@@ -242,8 +242,6 @@
   $select-item-hover-color: darken($select-item-color, 5%);
   $select-item-hover-bg: darken($select-item-bg, 5%);
 
-  /* stylelint-disable selector-max-specificity */
-  /* stylelint-disable no-descending-specificity */
   .Select {
     position: relative;
 
@@ -639,7 +637,6 @@
 
   }
 
-  /* stylelint-enable */
 }
 
 // React Select's default animations

@@ -90,8 +90,6 @@
     "sinon": "7.1.1",
     "sinon-test": "2.4.0",
     "style-loader": "0.23.1",
-    "stylelint": "^6.7.1",
-    "stylelint-scss": "^1.2.0",
     "webpack": "4.26.0",
     "webpack-cli": "3.1.2",
     "webpack-dev-server": "3.1.10"
@@ -101,17 +99,16 @@
     "react-dom": ">=15.x"
   },
   "scripts": {
-    "stylelint": "stylelint --syntax scss 'assets/stylesheets/**/*.scss'",
     "test": "jest --maxWorkers=2",
     "test:update:snapshots": "jest --updateSnapshot",
-    "prepublish": "yarn test && yarn build:js",
+    "prepublish": "npm run test && npm run build:js",
     "precommit": "lint-staged",
     "styleguide:start": "webpack-dev-server",
     "styleguide:build": "rm -rf styleguide/build && webpack --config webpack.config.build.js --progress --colors && htmlprocessor styleguide/index.html -o styleguide/build/index.html && cp -R styleguide/assets styleguide/build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "build": "build:js && build:css",
+    "build": "npm run build:js && npm run build:css",
     "build:js": "babel assets/javascripts/kitten/ -d src --ignore 'assets/**/*.test.js','assets/**/__mocks__/*.js','assets/javascripts/kitten/karl'",
     "build:css": "webpack --config webpack.config.sass.js"
   },

@@ -2,9 +2,4 @@
 Dockerfile
 CodeBuildDockerfile
 *.log
-*.gem
-pkg/
 tmp/
-
-spec/dummy/kitten.run
-spec/dummy/kitten.log
