@@ -80,8 +80,8 @@ const styles = {
       fontWeight: 'regular',
       color: COLORS.background1,
       whiteSpace: 'nowrap',
-      opacity: 0,
-      visibility: 'hidden',
+      opacity: 1,
+      visibility: 'visible',
       transition: 'opacity .2s, visibility .2s',
       hover: {
         visibility: 'visible',
@@ -95,7 +95,6 @@ const styles = {
         height: 0,
         width: 0,
         marginLeft: -8,
-        border: '8px solid transparent',
         borderBottomColor: backgroundColor,
         borderWidth: 10,
         pointerEvents: 'none',
