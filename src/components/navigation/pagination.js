@@ -30,17 +30,17 @@ var _radium = _interopRequireDefault(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _arrowIcon = require("kitten/components/icons/arrow-icon");
+var _arrowIcon = require("../../components/icons/arrow-icon");
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../constants/screen-config");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var _parser = require("kitten/helpers/utils/parser");
+var _parser = require("../../helpers/utils/parser");
 
-var _mediaQueries = require("kitten/hoc/media-queries");
+var _mediaQueries = require("../../hoc/media-queries");
 
 var _buttonIcon, _list;
 

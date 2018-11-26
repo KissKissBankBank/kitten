@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlButtonImageWithText } from 'kitten/karl/buttons/button-image-with-text'
+import { KarlButtonImageWithText } from '../../../assets/javascripts/kitten/karl/buttons/button-image-with-text'
 import Example from '../../app/example'
 
 export default () => {

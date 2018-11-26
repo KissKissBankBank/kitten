@@ -29,7 +29,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../constants/screen-config");
 
 var Grid =
 /*#__PURE__*/

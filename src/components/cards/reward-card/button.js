@@ -15,13 +15,13 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _radium = _interopRequireDefault(require("radium"));
 
-var _button = require("kitten/components/buttons/button");
+var _button = require("../../../components/buttons/button");
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../../constants/screen-config");
 
-var _typography = require("kitten/helpers/utils/typography");
+var _typography = require("../../../helpers/utils/typography");
 
-var _deprecated = require("kitten/helpers/utils/deprecated");
+var _deprecated = require("../../../helpers/utils/deprecated");
 
 var Button = (0, _radium.default)(_button.Button);
 
@@ -35,7 +35,7 @@ var RewardCardButton = function RewardCardButton(_ref) {
   if (!label) return null;
   var buttonStyles = isTinyVersion ? styles.tinyVersion : styles.base;
   return _react.default.createElement(_deprecated.Deprecated, {
-    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/"
+    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
   }, _react.default.createElement(Button, {
     size: "big",
     modifier: "helium",

@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from 'kitten/components/layout/marger'
-import { CommentAvatar } from 'kitten/components/form/comment-avatar'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { mediaQueries } from 'kitten/hoc/media-queries'
-import COLORS from 'kitten/constants/colors-config'
+import { Marger } from '../../components/layout/marger'
+import { CommentAvatar } from '../../components/form/comment-avatar'
+import { Text as TextBase } from '../../components/typography/text'
+import { ScreenConfig } from '../../constants/screen-config'
+import { mediaQueries } from '../../hoc/media-queries'
+import COLORS from '../../constants/colors-config'
 
 const Text = Radium(TextBase)
 const CommentContent = ({ text, ownerName, viewportIsMobile, style }) => (

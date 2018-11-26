@@ -27,7 +27,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _typologyTagIcon = require("kitten/components/icons/typology-tag-icon");
+var _typologyTagIcon = require("../../components/icons/typology-tag-icon");
 
 var TagList =
 /*#__PURE__*/

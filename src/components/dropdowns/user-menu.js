@@ -31,15 +31,15 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _dropdown = require("kitten/components/dropdowns/dropdown");
+var _dropdown = require("../../components/dropdowns/dropdown");
 
-var _buttonImageWithTextAndBadge = require("kitten/components/buttons/button-image-with-text-and-badge");
+var _buttonImageWithTextAndBadge = require("../../components/buttons/button-image-with-text-and-badge");
 
-var _navList = require("kitten/components/lists/nav-list");
+var _navList = require("../../components/lists/nav-list");
 
-var _elementHelper = _interopRequireDefault(require("kitten/helpers/dom/element-helper"));
+var _elementHelper = _interopRequireDefault(require("../../helpers/dom/element-helper"));
 
-var _emitter = _interopRequireDefault(require("kitten/helpers/utils/emitter"));
+var _emitter = _interopRequireDefault(require("../../helpers/utils/emitter"));
 
 var UserMenu =
 /*#__PURE__*/

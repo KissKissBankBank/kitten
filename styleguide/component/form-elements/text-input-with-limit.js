@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
+import { TextInputWithLimit } from '../../../assets/javascripts/kitten/components/form/text-input-with-limit'
 import Example from '../../app/example'
 
 export default () => {

@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = exports.domElementHelper = void 0;
 
 /**
- * @module 'kitten/helpers/dom/element-helper'
+ * @module '../../helpers/dom/element-helper'
  */
 var domElementHelper = {
   /**

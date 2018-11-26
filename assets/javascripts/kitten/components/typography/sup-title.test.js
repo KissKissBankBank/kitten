@@ -1,5 +1,5 @@
 import React from 'react'
-import { SupTitle } from 'kitten/components/typography/sup-title'
+import { SupTitle } from './sup-title'
 
 describe('<SupTitle />', () => {
   describe('by default', () => {

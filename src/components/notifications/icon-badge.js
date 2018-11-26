@@ -25,11 +25,9 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireWildcard(require("radium"));
+var _radium = require("radium");
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
 var IconBadge =
 /*#__PURE__*/

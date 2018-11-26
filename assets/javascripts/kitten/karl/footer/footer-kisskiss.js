@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { Row as RowBase } from 'kitten/components/grid/row'
-import { Marger } from 'kitten/components/layout/marger'
+import { Row as RowBase } from '../../components/grid/row'
+import { Marger } from '../../components/layout/marger'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
-} from 'kitten/components/grid/grid'
-import { TextInputWithButton as TextInputWithButtonBase } from 'kitten/components/form/text-input-with-button'
-import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
-import { Text } from 'kitten/components/typography/text'
+} from '../../components/grid/grid'
+import { TextInputWithButton as TextInputWithButtonBase } from '../../components/form/text-input-with-button'
+import { Paragraph as ParagraphBase } from '../../components/typography/paragraph'
+import { Text } from '../../components/typography/text'
 import {
   FacebookButtonIcon as FacebookButtonIconBase,
   TwitterButtonIcon as TwitterButtonIconBase,
   InstagramButtonIcon,
-} from 'kitten/components/buttons/social-button-icon'
-import { LinkList } from 'kitten/components/links/link-list'
-import { SelectWithState } from 'kitten/components/form/select-with-state'
-import { KissKissBankBankLogo as KissKissBankBankLogoBase } from 'kitten/karl/logos/kisskissbankbanklogo'
-import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
-import { ScreenConfig, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
-import COLORS from 'kitten/constants/colors-config'
-import { parseHtml } from 'kitten/helpers/utils/parser'
+} from '../../components/buttons/social-button-icon'
+import { LinkList } from '../../components/links/link-list'
+import { SelectWithState } from '../../components/form/select-with-state'
+import { KissKissBankBankLogo as KissKissBankBankLogoBase } from '../../karl/logos/kisskissbankbanklogo'
+import { createMatchMediaMax } from '../../helpers/utils/media-queries'
+import { ScreenConfig, SCREEN_SIZE_M } from '../../constants/screen-config'
+import COLORS from '../../constants/colors-config'
+import { parseHtml } from '../../helpers/utils/parser'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)

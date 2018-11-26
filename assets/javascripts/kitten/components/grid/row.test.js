@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row } from 'kitten/components/grid/row'
+import { Row } from '../../components/grid/row'
 
 describe('<Row />', () => {
   describe('by default', () => {

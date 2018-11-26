@@ -1,7 +1,7 @@
 import React from 'react'
-import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader'
-import { Uploader } from 'kitten/components/uploaders/uploader'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
+import { SimpleUploader } from '../../components/uploaders/simple-uploader'
+import { Uploader } from '../../components/uploaders/uploader'
+import { ButtonIcon } from '../../components/buttons/button-icon'
 
 describe('<SimpleUploader />', () => {
   describe('by default', () => {

@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  Header,
-  HeaderItems,
-  HeaderItem,
-} from 'kitten/components/headers/header'
+import { Header, HeaderItems, HeaderItem } from './header'
 
 describe('<Header />', () => {
   const header = shallow(

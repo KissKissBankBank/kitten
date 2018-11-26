@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlCarouselProjectCard } from 'kitten/karl/carousel/carousel'
+import { KarlCarouselProjectCard } from '../../../assets/javascripts/kitten/karl/carousel/carousel'
 import Example from '../../app/example'
 
 export default () => {

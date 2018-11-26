@@ -19,19 +19,19 @@ var _radium = _interopRequireDefault(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _title = require("kitten/components/typography/title");
+var _title = require("../../components/typography/title");
 
-var _horizontalStroke = require("kitten/components/layout/horizontal-stroke");
+var _horizontalStroke = require("../../components/layout/horizontal-stroke");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var _mediaQueries = require("kitten/hoc/media-queries");
+var _mediaQueries = require("../../hoc/media-queries");
 
-var _textInputWithUnitForm = require("kitten/components/form/text-input-with-unit-form");
+var _textInputWithUnitForm = require("../../components/form/text-input-with-unit-form");
 
 var DonationCardComponent = function DonationCardComponent(_ref) {
   var viewportIsSOrLess = _ref.viewportIsSOrLess,

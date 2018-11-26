@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import COLORS from 'kitten/constants/colors-config'
-import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
+import { Marger as MargerBase } from '../../components/layout/marger'
+import COLORS from '../../constants/colors-config'
+import { createRangeFromZeroTo } from '../../helpers/utils/range'
 
 const Marger = Radium(MargerBase)
 

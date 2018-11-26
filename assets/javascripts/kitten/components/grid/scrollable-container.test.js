@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ScrollableContainer } from 'kitten/components/grid/scrollable-container'
+import { ScrollableContainer } from '../../components/grid/scrollable-container'
 
 describe('<ScrollableContainer />', () => {
   let component

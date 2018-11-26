@@ -21,7 +21,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _radium = _interopRequireDefault(require("radium"));
 
-var _range = require("kitten/helpers/utils/range");
+var _range = require("../../helpers/utils/range");
 
 var CarouselPageBase =
 /*#__PURE__*/

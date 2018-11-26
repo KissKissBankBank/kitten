@@ -1,10 +1,10 @@
 import React from 'react'
 import classNames from 'classnames'
-import { ProjectCard } from 'kitten/components/cards/project-card'
-import { CheckedCircleIcon } from 'kitten/components/icons/checked-circle-icon'
-import { WarningCircleIcon } from 'kitten/components/icons/warning-circle-icon'
-import { CrossCircleIcon } from 'kitten/components/icons/cross-circle-icon'
-import { ClockCircleIcon } from 'kitten/components/icons/clock-circle-icon'
+import { ProjectCard } from '../../components/cards/project-card'
+import { CheckedCircleIcon } from '../../components/icons/checked-circle-icon'
+import { WarningCircleIcon } from '../../components/icons/warning-circle-icon'
+import { CrossCircleIcon } from '../../components/icons/cross-circle-icon'
+import { ClockCircleIcon } from '../../components/icons/clock-circle-icon'
 
 const colors = {
   'line-2': '#d8d8d8',

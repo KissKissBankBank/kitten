@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
+import { TextInputWithButton } from '../../../assets/javascripts/kitten/components/form/text-input-with-button'
 import Example from '../../app/example'
 
 export default () => {

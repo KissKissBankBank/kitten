@@ -1,5 +1,5 @@
 import React from 'react'
-import { BulletList } from 'kitten/components/lists/bullet-list'
+import { BulletList } from '../../../assets/javascripts/kitten/components/lists/bullet-list'
 import Example from '../../app/example'
 
 export default () => {

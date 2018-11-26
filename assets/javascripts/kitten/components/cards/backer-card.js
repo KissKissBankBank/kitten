@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import COLORS from 'kitten/constants/colors-config'
-import { Marger } from 'kitten/components/layout/marger'
-import { Text } from 'kitten/components/typography/text'
-import { ButtonImage } from 'kitten/components/buttons/button-image'
+import COLORS from '../../constants/colors-config'
+import { Marger } from '../../components/layout/marger'
+import { Text } from '../../components/typography/text'
+import { ButtonImage } from '../../components/buttons/button-image'
 
 export const BackerCard = ({
   title,

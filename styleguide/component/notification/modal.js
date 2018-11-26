@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlModal, KarlModalExternalTrigger } from 'kitten/karl/modals/modal'
+import { KarlModal, KarlModalExternalTrigger } from '../../../assets/javascripts/kitten/karl/modals/modal'
 import Example from '../../app/example'
 
 export default () => {

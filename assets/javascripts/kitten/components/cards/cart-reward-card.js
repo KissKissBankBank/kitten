@@ -1,16 +1,16 @@
 import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import { GarbageIcon } from 'kitten/components/icons/garbage-icon'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { Title } from 'kitten/components/typography/title'
-import { Text } from 'kitten/components/typography/text'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import COLORS from 'kitten/constants/colors-config'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { mediaQueries } from 'kitten/hoc/media-queries'
-import { domElementHelper } from 'kitten/helpers/dom/element-helper'
+import { Marger as MargerBase } from '../../components/layout/marger'
+import { GarbageIcon } from '../../components/icons/garbage-icon'
+import { ButtonIcon } from '../../components/buttons/button-icon'
+import { Title } from '../../components/typography/title'
+import { Text } from '../../components/typography/text'
+import { Paragraph } from '../../components/typography/paragraph'
+import COLORS from '../../constants/colors-config'
+import { ScreenConfig } from '../../constants/screen-config'
+import { mediaQueries } from '../../hoc/media-queries'
+import { domElementHelper } from '../../helpers/dom/element-helper'
 import deprecated from 'prop-types-extra/lib/deprecated'
 
 const Marger = Radium(MargerBase)
@@ -165,15 +165,14 @@ class CartRewardCardComponent extends Component {
 
     return (
       <Fragment>
-        {shippingTitle &&
-          shippingValue && (
-            <Marger top="2">
-              <CartRewardCard.Information
-                title={shippingTitle}
-                value={shippingValue}
-              />
-            </Marger>
-          )}
+        {shippingTitle && shippingValue && (
+          <Marger top="2">
+            <CartRewardCard.Information
+              title={shippingTitle}
+              value={shippingValue}
+            />
+          </Marger>
+        )}
 
         {informationElements}
 

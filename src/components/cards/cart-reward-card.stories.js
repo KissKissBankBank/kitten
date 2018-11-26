@@ -12,11 +12,11 @@ var _react3 = require("@storybook/addon-knobs/react");
 
 var _radium = require("radium");
 
-var _cartRewardCard = require("kitten/components/cards/cart-reward-card");
+var _cartRewardCard = require("../../components/cards/cart-reward-card");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
 (0, _react2.storiesOf)('Cards/CartRewardCard', module).addDecorator(_react3.withKnobs).add('default', (0, _addonInfo.withInfo)('common info')(function () {
   return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {

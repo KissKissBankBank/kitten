@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paragraph } from 'kitten/components/typography/paragraph'
+import { Paragraph } from './paragraph'
 
 describe('Paragraph with default props', () => {
   const defaultComponent = shallow(<Paragraph />)

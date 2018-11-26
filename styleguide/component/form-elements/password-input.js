@@ -1,5 +1,5 @@
 import React from 'react'
-import { PasswordInput } from 'kitten/components/form/password-input'
+import { PasswordInput } from '../../../assets/javascripts/kitten/components/form/password-input'
 import Example from '../../app/example'
 
 export default () => {

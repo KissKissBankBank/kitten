@@ -2,7 +2,7 @@ import React from 'react'
 import {
   KarlButtonIconHeart,
   KarlButtonIconNano,
-} from 'kitten/karl/buttons/button-icon'
+} from '../../../assets/javascripts/kitten/karl/buttons/button-icon'
 import {
   YoutubeButtonIcon,
   TwitterButtonIcon,
@@ -10,7 +10,7 @@ import {
   LinkedinButtonIcon,
   InstagramButtonIcon,
   FacebookButtonIcon,
-} from 'kitten/components/buttons/social-button-icon'
+} from '../../../assets/javascripts/kitten/components/buttons/social-button-icon'
 import Example from '../../app/example'
 
 export default () => {

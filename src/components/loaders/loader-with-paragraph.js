@@ -27,9 +27,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _loader = require("kitten/components/loaders/loader");
+var _loader = require("../../components/loaders/loader");
 
-var _paragraph = require("kitten/components/typography/paragraph");
+var _paragraph = require("../../components/typography/paragraph");
 
 var LoaderWithParagraph =
 /*#__PURE__*/
@@ -45,12 +45,11 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          text = _this$props.text,
           className = _this$props.className,
           loaderPosition = _this$props.loaderPosition,
           loaderProps = _this$props.loaderProps,
           paragraphProps = _this$props.paragraphProps,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["text", "className", "loaderPosition", "loaderProps", "paragraphProps"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "loaderPosition", "loaderProps", "paragraphProps"]);
       var containerClassName = (0, _classnames.default)('k-LoaderWithParagraph', {
         'k-LoaderWithParagraph--column': loaderPosition == 'top' || loaderPosition == 'bottom'
       }, className);

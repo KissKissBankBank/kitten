@@ -16,7 +16,7 @@ var _addonActions = require("@storybook/addon-actions");
 
 var _checkbox = require("./checkbox");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
 (0, _react2.storiesOf)('Form/Checkbox', module).addDecorator(_react3.withKnobs).add('default', (0, _addonInfo.withInfo)('common info')(function () {
   return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {

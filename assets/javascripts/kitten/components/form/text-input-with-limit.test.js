@@ -1,7 +1,7 @@
 import React from 'react'
 import sinon from 'sinon'
-import { TextInput } from 'kitten/components/form/text-input'
-import { TextInputWithLimit } from 'kitten/components/form/text-input-with-limit'
+import { TextInput } from '../../components/form/text-input'
+import { TextInputWithLimit } from '../../components/form/text-input-with-limit'
 
 describe('<TextInputWithLimit />', () => {
   const sandbox = sinon.createSandbox()

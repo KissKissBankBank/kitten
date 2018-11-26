@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { Marger } from 'kitten/components/layout/marger'
-import { ManageContribution } from 'kitten/components/cards/reward-card/manage-contribution'
-import { RewardCardButton } from 'kitten/components/cards/reward-card/button'
-import { Deprecated } from 'kitten/helpers/utils/deprecated'
+import { Marger } from '../../../components/layout/marger'
+import { ManageContribution } from '../../../components/cards/reward-card/manage-contribution'
+import { RewardCardButton } from '../../../components/cards/reward-card/button'
+import { Deprecated } from '../../../helpers/utils/deprecated'
 
 export const RewardCardAction = ({
   manageContributionDescription,
@@ -23,7 +23,7 @@ export const RewardCardAction = ({
   if (!hasActionContent) return null
 
   return (
-    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
       <Fragment>
         {manageContributionDescription && (
           <Marger
@@ -70,7 +70,7 @@ export const RewardCardActionOnMOrMore = ({
   if (!hasActionContent) return null
 
   return (
-    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
       <Marger top="3">
         <RewardCardButton
           label={buttonLabel}

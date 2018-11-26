@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Marger } from 'kitten/components/layout/marger'
-import { Text } from 'kitten/components/typography/text'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Marger } from '../../components/layout/marger'
+import { Text } from '../../components/typography/text'
+import { Grid, GridCol } from '../../components/grid/grid'
 
 export class KarlColors extends Component {
   constructor() {

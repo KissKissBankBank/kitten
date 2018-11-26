@@ -1,13 +1,13 @@
 import React from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import { Grid as GridBase, GridCol } from 'kitten/components/grid/grid'
-import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
-import { Text } from 'kitten/components/typography/text'
-import { Label } from 'kitten/components/form/label'
-import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { ScreenConfig } from 'kitten/constants/screen-config'
+import { Marger as MargerBase } from '../../components/layout/marger'
+import { Grid as GridBase, GridCol } from '../../components/grid/grid'
+import { TextInputWithUnit } from '../../components/form/text-input-with-unit'
+import { Text } from '../../components/typography/text'
+import { Label } from '../../components/form/label'
+import { Button as ButtonBase } from '../../components/buttons/button'
+import { ScreenConfig } from '../../constants/screen-config'
 
 const Button = Radium(ButtonBase)
 const Grid = Radium(GridBase)

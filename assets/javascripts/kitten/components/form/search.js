@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { domElementHelper } from 'kitten/helpers/dom/element-helper'
-import { TextInput } from 'kitten/components/form/text-input'
-import { SearchIcon } from 'kitten/components/icons/search-icon'
+import { domElementHelper } from '../../helpers/dom/element-helper'
+import { TextInput } from '../../components/form/text-input'
+import { SearchIcon } from '../../components/icons/search-icon'
 
 export class Search extends Component {
   constructor(props) {

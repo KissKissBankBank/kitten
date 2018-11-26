@@ -25,7 +25,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _badge = require("kitten/components/notifications/badge");
+var _badge = require("../../components/notifications/badge");
 
 var _classnames = _interopRequireDefault(require("classnames"));
 

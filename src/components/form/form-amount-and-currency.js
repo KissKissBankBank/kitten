@@ -15,7 +15,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _textInputAndSelect = require("kitten/components/form/text-input-and-select");
+var _textInputAndSelect = require("../../components/form/text-input-and-select");
 
 var FormAmountAndCurrency = function FormAmountAndCurrency(props) {
   var currencyOptions = props.currencyOptions,

@@ -1,6 +1,6 @@
 import React from 'react'
-import { triggerEnhancer } from 'kitten/hoc/trigger-enhancer'
-import { Popover } from 'kitten/components/popovers/popover'
+import { triggerEnhancer } from '../../hoc/trigger-enhancer'
+import { Popover } from '../../components/popovers/popover'
 
 const text =
   'I could pee on this if i had the energy. Present belly, scratch ' +

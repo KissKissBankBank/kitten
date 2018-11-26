@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { Marger } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { Popover } from 'kitten/components/popovers/popover'
-import { Button } from 'kitten/components/buttons/button'
+import { Marger } from '../../components/layout/marger'
+import { Title } from '../../components/typography/title'
+import { Paragraph } from '../../components/typography/paragraph'
+import { Popover } from '../../components/popovers/popover'
+import { Button } from '../../components/buttons/button'
 
 export class CallToActionPopover extends Component {
   constructor(props) {

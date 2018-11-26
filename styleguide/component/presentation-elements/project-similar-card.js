@@ -1,9 +1,9 @@
 import React from 'react'
-import { KarlProjectSimilarLoader } from 'kitten/karl/cards/project-similar-card'
+import { KarlProjectSimilarLoader } from '../../../assets/javascripts/kitten/karl/cards/project-similar-card'
 import {
   KarlSimilarProjectsCard,
   KarlSimilarProjectsWithInfosCard,
-} from 'kitten/karl/cards/similar-projects-card'
+} from '../../../assets/javascripts/kitten/karl/cards/similar-projects-card'
 import Example from '../../app/example'
 
 export default () => {

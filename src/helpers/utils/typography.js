@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.pxToRem = void 0;
 
-var _typographyConfig = _interopRequireDefault(require("kitten/constants/typography-config"));
+var _typographyConfig = _interopRequireDefault(require("../../constants/typography-config"));
 
 var pxToRem = function pxToRem(sizeInPx) {
   if (sizeInPx === 0) return 0;

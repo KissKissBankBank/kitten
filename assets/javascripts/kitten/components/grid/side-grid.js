@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { stringUtils } from 'kitten/helpers/utils/string'
+import { stringUtils } from '../../helpers/utils/string'
 
 export class SideGrid extends Component {
   render() {

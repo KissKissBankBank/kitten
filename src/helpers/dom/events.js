@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = exports.domEvents = void 0;
 
 /**
- * @module 'kitten/helpers/dom/events'
+ * @module '../../helpers/dom/events'
  */
 var domEvents = {
   /**

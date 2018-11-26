@@ -27,7 +27,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
 var Checkbox =
 /*#__PURE__*/

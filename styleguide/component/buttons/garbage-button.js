@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlGarbageButton } from 'kitten/karl/buttons/garbage-button'
+import { KarlGarbageButton } from '../../../assets/javascripts/kitten/karl/buttons/garbage-button'
 import Example from '../../app/example'
 
 export default () => {

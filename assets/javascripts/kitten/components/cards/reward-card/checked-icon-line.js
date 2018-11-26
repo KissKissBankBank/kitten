@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { IconBadge } from 'kitten/components/notifications/icon-badge'
-import { CheckedIcon } from 'kitten/components/icons/checked-icon'
-import { pxToRem } from 'kitten/helpers/utils/typography'
-import COLORS from 'kitten/constants/colors-config'
+import { IconBadge } from '../../../components/notifications/icon-badge'
+import { CheckedIcon } from '../../../components/icons/checked-icon'
+import { pxToRem } from '../../../helpers/utils/typography'
+import COLORS from '../../../constants/colors-config'
 
 export class RewardCardCheckedIconLine extends Component {
   render() {

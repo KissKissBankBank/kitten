@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { ButtonImage as ButtonImageBase } from 'kitten/components/buttons/button-image'
-import { Text as TextBase } from 'kitten/components/typography/text'
+import { ButtonImage as ButtonImageBase } from '../../components/buttons/button-image'
+import { Text as TextBase } from '../../components/typography/text'
 
 const ButtonImage = Radium(ButtonImageBase)
 const Text = Radium(TextBase)

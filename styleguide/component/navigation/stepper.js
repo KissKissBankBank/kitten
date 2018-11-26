@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stepper } from 'kitten/components/steppers/stepper'
+import { Stepper } from '../../../assets/javascripts/kitten/components/steppers/stepper'
 import Example from '../../app/example'
 
 export default () => {

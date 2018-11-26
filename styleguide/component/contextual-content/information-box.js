@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlInformationBox } from 'kitten/karl/box/information-box'
+import { KarlInformationBox } from '../../../assets/javascripts/kitten/karl/box/information-box'
 import Example from '../../app/example'
 
 export default () => {

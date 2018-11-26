@@ -1,10 +1,10 @@
 import React from 'react'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Grid, GridCol } from '../../components/grid/grid'
 import Radium from 'radium'
-import { Marger } from 'kitten/components/layout/marger'
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { KarlExampleTitle } from 'kitten/karl/examples/title'
+import { Marger } from '../../components/layout/marger'
+import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
+import { Text as TextBase } from '../../components/typography/text'
+import { KarlExampleTitle } from '../../karl/examples/title'
 
 const Text = Radium(TextBase)
 

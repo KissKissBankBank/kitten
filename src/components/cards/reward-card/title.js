@@ -25,15 +25,15 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _radium = _interopRequireDefault(require("radium"));
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../../components/typography/text");
 
-var _horizontalStroke = require("kitten/components/layout/horizontal-stroke");
+var _horizontalStroke = require("../../../components/layout/horizontal-stroke");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../../components/layout/marger");
 
-var _typography = require("kitten/helpers/utils/typography");
+var _typography = require("../../../helpers/utils/typography");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var Text = (0, _radium.default)(_text.Text);
 var HorizontalStroke = (0, _radium.default)(_horizontalStroke.HorizontalStroke);

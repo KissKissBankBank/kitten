@@ -1,8 +1,8 @@
-import defaultProps from 'kitten/hoc/default-props'
+import defaultProps from '../../hoc/default-props'
 import React from 'react'
-import { LoanSimulator } from 'kitten/components/simulators/loan-simulator'
-import { card } from 'kitten/hoc/card'
-import { Marger } from 'kitten/components/layout/marger'
+import { LoanSimulator } from '../../components/simulators/loan-simulator'
+import { card } from '../../hoc/card'
+import { Marger } from '../../components/layout/marger'
 
 const KarlLoanSimulatorCardComponent = props => <div {...props} />
 

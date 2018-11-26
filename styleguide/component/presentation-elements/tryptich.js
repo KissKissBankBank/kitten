@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlTriptych } from 'kitten/karl/cards/triptych'
+import { KarlTriptych } from '../../../assets/javascripts/kitten/karl/cards/triptych'
 import Example from '../../app/example'
 
 export default () => {

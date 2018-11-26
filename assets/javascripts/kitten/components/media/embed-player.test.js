@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { EmbedPlayer } from 'kitten/components/media/embed-player'
+import { EmbedPlayer } from '../../components/media/embed-player'
 
 describe('<EmbedPlayer />', () => {
   let component
@@ -27,7 +27,7 @@ describe('<EmbedPlayer />', () => {
               },
             }}
             playButtonLabel="Play"
-            ratio={376 / 620 * 100}
+            ratio={(376 / 620) * 100}
             iframeHtml="<iframe
                 width='620'
                 height='376'

@@ -31,9 +31,9 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _reactMasonryComponent = _interopRequireDefault(require("react-masonry-component"));
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../constants/screen-config");
 
-var _gridConfig = require("kitten/constants/grid-config");
+var _gridConfig = require("../../constants/grid-config");
 
 var _radium = _interopRequireDefault(require("radium"));
 

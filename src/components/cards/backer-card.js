@@ -15,13 +15,13 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _buttonImage = require("kitten/components/buttons/button-image");
+var _buttonImage = require("../../components/buttons/button-image");
 
 var BackerCard = function BackerCard(_ref) {
   var title = _ref.title,

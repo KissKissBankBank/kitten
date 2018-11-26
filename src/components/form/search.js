@@ -27,11 +27,11 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _elementHelper = require("kitten/helpers/dom/element-helper");
+var _elementHelper = require("../../helpers/dom/element-helper");
 
-var _textInput = require("kitten/components/form/text-input");
+var _textInput = require("../../components/form/text-input");
 
-var _searchIcon = require("kitten/components/icons/search-icon");
+var _searchIcon = require("../../components/icons/search-icon");
 
 var Search =
 /*#__PURE__*/

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
-import classNames from 'classnames'
-import COLORS from 'kitten/constants/colors-config'
+import { StyleRoot } from 'radium'
+import COLORS from '../../constants/colors-config'
 
 export class IconBadge extends Component {
   render() {

@@ -25,13 +25,13 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _radium = _interopRequireDefault(require("radium"));
 
-var _iconBadge = require("kitten/components/notifications/icon-badge");
+var _iconBadge = require("../../../components/notifications/icon-badge");
 
-var _checkedIcon = require("kitten/components/icons/checked-icon");
+var _checkedIcon = require("../../../components/icons/checked-icon");
 
-var _typography = require("kitten/helpers/utils/typography");
+var _typography = require("../../../helpers/utils/typography");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var RewardCardCheckedIconLine =
 /*#__PURE__*/

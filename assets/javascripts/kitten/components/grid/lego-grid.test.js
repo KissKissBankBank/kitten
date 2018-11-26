@@ -1,8 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
-import { LegoGrid } from 'kitten/components/grid/lego-grid'
+import { LegoGrid } from '../../components/grid/lego-grid'
 import Masonry from 'react-masonry-component'
-import { NUM_COLUMNS } from 'kitten/constants/grid-config'
+import { NUM_COLUMNS } from '../../constants/grid-config'
 
 describe('<LegoGrid />', () => {
   describe('by default', () => {

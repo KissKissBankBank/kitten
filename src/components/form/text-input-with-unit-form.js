@@ -17,19 +17,19 @@ var _radium = _interopRequireWildcard(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _textInputWithUnit = require("kitten/components/form/text-input-with-unit");
+var _textInputWithUnit = require("../../components/form/text-input-with-unit");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _label = require("kitten/components/form/label");
+var _label = require("../../components/form/label");
 
-var _button2 = require("kitten/components/buttons/button");
+var _button2 = require("../../components/buttons/button");
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../constants/screen-config");
 
 var _button;
 

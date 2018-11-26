@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlUserMenuDropdown } from 'kitten/karl/organisms/dropdown'
+import { KarlUserMenuDropdown } from '../../../assets/javascripts/kitten/karl/organisms/dropdown'
 import Example from '../../app/example'
 
 export default () => {

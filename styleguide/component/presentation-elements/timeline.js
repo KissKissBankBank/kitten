@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlTimeline } from 'kitten/karl/lists/timeline'
+import { KarlTimeline } from '../../../assets/javascripts/kitten/karl/lists/timeline'
 import Example from '../../app/example'
 
 export default () => {

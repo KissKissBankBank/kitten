@@ -11,19 +11,19 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _react = _interopRequireDefault(require("react"));
 
-var _buttonIcon = require("kitten/components/buttons/button-icon");
+var _buttonIcon = require("../../components/buttons/button-icon");
 
-var _facebookIcon = require("kitten/components/icons/facebook-icon");
+var _facebookIcon = require("../../components/icons/facebook-icon");
 
-var _twitterIcon = require("kitten/components/icons/twitter-icon");
+var _twitterIcon = require("../../components/icons/twitter-icon");
 
-var _linkedinIcon = require("kitten/components/icons/linkedin-icon");
+var _linkedinIcon = require("../../components/icons/linkedin-icon");
 
-var _instagramIcon = require("kitten/components/icons/instagram-icon");
+var _instagramIcon = require("../../components/icons/instagram-icon");
 
-var _youtubeIcon = require("kitten/components/icons/youtube-icon");
+var _youtubeIcon = require("../../components/icons/youtube-icon");
 
-var _pinterestIcon = require("kitten/components/icons/pinterest-icon");
+var _pinterestIcon = require("../../components/icons/pinterest-icon");
 
 var FacebookButtonIcon = function FacebookButtonIcon(props) {
   return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {

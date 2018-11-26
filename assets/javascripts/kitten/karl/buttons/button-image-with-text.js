@@ -1,8 +1,8 @@
 import React from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { ButtonImageWithText } from 'kitten/components/buttons/button-image-with-text'
-import { KarlExampleTitle } from 'kitten/karl/examples/title'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { ButtonImageWithText } from '../../components/buttons/button-image-with-text'
+import { KarlExampleTitle } from '../../karl/examples/title'
 
 export const KarlButtonImageWithText = () => (
   <Grid>

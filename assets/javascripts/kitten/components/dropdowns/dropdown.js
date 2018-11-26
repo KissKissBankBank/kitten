@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import emitter from 'kitten/helpers/utils/emitter'
-import { DropdownButton } from 'kitten/components/dropdowns/dropdown-button'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
+import emitter from '../../helpers/utils/emitter'
+import { DropdownButton } from '../../components/dropdowns/dropdown-button'
+import domElementHelper from '../../helpers/dom/element-helper'
 
 export class Dropdown extends React.Component {
   constructor(props) {

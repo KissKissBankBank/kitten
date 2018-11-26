@@ -25,9 +25,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _sliderBar = require("kitten/components/sliders/slider-bar");
+var _sliderBar = require("../../components/sliders/slider-bar");
 
-var _sliderKeyDownHandler = require("kitten/handlers/sliders/slider-key-down-handler");
+var _sliderKeyDownHandler = require("../../handlers/sliders/slider-key-down-handler");
 
 // TODO move to the "sliders" group (breaking change)
 // Slider input to choose an integer value between two bounds
