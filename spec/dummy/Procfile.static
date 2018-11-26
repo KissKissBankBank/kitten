@@ -1,7 +1,0 @@
-# Procfile for development without hot reloading (static assets).
-
-# Server
-rails: REACT_ON_RAILS_ENV= rails s -b 0.0.0.0
-
-# Build client assets, watching for changes.
-rails-client-assets: sh -c 'yarn build:dev'
