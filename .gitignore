@@ -1,27 +1,12 @@
 .bundle/
 log/*.log
-pkg/
 tmp/
-spec/dummy/db/*.sqlite3
-spec/dummy/db/*.sqlite3-journal
-spec/dummy/log/*.log
-spec/dummy/tmp/
-spec/dummy/db
-spec/dummy/.sass-cache
-spec/dummy/app/assets/webpack/*
-spec/dummy/public
-*.gem
 .sass-cache
 npm-debug.log*
 node_modules/
 storybook-static/
-spec/dummy/kitten.log
-spec/dummy/kitten.run
 dist/
 styleguide/build
-
-# Changes are ignored so that you can play in it.
-app/views/layouts/kitten/playground.html.erb
 
 .DS_Store
 package-lock.json
