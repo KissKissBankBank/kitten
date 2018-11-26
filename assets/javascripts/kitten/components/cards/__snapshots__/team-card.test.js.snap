@@ -139,7 +139,6 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
               data-radium={true}
               style={
                 Object {
-                  "border": "8px solid transparent",
                   "borderBottomColor": "#19b4fa",
                   "borderWidth": 10,
                   "bottom": "102%",
