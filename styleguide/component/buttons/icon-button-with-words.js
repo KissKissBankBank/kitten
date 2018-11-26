@@ -2,7 +2,7 @@ import React from 'react'
 import {
   KarlButtonIconWordsLeft,
   KarlButtonIconWordsRight,
-} from 'kitten/karl/buttons/button-with-icon-words'
+} from '../../../assets/javascripts/kitten/karl/buttons/button-with-icon-words'
 import Example from '../../app/example'
 
 export default () => {

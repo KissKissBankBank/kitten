@@ -27,9 +27,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _buttonImage = require("kitten/components/buttons/button-image");
+var _buttonImage = require("../../components/buttons/button-image");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
 var ButtonImage = (0, _radium.default)(_buttonImage.ButtonImage);
 var Text = (0, _radium.default)(_text.Text);

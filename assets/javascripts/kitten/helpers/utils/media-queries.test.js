@@ -5,9 +5,9 @@ import {
   createMatchMediaMin,
   createMatchMediaMax,
   createMatchMediaWithin,
-} from 'kitten/helpers/utils/media-queries'
+} from '../../helpers/utils/media-queries'
 
-import { SCREEN_SIZE_S, SCREEN_SIZE_M } from 'kitten/constants/screen-config'
+import { SCREEN_SIZE_S, SCREEN_SIZE_M } from '../../constants/screen-config'
 
 const createMockMediaMatcher = matches => () => ({
   matches,

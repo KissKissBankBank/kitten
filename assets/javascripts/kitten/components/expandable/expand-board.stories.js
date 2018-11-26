@@ -9,11 +9,11 @@ import {
   object,
 } from '@storybook/addon-knobs/react'
 import { StyleRoot } from 'radium'
-import { ExpandBoard } from 'kitten/components/expandable/expand-board'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { ExpandBoardWithButtonItemList } from 'kitten/components/expandable/expand-board.examples'
-import COLORS from 'kitten/constants/colors-config'
-import { pxToRem } from 'kitten/helpers/utils/typography'
+import { ExpandBoard } from '../../components/expandable/expand-board'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Text } from '../../components/typography/text'
+import COLORS from '../../constants/colors-config'
+import { pxToRem } from '../../helpers/utils/typography'
 
 storiesOf('Expandable', module)
   .addDecorator(withKnobs)

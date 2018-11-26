@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlLinkBox } from 'kitten/karl/box/link-box'
+import { KarlLinkBox } from '../../../assets/javascripts/kitten/karl/box/link-box'
 
 export default () => {
   return (

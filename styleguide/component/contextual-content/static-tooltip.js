@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlStaticTooltip } from 'kitten/karl/tooltips/static-tooltip'
+import { KarlStaticTooltip } from '../../../assets/javascripts/kitten/karl/tooltips/static-tooltip'
 import Example from '../../app/example'
 
 export default () => {

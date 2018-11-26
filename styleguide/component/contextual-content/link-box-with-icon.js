@@ -1,5 +1,5 @@
 import React from 'react'
-import { DocLinkBox } from 'kitten/components/box/doc-link-box'
+import { DocLinkBox } from '../../../assets/javascripts/kitten/components/box/doc-link-box'
 import Example from '../../app/example'
 
 export default () => {

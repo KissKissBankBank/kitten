@@ -17,9 +17,9 @@ var _radium = _interopRequireWildcard(require("radium"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _container = require("kitten/components/grid/container");
+var _container = require("../../components/grid/container");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
 var ScrollableContainer = function ScrollableContainer(props) {
   return _react.default.createElement(_container.Container, (0, _extends2.default)({}, props, {

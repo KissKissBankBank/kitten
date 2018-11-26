@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { styles } from 'kitten/components/cards/reward-card'
-import { Deprecated } from 'kitten/helpers/utils/deprecated'
+import { styles } from '../../../components/cards/reward-card'
+import { Deprecated } from '../../../helpers/utils/deprecated'
 
 const RewardCardImageBase = ({ isDisabled, imageProps }) => {
   const imageStyles = [isDisabled && styles.disabled]
@@ -11,7 +11,7 @@ const RewardCardImageBase = ({ isDisabled, imageProps }) => {
   if (!shouldDisplayImage) return null
 
   return (
-    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
       <div style={imageStyles} disabled={isDisabled}>
         <img {...imageProps} alt={imageProps.alt || ''} style={styles.image} />
       </div>

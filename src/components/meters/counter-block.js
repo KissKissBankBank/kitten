@@ -25,17 +25,17 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _radium = _interopRequireWildcard(require("radium"));
 
-var _title = require("kitten/components/typography/title");
+var _title = require("../../components/typography/title");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _horizontalStroke = require("kitten/components/layout/horizontal-stroke");
+var _horizontalStroke = require("../../components/layout/horizontal-stroke");
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../constants/screen-config");
 
-var _mediaQueries = require("kitten/hoc/media-queries");
+var _mediaQueries = require("../../hoc/media-queries");
 
 var _counterText;
 

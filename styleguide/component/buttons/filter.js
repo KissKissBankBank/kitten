@@ -1,6 +1,6 @@
 import React from 'react'
-import { KarlButtonIconFilter } from 'kitten/karl/buttons/button-filter'
-import { FilterIcon } from 'kitten/components/icons/filter-icon'
+import { KarlButtonIconFilter } from '../../../assets/javascripts/kitten/karl/buttons/button-filter'
+import { FilterIcon } from '../../../assets/javascripts/kitten/components/icons/filter-icon'
 import Example from '../../app/example'
 
 export default () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge } from 'kitten/components/notifications/badge'
+import { Badge } from './badge'
 
 describe('<Badge />', () => {
   describe('by default', () => {

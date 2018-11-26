@@ -15,23 +15,23 @@ var _radium = _interopRequireDefault(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _rewardCard = require("kitten/components/cards/reward-card");
+var _rewardCard = require("../../../components/cards/reward-card");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../../components/layout/marger");
 
-var _title = require("kitten/components/typography/title");
+var _title = require("../../../components/typography/title");
 
-var _button = require("kitten/components/buttons/button");
+var _button = require("../../../components/buttons/button");
 
-var _horizontalStroke = require("kitten/components/layout/horizontal-stroke");
+var _horizontalStroke = require("../../../components/layout/horizontal-stroke");
 
-var _paragraph = require("kitten/components/typography/paragraph");
+var _paragraph = require("../../../components/typography/paragraph");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../../components/typography/text");
 
-var _starIcon = require("kitten/components/icons/star-icon");
+var _starIcon = require("../../../components/icons/star-icon");
 
-var _deprecated = require("kitten/helpers/utils/deprecated");
+var _deprecated = require("../../../helpers/utils/deprecated");
 
 var RewardCardContentBase = function RewardCardContentBase(_ref) {
   var titleAmount = _ref.titleAmount,
@@ -45,7 +45,7 @@ var RewardCardContentBase = function RewardCardContentBase(_ref) {
       isTinyVersion = _ref.isTinyVersion;
   var descriptionStyle = [isDisabled && _rewardCard.styles.disabled];
   return _react.default.createElement(_deprecated.Deprecated, {
-    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/"
+    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
   }, _react.default.createElement("div", {
     style: descriptionStyle,
     disabled: isDisabled

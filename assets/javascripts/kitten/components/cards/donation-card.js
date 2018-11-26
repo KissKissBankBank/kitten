@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from 'kitten/components/layout/marger'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Title } from 'kitten/components/typography/title'
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
-import COLORS from 'kitten/constants/colors-config'
-import { mediaQueries } from 'kitten/hoc/media-queries'
-import { TextInputWithUnitForm } from 'kitten/components/form/text-input-with-unit-form'
+import { Marger } from '../../components/layout/marger'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Title } from '../../components/typography/title'
+import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
+import COLORS from '../../constants/colors-config'
+import { mediaQueries } from '../../hoc/media-queries'
+import { TextInputWithUnitForm } from '../../components/form/text-input-with-unit-form'
 
 const DonationCardComponent = ({
   viewportIsSOrLess,

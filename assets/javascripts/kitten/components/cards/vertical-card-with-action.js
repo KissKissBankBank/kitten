@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { Button } from 'kitten/components/buttons/button'
-import COLORS from 'kitten/constants/colors-config'
+import { Marger } from '../../components/layout/marger'
+import { Title } from '../../components/typography/title'
+import { Paragraph } from '../../components/typography/paragraph'
+import { Button } from '../../components/buttons/button'
+import COLORS from '../../constants/colors-config'
 
 export class VerticalCardWithAction extends Component {
   static propTypes = {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Marger } from 'kitten/components/layout/marger'
+import { Marger } from '../../components/layout/marger'
 
 const getMargerElement = element =>
   shallow(element)

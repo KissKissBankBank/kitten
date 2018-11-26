@@ -25,9 +25,9 @@ var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/hel
 
 var _react = _interopRequireDefault(require("react"));
 
-var _elementHelper = require("kitten/helpers/dom/element-helper");
+var _elementHelper = require("../../helpers/dom/element-helper");
 
-var _tourPopover = require("kitten/components/tours/tour-popover");
+var _tourPopover = require("../../components/tours/tour-popover");
 
 var TourStep =
 /*#__PURE__*/

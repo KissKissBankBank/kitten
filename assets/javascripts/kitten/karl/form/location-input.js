@@ -1,7 +1,7 @@
 import React from 'react'
-import { Label } from 'kitten/components/form/label'
-import { LocationInput } from 'kitten/components/form/location-input'
-import { Marger } from 'kitten/components/layout/marger'
+import { Label } from '../../components/form/label'
+import { LocationInput } from '../../components/form/location-input'
+import { Marger } from '../../components/layout/marger'
 
 export const KarlLocationInput = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlAlert, KarlAlertWithButton } from 'kitten/karl/notifications/alert'
+import { KarlAlert, KarlAlertWithButton } from '../../../assets/javascripts/kitten/karl/notifications/alert'
 import Example from '../../app/example'
 
 export default () => {

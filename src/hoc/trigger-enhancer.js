@@ -23,7 +23,7 @@ var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/hel
 
 var _react = _interopRequireDefault(require("react"));
 
-var _elementHelper = require("kitten/helpers/dom/element-helper");
+var _elementHelper = require("../helpers/dom/element-helper");
 
 var triggerEnhancer = function triggerEnhancer(WrappedComponent, wrappedComponentProps) {
   var TriggerWrapper =

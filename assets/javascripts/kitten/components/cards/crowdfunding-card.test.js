@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
+import { CrowdfundingCard } from '../../components/cards/crowdfunding-card'
 
 describe('<CrowdfundingCard />', () => {
   const initialWindow = global.window

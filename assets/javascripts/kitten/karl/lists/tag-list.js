@@ -1,7 +1,7 @@
 import React from 'react'
-import { TagList } from 'kitten/components/lists/tag-list'
-import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
-import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
+import { TagList } from '../../components/lists/tag-list'
+import { TypologyTagIcon } from '../../components/icons/typology-tag-icon'
+import { InstrumentTagIcon } from '../../components/icons/instrument-tag-icon'
 
 export const KarlTagList = props => {
   const typologyItems = [

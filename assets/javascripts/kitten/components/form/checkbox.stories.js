@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text } from '@storybook/addon-knobs/react'
 import { action } from '@storybook/addon-actions'
 import { Checkbox } from './checkbox'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Grid, GridCol } from '../../components/grid/grid'
 
 storiesOf('Form/Checkbox', module)
   .addDecorator(withKnobs)

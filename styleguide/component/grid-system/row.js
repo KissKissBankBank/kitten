@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { KarlRow } from 'kitten/karl/grid/row'
+import { KarlRow } from '../../../assets/javascripts/kitten/karl/grid/row'
 import Example from '../../app/example'
 
 export default () => {

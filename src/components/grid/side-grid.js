@@ -23,7 +23,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _string = require("kitten/helpers/utils/string");
+var _string = require("../../helpers/utils/string");
 
 var SideGrid =
 /*#__PURE__*/

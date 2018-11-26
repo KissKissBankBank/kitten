@@ -11,9 +11,9 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _react = _interopRequireDefault(require("react"));
 
-var _questionMarkIcon = require("kitten/components/icons/question-mark-icon");
+var _questionMarkIcon = require("../../components/icons/question-mark-icon");
 
-var _buttonIcon = require("kitten/components/buttons/button-icon");
+var _buttonIcon = require("../../components/buttons/button-icon");
 
 var ButtonQuestionMarkIcon = function ButtonQuestionMarkIcon(props) {
   return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({

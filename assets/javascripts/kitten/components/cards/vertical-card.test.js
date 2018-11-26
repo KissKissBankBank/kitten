@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { VerticalCard } from 'kitten/components/cards/vertical-card'
+import { VerticalCard } from '../../components/cards/vertical-card'
 
 describe('<VerticalCard />', () => {
   let component

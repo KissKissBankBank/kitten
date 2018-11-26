@@ -1,5 +1,5 @@
 import React from 'react'
-import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
+import { createRangeFromZeroTo } from '../../helpers/utils/range'
 
 describe('utils range', () => {
   describe('createRangeFromZeroTo range 2', () => {

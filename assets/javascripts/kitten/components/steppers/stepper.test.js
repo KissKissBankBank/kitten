@@ -1,10 +1,10 @@
 import React from 'react'
-import { Stepper } from 'kitten/components/steppers/stepper'
+import { Stepper } from './stepper'
 import {
   StepperIconDefault,
   StepperIconInProgress,
   StepperIconValidated,
-} from 'kitten/components/steppers/stepper-icon'
+} from './stepper-icon'
 
 const items = [
   {

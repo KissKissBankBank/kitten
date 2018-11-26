@@ -1,19 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
-import { mediaQueries } from 'kitten/hoc/media-queries'
+import { createRangeFromZeroTo } from '../../helpers/utils/range'
+import { mediaQueries } from '../../hoc/media-queries'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE,
-} from 'kitten/constants/grid-config'
-import ColorsConfig from 'kitten/constants/colors-config'
+} from '../../constants/grid-config'
+import ColorsConfig from '../../constants/colors-config'
 
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { ButtonIcon } from '../../components/buttons/button-icon'
+import { ArrowIcon } from '../../components/icons/arrow-icon'
 
-import { CarouselInner } from 'kitten/components/carousel/carousel-inner'
+import { CarouselInner } from '../../components/carousel/carousel-inner'
 
 export const getNumColumnsForWidth = (
   width,

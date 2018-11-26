@@ -4,7 +4,7 @@ import {
   KarlHugeVerticalStroke,
   KarlTinyVerticalStroke,
   KarlVerticalStroke,
-} from 'kitten/karl/layout/vertical-stroke'
+} from '../../../assets/javascripts/kitten/karl/layout/vertical-stroke'
 import Example from '../../app/example'
 
 export default () => {

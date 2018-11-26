@@ -1,5 +1,5 @@
 import React from 'react'
-import { TabBar } from 'kitten/components/navigation/tab-bar'
+import { TabBar } from '../../../assets/javascripts/kitten/components/navigation/tab-bar'
 import Example from '../../app/example'
 
 export default () => {

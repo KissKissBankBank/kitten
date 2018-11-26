@@ -23,19 +23,19 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _card = require("kitten/hoc/card");
+var _card = require("../../hoc/card");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _clockIcon = require("kitten/components/icons/clock-icon");
+var _clockIcon = require("../../components/icons/clock-icon");
 
-var _paragraph = require("kitten/components/typography/paragraph");
+var _paragraph = require("../../components/typography/paragraph");
 
-var _buttonIcon = require("kitten/components/buttons/button-icon");
+var _buttonIcon = require("../../components/buttons/button-icon");
 
-var _separator = require("kitten/components/layout/separator");
+var _separator = require("../../components/layout/separator");
 
-var _arrowIcon = require("kitten/components/icons/arrow-icon");
+var _arrowIcon = require("../../components/icons/arrow-icon");
 
 var ProjectCreatorCardComponent =
 /*#__PURE__*/

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
-import { LinkBox } from 'kitten/components/box/link-box'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { KarlExampleTitle } from 'kitten/karl/examples/title'
-import { Container } from 'kitten/components/grid/container'
-import { Marger } from 'kitten/components/layout/marger'
+import { LinkBox } from '../../components/box/link-box'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { KarlExampleTitle } from '../../karl/examples/title'
+import { Container } from '../../components/grid/container'
+import { Marger } from '../../components/layout/marger'
 
 export const KarlLinkBox = () => (
   <Fragment>

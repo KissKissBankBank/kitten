@@ -1,5 +1,5 @@
 import React from 'react'
-import { HorizontalNav } from 'kitten/components/navigation/horizontal-nav'
+import { HorizontalNav } from './horizontal-nav'
 
 describe('<HorizontalNav />', () => {
   const component = shallow(

@@ -27,19 +27,19 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _card = require("kitten/hoc/card");
+var _card = require("../../hoc/card");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _title = require("kitten/components/typography/title");
+var _title = require("../../components/typography/title");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _parser = require("kitten/helpers/utils/parser");
+var _parser = require("../../helpers/utils/parser");
 
-var _horizontalStroke = require("kitten/components/layout/horizontal-stroke");
+var _horizontalStroke = require("../../components/layout/horizontal-stroke");
 
 var SimpleCardComponent =
 /*#__PURE__*/

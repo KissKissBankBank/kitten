@@ -27,7 +27,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _stepperIcon = require("kitten/components/steppers/stepper-icon");
+var _stepperIcon = require("./stepper-icon");
 
 var iconTypeComponents = {
   default: _stepperIcon.StepperIconDefault,

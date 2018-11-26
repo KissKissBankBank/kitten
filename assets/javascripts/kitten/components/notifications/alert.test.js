@@ -1,7 +1,6 @@
 import React from 'react'
-import classNames from 'classnames'
 import sinon from 'sinon'
-import { Alert } from 'kitten/components/notifications/alert'
+import { Alert } from './alert'
 
 describe('<Alert />', () => {
   const sandbox = sinon.createSandbox()

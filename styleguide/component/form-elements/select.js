@@ -1,5 +1,5 @@
 import React from 'react'
-import { SelectWithState } from 'kitten/components/form/select-with-state'
+import { SelectWithState } from '../../../assets/javascripts/kitten/components/form/select-with-state'
 import Example from '../../app/example'
 
 export default () => {

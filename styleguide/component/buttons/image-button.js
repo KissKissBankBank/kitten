@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonImage } from 'kitten/components/buttons/button-image'
+import { ButtonImage } from '../../../assets/javascripts/kitten/components/buttons/button-image'
 import Example from '../../app/example'
 
 export default () => {

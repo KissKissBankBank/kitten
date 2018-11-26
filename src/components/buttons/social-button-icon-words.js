@@ -13,13 +13,13 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
-var _button = require("kitten/components/buttons/button");
+var _button = require("../../components/buttons/button");
 
-var _facebookIconWithBackground = require("kitten/components/icons/facebook-icon-with-background");
+var _facebookIconWithBackground = require("../../components/icons/facebook-icon-with-background");
 
-var _twitterIcon = require("kitten/components/icons/twitter-icon");
+var _twitterIcon = require("../../components/icons/twitter-icon");
 
-var _linkedinIcon = require("kitten/components/icons/linkedin-icon");
+var _linkedinIcon = require("../../components/icons/linkedin-icon");
 
 var FacebookButtonIconWords = function FacebookButtonIconWords(_ref) {
   var children = _ref.children,

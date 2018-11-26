@@ -29,11 +29,11 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _radium = _interopRequireWildcard(require("radium"));
 
-var _arrowIcon = require("kitten/components/icons/arrow-icon");
+var _arrowIcon = require("../../components/icons/arrow-icon");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var _typography = require("kitten/helpers/utils/typography");
+var _typography = require("../../helpers/utils/typography");
 
 var ArrowIcon = (0, _radium.default)(_arrowIcon.ArrowIcon);
 

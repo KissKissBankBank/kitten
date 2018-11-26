@@ -1,13 +1,13 @@
 import React from 'react'
 import Cropper from 'react-cropper'
-import { Marger } from 'kitten/components/layout/marger'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Text } from 'kitten/components/typography/text'
-import { Label } from 'kitten/components/form/label'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { SimpleUploader } from 'kitten/components/uploaders/simple-uploader'
-import { Slider } from 'kitten/components/form/slider'
-import { domElementHelper } from 'kitten/helpers/dom/element-helper'
+import { Marger } from '../../components/layout/marger'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Text } from '../../components/typography/text'
+import { Label } from '../../components/form/label'
+import { Paragraph } from '../../components/typography/paragraph'
+import { SimpleUploader } from '../../components/uploaders/simple-uploader'
+import { Slider } from '../../components/form/slider'
+import { domElementHelper } from '../../helpers/dom/element-helper'
 
 export class ImageCropper extends React.Component {
   constructor(props) {
@@ -105,7 +105,7 @@ export class ImageCropper extends React.Component {
     const imageData = this.refs.cropper.getImageData()
     const naturalWidth = imageData.naturalWidth
     const width = imageData.width
-    const ratio = width / naturalWidth * 100
+    const ratio = (width / naturalWidth) * 100
     const min = this.props.sliderMin + ratio
     const max = this.props.sliderMax + ratio
 
@@ -164,31 +164,30 @@ export class ImageCropper extends React.Component {
             this.cropperContainer = node
           }}
         >
-          {this.state.cropperWidth &&
-            this.state.cropperHeight && (
-              <Cropper
-                // This helps unmount and remount a new cropper to keep
-                // the component responsive.
-                key={`cropper-${this.state.cropperHeight}`}
-                ref="cropper"
-                className="k-Cropper"
-                src={this.state.imageSrc}
-                style={styles}
-                aspectRatio={this.props.aspectRatio}
-                viewMode={3}
-                guides={false}
-                modal={false}
-                autoCropArea={1}
-                cropBoxMovable={false}
-                cropBoxResizable={false}
-                toggleDragModeOnDblclick={false}
-                zoomOnTouch={false}
-                zoomOnWheel={false}
-                dragMode={dragMode}
-                crop={this.handleCrop}
-                ready={this.handleReady}
-              />
-            )}
+          {this.state.cropperWidth && this.state.cropperHeight && (
+            <Cropper
+              // This helps unmount and remount a new cropper to keep
+              // the component responsive.
+              key={`cropper-${this.state.cropperHeight}`}
+              ref="cropper"
+              className="k-Cropper"
+              src={this.state.imageSrc}
+              style={styles}
+              aspectRatio={this.props.aspectRatio}
+              viewMode={3}
+              guides={false}
+              modal={false}
+              autoCropArea={1}
+              cropBoxMovable={false}
+              cropBoxResizable={false}
+              toggleDragModeOnDblclick={false}
+              zoomOnTouch={false}
+              zoomOnWheel={false}
+              dragMode={dragMode}
+              crop={this.handleCrop}
+              ready={this.handleReady}
+            />
+          )}
         </div>
       </Marger>
     )

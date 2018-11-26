@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Grid, GridCol } from '../../components/grid/grid'
 
 describe('<Grid />', () => {
   const grid = shallow(

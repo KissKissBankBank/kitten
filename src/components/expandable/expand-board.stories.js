@@ -12,15 +12,15 @@ var _react3 = require("@storybook/addon-knobs/react");
 
 var _radium = require("radium");
 
-var _expandBoard = require("kitten/components/expandable/expand-board");
+var _expandBoard = require("../../components/expandable/expand-board");
 
-var _list = require("kitten/components/lists/list");
+var _list = require("../../components/lists/list");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
 (0, _react2.storiesOf)('Expandable', module).addDecorator(_react3.withKnobs).add('ExpandBoard', (0, _addonInfo.withInfo)('The ExpandBoard is a container that can expand on click. It can accept any content.')(function () {
   return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {

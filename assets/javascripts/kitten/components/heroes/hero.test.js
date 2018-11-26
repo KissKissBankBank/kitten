@@ -1,6 +1,6 @@
 import React from 'react'
-import { Hero } from 'kitten/components/heroes/hero'
-import { Container } from 'kitten/components/grid/container'
+import { Hero } from '../../components/heroes/hero'
+import { Container } from '../../components/grid/container'
 import { StyleRoot } from 'radium'
 
 describe('<Hero />', () => {

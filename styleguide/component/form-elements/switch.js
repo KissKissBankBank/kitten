@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch } from 'kitten/components/form/switch'
+import { Switch } from '../../../assets/javascripts/kitten/components/form/switch'
 import Example from '../../app/example'
 
 export default () => {

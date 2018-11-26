@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArticleCard } from 'kitten/components/cards/article-card'
+import { ArticleCard } from '../../../assets/javascripts/kitten/components/cards/article-card'
 import Example from '../../app/example'
 
 export default () => {

@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Container } from 'kitten/components/grid/container'
+import { Container } from '../../components/grid/container'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
-} from 'kitten/components/grid/grid'
-import { ScreenConfig } from 'kitten/constants/screen-config'
+} from '../../components/grid/grid'
+import { ScreenConfig } from '../../constants/screen-config'
 import {
   NUM_COLUMNS,
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE,
-} from 'kitten/constants/grid-config'
-import COLORS from 'kitten/constants/colors-config'
+} from '../../constants/grid-config'
+import COLORS from '../../constants/colors-config'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
@@ -119,22 +119,22 @@ const styles = {
     grid: {
       position: 'relative',
       zIndex: 1,
-      paddingTop: `${1 / NUM_COLUMNS * 100}vw`,
-      marginLeft: `${1 / NUM_COLUMNS * 100}%`,
+      paddingTop: `${(1 / NUM_COLUMNS) * 100}vw`,
+      marginLeft: `${(1 / NUM_COLUMNS) * 100}%`,
 
       left: {
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          paddingTop: `${8 / NUM_COLUMNS * 100}vw`,
+          paddingTop: `${(8 / NUM_COLUMNS) * 100}vw`,
           marginLeft: 0,
         },
       },
 
       right: {
-        marginLeft: `${5 / NUM_COLUMNS * 100}%`,
+        marginLeft: `${(5 / NUM_COLUMNS) * 100}%`,
 
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          paddingTop: `${8 / NUM_COLUMNS * 100}vw`,
-          marginLeft: `${2 / NUM_COLUMNS * 100}%`,
+          paddingTop: `${(8 / NUM_COLUMNS) * 100}vw`,
+          marginLeft: `${(2 / NUM_COLUMNS) * 100}%`,
         },
 
         [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {
@@ -144,7 +144,7 @@ const styles = {
 
       tiny: {
         [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-          paddingBottom: `${1 / 2 / NUM_COLUMNS * 100}vw`,
+          paddingBottom: `${(1 / 2 / NUM_COLUMNS) * 100}vw`,
         },
       },
     },
@@ -172,12 +172,12 @@ const styles = {
     },
 
     grid: {
-      marginLeft: `-${2 / NUM_COLUMNS * 100}%`,
-      paddingBottom: `${1 / 2 / NUM_COLUMNS * 100}vw`,
+      marginLeft: `-${(2 / NUM_COLUMNS) * 100}%`,
+      paddingBottom: `${(1 / 2 / NUM_COLUMNS) * 100}vw`,
 
       left: {
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginLeft: `-${10 / NUM_COLUMNS * 100}%`,
+          marginLeft: `-${(10 / NUM_COLUMNS) * 100}%`,
           paddingBottom: 0,
         },
 
@@ -187,10 +187,10 @@ const styles = {
       },
 
       right: {
-        marginLeft: `-${11 / NUM_COLUMNS * 100}%`,
+        marginLeft: `-${(11 / NUM_COLUMNS) * 100}%`,
 
         [`@media (max-width: ${ScreenConfig['M'].max}px)`]: {
-          marginLeft: `-${12 / NUM_COLUMNS * 100}%`,
+          marginLeft: `-${(12 / NUM_COLUMNS) * 100}%`,
         },
 
         [`@media (max-width: ${ScreenConfig['XS'].max}px)`]: {

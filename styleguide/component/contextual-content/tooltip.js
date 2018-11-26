@@ -1,6 +1,6 @@
 import React from 'react'
-import { KarlLineWithTooltip } from 'kitten/karl/layout/line'
-import { QuestionMarkWithTooltip } from 'kitten/components/tooltips/question-mark-with-tooltip'
+import { KarlLineWithTooltip } from '../../../assets/javascripts/kitten/karl/layout/line'
+import { QuestionMarkWithTooltip } from '../../../assets/javascripts/kitten/components/tooltips/question-mark-with-tooltip'
 import Example from '../../app/example'
 
 export default () => {

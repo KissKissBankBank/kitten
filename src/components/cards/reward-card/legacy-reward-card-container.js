@@ -31,25 +31,25 @@ var _radium = _interopRequireWildcard(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../../components/layout/marger");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../../components/grid/grid");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../../constants/screen-config");
 
-var _content = require("kitten/components/cards/reward-card/content");
+var _content = require("../../../components/cards/reward-card/content");
 
-var _infos = require("kitten/components/cards/reward-card/infos");
+var _infos = require("../../../components/cards/reward-card/infos");
 
-var _image2 = require("kitten/components/cards/reward-card/image");
+var _image2 = require("../../../components/cards/reward-card/image");
 
-var _action = require("kitten/components/cards/reward-card/action");
+var _action = require("../../../components/cards/reward-card/action");
 
-var _deprecated = require("kitten/helpers/utils/deprecated");
+var _deprecated = require("../../../helpers/utils/deprecated");
 
-var _mediaQueries = require("kitten/hoc/media-queries");
+var _mediaQueries = require("../../../hoc/media-queries");
 
 var _paddings, _image, _lists, _paddings2;
 
@@ -174,7 +174,7 @@ function (_Component) {
       var withImageOnTinyVersion = shouldDisplayImage && this.isTinyVersion();
       if (!titleAmount) return null;
       return _react.default.createElement(_deprecated.Deprecated, {
-        warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/"
+        warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
       }, _react.default.createElement(_radium.StyleRoot, (0, _extends2.default)({}, others, {
         style: cardStyles
       }), _react.default.createElement(_marger.Marger, {

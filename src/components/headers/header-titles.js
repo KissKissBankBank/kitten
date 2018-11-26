@@ -25,7 +25,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _header = require("kitten/components/headers/header");
+var _header = require("../../components/headers/header");
 
 var HeaderTitles =
 /*#__PURE__*/

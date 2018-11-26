@@ -29,7 +29,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactPlacesAutocomplete = _interopRequireWildcard(require("react-places-autocomplete"));
 
-var _locationIcon = require("kitten/components/icons/location-icon");
+var _locationIcon = require("../../components/icons/location-icon");
 
 // Via "https://github.com/kenny-hibino/react-places-autocomplete"
 // Make sure you include a script to the Google Maps places API.

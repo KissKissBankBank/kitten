@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, object } from '@storybook/addon-knobs/react'
 import { Comment } from './comment'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Grid, GridCol } from '../../components/grid/grid'
 
 storiesOf('Form/Comment', module)
   .addDecorator(withKnobs)

@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { styles } from 'kitten/components/cards/reward-card'
-import { Marger } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
-import { Button } from 'kitten/components/buttons/button'
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { Text } from 'kitten/components/typography/text'
-import { StarIcon } from 'kitten/components/icons/star-icon'
-import { Deprecated } from 'kitten/helpers/utils/deprecated'
+import { styles } from '../../../components/cards/reward-card'
+import { Marger } from '../../../components/layout/marger'
+import { Title } from '../../../components/typography/title'
+import { Button } from '../../../components/buttons/button'
+import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
+import { Paragraph } from '../../../components/typography/paragraph'
+import { Text } from '../../../components/typography/text'
+import { StarIcon } from '../../../components/icons/star-icon'
+import { Deprecated } from '../../../helpers/utils/deprecated'
 
 const RewardCardContentBase = ({
   titleAmount,
@@ -25,7 +25,7 @@ const RewardCardContentBase = ({
   const descriptionStyle = [isDisabled && styles.disabled]
 
   return (
-    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
       <div style={descriptionStyle} disabled={isDisabled}>
         {starred && (
           <Marger bottom="2">

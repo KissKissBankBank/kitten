@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlPaginationExamples } from 'kitten/karl/navigation/pagination'
+import { KarlPaginationExamples } from '../../../assets/javascripts/kitten/karl/navigation/pagination'
 import Example from '../../app/example'
 
 export default () => {

@@ -20,7 +20,7 @@ import ContextualContent from './component/contextual-content'
 import Layout from './component/layout'
 import Carousel from './component/carousel'
 import Media from './component/media'
-import { DevGrid } from 'kitten/components/dev/dev-grid'
+import { DevGrid } from '../assets/javascripts/kitten/components/dev/dev-grid'
 
 render(
   <Fragment>

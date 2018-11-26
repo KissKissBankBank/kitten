@@ -1,8 +1,8 @@
 import React, { Fragment, Component } from 'react'
-import { CartRewardCard } from 'kitten/components/cards/cart-reward-card'
-import { Container } from 'kitten/components/grid/container'
-import { Marger } from 'kitten/components/layout/marger'
-import { KarlExampleTitle } from 'kitten/karl/examples/title'
+import { CartRewardCard } from '../../components/cards/cart-reward-card'
+import { Container } from '../../components/grid/container'
+import { Marger } from '../../components/layout/marger'
+import { KarlExampleTitle } from '../../karl/examples/title'
 
 export class KarlCartRewardCard extends Component {
   handleAfterClose = () => {

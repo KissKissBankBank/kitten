@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import { NavList } from 'kitten/components/lists/nav-list'
-import { TagButton } from 'kitten/components/buttons/tag-button'
-import { ScrollableContainer } from 'kitten/components/grid/scrollable-container'
+import { NavList } from '../../components/lists/nav-list'
+import { TagButton } from '../../components/buttons/tag-button'
+import { ScrollableContainer } from '../../components/grid/scrollable-container'
 
 const items = [
   { key: '1', children: 'Example 1', href: '#example-1' },

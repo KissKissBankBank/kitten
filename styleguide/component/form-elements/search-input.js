@@ -1,5 +1,5 @@
 import React from 'react'
-import { Search } from 'kitten/components/form/search'
+import { Search } from '../../../assets/javascripts/kitten/components/form/search'
 import Example from '../../app/example'
 
 export default () => {
