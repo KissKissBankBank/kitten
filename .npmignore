@@ -14,7 +14,6 @@ buildspec.yml
 CodeBuildDockerfile
 Dockerfile
 Rakefile
-.stylelintrc
 public
 webpack.config.build.js
 webpack.config.js
