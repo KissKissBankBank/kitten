@@ -29,19 +29,19 @@ var _radium = _interopRequireWildcard(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _arrowIcon = require("kitten/components/icons/arrow-icon");
+var _arrowIcon = require("../../components/icons/arrow-icon");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../constants/screen-config");
 
-var _mediaQueries = require("kitten/hoc/media-queries");
+var _mediaQueries = require("../../hoc/media-queries");
 
-var _typography = require("kitten/helpers/utils/typography");
+var _typography = require("../../helpers/utils/typography");
 
 var _navigation;
 

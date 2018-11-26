@@ -4,7 +4,7 @@ import {
   KarlLinkListDark,
   KarlLinkListItemsLight,
   KarlLinkListSelectedItem,
-} from 'kitten/karl/links/link-list'
+} from '../../../assets/javascripts/kitten/karl/links/link-list'
 import Example from '../../app/example'
 
 export default () => {

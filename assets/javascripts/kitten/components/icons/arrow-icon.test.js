@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
+import { ArrowIcon } from '../../components/icons/arrow-icon'
 
 describe('<ArrowIcon />', () => {
   describe('by default (deprecated)', () => {

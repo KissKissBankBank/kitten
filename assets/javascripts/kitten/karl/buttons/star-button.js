@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { StarIcon } from 'kitten/components/icons/star-icon'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import COLORS from 'kitten/constants/colors-config'
+import { StarIcon } from '../../components/icons/star-icon'
+import { ButtonIcon } from '../../components/buttons/button-icon'
+import COLORS from '../../constants/colors-config'
 
 export class KarlStarButton extends Component {
   static propTypes = {

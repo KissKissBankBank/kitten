@@ -15,13 +15,13 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../../components/layout/marger");
 
-var _manageContribution = require("kitten/components/cards/reward-card/manage-contribution");
+var _manageContribution = require("../../../components/cards/reward-card/manage-contribution");
 
-var _button = require("kitten/components/cards/reward-card/button");
+var _button = require("../../../components/cards/reward-card/button");
 
-var _deprecated = require("kitten/helpers/utils/deprecated");
+var _deprecated = require("../../../helpers/utils/deprecated");
 
 var RewardCardAction = function RewardCardAction(_ref) {
   var manageContributionDescription = _ref.manageContributionDescription,
@@ -38,7 +38,7 @@ var RewardCardAction = function RewardCardAction(_ref) {
   var hasActionContent = buttonLabel || manageContributionDescription;
   if (!hasActionContent) return null;
   return _react.default.createElement(_deprecated.Deprecated, {
-    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/"
+    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
   }, _react.default.createElement(_react.Fragment, null, manageContributionDescription && _react.default.createElement(_marger.Marger, {
     top: topMargin,
     bottom: !manageContributionDescription ? 0 : 2
@@ -75,7 +75,7 @@ var RewardCardActionOnMOrMore = function RewardCardActionOnMOrMore(_ref2) {
   var hasActionContent = buttonLabel || manageContributionDescription;
   if (!hasActionContent) return null;
   return _react.default.createElement(_deprecated.Deprecated, {
-    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/"
+    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
   }, _react.default.createElement(_marger.Marger, {
     top: "3"
   }, _react.default.createElement(_button.RewardCardButton, {

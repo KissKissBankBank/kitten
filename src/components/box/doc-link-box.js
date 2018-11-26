@@ -23,7 +23,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _linkBox = _interopRequireDefault(require("./link-box"));
 
-var _linkBoxIllustration = require("kitten/components/illustrations/link-box-illustration");
+var _linkBoxIllustration = require("../../components/illustrations/link-box-illustration");
 
 var DocLinkBox =
 /*#__PURE__*/

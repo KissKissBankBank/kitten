@@ -1,5 +1,5 @@
 import React from 'react'
-import { EmbedPlayer } from 'kitten/components/media/embed-player'
+import { EmbedPlayer } from '../../../assets/javascripts/kitten/components/media/embed-player'
 import Example from '../../app/example'
 
 export default () => {

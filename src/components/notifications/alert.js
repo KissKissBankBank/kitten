@@ -29,9 +29,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _closeButton = require("kitten/components/buttons/close-button");
+var _closeButton = require("../../components/buttons/close-button");
 
-var _elementHelper = require("kitten/helpers/dom/element-helper");
+var _elementHelper = require("../../helpers/dom/element-helper");
 
 var Alert =
 /*#__PURE__*/

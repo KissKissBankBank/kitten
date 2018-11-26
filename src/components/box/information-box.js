@@ -27,9 +27,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _title = require("kitten/components/typography/title");
+var _title = require("../../components/typography/title");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
 var InformationBox =
 /*#__PURE__*/

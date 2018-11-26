@@ -23,9 +23,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _elementHelper = require("kitten/helpers/dom/element-helper");
+var _elementHelper = require("../../helpers/dom/element-helper");
 
-var _grabberIcon = require("kitten/components/icons/grabber-icon");
+var _grabberIcon = require("../../components/icons/grabber-icon");
 
 // DOM for the Slider component. See Slider for state and
 var SliderBar =

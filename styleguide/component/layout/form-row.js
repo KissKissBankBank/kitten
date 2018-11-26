@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlFormRow } from 'kitten/karl/form/form-row'
+import { KarlFormRow } from '../../../assets/javascripts/kitten/karl/form/form-row'
 import Example from '../../app/example'
 
 export default () => {

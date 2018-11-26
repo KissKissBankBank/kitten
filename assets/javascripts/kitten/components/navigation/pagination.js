@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { ArrowIcon as ArrowIconBase } from 'kitten/components/icons/arrow-icon'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import COLORS from 'kitten/constants/colors-config'
-import { parseHtml } from 'kitten/helpers/utils/parser'
-import { mediaQueries } from 'kitten/hoc/media-queries'
+import { Text as TextBase } from '../../components/typography/text'
+import { ArrowIcon as ArrowIconBase } from '../../components/icons/arrow-icon'
+import { ScreenConfig } from '../../constants/screen-config'
+import COLORS from '../../constants/colors-config'
+import { parseHtml } from '../../helpers/utils/parser'
+import { mediaQueries } from '../../hoc/media-queries'
 
 const Text = Radium(TextBase)
 const ArrowIcon = Radium(ArrowIconBase)
@@ -178,8 +178,12 @@ class PaginationBase extends Component {
 
     const number =
       direction == 'left'
-        ? currentPage == 1 ? 1 : currentPage - 1
-        : currentPage == totalPages ? totalPages : currentPage + 1
+        ? currentPage == 1
+          ? 1
+          : currentPage - 1
+        : currentPage == totalPages
+        ? totalPages
+        : currentPage + 1
 
     return (
       <li style={styleList}>

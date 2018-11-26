@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Radium, { StyleRoot } from 'radium'
-import { ArrowIcon as ArrowIconBase } from 'kitten/components/icons/arrow-icon'
-import COLORS from 'kitten/constants/colors-config'
-import { pxToRem } from 'kitten/helpers/utils/typography'
+import { ArrowIcon as ArrowIconBase } from '../../components/icons/arrow-icon'
+import COLORS from '../../constants/colors-config'
+import { pxToRem } from '../../helpers/utils/typography'
 
 const ArrowIcon = Radium(ArrowIconBase)
 

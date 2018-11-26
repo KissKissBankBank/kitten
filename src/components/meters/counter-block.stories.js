@@ -10,11 +10,11 @@ var _addonInfo = require("@storybook/addon-info");
 
 var _react3 = require("@storybook/addon-knobs/react");
 
-var _counterBlock = require("kitten/components/meters/counter-block");
+var _counterBlock = require("../../components/meters/counter-block");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
 var createMockMediaMatcher = function createMockMediaMatcher(matches) {
   return function () {

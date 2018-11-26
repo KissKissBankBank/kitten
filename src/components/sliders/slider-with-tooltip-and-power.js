@@ -23,11 +23,11 @@ var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/hel
 
 var _react = _interopRequireDefault(require("react"));
 
-var _sliderBar = require("kitten/components/sliders/slider-bar");
+var _sliderBar = require("../../components/sliders/slider-bar");
 
-var _sliderKeyDownHandler = require("kitten/handlers/sliders/slider-key-down-handler");
+var _sliderKeyDownHandler = require("../../handlers/sliders/slider-key-down-handler");
 
-var _sliderTooltip = require("kitten/components/sliders/slider-tooltip");
+var _sliderTooltip = require("../../components/sliders/slider-tooltip");
 
 var SliderWithTooltipAndPower =
 /*#__PURE__*/

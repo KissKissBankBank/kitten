@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { TextInputAndSelect } from 'kitten/components/form/text-input-and-select'
+import { TextInputAndSelect } from '../../components/form/text-input-and-select'
 
 export const FormAmountAndCurrency = props => {
   const {

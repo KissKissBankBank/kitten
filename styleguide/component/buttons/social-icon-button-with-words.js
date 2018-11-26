@@ -3,7 +3,7 @@ import {
   KarlFacebookButtonIconWords,
   KarlLinkedinButtonIconWords,
   KarlTwitterButtonIconWords,
-} from 'kitten/karl/buttons/social-button-icon-words'
+} from '../../../assets/javascripts/kitten/karl/buttons/social-button-icon-words'
 import Example from '../../app/example'
 
 export default () => {

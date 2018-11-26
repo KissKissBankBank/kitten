@@ -25,21 +25,21 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactCropper = _interopRequireDefault(require("react-cropper"));
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _label = require("kitten/components/form/label");
+var _label = require("../../components/form/label");
 
-var _paragraph = require("kitten/components/typography/paragraph");
+var _paragraph = require("../../components/typography/paragraph");
 
-var _simpleUploader = require("kitten/components/uploaders/simple-uploader");
+var _simpleUploader = require("../../components/uploaders/simple-uploader");
 
-var _slider = require("kitten/components/form/slider");
+var _slider = require("../../components/form/slider");
 
-var _elementHelper = require("kitten/helpers/dom/element-helper");
+var _elementHelper = require("../../helpers/dom/element-helper");
 
 var ImageCropper =
 /*#__PURE__*/

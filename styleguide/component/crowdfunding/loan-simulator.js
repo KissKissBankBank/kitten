@@ -4,7 +4,7 @@ import {
   KarlLoanSimulatorWithCommission,
   KarlLoanSimulatorWithError,
   KarlLoanSimulatorWithfeesExemption,
-} from 'kitten/karl/organisms/loan-simulator'
+} from '../../../assets/javascripts/kitten/karl/organisms/loan-simulator'
 import Example from '../../app/example'
 
 export default () => {

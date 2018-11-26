@@ -12,13 +12,13 @@ var _react3 = require("@storybook/addon-knobs/react");
 
 var _backerCard = require("./backer-card");
 
-var _container = require("kitten/components/grid/container");
+var _container = require("../../components/grid/container");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
 var Description = function Description() {
   return _react.default.createElement(_react.Fragment, null, "Lorem", ' ', _react.default.createElement(_text.Text, {

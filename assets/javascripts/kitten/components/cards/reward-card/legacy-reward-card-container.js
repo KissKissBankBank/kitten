@@ -1,22 +1,22 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from 'kitten/components/layout/marger'
+import { Marger } from '../../../components/layout/marger'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
-} from 'kitten/components/grid/grid'
-import COLORS from 'kitten/constants/colors-config'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { RewardCardContent as LegacyRewardCardContent } from 'kitten/components/cards/reward-card/content'
-import { RewardCardInfos } from 'kitten/components/cards/reward-card/infos'
-import { RewardCardImage } from 'kitten/components/cards/reward-card/image'
+} from '../../../components/grid/grid'
+import COLORS from '../../../constants/colors-config'
+import { ScreenConfig } from '../../../constants/screen-config'
+import { RewardCardContent as LegacyRewardCardContent } from '../../../components/cards/reward-card/content'
+import { RewardCardInfos } from '../../../components/cards/reward-card/infos'
+import { RewardCardImage } from '../../../components/cards/reward-card/image'
 import {
   RewardCardAction,
   RewardCardActionOnMOrMore,
-} from 'kitten/components/cards/reward-card/action'
-import { Deprecated } from 'kitten/helpers/utils/deprecated'
-import { mediaQueries } from 'kitten/hoc/media-queries'
+} from '../../../components/cards/reward-card/action'
+import { Deprecated } from '../../../helpers/utils/deprecated'
+import { mediaQueries } from '../../../hoc/media-queries'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)
@@ -131,7 +131,7 @@ class LegacyRewardCardContainerBase extends Component {
     if (!titleAmount) return null
 
     return (
-      <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+      <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
         <StyleRoot {...others} style={cardStyles}>
           <Marger
             bottom={this.isSOrLessVersion() ? 0 : 4}

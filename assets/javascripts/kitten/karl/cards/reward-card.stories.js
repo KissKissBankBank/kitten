@@ -9,17 +9,17 @@ import {
   object,
 } from '@storybook/addon-knobs/react'
 import { StyleRoot } from 'radium'
-import { RewardCard } from 'kitten/components/cards/reward-card'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Marger } from 'kitten/components/layout/marger'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { pxToRem } from 'kitten/helpers/utils/typography'
+import { RewardCard } from '../../components/cards/reward-card'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Marger } from '../../components/layout/marger'
+import { Text as TextBase } from '../../components/typography/text'
+import { pxToRem } from '../../helpers/utils/typography'
 import Radium from 'radium'
-import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
-import COLORS from 'kitten/constants/colors-config'
-import { List } from 'kitten/components/lists/list'
-import { ExpandBoard } from 'kitten/components/expandable/expand-board'
+import { Button as ButtonBase } from '../../components/buttons/button'
+import { Paragraph as ParagraphBase } from '../../components/typography/paragraph'
+import COLORS from '../../constants/colors-config'
+import { List } from '../../components/lists/list'
+import { ExpandBoard } from '../../components/expandable/expand-board'
 
 const Button = Radium(ButtonBase)
 const Paragraph = Radium(ParagraphBase)

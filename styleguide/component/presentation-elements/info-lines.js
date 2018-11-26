@@ -1,5 +1,5 @@
 import React from 'react'
-import { InfoLines } from 'kitten/components/lines/info-lines'
+import { InfoLines } from '../../../assets/javascripts/kitten/components/lines/info-lines'
 import Example from '../../app/example'
 
 export default () => {

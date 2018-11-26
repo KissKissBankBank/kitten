@@ -11,13 +11,13 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _react = _interopRequireDefault(require("react"));
 
-var _uploader = require("kitten/components/uploaders/uploader");
+var _uploader = require("../../components/uploaders/uploader");
 
-var _button = require("kitten/components/buttons/button");
+var _button = require("../../components/buttons/button");
 
-var _buttonIcon = require("kitten/components/buttons/button-icon");
+var _buttonIcon = require("../../components/buttons/button-icon");
 
-var _crossIcon = require("kitten/components/icons/cross-icon");
+var _crossIcon = require("../../components/icons/cross-icon");
 
 var Theme = function Theme(props) {
   var handleClick = props.disabled ? null : props.onCancel;

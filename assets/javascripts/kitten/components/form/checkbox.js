@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { Text } from 'kitten/components/typography/text'
+import { Text } from '../../components/typography/text'
 
 export class Checkbox extends Component {
   render() {

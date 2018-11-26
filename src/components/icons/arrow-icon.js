@@ -33,9 +33,9 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _deprecated = require("kitten/helpers/utils/deprecated");
+var _deprecated = require("../../helpers/utils/deprecated");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
 var DeprecatedArrowIconSvgBase =
 /*#__PURE__*/

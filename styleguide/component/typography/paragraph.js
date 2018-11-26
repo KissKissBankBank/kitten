@@ -5,7 +5,7 @@ import {
   KarlParagraphSecondary,
   KarlParagraphTertiary,
   KarlParagraphWithLink,
-} from 'kitten/karl/typography/paragraph'
+} from '../../../assets/javascripts/kitten/karl/typography/paragraph'
 import Example from '../../app/example'
 
 export default () => {

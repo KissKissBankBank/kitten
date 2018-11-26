@@ -1,10 +1,9 @@
 import React from 'react'
-import { Popover } from 'kitten/components/popovers/popover'
-import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
-import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
-import { Button } from 'kitten/components/buttons/button'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
+import { CallToActionPopover } from '../../components/popovers/call-to-action-popover'
+import { LoudspeakerIllustration } from '../../components/illustrations/loudspeaker-illustration'
+import { Button } from '../../components/buttons/button'
+import { Title } from '../../components/typography/title'
+import { Paragraph } from '../../components/typography/paragraph'
 
 describe('<CallToActionPopover />', () => {
   describe('by default', () => {

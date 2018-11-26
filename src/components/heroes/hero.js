@@ -27,15 +27,15 @@ var _radium = _interopRequireDefault(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _container = require("kitten/components/grid/container");
+var _container = require("../../components/grid/container");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../constants/screen-config");
 
-var _gridConfig = require("kitten/constants/grid-config");
+var _gridConfig = require("../../constants/grid-config");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
 var _right2, _content, _left3, _right3, _image;
 

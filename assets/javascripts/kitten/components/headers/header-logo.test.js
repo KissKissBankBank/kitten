@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeaderLogo } from 'kitten/components/headers/header-logo'
+import { HeaderLogo } from './header-logo'
 
 describe('<HeaderLogo />', () => {
   const logo = shallow(<HeaderLogo />)

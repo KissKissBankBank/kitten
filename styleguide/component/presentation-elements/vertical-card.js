@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlVerticalCard } from 'kitten/karl/cards/vertical-card'
+import { KarlVerticalCard } from '../../../assets/javascripts/kitten/karl/cards/vertical-card'
 
 export default () => {
   return (

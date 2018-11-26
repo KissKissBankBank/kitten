@@ -1,7 +1,7 @@
 import React from 'react'
-import { KarlLoaderInButton } from 'kitten/karl/loaders/karl-loaders'
-import { Loader } from 'kitten/components/loaders/loader'
-import { LoaderWithParagraph } from 'kitten/components/loaders/loader-with-paragraph'
+import { KarlLoaderInButton } from '../../../assets/javascripts/kitten/karl/loaders/karl-loaders'
+import { Loader } from '../../../assets/javascripts/kitten/components/loaders/loader'
+import { LoaderWithParagraph } from '../../../assets/javascripts/kitten/components/loaders/loader-with-paragraph'
 import Example from '../../app/example'
 
 export default () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'kitten/components/typography/text'
+import { Text } from './text'
 
 describe('<Text />', () => {
   describe('by default', () => {

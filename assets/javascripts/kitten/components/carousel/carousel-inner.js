@@ -6,12 +6,11 @@ if (typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill()
 }
 
-import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
-import { cssSupports } from 'kitten/helpers/utils/feature-detection'
-import { CarouselPage } from 'kitten/components/carousel/carousel-page'
+import { createRangeFromZeroTo } from '../../helpers/utils/range'
+import { cssSupports } from '../../helpers/utils/feature-detection'
+import { CarouselPage } from '../../components/carousel/carousel-page'
 
 const supportScrollSnap = cssSupports('scroll-snap-type: mandatory')
-const supportScrollSmooth = cssSupports('scroll-behavior: smooth')
 
 // inspired by https://github.com/cferdinandi/scrollStop
 const scrollStop = callback => {
@@ -39,9 +38,8 @@ const scrollStop = callback => {
 }
 
 const getClosest = (counts, goal) => {
-  return counts.reduce(
-    (prev, curr) =>
-      Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev,
+  return counts.reduce((prev, curr) =>
+    Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev,
   )
 }
 

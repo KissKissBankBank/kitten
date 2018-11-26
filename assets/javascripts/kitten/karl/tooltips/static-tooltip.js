@@ -1,7 +1,7 @@
 import React from 'react'
-import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
-import { Button } from 'kitten/components/buttons/button'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { StaticTooltip } from '../../components/tooltips/static-tooltip'
+import { Button } from '../../components/buttons/button'
+import { Grid, GridCol } from '../../components/grid/grid'
 
 export const KarlStaticTooltip = props => {
   return (

@@ -27,11 +27,11 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _emitter = _interopRequireDefault(require("kitten/helpers/utils/emitter"));
+var _emitter = _interopRequireDefault(require("../../helpers/utils/emitter"));
 
-var _dropdownButton = require("kitten/components/dropdowns/dropdown-button");
+var _dropdownButton = require("../../components/dropdowns/dropdown-button");
 
-var _elementHelper = _interopRequireDefault(require("kitten/helpers/dom/element-helper"));
+var _elementHelper = _interopRequireDefault(require("../../helpers/dom/element-helper"));
 
 var Dropdown =
 /*#__PURE__*/

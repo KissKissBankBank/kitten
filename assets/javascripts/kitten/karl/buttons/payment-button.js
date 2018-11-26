@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { RadioButton } from 'kitten/components/form/radio-button'
-import { TagButton } from 'kitten/components/buttons/tag-button'
-import { VisaIcon } from 'kitten/components/icons/visa-icon'
-import { MasterCardIcon } from 'kitten/components/icons/mastercard-icon'
-import { CbIcon } from 'kitten/components/icons/cb-icon'
-import { Line } from 'kitten/components/layout/line'
+import { RadioButton } from '../../components/form/radio-button'
+import { TagButton } from '../../components/buttons/tag-button'
+import { VisaIcon } from '../../components/icons/visa-icon'
+import { MasterCardIcon } from '../../components/icons/mastercard-icon'
+import { CbIcon } from '../../components/icons/cb-icon'
+import { Line } from '../../components/layout/line'
 
 const paymentButtonWrapper = (WrappedComponent, props) => {
   return class PaymentButtonWrapper extends Component {

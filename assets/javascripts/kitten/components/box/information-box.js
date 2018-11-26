@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { Title } from 'kitten/components/typography/title'
-import { Marger } from 'kitten/components/layout/marger'
+import { Title } from '../../components/typography/title'
+import { Marger } from '../../components/layout/marger'
 
 export class InformationBox extends Component {
   render() {

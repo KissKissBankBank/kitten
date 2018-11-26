@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlSeparator } from 'kitten/karl/layout/separator'
+import { KarlSeparator } from '../../assets/javascripts/kitten/karl/layout/separator'
 
 export default ({ title, id, component: Comp }) => {
   return (

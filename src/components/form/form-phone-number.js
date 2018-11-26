@@ -13,7 +13,7 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
-var _textInputAndSelect = require("kitten/components/form/text-input-and-select");
+var _textInputAndSelect = require("../../components/form/text-input-and-select");
 
 var FormPhoneNumber = function FormPhoneNumber(props) {
   var areaOptions = props.areaOptions,

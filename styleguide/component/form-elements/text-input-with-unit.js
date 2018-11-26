@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextInputWithUnit } from 'kitten/components/form/text-input-with-unit'
+import { TextInputWithUnit } from '../../../assets/javascripts/kitten/components/form/text-input-with-unit'
 import Example from '../../app/example'
 
 export default () => {

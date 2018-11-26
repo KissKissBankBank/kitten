@@ -1,6 +1,6 @@
 import React from 'react'
-import { KarlCheckboxError } from 'kitten/karl/form/checkbox'
-import { Checkbox } from 'kitten/components/form/checkbox'
+import { KarlCheckboxError } from '../../../assets/javascripts/kitten/karl/form/checkbox'
+import { Checkbox } from '../../../assets/javascripts/kitten/components/form/checkbox'
 import Example from '../../app/example'
 
 export default () => {

@@ -15,15 +15,15 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _radium = _interopRequireDefault(require("radium"));
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../../components/grid/grid");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../../components/typography/text");
 
-var _checkedIcon = require("kitten/components/cards/reward-card/checked-icon");
+var _checkedIcon = require("../../../components/cards/reward-card/checked-icon");
 
-var _rewardCard = require("kitten/components/cards/reward-card");
+var _rewardCard = require("../../../components/cards/reward-card");
 
-var _deprecated = require("kitten/helpers/utils/deprecated");
+var _deprecated = require("../../../helpers/utils/deprecated");
 
 var Grid = (0, _radium.default)(_grid.Grid);
 
@@ -38,7 +38,7 @@ var ManageContributionBase = function ManageContributionBase(_ref) {
   if (isTinyVersion && isDisabled) return null;
   var choiceButtonPaddings = isTinyVersion ? _rewardCard.styles.choiceButton.paddings.tinyVersion : _rewardCard.styles.choiceButton.paddings;
   return _react.default.createElement(_deprecated.Deprecated, {
-    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/"
+    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
   }, _react.default.createElement(_react.Fragment, null, isSOrLessVersion && _react.default.createElement(Grid, {
     style: choiceButtonPaddings
   }, _react.default.createElement(_grid.GridCol, null, _react.default.createElement("div", {

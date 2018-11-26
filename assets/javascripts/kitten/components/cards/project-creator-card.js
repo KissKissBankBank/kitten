@@ -1,12 +1,12 @@
 import React from 'react'
 import classNames from 'classnames'
-import { card } from 'kitten/hoc/card'
-import { Marger } from 'kitten/components/layout/marger'
-import { ClockIcon } from 'kitten/components/icons/clock-icon'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { Separator } from 'kitten/components/layout/separator'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
+import { card } from '../../hoc/card'
+import { Marger } from '../../components/layout/marger'
+import { ClockIcon } from '../../components/icons/clock-icon'
+import { Paragraph } from '../../components/typography/paragraph'
+import { ButtonIcon } from '../../components/buttons/button-icon'
+import { Separator } from '../../components/layout/separator'
+import { ArrowIcon } from '../../components/icons/arrow-icon'
 
 class ProjectCreatorCardComponent extends React.Component {
   renderDate() {

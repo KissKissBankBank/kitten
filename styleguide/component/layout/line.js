@@ -2,7 +2,7 @@ import React from 'react'
 import {
   KarlLineWithTooltip,
   KarlLineWithBigHeart,
-} from 'kitten/karl/layout/line'
+} from '../../../assets/javascripts/kitten/karl/layout/line'
 import Example from '../../app/example'
 
 export default () => {

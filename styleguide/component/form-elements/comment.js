@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlComment, KarlCommentForm } from 'kitten/karl/form/comment'
+import { KarlComment, KarlCommentForm } from '../../../assets/javascripts/kitten/karl/form/comment'
 
 export default () => {
   return (

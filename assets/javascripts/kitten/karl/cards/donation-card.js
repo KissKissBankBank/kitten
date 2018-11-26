@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
-import { DonationCard } from 'kitten/components/cards/donation-card'
-import { KarlExampleTitle } from 'kitten/karl/examples/title'
-import { Container } from 'kitten/components/grid/container'
-import { Marger } from 'kitten/components/layout/marger'
+import { DonationCard } from '../../components/cards/donation-card'
+import { KarlExampleTitle } from '../../karl/examples/title'
+import { Container } from '../../components/grid/container'
+import { Marger } from '../../components/layout/marger'
 
 export const KarlDonationCard = () => (
   <Fragment>

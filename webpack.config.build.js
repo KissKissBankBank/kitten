@@ -7,7 +7,6 @@ module.exports = {
   resolve: {
     extensions: ['.scss', '.js', '.json'],
     alias: {
-      kitten: path.join(__dirname, './assets/javascripts/kitten'),
       icons: path.join(__dirname, './assets/images/icons')
     }
   },

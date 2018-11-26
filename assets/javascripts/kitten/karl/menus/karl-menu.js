@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { KarlMenuHeader } from 'kitten/karl/headers/karl-header'
+import { KarlMenuHeader } from '../../karl/headers/karl-header'
 
 export class KarlMenu extends React.Component {
   constructor(props) {

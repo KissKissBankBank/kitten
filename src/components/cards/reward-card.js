@@ -31,25 +31,25 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var _legacyRewardCardContainer = require("kitten/components/cards/reward-card/legacy-reward-card-container");
+var _legacyRewardCardContainer = require("../../components/cards/reward-card/legacy-reward-card-container");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _typography = require("kitten/helpers/utils/typography");
+var _typography = require("../../helpers/utils/typography");
 
-var _title = require("kitten/components/cards/reward-card/title");
+var _title = require("../../components/cards/reward-card/title");
 
-var _row = require("kitten/components/cards/reward-card/row");
+var _row = require("../../components/cards/reward-card/row");
 
-var _rowContent = require("kitten/components/cards/reward-card/row-content");
+var _rowContent = require("../../components/cards/reward-card/row-content");
 
-var _rowSide = require("kitten/components/cards/reward-card/row-side");
+var _rowSide = require("../../components/cards/reward-card/row-side");
 
-var _starredBadge = require("kitten/components/cards/reward-card/starred-badge");
+var _starredBadge = require("../../components/cards/reward-card/starred-badge");
 
-var _checkedSection = require("kitten/components/cards/reward-card/checked-section");
+var _checkedSection = require("../../components/cards/reward-card/checked-section");
 
 var Text = (0, _radium.default)(_text.Text); // TODO: Move this class to a separate file after deprecated component with the
 // same name will be deleted.

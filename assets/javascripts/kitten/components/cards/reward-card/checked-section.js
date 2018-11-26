@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { RewardCardCheckedIconLine } from 'kitten/components/cards/reward-card/checked-icon-line'
-import { pxToRem } from 'kitten/helpers/utils/typography'
+import { RewardCardCheckedIconLine } from '../../../components/cards/reward-card/checked-icon-line'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 export class RewardCardCheckedSection extends Component {
   static propTypes = {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { TagButton } from 'kitten/components/buttons/tag-button'
+import { TagButton } from '../../components/buttons/tag-button'
 
 describe('TagButton', () => {
   const defaultComponent = shallow(<TagButton />)

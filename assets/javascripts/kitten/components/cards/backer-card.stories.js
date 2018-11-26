@@ -3,10 +3,10 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text } from '@storybook/addon-knobs/react'
 import { BackerCard } from './backer-card'
-import { Container } from 'kitten/components/grid/container'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Marger } from 'kitten/components/layout/marger'
-import { Text } from 'kitten/components/typography/text'
+import { Container } from '../../components/grid/container'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Marger } from '../../components/layout/marger'
+import { Text } from '../../components/typography/text'
 
 const Description = () => (
   <Fragment>

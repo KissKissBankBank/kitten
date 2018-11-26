@@ -1,7 +1,7 @@
 import React from 'react'
-import { LoaderWithParagraph } from 'kitten/components/loaders/loader-with-paragraph'
-import { Loader } from 'kitten/components/loaders/loader'
-import { Paragraph } from 'kitten/components/typography/paragraph'
+import { LoaderWithParagraph } from './loader-with-paragraph'
+import { Loader } from '../../components/loaders/loader'
+import { Paragraph } from '../../components/typography/paragraph'
 
 describe('<LoaderWithParagraph />', () => {
   describe('by default', () => {

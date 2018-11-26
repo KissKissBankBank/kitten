@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.createMatchMediaWithin = exports.createMatchMediaMax = exports.createMatchMediaMin = exports.createMatchMedia = exports.getJoinedQueries = exports.getMaxQuery = exports.getMinQuery = void 0;
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../constants/screen-config");
 
 var getMinQuery = function getMinQuery(num) {
   return "(min-width: ".concat(num, "px)");

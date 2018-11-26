@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { KarlColors } from 'kitten/karl/colors/karl-colors'
+import { KarlColors } from '../../assets/javascripts/kitten/karl/colors/karl-colors'
 
 export default () => {
   return (

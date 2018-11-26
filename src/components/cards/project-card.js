@@ -29,31 +29,31 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
-var _card = require("kitten/hoc/card");
+var _card = require("../../hoc/card");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _title = require("kitten/components/typography/title");
+var _title = require("../../components/typography/title");
 
-var _paragraph = require("kitten/components/typography/paragraph");
+var _paragraph = require("../../components/typography/paragraph");
 
-var _progress = require("kitten/components/meters/progress");
+var _progress = require("../../components/meters/progress");
 
-var _buttonImage = require("kitten/components/buttons/button-image");
+var _buttonImage = require("../../components/buttons/button-image");
 
-var _iconBadge = require("kitten/components/notifications/icon-badge");
+var _iconBadge = require("../../components/notifications/icon-badge");
 
-var _lockIcon = require("kitten/components/icons/lock-icon");
+var _lockIcon = require("../../components/icons/lock-icon");
 
-var _checkedCircleIcon = require("kitten/components/icons/checked-circle-icon");
+var _checkedCircleIcon = require("../../components/icons/checked-circle-icon");
 
-var _tagList = require("kitten/components/lists/tag-list");
+var _tagList = require("../../components/lists/tag-list");
 
-var _typologyTagIcon = require("kitten/components/icons/typology-tag-icon");
+var _typologyTagIcon = require("../../components/icons/typology-tag-icon");
 
-var _instrumentTagIcon = require("kitten/components/icons/instrument-tag-icon");
+var _instrumentTagIcon = require("../../components/icons/instrument-tag-icon");
 
 var MIN_WIDTH = 280;
 exports.MIN_WIDTH = MIN_WIDTH;

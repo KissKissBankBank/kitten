@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlHeaderTour1, KarlHeaderTour2 } from 'kitten/karl/tours/tour'
+import { KarlHeaderTour1, KarlHeaderTour2 } from '../../../assets/javascripts/kitten/karl/tours/tour'
 import Example from '../../app/example'
 
 export default () => {

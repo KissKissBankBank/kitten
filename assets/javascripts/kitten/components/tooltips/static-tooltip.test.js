@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticTooltip } from 'kitten/components/tooltips/static-tooltip'
+import { StaticTooltip } from './static-tooltip'
 
 describe('<StaticTooltip />', () => {
   describe('by default', () => {

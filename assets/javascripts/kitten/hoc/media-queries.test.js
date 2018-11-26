@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import renderer from 'react-test-renderer'
-import { mediaQueries } from 'kitten/hoc/media-queries'
+import { mediaQueries } from './media-queries'
 
 class SimpleComponent extends Component {
   render() {

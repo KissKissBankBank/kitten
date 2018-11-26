@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlImageCropper } from 'kitten/karl/images/image-cropper'
+import { KarlImageCropper } from '../../../assets/javascripts/kitten/karl/images/image-cropper'
 
 export default () => {
   return (

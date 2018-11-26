@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { pxToRem } from 'kitten/helpers/utils/typography'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 class RewardCardRowSideBase extends Component {
   static propTypes = {
