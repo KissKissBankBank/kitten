@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { FilterIcon } from 'kitten/components/icons/filter-icon'
+import { FilterIcon } from '../../components/icons/filter-icon'
 
 describe('<FilterIcon />', () => {
   it('should match its empty snapshot', () => {

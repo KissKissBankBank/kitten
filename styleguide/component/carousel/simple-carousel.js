@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlSimpleCarousel } from 'kitten/karl/carousel/simple-carousel'
+import { KarlSimpleCarousel } from '../../../assets/javascripts/kitten/karl/carousel/simple-carousel'
 
 export default () => {
   return (

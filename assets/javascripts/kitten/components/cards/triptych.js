@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Grid, GridCol as GridColBase } from 'kitten/components/grid/grid'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import { VerticalStroke as VerticalStrokeBase } from 'kitten/components/layout/vertical-stroke'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { withMediaQueries } from 'kitten/hoc/media-queries'
-import { debounce } from 'kitten/helpers/utils/debounce'
-import { GUTTER } from 'kitten/constants/grid-config'
+import { Grid, GridCol as GridColBase } from '../../components/grid/grid'
+import { Marger as MargerBase } from '../../components/layout/marger'
+import { VerticalStroke as VerticalStrokeBase } from '../../components/layout/vertical-stroke'
+import { ScreenConfig } from '../../constants/screen-config'
+import { withMediaQueries } from '../../hoc/media-queries'
+import { debounce } from '../../helpers/utils/debounce'
+import { GUTTER } from '../../constants/grid-config'
 
 const Marger = Radium(MargerBase)
 const GridCol = Radium(GridColBase)
@@ -117,7 +117,7 @@ const styles = {
 
   oddMargin: {
     [`@media (min-width: ${ScreenConfig.L.min}px)`]: {
-      marginTop: -(strokeHeight * 2 / 3 + marginStroke * 10),
+      marginTop: -((strokeHeight * 2) / 3 + marginStroke * 10),
     },
   },
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { HorizontalNav } from 'kitten/components/navigation/horizontal-nav'
-import { Row } from 'kitten/components/grid/row'
-import COLORS from 'kitten/constants/colors-config'
+import { HorizontalNav } from '../../components/navigation/horizontal-nav'
+import { Row } from '../../components/grid/row'
+import COLORS from '../../constants/colors-config'
 
 export const KarlHorizontalNav = props => {
   const horizontalNavItems = [

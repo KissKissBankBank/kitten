@@ -23,11 +23,11 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireDefault(require("react"));
 
-var _tour = require("kitten/components/tours/tour");
+var _tour = require("../../components/tours/tour");
 
-var _mixIllustration = require("kitten/components/illustrations/mix-illustration");
+var _mixIllustration = require("../../components/illustrations/mix-illustration");
 
-var _loudspeakerIllustration = require("kitten/components/illustrations/loudspeaker-illustration");
+var _loudspeakerIllustration = require("../../components/illustrations/loudspeaker-illustration");
 
 // We directly use svg-react loader for the moment.
 // TODO: update webpack config to manage svg in jsx files.

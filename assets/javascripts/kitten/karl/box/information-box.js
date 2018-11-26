@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { InformationBox } from 'kitten/components/box/information-box'
+import { Title } from '../../components/typography/title'
+import { Paragraph } from '../../components/typography/paragraph'
+import { InformationBox } from '../../components/box/information-box'
 
 export const KarlInformationBox = () => {
   return (

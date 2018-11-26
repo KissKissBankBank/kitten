@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from 'kitten/components/typography/title'
+import { Title } from '../../../assets/javascripts/kitten/components/typography/title'
 import Example from '../../app/example'
 
 export default () => {

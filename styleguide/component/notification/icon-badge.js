@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlIconBadge } from 'kitten/karl/notifications/icon-badge'
+import { KarlIconBadge } from '../../../assets/javascripts/kitten/karl/notifications/icon-badge'
 
 export default () => {
   return (

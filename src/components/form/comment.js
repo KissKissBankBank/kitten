@@ -17,17 +17,17 @@ var _radium = _interopRequireWildcard(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _commentAvatar = require("kitten/components/form/comment-avatar");
+var _commentAvatar = require("../../components/form/comment-avatar");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../constants/screen-config");
 
-var _mediaQueries = require("kitten/hoc/media-queries");
+var _mediaQueries = require("../../hoc/media-queries");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
 var Text = (0, _radium.default)(_text.Text);
 

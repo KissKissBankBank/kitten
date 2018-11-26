@@ -1,4 +1,4 @@
-import { parseHtml } from 'kitten/helpers/utils/parser'
+import { parseHtml } from '../../helpers/utils/parser'
 import ReactDOMServer from 'react-dom/server'
 
 describe('parseHtml()', () => {

@@ -9,11 +9,11 @@ import {
   object,
 } from '@storybook/addon-knobs/react'
 import { StyleRoot } from 'radium'
-import { List } from 'kitten/components/lists/list'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Text } from 'kitten/components/typography/text'
-import { Marger } from 'kitten/components/layout/marger'
-import COLORS from 'kitten/constants/colors-config'
+import { List } from '../../components/lists/list'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Text } from '../../components/typography/text'
+import { Marger } from '../../components/layout/marger'
+import COLORS from '../../constants/colors-config'
 
 storiesOf('List', module)
   .addDecorator(withKnobs)

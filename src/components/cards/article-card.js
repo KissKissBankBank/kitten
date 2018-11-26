@@ -13,7 +13,7 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
-var _crowdfundingCard = require("kitten/components/cards/crowdfunding-card");
+var _crowdfundingCard = require("../../components/cards/crowdfunding-card");
 
 var ArticleCard = function ArticleCard(_ref) {
   var articleTitle = _ref.articleTitle,

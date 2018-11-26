@@ -27,18 +27,17 @@ var _radium = _interopRequireWildcard(require("radium"));
 
 var _resizeObserverPolyfill = _interopRequireDefault(require("resize-observer-polyfill"));
 
-var _range = require("kitten/helpers/utils/range");
+var _range = require("../../helpers/utils/range");
 
-var _featureDetection = require("kitten/helpers/utils/feature-detection");
+var _featureDetection = require("../../helpers/utils/feature-detection");
 
-var _carouselPage = require("kitten/components/carousel/carousel-page");
+var _carouselPage = require("../../components/carousel/carousel-page");
 
 if (typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill();
 }
 
-var supportScrollSnap = (0, _featureDetection.cssSupports)('scroll-snap-type: mandatory');
-var supportScrollSmooth = (0, _featureDetection.cssSupports)('scroll-behavior: smooth'); // inspired by https://github.com/cferdinandi/scrollStop
+var supportScrollSnap = (0, _featureDetection.cssSupports)('scroll-snap-type: mandatory'); // inspired by https://github.com/cferdinandi/scrollStop
 
 var scrollStop = function scrollStop(callback) {
   // Make sure a valid callback was provided

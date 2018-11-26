@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from 'kitten/components/buttons/button'
+import { Button } from '../../../assets/javascripts/kitten/components/buttons/button'
 import Example from '../../app/example'
 
 export default () => {

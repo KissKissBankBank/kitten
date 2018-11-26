@@ -11,9 +11,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _arrowIcon = require("kitten/components/icons/arrow-icon");
+var _arrowIcon = require("../../components/icons/arrow-icon");
 
-var _checkedIcon = require("kitten/components/icons/checked-icon");
+var _checkedIcon = require("../../components/icons/checked-icon");
 
 var StepperIcon = function StepperIcon(_ref) {
   var className = _ref.className,

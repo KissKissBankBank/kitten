@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlPlatformSwitch } from 'kitten/karl/organisms/dropdown'
+import { KarlPlatformSwitch } from '../../../assets/javascripts/kitten/karl/organisms/dropdown'
 import Example from '../../app/example'
 
 export default () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlImageWithCaption } from 'kitten/karl/images/image-with-caption'
+import { KarlImageWithCaption } from '../../../assets/javascripts/kitten/karl/images/image-with-caption'
 import Example from '../../app/example'
 
 export default () => {

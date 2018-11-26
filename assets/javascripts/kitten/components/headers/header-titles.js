@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { HeaderItem } from 'kitten/components/headers/header'
+import { HeaderItem } from '../../components/headers/header'
 
 export class HeaderTitles extends React.Component {
   renderSubtitle() {

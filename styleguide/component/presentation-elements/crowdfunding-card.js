@@ -1,5 +1,5 @@
 import React from 'react'
-import { CrowdfundingCard } from 'kitten/components/cards/crowdfunding-card'
+import { CrowdfundingCard } from '../../../assets/javascripts/kitten/components/cards/crowdfunding-card'
 import Example from '../../app/example'
 
 export default () => {

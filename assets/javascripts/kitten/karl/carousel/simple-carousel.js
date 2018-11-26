@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
-import { SimpleCarousel } from 'kitten/components/carousel/simple-carousel'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Marger } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
-import { Button } from 'kitten/components/buttons/button'
+import { SimpleCarousel } from '../../components/carousel/simple-carousel'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Marger } from '../../components/layout/marger'
+import { Title } from '../../components/typography/title'
+import { Paragraph } from '../../components/typography/paragraph'
+import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
+import { Button } from '../../components/buttons/button'
 
 const Item = ({ numItem }) => (
   <Fragment>

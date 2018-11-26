@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlCounterBlock } from 'kitten/karl/meters/karl-counter-block'
+import { KarlCounterBlock } from '../../../assets/javascripts/kitten/karl/meters/karl-counter-block'
 import Example from '../../app/example'
 
 export default () => {

@@ -2,8 +2,8 @@ import React from 'react'
 import {
   KarlRadioButtonContentError,
   KarlRadioButtonError,
-} from 'kitten/karl/form/radio-button'
-import { RadioButton } from 'kitten/components/form/radio-button'
+} from '../../../assets/javascripts/kitten/karl/form/radio-button'
+import { RadioButton } from '../../../assets/javascripts/kitten/components/form/radio-button'
 import Example from '../../app/example'
 
 export default () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlLocationInput } from 'kitten/karl/form/location-input'
+import { KarlLocationInput } from '../../../assets/javascripts/kitten/karl/form/location-input'
 import Example from '../../app/example'
 
 export default () => {

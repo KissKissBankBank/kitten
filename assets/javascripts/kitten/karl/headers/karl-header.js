@@ -1,16 +1,16 @@
 import React from 'react'
 import classNames from 'classnames'
-import { KissKissBankBankLogo } from 'kitten/karl/logos/kisskissbankbanklogo'
-import { CrossIcon } from 'kitten/components/icons/cross-icon'
-import { MenuIcon } from 'kitten/components/icons/menu-icon'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
+import { KissKissBankBankLogo } from '../../karl/logos/kisskissbankbanklogo'
+import { CrossIcon } from '../../components/icons/cross-icon'
+import { MenuIcon } from '../../components/icons/menu-icon'
+import { ButtonIcon } from '../../components/buttons/button-icon'
 import {
   Header,
   HeaderItems,
   HeaderItem,
-} from 'kitten/components/headers/header'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { HeaderTitles } from 'kitten/components/headers/header-titles'
+} from '../../components/headers/header'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { HeaderTitles } from '../../components/headers/header-titles'
 
 export const KarlMenuHeader = props => (
   <Grid>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProjectCreatorCard } from 'kitten/components/cards/project-creator-card'
+import { ProjectCreatorCard } from '../../../assets/javascripts/kitten/components/cards/project-creator-card'
 import Example from '../../app/example'
 
 export default () => {

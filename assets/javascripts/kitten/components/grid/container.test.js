@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container } from 'kitten/components/grid/container'
-import { SCREEN_SIZE_M } from 'kitten/constants/screen-config'
+import { Container } from '../../components/grid/container'
+import { SCREEN_SIZE_M } from '../../constants/screen-config'
 
 const createMockMediaMatcher = matches => () => ({
   matches,

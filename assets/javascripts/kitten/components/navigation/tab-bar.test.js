@@ -1,5 +1,5 @@
 import React from 'react'
-import { TabBar } from 'kitten/components/navigation/tab-bar'
+import { TabBar } from './tab-bar'
 
 describe('<TabBar />', () => {
   const component = shallow(

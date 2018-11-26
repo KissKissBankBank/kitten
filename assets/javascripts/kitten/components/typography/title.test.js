@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from 'kitten/components/typography/title'
+import { Title } from './title'
 
 describe('Title with default props', () => {
   const defaultComponent = shallow(<Title />)

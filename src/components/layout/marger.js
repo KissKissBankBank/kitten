@@ -13,7 +13,7 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
-var _typographyConfig = _interopRequireDefault(require("kitten/constants/typography-config"));
+var _typographyConfig = _interopRequireDefault(require("../../constants/typography-config"));
 
 var Marger = function Marger(_ref) {
   var top = _ref.top,

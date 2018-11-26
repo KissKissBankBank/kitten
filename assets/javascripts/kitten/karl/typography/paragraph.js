@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paragraph } from 'kitten/components/typography/paragraph'
+import { Paragraph } from '../../components/typography/paragraph'
 
 export const KarlParagraph = props => {
   return (

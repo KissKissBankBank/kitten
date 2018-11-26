@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.sliderKeyDownHandler = sliderKeyDownHandler;
 
-var _events = require("kitten/helpers/dom/events");
+var _events = require("../../helpers/dom/events");
 
 // KeyDown on a Slider should move the handle left and right with the keyboard.
 // The component needs a `move()` function that takes a value.

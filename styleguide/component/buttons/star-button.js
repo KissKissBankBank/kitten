@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlStarButton } from 'kitten/karl/buttons/star-button'
+import { KarlStarButton } from '../../../assets/javascripts/kitten/karl/buttons/star-button'
 import Example from '../../app/example'
 
 export default () => {

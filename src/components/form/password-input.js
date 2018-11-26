@@ -27,11 +27,11 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _radium = _interopRequireDefault(require("radium"));
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var _passwordIcon = require("kitten/components/icons/password-icon");
+var _passwordIcon = require("../../components/icons/password-icon");
 
-var _textInput = require("kitten/components/form/text-input");
+var _textInput = require("../../components/form/text-input");
 
 var PasswordIcon = (0, _radium.default)(_passwordIcon.PasswordIcon);
 var TextInput = (0, _radium.default)(_textInput.TextInput);

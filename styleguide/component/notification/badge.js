@@ -1,5 +1,5 @@
 import React from 'react'
-import { Badge } from 'kitten/components/notifications/badge'
+import { Badge } from '../../../assets/javascripts/kitten/components/notifications/badge'
 import Example from '../../app/example'
 
 export default () => {

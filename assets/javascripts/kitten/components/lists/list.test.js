@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { List } from 'kitten/components/lists/list'
+import { List } from '../../components/lists/list'
 import { shallow } from 'enzyme'
 
 describe('<List>', () => {

@@ -17,9 +17,9 @@ var _radium = _interopRequireDefault(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _rewardCard = require("kitten/components/cards/reward-card");
+var _rewardCard = require("../../../components/cards/reward-card");
 
-var _deprecated = require("kitten/helpers/utils/deprecated");
+var _deprecated = require("../../../helpers/utils/deprecated");
 
 var RewardCardImageBase = function RewardCardImageBase(_ref) {
   var isDisabled = _ref.isDisabled,
@@ -28,7 +28,7 @@ var RewardCardImageBase = function RewardCardImageBase(_ref) {
   var shouldDisplayImage = imageProps && imageProps.src;
   if (!shouldDisplayImage) return null;
   return _react.default.createElement(_deprecated.Deprecated, {
-    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/"
+    warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
   }, _react.default.createElement("div", {
     style: imageStyles,
     disabled: isDisabled

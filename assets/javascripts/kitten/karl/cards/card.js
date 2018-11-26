@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { card } from 'kitten/hoc/card'
+import { card } from '../../hoc/card'
 
 const KarlCardComponent = props => (
   <div style={{ height: '100px' }} {...props} />

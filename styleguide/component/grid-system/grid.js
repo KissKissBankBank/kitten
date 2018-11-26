@@ -4,7 +4,7 @@ import {
   KarlGridSmall,
   KarlGridTwelveColumns,
   KarlGridWithOffset,
-} from 'kitten/karl/grid/grid'
+} from '../../../assets/javascripts/kitten/karl/grid/grid'
 import Example from '../../app/example'
 
 export default () => {

@@ -25,7 +25,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _mediaQueries = require("kitten/helpers/utils/media-queries");
+var _mediaQueries = require("../../helpers/utils/media-queries");
 
 var Container =
 /*#__PURE__*/

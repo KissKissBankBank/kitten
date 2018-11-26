@@ -27,7 +27,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _checkbox = require("kitten/components/form/checkbox");
+var _checkbox = require("../../components/form/checkbox");
 
 var CheckboxSet =
 /*#__PURE__*/

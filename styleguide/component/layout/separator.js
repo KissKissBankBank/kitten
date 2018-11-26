@@ -1,5 +1,5 @@
 import React from 'react'
-import { Separator } from 'kitten/components/layout/separator'
+import { Separator } from '../../../assets/javascripts/kitten/components/layout/separator'
 import Example from '../../app/example'
 
 export default () => {

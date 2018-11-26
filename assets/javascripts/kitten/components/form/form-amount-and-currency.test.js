@@ -1,7 +1,7 @@
 import React from 'react'
-import { SelectWithState } from 'kitten/components/form/select-with-state'
-import { TextInput } from 'kitten/components/form/text-input'
-import { FormAmountAndCurrency } from 'kitten/components/form/form-amount-and-currency'
+import { SelectWithState } from '../../components/form/select-with-state'
+import { TextInput } from '../../components/form/text-input'
+import { FormAmountAndCurrency } from '../../components/form/form-amount-and-currency'
 
 describe('<FormAmountAndCurrency />', () => {
   describe('valid prop', () => {

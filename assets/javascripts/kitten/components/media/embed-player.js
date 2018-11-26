@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import COLORS from 'kitten/constants/colors-config'
+import COLORS from '../../constants/colors-config'
 import Radium, { StyleRoot } from 'radium'
-import { Text } from 'kitten/components/typography/text'
-import { ResponsiveIframeContainer } from 'kitten/components/layout/responsive-iframe-container'
-import { parseHtml } from 'kitten/helpers/utils/parser'
-import { ScreenConfig } from 'kitten/constants/screen-config'
+import { Text } from '../../components/typography/text'
+import { ResponsiveIframeContainer } from '../../components/layout/responsive-iframe-container'
+import { parseHtml } from '../../helpers/utils/parser'
+import { ScreenConfig } from '../../constants/screen-config'
 import {
   NUM_COLUMNS,
   GUTTER,
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE,
-} from 'kitten/constants/grid-config'
+} from '../../constants/grid-config'
 
 const PlayerButton = props => (
   <StyleRoot>

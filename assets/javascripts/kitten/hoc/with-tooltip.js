@@ -1,6 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
-import { TooltipNew } from 'kitten/components/tooltips/tooltip-new'
+import { TooltipNew } from '../components/tooltips/tooltip-new'
 
 export const withTooltip = (WrappedComponent, wrappedProps) => {
   const WithTooltip = props => {

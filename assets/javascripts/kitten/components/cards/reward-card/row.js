@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { pxToRem } from 'kitten/helpers/utils/typography'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 export class RewardCardRow extends Component {
   static propTypes = {

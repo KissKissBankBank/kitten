@@ -1,5 +1,5 @@
 import React from 'react'
-import { Uploader } from 'kitten/components/uploaders/uploader'
+import { Uploader } from './uploader'
 import Dropzone from 'react-dropzone'
 
 const CustomTheme = () => <div className="custom-theme" />

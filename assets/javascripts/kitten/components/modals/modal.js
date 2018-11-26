@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
-import { CloseButton } from 'kitten/components/buttons/close-button'
+import { CloseButton } from '../../components/buttons/close-button'
 
 export class Modal extends Component {
   constructor(props) {

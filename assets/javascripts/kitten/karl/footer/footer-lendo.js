@@ -1,26 +1,26 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { Row as RowBase } from 'kitten/components/grid/row'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
+import { Row as RowBase } from '../../components/grid/row'
+import { Marger as MargerBase } from '../../components/layout/marger'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
-} from 'kitten/components/grid/grid'
-import { TextInputWithButton as TextInputWithButtonBase } from 'kitten/components/form/text-input-with-button'
-import { Paragraph as ParagraphBase } from 'kitten/components/typography/paragraph'
-import { Text } from 'kitten/components/typography/text'
+} from '../../components/grid/grid'
+import { TextInputWithButton as TextInputWithButtonBase } from '../../components/form/text-input-with-button'
+import { Paragraph as ParagraphBase } from '../../components/typography/paragraph'
+import { Text } from '../../components/typography/text'
 import {
   FacebookButtonIcon as FacebookButtonIconBase,
   TwitterButtonIcon as TwitterButtonIconBase,
   InstagramButtonIcon,
-} from 'kitten/components/buttons/social-button-icon'
-import { LinkList } from 'kitten/components/links/link-list'
-import { SelectWithState } from 'kitten/components/form/select-with-state'
-import { LendopolisLogo as LendopolisLogoBase } from 'kitten/karl/logos/lendopolis-logo'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { mediaQueries } from 'kitten/hoc/media-queries'
-import COLORS from 'kitten/constants/colors-config'
-import { parseHtml } from 'kitten/helpers/utils/parser'
+} from '../../components/buttons/social-button-icon'
+import { LinkList } from '../../components/links/link-list'
+import { SelectWithState } from '../../components/form/select-with-state'
+import { LendopolisLogo as LendopolisLogoBase } from '../../karl/logos/lendopolis-logo'
+import { ScreenConfig } from '../../constants/screen-config'
+import { mediaQueries } from '../../hoc/media-queries'
+import COLORS from '../../constants/colors-config'
+import { parseHtml } from '../../helpers/utils/parser'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)

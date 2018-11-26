@@ -1,4 +1,4 @@
-import { domEvents } from 'kitten/helpers/dom/events'
+import { domEvents } from '../../helpers/dom/events'
 
 // KeyDown on a Slider should move the handle left and right with the keyboard.
 // The component needs a `move()` function that takes a value.

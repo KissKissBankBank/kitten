@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { LinkBox } from 'kitten/components/box/link-box'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
-import { Text } from 'kitten/components/typography/text'
+import { LinkBox } from '../../components/box/link-box'
+import { ArrowIcon } from '../../components/icons/arrow-icon'
+import { Text } from '../../components/typography/text'
 
 describe('<LinkBox />', () => {
   let component

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import COLORS from 'kitten/constants/colors-config'
+import { Marger } from '../../components/layout/marger'
+import { Title } from '../../components/typography/title'
+import { Paragraph } from '../../components/typography/paragraph'
+import COLORS from '../../constants/colors-config'
 
 export class VerticalCard extends Component {
   static propTypes = {

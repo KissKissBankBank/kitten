@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Alert } from 'kitten/components/notifications/alert'
-import { Button } from 'kitten/components/buttons/button'
+import { Alert } from '../../components/notifications/alert'
+import { Button } from '../../components/buttons/button'
 import Markdown from 'react-markdown'
 
 // TODO: make helper to manage class.

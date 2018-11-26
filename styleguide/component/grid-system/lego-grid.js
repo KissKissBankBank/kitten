@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { KarlLegoGrid, KarlLegoGrid12Items } from 'kitten/karl/grid/lego-grid'
+import { KarlLegoGrid, KarlLegoGrid12Items } from '../../../assets/javascripts/kitten/karl/grid/lego-grid'
 import Example from '../../app/example'
 
 export default () => {
