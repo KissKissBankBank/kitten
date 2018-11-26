@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormAmountAndCurrency } from 'kitten/components/form/form-amount-and-currency'
+import { FormAmountAndCurrency } from '../../../assets/javascripts/kitten/components/form/form-amount-and-currency'
 import Example from '../../app/example'
 
 export default () => {

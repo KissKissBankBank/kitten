@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlDonationCard } from 'kitten/karl/cards/donation-card'
+import { KarlDonationCard } from '../../../assets/javascripts/kitten/karl/cards/donation-card'
 
 export default () => {
   return (

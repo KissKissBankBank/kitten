@@ -1,6 +1,6 @@
 import React from 'react'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { LegoGrid } from 'kitten/components/grid/lego-grid'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { LegoGrid } from '../../components/grid/lego-grid'
 import classNames from 'classnames'
 
 const masonryProps = {

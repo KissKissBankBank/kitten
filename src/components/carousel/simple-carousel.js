@@ -25,11 +25,11 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _radium = _interopRequireDefault(require("radium"));
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var _range = require("kitten/helpers/utils/range");
+var _range = require("../../helpers/utils/range");
 
 var Marger = (0, _radium.default)(_marger.Marger);
 

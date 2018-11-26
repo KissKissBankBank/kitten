@@ -1,5 +1,5 @@
 /**
- * @module 'kitten/helpers/dom/element-helper'
+ * @module '../../helpers/dom/element-helper'
  */
 
 export const domElementHelper = {

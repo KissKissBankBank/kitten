@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import {
   KarlSideGridWithLeftAsideAndSmallSize,
   KarlSideGridWithRightAside,
-} from 'kitten/karl/grid/side-grid'
+} from '../../../assets/javascripts/kitten/karl/grid/side-grid'
 import Example from '../../app/example'
 
 export default () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { InfoLines } from 'kitten/components/lines/info-lines'
+import { InfoLines } from '../../components/lines/info-lines'
 
 describe('<InfoLines />', () => {
   const infos = [

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { TextInput } from 'kitten/components/form/text-input'
-import { TextInputWithButton } from 'kitten/components/form/text-input-with-button'
+import { TextInput } from '../../components/form/text-input'
+import { TextInputWithButton } from '../../components/form/text-input-with-button'
 
 describe('<TextInputWithButton />', () => {
   describe('by default', () => {

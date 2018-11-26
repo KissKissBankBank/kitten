@@ -23,7 +23,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _typography = require("kitten/helpers/utils/typography");
+var _typography = require("../../../helpers/utils/typography");
 
 var RewardCardRow =
 /*#__PURE__*/

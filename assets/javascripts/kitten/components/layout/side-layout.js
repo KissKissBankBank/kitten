@@ -5,8 +5,8 @@ import {
   SideGrid,
   SideGridContent,
   SideGridAside,
-} from 'kitten/components/grid/side-grid'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+} from '../../components/grid/side-grid'
+import { Grid, GridCol } from '../../components/grid/grid'
 
 export class SideLayout extends React.Component {
   constructor(props) {
@@ -57,6 +57,6 @@ export class SideLayout extends React.Component {
 SideLayout.defaultProps = {
   children: 'Children',
   // sidebar: renderOfWhatYouWant() // Content for aside grid
-  // E.g: see assets/javascripts/kitten/karl/layout/side-layout.js
+  // E.g: see assets/javascripts/../../karl/layout/side-layout.js
   sidebar: null,
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlFormActions } from 'kitten/karl/form/form-actions'
+import { KarlFormActions } from '../../../assets/javascripts/kitten/karl/form/form-actions'
 import Example from '../../app/example'
 
 export default () => {

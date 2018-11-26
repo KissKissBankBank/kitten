@@ -1,7 +1,7 @@
 import React from 'react'
-import { Popover } from 'kitten/components/popovers/popover'
-import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
-import { KarlLoudspeakerPopover } from 'kitten/karl/popovers/loudspeaker-popover'
+import { Popover } from '../../../assets/javascripts/kitten/components/popovers/popover'
+import { CallToActionPopover } from '../../../assets/javascripts/kitten/components/popovers/call-to-action-popover'
+import { KarlLoudspeakerPopover } from '../../../assets/javascripts/kitten/karl/popovers/loudspeaker-popover'
 import Example from '../../app/example'
 
 export default () => {

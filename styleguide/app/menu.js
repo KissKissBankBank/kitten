@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlMenu } from 'kitten/karl/menus/karl-menu'
+import { KarlMenu } from '../../assets/javascripts/kitten/karl/menus/karl-menu'
 
 export default () => {
   return (

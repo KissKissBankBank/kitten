@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Badge } from 'kitten/components/notifications/badge'
+import { Badge } from '../../components/notifications/badge'
 import classNames from 'classnames'
 import Markdown from 'react-markdown'
 

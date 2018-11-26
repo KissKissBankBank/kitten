@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
-import { Timeline } from 'kitten/components/lists/timeline'
-import { Text } from 'kitten/components/typography/text'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { Marger } from 'kitten/components/layout/marger'
-import { KarlExampleTitle } from 'kitten/karl/examples/title'
+import { Timeline } from '../../components/lists/timeline'
+import { Text } from '../../components/typography/text'
+import { Paragraph } from '../../components/typography/paragraph'
+import { Marger } from '../../components/layout/marger'
+import { KarlExampleTitle } from '../../karl/examples/title'
 
 export const KarlTimeline = props => (
   <Fragment>

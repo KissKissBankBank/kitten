@@ -23,9 +23,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _checkedIconLine = require("kitten/components/cards/reward-card/checked-icon-line");
+var _checkedIconLine = require("../../../components/cards/reward-card/checked-icon-line");
 
-var _typography = require("kitten/helpers/utils/typography");
+var _typography = require("../../../helpers/utils/typography");
 
 var RewardCardCheckedSection =
 /*#__PURE__*/

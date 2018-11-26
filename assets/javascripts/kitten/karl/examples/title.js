@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text } from 'kitten/components/typography/text'
+import { Text } from '../../components/typography/text'
 
 export class KarlExampleTitle extends Component {
   render() {

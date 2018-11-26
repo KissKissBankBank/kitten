@@ -29,21 +29,21 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _radium = _interopRequireWildcard(require("radium"));
 
-var _card = require("kitten/hoc/card");
+var _card = require("../../hoc/card");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _title = require("kitten/components/typography/title");
+var _title = require("../../components/typography/title");
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _horizontalStroke = require("kitten/components/layout/horizontal-stroke");
+var _horizontalStroke = require("../../components/layout/horizontal-stroke");
 
-var _buttonImage = require("kitten/components/buttons/button-image");
+var _buttonImage = require("../../components/buttons/button-image");
 
-var _progress = require("kitten/components/meters/progress");
+var _progress = require("../../components/meters/progress");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
 var _reactTruncate = _interopRequireDefault(require("react-truncate"));
 

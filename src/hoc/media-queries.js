@@ -27,9 +27,9 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _mediaQueries = require("kitten/helpers/utils/media-queries");
+var _mediaQueries = require("../helpers/utils/media-queries");
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../constants/screen-config");
 
 var viewPortTable = {
   viewportIsMobile: _screenConfig.SCREEN_SIZE_XS,

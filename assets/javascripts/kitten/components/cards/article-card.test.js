@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ArticleCard } from 'kitten/components/cards/article-card'
+import { ArticleCard } from '../../components/cards/article-card'
 
 describe('<ArticleCard />', () => {
   let component

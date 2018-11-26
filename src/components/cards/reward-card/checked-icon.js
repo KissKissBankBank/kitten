@@ -11,11 +11,11 @@ var _react = _interopRequireDefault(require("react"));
 
 var _radium = _interopRequireDefault(require("radium"));
 
-var _iconBadge = require("kitten/components/notifications/icon-badge");
+var _iconBadge = require("../../../components/notifications/icon-badge");
 
-var _checkedIcon = require("kitten/components/icons/checked-icon");
+var _checkedIcon = require("../../../components/icons/checked-icon");
 
-var _rewardCard = require("kitten/components/cards/reward-card");
+var _rewardCard = require("../../../components/cards/reward-card");
 
 var IconBadge = (0, _radium.default)(_iconBadge.IconBadge);
 

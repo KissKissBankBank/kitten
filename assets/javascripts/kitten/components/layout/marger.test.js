@@ -1,6 +1,6 @@
 import React from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { Marger } from 'kitten/components/layout/marger'
+import { Marger } from '../../components/layout/marger'
 
 const cleanStyles = styles =>
   styles.filter(rule => rule != null).filter(rule => rule != false)

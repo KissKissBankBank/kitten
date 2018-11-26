@@ -31,7 +31,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _elementHelper = _interopRequireDefault(require("kitten/helpers/dom/element-helper"));
+var _elementHelper = _interopRequireDefault(require("../../helpers/dom/element-helper"));
 
 var Label =
 /*#__PURE__*/

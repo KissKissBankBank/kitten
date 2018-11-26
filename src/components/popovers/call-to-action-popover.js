@@ -27,15 +27,15 @@ var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/hel
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _title = require("kitten/components/typography/title");
+var _title = require("../../components/typography/title");
 
-var _paragraph = require("kitten/components/typography/paragraph");
+var _paragraph = require("../../components/typography/paragraph");
 
-var _popover = require("kitten/components/popovers/popover");
+var _popover = require("../../components/popovers/popover");
 
-var _button = require("kitten/components/buttons/button");
+var _button = require("../../components/buttons/button");
 
 var CallToActionPopover =
 /*#__PURE__*/

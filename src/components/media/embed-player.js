@@ -27,19 +27,19 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
 var _radium = _interopRequireWildcard(require("radium"));
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../components/typography/text");
 
-var _responsiveIframeContainer = require("kitten/components/layout/responsive-iframe-container");
+var _responsiveIframeContainer = require("../../components/layout/responsive-iframe-container");
 
-var _parser = require("kitten/helpers/utils/parser");
+var _parser = require("../../helpers/utils/parser");
 
-var _screenConfig = require("kitten/constants/screen-config");
+var _screenConfig = require("../../constants/screen-config");
 
-var _gridConfig = require("kitten/constants/grid-config");
+var _gridConfig = require("../../constants/grid-config");
 
 var PlayerButton = function PlayerButton(props) {
   return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("div", {

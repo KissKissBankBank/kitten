@@ -3,9 +3,9 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text } from '@storybook/addon-knobs/react'
 import { StyleRoot } from 'radium'
-import { CartRewardCard } from 'kitten/components/cards/cart-reward-card'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Marger } from 'kitten/components/layout/marger'
+import { CartRewardCard } from '../../components/cards/cart-reward-card'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Marger } from '../../components/layout/marger'
 
 storiesOf('Cards/CartRewardCard', module)
   .addDecorator(withKnobs)

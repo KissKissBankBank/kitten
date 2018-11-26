@@ -17,9 +17,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _selectWithState = require("kitten/components/form/select-with-state");
+var _selectWithState = require("../../components/form/select-with-state");
 
-var _textInput = require("kitten/components/form/text-input");
+var _textInput = require("../../components/form/text-input");
 
 var _TextInputAndSelect$d;
 

@@ -9,9 +9,9 @@ import {
   object,
 } from '@storybook/addon-knobs/react'
 import { StyleRoot } from 'radium'
-import { Container } from 'kitten/components/grid/container'
-import { EmbedPlayer } from 'kitten/components/media/embed-player'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Container } from '../../components/grid/container'
+import { EmbedPlayer } from '../../components/media/embed-player'
+import { Grid, GridCol } from '../../components/grid/grid'
 
 storiesOf('Media/EmbedPlayer', module)
   .addDecorator(withKnobs)
@@ -33,7 +33,7 @@ storiesOf('Media/EmbedPlayer', module)
                   'Label in player button for accessibility',
                   'Play',
                 )}
-                ratio={text('Video ratio', 376.0 / 620 * 100)}
+                ratio={text('Video ratio', (376.0 / 620) * 100)}
                 iframeHtml={text(
                   'Iframe video',
                   `<iframe

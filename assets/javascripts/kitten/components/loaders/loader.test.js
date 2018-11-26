@@ -1,5 +1,5 @@
 import React from 'react'
-import { Loader } from 'kitten/components/loaders/loader'
+import { Loader } from './loader'
 
 describe('<Loader />', () => {
   describe('by default', () => {

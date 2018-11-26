@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { IconBadge } from 'kitten/components/notifications/icon-badge'
+import { IconBadge } from './icon-badge'
 
 describe('<IconBadge />', () => {
   let component

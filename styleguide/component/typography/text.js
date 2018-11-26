@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'kitten/components/typography/text'
+import { Text } from '../../../assets/javascripts/kitten/components/typography/text'
 import Example from '../../app/example'
 
 export default () => {

@@ -27,7 +27,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _projectSimilarCard = require("kitten/components/cards/project-similar-card");
+var _projectSimilarCard = require("../../components/cards/project-similar-card");
 
 var SimilarProjectsCard =
 /*#__PURE__*/

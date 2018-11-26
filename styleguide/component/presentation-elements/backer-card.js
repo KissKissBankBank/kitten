@@ -1,5 +1,5 @@
 import React from 'react'
-import { BackerCard } from 'kitten/components/cards/backer-card'
+import { BackerCard } from '../../../assets/javascripts/kitten/components/cards/backer-card'
 import Example from '../../app/example'
 
 export default () => {

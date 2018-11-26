@@ -27,7 +27,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactTooltip = _interopRequireDefault(require("react-tooltip"));
 
-var _buttonQuestionMarkIcon = require("kitten/components/buttons/button-question-mark-icon");
+var _buttonQuestionMarkIcon = require("../../components/buttons/button-question-mark-icon");
 
 var Tooltip =
 /*#__PURE__*/

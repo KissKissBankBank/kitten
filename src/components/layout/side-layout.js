@@ -25,9 +25,9 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _bowser = _interopRequireDefault(require("bowser"));
 
-var _sideGrid = require("kitten/components/grid/side-grid");
+var _sideGrid = require("../../components/grid/side-grid");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
 var SideLayout =
 /*#__PURE__*/
@@ -86,6 +86,6 @@ exports.SideLayout = SideLayout;
 SideLayout.defaultProps = {
   children: 'Children',
   // sidebar: renderOfWhatYouWant() // Content for aside grid
-  // E.g: see assets/javascripts/kitten/karl/layout/side-layout.js
+  // E.g: see assets/javascripts/../../karl/layout/side-layout.js
   sidebar: null
 };

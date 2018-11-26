@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { IconBadge as IconBadgeBase } from 'kitten/components/notifications/icon-badge'
-import { StarIcon } from 'kitten/components/icons/star-icon'
-import { pxToRem } from 'kitten/helpers/utils/typography'
-import COLORS from 'kitten/constants/colors-config'
+import { IconBadge as IconBadgeBase } from '../../../components/notifications/icon-badge'
+import { StarIcon } from '../../../components/icons/star-icon'
+import { pxToRem } from '../../../helpers/utils/typography'
+import COLORS from '../../../constants/colors-config'
 
 const IconBadge = Radium(IconBadgeBase)
 

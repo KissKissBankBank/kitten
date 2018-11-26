@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Triptych } from 'kitten/components/cards/triptych'
-import { Title } from 'kitten/components/typography/title'
-import { VerticalCardWithAction } from 'kitten/components/cards/vertical-card-with-action'
+import { Triptych } from '../../components/cards/triptych'
+import { Title } from '../../components/typography/title'
+import { VerticalCardWithAction } from '../../components/cards/vertical-card-with-action'
 
 const createMockMediaMatcher = matches => () => ({
   matches,

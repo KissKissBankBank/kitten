@@ -25,9 +25,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _elementHelper = require("kitten/helpers/dom/element-helper");
+var _elementHelper = require("../../helpers/dom/element-helper");
 
-var _tourStep = require("kitten/components/tours/tour-step");
+var _tourStep = require("../../components/tours/tour-step");
 
 var Tour =
 /*#__PURE__*/

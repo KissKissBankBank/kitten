@@ -4,7 +4,7 @@ import {
   KarlHeaderWithSearchInput,
   KarlHeaderWhenLogged,
   KarlHeaderWithTitles,
-} from 'kitten/karl/headers/header'
+} from '../../../assets/javascripts/kitten/karl/headers/header'
 import Example from '../../app/example'
 
 export default () => {

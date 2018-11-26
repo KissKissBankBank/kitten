@@ -29,9 +29,9 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _buttonIcon = require("kitten/components/buttons/button-icon");
+var _buttonIcon = require("../../components/buttons/button-icon");
 
-var _crossIcon = require("kitten/components/icons/cross-icon");
+var _crossIcon = require("../../components/icons/cross-icon");
 
 var CloseButton =
 /*#__PURE__*/

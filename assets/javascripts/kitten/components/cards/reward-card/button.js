@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { pxToRem } from 'kitten/helpers/utils/typography'
-import { Deprecated } from 'kitten/helpers/utils/deprecated'
+import { Button as ButtonBase } from '../../../components/buttons/button'
+import { ScreenConfig } from '../../../constants/screen-config'
+import { pxToRem } from '../../../helpers/utils/typography'
+import { Deprecated } from '../../../helpers/utils/deprecated'
 
 const Button = Radium(ButtonBase)
 
@@ -21,7 +21,7 @@ export const RewardCardButton = ({
   const buttonStyles = isTinyVersion ? styles.tinyVersion : styles.base
 
   return (
-    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
       <Button
         size="big"
         modifier="helium"

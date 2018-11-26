@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import {
   createMatchMediaMax,
   createMatchMedia,
-} from 'kitten/helpers/utils/media-queries'
+} from '../helpers/utils/media-queries'
 import {
   SCREEN_SIZE_XXS,
   SCREEN_SIZE_XS,
   SCREEN_SIZE_S,
   SCREEN_SIZE_M,
   SCREEN_SIZE_L,
-} from 'kitten/constants/screen-config'
+} from '../constants/screen-config'
 
 const viewPortTable = {
   viewportIsMobile: SCREEN_SIZE_XS,

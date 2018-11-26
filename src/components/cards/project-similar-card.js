@@ -29,31 +29,31 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _card = require("kitten/hoc/card");
+var _card = require("../../hoc/card");
 
-var _grid = require("kitten/components/grid/grid");
+var _grid = require("../../components/grid/grid");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../components/layout/marger");
 
-var _title = require("kitten/components/typography/title");
+var _title = require("../../components/typography/title");
 
-var _paragraph = require("kitten/components/typography/paragraph");
+var _paragraph = require("../../components/typography/paragraph");
 
-var _buttonIcon = require("kitten/components/buttons/button-icon");
+var _buttonIcon = require("../../components/buttons/button-icon");
 
-var _separator = require("kitten/components/layout/separator");
+var _separator = require("../../components/layout/separator");
 
-var _tagList = require("kitten/components/lists/tag-list");
+var _tagList = require("../../components/lists/tag-list");
 
-var _arrowIcon = require("kitten/components/icons/arrow-icon");
+var _arrowIcon = require("../../components/icons/arrow-icon");
 
-var _lockIcon = require("kitten/components/icons/lock-icon");
+var _lockIcon = require("../../components/icons/lock-icon");
 
-var _loader = require("kitten/components/loaders/loader");
+var _loader = require("../../components/loaders/loader");
 
-var _typologyTagIcon = require("kitten/components/icons/typology-tag-icon");
+var _typologyTagIcon = require("../../components/icons/typology-tag-icon");
 
-var _instrumentTagIcon = require("kitten/components/icons/instrument-tag-icon");
+var _instrumentTagIcon = require("../../components/icons/instrument-tag-icon");
 
 var SimilarProjectCardComponent =
 /*#__PURE__*/

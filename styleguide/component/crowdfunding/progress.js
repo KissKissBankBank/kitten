@@ -1,6 +1,6 @@
 import React from 'react'
-import { Progress } from 'kitten/components/meters/progress'
-import { KarlRandomProgress } from 'kitten/karl/meters/random-progress'
+import { Progress } from '../../../assets/javascripts/kitten/components/meters/progress'
+import { KarlRandomProgress } from '../../../assets/javascripts/kitten/karl/meters/random-progress'
 import Example from '../../app/example'
 
 export default () => {

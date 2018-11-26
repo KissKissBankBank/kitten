@@ -27,7 +27,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _radioButton = require("kitten/components/form/radio-button");
+var _radioButton = require("../../components/form/radio-button");
 
 var RadioButtonSet =
 /*#__PURE__*/

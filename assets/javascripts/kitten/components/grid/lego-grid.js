@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import Masonry from 'react-masonry-component'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { NUM_COLUMNS } from 'kitten/constants/grid-config'
+import { ScreenConfig } from '../../constants/screen-config'
+import { NUM_COLUMNS } from '../../constants/grid-config'
 import Radium from 'radium'
 
 class LegoGridBase extends Component {

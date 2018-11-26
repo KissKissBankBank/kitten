@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { styles } from 'kitten/components/cards/reward-card'
-import { Info } from 'kitten/components/cards/reward-card/info'
-import { Marger } from 'kitten/components/layout/marger'
-import { Deprecated } from 'kitten/helpers/utils/deprecated'
+import { styles } from '../../../components/cards/reward-card'
+import { Info } from '../../../components/cards/reward-card/info'
+import { Marger } from '../../../components/layout/marger'
+import { Deprecated } from '../../../helpers/utils/deprecated'
 
 const RewardCardInfosBase = ({
   infos,
@@ -17,7 +17,7 @@ const RewardCardInfosBase = ({
   if (infos.length === 0) return null
 
   return (
-    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
       <div style={styleInfos} disabled={isDisabled}>
         <Marger top="2" bottom="3">
           {infos &&

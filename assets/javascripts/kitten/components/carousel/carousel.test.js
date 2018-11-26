@@ -5,12 +5,12 @@ import {
   getNumColumnsForWidth,
   getNumPagesForColumnsAndDataLength,
   checkPage,
-} from 'kitten/components/carousel/carousel'
+} from './carousel'
 import {
   ProjectCard,
   MIN_WIDTH as ProjectCardMinWidth,
   MARGIN_BETWEEN as ProjectCardMarginBetween,
-} from 'kitten/components/cards/project-card'
+} from '../../components/cards/project-card'
 
 const createMockMediaMatcher = matches => () => ({
   matches,

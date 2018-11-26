@@ -1,7 +1,7 @@
 import React from 'react'
-import { triggerEnhancer } from 'kitten/hoc/trigger-enhancer'
-import { PhoneIllustration } from 'kitten/components/illustrations/phone-illustration'
-import { CallToActionPopover } from 'kitten/components/popovers/call-to-action-popover'
+import { triggerEnhancer } from '../../hoc/trigger-enhancer'
+import { PhoneIllustration } from '../../components/illustrations/phone-illustration'
+import { CallToActionPopover } from '../../components/popovers/call-to-action-popover'
 
 const text =
   'I could pee on this if I had the energy. Present belly, scratch ' +

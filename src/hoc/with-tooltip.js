@@ -13,9 +13,7 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
-var _tooltipNew = require("kitten/components/tooltips/tooltip-new");
+var _tooltipNew = require("../components/tooltips/tooltip-new");
 
 var withTooltip = function withTooltip(WrappedComponent, wrappedProps) {
   var WithTooltip = function WithTooltip(props) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormPhoneNumber } from 'kitten/components/form/form-phone-number'
+import { FormPhoneNumber } from '../../../assets/javascripts/kitten/components/form/form-phone-number'
 import Example from '../../app/example'
 
 export default () => {

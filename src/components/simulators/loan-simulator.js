@@ -27,11 +27,11 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _number = require("kitten/helpers/utils/number");
+var _number = require("../../helpers/utils/number");
 
-var _sliderWithTooltipAndPower = require("kitten/components/sliders/slider-with-tooltip-and-power");
+var _sliderWithTooltipAndPower = require("../../components/sliders/slider-with-tooltip-and-power");
 
-var _textInputWithUnit = require("kitten/components/form/text-input-with-unit");
+var _textInputWithUnit = require("../../components/form/text-input-with-unit");
 
 // Simulator that lets users select an amount and an installment, to start
 // simulating a loan.

@@ -1,6 +1,6 @@
 import React from 'react'
-import { KarlPaymentButtons } from 'kitten/karl/buttons/payment-button'
-import { TagButton } from 'kitten/components/buttons/tag-button'
+import { KarlPaymentButtons } from '../../../assets/javascripts/kitten/karl/buttons/payment-button'
+import { TagButton } from '../../../assets/javascripts/kitten/components/buttons/tag-button'
 import Example from '../../app/example'
 
 export default () => {

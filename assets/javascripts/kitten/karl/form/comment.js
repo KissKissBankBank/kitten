@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import Radium from 'radium'
-import { Comment } from 'kitten/components/form/comment'
-import { CommentForm } from 'kitten/components/form/comment-form'
-import { Container } from 'kitten/components/grid/container'
-import { Marger } from 'kitten/components/layout/marger'
-import { KarlExampleTitle } from 'kitten/karl/examples/title'
+import { Comment } from '../../components/form/comment'
+import { CommentForm } from '../../components/form/comment-form'
+import { Container } from '../../components/grid/container'
+import { Marger } from '../../components/layout/marger'
+import { KarlExampleTitle } from '../../karl/examples/title'
 
 export const KarlCommentForm = () => (
   <Fragment>

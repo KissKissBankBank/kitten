@@ -1,8 +1,8 @@
 import React from 'react'
-import { RadioButtonSet } from 'kitten/components/form/radio-button-set'
-import { CheckboxSet } from 'kitten/components/form/checkbox-set'
+import { RadioButtonSet } from '../../../assets/javascripts/kitten/components/form/radio-button-set'
+import { CheckboxSet } from '../../../assets/javascripts/kitten/components/form/checkbox-set'
 import Example from '../../app/example'
-import { TextInput } from 'kitten/components/form/text-input'
+import { TextInput } from '../../../assets/javascripts/kitten/components/form/text-input'
 
 export default () => {
   return (

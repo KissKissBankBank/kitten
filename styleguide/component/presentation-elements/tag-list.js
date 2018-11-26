@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlTagList } from 'kitten/karl/lists/tag-list'
+import { KarlTagList } from '../../../assets/javascripts/kitten/karl/lists/tag-list'
 import Example from '../../app/example'
 
 export default () => {

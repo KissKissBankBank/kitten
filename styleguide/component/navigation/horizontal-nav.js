@@ -3,7 +3,7 @@ import {
   KarlHorizontalNav,
   KarlTouchHorizontalNav,
   KarlTouchHorizontalNavWithNotification,
-} from 'kitten/karl/navigation/horizontal-nav'
+} from '../../../assets/javascripts/kitten/karl/navigation/horizontal-nav'
 import Example from '../../app/example'
 
 export default () => {

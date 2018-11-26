@@ -31,7 +31,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _reactModal = _interopRequireDefault(require("react-modal"));
 
-var _closeButton = require("kitten/components/buttons/close-button");
+var _closeButton = require("../../components/buttons/close-button");
 
 // Via "https://github.com/reactjs/react-modal"
 var Modal =
