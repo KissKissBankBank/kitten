@@ -25,7 +25,6 @@ class TeamCardPhoneIconBase extends Component {
             tag="a"
             href={`tel:${phoneNumber}`}
             modifier="hydrogen"
-            aria-label="Phone"
             className="k-ButtonIcon--phone"
             style={{ marginRight: 15 }}
           >

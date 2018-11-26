@@ -6,7 +6,7 @@ import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { TeamCard } from 'kitten/components/cards/team-card'
 import { Marger } from 'kitten/components/layout/marger'
 
-storiesOf('Cards/TeamCard', module)
+storiesOf('Cards', module)
   .addDecorator(withKnobs)
   .add('TeamCard', () => {
     return (
