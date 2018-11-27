@@ -8,6 +8,9 @@
     "type": "git",
     "url": "git+https://github.com/KissKissBankBank/kitten.git"
   },
+  "engines": {
+    "node": ">=10.x"
+  },
   "keywords": [
     "sass",
     "scss",
@@ -101,10 +104,10 @@
   "scripts": {
     "test": "jest --maxWorkers=2",
     "test:update:snapshots": "jest --updateSnapshot",
-    "prepublish": "npm run test && npm run build:js",
+    "prepublishOnly": "npm run test && npm run build:js",
     "precommit": "lint-staged",
     "styleguide:start": "webpack-dev-server",
-    "styleguide:build": "rm -rf styleguide/build && webpack --config webpack.config.build.js --progress --colors && htmlprocessor styleguide/index.html -o styleguide/build/index.html && cp -R styleguide/assets styleguide/build",
+    "styleguide:build": "rm -rf build && webpack --config webpack.config.build.js --progress --colors && htmlprocessor styleguide/index.html -o build/main.html && cp -R styleguide/assets build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
