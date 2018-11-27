@@ -6,15 +6,15 @@ import COLORS from 'kitten/constants/colors-config'
 
 export class TeamCardImage extends Component {
   static propTypes = {
-    image: PropTypes.string.isRequired,
-    imgTitle: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }
 
   render() {
-    const { image, imgTitle } = this.props
+    const { src, title } = this.props
     return (
       <Marger bottom="2">
-        <div style={imgBackground(image)} title={imgTitle} />
+        <div style={imgBackground(src)} title={title} />
       </Marger>
     )
   }

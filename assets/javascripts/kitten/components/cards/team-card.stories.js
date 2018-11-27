@@ -16,16 +16,15 @@ storiesOf('Cards', module)
             <Marger top="5" bottom="5">
               <TeamCard>
                 <TeamCard.Image
-                  image={text(
-                    'Url image',
+                  src={text(
+                    'Image url',
                     'http://via.placeholder.com/500x500/caf4fe/caf4fe',
                   )}
-                  imageTitle={text('Image title', 'Title')}
+                  title={text('Image title', 'Title')}
                 />
                 <TeamCard.Title
-                  firstName={text('Firstname', 'Lorem')}
-                  lastName={text('LastName', 'Ipsum')}
-                  jobTitle={text('Job title', 'Consectetur')}
+                  children={text('children', 'Lorem Ipsum')}
+                  subTitle={text('Subtitle', 'Consectetur')}
                 />
                 <TeamCard.Icons
                   mail={text('Mail', 'example@kisskissbankbank.com')}

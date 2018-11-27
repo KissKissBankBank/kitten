@@ -29,7 +29,6 @@ export class TeamCardIcons extends Component {
             tag="a"
             href={`mailto:${mail}`}
             modifier="hydrogen"
-            aria-label="Email"
             className="k-ButtonIcon--phone"
             style={{ marginRight: 15 }}
           >

@@ -19,14 +19,6 @@ describe('<TeamCard />', () => {
     window.matchMedia = originalMatchMedia
   })
 
-  describe('by default', () => {
-    it('matches with snapshot', () => {
-      window.matchMedia = createMockMediaMatcher(false)
-      const component = renderer.create(<TeamCard />).toJSON()
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with some props', () => {
     it('matches with snapshot', () => {
       window.matchMedia = createMockMediaMatcher(false)
@@ -34,14 +26,10 @@ describe('<TeamCard />', () => {
         .create(
           <TeamCard>
             <TeamCard.Image
-              image="http://via.placeholder.com/500x500/caf4fe/caf4fe"
-              imageTitle="Title"
+              src="http://via.placeholder.com/500x500/caf4fe/caf4fe"
+              title="Title"
             />
-            <TeamCard.Title
-              firstName="Lorem"
-              lastName="Ipsum"
-              jobTitle="Consectetur"
-            />
+            <TeamCard.Title children="Lorem Ipsum" subTitle="Consectetur" />
             <TeamCard.Icons
               mail="example@kisskissbankbank.com"
               phoneNumber="06 00 00 00 00"

@@ -16,11 +16,11 @@ class TeamCardPhoneIconBase extends Component {
   }
 
   render() {
-    const { phoneNumber, viewportIsMobile } = this.props
+    const { phoneNumber, viewportIsXSOrLess } = this.props
 
     return (
       <Fragment>
-        {viewportIsMobile && (
+        {viewportIsXSOrLess && (
           <ButtonIcon
             tag="a"
             href={`tel:${phoneNumber}`}
@@ -32,12 +32,12 @@ class TeamCardPhoneIconBase extends Component {
           </ButtonIcon>
         )}
 
-        {!viewportIsMobile && <TeamCardButtonWithTooltip {...this.props} />}
+        {!viewportIsXSOrLess && <TeamCardButtonWithTooltip {...this.props} />}
       </Fragment>
     )
   }
 }
 
 export const TeamCardPhoneIcon = mediaQueries(TeamCardPhoneIconBase, {
-  viewportIsMobile: true,
+  viewportIsXSOrLess: true,
 })

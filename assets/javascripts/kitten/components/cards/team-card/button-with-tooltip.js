@@ -15,7 +15,18 @@ export class TeamCardButtonWithTooltip extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { hover: false }
+    this.state = {
+      hover: false,
+      focus: false,
+    }
+  }
+
+  handleSubmitFocus = () => {
+    this.setState({ focus: true })
+  }
+
+  handleSubmitBlur = () => {
+    this.setState({ focus: false })
   }
 
   handleOnMouseEnter = () => {
@@ -32,6 +43,7 @@ export class TeamCardButtonWithTooltip extends Component {
     const tooltipStyle = [
       styles.tooltip.content,
       this.state.hover && styles.tooltip.content.hover,
+      this.state.focus && styles.tooltip.content.focus,
     ]
 
     return (
@@ -40,6 +52,9 @@ export class TeamCardButtonWithTooltip extends Component {
           href={`tel:${phoneNumber}`}
           onMouseEnter={this.handleOnMouseEnter}
           onMouseLeave={this.handleOnMouseLeave}
+          onFocus={this.handleSubmitFocus}
+          onBlur={this.handleSubmitBlur}
+          style={{ outline: 'none' }}
         >
           <div style={styles.tooltip}>
             <span style={tooltipStyle}>
@@ -49,7 +64,6 @@ export class TeamCardButtonWithTooltip extends Component {
 
             <ButtonIcon
               modifier="hydrogen"
-              aria-label="Phone"
               className="k-ButtonIcon--phone"
               style={{ marginRight: 15 }}
             >
@@ -63,6 +77,11 @@ export class TeamCardButtonWithTooltip extends Component {
 }
 
 const backgroundColor = COLORS.primary1
+
+const pseudoClass = {
+  visibility: 'visible',
+  opacity: 1,
+}
 
 const styles = {
   tooltip: {
@@ -83,10 +102,8 @@ const styles = {
       opacity: 0,
       visibility: 'hidden',
       transition: 'opacity .2s, visibility .2s',
-      hover: {
-        visibility: 'visible',
-        opacity: 1,
-      },
+      hover: pseudoClass,
+      focus: pseudoClass,
 
       after: {
         position: 'absolute',
@@ -95,8 +112,8 @@ const styles = {
         height: 0,
         width: 0,
         marginLeft: -8,
+        border: '10px solid transparent',
         borderBottomColor: backgroundColor,
-        borderWidth: 10,
         pointerEvents: 'none',
       },
     },

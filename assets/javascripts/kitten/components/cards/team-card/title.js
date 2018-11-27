@@ -6,21 +6,20 @@ import { Marger } from 'kitten/components/layout/marger'
 
 export class TeamCardTitle extends Component {
   static propTypes = {
-    firstName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired,
-    jobTilte: PropTypes.string.isRequired,
+    children: PropTypes.string.isRequired,
+    subTilte: PropTypes.string.isRequired,
   }
 
   render() {
-    const { firstName, lastName, jobTitle } = this.props
+    const { children, subTitle } = this.props
     return (
       <Marger top="2" bottom="1.5">
         <Text size="default" weight="bold" color="font1">
-          {firstName} {lastName}
+          {children}
         </Text>
         <br />
         <Text size="micro" color="font1" weight="light">
-          {jobTitle}
+          {subTitle}
         </Text>
       </Marger>
     )

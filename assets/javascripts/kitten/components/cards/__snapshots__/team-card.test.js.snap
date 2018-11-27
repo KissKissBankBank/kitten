@@ -1,19 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TeamCard /> by default matches with snapshot 1`] = `
-<div
-  data-radium={true}
->
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
-`;
-
 exports[`<TeamCard /> with some props matches with snapshot 1`] = `
 <div
   data-radium={true}
@@ -38,7 +24,7 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
           "width": "100%",
         }
       }
-      title={undefined}
+      title="Title"
     />
   </div>
   <div
@@ -52,9 +38,7 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
     <span
       className="k-u-color-font1 k-u-size-default k-u-weight-bold"
     >
-      Lorem
-       
-      Ipsum
+      Lorem Ipsum
     </span>
     <br />
     <span
@@ -73,7 +57,6 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
     }
   >
     <a
-      aria-label="Email"
       className="k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
       href="mailto:example@kisskissbankbank.com"
       style={
@@ -89,7 +72,7 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
-          Mail
+          Email
         </title>
         <path
           d="M9.5 8l9-6v10H.5V2l9 6zm0-2l-9-6h18l-9 6z"
@@ -102,8 +85,15 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
       <a
         data-radium={true}
         href="tel:06 00 00 00 00"
+        onBlur={[Function]}
+        onFocus={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
+        style={
+          Object {
+            "outline": "none",
+          }
+        }
       >
         <div
           data-radium={true}
@@ -139,8 +129,8 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
               data-radium={true}
               style={
                 Object {
+                  "border": "10px solid transparent",
                   "borderBottomColor": "#19b4fa",
-                  "borderWidth": 10,
                   "bottom": "102%",
                   "height": 0,
                   "left": "50%",
@@ -153,7 +143,6 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
             />
           </span>
           <button
-            aria-label="Phone"
             className="k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
             data-radium={true}
             style={
@@ -187,7 +176,6 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
       />
     </div>
     <a
-      aria-label="LinkedIn"
       className="k-ButtonIcon k-ButtonIcon--linkedin k-ButtonIcon--tiny"
       href="https://www.linkedin.com"
       rel="noopener"
