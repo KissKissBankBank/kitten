@@ -41,7 +41,7 @@ describe('<Marger />', () => {
 
     describe('with object prop', () => {
       it('has margin-top CSS rule', () => {
-        const marger = shallow(<Marger top={{ xs: 12, m: 2 }} />)
+        const marger = shallow(<Marger top={{ xs: 12, m: 2, default: 4 }} />)
           .dive()
           .children()
           .first()
@@ -52,6 +52,7 @@ describe('<Marger />', () => {
         const styles = cleanStyles(marger.props().style)
 
         expect(styles).toEqual([
+          { marginTop: '2.5rem' },
           { '@media (max-width: 639px)': { marginTop: '7.5rem' } },
           { '@media (max-width: 1079px)': { marginTop: '1.25rem' } },
         ])
@@ -78,7 +79,7 @@ describe('<Marger />', () => {
 
     describe('with object prop', () => {
       it('has margin-bottom CSS rule', () => {
-        const marger = shallow(<Marger bottom={{ xs: 12, m: 2 }} />)
+        const marger = shallow(<Marger bottom={{ xs: 12, m: 2, default: 4 }} />)
           .dive()
           .children()
           .first()
@@ -89,6 +90,7 @@ describe('<Marger />', () => {
         const styles = cleanStyles(marger.props().style)
 
         expect(styles).toEqual([
+          { marginBottom: '2.5rem' },
           { '@media (max-width: 639px)': { marginBottom: '7.5rem' } },
           { '@media (max-width: 1079px)': { marginBottom: '1.25rem' } },
         ])

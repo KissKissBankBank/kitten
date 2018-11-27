@@ -59,6 +59,8 @@ export class MargerBase extends Component {
     return isStringANumber(String(value))
   }
 
+  hasDefaultProp = propName =>
+    this.props[propName] && this.props[propName].default
   propIsNumber = propName => this.valueIsNumber(this.props[propName])
   isPropWithViewportRange = (propName, viewportRange) =>
     this.props[propName] && this.props[propName][viewportRange]
@@ -99,6 +101,12 @@ export class MargerBase extends Component {
       style,
       this.propIsNumber('top') && { marginTop: this.marginSize(top) },
       this.propIsNumber('bottom') && { marginBottom: this.marginSize(bottom) },
+      this.hasDefaultProp('top') && {
+        marginTop: this.marginSize(this.props.top.default),
+      },
+      this.hasDefaultProp('bottom') && {
+        marginBottom: this.marginSize(this.props.bottom.default),
+      },
       ...viewportRangesStyles,
     ]
 
