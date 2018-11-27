@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `TeamCard` and sub-components:
+  - `TeamCard.Icons`
+  - `TeamCard.Image`
+  - `TeamCard.PhoneIcon`
+  - `TeamCard.Title`
+- Feature: Create `PhoneIcon` and `EmailIcon` components.
 - Fix: Fix `ExpandBoard.Button` arrow styles.
 - Fix: Add `box-sizing` CSS rule to `RewardCard` component.
 
