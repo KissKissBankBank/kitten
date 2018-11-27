@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import Radium from 'radium'
+import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import TYPOGRAPHY from 'kitten/constants/typography-config'
 import pipe from 'ramda/src/pipe'
-import isPlainNumber from 'is-plain-number'
+import isStringANumber from 'is-string-a-number'
+import { upcaseFirst } from 'kitten/helpers/utils/string'
+
+const viewportRanges = ['xxs', 'xs', 's', 'm', 'l', 'xl']
 
 class MargerBase extends Component {
   static propTypes = {
@@ -51,25 +54,60 @@ class MargerBase extends Component {
     // Retro-compatibility: this handles the case when the user enters `.5` as a
     // value for a margin.
     if (typeof value === 'string' && value.match(/^\./)) {
-      return isPlainNumber(`0${value}`)
+      return isStringANumber(`0${value}`)
     }
 
-    return isPlainNumber(value)
+    return isStringANumber(String(value))
   }
 
-  topIsNumber = () => this.valueIsNumber(this.props.top)
-  bottomIsNumber = () => this.valueIsNumber(this.props.bottom)
+  propIsNumber = propName => this.valueIsNumber(this.props[propName])
+  isPropWithViewportRange = (propName, viewportRange) =>
+    this.props[propName] && this.props[propName][viewportRange]
+  viewportRangeCssRule = viewportRange =>
+    `@media (max-width: ${ScreenConfig[viewportRange.toUpperCase()].max}px)`
+  propCssDeclarationForViewportRange = (propName, viewportRange) => {
+    const size = this.props[propName][viewportRange]
+    const cssRule = `margin${upcaseFirst(propName)}`
+
+    return { [cssRule]: this.marginSize(size) }
+  }
+
+  viewportRangeStyleCondition = (propName, viewportRange) => {
+    const hasValue = this.isPropWithViewportRange(propName, viewportRange)
+
+    if (!hasValue) return null
+
+    const viewportRangeCssRule = this.viewportRangeCssRule(viewportRange)
+    const viewportRangeCssValue = this.propCssDeclarationForViewportRange(
+      propName,
+      viewportRange,
+    )
+
+    return { [viewportRangeCssRule]: viewportRangeCssValue }
+  }
 
   render() {
     const { top, bottom, style, ...others } = this.props
+    const viewportRangesStyles = viewportRanges.reduce((acc, viewportRange) => {
+      return [
+        ...acc,
+        this.viewportRangeStyleCondition('top', viewportRange),
+        this.viewportRangeStyleCondition('bottom', viewportRange),
+      ]
+    }, [])
 
     const styles = [
       style,
-      this.topIsNumber() && { marginTop: this.marginSize(top) },
-      this.bottomIsNumber() && { marginBottom: this.marginSize(bottom) },
+      this.propIsNumber('top') && { marginTop: this.marginSize(top) },
+      this.propIsNumber('bottom') && { marginBottom: this.marginSize(bottom) },
+      ...viewportRangesStyles,
     ]
 
-    return <div style={styles} {...others} />
+    return (
+      <StyleRoot>
+        <div style={styles} {...others} />
+      </StyleRoot>
+    )
   }
 }
 
