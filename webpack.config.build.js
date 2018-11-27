@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname),
-    filename: 'styleguide/build/app.js',
+    filename: 'build/app.js',
   },
   module: {
     rules: [
@@ -33,7 +33,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styleguide/build/app.css',
+      filename: 'build/app.css',
     }),
   ]
 }
