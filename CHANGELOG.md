@@ -10,7 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   This update doesn't affect the previous props' validation, you can still pass
   string values:
   ```js
-  const topMarginsWithBreakpoints = { xs: 12, m: 2 }
+  const topMarginsWithBreakpoints = { xs: 12, m: 2, default: 4 }
   <Marger top={topMarginsWithBreakpoints} bottom="1.5" />
   ```
 
