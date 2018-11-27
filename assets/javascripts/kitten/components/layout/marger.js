@@ -3,13 +3,12 @@ import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import TYPOGRAPHY from 'kitten/constants/typography-config'
-import pipe from 'ramda/src/pipe'
 import isStringANumber from 'is-string-a-number'
 import { upcaseFirst } from 'kitten/helpers/utils/string'
 
 const viewportRanges = ['xxs', 'xs', 's', 'm', 'l', 'xl']
 
-class MargerBase extends Component {
+export class MargerBase extends Component {
   static propTypes = {
     top: PropTypes.oneOfType([
       PropTypes.string,
@@ -111,4 +110,14 @@ class MargerBase extends Component {
   }
 }
 
-export const Marger = Radium(MargerBase)
+class WrappedMarger extends Component {
+  render() {
+    return (
+      <StyleRoot>
+        <MargerBase {...this.props} />
+      </StyleRoot>
+    )
+  }
+}
+
+export const Marger = Radium(WrappedMarger)
