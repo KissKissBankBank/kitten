@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<TeamCard /> with some props matches with snapshot 1`] = `
-<div
-  data-radium={true}
->
+Array [
   <div
     style={
       Object {
@@ -26,7 +24,7 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
       }
       title="Title"
     />
-  </div>
+  </div>,
   <div
     style={
       Object {
@@ -46,8 +44,9 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
     >
       Consectetur
     </span>
-  </div>
+  </div>,
   <div
+    data-radium={true}
     style={
       Object {
         "display": "flex",
@@ -195,13 +194,6 @@ exports[`<TeamCard /> with some props matches with snapshot 1`] = `
         />
       </svg>
     </a>
-  </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+  </div>,
+]
 `;
