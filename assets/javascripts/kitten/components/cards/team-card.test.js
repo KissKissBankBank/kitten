@@ -31,7 +31,7 @@ describe('<TeamCard />', () => {
             />
             <TeamCard.Title children="Lorem Ipsum" subTitle="Consectetur" />
             <TeamCard.Icons
-              mail="example@kisskissbankbank.com"
+              email="example@kisskissbankbank.com"
               phoneNumber="06 00 00 00 00"
               socialLink="https://www.linkedin.com"
             />

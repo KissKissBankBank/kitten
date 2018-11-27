@@ -2,37 +2,37 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { Marger } from 'kitten/components/layout/marger'
-import { MailIcon } from 'kitten/components/icons/mail-icon'
+import { EmailIcon } from 'kitten/components/icons/email-icon'
 import { LinkedinButtonIcon } from 'kitten/components/buttons/social-button-icon'
 import { TeamCardPhoneIcon } from 'kitten/components/cards/team-card/phone-icon'
 
 export class TeamCardIcons extends Component {
   static propTypes = {
-    mail: PropTypes.string,
+    email: PropTypes.string,
     phoneNumber: PropTypes.string,
     socialLink: PropTypes.string,
   }
 
   static defaultProps = {
-    mail: '',
+    email: '',
     phoneNumber: '',
     socialLink: '',
   }
 
   render() {
-    const { mail, phoneNumber, socialLink } = this.props
+    const { email, phoneNumber, socialLink } = this.props
 
     return (
       <Marger top="1.5" style={{ display: 'flex' }}>
-        {mail && (
+        {email && (
           <ButtonIcon
             tag="a"
-            href={`mailto:${mail}`}
+            href={`mailto:${email}`}
             modifier="hydrogen"
             className="k-ButtonIcon--phone"
             style={{ marginRight: 15 }}
           >
-            <MailIcon className="k-ButtonIcon__svg" />
+            <EmailIcon className="k-ButtonIcon__svg" />
           </ButtonIcon>
         )}
 

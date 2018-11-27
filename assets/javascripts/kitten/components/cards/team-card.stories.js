@@ -27,7 +27,7 @@ storiesOf('Cards', module)
                   subTitle={text('Subtitle', 'Consectetur')}
                 />
                 <TeamCard.Icons
-                  mail={text('Mail', 'example@kisskissbankbank.com')}
+                  email={text('Email', 'example@kisskissbankbank.com')}
                   phoneNumber={text('Phone number', '06 00 00 00 00')}
                   socialLink={text('Social link', 'https://www.linkedin.com')}
                 />
