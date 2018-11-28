@@ -121,6 +121,7 @@ const styles = {
       opacity: 0,
       visibility: 'hidden',
       transition: 'opacity .2s, visibility .2s',
+      pointer: 'cursor',
       hover: pseudoClass,
       focus: pseudoClass,
 
