@@ -188,13 +188,17 @@ class ExpandBoardBase extends Component {
   }
 
   contentStyle = () => {
-    const { withAnimation, animationShrinkingDuration } = this.props
+    const {
+      withAnimation,
+      animationShrinkingDuration,
+      animationMaxHeight,
+    } = this.props
 
     if (!withAnimation) return null
 
     if (this.state.isShrinking) {
       return {
-        maxHeight: '1000px',
+        maxHeight: animationMaxHeight,
         opacity: 1,
         animationDuration: `${animationShrinkingDuration}s`,
         animationDelay: 0,
