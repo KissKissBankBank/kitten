@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
+import { pxToRem } from 'kitten/helpers/utils/typography'
 import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
 import COLORS from 'kitten/constants/colors-config'
 
@@ -29,11 +30,11 @@ export class ButtonIconWithTooltip extends Component {
     }
   }
 
-  handleSubmitFocus = () => {
+  handleFocus = () => {
     this.setState({ focus: true })
   }
 
-  handleSubmitBlur = () => {
+  handleBlur = () => {
     this.setState({ focus: false })
   }
 
@@ -81,11 +82,12 @@ export class ButtonIconWithTooltip extends Component {
     return (
       <StyleRoot>
         <a
+          tag="button"
           href={href}
           onMouseEnter={this.handleOnMouseEnter}
           onMouseLeave={this.handleOnMouseLeave}
-          onFocus={this.handleSubmitFocus}
-          onBlur={this.handleSubmitBlur}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
           style={{ outline: 'none' }}
         >
           {this.renderTooltip()}
@@ -113,13 +115,13 @@ const styles = {
       marginLeft: -50,
       backgroundColor: backgroundColor,
       border: '2px solid #19b4fa',
-      fontSize: 14,
+      fontSize: pxToRem(14),
       lineHeight: 'normal',
       fontWeight: 'regular',
       color: COLORS.background1,
       whiteSpace: 'nowrap',
-      opacity: 0,
-      visibility: 'hidden',
+      opacity: 1,
+      visibility: 'visible',
       transition: 'opacity .2s, visibility .2s',
       pointer: 'cursor',
       hover: pseudoClass,
