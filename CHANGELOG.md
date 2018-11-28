@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `ExpandBoard` component:
+  - Enable animation on expanding and shrinking with `withAnimation`,
+    `animationMaxHeight`, `animationShrinkingDuration` props.
+  - Authorize `style` prop on `ExpandBoard.Content`.
 - Feature: Create `TeamCard` and sub-components:
   - `TeamCard.Icons`
   - `TeamCard.Image`

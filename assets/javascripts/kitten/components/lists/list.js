@@ -127,10 +127,12 @@ export class ListBase extends Component {
   static ButtonItem = ListButtonItem
 
   render() {
-    const { children } = this.props
+    const { children, style } = this.props
+
+    const listStyles = [styles.list, style]
 
     return (
-      <ul style={styles.list}>
+      <ul style={listStyles}>
         {React.Children.map(children, (child, index) => {
           if (!React.isValidElement(child)) return null
 
