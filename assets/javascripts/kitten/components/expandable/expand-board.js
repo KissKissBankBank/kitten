@@ -70,7 +70,7 @@ class ExpandBoardButton extends Component {
   }
 }
 
-class ExpandBoardContent extends Component {
+class ExpandBoardContentBase extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     ariaId: PropTypes.string,
@@ -81,11 +81,17 @@ class ExpandBoardContent extends Component {
   }
 
   render() {
-    const { children, ariaId } = this.props
+    const { children, ariaId, style } = this.props
 
-    return <div id={ariaId}>{children}</div>
+    return (
+      <div id={ariaId} style={style}>
+        {children}
+      </div>
+    )
   }
 }
+
+const ExpandBoardContent = Radium(ExpandBoardContentBase)
 
 class ExpandBoardBase extends Component {
   static Button = ExpandBoardButton
@@ -97,6 +103,9 @@ class ExpandBoardBase extends Component {
     style: PropTypes.object,
     onClick: PropTypes.func,
     ariaId: PropTypes.string.isRequired,
+    withAnimation: PropTypes.bool,
+    animationMaxHeight: PropTypes.string,
+    animationShrinkingDuration: PropTypes.number,
   }
 
   static defaultProps = {
@@ -104,28 +113,112 @@ class ExpandBoardBase extends Component {
     style: {},
     onClick: () => {},
     ariaId: 'k-ExpandBoard',
+    withAnimation: false,
+    animationMaxHeight: '100vh',
+    animationShrinkingDuration: 0.5,
   }
 
-  constructor(props) {
-    super()
-    this.state = {
-      expanded: false,
-    }
+  state = {
+    expanded: false,
+    isShrinking: false,
+    isExpanding: false,
   }
 
   isButtonComponent = component => component.type === ExpandBoardButton
   isContentComponent = component => component.type === ExpandBoardContent
 
-  handleClick = () => {
+  growAnimation = Radium.keyframes(
+    {
+      '0%': { opacity: 0, maxHeight: 0 },
+      '100%': { opacity: 1, maxHeight: this.props.animationMaxHeight },
+    },
+    'grow',
+  )
+
+  shrinkAnimation = Radium.keyframes(
+    {
+      '0%': { opacity: 1, maxHeight: this.props.animationMaxHeight },
+      '100%': { opacity: 0, maxHeight: 0 },
+    },
+    'schrink',
+  )
+
+  handleAfterClick = () => {
+    const { expanded, isShrinking, isExpanding } = this.state
+
+    document.activeElement.blur()
+    this.props.onClick({ expanded, isShrinking, isExpanding })
+  }
+
+  updateExpandState = () => {
     this.setState(
       prevState => ({
         expanded: !prevState.expanded,
+        isShrinking: false,
+        isExpanding: false,
       }),
+      this.handleAfterClick,
+    )
+  }
+
+  handleClick = () => {
+    const { withAnimation, animationShrinkingDuration } = this.props
+
+    if (!withAnimation) return this.updateExpandState()
+
+    return this.setState(
+      prevState => {
+        if (prevState.expanded) {
+          return { isShrinking: true }
+        }
+
+        return { isExpanding: true }
+      },
       () => {
-        document.activeElement.blur()
-        this.props.onClick({ expanded: this.state.expanded })
+        if (this.state.isShrinking) {
+          return setTimeout(
+            this.updateExpandState,
+            animationShrinkingDuration * 1000,
+          )
+        }
+
+        return this.updateExpandState()
       },
     )
+  }
+
+  contentStyle = () => {
+    const {
+      withAnimation,
+      animationShrinkingDuration,
+      animationMaxHeight,
+    } = this.props
+
+    if (!withAnimation) return null
+
+    if (this.state.isShrinking) {
+      return {
+        maxHeight: animationMaxHeight,
+        opacity: 1,
+        animationDuration: `${animationShrinkingDuration}s`,
+        animationDelay: 0,
+        animationIterationCount: 1,
+        animationFillMode: 'forwards',
+        animationName: this.shrinkAnimation,
+        animationTimingFunction: 'ease-in-out',
+      }
+    }
+
+    return {
+      maxHeight: 0,
+      opacity: 0,
+      animationDuration: '1s',
+      animationDelay: 0,
+      animationIterationCount: 1,
+      animationFillMode: 'forwards',
+      animationName: this.growAnimation,
+      animationTimingFunction: 'ease-in-out',
+    }
   }
 
   render() {
@@ -150,6 +243,7 @@ class ExpandBoardBase extends Component {
       if (this.isContentComponent(child)) {
         content = React.cloneElement(child, {
           ariaId,
+          style: this.contentStyle(),
         })
       }
     })

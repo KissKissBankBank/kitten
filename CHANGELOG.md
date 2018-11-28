@@ -5,14 +5,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `ButtonIconWithTooltip` component.
-- Feature: Create `TeamCard` and sub-components:
+
+## [23.14.0] - 2018-11-28
+
+Features:
+- Update `ExpandBoard` component:
+  - Enable animation on expanding and shrinking with `withAnimation`,
+    `animationMaxHeight`, `animationShrinkingDuration` props.
+  - Authorize `style` prop on `ExpandBoard.Content`.
+- Create `TeamCard` and sub-components:
   - `TeamCard.Icons`
   - `TeamCard.Image`
   - `TeamCard.PhoneIcon`
   - `TeamCard.Title`
-- Feature: Create `PhoneIcon` and `EmailIcon` components.
-- Fix: Fix `ExpandBoard.Button` arrow styles.
-- Fix: Add `box-sizing` CSS rule to `RewardCard` component.
+- Create `PhoneIcon` and `EmailIcon` components.
+
+Fixes:
+- Fix `ExpandBoard.Button` arrow styles.
+- Add `box-sizing` CSS rule to `RewardCard` component.
 
 ## [23.13.0] - 2018-11-21
 
