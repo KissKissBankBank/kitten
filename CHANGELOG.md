@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `ButtonIconWithTooltip` component.
 - Feature: Create `TeamCard` and sub-components:
   - `TeamCard.Icons`
   - `TeamCard.Image`

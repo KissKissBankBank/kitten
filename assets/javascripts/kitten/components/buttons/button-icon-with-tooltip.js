@@ -8,7 +8,7 @@ const ButtonIcon = Radium(ButtonIconBase)
 
 export class ButtonIconWithTooltip extends Component {
   static propTypes = {
-    tooltipText: PropTypes.string.isRequired,
+    tooltip: PropTypes.string.isRequired,
     href: PropTypes.string,
     modifier: PropTypes.string,
     size: PropTypes.string,
@@ -46,7 +46,7 @@ export class ButtonIconWithTooltip extends Component {
   }
 
   renderTooltip() {
-    const { tooltipText } = this.props
+    const { tooltip } = this.props
 
     const tooltipStyle = [
       styles.tooltip.content,
@@ -57,7 +57,7 @@ export class ButtonIconWithTooltip extends Component {
     return (
       <div style={styles.tooltip}>
         <span style={tooltipStyle}>
-          {tooltipText}
+          {tooltip}
           <span style={styles.tooltip.content.after} />
         </span>
         {this.renderButton()}
