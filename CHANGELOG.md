@@ -8,6 +8,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - Enable animation on expanding and shrinking with `withAnimation`,
     `animationMaxHeight`, `animationShrinkingDuration` props.
   - Authorize `style` prop on `ExpandBoard.Content`.
+- Feature: Create `TeamCard` and sub-components:
+  - `TeamCard.Icons`
+  - `TeamCard.Image`
+  - `TeamCard.PhoneIcon`
+  - `TeamCard.Title`
+- Feature: Create `PhoneIcon` and `EmailIcon` components.
 - Fix: Fix `ExpandBoard.Button` arrow styles.
 - Fix: Add `box-sizing` CSS rule to `RewardCard` component.
 
