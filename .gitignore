@@ -6,6 +6,5 @@ npm-debug.log*
 node_modules/
 storybook-static/
 dist/
-styleguide/build
-
+build/
 .DS_Store
