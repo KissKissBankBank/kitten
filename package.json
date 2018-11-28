@@ -9,7 +9,7 @@
     "url": "git+https://github.com/KissKissBankBank/kitten.git"
   },
   "engines": {
-    "node": ">=10.x"
+    "node": ">=8.x"
   },
   "keywords": [
     "sass",
