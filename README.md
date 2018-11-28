@@ -189,7 +189,7 @@ Once the pull request is accepted:
 - Run this command:
 
 ```sh
-$ bundle exec rake kitten_release
+bin/publish
 ```
 
 - Update
