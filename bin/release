@@ -10,6 +10,6 @@ git checkout -b release/v$1
 npm run build:js
 git add .
 git commit -m "add built js files for ${1}"
-npm version $1
+npm --no-git-tag-version version $1
 git push origin release/v$1
 echo "Done! You can now create a release PR: https://github.com/KissKissBankBank/kitten/compare/kitten-next...release/v${1}?expand=1 😸"
