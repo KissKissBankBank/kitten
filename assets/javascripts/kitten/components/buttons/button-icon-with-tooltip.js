@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
@@ -66,16 +66,15 @@ export class ButtonIconWithTooltip extends Component {
   }
 
   renderButton() {
-    const { children, modifier, size } = this.props
+    const { modifier, size, children } = this.props
 
     return (
-      <Fragment>
-        <ButtonIcon modifier={modifier} size={size}>
-          {children}
-        </ButtonIcon>
-      </Fragment>
+      <ButtonIcon modifier={modifier} size={size}>
+        {children}
+      </ButtonIcon>
     )
   }
+
   render() {
     const { href } = this.props
 
