@@ -4,6 +4,7 @@
 .storybook
 bin/
 styleguide/
+build/
 .babelrc
 log/*.log
 tmp/
@@ -13,7 +14,6 @@ tmp/
 buildspec.yml
 CodeBuildDockerfile
 Dockerfile
-Rakefile
 public
 webpack.config.build.js
 webpack.config.js
