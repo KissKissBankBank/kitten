@@ -118,7 +118,7 @@ export class MargerBase extends Component {
   }
 }
 
-class WrappedMarger extends Component {
+export class Marger extends Component {
   render() {
     return (
       <StyleRoot>
@@ -127,5 +127,3 @@ class WrappedMarger extends Component {
     )
   }
 }
-
-export const Marger = Radium(WrappedMarger)
