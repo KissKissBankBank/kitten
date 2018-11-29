@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix undefined `setState()` when unmounting `Triptych` component.
+
 ## [23.14.0] - 2018-11-28
 
 Features:
