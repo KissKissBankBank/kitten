@@ -60,6 +60,22 @@ describe('<Marger />', () => {
         ])
       })
     })
+
+    describe('with object with `fromXxs` prop', () => {
+      it('has default margin-top CSS rule', () => {
+        const marger = shallow(<Marger top={{ fromXxs: 4 }} />)
+          .dive()
+          .children()
+          .first()
+          .dive()
+          .first()
+          .children()
+          .first()
+        const styles = cleanStyles(marger.props().style)
+
+        expect(styles).toEqual([{ marginTop: '2.5rem' }])
+      })
+    })
   })
 
   describe('with bottom prop', () => {
@@ -98,6 +114,22 @@ describe('<Marger />', () => {
           { '@media (min-width: 480px)': { marginBottom: '7.5rem' } },
           { '@media (min-width: 768px)': { marginBottom: '1.25rem' } },
         ])
+      })
+    })
+
+    describe('with object with `fromXxs` prop', () => {
+      it('has default margin-bottom CSS rule', () => {
+        const marger = shallow(<Marger bottom={{ fromXxs: 4 }} />)
+          .dive()
+          .children()
+          .first()
+          .dive()
+          .first()
+          .children()
+          .first()
+        const styles = cleanStyles(marger.props().style)
+
+        expect(styles).toEqual([{ marginBottom: '2.5rem' }])
       })
     })
   })

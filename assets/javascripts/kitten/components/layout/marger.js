@@ -59,8 +59,6 @@ export class MargerBase extends Component {
     return isStringANumber(String(value))
   }
 
-  hasDefaultProp = propName =>
-    this.props[propName] && this.props[propName].default
   propIsNumber = propName => this.valueIsNumber(this.props[propName])
   isPropWithViewportRange = (propName, viewportRange) =>
     this.props[propName] &&
@@ -88,6 +86,23 @@ export class MargerBase extends Component {
     return { [viewportRangeCssRule]: viewportRangeCssValue }
   }
 
+  hasDefaultProp = propName =>
+    this.props[propName] && this.props[propName].default
+
+  hasXxsProp = propName => this.props[propName] && this.props[propName].fromXxs
+
+  defaultProp = propName => {
+    const cssRule = `margin${upcaseFirst(propName)}`
+
+    if (this.hasDefaultProp(propName)) {
+      return { [cssRule]: this.marginSize(this.props[propName].default) }
+    }
+
+    if (this.hasXxsProp(propName)) {
+      return { [cssRule]: this.marginSize(this.props[propName].fromXxs) }
+    }
+  }
+
   render() {
     const { top, bottom, style, ...others } = this.props
     const viewportRanges = Object.keys(ScreenConfig)
@@ -105,12 +120,8 @@ export class MargerBase extends Component {
       style,
       this.propIsNumber('top') && { marginTop: this.marginSize(top) },
       this.propIsNumber('bottom') && { marginBottom: this.marginSize(bottom) },
-      this.hasDefaultProp('top') && {
-        marginTop: this.marginSize(this.props.top.default),
-      },
-      this.hasDefaultProp('bottom') && {
-        marginBottom: this.marginSize(this.props.bottom.default),
-      },
+      this.defaultProp('top'),
+      this.defaultProp('bottom'),
       ...viewportRangesStyles,
     ]
 
