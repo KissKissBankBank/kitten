@@ -45,6 +45,9 @@ Feature:
   ```js
   <ArrowIcon version="solid" />
   ```
+- Feature: Add classes `k-Header__logo--smallOnXxs` & `k-Header__nav--hidden@m-down`
+  on `Header` and `k-TabBar--responsive--hidden@m-down` on `TabBar` to improve
+  responsiveness possibilities.
 
 Fix:
 - Fix `LinkBox` padding.
