@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [23.15.0] - 2018-11-29
+
+Feature:
+- Add classes `k-Header__logo--smallOnXxs` & `k-Header__nav--hidden@m-down`
+  on `Header` and `k-TabBar--responsive--hidden@m-down` on `TabBar` to improve
+  responsiveness possibilities.
+
 - Fix: Fix undefined `setState()` when unmounting `Triptych` component.
 - Feature: Update `Marger` component. You can now pass an
   object to the `top` and `bottom` props to handle breakpoints with `Marger`.
@@ -61,9 +68,6 @@ Feature:
   ```js
   <ArrowIcon version="solid" />
   ```
-- Feature: Add classes `k-Header__logo--smallOnXxs` & `k-Header__nav--hidden@m-down`
-  on `Header` and `k-TabBar--responsive--hidden@m-down` on `TabBar` to improve
-  responsiveness possibilities.
 
 Fix:
 - Fix `LinkBox` padding.
