@@ -49,6 +49,7 @@ export class MargerBase extends Component {
   }
 
   marginSize = value => `${value * this.gutter}rem`
+
   valueIsNumber = value => {
     // Retro-compatibility: this handles the case when the user enters `.5` as a
     // value for a margin.
@@ -60,11 +61,14 @@ export class MargerBase extends Component {
   }
 
   propIsNumber = propName => this.valueIsNumber(this.props[propName])
+
   isPropWithViewportRange = (propName, viewportRange) =>
     this.props[propName] &&
     this.props[propName][`from${upcaseFirst(viewportRange)}`]
+
   viewportRangeCssRule = viewportRange =>
     `@media (min-width: ${ScreenConfig[viewportRange.toUpperCase()].min}px)`
+
   propCssDeclarationForViewportRange = (propName, viewportRange) => {
     const size = this.props[propName][`from${upcaseFirst(viewportRange)}`]
     const cssRule = `margin${upcaseFirst(propName)}`
