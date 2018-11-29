@@ -35,39 +35,82 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        style={
-          Object {
-            "@media (min-width: 640px)": Object {
-              "paddingLeft": "1.875rem",
-            },
-            "display": "flex",
-            "flexDirection": "column",
-            "flexGrow": 1,
-            "justifyContent": "center",
-            "marginBottom": "1.25rem",
-            "marginTop": "1.25rem",
-            "paddingLeft": "1.25rem",
-          }
-        }
+        data-radium={true}
       >
         <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": null,
-            }
-          }
+          data-radium={true}
         >
-          <span
-            className="k-u-color-font1 k-u-size-default k-u-weight-regular"
+          <div
+            className="rmq-18e21d39"
+            data-radium={true}
             style={
               Object {
-                "lineHeight": 1,
+                "display": "flex",
+                "flexDirection": "column",
+                "flexGrow": 1,
+                "justifyContent": "center",
+                "marginBottom": "1.25rem",
+                "marginTop": "1.25rem",
+                "paddingLeft": "1.25rem",
+              }
+            }
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+              >
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "marginBottom": "0rem",
+                    }
+                  }
+                >
+                  <span
+                    className="k-u-color-font1 k-u-size-default k-u-weight-regular"
+                    style={
+                      Object {
+                        "lineHeight": 1,
+                      }
+                    }
+                  />
+                </div>
+                <style
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "",
+                    }
+                  }
+                />
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "@media (min-width: 640px){ .rmq-18e21d39{padding-left: 1.875rem !important;}}",
               }
             }
           />
         </div>
-        
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
       </div>
       <div
         className="rmq-e7aace01"
@@ -161,50 +204,93 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         }
       />
       <div
-        style={
-          Object {
-            "@media (min-width: 640px)": Object {
-              "paddingLeft": "1.875rem",
-            },
-            "display": "flex",
-            "flexDirection": "column",
-            "flexGrow": 1,
-            "justifyContent": "center",
-            "marginBottom": "1.25rem",
-            "marginTop": "1.25rem",
-            "paddingLeft": "1.25rem",
-          }
-        }
+        data-radium={true}
       >
         <div
-          style={
-            Object {
-              "marginBottom": "0.3125rem",
-              "marginTop": null,
-            }
-          }
+          data-radium={true}
         >
-          <span
-            className="k-u-color-font1 k-u-size-default k-u-weight-regular"
+          <div
+            className="rmq-18e21d39"
+            data-radium={true}
             style={
               Object {
-                "lineHeight": 1,
+                "display": "flex",
+                "flexDirection": "column",
+                "flexGrow": 1,
+                "justifyContent": "center",
+                "marginBottom": "1.25rem",
+                "marginTop": "1.25rem",
+                "paddingLeft": "1.25rem",
               }
             }
           >
-            Lorem ipsum
-          </span>
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+              >
+                <div
+                  data-radium={true}
+                  style={
+                    Object {
+                      "marginBottom": "0.3125rem",
+                    }
+                  }
+                >
+                  <span
+                    className="k-u-color-font1 k-u-size-default k-u-weight-regular"
+                    style={
+                      Object {
+                        "lineHeight": 1,
+                      }
+                    }
+                  >
+                    Lorem ipsum
+                  </span>
+                </div>
+                <style
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "",
+                    }
+                  }
+                />
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <span
+              className="k-u-color-font1 k-u-size-tiny k-u-weight-light"
+              style={
+                Object {
+                  "lineHeight": 1.3,
+                }
+              }
+            >
+              In enim justo, rhoncus ut,
+            </span>
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "@media (min-width: 640px){ .rmq-18e21d39{padding-left: 1.875rem !important;}}",
+              }
+            }
+          />
         </div>
-        <span
-          className="k-u-color-font1 k-u-size-tiny k-u-weight-light"
-          style={
+        <style
+          dangerouslySetInnerHTML={
             Object {
-              "lineHeight": 1.3,
+              "__html": "",
             }
           }
-        >
-          In enim justo, rhoncus ut,
-        </span>
+        />
       </div>
       <div
         className="rmq-e7aace01"
