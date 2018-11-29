@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import { FieldLabel } from './components/label'
 import { FieldInput } from './components/input'
 import { FieldError } from './components/error'
