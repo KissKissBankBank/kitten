@@ -11,6 +11,8 @@ Feature:
   on `Header` and `k-TabBar--responsive--hidden@m-down` on `TabBar` to improve
   responsiveness possibilities.
 
+- Fix: Fix undefined `setState()` when unmounting `Triptych` component.
+
 ## [23.14.0] - 2018-11-28
 
 Features:
