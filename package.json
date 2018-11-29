@@ -62,7 +62,7 @@
     "@storybook/addon-knobs": "4.0.9",
     "@storybook/addon-links": "4.0.9",
     "@storybook/addon-viewport": "4.0.9",
-    "@storybook/addons": "4.0.8",
+    "@storybook/addons": "4.0.9",
     "@storybook/react": "4.0.9",
     "@storybook/storybook-deployer": "2.3.0",
     "babel-core": "^7.0.0-bridge.0",
@@ -111,8 +111,9 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
+    "clean:src": "rm -rf src/components src/config src/constants src/handlers src/helpers src/hoc",
     "build": "npm run build:js && npm run build:css",
-    "build:js": "babel assets/javascripts/kitten/ -d src --ignore 'assets/**/*.test.js','assets/**/__mocks__/*.js','assets/javascripts/kitten/karl'",
+    "build:js": "npm run clean:src && babel assets/javascripts/kitten/ -d src --ignore 'assets/**/*.test.js','assets/**/__mocks__/*.js','assets/javascripts/kitten/karl'",
     "build:css": "webpack --config webpack.config.sass.js"
   },
   "lint-staged": {
