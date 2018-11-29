@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: use `Radium()` on `LinkBox` `Marger` component.
+
 ## [23.15.0] - 2018-11-29
 
 Feature:
