@@ -3,11 +3,13 @@ import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
 import { Text } from 'kitten/components/typography/text'
-import { Marger } from 'kitten/components/layout/marger'
+import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import COLORS from 'kitten/constants/colors-config'
 import { ScreenConfig } from 'kitten/constants/screen-config'
 import { mediaQueries } from 'kitten/hoc/media-queries'
 import { pxToRem } from 'kitten/helpers/utils/typography'
+
+const Marger = Radium(MargerBase)
 
 export class LinkBox extends Component {
   static propTypes = {
