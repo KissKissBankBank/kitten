@@ -67,5 +67,4 @@ const styles = {
   },
 }
 
-
 export const RewardCardStarredBadge = Radium(RewardCardStarredBadgeBase)

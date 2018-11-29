@@ -9,6 +9,17 @@ Fix:
   `header example`.
 - Update with new borderless Lendo logo.
 
+## [23.14.0] - 2018-11-28
+
+## [23.13.0] - 2018-11-21
+
+Feature:
+- Add `KarlSimpleCarousel` example.
+
+## [23.12.0] - 2018-11-15
+
+No changes.
+
 ## [23.11.4] - 2018-11-15
 
 No changes.

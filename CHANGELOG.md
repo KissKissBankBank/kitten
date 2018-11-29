@@ -4,7 +4,41 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `ArrowIcon` component with a `version` prop to handle the icon
+## [23.14.0] - 2018-11-28
+
+Features:
+- Update `ExpandBoard` component:
+  - Enable animation on expanding and shrinking with `withAnimation`,
+    `animationMaxHeight`, `animationShrinkingDuration` props.
+  - Authorize `style` prop on `ExpandBoard.Content`.
+- Create `TeamCard` and sub-components:
+  - `TeamCard.Icons`
+  - `TeamCard.Image`
+  - `TeamCard.PhoneIcon`
+  - `TeamCard.Title`
+- Create `PhoneIcon` and `EmailIcon` components.
+
+Fixes:
+- Fix `ExpandBoard.Button` arrow styles.
+- Add `box-sizing` CSS rule to `RewardCard` component.
+
+## [23.13.0] - 2018-11-21
+
+Features:
+- Add `SimpleCarousel` component.
+- Add animation on `List.ButtonItem` hover.
+- Add new viewport range to mediaQueries HOC.
+- Deprecated `viewportIsMobile` and `viewportIsTabletOrLess` on
+  mediaQueries HOC. Please use `viewportIsXS` and `viewportIsMOrLess` instead
+  now.
+
+Fix:
+- Fix `Deprecated` rendering error.
+
+## [23.12.0] - 2018-11-15
+
+Feature:
+- Update `ArrowIcon` component with a `version` prop to handle the icon
   center of gravity properly. `ArrowIcon` used without this prop is now
   deprecated. All others props are still available.
   You should use it as follow now:
@@ -14,6 +48,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add classes `k-Header__logo--smallOnXxs` & `k-Header__nav--hidden@m-down`
   on `Header` and `k-TabBar--responsive--hidden@m-down` on `TabBar` to improve
   responsiveness possibilities.
+
+Fix:
+- Fix `LinkBox` padding.
 
 ## [23.11.4] - 2018-11-15
 

@@ -56,19 +56,21 @@ class ExpandBoardButton extends Component {
         onClick={onClick}
         type="button"
       >
-        {expanded ? defaultExpandChildren : children}
-        <ArrowIcon
-          direction={expanded ? 'top' : 'bottom'}
-          className="k-Button__icon"
-          fill={COLORS.background1}
-          style={style.arrow}
-        />
+        <div>
+          {expanded ? defaultExpandChildren : children}
+          <ArrowIcon
+            version="solid"
+            direction={expanded ? 'top' : 'bottom'}
+            fill={COLORS.background1}
+            style={style.arrow}
+          />
+        </div>
       </Button>
     )
   }
 }
 
-class ExpandBoardContent extends Component {
+class ExpandBoardContentBase extends Component {
   static propTypes = {
     children: PropTypes.node.isRequired,
     ariaId: PropTypes.string,
@@ -79,11 +81,17 @@ class ExpandBoardContent extends Component {
   }
 
   render() {
-    const { children, ariaId } = this.props
+    const { children, ariaId, style } = this.props
 
-    return <div id={ariaId}>{children}</div>
+    return (
+      <div id={ariaId} style={style}>
+        {children}
+      </div>
+    )
   }
 }
+
+const ExpandBoardContent = Radium(ExpandBoardContentBase)
 
 class ExpandBoardBase extends Component {
   static Button = ExpandBoardButton
@@ -95,6 +103,9 @@ class ExpandBoardBase extends Component {
     style: PropTypes.object,
     onClick: PropTypes.func,
     ariaId: PropTypes.string.isRequired,
+    withAnimation: PropTypes.bool,
+    animationMaxHeight: PropTypes.string,
+    animationShrinkingDuration: PropTypes.number,
   }
 
   static defaultProps = {
@@ -102,28 +113,112 @@ class ExpandBoardBase extends Component {
     style: {},
     onClick: () => {},
     ariaId: 'k-ExpandBoard',
+    withAnimation: false,
+    animationMaxHeight: '100vh',
+    animationShrinkingDuration: 0.5,
   }
 
-  constructor(props) {
-    super()
-    this.state = {
-      expanded: false,
-    }
+  state = {
+    expanded: false,
+    isShrinking: false,
+    isExpanding: false,
   }
 
   isButtonComponent = component => component.type === ExpandBoardButton
   isContentComponent = component => component.type === ExpandBoardContent
 
-  handleClick = () => {
+  growAnimation = Radium.keyframes(
+    {
+      '0%': { opacity: 0, maxHeight: 0 },
+      '100%': { opacity: 1, maxHeight: this.props.animationMaxHeight },
+    },
+    'grow',
+  )
+
+  shrinkAnimation = Radium.keyframes(
+    {
+      '0%': { opacity: 1, maxHeight: this.props.animationMaxHeight },
+      '100%': { opacity: 0, maxHeight: 0 },
+    },
+    'schrink',
+  )
+
+  handleAfterClick = () => {
+    const { expanded, isShrinking, isExpanding } = this.state
+
+    document.activeElement.blur()
+    this.props.onClick({ expanded, isShrinking, isExpanding })
+  }
+
+  updateExpandState = () => {
     this.setState(
       prevState => ({
         expanded: !prevState.expanded,
+        isShrinking: false,
+        isExpanding: false,
       }),
+      this.handleAfterClick,
+    )
+  }
+
+  handleClick = () => {
+    const { withAnimation, animationShrinkingDuration } = this.props
+
+    if (!withAnimation) return this.updateExpandState()
+
+    return this.setState(
+      prevState => {
+        if (prevState.expanded) {
+          return { isShrinking: true }
+        }
+
+        return { isExpanding: true }
+      },
       () => {
-        document.activeElement.blur()
-        this.props.onClick({ expanded: this.state.expanded })
+        if (this.state.isShrinking) {
+          return setTimeout(
+            this.updateExpandState,
+            animationShrinkingDuration * 1000,
+          )
+        }
+
+        return this.updateExpandState()
       },
     )
+  }
+
+  contentStyle = () => {
+    const {
+      withAnimation,
+      animationShrinkingDuration,
+      animationMaxHeight,
+    } = this.props
+
+    if (!withAnimation) return null
+
+    if (this.state.isShrinking) {
+      return {
+        maxHeight: animationMaxHeight,
+        opacity: 1,
+        animationDuration: `${animationShrinkingDuration}s`,
+        animationDelay: 0,
+        animationIterationCount: 1,
+        animationFillMode: 'forwards',
+        animationName: this.shrinkAnimation,
+        animationTimingFunction: 'ease-in-out',
+      }
+    }
+
+    return {
+      maxHeight: 0,
+      opacity: 0,
+      animationDuration: '1s',
+      animationDelay: 0,
+      animationIterationCount: 1,
+      animationFillMode: 'forwards',
+      animationName: this.growAnimation,
+      animationTimingFunction: 'ease-in-out',
+    }
   }
 
   render() {
@@ -148,6 +243,7 @@ class ExpandBoardBase extends Component {
       if (this.isContentComponent(child)) {
         content = React.cloneElement(child, {
           ariaId,
+          style: this.contentStyle(),
         })
       }
     })
@@ -168,20 +264,17 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      lineHeight: '1.3em',
-      // As the arrow takes a huge space because of its rotation, we cannot
-      // apply the same paddings as on the basic big button. These values ajust
-      // the paddings so it fits the same as the basic big button.
-      paddingTop: pxToRem(3),
-      paddingBottom: pxToRem(3),
+      lineHeight: '1.3rem',
+      padding: `${pxToRem(22)} ${pxToRem(30)}`,
     },
     expanded: {
       backgroundColor: COLORS.font1,
       borderColor: COLORS.font1,
     },
     arrow: {
-      width: '0.375rem',
-      height: '0.375rem',
+      width: pxToRem(8),
+      height: '0.75rem', // half of button base line-height
+      marginLeft: pxToRem(10),
     },
   },
 }
