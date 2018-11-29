@@ -53,8 +53,8 @@ export class MargerBase extends Component {
   valueIsNumber = value => {
     // Retro-compatibility: this handles the case when the user enters `.5` as a
     // value for a margin.
-    if (typeof value === 'string' && value.match(/^\./)) {
-      return isStringANumber(value.replace(/(-)*(.\d)+/, '$10$2'))
+    if (typeof value === 'string' && value.match(/^-?\.\d+$/)) {
+      return true
     }
 
     return isStringANumber(String(value))
