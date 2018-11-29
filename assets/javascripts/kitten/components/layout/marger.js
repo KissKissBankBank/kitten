@@ -12,24 +12,26 @@ export class MargerBase extends Component {
       PropTypes.string,
       PropTypes.number,
       PropTypes.shape({
-        xxs: PropTypes.number,
-        xs: PropTypes.number,
-        s: PropTypes.number,
-        m: PropTypes.number,
-        l: PropTypes.number,
-        xl: PropTypes.number,
+        default: PropTypes.number,
+        fromXxs: PropTypes.number,
+        frommXs: PropTypes.number,
+        fromS: PropTypes.number,
+        fromM: PropTypes.number,
+        fromL: PropTypes.number,
+        fromXl: PropTypes.number,
       }),
     ]),
     bottom: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
       PropTypes.shape({
-        xxs: PropTypes.number,
-        xs: PropTypes.number,
-        s: PropTypes.number,
-        m: PropTypes.number,
-        l: PropTypes.number,
-        xl: PropTypes.number,
+        default: PropTypes.number,
+        fromXxs: PropTypes.number,
+        frommXs: PropTypes.number,
+        fromS: PropTypes.number,
+        fromM: PropTypes.number,
+        fromL: PropTypes.number,
+        fromXl: PropTypes.number,
       }),
     ]),
   }
@@ -61,11 +63,12 @@ export class MargerBase extends Component {
     this.props[propName] && this.props[propName].default
   propIsNumber = propName => this.valueIsNumber(this.props[propName])
   isPropWithViewportRange = (propName, viewportRange) =>
-    this.props[propName] && this.props[propName][viewportRange]
+    this.props[propName] &&
+    this.props[propName][`from${upcaseFirst(viewportRange)}`]
   viewportRangeCssRule = viewportRange =>
     `@media (min-width: ${ScreenConfig[viewportRange.toUpperCase()].min}px)`
   propCssDeclarationForViewportRange = (propName, viewportRange) => {
-    const size = this.props[propName][viewportRange]
+    const size = this.props[propName][`from${upcaseFirst(viewportRange)}`]
     const cssRule = `margin${upcaseFirst(propName)}`
 
     return { [cssRule]: this.marginSize(size) }

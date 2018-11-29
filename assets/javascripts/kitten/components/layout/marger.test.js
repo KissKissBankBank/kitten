@@ -41,7 +41,9 @@ describe('<Marger />', () => {
 
     describe('with object prop', () => {
       it('has margin-top CSS rule', () => {
-        const marger = shallow(<Marger top={{ xs: 12, m: 2, default: 4 }} />)
+        const marger = shallow(
+          <Marger top={{ fromXs: 12, fromM: 2, default: 4 }} />,
+        )
           .dive()
           .children()
           .first()
@@ -79,7 +81,9 @@ describe('<Marger />', () => {
 
     describe('with object prop', () => {
       it('has margin-bottom CSS rule', () => {
-        const marger = shallow(<Marger bottom={{ xs: 12, m: 2, default: 4 }} />)
+        const marger = shallow(
+          <Marger bottom={{ fromXs: 12, fromM: 2, default: 4 }} />,
+        )
           .dive()
           .children()
           .first()
@@ -102,8 +106,8 @@ describe('<Marger />', () => {
     it('has a custom style', () => {
       const marger = shallow(
         <Marger
-          bottom={{ xs: 12, m: 2 }}
-          top={{ xs: 12, m: 2 }}
+          bottom={{ fromXs: 12, fromM: 2 }}
+          top={{ fromXs: 12, fromM: 2 }}
           style={{ backgroundColor: 'red' }}
         />,
       )
