@@ -6,8 +6,6 @@ import TYPOGRAPHY from 'kitten/constants/typography-config'
 import isStringANumber from 'is-string-a-number'
 import { upcaseFirst } from 'kitten/helpers/utils/string'
 
-const viewportRanges = ['xxs', 'xs', 's', 'm', 'l', 'xl']
-
 export class MargerBase extends Component {
   static propTypes = {
     top: PropTypes.oneOfType([
@@ -65,7 +63,7 @@ export class MargerBase extends Component {
   isPropWithViewportRange = (propName, viewportRange) =>
     this.props[propName] && this.props[propName][viewportRange]
   viewportRangeCssRule = viewportRange =>
-    `@media (max-width: ${ScreenConfig[viewportRange.toUpperCase()].max}px)`
+    `@media (min-width: ${ScreenConfig[viewportRange.toUpperCase()].min}px)`
   propCssDeclarationForViewportRange = (propName, viewportRange) => {
     const size = this.props[propName][viewportRange]
     const cssRule = `margin${upcaseFirst(propName)}`
@@ -89,6 +87,9 @@ export class MargerBase extends Component {
 
   render() {
     const { top, bottom, style, ...others } = this.props
+    const viewportRanges = Object.keys(ScreenConfig)
+      .map(size => size.toLowerCase())
+      .filter(size => size !== 'xxs')
     const viewportRangesStyles = viewportRanges.reduce((acc, viewportRange) => {
       return [
         ...acc,

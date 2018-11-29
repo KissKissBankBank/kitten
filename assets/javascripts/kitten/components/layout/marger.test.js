@@ -53,8 +53,8 @@ describe('<Marger />', () => {
 
         expect(styles).toEqual([
           { marginTop: '2.5rem' },
-          { '@media (max-width: 639px)': { marginTop: '7.5rem' } },
-          { '@media (max-width: 1079px)': { marginTop: '1.25rem' } },
+          { '@media (min-width: 480px)': { marginTop: '7.5rem' } },
+          { '@media (min-width: 768px)': { marginTop: '1.25rem' } },
         ])
       })
     })
@@ -91,8 +91,8 @@ describe('<Marger />', () => {
 
         expect(styles).toEqual([
           { marginBottom: '2.5rem' },
-          { '@media (max-width: 639px)': { marginBottom: '7.5rem' } },
-          { '@media (max-width: 1079px)': { marginBottom: '1.25rem' } },
+          { '@media (min-width: 480px)': { marginBottom: '7.5rem' } },
+          { '@media (min-width: 768px)': { marginBottom: '1.25rem' } },
         ])
       })
     })
@@ -118,10 +118,10 @@ describe('<Marger />', () => {
 
       expect(styles).toMatchObject([
         { backgroundColor: 'red' },
-        { '@media (max-width: 639px)': { marginTop: '7.5rem' } },
-        { '@media (max-width: 639px)': { marginBottom: '7.5rem' } },
-        { '@media (max-width: 1079px)': { marginTop: '1.25rem' } },
-        { '@media (max-width: 1079px)': { marginBottom: '1.25rem' } },
+        { '@media (min-width: 480px)': { marginTop: '7.5rem' } },
+        { '@media (min-width: 480px)': { marginBottom: '7.5rem' } },
+        { '@media (min-width: 768px)': { marginTop: '1.25rem' } },
+        { '@media (min-width: 768px)': { marginBottom: '1.25rem' } },
       ])
     })
   })
