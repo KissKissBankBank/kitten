@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs/react'
-import { Field } from 'kitten/components/form/field'
-import { Marger } from 'kitten/components/layout/marger'
-import { Container } from 'kitten/components/grid/container'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Field } from './field'
+import { Marger } from '../layout/marger'
+import { Container } from '../grid/container'
+import { Grid, GridCol } from '../grid/grid'
 
 const FieldBase = ({ children }) => (
   <Container>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Marger } from 'kitten/components/layout/marger'
-import { Text } from 'kitten/components/typography/text'
+import { Marger } from '../../layout/marger'
+import { Text } from '../../typography/text'
 
 export class FieldError extends Component {
   render() {
