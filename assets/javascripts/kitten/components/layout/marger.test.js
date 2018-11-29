@@ -37,6 +37,20 @@ describe('<Marger />', () => {
 
         expect(styles).toEqual([{ marginTop: '0.9375rem' }])
       })
+
+      it('works with .5 value', () => {
+        const marger = shallow(<Marger top=".5" />)
+          .dive()
+          .children()
+          .first()
+          .dive()
+          .first()
+          .children()
+          .first()
+        const styles = cleanStyles(marger.props().style)
+
+        expect(styles).toEqual([{ marginTop: '0.3125rem' }])
+      })
     })
 
     describe('with object prop', () => {
@@ -92,6 +106,20 @@ describe('<Marger />', () => {
         const styles = cleanStyles(marger.props().style)
 
         expect(styles).toEqual([{ marginBottom: '0.9375rem' }])
+      })
+
+      it('works with .5 value', () => {
+        const marger = shallow(<Marger bottom=".5" />)
+          .dive()
+          .children()
+          .first()
+          .dive()
+          .first()
+          .children()
+          .first()
+        const styles = cleanStyles(marger.props().style)
+
+        expect(styles).toEqual([{ marginBottom: '0.3125rem' }])
       })
     })
 
