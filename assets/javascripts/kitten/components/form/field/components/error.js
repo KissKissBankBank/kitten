@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Marger } from '../../layout/marger'
-import { Text } from '../../typography/text'
+import { Marger } from '../../../layout/marger'
+import { Text } from '../../../typography/text'
 
 export class FieldError extends Component {
   render() {

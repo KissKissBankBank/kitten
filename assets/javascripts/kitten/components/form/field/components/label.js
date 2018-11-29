@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { Marger } from '../../layout/marger'
-import { Label } from '../../form/label'
-import { Tooltip } from '../../tooltips/tooltip'
-import { Line } from '../../layout/line'
+import { Marger } from '../../../layout/marger'
+import { Label } from '../../../form/label'
+import { Tooltip } from '../../../tooltips/tooltip'
+import { Line } from '../../../layout/line'
 
 export class FieldLabel extends Component {
   static propTypes = {

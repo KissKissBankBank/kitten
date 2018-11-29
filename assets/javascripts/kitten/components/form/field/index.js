@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { FieldLabel } from './field/label'
-import { FieldInput } from './field/input'
-import { FieldError } from './field/error'
-import { FieldRadioButtonSet } from './field/radio-button-set'
-import { FieldSelect } from './field/select'
+import { FieldLabel } from './components/label'
+import { FieldInput } from './components/input'
+import { FieldError } from './components/error'
+import { FieldRadioButtonSet } from './components/radio-button-set'
+import { FieldSelect } from './components/select'
 
 export class Field extends Component {
   static Label = FieldLabel

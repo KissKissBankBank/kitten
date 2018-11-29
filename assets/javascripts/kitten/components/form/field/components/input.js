@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Marger } from '../../layout/marger'
-import { TextInput } from '../../form/text-input'
+import { Marger } from '../../../layout/marger'
+import { TextInput } from '../../../form/text-input'
 
 export class FieldInput extends Component {
   render() {
