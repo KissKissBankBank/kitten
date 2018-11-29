@@ -5,6 +5,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Fix undefined `setState()` when unmounting `Triptych` component.
+- Feature: Update `Marger` component. You can now pass an
+  object to the `top` and `bottom` props to handle breakpoints with `Marger`.
+  This update doesn't affect the previous props' validation, you can still pass
+  string values:
+  ```js
+  const topMarginsWithBreakpoints = { xs: 12, m: 2 }
+  <Marger top={topMarginsWithBreakpoints} bottom="1.5" />
+  ```
 
 ## [23.14.0] - 2018-11-28
 
