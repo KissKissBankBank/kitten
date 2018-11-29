@@ -106,6 +106,12 @@
     }
   }
 
+  .k-Header__nav--hidden\@m-down {
+    @include k-media-max('m') {
+      display: none;
+    }
+  }
+
   .k-Header__nav__item {
     box-sizing: content-box;
     height: k-px-to-rem($height - $nav-border-width);
@@ -117,6 +123,14 @@
 
   .k-Header__logo {
     display: flex;
+  }
+
+  .k-Header__logo--smallOnXxs {
+    svg, img {
+      @include k-media-max('xxs') {
+        width: k-px-to-rem(120px);
+      }
+    }
   }
 
   .k-Header__logo--lightOnM {
