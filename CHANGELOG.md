@@ -10,17 +10,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   `Field.RadioButtonSet`
   `Field.Select`
   `Field.Error`
+- Fix: Fix `ExpandBoard.Button` arrow styles.
+- Fix: Add `box-sizing` CSS rule to `RewardCard` component.
 
 ## [23.13.0] - 2018-11-21
-
-Release de `kitten-components@23.13.0` avec au programme :
-```
-- Ajout du composant `SimpleCarousel`.
-- Ajout d'une animation sur le `:hover` sur les items de `List`.
-- Ajout d'un nouveau breakpoint dans le HOC `mediaQueries`.
-- Dépréciation de `viewportIsMobile` et `viewportIsTabletOrLess` au profit de `viewportIsXS` and `viewportIsMOrLess`.
-- Correction d'un bug sur le composant `Deprecated` au chargement SSR.
-```
 
 Features:
 - Add `SimpleCarousel` component.
