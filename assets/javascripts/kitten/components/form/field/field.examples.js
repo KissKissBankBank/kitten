@@ -77,7 +77,7 @@ export const FieldRadioButtonSetExample = ({
   </FieldBase>
 )
 
-export const FieldSelect = ({
+export const FieldSelectExample = ({
   id,
   label,
   tooltip,

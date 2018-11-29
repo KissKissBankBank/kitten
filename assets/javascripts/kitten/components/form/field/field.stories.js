@@ -4,7 +4,7 @@ import { withKnobs, text, boolean } from '@storybook/addon-knobs/react'
 import {
   FieldInputExample,
   FieldRadioButtonSetExample,
-  FieldSelect,
+  FieldSelectExample,
 } from './field.examples'
 
 storiesOf('Form/Field', module)
@@ -51,7 +51,7 @@ storiesOf('Form/Field', module)
   })
   .add('with select', () => {
     return (
-      <FieldSelect
+      <FieldSelectExample
         id={text('ID', 'select')}
         label={text('Label', 'Label')}
         tooltip={text('Tooltip', null)}
