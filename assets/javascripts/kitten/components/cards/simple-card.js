@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { card } from 'kitten/hoc/card'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Marger } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
-import { Text } from 'kitten/components/typography/text'
-import { parseHtml } from 'kitten/helpers/utils/parser'
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
+import { card } from '../../hoc/card'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Marger } from '../../components/layout/marger'
+import { Title } from '../../components/typography/title'
+import { Text } from '../../components/typography/text'
+import { parseHtml } from '../../helpers/utils/parser'
+import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
 
 class SimpleCardComponent extends Component {
   render() {

@@ -1,4 +1,4 @@
-import { stringUtils } from 'kitten/helpers/utils/string'
+import { stringUtils } from '../../helpers/utils/string'
 
 describe('upcaseFirst()', () => {
   it('converts a first character to uppercase', () => {

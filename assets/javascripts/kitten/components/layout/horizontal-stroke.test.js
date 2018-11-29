@@ -1,5 +1,5 @@
 import React from 'react'
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
+import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
 
 describe('<HorizontalStroke />', () => {
   describe('by default', () => {

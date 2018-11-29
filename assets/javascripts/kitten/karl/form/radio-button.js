@@ -1,5 +1,5 @@
 import React from 'react'
-import { RadioButton } from 'kitten/components/form/radio-button'
+import { RadioButton } from '../../components/form/radio-button'
 
 export const KarlRadioButtonError = () => (
   <div className="k-TextInputWithInfo">

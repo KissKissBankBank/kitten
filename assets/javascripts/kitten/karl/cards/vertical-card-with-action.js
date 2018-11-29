@@ -1,10 +1,10 @@
 import React from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { VerticalCardWithAction } from 'kitten/components/cards/vertical-card-with-action'
-import { Container } from 'kitten/components/grid/container'
-import { Marger } from 'kitten/components/layout/marger'
-import { KarlExampleTitle } from 'kitten/karl/examples/title'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { VerticalCardWithAction } from '../../components/cards/vertical-card-with-action'
+import { Container } from '../../components/grid/container'
+import { Marger } from '../../components/layout/marger'
+import { KarlExampleTitle } from '../../karl/examples/title'
 
 export const KarlVerticalCardWithAction = () => (
   <StyleRoot>

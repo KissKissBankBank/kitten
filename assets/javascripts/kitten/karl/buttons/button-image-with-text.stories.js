@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs/react'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
+import { Grid, GridCol } from '../../components/grid/grid'
 import { StyleRoot } from 'radium'
-import { ButtonImageWithText } from 'kitten/components/buttons/button-image-with-text'
+import { ButtonImageWithText } from '../../components/buttons/button-image-with-text'
 
 storiesOf('ButtonImageWithText', module)
   .addDecorator(withKnobs)

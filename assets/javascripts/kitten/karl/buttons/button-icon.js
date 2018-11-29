@@ -1,7 +1,7 @@
 import React from 'react'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { HeartIcon } from 'kitten/components/icons/heart-icon'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
+import { ButtonIcon } from '../../components/buttons/button-icon'
+import { HeartIcon } from '../../components/icons/heart-icon'
+import { ArrowIcon } from '../../components/icons/arrow-icon'
 
 export const KarlButtonIconHeart = props => (
   <ButtonIcon {...props}>

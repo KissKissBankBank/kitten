@@ -1,5 +1,5 @@
 import React from 'react'
-import { BulletList } from 'kitten/components/lists/bullet-list'
+import { BulletList } from '../../components/lists/bullet-list'
 
 describe('<BulletList />', () => {
   const items = [{ key: 'foo', item: 'Foo' }, { key: 'bar', item: 'Bar' }]

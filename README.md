@@ -7,62 +7,27 @@ typographic scale, etc.).
 You can check out Kitten's components on
 [KissKissBankBank's styleguide](https://styleguide.kisskissbankbank.com/).
 
-It is an npm module coupled with a Rails engine that provides an integrated
-styleguide. It should eventually be separated into two different repositories.
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
-
 ## Dependencies
-
-- Ruby 2.2.4
-- Bundler (`gem install bundler`)
-- Node ~> 6.0
+- react >= 15.x
+- react-dom >= 15.x
 
 ## Table of content
 - [Installation](#installation)
-  - [Npm](#npm)
-  - [Rails engine](#rails-engine)
 - [Usage](#usage)
   - [CSS components](#css-components)
   - [React components](#react-components)
-  - [Style Guide](#style-guide)
 - [Development](#development)
 - [Contributing](#contributing)
 - [Release](#release)
 
 ## Installation
 
-You can choose to use the npm module only or with the Rails engine.
-
-### Npm
-
-```sh
-npm install kitten-components --save-dev
 ```
-
-### Rails engine
-
-Add this line to your application's Gemfile:
-
-```ruby
-# Style guide
-gem 'kitten'
+npm install @kisskissbankbank/kitten
 ```
-
-And these routes to your `routes.rb`:
-
-```ruby
-mount Kitten::Engine, at: '/kitten' if Rails.env.development?
-```
-
-You can then run `bundle` and restart your server.
-
-`kitten` is designed to serve assets with [Webpack](webpack.github.io)
-through [React on Rails](https://github.com/shakacode/react_on_rails).
-
-**For more detailed instructions**, see [Rails webpack
-configuration](docs/installation/rails-webpack-configuration.md).
 
 ## Usage
 
@@ -86,40 +51,12 @@ for an example.
 You can render React components directly in your js bundle:
 
 ```js
-const yourLoanSimulatorProps = {}
+import { SimpleCard } from '@kisskissbankbank/kitten/src/components/cards/simple-card'
 
 ReactDOM.render(
-  React.createElement(LoanSimulator, yourLoanSimulatorProps),
-  document.getElementById('loan-simulator')
+  <SimpleCard ...props/>,
+  document.getElementById('main')
 )
-```
-
-Or, use [React on
-Rails](https://github.com/shakacode/react_on_rails#including-your-react-component-in-your-rails-views)
-view helper in your `.erb` file:
-
-```erb
-<%= react_component('LoanSimulator', props: your_loan_simulator_props) %>
-```
-
-### Style guide
-
-Kitten provides a styleguide interface through a Rails engine.
-You can run see it in your browser by downloading kitten and launching
-the app or by installing the style guide in your Rails app.
-
-The engine provides some configuration options that can be defined in
-`config/initializers/kitten.rb`:
-
-- **webpack_output_bundle**: This option is used to pass an output bundle name
-  for hot reloading. By default, it is set to `application-bundle`.
-
-Example configuration:
-
-```rb
-Kitten.configure do |config|
-  config.webpack_output_bundle = 'your-custom-bundle'
-end
 ```
 
 ## Development
@@ -132,104 +69,52 @@ creating new components!
 ### Install
 
 ```sh
-$ bin/kitten install
+$ npm install
+```
+
+
+### Storybook
+
+- To launch storybook in local
+```sh
+npm run storybook
+```
+
+Then visit http://localhost:6006
+
+- To release `Storybook` simply run this command:
+```sh
+yarn deploy-storybook
 ```
 
 ### Style guide
 
-To launch the style guide with hot-reloading, install `overmind`, then:
+To launch the style guide using webpack :
 
 ```sh
-$ bin/start
-```
-
-Then visit http://localhost:3003
-
-#### Background app
-
-To launch the style guide in the background without hot-reloading:
-
-```sh
-$ bin/kitten start
+$ npm run styleguide:start
 ```
 
 Then visit http://localhost:3000
 
-To stop the app:
-
-```sh
-$ bin/kitten stop
-```
-
-To check wether it is running or not:
-
-```sh
-$ bin/kitten status
-```
-
-To tail the app logs in real time:
-
-```sh
-$ bin/kitten log
-```
-
-Hit `Ctrl+C` to stop the tail.
-
 #### Production settings
 
 To share the style guide with production settings (to share via ngrok for
-example), you can compile the assets and serve a production server:
+example), you can compile the assets:
 
 ```sh
-$ bin/rake staging:assets:precompile
-$ REACT_ON_RAILS_ENV= rails s -b 0.0.0.0
+npm run styleguide:build
 ```
 
-### Cleanup
+It will create a `build` folder with static files. You can serve it as you wish
 
-To cleanup installed modules:
-
-```sh
-bin/kitten cleanup
-```
-
-### Style checker
-
-```sh
-$ yarn stylelint
-```
-
-### Ruby specs
-
-```sh
-$ bundle exec rake
-```
-
-### SassDoc
-
-We use [SassDoc](http://sassdoc.com/) to generate documentation from our
-components comments.
-
-Generate the documentation:
-
-```sh
-$ bundle exec rake sassdoc
-# OR
-$ yarn sassdoc
-```
-
-The documentation is accessible on development environment: `/kitten/sassdoc`.
 
 ### Component testing
 
 To launch the JS tests:
 
 ```sh
-$ bin/kitten test
-
-# OR
-
-$ bin/test {PATH}/{FILE}.test.js
+npm test
 ```
 
 Check out the [guidelines](../../wiki/Component-testing) to know how to test kitten.
@@ -259,16 +144,6 @@ To merge code into master:
 - Merge using `Squash and merge` on GitHub.
 - Delete the branch.
 
-## Static Dump
-
-To build an on disk static file mirror:
-
-```sh
-$ bin/kitten buildstatic
-```
-- files are located in build/
-
-
 ## Release
 
 **Only for [KissKissBankBank](https://github.com/KissKissBankBank)
@@ -295,12 +170,10 @@ $ yarn login
 - Update the `KARL_CHANGELOG.md` file:
   * Update the version with the version of the library.
   * Add a new `[unreleased]` section.
-- Update the version in `lib/kitten/version.rb`.
-- Update the version in `package.json`.
 - Run this command:
 
 ```sh
-$ bundle exec rake kitten_prepare_release
+bin/release NEW_VERSION
 ```
 
 - Follow the link to create the pull request on Github.
@@ -316,23 +189,10 @@ Once the pull request is accepted:
 - Run this command:
 
 ```sh
-$ bundle exec rake kitten_release
+bin/publish
 ```
 
 - Update
   [our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
   move cards that are released from `done` column to `released` column.
 
-### Storybook
-
-- To launch storybook in local
-```sh
-npm run storybook
-```
-
-Then visit http://localhost:6006
-
-- To release `Storybook` simply run this command:
-```sh
-yarn deploy-storybook
-```

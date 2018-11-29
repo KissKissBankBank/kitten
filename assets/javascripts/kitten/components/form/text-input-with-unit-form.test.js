@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { TextInputWithUnitForm } from 'kitten/components/form/text-input-with-unit-form'
+import { TextInputWithUnitForm } from '../../components/form/text-input-with-unit-form'
 
 const createMockMediaMatcher = matches => () => ({
   matches,

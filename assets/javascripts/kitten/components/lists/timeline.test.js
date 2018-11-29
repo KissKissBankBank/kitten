@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Timeline } from 'kitten/components/lists/timeline'
+import { Timeline } from '../../components/lists/timeline'
 
 const createMockMediaMatcher = matches => () => ({
   matches,

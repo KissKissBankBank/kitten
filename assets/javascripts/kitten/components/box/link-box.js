@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
-import { Text } from 'kitten/components/typography/text'
-import { Marger } from 'kitten/components/layout/marger'
-import COLORS from 'kitten/constants/colors-config'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { mediaQueries } from 'kitten/hoc/media-queries'
+import { ArrowIcon } from '../../components/icons/arrow-icon'
+import { Text } from '../../components/typography/text'
+import { Marger } from '../../components/layout/marger'
+import COLORS from '../../constants/colors-config'
+import { ScreenConfig } from '../../constants/screen-config'
+import { mediaQueries } from '../../hoc/media-queries'
+import { pxToRem } from '../../helpers/utils/typography'
 
 export class LinkBox extends Component {
   static propTypes = {
@@ -27,6 +28,20 @@ export class LinkBox extends Component {
     titleTag: 'span',
     text: '',
     textTag: 'span',
+  }
+
+  constructor(props) {
+    super(props)
+
+    this.state = { hover: false }
+  }
+
+  handleOnMouseEnter = () => {
+    this.setState({ hover: true })
+  }
+
+  handleOnMouseLeave = () => {
+    this.setState({ hover: false })
   }
 
   renderIcon() {
@@ -51,19 +66,28 @@ export class LinkBox extends Component {
 
     const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}
 
+    const arrowStyle = [
+      styles.navigation,
+      this.state.hover && styles.navigation.hover,
+    ]
+
     return (
       <StyleRoot>
         <a {...linkProps} style={styles.linkBox} href={href} {...target}>
-          <div style={styles.container}>
+          <div
+            style={styles.container}
+            onMouseEnter={this.handleOnMouseEnter}
+            onMouseLeave={this.handleOnMouseLeave}
+          >
             {this.renderIcon()}
-            <div style={styles.paragraph}>
+            <Marger top="2" bottom="2" style={styles.paragraph}>
               <Marger bottom={text ? 0.5 : 0}>
                 <Text
                   tag={titleTag}
                   weight="regular"
                   size={viewportIsMobile ? 'tiny' : 'default'}
                   color="font1"
-                  lineHeight="normal"
+                  style={{ lineHeight: 1 }}
                 >
                   {title}
                 </Text>
@@ -80,8 +104,8 @@ export class LinkBox extends Component {
                   {text}
                 </Text>
               )}
-            </div>
-            <div style={styles.navigation}>
+            </Marger>
+            <div style={arrowStyle}>
               <ArrowIcon className="k-ButtonIcon__svg" />
             </div>
           </div>
@@ -106,14 +130,11 @@ const styles = {
     color: COLORS.font1,
     backgroundColor: COLORS.background1,
     border: `2px solid ${COLORS.line1}`,
-    transition: 'backgroundColor .2s',
-    ':active': {
-      position: 'relative',
-      left: 5,
-      transition: 'left .5s',
-    },
     ':hover': {
       backgroundColor: COLORS.background2,
+    },
+    ':active': {
+      backgroundColor: COLORS.background3,
     },
   },
 
@@ -136,11 +157,9 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     flexGrow: 1,
-    paddingTop: 10,
-    paddingBottom: 15,
-    paddingLeft: 20,
+    paddingLeft: pxToRem(20),
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
-      paddingLeft: 30,
+      paddingLeft: pxToRem(30),
     },
   },
 
@@ -148,9 +167,13 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     padding: '15px 22px 15px 18px',
+    transition: 'all 0.4s ease-in-out',
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
-      paddingLeft: 30,
-      paddingRight: 32,
+      paddingLeft: pxToRem(30),
+      paddingRight: pxToRem(32),
+    },
+    hover: {
+      transform: 'translate(5px, 0px)',
     },
   },
 }

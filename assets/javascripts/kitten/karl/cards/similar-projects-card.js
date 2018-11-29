@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SimilarProjectsCard } from 'kitten/components/cards/similar-projects-card'
+import { SimilarProjectsCard } from '../../components/cards/similar-projects-card'
 
 const projectsWithImage = [
   {

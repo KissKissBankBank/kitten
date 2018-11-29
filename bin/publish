@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+PACKAGE_VERSION=$(cat package.json \
+  | grep version \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g' \
+  | tr -d '[[:space:]]')
+
+REALEASE_TAG="v$PACKAGE_VERSION-next"
+
+echo "Preparing to publish $PACKAGE_VERSION version linked to tag $REALEASE_TAG."
+
+git tag -a ${REALEASE_TAG} -m "create new release $REALEASE_TAG"
+git push origin ${REALEASE_TAG}
+npm publish
+
+echo "Done! kitten v$PACKAGE_VERSION is published! 🚀"
+echo "I can use it alteady with npm install @kisskissbankbank/kitten"

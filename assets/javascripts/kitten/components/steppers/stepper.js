@@ -4,7 +4,7 @@ import {
   StepperIconDefault,
   StepperIconInProgress,
   StepperIconValidated,
-} from 'kitten/components/steppers/stepper-icon'
+} from './stepper-icon'
 
 const iconTypeComponents = {
   default: StepperIconDefault,
@@ -21,13 +21,8 @@ export class Stepper extends Component {
 
     return text
       .split(regex)
-      .map(
-        (line, index) =>
-          line.match(regex) ? (
-            <br className={brClassNames} key={index} />
-          ) : (
-            line
-          ),
+      .map((line, index) =>
+        line.match(regex) ? <br className={brClassNames} key={index} /> : line,
       )
   }
 

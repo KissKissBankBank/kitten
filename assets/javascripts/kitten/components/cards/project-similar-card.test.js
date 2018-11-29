@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { SimilarProjectCard } from 'kitten/components/cards/project-similar-card'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { TagList } from 'kitten/components/lists/tag-list'
-import { LockIcon } from 'kitten/components/icons/lock-icon'
-import { Loader } from 'kitten/components/loaders/loader'
+import { SimilarProjectCard } from '../../components/cards/project-similar-card'
+import { Title } from '../../components/typography/title'
+import { Paragraph } from '../../components/typography/paragraph'
+import { TagList } from '../../components/lists/tag-list'
+import { LockIcon } from '../../components/icons/lock-icon'
+import { Loader } from '../../components/loaders/loader'
 
 describe('<SimilarProjectCard />', () => {
   describe('by default', () => {

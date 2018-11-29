@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { CounterBlock } from 'kitten/components/meters/counter-block'
-import { Title } from 'kitten/components/typography/title'
-import { Text } from 'kitten/components/typography/text'
+import { CounterBlock } from '../../components/meters/counter-block'
+import { Title } from '../../components/typography/title'
+import { Text } from '../../components/typography/text'
 
 export class KarlCounterBlock extends Component {
   render() {

@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { card } from 'kitten/hoc/card'
+import { card } from './card'
 
 const ExampleCardComponent = props => {
   const exampleClassName = classNames('test-ExampleCard', props.className)

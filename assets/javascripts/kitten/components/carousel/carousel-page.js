@@ -1,6 +1,6 @@
 import React from 'react'
 import Radium from 'radium'
-import { createRangeFromZeroTo } from 'kitten/helpers/utils/range'
+import { createRangeFromZeroTo } from '../../helpers/utils/range'
 
 class CarouselPageBase extends React.Component {
   render() {

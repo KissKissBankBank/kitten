@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
-import { Marger } from 'kitten/components/layout/marger'
-import { pxToRem } from 'kitten/helpers/utils/typography'
-import COLORS from 'kitten/constants/colors-config'
+import { Text as TextBase } from '../../../components/typography/text'
+import { HorizontalStroke as HorizontalStrokeBase } from '../../../components/layout/horizontal-stroke'
+import { Marger } from '../../../components/layout/marger'
+import { pxToRem } from '../../../helpers/utils/typography'
+import COLORS from '../../../constants/colors-config'
 
 const Text = Radium(TextBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)

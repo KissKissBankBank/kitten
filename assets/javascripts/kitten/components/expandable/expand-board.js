@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
-import COLORS from 'kitten/constants/colors-config'
-import { pxToRem } from 'kitten/helpers/utils/typography'
+import { Button as ButtonBase } from '../../components/buttons/button'
+import { ArrowIcon } from '../../components/icons/arrow-icon'
+import COLORS from '../../constants/colors-config'
+import { pxToRem } from '../../helpers/utils/typography'
 
 const Button = Radium(ButtonBase)
 
@@ -56,13 +56,15 @@ class ExpandBoardButton extends Component {
         onClick={onClick}
         type="button"
       >
-        {expanded ? defaultExpandChildren : children}
-        <ArrowIcon
-          direction={expanded ? 'top' : 'bottom'}
-          className="k-Button__icon"
-          fill={COLORS.background1}
-          style={style.arrow}
-        />
+        <div>
+          {expanded ? defaultExpandChildren : children}
+          <ArrowIcon
+            version="solid"
+            direction={expanded ? 'top' : 'bottom'}
+            fill={COLORS.background1}
+            style={style.arrow}
+          />
+        </div>
       </Button>
     )
   }
@@ -168,20 +170,17 @@ const styles = {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      lineHeight: '1.3em',
-      // As the arrow takes a huge space because of its rotation, we cannot
-      // apply the same paddings as on the basic big button. These values ajust
-      // the paddings so it fits the same as the basic big button.
-      paddingTop: pxToRem(3),
-      paddingBottom: pxToRem(3),
+      lineHeight: '1.3rem',
+      padding: `${pxToRem(22)} ${pxToRem(30)}`,
     },
     expanded: {
       backgroundColor: COLORS.font1,
       borderColor: COLORS.font1,
     },
     arrow: {
-      width: '0.375rem',
-      height: '0.375rem',
+      width: pxToRem(8),
+      height: '0.75rem', // half of button base line-height
+      marginLeft: pxToRem(10),
     },
   },
 }

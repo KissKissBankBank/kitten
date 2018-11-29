@@ -2,9 +2,9 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, object } from '@storybook/addon-knobs/react'
-import { VerticalCardWithAction } from 'kitten/components/cards/vertical-card-with-action'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Marger } from 'kitten/components/layout/marger'
+import { VerticalCardWithAction } from '../../components/cards/vertical-card-with-action'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Marger } from '../../components/layout/marger'
 
 storiesOf('Cards/VerticalCardWithAction', module)
   .addDecorator(withKnobs)

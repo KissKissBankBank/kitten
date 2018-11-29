@@ -5,11 +5,57 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `Field` and sub-components:
-  - `Field.Label`
-  - `Field.Input`
-  - `Field.RadioButtonSet`
-  - `Field.Select`
-  - `Field.Error`
+  `Field.Label`
+  `Field.Input`
+  `Field.RadioButtonSet`
+  `Field.Select`
+  `Field.Error`
+
+## [23.13.0] - 2018-11-21
+
+Release de `kitten-components@23.13.0` avec au programme :
+```
+- Ajout du composant `SimpleCarousel`.
+- Ajout d'une animation sur le `:hover` sur les items de `List`.
+- Ajout d'un nouveau breakpoint dans le HOC `mediaQueries`.
+- Dépréciation de `viewportIsMobile` et `viewportIsTabletOrLess` au profit de `viewportIsXS` and `viewportIsMOrLess`.
+- Correction d'un bug sur le composant `Deprecated` au chargement SSR.
+```
+
+Features:
+- Add `SimpleCarousel` component.
+- Add animation on `List.ButtonItem` hover.
+- Add new viewport range to mediaQueries HOC.
+- Deprecated `viewportIsMobile` and `viewportIsTabletOrLess` on
+  mediaQueries HOC. Please use `viewportIsXS` and `viewportIsMOrLess` instead
+  now.
+
+Fix:
+- Fix `Deprecated` rendering error.
+
+## [23.12.0] - 2018-11-15
+
+Feature:
+- Update `ArrowIcon` component with a `version` prop to handle the icon
+  center of gravity properly. `ArrowIcon` used without this prop is now
+  deprecated. All others props are still available.
+  You should use it as follow now:
+  ```js
+  <ArrowIcon version="solid" />
+  ```
+
+Fix:
+- Fix `LinkBox` padding.
+
+## [23.11.4] - 2018-11-15
+
+Fix:
+- Fix `Triptych` component margin.
+
+## [23.11.3] - 2018-11-14
+
+Fix:
+- Update `LinkBox` animation.
 
 ## [23.11.2] - 2018-11-09
 

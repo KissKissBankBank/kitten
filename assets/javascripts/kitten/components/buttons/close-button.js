@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { CrossIcon } from 'kitten/components/icons/cross-icon'
+import { ButtonIcon } from '../../components/buttons/button-icon'
+import { CrossIcon } from '../../components/icons/cross-icon'
 
 export class CloseButton extends Component {
   render() {
@@ -15,7 +15,7 @@ export class CloseButton extends Component {
 
     const buttonClassName = classNames(
       'k-ButtonIcon--cross',
-      ([`k-ButtonIcon--cross--${size}`]: size),
+      { [`k-ButtonIcon--cross--${size}`]: size },
       className,
     )
 

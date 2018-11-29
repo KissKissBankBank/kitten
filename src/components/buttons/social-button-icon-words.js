@@ -1,0 +1,63 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.LinkedinButtonIconWords = exports.TwitterButtonIconWords = exports.FacebookButtonIconWords = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
+var _react = _interopRequireDefault(require("react"));
+
+var _button = require("../../components/buttons/button");
+
+var _facebookIconWithBackground = require("../../components/icons/facebook-icon-with-background");
+
+var _twitterIcon = require("../../components/icons/twitter-icon");
+
+var _linkedinIcon = require("../../components/icons/linkedin-icon");
+
+var FacebookButtonIconWords = function FacebookButtonIconWords(_ref) {
+  var children = _ref.children,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children"]);
+  return _react.default.createElement(_button.Button, (0, _extends2.default)({
+    icon: true,
+    modifier: "facebook"
+  }, props), _react.default.createElement(_facebookIconWithBackground.FacebookIconWithBackground, {
+    className: "k-Button__icon k-Button__icon--facebook"
+  }), children);
+};
+
+exports.FacebookButtonIconWords = FacebookButtonIconWords;
+
+var TwitterButtonIconWords = function TwitterButtonIconWords(_ref2) {
+  var children = _ref2.children,
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["children"]);
+  return _react.default.createElement(_button.Button, (0, _extends2.default)({
+    icon: true,
+    size: "big",
+    modifier: "twitter"
+  }, props), _react.default.createElement(_twitterIcon.TwitterIcon, {
+    className: "k-Button__icon"
+  }), children);
+};
+
+exports.TwitterButtonIconWords = TwitterButtonIconWords;
+
+var LinkedinButtonIconWords = function LinkedinButtonIconWords(_ref3) {
+  var children = _ref3.children,
+      props = (0, _objectWithoutProperties2.default)(_ref3, ["children"]);
+  return _react.default.createElement(_button.Button, (0, _extends2.default)({
+    icon: true,
+    size: "big",
+    modifier: "linkedin"
+  }, props), _react.default.createElement(_linkedinIcon.LinkedinIcon, {
+    className: "k-Button__icon"
+  }), children);
+};
+
+exports.LinkedinButtonIconWords = LinkedinButtonIconWords;

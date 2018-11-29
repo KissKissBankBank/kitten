@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Dropdown } from 'kitten/components/dropdowns/dropdown'
-import { DropdownButton } from 'kitten/components/dropdowns/dropdown-button'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
-import objectAssign from 'core-js/library/fn/object/assign'
-import emitter from 'kitten/helpers/utils/emitter'
+import { Dropdown } from '../../components/dropdowns/dropdown'
+import { DropdownButton } from '../../components/dropdowns/dropdown-button'
+import domElementHelper from '../../helpers/dom/element-helper'
+import emitter from '../../helpers/utils/emitter'
 import classNames from 'classnames'
 
 export class PhoneDropdown extends React.Component {

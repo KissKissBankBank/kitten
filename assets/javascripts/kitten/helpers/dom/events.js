@@ -1,5 +1,5 @@
 /**
- * @module 'kitten/helpers/dom/events'
+ * @module '../../helpers/dom/events'
  */
 
 export const domEvents = {

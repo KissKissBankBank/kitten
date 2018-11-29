@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import COLORS from 'kitten/constants/colors-config'
-import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { FilterIcon as FilterIconBase } from 'kitten/components/icons/filter-icon'
+import COLORS from '../../constants/colors-config'
+import { Button as ButtonBase } from '../../components/buttons/button'
+import { FilterIcon as FilterIconBase } from '../../components/icons/filter-icon'
 
 const FilterIcon = Radium(FilterIconBase)
 const Button = Radium(ButtonBase)

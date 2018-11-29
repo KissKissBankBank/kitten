@@ -30,23 +30,23 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
           "color": "#222",
           "display": "flex",
           "minHeight": 90,
-          "transition": "backgroundColor .2s",
           "width": "100%",
         }
       }
     >
       <div
-        className="rmq-18e9242d"
-        data-radium={true}
         style={
           Object {
+            "@media (min-width: 640px)": Object {
+              "paddingLeft": "1.875rem",
+            },
             "display": "flex",
             "flexDirection": "column",
             "flexGrow": 1,
             "justifyContent": "center",
-            "paddingBottom": 15,
-            "paddingLeft": 20,
-            "paddingTop": 10,
+            "marginBottom": "1.25rem",
+            "marginTop": "1.25rem",
+            "paddingLeft": "1.25rem",
           }
         }
       >
@@ -59,24 +59,31 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
           }
         >
           <span
-            className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-regular"
+            className="k-u-color-font1 k-u-size-default k-u-weight-regular"
+            style={
+              Object {
+                "lineHeight": 1,
+              }
+            }
           />
         </div>
         
       </div>
       <div
-        className="rmq-a2159094"
+        className="rmq-e7aace01"
         data-radium={true}
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
             "padding": "15px 22px 15px 18px",
+            "transition": "all 0.4s ease-in-out",
           }
         }
       >
         <svg
           className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
+          data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -93,9 +100,8 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-18e9242d{padding-left: 30px !important;}}
-@media (min-width: 640px){ .rmq-a2159094{padding-left: 30px !important;
-padding-right: 32px !important;}}",
+        "__html": "@media (min-width: 640px){ .rmq-e7aace01{padding-left: 1.875rem !important;
+padding-right: 2rem !important;}}",
       }
     }
   />
@@ -134,7 +140,6 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
           "color": "#222",
           "display": "flex",
           "minHeight": 90,
-          "transition": "backgroundColor .2s",
           "width": "100%",
         }
       }
@@ -156,17 +161,18 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         }
       />
       <div
-        className="rmq-18e9242d"
-        data-radium={true}
         style={
           Object {
+            "@media (min-width: 640px)": Object {
+              "paddingLeft": "1.875rem",
+            },
             "display": "flex",
             "flexDirection": "column",
             "flexGrow": 1,
             "justifyContent": "center",
-            "paddingBottom": 15,
-            "paddingLeft": 20,
-            "paddingTop": 10,
+            "marginBottom": "1.25rem",
+            "marginTop": "1.25rem",
+            "paddingLeft": "1.25rem",
           }
         }
       >
@@ -179,7 +185,12 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
           }
         >
           <span
-            className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-regular"
+            className="k-u-color-font1 k-u-size-default k-u-weight-regular"
+            style={
+              Object {
+                "lineHeight": 1,
+              }
+            }
           >
             Lorem ipsum
           </span>
@@ -196,18 +207,20 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="rmq-a2159094"
+        className="rmq-e7aace01"
         data-radium={true}
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
             "padding": "15px 22px 15px 18px",
+            "transition": "all 0.4s ease-in-out",
           }
         }
       >
         <svg
           className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
+          data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -225,9 +238,8 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (min-width: 640px){ .rmq-d68686c{display: flex !important;}}
-@media (min-width: 640px){ .rmq-18e9242d{padding-left: 30px !important;}}
-@media (min-width: 640px){ .rmq-a2159094{padding-left: 30px !important;
-padding-right: 32px !important;}}",
+@media (min-width: 640px){ .rmq-e7aace01{padding-left: 1.875rem !important;
+padding-right: 2rem !important;}}",
       }
     }
   />

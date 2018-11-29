@@ -1,5 +1,5 @@
 import React from 'react'
-import TYPOGRAPHY from 'kitten/constants/typography-config'
+import TYPOGRAPHY from '../../constants/typography-config'
 
 export const Marger = ({ top, bottom, style, ...props }) => {
   const gutter = 10 / TYPOGRAPHY.root // Transform 10 to .625 for have rem unit.

@@ -1,21 +1,19 @@
 import React from 'react'
 import classNames from 'classnames'
-import { defaultProps } from 'kitten/hoc/default-props'
-import objectAssign from 'core-js/library/fn/object/assign'
-
-import { Dropdown } from 'kitten/components/dropdowns/dropdown'
-import { ExternalRichLink } from 'kitten/components/links/external-rich-link'
-import { NavList } from 'kitten/components/lists/nav-list'
-import { UserMenu } from 'kitten/components/dropdowns/user-menu'
-import { PhoneDropdown } from 'kitten/components/dropdowns/phone-dropdown'
-import { Search } from 'kitten/components/form/search'
+import { defaultProps } from '../../hoc/default-props'
+import { Dropdown } from '../../components/dropdowns/dropdown'
+import { ExternalRichLink } from '../../components/links/external-rich-link'
+import { NavList } from '../../components/lists/nav-list'
+import { UserMenu } from '../../components/dropdowns/user-menu'
+import { PhoneDropdown } from '../../components/dropdowns/phone-dropdown'
+import { Search } from '../../components/form/search'
 import {
   Header,
   HeaderItems,
   HeaderItem,
-} from 'kitten/components/headers/header'
-import { HeaderTitles } from 'kitten/components/headers/header-titles'
-import { HeaderLogo } from 'kitten/components/headers/header-logo'
+} from '../../components/headers/header'
+import { HeaderTitles } from '../../components/headers/header-titles'
+import { HeaderLogo } from '../../components/headers/header-logo'
 
 export const KarlHeader = () => {
   return (
@@ -304,7 +302,7 @@ const platformSwitchDropdownList = [
   >
     <img
       className="k-ExternalRichLink__image"
-      src="/assets/brand/kisskissbankbank.svg"
+      src="/assets/images/brand/kisskissbankbank.svg"
       alt="Logo de KissKissBankBank"
     />
   </ExternalRichLink>,
@@ -314,7 +312,7 @@ const platformSwitchDropdownList = [
   >
     <img
       className="k-ExternalRichLink__image"
-      src="/assets/brand/hellomerci.svg"
+      src="/assets/images/brand/hellomerci.svg"
       alt="Logo de hellomerci"
     />
   </ExternalRichLink>,
@@ -324,7 +322,7 @@ const platformSwitchDropdownList = [
   >
     <img
       className="k-ExternalRichLink__image"
-      src="/assets/brand/lendopolis.svg"
+      src="/assets/images/brand/lendopolis.svg"
       alt="Logo de LENDOPOLIS"
     />
   </ExternalRichLink>,
@@ -378,20 +376,20 @@ const platformSwitchProps = {
 }
 
 // Unlogged header dropdown
-const unloggedPlatformSwitchProps = objectAssign(
-  { positionedWith: () => document.getElementById('header') },
-  platformSwitchProps,
-)
+const unloggedPlatformSwitchProps = {
+  positionedWith: () => document.getElementById('header'),
+  ...platformSwitchProps,
+}
 export const KarlUnloggedHeaderPlatformSwitch = defaultProps(
   Dropdown,
   unloggedPlatformSwitchProps,
 )
 
 // Logged header dropdowns
-const loggedPlatformSwitchProps = objectAssign(
-  { positionedWith: () => document.getElementById('header-logged') },
-  platformSwitchProps,
-)
+const loggedPlatformSwitchProps = {
+  positionedWith: () => document.getElementById('header-logged'),
+  ...platformSwitchProps,
+}
 export const KarlLoggedHeaderPlatformSwitch = defaultProps(
   Dropdown,
   loggedPlatformSwitchProps,

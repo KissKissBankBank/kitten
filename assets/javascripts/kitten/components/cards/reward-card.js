@@ -2,19 +2,19 @@ import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import COLORS from 'kitten/constants/colors-config'
+import COLORS from '../../constants/colors-config'
 import {
   LegacyRewardCardContainer,
   styles as legacyStyles,
-} from 'kitten/components/cards/reward-card/legacy-reward-card-container'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { pxToRem } from 'kitten/helpers/utils/typography'
-import { RewardCardTitle } from 'kitten/components/cards/reward-card/title'
-import { RewardCardRow } from 'kitten/components/cards/reward-card/row'
-import { RewardCardRowContent } from 'kitten/components/cards/reward-card/row-content'
-import { RewardCardRowSide } from 'kitten/components/cards/reward-card/row-side'
-import { RewardCardStarredBadge } from 'kitten/components/cards/reward-card/starred-badge'
-import { RewardCardCheckedSection } from 'kitten/components/cards/reward-card/checked-section'
+} from '../../components/cards/reward-card/legacy-reward-card-container'
+import { Text as TextBase } from '../../components/typography/text'
+import { pxToRem } from '../../helpers/utils/typography'
+import { RewardCardTitle } from '../../components/cards/reward-card/title'
+import { RewardCardRow } from '../../components/cards/reward-card/row'
+import { RewardCardRowContent } from '../../components/cards/reward-card/row-content'
+import { RewardCardRowSide } from '../../components/cards/reward-card/row-side'
+import { RewardCardStarredBadge } from '../../components/cards/reward-card/starred-badge'
+import { RewardCardCheckedSection } from '../../components/cards/reward-card/checked-section'
 
 const Text = Radium(TextBase)
 
@@ -228,6 +228,7 @@ const style = {
     borderColor: COLORS.line1,
     width: '100%',
     padding: `${pxToRem(15)} 0`,
+    boxSizing: 'border-box',
   },
   image: {
     width: '100%',

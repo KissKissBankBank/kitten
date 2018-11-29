@@ -1,14 +1,14 @@
 import React, { Component, Fragment } from 'react'
 import classNames from 'classnames'
 import Radium, { StyleRoot } from 'radium'
-import { card } from 'kitten/hoc/card'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import { Title as TitleBase } from 'kitten/components/typography/title'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { HorizontalStroke as HorizontalStrokeBase } from 'kitten/components/layout/horizontal-stroke'
-import { ButtonImage } from 'kitten/components/buttons/button-image'
-import { Progress } from 'kitten/components/meters/progress'
-import COLORS from 'kitten/constants/colors-config'
+import { card } from '../../hoc/card'
+import { Marger as MargerBase } from '../../components/layout/marger'
+import { Title as TitleBase } from '../../components/typography/title'
+import { Text as TextBase } from '../../components/typography/text'
+import { HorizontalStroke as HorizontalStrokeBase } from '../../components/layout/horizontal-stroke'
+import { ButtonImage } from '../../components/buttons/button-image'
+import { Progress } from '../../components/meters/progress'
+import COLORS from '../../constants/colors-config'
 import Truncate from 'react-truncate'
 
 const Text = Radium(TextBase)
@@ -181,18 +181,17 @@ class CrowdfundingCardComponent extends Component {
       <Marger top="1" style={styles.subtitle}>
         <HorizontalStroke size="tiny" style={horizontalStroke} />
 
-        {this.props.cardSubTitle &&
-          !this.props.loading && (
-            <Text size="micro" weight="regular" tag="p" style={textStyle}>
-              {this.props.subTitleTruncate && (
-                <Truncate style={styles.truncate}>
-                  {this.props.cardSubTitle}
-                </Truncate>
-              )}
+        {this.props.cardSubTitle && !this.props.loading && (
+          <Text size="micro" weight="regular" tag="p" style={textStyle}>
+            {this.props.subTitleTruncate && (
+              <Truncate style={styles.truncate}>
+                {this.props.cardSubTitle}
+              </Truncate>
+            )}
 
-              {!this.props.subTitleTruncate && this.props.cardSubTitle}
-            </Text>
-          )}
+            {!this.props.subTitleTruncate && this.props.cardSubTitle}
+          </Text>
+        )}
 
         {this.props.loading && <span style={styles.subtitle.loading} />}
       </Marger>
@@ -302,7 +301,7 @@ const styles = {
   imageContainer: {
     overflow: 'hidden',
     position: 'relative',
-    paddingTop: `${9 / 16 * 100}%`,
+    paddingTop: `${(9 / 16) * 100}%`,
     backgroundColor: COLORS.line2,
   },
   imageContainerLoading: {

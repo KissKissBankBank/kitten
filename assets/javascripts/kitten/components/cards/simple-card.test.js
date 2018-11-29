@@ -1,9 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { SimpleCard } from 'kitten/components/cards/simple-card'
-import { Title } from 'kitten/components/typography/title'
-import { Text } from 'kitten/components/typography/text'
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
+import { SimpleCard } from '../../components/cards/simple-card'
+import { Title } from '../../components/typography/title'
+import { Text } from '../../components/typography/text'
+import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
 
 describe('<SimpleCard />', () => {
   let component

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import COLORS from 'kitten/constants/colors-config'
-import { PasswordIcon as PasswordIconBase } from 'kitten/components/icons/password-icon'
-import { TextInput as TextInputBase } from 'kitten/components/form/text-input'
+import COLORS from '../../constants/colors-config'
+import { PasswordIcon as PasswordIconBase } from '../../components/icons/password-icon'
+import { TextInput as TextInputBase } from '../../components/form/text-input'
 
 const PasswordIcon = Radium(PasswordIconBase)
 const TextInput = Radium(TextInputBase)
