@@ -4,7 +4,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: use `Radium()` on `LinkBox` `Marger` component.
+## [23.16.0] - 2018-11-30
+
+Feature:
+- Update `Marger` component. You can now pass an
+  object to the `top` and `bottom` props to handle breakpoints with `Marger`.
+  This update doesn't affect the previous props' validation, you can still pass
+  string values:
+  ```js
+  <Marger
+    top={ {
+      fromXs: 1,
+      fromM: 2,
+      default: 3,
+    } }
+    bottom="1.5"
+  />
+  ```
+
+Fix:
+- Use `Radium()` on `LinkBox` `Marger` component.
 
 ## [23.15.0] - 2018-11-29
 

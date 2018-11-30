@@ -8,3 +8,6 @@ export const stringUtils = {
     return str.charAt(0).toUpperCase() + str.slice(1)
   },
 }
+
+// Prefer specific export
+export const upcaseFirst = stringUtils.upcaseFirst
