@@ -126,10 +126,6 @@
       // the last elements on the page
       min-height: k-px-to-rem(50px);
     }
-
-    // @include k-media-min('m') {
-    //   display: none;
-    // }
   }
 
   .k-TabBar--responsive--hidden\@m-down {
