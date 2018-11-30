@@ -1,8 +1,5 @@
 import React from 'react'
 import { Field } from '../field'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 
 const FieldBase = ({
   tooltip,
@@ -13,26 +10,18 @@ const FieldBase = ({
   errorMessage,
   children,
 }) => (
-  <Container>
-    <Grid>
-      <GridCol col="3">
-        <Marger top="5" bottom="5">
-          <Field>
-            <Field.Label
-              labelProps={{ htmlFor: id }}
-              tooltip={tooltip}
-              tooltipId={tooltipId}
-            >
-              {label}
-            </Field.Label>
+  <Field>
+    <Field.Label
+      labelProps={{ htmlFor: id }}
+      tooltip={tooltip}
+      tooltipId={tooltipId}
+    >
+      {label}
+    </Field.Label>
 
-            {children}
-            {error && <Field.Error>{errorMessage}</Field.Error>}
-          </Field>
-        </Marger>
-      </GridCol>
-    </Grid>
-  </Container>
+    {children}
+    {error && <Field.Error>{errorMessage}</Field.Error>}
+  </Field>
 )
 
 export const FieldInputExample = ({
