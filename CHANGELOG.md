@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Use media-query for default value on `Marger` component when prop `top`
+  or `bottom` is an object.
+
 ## [23.16.0] - 2018-11-30
 
 Feature:
