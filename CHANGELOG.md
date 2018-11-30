@@ -4,17 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: use `Radium()` on `LinkBox` `Marger` component.
-
-## [23.15.0] - 2018-11-29
+## [23.16.0] - 2018-11-30
 
 Feature:
-- Add classes `k-Header__logo--smallOnXxs` & `k-Header__nav--hidden@m-down`
-  on `Header` and `k-TabBar--responsive--hidden@m-down` on `TabBar` to improve
-  responsiveness possibilities.
-
-- Fix: Fix undefined `setState()` when unmounting `Triptych` component.
-- Feature: Update `Marger` component. You can now pass an
+- Update `Marger` component. You can now pass an
   object to the `top` and `bottom` props to handle breakpoints with `Marger`.
   This update doesn't affect the previous props' validation, you can still pass
   string values:
@@ -28,6 +21,17 @@ Feature:
     bottom="1.5"
   />
   ```
+Fix:
+- Use `Radium()` on `LinkBox` `Marger` component.
+
+## [23.15.0] - 2018-11-29
+
+Feature:
+- Add classes `k-Header__logo--smallOnXxs` & `k-Header__nav--hidden@m-down`
+  on `Header` and `k-TabBar--responsive--hidden@m-down` on `TabBar` to improve
+  responsiveness possibilities.
+
+- Fix: Fix undefined `setState()` when unmounting `Triptych` component.
 
 ## [23.14.0] - 2018-11-28
 
