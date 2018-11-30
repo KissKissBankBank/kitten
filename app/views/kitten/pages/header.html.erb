@@ -40,7 +40,12 @@
 
         <p class="k-Header__item k-Header__item--fixedSize k-Header__item__logo">
           <a class="k-Header__logo k-Header__logo--smallOnXxs" href="header">
-            <%= image_tag 'brand/logo-lendopolis.svg', alt: 'lendopolis' %>
+            <%= image_tag 'brand/logo-lendopolis.svg',
+                          class:'k-u-hidden@m-up k-u-show@l-up',
+                          alt: 'lendopolis' %>
+            <%= image_tag 'brand/logo-lendopolis-mini.svg',
+                          class:'k-u-hidden@s-down k-u-hidden@l-up',
+                          alt: 'lendopolis' %>
           </a>
         </p>
 
