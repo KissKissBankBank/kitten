@@ -3,6 +3,7 @@ import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { pxToRem } from 'kitten/helpers/utils/typography'
 import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
+import { Button } from 'kitten/components/buttons/button'
 import COLORS from 'kitten/constants/colors-config'
 
 const ButtonIcon = Radium(ButtonIconBase)
@@ -11,6 +12,7 @@ export class ButtonIconWithTooltip extends Component {
   static propTypes = {
     tooltip: PropTypes.string.isRequired,
     href: PropTypes.string,
+    ariaId: PropTypes.string.isRequired,
     modifier: PropTypes.string,
     size: PropTypes.string,
   }
@@ -46,8 +48,27 @@ export class ButtonIconWithTooltip extends Component {
     this.setState({ hover: false })
   }
 
+  render() {
+    const { ariaId } = this.props
+
+    return (
+      <StyleRoot>
+        <div
+          onMouseEnter={this.handleOnMouseEnter}
+          onMouseLeave={this.handleOnMouseLeave}
+          onFocus={this.handleFocus}
+          onBlur={this.handleBlur}
+          aria-controls={ariaId}
+          style={{ outline: 'none' }}
+        >
+          {this.renderTooltip()}
+        </div>
+      </StyleRoot>
+    )
+  }
+
   renderTooltip() {
-    const { tooltip } = this.props
+    const { ariaId, tooltip, href } = this.props
 
     const tooltipStyle = [
       styles.tooltip.content,
@@ -56,43 +77,23 @@ export class ButtonIconWithTooltip extends Component {
     ]
 
     return (
-      <div style={styles.tooltip}>
+      <a id={ariaId} style={styles.tooltip} tag="button" href={href}>
         <span style={tooltipStyle}>
           {tooltip}
           <span style={styles.tooltip.content.after} />
         </span>
         {this.renderButton()}
-      </div>
+      </a>
     )
   }
 
   renderButton() {
-    const { modifier, size, children } = this.props
+    const { modifier, size, children, href } = this.props
 
     return (
-      <ButtonIcon modifier={modifier} size={size}>
+      <ButtonIcon modifier={modifier} size={size} href={href}>
         {children}
       </ButtonIcon>
-    )
-  }
-
-  render() {
-    const { href } = this.props
-
-    return (
-      <StyleRoot>
-        <a
-          tag="button"
-          href={href}
-          onMouseEnter={this.handleOnMouseEnter}
-          onMouseLeave={this.handleOnMouseLeave}
-          onFocus={this.handleFocus}
-          onBlur={this.handleBlur}
-          style={{ outline: 'none' }}
-        >
-          {this.renderTooltip()}
-        </a>
-      </StyleRoot>
     )
   }
 }
@@ -110,16 +111,16 @@ const styles = {
 
     content: {
       position: 'absolute',
+      maxWidth: 440,
       top: 55,
-      padding: 15,
-      marginLeft: -50,
+      padding: 20,
+      // marginLeft: -50,
       backgroundColor: backgroundColor,
       border: '2px solid #19b4fa',
       fontSize: pxToRem(14),
       lineHeight: 'normal',
       fontWeight: 'regular',
       color: COLORS.background1,
-      whiteSpace: 'nowrap',
       opacity: 1,
       visibility: 'visible',
       transition: 'opacity .2s, visibility .2s',
@@ -129,11 +130,10 @@ const styles = {
 
       after: {
         position: 'absolute',
-        left: '50%',
+        left: 20,
         bottom: '102%',
         height: 0,
         width: 0,
-        marginLeft: -8,
         border: '10px solid transparent',
         borderBottomColor: backgroundColor,
         pointerEvents: 'none',
