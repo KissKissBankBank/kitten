@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { ScreenConfig } from '../../constants/screen-config'
 import TYPOGRAPHY from '../../constants/typography-config'
