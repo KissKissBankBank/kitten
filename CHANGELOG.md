@@ -14,6 +14,20 @@ Feature:
   responsiveness possibilities.
 
 - Fix: Fix undefined `setState()` when unmounting `Triptych` component.
+- Feature: Update `Marger` component. You can now pass an
+  object to the `top` and `bottom` props to handle breakpoints with `Marger`.
+  This update doesn't affect the previous props' validation, you can still pass
+  string values:
+  ```js
+  <Marger
+    top={ {
+      fromXs: 1,
+      fromM: 2,
+      default: 3,
+    } }
+    bottom="1.5"
+  />
+  ```
 
 ## [23.14.0] - 2018-11-28
 

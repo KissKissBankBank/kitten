@@ -56,57 +56,121 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="rmq-b86f8336"
       data-radium={true}
-      style={
-        Object {
-          "marginBottom": "2.5rem",
-          "marginLeft": 20,
-          "marginRight": 20,
-          "marginTop": null,
-          "maxWidth": 500,
-        }
-      }
     >
       <div
         data-radium={true}
-        style={
+      >
+        <div
+          className="rmq-b86f8336"
+          data-radium={true}
+          style={
+            Object {
+              "marginBottom": "2.5rem",
+              "marginLeft": 20,
+              "marginRight": 20,
+              "maxWidth": 500,
+            }
+          }
+        >
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginBottom": "1.25rem",
+                  }
+                }
+              >
+                <h1
+                  className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
+                >
+                  Custom title amount
+                </h1>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+          
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginBottom": "1.25rem",
+                    "marginTop": "1.25rem",
+                  }
+                }
+              >
+                <p
+                  className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+                >
+                  Custom text description
+                </p>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+          
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
+margin-right: 40px !important;}}",
+            }
+          }
+        />
+      </div>
+      <style
+        dangerouslySetInnerHTML={
           Object {
-            "marginBottom": "1.25rem",
-            "marginTop": null,
+            "__html": "",
           }
         }
-      >
-        <h1
-          className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
-        >
-          Custom title amount
-        </h1>
-      </div>
-      
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-            "marginTop": "1.25rem",
-          }
-        }
-      >
-        <p
-          className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
-        >
-          Custom text description
-        </p>
-      </div>
-      
+      />
     </div>
   </div>
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
-margin-right: 40px !important;}}",
+        "__html": "",
       }
     }
   />
@@ -169,99 +233,206 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="rmq-b86f8336"
       data-radium={true}
-      style={
-        Object {
-          "marginBottom": "2.5rem",
-          "marginLeft": 20,
-          "marginRight": 20,
-          "marginTop": null,
-          "maxWidth": 500,
-        }
-      }
     >
       <div
         data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-            "marginTop": null,
-          }
-        }
       >
-        <Custom title tag
-          className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
-        >
-          Custom title amount
-        </Custom title tag>
-      </div>
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "1.25rem",
+        <div
+          className="rmq-b86f8336"
+          data-radium={true}
+          style={
+            Object {
+              "marginBottom": "2.5rem",
+              "marginLeft": 20,
+              "marginRight": 20,
+              "maxWidth": 500,
+            }
           }
-        }
-      >
-        <span
-          className="k-u-size-default k-u-weight-bold"
         >
-          Custom subtitle
-        </span>
-      </div>
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-            "marginTop": "1.25rem",
-          }
-        }
-      >
-        <p
-          className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
-        >
-          Custom text description
-        </p>
-      </div>
-      <div>
-        <span
-          className="k-u-size-tiny k-u-weight-regular"
-        >
-          Custom shipping title
-           
-          <span
-            className="k-u-weight-light"
+          <div
+            data-radium={true}
           >
-            Custom shipping value
-          </span>
-        </span>
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginBottom": "1.25rem",
+                  }
+                }
+              >
+                <Custom title tag
+                  className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
+                >
+                  Custom title amount
+                </Custom title tag>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginBottom": "0.625rem",
+                    "marginTop": "1.25rem",
+                  }
+                }
+              >
+                <span
+                  className="k-u-size-default k-u-weight-bold"
+                >
+                  Custom subtitle
+                </span>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginBottom": "1.25rem",
+                    "marginTop": "1.25rem",
+                  }
+                }
+              >
+                <p
+                  className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+                >
+                  Custom text description
+                </p>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+          <div>
+            <span
+              className="k-u-size-tiny k-u-weight-regular"
+            >
+              Custom shipping title
+               
+              <span
+                className="k-u-weight-light"
+              >
+                Custom shipping value
+              </span>
+            </span>
+          </div>
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginTop": "1.25rem",
+                  }
+                }
+              >
+                <a
+                  className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
+                  href="Custom amount link"
+                >
+                  Custom amount
+                </a>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
+margin-right: 40px !important;}}",
+            }
+          }
+        />
       </div>
-      <div
-        data-radium={true}
-        style={
+      <style
+        dangerouslySetInnerHTML={
           Object {
-            "marginBottom": null,
-            "marginTop": "1.25rem",
+            "__html": "",
           }
         }
-      >
-        <a
-          className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
-          href="Custom amount link"
-        >
-          Custom amount
-        </a>
-      </div>
+      />
     </div>
   </div>
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
-margin-right: 40px !important;}}",
+        "__html": "",
       }
     }
   />

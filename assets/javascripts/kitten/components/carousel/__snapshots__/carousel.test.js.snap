@@ -70,50 +70,96 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                 className="k-ProjectCard__grid"
               >
                 <div
-                  className="k-ProjectCard__grid--flex"
-                  style={
-                    Object {
-                      "marginBottom": "0.625rem",
-                      "marginTop": "1.25rem",
-                    }
-                  }
+                  data-radium={true}
                 >
-                  <span
-                    className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                    tabIndex={null}
+                  <div
+                    data-radium={true}
                   >
-                    <img
-                      alt=""
-                      className="k-ButtonImage__img"
-                      src={null}
-                    />
-                  </span>
-                  <p
-                    className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
-                  >
-                    <span
-                      className="k-u-weight-regular"
+                    <div
+                      className="k-ProjectCard__grid--flex"
+                      data-radium={true}
+                      style={
+                        Object {
+                          "marginBottom": "0.625rem",
+                          "marginTop": "1.25rem",
+                        }
+                      }
                     >
-                      Name
-                    </span>
-                    <br />
-                    Location
-                  </p>
+                      <span
+                        className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+                        tabIndex={null}
+                      >
+                        <img
+                          alt=""
+                          className="k-ButtonImage__img"
+                          src={null}
+                        />
+                      </span>
+                      <p
+                        className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
+                      >
+                        <span
+                          className="k-u-weight-regular"
+                        >
+                          Name
+                        </span>
+                        <br />
+                        Location
+                      </p>
+                    </div>
+                    <style
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "",
+                        }
+                      }
+                    />
+                  </div>
+                  <style
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
+                      }
+                    }
+                  />
                 </div>
                 <div
-                  className="k-ProjectCard__grid--flex"
-                  style={
-                    Object {
-                      "marginBottom": "0.9375rem",
-                      "marginTop": "0.625rem",
-                    }
-                  }
+                  data-radium={true}
                 >
-                  <p
-                    className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                  <div
+                    data-radium={true}
                   >
-                    A
-                  </p>
+                    <div
+                      className="k-ProjectCard__grid--flex"
+                      data-radium={true}
+                      style={
+                        Object {
+                          "marginBottom": "0.9375rem",
+                          "marginTop": "0.625rem",
+                        }
+                      }
+                    >
+                      <p
+                        className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                      >
+                        A
+                      </p>
+                    </div>
+                    <style
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "",
+                        }
+                      }
+                    />
+                  </div>
+                  <style
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
+                      }
+                    }
+                  />
                 </div>
               </div>
             </div>
@@ -226,50 +272,96 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="k-ProjectCard__grid--flex"
-                style={
-                  Object {
-                    "marginBottom": "0.625rem",
-                    "marginTop": "1.25rem",
-                  }
-                }
+                data-radium={true}
               >
-                <span
-                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                  tabIndex={null}
+                <div
+                  data-radium={true}
                 >
-                  <img
-                    alt=""
-                    className="k-ButtonImage__img"
-                    src={null}
-                  />
-                </span>
-                <p
-                  className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
-                >
-                  <span
-                    className="k-u-weight-regular"
+                  <div
+                    className="k-ProjectCard__grid--flex"
+                    data-radium={true}
+                    style={
+                      Object {
+                        "marginBottom": "0.625rem",
+                        "marginTop": "1.25rem",
+                      }
+                    }
                   >
-                    Name
-                  </span>
-                  <br />
-                  Location
-                </p>
+                    <span
+                      className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+                      tabIndex={null}
+                    >
+                      <img
+                        alt=""
+                        className="k-ButtonImage__img"
+                        src={null}
+                      />
+                    </span>
+                    <p
+                      className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
+                    >
+                      <span
+                        className="k-u-weight-regular"
+                      >
+                        Name
+                      </span>
+                      <br />
+                      Location
+                    </p>
+                  </div>
+                  <style
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
+                      }
+                    }
+                  />
+                </div>
+                <style
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "",
+                    }
+                  }
+                />
               </div>
               <div
-                className="k-ProjectCard__grid--flex"
-                style={
-                  Object {
-                    "marginBottom": "0.9375rem",
-                    "marginTop": "0.625rem",
-                  }
-                }
+                data-radium={true}
               >
-                <p
-                  className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                <div
+                  data-radium={true}
                 >
-                  A
-                </p>
+                  <div
+                    className="k-ProjectCard__grid--flex"
+                    data-radium={true}
+                    style={
+                      Object {
+                        "marginBottom": "0.9375rem",
+                        "marginTop": "0.625rem",
+                      }
+                    }
+                  >
+                    <p
+                      className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                    >
+                      A
+                    </p>
+                  </div>
+                  <style
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
+                      }
+                    }
+                  />
+                </div>
+                <style
+                  dangerouslySetInnerHTML={
+                    Object {
+                      "__html": "",
+                    }
+                  }
+                />
               </div>
             </div>
           </div>
@@ -389,50 +481,96 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                 className="k-ProjectCard__grid"
               >
                 <div
-                  className="k-ProjectCard__grid--flex"
-                  style={
-                    Object {
-                      "marginBottom": "0.625rem",
-                      "marginTop": "1.25rem",
-                    }
-                  }
+                  data-radium={true}
                 >
-                  <span
-                    className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                    tabIndex={null}
+                  <div
+                    data-radium={true}
                   >
-                    <img
-                      alt=""
-                      className="k-ButtonImage__img"
-                      src={null}
-                    />
-                  </span>
-                  <p
-                    className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
-                  >
-                    <span
-                      className="k-u-weight-regular"
+                    <div
+                      className="k-ProjectCard__grid--flex"
+                      data-radium={true}
+                      style={
+                        Object {
+                          "marginBottom": "0.625rem",
+                          "marginTop": "1.25rem",
+                        }
+                      }
                     >
-                      Name
-                    </span>
-                    <br />
-                    Location
-                  </p>
+                      <span
+                        className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+                        tabIndex={null}
+                      >
+                        <img
+                          alt=""
+                          className="k-ButtonImage__img"
+                          src={null}
+                        />
+                      </span>
+                      <p
+                        className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
+                      >
+                        <span
+                          className="k-u-weight-regular"
+                        >
+                          Name
+                        </span>
+                        <br />
+                        Location
+                      </p>
+                    </div>
+                    <style
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "",
+                        }
+                      }
+                    />
+                  </div>
+                  <style
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
+                      }
+                    }
+                  />
                 </div>
                 <div
-                  className="k-ProjectCard__grid--flex"
-                  style={
-                    Object {
-                      "marginBottom": "0.9375rem",
-                      "marginTop": "0.625rem",
-                    }
-                  }
+                  data-radium={true}
                 >
-                  <p
-                    className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                  <div
+                    data-radium={true}
                   >
-                    A
-                  </p>
+                    <div
+                      className="k-ProjectCard__grid--flex"
+                      data-radium={true}
+                      style={
+                        Object {
+                          "marginBottom": "0.9375rem",
+                          "marginTop": "0.625rem",
+                        }
+                      }
+                    >
+                      <p
+                        className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                      >
+                        A
+                      </p>
+                    </div>
+                    <style
+                      dangerouslySetInnerHTML={
+                        Object {
+                          "__html": "",
+                        }
+                      }
+                    />
+                  </div>
+                  <style
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "",
+                      }
+                    }
+                  />
                 </div>
               </div>
             </div>
