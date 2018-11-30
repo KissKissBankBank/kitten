@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
+import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
+import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { EmailIcon } from 'kitten/components/icons/email-icon'
-import { LinkedinButtonIcon } from 'kitten/components/buttons/social-button-icon'
 import { TeamCardPhoneIcon } from 'kitten/components/cards/team-card/phone-icon'
 
 const Marger = Radium(MargerBase)
@@ -13,17 +14,17 @@ export class TeamCardIcons extends Component {
   static propTypes = {
     email: PropTypes.string,
     phoneNumber: PropTypes.string,
-    socialLink: PropTypes.string,
+    socialNetworks: PropTypes.oneOf(['linkedin', 'twitter']),
   }
 
   static defaultProps = {
     email: '',
     phoneNumber: '',
-    socialLink: '',
+    socialNetworks: '',
   }
 
   render() {
-    const { email, phoneNumber, socialLink } = this.props
+    const { email, phoneNumber, socialNetworks } = this.props
 
     return (
       <Marger top="1.5" style={styles.icons}>
@@ -41,16 +42,44 @@ export class TeamCardIcons extends Component {
 
         {phoneNumber && <TeamCardPhoneIcon {...this.props} />}
 
-        {socialLink && (
-          <LinkedinButtonIcon
-            tag="a"
-            href={socialLink}
-            size="tiny"
-            target="_blank"
-            rel="noopener"
-          />
-        )}
+        {socialNetworks && <SocialLinks socialNetworks={socialNetworks} />}
       </Marger>
+    )
+  }
+}
+
+class SocialLinks extends Component {
+  render() {
+    const { socialNetworks } = this.props
+
+    return (
+      <Fragment>
+        {socialNetworks.map((socialNetwork, index) => {
+          let buttonStyle
+          if (index !== socialNetworks.length - 1) {
+            buttonStyle = { marginRight: 15 }
+          }
+
+          return (
+            <ButtonIcon
+              tag="a"
+              href={socialNetwork.href}
+              modifier={socialNetwork.name}
+              size="tiny"
+              target="_blank"
+              rel="noopener"
+              style={buttonStyle}
+            >
+              {socialNetwork.name === 'linkedin' && (
+                <LinkedinIcon className="k-ButtonIcon__svg" />
+              )}
+              {socialNetwork.name === 'twitter' && (
+                <TwitterIcon className="k-ButtonIcon__svg" />
+              )}
+            </ButtonIcon>
+          )
+        })}
+      </Fragment>
     )
   }
 }

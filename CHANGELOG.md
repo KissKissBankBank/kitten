@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `SocialLinks` on `TeamCard` component.
+
 ## [23.16.0] - 2018-11-30
 
 Feature:
