@@ -89,6 +89,20 @@ describe('<Marger />', () => {
 
         expect(styles).toEqual([{ marginTop: '2.5rem' }])
       })
+
+      it('is overrided by the default value', () => {
+        const marger = shallow(<Marger top={{ fromXxs: 3, default: 12 }} />)
+          .dive()
+          .children()
+          .first()
+          .dive()
+          .first()
+          .children()
+          .first()
+        const styles = cleanStyles(marger.props().style)
+
+        expect(styles).toEqual([{ marginTop: '7.5rem' }])
+      })
     })
   })
 
@@ -158,6 +172,20 @@ describe('<Marger />', () => {
         const styles = cleanStyles(marger.props().style)
 
         expect(styles).toEqual([{ marginBottom: '2.5rem' }])
+      })
+
+      it('is overrided by the default value', () => {
+        const marger = shallow(<Marger bottom={{ fromXxs: 4, default: 12 }} />)
+          .dive()
+          .children()
+          .first()
+          .dive()
+          .first()
+          .children()
+          .first()
+        const styles = cleanStyles(marger.props().style)
+
+        expect(styles).toEqual([{ marginBottom: '7.5rem' }])
       })
     })
   })
