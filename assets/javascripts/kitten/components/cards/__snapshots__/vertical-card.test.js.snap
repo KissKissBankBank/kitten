@@ -5,56 +5,122 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
-    style={
-      Object {
-        "marginBottom": "1.875rem",
-        "marginTop": null,
-      }
-    }
-  >
-    <img
-      data-radium={true}
-      style={
-        Object {
-          "display": "block",
-          "width": "100%",
-        }
-      }
-    />
-  </div>
-  <div
-    style={
-      Object {
-        "marginBottom": null,
-        "marginTop": "1.875rem",
-      }
-    }
+    data-radium={true}
   >
     <div
       data-radium={true}
     >
       <div
+        data-radium={true}
         style={
           Object {
-            "marginBottom": null,
-            "marginTop": null,
+            "marginBottom": "1.875rem",
           }
         }
       >
-        <h1
-          className="k-Title k-Title--senary k-Title--withoutMargin"
+        <img
+          data-radium={true}
           style={
             Object {
-              "color": "#222",
-              "textAlign": "center",
+              "display": "block",
+              "width": "100%",
             }
           }
-        >
-          Custom title
-        </h1>
+        />
       </div>
-      
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+      />
     </div>
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+    />
+  </div>
+  <div
+    data-radium={true}
+  >
+    <div
+      data-radium={true}
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginTop": "1.875rem",
+          }
+        }
+      >
+        <div
+          data-radium={true}
+        >
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginBottom": "0rem",
+                  }
+                }
+              >
+                <h1
+                  className="k-Title k-Title--senary k-Title--withoutMargin"
+                  style={
+                    Object {
+                      "color": "#222",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Custom title
+                </h1>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+          
+        </div>
+      </div>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+      />
+    </div>
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+    />
   </div>
   <style
     dangerouslySetInnerHTML={
@@ -71,77 +137,165 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
-    style={
-      Object {
-        "marginBottom": "1.875rem",
-        "marginTop": null,
-      }
-    }
-  >
-    <img
-      alt="Image alt"
-      data-radium={true}
-      src="#image"
-      style={
-        Object {
-          "display": "block",
-          "width": "100%",
-        }
-      }
-    />
-  </div>
-  <div
-    style={
-      Object {
-        "marginBottom": null,
-        "marginTop": "1.875rem",
-      }
-    }
+    data-radium={true}
   >
     <div
       data-radium={true}
     >
       <div
+        data-radium={true}
         style={
           Object {
-            "marginBottom": "0.625rem",
-            "marginTop": null,
+            "marginBottom": "1.875rem",
           }
         }
       >
-        <h1
-          className="k-Title k-Title--senary k-Title--withoutMargin"
+        <img
+          alt="Image alt"
+          data-radium={true}
+          src="#image"
           style={
             Object {
-              "color": "#222",
-              "textAlign": "center",
+              "display": "block",
+              "width": "100%",
             }
           }
-        >
-          Custom title
-        </h1>
+        />
       </div>
-      <div
-        style={
+      <style
+        dangerouslySetInnerHTML={
           Object {
-            "marginBottom": null,
-            "marginTop": "0.625rem",
+            "__html": "",
           }
         }
-      >
-        <p
-          className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
-          style={
-            Object {
-              "color": "#222",
-              "textAlign": "center",
-            }
-          }
-        >
-          Custom text
-        </p>
-      </div>
+      />
     </div>
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+    />
+  </div>
+  <div
+    data-radium={true}
+  >
+    <div
+      data-radium={true}
+    >
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "marginTop": "1.875rem",
+          }
+        }
+      >
+        <div
+          data-radium={true}
+        >
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginBottom": "0.625rem",
+                  }
+                }
+              >
+                <h1
+                  className="k-Title k-Title--senary k-Title--withoutMargin"
+                  style={
+                    Object {
+                      "color": "#222",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Custom title
+                </h1>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginTop": "0.625rem",
+                  }
+                }
+              >
+                <p
+                  className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+                  style={
+                    Object {
+                      "color": "#222",
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Custom text
+                </p>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+      />
+    </div>
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+    />
   </div>
   <style
     dangerouslySetInnerHTML={

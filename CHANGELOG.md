@@ -9,6 +9,33 @@ Feature:
 - Remove useless classes for `Header` and `TabBar` (`k-Header__logo--smallOnXxs`
   ,`k-Header__nav--hidden@m-down` & `k-TabBar--responsive--hidden@m-down`)
 
+## [23.16.1] - 2018-11-30
+
+Fix:
+- Use media-query for default value on `Marger` component when prop `top`
+  or `bottom` is an object.
+
+## [23.16.0] - 2018-11-30
+
+Feature:
+- Update `Marger` component. You can now pass an
+  object to the `top` and `bottom` props to handle breakpoints with `Marger`.
+  This update doesn't affect the previous props' validation, you can still pass
+  string values:
+  ```js
+  <Marger
+    top={ {
+      fromXs: 1,
+      fromM: 2,
+      default: 3,
+    } }
+    bottom="1.5"
+  />
+  ```
+
+Fix:
+- Use `Radium()` on `LinkBox` `Marger` component.
+
 ## [23.15.0] - 2018-11-29
 
 Feature:

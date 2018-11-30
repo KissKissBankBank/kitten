@@ -78,16 +78,38 @@ exports[`<Timeline /> with default props matches with snapshot 1`] = `
       </span>
       <div
         data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "flexGrow": 1,
-            "marginBottom": "1.5625rem",
-            "marginTop": "1.5625rem",
-          }
-        }
       >
-        foobar
+        <div
+          data-radium={true}
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexGrow": 1,
+                "marginBottom": "1.5625rem",
+                "marginTop": "1.5625rem",
+              }
+            }
+          >
+            foobar
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
       </div>
     </li>
   </ol>
@@ -183,16 +205,38 @@ exports[`<Timeline /> with itemHeight props matches with snapshot 1`] = `
       </span>
       <div
         data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "flexGrow": 1,
-            "marginBottom": "1.5625rem",
-            "marginTop": "1.5625rem",
-          }
-        }
       >
-        foobar
+        <div
+          data-radium={true}
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexGrow": 1,
+                "marginBottom": "1.5625rem",
+                "marginTop": "1.5625rem",
+              }
+            }
+          >
+            foobar
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
       </div>
     </li>
   </ol>
