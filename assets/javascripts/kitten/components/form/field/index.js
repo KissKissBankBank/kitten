@@ -10,7 +10,7 @@ export class Field extends Component {
   static Input = FieldInput
   static RadioButtonSet = FieldRadioButtonSet
   static Select = FieldSelect
-  static Error = FieldError
+  static ErrorMessage = FieldError
 
   render = () => this.props.children
 }

@@ -20,7 +20,7 @@ const FieldBase = ({
     </Field.Label>
 
     {children}
-    {error && <Field.Error>{errorMessage}</Field.Error>}
+    {error && <Field.ErrorMessage>{errorMessage}</Field.ErrorMessage>}
   </Field>
 )
 
