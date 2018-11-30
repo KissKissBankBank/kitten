@@ -41,7 +41,7 @@ storiesOf('Pages/Contribute', module)
           country={{
             label: 'Pays',
           }}
-          button="Valider mon total de 20 €"
+          button={'Valider mon total de 20 €'}
         />
       </Marger>
     )
