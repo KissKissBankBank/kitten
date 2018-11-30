@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [23.16.0] - 2018-11-30
+
+No changes.
+
 ## [23.15.0] - 2018-11-29
 
 Fix:
@@ -12,6 +16,8 @@ Fix:
 - Update with new borderless Lendo logo.
 
 ## [23.14.0] - 2018-11-28
+
+No changes.
 
 ## [23.13.0] - 2018-11-21
 
