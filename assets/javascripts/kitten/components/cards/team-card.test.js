@@ -33,8 +33,10 @@ describe('<TeamCard />', () => {
             <TeamCard.Icons
               email="example@kisskissbankbank.com"
               phoneNumber="06 00 00 00 00"
-              linkedinLink="https://www.linkedin.com"
-              twitterLink="https://www.twitter.com"
+              socialNetworks={[
+                { name: 'linkedin', href: 'https://www.linkedin.com' },
+                { name: 'twitter', href: 'https://www.twitter.com' },
+              ]}
             />
           </TeamCard>,
         )
