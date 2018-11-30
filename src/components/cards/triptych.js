@@ -50,108 +50,110 @@ var GridCol = (0, _radium.default)(_grid.GridCol);
 var VerticalStroke = (0, _radium.default)(_verticalStroke2.VerticalStroke);
 
 var TriptychBase =
-/*#__PURE__*/
-function (_Component) {
-  (0, _inherits2.default)(TriptychBase, _Component);
+  /*#__PURE__*/
+  function (_Component) {
+    (0, _inherits2.default)(TriptychBase, _Component);
 
-  function TriptychBase(_props) {
-    var _this;
+    function TriptychBase(_props) {
+      var _this;
 
-    (0, _classCallCheck2.default)(this, TriptychBase);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TriptychBase).call(this, _props));
+      (0, _classCallCheck2.default)(this, TriptychBase);
+      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TriptychBase).call(this, _props));
 
-    _this.updateSecondCardMargin = function () {
-      _this.setState(function (_state, props) {
-        var viewportIsTabletOrLess = props.viewportIsTabletOrLess,
+      _this.updateSecondCardMargin = function () {
+        _this.setState(function (_state, props) {
+          var viewportIsMOrLess = props.viewportIsMOrLess,
             viewportIsSOrLess = props.viewportIsSOrLess;
-        var isTablet = viewportIsTabletOrLess && !viewportIsSOrLess;
-        if (!isTablet) return {
-          secondCardComputedTopMargin: null
-        };
-        var titleHeight = _this.title.clientHeight;
-        var cardHeight = _this.firstCard.clientHeight;
-        return {
-          secondCardComputedTopMargin: -(cardHeight - titleHeight)
-        };
-      });
-    };
-
-    _this.setRef = function (name) {
-      return function (node) {
-        _this[name] = node;
+          var isTablet = viewportIsMOrLess && !viewportIsSOrLess;
+          if (!isTablet) return {
+            secondCardComputedTopMargin: null
+          };
+          var titleHeight = _this.title.clientHeight;
+          var cardHeight = _this.firstCard.clientHeight;
+          return {
+            secondCardComputedTopMargin: -(cardHeight - titleHeight)
+          };
+        });
       };
-    };
 
-    _this.state = {
-      secondCardComputedTopMargin: null
-    };
-    return _this;
-  }
+      _this.debounceUpdateMargin = (0, _debounce.debounce)(_this.updateSecondCardMargin, 250);
 
-  (0, _createClass2.default)(TriptychBase, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.updateSecondCardMargin();
-      window.addEventListener('resize', (0, _debounce.debounce)(this.updateSecondCardMargin, 250));
+      _this.setRef = function (name) {
+        return function (node) {
+          _this[name] = node;
+        };
+      };
+
+      _this.state = {
+        secondCardComputedTopMargin: null
+      };
+      return _this;
     }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      window.removeEventListener('resize', (0, _debounce.debounce)(this.updateSecondCardMargin, 250));
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          viewportIsTabletOrLess = _this$props.viewportIsTabletOrLess,
+
+    (0, _createClass2.default)(TriptychBase, [{
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        this.debounceUpdateMargin();
+        window.addEventListener('resize', this.debounceUpdateMargin);
+      }
+    }, {
+      key: "componentWillUnmount",
+      value: function componentWillUnmount() {
+        window.removeEventListener('resize', this.debounceUpdateMargin);
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this$props = this.props,
+          viewportIsMOrLess = _this$props.viewportIsMOrLess,
           title = _this$props.title,
           item1 = _this$props.item1,
           item2 = _this$props.item2,
           item3 = _this$props.item3;
-      return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(_grid.Grid, {
-        className: "k-u-align-center"
-      }, _react.default.createElement(GridCol, {
-        "col-l": "6",
-        "offset-l": "3",
-        "col-m": "6",
-        "offset-m": "0"
-      }, _react.default.createElement("div", {
-        ref: this.setRef('title')
-      }, _react.default.createElement(Marger, {
-        bottom: "2"
-      }, title), _react.default.createElement(Marger, {
-        bottom: "2"
-      }, _react.default.createElement(VerticalStroke, {
-        size: "huge",
-        style: styles.verticalStroke
-      })))), _react.default.createElement(GridCol, {
-        "col-l": "4",
-        "col-m": "6",
-        style: styles.oddMargin
-      }, _react.default.createElement(Marger, {
-        style: styles.gutter.firstItem
-      }, _react.default.createElement("div", {
-        ref: this.setRef('firstCard')
-      }, _react.default.createElement(Marger, {
-        bottom: viewportIsTabletOrLess ? 5 : 0
-      }, item1)))), _react.default.createElement(GridCol, {
-        "col-l": "4",
-        "col-m": "6"
-      }, _react.default.createElement(Marger, {
-        style: (0, _extends2.default)({}, styles.secondCard, styles.gutter.secondItem),
-        top: this.state.secondCardComputedTopMargin / 10,
-        bottom: viewportIsTabletOrLess ? 5 : 0
-      }, item2)), _react.default.createElement(GridCol, {
-        "col-l": "4",
-        "col-m": "6",
-        style: styles.oddMargin
-      }, _react.default.createElement(Marger, {
-        style: styles.gutter.thirdItem
-      }, item3))));
-    }
-  }]);
-  return TriptychBase;
-}(_react.Component);
+        return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(_grid.Grid, {
+          className: "k-u-align-center"
+        }, _react.default.createElement(GridCol, {
+          "col-l": "6",
+          "offset-l": "3",
+          "col-m": "6",
+          "offset-m": "0"
+        }, _react.default.createElement("div", {
+          ref: this.setRef('title')
+        }, _react.default.createElement(Marger, {
+          bottom: "2"
+        }, title), _react.default.createElement(Marger, {
+          bottom: "2"
+        }, _react.default.createElement(VerticalStroke, {
+          size: "huge",
+          style: styles.verticalStroke
+        })))), _react.default.createElement(GridCol, {
+          "col-l": "4",
+          "col-m": "6",
+          style: styles.oddMargin
+        }, _react.default.createElement(Marger, {
+          style: styles.gutter.firstItem
+        }, _react.default.createElement("div", {
+          ref: this.setRef('firstCard')
+        }, _react.default.createElement(Marger, {
+          bottom: viewportIsMOrLess ? 5 : 0
+        }, item1)))), _react.default.createElement(GridCol, {
+          "col-l": "4",
+          "col-m": "6"
+        }, _react.default.createElement(Marger, {
+          style: (0, _extends2.default)({}, styles.secondCard, styles.gutter.secondItem),
+          top: this.state.secondCardComputedTopMargin / 10,
+          bottom: viewportIsMOrLess ? 5 : 0
+        }, item2)), _react.default.createElement(GridCol, {
+          "col-l": "4",
+          "col-m": "6",
+          style: styles.oddMargin
+        }, _react.default.createElement(Marger, {
+          style: styles.gutter.thirdItem
+        }, item3))));
+      }
+    }]);
+    return TriptychBase;
+  }(_react.Component);
 
 TriptychBase.propTypes = {
   title: _propTypes.default.node.isRequired,
@@ -168,8 +170,8 @@ var styles = {
     height: strokeHeight,
     margin: '0 auto'
   }, "@media (max-width: ".concat(_screenConfig.ScreenConfig.S.max, "px)"), {
-    height: 50
-  }),
+      height: 50
+    }),
   oddMargin: (0, _defineProperty2.default)({}, "@media (min-width: ".concat(_screenConfig.ScreenConfig.L.min, "px)"), {
     marginTop: -(strokeHeight * 2 / 3 + marginStroke * 10)
   }),
@@ -205,8 +207,8 @@ var styles = {
     transition: 'margin 500ms'
   }
 };
-var Triptych = (0, _mediaQueries.mediaQueries)(TriptychBase, {
-  viewportIsTabletOrLess: true,
-  viewportIsSOrLess: true
-});
+var Triptych = (0, _mediaQueries.withMediaQueries)({
+  viewportIsSOrLess: true,
+  viewportIsMOrLess: true
+})(TriptychBase);
 exports.Triptych = Triptych;

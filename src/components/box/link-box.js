@@ -45,50 +45,52 @@ var _typography = require("../../helpers/utils/typography");
 
 var _navigation;
 
+var Marger = (0, _radium.default)(_marger.Marger);
+
 var LinkBox =
-/*#__PURE__*/
-function (_Component) {
-  (0, _inherits2.default)(LinkBox, _Component);
+  /*#__PURE__*/
+  function (_Component) {
+    (0, _inherits2.default)(LinkBox, _Component);
 
-  function LinkBox(props) {
-    var _this;
+    function LinkBox(props) {
+      var _this;
 
-    (0, _classCallCheck2.default)(this, LinkBox);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LinkBox).call(this, props));
+      (0, _classCallCheck2.default)(this, LinkBox);
+      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LinkBox).call(this, props));
 
-    _this.handleOnMouseEnter = function () {
-      _this.setState({
-        hover: true
-      });
-    };
+      _this.handleOnMouseEnter = function () {
+        _this.setState({
+          hover: true
+        });
+      };
 
-    _this.handleOnMouseLeave = function () {
-      _this.setState({
+      _this.handleOnMouseLeave = function () {
+        _this.setState({
+          hover: false
+        });
+      };
+
+      _this.state = {
         hover: false
-      });
-    };
+      };
+      return _this;
+    }
 
-    _this.state = {
-      hover: false
-    };
-    return _this;
-  }
-
-  (0, _createClass2.default)(LinkBox, [{
-    key: "renderIcon",
-    value: function renderIcon() {
-      var _this$props = this.props,
+    (0, _createClass2.default)(LinkBox, [{
+      key: "renderIcon",
+      value: function renderIcon() {
+        var _this$props = this.props,
           displayIcon = _this$props.displayIcon,
           children = _this$props.children;
-      if (!displayIcon) return null;
-      return _react.default.createElement("div", {
-        style: styles.icon
-      }, children);
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props2 = this.props,
+        if (!displayIcon) return null;
+        return _react.default.createElement("div", {
+          style: styles.icon
+        }, children);
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this$props2 = this.props,
           isExternal = _this$props2.isExternal,
           href = _this$props2.href,
           title = _this$props2.title,
@@ -97,49 +99,49 @@ function (_Component) {
           titleTag = _this$props2.titleTag,
           textTag = _this$props2.textTag,
           viewportIsMobile = _this$props2.viewportIsMobile;
-      var target = isExternal ? {
-        target: '_blank',
-        rel: 'noopener'
-      } : {};
-      var arrowStyle = [styles.navigation, this.state.hover && styles.navigation.hover];
-      return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("a", (0, _extends2.default)({}, linkProps, {
-        style: styles.linkBox,
-        href: href
-      }, target), _react.default.createElement("div", {
-        style: styles.container,
-        onMouseEnter: this.handleOnMouseEnter,
-        onMouseLeave: this.handleOnMouseLeave
-      }, this.renderIcon(), _react.default.createElement(_marger.Marger, {
-        top: "2",
-        bottom: "2",
-        style: styles.paragraph
-      }, _react.default.createElement(_marger.Marger, {
-        bottom: text ? 0.5 : 0
-      }, _react.default.createElement(_text.Text, {
-        tag: titleTag,
-        weight: "regular",
-        size: viewportIsMobile ? 'tiny' : 'default',
-        color: "font1",
-        style: {
-          lineHeight: 1
-        }
-      }, title)), text && _react.default.createElement(_text.Text, {
-        tag: textTag,
-        weight: "light",
-        size: "tiny",
-        color: "font1",
-        style: {
-          lineHeight: 1.3
-        }
-      }, text)), _react.default.createElement("div", {
-        style: arrowStyle
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
-        className: "k-ButtonIcon__svg"
-      })))));
-    }
-  }]);
-  return LinkBox;
-}(_react.Component);
+        var target = isExternal ? {
+          target: '_blank',
+          rel: 'noopener'
+        } : {};
+        var arrowStyle = [styles.navigation, this.state.hover && styles.navigation.hover];
+        return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("a", (0, _extends2.default)({}, linkProps, {
+          style: styles.linkBox,
+          href: href
+        }, target), _react.default.createElement("div", {
+          style: styles.container,
+          onMouseEnter: this.handleOnMouseEnter,
+          onMouseLeave: this.handleOnMouseLeave
+        }, this.renderIcon(), _react.default.createElement(Marger, {
+          top: "2",
+          bottom: "2",
+          style: styles.paragraph
+        }, _react.default.createElement(Marger, {
+          bottom: text ? 0.5 : 0
+        }, _react.default.createElement(_text.Text, {
+          tag: titleTag,
+          weight: "regular",
+          size: viewportIsMobile ? 'tiny' : 'default',
+          color: "font1",
+          style: {
+            lineHeight: 1
+          }
+        }, title)), text && _react.default.createElement(_text.Text, {
+          tag: textTag,
+          weight: "light",
+          size: "tiny",
+          color: "font1",
+          style: {
+            lineHeight: 1.3
+          }
+        }, text)), _react.default.createElement("div", {
+          style: arrowStyle
+        }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+          className: "k-ButtonIcon__svg"
+        })))));
+      }
+    }]);
+    return LinkBox;
+  }(_react.Component);
 
 exports.LinkBox = LinkBox;
 LinkBox.propTypes = {
@@ -191,8 +193,8 @@ var styles = {
     minWidth: 90,
     backgroundColor: _colorsConfig.default.primary4
   }, "@media (min-width: ".concat(_screenConfig.ScreenConfig.S.min, "px)"), {
-    display: 'flex'
-  }),
+      display: 'flex'
+    }),
   paragraph: (0, _defineProperty2.default)({
     display: 'flex',
     flexDirection: 'column',
@@ -200,8 +202,8 @@ var styles = {
     flexGrow: 1,
     paddingLeft: (0, _typography.pxToRem)(20)
   }, "@media (min-width: ".concat(_screenConfig.ScreenConfig.S.min, "px)"), {
-    paddingLeft: (0, _typography.pxToRem)(30)
-  }),
+      paddingLeft: (0, _typography.pxToRem)(30)
+    }),
   navigation: (_navigation = {
     display: 'flex',
     alignItems: 'center',

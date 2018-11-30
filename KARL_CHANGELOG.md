@@ -4,6 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [23.15.0] - 2018-11-29
+
+Fix:
+- Update Lendo `Header` and `TabBar` with new responsive classes on page:
+  `header example`.
+- Update with new borderless Lendo logo.
+
+## [23.14.0] - 2018-11-28
+
 ## [23.13.0] - 2018-11-21
 
 Feature:

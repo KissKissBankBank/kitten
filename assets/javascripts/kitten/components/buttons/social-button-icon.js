@@ -20,7 +20,7 @@ export const TwitterButtonIcon = props => (
 )
 
 export const LinkedinButtonIcon = props => (
-  <ButtonIcon {...props} modifier="linkedin" aria-label="LinkedIn">
+  <ButtonIcon {...props} modifier="linkedin">
     <LinkedinIcon className="k-ButtonIcon__svg" />
   </ButtonIcon>
 )

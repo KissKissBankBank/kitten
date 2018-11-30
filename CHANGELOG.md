@@ -4,14 +4,34 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `Field` and sub-components:
-  `Field.Label`
-  `Field.Input`
-  `Field.RadioButtonSet`
-  `Field.Select`
-  `Field.Error`
-- Fix: Fix `ExpandBoard.Button` arrow styles.
-- Fix: Add `box-sizing` CSS rule to `RewardCard` component.
+- Fix: use `Radium()` on `LinkBox` `Marger` component.
+
+## [23.15.0] - 2018-11-29
+
+Feature:
+- Add classes `k-Header__logo--smallOnXxs` & `k-Header__nav--hidden@m-down`
+  on `Header` and `k-TabBar--responsive--hidden@m-down` on `TabBar` to improve
+  responsiveness possibilities.
+
+- Fix: Fix undefined `setState()` when unmounting `Triptych` component.
+
+## [23.14.0] - 2018-11-28
+
+Features:
+- Update `ExpandBoard` component:
+  - Enable animation on expanding and shrinking with `withAnimation`,
+    `animationMaxHeight`, `animationShrinkingDuration` props.
+  - Authorize `style` prop on `ExpandBoard.Content`.
+- Create `TeamCard` and sub-components:
+  - `TeamCard.Icons`
+  - `TeamCard.Image`
+  - `TeamCard.PhoneIcon`
+  - `TeamCard.Title`
+- Create `PhoneIcon` and `EmailIcon` components.
+
+Fixes:
+- Fix `ExpandBoard.Button` arrow styles.
+- Add `box-sizing` CSS rule to `RewardCard` component.
 
 ## [23.13.0] - 2018-11-21
 
