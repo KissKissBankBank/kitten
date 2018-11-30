@@ -49,8 +49,7 @@ exports.TwitterButtonIcon = TwitterButtonIcon;
 
 var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
   return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
-    modifier: "linkedin",
-    "aria-label": "LinkedIn"
+    modifier: "linkedin"
   }), _react.default.createElement(_linkedinIcon.LinkedinIcon, {
     className: "k-ButtonIcon__svg"
   }));

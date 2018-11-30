@@ -179,9 +179,12 @@ function (_Component2) {
   (0, _createClass2.default)(ListBase, [{
     key: "render",
     value: function render() {
-      var children = this.props.children;
+      var _this$props3 = this.props,
+          children = _this$props3.children,
+          style = _this$props3.style;
+      var listStyles = [styles.list, style];
       return _react.default.createElement("ul", {
-        style: styles.list
+        style: listStyles
       }, _react.default.Children.map(children, function (child, index) {
         if (!_react.default.isValidElement(child)) return null;
         return _react.default.createElement("li", null, child);
