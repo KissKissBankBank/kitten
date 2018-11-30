@@ -1,474 +1,398 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Field /> with <Field.Input /> in error matches with snapshot 1`] = `
-<div
-  className="k-Container"
->
+Array [
   <div
-    className="k-Grid"
+    style={
+      Object {
+        "marginBottom": "0.9375rem",
+        "marginTop": null,
+      }
+    }
   >
     <div
-      className="k-Grid__col--3"
+      className="k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
     >
       <div
-        style={
-          Object {
-            "marginBottom": "3.125rem",
-            "marginTop": "3.125rem",
-          }
-        }
+        className="k-Line__item"
+      >
+        <label
+          className="k-Label k-Label--tiny"
+          htmlFor="input"
+          onClick={[Function]}
+        >
+          Label
+        </label>
+      </div>
+      <div
+        className="k-Line__item"
       >
         <div
-          style={
-            Object {
-              "marginBottom": "0.9375rem",
-              "marginTop": null,
-            }
-          }
+          className="k-Tooltip"
         >
+          <button
+            aria-describedby="tooltip"
+            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            data-dismiss="tooltip"
+            data-event="click"
+            data-for="tooltip"
+            data-tip={true}
+            tabIndex={null}
+          >
+            <svg
+              className="k-ButtonIcon__svg"
+              viewBox="0 0 6 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Question mark
+              </title>
+              <path
+                d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
+                fill="#FFF"
+              />
+            </svg>
+          </button>
           <div
-            className="k-Line"
-            style={
-              Object {
-                "lineHeight": 1,
-              }
-            }
+            className="__react_component_tooltip place-right type-dark "
+            data-id="tooltip"
+            id="tooltip"
+            role="tooltip"
           >
-            <div
-              className="k-Line__item"
-            >
-              <label
-                className="k-Label k-Label--tiny"
-                htmlFor="input"
-                onClick={[Function]}
-              >
-                Label
-              </label>
-            </div>
-            <div
-              className="k-Line__item"
-            >
-              <div
-                className="k-Tooltip"
-              >
-                <button
-                  aria-describedby="tooltip"
-                  className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
-                  data-dismiss="tooltip"
-                  data-event="click"
-                  data-for="tooltip"
-                  data-tip={true}
-                  tabIndex={null}
-                >
-                  <svg
-                    className="k-ButtonIcon__svg"
-                    viewBox="0 0 6 10"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>
-                      Question mark
-                    </title>
-                    <path
-                      d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
-                      fill="#FFF"
-                    />
-                  </svg>
-                </button>
-                <div
-                  className="__react_component_tooltip place-right type-dark "
-                  data-id="tooltip"
-                  id="tooltip"
-                  role="tooltip"
-                >
-                  Tooltip
-                </div>
-              </div>
-            </div>
+            Tooltip
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "0.9375rem",
-            }
-          }
-        >
-          <input
-            className="k-TextInput is-error"
-            disabled={false}
-            id="input"
-            name="field"
-            placeholder="Placeholder…"
-            type="text"
-          />
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "0.625rem",
-            }
-          }
-        >
-          <p
-            className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
-            style={
-              Object {
-                "margin": 0,
-              }
-            }
-          >
-            Error!
-          </p>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "0.9375rem",
+      }
+    }
+  >
+    <input
+      className="k-TextInput is-error"
+      disabled={false}
+      id="input"
+      name="field"
+      placeholder="Placeholder…"
+      type="text"
+    />
+  </div>,
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "0.625rem",
+      }
+    }
+  >
+    <p
+      className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      Error!
+    </p>
+  </div>,
+]
 `;
 
 exports[`<Field /> with <Field.Input /> matches with snapshot 1`] = `
-<div
-  className="k-Container"
->
+Array [
   <div
-    className="k-Grid"
+    style={
+      Object {
+        "marginBottom": "0.9375rem",
+        "marginTop": null,
+      }
+    }
   >
     <div
-      className="k-Grid__col--3"
+      className="k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
     >
       <div
-        style={
-          Object {
-            "marginBottom": "3.125rem",
-            "marginTop": "3.125rem",
-          }
-        }
+        className="k-Line__item"
+      >
+        <label
+          className="k-Label k-Label--tiny"
+          htmlFor="input"
+          onClick={[Function]}
+        >
+          Label
+        </label>
+      </div>
+      <div
+        className="k-Line__item"
       >
         <div
-          style={
-            Object {
-              "marginBottom": "0.9375rem",
-              "marginTop": null,
-            }
-          }
+          className="k-Tooltip"
         >
-          <div
-            className="k-Line"
-            style={
-              Object {
-                "lineHeight": 1,
-              }
-            }
+          <button
+            aria-describedby="tooltip"
+            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            data-dismiss="tooltip"
+            data-event="click"
+            data-for="tooltip"
+            data-tip={true}
+            tabIndex={null}
           >
-            <div
-              className="k-Line__item"
+            <svg
+              className="k-ButtonIcon__svg"
+              viewBox="0 0 6 10"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <label
-                className="k-Label k-Label--tiny"
-                htmlFor="input"
-                onClick={[Function]}
-              >
-                Label
-              </label>
-            </div>
-            <div
-              className="k-Line__item"
-            >
-              <div
-                className="k-Tooltip"
-              >
-                <button
-                  aria-describedby="tooltip"
-                  className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
-                  data-dismiss="tooltip"
-                  data-event="click"
-                  data-for="tooltip"
-                  data-tip={true}
-                  tabIndex={null}
-                >
-                  <svg
-                    className="k-ButtonIcon__svg"
-                    viewBox="0 0 6 10"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <title>
-                      Question mark
-                    </title>
-                    <path
-                      d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
-                      fill="#FFF"
-                    />
-                  </svg>
-                </button>
-                <div
-                  className="__react_component_tooltip place-right type-dark "
-                  data-id="tooltip"
-                  id="tooltip"
-                  role="tooltip"
-                >
-                  Tooltip
-                </div>
-              </div>
-            </div>
+              <title>
+                Question mark
+              </title>
+              <path
+                d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
+                fill="#FFF"
+              />
+            </svg>
+          </button>
+          <div
+            className="__react_component_tooltip place-right type-dark "
+            data-id="tooltip"
+            id="tooltip"
+            role="tooltip"
+          >
+            Tooltip
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "0.9375rem",
-            }
-          }
-        >
-          <input
-            className="k-TextInput"
-            disabled={false}
-            id="input"
-            name="field"
-            placeholder="Placeholder…"
-            type="text"
-          />
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "0.9375rem",
+      }
+    }
+  >
+    <input
+      className="k-TextInput"
+      disabled={false}
+      id="input"
+      name="field"
+      placeholder="Placeholder…"
+      type="text"
+    />
+  </div>,
+]
 `;
 
 exports[`<Field /> with <Field.RadioButtonSet /> matches with snapshot 1`] = `
-<div
-  className="k-Container"
->
+Array [
   <div
-    className="k-Grid"
+    style={
+      Object {
+        "marginBottom": "0.9375rem",
+        "marginTop": null,
+      }
+    }
   >
     <div
-      className="k-Grid__col--3"
+      className="k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
     >
       <div
-        style={
-          Object {
-            "marginBottom": "3.125rem",
-            "marginTop": "3.125rem",
-          }
-        }
+        className="k-Line__item"
       >
-        <div
-          style={
-            Object {
-              "marginBottom": "0.9375rem",
-              "marginTop": null,
-            }
-          }
+        <label
+          className="k-Label k-Label--tiny"
+          htmlFor="option-a"
+          onClick={[Function]}
         >
-          <div
-            className="k-Line"
-            style={
-              Object {
-                "lineHeight": 1,
-              }
-            }
-          >
-            <div
-              className="k-Line__item"
-            >
-              <label
-                className="k-Label k-Label--tiny"
-                htmlFor="option-a"
-                onClick={[Function]}
-              >
-                Label
-              </label>
-            </div>
-          </div>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "0.9375rem",
-            }
-          }
-        >
-          <div
-            className="k-RadioButtonSet"
-            style={
-              Object {
-                "lineHeight": "1.3rem",
-              }
-            }
-          >
-            <div
-              className="k-RadioButton k-RadioButtonSet__radioButton"
-            >
-              <input
-                className="k-RadioButton__input"
-                defaultChecked={true}
-                id="option-a"
-                name="radio"
-                type="radio"
-              />
-              <label
-                className="k-RadioButton__label"
-                htmlFor="option-a"
-              >
-                Option A
-              </label>
-            </div>
-            <div
-              className="k-RadioButton k-RadioButtonSet__radioButton"
-            >
-              <input
-                className="k-RadioButton__input"
-                id="option-b"
-                name="radio"
-                type="radio"
-              />
-              <label
-                className="k-RadioButton__label"
-                htmlFor="option-b"
-              >
-                Option B
-              </label>
-            </div>
-            <div
-              className="k-RadioButton k-RadioButtonSet__radioButton"
-            >
-              <input
-                className="k-RadioButton__input"
-                id="option-c"
-                name="radio"
-                type="radio"
-              />
-              <label
-                className="k-RadioButton__label"
-                htmlFor="option-c"
-              >
-                Option C
-              </label>
-            </div>
-          </div>
-        </div>
+          Label
+        </label>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "0.9375rem",
+      }
+    }
+  >
+    <div
+      className="k-RadioButtonSet"
+      style={
+        Object {
+          "lineHeight": "1.3rem",
+        }
+      }
+    >
+      <div
+        className="k-RadioButton k-RadioButtonSet__radioButton"
+      >
+        <input
+          className="k-RadioButton__input"
+          defaultChecked={true}
+          id="option-a"
+          name="radio"
+          type="radio"
+        />
+        <label
+          className="k-RadioButton__label"
+          htmlFor="option-a"
+        >
+          Option A
+        </label>
+      </div>
+      <div
+        className="k-RadioButton k-RadioButtonSet__radioButton"
+      >
+        <input
+          className="k-RadioButton__input"
+          id="option-b"
+          name="radio"
+          type="radio"
+        />
+        <label
+          className="k-RadioButton__label"
+          htmlFor="option-b"
+        >
+          Option B
+        </label>
+      </div>
+      <div
+        className="k-RadioButton k-RadioButtonSet__radioButton"
+      >
+        <input
+          className="k-RadioButton__input"
+          id="option-c"
+          name="radio"
+          type="radio"
+        />
+        <label
+          className="k-RadioButton__label"
+          htmlFor="option-c"
+        >
+          Option C
+        </label>
+      </div>
+    </div>
+  </div>,
+]
 `;
 
 exports[`<Field /> with <Field.Select /> matches with snapshot 1`] = `
-<div
-  className="k-Container"
->
+Array [
   <div
-    className="k-Grid"
+    style={
+      Object {
+        "marginBottom": "0.9375rem",
+        "marginTop": null,
+      }
+    }
   >
     <div
-      className="k-Grid__col--3"
+      className="k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
     >
       <div
-        style={
-          Object {
-            "marginBottom": "3.125rem",
-            "marginTop": "3.125rem",
-          }
-        }
+        className="k-Line__item"
+      >
+        <label
+          className="k-Label k-Label--tiny"
+          htmlFor="select"
+          onClick={[Function]}
+        >
+          Label
+        </label>
+      </div>
+    </div>
+  </div>,
+  <div
+    style={
+      Object {
+        "marginBottom": null,
+        "marginTop": "0.9375rem",
+      }
+    }
+  >
+    <div
+      className="k-Select"
+    >
+      <div
+        className="Select Select--single"
       >
         <div
-          style={
-            Object {
-              "marginBottom": "0.9375rem",
-              "marginTop": null,
-            }
-          }
+          className="Select-control"
+          onKeyDown={[Function]}
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
         >
           <div
-            className="k-Line"
-            style={
-              Object {
-                "lineHeight": 1,
+            className="Select-multi-value-wrapper"
+            id="react-select-2--value"
+          >
+            <div
+              className="Select-placeholder"
+            >
+              Select…
+            </div>
+            <div
+              aria-activedescendant="react-select-2--value"
+              aria-disabled="false"
+              aria-expanded={false}
+              aria-owns=""
+              className="Select-input"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              role="combobox"
+              style={
+                Object {
+                  "border": 0,
+                  "display": "inline-block",
+                  "width": 1,
+                }
               }
-            }
-          >
-            <div
-              className="k-Line__item"
-            >
-              <label
-                className="k-Label k-Label--tiny"
-                htmlFor="select"
-                onClick={[Function]}
-              >
-                Label
-              </label>
-            </div>
+              tabIndex={0}
+            />
           </div>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": null,
-              "marginTop": "0.9375rem",
-            }
-          }
-        >
-          <div
-            className="k-Select"
+          <span
+            className="Select-arrow-zone"
+            onMouseDown={[Function]}
           >
-            <div
-              className="Select Select--single"
-            >
-              <div
-                className="Select-control"
-                onKeyDown={[Function]}
-                onMouseDown={[Function]}
-                onTouchEnd={[Function]}
-                onTouchMove={[Function]}
-                onTouchStart={[Function]}
-              >
-                <div
-                  className="Select-multi-value-wrapper"
-                  id="react-select-2--value"
-                >
-                  <div
-                    className="Select-placeholder"
-                  >
-                    Select…
-                  </div>
-                  <div
-                    aria-activedescendant="react-select-2--value"
-                    aria-disabled="false"
-                    aria-expanded={false}
-                    aria-owns=""
-                    className="Select-input"
-                    onBlur={[Function]}
-                    onFocus={[Function]}
-                    role="combobox"
-                    style={
-                      Object {
-                        "border": 0,
-                        "display": "inline-block",
-                        "width": 1,
-                      }
-                    }
-                    tabIndex={0}
-                  />
-                </div>
-                <span
-                  className="Select-arrow-zone"
-                  onMouseDown={[Function]}
-                >
-                  <span
-                    className="Select-arrow"
-                    onMouseDown={[Function]}
-                  />
-                </span>
-              </div>
-            </div>
-          </div>
+            <span
+              className="Select-arrow"
+              onMouseDown={[Function]}
+            />
+          </span>
         </div>
       </div>
     </div>
-  </div>
-</div>
+  </div>,
+]
 `;
