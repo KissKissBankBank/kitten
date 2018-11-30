@@ -122,7 +122,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
                   }
                 />
               </div>
-
+              
               <div
                 data-radium={true}
               >
@@ -492,7 +492,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
                           }
                         }
                       >
-                        Delivery
+                        Delivery 
                         <span
                           className="k-u-weight-light"
                         >
@@ -511,7 +511,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
                           }
                         }
                       >
-                        Alice
+                        Alice 
                         <span
                           className="k-u-weight-light"
                         >
@@ -1073,7 +1073,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
                         }
                       }
                     >
-                      Delivery
+                      Delivery 
                       <span
                         className="k-u-weight-light"
                       >
@@ -1089,7 +1089,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
                         }
                       }
                     >
-                      Alice
+                      Alice 
                       <span
                         className="k-u-weight-light"
                       >
@@ -1617,7 +1617,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
                         }
                       }
                     >
-                      Custom title contributors
+                      Custom title contributors 
                       <span
                         className="k-u-weight-light"
                       >
@@ -1633,7 +1633,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
                         }
                       }
                     >
-                      Custom title delivery
+                      Custom title delivery 
                       <span
                         className="k-u-weight-light"
                       >
@@ -1649,7 +1649,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
                         }
                       }
                     >
-                      Custom title availability
+                      Custom title availability 
                       <span
                         className="k-u-weight-light"
                       >

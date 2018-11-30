@@ -122,7 +122,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
                   }
                 />
               </div>
-
+              
               <div
                 data-radium={true}
               >
@@ -434,7 +434,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
                         }
                       }
                     >
-                      Custom title contributors
+                      Custom title contributors 
                       <span
                         className="k-u-weight-light"
                       >
@@ -450,7 +450,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
                         }
                       }
                     >
-                      Custom title delivery
+                      Custom title delivery 
                       <span
                         className="k-u-weight-light"
                       >
@@ -466,7 +466,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
                         }
                       }
                     >
-                      Custom title availability
+                      Custom title availability 
                       <span
                         className="k-u-weight-light"
                       >
@@ -992,7 +992,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
                           }
                         }
                       >
-                        Custom title contributors
+                        Custom title contributors 
                         <span
                           className="k-u-weight-light"
                         >
@@ -1011,7 +1011,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
                           }
                         }
                       >
-                        Custom title delivery
+                        Custom title delivery 
                         <span
                           className="k-u-weight-light"
                         >
@@ -1030,7 +1030,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
                           }
                         }
                       >
-                        Custom title availability
+                        Custom title availability 
                         <span
                           className="k-u-weight-light"
                         >
