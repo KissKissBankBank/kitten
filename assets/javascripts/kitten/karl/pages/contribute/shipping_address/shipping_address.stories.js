@@ -2,9 +2,9 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs } from '@storybook/addon-knobs/react'
 import ShippingAddress from './components/shipping_address'
-import { Marger } from '../../../components/layout/marger'
+import { Marger } from '../../../../components/layout/marger'
 
-storiesOf('Pages/ShippingAddress', module)
+storiesOf('Pages/Contribute', module)
   .addDecorator(withKnobs)
   .add('ShippingAddress', () => {
     return (
