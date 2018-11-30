@@ -119,14 +119,6 @@
     display: flex;
   }
 
-  .k-Header__logo--smallOnXxs {
-    svg, img {
-      @include k-media-max('xxs') {
-        width: k-px-to-rem(120px);
-      }
-    }
-  }
-
   .k-Header__logo--lightOnM {
     overflow: hidden;
 
