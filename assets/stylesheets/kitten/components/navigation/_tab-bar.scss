@@ -127,10 +127,4 @@
       min-height: k-px-to-rem(50px);
     }
   }
-
-  .k-TabBar--responsive--hidden\@m-down {
-    @include k-media-max('m') {
-      display: flex;
-    }
-  }
 }
