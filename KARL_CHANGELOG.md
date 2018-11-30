@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix:
+- Update Lendo `Header` and `TabBar` with new `k-u-show` media queries
+- Add mini lendo logo.
+
 ## [23.15.0] - 2018-11-29
 
 Fix:
