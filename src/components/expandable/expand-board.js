@@ -17,7 +17,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -44,7 +44,7 @@ function (_Component) {
 
   function ExpandBoardButton() {
     (0, _classCallCheck2.default)(this, ExpandBoardButton);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ExpandBoardButton).apply(this, arguments));
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(ExpandBoardButton).apply(this, arguments));
   }
 
   (0, _createClass2.default)(ExpandBoardButton, [{
@@ -100,48 +100,63 @@ ExpandBoardButton.defaultProps = {
   ariaId: ''
 };
 
-var ExpandBoardContent =
+var ExpandBoardContentBase =
 /*#__PURE__*/
 function (_Component2) {
-  (0, _inherits2.default)(ExpandBoardContent, _Component2);
+  (0, _inherits2.default)(ExpandBoardContentBase, _Component2);
 
-  function ExpandBoardContent() {
-    (0, _classCallCheck2.default)(this, ExpandBoardContent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ExpandBoardContent).apply(this, arguments));
+  function ExpandBoardContentBase() {
+    (0, _classCallCheck2.default)(this, ExpandBoardContentBase);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(ExpandBoardContentBase).apply(this, arguments));
   }
 
-  (0, _createClass2.default)(ExpandBoardContent, [{
+  (0, _createClass2.default)(ExpandBoardContentBase, [{
     key: "render",
     value: function render() {
       var _this$props2 = this.props,
           children = _this$props2.children,
-          ariaId = _this$props2.ariaId;
+          ariaId = _this$props2.ariaId,
+          style = _this$props2.style;
       return _react.default.createElement("div", {
-        id: ariaId
+        id: ariaId,
+        style: style
       }, children);
     }
   }]);
-  return ExpandBoardContent;
+  return ExpandBoardContentBase;
 }(_react.Component);
 
-ExpandBoardContent.propTypes = {
+ExpandBoardContentBase.propTypes = {
   children: _propTypes.default.node.isRequired,
   ariaId: _propTypes.default.string
 };
-ExpandBoardContent.defaultProps = {
+ExpandBoardContentBase.defaultProps = {
   ariaId: ''
 };
+var ExpandBoardContent = (0, _radium.default)(ExpandBoardContentBase);
 
 var ExpandBoardBase =
 /*#__PURE__*/
 function (_Component3) {
   (0, _inherits2.default)(ExpandBoardBase, _Component3);
 
-  function ExpandBoardBase(props) {
+  function ExpandBoardBase() {
+    var _getPrototypeOf2;
+
     var _this;
 
     (0, _classCallCheck2.default)(this, ExpandBoardBase);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ExpandBoardBase).call(this));
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(ExpandBoardBase)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this.state = {
+      expanded: false,
+      isShrinking: false,
+      isExpanding: false
+    };
 
     _this.isButtonComponent = function (component) {
       return component.type === ExpandBoardButton;
@@ -151,23 +166,107 @@ function (_Component3) {
       return component.type === ExpandBoardContent;
     };
 
-    _this.handleClick = function () {
-      _this.setState(function (prevState) {
-        return {
-          expanded: !prevState.expanded
-        };
-      }, function () {
-        document.activeElement.blur();
+    _this.growAnimation = _radium.default.keyframes({
+      '0%': {
+        opacity: 0,
+        maxHeight: 0
+      },
+      '100%': {
+        opacity: 1,
+        maxHeight: _this.props.animationMaxHeight
+      }
+    }, 'grow');
+    _this.shrinkAnimation = _radium.default.keyframes({
+      '0%': {
+        opacity: 1,
+        maxHeight: _this.props.animationMaxHeight
+      },
+      '100%': {
+        opacity: 0,
+        maxHeight: 0
+      }
+    }, 'schrink');
 
-        _this.props.onClick({
-          expanded: _this.state.expanded
-        });
+    _this.handleAfterClick = function () {
+      var _this$state = _this.state,
+          expanded = _this$state.expanded,
+          isShrinking = _this$state.isShrinking,
+          isExpanding = _this$state.isExpanding;
+      document.activeElement.blur();
+
+      _this.props.onClick({
+        expanded: expanded,
+        isShrinking: isShrinking,
+        isExpanding: isExpanding
       });
     };
 
-    _this.state = {
-      expanded: false
+    _this.updateExpandState = function () {
+      _this.setState(function (prevState) {
+        return {
+          expanded: !prevState.expanded,
+          isShrinking: false,
+          isExpanding: false
+        };
+      }, _this.handleAfterClick);
     };
+
+    _this.handleClick = function () {
+      var _this$props3 = _this.props,
+          withAnimation = _this$props3.withAnimation,
+          animationShrinkingDuration = _this$props3.animationShrinkingDuration;
+      if (!withAnimation) return _this.updateExpandState();
+      return _this.setState(function (prevState) {
+        if (prevState.expanded) {
+          return {
+            isShrinking: true
+          };
+        }
+
+        return {
+          isExpanding: true
+        };
+      }, function () {
+        if (_this.state.isShrinking) {
+          return setTimeout(_this.updateExpandState, animationShrinkingDuration * 1000);
+        }
+
+        return _this.updateExpandState();
+      });
+    };
+
+    _this.contentStyle = function () {
+      var _this$props4 = _this.props,
+          withAnimation = _this$props4.withAnimation,
+          animationShrinkingDuration = _this$props4.animationShrinkingDuration,
+          animationMaxHeight = _this$props4.animationMaxHeight;
+      if (!withAnimation) return null;
+
+      if (_this.state.isShrinking) {
+        return {
+          maxHeight: animationMaxHeight,
+          opacity: 1,
+          animationDuration: "".concat(animationShrinkingDuration, "s"),
+          animationDelay: 0,
+          animationIterationCount: 1,
+          animationFillMode: 'forwards',
+          animationName: _this.shrinkAnimation,
+          animationTimingFunction: 'ease-in-out'
+        };
+      }
+
+      return {
+        maxHeight: 0,
+        opacity: 0,
+        animationDuration: '1s',
+        animationDelay: 0,
+        animationIterationCount: 1,
+        animationFillMode: 'forwards',
+        animationName: _this.growAnimation,
+        animationTimingFunction: 'ease-in-out'
+      };
+    };
+
     return _this;
   }
 
@@ -176,11 +275,11 @@ function (_Component3) {
     value: function render() {
       var _this2 = this;
 
-      var _this$props3 = this.props,
-          children = _this$props3.children,
-          style = _this$props3.style,
-          disabled = _this$props3.disabled,
-          ariaId = _this$props3.ariaId;
+      var _this$props5 = this.props,
+          children = _this$props5.children,
+          style = _this$props5.style,
+          disabled = _this$props5.disabled,
+          ariaId = _this$props5.ariaId;
       var button = null;
       var content = null;
 
@@ -199,7 +298,8 @@ function (_Component3) {
 
         if (_this2.isContentComponent(child)) {
           content = _react.default.cloneElement(child, {
-            ariaId: ariaId
+            ariaId: ariaId,
+            style: _this2.contentStyle()
           });
         }
       });
@@ -219,13 +319,19 @@ ExpandBoardBase.propTypes = {
   disabled: _propTypes.default.bool,
   style: _propTypes.default.object,
   onClick: _propTypes.default.func,
-  ariaId: _propTypes.default.string.isRequired
+  ariaId: _propTypes.default.string.isRequired,
+  withAnimation: _propTypes.default.bool,
+  animationMaxHeight: _propTypes.default.string,
+  animationShrinkingDuration: _propTypes.default.number
 };
 ExpandBoardBase.defaultProps = {
   disabled: false,
   style: {},
   onClick: function onClick() {},
-  ariaId: 'k-ExpandBoard'
+  ariaId: 'k-ExpandBoard',
+  withAnimation: false,
+  animationMaxHeight: '100vh',
+  animationShrinkingDuration: 0.5
 };
 var styles = {
   button: {

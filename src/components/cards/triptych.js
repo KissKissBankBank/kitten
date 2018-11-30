@@ -62,9 +62,9 @@ function (_Component) {
 
     _this.updateSecondCardMargin = function () {
       _this.setState(function (_state, props) {
-        var viewportIsTabletOrLess = props.viewportIsTabletOrLess,
+        var viewportIsMOrLess = props.viewportIsMOrLess,
             viewportIsSOrLess = props.viewportIsSOrLess;
-        var isTablet = viewportIsTabletOrLess && !viewportIsSOrLess;
+        var isTablet = viewportIsMOrLess && !viewportIsSOrLess;
         if (!isTablet) return {
           secondCardComputedTopMargin: null
         };
@@ -75,6 +75,8 @@ function (_Component) {
         };
       });
     };
+
+    _this.debounceUpdateMargin = (0, _debounce.debounce)(_this.updateSecondCardMargin, 250);
 
     _this.setRef = function (name) {
       return function (node) {
@@ -91,19 +93,19 @@ function (_Component) {
   (0, _createClass2.default)(TriptychBase, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.updateSecondCardMargin();
-      window.addEventListener('resize', (0, _debounce.debounce)(this.updateSecondCardMargin, 250));
+      this.debounceUpdateMargin();
+      window.addEventListener('resize', this.debounceUpdateMargin);
     }
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
-      window.removeEventListener('resize', (0, _debounce.debounce)(this.updateSecondCardMargin, 250));
+      window.removeEventListener('resize', this.debounceUpdateMargin);
     }
   }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          viewportIsTabletOrLess = _this$props.viewportIsTabletOrLess,
+          viewportIsMOrLess = _this$props.viewportIsMOrLess,
           title = _this$props.title,
           item1 = _this$props.item1,
           item2 = _this$props.item2,
@@ -133,14 +135,14 @@ function (_Component) {
       }, _react.default.createElement("div", {
         ref: this.setRef('firstCard')
       }, _react.default.createElement(Marger, {
-        bottom: viewportIsTabletOrLess ? 5 : 0
+        bottom: viewportIsMOrLess ? 5 : 0
       }, item1)))), _react.default.createElement(GridCol, {
         "col-l": "4",
         "col-m": "6"
       }, _react.default.createElement(Marger, {
         style: (0, _extends2.default)({}, styles.secondCard, styles.gutter.secondItem),
         top: this.state.secondCardComputedTopMargin / 10,
-        bottom: viewportIsTabletOrLess ? 5 : 0
+        bottom: viewportIsMOrLess ? 5 : 0
       }, item2)), _react.default.createElement(GridCol, {
         "col-l": "4",
         "col-m": "6",
@@ -205,8 +207,8 @@ var styles = {
     transition: 'margin 500ms'
   }
 };
-var Triptych = (0, _mediaQueries.mediaQueries)(TriptychBase, {
-  viewportIsTabletOrLess: true,
-  viewportIsSOrLess: true
-});
+var Triptych = (0, _mediaQueries.withMediaQueries)({
+  viewportIsSOrLess: true,
+  viewportIsMOrLess: true
+})(TriptychBase);
 exports.Triptych = Triptych;

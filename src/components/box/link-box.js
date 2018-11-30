@@ -45,6 +45,8 @@ var _typography = require("../../helpers/utils/typography");
 
 var _navigation;
 
+var Marger = (0, _radium.default)(_marger.Marger);
+
 var LinkBox =
 /*#__PURE__*/
 function (_Component) {
@@ -109,11 +111,11 @@ function (_Component) {
         style: styles.container,
         onMouseEnter: this.handleOnMouseEnter,
         onMouseLeave: this.handleOnMouseLeave
-      }, this.renderIcon(), _react.default.createElement(_marger.Marger, {
+      }, this.renderIcon(), _react.default.createElement(Marger, {
         top: "2",
         bottom: "2",
         style: styles.paragraph
-      }, _react.default.createElement(_marger.Marger, {
+      }, _react.default.createElement(Marger, {
         bottom: text ? 0.5 : 0
       }, _react.default.createElement(_text.Text, {
         tag: titleTag,
