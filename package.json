@@ -31,7 +31,6 @@
     "jest-cli": "^22.0.4",
     "json-loader": "^0.5.4",
     "modularscale-sass": "^2.1.1",
-    "node-sass": "^3.8.0",
     "prop-types": "^15.6.0",
     "prop-types-extra": "^1.0.1",
     "pubsub-js": "^1.5.3",
