@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `k-TextInput--fiveDigits` class.
+- Fix: Update `k-inputSet` vertical spacing.
+- Fix: Update `k-RadioButtonSet` line-height.
 
 ## [23.16.1] - 2018-11-30
 
