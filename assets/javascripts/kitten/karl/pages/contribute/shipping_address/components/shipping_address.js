@@ -3,14 +3,13 @@ import { Container } from '../../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../../components/grid/grid'
 import { Marger } from '../../../../../components/layout/marger'
 import { Title } from '../../../../../components/typography/title'
-import { parseHtml } from '../../../../../helpers/utils/parser'
 import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
 import Form from './form'
 import Cart from './cart'
 
 class ShippingAddress extends Component {
   render() {
-    const { title, ...others } = this.props
+    const { error } = this.props
 
     return (
       <Container>
@@ -18,7 +17,8 @@ class ShippingAddress extends Component {
           <GridCol col-l="6" offset-l="1">
             <Marger bottom="2">
               <Title modifier="secondary" margin={false}>
-                {parseHtml(title)}
+                Vos informations <br />
+                de livraison
               </Title>
             </Marger>
 
@@ -26,7 +26,7 @@ class ShippingAddress extends Component {
               <HorizontalStroke size="big" />
             </Marger>
 
-            <Form {...others} />
+            <Form error={error} />
           </GridCol>
 
           <GridCol col="3" offset="2" className="k-u-hidden@m-down">
