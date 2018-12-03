@@ -1,7 +1,7 @@
 $k-module: null;
 
 // Vendor dependencies
-@import '~modularscale-sass/stylesheets/modularscale';
+@import '~modularscale-sass/stylesheets/modular-scale';
 
 // Helpers
 @import './kitten/schema';
@@ -19,4 +19,3 @@ $k-module: null;
 
 // Utilities
 @import './kitten/utilities';
-
