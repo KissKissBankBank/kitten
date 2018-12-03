@@ -130,6 +130,10 @@
     text-align: center;
   }
 
+  .k-TextInput--fiveDigits {
+    width: k-px-to-rem($horizontal-padding * 2 + $digit-length * 5);
+  }
+
   .k-TextInput--twelveDigits {
     width: k-px-to-rem($horizontal-padding * 2 + $digit-length * 12);
   }
