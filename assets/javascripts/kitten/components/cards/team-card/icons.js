@@ -56,7 +56,7 @@ export class TeamCardIcons extends Component {
 
         {links && <SocialLinks links={links} />}
 
-        {socialLinks && <SocialLinks links={socialLinks} />}
+        {socialLink && <SocialLinks links={socialLinks} />}
       </Marger>
     )
   }
