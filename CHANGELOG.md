@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `SocialLinks` on `TeamCard` component.
+- Feature: Add `links` props on `TeamCard` component.
+  `socialLink` is deprecated.
 
 ## [23.16.0] - 2018-11-30
 

@@ -29,7 +29,7 @@ storiesOf('Cards', module)
                 <TeamCard.Icons
                   email={text('Email', 'example@kisskissbankbank.com')}
                   phoneNumber={text('Phone number', '06 00 00 00 00')}
-                  socialNetworks={[
+                  links={[
                     {
                       name: 'linkedin',
                       href: text('Linkedin link', 'https://www.linkedin.com'),

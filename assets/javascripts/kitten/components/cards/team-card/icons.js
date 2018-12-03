@@ -7,6 +7,7 @@ import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { EmailIcon } from 'kitten/components/icons/email-icon'
 import { TeamCardPhoneIcon } from 'kitten/components/cards/team-card/phone-icon'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const Marger = Radium(MargerBase)
 
@@ -14,17 +15,23 @@ export class TeamCardIcons extends Component {
   static propTypes = {
     email: PropTypes.string,
     phoneNumber: PropTypes.string,
-    socialNetworks: PropTypes.oneOf(['linkedin', 'twitter']),
+    links: PropTypes.oneOf(['linkedin', 'twitter']),
+
+    // Deprecated.
+    socialLink: deprecated(
+      PropTypes.string,
+      'Prefer use <ButtonIcon href={link.href} name={link.name} />',
+    ),
   }
 
   static defaultProps = {
     email: '',
     phoneNumber: '',
-    socialNetworks: '',
+    links: '',
   }
 
   render() {
-    const { email, phoneNumber, socialNetworks } = this.props
+    const { email, phoneNumber, links } = this.props
 
     return (
       <Marger top="1.5" style={styles.icons}>
@@ -42,7 +49,7 @@ export class TeamCardIcons extends Component {
 
         {phoneNumber && <TeamCardPhoneIcon {...this.props} />}
 
-        {socialNetworks && <SocialLinks socialNetworks={socialNetworks} />}
+        {links && <SocialLinks links={links} />}
       </Marger>
     )
   }
@@ -50,30 +57,30 @@ export class TeamCardIcons extends Component {
 
 class SocialLinks extends Component {
   render() {
-    const { socialNetworks } = this.props
+    const { links } = this.props
 
     return (
       <Fragment>
-        {socialNetworks.map((socialNetwork, index) => {
+        {links.map((link, index) => {
           let buttonStyle
-          if (index !== socialNetworks.length - 1) {
+          if (index !== links.length - 1) {
             buttonStyle = { marginRight: 15 }
           }
 
           return (
             <ButtonIcon
               tag="a"
-              href={socialNetwork.href}
-              modifier={socialNetwork.name}
+              href={link.href}
+              modifier={link.name}
               size="tiny"
               target="_blank"
               rel="noopener"
               style={buttonStyle}
             >
-              {socialNetwork.name === 'linkedin' && (
+              {link.name === 'linkedin' && (
                 <LinkedinIcon className="k-ButtonIcon__svg" />
               )}
-              {socialNetwork.name === 'twitter' && (
+              {link.name === 'twitter' && (
                 <TwitterIcon className="k-ButtonIcon__svg" />
               )}
             </ButtonIcon>
