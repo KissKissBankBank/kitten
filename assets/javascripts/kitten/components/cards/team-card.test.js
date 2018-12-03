@@ -44,4 +44,17 @@ describe('<TeamCard />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with socialLink prop (deprecated) ', () => {
+    it('matches with snapshot', () => {
+      const component = renderer
+        .create(
+          <TeamCard>
+            <TeamCard.Icons socialLink="https://www.linkedin.com" />
+          </TeamCard>,
+        )
+        .toJSON()
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
