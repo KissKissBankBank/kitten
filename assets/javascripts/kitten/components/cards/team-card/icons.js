@@ -18,10 +18,7 @@ export class TeamCardIcons extends Component {
     links: PropTypes.oneOf(['linkedin', 'twitter']),
 
     // Deprecated.
-    socialLink: deprecated(
-      PropTypes.string,
-      'Prefer use <ButtonIcon href={link.href} name={link.name} />',
-    ),
+    socialLink: deprecated(PropTypes.string, 'Prefer use links prop'),
   }
 
   static defaultProps = {
@@ -54,9 +51,7 @@ export class TeamCardIcons extends Component {
 
         {phoneNumber && <TeamCardPhoneIcon {...this.props} />}
 
-        {links && <SocialLinks links={links} />}
-
-        {socialLink && <SocialLinks links={socialLinks} />}
+        {socialLinks && <SocialLinks links={socialLinks} />}
       </Marger>
     )
   }

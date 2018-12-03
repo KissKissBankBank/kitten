@@ -18,7 +18,6 @@ exports[`<TeamCard /> with socialLink prop (deprecated)  matches with snapshot 1
     >
       
       
-      
       <a
         className="k-ButtonIcon k-ButtonIcon--linkedin k-ButtonIcon--tiny"
         href="https://www.linkedin.com"
