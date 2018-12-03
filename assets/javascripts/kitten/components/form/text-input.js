@@ -30,7 +30,7 @@ export class TextInput extends Component {
       'is-error': error,
       'is-disabled': disabled,
       'k-TextInput--twoDigits': digits === 2,
-      'k-TextInput--fiveDigits': digits === 5,
+      'k-TextInput--sixDigits': digits === 6,
       'k-TextInput--twelveDigits': digits === 12,
     })
 
