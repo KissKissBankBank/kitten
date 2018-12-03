@@ -96,14 +96,23 @@ export class MargerBase extends Component {
   hasXxsProp = propName => this.props[propName] && this.props[propName].fromXxs
 
   defaultProp = propName => {
+    const mediaQueryRule = `@media (min-width: 0)`
     const cssRule = `margin${upcaseFirst(propName)}`
 
     if (this.hasDefaultProp(propName)) {
-      return { [cssRule]: this.marginSize(this.props[propName].default) }
+      return {
+        [mediaQueryRule]: {
+          [cssRule]: this.marginSize(this.props[propName].default),
+        },
+      }
     }
 
     if (this.hasXxsProp(propName)) {
-      return { [cssRule]: this.marginSize(this.props[propName].fromXxs) }
+      return {
+        [mediaQueryRule]: {
+          [cssRule]: this.marginSize(this.props[propName].fromXxs),
+        },
+      }
     }
   }
 

@@ -67,7 +67,7 @@ describe('<Marger />', () => {
         const styles = cleanStyles(marger.props().style)
 
         expect(styles).toEqual([
-          { marginTop: '2.5rem' },
+          { '@media (min-width: 0)': { marginTop: '2.5rem' } },
           { '@media (min-width: 480px)': { marginTop: '7.5rem' } },
           { '@media (min-width: 768px)': { marginTop: '1.25rem' } },
         ])
@@ -86,7 +86,9 @@ describe('<Marger />', () => {
           .first()
         const styles = cleanStyles(marger.props().style)
 
-        expect(styles).toEqual([{ marginTop: '2.5rem' }])
+        expect(styles).toEqual([
+          { '@media (min-width: 0)': { marginTop: '2.5rem' } },
+        ])
       })
 
       it('is overrided by the default value', () => {
@@ -100,7 +102,9 @@ describe('<Marger />', () => {
           .first()
         const styles = cleanStyles(marger.props().style)
 
-        expect(styles).toEqual([{ marginTop: '7.5rem' }])
+        expect(styles).toEqual([
+          { '@media (min-width: 0)': { marginTop: '7.5rem' } },
+        ])
       })
     })
   })
@@ -151,7 +155,7 @@ describe('<Marger />', () => {
         const styles = cleanStyles(marger.props().style)
 
         expect(styles).toEqual([
-          { marginBottom: '2.5rem' },
+          { '@media (min-width: 0)': { marginBottom: '2.5rem' } },
           { '@media (min-width: 480px)': { marginBottom: '7.5rem' } },
           { '@media (min-width: 768px)': { marginBottom: '1.25rem' } },
         ])
@@ -170,7 +174,9 @@ describe('<Marger />', () => {
           .first()
         const styles = cleanStyles(marger.props().style)
 
-        expect(styles).toEqual([{ marginBottom: '2.5rem' }])
+        expect(styles).toEqual([
+          { '@media (min-width: 0)': { marginBottom: '2.5rem' } },
+        ])
       })
 
       it('is overrided by the default value', () => {
@@ -184,7 +190,9 @@ describe('<Marger />', () => {
           .first()
         const styles = cleanStyles(marger.props().style)
 
-        expect(styles).toEqual([{ marginBottom: '7.5rem' }])
+        expect(styles).toEqual([
+          { '@media (min-width: 0)': { marginBottom: '7.5rem' } },
+        ])
       })
     })
   })
