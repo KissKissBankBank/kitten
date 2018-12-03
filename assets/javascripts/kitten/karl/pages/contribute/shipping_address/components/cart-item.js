@@ -17,7 +17,12 @@ class CartItem extends Component {
         }}
       >
         <Marger bottom="2">
-          <Title modifier="senary" margin={false} className="k-u-style-italic">
+          <Title
+            tag="p"
+            modifier="senary"
+            margin={false}
+            className="k-u-style-italic"
+          >
             Pour 60 €
           </Title>
         </Marger>
