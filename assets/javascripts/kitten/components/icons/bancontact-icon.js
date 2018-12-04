@@ -6,6 +6,7 @@ export const BancontactIcon = props => (
     height="28"
     viewBox="0 0 46 28"
     xmlns="http://www.w3.org/2000/svg"
+    {...props}
   >
     <title>Bancontact</title>
     <g fill="none" fill-rule="evenodd">
