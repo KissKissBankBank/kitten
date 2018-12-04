@@ -6,7 +6,7 @@ export class FieldRadioButtonSet extends Component {
   render() {
     return (
       <Marger top="1.5">
-        <RadioButtonSet style={{ lineHeight: '1.3rem' }} {...this.props} />
+        <RadioButtonSet {...this.props} />
       </Marger>
     )
   }

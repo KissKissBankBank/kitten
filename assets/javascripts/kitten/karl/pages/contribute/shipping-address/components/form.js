@@ -95,7 +95,7 @@ class Form extends Component {
               tooltipId="phone-tooltip"
               tooltip="Votre numéro permettra au porteur de projet de vous contacter en cas de problème de livraison."
             >
-              Numéro de téléphone (optionnel)
+              Numéro de téléphone
             </Field.Label>
 
             <Field.Input
@@ -152,7 +152,7 @@ class Form extends Component {
               id="postal-code"
               name="postalCode"
               placeholder="Code postal"
-              digits={5}
+              digits={6}
               error={error}
             />
 

@@ -5,7 +5,7 @@ import { Marger } from '../../../../../components/layout/marger'
 import { Title } from '../../../../../components/typography/title'
 import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
 import Form from './form'
-import Cart from './cart'
+import Cart from '../../common/cart/cart'
 
 class ShippingAddress extends Component {
   render() {
@@ -14,7 +14,7 @@ class ShippingAddress extends Component {
     return (
       <Container>
         <Grid>
-          <GridCol col-l="6" offset-l="1">
+          <GridCol col-xs="10" offset-xs="1" col-l="5" offset-l="1">
             <Marger bottom="2">
               <Title modifier="secondary" margin={false}>
                 Vos informations <br />
@@ -29,7 +29,13 @@ class ShippingAddress extends Component {
             <Form error={error} />
           </GridCol>
 
-          <GridCol col="3" offset="2" className="k-u-hidden@m-down">
+          <GridCol
+            col-l="4"
+            offset-l="2"
+            col-xl="3"
+            offset-xl="3"
+            className="k-u-hidden@m-down"
+          >
             <Cart />
           </GridCol>
         </Grid>
