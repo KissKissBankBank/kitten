@@ -5,9 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Feature:
-- Add `k-u-show` mediaqueries
-- Remove useless classes for `Header` and `TabBar` (`k-Header__logo--smallOnXxs`
-  ,`k-Header__nav--hidden@m-down` & `k-TabBar--responsive--hidden@m-down`)
+- Add `k-u-hidden@{windowWidth}` mediaqueries
 
 ## [23.16.1] - 2018-11-30
 

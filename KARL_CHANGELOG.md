@@ -5,8 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Fix:
-- Update Lendo `Header` and `TabBar` with new `k-u-show` media queries
-- Add mini lendo logo.
+- Update `header.html` with `k-u-hidden@{windowWidth}` mediaqueries
+- Add mini Lendo logo.
 
 ## [23.16.1] - 2018-11-30
 
