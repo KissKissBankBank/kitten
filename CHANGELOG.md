@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Feature:
-- Add `k-u-hidden@{viewportRange}` mediaqueries
+- Add `k-u-hidden@{viewportRange}` utilities
 
 ## [23.16.1] - 2018-11-30
 
