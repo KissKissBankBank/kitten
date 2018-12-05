@@ -5,7 +5,7 @@ import { Grid, GridCol as GridColBase } from 'kitten/components/grid/grid'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { VerticalStroke as VerticalStrokeBase } from 'kitten/components/layout/vertical-stroke'
 import { ScreenConfig } from 'kitten/constants/screen-config'
-import { mediaQueries } from 'kitten/hoc/media-queries'
+import { withMediaQueries } from 'kitten/hoc/media-queries'
 import { debounce } from 'kitten/helpers/utils/debounce'
 import { GUTTER } from 'kitten/constants/grid-config'
 
@@ -22,8 +22,8 @@ class TriptychBase extends Component {
 
   updateSecondCardMargin = () => {
     this.setState((_state, props) => {
-      const { viewportIsTabletOrLess, viewportIsSOrLess } = props
-      const isTablet = viewportIsTabletOrLess && !viewportIsSOrLess
+      const { viewportIsMOrLess, viewportIsSOrLess } = props
+      const isTablet = viewportIsMOrLess && !viewportIsSOrLess
 
       if (!isTablet) return { secondCardComputedTopMargin: null }
 
@@ -34,20 +34,16 @@ class TriptychBase extends Component {
     })
   }
 
-  componentDidMount() {
-    this.updateSecondCardMargin()
+  debounceUpdateMargin = debounce(this.updateSecondCardMargin, 250)
 
-    window.addEventListener(
-      'resize',
-      debounce(this.updateSecondCardMargin, 250),
-    )
+  componentDidMount() {
+    this.debounceUpdateMargin()
+
+    window.addEventListener('resize', this.debounceUpdateMargin)
   }
 
   componentWillUnmount() {
-    window.removeEventListener(
-      'resize',
-      debounce(this.updateSecondCardMargin, 250),
-    )
+    window.removeEventListener('resize', this.debounceUpdateMargin)
   }
 
   setRef = name => node => {
@@ -55,7 +51,7 @@ class TriptychBase extends Component {
   }
 
   render() {
-    const { viewportIsTabletOrLess, title, item1, item2, item3 } = this.props
+    const { viewportIsMOrLess, title, item1, item2, item3 } = this.props
 
     return (
       <StyleRoot>
@@ -73,7 +69,7 @@ class TriptychBase extends Component {
           <GridCol col-l="4" col-m="6" style={styles.oddMargin}>
             <Marger style={styles.gutter.firstItem}>
               <div ref={this.setRef('firstCard')}>
-                <Marger bottom={viewportIsTabletOrLess ? 5 : 0}>{item1}</Marger>
+                <Marger bottom={viewportIsMOrLess ? 5 : 0}>{item1}</Marger>
               </div>
             </Marger>
           </GridCol>
@@ -82,7 +78,7 @@ class TriptychBase extends Component {
             <Marger
               style={{ ...styles.secondCard, ...styles.gutter.secondItem }}
               top={this.state.secondCardComputedTopMargin / 10}
-              bottom={viewportIsTabletOrLess ? 5 : 0}
+              bottom={viewportIsMOrLess ? 5 : 0}
             >
               {item2}
             </Marger>
@@ -169,7 +165,7 @@ const styles = {
   secondCard: { transition: 'margin 500ms' },
 }
 
-export const Triptych = mediaQueries(TriptychBase, {
-  viewportIsTabletOrLess: true,
+export const Triptych = withMediaQueries({
   viewportIsSOrLess: true,
-})
+  viewportIsMOrLess: true,
+})(TriptychBase)

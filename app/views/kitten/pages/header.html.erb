@@ -39,12 +39,12 @@
         </div>
 
         <p class="k-Header__item k-Header__item--fixedSize k-Header__item__logo">
-          <a class="k-Header__logo k-Header__logo--lightOnM k-Header__logo--lightOnXxs" href="header">
-            <%= image_tag 'brand/lendopolis.svg', alt: 'lendopolis' %>
+          <a class="k-Header__logo k-Header__logo--smallOnXxs" href="header">
+            <%= image_tag 'brand/logo-lendopolis.svg', alt: 'lendopolis' %>
           </a>
         </p>
 
-        <nav class="k-Header__item k-Header__nav">
+        <nav class="k-Header__item k-Header__nav k-Header__nav--hidden@m-down">
           <ul class="k-HorizontalNav" role="menubar">
             <li class="k-HorizontalNav__element" role="menuitem">
               <%= link_to 'Comment emprunter',
@@ -308,7 +308,7 @@
 
 </header>
 
-<div class="k-TabBar k-TabBar--responsive is-fixed">
+<div class="k-TabBar k-TabBar--responsive k-TabBar--responsive--hidden@m-down is-fixed">
   <nav class="k-TabBar__nav">
     <ul class="k-TabBar__list">
       <li>

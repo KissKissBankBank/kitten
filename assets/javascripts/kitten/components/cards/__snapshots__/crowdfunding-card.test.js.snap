@@ -17,32 +17,52 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
       data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "marginBottom": null,
-          "marginTop": null,
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
     >
-      <img
-        alt=""
-        className="k-Card__image"
+      <div
         data-radium={true}
-        src="https://placehold.it/350x200/caf4fe/caf4fe"
-        style={
+      >
+        <div
+          className="k-Card__imageContainer"
+          data-radium={true}
+          style={
+            Object {
+              "backgroundColor": "#d8d8d8",
+              "overflow": "hidden",
+              "paddingTop": "56.25%",
+              "position": "relative",
+            }
+          }
+        >
+          <img
+            alt=""
+            className="k-Card__image"
+            data-radium={true}
+            src="https://placehold.it/350x200/caf4fe/caf4fe"
+            style={
+              Object {
+                "color": undefined,
+                "display": "block",
+                "position": "absolute",
+                "textAlign": "center",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+      </div>
+      <style
+        dangerouslySetInnerHTML={
           Object {
-            "color": undefined,
-            "display": "block",
-            "position": "absolute",
-            "textAlign": "center",
-            "top": 0,
-            "width": "100%",
+            "__html": "",
           }
         }
       />
@@ -62,29 +82,51 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
       >
-        <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-          style={
+        <div
+          data-radium={true}
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "marginBottom": "0.625rem",
+                "marginTop": "0.625rem",
+              }
+            }
+          >
+            <span
+              className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+              style={
+                Object {
+                  "backgroundColor": "#d8d8d8",
+                  "marginLeft": "10px",
+                }
+              }
+              tabIndex={null}
+            >
+              <img
+                alt=""
+                className="k-ButtonImage__img"
+                src="https://placehold.it/100x100/caf4fe/caf4fe"
+              />
+            </span>
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </div>
+        <style
+          dangerouslySetInnerHTML={
             Object {
-              "backgroundColor": "#d8d8d8",
-              "marginLeft": "10px",
+              "__html": "",
             }
           }
-          tabIndex={null}
-        >
-          <img
-            alt=""
-            className="k-ButtonImage__img"
-            src="https://placehold.it/100x100/caf4fe/caf4fe"
-          />
-        </span>
+        />
       </div>
       <div
         data-radium={true}
@@ -110,77 +152,140 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     </div>
     <div
       data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-          "marginTop": null,
-          "minHeight": "75px",
-        }
-      }
     >
       <div
         data-radium={true}
-        style={
-          Object {
-            "lineHeight": "1",
-            "marginBottom": "0.625rem",
-            "marginTop": null,
-            "padding": "0 10px",
-          }
-        }
       >
-        <p
-          className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
-          data-radium={true}
-        >
-          <span
-            style={
-              Object {
-                "whiteSpace": "nowrap",
-              }
-            }
-          >
-            <span />
-            <span />
-            <span
-              style={
-                Object {
-                  "left": 0,
-                  "position": "fixed",
-                  "top": 0,
-                  "visibility": "hidden",
-                }
-              }
-            >
-              …
-            </span>
-          </span>
-        </p>
-      </div>
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "marginBottom": null,
-            "marginTop": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
-      >
-        <span
-          className="k-HorizontalStroke k-HorizontalStroke--tiny"
+        <div
           data-radium={true}
           style={
             Object {
-              "flexShrink": 0,
-              "margin": "5px 10px 5px 0",
+              "marginBottom": "1.25rem",
+              "minHeight": "75px",
+            }
+          }
+        >
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "lineHeight": "1",
+                    "marginBottom": "0.625rem",
+                    "padding": "0 10px",
+                  }
+                }
+              >
+                <p
+                  className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+                  data-radium={true}
+                >
+                  <span
+                    style={
+                      Object {
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                  >
+                    <span />
+                    <span />
+                    <span
+                      style={
+                        Object {
+                          "left": 0,
+                          "position": "fixed",
+                          "top": 0,
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      …
+                    </span>
+                  </span>
+                </p>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "lineHeight": "1",
+                    "marginTop": "0.625rem",
+                    "padding": "0 10px",
+                  }
+                }
+              >
+                <span
+                  className="k-HorizontalStroke k-HorizontalStroke--tiny"
+                  data-radium={true}
+                  style={
+                    Object {
+                      "flexShrink": 0,
+                      "margin": "5px 10px 5px 0",
+                    }
+                  }
+                />
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
             }
           }
         />
       </div>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+      />
     </div>
   </div>
   <style
@@ -210,19 +315,39 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
       data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "marginBottom": null,
-          "marginTop": null,
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
+    >
+      <div
+        data-radium={true}
+      >
+        <div
+          className="k-Card__imageContainer"
+          data-radium={true}
+          style={
+            Object {
+              "backgroundColor": "#d8d8d8",
+              "overflow": "hidden",
+              "paddingTop": "56.25%",
+              "position": "relative",
+            }
+          }
+        />
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+      </div>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
         }
-      }
-    />
+      />
+    </div>
     <div
       data-radium={true}
       style={
@@ -238,28 +363,50 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
       >
-        <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-          style={
+        <div
+          data-radium={true}
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "marginBottom": "0.625rem",
+                "marginTop": "0.625rem",
+              }
+            }
+          >
+            <span
+              className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+              style={
+                Object {
+                  "backgroundColor": "#d8d8d8",
+                  "marginLeft": "10px",
+                }
+              }
+              tabIndex={null}
+            >
+              <img
+                alt=""
+                className="k-ButtonImage__img"
+              />
+            </span>
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </div>
+        <style
+          dangerouslySetInnerHTML={
             Object {
-              "backgroundColor": "#d8d8d8",
-              "marginLeft": "10px",
+              "__html": "",
             }
           }
-          tabIndex={null}
-        >
-          <img
-            alt=""
-            className="k-ButtonImage__img"
-          />
-        </span>
+        />
       </div>
       <div
         data-radium={true}
@@ -299,90 +446,153 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     </div>
     <div
       data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-          "marginTop": null,
-          "minHeight": "75px",
-        }
-      }
     >
       <div
         data-radium={true}
-        style={
-          Object {
-            "lineHeight": "1",
-            "marginBottom": "0.625rem",
-            "marginTop": null,
-            "padding": "0 10px",
-          }
-        }
       >
         <div
           data-radium={true}
+          style={
+            Object {
+              "marginBottom": "1.25rem",
+              "minHeight": "75px",
+            }
+          }
         >
-          <span
+          <div
             data-radium={true}
-            style={
-              Object {
-                "backgroundColor": "#d8d8d8",
-                "borderBottom": "1px solid #fff",
-                "display": "block",
-                "height": "24px",
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "lineHeight": "1",
+                    "marginBottom": "0.625rem",
+                    "padding": "0 10px",
+                  }
+                }
+              >
+                <div
+                  data-radium={true}
+                >
+                  <span
+                    data-radium={true}
+                    style={
+                      Object {
+                        "backgroundColor": "#d8d8d8",
+                        "borderBottom": "1px solid #fff",
+                        "display": "block",
+                        "height": "24px",
+                      }
+                    }
+                  />
+                  <span
+                    data-radium={true}
+                    style={
+                      Object {
+                        "backgroundColor": "#d8d8d8",
+                        "borderBottom": 0,
+                        "borderTop": "1px solid #fff",
+                        "display": "block",
+                        "height": "24px",
+                        "width": "70%",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
               }
-            }
-          />
-          <span
+            />
+          </div>
+          <div
             data-radium={true}
-            style={
-              Object {
-                "backgroundColor": "#d8d8d8",
-                "borderBottom": 0,
-                "borderTop": "1px solid #fff",
-                "display": "block",
-                "height": "24px",
-                "width": "70%",
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "lineHeight": "1",
+                    "marginTop": "0.625rem",
+                    "padding": "0 10px",
+                  }
+                }
+              >
+                <span
+                  className="k-HorizontalStroke k-HorizontalStroke--tiny"
+                  data-radium={true}
+                  style={
+                    Object {
+                      "backgroundColor": "#d8d8d8",
+                      "flexShrink": 0,
+                      "margin": "5px 10px 5px 0",
+                    }
+                  }
+                />
+                <span
+                  data-radium={true}
+                  style={
+                    Object {
+                      "backgroundColor": "#d8d8d8",
+                      "display": "block",
+                      "height": "12px",
+                      "width": "80px",
+                    }
+                  }
+                />
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
               }
-            }
-          />
+            />
+          </div>
         </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
       </div>
-      <div
-        data-radium={true}
-        style={
+      <style
+        dangerouslySetInnerHTML={
           Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "marginBottom": null,
-            "marginTop": "0.625rem",
-            "padding": "0 10px",
+            "__html": "",
           }
         }
-      >
-        <span
-          className="k-HorizontalStroke k-HorizontalStroke--tiny"
-          data-radium={true}
-          style={
-            Object {
-              "backgroundColor": "#d8d8d8",
-              "flexShrink": 0,
-              "margin": "5px 10px 5px 0",
-            }
-          }
-        />
-        <span
-          data-radium={true}
-          style={
-            Object {
-              "backgroundColor": "#d8d8d8",
-              "display": "block",
-              "height": "12px",
-              "width": "80px",
-            }
-          }
-        />
-      </div>
+      />
     </div>
     <span
       data-radium={true}
@@ -432,32 +642,52 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
       data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "marginBottom": null,
-          "marginTop": null,
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
     >
-      <img
-        alt="Image alt"
-        className="k-Card__image"
+      <div
         data-radium={true}
-        src="#image"
-        style={
+      >
+        <div
+          className="k-Card__imageContainer"
+          data-radium={true}
+          style={
+            Object {
+              "backgroundColor": "#d8d8d8",
+              "overflow": "hidden",
+              "paddingTop": "56.25%",
+              "position": "relative",
+            }
+          }
+        >
+          <img
+            alt="Image alt"
+            className="k-Card__image"
+            data-radium={true}
+            src="#image"
+            style={
+              Object {
+                "color": "#333",
+                "display": "block",
+                "position": "absolute",
+                "textAlign": "center",
+                "top": 0,
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+      </div>
+      <style
+        dangerouslySetInnerHTML={
           Object {
-            "color": "#333",
-            "display": "block",
-            "position": "absolute",
-            "textAlign": "center",
-            "top": 0,
-            "width": "100%",
+            "__html": "",
           }
         }
       />
@@ -477,29 +707,51 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
       >
-        <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-          style={
+        <div
+          data-radium={true}
+        >
+          <div
+            data-radium={true}
+            style={
+              Object {
+                "marginBottom": "0.625rem",
+                "marginTop": "0.625rem",
+              }
+            }
+          >
+            <span
+              className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+              style={
+                Object {
+                  "backgroundColor": "#d8d8d8",
+                  "marginLeft": "10px",
+                }
+              }
+              tabIndex={null}
+            >
+              <img
+                alt="Avatar alt"
+                className="k-ButtonImage__img"
+                src="#avatar"
+              />
+            </span>
+          </div>
+          <style
+            dangerouslySetInnerHTML={
+              Object {
+                "__html": "",
+              }
+            }
+          />
+        </div>
+        <style
+          dangerouslySetInnerHTML={
             Object {
-              "backgroundColor": "#d8d8d8",
-              "marginLeft": "10px",
+              "__html": "",
             }
           }
-          tabIndex={null}
-        >
-          <img
-            alt="Avatar alt"
-            className="k-ButtonImage__img"
-            src="#avatar"
-          />
-        </span>
+        />
       </div>
       <div
         data-radium={true}
@@ -529,235 +781,405 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     </div>
     <div
       data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-          "marginTop": null,
-          "minHeight": "75px",
-        }
-      }
     >
       <div
         data-radium={true}
-        style={
-          Object {
-            "lineHeight": "1",
-            "marginBottom": "0.625rem",
-            "marginTop": null,
-            "padding": "0 10px",
-          }
-        }
-      >
-        <h4
-          className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
-          data-radium={true}
-        >
-          <span
-            style={
-              Object {
-                "whiteSpace": "nowrap",
-              }
-            }
-          >
-            <span />
-            <span>
-              Custom title
-            </span>
-            <span
-              style={
-                Object {
-                  "left": 0,
-                  "position": "fixed",
-                  "top": 0,
-                  "visibility": "hidden",
-                }
-              }
-            >
-              …
-            </span>
-          </span>
-        </h4>
-      </div>
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "marginBottom": null,
-            "marginTop": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
-      >
-        <span
-          className="k-HorizontalStroke k-HorizontalStroke--tiny"
-          data-radium={true}
-          style={
-            Object {
-              "flexShrink": 0,
-              "margin": "5px 10px 5px 0",
-            }
-          }
-        />
-        <p
-          className="k-u-size-micro k-u-weight-regular"
-          data-radium={true}
-          style={
-            Object {
-              "flex": 1,
-              "lineHeight": "1rem",
-              "overflow": "hidden",
-              "whiteSpace": "nowrap",
-            }
-          }
-        >
-          <span
-            style={
-              Object {
-                "whiteSpace": "nowrap",
-              }
-            }
-          >
-            <span />
-            <span>
-              Custom subtitle
-            </span>
-            <span
-              style={
-                Object {
-                  "left": 0,
-                  "position": "fixed",
-                  "top": 0,
-                  "visibility": "hidden",
-                }
-              }
-            >
-              …
-            </span>
-          </span>
-        </p>
-      </div>
-    </div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "display": "flex",
-          "flexWrap": "wrap",
-          "lineHeight": "1",
-          "marginBottom": "0.3125rem",
-          "marginTop": "0.9375rem",
-          "padding": "0 10px",
-        }
-      }
-    >
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": null,
-            "marginRight": "30px",
-            "marginTop": "0.3125rem",
-          }
-        }
-      >
-        <span
-          className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
-        >
-          Custom information #1
-        </span>
-      </div>
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": null,
-            "marginRight": "30px",
-            "marginTop": "0.3125rem",
-          }
-        }
-      >
-        <span
-          className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
-        >
-          Custom information #2
-        </span>
-      </div>
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": null,
-            "marginRight": 0,
-            "marginTop": "0.3125rem",
-          }
-        }
-      >
-        <span
-          className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
-        >
-          Custom information #3
-        </span>
-      </div>
-    </div>
-    <div
-      data-radium={true}
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginBottom": "1.25rem",
-          "marginTop": "0.3125rem",
-          "padding": "0 10px",
-        }
-      }
-    >
-      <div
-        aria-valuemax="100"
-        aria-valuemin="0"
-        aria-valuenow="84"
-        className="k-Progress"
-        role="progressbar"
-        style={
-          Object {
-            "flex": 1,
-          }
-        }
       >
         <div
-          className="k-Progress__ramp"
+          data-radium={true}
           style={
             Object {
-              "height": "4px",
+              "marginBottom": "1.25rem",
+              "minHeight": "75px",
             }
           }
         >
           <div
-            className="k-Progress__slider"
-            style={
-              Object {
-                "backgroundColor": "null",
-                "width": "84%",
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "lineHeight": "1",
+                    "marginBottom": "0.625rem",
+                    "padding": "0 10px",
+                  }
+                }
+              >
+                <h4
+                  className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+                  data-radium={true}
+                >
+                  <span
+                    style={
+                      Object {
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                  >
+                    <span />
+                    <span>
+                      Custom title
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "left": 0,
+                          "position": "fixed",
+                          "top": 0,
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      …
+                    </span>
+                  </span>
+                </h4>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
               }
-            }
-          />
+            />
+          </div>
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                    "lineHeight": "1",
+                    "marginTop": "0.625rem",
+                    "padding": "0 10px",
+                  }
+                }
+              >
+                <span
+                  className="k-HorizontalStroke k-HorizontalStroke--tiny"
+                  data-radium={true}
+                  style={
+                    Object {
+                      "flexShrink": 0,
+                      "margin": "5px 10px 5px 0",
+                    }
+                  }
+                />
+                <p
+                  className="k-u-size-micro k-u-weight-regular"
+                  data-radium={true}
+                  style={
+                    Object {
+                      "flex": 1,
+                      "lineHeight": "1rem",
+                      "overflow": "hidden",
+                      "whiteSpace": "nowrap",
+                    }
+                  }
+                >
+                  <span
+                    style={
+                      Object {
+                        "whiteSpace": "nowrap",
+                      }
+                    }
+                  >
+                    <span />
+                    <span>
+                      Custom subtitle
+                    </span>
+                    <span
+                      style={
+                        Object {
+                          "left": 0,
+                          "position": "fixed",
+                          "top": 0,
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      …
+                    </span>
+                  </span>
+                </p>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
         </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
       </div>
-      <span
-        className="k-u-size-micro k-u-weight-regular"
-        data-radium={true}
-        style={
+      <style
+        dangerouslySetInnerHTML={
           Object {
-            "flexShrink": 0,
-            "marginLeft": "20px",
+            "__html": "",
           }
         }
+      />
+    </div>
+    <div
+      data-radium={true}
+    >
+      <div
+        data-radium={true}
       >
-        84 %
-      </span>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "display": "flex",
+              "flexWrap": "wrap",
+              "lineHeight": "1",
+              "marginBottom": "0.3125rem",
+              "marginTop": "0.9375rem",
+              "padding": "0 10px",
+            }
+          }
+        >
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginRight": "30px",
+                    "marginTop": "0.3125rem",
+                  }
+                }
+              >
+                <span
+                  className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
+                >
+                  Custom information #1
+                </span>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginRight": "30px",
+                    "marginTop": "0.3125rem",
+                  }
+                }
+              >
+                <span
+                  className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
+                >
+                  Custom information #2
+                </span>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+          <div
+            data-radium={true}
+          >
+            <div
+              data-radium={true}
+            >
+              <div
+                data-radium={true}
+                style={
+                  Object {
+                    "marginRight": 0,
+                    "marginTop": "0.3125rem",
+                  }
+                }
+              >
+                <span
+                  className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
+                >
+                  Custom information #3
+                </span>
+              </div>
+              <style
+                dangerouslySetInnerHTML={
+                  Object {
+                    "__html": "",
+                  }
+                }
+              />
+            </div>
+            <style
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "",
+                }
+              }
+            />
+          </div>
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+      </div>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+      />
+    </div>
+    <div
+      data-radium={true}
+    >
+      <div
+        data-radium={true}
+      >
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "alignItems": "center",
+              "display": "flex",
+              "flexDirection": "row",
+              "marginBottom": "1.25rem",
+              "marginTop": "0.3125rem",
+              "padding": "0 10px",
+            }
+          }
+        >
+          <div
+            aria-valuemax="100"
+            aria-valuemin="0"
+            aria-valuenow="84"
+            className="k-Progress"
+            role="progressbar"
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <div
+              className="k-Progress__ramp"
+              style={
+                Object {
+                  "height": "4px",
+                }
+              }
+            >
+              <div
+                className="k-Progress__slider"
+                style={
+                  Object {
+                    "backgroundColor": "null",
+                    "width": "84%",
+                  }
+                }
+              />
+            </div>
+          </div>
+          <span
+            className="k-u-size-micro k-u-weight-regular"
+            data-radium={true}
+            style={
+              Object {
+                "flexShrink": 0,
+                "marginLeft": "20px",
+              }
+            }
+          >
+            84 %
+          </span>
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+      </div>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+      />
     </div>
     <div
       data-radium={true}
