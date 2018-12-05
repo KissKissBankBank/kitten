@@ -10,17 +10,17 @@ class CartItem extends Component {
       <Marger
         top="2"
         bottom="2"
-        style={{
+        style={ {
           padding: `${pxToRem(30)} ${pxToRem(20)}`,
           background: '#FFF',
           color: '#222',
-        }}
+        } }
       >
         <Marger bottom="2">
           <Title
             tag="p"
             modifier="senary"
-            margin={false}
+            margin={ false }
             className="k-u-style-italic"
           >
             Pour 60 €
@@ -34,40 +34,40 @@ class CartItem extends Component {
             weight="light"
             color="font1"
             lineHeight="normal"
-            style={{ margin: 0 }}
+            style={ { margin: 0 } }
           >
             Les contreparties précédentes + 1 place pour le concert Démos à la
             Philharmonie en juin + 1 laissez-passer Musée de la musique
           </Text>
         </Marger>
 
-        <Marger top="1">
+        <Marger top=".5">
           <Text
             tag="p"
             size="micro"
             weight="light"
             color="font1"
             lineHeight="normal"
-            style={{ margin: 0 }}
+            style={ { margin: 0 } }
           >
             <Text tag="span" weight="regular">
-              Livraison :{' '}
+              Livraison :{ ' ' }
             </Text>
             Janvier 2018
           </Text>
         </Marger>
 
-        <Marger top="1">
+        <Marger top=".5">
           <Text
             tag="p"
             size="micro"
             weight="light"
             color="font1"
             lineHeight="normal"
-            style={{ margin: 0 }}
+            style={ { margin: 0 } }
           >
             <Text tag="span" weight="regular">
-              Option :{' '}
+              Option :{ ' ' }
             </Text>
             Taille XL
           </Text>
