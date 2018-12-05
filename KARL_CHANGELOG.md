@@ -5,8 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Fix:
-- Update `header.html` with `k-u-hidden@{windowWidth}` mediaqueries
-- Add mini Lendo logo.
+- Update `header.html` with `k-u-hidden@{viewportRange}` mediaqueries
+- Add mini LENDOPOLIS logo.
 
 ## [23.16.1] - 2018-11-30
 
