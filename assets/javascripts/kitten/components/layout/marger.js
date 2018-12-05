@@ -6,18 +6,18 @@ import TYPOGRAPHY from 'kitten/constants/typography-config'
 import isStringANumber from 'is-string-a-number'
 import { upcaseFirst } from 'kitten/helpers/utils/string'
 
-const renderWithStyleRoot = WrappedComponent =>
+const margerWrapper = WrappedComponent =>
   class extends Component {
-    mustAddStyleRoot = () => {
+    needsStyleRoot = () => {
       const { top, bottom } = this.props
-      const isObjectTypeOfTop = top && typeof top === 'object'
-      const isObjectTypeOfBottom = bottom && typeof bottom === 'object'
+      const isTopAnObject = top && typeof top === 'object'
+      const isBottomAnObject = bottom && typeof bottom === 'object'
 
-      return isObjectTypeOfTop || isObjectTypeOfBottom
+      return isTopAnObject || isBottomAnObject
     }
 
     render() {
-      if (!this.mustAddStyleRoot()) return <WrappedComponent { ...this.props } />
+      if (!this.needsStyleRoot()) return <WrappedComponent { ...this.props } />
 
       return (
         <StyleRoot>
@@ -165,14 +165,4 @@ class MargerBaseWithoutStyleRoot extends Component {
   }
 }
 
-export const MargerBase = renderWithStyleRoot(Radium(MargerBaseWithoutStyleRoot))
-
-class MargerWithoutStyleRoot extends Component {
-  render() {
-    return (
-      <MargerBase { ...this.props } />
-    )
-  }
-}
-
-export const Marger = renderWithStyleRoot(MargerWithoutStyleRoot)
+export const Marger = margerWrapper(Radium(MargerBaseWithoutStyleRoot))

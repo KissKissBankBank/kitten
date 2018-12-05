@@ -1,11 +1,7 @@
 import React from 'react'
 import { Marger } from 'kitten/components/layout/marger'
 
-const getMargerElement = element =>
-  shallow(element)
-    .first().shallow() // HOC
-    .first().shallow() // MargerBase
-    .first().shallow() // HOC
+const getMargerElement = element => shallow(element).first().shallow()
 
 describe('<Marger />', () => {
   describe('by default', () => {
