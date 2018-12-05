@@ -47,19 +47,19 @@ class CrowdfundingCardComponent extends Component {
 
     return (
       <StyleRoot>
-        <Tag {...others} style={styles.card} onClick={this.removeCurrentFocus}>
-          {this.renderImage()}
-          {this.renderHeader()}
+        <Tag { ...others } style={ styles.card } onClick={ this.removeCurrentFocus }>
+          { this.renderImage() }
+          { this.renderHeader() }
 
-          <Marger bottom="2" style={titlesMinHeight && styles.titles}>
-            {this.renderTitle()}
-            {this.renderSubtitle()}
+          <Marger bottom="2" style={ titlesMinHeight && styles.titles }>
+            { this.renderTitle() }
+            { this.renderSubtitle() }
           </Marger>
 
-          {this.renderInformation()}
-          {this.renderProgress()}
-          {this.renderState()}
-          {this.renderLoading()}
+          { this.renderInformation() }
+          { this.renderProgress() }
+          { this.renderState() }
+          { this.renderLoading() }
         </Tag>
       </StyleRoot>
     )
@@ -73,23 +73,23 @@ class CrowdfundingCardComponent extends Component {
     return (
       <Marger
         className="k-Card__imageContainer"
-        style={{
+        style={ {
           ...styles.imageContainer,
           backgroundColor: this.props.loading ? COLORS.line2 : backgroundColor,
-        }}
+        } }
       >
-        {!this.props.loading && (
+        { !this.props.loading && (
           <img
-            {...imageProps}
-            alt={alt || ''}
-            className={imageClassName}
-            style={{
+            { ...imageProps }
+            alt={ alt || '' }
+            className={ imageClassName }
+            style={ {
               ...imageProps.style,
               ...styles.image,
               color,
-            }}
+            } }
           />
-        )}
+        ) }
       </Marger>
     )
   }
@@ -102,23 +102,23 @@ class CrowdfundingCardComponent extends Component {
     ]
 
     return (
-      <div style={styles.header.grid}>
+      <div style={ styles.header.grid }>
         <Marger top="1" bottom="1">
           <ButtonImage
             tag="span"
-            img={!this.props.loading && this.props.avatarProps}
+            img={ !this.props.loading && this.props.avatarProps }
             withoutPointerEvents
-            style={styles.header.avatar}
+            style={ styles.header.avatar }
           />
         </Marger>
 
-        <div style={styles.header.owner}>
-          <Text tag="div" size="micro" weight="regular" style={titleStyle}>
-            {!this.props.loading && this.props.ownerTitle}
+        <div style={ styles.header.owner }>
+          <Text tag="div" size="micro" weight="regular" style={ titleStyle }>
+            { !this.props.loading && this.props.ownerTitle }
           </Text>
 
-          <Text tag="div" size="micro" weight="light" style={descriptionStyle}>
-            {!this.props.loading && this.props.ownerDescription}
+          <Text tag="div" size="micro" weight="light" style={ descriptionStyle }>
+            { !this.props.loading && this.props.ownerDescription }
           </Text>
         </div>
       </div>
@@ -132,36 +132,36 @@ class CrowdfundingCardComponent extends Component {
     )
 
     return (
-      <Marger bottom="1" style={styles.title}>
-        {!this.props.loading && (
+      <Marger bottom="1" style={ styles.title }>
+        { !this.props.loading && (
           <Title
             tag="p"
-            {...this.props.titleProps}
+            { ...this.props.titleProps }
             modifier="senary"
-            margin={false}
-            className={className}
+            margin={ false }
+            className={ className }
           >
-            {this.props.titleTruncate && (
-              <Truncate lines={2} style={styles.truncate}>
-                {this.props.cardTitle}
+            { this.props.titleTruncate && (
+              <Truncate lines={ 2 } style={ styles.truncate }>
+                { this.props.cardTitle }
               </Truncate>
-            )}
+            ) }
 
-            {!this.props.titleTruncate && this.props.cardTitle}
+            { !this.props.titleTruncate && this.props.cardTitle }
           </Title>
-        )}
+        ) }
 
-        {this.props.loading && (
+        { this.props.loading && (
           <div>
-            <span style={styles.title.loading} />
+            <span style={ styles.title.loading } />
             <span
-              style={{
+              style={ {
                 ...styles.title.loading,
                 ...styles.title.loading.small,
-              }}
+              } }
             />
           </div>
-        )}
+        ) }
       </Marger>
     )
   }
@@ -178,23 +178,23 @@ class CrowdfundingCardComponent extends Component {
     ]
 
     return (
-      <Marger top="1" style={styles.subtitle}>
-        <HorizontalStroke size="tiny" style={horizontalStroke} />
+      <Marger top="1" style={ styles.subtitle }>
+        <HorizontalStroke size="tiny" style={ horizontalStroke } />
 
-        {this.props.cardSubTitle &&
+        { this.props.cardSubTitle &&
           !this.props.loading && (
-            <Text size="micro" weight="regular" tag="p" style={textStyle}>
-              {this.props.subTitleTruncate && (
-                <Truncate style={styles.truncate}>
-                  {this.props.cardSubTitle}
+            <Text size="micro" weight="regular" tag="p" style={ textStyle }>
+              { this.props.subTitleTruncate && (
+                <Truncate style={ styles.truncate }>
+                  { this.props.cardSubTitle }
                 </Truncate>
-              )}
+              ) }
 
-              {!this.props.subTitleTruncate && this.props.cardSubTitle}
+              { !this.props.subTitleTruncate && this.props.cardSubTitle }
             </Text>
-          )}
+          ) }
 
-        {this.props.loading && <span style={styles.subtitle.loading} />}
+        { this.props.loading && <span style={ styles.subtitle.loading } /> }
       </Marger>
     )
   }
@@ -203,10 +203,10 @@ class CrowdfundingCardComponent extends Component {
     if (!this.props.info1 && !this.props.info2 && !this.props.info3) return
 
     return (
-      <Marger top="1.5" bottom=".5" style={styles.informations}>
-        {this.renderInfo(this.props.info1)}
-        {this.renderInfo(this.props.info2)}
-        {this.renderInfo(this.props.info3, true)}
+      <Marger top="1.5" bottom=".5" style={ styles.informations }>
+        { this.renderInfo(this.props.info1) }
+        { this.renderInfo(this.props.info2) }
+        { this.renderInfo(this.props.info3, true) }
       </Marger>
     )
   }
@@ -217,25 +217,25 @@ class CrowdfundingCardComponent extends Component {
     return (
       <Marger
         top="0.5"
-        style={{ ...styles.informations.info, ...lastItemStyles }}
+        style={ { ...styles.informations.info, ...lastItemStyles } }
       >
-        {!this.props.loading && (
+        { !this.props.loading && (
           <Text size="micro" lineHeight="normal" weight="light">
-            {text}
+            { text }
           </Text>
-        )}
+        ) }
 
-        {this.props.loading && (
+        { this.props.loading && (
           <div>
-            <span style={styles.informations.info.loading} />
+            <span style={ styles.informations.info.loading } />
             <span
-              style={{
+              style={ {
                 ...styles.informations.info.loading,
                 ...styles.informations.info.loading.large,
-              }}
+              } }
             />
           </div>
-        )}
+        ) }
       </Marger>
     )
   }
@@ -248,21 +248,21 @@ class CrowdfundingCardComponent extends Component {
     const progressValue = loading ? 65 : progress
 
     return (
-      <Marger top=".5" bottom="2" style={styles.progress}>
+      <Marger top=".5" bottom="2" style={ styles.progress }>
         <Progress
-          value={progressValue}
-          className={loading && 'is-disabled'}
-          color={progressColor}
-          rampProps={{
+          value={ progressValue }
+          className={ loading && 'is-disabled' }
+          color={ progressColor }
+          rampProps={ {
             style: { height: '4px' },
-          }}
-          style={{ flex: 1 }}
+          } }
+          style={ { flex: 1 } }
         />
 
-        <Text weight="regular" size="micro" style={styles.progress.percent}>
-          {loading && <span style={styles.informations.info.loading} />}
+        <Text weight="regular" size="micro" style={ styles.progress.percent }>
+          { loading && <span style={ styles.informations.info.loading } /> }
 
-          {!loading && `${progress} %`}
+          { !loading && `${progress} %` }
         </Text>
       </Marger>
     )
@@ -272,9 +272,9 @@ class CrowdfundingCardComponent extends Component {
     if (!this.props.state || this.props.loading) return
 
     return (
-      <div style={styles.state}>
+      <div style={ styles.state }>
         <Text size="micro" lineHeight="normal" weight="regular">
-          {this.props.state}
+          { this.props.state }
         </Text>
       </div>
     )
@@ -283,7 +283,7 @@ class CrowdfundingCardComponent extends Component {
   renderLoading() {
     if (!this.props.loading) return
 
-    return <span style={styles.loading} />
+    return <span style={ styles.loading } />
   }
 }
 

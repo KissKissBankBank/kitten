@@ -3490,6 +3490,11 @@ is-stream@^1.0.1, is-stream@^1.1.0:
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
   integrity sha1-EtSj3U5o4Lec6428hBc66A2RykQ=
 
+is-string-a-number@2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/is-string-a-number/-/is-string-a-number-2.0.2.tgz#b3ad78f1579d108342e3c8114ac0cfaeb4bec309"
+  integrity sha512-CZXdCHUxrfmDEf5/noXERbszvVI6TT4sbuIy2I7IWOeihLqyAO82pif+fV3OvKigg1up42z28EHLLoAwoMxMRA==
+
 is-svg@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-svg/-/is-svg-2.1.0.tgz#cf61090da0d9efbcab8722deba6f032208dbb0e9"
@@ -4097,7 +4102,7 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
 "kitten-components@file:../../..":
-  version "23.5.1"
+  version "23.16.1"
   dependencies:
     autoprefixer "^6.5.3"
     babel-cli "^6.14.0"
@@ -4115,6 +4120,7 @@ kind-of@^6.0.0, kind-of@^6.0.2:
     es5-shim "^4.5.7"
     event-emitter "^0.3.4"
     html-to-react "^1.3.2"
+    is-string-a-number "2.0.2"
     isomorphic-fetch "^2.2.1"
     jest-cli "^22.0.4"
     json-loader "^0.5.4"
