@@ -24,16 +24,20 @@ export class TeamCardIcons extends Component {
   static defaultProps = {
     email: '',
     phoneNumber: '',
-    links: '',
+    links: [],
+  }
+
+  getSocialLinks = () => {
+    const { links, socialLink } = this.props
+
+    if (links) return links
+
+    // handle deprecated `socialLink` prop
+    if (socialLink) return [{ name: 'linkedin', href: socialLink }]
   }
 
   render() {
-    const { email, phoneNumber, links, socialLink } = this.props
-
-    let socialLinks = links
-    if (socialLink) {
-      socialLinks = [{ name: 'linkedin', href: socialLink }]
-    }
+    const { email, phoneNumber, links } = this.props
 
     return (
       <Marger top="1.5" style={styles.icons}>
@@ -51,7 +55,7 @@ export class TeamCardIcons extends Component {
 
         {phoneNumber && <TeamCardPhoneIcon {...this.props} />}
 
-        {socialLinks && <SocialLinks links={socialLinks} />}
+        <SocialLinks links={this.getSocialLinks()} />
       </Marger>
     )
   }
@@ -72,6 +76,7 @@ class SocialLinks extends Component {
           return (
             <ButtonIcon
               tag="a"
+              key={link.name}
               href={link.href}
               modifier={link.name}
               size="tiny"
