@@ -45,7 +45,7 @@ describe('<TeamCard />', () => {
     })
   })
 
-  describe('with socialLink prop (deprecated) ', () => {
+  describe('with socialLink prop (deprecated)', () => {
     it('matches with snapshot', () => {
       const component = renderer
         .create(
