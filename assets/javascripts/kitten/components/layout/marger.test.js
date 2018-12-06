@@ -1,7 +1,10 @@
 import React from 'react'
 import { Marger } from 'kitten/components/layout/marger'
 
-const getMargerElement = element => shallow(element).first().shallow()
+const getMargerElement = element =>
+  shallow(element)
+    .first()
+    .shallow()
 
 describe('<Marger />', () => {
   describe('by default', () => {
@@ -33,7 +36,7 @@ describe('<Marger />', () => {
     describe('with object prop', () => {
       it('has margin-top CSS rule', () => {
         const marger = shallow(
-          <Marger top={ { fromXs: 12, fromM: 2, default: 4 } } />,
+          <Marger top={{ fromXs: 12, fromM: 2, default: 4 }} />,
         )
         const html = marger.html()
 
@@ -48,7 +51,7 @@ describe('<Marger />', () => {
 
     describe('with object with `fromXxs` prop', () => {
       it('has default margin-top CSS rule', () => {
-        const marger = shallow(<Marger top={ { fromXxs: 4 } } />)
+        const marger = shallow(<Marger top={{ fromXxs: 4 }} />)
         const html = marger.html()
 
         expect(html).toContain('@media (min-width: 0)')
@@ -56,7 +59,7 @@ describe('<Marger />', () => {
       })
 
       it('is overrided by the default value', () => {
-        const marger = shallow(<Marger top={ { fromXxs: 3, default: 12 } } />)
+        const marger = shallow(<Marger top={{ fromXxs: 3, default: 12 }} />)
         const html = marger.html()
 
         expect(html).toContain('@media (min-width: 0)')
@@ -85,7 +88,7 @@ describe('<Marger />', () => {
     describe('with object prop', () => {
       it('has margin-bottom CSS rule', () => {
         const marger = shallow(
-          <Marger bottom={ { fromXs: 12, fromM: 2, default: 4 } } />,
+          <Marger bottom={{ fromXs: 12, fromM: 2, default: 4 }} />,
         )
         const html = marger.html()
 
@@ -100,7 +103,7 @@ describe('<Marger />', () => {
 
     describe('with object with `fromXxs` prop', () => {
       it('has default margin-bottom CSS rule', () => {
-        const marger = shallow(<Marger bottom={ { fromXxs: 4 } } />)
+        const marger = shallow(<Marger bottom={{ fromXxs: 4 }} />)
         const html = marger.html()
 
         expect(html).toContain('@media (min-width: 0)')
@@ -108,7 +111,7 @@ describe('<Marger />', () => {
       })
 
       it('is overrided by the default value', () => {
-        const marger = shallow(<Marger bottom={ { fromXxs: 4, default: 12 } } />)
+        const marger = shallow(<Marger bottom={{ fromXxs: 4, default: 12 }} />)
         const html = marger.html()
 
         expect(html).toContain('@media (min-width: 0)')
@@ -121,9 +124,9 @@ describe('<Marger />', () => {
     it('has a custom style', () => {
       const marger = shallow(
         <Marger
-          bottom={ { fromXs: 12, fromM: 2 } }
-          top={ { fromXs: 12, fromM: 2 } }
-          style={ { backgroundColor: 'red' } }
+          bottom={{ fromXs: 12, fromM: 2 }}
+          top={{ fromXs: 12, fromM: 2 }}
+          style={{ backgroundColor: 'red' }}
         />,
       )
       const html = marger.html()

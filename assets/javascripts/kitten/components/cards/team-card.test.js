@@ -33,8 +33,24 @@ describe('<TeamCard />', () => {
             <TeamCard.Icons
               email="example@kisskissbankbank.com"
               phoneNumber="06 00 00 00 00"
-              socialLink="https://www.linkedin.com"
+              links={[
+                { name: 'linkedin', href: 'https://www.linkedin.com' },
+                { name: 'twitter', href: 'https://www.twitter.com' },
+              ]}
             />
+          </TeamCard>,
+        )
+        .toJSON()
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with socialLink prop (deprecated)', () => {
+    it('matches with snapshot', () => {
+      const component = renderer
+        .create(
+          <TeamCard>
+            <TeamCard.Icons socialLink="https://www.linkedin.com" />
           </TeamCard>,
         )
         .toJSON()

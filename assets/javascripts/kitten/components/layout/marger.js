@@ -17,11 +17,11 @@ const margerWrapper = WrappedComponent =>
     }
 
     render() {
-      if (!this.needsStyleRoot()) return <WrappedComponent { ...this.props } />
+      if (!this.needsStyleRoot()) return <WrappedComponent {...this.props} />
 
       return (
         <StyleRoot>
-          <WrappedComponent { ...this.props } />
+          <WrappedComponent {...this.props} />
         </StyleRoot>
       )
     }
@@ -159,9 +159,7 @@ class MargerBaseWithoutStyleRoot extends Component {
       ...viewportRangesStyles,
     ]
 
-    return (
-      <div style={ styles } { ...others } />
-    )
+    return <div style={styles} {...others} />
   }
 }
 
