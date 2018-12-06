@@ -35,82 +35,38 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       }
     >
       <div
+        className="rmq-18e21d39"
         data-radium={true}
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "flexGrow": 1,
+            "justifyContent": "center",
+            "marginBottom": "1.25rem",
+            "marginTop": "1.25rem",
+            "paddingLeft": "1.25rem",
+          }
+        }
       >
         <div
           data-radium={true}
+          style={
+            Object {
+              "marginBottom": "0rem",
+            }
+          }
         >
-          <div
-            className="rmq-18e21d39"
-            data-radium={true}
+          <span
+            className="k-u-color-font1 k-u-size-default k-u-weight-regular"
             style={
               Object {
-                "display": "flex",
-                "flexDirection": "column",
-                "flexGrow": 1,
-                "justifyContent": "center",
-                "marginBottom": "1.25rem",
-                "marginTop": "1.25rem",
-                "paddingLeft": "1.25rem",
-              }
-            }
-          >
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-              >
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0rem",
-                    }
-                  }
-                >
-                  <span
-                    className="k-u-color-font1 k-u-size-default k-u-weight-regular"
-                    style={
-                      Object {
-                        "lineHeight": 1,
-                      }
-                    }
-                  />
-                </div>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "@media (min-width: 640px){ .rmq-18e21d39{padding-left: 1.875rem !important;}}",
+                "lineHeight": 1,
               }
             }
           />
         </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
-          }
-        />
+        
       </div>
       <div
         className="rmq-e7aace01"
@@ -144,7 +100,8 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (min-width: 640px){ .rmq-e7aace01{padding-left: 1.875rem !important;
-padding-right: 2rem !important;}}",
+padding-right: 2rem !important;}}
+@media (min-width: 640px){ .rmq-18e21d39{padding-left: 1.875rem !important;}}",
       }
     }
   />
@@ -204,93 +161,49 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         }
       />
       <div
+        className="rmq-18e21d39"
         data-radium={true}
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "flexGrow": 1,
+            "justifyContent": "center",
+            "marginBottom": "1.25rem",
+            "marginTop": "1.25rem",
+            "paddingLeft": "1.25rem",
+          }
+        }
       >
         <div
           data-radium={true}
+          style={
+            Object {
+              "marginBottom": "0.3125rem",
+            }
+          }
         >
-          <div
-            className="rmq-18e21d39"
-            data-radium={true}
+          <span
+            className="k-u-color-font1 k-u-size-default k-u-weight-regular"
             style={
               Object {
-                "display": "flex",
-                "flexDirection": "column",
-                "flexGrow": 1,
-                "justifyContent": "center",
-                "marginBottom": "1.25rem",
-                "marginTop": "1.25rem",
-                "paddingLeft": "1.25rem",
+                "lineHeight": 1,
               }
             }
           >
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-              >
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0.3125rem",
-                    }
-                  }
-                >
-                  <span
-                    className="k-u-color-font1 k-u-size-default k-u-weight-regular"
-                    style={
-                      Object {
-                        "lineHeight": 1,
-                      }
-                    }
-                  >
-                    Lorem ipsum
-                  </span>
-                </div>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <span
-              className="k-u-color-font1 k-u-size-tiny k-u-weight-light"
-              style={
-                Object {
-                  "lineHeight": 1.3,
-                }
-              }
-            >
-              In enim justo, rhoncus ut,
-            </span>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "@media (min-width: 640px){ .rmq-18e21d39{padding-left: 1.875rem !important;}}",
-              }
-            }
-          />
+            Lorem ipsum
+          </span>
         </div>
-        <style
-          dangerouslySetInnerHTML={
+        <span
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-light"
+          style={
             Object {
-              "__html": "",
+              "lineHeight": 1.3,
             }
           }
-        />
+        >
+          In enim justo, rhoncus ut,
+        </span>
       </div>
       <div
         className="rmq-e7aace01"
@@ -325,7 +238,8 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       Object {
         "__html": "@media (min-width: 640px){ .rmq-d68686c{display: flex !important;}}
 @media (min-width: 640px){ .rmq-e7aace01{padding-left: 1.875rem !important;
-padding-right: 2rem !important;}}",
+padding-right: 2rem !important;}}
+@media (min-width: 640px){ .rmq-18e21d39{padding-left: 1.875rem !important;}}",
       }
     }
   />

@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature:
-- Add `k-u-hidden@{viewportRange}` utilities
+- Feature: Add `k-u-hidden@{viewportRange}` utilities.
+- Fix: `Marger` use `StyleRoot` only if `top` or `bottom` prop are an object.
 
 ## [23.16.1] - 2018-11-30
 
