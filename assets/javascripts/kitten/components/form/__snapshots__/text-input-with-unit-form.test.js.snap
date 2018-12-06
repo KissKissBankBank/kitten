@@ -12,199 +12,111 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
 >
   <div
     data-radium={true}
+    style={
+      Object {
+        "marginBottom": "1.875rem",
+        "marginTop": "1.875rem",
+      }
+    }
   >
     <div
+      className="k-Grid"
       data-radium={true}
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.875rem",
-            "marginTop": "1.875rem",
-          }
-        }
+        className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          className="k-Grid"
           data-radium={true}
           style={
             Object {
-              "display": "flex",
-              "justifyContent": "center",
+              "marginBottom": "0.9375rem",
+            }
+          }
+        >
+          <label
+            className="k-Label k-Label--micro"
+            htmlFor="donation-amount"
+            onClick={[Function]}
+          >
+            Enter your amount
+          </label>
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "marginTop": "0.9375rem",
             }
           }
         >
           <div
-            className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+            className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
           >
-            <div
-              data-radium={true}
+            <input
+              autoComplete="off"
+              className="k-TextInput k-TextInputWithUnit__input"
+              defaultValue=""
+              disabled={false}
+              id="donation-amount"
+              name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Your amount"
+              type="number"
+            />
+            <span
+              className="k-TextInputWithUnit__unit"
             >
-              <div
-                data-radium={true}
-              >
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0.9375rem",
-                    }
-                  }
-                >
-                  <label
-                    className="k-Label k-Label--micro"
-                    htmlFor="donation-amount"
-                    onClick={[Function]}
-                  >
-                    Enter your amount
-                  </label>
-                </div>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-              >
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginTop": "0.9375rem",
-                    }
-                  }
-                >
-                  <div
-                    className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="k-TextInput k-TextInputWithUnit__input"
-                      defaultValue=""
-                      disabled={false}
-                      id="donation-amount"
-                      name="text"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      placeholder="Your amount"
-                      type="number"
-                    />
-                    <span
-                      className="k-TextInputWithUnit__unit"
-                    >
-                      €
-                    </span>
-                  </div>
-                </div>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
+              €
+            </span>
           </div>
         </div>
       </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
     </div>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "",
-        }
-      }
-    />
   </div>
   <div
     data-radium={true}
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
   >
     <div
+      className="rmq-2001d403"
       data-radium={true}
+      style={Object {}}
     >
-      <div
+      <button
+        aria-label="To contribute"
+        className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
         data-radium={true}
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "center",
-          }
-        }
+        disabled={false}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={Object {}}
+        tabIndex={null}
+        type="submit"
       >
-        <div
-          className="rmq-2001d403"
-          data-radium={true}
-          style={Object {}}
-        >
-          <button
-            aria-label="To contribute"
-            className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
-            data-radium={true}
-            disabled={false}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={Object {}}
-            tabIndex={null}
-            type="submit"
-          >
-            To contribute
-          </button>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "@media (max-width: 639px){ .rmq-2001d403{width: 100% !important;}}",
-              }
-            }
-          />
-        </div>
-      </div>
+        To contribute
+      </button>
       <style
         dangerouslySetInnerHTML={
           Object {
-            "__html": "",
+            "__html": "@media (max-width: 639px){ .rmq-2001d403{width: 100% !important;}}",
           }
         }
       />
     </div>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "",
-        }
-      }
-    />
   </div>
 </form>
 `;
@@ -221,199 +133,111 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
 >
   <div
     data-radium={true}
+    style={
+      Object {
+        "marginBottom": "1.875rem",
+        "marginTop": "1.875rem",
+      }
+    }
   >
     <div
+      className="k-Grid"
       data-radium={true}
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.875rem",
-            "marginTop": "1.875rem",
-          }
-        }
+        className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          className="k-Grid"
           data-radium={true}
           style={
             Object {
-              "display": "flex",
-              "justifyContent": "center",
+              "marginBottom": "0.9375rem",
+            }
+          }
+        >
+          <label
+            className="k-Label k-Label--micro"
+            htmlFor="donation-amount"
+            onClick={[Function]}
+          >
+            Enter your amount
+          </label>
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "marginTop": "0.9375rem",
             }
           }
         >
           <div
-            className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+            className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
           >
-            <div
-              data-radium={true}
+            <input
+              autoComplete="off"
+              className="k-TextInput k-TextInputWithUnit__input is-disabled"
+              defaultValue=""
+              disabled={true}
+              id="donation-amount"
+              name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Your amount"
+              type="number"
+            />
+            <span
+              className="k-TextInputWithUnit__unit is-inactive"
             >
-              <div
-                data-radium={true}
-              >
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0.9375rem",
-                    }
-                  }
-                >
-                  <label
-                    className="k-Label k-Label--micro"
-                    htmlFor="donation-amount"
-                    onClick={[Function]}
-                  >
-                    Enter your amount
-                  </label>
-                </div>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-              >
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginTop": "0.9375rem",
-                    }
-                  }
-                >
-                  <div
-                    className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="k-TextInput k-TextInputWithUnit__input is-disabled"
-                      defaultValue=""
-                      disabled={true}
-                      id="donation-amount"
-                      name="text"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      placeholder="Your amount"
-                      type="number"
-                    />
-                    <span
-                      className="k-TextInputWithUnit__unit is-inactive"
-                    >
-                      €
-                    </span>
-                  </div>
-                </div>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
+              €
+            </span>
           </div>
         </div>
       </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
     </div>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "",
-        }
-      }
-    />
   </div>
   <div
     data-radium={true}
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
   >
     <div
+      className="rmq-2001d403"
       data-radium={true}
+      style={Object {}}
     >
-      <div
+      <button
+        aria-label="To contribute"
+        className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
         data-radium={true}
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "center",
-          }
-        }
+        disabled={true}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={Object {}}
+        tabIndex={null}
+        type="submit"
       >
-        <div
-          className="rmq-2001d403"
-          data-radium={true}
-          style={Object {}}
-        >
-          <button
-            aria-label="To contribute"
-            className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
-            data-radium={true}
-            disabled={true}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={Object {}}
-            tabIndex={null}
-            type="submit"
-          >
-            To contribute
-          </button>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "@media (max-width: 639px){ .rmq-2001d403{width: 100% !important;}}",
-              }
-            }
-          />
-        </div>
-      </div>
+        To contribute
+      </button>
       <style
         dangerouslySetInnerHTML={
           Object {
-            "__html": "",
+            "__html": "@media (max-width: 639px){ .rmq-2001d403{width: 100% !important;}}",
           }
         }
       />
     </div>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "",
-        }
-      }
-    />
   </div>
 </form>
 `;
@@ -430,236 +254,126 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
 >
   <div
     data-radium={true}
+    style={
+      Object {
+        "marginBottom": "0.625rem",
+        "marginTop": "1.875rem",
+      }
+    }
   >
     <div
+      className="k-Grid"
       data-radium={true}
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "1.875rem",
-          }
-        }
+        className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          className="k-Grid"
           data-radium={true}
           style={
             Object {
-              "display": "flex",
-              "justifyContent": "center",
+              "marginBottom": "0.9375rem",
+            }
+          }
+        >
+          <label
+            className="k-Label k-Label--micro"
+            htmlFor="donation-amount"
+            onClick={[Function]}
+          >
+            Enter your amount
+          </label>
+        </div>
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "marginBottom": "0.625rem",
+              "marginTop": "0.9375rem",
             }
           }
         >
           <div
-            className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+            className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
           >
-            <div
-              data-radium={true}
+            <input
+              autoComplete="off"
+              className="k-TextInput k-TextInputWithUnit__input is-error"
+              defaultValue=""
+              disabled={false}
+              id="donation-amount"
+              name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Your amount"
+              type="number"
+            />
+            <span
+              className="k-TextInputWithUnit__unit is-error"
             >
-              <div
-                data-radium={true}
-              >
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0.9375rem",
-                    }
-                  }
-                >
-                  <label
-                    className="k-Label k-Label--micro"
-                    htmlFor="donation-amount"
-                    onClick={[Function]}
-                  >
-                    Enter your amount
-                  </label>
-                </div>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-              >
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0.625rem",
-                      "marginTop": "0.9375rem",
-                    }
-                  }
-                >
-                  <div
-                    className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="k-TextInput k-TextInputWithUnit__input is-error"
-                      defaultValue=""
-                      disabled={false}
-                      id="donation-amount"
-                      name="text"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      placeholder="Your amount"
-                      type="number"
-                    />
-                    <span
-                      className="k-TextInputWithUnit__unit is-error"
-                    >
-                      €
-                    </span>
-                  </div>
-                </div>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-              >
-                <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginTop": "0.625rem",
-                    }
-                  }
-                >
-                  <span
-                    className="k-u-color-error k-u-size-micro k-u-weight-regular"
-                  >
-                    lorem ipsum dolor sit amet consectetur.
-                  </span>
-                </div>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
+              €
+            </span>
           </div>
         </div>
-      </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
+        <div
+          data-radium={true}
+          style={
+            Object {
+              "marginTop": "0.625rem",
+            }
           }
-        }
-      />
+        >
+          <span
+            className="k-u-color-error k-u-size-micro k-u-weight-regular"
+          >
+            lorem ipsum dolor sit amet consectetur.
+          </span>
+        </div>
+      </div>
     </div>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "",
-        }
-      }
-    />
   </div>
   <div
     data-radium={true}
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "center",
+      }
+    }
   >
     <div
+      className="rmq-2001d403"
       data-radium={true}
+      style={Object {}}
     >
-      <div
+      <button
+        aria-label="To contribute"
+        className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
         data-radium={true}
-        style={
-          Object {
-            "display": "flex",
-            "justifyContent": "center",
-          }
-        }
+        disabled={false}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={Object {}}
+        tabIndex={null}
+        type="submit"
       >
-        <div
-          className="rmq-2001d403"
-          data-radium={true}
-          style={Object {}}
-        >
-          <button
-            aria-label="To contribute"
-            className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
-            data-radium={true}
-            disabled={false}
-            onMouseEnter={[Function]}
-            onMouseLeave={[Function]}
-            style={Object {}}
-            tabIndex={null}
-            type="submit"
-          >
-            To contribute
-          </button>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "@media (max-width: 639px){ .rmq-2001d403{width: 100% !important;}}",
-              }
-            }
-          />
-        </div>
-      </div>
+        To contribute
+      </button>
       <style
         dangerouslySetInnerHTML={
           Object {
-            "__html": "",
+            "__html": "@media (max-width: 639px){ .rmq-2001d403{width: 100% !important;}}",
           }
         }
       />
     </div>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "",
-        }
-      }
-    />
   </div>
 </form>
 `;

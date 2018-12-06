@@ -11,39 +11,17 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
 >
   <div
     data-radium={true}
-  >
-    <div
-      data-radium={true}
-    >
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "2.5rem",
-          }
-        }
-      >
-        <p
-          className="k-Title k-Title--tertiary k-Title--withoutMargin"
-        >
-          foo
-        </p>
-      </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
-    </div>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "",
-        }
+    style={
+      Object {
+        "marginBottom": "2.5rem",
       }
-    />
+    }
+  >
+    <p
+      className="k-Title k-Title--tertiary k-Title--withoutMargin"
+    >
+      foo
+    </p>
   </div>
   <div
     data-radium={true}
@@ -114,45 +92,23 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
   </div>
   <div
     data-radium={true}
+    style={
+      Object {
+        "marginTop": "2.5rem",
+      }
+    }
   >
-    <div
+    <p
+      className="k-u-size-huge k-u-style-italic k-u-weight-bold"
       data-radium={true}
-    >
-      <div
-        data-radium={true}
-        style={
-          Object {
-            "marginTop": "2.5rem",
-          }
-        }
-      >
-        <p
-          className="k-u-size-huge k-u-style-italic k-u-weight-bold"
-          data-radium={true}
-          style={
-            Object {
-              "margin": 0,
-            }
-          }
-        >
-          bar
-        </p>
-      </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
-    </div>
-    <style
-      dangerouslySetInnerHTML={
+      style={
         Object {
-          "__html": "",
+          "margin": 0,
         }
       }
-    />
+    >
+      bar
+    </p>
   </div>
   <style
     dangerouslySetInnerHTML={

@@ -17,52 +17,30 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
+      className="k-Card__imageContainer"
       data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#d8d8d8",
+          "overflow": "hidden",
+          "paddingTop": "56.25%",
+          "position": "relative",
+        }
+      }
     >
-      <div
+      <img
+        alt=""
+        className="k-Card__image"
         data-radium={true}
-      >
-        <div
-          className="k-Card__imageContainer"
-          data-radium={true}
-          style={
-            Object {
-              "backgroundColor": "#d8d8d8",
-              "overflow": "hidden",
-              "paddingTop": "56.25%",
-              "position": "relative",
-            }
-          }
-        >
-          <img
-            alt=""
-            className="k-Card__image"
-            data-radium={true}
-            src="https://placehold.it/350x200/caf4fe/caf4fe"
-            style={
-              Object {
-                "color": undefined,
-                "display": "block",
-                "position": "absolute",
-                "textAlign": "center",
-                "top": 0,
-                "width": "100%",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
-          }
-        />
-      </div>
-      <style
-        dangerouslySetInnerHTML={
+        src="https://placehold.it/350x200/caf4fe/caf4fe"
+        style={
           Object {
-            "__html": "",
+            "color": undefined,
+            "display": "block",
+            "position": "absolute",
+            "textAlign": "center",
+            "top": 0,
+            "width": "100%",
           }
         }
       />
@@ -82,51 +60,29 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": "0.625rem",
+          }
+        }
       >
-        <div
-          data-radium={true}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-                "marginTop": "0.625rem",
-              }
-            }
-          >
-            <span
-              className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-              style={
-                Object {
-                  "backgroundColor": "#d8d8d8",
-                  "marginLeft": "10px",
-                }
-              }
-              tabIndex={null}
-            >
-              <img
-                alt=""
-                className="k-ButtonImage__img"
-                src="https://placehold.it/100x100/caf4fe/caf4fe"
-              />
-            </span>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
+        <span
+          className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+          style={
             Object {
-              "__html": "",
+              "backgroundColor": "#d8d8d8",
+              "marginLeft": "10px",
             }
           }
-        />
+          tabIndex={null}
+        >
+          <img
+            alt=""
+            className="k-ButtonImage__img"
+            src="https://placehold.it/100x100/caf4fe/caf4fe"
+          />
+        </span>
       </div>
       <div
         data-radium={true}
@@ -152,116 +108,50 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     </div>
     <div
       data-radium={true}
+      style={
+        Object {
+          "marginBottom": "1.25rem",
+        }
+      }
     >
       <div
         data-radium={true}
+        style={
+          Object {
+            "lineHeight": "1",
+            "marginBottom": "0.625rem",
+            "padding": "0 10px",
+          }
+        }
       >
-        <div
+        <p
+          className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+          data-radium={true}
+        />
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "lineHeight": "1",
+            "marginTop": "0.625rem",
+            "padding": "0 10px",
+          }
+        }
+      >
+        <span
+          className="k-HorizontalStroke k-HorizontalStroke--tiny"
           data-radium={true}
           style={
             Object {
-              "marginBottom": "1.25rem",
-            }
-          }
-        >
-          <div
-            data-radium={true}
-          >
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-                style={
-                  Object {
-                    "lineHeight": "1",
-                    "marginBottom": "0.625rem",
-                    "padding": "0 10px",
-                  }
-                }
-              >
-                <p
-                  className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
-                  data-radium={true}
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "",
-                }
-              }
-            />
-          </div>
-          <div
-            data-radium={true}
-          >
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "lineHeight": "1",
-                    "marginTop": "0.625rem",
-                    "padding": "0 10px",
-                  }
-                }
-              >
-                <span
-                  className="k-HorizontalStroke k-HorizontalStroke--tiny"
-                  data-radium={true}
-                  style={
-                    Object {
-                      "flexShrink": 0,
-                      "margin": "5px 10px 5px 0",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "",
-                }
-              }
-            />
-          </div>
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
+              "flexShrink": 0,
+              "margin": "5px 10px 5px 0",
             }
           }
         />
       </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
     </div>
   </div>
   <style
@@ -291,52 +181,30 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     }
   >
     <div
+      className="k-Card__imageContainer"
       data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#d8d8d8",
+          "overflow": "hidden",
+          "paddingTop": "56.25%",
+          "position": "relative",
+        }
+      }
     >
-      <div
+      <img
+        alt=""
+        className="k-Card__image"
         data-radium={true}
-      >
-        <div
-          className="k-Card__imageContainer"
-          data-radium={true}
-          style={
-            Object {
-              "backgroundColor": "#d8d8d8",
-              "overflow": "hidden",
-              "paddingTop": "56.25%",
-              "position": "relative",
-            }
-          }
-        >
-          <img
-            alt=""
-            className="k-Card__image"
-            data-radium={true}
-            src="https://placehold.it/350x200/caf4fe/caf4fe"
-            style={
-              Object {
-                "color": undefined,
-                "display": "block",
-                "position": "absolute",
-                "textAlign": "center",
-                "top": 0,
-                "width": "100%",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
-          }
-        />
-      </div>
-      <style
-        dangerouslySetInnerHTML={
+        src="https://placehold.it/350x200/caf4fe/caf4fe"
+        style={
           Object {
-            "__html": "",
+            "color": undefined,
+            "display": "block",
+            "position": "absolute",
+            "textAlign": "center",
+            "top": 0,
+            "width": "100%",
           }
         }
       />
@@ -356,51 +224,29 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     >
       <div
         data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": "0.625rem",
+          }
+        }
       >
-        <div
-          data-radium={true}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-                "marginTop": "0.625rem",
-              }
-            }
-          >
-            <span
-              className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-              style={
-                Object {
-                  "backgroundColor": "#d8d8d8",
-                  "marginLeft": "10px",
-                }
-              }
-              tabIndex={null}
-            >
-              <img
-                alt=""
-                className="k-ButtonImage__img"
-                src="https://placehold.it/100x100/caf4fe/caf4fe"
-              />
-            </span>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
+        <span
+          className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+          style={
             Object {
-              "__html": "",
+              "backgroundColor": "#d8d8d8",
+              "marginLeft": "10px",
             }
           }
-        />
+          tabIndex={null}
+        >
+          <img
+            alt=""
+            className="k-ButtonImage__img"
+            src="https://placehold.it/100x100/caf4fe/caf4fe"
+          />
+        </span>
       </div>
       <div
         data-radium={true}
@@ -426,155 +272,89 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     </div>
     <div
       data-radium={true}
+      style={
+        Object {
+          "marginBottom": "1.25rem",
+        }
+      }
     >
       <div
         data-radium={true}
+        style={
+          Object {
+            "lineHeight": "1",
+            "marginBottom": "0.625rem",
+            "padding": "0 10px",
+          }
+        }
       >
-        <div
+        <p
+          className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+          data-radium={true}
+        >
+          Custom title
+        </p>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "lineHeight": "1",
+            "marginTop": "0.625rem",
+            "padding": "0 10px",
+          }
+        }
+      >
+        <span
+          className="k-HorizontalStroke k-HorizontalStroke--tiny"
           data-radium={true}
           style={
             Object {
-              "marginBottom": "1.25rem",
-            }
-          }
-        >
-          <div
-            data-radium={true}
-          >
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-                style={
-                  Object {
-                    "lineHeight": "1",
-                    "marginBottom": "0.625rem",
-                    "padding": "0 10px",
-                  }
-                }
-              >
-                <p
-                  className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
-                  data-radium={true}
-                >
-                  Custom title
-                </p>
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "",
-                }
-              }
-            />
-          </div>
-          <div
-            data-radium={true}
-          >
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "lineHeight": "1",
-                    "marginTop": "0.625rem",
-                    "padding": "0 10px",
-                  }
-                }
-              >
-                <span
-                  className="k-HorizontalStroke k-HorizontalStroke--tiny"
-                  data-radium={true}
-                  style={
-                    Object {
-                      "flexShrink": 0,
-                      "margin": "5px 10px 5px 0",
-                    }
-                  }
-                />
-                <p
-                  className="k-u-size-micro k-u-weight-regular"
-                  data-radium={true}
-                  style={
-                    Object {
-                      "flex": 1,
-                      "lineHeight": "1rem",
-                      "overflow": "hidden",
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <span
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
-                    }
-                  >
-                    <span />
-                    <span>
-                      Custom subtitle
-                    </span>
-                    <span
-                      style={
-                        Object {
-                          "left": 0,
-                          "position": "fixed",
-                          "top": 0,
-                          "visibility": "hidden",
-                        }
-                      }
-                    >
-                      …
-                    </span>
-                  </span>
-                </p>
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "",
-                }
-              }
-            />
-          </div>
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
+              "flexShrink": 0,
+              "margin": "5px 10px 5px 0",
             }
           }
         />
-      </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
+        <p
+          className="k-u-size-micro k-u-weight-regular"
+          data-radium={true}
+          style={
+            Object {
+              "flex": 1,
+              "lineHeight": "1rem",
+              "overflow": "hidden",
+              "whiteSpace": "nowrap",
+            }
           }
-        }
-      />
+        >
+          <span
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <span />
+            <span>
+              Custom subtitle
+            </span>
+            <span
+              style={
+                Object {
+                  "left": 0,
+                  "position": "fixed",
+                  "top": 0,
+                  "visibility": "hidden",
+                }
+              }
+            >
+              …
+            </span>
+          </span>
+        </p>
+      </div>
     </div>
   </div>
   <style
@@ -604,52 +384,30 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     }
   >
     <div
+      className="k-Card__imageContainer"
       data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#d8d8d8",
+          "overflow": "hidden",
+          "paddingTop": "56.25%",
+          "position": "relative",
+        }
+      }
     >
-      <div
+      <img
+        alt=""
+        className="k-Card__image"
         data-radium={true}
-      >
-        <div
-          className="k-Card__imageContainer"
-          data-radium={true}
-          style={
-            Object {
-              "backgroundColor": "#d8d8d8",
-              "overflow": "hidden",
-              "paddingTop": "56.25%",
-              "position": "relative",
-            }
-          }
-        >
-          <img
-            alt=""
-            className="k-Card__image"
-            data-radium={true}
-            src="https://placehold.it/350x200/caf4fe/caf4fe"
-            style={
-              Object {
-                "color": undefined,
-                "display": "block",
-                "position": "absolute",
-                "textAlign": "center",
-                "top": 0,
-                "width": "100%",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
-          }
-        />
-      </div>
-      <style
-        dangerouslySetInnerHTML={
+        src="https://placehold.it/350x200/caf4fe/caf4fe"
+        style={
           Object {
-            "__html": "",
+            "color": undefined,
+            "display": "block",
+            "position": "absolute",
+            "textAlign": "center",
+            "top": 0,
+            "width": "100%",
           }
         }
       />
@@ -669,51 +427,29 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": "0.625rem",
+          }
+        }
       >
-        <div
-          data-radium={true}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-                "marginTop": "0.625rem",
-              }
-            }
-          >
-            <span
-              className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-              style={
-                Object {
-                  "backgroundColor": "#d8d8d8",
-                  "marginLeft": "10px",
-                }
-              }
-              tabIndex={null}
-            >
-              <img
-                alt=""
-                className="k-ButtonImage__img"
-                src="https://placehold.it/100x100/caf4fe/caf4fe"
-              />
-            </span>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
+        <span
+          className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+          style={
             Object {
-              "__html": "",
+              "backgroundColor": "#d8d8d8",
+              "marginLeft": "10px",
             }
           }
-        />
+          tabIndex={null}
+        >
+          <img
+            alt=""
+            className="k-ButtonImage__img"
+            src="https://placehold.it/100x100/caf4fe/caf4fe"
+          />
+        </span>
       </div>
       <div
         data-radium={true}
@@ -739,116 +475,50 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     </div>
     <div
       data-radium={true}
+      style={
+        Object {
+          "marginBottom": "1.25rem",
+        }
+      }
     >
       <div
         data-radium={true}
+        style={
+          Object {
+            "lineHeight": "1",
+            "marginBottom": "0.625rem",
+            "padding": "0 10px",
+          }
+        }
       >
-        <div
+        <p
+          className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+          data-radium={true}
+        />
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "lineHeight": "1",
+            "marginTop": "0.625rem",
+            "padding": "0 10px",
+          }
+        }
+      >
+        <span
+          className="k-HorizontalStroke k-HorizontalStroke--tiny"
           data-radium={true}
           style={
             Object {
-              "marginBottom": "1.25rem",
-            }
-          }
-        >
-          <div
-            data-radium={true}
-          >
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-                style={
-                  Object {
-                    "lineHeight": "1",
-                    "marginBottom": "0.625rem",
-                    "padding": "0 10px",
-                  }
-                }
-              >
-                <p
-                  className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
-                  data-radium={true}
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "",
-                }
-              }
-            />
-          </div>
-          <div
-            data-radium={true}
-          >
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "lineHeight": "1",
-                    "marginTop": "0.625rem",
-                    "padding": "0 10px",
-                  }
-                }
-              >
-                <span
-                  className="k-HorizontalStroke k-HorizontalStroke--tiny"
-                  data-radium={true}
-                  style={
-                    Object {
-                      "flexShrink": 0,
-                      "margin": "5px 10px 5px 0",
-                    }
-                  }
-                />
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "",
-                }
-              }
-            />
-          </div>
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
+              "flexShrink": 0,
+              "margin": "5px 10px 5px 0",
             }
           }
         />
       </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
     </div>
   </div>
   <style
@@ -878,52 +548,30 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
+      className="k-Card__imageContainer"
       data-radium={true}
+      style={
+        Object {
+          "backgroundColor": "#d8d8d8",
+          "overflow": "hidden",
+          "paddingTop": "56.25%",
+          "position": "relative",
+        }
+      }
     >
-      <div
+      <img
+        alt="Image alt"
+        className="k-Card__image"
         data-radium={true}
-      >
-        <div
-          className="k-Card__imageContainer"
-          data-radium={true}
-          style={
-            Object {
-              "backgroundColor": "#d8d8d8",
-              "overflow": "hidden",
-              "paddingTop": "56.25%",
-              "position": "relative",
-            }
-          }
-        >
-          <img
-            alt="Image alt"
-            className="k-Card__image"
-            data-radium={true}
-            src="#image"
-            style={
-              Object {
-                "color": "#333",
-                "display": "block",
-                "position": "absolute",
-                "textAlign": "center",
-                "top": 0,
-                "width": "100%",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
-          }
-        />
-      </div>
-      <style
-        dangerouslySetInnerHTML={
+        src="#image"
+        style={
           Object {
-            "__html": "",
+            "color": "#333",
+            "display": "block",
+            "position": "absolute",
+            "textAlign": "center",
+            "top": 0,
+            "width": "100%",
           }
         }
       />
@@ -943,51 +591,29 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     >
       <div
         data-radium={true}
+        style={
+          Object {
+            "marginBottom": "0.625rem",
+            "marginTop": "0.625rem",
+          }
+        }
       >
-        <div
-          data-radium={true}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-                "marginTop": "0.625rem",
-              }
-            }
-          >
-            <span
-              className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-              style={
-                Object {
-                  "backgroundColor": "#d8d8d8",
-                  "marginLeft": "10px",
-                }
-              }
-              tabIndex={null}
-            >
-              <img
-                alt="Avatar alt"
-                className="k-ButtonImage__img"
-                src="#avatar"
-              />
-            </span>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
+        <span
+          className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+          style={
             Object {
-              "__html": "",
+              "backgroundColor": "#d8d8d8",
+              "marginLeft": "10px",
             }
           }
-        />
+          tabIndex={null}
+        >
+          <img
+            alt="Avatar alt"
+            className="k-ButtonImage__img"
+            src="#avatar"
+          />
+        </span>
       </div>
       <div
         data-radium={true}
@@ -1017,155 +643,89 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     </div>
     <div
       data-radium={true}
+      style={
+        Object {
+          "marginBottom": "1.25rem",
+        }
+      }
     >
       <div
         data-radium={true}
+        style={
+          Object {
+            "lineHeight": "1",
+            "marginBottom": "0.625rem",
+            "padding": "0 10px",
+          }
+        }
       >
-        <div
+        <h4
+          className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+          data-radium={true}
+        >
+          Custom title
+        </h4>
+      </div>
+      <div
+        data-radium={true}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "lineHeight": "1",
+            "marginTop": "0.625rem",
+            "padding": "0 10px",
+          }
+        }
+      >
+        <span
+          className="k-HorizontalStroke k-HorizontalStroke--tiny"
           data-radium={true}
           style={
             Object {
-              "marginBottom": "1.25rem",
-            }
-          }
-        >
-          <div
-            data-radium={true}
-          >
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-                style={
-                  Object {
-                    "lineHeight": "1",
-                    "marginBottom": "0.625rem",
-                    "padding": "0 10px",
-                  }
-                }
-              >
-                <h4
-                  className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
-                  data-radium={true}
-                >
-                  Custom title
-                </h4>
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "",
-                }
-              }
-            />
-          </div>
-          <div
-            data-radium={true}
-          >
-            <div
-              data-radium={true}
-            >
-              <div
-                data-radium={true}
-                style={
-                  Object {
-                    "alignItems": "center",
-                    "display": "flex",
-                    "lineHeight": "1",
-                    "marginTop": "0.625rem",
-                    "padding": "0 10px",
-                  }
-                }
-              >
-                <span
-                  className="k-HorizontalStroke k-HorizontalStroke--tiny"
-                  data-radium={true}
-                  style={
-                    Object {
-                      "flexShrink": 0,
-                      "margin": "5px 10px 5px 0",
-                    }
-                  }
-                />
-                <p
-                  className="k-u-size-micro k-u-weight-regular"
-                  data-radium={true}
-                  style={
-                    Object {
-                      "flex": 1,
-                      "lineHeight": "1rem",
-                      "overflow": "hidden",
-                      "whiteSpace": "nowrap",
-                    }
-                  }
-                >
-                  <span
-                    style={
-                      Object {
-                        "whiteSpace": "nowrap",
-                      }
-                    }
-                  >
-                    <span />
-                    <span>
-                      Custom subtitle
-                    </span>
-                    <span
-                      style={
-                        Object {
-                          "left": 0,
-                          "position": "fixed",
-                          "top": 0,
-                          "visibility": "hidden",
-                        }
-                      }
-                    >
-                      …
-                    </span>
-                  </span>
-                </p>
-              </div>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "",
-                  }
-                }
-              />
-            </div>
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "",
-                }
-              }
-            />
-          </div>
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
+              "flexShrink": 0,
+              "margin": "5px 10px 5px 0",
             }
           }
         />
-      </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
+        <p
+          className="k-u-size-micro k-u-weight-regular"
+          data-radium={true}
+          style={
+            Object {
+              "flex": 1,
+              "lineHeight": "1rem",
+              "overflow": "hidden",
+              "whiteSpace": "nowrap",
+            }
           }
-        }
-      />
+        >
+          <span
+            style={
+              Object {
+                "whiteSpace": "nowrap",
+              }
+            }
+          >
+            <span />
+            <span>
+              Custom subtitle
+            </span>
+            <span
+              style={
+                Object {
+                  "left": 0,
+                  "position": "fixed",
+                  "top": 0,
+                  "visibility": "hidden",
+                }
+              }
+            >
+              …
+            </span>
+          </span>
+        </p>
+      </div>
     </div>
   </a>
   <style

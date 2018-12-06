@@ -21,44 +21,22 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
   >
     <div
       data-radium={true}
-    >
-      <div
-        data-radium={true}
-      >
-        <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.625rem",
-            }
-          }
-        >
-          <span
-            className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
-            tabIndex={null}
-          >
-            <img
-              alt="Image alt"
-              className="k-ButtonImage__img"
-              src="#image"
-            />
-          </span>
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
-          }
-        />
-      </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
+      style={
+        Object {
+          "marginBottom": "0.625rem",
         }
-      />
+      }
+    >
+      <span
+        className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+        tabIndex={null}
+      >
+        <img
+          alt="Image alt"
+          className="k-ButtonImage__img"
+          src="#image"
+        />
+      </span>
     </div>
     <span
       className="k-u-color-font1 k-u-size-micro k-u-weight-light"
@@ -91,75 +69,31 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     >
       <div
         data-radium={true}
-      >
-        <div
-          data-radium={true}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-              }
-            }
-          >
-            <span
-              className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
-            >
-              Custom name
-            </span>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
+        style={
+          Object {
+            "marginBottom": "0.625rem",
           }
-        />
+        }
+      >
+        <span
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+        >
+          Custom name
+        </span>
       </div>
       <div
         data-radium={true}
-      >
-        <div
-          data-radium={true}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "marginTop": "0.625rem",
-              }
-            }
-          >
-            <span
-              className="k-u-color-font1 k-u-size-default k-u-weight-light"
-            >
-              Custom text
-            </span>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
+        style={
+          Object {
+            "marginTop": "0.625rem",
           }
-        />
+        }
+      >
+        <span
+          className="k-u-color-font1 k-u-size-default k-u-weight-light"
+        >
+          Custom text
+        </span>
       </div>
       <span
         className="rmq-e4f3f344"
@@ -189,66 +123,44 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     </div>
     <div
       data-radium={true}
+      style={
+        Object {
+          "marginTop": "0.3125rem",
+        }
+      }
     >
-      <div
+      <p
+        className="k-u-color-font1 k-u-size-micro k-u-weight-bold"
         data-radium={true}
-      >
-        <div
-          data-radium={true}
-          style={
-            Object {
-              "marginTop": "0.3125rem",
-            }
+        style={
+          Object {
+            "paddingLeft": 30,
           }
-        >
-          <p
-            className="k-u-color-font1 k-u-size-micro k-u-weight-bold"
-            data-radium={true}
+        }
+      >
+        <div>
+          <a
+            href="#"
             style={
               Object {
-                "paddingLeft": 30,
+                "color": "#000",
               }
             }
           >
-            <div>
-              <a
-                href="#"
-                style={
-                  Object {
-                    "color": "#000",
-                  }
-                }
-              >
-                Delete this comment
-              </a>
-              <a
-                href="#"
-                style={
-                  Object {
-                    "color": "#000",
-                  }
-                }
-              >
-                Notify abuse
-              </a>
-            </div>
-          </p>
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
+            Delete this comment
+          </a>
+          <a
+            href="#"
+            style={
+              Object {
+                "color": "#000",
+              }
             }
-          }
-        />
-      </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
+          >
+            Notify abuse
+          </a>
+        </div>
+      </p>
     </div>
     <style
       dangerouslySetInnerHTML={
@@ -282,44 +194,22 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
   >
     <div
       data-radium={true}
-    >
-      <div
-        data-radium={true}
-      >
-        <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.625rem",
-            }
-          }
-        >
-          <span
-            className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
-            tabIndex={null}
-          >
-            <img
-              alt="Image alt"
-              className="k-ButtonImage__img"
-              src="#image"
-            />
-          </span>
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
-          }
-        />
-      </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
+      style={
+        Object {
+          "marginBottom": "0.625rem",
         }
-      />
+      }
+    >
+      <span
+        className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+        tabIndex={null}
+      >
+        <img
+          alt="Image alt"
+          className="k-ButtonImage__img"
+          src="#image"
+        />
+      </span>
     </div>
     <span
       className="k-u-color-font1 k-u-size-micro k-u-weight-light"
@@ -352,75 +242,31 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     >
       <div
         data-radium={true}
-      >
-        <div
-          data-radium={true}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "marginBottom": "0.625rem",
-              }
-            }
-          >
-            <span
-              className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
-            >
-              Custom name
-            </span>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
+        style={
+          Object {
+            "marginBottom": "0.625rem",
           }
-        />
+        }
+      >
+        <span
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+        >
+          Custom name
+        </span>
       </div>
       <div
         data-radium={true}
-      >
-        <div
-          data-radium={true}
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "marginTop": "0.625rem",
-              }
-            }
-          >
-            <span
-              className="k-u-color-font1 k-u-size-default k-u-weight-light"
-            >
-              Custom text
-            </span>
-          </div>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
-          />
-        </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
+        style={
+          Object {
+            "marginTop": "0.625rem",
           }
-        />
+        }
+      >
+        <span
+          className="k-u-color-font1 k-u-size-default k-u-weight-light"
+        >
+          Custom text
+        </span>
       </div>
       <span
         className="rmq-e4f3f344"
