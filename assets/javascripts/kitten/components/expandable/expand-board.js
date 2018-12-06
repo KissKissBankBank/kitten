@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Button as ButtonBase } from 'kitten/components/buttons/button'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
-import COLORS from 'kitten/constants/colors-config'
-import { pxToRem } from 'kitten/helpers/utils/typography'
+import { Button as ButtonBase } from '../../components/buttons/button'
+import { ArrowIcon } from '../../components/icons/arrow-icon'
+import COLORS from '../../constants/colors-config'
+import { pxToRem } from '../../helpers/utils/typography'
 
 const Button = Radium(ButtonBase)
 

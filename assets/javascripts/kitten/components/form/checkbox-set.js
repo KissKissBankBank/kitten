@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Checkbox } from 'kitten/components/form/checkbox'
+import { Checkbox } from '../../components/form/checkbox'
 
 export class CheckboxSet extends React.Component {
   constructor(props) {

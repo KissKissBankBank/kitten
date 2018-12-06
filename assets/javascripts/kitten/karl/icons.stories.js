@@ -1,9 +1,8 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { StyleRoot } from 'radium'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
+import { Grid, GridCol } from '../components/grid/grid'
+import { ArrowIcon } from '../components/icons/arrow-icon'
 
 storiesOf('Icons', module).add(
   'ArrowIcon',

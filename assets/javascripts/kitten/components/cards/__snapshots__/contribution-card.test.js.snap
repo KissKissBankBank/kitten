@@ -502,7 +502,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
       }
     >
       <div
-        className="k-Grid__col--12 "
+        className="k-Grid__col--12"
         data-radium={true}
       >
         <div
@@ -658,7 +658,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="k-Grid__col--12 "
+        className="k-Grid__col--12"
         data-radium={true}
         style={
           Object {
@@ -710,7 +710,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         }
       >
         <div
-          className="k-Grid__col--12 "
+          className="k-Grid__col--12"
         >
           <div
             data-radium={true}

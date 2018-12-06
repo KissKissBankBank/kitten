@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { Loader } from 'kitten/components/loaders/loader'
-import { Paragraph } from 'kitten/components/typography/paragraph'
+import { Loader } from '../../components/loaders/loader'
+import { Paragraph } from '../../components/typography/paragraph'
 
 export class LoaderWithParagraph extends Component {
   render() {
     const {
-      text,
       className,
       loaderPosition,
       loaderProps,

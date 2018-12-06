@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { Marger } from 'kitten/components/layout/marger'
-import { CloseButton } from 'kitten/components/buttons/close-button'
+import { Marger } from '../../components/layout/marger'
+import { CloseButton } from '../../components/buttons/close-button'
 
 export class Popover extends Component {
   constructor(props) {

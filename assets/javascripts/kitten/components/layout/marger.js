@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import TYPOGRAPHY from 'kitten/constants/typography-config'
+import { ScreenConfig } from '../../constants/screen-config'
+import TYPOGRAPHY from '../../constants/typography-config'
 import isStringANumber from 'is-string-a-number'
-import { upcaseFirst } from 'kitten/helpers/utils/string'
+import { upcaseFirst } from '../../helpers/utils/string'
 
 const margerWrapper = WrappedComponent =>
   class extends Component {

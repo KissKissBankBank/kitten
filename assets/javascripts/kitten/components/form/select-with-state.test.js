@@ -1,6 +1,6 @@
 import React from 'react'
 import sinon from 'sinon'
-import { SelectWithState } from 'kitten/components/form/select-with-state'
+import { SelectWithState } from '../../components/form/select-with-state'
 import Select from 'react-select'
 
 describe('<SelectWithState />', () => {

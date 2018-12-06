@@ -219,7 +219,6 @@ Array [
       className="k-ButtonIcon k-ButtonIcon--twitter k-ButtonIcon--tiny"
       href="https://www.twitter.com"
       rel="noopener"
-      style={undefined}
       tabIndex={null}
       target="_blank"
     >

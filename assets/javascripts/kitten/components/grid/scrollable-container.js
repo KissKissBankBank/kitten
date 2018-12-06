@@ -1,8 +1,8 @@
 import React, { Component, Fragment } from 'react'
 import Radium, { Style } from 'radium'
 import classNames from 'classnames'
-import { Container } from 'kitten/components/grid/container'
-import ColorsConfig from 'kitten/constants/colors-config'
+import { Container } from '../../components/grid/container'
+import ColorsConfig from '../../constants/colors-config'
 
 export const ScrollableContainer = props => (
   <Container

@@ -135,6 +135,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
                 "whiteSpace": "nowrap",
               }
             }
+            width={0}
           >
             <span />
             <span />
@@ -544,6 +545,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
                 "whiteSpace": "nowrap",
               }
             }
+            width={0}
           >
             <span />
             <span>
@@ -604,6 +606,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
                 "whiteSpace": "nowrap",
               }
             }
+            width={0}
           >
             <span />
             <span>

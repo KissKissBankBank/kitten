@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-set -e
-
-echo "Build files generation 🚀"
-yarn run dist

@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Button } from 'kitten/components/buttons/button'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { Modal } from 'kitten/components/modals/modal'
-import { Marger } from 'kitten/components/layout/marger'
-import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
-import { ScreenConfig, SCREEN_SIZE_XS } from 'kitten/constants/screen-config'
+import { Button } from '../../components/buttons/button'
+import { Title } from '../../components/typography/title'
+import { Paragraph } from '../../components/typography/paragraph'
+import { Modal } from '../../components/modals/modal'
+import { Marger } from '../../components/layout/marger'
+import { createMatchMediaMax } from '../../helpers/utils/media-queries'
+import { ScreenConfig, SCREEN_SIZE_XS } from '../../constants/screen-config'
 
 class KarlModalComponent extends Component {
   constructor(props, context) {

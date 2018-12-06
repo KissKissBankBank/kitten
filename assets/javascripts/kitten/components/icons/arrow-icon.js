@@ -2,8 +2,8 @@ import React, { Fragment, Component } from 'react'
 import Radium from 'radium'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import { Deprecated } from 'kitten/helpers/utils/deprecated'
-import COLORS from 'kitten/constants/colors-config'
+import { Deprecated } from '../../helpers/utils/deprecated'
+import COLORS from '../../constants/colors-config'
 
 class DeprecatedArrowIconSvgBase extends Component {
   static propTypes = {

@@ -1,4 +1,4 @@
-import { ScreenConfig } from 'kitten/constants/screen-config'
+import { ScreenConfig } from '../../constants/screen-config'
 
 export const getMinQuery = num => `(min-width: ${num}px)`
 export const getMaxQuery = num => `(max-width: ${num}px)`

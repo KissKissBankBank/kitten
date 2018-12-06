@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { Grid as GridBase, GridCol } from 'kitten/components/grid/grid'
-import { Text } from 'kitten/components/typography/text'
-import { RewardCardCheckedIcon } from 'kitten/components/cards/reward-card/checked-icon'
-import { styles } from 'kitten/components/cards/reward-card'
-import { Deprecated } from 'kitten/helpers/utils/deprecated'
+import { Grid as GridBase, GridCol } from '../../../components/grid/grid'
+import { Text } from '../../../components/typography/text'
+import { RewardCardCheckedIcon } from '../../../components/cards/reward-card/checked-icon'
+import { styles } from '../../../components/cards/reward-card'
+import { Deprecated } from '../../../helpers/utils/deprecated'
 
 const Grid = Radium(GridBase)
 
@@ -25,7 +25,7 @@ const ManageContributionBase = ({
     : styles.choiceButton.paddings
 
   return (
-    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/kitten/">
+    <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
       <Fragment>
         {isSOrLessVersion && (
           <Grid style={choiceButtonPaddings}>

@@ -3,11 +3,11 @@ import {
   FacebookButtonIconWords,
   TwitterButtonIconWords,
   LinkedinButtonIconWords,
-} from 'kitten/components/buttons/social-button-icon-words'
-import { Button } from 'kitten/components/buttons/button'
-import { FacebookIconWithBackground } from 'kitten/components/icons/facebook-icon-with-background'
-import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
-import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
+} from '../../components/buttons/social-button-icon-words'
+import { Button } from '../../components/buttons/button'
+import { FacebookIconWithBackground } from '../../components/icons/facebook-icon-with-background'
+import { TwitterIcon } from '../../components/icons/twitter-icon'
+import { LinkedinIcon } from '../../components/icons/linkedin-icon'
 
 describe('<FacebookButtonIconWords />', () => {
   describe('by default', () => {

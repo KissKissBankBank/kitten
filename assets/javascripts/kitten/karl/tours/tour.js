@@ -1,14 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Button } from 'kitten/components/buttons/button'
-import { Marger } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { Text } from 'kitten/components/typography/text'
-import { CloseButton } from 'kitten/components/buttons/close-button'
-import { ArrowIcon } from 'kitten/components/icons/arrow-icon'
-import { MixIllustration } from 'kitten/components/illustrations/mix-illustration'
-import { LoudspeakerIllustration } from 'kitten/components/illustrations/loudspeaker-illustration'
+import { Button } from '../../components/buttons/button'
+import { Marger } from '../../components/layout/marger'
+import { Title } from '../../components/typography/title'
+import { Paragraph } from '../../components/typography/paragraph'
+import { Text } from '../../components/typography/text'
+import { CloseButton } from '../../components/buttons/close-button'
+import { ArrowIcon } from '../../components/icons/arrow-icon'
+import { MixIllustration } from '../../components/illustrations/mix-illustration'
+import { LoudspeakerIllustration } from '../../components/illustrations/loudspeaker-illustration'
 
 export const KarlHeaderTour1 = props => (
   <div

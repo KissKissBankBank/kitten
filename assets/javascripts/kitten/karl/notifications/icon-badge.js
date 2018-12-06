@@ -1,10 +1,10 @@
 import React from 'react'
 import Radium from 'radium'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { IconBadge } from 'kitten/components/notifications/icon-badge'
-import { CheckedIcon } from 'kitten/components/icons/checked-icon'
-import COLORS from 'kitten/constants/colors-config'
-import { KarlExampleTitle } from 'kitten/karl/examples/title'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { IconBadge } from '../../components/notifications/icon-badge'
+import { CheckedIcon } from '../../components/icons/checked-icon'
+import COLORS from '../../constants/colors-config'
+import { KarlExampleTitle } from '../../karl/examples/title'
 
 export const KarlIconBadge = props => (
   <Grid>

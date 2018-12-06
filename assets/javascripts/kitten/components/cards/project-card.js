@@ -2,19 +2,19 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
-import { card } from 'kitten/hoc/card'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
-import { Marger } from 'kitten/components/layout/marger'
-import { Title } from 'kitten/components/typography/title'
-import { Paragraph } from 'kitten/components/typography/paragraph'
-import { Progress } from 'kitten/components/meters/progress'
-import { ButtonImage } from 'kitten/components/buttons/button-image'
-import { IconBadge } from 'kitten/components/notifications/icon-badge'
-import { LockIcon } from 'kitten/components/icons/lock-icon'
-import { CheckedCircleIcon } from 'kitten/components/icons/checked-circle-icon'
-import { TagList } from 'kitten/components/lists/tag-list'
-import { TypologyTagIcon } from 'kitten/components/icons/typology-tag-icon'
-import { InstrumentTagIcon } from 'kitten/components/icons/instrument-tag-icon'
+import { card } from '../../hoc/card'
+import { Grid, GridCol } from '../../components/grid/grid'
+import { Marger } from '../../components/layout/marger'
+import { Title } from '../../components/typography/title'
+import { Paragraph } from '../../components/typography/paragraph'
+import { Progress } from '../../components/meters/progress'
+import { ButtonImage } from '../../components/buttons/button-image'
+import { IconBadge } from '../../components/notifications/icon-badge'
+import { LockIcon } from '../../components/icons/lock-icon'
+import { CheckedCircleIcon } from '../../components/icons/checked-circle-icon'
+import { TagList } from '../../components/lists/tag-list'
+import { TypologyTagIcon } from '../../components/icons/typology-tag-icon'
+import { InstrumentTagIcon } from '../../components/icons/instrument-tag-icon'
 
 export const MIN_WIDTH = 280
 export const MARGIN_BETWEEN = 40
@@ -349,7 +349,7 @@ const styles = {
   imageContainer: {
     overflow: 'hidden',
     position: 'relative',
-    paddingTop: `${9 / 16 * 100}%`,
+    paddingTop: `${(9 / 16) * 100}%`,
   },
   image: {
     position: 'absolute',

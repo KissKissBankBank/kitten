@@ -1,9 +1,9 @@
 import React from 'react'
-import { defaultProps } from 'kitten/hoc/default-props'
-import { ExternalRichLink } from 'kitten/components/links/external-rich-link'
-import { Dropdown } from 'kitten/components/dropdowns/dropdown'
-import { NavList } from 'kitten/components/lists/nav-list'
-import { UserMenu } from 'kitten/components/dropdowns/user-menu'
+import { defaultProps } from '../../hoc/default-props'
+import { ExternalRichLink } from '../../components/links/external-rich-link'
+import { Dropdown } from '../../components/dropdowns/dropdown'
+import { NavList } from '../../components/lists/nav-list'
+import { UserMenu } from '../../components/dropdowns/user-menu'
 
 // KarlPlatformSwitch
 const karlPlatformSwitchButtonContent = (

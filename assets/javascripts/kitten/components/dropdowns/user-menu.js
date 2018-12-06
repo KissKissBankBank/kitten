@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Dropdown } from 'kitten/components/dropdowns/dropdown'
-import { ButtonImageWithTextAndBadge } from 'kitten/components/buttons/button-image-with-text-and-badge'
-import { NavList } from 'kitten/components/lists/nav-list'
-import domElementHelper from 'kitten/helpers/dom/element-helper'
-import emitter from 'kitten/helpers/utils/emitter'
-import objectAssign from 'core-js/library/fn/object/assign'
+import { Dropdown } from '../../components/dropdowns/dropdown'
+import { ButtonImageWithTextAndBadge } from '../../components/buttons/button-image-with-text-and-badge'
+import { NavList } from '../../components/lists/nav-list'
+import domElementHelper from '../../helpers/dom/element-helper'
+import emitter from '../../helpers/utils/emitter'
 
 export class UserMenu extends Component {
   constructor(props) {

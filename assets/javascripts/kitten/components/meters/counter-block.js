@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { Title as TitleBase } from 'kitten/components/typography/title'
-import { Text as TextBase } from 'kitten/components/typography/text'
-import { Marger } from 'kitten/components/layout/marger'
-import { HorizontalStroke } from 'kitten/components/layout/horizontal-stroke'
-import { ScreenConfig } from 'kitten/constants/screen-config'
-import { withMediaQueries } from 'kitten/hoc/media-queries'
+import { Title as TitleBase } from '../../components/typography/title'
+import { Text as TextBase } from '../../components/typography/text'
+import { Marger } from '../../components/layout/marger'
+import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
+import { ScreenConfig } from '../../constants/screen-config'
+import { withMediaQueries } from '../../hoc/media-queries'
 
 const Text = Radium(TextBase)
 const Title = Radium(TitleBase)

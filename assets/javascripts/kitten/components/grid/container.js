@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { createMatchMediaMax } from 'kitten/helpers/utils/media-queries'
+import { createMatchMediaMax } from '../../helpers/utils/media-queries'
 
 export class Container extends React.PureComponent {
   constructor(props, context) {

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+if [ -z "$1" ]
+  then
+    echo "You need to supply version (patch|minor|major or specific tag)"
+    exit
+fi
+echo "You're about to release the next ${1} kitten's version"
+npm test
+git checkout -b release/v$1
+npm run build:js
+git add .
+git commit -m "add built js files for ${1}"
+npm --no-git-tag-version version $1
+git add .
+git commit -m "bump kitten version to $1"
+git push origin release/v$1
+echo "Done! You can now create a release PR: https://github.com/KissKissBankBank/kitten/compare/kitten-next...release/v${1}?expand=1 😸"

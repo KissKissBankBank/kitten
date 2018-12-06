@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { ScreenConfig } from 'kitten/constants/screen-config'
+import { ScreenConfig } from '../../constants/screen-config'
 
 export class Grid extends Component {
   render() {
