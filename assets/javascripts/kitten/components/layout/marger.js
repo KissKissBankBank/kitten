@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import { StyleRoot } from 'radium'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { ScreenConfig } from '../../constants/screen-config'
 import TYPOGRAPHY from '../../constants/typography-config'
 import isStringANumber from 'is-string-a-number'
 import { upcaseFirst } from '../../helpers/utils/string'
 
-export class MargerBase extends Component {
+export class Marger extends Component {
   static propTypes = {
     top: PropTypes.oneOfType([
       PropTypes.string,
@@ -71,9 +71,8 @@ export class MargerBase extends Component {
 
   propCssDeclarationForViewportRange = (propName, viewportRange) => {
     const size = this.props[propName][`from${upcaseFirst(viewportRange)}`]
-    const cssRule = `margin${upcaseFirst(propName)}`
 
-    return { [cssRule]: this.marginSize(size) }
+    return `margin-${propName}: ${this.marginSize(size)};`
   }
 
   viewportRangeStyleCondition = (propName, viewportRange) => {
@@ -87,7 +86,7 @@ export class MargerBase extends Component {
       viewportRange,
     )
 
-    return { [viewportRangeCssRule]: viewportRangeCssValue }
+    return `${viewportRangeCssRule} { ${viewportRangeCssValue} }`
   }
 
   hasDefaultProp = propName =>
@@ -96,28 +95,23 @@ export class MargerBase extends Component {
   hasXxsProp = propName => this.props[propName] && this.props[propName].fromXxs
 
   defaultProp = propName => {
-    const mediaQueryRule = `@media (min-width: 0)`
-    const cssRule = `margin${upcaseFirst(propName)}`
+    const cssRule = `margin-${propName}`
+
+    if (this.propIsNumber(propName)) {
+      return `${cssRule}: ${this.marginSize(this.props[propName])};`
+    }
 
     if (this.hasDefaultProp(propName)) {
-      return {
-        [mediaQueryRule]: {
-          [cssRule]: this.marginSize(this.props[propName].default),
-        },
-      }
+      return `${cssRule}: ${this.marginSize(this.props[propName].default)};`
     }
 
     if (this.hasXxsProp(propName)) {
-      return {
-        [mediaQueryRule]: {
-          [cssRule]: this.marginSize(this.props[propName].fromXxs),
-        },
-      }
+      return `${cssRule}: ${this.marginSize(this.props[propName].fromXxs)};`
     }
   }
 
   render() {
-    const { top, bottom, style, ...others } = this.props
+    const { top, bottom, ...others } = this.props
     const viewportRanges = Object.keys(ScreenConfig)
       .map(size => size.toLowerCase())
       .filter(size => size !== 'xxs')
@@ -129,29 +123,12 @@ export class MargerBase extends Component {
       ]
     }, [])
 
-    const styles = [
-      style,
-      this.propIsNumber('top') && { marginTop: this.marginSize(top) },
-      this.propIsNumber('bottom') && { marginBottom: this.marginSize(bottom) },
-      this.defaultProp('top'),
-      this.defaultProp('bottom'),
-      ...viewportRangesStyles,
-    ]
+    const MargerDiv = styled.div`
+      ${this.defaultProp('top')}
+      ${this.defaultProp('bottom')}
+      ${viewportRangesStyles}
+    `
 
-    return (
-      <StyleRoot>
-        <div style={styles} {...others} />
-      </StyleRoot>
-    )
-  }
-}
-
-export class Marger extends Component {
-  render() {
-    return (
-      <StyleRoot>
-        <MargerBase {...this.props} />
-      </StyleRoot>
-    )
+    return <MargerDiv {...others} />
   }
 }
