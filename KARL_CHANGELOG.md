@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix:
+- Update `header.html` with `k-u-hidden@{viewportRange}` utilities
+- Add mini LENDOPOLIS logo.
+
 ## [23.16.1] - 2018-11-30
 
 No changes.
