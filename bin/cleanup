@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+rm -fr node_modules
+
+echo "Cleanup done!"
