@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `links` prop on `TeamCard` component.
+## [23.17.0] - 2018-12-06
+
+Features:
+- Add `links` prop on `TeamCard` component.
   `socialLink` is deprecated.
-- Feature: Add `k-u-hidden@{viewportRange}` utilities.
-- Fix: `Marger` use `StyleRoot` only if `top` or `bottom` prop are an object.
+- Add `k-u-hidden@{viewportRange}` utilities.
+
+Fix:
+- `Marger` use `StyleRoot` only if `top` or `bottom` prop are an object.
 
 ## [23.16.1] - 2018-11-30
 
