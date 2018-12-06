@@ -68,6 +68,8 @@ class SocialLinks extends Component {
     return (
       <Fragment>
         {links.map((link, index) => {
+          if (!link.href) return
+
           let buttonStyle
           if (index !== links.length - 1) {
             buttonStyle = { marginRight: 15 }
