@@ -44,5 +44,11 @@
         }
       }
     }
+
+    .k-u-hidden\@#{$name} {
+      @include k-media-within($name) {
+        display: none;
+      }
+    }
   }
 }
