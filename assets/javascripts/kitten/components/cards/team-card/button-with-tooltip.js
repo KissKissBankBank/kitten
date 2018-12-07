@@ -38,9 +38,10 @@ export class TeamCardButtonWithTooltip extends Component {
   }
 
   render() {
-    const { phoneNumber } = this.props
+    const { phoneNumber, color } = this.props
 
     const tooltipStyle = [
+      colorTooltip(color),
       styles.tooltip.content,
       this.state.hover && styles.tooltip.content.hover,
       this.state.focus && styles.tooltip.content.focus,
@@ -76,12 +77,21 @@ export class TeamCardButtonWithTooltip extends Component {
   }
 }
 
-const backgroundColor = COLORS.primary1
-
 const pseudoClass = {
   visibility: 'visible',
   opacity: 1,
 }
+
+const colorTooltip = backgroundTooltipColor => ({
+  backgroundColor: `${backgroundTooltipColor}`,
+  borderColor: `${backgroundTooltipColor}`,
+
+  after: {
+    borderBottomColor: `${backgroundTooltipColor}`,
+  },
+})
+
+const backgroundColor = COLORS.primary1
 
 const styles = {
   tooltip: {
@@ -92,15 +102,15 @@ const styles = {
       top: 55,
       padding: 15,
       marginLeft: -50,
-      backgroundColor: backgroundColor,
-      border: '2px solid #19b4fa',
+      borderSize: 2,
+      borderStyle: 'solid',
       fontSize: 14,
       lineHeight: 'normal',
       fontWeight: 'regular',
       color: COLORS.background1,
       whiteSpace: 'nowrap',
-      opacity: 0,
-      visibility: 'hidden',
+      opacity: 1,
+      visibility: 'visible',
       transition: 'opacity .2s, visibility .2s',
       hover: pseudoClass,
       focus: pseudoClass,
@@ -113,7 +123,6 @@ const styles = {
         width: 0,
         marginLeft: -8,
         border: '10px solid transparent',
-        borderBottomColor: backgroundColor,
         pointerEvents: 'none',
       },
     },

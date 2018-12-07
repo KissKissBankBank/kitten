@@ -32,7 +32,9 @@ class TeamCardPhoneIconBase extends Component {
           </ButtonIcon>
         )}
 
-        {!viewportIsXSOrLess && <TeamCardButtonWithTooltip {...this.props} />}
+        {!viewportIsXSOrLess && (
+          <TeamCardButtonWithTooltip color="#ff0046" {...this.props} />
+        )}
       </Fragment>
     )
   }
