@@ -45,13 +45,15 @@ class CrowdfundingCardComponent extends Component {
 
     const Tag = this.props.href ? 'a' : 'div'
 
+    const titlesStyles = [titlesMinHeight && styles.titles]
+
     return (
       <StyleRoot>
         <Tag {...others} style={styles.card} onClick={this.removeCurrentFocus}>
           {this.renderImage()}
           {this.renderHeader()}
 
-          <Marger bottom="2" style={titlesMinHeight && styles.titles}>
+          <Marger bottom="2" style={titlesStyles}>
             {this.renderTitle()}
             {this.renderSubtitle()}
           </Marger>
