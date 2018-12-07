@@ -11,13 +11,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "1.875rem",
-        "marginTop": "1.875rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 dYzCuT"
   >
     <div
       className="k-Grid"
@@ -33,12 +27,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.9375rem",
-            }
-          }
+          className="marger__MargerDiv-q3lecu-0 PVOpW"
         >
           <label
             className="k-Label k-Label--micro"
@@ -49,12 +38,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           </label>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginTop": "0.9375rem",
-            }
-          }
+          className="marger__MargerDiv-q3lecu-0 dmMPzX"
         >
           <div
             className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -83,7 +67,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    data-radium={true}
+    className="marger__MargerDiv-q3lecu-0 fyuddl"
     style={
       Object {
         "display": "flex",
@@ -132,13 +116,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "1.875rem",
-        "marginTop": "1.875rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 dYzCuT"
   >
     <div
       className="k-Grid"
@@ -154,12 +132,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.9375rem",
-            }
-          }
+          className="marger__MargerDiv-q3lecu-0 PVOpW"
         >
           <label
             className="k-Label k-Label--micro"
@@ -170,12 +143,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
           </label>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginTop": "0.9375rem",
-            }
-          }
+          className="marger__MargerDiv-q3lecu-0 dmMPzX"
         >
           <div
             className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -204,7 +172,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    data-radium={true}
+    className="marger__MargerDiv-q3lecu-0 fyuddl"
     style={
       Object {
         "display": "flex",
@@ -253,13 +221,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.625rem",
-        "marginTop": "1.875rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 flJUdZ"
   >
     <div
       className="k-Grid"
@@ -275,12 +237,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.9375rem",
-            }
-          }
+          className="marger__MargerDiv-q3lecu-0 PVOpW"
         >
           <label
             className="k-Label k-Label--micro"
@@ -291,13 +248,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
           </label>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.625rem",
-              "marginTop": "0.9375rem",
-            }
-          }
+          className="marger__MargerDiv-q3lecu-0 cQGtab"
         >
           <div
             className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -323,12 +274,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginTop": "0.625rem",
-            }
-          }
+          className="marger__MargerDiv-q3lecu-0 ksLFOn"
         >
           <span
             className="k-u-color-error k-u-size-micro k-u-weight-regular"
@@ -340,7 +286,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    data-radium={true}
+    className="marger__MargerDiv-q3lecu-0 fyuddl"
     style={
       Object {
         "display": "flex",

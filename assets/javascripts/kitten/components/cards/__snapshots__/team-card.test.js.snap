@@ -2,11 +2,10 @@
 
 exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`] = `
 <div
-  data-radium={true}
+  className="marger__MargerDiv-q3lecu-0 dmMPzX"
   style={
     Object {
       "display": "flex",
-      "marginTop": "0.9375rem",
     }
   }
 >
@@ -18,15 +17,9 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
 exports[`<TeamCard /> with some props matches with snapshot 1`] = `
 Array [
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "1.25rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 iPaUkj"
   >
     <div
-      data-radium={true}
       style={
         Object {
           "backgroundColor": "#fff",
@@ -42,13 +35,7 @@ Array [
     />
   </div>,
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.9375rem",
-        "marginTop": "1.25rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 jjTQYz"
   >
     <span
       className="k-u-color-font1 k-u-size-default k-u-weight-bold"
@@ -63,11 +50,10 @@ Array [
     </span>
   </div>,
   <div
-    data-radium={true}
+    className="marger__MargerDiv-q3lecu-0 dmMPzX"
     style={
       Object {
         "display": "flex",
-        "marginTop": "0.9375rem",
       }
     }
   >

@@ -17,8 +17,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
+      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 fyuddl"
       style={
         Object {
           "backgroundColor": "#d8d8d8",
@@ -59,13 +58,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 eyQbYR"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -107,19 +100,25 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 iPaUkj"
+      style={false}
     >
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 jAJVJj"
         style={
           Object {
             "lineHeight": "1",
-            "marginBottom": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "24px",
+              "small": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "70%",
+              },
+            },
             "padding": "0 10px",
           }
         }
@@ -130,14 +129,27 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         />
       </div>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 ksLFOn"
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
-            "marginTop": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "display": "block",
+              "height": "12px",
+              "width": "80px",
+            },
             "padding": "0 10px",
+            "text": Object {
+              "flex": 1,
+              "lineHeight": "1rem",
+              "truncated": Object {
+                "overflow": "hidden",
+                "whiteSpace": "nowrap",
+              },
+            },
           }
         }
       >
@@ -181,8 +193,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
+      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 fyuddl"
       style={
         Object {
           "backgroundColor": "#d8d8d8",
@@ -223,13 +234,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 eyQbYR"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -271,19 +276,25 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 iPaUkj"
+      style={false}
     >
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 jAJVJj"
         style={
           Object {
             "lineHeight": "1",
-            "marginBottom": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "24px",
+              "small": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "70%",
+              },
+            },
             "padding": "0 10px",
           }
         }
@@ -296,14 +307,27 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         </p>
       </div>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 ksLFOn"
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
-            "marginTop": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "display": "block",
+              "height": "12px",
+              "width": "80px",
+            },
             "padding": "0 10px",
+            "text": Object {
+              "flex": 1,
+              "lineHeight": "1rem",
+              "truncated": Object {
+                "overflow": "hidden",
+                "whiteSpace": "nowrap",
+              },
+            },
           }
         }
       >
@@ -385,8 +409,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
+      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 fyuddl"
       style={
         Object {
           "backgroundColor": "#d8d8d8",
@@ -427,13 +450,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 eyQbYR"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -475,19 +492,25 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 iPaUkj"
+      style={false}
     >
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 jAJVJj"
         style={
           Object {
             "lineHeight": "1",
-            "marginBottom": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "24px",
+              "small": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "70%",
+              },
+            },
             "padding": "0 10px",
           }
         }
@@ -498,14 +521,27 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         />
       </div>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 ksLFOn"
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
-            "marginTop": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "display": "block",
+              "height": "12px",
+              "width": "80px",
+            },
             "padding": "0 10px",
+            "text": Object {
+              "flex": 1,
+              "lineHeight": "1rem",
+              "truncated": Object {
+                "overflow": "hidden",
+                "whiteSpace": "nowrap",
+              },
+            },
           }
         }
       >
@@ -549,8 +585,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
+      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 fyuddl"
       style={
         Object {
           "backgroundColor": "#d8d8d8",
@@ -591,13 +626,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 eyQbYR"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -643,19 +672,25 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 iPaUkj"
+      style={false}
     >
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 jAJVJj"
         style={
           Object {
             "lineHeight": "1",
-            "marginBottom": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "24px",
+              "small": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "70%",
+              },
+            },
             "padding": "0 10px",
           }
         }
@@ -668,14 +703,27 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         </h4>
       </div>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 ksLFOn"
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
-            "marginTop": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "display": "block",
+              "height": "12px",
+              "width": "80px",
+            },
             "padding": "0 10px",
+            "text": Object {
+              "flex": 1,
+              "lineHeight": "1rem",
+              "truncated": Object {
+                "overflow": "hidden",
+                "whiteSpace": "nowrap",
+              },
+            },
           }
         }
       >

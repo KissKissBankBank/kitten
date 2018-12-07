@@ -23,12 +23,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 jAJVJj"
       >
         <span
           className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
@@ -81,12 +76,72 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 gNoTyt"
         style={
           Object {
+            "arrow": Object {
+              "@media (min-width: 640px)": Object {
+                "top": 35,
+              },
+              "before": Object {
+                "borderColor": "transparent",
+                "borderRightColor": "white",
+                "borderStyle": "solid",
+                "borderWidth": 10,
+                "height": 0,
+                "left": -7,
+                "marginTop": -10,
+                "position": "absolute",
+                "width": 0,
+              },
+              "borderColor": "transparent",
+              "borderRightColor": "#eee",
+              "borderStyle": "solid",
+              "borderWidth": 10,
+              "display": "block",
+              "error": Object {
+                "borderRightColor": "#ffb2c7",
+              },
+              "focus": Object {
+                "borderRightColor": "#d8d8d8",
+              },
+              "height": 0,
+              "left": -20,
+              "position": "absolute",
+              "top": 20,
+              "width": 0,
+            },
             "display": "flex",
-            "marginBottom": "0.3125rem",
             "position": "relative",
+            "textarea": Object {
+              "@media (min-width: 640px)": Object {
+                "fontSize": 16,
+              },
+              "borderColor": "#eee",
+              "borderStyle": "solid",
+              "borderWidth": 2,
+              "boxSizing": "border-box",
+              "color": "#222",
+              "error": Object {
+                "borderColor": "#ffb2c7",
+                "color": "#ffb2c7",
+              },
+              "focus": Object {
+                "borderColor": "#d8d8d8",
+                "color": "#222",
+                "outline": "none",
+              },
+              "fontSize": 14,
+              "isDisabled": Object {
+                "backgroundColor": "#eee",
+                "borderColor": "#eee",
+                "color": "#b8b8b8",
+              },
+              "overflowY": "hidden",
+              "padding": 30,
+              "resize": "none",
+              "width": "100%",
+            },
           }
         }
       >
@@ -153,12 +208,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         </span>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginTop": "0.3125rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 dtajrs"
       >
         <span
           className="k-u-color-error k-u-size-micro k-u-weight-regular"

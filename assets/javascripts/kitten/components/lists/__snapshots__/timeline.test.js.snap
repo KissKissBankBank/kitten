@@ -77,13 +77,11 @@ exports[`<Timeline /> with default props matches with snapshot 1`] = `
         1
       </span>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 fRejIC"
         style={
           Object {
             "alignItems": "center",
             "flexGrow": 1,
-            "marginBottom": "1.5625rem",
-            "marginTop": "1.5625rem",
           }
         }
       >
@@ -182,13 +180,11 @@ exports[`<Timeline /> with itemHeight props matches with snapshot 1`] = `
         1
       </span>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 fRejIC"
         style={
           Object {
             "alignItems": "center",
             "flexGrow": 1,
-            "marginBottom": "1.5625rem",
-            "marginTop": "1.5625rem",
           }
         }
       >

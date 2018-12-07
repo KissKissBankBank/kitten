@@ -70,14 +70,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                 className="k-ProjectCard__grid"
               >
                 <div
-                  className="k-ProjectCard__grid--flex"
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0.625rem",
-                      "marginTop": "1.25rem",
-                    }
-                  }
+                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hjvjyl"
                 >
                   <span
                     className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -102,14 +95,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                   </p>
                 </div>
                 <div
-                  className="k-ProjectCard__grid--flex"
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0.9375rem",
-                      "marginTop": "0.625rem",
-                    }
-                  }
+                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 eKuTSl"
                 >
                   <p
                     className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -228,14 +214,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="k-ProjectCard__grid--flex"
-                data-radium={true}
-                style={
-                  Object {
-                    "marginBottom": "0.625rem",
-                    "marginTop": "1.25rem",
-                  }
-                }
+                className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hjvjyl"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -260,14 +239,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
                 </p>
               </div>
               <div
-                className="k-ProjectCard__grid--flex"
-                data-radium={true}
-                style={
-                  Object {
-                    "marginBottom": "0.9375rem",
-                    "marginTop": "0.625rem",
-                  }
-                }
+                className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 eKuTSl"
               >
                 <p
                   className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -393,14 +365,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                 className="k-ProjectCard__grid"
               >
                 <div
-                  className="k-ProjectCard__grid--flex"
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0.625rem",
-                      "marginTop": "1.25rem",
-                    }
-                  }
+                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hjvjyl"
                 >
                   <span
                     className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -425,14 +390,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                   </p>
                 </div>
                 <div
-                  className="k-ProjectCard__grid--flex"
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0.9375rem",
-                      "marginTop": "0.625rem",
-                    }
-                  }
+                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 eKuTSl"
                 >
                   <p
                     className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"

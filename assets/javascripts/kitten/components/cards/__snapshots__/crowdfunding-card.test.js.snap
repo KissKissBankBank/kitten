@@ -17,8 +17,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
+      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 fyuddl"
       style={
         Object {
           "backgroundColor": "#d8d8d8",
@@ -59,13 +58,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 eyQbYR"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -107,20 +100,29 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
+      className="marger__MargerDiv-q3lecu-0 iPaUkj"
       style={
         Object {
-          "marginBottom": "1.25rem",
           "minHeight": "75px",
         }
       }
     >
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 jAJVJj"
         style={
           Object {
             "lineHeight": "1",
-            "marginBottom": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "24px",
+              "small": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "70%",
+              },
+            },
             "padding": "0 10px",
           }
         }
@@ -155,14 +157,27 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
         </p>
       </div>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 ksLFOn"
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
-            "marginTop": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "display": "block",
+              "height": "12px",
+              "width": "80px",
+            },
             "padding": "0 10px",
+            "text": Object {
+              "flex": 1,
+              "lineHeight": "1rem",
+              "truncated": Object {
+                "overflow": "hidden",
+                "whiteSpace": "nowrap",
+              },
+            },
           }
         }
       >
@@ -206,8 +221,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
+      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 fyuddl"
       style={
         Object {
           "backgroundColor": "#d8d8d8",
@@ -231,13 +245,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 eyQbYR"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -292,20 +300,29 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
+      className="marger__MargerDiv-q3lecu-0 iPaUkj"
       style={
         Object {
-          "marginBottom": "1.25rem",
           "minHeight": "75px",
         }
       }
     >
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 jAJVJj"
         style={
           Object {
             "lineHeight": "1",
-            "marginBottom": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "24px",
+              "small": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "70%",
+              },
+            },
             "padding": "0 10px",
           }
         }
@@ -340,14 +357,27 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 ksLFOn"
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
-            "marginTop": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "display": "block",
+              "height": "12px",
+              "width": "80px",
+            },
             "padding": "0 10px",
+            "text": Object {
+              "flex": 1,
+              "lineHeight": "1rem",
+              "truncated": Object {
+                "overflow": "hidden",
+                "whiteSpace": "nowrap",
+              },
+            },
           }
         }
       >
@@ -423,8 +453,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
+      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 fyuddl"
       style={
         Object {
           "backgroundColor": "#d8d8d8",
@@ -465,13 +494,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 eyQbYR"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -517,20 +540,29 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
+      className="marger__MargerDiv-q3lecu-0 iPaUkj"
       style={
         Object {
-          "marginBottom": "1.25rem",
           "minHeight": "75px",
         }
       }
     >
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 jAJVJj"
         style={
           Object {
             "lineHeight": "1",
-            "marginBottom": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "24px",
+              "small": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "70%",
+              },
+            },
             "padding": "0 10px",
           }
         }
@@ -567,14 +599,27 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </h4>
       </div>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 ksLFOn"
         style={
           Object {
             "alignItems": "center",
             "display": "flex",
             "lineHeight": "1",
-            "marginTop": "0.625rem",
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "display": "block",
+              "height": "12px",
+              "width": "80px",
+            },
             "padding": "0 10px",
+            "text": Object {
+              "flex": 1,
+              "lineHeight": "1rem",
+              "truncated": Object {
+                "overflow": "hidden",
+                "whiteSpace": "nowrap",
+              },
+            },
           }
         }
       >
@@ -629,24 +674,54 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
+      className="marger__MargerDiv-q3lecu-0 oUIQM"
       style={
         Object {
           "display": "flex",
           "flexWrap": "wrap",
+          "info": Object {
+            "lastItem": Object {
+              "marginRight": 0,
+            },
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "16px",
+              "large": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "65px",
+              },
+              "width": "40px",
+            },
+            "marginRight": "30px",
+          },
           "lineHeight": "1",
-          "marginBottom": "0.3125rem",
-          "marginTop": "0.9375rem",
           "padding": "0 10px",
         }
       }
     >
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 dtajrs"
         style={
           Object {
+            "lastItem": Object {
+              "marginRight": 0,
+            },
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "16px",
+              "large": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "65px",
+              },
+              "width": "40px",
+            },
             "marginRight": "30px",
-            "marginTop": "0.3125rem",
           }
         }
       >
@@ -657,11 +732,25 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 dtajrs"
         style={
           Object {
+            "lastItem": Object {
+              "marginRight": 0,
+            },
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "16px",
+              "large": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "65px",
+              },
+              "width": "40px",
+            },
             "marginRight": "30px",
-            "marginTop": "0.3125rem",
           }
         }
       >
@@ -672,11 +761,25 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        data-radium={true}
+        className="marger__MargerDiv-q3lecu-0 dtajrs"
         style={
           Object {
+            "lastItem": Object {
+              "marginRight": 0,
+            },
+            "loading": Object {
+              "backgroundColor": "#d8d8d8",
+              "borderBottom": "1px solid #fff",
+              "display": "block",
+              "height": "16px",
+              "large": Object {
+                "borderBottom": 0,
+                "borderTop": "1px solid #fff",
+                "width": "65px",
+              },
+              "width": "40px",
+            },
             "marginRight": 0,
-            "marginTop": "0.3125rem",
           }
         }
       >
@@ -688,15 +791,17 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
+      className="marger__MargerDiv-q3lecu-0 jguoMB"
       style={
         Object {
           "alignItems": "center",
           "display": "flex",
           "flexDirection": "row",
-          "marginBottom": "1.25rem",
-          "marginTop": "0.3125rem",
           "padding": "0 10px",
+          "percent": Object {
+            "flexShrink": 0,
+            "marginLeft": "20px",
+          },
         }
       }
     >
