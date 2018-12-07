@@ -102,9 +102,11 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     <div
       className="marger__MargerDiv-q3lecu-0 iPaUkj"
       style={
-        Object {
-          "minHeight": "75px",
-        }
+        Array [
+          Object {
+            "minHeight": "75px",
+          },
+        ]
       }
     >
       <div
@@ -302,9 +304,11 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     <div
       className="marger__MargerDiv-q3lecu-0 iPaUkj"
       style={
-        Object {
-          "minHeight": "75px",
-        }
+        Array [
+          Object {
+            "minHeight": "75px",
+          },
+        ]
       }
     >
       <div
@@ -542,9 +546,11 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     <div
       className="marger__MargerDiv-q3lecu-0 iPaUkj"
       style={
-        Object {
-          "minHeight": "75px",
-        }
+        Array [
+          Object {
+            "minHeight": "75px",
+          },
+        ]
       }
     >
       <div
