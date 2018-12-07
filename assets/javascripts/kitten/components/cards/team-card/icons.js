@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
+import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
+import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
 import { Marger as MargerBase } from 'kitten/components/layout/marger'
 import { EmailIcon } from 'kitten/components/icons/email-icon'
-import { LinkedinButtonIcon } from 'kitten/components/buttons/social-button-icon'
 import { TeamCardPhoneIcon } from 'kitten/components/cards/team-card/phone-icon'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const Marger = Radium(MargerBase)
 
@@ -13,17 +15,29 @@ export class TeamCardIcons extends Component {
   static propTypes = {
     email: PropTypes.string,
     phoneNumber: PropTypes.string,
-    socialLink: PropTypes.string,
+    links: PropTypes.oneOf(['linkedin', 'twitter']),
+
+    // Deprecated.
+    socialLink: deprecated(PropTypes.string, 'Prefer use links prop'),
   }
 
   static defaultProps = {
     email: '',
     phoneNumber: '',
-    socialLink: '',
+    links: [],
+  }
+
+  getSocialLinks = () => {
+    const { links, socialLink } = this.props
+
+    if (links) return links
+
+    // handle deprecated `socialLink` prop
+    if (socialLink) return [{ name: 'linkedin', href: socialLink }]
   }
 
   render() {
-    const { email, phoneNumber, socialLink } = this.props
+    const { email, phoneNumber, links } = this.props
 
     return (
       <Marger top="1.5" style={styles.icons}>
@@ -41,16 +55,47 @@ export class TeamCardIcons extends Component {
 
         {phoneNumber && <TeamCardPhoneIcon {...this.props} />}
 
-        {socialLink && (
-          <LinkedinButtonIcon
-            tag="a"
-            href={socialLink}
-            size="tiny"
-            target="_blank"
-            rel="noopener"
-          />
-        )}
+        <SocialLinks links={this.getSocialLinks()} />
       </Marger>
+    )
+  }
+}
+
+class SocialLinks extends Component {
+  render() {
+    const { links } = this.props
+
+    return (
+      <Fragment>
+        {links.map((link, index) => {
+          if (!link.href) return
+
+          let buttonStyle
+          if (index !== links.length - 1) {
+            buttonStyle = { marginRight: 15 }
+          }
+
+          return (
+            <ButtonIcon
+              tag="a"
+              key={link.name}
+              href={link.href}
+              modifier={link.name}
+              size="tiny"
+              target="_blank"
+              rel="noopener"
+              style={buttonStyle}
+            >
+              {link.name === 'linkedin' && (
+                <LinkedinIcon className="k-ButtonIcon__svg" />
+              )}
+              {link.name === 'twitter' && (
+                <TwitterIcon className="k-ButtonIcon__svg" />
+              )}
+            </ButtonIcon>
+          )
+        })}
+      </Fragment>
     )
   }
 }
