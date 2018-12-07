@@ -72,6 +72,13 @@ creating new components!
 $ npm install
 ```
 
+### Cleanup
+
+To cleanup installed modules:
+
+```sh
+bin/cleanup
+```
 
 ### Storybook
 
@@ -195,4 +202,3 @@ bin/publish
 - Update
   [our private project kanban](https://github.com/orgs/KissKissBankBank/projects/5):
   move cards that are released from `done` column to `released` column.
-
