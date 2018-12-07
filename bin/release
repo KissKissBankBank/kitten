@@ -14,4 +14,4 @@ npm --no-git-tag-version version $1
 git add .
 git commit -m "bump kitten version to $1"
 git push origin release/v$1
-echo "Done! You can now create a release PR: https://github.com/KissKissBankBank/kitten/compare/kitten-next...release/v${1}?expand=1 😸"
+echo "Done! You can now create a release PR: https://github.com/KissKissBankBank/kitten/compare/release/v${1}?expand=1 😸"
