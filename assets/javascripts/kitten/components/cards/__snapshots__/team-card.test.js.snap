@@ -45,7 +45,6 @@ Array [
     data-radium={true}
     style={
       Object {
-        "marginBottom": "0.9375rem",
         "marginTop": "1.25rem",
       }
     }
@@ -123,7 +122,9 @@ Array [
             style={
               Object {
                 "backgroundColor": "#19b4fa",
-                "border": "2px solid #19b4fa",
+                "borderColor": "#19b4fa",
+                "borderSize": 2,
+                "borderStyle": "solid",
                 "color": "#fff",
                 "fontSize": 14,
                 "fontWeight": "regular",
@@ -159,7 +160,6 @@ Array [
           </span>
           <button
             className="k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
-            data-radium={true}
             style={
               Object {
                 "marginRight": 15,
