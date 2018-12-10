@@ -111,7 +111,7 @@ export class Marger extends Component {
   }
 
   render() {
-    const { top, bottom, ...others } = this.props
+    const { top, bottom, style, ...others } = this.props
     const viewportRanges = Object.keys(ScreenConfig)
       .map(size => size.toLowerCase())
       .filter(size => size !== 'xxs')
@@ -129,6 +129,6 @@ export class Marger extends Component {
       ${viewportRangesStyles}
     `
 
-    return <MargerDiv {...others} />
+    return <MargerDiv style={style || null} {...others} />
   }
 }
