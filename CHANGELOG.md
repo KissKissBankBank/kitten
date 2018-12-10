@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Use interpolation for manage `backgroundColor` on `TeamCardButtonWithTooltip`.
+
 ## [23.17.0] - 2018-12-06
 
 Features:

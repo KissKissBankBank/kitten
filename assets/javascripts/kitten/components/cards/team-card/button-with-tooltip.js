@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
@@ -112,8 +112,8 @@ const styles = {
       fontWeight: 'regular',
       color: COLORS.background1,
       whiteSpace: 'nowrap',
-      opacity: 1,
-      visibility: 'visible',
+      opacity: 0,
+      visibility: 'hidden',
       transition: 'opacity .2s, visibility .2s',
       hover: pseudoClass,
       focus: pseudoClass,
