@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Field` component and sub-components:
+  - `Field.Label`
+  - `Field.Input`
+  - `Field.RadioButtonSet`
+  - `Field.Select`
+  - `Field.ErrorMessage`
 - Feature: Add some icons:
   - `BancontactIcon`
   - `GiropayIcon`
@@ -11,7 +17,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `MaestroIcon`
   - `PayPalIcon`
   - `SofortIcon`
-- Feature: Add `k-TextInput--sixDigits` classes.
+- Feature: Add `k-TextInput--sixDigits` class.
 - Fix: Update `k-inputSet` vertical spacing.
 - Fix: Update `k-RadioButtonSet` line-height.
 
