@@ -7,7 +7,6 @@ import { Paragraph } from '../../../../../components/typography/paragraph'
 import { Text } from '../../../../../components/typography/text'
 import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
 import { Button } from '../../../../../components/buttons/button'
-import { TagButton } from '../../../../../components/buttons/tag-button'
 import { VisaIcon } from '../../../../../components/icons/visa-icon'
 import { MasterCardIcon } from '../../../../../components/icons/mastercard-icon'
 import { MaestroIcon } from '../../../../../components/icons/maestro-icon'
@@ -20,7 +19,7 @@ import { PaymentButton } from './payment-button'
 import Cart from '../../common/cart/cart'
 import { pxToRem } from '../../../../../helpers/utils/typography'
 
-class MeansOfPayment extends Component {
+class PaymentChoices extends Component {
   render() {
     const { onlyPayPal } = this.props
 
@@ -132,4 +131,4 @@ class MeansOfPayment extends Component {
   }
 }
 
-export default MeansOfPayment
+export default PaymentChoices
