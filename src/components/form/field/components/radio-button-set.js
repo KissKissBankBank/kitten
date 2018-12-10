@@ -9,8 +9,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.FieldRadioButtonSet = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -42,11 +40,7 @@ function (_Component) {
     value: function render() {
       return _react.default.createElement(_marger.Marger, {
         top: "1.5"
-      }, _react.default.createElement(_radioButtonSet.RadioButtonSet, (0, _extends2.default)({
-        style: {
-          lineHeight: '1.3rem'
-        }
-      }, this.props)));
+      }, _react.default.createElement(_radioButtonSet.RadioButtonSet, this.props));
     }
   }]);
   return FieldRadioButtonSet;

@@ -6,7 +6,28 @@ import TYPOGRAPHY from '../../constants/typography-config'
 import isStringANumber from 'is-string-a-number'
 import { upcaseFirst } from '../../helpers/utils/string'
 
-export class MargerBase extends Component {
+const margerWrapper = WrappedComponent =>
+  class extends Component {
+    needsStyleRoot = () => {
+      const { top, bottom } = this.props
+      const isTopAnObject = top && typeof top === 'object'
+      const isBottomAnObject = bottom && typeof bottom === 'object'
+
+      return isTopAnObject || isBottomAnObject
+    }
+
+    render() {
+      if (!this.needsStyleRoot()) return <WrappedComponent {...this.props} />
+
+      return (
+        <StyleRoot>
+          <WrappedComponent {...this.props} />
+        </StyleRoot>
+      )
+    }
+  }
+
+class MargerBaseWithoutStyleRoot extends Component {
   static propTypes = {
     top: PropTypes.oneOfType([
       PropTypes.string,
@@ -138,20 +159,8 @@ export class MargerBase extends Component {
       ...viewportRangesStyles,
     ]
 
-    return (
-      <StyleRoot>
-        <div style={styles} {...others} />
-      </StyleRoot>
-    )
+    return <div style={styles} {...others} />
   }
 }
 
-export class Marger extends Component {
-  render() {
-    return (
-      <StyleRoot>
-        <MargerBase {...this.props} />
-      </StyleRoot>
-    )
-  }
-}
+export const Marger = margerWrapper(Radium(MargerBaseWithoutStyleRoot))

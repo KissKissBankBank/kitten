@@ -27,8 +27,7 @@ var _pinterestIcon = require("../../components/icons/pinterest-icon");
 
 var FacebookButtonIcon = function FacebookButtonIcon(props) {
   return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
-    modifier: "facebook",
-    "aria-label": "Facebook"
+    modifier: "facebook"
   }), _react.default.createElement(_facebookIcon.FacebookIcon, {
     className: "k-ButtonIcon__svg"
   }));
@@ -38,8 +37,7 @@ exports.FacebookButtonIcon = FacebookButtonIcon;
 
 var TwitterButtonIcon = function TwitterButtonIcon(props) {
   return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
-    modifier: "twitter",
-    "aria-label": "Twitter"
+    modifier: "twitter"
   }), _react.default.createElement(_twitterIcon.TwitterIcon, {
     className: "k-ButtonIcon__svg"
   }));
@@ -59,8 +57,7 @@ exports.LinkedinButtonIcon = LinkedinButtonIcon;
 
 var InstagramButtonIcon = function InstagramButtonIcon(props) {
   return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
-    modifier: "instagram",
-    "aria-label": "Instagram"
+    modifier: "instagram"
   }), _react.default.createElement(_instagramIcon.InstagramIcon, {
     className: "k-ButtonIcon__svg"
   }));
@@ -70,8 +67,7 @@ exports.InstagramButtonIcon = InstagramButtonIcon;
 
 var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
   return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
-    modifier: "youtube",
-    "aria-label": "Youtube"
+    modifier: "youtube"
   }), _react.default.createElement(_youtubeIcon.YoutubeIcon, {
     className: "k-ButtonIcon__svg"
   }));
@@ -81,8 +77,7 @@ exports.YoutubeButtonIcon = YoutubeButtonIcon;
 
 var PinterestButtonIcon = function PinterestButtonIcon(props) {
   return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
-    modifier: "pinterest",
-    "aria-label": "Pinterest"
+    modifier: "pinterest"
   }), _react.default.createElement(_pinterestIcon.PinterestIcon, {
     className: "k-ButtonIcon__svg"
   }));

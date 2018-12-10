@@ -1,20 +1,15 @@
 import React from 'react'
 import { Marger } from '../../components/layout/marger'
 
-const cleanStyles = styles =>
-  styles.filter(rule => rule != null).filter(rule => rule != false)
+const getMargerElement = element =>
+  shallow(element)
+    .first()
+    .shallow()
 
 describe('<Marger />', () => {
   describe('by default', () => {
     it('renders a <div /> that wraps its children', () => {
-      const marger = shallow(<Marger>Curioser and curioser</Marger>)
-        .dive()
-        .children()
-        .first()
-        .dive()
-        .first()
-        .children()
-        .first()
+      const marger = getMargerElement(<Marger>Curioser and curioser</Marger>)
 
       expect(marger.is('div')).toBe(true)
       expect(marger.text()).toEqual('Curioser and curioser')
@@ -24,31 +19,17 @@ describe('<Marger />', () => {
   describe('with top prop', () => {
     describe('with string prop', () => {
       it('has margin-top CSS rule', () => {
-        const marger = shallow(<Marger top="1.5" />)
-          .dive()
-          .children()
-          .first()
-          .dive()
-          .first()
-          .children()
-          .first()
-        const styles = cleanStyles(marger.props().style)
+        const marger = getMargerElement(<Marger top="1.5" />)
+        const styles = marger.props().style
 
-        expect(styles).toEqual([{ marginTop: '0.9375rem' }])
+        expect(styles).toEqual({ marginTop: '0.9375rem' })
       })
 
       it('works with .5 value', () => {
-        const marger = shallow(<Marger top=".5" />)
-          .dive()
-          .children()
-          .first()
-          .dive()
-          .first()
-          .children()
-          .first()
-        const styles = cleanStyles(marger.props().style)
+        const marger = getMargerElement(<Marger top=".5" />)
+        const styles = marger.props().style
 
-        expect(styles).toEqual([{ marginTop: '0.3125rem' }])
+        expect(styles).toEqual({ marginTop: '0.3125rem' })
       })
     })
 
@@ -57,54 +38,32 @@ describe('<Marger />', () => {
         const marger = shallow(
           <Marger top={{ fromXs: 12, fromM: 2, default: 4 }} />,
         )
-          .dive()
-          .children()
-          .first()
-          .dive()
-          .first()
-          .children()
-          .first()
-        const styles = cleanStyles(marger.props().style)
+        const html = marger.html()
 
-        expect(styles).toEqual([
-          { '@media (min-width: 0)': { marginTop: '2.5rem' } },
-          { '@media (min-width: 480px)': { marginTop: '7.5rem' } },
-          { '@media (min-width: 768px)': { marginTop: '1.25rem' } },
-        ])
+        expect(html).toContain('@media (min-width: 0)')
+        expect(html).toContain('margin-top: 2.5rem')
+        expect(html).toContain('@media (min-width: 480px)')
+        expect(html).toContain('margin-top: 7.5rem')
+        expect(html).toContain('@media (min-width: 768px)')
+        expect(html).toContain('margin-top: 1.25rem')
       })
     })
 
     describe('with object with `fromXxs` prop', () => {
       it('has default margin-top CSS rule', () => {
         const marger = shallow(<Marger top={{ fromXxs: 4 }} />)
-          .dive()
-          .children()
-          .first()
-          .dive()
-          .first()
-          .children()
-          .first()
-        const styles = cleanStyles(marger.props().style)
+        const html = marger.html()
 
-        expect(styles).toEqual([
-          { '@media (min-width: 0)': { marginTop: '2.5rem' } },
-        ])
+        expect(html).toContain('@media (min-width: 0)')
+        expect(html).toContain('margin-top: 2.5rem')
       })
 
       it('is overrided by the default value', () => {
         const marger = shallow(<Marger top={{ fromXxs: 3, default: 12 }} />)
-          .dive()
-          .children()
-          .first()
-          .dive()
-          .first()
-          .children()
-          .first()
-        const styles = cleanStyles(marger.props().style)
+        const html = marger.html()
 
-        expect(styles).toEqual([
-          { '@media (min-width: 0)': { marginTop: '7.5rem' } },
-        ])
+        expect(html).toContain('@media (min-width: 0)')
+        expect(html).toContain('margin-top: 7.5rem')
       })
     })
   })
@@ -112,31 +71,17 @@ describe('<Marger />', () => {
   describe('with bottom prop', () => {
     describe('with string prop', () => {
       it('has margin-bottom CSS rule', () => {
-        const marger = shallow(<Marger bottom="1.5" />)
-          .dive()
-          .children()
-          .first()
-          .dive()
-          .first()
-          .children()
-          .first()
-        const styles = cleanStyles(marger.props().style)
+        const marger = getMargerElement(<Marger bottom="1.5" />)
+        const styles = marger.props().style
 
-        expect(styles).toEqual([{ marginBottom: '0.9375rem' }])
+        expect(styles).toEqual({ marginBottom: '0.9375rem' })
       })
 
       it('works with .5 value', () => {
-        const marger = shallow(<Marger bottom=".5" />)
-          .dive()
-          .children()
-          .first()
-          .dive()
-          .first()
-          .children()
-          .first()
-        const styles = cleanStyles(marger.props().style)
+        const marger = getMargerElement(<Marger bottom=".5" />)
+        const styles = marger.props().style
 
-        expect(styles).toEqual([{ marginBottom: '0.3125rem' }])
+        expect(styles).toEqual({ marginBottom: '0.3125rem' })
       })
     })
 
@@ -145,54 +90,32 @@ describe('<Marger />', () => {
         const marger = shallow(
           <Marger bottom={{ fromXs: 12, fromM: 2, default: 4 }} />,
         )
-          .dive()
-          .children()
-          .first()
-          .dive()
-          .first()
-          .children()
-          .first()
-        const styles = cleanStyles(marger.props().style)
+        const html = marger.html()
 
-        expect(styles).toEqual([
-          { '@media (min-width: 0)': { marginBottom: '2.5rem' } },
-          { '@media (min-width: 480px)': { marginBottom: '7.5rem' } },
-          { '@media (min-width: 768px)': { marginBottom: '1.25rem' } },
-        ])
+        expect(html).toContain('@media (min-width: 0)')
+        expect(html).toContain('margin-bottom: 2.5rem')
+        expect(html).toContain('@media (min-width: 480px)')
+        expect(html).toContain('margin-bottom: 7.5rem')
+        expect(html).toContain('@media (min-width: 768px)')
+        expect(html).toContain('margin-bottom: 1.25rem')
       })
     })
 
     describe('with object with `fromXxs` prop', () => {
       it('has default margin-bottom CSS rule', () => {
         const marger = shallow(<Marger bottom={{ fromXxs: 4 }} />)
-          .dive()
-          .children()
-          .first()
-          .dive()
-          .first()
-          .children()
-          .first()
-        const styles = cleanStyles(marger.props().style)
+        const html = marger.html()
 
-        expect(styles).toEqual([
-          { '@media (min-width: 0)': { marginBottom: '2.5rem' } },
-        ])
+        expect(html).toContain('@media (min-width: 0)')
+        expect(html).toContain('margin-bottom: 2.5rem')
       })
 
       it('is overrided by the default value', () => {
         const marger = shallow(<Marger bottom={{ fromXxs: 4, default: 12 }} />)
-          .dive()
-          .children()
-          .first()
-          .dive()
-          .first()
-          .children()
-          .first()
-        const styles = cleanStyles(marger.props().style)
+        const html = marger.html()
 
-        expect(styles).toEqual([
-          { '@media (min-width: 0)': { marginBottom: '7.5rem' } },
-        ])
+        expect(html).toContain('@media (min-width: 0)')
+        expect(html).toContain('margin-bottom: 7.5rem')
       })
     })
   })
@@ -206,35 +129,21 @@ describe('<Marger />', () => {
           style={{ backgroundColor: 'red' }}
         />,
       )
-        .dive()
-        .children()
-        .first()
-        .dive()
-        .first()
-        .children()
-        .first()
-      const styles = cleanStyles(marger.props().style)
+      const html = marger.html()
 
-      expect(styles).toMatchObject([
-        { backgroundColor: 'red' },
-        { '@media (min-width: 480px)': { marginTop: '7.5rem' } },
-        { '@media (min-width: 480px)': { marginBottom: '7.5rem' } },
-        { '@media (min-width: 768px)': { marginTop: '1.25rem' } },
-        { '@media (min-width: 768px)': { marginBottom: '1.25rem' } },
-      ])
+      expect(html).toContain('@media (min-width: 480px)')
+      expect(html).toContain('margin-top: 7.5rem')
+      expect(html).toContain('margin-bottom: 7.5rem')
+      expect(html).toContain('@media (min-width: 768px)')
+      expect(html).toContain('margin-top: 1.25rem')
+      expect(html).toContain('margin-bottom: 1.25rem')
+      expect(html).toContain('style="background-color:red"')
     })
   })
 
   describe('with other prop', () => {
     it('has a custom class', () => {
-      const marger = shallow(<Marger className="custom__class" />)
-        .dive()
-        .children()
-        .first()
-        .dive()
-        .first()
-        .children()
-        .first()
+      const marger = getMargerElement(<Marger className="custom__class" />)
 
       expect(marger.hasClass('custom__class')).toBe(true)
     })

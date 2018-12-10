@@ -29,7 +29,16 @@ storiesOf('Cards', module)
                 <TeamCard.Icons
                   email={text('Email', 'example@kisskissbankbank.com')}
                   phoneNumber={text('Phone number', '06 00 00 00 00')}
-                  socialLink={text('Social link', 'https://www.linkedin.com')}
+                  links={[
+                    {
+                      name: 'linkedin',
+                      href: text('Linkedin link', 'https://www.linkedin.com'),
+                    },
+                    {
+                      name: 'twitter',
+                      href: text('Twitter link', 'https://www.twitter.com'),
+                    },
+                  ]}
                 />
               </TeamCard>
             </Marger>
