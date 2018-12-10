@@ -45,9 +45,9 @@ export class TeamCardButtonWithTooltip extends Component {
       this.state.focus && styles.tooltip.content.focus,
     ]
 
-    const tooltipAfterStyle = [
-      colorPseudoTooltip(pseudoColor),
+    const tooltipPseudoStyle = [
       styles.tooltip.content.after,
+      colorPseudoTooltip(pseudoColor),
     ]
 
     return (
@@ -63,7 +63,7 @@ export class TeamCardButtonWithTooltip extends Component {
           <div style={styles.tooltip}>
             <span style={tooltipStyle}>
               {phoneNumber}
-              <span style={tooltipAfterStyle} />
+              <span style={tooltipPseudoStyle} />
             </span>
 
             <ButtonIcon
