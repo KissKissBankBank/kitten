@@ -13,6 +13,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
 >
   <div
     className="marger__MargerDiv-q3lecu-0 IaUCp"
+    style={null}
   >
     <span
       className="k-u-color-primary1 k-u-line-height-normal k-u-weight-regular"
@@ -22,6 +23,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
   </div>
   <div
     className="marger__MargerDiv-q3lecu-0 eyQbYR"
+    style={null}
   >
     <span
       className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
@@ -41,6 +43,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
   </div>
   <div
     className="marger__MargerDiv-q3lecu-0 gYxUMO"
+    style={null}
   >
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -69,6 +72,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
 >
   <div
     className="marger__MargerDiv-q3lecu-0 IaUCp"
+    style={null}
   >
     <span
       className="k-u-color-primary1 k-u-line-height-normal k-u-weight-regular"
@@ -88,6 +92,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
   </div>
   <div
     className="marger__MargerDiv-q3lecu-0 eyQbYR"
+    style={null}
   >
     <span
       className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
@@ -107,6 +112,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
   </div>
   <div
     className="marger__MargerDiv-q3lecu-0 gYxUMO"
+    style={null}
   >
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"

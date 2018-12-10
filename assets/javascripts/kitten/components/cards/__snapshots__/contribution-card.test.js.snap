@@ -13,6 +13,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
 >
   <div
     className="marger__MargerDiv-q3lecu-0 gdbaHu"
+    style={null}
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -35,6 +36,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
         >
           <div
             className="marger__MargerDiv-q3lecu-0 bnQcdR"
+            style={null}
           >
             <h1
               className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
@@ -49,6 +51,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           </div>
           <div
             className="marger__MargerDiv-q3lecu-0 dqQmTc"
+            style={null}
           >
             <span
               className="k-HorizontalStroke k-HorizontalStroke--big"
@@ -57,6 +60,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           
           <div
             className="marger__MargerDiv-q3lecu-0 hOWkne"
+            style={null}
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -101,6 +105,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
 >
   <div
     className="marger__MargerDiv-q3lecu-0 gdbaHu"
+    style={null}
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -123,6 +128,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         >
           <div
             className="marger__MargerDiv-q3lecu-0 bnQcdR"
+            style={null}
           >
             <h1
               className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
@@ -137,6 +143,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           </div>
           <div
             className="marger__MargerDiv-q3lecu-0 dqQmTc"
+            style={null}
           >
             <span
               className="k-HorizontalStroke k-HorizontalStroke--big"
@@ -144,6 +151,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           </div>
           <div
             className="marger__MargerDiv-q3lecu-0 flJUdZ"
+            style={null}
           >
             <p
               className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
@@ -158,6 +166,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           </div>
           <div
             className="marger__MargerDiv-q3lecu-0 ksLFOn"
+            style={null}
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -178,6 +187,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         >
           <div
             className="marger__MargerDiv-q3lecu-0 dqQmTc"
+            style={null}
           >
             <span
               className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
@@ -231,6 +241,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         </div>
         <div
           className="marger__MargerDiv-q3lecu-0 hOWkne"
+          style={null}
         >
           <button
             aria-labelledby="Custom text button"
@@ -257,6 +268,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           </button>
           <div
             className="marger__MargerDiv-q3lecu-0 jyeADL"
+            style={null}
           >
             <div
               data-radium={true}
@@ -358,6 +370,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
       >
         <div
           className="marger__MargerDiv-q3lecu-0 fyuddl"
+          style={null}
         >
           <div
             data-radium={true}
@@ -415,6 +428,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
 >
   <div
     className="marger__MargerDiv-q3lecu-0 hQQaP"
+    style={null}
   >
     <div
       className="k-Grid"
@@ -437,6 +451,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         >
           <div
             className="marger__MargerDiv-q3lecu-0 bnQcdR"
+            style={null}
           >
             <h1
               className="k-Title k-Title--quaternary k-Title--withoutMargin k-Title--italic"
@@ -451,6 +466,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           </div>
           <div
             className="marger__MargerDiv-q3lecu-0 dqQmTc"
+            style={null}
           >
             <span
               className="k-HorizontalStroke k-HorizontalStroke--big"
@@ -458,6 +474,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           </div>
           <div
             className="marger__MargerDiv-q3lecu-0 flJUdZ"
+            style={null}
           >
             <p
               className="k-u-color-font1 k-u-size-big k-u-weight-bold"
@@ -472,6 +489,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           </div>
           <div
             className="marger__MargerDiv-q3lecu-0 ksLFOn"
+            style={null}
           >
             <p
               className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -492,6 +510,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         >
           <div
             className="marger__MargerDiv-q3lecu-0 dqQmTc"
+            style={null}
           >
             <div>
               <span
@@ -564,6 +583,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
       >
         <div
           className="marger__MargerDiv-q3lecu-0 fyuddl"
+          style={null}
         >
           <div
             data-radium={true}
@@ -587,6 +607,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
     </div>
     <div
       className="marger__MargerDiv-q3lecu-0 gVTpax"
+      style={null}
     >
       <div
         className="k-Grid"

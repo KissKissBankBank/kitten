@@ -95,16 +95,17 @@ export class Marger extends Component {
   hasXxsProp = propName => this.props[propName] && this.props[propName].fromXxs
 
   defaultValue = propName => {
-    const marginSize = this.marginSize(this.props[propName])
-
-    if (this.propIsNumber(propName)) return marginSize
-    if (this.hasDefaultProp(propName)) return marginSize.default
-    if (this.hasXxsProp(propName)) return marginSize.fromXxs
+    if (this.propIsNumber(propName))
+      return this.marginSize(this.props[propName])
+    if (this.hasDefaultProp(propName))
+      return this.marginSize(this.props[propName].default)
+    if (this.hasXxsProp(propName))
+      return this.marginSize(this.props[propName].fromXxs)
   }
 
   stylesForName = propName => {
     const value = this.defaultValue(propName)
-    if (value) return `margin-${propName}: ${value};`
+    if (value) return `margin-${propName}: ${this.defaultValue(propName)};`
   }
 
   render() {

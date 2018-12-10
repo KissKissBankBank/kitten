@@ -24,6 +24,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     >
       <div
         className="marger__MargerDiv-q3lecu-0 jAJVJj"
+        style={null}
       >
         <span
           className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
@@ -209,6 +210,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       </div>
       <div
         className="marger__MargerDiv-q3lecu-0 dtajrs"
+        style={null}
       >
         <span
           className="k-u-color-error k-u-size-micro k-u-weight-regular"

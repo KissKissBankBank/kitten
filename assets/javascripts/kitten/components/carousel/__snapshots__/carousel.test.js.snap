@@ -71,6 +71,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
               >
                 <div
                   className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hjvjyl"
+                  style={null}
                 >
                   <span
                     className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -96,6 +97,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                 </div>
                 <div
                   className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 eKuTSl"
+                  style={null}
                 >
                   <p
                     className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -215,6 +217,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
             >
               <div
                 className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hjvjyl"
+                style={null}
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -240,6 +243,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
               </div>
               <div
                 className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 eKuTSl"
+                style={null}
               >
                 <p
                   className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -366,6 +370,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
               >
                 <div
                   className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hjvjyl"
+                  style={null}
                 >
                   <span
                     className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -391,6 +396,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                 </div>
                 <div
                   className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 eKuTSl"
+                  style={null}
                 >
                   <p
                     className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"

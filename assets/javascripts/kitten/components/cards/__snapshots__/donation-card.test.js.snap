@@ -13,6 +13,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
 >
   <div
     className="marger__MargerDiv-q3lecu-0 gdbaHu"
+    style={null}
   >
     <div
       className="k-Grid"
@@ -28,6 +29,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
       >
         <div
           className="marger__MargerDiv-q3lecu-0 iPaUkj"
+          style={null}
         >
           <h2
             className="k-Title k-Title--quaternary k-Title--withoutMargin"
@@ -43,6 +45,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
         </div>
         <div
           className="marger__MargerDiv-q3lecu-0 dqQmTc"
+          style={null}
         >
           <span
             className="k-HorizontalStroke k-HorizontalStroke--big"
@@ -64,6 +67,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
         >
           <div
             className="marger__MargerDiv-q3lecu-0 dYzCuT"
+            style={null}
           >
             <div
               className="k-Grid"
@@ -80,6 +84,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
               >
                 <div
                   className="marger__MargerDiv-q3lecu-0 PVOpW"
+                  style={null}
                 >
                   <label
                     className="k-Label k-Label--micro"
@@ -91,6 +96,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                 </div>
                 <div
                   className="marger__MargerDiv-q3lecu-0 dmMPzX"
+                  style={null}
                 >
                   <div
                     className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"

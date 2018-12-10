@@ -59,6 +59,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     >
       <div
         className="marger__MargerDiv-q3lecu-0 eyQbYR"
+        style={null}
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -102,11 +103,9 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     <div
       className="marger__MargerDiv-q3lecu-0 iPaUkj"
       style={
-        Array [
-          Object {
-            "minHeight": "75px",
-          },
-        ]
+        Object {
+          "minHeight": "75px",
+        }
       }
     >
       <div
@@ -248,6 +247,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     >
       <div
         className="marger__MargerDiv-q3lecu-0 eyQbYR"
+        style={null}
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -304,11 +304,9 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     <div
       className="marger__MargerDiv-q3lecu-0 iPaUkj"
       style={
-        Array [
-          Object {
-            "minHeight": "75px",
-          },
-        ]
+        Object {
+          "minHeight": "75px",
+        }
       }
     >
       <div
@@ -499,6 +497,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     >
       <div
         className="marger__MargerDiv-q3lecu-0 eyQbYR"
+        style={null}
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -546,11 +545,9 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     <div
       className="marger__MargerDiv-q3lecu-0 iPaUkj"
       style={
-        Array [
-          Object {
-            "minHeight": "75px",
-          },
-        ]
+        Object {
+          "minHeight": "75px",
+        }
       }
     >
       <div

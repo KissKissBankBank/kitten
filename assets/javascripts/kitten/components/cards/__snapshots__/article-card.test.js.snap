@@ -59,6 +59,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     >
       <div
         className="marger__MargerDiv-q3lecu-0 eyQbYR"
+        style={null}
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -101,11 +102,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     </div>
     <div
       className="marger__MargerDiv-q3lecu-0 iPaUkj"
-      style={
-        Array [
-          false,
-        ]
-      }
+      style={null}
     >
       <div
         className="marger__MargerDiv-q3lecu-0 jAJVJj"
@@ -239,6 +236,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     >
       <div
         className="marger__MargerDiv-q3lecu-0 eyQbYR"
+        style={null}
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -281,11 +279,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     </div>
     <div
       className="marger__MargerDiv-q3lecu-0 iPaUkj"
-      style={
-        Array [
-          false,
-        ]
-      }
+      style={null}
     >
       <div
         className="marger__MargerDiv-q3lecu-0 jAJVJj"
@@ -459,6 +453,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     >
       <div
         className="marger__MargerDiv-q3lecu-0 eyQbYR"
+        style={null}
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -501,11 +496,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     </div>
     <div
       className="marger__MargerDiv-q3lecu-0 iPaUkj"
-      style={
-        Array [
-          false,
-        ]
-      }
+      style={null}
     >
       <div
         className="marger__MargerDiv-q3lecu-0 jAJVJj"
@@ -639,6 +630,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     >
       <div
         className="marger__MargerDiv-q3lecu-0 eyQbYR"
+        style={null}
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -685,11 +677,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     </div>
     <div
       className="marger__MargerDiv-q3lecu-0 iPaUkj"
-      style={
-        Array [
-          false,
-        ]
-      }
+      style={null}
     >
       <div
         className="marger__MargerDiv-q3lecu-0 jAJVJj"
