@@ -284,8 +284,7 @@ describe('<SimilarProjectsCard />', () => {
           )
           rightArrowButton = similarProjectsCard.find('.k-ButtonIcon').last()
 
-          similarProjectsCard.setState({ currentIndex: 1 })
-          rightArrowButton.simulate('click')
+          similarProjectsCard.setState({ currentIndex: 2 })
 
           currentCard = similarProjectsCard.find(SimilarProjectCard)
         })
