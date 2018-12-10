@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
 import COLORS from 'kitten/constants/colors-config'
-
-const ButtonIcon = Radium(ButtonIconBase)
 
 export class TeamCardButtonWithTooltip extends Component {
   static propTypes = {
@@ -38,13 +36,18 @@ export class TeamCardButtonWithTooltip extends Component {
   }
 
   render() {
-    const { phoneNumber, color } = this.props
+    const { phoneNumber, color, pseudoColor } = this.props
 
     const tooltipStyle = [
       colorTooltip(color),
       styles.tooltip.content,
       this.state.hover && styles.tooltip.content.hover,
       this.state.focus && styles.tooltip.content.focus,
+    ]
+
+    const tooltipAfterStyle = [
+      colorPseudoTooltip(pseudoColor),
+      styles.tooltip.content.after,
     ]
 
     return (
@@ -60,7 +63,7 @@ export class TeamCardButtonWithTooltip extends Component {
           <div style={styles.tooltip}>
             <span style={tooltipStyle}>
               {phoneNumber}
-              <span style={styles.tooltip.content.after} />
+              <span style={tooltipAfterStyle} />
             </span>
 
             <ButtonIcon
@@ -82,13 +85,13 @@ const pseudoClass = {
   opacity: 1,
 }
 
+const colorPseudoTooltip = pseudoTooltipColor => ({
+  borderBottomColor: `${pseudoTooltipColor}`,
+})
+
 const colorTooltip = backgroundTooltipColor => ({
   backgroundColor: `${backgroundTooltipColor}`,
   borderColor: `${backgroundTooltipColor}`,
-
-  after: {
-    borderBottomColor: `${backgroundTooltipColor}`,
-  },
 })
 
 const backgroundColor = COLORS.primary1
