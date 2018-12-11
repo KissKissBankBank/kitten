@@ -3,12 +3,8 @@
 exports[`<Field /> with <Field.Input /> in error matches with snapshot 1`] = `
 Array [
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.9375rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 PVOpW"
+    style={null}
   >
     <div
       className="k-Line"
@@ -71,12 +67,8 @@ Array [
     </div>
   </div>,
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginTop": "0.9375rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 dmMPzX"
+    style={null}
   >
     <input
       className="k-TextInput is-error"
@@ -88,12 +80,8 @@ Array [
     />
   </div>,
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginTop": "0.625rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 ksLFOn"
+    style={null}
   >
     <p
       className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
@@ -112,12 +100,8 @@ Array [
 exports[`<Field /> with <Field.Input /> matches with snapshot 1`] = `
 Array [
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.9375rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 PVOpW"
+    style={null}
   >
     <div
       className="k-Line"
@@ -180,12 +164,8 @@ Array [
     </div>
   </div>,
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginTop": "0.9375rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 dmMPzX"
+    style={null}
   >
     <input
       className="k-TextInput"
@@ -202,12 +182,8 @@ Array [
 exports[`<Field /> with <Field.RadioButtonSet /> matches with snapshot 1`] = `
 Array [
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.9375rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 PVOpW"
+    style={null}
   >
     <div
       className="k-Line"
@@ -231,12 +207,8 @@ Array [
     </div>
   </div>,
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginTop": "0.9375rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 dmMPzX"
+    style={null}
   >
     <div
       className="k-RadioButtonSet"
@@ -298,12 +270,8 @@ Array [
 exports[`<Field /> with <Field.Select /> matches with snapshot 1`] = `
 Array [
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.9375rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 PVOpW"
+    style={null}
   >
     <div
       className="k-Line"
@@ -327,12 +295,8 @@ Array [
     </div>
   </div>,
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginTop": "0.9375rem",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 dmMPzX"
+    style={null}
   >
     <div
       className="k-Select"
