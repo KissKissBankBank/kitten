@@ -20,4 +20,4 @@ echo "I can use it alteady with npm install @kisskissbankbank/kitten"
 
 npm run deploy-storybook
 
-echo "Storybook is updated! https://kisskissbankbank.github.io"
+echo "Storybook is updated! https://kisskissbankbank.github.io/kitten"
