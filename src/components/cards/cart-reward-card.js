@@ -112,8 +112,14 @@ function (_Component) {
           titleTag = _this$props.titleTag,
           titleAmount = _this$props.titleAmount,
           subtitle = _this$props.subtitle,
-          textDescription = _this$props.textDescription,
-          viewportIsMobile = _this$props.viewportIsMobile;
+          children = _this$props.children,
+          viewportIsMobile = _this$props.viewportIsMobile,
+          textDescription = _this$props.textDescription;
+
+      var description = _react.default.Children.toArray(children).filter(function (child) {
+        return child.type === CartRewardCard.Description;
+      });
+
       return _react.default.createElement(Marger, {
         bottom: "4",
         style: styles.description
@@ -136,7 +142,7 @@ function (_Component) {
       }, _react.default.createElement(_paragraph.Paragraph, {
         margin: false,
         modifier: "quaternary"
-      }, textDescription)), this.renderBottomContent());
+      }, textDescription, description)), this.renderBottomContent());
     }
   }, {
     key: "renderGarbage",
@@ -191,7 +197,6 @@ function (_Component) {
 
 CartRewardCardComponent.propTypes = {
   titleAmount: _propTypes.default.string.isRequired,
-  textDescription: _propTypes.default.string.isRequired,
   titleTag: _propTypes.default.string,
   subtitle: _propTypes.default.string,
   updateAmountTitle: _propTypes.default.string,
@@ -200,7 +205,8 @@ CartRewardCardComponent.propTypes = {
   onCloseClick: _propTypes.default.func,
   // Deprecated.
   shippingTitle: (0, _deprecated.default)(_propTypes.default.string, 'Prefer use <CartRewardCard.Information />'),
-  shippingValue: (0, _deprecated.default)(_propTypes.default.string, 'Prefer use <CartRewardCard.Information />')
+  shippingValue: (0, _deprecated.default)(_propTypes.default.string, 'Prefer use <CartRewardCard.Information />'),
+  textDescription: (0, _deprecated.default)(_propTypes.default.string, 'Prefer use <CartRewardCard.Description />')
 };
 CartRewardCardComponent.defaultProps = {
   titleTag: 'h1',
@@ -274,4 +280,9 @@ CartRewardCard.Information = function (_ref) {
 CartRewardCard.Information.propTypes = {
   title: _propTypes.default.string.isRequired,
   value: _propTypes.default.string.isRequired
+};
+
+CartRewardCard.Description = function (_ref2) {
+  var children = _ref2.children;
+  return _react.default.createElement(_react.Fragment, null, children);
 };

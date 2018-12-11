@@ -17,16 +17,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     >
       <img
         alt=""
@@ -59,13 +50,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -107,23 +92,10 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-          "minHeight": "75px",
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 jduugu"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "lineHeight": "1",
-            "marginBottom": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -155,16 +127,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
         </p>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "marginTop": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -206,16 +169,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     />
     <div
       data-radium={true}
@@ -231,13 +185,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -292,23 +240,10 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-          "minHeight": "75px",
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 jduugu"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "lineHeight": "1",
-            "marginBottom": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <div
           data-radium={true}
@@ -340,16 +275,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "marginTop": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -423,16 +349,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     >
       <img
         alt="Image alt"
@@ -465,13 +382,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -517,23 +428,10 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-          "minHeight": "75px",
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 jduugu"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "lineHeight": "1",
-            "marginBottom": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <h4
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -567,16 +465,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </h4>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "marginTop": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -629,26 +518,10 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "display": "flex",
-          "flexWrap": "wrap",
-          "lineHeight": "1",
-          "marginBottom": "0.3125rem",
-          "marginTop": "0.9375rem",
-          "padding": "0 10px",
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 geQoCp"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginRight": "30px",
-            "marginTop": "0.3125rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 jNxKgx"
       >
         <span
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -657,13 +530,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginRight": "30px",
-            "marginTop": "0.3125rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 jNxKgx"
       >
         <span
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -672,13 +539,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginRight": 0,
-            "marginTop": "0.3125rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 bBRXdi"
       >
         <span
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -688,17 +549,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "flexDirection": "row",
-          "marginBottom": "1.25rem",
-          "marginTop": "0.3125rem",
-          "padding": "0 10px",
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 eMXPeD"
     >
       <div
         aria-valuemax="100"

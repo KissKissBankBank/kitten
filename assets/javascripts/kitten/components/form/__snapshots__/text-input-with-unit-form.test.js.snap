@@ -11,13 +11,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "1.875rem",
-        "marginTop": "1.875rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 XZtAg"
   >
     <div
       className="k-Grid"
@@ -33,12 +27,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.9375rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 bMhIqY"
         >
           <label
             className="k-Label k-Label--micro"
@@ -49,12 +38,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           </label>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginTop": "0.9375rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 gbReRL"
         >
           <div
             className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -83,13 +67,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    data-radium={true}
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "center",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 fsabFf"
   >
     <div
       className="rmq-2001d403"
@@ -132,13 +110,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "1.875rem",
-        "marginTop": "1.875rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 XZtAg"
   >
     <div
       className="k-Grid"
@@ -154,12 +126,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.9375rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 bMhIqY"
         >
           <label
             className="k-Label k-Label--micro"
@@ -170,12 +137,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
           </label>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginTop": "0.9375rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 gbReRL"
         >
           <div
             className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -204,13 +166,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    data-radium={true}
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "center",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 fsabFf"
   >
     <div
       className="rmq-2001d403"
@@ -253,13 +209,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.625rem",
-        "marginTop": "1.875rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 fwKvGq"
   >
     <div
       className="k-Grid"
@@ -275,12 +225,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.9375rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 bMhIqY"
         >
           <label
             className="k-Label k-Label--micro"
@@ -291,13 +236,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
           </label>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.625rem",
-              "marginTop": "0.9375rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 fDLxZE"
         >
           <div
             className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -323,12 +262,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginTop": "0.625rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 kdfkFz"
         >
           <span
             className="k-u-color-error k-u-size-micro k-u-weight-regular"
@@ -340,13 +274,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    data-radium={true}
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "center",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 fsabFf"
   >
     <div
       className="rmq-2001d403"

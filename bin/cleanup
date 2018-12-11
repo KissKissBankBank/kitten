@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-rm -fr node_modules
+rm -fr node_modules .bundle app dist spec pkg vendor
 
 echo "Cleanup done!"
