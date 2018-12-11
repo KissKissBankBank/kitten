@@ -19,10 +19,6 @@ storiesOf('Cards/CartRewardCard', module)
               <CartRewardCard
                 titleAmount={text('Title Amount', 'For 00€')}
                 subtitle={text('Subtitle', 'Don libre')}
-                textDescription={text(
-                  'Text description',
-                  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont',
-                )}
                 updateAmountTitle={text(
                   'Update amount',
                   'Change donation amount',
@@ -36,6 +32,12 @@ storiesOf('Cards/CartRewardCard', module)
                   title={text('Other information title', 'Variation:')}
                   value={text('Other information value', 'Size L')}
                 />
+                <CartRewardCard.Description>
+                  {text(
+                    'Text description',
+                    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont',
+                  )}
+                </CartRewardCard.Description>
               </CartRewardCard>
             </Marger>
           </GridCol>

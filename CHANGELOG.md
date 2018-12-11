@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `CartRewardCard` introduce new sub-component `CartRewardCard.Description` as prop `textDescription` is deprecated
 - Feature: Add `Field` component and sub-components:
   - `Field.Label`
   - `Field.Input`
