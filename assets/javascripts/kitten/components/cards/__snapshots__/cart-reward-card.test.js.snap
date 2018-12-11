@@ -56,10 +56,10 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 gUkstQ"
+      className="marger__StyledMarger-q3lecu-0 gnPBCU"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 hQpjJz"
+        className="marger__StyledMarger-q3lecu-0 fPugnd"
       >
         <h1
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -69,7 +69,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </div>
       
       <div
-        className="marger__MargerDiv-q3lecu-0 iGYdNe"
+        className="marger__StyledMarger-q3lecu-0 bfHaYT"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -146,10 +146,10 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 gUkstQ"
+      className="marger__StyledMarger-q3lecu-0 gnPBCU"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 hQpjJz"
+        className="marger__StyledMarger-q3lecu-0 fPugnd"
       >
         <Custom title tag
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -158,7 +158,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </Custom title tag>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 hGmHod"
+        className="marger__StyledMarger-q3lecu-0 dhveii"
       >
         <span
           className="k-u-size-default k-u-weight-bold"
@@ -167,7 +167,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 iGYdNe"
+        className="marger__StyledMarger-q3lecu-0 bfHaYT"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -189,7 +189,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 bhvMDJ"
+        className="marger__StyledMarger-q3lecu-0 fcmQnt"
       >
         <a
           className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"

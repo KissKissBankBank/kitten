@@ -12,7 +12,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 iNgIye"
+    className="marger__StyledMarger-q3lecu-0 cvWOBq"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -34,7 +34,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 lbjLoA"
+            className="marger__StyledMarger-q3lecu-0 dgmTft"
           >
             <h1
               className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
@@ -48,7 +48,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 dSAEAa"
+            className="marger__StyledMarger-q3lecu-0 bgeujG"
           >
             <span
               className="k-HorizontalStroke k-HorizontalStroke--big"
@@ -56,7 +56,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
           </div>
           
           <div
-            className="marger__MargerDiv-q3lecu-0 eGrRkZ"
+            className="marger__StyledMarger-q3lecu-0 fShUvY"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -100,7 +100,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 eItjH"
+    className="marger__StyledMarger-q3lecu-0 gIzxUK"
   >
     <div
       className="k-Grid"
@@ -122,7 +122,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 hQpjJz"
+            className="marger__StyledMarger-q3lecu-0 fPugnd"
           >
             <span
               className="k-Button k-Button--lithium k-Button--tiny k-Button--icon is-readonly k-Button--icon--tiny"
@@ -151,7 +151,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
             </span>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 iGYdNe"
+            className="marger__StyledMarger-q3lecu-0 bfHaYT"
           >
             <h4
               className="k-Title k-Title--quaternary k-Title--withoutMargin k-Title--italic"
@@ -165,14 +165,14 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
             </h4>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 dSAEAa"
+            className="marger__StyledMarger-q3lecu-0 bgeujG"
           >
             <span
               className="k-HorizontalStroke k-HorizontalStroke--big"
             />
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 kHDsFw"
+            className="marger__StyledMarger-q3lecu-0 fwKvGq"
           >
             <quote
               className="k-u-color-font1 k-u-size-big k-u-weight-bold"
@@ -186,7 +186,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
             </quote>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 jXbljZ"
+            className="marger__StyledMarger-q3lecu-0 kdfkFz"
           >
             <p
               className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -206,7 +206,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 dSAEAa"
+            className="marger__StyledMarger-q3lecu-0 bgeujG"
           >
             <div>
               <span
@@ -259,7 +259,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
         }
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 hQpjJz"
+          className="marger__StyledMarger-q3lecu-0 fPugnd"
         >
           <div
             data-radium={true}
@@ -282,7 +282,7 @@ exports[`<RewardCard /> on tiny version matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 iGYdNe"
+      className="marger__StyledMarger-q3lecu-0 bfHaYT"
     >
       <div
         className="k-Grid"
@@ -434,7 +434,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 iNgIye"
+    className="marger__StyledMarger-q3lecu-0 cvWOBq"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -456,7 +456,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 hQpjJz"
+            className="marger__StyledMarger-q3lecu-0 fPugnd"
           >
             <span
               className="k-Button k-Button--lithium k-Button--tiny k-Button--icon is-readonly k-Button--icon--tiny"
@@ -485,7 +485,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             </span>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 iGYdNe"
+            className="marger__StyledMarger-q3lecu-0 bfHaYT"
           >
             <h4
               className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
@@ -499,14 +499,14 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             </h4>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 dSAEAa"
+            className="marger__StyledMarger-q3lecu-0 bgeujG"
           >
             <span
               className="k-HorizontalStroke k-HorizontalStroke--big"
             />
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 kHDsFw"
+            className="marger__StyledMarger-q3lecu-0 fwKvGq"
           >
             <quote
               className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
@@ -520,7 +520,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             </quote>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 jXbljZ"
+            className="marger__StyledMarger-q3lecu-0 kdfkFz"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -540,7 +540,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 dSAEAa"
+            className="marger__StyledMarger-q3lecu-0 bgeujG"
           >
             <span
               className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
@@ -577,7 +577,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="marger__MargerDiv-q3lecu-0 eGrRkZ"
+          className="marger__StyledMarger-q3lecu-0 fShUvY"
         >
           <button
             aria-labelledby="Custom text button"
@@ -603,7 +603,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             Custom text button
           </button>
           <div
-            className="marger__MargerDiv-q3lecu-0 bhvMDJ"
+            className="marger__StyledMarger-q3lecu-0 fcmQnt"
           >
             <div
               data-radium={true}
@@ -704,7 +704,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         style={Object {}}
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 hQpjJz"
+          className="marger__StyledMarger-q3lecu-0 fPugnd"
         >
           <div
             data-radium={true}
@@ -761,7 +761,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 iNgIye"
+    className="marger__StyledMarger-q3lecu-0 cvWOBq"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -783,7 +783,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 lbjLoA"
+            className="marger__StyledMarger-q3lecu-0 dgmTft"
           >
             <h1
               className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
@@ -797,14 +797,14 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 dSAEAa"
+            className="marger__StyledMarger-q3lecu-0 bgeujG"
           >
             <span
               className="k-HorizontalStroke k-HorizontalStroke--big"
             />
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 kHDsFw"
+            className="marger__StyledMarger-q3lecu-0 fwKvGq"
           >
             <p
               className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
@@ -818,7 +818,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 jXbljZ"
+            className="marger__StyledMarger-q3lecu-0 kdfkFz"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -838,7 +838,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 dSAEAa"
+            className="marger__StyledMarger-q3lecu-0 bgeujG"
           >
             <span
               className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
@@ -891,7 +891,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="marger__MargerDiv-q3lecu-0 eGrRkZ"
+          className="marger__StyledMarger-q3lecu-0 fShUvY"
         >
           <button
             aria-labelledby="Custom text button"
@@ -917,7 +917,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             Custom text button
           </button>
           <div
-            className="marger__MargerDiv-q3lecu-0 bhvMDJ"
+            className="marger__StyledMarger-q3lecu-0 fcmQnt"
           >
             <div
               data-radium={true}
@@ -1018,7 +1018,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
         style={Object {}}
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 hniAsz"
+          className="marger__StyledMarger-q3lecu-0 bXTWGR"
         >
           <div
             data-radium={true}

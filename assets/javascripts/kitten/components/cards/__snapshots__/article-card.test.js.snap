@@ -17,7 +17,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 hRuDHW"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     >
       <img
         alt=""
@@ -50,7 +50,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 fAimMx"
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -92,10 +92,10 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 hQpjJz"
+      className="marger__StyledMarger-q3lecu-0 fPugnd"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 bgFPlO"
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -103,7 +103,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         />
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 gjOKXg"
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -145,7 +145,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     }
   >
     <div
-      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 hRuDHW"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     >
       <img
         alt=""
@@ -178,7 +178,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 fAimMx"
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -220,10 +220,10 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 hQpjJz"
+      className="marger__StyledMarger-q3lecu-0 fPugnd"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 bgFPlO"
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -233,7 +233,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         </p>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 gjOKXg"
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -313,7 +313,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 hRuDHW"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     >
       <img
         alt=""
@@ -346,7 +346,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 fAimMx"
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -388,10 +388,10 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 hQpjJz"
+      className="marger__StyledMarger-q3lecu-0 fPugnd"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 bgFPlO"
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -399,7 +399,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         />
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 gjOKXg"
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -441,7 +441,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 hRuDHW"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     >
       <img
         alt="Image alt"
@@ -474,7 +474,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 fAimMx"
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -520,10 +520,10 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 hQpjJz"
+      className="marger__StyledMarger-q3lecu-0 fPugnd"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 bgFPlO"
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <h4
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -533,7 +533,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         </h4>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 gjOKXg"
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"

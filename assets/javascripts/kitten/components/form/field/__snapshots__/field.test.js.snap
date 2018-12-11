@@ -3,7 +3,7 @@
 exports[`<Field /> with <Field.Input /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__MargerDiv-q3lecu-0 kMmCJm"
+    className="marger__StyledMarger-q3lecu-0 bMhIqY"
   >
     <div
       className="k-Line"
@@ -66,7 +66,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__MargerDiv-q3lecu-0 bXQMav"
+    className="marger__StyledMarger-q3lecu-0 gbReRL"
   >
     <input
       className="k-TextInput is-error"
@@ -78,7 +78,7 @@ Array [
     />
   </div>,
   <div
-    className="marger__MargerDiv-q3lecu-0 jXbljZ"
+    className="marger__StyledMarger-q3lecu-0 kdfkFz"
   >
     <p
       className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
@@ -97,7 +97,7 @@ Array [
 exports[`<Field /> with <Field.Input /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__MargerDiv-q3lecu-0 kMmCJm"
+    className="marger__StyledMarger-q3lecu-0 bMhIqY"
   >
     <div
       className="k-Line"
@@ -160,7 +160,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__MargerDiv-q3lecu-0 bXQMav"
+    className="marger__StyledMarger-q3lecu-0 gbReRL"
   >
     <input
       className="k-TextInput"
@@ -177,7 +177,7 @@ Array [
 exports[`<Field /> with <Field.RadioButtonSet /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__MargerDiv-q3lecu-0 kMmCJm"
+    className="marger__StyledMarger-q3lecu-0 bMhIqY"
   >
     <div
       className="k-Line"
@@ -201,7 +201,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__MargerDiv-q3lecu-0 bXQMav"
+    className="marger__StyledMarger-q3lecu-0 gbReRL"
   >
     <div
       className="k-RadioButtonSet"
@@ -263,7 +263,7 @@ Array [
 exports[`<Field /> with <Field.Select /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__MargerDiv-q3lecu-0 kMmCJm"
+    className="marger__StyledMarger-q3lecu-0 bMhIqY"
   >
     <div
       className="k-Line"
@@ -287,7 +287,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__MargerDiv-q3lecu-0 bXQMav"
+    className="marger__StyledMarger-q3lecu-0 gbReRL"
   >
     <div
       className="k-Select"

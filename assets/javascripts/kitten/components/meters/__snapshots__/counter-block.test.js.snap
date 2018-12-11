@@ -10,7 +10,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 kWjAjy"
+    className="marger__StyledMarger-q3lecu-0 bZfxJj"
   >
     <p
       className="k-Title k-Title--tertiary k-Title--withoutMargin"
@@ -86,7 +86,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 cwxmaD"
+    className="marger__StyledMarger-q3lecu-0 enHNhs"
   >
     <p
       className="k-u-size-huge k-u-style-italic k-u-weight-bold"

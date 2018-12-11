@@ -35,10 +35,10 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 jjCsZa"
+        className="marger__StyledMarger-q3lecu-0 csUffW"
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 bkglEp"
+          className="marger__StyledMarger-q3lecu-0 gdXKir"
         >
           <span
             className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -143,10 +143,10 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         }
       />
       <div
-        className="marger__MargerDiv-q3lecu-0 jjCsZa"
+        className="marger__StyledMarger-q3lecu-0 csUffW"
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 iSamlQ"
+          className="marger__StyledMarger-q3lecu-0 ikpinD"
         >
           <span
             className="k-u-color-font1 k-u-size-default k-u-weight-regular"

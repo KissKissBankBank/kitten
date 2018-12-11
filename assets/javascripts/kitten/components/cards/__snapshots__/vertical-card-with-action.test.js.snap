@@ -5,7 +5,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 eWOTtq"
+    className="marger__StyledMarger-q3lecu-0 hfEYYe"
   >
     <img
       data-radium={true}
@@ -18,13 +18,13 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 kOIRIA"
+    className="marger__StyledMarger-q3lecu-0 XZtAg"
   >
     <div
       data-radium={true}
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 bkglEp"
+        className="marger__StyledMarger-q3lecu-0 gdXKir"
       >
         <h1
           className="k-Title k-Title--senary k-Title--withoutMargin"
@@ -42,7 +42,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 bKkJNK"
+    className="marger__StyledMarger-q3lecu-0 tihXz"
   >
     <button
       className="k-Button k-Button--helium"
@@ -69,7 +69,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
   data-radium={true}
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 eWOTtq"
+    className="marger__StyledMarger-q3lecu-0 hfEYYe"
   >
     <img
       alt="Image alt"
@@ -84,13 +84,13 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     />
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 kOIRIA"
+    className="marger__StyledMarger-q3lecu-0 XZtAg"
   >
     <div
       data-radium={true}
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 kMmCJm"
+        className="marger__StyledMarger-q3lecu-0 bMhIqY"
       >
         <h1
           className="k-Title k-Title--senary k-Title--withoutMargin"
@@ -105,7 +105,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
         </h1>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 bXQMav"
+        className="marger__StyledMarger-q3lecu-0 gbReRL"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -122,7 +122,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     </div>
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 bKkJNK"
+    className="marger__StyledMarger-q3lecu-0 tihXz"
   >
     <button
       className="k-Button k-Button--helium"
