@@ -29,8 +29,9 @@ export class TextInput extends Component {
       'is-valid': valid,
       'is-error': error,
       'is-disabled': disabled,
-      'k-TextInput--twoDigits': digits == 2,
-      'k-TextInput--twelveDigits': digits == 12,
+      'k-TextInput--twoDigits': digits === 2,
+      'k-TextInput--sixDigits': digits === 6,
+      'k-TextInput--twelveDigits': digits === 12,
     })
 
     if (tag == 'textarea') {

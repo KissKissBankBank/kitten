@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Marger = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
@@ -100,20 +102,16 @@ function (_Component) {
       return _this.props[propName] && _this.props[propName].fromXxs;
     };
 
-    _this.defaultProp = function (propName) {
-      var cssRule = "margin-".concat(propName);
+    _this.defaultValue = function (propName) {
+      if (_this.propIsNumber(propName)) return _this.marginSize(_this.props[propName]);
+      if (_this.hasDefaultProp(propName)) return _this.marginSize(_this.props[propName].default);
+      if (_this.hasXxsProp(propName)) return _this.marginSize(_this.props[propName].fromXxs);
+    };
 
-      if (_this.propIsNumber(propName)) {
-        return "".concat(cssRule, ": ").concat(_this.marginSize(_this.props[propName]), ";");
-      }
+    _this.stylesForName = function (propName) {
+      var value = _this.defaultValue(propName);
 
-      if (_this.hasDefaultProp(propName)) {
-        return "".concat(cssRule, ": ").concat(_this.marginSize(_this.props[propName].default), ";");
-      }
-
-      if (_this.hasXxsProp(propName)) {
-        return "".concat(cssRule, ": ").concat(_this.marginSize(_this.props[propName].fromXxs), ";");
-      }
+      if (value) return "margin-".concat(propName, ": ").concat(_this.defaultValue(propName), ";");
     };
 
     _this.gutter = 10 / _typographyConfig.default.root;
@@ -128,7 +126,8 @@ function (_Component) {
       var _this$props = this.props,
           top = _this$props.top,
           bottom = _this$props.bottom,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["top", "bottom"]);
+          style = _this$props.style,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["top", "bottom", "style"]);
       var viewportRanges = Object.keys(_screenConfig.ScreenConfig).map(function (size) {
         return size.toLowerCase();
       }).filter(function (size) {
@@ -141,9 +140,11 @@ function (_Component) {
       var MargerDiv = _styledComponents.default.div.withConfig({
         displayName: "marger__MargerDiv",
         componentId: "q3lecu-0"
-      })(["", " ", " ", ""], this.defaultProp('top'), this.defaultProp('bottom'), viewportRangesStyles);
+      })(["", " ", " ", ""], this.stylesForName('top'), this.stylesForName('bottom'), viewportRangesStyles);
 
-      return _react.default.createElement(MargerDiv, others);
+      return _react.default.createElement(MargerDiv, (0, _extends2.default)({
+        style: style || null
+      }, others));
     }
   }]);
   return Marger;
