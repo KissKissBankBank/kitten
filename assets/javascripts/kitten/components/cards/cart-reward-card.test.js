@@ -25,10 +25,9 @@ describe('<CartRewardCard />', () => {
 
     const component = renderer
       .create(
-        <CartRewardCard
-          titleAmount="Custom title amount"
-          textDescription="Custom text description"
-        />,
+        <CartRewardCard titleAmount="Custom title amount">
+          Custom text description
+        </CartRewardCard>,
       )
       .toJSON()
 
@@ -43,7 +42,6 @@ describe('<CartRewardCard />', () => {
         .create(
           <CartRewardCard
             titleAmount="Custom title amount"
-            textDescription="Custom text description"
             titleTag="Custom title tag"
             subtitle="Custom subtitle"
             updateAmountTitle="Custom amount"
@@ -53,6 +51,7 @@ describe('<CartRewardCard />', () => {
               title="Custom shipping title"
               value="Custom shipping value"
             />
+            Custom text description
           </CartRewardCard>,
         )
         .toJSON()

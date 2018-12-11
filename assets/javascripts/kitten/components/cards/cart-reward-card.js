@@ -18,7 +18,6 @@ const Marger = Radium(MargerBase)
 class CartRewardCardComponent extends Component {
   static propTypes = {
     titleAmount: PropTypes.string.isRequired,
-    textDescription: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
     subtitle: PropTypes.string,
     updateAmountTitle: PropTypes.string,
@@ -104,7 +103,7 @@ class CartRewardCardComponent extends Component {
       titleTag,
       titleAmount,
       subtitle,
-      textDescription,
+      children,
       viewportIsMobile,
     } = this.props
 
@@ -124,7 +123,7 @@ class CartRewardCardComponent extends Component {
         )}
         <Marger top={viewportIsMobile && !subtitle ? 1 : 2} bottom="2">
           <Paragraph margin={false} modifier="quaternary">
-            {textDescription}
+            {children}
           </Paragraph>
         </Marger>
         {this.renderBottomContent()}
