@@ -146,24 +146,10 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       </button>
     </div>
     <div
-      className="rmq-b86f8336"
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "2.5rem",
-          "marginLeft": 20,
-          "marginRight": 20,
-          "maxWidth": 500,
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 gnPBCU"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fPugnd"
       >
         <h1
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -173,13 +159,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       </div>
       
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-            "marginTop": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 bfHaYT"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -193,8 +173,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
-margin-right: 40px !important;}}",
+        "__html": "",
       }
     }
   />
