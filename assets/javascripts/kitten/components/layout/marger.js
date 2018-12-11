@@ -121,13 +121,13 @@ export class Marger extends Component {
       ]
     }, [])
 
-    const MargerDiv = styled.div`
+    const StyledMarger = styled.div`
       ${this.stylesForName('top')}
       ${this.stylesForName('bottom')}
       ${viewportRangesStyles}
       ${style}
     `
 
-    return <MargerDiv {...others} />
+    return <StyledMarger {...others} />
   }
 }
