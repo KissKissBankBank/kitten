@@ -26,7 +26,9 @@ describe('<CartRewardCard />', () => {
     const component = renderer
       .create(
         <CartRewardCard titleAmount="Custom title amount">
-          Custom text description
+          <CartRewardCard.Description>
+            Custom text description
+          </CartRewardCard.Description>
         </CartRewardCard>,
       )
       .toJSON()
@@ -51,7 +53,9 @@ describe('<CartRewardCard />', () => {
               title="Custom shipping title"
               value="Custom shipping value"
             />
-            Custom text description
+            <CartRewardCard.Description>
+              Custom text description
+            </CartRewardCard.Description>
           </CartRewardCard>,
         )
         .toJSON()
