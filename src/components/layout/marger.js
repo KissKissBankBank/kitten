@@ -9,8 +9,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Marger = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
@@ -137,14 +135,12 @@ function (_Component) {
         return (0, _toConsumableArray2.default)(acc).concat([_this2.viewportRangeStyleCondition('top', viewportRange), _this2.viewportRangeStyleCondition('bottom', viewportRange)]);
       }, []);
 
-      var MargerDiv = _styledComponents.default.div.withConfig({
-        displayName: "marger__MargerDiv",
+      var StyledMarger = _styledComponents.default.div.withConfig({
+        displayName: "marger__StyledMarger",
         componentId: "q3lecu-0"
-      })(["", " ", " ", ""], this.stylesForName('top'), this.stylesForName('bottom'), viewportRangesStyles);
+      })(["", " ", " ", " ", ""], this.stylesForName('top'), this.stylesForName('bottom'), viewportRangesStyles, style);
 
-      return _react.default.createElement(MargerDiv, (0, _extends2.default)({
-        style: style || null
-      }, others));
+      return _react.default.createElement(StyledMarger, others);
     }
   }]);
   return Marger;
