@@ -30,5 +30,5 @@ const imgBackground = image => ({
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
   width: '100%',
-  paddingBottom: imageHeight / imageWidth * 100 + '%',
+  paddingBottom: (imageHeight / imageWidth) * 100 + '%',
 })
