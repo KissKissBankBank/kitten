@@ -12,8 +12,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 gdbaHu"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 iNgIye"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -35,8 +34,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 bnQcdR"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 lbjLoA"
           >
             <h1
               className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
@@ -50,8 +48,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 dqQmTc"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 dSAEAa"
           >
             <span
               className="k-HorizontalStroke k-HorizontalStroke--big"
@@ -59,8 +56,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           </div>
           
           <div
-            className="marger__MargerDiv-q3lecu-0 hOWkne"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 eGrRkZ"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -104,8 +100,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 gdbaHu"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 iNgIye"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -127,8 +122,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 bnQcdR"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 lbjLoA"
           >
             <h1
               className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
@@ -142,16 +136,14 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 dqQmTc"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 dSAEAa"
           >
             <span
               className="k-HorizontalStroke k-HorizontalStroke--big"
             />
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 flJUdZ"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 kHDsFw"
           >
             <p
               className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
@@ -165,8 +157,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 ksLFOn"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 jXbljZ"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -186,8 +177,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 dqQmTc"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 dSAEAa"
           >
             <span
               className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
@@ -240,8 +230,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="marger__MargerDiv-q3lecu-0 hOWkne"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 eGrRkZ"
         >
           <button
             aria-labelledby="Custom text button"
@@ -267,8 +256,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             Custom text button
           </button>
           <div
-            className="marger__MargerDiv-q3lecu-0 jyeADL"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 bhvMDJ"
           >
             <div
               data-radium={true}
@@ -369,8 +357,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         style={Object {}}
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 fyuddl"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 hniAsz"
         >
           <div
             data-radium={true}
@@ -427,8 +414,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 hQQaP"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 eItjH"
   >
     <div
       className="k-Grid"
@@ -450,8 +436,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 bnQcdR"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 lbjLoA"
           >
             <h1
               className="k-Title k-Title--quaternary k-Title--withoutMargin k-Title--italic"
@@ -465,16 +450,14 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 dqQmTc"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 dSAEAa"
           >
             <span
               className="k-HorizontalStroke k-HorizontalStroke--big"
             />
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 flJUdZ"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 kHDsFw"
           >
             <p
               className="k-u-color-font1 k-u-size-big k-u-weight-bold"
@@ -488,8 +471,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 ksLFOn"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 jXbljZ"
           >
             <p
               className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -509,8 +491,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 dqQmTc"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 dSAEAa"
           >
             <div>
               <span
@@ -582,8 +563,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         }
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 fyuddl"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 hniAsz"
         >
           <div
             data-radium={true}
@@ -606,8 +586,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 gVTpax"
-      style={null}
+      className="marger__MargerDiv-q3lecu-0 iGYdNe"
     >
       <div
         className="k-Grid"

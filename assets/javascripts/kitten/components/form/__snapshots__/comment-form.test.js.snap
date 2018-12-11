@@ -23,8 +23,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 jAJVJj"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 iBqkgh"
       >
         <span
           className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
@@ -77,74 +76,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 gNoTyt"
-        style={
-          Object {
-            "arrow": Object {
-              "@media (min-width: 640px)": Object {
-                "top": 35,
-              },
-              "before": Object {
-                "borderColor": "transparent",
-                "borderRightColor": "white",
-                "borderStyle": "solid",
-                "borderWidth": 10,
-                "height": 0,
-                "left": -7,
-                "marginTop": -10,
-                "position": "absolute",
-                "width": 0,
-              },
-              "borderColor": "transparent",
-              "borderRightColor": "#eee",
-              "borderStyle": "solid",
-              "borderWidth": 10,
-              "display": "block",
-              "error": Object {
-                "borderRightColor": "#ffb2c7",
-              },
-              "focus": Object {
-                "borderRightColor": "#d8d8d8",
-              },
-              "height": 0,
-              "left": -20,
-              "position": "absolute",
-              "top": 20,
-              "width": 0,
-            },
-            "display": "flex",
-            "position": "relative",
-            "textarea": Object {
-              "@media (min-width: 640px)": Object {
-                "fontSize": 16,
-              },
-              "borderColor": "#eee",
-              "borderStyle": "solid",
-              "borderWidth": 2,
-              "boxSizing": "border-box",
-              "color": "#222",
-              "error": Object {
-                "borderColor": "#ffb2c7",
-                "color": "#ffb2c7",
-              },
-              "focus": Object {
-                "borderColor": "#d8d8d8",
-                "color": "#222",
-                "outline": "none",
-              },
-              "fontSize": 14,
-              "isDisabled": Object {
-                "backgroundColor": "#eee",
-                "borderColor": "#eee",
-                "color": "#b8b8b8",
-              },
-              "overflowY": "hidden",
-              "padding": 30,
-              "resize": "none",
-              "width": "100%",
-            },
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 kuqdzX"
       >
         <textarea
           className="rmq-2904dc95 k-CommentForm__input k-u-weight-light"
@@ -209,8 +141,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 dtajrs"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 eioHMz"
       >
         <span
           className="k-u-color-error k-u-size-micro k-u-weight-regular"

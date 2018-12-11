@@ -5,8 +5,7 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
   className="k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 iPaUkj"
-    style={null}
+    className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 hQpjJz"
   >
     <img
       alt=""
@@ -21,8 +20,7 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 dmMPzX"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 bXQMav"
   >
     <span
       className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -36,8 +34,7 @@ exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
   className="k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 iPaUkj"
-    style={null}
+    className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 hQpjJz"
   >
     <img
       alt=""

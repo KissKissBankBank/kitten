@@ -3,7 +3,6 @@
 exports[`<Marger /> by default renders a <div /> that wraps its children 1`] = `
 <div
   className=""
-  style={null}
 >
   Curioser and curioser
 </div>
@@ -28,7 +27,6 @@ exports[`<Marger /> with bottom prop with object prop has margin-bottom CSS rule
 
 <div
   className="c0"
-  style={null}
 />
 `;
 
@@ -39,7 +37,6 @@ exports[`<Marger /> with bottom prop with object with \`fromXxs\` prop has defau
 
 <div
   className="c0"
-  style={null}
 />
 `;
 
@@ -50,7 +47,6 @@ exports[`<Marger /> with bottom prop with object with \`fromXxs\` prop is overri
 
 <div
   className="c0"
-  style={null}
 />
 `;
 
@@ -61,7 +57,6 @@ exports[`<Marger /> with bottom prop with string prop has margin-bottom CSS rule
 
 <div
   className="c0"
-  style={null}
 />
 `;
 
@@ -72,11 +67,14 @@ exports[`<Marger /> with bottom prop with string prop works with .5 value 1`] = 
 
 <div
   className="c0"
-  style={null}
 />
 `;
 
 exports[`<Marger /> with other styles has a custom style 1`] = `
+.c0 {
+  background-color: red;
+}
+
 @media (min-width:480px) {
   .c0 {
     margin-top: 7.5rem;
@@ -103,11 +101,6 @@ exports[`<Marger /> with other styles has a custom style 1`] = `
 
 <div
   className="c0"
-  style={
-    Object {
-      "backgroundColor": "red",
-    }
-  }
 />
 `;
 
@@ -130,7 +123,6 @@ exports[`<Marger /> with top prop with object prop has margin-top CSS rule 1`] =
 
 <div
   className="c0"
-  style={null}
 />
 `;
 
@@ -141,7 +133,6 @@ exports[`<Marger /> with top prop with object with \`fromXxs\` prop has default 
 
 <div
   className="c0"
-  style={null}
 />
 `;
 
@@ -152,7 +143,6 @@ exports[`<Marger /> with top prop with object with \`fromXxs\` prop is overrided
 
 <div
   className="c0"
-  style={null}
 />
 `;
 
@@ -163,7 +153,6 @@ exports[`<Marger /> with top prop with string prop has margin-top CSS rule 1`] =
 
 <div
   className="c0"
-  style={null}
 />
 `;
 
@@ -174,6 +163,5 @@ exports[`<Marger /> with top prop with string prop works with .5 value 1`] = `
 
 <div
   className="c0"
-  style={null}
 />
 `;

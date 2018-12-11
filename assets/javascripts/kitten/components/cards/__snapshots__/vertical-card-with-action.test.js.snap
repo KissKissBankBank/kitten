@@ -5,8 +5,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 fiYruh"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 eWOTtq"
   >
     <img
       data-radium={true}
@@ -19,15 +18,13 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 dYzCuT"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 kOIRIA"
   >
     <div
       data-radium={true}
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 cporEd"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 bkglEp"
       >
         <h1
           className="k-Title k-Title--senary k-Title--withoutMargin"
@@ -45,12 +42,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 hOWkne"
-    style={
-      Object {
-        "textAlign": "center",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 bKkJNK"
   >
     <button
       className="k-Button k-Button--helium"
@@ -77,8 +69,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
   data-radium={true}
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 fiYruh"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 eWOTtq"
   >
     <img
       alt="Image alt"
@@ -93,15 +84,13 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     />
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 dYzCuT"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 kOIRIA"
   >
     <div
       data-radium={true}
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 PVOpW"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 kMmCJm"
       >
         <h1
           className="k-Title k-Title--senary k-Title--withoutMargin"
@@ -116,8 +105,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
         </h1>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 dmMPzX"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 bXQMav"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -134,12 +122,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     </div>
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 hOWkne"
-    style={
-      Object {
-        "textAlign": "center",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 bKkJNK"
   >
     <button
       className="k-Button k-Button--helium"

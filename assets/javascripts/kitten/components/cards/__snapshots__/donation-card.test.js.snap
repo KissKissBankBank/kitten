@@ -12,8 +12,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 gdbaHu"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 iNgIye"
   >
     <div
       className="k-Grid"
@@ -28,8 +27,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--offset-1@m k-Grid__col--8@l k-Grid__col--offset-2@l"
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 iPaUkj"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 hQpjJz"
         >
           <h2
             className="k-Title k-Title--quaternary k-Title--withoutMargin"
@@ -44,8 +42,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           </h2>
         </div>
         <div
-          className="marger__MargerDiv-q3lecu-0 dqQmTc"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 dSAEAa"
         >
           <span
             className="k-HorizontalStroke k-HorizontalStroke--big"
@@ -66,8 +63,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           }
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 dYzCuT"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 kOIRIA"
           >
             <div
               className="k-Grid"
@@ -83,8 +79,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                 className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
               >
                 <div
-                  className="marger__MargerDiv-q3lecu-0 PVOpW"
-                  style={null}
+                  className="marger__MargerDiv-q3lecu-0 kMmCJm"
                 >
                   <label
                     className="k-Label k-Label--micro"
@@ -95,8 +90,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   </label>
                 </div>
                 <div
-                  className="marger__MargerDiv-q3lecu-0 dmMPzX"
-                  style={null}
+                  className="marger__MargerDiv-q3lecu-0 bXQMav"
                 >
                   <div
                     className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -125,13 +119,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 fyuddl"
-            style={
-              Object {
-                "display": "flex",
-                "justifyContent": "center",
-              }
-            }
+            className="marger__MargerDiv-q3lecu-0 llBRka"
           >
             <div
               className="rmq-2001d403"

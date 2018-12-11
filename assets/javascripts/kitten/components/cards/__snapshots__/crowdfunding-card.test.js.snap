@@ -17,15 +17,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 fyuddl"
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
+      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 hRuDHW"
     >
       <img
         alt=""
@@ -58,8 +50,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 eyQbYR"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 fAimMx"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -101,32 +92,10 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 iPaUkj"
-      style={
-        Object {
-          "minHeight": "75px",
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 fVfZHB"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 jAJVJj"
-        style={
-          Object {
-            "lineHeight": "1",
-            "loading": Object {
-              "backgroundColor": "#d8d8d8",
-              "borderBottom": "1px solid #fff",
-              "display": "block",
-              "height": "24px",
-              "small": Object {
-                "borderBottom": 0,
-                "borderTop": "1px solid #fff",
-                "width": "70%",
-              },
-            },
-            "padding": "0 10px",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 bgFPlO"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -158,29 +127,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
         </p>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 ksLFOn"
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "loading": Object {
-              "backgroundColor": "#d8d8d8",
-              "display": "block",
-              "height": "12px",
-              "width": "80px",
-            },
-            "padding": "0 10px",
-            "text": Object {
-              "flex": 1,
-              "lineHeight": "1rem",
-              "truncated": Object {
-                "overflow": "hidden",
-                "whiteSpace": "nowrap",
-              },
-            },
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 gjOKXg"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -222,15 +169,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 fyuddl"
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
+      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 hRuDHW"
     />
     <div
       data-radium={true}
@@ -246,8 +185,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 eyQbYR"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 fAimMx"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -302,32 +240,10 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 iPaUkj"
-      style={
-        Object {
-          "minHeight": "75px",
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 fVfZHB"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 jAJVJj"
-        style={
-          Object {
-            "lineHeight": "1",
-            "loading": Object {
-              "backgroundColor": "#d8d8d8",
-              "borderBottom": "1px solid #fff",
-              "display": "block",
-              "height": "24px",
-              "small": Object {
-                "borderBottom": 0,
-                "borderTop": "1px solid #fff",
-                "width": "70%",
-              },
-            },
-            "padding": "0 10px",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 bgFPlO"
       >
         <div
           data-radium={true}
@@ -359,29 +275,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 ksLFOn"
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "loading": Object {
-              "backgroundColor": "#d8d8d8",
-              "display": "block",
-              "height": "12px",
-              "width": "80px",
-            },
-            "padding": "0 10px",
-            "text": Object {
-              "flex": 1,
-              "lineHeight": "1rem",
-              "truncated": Object {
-                "overflow": "hidden",
-                "whiteSpace": "nowrap",
-              },
-            },
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 gjOKXg"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -455,15 +349,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 fyuddl"
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
+      className="k-Card__imageContainer marger__MargerDiv-q3lecu-0 hRuDHW"
     >
       <img
         alt="Image alt"
@@ -496,8 +382,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 eyQbYR"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 fAimMx"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -543,32 +428,10 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 iPaUkj"
-      style={
-        Object {
-          "minHeight": "75px",
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 fVfZHB"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 jAJVJj"
-        style={
-          Object {
-            "lineHeight": "1",
-            "loading": Object {
-              "backgroundColor": "#d8d8d8",
-              "borderBottom": "1px solid #fff",
-              "display": "block",
-              "height": "24px",
-              "small": Object {
-                "borderBottom": 0,
-                "borderTop": "1px solid #fff",
-                "width": "70%",
-              },
-            },
-            "padding": "0 10px",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 bgFPlO"
       >
         <h4
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -602,29 +465,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </h4>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 ksLFOn"
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "loading": Object {
-              "backgroundColor": "#d8d8d8",
-              "display": "block",
-              "height": "12px",
-              "width": "80px",
-            },
-            "padding": "0 10px",
-            "text": Object {
-              "flex": 1,
-              "lineHeight": "1rem",
-              "truncated": Object {
-                "overflow": "hidden",
-                "whiteSpace": "nowrap",
-              },
-            },
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 gjOKXg"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -677,56 +518,10 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 oUIQM"
-      style={
-        Object {
-          "display": "flex",
-          "flexWrap": "wrap",
-          "info": Object {
-            "lastItem": Object {
-              "marginRight": 0,
-            },
-            "loading": Object {
-              "backgroundColor": "#d8d8d8",
-              "borderBottom": "1px solid #fff",
-              "display": "block",
-              "height": "16px",
-              "large": Object {
-                "borderBottom": 0,
-                "borderTop": "1px solid #fff",
-                "width": "65px",
-              },
-              "width": "40px",
-            },
-            "marginRight": "30px",
-          },
-          "lineHeight": "1",
-          "padding": "0 10px",
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 hSRzZl"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 dtajrs"
-        style={
-          Object {
-            "lastItem": Object {
-              "marginRight": 0,
-            },
-            "loading": Object {
-              "backgroundColor": "#d8d8d8",
-              "borderBottom": "1px solid #fff",
-              "display": "block",
-              "height": "16px",
-              "large": Object {
-                "borderBottom": 0,
-                "borderTop": "1px solid #fff",
-                "width": "65px",
-              },
-              "width": "40px",
-            },
-            "marginRight": "30px",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 lkBORV"
       >
         <span
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -735,27 +530,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 dtajrs"
-        style={
-          Object {
-            "lastItem": Object {
-              "marginRight": 0,
-            },
-            "loading": Object {
-              "backgroundColor": "#d8d8d8",
-              "borderBottom": "1px solid #fff",
-              "display": "block",
-              "height": "16px",
-              "large": Object {
-                "borderBottom": 0,
-                "borderTop": "1px solid #fff",
-                "width": "65px",
-              },
-              "width": "40px",
-            },
-            "marginRight": "30px",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 lkBORV"
       >
         <span
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -764,27 +539,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 dtajrs"
-        style={
-          Object {
-            "lastItem": Object {
-              "marginRight": 0,
-            },
-            "loading": Object {
-              "backgroundColor": "#d8d8d8",
-              "borderBottom": "1px solid #fff",
-              "display": "block",
-              "height": "16px",
-              "large": Object {
-                "borderBottom": 0,
-                "borderTop": "1px solid #fff",
-                "width": "65px",
-              },
-              "width": "40px",
-            },
-            "marginRight": 0,
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 bVfsse"
       >
         <span
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -794,19 +549,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 jguoMB"
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "flexDirection": "row",
-          "padding": "0 10px",
-          "percent": Object {
-            "flexShrink": 0,
-            "marginLeft": "20px",
-          },
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 cRUtjm"
     >
       <div
         aria-valuemax="100"

@@ -15,8 +15,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         data-radium={true}
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 iPaUkj"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 hQpjJz"
         >
           <h2
             className="k-Title k-Title--secondary k-Title--withoutMargin"
@@ -25,8 +24,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           </h2>
         </div>
         <div
-          className="marger__MargerDiv-q3lecu-0 iPaUkj"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 hQpjJz"
         >
           <span
             className="rmq-f8208d89 k-VerticalStroke k-VerticalStroke--huge"
@@ -47,32 +45,17 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       style={Object {}}
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 fyuddl"
-        style={
-          Object {
-            "@media (max-width: 1079px)": Object {
-              "marginLeft": 15,
-              "marginRight": "inherit",
-            },
-            "@media (max-width: 767px)": Object {
-              "marginLeft": "inherit",
-              "marginRight": "inherit",
-            },
-            "marginRight": 10,
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 bXhPke"
       >
         <div>
           <div
-            className="marger__MargerDiv-q3lecu-0 cporEd"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 bkglEp"
           >
             <div
               data-radium={true}
             >
               <div
-                className="marger__MargerDiv-q3lecu-0 fiYruh"
-                style={null}
+                className="marger__MargerDiv-q3lecu-0 eWOTtq"
               >
                 <img
                   alt=""
@@ -87,15 +70,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 />
               </div>
               <div
-                className="marger__MargerDiv-q3lecu-0 dYzCuT"
-                style={null}
+                className="marger__MargerDiv-q3lecu-0 kOIRIA"
               >
                 <div
                   data-radium={true}
                 >
                   <div
-                    className="marger__MargerDiv-q3lecu-0 cporEd"
-                    style={null}
+                    className="marger__MargerDiv-q3lecu-0 bkglEp"
                   >
                     <h1
                       className="k-Title k-Title--senary k-Title--withoutMargin"
@@ -113,12 +94,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 </div>
               </div>
               <div
-                className="marger__MargerDiv-q3lecu-0 hOWkne"
-                style={
-                  Object {
-                    "textAlign": "center",
-                  }
-                }
+                className="marger__MargerDiv-q3lecu-0 bKkJNK"
               >
                 <button
                   className="k-Button k-Button--helium"
@@ -146,29 +122,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 hYqFHB"
-        style={
-          Object {
-            "@media (max-width: 1079px)": Object {
-              "marginLeft": "inherit",
-              "marginRight": 15,
-            },
-            "@media (max-width: 767px)": Object {
-              "marginLeft": "inherit",
-              "marginRight": "inherit",
-            },
-            "marginLeft": 10,
-            "marginRight": 10,
-            "transition": "margin 500ms",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 iEXJEy"
       >
         <div
           data-radium={true}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 fiYruh"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 eWOTtq"
           >
             <img
               alt=""
@@ -183,15 +143,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             />
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 dYzCuT"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 kOIRIA"
           >
             <div
               data-radium={true}
             >
               <div
-                className="marger__MargerDiv-q3lecu-0 PVOpW"
-                style={null}
+                className="marger__MargerDiv-q3lecu-0 kMmCJm"
               >
                 <h1
                   className="k-Title k-Title--senary k-Title--withoutMargin"
@@ -206,8 +164,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 </h1>
               </div>
               <div
-                className="marger__MargerDiv-q3lecu-0 dmMPzX"
-                style={null}
+                className="marger__MargerDiv-q3lecu-0 bXQMav"
               >
                 <p
                   className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -224,12 +181,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 hOWkne"
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
+            className="marger__MargerDiv-q3lecu-0 bKkJNK"
           >
             <button
               className="k-Button k-Button--helium"
@@ -257,25 +209,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       style={Object {}}
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 fyuddl"
-        style={
-          Object {
-            "@media (max-width: 1079px)": Object {
-              "marginLeft": 15,
-            },
-            "@media (max-width: 767px)": Object {
-              "marginLeft": "inherit",
-            },
-            "marginLeft": 10,
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 izXkZe"
       >
         <div
           data-radium={true}
         >
           <div
-            className="marger__MargerDiv-q3lecu-0 fiYruh"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 eWOTtq"
           >
             <img
               alt=""
@@ -290,15 +230,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             />
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 dYzCuT"
-            style={null}
+            className="marger__MargerDiv-q3lecu-0 kOIRIA"
           >
             <div
               data-radium={true}
             >
               <div
-                className="marger__MargerDiv-q3lecu-0 cporEd"
-                style={null}
+                className="marger__MargerDiv-q3lecu-0 bkglEp"
               >
                 <h1
                   className="k-Title k-Title--senary k-Title--withoutMargin"
@@ -316,12 +254,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="marger__MargerDiv-q3lecu-0 hOWkne"
-            style={
-              Object {
-                "textAlign": "center",
-              }
-            }
+            className="marger__MargerDiv-q3lecu-0 bKkJNK"
           >
             <button
               className="k-Button k-Button--helium"

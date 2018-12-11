@@ -56,22 +56,10 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 jcBYld"
-      style={
-        Object {
-          "@media (min-width: 640px)": Object {
-            "marginLeft": 40,
-            "marginRight": 40,
-          },
-          "marginLeft": 20,
-          "marginRight": 20,
-          "maxWidth": 500,
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 gUkstQ"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 iPaUkj"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 hQpjJz"
       >
         <h1
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -81,8 +69,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </div>
       
       <div
-        className="marger__MargerDiv-q3lecu-0 gVTpax"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 iGYdNe"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -159,22 +146,10 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="marger__MargerDiv-q3lecu-0 jcBYld"
-      style={
-        Object {
-          "@media (min-width: 640px)": Object {
-            "marginLeft": 40,
-            "marginRight": 40,
-          },
-          "marginLeft": 20,
-          "marginRight": 20,
-          "maxWidth": 500,
-        }
-      }
+      className="marger__MargerDiv-q3lecu-0 gUkstQ"
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 iPaUkj"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 hQpjJz"
       >
         <Custom title tag
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -183,8 +158,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </Custom title tag>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 hjvjyl"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 hGmHod"
       >
         <span
           className="k-u-size-default k-u-weight-bold"
@@ -193,8 +167,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 gVTpax"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 iGYdNe"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -216,8 +189,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__MargerDiv-q3lecu-0 jyeADL"
-        style={null}
+        className="marger__MargerDiv-q3lecu-0 bhvMDJ"
       >
         <a
           className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"

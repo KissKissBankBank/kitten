@@ -77,13 +77,7 @@ exports[`<Timeline /> with default props matches with snapshot 1`] = `
         1
       </span>
       <div
-        className="marger__MargerDiv-q3lecu-0 fRejIC"
-        style={
-          Object {
-            "alignItems": "center",
-            "flexGrow": 1,
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 ejzXwm"
       >
         foobar
       </div>
@@ -180,13 +174,7 @@ exports[`<Timeline /> with itemHeight props matches with snapshot 1`] = `
         1
       </span>
       <div
-        className="marger__MargerDiv-q3lecu-0 fRejIC"
-        style={
-          Object {
-            "alignItems": "center",
-            "flexGrow": 1,
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 ejzXwm"
       >
         foobar
       </div>

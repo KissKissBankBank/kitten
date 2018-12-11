@@ -11,8 +11,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 dYzCuT"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 kOIRIA"
   >
     <div
       className="k-Grid"
@@ -28,8 +27,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 PVOpW"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 kMmCJm"
         >
           <label
             className="k-Label k-Label--micro"
@@ -40,8 +38,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           </label>
         </div>
         <div
-          className="marger__MargerDiv-q3lecu-0 dmMPzX"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 bXQMav"
         >
           <div
             className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -70,13 +67,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 fyuddl"
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "center",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 llBRka"
   >
     <div
       className="rmq-2001d403"
@@ -119,8 +110,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 dYzCuT"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 kOIRIA"
   >
     <div
       className="k-Grid"
@@ -136,8 +126,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 PVOpW"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 kMmCJm"
         >
           <label
             className="k-Label k-Label--micro"
@@ -148,8 +137,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
           </label>
         </div>
         <div
-          className="marger__MargerDiv-q3lecu-0 dmMPzX"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 bXQMav"
         >
           <div
             className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -178,13 +166,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 fyuddl"
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "center",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 llBRka"
   >
     <div
       className="rmq-2001d403"
@@ -227,8 +209,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
   }
 >
   <div
-    className="marger__MargerDiv-q3lecu-0 flJUdZ"
-    style={null}
+    className="marger__MargerDiv-q3lecu-0 kHDsFw"
   >
     <div
       className="k-Grid"
@@ -244,8 +225,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 PVOpW"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 kMmCJm"
         >
           <label
             className="k-Label k-Label--micro"
@@ -256,8 +236,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
           </label>
         </div>
         <div
-          className="marger__MargerDiv-q3lecu-0 cQGtab"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 PZjZd"
         >
           <div
             className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -283,8 +262,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="marger__MargerDiv-q3lecu-0 ksLFOn"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 jXbljZ"
         >
           <span
             className="k-u-color-error k-u-size-micro k-u-weight-regular"
@@ -296,13 +274,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="marger__MargerDiv-q3lecu-0 fyuddl"
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "center",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 llBRka"
   >
     <div
       className="rmq-2001d403"

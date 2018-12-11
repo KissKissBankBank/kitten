@@ -3,13 +3,7 @@
 exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__MargerDiv-q3lecu-0 jcBYld"
-    style={
-      Object {
-        "display": "grid",
-        "gap": 0,
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 cUlAXQ"
   >
     <div
       data-radium={true}
@@ -46,13 +40,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__MargerDiv-q3lecu-0 gdbaHu"
-    style={
-      Object {
-        "display": "flex",
-        "justifyContent": "center",
-      }
-    }
+    className="marger__MargerDiv-q3lecu-0 dLUUUF"
   >
     <div
       data-radium={true}
@@ -87,13 +75,7 @@ Array [
 
 exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 <div
-  className="marger__MargerDiv-q3lecu-0 cporEd"
-  style={
-    Object {
-      "display": "grid",
-      "gap": 0,
-    }
-  }
+  className="marger__MargerDiv-q3lecu-0 cpqyXJ"
 >
   <div
     data-radium={true}

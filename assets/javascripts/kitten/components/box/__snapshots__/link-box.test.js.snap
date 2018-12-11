@@ -35,23 +35,10 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__MargerDiv-q3lecu-0 gVTpax"
-        style={
-          Object {
-            "@media (min-width: 640px)": Object {
-              "paddingLeft": "1.875rem",
-            },
-            "display": "flex",
-            "flexDirection": "column",
-            "flexGrow": 1,
-            "justifyContent": "center",
-            "paddingLeft": "1.25rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 jjCsZa"
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 cporEd"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 bkglEp"
         >
           <span
             className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -156,23 +143,10 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         }
       />
       <div
-        className="marger__MargerDiv-q3lecu-0 gVTpax"
-        style={
-          Object {
-            "@media (min-width: 640px)": Object {
-              "paddingLeft": "1.875rem",
-            },
-            "display": "flex",
-            "flexDirection": "column",
-            "flexGrow": 1,
-            "justifyContent": "center",
-            "paddingLeft": "1.25rem",
-          }
-        }
+        className="marger__MargerDiv-q3lecu-0 jjCsZa"
       >
         <div
-          className="marger__MargerDiv-q3lecu-0 gNoTyt"
-          style={null}
+          className="marger__MargerDiv-q3lecu-0 iSamlQ"
         >
           <span
             className="k-u-color-font1 k-u-size-default k-u-weight-regular"

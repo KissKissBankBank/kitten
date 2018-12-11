@@ -125,8 +125,9 @@ export class Marger extends Component {
       ${this.stylesForName('top')}
       ${this.stylesForName('bottom')}
       ${viewportRangesStyles}
+      ${style}
     `
 
-    return <MargerDiv style={style || null} {...others} />
+    return <MargerDiv {...others} />
   }
 }

@@ -70,8 +70,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                 className="k-ProjectCard__grid"
               >
                 <div
-                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hjvjyl"
-                  style={null}
+                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hGmHod"
                 >
                   <span
                     className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -96,8 +95,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                   </p>
                 </div>
                 <div
-                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 eKuTSl"
-                  style={null}
+                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 xrLew"
                 >
                   <p
                     className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -216,8 +214,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hjvjyl"
-                style={null}
+                className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hGmHod"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -242,8 +239,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
                 </p>
               </div>
               <div
-                className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 eKuTSl"
-                style={null}
+                className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 xrLew"
               >
                 <p
                   className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -369,8 +365,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                 className="k-ProjectCard__grid"
               >
                 <div
-                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hjvjyl"
-                  style={null}
+                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 hGmHod"
                 >
                   <span
                     className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -395,8 +390,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                   </p>
                 </div>
                 <div
-                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 eKuTSl"
-                  style={null}
+                  className="k-ProjectCard__grid--flex marger__MargerDiv-q3lecu-0 xrLew"
                 >
                   <p
                     className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
