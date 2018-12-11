@@ -18,7 +18,6 @@ const Marger = Radium(MargerBase)
 class CartRewardCardComponent extends Component {
   static propTypes = {
     titleAmount: PropTypes.string.isRequired,
-    textDescription: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
     subtitle: PropTypes.string,
     updateAmountTitle: PropTypes.string,
@@ -34,6 +33,10 @@ class CartRewardCardComponent extends Component {
     shippingValue: deprecated(
       PropTypes.string,
       'Prefer use <CartRewardCard.Information />',
+    ),
+    textDescription: deprecated(
+      PropTypes.string,
+      'Prefer use <CartRewardCard.Description />',
     ),
   }
 
@@ -104,9 +107,14 @@ class CartRewardCardComponent extends Component {
       titleTag,
       titleAmount,
       subtitle,
-      textDescription,
+      children,
       viewportIsMobile,
+      textDescription,
     } = this.props
+
+    const description = React.Children.toArray(children).filter(
+      child => child.type === CartRewardCard.Description,
+    )
 
     return (
       <Marger bottom="4" style={styles.description}>
@@ -125,6 +133,7 @@ class CartRewardCardComponent extends Component {
         <Marger top={viewportIsMobile && !subtitle ? 1 : 2} bottom="2">
           <Paragraph margin={false} modifier="quaternary">
             {textDescription}
+            {description}
           </Paragraph>
         </Marger>
         {this.renderBottomContent()}
@@ -259,3 +268,5 @@ CartRewardCard.Information.propTypes = {
   title: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
 }
+
+CartRewardCard.Description = ({ children }) => <Fragment>{children}</Fragment>
