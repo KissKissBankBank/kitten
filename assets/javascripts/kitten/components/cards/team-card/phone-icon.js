@@ -10,22 +10,15 @@ class TeamCardPhoneIconBase extends Component {
   static propTypes = {
     phoneNumber: PropTypes.string,
     tooltipColor: PropTypes.string,
-    tooltipPseudoColor: PropTypes.string,
   }
 
   static defaultProps = {
     phoneNumber: '',
     tooltipColor: '#19b4fa',
-    tooltipPseudoColor: '#19b4fa',
   }
 
   render() {
-    const {
-      phoneNumber,
-      viewportIsXSOrLess,
-      tooltipColor,
-      tooltipPseudoColor,
-    } = this.props
+    const { phoneNumber, viewportIsXSOrLess, tooltipColor } = this.props
 
     return (
       <Fragment>
@@ -42,11 +35,7 @@ class TeamCardPhoneIconBase extends Component {
         )}
 
         {!viewportIsXSOrLess && (
-          <TeamCardButtonWithTooltip
-            color={tooltipColor}
-            pseudoColor={tooltipPseudoColor}
-            {...this.props}
-          />
+          <TeamCardButtonWithTooltip color={tooltipColor} {...this.props} />
         )}
       </Fragment>
     )

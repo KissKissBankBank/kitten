@@ -36,18 +36,18 @@ export class TeamCardButtonWithTooltip extends Component {
   }
 
   render() {
-    const { phoneNumber, color, pseudoColor } = this.props
+    const { phoneNumber, color } = this.props
 
     const tooltipStyle = [
-      colorTooltip(color),
+      tooltipColor(color),
       styles.tooltip.content,
       this.state.hover && styles.tooltip.content.hover,
       this.state.focus && styles.tooltip.content.focus,
     ]
 
-    const tooltipPseudoStyle = [
+    const arrowTooltipStyle = [
       styles.tooltip.content.after,
-      colorPseudoTooltip(pseudoColor),
+      arrowTooltipColor(color),
     ]
 
     return (
@@ -63,7 +63,7 @@ export class TeamCardButtonWithTooltip extends Component {
           <div style={styles.tooltip}>
             <span style={tooltipStyle}>
               {phoneNumber}
-              <span style={tooltipPseudoStyle} />
+              <span style={arrowTooltipStyle} />
             </span>
 
             <ButtonIcon
@@ -85,11 +85,11 @@ const pseudoClass = {
   opacity: 1,
 }
 
-const colorPseudoTooltip = pseudoTooltipColor => ({
-  borderBottomColor: `${pseudoTooltipColor}`,
+const arrowTooltipColor = backgroundTooltipColor => ({
+  borderBottomColor: `${backgroundTooltipColor}`,
 })
 
-const colorTooltip = backgroundTooltipColor => ({
+const tooltipColor = backgroundTooltipColor => ({
   backgroundColor: `${backgroundTooltipColor}`,
   borderColor: `${backgroundTooltipColor}`,
 })
@@ -112,8 +112,8 @@ const styles = {
       fontWeight: 'regular',
       color: COLORS.background1,
       whiteSpace: 'nowrap',
-      opacity: 0,
-      visibility: 'hidden',
+      opacity: 1,
+      visibility: 'visible',
       transition: 'opacity .2s, visibility .2s',
       hover: pseudoClass,
       focus: pseudoClass,
