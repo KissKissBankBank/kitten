@@ -24,7 +24,7 @@
 ///   }
 
 @mixin k-inputSet {
-  margin: k-px-to-rem(10px) 0;
+  margin: k-px-to-rem(5px) 0;
 
   &:first-child { margin-top: 0; }
   &:last-child { margin-bottom: 0; }

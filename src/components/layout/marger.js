@@ -31,7 +31,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireWildcard(require("radium"));
+var _radium = require("radium");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -222,5 +222,5 @@ MargerBaseWithoutStyleRoot.defaultProps = {
   top: null,
   bottom: null
 };
-var Marger = margerWrapper((0, _radium.default)(MargerBaseWithoutStyleRoot));
+var Marger = margerWrapper(Radium(MargerBaseWithoutStyleRoot));
 exports.Marger = Marger;

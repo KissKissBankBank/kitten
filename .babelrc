@@ -26,6 +26,7 @@
       {
         "loose": true
       }
-    ]
+    ],
+    "babel-plugin-styled-components"
   ]
 }
