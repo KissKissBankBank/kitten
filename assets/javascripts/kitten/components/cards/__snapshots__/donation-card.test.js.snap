@@ -12,13 +12,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "2.5rem",
-        "marginTop": "2.5rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 cvWOBq"
   >
     <div
       className="k-Grid"
@@ -33,12 +27,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
         className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--offset-1@m k-Grid__col--8@l k-Grid__col--offset-2@l"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "1.25rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 fPugnd"
         >
           <h2
             className="k-Title k-Title--quaternary k-Title--withoutMargin"
@@ -53,13 +42,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           </h2>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "1.875rem",
-              "marginTop": "1.25rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 bgeujG"
         >
           <span
             className="k-HorizontalStroke k-HorizontalStroke--big"
@@ -80,13 +63,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           }
         >
           <div
-            data-radium={true}
-            style={
-              Object {
-                "marginBottom": "1.875rem",
-                "marginTop": "1.875rem",
-              }
-            }
+            className="marger__StyledMarger-q3lecu-0 XZtAg"
           >
             <div
               className="k-Grid"
@@ -102,12 +79,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                 className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
               >
                 <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginBottom": "0.9375rem",
-                    }
-                  }
+                  className="marger__StyledMarger-q3lecu-0 bMhIqY"
                 >
                   <label
                     className="k-Label k-Label--micro"
@@ -118,12 +90,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   </label>
                 </div>
                 <div
-                  data-radium={true}
-                  style={
-                    Object {
-                      "marginTop": "0.9375rem",
-                    }
-                  }
+                  className="marger__StyledMarger-q3lecu-0 gbReRL"
                 >
                   <div
                     className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
@@ -152,13 +119,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            data-radium={true}
-            style={
-              Object {
-                "display": "flex",
-                "justifyContent": "center",
-              }
-            }
+            className="marger__StyledMarger-q3lecu-0 fsabFf"
           >
             <div
               className="rmq-2001d403"

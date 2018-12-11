@@ -10,12 +10,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "2.5rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 bZfxJj"
   >
     <p
       className="k-Title k-Title--tertiary k-Title--withoutMargin"
@@ -91,12 +86,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginTop": "2.5rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 enHNhs"
   >
     <p
       className="k-u-size-huge k-u-style-italic k-u-weight-bold"

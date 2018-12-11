@@ -35,27 +35,10 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="rmq-18e21d39"
-        data-radium={true}
-        style={
-          Object {
-            "display": "flex",
-            "flexDirection": "column",
-            "flexGrow": 1,
-            "justifyContent": "center",
-            "marginBottom": "1.25rem",
-            "marginTop": "1.25rem",
-            "paddingLeft": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 csUffW"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 gdXKir"
         >
           <span
             className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -100,8 +83,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (min-width: 640px){ .rmq-e7aace01{padding-left: 1.875rem !important;
-padding-right: 2rem !important;}}
-@media (min-width: 640px){ .rmq-18e21d39{padding-left: 1.875rem !important;}}",
+padding-right: 2rem !important;}}",
       }
     }
   />
@@ -161,27 +143,10 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         }
       />
       <div
-        className="rmq-18e21d39"
-        data-radium={true}
-        style={
-          Object {
-            "display": "flex",
-            "flexDirection": "column",
-            "flexGrow": 1,
-            "justifyContent": "center",
-            "marginBottom": "1.25rem",
-            "marginTop": "1.25rem",
-            "paddingLeft": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 csUffW"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "marginBottom": "0.3125rem",
-            }
-          }
+          className="marger__StyledMarger-q3lecu-0 ikpinD"
         >
           <span
             className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -238,8 +203,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       Object {
         "__html": "@media (min-width: 640px){ .rmq-d68686c{display: flex !important;}}
 @media (min-width: 640px){ .rmq-e7aace01{padding-left: 1.875rem !important;
-padding-right: 2rem !important;}}
-@media (min-width: 640px){ .rmq-18e21d39{padding-left: 1.875rem !important;}}",
+padding-right: 2rem !important;}}",
       }
     }
   />

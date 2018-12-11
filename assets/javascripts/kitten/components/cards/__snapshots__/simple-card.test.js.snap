@@ -5,18 +5,11 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
   className="k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="k-Card__imageContainer"
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "1.25rem",
-      }
-    }
+    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 fPugnd"
   >
     <img
       alt=""
       className="k-Card__image"
-      data-radium={true}
       src="https://placehold.it/200x200/caf4fe/caf4fe"
       style={
         Object {
@@ -27,12 +20,7 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
     />
   </div>
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginTop": "0.9375rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 gbReRL"
   >
     <span
       className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -46,18 +34,11 @@ exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
   className="k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="k-Card__imageContainer"
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "1.25rem",
-      }
-    }
+    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 fPugnd"
   >
     <img
       alt=""
       className="k-Card__image"
-      data-radium={true}
       src="https://placehold.it/200x200/caf4fe/caf4fe"
       style={
         Object {

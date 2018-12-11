@@ -23,12 +23,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 laFANL"
       >
         <span
           className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
@@ -81,14 +76,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "display": "flex",
-            "marginBottom": "0.3125rem",
-            "position": "relative",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 gkXmlR"
       >
         <textarea
           className="rmq-2904dc95 k-CommentForm__input k-u-weight-light"
@@ -153,12 +141,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         </span>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginTop": "0.3125rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 KTZQj"
       >
         <span
           className="k-u-color-error k-u-size-micro k-u-weight-regular"

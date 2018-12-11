@@ -56,24 +56,10 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="rmq-b86f8336"
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "2.5rem",
-          "marginLeft": 20,
-          "marginRight": 20,
-          "maxWidth": 500,
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 gnPBCU"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fPugnd"
       >
         <h1
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -83,13 +69,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </div>
       
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-            "marginTop": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 bfHaYT"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -103,8 +83,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
-margin-right: 40px !important;}}",
+        "__html": "",
       }
     }
   />
@@ -167,24 +146,10 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       </button>
     </div>
     <div
-      className="rmq-b86f8336"
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "2.5rem",
-          "marginLeft": 20,
-          "marginRight": 20,
-          "maxWidth": 500,
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 gnPBCU"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fPugnd"
       >
         <h1
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -194,13 +159,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       </div>
       
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-            "marginTop": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 bfHaYT"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -214,8 +173,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
-margin-right: 40px !important;}}",
+        "__html": "",
       }
     }
   />
@@ -278,24 +236,10 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="rmq-b86f8336"
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "2.5rem",
-          "marginLeft": 20,
-          "marginRight": 20,
-          "maxWidth": 500,
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 gnPBCU"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fPugnd"
       >
         <Custom title tag
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -304,13 +248,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </Custom title tag>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 dhveii"
       >
         <span
           className="k-u-size-default k-u-weight-bold"
@@ -319,13 +257,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.25rem",
-            "marginTop": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 bfHaYT"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -347,12 +279,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginTop": "1.25rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fcmQnt"
       >
         <a
           className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
@@ -366,8 +293,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-b86f8336{margin-left: 40px !important;
-margin-right: 40px !important;}}",
+        "__html": "",
       }
     }
   />

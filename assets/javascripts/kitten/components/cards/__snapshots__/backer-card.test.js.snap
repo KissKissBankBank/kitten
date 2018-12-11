@@ -12,13 +12,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.625rem",
-        "marginTop": "2.5rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 ljzjIg"
   >
     <span
       className="k-u-color-primary1 k-u-line-height-normal k-u-weight-regular"
@@ -27,13 +21,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.625rem",
-        "marginTop": "0.625rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 dIUCnH"
   >
     <span
       className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
@@ -52,13 +40,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "2.5rem",
-        "marginTop": "0.625rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 gwMqJO"
   >
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -86,13 +68,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
   }
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.625rem",
-        "marginTop": "2.5rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 ljzjIg"
   >
     <span
       className="k-u-color-primary1 k-u-line-height-normal k-u-weight-regular"
@@ -111,13 +87,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "0.625rem",
-        "marginTop": "0.625rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 dIUCnH"
   >
     <span
       className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
@@ -136,13 +106,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    data-radium={true}
-    style={
-      Object {
-        "marginBottom": "2.5rem",
-        "marginTop": "0.625rem",
-      }
-    }
+    className="marger__StyledMarger-q3lecu-0 gwMqJO"
   >
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"

@@ -1,33 +1,12 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { ScreenConfig } from '../../constants/screen-config'
 import TYPOGRAPHY from '../../constants/typography-config'
 import isStringANumber from 'is-string-a-number'
 import { upcaseFirst } from '../../helpers/utils/string'
 
-const margerWrapper = WrappedComponent =>
-  class extends Component {
-    needsStyleRoot = () => {
-      const { top, bottom } = this.props
-      const isTopAnObject = top && typeof top === 'object'
-      const isBottomAnObject = bottom && typeof bottom === 'object'
-
-      return isTopAnObject || isBottomAnObject
-    }
-
-    render() {
-      if (!this.needsStyleRoot()) return <WrappedComponent {...this.props} />
-
-      return (
-        <StyleRoot>
-          <WrappedComponent {...this.props} />
-        </StyleRoot>
-      )
-    }
-  }
-
-class MargerBaseWithoutStyleRoot extends Component {
+export class Marger extends Component {
   static propTypes = {
     top: PropTypes.oneOfType([
       PropTypes.string,
@@ -92,9 +71,8 @@ class MargerBaseWithoutStyleRoot extends Component {
 
   propCssDeclarationForViewportRange = (propName, viewportRange) => {
     const size = this.props[propName][`from${upcaseFirst(viewportRange)}`]
-    const cssRule = `margin${upcaseFirst(propName)}`
 
-    return { [cssRule]: this.marginSize(size) }
+    return `margin-${propName}: ${this.marginSize(size)};`
   }
 
   viewportRangeStyleCondition = (propName, viewportRange) => {
@@ -108,7 +86,7 @@ class MargerBaseWithoutStyleRoot extends Component {
       viewportRange,
     )
 
-    return { [viewportRangeCssRule]: viewportRangeCssValue }
+    return `${viewportRangeCssRule} { ${viewportRangeCssValue} }`
   }
 
   hasDefaultProp = propName =>
@@ -116,25 +94,18 @@ class MargerBaseWithoutStyleRoot extends Component {
 
   hasXxsProp = propName => this.props[propName] && this.props[propName].fromXxs
 
-  defaultProp = propName => {
-    const mediaQueryRule = `@media (min-width: 0)`
-    const cssRule = `margin${upcaseFirst(propName)}`
+  defaultValue = propName => {
+    if (this.propIsNumber(propName))
+      return this.marginSize(this.props[propName])
+    if (this.hasDefaultProp(propName))
+      return this.marginSize(this.props[propName].default)
+    if (this.hasXxsProp(propName))
+      return this.marginSize(this.props[propName].fromXxs)
+  }
 
-    if (this.hasDefaultProp(propName)) {
-      return {
-        [mediaQueryRule]: {
-          [cssRule]: this.marginSize(this.props[propName].default),
-        },
-      }
-    }
-
-    if (this.hasXxsProp(propName)) {
-      return {
-        [mediaQueryRule]: {
-          [cssRule]: this.marginSize(this.props[propName].fromXxs),
-        },
-      }
-    }
+  stylesForName = propName => {
+    const value = this.defaultValue(propName)
+    if (value) return `margin-${propName}: ${this.defaultValue(propName)};`
   }
 
   render() {
@@ -150,17 +121,13 @@ class MargerBaseWithoutStyleRoot extends Component {
       ]
     }, [])
 
-    const styles = [
-      style,
-      this.propIsNumber('top') && { marginTop: this.marginSize(top) },
-      this.propIsNumber('bottom') && { marginBottom: this.marginSize(bottom) },
-      this.defaultProp('top'),
-      this.defaultProp('bottom'),
-      ...viewportRangesStyles,
-    ]
+    const StyledMarger = styled.div`
+      ${this.stylesForName('top')}
+      ${this.stylesForName('bottom')}
+      ${viewportRangesStyles}
+      ${style}
+    `
 
-    return <div style={styles} {...others} />
+    return <StyledMarger {...others} />
   }
 }
-
-export const Marger = margerWrapper(Radium(MargerBaseWithoutStyleRoot))

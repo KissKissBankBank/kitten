@@ -17,16 +17,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     >
       <img
         alt=""
@@ -59,13 +50,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -107,22 +92,10 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 fPugnd"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "lineHeight": "1",
-            "marginBottom": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -130,16 +103,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         />
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "marginTop": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -181,16 +145,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     >
       <img
         alt=""
@@ -223,13 +178,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -271,22 +220,10 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 fPugnd"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "lineHeight": "1",
-            "marginBottom": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -296,16 +233,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         </p>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "marginTop": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -385,16 +313,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     >
       <img
         alt=""
@@ -427,13 +346,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -475,22 +388,10 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 fPugnd"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "lineHeight": "1",
-            "marginBottom": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -498,16 +399,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         />
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "marginTop": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -549,16 +441,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer"
-      data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#d8d8d8",
-          "overflow": "hidden",
-          "paddingTop": "56.25%",
-          "position": "relative",
-        }
-      }
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
     >
       <img
         alt="Image alt"
@@ -591,13 +474,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "0.625rem",
-            "marginTop": "0.625rem",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 dIUCnH"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -643,22 +520,10 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "marginBottom": "1.25rem",
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 fPugnd"
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "lineHeight": "1",
-            "marginBottom": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 iBqKye"
       >
         <h4
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -668,16 +533,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         </h4>
       </div>
       <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1",
-            "marginTop": "0.625rem",
-            "padding": "0 10px",
-          }
-        }
+        className="marger__StyledMarger-q3lecu-0 fTatOX"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
