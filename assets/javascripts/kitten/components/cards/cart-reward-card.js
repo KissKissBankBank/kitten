@@ -34,6 +34,10 @@ class CartRewardCardComponent extends Component {
       PropTypes.string,
       'Prefer use <CartRewardCard.Information />',
     ),
+    textDescription: deprecated(
+      PropTypes.string,
+      'Prefer use <CartRewardCard.Description />',
+    ),
   }
 
   static defaultProps = {
@@ -105,7 +109,12 @@ class CartRewardCardComponent extends Component {
       subtitle,
       children,
       viewportIsMobile,
+      textDescription,
     } = this.props
+
+    const description = React.Children.toArray(children).filter(
+      child => child.type === CartRewardCard.Description,
+    )
 
     return (
       <Marger bottom="4" style={styles.description}>
@@ -123,7 +132,8 @@ class CartRewardCardComponent extends Component {
         )}
         <Marger top={viewportIsMobile && !subtitle ? 1 : 2} bottom="2">
           <Paragraph margin={false} modifier="quaternary">
-            {children}
+            {textDescription}
+            {description}
           </Paragraph>
         </Marger>
         {this.renderBottomContent()}
@@ -258,3 +268,5 @@ CartRewardCard.Information.propTypes = {
   title: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
 }
+
+CartRewardCard.Description = ({ children }) => <Fragment>{children}</Fragment>

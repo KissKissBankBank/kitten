@@ -32,10 +32,12 @@ storiesOf('Cards/CartRewardCard', module)
                   title={text('Other information title', 'Variation:')}
                   value={text('Other information value', 'Size L')}
                 />
-                {text(
-                  'Text description',
-                  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont',
-                )}
+                <CartRewardCard.Description>
+                  {text(
+                    'Text description',
+                    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient mont',
+                  )}
+                </CartRewardCard.Description>
               </CartRewardCard>
             </Marger>
           </GridCol>
