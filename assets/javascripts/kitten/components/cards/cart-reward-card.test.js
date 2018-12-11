@@ -20,6 +20,23 @@ describe('<CartRewardCard />', () => {
     window.matchMedia = originalMatchMedia
   })
 
+  describe('ensure backward compatibility', () => {
+    window.matchMedia = createMockMediaMatcher(false)
+
+    const component = renderer
+      .create(
+        <CartRewardCard
+          titleAmount="Custom title amount"
+          textDescription="Custom text description"
+        />,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('by default', () => {
     window.matchMedia = createMockMediaMatcher(false)
 
