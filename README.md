@@ -177,6 +177,8 @@ $ yarn login
 - Update the `KARL_CHANGELOG.md` file:
   * Update the version with the version of the library.
   * Add a new `[unreleased]` section.
+- Update the `package.json` file:
+  * Update the version with the version of the library.
 - Run this command:
 
 ```sh
