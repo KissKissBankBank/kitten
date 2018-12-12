@@ -168,6 +168,7 @@ $ yarn login
 ### Prepare the release pull request
 
 - Pull `master`.
+- Update the `package.json` with the new version.
 - Update the `CHANGELOG.md` file:
   * Update the version following the [Semantic Versioning](http://semver.org/).
   * Add a new `[unreleased]` section.
