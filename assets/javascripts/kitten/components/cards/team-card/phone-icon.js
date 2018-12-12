@@ -9,14 +9,16 @@ import { mediaQueries } from 'kitten/hoc/media-queries'
 class TeamCardPhoneIconBase extends Component {
   static propTypes = {
     phoneNumber: PropTypes.string,
+    tooltipColor: PropTypes.string,
   }
 
   static defaultProps = {
     phoneNumber: '',
+    tooltipColor: '#19b4fa',
   }
 
   render() {
-    const { phoneNumber, viewportIsXSOrLess } = this.props
+    const { phoneNumber, viewportIsXSOrLess, tooltipColor } = this.props
 
     return (
       <Fragment>
@@ -32,7 +34,9 @@ class TeamCardPhoneIconBase extends Component {
           </ButtonIcon>
         )}
 
-        {!viewportIsXSOrLess && <TeamCardButtonWithTooltip {...this.props} />}
+        {!viewportIsXSOrLess && (
+          <TeamCardButtonWithTooltip {...this.props} color={tooltipColor} />
+        )}
       </Fragment>
     )
   }

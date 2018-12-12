@@ -13,7 +13,7 @@ export class TeamCardTitle extends Component {
   render() {
     const { children, subTitle } = this.props
     return (
-      <Marger top="2" bottom="1.5">
+      <Marger top="2">
         <Text size="default" weight="bold" color="font1">
           {children}
         </Text>

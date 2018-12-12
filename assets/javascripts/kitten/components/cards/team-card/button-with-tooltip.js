@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { ButtonIcon as ButtonIconBase } from 'kitten/components/buttons/button-icon'
+import { ButtonIcon } from 'kitten/components/buttons/button-icon'
 import { PhoneIcon } from 'kitten/components/icons/phone-icon'
 import COLORS from 'kitten/constants/colors-config'
-
-const ButtonIcon = Radium(ButtonIconBase)
 
 export class TeamCardButtonWithTooltip extends Component {
   static propTypes = {
@@ -38,12 +36,18 @@ export class TeamCardButtonWithTooltip extends Component {
   }
 
   render() {
-    const { phoneNumber } = this.props
+    const { phoneNumber, color } = this.props
 
     const tooltipStyle = [
+      tooltipColor(color),
       styles.tooltip.content,
       this.state.hover && styles.tooltip.content.hover,
       this.state.focus && styles.tooltip.content.focus,
+    ]
+
+    const arrowTooltipStyle = [
+      styles.tooltip.content.after,
+      arrowTooltipColor(color),
     ]
 
     return (
@@ -59,7 +63,7 @@ export class TeamCardButtonWithTooltip extends Component {
           <div style={styles.tooltip}>
             <span style={tooltipStyle}>
               {phoneNumber}
-              <span style={styles.tooltip.content.after} />
+              <span style={arrowTooltipStyle} />
             </span>
 
             <ButtonIcon
@@ -76,12 +80,21 @@ export class TeamCardButtonWithTooltip extends Component {
   }
 }
 
-const backgroundColor = COLORS.primary1
-
 const pseudoClass = {
   visibility: 'visible',
   opacity: 1,
 }
+
+const arrowTooltipColor = backgroundTooltipColor => ({
+  borderBottomColor: `${backgroundTooltipColor}`,
+})
+
+const tooltipColor = backgroundTooltipColor => ({
+  backgroundColor: `${backgroundTooltipColor}`,
+  borderColor: `${backgroundTooltipColor}`,
+})
+
+const backgroundColor = COLORS.primary1
 
 const styles = {
   tooltip: {
@@ -92,8 +105,8 @@ const styles = {
       top: 55,
       padding: 15,
       marginLeft: -50,
-      backgroundColor: backgroundColor,
-      border: '2px solid #19b4fa',
+      borderSize: 2,
+      borderStyle: 'solid',
       fontSize: 14,
       lineHeight: 'normal',
       fontWeight: 'regular',
@@ -113,7 +126,6 @@ const styles = {
         width: 0,
         marginLeft: -8,
         border: '10px solid transparent',
-        borderBottomColor: backgroundColor,
         pointerEvents: 'none',
       },
     },
