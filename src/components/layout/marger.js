@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Marger = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
@@ -134,13 +136,10 @@ function (_Component) {
       var viewportRangesStyles = viewportRanges.reduce(function (acc, viewportRange) {
         return (0, _toConsumableArray2.default)(acc).concat([_this2.viewportRangeStyleCondition('top', viewportRange), _this2.viewportRangeStyleCondition('bottom', viewportRange)]);
       }, []);
-
-      var StyledMarger = _styledComponents.default.div.withConfig({
-        displayName: "marger__StyledMarger",
-        componentId: "q3lecu-0"
-      })(["", " ", " ", " ", ""], this.stylesForName('top'), this.stylesForName('bottom'), viewportRangesStyles, style);
-
-      return _react.default.createElement(StyledMarger, others);
+      var styles = [this.stylesForName('top'), this.stylesForName('bottom'), viewportRangesStyles, style];
+      return _react.default.createElement(StyledMarger, (0, _extends2.default)({
+        styles: styles
+      }, others));
     }
   }]);
   return Marger;
@@ -171,3 +170,10 @@ Marger.defaultProps = {
   top: null,
   bottom: null
 };
+
+var StyledMarger = _styledComponents.default.div.withConfig({
+  displayName: "marger__StyledMarger",
+  componentId: "q3lecu-0"
+})(["", ""], function (props) {
+  return props.styles;
+});
