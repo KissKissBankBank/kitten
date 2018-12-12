@@ -23,7 +23,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       }
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 laFANL"
+        className="marger__StyledMarger-q3lecu-0 gkLTfi"
       >
         <span
           className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
@@ -76,7 +76,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       }
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 gkXmlR"
+        className="marger__StyledMarger-q3lecu-0 gBXmMX"
       >
         <textarea
           className="rmq-2904dc95 k-CommentForm__input k-u-weight-light"
@@ -141,7 +141,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 KTZQj"
+        className="marger__StyledMarger-q3lecu-0 gWrqvV"
       >
         <span
           className="k-u-color-error k-u-size-micro k-u-weight-regular"
