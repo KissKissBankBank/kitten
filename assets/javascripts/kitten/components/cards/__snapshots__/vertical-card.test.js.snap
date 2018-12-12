@@ -5,7 +5,7 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 hfEYYe"
+    className="marger__StyledMarger-q3lecu-0 fsRJyG"
   >
     <img
       data-radium={true}
@@ -18,13 +18,13 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 fShUvY"
+    className="marger__StyledMarger-q3lecu-0 gNBLBo"
   >
     <div
       data-radium={true}
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 gdXKir"
+        className="marger__StyledMarger-q3lecu-0 iyINNV"
       >
         <h1
           className="k-Title k-Title--senary k-Title--withoutMargin"
@@ -56,7 +56,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 hfEYYe"
+    className="marger__StyledMarger-q3lecu-0 fsRJyG"
   >
     <img
       alt="Image alt"
@@ -71,13 +71,13 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 fShUvY"
+    className="marger__StyledMarger-q3lecu-0 gNBLBo"
   >
     <div
       data-radium={true}
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 laFANL"
+        className="marger__StyledMarger-q3lecu-0 gkLTfi"
       >
         <h1
           className="k-Title k-Title--senary k-Title--withoutMargin"
@@ -92,7 +92,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
         </h1>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 kdfkFz"
+        className="marger__StyledMarger-q3lecu-0 WSKaG"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"

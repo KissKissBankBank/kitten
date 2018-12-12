@@ -121,13 +121,17 @@ export class Marger extends Component {
       ]
     }, [])
 
-    const StyledMarger = styled.div`
-      ${this.stylesForName('top')}
-      ${this.stylesForName('bottom')}
-      ${viewportRangesStyles}
-      ${style}
-    `
+    const styles = [
+      this.stylesForName('top'),
+      this.stylesForName('bottom'),
+      viewportRangesStyles,
+      style,
+    ]
 
-    return <StyledMarger {...others} />
+    return <StyledMarger styles={styles} {...others} />
   }
 }
+
+const StyledMarger = styled.div`
+  ${props => props.styles}
+`
