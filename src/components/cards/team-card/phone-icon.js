@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.TeamCardPhoneIcon = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -48,7 +50,8 @@ function (_Component) {
     value: function render() {
       var _this$props = this.props,
           phoneNumber = _this$props.phoneNumber,
-          viewportIsXSOrLess = _this$props.viewportIsXSOrLess;
+          viewportIsXSOrLess = _this$props.viewportIsXSOrLess,
+          tooltipColor = _this$props.tooltipColor;
       return _react.default.createElement(_react.Fragment, null, viewportIsXSOrLess && _react.default.createElement(_buttonIcon.ButtonIcon, {
         tag: "a",
         href: "tel:".concat(phoneNumber),
@@ -59,17 +62,21 @@ function (_Component) {
         }
       }, _react.default.createElement(_phoneIcon.PhoneIcon, {
         className: "k-ButtonIcon__svg"
-      })), !viewportIsXSOrLess && _react.default.createElement(_buttonWithTooltip.TeamCardButtonWithTooltip, this.props));
+      })), !viewportIsXSOrLess && _react.default.createElement(_buttonWithTooltip.TeamCardButtonWithTooltip, (0, _extends2.default)({}, this.props, {
+        color: tooltipColor
+      })));
     }
   }]);
   return TeamCardPhoneIconBase;
 }(_react.Component);
 
 TeamCardPhoneIconBase.propTypes = {
-  phoneNumber: _propTypes.default.string
+  phoneNumber: _propTypes.default.string,
+  tooltipColor: _propTypes.default.string
 };
 TeamCardPhoneIconBase.defaultProps = {
-  phoneNumber: ''
+  phoneNumber: '',
+  tooltipColor: '#19b4fa'
 };
 var TeamCardPhoneIcon = (0, _mediaQueries.mediaQueries)(TeamCardPhoneIconBase, {
   viewportIsXSOrLess: true
