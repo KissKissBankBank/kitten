@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `Marger` context/state.
+
 ## [1.1.1] - 2018-12-12
 
 Fix:

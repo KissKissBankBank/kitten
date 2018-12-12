@@ -17,7 +17,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 fiJAYL"
     >
       <img
         alt=""
@@ -50,7 +50,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 dIUCnH"
+        className="marger__StyledMarger-q3lecu-0 hAgZUM"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -92,10 +92,10 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 jduugu"
+      className="marger__StyledMarger-q3lecu-0 hnyYlw"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 iBqKye"
+        className="marger__StyledMarger-q3lecu-0 XfZGJ"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -127,7 +127,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
         </p>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 fTatOX"
+        className="marger__StyledMarger-q3lecu-0 kREYig"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -169,7 +169,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 fiJAYL"
     />
     <div
       data-radium={true}
@@ -185,7 +185,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 dIUCnH"
+        className="marger__StyledMarger-q3lecu-0 hAgZUM"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -240,10 +240,10 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 jduugu"
+      className="marger__StyledMarger-q3lecu-0 hnyYlw"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 iBqKye"
+        className="marger__StyledMarger-q3lecu-0 XfZGJ"
       >
         <div
           data-radium={true}
@@ -275,7 +275,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 fTatOX"
+        className="marger__StyledMarger-q3lecu-0 kREYig"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -349,7 +349,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 erRuoa"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 fiJAYL"
     >
       <img
         alt="Image alt"
@@ -382,7 +382,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 dIUCnH"
+        className="marger__StyledMarger-q3lecu-0 hAgZUM"
       >
         <span
           className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -428,10 +428,10 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 jduugu"
+      className="marger__StyledMarger-q3lecu-0 hnyYlw"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 iBqKye"
+        className="marger__StyledMarger-q3lecu-0 XfZGJ"
       >
         <h4
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -465,7 +465,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </h4>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 fTatOX"
+        className="marger__StyledMarger-q3lecu-0 kREYig"
       >
         <span
           className="k-HorizontalStroke k-HorizontalStroke--tiny"
@@ -518,10 +518,10 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 geQoCp"
+      className="marger__StyledMarger-q3lecu-0 fjuyYc"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 jNxKgx"
+        className="marger__StyledMarger-q3lecu-0 ilYDOS"
       >
         <span
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -530,7 +530,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 jNxKgx"
+        className="marger__StyledMarger-q3lecu-0 ilYDOS"
       >
         <span
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -539,7 +539,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 bBRXdi"
+        className="marger__StyledMarger-q3lecu-0 kWNgUJ"
       >
         <span
           className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -549,7 +549,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 eMXPeD"
+      className="marger__StyledMarger-q3lecu-0 gnUrti"
     >
       <div
         aria-valuemax="100"

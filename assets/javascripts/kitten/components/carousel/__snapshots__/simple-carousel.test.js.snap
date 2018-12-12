@@ -3,7 +3,7 @@
 exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 jgLxqI"
+    className="marger__StyledMarger-q3lecu-0 kOdsyC"
   >
     <div
       data-radium={true}
@@ -40,7 +40,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 HOrUm"
+    className="marger__StyledMarger-q3lecu-0 dssCRr"
   >
     <div
       data-radium={true}
@@ -75,7 +75,7 @@ Array [
 
 exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 <div
-  className="marger__StyledMarger-q3lecu-0 hfpyUu"
+  className="marger__StyledMarger-q3lecu-0 hDKFKn"
 >
   <div
     data-radium={true}
