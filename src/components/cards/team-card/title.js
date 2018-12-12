@@ -46,8 +46,7 @@ function (_Component) {
           children = _this$props.children,
           subTitle = _this$props.subTitle;
       return _react.default.createElement(_marger.Marger, {
-        top: "2",
-        bottom: "1.5"
+        top: "2"
       }, _react.default.createElement(_text.Text, {
         size: "default",
         weight: "bold",
