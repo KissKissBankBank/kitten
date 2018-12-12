@@ -21,7 +21,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireWildcard(require("radium"));
+var _radium = require("radium");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -30,8 +30,6 @@ var _buttonIcon = require("kitten/components/buttons/button-icon");
 var _phoneIcon = require("kitten/components/icons/phone-icon");
 
 var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
-
-var ButtonIcon = (0, _radium.default)(_buttonIcon.ButtonIcon);
 
 var TeamCardButtonWithTooltip =
 /*#__PURE__*/
@@ -78,8 +76,11 @@ function (_Component) {
   (0, _createClass2.default)(TeamCardButtonWithTooltip, [{
     key: "render",
     value: function render() {
-      var phoneNumber = this.props.phoneNumber;
-      var tooltipStyle = [styles.tooltip.content, this.state.hover && styles.tooltip.content.hover, this.state.focus && styles.tooltip.content.focus];
+      var _this$props = this.props,
+          phoneNumber = _this$props.phoneNumber,
+          color = _this$props.color;
+      var tooltipStyle = [tooltipColor(color), styles.tooltip.content, this.state.hover && styles.tooltip.content.hover, this.state.focus && styles.tooltip.content.focus];
+      var arrowTooltipStyle = [styles.tooltip.content.after, arrowTooltipColor(color)];
       return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("a", {
         href: "tel:".concat(phoneNumber),
         onMouseEnter: this.handleOnMouseEnter,
@@ -94,8 +95,8 @@ function (_Component) {
       }, _react.default.createElement("span", {
         style: tooltipStyle
       }, phoneNumber, _react.default.createElement("span", {
-        style: styles.tooltip.content.after
-      })), _react.default.createElement(ButtonIcon, {
+        style: arrowTooltipStyle
+      })), _react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "hydrogen",
         className: "k-ButtonIcon--phone",
         style: {
@@ -113,11 +114,25 @@ exports.TeamCardButtonWithTooltip = TeamCardButtonWithTooltip;
 TeamCardButtonWithTooltip.propTypes = {
   phoneNumber: _propTypes.default.string.isRequired
 };
-var backgroundColor = _colorsConfig.default.primary1;
 var pseudoClass = {
   visibility: 'visible',
   opacity: 1
 };
+
+var arrowTooltipColor = function arrowTooltipColor(backgroundTooltipColor) {
+  return {
+    borderBottomColor: "".concat(backgroundTooltipColor)
+  };
+};
+
+var tooltipColor = function tooltipColor(backgroundTooltipColor) {
+  return {
+    backgroundColor: "".concat(backgroundTooltipColor),
+    borderColor: "".concat(backgroundTooltipColor)
+  };
+};
+
+var backgroundColor = _colorsConfig.default.primary1;
 var styles = {
   tooltip: {
     position: 'relative',
@@ -126,8 +141,8 @@ var styles = {
       top: 55,
       padding: 15,
       marginLeft: -50,
-      backgroundColor: backgroundColor,
-      border: '2px solid #19b4fa',
+      borderSize: 2,
+      borderStyle: 'solid',
       fontSize: 14,
       lineHeight: 'normal',
       fontWeight: 'regular',
@@ -146,7 +161,6 @@ var styles = {
         width: 0,
         marginLeft: -8,
         border: '10px solid transparent',
-        borderBottomColor: backgroundColor,
         pointerEvents: 'none'
       }
     }

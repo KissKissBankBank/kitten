@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `color` prop for `TeamCardButtonWithTooltip` component.
+## [1.1.1] - 2018-12-12
+
+Fix:
+- Add `color` prop for `TeamCardButtonWithTooltip` component.
 
 ## [1.1.0] - 2018-12-11
 
