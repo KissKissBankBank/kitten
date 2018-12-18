@@ -2,7 +2,7 @@
 
 exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
 <div
-  className="k-Container k-Container--no-padding"
+  className="container__StyledContainer-q3sglt-0 k-Container--no-padding container__StyledContainer-sc-1jrnxo-0 fsdNlY"
   style={
     Object {
       "position": "relative",
@@ -57,7 +57,7 @@ exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
 
 exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
 <div
-  className="k-Container k-Container--no-padding"
+  className="container__StyledContainer-q3sglt-0 k-Container--no-padding container__StyledContainer-sc-1jrnxo-0 fsdNlY"
   style={
     Object {
       "position": "relative",
@@ -127,7 +127,7 @@ exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
 exports[`<ScrollableContainer /> with some props matches with snapshot 1`] = `
 <div
   aria-hidden={true}
-  className="k-Container k-Container--no-padding custom__class"
+  className="container__StyledContainer-q3sglt-0 k-Container--no-padding custom__class container__StyledContainer-sc-1jrnxo-0 fsdNlY"
   style={
     Object {
       "color": "red",
