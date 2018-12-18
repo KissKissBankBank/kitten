@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: Move Sass styles to styled components styles for `Container` component.
+You don't need to include the `k-Container` mixin in your Sass stylesheet
+anymore.
+
 ## [1.1.2] - 2018-12-12
 
 Fix:
