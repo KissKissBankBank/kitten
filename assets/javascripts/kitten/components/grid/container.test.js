@@ -1,31 +1,15 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
+import 'jest-styled-components'
 import { Container } from '../../components/grid/container'
 import { SCREEN_SIZE_M } from '../../constants/screen-config'
 
-const createMockMediaMatcher = matches => () => ({
-  matches,
-  addListener: () => {},
-  removeListener: () => {},
-})
-
 describe('<Container />', () => {
   describe('by default', () => {
-    const container = shallow(<Container />)
+    const container = mount(<Container />)
 
     it('is a <div />', () => {
-      expect(container.is('div')).toBe(true)
-    })
-
-    it('has a default class', () => {
-      expect(container.hasClass('k-Container')).toBe(true)
-    })
-  })
-
-  describe('with a custom class', () => {
-    const container = shallow(<Container className="custom__class" />)
-
-    it('has a custom class', () => {
-      expect(container.hasClass('custom__class')).toBe(true)
+      expect(container.find('div').length).toBe(1)
     })
   })
 
@@ -46,34 +30,25 @@ describe('<Container />', () => {
   })
 
   describe('with fullWidthBelowScreenSize props', () => {
-    let originalMatchMedia
-    beforeEach(() => {
-      originalMatchMedia = window.matchMedia
-    })
+    it('has padding CSS rule', () => {
+      const tree = renderer
+        .create(<Container fullWidthBelowScreenSize="M" />)
+        .toJSON()
 
-    afterEach(() => {
-      window.matchMedia = originalMatchMedia
-    })
-
-    describe('and media match', () => {
-      window.matchMedia = createMockMediaMatcher(true)
-      const container = shallow(
-        <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />,
-      )
-
-      it('has class no-padding', () => {
-        expect(container.hasClass('k-Container--no-padding')).toBe(true)
+      expect(tree).toHaveStyleRule('padding-right', '1.25rem')
+      expect(tree).toHaveStyleRule('padding-right', '2.5rem', {
+        media: '(min-width:640px)',
       })
-    })
+      expect(tree).toHaveStyleRule('padding-right', '0', {
+        media: '(max-width:1079px)',
+      })
 
-    describe("and media don't match", () => {
-      window.matchMedia = createMockMediaMatcher(false)
-      const container = shallow(
-        <Container fullWidthBelowScreenSize={SCREEN_SIZE_M} />,
-      )
-
-      it('has not class no-padding', () => {
-        expect(container.hasClass('k-Container--no-padding')).toBe(false)
+      expect(tree).toHaveStyleRule('padding-left', '1.25rem')
+      expect(tree).toHaveStyleRule('padding-left', '2.5rem', {
+        media: '(min-width:640px)',
+      })
+      expect(tree).toHaveStyleRule('padding-left', '0', {
+        media: '(max-width:1079px)',
       })
     })
   })

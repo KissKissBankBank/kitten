@@ -1,49 +1,30 @@
 import React from 'react'
+import styled from 'styled-components'
 import classNames from 'classnames'
-import { createMatchMediaMax } from '../../helpers/utils/media-queries'
+import { ScreenConfig } from '../../constants/screen-config'
+import BaseStyledContainer from '../styled/grid/container'
+
+const containerMediaQuery = props => {
+  if (!props.fullWidthBelowScreenSize) return null
+
+  const breakpoint = ScreenConfig[props.fullWidthBelowScreenSize].max
+
+  return `@media (max-width: ${breakpoint}px) {
+    padding-right: 0;
+    padding-left: 0;
+  }`
+}
+
+const StyledContainer = styled(BaseStyledContainer)`
+  ${containerMediaQuery}
+`
 
 export class Container extends React.PureComponent {
-  constructor(props, context) {
-    super(props, context)
-
-    this.mqBelowScreenSize =
-      props.fullWidthBelowScreenSize &&
-      createMatchMediaMax(props.fullWidthBelowScreenSize)
-
-    this.state = {
-      isBelowScreenSize: false,
-    }
-  }
-
-  componentDidMount() {
-    if (this.mqBelowScreenSize) {
-      this.mqBelowScreenSize.addListener(this.onScreenSizeChange)
-      this.onScreenSizeChange(this.mqBelowScreenSize)
-    }
-  }
-
-  componentWillUnmount() {
-    this.mqBelowScreenSize &&
-      this.mqBelowScreenSize.removeListener(this.onScreenSizeChange)
-  }
-
-  onScreenSizeChange = event => {
-    this.setState({ isBelowScreenSize: event.matches })
-  }
-
   render() {
-    const { className, fullWidthBelowScreenSize, ...props } = this.props
-    const { isBelowScreenSize } = this.state
-
-    const containerClassName = classNames('k-Container', className, {
-      'k-Container--no-padding': isBelowScreenSize,
-    })
-
-    return <div className={containerClassName} {...props} />
+    return <StyledContainer {...this.props} />
   }
 }
 
 Container.defaultProps = {
-  className: null,
   fullWidthBelowScreenSize: null,
 }
