@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { ButtonIcon } from '../../../components/buttons/button-icon'
-import { LinkedinIcon } from '../../../components/icons/linkedin-icon'
-import { TwitterIcon } from '../../../components/icons/twitter-icon'
-import { Marger as MargerBase } from '../../../components/layout/marger'
-import { EmailIcon } from '../../../components/icons/email-icon'
-import { TeamCardPhoneIcon } from '../../../components/cards/team-card/phone-icon'
+import { ButtonIcon } from '../../buttons/button-icon'
+import { LinkedinIcon } from '../../icons/linkedin-icon'
+import { TwitterIcon } from '../../icons/twitter-icon'
+import { Marger as MargerBase } from '../../layout/marger'
+import { EmailIcon } from '../../icons/email-icon'
+import { TeamCardPhoneIcon } from './phone-icon'
 import deprecated from 'prop-types-extra/lib/deprecated'
 
 const Marger = Radium(MargerBase)

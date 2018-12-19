@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { ButtonIcon } from '../../../components/buttons/button-icon'
-import { PhoneIcon } from '../../../components/icons/phone-icon'
-import { TeamCardButtonWithTooltip } from '../../../components/cards/team-card/button-with-tooltip'
+import { ButtonIcon } from '../../buttons/button-icon'
+import { PhoneIcon } from '../../icons/phone-icon'
+import { TeamCardButtonWithTooltip } from './button-with-tooltip'
 import { mediaQueries } from '../../../hoc/media-queries'
 
 class TeamCardPhoneIconBase extends Component {
