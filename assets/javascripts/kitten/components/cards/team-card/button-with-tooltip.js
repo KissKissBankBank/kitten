@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { PhoneIcon } from 'kitten/components/icons/phone-icon'
-import COLORS from 'kitten/constants/colors-config'
+import { ButtonIcon } from '../../../components/buttons/button-icon'
+import { PhoneIcon } from '../../../components/icons/phone-icon'
+import COLORS from '../../../constants/colors-config'
 
 export class TeamCardButtonWithTooltip extends Component {
   static propTypes = {
