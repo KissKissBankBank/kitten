@@ -1,19 +1,9 @@
 import React, { Component, Fragment } from 'react'
+import { Item } from './components/item'
+import { Header } from './components/header'
+import { Content } from './components/content'
+import { Context } from './components/context'
 import { Marger } from '../layout/marger'
-
-const AccordeonContext = React.createContext(0)
-
-const Item = props => <div {...props} />
-const Header = props => <div {...props} />
-const Content = props => {
-  return (
-    <AccordeonContext.Consumer>
-      {selectedItem => {
-        return selectedItem === props.id && <div {...props} />
-      }}
-    </AccordeonContext.Consumer>
-  )
-}
 
 export class Accordeon extends Component {
   static Item = Item
@@ -32,13 +22,13 @@ export class Accordeon extends Component {
     )
 
     return (
-      <AccordeonContext.Provider value={selectedItem}>
+      <Context.Provider value={selectedItem}>
         {items.map((item, index) => (
           <Marger key={index} bottom={index === items.length - 1 ? 0 : 1.5}>
             {React.cloneElement(item, { id: index })}
           </Marger>
         ))}
-      </AccordeonContext.Provider>
+      </Context.Provider>
     )
   }
 }
