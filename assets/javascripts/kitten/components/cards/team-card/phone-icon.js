@@ -1,10 +1,10 @@
 import React, { Component, Fragment } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { PhoneIcon } from 'kitten/components/icons/phone-icon'
-import { TeamCardButtonWithTooltip } from 'kitten/components/cards/team-card/button-with-tooltip'
-import { mediaQueries } from 'kitten/hoc/media-queries'
+import { ButtonIcon } from '../../buttons/button-icon'
+import { PhoneIcon } from '../../icons/phone-icon'
+import { TeamCardButtonWithTooltip } from './button-with-tooltip'
+import { mediaQueries } from '../../../hoc/media-queries'
 
 class TeamCardPhoneIconBase extends Component {
   static propTypes = {

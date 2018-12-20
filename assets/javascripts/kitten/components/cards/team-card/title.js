@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Text } from 'kitten/components/typography/text'
-import { Marger } from 'kitten/components/layout/marger'
+import { Text } from '../../typography/text'
+import { Marger } from '../../layout/marger'
 
 export class TeamCardTitle extends Component {
   static propTypes = {
