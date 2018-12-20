@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Item } from './components/item'
 import { Header } from './components/header'
 import { Content } from './components/content'
@@ -17,8 +18,10 @@ export class Accordeon extends Component {
       updateSelectedItem: this.updateSelectedItem,
     }
   }
+
   updateSelectedItem = newSelectedItemId => {
     this.setState({ selectedItem: newSelectedItemId })
+    this.props.onChange(newSelectedItemId)
   }
 
   render() {
@@ -37,4 +40,12 @@ export class Accordeon extends Component {
       </Context.Provider>
     )
   }
+}
+
+Accordeon.propTypes = {
+  onChange: PropTypes.func,
+}
+
+Accordeon.defaultProps = {
+  onchange: () => {},
 }

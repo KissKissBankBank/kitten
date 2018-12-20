@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import styled, { css } from 'styled-components'
 import { Container } from '../../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../../components/grid/grid'
 import { Marger } from '../../../../../components/layout/marger'
@@ -20,6 +21,13 @@ import Cart from '../../common/cart/cart'
 import { pxToRem } from '../../../../../helpers/utils/typography'
 import { Accordeon } from '../../../../../components/accordeon'
 import { RadioButton } from '../../../../..//components/form/radio-button'
+import COLORS from '../../../../../constants/colors-config'
+
+const HeaderDisplayStyle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
 
 class PaymentChoices extends Component {
   render() {
@@ -72,11 +80,19 @@ class PaymentChoices extends Component {
                 <Accordeon>
                   <Accordeon.Item>
                     <Accordeon.Header>
-                      <RadioButton
-                        text="Payer par carte bancaire"
-                        style={{ margin: 0 }}
-                      />
-                      <VisaIcon />
+                      <label htmlFor="rpc-credit-card">
+                        <HeaderDisplayStyle>
+                          <RadioButton
+                            text="Payer par carte bancaire"
+                            checked
+                            style={{ margin: 0 }}
+                          />
+                          <HeaderDisplayStyle>
+                            <VisaIcon style={{ marginRight: 20 }} />
+                            <MasterCardIcon />
+                          </HeaderDisplayStyle>
+                        </HeaderDisplayStyle>
+                      </label>
                     </Accordeon.Header>
 
                     <Accordeon.Content />
@@ -84,10 +100,14 @@ class PaymentChoices extends Component {
 
                   <Accordeon.Item>
                     <Accordeon.Header>
-                      <RadioButton
-                        text="Payer avec Paypal"
-                        style={{ margin: 0 }}
-                      />
+                      <HeaderDisplayStyle>
+                        <RadioButton
+                          text="Payer avec Paypal"
+                          checked
+                          style={{ margin: 0 }}
+                        />
+                        <PayPalIcon />
+                      </HeaderDisplayStyle>
                     </Accordeon.Header>
 
                     <Accordeon.Content />
@@ -97,6 +117,7 @@ class PaymentChoices extends Component {
                     <Accordeon.Header>
                       <RadioButton
                         text="Autre moyen de paiement"
+                        checked
                         style={{ margin: 0 }}
                       />
                     </Accordeon.Header>
