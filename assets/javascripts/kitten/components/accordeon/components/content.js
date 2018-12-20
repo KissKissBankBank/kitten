@@ -6,7 +6,6 @@ import { Context } from './context'
 
 const ContentStyled = styled.div`
   display: none;
-  align-self: center;
   box-sizing: border-box;
 
   padding: ${pxToRem(30)};

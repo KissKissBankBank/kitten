@@ -18,6 +18,8 @@ import { GiropayIcon } from '../../../../../components/icons/giropay-icon'
 import { PaymentButton } from './payment-button'
 import Cart from '../../common/cart/cart'
 import { pxToRem } from '../../../../../helpers/utils/typography'
+import { Accordeon } from '../../../../../components/accordeon'
+import { RadioButton } from '../../../../..//components/form/radio-button'
 
 class PaymentChoices extends Component {
   render() {
@@ -67,51 +69,41 @@ class PaymentChoices extends Component {
               )}
 
               {!onlyPayPal && (
-                <Fragment>
-                  <PaymentButton tag="a" href="#">
-                    <VisaIcon />
-                  </PaymentButton>
+                <Accordeon>
+                  <Accordeon.Item>
+                    <Accordeon.Header>
+                      <RadioButton
+                        text="Payer par carte bancaire"
+                        style={{ margin: 0 }}
+                      />
+                      <VisaIcon />
+                    </Accordeon.Header>
 
-                  <PaymentButton tag="a" href="#">
-                    <MasterCardIcon />
-                  </PaymentButton>
+                    <Accordeon.Content />
+                  </Accordeon.Item>
 
-                  <PaymentButton tag="a" href="#">
-                    <MaestroIcon />
-                  </PaymentButton>
+                  <Accordeon.Item>
+                    <Accordeon.Header>
+                      <RadioButton
+                        text="Payer avec Paypal"
+                        style={{ margin: 0 }}
+                      />
+                    </Accordeon.Header>
 
-                  <PaymentButton tag="a" href="#">
-                    <BancontactIcon />
-                  </PaymentButton>
+                    <Accordeon.Content />
+                  </Accordeon.Item>
 
-                  <PaymentButton tag="a" href="#">
-                    <IdealIcon />
-                  </PaymentButton>
+                  <Accordeon.Item>
+                    <Accordeon.Header>
+                      <RadioButton
+                        text="Autre moyen de paiement"
+                        style={{ margin: 0 }}
+                      />
+                    </Accordeon.Header>
 
-                  <PaymentButton
-                    tag="a"
-                    href="#"
-                    style={{ padding: pxToRem(10) }}
-                  >
-                    <SofortIcon />
-                  </PaymentButton>
-
-                  <PaymentButton
-                    tag="a"
-                    href="#"
-                    style={{ padding: pxToRem(10) }}
-                  >
-                    <PayPalIcon />
-                  </PaymentButton>
-
-                  <PaymentButton
-                    tag="a"
-                    href="#"
-                    style={{ padding: pxToRem(10) }}
-                  >
-                    <GiropayIcon />
-                  </PaymentButton>
-                </Fragment>
+                    <Accordeon.Content />
+                  </Accordeon.Item>
+                </Accordeon>
               )}
             </Marger>
           </GridCol>

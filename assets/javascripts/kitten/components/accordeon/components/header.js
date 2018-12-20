@@ -5,8 +5,6 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { Context } from './context'
 
 const HeaderStyled = styled.div`
-  display: flex;
-  align-self: center;
   box-sizing: border-box;
 
   padding: ${pxToRem(20)};
