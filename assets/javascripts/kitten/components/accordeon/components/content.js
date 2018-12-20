@@ -20,7 +20,7 @@ const ContentStyled = styled.div`
   ${({ isSelected }) =>
     isSelected &&
     css`
-      display: flex;
+      display: block;
     `}
 `
 

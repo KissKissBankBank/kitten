@@ -30,8 +30,19 @@ const HeaderDisplayStyle = styled.div`
 `
 
 class PaymentChoices extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      selectedItem: null,
+    }
+  }
+
+  handleChange = selectedItem => this.setState({ selectedItem })
+
   render() {
     const { onlyPayPal } = this.props
+    const { selectedItem } = this.state
 
     return (
       <Container>
@@ -77,22 +88,20 @@ class PaymentChoices extends Component {
               )}
 
               {!onlyPayPal && (
-                <Accordeon>
+                <Accordeon onChange={this.handleChange}>
                   <Accordeon.Item>
                     <Accordeon.Header>
-                      <label htmlFor="rpc-credit-card">
+                      <HeaderDisplayStyle>
+                        <RadioButton
+                          text="Payer par carte bancaire"
+                          checked={selectedItem === 0}
+                          style={{ margin: 0 }}
+                        />
                         <HeaderDisplayStyle>
-                          <RadioButton
-                            text="Payer par carte bancaire"
-                            checked
-                            style={{ margin: 0 }}
-                          />
-                          <HeaderDisplayStyle>
-                            <VisaIcon style={{ marginRight: 20 }} />
-                            <MasterCardIcon />
-                          </HeaderDisplayStyle>
+                          <VisaIcon style={{ marginRight: 20 }} />
+                          <MasterCardIcon />
                         </HeaderDisplayStyle>
-                      </label>
+                      </HeaderDisplayStyle>
                     </Accordeon.Header>
 
                     <Accordeon.Content />
@@ -103,26 +112,77 @@ class PaymentChoices extends Component {
                       <HeaderDisplayStyle>
                         <RadioButton
                           text="Payer avec Paypal"
-                          checked
+                          checked={selectedItem === 1}
                           style={{ margin: 0 }}
                         />
                         <PayPalIcon />
                       </HeaderDisplayStyle>
                     </Accordeon.Header>
 
-                    <Accordeon.Content />
+                    <Accordeon.Content>
+                      <Marger bottom="3">
+                        <Paragraph modifier="tertiary" margin={false}>
+                          Après avoir validé votre demande, vous serez
+                          automatiquement redirigé vers la page de connexion
+                          Paypal
+                        </Paragraph>
+                      </Marger>
+
+                      <Button modifier="helium" size="big" type="button">
+                        Payer 120 €
+                      </Button>
+                    </Accordeon.Content>
                   </Accordeon.Item>
 
                   <Accordeon.Item>
                     <Accordeon.Header>
                       <RadioButton
                         text="Autre moyen de paiement"
-                        checked
+                        checked={selectedItem === 2}
                         style={{ margin: 0 }}
                       />
                     </Accordeon.Header>
 
-                    <Accordeon.Content />
+                    <Accordeon.Content>
+                      <Marger bottom="3">
+                        <Paragraph modifier="tertiary" margin={false}>
+                          Vous serez automatiquement redirigé vers la page de
+                          notre prestataire de paiement.
+                        </Paragraph>
+                      </Marger>
+
+                      <Text weight="regular" color="font1">
+                        Sélectionnez un prestataire de paiement
+                      </Text>
+
+                      <PaymentButton tag="a" href="#">
+                        <MaestroIcon />
+                      </PaymentButton>
+
+                      <PaymentButton tag="a" href="#">
+                        <BancontactIcon />
+                      </PaymentButton>
+
+                      <PaymentButton tag="a" href="#">
+                        <IdealIcon />
+                      </PaymentButton>
+
+                      <PaymentButton
+                        tag="a"
+                        href="#"
+                        style={{ padding: pxToRem(10) }}
+                      >
+                        <SofortIcon />
+                      </PaymentButton>
+
+                      <PaymentButton
+                        tag="a"
+                        href="#"
+                        style={{ padding: pxToRem(10) }}
+                      >
+                        <GiropayIcon />
+                      </PaymentButton>
+                    </Accordeon.Content>
                   </Accordeon.Item>
                 </Accordeon>
               )}
