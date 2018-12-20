@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import { Header } from './header'
 import { Content } from './content'
-import { Context } from './context'
 
 export const Item = ({ children, id }) => {
   const header = React.Children.toArray(children).filter(
@@ -13,15 +12,9 @@ export const Item = ({ children, id }) => {
   )
 
   return (
-    <Context.Consumer>
-      {({ selectedItem }) => {
-        return (
-          <Fragment>
-            {React.cloneElement(header[0], { id })}
-            {selectedItem === id && content[0]}
-          </Fragment>
-        )
-      }}
-    </Context.Consumer>
+    <Fragment>
+      {React.cloneElement(header[0], { id })}
+      {React.cloneElement(content[0], { id })}
+    </Fragment>
   )
 }

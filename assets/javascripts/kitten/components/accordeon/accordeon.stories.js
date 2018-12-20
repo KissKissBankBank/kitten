@@ -25,33 +25,21 @@ storiesOf('Accordeon/Accordeon', module)
       <StoryGrid>
         <Accordeon>
           <Accordeon.Item>
-            <Accordeon.Header>
-              <p>Header</p>
-            </Accordeon.Header>
+            <Accordeon.Header>Header</Accordeon.Header>
 
-            <Accordeon.Content>
-              <p>Content</p>
-            </Accordeon.Content>
+            <Accordeon.Content>Content</Accordeon.Content>
           </Accordeon.Item>
 
           <Accordeon.Item>
-            <Accordeon.Header>
-              <p>Header</p>
-            </Accordeon.Header>
+            <Accordeon.Header>Header</Accordeon.Header>
 
-            <Accordeon.Content>
-              <p>Content</p>
-            </Accordeon.Content>
+            <Accordeon.Content>Content</Accordeon.Content>
           </Accordeon.Item>
 
           <Accordeon.Item>
-            <Accordeon.Header>
-              <p>Header</p>
-            </Accordeon.Header>
+            <Accordeon.Header>Header</Accordeon.Header>
 
-            <Accordeon.Content>
-              <p>Content</p>
-            </Accordeon.Content>
+            <Accordeon.Content>Content</Accordeon.Content>
           </Accordeon.Item>
         </Accordeon>
       </StoryGrid>
