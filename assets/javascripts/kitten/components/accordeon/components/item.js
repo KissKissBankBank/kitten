@@ -14,11 +14,11 @@ export const Item = ({ children, id }) => {
 
   return (
     <Context.Consumer>
-      {selectedItem => {
+      {({ selectedItem }) => {
         return (
           <Fragment>
-            {header}
-            {selectedItem === id && content}
+            {React.cloneElement(header[0], { id })}
+            {selectedItem === id && content[0]}
           </Fragment>
         )
       }}

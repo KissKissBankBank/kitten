@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Item } from './components/item'
 import { Header } from './components/header'
 import { Content } from './components/content'
@@ -10,19 +10,25 @@ export class Accordeon extends Component {
   static Header = Header
   static Content = Content
 
-  state = {
-    selectedItem: 0,
+  constructor(props) {
+    super(props)
+    this.state = {
+      selectedItem: null,
+      updateSelectedItem: this.updateSelectedItem,
+    }
+  }
+  updateSelectedItem = newSelectedItemId => {
+    this.setState({ selectedItem: newSelectedItemId })
   }
 
   render() {
-    const { selectedItem } = this.state
     const { children } = this.props
     const items = React.Children.toArray(children).filter(
       child => child.type === Accordeon.Item,
     )
 
     return (
-      <Context.Provider value={selectedItem}>
+      <Context.Provider value={this.state}>
         {items.map((item, index) => (
           <Marger key={index} bottom={index === items.length - 1 ? 0 : 1.5}>
             {React.cloneElement(item, { id: index })}
