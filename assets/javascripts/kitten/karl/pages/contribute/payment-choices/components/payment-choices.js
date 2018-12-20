@@ -155,33 +155,35 @@ class PaymentChoices extends Component {
                         Sélectionnez un prestataire de paiement
                       </Text>
 
-                      <PaymentButton tag="a" href="#">
-                        <MaestroIcon />
-                      </PaymentButton>
+                      <div>
+                        <PaymentButton tag="a" href="#">
+                          <MaestroIcon />
+                        </PaymentButton>
 
-                      <PaymentButton tag="a" href="#">
-                        <BancontactIcon />
-                      </PaymentButton>
+                        <PaymentButton tag="a" href="#">
+                          <BancontactIcon />
+                        </PaymentButton>
 
-                      <PaymentButton tag="a" href="#">
-                        <IdealIcon />
-                      </PaymentButton>
+                        <PaymentButton tag="a" href="#">
+                          <IdealIcon />
+                        </PaymentButton>
 
-                      <PaymentButton
-                        tag="a"
-                        href="#"
-                        style={{ padding: pxToRem(10) }}
-                      >
-                        <SofortIcon />
-                      </PaymentButton>
+                        <PaymentButton
+                          tag="a"
+                          href="#"
+                          style={{ padding: pxToRem(10) }}
+                        >
+                          <SofortIcon />
+                        </PaymentButton>
 
-                      <PaymentButton
-                        tag="a"
-                        href="#"
-                        style={{ padding: pxToRem(10) }}
-                      >
-                        <GiropayIcon />
-                      </PaymentButton>
+                        <PaymentButton
+                          tag="a"
+                          href="#"
+                          style={{ padding: pxToRem(10) }}
+                        >
+                          <GiropayIcon />
+                        </PaymentButton>
+                      </div>
                     </Accordeon.Content>
                   </Accordeon.Item>
                 </Accordeon>
