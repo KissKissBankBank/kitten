@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update `TeamCard` import links.
+## [1.1.3] - 2018-12-20
+
+Fix:
+- Update `TeamCard` import links.
 
 ## [1.1.2] - 2018-12-12
 
