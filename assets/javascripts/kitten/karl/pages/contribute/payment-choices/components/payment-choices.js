@@ -20,10 +20,10 @@ import { PaymentButton } from './payment-button'
 import Cart from '../../common/cart/cart'
 import { pxToRem } from '../../../../../helpers/utils/typography'
 import { Accordeon } from '../../../../../components/accordeon'
-import { RadioButton } from '../../../../..//components/form/radio-button'
-import COLORS from '../../../../../constants/colors-config'
+import { RadioButton } from '../../../../../components/form/radio-button'
+import { Field } from '../../../../../components/form/field'
 
-const HeaderDisplayStyle = styled.div`
+const HeaderDisplayStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +41,7 @@ class PaymentChoices extends Component {
   handleChange = selectedItem => this.setState({ selectedItem })
 
   render() {
-    const { onlyPayPal } = this.props
+    const { error } = this.props
     const { selectedItem } = this.state
 
     return (
@@ -66,57 +66,149 @@ class PaymentChoices extends Component {
               </Paragraph>
             </Marger>
 
-            {!onlyPayPal && (
-              <Marger top="4" bottom="1.5">
-                <Text
-                  tag="p"
-                  weight="regular"
-                  color="font1"
-                  style={{ margin: 0 }}
-                >
-                  Sélectionnez un type de paiement
-                </Text>
-              </Marger>
-            )}
+            <Marger top="4" bottom="1.5">
+              <Text
+                tag="p"
+                weight="regular"
+                color="font1"
+                style={{ margin: 0 }}
+              >
+                Sélectionnez un type de paiement
+              </Text>
+            </Marger>
 
-            <Marger top={onlyPayPal ? 4 : 1.5}>
-              {onlyPayPal && (
-                <Button modifier="azote" size="big">
-                  Payer 120 € avec{' '}
-                  <PayPalIcon style={{ position: 'relative', top: '2px' }} />
-                </Button>
-              )}
-
-              {!onlyPayPal && (
+            <Grid>
+              <GridCol col-l="10">
                 <Accordeon onChange={this.handleChange}>
                   <Accordeon.Item>
                     <Accordeon.Header>
-                      <HeaderDisplayStyle>
+                      <HeaderDisplayStyled>
                         <RadioButton
-                          text="Payer par carte bancaire"
+                          text={
+                            <Text weight="regular" color="font1">
+                              Payer par carte bancaire
+                            </Text>
+                          }
                           checked={selectedItem === 0}
                           style={{ margin: 0 }}
                         />
-                        <HeaderDisplayStyle>
+                        <HeaderDisplayStyled>
                           <VisaIcon style={{ marginRight: 20 }} />
                           <MasterCardIcon />
-                        </HeaderDisplayStyle>
-                      </HeaderDisplayStyle>
+                        </HeaderDisplayStyled>
+                      </HeaderDisplayStyled>
                     </Accordeon.Header>
 
-                    <Accordeon.Content />
+                    <Accordeon.Content>
+                      <form style={{ padding: 0 }}>
+                        <Marger bottom="3">
+                          <Field>
+                            <Field.Label
+                              labelProps={{ htmlFor: 'card-number' }}
+                            >
+                              Numéro de carte
+                            </Field.Label>
+
+                            <Field.Input
+                              id="card-number"
+                              placeholder="XXXX XXXX XXXX XXXX"
+                              error={error}
+                            />
+
+                            {error && (
+                              <Field.ErrorMessage>
+                                Le numéro de carte n'est pas valide.
+                              </Field.ErrorMessage>
+                            )}
+                          </Field>
+                        </Marger>
+
+                        <Marger bottom="3">
+                          <Field>
+                            <Field.Label labelProps={{ htmlFor: 'month' }}>
+                              Date de fin de validité
+                            </Field.Label>
+
+                            <Grid style={{ marginTop: pxToRem(-15) }}>
+                              <GridCol col="6">
+                                <Field.Select
+                                  id="month"
+                                  name="month"
+                                  placeholder="Mois"
+                                  options={[
+                                    { value: 1, label: 'Janvier' },
+                                    { value: 2, label: 'Février' },
+                                  ]}
+                                  error={error}
+                                />
+                              </GridCol>
+
+                              <GridCol col="6">
+                                <Field.Select
+                                  id="year"
+                                  name="year"
+                                  placeholder="Année"
+                                  options={[
+                                    { value: 2018, label: '2018' },
+                                    { value: 2019, label: '2019' },
+                                    { value: 2020, label: '2020' },
+                                    { value: 2021, label: '2021' },
+                                  ]}
+                                  error={error}
+                                />
+                              </GridCol>
+                            </Grid>
+
+                            {error && (
+                              <Field.ErrorMessage>
+                                Le date de fin de validité n'est pas valide.
+                              </Field.ErrorMessage>
+                            )}
+                          </Field>
+                        </Marger>
+
+                        <Marger bottom="4">
+                          <Field>
+                            <Field.Label labelProps={{ htmlFor: 'cvv' }}>
+                              Cryptogramme visuel
+                            </Field.Label>
+
+                            <Field.Input
+                              id="cvv"
+                              placeholder="CVV"
+                              digits={6}
+                              error={error}
+                            />
+
+                            {error && (
+                              <Field.ErrorMessage>
+                                Le cryptogramme visuel est requis.
+                              </Field.ErrorMessage>
+                            )}
+                          </Field>
+                        </Marger>
+
+                        <Button modifier="helium" size="big" type="button">
+                          Payer 120 €
+                        </Button>
+                      </form>
+                    </Accordeon.Content>
                   </Accordeon.Item>
 
                   <Accordeon.Item>
                     <Accordeon.Header>
-                      <HeaderDisplayStyle>
+                      <HeaderDisplayStyled>
                         <RadioButton
-                          text="Payer avec Paypal"
+                          text={
+                            <Text weight="regular" color="font1">
+                              Payer avec Paypal
+                            </Text>
+                          }
                           checked={selectedItem === 1}
                           style={{ margin: 0 }}
                         />
                         <PayPalIcon />
-                      </HeaderDisplayStyle>
+                      </HeaderDisplayStyled>
                     </Accordeon.Header>
 
                     <Accordeon.Content>
@@ -137,7 +229,11 @@ class PaymentChoices extends Component {
                   <Accordeon.Item>
                     <Accordeon.Header>
                       <RadioButton
-                        text="Autre moyen de paiement"
+                        text={
+                          <Text weight="regular" color="font1">
+                            Autre moyen de paiement
+                          </Text>
+                        }
                         checked={selectedItem === 2}
                         style={{ margin: 0 }}
                       />
@@ -187,8 +283,8 @@ class PaymentChoices extends Component {
                     </Accordeon.Content>
                   </Accordeon.Item>
                 </Accordeon>
-              )}
-            </Marger>
+              </GridCol>
+            </Grid>
           </GridCol>
 
           <GridCol
