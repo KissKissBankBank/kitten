@@ -78,7 +78,7 @@ class PaymentChoices extends Component {
             </Marger>
 
             <Grid>
-              <GridCol col-l="10">
+              <GridCol col-m="8" col-l="10">
                 <Accordeon onChange={this.handleChange}>
                   <Accordeon.Item>
                     <Accordeon.Header>
