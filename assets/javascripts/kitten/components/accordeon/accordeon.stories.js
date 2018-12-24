@@ -26,19 +26,16 @@ storiesOf('Accordeon/Accordeon', module)
         <Accordeon>
           <Accordeon.Item>
             <Accordeon.Header>Header</Accordeon.Header>
-
             <Accordeon.Content>Content</Accordeon.Content>
           </Accordeon.Item>
 
           <Accordeon.Item>
             <Accordeon.Header>Header</Accordeon.Header>
-
             <Accordeon.Content>Content</Accordeon.Content>
           </Accordeon.Item>
 
           <Accordeon.Item>
             <Accordeon.Header>Header</Accordeon.Header>
-
             <Accordeon.Content>Content</Accordeon.Content>
           </Accordeon.Item>
         </Accordeon>

@@ -6,12 +6,11 @@ import { Context } from './context'
 
 const HeaderStyled = styled.div`
   box-sizing: border-box;
-
   padding: ${pxToRem(20)};
   min-height: ${pxToRem(30)};
-
-  border: 2px solid ${COLORS.line1};
-  border-radius: 3px;
+  border: ${pxToRem(2)} solid ${COLORS.line1};
+  border-radius: ${pxToRem(3)};
+  cursor: pointer;
 
   ${({ isSelected }) =>
     isSelected &&
@@ -19,21 +18,17 @@ const HeaderStyled = styled.div`
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     `}
-
-  cursor: pointer;
 `
 
-export const Header = ({ id, children }) => {
-  return (
-    <Context.Consumer>
-      {({ updateSelectedItem, selectedItem }) => (
-        <HeaderStyled
-          isSelected={selectedItem === id}
-          onClick={() => updateSelectedItem(id)}
-        >
-          {children}
-        </HeaderStyled>
-      )}
-    </Context.Consumer>
-  )
-}
+export const Header = ({ id, children }) => (
+  <Context.Consumer>
+    {({ updateSelectedItem, selectedItem }) => (
+      <HeaderStyled
+        isSelected={selectedItem === id}
+        onClick={() => updateSelectedItem(id)}
+      >
+        {children}
+      </HeaderStyled>
+    )}
+  </Context.Consumer>
+)
