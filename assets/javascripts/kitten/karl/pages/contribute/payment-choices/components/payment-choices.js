@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react'
-import styled, { css } from 'styled-components'
+import React, { Component } from 'react'
+import styled from 'styled-components'
 import { Container } from '../../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../../components/grid/grid'
 import { Marger } from '../../../../../components/layout/marger'
@@ -204,7 +204,12 @@ class PaymentChoices extends Component {
                     <Accordeon.Header>
                       <HeaderDisplayStyled>
                         {onlyPayPal && (
-                          <Text weight="regular" color="font1" size="tiny">
+                          <Text
+                            weight="regular"
+                            color="font1"
+                            size="tiny"
+                            style={{ marginLeft: pxToRem(10) }}
+                          >
                             Payer avec Paypal
                           </Text>
                         )}
