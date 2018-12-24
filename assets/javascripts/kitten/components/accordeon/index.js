@@ -5,6 +5,7 @@ import { Header } from './components/header'
 import { Content } from './components/content'
 import { Context } from './components/context'
 import { Marger } from '../layout/marger'
+import { getReactElementsByType } from '../../helpers/react/react-elements'
 
 export class Accordeon extends Component {
   static Item = Item
@@ -13,6 +14,7 @@ export class Accordeon extends Component {
 
   constructor(props) {
     super(props)
+
     this.state = {
       selectedItem: null,
       updateSelectedItem: this.updateSelectedItem,
@@ -26,9 +28,7 @@ export class Accordeon extends Component {
 
   render() {
     const { children } = this.props
-    const items = React.Children.toArray(children).filter(
-      child => child.type === Accordeon.Item,
-    )
+    const items = getReactElementsByType({ children, type: Accordeon.Item })
 
     return (
       <Context.Provider value={this.state}>
