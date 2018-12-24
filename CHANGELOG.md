@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Accordeon` component.
+- Feature: Add `getReactElementsByType` helper.
+
 ## [1.1.2] - 2018-12-12
 
 Fix:
