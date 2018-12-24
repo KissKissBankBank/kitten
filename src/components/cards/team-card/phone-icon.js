@@ -27,13 +27,13 @@ var _radium = _interopRequireDefault(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _buttonIcon = require("kitten/components/buttons/button-icon");
+var _buttonIcon = require("../../buttons/button-icon");
 
-var _phoneIcon = require("kitten/components/icons/phone-icon");
+var _phoneIcon = require("../../icons/phone-icon");
 
-var _buttonWithTooltip = require("kitten/components/cards/team-card/button-with-tooltip");
+var _buttonWithTooltip = require("./button-with-tooltip");
 
-var _mediaQueries = require("kitten/hoc/media-queries");
+var _mediaQueries = require("../../../hoc/media-queries");
 
 var TeamCardPhoneIconBase =
 /*#__PURE__*/

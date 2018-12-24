@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from 'kitten/components/layout/marger'
-import COLORS from 'kitten/constants/colors-config'
+import { Marger } from '../../layout/marger'
+import COLORS from '../../../constants/colors-config'
 
 export class TeamCardImage extends Component {
   static propTypes = {
