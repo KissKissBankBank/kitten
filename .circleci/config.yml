@@ -1,5 +1,10 @@
 version: 2
 
+jobs:
+  build_and_test:
+    docker:
+      - image: circleci/node:10-browsers
+
 defaults:
   working_directory: ~/repo
   docker:
@@ -23,16 +28,19 @@ jobs:
             - ~/.bundle
           key: v1-dependencies-{{ checksum "package-lock.json" }}
       - run:
-          name: Run tests
-          command: npm run test
+          name: run tests
+          command: |
+            npm run test
+
       - store_test_results:
           path: /tmp/test-results
+
       - store_artifacts:
           path: /tmp/test-results
           destination: test-results
 
 workflows:
   version: 2
-  build:
+  build_and_test:
     jobs:
-      - test
+      - build_and_test
