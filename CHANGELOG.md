@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `Accordeon` component.
 - Feature: Add `getReactElementsByType` helper.
+- Feature: Uses `style` prop on `RadioButton`.
 
 ## [1.1.3] - 2018-12-20
 
