@@ -41,7 +41,7 @@ class PaymentChoices extends Component {
   handleChange = selectedItem => this.setState({ selectedItem })
 
   render() {
-    const { error } = this.props
+    const { onlyPayPal, error } = this.props
     const { selectedItem } = this.state
 
     return (
@@ -79,134 +79,148 @@ class PaymentChoices extends Component {
 
             <Grid>
               <GridCol col-m="8" col-l="10">
-                <Accordeon onChange={this.handleChange}>
-                  <Accordeon.Item>
-                    <Accordeon.Header>
-                      <HeaderDisplayStyled>
-                        <RadioButton
-                          text={
-                            <Text weight="regular" color="font1">
-                              Payer par carte bancaire
-                            </Text>
-                          }
-                          checked={selectedItem === 0}
-                          style={{ margin: 0 }}
-                        />
+                <Accordeon
+                  selectedItem={onlyPayPal ? 0 : null}
+                  onChange={this.handleChange}
+                >
+                  {!onlyPayPal && (
+                    <Accordeon.Item>
+                      <Accordeon.Header>
                         <HeaderDisplayStyled>
-                          <VisaIcon style={{ marginRight: 20 }} />
-                          <MasterCardIcon />
+                          <RadioButton
+                            text={
+                              <Text weight="regular" color="font1">
+                                Payer par carte bancaire
+                              </Text>
+                            }
+                            checked={selectedItem === 0}
+                            style={{ margin: 0 }}
+                          />
+                          <HeaderDisplayStyled>
+                            <VisaIcon style={{ marginRight: 20 }} />
+                            <MasterCardIcon />
+                          </HeaderDisplayStyled>
                         </HeaderDisplayStyled>
-                      </HeaderDisplayStyled>
-                    </Accordeon.Header>
+                      </Accordeon.Header>
 
-                    <Accordeon.Content>
-                      <form style={{ padding: 0 }}>
-                        <Marger bottom="3">
-                          <Field>
-                            <Field.Label
-                              labelProps={{ htmlFor: 'card-number' }}
-                            >
-                              Numéro de carte
-                            </Field.Label>
+                      <Accordeon.Content>
+                        <form style={{ padding: 0 }}>
+                          <Marger bottom="3">
+                            <Field>
+                              <Field.Label
+                                labelProps={{ htmlFor: 'card-number' }}
+                              >
+                                Numéro de carte
+                              </Field.Label>
 
-                            <Field.Input
-                              id="card-number"
-                              placeholder="XXXX XXXX XXXX XXXX"
-                              error={error}
-                            />
+                              <Field.Input
+                                id="card-number"
+                                placeholder="XXXX XXXX XXXX XXXX"
+                                error={error}
+                              />
 
-                            {error && (
-                              <Field.ErrorMessage>
-                                Le numéro de carte n'est pas valide.
-                              </Field.ErrorMessage>
-                            )}
-                          </Field>
-                        </Marger>
+                              {error && (
+                                <Field.ErrorMessage>
+                                  Le numéro de carte n'est pas valide.
+                                </Field.ErrorMessage>
+                              )}
+                            </Field>
+                          </Marger>
 
-                        <Marger bottom="3">
-                          <Field>
-                            <Field.Label labelProps={{ htmlFor: 'month' }}>
-                              Date de fin de validité
-                            </Field.Label>
+                          <Marger bottom="3">
+                            <Field>
+                              <Field.Label labelProps={{ htmlFor: 'month' }}>
+                                Date de fin de validité
+                              </Field.Label>
 
-                            <Grid style={{ marginTop: pxToRem(-15) }}>
-                              <GridCol col="6">
-                                <Field.Select
-                                  id="month"
-                                  name="month"
-                                  placeholder="Mois"
-                                  options={[
-                                    { value: 1, label: 'Janvier' },
-                                    { value: 2, label: 'Février' },
-                                  ]}
-                                  error={error}
-                                />
-                              </GridCol>
+                              <Grid style={{ marginTop: pxToRem(-15) }}>
+                                <GridCol col="6">
+                                  <Field.Select
+                                    id="month"
+                                    name="month"
+                                    placeholder="Mois"
+                                    options={[
+                                      { value: 1, label: 'Janvier' },
+                                      { value: 2, label: 'Février' },
+                                    ]}
+                                    error={error}
+                                  />
+                                </GridCol>
 
-                              <GridCol col="6">
-                                <Field.Select
-                                  id="year"
-                                  name="year"
-                                  placeholder="Année"
-                                  options={[
-                                    { value: 2018, label: '2018' },
-                                    { value: 2019, label: '2019' },
-                                    { value: 2020, label: '2020' },
-                                    { value: 2021, label: '2021' },
-                                  ]}
-                                  error={error}
-                                />
-                              </GridCol>
-                            </Grid>
+                                <GridCol col="6">
+                                  <Field.Select
+                                    id="year"
+                                    name="year"
+                                    placeholder="Année"
+                                    options={[
+                                      { value: 2018, label: '2018' },
+                                      { value: 2019, label: '2019' },
+                                      { value: 2020, label: '2020' },
+                                      { value: 2021, label: '2021' },
+                                    ]}
+                                    error={error}
+                                  />
+                                </GridCol>
+                              </Grid>
 
-                            {error && (
-                              <Field.ErrorMessage>
-                                Le date de fin de validité n'est pas valide.
-                              </Field.ErrorMessage>
-                            )}
-                          </Field>
-                        </Marger>
+                              {error && (
+                                <Field.ErrorMessage>
+                                  Le date de fin de validité n'est pas valide.
+                                </Field.ErrorMessage>
+                              )}
+                            </Field>
+                          </Marger>
 
-                        <Marger bottom="4">
-                          <Field>
-                            <Field.Label labelProps={{ htmlFor: 'cvv' }}>
-                              Cryptogramme visuel
-                            </Field.Label>
+                          <Marger bottom="4">
+                            <Field>
+                              <Field.Label labelProps={{ htmlFor: 'cvv' }}>
+                                Cryptogramme visuel
+                              </Field.Label>
 
-                            <Field.Input
-                              id="cvv"
-                              placeholder="CVV"
-                              digits={6}
-                              error={error}
-                            />
+                              <Field.Input
+                                id="cvv"
+                                placeholder="CVV"
+                                digits={6}
+                                error={error}
+                              />
 
-                            {error && (
-                              <Field.ErrorMessage>
-                                Le cryptogramme visuel est requis.
-                              </Field.ErrorMessage>
-                            )}
-                          </Field>
-                        </Marger>
+                              {error && (
+                                <Field.ErrorMessage>
+                                  Le cryptogramme visuel est requis.
+                                </Field.ErrorMessage>
+                              )}
+                            </Field>
+                          </Marger>
 
-                        <Button modifier="helium" size="big" type="button">
-                          Payer 120 €
-                        </Button>
-                      </form>
-                    </Accordeon.Content>
-                  </Accordeon.Item>
+                          <Button modifier="helium" size="big" type="button">
+                            Payer 120 €
+                          </Button>
+                        </form>
+                      </Accordeon.Content>
+                    </Accordeon.Item>
+                  )}
 
                   <Accordeon.Item>
                     <Accordeon.Header>
                       <HeaderDisplayStyled>
-                        <RadioButton
-                          text={
-                            <Text weight="regular" color="font1">
-                              Payer avec Paypal
-                            </Text>
-                          }
-                          checked={selectedItem === 1}
-                          style={{ margin: 0 }}
-                        />
+                        {onlyPayPal && (
+                          <Text weight="regular" color="font1" size="tiny">
+                            Payer avec Paypal
+                          </Text>
+                        )}
+
+                        {!onlyPayPal && (
+                          <RadioButton
+                            text={
+                              <Text weight="regular" color="font1" size="tiny">
+                                Payer avec Paypal
+                              </Text>
+                            }
+                            checked={selectedItem === 1}
+                            style={{ margin: 0 }}
+                          />
+                        )}
+
                         <PayPalIcon />
                       </HeaderDisplayStyled>
                     </Accordeon.Header>
@@ -226,62 +240,64 @@ class PaymentChoices extends Component {
                     </Accordeon.Content>
                   </Accordeon.Item>
 
-                  <Accordeon.Item>
-                    <Accordeon.Header>
-                      <RadioButton
-                        text={
-                          <Text weight="regular" color="font1">
-                            Autre moyen de paiement
-                          </Text>
-                        }
-                        checked={selectedItem === 2}
-                        style={{ margin: 0 }}
-                      />
-                    </Accordeon.Header>
+                  {!onlyPayPal && (
+                    <Accordeon.Item>
+                      <Accordeon.Header>
+                        <RadioButton
+                          text={
+                            <Text weight="regular" color="font1">
+                              Autre moyen de paiement
+                            </Text>
+                          }
+                          checked={selectedItem === 2}
+                          style={{ margin: 0 }}
+                        />
+                      </Accordeon.Header>
 
-                    <Accordeon.Content>
-                      <Marger bottom="3">
-                        <Paragraph modifier="tertiary" margin={false}>
-                          Vous serez automatiquement redirigé vers la page de
-                          notre prestataire de paiement.
-                        </Paragraph>
-                      </Marger>
+                      <Accordeon.Content>
+                        <Marger bottom="3">
+                          <Paragraph modifier="tertiary" margin={false}>
+                            Vous serez automatiquement redirigé vers la page de
+                            notre prestataire de paiement.
+                          </Paragraph>
+                        </Marger>
 
-                      <Text weight="regular" color="font1">
-                        Sélectionnez un prestataire de paiement
-                      </Text>
+                        <Text weight="regular" color="font1">
+                          Sélectionnez un prestataire de paiement
+                        </Text>
 
-                      <div>
-                        <PaymentButton tag="a" href="#">
-                          <MaestroIcon />
-                        </PaymentButton>
+                        <div>
+                          <PaymentButton tag="a" href="#">
+                            <MaestroIcon />
+                          </PaymentButton>
 
-                        <PaymentButton tag="a" href="#">
-                          <BancontactIcon />
-                        </PaymentButton>
+                          <PaymentButton tag="a" href="#">
+                            <BancontactIcon />
+                          </PaymentButton>
 
-                        <PaymentButton tag="a" href="#">
-                          <IdealIcon />
-                        </PaymentButton>
+                          <PaymentButton tag="a" href="#">
+                            <IdealIcon />
+                          </PaymentButton>
 
-                        <PaymentButton
-                          tag="a"
-                          href="#"
-                          style={{ padding: pxToRem(10) }}
-                        >
-                          <SofortIcon />
-                        </PaymentButton>
+                          <PaymentButton
+                            tag="a"
+                            href="#"
+                            style={{ padding: pxToRem(10) }}
+                          >
+                            <SofortIcon />
+                          </PaymentButton>
 
-                        <PaymentButton
-                          tag="a"
-                          href="#"
-                          style={{ padding: pxToRem(10) }}
-                        >
-                          <GiropayIcon />
-                        </PaymentButton>
-                      </div>
-                    </Accordeon.Content>
-                  </Accordeon.Item>
+                          <PaymentButton
+                            tag="a"
+                            href="#"
+                            style={{ padding: pxToRem(10) }}
+                          >
+                            <GiropayIcon />
+                          </PaymentButton>
+                        </div>
+                      </Accordeon.Content>
+                    </Accordeon.Item>
+                  )}
                 </Accordeon>
               </GridCol>
             </Grid>

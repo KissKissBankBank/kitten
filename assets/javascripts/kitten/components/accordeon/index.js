@@ -16,8 +16,14 @@ export class Accordeon extends Component {
     super(props)
 
     this.state = {
-      selectedItem: null,
+      selectedItem: props.selectedItem,
       updateSelectedItem: this.updateSelectedItem,
+    }
+  }
+
+  componentDidUpdate = prevProps => {
+    if (prevProps.selectedItem !== this.props.selectedItem) {
+      this.updateSelectedItem(this.props.selectedItem)
     }
   }
 
@@ -43,9 +49,11 @@ export class Accordeon extends Component {
 }
 
 Accordeon.propTypes = {
+  selectedItem: PropTypes.number,
   onChange: PropTypes.func,
 }
 
 Accordeon.defaultProps = {
+  selectedItem: null,
   onChange: () => {},
 }
