@@ -47,5 +47,5 @@ Accordeon.propTypes = {
 }
 
 Accordeon.defaultProps = {
-  onchange: () => {},
+  onChange: () => {},
 }
