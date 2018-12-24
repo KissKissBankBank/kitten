@@ -65,10 +65,6 @@ describe('<Field />', () => {
                 defaultChecked: true,
               },
               {
-                text: 'Option B',
-                id: 'option-b',
-              },
-              {
                 text: 'Option C',
                 id: 'option-c',
               },
