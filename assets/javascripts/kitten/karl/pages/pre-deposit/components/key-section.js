@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
-import { Title } from '../../../../components/typography/title'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
+import { Title as TitleBase } from '../../../../components/typography/title'
+import { HorizontalStroke as HorizontalStrokeBase } from '../../../../components/layout/horizontal-stroke'
 import { BulletList as BulletlistBase } from '../../../../components/lists/bullet-list'
 import { Button } from '../../../../components/buttons/button'
 import { withMediaQueries } from '../../../../hoc/media-queries'
@@ -13,16 +12,15 @@ import COLORS from '../../../../constants/colors-config'
 import { parseHtml } from '../../../../helpers/utils/parser'
 
 const BulletList = Radium(BulletlistBase)
+const HorizontalStroke = Radium(HorizontalStrokeBase)
+const Title = Radium(TitleBase)
 
 class KeySection extends Component {
   render() {
     return (
       <StyleRoot>
-        <Container>
-          <Marger bottom="4">{this.renderTitle()}</Marger>
-
-          <Marger top="4">{this.renderBulletList()}</Marger>
-        </Container>
+        <Marger bottom="4">{this.renderTitle()}</Marger>
+        <Marger top="4">{this.renderBulletList()}</Marger>
       </StyleRoot>
     )
   }
@@ -32,15 +30,15 @@ class KeySection extends Component {
 
     return (
       <Grid>
-        <GridCol col-l="6">
+        <GridCol col-l="6" offset="1" col="10">
           <Marger bottom="2">
-            <Title modifier="secondary" margin={false}>
+            <Title modifier="secondary" margin={false} style={styles.textAlign}>
               La clé ? Un accompagnement sur mesure
             </Title>
           </Marger>
 
           <Marger top="2">
-            <HorizontalStroke size="huge" />
+            <HorizontalStroke size="huge" style={styles.HorizontalStroke} />
           </Marger>
         </GridCol>
       </Grid>
@@ -51,40 +49,44 @@ class KeySection extends Component {
     const imgKeyStyle = [imgBackground('FFF')]
 
     return (
-      <GridCol col-m="5" offset-m="1" col-s="10" offset-s="1">
+      <GridCol col-l="5" offset="1" col="10">
         <img style={imgKeyStyle} />
       </GridCol>
     )
   }
 
   renderBulletList() {
+    const { viewportIsMOrLess } = this.props
+
     return (
       <Grid>
         {this.renderImage()}
+        <GridCol col-l="4" offset="1" col="10">
+          <Marger top={viewportIsMOrLess ? 4 : 3}>
+            <BulletList
+              huge
+              style={styles.bulletList}
+              items={[
+                {
+                  key: '1',
+                  item:
+                    "Un coach pour vous conseiller sur la mise en forme de votre page projet, votre stratégie de communication durant la collecte et l'envoi de vos contreparties.",
+                },
+                {
+                  key: '2',
+                  item:
+                    'Une équipe d’experts pour chaque secteur d’activité, proche de vos besoins et vos problématiques.',
+                },
+                {
+                  key: '3',
+                  item:
+                    'Des articles et des vidéos tutos pour devenir un pro du financement participatif !',
+                },
+              ]}
+            />
+          </Marger>
 
-        <GridCol col-m="4" offset-m="1">
-          <BulletList
-            huge
-            style={styles.bulletList}
-            items={[
-              {
-                key: '1',
-                item:
-                  "Un coach pour vous conseiller sur la mise en forme de votre page projet, votre stratégie de communication durant la collecte et l'envoi de vos contreparties.",
-              },
-              {
-                key: '2',
-                item:
-                  'Une équipe d’experts pour chaque secteur d’activité, proche de vos besoins et vos problématiques.',
-              },
-              {
-                key: '3',
-                item:
-                  'Des articles et des vidéos tutos pour devenir un pro du financement participatif !',
-              },
-            ]}
-          />
-          <Marger top="4">{this.renderButton()}</Marger>
+          {!viewportIsMOrLess && <Marger top="4">{this.renderButton()}</Marger>}
         </GridCol>
       </Grid>
     )
@@ -109,6 +111,18 @@ const imgBackground = image => ({
 })
 
 const styles = {
+  textAlign: {
+    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
+      textAlign: 'center',
+    },
+  },
+
+  HorizontalStroke: {
+    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
+      margin: 'auto',
+    },
+  },
+
   bulletList: {
     lineHeight: 32,
     color: COLORS.font1,

@@ -25,7 +25,6 @@ export class HeaderWithBackgroundBase extends Component {
   render() {
     const {
       viewportIsXSOrLess,
-      viewportIsMOrLess,
       title,
       subTitle,
       buttonProps,
