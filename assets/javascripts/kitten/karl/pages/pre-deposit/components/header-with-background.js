@@ -13,7 +13,7 @@ import { parseHtml } from '../../../../helpers/utils/parser'
 
 const Container = Radium(ContainerBase)
 
-export class HeaderWithBackgroundBase extends Component {
+class HeaderWithBackground extends Component {
   titleModifier() {
     const { viewportIsXSOrLess, viewportIsMOrLess } = this.props
     if (!viewportIsMOrLess) return 'primary'
@@ -23,70 +23,68 @@ export class HeaderWithBackgroundBase extends Component {
   }
 
   render() {
-    const {
-      viewportIsXSOrLess,
-      title,
-      subTitle,
-      buttonProps,
-      backgroundImage,
-    } = this.props
+    const { viewportIsXSOrLess, backgroundImage } = this.props
 
     const headerStyle = [styles.header, { backgroundImage }]
 
     return (
       <StyleRoot style={headerStyle}>
         <Container style={styles.header.container}>
-          <Marger bottom="1">
+          <Marger top="1">
             <Grid>
               <GridCol
                 col-m="10"
                 offset-m="1"
-                col-s="12"
-                offset-s="0"
-                col-xs="10"
-                offset-xs="1"
-                className="k-u-align-center"
+                style={styles.header.container.background}
               >
-                <Title
-                  tag="h1"
-                  margin={false}
-                  style={{ color: COLORS.background1 }}
-                  modifier={this.titleModifier()}
-                >
-                  {parseHtml(title)}
-                </Title>
-              </GridCol>
-            </Grid>
-          </Marger>
+                <Grid>
+                  <GridCol
+                    col-m="10"
+                    offset-m="1"
+                    col-s="12"
+                    offset-s="0"
+                    col-xs="10"
+                    offset-xs="1"
+                    className="k-u-align-center"
+                  >
+                    <Marger bottom="1">
+                      <Title
+                        tag="h1"
+                        margin={false}
+                        style={{ color: COLORS.font1 }}
+                        modifier="secondary"
+                      >
+                        Ce projet, vous y croyez ? <br /> Nous aussi !
+                      </Title>
+                    </Marger>
 
-          <Marger top="1" bottom="4">
-            <Grid>
-              <GridCol col-l="6" offset-l="3" col-xs="10" offset-xs="1">
-                <Paragraph
-                  margin={false}
-                  className="k-u-align-center"
-                  style={{ color: COLORS.background1 }}
-                  modifier={viewportIsXSOrLess ? 'tertiary' : 'primary'}
-                >
-                  {parseHtml(subTitle)}
-                </Paragraph>
-              </GridCol>
-            </Grid>
-          </Marger>
+                    <Marger top="1" bottom="4">
+                      <Paragraph
+                        margin={false}
+                        className="k-u-align-center"
+                        style={{ color: COLORS.font1 }}
+                        modifier={viewportIsXSOrLess ? 'tertiary' : 'primary'}
+                      >
+                        70 % des projets présentés réussissent sur
+                        KissKissBankBank. N'attendez plus pour démarrer votre
+                        campagne.
+                      </Paragraph>
+                    </Marger>
 
-          <Marger top="4">
-            <Grid>
-              <GridCol className="k-u-align-center">
-                <Button
-                  tag="a"
-                  size="big"
-                  modifier="helium"
-                  href={buttonProps.url}
-                  target={buttonProps.target}
-                  rel={buttonProps.rel}
-                >
-                  {buttonProps.text}
-                </Button>
+                    <Marger top="4" className="k-u-align-center">
+                      <Button
+                        tag="a"
+                        size="big"
+                        modifier="helium"
+                        href=""
+                        target=""
+                        rel=""
+                      >
+                        Lancez-vous
+                      </Button>
+                    </Marger>
+                  </GridCol>
+                </Grid>
               </GridCol>
             </Grid>
           </Marger>
@@ -102,6 +100,7 @@ const styles = {
     marginBottom: 50,
     height: 500,
     display: 'flex',
+    backgroundColor: '#CBF4FD',
 
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       height: 600,
@@ -113,11 +112,17 @@ const styles = {
 
     container: {
       alignSelf: 'center',
+
+      background: {
+        backgroundColor: '#FFF',
+        paddingTop: 50,
+        paddingBottom: 50,
+      },
     },
   },
 }
 
-export const HeaderWithBackground = withMediaQueries({
+export default withMediaQueries({
   viewportIsXSOrLess: true,
   viewportIsMOrLess: true,
-})(HeaderWithBackgroundBase)
+})(Radium(HeaderWithBackground))

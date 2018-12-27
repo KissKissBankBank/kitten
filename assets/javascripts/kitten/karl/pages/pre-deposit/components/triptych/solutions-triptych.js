@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Marger } from '../../../../components/layout/marger'
-import { Title } from '../../../../components/typography/title'
+import { Container } from '../../../../../components/grid/container'
+import { Grid, GridCol } from '../../../../../components/grid/grid'
+import { Marger } from '../../../../../components/layout/marger'
+import { Title } from '../../../../../components/typography/title'
 import { CardWithButton } from './card-with-button'
-import { Triptych } from '../../../../components/cards/triptych'
+import { Triptych } from '../../../../../components/cards/triptych'
 
 class SolutionsTriptych extends Component {
   render() {
