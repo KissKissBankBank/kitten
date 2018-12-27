@@ -83,12 +83,14 @@ function (_Component) {
           largeContent = _this$props3.largeContent,
           text = _this$props3.text,
           error = _this$props3.error,
-          inputProps = (0, _objectWithoutProperties2.default)(_this$props3, ["className", "id", "children", "inputClassName", "large", "largeContent", "text", "error"]);
+          style = _this$props3.style,
+          inputProps = (0, _objectWithoutProperties2.default)(_this$props3, ["className", "id", "children", "inputClassName", "large", "largeContent", "text", "error", "style"]);
       var radioButtonInputClassNames = (0, _classnames.default)('k-RadioButton__input', inputClassName, {
         'is-error': error
       });
       return _react.default.createElement("div", {
-        className: (0, _classnames.default)('k-RadioButton', className)
+        className: (0, _classnames.default)('k-RadioButton', className),
+        style: style
       }, _react.default.createElement("input", (0, _extends2.default)({
         id: id,
         type: "radio",
