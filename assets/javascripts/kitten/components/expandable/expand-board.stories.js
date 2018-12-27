@@ -7,7 +7,7 @@ import {
   select,
   boolean,
   object,
-} from '@storybook/addon-knobs/react'
+} from '@storybook/addon-knobs'
 import { StyleRoot } from 'radium'
 import { ExpandBoard } from '../../components/expandable/expand-board'
 import { Grid, GridCol } from '../../components/grid/grid'
