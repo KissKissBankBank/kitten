@@ -133,4 +133,22 @@ describe('<Accordeon />', () => {
       expect(handleChange).toHaveBeenCalled()
     })
   })
+
+  it('should onChange give item id if setted', () => {
+    let id = 0
+    expect(id).toEqual(0)
+    component = mount(
+      <Accordeon onChange={item => (id = item)}>
+        <Accordeon.Item id="CLICKED">
+          <Accordeon.Header>Header #1</Accordeon.Header>
+          <Accordeon.Content>Content</Accordeon.Content>
+        </Accordeon.Item>
+      </Accordeon>,
+    )
+    component
+      .find(Accordeon.Header)
+      .first()
+      .simulate('click')
+    expect(id).toEqual('CLICKED')
+  })
 })
