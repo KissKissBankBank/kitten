@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
 Object.defineProperty(exports, "__esModule", {
@@ -8,6 +10,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.Item = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _header = require("./header");
 
@@ -34,3 +38,6 @@ var Item = function Item(_ref) {
 };
 
 exports.Item = Item;
+Item.propTypes = {
+  id: _propTypes.default.string
+};
