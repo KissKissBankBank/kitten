@@ -82,7 +82,7 @@ function (_Component) {
           key: index,
           bottom: index === items.length - 1 ? 0 : 1.5
         }, _react.default.cloneElement(item, {
-          id: index
+          id: item.props.id || index
         }));
       }));
     }
