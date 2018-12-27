@@ -40,7 +40,7 @@ export class Accordeon extends Component {
       <Context.Provider value={this.state}>
         {items.map((item, index) => (
           <Marger key={index} bottom={index === items.length - 1 ? 0 : 1.5}>
-            {React.cloneElement(item, { id: index })}
+            {React.cloneElement(item, { id: item.props.id || index })}
           </Marger>
         ))}
       </Context.Provider>

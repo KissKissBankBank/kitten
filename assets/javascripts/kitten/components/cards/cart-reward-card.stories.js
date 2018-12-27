@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text } from '@storybook/addon-knobs/react'
+import { withKnobs, text } from '@storybook/addon-knobs'
 import { StyleRoot } from 'radium'
 import { CartRewardCard } from '../../components/cards/cart-reward-card'
 import { Grid, GridCol } from '../../components/grid/grid'
