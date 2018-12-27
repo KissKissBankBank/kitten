@@ -9,7 +9,10 @@ storiesOf('Pages/Contribute', module)
   .add('PaymentChoices', () => {
     return (
       <Marger top="10" bottom="10">
-        <PaymentChoices onlyPayPal={boolean('Only PayPal?', false)} />
+        <PaymentChoices
+          onlyPayPal={boolean('onlyPayPal?', false)}
+          error={boolean('Error?', false)}
+        />
       </Marger>
     )
   })
