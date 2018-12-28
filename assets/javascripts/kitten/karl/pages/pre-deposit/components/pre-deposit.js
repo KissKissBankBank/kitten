@@ -3,7 +3,9 @@ import Radium, { StyleRoot } from 'radium'
 import HeaderWithBackground from './header-with-background'
 import KeySection from './key-section'
 import SolutionsTriptych from './triptych/solutions-triptych'
-import TimelineSection from './steps/timeline-section'
+import TimelineSection from './timeline-section'
+import TipsSection from './tips-section'
+import PartnersSection from './partners-section'
 
 class PreDeposit extends Component {
   render() {
@@ -13,6 +15,8 @@ class PreDeposit extends Component {
         <KeySection />
         <SolutionsTriptych />
         <TimelineSection />
+        <TipsSection />
+        <PartnersSection />
       </StyleRoot>
     )
   }

@@ -35,13 +35,13 @@ class TimelineSection extends Component {
       <GridCol col-l="4" offset-l="1">
         <Marger top="9" bottom="4">
           <Title modifier="secondary" margin={false} style={styles.textAlign}>
-            Quelles étapes pour lancer ma collecte ?
+            Quelles étapes pour lancer ma collecte de crowdfunding ?
           </Title>
 
           {!viewportIsMOrLess && (
             <Marger top="4">
               <Button modifier="helium" size="big">
-                Lancez vous
+                Je lance mon projet
               </Button>
             </Marger>
           )}

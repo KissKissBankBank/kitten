@@ -37,7 +37,7 @@ class KeySection extends Component {
         <GridCol col-l="6" offset="1" col="10">
           <Marger bottom="2">
             <Title modifier="secondary" margin={false} style={styles.textAlign}>
-              La clé ? Un accompagnement sur mesure
+              La clé ? Un accompagnement sur mesure pour votre financement
             </Title>
           </Marger>
 
@@ -94,7 +94,7 @@ class KeySection extends Component {
                   key: '3',
                   item: (
                     <Text style={{ lineHeight: 1.5 }}>
-                      <span style={{ color: '#19B4FA' }}>Des articles</span> et{' '}
+                      <span style={{ color: '#19B4FA' }}>Un blog</span> et{' '}
                       <span style={{ color: '#19B4FA' }}>des vidéos tutos</span>{' '}
                       pour devenir un pro du financement participatif !
                     </Text>
@@ -113,7 +113,7 @@ class KeySection extends Component {
   renderButton() {
     return (
       <Button modifier="helium" size="big">
-        Lancez-vous
+        Je lance mon projet
       </Button>
     )
   }
@@ -139,6 +139,7 @@ const styles = {
   },
 
   HorizontalStroke: {
+    width: 50,
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
       margin: 'auto',
     },

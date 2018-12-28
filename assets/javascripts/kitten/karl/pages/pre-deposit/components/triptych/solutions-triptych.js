@@ -24,11 +24,6 @@ class SolutionsTriptych extends Component {
                   <CardWithButton
                     title="Le don en échange de contreparties"
                     paragraph="Adapté à tous les types de projets, laissez parler votre créativité pour remercier vos contributeurs."
-                    buttonProps={{
-                      text: 'En savoir plus',
-                      url: '',
-                      modifier: 'hydrogen',
-                    }}
                     imageProps={{
                       src: 'http://via.placeholder.com/350x350/19b4fa/19b4fa',
                       alt: '',
@@ -41,11 +36,6 @@ class SolutionsTriptych extends Component {
                   <CardWithButton
                     title="La prévente"
                     paragraph="Recommandée pour lancer vos créations, votre marque, vos produits ou pour tester un prototype. Fonctionne aussi très bien pour gérer la billetterie de vos événements."
-                    buttonProps={{
-                      text: 'En savoir plus',
-                      url: '',
-                      modifier: 'hydrogen',
-                    }}
                     imageProps={{
                       src: 'http://via.placeholder.com/350x350/19b4fa/19b4fa',
                       alt: '',
@@ -58,11 +48,6 @@ class SolutionsTriptych extends Component {
                   <CardWithButton
                     title="Le don libre"
                     paragraph="Idéal pour les projets associatifs, philanthropiques, de défense de l’environnement, éducatifs, patrimoniaux, de mécénat, personnels…"
-                    buttonProps={{
-                      text: 'En savoir plus',
-                      url: '',
-                      modifier: 'hydrogen',
-                    }}
                     imageProps={{
                       src: 'http://via.placeholder.com/350x350/19b4fa/19b4fa',
                       alt: '',

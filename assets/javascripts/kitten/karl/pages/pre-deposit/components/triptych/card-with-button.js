@@ -71,19 +71,6 @@ export class CardWithButton extends Component {
             </Paragraph>
           </Marger>
         )}
-
-        <Marger top="3">
-          <Button
-            tag="a"
-            modifier={buttonProps.modifier}
-            href={buttonProps.url}
-            target={buttonProps.target}
-            rel={buttonProps.rel}
-            style={styles.button}
-          >
-            {buttonProps.text}
-          </Button>
-        </Marger>
       </StyleRoot>
     )
   }
