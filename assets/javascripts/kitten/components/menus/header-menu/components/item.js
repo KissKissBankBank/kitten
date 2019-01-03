@@ -5,7 +5,7 @@ import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Context } from './context'
 
-const Link = styled.a`
+const StyledItem = styled.div`
   display: block;
   padding: ${pxToRem(15)} ${pxToRem(20)};
 
@@ -71,7 +71,7 @@ const Link = styled.a`
 
 export class Item extends Component {
   static propTypes = {
-    href: PropTypes.string.isRequired,
+    href: PropTypes.string,
     isSelected: PropTypes.bool,
     borderTop: PropTypes.bool,
     borderBottom: PropTypes.bool,
@@ -79,6 +79,7 @@ export class Item extends Component {
   }
 
   static defaultProps = {
+    href: null,
     isSelected: false,
     borderTop: false,
     borderBottom: false,
@@ -86,15 +87,19 @@ export class Item extends Component {
   }
 
   render() {
-    const { children, tag, ...other } = this.props
+    const { children, href, ...other } = this.props
 
     return (
       <Context.Consumer>
         {({ selectedBorderSide }) => (
           <li>
-            <Link selectedBorderSide={selectedBorderSide} {...other}>
+            <StyledItem
+              as={href ? 'a' : 'div'}
+              selectedBorderSide={selectedBorderSide}
+              {...other}
+            >
               {children}
-            </Link>
+            </StyledItem>
           </li>
         )}
       </Context.Consumer>
