@@ -7,7 +7,6 @@ const CustomComponent = () => <a href="#custom-component">Custom component</a>
 
 describe('<HeaderMenu />', () => {
   let component
-  // let handleChange
 
   describe('with three items', () => {
     beforeEach(() => {
