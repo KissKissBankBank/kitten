@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Item } from './components/item'
+import { Context } from './components/context'
 import COLORS from '../../../constants/colors-config'
 
 const List = styled.ul`
@@ -23,13 +24,29 @@ export class HeaderMenu extends Component {
     selectedBorderSide: 'left',
   }
 
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      selectedBorderSide: props.selectedBorderSide,
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.selectedBorderSide !== this.props.selectedBorderSide) {
+      this.setState({ selectedBorderSide: this.props.selectedBorderSide })
+    }
+  }
+
   render() {
-    const { children, selectedBorderSide } = this.props
+    const { children } = this.props
 
     return (
-      <nav>
-        <List selectedBorderSide={selectedBorderSide}>{children}</List>
-      </nav>
+      <Context.Provider value={this.state}>
+        <nav>
+          <List>{children}</List>
+        </nav>
+      </Context.Provider>
     )
   }
 }

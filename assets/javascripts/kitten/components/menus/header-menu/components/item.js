@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
+import { Context } from './context'
 
 const Link = styled.a`
   display: block;
@@ -59,6 +60,13 @@ const Link = styled.a`
     css`
       color: ${COLORS.font2};
     `}
+
+  ${({ selectedBorderSide, isSelected }) =>
+    selectedBorderSide === 'right' &&
+    css`
+      border-right: 1px solid ${isSelected ? COLORS.primary1 : COLORS.line1};
+      border-left: 0;
+    `}
 `
 
 export class Item extends Component {
@@ -81,9 +89,15 @@ export class Item extends Component {
     const { children, tag, ...other } = this.props
 
     return (
-      <li>
-        <Link {...other}>{children}</Link>
-      </li>
+      <Context.Consumer>
+        {({ selectedBorderSide }) => (
+          <li>
+            <Link selectedBorderSide={selectedBorderSide} {...other}>
+              {children}
+            </Link>
+          </li>
+        )}
+      </Context.Consumer>
     )
   }
 }

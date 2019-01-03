@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, select } from '@storybook/addon-knobs'
 import { HeaderMenu } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -25,7 +25,13 @@ storiesOf('Menus/HeaderMenu', module)
   .add('default', () => {
     return (
       <StoryGrid>
-        <HeaderMenu>
+        <HeaderMenu
+          selectedBorderSide={select(
+            'Selected border side',
+            { Left: 'left', Right: 'right' },
+            'left',
+          )}
+        >
           <HeaderMenu.Item href="#">Item 1</HeaderMenu.Item>
           <HeaderMenu.Item href="#" isSelected>
             Item 2
