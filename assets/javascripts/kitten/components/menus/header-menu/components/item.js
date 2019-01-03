@@ -95,6 +95,7 @@ export class Item extends Component {
           <li>
             <StyledItem
               as={href ? 'a' : 'div'}
+              href={href}
               selectedBorderSide={selectedBorderSide}
               {...other}
             >
