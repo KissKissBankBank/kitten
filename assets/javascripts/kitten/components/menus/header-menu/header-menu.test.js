@@ -74,7 +74,7 @@ describe('<HeaderMenu />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <HeaderMenu selectedBorderSide="right">
+          <HeaderMenu borderSide="right">
             <HeaderMenu.Item href="#">Item 1</HeaderMenu.Item>
             <HeaderMenu.Item href="#">Item 2</HeaderMenu.Item>
             <HeaderMenu.Item href="#">Item 3</HeaderMenu.Item>
