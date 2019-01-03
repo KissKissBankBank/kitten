@@ -31,6 +31,9 @@ storiesOf('Menus/HeaderMenu', module)
             Item 2
           </HeaderMenu.Item>
           <HeaderMenu.Item href="#">Item 3</HeaderMenu.Item>
+          <HeaderMenu.Item href="#" borderTop modifier="light">
+            Item 4 (light)
+          </HeaderMenu.Item>
           <HeaderMenu.Item borderTop>
             <ExternalRichLink margin={false}>
               <LendopolisLogo primaryColor="#222" />

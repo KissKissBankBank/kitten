@@ -53,6 +53,12 @@ const Link = styled.a`
     css`
       border-bottom: 1px solid ${COLORS.line1};
     `}
+
+  ${({ modifier }) =>
+    modifier === 'light' &&
+    css`
+      color: ${COLORS.font2};
+    `}
 `
 
 export class Item extends Component {
@@ -61,12 +67,14 @@ export class Item extends Component {
     isSelected: PropTypes.bool,
     borderTop: PropTypes.bool,
     borderBottom: PropTypes.bool,
+    modifier: PropTypes.oneOf(['light', 'default']),
   }
 
   static defaultProps = {
     isSelected: false,
     borderTop: false,
     borderBottom: false,
+    modifier: 'default',
   }
 
   render() {
