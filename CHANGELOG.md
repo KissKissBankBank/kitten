@@ -4,9 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `fontStyles` helper.
+
 ## [1.3.0] - 2018-12-27
 
-Features: 
+Features:
 - Add prop `id` on `Accordeon.Item`. This id would be given by the callback `onChange` on `Accordon` if setted.
 
 ## [1.2.0] - 2018-12-27
