@@ -92,7 +92,7 @@ export class Item extends Component {
     return (
       <Context.Consumer>
         {({ selectedBorderSide }) => (
-          <li>
+          <li role="menuitem">
             <StyledItem
               as={href ? 'a' : 'div'}
               href={href}

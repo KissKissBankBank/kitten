@@ -43,8 +43,8 @@ export class HeaderMenu extends Component {
 
     return (
       <Context.Provider value={this.state}>
-        <nav>
-          <List>{children}</List>
+        <nav role="navigation">
+          <List role="menubar">{children}</List>
         </nav>
       </Context.Provider>
     )
