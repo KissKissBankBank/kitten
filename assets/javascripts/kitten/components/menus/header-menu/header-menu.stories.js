@@ -26,8 +26,8 @@ storiesOf('Menus/HeaderMenu', module)
     return (
       <StoryGrid>
         <HeaderMenu
-          selectedBorderSide={select(
-            'Selected border side',
+          borderSide={select(
+            'Border side',
             { Left: 'left', Right: 'right' },
             'left',
           )}

@@ -17,24 +17,24 @@ export class HeaderMenu extends Component {
   static Item = Item
 
   static propTypes = {
-    selectedBorderSide: PropTypes.oneOf(['left', 'right']),
+    borderSide: PropTypes.oneOf(['left', 'right']),
   }
 
   static defaultProps = {
-    selectedBorderSide: 'left',
+    borderSide: 'left',
   }
 
   constructor(props) {
     super(props)
 
     this.state = {
-      selectedBorderSide: props.selectedBorderSide,
+      borderSide: props.borderSide,
     }
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.selectedBorderSide !== this.props.selectedBorderSide) {
-      this.setState({ selectedBorderSide: this.props.selectedBorderSide })
+    if (prevProps.borderSide !== this.props.borderSide) {
+      this.setState({ borderSide: this.props.borderSide })
     }
   }
 

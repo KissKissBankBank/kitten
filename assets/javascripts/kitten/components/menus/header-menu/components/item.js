@@ -61,8 +61,8 @@ const StyledItem = styled.div`
       color: ${COLORS.font2};
     `}
 
-  ${({ selectedBorderSide, isSelected }) =>
-    selectedBorderSide === 'right' &&
+  ${({ borderSide, isSelected }) =>
+    borderSide === 'right' &&
     css`
       border-right: 1px solid ${isSelected ? COLORS.primary1 : COLORS.line1};
       border-left: 0;
@@ -91,12 +91,12 @@ export class Item extends Component {
 
     return (
       <Context.Consumer>
-        {({ selectedBorderSide }) => (
+        {({ borderSide }) => (
           <li role="menuitem">
             <StyledItem
               as={href ? 'a' : 'div'}
               href={href}
-              selectedBorderSide={selectedBorderSide}
+              borderSide={borderSide}
               {...other}
             >
               {children}
