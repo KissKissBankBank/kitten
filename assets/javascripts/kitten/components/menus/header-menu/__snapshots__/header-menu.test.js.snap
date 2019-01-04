@@ -4,23 +4,24 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 .c1 {
   display: block;
   padding: 0.9375rem 1.25rem;
+  outline: none;
   border-left: 1px solid #eee;
   background-color: #fbfbfb;
-  font-family: "Maax",Helvetica,Arial,sans-serif;
+  font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  outline: none;
   -webkit-transition: color .2s,background-color .2s,border-color .2s;
   transition: color .2s,background-color .2s,border-color .2s;
   border-right: 1px solid #eee;
   border-left: 0;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   background-color: #eee;
   color: #19b4fa;
   -webkit-text-decoration: none;
@@ -28,11 +29,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 }
 
 .c1:focus {
-  background-color: #eee;
   border-left-color: #19b4fa;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0 {
@@ -88,21 +85,22 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c1 {
   display: block;
   padding: 0.9375rem 1.25rem;
+  outline: none;
   border-left: 1px solid #eee;
   background-color: #fbfbfb;
-  font-family: "Maax",Helvetica,Arial,sans-serif;
+  font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  outline: none;
   -webkit-transition: color .2s,background-color .2s,border-color .2s;
   transition: color .2s,background-color .2s,border-color .2s;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   background-color: #eee;
   color: #19b4fa;
   -webkit-text-decoration: none;
@@ -110,11 +108,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 }
 
 .c1:focus {
-  background-color: #eee;
   border-left-color: #19b4fa;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0 {
@@ -174,21 +168,22 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c1 {
   display: block;
   padding: 0.9375rem 1.25rem;
+  outline: none;
   border-left: 1px solid #eee;
   background-color: #fbfbfb;
-  font-family: "Maax",Helvetica,Arial,sans-serif;
+  font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  outline: none;
   -webkit-transition: color .2s,background-color .2s,border-color .2s;
   transition: color .2s,background-color .2s,border-color .2s;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   background-color: #eee;
   color: #19b4fa;
   -webkit-text-decoration: none;
@@ -196,33 +191,30 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 }
 
 .c1:focus {
-  background-color: #eee;
   border-left-color: #19b4fa;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c2 {
   display: block;
   padding: 0.9375rem 1.25rem;
+  outline: none;
   border-left: 1px solid #eee;
   background-color: #fbfbfb;
-  font-family: "Maax",Helvetica,Arial,sans-serif;
+  font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  outline: none;
   -webkit-transition: color .2s,background-color .2s,border-color .2s;
   transition: color .2s,background-color .2s,border-color .2s;
   border-left-color: #19b4fa;
   color: #19b4fa;
 }
 
-.c2:hover {
+.c2:hover,
+.c2:focus {
   background-color: #eee;
   color: #19b4fa;
   -webkit-text-decoration: none;
@@ -230,11 +222,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 }
 
 .c2:focus {
-  background-color: #eee;
   border-left-color: #19b4fa;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0 {
@@ -290,21 +278,22 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c1 {
   display: block;
   padding: 0.9375rem 1.25rem;
+  outline: none;
   border-left: 1px solid #eee;
   background-color: #fbfbfb;
-  font-family: "Maax",Helvetica,Arial,sans-serif;
+  font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  outline: none;
   -webkit-transition: color .2s,background-color .2s,border-color .2s;
   transition: color .2s,background-color .2s,border-color .2s;
 }
 
-.c1:hover {
+.c1:hover,
+.c1:focus {
   background-color: #eee;
   color: #19b4fa;
   -webkit-text-decoration: none;
@@ -312,32 +301,29 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 }
 
 .c1:focus {
-  background-color: #eee;
   border-left-color: #19b4fa;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c2 {
   display: block;
   padding: 0.9375rem 1.25rem;
+  outline: none;
   border-left: 1px solid #eee;
   background-color: #fbfbfb;
-  font-family: "Maax",Helvetica,Arial,sans-serif;
+  font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  outline: none;
   -webkit-transition: color .2s,background-color .2s,border-color .2s;
   transition: color .2s,background-color .2s,border-color .2s;
   color: #b8b8b8;
 }
 
-.c2:hover {
+.c2:hover,
+.c2:focus {
   background-color: #eee;
   color: #19b4fa;
   -webkit-text-decoration: none;
@@ -345,32 +331,29 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 }
 
 .c2:focus {
-  background-color: #eee;
   border-left-color: #19b4fa;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c3 {
   display: block;
   padding: 0.9375rem 1.25rem;
+  outline: none;
   border-left: 1px solid #eee;
   background-color: #fbfbfb;
-  font-family: "Maax",Helvetica,Arial,sans-serif;
+  font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  outline: none;
   -webkit-transition: color .2s,background-color .2s,border-color .2s;
   transition: color .2s,background-color .2s,border-color .2s;
   border-top: 1px solid #eee;
 }
 
-.c3:hover {
+.c3:hover,
+.c3:focus {
   background-color: #eee;
   color: #19b4fa;
   -webkit-text-decoration: none;
@@ -378,11 +361,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 }
 
 .c3:focus {
-  background-color: #eee;
   border-left-color: #19b4fa;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
 }
 
 .c0 {
