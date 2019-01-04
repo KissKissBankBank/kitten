@@ -47,6 +47,9 @@ describe('<TeamCard />', () => {
 
   describe('with socialLink prop (deprecated)', () => {
     it('matches with snapshot', () => {
+      // Desactivate warnings.
+      jest.spyOn(global.console, 'error').mockImplementation(() => {})
+
       const component = renderer
         .create(
           <TeamCard>
