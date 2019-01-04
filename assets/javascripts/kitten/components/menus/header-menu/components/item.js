@@ -10,6 +10,7 @@ const StyledItem = styled.div`
   display: block;
   padding: ${pxToRem(15)} ${pxToRem(20)};
 
+  outline: none;
   border-left: 1px solid ${COLORS.line1};
   background-color: ${COLORS.background2};
 
@@ -19,21 +20,17 @@ const StyledItem = styled.div`
   text-decoration: none;
   color: ${COLORS.font1};
 
-  outline: none;
-
   transition: color .2s, background-color .2s, border-color .2s;
 
-  :hover {
+  :hover,
+  :focus {
     background-color: ${COLORS.line1};
     color: ${COLORS.primary1};
     text-decoration: none;
   }
 
   :focus {
-    background-color: ${COLORS.line1};
     border-left-color: ${COLORS.primary1};
-    color: ${COLORS.primary1};
-    text-decoration: none;
   }
 
   ${({ isSelected }) =>
