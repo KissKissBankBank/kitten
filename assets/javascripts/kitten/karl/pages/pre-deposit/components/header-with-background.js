@@ -9,7 +9,6 @@ import { Title } from '../../../../components/typography/title'
 import { withMediaQueries } from '../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
-import { parseHtml } from '../../../../helpers/utils/parser'
 
 const Container = Radium(ContainerBase)
 

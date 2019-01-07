@@ -36,7 +36,7 @@ class KeySection extends Component {
   }
 
   renderTitle() {
-    const { titleKeyImg, viewportIsSOrLess } = this.props
+    const { titleKeyImg, viewportIsSOrLess, viewportIsXSOrLess } = this.props
 
     return (
       <Grid>
@@ -49,7 +49,7 @@ class KeySection extends Component {
 
           <Marger top="2">
             <HorizontalStroke
-              size={viewportIsSOrLess ? 'default' : 'huge'}
+              size={viewportIsXSOrLess ? 'default' : 'huge'}
               style={styles.horizontalStroke}
             />
           </Marger>
@@ -164,4 +164,5 @@ const styles = {
 export default withMediaQueries({
   viewportIsMOrLess: true,
   viewportIsSOrLess: true,
+  viewportIsXSOrLess: true,
 })(Radium(KeySection))

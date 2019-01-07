@@ -22,7 +22,7 @@ class TipsSection extends Component {
     return (
       <StyleRoot>
         <Container style={styles.background}>
-          <Marger top={viewportIsSOrLess ? 8 : 10}>
+          <Marger top={viewportIsSOrLess ? 5 : 10}>
             {!viewportIsMOrLess && (
               <Grid>
                 {this.renderImage()}
