@@ -5,6 +5,7 @@ import KeySection from './key-section'
 import SolutionsTriptych from './triptych/solutions-triptych'
 import TimelineSection from './timeline-section'
 import TipsSection from './tips-section'
+import CarouselSection from './carousel-section'
 import PartnersSection from './partners-section'
 
 class PreDeposit extends Component {
@@ -16,6 +17,7 @@ class PreDeposit extends Component {
         <SolutionsTriptych />
         <TimelineSection />
         <TipsSection />
+        <CarouselSection />
         <PartnersSection />
       </StyleRoot>
     )
