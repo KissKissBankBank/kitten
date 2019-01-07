@@ -12,6 +12,9 @@ describe('<ContributionCard />', () => {
   let originalMatchMedia
   let component
 
+  // Desactivate warnings.
+  jest.spyOn(global.console, 'error').mockImplementation(() => {})
+
   beforeEach(() => {
     originalMatchMedia = window.matchMedia
   })
