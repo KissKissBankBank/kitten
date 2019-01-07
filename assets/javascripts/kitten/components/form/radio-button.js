@@ -40,6 +40,7 @@ export class RadioButton extends Component {
       largeContent,
       text,
       error,
+      style,
       ...inputProps
     } = this.props
 
@@ -50,7 +51,7 @@ export class RadioButton extends Component {
     )
 
     return (
-      <div className={classNames('k-RadioButton', className)}>
+      <div className={classNames('k-RadioButton', className)} style={style}>
         <input
           id={id}
           type="radio"

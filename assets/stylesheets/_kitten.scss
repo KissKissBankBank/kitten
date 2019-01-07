@@ -11,9 +11,6 @@ $k-module: null;
 // Default config
 @import 'kitten/default-config';
 
-// Dependencies that have te be loaded after the default config
-@import '~susy/sass/susy';
-
 // Components
 @import './kitten/components';
 
