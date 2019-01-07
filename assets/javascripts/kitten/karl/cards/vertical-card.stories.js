@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, object } from '@storybook/addon-knobs/react'
+import { withKnobs, text, object } from '@storybook/addon-knobs'
 import { VerticalCard } from '../../components/cards/vertical-card'
 import { Grid, GridCol } from '../../components/grid/grid'
 import { Marger } from '../../components/layout/marger'

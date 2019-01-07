@@ -12,7 +12,7 @@ const TagButton = styled(TagButtonBase)`
   align-items: center;
   width: ${pxToRem(80)};
   height: ${pxToRem(50)};
-  margin: 0 ${pxToRem(15)} ${pxToRem(15)} 0;
+  margin: ${pxToRem(15)} ${pxToRem(15)} 0 0;
   padding: ${pxToRem(10)} ${pxToRem(20)};
 
   :hover,

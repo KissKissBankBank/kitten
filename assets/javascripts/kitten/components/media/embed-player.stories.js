@@ -7,7 +7,7 @@ import {
   select,
   boolean,
   object,
-} from '@storybook/addon-knobs/react'
+} from '@storybook/addon-knobs'
 import { StyleRoot } from 'radium'
 import { Container } from '../../components/grid/container'
 import { EmbedPlayer } from '../../components/media/embed-player'

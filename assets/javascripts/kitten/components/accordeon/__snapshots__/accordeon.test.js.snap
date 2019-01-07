@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Accordeon /> with one item matches with snapshot 1`] = `
+.c1 {
+  box-sizing: border-box;
+  padding: 1.25rem;
+  min-height: 1.875rem;
+  border: 0.125rem solid #eee;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+}
+
+.c2 {
+  display: none;
+  box-sizing: border-box;
+  padding: 1.875rem;
+  min-height: 1.875rem;
+  background-color: #f6f6f6;
+  border: 0.125rem solid #eee;
+  border-top: 0;
+  border-bottom-left-radius: 0.1875rem;
+  border-bottom-right-radius: 0.1875rem;
+}
+
+.c0 {
+  margin-bottom: 0rem;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+    onClick={[Function]}
+  >
+    Header
+  </div>
+  <div
+    className="c2"
+  >
+    Content
+  </div>
+</div>
+`;
+
+exports[`<Accordeon /> with two items matches with snapshot 1`] = `
+Array [
+  .c1 {
+  box-sizing: border-box;
+  padding: 1.25rem;
+  min-height: 1.875rem;
+  border: 0.125rem solid #eee;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+}
+
+.c2 {
+  display: none;
+  box-sizing: border-box;
+  padding: 1.875rem;
+  min-height: 1.875rem;
+  background-color: #f6f6f6;
+  border: 0.125rem solid #eee;
+  border-top: 0;
+  border-bottom-left-radius: 0.1875rem;
+  border-bottom-right-radius: 0.1875rem;
+}
+
+.c0 {
+  margin-bottom: 0.9375rem;
+}
+
+<div
+    className="c0"
+  >
+    <div
+      className="c1"
+      onClick={[Function]}
+    >
+      Header
+    </div>
+    <div
+      className="c2"
+    >
+      Content
+    </div>
+  </div>,
+  .c1 {
+  box-sizing: border-box;
+  padding: 1.25rem;
+  min-height: 1.875rem;
+  border: 0.125rem solid #eee;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+}
+
+.c2 {
+  display: none;
+  box-sizing: border-box;
+  padding: 1.875rem;
+  min-height: 1.875rem;
+  background-color: #f6f6f6;
+  border: 0.125rem solid #eee;
+  border-top: 0;
+  border-bottom-left-radius: 0.1875rem;
+  border-bottom-right-radius: 0.1875rem;
+}
+
+.c0 {
+  margin-bottom: 0rem;
+}
+
+<div
+    className="c0"
+  >
+    <div
+      className="c1"
+      onClick={[Function]}
+    >
+      Header
+    </div>
+    <div
+      className="c2"
+    >
+      Content
+    </div>
+  </div>,
+]
+`;
