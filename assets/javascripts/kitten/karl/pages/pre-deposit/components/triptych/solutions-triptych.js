@@ -6,11 +6,14 @@ import { Marger } from '../../../../../components/layout/marger'
 import { Title } from '../../../../../components/typography/title'
 import { CardWithButton } from './card-with-button'
 import { Triptych } from '../../../../../components/cards/triptych'
+import { withMediaQueries } from '../../../../../hoc/media-queries'
 
 class SolutionsTriptych extends Component {
   render() {
+    const { viewportIsSOrLess } = this.props
+
     return (
-      <Marger top="11.4">
+      <Marger top={viewportIsSOrLess ? 8 : 10}>
         <Container>
           <Grid>
             <GridCol offset-l="1" col-l="10">
@@ -65,4 +68,6 @@ class SolutionsTriptych extends Component {
   }
 }
 
-export default SolutionsTriptych
+export default withMediaQueries({
+  viewportIsSOrLess: true,
+})(Radium(SolutionsTriptych))

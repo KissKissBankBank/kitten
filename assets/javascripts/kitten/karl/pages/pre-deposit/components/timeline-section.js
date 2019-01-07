@@ -14,10 +14,12 @@ const Title = Radium(TitleBase)
 
 class TimelineSection extends Component {
   render() {
+    const { viewportIsSOrLess } = this.props
+
     return (
       <StyleRoot>
         <Container>
-          <Marger top="10">
+          <Marger top={viewportIsSOrLess ? 8 : 10}>
             <Grid>
               {this.renderTitleAndButton()}
               {this.renderTimeline()}
@@ -33,7 +35,7 @@ class TimelineSection extends Component {
 
     return (
       <GridCol col-l="4" offset-l="1">
-        <Marger top="9" bottom="4">
+        <Marger bottom="4">
           <Title modifier="secondary" margin={false} style={styles.textAlign}>
             Quelles étapes pour lancer ma collecte de crowdfunding ?
           </Title>
@@ -87,4 +89,5 @@ const styles = {
 
 export default withMediaQueries({
   viewportIsMOrLess: true,
+  viewportIsSOrLess: true,
 })(Radium(TimelineSection))

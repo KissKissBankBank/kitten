@@ -19,18 +19,24 @@ const Title = Radium(TitleBase)
 
 class KeySection extends Component {
   render() {
+    const { viewportIsSOrLess } = this.props
+
     return (
       <StyleRoot>
         <Container>
-          <Marger bottom="4">{this.renderTitle()}</Marger>
-          <Marger top="4">{this.renderBulletList()}</Marger>
+          <Marger bottom={viewportIsSOrLess ? 3 : 4}>
+            {this.renderTitle()}
+          </Marger>
+          <Marger top={viewportIsSOrLess ? 3 : 4}>
+            {this.renderBulletList()}
+          </Marger>
         </Container>
       </StyleRoot>
     )
   }
 
   renderTitle() {
-    const { titleKeyImg } = this.props
+    const { titleKeyImg, viewportIsSOrLess } = this.props
 
     return (
       <Grid>
@@ -42,7 +48,10 @@ class KeySection extends Component {
           </Marger>
 
           <Marger top="2">
-            <HorizontalStroke size="huge" style={styles.HorizontalStroke} />
+            <HorizontalStroke
+              size={viewportIsSOrLess ? 'default' : 'huge'}
+              style={styles.horizontalStroke}
+            />
           </Marger>
         </GridCol>
       </Grid>
@@ -68,7 +77,7 @@ class KeySection extends Component {
         <GridCol col-l="4" offset-l="1" col-s="10" offset-s="1">
           <Marger top={viewportIsMOrLess ? 4 : 3}>
             <BulletList
-              huge
+              big
               style={styles.bulletList}
               items={[
                 {
@@ -138,10 +147,11 @@ const styles = {
     },
   },
 
-  HorizontalStroke: {
+  horizontalStroke: {
     width: 50,
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
       margin: 'auto',
+      width: 40,
     },
   },
 
@@ -153,4 +163,5 @@ const styles = {
 
 export default withMediaQueries({
   viewportIsMOrLess: true,
+  viewportIsSOrLess: true,
 })(Radium(KeySection))

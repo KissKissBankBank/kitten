@@ -6,6 +6,7 @@ import { Marger } from '../../../../components/layout/marger'
 import { Title as TitleBase } from '../../../../components/typography/title'
 import { Text } from '../../../../components/typography/text'
 import { withMediaQueries } from '../../../../hoc/media-queries'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const Title = Radium(TitleBase)
 const GridCol = Radium(GridColBase)
@@ -34,8 +35,10 @@ class PartnersSection extends Component {
   }
 
   renderTitle() {
+    const { viewportIsSOrLess } = this.props
+
     return (
-      <Marger bottom="5">
+      <Marger bottom={viewportIsSOrLess ? 4 : 5}>
         <Title modifier="quinary" margin={false} style={styles.textAlign}>
           Nous prenons soin de vos projet et de vos données personnelles aussi
         </Title>
@@ -49,8 +52,8 @@ class PartnersSection extends Component {
     return (
       <Grid>
         <GridCol col-m="4" style={styles.textAlign}>
-          <figure style={{ margin: 0 }}>
-            <div style={{ height: 100 }}>
+          <figure style={styles.logosMargin}>
+            <div style={styles.logos}>
               <img src="http://via.placeholder.com/70x50/caf4fe/caf4fe" />
             </div>
             <figcaption>Protection de vos données</figcaption>
@@ -58,8 +61,8 @@ class PartnersSection extends Component {
         </GridCol>
 
         <GridCol col-m="4" style={styles.textAlign}>
-          <figure style={{ margin: 0 }}>
-            <div style={{ height: 100 }}>
+          <figure style={styles.logosMargin}>
+            <div style={styles.logos}>
               <img src="http://via.placeholder.com/100x80/caf4fe/caf4fe" />
             </div>
             <figcaption>
@@ -69,8 +72,8 @@ class PartnersSection extends Component {
         </GridCol>
 
         <GridCol col-m="4" style={styles.textAlign}>
-          <figure style={{ margin: 0 }}>
-            <div style={{ height: 100 }}>
+          <figure style={styles.logosMargin}>
+            <div style={styles.logos}>
               <img src="http://via.placeholder.com/50x50/caf4fe/caf4fe" />
             </div>
             <figcaption>
@@ -86,6 +89,18 @@ class PartnersSection extends Component {
 const styles = {
   textAlign: {
     textAlign: 'center',
+  },
+  logosMargin: {
+    margin: 0,
+    [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
+      marginBottom: 40,
+    },
+  },
+  logos: {
+    height: 100,
+    [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
+      height: '100%',
+    },
   },
 }
 
