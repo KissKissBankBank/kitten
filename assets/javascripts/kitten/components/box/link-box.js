@@ -6,7 +6,6 @@ import { Text } from '../../components/typography/text'
 import { Marger as MargerBase } from '../../components/layout/marger'
 import COLORS from '../../constants/colors-config'
 import { ScreenConfig } from '../../constants/screen-config'
-import { mediaQueries } from '../../hoc/media-queries'
 import { pxToRem } from '../../helpers/utils/typography'
 
 const Marger = Radium(MargerBase)
