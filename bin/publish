@@ -7,7 +7,7 @@ PACKAGE_VERSION=$(cat package.json \
   | sed 's/[",]//g' \
   | tr -d '[[:space:]]')
 
-REALEASE_TAG="v$PACKAGE_VERSION-next"
+REALEASE_TAG="v$PACKAGE_VERSION"
 
 echo "Preparing to publish $PACKAGE_VERSION version linked to tag $REALEASE_TAG."
 
