@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React from 'react'
 import { RewardCard } from '../../components/cards/reward-card'
 import { Deprecated } from '../../helpers/utils/deprecated'
 

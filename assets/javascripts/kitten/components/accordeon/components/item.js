@@ -17,5 +17,9 @@ export const Item = ({ children, id }) => {
 }
 
 Item.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+}
+
+Item.defaultProps = {
+  id: null,
 }
