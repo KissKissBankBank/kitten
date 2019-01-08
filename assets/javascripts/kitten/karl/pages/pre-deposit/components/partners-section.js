@@ -35,11 +35,7 @@ class PartnersSection extends Component {
 
     return (
       <Marger bottom={viewportIsXSOrLess ? 4 : 5}>
-        <Title
-          modifier="quinary"
-          margin={false}
-          style={{ color: COLORS.font1 }}
-        >
+        <Title modifier="quinary" margin={false} style={styles.title}>
           Nous prenons soin de vos projet et de vos données personnelles aussi
         </Title>
       </Marger>
@@ -87,6 +83,10 @@ class PartnersSection extends Component {
 }
 
 const styles = {
+  title: {
+    color: COLORS.font1,
+    textAlign: 'center',
+  },
   logosMargin: {
     margin: 0,
     [`@media (max-width: ${ScreenConfig.S.max}px)`]: {

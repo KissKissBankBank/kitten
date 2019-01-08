@@ -75,14 +75,14 @@ class KeySection extends Component {
         <GridCol col-m="4" offset-m="1" col-s="10" offset-s="1">
           <Marger top={viewportIsMOrLess ? 4 : 3}>
             <BulletList
-              big
+              default
               style={styles.bulletList}
               items={[
                 {
                   key: '1',
                   item: (
                     <Text
-                      size={viewportIsXSOrLess ? 'big' : 'huge'}
+                      size={viewportIsXSOrLess ? 'tiny' : 'default'}
                       style={{ lineHeight: 1.5 }}
                       color="font1"
                     >
@@ -96,7 +96,7 @@ class KeySection extends Component {
                   key: '2',
                   item: (
                     <Text
-                      size={viewportIsXSOrLess ? 'big' : 'huge'}
+                      size={viewportIsXSOrLess ? 'tiny' : 'default'}
                       style={{ lineHeight: 1.5 }}
                       color="font1"
                     >
@@ -109,7 +109,7 @@ class KeySection extends Component {
                   key: '3',
                   item: (
                     <Text
-                      size={viewportIsXSOrLess ? 'big' : 'huge'}
+                      size={viewportIsXSOrLess ? 'tiny' : 'default'}
                       style={{ lineHeight: 1.5 }}
                       color="font1"
                     >
