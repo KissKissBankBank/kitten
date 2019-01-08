@@ -70,6 +70,13 @@ class CarouselSection extends Component {
         title: '« Notre volonté était d’auto-éditer notre guide. »',
         paragraph: 'Chilowé, guide des micro-aventures en île-de-France',
       },
+      {
+        imageProps: {
+          src: 'https://placehold.it/350x195/caf4fe/caf4fe',
+        },
+        title: '« Notre volonté était d’auto-éditer notre guide. »',
+        paragraph: 'Chilowé, guide des micro-aventures en île-de-France',
+      },
     ]
 
     return (
