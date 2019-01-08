@@ -23,6 +23,9 @@ describe('<CartRewardCard />', () => {
   describe('ensure backward compatibility', () => {
     window.matchMedia = createMockMediaMatcher(false)
 
+    // Desactivate warnings.
+    jest.spyOn(global.console, 'error').mockImplementation(() => {})
+
     const component = renderer
       .create(
         <CartRewardCard

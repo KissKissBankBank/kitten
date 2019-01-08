@@ -8,7 +8,13 @@ describe('<VerticalCardWithAction />', () => {
   describe('by default', () => {
     beforeEach(() => {
       component = renderer
-        .create(<VerticalCardWithAction title="Custom title" button="button" />)
+        .create(
+          <VerticalCardWithAction
+            title="Custom title"
+            button="button"
+            imageProps={{ src: '#image', alt: '' }}
+          />,
+        )
         .toJSON()
     })
 
