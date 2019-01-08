@@ -1,6 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { RewardCard } from '../../components/cards/reward-card'
+import { Paragraph } from '../../components/typography/paragraph'
+import { List } from '../../components/lists/list'
+import { Text } from '../../components/typography/text'
 
 const createMockMediaMatcher = matches => () => ({
   matches,
@@ -24,10 +27,17 @@ describe('<RewardCard />', () => {
       window.matchMedia = createMockMediaMatcher(false)
       const component = renderer
         .create(
-          <RewardCard
-            titleAmount="Custom title mount"
-            textDescription="Custom text description"
-          />,
+          <RewardCard>
+            <RewardCard.Row>
+              <RewardCard.RowContent>
+                <RewardCard.Title>Custom title mount</RewardCard.Title>
+
+                <Paragraph modifier="quaternary" margin={false}>
+                  Custom text description
+                </Paragraph>
+              </RewardCard.RowContent>
+            </RewardCard.Row>
+          </RewardCard>,
         )
         .toJSON()
       expect(component).toMatchSnapshot()
@@ -39,59 +49,76 @@ describe('<RewardCard />', () => {
       window.matchMedia = createMockMediaMatcher(false)
       const component = renderer
         .create(
-          <RewardCard
-            titleAmount="Custom title amount"
-            titleTag="h4"
-            subtitle="Custom title description"
-            subtitleTag="quote"
-            description="Custom text description"
-            manageContributionDescription="Custom my contribution"
-            manageContributionLinkLabel="Custom manage contribution"
-            manageContributionLinkHref="Custom manage link contribution"
-            buttonLabel="Custom text button"
-            imageProps={{
-              src: '#image',
-            }}
-            infos={[
-              { label: 'Delivery', value: '03/18' },
-              { label: 'Alice', value: 'Wonderland' },
-            ]}
-            starred
-            starLabel="Youpi"
-          />,
-        )
-        .toJSON()
-      expect(component).toMatchSnapshot()
-    })
-  })
+          <RewardCard>
+            <RewardCard.Row>
+              <RewardCard.RowContent>
+                <RewardCard.StarredBadge>
+                  <Text size="nano" color="font1" weight="bold">
+                    Starred label
+                  </Text>
+                  <Text size="nano" color="font1">
+                    Lorem ipsum
+                  </Text>
+                </RewardCard.StarredBadge>
 
-  describe('on tiny version', () => {
-    it('matches with snapshot', () => {
-      window.matchMedia = createMockMediaMatcher(false)
-      const component = renderer
-        .create(
-          <RewardCard
-            titleAmount="Custom title amount"
-            titleTag="h4"
-            subtitle="Custom title description"
-            subtitleTag="quote"
-            description="Custom text description"
-            manageContributionDescription="Custom my contribution"
-            manageContributionLinkLabel="Custom manage contribution"
-            manageContributionLinkHref="Custom manage link contribution"
-            buttonLabel="Custom text button"
-            imageProps={{
-              src: '#image',
-              alt: 'Image alt',
-            }}
-            infos={[
-              { label: 'Delivery', value: '03/18' },
-              { label: 'Alice', value: 'Wonderland' },
-            ]}
-            starred
-            starLabel="Youpi"
-            version="tiny"
-          />,
+                <RewardCard.Title>100$</RewardCard.Title>
+
+                <Text color="font1" tag="p" weight="bold">
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                </Text>
+
+                <Paragraph modifier="quaternary" margin={false}>
+                  Superatis Tauri montis verticibus qui ad solis ortum sublimius
+                  attolluntur, Cilicia spatiis porrigitur late distentis dives
+                  bonis omnibus terra, eiusque lateri dextro adnexa Isauria,
+                  pari sorte uberi palmite viget et frugibus minutis, quam
+                  mediam navigabile flumen Calycadnus interscindit.
+                </Paragraph>
+
+                <List>
+                  <RewardCard.Info
+                    key="Contributors"
+                    label="Contributors:"
+                    value="35"
+                  />
+                  <RewardCard.Info
+                    key="Availability"
+                    label="Availability:"
+                    value="42/1000"
+                  />
+                  <RewardCard.Info
+                    key="Delivery"
+                    label="Delivery:"
+                    value="January 2019"
+                    withMarginBottom={false}
+                  />
+                </List>
+              </RewardCard.RowContent>
+
+              <RewardCard.RowSide>
+                <RewardCard.Image
+                  src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
+                  alt="My reward"
+                />
+              </RewardCard.RowSide>
+            </RewardCard.Row>
+
+            <RewardCard.CheckedSection>
+              <Text color="font1" size="tiny" tag="p">
+                You contributed to this project.
+              </Text>
+              <Text
+                decoration="none"
+                color="primary1"
+                size="tiny"
+                weight="regular"
+                tag="a"
+                href="#"
+              >
+                Manage my contribution
+              </Text>
+            </RewardCard.CheckedSection>
+          </RewardCard>,
         )
         .toJSON()
       expect(component).toMatchSnapshot()
@@ -101,6 +128,10 @@ describe('<RewardCard />', () => {
   describe('with legacy props', () => {
     it('matches with snapshot', () => {
       window.matchMedia = createMockMediaMatcher(false)
+
+      // Desactivate warnings.
+      jest.spyOn(global.console, 'error').mockImplementation(() => {})
+
       const component = renderer
         .create(
           <RewardCard

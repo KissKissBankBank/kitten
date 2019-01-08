@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
 import { ButtonImage as ButtonImageBase } from '../../components/buttons/button-image'
 import { Text as TextBase } from '../../components/typography/text'
 
@@ -17,7 +16,7 @@ class ButtonImageWithTextComponent extends Component {
     largeGutter: PropTypes.bool,
     titleRegular: PropTypes.bool,
     textRegular: PropTypes.bool,
-    avatarProps: PropTypes.func,
+    avatarProps: PropTypes.object,
   }
 
   static defaultProps = {

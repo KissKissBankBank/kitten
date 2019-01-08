@@ -15,7 +15,12 @@ export class TeamCardIcons extends Component {
   static propTypes = {
     email: PropTypes.string,
     phoneNumber: PropTypes.string,
-    links: PropTypes.oneOf(['linkedin', 'twitter']),
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.oneOf(['linkedin', 'twitter']),
+        href: PropTypes.string,
+      }),
+    ),
 
     // Deprecated.
     socialLink: deprecated(PropTypes.string, 'Prefer use links prop'),
@@ -37,7 +42,7 @@ export class TeamCardIcons extends Component {
   }
 
   render() {
-    const { email, phoneNumber, links } = this.props
+    const { email, phoneNumber } = this.props
 
     return (
       <Marger top="1.5" style={styles.icons}>
