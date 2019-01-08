@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import { ScreenConfig } from '../../../../../constants/screen-config'
 import { card } from '../../../../../hoc/card'
-import { Grid, GridCol } from '../../../../../components/grid/grid'
 import { Marger } from '../../../../../components/layout/marger'
-import { Title } from '../../../../../components/typography/title'
+import { Title as TitleBase } from '../../../../../components/typography/title'
 import { Text } from '../../../../../components/typography/text'
 import { Paragraph as ParagraphBase } from '../../../../../components/typography/paragraph'
 import { parseHtml } from '../../../../../helpers/utils/parser'
-import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
-import { Button as ButtonBase } from '../../../../../components/buttons/button'
+import { HorizontalStroke as HorizontalStrokeBase } from '../../../../../components/layout/horizontal-stroke'
+import COLORS from '../../../../../constants/colors-config'
 
 const Paragraph = Radium(ParagraphBase)
-const Button = Radium(ButtonBase)
+const HorizontalStroke = Radium(HorizontalStrokeBase)
+const Title = Radium(TitleBase)
 
 export class CardWithButton extends Component {
   render() {
@@ -45,19 +45,29 @@ export class CardWithButton extends Component {
           top={marginBetweenImgAndContent}
           bottom={horizontalStroke ? 2 : 1}
         >
-          <Title {...titleProps} tag="h3" margin={false} modifier="senary">
+          <Title
+            {...titleProps}
+            tag="h3"
+            margin={false}
+            modifier="senary"
+            style={{ color: COLORS.font1 }}
+          >
             {parseHtml(title)}
           </Title>
         </Marger>
 
         {horizontalStroke && (
           <Marger top="2" bottom="3">
-            <HorizontalStroke />
+            <HorizontalStroke style={{ color: COLORS.font1 }} />
           </Marger>
         )}
 
         <Marger top={horizontalStroke ? 3 : 1} bottom={notice ? 1.5 : 3}>
-          <Paragraph modifier="quaternary" margin={false}>
+          <Paragraph
+            modifier="quaternary"
+            margin={false}
+            style={{ color: COLORS.font1 }}
+          >
             {parseHtml(paragraph)}
           </Paragraph>
         </Marger>
@@ -65,7 +75,12 @@ export class CardWithButton extends Component {
         {notice && (
           <Marger top="1.5" bottom="4">
             <Paragraph margin={false} style={styles.noLineHeight}>
-              <Text lineHeight="normal" size="micro" weight="regular">
+              <Text
+                lineHeight="normal"
+                size="micro"
+                weight="regular"
+                color="font1"
+              >
                 {parseHtml(notice)}
               </Text>
             </Paragraph>

@@ -1,30 +1,29 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol as GridColBase } from '../../../../components/grid/grid'
+import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
-import { Title } from '../../../../components/typography/title'
+import { Title as TitleBase } from '../../../../components/typography/title'
 import { Carousel } from '../../../../components/carousel/carousel'
 import { SimpleCard } from '../../../../components/cards/simple-card'
 import { withMediaQueries } from '../../../../hoc/media-queries'
+import COLORS from '../../../../constants/colors-config'
 
-const GridCol = Radium(GridColBase)
+const Title = Radium(TitleBase)
 
 class CarouselSection extends Component {
   render() {
-    const { viewportIsXSOrLess, viewportIsSOrLess } = this.props
+    const { viewportIsXSOrLess } = this.props
 
     return (
-      <StyleRoot>
-        <Container>
-          <Marger top={viewportIsSOrLess ? 8 : 10}>
-            <Grid>
-              {this.renderTitle()}
-              {this.renderCarousel()}
-            </Grid>
-          </Marger>
-        </Container>
-      </StyleRoot>
+      <Container>
+        <Marger top={viewportIsXSOrLess ? 8 : 10}>
+          <Grid>
+            {this.renderTitle()}
+            {this.renderCarousel()}
+          </Grid>
+        </Marger>
+      </Container>
     )
   }
 
@@ -32,7 +31,12 @@ class CarouselSection extends Component {
     return (
       <GridCol col-l="4" offset-l="1" col-s="10">
         <Marger bottom="3">
-          <Title tag="h2" modifier="quaternary" margin={false}>
+          <Title
+            tag="h2"
+            modifier="quaternary"
+            margin={false}
+            style={{ color: COLORS.font1 }}
+          >
             Nos créatrices et créateurs racontent leur campagne
           </Title>
         </Marger>
@@ -96,5 +100,4 @@ class CarouselSection extends Component {
 
 export default withMediaQueries({
   viewportIsXSOrLess: true,
-  viewportIsSOrLess: true,
 })(Radium(CarouselSection))

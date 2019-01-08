@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Container as ContainerBase } from '../../../../components/grid/container'
 import { Marger } from '../../../../components/layout/marger'
@@ -17,32 +17,30 @@ const Container = Radium(ContainerBase)
 
 class TipsSection extends Component {
   render() {
-    const { viewportIsSOrLess, viewportIsMOrLess } = this.props
+    const { viewportIsXSOrLess, viewportIsMOrLess } = this.props
 
     return (
-      <StyleRoot>
-        <Container style={styles.background}>
-          <Marger top={viewportIsSOrLess ? 5 : 10}>
-            {!viewportIsMOrLess && (
-              <Grid>
-                {this.renderImage()}
-                {this.renderText()}
-              </Grid>
-            )}
+      <Container style={styles.background}>
+        <Marger top={viewportIsXSOrLess ? 5 : 10}>
+          {!viewportIsMOrLess && (
+            <Grid>
+              {this.renderImage()}
+              {this.renderText()}
+            </Grid>
+          )}
 
-            {viewportIsMOrLess && (
-              <Grid>
-                <Marger
-                  top={viewportIsSOrLess ? 5 : 10}
-                  bottom={viewportIsSOrLess ? 5 : 10}
-                >
-                  {this.renderText()}
-                </Marger>
-              </Grid>
-            )}
-          </Marger>
-        </Container>
-      </StyleRoot>
+          {viewportIsMOrLess && (
+            <Grid>
+              <Marger
+                top={viewportIsXSOrLess ? 5 : 10}
+                bottom={viewportIsXSOrLess ? 5 : 10}
+              >
+                {this.renderText()}
+              </Marger>
+            </Grid>
+          )}
+        </Marger>
+      </Container>
     )
   }
 
@@ -57,7 +55,7 @@ class TipsSection extends Component {
   }
 
   renderText() {
-    const { viewportIsMOrLess, viewportIsSOrLess } = this.props
+    const { viewportIsMOrLess } = this.props
 
     return (
       <GridCol col-l="4" offset-l="1" col-s="10" offset-s="1">
@@ -122,5 +120,5 @@ const styles = {
 
 export default withMediaQueries({
   viewportIsMOrLess: true,
-  viewportIsSOrLess: true,
+  viewportIsXSOrLess: true,
 })(Radium(TipsSection))

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Container } from '../../../../components/grid/container'
 import { Marger } from '../../../../components/layout/marger'
@@ -19,30 +19,28 @@ const Title = Radium(TitleBase)
 
 class KeySection extends Component {
   render() {
-    const { viewportIsSOrLess } = this.props
+    const { viewportIsXSOrLess } = this.props
 
     return (
-      <StyleRoot>
-        <Container>
-          <Marger bottom={viewportIsSOrLess ? 3 : 4}>
-            {this.renderTitle()}
-          </Marger>
-          <Marger top={viewportIsSOrLess ? 3 : 4}>
-            {this.renderBulletList()}
-          </Marger>
-        </Container>
-      </StyleRoot>
+      <Container>
+        <Marger bottom={viewportIsXSOrLess ? 3 : 4}>
+          {this.renderTitle()}
+        </Marger>
+        <Marger top={viewportIsXSOrLess ? 3 : 4}>
+          {this.renderBulletList()}
+        </Marger>
+      </Container>
     )
   }
 
   renderTitle() {
-    const { titleKeyImg, viewportIsSOrLess, viewportIsXSOrLess } = this.props
+    const { titleKeyImg, viewportIsXSOrLess } = this.props
 
     return (
       <Grid>
         <GridCol col-l="6" offset="1" col="10">
           <Marger bottom="2">
-            <Title modifier="secondary" margin={false} style={styles.textAlign}>
+            <Title modifier="secondary" margin={false} style={styles.text}>
               La clé ? Un accompagnement sur mesure pour votre financement
             </Title>
           </Marger>
@@ -69,7 +67,7 @@ class KeySection extends Component {
   }
 
   renderBulletList() {
-    const { viewportIsMOrLess } = this.props
+    const { viewportIsMOrLess, viewportIsXSOrLess } = this.props
 
     return (
       <Grid>
@@ -83,7 +81,11 @@ class KeySection extends Component {
                 {
                   key: '1',
                   item: (
-                    <Text style={{ lineHeight: 1.5 }}>
+                    <Text
+                      size={viewportIsXSOrLess ? 'big' : 'huge'}
+                      style={{ lineHeight: 1.5 }}
+                      color="font1"
+                    >
                       Un coach pour vous conseiller sur la mise en forme de
                       votre page projet, votre stratégie de communication durant
                       la collecte et l'envoi de vos contreparties.
@@ -93,7 +95,11 @@ class KeySection extends Component {
                 {
                   key: '2',
                   item: (
-                    <Text style={{ lineHeight: 1.5 }}>
+                    <Text
+                      size={viewportIsXSOrLess ? 'big' : 'huge'}
+                      style={{ lineHeight: 1.5 }}
+                      color="font1"
+                    >
                       Une équipe d’experts pour chaque secteur d’activité,
                       proche de vos besoins et vos problématiques.
                     </Text>
@@ -102,7 +108,11 @@ class KeySection extends Component {
                 {
                   key: '3',
                   item: (
-                    <Text style={{ lineHeight: 1.5 }}>
+                    <Text
+                      size={viewportIsXSOrLess ? 'big' : 'huge'}
+                      style={{ lineHeight: 1.5 }}
+                      color="font1"
+                    >
                       <span style={{ color: '#19B4FA' }}>Un blog</span> et{' '}
                       <span style={{ color: '#19B4FA' }}>des vidéos tutos</span>{' '}
                       pour devenir un pro du financement participatif !
@@ -141,7 +151,8 @@ const imgBackground = image => ({
 })
 
 const styles = {
-  textAlign: {
+  text: {
+    color: COLORS.font1,
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
       textAlign: 'center',
     },
@@ -149,6 +160,7 @@ const styles = {
 
   horizontalStroke: {
     width: 50,
+    color: COLORS.font1,
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
       margin: 'auto',
       width: 40,
@@ -163,6 +175,5 @@ const styles = {
 
 export default withMediaQueries({
   viewportIsMOrLess: true,
-  viewportIsSOrLess: true,
   viewportIsXSOrLess: true,
 })(Radium(KeySection))

@@ -1,25 +1,33 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import { Container } from '../../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../../components/grid/grid'
 import { Marger } from '../../../../../components/layout/marger'
-import { Title } from '../../../../../components/typography/title'
+import { Title as TitleBase } from '../../../../../components/typography/title'
 import { CardWithButton } from './card-with-button'
 import { Triptych } from '../../../../../components/cards/triptych'
 import { withMediaQueries } from '../../../../../hoc/media-queries'
+import COLORS from '../../../../../constants/colors-config'
+
+const Title = Radium(TitleBase)
 
 class SolutionsTriptych extends Component {
   render() {
-    const { viewportIsSOrLess } = this.props
+    const { viewportIsXSOrLess } = this.props
 
     return (
-      <Marger top={viewportIsSOrLess ? 8 : 10}>
+      <Marger top={viewportIsXSOrLess ? 8 : 10}>
         <Container>
           <Grid>
             <GridCol offset-l="1" col-l="10">
               <Triptych
                 title={
-                  <Title tag="h2" modifier="secondary" margin={false}>
+                  <Title
+                    tag="h2"
+                    modifier="secondary"
+                    margin={false}
+                    style={{ color: COLORS.font1 }}
+                  >
                     3 solutions pour collecter des fonds et financer mon projet
                   </Title>
                 }
@@ -69,5 +77,5 @@ class SolutionsTriptych extends Component {
 }
 
 export default withMediaQueries({
-  viewportIsSOrLess: true,
+  viewportIsXSOrLess: true,
 })(Radium(SolutionsTriptych))
