@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { Grid, GridCol } from '../../../../components/grid/grid'
+import { Grid, GridCol as GridColBase } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
 import { Paragraph as ParagraphBase } from '../../../../components/typography/paragraph'
@@ -12,6 +12,7 @@ import COLORS from '../../../../constants/colors-config'
 
 const Paragraph = Radium(ParagraphBase)
 const Title = Radium(TitleBase)
+const GridCol = Radium(GridColBase)
 
 class HeaderWithBackground extends Component {
   titleModifier() {
@@ -40,8 +41,8 @@ class HeaderWithBackground extends Component {
     const { viewportIsXSOrLess } = this.props
 
     return (
-      <GridCol col-m="8" offset-m="2">
-        <div style={styles.header.background}>
+      <GridCol col-m="8" offset-m="2" style={styles.header.container}>
+        <div style={styles.header.container.background}>
           <GridCol col-m="10" offset-m="1">
             <Marger bottom="1">
               <Title
@@ -72,9 +73,9 @@ class HeaderWithBackground extends Component {
                 tag="a"
                 size="big"
                 modifier="helium"
-                href=""
-                target=""
-                rel=""
+                href="#"
+                target="_blank"
+                rel="noopener"
               >
                 Lancez-vous
               </Button>
@@ -101,10 +102,20 @@ const styles = {
       marginBottom: 100,
     },
 
-    background: {
-      backgroundColor: '#fff',
-      paddingTop: 50,
-      paddingBottom: 50,
+    container: {
+      marginTop: 50,
+      [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
+        marginTop: 80,
+      },
+      [`@media (min-width: ${ScreenConfig.L.min}px)`]: {
+        marginTop: 100,
+      },
+
+      background: {
+        backgroundColor: '#fff',
+        paddingTop: 50,
+        paddingBottom: 50,
+      },
     },
   },
 }
