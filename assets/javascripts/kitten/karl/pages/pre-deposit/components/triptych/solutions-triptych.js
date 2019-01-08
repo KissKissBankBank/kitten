@@ -19,7 +19,14 @@ class SolutionsTriptych extends Component {
       <Marger top={viewportIsXSOrLess ? 8 : 10}>
         <Container>
           <Grid>
-            <GridCol offset-l="1" col-l="10">
+            <GridCol
+              col-l="10"
+              offset-l="1"
+              col-m="12"
+              offset-m="0"
+              col-s="10"
+              offset-s="1"
+            >
               <Triptych
                 title={
                   <Title

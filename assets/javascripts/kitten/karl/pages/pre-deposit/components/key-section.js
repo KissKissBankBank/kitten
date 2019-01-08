@@ -60,7 +60,7 @@ class KeySection extends Component {
     const imgKeyStyle = [imgBackground('FFF')]
 
     return (
-      <GridCol col-l="5" offset-l="1" col-s="10" offset-s="1">
+      <GridCol col-m="5" offset-m="1" col-s="10" offset-s="1">
         <img style={imgKeyStyle} />
       </GridCol>
     )
@@ -72,7 +72,7 @@ class KeySection extends Component {
     return (
       <Grid>
         {this.renderImage()}
-        <GridCol col-l="4" offset-l="1" col-s="10" offset-s="1">
+        <GridCol col-m="4" offset-m="1" col-s="10" offset-s="1">
           <Marger top={viewportIsMOrLess ? 4 : 3}>
             <BulletList
               big
@@ -153,7 +153,7 @@ const imgBackground = image => ({
 const styles = {
   text: {
     color: COLORS.font1,
-    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
+    [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
       textAlign: 'center',
     },
   },
@@ -161,7 +161,7 @@ const styles = {
   horizontalStroke: {
     width: 50,
     color: COLORS.font1,
-    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
+    [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
       margin: 'auto',
       width: 40,
     },

@@ -41,9 +41,15 @@ class HeaderWithBackground extends Component {
     const { viewportIsXSOrLess } = this.props
 
     return (
-      <GridCol col-m="8" offset-m="2" style={styles.header.container}>
+      <GridCol
+        col-l="8"
+        offset-l="2"
+        col-s="10"
+        offset-s="1"
+        style={styles.header.container}
+      >
         <div style={styles.header.container.background}>
-          <GridCol col-m="10" offset-m="1">
+          <GridCol col="10" offset="1">
             <Marger bottom="1">
               <Title
                 tag="h1"
