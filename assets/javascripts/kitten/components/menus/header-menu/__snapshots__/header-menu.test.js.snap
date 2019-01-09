@@ -161,8 +161,8 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-transition: padding-right .2s;
-  transition: padding-right .2s;
+  -webkit-transition: padding-right 0.2s;
+  transition: padding-right 0.2s;
   height: 1.5rem;
 }
 
