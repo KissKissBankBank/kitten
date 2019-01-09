@@ -5,6 +5,7 @@ import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Context } from './context'
+import { ArrowIcon } from '../../../icons/arrow-icon'
 
 const StyledItem = styled.a`
   display: block;
@@ -134,10 +135,7 @@ export class Item extends Component {
               <StyledItem href={href} borderSide={borderSide} {...other}>
                 <span>{children}</span>
                 <i className="linkArrow">
-                  <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z" />
-                    <path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z" />
-                  </svg>
+                  <ArrowIcon direction="right" />
                 </i>
               </StyledItem>
             </li>
