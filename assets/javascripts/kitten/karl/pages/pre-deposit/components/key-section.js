@@ -12,6 +12,7 @@ import { withMediaQueries } from '../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
 import { parseHtml } from '../../../../helpers/utils/parser'
+import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 
 const BulletList = Radium(BulletlistBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)
@@ -57,11 +58,11 @@ class KeySection extends Component {
   }
 
   renderImage() {
-    const imgKeyStyle = [imgBackground('FFF')]
+    const imgKeyStyle = [imgBackground('FFF'), styles.image]
 
     return (
-      <GridCol col-m="5" offset-m="1" col-s="10" offset-s="1">
-        <img style={imgKeyStyle} />
+      <GridCol offset-l="1" col-s="5" offset-s="0" col-xs="10" offset-xs="1">
+        <div style={imgKeyStyle} />
       </GridCol>
     )
   }
@@ -72,8 +73,8 @@ class KeySection extends Component {
     return (
       <Grid>
         {this.renderImage()}
-        <GridCol col-m="4" offset-m="1" col-s="10" offset-s="1">
-          <Marger top={viewportIsMOrLess ? 4 : 3}>
+        <GridCol col-l="4" col-s="6" offset-s="1" col-xs="10" offset-xs="1">
+          <div style={styles.bulletListMarger}>
             <BulletList
               default
               style={styles.bulletList}
@@ -121,7 +122,7 @@ class KeySection extends Component {
                 },
               ]}
             />
-          </Marger>
+          </div>
 
           {!viewportIsMOrLess && <Marger top="4">{this.renderButton()}</Marger>}
         </GridCol>
@@ -164,6 +165,21 @@ const styles = {
     [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
       margin: 'auto',
       width: 40,
+    },
+  },
+
+  image: {
+    [`@media (min-width: ${ScreenConfig.S.min}px) and
+      (max-width: ${ScreenConfig.M.max}px)`]: {
+      marginLeft: -`${CONTAINER_PADDING}`,
+      width: `calc(100% + ${CONTAINER_PADDING}px)`,
+    },
+  },
+
+  bulletListMarger: {
+    [`@media (max-width: ${ScreenConfig.L.max}px) and
+      (max-width: ${ScreenConfig.XS.max}px)`]: {
+      marginTop: 40,
     },
   },
 
