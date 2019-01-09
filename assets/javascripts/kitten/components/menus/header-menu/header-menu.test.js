@@ -17,7 +17,9 @@ describe('<HeaderMenu />', () => {
             <HeaderMenu.Item href="#" modifier="light">
               Item 2
             </HeaderMenu.Item>
-            <HeaderMenu.Item href="#">Item 3</HeaderMenu.Item>
+            <HeaderMenu.Item href="#" liProps={{ className: 'customLiClass' }}>
+              Item 3
+            </HeaderMenu.Item>
           </HeaderMenu>,
         )
         .toJSON()
