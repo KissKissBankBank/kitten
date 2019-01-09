@@ -8,6 +8,7 @@ import { Text } from '../../../../components/typography/text'
 import { withMediaQueries } from '../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
 const Title = Radium(TitleBase)
 
@@ -50,7 +51,7 @@ class PartnersSection extends Component {
             <div style={styles.logos}>
               <img src="http://via.placeholder.com/70x50/caf4fe/caf4fe" />
             </div>
-            <figcaption style={{ color: COLORS.font1 }}>
+            <figcaption style={styles.text}>
               Protection de vos données
             </figcaption>
           </figure>
@@ -61,7 +62,7 @@ class PartnersSection extends Component {
             <div style={styles.logos}>
               <img src="http://via.placeholder.com/100x80/caf4fe/caf4fe" />
             </div>
-            <figcaption style={{ color: COLORS.font1 }}>
+            <figcaption style={styles.text}>
               KissKissBankBank est filiale de La Banque Postale
             </figcaption>
           </figure>
@@ -72,7 +73,7 @@ class PartnersSection extends Component {
             <div style={styles.logos}>
               <img src="http://via.placeholder.com/50x50/caf4fe/caf4fe" />
             </div>
-            <figcaption style={{ color: COLORS.font1 }}>
+            <figcaption style={styles.text}>
               Sécurisation de vos transactions financières
             </figcaption>
           </figure>
@@ -86,6 +87,10 @@ const styles = {
   title: {
     color: COLORS.font1,
     textAlign: 'center',
+  },
+  text: {
+    color: COLORS.font1,
+    fontSize: pxToRem(14),
   },
   logosMargin: {
     margin: 0,
