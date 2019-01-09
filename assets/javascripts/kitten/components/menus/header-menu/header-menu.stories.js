@@ -33,7 +33,7 @@ storiesOf('Menus/HeaderMenu', module)
         >
           <HeaderMenu.Item href="#">Item 1</HeaderMenu.Item>
           <HeaderMenu.Item href="#" isSelected>
-            Item 2
+            Item 2 (actif)
           </HeaderMenu.Item>
           <HeaderMenu.Item href="#">Item 3</HeaderMenu.Item>
           <HeaderMenu.Item href="#" modifier="light">
