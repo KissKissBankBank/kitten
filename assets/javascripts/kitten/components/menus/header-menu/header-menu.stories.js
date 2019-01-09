@@ -6,7 +6,6 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { LendopolisLogo } from '../../logos/lendopolis-logo'
-import { ExternalRichLink } from '../../links/external-rich-link'
 
 const StoryGrid = ({ children }) => (
   <Container>
@@ -37,13 +36,14 @@ storiesOf('Menus/HeaderMenu', module)
             Item 2
           </HeaderMenu.Item>
           <HeaderMenu.Item href="#">Item 3</HeaderMenu.Item>
-          <HeaderMenu.Item href="#" borderTop modifier="light">
+          <HeaderMenu.Item href="#" modifier="light">
             Item 4 (light)
           </HeaderMenu.Item>
-          <HeaderMenu.Item borderTop>
-            <ExternalRichLink href="#" margin={false}>
-              <LendopolisLogo primaryColor="#222" />
-            </ExternalRichLink>
+          <HeaderMenu.Item external href="#">
+            <LendopolisLogo primaryColor="#222" />
+          </HeaderMenu.Item>
+          <HeaderMenu.Item external href="#">
+            Item 5
           </HeaderMenu.Item>
         </HeaderMenu>
       </StoryGrid>

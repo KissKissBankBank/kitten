@@ -6,50 +6,90 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Context } from './context'
 
-const StyledItem = styled.div`
+const StyledItem = styled.a`
   display: block;
-  padding: ${pxToRem(15)} ${pxToRem(20)};
 
   outline: none;
-  border-left: 1px solid ${COLORS.line1};
-  background-color: ${COLORS.background2};
+  background-color: ${COLORS.background1};
 
   ${TYPOGRAPHY.fontStyles.regular}
-  font-size: ${pxToRem(12)};
-  line-height: 1;
+  font-size: ${pxToRem(14)};
   text-decoration: none;
   color: ${COLORS.font1};
+  position: relative;
 
-  transition: color .2s, background-color .2s, border-color .2s;
+  border-bottom: 1px solid ${COLORS.line1};
 
-  :hover,
-  :focus {
-    background-color: ${COLORS.line1};
-    color: ${COLORS.primary1};
-    text-decoration: none;
-  }
+  ${({ external }) =>
+    external
+      ? css`
+          padding: ${pxToRem(23)} ${pxToRem(21)} ${pxToRem(22)} ${pxToRem(30)};
+          background-color: ${COLORS.background3};
 
-  :focus {
-    border-left-color: ${COLORS.primary1};
-  }
+          display: flex;
+          align-items: center;
+          align-self: flex-start;
+          justify-content: space-between;
+
+          text-decoration: none;
+
+          > * {
+            height: ${pxToRem(24)};
+            line-height: ${pxToRem(24)};
+          }
+
+          > span > svg,
+          > span > img {
+            height: 100%;
+            width: auto;
+          }
+
+          > i {
+            width: ${pxToRem(10)};
+            line-height: ${pxToRem(10)};
+            height: ${pxToRem(10)};
+            position: relative;
+            left: 0;
+            transition: left 0.2s;
+          }
+          :focus > i,
+          :hover > i {
+            left: 5px;
+          }
+        `
+      : css`
+          padding: ${pxToRem(18)} ${pxToRem(30)} ${pxToRem(17)};
+          line-height: 1;
+
+          ::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            bottom: -1px;
+            width: 1px;
+            background-color: transparent;
+
+            transition: background-color 0.2s, width 0.2s;
+          }
+          :hover::before,
+          :focus::before {
+            background-color: ${COLORS.primary1};
+            width: 4px;
+            transition: width 0.2s;
+          }
+        `}
+
+
 
   ${({ isSelected }) =>
     isSelected &&
     css`
-      border-left-color: ${COLORS.primary1};
       color: ${COLORS.primary1};
-    `}
-
-  ${({ borderTop }) =>
-    borderTop &&
-    css`
-      border-top: 1px solid ${COLORS.line1};
-    `}
-
-  ${({ borderBottom }) =>
-    borderBottom &&
-    css`
-      border-bottom: 1px solid ${COLORS.line1};
+      ::before {
+        background-color: ${COLORS.primary1};
+        width: 4px;
+      }
     `}
 
   ${({ modifier }) =>
@@ -61,8 +101,10 @@ const StyledItem = styled.div`
   ${({ borderSide, isSelected }) =>
     borderSide === 'right' &&
     css`
-      border-right: 1px solid ${isSelected ? COLORS.primary1 : COLORS.line1};
-      border-left: 0;
+      ::before {
+        left: unset;
+        right: -1px;
+      }
     `}
 `
 
@@ -70,37 +112,50 @@ export class Item extends Component {
   static propTypes = {
     href: PropTypes.string,
     isSelected: PropTypes.bool,
-    borderTop: PropTypes.bool,
-    borderBottom: PropTypes.bool,
     modifier: PropTypes.oneOf(['light', 'default']),
+    external: PropTypes.bool,
   }
 
   static defaultProps = {
     href: null,
     isSelected: false,
-    borderTop: false,
-    borderBottom: false,
     modifier: 'default',
+    external: false,
   }
 
   render() {
     const { children, href, ...other } = this.props
 
-    return (
-      <Context.Consumer>
-        {({ borderSide }) => (
-          <li role="menuitem">
-            <StyledItem
-              as={href ? 'a' : 'div'}
-              href={href}
-              borderSide={borderSide}
-              {...other}
-            >
-              {children}
-            </StyledItem>
-          </li>
-        )}
-      </Context.Consumer>
-    )
+    if (this.props.external === true) {
+      return (
+        <Context.Consumer>
+          {({ borderSide }) => (
+            <li role="menuitem">
+              <StyledItem href={href} borderSide={borderSide} {...other}>
+                <span>{children}</span>
+                <i className="linkArrow">
+                  <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z" />
+                    <path d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z" />
+                  </svg>
+                </i>
+              </StyledItem>
+            </li>
+          )}
+        </Context.Consumer>
+      )
+    } else {
+      return (
+        <Context.Consumer>
+          {({ borderSide }) => (
+            <li role="menuitem">
+              <StyledItem href={href} borderSide={borderSide} {...other}>
+                {children}
+              </StyledItem>
+            </li>
+          )}
+        </Context.Consumer>
+      )
+    }
   }
 }
