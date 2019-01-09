@@ -16,21 +16,27 @@ const Paragraph = Radium(ParagraphBase)
 
 class TimelineSection extends Component {
   render() {
-    const { viewportIsXSOrLess } = this.props
+    const { viewportIsXSOrLess, viewportIsMOrLess } = this.props
 
     return (
       <Container>
         <Marger top={viewportIsXSOrLess ? 8 : 10}>
           <Grid>
-            {this.renderTitleAndButton()}
+            {this.renderTitle()}
             {this.renderTimeline()}
+
+            {viewportIsMOrLess && (
+              <GridCol className="k-u-align-center">
+                {this.renderButton()}
+              </GridCol>
+            )}
           </Grid>
         </Marger>
       </Container>
     )
   }
 
-  renderTitleAndButton() {
+  renderTitle() {
     const { viewportIsMOrLess } = this.props
 
     return (
@@ -40,15 +46,19 @@ class TimelineSection extends Component {
             Quelles étapes pour lancer ma collecte de crowdfunding ?
           </Title>
 
-          {!viewportIsMOrLess && (
-            <Marger top="4">
-              <Button modifier="helium" size="big">
-                Je lance mon projet
-              </Button>
-            </Marger>
-          )}
+          {!viewportIsMOrLess && this.renderButton()}
         </Marger>
       </GridCol>
+    )
+  }
+
+  renderButton() {
+    return (
+      <Marger top="4">
+        <Button modifier="helium" size="big">
+          Je lance mon projet
+        </Button>
+      </Marger>
     )
   }
 
