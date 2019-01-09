@@ -4,7 +4,7 @@ import HeaderWithBackground from './header-with-background'
 import KeySection from './key-section'
 import SolutionsTriptych from './triptych/solutions-triptych'
 import TimelineSection from './timeline-section'
-import TipsSection from './tips-section'
+import TipsSection from './tips/tips-section'
 import CarouselSection from './carousel-section'
 import PartnersSection from './partners-section'
 
