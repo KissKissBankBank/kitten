@@ -158,7 +158,6 @@ const styles = {
       textAlign: 'center',
     },
   },
-
   horizontalStroke: {
     width: 50,
     color: COLORS.font1,
@@ -167,7 +166,6 @@ const styles = {
       width: 40,
     },
   },
-
   image: {
     [`@media (min-width: ${ScreenConfig.S.min}px) and
       (max-width: ${ScreenConfig.M.max}px)`]: {
@@ -175,14 +173,12 @@ const styles = {
       width: `calc(100% + ${CONTAINER_PADDING}px)`,
     },
   },
-
   bulletListMarger: {
     [`@media (max-width: ${ScreenConfig.L.max}px) and
       (max-width: ${ScreenConfig.XS.max}px)`]: {
       marginTop: 40,
     },
   },
-
   bulletList: {
     lineHeight: '2rem',
     color: COLORS.font1,

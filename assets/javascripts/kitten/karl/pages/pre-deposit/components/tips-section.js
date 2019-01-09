@@ -3,14 +3,14 @@ import Radium from 'radium'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Container as ContainerBase } from '../../../../components/grid/container'
 import { Marger } from '../../../../components/layout/marger'
-import { Title as TitleBase } from '../../../../components/typography/title'
+import { Title } from '../../../../components/typography/title'
 import { Paragraph as ParagraphBase } from '../../../../components/typography/paragraph'
 import { HorizontalStroke as HorizontalStrokeBase } from '../../../../components/layout/horizontal-stroke'
 import { withMediaQueries } from '../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
+import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 
-const Title = Radium(TitleBase)
 const Paragraph = Radium(ParagraphBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)
 const Container = Radium(ContainerBase)
@@ -20,36 +20,23 @@ class TipsSection extends Component {
     const { viewportIsXSOrLess, viewportIsMOrLess } = this.props
 
     return (
-      <Container style={styles.background}>
+      <Container>
         <Marger top={viewportIsXSOrLess ? 5 : 10}>
-          {!viewportIsMOrLess && (
-            <Grid>
-              {this.renderImage()}
-              {this.renderText()}
-            </Grid>
-          )}
-
-          {viewportIsMOrLess && (
-            <Grid>
-              <Marger
-                top={viewportIsXSOrLess ? 5 : 10}
-                bottom={viewportIsXSOrLess ? 5 : 10}
-              >
-                {this.renderText()}
-              </Marger>
-            </Grid>
-          )}
+          <Grid>
+            {this.renderImage()}
+            {this.renderText()}
+          </Grid>
         </Marger>
       </Container>
     )
   }
 
   renderImage() {
-    const imgKeyStyle = [imgBackground('FFF')]
+    const imgKeyStyle = [imgBackground('FFF'), styles.image]
 
     return (
-      <GridCol col-l="5" offset-l="1" col-s="10" offset-s="1">
-        <img style={imgKeyStyle} />
+      <GridCol offset-l="1" col-s="5" offset-s="0" col-xs="10" offset-xs="1">
+        <div style={imgKeyStyle} />
       </GridCol>
     )
   }
@@ -58,10 +45,10 @@ class TipsSection extends Component {
     const { viewportIsMOrLess } = this.props
 
     return (
-      <GridCol col-l="4" offset-l="1" col-s="10" offset-s="1">
-        <Marger top={!viewportIsMOrLess ? 6 : null}>
+      <GridCol col-l="4" col-s="6" offset-s="1" col-xs="10" offset-xs="1">
+        <div style={styles.tipsMarger}>
           <Marger bottom="1.5">
-            <Title modifier="quinary" margin={false} style={styles.text}>
+            <Title modifier="quinary" margin={false}>
               Astuce n° 1 <br />
               Choisissez un objectif minimum
             </Title>
@@ -78,7 +65,7 @@ class TipsSection extends Component {
               l’objectif minimum pour amorcer votre projet.
             </Paragraph>
           </Marger>
-        </Marger>
+        </div>
       </GridCol>
     )
   }
@@ -97,15 +84,20 @@ const imgBackground = image => ({
 })
 
 const styles = {
-  background: {
-    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
-      backgroundColor: COLORS.font1,
+  image: {
+    [`@media (min-width: ${ScreenConfig.S.min}px) and
+      (max-width: ${ScreenConfig.M.max}px)`]: {
+      marginLeft: -`${CONTAINER_PADDING}`,
+      width: `calc(100% + ${CONTAINER_PADDING}px)`,
     },
   },
-  text: {
+  tipsMarger: {
+    marginTop: 100,
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
-      color: COLORS.background1,
-      textAlign: 'center',
+      marginTop: 0,
+    },
+    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
+      marginTop: 30,
     },
   },
   horizontalStroke: {
