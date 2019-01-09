@@ -9,8 +9,8 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  border: 1px solid ${COLORS.line1};
-  border-bottom: 0;
+  border-left: 1px solid ${COLORS.line1};
+  border-right: 1px solid ${COLORS.line1};
 `
 
 export class HeaderMenu extends Component {
