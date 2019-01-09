@@ -34,12 +34,15 @@ describe('<Label />', () => {
   })
 
   describe('with `focusId` prop', () => {
+    const div = document.createElement('div')
+    document.body.appendChild(div)
+
     const wrapper = mount(
       <div>
         <Label tag="span" focusId="focus" children="Label" />
         <input type="text" id="focus" onFocus={jest.fn()} />
       </div>,
-      { attachTo: document.body },
+      { attachTo: div },
     )
 
     it('simulates click event on label', () => {
