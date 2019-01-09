@@ -17,9 +17,7 @@ describe('<HeaderMenu />', () => {
             <HeaderMenu.Item href="#" modifier="light">
               Item 2
             </HeaderMenu.Item>
-            <HeaderMenu.Item href="#" borderTop>
-              Item 3
-            </HeaderMenu.Item>
+            <HeaderMenu.Item href="#">Item 3</HeaderMenu.Item>
           </HeaderMenu>,
         )
         .toJSON()
@@ -57,7 +55,7 @@ describe('<HeaderMenu />', () => {
           <HeaderMenu>
             <HeaderMenu.Item href="#">Item 1</HeaderMenu.Item>
             <HeaderMenu.Item href="#">Item 2</HeaderMenu.Item>
-            <HeaderMenu.Item>
+            <HeaderMenu.Item href="#" external>
               <CustomComponent />
             </HeaderMenu.Item>
           </HeaderMenu>,

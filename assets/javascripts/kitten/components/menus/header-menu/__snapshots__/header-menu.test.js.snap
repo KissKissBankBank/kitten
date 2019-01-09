@@ -3,41 +3,51 @@
 exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 .c1 {
   display: block;
-  padding: 0.9375rem 1.25rem;
   outline: none;
-  border-left: 1px solid #eee;
-  background-color: #fbfbfb;
+  background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1;
+  font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  -webkit-transition: color .2s,background-color .2s,border-color .2s;
-  transition: color .2s,background-color .2s,border-color .2s;
-  border-right: 1px solid #eee;
-  border-left: 0;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 1.125rem 1.875rem 1.0625rem;
+  line-height: 1;
 }
 
-.c1:hover,
-.c1:focus {
-  background-color: #eee;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c1::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 1px;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
 }
 
-.c1:focus {
-  border-left-color: #19b4fa;
+.c1:hover::before,
+.c1:focus::before {
+  background-color: #19b4fa;
+  width: 4px;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c1::before {
+  left: unset;
+  right: -1px;
 }
 
 .c0 {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border: 1px solid #eee;
+  border-bottom: 0;
 }
 
 <nav
@@ -84,39 +94,105 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c1 {
   display: block;
-  padding: 0.9375rem 1.25rem;
   outline: none;
-  border-left: 1px solid #eee;
-  background-color: #fbfbfb;
+  background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1;
+  font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  -webkit-transition: color .2s,background-color .2s,border-color .2s;
-  transition: color .2s,background-color .2s,border-color .2s;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 1.125rem 1.875rem 1.0625rem;
+  line-height: 1;
 }
 
-.c1:hover,
-.c1:focus {
-  background-color: #eee;
-  color: #19b4fa;
+.c1::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 1px;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
+}
+
+.c1:hover::before,
+.c1:focus::before {
+  background-color: #19b4fa;
+  width: 4px;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c2 {
+  display: block;
+  outline: none;
+  background-color: #fff;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: #222;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1:focus {
-  border-left-color: #19b4fa;
+.c2 > * {
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.c2 > span > svg,
+.c2 > span > img {
+  height: 100%;
+  width: auto;
+}
+
+.c2 > i {
+  width: 0.625rem;
+  line-height: 0.625rem;
+  height: 0.625rem;
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
+}
+
+.c2:focus > i,
+.c2:hover > i {
+  left: 5px;
 }
 
 .c0 {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border: 1px solid #eee;
+  border-bottom: 0;
 }
 
 <nav
@@ -149,16 +225,33 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
     <li
       role="menuitem"
     >
-      <div
-        className="c1"
-        href={null}
+      <a
+        className="c2"
+        href="#"
       >
-        <a
-          href="#custom-component"
+        <span>
+          <a
+            href="#custom-component"
+          >
+            Custom component
+          </a>
+        </span>
+        <i
+          className="linkArrow"
         >
-          Custom component
-        </a>
-      </div>
+          <svg
+            viewBox="0 0 10 10"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
+            />
+            <path
+              d="M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
+            />
+          </svg>
+        </i>
+      </a>
     </li>
   </ul>
 </nav>
@@ -167,70 +260,88 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c1 {
   display: block;
-  padding: 0.9375rem 1.25rem;
   outline: none;
-  border-left: 1px solid #eee;
-  background-color: #fbfbfb;
+  background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1;
+  font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  -webkit-transition: color .2s,background-color .2s,border-color .2s;
-  transition: color .2s,background-color .2s,border-color .2s;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 1.125rem 1.875rem 1.0625rem;
+  line-height: 1;
 }
 
-.c1:hover,
-.c1:focus {
-  background-color: #eee;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c1::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 1px;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
 }
 
-.c1:focus {
-  border-left-color: #19b4fa;
+.c1:hover::before,
+.c1:focus::before {
+  background-color: #19b4fa;
+  width: 4px;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
 }
 
 .c2 {
   display: block;
-  padding: 0.9375rem 1.25rem;
   outline: none;
-  border-left: 1px solid #eee;
-  background-color: #fbfbfb;
+  background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1;
+  font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  -webkit-transition: color .2s,background-color .2s,border-color .2s;
-  transition: color .2s,background-color .2s,border-color .2s;
-  border-left-color: #19b4fa;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 1.125rem 1.875rem 1.0625rem;
+  line-height: 1;
   color: #19b4fa;
 }
 
-.c2:hover,
-.c2:focus {
-  background-color: #eee;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c2::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 1px;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
 }
 
-.c2:focus {
-  border-left-color: #19b4fa;
+.c2:hover::before,
+.c2:focus::before {
+  background-color: #19b4fa;
+  width: 4px;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+.c2::before {
+  background-color: #19b4fa;
+  width: 4px;
 }
 
 .c0 {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border: 1px solid #eee;
+  border-bottom: 0;
 }
 
 <nav
@@ -277,99 +388,83 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c1 {
   display: block;
-  padding: 0.9375rem 1.25rem;
   outline: none;
-  border-left: 1px solid #eee;
-  background-color: #fbfbfb;
+  background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1;
+  font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  -webkit-transition: color .2s,background-color .2s,border-color .2s;
-  transition: color .2s,background-color .2s,border-color .2s;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 1.125rem 1.875rem 1.0625rem;
+  line-height: 1;
 }
 
-.c1:hover,
-.c1:focus {
-  background-color: #eee;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c1::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 1px;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
 }
 
-.c1:focus {
-  border-left-color: #19b4fa;
+.c1:hover::before,
+.c1:focus::before {
+  background-color: #19b4fa;
+  width: 4px;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
 }
 
 .c2 {
   display: block;
-  padding: 0.9375rem 1.25rem;
   outline: none;
-  border-left: 1px solid #eee;
-  background-color: #fbfbfb;
+  background-color: #fff;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1;
+  font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #222;
-  -webkit-transition: color .2s,background-color .2s,border-color .2s;
-  transition: color .2s,background-color .2s,border-color .2s;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding: 1.125rem 1.875rem 1.0625rem;
+  line-height: 1;
   color: #b8b8b8;
 }
 
-.c2:hover,
-.c2:focus {
-  background-color: #eee;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
+.c2::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  width: 1px;
+  background-color: transparent;
+  -webkit-transition: background-color 0.2s,width 0.2s;
+  transition: background-color 0.2s,width 0.2s;
 }
 
-.c2:focus {
-  border-left-color: #19b4fa;
-}
-
-.c3 {
-  display: block;
-  padding: 0.9375rem 1.25rem;
-  outline: none;
-  border-left: 1px solid #eee;
-  background-color: #fbfbfb;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #222;
-  -webkit-transition: color .2s,background-color .2s,border-color .2s;
-  transition: color .2s,background-color .2s,border-color .2s;
-  border-top: 1px solid #eee;
-}
-
-.c3:hover,
-.c3:focus {
-  background-color: #eee;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c3:focus {
-  border-left-color: #19b4fa;
+.c2:hover::before,
+.c2:focus::before {
+  background-color: #19b4fa;
+  width: 4px;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
 }
 
 .c0 {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border: 1px solid #eee;
+  border-bottom: 0;
 }
 
 <nav
@@ -403,7 +498,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
       role="menuitem"
     >
       <a
-        className="c3"
+        className="c1"
         href="#"
       >
         Item 3
