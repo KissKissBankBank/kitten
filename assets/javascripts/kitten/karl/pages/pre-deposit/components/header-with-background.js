@@ -41,16 +41,10 @@ class HeaderWithBackground extends Component {
     const { viewportIsXSOrLess } = this.props
 
     return (
-      <GridCol
-        col-l="8"
-        offset-l="2"
-        col-s="10"
-        offset-s="1"
-        style={styles.header.container}
-      >
+      <GridCol col-l="8" offset-l="2" style={styles.header.container}>
         <div style={styles.header.container.background}>
           <GridCol col="10" offset="1">
-            <Marger bottom="1">
+            <Marger bottom={viewportIsXSOrLess ? 1 : 2}>
               <Title
                 tag="h1"
                 margin={false}
@@ -62,7 +56,7 @@ class HeaderWithBackground extends Component {
               </Title>
             </Marger>
 
-            <Marger top="1" bottom="4">
+            <Marger top={viewportIsXSOrLess ? 1 : 2} bottom="4">
               <Paragraph
                 margin={false}
                 className="k-u-align-center"
@@ -118,9 +112,13 @@ const styles = {
       },
 
       background: {
-        backgroundColor: '#fff',
         paddingTop: 50,
         paddingBottom: 50,
+        backgroundColor: COLORS.background1,
+        [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
+          paddingTop: 40,
+          paddingBottom: 40,
+        },
       },
     },
   },
