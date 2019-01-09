@@ -39,7 +39,7 @@ class KeySection extends Component {
 
     return (
       <Grid>
-        <GridCol col-l="6" offset="1" col="10">
+        <GridCol col-l="9" offset="1" col="10">
           <Marger bottom="2">
             <Title modifier="secondary" margin={false} style={styles.text}>
               La clé ? Un accompagnement sur mesure pour votre financement
@@ -72,21 +72,15 @@ class KeySection extends Component {
 
     return (
       <Grid>
-        {this.renderImage()}
         <GridCol col-l="4" col-s="6" offset-s="1" col-xs="10" offset-xs="1">
           <div style={styles.bulletListMarger}>
             <BulletList
-              default
               style={styles.bulletList}
               items={[
                 {
                   key: '1',
                   item: (
-                    <Text
-                      size={viewportIsXSOrLess ? 'tiny' : 'default'}
-                      style={{ lineHeight: 1.5 }}
-                      color="font1"
-                    >
+                    <Text size={viewportIsXSOrLess ? 'tiny' : 'default'}>
                       Un coach pour vous conseiller sur la mise en forme de
                       votre page projet, votre stratégie de communication durant
                       la collecte et l'envoi de vos contreparties.
@@ -96,11 +90,7 @@ class KeySection extends Component {
                 {
                   key: '2',
                   item: (
-                    <Text
-                      size={viewportIsXSOrLess ? 'tiny' : 'default'}
-                      style={{ lineHeight: 1.5 }}
-                      color="font1"
-                    >
+                    <Text size={viewportIsXSOrLess ? 'tiny' : 'default'}>
                       Une équipe d’experts pour chaque secteur d’activité,
                       proche de vos besoins et vos problématiques.
                     </Text>
@@ -109,11 +99,7 @@ class KeySection extends Component {
                 {
                   key: '3',
                   item: (
-                    <Text
-                      size={viewportIsXSOrLess ? 'tiny' : 'default'}
-                      style={{ lineHeight: 1.5 }}
-                      color="font1"
-                    >
+                    <Text size={viewportIsXSOrLess ? 'tiny' : 'default'}>
                       <span style={{ color: '#19B4FA' }}>Un blog</span> et{' '}
                       <span style={{ color: '#19B4FA' }}>des vidéos tutos</span>{' '}
                       pour devenir un pro du financement participatif !
@@ -126,6 +112,8 @@ class KeySection extends Component {
 
           {!viewportIsMOrLess && <Marger top="4">{this.renderButton()}</Marger>}
         </GridCol>
+
+        {this.renderImage()}
       </Grid>
     )
   }
@@ -169,7 +157,7 @@ const styles = {
   image: {
     [`@media (min-width: ${ScreenConfig.S.min}px) and
       (max-width: ${ScreenConfig.M.max}px)`]: {
-      marginLeft: -`${CONTAINER_PADDING}`,
+      marginRight: -`${CONTAINER_PADDING}`,
       width: `calc(100% + ${CONTAINER_PADDING}px)`,
     },
   },
@@ -180,7 +168,7 @@ const styles = {
     },
   },
   bulletList: {
-    lineHeight: '2rem',
+    lineHeight: 1.6,
     color: COLORS.font1,
   },
 }
