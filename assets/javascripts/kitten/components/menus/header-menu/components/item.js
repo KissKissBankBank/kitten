@@ -65,7 +65,7 @@ const StyledItem = styled.a`
       color: ${COLORS.font2};
     `}
 
-  ${({ borderSide, isSelected }) =>
+  ${({ borderSide }) =>
     borderSide === 'right' &&
     css`
       ::before {
