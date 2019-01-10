@@ -2,7 +2,7 @@
 
 exports[`<BurgerIcon /> default matches the snapshot 1`] = `
 <svg
-  className="burger-icon__StyledItem-sc-2o2fz7-0 gPJkhi"
+  className="burger-icon__StyledItem-sc-2o2fz7-0 bZHGFr"
   height="10"
   viewBox="0 0 12 10"
   width="12"
@@ -13,21 +13,18 @@ exports[`<BurgerIcon /> default matches the snapshot 1`] = `
   </title>
   <rect
     className="item-top"
-    fill="#222"
     height="2"
     width="12"
     y="0"
   />
   <rect
     className="item-patty"
-    fill="#222"
     height="2"
     width="12"
     y="4"
   />
   <rect
     className="item-bottom"
-    fill="#222"
     height="2"
     width="12"
     y="8"
@@ -37,7 +34,7 @@ exports[`<BurgerIcon /> default matches the snapshot 1`] = `
 
 exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the snapshot 1`] = `
 <svg
-  className="burger-icon__StyledItem-sc-2o2fz7-0 hquxfx"
+  className="burger-icon__StyledItem-sc-2o2fz7-0 dNHWCC"
   height="10"
   viewBox="0 0 12 10"
   width="12"
@@ -48,21 +45,18 @@ exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the s
   </title>
   <rect
     className="item-top"
-    fill="#222"
     height="2"
     width="12"
     y="0"
   />
   <rect
     className="item-patty"
-    fill="#222"
     height="2"
     width="12"
     y="4"
   />
   <rect
     className="item-bottom"
-    fill="#222"
     height="2"
     width="12"
     y="8"
