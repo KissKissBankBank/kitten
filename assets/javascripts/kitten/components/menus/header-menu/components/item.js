@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
@@ -130,10 +130,8 @@ export class Item extends Component {
                 external={external}
                 {...other}
               >
-                <Fragment>
-                  <span>{children}</span>
-                  <ArrowIcon direction="right" />
-                </Fragment>
+                <span>{children}</span>
+                <ArrowIcon direction="right" />
               </ExternalStyledItem>
             ) : (
               <StyledItem
@@ -142,7 +140,7 @@ export class Item extends Component {
                 external={external}
                 {...other}
               >
-                <Fragment>{children}</Fragment>
+                {children}
               </StyledItem>
             )}
           </li>
