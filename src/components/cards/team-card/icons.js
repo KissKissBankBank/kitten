@@ -79,8 +79,7 @@ function (_Component) {
     value: function render() {
       var _this$props2 = this.props,
           email = _this$props2.email,
-          phoneNumber = _this$props2.phoneNumber,
-          links = _this$props2.links;
+          phoneNumber = _this$props2.phoneNumber;
       return _react.default.createElement(Marger, {
         top: "1.5",
         style: styles.icons
@@ -106,7 +105,10 @@ exports.TeamCardIcons = TeamCardIcons;
 TeamCardIcons.propTypes = {
   email: _propTypes.default.string,
   phoneNumber: _propTypes.default.string,
-  links: _propTypes.default.oneOf(['linkedin', 'twitter']),
+  links: _propTypes.default.arrayOf(_propTypes.default.shape({
+    name: _propTypes.default.oneOf(['linkedin', 'twitter']),
+    href: _propTypes.default.string
+  })),
   // Deprecated.
   socialLink: (0, _deprecated.default)(_propTypes.default.string, 'Prefer use links prop')
 };
