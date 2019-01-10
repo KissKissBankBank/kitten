@@ -18,11 +18,10 @@ const StyledItem = styled.svg`
   ${({ isActive }) =>
     isActive &&
     css`
-      & .item-top,
-      & .item-bottom {
+      .item-buns {
         transform: translateX(2px);
       }
-      & .item-patty {
+      .item-patty {
         transform: translateX(-2px);
       }
     `}
@@ -47,9 +46,9 @@ export const BurgerIcon = ({
       {...props}
     >
       {iconTitle && <title>{iconTitle}</title>}
-      <rect y="0" width="12" height="2" className="item-top" />
+      <rect y="0" width="12" height="2" className="item-buns" />
       <rect y="4" width="12" height="2" className="item-patty" />
-      <rect y="8" width="12" height="2" className="item-bottom" />
+      <rect y="8" width="12" height="2" className="item-buns" />
     </StyledItem>
   )
 }
