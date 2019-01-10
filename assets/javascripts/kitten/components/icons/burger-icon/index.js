@@ -6,7 +6,13 @@ const StyledItem = styled.svg`
   overflow: visible;
 
   rect {
-    transition: all 0.2s ease-out;
+    fill: ${props => props.mainColor || COLORS.font1};
+    transition: transform 0.2s ease-out, fill 0.15s;
+  }
+
+  :hover rect {
+    fill: ${props => props.hoverColor || COLORS.primary1};
+    transition: transform 0.2s ease-out, fill 0.15s;
   }
 
   ${({ isActive }) =>
@@ -22,35 +28,26 @@ const StyledItem = styled.svg`
     `}
 `
 
-export const BurgerIcon = ({ mainColor, isActive, ...props }) => {
+export const BurgerIcon = ({ mainColor, hoverColor, isActive, ...props }) => {
   return (
     <StyledItem
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 12 10"
       isActive={isActive}
+      mainColor={mainColor}
+      hoverColor={hoverColor}
       {...props}
     >
       <title>Menu</title>
-      <rect y="0" fill={mainColor} width="12" height="2" className="item-top" />
-      <rect
-        y="4"
-        fill={mainColor}
-        width="12"
-        height="2"
-        className="item-patty"
-      />
-      <rect
-        y="8"
-        fill={mainColor}
-        width="12"
-        height="2"
-        className="item-bottom"
-      />
+      <rect y="0" width="12" height="2" className="item-top" />
+      <rect y="4" width="12" height="2" className="item-patty" />
+      <rect y="8" width="12" height="2" className="item-bottom" />
     </StyledItem>
   )
 }
 
 BurgerIcon.defaultProps = {
   mainColor: COLORS.font1,
+  hoverColor: COLORS.primary1,
   isActive: false,
 }
