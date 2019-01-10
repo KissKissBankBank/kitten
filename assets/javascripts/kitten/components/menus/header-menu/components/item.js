@@ -9,20 +9,20 @@ import { ArrowIcon } from '../../../icons/arrow-icon'
 
 const StyledItem = styled.a`
   display: block;
-
-  outline: none;
-  background-color: ${COLORS.background1};
-
-  ${TYPOGRAPHY.fontStyles.regular}
-  font-size: ${pxToRem(14)};
-  text-decoration: none;
-  color: ${COLORS.font1};
   position: relative;
 
-  border-bottom: 1px solid ${COLORS.line1};
-
   padding: ${pxToRem(18)} ${pxToRem(30)} ${pxToRem(17)};
+
+  background-color: ${COLORS.background1};
+  border-bottom: 1px solid ${COLORS.line1};
+  outline: none;
+
+  ${TYPOGRAPHY.fontStyles.regular}
+  color: ${COLORS.font1};
   line-height: 1;
+  font-size: ${pxToRem(14)};
+  text-decoration: none;
+
 
   ::before {
     content: '';
@@ -30,17 +30,22 @@ const StyledItem = styled.a`
     top: -1px;
     left: -1px;
     bottom: -1px;
-    width: 1px;
-    background-color: transparent;
 
+    width: 1px;
+
+    background-color: transparent;
     transition: background-color 0.2s, width 0.2s;
   }
+
   :hover::before,
   :focus::before {
+    width: ${pxToRem(4)};
+
     background-color: ${COLORS.primary1};
-    width: 4px;
+
+    color: ${COLORS.font1};
+
     transition: width 0.2s;
-    color: ${COLORS.font1}
   }
 
   ${({ isSelected }) =>
@@ -48,8 +53,9 @@ const StyledItem = styled.a`
     css`
       color: ${COLORS.primary1};
       ::before {
-        background-color: ${COLORS.primary1};
         width: 4px;
+
+        background-color: ${COLORS.primary1};
       }
     `}
 
@@ -70,17 +76,18 @@ const StyledItem = styled.a`
 `
 
 const ExternalStyledItem = styled(StyledItem)`
-  padding: ${pxToRem(23)} ${pxToRem(21)} ${pxToRem(22)} ${pxToRem(30)};
-  background-color: ${COLORS.background3};
-
   display: flex;
+
+  height: ${pxToRem(24)};
+  padding: ${pxToRem(23)} ${pxToRem(21)} ${pxToRem(22)} ${pxToRem(30)};
+
   align-items: center;
   align-self: flex-start;
   justify-content: space-between;
 
-  transition: padding-right 0.2s;
+  background-color: ${COLORS.background3};
 
-  height: ${pxToRem(24)};
+  transition: padding-right 0.2s;
 
   svg,
   img {
@@ -91,6 +98,7 @@ const ExternalStyledItem = styled(StyledItem)`
   :focus,
   :hover {
     padding-right: ${pxToRem(16)};
+
     color: ${COLORS.font1};
   }
 
