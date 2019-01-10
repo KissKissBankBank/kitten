@@ -12,7 +12,7 @@ exports[`<BurgerIcon /> default matches the snapshot 1`] = `
     Menu
   </title>
   <rect
-    className="item-top"
+    className="item-buns"
     height="2"
     width="12"
     y="0"
@@ -24,7 +24,7 @@ exports[`<BurgerIcon /> default matches the snapshot 1`] = `
     y="4"
   />
   <rect
-    className="item-bottom"
+    className="item-buns"
     height="2"
     width="12"
     y="8"
@@ -41,7 +41,7 @@ exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches th
   xmlns="http://www.w3.org/2000/svg"
 >
   <rect
-    className="item-top"
+    className="item-buns"
     height="2"
     width="12"
     y="0"
@@ -53,7 +53,7 @@ exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches th
     y="4"
   />
   <rect
-    className="item-bottom"
+    className="item-buns"
     height="2"
     width="12"
     y="8"
@@ -63,7 +63,7 @@ exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches th
 
 exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the snapshot 1`] = `
 <svg
-  className="burger-icon__StyledItem-sc-2o2fz7-0 hYtqwW"
+  className="burger-icon__StyledItem-sc-2o2fz7-0 kyfXrg"
   height="10"
   viewBox="0 0 12 10"
   width="12"
@@ -73,7 +73,7 @@ exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the s
     Menu
   </title>
   <rect
-    className="item-top"
+    className="item-buns"
     height="2"
     width="12"
     y="0"
@@ -85,7 +85,7 @@ exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the s
     y="4"
   />
   <rect
-    className="item-bottom"
+    className="item-buns"
     height="2"
     width="12"
     y="8"
