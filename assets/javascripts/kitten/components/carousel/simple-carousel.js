@@ -8,6 +8,16 @@ import { createRangeFromZeroTo } from '../../helpers/utils/range'
 const Marger = Radium(MargerBase)
 
 class SimpleCarouselBase extends Component {
+  static propTypes = {
+    activePaginationColor: PropTypes.string,
+    paginationColor: PropTypes.string,
+  }
+
+  static defaultProps = {
+    activePaginationColor: COLORS.primary1,
+    paginationColor: COLORS.background1,
+  }
+
   constructor(props) {
     super(props)
 
@@ -24,7 +34,7 @@ class SimpleCarouselBase extends Component {
   }
 
   render() {
-    const { children } = this.props
+    const { children, activePaginationColor, paginationColor } = this.props
     const { totalPagesCount, currentPageNumber } = this.state
     const rangePage = createRangeFromZeroTo(totalPagesCount)
 
@@ -50,7 +60,10 @@ class SimpleCarouselBase extends Component {
             {rangePage.map(numPage => {
               const pageStyle = [
                 styles.page,
-                numPage === currentPageNumber && styles.page.active,
+                paginationColor && { background: paginationColor },
+                numPage === currentPageNumber && {
+                  background: activePaginationColor,
+                },
               ]
 
               return (
@@ -96,14 +109,9 @@ const styles = {
   page: {
     width: 6,
     height: 6,
-    background: COLORS.background1,
     marginRight: 5,
     cursor: 'pointer',
-
-    active: {
-      transition: `background .4s ease-in-out`,
-      background: COLORS.primary1,
-    },
+    transition: `background .4s ease-in-out`,
   },
 }
 
