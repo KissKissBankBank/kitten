@@ -33,6 +33,8 @@ export const BurgerIcon = ({ mainColor, hoverColor, isActive, ...props }) => {
     <StyledItem
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 12 10"
+      width="12"
+      height="10"
       isActive={isActive}
       mainColor={mainColor}
       hoverColor={hoverColor}

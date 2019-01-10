@@ -19,8 +19,6 @@ storiesOf('Icons/BurgerIcon', module)
     return (
       <StoryGrid>
         <BurgerIcon
-          width="12"
-          height="10"
           isActive={boolean('isActive ?', false)}
           mainColor={select(
             'mainColor',
