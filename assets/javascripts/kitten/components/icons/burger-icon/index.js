@@ -53,16 +53,16 @@ export const BurgerIcon = ({
   )
 }
 
-BurgerIcon.defaultProps = {
-  mainColor: COLORS.font1,
-  hoverColor: COLORS.primary1,
-  isActive: false,
-  iconTitle: 'Menu',
-}
-
 BurgerIcon.propTypes = {
   mainColor: PropTypes.string,
   hoverColor: PropTypes.string,
   isActive: PropTypes.bool,
   iconTitle: PropTypes.string,
+}
+
+BurgerIcon.defaultProps = {
+  mainColor: COLORS.font1,
+  hoverColor: COLORS.primary1,
+  isActive: false,
+  iconTitle: 'Menu',
 }
