@@ -3,9 +3,6 @@ import Radium from 'radium'
 import { Grid, GridCol } from '../../../../../components/grid/grid'
 import { Container as ContainerBase } from '../../../../../components/grid/container'
 import { Marger } from '../../../../../components/layout/marger'
-import { Title } from '../../../../../components/typography/title'
-import { Paragraph } from '../../../../../components/typography/paragraph'
-import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
 import { withMediaQueries } from '../../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../../constants/screen-config'
 import { parseHtml } from '../../../../../helpers/utils/parser'
@@ -75,7 +72,7 @@ class TipsSection extends Component {
 
     return (
       <GridCol col-l="4" col-s="6" offset-s="1" col-xs="10" offset-xs="1">
-        <SimpleCarousel style={{ ...styles.pagination }}>
+        <SimpleCarousel paginationColor="#d8d8d8" activePaginationColor="#222">
           {tips.map(item => (
             <TipSimpleCarousel
               key={item.key}
@@ -108,9 +105,6 @@ const styles = {
       marginLeft: -`${CONTAINER_PADDING}`,
       width: `calc(100% + ${CONTAINER_PADDING}px)`,
     },
-  },
-  pagination: {
-    background: COLORS.font1,
   },
 }
 
