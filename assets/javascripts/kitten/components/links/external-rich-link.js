@@ -7,24 +7,17 @@ export class ExternalRichLink extends React.Component {
   }
 
   render() {
-    const { className, margin, ...rest } = this.props
+    const { className, ...rest } = this.props
     const linkClassName = classNames('k-ExternalRichLink', className)
 
     return (
       <a className={linkClassName} {...rest}>
-        <div
-          className={classNames('k-ExternalRichLink__element', {
-            'k-u-margin-left-none': !margin,
-          })}
-        >
-          {this.props.children}
-        </div>
+        <div className="k-ExternalRichLink__element">{this.props.children}</div>
 
         <div
           className={classNames(
             'k-ExternalRichLink__element',
             'k-ExternalRichLink__element--animate',
-            { 'k-u-margin-right-none': !margin },
           )}
         >
           <span
@@ -54,7 +47,6 @@ export class ExternalRichLink extends React.Component {
 ExternalRichLink.defaultProps = {
   href: '#',
   children: 'I am a rich link!',
-  margin: true,
 }
 
 // DEPRECATED: do not use default export.
