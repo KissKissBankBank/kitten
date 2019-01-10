@@ -28,7 +28,13 @@ const StyledItem = styled.svg`
     `}
 `
 
-export const BurgerIcon = ({ mainColor, hoverColor, isActive, ...props }) => {
+export const BurgerIcon = ({
+  mainColor,
+  hoverColor,
+  isActive,
+  iconTitle,
+  ...props
+}) => {
   return (
     <StyledItem
       xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +46,7 @@ export const BurgerIcon = ({ mainColor, hoverColor, isActive, ...props }) => {
       hoverColor={hoverColor}
       {...props}
     >
-      <title>Menu</title>
+      {iconTitle && <title>{iconTitle}</title>}
       <rect y="0" width="12" height="2" className="item-top" />
       <rect y="4" width="12" height="2" className="item-patty" />
       <rect y="8" width="12" height="2" className="item-bottom" />
@@ -52,10 +58,12 @@ BurgerIcon.defaultProps = {
   mainColor: COLORS.font1,
   hoverColor: COLORS.primary1,
   isActive: false,
+  iconTitle: 'Menu',
 }
 
 BurgerIcon.propTypes = {
   mainColor: PropTypes.string,
   hoverColor: PropTypes.string,
   isActive: PropTypes.bool,
+  iconTitle: PropTypes.string,
 }
