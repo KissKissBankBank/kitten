@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 
@@ -50,4 +51,10 @@ BurgerIcon.defaultProps = {
   mainColor: COLORS.font1,
   hoverColor: COLORS.primary1,
   isActive: false,
+}
+
+BurgerIcon.propTypes = {
+  mainColor: PropTypes.string,
+  hoverColor: PropTypes.string,
+  isActive: PropTypes.bool,
 }
