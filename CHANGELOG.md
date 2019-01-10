@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `HeaderMenu`.
+- Feature: Add `BurgerIcon`.
 
 ## [1.3.0] - 2018-12-27
 
