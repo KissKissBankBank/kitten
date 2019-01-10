@@ -16,7 +16,17 @@ describe('<BurgerIcon />', () => {
   describe('with the prop `isActive` set to `true`', () => {
     it('matches the snapshot', () => {
       const component = renderer
-        .create(<BurgerIcon width="12" height="10" isActive="isActive" />)
+        .create(<BurgerIcon width="12" height="10" isActive />)
+        .toJSON()
+
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with no `title` (`iconTitle` to `null`)', () => {
+    it('matches the snapshot', () => {
+      const component = renderer
+        .create(<BurgerIcon width="12" height="10" iconTitle={null} />)
         .toJSON()
 
       expect(component).toMatchSnapshot()

@@ -2,7 +2,7 @@
 
 exports[`<BurgerIcon /> default matches the snapshot 1`] = `
 <svg
-  className="burger-icon__StyledItem-sc-2o2fz7-0 bZHGFr"
+  className="burger-icon__StyledItem-sc-2o2fz7-0 KAWMe"
   height="10"
   viewBox="0 0 12 10"
   width="12"
@@ -32,9 +32,38 @@ exports[`<BurgerIcon /> default matches the snapshot 1`] = `
 </svg>
 `;
 
+exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches the snapshot 1`] = `
+<svg
+  className="burger-icon__StyledItem-sc-2o2fz7-0 KAWMe"
+  height="10"
+  viewBox="0 0 12 10"
+  width="12"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect
+    className="item-top"
+    height="2"
+    width="12"
+    y="0"
+  />
+  <rect
+    className="item-patty"
+    height="2"
+    width="12"
+    y="4"
+  />
+  <rect
+    className="item-bottom"
+    height="2"
+    width="12"
+    y="8"
+  />
+</svg>
+`;
+
 exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the snapshot 1`] = `
 <svg
-  className="burger-icon__StyledItem-sc-2o2fz7-0 dNHWCC"
+  className="burger-icon__StyledItem-sc-2o2fz7-0 hYtqwW"
   height="10"
   viewBox="0 0 12 10"
   width="12"
