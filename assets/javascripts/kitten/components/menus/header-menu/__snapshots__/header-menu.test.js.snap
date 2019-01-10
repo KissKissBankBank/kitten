@@ -3,18 +3,18 @@
 exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 .c1 {
   display: block;
-  outline: none;
+  position: relative;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
+  border-bottom: 1px solid #eee;
+  outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
+  color: #222;
+  line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222;
-  position: relative;
-  border-bottom: 1px solid #eee;
-  padding: 1.125rem 1.875rem 1.0625rem;
-  line-height: 1;
 }
 
 .c1::before {
@@ -31,11 +31,11 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 
 .c1:hover::before,
 .c1:focus::before {
+  width: 0.25rem;
   background-color: #19b4fa;
-  width: 4px;
+  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
-  color: #222;
 }
 
 .c1::before {
@@ -95,18 +95,18 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c1 {
   display: block;
-  outline: none;
+  position: relative;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
+  border-bottom: 1px solid #eee;
+  outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
+  color: #222;
+  line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222;
-  position: relative;
-  border-bottom: 1px solid #eee;
-  padding: 1.125rem 1.875rem 1.0625rem;
-  line-height: 1;
 }
 
 .c1::before {
@@ -123,33 +123,33 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 
 .c1:hover::before,
 .c1:focus::before {
+  width: 0.25rem;
   background-color: #19b4fa;
-  width: 4px;
+  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
-  color: #222;
 }
 
 .c2 {
   display: block;
-  outline: none;
+  position: relative;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
+  border-bottom: 1px solid #eee;
+  outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
+  color: #222;
+  line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222;
-  position: relative;
-  border-bottom: 1px solid #eee;
-  padding: 1.125rem 1.875rem 1.0625rem;
-  line-height: 1;
-  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
-  background-color: #f6f6f6;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 1.5rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -161,9 +161,9 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  background-color: #f6f6f6;
   -webkit-transition: padding-right 0.2s;
   transition: padding-right 0.2s;
-  height: 1.5rem;
 }
 
 .c2::before {
@@ -180,11 +180,11 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 
 .c2:hover::before,
 .c2:focus::before {
+  width: 0.25rem;
   background-color: #19b4fa;
-  width: 4px;
+  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
-  color: #222;
 }
 
 .c2 svg,
@@ -274,18 +274,18 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c1 {
   display: block;
-  outline: none;
+  position: relative;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
+  border-bottom: 1px solid #eee;
+  outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
+  color: #222;
+  line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222;
-  position: relative;
-  border-bottom: 1px solid #eee;
-  padding: 1.125rem 1.875rem 1.0625rem;
-  line-height: 1;
 }
 
 .c1::before {
@@ -302,27 +302,27 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 
 .c1:hover::before,
 .c1:focus::before {
+  width: 0.25rem;
   background-color: #19b4fa;
-  width: 4px;
+  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
-  color: #222;
 }
 
 .c2 {
   display: block;
-  outline: none;
+  position: relative;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
+  border-bottom: 1px solid #eee;
+  outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
+  color: #222;
+  line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222;
-  position: relative;
-  border-bottom: 1px solid #eee;
-  padding: 1.125rem 1.875rem 1.0625rem;
-  line-height: 1;
   color: #19b4fa;
 }
 
@@ -340,16 +340,16 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 
 .c2:hover::before,
 .c2:focus::before {
+  width: 0.25rem;
   background-color: #19b4fa;
-  width: 4px;
+  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
-  color: #222;
 }
 
 .c2::before {
-  background-color: #19b4fa;
   width: 4px;
+  background-color: #19b4fa;
 }
 
 .c0 {
@@ -404,18 +404,18 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c1 {
   display: block;
-  outline: none;
+  position: relative;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
+  border-bottom: 1px solid #eee;
+  outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
+  color: #222;
+  line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222;
-  position: relative;
-  border-bottom: 1px solid #eee;
-  padding: 1.125rem 1.875rem 1.0625rem;
-  line-height: 1;
 }
 
 .c1::before {
@@ -432,27 +432,27 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 
 .c1:hover::before,
 .c1:focus::before {
+  width: 0.25rem;
   background-color: #19b4fa;
-  width: 4px;
+  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
-  color: #222;
 }
 
 .c2 {
   display: block;
-  outline: none;
+  position: relative;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
+  border-bottom: 1px solid #eee;
+  outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
+  color: #222;
+  line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #222;
-  position: relative;
-  border-bottom: 1px solid #eee;
-  padding: 1.125rem 1.875rem 1.0625rem;
-  line-height: 1;
   color: #b8b8b8;
 }
 
@@ -470,11 +470,11 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 
 .c2:hover::before,
 .c2:focus::before {
+  width: 0.25rem;
   background-color: #19b4fa;
-  width: 4px;
+  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
-  color: #222;
 }
 
 .c0 {
