@@ -24,7 +24,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 var StyledItem = _styledComponents.default.svg.withConfig({
   displayName: "burger-icon__StyledItem",
   componentId: "sc-2o2fz7-0"
-})(["overflow:visible;rect{fill:", ";transition:transform 0.2s ease-out,fill 0.15s;}:hover rect{fill:", ";}", ""], function (props) {
+})(["overflow:visible;fill:", ";:hover{fill:", ";}rect{transition:transform 0.2s ease-out,fill 0.15s;}", ""], function (props) {
   return props.mainColor;
 }, function (props) {
   return props.hoverColor;
