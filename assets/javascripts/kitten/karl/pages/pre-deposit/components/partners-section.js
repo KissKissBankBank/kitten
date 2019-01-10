@@ -36,7 +36,11 @@ class PartnersSection extends Component {
 
     return (
       <Marger bottom={viewportIsXSOrLess ? 4 : 5}>
-        <Title modifier="quinary" margin={false} style={styles.title}>
+        <Title
+          margin={false}
+          style={styles.title}
+          modifier={viewportIsXSOrLess ? 'senary' : 'quinary'}
+        >
           Nous prenons soin de vos projet et de vos données personnelles aussi
         </Title>
       </Marger>

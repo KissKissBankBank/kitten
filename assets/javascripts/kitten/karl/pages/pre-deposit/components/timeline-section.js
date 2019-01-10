@@ -20,7 +20,7 @@ class TimelineSection extends Component {
 
     return (
       <Container>
-        <Marger top={viewportIsXSOrLess ? 8 : 10}>
+        <Marger top={viewportIsXSOrLess ? 5 : 7}>
           <Grid>
             {this.renderTitle()}
             {this.renderTimeline()}

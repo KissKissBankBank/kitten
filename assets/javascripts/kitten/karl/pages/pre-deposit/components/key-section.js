@@ -7,7 +7,7 @@ import { Title as TitleBase } from '../../../../components/typography/title'
 import { Text } from '../../../../components/typography/text'
 import { HorizontalStroke as HorizontalStrokeBase } from '../../../../components/layout/horizontal-stroke'
 import { BulletList as BulletlistBase } from '../../../../components/lists/bullet-list'
-import { Button } from '../../../../components/buttons/button'
+import { Button as ButtonBase } from '../../../../components/buttons/button'
 import { withMediaQueries } from '../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
@@ -17,6 +17,7 @@ import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 const BulletList = Radium(BulletlistBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)
 const Title = Radium(TitleBase)
+const Button = Radium(ButtonBase)
 
 class KeySection extends Component {
   render() {
@@ -39,7 +40,7 @@ class KeySection extends Component {
 
     return (
       <Grid>
-        <GridCol col-l="9" offset="1" col="10">
+        <GridCol col-l="9" offset-l="1" col="12">
           <Marger bottom="2">
             <Title modifier="secondary" margin={false} style={styles.text}>
               La clé ? Un accompagnement sur mesure pour votre financement
@@ -61,7 +62,7 @@ class KeySection extends Component {
     const imgKeyStyle = [imgBackground('FFF'), styles.image]
 
     return (
-      <GridCol offset-l="1" col-s="5" offset-s="0" col-xs="10" offset-xs="1">
+      <GridCol offset-l="1" col-s="5" offset-s="1" col-xs="12">
         <div style={imgKeyStyle} />
       </GridCol>
     )
@@ -72,13 +73,15 @@ class KeySection extends Component {
 
     return (
       <Grid>
-        <GridCol col-l="4" col-s="6" offset-s="1" col-xs="10" offset-xs="1">
-          <div style={styles.bulletListMarger}>
+        {viewportIsXSOrLess && this.renderImage()}
+        <GridCol col-l="4" offset-l="1" col-s="6" offset-s="0" col-xs="12">
+          <Marger top={viewportIsXSOrLess ? 3 : null}>
             <BulletList
               style={styles.bulletList}
               items={[
                 {
                   key: '1',
+                  className: 'k-u-margin-bottom-double',
                   item: (
                     <Text size={viewportIsXSOrLess ? 'tiny' : 'default'}>
                       Un coach pour vous conseiller sur la mise en forme de
@@ -89,6 +92,7 @@ class KeySection extends Component {
                 },
                 {
                   key: '2',
+                  className: 'k-u-margin-bottom-double',
                   item: (
                     <Text size={viewportIsXSOrLess ? 'tiny' : 'default'}>
                       Une équipe d’experts pour chaque secteur d’activité,
@@ -108,12 +112,14 @@ class KeySection extends Component {
                 },
               ]}
             />
-          </div>
+          </Marger>
 
-          {!viewportIsMOrLess && <Marger top="4">{this.renderButton()}</Marger>}
+          <Marger top="4" style={styles.button}>
+            {this.renderButton()}
+          </Marger>
         </GridCol>
 
-        {this.renderImage()}
+        {!viewportIsXSOrLess && this.renderImage()}
       </Grid>
     )
   }
@@ -142,14 +148,14 @@ const imgBackground = image => ({
 const styles = {
   text: {
     color: COLORS.font1,
-    [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
+    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       textAlign: 'center',
     },
   },
   horizontalStroke: {
     width: 50,
     color: COLORS.font1,
-    [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
+    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       margin: 'auto',
       width: 40,
     },
@@ -161,15 +167,14 @@ const styles = {
       width: `calc(100% + ${CONTAINER_PADDING}px)`,
     },
   },
-  bulletListMarger: {
-    [`@media (max-width: ${ScreenConfig.L.max}px) and
-      (max-width: ${ScreenConfig.XS.max}px)`]: {
-      marginTop: 40,
-    },
-  },
   bulletList: {
     lineHeight: 1.6,
     color: COLORS.font1,
+  },
+  button: {
+    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
+      textAlign: 'center',
+    },
   },
 }
 
