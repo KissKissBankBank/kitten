@@ -23,7 +23,6 @@ const StyledItem = styled.a`
   font-size: ${pxToRem(14)};
   text-decoration: none;
 
-
   ::before {
     content: '';
     position: absolute;
@@ -31,7 +30,7 @@ const StyledItem = styled.a`
     left: -1px;
     bottom: -1px;
 
-    width: 1px;
+    width: ${pxToRem(1)};
 
     background-color: transparent;
     transition: background-color 0.2s, width 0.2s;
@@ -53,7 +52,7 @@ const StyledItem = styled.a`
     css`
       color: ${COLORS.primary1};
       ::before {
-        width: 4px;
+        width: ${pxToRem(4)};
 
         background-color: ${COLORS.primary1};
       }
