@@ -6,13 +6,14 @@ import COLORS from '../../../constants/colors-config'
 const StyledItem = styled.svg`
   overflow: visible;
 
-  rect {
-    fill: ${props => props.mainColor};
-    transition: transform 0.2s ease-out, fill 0.15s;
+  fill: ${props => props.mainColor};
+
+  :hover {
+    fill: ${props => props.hoverColor};
   }
 
-  :hover rect {
-    fill: ${props => props.hoverColor};
+  rect {
+    transition: transform 0.2s ease-out, fill 0.15s;
   }
 
   ${({ isActive }) =>
