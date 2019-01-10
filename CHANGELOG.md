@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.4.1] - 2019-01-10
 
-- Fix : `BurgerMenu` changed `hover` behaviour
+Fix:
+- `BurgerMenu` changed `hover` behaviour.
 
 ## [1.4.0] - 2019-01-10
 
