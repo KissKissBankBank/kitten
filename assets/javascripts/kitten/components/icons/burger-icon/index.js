@@ -7,13 +7,12 @@ const StyledItem = styled.svg`
   overflow: visible;
 
   rect {
-    fill: ${props => props.mainColor || COLORS.font1};
+    fill: ${props => props.mainColor};
     transition: transform 0.2s ease-out, fill 0.15s;
   }
 
   :hover rect {
-    fill: ${props => props.hoverColor || COLORS.primary1};
-    transition: transform 0.2s ease-out, fill 0.15s;
+    fill: ${props => props.hoverColor};
   }
 
   ${({ isActive }) =>
@@ -21,10 +20,10 @@ const StyledItem = styled.svg`
     css`
       & .item-top,
       & .item-bottom {
-        transform: translate(2px, 0);
+        transform: translateX(2px);
       }
       & .item-patty {
-        transform: translate(-2px, 0);
+        transform: translateX(-2px);
       }
     `}
 `
