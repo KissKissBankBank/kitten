@@ -41,13 +41,11 @@ class TimelineSection extends Component {
 
     return (
       <GridCol col-l="4" offset-l="1" style={{ alignSelf: 'center' }}>
-        <Marger bottom="4">
-          <Title modifier="secondary" margin={false} style={styles.title}>
-            Quelles étapes pour lancer ma collecte de crowdfunding ?
-          </Title>
+        <Title modifier="secondary" margin={false} style={styles.title}>
+          Quelles étapes pour lancer ma collecte de crowdfunding ?
+        </Title>
 
-          {!viewportIsMOrLess && this.renderButton()}
-        </Marger>
+        {!viewportIsMOrLess && this.renderButton()}
       </GridCol>
     )
   }
