@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { Grid, GridCol as GridColBase } from '../../../../components/grid/grid'
+import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
 import { Paragraph as ParagraphBase } from '../../../../components/typography/paragraph'
@@ -16,7 +16,6 @@ import COLORS from '../../../../constants/colors-config'
 
 const Paragraph = Radium(ParagraphBase)
 const Title = Radium(TitleBase)
-const GridCol = Radium(GridColBase)
 
 class HeaderWithBackground extends Component {
   render() {
@@ -119,5 +118,4 @@ const styles = {
 
 export default withMediaQueries({
   viewportIsXSOrLess: true,
-  viewportIsMOrLess: true,
 })(Radium(HeaderWithBackground))

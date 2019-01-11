@@ -115,7 +115,6 @@ const styles = {
 
   pagination: {
     display: 'flex',
-    justifyContent: 'center',
   },
 
   page: {

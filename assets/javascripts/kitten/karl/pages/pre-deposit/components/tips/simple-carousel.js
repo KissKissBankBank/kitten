@@ -12,6 +12,7 @@ import { ScreenConfig } from '../../../../../constants/screen-config'
 export class TipSimpleCarousel extends Component {
   render() {
     const { title, paragraph } = this.props
+
     return (
       <StyleRoot>
         <div style={styles.tipsMarger}>

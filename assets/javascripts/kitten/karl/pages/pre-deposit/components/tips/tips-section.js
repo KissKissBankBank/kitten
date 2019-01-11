@@ -1,22 +1,19 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import { Grid, GridCol } from '../../../../../components/grid/grid'
-import { Container as ContainerBase } from '../../../../../components/grid/container'
+import { Container } from '../../../../../components/grid/container'
 import { Marger } from '../../../../../components/layout/marger'
 import { withMediaQueries } from '../../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../../constants/screen-config'
 import { parseHtml } from '../../../../../helpers/utils/parser'
 import { CONTAINER_PADDING } from '../../../../../constants/grid-config'
-import { SimpleCarousel as SimpleCarouselBase } from '../.././../../../components/carousel/simple-carousel'
+import { SimpleCarousel } from '../.././../../../components/carousel/simple-carousel'
 import { TipSimpleCarousel } from './simple-carousel'
 import COLORS from '../../../../../constants/colors-config'
 
-const Container = Radium(ContainerBase)
-const SimpleCarousel = Radium(SimpleCarouselBase)
-
 class TipsSection extends Component {
   render() {
-    const { viewportIsXSOrLess, viewportIsMOrLess } = this.props
+    const { viewportIsXSOrLess } = this.props
 
     return (
       <Container>
@@ -68,8 +65,6 @@ class TipsSection extends Component {
       },
     ]
 
-    const { viewportIsMOrLess } = this.props
-
     return (
       <GridCol col-l="4" col-s="6" offset-s="1" col-xs="10" offset-xs="1">
         <SimpleCarousel
@@ -113,6 +108,5 @@ const styles = {
 }
 
 export default withMediaQueries({
-  viewportIsMOrLess: true,
   viewportIsXSOrLess: true,
 })(Radium(TipsSection))

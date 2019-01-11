@@ -7,7 +7,7 @@ import { Title as TitleBase } from '../../../../components/typography/title'
 import { Text } from '../../../../components/typography/text'
 import { HorizontalStroke as HorizontalStrokeBase } from '../../../../components/layout/horizontal-stroke'
 import { BulletList as BulletlistBase } from '../../../../components/lists/bullet-list'
-import { Button as ButtonBase } from '../../../../components/buttons/button'
+import { Button } from '../../../../components/buttons/button'
 import { withMediaQueries } from '../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
@@ -17,7 +17,6 @@ import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 const BulletList = Radium(BulletlistBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)
 const Title = Radium(TitleBase)
-const Button = Radium(ButtonBase)
 
 class KeySection extends Component {
   render() {
@@ -40,7 +39,7 @@ class KeySection extends Component {
 
     return (
       <Grid>
-        <GridCol col-l="9" offset-l="1" col="12">
+        <GridCol col-l="9" offset-l="1">
           <Marger bottom="2">
             <Title modifier="secondary" margin={false} style={styles.text}>
               La clé ? Un accompagnement sur mesure pour votre financement
@@ -62,19 +61,19 @@ class KeySection extends Component {
     const imgKeyStyle = [imgBackground('FFF'), styles.image]
 
     return (
-      <GridCol offset-l="1" col-s="5" offset-s="1" col-xs="12">
+      <GridCol offset-l="1" col-s="5" offset-s="1">
         <div style={imgKeyStyle} />
       </GridCol>
     )
   }
 
   renderBulletList() {
-    const { viewportIsMOrLess, viewportIsXSOrLess } = this.props
+    const { viewportIsXSOrLess } = this.props
 
     return (
       <Grid>
         {viewportIsXSOrLess && this.renderImage()}
-        <GridCol col-l="4" offset-l="1" col-s="6" offset-s="0" col-xs="12">
+        <GridCol col-l="4" offset-l="1" col-s="6" offset-s="0">
           <Marger top={viewportIsXSOrLess ? 3 : null}>
             <BulletList
               style={styles.bulletList}
@@ -179,6 +178,5 @@ const styles = {
 }
 
 export default withMediaQueries({
-  viewportIsMOrLess: true,
   viewportIsXSOrLess: true,
 })(Radium(KeySection))

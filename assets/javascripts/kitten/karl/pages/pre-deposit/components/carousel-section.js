@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import { Container as ContainerBase } from '../../../../components/grid/container'
 import { Grid, GridCol as GridColBase } from '../../../../components/grid/grid'
 import { Marger as MargerBase } from '../../../../components/layout/marger'
-import { Title as TitleBase } from '../../../../components/typography/title'
+import { Title } from '../../../../components/typography/title'
 import { HorizontalStroke as HorizontalStrokeBase } from '../../../../components/layout/horizontal-stroke'
 import { Carousel } from '../../../../components/carousel/carousel'
 import { SimpleCard } from '../../../../components/cards/simple-card'
@@ -19,25 +19,20 @@ import {
 import COLORS from '../../../../constants/colors-config'
 
 const Container = Radium(ContainerBase)
-const Title = Radium(TitleBase)
 const Marger = Radium(MargerBase)
 const GridCol = Radium(GridColBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)
 
 class CarouselSection extends Component {
   render() {
-    const { viewportIsXSOrLess } = this.props
-
     return (
-      <StyleRoot>
-        <div style={styles.background}>
-          {this.renderBackground()}
-          <div style={styles.content}>
-            {this.renderTitle()}
-            {this.renderCarousel()}
-          </div>
+      <div style={styles.background}>
+        {this.renderBackground()}
+        <div style={styles.content}>
+          {this.renderTitle()}
+          {this.renderCarousel()}
         </div>
-      </StyleRoot>
+      </div>
     )
   }
 
@@ -227,6 +222,5 @@ const styles = {
 }
 
 export default withMediaQueries({
-  viewportIsXSOrLess: true,
   viewportIsMOrLess: true,
 })(Radium(CarouselSection))
