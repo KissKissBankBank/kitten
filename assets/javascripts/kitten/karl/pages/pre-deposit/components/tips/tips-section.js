@@ -71,15 +71,12 @@ class TipsSection extends Component {
     const { viewportIsMOrLess } = this.props
 
     return (
-      <GridCol
-        col-l="4"
-        col-s="6"
-        offset-s="1"
-        col-xs="10"
-        offset-xs="1"
-        style={{ justifyContent: 'center' }}
-      >
-        <SimpleCarousel paginationColor="#d8d8d8" activePaginationColor="#222">
+      <GridCol col-l="4" col-s="6" offset-s="1" col-xs="10" offset-xs="1">
+        <SimpleCarousel
+          paginationColor="#d8d8d8"
+          activePaginationColor="#222"
+          style={{ justifyContent: 'left' }}
+        >
           {tips.map(item => (
             <TipSimpleCarousel
               key={item.key}
