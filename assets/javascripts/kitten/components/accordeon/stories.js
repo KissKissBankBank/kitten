@@ -4,17 +4,12 @@ import { withKnobs } from '@storybook/addon-knobs'
 import { Accordeon } from './index'
 import { Marger } from '../layout/marger'
 import { Container } from '../grid/container'
-import { Grid, GridCol } from '../grid/grid'
 
-const StoryGrid = ({ children }) => (
+const StoryContainer = ({ children }) => (
   <Container>
-    <Grid>
-      <GridCol col="3">
-        <Marger top="5" bottom="5">
-          {children}
-        </Marger>
-      </GridCol>
-    </Grid>
+    <Marger top="5" bottom="5">
+      {children}
+    </Marger>
   </Container>
 )
 
@@ -22,11 +17,20 @@ storiesOf('Accordeon/Accordeon', module)
   .addDecorator(withKnobs)
   .add('default', () => {
     return (
-      <StoryGrid>
+      <StoryContainer>
         <Accordeon>
           <Accordeon.Item>
             <Accordeon.Header>Header</Accordeon.Header>
-            <Accordeon.Content>Content</Accordeon.Content>
+            <Accordeon.Content>
+              Content
+              <br />
+              in
+              <br />
+              four
+              <br />
+              lines
+              <br />
+            </Accordeon.Content>
           </Accordeon.Item>
 
           <Accordeon.Item>
@@ -39,6 +43,6 @@ storiesOf('Accordeon/Accordeon', module)
             <Accordeon.Content>Content</Accordeon.Content>
           </Accordeon.Item>
         </Accordeon>
-      </StoryGrid>
+      </StoryContainer>
     )
   })
