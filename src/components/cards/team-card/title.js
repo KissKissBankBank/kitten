@@ -21,8 +21,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireDefault(require("radium"));
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _text = require("../../typography/text");
@@ -64,5 +62,5 @@ function (_Component) {
 exports.TeamCardTitle = TeamCardTitle;
 TeamCardTitle.propTypes = {
   children: _propTypes.default.string.isRequired,
-  subTilte: _propTypes.default.string.isRequired
+  subTitle: _propTypes.default.string.isRequired
 };

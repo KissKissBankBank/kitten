@@ -4,9 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [1.4.1] - 2019-01-10
+
+Fix:
+- `BurgerMenu` changed `hover` behaviour.
+
+## [1.4.0] - 2019-01-10
+
+Features:
+- Add `HeaderMenu`.
+- Add `BurgerIcon`.
+
 ## [1.3.0] - 2018-12-27
 
-Features: 
+Features:
 - Add prop `id` on `Accordeon.Item`. This id would be given by the callback `onChange` on `Accordon` if setted.
 
 ## [1.2.0] - 2018-12-27
