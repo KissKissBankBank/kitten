@@ -71,11 +71,9 @@ describe('<Accordeon />', () => {
 
     it('has selected styles', () => {
       const item = component.find(Accordeon.Item).first()
-      const header = item.find(Accordeon.Header).first()
       const content = item.find(Accordeon.Content).first()
 
-      expect(header).toHaveStyleRule('border-bottom-left-radius', '0')
-      expect(content).toHaveStyleRule('display', 'block')
+      expect(content).toHaveStyleRule('visibility', 'visible')
     })
   })
 
@@ -103,11 +101,9 @@ describe('<Accordeon />', () => {
 
     it('has selected styles', () => {
       const item = component.find(Accordeon.Item).last()
-      const header = item.find(Accordeon.Header).first()
       const content = item.find(Accordeon.Content).first()
 
-      expect(header).toHaveStyleRule('border-bottom-left-radius', '0')
-      expect(content).toHaveStyleRule('display', 'block')
+      expect(content).toHaveStyleRule('visibility', 'visible')
     })
   })
 
