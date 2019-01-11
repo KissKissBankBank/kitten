@@ -11,11 +11,13 @@ class SimpleCarouselBase extends Component {
   static propTypes = {
     activePaginationColor: PropTypes.string,
     paginationColor: PropTypes.string,
+    paginationAlign: PropTypes.string,
   }
 
   static defaultProps = {
     activePaginationColor: COLORS.primary1,
     paginationColor: COLORS.background1,
+    paginationAlign: 'center',
   }
 
   constructor(props) {
@@ -34,9 +36,19 @@ class SimpleCarouselBase extends Component {
   }
 
   render() {
-    const { children, activePaginationColor, paginationColor } = this.props
+    const {
+      children,
+      activePaginationColor,
+      paginationColor,
+      paginationAlign,
+    } = this.props
+
     const { totalPagesCount, currentPageNumber } = this.state
     const rangePage = createRangeFromZeroTo(totalPagesCount)
+    const paginationStyle = [
+      styles.pagination,
+      paginationAlign && { justifyContent: paginationAlign },
+    ]
 
     return (
       <Fragment>
@@ -56,7 +68,7 @@ class SimpleCarouselBase extends Component {
         </Marger>
 
         {this.showPagination() && (
-          <Marger top="4" bottom="4" style={styles.pagination}>
+          <Marger top="4" bottom="4" style={paginationStyle}>
             {rangePage.map(numPage => {
               const pageStyle = [
                 styles.page,

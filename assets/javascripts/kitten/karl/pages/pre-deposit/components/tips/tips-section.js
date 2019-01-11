@@ -75,7 +75,7 @@ class TipsSection extends Component {
         <SimpleCarousel
           paginationColor="#d8d8d8"
           activePaginationColor="#222"
-          style={{ justifyContent: 'left' }}
+          paginationAlign="left"
         >
           {tips.map(item => (
             <TipSimpleCarousel
