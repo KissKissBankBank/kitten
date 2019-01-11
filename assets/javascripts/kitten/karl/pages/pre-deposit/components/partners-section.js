@@ -14,9 +14,11 @@ const Title = Radium(TitleBase)
 
 class PartnersSection extends Component {
   render() {
+    const { viewportIsXSOrLess } = this.props
+
     return (
       <Container>
-        <Marger top="10">
+        <Marger top={viewportIsXSOrLess ? 8 : 10}>
           <Grid>
             <GridCol col-m="6" offset-m="3">
               {this.renderTitle()}
