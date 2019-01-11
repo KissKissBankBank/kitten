@@ -31,6 +31,11 @@ const ContentStyled = styled.div`
     transition-delay: 0.4s, 0s, 0s;
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    & {
+      animation: none;
+      -webkit-animation: none;
+    }
   }
 `
 
