@@ -25,7 +25,12 @@ const ContentStyled = styled.div`
 export const Content = ({ id, children }) => (
   <Context.Consumer>
     {({ selectedItem }) => (
-      <ContentStyled isSelected={selectedItem === id}>{children}</ContentStyled>
+      <ContentStyled
+        isSelected={selectedItem === id}
+        aria-hidden={selectedItem !== id}
+      >
+        {children}
+      </ContentStyled>
     )}
   </Context.Consumer>
 )
