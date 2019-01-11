@@ -39,5 +39,8 @@ var Item = function Item(_ref) {
 
 exports.Item = Item;
 Item.propTypes = {
-  id: _propTypes.default.string
+  id: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number])
+};
+Item.defaultProps = {
+  id: null
 };
