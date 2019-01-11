@@ -40,7 +40,7 @@ class TimelineSection extends Component {
     const { viewportIsMOrLess } = this.props
 
     return (
-      <GridCol col-l="4" offset-l="1">
+      <GridCol col-l="4" offset-l="1" style={{ alignSelf: 'center' }}>
         <Marger bottom="4">
           <Title modifier="secondary" margin={false} style={styles.title}>
             Quelles étapes pour lancer ma collecte de crowdfunding ?
