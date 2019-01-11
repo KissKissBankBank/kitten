@@ -26,19 +26,16 @@ const HeaderStyled = styled.button`
   -webkit-appearance: none;
   cursor: pointer;
 
-  ${({ isSelected }) =>
-    isSelected &&
-    css`
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    `}
+  &[aria-expanded='true'] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 `
 
 export const Header = ({ id, children }) => (
   <Context.Consumer>
     {({ updateSelectedItem, selectedItem }) => (
       <HeaderStyled
-        isSelected={selectedItem === id}
         onClick={() => updateSelectedItem(id)}
         role="tab"
         aria-expanded={selectedItem === id}
