@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Context } from './context'
+import { Marger } from '../../layout/marger'
 
 const ContentStyled = styled.div`
   box-sizing: border-box;
@@ -16,8 +17,9 @@ const ContentStyled = styled.div`
   border-top: 0;
   border-bottom-left-radius: ${pxToRem(3)};
   border-bottom-right-radius: ${pxToRem(3)};
-
   opacity: 1;
+
+  padding: 0 ${pxToRem(30)};
 
   transition: visibility 0s ease, flex-basis 0.4s ease, opacity 0.4s ease;
   transition-delay: 0s, 0s, 0s;
@@ -29,8 +31,6 @@ const ContentStyled = styled.div`
     transition-delay: 0.4s, 0s, 0s;
   }
 
-  > div {
-    margin: ${pxToRem(30)};
   }
 `
 
@@ -61,7 +61,9 @@ export class Content extends Component {
             ref={contentDiv => (this.div = contentDiv)}
             maxHeight={maxHeight}
           >
-            <div>{children}</div>
+            <Marger top="3" bottom="3">
+              {children}
+            </Marger>
           </ContentStyled>
         )}
       </Context.Consumer>
