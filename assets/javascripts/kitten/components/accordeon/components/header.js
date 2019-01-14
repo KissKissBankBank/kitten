@@ -39,9 +39,11 @@ export const Header = ({ id, children }) => (
     {({ updateSelectedItem, selectedItem, componentId }) => (
       <HeaderStyled
         onClick={() => updateSelectedItem(id)}
-        role="tab"
+        role="button"
         aria-expanded={selectedItem === id}
-        aria-controls={`${componentId}_${id}`}
+        aria-disabled={selectedItem === id}
+        id={`${componentId}_header${id}`}
+        aria-controls={`${componentId}_content${id}`}
       >
         {children}
       </HeaderStyled>
