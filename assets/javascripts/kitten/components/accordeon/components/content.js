@@ -9,8 +9,9 @@ const ContentStyled = styled.div`
   box-sizing: border-box;
   visibility: visible;
   overflow: hidden;
+  height: auto;
 
-  flex-basis: ${({ maxHeight }) => pxToRem(maxHeight)};
+  max-height: ${({ maxHeight }) => pxToRem(maxHeight)};
 
   background-color: ${COLORS.background3};
   border: ${pxToRem(2)} solid ${COLORS.line1};
@@ -21,13 +22,13 @@ const ContentStyled = styled.div`
 
   padding: 0 ${pxToRem(30)};
 
-  transition: visibility 0s ease, flex-basis 0.4s ease, opacity 0.4s ease;
+  transition: visibility 0s ease, max-height 0.4s ease, opacity 0.4s ease;
   transition-delay: 0s, 0s, 0s;
 
   &[aria-hidden='true'] {
     visibility: hidden;
     opacity: 0;
-    flex-basis: 0;
+    max-height: 0;
     transition-delay: 0.4s, 0s, 0s;
   }
 
