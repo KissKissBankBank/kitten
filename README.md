@@ -91,7 +91,7 @@ Then visit http://localhost:6006
 
 - To release `Storybook` simply run this command:
 ```sh
-yarn deploy-storybook
+npm run deploy-storybook
 ```
 
 ### Style guide
@@ -162,7 +162,7 @@ If this is your first release, start by saving your npm credentials in
 your `~/.npmrc` by calling:
 
 ```sh
-$ yarn login
+$ npm login
 ```
 
 ### Prepare the release pull request
