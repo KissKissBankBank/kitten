@@ -51,13 +51,13 @@ export class Content extends Component {
     super(props)
 
     this.state = {
-      maxHeight: 'none',
+      maxHeight: 0,
     }
   }
 
   componentDidMount() {
     if (this.div) {
-      this.setState({ maxHeight: this.div.scrollHeight })
+      this.setState({ maxHeight: this.div.scrollHeight || 0 })
     }
   }
 
