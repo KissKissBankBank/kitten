@@ -98,25 +98,21 @@ const styles = {
     display: 'grid',
     gap: 0,
   },
-
   item: {
     gridColumn: 1,
     gridRow: 1,
     visibility: 'visible',
     opacity: 1,
     transition: `all .8s ease-in-out`,
-
     hide: {
       visibility: 'hidden',
       opacity: 0,
       pointerEvents: 'none',
     },
   },
-
   pagination: {
     display: 'flex',
   },
-
   page: {
     width: 6,
     height: 6,

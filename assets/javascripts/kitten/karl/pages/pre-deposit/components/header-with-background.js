@@ -20,7 +20,6 @@ const Title = Radium(TitleBase)
 class HeaderWithBackground extends Component {
   render() {
     const { backgroundImage } = this.props
-
     const headerStyle = [styles.header, { backgroundImage }]
 
     return (
@@ -87,7 +86,6 @@ const styles = {
     paddingTop: 50,
     marginBottom: 50,
     backgroundColor: '#CBF4FD',
-
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
       paddingTop: 80,
       paddingBottom: 80,
@@ -98,14 +96,12 @@ const styles = {
       paddingBottom: 100,
       marginBottom: 100,
     },
-
     container: {
       paddingTop: 50,
       paddingBottom: 50,
       paddingRight: `${CONTAINER_PADDING}px`,
       paddingLeft: `${CONTAINER_PADDING}px`,
       backgroundColor: COLORS.background1,
-
       [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
         paddingTop: 40,
         paddingBottom: 40,

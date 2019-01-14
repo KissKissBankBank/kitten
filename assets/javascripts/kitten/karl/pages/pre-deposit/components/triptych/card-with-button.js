@@ -40,7 +40,6 @@ export class CardWithButton extends Component {
             style={{ ...imageProps.style, ...styles.image }}
           />
         </Marger>
-
         <Marger
           top={marginBetweenImgAndContent}
           bottom={horizontalStroke ? 2 : 1}
@@ -61,7 +60,6 @@ export class CardWithButton extends Component {
             <HorizontalStroke style={{ color: COLORS.font1 }} />
           </Marger>
         )}
-
         <Marger top={horizontalStroke ? 3 : 1} bottom={notice ? 1.5 : 3}>
           <Paragraph
             modifier="quaternary"
@@ -96,11 +94,9 @@ const styles = {
     width: '100%',
     display: 'block',
   },
-
   noLineHeight: {
     lineHeight: 0,
   },
-
   button: {
     [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
       minWidth: '100%',

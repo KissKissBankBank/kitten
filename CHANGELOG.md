@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature : Add `activePaginationColor`, `paginationColor` and `paginationAlign`
+  props on `SimpleCarousel`.
+
 ## [1.4.1] - 2019-01-10
 
 Fix:

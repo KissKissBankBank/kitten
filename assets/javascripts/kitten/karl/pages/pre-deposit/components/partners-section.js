@@ -23,7 +23,6 @@ class PartnersSection extends Component {
             <GridCol col-m="6" offset-m="3">
               {this.renderTitle()}
             </GridCol>
-
             <GridCol col-l="6" offset-l="3">
               {this.renderLogos()}
             </GridCol>
@@ -62,7 +61,6 @@ class PartnersSection extends Component {
             </figcaption>
           </figure>
         </GridCol>
-
         <GridCol col-m="4" className="k-u-align-center">
           <figure style={styles.logosMargin}>
             <div style={styles.logos}>
@@ -73,7 +71,6 @@ class PartnersSection extends Component {
             </figcaption>
           </figure>
         </GridCol>
-
         <GridCol col-m="4" className="k-u-align-center">
           <figure style={styles.logosMargin}>
             <div style={styles.logos}>

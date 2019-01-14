@@ -170,48 +170,39 @@ const styles = {
       ${COLORS.background1} 50%,
       #ECFCFF 50%,
       #ECFCFF 100%)`,
-
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       paddingTop: 50,
       paddingBottom: 50,
       marginTop: 20,
     },
   },
-
   svg: {
     position: 'absolute',
     zIndex: 1,
     top: 50,
     right: 'calc(50% - 455px)',
   },
-
   content: {
     position: 'relative',
     zIndex: 2,
   },
-
   flex: {
     display: 'flex',
     alignItems: 'center',
   },
-
   spaceBetween: {
     justifyContent: 'space-between',
     alignItems: 'flex-end',
   },
-
   title: {
     marginLeft: -50,
-
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
       marginLeft: 0,
     },
   },
-
   stroke: {
     marginRight: 20,
     flexShrink: 0,
-
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
       order: 2,
       width: '100%',

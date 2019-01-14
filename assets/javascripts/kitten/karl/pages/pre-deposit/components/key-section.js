@@ -45,7 +45,6 @@ class KeySection extends Component {
               La clé ? Un accompagnement sur mesure pour votre financement
             </Title>
           </Marger>
-
           <Marger top="2">
             <HorizontalStroke
               size={viewportIsXSOrLess ? 'default' : 'huge'}
@@ -112,7 +111,6 @@ class KeySection extends Component {
               ]}
             />
           </Marger>
-
           <Marger top="4" style={styles.button}>
             {this.renderButton()}
           </Marger>
