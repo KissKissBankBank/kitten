@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove margin when `title` prop is empty in `CounterBlock` component.
+
 ## [1.4.1] - 2019-01-10
 
 Fix:
