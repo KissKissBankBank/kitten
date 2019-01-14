@@ -40,9 +40,7 @@ const ContentStyled = styled.div`
   }
 
   @media (prefers-reduced-motion: reduce) {
-    & {
-      transition: none;
-    }
+    transition: none;
   }
 `
 
