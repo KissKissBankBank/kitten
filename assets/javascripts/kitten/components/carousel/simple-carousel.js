@@ -11,7 +11,12 @@ class SimpleCarouselBase extends Component {
   static propTypes = {
     activePaginationColor: PropTypes.string,
     paginationColor: PropTypes.string,
-    paginationAlign: PropTypes.string,
+    paginationAlign: PropTypes.oneOf([
+      'start',
+      'center',
+      'space-between',
+      'space-around',
+    ]),
   }
 
   static defaultProps = {

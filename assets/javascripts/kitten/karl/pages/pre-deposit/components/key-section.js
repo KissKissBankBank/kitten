@@ -58,7 +58,7 @@ class KeySection extends Component {
   }
 
   renderImage() {
-    const imgKeyStyle = [imgBackground('FFF'), styles.image]
+    const imgKeyStyle = [imgBackground('fff'), styles.image]
 
     return (
       <GridCol offset-l="1" col-s="5" offset-s="1">
@@ -103,8 +103,8 @@ class KeySection extends Component {
                   key: '3',
                   item: (
                     <Text size={viewportIsXSOrLess ? 'tiny' : 'default'}>
-                      <span style={{ color: '#19B4FA' }}>Un blog</span> et{' '}
-                      <span style={{ color: '#19B4FA' }}>des vidéos tutos</span>{' '}
+                      <span style={{ color: '#19b4fa' }}>Un blog</span> et{' '}
+                      <span style={{ color: '#19b4fa' }}>des vidéos tutos</span>{' '}
                       pour devenir un pro du financement participatif !
                     </Text>
                   ),

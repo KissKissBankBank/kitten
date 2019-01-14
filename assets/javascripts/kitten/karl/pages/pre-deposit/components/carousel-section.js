@@ -40,7 +40,12 @@ class CarouselSection extends Component {
   renderBackground() {
     return (
       <div style={styles.svg}>
-        <svg width="693" height="543" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width="693"
+          height="543"
+          xmlns="http://www.w3.org/2000/svg"
+          viewbox="0 0 693 543"
+        >
           <path
             d="M197.541 542.838l20.88-166.224L0
                 381.432l165.02-62.234-96.764-40.552 107.604-30.514L52.598
@@ -51,7 +56,7 @@ class CarouselSection extends Component {
                 134.558 87.312 134.56a.46.46 0 0
                 1-.185-.055c-6.424-3.212-185.897-72.673-185.897-72.673l-49.788
                 118.043-72.27-117.24L197.54 542.837"
-            fill="#FFF"
+            fill="#fff"
             fillRule="evenodd"
           />
         </svg>
@@ -168,8 +173,8 @@ const styles = {
       to right,
       ${COLORS.background1} 0%,
       ${COLORS.background1} 50%,
-      #ECFCFF 50%,
-      #ECFCFF 100%)`,
+      #ecfcff 50%,
+      #ecfcff 100%)`,
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       padding: 'pxToRem(50 0)',
       marginTop: pxToRem(20),
