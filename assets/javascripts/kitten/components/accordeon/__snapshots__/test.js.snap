@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Accordeon /> with one item matches with snapshot 1`] = `
-.c2 {
+.c1 {
   display: block;
   margin: 0;
   width: 100%;
@@ -21,7 +21,7 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
   outline: none;
 }
 
-.c2[aria-expanded='true'] {
+.c1[aria-expanded='true'] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -30,18 +30,17 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
   margin-bottom: 0rem;
 }
 
-.c4 {
+.c3 {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
-.c3 {
+.c2 {
   box-sizing: border-box;
   visibility: visible;
   overflow: hidden;
-  -webkit-flex-basis: NaNrem;
-  -ms-flex-preferred-size: NaNrem;
-  flex-basis: NaNrem;
+  height: auto;
+  max-height: NaNrem;
   background-color: #f6f6f6;
   border: 0.125rem solid #eee;
   border-top: 0;
@@ -49,63 +48,49 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
   border-bottom-right-radius: 0.1875rem;
   opacity: 1;
   padding: 0 1.875rem;
-  -webkit-transition: visibility 0s ease,flex-basis 0.4s ease,opacity 0.4s ease;
-  transition: visibility 0s ease,flex-basis 0.4s ease,opacity 0.4s ease;
+  -webkit-transition: visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;
+  transition: visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;
   -webkit-transition-delay: 0s,0s,0s;
   transition-delay: 0s,0s,0s;
 }
 
-.c3[aria-hidden='true'] {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
+.c2[aria-hidden='true'] {
   -webkit-transition-delay: 0.4s,0s,0s;
   transition-delay: 0.4s,0s,0s;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.c2[aria-hidden='true'] {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .c3 {
-    -webkit-animation: none;
-    animation: none;
-    -webkit-animation: none;
+  .c2 {
+    -webkit-transition: none;
+    transition: none;
   }
 }
 
 <div
   className="c0"
 >
-  <div
+  <button
+    aria-expanded={false}
     className="c1"
+    onClick={[Function]}
+    role="tab"
   >
-    <button
-      aria-expanded={false}
-      className="c2"
-      onClick={[Function]}
-      role="tab"
-    >
-      Header
-    </button>
+    Header
+  </button>
+  <div
+    aria-hidden={true}
+    className="c2"
+  >
     <div
-      aria-hidden={true}
       className="c3"
     >
-      <div
-        className="c4"
-      >
-        Content
-      </div>
+      Content
     </div>
   </div>
 </div>
@@ -113,7 +98,7 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 
 exports[`<Accordeon /> with two items matches with snapshot 1`] = `
 Array [
-  .c2 {
+  .c1 {
   display: block;
   margin: 0;
   width: 100%;
@@ -133,12 +118,12 @@ Array [
   outline: none;
 }
 
-.c2[aria-expanded='true'] {
+.c1[aria-expanded='true'] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-.c4 {
+.c3 {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
@@ -147,13 +132,12 @@ Array [
   margin-bottom: 0.9375rem;
 }
 
-.c3 {
+.c2 {
   box-sizing: border-box;
   visibility: visible;
   overflow: hidden;
-  -webkit-flex-basis: NaNrem;
-  -ms-flex-preferred-size: NaNrem;
-  flex-basis: NaNrem;
+  height: auto;
+  max-height: NaNrem;
   background-color: #f6f6f6;
   border: 0.125rem solid #eee;
   border-top: 0;
@@ -161,67 +145,53 @@ Array [
   border-bottom-right-radius: 0.1875rem;
   opacity: 1;
   padding: 0 1.875rem;
-  -webkit-transition: visibility 0s ease,flex-basis 0.4s ease,opacity 0.4s ease;
-  transition: visibility 0s ease,flex-basis 0.4s ease,opacity 0.4s ease;
+  -webkit-transition: visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;
+  transition: visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;
   -webkit-transition-delay: 0s,0s,0s;
   transition-delay: 0s,0s,0s;
 }
 
-.c3[aria-hidden='true'] {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
+.c2[aria-hidden='true'] {
   -webkit-transition-delay: 0.4s,0s,0s;
   transition-delay: 0.4s,0s,0s;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.c2[aria-hidden='true'] {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .c3 {
-    -webkit-animation: none;
-    animation: none;
-    -webkit-animation: none;
+  .c2 {
+    -webkit-transition: none;
+    transition: none;
   }
 }
 
 <div
     className="c0"
   >
-    <div
+    <button
+      aria-expanded={false}
       className="c1"
+      onClick={[Function]}
+      role="tab"
     >
-      <button
-        aria-expanded={false}
-        className="c2"
-        onClick={[Function]}
-        role="tab"
-      >
-        Header
-      </button>
+      Header
+    </button>
+    <div
+      aria-hidden={true}
+      className="c2"
+    >
       <div
-        aria-hidden={true}
         className="c3"
       >
-        <div
-          className="c4"
-        >
-          Content
-        </div>
+        Content
       </div>
     </div>
   </div>,
-  .c2 {
+  .c1 {
   display: block;
   margin: 0;
   width: 100%;
@@ -241,7 +211,7 @@ Array [
   outline: none;
 }
 
-.c2[aria-expanded='true'] {
+.c1[aria-expanded='true'] {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
@@ -250,18 +220,17 @@ Array [
   margin-bottom: 0rem;
 }
 
-.c4 {
+.c3 {
   margin-top: 1.875rem;
   margin-bottom: 1.875rem;
 }
 
-.c3 {
+.c2 {
   box-sizing: border-box;
   visibility: visible;
   overflow: hidden;
-  -webkit-flex-basis: NaNrem;
-  -ms-flex-preferred-size: NaNrem;
-  flex-basis: NaNrem;
+  height: auto;
+  max-height: NaNrem;
   background-color: #f6f6f6;
   border: 0.125rem solid #eee;
   border-top: 0;
@@ -269,63 +238,49 @@ Array [
   border-bottom-right-radius: 0.1875rem;
   opacity: 1;
   padding: 0 1.875rem;
-  -webkit-transition: visibility 0s ease,flex-basis 0.4s ease,opacity 0.4s ease;
-  transition: visibility 0s ease,flex-basis 0.4s ease,opacity 0.4s ease;
+  -webkit-transition: visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;
+  transition: visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;
   -webkit-transition-delay: 0s,0s,0s;
   transition-delay: 0s,0s,0s;
 }
 
-.c3[aria-hidden='true'] {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-flex-basis: 0;
-  -ms-flex-preferred-size: 0;
-  flex-basis: 0;
+.c2[aria-hidden='true'] {
   -webkit-transition-delay: 0.4s,0s,0s;
   transition-delay: 0.4s,0s,0s;
 }
 
-.c1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.c2[aria-hidden='true'] {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
 }
 
 @media (prefers-reduced-motion:reduce) {
-  .c3 {
-    -webkit-animation: none;
-    animation: none;
-    -webkit-animation: none;
+  .c2 {
+    -webkit-transition: none;
+    transition: none;
   }
 }
 
 <div
     className="c0"
   >
-    <div
+    <button
+      aria-expanded={false}
       className="c1"
+      onClick={[Function]}
+      role="tab"
     >
-      <button
-        aria-expanded={false}
-        className="c2"
-        onClick={[Function]}
-        role="tab"
-      >
-        Header
-      </button>
+      Header
+    </button>
+    <div
+      aria-hidden={true}
+      className="c2"
+    >
       <div
-        aria-hidden={true}
         className="c3"
       >
-        <div
-          className="c4"
-        >
-          Content
-        </div>
+        Content
       </div>
     </div>
   </div>,

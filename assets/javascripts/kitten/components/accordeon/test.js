@@ -147,4 +147,29 @@ describe('<Accordeon />', () => {
       .simulate('click')
     expect(id).toEqual('CLICKED')
   })
+
+  describe('with isAnimated prop set to `false`', () => {
+    beforeEach(() => {
+      component = mount(
+        <Accordeon>
+          <Accordeon.Item>
+            <Accordeon.Header>Header</Accordeon.Header>
+            <Accordeon.Content>Content</Accordeon.Content>
+          </Accordeon.Item>
+
+          <Accordeon.Item>
+            <Accordeon.Header>Header</Accordeon.Header>
+            <Accordeon.Content>Content</Accordeon.Content>
+          </Accordeon.Item>
+        </Accordeon>,
+      )
+    })
+
+    it('doesn’t have `transition` styles', () => {
+      const item = component.find(Accordeon.Item).first()
+      const content = item.find(Accordeon.Content).first()
+
+      expect(content).not.toHaveStyleRule('transition')
+    })
+  })
 })
