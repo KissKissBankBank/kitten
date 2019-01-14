@@ -26,11 +26,13 @@ class CounterBlockBase extends Component {
 
     return (
       <StyleRoot style={styles.counterBlock}>
-        <Marger bottom={margin}>
-          <Title modifier={titleSize} margin={false} tag={titleTag}>
-            {title}
-          </Title>
-        </Marger>
+        {title && (
+          <Marger bottom={margin}>
+            <Title modifier={titleSize} margin={false} tag={titleTag}>
+              {title}
+            </Title>
+          </Marger>
+        )}
         <div style={styles.flexGrid}>
           <div style={styles.strokeContainer} className="k-u-hidden@m-down">
             <HorizontalStroke style={styles.stroke} size="big" />
