@@ -42,8 +42,8 @@ export const Header = ({ id, children }) => (
         role="button"
         aria-expanded={selectedItem === id}
         aria-disabled={selectedItem === id}
-        id={`${componentId}_header${id}`}
-        aria-controls={`${componentId}_content${id}`}
+        id={`${componentId}-header${id}`}
+        aria-controls={`${componentId}-content${id}`}
       >
         {children}
       </HeaderStyled>

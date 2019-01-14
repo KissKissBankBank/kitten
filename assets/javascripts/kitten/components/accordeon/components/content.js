@@ -79,8 +79,8 @@ export class Content extends Component {
             ref={contentDiv => (this.div = contentDiv)}
             maxHeight={maxHeight}
             isAnimated={isAnimated}
-            id={`${componentId}_content${id}`}
-            aria-labelledby={`${componentId}_header${id}`}
+            id={`${componentId}-content${id}`}
+            aria-labelledby={`${componentId}-header${id}`}
           >
             <Marger top="3" bottom="3">
               {children}
