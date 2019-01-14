@@ -41,7 +41,7 @@ Array [
   visibility: visible;
   overflow: hidden;
   height: auto;
-  max-height: NaNrem;
+  max-height: 0;
   background-color: #f6f6f6;
   border: 0.125rem solid #eee;
   border-top: 0;
@@ -77,11 +77,11 @@ Array [
     className="c0"
   >
     <button
-      aria-controls="custom_id_content0"
+      aria-controls="custom_id-content0"
       aria-disabled={false}
       aria-expanded={false}
       className="c1"
-      id="custom_id_header0"
+      id="custom_id-header0"
       onClick={[Function]}
       role="button"
     >
@@ -89,9 +89,9 @@ Array [
     </button>
     <div
       aria-hidden={true}
-      aria-labelledby="custom_id_header0"
+      aria-labelledby="custom_id-header0"
       className="c2"
-      id="custom_id_content0"
+      id="custom_id-content0"
     >
       <div
         className="c3"
@@ -139,7 +139,7 @@ Array [
   visibility: visible;
   overflow: hidden;
   height: auto;
-  max-height: NaNrem;
+  max-height: 0;
   background-color: #f6f6f6;
   border: 0.125rem solid #eee;
   border-top: 0;
@@ -175,11 +175,11 @@ Array [
     className="c0"
   >
     <button
-      aria-controls="custom_id_content1"
+      aria-controls="custom_id-content1"
       aria-disabled={false}
       aria-expanded={false}
       className="c1"
-      id="custom_id_header1"
+      id="custom_id-header1"
       onClick={[Function]}
       role="button"
     >
@@ -187,9 +187,9 @@ Array [
     </button>
     <div
       aria-hidden={true}
-      aria-labelledby="custom_id_header1"
+      aria-labelledby="custom_id-header1"
       className="c2"
-      id="custom_id_content1"
+      id="custom_id-content1"
     >
       <div
         className="c3"
@@ -241,7 +241,7 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
   visibility: visible;
   overflow: hidden;
   height: auto;
-  max-height: NaNrem;
+  max-height: 0;
   background-color: #f6f6f6;
   border: 0.125rem solid #eee;
   border-top: 0;
@@ -277,11 +277,11 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
   className="c0"
 >
   <button
-    aria-controls="accordeon_content0"
+    aria-controls="accordeon-content0"
     aria-disabled={false}
     aria-expanded={false}
     className="c1"
-    id="accordeon_header0"
+    id="accordeon-header0"
     onClick={[Function]}
     role="button"
   >
@@ -289,9 +289,9 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
   </button>
   <div
     aria-hidden={true}
-    aria-labelledby="accordeon_header0"
+    aria-labelledby="accordeon-header0"
     className="c2"
-    id="accordeon_content0"
+    id="accordeon-content0"
   >
     <div
       className="c3"
@@ -343,7 +343,7 @@ Array [
   visibility: visible;
   overflow: hidden;
   height: auto;
-  max-height: NaNrem;
+  max-height: 0;
   background-color: #f6f6f6;
   border: 0.125rem solid #eee;
   border-top: 0;
@@ -379,11 +379,11 @@ Array [
     className="c0"
   >
     <button
-      aria-controls="accordeon_content0"
+      aria-controls="accordeon-content0"
       aria-disabled={false}
       aria-expanded={false}
       className="c1"
-      id="accordeon_header0"
+      id="accordeon-header0"
       onClick={[Function]}
       role="button"
     >
@@ -391,9 +391,9 @@ Array [
     </button>
     <div
       aria-hidden={true}
-      aria-labelledby="accordeon_header0"
+      aria-labelledby="accordeon-header0"
       className="c2"
-      id="accordeon_content0"
+      id="accordeon-content0"
     >
       <div
         className="c3"
@@ -441,7 +441,7 @@ Array [
   visibility: visible;
   overflow: hidden;
   height: auto;
-  max-height: NaNrem;
+  max-height: 0;
   background-color: #f6f6f6;
   border: 0.125rem solid #eee;
   border-top: 0;
@@ -477,11 +477,11 @@ Array [
     className="c0"
   >
     <button
-      aria-controls="accordeon_content1"
+      aria-controls="accordeon-content1"
       aria-disabled={false}
       aria-expanded={false}
       className="c1"
-      id="accordeon_header1"
+      id="accordeon-header1"
       onClick={[Function]}
       role="button"
     >
@@ -489,9 +489,9 @@ Array [
     </button>
     <div
       aria-hidden={true}
-      aria-labelledby="accordeon_header1"
+      aria-labelledby="accordeon-header1"
       className="c2"
-      id="accordeon_content1"
+      id="accordeon-content1"
     >
       <div
         className="c3"
