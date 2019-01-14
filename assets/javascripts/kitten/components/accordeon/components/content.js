@@ -61,6 +61,12 @@ export class Content extends Component {
     }
   }
 
+  componentDidUpdate() {
+    if (this.div && this.state.maxHeight !== this.div.scrollHeight) {
+      this.setState({ maxHeight: this.div.scrollHeight })
+    }
+  }
+
   render() {
     const { id, children } = this.props
     const { maxHeight } = this.state
