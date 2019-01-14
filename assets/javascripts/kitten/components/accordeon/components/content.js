@@ -41,8 +41,7 @@ const ContentStyled = styled.div`
 
   @media (prefers-reduced-motion: reduce) {
     & {
-      animation: none;
-      -webkit-animation: none;
+      transition: none;
     }
   }
 `
