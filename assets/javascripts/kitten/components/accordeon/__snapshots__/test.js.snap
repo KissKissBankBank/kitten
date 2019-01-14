@@ -1,5 +1,200 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
+Array [
+  .c1 {
+  display: block;
+  margin: 0;
+  width: 100%;
+  padding: 1.25rem;
+  min-height: 1.875rem;
+  box-sizing: border-box;
+  overflow: visible;
+  background: transparent;
+  border: 0.125rem solid #eee;
+  border-radius: 0.1875rem;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  line-height: normal;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.c1[aria-expanded='true'] {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c3 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.c0 {
+  margin-bottom: 0.9375rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  visibility: visible;
+  overflow: hidden;
+  height: auto;
+  max-height: NaNrem;
+  background-color: #f6f6f6;
+  border: 0.125rem solid #eee;
+  border-top: 0;
+  border-bottom-left-radius: 0.1875rem;
+  border-bottom-right-radius: 0.1875rem;
+  opacity: 1;
+  padding: 0 1.875rem;
+  -webkit-transition: visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;
+  transition: visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;
+  -webkit-transition-delay: 0s,0s,0s;
+  transition-delay: 0s,0s,0s;
+}
+
+.c2[aria-hidden='true'] {
+  -webkit-transition-delay: 0.4s,0s,0s;
+  transition-delay: 0.4s,0s,0s;
+}
+
+.c2[aria-hidden='true'] {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c2 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+<div
+    className="c0"
+  >
+    <button
+      aria-controls="custom_id_0"
+      aria-expanded={false}
+      className="c1"
+      onClick={[Function]}
+      role="tab"
+    >
+      Header
+    </button>
+    <div
+      aria-hidden={true}
+      className="c2"
+      id="custom_id_0"
+    >
+      <div
+        className="c3"
+      >
+        Content
+      </div>
+    </div>
+  </div>,
+  .c1 {
+  display: block;
+  margin: 0;
+  width: 100%;
+  padding: 1.25rem;
+  min-height: 1.875rem;
+  box-sizing: border-box;
+  overflow: visible;
+  background: transparent;
+  border: 0.125rem solid #eee;
+  border-radius: 0.1875rem;
+  color: inherit;
+  font: inherit;
+  text-align: inherit;
+  line-height: normal;
+  -webkit-appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.c1[aria-expanded='true'] {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.c0 {
+  margin-bottom: 0rem;
+}
+
+.c3 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.c2 {
+  box-sizing: border-box;
+  visibility: visible;
+  overflow: hidden;
+  height: auto;
+  max-height: NaNrem;
+  background-color: #f6f6f6;
+  border: 0.125rem solid #eee;
+  border-top: 0;
+  border-bottom-left-radius: 0.1875rem;
+  border-bottom-right-radius: 0.1875rem;
+  opacity: 1;
+  padding: 0 1.875rem;
+  -webkit-transition: visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;
+  transition: visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;
+  -webkit-transition-delay: 0s,0s,0s;
+  transition-delay: 0s,0s,0s;
+}
+
+.c2[aria-hidden='true'] {
+  -webkit-transition-delay: 0.4s,0s,0s;
+  transition-delay: 0.4s,0s,0s;
+}
+
+.c2[aria-hidden='true'] {
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .c2 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+<div
+    className="c0"
+  >
+    <button
+      aria-controls="custom_id_1"
+      aria-expanded={false}
+      className="c1"
+      onClick={[Function]}
+      role="tab"
+    >
+      Header
+    </button>
+    <div
+      aria-hidden={true}
+      className="c2"
+      id="custom_id_1"
+    >
+      <div
+        className="c3"
+      >
+        Content
+      </div>
+    </div>
+  </div>,
+]
+`;
+
 exports[`<Accordeon /> with one item matches with snapshot 1`] = `
 .c1 {
   display: block;
@@ -76,6 +271,7 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
   className="c0"
 >
   <button
+    aria-controls="accordeon_0"
     aria-expanded={false}
     className="c1"
     onClick={[Function]}
@@ -86,6 +282,7 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
   <div
     aria-hidden={true}
     className="c2"
+    id="accordeon_0"
   >
     <div
       className="c3"
@@ -173,6 +370,7 @@ Array [
     className="c0"
   >
     <button
+      aria-controls="accordeon_0"
       aria-expanded={false}
       className="c1"
       onClick={[Function]}
@@ -183,6 +381,7 @@ Array [
     <div
       aria-hidden={true}
       className="c2"
+      id="accordeon_0"
     >
       <div
         className="c3"
@@ -266,6 +465,7 @@ Array [
     className="c0"
   >
     <button
+      aria-controls="accordeon_1"
       aria-expanded={false}
       className="c1"
       onClick={[Function]}
@@ -276,6 +476,7 @@ Array [
     <div
       aria-hidden={true}
       className="c2"
+      id="accordeon_1"
     >
       <div
         className="c3"

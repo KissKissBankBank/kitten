@@ -172,4 +172,28 @@ describe('<Accordeon />', () => {
       expect(content).not.toHaveStyleRule('transition')
     })
   })
+
+  describe('with an ID', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Accordeon id="custom_id">
+            <Accordeon.Item>
+              <Accordeon.Header>Header</Accordeon.Header>
+              <Accordeon.Content>Content</Accordeon.Content>
+            </Accordeon.Item>
+
+            <Accordeon.Item>
+              <Accordeon.Header>Header</Accordeon.Header>
+              <Accordeon.Content>Content</Accordeon.Content>
+            </Accordeon.Item>
+          </Accordeon>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
