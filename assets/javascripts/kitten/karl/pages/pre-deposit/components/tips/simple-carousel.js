@@ -8,6 +8,7 @@ import { Button } from '../../../../../components/buttons/button'
 import COLORS from '../../../../../constants/colors-config'
 import { withMediaQueries } from '../../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../../constants/screen-config'
+import { pxToRem } from '../../../../../helpers/utils/typography'
 
 export class TipSimpleCarousel extends Component {
   render() {
@@ -39,12 +40,12 @@ export class TipSimpleCarousel extends Component {
 
 const styles = {
   tipsMarger: {
-    marginTop: 100,
+    marginTop: pxToRem(100),
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
       marginTop: 0,
     },
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
-      marginTop: 30,
+      marginTop: pxToRem(30),
     },
   },
 }

@@ -13,6 +13,7 @@ import {
   CONTAINER_PADDING_MOBILE,
 } from '../../../../constants/grid-config'
 import COLORS from '../../../../constants/colors-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
 const Paragraph = Radium(ParagraphBase)
 const Title = Radium(TitleBase)
@@ -82,29 +83,29 @@ class HeaderWithBackground extends Component {
 const styles = {
   header: {
     backgroundSize: 'cover',
-    paddingBottom: 50,
-    paddingTop: 50,
-    marginBottom: 50,
-    backgroundColor: '#CBF4FD',
+    paddingTop: pxToRem(50),
+    paddingBottom: pxToRem(50),
+    marginBottom: pxToRem(50),
+    backgroundColor: '#cbf4fd',
     [`@media (min-width: ${ScreenConfig.S.min}px)`]: {
-      paddingTop: 80,
-      paddingBottom: 80,
-      marginBottom: 80,
+      paddingTop: pxToRem(80),
+      paddingBottom: pxToRem(80),
+      marginBottom: pxToRem(80),
     },
     [`@media (min-width: ${ScreenConfig.L.min}px)`]: {
-      paddingTop: 100,
-      paddingBottom: 100,
-      marginBottom: 100,
+      paddingTop: pxToRem(100),
+      paddingBottom: pxToRem(100),
+      marginBottom: pxToRem(100),
     },
     container: {
-      paddingTop: 50,
-      paddingBottom: 50,
+      paddingTop: pxToRem(50),
+      paddingBottom: pxToRem(50),
       paddingRight: `${CONTAINER_PADDING}px`,
       paddingLeft: `${CONTAINER_PADDING}px`,
       backgroundColor: COLORS.background1,
       [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
-        paddingTop: 40,
-        paddingBottom: 40,
+        paddingTop: pxToRem(40),
+        paddingBottom: pxToRem(40),
         paddingRight: `${CONTAINER_PADDING_MOBILE}px`,
         paddingLeft: `${CONTAINER_PADDING_MOBILE}px`,
       },

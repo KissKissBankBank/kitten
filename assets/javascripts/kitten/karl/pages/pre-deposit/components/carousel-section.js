@@ -17,6 +17,7 @@ import {
   CONTAINER_PADDING_MOBILE,
 } from '../../../../constants/grid-config'
 import COLORS from '../../../../constants/colors-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
 const Container = Radium(ContainerBase)
 const Marger = Radium(MargerBase)
@@ -161,9 +162,8 @@ const styles = {
   background: {
     position: 'relative',
     overflow: 'hidden',
-    paddingBottom: 100,
-    paddingTop: 100,
-    marginTop: 60,
+    padding: 'pxToRem(100 0)',
+    marginTop: pxToRem(60),
     background: `linear-gradient(
       to right,
       ${COLORS.background1} 0%,
@@ -171,15 +171,14 @@ const styles = {
       #ECFCFF 50%,
       #ECFCFF 100%)`,
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
-      paddingTop: 50,
-      paddingBottom: 50,
-      marginTop: 20,
+      padding: 'pxToRem(50 0)',
+      marginTop: pxToRem(20),
     },
   },
   svg: {
     position: 'absolute',
     zIndex: 1,
-    top: 50,
+    top: pxToRem(50),
     right: 'calc(50% - 455px)',
   },
   content: {
@@ -195,18 +194,18 @@ const styles = {
     alignItems: 'flex-end',
   },
   title: {
-    marginLeft: -50,
+    marginLeft: pxToRem(-50),
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
       marginLeft: 0,
     },
   },
   stroke: {
-    marginRight: 20,
+    marginRight: pxToRem(20),
     flexShrink: 0,
     [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
       order: 2,
       width: '100%',
-      marginLeft: 20,
+      marginLeft: pxToRem(20),
       marginRight: 0,
     },
   },

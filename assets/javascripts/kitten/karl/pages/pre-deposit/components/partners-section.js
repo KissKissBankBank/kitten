@@ -98,11 +98,11 @@ const styles = {
   logosMargin: {
     margin: 0,
     [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
-      marginBottom: 40,
+      marginBottom: pxToRem(40),
     },
   },
   logos: {
-    height: 100,
+    height: pxToRem(100),
     [`@media (max-width: ${ScreenConfig.S.max}px)`]: {
       height: '100%',
     },

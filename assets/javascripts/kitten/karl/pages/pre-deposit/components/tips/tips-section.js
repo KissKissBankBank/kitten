@@ -43,7 +43,7 @@ class TipsSection extends Component {
         key: 1,
         title: 'Astuce n°1 <br /> Choisissez un objectif minimum',
         paragraph:
-          'Si vous n’atteignez pas votre objectif dans le temps imparti, vous ne touchez rien et vos contributeurs sont remboursés. Fixez l’objectif minimum pour amorcer votre projet.',
+          "Vous récupérez la somme collectée si vous atteignez votre objectif dans le temps imparti. Dans le cas contraire, vos contributeurs sont remboursés. Augmentez vos chances de réussite en définissant l'objectif minimum dont vous avez besoin pour réaliser votre projet.",
       },
       {
         key: 2,
@@ -109,7 +109,7 @@ const styles = {
     },
   },
   links: {
-    color: '#19B4FA',
+    color: '#19b4fa',
     textDecoration: 'none',
   },
 }

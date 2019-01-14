@@ -12,6 +12,7 @@ import { withMediaQueries } from '../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
 import { parseHtml } from '../../../../helpers/utils/parser'
+import { pxToRem } from '../../../../helpers/utils/typography'
 import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 
 const BulletList = Radium(BulletlistBase)
@@ -134,7 +135,7 @@ const imgHeight = 416
 const imgWidth = 555
 
 const imgBackground = image => ({
-  backgroundColor: '#CAF4FE',
+  backgroundColor: '#caf4fe',
   backgroundSize: 'cover',
   backgroundPosition: 'center bottom',
   backgroundRepeat: 'no-repeat',
@@ -150,11 +151,11 @@ const styles = {
     },
   },
   horizontalStroke: {
-    width: 50,
+    width: pxToRem(50),
     color: COLORS.font1,
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
       margin: 'auto',
-      width: 40,
+      width: pxToRem(40),
     },
   },
   image: {
