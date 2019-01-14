@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Context } from './context'
@@ -22,14 +22,21 @@ const ContentStyled = styled.div`
 
   padding: 0 ${pxToRem(30)};
 
-  transition: visibility 0s ease, max-height 0.4s ease, opacity 0.4s ease;
-  transition-delay: 0s, 0s, 0s;
+  ${({ isAnimated }) =>
+    isAnimated &&
+    css`
+      transition: visibility 0s ease, max-height 0.4s ease, opacity 0.4s ease;
+      transition-delay: 0s, 0s, 0s;
+
+      &[aria-hidden='true'] {
+        transition-delay: 0.4s, 0s, 0s;
+      }
+    `}
 
   &[aria-hidden='true'] {
     visibility: hidden;
     opacity: 0;
     max-height: 0;
-    transition-delay: 0.4s, 0s, 0s;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -56,16 +63,17 @@ export class Content extends Component {
   }
 
   render() {
-    const { id, children, selectedItem } = this.props
+    const { id, children } = this.props
     const { maxHeight } = this.state
 
     return (
       <Context.Consumer>
-        {({ selectedItem }) => (
+        {({ selectedItem, isAnimated }) => (
           <ContentStyled
             aria-hidden={selectedItem !== id}
             ref={contentDiv => (this.div = contentDiv)}
             maxHeight={maxHeight}
+            isAnimated={isAnimated}
           >
             <Marger top="3" bottom="3">
               {children}

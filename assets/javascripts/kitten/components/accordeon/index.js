@@ -18,12 +18,16 @@ export class Accordeon extends Component {
     this.state = {
       selectedItem: props.selectedItem,
       updateSelectedItem: this.updateSelectedItem,
+      isAnimated: props.isAnimated,
     }
   }
 
   componentDidUpdate = prevProps => {
     if (prevProps.selectedItem !== this.props.selectedItem) {
       this.updateSelectedItem(this.props.selectedItem)
+    }
+    if (prevProps.isAnimated !== this.props.isAnimated) {
+      this.setState({ isAnimated: this.props.isAnimated })
     }
   }
 
@@ -51,9 +55,11 @@ export class Accordeon extends Component {
 Accordeon.propTypes = {
   selectedItem: PropTypes.number,
   onChange: PropTypes.func,
+  isAnimated: PropTypes.bool,
 }
 
 Accordeon.defaultProps = {
   selectedItem: null,
   onChange: () => {},
+  isAnimated: true,
 }

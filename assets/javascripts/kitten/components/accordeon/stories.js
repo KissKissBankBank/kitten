@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { Accordeon } from './index'
 import { Marger } from '../layout/marger'
 import { Container } from '../grid/container'
@@ -18,7 +18,7 @@ storiesOf('Accordeon/Accordeon', module)
   .add('default', () => {
     return (
       <StoryContainer>
-        <Accordeon>
+        <Accordeon isAnimated={boolean('isAnimated?', true)}>
           <Accordeon.Item>
             <Accordeon.Header>Header</Accordeon.Header>
             <Accordeon.Content>
