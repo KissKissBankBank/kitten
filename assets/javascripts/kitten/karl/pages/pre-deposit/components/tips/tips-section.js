@@ -47,13 +47,13 @@ class TipsSection extends Component {
       },
       {
         key: 2,
-        title: 'Astuce n°2 <br /> Dépassez les 100%',
+        title: 'Astuce n°2 <br /> Dépassez les 100 %',
         paragraph:
           'Votre objectif est atteint et il vous reste du temps ? La campagne n’est pas terminée : vous pouvez continuer à collecter !',
       },
       {
         key: 3,
-        title: 'Intégrez notre commission à votre objectif',
+        title: 'Astuce n°3 <br /> Intégrez notre commission à votre objectif',
         paragraph:
           'La commission est de 5 % + 3 % TTC (pour la plateforme et la gestion des flux financiers). Elle n’est prélevée qu’en cas de réussite de la collecte.',
       },
@@ -61,7 +61,10 @@ class TipsSection extends Component {
         key: 4,
         title: 'Plus d’astuces ?',
         paragraph:
-          'Préparer votre campagne, communiquer et envoyer vos contreparties… Découvrez tous nos conseils sur KissKissBankBank, le blog (lien) et sur notre chaîne youtube, la KissKiss School (lien)',
+          'Découvrez tous nos conseils sur notre <a href="https://blog.kisskissbankbank.com/reussir-collecte/" style="color:#19B4FA; text-decoration:none">blog</a> \
+            et dans notre chaîne YouTube \
+            <a href="https://www.youtube.com/playlist?list=PLBcOcP0O0TuAkYi3SRdsHA8HcaFHVGUjQ" style="color:#19B4FA; text-decoration:none">La KissKiss School</a>\
+          .',
       },
     ]
 
@@ -104,6 +107,10 @@ const styles = {
       marginLeft: -`${CONTAINER_PADDING}`,
       width: `calc(100% + ${CONTAINER_PADDING}px)`,
     },
+  },
+  links: {
+    color: '#19B4FA',
+    textDecoration: 'none',
   },
 }
 

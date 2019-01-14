@@ -87,7 +87,7 @@ class TimelineSection extends Component {
             style={{ color: COLORS.font1 }}
           >
             Je reçois les conseils d’un coach pour booster ma collecte et mes
-            chances de réussite
+            chances de réussite.
           </Paragraph>
           <Paragraph
             {...paragraphProps}

@@ -94,7 +94,7 @@ class KeySection extends Component {
                   item: (
                     <Text size={viewportIsXSOrLess ? 'tiny' : 'default'}>
                       Une équipe d’experts pour chaque secteur d’activité,
-                      proche de vos besoins et vos problématiques.
+                      proche de vos besoins et de vos problématiques.
                     </Text>
                   ),
                 },

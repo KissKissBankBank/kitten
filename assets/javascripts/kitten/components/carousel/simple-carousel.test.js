@@ -46,4 +46,22 @@ describe('<SimpleCarousel />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with some props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <SimpleCarousel
+            activePaginationColor="Custom active pagination color"
+            paginationColor="Custom pagination color"
+            paginationAlign="Custom pagination align"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
