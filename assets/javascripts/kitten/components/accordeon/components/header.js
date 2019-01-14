@@ -36,11 +36,12 @@ const HeaderStyled = styled.button`
 
 export const Header = ({ id, children }) => (
   <Context.Consumer>
-    {({ updateSelectedItem, selectedItem }) => (
+    {({ updateSelectedItem, selectedItem, componentId }) => (
       <HeaderStyled
         onClick={() => updateSelectedItem(id)}
         role="tab"
         aria-expanded={selectedItem === id}
+        aria-controls={`${componentId}_${id}`}
       >
         {children}
       </HeaderStyled>

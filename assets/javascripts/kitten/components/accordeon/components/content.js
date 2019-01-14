@@ -73,12 +73,13 @@ export class Content extends Component {
 
     return (
       <Context.Consumer>
-        {({ selectedItem, isAnimated }) => (
+        {({ selectedItem, isAnimated, componentId }) => (
           <ContentStyled
             aria-hidden={selectedItem !== id}
             ref={contentDiv => (this.div = contentDiv)}
             maxHeight={maxHeight}
             isAnimated={isAnimated}
+            id={`${componentId}_${id}`}
           >
             <Marger top="3" bottom="3">
               {children}

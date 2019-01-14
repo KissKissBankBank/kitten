@@ -19,6 +19,7 @@ export class Accordeon extends Component {
       selectedItem: props.selectedItem,
       updateSelectedItem: this.updateSelectedItem,
       isAnimated: props.isAnimated,
+      componentId: props.id,
     }
   }
 
@@ -56,10 +57,12 @@ Accordeon.propTypes = {
   selectedItem: PropTypes.number,
   onChange: PropTypes.func,
   isAnimated: PropTypes.bool,
+  id: PropTypes.string,
 }
 
 Accordeon.defaultProps = {
   selectedItem: null,
   onChange: () => {},
   isAnimated: true,
+  id: 'accordeon',
 }
