@@ -31,8 +31,31 @@ const StyledOverlay = styled.div`
 `
 
 export class Overlay extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { isActive: props.isActive }
+  }
+
+  componentDidMount() {
+    if (this.props.toggleEvent !== '') {
+      window.addEventListener(this.props.toggleEvent, this.toggleActiveState)
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.props.toggleEvent !== '') {
+      window.removeEventListener(this.props.toggleEvent, this.toggleActiveState)
+    }
+  }
+
+  toggleActiveState = () => {
+    this.setState({ isActive: !this.state.isActive })
+  }
+
   render() {
-    const { zIndex, isActive, ...other } = this.props
+    const { zIndex, ...other } = this.props
+    const { isActive } = this.state
     return (
       <StyledOverlay
         zIndex={zIndex}
@@ -46,9 +69,11 @@ export class Overlay extends Component {
 Overlay.propTypes = {
   zIndex: PropTypes.number,
   isActive: PropTypes.bool,
+  toggleEvent: PropTypes.string,
 }
 
 Overlay.defaultProps = {
   zIndex: 100,
   isActive: false,
+  toggleEvent: '',
 }
