@@ -38,20 +38,26 @@ export class Overlay extends Component {
   }
 
   componentDidMount() {
-    if (this.props.toggleEvent !== '') {
+    this.props.toggleEvent &&
       window.addEventListener(this.props.toggleEvent, this.toggleActiveState)
-    }
+    this.props.closeEvent &&
+      window.addEventListener(this.props.closeEvent, this.disableActiveState)
+    this.props.openEvent &&
+      window.addEventListener(this.props.openEvent, this.enableActiveState)
   }
 
   componentWillUnmount() {
-    if (this.props.toggleEvent !== '') {
+    this.props.toggleEvent &&
       window.removeEventListener(this.props.toggleEvent, this.toggleActiveState)
-    }
+    this.props.closeEvent &&
+      window.removeEventListener(this.props.closeEvent, this.disableActiveState)
+    this.props.openEvent &&
+      window.removeEventListener(this.props.openEvent, this.enableActiveState)
   }
 
-  toggleActiveState = () => {
-    this.setState({ isActive: !this.state.isActive })
-  }
+  toggleActiveState = () => this.setState({ isActive: !this.state.isActive })
+  disableActiveState = () => this.setState({ isActive: false })
+  enableActiveState = () => this.setState({ isActive: true })
 
   render() {
     const { zIndex, ...other } = this.props
@@ -70,10 +76,14 @@ Overlay.propTypes = {
   zIndex: PropTypes.number,
   isActive: PropTypes.bool,
   toggleEvent: PropTypes.string,
+  closeEvent: PropTypes.string,
+  openEvent: PropTypes.string,
 }
 
 Overlay.defaultProps = {
   zIndex: 100,
   isActive: false,
   toggleEvent: '',
+  closeEvent: '',
+  openEvent: '',
 }
