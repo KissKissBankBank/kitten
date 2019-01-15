@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 
 const StyledOverlay = styled.div`
-  display: block;
-
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   right: 100%;

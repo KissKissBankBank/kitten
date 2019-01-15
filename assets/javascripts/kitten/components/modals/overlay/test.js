@@ -3,8 +3,6 @@ import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { Overlay } from './index'
 
-const CustomComponent = () => <a href="#custom-component">Custom component</a>
-
 describe('<Overlay />', () => {
   let component
 
