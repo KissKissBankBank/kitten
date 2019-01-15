@@ -54,7 +54,10 @@ class PartnersSection extends Component {
         <GridCol col-m="4" className="k-u-align-center">
           <figure style={styles.logosMargin}>
             <div style={styles.logos}>
-              <img src="http://via.placeholder.com/70x50/caf4fe/caf4fe" />
+              <img
+                src="http://via.placeholder.com/70x50/caf4fe/caf4fe"
+                alt=""
+              />
             </div>
             <figcaption style={styles.text}>
               Protection de vos données
@@ -64,7 +67,10 @@ class PartnersSection extends Component {
         <GridCol col-m="4" className="k-u-align-center">
           <figure style={styles.logosMargin}>
             <div style={styles.logos}>
-              <img src="http://via.placeholder.com/100x80/caf4fe/caf4fe" />
+              <img
+                src="http://via.placeholder.com/100x80/caf4fe/caf4fe"
+                alt=""
+              />
             </div>
             <figcaption style={styles.text}>
               KissKissBankBank est filiale de La Banque Postale
@@ -74,7 +80,10 @@ class PartnersSection extends Component {
         <GridCol col-m="4" className="k-u-align-center">
           <figure style={styles.logosMargin}>
             <div style={styles.logos}>
-              <img src="http://via.placeholder.com/50x50/caf4fe/caf4fe" />
+              <img
+                src="http://via.placeholder.com/50x50/caf4fe/caf4fe"
+                alt=""
+              />
             </div>
             <figcaption style={styles.text}>
               Sécurisation de vos transactions financières

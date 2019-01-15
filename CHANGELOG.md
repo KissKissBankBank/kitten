@@ -4,8 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature : Add `activePaginationColor`, `paginationColor` and `paginationAlign`
+- Feature: Add `activePaginationColor`, `paginationColor` and `paginationAlign`
   props on `SimpleCarousel`.
+- Fix: Adds the ability to edit and add styles on `BulletList`.
 
 ## [1.4.1] - 2019-01-10
 

@@ -71,9 +71,9 @@ class TipsSection extends Component {
     return (
       <GridCol col-l="4" col-s="6" offset-s="1" col-xs="10" offset-xs="1">
         <SimpleCarousel
-          paginationColor="#d8d8d8"
-          activePaginationColor="#222"
-          paginationAlign="left"
+          paginationColor={COLORS.line2}
+          activePaginationColor={COLORS.font1}
+          paginationAlign="start"
         >
           {tips.map(item => (
             <TipSimpleCarousel

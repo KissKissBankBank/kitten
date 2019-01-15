@@ -54,7 +54,7 @@ describe('<SimpleCarousel />', () => {
           <SimpleCarousel
             activePaginationColor="Custom active pagination color"
             paginationColor="Custom pagination color"
-            paginationAlign="Custom pagination align"
+            paginationAlign="center"
           />,
         )
         .toJSON()

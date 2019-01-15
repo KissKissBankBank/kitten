@@ -3,8 +3,6 @@ import { storiesOf } from '@storybook/react'
 import { withKnobs, boolean } from '@storybook/addon-knobs/react'
 import PreDeposit from './components/pre-deposit'
 
-storiesOf('Pages/Pre-deposit', module)
-  .addDecorator(withKnobs)
-  .add('Pre-deposit', () => {
-    return <PreDeposit />
-  })
+storiesOf('Pages/Pre-deposit', module).add('Pre-deposit', () => {
+  return <PreDeposit />
+})
