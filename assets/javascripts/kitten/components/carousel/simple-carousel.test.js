@@ -51,11 +51,14 @@ describe('<SimpleCarousel />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <SimpleCarousel
-            activePaginationColor="Custom active pagination color"
-            paginationColor="Custom pagination color"
-            paginationAlign="center"
-          />,
+          <SimpleCarousel paginationAlign="center">
+            <p
+              activePaginationColor="Custom active pagination color"
+              paginationColor="Custom pagination color"
+            >
+              Foo
+            </p>
+          </SimpleCarousel>,
         )
         .toJSON()
     })

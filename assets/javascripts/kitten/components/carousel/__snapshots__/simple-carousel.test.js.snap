@@ -100,5 +100,25 @@ exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 exports[`<SimpleCarousel /> with some props matches with snapshot 1`] = `
 <div
   className="marger__StyledMarger-q3lecu-0 hDKFKn"
-/>
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "gridColumn": 1,
+        "gridRow": 1,
+        "opacity": 1,
+        "transition": "all .8s ease-in-out",
+        "visibility": "visible",
+      }
+    }
+  >
+    <p
+      activePaginationColor="Custom active pagination color"
+      paginationColor="Custom pagination color"
+    >
+      Foo
+    </p>
+  </div>
+</div>
 `;
