@@ -34,8 +34,14 @@ const StyledOverlay = styled.div`
 
 export class Overlay extends Component {
   render() {
-    const { zIndex, isActive } = this.props
-    return <StyledOverlay zIndex={zIndex} className={isActive && 'is-active'} />
+    const { zIndex, isActive, ...other } = this.props
+    return (
+      <StyledOverlay
+        zIndex={zIndex}
+        className={isActive && 'is-active'}
+        {...other}
+      />
+    )
   }
 }
 
