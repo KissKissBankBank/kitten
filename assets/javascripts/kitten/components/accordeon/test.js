@@ -151,7 +151,7 @@ describe('<Accordeon />', () => {
   describe('with isAnimated prop set to `false`', () => {
     beforeEach(() => {
       component = mount(
-        <Accordeon>
+        <Accordeon isAnimated={false}>
           <Accordeon.Item>
             <Accordeon.Header>Header</Accordeon.Header>
             <Accordeon.Content>Content</Accordeon.Content>
@@ -169,7 +169,10 @@ describe('<Accordeon />', () => {
       const item = component.find(Accordeon.Item).first()
       const content = item.find(Accordeon.Content).first()
 
-      expect(content).not.toHaveStyleRule('transition')
+      expect(content).not.toHaveStyleRule(
+        'transition',
+        'visibility 0s ease, max-height 0.4s ease, opacity 0.4s ease',
+      )
     })
   })
 
