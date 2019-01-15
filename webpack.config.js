@@ -8,7 +8,8 @@ module.exports = {
   resolve: {
     extensions: ['.scss', '.js', '.json'],
     alias: {
-      icons: path.join(__dirname, './assets/images/icons')
+      icons: path.join(__dirname, './assets/images/icons'),
+      kitten: path.join(__dirname, '../assets/javascripts/kitten'),
     }
   },
   output: {
