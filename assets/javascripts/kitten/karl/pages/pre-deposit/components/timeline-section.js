@@ -65,7 +65,7 @@ class TimelineSection extends Component {
 
     return (
       <GridCol col-l="5" offset-l="1" col-s="10" offset-s="1">
-        <Timeline itemHeight="thin" color="#19B4FA">
+        <Timeline itemHeight="thin" color="#19b4fa">
           <Paragraph
             {...paragraphProps}
             modifier="tertiary"

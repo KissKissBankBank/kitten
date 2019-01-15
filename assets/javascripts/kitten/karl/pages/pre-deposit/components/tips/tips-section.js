@@ -92,7 +92,7 @@ const imgHeight = 416
 const imgWidth = 555
 
 const imgBackground = image => ({
-  backgroundColor: '#CAF4FE',
+  backgroundColor: '#caf4fe',
   backgroundSize: 'cover',
   backgroundPosition: 'center bottom',
   backgroundRepeat: 'no-repeat',
