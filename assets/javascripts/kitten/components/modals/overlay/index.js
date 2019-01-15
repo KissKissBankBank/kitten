@@ -13,7 +13,7 @@ const StyledOverlay = styled.div`
   visibility: hidden;
 
   opacity: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(34, 34, 34, 0.9);
 
   transition: visibility 0s ease, opacity 0.2s ease, bottom 0s, right 0s;
   transition-delay: 0.2s, 0s, 0.2s, 0.2s;
