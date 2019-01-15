@@ -25,7 +25,6 @@ const HeaderStyled = styled.button`
 
   -webkit-appearance: none;
   cursor: pointer;
-  /* Je préférerais me passer de outline:none; quitte à déterminer un état "actif" */
   outline: none;
 
   &[aria-expanded='true'] {
