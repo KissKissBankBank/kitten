@@ -2,8 +2,7 @@
 
 exports[`<Overlay /> overlay with \`isActive\` prop matches with snapshot 1`] = `
 .c0 {
-  display: block;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   right: 100%;
@@ -34,8 +33,7 @@ exports[`<Overlay /> overlay with \`isActive\` prop matches with snapshot 1`] = 
 
 exports[`<Overlay /> simple overlay with zIndex set to 105 matches with snapshot 1`] = `
 .c0 {
-  display: block;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   right: 100%;
