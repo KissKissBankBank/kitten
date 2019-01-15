@@ -7,6 +7,7 @@ export const ButtonQuestionMarkIcon = props => (
     className="k-ButtonIcon--tooltip--nano"
     modifier="helium"
     size="nano"
+    type="button"
     rounded
     {...props}
   >
