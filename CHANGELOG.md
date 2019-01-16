@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: animation on `Accordeon` component
 - Fix: Remove margin when `title` prop is empty in `CounterBlock` component.
 - Fix: Force `type="button"` on `buttonQuestionMarkIcon` component.
 
