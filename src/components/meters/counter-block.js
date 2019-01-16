@@ -67,7 +67,7 @@ function (_Component) {
       var margin = viewportIsMobile ? 2 : 4;
       return _react.default.createElement(_radium.StyleRoot, {
         style: styles.counterBlock
-      }, _react.default.createElement(_marger.Marger, {
+      }, title && _react.default.createElement(_marger.Marger, {
         bottom: margin
       }, _react.default.createElement(Title, {
         modifier: titleSize,
