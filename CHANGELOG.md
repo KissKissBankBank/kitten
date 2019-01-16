@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update size of the bullets on `BulletList`.
+
 ## [1.5.0] - 2019-01-16
 
 Feature:
