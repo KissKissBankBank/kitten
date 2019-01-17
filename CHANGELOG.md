@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `SearchIcon` to accept `color`, `iconTitle`,
+  `circleProps` and `pathProps` props.
+
 ## [1.5.0] - 2019-01-16
 
 Feature:
