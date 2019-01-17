@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
+import classNames from 'classnames'
 
 const StyledOverlay = styled.div`
   position: absolute;
@@ -60,12 +61,12 @@ export class Overlay extends Component {
   enableActiveState = () => this.setState({ isActive: true })
 
   render() {
-    const { zIndex, ...other } = this.props
+    const { className, zIndex, ...other } = this.props
     const { isActive } = this.state
     return (
       <StyledOverlay
         zIndex={zIndex}
-        className={isActive && 'is-active'}
+        className={classNames(isActive && 'is-active', className)}
         {...other}
       />
     )
