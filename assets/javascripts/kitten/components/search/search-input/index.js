@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
+import React from 'react'
+import styled from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const StyledInput = styled.input`
+export const SearchInput = styled.input.attrs({ type: 'search' })`
   width: 100%;
 
   border: none;
@@ -30,11 +30,3 @@ const StyledInput = styled.input`
     color: ${COLORS.line1};
   }
 `
-
-export class SearchInput extends Component {
-  render() {
-    const { ...other } = this.props
-
-    return <StyledInput type="search" {...other} />
-  }
-}
