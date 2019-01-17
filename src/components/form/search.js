@@ -126,7 +126,13 @@ function (_Component) {
         onMouseOut: this.handleSubmitMouseOut
       }, _react.default.createElement(_searchIcon.SearchIcon, {
         width: "14",
-        height: "14"
+        height: "14",
+        circleProps: {
+          className: 'k-SearchInput__submit__svgCircle'
+        },
+        pathProps: {
+          className: 'k-SearchInput__submit__svgPath'
+        }
       })));
     }
   }]);

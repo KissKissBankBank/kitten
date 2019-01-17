@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: new `Overlay` component with `zIndex` (number) and `isActive` (bool) props.
+Features:
+- New `SearchInput` component.
+- Update `SearchIcon` to accept `color`, `iconTitle`,
+  `circleProps` and `pathProps` props.
+- New `Overlay` component with `zIndex` (number) and `isActive` (bool) props.
 
 ## [1.5.0] - 2019-01-16
 
