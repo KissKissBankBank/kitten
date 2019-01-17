@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update size of the bullets on `BulletList`.
 Features:
 - New `SearchInput` component.
 - Update `SearchIcon` to accept `color`, `iconTitle`,
