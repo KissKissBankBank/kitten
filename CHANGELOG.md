@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: new `SearchInput` component
+
 ## [1.5.0] - 2019-01-16
 
 Feature:
