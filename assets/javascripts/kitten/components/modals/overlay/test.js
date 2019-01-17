@@ -25,4 +25,16 @@ describe('<Overlay />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('overlay with `isActive` prop and custom class', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<Overlay isActive={true} className="fooBarTest" />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
