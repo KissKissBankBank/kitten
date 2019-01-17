@@ -15,4 +15,22 @@ describe('<SearchInput />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('Search input with attributes', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <SearchInput
+            aria-label="Rechercher"
+            placeholder="Rechercher"
+            className="k-testClass"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
