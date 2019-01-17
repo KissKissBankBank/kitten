@@ -11,7 +11,9 @@ var _react = _interopRequireDefault(require("react"));
 
 var Context = _react.default.createContext({
   selectedItem: null,
-  updateSelectedItem: function updateSelectedItem() {}
+  updateSelectedItem: function updateSelectedItem() {},
+  isAnimated: true,
+  componentId: 'accordeon'
 });
 
 exports.Context = Context;

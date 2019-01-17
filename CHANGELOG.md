@@ -5,7 +5,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: new `Overlay` component with `zIndex` (number) and `isActive` (bool) props.
-- Fix: Remove margin when `title` prop is empty in `CounterBlock` component.
+
+## [1.5.0] - 2019-01-16
+
+Feature:
+- Animation on `Accordeon` component.
+
+Fixes:
+- Remove margin when `title` prop is empty in `CounterBlock` component.
+- Force `type="button"` on `buttonQuestionMarkIcon` component.
 
 ## [1.4.1] - 2019-01-10
 

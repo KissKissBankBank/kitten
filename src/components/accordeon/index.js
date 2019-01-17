@@ -50,6 +50,12 @@ function (_Component) {
       if (prevProps.selectedItem !== _this.props.selectedItem) {
         _this.updateSelectedItem(_this.props.selectedItem);
       }
+
+      if (prevProps.isAnimated !== _this.props.isAnimated) {
+        _this.setState({
+          isAnimated: _this.props.isAnimated
+        });
+      }
     };
 
     _this.updateSelectedItem = function (newSelectedItemId) {
@@ -62,7 +68,9 @@ function (_Component) {
 
     _this.state = {
       selectedItem: props.selectedItem,
-      updateSelectedItem: _this.updateSelectedItem
+      updateSelectedItem: _this.updateSelectedItem,
+      isAnimated: props.isAnimated,
+      componentId: props.id
     };
     return _this;
   }
@@ -96,9 +104,13 @@ Accordeon.Header = _header.Header;
 Accordeon.Content = _content.Content;
 Accordeon.propTypes = {
   selectedItem: _propTypes.default.number,
-  onChange: _propTypes.default.func
+  onChange: _propTypes.default.func,
+  isAnimated: _propTypes.default.bool,
+  id: _propTypes.default.string
 };
 Accordeon.defaultProps = {
   selectedItem: null,
-  onChange: function onChange() {}
+  onChange: function onChange() {},
+  isAnimated: true,
+  id: 'accordeon'
 };
