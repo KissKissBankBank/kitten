@@ -4,12 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update size of the bullets on `BulletList`.
+## [1.6.0] - 2019-01-17
+
 Features:
 - New `SearchInput` component.
 - Update `SearchIcon` to accept `color`, `iconTitle`,
   `circleProps` and `pathProps` props.
 - New `Overlay` component with `zIndex` (number) and `isActive` (bool) props.
+
+Fix:
+- Update size of the bullets on `BulletList`.
 
 ## [1.5.0] - 2019-01-16
 
