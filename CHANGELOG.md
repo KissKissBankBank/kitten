@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: New `HighlightHalo` component in `Tour` group. Accepts:
+  `itemSize` (width/height size in pixel number),
+  `itemColor` (CSS color value as string),
+  `animationDuration` (duration in seconds as number).
+
 ## [1.6.0] - 2019-01-17
 
 Features:
