@@ -21,12 +21,15 @@ export class SelectWithState extends Component {
     this.state = {
       value: props.value,
     }
-
-    this.handleChange = this.handleChange.bind(this)
-    this.onKeyDown = this.onKeyDown.bind(this)
   }
 
-  handleChange(val) {
+  componentDidUpdate(prevProps) {
+    if (prevProps.value !== this.props.value) {
+      this.setState({ value: this.props.value })
+    }
+  }
+
+  handleChange = val => {
     const value = val && val.value ? val : { value: null, label: null }
 
     this.setState({ value: value })
@@ -34,7 +37,7 @@ export class SelectWithState extends Component {
     this.props.onInputChange({ value: value, name: this.props.name })
   }
 
-  onKeyDown(event) {
+  onKeyDown = event => {
     const enterKeyCode = 13
     const spaceKeyCode = 32
 

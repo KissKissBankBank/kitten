@@ -151,4 +151,13 @@ describe('<SelectWithState />', () => {
       expect(onInputChangeSpy.calledWith(onInputChangeValue)).toBe(true)
     })
   })
+
+  describe('update props', () => {
+    it('should update select value on prop change', () => {
+      select = mount(<SelectWithState options={options} value="foo" />)
+      expect(select.state().value).toBe('foo')
+      select.setProps({ value: 'bar' })
+      expect(select.state().value).toBe('bar')
+    })
+  })
 })

@@ -35,7 +35,14 @@ class PaymentChoices extends Component {
 
     this.state = {
       selectedItem: null,
+      expMonth: undefined,
+      expYear: undefined,
     }
+  }
+
+  handleExpChange = ({ target }) => {
+    const [month, year] = target.value.split('/')
+    this.setState({ expMonth: month, expYear: parseInt(year) })
   }
 
   handleChange = selectedItem => this.setState({ selectedItem })
@@ -116,6 +123,7 @@ class PaymentChoices extends Component {
                               <Field.Input
                                 id="card-number"
                                 placeholder="XXXX XXXX XXXX XXXX"
+                                autoComplete="cc-number"
                                 error={error}
                               />
 
@@ -139,11 +147,34 @@ class PaymentChoices extends Component {
                                     id="month"
                                     name="month"
                                     placeholder="Mois"
+                                    value={this.state.expMonth}
                                     options={[
-                                      { value: 1, label: 'Janvier' },
-                                      { value: 2, label: 'Février' },
+                                      { value: '01', label: '01' },
+                                      { value: '02', label: '02' },
+                                      { value: '03', label: '03' },
+                                      { value: '04', label: '04' },
+                                      { value: '05', label: '05' },
+                                      { value: '06', label: '06' },
+                                      { value: '07', label: '07' },
+                                      { value: '08', label: '08' },
+                                      { value: '09', label: '09' },
+                                      { value: '10', label: '10' },
+                                      { value: '11', label: '11' },
+                                      { value: '12', label: '12' },
                                     ]}
                                     error={error}
+                                  />
+                                  <input
+                                    name="cc-exp"
+                                    id="frmCCExp"
+                                    placeholder="MM-YYYY"
+                                    autoComplete="cc-exp"
+                                    style={{
+                                      position: 'absolute',
+                                      zIndex: '-1',
+                                      opacity: '0',
+                                    }}
+                                    onChange={this.handleExpChange}
                                   />
                                 </GridCol>
 
@@ -152,11 +183,16 @@ class PaymentChoices extends Component {
                                     id="year"
                                     name="year"
                                     placeholder="Année"
+                                    value={this.state.expYear}
                                     options={[
-                                      { value: 2018, label: '2018' },
-                                      { value: 2019, label: '2019' },
-                                      { value: 2020, label: '2020' },
-                                      { value: 2021, label: '2021' },
+                                      { value: 2018, label: '18' },
+                                      { value: 2019, label: '19' },
+                                      { value: 2020, label: '20' },
+                                      { value: 2021, label: '21' },
+                                      { value: 2022, label: '22' },
+                                      { value: 2023, label: '23' },
+                                      { value: 2024, label: '24' },
+                                      { value: 2025, label: '25' },
                                     ]}
                                     error={error}
                                   />
