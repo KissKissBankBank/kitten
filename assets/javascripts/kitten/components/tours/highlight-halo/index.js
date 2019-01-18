@@ -4,58 +4,56 @@ import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const highlightHaloKeyframes = keyframes`
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
+const highlightHaloKeyframes = animationDuration =>
+  keyframes`
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
 
-  /* calculer le pourcentage en secondes absolues :
-    animationDuration * pourcentage / 15
-  */
-  2% {
-    transform: scale(1.1);
-    opacity: 0.2;
-  }
-  3% {
-    transform: scale(0.8);
-  }
-  4% {
-    transform: scale(1.05);
-  }
-  5% {
-    transform: scale(0.9);
-  }
-  6% {
-    transform: scale(1);
-  }
+    ${(15 / animationDuration) * 1}% {
+      transform: scale(1.1);
+      opacity: 0.2;
+    }
+    ${(15 / animationDuration) * 1.5}% {
+      transform: scale(0.8);
+    }
+    ${(15 / animationDuration) * 2}% {
+      transform: scale(1.05);
+    }
+    ${(15 / animationDuration) * 2.5}% {
+      transform: scale(0.9);
+    }
+    ${(15 / animationDuration) * 3}% {
+      transform: scale(1);
+    }
 
-  16.66% {
-    transform: scale(.84);
-    opacity: 0.2;
-  }
-  33.33% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(.84);
-  }
-  66.66% {
-    transform: scale(1);
-  }
-  83.33% {
-    transform: scale(.84);
-    opacity: 0.2;
-  }
+    16.66% {
+      transform: scale(.84);
+      opacity: 0.2;
+    }
+    33.33% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(.84);
+    }
+    66.66% {
+      transform: scale(1);
+    }
+    83.33% {
+      transform: scale(.84);
+      opacity: 0.2;
+    }
 
-  98.5% {
-    transform: scale(1);
-    opacity: 0.2;
-  }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
+    ${100 - 15 / animationDuration}% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(0);
+      opacity: 0;
+    }
 `
 
 const StyledHighlightHalo = styled.div`
@@ -77,7 +75,8 @@ const StyledHighlightHalo = styled.div`
 
     transform: scale(0);
 
-    animation: ${highlightHaloKeyframes}
+    animation: ${({ animationDuration }) =>
+        highlightHaloKeyframes(animationDuration)}
       ${({ animationDuration }) => animationDuration}s ease-in-out 1;
   }
 
@@ -85,7 +84,7 @@ const StyledHighlightHalo = styled.div`
     width: 100%;
     height: 100%;
 
-    animation-delay: 1.15s;
+    animation-delay: 1.2s;
   }
   > div:nth-of-type(2) {
     top: 16.66%;
@@ -94,7 +93,7 @@ const StyledHighlightHalo = styled.div`
     width: 66.66%;
     height: 66.66%;
 
-    animation-delay: 1.075s;
+    animation-delay: 1.1s;
   }
   > div:nth-of-type(3) {
     top: 33.33%;
@@ -110,12 +109,6 @@ const StyledHighlightHalo = styled.div`
 export class HighlightHalo extends Component {
   constructor(props) {
     super(props)
-  }
-
-  absoluteDuration(duration) {
-    const { animationDuration } = props
-
-    return (duration * animationDuration) / 15
   }
 
   render() {
