@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HighlightHalo /> HighlightHalo with \`isActive\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  height: 18.75rem;
+  width: 18.75rem;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c0 > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: #444;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-animation: ipfATZ 20s ease-in-out 1;
+  animation: ipfATZ 20s ease-in-out 1;
+}
+
+.c0 > div:nth-of-type(1) {
+  width: 100%;
+  height: 100%;
+  -webkit-animation-delay: 1.15s;
+  animation-delay: 1.15s;
+}
+
+.c0 > div:nth-of-type(2) {
+  top: 16.66%;
+  left: 16.66%;
+  width: 66.66%;
+  height: 66.66%;
+  -webkit-animation-delay: 1.075s;
+  animation-delay: 1.075s;
+}
+
+.c0 > div:nth-of-type(3) {
+  top: 33.33%;
+  left: 33.33%;
+  width: 33.33%;
+  height: 33.33%;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+<div
+  className="c0"
+>
+  <div />
+  <div />
+  <div />
+</div>
+`;
+
+exports[`<HighlightHalo /> simple HighlightHalo  matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  height: 7.5rem;
+  width: 7.5rem;
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.c0 > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: #19b4fa;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-animation: ipfATZ 10s ease-in-out 1;
+  animation: ipfATZ 10s ease-in-out 1;
+}
+
+.c0 > div:nth-of-type(1) {
+  width: 100%;
+  height: 100%;
+  -webkit-animation-delay: 1.15s;
+  animation-delay: 1.15s;
+}
+
+.c0 > div:nth-of-type(2) {
+  top: 16.66%;
+  left: 16.66%;
+  width: 66.66%;
+  height: 66.66%;
+  -webkit-animation-delay: 1.075s;
+  animation-delay: 1.075s;
+}
+
+.c0 > div:nth-of-type(3) {
+  top: 33.33%;
+  left: 33.33%;
+  width: 33.33%;
+  height: 33.33%;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+<div
+  className="c0"
+>
+  <div />
+  <div />
+  <div />
+</div>
+`;

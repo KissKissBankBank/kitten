@@ -1,0 +1,36 @@
+import React from 'react'
+import renderer from 'react-test-renderer'
+import 'jest-styled-components'
+import { HighlightHalo } from './index'
+
+describe('<HighlightHalo />', () => {
+  let component
+
+  describe('simple HighlightHalo ', () => {
+    beforeEach(() => {
+      component = renderer.create(<HighlightHalo />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('HighlightHalo with `isActive` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <HighlightHalo
+            haloColor="#444"
+            haloSize={300}
+            animationDuration={20}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+})
