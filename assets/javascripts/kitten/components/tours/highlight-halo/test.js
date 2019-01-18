@@ -16,7 +16,7 @@ describe('<HighlightHalo />', () => {
     })
   })
 
-  describe('HighlightHalo with `isActive` prop', () => {
+  describe('HighlightHalo with multiple props', () => {
     beforeEach(() => {
       component = renderer
         .create(
