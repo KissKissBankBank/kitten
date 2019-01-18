@@ -139,7 +139,7 @@ export class HighlightHalo extends Component {
 HighlightHalo.propTypes = {
   haloColor: PropTypes.string,
   haloSize: PropTypes.number,
-  animationDuration: PropTypes.string,
+  animationDuration: PropTypes.number,
 }
 
 HighlightHalo.defaultProps = {
