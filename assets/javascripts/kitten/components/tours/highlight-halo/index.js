@@ -6,11 +6,13 @@ import { pxToRem } from '../../../helpers/utils/typography'
 
 const highlightHaloKeyframes = props =>
   keyframes`
+    /* Initial state */
     0% {
       transform: scale(0);
       opacity: 0;
     }
 
+    /* Bubbling animation with calculated absolute durations */
     ${15 / props.animationDuration}% {
       transform: scale(1.1);
       opacity: 0.2;
@@ -28,6 +30,7 @@ const highlightHaloKeyframes = props =>
       transform: scale(1);
     }
 
+    /* Breathing animation with relative durations */
     16.66% {
       transform: scale(.84);
       opacity: 0.2;
@@ -46,6 +49,7 @@ const highlightHaloKeyframes = props =>
       opacity: 0.2;
     }
 
+    /* Closing animation with absllute durations */
     ${100 - 15 / props.animationDuration}% {
       transform: scale(1);
       opacity: 0.2;
