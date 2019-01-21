@@ -51,6 +51,10 @@ const FlexButtonsContainer = styled.div`
     margin-bottom: ${pxToRem(20)};
   }
 
+  .k-Button--icon svg.k-Button__icon {
+    padding-left: 0;
+  }
+
   @media screen and (min-width: ${ScreenConfig.XS.min}px) {
     max-width: ${pxToRem(325)};
   }
