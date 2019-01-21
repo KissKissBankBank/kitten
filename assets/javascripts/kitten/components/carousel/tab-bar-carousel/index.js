@@ -6,6 +6,7 @@ import { Next } from './components/next'
 import { Pagination } from './components/pagination'
 import COLORS from './../../../constants/colors-config'
 import { getReactElementsByType } from './../../../helpers/react/react-elements'
+import { pxToRem } from './../../../helpers/utils/typography'
 
 const NavTabCarouselStyles = styled.div`
   display: flex;
@@ -13,7 +14,7 @@ const NavTabCarouselStyles = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: ${COLORS.font1};
-  padding: 32px 40px;
+  padding: ${pxToRem(32)} ${pxToRem(40)};
 `
 
 export class NavTabCarousel extends Component {
