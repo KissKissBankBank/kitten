@@ -8,6 +8,23 @@ import { createRangeFromZeroTo } from '../../helpers/utils/range'
 const Marger = Radium(MargerBase)
 
 class SimpleCarouselBase extends Component {
+  static propTypes = {
+    activePaginationColor: PropTypes.string,
+    paginationColor: PropTypes.string,
+    paginationAlign: PropTypes.oneOf([
+      'start',
+      'center',
+      'space-between',
+      'space-around',
+    ]),
+  }
+
+  static defaultProps = {
+    activePaginationColor: COLORS.primary1,
+    paginationColor: COLORS.background1,
+    paginationAlign: 'center',
+  }
+
   constructor(props) {
     super(props)
 
@@ -24,9 +41,19 @@ class SimpleCarouselBase extends Component {
   }
 
   render() {
-    const { children } = this.props
+    const {
+      children,
+      activePaginationColor,
+      paginationColor,
+      paginationAlign,
+    } = this.props
+
     const { totalPagesCount, currentPageNumber } = this.state
     const rangePage = createRangeFromZeroTo(totalPagesCount)
+    const paginationStyle = [
+      styles.pagination,
+      paginationAlign && { justifyContent: paginationAlign },
+    ]
 
     return (
       <Fragment>
@@ -46,11 +73,14 @@ class SimpleCarouselBase extends Component {
         </Marger>
 
         {this.showPagination() && (
-          <Marger top="4" bottom="4" style={styles.pagination}>
+          <Marger top="4" bottom="4" style={paginationStyle}>
             {rangePage.map(numPage => {
               const pageStyle = [
                 styles.page,
-                numPage === currentPageNumber && styles.page.active,
+                paginationColor && { background: paginationColor },
+                numPage === currentPageNumber && {
+                  background: activePaginationColor,
+                },
               ]
 
               return (
@@ -73,37 +103,27 @@ const styles = {
     display: 'grid',
     gap: 0,
   },
-
   item: {
     gridColumn: 1,
     gridRow: 1,
     visibility: 'visible',
     opacity: 1,
     transition: `all .8s ease-in-out`,
-
     hide: {
       visibility: 'hidden',
       opacity: 0,
       pointerEvents: 'none',
     },
   },
-
   pagination: {
     display: 'flex',
-    justifyContent: 'center',
   },
-
   page: {
     width: 6,
     height: 6,
-    background: COLORS.background1,
     marginRight: 5,
     cursor: 'pointer',
-
-    active: {
-      transition: `background .4s ease-in-out`,
-      background: COLORS.primary1,
-    },
+    transition: `background .4s ease-in-out`,
   },
 }
 
