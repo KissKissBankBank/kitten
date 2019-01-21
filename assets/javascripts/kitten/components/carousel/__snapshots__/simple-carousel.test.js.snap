@@ -40,7 +40,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 dssCRr"
+    className="marger__StyledMarger-q3lecu-0 kbXjqc"
   >
     <div
       data-radium={true}
@@ -65,6 +65,7 @@ Array [
           "cursor": "pointer",
           "height": 6,
           "marginRight": 5,
+          "transition": "background .4s ease-in-out",
           "width": 6,
         }
       }
@@ -90,6 +91,32 @@ exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
     }
   >
     <p>
+      Foo
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<SimpleCarousel /> with some props matches with snapshot 1`] = `
+<div
+  className="marger__StyledMarger-q3lecu-0 hDKFKn"
+>
+  <div
+    data-radium={true}
+    style={
+      Object {
+        "gridColumn": 1,
+        "gridRow": 1,
+        "opacity": 1,
+        "transition": "all .8s ease-in-out",
+        "visibility": "visible",
+      }
+    }
+  >
+    <p
+      activePaginationColor="Custom active pagination color"
+      paginationColor="Custom pagination color"
+    >
       Foo
     </p>
   </div>
