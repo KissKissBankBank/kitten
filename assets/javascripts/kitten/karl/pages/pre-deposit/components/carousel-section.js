@@ -167,7 +167,7 @@ const styles = {
   background: {
     position: 'relative',
     overflow: 'hidden',
-    padding: 'pxToRem(100 0)',
+    padding: `${pxToRem(100)} ${pxToRem(0)}`,
     marginTop: pxToRem(60),
     background: `linear-gradient(
       to right,
