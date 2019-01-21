@@ -19,6 +19,8 @@ import { EmailIcon } from '../../../../components/icons/email-icon'
 import { Carousel } from '../../../../components/carousel/carousel'
 import { CrowdfundingCard } from '../../../../components/cards/crowdfunding-card'
 
+import ProjectsCarousel from '../../common/projects-carousel'
+
 storiesOf('Pages/Contribute', module).add('Thanks', () => {
   return (
     <Marger top="10" bottom="10">
@@ -81,73 +83,9 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
             </Marger>
           </GridCol>
         </Grid>
-
-        <Grid>
-          <GridCol />
-        </Grid>
-
-        <Carousel
-          itemMinWidth={280}
-          baseItemMarginBetween={20}
-          data={[
-            {
-              title: 'Item A',
-              imageSrc: 'http://placekitten.com/500/300/',
-              thumbSrc: 'http://placekitten.com/80/80/',
-            },
-            {
-              title: 'Item B',
-              imageSrc: 'http://placekitten.com/501/301/',
-              thumbSrc: 'http://placekitten.com/81/81/',
-            },
-            {
-              title: 'Item C',
-              imageSrc: 'http://placekitten.com/502/302/',
-              thumbSrc: 'http://placekitten.com/82/82/',
-            },
-            {
-              title: 'Item D',
-              imageSrc: 'http://placekitten.com/503/303/',
-              thumbSrc: 'http://placekitten.com/83/83/',
-            },
-            {
-              title: 'Item E',
-              imageSrc: 'http://placekitten.com/504/304/',
-              thumbSrc: 'http://placekitten.com/84/84/',
-            },
-          ]}
-          renderItem={({ item }) => {
-            return (
-              <CrowdfundingCard
-                href="#"
-                imageProps={{
-                  src: item.imageSrc,
-                  alt: 'Image alt',
-                  backgroundColor: '#d8d8d8',
-                  color: '#333',
-                }}
-                avatarProps={{
-                  src: item.thumbSrc,
-                  alt: 'Avatar alt',
-                }}
-                ownerTitle="Title"
-                ownerDescription="Custom description"
-                titleProps={{
-                  tag: 'h4',
-                }}
-                cardTitle={item.title}
-                cardSubTitle="Custom subtitle"
-                titlesMinHeight
-                info1="Custom information #1"
-                info2="Custom information #2"
-                info3="Custom information #3"
-                progress="84"
-                state="Custom state"
-              />
-            )
-          }}
-        />
       </Container>
+
+      <ProjectsCarousel title="Test" buttonHref="#" buttonLabel="Voir plus" />
     </Marger>
   )
 })
