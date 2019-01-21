@@ -110,13 +110,19 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
                 </Title>
               </Marger>
               <FlexButtonsContainer>
-                <FacebookButtonIconWords tag="a">
+                <FacebookButtonIconWords tag="a" iconWithMinWidth={true}>
                   Partager sur Facebook
                 </FacebookButtonIconWords>
-                <TwitterButtonIconWords tag="a">
+                <TwitterButtonIconWords tag="a" iconWithMinWidth={true}>
                   Partager sur Twitter
                 </TwitterButtonIconWords>
-                <Button modifier="lithium" size="big" icon={true} tag="a">
+                <Button
+                  modifier="lithium"
+                  size="big"
+                  icon={true}
+                  tag="a"
+                  iconWithMinWidth={true}
+                >
                   <EmailIcon className="k-Button__icon" />
                   Partager par email
                 </Button>
