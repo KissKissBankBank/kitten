@@ -35,14 +35,7 @@ class PaymentChoices extends Component {
 
     this.state = {
       selectedItem: null,
-      expMonth: undefined,
-      expYear: undefined,
     }
-  }
-
-  handleExpChange = ({ target }) => {
-    const [month, year] = target.value.split('/')
-    this.setState({ expMonth: month, expYear: parseInt(year) })
   }
 
   handleChange = selectedItem => this.setState({ selectedItem })
@@ -147,7 +140,7 @@ class PaymentChoices extends Component {
                                     id="month"
                                     name="month"
                                     placeholder="Mois"
-                                    value={this.state.expMonth}
+                                    autoFill="cc-exp-month"
                                     options={[
                                       { value: '01', label: '01' },
                                       { value: '02', label: '02' },
@@ -164,18 +157,6 @@ class PaymentChoices extends Component {
                                     ]}
                                     error={error}
                                   />
-                                  <input
-                                    name="cc-exp"
-                                    id="frmCCExp"
-                                    placeholder="MM-YYYY"
-                                    autoComplete="cc-exp"
-                                    style={{
-                                      position: 'absolute',
-                                      zIndex: '-1',
-                                      opacity: '0',
-                                    }}
-                                    onChange={this.handleExpChange}
-                                  />
                                 </GridCol>
 
                                 <GridCol col="6">
@@ -183,7 +164,7 @@ class PaymentChoices extends Component {
                                     id="year"
                                     name="year"
                                     placeholder="Année"
-                                    value={this.state.expYear}
+                                    autoFill="cc-exp-year"
                                     options={[
                                       { value: 2018, label: '18' },
                                       { value: 2019, label: '19' },
