@@ -56,7 +56,7 @@ class TriptychBase extends Component {
     return (
       <StyleRoot>
         <Grid className="k-u-align-center">
-          <GridCol col-l="6" offset-l="3" col-m="6" offset-m="0">
+          <GridCol col-l="10" offset-l="1" col-m="6" offset-m="0">
             <div ref={this.setRef('title')}>
               <Marger bottom="2">{title}</Marger>
 

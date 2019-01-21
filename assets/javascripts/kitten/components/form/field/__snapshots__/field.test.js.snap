@@ -38,6 +38,7 @@ Array [
             data-for="tooltip"
             data-tip={true}
             tabIndex={null}
+            type="button"
           >
             <svg
               className="k-ButtonIcon__svg"
@@ -132,6 +133,7 @@ Array [
             data-for="tooltip"
             data-tip={true}
             tabIndex={null}
+            type="button"
           >
             <svg
               className="k-ButtonIcon__svg"
