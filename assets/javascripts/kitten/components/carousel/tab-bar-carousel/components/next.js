@@ -5,7 +5,7 @@ import TYPOGRAPHY from './../../../../constants/typography-config'
 
 const RightArrowContainerStyles = styled.a`
   color: #fff;
-  ${TYPOGRAPHY.fontStyles.bold};
+  ${TYPOGRAPHY.fontStyles.regular};
   align-items: center;
   display: flex;
 `
