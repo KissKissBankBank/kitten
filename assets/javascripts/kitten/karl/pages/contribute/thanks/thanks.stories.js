@@ -98,6 +98,7 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
                   tag="textarea"
                   rows="4"
                   placeholder="Laissez un message au porteur de projet…"
+                  aria-label="Laissez un message au porteur de projet"
                 />
               </Marger>
               <Marger top="3" className="k-u-align-center@s-down">
