@@ -84,7 +84,7 @@ const StyledHighlightHalo = styled.div`
     width: 100%;
     height: 100%;
 
-    animation-delay: 1.2s;
+    animation-delay: ${({ animationDelay }) => animationDelay}.2s;
   }
   > div:nth-of-type(2) {
     top: 16.66%;
@@ -93,7 +93,7 @@ const StyledHighlightHalo = styled.div`
     width: 66.66%;
     height: 66.66%;
 
-    animation-delay: 1.1s;
+    animation-delay: ${({ animationDelay }) => animationDelay}.1s;
   }
   > div:nth-of-type(3) {
     top: 33.33%;
@@ -102,7 +102,7 @@ const StyledHighlightHalo = styled.div`
     width: 33.33%;
     height: 33.33%;
 
-    animation-delay: 1s;
+    animation-delay: ${({ animationDelay }) => animationDelay}s;
   }
 `
 
@@ -124,10 +124,12 @@ HighlightHalo.propTypes = {
   haloColor: PropTypes.string,
   haloSize: PropTypes.number,
   animationDuration: PropTypes.number,
+  animationDelay: PropTypes.number,
 }
 
 HighlightHalo.defaultProps = {
   haloColor: COLORS.primary1,
   haloSize: 120,
   animationDuration: 10,
+  animationDelay: 0,
 }

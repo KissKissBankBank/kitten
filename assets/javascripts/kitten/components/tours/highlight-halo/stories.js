@@ -13,7 +13,7 @@ const StoryContainer = ({ children }) => (
 storiesOf('Tour/HighlightHalo', module).add('default', () => {
   return (
     <StoryContainer>
-      <HighlightHalo />
+      <HighlightHalo animationDelay={1} />
     </StoryContainer>
   )
 })

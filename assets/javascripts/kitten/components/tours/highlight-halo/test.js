@@ -24,6 +24,7 @@ describe('<HighlightHalo />', () => {
             haloColor="#444"
             haloSize={300}
             animationDuration={20}
+            animationDelay={1}
           />,
         )
         .toJSON()
