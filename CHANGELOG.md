@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `SearchInput` results cross.
 - Feature: Add `activePaginationColor`, `paginationColor` and `paginationAlign`
   props on `SimpleCarousel`.
 - Fix: Adds the ability to edit and add styles on `BulletList`.
