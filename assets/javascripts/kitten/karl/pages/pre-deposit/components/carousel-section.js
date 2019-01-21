@@ -176,7 +176,7 @@ const styles = {
       #ecfcff 50%,
       #ecfcff 100%)`,
     [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
-      padding: 'pxToRem(50 0)',
+      padding: `${pxToRem(50)} ${pxToRem(0)}`,
       marginTop: pxToRem(20),
     },
   },
