@@ -13,12 +13,13 @@ export class BulletList extends React.Component {
   }
 
   renderItem(element) {
-    const { key, item } = element
+    const { key, item, className } = element
     const itemClassName = classNames(
       'k-BulletList__item',
       { 'k-BulletList__item--large': this.props.large },
       { 'k-BulletList__item--big': this.props.big },
       { 'k-BulletList__item--huge': this.props.huge },
+      className,
     )
 
     return (
