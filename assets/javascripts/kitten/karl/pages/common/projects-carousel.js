@@ -92,28 +92,28 @@ const ProjectsCarousel = ({
           data={[
             {
               title: 'Item A',
-              imageSrc: 'http://placekitten.com/500/300/',
-              thumbSrc: 'http://placekitten.com/80/80/',
+              imageSrc: 'http://placekitten.com/500/300',
+              thumbSrc: 'http://placekitten.com/80/80',
             },
             {
               title: 'Item B',
-              imageSrc: 'http://placekitten.com/501/301/',
-              thumbSrc: 'http://placekitten.com/81/81/',
+              imageSrc: 'http://placekitten.com/501/301',
+              thumbSrc: 'http://placekitten.com/81/81',
             },
             {
               title: 'Item C',
-              imageSrc: 'http://placekitten.com/502/302/',
-              thumbSrc: 'http://placekitten.com/82/82/',
+              imageSrc: 'http://placekitten.com/502/302',
+              thumbSrc: 'http://placekitten.com/82/82',
             },
             {
               title: 'Item D',
-              imageSrc: 'http://placekitten.com/503/303/',
-              thumbSrc: 'http://placekitten.com/83/83/',
+              imageSrc: 'http://placekitten.com/503/303',
+              thumbSrc: 'http://placekitten.com/83/83',
             },
             {
               title: 'Item E',
-              imageSrc: 'http://placekitten.com/504/304/',
-              thumbSrc: 'http://placekitten.com/84/84/',
+              imageSrc: 'http://placekitten.com/504/304',
+              thumbSrc: 'http://placekitten.com/84/84',
             },
           ]}
           renderItem={({ item }) => (
