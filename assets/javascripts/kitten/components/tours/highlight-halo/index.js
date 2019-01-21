@@ -1,30 +1,30 @@
 import React, { Component } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const highlightHaloKeyframes = animationDuration =>
+const highlightHaloKeyframes = props =>
   keyframes`
     0% {
       transform: scale(0);
       opacity: 0;
     }
 
-    ${15 / animationDuration}% {
+    ${15 / props.animationDuration}% {
       transform: scale(1.1);
       opacity: 0.2;
     }
-    ${(15 / animationDuration) * 1.5}% {
+    ${(15 / props.animationDuration) * 1.5}% {
       transform: scale(0.8);
     }
-    ${(15 / animationDuration) * 2}% {
+    ${(15 / props.animationDuration) * 2}% {
       transform: scale(1.05);
     }
-    ${(15 / animationDuration) * 2.5}% {
+    ${(15 / props.animationDuration) * 2.5}% {
       transform: scale(0.9);
     }
-    ${(15 / animationDuration) * 3}% {
+    ${(15 / props.animationDuration) * 3}% {
       transform: scale(1);
     }
 
@@ -46,7 +46,7 @@ const highlightHaloKeyframes = animationDuration =>
       opacity: 0.2;
     }
 
-    ${100 - 15 / animationDuration}% {
+    ${100 - 15 / props.animationDuration}% {
       transform: scale(1);
       opacity: 0.2;
     }
@@ -54,6 +54,10 @@ const highlightHaloKeyframes = animationDuration =>
       transform: scale(0);
       opacity: 0;
     }
+`
+
+const highlightHaloKeyAnimation = props => css`
+  ${highlightHaloKeyframes} ${props.animationDuration}s ease-in-out 1;
 `
 
 const StyledHighlightHalo = styled.div`
@@ -75,9 +79,7 @@ const StyledHighlightHalo = styled.div`
 
     transform: scale(0);
 
-    animation: ${({ animationDuration }) =>
-        highlightHaloKeyframes(animationDuration)}
-      ${({ animationDuration }) => animationDuration}s ease-in-out 1;
+    animation: ${highlightHaloKeyAnimation};
   }
 
   > div:nth-of-type(1) {
