@@ -1,10 +1,11 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { ArrowIcon } from './../../../icons/arrow-icon'
+import TYPOGRAPHY from './../../../../constants/typography-config'
 
 const RightArrowContainerStyles = styled.a`
   color: #fff;
-  font-weight: 500;
+  ${TYPOGRAPHY.fontStyles.bold};
   align-items: center;
   display: flex;
 `
