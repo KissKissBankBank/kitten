@@ -39,11 +39,9 @@ export class NavTabCarousel extends Component {
 
     return (
       <NavTabCarouselStyles>
-        {React.cloneElement(prev, { children: prev.props.children })}
-        {React.cloneElement(pagination, {
-          activeIndex: pagination.props.activeIndex,
-        })}
-        {React.cloneElement(next, { children: next.props.children })}
+        {prev}
+        {pagination}
+        {next}
       </NavTabCarouselStyles>
     )
   }

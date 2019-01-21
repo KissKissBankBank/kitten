@@ -18,6 +18,8 @@ const StoryGrid = ({ children }) => (
   </Container>
 )
 
+const totalIndex = 3
+
 storiesOf('Carousel/NavTabCarousel', module)
   .addDecorator(withKnobs)
   .add('default', () => {
@@ -26,7 +28,9 @@ storiesOf('Carousel/NavTabCarousel', module)
         <NavTabCarousel>
           <NavTabCarousel.Prev children={text('Prev text', 'Foobar 1')} />
           <NavTabCarousel.Pagination
-            activeIndex={number('activeIndex', 2, { min: 1, max: 3, step: 1 })}
+            activeIndex={number('active index', 2)}
+            totalIndex={number('total index', totalIndex)}
+            color={text('Color', '')}
           />
           <NavTabCarousel.Next children={text('Next text', 'Foobar 2')} />
         </NavTabCarousel>

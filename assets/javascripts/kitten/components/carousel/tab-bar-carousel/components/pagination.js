@@ -6,10 +6,10 @@ import { Marger } from './../../../layout/marger'
 import { pxToRem } from './../../../../helpers/utils/typography'
 
 const BulletPointStyles = styled.div`
-  width: pxToRem(6);
-  height: pxToRem(6);
-  margin-left: pxToRem(4);
-  margin-right: pxToRem(4);
+  width: ${pxToRem(6)};
+  height: ${pxToRem(6)};
+  margin-left: ${pxToRem(4)};
+  margin-right: ${pxToRem(4)};
   background-color: ${COLORS.background1};
 
   ${({ isSelected, color }) =>
@@ -22,27 +22,28 @@ const BulletPointStyles = styled.div`
 const PaginationStyles = styled.div`
   display: flex;
   justify-content: center;
-  margin: 0 10px;
+  margin: 0 ${pxToRem(10)};
 `
 
 const BulletPoint = ({ isSelected, color }) => {
   return <BulletPointStyles isSelected={isSelected} color={color} />
 }
 
-export const Pagination = ({ activeIndex }) => {
+export const Pagination = ({ activeIndex, totalIndex, color }) => {
   return (
     <PaginationStyles>
-      <BulletPoint isSelected={activeIndex == 1} />
-      <BulletPoint isSelected={activeIndex == 2} />
-      <BulletPoint isSelected={activeIndex == 3} />
+      {Array.apply(null, { length: totalIndex }).map((_, index) => (
+        <BulletPointStyles
+          key={index}
+          isSelected={activeIndex === index + 1}
+          color={color}
+        />
+      ))}
     </PaginationStyles>
   )
 }
 
 Pagination.propTypes = {
-  activeIndex: PropTypes.oneOf([1, 2, 3]),
-}
-
-Pagination.defaultProps = {
-  activeIndex: null,
+  activeIndex: PropTypes.number.isRequired,
+  totalIndex: PropTypes.number.isRequired,
 }
