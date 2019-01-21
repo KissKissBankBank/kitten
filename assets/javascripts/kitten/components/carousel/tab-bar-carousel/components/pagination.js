@@ -25,10 +25,6 @@ const PaginationStyles = styled.div`
   margin: 0 ${pxToRem(10)};
 `
 
-const BulletPoint = ({ isSelected, color }) => {
-  return <BulletPointStyles isSelected={isSelected} color={color} />
-}
-
 export const Pagination = ({ activeIndex, totalIndex, color }) => {
   return (
     <PaginationStyles>
