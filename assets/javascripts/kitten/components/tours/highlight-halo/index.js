@@ -11,7 +11,7 @@ const highlightHaloKeyframes = animationDuration =>
       opacity: 0;
     }
 
-    ${(15 / animationDuration) * 1}% {
+    ${15 / animationDuration}% {
       transform: scale(1.1);
       opacity: 0.2;
     }
@@ -107,20 +107,11 @@ const StyledHighlightHalo = styled.div`
 `
 
 export class HighlightHalo extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
-    const { haloSize, haloColor, animationDuration, ...other } = this.props
+    const { ...other } = this.props
 
     return (
-      <StyledHighlightHalo
-        haloSize={haloSize}
-        haloColor={haloColor}
-        animationDuration={animationDuration}
-        {...other}
-      >
+      <StyledHighlightHalo {...other}>
         <div />
         <div />
         <div />
