@@ -22,7 +22,6 @@ const PaginationStyles = styled.div`
   display: flex;
   justify-content: center;
   margin: 0 10px;
-  flex-grow: 2;
 `
 
 const BulletPoint = ({ isSelected, color }) => {
