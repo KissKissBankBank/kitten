@@ -87,7 +87,12 @@ export class Search extends Component {
           onMouseOver={this.handleSubmitMouseOver}
           onMouseOut={this.handleSubmitMouseOut}
         >
-          <SearchIcon width="14" height="14" />
+          <SearchIcon
+            width="14"
+            height="14"
+            circleProps={{ className: 'k-SearchInput__submit__svgCircle' }}
+            pathProps={{ className: 'k-SearchInput__submit__svgPath' }}
+          />
         </button>
       </form>
     )

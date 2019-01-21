@@ -71,11 +71,9 @@ describe('<Accordeon />', () => {
 
     it('has selected styles', () => {
       const item = component.find(Accordeon.Item).first()
-      const header = item.find(Accordeon.Header).first()
       const content = item.find(Accordeon.Content).first()
 
-      expect(header).toHaveStyleRule('border-bottom-left-radius', '0')
-      expect(content).toHaveStyleRule('display', 'block')
+      expect(content).toHaveStyleRule('visibility', 'visible')
     })
   })
 
@@ -103,11 +101,9 @@ describe('<Accordeon />', () => {
 
     it('has selected styles', () => {
       const item = component.find(Accordeon.Item).last()
-      const header = item.find(Accordeon.Header).first()
       const content = item.find(Accordeon.Content).first()
 
-      expect(header).toHaveStyleRule('border-bottom-left-radius', '0')
-      expect(content).toHaveStyleRule('display', 'block')
+      expect(content).toHaveStyleRule('visibility', 'visible')
     })
   })
 
@@ -150,5 +146,57 @@ describe('<Accordeon />', () => {
       .first()
       .simulate('click')
     expect(id).toEqual('CLICKED')
+  })
+
+  describe('with isAnimated prop set to `false`', () => {
+    beforeEach(() => {
+      component = mount(
+        <Accordeon isAnimated={false}>
+          <Accordeon.Item>
+            <Accordeon.Header>Header</Accordeon.Header>
+            <Accordeon.Content>Content</Accordeon.Content>
+          </Accordeon.Item>
+
+          <Accordeon.Item>
+            <Accordeon.Header>Header</Accordeon.Header>
+            <Accordeon.Content>Content</Accordeon.Content>
+          </Accordeon.Item>
+        </Accordeon>,
+      )
+    })
+
+    it('doesn’t have `transition` styles', () => {
+      const item = component.find(Accordeon.Item).first()
+      const content = item.find(Accordeon.Content).first()
+
+      expect(content).not.toHaveStyleRule(
+        'transition',
+        'visibility 0s ease, max-height 0.4s ease, opacity 0.4s ease',
+      )
+    })
+  })
+
+  describe('with an ID', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Accordeon id="custom_id">
+            <Accordeon.Item>
+              <Accordeon.Header>Header</Accordeon.Header>
+              <Accordeon.Content>Content</Accordeon.Content>
+            </Accordeon.Item>
+
+            <Accordeon.Item>
+              <Accordeon.Header>Header</Accordeon.Header>
+              <Accordeon.Content>Content</Accordeon.Content>
+            </Accordeon.Item>
+          </Accordeon>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
   })
 })
