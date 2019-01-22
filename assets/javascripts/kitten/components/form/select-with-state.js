@@ -11,6 +11,7 @@
 //      } />
 //
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import Select from 'react-select'
 
@@ -21,12 +22,15 @@ export class SelectWithState extends Component {
     this.state = {
       value: props.value,
     }
-
-    this.handleChange = this.handleChange.bind(this)
-    this.onKeyDown = this.onKeyDown.bind(this)
   }
 
-  handleChange(val) {
+  componentDidUpdate(prevProps) {
+    if (prevProps.value !== this.props.value) {
+      this.setState({ value: this.props.value })
+    }
+  }
+
+  handleChange = val => {
     const value = val && val.value ? val : { value: null, label: null }
 
     this.setState({ value: value })
@@ -34,7 +38,7 @@ export class SelectWithState extends Component {
     this.props.onInputChange({ value: value, name: this.props.name })
   }
 
-  onKeyDown(event) {
+  onKeyDown = event => {
     const enterKeyCode = 13
     const spaceKeyCode = 32
 
@@ -43,16 +47,6 @@ export class SelectWithState extends Component {
       event.stopPropagation()
       this.onRemove(event)
     }
-  }
-
-  renderLabel() {
-    if (!this.props.labelText) return
-
-    return (
-      <label className="k-Select__label" id={this.props.id}>
-        {this.props.labelText}
-      </label>
-    )
   }
 
   render() {
@@ -64,6 +58,8 @@ export class SelectWithState extends Component {
       error,
       valid,
       disabled,
+      labelText,
+      autoFill,
       ...other
     } = this.props
 
@@ -76,7 +72,26 @@ export class SelectWithState extends Component {
 
     return (
       <div className={selectClassName}>
-        {this.renderLabel()}
+        {labelText && (
+          <label className="k-Select__label" for={this.props.id}>
+            {labelText}
+          </label>
+        )}
+        {autoFill && (
+          <input
+            autocomplete={autoFill}
+            x-autocompletetype={autoFill}
+            xautocompletetype={autoFill}
+            autocompletetype={autoFill}
+            name={autoFill}
+            style={{
+              position: 'absolute',
+              zIndex: '-1',
+              opacity: '0',
+            }}
+            onChange={e => this.setState({ value: e.target.value })}
+          />
+        )}
         <SelectWithMultiLevel
           value={this.state.value}
           onKeyDown={this.onKeyDown}
@@ -135,6 +150,10 @@ class SelectWithMultiLevel extends Component {
   }
 }
 
+SelectWithState.propTypes = {
+  autoFill: PropTypes.string,
+}
+
 SelectWithState.defaultProps = {
   onChange: function() {},
   onInputChange: function() {},
@@ -149,6 +168,7 @@ SelectWithState.defaultProps = {
   tiny: false,
   name: null,
   inputProps: {},
+  autoFill: undefined,
 }
 
 // DEPRECATED: do not use default export.
