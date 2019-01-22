@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 ## [1.7.1] - 2019-01-22
+
 Fixes:
 - Fix trigger `onChange` handler on `Field.Select` when autoFill is triggered.
 
