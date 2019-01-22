@@ -9,6 +9,12 @@ const LeftArrowContainerStyles = styled.div`
   ${TYPOGRAPHY.fontStyles.regular};
   align-items: center;
   display: flex;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translate(-${pxToRem(8)});
+    cursor: pointer;
+  }
 `
 
 const TextStyles = styled.div`
