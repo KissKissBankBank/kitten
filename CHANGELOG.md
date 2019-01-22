@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `autoFill` prop to `Field.Select` component.
-
+- Fix: Fix `Field.Select` label by using `for=` instead of `id=`.
 - Feature: Add `activePaginationColor`, `paginationColor` and `paginationAlign`
   props on `SimpleCarousel`.
 - Fix: Adds the ability to edit and add styles on `BulletList`.
