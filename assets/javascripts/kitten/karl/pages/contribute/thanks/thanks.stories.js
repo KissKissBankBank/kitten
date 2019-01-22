@@ -80,7 +80,7 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
                 la collecte progresse !
               </Title>
             </FlexTitleContainer>
-            <Marger top="3" bottom="4">
+            <Marger top="1" bottom="3">
               <Text>
                 Vos contreparties seront délivrées par le créateur quand la
                 collecte sera réussie.
@@ -88,9 +88,17 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
                 Vous pourrez également lui demander un reçu de don.
               </Text>
             </Marger>
-
+          </GridCol>
+          <GridCol
+            col-xs="12"
+            offset-xs="0"
+            col-m="9"
+            offset-m="1"
+            col-l="5"
+            offset-l="3"
+          >
             <Marger bottom="8">
-              <Title modifier="quinary" tag="h2">
+              <Title modifier="senary" tag="h2">
                 Postez un message de soutien sur la page du projet
               </Title>
               <Marger top="3">
@@ -110,7 +118,7 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
 
             <Marger bottom="8">
               <Marger bottom="3">
-                <Title modifier="quinary" tag="h2">
+                <Title modifier="senary" tag="h2">
                   Faites connaître le projet
                 </Title>
               </Marger>
