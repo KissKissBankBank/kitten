@@ -73,7 +73,7 @@ export class SelectWithState extends Component {
     return (
       <div className={selectClassName}>
         {labelText && (
-          <label className="k-Select__label" id={this.props.id}>
+          <label className="k-Select__label" for={this.props.id}>
             {labelText}
           </label>
         )}
