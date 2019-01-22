@@ -30,7 +30,7 @@ const FlexTitleContainer = styled.div`
   align-items: center;
 
   h1 {
-    margin-left: ${pxToRem(40)};
+    margin: 0 0 0 ${pxToRem(40)};
     line-height: ${pxToRem(43)};
     font-size: ${pxToRem(36)};
   }
@@ -39,8 +39,7 @@ const FlexTitleContainer = styled.div`
     flex-direction: column;
 
     h1 {
-      margin-left: 0;
-      margin-top: ${pxToRem(20)};
+      margin: ${pxToRem(20)} 0 0 0;
       text-align: center;
       line-height: ${pxToRem(29)};
       font-size: ${pxToRem(24)};
@@ -67,6 +66,7 @@ const FlexButtonsContainer = styled.div`
 
 const PageSubTitles = styled(Text)`
   font-size: ${pxToRem(20)};
+  margin: 0;
 `
 
 const PageIntroText = styled(Text)`
@@ -97,7 +97,7 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
                 la collecte progresse&nbsp;!
               </Text>
             </FlexTitleContainer>
-            <Marger top="1" bottom="3">
+            <Marger top="3" bottom="4">
               <PageIntroText>
                 Vos contreparties seront délivrées par le créateur quand la
                 collecte sera réussie.
@@ -118,7 +118,7 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
               <PageSubTitles tag="h2" weight="bold">
                 Postez un message de soutien sur la page du projet
               </PageSubTitles>
-              <Marger top="3">
+              <Marger top="2">
                 <TextInput
                   tag="textarea"
                   rows="4"
