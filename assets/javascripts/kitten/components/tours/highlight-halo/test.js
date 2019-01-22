@@ -23,7 +23,8 @@ describe('<HighlightHalo />', () => {
           <HighlightHalo
             haloColor="#444"
             haloSize={300}
-            animationDuration={20}
+            animationCycles={5}
+            animationCycleDuration={4}
             animationDelay={1}
           />,
         )
