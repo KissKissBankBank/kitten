@@ -31,6 +31,8 @@ const FlexTitleContainer = styled.div`
 
   h1 {
     margin-left: ${pxToRem(40)};
+    line-height: ${pxToRem(43)};
+    font-size: ${pxToRem(36)};
   }
 
   @media screen and (max-width: ${ScreenConfig.XXS.max}px) {
@@ -38,7 +40,10 @@ const FlexTitleContainer = styled.div`
 
     h1 {
       margin-left: 0;
+      margin-top: ${pxToRem(20)};
       text-align: center;
+      line-height: ${pxToRem(29)};
+      font-size: ${pxToRem(24)};
     }
   }
 `
@@ -60,6 +65,17 @@ const FlexButtonsContainer = styled.div`
   }
 `
 
+const PageSubTitles = styled(Text)`
+  font-size: ${pxToRem(20)};
+`
+
+const PageIntroText = styled(Text)`
+  font-size: ${pxToRem(14)};
+  @media screen and (min-width: ${ScreenConfig.XS.min}px) {
+    font-size: ${pxToRem(16)};
+  }
+`
+
 storiesOf('Pages/Contribute', module).add('Thanks', () => {
   return (
     <Marger top="10" bottom="10">
@@ -75,19 +91,19 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
           >
             <FlexTitleContainer>
               <RocketIllustration />
-              <Title modifier="tertiary" tag="h1">
+              <Text tag="h1" weight="bold">
                 Bravo, grâce à vous
                 <br />
                 la collecte progresse&nbsp;!
-              </Title>
+              </Text>
             </FlexTitleContainer>
             <Marger top="1" bottom="3">
-              <Text>
+              <PageIntroText>
                 Vos contreparties seront délivrées par le créateur quand la
                 collecte sera réussie.
                 <br />
                 Vous pourrez également lui demander un reçu de don.
-              </Text>
+              </PageIntroText>
             </Marger>
           </GridCol>
           <GridCol
@@ -99,9 +115,9 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
             offset-l="3"
           >
             <Marger bottom="8">
-              <Title modifier="senary" tag="h2">
+              <PageSubTitles tag="h2" weight="bold">
                 Postez un message de soutien sur la page du projet
-              </Title>
+              </PageSubTitles>
               <Marger top="3">
                 <TextInput
                   tag="textarea"
@@ -119,9 +135,9 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
 
             <Marger bottom="8">
               <Marger bottom="3">
-                <Title modifier="senary" tag="h2">
+                <PageSubTitles tag="h2" weight="bold">
                   Faites connaître le projet
-                </Title>
+                </PageSubTitles>
               </Marger>
               <FlexButtonsContainer>
                 <FacebookButtonIconWords tag="a" iconWithMinWidth={true}>
