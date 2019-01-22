@@ -12,7 +12,7 @@ const RightArrowContainerStyles = styled.a`
 `
 
 const TextStyles = styled.div`
-  margin-right: pxToRem(6);
+  margin-right: ${pxToRem(6)};
 `
 
 export const Next = ({ children }) => {
