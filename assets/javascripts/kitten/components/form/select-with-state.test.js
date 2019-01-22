@@ -184,7 +184,6 @@ describe('<SelectWithState />', () => {
       expect(input.props()['x-autocompletetype']).toBe(autoFillName)
       expect(input.props().xautocompletetype).toBe(autoFillName)
       expect(input.props().name).toBe(autoFillName)
-      expect(input.props().id).toBe(autoFillName)
     })
 
     it('should update select value on input change', () => {
@@ -196,7 +195,7 @@ describe('<SelectWithState />', () => {
           value="foo"
         />,
       )
-      const input = select.find({ id: autoFillName })
+      const input = select.find({ autocomplete: autoFillName })
       input.simulate('change', { target: { value: '2010' } })
       expect(select.state().value).toBe('2010')
     })
