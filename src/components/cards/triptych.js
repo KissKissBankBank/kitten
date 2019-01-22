@@ -113,8 +113,8 @@ function (_Component) {
       return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(_grid.Grid, {
         className: "k-u-align-center"
       }, _react.default.createElement(GridCol, {
-        "col-l": "6",
-        "offset-l": "3",
+        "col-l": "10",
+        "offset-l": "1",
         "col-m": "6",
         "offset-m": "0"
       }, _react.default.createElement("div", {
