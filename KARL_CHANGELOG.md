@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Page: New `Thanks` page
+
 ## [1.7.0] - 2019-01-22
 
 No changes.
