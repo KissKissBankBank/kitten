@@ -114,10 +114,8 @@ const StyledHighlightHalo = styled.div`
 
 export class HighlightHalo extends Component {
   render() {
-    const { ...other } = this.props
-
     return (
-      <StyledHighlightHalo {...other}>
+      <StyledHighlightHalo {...this.props}>
         <div />
         <div />
         <div />
