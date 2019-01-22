@@ -1,67 +1,57 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const highlightHaloKeyframes = props =>
+const bubbleAnimationKeyframes = props =>
   keyframes`
-    /* Initial state */
     0% {
       transform: scale(0);
       opacity: 0;
     }
-
-    /* Bubbling animation with calculated absolute durations */
-    ${15 / props.animationDuration}% {
+    33.33% {
       transform: scale(1.1);
       opacity: 0.2;
     }
-    ${(15 / props.animationDuration) * 1.5}% {
+    50% {
       transform: scale(0.8);
     }
-    ${(15 / props.animationDuration) * 2}% {
+    66.66% {
       transform: scale(1.05);
     }
-    ${(15 / props.animationDuration) * 2.5}% {
+    83.33% {
       transform: scale(0.9);
     }
-    ${(15 / props.animationDuration) * 3}% {
+    100% {
       transform: scale(1);
-    }
-
-    /* Breathing animation with relative durations */
-    16.66% {
-      transform: scale(.84);
       opacity: 0.2;
     }
-    33.33% {
+`
+const breathingAnimationKeyframes = props =>
+  keyframes`
+    0% {
       transform: scale(1);
+      opacity: 0.2;
     }
     50% {
       transform: scale(.84);
     }
-    66.66% {
-      transform: scale(1);
-    }
-    83.33% {
-      transform: scale(.84);
-      opacity: 0.2;
-    }
-
-    /* Closing animation with absllute durations */
-    ${100 - 15 / props.animationDuration}% {
-      transform: scale(1);
-      opacity: 0.2;
-    }
     100% {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+`
+const endingAnimationKeyframes = props =>
+  keyframes`
+    from {
+      transform: scale(1);
+      opacity: 0.2;
+    }
+    to {
       transform: scale(0);
       opacity: 0;
     }
-`
-
-const highlightHaloKeyAnimation = props => css`
-  ${highlightHaloKeyframes} ${props.animationDuration}s ease-in-out 1;
 `
 
 const StyledHighlightHalo = styled.div`
@@ -83,14 +73,17 @@ const StyledHighlightHalo = styled.div`
 
     transform: scale(0);
 
-    animation: ${highlightHaloKeyAnimation};
+    ${({ highlightHaloAnimation }) => highlightHaloAnimation};
   }
 
   > div:nth-of-type(1) {
     width: 100%;
     height: 100%;
 
-    animation-delay: ${({ animationDelay }) => animationDelay + 0.2}s;
+    animation-delay: ${({ animationDelay }) => animationDelay + 0.2}s,
+      ${({ animationDelay }) => animationDelay + 0.2 + 0.5}s,
+      ${({ animationDelay, getAnimationDelay }) =>
+        animationDelay + 0.2 + 0.5 + getAnimationDelay}s;
   }
   > div:nth-of-type(2) {
     top: 16.66%;
@@ -99,7 +92,10 @@ const StyledHighlightHalo = styled.div`
     width: 66.66%;
     height: 66.66%;
 
-    animation-delay: ${({ animationDelay }) => animationDelay + 0.1}s;
+    animation-delay: ${({ animationDelay }) => animationDelay + 0.1}s,
+      ${({ animationDelay }) => animationDelay + 0.1 + 0.5}s,
+      ${({ animationDelay, getAnimationDelay }) =>
+        animationDelay + 0.1 + 0.5 + getAnimationDelay}s;
   }
   > div:nth-of-type(3) {
     top: 33.33%;
@@ -108,14 +104,58 @@ const StyledHighlightHalo = styled.div`
     width: 33.33%;
     height: 33.33%;
 
-    animation-delay: ${({ animationDelay }) => animationDelay}s;
+    animation-delay: ${({ animationDelay }) => animationDelay}s,
+      ${({ animationDelay }) => animationDelay + 0.5}s,
+      ${({ animationDelay, getAnimationDelay }) =>
+        animationDelay + 0.5 + getAnimationDelay}s;
   }
 `
 
 export class HighlightHalo extends Component {
+  highlightHaloAnimation = () => {
+    var animationEasing = 'ease-in-out'
+
+    if (
+      typeof this.props.animationCycles === 'number' &&
+      this.props.animationCycles >= 0
+    ) {
+      return css`
+        animation-name: ${bubbleAnimationKeyframes},
+          ${breathingAnimationKeyframes}, ${endingAnimationKeyframes};
+        animation-duration: 0.5s, ${this.props.animationCycleDuration}s, 0.1s;
+        animation-timing-function: ${animationEasing}, ${animationEasing},
+          ${animationEasing};
+        animation-iteration-count: 1, ${this.props.animationCycles}, 1;
+      `
+    }
+
+    return css`
+      animation-name: ${bubbleAnimationKeyframes},
+        ${breathingAnimationKeyframes};
+      animation-duration: 0.5s, ${this.props.animationCycleDuration}s;
+      animation-timing-function: ${animationEasing}, ${animationEasing};
+      animation-iteration-count: 1, infinite;
+    `
+  }
+
+  getAnimationDelay = () => {
+    if (
+      typeof this.props.animationCycles == 'number' &&
+      this.props.animationCycles >= 0
+    ) {
+      return this.props.animationCycles * this.props.animationCycleDuration
+    } else {
+      return 0
+    }
+  }
+
   render() {
     return (
-      <StyledHighlightHalo {...this.props}>
+      <StyledHighlightHalo
+        highlightHaloAnimation={this.highlightHaloAnimation()}
+        getAnimationDelay={this.getAnimationDelay()}
+        {...this.props}
+      >
         <div />
         <div />
         <div />
@@ -127,13 +167,18 @@ export class HighlightHalo extends Component {
 HighlightHalo.propTypes = {
   haloColor: PropTypes.string,
   haloSize: PropTypes.number,
-  animationDuration: PropTypes.number,
+  animationCycles: PropTypes.oneOfType([
+    PropTypes.string, // only accepts 'infinite' as a string arg, no shutdown
+    PropTypes.number, // number of 'breathing' cycles before shutting down
+  ]),
+  animationCycleDuration: PropTypes.number,
   animationDelay: PropTypes.number,
 }
 
 HighlightHalo.defaultProps = {
   haloColor: COLORS.primary1,
   haloSize: 120,
-  animationDuration: 10,
+  animationCycles: 3,
+  animationCycleDuration: 4,
   animationDelay: 0,
 }

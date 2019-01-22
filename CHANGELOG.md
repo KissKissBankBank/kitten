@@ -5,10 +5,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: New `HighlightHalo` component in `Tour` group. Accepts:
-  `itemSize` (width/height size in pixel number),
-  `itemColor` (CSS color value as string),
-  `animationDuration` (duration in seconds as number).
-  `animationDelay` (delay in seconds as number).
+  `itemSize` (width/height size in pixel number)
+  `itemColor` (CSS color value as string)
+  `animationCycles` (number of middle animation cycles as number)
+  `animationCycleDuration` (duration of an animation cycle in seconds as number)
+  `animationDelay` (delay in seconds as number)
 - Feature: Add `activePaginationColor`, `paginationColor` and `paginationAlign`
   props on `SimpleCarousel`.
 - Fix: Adds the ability to edit and add styles on `BulletList`.
