@@ -38,6 +38,12 @@ export class SelectWithState extends Component {
     this.props.onInputChange({ value: value, name: this.props.name })
   }
 
+  handleLightChange = e => {
+    const value = e.target.value
+    this.setState({ value })
+    this.props.onChange({ value })
+  }
+
   onKeyDown = event => {
     const enterKeyCode = 13
     const spaceKeyCode = 32
@@ -89,7 +95,7 @@ export class SelectWithState extends Component {
               zIndex: '-1',
               opacity: '0',
             }}
-            onChange={e => this.setState({ value: e.target.value })}
+            onChange={this.handleLightChange}
           />
         )}
         <SelectWithMultiLevel
