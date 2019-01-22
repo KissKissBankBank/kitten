@@ -90,7 +90,7 @@ const StyledHighlightHalo = styled.div`
     width: 100%;
     height: 100%;
 
-    animation-delay: ${({ animationDelay }) => animationDelay}.2s;
+    animation-delay: ${({ animationDelay }) => animationDelay + 0.2}s;
   }
   > div:nth-of-type(2) {
     top: 16.66%;
@@ -99,7 +99,7 @@ const StyledHighlightHalo = styled.div`
     width: 66.66%;
     height: 66.66%;
 
-    animation-delay: ${({ animationDelay }) => animationDelay}.1s;
+    animation-delay: ${({ animationDelay }) => animationDelay + 0.1}s;
   }
   > div:nth-of-type(3) {
     top: 33.33%;
