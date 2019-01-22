@@ -50,14 +50,15 @@ function (_React$Component) {
     key: "renderItem",
     value: function renderItem(element) {
       var key = element.key,
-          item = element.item;
+          item = element.item,
+          className = element.className;
       var itemClassName = (0, _classnames.default)('k-BulletList__item', {
         'k-BulletList__item--large': this.props.large
       }, {
         'k-BulletList__item--big': this.props.big
       }, {
         'k-BulletList__item--huge': this.props.huge
-      });
+      }, className);
       return _react.default.createElement("li", {
         key: key,
         className: itemClassName
