@@ -139,14 +139,13 @@ export class HighlightHalo extends Component {
   }
 
   getAnimationDelay = () => {
-    if (
-      typeof this.props.animationCycles == 'number' &&
-      this.props.animationCycles >= 0
-    ) {
-      return this.props.animationCycles * this.props.animationCycleDuration
-    } else {
-      return 0
+    const animationCycles = parseInt(this.props.animationCycles, 10)
+
+    if (animationCycles >= 0) {
+      return animationCycles * this.props.animationCycleDuration
     }
+
+    return 0
   }
 
   render() {
@@ -171,8 +170,8 @@ HighlightHalo.propTypes = {
     PropTypes.string, // any string arg will cause no shutdown
     PropTypes.number, // number of 'breathing' cycles before shutting down
   ]),
-  animationCycleDuration: PropTypes.number,
-  animationDelay: PropTypes.number,
+  animationCycleDuration: PropTypes.number, // time in seconds
+  animationDelay: PropTypes.number, // time in seconds
 }
 
 HighlightHalo.defaultProps = {
