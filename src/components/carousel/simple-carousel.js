@@ -68,11 +68,18 @@ function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      var children = this.props.children;
+      var _this$props = this.props,
+          children = _this$props.children,
+          activePaginationColor = _this$props.activePaginationColor,
+          paginationColor = _this$props.paginationColor,
+          paginationAlign = _this$props.paginationAlign;
       var _this$state = this.state,
           totalPagesCount = _this$state.totalPagesCount,
           currentPageNumber = _this$state.currentPageNumber;
       var rangePage = (0, _range.createRangeFromZeroTo)(totalPagesCount);
+      var paginationStyle = [styles.pagination, paginationAlign && {
+        justifyContent: paginationAlign
+      }];
       return _react.default.createElement(_react.Fragment, null, _react.default.createElement(Marger, {
         bottom: this.showPagination() ? 4 : 0,
         style: styles.container
@@ -85,9 +92,13 @@ function (_Component) {
       })), this.showPagination() && _react.default.createElement(Marger, {
         top: "4",
         bottom: "4",
-        style: styles.pagination
+        style: paginationStyle
       }, rangePage.map(function (numPage) {
-        var pageStyle = [styles.page, numPage === currentPageNumber && styles.page.active];
+        var pageStyle = [styles.page, paginationColor && {
+          background: paginationColor
+        }, numPage === currentPageNumber && {
+          background: activePaginationColor
+        }];
         return _react.default.createElement("div", {
           key: numPage,
           style: pageStyle,
@@ -99,6 +110,16 @@ function (_Component) {
   return SimpleCarouselBase;
 }(_react.Component);
 
+SimpleCarouselBase.propTypes = {
+  activePaginationColor: _propTypes.default.string,
+  paginationColor: _propTypes.default.string,
+  paginationAlign: _propTypes.default.oneOf(['start', 'center', 'space-between', 'space-around'])
+};
+SimpleCarouselBase.defaultProps = {
+  activePaginationColor: _colorsConfig.default.primary1,
+  paginationColor: _colorsConfig.default.background1,
+  paginationAlign: 'center'
+};
 var styles = {
   container: {
     display: 'grid',
@@ -117,19 +138,14 @@ var styles = {
     }
   },
   pagination: {
-    display: 'flex',
-    justifyContent: 'center'
+    display: 'flex'
   },
   page: {
     width: 6,
     height: 6,
-    background: _colorsConfig.default.background1,
     marginRight: 5,
     cursor: 'pointer',
-    active: {
-      transition: "background .4s ease-in-out",
-      background: _colorsConfig.default.primary1
-    }
+    transition: "background .4s ease-in-out"
   }
 };
 var SimpleCarousel = (0, _radium.default)(SimpleCarouselBase);
