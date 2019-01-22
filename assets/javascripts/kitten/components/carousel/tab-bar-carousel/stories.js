@@ -5,6 +5,7 @@ import { NavTabCarousel } from './index'
 import { Marger } from './../../layout/marger'
 import { Container } from './../../grid/container'
 import { Grid, GridCol } from './../../grid/grid'
+import { parseHtml } from './../../../helpers/utils/parser'
 
 const StoryGrid = ({ children }) => (
   <Container>
@@ -26,13 +27,19 @@ storiesOf('Carousel/NavTabCarousel', module)
     return (
       <StoryGrid>
         <NavTabCarousel>
-          <NavTabCarousel.Prev children={text('Prev text', 'Foobar 1')} />
-          <NavTabCarousel.Pagination
-            activeIndex={number('active index', 2)}
-            totalIndex={number('total index', totalIndex)}
-            color={text('Color', '')}
+          <NavTabCarousel.Prev
+            hoverColor={text('Prev hover color', '#fff')}
+            children={text('Prev text', 'Foobar 1')}
           />
-          <NavTabCarousel.Next children={text('Next text', 'Foobar 2')} />
+          <NavTabCarousel.Pagination
+            activeIndex={number('Active index', 2)}
+            totalIndex={number('Total index', totalIndex)}
+            color={text('Pagination current color', '')}
+          />
+          <NavTabCarousel.Next
+            hoverColor={text('Next hover color', '#fff')}
+            children={text('Next text', 'Foobar 2')}
+          />
         </NavTabCarousel>
       </StoryGrid>
     )

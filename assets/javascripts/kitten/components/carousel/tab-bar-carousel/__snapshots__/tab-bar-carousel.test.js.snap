@@ -5,7 +5,7 @@ exports[`<NavTabCarousel /> matches with snapshot 1`] = `
   className="tab-bar-carousel__NavTabCarouselStyles-sc-1vfblk9-0 cuQfFM"
 >
   <div
-    className="prev__LeftArrowContainerStyles-n0wx91-0 gMfRlf"
+    className="prev__LeftArrowContainerStyles-n0wx91-0 kRykYK"
   >
     <svg
       className=""
@@ -35,7 +35,7 @@ exports[`<NavTabCarousel /> matches with snapshot 1`] = `
     className="pagination__PaginationStyles-sc-1u3i1hn-1 gEkWnL"
   />
   <a
-    className="next__RightArrowContainerStyles-bcawu0-0 dLoZyO"
+    className="next__RightArrowContainerStyles-bcawu0-0 dQpkth"
   >
     <div
       className="next__TextStyles-bcawu0-1 hNVLRJ"

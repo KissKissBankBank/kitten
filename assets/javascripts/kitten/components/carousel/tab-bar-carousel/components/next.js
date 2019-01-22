@@ -9,11 +9,16 @@ const RightArrowContainerStyles = styled.a`
   ${TYPOGRAPHY.fontStyles.regular};
   align-items: center;
   display: flex;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     transform: translate(${pxToRem(8)});
     cursor: pointer;
+    color: ${({ hoverColor }) => hoverColor};
+
+    svg {
+      fill: ${({ hoverColor }) => hoverColor};
+    }
   }
 `
 
@@ -21,11 +26,11 @@ const TextStyles = styled.div`
   margin-right: ${pxToRem(6)};
 `
 
-export const Next = ({ children }) => {
+export const Next = ({ children, hoverColor }) => {
   return (
-    <RightArrowContainerStyles>
+    <RightArrowContainerStyles hoverColor={hoverColor}>
       <TextStyles>{children}</TextStyles>
-      <ArrowIcon fill="#fff" version="solid" />
+      <ArrowIcon version="solid" fill="#fff" />
     </RightArrowContainerStyles>
   )
 }

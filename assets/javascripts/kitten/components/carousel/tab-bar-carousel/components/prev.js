@@ -9,11 +9,16 @@ const LeftArrowContainerStyles = styled.div`
   ${TYPOGRAPHY.fontStyles.regular};
   align-items: center;
   display: flex;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 
   &:hover {
     transform: translate(-${pxToRem(8)});
     cursor: pointer;
+    color: ${({ hoverColor }) => hoverColor};
+
+    svg {
+      fill: ${({ hoverColor }) => hoverColor};
+    }
   }
 `
 
@@ -21,9 +26,9 @@ const TextStyles = styled.div`
   margin-left: ${pxToRem(6)};
 `
 
-export const Prev = ({ children }) => {
+export const Prev = ({ children, hoverColor }) => {
   return (
-    <LeftArrowContainerStyles>
+    <LeftArrowContainerStyles hoverColor={hoverColor}>
       <ArrowIcon version="solid" direction="left" fill="#fff" />
       <TextStyles>{children}</TextStyles>
     </LeftArrowContainerStyles>
