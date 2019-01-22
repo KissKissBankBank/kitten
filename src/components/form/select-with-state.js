@@ -72,6 +72,18 @@ function (_Component) {
       });
     };
 
+    _this.handleLightChange = function (e) {
+      var value = e.target.value;
+
+      _this.setState({
+        value: value
+      });
+
+      _this.props.onChange({
+        value: value
+      });
+    };
+
     _this.onKeyDown = function (event) {
       var enterKeyCode = 13;
       var spaceKeyCode = 32;
@@ -102,8 +114,6 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       var _this$props = this.props,
           value = _this$props.value,
           onChange = _this$props.onChange,
@@ -137,11 +147,7 @@ function (_Component) {
           zIndex: '-1',
           opacity: '0'
         },
-        onChange: function onChange(e) {
-          return _this2.setState({
-            value: e.target.value
-          });
-        }
+        onChange: this.handleLightChange
       }), _react.default.createElement(SelectWithMultiLevel, (0, _extends2.default)({
         value: this.state.value,
         onKeyDown: this.onKeyDown,
