@@ -76,8 +76,9 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
             <FlexTitleContainer>
               <RocketIllustration />
               <Title modifier="tertiary" tag="h1">
-                Bravo, grâce à vous <br />
-                la collecte progresse !
+                Bravo, grâce à vous
+                <br />
+                la collecte progresse&nbsp;!
               </Title>
             </FlexTitleContainer>
             <Marger top="3" bottom="4">
