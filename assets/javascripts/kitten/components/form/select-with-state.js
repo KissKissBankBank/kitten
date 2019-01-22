@@ -83,7 +83,6 @@ export class SelectWithState extends Component {
             x-autocompletetype={autoFill}
             xautocompletetype={autoFill}
             autocompletetype={autoFill}
-            id={autoFill}
             name={autoFill}
             style={{
               position: 'absolute',
