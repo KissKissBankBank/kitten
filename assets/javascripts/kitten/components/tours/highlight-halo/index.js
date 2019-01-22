@@ -168,7 +168,7 @@ HighlightHalo.propTypes = {
   haloColor: PropTypes.string,
   haloSize: PropTypes.number,
   animationCycles: PropTypes.oneOfType([
-    PropTypes.string, // only accepts 'infinite' as a string arg, no shutdown
+    PropTypes.string, // any string arg will cause no shutdown
     PropTypes.number, // number of 'breathing' cycles before shutting down
   ]),
   animationCycleDuration: PropTypes.number,
