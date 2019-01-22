@@ -5,7 +5,7 @@ exports[`<NavTabCarousel /> matches with snapshot 1`] = `
   className="tab-bar-carousel__NavTabCarouselStyles-sc-1vfblk9-0 cuQfFM"
 >
   <div
-    className="prev__LeftArrowStyles-n0wx91-0 gvYeTL"
+    className="prev__LeftArrowContainerStyles-n0wx91-0 gMfRlf"
   >
     <svg
       className=""
@@ -26,7 +26,7 @@ exports[`<NavTabCarousel /> matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="prev__TextStyles-n0wx91-1 lmJMtS"
+      className="prev__TextStyles-n0wx91-1 jjcWqd"
     >
       Foobar 1
     </div>
@@ -35,10 +35,10 @@ exports[`<NavTabCarousel /> matches with snapshot 1`] = `
     className="pagination__PaginationStyles-sc-1u3i1hn-1 gEkWnL"
   />
   <a
-    className="next__RightArrowContainerStyles-bcawu0-0 iYSAjP"
+    className="next__RightArrowContainerStyles-bcawu0-0 dLoZyO"
   >
     <div
-      className="next__TextStyles-bcawu0-1 jNnuYO"
+      className="next__TextStyles-bcawu0-1 hNVLRJ"
     >
       Foobar 2
     </div>
