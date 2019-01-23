@@ -34,7 +34,7 @@ storiesOf('Carousel/NavTabCarousel', module)
           <NavTabCarousel.Pagination
             activeIndex={number('Active index', 2)}
             totalIndex={number('Total index', totalIndex)}
-            color={text('Pagination current color', '')}
+            activeColor={text('Pagination active color', '')}
           />
           <NavTabCarousel.Next
             hoverColor={text('Next hover color', '#fff')}

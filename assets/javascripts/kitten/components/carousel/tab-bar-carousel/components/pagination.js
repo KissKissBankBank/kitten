@@ -12,10 +12,10 @@ const BulletPointStyles = styled.div`
   margin-right: ${pxToRem(4)};
   background-color: ${COLORS.background1};
 
-  ${({ isSelected, color }) =>
+  ${({ isSelected, activeColor }) =>
     isSelected &&
     css`
-      background-color: ${color || COLORS.primary1};
+      background-color: ${activeColor || COLORS.primary1};
     `}
 `
 
@@ -25,14 +25,14 @@ const PaginationStyles = styled.div`
   margin: 0 ${pxToRem(10)};
 `
 
-export const Pagination = ({ activeIndex, totalIndex, color }) => {
+export const Pagination = ({ activeIndex, totalIndex, activeColor }) => {
   return (
     <PaginationStyles>
       {Array.apply(null, { length: totalIndex }).map((_, index) => (
         <BulletPointStyles
           key={index}
           isSelected={activeIndex === index + 1}
-          color={color}
+          activeColor={activeColor}
         />
       ))}
     </PaginationStyles>
@@ -42,4 +42,5 @@ export const Pagination = ({ activeIndex, totalIndex, color }) => {
 Pagination.propTypes = {
   activeIndex: PropTypes.number.isRequired,
   totalIndex: PropTypes.number.isRequired,
+  activeColor: PropTypes.string,
 }

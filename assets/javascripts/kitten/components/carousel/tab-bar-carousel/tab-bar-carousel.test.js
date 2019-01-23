@@ -10,7 +10,11 @@ describe('<NavTabCarousel />', () => {
       .create(
         <NavTabCarousel>
           <NavTabCarousel.Prev>Foobar 1</NavTabCarousel.Prev>
-          <NavTabCarousel.Pagination activeIndex={2} />
+          <NavTabCarousel.Pagination
+            activeIndex={2}
+            totalIndex={3}
+            activeColor="#c0ff33"
+          />
           <NavTabCarousel.Next>Foobar 2</NavTabCarousel.Next>
         </NavTabCarousel>,
       )

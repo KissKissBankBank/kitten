@@ -33,8 +33,18 @@ exports[`<NavTabCarousel /> matches with snapshot 1`] = `
   </div>
   <div
     className="pagination__PaginationStyles-sc-1u3i1hn-1 gEkWnL"
-  />
-  <a
+  >
+    <div
+      className="pagination__BulletPointStyles-sc-1u3i1hn-0 lnKoTT"
+    />
+    <div
+      className="pagination__BulletPointStyles-sc-1u3i1hn-0 dBffWO"
+    />
+    <div
+      className="pagination__BulletPointStyles-sc-1u3i1hn-0 lnKoTT"
+    />
+  </div>
+  <div
     className="next__RightArrowContainerStyles-bcawu0-0 dQpkth"
   >
     <div
@@ -60,6 +70,6 @@ exports[`<NavTabCarousel /> matches with snapshot 1`] = `
         d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
       />
     </svg>
-  </a>
+  </div>
 </div>
 `;
