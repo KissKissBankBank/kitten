@@ -27,19 +27,17 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _card = require("../../hoc/card");
+var _card = require("../../../hoc/card");
 
-var _grid = require("../../components/grid/grid");
+var _marger = require("../../../components/layout/marger");
 
-var _marger = require("../../components/layout/marger");
+var _title = require("../../../components/typography/title");
 
-var _title = require("../../components/typography/title");
+var _text = require("../../../components/typography/text");
 
-var _text = require("../../components/typography/text");
+var _parser = require("../../../helpers/utils/parser");
 
-var _parser = require("../../helpers/utils/parser");
-
-var _horizontalStroke = require("../../components/layout/horizontal-stroke");
+var _horizontalStroke = require("../../../components/layout/horizontal-stroke");
 
 var SimpleCardComponent =
 /*#__PURE__*/
@@ -64,15 +62,20 @@ function (_Component) {
           others = (0, _objectWithoutProperties2.default)(_this$props, ["imageProps", "titleProps", "title", "subtitle", "paragraph", "horizontalStroke"]);
       var Tag = this.props.href ? 'a' : 'div';
       var titleClassName = (0, _classnames.default)('k-Card__title', titleProps.className);
-      return _react.default.createElement(Tag, others, _react.default.createElement(_marger.Marger, {
+      return _react.default.createElement(Tag, (0, _extends2.default)({}, others, {
+        style: (0, _extends2.default)({
+          lineHeight: 1
+        }, others.style)
+      }), _react.default.createElement(_marger.Marger, {
         bottom: "2",
         className: "k-Card__imageContainer"
       }, _react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
+        alt: imageProps.alt || '',
         className: "k-Card__image",
         style: (0, _extends2.default)({}, imageProps.style, styles.image)
       }))), title && _react.default.createElement(_marger.Marger, {
         top: "2",
-        bottom: subtitle ? 0.5 : 1
+        bottom: ".3"
       }, _react.default.createElement(_title.Title, (0, _extends2.default)({
         tag: "p"
       }, titleProps, {
@@ -80,13 +83,13 @@ function (_Component) {
         margin: false,
         modifier: "senary"
       }), (0, _parser.parseHtml)(title))), subtitle && _react.default.createElement(_marger.Marger, {
-        top: ".5",
+        top: ".3",
         bottom: "1.5"
       }, _react.default.createElement(_text.Text, {
         size: "micro",
         weight: "regular"
       }, (0, _parser.parseHtml)(subtitle))), paragraph && _react.default.createElement(_marger.Marger, {
-        top: "1",
+        top: ".3",
         bottom: "1.5"
       }, _react.default.createElement(_text.Text, {
         lineHeight: "normal",
