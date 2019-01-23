@@ -13,7 +13,7 @@ storiesOf('Cards/SimpleCard', module)
       <Marger top="4" bottom="4">
         <Container>
           <Grid>
-            <GridCol col="2">
+            <GridCol col="6" col-xs="4" col-m="3" col-l="2">
               <SimpleCard
                 imageProps={{
                   src: text(
