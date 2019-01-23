@@ -26,7 +26,6 @@ const PaginationStyles = styled.div`
 `
 
 export const Pagination = ({ activeIndex, totalIndex, activeColor }) => {
-  console.warn('activeColor', activeColor)
   return (
     <PaginationStyles>
       {Array.apply(null, { length: totalIndex }).map((_, index) => (
