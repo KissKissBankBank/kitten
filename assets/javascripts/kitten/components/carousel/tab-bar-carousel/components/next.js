@@ -4,7 +4,7 @@ import { ArrowIcon } from './../../../icons/arrow-icon'
 import TYPOGRAPHY from './../../../../constants/typography-config'
 import { pxToRem } from './../../../../helpers/utils/typography'
 
-const RightArrowContainerStyles = styled.a`
+const RightArrowContainerStyles = styled.div`
   color: #fff;
   ${TYPOGRAPHY.fontStyles.regular};
   align-items: center;
