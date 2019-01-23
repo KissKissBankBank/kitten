@@ -1,11 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, number } from '@storybook/addon-knobs'
+import { withKnobs, text, number, color } from '@storybook/addon-knobs'
 import { NavTabCarousel } from './index'
 import { Marger } from './../../layout/marger'
 import { Container } from './../../grid/container'
 import { Grid, GridCol } from './../../grid/grid'
 import { parseHtml } from './../../../helpers/utils/parser'
+import COLORS from './../../../constants/colors-config'
 
 const StoryGrid = ({ children }) => (
   <Container>
@@ -28,16 +29,16 @@ storiesOf('Carousel/NavTabCarousel', module)
       <StoryGrid>
         <NavTabCarousel>
           <NavTabCarousel.Prev
-            hoverColor={text('Prev hover color', '#fff')}
+            hoverColor={color('Prev hover color', '#fff')}
             children={text('Prev text', 'Foobar 1')}
           />
           <NavTabCarousel.Pagination
             activeIndex={number('Active index', 2)}
             totalIndex={number('Total index', totalIndex)}
-            activeColor={text('Pagination active color', '')}
+            activeColor={color('Pagination active color', COLORS.primary1)}
           />
           <NavTabCarousel.Next
-            hoverColor={text('Next hover color', '#fff')}
+            hoverColor={color('Next hover color', '#fff')}
             children={text('Next text', 'Foobar 2')}
           />
         </NavTabCarousel>

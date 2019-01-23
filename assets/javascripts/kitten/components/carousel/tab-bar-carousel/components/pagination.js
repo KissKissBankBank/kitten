@@ -15,7 +15,7 @@ const BulletPointStyles = styled.div`
   ${({ isSelected, activeColor }) =>
     isSelected &&
     css`
-      background-color: ${activeColor || COLORS.primary1};
+      background-color: ${activeColor};
     `}
 `
 
@@ -26,6 +26,7 @@ const PaginationStyles = styled.div`
 `
 
 export const Pagination = ({ activeIndex, totalIndex, activeColor }) => {
+  console.warn('activeColor', activeColor)
   return (
     <PaginationStyles>
       {Array.apply(null, { length: totalIndex }).map((_, index) => (
@@ -43,4 +44,8 @@ Pagination.propTypes = {
   activeIndex: PropTypes.number.isRequired,
   totalIndex: PropTypes.number.isRequired,
   activeColor: PropTypes.string,
+}
+
+Pagination.defaultProps = {
+  activeColor: COLORS.primary1,
 }
