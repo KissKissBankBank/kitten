@@ -6,9 +6,9 @@ import { Grid, GridCol } from '../grid/grid'
 import { TeamCard } from './team-card'
 import { Marger } from '../layout/marger'
 
-storiesOf('Cards', module)
+storiesOf('Cards/TeamCard', module)
   .addDecorator(withKnobs)
-  .add('TeamCard', () => {
+  .add('default', () => {
     return (
       <Container>
         <Grid>
