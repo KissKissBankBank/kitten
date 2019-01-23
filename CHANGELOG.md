@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix some styles on `SimpleCard`.
 - Fix: Remove `SearchInput` results cross.
 
 ## [1.7.1] - 2019-01-22
