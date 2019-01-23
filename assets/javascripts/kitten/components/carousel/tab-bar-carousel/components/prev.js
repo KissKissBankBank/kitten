@@ -1,0 +1,36 @@
+import React from 'react'
+import styled, { css } from 'styled-components'
+import { ArrowIcon } from './../../../icons/arrow-icon'
+import TYPOGRAPHY from './../../../../constants/typography-config'
+import { pxToRem } from './../../../../helpers/utils/typography'
+
+const LeftArrowContainerStyles = styled.div`
+  color: #fff;
+  ${TYPOGRAPHY.fontStyles.regular};
+  align-items: center;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: translate(-${pxToRem(8)});
+    cursor: pointer;
+    color: ${({ hoverColor }) => hoverColor};
+
+    svg {
+      fill: ${({ hoverColor }) => hoverColor};
+    }
+  }
+`
+
+const TextStyles = styled.div`
+  margin-left: ${pxToRem(6)};
+`
+
+export const Prev = ({ children, hoverColor }) => {
+  return (
+    <LeftArrowContainerStyles hoverColor={hoverColor}>
+      <ArrowIcon version="solid" direction="left" fill="#fff" />
+      <TextStyles>{children}</TextStyles>
+    </LeftArrowContainerStyles>
+  )
+}
