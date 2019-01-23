@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { card } from '../../hoc/card'
-import { Grid, GridCol } from '../../components/grid/grid'
-import { Marger } from '../../components/layout/marger'
-import { Title } from '../../components/typography/title'
-import { Text } from '../../components/typography/text'
-import { parseHtml } from '../../helpers/utils/parser'
-import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
+import { card } from '../../../hoc/card'
+import { Marger } from '../../../components/layout/marger'
+import { Title } from '../../../components/typography/title'
+import { Text } from '../../../components/typography/text'
+import { parseHtml } from '../../../helpers/utils/parser'
+import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
 
 class SimpleCardComponent extends Component {
   render() {
@@ -25,17 +24,18 @@ class SimpleCardComponent extends Component {
     const titleClassName = classNames('k-Card__title', titleProps.className)
 
     return (
-      <Tag {...others}>
+      <Tag {...others} style={{ lineHeight: 1, ...others.style }}>
         <Marger bottom="2" className="k-Card__imageContainer">
           <img
             {...imageProps}
+            alt={imageProps.alt || ''}
             className="k-Card__image"
             style={{ ...imageProps.style, ...styles.image }}
           />
         </Marger>
 
         {title && (
-          <Marger top="2" bottom={subtitle ? 0.5 : 1}>
+          <Marger top="2" bottom=".3">
             <Title
               tag="p"
               {...titleProps}
@@ -49,7 +49,7 @@ class SimpleCardComponent extends Component {
         )}
 
         {subtitle && (
-          <Marger top=".5" bottom="1.5">
+          <Marger top=".3" bottom="1.5">
             <Text size="micro" weight="regular">
               {parseHtml(subtitle)}
             </Text>
@@ -57,7 +57,7 @@ class SimpleCardComponent extends Component {
         )}
 
         {paragraph && (
-          <Marger top="1" bottom="1.5">
+          <Marger top=".3" bottom="1.5">
             <Text lineHeight="normal" size="micro" weight="light">
               {parseHtml(paragraph)}
             </Text>
