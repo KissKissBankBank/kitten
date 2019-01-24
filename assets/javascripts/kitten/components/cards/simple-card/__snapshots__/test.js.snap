@@ -3,6 +3,11 @@
 exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 <div
   className="k-Card k-Card--withoutBoxShadowOnHover"
+  style={
+    Object {
+      "lineHeight": 1,
+    }
+  }
 >
   <div
     className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
@@ -32,6 +37,11 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
 <div
   className="k-Card k-Card--withoutBoxShadowOnHover"
+  style={
+    Object {
+      "lineHeight": 1,
+    }
+  }
 >
   <div
     className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
