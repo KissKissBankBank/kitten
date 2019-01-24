@@ -15,10 +15,8 @@ import { Text } from '../../../../components/typography/text'
 import { TextInput } from '../../../../components/form/text-input'
 import { Button } from '../../../../components/buttons/button'
 
-import {
-  FacebookButtonIconWords,
-  TwitterButtonIconWords,
-} from '../../../../components/buttons/social-button-icon-words'
+import { FacebookIconWithBackground } from '../../../../components/icons/facebook-icon-with-background'
+import { TwitterIcon } from '../../../../components/icons/twitter-icon'
 import { EmailIcon } from '../../../../components/icons/email-icon'
 
 import ProjectsCarousel from '../../common/projects-carousel'
@@ -53,14 +51,28 @@ const FlexButtonsContainer = styled.div`
   > a {
     margin-bottom: ${pxToRem(20)};
   }
-
-  .k-Button--icon svg.k-Button__icon {
-    padding-left: 0;
   }
 
   @media screen and (min-width: ${ScreenConfig.XS.min}px) {
     max-width: ${pxToRem(325)};
   }
+`
+
+/* `&&&` is used to increase specificity */
+const NoPaddingLeft = css`
+  &&& {
+    padding-left: 0;
+  }
+`
+
+const FacebookIconWithBackgroundNoPadding = styled(FacebookIconWithBackground)`
+  ${NoPaddingLeft}
+`
+const TwitterIconNoPadding = styled(TwitterIcon)`
+  ${NoPaddingLeft}
+`
+const EmailIconNoPadding = styled(EmailIcon)`
+  ${NoPaddingLeft}
 `
 
 const PageSubTitles = styled(Text)`
@@ -540,22 +552,43 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
                 </PageSubTitles>
               </Marger>
               <FlexButtonsContainer>
-                <FacebookButtonIconWords tag="a" iconWithMinWidth={true}>
-                  Partager sur Facebook
-                </FacebookButtonIconWords>
-                <TwitterButtonIconWords tag="a" iconWithMinWidth={true}>
-                  Partager sur Twitter
-                </TwitterButtonIconWords>
-                <Button
-                  modifier="lithium"
-                  size="big"
-                  icon={true}
-                  tag="a"
-                  iconWithMinWidth={true}
-                >
-                  <EmailIcon className="k-Button__icon" />
-                  Partager par email
-                </Button>
+                <Marger bottom="2">
+                  <Button
+                    icon
+                    modifier="facebook"
+                    tag="a"
+                    iconWithMinWidth={true}
+                  >
+                    <FacebookIconWithBackgroundNoPadding className="k-Button__icon k-Button__icon--facebook" />
+                    Partager sur Facebook
+                  </Button>
+                </Marger>
+
+                <Marger bottom="2">
+                  <Button
+                    icon
+                    size="big"
+                    modifier="twitter"
+                    tag="a"
+                    iconWithMinWidth={true}
+                  >
+                    <TwitterIconNoPadding className="k-Button__icon" />
+                    Partager sur Twitter
+                  </Button>
+                </Marger>
+
+                <Marger bottom="2">
+                  <Button
+                    icon
+                    modifier="lithium"
+                    size="big"
+                    tag="a"
+                    iconWithMinWidth={true}
+                  >
+                    <EmailIconNoPadding className="k-Button__icon" />
+                    Partager par email
+                  </Button>
+                </Marger>
               </FlexButtonsContainer>
             </Marger>
           </GridCol>
