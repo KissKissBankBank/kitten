@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const bubbleAnimationKeyframes = props =>
+const bubbleAnimationKeyframes = () =>
   keyframes`
     0% {
       transform: scale(0);
@@ -28,7 +28,8 @@ const bubbleAnimationKeyframes = props =>
       opacity: 0.2;
     }
 `
-const breathingAnimationKeyframes = props =>
+
+const breathingAnimationKeyframes = () =>
   keyframes`
     0% {
       transform: scale(1);
@@ -42,7 +43,8 @@ const breathingAnimationKeyframes = props =>
       opacity: 0.2;
     }
 `
-const endingAnimationKeyframes = props =>
+
+const endingAnimationKeyframes = () =>
   keyframes`
     from {
       transform: scale(1);
