@@ -4,7 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Added `Rocket` illustration.
 - Page: New `Thanks` page
 
 ## [1.7.0] - 2019-01-22
