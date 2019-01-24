@@ -4,9 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `containerStyle`, `paginationStyle` and `bulletStyle`
-  props on `SimpleCarousel`.
-- Fix: Add the ability to edit and add styles on `BulletList`.
+- Feature: New `HighlightHalo` component in `Tour` group. Accepts:
+  `itemSize` (width/height size in pixel number)
+  `itemColor` (CSS color value as string)
+  `animationCycles` (number of middle animation cycles as number)
+  `animationCycleDuration` (duration of an animation cycle in seconds as number)
+  `animationDelay` (delay in seconds as number)
 
 ## [1.8.0] - 2019-01-23
 
