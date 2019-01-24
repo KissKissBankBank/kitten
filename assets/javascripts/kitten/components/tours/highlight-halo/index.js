@@ -82,11 +82,12 @@ const StyledHighlightHalo = styled.div`
     width: 100%;
     height: 100%;
 
-    animation-delay: ${({ animationDelay }) => animationDelay + 0.2}s,
-      ${({ animationDelay }) => animationDelay + 0.2 + 0.5}s,
-      ${({ animationDelay, getAnimationDelay }) =>
-        animationDelay + 0.2 + 0.5 + getAnimationDelay}s;
+    ${({ animationDelay, getAnimationDelay }) => css`
+      animation-delay: ${animationDelay + 0.2}s, ${animationDelay + 0.2 + 0.5}s,
+        ${animationDelay + 0.2 + 0.5 + getAnimationDelay}s;
+    `}
   }
+
   > div:nth-of-type(2) {
     top: 16.66%;
     left: 16.66%;
@@ -94,10 +95,10 @@ const StyledHighlightHalo = styled.div`
     width: 66.66%;
     height: 66.66%;
 
-    animation-delay: ${({ animationDelay }) => animationDelay + 0.1}s,
-      ${({ animationDelay }) => animationDelay + 0.1 + 0.5}s,
-      ${({ animationDelay, getAnimationDelay }) =>
-        animationDelay + 0.1 + 0.5 + getAnimationDelay}s;
+    ${({ animationDelay, getAnimationDelay }) => css`
+      animation-delay: ${animationDelay + 0.1}s, ${animationDelay + 0.1 + 0.5}s,
+        ${animationDelay + 0.1 + 0.5 + getAnimationDelay}s;
+    `}
   }
   > div:nth-of-type(3) {
     top: 33.33%;
@@ -106,10 +107,10 @@ const StyledHighlightHalo = styled.div`
     width: 33.33%;
     height: 33.33%;
 
-    animation-delay: ${({ animationDelay }) => animationDelay}s,
-      ${({ animationDelay }) => animationDelay + 0.5}s,
-      ${({ animationDelay, getAnimationDelay }) =>
-        animationDelay + 0.5 + getAnimationDelay}s;
+    ${({ animationDelay, getAnimationDelay }) => css`
+      animation-delay: ${animationDelay}s, ${animationDelay + 0.5}s,
+        ${animationDelay + 0.5 + getAnimationDelay}s;
+    `}
   }
 `
 
