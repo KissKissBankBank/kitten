@@ -21,14 +21,12 @@ const FlexTitleContainer = styled.div`
 `
 
 const PageTitle = styled.h1`
-  margin: 0 0 0 ${pxToRem(40)};
   line-height: ${pxToRem(43)};
   font-size: ${pxToRem(36)};
   font-weight: bold;
   color: ${COLORS.text1};
 
   @media screen and (max-width: ${ScreenConfig.XXS.max}px) {
-    margin: ${pxToRem(20)} 0 0 0;
     text-align: center;
     line-height: ${pxToRem(29)};
     font-size: ${pxToRem(24)};
@@ -62,7 +60,14 @@ export class ThanksHeader extends Component {
       <GridCol offset-xs="0" col-m="9" offset-m="1" col-l="6" offset-l="3">
         <FlexTitleContainer>
           <RocketIllustration />
-          <PageTitle>
+          <PageTitle
+            className="
+            k-u-margin-top-double
+            k-u-margin-top-none@m-up
+            k-u-margin-left-none
+            k-u-margin-left-quadruple@m-up
+          "
+          >
             Bravo, grâce à vous
             <br />
             la collecte progresse&nbsp;!
