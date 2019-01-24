@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components'
 
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
+import COLORS from '../../../../constants/colors-config'
 
 import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
@@ -494,14 +495,7 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
     <Marger top="10" bottom="10">
       <Container>
         <Grid>
-          <GridCol
-            col-xs="12"
-            offset-xs="0"
-            col-m="9"
-            offset-m="1"
-            col-l="6"
-            offset-l="3"
-          >
+          <GridCol offset-xs="0" col-m="9" offset-m="1" col-l="6" offset-l="3">
             <FlexTitleContainer>
               <RocketIllustration />
               <Title>
@@ -519,14 +513,7 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
               </PageIntroText>
             </Marger>
           </GridCol>
-          <GridCol
-            col-xs="12"
-            offset-xs="0"
-            col-m="9"
-            offset-m="1"
-            col-l="5"
-            offset-l="3"
-          >
+          <GridCol offset-xs="0" col-m="9" offset-m="1" col-l="5" offset-l="3">
             <Marger bottom="8">
               <PageSubTitles tag="h2" weight="bold">
                 Postez un message de soutien sur la page du projet
