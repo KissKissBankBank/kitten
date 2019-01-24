@@ -6,6 +6,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Page: New `Thanks` page
 
+## [1.8.0] - 2019-01-23
+
+Feature:
+- Create `NavTabCarousel` component.
+
+Fixes:
+- Fix some styles on `SimpleCard`.
+- Remove `SearchInput` results cross.
+
+## [1.7.1] - 2019-01-22
+
+Fixes:
+- Fix trigger `onChange` handler on `Field.Select` when autoFill is triggered.
+
 ## [1.7.0] - 2019-01-22
 
 Features:
