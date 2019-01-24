@@ -65,7 +65,7 @@ class SimpleCarouselBase extends Component {
     const paginationCustomStyle = [
       styles.pagination,
       paginationAlign && { justifyContent: paginationAlign },
-      { ...paginationStyle },
+      paginationStyle,
     ]
 
     return (
