@@ -9,7 +9,6 @@ import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
 
-import { Title } from '../../../../components/typography/title'
 import { Text } from '../../../../components/typography/text'
 
 import { TextInput } from '../../../../components/form/text-input'
@@ -26,23 +25,26 @@ const FlexTitleContainer = styled.div`
   flex-direction: row;
   align-items: center;
 
-  h1 {
-    margin: 0 0 0 ${pxToRem(40)};
-    line-height: ${pxToRem(43)};
-    font-size: ${pxToRem(36)};
-  }
-
   @media screen and (max-width: ${ScreenConfig.XXS.max}px) {
     flex-direction: column;
-
-    h1 {
-      margin: ${pxToRem(20)} 0 0 0;
-      text-align: center;
-      line-height: ${pxToRem(29)};
-      font-size: ${pxToRem(24)};
-    }
   }
 `
+
+const Title = styled.h1`
+  margin: 0 0 0 ${pxToRem(40)};
+  line-height: ${pxToRem(43)};
+  font-size: ${pxToRem(36)};
+  font-weight: bold;
+  color: ${COLORS.text1};
+
+  @media screen and (max-width: ${ScreenConfig.XXS.max}px) {
+    margin: ${pxToRem(20)} 0 0 0;
+    text-align: center;
+    line-height: ${pxToRem(29)};
+    font-size: ${pxToRem(24)};
+  }
+`
+
 const FlexButtonsContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -503,11 +505,11 @@ storiesOf('Pages/Contribute', module).add('Thanks', () => {
           >
             <FlexTitleContainer>
               <RocketIllustration />
-              <Text tag="h1" weight="bold">
+              <Title>
                 Bravo, grâce à vous
                 <br />
                 la collecte progresse&nbsp;!
-              </Text>
+              </Title>
             </FlexTitleContainer>
             <Marger top="3" bottom="4">
               <PageIntroText>
