@@ -60,7 +60,7 @@ class SimpleCarouselBase extends Component {
     const { totalPagesCount, currentPageNumber } = this.state
     const rangePage = createRangeFromZeroTo(totalPagesCount)
 
-    const containerCustomStyle = [styles.container, { ...containerStyle }]
+    const containerCustomStyle = [styles.container, containerStyle]
 
     const paginationCustomStyle = [
       styles.pagination,
