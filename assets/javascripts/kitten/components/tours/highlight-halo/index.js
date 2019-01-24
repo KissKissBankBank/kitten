@@ -170,7 +170,7 @@ HighlightHalo.propTypes = {
   haloColor: PropTypes.string,
   haloSize: PropTypes.number,
   animationCycles: PropTypes.oneOfType([
-    PropTypes.string, // any string arg will cause no shutdown
+    PropTypes.oneOf(['infinite']), // `infinite` will cause no shutdown
     PropTypes.number, // number of 'breathing' cycles before shutting down
   ]),
   animationCycleDuration: PropTypes.number, // time in seconds
