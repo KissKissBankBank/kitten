@@ -97,7 +97,7 @@ class SimpleCarouselBase extends Component {
                 numPage === currentPageNumber && {
                   background: activePaginationColor,
                 },
-                { ...bulletStyle },
+                bulletStyle,
               ]
 
               return (
