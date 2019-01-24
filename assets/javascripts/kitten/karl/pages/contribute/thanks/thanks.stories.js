@@ -50,9 +50,8 @@ const FlexButtonsContainer = styled.div`
   flex-direction: column;
   align-items: stretch;
 
-  > a {
-    margin-bottom: ${pxToRem(20)};
-  }
+  a {
+    display: block;
   }
 
   @media screen and (min-width: ${ScreenConfig.XS.min}px) {
