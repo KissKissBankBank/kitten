@@ -32,7 +32,7 @@ export class ThanksComment extends Component {
               aria-label="Laissez un message au porteur de projet"
             />
           </Marger>
-          <Marger top="3" className="k-u-align-center@s-down">
+          <Marger top="3" className="k-u-align-center@xs-down">
             <Button modifier="helium" size="big">
               Valider
             </Button>
