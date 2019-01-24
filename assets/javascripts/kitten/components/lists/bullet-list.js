@@ -13,7 +13,7 @@ export class BulletList extends React.Component {
   }
 
   renderItem(element) {
-    const { key, item, className } = element
+    const { key, item, className, ...others } = element
     const itemClassName = classNames(
       'k-BulletList__item',
       { 'k-BulletList__item--large': this.props.large },
@@ -23,7 +23,7 @@ export class BulletList extends React.Component {
     )
 
     return (
-      <li key={key} className={itemClassName}>
+      <li key={key} className={itemClassName} {...others}>
         {item}
       </li>
     )

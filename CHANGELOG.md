@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `containerStyle`, `paginationStyle` and `bulletStyle`
+  props on `SimpleCarousel`.
+- Fix: Add the ability to edit and add styles on `BulletList`.
+
 ## [1.8.0] - 2019-01-23
 
 Feature:

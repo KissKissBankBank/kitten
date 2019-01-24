@@ -9,6 +9,7 @@ const Marger = Radium(MargerBase)
 
 class SimpleCarouselBase extends Component {
   static propTypes = {
+    containerStyle: PropTypes.object,
     activePaginationColor: PropTypes.string,
     paginationColor: PropTypes.string,
     paginationAlign: PropTypes.oneOf([
@@ -17,12 +18,17 @@ class SimpleCarouselBase extends Component {
       'space-between',
       'space-around',
     ]),
+    paginationStyle: PropTypes.object,
+    bulletStyle: PropTypes.object,
   }
 
   static defaultProps = {
+    containerStyle: {},
     activePaginationColor: COLORS.primary1,
     paginationColor: COLORS.background1,
     paginationAlign: 'center',
+    paginationStyle: {},
+    bulletStyle: {},
   }
 
   constructor(props) {
@@ -43,21 +49,31 @@ class SimpleCarouselBase extends Component {
   render() {
     const {
       children,
+      containerStyle,
       activePaginationColor,
       paginationColor,
       paginationAlign,
+      paginationStyle,
+      bulletStyle,
     } = this.props
 
     const { totalPagesCount, currentPageNumber } = this.state
     const rangePage = createRangeFromZeroTo(totalPagesCount)
-    const paginationStyle = [
+
+    const containerCustomStyle = [styles.container, { ...containerStyle }]
+
+    const paginationCustomStyle = [
       styles.pagination,
       paginationAlign && { justifyContent: paginationAlign },
+      { ...paginationStyle },
     ]
 
     return (
       <Fragment>
-        <Marger bottom={this.showPagination() ? 4 : 0} style={styles.container}>
+        <Marger
+          bottom={this.showPagination() ? 4 : 0}
+          style={containerCustomStyle}
+        >
           {React.Children.map(children, (item, index) => {
             const itemStyle = [
               styles.item,
@@ -73,7 +89,7 @@ class SimpleCarouselBase extends Component {
         </Marger>
 
         {this.showPagination() && (
-          <Marger top="4" bottom="4" style={paginationStyle}>
+          <Marger top="4" bottom="4" style={paginationCustomStyle}>
             {rangePage.map(numPage => {
               const pageStyle = [
                 styles.page,
@@ -81,6 +97,7 @@ class SimpleCarouselBase extends Component {
                 numPage === currentPageNumber && {
                   background: activePaginationColor,
                 },
+                { ...bulletStyle },
               ]
 
               return (
