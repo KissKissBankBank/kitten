@@ -115,6 +115,16 @@ const StyledHighlightHalo = styled.div`
 `
 
 export class HighlightHalo extends Component {
+  constructor(props) {
+    super(props)
+
+    this.lastAnimatedDiv = React.createRef()
+
+    this.state = { animationStatus: true }
+
+    this.animationCount = 0
+  }
+
   highlightHaloAnimation = () => {
     var animationEasing = 'ease-in-out'
 
@@ -151,6 +161,16 @@ export class HighlightHalo extends Component {
     return 0
   }
 
+  // handleAnimationEnd =
+
+  componentDidMount() {
+    this.lastAnimatedDiv.current.addEventListener('animationend', () => {
+      this.animationCount += 1
+      this.animationCount == 3 && this.setState({ animationStatus: false })
+      console.log(this.state.animationStatus)
+    })
+  }
+
   render() {
     return (
       <StyledHighlightHalo
@@ -158,7 +178,7 @@ export class HighlightHalo extends Component {
         getAnimationDelay={this.getAnimationDelay()}
         {...this.props}
       >
-        <div />
+        <div ref={this.lastAnimatedDiv} />
         <div />
         <div />
       </StyledHighlightHalo>
