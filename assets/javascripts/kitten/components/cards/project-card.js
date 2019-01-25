@@ -27,7 +27,7 @@ class ProjectCardComponent extends Component {
   }
 
   renderDescription() {
-    const { ownerAvatarSrc, ownerName, ownerLocation, title } = this.props
+    const { ownerAvatarSrc, ownerName, title } = this.props
 
     return (
       <div className="k-ProjectCard__grid">
@@ -42,14 +42,14 @@ class ProjectCardComponent extends Component {
               'k-ProjectCard__grid--flex__item-fluid',
               'k-u-margin-left-single',
               'k-u-margin-right-single',
+              'k-u-weight-regular',
             )}
             margin={false}
             normalLineHeight
             modifier="quaternary"
+            tag="strong"
           >
-            <span className="k-u-weight-regular">{ownerName}</span>
-            <br />
-            {ownerLocation}
+            {ownerName}
           </Paragraph>
 
           {this.renderTooltip()}
@@ -365,7 +365,6 @@ ProjectCardComponent.defaultProps = {
   linkTitle: null,
   ownerAvatarSrc: null,
   ownerName: 'Name',
-  ownerLocation: 'Location',
   tagLists: null,
   tags: null,
   paragraph: null,
