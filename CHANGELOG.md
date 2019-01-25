@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Page: New `Thanks` page
 
+## [1.10.0] - 2019-01-25
+
+Feature: 
+- Add `onAnimationEnd` to `HighlightHalo` that accepts a function to
+  execute when animation is over.
+
 ## [1.9.0] - 2019-01-23
 
 Features:
