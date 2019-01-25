@@ -115,12 +115,6 @@ const StyledHighlightHalo = styled.div`
 `
 
 export class HighlightHalo extends Component {
-  constructor(props) {
-    super(props)
-
-    this.animationCount = 0
-  }
-
   highlightHaloAnimation = () => {
     var animationEasing = 'ease-in-out'
 
@@ -157,16 +151,19 @@ export class HighlightHalo extends Component {
     return 0
   }
 
-  componentDidMount() {
-    if (this.lastAnimatedDiv === null) return null
+  handleAnimationEnd = event => {
+    const animationName = event.animationName
+    const lastAnimationName = endingAnimationKeyframes().getName()
 
-    this.lastAnimatedDiv.addEventListener('animationend', () => {
-      this.animationCount += 1
+    event.persist()
 
-      if (this.animationCount === 3) {
-        this.props.onHaloAnimationEnd()
-      }
-    })
+    if (
+      animationName !== lastAnimationName ||
+      this.lastAnimatedDiv != event.target
+    )
+      return
+
+    this.props.onHaloAnimationEnd()
   }
 
   render() {
@@ -176,6 +173,7 @@ export class HighlightHalo extends Component {
         highlightHaloAnimation={this.highlightHaloAnimation()}
         getAnimationDelay={this.getAnimationDelay()}
         {...other}
+        onAnimationEnd={this.handleAnimationEnd}
       >
         <div />
         <div />
