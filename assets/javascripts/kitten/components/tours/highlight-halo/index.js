@@ -119,9 +119,6 @@ export class HighlightHalo extends Component {
     super(props)
 
     this.lastAnimatedDiv = React.createRef()
-
-    this.state = { animationStatus: true }
-
     this.animationCount = 0
   }
 
@@ -161,22 +158,23 @@ export class HighlightHalo extends Component {
     return 0
   }
 
-  // handleAnimationEnd =
-
   componentDidMount() {
     this.lastAnimatedDiv.current.addEventListener('animationend', () => {
       this.animationCount += 1
-      this.animationCount == 3 && this.setState({ animationStatus: false })
-      console.log(this.state.animationStatus)
+
+      if (this.animationCount === 3) {
+        this.props.onHaloAnimationEnd()
+      }
     })
   }
 
   render() {
+    const { onHaloAnimationEnd, ...other } = this.props
     return (
       <StyledHighlightHalo
         highlightHaloAnimation={this.highlightHaloAnimation()}
         getAnimationDelay={this.getAnimationDelay()}
-        {...this.props}
+        {...other}
       >
         <div ref={this.lastAnimatedDiv} />
         <div />
@@ -195,6 +193,7 @@ HighlightHalo.propTypes = {
   ]),
   animationCycleDuration: PropTypes.number, // time in seconds
   animationDelay: PropTypes.number, // time in seconds
+  onHaloAnimationEnd: PropTypes.func,
 }
 
 HighlightHalo.defaultProps = {
@@ -203,4 +202,5 @@ HighlightHalo.defaultProps = {
   animationCycles: 3,
   animationCycleDuration: 4,
   animationDelay: 0,
+  onHaloAnimationEnd: () => {},
 }
