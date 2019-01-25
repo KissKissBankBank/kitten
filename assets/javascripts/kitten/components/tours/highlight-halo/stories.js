@@ -45,6 +45,9 @@ storiesOf('Tour/HighlightHalo', module)
             max: 20,
             step: 1,
           })}
+          onHaloAnimationEnd={() => {
+            console.log('Animation has ended.')
+          }}
         />
       </StoryContainer>
     )

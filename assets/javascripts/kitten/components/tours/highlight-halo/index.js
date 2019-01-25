@@ -79,12 +79,15 @@ const StyledHighlightHalo = styled.div`
   }
 
   > div:nth-of-type(1) {
-    width: 100%;
-    height: 100%;
+    top: 33.33%;
+    left: 33.33%;
+
+    width: 33.33%;
+    height: 33.33%;
 
     ${({ animationDelay, getAnimationDelay }) => css`
-      animation-delay: ${animationDelay + 0.2}s, ${animationDelay + 0.2 + 0.5}s,
-        ${animationDelay + 0.2 + 0.5 + getAnimationDelay}s;
+      animation-delay: ${animationDelay}s, ${animationDelay + 0.5}s,
+        ${animationDelay + 0.5 + getAnimationDelay}s;
     `}
   }
 
@@ -101,15 +104,12 @@ const StyledHighlightHalo = styled.div`
     `}
   }
   > div:nth-of-type(3) {
-    top: 33.33%;
-    left: 33.33%;
-
-    width: 33.33%;
-    height: 33.33%;
+    width: 100%;
+    height: 100%;
 
     ${({ animationDelay, getAnimationDelay }) => css`
-      animation-delay: ${animationDelay}s, ${animationDelay + 0.5}s,
-        ${animationDelay + 0.5 + getAnimationDelay}s;
+      animation-delay: ${animationDelay + 0.2}s, ${animationDelay + 0.2 + 0.5}s,
+        ${animationDelay + 0.2 + 0.5 + getAnimationDelay}s;
     `}
   }
 `
@@ -151,16 +151,33 @@ export class HighlightHalo extends Component {
     return 0
   }
 
+  handleAnimationEnd = event => {
+    const animationName = event.animationName
+    const lastAnimationName = endingAnimationKeyframes().getName()
+
+    event.persist()
+
+    if (
+      animationName !== lastAnimationName ||
+      this.lastAnimatedDiv != event.target
+    )
+      return
+
+    this.props.onHaloAnimationEnd()
+  }
+
   render() {
+    const { onHaloAnimationEnd, ...other } = this.props
     return (
       <StyledHighlightHalo
         highlightHaloAnimation={this.highlightHaloAnimation()}
         getAnimationDelay={this.getAnimationDelay()}
-        {...this.props}
+        {...other}
+        onAnimationEnd={this.handleAnimationEnd}
       >
         <div />
         <div />
-        <div />
+        <div ref={ref => (this.lastAnimatedDiv = ref)} />
       </StyledHighlightHalo>
     )
   }
@@ -175,6 +192,7 @@ HighlightHalo.propTypes = {
   ]),
   animationCycleDuration: PropTypes.number, // time in seconds
   animationDelay: PropTypes.number, // time in seconds
+  onHaloAnimationEnd: PropTypes.func,
 }
 
 HighlightHalo.defaultProps = {
@@ -183,4 +201,5 @@ HighlightHalo.defaultProps = {
   animationCycles: 3,
   animationCycleDuration: 4,
   animationDelay: 0,
+  onHaloAnimationEnd: () => {},
 }
