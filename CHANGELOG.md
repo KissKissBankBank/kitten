@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Features: In `HighlightHalo`, new prop `onAnimationEnd` (function to execute when animation is over)
+- Features: Add `onAnimationEnd` to `HighlightHalo` that accepts a function to
+  execute when animation is over.
 
 ## [1.9.0] - 2019-01-23
 
