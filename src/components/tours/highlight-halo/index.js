@@ -11,6 +11,8 @@ exports.HighlightHalo = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -46,7 +48,7 @@ var endingAnimationKeyframes = function endingAnimationKeyframes() {
 var StyledHighlightHalo = _styledComponents.default.div.withConfig({
   displayName: "highlight-halo__StyledHighlightHalo",
   componentId: "sc-1pxsuit-0"
-})(["position:relative;height:", ";width:", ";transform:translate(-50%,-50%);> div{position:absolute;left:0;top:0;opacity:0;border-radius:50%;background-color:", ";transform:scale(0);", ";}> div:nth-of-type(1){width:100%;height:100%;", "}> div:nth-of-type(2){top:16.66%;left:16.66%;width:66.66%;height:66.66%;", "}> div:nth-of-type(3){top:33.33%;left:33.33%;width:33.33%;height:33.33%;", "}"], function (_ref) {
+})(["position:relative;height:", ";width:", ";transform:translate(-50%,-50%);> div{position:absolute;left:0;top:0;opacity:0;border-radius:50%;background-color:", ";transform:scale(0);", ";}> div:nth-of-type(1){top:33.33%;left:33.33%;width:33.33%;height:33.33%;", "}> div:nth-of-type(2){top:16.66%;left:16.66%;width:66.66%;height:66.66%;", "}> div:nth-of-type(3){width:100%;height:100%;", "}"], function (_ref) {
   var haloSize = _ref.haloSize;
   return (0, _typography.pxToRem)(haloSize);
 }, function (_ref2) {
@@ -61,7 +63,7 @@ var StyledHighlightHalo = _styledComponents.default.div.withConfig({
 }, function (_ref5) {
   var animationDelay = _ref5.animationDelay,
       getAnimationDelay = _ref5.getAnimationDelay;
-  return (0, _styledComponents.css)(["animation-delay:", "s,", "s,", "s;"], animationDelay + 0.2, animationDelay + 0.2 + 0.5, animationDelay + 0.2 + 0.5 + getAnimationDelay);
+  return (0, _styledComponents.css)(["animation-delay:", "s,", "s,", "s;"], animationDelay, animationDelay + 0.5, animationDelay + 0.5 + getAnimationDelay);
 }, function (_ref6) {
   var animationDelay = _ref6.animationDelay,
       getAnimationDelay = _ref6.getAnimationDelay;
@@ -69,7 +71,7 @@ var StyledHighlightHalo = _styledComponents.default.div.withConfig({
 }, function (_ref7) {
   var animationDelay = _ref7.animationDelay,
       getAnimationDelay = _ref7.getAnimationDelay;
-  return (0, _styledComponents.css)(["animation-delay:", "s,", "s,", "s;"], animationDelay, animationDelay + 0.5, animationDelay + 0.5 + getAnimationDelay);
+  return (0, _styledComponents.css)(["animation-delay:", "s,", "s,", "s;"], animationDelay + 0.2, animationDelay + 0.2 + 0.5, animationDelay + 0.2 + 0.5 + getAnimationDelay);
 });
 
 var HighlightHalo =
@@ -110,16 +112,36 @@ function (_Component) {
       return 0;
     };
 
+    _this.handleAnimationEnd = function (event) {
+      var animationName = event.animationName;
+      var lastAnimationName = endingAnimationKeyframes().getName();
+      event.persist();
+      if (animationName !== lastAnimationName || _this.lastAnimatedDiv != event.target) return;
+
+      _this.props.onHaloAnimationEnd();
+    };
+
     return _this;
   }
 
   (0, _createClass2.default)(HighlightHalo, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
+      var _this$props = this.props,
+          onHaloAnimationEnd = _this$props.onHaloAnimationEnd,
+          other = (0, _objectWithoutProperties2.default)(_this$props, ["onHaloAnimationEnd"]);
       return _react.default.createElement(StyledHighlightHalo, (0, _extends2.default)({
         highlightHaloAnimation: this.highlightHaloAnimation(),
         getAnimationDelay: this.getAnimationDelay()
-      }, this.props), _react.default.createElement("div", null), _react.default.createElement("div", null), _react.default.createElement("div", null));
+      }, other, {
+        onAnimationEnd: this.handleAnimationEnd
+      }), _react.default.createElement("div", null), _react.default.createElement("div", null), _react.default.createElement("div", {
+        ref: function ref(_ref8) {
+          return _this2.lastAnimatedDiv = _ref8;
+        }
+      }));
     }
   }]);
   return HighlightHalo;
@@ -133,13 +155,15 @@ HighlightHalo.propTypes = {
   _propTypes.default.number]),
   animationCycleDuration: _propTypes.default.number,
   // time in seconds
-  animationDelay: _propTypes.default.number // time in seconds
-
+  animationDelay: _propTypes.default.number,
+  // time in seconds
+  onHaloAnimationEnd: _propTypes.default.func
 };
 HighlightHalo.defaultProps = {
   haloColor: _colorsConfig.default.primary1,
   haloSize: 120,
   animationCycles: 3,
   animationCycleDuration: 4,
-  animationDelay: 0
+  animationDelay: 0,
+  onHaloAnimationEnd: function onHaloAnimationEnd() {}
 };
