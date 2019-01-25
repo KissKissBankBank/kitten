@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 
 import { pxToRem } from '../../../../../helpers/utils/typography'

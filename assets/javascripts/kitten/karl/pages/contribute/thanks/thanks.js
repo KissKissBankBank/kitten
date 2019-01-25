@@ -1,9 +1,7 @@
 import React, { Component, Fragment } from 'react'
-import styled, { css } from 'styled-components'
 
 import { Container } from '../../../../components/grid/container'
 import { Grid } from '../../../../components/grid/grid'
-import { Marger } from '../../../../components/layout/marger'
 
 import { ThanksHeader } from './components/thanks-header'
 import { ThanksComment } from './components/thanks-comment'
