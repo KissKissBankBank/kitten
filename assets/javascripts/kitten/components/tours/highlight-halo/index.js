@@ -118,7 +118,6 @@ export class HighlightHalo extends Component {
   constructor(props) {
     super(props)
 
-    this.lastAnimatedDiv = React.createRef()
     this.animationCount = 0
   }
 
@@ -159,7 +158,9 @@ export class HighlightHalo extends Component {
   }
 
   componentDidMount() {
-    this.lastAnimatedDiv.current.addEventListener('animationend', () => {
+    if (this.lastAnimatedDiv === null) return null
+
+    this.lastAnimatedDiv.addEventListener('animationend', () => {
       this.animationCount += 1
 
       if (this.animationCount === 3) {
@@ -176,7 +177,7 @@ export class HighlightHalo extends Component {
         getAnimationDelay={this.getAnimationDelay()}
         {...other}
       >
-        <div ref={this.lastAnimatedDiv} />
+        <div ref={ref => (this.lastAnimatedDiv = ref)} />
         <div />
         <div />
       </StyledHighlightHalo>
