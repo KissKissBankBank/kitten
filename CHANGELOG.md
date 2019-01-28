@@ -4,9 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Remove `ownerLocation` from `ProjectCardComponent`.
+
 ## [1.10.0] - 2019-01-25
 
-Feature: 
+Feature:
 - Add `onAnimationEnd` to `HighlightHalo` that accepts a function to
   execute when animation is over.
 
