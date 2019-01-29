@@ -14,7 +14,7 @@ export class Marger extends Component {
       PropTypes.shape({
         default: PropTypes.number,
         fromXxs: PropTypes.number,
-        frommXs: PropTypes.number,
+        fromXs: PropTypes.number,
         fromS: PropTypes.number,
         fromM: PropTypes.number,
         fromL: PropTypes.number,
@@ -27,7 +27,7 @@ export class Marger extends Component {
       PropTypes.shape({
         default: PropTypes.number,
         fromXxs: PropTypes.number,
-        frommXs: PropTypes.number,
+        fromXs: PropTypes.number,
         fromS: PropTypes.number,
         fromM: PropTypes.number,
         fromL: PropTypes.number,

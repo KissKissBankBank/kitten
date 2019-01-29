@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Display `ownerLocation` only if the prop is provided.
 
+## [1.10.1] - 2019-01-29
+
+Fixes:
+- Move `NavTabCarousel` component path. Imported component from
+  `kitten/components/carousel/tab-bar-carousel` is now deprecated.
+  Use `kitten/components/carousel/nav-tab-carousel` instead.
+- Fix `NavTabCarousel` style issue on grid layout.
+
 ## [1.10.0] - 2019-01-25
 
 Feature:

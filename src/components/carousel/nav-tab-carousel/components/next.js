@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Prev = void 0;
+exports.Next = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -19,10 +19,10 @@ var _typographyConfig = _interopRequireDefault(require("./../../../../constants/
 
 var _typography = require("./../../../../helpers/utils/typography");
 
-var LeftArrowContainerStyles = _styledComponents.default.div.withConfig({
-  displayName: "prev__LeftArrowContainerStyles",
-  componentId: "n0wx91-0"
-})(["color:#fff;", ";align-items:center;display:flex;transition:transform 0.3s ease-in-out;&:hover{transform:translate(-", ");cursor:pointer;color:", ";svg{fill:", ";}}"], _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(8), function (_ref) {
+var RightArrowContainerStyles = _styledComponents.default.div.withConfig({
+  displayName: "next__RightArrowContainerStyles",
+  componentId: "sc-1gb9cus-0"
+})(["color:#fff;", ";align-items:center;display:flex;transition:transform 0.3s ease-in-out;&:hover{transform:translate(", ");cursor:pointer;color:", ";svg{fill:", ";}}"], _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(8), function (_ref) {
   var hoverColor = _ref.hoverColor;
   return hoverColor;
 }, function (_ref2) {
@@ -31,20 +31,19 @@ var LeftArrowContainerStyles = _styledComponents.default.div.withConfig({
 });
 
 var TextStyles = _styledComponents.default.div.withConfig({
-  displayName: "prev__TextStyles",
-  componentId: "n0wx91-1"
-})(["margin-left:", ";"], (0, _typography.pxToRem)(6));
+  displayName: "next__TextStyles",
+  componentId: "sc-1gb9cus-1"
+})(["margin-right:", ";"], (0, _typography.pxToRem)(6));
 
-var Prev = function Prev(_ref3) {
+var Next = function Next(_ref3) {
   var children = _ref3.children,
       hoverColor = _ref3.hoverColor;
-  return _react.default.createElement(LeftArrowContainerStyles, {
+  return _react.default.createElement(RightArrowContainerStyles, {
     hoverColor: hoverColor
-  }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+  }, _react.default.createElement(TextStyles, null, children), _react.default.createElement(_arrowIcon.ArrowIcon, {
     version: "solid",
-    direction: "left",
     fill: "#fff"
-  }), _react.default.createElement(TextStyles, null, children));
+  }));
 };
 
-exports.Prev = Prev;
+exports.Next = Next;
