@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Move `NavTabCarousel` component path. Imported component from
+  `kitten/components/carousel/tab-bar-carousel` is now deprecated.
+  Use `kitten/components/carousel/nav-tab-carousel` instead.
+- Fix: Fix `NavTabCarousel` style issue on grid layout.
+
 ## [1.10.0] - 2019-01-25
 
-Feature: 
+Feature:
 - Add `onAnimationEnd` to `HighlightHalo` that accepts a function to
   execute when animation is over.
 
