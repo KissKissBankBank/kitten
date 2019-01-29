@@ -70,19 +70,23 @@ function (_Component) {
 
       var _this$props = this.props,
           children = _this$props.children,
+          containerStyle = _this$props.containerStyle,
           activePaginationColor = _this$props.activePaginationColor,
           paginationColor = _this$props.paginationColor,
-          paginationAlign = _this$props.paginationAlign;
+          paginationAlign = _this$props.paginationAlign,
+          paginationStyle = _this$props.paginationStyle,
+          bulletStyle = _this$props.bulletStyle;
       var _this$state = this.state,
           totalPagesCount = _this$state.totalPagesCount,
           currentPageNumber = _this$state.currentPageNumber;
       var rangePage = (0, _range.createRangeFromZeroTo)(totalPagesCount);
-      var paginationStyle = [styles.pagination, paginationAlign && {
+      var containerCustomStyle = [styles.container, containerStyle];
+      var paginationCustomStyle = [styles.pagination, paginationAlign && {
         justifyContent: paginationAlign
-      }];
+      }, paginationStyle];
       return _react.default.createElement(_react.Fragment, null, _react.default.createElement(Marger, {
         bottom: this.showPagination() ? 4 : 0,
-        style: styles.container
+        style: containerCustomStyle
       }, _react.default.Children.map(children, function (item, index) {
         var itemStyle = [styles.item, index !== currentPageNumber && styles.item.hide];
         return _react.default.createElement("div", {
@@ -92,13 +96,13 @@ function (_Component) {
       })), this.showPagination() && _react.default.createElement(Marger, {
         top: "4",
         bottom: "4",
-        style: paginationStyle
+        style: paginationCustomStyle
       }, rangePage.map(function (numPage) {
         var pageStyle = [styles.page, paginationColor && {
           background: paginationColor
         }, numPage === currentPageNumber && {
           background: activePaginationColor
-        }];
+        }, bulletStyle];
         return _react.default.createElement("div", {
           key: numPage,
           style: pageStyle,
@@ -111,14 +115,20 @@ function (_Component) {
 }(_react.Component);
 
 SimpleCarouselBase.propTypes = {
+  containerStyle: _propTypes.default.object,
   activePaginationColor: _propTypes.default.string,
   paginationColor: _propTypes.default.string,
-  paginationAlign: _propTypes.default.oneOf(['start', 'center', 'space-between', 'space-around'])
+  paginationAlign: _propTypes.default.oneOf(['start', 'center', 'space-between', 'space-around']),
+  paginationStyle: _propTypes.default.object,
+  bulletStyle: _propTypes.default.object
 };
 SimpleCarouselBase.defaultProps = {
+  containerStyle: {},
   activePaginationColor: _colorsConfig.default.primary1,
   paginationColor: _colorsConfig.default.background1,
-  paginationAlign: 'center'
+  paginationAlign: 'center',
+  paginationStyle: {},
+  bulletStyle: {}
 };
 var styles = {
   container: {

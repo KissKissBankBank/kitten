@@ -4,6 +4,32 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Move `NavTabCarousel` component path. Imported component from
+  `kitten/components/carousel/tab-bar-carousel` is now deprecated.
+  Use `kitten/components/carousel/nav-tab-carousel` instead.
+- Fix: Fix `NavTabCarousel` style issue on grid layout.
+
+## [1.10.0] - 2019-01-25
+
+Feature:
+- Add `onAnimationEnd` to `HighlightHalo` that accepts a function to
+  execute when animation is over.
+
+## [1.9.0] - 2019-01-23
+
+Features:
+- Add `containerStyle`, `paginationStyle` and `bulletStyle`
+  props on `SimpleCarousel`.
+- New `HighlightHalo` component in `Tour` group. Accepts:
+  `itemSize` (width/height size in pixel number)
+  `itemColor` (CSS color value as string)
+  `animationCycles` (number of middle animation cycles as number)
+  `animationCycleDuration` (duration of an animation cycle in seconds as number)
+  `animationDelay` (delay in seconds as number)
+
+Fix:
+- Add the ability to edit and add styles on `BulletList`.
+
 ## [1.8.0] - 2019-01-23
 
 Feature:

@@ -141,8 +141,6 @@ To contribute code:
   - Feature: a new feature.
   - Fix: a fix.
   ```
-- Update the `KARL_CHANGELOG.md` under the [unreleased] section if you added some
-  updates to the styleguide.
 
 To merge code into master:
 
@@ -174,9 +172,6 @@ $ npm login
   * Check that [each merged
     PR](https://github.com/KissKissBankBank/kitten/commits/master)
     from the last release has an entry.
-- Update the `KARL_CHANGELOG.md` file:
-  * Update the version with the version of the library.
-  * Add a new `[unreleased]` section.
 - Update the `package.json` file:
   * Update the version with the version of the library.
 - Run this command:
