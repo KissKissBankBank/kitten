@@ -90,8 +90,6 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                     >
                       Name
                     </span>
-                    <br />
-                    Location
                   </p>
                 </div>
                 <div
@@ -234,8 +232,6 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
                   >
                     Name
                   </span>
-                  <br />
-                  Location
                 </p>
               </div>
               <div
@@ -385,8 +381,6 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                     >
                       Name
                     </span>
-                    <br />
-                    Location
                   </p>
                 </div>
                 <div
