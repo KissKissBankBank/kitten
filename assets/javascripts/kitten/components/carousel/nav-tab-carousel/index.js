@@ -9,6 +9,7 @@ import { getReactElementsByType } from './../../../helpers/react/react-elements'
 import { pxToRem } from './../../../helpers/utils/typography'
 
 const NavTabCarouselStyles = styled.div`
+  box-sizing: border-box;
   display: flex;
   width: 100%;
   justify-content: space-between;
