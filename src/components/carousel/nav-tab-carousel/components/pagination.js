@@ -23,7 +23,7 @@ var _typography = require("./../../../../helpers/utils/typography");
 
 var BulletPointStyles = _styledComponents.default.div.withConfig({
   displayName: "pagination__BulletPointStyles",
-  componentId: "sc-1u3i1hn-0"
+  componentId: "sc-1thdyq2-0"
 })(["width:", ";height:", ";margin-left:", ";margin-right:", ";background-color:", ";", ""], (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), _colorsConfig.default.background1, function (_ref) {
   var isSelected = _ref.isSelected,
       activeColor = _ref.activeColor;
@@ -32,7 +32,7 @@ var BulletPointStyles = _styledComponents.default.div.withConfig({
 
 var PaginationStyles = _styledComponents.default.div.withConfig({
   displayName: "pagination__PaginationStyles",
-  componentId: "sc-1u3i1hn-1"
+  componentId: "sc-1thdyq2-1"
 })(["display:flex;justify-content:center;margin:0 ", ";"], (0, _typography.pxToRem)(10));
 
 var Pagination = function Pagination(_ref2) {

@@ -4,10 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Move `NavTabCarousel` component path. Imported component from
+## [1.10.1] - 2019-01-29
+
+Fixes:
+- Move `NavTabCarousel` component path. Imported component from
   `kitten/components/carousel/tab-bar-carousel` is now deprecated.
   Use `kitten/components/carousel/nav-tab-carousel` instead.
-- Fix: Fix `NavTabCarousel` style issue on grid layout.
+- Fix `NavTabCarousel` style issue on grid layout.
 
 ## [1.10.0] - 2019-01-25
 
