@@ -150,7 +150,7 @@ Marger.propTypes = {
   top: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number, _propTypes.default.shape({
     default: _propTypes.default.number,
     fromXxs: _propTypes.default.number,
-    frommXs: _propTypes.default.number,
+    fromXs: _propTypes.default.number,
     fromS: _propTypes.default.number,
     fromM: _propTypes.default.number,
     fromL: _propTypes.default.number,
@@ -159,7 +159,7 @@ Marger.propTypes = {
   bottom: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number, _propTypes.default.shape({
     default: _propTypes.default.number,
     fromXxs: _propTypes.default.number,
-    frommXs: _propTypes.default.number,
+    fromXs: _propTypes.default.number,
     fromS: _propTypes.default.number,
     fromM: _propTypes.default.number,
     fromL: _propTypes.default.number,
