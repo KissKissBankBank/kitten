@@ -4,7 +4,8 @@ import { Deprecated } from '../../helpers/utils/deprecated'
 
 export const NavTabCarousel = props => {
   const message = `DEPRECATED:
-    Use \`NavTabCarousel\` from \`…/carousel/nav-tab-carousel\`.`
+    Import \`NavTabCarousel\` from \`…/nav-tab-carousel\`
+    instead of `…/tab-bar-carousel.`
 
   return (
     <Deprecated warningMessage={message}>
