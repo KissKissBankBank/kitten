@@ -73,12 +73,18 @@ describe('<ProjectCard />', () => {
     })
   })
 
-  describe('with ownerName props', () => {
-    const projectCard = mount(<ProjectCard ownerName="Custom name" />)
+  describe('with ownerName and ownerLocation props', () => {
+    const projectCard = mount(
+      <ProjectCard ownerName="Custom name" ownerLocation="Custom location" />,
+    )
     const paragraph = projectCard.find(Paragraph).first()
 
     it('renders a name value', () => {
       expect(paragraph.contains('Custom name')).toBe(true)
+    })
+
+    it('renders a location value', () => {
+      expect(paragraph.contains('Custom location')).toBe(true)
     })
   })
 
