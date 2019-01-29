@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Allow an empty `ownerLocation` on `ProjectCardComponent`.
+- Feature: Display `ownerLocation` only if the prop is provided.
 
 ## [1.10.0] - 2019-01-25
 
