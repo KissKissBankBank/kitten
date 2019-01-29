@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Remove `ownerLocation` from `ProjectCardComponent`.
+- Feature: Allow an empty `ownerLocation` on `ProjectCardComponent`.
 
 ## [1.10.0] - 2019-01-25
 
