@@ -364,6 +364,7 @@ ProjectCardComponent.defaultProps = {
   linkTitle: null,
   ownerAvatarSrc: null,
   ownerName: 'Name',
+  ownerLocation: 'Location',
   tagLists: null,
   tags: null,
   paragraph: null,
