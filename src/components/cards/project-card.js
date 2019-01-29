@@ -95,12 +95,13 @@ function (_Component) {
         },
         withoutPointerEvents: true
       }), _react.default.createElement(_paragraph.Paragraph, {
-        className: (0, _classnames.default)('k-ProjectCard__grid--flex__item-fluid', 'k-u-margin-left-single', 'k-u-margin-right-single', 'k-u-weight-regular'),
+        className: (0, _classnames.default)('k-ProjectCard__grid--flex__item-fluid', 'k-u-margin-left-single', 'k-u-margin-right-single'),
         margin: false,
         normalLineHeight: true,
-        modifier: "quaternary",
-        tag: "strong"
-      }, ownerName), this.renderTooltip()), _react.default.createElement(_marger.Marger, {
+        modifier: "quaternary"
+      }, _react.default.createElement("span", {
+        className: "k-u-weight-regular"
+      }, "ownerName}"), ownerLocation && "<br /> ".concat(ownerLocation)), this.renderTooltip()), _react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "1.5",
         className: "k-ProjectCard__grid--flex"
