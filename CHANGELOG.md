@@ -2,7 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [unreleased]
+## [1.11.0] - 2019-01-29
+
+Feature:
+- Display `ownerLocation` only if the prop is provided.
 
 ## [1.10.1] - 2019-01-29
 

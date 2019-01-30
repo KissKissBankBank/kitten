@@ -101,7 +101,7 @@ function (_Component) {
         modifier: "quaternary"
       }, _react.default.createElement("span", {
         className: "k-u-weight-regular"
-      }, ownerName), _react.default.createElement("br", null), ownerLocation), this.renderTooltip()), _react.default.createElement(_marger.Marger, {
+      }, ownerName), ownerLocation && _react.default.createElement(_react.Fragment, null, _react.default.createElement("br", null), ownerLocation)), this.renderTooltip()), _react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "1.5",
         className: "k-ProjectCard__grid--flex"
@@ -365,7 +365,7 @@ ProjectCardComponent.defaultProps = {
   linkTitle: null,
   ownerAvatarSrc: null,
   ownerName: 'Name',
-  ownerLocation: 'Location',
+  ownerLocation: null,
   tagLists: null,
   tags: null,
   paragraph: null,
