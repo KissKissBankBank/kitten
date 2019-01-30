@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Replace FacebookIconWithBackground inside `FacebookButtonIconWords` by FacebookIcon.
 - Feature: Display `ownerLocation` only if the prop is provided.
 
 ## [1.10.1] - 2019-01-29
