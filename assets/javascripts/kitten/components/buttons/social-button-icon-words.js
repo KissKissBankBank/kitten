@@ -5,7 +5,7 @@ import { TwitterIcon } from '../../components/icons/twitter-icon'
 import { LinkedinIcon } from '../../components/icons/linkedin-icon'
 
 export const FacebookButtonIconWords = ({ children, ...props }) => (
-  <Button icon modifier="facebook" {...props}>
+  <Button icon size="big" modifier="facebook" {...props}>
     <FacebookIcon className="k-Button__icon" />
     {children}
   </Button>
