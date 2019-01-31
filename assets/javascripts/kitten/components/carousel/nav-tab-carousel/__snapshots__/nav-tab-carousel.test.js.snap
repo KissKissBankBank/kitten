@@ -2,7 +2,7 @@
 
 exports[`<NavTabCarousel /> matches with snapshot 1`] = `
 <div
-  className="nav-tab-carousel__NavTabCarouselStyles-sc-1fg6mhx-0 fkGTlP"
+  className="nav-tab-carousel__NavTabCarouselStyles-sc-1fg6mhx-0 drKXbI"
 >
   <div
     className="styled-components__StyledLeftArrowContainer-jws9qo-1 eWbDxx"

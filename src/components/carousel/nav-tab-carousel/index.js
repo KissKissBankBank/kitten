@@ -40,7 +40,7 @@ var _typography = require("./../../../helpers/utils/typography");
 var NavTabCarouselStyles = _styledComponents.default.div.withConfig({
   displayName: "nav-tab-carousel__NavTabCarouselStyles",
   componentId: "sc-1fg6mhx-0"
-})(["box-sizing:border-box;display:flex;width:100%;justify-content:space-between;align-items:center;background-color:", ";padding:", " ", ";min-width:320px;"], _colorsConfig.default.font1, (0, _typography.pxToRem)(32), (0, _typography.pxToRem)(40));
+})(["box-sizing:border-box;display:flex;width:100%;justify-content:space-between;align-items:center;background-color:", ";padding:", " ", ";min-width:", ";"], _colorsConfig.default.font1, (0, _typography.pxToRem)(32), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(320));
 
 var NavTabCarousel =
 /*#__PURE__*/
