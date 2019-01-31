@@ -23,6 +23,8 @@ const PaginationStyles = styled.div`
   display: flex;
   justify-content: center;
   margin: 0 ${pxToRem(10)};
+  width: 20%;
+  min-width: 60px;
 `
 
 export const Pagination = ({ activeIndex, totalIndex, activeColor }) => {
