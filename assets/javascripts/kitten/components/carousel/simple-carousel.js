@@ -30,16 +30,21 @@ const StyledContainer = styled.div`
     }
   }
 `
-const StyledPagination = styled.div`
+const StyledPagination = styled.ul`
   justify-content: ${({ paginationAlign }) => paginationAlign};
-  margin: ${pxToRem(40)};
+  margin: ${pxToRem(40)} 0;
+  padding: 0;
   display: flex;
+  li {
+    list-style-type: none;
+    margin-right: ${pxToRem(5)};
+    line-height: ${pxToRem(6)};
+  }
 `
 
 const StyledPaginationButton = styled.button`
   width: ${pxToRem(6)};
   height: ${pxToRem(6)};
-  margin-right: ${pxToRem(5)};
   border: 0;
   padding: 0;
   border-radius: 0;
@@ -135,19 +140,21 @@ export class SimpleCarousel extends Component {
           >
             {rangePage.map(numPage => {
               return (
-                <StyledPaginationButton
-                  id={'carouselTab' + numPage}
-                  type="button"
-                  aria-controls={'carouselItem' + numPage}
-                  aria-label={'Page ' + (numPage + 1)}
-                  role="tab"
-                  key={numPage}
-                  aria-selected={numPage === currentPageNumber}
-                  paginationColor={paginationColor}
-                  activePaginationColor={activePaginationColor}
-                  style={bulletStyle}
-                  onClick={this.handlePageClick(numPage)}
-                />
+                <li>
+                  <StyledPaginationButton
+                    id={'carouselTab' + numPage}
+                    type="button"
+                    aria-controls={'carouselItem' + numPage}
+                    aria-label={'Page ' + (numPage + 1)}
+                    role="tab"
+                    key={numPage}
+                    aria-selected={numPage === currentPageNumber}
+                    paginationColor={paginationColor}
+                    activePaginationColor={activePaginationColor}
+                    style={bulletStyle}
+                    onClick={this.handlePageClick(numPage)}
+                  />
+                </li>
               )
             })}
           </StyledPagination>
