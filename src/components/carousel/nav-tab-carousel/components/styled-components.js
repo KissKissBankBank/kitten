@@ -43,7 +43,7 @@ exports.StyledLeftArrowContainer = StyledLeftArrowContainer;
 var StyledArrowIcon = (0, _styledComponents.default)(_arrowIcon.ArrowIcon).withConfig({
   displayName: "styled-components__StyledArrowIcon",
   componentId: "jws9qo-2"
-})(["min-width:9px;min-height:9px;"]);
+})(["min-width:", ";min-height:", ";"], (0, _typography.pxToRem)(9), (0, _typography.pxToRem)(9));
 exports.StyledArrowIcon = StyledArrowIcon;
 
 var StyledPrevText = _styledComponents.default.div.withConfig({
