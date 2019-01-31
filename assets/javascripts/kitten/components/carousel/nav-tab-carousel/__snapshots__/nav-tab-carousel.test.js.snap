@@ -2,13 +2,13 @@
 
 exports[`<NavTabCarousel /> matches with snapshot 1`] = `
 <div
-  className="nav-tab-carousel__NavTabCarouselStyles-sc-1fg6mhx-0 cCoVMH"
+  className="nav-tab-carousel__NavTabCarouselStyles-sc-1fg6mhx-0 drKXbI"
 >
   <div
-    className="prev__LeftArrowContainerStyles-sc-11dzafq-0 hDYrvH"
+    className="styled-components__StyledLeftArrowContainer-jws9qo-1 eWbDxx"
   >
     <svg
-      className=""
+      className="styled-components__StyledArrowIcon-jws9qo-2 lmmseD"
       data-radium={true}
       fill="#fff"
       height="5.64"
@@ -26,13 +26,13 @@ exports[`<NavTabCarousel /> matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="prev__TextStyles-sc-11dzafq-1 dgARql"
+      className="styled-components__StyledPrevText-jws9qo-3 hRbKse"
     >
       Foobar 1
     </div>
   </div>
   <div
-    className="pagination__PaginationStyles-sc-1thdyq2-1 geOfaq"
+    className="pagination__PaginationStyles-sc-1thdyq2-1 hZuMTE"
   >
     <div
       className="pagination__BulletPointStyles-sc-1thdyq2-0 fBOazf"
@@ -45,15 +45,15 @@ exports[`<NavTabCarousel /> matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="next__RightArrowContainerStyles-sc-1gb9cus-0 conurw"
+    className="styled-components__StyledRightArrowContainer-jws9qo-0 fuMAAg"
   >
     <div
-      className="next__TextStyles-sc-1gb9cus-1 fwfhKW"
+      className="styled-components__StyledNextText-jws9qo-4 cvlIdJ"
     >
       Foobar 2
     </div>
     <svg
-      className=""
+      className="styled-components__StyledArrowIcon-jws9qo-2 lmmseD"
       data-radium={true}
       fill="#fff"
       height="5.64"
