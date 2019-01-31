@@ -13,7 +13,7 @@ const sharedStyledArrowIcons = css`
   width: 40%;
 `
 
-export const sharedHoverStyledArrowIcons = css`
+const sharedHoverStyledArrowIcons = css`
   cursor: pointer;
   color: ${({ hoverColor }) => hoverColor};
 
@@ -47,6 +47,7 @@ export const StyledArrowIcon = styled(ArrowIcon)`
   min-width: ${pxToRem(9)};
   min-height: ${pxToRem(9)};
 `
+
 export const StyledPrevText = styled.div`
   margin-left: ${pxToRem(6)};
 `
