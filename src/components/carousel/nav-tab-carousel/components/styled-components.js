@@ -7,7 +7,7 @@ var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWild
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StyledNextText = exports.StyledPrevText = exports.StyledArrowIcon = exports.StyledLeftArrowContainer = exports.StyledRightArrowContainer = exports.sharedHoverStyledArrowIcons = void 0;
+exports.StyledNextText = exports.StyledPrevText = exports.StyledArrowIcon = exports.StyledLeftArrowContainer = exports.StyledRightArrowContainer = void 0;
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
@@ -25,7 +25,6 @@ var sharedHoverStyledArrowIcons = (0, _styledComponents.css)(["cursor:pointer;co
   var hoverColor = _ref2.hoverColor;
   return hoverColor;
 });
-exports.sharedHoverStyledArrowIcons = sharedHoverStyledArrowIcons;
 
 var StyledRightArrowContainer = _styledComponents.default.div.withConfig({
   displayName: "styled-components__StyledRightArrowContainer",
