@@ -9,14 +9,14 @@ exports.Next = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _styles = require("./styles");
+var _styledComponents = require("./styled-components");
 
 var Next = function Next(_ref) {
   var children = _ref.children,
       hoverColor = _ref.hoverColor;
-  return _react.default.createElement(_styles.RightArrowContainerStyles, {
+  return _react.default.createElement(_styledComponents.StyledRightArrowContainer, {
     hoverColor: hoverColor
-  }, _react.default.createElement(_styles.NextTextStyles, null, children), _react.default.createElement(_styles.ArrowIconStyle, {
+  }, _react.default.createElement(_styledComponents.StyledNextText, null, children), _react.default.createElement(_styledComponents.StyledArrowIcon, {
     version: "solid",
     fill: "#fff"
   }));

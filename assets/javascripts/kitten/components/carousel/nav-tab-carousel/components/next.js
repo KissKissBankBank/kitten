@@ -1,15 +1,15 @@
 import React from 'react'
 import {
-  RightArrowContainerStyles,
-  NextTextStyles,
-  ArrowIconStyle,
-} from './styles'
+  StyledRightArrowContainer,
+  StyledNextText,
+  StyledArrowIcon,
+} from './styled-components'
 
 export const Next = ({ children, hoverColor }) => {
   return (
-    <RightArrowContainerStyles hoverColor={hoverColor}>
-      <NextTextStyles>{children}</NextTextStyles>
-      <ArrowIconStyle version="solid" fill="#fff" />
-    </RightArrowContainerStyles>
+    <StyledRightArrowContainer hoverColor={hoverColor}>
+      <StyledNextText>{children}</StyledNextText>
+      <StyledArrowIcon version="solid" fill="#fff" />
+    </StyledRightArrowContainer>
   )
 }

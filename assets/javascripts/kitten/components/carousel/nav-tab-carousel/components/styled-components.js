@@ -3,7 +3,7 @@ import TYPOGRAPHY from './../../../../constants/typography-config'
 import { pxToRem } from './../../../../helpers/utils/typography'
 import { ArrowIcon } from './../../../icons/arrow-icon'
 
-const sharedArrowIconStyles = css`
+const sharedStyledArrowIcons = css`
   color: #fff;
   ${TYPOGRAPHY.fontStyles.regular};
   align-items: center;
@@ -13,7 +13,7 @@ const sharedArrowIconStyles = css`
   width: 40%;
 `
 
-export const sharedHoverArrowIconStyles = css`
+export const sharedHoverStyledArrowIcons = css`
   cursor: pointer;
   color: ${({ hoverColor }) => hoverColor};
 
@@ -22,35 +22,35 @@ export const sharedHoverArrowIconStyles = css`
   }
 `
 
-export const RightArrowContainerStyles = styled.div`
+export const StyledRightArrowContainer = styled.div`
   justify-content: flex-end;
   text-align: right;
-  ${sharedArrowIconStyles}
+  ${sharedStyledArrowIcons}
 
   &:hover {
     transform: translate(${pxToRem(8)});
-    ${sharedHoverArrowIconStyles}
+    ${sharedHoverStyledArrowIcons}
   }
 `
 
-export const LeftArrowContainerStyles = styled.div`
+export const StyledLeftArrowContainer = styled.div`
   justify-content: flex-start;
-  ${sharedArrowIconStyles}
+  ${sharedStyledArrowIcons}
 
   &:hover {
     transform: translate(-${pxToRem(8)});
-    ${sharedHoverArrowIconStyles}
+    ${sharedHoverStyledArrowIcons}
   }
 `
 
-export const ArrowIconStyle = styled(ArrowIcon)`
+export const StyledArrowIcon = styled(ArrowIcon)`
   min-width: 9px;
   min-height: 9px;
 `
-export const PrevTextStyles = styled.div`
+export const StyledPrevText = styled.div`
   margin-left: ${pxToRem(6)};
 `
 
-export const NextTextStyles = styled.div`
+export const StyledNextText = styled.div`
   margin-right: ${pxToRem(6)};
 `
