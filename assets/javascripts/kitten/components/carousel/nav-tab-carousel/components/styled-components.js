@@ -44,8 +44,8 @@ export const StyledLeftArrowContainer = styled.div`
 `
 
 export const StyledArrowIcon = styled(ArrowIcon)`
-  min-width: 9px;
-  min-height: 9px;
+  min-width: ${pxToRem(9)};
+  min-height: ${pxToRem(9)};
 `
 export const StyledPrevText = styled.div`
   margin-left: ${pxToRem(6)};
