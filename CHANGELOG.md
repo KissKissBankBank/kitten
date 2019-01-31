@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `NavTabCarousel` layout for small device.
+- Fix: Fix `NavTabCarousel` layout for small devices.
 
 ## [1.11.0] - 2019-01-29
 
