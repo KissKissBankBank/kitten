@@ -23,7 +23,7 @@ const StyledContainer = styled.div`
     opacity: 1;
     transition: all 0.8s ease-in-out;
 
-    &[hidden]: {
+    &[aria-hidden='true'] {
       visibility: hidden;
       opacity: 0;
       pointer-events: none;
@@ -116,7 +116,7 @@ export class SimpleCarousel extends Component {
             return (
               <div
                 key={item.key}
-                hidden={index !== currentPageNumber}
+                aria-hidden={index !== currentPageNumber}
                 id={'carouselItem' + index}
                 aria-labelledby={'carouselTab' + index}
                 role="tabpanel"
