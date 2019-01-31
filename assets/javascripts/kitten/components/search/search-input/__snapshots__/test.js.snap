@@ -38,7 +38,10 @@ exports[`<SearchInput /> Basic search input matches with snapshot 1`] = `
 .c0::-webkit-search-decoration,
 .c0::-webkit-search-cancel-button,
 .c0::-webkit-search-results-button,
-.c0::-webkit-search-results-decoration,
+.c0::-webkit-search-results-decoration {
+  display: none;
+}
+
 .c0::-ms-clear {
   display: none;
 }
@@ -101,7 +104,10 @@ exports[`<SearchInput /> Search input with attributes matches with snapshot 1`] 
 .c0::-webkit-search-decoration,
 .c0::-webkit-search-cancel-button,
 .c0::-webkit-search-results-button,
-.c0::-webkit-search-results-decoration,
+.c0::-webkit-search-results-decoration {
+  display: none;
+}
+
 .c0::-ms-clear {
   display: none;
 }
