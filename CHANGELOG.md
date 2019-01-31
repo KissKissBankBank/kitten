@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [unreleased]
+
+- Fix: `SearchInput`, remove "clear" cross from IE10+ input.
+
 ## [1.11.0] - 2019-01-29
 
 Feature:
