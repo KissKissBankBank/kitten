@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `k-u-background-color-primary5` class.
+- Fix: Switch `SimpleCarousel` from Radium to Styled Components in order to fix bug for IE11.
+- Fix: Replace FacebookIconWithBackground inside `FacebookButtonIconWords` by FacebookIcon.
 - Fix: `Marger` accepts zero value.
 - Feature: `SimpleCarousel` Add `id` prop to component (in case of multiple Carousels on one webpage)
 - Fix: Switch `SimpleCarousel` from Radium to Styled Components in order to fix bug for IE11.
