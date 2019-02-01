@@ -21,6 +21,7 @@
   "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "dependencies": {
+    "@babel/polyfill": "7.2.5",
     "autoprefixer": "9.3.1",
     "bowser": "1.9.4",
     "classnames": "^2.2.5",
