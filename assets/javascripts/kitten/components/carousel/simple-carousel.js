@@ -1,14 +1,67 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
-import { Marger as MargerBase } from '../../components/layout/marger'
+import styled, { css } from 'styled-components'
 import COLORS from '../../constants/colors-config'
 import { createRangeFromZeroTo } from '../../helpers/utils/range'
+import { pxToRem } from '../../helpers/utils/typography'
 
-const Marger = Radium(MargerBase)
+const StyledContainer = styled.div`
+  ${({ addBottomMargin }) =>
+    addBottomMargin &&
+    css`
+      margin-bottom: ${pxToRem(40)};
+    `}
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 0;
+  gap: 0;
 
-class SimpleCarouselBase extends Component {
+  > div {
+    grid-column: 1;
+    grid-row: 1;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.8s ease-in-out;
+
+    &[aria-hidden='true'] {
+      visibility: hidden;
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+`
+const StyledPagination = styled.ul`
+  justify-content: ${({ paginationAlign }) => paginationAlign};
+  margin: ${pxToRem(40)} 0;
+  padding: 0;
+  display: flex;
+  li {
+    list-style-type: none;
+    line-height: ${pxToRem(6)};
+  }
+`
+
+const StyledPaginationButton = styled.button`
+  margin-right: ${pxToRem(5)};
+  width: ${pxToRem(6)};
+  height: ${pxToRem(6)};
+  border: 0;
+  padding: 0;
+  border-radius: 0;
+  appearance: none;
+  cursor: pointer;
+  transition: background 0.4s ease-in-out;
+  background: ${({ paginationColor }) => paginationColor};
+  vertical-align: top;
+
+  &[aria-selected='true'] {
+    background: ${({ activePaginationColor }) => activePaginationColor};
+  }
+`
+
+export class SimpleCarousel extends Component {
   static propTypes = {
+    id: PropTypes.string,
     containerStyle: PropTypes.object,
     activePaginationColor: PropTypes.string,
     paginationColor: PropTypes.string,
@@ -23,6 +76,7 @@ class SimpleCarouselBase extends Component {
   }
 
   static defaultProps = {
+    id: '',
     containerStyle: {},
     activePaginationColor: COLORS.primary1,
     paginationColor: COLORS.background1,
@@ -59,89 +113,56 @@ class SimpleCarouselBase extends Component {
 
     const { totalPagesCount, currentPageNumber } = this.state
     const rangePage = createRangeFromZeroTo(totalPagesCount)
-
-    const containerCustomStyle = [styles.container, containerStyle]
-
-    const paginationCustomStyle = [
-      styles.pagination,
-      paginationAlign && { justifyContent: paginationAlign },
-      paginationStyle,
-    ]
+    const id = this.props.id ? this.props.id + '_' : ''
 
     return (
       <Fragment>
-        <Marger
-          bottom={this.showPagination() ? 4 : 0}
-          style={containerCustomStyle}
+        <StyledContainer
+          style={containerStyle}
+          addBottomMargin={this.showPagination()}
         >
           {React.Children.map(children, (item, index) => {
-            const itemStyle = [
-              styles.item,
-              index !== currentPageNumber && styles.item.hide,
-            ]
-
             return (
-              <div key={item.key} style={itemStyle}>
+              <div
+                key={item.key}
+                aria-hidden={index !== currentPageNumber}
+                id={`${id}carouselItem_${index}`}
+                aria-labelledby={`${id}carouselTab_${index}`}
+                role="tabpanel"
+              >
                 {item}
               </div>
             )
           })}
-        </Marger>
+        </StyledContainer>
 
         {this.showPagination() && (
-          <Marger top="4" bottom="4" style={paginationCustomStyle}>
+          <StyledPagination
+            style={paginationStyle}
+            paginationAlign={paginationAlign}
+            role="tablist"
+          >
             {rangePage.map(numPage => {
-              const pageStyle = [
-                styles.page,
-                paginationColor && { background: paginationColor },
-                numPage === currentPageNumber && {
-                  background: activePaginationColor,
-                },
-                bulletStyle,
-              ]
-
               return (
-                <div
-                  key={numPage}
-                  style={pageStyle}
-                  onClick={this.handlePageClick(numPage)}
-                />
+                <li key={numPage}>
+                  <StyledPaginationButton
+                    id={`${id}carouselTab_${numPage}`}
+                    type="button"
+                    aria-controls={`${id}carouselItem_${numPage}`}
+                    aria-label={`Page ${numPage + 1}`}
+                    role="tab"
+                    aria-selected={numPage === currentPageNumber}
+                    paginationColor={paginationColor}
+                    activePaginationColor={activePaginationColor}
+                    style={bulletStyle}
+                    onClick={this.handlePageClick(numPage)}
+                  />
+                </li>
               )
             })}
-          </Marger>
+          </StyledPagination>
         )}
       </Fragment>
     )
   }
 }
-
-const styles = {
-  container: {
-    display: 'grid',
-    gap: 0,
-  },
-  item: {
-    gridColumn: 1,
-    gridRow: 1,
-    visibility: 'visible',
-    opacity: 1,
-    transition: `all .8s ease-in-out`,
-    hide: {
-      visibility: 'hidden',
-      opacity: 0,
-      pointerEvents: 'none',
-    },
-  },
-  pagination: {
-    display: 'flex',
-  },
-  page: {
-    width: 6,
-    height: 6,
-    marginRight: 5,
-    cursor: 'pointer',
-    transition: `background .4s ease-in-out`,
-  },
-}
-
-export const SimpleCarousel = Radium(SimpleCarouselBase)
