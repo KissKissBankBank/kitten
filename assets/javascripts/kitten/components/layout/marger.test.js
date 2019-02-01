@@ -122,6 +122,19 @@ describe('<Marger />', () => {
     })
   })
 
+  describe('with fromS to `0` and default value', () => {
+    it('has margin-bottom to `0` for S media-query', () => {
+      const tree = renderer
+        .create(<Marger bottom={{ default: 4, fromS: 0 }} />)
+        .toJSON()
+
+      expect(tree).toMatchSnapshot()
+      expect(tree).toHaveStyleRule('margin-bottom', '0rem', {
+        media: '(min-width:640px)',
+      })
+    })
+  })
+
   describe('with other styles', () => {
     it('has a custom style', () => {
       const tree = renderer
