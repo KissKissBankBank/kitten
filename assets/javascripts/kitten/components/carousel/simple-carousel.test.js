@@ -51,7 +51,7 @@ describe('<SimpleCarousel />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <SimpleCarousel paginationAlign="center">
+          <SimpleCarousel paginationAlign="center" id="simpleCarousel">
             <p
               activePaginationColor="Custom active pagination color"
               paginationColor="Custom pagination color"
