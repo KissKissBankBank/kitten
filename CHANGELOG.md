@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Switch `SimpleCarousel` from Radium to Styled Components in order to fix bug for IE11.
-- Fix: `SimpleCarousel` Add `id` prop to component (in case of multiple Carousels on one webpage)
+- Feature: `SimpleCarousel` Add `id` prop to component (in case of multiple Carousels on one webpage)
 
 ## [1.11.0] - 2019-01-29
 
