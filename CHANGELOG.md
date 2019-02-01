@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 - Add `k-u-background-color-primary5` class.
 - On `SimpleCarousel`, add `id` prop to component
-    (in case of multiple Carousels on one webpage)
+    (in case of multiple Carousels on one webpage).
 
 Fixes:
 - Switch `SimpleCarousel` from Radium to Styled Components in order to fix bug for IE.
