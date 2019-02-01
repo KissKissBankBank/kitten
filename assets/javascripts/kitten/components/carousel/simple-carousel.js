@@ -61,6 +61,7 @@ const StyledPaginationButton = styled.button`
 
 export class SimpleCarousel extends Component {
   static propTypes = {
+    id: PropTypes.string,
     containerStyle: PropTypes.object,
     activePaginationColor: PropTypes.string,
     paginationColor: PropTypes.string,
@@ -75,6 +76,7 @@ export class SimpleCarousel extends Component {
   }
 
   static defaultProps = {
+    id: '',
     containerStyle: {},
     activePaginationColor: COLORS.primary1,
     paginationColor: COLORS.background1,
@@ -111,6 +113,7 @@ export class SimpleCarousel extends Component {
 
     const { totalPagesCount, currentPageNumber } = this.state
     const rangePage = createRangeFromZeroTo(totalPagesCount)
+    const id = this.props.id ? this.props.id + '_' : ''
 
     return (
       <Fragment>
@@ -123,8 +126,8 @@ export class SimpleCarousel extends Component {
               <div
                 key={item.key}
                 aria-hidden={index !== currentPageNumber}
-                id={'carouselItem' + index}
-                aria-labelledby={'carouselTab' + index}
+                id={id + 'carouselItem_' + index}
+                aria-labelledby={id + 'carouselTab_' + index}
                 role="tabpanel"
               >
                 {item}
@@ -141,14 +144,13 @@ export class SimpleCarousel extends Component {
           >
             {rangePage.map(numPage => {
               return (
-                <li>
+                <li key={numPage}>
                   <StyledPaginationButton
-                    id={'carouselTab' + numPage}
+                    id={id + 'carouselTab_' + numPage}
                     type="button"
-                    aria-controls={'carouselItem' + numPage}
+                    aria-controls={id + 'carouselItem_' + numPage}
                     aria-label={'Page ' + (numPage + 1)}
                     role="tab"
-                    key={numPage}
                     aria-selected={numPage === currentPageNumber}
                     paginationColor={paginationColor}
                     activePaginationColor={activePaginationColor}
