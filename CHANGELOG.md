@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [1.12.0]
+## [1.12.0] - 2019-02-01
 
 Features:
 - Add `k-u-background-color-primary5` class.
