@@ -126,7 +126,7 @@ export class SimpleCarousel extends Component {
               <div
                 key={item.key}
                 aria-hidden={index !== currentPageNumber}
-                id={id + 'carouselItem_' + index}
+                id={`${id}carouselItem_${index}`}
                 aria-labelledby={`${id}carouselTab_${index}`}
                 role="tabpanel"
               >
