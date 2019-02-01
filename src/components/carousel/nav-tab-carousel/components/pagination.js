@@ -33,7 +33,7 @@ var BulletPointStyles = _styledComponents.default.div.withConfig({
 var PaginationStyles = _styledComponents.default.div.withConfig({
   displayName: "pagination__PaginationStyles",
   componentId: "sc-1thdyq2-1"
-})(["display:flex;justify-content:center;margin:0 ", ";"], (0, _typography.pxToRem)(10));
+})(["display:flex;justify-content:center;margin:0 ", ";width:20%;min-width:", ";"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(60));
 
 var Pagination = function Pagination(_ref2) {
   var activeIndex = _ref2.activeIndex,
