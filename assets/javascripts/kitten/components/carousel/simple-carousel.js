@@ -127,7 +127,7 @@ export class SimpleCarousel extends Component {
                 key={item.key}
                 aria-hidden={index !== currentPageNumber}
                 id={id + 'carouselItem_' + index}
-                aria-labelledby={id + 'carouselTab_' + index}
+                aria-labelledby={`${id}carouselTab_${index}`}
                 role="tabpanel"
               >
                 {item}
@@ -146,10 +146,10 @@ export class SimpleCarousel extends Component {
               return (
                 <li key={numPage}>
                   <StyledPaginationButton
-                    id={id + 'carouselTab_' + numPage}
+                    id={`${id}carouselTab_${numPage}`}
                     type="button"
-                    aria-controls={id + 'carouselItem_' + numPage}
-                    aria-label={'Page ' + (numPage + 1)}
+                    aria-controls={`${id}carouselItem_${numPage}`}
+                    aria-label={`Page ${numPage + 1}`}
                     role="tab"
                     aria-selected={numPage === currentPageNumber}
                     paginationColor={paginationColor}
