@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: IE Flexbox bug on `Header` component CSS
+
 ## [1.11.1] - 2019-02-01
 
 Fix:
