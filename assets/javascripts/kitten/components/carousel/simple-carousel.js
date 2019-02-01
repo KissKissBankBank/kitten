@@ -37,12 +37,12 @@ const StyledPagination = styled.ul`
   display: flex;
   li {
     list-style-type: none;
-    margin-right: ${pxToRem(5)};
     line-height: ${pxToRem(6)};
   }
 `
 
 const StyledPaginationButton = styled.button`
+  margin-right: ${pxToRem(5)};
   width: ${pxToRem(6)};
   height: ${pxToRem(6)};
   border: 0;
@@ -52,6 +52,7 @@ const StyledPaginationButton = styled.button`
   cursor: pointer;
   transition: background 0.4s ease-in-out;
   background: ${({ paginationColor }) => paginationColor};
+  vertical-align: top;
 
   &[aria-selected='true'] {
     background: ${({ activePaginationColor }) => activePaginationColor};
