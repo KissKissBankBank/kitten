@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Fix:
 - Replace FacebookIconWithBackground inside `FacebookButtonIconWords` by FacebookIcon.
+- Add `k-u-background-color-primary5` class.
 
 Feature:
 - Display `ownerLocation` only if the prop is provided.
