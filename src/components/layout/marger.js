@@ -68,6 +68,10 @@ function (_Component) {
       return _this.valueIsNumber(_this.props[propName]);
     };
 
+    _this.isSetValue = function (value) {
+      return value || value === 0;
+    };
+
     _this.isPropWithViewportRange = function (propName, viewportRange) {
       return _this.props[propName] && _this.props[propName]["from".concat((0, _string.upcaseFirst)(viewportRange))];
     };
@@ -79,18 +83,20 @@ function (_Component) {
     _this.propCssDeclarationForViewportRange = function (propName, viewportRange) {
       var size = _this.props[propName]["from".concat((0, _string.upcaseFirst)(viewportRange))];
 
+      if (!_this.isSetValue(size)) return;
       return "margin-".concat(propName, ": ").concat(_this.marginSize(size), ";");
     };
 
     _this.viewportRangeStyleCondition = function (propName, viewportRange) {
       var hasValue = _this.isPropWithViewportRange(propName, viewportRange);
 
-      if (!hasValue) return null;
+      if (!_this.isSetValue(hasValue)) return;
 
       var viewportRangeCssRule = _this.viewportRangeCssRule(viewportRange);
 
       var viewportRangeCssValue = _this.propCssDeclarationForViewportRange(propName, viewportRange);
 
+      if (!viewportRangeCssValue) return;
       return "".concat(viewportRangeCssRule, " { ").concat(viewportRangeCssValue, " }");
     };
 
