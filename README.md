@@ -174,6 +174,8 @@ $ npm login
     from the last release has an entry.
 - Update the `package.json` file:
   * Update the version with the version of the library.
+- Update the `package-lock.json` file:
+  * Update the version with the version of the library.
 - Run this command:
 
 ```sh
