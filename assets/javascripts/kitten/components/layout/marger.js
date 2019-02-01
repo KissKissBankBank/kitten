@@ -62,6 +62,8 @@ export class Marger extends Component {
 
   propIsNumber = propName => this.valueIsNumber(this.props[propName])
 
+  isSetValue = value => value || value === 0
+
   isPropWithViewportRange = (propName, viewportRange) =>
     this.props[propName] &&
     this.props[propName][`from${upcaseFirst(viewportRange)}`]
@@ -72,19 +74,23 @@ export class Marger extends Component {
   propCssDeclarationForViewportRange = (propName, viewportRange) => {
     const size = this.props[propName][`from${upcaseFirst(viewportRange)}`]
 
+    if (!this.isSetValue(size)) return
+
     return `margin-${propName}: ${this.marginSize(size)};`
   }
 
   viewportRangeStyleCondition = (propName, viewportRange) => {
     const hasValue = this.isPropWithViewportRange(propName, viewportRange)
 
-    if (!hasValue) return null
+    if (!this.isSetValue(hasValue)) return
 
     const viewportRangeCssRule = this.viewportRangeCssRule(viewportRange)
     const viewportRangeCssValue = this.propCssDeclarationForViewportRange(
       propName,
       viewportRange,
     )
+
+    if (!viewportRangeCssValue) return
 
     return `${viewportRangeCssRule} { ${viewportRangeCssValue} }`
   }
