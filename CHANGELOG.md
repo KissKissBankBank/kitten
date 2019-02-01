@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `SimpleCarousel` Add `id` prop to component (in case of multiple Carousels on one webpage)
-- Fix: Switch `SimpleCarousel` from Radium to Styled Components in order to fix bug for IE11.
-- Fix: IE Flexbox bug on `Header` component CSS
-- Fix: `SearchInput`, remove "clear" cross from IE10+ input.
+Fix:
+- Replace FacebookIconWithBackground inside `FacebookButtonIconWords` by FacebookIcon.
+- Switch `SimpleCarousel` from Radium to Styled Components in order to fix bug for IE11.
+- IE Flexbox bug on `Header` component CSS
+- `SearchInput`, remove "clear" cross from IE10+ input.
+
+Feature:
+- Add `k-u-background-color-primary5` class.
+- `SimpleCarousel` Add `id` prop to component (in case of multiple Carousels on one webpage)
 
 ## [1.11.1] - 2019-02-01
 
@@ -15,10 +20,6 @@ Fix:
 - Fix `NavTabCarousel` layout for small devices.
 
 ## [1.11.0] - 2019-01-29
-
-Fix:
-- Replace FacebookIconWithBackground inside `FacebookButtonIconWords` by FacebookIcon.
-- Add `k-u-background-color-primary5` class.
 
 Feature:
 - Display `ownerLocation` only if the prop is provided.
