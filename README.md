@@ -13,6 +13,7 @@ You can check out Kitten's components on
 ## Dependencies
 - react >= 15.x
 - react-dom >= 15.x
+- @babel/polyfill if you support IE10 and previous versions
 
 ## Table of content
 - [Installation](#installation)
