@@ -4,8 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Switch `SimpleCarousel` from Radium to Styled Components in order to fix bug for IE11.
 - Feature: `SimpleCarousel` Add `id` prop to component (in case of multiple Carousels on one webpage)
+- Fix: Switch `SimpleCarousel` from Radium to Styled Components in order to fix bug for IE11.
+- Fix: `SearchInput`, remove "clear" cross from IE10+ input.
+
+## [1.11.1] - 2019-02-01
+
+Fix:
+- Fix `NavTabCarousel` layout for small devices.
 
 ## [1.11.0] - 2019-01-29
 
