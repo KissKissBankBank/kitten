@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `Marger` accepts zero value.
+- Feature: `SimpleCarousel` Add `id` prop to component (in case of multiple Carousels on one webpage)
+- Fix: Switch `SimpleCarousel` from Radium to Styled Components in order to fix bug for IE11.
+- Fix: IE Flexbox bug on `Header` component CSS
+- Fix: `SearchInput`, remove "clear" cross from IE10+ input.
 
 ## [1.11.1] - 2019-02-01
 
