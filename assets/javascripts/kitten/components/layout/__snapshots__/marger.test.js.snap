@@ -70,6 +70,22 @@ exports[`<Marger /> with bottom prop with string prop works with .5 value 1`] = 
 />
 `;
 
+exports[`<Marger /> with fromS to \`0\` and default value has margin-bottom to \`0\` for S media-query 1`] = `
+.c0 {
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width:640px) {
+  .c0 {
+    margin-bottom: 0rem;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`<Marger /> with other styles has a custom style 1`] = `
 .c0 {
   background-color: red;
