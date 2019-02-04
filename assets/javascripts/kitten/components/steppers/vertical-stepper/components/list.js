@@ -15,6 +15,9 @@ const StyledList = styled.ul`
 `
 
 const StyledItem = styled.li`
+  display: flex;
+  align-items: baseline;
+
   margin: 0 0 ${pxToRem(2)};
   padding: 0;
   list-style: none;
