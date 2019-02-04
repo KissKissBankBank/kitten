@@ -5,7 +5,7 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import COLORS from '../../../../constants/colors-config'
 
 const StyledList = styled.ul`
-  margin: ${pxToRem(10)} 0;
+  margin: ${pxToRem(5)} 0 ${pxToRem(10)};
   padding: 0;
 
   ${TYPOGRAPHY.fontStyles.regular};
