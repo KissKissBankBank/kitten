@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `VerticalStepper`.
+- Feature: Add `WarningIcon`.
 - Feature: Update `CheckedIcon` to accept `color` and `title` props.
 
 ## [1.12.0] - 2019-02-01

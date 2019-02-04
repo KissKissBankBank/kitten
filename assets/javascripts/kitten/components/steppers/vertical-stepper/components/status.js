@@ -5,6 +5,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { CheckedIcon } from '../../../../components/icons/checked-icon'
+import { WarningIcon } from '../../../../components/icons/warning-icon'
 
 export class Status extends Component {
   static propTypes = {
@@ -29,7 +30,8 @@ export class Status extends Component {
     const { valid, error } = this.props
 
     if (valid) return <CheckedIcon width="10" title={null} />
-    if (error) return '!'
+    if (error)
+      return <WarningIcon height="20" color={COLORS.error} title={null} />
 
     return null
   }
