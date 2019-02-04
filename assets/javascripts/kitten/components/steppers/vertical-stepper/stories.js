@@ -30,6 +30,16 @@ storiesOf('Steppers/VerticalStepper', module)
           <VerticalStepper.Step valid>
             <VerticalStepper.Step.Label>Réseaux</VerticalStepper.Step.Label>
 
+            <VerticalStepper.Step.List>
+              <VerticalStepper.Step.List.Item>
+                Facebook
+              </VerticalStepper.Step.List.Item>
+              <VerticalStepper.Step.List.Item>
+                Twitter
+              </VerticalStepper.Step.List.Item>
+              <VerticalStepper.Step.List.Item>…</VerticalStepper.Step.List.Item>
+            </VerticalStepper.Step.List>
+
             <VerticalStepper.Step.Link href="#">
               Éditer
             </VerticalStepper.Step.Link>

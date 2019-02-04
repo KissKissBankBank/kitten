@@ -1,0 +1,345 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
+.c3 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 1.875rem;
+  box-sizing: border-box;
+  margin-right: 0.9375rem;
+  background-color: #fff;
+  border: 2px solid #eee;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  background-color: #61d079;
+  border-color: #61d079;
+}
+
+.c10 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 1.875rem;
+  box-sizing: border-box;
+  margin-right: 0.9375rem;
+  background-color: #fff;
+  border: 2px solid #eee;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #ff0046;
+  border-color: #ffb2c7;
+}
+
+.c5 {
+  margin: 0 0 0.125rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: normal;
+  color: #222;
+}
+
+.c6 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.c7 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: normal;
+  color: #19b4fa;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.c7:hover,
+.c7:focus,
+.c7:active {
+  color: #0496cc;
+}
+
+.c8 {
+  margin: 0.3125rem 0 0.625rem;
+  padding: 0;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin: 0 0 0.125rem;
+  padding: 0;
+  list-style: none;
+}
+
+.c9:before {
+  padding-right: 0.625rem;
+  content: '●';
+  font-size: 0.5rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.875rem 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #222;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #222;
+  color: #ff0046;
+}
+
+.c0 {
+  position: relative;
+  overflow: auto;
+}
+
+.c1 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c1:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.875rem;
+  z-index: -1;
+  content: '';
+  border-left: 2px dashed #eee;
+}
+
+<nav
+  className="c0"
+>
+  <ul
+    className="c1"
+    role="tablist"
+  >
+    <li
+      className="c2"
+    >
+      <span
+        className="c3"
+      >
+        <svg
+          fill="#FFF"
+          viewBox="0 0 11 8"
+          width="10"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+          />
+          <path
+            d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+          />
+        </svg>
+      </span>
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          Label
+        </p>
+        <p
+          className="c6"
+        >
+          <a
+            className="c7"
+            href="#"
+          >
+            Link
+          </a>
+        </p>
+      </div>
+    </li>
+    <li
+      className="c2"
+    >
+      <span
+        className="c3"
+      >
+        <svg
+          fill="#FFF"
+          viewBox="0 0 11 8"
+          width="10"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+          />
+          <path
+            d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+          />
+        </svg>
+      </span>
+      <div
+        className="c4"
+      >
+        <p
+          className="c5"
+        >
+          Label
+        </p>
+        <ul
+          className="c8"
+        >
+          <li
+            className="c9"
+          >
+            Item
+          </li>
+          <li
+            className="c9"
+          >
+            Item
+          </li>
+          <li
+            className="c9"
+          >
+            …
+          </li>
+        </ul>
+        <p
+          className="c6"
+        >
+          <a
+            className="c7"
+            href="#"
+          >
+            Link
+          </a>
+        </p>
+      </div>
+    </li>
+    <li
+      className="c2"
+    >
+      <span
+        className="c10"
+      >
+        <svg
+          fill="#ff0046"
+          height="20"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9.034 7.088l-.07-1.862h2.072l-.07 1.862-.294 4.284H9.328l-.294-4.284zm-.28 6.398c0-.373.12-.684.357-.93.24-.248.535-.372.89-.372s.65.124.89.37c.237.248.356.56.356.932 0 .364-.12.67-.357.917-.24.247-.535.37-.89.37s-.65-.123-.89-.37c-.237-.247-.356-.553-.356-.917z"
+          />
+        </svg>
+      </span>
+      <div
+        className="c11"
+      >
+        <p
+          className="c5"
+        >
+          Label
+        </p>
+        <ul
+          className="c8"
+        >
+          <li
+            className="c9"
+          >
+            Item
+          </li>
+          <li
+            className="c9"
+          >
+            Item
+          </li>
+        </ul>
+        <p
+          className="c6"
+        >
+          <a
+            className="c7"
+            href="#"
+          >
+            Link
+          </a>
+        </p>
+      </div>
+    </li>
+  </ul>
+</nav>
+`;

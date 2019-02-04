@@ -11,7 +11,6 @@ const StyledList = styled.ul`
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${pxToRem(12)};
   line-height: normal;
-  color: ${COLORS.error};
 `
 
 const StyledItem = styled.li`
@@ -25,7 +24,6 @@ const StyledItem = styled.li`
   :before {
     padding-right: ${pxToRem(10)};
     content: '●';
-    color: ${COLORS.error};
     font-size: ${pxToRem(8)};
   }
 `

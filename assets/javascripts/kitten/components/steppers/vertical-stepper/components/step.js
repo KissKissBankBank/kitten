@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
+import COLORS from '../../../../constants/colors-config'
 import { Status } from './status'
 import { Label } from './label'
 import { Link } from './link'
@@ -18,7 +19,7 @@ export class Step extends Component {
       <StyledItem {...other}>
         <Status valid={valid} error={error} {...statusProps} />
 
-        <StyledContent>{children}</StyledContent>
+        <StyledContent error={error}>{children}</StyledContent>
       </StyledItem>
     )
   }
@@ -34,4 +35,12 @@ const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  color: ${COLORS.font1};
+
+  ${({ error }) =>
+    error &&
+    css`
+      color: ${COLORS.error};
+    `}
 `
