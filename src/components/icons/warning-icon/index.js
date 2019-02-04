@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CheckedIcon = void 0;
+exports.WarningIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -15,27 +15,25 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var CheckedIcon = function CheckedIcon(_ref) {
+var WarningIcon = function WarningIcon(_ref) {
   var color = _ref.color,
       title = _ref.title,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
   return _react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 11 8",
+    viewBox: "0 0 20 20",
     fill: color
-  }, other), title && _react.default.createElement("title", null, title), _react.default.createElement("path", {
-    d: "M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-  }), _react.default.createElement("path", {
-    d: "M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+  }, props), title && _react.default.createElement("title", null, title), _react.default.createElement("path", {
+    d: "M9.034 7.088l-.07-1.862h2.072l-.07 1.862-.294 4.284H9.328l-.294-4.284zm-.28 6.398c0-.373.12-.684.357-.93.24-.248.535-.372.89-.372s.65.124.89.37c.237.248.356.56.356.932 0 .364-.12.67-.357.917-.24.247-.535.37-.89.37s-.65-.123-.89-.37c-.237-.247-.356-.553-.356-.917z"
   }));
 };
 
-exports.CheckedIcon = CheckedIcon;
-CheckedIcon.propTypes = {
+exports.WarningIcon = WarningIcon;
+WarningIcon.propTypes = {
   color: _propTypes.default.string,
   title: _propTypes.default.string
 };
-CheckedIcon.defaultProps = {
+WarningIcon.defaultProps = {
   color: '#FFF',
-  title: 'Checked'
+  title: 'Warning'
 };
