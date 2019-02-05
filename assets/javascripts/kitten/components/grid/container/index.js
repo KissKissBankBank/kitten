@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import StyledContainer from './styled'
+import { StyledContainer } from './styled'
 
 export class Container extends React.PureComponent {
   render() {
