@@ -16,8 +16,8 @@ export const modifierStyles = modifier => {
       borderColor = COLORS.line1
       backgroundColor = COLORS.background1
       color = COLORS.font1
-      selectorsBorderColor = COLORS.primary1
-      selectorsBackgroundColor = COLORS.primary1
+      selectorsBorderColor = COLORS.primary3
+      selectorsBackgroundColor = COLORS.primary3
       selectorsColor = COLORS.background1
       break
 
@@ -25,8 +25,8 @@ export const modifierStyles = modifier => {
       borderColor = COLORS.primary1
       backgroundColor = COLORS.primary1
       color = COLORS.background1
-      selectorsBorderColor = COLORS.primary2
-      selectorsBackgroundColor = COLORS.primary2
+      selectorsBorderColor = COLORS.primary3
+      selectorsBackgroundColor = COLORS.primary3
       selectorsColor = COLORS.background1
       break
 
@@ -34,8 +34,8 @@ export const modifierStyles = modifier => {
       borderColor = COLORS.primary4
       backgroundColor = COLORS.background1
       color = COLORS.primary1
-      selectorsBorderColor = COLORS.primary1
-      selectorsBackgroundColor = COLORS.primary1
+      selectorsBorderColor = COLORS.primary3
+      selectorsBackgroundColor = COLORS.primary3
       selectorsColor = COLORS.background1
       break
 
@@ -43,8 +43,8 @@ export const modifierStyles = modifier => {
       borderColor = COLORS.font1
       backgroundColor = COLORS.font1
       color = COLORS.background1
-      selectorsBorderColor = COLORS.primary1
-      selectorsBackgroundColor = COLORS.primary1
+      selectorsBorderColor = COLORS.primary3
+      selectorsBackgroundColor = COLORS.primary3
       selectorsColor = COLORS.background1
       break
 
@@ -52,8 +52,8 @@ export const modifierStyles = modifier => {
       borderColor = COLORS.background1
       backgroundColor = COLORS.background1
       color = COLORS.font1
-      selectorsBorderColor = COLORS.primary1
-      selectorsBackgroundColor = COLORS.primary1
+      selectorsBorderColor = COLORS.primary3
+      selectorsBackgroundColor = COLORS.primary3
       selectorsColor = COLORS.background1
       break
 
@@ -71,8 +71,8 @@ export const modifierStyles = modifier => {
       borderStyle = 'dashed'
       backgroundColor = COLORS.background1
       color = COLORS.primary1
-      selectorsBorderColor = COLORS.primary1
-      selectorsBackgroundColor = COLORS.primary1
+      selectorsBorderColor = COLORS.primary3
+      selectorsBackgroundColor = COLORS.primary3
       selectorsColor = COLORS.background1
       break
   }
