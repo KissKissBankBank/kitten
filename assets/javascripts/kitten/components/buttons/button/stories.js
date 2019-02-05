@@ -119,10 +119,9 @@ storiesOf('Buttons/Button', module)
                   big={boolean('Big', false)}
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
-                  as="input"
-                  type="submit"
-                  value="FooBar"
-                />
+                >
+                  {text('Text', 'MyButton')}
+                </Button>
               </GridCol>
             </Grid>
           </Container>
