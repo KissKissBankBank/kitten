@@ -51,7 +51,7 @@ export const KarlSimpleCarousel = props => (
           overflow: 'auto',
         }}
       >
-        <SimpleCarousel>
+        <SimpleCarousel id="simpleCarousel">
           <Item key="1" numItem="1" />
           <Item key="2" numItem="2" />
           <Item key="3" numItem="3" />

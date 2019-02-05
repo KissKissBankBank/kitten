@@ -36,4 +36,8 @@ export const SearchInput = styled.input.attrs({ type: 'search' })`
   &::-webkit-search-results-decoration {
     display: none;
   }
+
+  &::-ms-clear {
+    display: none;
+  }
 `

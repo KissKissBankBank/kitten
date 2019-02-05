@@ -2,6 +2,27 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [unreleased]
+
+## [1.12.0] - 2019-02-01
+
+Features:
+- Add `k-u-background-color-primary5` class.
+- On `SimpleCarousel`, add `id` prop to component
+    (in case of multiple Carousels on one webpage).
+
+Fixes:
+- Switch `SimpleCarousel` from Radium to Styled Components in order to fix bug for IE.
+- Replace FacebookIconWithBackground inside `FacebookButtonIconWords` by FacebookIcon.
+- `Marger` accepts zero value.
+- IE Flexbox bug on `Header` component CSS.
+- `SearchInput`, remove "clear" cross from IE10+ input.
+
+## [1.11.1] - 2019-02-01
+
+Fix:
+- Fix `NavTabCarousel` layout for small devices.
+
 ## [1.11.0] - 2019-01-29
 
 Feature:
