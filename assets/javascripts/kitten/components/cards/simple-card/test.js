@@ -1,9 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { SimpleCard } from '../../components/cards/simple-card'
-import { Title } from '../../components/typography/title'
-import { Text } from '../../components/typography/text'
-import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
+import { SimpleCard } from './index'
+import { Title } from '../../../components/typography/title'
+import { Text } from '../../../components/typography/text'
 
 describe('<SimpleCard />', () => {
   let component

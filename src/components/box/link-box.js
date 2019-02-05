@@ -39,8 +39,6 @@ var _colorsConfig = _interopRequireDefault(require("../../constants/colors-confi
 
 var _screenConfig = require("../../constants/screen-config");
 
-var _mediaQueries = require("../../hoc/media-queries");
-
 var _typography = require("../../helpers/utils/typography");
 
 var _navigation;

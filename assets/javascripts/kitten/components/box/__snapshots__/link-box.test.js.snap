@@ -47,7 +47,9 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
                 "lineHeight": 1,
               }
             }
-          />
+          >
+            My title
+          </span>
         </div>
         
       </div>

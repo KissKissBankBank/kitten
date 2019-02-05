@@ -19,11 +19,11 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _title = require("kitten/components/cards/team-card/title");
+var _title = require("./team-card/title");
 
-var _image = require("kitten/components/cards/team-card/image");
+var _image = require("./team-card/image");
 
-var _icons = require("kitten/components/cards/team-card/icons");
+var _icons = require("./team-card/icons");
 
 var TeamCard =
 /*#__PURE__*/

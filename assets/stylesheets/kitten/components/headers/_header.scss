@@ -77,8 +77,7 @@
 
   .k-Header__items--fixedSize,
   .k-Header__item--fixedSize {
-    flex: initial;
-    flex-shrink: 0;
+    flex: none;
   }
 
   .k-Header__item {

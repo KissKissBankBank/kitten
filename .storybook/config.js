@@ -1,11 +1,13 @@
 import { configure } from '@storybook/react'
-import './decorators/grid'
+import { addDecorator } from '@storybook/react'
+import GridDecorator from './decorators/grid'
 import './stylesheets/app-kitten.scss'
 
-// automatically import all files ending in *.stories.js
-const req = require.context('../assets/javascripts', true, /.stories.js$/)
+// automatically import all files ending in *.?stories.js
 function loadStories() {
+  const req = require.context('../assets/javascripts', true, /.?stories.js$/)
   req.keys().forEach(filename => req(filename))
 }
 
+addDecorator(GridDecorator)
 configure(loadStories, module)

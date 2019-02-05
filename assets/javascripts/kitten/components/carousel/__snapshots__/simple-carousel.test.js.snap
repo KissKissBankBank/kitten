@@ -3,93 +3,98 @@
 exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 kOdsyC"
+    className="simple-carousel__StyledContainer-t6k8ig-0 eItgJi"
+    style={Object {}}
   >
     <div
-      data-radium={true}
-      style={
-        Object {
-          "gridColumn": 1,
-          "gridRow": 1,
-          "opacity": 1,
-          "transition": "all .8s ease-in-out",
-          "visibility": "visible",
-        }
-      }
+      aria-hidden={false}
+      aria-labelledby="carouselTab_0"
+      id="carouselItem_0"
+      role="tabpanel"
     >
       <p>
         Foo
       </p>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "gridColumn": 1,
-          "gridRow": 1,
-          "opacity": 0,
-          "pointerEvents": "none",
-          "transition": "all .8s ease-in-out",
-          "visibility": "hidden",
-        }
-      }
+      aria-hidden={true}
+      aria-labelledby="carouselTab_1"
+      id="carouselItem_1"
+      role="tabpanel"
     >
       <p>
         Bar
       </p>
     </div>
   </div>,
-  <div
-    className="marger__StyledMarger-q3lecu-0 dssCRr"
+  <ul
+    className="simple-carousel__StyledPagination-t6k8ig-1 cJmvhm"
+    role="tablist"
+    style={Object {}}
   >
-    <div
-      data-radium={true}
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#19b4fa",
-          "cursor": "pointer",
-          "height": 6,
-          "marginRight": 5,
-          "transition": "background .4s ease-in-out",
-          "width": 6,
-        }
-      }
-    />
-    <div
-      data-radium={true}
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#fff",
-          "cursor": "pointer",
-          "height": 6,
-          "marginRight": 5,
-          "width": 6,
-        }
-      }
-    />
-  </div>,
+    <li>
+      <button
+        aria-controls="carouselItem_0"
+        aria-label="Page 1"
+        aria-selected={true}
+        className="simple-carousel__StyledPaginationButton-t6k8ig-2 iDakHt"
+        id="carouselTab_0"
+        onClick={[Function]}
+        role="tab"
+        style={Object {}}
+        type="button"
+      />
+    </li>
+    <li>
+      <button
+        aria-controls="carouselItem_1"
+        aria-label="Page 2"
+        aria-selected={false}
+        className="simple-carousel__StyledPaginationButton-t6k8ig-2 iDakHt"
+        id="carouselTab_1"
+        onClick={[Function]}
+        role="tab"
+        style={Object {}}
+        type="button"
+      />
+    </li>
+  </ul>,
 ]
 `;
 
 exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 <div
-  className="marger__StyledMarger-q3lecu-0 hDKFKn"
+  className="simple-carousel__StyledContainer-t6k8ig-0 kmkOnR"
+  style={Object {}}
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "gridColumn": 1,
-        "gridRow": 1,
-        "opacity": 1,
-        "transition": "all .8s ease-in-out",
-        "visibility": "visible",
-      }
-    }
+    aria-hidden={false}
+    aria-labelledby="carouselTab_0"
+    id="carouselItem_0"
+    role="tabpanel"
   >
     <p>
+      Foo
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<SimpleCarousel /> with some props matches with snapshot 1`] = `
+<div
+  className="simple-carousel__StyledContainer-t6k8ig-0 kmkOnR"
+  style={Object {}}
+>
+  <div
+    aria-hidden={false}
+    aria-labelledby="simpleCarousel_carouselTab_0"
+    id="simpleCarousel_carouselItem_0"
+    role="tabpanel"
+  >
+    <p
+      activePaginationColor="Custom active pagination color"
+      paginationColor="Custom pagination color"
+    >
       Foo
     </p>
   </div>

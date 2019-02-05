@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
@@ -48,8 +48,12 @@ class ProjectCardComponent extends Component {
             modifier="quaternary"
           >
             <span className="k-u-weight-regular">{ownerName}</span>
-            <br />
-            {ownerLocation}
+            {ownerLocation && (
+              <Fragment>
+                <br />
+                {ownerLocation}
+              </Fragment>
+            )}
           </Paragraph>
 
           {this.renderTooltip()}
@@ -365,7 +369,7 @@ ProjectCardComponent.defaultProps = {
   linkTitle: null,
   ownerAvatarSrc: null,
   ownerName: 'Name',
-  ownerLocation: 'Location',
+  ownerLocation: null,
   tagLists: null,
   tags: null,
   paragraph: null,

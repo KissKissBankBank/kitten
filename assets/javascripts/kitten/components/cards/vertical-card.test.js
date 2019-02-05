@@ -8,7 +8,12 @@ describe('<VerticalCard />', () => {
   describe('by default', () => {
     beforeEach(() => {
       component = renderer
-        .create(<VerticalCard title="Custom title" />)
+        .create(
+          <VerticalCard
+            title="Custom title"
+            imageProps={{ src: '#image', alt: '' }}
+          />,
+        )
         .toJSON()
     })
 

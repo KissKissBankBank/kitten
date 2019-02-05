@@ -151,4 +151,53 @@ describe('<SelectWithState />', () => {
       expect(onInputChangeSpy.calledWith(onInputChangeValue)).toBe(true)
     })
   })
+
+  describe('update props', () => {
+    it('should update select value on prop change', () => {
+      select = mount(<SelectWithState options={options} value="foo" />)
+      expect(select.state().value).toBe('foo')
+      select.setProps({ value: 'bar' })
+      expect(select.state().value).toBe('bar')
+    })
+  })
+
+  describe('with autofill', () => {
+    it('should not create extra input if autofill is undefined', () => {
+      select = mount(<SelectWithState options={options} value="foo" />)
+
+      expect(select.exists('input')).toBe(false)
+    })
+
+    it('should create input element with revelant props if autofill is setted', () => {
+      const autoFillName = 'cc-number'
+      select = mount(
+        <SelectWithState
+          autoFill={autoFillName}
+          options={options}
+          value="foo"
+        />,
+      )
+
+      expect(select.exists('input')).toBe(true)
+      const input = select.find('input')
+      expect(input.props().autocomplete).toBe(autoFillName)
+      expect(input.props()['x-autocompletetype']).toBe(autoFillName)
+      expect(input.props().xautocompletetype).toBe(autoFillName)
+      expect(input.props().name).toBe(autoFillName)
+    })
+
+    it('should update select value on input change', () => {
+      const autoFillName = 'cc-number'
+      select = mount(
+        <SelectWithState
+          autoFill={autoFillName}
+          options={options}
+          value="foo"
+        />,
+      )
+      const input = select.find({ autocomplete: autoFillName })
+      input.simulate('change', { target: { value: '2010' } })
+      expect(select.state().value).toBe('2010')
+    })
+  })
 })

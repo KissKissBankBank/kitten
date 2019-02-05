@@ -23,9 +23,9 @@ var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/ge
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
-
 var _react = _interopRequireWildcard(require("react"));
+
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
@@ -53,50 +53,63 @@ function (_Component) {
 
     (0, _classCallCheck2.default)(this, SelectWithState);
     _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(SelectWithState).call(this, props));
-    _this.state = {
-      value: props.value
-    };
-    _this.handleChange = _this.handleChange.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.onKeyDown = _this.onKeyDown.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    return _this;
-  }
 
-  (0, _createClass2.default)(SelectWithState, [{
-    key: "handleChange",
-    value: function handleChange(val) {
+    _this.handleChange = function (val) {
       var value = val && val.value ? val : {
         value: null,
         label: null
       };
-      this.setState({
+
+      _this.setState({
         value: value
       });
-      this.props.onChange(value);
-      this.props.onInputChange({
+
+      _this.props.onChange(value);
+
+      _this.props.onInputChange({
         value: value,
-        name: this.props.name
+        name: _this.props.name
       });
-    }
-  }, {
-    key: "onKeyDown",
-    value: function onKeyDown(event) {
+    };
+
+    _this.handleLightChange = function (e) {
+      var value = e.target.value;
+
+      _this.setState({
+        value: value
+      });
+
+      _this.props.onChange({
+        value: value
+      });
+    };
+
+    _this.onKeyDown = function (event) {
       var enterKeyCode = 13;
       var spaceKeyCode = 32;
 
       if (event.keyCode === enterKeyCode || event.keyCode === spaceKeyCode) {
         event.preventDefault();
         event.stopPropagation();
-        this.onRemove(event);
+
+        _this.onRemove(event);
       }
-    }
-  }, {
-    key: "renderLabel",
-    value: function renderLabel() {
-      if (!this.props.labelText) return;
-      return _react.default.createElement("label", {
-        className: "k-Select__label",
-        id: this.props.id
-      }, this.props.labelText);
+    };
+
+    _this.state = {
+      value: props.value
+    };
+    return _this;
+  }
+
+  (0, _createClass2.default)(SelectWithState, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps) {
+      if (prevProps.value !== this.props.value) {
+        this.setState({
+          value: this.props.value
+        });
+      }
     }
   }, {
     key: "render",
@@ -109,7 +122,9 @@ function (_Component) {
           error = _this$props.error,
           valid = _this$props.valid,
           disabled = _this$props.disabled,
-          other = (0, _objectWithoutProperties2.default)(_this$props, ["value", "onChange", "className", "tiny", "error", "valid", "disabled"]);
+          labelText = _this$props.labelText,
+          autoFill = _this$props.autoFill,
+          other = (0, _objectWithoutProperties2.default)(_this$props, ["value", "onChange", "className", "tiny", "error", "valid", "disabled", "labelText", "autoFill"]);
       var selectClassName = (0, _classnames.default)('k-Select', className, {
         'k-Select--tiny': tiny,
         'is-error': error,
@@ -118,7 +133,22 @@ function (_Component) {
       });
       return _react.default.createElement("div", {
         className: selectClassName
-      }, this.renderLabel(), _react.default.createElement(SelectWithMultiLevel, (0, _extends2.default)({
+      }, labelText && _react.default.createElement("label", {
+        className: "k-Select__label",
+        for: this.props.id
+      }, labelText), autoFill && _react.default.createElement("input", {
+        autocomplete: autoFill,
+        "x-autocompletetype": autoFill,
+        xautocompletetype: autoFill,
+        autocompletetype: autoFill,
+        name: autoFill,
+        style: {
+          position: 'absolute',
+          zIndex: '-1',
+          opacity: '0'
+        },
+        onChange: this.handleLightChange
+      }), _react.default.createElement(SelectWithMultiLevel, (0, _extends2.default)({
         value: this.state.value,
         onKeyDown: this.onKeyDown,
         onChange: this.handleChange,
@@ -188,6 +218,9 @@ function (_Component2) {
   return SelectWithMultiLevel;
 }(_react.Component);
 
+SelectWithState.propTypes = {
+  autoFill: _propTypes.default.string
+};
 SelectWithState.defaultProps = {
   onChange: function onChange() {},
   onInputChange: function onInputChange() {},
@@ -201,7 +234,8 @@ SelectWithState.defaultProps = {
   disabled: false,
   tiny: false,
   name: null,
-  inputProps: {} // DEPRECATED: do not use default export.
+  inputProps: {},
+  autoFill: undefined // DEPRECATED: do not use default export.
 
 };
 var _default = SelectWithState;

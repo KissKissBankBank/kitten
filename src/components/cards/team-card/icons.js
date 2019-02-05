@@ -25,17 +25,17 @@ var _radium = _interopRequireDefault(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _buttonIcon = require("kitten/components/buttons/button-icon");
+var _buttonIcon = require("../../buttons/button-icon");
 
-var _linkedinIcon = require("kitten/components/icons/linkedin-icon");
+var _linkedinIcon = require("../../icons/linkedin-icon");
 
-var _twitterIcon = require("kitten/components/icons/twitter-icon");
+var _twitterIcon = require("../../icons/twitter-icon");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../layout/marger");
 
-var _emailIcon = require("kitten/components/icons/email-icon");
+var _emailIcon = require("../../icons/email-icon");
 
-var _phoneIcon = require("kitten/components/cards/team-card/phone-icon");
+var _phoneIcon = require("./phone-icon");
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
@@ -79,8 +79,7 @@ function (_Component) {
     value: function render() {
       var _this$props2 = this.props,
           email = _this$props2.email,
-          phoneNumber = _this$props2.phoneNumber,
-          links = _this$props2.links;
+          phoneNumber = _this$props2.phoneNumber;
       return _react.default.createElement(Marger, {
         top: "1.5",
         style: styles.icons
@@ -106,7 +105,10 @@ exports.TeamCardIcons = TeamCardIcons;
 TeamCardIcons.propTypes = {
   email: _propTypes.default.string,
   phoneNumber: _propTypes.default.string,
-  links: _propTypes.default.oneOf(['linkedin', 'twitter']),
+  links: _propTypes.default.arrayOf(_propTypes.default.shape({
+    name: _propTypes.default.oneOf(['linkedin', 'twitter']),
+    href: _propTypes.default.string
+  })),
   // Deprecated.
   socialLink: (0, _deprecated.default)(_propTypes.default.string, 'Prefer use links prop')
 };

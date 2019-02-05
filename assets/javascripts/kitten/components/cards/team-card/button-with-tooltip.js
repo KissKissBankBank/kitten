@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { PhoneIcon } from 'kitten/components/icons/phone-icon'
-import COLORS from 'kitten/constants/colors-config'
+import { ButtonIcon } from '../../buttons/button-icon'
+import { PhoneIcon } from '../../icons/phone-icon'
+import COLORS from '../../../constants/colors-config'
 
 export class TeamCardButtonWithTooltip extends Component {
   static propTypes = {
@@ -125,7 +125,11 @@ const styles = {
         height: 0,
         width: 0,
         marginLeft: -8,
-        border: '10px solid transparent',
+        borderWidth: 10,
+        borderTopColor: 'transparent',
+        borderLeftColor: 'transparent',
+        borderRightColor: 'transparent',
+        borderStyle: 'solid',
         pointerEvents: 'none',
       },
     },

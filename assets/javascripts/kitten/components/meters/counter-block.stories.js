@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text } from '@storybook/addon-knobs/react'
+import { withKnobs, text } from '@storybook/addon-knobs'
 import { CounterBlock } from '../../components/meters/counter-block'
 import { Grid, GridCol } from '../../components/grid/grid'
 import { Marger } from '../../components/layout/marger'
