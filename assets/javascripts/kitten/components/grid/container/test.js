@@ -1,8 +1,8 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
-import { Container } from '../../components/grid/container'
-import { SCREEN_SIZE_M } from '../../constants/screen-config'
+import { Container } from './index'
+import { SCREEN_SIZE_M } from '../../../constants/screen-config'
 
 describe('<Container />', () => {
   describe('by default', () => {
