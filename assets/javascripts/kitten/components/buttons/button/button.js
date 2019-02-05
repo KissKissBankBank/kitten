@@ -86,25 +86,87 @@ const StyledButton = styled.button`
 
 const modifierStyles = modifier => {
   let borderColor
+  let borderStyle = 'solid'
   let backgroundColor
   let color
   let selectorsBorderColor
   let selectorsBackgroundColor
   let selectorsColor
 
-  if (modifier === 'hydrogen') {
-    borderColor = COLORS.line1
-    backgroundColor = COLORS.background1
-    color = COLORS.font1
-    selectorsBorderColor = COLORS.primary1
-    selectorsBackgroundColor = COLORS.primary1
-    selectorsColor = COLORS.background1
+  switch (modifier) {
+    case 'hydrogen':
+      borderColor = COLORS.line1
+      backgroundColor = COLORS.background1
+      color = COLORS.font1
+      selectorsBorderColor = COLORS.primary1
+      selectorsBackgroundColor = COLORS.primary1
+      selectorsColor = COLORS.background1
+      break
+
+    case 'helium':
+      borderColor = COLORS.primary1
+      backgroundColor = COLORS.primary1
+      color = COLORS.background1
+      selectorsBorderColor = COLORS.primary2
+      selectorsBackgroundColor = COLORS.primary2
+      selectorsColor = COLORS.background1
+      break
+
+    case 'lithium':
+      borderColor = COLORS.primary4
+      backgroundColor = COLORS.background1
+      color = COLORS.primary1
+      selectorsBorderColor = COLORS.primary1
+      selectorsBackgroundColor = COLORS.primary1
+      selectorsColor = COLORS.background1
+      break
+
+    case 'beryllium':
+      borderColor = COLORS.font1
+      backgroundColor = COLORS.font1
+      color = COLORS.background1
+      selectorsBorderColor = COLORS.primary1
+      selectorsBackgroundColor = COLORS.primary1
+      selectorsColor = COLORS.background1
+      break
+
+    case 'carbon':
+      borderColor = COLORS.background1
+      backgroundColor = COLORS.background1
+      color = COLORS.font1
+      selectorsBorderColor = COLORS.primary1
+      selectorsBackgroundColor = COLORS.primary1
+      selectorsColor = COLORS.background1
+      break
+
+    case 'azote':
+      borderColor = COLORS.line1
+      backgroundColor = COLORS.background1
+      color = COLORS.font1
+      selectorsBorderColor = COLORS.primary4
+      selectorsBackgroundColor = COLORS.background1
+      selectorsColor = COLORS.primary1
+      break
+
+    case 'oxygen':
+      borderColor = COLORS.primary4
+      borderStyle = 'dashed'
+      backgroundColor = COLORS.background1
+      color = COLORS.primary1
+      selectorsBorderColor = COLORS.primary1
+      selectorsBackgroundColor = COLORS.primary1
+      selectorsColor = COLORS.background1
+      break
   }
 
   return css`
-    border: ${pxToRem(2)} solid ${borderColor};
+    border: ${pxToRem(2)} ${borderStyle} ${borderColor};
     background-color: ${backgroundColor};
     color: ${color};
+
+    svg {
+      fill: ${color};
+    }
 
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
@@ -131,7 +193,15 @@ export class Button extends Component {
     tiny: PropTypes.bool,
     big: PropTypes.bool,
     fluid: PropTypes.bool,
-    modifier: PropTypes.oneOf(['hydrogen']),
+    modifier: PropTypes.oneOf([
+      'hydrogen',
+      'helium',
+      'lithium',
+      'beryllium',
+      'carbon',
+      'azote',
+      'oxygen',
+    ]),
   }
 
   static defaultProps = {

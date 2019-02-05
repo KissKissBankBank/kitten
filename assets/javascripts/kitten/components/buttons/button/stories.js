@@ -6,6 +6,7 @@ import {
   boolean,
   number,
   radios,
+  select,
 } from '@storybook/addon-knobs'
 import { Button } from './button'
 import { Marger } from '../../layout/marger'
@@ -25,6 +26,16 @@ const svgPositionOptions = {
   Right: 'right',
 }
 
+const modifierOptions = {
+  Hydrogen: 'hydrogen',
+  Helium: 'helium',
+  Lithium: 'lithium',
+  Beryllium: 'beryllium',
+  Carbon: 'carbon',
+  Azote: 'azote',
+  Oxygen: 'oxygen',
+}
+
 storiesOf('Buttons/Button', module)
   .addDecorator(withKnobs)
   .add('with text', () => {
@@ -37,6 +48,7 @@ storiesOf('Buttons/Button', module)
                 tiny={boolean('Tiny', false)}
                 big={boolean('Big', false)}
                 fluid={boolean('Fluid', false)}
+                modifier={select('Modifier', modifierOptions, 'hydrogen')}
               >
                 {text('Text', 'MyButton')}
               </Button>
@@ -58,6 +70,7 @@ storiesOf('Buttons/Button', module)
                 tiny={boolean('Tiny', false)}
                 big={boolean('Big', false)}
                 fluid={boolean('Fluid', false)}
+                modifier={select('Modifier', modifierOptions, 'hydrogen')}
               >
                 {iconPosition === 'left' && (
                   <BurgerIcon
@@ -90,6 +103,7 @@ storiesOf('Buttons/Button', module)
               <Button
                 tiny={boolean('Tiny', false)}
                 big={boolean('Big', false)}
+                modifier={select('Modifier', modifierOptions, 'hydrogen')}
                 icon
               >
                 <BurgerIcon
