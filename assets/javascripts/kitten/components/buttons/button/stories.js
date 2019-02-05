@@ -40,7 +40,14 @@ const modifierOptions = {
 const info = {
   text: `
     # Button
+    &nbsp;
 
+    ## Import
+    ~~~js
+    import { Button } from '@kisskissbankbank/kitten/src/components/buttons/button/button'
+    ~~~
+
+    ## Usage
     &nbsp;
 
     #### Default
