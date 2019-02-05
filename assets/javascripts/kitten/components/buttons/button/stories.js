@@ -45,41 +45,42 @@ const info = {
 
     #### Default
     ~~~js
-    <Button>FooBar</Button>
+    <Button>MyButton</Button>
     ~~~
 
     #### Size
     ~~~js
-    <Button tiny>FooBar</Button>
-    <Button big>FooBar</Button>
+    <Button tiny>MyButton</Button>
+    <Button big>MyButton</Button>
     ~~~
 
     #### Display
     ~~~js
-    <Button fluid>FooBar</Button>
+    <Button fluid>MyButton</Button>
     ~~~
 
     #### Modifier
     ~~~js
-    <Button modifier="hydrogen">FooBar</Button>
-    <Button modifier="helium">FooBar</Button>
-    <Button modifier="lithium">FooBar</Button>
-    <Button modifier="beryllium">FooBar</Button>
-    <Button modifier="carbon">FooBar</Button>
-    <Button modifier="azote">FooBar</Button>
-    <Button modifier="oxygen">FooBar</Button>
+    <Button modifier="hydrogen">MyButton</Button>
+    <Button modifier="helium">MyButton</Button>
+    <Button modifier="lithium">MyButton</Button>
+    <Button modifier="beryllium">MyButton</Button>
+    <Button modifier="carbon">MyButton</Button>
+    <Button modifier="azote">MyButton</Button>
+    <Button modifier="oxygen">MyButton</Button>
     ~~~
 
     #### Tag
     ~~~js
-    <Button as="a">FooBar</Button>
+    <Button as="a" href="#">MyButton</Button>
+    <Button as="input" type="submit" value="MyButton" />
     ~~~
 
     #### With some elements
     ~~~js
     <Button>
-      <span>Foo</span>
-      <span>Bar</span>
+      <span>My</span>
+      <span>Button</span>
     </Button>
     ~~~
 
@@ -87,7 +88,7 @@ const info = {
     ~~~js
     <Button>
       <MyIcon />
-      <span>FooBar</span>
+      <span>MyButton</span>
     </Button>
     ~~~
 
@@ -118,9 +119,10 @@ storiesOf('Buttons/Button', module)
                   big={boolean('Big', false)}
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
-                >
-                  {text('Text', 'MyButton')}
-                </Button>
+                  as="input"
+                  type="submit"
+                  value="FooBar"
+                />
               </GridCol>
             </Grid>
           </Container>
