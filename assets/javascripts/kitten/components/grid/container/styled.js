@@ -30,6 +30,8 @@ const StyledContainer = styled.div`
         padding-left: 0;
       }
     `}
+
+  ${props => props.styles}
 `
 
 export default StyledContainer

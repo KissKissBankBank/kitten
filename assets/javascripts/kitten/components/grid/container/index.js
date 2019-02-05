@@ -4,7 +4,8 @@ import StyledContainer from './styled'
 
 export class Container extends React.PureComponent {
   render() {
-    return <StyledContainer {...this.props} />
+    const { style, ...others } = this.props
+    return <StyledContainer styles={style} {...others} />
   }
 }
 
