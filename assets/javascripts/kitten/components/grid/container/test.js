@@ -5,6 +5,18 @@ import { Container } from './index'
 import { SCREEN_SIZE_M } from '../../../constants/screen-config'
 
 describe('<Container />', () => {
+  let component
+
+  describe('compare with snapshot', () => {
+    beforeEach(() => {
+      component = renderer.create(<Container />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('by default', () => {
     const container = mount(<Container />)
 
