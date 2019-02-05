@@ -28,6 +28,7 @@ const StyledButton = styled.button`
 
   > :nth-child(n) {
     margin-right: ${pxToRem(10)};
+    text-align: left;
   }
 
   > :last-child {
@@ -91,6 +92,7 @@ export class Button extends Component {
     tiny: PropTypes.bool,
     big: PropTypes.bool,
     fluid: PropTypes.bool,
+    icon: PropTypes.bool,
     modifier: PropTypes.oneOf([
       'hydrogen',
       'helium',
@@ -106,6 +108,7 @@ export class Button extends Component {
     tiny: false,
     big: false,
     fluid: false,
+    icon: false,
     modifier: 'hydrogen',
   }
 
