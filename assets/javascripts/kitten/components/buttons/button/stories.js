@@ -79,7 +79,7 @@ storiesOf('Buttons/Button', module)
                   />
                 )}
 
-                <div>{text('Text', 'MyButton')}</div>
+                <span>{text('Text', 'MyButton')}</span>
 
                 {iconPosition === 'right' && (
                   <BurgerIcon
