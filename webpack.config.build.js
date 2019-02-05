@@ -3,7 +3,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'production',
-  entry: ['./styleguide/index.js'],
+  entry: [
+    '@babel/polyfill',
+    './styleguide/index.js',
+  ],
   resolve: {
     extensions: ['.scss', '.js', '.json'],
     alias: {

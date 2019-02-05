@@ -15,6 +15,10 @@ describe('ButtonQuestionMarkIcon />', () => {
     it('has a <QuestionMarkIcon />', () => {
       expect(button.find(QuestionMarkIcon).exists()).toBe(true)
     })
+
+    it('should be type of button', () => {
+      expect(button.props().type).toBe('button')
+    })
   })
 
   describe('with other props', () => {

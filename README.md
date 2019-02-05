@@ -13,6 +13,7 @@ You can check out Kitten's components on
 ## Dependencies
 - react >= 15.x
 - react-dom >= 15.x
+- @babel/polyfill if you support IE10 and previous versions
 
 ## Table of content
 - [Installation](#installation)
@@ -91,7 +92,7 @@ Then visit http://localhost:6006
 
 - To release `Storybook` simply run this command:
 ```sh
-yarn deploy-storybook
+npm run deploy-storybook
 ```
 
 ### Style guide
@@ -141,8 +142,6 @@ To contribute code:
   - Feature: a new feature.
   - Fix: a fix.
   ```
-- Update the `KARL_CHANGELOG.md` under the [unreleased] section if you added some
-  updates to the styleguide.
 
 To merge code into master:
 
@@ -162,7 +161,7 @@ If this is your first release, start by saving your npm credentials in
 your `~/.npmrc` by calling:
 
 ```sh
-$ yarn login
+$ npm login
 ```
 
 ### Prepare the release pull request
@@ -174,10 +173,9 @@ $ yarn login
   * Check that [each merged
     PR](https://github.com/KissKissBankBank/kitten/commits/master)
     from the last release has an entry.
-- Update the `KARL_CHANGELOG.md` file:
-  * Update the version with the version of the library.
-  * Add a new `[unreleased]` section.
 - Update the `package.json` file:
+  * Update the version with the version of the library.
+- Update the `package-lock.json` file:
   * Update the version with the version of the library.
 - Run this command:
 

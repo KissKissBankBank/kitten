@@ -25,8 +25,6 @@ var _radium = _interopRequireDefault(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
 var _buttonImage = require("../../components/buttons/button-image");
 
 var _text = require("../../components/typography/text");
@@ -103,7 +101,7 @@ ButtonImageWithTextComponent.propTypes = {
   largeGutter: _propTypes.default.bool,
   titleRegular: _propTypes.default.bool,
   textRegular: _propTypes.default.bool,
-  avatarProps: _propTypes.default.func
+  avatarProps: _propTypes.default.object
 };
 ButtonImageWithTextComponent.defaultProps = {
   avatarProps: {

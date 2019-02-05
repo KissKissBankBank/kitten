@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, boolean } from '@storybook/addon-knobs/react'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../components/grid/grid'
 import { StyleRoot } from 'radium'
 import { ButtonImageWithText } from '../../components/buttons/button-image-with-text'

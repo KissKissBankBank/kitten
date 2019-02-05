@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { TeamCard } from 'kitten/components/cards/team-card'
+import { TeamCard } from './team-card'
 
 const createMockMediaMatcher = matches => () => ({
   matches,
@@ -47,6 +47,9 @@ describe('<TeamCard />', () => {
 
   describe('with socialLink prop (deprecated)', () => {
     it('matches with snapshot', () => {
+      // Desactivate warnings.
+      jest.spyOn(global.console, 'error').mockImplementation(() => {})
+
       const component = renderer
         .create(
           <TeamCard>

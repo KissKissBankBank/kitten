@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text } from '@storybook/addon-knobs/react'
+import { withKnobs, text } from '@storybook/addon-knobs'
 import { BackerCard } from './backer-card'
 import { Container } from '../../components/grid/container'
 import { Grid, GridCol } from '../../components/grid/grid'

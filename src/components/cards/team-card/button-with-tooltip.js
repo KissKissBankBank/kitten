@@ -25,11 +25,11 @@ var _radium = require("radium");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _buttonIcon = require("kitten/components/buttons/button-icon");
+var _buttonIcon = require("../../buttons/button-icon");
 
-var _phoneIcon = require("kitten/components/icons/phone-icon");
+var _phoneIcon = require("../../icons/phone-icon");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var TeamCardButtonWithTooltip =
 /*#__PURE__*/
@@ -160,7 +160,11 @@ var styles = {
         height: 0,
         width: 0,
         marginLeft: -8,
-        border: '10px solid transparent',
+        borderWidth: 10,
+        borderTopColor: 'transparent',
+        borderLeftColor: 'transparent',
+        borderRightColor: 'transparent',
+        borderStyle: 'solid',
         pointerEvents: 'none'
       }
     }

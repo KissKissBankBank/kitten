@@ -1,15 +1,13 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { LinkBox } from '../../components/box/link-box'
-import { ArrowIcon } from '../../components/icons/arrow-icon'
-import { Text } from '../../components/typography/text'
 
 describe('<LinkBox />', () => {
   let component
 
   describe('by default', () => {
     beforeEach(() => {
-      component = renderer.create(<LinkBox />).toJSON()
+      component = renderer.create(<LinkBox title="My title" />).toJSON()
     })
 
     it('matches with snapshot', () => {

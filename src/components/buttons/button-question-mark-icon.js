@@ -20,6 +20,7 @@ var ButtonQuestionMarkIcon = function ButtonQuestionMarkIcon(props) {
     className: "k-ButtonIcon--tooltip--nano",
     modifier: "helium",
     size: "nano",
+    type: "button",
     rounded: true
   }, props), _react.default.createElement(_questionMarkIcon.QuestionMarkIcon, {
     className: "k-ButtonIcon__svg"

@@ -21,13 +21,11 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireDefault(require("radium"));
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _text = require("kitten/components/typography/text");
+var _text = require("../../typography/text");
 
-var _marger = require("kitten/components/layout/marger");
+var _marger = require("../../layout/marger");
 
 var TeamCardTitle =
 /*#__PURE__*/
@@ -64,5 +62,5 @@ function (_Component) {
 exports.TeamCardTitle = TeamCardTitle;
 TeamCardTitle.propTypes = {
   children: _propTypes.default.string.isRequired,
-  subTilte: _propTypes.default.string.isRequired
+  subTitle: _propTypes.default.string.isRequired
 };

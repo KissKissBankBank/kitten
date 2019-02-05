@@ -3,7 +3,7 @@ import { DocLinkBox } from '../../components/box/doc-link-box'
 import { LinkBox } from '../../components/box/link-box'
 
 describe('<DocLinkBox />', () => {
-  const component = shallow(<DocLinkBox />)
+  const component = shallow(<DocLinkBox title="My title" />)
 
   it('renders a <LinkBox />', () => {
     expect(component.find(LinkBox).exists()).toBe(true)

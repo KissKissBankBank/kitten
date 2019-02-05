@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavTabCarousel /> matches with snapshot 1`] = `
+<div
+  className="nav-tab-carousel__NavTabCarouselStyles-sc-1fg6mhx-0 drKXbI"
+>
+  <div
+    className="styled-components__StyledLeftArrowContainer-jws9qo-1 eWbDxx"
+  >
+    <svg
+      className="styled-components__StyledArrowIcon-jws9qo-2 lmmseD"
+      data-radium={true}
+      fill="#fff"
+      height="5.64"
+      style={
+        Object {
+          "transform": "rotate(-90deg)",
+        }
+      }
+      viewBox="0 0 8.48 5.64"
+      width="8.48"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+      />
+    </svg>
+    <div
+      className="styled-components__StyledPrevText-jws9qo-3 hRbKse"
+    >
+      Foobar 1
+    </div>
+  </div>
+  <div
+    className="pagination__PaginationStyles-sc-1thdyq2-1 hZuMTE"
+  >
+    <div
+      className="pagination__BulletPointStyles-sc-1thdyq2-0 fBOazf"
+    />
+    <div
+      className="pagination__BulletPointStyles-sc-1thdyq2-0 bCMDPM"
+    />
+    <div
+      className="pagination__BulletPointStyles-sc-1thdyq2-0 fBOazf"
+    />
+  </div>
+  <div
+    className="styled-components__StyledRightArrowContainer-jws9qo-0 fuMAAg"
+  >
+    <div
+      className="styled-components__StyledNextText-jws9qo-4 cvlIdJ"
+    >
+      Foobar 2
+    </div>
+    <svg
+      className="styled-components__StyledArrowIcon-jws9qo-2 lmmseD"
+      data-radium={true}
+      fill="#fff"
+      height="5.64"
+      style={
+        Object {
+          "transform": "rotate(90deg)",
+        }
+      }
+      viewBox="0 0 8.48 5.64"
+      width="8.48"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+      />
+    </svg>
+  </div>
+</div>
+`;

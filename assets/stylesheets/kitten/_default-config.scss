@@ -40,20 +40,6 @@ $k-grid: (
   container-padding-thin: 20px,
 ) !default;
 
-// Susy
-
-$columns: map-get($k-grid, 'columns');
-$container: map-get($k-grid, 'container');
-$gutter-width: map-get($k-grid, 'gutter-width');
-$column-width: ($container - ($columns - 1) * $gutter-width) / $columns;
-
-$susy: (
-  columns: $columns,
-  container: $container,
-  gutter-position: split,
-  gutters: $gutter-width/$column-width,
-) !default;
-
 // Fonts
 
 $k-fonts: (

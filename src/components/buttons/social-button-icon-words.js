@@ -15,7 +15,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _button = require("../../components/buttons/button");
 
-var _facebookIconWithBackground = require("../../components/icons/facebook-icon-with-background");
+var _facebookIcon = require("../../components/icons/facebook-icon");
 
 var _twitterIcon = require("../../components/icons/twitter-icon");
 
@@ -26,9 +26,10 @@ var FacebookButtonIconWords = function FacebookButtonIconWords(_ref) {
       props = (0, _objectWithoutProperties2.default)(_ref, ["children"]);
   return _react.default.createElement(_button.Button, (0, _extends2.default)({
     icon: true,
+    size: "big",
     modifier: "facebook"
-  }, props), _react.default.createElement(_facebookIconWithBackground.FacebookIconWithBackground, {
-    className: "k-Button__icon k-Button__icon--facebook"
+  }, props), _react.default.createElement(_facebookIcon.FacebookIcon, {
+    className: "k-Button__icon"
   }), children);
 };
 

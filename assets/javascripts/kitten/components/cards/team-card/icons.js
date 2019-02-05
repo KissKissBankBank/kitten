@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { ButtonIcon } from 'kitten/components/buttons/button-icon'
-import { LinkedinIcon } from 'kitten/components/icons/linkedin-icon'
-import { TwitterIcon } from 'kitten/components/icons/twitter-icon'
-import { Marger as MargerBase } from 'kitten/components/layout/marger'
-import { EmailIcon } from 'kitten/components/icons/email-icon'
-import { TeamCardPhoneIcon } from 'kitten/components/cards/team-card/phone-icon'
+import { ButtonIcon } from '../../buttons/button-icon'
+import { LinkedinIcon } from '../../icons/linkedin-icon'
+import { TwitterIcon } from '../../icons/twitter-icon'
+import { Marger as MargerBase } from '../../layout/marger'
+import { EmailIcon } from '../../icons/email-icon'
+import { TeamCardPhoneIcon } from './phone-icon'
 import deprecated from 'prop-types-extra/lib/deprecated'
 
 const Marger = Radium(MargerBase)
@@ -15,7 +15,12 @@ export class TeamCardIcons extends Component {
   static propTypes = {
     email: PropTypes.string,
     phoneNumber: PropTypes.string,
-    links: PropTypes.oneOf(['linkedin', 'twitter']),
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.oneOf(['linkedin', 'twitter']),
+        href: PropTypes.string,
+      }),
+    ),
 
     // Deprecated.
     socialLink: deprecated(PropTypes.string, 'Prefer use links prop'),
@@ -37,7 +42,7 @@ export class TeamCardIcons extends Component {
   }
 
   render() {
-    const { email, phoneNumber, links } = this.props
+    const { email, phoneNumber } = this.props
 
     return (
       <Marger top="1.5" style={styles.icons}>
