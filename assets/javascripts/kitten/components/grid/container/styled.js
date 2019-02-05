@@ -7,7 +7,7 @@ import {
   CONTAINER_PADDING_THIN,
 } from '../../../constants/grid-config'
 
-const StyledContainer = styled.div`
+export const StyledContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
 
@@ -33,5 +33,3 @@ const StyledContainer = styled.div`
 
   ${props => props.styles}
 `
-
-export default StyledContainer
