@@ -1,21 +1,17 @@
 import React from 'react'
-import styled from 'styled-components'
-import { ScreenConfig } from '../../../constants/screen-config'
+import PropTypes from 'prop-types'
 import StyledContainer from './styled'
 
 export class Container extends React.PureComponent {
   render() {
-    const { fullWidthBelowScreenSize, ...props } = this.props
-
-    return (
-      <StyledContainer
-        fullWidthBelowScreenSize={fullWidthBelowScreenSize}
-        {...props}
-      />
-    )
+    return <StyledContainer {...this.props} />
   }
 }
 
 Container.defaultProps = {
   fullWidthBelowScreenSize: null,
+}
+
+Container.propTypes = {
+  fullWidthBelowScreenSize: PropTypes.oneOf(['XXS', 'XS', 'S', 'M', 'L', 'XL']),
 }

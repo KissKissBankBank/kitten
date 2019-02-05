@@ -21,8 +21,8 @@ const StyledContainer = styled.div`
     padding-right: ${pxToRem(CONTAINER_PADDING)};
   }
 
-  ${fullWidthBelowScreenSize =>
-    fullWidthBelowScreenSize &&
+  ${props =>
+    props.fullWidthBelowScreenSize &&
     css`
       @media (max-width: ${ScreenConfig[props.fullWidthBelowScreenSize]
           .max}px) {
