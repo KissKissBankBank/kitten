@@ -23,6 +23,7 @@ const StyledButton = styled.button`
 
   cursor: pointer;
   appareance: none;
+  outline: none;
 
   > :nth-child(n) {
     margin-right: ${pxToRem(10)};
