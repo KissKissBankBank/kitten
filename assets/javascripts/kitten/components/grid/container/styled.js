@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import {
@@ -20,6 +20,16 @@ const StyledContainer = styled.div`
     padding-left: ${pxToRem(CONTAINER_PADDING)};
     padding-right: ${pxToRem(CONTAINER_PADDING)};
   }
+
+  ${fullWidthBelowScreenSize =>
+    fullWidthBelowScreenSize &&
+    css`
+      @media (max-width: ${ScreenConfig[props.fullWidthBelowScreenSize]
+          .max}px) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    `}
 `
 
 export default StyledContainer
