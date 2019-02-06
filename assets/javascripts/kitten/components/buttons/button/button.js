@@ -99,7 +99,6 @@ export class Button extends Component {
       'lithium',
       'beryllium',
       'carbon',
-      'azote',
       'oxygen',
     ]),
   }

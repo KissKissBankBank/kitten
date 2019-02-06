@@ -33,7 +33,6 @@ const modifierOptions = {
   Lithium: 'lithium',
   Beryllium: 'beryllium',
   Carbon: 'carbon',
-  Azote: 'azote',
   Oxygen: 'oxygen',
 }
 
@@ -73,7 +72,6 @@ const info = {
     <Button modifier="lithium">MyButton</Button>
     <Button modifier="beryllium">MyButton</Button>
     <Button modifier="carbon">MyButton</Button>
-    <Button modifier="azote">MyButton</Button>
     <Button modifier="oxygen">MyButton</Button>
     ~~~
 
@@ -126,6 +124,7 @@ storiesOf('Buttons/Button', module)
                   big={boolean('Big', false)}
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
+                  disabled
                 >
                   {text('Text', 'MyButton')}
                 </Button>
