@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Accordeon /> with \`as\` prop matches with snapshot 1`] = `
+exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -25,16 +25,20 @@ exports[`<Accordeon /> with \`as\` prop matches with snapshot 1`] = `
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
   outline: none;
+  cursor: pointer;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
 }
 
 .c0 >:nth-child(n) {
@@ -51,21 +55,35 @@ exports[`<Accordeon /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover,
-.c0:focus,
-.c0:active {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+.c0:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
   color: #fff;
 }
 
 .c0:hover svg,
-.c0:focus svg,
+.c0:focus svg {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
 .c0:active svg {
   fill: #fff;
 }
 
 .c0:disabled {
+  border-color: #d8d8d8;
   background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg {
+  fill: #fff;
 }
 
 <input
@@ -75,7 +93,7 @@ exports[`<Accordeon /> with \`as\` prop matches with snapshot 1`] = `
 />
 `;
 
-exports[`<Accordeon /> with \`big\` prop matches with snapshot 1`] = `
+exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -100,11 +118,11 @@ exports[`<Accordeon /> with \`big\` prop matches with snapshot 1`] = `
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
   outline: none;
+  cursor: pointer;
   min-width: 13.75rem;
   min-height: 4.375rem;
   padding: 0 2.5rem;
@@ -116,6 +134,10 @@ exports[`<Accordeon /> with \`big\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
+.c0:disabled {
+  cursor: not-allowed;
+}
+
 .c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -130,21 +152,35 @@ exports[`<Accordeon /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover,
-.c0:focus,
-.c0:active {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+.c0:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
   color: #fff;
 }
 
 .c0:hover svg,
-.c0:focus svg,
+.c0:focus svg {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
 .c0:active svg {
   fill: #fff;
 }
 
 .c0:disabled {
+  border-color: #d8d8d8;
   background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg {
+  fill: #fff;
 }
 
 <button
@@ -154,7 +190,7 @@ exports[`<Accordeon /> with \`big\` prop matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Accordeon /> with \`fluid\` prop matches with snapshot 1`] = `
+exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -179,11 +215,11 @@ exports[`<Accordeon /> with \`fluid\` prop matches with snapshot 1`] = `
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
   outline: none;
+  cursor: pointer;
   min-width: initial;
   width: 100%;
   border: 0.125rem solid #eee;
@@ -193,6 +229,10 @@ exports[`<Accordeon /> with \`fluid\` prop matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
+.c0:disabled {
+  cursor: not-allowed;
+}
+
 .c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -207,21 +247,35 @@ exports[`<Accordeon /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover,
-.c0:focus,
-.c0:active {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+.c0:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
   color: #fff;
 }
 
 .c0:hover svg,
-.c0:focus svg,
+.c0:focus svg {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
 .c0:active svg {
   fill: #fff;
 }
 
 .c0:disabled {
+  border-color: #d8d8d8;
   background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg {
+  fill: #fff;
 }
 
 <button
@@ -231,7 +285,7 @@ exports[`<Accordeon /> with \`fluid\` prop matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Accordeon /> with \`modifier\` prop matches with snapshot 1`] = `
+exports[`<Button /> with \`modifier\` prop matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -256,16 +310,20 @@ exports[`<Accordeon /> with \`modifier\` prop matches with snapshot 1`] = `
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
   outline: none;
+  cursor: pointer;
   border: 0.125rem dashed #bae8fd;
   background-color: #fff;
   color: #19b4fa;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
 }
 
 .c0 >:nth-child(n) {
@@ -282,21 +340,35 @@ exports[`<Accordeon /> with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover,
-.c0:focus,
-.c0:active {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+.c0:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
   color: #fff;
 }
 
 .c0:hover svg,
-.c0:focus svg,
+.c0:focus svg {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
 .c0:active svg {
   fill: #fff;
 }
 
 .c0:disabled {
+  border-color: #d8d8d8;
   background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg {
+  fill: #fff;
 }
 
 <button
@@ -306,7 +378,7 @@ exports[`<Accordeon /> with \`modifier\` prop matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Accordeon /> with \`tiny\` prop matches with snapshot 1`] = `
+exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -331,11 +403,11 @@ exports[`<Accordeon /> with \`tiny\` prop matches with snapshot 1`] = `
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
   outline: none;
+  cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
   padding: 0 1.25rem;
@@ -344,6 +416,10 @@ exports[`<Accordeon /> with \`tiny\` prop matches with snapshot 1`] = `
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
 }
 
 .c0 >:nth-child(n) {
@@ -360,21 +436,35 @@ exports[`<Accordeon /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover,
-.c0:focus,
-.c0:active {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+.c0:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
   color: #fff;
 }
 
 .c0:hover svg,
-.c0:focus svg,
+.c0:focus svg {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
 .c0:active svg {
   fill: #fff;
 }
 
 .c0:disabled {
+  border-color: #d8d8d8;
   background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg {
+  fill: #fff;
 }
 
 <button
@@ -384,7 +474,7 @@ exports[`<Accordeon /> with \`tiny\` prop matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Accordeon /> with icon matches with snapshot 1`] = `
+exports[`<Button /> with icon matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -409,11 +499,11 @@ exports[`<Accordeon /> with icon matches with snapshot 1`] = `
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
   outline: none;
+  cursor: pointer;
   min-width: initial;
   min-height: initial;
   width: 3.125rem;
@@ -426,6 +516,10 @@ exports[`<Accordeon /> with icon matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
+.c0:disabled {
+  cursor: not-allowed;
+}
+
 .c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -440,21 +534,35 @@ exports[`<Accordeon /> with icon matches with snapshot 1`] = `
 }
 
 .c0:hover,
-.c0:focus,
-.c0:active {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+.c0:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
   color: #fff;
 }
 
 .c0:hover svg,
-.c0:focus svg,
+.c0:focus svg {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
 .c0:active svg {
   fill: #fff;
 }
 
 .c0:disabled {
+  border-color: #d8d8d8;
   background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg {
+  fill: #fff;
 }
 
 <button
@@ -464,7 +572,7 @@ exports[`<Accordeon /> with icon matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Accordeon /> with some elements matches with snapshot 1`] = `
+exports[`<Button /> with some elements matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -489,16 +597,20 @@ exports[`<Accordeon /> with some elements matches with snapshot 1`] = `
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
   outline: none;
+  cursor: pointer;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
 }
 
 .c0 >:nth-child(n) {
@@ -515,21 +627,35 @@ exports[`<Accordeon /> with some elements matches with snapshot 1`] = `
 }
 
 .c0:hover,
-.c0:focus,
-.c0:active {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+.c0:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
   color: #fff;
 }
 
 .c0:hover svg,
-.c0:focus svg,
+.c0:focus svg {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
 .c0:active svg {
   fill: #fff;
 }
 
 .c0:disabled {
+  border-color: #d8d8d8;
   background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg {
+  fill: #fff;
 }
 
 <button
@@ -544,7 +670,7 @@ exports[`<Accordeon /> with some elements matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Accordeon /> with text matches with snapshot 1`] = `
+exports[`<Button /> with text matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -569,16 +695,20 @@ exports[`<Accordeon /> with text matches with snapshot 1`] = `
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  cursor: pointer;
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
   outline: none;
+  cursor: pointer;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
 }
 
 .c0 >:nth-child(n) {
@@ -595,21 +725,35 @@ exports[`<Accordeon /> with text matches with snapshot 1`] = `
 }
 
 .c0:hover,
-.c0:focus,
-.c0:active {
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+.c0:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
   color: #fff;
 }
 
 .c0:hover svg,
-.c0:focus svg,
+.c0:focus svg {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
 .c0:active svg {
   fill: #fff;
 }
 
 .c0:disabled {
+  border-color: #d8d8d8;
   background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg {
+  fill: #fff;
 }
 
 <button
