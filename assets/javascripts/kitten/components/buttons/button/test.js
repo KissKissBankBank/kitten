@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { Button } from './button'
 
-describe('<Accordeon />', () => {
+describe('<Button />', () => {
   let component
 
   describe('with text', () => {

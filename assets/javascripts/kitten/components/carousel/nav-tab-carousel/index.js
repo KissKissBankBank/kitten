@@ -16,6 +16,7 @@ const NavTabCarouselStyles = styled.div`
   align-items: center;
   background-color: ${COLORS.font1};
   padding: ${pxToRem(32)} ${pxToRem(40)};
+  min-width: ${pxToRem(320)};
 `
 
 export class NavTabCarousel extends Component {

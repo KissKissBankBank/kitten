@@ -5,7 +5,7 @@ import {
   LinkedinButtonIconWords,
 } from '../../components/buttons/social-button-icon-words'
 import { Button } from '../../components/buttons/button'
-import { FacebookIconWithBackground } from '../../components/icons/facebook-icon-with-background'
+import { FacebookIcon } from '../../components/icons/facebook-icon'
 import { TwitterIcon } from '../../components/icons/twitter-icon'
 import { LinkedinIcon } from '../../components/icons/linkedin-icon'
 
@@ -18,8 +18,8 @@ describe('<FacebookButtonIconWords />', () => {
       expect(button.props().modifier).toBe('facebook')
     })
 
-    it('has a <FacebookIconWithBackground />', () => {
-      expect(button.find(FacebookIconWithBackground).exists()).toBe(true)
+    it('has a <FacebookIcon />', () => {
+      expect(button.find(FacebookIcon).exists()).toBe(true)
     })
   })
 

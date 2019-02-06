@@ -13,6 +13,7 @@ You can check out Kitten's components on
 ## Dependencies
 - react >= 15.x
 - react-dom >= 15.x
+- @babel/polyfill if you support IE10 and previous versions
 
 ## Table of content
 - [Installation](#installation)
@@ -173,6 +174,8 @@ $ npm login
     PR](https://github.com/KissKissBankBank/kitten/commits/master)
     from the last release has an entry.
 - Update the `package.json` file:
+  * Update the version with the version of the library.
+- Update the `package-lock.json` file:
   * Update the version with the version of the library.
 - Run this command:
 
