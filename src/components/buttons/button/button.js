@@ -36,7 +36,7 @@ var _modifierStyles = require("./helpers/modifier-styles");
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "sc-1q5nte0-0"
-})(["display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-width:", ";min-height:", ";padding:0 ", ";", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;cursor:pointer;appareance:none;outline:none;>:nth-child(n){margin-right:", ";text-align:left;}>:last-child{margin-right:0;}", " ", " ", " ", " ", ""], (0, _typography.pxToRem)(200), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(30), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(14), _colorsConfig.default.font1, (0, _typography.pxToRem)(10), function (_ref) {
+})(["display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-width:", ";min-height:", ";padding:0 ", ";", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appareance:none;outline:none;cursor:pointer;:disabled{cursor:not-allowed;}>:nth-child(n){margin-right:", ";text-align:left;}>:last-child{margin-right:0;}", " ", " ", " ", " ", ""], (0, _typography.pxToRem)(200), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(30), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(14), _colorsConfig.default.font1, (0, _typography.pxToRem)(10), function (_ref) {
   var tiny = _ref.tiny;
   return tiny && (0, _styledComponents.css)(["min-width:", ";min-height:", ";padding:0 ", ";"], (0, _typography.pxToRem)(160), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(20));
 }, function (_ref2) {
@@ -84,7 +84,7 @@ Button.propTypes = {
   big: _propTypes.default.bool,
   fluid: _propTypes.default.bool,
   icon: _propTypes.default.bool,
-  modifier: _propTypes.default.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'azote', 'oxygen'])
+  modifier: _propTypes.default.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen'])
 };
 Button.defaultProps = {
   tiny: false,
