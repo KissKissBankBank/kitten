@@ -80,7 +80,13 @@ export const modifierStyles = modifier => {
     }
 
     :disabled {
+      border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
+      color: ${COLORS.background1};
+
+      svg {
+        fill: ${COLORS.background1};
+      }
     }
   `
 }

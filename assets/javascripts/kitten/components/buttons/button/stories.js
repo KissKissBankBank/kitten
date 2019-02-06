@@ -124,7 +124,7 @@ storiesOf('Buttons/Button', module)
                   big={boolean('Big', false)}
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
-                  disabled
+                  disabled={boolean('Disabled', false)}
                 >
                   {text('Text', 'MyButton')}
                 </Button>
@@ -151,6 +151,7 @@ storiesOf('Buttons/Button', module)
                   big={boolean('Big', false)}
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
+                  disabled={boolean('Disabled', false)}
                 >
                   {iconPosition === 'left' && (
                     <BurgerIcon
@@ -188,6 +189,7 @@ storiesOf('Buttons/Button', module)
                   tiny={boolean('Tiny', false)}
                   big={boolean('Big', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
+                  disabled={boolean('Disabled', false)}
                   icon
                 >
                   <BurgerIcon

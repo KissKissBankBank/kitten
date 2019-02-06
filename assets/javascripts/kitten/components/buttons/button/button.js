@@ -22,9 +22,14 @@ const StyledButton = styled.button`
   line-height: 1.3;
   text-decoration: none;
 
-  cursor: pointer;
   appareance: none;
   outline: none;
+
+  cursor: pointer;
+
+  :disabled {
+    cursor: not-allowed;
+  }
 
   > :nth-child(n) {
     margin-right: ${pxToRem(10)};
