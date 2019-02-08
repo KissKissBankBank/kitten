@@ -364,7 +364,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         >
           <svg
             className="k-IconBadge__svg"
-            fill="#FFF"
+            fill="#fff"
             viewBox="0 0 11 8"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -632,7 +632,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
                   >
                     <svg
                       className="k-IconBadge__svg"
-                      fill="#FFF"
+                      fill="#fff"
                       viewBox="0 0 11 8"
                       xmlns="http://www.w3.org/2000/svg"
                     >

@@ -197,7 +197,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         className="c3"
       >
         <svg
-          fill="#FFF"
+          fill="#fff"
           viewBox="0 0 11 8"
           width="10"
           xmlns="http://www.w3.org/2000/svg"
@@ -237,7 +237,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         className="c3"
       >
         <svg
-          fill="#FFF"
+          fill="#fff"
           viewBox="0 0 11 8"
           width="10"
           xmlns="http://www.w3.org/2000/svg"
