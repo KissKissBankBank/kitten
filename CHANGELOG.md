@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add a new `Button` component.
+## [1.13.0] - 2019-02-08
+
+Feature:
+- Add a new `Button` component.
 
 ## [1.12.0] - 2019-02-01
 
