@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol as GridColBase } from '../../../../components/grid/grid'
-import { Button as ButtonBase } from '../../../../components/buttons/button'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import COLORS from '../../../../constants/colors-config'
-import { Title } from '../../../../components/typography/title'
-import { withMediaQueries } from '../../../../hoc/media-queries'
-import { HorizontalStroke as HorizontalStrokeBase } from '../../../../components/layout/horizontal-stroke'
-import { parseHtml } from '../../../../helpers/utils/parser'
+import { Container } from '../../../components/grid/container'
+import { Grid, GridCol as GridColBase } from '../../../components/grid/grid'
+import { Button as ButtonBase } from '../../../components/buttons/button'
+import { ScreenConfig } from '../../../constants/screen-config'
+import COLORS from '../../../constants/colors-config'
+import { Title } from '../../../components/typography/title'
+import { withMediaQueries } from '../../../hoc/media-queries'
+import { HorizontalStroke as HorizontalStrokeBase } from '../../../components/layout/horizontal-stroke'
+import { parseHtml } from '../../../helpers/utils/parser'
 
 const GridCol = Radium(GridColBase)
 const HorizontalStroke = Radium(HorizontalStrokeBase)

@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { SimpleTemplate } from './simple-template'
-import { Title } from '../../../../../components/typography/title'
-import { Text } from '../../../../../components/typography/text'
-import { Paragraph } from '../../../../../components/typography/paragraph'
-import { BulletList } from '../../../../../components/lists/bullet-list'
-import { Marger } from '../../../../../components/layout/marger'
-import { withMediaQueries } from '../../../../../hoc/media-queries'
+import { Title } from '../../../../components/typography/title'
+import { Text } from '../../../../components/typography/text'
+import { Paragraph } from '../../../../components/typography/paragraph'
+import { BulletList } from '../../../../components/lists/bullet-list'
+import { Marger } from '../../../../components/layout/marger'
+import { withMediaQueries } from '../../../../hoc/media-queries'
+import { parseHtml } from '../../../../helpers/utils/parser'
 
-class BusinessTakeoverBase extends Component {
+class FranchiseCreationBase extends Component {
   render() {
     const { viewportIsXSOrLess } = this.props
 
@@ -18,8 +19,8 @@ class BusinessTakeoverBase extends Component {
       {
         background: 'https://placehold.it/350x195/caf4fe/caf4fe',
         title:
-          'Vous souhaitez financer une reprise de titres ou de fonds de \
-            commerce ?',
+          'Vous souhaitez financer une création en franchise ou \
+            commerce associé ?',
       },
     ]
 
@@ -27,24 +28,20 @@ class BusinessTakeoverBase extends Component {
       {
         key: 1,
         item:
-          'Ancienneté de la société cible (société à reprendre) : 4ans \
-        d’activité minimum',
+          'Tête de réseau référencée par nos services (n’hésitez pas à vous \
+          renseigner à l’adresse \
+          <a href="mailto:franchise@lendopolis.com">\
+          franchise@lendopolis.com</a>),',
       },
       {
         key: 2,
-        item: 'Chiffre d’affaires de la cible supérieur à 200 000euros',
+        item:
+          'Analyse du projet de création sous franchise, licence de marque \
+              ou coopérative',
       },
       {
         key: 3,
-        item: 'Société rentable (EBE positif)',
-      },
-      {
-        key: 4,
-        item: 'Capitaux propres positifs',
-      },
-      {
-        key: 5,
-        item: 'Pas de procédure collective en cours',
+        item: 'LENDOPOLIS intervient en complément d’un crédit bancaire',
       },
     ]
 
@@ -55,51 +52,38 @@ class BusinessTakeoverBase extends Component {
       },
       {
         key: 2,
-        item: 'Montant&nbsp;: à partir de 10 000euros',
+        item: 'Montant : à partir de 10 000 euros',
       },
       {
         key: 3,
-        item: 'Durée&nbsp;: de 24 à 60 mois',
+        item: 'Durée : de 24 à 60mois',
       },
       {
         key: 4,
-        item: 'Taux d’intérêt fixe&nbsp;: entre 4% et 10,5%',
-      },
-      {
-        key: 5,
-        item: 'LENDOPOLIS intervient en complément d’un crédit bancaire',
+        item: 'Taux d’intérêt fixe: entre 4% et 10,5%',
       },
     ]
 
     const section4List = [
       {
         key: 1,
-        item: 'Une présentation de l’activité',
+        item: 'Un descriptif du projet et le détail du plan de financement',
       },
       {
         key: 2,
-        item:
-          'Un descriptif du projet détaillant le montage juridique et \
-        financier de l’opération',
-      },
-      {
-        key: 3,
         item: 'Un prévisionnel',
       },
       {
+        key: 3,
+        item: 'Le DIP avec les annexes',
+      },
+      {
         key: 4,
-        item:
-          'Les 2 dernières liasses fiscales de la société cible avec les \
-        annexes',
+        item: 'Le contrat de franchise/partenariat le cas échéant',
       },
       {
         key: 5,
-        item:
-          'La promesse de vente du fonds de commerce, ou de cession de parts',
-      },
-      {
-        key: 6,
-        item: 'Le CV du repreneur',
+        item: 'Le CV du porteur de projet',
       },
     ]
 
@@ -113,10 +97,13 @@ class BusinessTakeoverBase extends Component {
           </Marger>
 
           <Paragraph modifier="primary" margin={false}>
-            LENDOPOLIS complète vos apports pour financer les frais
-            d’honoraires, les frais d’installation, le BFR initial, les travaux
-            d’aménagement, les premiers investissements liés à votre projet de
-            reprise, etc.
+            LENDOPOLIS complète vos apports personnels pour financer les
+            investissements matériels liés à votre installation : équipement,
+            système de caisse et logiciels, véhicules, etc., ou d’autres besoins
+            incorporels : recrutement de vos premiers collaborateurs, frais de
+            formation et d’honoraires, dépôt de garantie, achat du stock
+            initial, frais de marketing et communication, travaux d’aménagement,
+            site web marchand à créer, etc.
           </Paragraph>
         </Marger>
 
@@ -153,7 +140,7 @@ class BusinessTakeoverBase extends Component {
 
           <Paragraph modifier="primary" margin={false}>
             Nous vous invitons également à joindre tout autre document utile à
-            l’appréciation de votre dossier (plaquette, devis travaux, photos,
+            l’appréciation de votre dossier (plaquette, photos, bail commercial,
             etc.).
           </Paragraph>
         </Marger>
@@ -162,6 +149,6 @@ class BusinessTakeoverBase extends Component {
   }
 }
 
-export const BusinessTakeover = withMediaQueries({
+export const FranchiseCreation = withMediaQueries({
   viewportIsXSOrLess: true,
-})(BusinessTakeoverBase)
+})(FranchiseCreationBase)
