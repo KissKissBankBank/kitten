@@ -74,8 +74,10 @@ Array [
       disabled={false}
       id="input"
       name="field"
+      onChange={[Function]}
       placeholder="Placeholder…"
       type="text"
+      value=""
     />
   </div>,
   <div
@@ -169,8 +171,10 @@ Array [
       disabled={false}
       id="input"
       name="field"
+      onChange={[Function]}
       placeholder="Placeholder…"
       type="text"
+      value=""
     />
   </div>,
 ]
