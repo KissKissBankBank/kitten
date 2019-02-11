@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> compare with snapshot matches with snapshot 1`] = `
+.c0 {
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  max-width: 90rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width:640px) {
+  .c0 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+<div
+  className="c0"
+/>
+`;
