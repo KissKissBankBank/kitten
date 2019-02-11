@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ScrollableContainer } from '../../components/grid/scrollable-container'
+import { ScrollableContainer } from './index'
 
 describe('<ScrollableContainer />', () => {
   let component
