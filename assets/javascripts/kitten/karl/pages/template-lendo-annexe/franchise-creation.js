@@ -29,8 +29,7 @@ class FranchiseCreationBase extends Component {
         key: 1,
         item:
           'Tête de réseau référencée par nos services (n’hésitez pas à vous \
-          renseigner à l’adresse \
-          <a href="mailto:franchise@lendopolis.com">\
+          renseigner à l’adresse <a href="mailto:franchise@lendopolis.com">\
           franchise@lendopolis.com</a>),',
       },
       {
