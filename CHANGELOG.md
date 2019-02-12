@@ -4,10 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix: Move Sass styles to styled components styles for `Container` component.
+## [1.14.0] - 2019-02-12
+
+Feature:
+- Add `limit` prop to `Field.Input` to handle length limitation.
+- Migration des fichiers TPE/PME depuis LENDO.
+
+Fix:
+- Move Sass styles to styled components styles for `Container` component.
 You don't need to include the `k-Container` mixin in your Sass stylesheet
 anymore.
-Feature: Add `limit` prop to `Field.Input` to handle length limitation.
 
 ## [1.13.0] - 2019-02-08
 
