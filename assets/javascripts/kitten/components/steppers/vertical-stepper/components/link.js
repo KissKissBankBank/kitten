@@ -20,7 +20,7 @@ const StyledParagraph = styled.p`
   line-height: 1;
 `
 
-const StyledLink = styled.a`
+const StyledLink = styled.span`
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${pxToRem(12)};
   line-height: normal;

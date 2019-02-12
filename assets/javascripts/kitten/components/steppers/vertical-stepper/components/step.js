@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
@@ -12,23 +14,71 @@ export class Step extends Component {
   static List = List
   static Link = Link
 
+  static propTypes = {
+    href: PropTypes.string.isRequired,
+    valid: PropTypes.bool,
+    success: PropTypes.bool,
+    error: PropTypes.bool,
+    waiting: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    valid: false,
+    success: false,
+    error: false,
+    waiting: false,
+  }
+
   render() {
-    const { valid, error, statusProps, children, ...other } = this.props
+    const { success, valid, error, waiting, children, ...other } = this.props
 
     return (
       <StyledItem {...other}>
-        <Status valid={valid} error={error} {...statusProps} />
+        <StyledLink>
+          <Status
+            success={success}
+            valid={valid}
+            error={error}
+            waiting={waiting}
+            className="VerticalStepper__status"
+          />
 
-        <StyledContent error={error}>{children}</StyledContent>
+          <StyledContent error={error} className="VerticalStepper__content">
+            {children}
+          </StyledContent>
+        </StyledLink>
       </StyledItem>
     )
   }
 }
 
 const StyledItem = styled.li`
-  display: flex;
-
   margin ${pxToRem(30)} 0;
+`
+
+const StyledLink = styled.a`
+  display: inline-flex;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  .VerticalStepper__status {
+    transition: transform 0.4s;
+  }
+
+  .VerticalStepper__content {
+    transition: transform 0.4s;
+  }
+
+  :hover {
+    .VerticalStepper__status {
+      transform: scale(1.1);
+    }
+
+    .VerticalStepper__content {
+      transform: translateX(5px);
+    }
+  }
 `
 
 const StyledContent = styled.div`

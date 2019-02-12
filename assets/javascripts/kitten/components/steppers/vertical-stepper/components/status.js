@@ -6,16 +6,20 @@ import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { CheckedIcon } from '../../../../components/icons/checked-icon'
 import { WarningIcon } from '../../../../components/icons/warning-icon'
+import { WaitingIcon } from '../../../../components/icons/waiting-icon'
 
 export class Status extends Component {
   static propTypes = {
     valid: PropTypes.bool,
+    success: PropTypes.bool,
     error: PropTypes.bool,
+    waiting: PropTypes.bool,
   }
 
   static defaultProps = {
     valid: false,
     error: false,
+    waiting: false,
   }
 
   render() {
@@ -27,10 +31,12 @@ export class Status extends Component {
   }
 
   iconByStatus = () => {
-    const { valid, error } = this.props
+    const { valid, success, error, waiting } = this.props
 
     if (valid) return <CheckedIcon width="10" title={null} />
+    if (success) return <CheckedIcon width="10" title={null} />
     if (error) return <WarningIcon color={COLORS.error} title={null} />
+    if (waiting) return <WaitingIcon color={COLORS.primary1} title={null} />
 
     return null
   }
@@ -58,11 +64,18 @@ export const StyledStatus = styled.span`
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${pxToRem(14)};
 
-  ${({ valid }) =>
-    valid &&
+  ${({ success }) =>
+    success &&
     css`
       background-color: ${COLORS.valid};
       border-color: ${COLORS.valid};
+    `}
+
+  ${({ valid }) =>
+    valid &&
+    css`
+      background-color: ${COLORS.primary1};
+      border-color: ${COLORS.primary1};
     `}
 
   ${({ error }) =>
@@ -70,5 +83,12 @@ export const StyledStatus = styled.span`
     css`
       color: ${COLORS.error};
       border-color: ${COLORS.error3};
+    `}
+
+  ${({ waiting }) =>
+    waiting &&
+    css`
+      color: ${COLORS.primary1};
+      border-color: ${COLORS.primary4};
     `}
 `

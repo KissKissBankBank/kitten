@@ -19,15 +19,13 @@ storiesOf('Steppers/VerticalStepper', module)
     return (
       <StoryContainer>
         <VerticalStepper>
-          <VerticalStepper.Step valid>
+          <VerticalStepper.Step success href="#">
             <VerticalStepper.Step.Label>Infos clés</VerticalStepper.Step.Label>
 
-            <VerticalStepper.Step.Link href="#">
-              Éditer
-            </VerticalStepper.Step.Link>
+            <VerticalStepper.Step.Link>Éditer</VerticalStepper.Step.Link>
           </VerticalStepper.Step>
 
-          <VerticalStepper.Step valid>
+          <VerticalStepper.Step valid href="#">
             <VerticalStepper.Step.Label>Réseaux</VerticalStepper.Step.Label>
 
             <VerticalStepper.Step.List>
@@ -40,12 +38,10 @@ storiesOf('Steppers/VerticalStepper', module)
               <VerticalStepper.Step.List.Item>…</VerticalStepper.Step.List.Item>
             </VerticalStepper.Step.List>
 
-            <VerticalStepper.Step.Link href="#">
-              Éditer
-            </VerticalStepper.Step.Link>
+            <VerticalStepper.Step.Link>Éditer</VerticalStepper.Step.Link>
           </VerticalStepper.Step>
 
-          <VerticalStepper.Step error>
+          <VerticalStepper.Step error href="#">
             <VerticalStepper.Step.Label>
               Présentation du projet
             </VerticalStepper.Step.Label>
@@ -59,29 +55,23 @@ storiesOf('Steppers/VerticalStepper', module)
               </VerticalStepper.Step.List.Item>
             </VerticalStepper.Step.List>
 
-            <VerticalStepper.Step.Link href="#">
-              Compléter
-            </VerticalStepper.Step.Link>
+            <VerticalStepper.Step.Link>Compléter</VerticalStepper.Step.Link>
           </VerticalStepper.Step>
 
-          <VerticalStepper.Step>
+          <VerticalStepper.Step waiting href="#">
             <VerticalStepper.Step.Label>
               Contreparties
             </VerticalStepper.Step.Label>
 
-            <VerticalStepper.Step.Link href="#">
-              Commencer
-            </VerticalStepper.Step.Link>
+            <VerticalStepper.Step.Link>Commencer</VerticalStepper.Step.Link>
           </VerticalStepper.Step>
 
-          <VerticalStepper.Step>
+          <VerticalStepper.Step href="#">
             <VerticalStepper.Step.Label>
               Statut et infos bancaires
             </VerticalStepper.Step.Label>
 
-            <VerticalStepper.Step.Link href="#">
-              Commencer
-            </VerticalStepper.Step.Link>
+            <VerticalStepper.Step.Link>Commencer</VerticalStepper.Step.Link>
           </VerticalStepper.Step>
         </VerticalStepper>
       </StoryContainer>

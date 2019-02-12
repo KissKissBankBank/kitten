@@ -20,7 +20,7 @@ export class VerticalStepper extends Component {
 
 const StyledNav = styled.nav`
   position: relative;
-  overflow: auto;
+  padding: 1px 0;
 `
 
 const StyledList = styled.ul`
