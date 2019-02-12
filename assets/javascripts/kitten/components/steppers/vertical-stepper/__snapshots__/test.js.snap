@@ -237,7 +237,9 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   transition: transform 0.4s;
 }
 
-.c3:hover .VerticalStepper__content {
+.c3:hover .VerticalStepper__content,
+.c3:focus .VerticalStepper__content,
+.c3:active .VerticalStepper__content {
   -webkit-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
