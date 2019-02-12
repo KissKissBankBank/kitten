@@ -58,7 +58,7 @@ storiesOf('Steppers/VerticalStepper', module)
               Présentation du projet
             </VerticalStepper.Step.Label>
 
-            <VerticalStepper.Step.List>
+            <VerticalStepper.Step.List error>
               <VerticalStepper.Step.List.Item>
                 Veuillez renseigner votre slogan
               </VerticalStepper.Step.List.Item>

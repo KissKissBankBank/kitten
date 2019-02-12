@@ -91,7 +91,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-color: #ffb2c7;
 }
 
-.c14 {
+.c13 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -121,7 +121,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-color: #bae8fd;
 }
 
-.c15 {
+.c14 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -240,9 +240,9 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c3:hover .VerticalStepper__content,
 .c3:focus .VerticalStepper__content,
 .c3:active .VerticalStepper__content {
-  -webkit-transform: translateX(5px);
-  -ms-transform: translateX(5px);
-  transform: translateX(5px);
+  -webkit-transform: translateX(0.3125rem);
+  -ms-transform: translateX(0.3125rem);
+  transform: translateX(0.3125rem);
 }
 
 .c5 {
@@ -258,22 +258,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -ms-flex-pack: center;
   justify-content: center;
   color: #222;
-}
-
-.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  color: #222;
-  color: #ff0046;
 }
 
 .c0 {
@@ -434,7 +418,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="VerticalStepper__content c13"
+          className="VerticalStepper__content c5"
         >
           <p
             className="c6"
@@ -475,7 +459,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="VerticalStepper__status c14"
+          className="VerticalStepper__status c13"
         >
           <svg
             height="3"
@@ -517,7 +501,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="VerticalStepper__status c15"
+          className="VerticalStepper__status c14"
         />
         <div
           className="VerticalStepper__content c5"

@@ -18,6 +18,7 @@ export class Status extends Component {
 
   static defaultProps = {
     valid: false,
+    success: false,
     error: false,
     waiting: false,
   }

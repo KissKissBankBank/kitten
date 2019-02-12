@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import { Status } from './status'
@@ -49,10 +48,6 @@ export class Step extends Component {
             error={error}
             waiting={waiting}
             {...statusProps}
-            className={classNames(
-              'VerticalStepper__status',
-              statusProps && statusProps.className,
-            )}
           />
 
           <StyledContent error={error} className="VerticalStepper__content">
@@ -74,10 +69,6 @@ const StyledLink = styled.a`
   cursor: pointer;
   text-decoration: none;
 
-  .VerticalStepper__status {
-    transition: transform 0.4s;
-  }
-
   .VerticalStepper__content {
     transition: transform 0.4s;
   }
@@ -85,12 +76,8 @@ const StyledLink = styled.a`
   :hover,
   :focus,
   :active {
-    // .VerticalStepper__status {
-    //   transform: scale(1.1);
-    // }
-
     .VerticalStepper__content {
-      transform: translateX(5px);
+      transform: translateX(${pxToRem(5)});
     }
   }
 `
@@ -101,10 +88,4 @@ const StyledContent = styled.div`
   justify-content: center;
 
   color: ${COLORS.font1};
-
-  ${({ error }) =>
-    error &&
-    css`
-      color: ${COLORS.error};
-    `}
 `
