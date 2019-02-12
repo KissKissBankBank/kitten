@@ -41,8 +41,8 @@ export class Step extends Component {
     } = this.props
 
     return (
-      <StyledItem {...other}>
-        <StyledLink>
+      <StyledItem>
+        <StyledLink {...other}>
           <Status
             success={success}
             valid={valid}

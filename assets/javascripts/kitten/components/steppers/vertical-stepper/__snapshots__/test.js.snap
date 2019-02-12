@@ -304,10 +304,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   >
     <li
       className="c2"
-      href="#"
     >
       <a
         className="c3"
+        href="#"
       >
         <span
           className="VerticalStepper__status c4"
@@ -348,10 +348,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
     </li>
     <li
       className="c2"
-      href="#"
     >
       <a
         className="c3"
+        href="#"
       >
         <span
           className="VerticalStepper__status c9"
@@ -411,10 +411,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
     </li>
     <li
       className="c2"
-      href="#"
     >
       <a
         className="c3"
+        href="#"
       >
         <span
           className="VerticalStepper__status c12"
@@ -467,10 +467,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
     </li>
     <li
       className="c2"
-      href="#"
     >
       <a
         className="c3"
+        href="#"
       >
         <span
           className="VerticalStepper__status c14"
@@ -509,10 +509,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
     </li>
     <li
       className="c2"
-      href="#"
     >
       <a
         className="c3"
+        href="#"
       >
         <span
           className="VerticalStepper__status c15"
