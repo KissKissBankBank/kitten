@@ -82,7 +82,9 @@ const StyledLink = styled.a`
     transition: transform 0.4s;
   }
 
-  :hover {
+  :hover,
+  :focus,
+  :active {
     // .VerticalStepper__status {
     //   transform: scale(1.1);
     // }
