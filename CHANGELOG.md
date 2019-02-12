@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Feature:
 - Add `limit` prop to `Field.Input` to handle length limitation.
-- Migration des fichiers TPE/PME depuis LENDO.
+- Recover templates for TPE/PME pages from LENDO.
 
 Fix:
 - Move Sass styles to styled components styles for `Container` component.
