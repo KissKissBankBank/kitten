@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.14.0] - 2019-02-12
 
-Feature:
+Features:
 - Add `limit` prop to `Field.Input` to handle length limitation.
 - Recover templates for TPE/PME pages from LENDO.
 
