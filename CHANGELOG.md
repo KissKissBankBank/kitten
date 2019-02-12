@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Fix: Move Sass styles to styled components styles for `Container` component.
 You don't need to include the `k-Container` mixin in your Sass stylesheet
 anymore.
+Feature: Add `limit` prop to `Field.Input` to handle length limitation.
 
 ## [1.13.0] - 2019-02-08
 
