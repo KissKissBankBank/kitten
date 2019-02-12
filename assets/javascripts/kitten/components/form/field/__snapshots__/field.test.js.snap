@@ -73,11 +73,10 @@ Array [
       className="k-TextInput is-error"
       disabled={false}
       id="input"
+      limit={null}
       name="field"
-      onChange={[Function]}
       placeholder="Placeholder…"
       type="text"
-      value=""
     />
   </div>,
   <div
@@ -170,11 +169,10 @@ Array [
       className="k-TextInput"
       disabled={false}
       id="input"
+      limit={null}
       name="field"
-      onChange={[Function]}
       placeholder="Placeholder…"
       type="text"
-      value=""
     />
   </div>,
 ]
