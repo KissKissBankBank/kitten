@@ -225,12 +225,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   text-decoration: none;
 }
 
-.c3 .VerticalStepper__status {
-  -webkit-transition: -webkit-transform 0.4s;
-  -webkit-transition: transform 0.4s;
-  transition: transform 0.4s;
-}
-
 .c3 .VerticalStepper__content {
   -webkit-transition: -webkit-transform 0.4s;
   -webkit-transition: transform 0.4s;
@@ -296,7 +290,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="VerticalStepper__status c4"
+          className="c4"
         >
           <svg
             fill="#fff"
@@ -340,7 +334,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="VerticalStepper__status c9"
+          className="c9"
         >
           <svg
             fill="#fff"
@@ -403,7 +397,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="VerticalStepper__status c12"
+          className="c12"
         >
           <svg
             height="10"
@@ -459,7 +453,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="VerticalStepper__status c13"
+          className="c13"
         >
           <svg
             height="3"
@@ -501,7 +495,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="VerticalStepper__status c14"
+          className="c14"
         />
         <div
           className="VerticalStepper__content c5"
