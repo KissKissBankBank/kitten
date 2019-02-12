@@ -30,8 +30,7 @@ export class Status extends Component {
     const { valid, error } = this.props
 
     if (valid) return <CheckedIcon width="10" title={null} />
-    if (error)
-      return <WarningIcon height="20" color={COLORS.error} title={null} />
+    if (error) return <WarningIcon color={COLORS.error} title={null} />
 
     return null
   }
