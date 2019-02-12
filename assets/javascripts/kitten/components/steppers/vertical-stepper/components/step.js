@@ -30,7 +30,15 @@ export class Step extends Component {
   }
 
   render() {
-    const { success, valid, error, waiting, children, ...other } = this.props
+    const {
+      success,
+      valid,
+      error,
+      waiting,
+      statusProps,
+      children,
+      ...other
+    } = this.props
 
     return (
       <StyledItem {...other}>
@@ -40,7 +48,11 @@ export class Step extends Component {
             valid={valid}
             error={error}
             waiting={waiting}
-            className="VerticalStepper__status"
+            {...statusProps}
+            className={classNames(
+              'VerticalStepper__status',
+              statusProps && statusProps.className,
+            )}
           />
 
           <StyledContent error={error} className="VerticalStepper__content">
@@ -71,9 +83,9 @@ const StyledLink = styled.a`
   }
 
   :hover {
-    .VerticalStepper__status {
-      transform: scale(1.1);
-    }
+    // .VerticalStepper__status {
+    //   transform: scale(1.1);
+    // }
 
     .VerticalStepper__content {
       transform: translateX(5px);

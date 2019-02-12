@@ -11,15 +11,13 @@ describe('<VerticalStepper />', () => {
       component = renderer
         .create(
           <VerticalStepper>
-            <VerticalStepper.Step valid>
+            <VerticalStepper.Step success href="#">
               <VerticalStepper.Step.Label>Label</VerticalStepper.Step.Label>
 
-              <VerticalStepper.Step.Link href="#">
-                Link
-              </VerticalStepper.Step.Link>
+              <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
             </VerticalStepper.Step>
 
-            <VerticalStepper.Step valid>
+            <VerticalStepper.Step valid href="#">
               <VerticalStepper.Step.Label>Label</VerticalStepper.Step.Label>
 
               <VerticalStepper.Step.List>
@@ -34,12 +32,10 @@ describe('<VerticalStepper />', () => {
                 </VerticalStepper.Step.List.Item>
               </VerticalStepper.Step.List>
 
-              <VerticalStepper.Step.Link href="#">
-                Link
-              </VerticalStepper.Step.Link>
+              <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
             </VerticalStepper.Step>
 
-            <VerticalStepper.Step error>
+            <VerticalStepper.Step error href="#">
               <VerticalStepper.Step.Label>Label</VerticalStepper.Step.Label>
 
               <VerticalStepper.Step.List>
@@ -51,9 +47,19 @@ describe('<VerticalStepper />', () => {
                 </VerticalStepper.Step.List.Item>
               </VerticalStepper.Step.List>
 
-              <VerticalStepper.Step.Link href="#">
-                Link
-              </VerticalStepper.Step.Link>
+              <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
+            </VerticalStepper.Step>
+
+            <VerticalStepper.Step waiting href="#">
+              <VerticalStepper.Step.Label>Label</VerticalStepper.Step.Label>
+
+              <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
+            </VerticalStepper.Step>
+
+            <VerticalStepper.Step href="#">
+              <VerticalStepper.Step.Label>Label</VerticalStepper.Step.Label>
+
+              <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
             </VerticalStepper.Step>
           </VerticalStepper>,
         )
