@@ -232,7 +232,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   margin: 0.3125rem 0 0.625rem;
   padding: 0;
   font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 0.75rem;
   line-height: normal;
 }
@@ -459,7 +459,8 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="c13"
         >
           <svg
-            height="3"
+            height="4"
+            viewBox="0 0 13 3"
             width="13"
             xmlns="http://www.w3.org/2000/svg"
           >

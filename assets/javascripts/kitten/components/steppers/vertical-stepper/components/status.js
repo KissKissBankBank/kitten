@@ -37,7 +37,8 @@ export class Status extends Component {
     if (valid) return <CheckedIcon width="10" title={null} />
     if (success) return <CheckedIcon width="10" title={null} />
     if (error) return <WarningIcon color={COLORS.error} title={null} />
-    if (waiting) return <WaitingIcon color={COLORS.primary1} title={null} />
+    if (waiting)
+      return <WaitingIcon height="4" color={COLORS.primary1} title={null} />
 
     return null
   }

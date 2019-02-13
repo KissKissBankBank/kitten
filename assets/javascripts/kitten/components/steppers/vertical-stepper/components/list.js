@@ -9,13 +9,14 @@ const StyledList = styled.ul`
   margin: ${pxToRem(5)} 0 ${pxToRem(10)};
   padding: 0;
 
-  ${TYPOGRAPHY.fontStyles.regular};
+  ${TYPOGRAPHY.fontStyles.light};
   font-size: ${pxToRem(12)};
   line-height: normal;
 
   ${({ error }) =>
     error &&
     css`
+      ${TYPOGRAPHY.fontStyles.regular};
       color: ${COLORS.error};
     `}
 `
