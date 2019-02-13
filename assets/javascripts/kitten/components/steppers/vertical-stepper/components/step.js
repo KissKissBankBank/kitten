@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import { Status } from './status'
@@ -41,7 +41,7 @@ export class Step extends Component {
 
     return (
       <StyledItem>
-        <StyledLink {...other}>
+        <StyledLink as={other.href ? 'a' : 'span'} {...other}>
           <Status
             success={success}
             valid={valid}
@@ -66,20 +66,24 @@ const StyledItem = styled.li`
 const StyledLink = styled.a`
   display: inline-flex;
 
-  cursor: pointer;
-  text-decoration: none;
+  ${({ as }) =>
+    as === 'a' &&
+    css`
+      cursor: pointer;
+      text-decoration: none;
 
-  .VerticalStepper__content {
-    transition: transform 0.4s;
-  }
+      .VerticalStepper__content {
+        transition: transform 0.4s;
+      }
 
-  :hover,
-  :focus,
-  :active {
-    .VerticalStepper__content {
-      transform: translateX(${pxToRem(5)});
-    }
-  }
+      :hover,
+      :focus,
+      :active {
+        .VerticalStepper__content {
+          transform: translateX(${pxToRem(5)});
+        }
+      }
+    `}
 `
 
 const StyledContent = styled.div`

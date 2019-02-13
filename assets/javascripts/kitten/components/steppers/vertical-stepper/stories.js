@@ -82,10 +82,7 @@ storiesOf('Steppers/VerticalStepper', module)
             <VerticalStepper.Step.Link>Commencer</VerticalStepper.Step.Link>
           </VerticalStepper.Step>
 
-          <VerticalStepper.Step
-            href="#"
-            statusProps={{ title: 'Étape à commencer' }}
-          >
+          <VerticalStepper.Step statusProps={{ title: 'Étape à commencer' }}>
             <VerticalStepper.Step.Label>
               Statut et infos bancaires
             </VerticalStepper.Step.Label>
