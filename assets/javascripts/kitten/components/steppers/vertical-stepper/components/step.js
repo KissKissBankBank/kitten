@@ -4,16 +4,9 @@ import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import { Status } from './status'
-import { Title } from './title'
-import { Link } from './link'
-import { List } from './list'
 import { STEP_CLASSNAME, LINK_CLASSNAME } from '../index'
 
 export class Step extends Component {
-  static Title = Title
-  static List = List
-  static Link = Link
-
   static propTypes = {
     href: PropTypes.string.isRequired,
     valid: PropTypes.bool,

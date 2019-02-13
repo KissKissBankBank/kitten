@@ -24,9 +24,9 @@ storiesOf('Steppers/VerticalStepper', module)
             href="#"
             statusProps={{ title: 'Étape validée' }}
           >
-            <VerticalStepper.Step.Title>Infos clés</VerticalStepper.Step.Title>
+            <VerticalStepper.Title>Infos clés</VerticalStepper.Title>
 
-            <VerticalStepper.Step.Link>Éditer</VerticalStepper.Step.Link>
+            <VerticalStepper.Link>Éditer</VerticalStepper.Link>
           </VerticalStepper.Step>
 
           <VerticalStepper.Step
@@ -34,19 +34,15 @@ storiesOf('Steppers/VerticalStepper', module)
             href="#"
             statusProps={{ title: 'Étape complétée' }}
           >
-            <VerticalStepper.Step.Title>Réseaux</VerticalStepper.Step.Title>
+            <VerticalStepper.Title>Réseaux</VerticalStepper.Title>
 
-            <VerticalStepper.Step.List>
-              <VerticalStepper.Step.List.Item>
-                Facebook
-              </VerticalStepper.Step.List.Item>
-              <VerticalStepper.Step.List.Item>
-                Twitter
-              </VerticalStepper.Step.List.Item>
-              <VerticalStepper.Step.List.Item>…</VerticalStepper.Step.List.Item>
-            </VerticalStepper.Step.List>
+            <VerticalStepper.List>
+              <VerticalStepper.List.Item>Facebook</VerticalStepper.List.Item>
+              <VerticalStepper.List.Item>Twitter</VerticalStepper.List.Item>
+              <VerticalStepper.List.Item>…</VerticalStepper.List.Item>
+            </VerticalStepper.List>
 
-            <VerticalStepper.Step.Link>Éditer</VerticalStepper.Step.Link>
+            <VerticalStepper.Link>Éditer</VerticalStepper.Link>
           </VerticalStepper.Step>
 
           <VerticalStepper.Step
@@ -54,20 +50,20 @@ storiesOf('Steppers/VerticalStepper', module)
             href="#"
             statusProps={{ title: 'Étape à améliorer' }}
           >
-            <VerticalStepper.Step.Title>
+            <VerticalStepper.Title>
               Présentation du projet
-            </VerticalStepper.Step.Title>
+            </VerticalStepper.Title>
 
-            <VerticalStepper.Step.List error>
-              <VerticalStepper.Step.List.Item>
+            <VerticalStepper.List error>
+              <VerticalStepper.List.Item>
                 Veuillez renseigner votre slogan
-              </VerticalStepper.Step.List.Item>
-              <VerticalStepper.Step.List.Item>
+              </VerticalStepper.List.Item>
+              <VerticalStepper.List.Item>
                 Veuillez renseigner votre description détaillée du projet
-              </VerticalStepper.Step.List.Item>
-            </VerticalStepper.Step.List>
+              </VerticalStepper.List.Item>
+            </VerticalStepper.List>
 
-            <VerticalStepper.Step.Link>Compléter</VerticalStepper.Step.Link>
+            <VerticalStepper.Link>Compléter</VerticalStepper.Link>
           </VerticalStepper.Step>
 
           <VerticalStepper.Step
@@ -75,19 +71,17 @@ storiesOf('Steppers/VerticalStepper', module)
             href="#"
             statusProps={{ title: 'Étape à compléter' }}
           >
-            <VerticalStepper.Step.Title>
-              Contreparties
-            </VerticalStepper.Step.Title>
+            <VerticalStepper.Title>Contreparties</VerticalStepper.Title>
 
-            <VerticalStepper.Step.Link>Commencer</VerticalStepper.Step.Link>
+            <VerticalStepper.Link>Commencer</VerticalStepper.Link>
           </VerticalStepper.Step>
 
           <VerticalStepper.Step statusProps={{ title: 'Étape à commencer' }}>
-            <VerticalStepper.Step.Title>
+            <VerticalStepper.Title>
               Statut et infos bancaires
-            </VerticalStepper.Step.Title>
+            </VerticalStepper.Title>
 
-            <VerticalStepper.Step.Link>Commencer</VerticalStepper.Step.Link>
+            <VerticalStepper.Link>Commencer</VerticalStepper.Link>
           </VerticalStepper.Step>
         </VerticalStepper>
       </StoryContainer>

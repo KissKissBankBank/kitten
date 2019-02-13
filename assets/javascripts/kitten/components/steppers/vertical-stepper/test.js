@@ -12,54 +12,44 @@ describe('<VerticalStepper />', () => {
         .create(
           <VerticalStepper>
             <VerticalStepper.Step success href="#">
-              <VerticalStepper.Step.Title>Title</VerticalStepper.Step.Title>
+              <VerticalStepper.Title>Title</VerticalStepper.Title>
 
-              <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
+              <VerticalStepper.Link>Link</VerticalStepper.Link>
             </VerticalStepper.Step>
 
             <VerticalStepper.Step valid href="#">
-              <VerticalStepper.Step.Title>Title</VerticalStepper.Step.Title>
+              <VerticalStepper.Title>Title</VerticalStepper.Title>
 
-              <VerticalStepper.Step.List>
-                <VerticalStepper.Step.List.Item>
-                  Item
-                </VerticalStepper.Step.List.Item>
-                <VerticalStepper.Step.List.Item>
-                  Item
-                </VerticalStepper.Step.List.Item>
-                <VerticalStepper.Step.List.Item>
-                  …
-                </VerticalStepper.Step.List.Item>
-              </VerticalStepper.Step.List>
+              <VerticalStepper.List>
+                <VerticalStepper.List.Item>Item</VerticalStepper.List.Item>
+                <VerticalStepper.List.Item>Item</VerticalStepper.List.Item>
+                <VerticalStepper.List.Item>…</VerticalStepper.List.Item>
+              </VerticalStepper.List>
 
-              <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
+              <VerticalStepper.Link>Link</VerticalStepper.Link>
             </VerticalStepper.Step>
 
             <VerticalStepper.Step error href="#">
-              <VerticalStepper.Step.Title>Title</VerticalStepper.Step.Title>
+              <VerticalStepper.Title>Title</VerticalStepper.Title>
 
-              <VerticalStepper.Step.List>
-                <VerticalStepper.Step.List.Item>
-                  Item
-                </VerticalStepper.Step.List.Item>
-                <VerticalStepper.Step.List.Item>
-                  Item
-                </VerticalStepper.Step.List.Item>
-              </VerticalStepper.Step.List>
+              <VerticalStepper.List>
+                <VerticalStepper.List.Item>Item</VerticalStepper.List.Item>
+                <VerticalStepper.List.Item>Item</VerticalStepper.List.Item>
+              </VerticalStepper.List>
 
-              <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
+              <VerticalStepper.Link>Link</VerticalStepper.Link>
             </VerticalStepper.Step>
 
             <VerticalStepper.Step waiting href="#">
-              <VerticalStepper.Step.Title>Title</VerticalStepper.Step.Title>
+              <VerticalStepper.Title>Title</VerticalStepper.Title>
 
-              <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
+              <VerticalStepper.Link>Link</VerticalStepper.Link>
             </VerticalStepper.Step>
 
             <VerticalStepper.Step href="#">
-              <VerticalStepper.Step.Title>Title</VerticalStepper.Step.Title>
+              <VerticalStepper.Title>Title</VerticalStepper.Title>
 
-              <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
+              <VerticalStepper.Link>Link</VerticalStepper.Link>
             </VerticalStepper.Step>
           </VerticalStepper>,
         )

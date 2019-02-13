@@ -3,12 +3,18 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { Step } from './components/step'
+import { Title } from './components/title'
+import { Link } from './components/link'
+import { List } from './components/list'
 
 export const STEP_CLASSNAME = 'VerticalStepper__step'
 export const LINK_CLASSNAME = 'VerticalStepper__link'
 
 export class VerticalStepper extends Component {
   static Step = Step
+  static Title = Title
+  static List = List
+  static Link = Link
 
   render() {
     const { children } = this.props

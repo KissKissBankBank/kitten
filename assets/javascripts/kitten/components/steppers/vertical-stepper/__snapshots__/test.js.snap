@@ -149,60 +149,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   font-size: 0.875rem;
 }
 
-.c6 {
-  margin: 0 0 0.125rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: normal;
-  color: #222;
-}
-
-.c7 {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
-
-.c8 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: normal;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c10 {
-  margin: 0.3125rem 0 0.625rem;
-  padding: 0;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: normal;
-}
-
-.c11 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: baseline;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
-  margin: 0 0 0.125rem;
-  padding: 0;
-  list-style: none;
-}
-
-.c11:before {
-  padding-right: 0.625rem;
-  content: '●';
-  font-size: 0.5rem;
-}
-
 .c2 {
   margin: 1.875rem 0;
 }
@@ -255,6 +201,60 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -ms-flex-pack: center;
   justify-content: center;
   color: #222;
+}
+
+.c6 {
+  margin: 0 0 0.125rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: normal;
+  color: #222;
+}
+
+.c7 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.c8 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: normal;
+  color: #19b4fa;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c10 {
+  margin: 0.3125rem 0 0.625rem;
+  padding: 0;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  margin: 0 0 0.125rem;
+  padding: 0;
+  list-style: none;
+}
+
+.c11:before {
+  padding-right: 0.625rem;
+  content: '●';
+  font-size: 0.5rem;
 }
 
 .c0 {
