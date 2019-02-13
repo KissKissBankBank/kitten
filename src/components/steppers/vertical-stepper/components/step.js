@@ -35,12 +35,6 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _status = require("./status");
 
-var _title = require("./title");
-
-var _link = require("./link");
-
-var _list = require("./list");
-
 var _index = require("../index");
 
 var Step =
@@ -81,9 +75,6 @@ function (_Component) {
 }(_react.Component);
 
 exports.Step = Step;
-Step.Title = _title.Title;
-Step.List = _list.List;
-Step.Link = _link.Link;
 Step.propTypes = {
   href: _propTypes.default.string.isRequired,
   valid: _propTypes.default.bool,

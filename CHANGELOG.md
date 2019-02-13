@@ -4,9 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `VerticalStepper`.
-- Feature: Add `WarningIcon` and `WaitingIcon`.
-- Feature: Update `CheckedIcon` to accept `color` and `title` props.
+## [1.15.0] - 2019-02-13
+
+Features:
+- Add `VerticalStepper`.
+- Add `WarningIcon` and `WaitingIcon`.
+- Update `CheckedIcon` to accept `color` and `title` props.
 
 ## [1.14.0] - 2019-02-12
 
