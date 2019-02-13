@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.VerticalStepper = void 0;
+exports.VerticalStepper = exports.LINK_CLASSNAME = exports.STEP_CLASSNAME = void 0;
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
@@ -28,6 +28,11 @@ var _typography = require("../../../helpers/utils/typography");
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _step = require("./components/step");
+
+var STEP_CLASSNAME = 'VerticalStepper__step';
+exports.STEP_CLASSNAME = STEP_CLASSNAME;
+var LINK_CLASSNAME = 'VerticalStepper__link';
+exports.LINK_CLASSNAME = LINK_CLASSNAME;
 
 var VerticalStepper =
 /*#__PURE__*/
@@ -57,7 +62,7 @@ VerticalStepper.Step = _step.Step;
 var StyledNav = _styledComponents.default.nav.withConfig({
   displayName: "vertical-stepper__StyledNav",
   componentId: "sc-1uso67w-0"
-})(["position:relative;overflow:auto;"]);
+})(["position:relative;padding:1px 0;"]);
 
 var StyledList = _styledComponents.default.ul.withConfig({
   displayName: "vertical-stepper__StyledList",

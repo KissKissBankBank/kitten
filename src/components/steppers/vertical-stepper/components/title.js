@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Label = void 0;
+exports.Title = void 0;
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -15,9 +15,9 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var Label = _styledComponents.default.p.withConfig({
-  displayName: "label__Label",
-  componentId: "sc-33pwaa-0"
+var Title = _styledComponents.default.p.withConfig({
+  displayName: "title__Title",
+  componentId: "zdw2ns-0"
 })(["margin:0 0 ", ";", ";font-size:", ";line-height:normal;color:", ";"], (0, _typography.pxToRem)(2), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(16), _colorsConfig.default.font1);
 
-exports.Label = Label;
+exports.Title = Title;

@@ -21,7 +21,9 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _typography = require("../../../../helpers/utils/typography");
 
@@ -32,7 +34,10 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 var StyledList = _styledComponents.default.ul.withConfig({
   displayName: "list__StyledList",
   componentId: "sc-1m61gol-0"
-})(["margin:", " 0 ", ";padding:0;", ";font-size:", ";line-height:normal;"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12));
+})(["margin:", " 0 ", ";padding:0;", ";font-size:", ";line-height:normal;", ""], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12), function (_ref) {
+  var error = _ref.error;
+  return error && (0, _styledComponents.css)(["color:", ";"], _colorsConfig.default.error);
+});
 
 var StyledItem = _styledComponents.default.li.withConfig({
   displayName: "list__StyledItem",
@@ -60,3 +65,9 @@ function (_Component) {
 
 exports.List = List;
 List.Item = StyledItem;
+List.propTypes = {
+  error: _propTypes.default.bool
+};
+List.defaultProps = {
+  error: false
+};

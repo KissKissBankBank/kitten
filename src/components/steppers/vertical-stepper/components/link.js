@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Link = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -23,11 +25,15 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var _typography = require("../../../../helpers/utils/typography");
 
 var _typographyConfig = _interopRequireDefault(require("../../../../constants/typography-config"));
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
+
+var _index = require("../index");
 
 var Link =
 /*#__PURE__*/
@@ -42,7 +48,9 @@ function (_Component) {
   (0, _createClass2.default)(Link, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(StyledParagraph, null, _react.default.createElement(StyledLink, this.props));
+      return _react.default.createElement(StyledParagraph, null, _react.default.createElement(StyledLink, (0, _extends2.default)({}, this.props, {
+        className: (0, _classnames.default)(_index.LINK_CLASSNAME, this.props.className)
+      })));
     }
   }]);
   return Link;
@@ -55,7 +63,7 @@ var StyledParagraph = _styledComponents.default.p.withConfig({
   componentId: "sc-11s9i6i-0"
 })(["margin:0;padding:0;line-height:1;"]);
 
-var StyledLink = _styledComponents.default.a.withConfig({
+var StyledLink = _styledComponents.default.span.withConfig({
   displayName: "link__StyledLink",
   componentId: "sc-11s9i6i-1"
-})(["", ";font-size:", ";line-height:normal;color:", ";text-decoration:none;transition:color 0.4s;&:hover,&:focus,&:active{color:", ";}"], _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12), _colorsConfig.default.primary1, _colorsConfig.default.primary3);
+})(["", ";font-size:", ";line-height:normal;color:", ";text-decoration:none;"], _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12), _colorsConfig.default.primary1);

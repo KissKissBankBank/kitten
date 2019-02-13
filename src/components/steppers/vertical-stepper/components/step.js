@@ -25,6 +25,8 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _typography = require("../../../../helpers/utils/typography");
@@ -33,11 +35,13 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _status = require("./status");
 
-var _label = require("./label");
+var _title = require("./title");
 
 var _link = require("./link");
 
 var _list = require("./list");
+
+var _index = require("../index");
 
 var Step =
 /*#__PURE__*/
@@ -53,36 +57,61 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
+          success = _this$props.success,
           valid = _this$props.valid,
           error = _this$props.error,
+          waiting = _this$props.waiting,
           statusProps = _this$props.statusProps,
           children = _this$props.children,
-          other = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "statusProps", "children"]);
-      return _react.default.createElement(StyledItem, other, _react.default.createElement(_status.Status, (0, _extends2.default)({
+          other = (0, _objectWithoutProperties2.default)(_this$props, ["success", "valid", "error", "waiting", "statusProps", "children"]);
+      return _react.default.createElement(StyledItem, null, _react.default.createElement(StyledLink, (0, _extends2.default)({
+        as: other.href ? 'a' : 'span'
+      }, other), _react.default.createElement(_status.Status, (0, _extends2.default)({
+        success: success,
         valid: valid,
-        error: error
+        error: error,
+        waiting: waiting
       }, statusProps)), _react.default.createElement(StyledContent, {
-        error: error
-      }, children));
+        error: error,
+        className: _index.STEP_CLASSNAME
+      }, children)));
     }
   }]);
   return Step;
 }(_react.Component);
 
 exports.Step = Step;
-Step.Label = _label.Label;
+Step.Title = _title.Title;
 Step.List = _list.List;
 Step.Link = _link.Link;
+Step.propTypes = {
+  href: _propTypes.default.string.isRequired,
+  valid: _propTypes.default.bool,
+  success: _propTypes.default.bool,
+  error: _propTypes.default.bool,
+  waiting: _propTypes.default.bool
+};
+Step.defaultProps = {
+  valid: false,
+  success: false,
+  error: false,
+  waiting: false
+};
 
 var StyledItem = _styledComponents.default.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-1you76f-0"
-})(["display:flex;margin ", " 0;"], (0, _typography.pxToRem)(30));
+})(["margin ", " 0;"], (0, _typography.pxToRem)(30));
+
+var StyledLink = _styledComponents.default.a.withConfig({
+  displayName: "step__StyledLink",
+  componentId: "sc-1you76f-1"
+})(["display:inline-flex;", ""], function (_ref) {
+  var as = _ref.as;
+  return as === 'a' && (0, _styledComponents.css)(["cursor:pointer;text-decoration:none;.", "{transition:transform 0.4s;}.", "{transition:color 0.4s;}:hover,:focus,:active{.", "{transform:translateX(", ");}.", "{color:", ";}}"], _index.STEP_CLASSNAME, _index.LINK_CLASSNAME, _index.STEP_CLASSNAME, (0, _typography.pxToRem)(5), _index.LINK_CLASSNAME, _colorsConfig.default.primary3);
+});
 
 var StyledContent = _styledComponents.default.div.withConfig({
   displayName: "step__StyledContent",
-  componentId: "sc-1you76f-1"
-})(["display:flex;flex-direction:column;justify-content:center;color:", ";", ""], _colorsConfig.default.font1, function (_ref) {
-  var error = _ref.error;
-  return error && (0, _styledComponents.css)(["color:", ";"], _colorsConfig.default.error);
-});
+  componentId: "sc-1you76f-2"
+})(["display:flex;flex-direction:column;justify-content:center;color:", ";"], _colorsConfig.default.font1);
