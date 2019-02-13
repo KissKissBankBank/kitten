@@ -31,7 +31,7 @@ const scrollStop = callback => {
         callback(target)
       },
       // wait more for scrollStop if browser support snap
-      // because of the momentum on ios
+      // because of the momentum on iOS
       supportScrollSnap ? 132 : 66,
     )
   }
