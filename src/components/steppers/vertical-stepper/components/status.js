@@ -76,6 +76,7 @@ function (_Component) {
         title: null
       });
       if (waiting) return _react.default.createElement(_waitingIcon.WaitingIcon, {
+        height: "4",
         color: _colorsConfig.default.primary1,
         title: null
       });

@@ -29,6 +29,12 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _step = require("./components/step");
 
+var _title = require("./components/title");
+
+var _link = require("./components/link");
+
+var _list = require("./components/list");
+
 var STEP_CLASSNAME = 'VerticalStepper__step';
 exports.STEP_CLASSNAME = STEP_CLASSNAME;
 var LINK_CLASSNAME = 'VerticalStepper__link';
@@ -58,6 +64,9 @@ function (_Component) {
 
 exports.VerticalStepper = VerticalStepper;
 VerticalStepper.Step = _step.Step;
+VerticalStepper.Title = _title.Title;
+VerticalStepper.List = _list.List;
+VerticalStepper.Link = _link.Link;
 
 var StyledNav = _styledComponents.default.nav.withConfig({
   displayName: "vertical-stepper__StyledNav",
