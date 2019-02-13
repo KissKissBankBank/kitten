@@ -12,13 +12,13 @@ describe('<VerticalStepper />', () => {
         .create(
           <VerticalStepper>
             <VerticalStepper.Step success href="#">
-              <VerticalStepper.Step.Label>Label</VerticalStepper.Step.Label>
+              <VerticalStepper.Step.Title>Title</VerticalStepper.Step.Title>
 
               <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
             </VerticalStepper.Step>
 
             <VerticalStepper.Step valid href="#">
-              <VerticalStepper.Step.Label>Label</VerticalStepper.Step.Label>
+              <VerticalStepper.Step.Title>Title</VerticalStepper.Step.Title>
 
               <VerticalStepper.Step.List>
                 <VerticalStepper.Step.List.Item>
@@ -36,7 +36,7 @@ describe('<VerticalStepper />', () => {
             </VerticalStepper.Step>
 
             <VerticalStepper.Step error href="#">
-              <VerticalStepper.Step.Label>Label</VerticalStepper.Step.Label>
+              <VerticalStepper.Step.Title>Title</VerticalStepper.Step.Title>
 
               <VerticalStepper.Step.List>
                 <VerticalStepper.Step.List.Item>
@@ -51,13 +51,13 @@ describe('<VerticalStepper />', () => {
             </VerticalStepper.Step>
 
             <VerticalStepper.Step waiting href="#">
-              <VerticalStepper.Step.Label>Label</VerticalStepper.Step.Label>
+              <VerticalStepper.Step.Title>Title</VerticalStepper.Step.Title>
 
               <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
             </VerticalStepper.Step>
 
             <VerticalStepper.Step href="#">
-              <VerticalStepper.Step.Label>Label</VerticalStepper.Step.Label>
+              <VerticalStepper.Step.Title>Title</VerticalStepper.Step.Title>
 
               <VerticalStepper.Step.Link>Link</VerticalStepper.Step.Link>
             </VerticalStepper.Step>

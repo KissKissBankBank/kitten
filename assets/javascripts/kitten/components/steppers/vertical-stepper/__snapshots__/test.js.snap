@@ -172,14 +172,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   color: #19b4fa;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-transition: color 0.4s;
-  transition: color 0.4s;
-}
-
-.c8:hover,
-.c8:focus,
-.c8:active {
-  color: #0496cc;
 }
 
 .c10 {
@@ -225,18 +217,29 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   text-decoration: none;
 }
 
-.c3 .VerticalStepper__content {
+.c3 .VerticalStepper__step {
   -webkit-transition: -webkit-transform 0.4s;
   -webkit-transition: transform 0.4s;
   transition: transform 0.4s;
 }
 
-.c3:hover .VerticalStepper__content,
-.c3:focus .VerticalStepper__content,
-.c3:active .VerticalStepper__content {
+.c3 .VerticalStepper__link {
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.c3:hover .VerticalStepper__step,
+.c3:focus .VerticalStepper__step,
+.c3:active .VerticalStepper__step {
   -webkit-transform: translateX(0.3125rem);
   -ms-transform: translateX(0.3125rem);
   transform: translateX(0.3125rem);
+}
+
+.c3:hover .VerticalStepper__link,
+.c3:focus .VerticalStepper__link,
+.c3:active .VerticalStepper__link {
+  color: #0496cc;
 }
 
 .c5 {
@@ -307,18 +310,18 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="VerticalStepper__content c5"
+          className="VerticalStepper__step c5"
         >
           <p
             className="c6"
           >
-            Label
+            Title
           </p>
           <p
             className="c7"
           >
             <span
-              className="c8"
+              className="VerticalStepper__link c8"
             >
               Link
             </span>
@@ -351,12 +354,12 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="VerticalStepper__content c5"
+          className="VerticalStepper__step c5"
         >
           <p
             className="c6"
           >
-            Label
+            Title
           </p>
           <ul
             className="c10"
@@ -381,7 +384,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c7"
           >
             <span
-              className="c8"
+              className="VerticalStepper__link c8"
             >
               Link
             </span>
@@ -412,12 +415,12 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="VerticalStepper__content c5"
+          className="VerticalStepper__step c5"
         >
           <p
             className="c6"
           >
-            Label
+            Title
           </p>
           <ul
             className="c10"
@@ -437,7 +440,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c7"
           >
             <span
-              className="c8"
+              className="VerticalStepper__link c8"
             >
               Link
             </span>
@@ -468,18 +471,18 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="VerticalStepper__content c5"
+          className="VerticalStepper__step c5"
         >
           <p
             className="c6"
           >
-            Label
+            Title
           </p>
           <p
             className="c7"
           >
             <span
-              className="c8"
+              className="VerticalStepper__link c8"
             >
               Link
             </span>
@@ -498,18 +501,18 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           className="c14"
         />
         <div
-          className="VerticalStepper__content c5"
+          className="VerticalStepper__step c5"
         >
           <p
             className="c6"
           >
-            Label
+            Title
           </p>
           <p
             className="c7"
           >
             <span
-              className="c8"
+              className="VerticalStepper__link c8"
             >
               Link
             </span>

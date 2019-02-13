@@ -4,6 +4,9 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { Step } from './components/step'
 
+export const STEP_CLASSNAME = 'VerticalStepper__step'
+export const LINK_CLASSNAME = 'VerticalStepper__link'
+
 export class VerticalStepper extends Component {
   static Step = Step
 

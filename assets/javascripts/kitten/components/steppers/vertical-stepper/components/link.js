@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import classNames from 'classnames'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import COLORS from '../../../../constants/colors-config'
+import { LINK_CLASSNAME } from '../index'
 
 export class Link extends Component {
   render() {
     return (
       <StyledParagraph>
-        <StyledLink {...this.props} />
+        <StyledLink
+          {...this.props}
+          className={classNames(LINK_CLASSNAME, this.props.className)}
+        />
       </StyledParagraph>
     )
   }
@@ -26,12 +31,4 @@ const StyledLink = styled.span`
   line-height: normal;
   color: ${COLORS.primary1};
   text-decoration: none;
-
-  transition: color 0.4s;
-
-  &:hover,
-  &:focus,
-  &:active {
-    color: ${COLORS.primary3};
-  }
 `

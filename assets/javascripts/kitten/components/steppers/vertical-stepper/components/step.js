@@ -4,12 +4,13 @@ import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import { Status } from './status'
-import { Label } from './label'
+import { Title } from './title'
 import { Link } from './link'
 import { List } from './list'
+import { STEP_CLASSNAME, LINK_CLASSNAME } from '../index'
 
 export class Step extends Component {
-  static Label = Label
+  static Title = Title
   static List = List
   static Link = Link
 
@@ -50,7 +51,7 @@ export class Step extends Component {
             {...statusProps}
           />
 
-          <StyledContent error={error} className="VerticalStepper__content">
+          <StyledContent error={error} className={STEP_CLASSNAME}>
             {children}
           </StyledContent>
         </StyledLink>
@@ -72,15 +73,23 @@ const StyledLink = styled.a`
       cursor: pointer;
       text-decoration: none;
 
-      .VerticalStepper__content {
+      .${STEP_CLASSNAME} {
         transition: transform 0.4s;
+      }
+
+      .${LINK_CLASSNAME} {
+        transition: color 0.4s;
       }
 
       :hover,
       :focus,
       :active {
-        .VerticalStepper__content {
+        .${STEP_CLASSNAME} {
           transform: translateX(${pxToRem(5)});
+        }
+
+        .${LINK_CLASSNAME} {
+          color: ${COLORS.primary3};
         }
       }
     `}

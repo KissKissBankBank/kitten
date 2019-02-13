@@ -24,7 +24,7 @@ storiesOf('Steppers/VerticalStepper', module)
             href="#"
             statusProps={{ title: 'Étape validée' }}
           >
-            <VerticalStepper.Step.Label>Infos clés</VerticalStepper.Step.Label>
+            <VerticalStepper.Step.Title>Infos clés</VerticalStepper.Step.Title>
 
             <VerticalStepper.Step.Link>Éditer</VerticalStepper.Step.Link>
           </VerticalStepper.Step>
@@ -34,7 +34,7 @@ storiesOf('Steppers/VerticalStepper', module)
             href="#"
             statusProps={{ title: 'Étape complétée' }}
           >
-            <VerticalStepper.Step.Label>Réseaux</VerticalStepper.Step.Label>
+            <VerticalStepper.Step.Title>Réseaux</VerticalStepper.Step.Title>
 
             <VerticalStepper.Step.List>
               <VerticalStepper.Step.List.Item>
@@ -54,9 +54,9 @@ storiesOf('Steppers/VerticalStepper', module)
             href="#"
             statusProps={{ title: 'Étape à améliorer' }}
           >
-            <VerticalStepper.Step.Label>
+            <VerticalStepper.Step.Title>
               Présentation du projet
-            </VerticalStepper.Step.Label>
+            </VerticalStepper.Step.Title>
 
             <VerticalStepper.Step.List error>
               <VerticalStepper.Step.List.Item>
@@ -75,17 +75,17 @@ storiesOf('Steppers/VerticalStepper', module)
             href="#"
             statusProps={{ title: 'Étape à compléter' }}
           >
-            <VerticalStepper.Step.Label>
+            <VerticalStepper.Step.Title>
               Contreparties
-            </VerticalStepper.Step.Label>
+            </VerticalStepper.Step.Title>
 
             <VerticalStepper.Step.Link>Commencer</VerticalStepper.Step.Link>
           </VerticalStepper.Step>
 
           <VerticalStepper.Step statusProps={{ title: 'Étape à commencer' }}>
-            <VerticalStepper.Step.Label>
+            <VerticalStepper.Step.Title>
               Statut et infos bancaires
-            </VerticalStepper.Step.Label>
+            </VerticalStepper.Step.Title>
 
             <VerticalStepper.Step.Link>Commencer</VerticalStepper.Step.Link>
           </VerticalStepper.Step>
