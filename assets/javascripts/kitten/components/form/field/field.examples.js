@@ -32,6 +32,7 @@ export const FieldInputExample = ({
   placeholder,
   error,
   errorMessage,
+  limit,
 }) => (
   <FieldBase
     id={id}
@@ -41,7 +42,13 @@ export const FieldInputExample = ({
     error={error}
     errorMessage={errorMessage}
   >
-    <Field.Input id={id} name="field" placeholder={placeholder} error={error} />
+    <Field.Input
+      id={id}
+      limit={limit}
+      name="field"
+      placeholder={placeholder}
+      error={error}
+    />
   </FieldBase>
 )
 
