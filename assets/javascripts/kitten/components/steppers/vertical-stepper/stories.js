@@ -1,0 +1,89 @@
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { withKnobs } from '@storybook/addon-knobs'
+import { VerticalStepper } from './index'
+import { Marger } from '../../layout/marger'
+import { Container } from '../../grid/container'
+
+const StoryContainer = ({ children }) => (
+  <Container>
+    <Marger top="5" bottom="5">
+      {children}
+    </Marger>
+  </Container>
+)
+
+storiesOf('Steppers/VerticalStepper', module)
+  .addDecorator(withKnobs)
+  .add('default', () => {
+    return (
+      <StoryContainer>
+        <VerticalStepper>
+          <VerticalStepper.Step
+            success
+            href="#"
+            statusProps={{ title: 'Étape validée' }}
+          >
+            <VerticalStepper.Title>Infos clés</VerticalStepper.Title>
+
+            <VerticalStepper.Link>Éditer</VerticalStepper.Link>
+          </VerticalStepper.Step>
+
+          <VerticalStepper.Step
+            valid
+            href="#"
+            statusProps={{ title: 'Étape complétée' }}
+          >
+            <VerticalStepper.Title>Réseaux</VerticalStepper.Title>
+
+            <VerticalStepper.List>
+              <VerticalStepper.List.Item>Facebook</VerticalStepper.List.Item>
+              <VerticalStepper.List.Item>Twitter</VerticalStepper.List.Item>
+              <VerticalStepper.List.Item>…</VerticalStepper.List.Item>
+            </VerticalStepper.List>
+
+            <VerticalStepper.Link>Éditer</VerticalStepper.Link>
+          </VerticalStepper.Step>
+
+          <VerticalStepper.Step
+            error
+            href="#"
+            statusProps={{ title: 'Étape à améliorer' }}
+          >
+            <VerticalStepper.Title>
+              Présentation du projet
+            </VerticalStepper.Title>
+
+            <VerticalStepper.List error>
+              <VerticalStepper.List.Item>
+                Veuillez renseigner votre slogan
+              </VerticalStepper.List.Item>
+              <VerticalStepper.List.Item>
+                Veuillez renseigner votre description détaillée du projet
+              </VerticalStepper.List.Item>
+            </VerticalStepper.List>
+
+            <VerticalStepper.Link>Compléter</VerticalStepper.Link>
+          </VerticalStepper.Step>
+
+          <VerticalStepper.Step
+            waiting
+            href="#"
+            statusProps={{ title: 'Étape à compléter' }}
+          >
+            <VerticalStepper.Title>Contreparties</VerticalStepper.Title>
+
+            <VerticalStepper.Link>Commencer</VerticalStepper.Link>
+          </VerticalStepper.Step>
+
+          <VerticalStepper.Step statusProps={{ title: 'Étape à commencer' }}>
+            <VerticalStepper.Title>
+              Statut et infos bancaires
+            </VerticalStepper.Title>
+
+            <VerticalStepper.Link>Commencer</VerticalStepper.Link>
+          </VerticalStepper.Step>
+        </VerticalStepper>
+      </StoryContainer>
+    )
+  })
