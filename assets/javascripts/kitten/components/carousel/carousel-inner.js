@@ -33,11 +33,10 @@ const scrollStop = callback => {
   }
 }
 
-const getClosest = (counts, goal) => {
-  return counts.reduce((prev, curr) =>
+const getClosest = (counts, goal) =>
+  counts.reduce((prev, curr) =>
     Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev,
   )
-}
 
 const getDataForPage = (data, indexPage, numColumns) => {
   const startIndex = indexPage * numColumns
@@ -48,19 +47,11 @@ const getDataForPage = (data, indexPage, numColumns) => {
 const getRangePageScrollLeft = (
   targetClientWidth,
   numPages,
-  siblingPageVisible,
   itemMarginBetween,
-) => {
-  const partSiblingItemExceedWidth = itemMarginBetween
-  const marginForSibling = siblingPageVisible
-    ? (itemMarginBetween + partSiblingItemExceedWidth) * 2
-    : 0
-  const innerWidth = targetClientWidth - marginForSibling
-
-  return createRangeFromZeroTo(numPages).map(
-    numPage => numPage * (innerWidth + itemMarginBetween),
+) =>
+  createRangeFromZeroTo(numPages).map(
+    numPage => numPage * (targetClientWidth + itemMarginBetween),
   )
-}
 
 export class CarouselInner extends Component {
   state = {
@@ -92,7 +83,6 @@ export class CarouselInner extends Component {
 
     const {
       numPages,
-      siblingPageVisible,
       itemMarginBetween,
       indexPageVisible,
       goToPage,
@@ -102,7 +92,6 @@ export class CarouselInner extends Component {
     const rangePageScrollLeft = getRangePageScrollLeft(
       clientWidth,
       numPages,
-      siblingPageVisible,
       itemMarginBetween,
     )
 
@@ -118,7 +107,7 @@ export class CarouselInner extends Component {
   })
 
   scrollToPage = indexPageToScroll => {
-    const { numPages, siblingPageVisible, itemMarginBetween } = this.props
+    const { numPages, itemMarginBetween } = this.props
 
     const target = this.carouselInner
     const { scrollLeft, clientWidth } = target
@@ -126,7 +115,6 @@ export class CarouselInner extends Component {
     const rangePageScrollLeft = getRangePageScrollLeft(
       clientWidth,
       numPages,
-      siblingPageVisible,
       itemMarginBetween,
     )
 
@@ -157,7 +145,6 @@ export class CarouselInner extends Component {
       numColumns,
       numPages,
       itemMarginBetween,
-      siblingPageVisible,
     } = this.props
 
     const rangePage = createRangeFromZeroTo(numPages)

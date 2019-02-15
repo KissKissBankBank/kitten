@@ -172,7 +172,6 @@ class CarouselBase extends Component {
         numColumns={numColumns}
         numPages={numPages}
         itemMarginBetween={itemMarginBetween}
-        siblingPageVisible={viewportIsMOrLess}
         onResizeInner={this.onResizeInner}
         goToPage={this.goToPage}
       />
