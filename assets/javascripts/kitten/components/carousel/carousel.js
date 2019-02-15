@@ -13,7 +13,6 @@ import ColorsConfig from '../../constants/colors-config'
 import { Grid, GridCol } from '../../components/grid/grid'
 import { ButtonIcon } from '../../components/buttons/button-icon'
 import { ArrowIcon } from '../../components/icons/arrow-icon'
-
 import { CarouselInner } from '../../components/carousel/carousel-inner'
 
 export const getNumColumnsForWidth = (
@@ -59,7 +58,35 @@ const getMarginBetweenAccordingToViewport = (
   return baseItemMarginBetween
 }
 
+const propTypesPositions = PropTypes.oneOf(['top', 'right', 'bottom', 'left'])
+
 class CarouselBase extends Component {
+  static defaultProps = {
+    hidePaginationOnMobile: false,
+    paginationPosition: {
+      default: 'right',
+      fromM: 'bottom',
+    },
+  }
+
+  static propTypes = {
+    itemMinWidth: PropTypes.number.isRequired,
+    baseItemMarginBetween: PropTypes.number.isRequired,
+    renderItem: PropTypes.func.isRequired,
+    viewportIsMOrLess: PropTypes.bool.isRequired,
+    viewportIsXSOrLess: PropTypes.bool.isRequired,
+    hidePaginationOnMobile: PropTypes.bool,
+    paginationPosition: PropTypes.shape({
+      default: propTypesPositions,
+      fromXxs: propTypesPositions,
+      fromXs: propTypesPositions,
+      fromS: propTypesPositions,
+      fromM: propTypesPositions,
+      fromL: propTypesPositions,
+      fromXl: propTypesPositions,
+    }),
+  }
+
   state = {
     indexPageVisible: 0,
     numColumns: 3,
@@ -412,34 +439,6 @@ const PageDot = styled.div`
       background-color: ${ColorsConfig.primary2};
     `}}
 `
-
-CarouselBase.defaultProps = {
-  hidePaginationOnMobile: false,
-  paginationPosition: {
-    default: 'right',
-    fromM: 'bottom',
-  },
-}
-
-const propTypesPositions = PropTypes.oneOf(['top', 'right', 'bottom', 'left'])
-
-CarouselBase.propTypes = {
-  itemMinWidth: PropTypes.number.isRequired,
-  baseItemMarginBetween: PropTypes.number.isRequired,
-  renderItem: PropTypes.func.isRequired,
-  viewportIsMOrLess: PropTypes.bool.isRequired,
-  viewportIsXSOrLess: PropTypes.bool.isRequired,
-  hidePaginationOnMobile: PropTypes.bool,
-  paginationPosition: PropTypes.shape({
-    default: propTypesPositions,
-    fromXxs: propTypesPositions,
-    fromXs: propTypesPositions,
-    fromS: propTypesPositions,
-    fromM: propTypesPositions,
-    fromL: propTypesPositions,
-    fromXl: propTypesPositions,
-  }),
-}
 
 export const Carousel = withMediaQueries({
   viewportIsXSOrLess: true,
