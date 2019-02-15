@@ -81,8 +81,6 @@ storiesOf('Steppers/VerticalStepper', module)
             <VerticalStepper.Title>
               Statut et infos bancaires
             </VerticalStepper.Title>
-
-            <VerticalStepper.Link>Commencer</VerticalStepper.Link>
           </VerticalStepper.Step>
 
           <VerticalStepper.Step
