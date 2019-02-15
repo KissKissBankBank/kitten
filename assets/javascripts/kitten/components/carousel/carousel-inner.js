@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Radium, { Style } from 'radium'
 import ResizeObserver from 'resize-observer-polyfill'
 
@@ -66,7 +66,7 @@ const getRangePageScrollLeft = (
   )
 }
 
-class CarouselInnerBase extends React.Component {
+class CarouselInnerBase extends Component {
   state = {
     isTouched: false,
   }
@@ -175,13 +175,7 @@ class CarouselInnerBase extends React.Component {
           this.carouselInner = div
         }}
         className="k-CarouselInner"
-        style={[
-          styles.carouselInner,
-          {
-            paddingLeft: siblingPageVisible ? itemMarginBetween * 2 : 0,
-            paddingRight: siblingPageVisible ? itemMarginBetween * 2 : 0,
-          },
-        ]}
+        style={[styles.carouselInner]}
         onScroll={this.handleInnerScroll}
         onTouchStart={this.handleTouchStart}
         onTouchEnd={this.handleTouchEnd}
@@ -208,10 +202,6 @@ class CarouselInnerBase extends React.Component {
             />
           </div>
         ))}
-        {siblingPageVisible && (
-          <div style={{ minWidth: itemMarginBetween * 2 }} />
-        )}
-
         {/* hide scrollbar on Chrome and Safari */}
         <Style
           scopeSelector=".k-CarouselInner::-webkit-scrollbar"

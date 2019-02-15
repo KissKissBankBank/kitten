@@ -43,6 +43,11 @@ const data = [
   },
 ]
 
+const paginationPosition = {
+  default: 'bottom',
+  fromL: 'left',
+}
+
 storiesOf('Carousel/ProjectCarousel', module)
   .addDecorator(withKnobs)
   .add('default', () => (
@@ -54,6 +59,7 @@ storiesOf('Carousel/ProjectCarousel', module)
           CONTAINER_PADDING,
         )}
         data={data}
+        paginationPosition={object('paginationPosition', paginationPosition)}
         renderItem={({ item }) => (
           <CrowdfundingCard
             href="#"
