@@ -45,28 +45,7 @@ describe('<Carousel />', () => {
       )
       .toJSON()
 
-    it('is a <Grid />', () => {
-      expect(carousel).toMatchSnapshot()
-    })
-  })
-
-  describe('with withoutLeftOffset on desktop', () => {
-    window.matchMedia = createMockMediaMatcher(false) // desktop
-    const carousel = renderer
-      .create(
-        <Carousel
-          data={[{ title: 'A' }]}
-          itemMinWidth={ProjectCardMinWidth}
-          baseItemMarginBetween={ProjectCardMarginBetween}
-          withoutLeftOffset={true}
-          renderItem={({ item }) => {
-            return <ProjectCard title={item.title} />
-          }}
-        />,
-      )
-      .toJSON()
-
-    it('is a <Grid />', () => {
+    it('matches with snapshot', () => {
       expect(carousel).toMatchSnapshot()
     })
   })
@@ -86,7 +65,7 @@ describe('<Carousel />', () => {
       )
       .toJSON()
 
-    it('is not a <Grid />', () => {
+    it('matches with snapshot', () => {
       expect(carousel).toMatchSnapshot()
     })
   })
