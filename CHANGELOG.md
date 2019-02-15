@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `MarkdownPage` component.
+
 ## [1.15.0] - 2019-02-13
 
 Features:
