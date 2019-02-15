@@ -224,8 +224,7 @@ class CarouselBase extends Component {
 
   render() {
     if (!this.props.data || !this.props.data.length) return null
-    // withoutLeftOffset unused for now
-    const { withoutLeftOffset, paginationPosition } = this.props
+    const { paginationPosition } = this.props
 
     return (
       <FlexContainer paginationPosition={paginationPosition}>
@@ -415,7 +414,6 @@ const PageDot = styled.div`
 `
 
 CarouselBase.defaultProps = {
-  withoutLeftOffset: false,
   hidePaginationOnMobile: false,
   paginationPosition: {
     default: 'right',
