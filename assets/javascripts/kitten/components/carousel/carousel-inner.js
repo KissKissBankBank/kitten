@@ -73,7 +73,6 @@ export class CarouselInner extends Component {
   }
 
   componentDidMount() {
-    console.warn('this.carouselInner', this.carouselInner)
     this.observer = new ResizeObserver(this.onResizeObserve)
     this.observer.observe(this.carouselInner)
   }
