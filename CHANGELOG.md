@@ -4,7 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix: Move Sass styles to styled components styles for `Container` component.
+## [1.15.0] - 2019-02-13
+
+Features:
+- Add `VerticalStepper`.
+- Add `WarningIcon` and `WaitingIcon`.
+- Update `CheckedIcon` to accept `color` and `title` props.
+
+## [1.14.0] - 2019-02-12
+
+Features:
+- Add `limit` prop to `Field.Input` to handle length limitation.
+- Recover templates for TPE/PME pages from LENDO.
+
+Fix:
+- Move Sass styles to styled components styles for `Container` component.
 You don't need to include the `k-Container` mixin in your Sass stylesheet
 anymore.
 

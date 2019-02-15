@@ -63,7 +63,7 @@ function pages(min, max, currentPage, availableSlots) {
 
 
   if (currentPage - min + 1 < availableSlots - 2) {
-    return (0, _toConsumableArray2.default)(range(min, min - 1 + availableSlots - 2)).concat([null, max]);
+    return [].concat((0, _toConsumableArray2.default)(range(min, min - 1 + availableSlots - 2)), [null, max]);
   } // 1, …, 40, 41, 42
 
 

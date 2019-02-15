@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
 import {
   FieldInputExample,
   FieldRadioButtonSetExample,
@@ -35,6 +35,7 @@ storiesOf('Form/Field', module)
           placeholder={text('Placeholder', 'Placeholder…')}
           error={boolean('Error?', false)}
           errorMessage={text('Error', 'Error message…')}
+          limit={number('Limit', undefined)}
         />
       </StoryGrid>
     )
