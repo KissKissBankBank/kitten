@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { Style } from 'radium'
+import styled, { css } from 'styled-components'
 import ResizeObserver from 'resize-observer-polyfill'
 
 if (typeof window !== 'undefined') {
@@ -14,7 +14,6 @@ const supportScrollSnap = cssSupports('scroll-snap-type: mandatory')
 
 // inspired by https://github.com/cferdinandi/scrollStop
 const scrollStop = callback => {
-  // Make sure a valid callback was provided
   if (!callback) return
 
   let isScrolling
@@ -26,10 +25,7 @@ const scrollStop = callback => {
     target = event.target
 
     isScrolling = setTimeout(
-      () => {
-        // Run the callback
-        callback(target)
-      },
+      () => callback(target),
       // wait more for scrollStop if browser support snap
       // because of the momentum on iOS
       supportScrollSnap ? 132 : 66,
@@ -66,7 +62,7 @@ const getRangePageScrollLeft = (
   )
 }
 
-class CarouselInnerBase extends Component {
+export class CarouselInner extends Component {
   state = {
     isTouched: false,
   }
@@ -77,6 +73,7 @@ class CarouselInnerBase extends Component {
   }
 
   componentDidMount() {
+    console.warn('this.carouselInner', this.carouselInner)
     this.observer = new ResizeObserver(this.onResizeObserve)
     this.observer.observe(this.carouselInner)
   }
@@ -113,14 +110,11 @@ class CarouselInnerBase extends Component {
     const closest = getClosest(rangePageScrollLeft, scrollLeft)
     const indexClosest = rangePageScrollLeft.indexOf(closest)
 
-    if (indexClosest !== indexPageVisible) {
-      goToPage(indexClosest)
-    } else {
-      // if the user doesn't scroll enough to change page
-      // we need to scroll back to the fake snap page
-      if (closest !== scrollLeft) {
-        target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
-      }
+    if (indexClosest !== indexPageVisible) return goToPage(indexClosest)
+    // if the user doesn't scroll enough to change page
+    // we need to scroll back to the fake snap page
+    if (closest !== scrollLeft) {
+      return target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
     }
   })
 
@@ -148,11 +142,11 @@ class CarouselInnerBase extends Component {
   handleTouchEnd = () => this.setState({ isTouched: false })
 
   handlePageClick = index => e => {
-    if (index !== this.props.indexPageVisible) {
-      e.preventDefault()
-      this.scrollToPage(index)
-      document.activeElement.blur()
-    }
+    if (index === this.props.indexPageVisible) return
+
+    e.preventDefault()
+    this.scrollToPage(index)
+    document.activeElement.blur()
   }
 
   render() {
@@ -170,27 +164,20 @@ class CarouselInnerBase extends Component {
     const rangePage = createRangeFromZeroTo(numPages)
 
     return (
-      <div
-        ref={div => {
-          this.carouselInner = div
+      <StyledCarouselInner
+        ref={node => {
+          this.carouselInner = node
         }}
-        className="k-CarouselInner"
-        style={[styles.carouselInner]}
         onScroll={this.handleInnerScroll}
         onTouchStart={this.handleTouchStart}
         onTouchEnd={this.handleTouchEnd}
       >
         {rangePage.map(index => (
-          <div
+          <StyledCarouselPageContainer
             key={index}
-            style={[
-              styles.carouselPageContainer,
-              index !== indexPageVisible &&
-                styles.carouselPageContainerClickable,
-              {
-                marginLeft: index ? itemMarginBetween : 0,
-              },
-            ]}
+            index={index}
+            indexPageVisible={indexPageVisible}
+            itemMarginBetween={itemMarginBetween}
             onClick={this.handlePageClick(index)}
           >
             <CarouselPage
@@ -200,42 +187,62 @@ class CarouselInnerBase extends Component {
               itemMarginBetween={itemMarginBetween}
               renderItem={renderItem}
             />
-          </div>
+          </StyledCarouselPageContainer>
         ))}
-        {/* hide scrollbar on Chrome and Safari */}
-        <Style
-          scopeSelector=".k-CarouselInner::-webkit-scrollbar"
-          rules={{ display: 'none' }}
-        />
-      </div>
+      </StyledCarouselInner>
     )
   }
 }
 
-const styles = {
-  carouselInner: {
-    display: 'flex',
-    flexDirect: 'row',
-    overflowX: 'scroll',
-    scrollBehavior: 'smooth',
-    // hide scrollbar on IE and Edge
-    MsOverflowStyle: 'none',
-    // mandatory to combine scroll with this property on iOS
-    WebkitOverflowScrolling: 'touch',
-    // snap only for browser that support snap without prefixes
-    scrollSnapType: supportScrollSnap ? 'mandatory' : 'none',
-    // Fix bug IE11 ResizeObserver, to trigger a first resize
-    minHeight: 1,
-  },
-  carouselPageContainer: {
-    width: '100%',
-    flexShrink: 0,
-    // snap only for browser that support snap without prefixes
-    scrollSnapAlign: supportScrollSnap ? 'center' : 'none',
-  },
-  carouselPageContainerClickable: {
-    cursor: 'pointer',
-  },
-}
+const StyledCarouselInner = styled.div`
+  display: flex;
+  flex-direct: row;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  /* hide scrollbar on IE and Edge */
+  -ms-over-flow-style: none;
+  /* mandatory to combine scroll with this property on iOS */
+  -webkit-overflow-scrolling: touch;
+  ${// snap only for browser that support snap without prefixes
+  supportScrollSnap
+    ? css`
+        scroll-snap-type: mandatory;
+      `
+    : css`
+        scroll-snap-type: none;
+      `}
+  /* Fix bug IE11 ResizeObserver, to trigger a first resize */
+  min-height: 1;
 
-export const CarouselInner = Radium(CarouselInnerBase)
+  /* hide scrollbar on Chrome and Safari */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`
+
+const StyledCarouselPageContainer = styled.div`
+  width: 100%;
+  flex-shrink: 0;
+  ${
+    // snap only for browser that support snap without prefixes
+    supportScrollSnap
+      ? css`
+          scroll-snap-align: center;
+        `
+      : css`
+          scroll-snap-align: none;
+        `
+  }
+
+  ${({ index, indexPageVisible }) =>
+    index !== indexPageVisible &&
+    css`
+      cursor: pointer;
+    `}
+
+  ${({ index, itemMarginBetween }) =>
+    index &&
+    css`
+      margin-left: ${itemMarginBetween}px;
+    `}
+`
