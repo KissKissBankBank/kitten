@@ -2,206 +2,23 @@
 
 exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
 <div
-  className="k-Grid"
+  className="carousel__FlexContainer-sc-1bidnho-0 kTFyVx"
 >
   <div
-    className="k-Grid__col--10 k-Grid__col--offset-1"
-  >
-    <div
-      className="k-CarouselInner"
-      data-radium={true}
-      onScroll={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
-      style={
-        Object {
-          "MsOverflowStyle": "none",
-          "WebkitOverflowScrolling": "touch",
-          "display": "flex",
-          "flexDirect": "row",
-          "minHeight": 1,
-          "overflowX": "scroll",
-          "paddingLeft": 0,
-          "paddingRight": 0,
-          "scrollBehavior": "smooth",
-          "scrollSnapType": "none",
-        }
-      }
-    >
-      <div
-        data-radium={true}
-        onClick={[Function]}
-        style={
-          Object {
-            "flexShrink": 0,
-            "marginLeft": 0,
-            "scrollSnapAlign": "none",
-            "width": "100%",
-          }
-        }
-      >
-        <div
-          data-radium={true}
-          style={
-            Object {
-              "display": "flex",
-              "flexDirection": "row",
-            }
-          }
-        >
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "flexBasis": 280,
-                "flexGrow": 1,
-                "flexShrink": 1,
-                "marginLeft": 0,
-                "minWidth": 280,
-              }
-            }
-          >
-            <div
-              className="k-ProjectCard k-Card k-Card--light"
-              href={null}
-              title={null}
-            >
-              <div
-                className="k-ProjectCard__grid"
-              >
-                <div
-                  className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 evHeqt"
-                >
-                  <span
-                    className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                    tabIndex={null}
-                  >
-                    <img
-                      alt=""
-                      className="k-ButtonImage__img"
-                      src={null}
-                    />
-                  </span>
-                  <p
-                    className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
-                  >
-                    <span
-                      className="k-u-weight-regular"
-                    >
-                      Name
-                    </span>
-                  </p>
-                </div>
-                <div
-                  className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 fXmpKT"
-                >
-                  <p
-                    className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
-                  >
-                    A
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "flexBasis": 280,
-                "flexGrow": 1,
-                "flexShrink": 1,
-                "marginLeft": 40,
-                "minWidth": 280,
-              }
-            }
-          />
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "flexBasis": 280,
-                "flexGrow": 1,
-                "flexShrink": 1,
-                "marginLeft": 40,
-                "minWidth": 280,
-              }
-            }
-          />
-        </div>
-      </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": ".k-CarouselInner::-webkit-scrollbar{display: none;}",
-          }
-        }
-      />
-    </div>
-  </div>
-  <div
-    className="k-Grid__col--1"
-  />
-</div>
-`;
-
-exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
-<div
-  data-radium={true}
->
-  <div
-    className="k-CarouselInner"
-    data-radium={true}
+    className="carousel-inner__StyledCarouselInner-nc2pvj-0 gtjfbb"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
-    style={
-      Object {
-        "MsOverflowStyle": "none",
-        "WebkitOverflowScrolling": "touch",
-        "display": "flex",
-        "flexDirect": "row",
-        "minHeight": 1,
-        "overflowX": "scroll",
-        "paddingLeft": 20,
-        "paddingRight": 20,
-        "scrollBehavior": "smooth",
-        "scrollSnapType": "none",
-      }
-    }
   >
     <div
-      data-radium={true}
+      className="carousel-inner__StyledCarouselPageContainer-nc2pvj-1 gnvZH"
       onClick={[Function]}
-      style={
-        Object {
-          "flexShrink": 0,
-          "marginLeft": 0,
-          "scrollSnapAlign": "none",
-          "width": "100%",
-        }
-      }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "display": "flex",
-            "flexDirection": "row",
-          }
-        }
+        className="carousel-page__StyledPage-sc-5pf2p2-0 jEWHLT"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "flexBasis": 280,
-              "flexGrow": 1,
-              "flexShrink": 1,
-              "marginLeft": 0,
-              "minWidth": 280,
-            }
-          }
+          className="carousel-page__StyledItem-sc-5pf2p2-1 lmKqmT"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -247,191 +64,163 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
           </div>
         </div>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "flexBasis": 280,
-              "flexGrow": 1,
-              "flexShrink": 1,
-              "marginLeft": 10,
-              "minWidth": 280,
-            }
-          }
+          className="carousel-page__StyledItem-sc-5pf2p2-1 dccRYa"
         />
         <div
-          data-radium={true}
-          style={
-            Object {
-              "flexBasis": 280,
-              "flexGrow": 1,
-              "flexShrink": 1,
-              "marginLeft": 10,
-              "minWidth": 280,
-            }
-          }
+          className="carousel-page__StyledItem-sc-5pf2p2-1 dccRYa"
         />
       </div>
     </div>
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
+<div
+  className="carousel__FlexContainer-sc-1bidnho-0 kTFyVx"
+>
+  <div
+    className="carousel-inner__StyledCarouselInner-nc2pvj-0 gtjfbb"
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+  >
     <div
-      data-radium={true}
-      style={
-        Object {
-          "minWidth": 20,
-        }
-      }
-    />
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": ".k-CarouselInner::-webkit-scrollbar{display: none;}",
-        }
-      }
-    />
+      className="carousel-inner__StyledCarouselPageContainer-nc2pvj-1 gnvZH"
+      onClick={[Function]}
+    >
+      <div
+        className="carousel-page__StyledPage-sc-5pf2p2-0 jEWHLT"
+      >
+        <div
+          className="carousel-page__StyledItem-sc-5pf2p2-1 lmKqmT"
+        >
+          <div
+            className="k-ProjectCard k-Card k-Card--light"
+            href={null}
+            title={null}
+          >
+            <div
+              className="k-ProjectCard__grid"
+            >
+              <div
+                className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 evHeqt"
+              >
+                <span
+                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+                  tabIndex={null}
+                >
+                  <img
+                    alt=""
+                    className="k-ButtonImage__img"
+                    src={null}
+                  />
+                </span>
+                <p
+                  className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
+                >
+                  <span
+                    className="k-u-weight-regular"
+                  >
+                    Name
+                  </span>
+                </p>
+              </div>
+              <div
+                className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 fXmpKT"
+              >
+                <p
+                  className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                >
+                  A
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="carousel-page__StyledItem-sc-5pf2p2-1 gbdUmm"
+        />
+        <div
+          className="carousel-page__StyledItem-sc-5pf2p2-1 gbdUmm"
+        />
+      </div>
+    </div>
   </div>
 </div>
 `;
 
 exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
 <div
-  className="k-Grid"
+  className="carousel__FlexContainer-sc-1bidnho-0 kTFyVx"
 >
   <div
-    className="k-Grid__col--11 k-Grid__col--offset-0"
+    className="carousel-inner__StyledCarouselInner-nc2pvj-0 gtjfbb"
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
   >
     <div
-      className="k-CarouselInner"
-      data-radium={true}
-      onScroll={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
-      style={
-        Object {
-          "MsOverflowStyle": "none",
-          "WebkitOverflowScrolling": "touch",
-          "display": "flex",
-          "flexDirect": "row",
-          "minHeight": 1,
-          "overflowX": "scroll",
-          "paddingLeft": 0,
-          "paddingRight": 0,
-          "scrollBehavior": "smooth",
-          "scrollSnapType": "none",
-        }
-      }
+      className="carousel-inner__StyledCarouselPageContainer-nc2pvj-1 gnvZH"
+      onClick={[Function]}
     >
       <div
-        data-radium={true}
-        onClick={[Function]}
-        style={
-          Object {
-            "flexShrink": 0,
-            "marginLeft": 0,
-            "scrollSnapAlign": "none",
-            "width": "100%",
-          }
-        }
+        className="carousel-page__StyledPage-sc-5pf2p2-0 jEWHLT"
       >
         <div
-          data-radium={true}
-          style={
-            Object {
-              "display": "flex",
-              "flexDirection": "row",
-            }
-          }
+          className="carousel-page__StyledItem-sc-5pf2p2-1 lmKqmT"
         >
           <div
-            data-radium={true}
-            style={
-              Object {
-                "flexBasis": 280,
-                "flexGrow": 1,
-                "flexShrink": 1,
-                "marginLeft": 0,
-                "minWidth": 280,
-              }
-            }
+            className="k-ProjectCard k-Card k-Card--light"
+            href={null}
+            title={null}
           >
             <div
-              className="k-ProjectCard k-Card k-Card--light"
-              href={null}
-              title={null}
+              className="k-ProjectCard__grid"
             >
               <div
-                className="k-ProjectCard__grid"
+                className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 evHeqt"
               >
-                <div
-                  className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 evHeqt"
+                <span
+                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+                  tabIndex={null}
+                >
+                  <img
+                    alt=""
+                    className="k-ButtonImage__img"
+                    src={null}
+                  />
+                </span>
+                <p
+                  className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
                 >
                   <span
-                    className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                    tabIndex={null}
+                    className="k-u-weight-regular"
                   >
-                    <img
-                      alt=""
-                      className="k-ButtonImage__img"
-                      src={null}
-                    />
+                    Name
                   </span>
-                  <p
-                    className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
-                  >
-                    <span
-                      className="k-u-weight-regular"
-                    >
-                      Name
-                    </span>
-                  </p>
-                </div>
-                <div
-                  className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 fXmpKT"
+                </p>
+              </div>
+              <div
+                className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 fXmpKT"
+              >
+                <p
+                  className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
                 >
-                  <p
-                    className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
-                  >
-                    A
-                  </p>
-                </div>
+                  A
+                </p>
               </div>
             </div>
           </div>
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "flexBasis": 280,
-                "flexGrow": 1,
-                "flexShrink": 1,
-                "marginLeft": 40,
-                "minWidth": 280,
-              }
-            }
-          />
-          <div
-            data-radium={true}
-            style={
-              Object {
-                "flexBasis": 280,
-                "flexGrow": 1,
-                "flexShrink": 1,
-                "marginLeft": 40,
-                "minWidth": 280,
-              }
-            }
-          />
         </div>
+        <div
+          className="carousel-page__StyledItem-sc-5pf2p2-1 dccRYa"
+        />
+        <div
+          className="carousel-page__StyledItem-sc-5pf2p2-1 dccRYa"
+        />
       </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": ".k-CarouselInner::-webkit-scrollbar{display: none;}",
-          }
-        }
-      />
     </div>
   </div>
-  <div
-    className="k-Grid__col--1"
-  />
 </div>
 `;
