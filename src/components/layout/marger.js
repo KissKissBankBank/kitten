@@ -140,7 +140,7 @@ function (_Component) {
         return size !== 'xxs';
       });
       var viewportRangesStyles = viewportRanges.reduce(function (acc, viewportRange) {
-        return (0, _toConsumableArray2.default)(acc).concat([_this2.viewportRangeStyleCondition('top', viewportRange), _this2.viewportRangeStyleCondition('bottom', viewportRange)]);
+        return [].concat((0, _toConsumableArray2.default)(acc), [_this2.viewportRangeStyleCondition('top', viewportRange), _this2.viewportRangeStyleCondition('bottom', viewportRange)]);
       }, []);
       var styles = [this.stylesForName('top'), this.stylesForName('bottom'), viewportRangesStyles, style];
       return _react.default.createElement(StyledMarger, (0, _extends2.default)({
