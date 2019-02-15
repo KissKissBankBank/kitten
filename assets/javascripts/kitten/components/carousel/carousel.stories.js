@@ -6,11 +6,28 @@ import { Carousel } from '../../components/carousel/carousel'
 import { CONTAINER_PADDING } from '../../constants/grid-config'
 import { Marger } from '../../components/layout/marger'
 import { Container } from '../../components/grid/container'
+import { Grid, GridCol } from '../../components/grid/grid'
 
 const StoryContainer = ({ children }) => (
   <Container>
     <Marger top="5" bottom="5">
       {children}
+    </Marger>
+  </Container>
+)
+
+const SmallStoryContainer = ({ children }) => (
+  <Container>
+    <Marger top="5" bottom="5">
+      <Grid>
+        <GridCol col="10" offset="1">
+          <Grid>
+            <GridCol col="8" offset="2">
+              {children}
+            </GridCol>
+          </Grid>
+        </GridCol>
+      </Grid>
     </Marger>
   </Container>
 )
@@ -87,4 +104,42 @@ storiesOf('Carousel/ProjectCarousel', module)
         )}
       />
     </StoryContainer>
+  ))
+  .add('in nested grid', () => (
+    <SmallStoryContainer>
+      <Carousel
+        itemMinWidth={number('itemMinWidth', 280)}
+        baseItemMarginBetween={number(
+          'baseItemMarginBetween',
+          CONTAINER_PADDING,
+        )}
+        data={data}
+        paginationPosition={object('paginationPosition', paginationPosition)}
+        renderItem={({ item }) => (
+          <CrowdfundingCard
+            href="#"
+            imageProps={{
+              src: item.imageSrc,
+              alt: 'Image alt',
+              backgroundColor: '#d8d8d8',
+              color: '#333',
+            }}
+            avatarProps={{
+              src: item.thumbSrc,
+              alt: 'Avatar alt',
+            }}
+            ownerTitle="Title"
+            ownerDescription="Custom description"
+            titleProps={{
+              tag: 'h4',
+            }}
+            cardTitle={item.title}
+            cardSubTitle="Custom subtitle"
+            titlesMinHeight
+            progress="84"
+            state="Custom state"
+          />
+        )}
+      />
+    </SmallStoryContainer>
   ))
