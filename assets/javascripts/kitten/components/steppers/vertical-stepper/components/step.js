@@ -13,6 +13,7 @@ export class Step extends Component {
     success: PropTypes.bool,
     error: PropTypes.bool,
     waiting: PropTypes.bool,
+    disabled: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -20,6 +21,7 @@ export class Step extends Component {
     success: false,
     error: false,
     waiting: false,
+    disabled: false,
   }
 
   render() {
@@ -28,6 +30,7 @@ export class Step extends Component {
       valid,
       error,
       waiting,
+      disabled,
       statusProps,
       children,
       ...other
@@ -41,10 +44,15 @@ export class Step extends Component {
             valid={valid}
             error={error}
             waiting={waiting}
+            disabled={disabled}
             {...statusProps}
           />
 
-          <StyledContent error={error} className={STEP_CLASSNAME}>
+          <StyledContent
+            error={error}
+            disabled={disabled}
+            className={STEP_CLASSNAME}
+          >
             {children}
           </StyledContent>
         </StyledLink>
@@ -94,4 +102,10 @@ const StyledContent = styled.div`
   justify-content: center;
 
   color: ${COLORS.font1};
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      color: ${COLORS.font2};
+    `}
 `
