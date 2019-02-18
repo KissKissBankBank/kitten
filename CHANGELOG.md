@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `MarkdownPage` component.
+- Feature: Add `disabled` status to `VerticalStepper`.
+- Feature: Update `LockIcon` to accept `color` and `title` props.
 
 ## [1.15.0] - 2019-02-13
 

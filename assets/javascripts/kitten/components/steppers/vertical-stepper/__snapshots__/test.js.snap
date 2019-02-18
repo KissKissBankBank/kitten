@@ -209,7 +209,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   font-weight: 500;
   font-size: 1rem;
   line-height: normal;
-  color: #222;
 }
 
 .c7 {
@@ -294,6 +293,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       >
         <span
           className="c4"
+          disabled={false}
         >
           <svg
             fill="#fff"
@@ -311,6 +311,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </span>
         <div
           className="VerticalStepper__step c5"
+          disabled={false}
         >
           <p
             className="c6"
@@ -338,6 +339,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       >
         <span
           className="c9"
+          disabled={false}
         >
           <svg
             fill="#fff"
@@ -355,6 +357,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </span>
         <div
           className="VerticalStepper__step c5"
+          disabled={false}
         >
           <p
             className="c6"
@@ -401,6 +404,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       >
         <span
           className="c12"
+          disabled={false}
         >
           <svg
             height="10"
@@ -416,6 +420,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </span>
         <div
           className="VerticalStepper__step c5"
+          disabled={false}
         >
           <p
             className="c6"
@@ -457,6 +462,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       >
         <span
           className="c13"
+          disabled={false}
         >
           <svg
             height="4"
@@ -467,12 +473,13 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             <path
               d="M5 0h3v3H5V0zM0 0h3v3H0V0zm10 0h3v3h-3V0z"
               fill="#19b4fa"
-              fill-rule="nonzero"
+              fillRule="nonzero"
             />
           </svg>
         </span>
         <div
           className="VerticalStepper__step c5"
+          disabled={false}
         >
           <p
             className="c6"
@@ -500,9 +507,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       >
         <span
           className="c14"
+          disabled={false}
         />
         <div
           className="VerticalStepper__step c5"
+          disabled={false}
         >
           <p
             className="c6"

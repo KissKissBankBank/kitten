@@ -14,7 +14,7 @@ export const WaitingIcon = ({ color, title, ...props }) => {
       <path
         d="M5 0h3v3H5V0zM0 0h3v3H0V0zm10 0h3v3h-3V0z"
         fill={color}
-        fill-rule="nonzero"
+        fillRule="nonzero"
       />
     </svg>
   )

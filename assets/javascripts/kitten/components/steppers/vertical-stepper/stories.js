@@ -4,6 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 import { VerticalStepper } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
+import { Text } from '../../typography/text'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -80,8 +81,18 @@ storiesOf('Steppers/VerticalStepper', module)
             <VerticalStepper.Title>
               Statut et infos bancaires
             </VerticalStepper.Title>
+          </VerticalStepper.Step>
 
-            <VerticalStepper.Link>Commencer</VerticalStepper.Link>
+          <VerticalStepper.Step
+            disabled
+            statusProps={{ title: 'Étape bloquée' }}
+          >
+            <VerticalStepper.Title>Réception des fonds</VerticalStepper.Title>
+
+            <Text weight="light" size="micro">
+              Pièces justificatives à compléter lorsque vous aurez atteint 50%
+              de votre objectif
+            </Text>
           </VerticalStepper.Step>
         </VerticalStepper>
       </StoryContainer>
