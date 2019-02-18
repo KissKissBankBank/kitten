@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { MarkdownPage } from '../../components/typography/markdown-page'
+import { MarkdownPage } from '../../components/typography/markdown/markdown-page'
 import { Container } from '../../components/grid/container'
 
 class MardownExample extends Component {
