@@ -7,6 +7,7 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import { CheckedIcon } from '../../../../components/icons/checked-icon'
 import { WarningIcon } from '../../../../components/icons/warning-icon'
 import { WaitingIcon } from '../../../../components/icons/waiting-icon'
+import { LockIcon } from '../../../../components/icons/lock-icon'
 
 export class Status extends Component {
   static propTypes = {
@@ -14,6 +15,7 @@ export class Status extends Component {
     success: PropTypes.bool,
     error: PropTypes.bool,
     waiting: PropTypes.bool,
+    disabled: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -21,6 +23,7 @@ export class Status extends Component {
     success: false,
     error: false,
     waiting: false,
+    disabled: false,
   }
 
   render() {
@@ -32,13 +35,15 @@ export class Status extends Component {
   }
 
   iconByStatus = () => {
-    const { valid, success, error, waiting } = this.props
+    const { valid, success, error, waiting, disabled } = this.props
 
     if (valid) return <CheckedIcon width="10" title={null} />
     if (success) return <CheckedIcon width="10" title={null} />
     if (error) return <WarningIcon color={COLORS.error} title={null} />
     if (waiting)
       return <WaitingIcon height="4" color={COLORS.primary1} title={null} />
+    if (disabled)
+      return <LockIcon width="10" color={COLORS.background1} title={null} />
 
     return null
   }
@@ -92,5 +97,13 @@ export const StyledStatus = styled.span`
     css`
       color: ${COLORS.primary1};
       border-color: ${COLORS.primary4};
+    `}
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      color: ${COLORS.background1};
+      border-color: ${COLORS.font2};
+      background-color: ${COLORS.font2};
     `}
 `
