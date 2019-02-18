@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MarkdownPage /> matches with snapshot 1`] = `
+<div
+  className="marger__StyledMarger-q3lecu-0 loOPNX"
+>
+  <p
+    className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
+  >
+    foobar
+  </p>
+</div>
+`;
