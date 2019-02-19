@@ -25,11 +25,7 @@ export class HorizontalNav extends Component {
       </Fragment>
     )
 
-    const renderMarkdown = markdown ? (
-      <Markdown softBreak="br" source={text} />
-    ) : (
-      text
-    )
+    const renderMarkdown = markdown ? <Markdown source={text} /> : text
 
     const renderText = badge ? renderBadge : renderMarkdown
 

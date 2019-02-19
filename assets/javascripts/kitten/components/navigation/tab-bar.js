@@ -19,7 +19,7 @@ export class TabBar extends Component {
     return (
       <li key={key}>
         <a className={itemClassName} {...linkProps}>
-          <Markdown softBreak="br" source={text} />
+          <Markdown source={text} />
         </a>
       </li>
     )
