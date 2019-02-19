@@ -34,6 +34,7 @@
     "radium": "^0.25.0",
     "react-ckeditor-wrapper": "^1.0.22",
     "react-cropper": "^0.12.0",
+    "react-day-picker": "^7.2.4",
     "react-dropzone": "^3.13.1",
     "react-markdown": "^2.4.4",
     "react-masonry-component": "6.0.2",
