@@ -134,6 +134,7 @@ const StyledDatePicker = styled.div`
                 background-color: ${COLORS.primary1};
                 color: #fff;
                 border: double ${COLORS.primary1} ${borderSize};
+                ${TYPOGRAPHY.fontStyles.light}
               }
             }
           }
@@ -154,22 +155,14 @@ export class DatePicker extends Component {
     locale: this.props.locale || 'en',
   }
 
-  handleOnFocusChange = ({ focused }) => {
-    console.log('focused', focused)
-    this.setState({ focused })
-  }
-
-  handleDayClick = selectedDay => {
-    console.log('handleDayClick::selectedDay', selectedDay)
-    this.setState({ selectedDay })
-  }
-
   render() {
     const { locale } = this.props
 
     return (
       <StyledDatePicker>
         <DayPickerInput
+          formatDate={date => date.toLocaleDateString('fr-FR')}
+          placeholder="jj/mm/aaaa"
           dayPickerProps={{
             locale: locale,
             months: MONTHS[locale],
@@ -185,7 +178,7 @@ export class DatePicker extends Component {
             navbarElement: <Navbar />,
           }}
           component={props => {
-            return <TextInputWithUnit unit="📅" {...props} />
+            return <TextInputWithUnit type="text" unit="📅" {...props} />
           }}
         />
       </StyledDatePicker>
