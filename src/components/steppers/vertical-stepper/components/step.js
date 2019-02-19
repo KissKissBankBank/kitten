@@ -55,18 +55,21 @@ function (_Component) {
           valid = _this$props.valid,
           error = _this$props.error,
           waiting = _this$props.waiting,
+          disabled = _this$props.disabled,
           statusProps = _this$props.statusProps,
           children = _this$props.children,
-          other = (0, _objectWithoutProperties2.default)(_this$props, ["success", "valid", "error", "waiting", "statusProps", "children"]);
+          other = (0, _objectWithoutProperties2.default)(_this$props, ["success", "valid", "error", "waiting", "disabled", "statusProps", "children"]);
       return _react.default.createElement(StyledItem, null, _react.default.createElement(StyledLink, (0, _extends2.default)({
         as: other.href ? 'a' : 'span'
       }, other), _react.default.createElement(_status.Status, (0, _extends2.default)({
         success: success,
         valid: valid,
         error: error,
-        waiting: waiting
+        waiting: waiting,
+        disabled: disabled
       }, statusProps)), _react.default.createElement(StyledContent, {
         error: error,
+        disabled: disabled,
         className: _index.STEP_CLASSNAME
       }, children)));
     }
@@ -80,13 +83,15 @@ Step.propTypes = {
   valid: _propTypes.default.bool,
   success: _propTypes.default.bool,
   error: _propTypes.default.bool,
-  waiting: _propTypes.default.bool
+  waiting: _propTypes.default.bool,
+  disabled: _propTypes.default.bool
 };
 Step.defaultProps = {
   valid: false,
   success: false,
   error: false,
-  waiting: false
+  waiting: false,
+  disabled: false
 };
 
 var StyledItem = _styledComponents.default.li.withConfig({
@@ -105,4 +110,7 @@ var StyledLink = _styledComponents.default.a.withConfig({
 var StyledContent = _styledComponents.default.div.withConfig({
   displayName: "step__StyledContent",
   componentId: "sc-1you76f-2"
-})(["display:flex;flex-direction:column;justify-content:center;color:", ";"], _colorsConfig.default.font1);
+})(["display:flex;flex-direction:column;justify-content:center;color:", ";", ""], _colorsConfig.default.font1, function (_ref2) {
+  var disabled = _ref2.disabled;
+  return disabled && (0, _styledComponents.css)(["color:", ";"], _colorsConfig.default.font2);
+});

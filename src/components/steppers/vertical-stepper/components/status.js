@@ -39,6 +39,8 @@ var _warningIcon = require("../../../../components/icons/warning-icon");
 
 var _waitingIcon = require("../../../../components/icons/waiting-icon");
 
+var _lockIcon = require("../../../../components/icons/lock-icon");
+
 var Status =
 /*#__PURE__*/
 function (_Component) {
@@ -62,7 +64,8 @@ function (_Component) {
           valid = _this$props.valid,
           success = _this$props.success,
           error = _this$props.error,
-          waiting = _this$props.waiting;
+          waiting = _this$props.waiting,
+          disabled = _this$props.disabled;
       if (valid) return _react.default.createElement(_checkedIcon.CheckedIcon, {
         width: "10",
         title: null
@@ -78,6 +81,11 @@ function (_Component) {
       if (waiting) return _react.default.createElement(_waitingIcon.WaitingIcon, {
         height: "4",
         color: _colorsConfig.default.primary1,
+        title: null
+      });
+      if (disabled) return _react.default.createElement(_lockIcon.LockIcon, {
+        width: "10",
+        color: _colorsConfig.default.background1,
         title: null
       });
       return null;
@@ -103,20 +111,22 @@ Status.propTypes = {
   valid: _propTypes.default.bool,
   success: _propTypes.default.bool,
   error: _propTypes.default.bool,
-  waiting: _propTypes.default.bool
+  waiting: _propTypes.default.bool,
+  disabled: _propTypes.default.bool
 };
 Status.defaultProps = {
   valid: false,
   success: false,
   error: false,
-  waiting: false
+  waiting: false,
+  disabled: false
 };
 var STATUS_SIZE = 30;
 
 var StyledStatus = _styledComponents.default.span.withConfig({
   displayName: "status__StyledStatus",
   componentId: "sc-17oq9bs-0"
-})(["flex-shrink:0;display:flex;align-items:center;justify-content:center;width:", ";height:", ";border-radius:", ";box-sizing:border-box;margin-right:", ";background-color:", ";border:2px solid ", ";", ";font-size:", ";", " ", " ", " ", ""], (0, _typography.pxToRem)(STATUS_SIZE), (0, _typography.pxToRem)(STATUS_SIZE), (0, _typography.pxToRem)(STATUS_SIZE), (0, _typography.pxToRem)(15), _colorsConfig.default.background1, _colorsConfig.default.line1, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(14), function (_ref) {
+})(["flex-shrink:0;display:flex;align-items:center;justify-content:center;width:", ";height:", ";border-radius:", ";box-sizing:border-box;margin-right:", ";background-color:", ";border:2px solid ", ";", ";font-size:", ";", " ", " ", " ", " ", ""], (0, _typography.pxToRem)(STATUS_SIZE), (0, _typography.pxToRem)(STATUS_SIZE), (0, _typography.pxToRem)(STATUS_SIZE), (0, _typography.pxToRem)(15), _colorsConfig.default.background1, _colorsConfig.default.line1, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(14), function (_ref) {
   var success = _ref.success;
   return success && (0, _styledComponents.css)(["background-color:", ";border-color:", ";"], _colorsConfig.default.valid, _colorsConfig.default.valid);
 }, function (_ref2) {
@@ -128,6 +138,9 @@ var StyledStatus = _styledComponents.default.span.withConfig({
 }, function (_ref4) {
   var waiting = _ref4.waiting;
   return waiting && (0, _styledComponents.css)(["color:", ";border-color:", ";"], _colorsConfig.default.primary1, _colorsConfig.default.primary4);
+}, function (_ref5) {
+  var disabled = _ref5.disabled;
+  return disabled && (0, _styledComponents.css)(["color:", ";border-color:", ";background-color:", ";"], _colorsConfig.default.background1, _colorsConfig.default.font2, _colorsConfig.default.font2);
 });
 
 exports.StyledStatus = StyledStatus;
