@@ -103,7 +103,7 @@ export const StyledStatus = styled.span`
     disabled &&
     css`
       color: ${COLORS.background1};
-      border-color: ${COLORS.font2};
-      background-color: ${COLORS.font2};
+      border-color: ${COLORS.line2};
+      background-color: ${COLORS.line2};
     `}
 `

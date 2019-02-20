@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `disabled` status colors to `VerticalStepper`.
+
 ## [1.16.0] - 2019-02-19
 
 Features:
