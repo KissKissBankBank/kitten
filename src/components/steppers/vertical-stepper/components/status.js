@@ -140,7 +140,7 @@ var StyledStatus = _styledComponents.default.span.withConfig({
   return waiting && (0, _styledComponents.css)(["color:", ";border-color:", ";"], _colorsConfig.default.primary1, _colorsConfig.default.primary4);
 }, function (_ref5) {
   var disabled = _ref5.disabled;
-  return disabled && (0, _styledComponents.css)(["color:", ";border-color:", ";background-color:", ";"], _colorsConfig.default.background1, _colorsConfig.default.font2, _colorsConfig.default.font2);
+  return disabled && (0, _styledComponents.css)(["color:", ";border-color:", ";background-color:", ";"], _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2);
 });
 
 exports.StyledStatus = StyledStatus;
