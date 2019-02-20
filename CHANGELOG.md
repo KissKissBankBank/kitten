@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `disabled` status to `VerticalStepper`.
-- Feature: Update `LockIcon` to accept `color` and `title` props.
+- Fix: Update `disabled` status colors to `VerticalStepper`.
+
+## [1.16.0] - 2019-02-19
+
+Features:
+- Add `disabled` status to `VerticalStepper`.
+- Update `LockIcon` to accept `color` and `title` props.
 
 ## [1.15.0] - 2019-02-13
 
