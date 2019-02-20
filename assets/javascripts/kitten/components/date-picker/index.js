@@ -56,13 +56,13 @@ const StyledDatePicker = styled.div`
     color: #fff;
     text-align: center;
     height: 70px;
-    ${fontSize}
     margin: -2px -32px 0;
     overflow: hidden;
 
     & div {
       padding: 23px 0;
       margin: 0 63px;
+      ${fontSize}
     }
   }
 
@@ -115,7 +115,7 @@ const StyledDatePicker = styled.div`
   }
 
   .DayPicker-wrapper {
-    padding: 0 30px 34px 30px;
+    padding: 0 30px 30px 30px;
     outline: none;
   }
 
