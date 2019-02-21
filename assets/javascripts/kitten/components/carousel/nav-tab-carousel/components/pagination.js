@@ -4,10 +4,11 @@ import styled, { css } from 'styled-components'
 import COLORS from './../../../../constants/colors-config'
 import { Marger } from './../../../layout/marger'
 import { pxToRem } from './../../../../helpers/utils/typography'
+import { createRangeFromZeroTo } from './../../../../helpers/utils/range'
 
 const BulletPointStyles = styled.div`
-  width: ${pxToRem(6)};
-  height: ${pxToRem(6)};
+  min-width: ${pxToRem(6)};
+  min-height: ${pxToRem(6)};
   margin-left: ${pxToRem(4)};
   margin-right: ${pxToRem(4)};
   background-color: ${COLORS.background1};
@@ -27,24 +28,38 @@ const PaginationStyles = styled.div`
   min-width: ${pxToRem(60)};
 `
 
-export const Pagination = ({ activeIndex, totalIndex, activeColor }) => {
+export const Pagination = ({ activeIndex, links, totalIndex, activeColor }) => {
+  const hasNoLinks = !links && totalIndex
+
   return (
     <PaginationStyles>
-      {Array.apply(null, { length: totalIndex }).map((_, index) => (
-        <BulletPointStyles
-          key={index}
-          isSelected={activeIndex === index + 1}
-          activeColor={activeColor}
-        />
-      ))}
+      {links &&
+        links.map((link, index) => (
+          <BulletPointStyles
+            as="a"
+            href={link}
+            key={index}
+            isSelected={activeIndex === index + 1}
+            activeColor={activeColor}
+          />
+        ))}
+      {hasNoLinks &&
+        createRangeFromZeroTo(totalIndex).map((_, index) => (
+          <BulletPointStyles
+            key={index}
+            isSelected={activeIndex === index + 1}
+            activeColor={activeColor}
+          />
+        ))}
     </PaginationStyles>
   )
 }
 
 Pagination.propTypes = {
   activeIndex: PropTypes.number.isRequired,
-  totalIndex: PropTypes.number.isRequired,
+  totalIndex: PropTypes.number,
   activeColor: PropTypes.string,
+  links: PropTypes.arrayOf(PropTypes.string),
 }
 
 Pagination.defaultProps = {
