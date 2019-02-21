@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 import ResizeObserver from 'resize-observer-polyfill'
+import { pxToRem } from '../../helpers/utils/typography'
 
 if (typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill()
@@ -209,15 +210,7 @@ const StyledCarouselInner = styled.div`
 const StyledCarouselPageContainer = styled.div`
   width: 100%;
   flex-shrink: 0;
-  ${
-    // snap only for browser that support snap without prefixes
-    supportScrollSnap
-      ? css`
-          scroll-snap-align: center;
-        `
-      : css`
-          scroll-snap-align: none;
-        `
+  scroll-snap-align: ${supportScrollSnap ? 'center' : 'none'};
   }
 
   ${({ index, indexPageVisible }) =>
@@ -229,6 +222,6 @@ const StyledCarouselPageContainer = styled.div`
   ${({ index, itemMarginBetween }) =>
     index &&
     css`
-      margin-left: ${itemMarginBetween}px;
+      margin-left: ${pxToRem(itemMarginBetween)};
     `}
 `

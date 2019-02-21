@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
+import { pxToRem } from '../../helpers/utils/typography'
 import { ScreenConfig } from '../../constants/screen-config'
 import { createRangeFromZeroTo } from '../../helpers/utils/range'
 import { withMediaQueries } from '../../hoc/media-queries'
@@ -323,20 +324,20 @@ const paginationPositionStyle = positionType => ({ position }) => {
       return css`
         flex-direction: row;
         margin: 0; /* Reset css from all previous media-queries */
-        margin-bottom: ${GUTTER}px;
+        margin-bottom: ${pxToRem(GUTTER)});
 
         & > button:first-child {
-          margin-bottom: 2px;
+          margin-bottom: pxToRem(2);
         }
       `
     case 'bottom':
       return css`
         flex-direction: row;
         margin: 0; /* Reset css from all previous media-queries */
-        margin-top: ${GUTTER}px;
+        margin-top: ${pxToRem(GUTTER)};
 
         & > button:first-child {
-          margin-right: 2px;
+          margin-right: ${pxToRem(2)};
         }
       `
     case 'left':
@@ -344,10 +345,10 @@ const paginationPositionStyle = positionType => ({ position }) => {
         flex-direction: column;
         align-self: flex-start;
         margin: 0; /* Reset css from all previous media-queries */
-        margin-right: ${GUTTER}px;
+        margin-right: ${pxToRem(GUTTER)};
 
         & > button:first-child {
-          margin-bottom: 2px;
+          margin-bottom: ${pxToRem(2)};
         }
       `
     case 'right':
@@ -355,10 +356,10 @@ const paginationPositionStyle = positionType => ({ position }) => {
         flex-direction: column-reverse;
         align-self: flex-start;
         margin: 0; /* Reset css from all previous media-queries */
-        margin-left: ${GUTTER}px;
+        margin-left: ${pxToRem(GUTTER)};
 
         & > button:last-child {
-          margin-bottom: 2px;
+          margin-bottom: ${pxToRem(2)};
         }
       `
   }
@@ -399,37 +400,37 @@ const PageControl = styled.div`
   flex-direction: row;
   justify-content: center;
   position: relative;
-  padding-top: ${CONTAINER_PADDING_MOBILE / 2}px;
-  padding-bottom: ${CONTAINER_PADDING_MOBILE / 2}px;
+  padding-top: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
+  padding-bottom: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
 `
 
 const PageControlButton = styled.div`
   position: absolute;
-  top: ${CONTAINER_PADDING_MOBILE / 4}px;
-  bottom: ${CONTAINER_PADDING_MOBILE / 4}px;
+  top: ${pxToRem(CONTAINER_PADDING_MOBILE / 4)};
+  bottom: ${pxToRem(CONTAINER_PADDING_MOBILE / 4)};
   -webkit-tap-highlight-color: transparent;
 
   ${({ prev }) =>
     prev &&
     css`
-    left: ${CONTAINER_PADDING_MOBILE}px,
-    right: 50%,
-  `}
+      left: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+      right: 50%;
+    `}
 
   ${({ next }) =>
     next &&
     css`
-    right: ${CONTAINER_PADDING_MOBILE}px,
-    left: 50%,
-  `}
+      right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+      left: 50%;
+    `}
 `
 
 const PageDot = styled.div`
-  width: 8px;
-  height: 8px;
-  margin-left: 4px;
-  margin-right: 4px;
-  border-radius: 4px;
+  width: ${pxToRem(8)};
+  height: ${pxToRem(8)};
+  margin-left: ${pxToRem(4)};
+  margin-right: ${pxToRem(4)};
+  border-radius: ${pxToRem(4)};
   background-color: ${ColorsConfig.font1};
 
   ${({ visibleIndex, index }) =>
