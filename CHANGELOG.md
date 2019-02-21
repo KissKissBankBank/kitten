@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Change positioning (from absolute to flex) on button in `TextInputWithButton` component.
+
 ## [1.17.0] - 2019-02-21
 
 Feature:
