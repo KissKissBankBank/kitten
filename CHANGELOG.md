@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `links` props to `NavTabCarousel` component.
-- Fix: Update `disabled` status colors to `VerticalStepper`.
+## [1.17.0] - 2019-02-21
+
+Feature:
+- Add `links` props to `NavTabCarousel` component.
+
+Fix:
+- Update `disabled` status colors to `VerticalStepper`.
 
 ## [1.16.0] - 2019-02-19
 
