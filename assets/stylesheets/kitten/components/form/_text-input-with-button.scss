@@ -58,10 +58,8 @@
 
     @include k-buttonColors('beryllium');
 
-    position: absolute;
-    right: 0;
+    flex: 1 0 auto;
 
-    height: 100%;
     padding: 0 $padding-button;
 
     border-radius: $border-text-input;
