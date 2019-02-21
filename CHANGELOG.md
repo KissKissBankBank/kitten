@@ -4,13 +4,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Remove `withoutLeftOffset` `Carousel` props. The layout
-  should be managed by his parent tag.
-- Fix: `Carousel` layout by removing its inner grid.
-- Feature: The pagination buttons from `Carousel` can now be place everywhere
+- Feature: Add new carousel which better work inside grid.
+  The pagination buttons from `Carousel` can now be place everywhere
   around the component by using this props `paginationPosition` with object keys
   from `fromXxs` to `fromXl` and `default` and object values in
   `'top'`, `'right'`, `'bottom'`, `'left'`.
+
+## [1.17.0] - 2019-02-21
+
+Feature:
+- Add `links` props to `NavTabCarousel` component.
+
+Fix:
+- Update `disabled` status colors to `VerticalStepper`.
+
+## [1.16.0] - 2019-02-19
+
+Features:
+- Add `disabled` status to `VerticalStepper`.
+- Update `LockIcon` to accept `color` and `title` props.
 
 ## [1.15.0] - 2019-02-13
 

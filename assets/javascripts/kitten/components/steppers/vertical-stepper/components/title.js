@@ -9,5 +9,4 @@ export const Title = styled.p`
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${pxToRem(16)};
   line-height: normal;
-  color: ${COLORS.font1};
 `
