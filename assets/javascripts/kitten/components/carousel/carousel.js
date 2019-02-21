@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
 import { createRangeFromZeroTo } from '../../helpers/utils/range'
-import { mediaQueries } from '../../hoc/media-queries'
+import { withMediaQueries } from '../../hoc/media-queries'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE,
@@ -55,12 +55,12 @@ export const checkPage = (numPages, newPage) => {
 
 const getMarginBetweenAccordingToViewport = (
   baseItemMarginBetween,
-  viewportIsMobile,
-  viewportIsTabletOrLess,
+  viewportIsXSOrLess,
+  viewportIsMOrLess,
 ) => {
-  if (viewportIsMobile) {
+  if (viewportIsXSOrLess) {
     return CONTAINER_PADDING_MOBILE / 2
-  } else if (viewportIsTabletOrLess) {
+  } else if (viewportIsMOrLess) {
     return CONTAINER_PADDING / 2
   } else {
     return baseItemMarginBetween
@@ -83,13 +83,13 @@ class CarouselBase extends React.Component {
       data,
       itemMinWidth,
       baseItemMarginBetween,
-      viewportIsMobile,
-      viewportIsTabletOrLess,
+      viewportIsXSOrLess,
+      viewportIsMOrLess,
     } = this.props
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
-      viewportIsMobile,
-      viewportIsTabletOrLess,
+      viewportIsXSOrLess,
+      viewportIsMOrLess,
     )
 
     const numColumns = getNumColumnsForWidth(
@@ -136,14 +136,14 @@ class CarouselBase extends React.Component {
       itemMinWidth,
       renderItem,
       baseItemMarginBetween,
-      viewportIsMobile,
-      viewportIsTabletOrLess,
+      viewportIsXSOrLess,
+      viewportIsMOrLess,
     } = this.props
     const { indexPageVisible, numColumns, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
-      viewportIsMobile,
-      viewportIsTabletOrLess,
+      viewportIsXSOrLess,
+      viewportIsMOrLess,
     )
 
     return (
@@ -155,7 +155,7 @@ class CarouselBase extends React.Component {
         numColumns={numColumns}
         numPages={numPages}
         itemMarginBetween={itemMarginBetween}
-        siblingPageVisible={viewportIsTabletOrLess}
+        siblingPageVisible={viewportIsMOrLess}
         onResizeInner={this.onResizeInner}
         goToPage={this.goToPage}
       />
@@ -165,22 +165,22 @@ class CarouselBase extends React.Component {
   renderPagination = () => {
     const {
       baseItemMarginBetween,
-      viewportIsTabletOrLess,
-      viewportIsMobile,
+      viewportIsMOrLess,
+      viewportIsXSOrLess,
       hidePaginationOnMobile,
     } = this.props
     const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
-      viewportIsMobile,
-      viewportIsTabletOrLess,
+      viewportIsXSOrLess,
+      viewportIsMOrLess,
     )
 
-    if (viewportIsMobile && hidePaginationOnMobile) return
+    if (viewportIsXSOrLess && hidePaginationOnMobile) return
 
     if (numPages <= 1) return
 
-    if (viewportIsMobile) {
+    if (viewportIsXSOrLess) {
       const rangePage = createRangeFromZeroTo(numPages)
 
       return (
@@ -212,10 +212,10 @@ class CarouselBase extends React.Component {
       <div
         style={[
           styles.carouselPagination,
-          viewportIsTabletOrLess && styles.carouselPaginationTablet,
+          viewportIsMOrLess && styles.carouselPaginationTablet,
           {
-            marginTop: viewportIsTabletOrLess ? itemMarginBetween : 0,
-            marginLeft: viewportIsTabletOrLess ? itemMarginBetween * 2 : 0,
+            marginTop: viewportIsMOrLess ? itemMarginBetween : 0,
+            marginLeft: viewportIsMOrLess ? itemMarginBetween * 2 : 0,
           },
         ]}
       >
@@ -253,9 +253,9 @@ class CarouselBase extends React.Component {
   render() {
     if (!this.props.data || !this.props.data.length) return null
 
-    const { withoutLeftOffset, viewportIsTabletOrLess } = this.props
+    const { withoutLeftOffset, viewportIsMOrLess } = this.props
 
-    if (viewportIsTabletOrLess) {
+    if (viewportIsMOrLess) {
       return (
         <div>
           {this.renderCarouselInner()}
@@ -341,12 +341,12 @@ CarouselBase.propTypes = {
   itemMinWidth: PropTypes.number.isRequired,
   baseItemMarginBetween: PropTypes.number.isRequired,
   renderItem: PropTypes.func.isRequired,
-  viewportIsTabletOrLess: PropTypes.bool.isRequired,
-  viewportIsMobile: PropTypes.bool.isRequired,
+  viewportIsMOrLess: PropTypes.bool.isRequired,
+  viewportIsXSOrLess: PropTypes.bool.isRequired,
   hidePaginationOnMobile: PropTypes.bool,
 }
 
-export const Carousel = mediaQueries(Radium(CarouselBase), {
-  viewportIsMobile: true,
-  viewportIsTabletOrLess: true,
-})
+export const Carousel = withMediaQueries({
+  viewportIsXSOrLess: true,
+  viewportIsMOrLess: true,
+})(Radium(CarouselBase))
