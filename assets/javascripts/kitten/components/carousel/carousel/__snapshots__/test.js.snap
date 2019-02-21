@@ -5,7 +5,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
   className="carousel__FlexContainer-sc-1o67jdh-0 lesGh"
 >
   <div
-    className="carousel-inner__StyledCarouselInner-wljpd2-0 eNKkhh"
+    className="carousel-inner__StyledCarouselInner-wljpd2-0 clzNSe"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
@@ -80,7 +80,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
   className="carousel__FlexContainer-sc-1o67jdh-0 lesGh"
 >
   <div
-    className="carousel-inner__StyledCarouselInner-wljpd2-0 eNKkhh"
+    className="carousel-inner__StyledCarouselInner-wljpd2-0 clzNSe"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}

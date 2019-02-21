@@ -20,6 +20,7 @@ const createMockMediaMatcher = matches => () => ({
 
 describe('<Carousel />', () => {
   let originalMatchMedia
+  const data = [{ title: 'A' }]
 
   beforeEach(() => {
     originalMatchMedia = window.matchMedia
@@ -31,17 +32,16 @@ describe('<Carousel />', () => {
 
   describe('by default on desktop', () => {
     window.matchMedia = createMockMediaMatcher(false) // desktop
-
     const carousel = renderer
       .create(
         <Carousel
-          data={[{ title: 'A' }]}
           itemMinWidth={ProjectCardMinWidth}
           baseItemMarginBetween={ProjectCardMarginBetween}
-          renderItem={({ item }) => {
-            return <ProjectCard title={item.title} />
-          }}
-        />,
+        >
+          {data.map(item => (
+            <ProjectCard title={item.title} />
+          ))}
+        </Carousel>,
       )
       .toJSON()
 
@@ -55,13 +55,13 @@ describe('<Carousel />', () => {
     const carousel = renderer
       .create(
         <Carousel
-          data={[{ title: 'A' }]}
           itemMinWidth={ProjectCardMinWidth}
           baseItemMarginBetween={ProjectCardMarginBetween}
-          renderItem={({ item }) => {
-            return <ProjectCard title={item.title} />
-          }}
-        />,
+        >
+          {data.map(item => (
+            <ProjectCard title={item.title} />
+          ))}
+        </Carousel>,
       )
       .toJSON()
 

@@ -75,9 +75,9 @@ storiesOf('Carousel/ProjectCarousel', module)
           'baseItemMarginBetween',
           CONTAINER_PADDING,
         )}
-        data={data}
         paginationPosition={object('paginationPosition', paginationPosition)}
-        renderItem={({ item }) => (
+      >
+        {data.map(item => (
           <CrowdfundingCard
             href="#"
             imageProps={{
@@ -101,8 +101,8 @@ storiesOf('Carousel/ProjectCarousel', module)
             progress="84"
             state="Custom state"
           />
-        )}
-      />
+        ))}
+      </Carousel>
     </StoryContainer>
   ))
   .add('in nested grid', () => (
@@ -113,9 +113,9 @@ storiesOf('Carousel/ProjectCarousel', module)
           'baseItemMarginBetween',
           CONTAINER_PADDING,
         )}
-        data={data}
         paginationPosition={object('paginationPosition', paginationPosition)}
-        renderItem={({ item }) => (
+      >
+        {data.map(item => (
           <CrowdfundingCard
             href="#"
             imageProps={{
@@ -139,7 +139,7 @@ storiesOf('Carousel/ProjectCarousel', module)
             progress="84"
             state="Custom state"
           />
-        )}
-      />
+        ))}
+      </Carousel>
     </SmallStoryContainer>
   ))

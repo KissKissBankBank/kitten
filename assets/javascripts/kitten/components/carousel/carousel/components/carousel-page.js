@@ -44,7 +44,7 @@ export class CarouselPage extends Component {
             itemMinWidth={itemMinWidth}
             itemMarginBetween={itemMarginBetween}
           >
-            {data[index] && renderItem({ item: data[index] })}
+            {renderItem[index]}
           </StyledItem>
         ))}
       </StyledPage>

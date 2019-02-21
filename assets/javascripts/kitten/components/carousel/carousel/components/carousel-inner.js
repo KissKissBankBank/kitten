@@ -168,11 +168,10 @@ export class CarouselInner extends Component {
             onClick={this.handlePageClick(index)}
           >
             <CarouselPage
-              data={getDataForPage(data, index, numColumns)}
               numColumns={numColumns}
               itemMinWidth={itemMinWidth}
               itemMarginBetween={itemMarginBetween}
-              renderItem={renderItem}
+              renderItem={getDataForPage(renderItem, index, numColumns)}
             />
           </StyledCarouselPageContainer>
         ))}
@@ -190,14 +189,7 @@ const StyledCarouselInner = styled.div`
   -ms-over-flow-style: none;
   /* mandatory to combine scroll with this property on iOS */
   -webkit-overflow-scrolling: touch;
-  ${// snap only for browser that support snap without prefixes
-  supportScrollSnap
-    ? css`
-        scroll-snap-type: mandatory;
-      `
-    : css`
-        scroll-snap-type: none;
-      `}
+  scroll-snap-type: ${supportScrollSnap ? 'mandatory' : 'none'};
   /* Fix bug IE11 ResizeObserver, to trigger a first resize */
   min-height: 1;
 

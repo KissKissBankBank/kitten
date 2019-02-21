@@ -73,7 +73,7 @@ class CarouselBase extends Component {
   static propTypes = {
     itemMinWidth: PropTypes.number.isRequired,
     baseItemMarginBetween: PropTypes.number.isRequired,
-    renderItem: PropTypes.func.isRequired,
+    children: PropTypes.node.isRequired,
     viewportIsMOrLess: PropTypes.bool.isRequired,
     viewportIsXSOrLess: PropTypes.bool.isRequired,
     hidePaginationOnMobile: PropTypes.bool,
@@ -91,12 +91,15 @@ class CarouselBase extends Component {
   state = {
     indexPageVisible: 0,
     numColumns: 3,
-    numPages: getNumPagesForColumnsAndDataLength(this.props.data.length, 3),
+    numPages: getNumPagesForColumnsAndDataLength(
+      React.Children.count(this.props.children),
+      3,
+    ),
   }
 
   onResizeInner = widthInner => {
     const {
-      data,
+      children,
       itemMinWidth,
       baseItemMarginBetween,
       viewportIsXSOrLess,
@@ -115,7 +118,10 @@ class CarouselBase extends Component {
       itemMarginBetween,
     )
 
-    const numPages = getNumPagesForColumnsAndDataLength(data.length, numColumns)
+    const numPages = getNumPagesForColumnsAndDataLength(
+      React.Children.count(children),
+      numColumns,
+    )
 
     if (
       this.state.numColumns !== numColumns ||
@@ -150,9 +156,8 @@ class CarouselBase extends Component {
 
   renderCarouselInner = () => {
     const {
-      data,
       itemMinWidth,
-      renderItem,
+      children,
       baseItemMarginBetween,
       viewportIsXSOrLess,
       viewportIsMOrLess,
@@ -166,9 +171,8 @@ class CarouselBase extends Component {
 
     return (
       <CarouselInner
-        data={data}
         itemMinWidth={itemMinWidth}
-        renderItem={renderItem}
+        renderItem={children}
         indexPageVisible={indexPageVisible}
         numColumns={numColumns}
         numPages={numPages}
@@ -250,8 +254,9 @@ class CarouselBase extends Component {
   }
 
   render() {
-    if (!this.props.data || !this.props.data.length) return null
-    const { paginationPosition } = this.props
+    const { paginationPosition, children } = this.props
+
+    if (React.Children.count(children) === 0) return null
 
     return (
       <FlexContainer paginationPosition={paginationPosition}>
