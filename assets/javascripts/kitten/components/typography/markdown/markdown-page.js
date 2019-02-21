@@ -182,8 +182,8 @@ const LinkListstyle = styled(LinkList)`
 `
 
 const BulletListStyle = styled(BulletList)`
-  li: {
-    lineheight: '1.8rem';
+  li {
+    lineheight: 1.8rem;
   }
 `
 
