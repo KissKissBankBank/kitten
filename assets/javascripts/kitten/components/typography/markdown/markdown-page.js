@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 import Markdown from 'react-markdown'
 import PropTypes from 'prop-types'
@@ -13,13 +13,17 @@ import { scrollTo } from '../../../helpers/utils/scroll-to'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
-export const MarkdownPage = props => (
-  <Markdown
-    source={props.content}
-    renderers={markdownRenderers}
-    escapeHtml={false}
-  />
-)
+export class MarkdownPage extends Component {
+  render() {
+    return (
+      <Markdown
+        source={this.props.content}
+        renderers={markdownRenderers}
+        escapeHtml={false}
+      />
+    )
+  }
+}
 
 MarkdownPage.propTypes = {
   content: PropTypes.string.isRequired,
@@ -28,7 +32,7 @@ MarkdownPage.propTypes = {
 const MarkdownParagraph = props => {
   return (
     <Marger bottom="2.6">
-      <Paragraph modifier="primary" margin={false}>
+      <Paragraph modifier={props.modifierParagraph} margin={false}>
         {props.children}
       </Paragraph>
     </Marger>
@@ -37,6 +41,11 @@ const MarkdownParagraph = props => {
 
 MarkdownParagraph.propTypes = {
   children: PropTypes.node.isRequired,
+  modifierParagraph: PropTypes.string,
+}
+
+MarkdownParagraph.defaultProps = {
+  modifierParagraph: 'primary',
 }
 
 const MarkdownBlockquote = props => {
@@ -98,7 +107,7 @@ MarkdownLink.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const MarkdownHeading = ({ ...props }) => {
+const MarkdownHeading = props => {
   let modifier
   let tag
 
@@ -131,7 +140,7 @@ const MarkdownHeading = ({ ...props }) => {
     )
   }
 
-  const id = slugify(props.children[0].props.value, {
+  const id = slugify(props.children[0], {
     lower: true,
     remove: /[']/g,
   })
