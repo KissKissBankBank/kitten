@@ -11,7 +11,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-nc2pvj-1 gnvZH"
+      className="carousel-inner__StyledCarouselPageContainer-nc2pvj-1 ekQvPS"
       onClick={[Function]}
     >
       <div
@@ -86,7 +86,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-nc2pvj-1 gnvZH"
+      className="carousel-inner__StyledCarouselPageContainer-nc2pvj-1 ekQvPS"
       onClick={[Function]}
     >
       <div
