@@ -226,7 +226,11 @@ class CarouselBase extends React.Component {
           disabled={indexPageVisible < 1 || numPages < 1}
           style={styles.carouselButtonPagination}
         >
-          <ArrowIcon className="k-ButtonIcon__svg" direction="left" />
+          <ArrowIcon
+            version="solid"
+            className="k-ButtonIcon__svg"
+            direction="left"
+          />
         </ButtonIcon>
 
         <ButtonIcon
@@ -236,7 +240,11 @@ class CarouselBase extends React.Component {
           disabled={indexPageVisible >= numPages - 1}
           style={styles.carouselButtonPagination}
         >
-          <ArrowIcon className="k-ButtonIcon__svg" direction="right" />
+          <ArrowIcon
+            version="solid"
+            className="k-ButtonIcon__svg"
+            direction="right"
+          />
         </ButtonIcon>
       </div>
     )
