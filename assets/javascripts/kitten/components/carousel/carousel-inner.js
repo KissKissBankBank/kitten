@@ -58,6 +58,8 @@ export class CarouselInner extends Component {
     isTouched: false,
   }
 
+  carouselInner = React.createRef()
+
   onResizeObserve = ([entry]) => {
     const widthInner = entry.contentRect.width
     this.props.onResizeInner(widthInner)
@@ -65,7 +67,7 @@ export class CarouselInner extends Component {
 
   componentDidMount() {
     this.observer = new ResizeObserver(this.onResizeObserve)
-    this.observer.observe(this.carouselInner)
+    this.observer.observe(this.carouselInner.current)
   }
 
   componentWillUnmount() {
@@ -109,7 +111,7 @@ export class CarouselInner extends Component {
   scrollToPage = indexPageToScroll => {
     const { numPages, itemMarginBetween } = this.props
 
-    const target = this.carouselInner
+    const target = this.carouselInner.current
     const { scrollLeft, clientWidth } = target
 
     const rangePageScrollLeft = getRangePageScrollLeft(
@@ -151,9 +153,7 @@ export class CarouselInner extends Component {
 
     return (
       <StyledCarouselInner
-        ref={node => {
-          this.carouselInner = node
-        }}
+        ref={this.carouselInner}
         onScroll={this.handleInnerScroll}
         onTouchStart={this.handleTouchStart}
         onTouchEnd={this.handleTouchEnd}
