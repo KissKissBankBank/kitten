@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
+<div
+  className="carousel__FlexContainer-sc-1o67jdh-0 lesGh"
+>
+  <div
+    className="carousel-inner__StyledCarouselInner-wljpd2-0 eNKkhh"
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 leGWvb"
+      onClick={[Function]}
+    >
+      <div
+        className="carousel-page__StyledPage-sc-12ynwqa-0 fKfWlh"
+      >
+        <div
+          className="carousel-page__StyledItem-sc-12ynwqa-1 cTnAZH"
+        >
+          <div
+            className="k-ProjectCard k-Card k-Card--light"
+            href={null}
+            title={null}
+          >
+            <div
+              className="k-ProjectCard__grid"
+            >
+              <div
+                className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 evHeqt"
+              >
+                <span
+                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+                  tabIndex={null}
+                >
+                  <img
+                    alt=""
+                    className="k-ButtonImage__img"
+                    src={null}
+                  />
+                </span>
+                <p
+                  className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
+                >
+                  <span
+                    className="k-u-weight-regular"
+                  >
+                    Name
+                  </span>
+                </p>
+              </div>
+              <div
+                className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 fXmpKT"
+              >
+                <p
+                  className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                >
+                  A
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb"
+        />
+        <div
+          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
+<div
+  className="carousel__FlexContainer-sc-1o67jdh-0 lesGh"
+>
+  <div
+    className="carousel-inner__StyledCarouselInner-wljpd2-0 eNKkhh"
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 leGWvb"
+      onClick={[Function]}
+    >
+      <div
+        className="carousel-page__StyledPage-sc-12ynwqa-0 fKfWlh"
+      >
+        <div
+          className="carousel-page__StyledItem-sc-12ynwqa-1 cTnAZH"
+        >
+          <div
+            className="k-ProjectCard k-Card k-Card--light"
+            href={null}
+            title={null}
+          >
+            <div
+              className="k-ProjectCard__grid"
+            >
+              <div
+                className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 evHeqt"
+              >
+                <span
+                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+                  tabIndex={null}
+                >
+                  <img
+                    alt=""
+                    className="k-ButtonImage__img"
+                    src={null}
+                  />
+                </span>
+                <p
+                  className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
+                >
+                  <span
+                    className="k-u-weight-regular"
+                  >
+                    Name
+                  </span>
+                </p>
+              </div>
+              <div
+                className="k-ProjectCard__grid--flex marger__StyledMarger-q3lecu-0 fXmpKT"
+              >
+                <p
+                  className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                >
+                  A
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="carousel-page__StyledItem-sc-12ynwqa-1 dGWhDF"
+        />
+        <div
+          className="carousel-page__StyledItem-sc-12ynwqa-1 dGWhDF"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

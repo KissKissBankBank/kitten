@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
+import React from 'react'
+import Radium, { Style } from 'radium'
 import ResizeObserver from 'resize-observer-polyfill'
-import { pxToRem } from '../../helpers/utils/typography'
 
 if (typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill()
@@ -15,6 +14,7 @@ const supportScrollSnap = cssSupports('scroll-snap-type: mandatory')
 
 // inspired by https://github.com/cferdinandi/scrollStop
 const scrollStop = callback => {
+  // Make sure a valid callback was provided
   if (!callback) return
 
   let isScrolling
@@ -26,18 +26,22 @@ const scrollStop = callback => {
     target = event.target
 
     isScrolling = setTimeout(
-      () => callback(target),
+      () => {
+        // Run the callback
+        callback(target)
+      },
       // wait more for scrollStop if browser support snap
-      // because of the momentum on iOS
+      // because of the momentum on ios
       supportScrollSnap ? 132 : 66,
     )
   }
 }
 
-const getClosest = (counts, goal) =>
-  counts.reduce((prev, curr) =>
+const getClosest = (counts, goal) => {
+  return counts.reduce((prev, curr) =>
     Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev,
   )
+}
 
 const getDataForPage = (data, indexPage, numColumns) => {
   const startIndex = indexPage * numColumns
@@ -48,18 +52,24 @@ const getDataForPage = (data, indexPage, numColumns) => {
 const getRangePageScrollLeft = (
   targetClientWidth,
   numPages,
+  siblingPageVisible,
   itemMarginBetween,
-) =>
-  createRangeFromZeroTo(numPages).map(
-    numPage => numPage * (targetClientWidth + itemMarginBetween),
-  )
+) => {
+  const partSiblingItemExceedWidth = itemMarginBetween
+  const marginForSibling = siblingPageVisible
+    ? (itemMarginBetween + partSiblingItemExceedWidth) * 2
+    : 0
+  const innerWidth = targetClientWidth - marginForSibling
 
-export class CarouselInner extends Component {
+  return createRangeFromZeroTo(numPages).map(
+    numPage => numPage * (innerWidth + itemMarginBetween),
+  )
+}
+
+class CarouselInnerBase extends React.Component {
   state = {
     isTouched: false,
   }
-
-  carouselInner = React.createRef()
 
   onResizeObserve = ([entry]) => {
     const widthInner = entry.contentRect.width
@@ -68,7 +78,7 @@ export class CarouselInner extends Component {
 
   componentDidMount() {
     this.observer = new ResizeObserver(this.onResizeObserve)
-    this.observer.observe(this.carouselInner.current)
+    this.observer.observe(this.carouselInner)
   }
 
   componentWillUnmount() {
@@ -86,6 +96,7 @@ export class CarouselInner extends Component {
 
     const {
       numPages,
+      siblingPageVisible,
       itemMarginBetween,
       indexPageVisible,
       goToPage,
@@ -95,29 +106,34 @@ export class CarouselInner extends Component {
     const rangePageScrollLeft = getRangePageScrollLeft(
       clientWidth,
       numPages,
+      siblingPageVisible,
       itemMarginBetween,
     )
 
     const closest = getClosest(rangePageScrollLeft, scrollLeft)
     const indexClosest = rangePageScrollLeft.indexOf(closest)
 
-    if (indexClosest !== indexPageVisible) return goToPage(indexClosest)
-    // if the user doesn't scroll enough to change page
-    // we need to scroll back to the fake snap page
-    if (closest !== scrollLeft) {
-      return target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
+    if (indexClosest !== indexPageVisible) {
+      goToPage(indexClosest)
+    } else {
+      // if the user doesn't scroll enough to change page
+      // we need to scroll back to the fake snap page
+      if (closest !== scrollLeft) {
+        target.scrollTo({ top: 0, left: closest, behavior: 'smooth' })
+      }
     }
   })
 
   scrollToPage = indexPageToScroll => {
-    const { numPages, itemMarginBetween } = this.props
+    const { numPages, siblingPageVisible, itemMarginBetween } = this.props
 
-    const target = this.carouselInner.current
+    const target = this.carouselInner
     const { scrollLeft, clientWidth } = target
 
     const rangePageScrollLeft = getRangePageScrollLeft(
       clientWidth,
       numPages,
+      siblingPageVisible,
       itemMarginBetween,
     )
 
@@ -132,11 +148,11 @@ export class CarouselInner extends Component {
   handleTouchEnd = () => this.setState({ isTouched: false })
 
   handlePageClick = index => e => {
-    if (index === this.props.indexPageVisible) return
-
-    e.preventDefault()
-    this.scrollToPage(index)
-    document.activeElement.blur()
+    if (index !== this.props.indexPageVisible) {
+      e.preventDefault()
+      this.scrollToPage(index)
+      document.activeElement.blur()
+    }
   }
 
   render() {
@@ -148,23 +164,39 @@ export class CarouselInner extends Component {
       numColumns,
       numPages,
       itemMarginBetween,
+      siblingPageVisible,
     } = this.props
 
     const rangePage = createRangeFromZeroTo(numPages)
 
     return (
-      <StyledCarouselInner
-        ref={this.carouselInner}
+      <div
+        ref={div => {
+          this.carouselInner = div
+        }}
+        className="k-CarouselInner"
+        style={[
+          styles.carouselInner,
+          {
+            paddingLeft: siblingPageVisible ? itemMarginBetween * 2 : 0,
+            paddingRight: siblingPageVisible ? itemMarginBetween * 2 : 0,
+          },
+        ]}
         onScroll={this.handleInnerScroll}
         onTouchStart={this.handleTouchStart}
         onTouchEnd={this.handleTouchEnd}
       >
         {rangePage.map(index => (
-          <StyledCarouselPageContainer
+          <div
             key={index}
-            index={index}
-            indexPageVisible={indexPageVisible}
-            itemMarginBetween={itemMarginBetween}
+            style={[
+              styles.carouselPageContainer,
+              index !== indexPageVisible &&
+                styles.carouselPageContainerClickable,
+              {
+                marginLeft: index ? itemMarginBetween : 0,
+              },
+            ]}
             onClick={this.handlePageClick(index)}
           >
             <CarouselPage
@@ -174,54 +206,46 @@ export class CarouselInner extends Component {
               itemMarginBetween={itemMarginBetween}
               renderItem={renderItem}
             />
-          </StyledCarouselPageContainer>
+          </div>
         ))}
-      </StyledCarouselInner>
+        {siblingPageVisible && (
+          <div style={{ minWidth: itemMarginBetween * 2 }} />
+        )}
+
+        {/* hide scrollbar on Chrome and Safari */}
+        <Style
+          scopeSelector=".k-CarouselInner::-webkit-scrollbar"
+          rules={{ display: 'none' }}
+        />
+      </div>
     )
   }
 }
 
-const StyledCarouselInner = styled.div`
-  display: flex;
-  flex-direct: row;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  /* hide scrollbar on IE and Edge */
-  -ms-over-flow-style: none;
-  /* mandatory to combine scroll with this property on iOS */
-  -webkit-overflow-scrolling: touch;
-  ${// snap only for browser that support snap without prefixes
-  supportScrollSnap
-    ? css`
-        scroll-snap-type: mandatory;
-      `
-    : css`
-        scroll-snap-type: none;
-      `}
-  /* Fix bug IE11 ResizeObserver, to trigger a first resize */
-  min-height: 1;
+const styles = {
+  carouselInner: {
+    display: 'flex',
+    flexDirect: 'row',
+    overflowX: 'scroll',
+    scrollBehavior: 'smooth',
+    // hide scrollbar on IE and Edge
+    MsOverflowStyle: 'none',
+    // mandatory to combine scroll with this property on iOS
+    WebkitOverflowScrolling: 'touch',
+    // snap only for browser that support snap without prefixes
+    scrollSnapType: supportScrollSnap ? 'mandatory' : 'none',
+    // Fix bug IE11 ResizeObserver, to trigger a first resize
+    minHeight: 1,
+  },
+  carouselPageContainer: {
+    width: '100%',
+    flexShrink: 0,
+    // snap only for browser that support snap without prefixes
+    scrollSnapAlign: supportScrollSnap ? 'center' : 'none',
+  },
+  carouselPageContainerClickable: {
+    cursor: 'pointer',
+  },
+}
 
-  /* hide scrollbar on Chrome and Safari */
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`
-
-const StyledCarouselPageContainer = styled.div`
-  width: 100%;
-  flex-shrink: 0;
-  scroll-snap-align: ${supportScrollSnap ? 'center' : 'none'};
-  }
-
-  ${({ index, indexPageVisible }) =>
-    index !== indexPageVisible &&
-    css`
-      cursor: pointer;
-    `}
-
-  ${({ index, itemMarginBetween }) =>
-    index &&
-    css`
-      margin-left: ${pxToRem(itemMarginBetween)};
-    `}
-`
+export const CarouselInner = Radium(CarouselInnerBase)

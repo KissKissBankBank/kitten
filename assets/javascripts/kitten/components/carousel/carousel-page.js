@@ -1,29 +1,8 @@
-import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
+import React from 'react'
+import Radium from 'radium'
 import { createRangeFromZeroTo } from '../../helpers/utils/range'
 
-const StyledPage = styled.div`
-  display: flex;
-  flex-direction: row;
-`
-
-const StyledItem = styled.div`
-  flex-grow: 1;
-  flex-shrink: 1;
-
-  ${({ itemMinWidth }) => css`
-    min-width: ${itemMinWidth}px;
-    flex-basis: ${itemMinWidth}px;
-  `}
-
-  ${({ index, itemMarginBetween }) =>
-    index &&
-    css`
-      margin-left: ${itemMarginBetween}px;
-    `}
-`
-
-export class CarouselPage extends Component {
+class CarouselPageBase extends React.Component {
   render() {
     const {
       data,
@@ -32,22 +11,39 @@ export class CarouselPage extends Component {
       itemMarginBetween,
       renderItem,
     } = this.props
-
     const rangeCard = createRangeFromZeroTo(numColumns)
 
     return (
-      <StyledPage>
+      <div style={styles.page}>
         {rangeCard.map(index => (
-          <StyledItem
+          <div
             key={index}
-            index={index}
-            itemMinWidth={itemMinWidth}
-            itemMarginBetween={itemMarginBetween}
+            style={[
+              styles.item,
+              {
+                minWidth: itemMinWidth,
+                flexBasis: itemMinWidth,
+                marginLeft: index ? itemMarginBetween : 0,
+              },
+            ]}
           >
             {data[index] && renderItem({ item: data[index] })}
-          </StyledItem>
+          </div>
         ))}
-      </StyledPage>
+      </div>
     )
   }
 }
+
+const styles = {
+  page: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  item: {
+    flexGrow: 1,
+    flexShrink: 1,
+  },
+}
+
+export const CarouselPage = Radium(CarouselPageBase)
