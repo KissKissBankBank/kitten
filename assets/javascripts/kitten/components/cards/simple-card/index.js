@@ -23,6 +23,14 @@ class SimpleCardComponent extends Component {
 
     const titleClassName = classNames('k-Card__title', titleProps.className)
 
+    const ProjectPlayerButton = arrowColor => (
+      <div style={styles.projectPlayerButton}>
+        <Text size="default" weight="regular" color={arrowColor}>
+          ►
+        </Text>
+      </div>
+    )
+
     return (
       <Tag {...others} style={{ lineHeight: 1, ...others.style }}>
         <Marger bottom="2" className="k-Card__imageContainer">
