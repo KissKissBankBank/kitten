@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   around the component by using this props `paginationPosition` with object keys
   from `fromXxs` to `fromXl` and `default` and object values in
   `'top'`, `'right'`, `'bottom'`, `'left'`.
+- Fix: `SelectWithState` fix warnings about `htmlFor` and `autoComplete` props
 
 ## [1.17.0] - 2019-02-21
 

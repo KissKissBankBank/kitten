@@ -79,13 +79,13 @@ export class SelectWithState extends Component {
     return (
       <div className={selectClassName}>
         {labelText && (
-          <label className="k-Select__label" for={this.props.id}>
+          <label className="k-Select__label" htmlFor={this.props.id}>
             {labelText}
           </label>
         )}
         {autoFill && (
           <input
-            autocomplete={autoFill}
+            autoComplete={autoFill}
             x-autocompletetype={autoFill}
             xautocompletetype={autoFill}
             autocompletetype={autoFill}
