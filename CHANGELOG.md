@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `SelectWithState` fix test warnings about `htmlFor` and `autoComplete` props
+- Fix: `SelectWithState` fix warnings about `htmlFor` and `autoComplete` props
 
 ## [1.17.0] - 2019-02-21
 
