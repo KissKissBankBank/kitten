@@ -31,15 +31,24 @@ class SimpleCardComponent extends Component {
       </div>
     )
 
+    const playerPreviewStyle = [
+      styles.projectPlayer.base,
+      projectVideo ? { cursor: 'pointer' } : null,
+      isVideoPlaying ? styles.projectPlayer.hide : styles.projectPlayer.show,
+    ]
+
     return (
       <Tag {...others} style={{ lineHeight: 1, ...others.style }}>
         <Marger bottom="2" className="k-Card__imageContainer">
-          <img
-            {...imageProps}
-            alt={imageProps.alt || ''}
-            className="k-Card__image"
-            style={{ ...imageProps.style, ...styles.image }}
-          />
+          <div style={playerPreviewStyle}>
+            {projectVideo && <ProjectPlayerButton />}
+            <img
+              {...imageProps}
+              alt={imageProps.alt || ''}
+              className="k-Card__image"
+              style={{ ...imageProps.style, ...styles.image }}
+            />
+          </div>
         </Marger>
 
         {title && (
@@ -82,10 +91,23 @@ class SimpleCardComponent extends Component {
   }
 }
 
+const playerButtonSize = 70
+
 const styles = {
   image: {
     width: '100%',
     display: 'block',
+  },
+  projectPlayerButton: {
+    width: `${playerButtonSize}px`,
+    height: `${playerButtonSize}px`,
+    background: COLORS.font1,
+    position: 'absolute',
+    top: `calc(50% - ${playerButtonSize / 2}px)`,
+    left: `calc(50% - ${playerButtonSize / 2}px)`,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 }
 
