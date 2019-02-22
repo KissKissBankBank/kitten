@@ -37,6 +37,7 @@ const ProjectsCarousel = ({
     <Button icon iconOnRight tag="a" href={buttonHref} style={styles.button}>
       {buttonLabel}
       <ArrowIcon
+        version="solid"
         className="k-Button__icon k-ButtonIcon__svg"
         style={{ width: 6 }}
       />
