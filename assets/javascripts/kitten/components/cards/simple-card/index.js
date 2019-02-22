@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import classNames from 'classnames'
 import { card } from '../../../hoc/card'
 import { Marger } from '../../../components/layout/marger'
@@ -7,6 +9,40 @@ import { Text } from '../../../components/typography/text'
 import { parseHtml } from '../../../helpers/utils/parser'
 import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
 import COLORS from '../../../constants/colors-config'
+
+const ContainerStyle = styled.a`
+  line-height: 1;
+`
+
+const MargerStyle = styled(Marger)`
+  position: relative;
+`
+
+const ImageStyle = styled.img`
+  width: 100%;
+  display: block;
+`
+
+const PlayerButtonSize = 70
+
+const PlayerButtonStyle = styled.div`
+  width: ${PlayerButtonSize}px;
+  height: ${PlayerButtonSize}px;
+  background: ${COLORS.font1};
+  position: absolute;
+  top: calc(50% - ${PlayerButtonSize / 2}px);
+  left: calc(50% - ${PlayerButtonSize / 2}px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+`
+
+const PlayerStyle = styled.div`
+  position: relative;
+  transition: opacity ease 600ms, z-index ease 600ms;
+  z-index: 1;
+`
 
 class SimpleCardComponent extends Component {
   render() {
@@ -25,12 +61,12 @@ class SimpleCardComponent extends Component {
       ...others
     } = this.props
 
-    const Tag = this.props.href ? 'a' : 'div'
+    // const Tag = this.props.href ? 'a' : 'div'
 
     const titleClassName = classNames('k-Card__title', titleProps.className)
 
     const ProjectPlayerButton = props => (
-      <div tag="a" href={href} style={styles.projectPlayerButton}>
+      <PlayerButtonStyle>
         <Text
           size="default"
           weight="regular"
@@ -39,31 +75,26 @@ class SimpleCardComponent extends Component {
         >
           ►
         </Text>
-      </div>
+      </PlayerButtonStyle>
     )
 
     return (
-      <Tag {...others} style={{ lineHeight: 1, ...others.style }}>
-        <Marger
-          bottom="2"
-          className="k-Card__imageContainer"
-          style={{ position: 'relative' }}
-        >
-          <div style={styles.projectPlayer}>
+      <ContainerStyle {...others}>
+        <MargerStyle bottom="2" className="k-Card__imageContainer">
+          <PlayerStyle>
             {projectVideo && (
               <ProjectPlayerButton
                 arrowColor={arrowColor}
                 ariaLabel={ariaLabel}
               />
             )}
-            <img
+            <ImageStyle
               {...imageProps}
               alt={imageProps.alt || ''}
               className="k-Card__image"
-              style={{ ...imageProps.style, ...styles.image }}
             />
-          </div>
-        </Marger>
+          </PlayerStyle>
+        </MargerStyle>
 
         {title && (
           <Marger top="2" bottom=".3">
@@ -100,35 +131,25 @@ class SimpleCardComponent extends Component {
             <HorizontalStroke size="tiny" />
           </Marger>
         )}
-      </Tag>
+      </ContainerStyle>
     )
   }
 }
 
-const playerButtonSize = 70
-
-const styles = {
-  image: {
-    width: '100%',
-    display: 'block',
-  },
-  projectPlayerButton: {
-    width: `${playerButtonSize}px`,
-    height: `${playerButtonSize}px`,
-    background: COLORS.font1,
-    position: 'absolute',
-    top: `calc(50% - ${playerButtonSize / 2}px)`,
-    left: `calc(50% - ${playerButtonSize / 2}px)`,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    cursor: 'pointer',
-  },
-  projectPlayer: {
-    position: 'relative',
-    transition: 'opacity ease 600ms, z-index ease 600ms',
-    zIndex: 1,
-  },
+SimpleCardComponent.propTypes = {
+  imageProps: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+  }),
+  titleProps: PropTypes.shape,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  paragraph: PropTypes.string,
+  horizontalStroke: PropTypes.bool,
+  projectVideo: PropTypes.bool,
+  ariaLabel: PropTypes.string,
+  arrowColor: PropTypes.string,
+  href: PropTypes.string,
 }
 
 SimpleCardComponent.defaultProps = {
@@ -142,7 +163,7 @@ SimpleCardComponent.defaultProps = {
   paragraph: null,
   horizontalStroke: true,
   projectVideo: false,
-  ariaLabel: '',
+  ariaLabel: null,
   arrowColor: 'background1',
   href: '#',
 }
