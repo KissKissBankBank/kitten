@@ -47,6 +47,7 @@
 
   .k-TextInputWithButton__input {
     outline: none; // since we introduce our own focus styles
+    border-right: 0;
   }
 
   .k-TextInputWithButton__button {
