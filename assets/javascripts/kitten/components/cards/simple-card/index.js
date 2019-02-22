@@ -21,6 +21,7 @@ class SimpleCardComponent extends Component {
       arrowColor,
       ariaLabel,
       t,
+      href,
       ...others
     } = this.props
 
@@ -29,7 +30,7 @@ class SimpleCardComponent extends Component {
     const titleClassName = classNames('k-Card__title', titleProps.className)
 
     const ProjectPlayerButton = props => (
-      <div style={styles.projectPlayerButton}>
+      <div tag="a" href={href} style={styles.projectPlayerButton}>
         <Text
           size="default"
           weight="regular"
@@ -143,6 +144,7 @@ SimpleCardComponent.defaultProps = {
   projectVideo: false,
   ariaLabel: '',
   arrowColor: 'background1',
+  href: '#',
 }
 
 export const SimpleCard = card(SimpleCardComponent, {

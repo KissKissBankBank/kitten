@@ -141,4 +141,14 @@ describe('<SimpleCard />', () => {
       expect(component.find(Title).hasClass('custom-class')).toBe(true)
     })
   })
+
+  describe('with projectVideo props', () => {
+    beforeEach(() => {
+      component = renderer.create(<SimpleCard projectVideo={true} />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

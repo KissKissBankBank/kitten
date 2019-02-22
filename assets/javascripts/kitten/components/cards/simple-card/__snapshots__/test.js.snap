@@ -10,19 +10,96 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
   }
 >
   <div
-    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
+    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jsfkfD"
   >
-    <img
-      alt=""
-      className="k-Card__image"
-      src="https://placehold.it/200x200/caf4fe/caf4fe"
+    <div
       style={
         Object {
-          "display": "block",
-          "width": "100%",
+          "position": "relative",
+          "transition": "opacity ease 600ms, z-index ease 600ms",
+          "zIndex": 1,
         }
       }
+    >
+      <img
+        alt=""
+        className="k-Card__image"
+        src="https://placehold.it/200x200/caf4fe/caf4fe"
+        style={
+          Object {
+            "display": "block",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+  >
+    <span
+      className="k-HorizontalStroke k-HorizontalStroke--tiny"
     />
+  </div>
+</div>
+`;
+
+exports[`<SimpleCard /> with projectVideo props matches with snapshot 1`] = `
+<div
+  className="k-Card k-Card--withoutBoxShadowOnHover"
+  style={
+    Object {
+      "lineHeight": 1,
+    }
+  }
+>
+  <div
+    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jsfkfD"
+  >
+    <div
+      style={
+        Object {
+          "position": "relative",
+          "transition": "opacity ease 600ms, z-index ease 600ms",
+          "zIndex": 1,
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "alignItems": "center",
+            "background": "#222",
+            "cursor": "pointer",
+            "display": "flex",
+            "height": "70px",
+            "justifyContent": "center",
+            "left": "calc(50% - 35px)",
+            "position": "absolute",
+            "top": "calc(50% - 35px)",
+            "width": "70px",
+          }
+        }
+      >
+        <span
+          aria-label=""
+          className="k-u-color-background1 k-u-size-default k-u-weight-regular"
+        >
+          ►
+        </span>
+      </div>
+      <img
+        alt=""
+        className="k-Card__image"
+        src="https://placehold.it/200x200/caf4fe/caf4fe"
+        style={
+          Object {
+            "display": "block",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
   </div>
   <div
     className="marger__StyledMarger-q3lecu-0 cHJBWz"
@@ -44,19 +121,29 @@ exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
   }
 >
   <div
-    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
+    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jsfkfD"
   >
-    <img
-      alt=""
-      className="k-Card__image"
-      src="https://placehold.it/200x200/caf4fe/caf4fe"
+    <div
       style={
         Object {
-          "display": "block",
-          "width": "100%",
+          "position": "relative",
+          "transition": "opacity ease 600ms, z-index ease 600ms",
+          "zIndex": 1,
         }
       }
-    />
+    >
+      <img
+        alt=""
+        className="k-Card__image"
+        src="https://placehold.it/200x200/caf4fe/caf4fe"
+        style={
+          Object {
+            "display": "block",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
   </div>
 </div>
 `;
