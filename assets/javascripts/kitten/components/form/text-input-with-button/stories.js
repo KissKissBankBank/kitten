@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { Grid, GridCol } from '../../components/grid/grid'
-import { TextInputWithButton } from './text-input-with-button'
+import { Grid, GridCol } from '../../../components/grid/grid'
+import { TextInputWithButton } from './index'
 
 storiesOf('Form/TextInputWithButton', module).add(
   'default',
