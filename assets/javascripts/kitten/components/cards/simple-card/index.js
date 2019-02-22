@@ -6,6 +6,7 @@ import { Title } from '../../../components/typography/title'
 import { Text } from '../../../components/typography/text'
 import { parseHtml } from '../../../helpers/utils/parser'
 import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
+import COLORS from '../../../constants/colors-config'
 
 class SimpleCardComponent extends Component {
   render() {
@@ -16,6 +17,10 @@ class SimpleCardComponent extends Component {
       subtitle,
       paragraph,
       horizontalStroke,
+      projectVideo,
+      arrowColor,
+      ariaLabel,
+      t,
       ...others
     } = this.props
 
@@ -23,25 +28,33 @@ class SimpleCardComponent extends Component {
 
     const titleClassName = classNames('k-Card__title', titleProps.className)
 
-    const ProjectPlayerButton = arrowColor => (
+    const ProjectPlayerButton = props => (
       <div style={styles.projectPlayerButton}>
-        <Text size="default" weight="regular" color={arrowColor}>
+        <Text
+          size="default"
+          weight="regular"
+          color={props.arrowColor}
+          aria-label={props.ariaLabel}
+        >
           ►
         </Text>
       </div>
     )
 
-    const playerPreviewStyle = [
-      styles.projectPlayer.base,
-      projectVideo ? { cursor: 'pointer' } : null,
-      isVideoPlaying ? styles.projectPlayer.hide : styles.projectPlayer.show,
-    ]
-
     return (
       <Tag {...others} style={{ lineHeight: 1, ...others.style }}>
-        <Marger bottom="2" className="k-Card__imageContainer">
-          <div style={playerPreviewStyle}>
-            {projectVideo && <ProjectPlayerButton />}
+        <Marger
+          bottom="2"
+          className="k-Card__imageContainer"
+          style={{ position: 'relative' }}
+        >
+          <div style={styles.projectPlayer}>
+            {projectVideo && (
+              <ProjectPlayerButton
+                arrowColor={arrowColor}
+                ariaLabel={ariaLabel}
+              />
+            )}
             <img
               {...imageProps}
               alt={imageProps.alt || ''}
@@ -108,6 +121,12 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    cursor: 'pointer',
+  },
+  projectPlayer: {
+    position: 'relative',
+    transition: 'opacity ease 600ms, z-index ease 600ms',
+    zIndex: 1,
   },
 }
 
@@ -121,6 +140,9 @@ SimpleCardComponent.defaultProps = {
   subtitle: null,
   paragraph: null,
   horizontalStroke: true,
+  projectVideo: false,
+  ariaLabel: '',
+  arrowColor: 'background1',
 }
 
 export const SimpleCard = card(SimpleCardComponent, {
