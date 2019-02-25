@@ -30,3 +30,8 @@ export const FIRST_DAY_OF_WEEK = {
 export const LABELS = {
   fr: { nextMonth: 'Mois suivant', previousMonth: 'Mois précedent' },
 }
+
+export const FORMAT = {
+  fr: 'dd/mm/yyyy',
+  en: 'mm/dd/yyyy',
+}
