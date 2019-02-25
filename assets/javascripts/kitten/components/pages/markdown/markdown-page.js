@@ -9,7 +9,6 @@ import { Paragraph } from '../../../components/typography/paragraph'
 import { BulletList } from '../../../components/lists/bullet-list'
 import { LinkList } from '../../../components/links/link-list'
 import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
-import { scrollTo } from '../../../helpers/utils/scroll-to'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
@@ -82,23 +81,8 @@ MarkdownList.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const handleLinkClick = url => {
-  if (url.match(/^#/)) {
-    scrollTo(document.getElementById(url.replace('#', '')), 500)
-  }
-}
-
 const MarkdownLink = props => {
-  return (
-    <a
-      href={props.href}
-      onClick={() => {
-        handleLinkClick(props.href)
-      }}
-    >
-      {props.children}
-    </a>
-  )
+  return <a href={props.href}>{props.children}</a>
 }
 
 MarkdownLink.propTypes = {
