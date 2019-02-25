@@ -48,7 +48,7 @@ export const MarkdownHeading = props => {
 
   return (
     <Fragment>
-      <Marger top="8" bottom="2">
+      <Marger top={{ default: 8, fromS: 10 }} bottom="2">
         <Title modifier={modifier} tag={tag} id={id}>
           {props.children}
         </Title>
