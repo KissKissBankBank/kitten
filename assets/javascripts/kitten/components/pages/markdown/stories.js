@@ -1,8 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
-import { MarkdownPage } from '../../../components/typography/markdown/markdown-page'
-import { Container } from '../../../components/grid/container'
+import { MarkdownPage } from '../../pages/markdown/index'
+import { Marger } from '../../layout/marger'
+import { Container } from '../../grid/container'
 
 const defaultText = `
 # H1
@@ -28,14 +29,22 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 # Link
 
 [I'm an inline-style link](https://www.google.com)
-
-# Blockquotes
-
-> Blockquotes are very handy in email to emulate reply text.
 `
 
-storiesOf('Typo/Markdown-Page', module)
+const StoryContainer = ({ children }) => (
+  <Container>
+    <Marger top="5" bottom="5">
+      {children}
+    </Marger>
+  </Container>
+)
+
+storiesOf('Pages/Markdown-Page', module)
   .addDecorator(withKnobs)
   .add('default', () => {
-    return <MarkdownPage content={text('Markdown', defaultText)} />
+    return (
+      <StoryContainer>
+        <MarkdownPage children={text('Markdown', defaultText)} />
+      </StoryContainer>
+    )
   })
