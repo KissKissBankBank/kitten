@@ -32,7 +32,6 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 # Blockquotes
 
 > Blockquotes are very handy in email to emulate reply text.
-> Exemple
 `
 
 storiesOf('Typo/Markdown-Page', module)
