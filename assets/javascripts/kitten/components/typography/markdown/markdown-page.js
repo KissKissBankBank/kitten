@@ -56,7 +56,7 @@ const MarkdownBlockquote = props => {
 
   return (
     <Marger top="4" bottom="4">
-      <LinkListstyle color="dark" items={items} className="kiss-LinkList" />
+      <LinkListstyle color="dark" items={items} />
     </Marger>
   )
 }
@@ -65,7 +65,7 @@ MarkdownBlockquote.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-const MarkdownListComponent = props => {
+const MarkdownList = props => {
   const items = props.children.map(item => ({
     key: item.key,
     item: item.props.children[0],
@@ -73,12 +73,12 @@ const MarkdownListComponent = props => {
 
   return (
     <Marger top="3" bottom="3">
-      <BulletListStyle className="kiss-BulletList" big items={items} />
+      <BulletListStyle big items={items} />
     </Marger>
   )
 }
 
-MarkdownListComponent.propTypes = {
+MarkdownList.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
@@ -92,7 +92,6 @@ const MarkdownLink = props => {
   return (
     <a
       href={props.href}
-      className="k-Paragraph__link"
       onClick={() => {
         handleLinkClick(props.href)
       }}
@@ -168,6 +167,7 @@ MarkdownHeading.propTypes = {
 
 const markdownRenderers = {
   paragraph: MarkdownParagraph,
+  list: MarkdownList,
   link: MarkdownLink,
   heading: MarkdownHeading,
   blockquote: MarkdownBlockquote,
