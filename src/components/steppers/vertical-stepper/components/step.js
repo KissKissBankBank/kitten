@@ -98,7 +98,7 @@ Step.defaultProps = {
 var StyledItem = _styledComponents.default.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-1you76f-0"
-})(["margin ", " 0 ", ";"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(28));
+})(["margin ", " 0;"], (0, _typography.pxToRem)(30));
 
 var StyledLink = _styledComponents.default.a.withConfig({
   displayName: "step__StyledLink",
