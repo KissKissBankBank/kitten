@@ -248,19 +248,14 @@ export class DatePicker extends Component {
           format={FORMAT[locale]}
           parseDate={this.parseDate}
           dayPickerProps={{
+            ...datePickerProps,
             locale: locale,
             months: MONTHS[locale],
             weekdaysLong: WEEKDAYS_LONG[locale],
             weekdaysShort: WEEKDAYS_SHORT[locale],
             firstDayOfWeek: FIRST_DAY_OF_WEEK[locale],
             labels: LABELS[locale],
-            disabledDays: [
-              {
-                after: new Date(),
-              },
-            ],
             navbarElement: <Navbar iconColor={styles.header.icon.color} />,
-            ...datePickerProps,
           }}
           component={props => {
             return (
