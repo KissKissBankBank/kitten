@@ -7,9 +7,8 @@ import { HorizontalStroke } from '../../../layout/horizontal-stroke'
 import { Marger } from '../../../layout/marger'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
-import { withMediaQueries } from '../../../../hoc/media-queries'
 
-const MarkdownHeadingBase = ({ viewportIsXSOrLess, ...props }) => {
+export const MarkdownHeading = props => {
   let modifier
   let tag
 
@@ -49,7 +48,7 @@ const MarkdownHeadingBase = ({ viewportIsXSOrLess, ...props }) => {
 
   return (
     <Fragment>
-      <Marger top={viewportIsXSOrLess ? 8 : 10} bottom={2}>
+      <Marger top="8" bottom="2">
         <Title modifier={modifier} tag={tag} id={id}>
           {props.children}
         </Title>
@@ -59,17 +58,13 @@ const MarkdownHeadingBase = ({ viewportIsXSOrLess, ...props }) => {
   )
 }
 
-MarkdownHeadingBase.defaultProps = {
+MarkdownHeading.defaultProps = {
   level: null,
   viewportIsXSOrLess: '',
 }
 
-MarkdownHeadingBase.propTypes = {
+MarkdownHeading.propTypes = {
   level: PropTypes.number,
   viewportIsXSOrLess: PropTypes.string,
   children: PropTypes.node.isRequired,
 }
-
-export const MarkdownHeading = withMediaQueries({
-  viewportIsMobile: true,
-})(MarkdownHeadingBase)
