@@ -6,7 +6,6 @@ import { Title } from '../../../typography/title'
 import { HorizontalStroke } from '../../../layout/horizontal-stroke'
 import { Marger } from '../../../layout/marger'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const MarkdownHeading = props => {
   let modifier
@@ -60,11 +59,9 @@ export const MarkdownHeading = props => {
 
 MarkdownHeading.defaultProps = {
   level: null,
-  viewportIsXSOrLess: '',
 }
 
 MarkdownHeading.propTypes = {
   level: PropTypes.number,
-  viewportIsXSOrLess: PropTypes.string,
   children: PropTypes.node.isRequired,
 }
