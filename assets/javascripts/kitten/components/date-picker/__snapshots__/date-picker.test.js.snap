@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DatePicker /> matches with snapshot 1`] = `
+<div
+  className="date-picker__StyledDatePicker-snpu98-0 hzGJck"
+>
+  <div
+    className="DayPickerInput"
+  >
+    <div
+      className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
+    >
+      <input
+        autocomplete="off"
+        className="k-TextInput k-TextInputWithUnit__input"
+        disabled={false}
+        name="text"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        placeholder="dd/mm/yyyy"
+        type="text"
+        value=""
+      />
+      <span
+        className="k-TextInputWithUnit__unit"
+      >
+        📅
+      </span>
+    </div>
+  </div>
+</div>
+`;

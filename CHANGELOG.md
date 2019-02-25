@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `disabled` status to `VerticalStepper`.
 - Feature: Update `LockIcon` to accept `color` and `title` props.
+- Feature: Create `DatePicker` component.
 
 ## [1.15.0] - 2019-02-13
 
