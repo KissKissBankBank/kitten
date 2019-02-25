@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// Doc available here: http://react-day-picker.js.org/docs/getting-started
 import DayPickerInput from 'react-day-picker/DayPickerInput'
 import styled, { css } from 'styled-components'
 import COLORS from '../../constants/colors-config'
@@ -147,6 +148,7 @@ const StyledDatePicker = styled.div`
 export class DatePicker extends Component {
   static defaultProps = {
     locale: 'fr',
+    disabledDays: [],
   }
 
   state = {
