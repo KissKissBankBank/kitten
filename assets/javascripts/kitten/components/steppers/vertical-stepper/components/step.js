@@ -8,7 +8,7 @@ import { STEP_CLASSNAME, LINK_CLASSNAME } from '../index'
 
 export class Step extends Component {
   static propTypes = {
-    href: PropTypes.string.isRequired,
+    href: PropTypes.string,
     valid: PropTypes.bool,
     success: PropTypes.bool,
     error: PropTypes.bool,
@@ -17,6 +17,7 @@ export class Step extends Component {
   }
 
   static defaultProps = {
+    href: null,
     valid: false,
     success: false,
     error: false,
