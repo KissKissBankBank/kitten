@@ -79,7 +79,7 @@ function (_Component) {
 
 exports.Step = Step;
 Step.propTypes = {
-  href: _propTypes.default.string.isRequired,
+  href: _propTypes.default.string,
   valid: _propTypes.default.bool,
   success: _propTypes.default.bool,
   error: _propTypes.default.bool,
@@ -87,6 +87,7 @@ Step.propTypes = {
   disabled: _propTypes.default.bool
 };
 Step.defaultProps = {
+  href: null,
   valid: false,
   success: false,
   error: false,
@@ -97,7 +98,7 @@ Step.defaultProps = {
 var StyledItem = _styledComponents.default.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-1you76f-0"
-})(["margin ", " 0;"], (0, _typography.pxToRem)(30));
+})(["margin ", " 0 ", ";"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(28));
 
 var StyledLink = _styledComponents.default.a.withConfig({
   displayName: "step__StyledLink",
