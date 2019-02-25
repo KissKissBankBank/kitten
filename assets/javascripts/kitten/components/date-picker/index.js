@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 // Doc available here: http://react-day-picker.js.org/docs/getting-started
 import DayPickerInput from 'react-day-picker/DayPickerInput'
-import dateFnsFormat from 'date-fns/format'
-import dateFnsParse from 'date-fns/parse'
 import styled, { css } from 'styled-components'
 import COLORS from '../../constants/colors-config'
 import TYPOGRAPHY from '../../constants/typography-config'
