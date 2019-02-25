@@ -1,7 +1,7 @@
 import React from 'react'
 import { DatePicker } from './index'
 import { storiesOf } from '@storybook/react'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, date, select } from '@storybook/addon-knobs'
 import { Container } from '../../components/grid/container'
 import { Marger } from '../../components/layout/marger'
 
@@ -18,7 +18,14 @@ storiesOf('Form/DatePicker', module)
   .add('default', () => {
     return (
       <StoryContainer>
-        <DatePicker />
+        <DatePicker
+          selectedDay={date('default selected Date', new Date())}
+          locale={select(
+            'Default language',
+            { french: 'fr', english: 'en' },
+            'en',
+          )}
+        />
       </StoryContainer>
     )
   })
