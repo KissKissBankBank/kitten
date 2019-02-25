@@ -11,6 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   from `fromXxs` to `fromXl` and `default` and object values in
   `'top'`, `'right'`, `'bottom'`, `'left'`.
 - Fix: `SelectWithState` fix warnings about `htmlFor` and `autoComplete` props
+- Fix: Fix `VerticalStepper.Step` warning.
 - Fix: Change positioning (from absolute to flex) on button in `TextInputWithButton` component.
 
 ## [1.17.0] - 2019-02-21
