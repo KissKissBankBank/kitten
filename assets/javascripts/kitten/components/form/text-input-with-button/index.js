@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { TextInput } from '../../components/form/text-input'
+import { TextInput } from '../../../components/form/text-input'
 
 export class TextInputWithButton extends Component {
   render() {

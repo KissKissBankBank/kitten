@@ -180,7 +180,7 @@ describe('<SelectWithState />', () => {
 
       expect(select.exists('input')).toBe(true)
       const input = select.find('input')
-      expect(input.props().autocomplete).toBe(autoFillName)
+      expect(input.props().autoComplete).toBe(autoFillName)
       expect(input.props()['x-autocompletetype']).toBe(autoFillName)
       expect(input.props().xautocompletetype).toBe(autoFillName)
       expect(input.props().name).toBe(autoFillName)
@@ -195,7 +195,7 @@ describe('<SelectWithState />', () => {
           value="foo"
         />,
       )
-      const input = select.find({ autocomplete: autoFillName })
+      const input = select.find({ autoComplete: autoFillName })
       input.simulate('change', { target: { value: '2010' } })
       expect(select.state().value).toBe('2010')
     })
