@@ -7,37 +7,9 @@ exports[`<MarkdownPage /> matches with snapshot 1`] = `
   >
     <h1
       className="k-Title k-Title--secondary"
-      id="h1-##-h2-###-h3-#-emphasis-emphasis,-aka-italics,-with"
+      id="h1"
     >
-      H1 ## H2 ### H3 # Emphasis Emphasis, aka italics, with 
-      <em>
-        asterisks
-      </em>
-       or 
-      <em>
-        underscores
-      </em>
-      . Strong emphasis, aka bold, with 
-      <strong>
-        asterisks
-      </strong>
-       or 
-      <strong>
-        underscores
-      </strong>
-      . Combined emphasis with 
-      <strong>
-        asterisks and 
-        <em>
-          underscores
-        </em>
-      </strong>
-      . Strikethrough uses two tildes. ~~Scratch this.~~ # List * Unordered list can use asterisks - Or minuses + Or pluses # Link 
-      <a
-        href="https://www.google.com"
-      >
-        I'm an inline-style link
-      </a>
+      H1
     </h1>
   </div>
   <div
@@ -46,6 +18,164 @@ exports[`<MarkdownPage /> matches with snapshot 1`] = `
     <span
       className="k-HorizontalStroke k-HorizontalStroke--big"
     />
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 kboIqb"
+  >
+    <h2
+      className="k-Title k-Title--quaternary"
+      id="h2"
+    >
+      H2
+    </h2>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 kboIqb"
+  >
+    <h3
+      className="k-Title k-Title--quinary"
+      id="h3"
+    >
+      H3
+    </h3>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 kboIqb"
+  >
+    <h1
+      className="k-Title k-Title--secondary"
+      id="emphasis"
+    >
+      Emphasis
+    </h1>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 PUhWi"
+  >
+    <span
+      className="k-HorizontalStroke k-HorizontalStroke--big"
+    />
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 loOPNX"
+  >
+    <p
+      className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
+    >
+      Emphasis, aka italics, with 
+      <em>
+        asterisks
+      </em>
+       or 
+      <em>
+        underscores
+      </em>
+      .
+Strong emphasis, aka bold, with 
+      <strong>
+        asterisks
+      </strong>
+       or 
+      <strong>
+        underscores
+      </strong>
+      .
+Combined emphasis with 
+      <strong>
+        asterisks and 
+        <em>
+          underscores
+        </em>
+      </strong>
+      .
+Strikethrough uses two tildes. ~~Scratch this.~~
+    </p>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 kboIqb"
+  >
+    <h1
+      className="k-Title k-Title--secondary"
+      id="list"
+    >
+      List
+    </h1>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 PUhWi"
+  >
+    <span
+      className="k-HorizontalStroke k-HorizontalStroke--big"
+    />
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+  >
+    <ul
+      className="k-BulletList list__BulletListStyle-sc-1hya2vn-0 EaOQv"
+    >
+      <li
+        className="k-BulletList__item k-BulletList__item--big"
+      >
+        Unordered list can use asterisks
+      </li>
+    </ul>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+  >
+    <ul
+      className="k-BulletList list__BulletListStyle-sc-1hya2vn-0 EaOQv"
+    >
+      <li
+        className="k-BulletList__item k-BulletList__item--big"
+      >
+        Or minuses
+      </li>
+    </ul>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+  >
+    <ul
+      className="k-BulletList list__BulletListStyle-sc-1hya2vn-0 EaOQv"
+    >
+      <li
+        className="k-BulletList__item k-BulletList__item--big"
+      >
+        Or pluses
+      </li>
+    </ul>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 kboIqb"
+  >
+    <h1
+      className="k-Title k-Title--secondary"
+      id="link"
+    >
+      Link
+    </h1>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 PUhWi"
+  >
+    <span
+      className="k-HorizontalStroke k-HorizontalStroke--big"
+    />
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 loOPNX"
+  >
+    <p
+      className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
+    >
+      <a
+        href="https://www.google.com"
+      >
+        I'm an inline-style link
+      </a>
+    </p>
   </div>
 </div>
 `;

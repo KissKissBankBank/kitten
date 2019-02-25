@@ -19,7 +19,7 @@ export class MarkdownPage extends Component {
 }
 
 MarkdownPage.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 }
 
 const markdownRenderers = {
