@@ -4,9 +4,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `disabled` status to `VerticalStepper`.
-- Feature: Update `LockIcon` to accept `color` and `title` props.
 - Feature: Create `DatePicker` component.
+- Feature: Add new carousel which better work inside grid.
+  The pagination buttons from `Carousel` can now be place everywhere
+  around the component by using this props `paginationPosition` with object keys
+  from `fromXxs` to `fromXl` and `default` and object values in
+  `'top'`, `'right'`, `'bottom'`, `'left'`.
+- Fix: `SelectWithState` fix warnings about `htmlFor` and `autoComplete` props
+- Fix: Fix `VerticalStepper.Step` warning.
+- Fix: Change positioning (from absolute to flex) on button in `TextInputWithButton` component.
+
+## [1.17.0] - 2019-02-21
+
+Feature:
+- Add `links` props to `NavTabCarousel` component.
+
+Fix:
+- Update `disabled` status colors to `VerticalStepper`.
+
+## [1.16.0] - 2019-02-19
+
+Features:
+- Add `disabled` status to `VerticalStepper`.
+- Update `LockIcon` to accept `color` and `title` props.
 
 ## [1.15.0] - 2019-02-13
 

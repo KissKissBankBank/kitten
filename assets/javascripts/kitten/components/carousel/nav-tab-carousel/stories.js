@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, number, color } from '@storybook/addon-knobs'
+import { withKnobs, text, number, color, array } from '@storybook/addon-knobs'
 import { NavTabCarousel } from './index'
 import { Marger } from './../../layout/marger'
 import { Container } from './../../grid/container'
@@ -20,11 +20,16 @@ const StoryGrid = ({ children }) => (
   </Container>
 )
 
+const links = [
+  'http://www.google.com',
+  'http://www.foo.bar',
+  'http://www.bar.foo',
+]
 const totalIndex = 3
 
 storiesOf('Carousel/NavTabCarousel', module)
   .addDecorator(withKnobs)
-  .add('default', () => {
+  .add('with Links', () => {
     return (
       <StoryGrid>
         <NavTabCarousel>
@@ -34,7 +39,28 @@ storiesOf('Carousel/NavTabCarousel', module)
           />
           <NavTabCarousel.Pagination
             activeIndex={number('Active index', 2)}
-            totalIndex={number('Total index', totalIndex)}
+            links={array('links', links)}
+            activeColor={color('Pagination active color', COLORS.primary1)}
+          />
+          <NavTabCarousel.Next
+            hoverColor={color('Next hover color', '#fff')}
+            children={text('Next text', 'Foobar 2')}
+          />
+        </NavTabCarousel>
+      </StoryGrid>
+    )
+  })
+  .add('with totalIndex', () => {
+    return (
+      <StoryGrid>
+        <NavTabCarousel>
+          <NavTabCarousel.Prev
+            hoverColor={color('Prev hover color', '#fff')}
+            children={text('Prev text', 'Foobar 1')}
+          />
+          <NavTabCarousel.Pagination
+            activeIndex={number('Active index', 2)}
+            totalIndex={number('total index', 3)}
             activeColor={color('Pagination active color', COLORS.primary1)}
           />
           <NavTabCarousel.Next
