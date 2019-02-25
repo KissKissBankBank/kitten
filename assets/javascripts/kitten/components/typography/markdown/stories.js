@@ -21,13 +21,6 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 
 # List
 
-1. First ordered list item
-
-2. Another item
-  *Unordered sub-list.
-
-  3. Ordered sub-list
-
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses
@@ -39,6 +32,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 # Blockquotes
 
 > Blockquotes are very handy in email to emulate reply text.
+> Exemple
 `
 
 storiesOf('Typo/Markdown-Page', module)
