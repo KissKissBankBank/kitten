@@ -7,15 +7,16 @@ typographic scale, etc.).
 You can check out Kitten's components on
 [KissKissBankBank's styleguide](https://styleguide.kisskissbankbank.com/).
 
-
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
 ## Dependencies
+
 - react >= 15.x
 - react-dom >= 15.x
 - @babel/polyfill if you support IE10 and previous versions
 
 ## Table of content
+
 - [Installation](#installation)
 - [Usage](#usage)
   - [CSS components](#css-components)
@@ -26,8 +27,8 @@ You can check out Kitten's components on
 
 ## Installation
 
-```
-npm install @kisskissbankbank/kitten
+```sh
+$ npm install @kisskissbankbank/kitten
 ```
 
 ## Usage
@@ -70,7 +71,7 @@ creating new components!
 ### Install
 
 ```sh
-$ npm install
+$ bin/install
 ```
 
 ### Cleanup
@@ -83,21 +84,23 @@ bin/cleanup
 
 ### Storybook
 
-- To launch storybook in local
+To launch storybook locally:
+
 ```sh
 npm run storybook
 ```
 
 Then visit http://localhost:6006
 
-- To release `Storybook` simply run this command:
+To release `Storybook` simply run this command:
+
 ```sh
 npm run deploy-storybook
 ```
 
-### Style guide
+### Styleguide
 
-To launch the style guide using webpack :
+To launch the styleguide using webpack:
 
 ```sh
 $ npm run styleguide:start
@@ -107,11 +110,11 @@ Then visit http://localhost:3000
 
 #### Production settings
 
-To share the style guide with production settings (to share via ngrok for
+To share the styleguide with production settings (to share via ngrok for
 example), you can compile the assets:
 
 ```sh
-npm run styleguide:build
+$ npm run styleguide:build
 ```
 
 It will create a `build` folder with static files. You can serve it as you wish
@@ -122,7 +125,7 @@ It will create a `build` folder with static files. You can serve it as you wish
 To launch the JS tests:
 
 ```sh
-npm test
+$ npm test
 ```
 
 Check out the [guidelines](../../wiki/Component-testing) to know how to test kitten.
@@ -137,7 +140,7 @@ To contribute code:
 - Don't forget to update the `CHANGELOG.md` under the `[unreleased]` section
   with the following syntax:
 
-  ```
+  ```md
   - Breaking change: a breaking change.
   - Feature: a new feature.
   - Fix: a fix.

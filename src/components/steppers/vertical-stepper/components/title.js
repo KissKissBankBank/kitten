@@ -18,6 +18,6 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 var Title = _styledComponents.default.p.withConfig({
   displayName: "title__Title",
   componentId: "zdw2ns-0"
-})(["margin:0 0 ", ";", ";font-size:", ";line-height:normal;color:", ";"], (0, _typography.pxToRem)(2), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(16), _colorsConfig.default.font1);
+})(["margin:0 0 ", ";", ";font-size:", ";line-height:normal;"], (0, _typography.pxToRem)(2), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(16));
 
 exports.Title = Title;

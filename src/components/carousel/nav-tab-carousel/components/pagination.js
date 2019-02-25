@@ -21,10 +21,12 @@ var _marger = require("./../../../layout/marger");
 
 var _typography = require("./../../../../helpers/utils/typography");
 
+var _range = require("./../../../../helpers/utils/range");
+
 var BulletPointStyles = _styledComponents.default.div.withConfig({
   displayName: "pagination__BulletPointStyles",
   componentId: "sc-1thdyq2-0"
-})(["width:", ";height:", ";margin-left:", ";margin-right:", ";background-color:", ";", ""], (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), _colorsConfig.default.background1, function (_ref) {
+})(["min-width:", ";min-height:", ";margin-left:", ";margin-right:", ";background-color:", ";", ""], (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), _colorsConfig.default.background1, function (_ref) {
   var isSelected = _ref.isSelected,
       activeColor = _ref.activeColor;
   return isSelected && (0, _styledComponents.css)(["background-color:", ";"], activeColor);
@@ -37,11 +39,19 @@ var PaginationStyles = _styledComponents.default.div.withConfig({
 
 var Pagination = function Pagination(_ref2) {
   var activeIndex = _ref2.activeIndex,
+      links = _ref2.links,
       totalIndex = _ref2.totalIndex,
       activeColor = _ref2.activeColor;
-  return _react.default.createElement(PaginationStyles, null, Array.apply(null, {
-    length: totalIndex
-  }).map(function (_, index) {
+  var hasNoLinks = !links && totalIndex;
+  return _react.default.createElement(PaginationStyles, null, links && links.map(function (link, index) {
+    return _react.default.createElement(BulletPointStyles, {
+      as: "a",
+      href: link,
+      key: index,
+      isSelected: activeIndex === index + 1,
+      activeColor: activeColor
+    });
+  }), hasNoLinks && (0, _range.createRangeFromZeroTo)(totalIndex).map(function (_, index) {
     return _react.default.createElement(BulletPointStyles, {
       key: index,
       isSelected: activeIndex === index + 1,
@@ -53,8 +63,9 @@ var Pagination = function Pagination(_ref2) {
 exports.Pagination = Pagination;
 Pagination.propTypes = {
   activeIndex: _propTypes.default.number.isRequired,
-  totalIndex: _propTypes.default.number.isRequired,
-  activeColor: _propTypes.default.string
+  totalIndex: _propTypes.default.number,
+  activeColor: _propTypes.default.string,
+  links: _propTypes.default.arrayOf(_propTypes.default.string)
 };
 Pagination.defaultProps = {
   activeColor: _colorsConfig.default.primary1
