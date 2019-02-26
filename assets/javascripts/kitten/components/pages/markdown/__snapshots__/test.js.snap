@@ -171,6 +171,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
     >
       <a
+        className="k-Paragraph__link"
         href="https://www.google.com"
       >
         I'm an inline-style link
