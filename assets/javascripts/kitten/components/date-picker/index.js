@@ -14,10 +14,14 @@ import {
   LABELS,
   FORMAT,
 } from './date-picker-config'
+import { ScreenConfig } from '../../constants/screen-config'
 import { Navbar } from './components/navbar'
 
 const borderSize = pxToRem(2)
 const cellSize = pxToRem(50)
+const tinyCellSize = pxToRem(40)
+const dayPickerPadding = pxToRem(30)
+const tinyDayPickerPadding = pxToRem(20)
 
 const fontSize = css`
   font-size: ${TYPOGRAPHY.fontSize / TYPOGRAPHY.scaleMultiplier}rem;
@@ -30,6 +34,12 @@ const StyledDatePicker = styled.div`
     box-shadow: none;
     margin-top: 18px;
     outline: none;
+    min-width: calc(7 * ${tinyCellSize} + 2 * ${tinyDayPickerPadding});
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      min-width: calc(7 * ${cellSize} + 2 * ${dayPickerPadding});
+    }
+
     /* Arrow's top header */
     &:before {
       content: '';
@@ -49,8 +59,12 @@ const StyledDatePicker = styled.div`
   .DayPicker-Caption {
     text-align: center;
     height: ${pxToRem(70)};
-    margin: -${pxToRem(2)} -${pxToRem(32)} 0;
+    margin: -${pxToRem(2)} -${pxToRem(22)} 0;
     overflow: hidden;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      margin: -${pxToRem(2)} -${pxToRem(32)} 0;
+    }
 
     ${({ styles }) => css`
       background-color ${styles.header.backgroundColor};
@@ -75,12 +89,17 @@ const StyledDatePicker = styled.div`
   .DayPicker-Weekday,
   .DayPicker-Day {
     padding: 0;
-    width: ${cellSize};
-    height: ${cellSize};
+    width: ${tinyCellSize};
+    height: ${tinyCellSize};
     vertical-align: middle;
     box-sizing: border-box;
     ${fontSize}
     outline: none;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      width: ${cellSize};
+      height: ${cellSize};
+    }
   }
 
   .DayPicker-Day {
@@ -131,8 +150,13 @@ const StyledDatePicker = styled.div`
   }
 
   .DayPicker-wrapper {
-    padding: 0 ${pxToRem(30)} ${pxToRem(30)} ${pxToRem(30)};
+    padding: 0 ${tinyDayPickerPadding} ${tinyDayPickerPadding}
+      ${tinyDayPickerPadding};
     outline: none;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: 0 ${dayPickerPadding} ${dayPickerPadding} ${dayPickerPadding};
+    }
   }
 
   .DayPicker {
@@ -168,7 +192,7 @@ const StyledDatePicker = styled.div`
 
 export class DatePicker extends Component {
   static defaultProps = {
-    locale: 'fr',
+    locale: 'en',
     inputIcon: '📅',
     datePickerProps: {
       disabledDays: [
@@ -237,6 +261,7 @@ export class DatePicker extends Component {
       datePickerProps,
       styles,
       textInputProps,
+      children,
     } = this.props
 
     return (
@@ -257,6 +282,12 @@ export class DatePicker extends Component {
             navbarElement: <Navbar iconColor={styles.header.icon.color} />,
           }}
           component={props => {
+            if (children) {
+              return React.Children.map(children, child =>
+                React.cloneElement(child, props),
+              )
+            }
+
             return (
               <TextInputWithUnit
                 {...textInputProps}
