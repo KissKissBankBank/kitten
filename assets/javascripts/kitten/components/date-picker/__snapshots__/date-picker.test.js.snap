@@ -2,7 +2,7 @@
 
 exports[`<DatePicker /> matches with snapshot 1`] = `
 <div
-  className="date-picker__StyledDatePicker-snpu98-0 hzGJck"
+  className="date-picker__StyledDatePicker-snpu98-0 kXEnsg"
 >
   <div
     className="DayPickerInput"
