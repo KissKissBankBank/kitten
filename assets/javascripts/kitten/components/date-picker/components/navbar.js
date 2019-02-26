@@ -4,11 +4,11 @@ import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledArrowIcon = styled.div`
-  width: 70px;
-  height: 70px;
+  width: ${pxToRem(70)};
+  height: ${pxToRem(70)};
   cursor: pointer;
   position: absolute;
-  top: -2px;
+  top: -${pxToRem(2)};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,7 @@ const StyledArrowIcon = styled.div`
   ${({ left }) =>
     left &&
     css`
-      left: -2px;
+      left: -${pxToRem(2)};
 
       &:hover {
         transform: translate(-${pxToRem(8)});
@@ -26,7 +26,7 @@ const StyledArrowIcon = styled.div`
   ${({ right }) =>
     right &&
     css`
-      right: -2px;
+      right: -${pxToRem(2)};
 
       &:hover {
         transform: translate(${pxToRem(8)});

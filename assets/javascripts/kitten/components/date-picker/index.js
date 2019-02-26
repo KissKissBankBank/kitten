@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components'
 import COLORS from '../../constants/colors-config'
 import TYPOGRAPHY from '../../constants/typography-config'
 import { TextInputWithUnit } from '../../components/form/text-input-with-unit'
+import { pxToRem } from '../../helpers/utils/typography'
 import {
   WEEKDAYS_SHORT,
   MONTHS,
@@ -15,8 +16,8 @@ import {
 } from './date-picker-config'
 import { Navbar } from './components/navbar'
 
-const borderSize = '2px'
-const cellSize = '50px'
+const borderSize = pxToRem(2)
+const cellSize = pxToRem(50)
 
 const fontSize = css`
   font-size: ${TYPOGRAPHY.fontSize / TYPOGRAPHY.scaleMultiplier}rem;
@@ -34,21 +35,21 @@ const StyledDatePicker = styled.div`
       content: '';
       width: 0;
       height: 0;
-      border-left: 9px solid transparent;
-      border-right: 9px solid transparent;
+      border-left: ${pxToRem(9)} solid transparent;
+      border-right: ${pxToRem(9)} solid transparent;
       ${({ styles }) => css`
-        border-bottom: 8px solid ${styles.header.backgroundColor};
+        border-bottom: ${pxToRem(8)} solid ${styles.header.backgroundColor};
       `}
       position: absolute;
-      top: -8px;
-      left: 15px;
+      top: -${pxToRem(8)};
+      left: ${pxToRem(15)};
     }
   }
   /* Header */
   .DayPicker-Caption {
     text-align: center;
-    height: 70px;
-    margin: -2px -32px 0;
+    height: ${pxToRem(70)};
+    margin: -${pxToRem(2)} -${pxToRem(32)} 0;
     overflow: hidden;
 
     ${({ styles }) => css`
@@ -57,8 +58,8 @@ const StyledDatePicker = styled.div`
     `}
 
     & div {
-      padding: 23px 0;
-      margin: 0 63px;
+      padding: ${pxToRem(23)} 0;
+      margin: 0 ${pxToRem(63)};
       ${fontSize}
     }
   }
@@ -130,7 +131,7 @@ const StyledDatePicker = styled.div`
   }
 
   .DayPicker-wrapper {
-    padding: 0 30px 30px 30px;
+    padding: 0 ${pxToRem(30)} ${pxToRem(30)} ${pxToRem(30)};
     outline: none;
   }
 
@@ -179,9 +180,9 @@ export class DatePicker extends Component {
     styles: {
       header: {
         backgroundColor: COLORS.font1,
-        color: '#fff',
+        color: COLORS.background1,
         icon: {
-          color: '#fff',
+          color: COLORS.background1,
         },
       },
       borderColor: COLORS.line1,
@@ -189,7 +190,7 @@ export class DatePicker extends Component {
       day: {
         hover: {
           backgroundColor: COLORS.primary1,
-          color: '#fff',
+          color: COLORS.background1,
         },
         today: {
           color: COLORS.primary1,
@@ -199,7 +200,7 @@ export class DatePicker extends Component {
         },
         selected: {
           backgroundColor: COLORS.primary1,
-          color: '#fff',
+          color: COLORS.background1,
         },
       },
     },
