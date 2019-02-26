@@ -256,7 +256,7 @@ export class DatePicker extends Component {
           parseDate={this.parseDate}
           dayPickerProps={{
             ...datePickerProps,
-            locale: this.props.locale,
+            locale: locale,
             months: months,
             weekdaysLong: weekDays,
             weekdaysShort: weekDays && weekDays.map(str => str.substr(0, 2)),
