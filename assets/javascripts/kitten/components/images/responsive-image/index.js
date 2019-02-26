@@ -12,15 +12,16 @@ export class ResponsiveImage extends Component {
     fromM: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     fromL: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     fromXl: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    isResponsive: PropTypes.boolean,
+    isResponsive: PropTypes.bool,
     pictureProps: PropTypes.object,
-    ratio: 0,
+    ratio: PropTypes.number,
   }
 
   static defaultProps = {
     fromXxs: 350,
     isResponsive: false,
     pictureProps: {},
+    ratio: 0,
   }
 
   constructor(props) {

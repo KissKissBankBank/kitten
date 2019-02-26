@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResponsiveImage /> Basic render matches with snapshot 1`] = `
+<img
+  src="/test/data.jpg"
+/>
+`;
+
+exports[`<ResponsiveImage /> Responsive render matches with snapshot 1`] = `
+<picture
+  className="customClass"
+>
+  <source
+    media="(min-width: 768px)"
+    srcSet="http://localhost:8169/unsafe/400x800/filters:quality(90):format(webp)/host.docker.internal:3000/test/data.jpg, http://localhost:8169/unsafe/800x1600/filters:quality(60):format(webp)/host.docker.internal:3000/test/data.jpg 2x"
+    type="image/webp"
+  />
+  <source
+    media="(min-width: 768px)"
+    srcSet="http://localhost:8169/unsafe/400x800/filters:quality(90):format(jpeg)/host.docker.internal:3000/test/data.jpg, http://localhost:8169/unsafe/800x1600/filters:quality(60):format(jpeg)/host.docker.internal:3000/test/data.jpg 2x"
+    type="image/jpeg"
+  />
+  <img
+    src="http://localhost:8169/unsafe/500x1000/filters:quality(90)/host.docker.internal:3000/test/data.jpg"
+  />
+</picture>
+`;
