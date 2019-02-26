@@ -262,7 +262,7 @@ export class DatePicker extends Component {
             labels: { previousMonth, nextMonth },
             navbarElement: <Navbar iconColor={styles.header.icon.color} />,
           }}
-          /* `component` only accept class to prevent stateless function
+          /* `component` only accepts classes to prevent stateless function
              `ref` error. A fix is currently in progress, see:
              https://github.com/gpbl/react-day-picker/pull/862
           */
