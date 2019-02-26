@@ -4,16 +4,8 @@ import DayPickerInput from 'react-day-picker/DayPickerInput'
 import styled, { css } from 'styled-components'
 import COLORS from '../../constants/colors-config'
 import TYPOGRAPHY from '../../constants/typography-config'
-import { TextInputWithUnit } from '../../components/form/text-input-with-unit'
+import { TextInputWithUnit as TextInputWithUnitBase } from '../../components/form/text-input-with-unit'
 import { pxToRem } from '../../helpers/utils/typography'
-import {
-  WEEKDAYS_SHORT,
-  MONTHS,
-  WEEKDAYS_LONG,
-  FIRST_DAY_OF_WEEK,
-  LABELS,
-  FORMAT,
-} from './date-picker-config'
 import { ScreenConfig } from '../../constants/screen-config'
 import { Navbar } from './components/navbar'
 
@@ -193,7 +185,10 @@ const StyledDatePicker = styled.div`
 export class DatePicker extends Component {
   static defaultProps = {
     locale: 'en',
-    inputIcon: '📅',
+    previousMonth: 'Previous month',
+    nextMonth: 'Next month',
+    weekDays: null,
+    months: null,
     datePickerProps: {
       disabledDays: [
         {
@@ -228,31 +223,15 @@ export class DatePicker extends Component {
         },
       },
     },
-    textInputProps: {},
   }
 
-  state = {
-    selectedDay: new Date(),
-    focused: null,
-    locale: this.props.locale || 'en',
+  parseDate = str => {
+    const [day, month, year] = str.split('/')
+
+    return new Date(year, month - 1, day)
   }
 
-  parseDate = (str, format, locale) => {
-    let day, month, year
-
-    switch (locale) {
-      case 'fr':
-        ;[day, month, year] = str.split('/')
-
-        return new Date(year, month - 1, day)
-      default:
-        ;[month, day, year] = str.split('/')
-
-        return new Date(year, month - 1, day)
-    }
-  }
-
-  formatDate = (date, format, locale) => date.toLocaleDateString(locale)
+  formatDate = date => date.toLocaleDateString('fr')
 
   render() {
     const {
@@ -261,6 +240,10 @@ export class DatePicker extends Component {
       datePickerProps,
       styles,
       textInputProps,
+      previousMonth,
+      nextMonth,
+      weekDays,
+      months,
       children,
     } = this.props
 
@@ -268,38 +251,39 @@ export class DatePicker extends Component {
       <StyledDatePicker styles={styles}>
         <DayPickerInput
           formatDate={this.formatDate}
-          placeholder={FORMAT[locale]}
-          format={FORMAT[locale]}
+          format="dd/mm/yyyy"
+          placeholder="dd/mm/yyyy"
           parseDate={this.parseDate}
           dayPickerProps={{
             ...datePickerProps,
-            locale: locale,
-            months: MONTHS[locale],
-            weekdaysLong: WEEKDAYS_LONG[locale],
-            weekdaysShort: WEEKDAYS_SHORT[locale],
-            firstDayOfWeek: FIRST_DAY_OF_WEEK[locale],
-            labels: LABELS[locale],
+            locale: this.props.locale,
+            months: months,
+            weekdaysLong: weekDays,
+            weekdaysShort: weekDays && weekDays.map(str => str.substr(0, 2)),
+            firstDayOfWeek: 1,
+            labels: { previousMonth, nextMonth },
             navbarElement: <Navbar iconColor={styles.header.icon.color} />,
           }}
-          component={props => {
-            if (children) {
-              return React.Children.map(children, child =>
-                React.cloneElement(child, props),
-              )
-            }
-
-            return (
-              <TextInputWithUnit
-                {...textInputProps}
-                type="text"
-                unit={inputIcon}
-                autocomplete="off"
-                {...props}
-              />
-            )
-          }}
+          /* `component` only accept class to prevent stateless function
+             `ref` error. A fix is currently in progress, see:
+             https://github.com/gpbl/react-day-picker/pull/862
+          */
+          component={children ? children : TextInputWithUnit}
         />
       </StyledDatePicker>
+    )
+  }
+}
+
+class TextInputWithUnit extends Component {
+  render() {
+    return (
+      <TextInputWithUnitBase
+        type="text"
+        unit="📅"
+        autoComplete="off"
+        {...this.props}
+      />
     )
   }
 }

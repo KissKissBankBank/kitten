@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DatePicker /> matches with snapshot 1`] = `
+exports[`<DatePicker /> by default matches with snapshot 1`] = `
 <div
   className="date-picker__StyledDatePicker-snpu98-0 koVTgW"
 >
@@ -11,7 +11,7 @@ exports[`<DatePicker /> matches with snapshot 1`] = `
       className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
     >
       <input
-        autocomplete="off"
+        autoComplete="off"
         className="k-TextInput k-TextInputWithUnit__input"
         disabled={false}
         name="text"
@@ -21,7 +21,7 @@ exports[`<DatePicker /> matches with snapshot 1`] = `
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
-        placeholder="mm/dd/yyyy"
+        placeholder="dd/mm/yyyy"
         type="text"
         value=""
       />
@@ -31,6 +31,29 @@ exports[`<DatePicker /> matches with snapshot 1`] = `
         📅
       </span>
     </div>
+  </div>
+</div>
+`;
+
+exports[`<DatePicker /> with custom input matches with snapshot 1`] = `
+<div
+  className="date-picker__StyledDatePicker-snpu98-0 koVTgW"
+>
+  <div
+    className="DayPickerInput"
+  >
+    <input
+      autoComplete="off"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      placeholder="dd/mm/yyyy"
+      type="text"
+      value=""
+    />
   </div>
 </div>
 `;

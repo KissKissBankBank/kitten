@@ -36,14 +36,28 @@ const StyledArrowIcon = styled.div`
 
 export class Navbar extends Component {
   render() {
-    const { onPreviousClick, onNextClick, className, iconColor } = this.props
+    const {
+      onPreviousClick,
+      onNextClick,
+      className,
+      iconColor,
+      labels,
+    } = this.props
 
     return (
       <div className={className}>
-        <StyledArrowIcon onClick={() => onPreviousClick()} left>
+        <StyledArrowIcon
+          aria-label={labels.previoustMonth}
+          onClick={() => onPreviousClick()}
+          left
+        >
           <ArrowIcon version="solid" fill={iconColor} direction="left" />
         </StyledArrowIcon>
-        <StyledArrowIcon onClick={() => onNextClick()} right>
+        <StyledArrowIcon
+          aria-label={labels.nextMonth}
+          onClick={() => onNextClick()}
+          right
+        >
           <ArrowIcon version="solid" fill={iconColor} />
         </StyledArrowIcon>
       </div>

@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { DatePicker } from './index'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, date, select, text, object } from '@storybook/addon-knobs'
+import {
+  withKnobs,
+  date,
+  select,
+  text,
+  object,
+  array,
+} from '@storybook/addon-knobs'
 import { Container } from '../../components/grid/container'
 import { Marger } from '../../components/layout/marger'
 import COLORS from '../../constants/colors-config'
@@ -43,6 +50,37 @@ const styles = {
   },
 }
 
+const weekDays = [
+  'Dimanche',
+  'Lundi',
+  'Mardi',
+  'Mercredi',
+  'Jeudi',
+  'Vendredi',
+  'Samedi',
+]
+
+const months = [
+  'Janvier',
+  'Février',
+  'Mars',
+  'Avril',
+  'Mai',
+  'Juin',
+  'Juillet',
+  'Août',
+  'Septembre',
+  'Octobre',
+  'Novembre',
+  'Décembre',
+]
+
+class CustomInput extends Component {
+  render() {
+    return <input type="text" autoComplete="off" {...this.props} />
+  }
+}
+
 storiesOf('Form/DatePicker', module)
   .addDecorator(withKnobs)
   .add('with default TextInputWithUnit', () => {
@@ -50,12 +88,11 @@ storiesOf('Form/DatePicker', module)
       <StoryContainer>
         <DatePicker
           selectedDay={date('default selected Date', today)}
-          locale={select(
-            'Default language',
-            { french: 'fr', english: 'en' },
-            'fr',
-          )}
-          inputIcon={text('Icon', '📅')}
+          locale="fr"
+          weekDays={array('Week days', weekDays)}
+          months={array('Months', months)}
+          previousMonth={text('Aria-label for previous month', 'Mois suivant')}
+          nextMonth={text('Aria-label for next month', 'Mois précédent')}
           styles={object('Styles', styles)}
         />
       </StoryContainer>
@@ -66,14 +103,9 @@ storiesOf('Form/DatePicker', module)
       <StoryContainer>
         <DatePicker
           selectedDay={date('default selected Date', today)}
-          locale={select(
-            'Default language',
-            { french: 'fr', english: 'en' },
-            'fr',
-          )}
           styles={object('Styles', styles)}
         >
-          <input type="text" autocomplete="off" />
+          {CustomInput}
         </DatePicker>
       </StoryContainer>
     )
