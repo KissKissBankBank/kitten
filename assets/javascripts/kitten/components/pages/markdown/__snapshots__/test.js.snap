@@ -1,6 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MarkdownPage /> matches with snapshot 1`] = `
+exports[`<MarkdownPage /> with \`modifierParagraph\` props matches with snapshot 1`] = `<div />`;
+
+exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
 <div>
   <div
     className="marger__StyledMarger-q3lecu-0 kboIqb"

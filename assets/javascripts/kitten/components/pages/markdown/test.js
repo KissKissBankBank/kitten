@@ -25,15 +25,27 @@ const defaultText = `
 describe('<MarkdownPage />', () => {
   let component
 
-  beforeEach(() => {
-    component = renderer
-      .create(
-        <MarkdownPage children={defaultText} modifierParagraph="primary" />,
-      )
-      .toJSON()
+  describe('with children', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<MarkdownPage children={defaultText} />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
   })
 
-  it('matches with snapshot', () => {
-    expect(component).toMatchSnapshot()
+  describe('with `modifierParagraph` props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<MarkdownPage modifierParagraph="primary" />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
   })
 })
