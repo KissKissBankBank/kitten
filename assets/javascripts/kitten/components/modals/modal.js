@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import styled, { css } from 'styled-components'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
 import { CloseButton } from '../../components/buttons/close-button'
+
+const CloseModal = styled(CloseButton)`
+  position: absolute;
+  top: 0;
+  right: 0;
+`
 
 export class Modal extends Component {
   constructor(props) {
@@ -26,13 +33,7 @@ export class Modal extends Component {
   }
 
   renderCloseModal() {
-    return (
-      <CloseButton
-        className="k-Modal__close"
-        modifier="beryllium"
-        onClick={this.close}
-      />
-    )
+    return <CloseModal modifier="beryllium" onClick={this.close} />
   }
 
   renderTriggerAction() {
