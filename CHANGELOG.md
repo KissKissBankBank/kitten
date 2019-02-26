@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `MarkdownPage` component.
+- Feature: Create `DatePicker` component.
 - Feature: Add new carousel which better work inside grid.
   The pagination buttons from `Carousel` can now be place everywhere
   around the component by using this props `paginationPosition` with object keys
