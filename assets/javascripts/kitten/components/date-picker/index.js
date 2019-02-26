@@ -236,10 +236,8 @@ export class DatePicker extends Component {
   render() {
     const {
       locale,
-      inputIcon,
       datePickerProps,
       styles,
-      textInputProps,
       previousMonth,
       nextMonth,
       weekDays,
