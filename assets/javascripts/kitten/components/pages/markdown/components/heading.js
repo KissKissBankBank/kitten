@@ -30,7 +30,7 @@ export const MarkdownHeading = props => {
       break
   }
 
-  const renderHorizontalStroke = () => {
+  const renderHorizontalStroke = props => {
     if (props.level > 1) return
 
     return (

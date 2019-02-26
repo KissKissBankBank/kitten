@@ -27,7 +27,9 @@ describe('<MarkdownPage />', () => {
 
   beforeEach(() => {
     component = renderer
-      .create(<MarkdownPage children={defaultText} />)
+      .create(
+        <MarkdownPage children={defaultText} modifierParagraph="primary" />,
+      )
       .toJSON()
   })
 
