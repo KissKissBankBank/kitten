@@ -2,7 +2,7 @@
 
 exports[`<DatePicker /> matches with snapshot 1`] = `
 <div
-  className="date-picker__StyledDatePicker-snpu98-0 kXEnsg"
+  className="date-picker__StyledDatePicker-snpu98-0 koVTgW"
 >
   <div
     className="DayPickerInput"
@@ -21,7 +21,7 @@ exports[`<DatePicker /> matches with snapshot 1`] = `
         onFocus={[Function]}
         onKeyDown={[Function]}
         onKeyUp={[Function]}
-        placeholder="dd/mm/yyyy"
+        placeholder="mm/dd/yyyy"
         type="text"
         value=""
       />
