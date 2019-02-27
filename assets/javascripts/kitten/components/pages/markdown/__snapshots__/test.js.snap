@@ -18,7 +18,10 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 PUhWi"
   >
     <span
-      className="k-HorizontalStroke k-HorizontalStroke--big"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      height={null}
+      size="big"
+      width={null}
     />
   </div>
   <div
@@ -55,7 +58,10 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 PUhWi"
   >
     <span
-      className="k-HorizontalStroke k-HorizontalStroke--big"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      height={null}
+      size="big"
+      width={null}
     />
   </div>
   <div
@@ -107,7 +113,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 PUhWi"
   >
     <span
-      className="k-HorizontalStroke k-HorizontalStroke--big"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      height={null}
+      size="big"
+      width={null}
     />
   </div>
   <div
@@ -163,7 +172,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 PUhWi"
   >
     <span
-      className="k-HorizontalStroke k-HorizontalStroke--big"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      height={null}
+      size="big"
+      width={null}
     />
   </div>
   <div
