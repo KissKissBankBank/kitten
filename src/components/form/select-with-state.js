@@ -135,9 +135,9 @@ function (_Component) {
         className: selectClassName
       }, labelText && _react.default.createElement("label", {
         className: "k-Select__label",
-        for: this.props.id
+        htmlFor: this.props.id
       }, labelText), autoFill && _react.default.createElement("input", {
-        autocomplete: autoFill,
+        autoComplete: autoFill,
         "x-autocompletetype": autoFill,
         xautocompletetype: autoFill,
         autocompletetype: autoFill,
