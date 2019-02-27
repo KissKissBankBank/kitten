@@ -6,20 +6,15 @@ import { MarkdownLink } from './components/link'
 import { MarkdownList } from './components/list'
 import { MarkdownParagraph } from './components/paragraph'
 
-export class MarkdownPage extends Component {
-  render() {
-    return (
-      <Markdown
-        source={this.props.children}
-        renderers={markdownRenderers}
-        escapeHtml={false}
-      />
-    )
-  }
-}
-
-MarkdownPage.propTypes = {
-  children: PropTypes.node.isRequired,
+export const MarkdownPage = props => {
+  console.log('props', props)
+  return (
+    <Markdown
+      source={props.children}
+      renderers={markdownRenderers}
+      escapeHtml={false}
+    />
+  )
 }
 
 const markdownRenderers = {
@@ -27,4 +22,8 @@ const markdownRenderers = {
   list: MarkdownList,
   link: MarkdownLink,
   heading: MarkdownHeading,
+}
+
+MarkdownPage.propTypes = {
+  children: PropTypes.node.isRequired,
 }

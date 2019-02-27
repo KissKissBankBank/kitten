@@ -44,7 +44,7 @@ storiesOf('Pages/Markdown-Page', module)
   .add('default', () => {
     return (
       <StoryContainer>
-        <MarkdownPage children={text('Markdown', defaultText)} />
+        <MarkdownPage children={defaultText} />
       </StoryContainer>
     )
   })
