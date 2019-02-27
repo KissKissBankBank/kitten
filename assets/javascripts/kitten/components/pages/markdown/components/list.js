@@ -6,7 +6,7 @@ import { Marger } from '../../../layout/marger'
 
 const BulletListStyle = styled(BulletList)`
   li {
-    lineheight: 1.8rem;
+    line-height: 1.8rem;
   }
 `
 
