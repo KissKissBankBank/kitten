@@ -6,16 +6,13 @@ import { MarkdownLink } from './components/link'
 import { MarkdownList } from './components/list'
 import { MarkdownParagraph } from './components/paragraph'
 
-export const MarkdownPage = props => {
-  console.log('props', props)
-  return (
-    <Markdown
-      source={props.children}
-      renderers={markdownRenderers}
-      escapeHtml={false}
-    />
-  )
-}
+export const MarkdownPage = props => (
+  <Markdown
+    source={props.children}
+    renderers={markdownRenderers}
+    escapeHtml={false}
+  />
+)
 
 const markdownRenderers = {
   paragraph: MarkdownParagraph,
