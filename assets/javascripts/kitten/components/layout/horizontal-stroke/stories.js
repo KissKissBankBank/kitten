@@ -45,6 +45,11 @@ const info = {
     <HorizontalStroke size="big" />
     <HorizontalStroke size="huge" />
     ~~~
+
+    #### Custom size
+    ~~~js
+    <HorizontalStroke width={ 100 } height={ 50 } />
+    ~~~
   `,
   header: false,
   propTables: false,
