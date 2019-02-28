@@ -15,8 +15,6 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _slugify = _interopRequireDefault(require("slugify"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _title = require("../../../typography/title");
 
 var _horizontalStroke = require("../../../layout/horizontal-stroke");
@@ -79,10 +77,3 @@ var MarkdownHeading = function MarkdownHeading(props) {
 };
 
 exports.MarkdownHeading = MarkdownHeading;
-MarkdownHeading.defaultProps = {
-  level: null
-};
-MarkdownHeading.propTypes = {
-  level: _propTypes.default.number,
-  children: _propTypes.default.node.isRequired
-};

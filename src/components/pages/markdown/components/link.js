@@ -11,8 +11,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var MarkdownLink = function MarkdownLink(props) {
   return _react.default.createElement("a", {
     href: props.href,
@@ -21,7 +19,3 @@ var MarkdownLink = function MarkdownLink(props) {
 };
 
 exports.MarkdownLink = MarkdownLink;
-MarkdownLink.propTypes = {
-  href: _propTypes.default.string.isRequired,
-  children: _propTypes.default.node.isRequired
-};
