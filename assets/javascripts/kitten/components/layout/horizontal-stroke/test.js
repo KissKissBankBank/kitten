@@ -49,7 +49,7 @@ describe('<HorizontalStroke />', () => {
   describe('with with and height props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<HorizontalStroke width={100} height={50} />)
+        .create(<HorizontalStroke customSize={{ width: 100, height: 50 }} />)
         .toJSON()
     })
 

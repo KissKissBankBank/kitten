@@ -63,11 +63,11 @@ exports[`<HorizontalStroke /> with with and height props matches with snapshot 1
   background: #222;
   width: 1.875rem;
   height: 0.25rem;
+  width: 6.25rem;
+  height: 3.125rem;
 }
 
 <span
   className="c0"
-  height={50}
-  width={100}
 />
 `;
