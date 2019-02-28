@@ -37,10 +37,12 @@ describe('<MarkdownPage />', () => {
     })
   })
 
-  describe('with `modifierParagraph` props', () => {
+  describe('with `paragraphModifier` props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<MarkdownPage modifierParagraph="primary" />)
+        .create(
+          <MarkdownPage children={defaultText} paragraphModifier="primary" />,
+        )
         .toJSON()
     })
 

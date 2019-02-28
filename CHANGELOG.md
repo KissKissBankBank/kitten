@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `Video` component.
 
+## [1.18.1] - 2019-02-28
+
+Fix:
+- Update `paragraphModifier` props to `MarkdownPage` component.
+
 ## [1.18.0] - 2019-02-27
 
 Features:
