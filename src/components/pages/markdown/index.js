@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.MarkdownPage = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _reactMarkdown = _interopRequireDefault(require("react-markdown"));
 
@@ -23,12 +21,20 @@ var _list = require("./components/list");
 
 var _paragraph = require("./components/paragraph");
 
-var MarkdownPage = function MarkdownPage(props) {
-  return _react.default.createElement(_reactMarkdown.default, {
-    source: props.children,
+var _context = require("./components/context");
+
+var MarkdownPage = function MarkdownPage(_ref) {
+  var children = _ref.children,
+      paragraphModifier = _ref.paragraphModifier;
+  return _react.default.createElement(_context.Context.Provider, {
+    value: {
+      paragraphModifier: paragraphModifier
+    }
+  }, _react.default.createElement(_reactMarkdown.default, {
+    source: children,
     renderers: markdownRenderers,
     escapeHtml: false
-  });
+  }));
 };
 
 exports.MarkdownPage = MarkdownPage;
@@ -39,5 +45,9 @@ var markdownRenderers = {
   heading: _heading.MarkdownHeading
 };
 MarkdownPage.propTypes = {
-  children: _propTypes.default.node.isRequired
+  children: _propTypes.default.node.isRequired,
+  paragraphModifier: _propTypes.default.oneOf(['primary', 'secondary', 'tertiary', 'quaternary'])
+};
+MarkdownPage.defaultProps = {
+  paragraphModifier: 'quaternary'
 };

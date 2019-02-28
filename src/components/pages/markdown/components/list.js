@@ -11,8 +11,6 @@ var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _bulletList = require("../../../lists/bullet-list");
 
 var _marger = require("../../../layout/marger");
@@ -39,6 +37,3 @@ var MarkdownList = function MarkdownList(props) {
 };
 
 exports.MarkdownList = MarkdownList;
-MarkdownList.propTypes = {
-  children: _propTypes.default.node.isRequired
-};

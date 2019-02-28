@@ -5,9 +5,9 @@ import { Context } from './context'
 
 export const MarkdownParagraph = ({ children }) => (
   <Context.Consumer>
-    {({ modifierParagraph }) => (
+    {({ paragraphModifier }) => (
       <Marger bottom="2.6">
-        <Paragraph modifier={modifierParagraph} margin={false}>
+        <Paragraph modifier={paragraphModifier} margin={false}>
           {children}
         </Paragraph>
       </Marger>

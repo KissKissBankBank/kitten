@@ -7,8 +7,8 @@ import { MarkdownList } from './components/list'
 import { MarkdownParagraph } from './components/paragraph'
 import { Context } from './components/context'
 
-export const MarkdownPage = ({ children, modifierParagraph }) => (
-  <Context.Provider value={{ modifierParagraph }}>
+export const MarkdownPage = ({ children, paragraphModifier }) => (
+  <Context.Provider value={{ paragraphModifier }}>
     <Markdown
       source={children}
       renderers={markdownRenderers}
@@ -26,7 +26,7 @@ const markdownRenderers = {
 
 MarkdownPage.propTypes = {
   children: PropTypes.node.isRequired,
-  modifierParagraph: PropTypes.oneOf([
+  paragraphModifier: PropTypes.oneOf([
     'primary',
     'secondary',
     'tertiary',
@@ -35,5 +35,5 @@ MarkdownPage.propTypes = {
 }
 
 MarkdownPage.defaultProps = {
-  modifierParagraph: 'quaternary',
+  paragraphModifier: 'quaternary',
 }

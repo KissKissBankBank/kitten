@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
 import slugify from 'slugify'
 import { Title } from '../../../typography/title'
 import { HorizontalStroke } from '../../../layout/horizontal-stroke'

@@ -53,7 +53,7 @@ storiesOf('Pages/Markdown-Page', module)
       <StoryContainer>
         <MarkdownPage
           children={text('children', defaultText)}
-          modifierParagraph={select(
+          paragraphModifier={select(
             'Modifier paragraph',
             modifierOptions,
             'primary',
