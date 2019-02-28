@@ -11,8 +11,6 @@ exports.MarkdownHeading = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _slugify = _interopRequireDefault(require("slugify"));
 
 var _title = require("../../../typography/title");
