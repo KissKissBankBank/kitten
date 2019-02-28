@@ -10,8 +10,8 @@ export const StyledHorizontalStroke = styled.span`
   border: none;
   background: ${COLORS.font1};
 
-  ${({ size }) => {
-    switch (size) {
+  ${({ modifierSize }) => {
+    switch (modifierSize) {
       case 'tiny':
         return TINY
       case 'big':
@@ -23,17 +23,17 @@ export const StyledHorizontalStroke = styled.span`
     }
   }}
 
-  ${({ width }) =>
-    width &&
+  ${({ customSize: { width } }) =>
+    !!width &&
     css`
       width: ${pxToRem(width)};
     `}
 
-   ${({ height }) =>
-     height &&
-     css`
-       height: ${pxToRem(height)};
-     `}
+  ${({ customSize: { height } }) =>
+    !!height &&
+    css`
+      height: ${pxToRem(height)};
+    `}
 
   ${props => props.styles}
 `
@@ -58,18 +58,22 @@ export const HUGE = css`
   height: ${pxToRem(6)};
 `
 
-export const HorizontalStroke = ({ style, ...props }) => (
-  <StyledHorizontalStroke {...props} styles={style} />
+export const HorizontalStroke = ({ style, size, ...props }) => (
+  <StyledHorizontalStroke {...props} modifierSize={size} styles={style} />
 )
 
 HorizontalStroke.propTypes = {
   size: PropTypes.oneOf(['tiny', 'default', 'big', 'huge']),
-  width: PropTypes.number,
-  height: PropTypes.number,
+  customSize: PropTypes.shape({
+    width: PropTypes.number,
+    height: PropTypes.number,
+  }),
 }
 
 HorizontalStroke.defaultProps = {
   size: 'default',
-  width: null,
-  height: null,
+  customSize: {
+    width: null,
+    height: null,
+  },
 }

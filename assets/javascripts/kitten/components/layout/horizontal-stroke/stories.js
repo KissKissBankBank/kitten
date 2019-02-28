@@ -30,6 +30,11 @@ const info = {
     import { HorizontalStroke } from '@kisskissbankbank/kitten/src/components/layout/horizontal-stroke'
     ~~~
 
+    #### Size CSS
+    ~~~js
+    import { TINY, DEFAULT, BIG, HUGE } from '@kisskissbankbank/kitten/src/components/layout/horizontal-stroke'
+    ~~~
+
     ## Usage
     &nbsp;
 
@@ -48,7 +53,7 @@ const info = {
 
     #### Custom size
     ~~~js
-    <HorizontalStroke width={ 100 } height={ 50 } />
+    <HorizontalStroke customSize={{ width: 100, height: 50 }} />
     ~~~
   `,
   header: false,
@@ -66,8 +71,10 @@ storiesOf('Layout/HorizontalStroke', module)
           <Container>
             <HorizontalStroke
               size={select('Size', sizeOptions, 'default')}
-              width={number('Width', 0)}
-              height={number('Height', 0)}
+              customSize={{
+                width: number('Width', null),
+                height: number('Height', null),
+              }}
             />
           </Container>
         </Marger>

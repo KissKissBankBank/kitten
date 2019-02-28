@@ -131,9 +131,6 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
       >
         <span
           className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 ifvkxH"
-          height={null}
-          size="tiny"
-          width={null}
         />
       </div>
     </div>
@@ -275,9 +272,6 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
       >
         <span
           className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 RWndB"
-          height={null}
-          size="tiny"
-          width={null}
         />
         <span
           data-radium={true}
@@ -460,9 +454,6 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       >
         <span
           className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 ifvkxH"
-          height={null}
-          size="tiny"
-          width={null}
         />
         <p
           className="k-u-size-micro k-u-weight-regular"

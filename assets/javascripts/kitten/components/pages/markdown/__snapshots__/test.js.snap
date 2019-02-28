@@ -19,9 +19,6 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
   >
     <span
       className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
-      height={null}
-      size="big"
-      width={null}
     />
   </div>
   <div
@@ -59,9 +56,6 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
   >
     <span
       className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
-      height={null}
-      size="big"
-      width={null}
     />
   </div>
   <div
@@ -114,9 +108,6 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   >
     <span
       className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
-      height={null}
-      size="big"
-      width={null}
     />
   </div>
   <div
@@ -173,9 +164,6 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   >
     <span
       className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
-      height={null}
-      size="big"
-      width={null}
     />
   </div>
   <div

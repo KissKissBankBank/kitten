@@ -11,9 +11,6 @@ exports[`<HorizontalStroke /> by default matches with snapshot 1`] = `
 
 <span
   className="c0"
-  height={null}
-  size="default"
-  width={null}
 />
 `;
 
@@ -28,9 +25,6 @@ exports[`<HorizontalStroke /> with \`big\` size matches with snapshot 1`] = `
 
 <span
   className="c0"
-  height={null}
-  size="big"
-  width={null}
 />
 `;
 
@@ -45,9 +39,6 @@ exports[`<HorizontalStroke /> with \`huge\` size matches with snapshot 1`] = `
 
 <span
   className="c0"
-  height={null}
-  size="huge"
-  width={null}
 />
 `;
 
@@ -62,9 +53,6 @@ exports[`<HorizontalStroke /> with \`tiny\` size matches with snapshot 1`] = `
 
 <span
   className="c0"
-  height={null}
-  size="tiny"
-  width={null}
 />
 `;
 
@@ -75,14 +63,11 @@ exports[`<HorizontalStroke /> with with and height props matches with snapshot 1
   background: #222;
   width: 1.875rem;
   height: 0.25rem;
-  width: 6.25rem;
-  height: 3.125rem;
 }
 
 <span
   className="c0"
   height={50}
-  size="default"
   width={100}
 />
 `;

@@ -47,9 +47,6 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       </h6>
       <span
         className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 MGUQ"
-        height={null}
-        size="default"
-        width={null}
       />
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -203,9 +200,6 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       </h6>
       <span
         className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 MGUQ"
-        height={null}
-        size="default"
-        width={null}
       />
       <p
         className="k-u-color-font1 k-u-weight-bold"
@@ -464,9 +458,6 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           >
             <span
               className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
-              height={null}
-              size="big"
-              width={null}
             />
           </div>
           <div
