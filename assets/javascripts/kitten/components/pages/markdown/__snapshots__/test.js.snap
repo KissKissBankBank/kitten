@@ -62,7 +62,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 loOPNX"
   >
     <p
-      className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
+      className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
     >
       Emphasis, aka italics, with 
       <em>
@@ -170,7 +170,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 loOPNX"
   >
     <p
-      className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
+      className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
     >
       <a
         className="k-Paragraph__link"

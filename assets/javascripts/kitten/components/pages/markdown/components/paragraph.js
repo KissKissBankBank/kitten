@@ -1,21 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Paragraph } from '../../../typography/paragraph'
 import { Marger } from '../../../layout/marger'
+import { Context } from './context'
 
-export const MarkdownParagraph = props => (
-  <Marger bottom="2.6">
-    <Paragraph modifier={props.modifierParagraph} margin={false}>
-      {props.children}
-    </Paragraph>
-  </Marger>
+export const MarkdownParagraph = ({ children }) => (
+  <Context.Consumer>
+    {({ modifierParagraph }) => (
+      <Marger bottom="2.6">
+        <Paragraph modifier={modifierParagraph} margin={false}>
+          {children}
+        </Paragraph>
+      </Marger>
+    )}
+  </Context.Consumer>
 )
-
-MarkdownParagraph.propTypes = {
-  children: PropTypes.node.isRequired,
-  modifierParagraph: PropTypes.string,
-}
-
-MarkdownParagraph.defaultProps = {
-  modifierParagraph: 'primary',
-}

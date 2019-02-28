@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import slugify from 'slugify'
-import PropTypes from 'prop-types'
 import { Title } from '../../../typography/title'
 import { HorizontalStroke } from '../../../layout/horizontal-stroke'
 import { Marger } from '../../../layout/marger'
@@ -55,13 +54,4 @@ export const MarkdownHeading = props => {
       {renderHorizontalStroke()}
     </Fragment>
   )
-}
-
-MarkdownHeading.defaultProps = {
-  level: null,
-}
-
-MarkdownHeading.propTypes = {
-  level: PropTypes.number,
-  children: PropTypes.node.isRequired,
 }
