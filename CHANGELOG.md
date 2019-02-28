@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Video` component.
+
 ## [1.18.0] - 2019-02-27
 
 Features:
