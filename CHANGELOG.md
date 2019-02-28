@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update `modifierParagraph` props to `MarkdownPage` component.
+- Fix: Update `paragraphModifier` props to `MarkdownPage` component.
 
 ## [1.18.0] - 2019-02-27
 
