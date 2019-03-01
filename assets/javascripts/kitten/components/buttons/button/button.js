@@ -58,12 +58,7 @@ const StyledButton = styled.button`
       font-size: ${pxToRem(16)};
     `}
 
-  ${({ fluid }) =>
-    fluid &&
-    css`
-      min-width: initial;
-      width: 100%;
-    `}
+  ${({ fluid }) => fluid && FLUID}
 
   ${({ icon }) =>
     icon &&
@@ -90,6 +85,11 @@ const StyledButton = styled.button`
     `}
 
   ${({ modifier }) => modifierStyles(modifier)}
+`
+
+export const FLUID = css`
+  min-width: initial;
+  width: 100%;
 `
 
 export class Button extends Component {

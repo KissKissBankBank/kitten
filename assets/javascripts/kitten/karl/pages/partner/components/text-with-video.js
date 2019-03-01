@@ -1,25 +1,61 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Title } from '../../../../components/typography/title'
 import { Paragraph } from '../../../../components/typography/paragraph'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
-import { Button } from '../../../../components/buttons/button/button'
-import { CONTAINER_PADDING } from '../../../../constants/grid-config'
+import {
+  HorizontalStroke,
+  DEFAULT,
+  BIG,
+} from '../../../../components/layout/horizontal-stroke'
+import { Button, FLUID } from '../../../../components/buttons/button/button'
+import {
+  CONTAINER_PADDING,
+  CONTAINER_PADDING_THIN,
+} from '../../../../constants/grid-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Video } from '../../../../components/videos/video'
 import { Loader } from '../../../../components/loaders/loader'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledGrid = styled(Grid)`
   align-items: center;
 `
 
 const StyledVideo = styled.div`
-  height: ${pxToRem(800)};
-  margin-left: -${pxToRem(CONTAINER_PADDING)};
+  height: ${pxToRem(200)};
+  margin-left: -${pxToRem(CONTAINER_PADDING_THIN)};
+  margin-right: -${pxToRem(CONTAINER_PADDING_THIN)};
   background: #404040;
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    height: ${pxToRem(350)};
+    margin-left: -${pxToRem(CONTAINER_PADDING)};
+    margin-right: -${pxToRem(CONTAINER_PADDING)};
+  }
+
+  @media (min-width: ${ScreenConfig.L.min}px) {
+    height: ${pxToRem(800)};
+    margin-right: 0;
+  }
+`
+
+const StyledHorizontalStroke = styled(HorizontalStroke)`
+  ${DEFAULT}
+  width: ${pxToRem(40)};
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    ${BIG}
+    height: ${pxToRem(6)};
+  }
+`
+
+const StyledButton = styled(props => <Button as="a" {...props} />)`
+  @media (max-width: ${ScreenConfig.XS.max}px) {
+    ${FLUID}
+  }
 `
 
 const TextWithVideo = () => (
@@ -42,15 +78,15 @@ const TextWithVideo = () => (
           </StyledVideo>
         </GridCol>
 
-        <GridCol col-l="5" offset-l="1">
-          <Marger top="2" bottom="2">
+        <GridCol col-s="10" col-l="5" offset-s="1">
+          <Marger top={{ default: 4, fromS: 8, fromL: 0 }} bottom="2">
             <Title tag="h1" modifier="secondary" margin={false}>
               Devenons partenaires, favorisons l’émergence de projets inspirants
             </Title>
           </Marger>
 
-          <Marger bottom="4">
-            <HorizontalStroke size="big" customSize={{ height: 6 }} />
+          <Marger bottom={{ default: 3, fromS: 4 }}>
+            <StyledHorizontalStroke />
           </Marger>
 
           <Marger bottom="2">
@@ -61,10 +97,10 @@ const TextWithVideo = () => (
             </Paragraph>
           </Marger>
 
-          <Marger top="4" bottom="2">
-            <Button as="a" href="#" modifier="helium" big>
+          <Marger top="4">
+            <StyledButton href="#" modifier="helium" big>
               Devenir partenaire
-            </Button>
+            </StyledButton>
           </Marger>
         </GridCol>
       </StyledGrid>
