@@ -27,7 +27,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _textInput = require("../../components/form/text-input");
+var _textInput = require("../../../components/form/text-input");
 
 var TextInputWithButton =
 /*#__PURE__*/
