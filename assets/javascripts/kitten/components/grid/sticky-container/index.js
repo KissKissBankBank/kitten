@@ -6,6 +6,8 @@ import ColorsConfig from '../../../constants/colors-config'
 import { throttle } from '../../../helpers/utils/throttle'
 
 const StyledStickyContainer = styled.div`
+  will-change: transform;
+
   ${({ sticky }) =>
     !sticky
       ? css`
