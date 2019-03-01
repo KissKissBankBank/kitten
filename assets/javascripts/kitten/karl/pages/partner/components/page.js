@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import { Header } from '../../../../components/headers/header'
 import TextWithVideo from './text-with-video'
 import TextWithIconsList from './text-with-icons-list'
 import TextWithImages from './text-with-images'
@@ -11,15 +12,16 @@ class PartnerPage extends Component {
   render() {
     return (
       <Fragment>
+        <Header />
         <TextWithVideo />
-        <TextWithIconsList />
+        {/* <TextWithIconsList />
         <TextWithImages />
         <Title />
         <TextWithImage />
         <TextWithImage imagePosition="right" />
         <TextWithImage />
         <Triptych />
-        <FormWithImage />
+        <FormWithImage /> */}
       </Fragment>
     )
   }
