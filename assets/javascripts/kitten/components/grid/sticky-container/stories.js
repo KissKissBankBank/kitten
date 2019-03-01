@@ -31,14 +31,14 @@ storiesOf('Grid/StickyContainer', module).add(
           }}
         >
           <StickyContainer isStickyOnScroll="up">
-            <span
+            <div
               style={{
                 fontSize: '40px',
                 lineHeight: '40px',
               }}
             >
               🦊
-            </span>
+            </div>
           </StickyContainer>
           <BlockContent />
         </div>
