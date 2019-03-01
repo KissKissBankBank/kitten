@@ -17,7 +17,7 @@ const StyledGrid = styled(Grid)`
 `
 
 const StyledVideo = styled.div`
-  height: calc(100vh - 65px);
+  height: ${pxToRem(800)};
   margin-left: -${pxToRem(CONTAINER_PADDING)};
   background: #404040;
 `
@@ -50,7 +50,7 @@ const TextWithVideo = () => (
           </Marger>
 
           <Marger bottom="4">
-            <HorizontalStroke size="big" style={{ height: 6 }} />
+            <HorizontalStroke size="big" customSize={{ height: 6 }} />
           </Marger>
 
           <Marger bottom="2">
