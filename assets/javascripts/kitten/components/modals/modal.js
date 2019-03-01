@@ -22,7 +22,15 @@ export class Modal extends Component {
   }
 
   renderCloseModal() {
-    return <CloseButton modifier="beryllium" onClick={this.close} />
+    return (
+      <div className="k-Modal__close">
+        <CloseButton
+          className="k-Modal__close--fixed"
+          modifier="beryllium"
+          onClick={this.close}
+        />
+      </div>
+    )
   }
 
   renderTriggerAction() {

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `position: fixed` on `Modal` component.
+
 ## [1.18.1] - 2019-02-28
 
 Fix:
