@@ -77,10 +77,10 @@ var checkPage = function checkPage(numPages, newPage) {
 
 exports.checkPage = checkPage;
 
-var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess) {
-  if (viewportIsMobile) {
+var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess) {
+  if (viewportIsXSOrLess) {
     return _gridConfig.CONTAINER_PADDING_MOBILE / 2;
-  } else if (viewportIsTabletOrLess) {
+  } else if (viewportIsMOrLess) {
     return _gridConfig.CONTAINER_PADDING / 2;
   } else {
     return baseItemMarginBetween;
@@ -103,9 +103,9 @@ function (_React$Component) {
           data = _this$props.data,
           itemMinWidth = _this$props.itemMinWidth,
           baseItemMarginBetween = _this$props.baseItemMarginBetween,
-          viewportIsMobile = _this$props.viewportIsMobile,
-          viewportIsTabletOrLess = _this$props.viewportIsTabletOrLess;
-      var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess);
+          viewportIsXSOrLess = _this$props.viewportIsXSOrLess,
+          viewportIsMOrLess = _this$props.viewportIsMOrLess;
+      var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
       var numColumns = getNumColumnsForWidth(widthInner, itemMinWidth, itemMarginBetween);
       var numPages = getNumPagesForColumnsAndDataLength(data.length, numColumns);
 
@@ -157,13 +157,13 @@ function (_React$Component) {
           itemMinWidth = _this$props2.itemMinWidth,
           renderItem = _this$props2.renderItem,
           baseItemMarginBetween = _this$props2.baseItemMarginBetween,
-          viewportIsMobile = _this$props2.viewportIsMobile,
-          viewportIsTabletOrLess = _this$props2.viewportIsTabletOrLess;
+          viewportIsXSOrLess = _this$props2.viewportIsXSOrLess,
+          viewportIsMOrLess = _this$props2.viewportIsMOrLess;
       var _this$state3 = _this.state,
           indexPageVisible = _this$state3.indexPageVisible,
           numColumns = _this$state3.numColumns,
           numPages = _this$state3.numPages;
-      var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess);
+      var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
       return _react.default.createElement(_carouselInner.CarouselInner, {
         data: data,
         itemMinWidth: itemMinWidth,
@@ -172,7 +172,7 @@ function (_React$Component) {
         numColumns: numColumns,
         numPages: numPages,
         itemMarginBetween: itemMarginBetween,
-        siblingPageVisible: viewportIsTabletOrLess,
+        siblingPageVisible: viewportIsMOrLess,
         onResizeInner: _this.onResizeInner,
         goToPage: _this.goToPage
       });
@@ -181,17 +181,17 @@ function (_React$Component) {
     _this.renderPagination = function () {
       var _this$props3 = _this.props,
           baseItemMarginBetween = _this$props3.baseItemMarginBetween,
-          viewportIsTabletOrLess = _this$props3.viewportIsTabletOrLess,
-          viewportIsMobile = _this$props3.viewportIsMobile,
+          viewportIsMOrLess = _this$props3.viewportIsMOrLess,
+          viewportIsXSOrLess = _this$props3.viewportIsXSOrLess,
           hidePaginationOnMobile = _this$props3.hidePaginationOnMobile;
       var _this$state4 = _this.state,
           indexPageVisible = _this$state4.indexPageVisible,
           numPages = _this$state4.numPages;
-      var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsMobile, viewportIsTabletOrLess);
-      if (viewportIsMobile && hidePaginationOnMobile) return;
+      var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
+      if (viewportIsXSOrLess && hidePaginationOnMobile) return;
       if (numPages <= 1) return;
 
-      if (viewportIsMobile) {
+      if (viewportIsXSOrLess) {
         var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
         return _react.default.createElement("div", {
           style: styles.pageControl
@@ -212,9 +212,9 @@ function (_React$Component) {
       }
 
       return _react.default.createElement("div", {
-        style: [styles.carouselPagination, viewportIsTabletOrLess && styles.carouselPaginationTablet, {
-          marginTop: viewportIsTabletOrLess ? itemMarginBetween : 0,
-          marginLeft: viewportIsTabletOrLess ? itemMarginBetween * 2 : 0
+        style: [styles.carouselPagination, viewportIsMOrLess && styles.carouselPaginationTablet, {
+          marginTop: viewportIsMOrLess ? itemMarginBetween : 0,
+          marginLeft: viewportIsMOrLess ? itemMarginBetween * 2 : 0
         }]
       }, _react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "beryllium",
@@ -223,6 +223,7 @@ function (_React$Component) {
         disabled: indexPageVisible < 1 || numPages < 1,
         style: styles.carouselButtonPagination
       }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+        version: "solid",
         className: "k-ButtonIcon__svg",
         direction: "left"
       })), _react.default.createElement(_buttonIcon.ButtonIcon, {
@@ -232,6 +233,7 @@ function (_React$Component) {
         disabled: indexPageVisible >= numPages - 1,
         style: styles.carouselButtonPagination
       }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+        version: "solid",
         className: "k-ButtonIcon__svg",
         direction: "right"
       })));
@@ -251,9 +253,9 @@ function (_React$Component) {
       if (!this.props.data || !this.props.data.length) return null;
       var _this$props4 = this.props,
           withoutLeftOffset = _this$props4.withoutLeftOffset,
-          viewportIsTabletOrLess = _this$props4.viewportIsTabletOrLess;
+          viewportIsMOrLess = _this$props4.viewportIsMOrLess;
 
-      if (viewportIsTabletOrLess) {
+      if (viewportIsMOrLess) {
         return _react.default.createElement("div", null, this.renderCarouselInner(), this.renderPagination());
       }
 
@@ -327,12 +329,12 @@ CarouselBase.propTypes = {
   itemMinWidth: _propTypes.default.number.isRequired,
   baseItemMarginBetween: _propTypes.default.number.isRequired,
   renderItem: _propTypes.default.func.isRequired,
-  viewportIsTabletOrLess: _propTypes.default.bool.isRequired,
-  viewportIsMobile: _propTypes.default.bool.isRequired,
+  viewportIsMOrLess: _propTypes.default.bool.isRequired,
+  viewportIsXSOrLess: _propTypes.default.bool.isRequired,
   hidePaginationOnMobile: _propTypes.default.bool
 };
-var Carousel = (0, _mediaQueries.mediaQueries)((0, _radium.default)(CarouselBase), {
-  viewportIsMobile: true,
-  viewportIsTabletOrLess: true
-});
+var Carousel = (0, _mediaQueries.withMediaQueries)({
+  viewportIsXSOrLess: true,
+  viewportIsMOrLess: true
+})((0, _radium.default)(CarouselBase));
 exports.Carousel = Carousel;

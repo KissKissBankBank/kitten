@@ -79,7 +79,7 @@ function (_Component) {
 
 exports.Step = Step;
 Step.propTypes = {
-  href: _propTypes.default.string.isRequired,
+  href: _propTypes.default.string,
   valid: _propTypes.default.bool,
   success: _propTypes.default.bool,
   error: _propTypes.default.bool,
@@ -87,6 +87,7 @@ Step.propTypes = {
   disabled: _propTypes.default.bool
 };
 Step.defaultProps = {
+  href: null,
   valid: false,
   success: false,
   error: false,
