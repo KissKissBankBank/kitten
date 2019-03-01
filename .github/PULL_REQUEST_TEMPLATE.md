@@ -9,4 +9,4 @@ TODO:
 - [ ] Changelog
 - [ ] A11Y
 - [ ] Stories
-- [ ] Browserstack
+- [ ] BrowserStack
