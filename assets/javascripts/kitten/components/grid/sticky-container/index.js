@@ -125,7 +125,7 @@ export class StickyContainer extends Component {
   }
 
   componentDidMount() {
-    let containerHeight = this.currentStickyContainer.current.scrollHeight
+    let containerHeight = this.currentStickyContainer.current.clientHeight
     this.setState({ containerHeight: containerHeight })
 
     if (
