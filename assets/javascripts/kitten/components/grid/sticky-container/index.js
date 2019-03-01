@@ -93,12 +93,10 @@ export class StickyContainer extends Component {
   }
 
   setSticky = () => {
-    console.log('setSticky called')
     this.setState({ sticky: true })
   }
 
   setUnsticky = () => {
-    console.log('setUnsticky called')
     this.setState({ removeSticky: true })
     setTimeout(() => {
       this.setState({
