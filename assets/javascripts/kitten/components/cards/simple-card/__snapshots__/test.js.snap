@@ -28,7 +28,7 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 cHJBWz"
   >
     <span
-      className="k-HorizontalStroke k-HorizontalStroke--tiny"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
     />
   </div>
 </div>
