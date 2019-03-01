@@ -8,12 +8,18 @@ import { throttle } from '../../../helpers/utils/throttle'
 const StyledStickyContainer = styled.div`
   will-change: transform;
 
-  ${({ sticky }) =>
+  ${({
+    sticky,
+    isStickyOnScroll,
+    containerHeight,
+    top,
+    bottom,
+    removeSticky,
+  }) =>
     !sticky
       ? css`
           position: static;
-          ${({ isStickyOnScroll, containerHeight, top, bottom }) =>
-            isStickyOnScroll &&
+          ${isStickyOnScroll &&
             css`
               ${isStickyOnScroll == 'up'
                 ? css`
@@ -29,39 +35,32 @@ const StyledStickyContainer = styled.div`
       : css`
           position: sticky;
 
-          ${({
-            isStickyOnScroll,
-            containerHeight,
-            top,
-            bottom,
-            removeSticky,
-          }) =>
-            isStickyOnScroll
-              ? css`
-                  ${isStickyOnScroll == 'up'
-                    ? css`
-                        top: ${removeSticky
-                          ? pxToRem(top - containerHeight)
-                          : pxToRem(top)};
-                        transition: top 0.2s ease;
-                      `
-                    : css`
-                        bottom: ${removeSticky
-                          ? pxToRem(bottom - containerHeight)
-                          : pxToRem(bottom)};
-                        transition: bottom 0.2s ease;
-                      `}
-                `
-              : css`
-                  ${top != 0 &&
-                    css`
-                      top: ${top};
+          ${isStickyOnScroll
+            ? css`
+                ${isStickyOnScroll == 'up'
+                  ? css`
+                      top: ${removeSticky
+                        ? pxToRem(top - containerHeight)
+                        : pxToRem(top)};
+                      transition: top 0.2s ease;
+                    `
+                  : css`
+                      bottom: ${removeSticky
+                        ? pxToRem(bottom - containerHeight)
+                        : pxToRem(bottom)};
+                      transition: bottom 0.2s ease;
                     `}
-                  ${bottom != 0 &&
-                    css`
-                      bottom: ${bottom};
-                    `}
-                `}
+              `
+            : css`
+                ${top != 0 &&
+                  css`
+                    top: ${top};
+                  `}
+                ${bottom != 0 &&
+                  css`
+                    bottom: ${bottom};
+                  `}
+              `}
         `}
 `
 
