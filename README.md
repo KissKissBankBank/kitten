@@ -6,7 +6,7 @@ typographic scale, etc.).
 
 You can check out Kitten's components on
 [KissKissBankBank's styleguide](https://styleguide.kisskissbankbank.com/)
-and on [storybook](https://kisskissbankbank.github.io/kitten/).
+and on [Storybook](https://kisskissbankbank.github.io/kitten/).
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 
