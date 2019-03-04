@@ -34,7 +34,7 @@ const StyledStickyContainer = styled.div`
             `}
         `
       : css`
-          position: sticky;
+          position: fixed;
 
           ${isStickyOnScroll
             ? css`
@@ -63,6 +63,10 @@ const StyledStickyContainer = styled.div`
                   `}
               `}
         `}
+`
+
+const StyledEmptyContainer = styled.div`
+  height: ${({ containerHeight }) => pxToRem(containerHeight)};
 `
 
 export class StickyContainer extends Component {
@@ -96,14 +100,18 @@ export class StickyContainer extends Component {
     this.setState({ sticky: true })
   }
 
-  setUnsticky = () => {
-    this.setState({ removeSticky: true })
-    setTimeout(() => {
-      this.setState({
-        sticky: false,
-        removeSticky: false,
-      })
-    }, 220)
+  setUnsticky = (fastMode = false) => {
+    if (fastMode === true) {
+      this.setState({ sticky: false })
+    } else {
+      this.setState({ removeSticky: true })
+      setTimeout(() => {
+        this.setState({
+          sticky: false,
+          removeSticky: false,
+        })
+      }, 220)
+    }
   }
 
   updateStickyState = () => {
@@ -111,14 +119,22 @@ export class StickyContainer extends Component {
 
     if (this.state.prevScrollpos > currentScrollPos) {
       if (this.props.isStickyOnScroll == 'up') {
-        this.setSticky()
-      } else if (this.props.isStickyOnScroll == 'down') {
+        if (currentScrollPos > this.state.containerHeight + this.props.top) {
+          this.setSticky()
+        } else {
+          this.setUnsticky(true)
+        }
+      } else {
         this.setUnsticky()
       }
     } else {
       if (this.props.isStickyOnScroll == 'down') {
-        this.setSticky()
-      } else if (this.props.isStickyOnScroll == 'up') {
+        if (currentScrollPos > this.state.containerHeight + this.props.bottom) {
+          this.setSticky()
+        } else {
+          this.setUnsticky(true)
+        }
+      } else {
         this.setUnsticky()
       }
     }
@@ -143,18 +159,21 @@ export class StickyContainer extends Component {
     const { sticky, containerHeight, removeSticky } = this.state
 
     return (
-      <StyledStickyContainer
-        ref={this.currentStickyContainer}
-        top={top}
-        bottom={bottom}
-        sticky={sticky}
-        containerHeight={containerHeight}
-        isStickyOnScroll={isStickyOnScroll}
-        removeSticky={removeSticky}
-        {...other}
-      >
-        {children}
-      </StyledStickyContainer>
+      <Fragment>
+        {sticky && <StyledEmptyContainer containerHeight={containerHeight} />}
+        <StyledStickyContainer
+          ref={this.currentStickyContainer}
+          top={top}
+          bottom={bottom}
+          sticky={sticky}
+          containerHeight={containerHeight}
+          isStickyOnScroll={isStickyOnScroll}
+          removeSticky={removeSticky}
+          {...other}
+        >
+          {children}
+        </StyledStickyContainer>
+      </Fragment>
     )
   }
 }
