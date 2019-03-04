@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
 import ColorsConfig from '../../../constants/colors-config'
 import { throttle } from '../../../helpers/utils/throttle'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
 
 const StyledStickyContainer = styled.div`
   will-change: transform;
@@ -85,7 +86,7 @@ export class StickyContainer extends Component {
 
     this.state = {
       sticky: props.isSticky,
-      prevScrollpos: window.pageYOffset,
+      prevScrollpos: 0,
       containerHeight: 0,
       removeSticky: false,
     }
@@ -107,6 +108,7 @@ export class StickyContainer extends Component {
 
   updateStickyState = () => {
     let currentScrollPos = window.pageYOffset
+
     if (this.state.prevScrollpos > currentScrollPos) {
       if (this.props.isStickyOnScroll == 'up') {
         this.setSticky()
@@ -129,7 +131,8 @@ export class StickyContainer extends Component {
 
     if (
       typeof this.props.isStickyOnScroll != 'undefined' &&
-      ['up', 'down'].includes(this.props.isStickyOnScroll)
+      ['up', 'down'].includes(this.props.isStickyOnScroll) &&
+      domElementHelper.canUseDom()
     ) {
       window.onscroll = throttle(this.updateStickyState, 200)
     }
