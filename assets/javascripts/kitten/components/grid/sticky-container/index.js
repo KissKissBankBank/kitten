@@ -148,7 +148,6 @@ export class StickyContainer extends Component {
     this.setState({ containerHeight: containerHeight })
 
     if (
-      typeof this.props.isStickyOnScroll != 'undefined' &&
       ['up', 'down'].includes(this.props.isStickyOnScroll) &&
       domElementHelper.canUseDom()
     ) {
