@@ -13,7 +13,7 @@ const BlockContent = () => {
   return (
     <ul>
       {lines.map(i => {
-        return <li key={i}>🥕 🐇</li>
+        return <li key={i}>🐱</li>
       })}
     </ul>
   )
@@ -37,7 +37,7 @@ storiesOf('Grid/StickyContainer', module).add(
                 lineHeight: '40px',
               }}
             >
-              🦊
+              🐈
             </div>
           </StickyContainer>
           <BlockContent />
