@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `position: fixed` and update horizontal padding on `Modal`
+  component.
+
 ## [1.18.1] - 2019-02-28
 
 Fix:
