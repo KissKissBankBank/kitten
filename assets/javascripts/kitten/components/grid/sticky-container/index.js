@@ -8,6 +8,8 @@ import { domElementHelper } from '../../../helpers/dom/element-helper'
 
 const StyledStickyContainer = styled.div`
   will-change: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
 
   ${({
     stuck,
@@ -23,12 +25,12 @@ const StyledStickyContainer = styled.div`
           ${isSticky === 'topOnScrollUp' &&
             css`
               top: ${pxToRem(top - containerHeight)};
-              transition: top 0.2s ease;
+              transition-property: top;
             `}
           ${isSticky === 'bottomOnScrollDown' &&
             css`
               bottom: ${pxToRem(bottom - containerHeight)};
-              transition: bottom 0.2s ease;
+              transition-property: bottom;
             `}
         `
       : css`
@@ -38,14 +40,14 @@ const StyledStickyContainer = styled.div`
           top: ${unstickingInTransition
             ? pxToRem(top - containerHeight)
             : pxToRem(top)};
-          transition: top 0.2s ease;
+          transition-property: top;
         `}
       ${isSticky === 'bottomOnScrollDown' &&
         css`
           bottom: ${unstickingInTransition
             ? pxToRem(bottom - containerHeight)
             : pxToRem(bottom)};
-          transition: bottom 0.2s ease;
+          transition-property: bottom;
         `}
       ${isSticky === 'always' &&
         css`
