@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, boolean, text } from '@storybook/addon-knobs'
+import { withKnobs, text } from '@storybook/addon-knobs'
 import { Button } from '../../../components/buttons/button'
 import { Title } from '../../../components/typography/title'
 import { Paragraph } from '../../../components/typography/paragraph'
@@ -49,6 +49,12 @@ const StoryContent = ({ content }) => (
       <Paragraph modifier="tertiary" margin={false} tag="p">
         {content}
       </Paragraph>
+    </Marger>
+
+    <Marger top="4" bottom="10">
+      <Button modifier="helium" size="big">
+        Action 1 Button
+      </Button>
     </Marger>
   </Marger>
 )
