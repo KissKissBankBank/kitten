@@ -22,12 +22,15 @@ export class Modal extends Component {
   }
 
   renderCloseModal() {
+    const { closeButtonLabel } = this.props
+
     return (
       <div className="k-Modal__close">
         <CloseButton
           className="k-Modal__close--fixed"
           modifier="beryllium"
           onClick={this.close}
+          closeButtonLabel={closeButtonLabel}
         />
       </div>
     )
@@ -51,6 +54,7 @@ export class Modal extends Component {
       labelledby,
       describedby,
       className,
+      closeButtonLabel,
       onClose,
       ...others
     } = this.props
@@ -95,10 +99,12 @@ Modal.propTypes = {
   label: PropTypes.string,
   labelledby: PropTypes.string,
   describedby: PropTypes.string,
+  closeButtonLabel: PropTypes.string,
 }
 
 Modal.defaultProps = {
   label: 'Modal',
   labelledby: '',
   describedby: '',
+  closeButtonLabel: '',
 }

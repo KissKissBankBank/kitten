@@ -68,6 +68,7 @@ storiesOf('Modals/Modal', module)
   .add('default', () => (
     <Marger top="2">
       <Modal
+        closeButtonLabel="Fermer"
         trigger={<StoryButton children={text('bouton', 'open')} />}
         content={<StoryContent content={text('content', paragraphContainer)} />}
       />
