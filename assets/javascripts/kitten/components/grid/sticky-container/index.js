@@ -151,8 +151,12 @@ export class StickyContainer extends Component {
       ['up', 'down'].includes(this.props.isStickyOnScroll) &&
       domElementHelper.canUseDom()
     ) {
-      window.onscroll = throttle(this.updateStickyState, 200)
+      window.addEventListener('scroll', throttle(this.updateStickyState, 200))
     }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', throttle(this.updateStickyState, 200))
   }
 
   render() {
