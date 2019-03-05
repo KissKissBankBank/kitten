@@ -9,60 +9,47 @@ import { domElementHelper } from '../../../helpers/dom/element-helper'
 const StyledStickyContainer = styled.div`
   will-change: transform;
 
-  ${({
-    sticky,
-    isStickyOnScroll,
-    containerHeight,
-    top,
-    bottom,
-    removeSticky,
-  }) =>
-    !sticky
+  ${({ stuck, containerHeight, top, bottom, removeSticky, isSticky }) =>
+    !stuck
       ? css`
           position: static;
-          ${isStickyOnScroll &&
+          ${isSticky === 'topOnScrollUp' &&
             css`
-              ${isStickyOnScroll == 'up'
-                ? css`
-                    top: ${pxToRem(top - containerHeight)};
-                    transition: top 0.2s ease;
-                  `
-                : css`
-                    bottom: ${pxToRem(bottom - containerHeight)};
-                    transition: bottom 0.2s ease;
-                  `}
+              top: ${pxToRem(top - containerHeight)};
+              transition: top 0.2s ease;
+            `}
+          ${isSticky === 'bottomOnScrollDown' &&
+            css`
+              bottom: ${pxToRem(bottom - containerHeight)};
+              transition: bottom 0.2s ease;
             `}
         `
       : css`
-          position: fixed;
-
-          ${isStickyOnScroll
-            ? css`
-                ${isStickyOnScroll == 'up'
-                  ? css`
-                      top: ${removeSticky
-                        ? pxToRem(top - containerHeight)
-                        : pxToRem(top)};
-                      transition: top 0.2s ease;
-                    `
-                  : css`
-                      bottom: ${removeSticky
-                        ? pxToRem(bottom - containerHeight)
-                        : pxToRem(bottom)};
-                      transition: bottom 0.2s ease;
-                    `}
-              `
-            : css`
-                ${top != 0 &&
-                  css`
-                    top: ${top};
-                  `}
-                ${bottom != 0 &&
-                  css`
-                    bottom: ${bottom};
-                  `}
-              `}
+      position: fixed;
+      ${isSticky === 'topOnScrollUp' &&
+        css`
+          top: ${removeSticky ? pxToRem(top - containerHeight) : pxToRem(top)};
+          transition: top 0.2s ease;
         `}
+      ${isSticky === 'bottomOnScrollDown' &&
+        css`
+          bottom: ${removeSticky
+            ? pxToRem(bottom - containerHeight)
+            : pxToRem(bottom)};
+          transition: bottom 0.2s ease;
+        `}
+      ${isSticky === 'always' &&
+        css`
+          ${top != 0 &&
+            css`
+              top: ${top};
+            `}
+          ${bottom != 0 &&
+            css`
+              bottom: ${bottom};
+            `}
+        `}
+    `}
 `
 
 const StyledEmptyContainer = styled.div`
@@ -71,14 +58,18 @@ const StyledEmptyContainer = styled.div`
 
 export class StickyContainer extends Component {
   static propTypes = {
-    isSticky: PropTypes.bool,
-    isStickyOnScroll: PropTypes.oneOf(['up', 'down']),
+    isSticky: PropTypes.oneOf([
+      'always',
+      'topOnScrollUp',
+      'bottomOnScrollDown',
+      'never',
+    ]),
     top: PropTypes.number,
     bottom: PropTypes.number,
   }
 
   static defaultProps = {
-    isSticky: false,
+    isSticky: 'always',
     top: 0,
     bottom: 0,
   }
@@ -89,7 +80,7 @@ export class StickyContainer extends Component {
     this.currentStickyContainer = React.createRef()
 
     this.state = {
-      sticky: props.isSticky,
+      stuck: false,
       prevScrollpos: 0,
       containerHeight: 0,
       removeSticky: false,
@@ -97,47 +88,91 @@ export class StickyContainer extends Component {
   }
 
   setSticky = () => {
-    this.setState({ sticky: true })
+    this.setState({ stuck: true })
   }
 
-  setUnsticky = (fastMode = false) => {
-    if (fastMode === true) {
-      this.setState({ sticky: false })
-    } else {
-      this.setState({ removeSticky: true })
-      setTimeout(() => {
-        this.setState({
-          sticky: false,
-          removeSticky: false,
-        })
-      }, 220)
+  setUnstickyWithTransition = () => {
+    this.setState({ removeSticky: true })
+    setTimeout(() => {
+      this.setState({
+        stuck: false,
+        removeSticky: false,
+      })
+    }, 220)
+  }
+
+  setUnsticky = () => {
+    this.setState({ stuck: false })
+  }
+
+  hasScrolledDown = currentScrollPos =>
+    this.state.prevScrollpos < currentScrollPos
+  hasScrolledUp = currentScrollPos =>
+    this.state.prevScrollpos > currentScrollPos
+
+  isOriginalContainerOutOfViewport = () => {
+    if (this.props.isSticky === 'topOnScrollUp') {
+      return window.pageYOffset > this.state.containerHeight + this.props.top
     }
+    if (this.props.isSticky === 'bottomOnScrollDown') {
+      return (
+        window.pageYOffset + window.innerHeight <
+        document.body.clientHeight -
+          (this.state.containerHeight + this.props.bottom)
+      )
+    }
+  }
+
+  shouldStickContainerOnTop = hasScrolledUp => {
+    return (
+      hasScrolledUp &&
+      this.props.isSticky === 'topOnScrollUp' &&
+      this.isOriginalContainerOutOfViewport()
+    )
+  }
+
+  shouldStickContainerOnBottom = hasScrolledDown => {
+    return (
+      hasScrolledDown &&
+      this.props.isSticky === 'bottomOnScrollDown' &&
+      this.isOriginalContainerOutOfViewport()
+    )
+  }
+
+  shouldStickContainer = (hasScrolledDown, hasScrolledUp) => {
+    return (
+      this.shouldStickContainerOnTop(hasScrolledUp) ||
+      this.shouldStickContainerOnBottom(hasScrolledDown)
+    )
+  }
+
+  shouldUnstickContainer = () => {
+    return !this.isOriginalContainerOutOfViewport()
+  }
+
+  shouldUnstickContainerWithTransition = (hasScrolledDown, hasScrolledUp) => {
+    return (
+      (hasScrolledDown && this.props.isSticky === 'topOnScrollUp') ||
+      (hasScrolledUp && this.props.isSticky === 'bottomOnScrollDown')
+    )
   }
 
   updateStickyState = () => {
-    let currentScrollPos = window.pageYOffset
+    const currentScrollPos = window.pageYOffset
 
-    if (this.state.prevScrollpos > currentScrollPos) {
-      if (this.props.isStickyOnScroll == 'up') {
-        if (currentScrollPos > this.state.containerHeight + this.props.top) {
-          this.setSticky()
-        } else {
-          this.setUnsticky(true)
-        }
-      } else {
-        this.setUnsticky()
-      }
-    } else {
-      if (this.props.isStickyOnScroll == 'down') {
-        if (currentScrollPos > this.state.containerHeight + this.props.bottom) {
-          this.setSticky()
-        } else {
-          this.setUnsticky(true)
-        }
-      } else {
-        this.setUnsticky()
-      }
+    const hasScrolledDown = this.hasScrolledDown(currentScrollPos)
+    const hasScrolledUp = this.hasScrolledUp(currentScrollPos)
+
+    if (this.shouldUnstickContainer()) {
+      this.setUnsticky()
+    } else if (this.shouldStickContainer(hasScrolledDown, hasScrolledUp)) {
+      this.setSticky()
+    } else if (
+      this.shouldUnstickContainerWithTransition(hasScrolledDown, hasScrolledUp)
+    ) {
+      this.setUnstickyWithTransition()
     }
+
     this.setState({ prevScrollpos: currentScrollPos })
   }
 
@@ -147,10 +182,7 @@ export class StickyContainer extends Component {
       : 0
     this.setState({ containerHeight: containerHeight })
 
-    if (
-      ['up', 'down'].includes(this.props.isStickyOnScroll) &&
-      domElementHelper.canUseDom()
-    ) {
+    if (domElementHelper.canUseDom()) {
       window.addEventListener('scroll', throttle(this.updateStickyState, 200))
     }
   }
@@ -160,19 +192,19 @@ export class StickyContainer extends Component {
   }
 
   render() {
-    const { children, top, bottom, isStickyOnScroll, ...other } = this.props
-    const { sticky, containerHeight, removeSticky } = this.state
+    const { children, top, bottom, isSticky, ...other } = this.props
+    const { stuck, containerHeight, removeSticky } = this.state
 
     return (
       <Fragment>
-        {sticky && <StyledEmptyContainer containerHeight={containerHeight} />}
+        {stuck && <StyledEmptyContainer containerHeight={containerHeight} />}
         <StyledStickyContainer
           ref={this.currentStickyContainer}
           top={top}
           bottom={bottom}
-          sticky={sticky}
+          stuck={stuck}
           containerHeight={containerHeight}
-          isStickyOnScroll={isStickyOnScroll}
+          isSticky={isSticky}
           removeSticky={removeSticky}
           {...other}
         >

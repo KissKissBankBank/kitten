@@ -69,7 +69,7 @@ storiesOf('Grid/StickyContainer', module).add(
             backgroundColor: COLORS.line1,
           }}
         >
-          <StickyContainer isStickyOnScroll="up">
+          <StickyContainer isSticky="topOnScrollUp">
             <div
               style={{
                 fontSize: '40px',
