@@ -9,7 +9,14 @@ import { domElementHelper } from '../../../helpers/dom/element-helper'
 const StyledStickyContainer = styled.div`
   will-change: transform;
 
-  ${({ stuck, containerHeight, top, bottom, removeSticky, isSticky }) =>
+  ${({
+    stuck,
+    containerHeight,
+    top,
+    bottom,
+    unstickingInTransition,
+    isSticky,
+  }) =>
     !stuck
       ? css`
           position: static;
@@ -28,12 +35,14 @@ const StyledStickyContainer = styled.div`
       position: fixed;
       ${isSticky === 'topOnScrollUp' &&
         css`
-          top: ${removeSticky ? pxToRem(top - containerHeight) : pxToRem(top)};
+          top: ${unstickingInTransition
+            ? pxToRem(top - containerHeight)
+            : pxToRem(top)};
           transition: top 0.2s ease;
         `}
       ${isSticky === 'bottomOnScrollDown' &&
         css`
-          bottom: ${removeSticky
+          bottom: ${unstickingInTransition
             ? pxToRem(bottom - containerHeight)
             : pxToRem(bottom)};
           transition: bottom 0.2s ease;
@@ -83,7 +92,7 @@ export class StickyContainer extends Component {
       stuck: false,
       prevScrollpos: 0,
       containerHeight: 0,
-      removeSticky: false,
+      unstickingInTransition: false,
     }
   }
 
@@ -92,11 +101,11 @@ export class StickyContainer extends Component {
   }
 
   setUnstickyWithTransition = () => {
-    this.setState({ removeSticky: true })
+    this.setState({ unstickingInTransition: true })
     setTimeout(() => {
       this.setState({
         stuck: false,
-        removeSticky: false,
+        unstickingInTransition: false,
       })
     }, 220)
   }
@@ -193,7 +202,7 @@ export class StickyContainer extends Component {
 
   render() {
     const { children, top, bottom, isSticky, ...other } = this.props
-    const { stuck, containerHeight, removeSticky } = this.state
+    const { stuck, containerHeight, unstickingInTransition } = this.state
 
     return (
       <Fragment>
@@ -205,7 +214,7 @@ export class StickyContainer extends Component {
           stuck={stuck}
           containerHeight={containerHeight}
           isSticky={isSticky}
-          removeSticky={removeSticky}
+          unstickingInTransition={unstickingInTransition}
           {...other}
         >
           {children}
