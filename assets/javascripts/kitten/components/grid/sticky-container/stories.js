@@ -7,6 +7,45 @@ import { Marger } from '../../../components/layout/marger'
 import COLORS from '../../../constants/colors-config'
 import { createRangeFromZeroTo } from '../../../helpers/utils/range'
 
+const info = {
+  text: `
+    # StickyContainer
+    &nbsp;
+
+    ## Import
+
+    ~~~js
+    import { StickyContainer } from '@kisskissbankbank/kitten/src/components/grid/sticky-container'
+    ~~~
+
+    ## Usage
+    &nbsp;
+
+    The component can be used as always sticky, and only sticky on scroll up or down.
+
+
+    ### isStickyOnScroll
+
+    When scrolling up, top prop is necessary (defaults to 0), when scrolling down, bottom prop is necessary (defaults to 0).
+
+    ~~~js
+      <StickyContainer isStickyOnScroll="up">
+        …
+      </StickyContainer>
+    ~~~
+
+    ### sticky
+
+    ~~~js
+      <StickyContainer sticky>
+        …
+      </StickyContainer>
+    ~~~
+  `,
+  header: false,
+  propTables: false,
+}
+
 const BlockContent = () => {
   let lines = createRangeFromZeroTo(100)
 
@@ -21,7 +60,7 @@ const BlockContent = () => {
 
 storiesOf('Grid/StickyContainer', module).add(
   'default',
-  withInfo('common info')(() => (
+  withInfo(info)(() => (
     <Container>
       <Marger top={3}>
         <div
