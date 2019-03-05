@@ -3,15 +3,11 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
-import { CloseButton } from '../../components/buttons/close-button'
+import { CloseButton } from '../../../components/buttons/close-button'
 
 export class Modal extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      showModal: false,
-    }
+  state = {
+    showModal: false,
   }
 
   open = () => {
@@ -26,12 +22,17 @@ export class Modal extends Component {
   }
 
   renderCloseModal() {
+    const { closeButtonLabel } = this.props
+
     return (
-      <CloseButton
-        className="k-Modal__close"
-        modifier="beryllium"
-        onClick={this.close}
-      />
+      <div className="k-Modal__close">
+        <CloseButton
+          className="k-Modal__close--fixed"
+          modifier="beryllium"
+          onClick={this.close}
+          closeButtonLabel={closeButtonLabel}
+        />
+      </div>
     )
   }
 
@@ -53,6 +54,7 @@ export class Modal extends Component {
       labelledby,
       describedby,
       className,
+      closeButtonLabel,
       onClose,
       ...others
     } = this.props
@@ -97,10 +99,12 @@ Modal.propTypes = {
   label: PropTypes.string,
   labelledby: PropTypes.string,
   describedby: PropTypes.string,
+  closeButtonLabel: PropTypes.string,
 }
 
 Modal.defaultProps = {
   label: 'Modal',
   labelledby: '',
   describedby: '',
+  closeButtonLabel: '',
 }
