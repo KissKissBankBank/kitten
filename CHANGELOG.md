@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `projectVideo` props and update style on `SimpleCard` component.
+
 ## [1.19.0] - 2019-03-05
 
 Feature:
