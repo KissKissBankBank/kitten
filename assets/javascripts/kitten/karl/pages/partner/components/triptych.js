@@ -1,15 +1,24 @@
-import React, { Component, Fragment } from 'react'
+import React, { memo, Fragment } from 'react'
+import styled from 'styled-components'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
 import { Title } from '../../../../components/typography/title'
 import { Text } from '../../../../components/typography/text'
-import { Button } from '../../../../components/buttons/button/button'
+import { Button, FLUID } from '../../../../components/buttons/button/button'
 import { Triptych as KittenTriptych } from '../../../../components/cards/triptych'
+import { Grid, GridCol } from '../../../../components/grid/grid'
+import { ScreenConfig } from '../../../../constants/screen-config'
+
+const StyledButton = styled(props => <Button as="a" {...props} />)`
+  @media (max-width: ${ScreenConfig.XS.max}px) {
+    ${FLUID}
+  }
+`
 
 const Card = () => (
   <Fragment>
     <Marger bottom="3">
-      <div style={{ background: '#404040', height: 200 }} />
+      <div style={{ background: '#404040', height: 300 }} />
     </Marger>
 
     <Marger bottom="3">
@@ -18,17 +27,15 @@ const Card = () => (
       </Text>
     </Marger>
 
-    <Button as="a" href="#">
-      En savoir plus
-    </Button>
+    <StyledButton href="#">En savoir plus</StyledButton>
   </Fragment>
 )
 
-class Triptych extends Component {
-  render() {
-    return (
-      <Marger top="10" bottom="10">
-        <Container>
+const Triptych = () => (
+  <Marger top={{ default: 8, fromS: 10 }} bottom={{ default: 8, fromS: 10 }}>
+    <Container>
+      <Grid>
+        <GridCol col-l="10" offset-l="1">
           <KittenTriptych
             title={
               <Title tag="h2" modifier="secondary" margin={false}>
@@ -40,10 +47,10 @@ class Triptych extends Component {
             item2={<Card />}
             item3={<Card />}
           />
-        </Container>
-      </Marger>
-    )
-  }
-}
+        </GridCol>
+      </Grid>
+    </Container>
+  </Marger>
+)
 
-export default Triptych
+export default memo(Triptych)

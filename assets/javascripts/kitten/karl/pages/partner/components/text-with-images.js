@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { memo } from 'react'
 import styled from 'styled-components'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
@@ -49,126 +49,119 @@ const ImageCard = () => (
   <div style={{ paddingBottom: '100%', background: '#404040' }} />
 )
 
-class TextWithImages extends Component {
-  render() {
-    return (
-      <Marger
-        top={{ default: 8, fromL: 10 }}
-        bottom={{ default: 8, fromL: 10 }}
-      >
-        <Container>
-          <Grid>
-            <GridCol col-l="10" offset-l="1">
-              <StyledGrid>
-                <div>
-                  <StyledTitle tag="h2" modifier="secondary" margin={false}>
-                    Nous travaillons déjà ensemble
-                  </StyledTitle>
+const TextWithImages = () => (
+  <Marger top={{ default: 8, fromS: 10 }} bottom={{ default: 8, fromS: 10 }}>
+    <Container>
+      <Grid>
+        <GridCol col-l="10" offset-l="1">
+          <StyledGrid>
+            <div>
+              <StyledTitle tag="h2" modifier="secondary" margin={false}>
+                Nous travaillons déjà ensemble
+              </StyledTitle>
 
-                  <Marger top="4" className="k-u-hidden@xs-down">
-                    <Button as="a" href="#" modifier="helium" big>
-                      Vous aussi, rejoignez-nous
-                    </Button>
-                  </Marger>
-                </div>
-
-                <div>
-                  <StyledImagesGrid>
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                  </StyledImagesGrid>
-
-                  <Marger top={2} className="k-u-align-center">
-                    <Text size="tiny" weight="regular" color="font1">
-                      Marque ou entreprise
-                    </Text>
-                  </Marger>
-                </div>
-
-                <div>
-                  <StyledImagesGrid>
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                  </StyledImagesGrid>
-
-                  <Marger top={2} className="k-u-align-center">
-                    <Text size="tiny" weight="regular" color="font1">
-                      Collectivité territoriale ou réseau
-                    </Text>
-                  </Marger>
-                </div>
-
-                <div>
-                  <StyledImagesGrid>
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                  </StyledImagesGrid>
-
-                  <Marger top={2} className="k-u-align-center">
-                    <Text size="tiny" weight="regular" color="font1">
-                      Média ou agence
-                    </Text>
-                  </Marger>
-                </div>
-
-                <div>
-                  <StyledImagesGrid>
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                  </StyledImagesGrid>
-
-                  <Marger top={2} className="k-u-align-center">
-                    <Text size="tiny" weight="regular" color="font1">
-                      Marque ou Association ou fondation
-                    </Text>
-                  </Marger>
-                </div>
-
-                <div>
-                  <StyledImagesGrid>
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                    <ImageCard />
-                  </StyledImagesGrid>
-
-                  <Marger top={2} className="k-u-align-center">
-                    <Text size="tiny" weight="regular" color="font1">
-                      École ou incubateur
-                    </Text>
-                  </Marger>
-                </div>
-              </StyledGrid>
-
-              <Marger top="4" className="k-u-hidden@s-up">
-                <Button as="a" href="#" modifier="helium" big fluid>
+              <Marger top="4" className="k-u-hidden@xs-down">
+                <Button as="a" href="#" modifier="helium" big>
                   Vous aussi, rejoignez-nous
                 </Button>
               </Marger>
-            </GridCol>
-          </Grid>
-        </Container>
-      </Marger>
-    )
-  }
-}
+            </div>
 
-export default TextWithImages
+            <div>
+              <StyledImagesGrid>
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+              </StyledImagesGrid>
+
+              <Marger top={2} className="k-u-align-center">
+                <Text size="tiny" weight="regular" color="font1">
+                  Marque ou entreprise
+                </Text>
+              </Marger>
+            </div>
+
+            <div>
+              <StyledImagesGrid>
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+              </StyledImagesGrid>
+
+              <Marger top={2} className="k-u-align-center">
+                <Text size="tiny" weight="regular" color="font1">
+                  Collectivité territoriale ou réseau
+                </Text>
+              </Marger>
+            </div>
+
+            <div>
+              <StyledImagesGrid>
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+              </StyledImagesGrid>
+
+              <Marger top={2} className="k-u-align-center">
+                <Text size="tiny" weight="regular" color="font1">
+                  Média ou agence
+                </Text>
+              </Marger>
+            </div>
+
+            <div>
+              <StyledImagesGrid>
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+              </StyledImagesGrid>
+
+              <Marger top={2} className="k-u-align-center">
+                <Text size="tiny" weight="regular" color="font1">
+                  Marque ou Association ou fondation
+                </Text>
+              </Marger>
+            </div>
+
+            <div>
+              <StyledImagesGrid>
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+                <ImageCard />
+              </StyledImagesGrid>
+
+              <Marger top={2} className="k-u-align-center">
+                <Text size="tiny" weight="regular" color="font1">
+                  École ou incubateur
+                </Text>
+              </Marger>
+            </div>
+          </StyledGrid>
+
+          <Marger top="4" className="k-u-hidden@s-up">
+            <Button as="a" href="#" modifier="helium" big fluid>
+              Vous aussi, rejoignez-nous
+            </Button>
+          </Marger>
+        </GridCol>
+      </Grid>
+    </Container>
+  </Marger>
+)
+
+export default memo(TextWithImages)

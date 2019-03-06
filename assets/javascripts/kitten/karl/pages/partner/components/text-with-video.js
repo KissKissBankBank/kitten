@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styled from 'styled-components'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
@@ -108,4 +108,4 @@ const TextWithVideo = () => (
   </Marger>
 )
 
-export default TextWithVideo
+export default memo(TextWithVideo)

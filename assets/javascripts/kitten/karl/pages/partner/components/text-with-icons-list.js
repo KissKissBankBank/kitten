@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { memo } from 'react'
 import styled from 'styled-components'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
@@ -38,7 +38,7 @@ const StyledButton = styled(props => <Button as="a" {...props} />)`
 `
 
 const TextWithIconsList = () => (
-  <Marger top={{ default: 8, fromL: 10 }} bottom={{ default: 8, fromL: 10 }}>
+  <Marger top={{ default: 8, fromS: 10 }} bottom={{ default: 8, fromS: 10 }}>
     <Container>
       <StyledGrid>
         <GridCol col-s="10" offset-s="1" col-l="4">
@@ -116,4 +116,4 @@ const TextWithIconsList = () => (
   </Marger>
 )
 
-export default TextWithIconsList
+export default memo(TextWithIconsList)

@@ -4,11 +4,15 @@ import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Title } from '../../../../components/typography/title'
+import { Text } from '../../../../components/typography/text'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import { Button } from '../../../../components/buttons/button/button'
 import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Field } from '../../../../components/form/field'
+import { ScreenConfig } from '../../../../constants/screen-config'
+import COLORS from '../../../../constants/colors-config'
+import { CheckedCircleIcon } from '../../../../components/icons/checked-circle-icon'
 
 const StyledImage = styled.div`
   height: 800px;
@@ -16,26 +20,65 @@ const StyledImage = styled.div`
   background: #404040;
 `
 
+const StyledTitle = styled(Title)`
+  text-align: left;
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    text-align: center;
+  }
+
+  @media (min-width: ${ScreenConfig.L.min}px) {
+    text-align: left;
+  }
+`
+
+const StyledHorizontalStroke = styled(HorizontalStroke)`
+  margin: 0;
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: ${ScreenConfig.L.min}px) {
+    margin: 0;
+  }
+`
+
+const SuccessMessage = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: ${pxToRem(20)};
+  padding: ${pxToRem(20)} ${pxToRem(15)};
+  background-color: ${COLORS.tertiary1};
+
+  svg {
+    flex-shrink: 0;
+  }
+`
+
 class FormWithImage extends Component {
   render() {
     return (
-      <Marger top="10" bottom="10">
+      <Marger
+        top={{ default: 8, fromS: 10 }}
+        bottom={{ default: 8, fromS: 10 }}
+      >
         <Container>
           <Grid>
-            <GridCol col-l="6">
+            <GridCol col-l="6" className="k-u-hidden@m-down">
               <StyledImage />
             </GridCol>
 
-            <GridCol col-l="4" offset-l="1">
+            <GridCol col-s="8" offset-s="2" col-l="4" offset-l="1">
               <Marger bottom="1.5">
-                <Title tag="h3" modifier="quaternary" margin={false}>
+                <StyledTitle tag="h3" modifier="quaternary" margin={false}>
                   Contactez nous et rejoignez la famille des partenaires de
                   KissKissBankBank
-                </Title>
+                </StyledTitle>
               </Marger>
 
               <Marger bottom="3">
-                <HorizontalStroke />
+                <StyledHorizontalStroke customSize={{ width: 40 }} />
               </Marger>
 
               <Marger bottom="4">
@@ -49,8 +92,8 @@ class FormWithImage extends Component {
               <Marger bottom="4">
                 <Field>
                   <Field.Label>Votre nom</Field.Label>
-
-                  <Field.Input placeholder="Entrer votre nom" />
+                  <Field.Input error placeholder="Entrer votre nom" />
+                  <Field.ErrorMessage>Votre nom est requis.</Field.ErrorMessage>
                 </Field>
               </Marger>
 
@@ -109,12 +152,37 @@ class FormWithImage extends Component {
               </Marger>
 
               <Marger bottom="4">
-                <Field>CHECKBOX</Field>
+                <Field>
+                  <Field.Checkbox id="optin">
+                    Je souhaite recevoir le best-of des projets KissKissBankBank
+                  </Field.Checkbox>
+                </Field>
               </Marger>
 
               <Button big fluid modifier="helium">
                 Envoyer
               </Button>
+
+              <SuccessMessage>
+                <CheckedCircleIcon
+                  circleColor={COLORS.valid}
+                  checkedColor={COLORS.background1}
+                  style={{ width: 25 }}
+                  className="k-u-margin-right-single"
+                />
+
+                <Text
+                  tag="p"
+                  size="micro"
+                  lineHeight="normal"
+                  weight="light"
+                  color="font1"
+                  style={{ margin: 0 }}
+                >
+                  Merci d'avoir pensé à KissKissBankBank. Nous avons bien reçu
+                  votre demande et nous vous re-contactons dans les 72 heures.
+                </Text>
+              </SuccessMessage>
             </GridCol>
           </Grid>
         </Container>
