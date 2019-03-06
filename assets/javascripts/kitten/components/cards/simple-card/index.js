@@ -173,7 +173,7 @@ SimpleCardComponent.propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
   }),
-  titleProps: PropTypes.shape({}),
+  titleProps: PropTypes.shape(),
   title: PropTypes.string,
   subtitle: PropTypes.string,
   paragraph: PropTypes.string,
