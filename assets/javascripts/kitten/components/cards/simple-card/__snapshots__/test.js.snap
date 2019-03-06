@@ -2,35 +2,19 @@
 
 exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 <div
-  className="k-Card k-Card--withoutBoxShadowOnHover"
-  style={
-    Object {
-      "lineHeight": 1,
-    }
-  }
+  className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
+  title={null}
 >
   <div
-    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jsfkfD"
+    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
   >
     <div
-      style={
-        Object {
-          "position": "relative",
-          "transition": "opacity ease 600ms, z-index ease 600ms",
-          "zIndex": 1,
-        }
-      }
+      className="simple-card__PlayerStyle-sc-1g5bppt-3 behilo"
     >
       <img
         alt=""
-        className="k-Card__image"
+        className="k-Card__image simple-card__ImageStyle-sc-1g5bppt-1 dIFdHh"
         src="https://placehold.it/200x200/caf4fe/caf4fe"
-        style={
-          Object {
-            "display": "block",
-            "width": "100%",
-          }
-        }
       />
     </div>
   </div>
@@ -46,43 +30,20 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 
 exports[`<SimpleCard /> with projectVideo props matches with snapshot 1`] = `
 <div
-  className="k-Card k-Card--withoutBoxShadowOnHover"
-  style={
-    Object {
-      "lineHeight": 1,
-    }
-  }
+  className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
+  title={null}
 >
   <div
-    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jsfkfD"
+    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
   >
     <div
-      style={
-        Object {
-          "position": "relative",
-          "transition": "opacity ease 600ms, z-index ease 600ms",
-          "zIndex": 1,
-        }
-      }
+      className="simple-card__PlayerStyle-sc-1g5bppt-3 behilo"
     >
       <div
-        style={
-          Object {
-            "alignItems": "center",
-            "background": "#222",
-            "cursor": "pointer",
-            "display": "flex",
-            "height": "70px",
-            "justifyContent": "center",
-            "left": "calc(50% - 35px)",
-            "position": "absolute",
-            "top": "calc(50% - 35px)",
-            "width": "70px",
-          }
-        }
+        className="simple-card__PlayerButtonStyle-sc-1g5bppt-2 kFiYmQ"
       >
         <span
-          aria-label=""
+          aria-label={null}
           className="k-u-color-background1 k-u-size-default k-u-weight-regular"
         >
           ►
@@ -90,14 +51,8 @@ exports[`<SimpleCard /> with projectVideo props matches with snapshot 1`] = `
       </div>
       <img
         alt=""
-        className="k-Card__image"
+        className="k-Card__image simple-card__ImageStyle-sc-1g5bppt-1 dIFdHh"
         src="https://placehold.it/200x200/caf4fe/caf4fe"
-        style={
-          Object {
-            "display": "block",
-            "width": "100%",
-          }
-        }
       />
     </div>
   </div>
@@ -113,35 +68,19 @@ exports[`<SimpleCard /> with projectVideo props matches with snapshot 1`] = `
 
 exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
 <div
-  className="k-Card k-Card--withoutBoxShadowOnHover"
-  style={
-    Object {
-      "lineHeight": 1,
-    }
-  }
+  className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
+  title={null}
 >
   <div
-    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jsfkfD"
+    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
   >
     <div
-      style={
-        Object {
-          "position": "relative",
-          "transition": "opacity ease 600ms, z-index ease 600ms",
-          "zIndex": 1,
-        }
-      }
+      className="simple-card__PlayerStyle-sc-1g5bppt-3 behilo"
     >
       <img
         alt=""
-        className="k-Card__image"
+        className="k-Card__image simple-card__ImageStyle-sc-1g5bppt-1 dIFdHh"
         src="https://placehold.it/200x200/caf4fe/caf4fe"
-        style={
-          Object {
-            "display": "block",
-            "width": "100%",
-          }
-        }
       />
     </div>
   </div>

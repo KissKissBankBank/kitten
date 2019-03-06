@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import classNames from 'classnames'
 import { card } from '../../../hoc/card'
 import { Marger } from '../../../components/layout/marger'
@@ -13,6 +13,13 @@ import COLORS from '../../../constants/colors-config'
 const ContainerStyle = styled.a`
   line-height: 1;
   position: relative;
+
+  ${({ as }) =>
+    as === 'a' &&
+    css`
+      cursor: pointer;
+      text-decoration: none;
+    `}
 `
 
 const ImageStyle = styled.img`
@@ -39,27 +46,25 @@ const PlayerStyle = styled.div`
   position: relative;
   transition: opacity ease 600ms, z-index ease 600ms;
   z-index: 1;
-  cursor: pointer;
 `
 
 class SimpleCardComponent extends Component {
   render() {
-    const {
-      imageProps,
-      titleProps,
-      title,
-      subtitle,
-      paragraph,
-      horizontalStroke,
-      projectVideo,
-      arrowColor,
-      ariaLabel,
-      t,
-      href,
-      ...others
-    } = this.props
+    const { href, ...others } = this.props
 
-    const titleClassName = classNames('k-Card__title', titleProps.className)
+    return (
+      <ContainerStyle as={others.href ? 'a' : 'div'} {...others}>
+        {this.renderImage()}
+        {this.renderTitle()}
+        {this.renderSubtitle()}
+        {this.renderParagraph()}
+        {this.renderHorizontalStroke()}
+      </ContainerStyle>
+    )
+  }
+
+  renderImage() {
+    const { imageProps, projectVideo, arrowColor, ariaLabel } = this.props
 
     const ProjectPlayerButton = props => (
       <PlayerButtonStyle>
@@ -75,23 +80,30 @@ class SimpleCardComponent extends Component {
     )
 
     return (
-      <ContainerStyle as={others.href ? 'a' : 'div'} {...others}>
-        <Marger bottom="2" className="k-Card__imageContainer">
-          <PlayerStyle>
-            {projectVideo && (
-              <ProjectPlayerButton
-                arrowColor={arrowColor}
-                ariaLabel={ariaLabel}
-              />
-            )}
-            <ImageStyle
-              {...imageProps}
-              alt={imageProps.alt || ''}
-              className="k-Card__image"
+      <Marger bottom="2" className="k-Card__imageContainer">
+        <PlayerStyle>
+          {projectVideo && (
+            <ProjectPlayerButton
+              arrowColor={arrowColor}
+              ariaLabel={ariaLabel}
             />
-          </PlayerStyle>
-        </Marger>
+          )}
+          <ImageStyle
+            {...imageProps}
+            alt={imageProps.alt || ''}
+            className="k-Card__image"
+          />
+        </PlayerStyle>
+      </Marger>
+    )
+  }
 
+  renderTitle() {
+    const { title, titleProps } = this.props
+    const titleClassName = classNames('k-Card__title', titleProps.className)
+
+    return (
+      <>
         {title && (
           <Marger top="2" bottom=".3">
             <Title
@@ -105,7 +117,15 @@ class SimpleCardComponent extends Component {
             </Title>
           </Marger>
         )}
+      </>
+    )
+  }
 
+  renderSubtitle() {
+    const { subtitle } = this.props
+
+    return (
+      <>
         {subtitle && (
           <Marger top=".3" bottom="1.5">
             <Text size="micro" weight="regular">
@@ -113,7 +133,15 @@ class SimpleCardComponent extends Component {
             </Text>
           </Marger>
         )}
+      </>
+    )
+  }
 
+  renderParagraph() {
+    const { paragraph } = this.props
+
+    return (
+      <>
         {paragraph && (
           <Marger top=".3" bottom="1.5">
             <Text lineHeight="normal" size="micro" weight="light">
@@ -121,13 +149,21 @@ class SimpleCardComponent extends Component {
             </Text>
           </Marger>
         )}
+      </>
+    )
+  }
 
+  renderHorizontalStroke() {
+    const { horizontalStroke } = this.props
+
+    return (
+      <>
         {horizontalStroke && (
           <Marger top="1.5">
             <HorizontalStroke size="tiny" />
           </Marger>
         )}
-      </ContainerStyle>
+      </>
     )
   }
 }
@@ -137,7 +173,7 @@ SimpleCardComponent.propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
   }),
-  titleProps: PropTypes.shape,
+  titleProps: PropTypes.shape({}),
   title: PropTypes.string,
   subtitle: PropTypes.string,
   paragraph: PropTypes.string,
