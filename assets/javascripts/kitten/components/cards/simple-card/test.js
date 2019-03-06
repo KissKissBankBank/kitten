@@ -23,7 +23,7 @@ describe('<SimpleCard />', () => {
     })
 
     it('is a <a />', () => {
-      expect(component.render().is('a')).toBe(true)
+      expect(component.render().is('a')).toBe(false)
     })
 
     it('has a href attribute', () => {
