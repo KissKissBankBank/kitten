@@ -25,7 +25,7 @@ storiesOf('Cards/SimpleCard', module)
                 subtitle={text('Subtitle', 'Subtitle')}
                 paragraph={text('Paragraph', 'Paragraph')}
                 horizontalStroke={boolean('With horizontal stroke?', true)}
-                projectVideo={boolean('With player button', true)}
+                projectVideo={boolean('With player button?', true)}
               />
             </GridCol>
           </Grid>

@@ -12,9 +12,6 @@ import COLORS from '../../../constants/colors-config'
 
 const ContainerStyle = styled.a`
   line-height: 1;
-`
-
-const MargerStyle = styled(Marger)`
   position: relative;
 `
 
@@ -35,13 +32,14 @@ const PlayerButtonStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  z-index: 2;
 `
 
 const PlayerStyle = styled.div`
   position: relative;
   transition: opacity ease 600ms, z-index ease 600ms;
   z-index: 1;
+  cursor: pointer;
 `
 
 class SimpleCardComponent extends Component {
@@ -61,8 +59,6 @@ class SimpleCardComponent extends Component {
       ...others
     } = this.props
 
-    // const Tag = this.props.href ? 'a' : 'div'
-
     const titleClassName = classNames('k-Card__title', titleProps.className)
 
     const ProjectPlayerButton = props => (
@@ -79,8 +75,8 @@ class SimpleCardComponent extends Component {
     )
 
     return (
-      <ContainerStyle {...others}>
-        <MargerStyle bottom="2" className="k-Card__imageContainer">
+      <ContainerStyle as={others.href ? 'a' : 'div'} {...others}>
+        <Marger bottom="2" className="k-Card__imageContainer">
           <PlayerStyle>
             {projectVideo && (
               <ProjectPlayerButton
@@ -94,7 +90,7 @@ class SimpleCardComponent extends Component {
               className="k-Card__image"
             />
           </PlayerStyle>
-        </MargerStyle>
+        </Marger>
 
         {title && (
           <Marger top="2" bottom=".3">
