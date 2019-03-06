@@ -25,12 +25,6 @@ const StyledGrid = styled.div`
   }
 `
 
-const StyledTitleGrid = styled.div`
-  // @media (max-width: ${ScreenConfig.M.max}px) {
-  //   grid-column: 1 / span 3;
-  // }
-`
-
 const StyledImagesGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -51,6 +45,10 @@ const StyledTitle = styled(Title)`
   }
 `
 
+const ImageCard = () => (
+  <div style={{ paddingBottom: '100%', background: '#404040' }} />
+)
+
 class TextWithImages extends Component {
   render() {
     return (
@@ -62,7 +60,7 @@ class TextWithImages extends Component {
           <Grid>
             <GridCol col-l="10" offset-l="1">
               <StyledGrid>
-                <StyledTitleGrid>
+                <div>
                   <StyledTitle tag="h2" modifier="secondary" margin={false}>
                     Nous travaillons déjà ensemble
                   </StyledTitle>
@@ -72,28 +70,16 @@ class TextWithImages extends Component {
                       Vous aussi, rejoignez-nous
                     </Button>
                   </Marger>
-                </StyledTitleGrid>
+                </div>
 
                 <div>
                   <StyledImagesGrid>
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
                   </StyledImagesGrid>
 
                   <Marger top={2} className="k-u-align-center">
@@ -105,24 +91,12 @@ class TextWithImages extends Component {
 
                 <div>
                   <StyledImagesGrid>
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
                   </StyledImagesGrid>
 
                   <Marger top={2} className="k-u-align-center">
@@ -134,24 +108,12 @@ class TextWithImages extends Component {
 
                 <div>
                   <StyledImagesGrid>
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
                   </StyledImagesGrid>
 
                   <Marger top={2} className="k-u-align-center">
@@ -163,24 +125,12 @@ class TextWithImages extends Component {
 
                 <div>
                   <StyledImagesGrid>
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
                   </StyledImagesGrid>
 
                   <Marger top={2} className="k-u-align-center">
@@ -192,24 +142,12 @@ class TextWithImages extends Component {
 
                 <div>
                   <StyledImagesGrid>
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
-                    <div
-                      style={{ paddingBottom: '100%', background: '#404040' }}
-                    />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
+                    <ImageCard />
                   </StyledImagesGrid>
 
                   <Marger top={2} className="k-u-align-center">
