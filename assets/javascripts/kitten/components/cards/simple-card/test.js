@@ -142,9 +142,11 @@ describe('<SimpleCard />', () => {
     })
   })
 
-  describe('with projectVideo props', () => {
+  describe('with withPlayerButtonOnImage props', () => {
     beforeEach(() => {
-      component = renderer.create(<SimpleCard projectVideo={true} />).toJSON()
+      component = renderer
+        .create(<SimpleCard withPlayerButtonOnImage={true} />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {

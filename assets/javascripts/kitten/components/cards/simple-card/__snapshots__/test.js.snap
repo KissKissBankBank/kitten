@@ -28,7 +28,7 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 </div>
 `;
 
-exports[`<SimpleCard /> with projectVideo props matches with snapshot 1`] = `
+exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot 1`] = `
 <div
   className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
   title={null}

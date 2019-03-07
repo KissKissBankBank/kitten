@@ -58,9 +58,14 @@ class SimpleCardComponent extends Component {
   }
 
   renderImage() {
-    const { imageProps, projectVideo, arrowColor, ariaLabel } = this.props
+    const {
+      imageProps,
+      withPlayerButtonOnImage,
+      arrowColor,
+      ariaLabel,
+    } = this.props
 
-    const ProjectPlayerButton = props => (
+    const PlayerButtonOnImage = props => (
       <PlayerButtonStyle>
         <Text
           size="default"
@@ -76,8 +81,8 @@ class SimpleCardComponent extends Component {
     return (
       <Marger bottom="2" className="k-Card__imageContainer">
         <PlayerStyle>
-          {projectVideo && (
-            <ProjectPlayerButton
+          {withPlayerButtonOnImage && (
+            <PlayerButtonOnImage
               arrowColor={arrowColor}
               ariaLabel={ariaLabel}
             />
@@ -164,7 +169,7 @@ SimpleCardComponent.propTypes = {
   subtitle: PropTypes.string,
   paragraph: PropTypes.string,
   horizontalStroke: PropTypes.bool,
-  projectVideo: PropTypes.bool,
+  withPlayerButtonOnImage: PropTypes.bool,
   ariaLabel: PropTypes.string,
   arrowColor: PropTypes.string,
   href: PropTypes.string,
@@ -181,7 +186,7 @@ SimpleCardComponent.defaultProps = {
   subtitle: null,
   paragraph: null,
   horizontalStroke: true,
-  projectVideo: false,
+  withPlayerButtonOnImage: false,
   ariaLabel: null,
   arrowColor: 'background1',
   href: '#',
