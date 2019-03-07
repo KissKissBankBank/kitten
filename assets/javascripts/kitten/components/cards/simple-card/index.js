@@ -9,6 +9,7 @@ import { Text } from '../../../components/typography/text'
 import { parseHtml } from '../../../helpers/utils/parser'
 import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
 import COLORS from '../../../constants/colors-config'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 const ContainerStyle = styled.a`
   line-height: 1;
@@ -17,7 +18,6 @@ const ContainerStyle = styled.a`
   ${({ as }) =>
     as === 'a' &&
     css`
-      cursor: pointer;
       text-decoration: none;
     `}
 `
@@ -27,15 +27,15 @@ const ImageStyle = styled.img`
   display: block;
 `
 
-const PlayerButtonSize = 70
+const PlayerButtonSize = pxToRem(70)
 
 const PlayerButtonStyle = styled.div`
-  width: ${PlayerButtonSize}px;
-  height: ${PlayerButtonSize}px;
+  width: ${PlayerButtonSize};
+  height: ${PlayerButtonSize};
   background: ${COLORS.font1};
   position: absolute;
-  top: calc(50% - ${PlayerButtonSize / 2}px);
-  left: calc(50% - ${PlayerButtonSize / 2}px);
+  top: calc(50% - ${PlayerButtonSize} / 2);
+  left: calc(50% - ${PlayerButtonSize} / 2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,7 +53,7 @@ class SimpleCardComponent extends Component {
     const { href, ...others } = this.props
 
     return (
-      <ContainerStyle as={others.href ? 'a' : 'div'} {...others}>
+      <ContainerStyle {...others} as={others.href ? 'a' : 'div'}>
         {this.renderImage()}
         {this.renderTitle()}
         {this.renderSubtitle()}
@@ -100,70 +100,62 @@ class SimpleCardComponent extends Component {
 
   renderTitle() {
     const { title, titleProps } = this.props
+
+    if (!title) return
+
     const titleClassName = classNames('k-Card__title', titleProps.className)
 
     return (
-      <>
-        {title && (
-          <Marger top="2" bottom=".3">
-            <Title
-              tag="p"
-              {...titleProps}
-              className={titleClassName}
-              margin={false}
-              modifier="senary"
-            >
-              {parseHtml(title)}
-            </Title>
-          </Marger>
-        )}
-      </>
+      <Marger top="2" bottom=".3">
+        <Title
+          tag="p"
+          {...titleProps}
+          className={titleClassName}
+          margin={false}
+          modifier="senary"
+        >
+          {parseHtml(title)}
+        </Title>
+      </Marger>
     )
   }
 
   renderSubtitle() {
     const { subtitle } = this.props
 
+    if (!subtitle) return
+
     return (
-      <>
-        {subtitle && (
-          <Marger top=".3" bottom="1.5">
-            <Text size="micro" weight="regular">
-              {parseHtml(subtitle)}
-            </Text>
-          </Marger>
-        )}
-      </>
+      <Marger top=".3" bottom="1.5">
+        <Text size="micro" weight="regular">
+          {parseHtml(subtitle)}
+        </Text>
+      </Marger>
     )
   }
 
   renderParagraph() {
     const { paragraph } = this.props
 
+    if (!paragraph) return
+
     return (
-      <>
-        {paragraph && (
-          <Marger top=".3" bottom="1.5">
-            <Text lineHeight="normal" size="micro" weight="light">
-              {parseHtml(paragraph)}
-            </Text>
-          </Marger>
-        )}
-      </>
+      <Marger top=".3" bottom="1.5">
+        <Text lineHeight="normal" size="micro" weight="light">
+          {parseHtml(paragraph)}
+        </Text>
+      </Marger>
     )
   }
 
   renderHorizontalStroke() {
     const { horizontalStroke } = this.props
 
+    if (!horizontalStroke) return
     return (
-      <>
-        {horizontalStroke && (
-          <Marger top="1.5">
-            <HorizontalStroke size="tiny" />
-          </Marger>
-        )}
-      </>
+      <Marger top="1.5">
+        <HorizontalStroke size="tiny" />
+      </Marger>
     )
   }
 }
