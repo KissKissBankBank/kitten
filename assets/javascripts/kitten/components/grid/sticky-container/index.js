@@ -88,7 +88,7 @@ export class StickyContainer extends Component {
 
     this.state = {
       stuck: false,
-      prevScrollpos: 0,
+      prevScrollPos: 0,
       containerHeight: 0,
       unstickingInTransition: false,
     }
@@ -114,9 +114,9 @@ export class StickyContainer extends Component {
   }
 
   hasScrolledDown = currentScrollPos =>
-    this.state.prevScrollpos < currentScrollPos
+    this.state.prevScrollPos < currentScrollPos
   hasScrolledUp = currentScrollPos =>
-    this.state.prevScrollpos > currentScrollPos
+    this.state.prevScrollPos > currentScrollPos
 
   isOriginalContainerOutOfViewport = () => {
     if (this.props.isSticky === 'topOnScrollUp') {
@@ -181,7 +181,7 @@ export class StickyContainer extends Component {
       this.setUnstickyWithTransition()
     }
 
-    this.setState({ prevScrollpos: currentScrollPos })
+    this.setState({ prevScrollPos: currentScrollPos })
   }
 
   componentDidMount() {
