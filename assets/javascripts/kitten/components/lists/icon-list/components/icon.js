@@ -4,7 +4,7 @@ import COLORS from '../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
-const ICON_SIZE = 50
+const ICON_SIZE = pxToRem(50)
 
 export const Icon = styled.span`
   flex-shrink: 0;
@@ -13,9 +13,9 @@ export const Icon = styled.span`
   align-items: center;
   justify-content: center;
 
-  width: ${pxToRem(ICON_SIZE)};
-  height: ${pxToRem(ICON_SIZE)};
-  border-radius: ${pxToRem(ICON_SIZE)};
+  width: ${ICON_SIZE};
+  height: ${ICON_SIZE};
+  border-radius: ${ICON_SIZE};
   box-sizing: border-box;
 
   margin-right: ${pxToRem(20)};
