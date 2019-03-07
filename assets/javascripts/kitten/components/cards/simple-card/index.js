@@ -93,7 +93,7 @@ class SimpleCardComponent extends Component {
   }
 
   renderTitle() {
-    const { title, titleProps } = this.props
+    const { title, titleProps, tag } = this.props
 
     if (!title) return
 
@@ -102,7 +102,7 @@ class SimpleCardComponent extends Component {
     return (
       <Marger top="2" bottom=".3">
         <Title
-          tag="p"
+          tag={tag}
           {...titleProps}
           className={titleClassName}
           margin={false}
@@ -168,6 +168,7 @@ SimpleCardComponent.propTypes = {
   ariaLabel: PropTypes.string,
   arrowColor: PropTypes.string,
   href: PropTypes.string,
+  tag: PropTypes.string,
 }
 
 SimpleCardComponent.defaultProps = {
@@ -184,6 +185,7 @@ SimpleCardComponent.defaultProps = {
   ariaLabel: null,
   arrowColor: 'background1',
   href: '#',
+  tag: 'p',
 }
 
 export const SimpleCard = card(SimpleCardComponent, {
