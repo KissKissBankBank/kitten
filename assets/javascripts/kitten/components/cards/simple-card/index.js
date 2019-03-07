@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import classNames from 'classnames'
 import { card } from '../../../hoc/card'
 import { Marger } from '../../../components/layout/marger'
@@ -14,12 +14,6 @@ import { pxToRem } from '../../../helpers/utils/typography'
 const ContainerStyle = styled.a`
   line-height: 1;
   position: relative;
-
-  ${({ as }) =>
-    as === 'a' &&
-    css`
-      text-decoration: none;
-    `}
 `
 
 const ImageStyle = styled.img`
