@@ -5,11 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: New `StickyContainer` component.
-  Props:
-      - `isSticky` makes the component always sticky.
-      - `isStickyOnScroll` accepts `'up'` or `down`, so the component
-        is only sticky when scrolling in that direction.
-      - `top` or `bottom` help with the component’s position.
 
 ## [1.19.0] - 2019-03-05
 
