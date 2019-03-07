@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import sinon from 'sinon'
-import { Modal } from '../../components/modals/modal'
+import { Modal } from './index'
 
 describe('<Modal />', () => {
   const sandbox = sinon.createSandbox()

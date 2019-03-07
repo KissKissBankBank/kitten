@@ -11,6 +11,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
         is only sticky when scrolling in that direction.
       - `top` or `bottom` help with the component’s position.
 
+## [1.19.0] - 2019-03-05
+
+Feature:
+- Add `position: fixed` and update horizontal padding on `Modal`
+  component.
+
 ## [1.18.1] - 2019-02-28
 
 Fix:
