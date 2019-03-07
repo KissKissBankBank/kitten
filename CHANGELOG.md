@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `width` and `height` props to `HorizontalStroke`.
+- Feature: Add `customSize` props to `HorizontalStroke`.
 - Feature: Add `HorizontalStroke` size CSS: `TINY`, `DEFAULT`, `BIG` and `HUGE`.
 
 ## [1.19.0] - 2019-03-05
