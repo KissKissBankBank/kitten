@@ -40,7 +40,7 @@ exports[`<SimpleCard /> with projectVideo props matches with snapshot 1`] = `
       className="simple-card__PlayerStyle-sc-1g5bppt-3 behilo"
     >
       <div
-        className="simple-card__PlayerButtonStyle-sc-1g5bppt-2 kFiYmQ"
+        className="simple-card__PlayerButtonStyle-sc-1g5bppt-2 gIZiSo"
       >
         <span
           aria-label={null}
