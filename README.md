@@ -5,7 +5,8 @@ create flexible components based on your own brand elements (colors, fonts,
 typographic scale, etc.).
 
 You can check out Kitten's components on
-[KissKissBankBank's styleguide](https://styleguide.kisskissbankbank.com/).
+[KissKissBankBank's styleguide](https://styleguide.kisskissbankbank.com/)
+and on [Storybook](https://kisskissbankbank.github.io/kitten/).
 
 ![Kittens](http://i.imgur.com/EbGhfDH.gif)
 

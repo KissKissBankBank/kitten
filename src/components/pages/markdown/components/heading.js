@@ -11,11 +11,7 @@ exports.MarkdownHeading = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _slugify = _interopRequireDefault(require("slugify"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _title = require("../../../typography/title");
 
@@ -79,10 +75,3 @@ var MarkdownHeading = function MarkdownHeading(props) {
 };
 
 exports.MarkdownHeading = MarkdownHeading;
-MarkdownHeading.defaultProps = {
-  level: null
-};
-MarkdownHeading.propTypes = {
-  level: _propTypes.default.number,
-  children: _propTypes.default.node.isRequired
-};
