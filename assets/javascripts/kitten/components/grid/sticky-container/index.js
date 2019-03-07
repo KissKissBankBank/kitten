@@ -63,10 +63,6 @@ const StyledStickyContainer = styled.div`
     `}
 `
 
-const StyledEmptyContainer = styled.div`
-  height: ${({ containerHeight }) => pxToRem(containerHeight)};
-`
-
 export class StickyContainer extends Component {
   static propTypes = {
     isSticky: PropTypes.oneOf([
@@ -209,7 +205,7 @@ export class StickyContainer extends Component {
 
     return (
       <Fragment>
-        {stuck && <StyledEmptyContainer containerHeight={containerHeight} />}
+        {stuck && <div style={{ height: pxToRem(containerHeight) }} />}
         <StyledStickyContainer
           ref={this.currentStickyContainer}
           top={top}
