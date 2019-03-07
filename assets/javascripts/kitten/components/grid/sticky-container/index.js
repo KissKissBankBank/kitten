@@ -11,57 +11,46 @@ const StyledStickyContainer = styled.div`
   transition-duration: 0.2s;
   transition-timing-function: ease;
 
-  ${({
-    stuck,
-    containerHeight,
-    top,
-    bottom,
-    unstickingInTransition,
-    isSticky,
-  }) =>
-    !stuck
-      ? css`
-          position: static;
-          ${isSticky === 'topOnScrollUp' &&
-            css`
-              top: ${pxToRem(top - containerHeight)};
-              transition-property: top;
-            `}
-          ${isSticky === 'bottomOnScrollDown' &&
-            css`
-              bottom: ${pxToRem(bottom - containerHeight)};
-              transition-property: bottom;
-            `}
-        `
-      : css`
-      position: fixed;
-      ${isSticky === 'topOnScrollUp' &&
-        css`
-          top: ${unstickingInTransition
-            ? pxToRem(top - containerHeight)
-            : pxToRem(top)};
-          transition-property: top;
-        `}
-      ${isSticky === 'bottomOnScrollDown' &&
-        css`
-          bottom: ${unstickingInTransition
-            ? pxToRem(bottom - containerHeight)
-            : pxToRem(bottom)};
-          transition-property: bottom;
-        `}
-      ${isSticky === 'always' &&
-        css`
-          ${top != 0 &&
-            css`
-              top: ${top};
-            `}
-          ${bottom != 0 &&
-            css`
-              bottom: ${bottom};
-            `}
-        `}
-    `}
+  ${({ stickyContainerStyleProps }) => stickyContainerStyleProps}
 `
+
+const isStickyTopOnScrollUp = isSticky => isSticky === 'topOnScrollUp'
+
+const isStickyBottomOnScrollDown = isSticky => isSticky === 'bottomOnScrollDown'
+
+const isStickyAlways = isSticky => isSticky === 'always'
+
+const getStickyStyleProps = ({
+  stuck,
+  containerHeight,
+  top,
+  bottom,
+  unstickingInTransition,
+  isSticky,
+}) => {
+  const position = stuck ? 'fixed' : 'static'
+
+  if (isStickyAlways(isSticky)) {
+    return css`
+      position: ${position};
+      top: ${top};
+      bottom: ${bottom};
+    `
+  }
+
+  const distance = unstickingInTransition || !stuck ? containerHeight : 0
+
+  const direction = isStickyTopOnScrollUp(isSticky) ? 'top' : 'bottom'
+
+  const basis = direction === 'top' ? top : bottom
+  const directionDistance = pxToRem(basis - distance)
+
+  return css`
+    position: ${position};
+    ${direction}: ${directionDistance};
+    transition-property: ${direction};
+  `
+}
 
 export class StickyContainer extends Component {
   static propTypes = {
@@ -77,8 +66,8 @@ export class StickyContainer extends Component {
 
   static defaultProps = {
     isSticky: 'always',
-    top: 0,
-    bottom: 0,
+    top: null,
+    bottom: null,
   }
 
   constructor(props) {
@@ -185,35 +174,46 @@ export class StickyContainer extends Component {
   }
 
   componentDidMount() {
+    isStickyAlways(this.props.isSticky) && this.setSticky()
+
     const containerHeight = this.currentStickyContainer.current
       ? this.currentStickyContainer.current.clientHeight
       : 0
     this.setState({ containerHeight })
 
-    if (domElementHelper.canUseDom()) {
+    if (domElementHelper.canUseDom() && !isStickyAlways(this.props.isSticky)) {
       window.addEventListener('scroll', throttle(this.updateStickyState, 200))
     }
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', throttle(this.updateStickyState, 200))
+    if (domElementHelper.canUseDom() && !isStickyAlways(this.props.isSticky)) {
+      window.removeEventListener(
+        'scroll',
+        throttle(this.updateStickyState, 200),
+      )
+    }
   }
 
   render() {
     const { children, top, bottom, isSticky, ...other } = this.props
     const { stuck, containerHeight, unstickingInTransition } = this.state
 
+    const stickyContainerStyleProps = getStickyStyleProps({
+      stuck,
+      containerHeight,
+      top,
+      bottom,
+      unstickingInTransition,
+      isSticky,
+    })
+
     return (
       <Fragment>
         {stuck && <div style={{ height: pxToRem(containerHeight) }} />}
         <StyledStickyContainer
           ref={this.currentStickyContainer}
-          top={top}
-          bottom={bottom}
-          stuck={stuck}
-          containerHeight={containerHeight}
-          isSticky={isSticky}
-          unstickingInTransition={unstickingInTransition}
+          stickyContainerStyleProps={stickyContainerStyleProps}
           {...other}
         >
           {children}
