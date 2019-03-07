@@ -188,7 +188,7 @@ export class StickyContainer extends Component {
     let containerHeight = this.currentStickyContainer.current
       ? this.currentStickyContainer.current.clientHeight
       : 0
-    this.setState({ containerHeight: containerHeight })
+    this.setState({ containerHeight })
 
     if (domElementHelper.canUseDom()) {
       window.addEventListener('scroll', throttle(this.updateStickyState, 200))
