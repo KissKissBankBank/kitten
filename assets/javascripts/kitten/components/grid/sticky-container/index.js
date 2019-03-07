@@ -108,10 +108,10 @@ export class StickyContainer extends Component {
     this.state.prevScrollPos > currentScrollPos
 
   isOriginalContainerOutOfViewport = () => {
-    if (this.props.isSticky === 'topOnScrollUp') {
+    if (isStickyTopOnScrollUp(this.props.isSticky)) {
       return window.pageYOffset > this.state.containerHeight + this.props.top
     }
-    if (this.props.isSticky === 'bottomOnScrollDown') {
+    if (isStickyBottomOnScrollDown(this.props.isSticky)) {
       return (
         window.pageYOffset + window.innerHeight <
         document.body.clientHeight -
@@ -123,7 +123,7 @@ export class StickyContainer extends Component {
   shouldStickContainerOnTop = hasScrolledUp => {
     return (
       hasScrolledUp &&
-      this.props.isSticky === 'topOnScrollUp' &&
+      isStickyTopOnScrollUp(this.props.isSticky) &&
       this.isOriginalContainerOutOfViewport()
     )
   }
@@ -131,7 +131,7 @@ export class StickyContainer extends Component {
   shouldStickContainerOnBottom = hasScrolledDown => {
     return (
       hasScrolledDown &&
-      this.props.isSticky === 'bottomOnScrollDown' &&
+      isStickyBottomOnScrollDown(this.props.isSticky) &&
       this.isOriginalContainerOutOfViewport()
     )
   }
@@ -149,8 +149,8 @@ export class StickyContainer extends Component {
 
   shouldUnstickContainerWithTransition = (hasScrolledDown, hasScrolledUp) => {
     return (
-      (hasScrolledDown && this.props.isSticky === 'topOnScrollUp') ||
-      (hasScrolledUp && this.props.isSticky === 'bottomOnScrollDown')
+      (hasScrolledDown && isStickyTopOnScrollUp(this.props.isSticky)) ||
+      (hasScrolledUp && isStickyBottomOnScrollDown(this.props.isSticky))
     )
   }
 
