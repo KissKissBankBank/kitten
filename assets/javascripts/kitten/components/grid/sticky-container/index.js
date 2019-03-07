@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment, useRef, useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -14,211 +14,170 @@ const StyledStickyContainer = styled.div`
   ${({ stickyContainerStyleProps }) => stickyContainerStyleProps}
 `
 
-const isStickyTopOnScrollUp = isSticky => isSticky === 'topOnScrollUp'
+function useScrollDirection() {
+  /*
+    https://www.iwakoscott.com/blog/useRef
+    return value:
+      true => user is scrolling to the bottom of the page.
+      false => user is scrolling to the top of the page.
+  */
 
-const isStickyBottomOnScrollDown = isSticky => isSticky === 'bottomOnScrollDown'
+  // save the new scroll position in state
+  const [scrollPos, setScrollPos] = useState(0)
+  // useRef Hook to save the old scroll state.
+  const oldScrollPos = useRef(0)
 
-const isStickyAlways = isSticky => isSticky === 'always'
+  useEffect(() => {
+    function onScroll() {
+      setScrollPos(window.pageYOffset)
+      // save the old scroll position in the ref
+      oldScrollPos.current = window.pageYOffset
+    }
+    window.addEventListener('scroll', throttle(onScroll, 200))
+    return () => window.removeEventListener('scroll', throttle(onScroll, 200))
+  }, [])
 
-const getStickyStyleProps = ({
-  stuck,
-  containerHeight,
-  top,
-  bottom,
-  unstickingInTransition,
-  isSticky,
-}) => {
-  const position = stuck ? 'fixed' : 'static'
+  // current scroll position minus the old scroll position saved in state.
+  const difference = scrollPos - oldScrollPos.current
 
-  if (isStickyAlways(isSticky)) {
+  return [difference > 0, difference < 0]
+}
+
+const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
+  const currentStickyContainer = useRef(null)
+
+  const [stuck, setStuckState] = useState(false)
+  const [containerHeight, setContainerHeight] = useState(0)
+  const [currentlyUnsticking, setCurrentlyUnstickingState] = useState(false)
+
+  const [scrollDirectionDown, scrollDirectionUp] = useScrollDirection()
+
+  const isStickyTopOnScrollUp = () => isSticky === 'topOnScrollUp'
+
+  const isStickyBottomOnScrollDown = () => isSticky === 'bottomOnScrollDown'
+
+  const isStickyAlways = () => isSticky === 'always'
+
+  const setSticky = () => {
+    setStuckState(true)
+  }
+
+  const setUnstickyWithTransition = () => {
+    setCurrentlyUnstickingState(true)
+    setTimeout(() => {
+      setStuckState(false)
+      setCurrentlyUnstickingState(false)
+    }, 220)
+  }
+
+  const setUnsticky = () => {
+    setStuckState(false)
+  }
+
+  const isOriginalContainerOutOfViewport = () => {
+    if (isStickyTopOnScrollUp()) {
+      let distanceToBorder = top || 0
+      return window.pageYOffset > containerHeight + distanceToBorder
+    }
+    if (isStickyBottomOnScrollDown()) {
+      let distanceToBorder = bottom || 0
+      return (
+        window.pageYOffset + window.innerHeight <
+        document.body.clientHeight - (containerHeight + distanceToBorder)
+      )
+    }
+  }
+
+  const shouldStickContainerOnTop = () => {
+    return (
+      scrollDirectionUp &&
+      isStickyTopOnScrollUp() &&
+      isOriginalContainerOutOfViewport()
+    )
+  }
+
+  const shouldStickContainerOnBottom = () => {
+    return (
+      scrollDirectionDown &&
+      isStickyBottomOnScrollDown() &&
+      isOriginalContainerOutOfViewport()
+    )
+  }
+
+  const shouldStickContainer = () => {
+    return shouldStickContainerOnTop() || shouldStickContainerOnBottom()
+  }
+
+  const shouldUnstickContainer = () => {
+    return !isOriginalContainerOutOfViewport()
+  }
+
+  const shouldUnstickContainerWithTransition = () => {
+    return (
+      (scrollDirectionDown && isStickyTopOnScrollUp()) ||
+      (scrollDirectionUp && isStickyBottomOnScrollDown())
+    )
+  }
+
+  useEffect(() => {
+    if (isStickyAlways()) {
+      setSticky()
+    } else {
+      const currentContainerHeight = currentStickyContainer.current
+        ? currentStickyContainer.current.clientHeight
+        : 0
+      setContainerHeight(currentContainerHeight)
+    }
+  }, []) // se déclenche au montage du composant
+
+  useEffect(() => {
+    if (shouldUnstickContainer()) {
+      setUnsticky()
+    } else if (shouldStickContainer()) {
+      setSticky()
+    } else if (shouldUnstickContainerWithTransition()) {
+      setUnstickyWithTransition()
+    }
+  }, [scrollDirectionDown, scrollDirectionUp])
+
+  const stickyContainerStyleProps = () => {
+    const position = stuck ? 'fixed' : 'static'
+
+    if (isStickyAlways()) {
+      return css`
+        position: ${position};
+        top: ${top};
+        bottom: ${bottom};
+      `
+    }
+
+    const distance = currentlyUnsticking || !stuck ? containerHeight : 0
+
+    const directionToAnimate = isStickyTopOnScrollUp() ? 'top' : 'bottom'
+
+    const basis = directionToAnimate === 'top' ? top || 0 : bottom || 0
+
+    const directionDistance = pxToRem(basis - distance)
+
     return css`
       position: ${position};
-      top: ${top};
-      bottom: ${bottom};
+      ${directionToAnimate}: ${directionDistance};
+      transition-property: ${directionToAnimate};
     `
   }
 
-  const distance = unstickingInTransition || !stuck ? containerHeight : 0
-
-  const direction = isStickyTopOnScrollUp(isSticky) ? 'top' : 'bottom'
-
-  const basis = direction === 'top' ? top : bottom
-  const directionDistance = pxToRem(basis - distance)
-
-  return css`
-    position: ${position};
-    ${direction}: ${directionDistance};
-    transition-property: ${direction};
-  `
+  return (
+    <Fragment>
+      {stuck && <div style={{ height: pxToRem(containerHeight) }} />}
+      <StyledStickyContainer
+        ref={currentStickyContainer}
+        stickyContainerStyleProps={stickyContainerStyleProps}
+        {...other}
+      >
+        {children}
+      </StyledStickyContainer>
+    </Fragment>
+  )
 }
 
-export class StickyContainer extends Component {
-  static propTypes = {
-    isSticky: PropTypes.oneOf([
-      'always',
-      'topOnScrollUp',
-      'bottomOnScrollDown',
-      'never',
-    ]),
-    top: PropTypes.number,
-    bottom: PropTypes.number,
-  }
-
-  static defaultProps = {
-    isSticky: 'always',
-    top: null,
-    bottom: null,
-  }
-
-  constructor(props) {
-    super(props)
-
-    this.currentStickyContainer = React.createRef()
-
-    this.state = {
-      stuck: false,
-      prevScrollPos: 0,
-      containerHeight: 0,
-      unstickingInTransition: false,
-    }
-  }
-
-  setSticky = () => {
-    this.setState({ stuck: true })
-  }
-
-  setUnstickyWithTransition = () => {
-    this.setState({ unstickingInTransition: true }, () => {
-      setTimeout(() => {
-        this.setState({
-          stuck: false,
-          unstickingInTransition: false,
-        })
-      }, 220)
-    })
-  }
-
-  setUnsticky = () => {
-    this.setState({ stuck: false })
-  }
-
-  hasScrolledDown = currentScrollPos =>
-    this.state.prevScrollPos < currentScrollPos
-  hasScrolledUp = currentScrollPos =>
-    this.state.prevScrollPos > currentScrollPos
-
-  isOriginalContainerOutOfViewport = () => {
-    if (isStickyTopOnScrollUp(this.props.isSticky)) {
-      return window.pageYOffset > this.state.containerHeight + this.props.top
-    }
-    if (isStickyBottomOnScrollDown(this.props.isSticky)) {
-      return (
-        window.pageYOffset + window.innerHeight <
-        document.body.clientHeight -
-          (this.state.containerHeight + this.props.bottom)
-      )
-    }
-  }
-
-  shouldStickContainerOnTop = hasScrolledUp => {
-    return (
-      hasScrolledUp &&
-      isStickyTopOnScrollUp(this.props.isSticky) &&
-      this.isOriginalContainerOutOfViewport()
-    )
-  }
-
-  shouldStickContainerOnBottom = hasScrolledDown => {
-    return (
-      hasScrolledDown &&
-      isStickyBottomOnScrollDown(this.props.isSticky) &&
-      this.isOriginalContainerOutOfViewport()
-    )
-  }
-
-  shouldStickContainer = (hasScrolledDown, hasScrolledUp) => {
-    return (
-      this.shouldStickContainerOnTop(hasScrolledUp) ||
-      this.shouldStickContainerOnBottom(hasScrolledDown)
-    )
-  }
-
-  shouldUnstickContainer = () => {
-    return !this.isOriginalContainerOutOfViewport()
-  }
-
-  shouldUnstickContainerWithTransition = (hasScrolledDown, hasScrolledUp) => {
-    return (
-      (hasScrolledDown && isStickyTopOnScrollUp(this.props.isSticky)) ||
-      (hasScrolledUp && isStickyBottomOnScrollDown(this.props.isSticky))
-    )
-  }
-
-  updateStickyState = () => {
-    const currentScrollPos = window.pageYOffset
-
-    const hasScrolledDown = this.hasScrolledDown(currentScrollPos)
-    const hasScrolledUp = this.hasScrolledUp(currentScrollPos)
-
-    if (this.shouldUnstickContainer()) {
-      this.setUnsticky()
-    } else if (this.shouldStickContainer(hasScrolledDown, hasScrolledUp)) {
-      this.setSticky()
-    } else if (
-      this.shouldUnstickContainerWithTransition(hasScrolledDown, hasScrolledUp)
-    ) {
-      this.setUnstickyWithTransition()
-    }
-
-    this.setState({ prevScrollPos: currentScrollPos })
-  }
-
-  componentDidMount() {
-    isStickyAlways(this.props.isSticky) && this.setSticky()
-
-    const containerHeight = this.currentStickyContainer.current
-      ? this.currentStickyContainer.current.clientHeight
-      : 0
-    this.setState({ containerHeight })
-
-    if (domElementHelper.canUseDom() && !isStickyAlways(this.props.isSticky)) {
-      window.addEventListener('scroll', throttle(this.updateStickyState, 200))
-    }
-  }
-
-  componentWillUnmount() {
-    if (domElementHelper.canUseDom() && !isStickyAlways(this.props.isSticky)) {
-      window.removeEventListener(
-        'scroll',
-        throttle(this.updateStickyState, 200),
-      )
-    }
-  }
-
-  render() {
-    const { children, top, bottom, isSticky, ...other } = this.props
-    const { stuck, containerHeight, unstickingInTransition } = this.state
-
-    const stickyContainerStyleProps = getStickyStyleProps({
-      stuck,
-      containerHeight,
-      top,
-      bottom,
-      unstickingInTransition,
-      isSticky,
-    })
-
-    return (
-      <Fragment>
-        {stuck && <div style={{ height: pxToRem(containerHeight) }} />}
-        <StyledStickyContainer
-          ref={this.currentStickyContainer}
-          stickyContainerStyleProps={stickyContainerStyleProps}
-          {...other}
-        >
-          {children}
-        </StyledStickyContainer>
-      </Fragment>
-    )
-  }
-}
+export default StickyContainer
