@@ -185,7 +185,7 @@ export class StickyContainer extends Component {
   }
 
   componentDidMount() {
-    let containerHeight = this.currentStickyContainer.current
+    const containerHeight = this.currentStickyContainer.current
       ? this.currentStickyContainer.current.clientHeight
       : 0
     this.setState({ containerHeight })
