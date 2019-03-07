@@ -103,13 +103,14 @@ export class StickyContainer extends Component {
   }
 
   setUnstickyWithTransition = () => {
-    this.setState({ unstickingInTransition: true })
-    setTimeout(() => {
-      this.setState({
-        stuck: false,
-        unstickingInTransition: false,
-      })
-    }, 220)
+    this.setState({ unstickingInTransition: true }, () => {
+      setTimeout(() => {
+        this.setState({
+          stuck: false,
+          unstickingInTransition: false,
+        })
+      }, 220)
+    })
   }
 
   setUnsticky = () => {
