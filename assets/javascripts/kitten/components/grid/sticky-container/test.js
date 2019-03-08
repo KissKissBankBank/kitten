@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { StickyContainer } from './index'
+import StickyContainer from './index'
 
 describe('<StickyContainer />', () => {
   let component
@@ -23,7 +23,7 @@ describe('<StickyContainer />', () => {
             className="custom__class"
             style={{ color: 'red' }}
             aria-hidden
-            isStickyOnScroll="up"
+            isSticky="topOnScrollUp"
             top={66}
           />,
         )
@@ -38,7 +38,7 @@ describe('<StickyContainer />', () => {
   describe('already sticky', () => {
     beforeEach(() => {
       component = renderer
-        .create(<StickyContainer isSticky={true} bottom={0} />)
+        .create(<StickyContainer isSticky="always" bottom={0} />)
         .toJSON()
     })
 
