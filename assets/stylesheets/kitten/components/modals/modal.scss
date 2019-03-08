@@ -28,8 +28,8 @@
 
     background-color: $background-color;
     text-align: center;
-    padding-left: k-px-to-rem(20px);
-    padding-right: k-px-to-rem(20px);
+    padding-left: k-px-to-rem(60px);
+    padding-right: k-px-to-rem(60px);
 
     outline: none;
     box-sizing: border-box;
@@ -45,7 +45,11 @@
   .k-Modal__close {
     position: absolute;
     top: 0;
-    right: 0;
+    right: k-px-to-rem(50px);
+  }
+
+  .k-Modal__close--fixed {
+    position: fixed;
   }
 
   .k-Modal__overlay {

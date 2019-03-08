@@ -8,6 +8,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `width` and `height` props to `HorizontalStroke`.
 - Feature: Add `HorizontalStroke` size CSS: `TINY`, `DEFAULT`, `BIG` and `HUGE`.
 - Feature: Export `FLUID` css from `Button`.
+- Feature: Add `IconList`.
+
+## [1.19.0] - 2019-03-05
+
+Feature:
+- Add `position: fixed` and update horizontal padding on `Modal`
+  component.
 
 ## [1.18.1] - 2019-02-28
 

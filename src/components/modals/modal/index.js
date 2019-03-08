@@ -19,7 +19,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -31,7 +31,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _reactModal = _interopRequireDefault(require("react-modal"));
 
-var _closeButton = require("../../components/buttons/close-button");
+var _closeButton = require("../../../components/buttons/close-button");
 
 // Via "https://github.com/reactjs/react-modal"
 var Modal =
@@ -39,11 +39,21 @@ var Modal =
 function (_Component) {
   (0, _inherits2.default)(Modal, _Component);
 
-  function Modal(props) {
+  function Modal() {
+    var _getPrototypeOf2;
+
     var _this;
 
     (0, _classCallCheck2.default)(this, Modal);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Modal).call(this, props));
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(Modal)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this.state = {
+      showModal: false
+    };
 
     _this.open = function () {
       _this.setState({
@@ -61,20 +71,21 @@ function (_Component) {
       }
     };
 
-    _this.state = {
-      showModal: false
-    };
     return _this;
   }
 
   (0, _createClass2.default)(Modal, [{
     key: "renderCloseModal",
     value: function renderCloseModal() {
-      return _react.default.createElement(_closeButton.CloseButton, {
-        className: "k-Modal__close",
+      var closeButtonLabel = this.props.closeButtonLabel;
+      return _react.default.createElement("div", {
+        className: "k-Modal__close"
+      }, _react.default.createElement(_closeButton.CloseButton, {
+        className: "k-Modal__close--fixed",
         modifier: "beryllium",
-        onClick: this.close
-      });
+        onClick: this.close,
+        closeButtonLabel: closeButtonLabel
+      }));
     }
   }, {
     key: "renderTriggerAction",
@@ -95,8 +106,9 @@ function (_Component) {
           labelledby = _this$props.labelledby,
           describedby = _this$props.describedby,
           className = _this$props.className,
+          closeButtonLabel = _this$props.closeButtonLabel,
           onClose = _this$props.onClose,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "onClose"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose"]);
       var triggerClassNames = (0, _classnames.default)('k-Modal', className);
       return _react.default.createElement("div", (0, _extends2.default)({
         className: triggerClassNames
@@ -130,10 +142,12 @@ exports.Modal = Modal;
 Modal.propTypes = {
   label: _propTypes.default.string,
   labelledby: _propTypes.default.string,
-  describedby: _propTypes.default.string
+  describedby: _propTypes.default.string,
+  closeButtonLabel: _propTypes.default.string
 };
 Modal.defaultProps = {
   label: 'Modal',
   labelledby: '',
-  describedby: ''
+  describedby: '',
+  closeButtonLabel: ''
 };
