@@ -15,12 +15,13 @@ const StyledStickyContainer = styled.div`
 `
 
 function useScrollDirection() {
-  /*
-    https://www.iwakoscott.com/blog/useRef
-    return value:
-      true => user is scrolling to the bottom of the page.
-      false => user is scrolling to the top of the page.
-  */
+  // Returns an array with booleans:
+  //
+  //     [true, false] // => user is scrolling to the bottom of the page.
+  //     [false, true] // => user is scrolling to the top of the page.
+  //     [false, false] // => no scroll change.
+  //
+  // See also https://www.iwakoscott.com/blog/useRef
 
   // save the new scroll position in state
   const [scrollPos, setScrollPos] = useState(0)
