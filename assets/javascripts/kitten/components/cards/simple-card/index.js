@@ -1,96 +1,45 @@
 import React, { Component } from 'react'
-import classNames from 'classnames'
+import styled from 'styled-components'
 import { card } from '../../../hoc/card'
-import { Marger } from '../../../components/layout/marger'
-import { Title } from '../../../components/typography/title'
-import { Text } from '../../../components/typography/text'
-import { parseHtml } from '../../../helpers/utils/parser'
-import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
+import { Image } from './components/image'
+import { TitleComponent } from './components/title'
+import { Subtitle } from './components/subtitle'
+import { Paragraph } from './components/paragraph'
+
+const ContainerStyle = styled.a`
+  line-height: 1;
+  position: relative;
+`
 
 class SimpleCardComponent extends Component {
   render() {
     const {
       imageProps,
-      titleProps,
+      withPlayerButtonOnImage,
+      arrowColor,
+      ariaLabel,
+      href,
       title,
+      titleProps,
       subtitle,
       paragraph,
-      horizontalStroke,
       ...others
     } = this.props
 
-    const Tag = this.props.href ? 'a' : 'div'
-
-    const titleClassName = classNames('k-Card__title', titleProps.className)
-
     return (
-      <Tag {...others} style={{ lineHeight: 1, ...others.style }}>
-        <Marger bottom="2" className="k-Card__imageContainer">
-          <img
-            {...imageProps}
-            alt={imageProps.alt || ''}
-            className="k-Card__image"
-            style={{ ...imageProps.style, ...styles.image }}
-          />
-        </Marger>
-
-        {title && (
-          <Marger top="2" bottom=".3">
-            <Title
-              tag="p"
-              {...titleProps}
-              className={titleClassName}
-              margin={false}
-              modifier="senary"
-            >
-              {parseHtml(title)}
-            </Title>
-          </Marger>
-        )}
-
-        {subtitle && (
-          <Marger top=".3" bottom="1.5">
-            <Text size="micro" weight="regular">
-              {parseHtml(subtitle)}
-            </Text>
-          </Marger>
-        )}
-
-        {paragraph && (
-          <Marger top=".3" bottom="1.5">
-            <Text lineHeight="normal" size="micro" weight="light">
-              {parseHtml(paragraph)}
-            </Text>
-          </Marger>
-        )}
-
-        {horizontalStroke && (
-          <Marger top="1.5">
-            <HorizontalStroke size="tiny" />
-          </Marger>
-        )}
-      </Tag>
+      <ContainerStyle {...others} as={href ? 'a' : 'div'}>
+        <Image
+          imageProps={imageProps}
+          withPlayerButtonOnImage={withPlayerButtonOnImage}
+          arrowColor={arrowColor}
+          ariaLabel={ariaLabel}
+        />
+        {title && <TitleComponent title={title} titleProps={titleProps} />}
+        {subtitle && <Subtitle subtitle={subtitle} />}
+        {paragraph && <Paragraph paragraph={paragraph} />}
+      </ContainerStyle>
     )
   }
-}
-
-const styles = {
-  image: {
-    width: '100%',
-    display: 'block',
-  },
-}
-
-SimpleCardComponent.defaultProps = {
-  imageProps: {
-    src: 'https://placehold.it/200x200/caf4fe/caf4fe',
-    alt: '',
-  },
-  titleProps: {},
-  title: null,
-  subtitle: null,
-  paragraph: null,
-  horizontalStroke: true,
 }
 
 export const SimpleCard = card(SimpleCardComponent, {
