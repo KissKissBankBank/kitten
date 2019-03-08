@@ -12,8 +12,8 @@ and on [Storybook](https://kisskissbankbank.github.io/kitten/).
 
 ## Dependencies
 
-- react >= 15.x
-- react-dom >= 15.x
+- react >= 16.8.x
+- react-dom >= 16.8.x
 - @babel/polyfill if you support IE10 and previous versions
 
 ## Table of content
