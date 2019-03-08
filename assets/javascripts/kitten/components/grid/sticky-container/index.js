@@ -53,12 +53,6 @@ const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
 
   const [scrollDirectionDown, scrollDirectionUp] = useScrollDirection()
 
-  const isStickyTopOnScrollUp = () => isSticky === 'topOnScrollUp'
-
-  const isStickyBottomOnScrollDown = () => isSticky === 'bottomOnScrollDown'
-
-  const isStickyAlways = () => isSticky === 'always'
-
   const setSticky = () => {
     setStuckState(true)
   }
@@ -76,11 +70,11 @@ const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
   }
 
   const isOriginalContainerOutOfViewport = () => {
-    if (isStickyTopOnScrollUp()) {
+    if (isSticky === 'topOnScrollUp') {
       let distanceToBorder = top || 0
       return window.pageYOffset > containerHeight + distanceToBorder
     }
-    if (isStickyBottomOnScrollDown()) {
+    if (isSticky === 'bottomOnScrollDown') {
       let distanceToBorder = bottom || 0
       return (
         window.pageYOffset + window.innerHeight <
@@ -92,7 +86,7 @@ const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
   const shouldStickContainerOnTop = () => {
     return (
       scrollDirectionUp &&
-      isStickyTopOnScrollUp() &&
+      isSticky === 'topOnScrollUp' &&
       isOriginalContainerOutOfViewport()
     )
   }
@@ -100,7 +94,7 @@ const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
   const shouldStickContainerOnBottom = () => {
     return (
       scrollDirectionDown &&
-      isStickyBottomOnScrollDown() &&
+      isSticky === 'bottomOnScrollDown' &&
       isOriginalContainerOutOfViewport()
     )
   }
@@ -115,13 +109,13 @@ const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
 
   const shouldUnstickContainerWithTransition = () => {
     return (
-      (scrollDirectionDown && isStickyTopOnScrollUp()) ||
-      (scrollDirectionUp && isStickyBottomOnScrollDown())
+      (scrollDirectionDown && isSticky === 'topOnScrollUp') ||
+      (scrollDirectionUp && isSticky === 'bottomOnScrollDown')
     )
   }
 
   useEffect(() => {
-    if (isStickyAlways()) {
+    if (isSticky === 'always') {
       setSticky()
     } else {
       const currentContainerHeight = currentStickyContainer.current
@@ -144,7 +138,7 @@ const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
   const stickyContainerStyleProps = () => {
     const position = stuck ? 'fixed' : 'static'
 
-    if (isStickyAlways()) {
+    if (isSticky === 'always') {
       return css`
         position: ${position};
         top: ${top};
@@ -154,7 +148,7 @@ const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
 
     const distance = currentlyUnsticking || !stuck ? containerHeight : 0
 
-    const directionToAnimate = isStickyTopOnScrollUp() ? 'top' : 'bottom'
+    const directionToAnimate = isSticky === 'topOnScrollUp' ? 'top' : 'bottom'
 
     const basis = directionToAnimate === 'top' ? top || 0 : bottom || 0
 
