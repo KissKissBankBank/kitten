@@ -3,27 +3,19 @@
 exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 <div
   className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
-  title={null}
 >
   <div
     className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
   >
     <div
-      className="simple-card__PlayerStyle-sc-1g5bppt-3 behilo"
+      className="image__PlayerStyle-sc-8olw7b-2 jEOAJp"
     >
       <img
         alt=""
-        className="k-Card__image simple-card__ImageStyle-sc-1g5bppt-1 dIFdHh"
+        className="k-Card__image image__ImageStyle-sc-8olw7b-0 bIBocY"
         src="https://placehold.it/200x200/caf4fe/caf4fe"
       />
     </div>
-  </div>
-  <div
-    className="marger__StyledMarger-q3lecu-0 cHJBWz"
-  >
-    <span
-      className="k-HorizontalStroke k-HorizontalStroke--tiny"
-    />
   </div>
 </div>
 `;
@@ -31,16 +23,15 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot 1`] = `
 <div
   className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
-  title={null}
 >
   <div
     className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
   >
     <div
-      className="simple-card__PlayerStyle-sc-1g5bppt-3 behilo"
+      className="image__PlayerStyle-sc-8olw7b-2 jEOAJp"
     >
       <div
-        className="simple-card__PlayerButtonStyle-sc-1g5bppt-2 gIZiSo"
+        className="image__PlayerButtonStyle-sc-8olw7b-1 jwKNkb"
       >
         <span
           aria-label={null}
@@ -51,17 +42,10 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
       </div>
       <img
         alt=""
-        className="k-Card__image simple-card__ImageStyle-sc-1g5bppt-1 dIFdHh"
+        className="k-Card__image image__ImageStyle-sc-8olw7b-0 bIBocY"
         src="https://placehold.it/200x200/caf4fe/caf4fe"
       />
     </div>
-  </div>
-  <div
-    className="marger__StyledMarger-q3lecu-0 cHJBWz"
-  >
-    <span
-      className="k-HorizontalStroke k-HorizontalStroke--tiny"
-    />
   </div>
 </div>
 `;
@@ -69,17 +53,16 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
 exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
 <div
   className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
-  title={null}
 >
   <div
     className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
   >
     <div
-      className="simple-card__PlayerStyle-sc-1g5bppt-3 behilo"
+      className="image__PlayerStyle-sc-8olw7b-2 jEOAJp"
     >
       <img
         alt=""
-        className="k-Card__image simple-card__ImageStyle-sc-1g5bppt-1 dIFdHh"
+        className="k-Card__image image__ImageStyle-sc-8olw7b-0 bIBocY"
         src="https://placehold.it/200x200/caf4fe/caf4fe"
       />
     </div>
