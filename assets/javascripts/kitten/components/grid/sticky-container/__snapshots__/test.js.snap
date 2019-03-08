@@ -14,6 +14,12 @@ exports[`<StickyContainer /> by default matches with snapshot 1`] = `
 
 exports[`<StickyContainer /> with some props matches with snapshot 1`] = `
 <div
-  className="sticky-container__StyledStickyContainer-trwgvt-0 irbHjO"
+  aria-hidden={true}
+  className="custom__class sticky-container__StyledStickyContainer-trwgvt-0 ickmxm"
+  style={
+    Object {
+      "color": "red",
+    }
+  }
 />
 `;
