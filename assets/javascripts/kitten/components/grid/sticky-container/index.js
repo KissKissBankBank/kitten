@@ -123,7 +123,7 @@ const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
         : 0
       setContainerHeight(currentContainerHeight)
     }
-  }, []) // se déclenche au montage du composant
+  }, []) // [] makes that Effect fire on Component mount only
 
   useEffect(() => {
     if (shouldUnstickContainer()) {
