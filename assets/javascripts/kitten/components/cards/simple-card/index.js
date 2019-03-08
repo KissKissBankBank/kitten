@@ -5,7 +5,6 @@ import { Image } from './components/image'
 import { TitleComponent } from './components/title'
 import { Subtitle } from './components/subtitle'
 import { Paragraph } from './components/paragraph'
-import { HorizontalStrokeComponent } from './components/horizontal-stroke'
 
 const ContainerStyle = styled.a`
   line-height: 1;
@@ -24,12 +23,11 @@ class SimpleCardComponent extends Component {
       titleProps,
       subtitle,
       paragraph,
-      horizontalStroke,
       ...others
     } = this.props
 
     return (
-      <ContainerStyle {...others} as={others.href ? 'a' : 'div'}>
+      <ContainerStyle {...others} as={href ? 'a' : 'div'}>
         <Image
           imageProps={imageProps}
           withPlayerButtonOnImage={withPlayerButtonOnImage}
@@ -39,9 +37,6 @@ class SimpleCardComponent extends Component {
         {title && <TitleComponent title={title} titleProps={titleProps} />}
         {subtitle && <Subtitle subtitle={subtitle} />}
         {paragraph && <Paragraph paragraph={paragraph} />}
-        {horizontalStroke && (
-          <HorizontalStrokeComponent horizontalStroke={horizontalStroke} />
-        )}
       </ContainerStyle>
     )
   }

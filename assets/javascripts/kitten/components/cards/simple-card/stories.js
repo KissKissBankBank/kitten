@@ -24,7 +24,6 @@ storiesOf('Cards/SimpleCard', module)
                 title={text('Title', 'Title')}
                 subtitle={text('Subtitle', 'Subtitle')}
                 paragraph={text('Paragraph', 'Paragraph')}
-                horizontalStroke={boolean('With horizontal stroke?', true)}
                 withPlayerButtonOnImage={boolean(
                   'With player button on image?',
                   true,

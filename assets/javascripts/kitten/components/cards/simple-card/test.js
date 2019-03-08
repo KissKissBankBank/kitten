@@ -23,7 +23,7 @@ describe('<SimpleCard />', () => {
     })
 
     it('is a <a />', () => {
-      expect(component.render().is('a')).toBe(false)
+      expect(component.render().is('a')).toBe(true)
     })
 
     it('has a href attribute', () => {
@@ -145,7 +145,7 @@ describe('<SimpleCard />', () => {
   describe('with withPlayerButtonOnImage props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<SimpleCard withPlayerButtonOnImage={true} />)
+        .create(<SimpleCard withPlayerButtonOnImage />)
         .toJSON()
     })
 
