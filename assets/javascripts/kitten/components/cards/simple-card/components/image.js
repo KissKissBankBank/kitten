@@ -10,15 +10,15 @@ const ImageStyle = styled.img`
   width: 100%;
   display: block;
 `
-const PlayerButtonSize = pxToRem(70)
+const playerButtonSize = pxToRem(70)
 
 const PlayerButtonStyle = styled.div`
-  width: ${PlayerButtonSize};
-  height: ${PlayerButtonSize};
+  width: ${playerButtonSize};
+  height: ${playerButtonSize};
   background: ${COLORS.font1};
   position: absolute;
-  top: calc(50% - ${PlayerButtonSize} / 2);
-  left: calc(50% - ${PlayerButtonSize} / 2);
+  top: calc(50% - ${playerButtonSize} / 2);
+  left: calc(50% - ${playerButtonSize} / 2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,6 +91,6 @@ Image.defaultProps = {
   },
   withPlayerButtonOnImage: false,
   ariaLabel: null,
-  arrowColor: 'background1',
+  arrowColor: COLORS.background1,
   href: '#',
 }
