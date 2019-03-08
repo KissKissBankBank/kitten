@@ -25,19 +25,22 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _card = require("../../../hoc/card");
 
-var _marger = require("../../../components/layout/marger");
+var _image = require("./components/image");
 
-var _title = require("../../../components/typography/title");
+var _title = require("./components/title");
 
-var _text = require("../../../components/typography/text");
+var _subtitle = require("./components/subtitle");
 
-var _parser = require("../../../helpers/utils/parser");
+var _paragraph = require("./components/paragraph");
 
-var _horizontalStroke = require("../../../components/layout/horizontal-stroke");
+var ContainerStyle = _styledComponents.default.a.withConfig({
+  displayName: "simple-card__ContainerStyle",
+  componentId: "sc-1g5bppt-0"
+})(["line-height:1;position:relative;"]);
 
 var SimpleCardComponent =
 /*#__PURE__*/
@@ -54,74 +57,35 @@ function (_Component) {
     value: function render() {
       var _this$props = this.props,
           imageProps = _this$props.imageProps,
-          titleProps = _this$props.titleProps,
+          withPlayerButtonOnImage = _this$props.withPlayerButtonOnImage,
+          arrowColor = _this$props.arrowColor,
+          ariaLabel = _this$props.ariaLabel,
+          href = _this$props.href,
           title = _this$props.title,
+          titleProps = _this$props.titleProps,
           subtitle = _this$props.subtitle,
           paragraph = _this$props.paragraph,
-          horizontalStroke = _this$props.horizontalStroke,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["imageProps", "titleProps", "title", "subtitle", "paragraph", "horizontalStroke"]);
-      var Tag = this.props.href ? 'a' : 'div';
-      var titleClassName = (0, _classnames.default)('k-Card__title', titleProps.className);
-      return _react.default.createElement(Tag, (0, _extends2.default)({}, others, {
-        style: (0, _extends2.default)({
-          lineHeight: 1
-        }, others.style)
-      }), _react.default.createElement(_marger.Marger, {
-        bottom: "2",
-        className: "k-Card__imageContainer"
-      }, _react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
-        alt: imageProps.alt || '',
-        className: "k-Card__image",
-        style: (0, _extends2.default)({}, imageProps.style, styles.image)
-      }))), title && _react.default.createElement(_marger.Marger, {
-        top: "2",
-        bottom: ".3"
-      }, _react.default.createElement(_title.Title, (0, _extends2.default)({
-        tag: "p"
-      }, titleProps, {
-        className: titleClassName,
-        margin: false,
-        modifier: "senary"
-      }), (0, _parser.parseHtml)(title))), subtitle && _react.default.createElement(_marger.Marger, {
-        top: ".3",
-        bottom: "1.5"
-      }, _react.default.createElement(_text.Text, {
-        size: "micro",
-        weight: "regular"
-      }, (0, _parser.parseHtml)(subtitle))), paragraph && _react.default.createElement(_marger.Marger, {
-        top: ".3",
-        bottom: "1.5"
-      }, _react.default.createElement(_text.Text, {
-        lineHeight: "normal",
-        size: "micro",
-        weight: "light"
-      }, (0, _parser.parseHtml)(paragraph))), horizontalStroke && _react.default.createElement(_marger.Marger, {
-        top: "1.5"
-      }, _react.default.createElement(_horizontalStroke.HorizontalStroke, {
-        size: "tiny"
-      })));
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph"]);
+      return _react.default.createElement(ContainerStyle, (0, _extends2.default)({}, others, {
+        as: href ? 'a' : 'div'
+      }), _react.default.createElement(_image.Image, {
+        imageProps: imageProps,
+        withPlayerButtonOnImage: withPlayerButtonOnImage,
+        arrowColor: arrowColor,
+        ariaLabel: ariaLabel
+      }), title && _react.default.createElement(_title.TitleComponent, {
+        title: title,
+        titleProps: titleProps
+      }), subtitle && _react.default.createElement(_subtitle.Subtitle, {
+        subtitle: subtitle
+      }), paragraph && _react.default.createElement(_paragraph.Paragraph, {
+        paragraph: paragraph
+      }));
     }
   }]);
   return SimpleCardComponent;
 }(_react.Component);
 
-var styles = {
-  image: {
-    width: '100%',
-    display: 'block'
-  }
-};
-SimpleCardComponent.defaultProps = {
-  imageProps: {
-    src: 'https://placehold.it/200x200/caf4fe/caf4fe',
-    alt: ''
-  },
-  titleProps: {},
-  title: null,
-  subtitle: null,
-  paragraph: null,
-  horizontalStroke: true
-};
 var SimpleCard = (0, _card.card)(SimpleCardComponent, {
   withoutBoxShadowOnHover: true
 });
