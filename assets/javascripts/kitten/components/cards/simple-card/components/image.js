@@ -91,6 +91,6 @@ Image.defaultProps = {
   },
   withPlayerButtonOnImage: false,
   ariaLabel: null,
-  arrowColor: COLORS.background1,
+  arrowColor: 'background1',
   href: '#',
 }
