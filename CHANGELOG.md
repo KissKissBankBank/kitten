@@ -6,8 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `customSize` props to `HorizontalStroke`.
 - Feature: Add `HorizontalStroke` size CSS: `TINY`, `DEFAULT`, `BIG` and `HUGE`.
-- Feature: Add `Video` component.
-- Feature: Add `getReactElementsWithoutType` helper.
+
+## [1.21.0] - 2019-03-11
+
+Features:
+- Add `Video` component.
+- Add `getReactElementsWithoutType` helper.
+
+Fix:
+- Add missing `href` props to `SimpleCard`.
 
 ## [1.20.0] - 2019-03-08
 
