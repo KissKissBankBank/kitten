@@ -141,4 +141,16 @@ describe('<SimpleCard />', () => {
       expect(component.find(Title).hasClass('custom-class')).toBe(true)
     })
   })
+
+  describe('with withPlayerButtonOnImage props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<SimpleCard withPlayerButtonOnImage />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

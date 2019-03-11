@@ -2,61 +2,70 @@
 
 exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 <div
-  className="k-Card k-Card--withoutBoxShadowOnHover"
-  style={
-    Object {
-      "lineHeight": 1,
-    }
-  }
+  className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
 >
   <div
     className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
   >
-    <img
-      alt=""
-      className="k-Card__image"
-      src="https://placehold.it/200x200/caf4fe/caf4fe"
-      style={
-        Object {
-          "display": "block",
-          "width": "100%",
-        }
-      }
-    />
+    <div
+      className="image__PlayerStyle-sc-8olw7b-2 jEOAJp"
+    >
+      <img
+        alt=""
+        className="k-Card__image image__ImageStyle-sc-8olw7b-0 bIBocY"
+        src="https://placehold.it/200x200/caf4fe/caf4fe"
+      />
+    </div>
   </div>
+</div>
+`;
+
+exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot 1`] = `
+<div
+  className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
+>
   <div
-    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+    className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
   >
-    <span
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
-    />
+    <div
+      className="image__PlayerStyle-sc-8olw7b-2 jEOAJp"
+    >
+      <div
+        className="image__PlayerButtonStyle-sc-8olw7b-1 jwKNkb"
+      >
+        <span
+          aria-label={null}
+          className="k-u-color-background1 k-u-size-default k-u-weight-regular"
+        >
+          ►
+        </span>
+      </div>
+      <img
+        alt=""
+        className="k-Card__image image__ImageStyle-sc-8olw7b-0 bIBocY"
+        src="https://placehold.it/200x200/caf4fe/caf4fe"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
 <div
-  className="k-Card k-Card--withoutBoxShadowOnHover"
-  style={
-    Object {
-      "lineHeight": 1,
-    }
-  }
+  className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
 >
   <div
     className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 jgfcQX"
   >
-    <img
-      alt=""
-      className="k-Card__image"
-      src="https://placehold.it/200x200/caf4fe/caf4fe"
-      style={
-        Object {
-          "display": "block",
-          "width": "100%",
-        }
-      }
-    />
+    <div
+      className="image__PlayerStyle-sc-8olw7b-2 jEOAJp"
+    >
+      <img
+        alt=""
+        className="k-Card__image image__ImageStyle-sc-8olw7b-0 bIBocY"
+        src="https://placehold.it/200x200/caf4fe/caf4fe"
+      />
+    </div>
   </div>
 </div>
 `;
