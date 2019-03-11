@@ -7,6 +7,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `Video` component.
 - Feature: Add `getReactElementsWithoutType` helper.
 
+## [1.20.0] - 2019-03-08
+
+Feature:
+- Add `withPlayerButtonOnImage` props and update style on
+  `SimpleCard` component.
+
 ## [1.19.0] - 2019-03-05
 
 Feature:
