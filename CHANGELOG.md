@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Video` component.
+- Feature: Add `getReactElementsWithoutType` helper.
+
 ## [1.20.0] - 2019-03-08
 
 Feature:
