@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `SimpleCard` link.
+
 ## [1.20.0] - 2019-03-08
 
 Feature:
