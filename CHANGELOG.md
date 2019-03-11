@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update `SimpleCard` link.
+- Fix: Add missing `href` props to `SimpleCard`.
 - Feature: Add `Video` component.
 - Feature: Add `getReactElementsWithoutType` helper.
 
