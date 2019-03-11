@@ -73,8 +73,8 @@ const TextWithImage = ({ imagePosition }) => (
     <Container>
       <StyledGrid>
         <ContentGrid
-          col-s="10"
-          offset-s="1"
+          col-xs="10"
+          offset-xs="1"
           col-l="4"
           imagePosition={imagePosition}
         >
@@ -118,7 +118,7 @@ const TextWithImage = ({ imagePosition }) => (
           <StyledButton big>En savoir plus</StyledButton>
         </ContentGrid>
 
-        <GridCol col-s="10" offset-s="1" col-l="5">
+        <GridCol col-xs="10" offset-xs="1" col-l="5">
           <Figure>
             <div
               style={{ width: '100%', height: 415, background: '#404040' }}

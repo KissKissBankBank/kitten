@@ -53,7 +53,7 @@ const TextWithImages = () => (
   <Marger top={{ default: 8, fromS: 10 }} bottom={{ default: 8, fromS: 10 }}>
     <Container>
       <Grid>
-        <GridCol col-l="10" offset-l="1">
+        <GridCol col-xs="10" offset-xs="1">
           <StyledGrid>
             <div>
               <StyledTitle tag="h2" modifier="secondary" margin={false}>
@@ -62,7 +62,7 @@ const TextWithImages = () => (
 
               <Marger top="4" className="k-u-hidden@xs-down">
                 <Button as="a" href="#" modifier="helium" big>
-                  Vous aussi, rejoignez-nous
+                  Rejoignez-nous
                 </Button>
               </Marger>
             </div>

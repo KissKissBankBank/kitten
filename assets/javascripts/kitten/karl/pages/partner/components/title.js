@@ -36,7 +36,7 @@ const Title = () => (
   <Marger top={{ default: 8, fromS: 10 }} bottom={{ default: 3, fromS: 4 }}>
     <Container>
       <Grid>
-        <GridCol col-s="10" offset-s="1">
+        <GridCol col-xs="10" offset-xs="1">
           <Marger bottom="2">
             <StyledTitle tag="h2" modifier="secondary" margin={false}>
               Nous créons avec vous <br />

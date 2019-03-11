@@ -33,7 +33,7 @@ const TextWithIconList = () => (
   <Marger top={{ default: 8, fromS: 10 }} bottom={{ default: 8, fromS: 10 }}>
     <Container>
       <StyledGrid>
-        <GridCol col-s="10" offset-s="1" col-l="4">
+        <GridCol col-xs="10" offset-xs="1" col-l="4">
           <Marger bottom={{ default: 3, fromL: 2 }}>
             <StyledTitle tag="h2" modifier="secondary" margin={false}>
               Les bonnes raisons de nous rejoindre
@@ -51,7 +51,7 @@ const TextWithIconList = () => (
           </Marger>
         </GridCol>
 
-        <GridCol col-s="10" offset-s="1" col-l="5">
+        <GridCol col-xs="10" offset-xs="1" col-l="5">
           <IconList>
             <IconList.Item
               iconProps={{

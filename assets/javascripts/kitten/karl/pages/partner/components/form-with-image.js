@@ -69,7 +69,7 @@ class FormWithImage extends Component {
               <StyledImage />
             </GridCol>
 
-            <GridCol col-s="8" offset-s="2" col-l="4" offset-l="1">
+            <GridCol col-xs="10" offset-xs="1" col-l="4" offset-l="1">
               <Marger bottom="1.5">
                 <StyledTitle tag="h3" modifier="quaternary" margin={false}>
                   Contactez nous et rejoignez la famille des partenaires de
@@ -127,10 +127,12 @@ class FormWithImage extends Component {
                   </Field.Label>
 
                   <Field.Select
+                    name="mentor"
+                    placeholder="Sélectionner le type de partenariat"
                     options={[
-                      { value: 'mentors', label: 'Mentors' },
-                      { value: 'mentors', label: 'Mentors' },
-                      { value: 'mentors', label: 'Mentors' },
+                      { value: '1', label: 'Mentors #1' },
+                      { value: '2', label: 'Mentors #2' },
+                      { value: '3', label: 'Mentors #3' },
                     ]}
                   />
                 </Field>

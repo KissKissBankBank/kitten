@@ -78,7 +78,7 @@ const TextWithVideo = () => (
           </StyledVideo>
         </GridCol>
 
-        <GridCol col-s="10" col-l="5" offset-s="1">
+        <GridCol col-xs="10" offset-xs="1" col-l="5">
           <Marger top={{ default: 4, fromS: 8, fromL: 0 }} bottom="2">
             <Title tag="h1" modifier="secondary" margin={false}>
               Devenons partenaires, favorisons l’émergence de projets inspirants

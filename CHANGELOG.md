@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `IconList`.
 - Feature: Add `Video` component.
 - Feature: Add `getReactElementsWithoutType` helper.
+- Fix: Update selected option style to `Select` component.
 
 ## [1.20.0] - 2019-03-08
 

@@ -35,12 +35,11 @@ const Triptych = () => (
   <Marger top={{ default: 8, fromS: 10 }} bottom={{ default: 8, fromS: 10 }}>
     <Container>
       <Grid>
-        <GridCol col-l="10" offset-l="1">
+        <GridCol col-xs="10" offset-xs="1">
           <KittenTriptych
             title={
               <Title tag="h2" modifier="secondary" margin={false}>
-                La Banque Postale, un exemple de <br />
-                partenariat riche de sens
+                La Banque Postale, un exemple de partenariat riche de sens
               </Title>
             }
             item1={<Card />}
