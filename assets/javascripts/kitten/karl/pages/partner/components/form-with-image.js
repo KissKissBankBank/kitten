@@ -92,8 +92,7 @@ class FormWithImage extends Component {
               <Marger bottom="4">
                 <Field>
                   <Field.Label>Votre nom</Field.Label>
-                  <Field.Input error placeholder="Entrer votre nom" />
-                  <Field.ErrorMessage>Votre nom est requis.</Field.ErrorMessage>
+                  <Field.Input placeholder="Entrer votre nom" />
                 </Field>
               </Marger>
 
