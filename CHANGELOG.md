@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `SimpleCard` link.
+- Feature: Add `Video` component.
+- Feature: Add `getReactElementsWithoutType` helper.
 
 ## [1.20.0] - 2019-03-08
 
