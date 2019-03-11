@@ -101,6 +101,7 @@ const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
 
   color: ${COLORS.font1};
 
