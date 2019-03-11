@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { PureComponent, createRef } from 'react'
 import styled from 'styled-components'
 import {
   getReactElementsByType,
@@ -19,37 +19,46 @@ const StyledVideo = styled.video`
   object-fit: cover;
 `
 
-export const Video = ({ src, children, ...props }) => {
-  const video = useRef()
+export class Video extends PureComponent {
+  constructor(props) {
+    super(props)
 
-  useEffect(() => updateVideoSource())
-
-  const updateVideoSource = () => {
-    if (isVideoSourceMatchesSource()) return
-
-    video.current.src = src
+    this.video = createRef()
   }
 
-  const isVideoSourceMatchesSource = () => {
-    if (!video.current || !video.current.src) return
-
-    return video.current.src === src
+  componentDidMount() {
+    this.updateVideoSource()
   }
 
-  const loader = getReactElementsByType({ children, type: Video.Loader })
-  const childrenWithoutLoader = getReactElementsWithoutType({
-    children,
-    type: Video.Loader,
-  })
+  updateVideoSource = () => {
+    if (this.isVideoSourceMatchesSource()) return
 
-  return (
-    <StyledContainer>
-      {loader}
-      <StyledVideo {...props} ref={video}>
-        {childrenWithoutLoader}
-      </StyledVideo>
-    </StyledContainer>
-  )
+    this.video.current.src = this.props.src
+  }
+
+  isVideoSourceMatchesSource = () => {
+    if (!this.video.current || !this.video.current.src) return
+
+    return this.video.current.src === this.props.src
+  }
+
+  render() {
+    const { children, ...props } = this.props
+    const loader = getReactElementsByType({ children, type: Video.Loader })
+    const childrenWithoutLoader = getReactElementsWithoutType({
+      children,
+      type: Video.Loader,
+    })
+
+    return (
+      <StyledContainer>
+        {loader}
+        <StyledVideo {...props} ref={this.video}>
+          {childrenWithoutLoader}
+        </StyledVideo>
+      </StyledContainer>
+    )
+  }
 }
 
 Video.Loader = styled.div`

@@ -4,11 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `Video` component.
 - Feature: Add `width` and `height` props to `HorizontalStroke`.
 - Feature: Add `HorizontalStroke` size CSS: `TINY`, `DEFAULT`, `BIG` and `HUGE`.
 - Feature: Export `FLUID` css from `Button`.
 - Feature: Add `IconList`.
+- Feature: Add `Video` component.
+- Feature: Add `getReactElementsWithoutType` helper.
+
+## [1.20.0] - 2019-03-08
+
+Feature:
+- Add `withPlayerButtonOnImage` props and update style on
+  `SimpleCard` component.
 
 ## [1.19.0] - 2019-03-05
 
