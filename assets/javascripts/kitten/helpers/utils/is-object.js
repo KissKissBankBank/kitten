@@ -1,15 +1,10 @@
 /*
- * lodash throttle()
- * Creates a throttled function that only invokes `func` at most once per
- * every `wait` milliseconds (or once per browser frame). The throttled function
- * comes with a `cancel` method to cancel delayed `func` invocations and a
- * `flush` method to immediately invoke them. Provide `options` to indicate
- * whether `func` should be invoked on the leading and/or trailing edge of the
- * `wait` timeout. The `func` is invoked with the last arguments provided to the
- * throttled function. Subsequent calls to the throttled function return the
- * result of the last `func` invocation.
+ * lodash isObject()
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
  *
- * https://github.com/lodash/lodash/blob/master/throttle.js
+ * https://github.com/lodash/lodash/blob/master/isObject.js
  *
  * The MIT License
  *
@@ -48,25 +43,9 @@
  *
  */
 
-import debounce from './debounce'
-import isObject from './is-object'
-
-function throttle(func, wait, options) {
-  let leading = true
-  let trailing = true
-
-  if (typeof func !== 'function') {
-    throw new TypeError('Expected a function')
-  }
-  if (isObject(options)) {
-    leading = 'leading' in options ? !!options.leading : leading
-    trailing = 'trailing' in options ? !!options.trailing : trailing
-  }
-  return debounce(func, wait, {
-    leading,
-    trailing,
-    maxWait: wait,
-  })
+function isObject(value) {
+  const type = typeof value
+  return value != null && (type == 'object' || type == 'function')
 }
 
-export default throttle
+export default isObject
