@@ -56,7 +56,7 @@ const StyledLink = styled(Text)`
   }
 `
 
-const Login = () => (
+const Login = props => (
   <StyledBackground>
     <Container>
       <StyledGrid>
@@ -80,7 +80,13 @@ const Login = () => (
           <Marger top="3" bottom="4">
             <Field>
               <Field.Label>Adresse email</Field.Label>
-              <Field.Input placeholder="Votre adresse email" />
+              <Field.Input
+                placeholder="Votre adresse email"
+                error={props.inputError}
+              />
+              {props.inputError && (
+                <Field.ErrorMessage>Invalid email</Field.ErrorMessage>
+              )}
             </Field>
           </Marger>
           <Marger top="4" bottom="1.5">
@@ -94,7 +100,15 @@ const Login = () => (
               >
                 Mot de passe
               </StyledLabel>
-              <Field.Password placeholder="Entrez votre mot de passe" />
+              <Field.Password
+                placeholder="Entrez votre mot de passe"
+                error={props.passwordError}
+                iconLabel="Show password"
+                hiddenIconLabel="Hide password"
+              />
+              {props.passwordError && (
+                <Field.ErrorMessage>Invalid password</Field.ErrorMessage>
+              )}
             </Field>
           </Marger>
           <Marger top="1.5" bottom="4">
