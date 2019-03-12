@@ -52,6 +52,35 @@ export const FieldInputExample = ({
   </FieldBase>
 )
 
+export const FieldPasswordExample = ({
+  id,
+  label,
+  tooltip,
+  tooltipId,
+  placeholder,
+  error,
+  errorMessage,
+  limit,
+}) => (
+  <FieldBase
+    id={id}
+    label={label}
+    tooltip={tooltip}
+    tooltipId={tooltipId}
+    error={error}
+    errorMessage={errorMessage}
+  >
+    <Field.Password
+      id={id}
+      name="field"
+      iconLabel="Show password"
+      hiddenIconLabel="Hide password"
+      placeholder={placeholder}
+      error={error}
+    />
+  </FieldBase>
+)
+
 export const FieldRadioButtonSetExample = ({
   id,
   label,
