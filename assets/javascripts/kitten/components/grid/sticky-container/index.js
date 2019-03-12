@@ -1,9 +1,9 @@
 import React, { Fragment, useRef, useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
+import throttle from 'lodash/throttle'
 import { pxToRem } from '../../../helpers/utils/typography'
 import ColorsConfig from '../../../constants/colors-config'
-import { throttle } from '../../../helpers/utils/throttle'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
 
 const StyledStickyContainer = styled.div`
