@@ -9,9 +9,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `HorizontalStroke` size CSS: `TINY`, `DEFAULT`, `BIG` and `HUGE`.
 - Feature: Export `FLUID`, `DEFAULT`, `TINY` and `BIG` css from `Button`.
 - Feature: Add `IconList`.
-- Feature: Add `Video` component.
-- Feature: Add `getReactElementsWithoutType` helper.
 - Fix: Update selected option style to `Select` component.
+
+## [1.21.0] - 2019-03-11
+
+Features:
+- Add `Video` component.
+- Add `getReactElementsWithoutType` helper.
+
+Fix:
+- Add missing `href` props to `SimpleCard`.
 
 ## [1.20.0] - 2019-03-08
 
