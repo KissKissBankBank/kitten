@@ -4,9 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Field.Checkbox`.
 - Feature: Add `width` and `height` props to `HorizontalStroke`.
 - Feature: Add `HorizontalStroke` size CSS: `TINY`, `DEFAULT`, `BIG` and `HUGE`.
-- Feature: Export `FLUID` css from `Button`.
+- Feature: Export `FLUID`, `DEFAULT`, `TINY` and `BIG` css from `Button`.
 - Feature: Add `IconList`.
 - Feature: Add `Video` component.
 - Feature: Add `getReactElementsWithoutType` helper.
