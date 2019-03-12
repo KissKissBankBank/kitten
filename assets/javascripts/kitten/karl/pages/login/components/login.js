@@ -7,6 +7,8 @@ import { Text } from '../../../../components/typography/text'
 import { Marger } from '../../../../components/layout/marger'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import { Field } from '../../../../components/form/field'
+import { Checkbox } from '../../../../components/form/checkbox'
+import { Button } from '../../../../components/buttons/button/button'
 import COLORS from '../../../../constants/colors-config'
 import styled from 'styled-components'
 
@@ -92,8 +94,26 @@ const Login = () => (
               >
                 Mot de passe
               </StyledLabel>
-              <Field.Input placeholder="Entrez votre mot de passe" />
+              <Field.Password placeholder="Entrez votre mot de passe" />
             </Field>
+          </Marger>
+          <Marger top="1.5" bottom="4">
+            <Checkbox id="remember-me">Se souvenir de moi</Checkbox>
+          </Marger>
+          <Marger top="4" bottom="2">
+            <Button big fluid modifier="helium">
+              Se connecter
+            </Button>
+          </Marger>
+          <Marger top="2" bottom="2">
+            <Text tag="p" size="tiny" className="k-u-align-center">
+              Créez votre compte en quelques minutes seulement et commencez à
+              investir.
+              <br />
+              <StyledLink tag="a" href="#" weight="regular" size="tiny">
+                Inscrivez-vous
+              </StyledLink>
+            </Text>
           </Marger>
         </GridCol>
       </StyledGrid>
