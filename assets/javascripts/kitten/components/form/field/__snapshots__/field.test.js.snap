@@ -260,8 +260,6 @@ Array [
         className="k-TextInput is-error"
         data-radium={true}
         disabled={false}
-        hiddenIconLabel="Hide password"
-        iconLabel="Show password"
         id="input"
         name="field"
         placeholder="Placeholder…"
@@ -416,8 +414,6 @@ Array [
         className="k-TextInput"
         data-radium={true}
         disabled={false}
-        hiddenIconLabel="Hide password"
-        iconLabel="Show password"
         id="input"
         name="field"
         placeholder="Placeholder…"
