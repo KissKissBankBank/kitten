@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { BulletList } from '../../../lists/bullet-list'
 import { Marger } from '../../../layout/marger'
+import PropTypes from 'prop-types'
 
 const BulletListStyle = styled(BulletList)`
   li {
@@ -20,4 +21,8 @@ export const MarkdownList = props => {
       <BulletListStyle big items={items} />
     </Marger>
   )
+}
+
+MarkdownList.propTypes = {
+  children: PropTypes.node.isRequired,
 }

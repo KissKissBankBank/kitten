@@ -5,6 +5,7 @@ import { MarkdownHeading } from './components/heading'
 import { MarkdownLink } from './components/link'
 import { MarkdownList } from './components/list'
 import { MarkdownParagraph } from './components/paragraph'
+import { MarkdownLinkList } from './components/link-list'
 import { Context } from './components/context'
 
 export const MarkdownPage = ({ children, paragraphModifier }) => (
@@ -22,6 +23,7 @@ const markdownRenderers = {
   list: MarkdownList,
   link: MarkdownLink,
   heading: MarkdownHeading,
+  blockquote: MarkdownLinkList,
 }
 
 MarkdownPage.propTypes = {

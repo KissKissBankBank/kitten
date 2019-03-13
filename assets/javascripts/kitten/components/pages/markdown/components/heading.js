@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import slugify from 'slugify'
 import { Title } from '../../../typography/title'
 import { HorizontalStroke } from '../../../layout/horizontal-stroke'
@@ -44,13 +44,13 @@ export const MarkdownHeading = props => {
   })
 
   return (
-    <Fragment>
+    <>
       <Marger top={{ default: 8, fromS: 10 }} bottom="2">
         <Title modifier={modifier} tag={tag} id={id}>
           {props.children}
         </Title>
       </Marger>
       {renderHorizontalStroke()}
-    </Fragment>
+    </>
   )
 }
