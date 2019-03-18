@@ -15,7 +15,7 @@ import COLORS from '../../../../constants/colors-config'
 import { CheckedCircleIcon } from '../../../../components/icons/checked-circle-icon'
 
 const StyledImage = styled.div`
-  height: 800px;
+  height: ${pxToRem(800)};
   margin-left: -${pxToRem(CONTAINER_PADDING)};
   background: #404040;
 `
