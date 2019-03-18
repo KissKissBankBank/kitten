@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `IconList`.
+
 ## [1.21.0] - 2019-03-11
 
 Features:
