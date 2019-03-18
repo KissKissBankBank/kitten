@@ -35,6 +35,7 @@ export const RightEmptyContainer = styled.div`
   ${rightContainer}
   flex: 1;
 `
+
 export const LeftEmptyContainer = styled.div`
   ${leftContainer}
   flex: 1;
