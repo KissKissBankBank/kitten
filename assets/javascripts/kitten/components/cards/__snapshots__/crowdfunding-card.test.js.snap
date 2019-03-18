@@ -130,14 +130,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
         className="marger__StyledMarger-q3lecu-0 kREYig"
       >
         <span
-          className="k-HorizontalStroke k-HorizontalStroke--tiny"
-          data-radium={true}
-          style={
-            Object {
-              "flexShrink": 0,
-              "margin": "5px 10px 5px 0",
-            }
-          }
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 ifvkxH"
         />
       </div>
     </div>
@@ -278,15 +271,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
         className="marger__StyledMarger-q3lecu-0 kREYig"
       >
         <span
-          className="k-HorizontalStroke k-HorizontalStroke--tiny"
-          data-radium={true}
-          style={
-            Object {
-              "backgroundColor": "#d8d8d8",
-              "flexShrink": 0,
-              "margin": "5px 10px 5px 0",
-            }
-          }
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 RWndB"
         />
         <span
           data-radium={true}
@@ -468,14 +453,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         className="marger__StyledMarger-q3lecu-0 kREYig"
       >
         <span
-          className="k-HorizontalStroke k-HorizontalStroke--tiny"
-          data-radium={true}
-          style={
-            Object {
-              "flexShrink": 0,
-              "margin": "5px 10px 5px 0",
-            }
-          }
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 ifvkxH"
         />
         <p
           className="k-u-size-micro k-u-weight-regular"
