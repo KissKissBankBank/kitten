@@ -111,7 +111,7 @@ var StyledLink = _styledComponents.default.a.withConfig({
 var StyledContent = _styledComponents.default.div.withConfig({
   displayName: "step__StyledContent",
   componentId: "sc-1you76f-2"
-})(["display:flex;flex-direction:column;justify-content:center;color:", ";", ""], _colorsConfig.default.font1, function (_ref2) {
+})(["display:flex;flex-direction:column;justify-content:center;flex:1;color:", ";", ""], _colorsConfig.default.font1, function (_ref2) {
   var disabled = _ref2.disabled;
   return disabled && (0, _styledComponents.css)(["color:", ";"], _colorsConfig.default.font2);
 });
