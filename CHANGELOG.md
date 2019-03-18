@@ -4,10 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `customSize` props to `HorizontalStroke`.
-- Feature: Add `HorizontalStroke` size CSS: `TINY`, `DEFAULT`, `BIG` and `HUGE`.
-- Feature: Add `IconList`.
-- Feature: Add empty `Prev` and `Next` container to `NavTabCarousel` when
+## [1.22.0] - 2019-03-18
+
+Features:
+- Add `customSize` props to `HorizontalStroke`.
+- Add `HorizontalStroke` size CSS: `TINY`, `DEFAULT`, `BIG` and `HUGE`.
+- Add `IconList`.
+- Add empty `Prev` and `Next` container to `NavTabCarousel` when
   `NavTabCarousel.Prev` or `NavTabCarousel.Next` are empty.
 
 ## [1.21.0] - 2019-03-11
