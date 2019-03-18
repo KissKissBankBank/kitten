@@ -56,7 +56,7 @@ storiesOf('Carousel/NavTabCarousel', module)
         <NavTabCarousel>
           <NavTabCarousel.Pagination
             activeIndex={number('Active index', 2)}
-            links={array('links', links)}
+            totalIndex={number('total index', 2)}
             activeColor={color('Pagination active color', COLORS.primary1)}
           />
           <NavTabCarousel.Next
@@ -77,7 +77,7 @@ storiesOf('Carousel/NavTabCarousel', module)
           />
           <NavTabCarousel.Pagination
             activeIndex={number('Active index', 2)}
-            links={array('links', links)}
+            totalIndex={number('total index', 2)}
             activeColor={color('Pagination active color', COLORS.primary1)}
           />
         </NavTabCarousel>
