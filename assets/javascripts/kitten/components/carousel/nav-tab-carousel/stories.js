@@ -50,7 +50,7 @@ storiesOf('Carousel/NavTabCarousel', module)
       </StoryGrid>
     )
   })
-  .add('with no next', () => {
+  .add('with no prev', () => {
     return (
       <StoryGrid>
         <NavTabCarousel>
@@ -67,7 +67,7 @@ storiesOf('Carousel/NavTabCarousel', module)
       </StoryGrid>
     )
   })
-  .add('with no prev', () => {
+  .add('with no next', () => {
     return (
       <StoryGrid>
         <NavTabCarousel>
