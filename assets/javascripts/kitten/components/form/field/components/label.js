@@ -5,36 +5,44 @@ import { Label } from '../../../form/label'
 import { Tooltip } from '../../../tooltips/tooltip'
 import { Line } from '../../../layout/line'
 
-export class FieldLabel extends Component {
-  static propTypes = {
-    tooltip: PropTypes.string,
-    labelProps: PropTypes.object,
+export const FieldLabel = ({
+  children,
+  tooltip,
+  tooltipId,
+  labelProps,
+  withoutMargin,
+}) => {
+  const InnerLabel = (
+    <Line style={{ lineHeight: 1 }}>
+      <Line.Item>
+        <Label {...labelProps} size="tiny">
+          {children}
+        </Label>
+      </Line.Item>
+
+      {tooltip && (
+        <Line.Item>
+          <Tooltip id={tooltipId}>{tooltip}</Tooltip>
+        </Line.Item>
+      )}
+    </Line>
+  )
+
+  if (withoutMargin) {
+    return InnerLabel
   }
 
-  static defaultProps = {
-    tooltip: null,
-    labelProps: {},
-  }
+  return <Marger bottom="1.5">{InnerLabel}</Marger>
+}
 
-  render() {
-    const { children, tooltip, tooltipId, labelProps } = this.props
+FieldLabel.propTypes = {
+  tooltip: PropTypes.string,
+  labelProps: PropTypes.object,
+  withoutMargin: PropTypes.bool,
+}
 
-    return (
-      <Marger bottom="1.5">
-        <Line style={{ lineHeight: 1 }}>
-          <Line.Item>
-            <Label {...labelProps} size="tiny">
-              {children}
-            </Label>
-          </Line.Item>
-
-          {tooltip && (
-            <Line.Item>
-              <Tooltip id={tooltipId}>{tooltip}</Tooltip>
-            </Line.Item>
-          )}
-        </Line>
-      </Marger>
-    )
-  }
+FieldLabel.defaultProps = {
+  tooltip: null,
+  labelProps: {},
+  withoutMargin: false,
 }

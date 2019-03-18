@@ -3,6 +3,10 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Features:
+- Add `withoutMarger` prop to `Field.Input`, `Field.Label` and `Field.Select`.
+- Add `unit` prop to `Field.Input`.
+
 
 ## [1.22.0] - 2019-03-18
 

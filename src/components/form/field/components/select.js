@@ -25,6 +25,8 @@ var _marger = require("../../../layout/marger");
 
 var _selectWithState = require("../../../form/select-with-state");
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var FieldSelect =
 /*#__PURE__*/
 function (_Component) {
@@ -38,6 +40,10 @@ function (_Component) {
   (0, _createClass2.default)(FieldSelect, [{
     key: "render",
     value: function render() {
+      if (this.props.withoutMargin) {
+        return _react.default.createElement(_selectWithState.SelectWithState, this.props);
+      }
+
       return _react.default.createElement(_marger.Marger, {
         top: "1.5"
       }, _react.default.createElement(_selectWithState.SelectWithState, this.props));
@@ -47,3 +53,9 @@ function (_Component) {
 }(_react.Component);
 
 exports.FieldSelect = FieldSelect;
+FieldSelect.propTypes = {
+  withoutMargin: _propTypes.default.bool
+};
+FieldSelect.defaultProps = {
+  withoutMargin: false
+};

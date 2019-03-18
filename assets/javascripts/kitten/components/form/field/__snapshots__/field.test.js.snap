@@ -73,7 +73,6 @@ Array [
       className="k-TextInput is-error"
       disabled={false}
       id="input"
-      limit={null}
       name="field"
       placeholder="Placeholder…"
       type="text"
@@ -169,7 +168,6 @@ Array [
       className="k-TextInput"
       disabled={false}
       id="input"
-      limit={null}
       name="field"
       placeholder="Placeholder…"
       type="text"
