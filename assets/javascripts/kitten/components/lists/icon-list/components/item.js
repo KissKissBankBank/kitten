@@ -40,6 +40,7 @@ const StyledContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex: 1;
 
   ${TYPOGRAPHY.fontStyles.light};
   color: ${COLORS.font1};
