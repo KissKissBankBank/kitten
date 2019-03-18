@@ -7,6 +7,10 @@ import { Pagination } from './components/pagination'
 import COLORS from './../../../constants/colors-config'
 import { getReactElementsByType } from './../../../helpers/react/react-elements'
 import { pxToRem } from './../../../helpers/utils/typography'
+import {
+  LeftEmptyContainer,
+  RightEmptyContainer,
+} from './components/styled-components'
 
 const NavTabCarouselStyles = styled.div`
   box-sizing: border-box;
@@ -41,9 +45,9 @@ export class NavTabCarousel extends Component {
 
     return (
       <NavTabCarouselStyles>
-        {prev}
+        {prev || <LeftEmptyContainer />}
         {pagination}
-        {next}
+        {next || <RightEmptyContainer />}
       </NavTabCarouselStyles>
     )
   }
