@@ -15,6 +15,7 @@ storiesOf('Cards/SimpleCard', module)
           <Grid>
             <GridCol col="6" col-xs="4" col-m="3" col-l="2">
               <SimpleCard
+                href="#"
                 imageProps={{
                   src: text(
                     'Image src',
@@ -24,7 +25,10 @@ storiesOf('Cards/SimpleCard', module)
                 title={text('Title', 'Title')}
                 subtitle={text('Subtitle', 'Subtitle')}
                 paragraph={text('Paragraph', 'Paragraph')}
-                horizontalStroke={boolean('With horizontal stroke?', true)}
+                withPlayerButtonOnImage={boolean(
+                  'With player button on image?',
+                  true,
+                )}
               />
             </GridCol>
           </Grid>
