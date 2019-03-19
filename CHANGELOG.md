@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Field.Checkbox`.
+- Feature: Export `FLUID`, `DEFAULT`, `TINY` and `BIG` css from `Button`.
+- Fix: Update selected option style to `Select` component.
+
 ## [1.22.0] - 2019-03-18
 
 Features:
