@@ -1,23 +1,24 @@
 import React, { memo } from 'react'
 import styled from 'styled-components'
-import { Marger } from '../../../../components/layout/marger'
-import { Container } from '../../../../components/grid/container'
-import { Grid, GridCol } from '../../../../components/grid/grid'
-import { Title } from '../../../../components/typography/title'
-import { Paragraph } from '../../../../components/typography/paragraph'
 import {
+  Marger,
+  Container,
+  Grid,
+  GridCol,
+  Title,
+  Paragraph,
   HorizontalStroke,
-  DEFAULT,
-  BIG,
-} from '../../../../components/layout/horizontal-stroke'
-import { Button, FLUID } from '../../../../components/buttons/button/button'
+  Button,
+  Video,
+  Loader,
+} from '../../../../index'
+import { DEFAULT, BIG } from '../../../../components/layout/horizontal-stroke'
+import { FLUID } from '../../../../components/buttons/button/button'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_THIN,
 } from '../../../../constants/grid-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Video } from '../../../../components/videos/video'
-import { Loader } from '../../../../components/loaders/loader'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledGrid = styled(Grid)`

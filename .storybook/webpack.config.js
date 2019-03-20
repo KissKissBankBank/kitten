@@ -6,7 +6,7 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 const path = require('path')
-const kittenPaths = require('../src')
+const kittenPaths = require('../src/assets-paths')
 const modulesPath = ['node_modules']
 
 module.exports = {
@@ -28,6 +28,9 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        resolve: {
+          extensions: ['.scss', '.sass'],
+        },
         use: [{
           loader: 'style-loader'
         }, {
