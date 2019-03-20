@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Move `src/index` in `src/assets-paths`.
+  If you use Kitten paths, you will be update require :
+  `const kittenPaths = require('../src')` by
+  `const kittenPaths = require('../src/assets-paths')`
+- Feature: You can now import components with `src/index`. Example:
+  `import { Button, Grid, GridCol, Text, Paragraph } from '@kisskissbankbank/kitten/src'
+
 ## [1.23.0] - 2019-03-20
 
 Features:
