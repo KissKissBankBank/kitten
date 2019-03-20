@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Button = void 0;
+exports.Button = exports.BIG = exports.TINY = exports.DEFAULT = exports.FLUID = void 0;
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
@@ -36,15 +36,17 @@ var _modifierStyles = require("./helpers/modifier-styles");
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "sc-1q5nte0-0"
-})(["display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-width:", ";min-height:", ";padding:0 ", ";", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appareance:none;outline:none;cursor:pointer;:disabled{cursor:not-allowed;}>:nth-child(n){margin-right:", ";text-align:left;}>:last-child{margin-right:0;}", " ", " ", " ", " ", ""], (0, _typography.pxToRem)(200), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(30), _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(14), _colorsConfig.default.font1, (0, _typography.pxToRem)(10), function (_ref) {
+})(["display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appareance:none;outline:none;cursor:pointer;:disabled{cursor:not-allowed;}>:nth-child(n){margin-right:", ";text-align:left;}>:last-child{margin-right:0;}", " ", " ", " ", " ", ""], function () {
+  return DEFAULT;
+}, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(14), _colorsConfig.default.font1, (0, _typography.pxToRem)(10), function (_ref) {
   var tiny = _ref.tiny;
-  return tiny && (0, _styledComponents.css)(["min-width:", ";min-height:", ";padding:0 ", ";"], (0, _typography.pxToRem)(160), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(20));
+  return tiny && TINY;
 }, function (_ref2) {
   var big = _ref2.big;
-  return big && (0, _styledComponents.css)(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";"], (0, _typography.pxToRem)(220), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(16));
+  return big && BIG;
 }, function (_ref3) {
   var fluid = _ref3.fluid;
-  return fluid && (0, _styledComponents.css)(["min-width:initial;width:100%;"]);
+  return fluid && FLUID;
 }, function (_ref4) {
   var icon = _ref4.icon;
   return icon && (0, _styledComponents.css)(["min-width:initial;min-height:initial;width:", ";height:", ";padding:0;", " ", ""], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), function (_ref5) {
@@ -58,6 +60,15 @@ var StyledButton = _styledComponents.default.button.withConfig({
   var modifier = _ref7.modifier;
   return (0, _modifierStyles.modifierStyles)(modifier);
 });
+
+var FLUID = (0, _styledComponents.css)(["min-width:initial;width:100%;"]);
+exports.FLUID = FLUID;
+var DEFAULT = (0, _styledComponents.css)(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";"], (0, _typography.pxToRem)(200), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(14));
+exports.DEFAULT = DEFAULT;
+var TINY = (0, _styledComponents.css)(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";"], (0, _typography.pxToRem)(160), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(14));
+exports.TINY = TINY;
+var BIG = (0, _styledComponents.css)(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";"], (0, _typography.pxToRem)(220), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(16));
+exports.BIG = BIG;
 
 var Button =
 /*#__PURE__*/
