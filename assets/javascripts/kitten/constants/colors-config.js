@@ -5,6 +5,7 @@ export default {
   background1: '#fff', // White
   background2: '#fbfbfb', // Extra Light Grey
   background3: '#f6f6f6', // Light Grey
+  backgroundLightRed: '#ffebe0', // Light Red
 
   line1: '#eee', // Semi Light Grey
   line2: '#d8d8d8', // Grey
