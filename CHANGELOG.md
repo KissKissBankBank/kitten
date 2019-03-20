@@ -4,6 +4,33 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [1.23.0] - 2019-03-20
+
+Features:
+- Add `Field.Checkbox`.
+- Export `FLUID`, `DEFAULT`, `TINY` and `BIG` css from `Button`.
+
+Fix:
+- Update selected option style to `Select` component.
+
+## [1.22.0] - 2019-03-18
+
+Features:
+- Add `customSize` props to `HorizontalStroke`.
+- Add `HorizontalStroke` size CSS: `TINY`, `DEFAULT`, `BIG` and `HUGE`.
+- Add `IconList`.
+- Add empty `Prev` and `Next` container to `NavTabCarousel` when
+  `NavTabCarousel.Prev` or `NavTabCarousel.Next` are empty.
+
+## [1.21.0] - 2019-03-11
+
+Features:
+- Add `Video` component.
+- Add `getReactElementsWithoutType` helper.
+
+Fix:
+- Add missing `href` props to `SimpleCard`.
+
 ## [1.20.0] - 2019-03-08
 
 Feature:

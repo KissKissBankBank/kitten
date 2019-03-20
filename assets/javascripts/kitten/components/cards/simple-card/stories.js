@@ -15,6 +15,7 @@ storiesOf('Cards/SimpleCard', module)
           <Grid>
             <GridCol col="6" col-xs="4" col-m="3" col-l="2">
               <SimpleCard
+                href="#"
                 imageProps={{
                   src: text(
                     'Image src',

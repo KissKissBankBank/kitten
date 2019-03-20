@@ -1,0 +1,182 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
+.c3 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 3.125rem;
+  box-sizing: border-box;
+  margin-right: 1.25rem;
+  background-color: #fff;
+  border: 2px solid #eee;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2.5rem 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+.c0 {
+  position: relative;
+  padding: 0.0625rem 0;
+}
+
+.c1 {
+  margin: 0;
+  padding: 0.625rem 0;
+  list-style: none;
+}
+
+.c1:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.5rem;
+  z-index: -1;
+  content: '';
+  border-left: 2px dashed #eee;
+}
+
+@media (min-width:640px) {
+  .c3 {
+    margin-right: 2.5rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c4 {
+    font-size: 1rem;
+  }
+}
+
+<nav
+  className="c0"
+>
+  <ul
+    className="c1"
+    role="tablist"
+  >
+    <li
+      className="c2"
+    >
+      <span
+        className="c3"
+        style={
+          Object {
+            "backgroundColor": "#FFEBE0",
+            "borderColor": "#FFEBE0",
+          }
+        }
+      >
+        <svg
+          fill="#333"
+          height="18px"
+          viewBox="0 0 14 18"
+          width="14px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Lock
+          </title>
+          <path
+            d="M5,6 L9,6 L9,4 C9,2.8954305 8.1045695,2 7,2 C5.8954305,2 5,2.8954305 5,4 L5,6 Z M11,6 L14,6 L14,18 L0,18 L0,6 L3,6 L3,4 C3,1.790861 4.790861,0 7,0 C9.209139,0 11,1.790861 11,4 L11,6 Z M6.5,11.9146471 L6.5,14.5 C6.5,14.7761424 6.72385763,15 7,15 C7.27614237,15 7.5,14.7761424 7.5,14.5 L7.5,11.9146471 C8.08259619,11.7087289 8.5,11.1531094 8.5,10.5 C8.5,9.67157288 7.82842712,9 7,9 C6.17157288,9 5.5,9.67157288 5.5,10.5 C5.5,11.1531094 5.91740381,11.7087289 6.5,11.9146471 Z"
+          />
+        </svg>
+      </span>
+      <div
+        className="c4"
+      >
+        <span
+          className="k-u-weight-light"
+        >
+          <span
+            className="k-u-weight-regular"
+          >
+            Foo
+          </span>
+          Bar
+        </span>
+      </div>
+    </li>
+    <li
+      className="c2"
+    >
+      <span
+        className="c3"
+      />
+      <div
+        className="c4"
+      >
+        FooBar
+      </div>
+    </li>
+    <li
+      className="c2"
+    >
+      <span
+        className="c3"
+      />
+      <div
+        className="c4"
+      >
+        FooBar
+      </div>
+    </li>
+    <li
+      className="c2"
+    >
+      <span
+        className="c3"
+      />
+      <div
+        className="c4"
+      >
+        FooBar
+      </div>
+    </li>
+  </ul>
+</nav>
+`;
