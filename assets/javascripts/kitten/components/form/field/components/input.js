@@ -7,9 +7,11 @@ import { TextInputWithUnit } from '../../text-input-with-unit'
 
 export const FieldInput = props => {
   let Input = TextInput
+
   if (props.limit) {
     Input = TextInputWithLimit
   }
+
   if (props.unit) {
     Input = TextInputWithUnit
   }
