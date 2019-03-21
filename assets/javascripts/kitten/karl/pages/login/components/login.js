@@ -71,7 +71,7 @@ const Login = props => (
         >
           <Marger top="2" bottom="1.5">
             <Title modifier="tertiary" margin={false}>
-              Connectez vous
+              Connectez-vous
             </Title>
           </Marger>
           <Marger top="1.5" bottom="3">

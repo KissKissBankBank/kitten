@@ -60,7 +60,6 @@ export const FieldPasswordExample = ({
   placeholder,
   error,
   errorMessage,
-  limit,
 }) => (
   <FieldBase
     id={id}
