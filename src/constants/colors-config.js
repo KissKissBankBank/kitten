@@ -15,6 +15,8 @@ var _default = {
   // Extra Light Grey
   background3: '#f6f6f6',
   // Light Grey
+  lightRed: '#ffebe0',
+  // Light Red
   line1: '#eee',
   // Semi Light Grey
   line2: '#d8d8d8',

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [1.25.0] - 2019-03-21
+
 Feature:
 - Add `lightRed` (`#ffebe0`) to `COLORS` set.
 - Add `unit` prop to `Field.Input`.
