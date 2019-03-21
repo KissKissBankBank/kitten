@@ -37,8 +37,10 @@ var FieldInput = function FieldInput(props) {
 
 exports.FieldInput = FieldInput;
 FieldInput.propTypes = {
-  limit: _propTypes.default.number
+  limit: _propTypes.default.number,
+  unit: _propTypes.default.string
 };
 FieldInput.defaultProps = {
-  limit: null
+  limit: undefined,
+  unit: undefined
 };

@@ -23,8 +23,10 @@ export const FieldInput = props => {
 
 FieldInput.propTypes = {
   limit: PropTypes.number,
+  unit: PropTypes.string,
 }
 
 FieldInput.defaultProps = {
-  limit: null,
+  limit: undefined,
+  unit: undefined,
 }
