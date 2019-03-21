@@ -1,25 +1,30 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../layout/marger'
 import { TextInput } from '../../../form/text-input'
 import { TextInputWithLimit } from '../../../form/text-input-with-limit'
+import { TextInputWithUnit } from '../../text-input-with-unit'
 
-export class FieldInput extends Component {
-  static propTypes = {
-    limit: PropTypes.number,
+export const FieldInput = props => {
+  let Input = TextInput
+  if (props.limit) {
+    Input = TextInputWithLimit
+  }
+  if (props.unit) {
+    Input = TextInputWithUnit
   }
 
-  static defaultProps = {
-    limit: null,
-  }
+  return (
+    <Marger top="1.5">
+      <Input {...props} />
+    </Marger>
+  )
+}
 
-  render() {
-    const Input = this.props.limit ? TextInputWithLimit : TextInput
+FieldInput.propTypes = {
+  limit: PropTypes.number,
+}
 
-    return (
-      <Marger top="1.5">
-        <Input {...this.props} />
-      </Marger>
-    )
-  }
+FieldInput.defaultProps = {
+  limit: null,
 }
