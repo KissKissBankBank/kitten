@@ -27,7 +27,7 @@ export const Grid = ({
   )
 }
 
-export const GridCol = ({ children, ...other }) => {
+export const GridCol = ({ children, col, offset, ...other }) => {
   const colNumber = useContext(GridColNumber)
   const gutter = useContext(GridGutter)
   const colAlign = useContext(GridAlign)
@@ -63,6 +63,8 @@ export const GridCol = ({ children, ...other }) => {
 
   return (
     <StyledGridCol
+      col={col}
+      offset={offset}
       gutter={gutter}
       colNumber={colNumber}
       colAlign={colAlign}
@@ -85,12 +87,12 @@ const StyledGrid = styled.div`
 `
 
 const StyledGridCol = styled.div`
-  ${({ props, colNumber, colAlign }) => {
-    if (!props.offset) return
+  ${({ offset, colNumber, colAlign }) => {
+    if (!offset) return
     const marginDirection = colAlign === 'right' ? 'right' : 'left'
-    return css`margin-${marginDirection}: ${(props.offset * 100) / colNumber}%;`
+    return css`margin-${marginDirection}: ${(offset * 100) / colNumber}%;`
   }}
-  width: ${({ props, colNumber }) => (props.col * 100) / colNumber}%;
+  width: ${({ col, colNumber }) => (col * 100) / colNumber}%;
   display: block;
   box-sizing: border-box;
   padding-left: ${({ gutter }) => gutter / 2}px;
