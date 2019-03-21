@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Feature:
-- Add `backgroundLightRed` (`#ffebe0`) to `COLORS` set.
+- Add `lightRed` (`#ffebe0`) to `COLORS` set.
 
 ## [1.24.0] - 2019-03-21
 
