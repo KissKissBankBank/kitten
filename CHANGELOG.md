@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [1.24.0] - 2019-03-21
+
 Features:
 - Add `link` props to `Field.Label`
 - Add `Field.Password` component
