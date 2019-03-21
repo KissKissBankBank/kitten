@@ -37,6 +37,7 @@ storiesOf('Form/Field', module)
           error={boolean('Error?', false)}
           errorMessage={text('Error', 'Error message…')}
           limit={number('Limit', undefined)}
+          unit={text('Unit', undefined)}
         />
       </StoryGrid>
     )

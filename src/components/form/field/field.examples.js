@@ -36,7 +36,8 @@ var FieldInputExample = function FieldInputExample(_ref2) {
       placeholder = _ref2.placeholder,
       error = _ref2.error,
       errorMessage = _ref2.errorMessage,
-      limit = _ref2.limit;
+      limit = _ref2.limit,
+      unit = _ref2.unit;
   return _react.default.createElement(FieldBase, {
     id: id,
     label: label,
@@ -47,6 +48,7 @@ var FieldInputExample = function FieldInputExample(_ref2) {
   }, _react.default.createElement(_field.Field.Input, {
     id: id,
     limit: limit,
+    unit: unit,
     name: "field",
     placeholder: placeholder,
     error: error
