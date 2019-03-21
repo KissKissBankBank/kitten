@@ -11,6 +11,8 @@ exports.FieldLabel = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -50,10 +52,12 @@ function (_Component) {
           children = _this$props.children,
           tooltip = _this$props.tooltip,
           tooltipId = _this$props.tooltipId,
-          labelProps = _this$props.labelProps;
-      return _react.default.createElement(_marger.Marger, {
+          labelProps = _this$props.labelProps,
+          link = _this$props.link,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "tooltip", "tooltipId", "labelProps", "link"]);
+      return _react.default.createElement(_marger.Marger, (0, _extends2.default)({
         bottom: "1.5"
-      }, _react.default.createElement(_line.Line, {
+      }, others), _react.default.createElement(_line.Line, {
         style: {
           lineHeight: 1
         }
@@ -61,7 +65,7 @@ function (_Component) {
         size: "tiny"
       }), children)), tooltip && _react.default.createElement(_line.Line.Item, null, _react.default.createElement(_tooltip.Tooltip, {
         id: tooltipId
-      }, tooltip))));
+      }, tooltip)), link && _react.default.createElement(_line.Line.Item, null, link)));
     }
   }]);
   return FieldLabel;
@@ -69,6 +73,7 @@ function (_Component) {
 
 exports.FieldLabel = FieldLabel;
 FieldLabel.propTypes = {
+  link: _propTypes.default.node,
   tooltip: _propTypes.default.string,
   labelProps: _propTypes.default.object
 };
