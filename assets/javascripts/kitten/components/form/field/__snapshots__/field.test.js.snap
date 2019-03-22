@@ -73,7 +73,6 @@ Array [
       className="k-TextInput is-error"
       disabled={false}
       id="input"
-      limit={null}
       name="field"
       placeholder="Placeholder…"
       type="text"
@@ -169,11 +168,304 @@ Array [
       className="k-TextInput"
       disabled={false}
       id="input"
-      limit={null}
       name="field"
       placeholder="Placeholder…"
       type="text"
     />
+  </div>,
+]
+`;
+
+exports[`<Field /> with <Field.Password /> in error matches with snapshot 1`] = `
+Array [
+  <div
+    className="marger__StyledMarger-q3lecu-0 csmETU"
+  >
+    <div
+      className="k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
+    >
+      <div
+        className="k-Line__item"
+      >
+        <label
+          className="k-Label k-Label--tiny"
+          htmlFor="input"
+          onClick={[Function]}
+        >
+          Label
+        </label>
+      </div>
+      <div
+        className="k-Line__item"
+      >
+        <div
+          className="k-Tooltip"
+        >
+          <button
+            aria-describedby="tooltip"
+            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            data-dismiss="tooltip"
+            data-event="click"
+            data-for="tooltip"
+            data-tip={true}
+            tabIndex={null}
+            type="button"
+          >
+            <svg
+              className="k-ButtonIcon__svg"
+              viewBox="0 0 6 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Question mark
+              </title>
+              <path
+                d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
+                fill="#FFF"
+              />
+            </svg>
+          </button>
+          <div
+            className="__react_component_tooltip place-right type-dark "
+            data-id="tooltip"
+            id="tooltip"
+            role="tooltip"
+          >
+            Tooltip
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "display": "flex",
+          "position": "relative",
+        }
+      }
+    >
+      <input
+        className="k-TextInput is-error"
+        data-radium={true}
+        disabled={false}
+        id="input"
+        name="field"
+        placeholder="Placeholder…"
+        style={
+          Object {
+            "paddingRight": "40px",
+          }
+        }
+        type="password"
+      />
+      <span
+        data-radium={true}
+        style={
+          Object {
+            "bottom": 0,
+            "display": "flex",
+            "marginRight": "11px",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "zIndex": 1,
+          }
+        }
+        title="Show password"
+      >
+        <svg
+          data-radium={true}
+          fill="#222"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+          tabIndex="0"
+          viewBox="0 0 18 12"
+          width="18"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Show password
+          </title>
+          <path
+            d="M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
+          />
+          <circle
+            cx="9"
+            cy="6"
+            r="2"
+          />
+        </svg>
+      </span>
+    </div>
+  </div>,
+  <div
+    className="marger__StyledMarger-q3lecu-0 WSKaG"
+  >
+    <p
+      className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+    >
+      Error!
+    </p>
+  </div>,
+]
+`;
+
+exports[`<Field /> with <Field.Password /> matches with snapshot 1`] = `
+Array [
+  <div
+    className="marger__StyledMarger-q3lecu-0 csmETU"
+  >
+    <div
+      className="k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
+    >
+      <div
+        className="k-Line__item"
+      >
+        <label
+          className="k-Label k-Label--tiny"
+          htmlFor="input"
+          onClick={[Function]}
+        >
+          Label
+        </label>
+      </div>
+      <div
+        className="k-Line__item"
+      >
+        <div
+          className="k-Tooltip"
+        >
+          <button
+            aria-describedby="tooltip"
+            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            data-dismiss="tooltip"
+            data-event="click"
+            data-for="tooltip"
+            data-tip={true}
+            tabIndex={null}
+            type="button"
+          >
+            <svg
+              className="k-ButtonIcon__svg"
+              viewBox="0 0 6 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                Question mark
+              </title>
+              <path
+                d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
+                fill="#FFF"
+              />
+            </svg>
+          </button>
+          <div
+            className="__react_component_tooltip place-right type-dark "
+            data-id="tooltip"
+            id="tooltip"
+            role="tooltip"
+          >
+            Tooltip
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+  >
+    <div
+      data-radium={true}
+      style={
+        Object {
+          "display": "flex",
+          "position": "relative",
+        }
+      }
+    >
+      <input
+        className="k-TextInput"
+        data-radium={true}
+        disabled={false}
+        id="input"
+        name="field"
+        placeholder="Placeholder…"
+        style={
+          Object {
+            "paddingRight": "40px",
+          }
+        }
+        type="password"
+      />
+      <span
+        data-radium={true}
+        style={
+          Object {
+            "bottom": 0,
+            "display": "flex",
+            "marginRight": "11px",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "zIndex": 1,
+          }
+        }
+        title="Show password"
+      >
+        <svg
+          data-radium={true}
+          fill="#222"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "cursor": "pointer",
+            }
+          }
+          tabIndex="0"
+          viewBox="0 0 18 12"
+          width="18"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Show password
+          </title>
+          <path
+            d="M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
+          />
+          <circle
+            cx="9"
+            cy="6"
+            r="2"
+          />
+        </svg>
+      </span>
+    </div>
   </div>,
 ]
 `;

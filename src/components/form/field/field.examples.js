@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FieldSelectExample = exports.FieldRadioButtonSetExample = exports.FieldInputExample = void 0;
+exports.FieldSelectExample = exports.FieldRadioButtonSetExample = exports.FieldPasswordExample = exports.FieldInputExample = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -36,7 +36,8 @@ var FieldInputExample = function FieldInputExample(_ref2) {
       placeholder = _ref2.placeholder,
       error = _ref2.error,
       errorMessage = _ref2.errorMessage,
-      limit = _ref2.limit;
+      limit = _ref2.limit,
+      unit = _ref2.unit;
   return _react.default.createElement(FieldBase, {
     id: id,
     label: label,
@@ -47,6 +48,7 @@ var FieldInputExample = function FieldInputExample(_ref2) {
   }, _react.default.createElement(_field.Field.Input, {
     id: id,
     limit: limit,
+    unit: unit,
     name: "field",
     placeholder: placeholder,
     error: error
@@ -55,14 +57,41 @@ var FieldInputExample = function FieldInputExample(_ref2) {
 
 exports.FieldInputExample = FieldInputExample;
 
-var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref3) {
+var FieldPasswordExample = function FieldPasswordExample(_ref3) {
   var id = _ref3.id,
       label = _ref3.label,
       tooltip = _ref3.tooltip,
       tooltipId = _ref3.tooltipId,
-      items = _ref3.items,
+      placeholder = _ref3.placeholder,
       error = _ref3.error,
       errorMessage = _ref3.errorMessage;
+  return _react.default.createElement(FieldBase, {
+    id: id,
+    label: label,
+    tooltip: tooltip,
+    tooltipId: tooltipId,
+    error: error,
+    errorMessage: errorMessage
+  }, _react.default.createElement(_field.Field.Password, {
+    id: id,
+    name: "field",
+    iconLabel: "Show password",
+    hiddenIconLabel: "Hide password",
+    placeholder: placeholder,
+    error: error
+  }));
+};
+
+exports.FieldPasswordExample = FieldPasswordExample;
+
+var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref4) {
+  var id = _ref4.id,
+      label = _ref4.label,
+      tooltip = _ref4.tooltip,
+      tooltipId = _ref4.tooltipId,
+      items = _ref4.items,
+      error = _ref4.error,
+      errorMessage = _ref4.errorMessage;
   return _react.default.createElement(FieldBase, {
     id: id,
     label: label,
@@ -79,15 +108,15 @@ var FieldRadioButtonSetExample = function FieldRadioButtonSetExample(_ref3) {
 
 exports.FieldRadioButtonSetExample = FieldRadioButtonSetExample;
 
-var FieldSelectExample = function FieldSelectExample(_ref4) {
-  var id = _ref4.id,
-      label = _ref4.label,
-      tooltip = _ref4.tooltip,
-      tooltipId = _ref4.tooltipId,
-      placeholder = _ref4.placeholder,
-      options = _ref4.options,
-      error = _ref4.error,
-      errorMessage = _ref4.errorMessage;
+var FieldSelectExample = function FieldSelectExample(_ref5) {
+  var id = _ref5.id,
+      label = _ref5.label,
+      tooltip = _ref5.tooltip,
+      tooltipId = _ref5.tooltipId,
+      placeholder = _ref5.placeholder,
+      options = _ref5.options,
+      error = _ref5.error,
+      errorMessage = _ref5.errorMessage;
   return _react.default.createElement(FieldBase, {
     id: id,
     label: label,

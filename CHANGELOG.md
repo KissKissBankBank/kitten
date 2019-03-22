@@ -6,6 +6,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Replace class-based `Grid` with StyledComponent alternative
 
+## [1.25.0] - 2019-03-21
+
+Feature:
+- Add `lightRed` (`#ffebe0`) to `COLORS` set.
+- Add `unit` prop to `Field.Input`.
+
+## [1.24.0] - 2019-03-21
+
+Features:
+- Add `link` props to `Field.Label`
+- Add `Field.Password` component
+
 ## [1.23.0] - 2019-03-20
 
 Features:
