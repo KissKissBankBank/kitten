@@ -1,37 +1,35 @@
 import React, { createContext, useState, useEffect, useContext } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-
 import { NUM_COLUMNS, GUTTER } from '../../../constants/grid-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 
-const GridColNumber = createContext(NUM_COLUMNS)
-const GridGutter = createContext(GUTTER)
-const GridAlign = createContext('left')
+const GridProperties = createContext({})
 
 export const Grid = ({
   children,
-  gutter,
-  colNumber,
+  gutter = GUTTER,
+  colNumber = NUM_COLUMNS,
   colAlign = 'left',
   ...other
 }) => {
+  const gridProperties = {
+    colAlign,
+    colNumber: colNumber,
+    gutter: gutter,
+  }
   return (
     <StyledGrid gutter={gutter} colAlign={colAlign}>
-      <GridColNumber.Provider value={colNumber || NUM_COLUMNS}>
-        <GridGutter.Provider value={gutter || GUTTER}>
-          <GridAlign.Provider value={colAlign}>{children}</GridAlign.Provider>
-        </GridGutter.Provider>
-      </GridColNumber.Provider>
+      <GridProperties.Provider value={gridProperties}>
+        {children}
+      </GridProperties.Provider>
     </StyledGrid>
   )
 }
 
 export const GridCol = ({ children, col, offset, ...other }) => {
-  const colNumber = useContext(GridColNumber)
-  const gutter = useContext(GridGutter)
-  const colAlign = useContext(GridAlign)
   const [styles, setStyles] = useState(null)
+  const { colAlign, colNumber, gutter } = useContext(GridProperties)
 
   useEffect(() => {
     const props = { ...other }
