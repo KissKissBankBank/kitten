@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Grid /> by default matches with snapshot 1`] = `
+<div
+  className="grid__StyledGrid-l82tx2-0 kXWVUs"
+>
+  <div
+    className="grid__StyledGridCol-l82tx2-1 hBOEgJ"
+  >
+    Test
+  </div>
+  <div
+    className="grid__StyledGridCol-l82tx2-1 fBvxMD"
+  >
+    Test
+  </div>
+</div>
+`;
+
+exports[`<Grid /> with some props matches with snapshot 1`] = `
+<div
+  className="grid__StyledGrid-l82tx2-0 kWurww"
+>
+  <div
+    className="grid__StyledGridCol-l82tx2-1 cmYicd"
+    offset={3}
+  >
+    Test
+  </div>
+  <div
+    className="grid__StyledGridCol-l82tx2-1 jCMCoc"
+  >
+    Test
+  </div>
+</div>
+`;
