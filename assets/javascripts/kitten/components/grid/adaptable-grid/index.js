@@ -6,7 +6,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 
 const GridProperties = createContext({})
 
-export const Grid = ({
+export const AdaptableGrid = ({
   children,
   gutter = GUTTER,
   colNumber = NUM_COLUMNS,
@@ -27,7 +27,7 @@ export const Grid = ({
   )
 }
 
-export const GridCol = ({ children, col, offset, ...other }) => {
+export const AdaptableGridCol = ({ children, col, offset, ...other }) => {
   const [styles, setStyles] = useState(null)
   const { colAlign, colNumber, gutter } = useContext(GridProperties)
   const marginDirection = colAlign === 'right' ? 'right' : 'left'
