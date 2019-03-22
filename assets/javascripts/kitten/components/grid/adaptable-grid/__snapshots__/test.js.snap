@@ -1,34 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Grid /> by default matches with snapshot 1`] = `
+exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 <div
-  className="grid__StyledGrid-l82tx2-0 kXWVUs"
+  className="adaptable-grid__StyledGrid-txsbu0-0 kagzol"
 >
   <div
-    className="grid__StyledGridCol-l82tx2-1 hBOEgJ"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 hmIwSN"
   >
     Test
   </div>
   <div
-    className="grid__StyledGridCol-l82tx2-1 fBvxMD"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 dGZHoz"
   >
     Test
   </div>
 </div>
 `;
 
-exports[`<Grid /> with some props matches with snapshot 1`] = `
+exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
 <div
-  className="grid__StyledGrid-l82tx2-0 kWurww"
+  className="adaptable-grid__StyledGrid-txsbu0-0 gIXwnE"
 >
   <div
-    className="grid__StyledGridCol-l82tx2-1 cmYicd"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 cluiNN"
     offset={3}
   >
     Test
   </div>
   <div
-    className="grid__StyledGridCol-l82tx2-1 jCMCoc"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 ecouGL"
   >
     Test
   </div>
