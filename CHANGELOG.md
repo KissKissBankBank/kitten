@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Replace class-based `Grid` with StyledComponent alternative
+
 ## [1.23.0] - 2019-03-20
 
 Features:
