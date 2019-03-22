@@ -8,11 +8,11 @@ storiesOf('Grid/Grid', module).add(
   'default',
   withInfo('common info')(() => (
     <Container>
-      <Grid colAlign="right">
-        <GridCol col="11" offset="1" col-s="4" offset-s="0" col-l="5">
+      <Grid colNumber={10}>
+        <GridCol col={4} offset={3} col-s={5} offset-s={0} col-l={2}>
           <div style={{ background: '#fae9d8' }}>{'🚗 '.repeat(5)}</div>
         </GridCol>
-        <GridCol col-s="6" offset-s="1" col-l="5" offset-l="1">
+        <GridCol col-s={3} offset-s={2} col-l={6} offset-l={1}>
           <div style={{ background: '#fae9d8' }}>{'🚗 '.repeat(8)}</div>
         </GridCol>
       </Grid>
