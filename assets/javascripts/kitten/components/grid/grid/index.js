@@ -30,6 +30,7 @@ export const Grid = ({
 export const GridCol = ({ children, col, offset, ...other }) => {
   const [styles, setStyles] = useState(null)
   const { colAlign, colNumber, gutter } = useContext(GridProperties)
+  const marginDirection = colAlign === 'right' ? 'right' : 'left'
 
   useEffect(() => {
     const props = { ...other }
@@ -38,7 +39,6 @@ export const GridCol = ({ children, col, offset, ...other }) => {
       const mediaQuery = size.toLowerCase()
       const col = props[`col-${mediaQuery}`]
       const offset = props[`offset-${mediaQuery}`]
-      const marginDirection = colAlign === 'right' ? 'right' : 'left'
 
       if (!col && !offset) {
         return false
@@ -50,8 +50,14 @@ export const GridCol = ({ children, col, offset, ...other }) => {
             css`
               width: ${(col * 100) / colNumber}%;
             `}
-          ${offset &&
-            css`margin-${marginDirection}: ${(offset * 100) / colNumber}%;`}
+          ${offset > 0 &&
+            css`
+              margin-${marginDirection}: ${(offset * 100) / colNumber}%;
+            `}
+          ${offset === 0 &&
+            css`
+              margin-${marginDirection}: 0;
+            `}
         }
       `
     })
@@ -61,11 +67,12 @@ export const GridCol = ({ children, col, offset, ...other }) => {
 
   return (
     <StyledGridCol
-      col={col}
+      col={col || colNumber}
       offset={offset}
       gutter={gutter}
       colNumber={colNumber}
       colAlign={colAlign}
+      marginDirection={marginDirection}
       props={{ ...other }}
       stylesByMediaQuery={styles}
     >
@@ -85,16 +92,15 @@ const StyledGrid = styled.div`
 `
 
 const StyledGridCol = styled.div`
-  ${({ offset, colNumber, colAlign }) => {
-    if (!offset) return
-    const marginDirection = colAlign === 'right' ? 'right' : 'left'
-    return css`margin-${marginDirection}: ${(offset * 100) / colNumber}%;`
-  }}
-  width: ${({ col, colNumber }) => (col * 100) / colNumber}%;
   display: block;
   box-sizing: border-box;
   padding-left: ${({ gutter }) => gutter / 2}px;
   padding-right: ${({ gutter }) => gutter / 2}px;
   flex: 0 0 auto;
+  width: ${({ col, colNumber }) => (col * 100) / colNumber}%;
+  ${({ offset, colNumber, colAlign, marginDirection }) => {
+    if (!offset) return
+    return css`margin-${marginDirection}: ${(offset * 100) / colNumber}%;`
+  }}
   ${({ stylesByMediaQuery }) => stylesByMediaQuery}
 `
