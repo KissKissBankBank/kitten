@@ -13,11 +13,7 @@ export const AdaptableGrid = ({
   colAlign = 'left',
   ...other
 }) => {
-  const gridProperties = {
-    colAlign,
-    colNumber: colNumber,
-    gutter: gutter,
-  }
+  const gridProperties = { colAlign, colNumber, gutter }
   return (
     <StyledGrid gutter={gutter} colAlign={colAlign}>
       <GridProperties.Provider value={gridProperties}>
