@@ -8,9 +8,9 @@ const GridProperties = createContext({})
 
 export const AdaptableGrid = ({
   children,
-  gutter = GUTTER,
-  colNumber = NUM_COLUMNS,
-  colAlign = 'left',
+  gutter,
+  colNumber,
+  colAlign,
   ...other
 }) => {
   const gridProperties = { colAlign, colNumber, gutter }
@@ -77,6 +77,16 @@ export const AdaptableGridCol = ({ children, col, offset, ...other }) => {
   )
 }
 
+AdaptableGrid.propTypes = {
+  gutter: PropTypes.number,
+  colNumber: PropTypes.number,
+  colAlign: PropTypes.oneOf(['left', 'right', 'center']),
+}
+AdaptableGrid.defaultProps = {
+  gutter: GUTTER,
+  colNumber: NUM_COLUMNS,
+  colAlign: 'left',
+}
 const StyledGrid = styled.div`
   width: 100%;
   box-sizing: border-box;
