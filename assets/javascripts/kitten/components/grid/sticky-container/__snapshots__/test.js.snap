@@ -2,7 +2,7 @@
 
 exports[`<StickyContainer /> already sticky matches with snapshot 1`] = `
 <div
-  className="sticky-container__StyledStickyContainer-trwgvt-0 leOXaT"
+  className="sticky-container__StyledStickyContainer-trwgvt-0 dkTkIA"
 />
 `;
 
