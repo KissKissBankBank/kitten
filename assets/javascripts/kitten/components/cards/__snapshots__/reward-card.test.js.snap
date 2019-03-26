@@ -46,13 +46,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <span
-        className="k-HorizontalStroke k-HorizontalStroke--default"
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.875rem",
-          }
-        }
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 MGUQ"
       />
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -205,13 +199,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         100$
       </h6>
       <span
-        className="k-HorizontalStroke k-HorizontalStroke--default"
-        data-radium={true}
-        style={
-          Object {
-            "marginBottom": "1.875rem",
-          }
-        }
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 MGUQ"
       />
       <p
         className="k-u-color-font1 k-u-weight-bold"
@@ -469,7 +457,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             className="marger__StyledMarger-q3lecu-0 fSrmLM"
           >
             <span
-              className="k-HorizontalStroke k-HorizontalStroke--big"
+              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
             />
           </div>
           <div

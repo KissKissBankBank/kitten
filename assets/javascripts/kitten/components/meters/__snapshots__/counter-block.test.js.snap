@@ -38,13 +38,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       }
     >
       <span
-        className="k-HorizontalStroke k-HorizontalStroke--big"
-        style={
-          Object {
-            "height": 6,
-            "width": "100%",
-          }
-        }
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kGvLel"
       />
     </div>
     <p
@@ -75,13 +69,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       }
     >
       <span
-        className="k-HorizontalStroke k-HorizontalStroke--big"
-        style={
-          Object {
-            "height": 6,
-            "width": "100%",
-          }
-        }
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kGvLel"
       />
     </div>
   </div>

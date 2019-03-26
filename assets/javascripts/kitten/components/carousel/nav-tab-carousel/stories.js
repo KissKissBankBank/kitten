@@ -50,6 +50,40 @@ storiesOf('Carousel/NavTabCarousel', module)
       </StoryGrid>
     )
   })
+  .add('with no prev', () => {
+    return (
+      <StoryGrid>
+        <NavTabCarousel>
+          <NavTabCarousel.Pagination
+            activeIndex={number('Active index', 2)}
+            totalIndex={number('total index', 2)}
+            activeColor={color('Pagination active color', COLORS.primary1)}
+          />
+          <NavTabCarousel.Next
+            hoverColor={color('Prev hover color', '#fff')}
+            children={text('Prev text', 'Foobar 1')}
+          />
+        </NavTabCarousel>
+      </StoryGrid>
+    )
+  })
+  .add('with no next', () => {
+    return (
+      <StoryGrid>
+        <NavTabCarousel>
+          <NavTabCarousel.Prev
+            hoverColor={color('Prev hover color', '#fff')}
+            children={text('Prev text', 'Foobar 1')}
+          />
+          <NavTabCarousel.Pagination
+            activeIndex={number('Active index', 2)}
+            totalIndex={number('total index', 2)}
+            activeColor={color('Pagination active color', COLORS.primary1)}
+          />
+        </NavTabCarousel>
+      </StoryGrid>
+    )
+  })
   .add('with totalIndex', () => {
     return (
       <StoryGrid>

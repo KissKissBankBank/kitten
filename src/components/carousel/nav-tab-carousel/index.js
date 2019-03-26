@@ -37,6 +37,8 @@ var _reactElements = require("./../../../helpers/react/react-elements");
 
 var _typography = require("./../../../helpers/utils/typography");
 
+var _styledComponents2 = require("./components/styled-components");
+
 var NavTabCarouselStyles = _styledComponents.default.div.withConfig({
   displayName: "nav-tab-carousel__NavTabCarouselStyles",
   componentId: "sc-1fg6mhx-0"
@@ -68,7 +70,7 @@ function (_Component) {
         children: children,
         type: NavTabCarousel.Pagination
       })[0];
-      return _react.default.createElement(NavTabCarouselStyles, null, prev, pagination, next);
+      return _react.default.createElement(NavTabCarouselStyles, null, prev || _react.default.createElement(_styledComponents2.LeftEmptyContainer, null), pagination, next || _react.default.createElement(_styledComponents2.RightEmptyContainer, null));
     }
   }]);
   return NavTabCarousel;

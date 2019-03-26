@@ -533,14 +533,14 @@
     display: block;
     padding: $select-padding-vertical $select-padding-horizontal;
 
-    &.is-selected {
-      background-color: $select-option-selected-bg;
-      color: $select-option-selected-color;
-    }
-
     &.is-focused {
       background-color: $select-option-focused-bg;
       color: $select-option-focused-color;
+    }
+
+    &.is-selected {
+      background-color: $select-option-selected-bg;
+      color: $select-option-selected-color;
     }
 
     &.is-disabled {
