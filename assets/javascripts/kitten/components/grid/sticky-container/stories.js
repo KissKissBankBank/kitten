@@ -26,22 +26,10 @@ const info = {
 
     Props:
 
-      - 'isSticky' makes the component always sticky.
-      - 'isStickyOnScroll' accepts 'up' or 'down', so the component
-        is only sticky when scrolling in that direction.
+      - 'isSticky' accepts 'topOnScrollUp' or 'bottomOnScrollDown' or 'always',
+        so the component is only sticky when scrolling in that direction, or always.
       - 'top' or 'bottom' help with the component’s position.
 
-
-    ### isStickyOnScroll
-
-    When scrolling up, top prop is necessary (defaults to 0), when scrolling
-    down, bottom prop is necessary (defaults to 0).
-
-    ~~~js
-      <StickyContainer isStickyOnScroll="up">
-        …
-      </StickyContainer>
-    ~~~
 
     ### sticky
 
