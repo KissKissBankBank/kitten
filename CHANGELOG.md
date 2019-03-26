@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Replace class-based `Grid` with StyledComponent alternative
+- Feature: Add a new component `AdaptableGrid` to handle grids. From now, you can use this component instead of `Grid`.
 
 ## [1.25.0] - 2019-03-21
 
