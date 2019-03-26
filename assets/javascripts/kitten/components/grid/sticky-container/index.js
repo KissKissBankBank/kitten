@@ -12,16 +12,6 @@ const StyledStickyContainer = styled.div`
   ${({ stickyContainerStyleProps }) => stickyContainerStyleProps}
 `
 
-StickyContainer.propTypes = {
-  top: PropTypes.number,
-  bottom: PropTypes.number,
-  isSticky: PropTypes.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always']),
-}
-StickyContainer.defaultProps = {
-  top: 0,
-  bottom: 0,
-}
-
 function useScrollDirection() {
   // Returns an array with booleans:
   //
@@ -181,6 +171,16 @@ const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
       </StyledStickyContainer>
     </Fragment>
   )
+}
+
+StickyContainer.propTypes = {
+  top: PropTypes.number,
+  bottom: PropTypes.number,
+  isSticky: PropTypes.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always']),
+}
+StickyContainer.defaultProps = {
+  top: 0,
+  bottom: 0,
 }
 
 export default StickyContainer
