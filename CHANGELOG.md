@@ -4,7 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: npm v6.5.0
 - Breaking Change: needs React 18
 - Feature: New `StickyContainer` component.
 
