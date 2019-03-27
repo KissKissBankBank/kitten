@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -21,14 +23,14 @@ var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/ge
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var Switch =
 /*#__PURE__*/
-function (_React$Component) {
-  (0, _inherits2.default)(Switch, _React$Component);
+function (_PureComponent) {
+  (0, _inherits2.default)(Switch, _PureComponent);
 
   function Switch() {
     (0, _classCallCheck2.default)(this, Switch);
@@ -50,20 +52,20 @@ function (_React$Component) {
       });
       return _react.default.createElement("div", {
         className: "k-Switch"
-      }, _react.default.createElement("input", (0, _extends2.default)({
+      }, _react.default.createElement("input", (0, _extends2.default)({}, others, {
         id: id,
         type: "checkbox",
         className: "k-Switch__input",
         defaultChecked: isChecked,
         disabled: disabled
-      }, others)), _react.default.createElement("label", {
+      })), _react.default.createElement("label", {
         htmlFor: id,
         className: switchClassNames
       }, label));
     }
   }]);
   return Switch;
-}(_react.default.Component); // DEPRECATED: do not use default export.
+}(_react.PureComponent); // DEPRECATED: do not use default export.
 
 
 exports.Switch = Switch;
