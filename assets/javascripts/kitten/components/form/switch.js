@@ -3,22 +3,25 @@ import classNames from 'classnames'
 
 export class Switch extends React.Component {
   render() {
-    let switchClassNames = classNames('k-Switch__label', {
-      'k-Switch__label--big': this.props.big,
+    const { id, isChecked, disabled, label, big, ...others } = this.props
+
+    const switchClassNames = classNames('k-Switch__label', {
+      'k-Switch__label--big': big,
     })
 
     return (
       <div className="k-Switch">
         <input
-          id={this.props.id}
+          id={id}
           type="checkbox"
           className="k-Switch__input"
-          defaultChecked={this.props.isChecked}
-          disabled={this.props.disabled}
+          defaultChecked={isChecked}
+          disabled={disabled}
+          {...others}
         />
 
-        <label htmlFor={this.props.id} className={switchClassNames}>
-          {this.props.label}
+        <label htmlFor={id} className={switchClassNames}>
+          {label}
         </label>
       </div>
     )
