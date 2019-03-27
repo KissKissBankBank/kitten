@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature:
+- Add `others` props to `Switch` component
+
 ## [1.25.0] - 2019-03-21
 
 Feature:
