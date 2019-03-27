@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-export class Switch extends React.Component {
+export class Switch extends React.PureComponent {
   render() {
     const { id, isChecked, disabled, label, big, ...others } = this.props
 
