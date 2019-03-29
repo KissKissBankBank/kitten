@@ -236,3 +236,6 @@ export { Uploader } from './components/uploaders/uploader'
 
 // Videos
 export { Video } from './components/videos/video'
+
+// Paths
+export { getScssPaths } from './config/paths'
