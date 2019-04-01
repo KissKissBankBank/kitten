@@ -22,5 +22,4 @@ export const Switch = ({ id, isChecked, disabled, label, big, ...others }) => (
         {label}
       </label>
     </div>
-  )
 }
