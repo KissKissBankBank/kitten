@@ -3,7 +3,6 @@ import classNames from 'classnames'
 
 export const Switch = ({ id, isChecked, disabled, label, big, ...others }) => (
 
-  return (
     <div className="k-Switch">
       <input
         {...others}
