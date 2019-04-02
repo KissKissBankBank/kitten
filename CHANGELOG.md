@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Feature:
 - Add `others` props to `Switch` component
+- Fix: Set `vertical-align` property for `BulletList` component
 
 ## [1.25.0] - 2019-03-21
 
