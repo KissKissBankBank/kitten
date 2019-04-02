@@ -35,7 +35,7 @@
   $border-size: 1px;
   $border-radius: 18px;
 
-  $transition-duration: .2s;
+  $transition-duration: .3s;
 
   .k-Switch {
     display: flex;
@@ -55,7 +55,7 @@
     @include k-typographyFontSize($font-step, $line-height);
     color: $color;
     cursor: pointer;
-    transition: color $transition-duration;
+    transition: color $transition-duration ease;
 
     &:hover {
       color: $color-hover;
@@ -73,7 +73,7 @@
       margin-right: k-px-to-rem(10px);
 
       content: '';
-      background-color: $background-color;
+      background-color: $border-color;
       border: 1px solid $border-color;
       border-radius: k-px-to-rem($border-radius);
 
@@ -95,6 +95,7 @@
       background-color: $background-color;
       border: $border-size solid $border-color;
       border-radius: k-px-to-rem($switch-height);
+      transition: left $transition-duration ease;
     }
 
     .k-Switch__input:focus + &:before {
@@ -108,6 +109,7 @@
 
     .k-Switch__input:checked + &:after {
       left: k-px-to-rem($switch-width - $switch-height + $border-size);
+      transition: left $transition-duration ease;
     }
 
     .k-Switch__input:disabled + & {
