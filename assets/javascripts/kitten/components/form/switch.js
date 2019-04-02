@@ -7,7 +7,7 @@ export const Switch = ({ id, isChecked, disabled, label, big, ...others }) => (
       {...others}
       id={id}
       type="checkbox"
-      className="k-Switch__input"
+      className={classNames('k-Switch__input', others.className)}
       defaultChecked={isChecked}
       disabled={disabled}
     />
