@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Set `vertical-align` property for `BulletList` component
+
 ## [1.25.0] - 2019-03-21
 
 Feature:
