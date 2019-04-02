@@ -15,19 +15,19 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var Switch = function Switch(props) {
-  var id = props.id,
-      isChecked = props.isChecked,
-      disabled = props.disabled,
-      label = props.label,
-      big = props.big,
-      others = (0, _objectWithoutProperties2.default)(props, ["id", "isChecked", "disabled", "label", "big"]);
+var Switch = function Switch(_ref) {
+  var id = _ref.id,
+      isChecked = _ref.isChecked,
+      disabled = _ref.disabled,
+      label = _ref.label,
+      big = _ref.big,
+      others = (0, _objectWithoutProperties2.default)(_ref, ["id", "isChecked", "disabled", "label", "big"]);
   return _react.default.createElement("div", {
     className: "k-Switch"
   }, _react.default.createElement("input", (0, _extends2.default)({}, others, {
     id: id,
     type: "checkbox",
-    className: "k-Switch__input",
+    className: (0, _classnames.default)('k-Switch__input', others.className),
     defaultChecked: isChecked,
     disabled: disabled
   })), _react.default.createElement("label", {
