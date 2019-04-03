@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, number } from '@storybook/addon-knobs'
+import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -65,6 +65,10 @@ storiesOf('Videos/Video', module)
                   src={text(
                     'Src',
                     'https://d3v4jsc54141g1.cloudfront.net/videos/home/home_v2.mp4',
+                  )}
+                  withPlayerButtonOnVideo={boolean(
+                    'With player button on video?',
+                    true,
                   )}
                 >
                   <Video.Loader>

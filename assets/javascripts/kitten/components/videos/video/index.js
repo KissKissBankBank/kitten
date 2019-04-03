@@ -1,5 +1,8 @@
 import React, { PureComponent, createRef } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { Text } from '../../../components/typography/text'
+import { pxToRem } from '../../../helpers/utils/typography'
+import COLORS from '../../../constants/colors-config'
 import {
   getReactElementsByType,
   getReactElementsWithoutType,
@@ -10,6 +13,43 @@ const StyledContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
+`
+
+const player = css`
+  position: relative;
+  transition: opacity ease 600ms, z-index ease 600ms;
+  z-index: 1;
+`
+
+const hidePlayer = css`
+  opacity: 0;
+  z-index: 0;
+`
+
+const showPlayer = css`
+  opacity: 1;
+`
+
+const StyledPlayer = styled.div`
+  ${player}
+
+  ${({ withPlayerButtonOnVideo }) => showPlayer}
+`
+
+const playerButtonSize = pxToRem(70)
+
+const StyledPlayerButton = styled.div`
+  width: ${playerButtonSize};
+  height: ${playerButtonSize};
+  background: ${COLORS.background1};
+  position: absolute;
+  top: calc(50% - ${playerButtonSize} / 2);
+  left: calc(50% - ${playerButtonSize} / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
 `
 
 const StyledVideo = styled.video`
@@ -24,6 +64,21 @@ export class Video extends PureComponent {
     super(props)
 
     this.video = createRef()
+    this.state = { showPlayer: false }
+  }
+
+  handleClick = () => {
+    this.setState({ showPlayer: true })
+  }
+
+  a11yOnClickProps = () => {
+    if (!this.props.withPlayerButtonOnVideo) return
+
+    return {
+      onClick: this.handleClick,
+      role: 'button',
+      tabIndex: 0,
+    }
   }
 
   componentDidMount() {
@@ -43,19 +98,46 @@ export class Video extends PureComponent {
   }
 
   render() {
-    const { children, ...props } = this.props
+    const {
+      children,
+      arrowColor,
+      ariaLabel,
+      withPlayerButtonOnVideo,
+      ...props
+    } = this.props
     const loader = getReactElementsByType({ children, type: Video.Loader })
     const childrenWithoutLoader = getReactElementsWithoutType({
       children,
       type: Video.Loader,
     })
 
+    const PlayerButtonOnImage = props => (
+      <StyledPlayerButton>
+        <Text
+          size="default"
+          weight="regular"
+          color={props.arrowColor}
+          aria-label={props.ariaLabel}
+        >
+          ►
+        </Text>
+      </StyledPlayerButton>
+    )
+
     return (
-      <StyledContainer>
+      <StyledContainer {...this.a11yOnClickProps()}>
         {loader}
-        <StyledVideo {...props} ref={this.video}>
-          {childrenWithoutLoader}
-        </StyledVideo>
+        <StyledPlayer>
+          {withPlayerButtonOnVideo && (
+            <PlayerButtonOnImage
+              arrowColor={arrowColor}
+              ariaLabel={ariaLabel}
+            />
+          )}
+          <StyledVideo {...props} ref={this.video}>
+            {childrenWithoutLoader}
+          </StyledVideo>
+        </StyledPlayer>
       </StyledContainer>
     )
   }
