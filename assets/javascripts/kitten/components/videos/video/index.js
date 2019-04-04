@@ -30,12 +30,6 @@ const showPlayer = css`
   opacity: 1;
 `
 
-const StyledPlayer = styled.div`
-  ${player}
-
-  ${({ withPlayerButtonOnVideo }) => showPlayer}
-`
-
 const playerButtonSize = pxToRem(70)
 
 const StyledPlayerButton = styled.div`
@@ -59,13 +53,26 @@ const StyledVideo = styled.video`
   object-fit: cover;
 `
 
-export class Video extends PureComponent {
-  constructor(props) {
-    super(props)
+const styledPlayerButtonOnVideo = styled(
+  ({ arrowColor, ariaLabel, ...others }) => (
+    <StyledPlayerButton>
+      <Text
+        size="default"
+        weight="regular"
+        color={props.arrowColor}
+        aria-label={props.ariaLabel}
+      >
+        ►
+      </Text>
+    </StyledPlayerButton>
+  ),
+)`
+  ${player}
+`
 
-    this.video = createRef()
-    this.state = { showPlayer: false }
-  }
+export class Video extends PureComponent {
+  state = { showPlayer: false }
+  video = createRef()
 
   handleClick = () => {
     this.setState({ showPlayer: true })
@@ -111,33 +118,15 @@ export class Video extends PureComponent {
       type: Video.Loader,
     })
 
-    const PlayerButtonOnImage = props => (
-      <StyledPlayerButton>
-        <Text
-          size="default"
-          weight="regular"
-          color={props.arrowColor}
-          aria-label={props.ariaLabel}
-        >
-          ►
-        </Text>
-      </StyledPlayerButton>
-    )
-
     return (
       <StyledContainer {...this.a11yOnClickProps()}>
-        {loader}
-        <StyledPlayer>
-          {withPlayerButtonOnVideo && (
-            <PlayerButtonOnImage
-              arrowColor={arrowColor}
-              ariaLabel={ariaLabel}
-            />
-          )}
-          <StyledVideo {...props} ref={this.video}>
-            {childrenWithoutLoader}
-          </StyledVideo>
-        </StyledPlayer>
+        <styledPlayerButtonOnVideo
+          arrowColor={arrowColor}
+          ariaLabel={ariaLabel}
+        />
+        <StyledVideo {...props} ref={this.video}>
+          {childrenWithoutLoader}
+        </StyledVideo>
       </StyledContainer>
     )
   }

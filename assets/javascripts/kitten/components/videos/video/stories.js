@@ -58,7 +58,7 @@ storiesOf('Videos/Video', module)
                 style={{ height: number('Height', 400) }}
               >
                 <Video
-                  autoPlay
+                  controls
                   playsInline
                   loop
                   muted
