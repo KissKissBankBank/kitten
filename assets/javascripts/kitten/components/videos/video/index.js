@@ -15,26 +15,12 @@ import {
 //     tabIndex: 0,
 //   }
 // })
+
 const StyledContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-`
-
-const player = css`
-  position: relative;
-  transition: opacity ease 600ms, z-index ease 600ms;
-  z-index: 1;
-`
-
-const hidePlayer = css`
-  opacity: 0;
-  z-index: 0;
-`
-
-const showPlayer = css`
-  opacity: 1;
 `
 
 const playerButtonSize = pxToRem(70)
@@ -50,7 +36,24 @@ const StyledPlayerButton = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 2;
-  cursor: pointer;
+`
+
+const StyledPlayer = styled.div`
+  position: relative;
+  transition: opacity ease 600ms, z-index ease 600ms;
+  z-index: 1;
+  cursor: ${props => (props.withPlayerButtonOnVideo ? 'pointer' : null)};
+
+  ${({ isVideoPlaying }) => hidePlayer && showPlayer}
+`
+
+const hidePlayer = css`
+  opacity: 0;
+  z-index: 0;
+`
+
+const showPlayer = css`
+  opacity: 1;
 `
 
 const StyledVideo = styled.video`
@@ -60,39 +63,13 @@ const StyledVideo = styled.video`
   object-fit: cover;
 `
 
-const styledPlayerButtonOnVideo = styled(
-  ({ arrowColor, ariaLabel, ...others }) => (
-    <StyledPlayerButton>
-      <Text
-        size="default"
-        weight="regular"
-        color={props.arrowColor}
-        aria-label={props.ariaLabel}
-      >
-        ►
-      </Text>
-    </StyledPlayerButton>
-  ),
-)`
-  ${player}
-`
-
 export class Video extends PureComponent {
   state = { showPlayer: false }
   video = createRef()
 
   handleClick = () => {
     this.setState({ showPlayer: true })
-  }
-
-  a11yOnClickProps = () => {
-    if (!this.props.withPlayerButtonOnVideo) return
-
-    return {
-      onClick: this.handleClick,
-      role: 'button',
-      tabIndex: 0,
-    }
+    this.previewVideo.blur()
   }
 
   componentDidMount() {
@@ -124,13 +101,24 @@ export class Video extends PureComponent {
       children,
       type: Video.Loader,
     })
+    const isVideoPlaying = withPlayerButtonOnVideo && this.state.showPlayer
 
     return (
-      <StyledContainer {...this.a11yOnClickProps()}>
-        <styledPlayerButtonOnVideo
-          arrowColor={arrowColor}
-          ariaLabel={ariaLabel}
-        />
+      <StyledContainer
+        ref={node => {
+          this.previewVideo = node
+        }}
+        onClick={this.handleClick}
+      >
+        <StyledPlayer>
+          {withPlayerButtonOnVideo && (
+            <StyledPlayerButton>
+              <Text size="default" weight="regular" aria-label={ariaLabel}>
+                ►
+              </Text>
+            </StyledPlayerButton>
+          )}
+        </StyledPlayer>
         <StyledVideo {...props} ref={this.video}>
           {childrenWithoutLoader}
         </StyledVideo>
