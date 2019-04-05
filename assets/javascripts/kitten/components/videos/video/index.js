@@ -101,15 +101,9 @@ export class Video extends PureComponent {
       children,
       type: Video.Loader,
     })
-    const isVideoPlaying = withPlayerButtonOnVideo && this.state.showPlayer
 
     return (
-      <StyledContainer
-        ref={node => {
-          this.previewVideo = node
-        }}
-        onClick={this.handleClick}
-      >
+      <StyledContainer onClick={this.handleClick}>
         <StyledPlayer>
           {withPlayerButtonOnVideo && (
             <StyledPlayerButton>
