@@ -8,6 +8,13 @@ import {
   getReactElementsWithoutType,
 } from '../../../helpers/react/react-elements'
 
+// const StyledContainer = styled.div.attrs({
+//   ${({withPlayerButtonOnVideo}) => withPlayerButtonOnVideo &&
+//     onClick: this.handleClick,
+//     role: 'button',
+//     tabIndex: 0,
+//   }
+// })
 const StyledContainer = styled.div`
   position: relative;
   width: 100%;
