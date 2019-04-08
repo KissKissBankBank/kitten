@@ -8,19 +8,15 @@ import {
   getReactElementsWithoutType,
 } from '../../../helpers/react/react-elements'
 
-// const StyledContainer = styled.div.attrs({
-//   ${({withPlayerButtonOnVideo}) => withPlayerButtonOnVideo &&
-//     onClick: this.handleClick,
-//     role: 'button',
-//     tabIndex: 0,
-//   }
-// })
-
-const StyledContainer = styled.div`
-  position: relative;
+const StyledContainer = styled.div.attrs({
+  role: 'button',
+  tabIndex: 0,
+})`
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
+  cursor: pointer;
 `
 
 const playerButtonSize = pxToRem(70)
@@ -36,15 +32,6 @@ const StyledPlayerButton = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 2;
-`
-
-const StyledPlayer = styled.div`
-  position: relative;
-  transition: opacity ease 600ms, z-index ease 600ms;
-  z-index: 1;
-  cursor: ${props => (props.withPlayerButtonOnVideo ? 'pointer' : null)};
-
-  ${({ isVideoPlaying }) => hidePlayer && showPlayer}
 `
 
 const hidePlayer = css`
@@ -67,9 +54,10 @@ export class Video extends PureComponent {
   state = { showPlayer: false }
   video = createRef()
 
-  handleClick = () => {
+  handlePlayClick = () => {
     this.setState({ showPlayer: true })
-    this.previewVideo.blur()
+    // this.previewVideo.blur()
+    this.video.play()
   }
 
   componentDidMount() {
@@ -89,13 +77,7 @@ export class Video extends PureComponent {
   }
 
   render() {
-    const {
-      children,
-      arrowColor,
-      ariaLabel,
-      withPlayerButtonOnVideo,
-      ...props
-    } = this.props
+    const { children, ariaLabel, ...props } = this.props
     const loader = getReactElementsByType({ children, type: Video.Loader })
     const childrenWithoutLoader = getReactElementsWithoutType({
       children,
@@ -103,19 +85,19 @@ export class Video extends PureComponent {
     })
 
     return (
-      <StyledContainer onClick={this.handleClick}>
-        <StyledPlayer>
-          {withPlayerButtonOnVideo && (
-            <StyledPlayerButton>
-              <Text size="default" weight="regular" aria-label={ariaLabel}>
-                ►
-              </Text>
-            </StyledPlayerButton>
-          )}
-        </StyledPlayer>
+      <StyledContainer>
+        {loader}
+
         <StyledVideo {...props} ref={this.video}>
           {childrenWithoutLoader}
         </StyledVideo>
+        {!props.autoPlay && (
+          <StyledPlayerButton onClick={this.handlePlayClick}>
+            <Text size="default" weight="regular" aria-label={ariaLabel}>
+              ►
+            </Text>
+          </StyledPlayerButton>
+        )}
       </StyledContainer>
     )
   }

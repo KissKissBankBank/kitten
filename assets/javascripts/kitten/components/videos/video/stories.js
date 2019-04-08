@@ -58,17 +58,12 @@ storiesOf('Videos/Video', module)
                 style={{ height: number('Height', 400) }}
               >
                 <Video
-                  controls
                   playsInline
                   loop
                   muted
                   src={text(
                     'Src',
                     'https://d3v4jsc54141g1.cloudfront.net/videos/home/home_v2.mp4',
-                  )}
-                  withPlayerButtonOnVideo={boolean(
-                    'With player button on video?',
-                    true,
                   )}
                 >
                   <Video.Loader>
