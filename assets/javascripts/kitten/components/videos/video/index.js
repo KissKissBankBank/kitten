@@ -8,15 +8,12 @@ import {
   getReactElementsWithoutType,
 } from '../../../helpers/react/react-elements'
 
-const StyledContainer = styled.div.attrs({
-  role: 'button',
-  tabIndex: 0,
-})`
+const StyledContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative;
-  cursor: pointer;
+  cursor: ${props => (props.autoPlay ? 'pointer' : null)};
 `
 
 const playerButtonSize = pxToRem(70)
@@ -31,16 +28,9 @@ const StyledPlayerButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
-`
-
-const hidePlayer = css`
-  opacity: 0;
-  z-index: 0;
-`
-
-const showPlayer = css`
-  opacity: 1;
+  transition: opacity ease 600ms, z-index ease 600ms;
+  z-index: ${props => (props.autoPlay ? 0 : 1)};
+  opacity: ${props => (props.autoPlay ? 0 : 1)};
 `
 
 const StyledVideo = styled.video`
@@ -51,13 +41,31 @@ const StyledVideo = styled.video`
 `
 
 export class Video extends PureComponent {
-  state = { showPlayer: false }
   video = createRef()
+  state = { showPlayer: false }
 
   handlePlayClick = () => {
-    this.setState({ showPlayer: true })
     // this.previewVideo.blur()
-    this.video.play()
+    if (this.state.showPlayer) {
+      this.video.current.pause()
+    } else {
+      this.video.current.play()
+    }
+    this.setState({ showPlayer: true })
+  }
+
+  handleKeyPress = event => {
+    event.preventDefault()
+    const enterKey = event.key === 'Enter'
+    const spaceKey = event.key === ' '
+
+    if (enterKey || spaceKey) this.handlePlayClick()
+  }
+
+  handleFocus = event => {
+    event.preventDefault()
+    this.previewVideo.focus()
+    this.handleKeyPress(event)
   }
 
   componentDidMount() {
@@ -76,8 +84,20 @@ export class Video extends PureComponent {
     return this.video.current.src === this.props.src
   }
 
+  a11yOnClickProps = () => {
+    if (this.props.autoPlay) return
+
+    return {
+      onClick: this.handleClick,
+      onKeyPress: this.handleKeyPress,
+      onFocus: this.handleFocus,
+      role: 'button',
+      tabIndex: 0,
+    }
+  }
+
   render() {
-    const { children, ariaLabel, ...props } = this.props
+    const { children, ariaLabel, autoPlay, ...props } = this.props
     const loader = getReactElementsByType({ children, type: Video.Loader })
     const childrenWithoutLoader = getReactElementsWithoutType({
       children,
@@ -88,11 +108,12 @@ export class Video extends PureComponent {
       <StyledContainer>
         {loader}
 
-        <StyledVideo {...props} ref={this.video}>
+        <StyledVideo {...props} ref={this.video} onClick={this.handlePlayClick}>
           {childrenWithoutLoader}
         </StyledVideo>
-        {!props.autoPlay && (
-          <StyledPlayerButton onClick={this.handlePlayClick}>
+
+        {!autoPlay && (
+          <StyledPlayerButton>
             <Text size="default" weight="regular" aria-label={ariaLabel}>
               ►
             </Text>
