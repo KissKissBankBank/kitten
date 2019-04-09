@@ -11,6 +11,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: You can now import components with `src/index`. Example:
   `import { Button, Grid, GridCol, Text, Paragraph } from '@kisskissbankbank/kitten/src'
 
+## [1.26.0] - 2019-04-02
+
+Feature:
+- Add `others` props to `Switch` component
+
+Fix:
+- Set `vertical-align` property for `BulletList` component
+
+## [1.25.0] - 2019-03-21
+
+Feature:
+- Add `lightRed` (`#ffebe0`) to `COLORS` set.
+- Add `unit` prop to `Field.Input`.
+
+## [1.24.0] - 2019-03-21
+
+Features:
+- Add `link` props to `Field.Label`
+- Add `Field.Password` component
+
 ## [1.23.0] - 2019-03-20
 
 Features:

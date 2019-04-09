@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -9,17 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.FieldInput = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -29,32 +17,30 @@ var _textInput = require("../../../form/text-input");
 
 var _textInputWithLimit = require("../../../form/text-input-with-limit");
 
-var FieldInput =
-/*#__PURE__*/
-function (_Component) {
-  (0, _inherits2.default)(FieldInput, _Component);
+var _textInputWithUnit = require("../../text-input-with-unit");
 
-  function FieldInput() {
-    (0, _classCallCheck2.default)(this, FieldInput);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(FieldInput).apply(this, arguments));
+var FieldInput = function FieldInput(props) {
+  var Input = _textInput.TextInput;
+
+  if (props.limit) {
+    Input = _textInputWithLimit.TextInputWithLimit;
   }
 
-  (0, _createClass2.default)(FieldInput, [{
-    key: "render",
-    value: function render() {
-      var Input = this.props.limit ? _textInputWithLimit.TextInputWithLimit : _textInput.TextInput;
-      return _react.default.createElement(_marger.Marger, {
-        top: "1.5"
-      }, _react.default.createElement(Input, this.props));
-    }
-  }]);
-  return FieldInput;
-}(_react.Component);
+  if (props.unit) {
+    Input = _textInputWithUnit.TextInputWithUnit;
+  }
+
+  return _react.default.createElement(_marger.Marger, {
+    top: "1.5"
+  }, _react.default.createElement(Input, props));
+};
 
 exports.FieldInput = FieldInput;
 FieldInput.propTypes = {
-  limit: _propTypes.default.number
+  limit: _propTypes.default.number,
+  unit: _propTypes.default.string
 };
 FieldInput.defaultProps = {
-  limit: null
+  limit: undefined,
+  unit: undefined
 };

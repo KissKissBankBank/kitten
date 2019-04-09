@@ -5,6 +5,7 @@ import { FieldError } from './components/error'
 import { FieldRadioButtonSet } from './components/radio-button-set'
 import { FieldSelect } from './components/select'
 import { FieldCheckbox } from './components/checkbox'
+import { FieldPassword } from './components/password'
 
 export class Field extends Component {
   static Label = FieldLabel
@@ -13,6 +14,7 @@ export class Field extends Component {
   static Select = FieldSelect
   static Checkbox = FieldCheckbox
   static ErrorMessage = FieldError
+  static Password = FieldPassword
 
   render = () => this.props.children
 }
