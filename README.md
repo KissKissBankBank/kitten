@@ -54,7 +54,7 @@ for an example.
 You can render React components directly in your js bundle:
 
 ```js
-import { SimpleCard } from '@kisskissbankbank/kitten/src/components/cards/simple-card'
+import { SimpleCard } from '@kisskissbankbank/kitten'
 
 ReactDOM.render(
   <SimpleCard ...props/>,
