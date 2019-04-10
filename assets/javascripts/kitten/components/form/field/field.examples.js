@@ -33,6 +33,7 @@ export const FieldInputExample = ({
   error,
   errorMessage,
   limit,
+  unit,
 }) => (
   <FieldBase
     id={id}
@@ -45,7 +46,36 @@ export const FieldInputExample = ({
     <Field.Input
       id={id}
       limit={limit}
+      unit={unit}
       name="field"
+      placeholder={placeholder}
+      error={error}
+    />
+  </FieldBase>
+)
+
+export const FieldPasswordExample = ({
+  id,
+  label,
+  tooltip,
+  tooltipId,
+  placeholder,
+  error,
+  errorMessage,
+}) => (
+  <FieldBase
+    id={id}
+    label={label}
+    tooltip={tooltip}
+    tooltipId={tooltipId}
+    error={error}
+    errorMessage={errorMessage}
+  >
+    <Field.Password
+      id={id}
+      name="field"
+      iconLabel="Show password"
+      hiddenIconLabel="Hide password"
       placeholder={placeholder}
       error={error}
     />

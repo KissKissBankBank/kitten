@@ -67,7 +67,8 @@ function (_Component) {
           paragraph = _this$props.paragraph,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph"]);
       return _react.default.createElement(ContainerStyle, (0, _extends2.default)({}, others, {
-        as: href ? 'a' : 'div'
+        as: href ? 'a' : 'div',
+        href: href
       }), _react.default.createElement(_image.Image, {
         imageProps: imageProps,
         withPlayerButtonOnImage: withPlayerButtonOnImage,

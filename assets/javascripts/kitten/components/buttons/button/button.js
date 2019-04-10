@@ -12,9 +12,7 @@ const StyledButton = styled.button`
   justify-content: center;
 
   box-sizing: border-box;
-  min-width: ${pxToRem(200)};
-  min-height: ${pxToRem(50)};
-  padding: 0 ${pxToRem(30)};
+  ${() => DEFAULT}
 
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${pxToRem(14)};
@@ -40,30 +38,9 @@ const StyledButton = styled.button`
     margin-right: 0;
   }
 
-  ${({ tiny }) =>
-    tiny &&
-    css`
-      min-width: ${pxToRem(160)};
-      min-height: ${pxToRem(40)};
-      padding: 0 ${pxToRem(20)};
-    `}
-
-  ${({ big }) =>
-    big &&
-    css`
-      min-width: ${pxToRem(220)};
-      min-height: ${pxToRem(70)};
-      padding: 0 ${pxToRem(40)};
-
-      font-size: ${pxToRem(16)};
-    `}
-
-  ${({ fluid }) =>
-    fluid &&
-    css`
-      min-width: initial;
-      width: 100%;
-    `}
+  ${({ tiny }) => tiny && TINY}
+  ${({ big }) => big && BIG}
+  ${({ fluid }) => fluid && FLUID}
 
   ${({ icon }) =>
     icon &&
@@ -90,6 +67,32 @@ const StyledButton = styled.button`
     `}
 
   ${({ modifier }) => modifierStyles(modifier)}
+`
+
+export const FLUID = css`
+  min-width: initial;
+  width: 100%;
+`
+
+export const DEFAULT = css`
+  min-width: ${pxToRem(200)};
+  min-height: ${pxToRem(50)};
+  padding: 0 ${pxToRem(30)};
+  font-size: ${pxToRem(14)};
+`
+
+export const TINY = css`
+  min-width: ${pxToRem(160)};
+  min-height: ${pxToRem(40)};
+  padding: 0 ${pxToRem(20)};
+  font-size: ${pxToRem(14)};
+`
+
+export const BIG = css`
+  min-width: ${pxToRem(220)};
+  min-height: ${pxToRem(70)};
+  padding: 0 ${pxToRem(40)};
+  font-size: ${pxToRem(16)};
 `
 
 export class Button extends Component {

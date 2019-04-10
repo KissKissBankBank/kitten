@@ -45,12 +45,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 fSrmLM"
         >
           <span
-            className="k-HorizontalStroke k-HorizontalStroke--big"
-            style={
-              Object {
-                "margin": "0 auto",
-              }
-            }
+            className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 fRKuJX"
           />
         </div>
         <form

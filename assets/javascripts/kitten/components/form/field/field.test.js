@@ -2,6 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import {
   FieldInputExample,
+  FieldPasswordExample,
   FieldRadioButtonSetExample,
   FieldSelectExample,
 } from './field.examples'
@@ -34,6 +35,48 @@ describe('<Field />', () => {
       component = renderer
         .create(
           <FieldInputExample
+            id="input"
+            label="Label"
+            tooltip="Tooltip"
+            tooltipId="tooltip"
+            placeholder="Placeholder…"
+            error
+            errorMessage="Error!"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with <Field.Password />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <FieldPasswordExample
+            id="input"
+            label="Label"
+            tooltip="Tooltip"
+            tooltipId="tooltip"
+            placeholder="Placeholder…"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with <Field.Password /> in error', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <FieldPasswordExample
             id="input"
             label="Label"
             tooltip="Tooltip"

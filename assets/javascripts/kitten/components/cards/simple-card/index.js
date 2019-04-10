@@ -27,7 +27,7 @@ class SimpleCardComponent extends Component {
     } = this.props
 
     return (
-      <ContainerStyle {...others} as={href ? 'a' : 'div'}>
+      <ContainerStyle {...others} as={href ? 'a' : 'div'} href={href}>
         <Image
           imageProps={imageProps}
           withPlayerButtonOnImage={withPlayerButtonOnImage}

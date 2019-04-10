@@ -22,9 +22,27 @@ const sharedHoverStyledArrowIcons = css`
   }
 `
 
-export const StyledRightArrowContainer = styled.div`
+const rightContainer = css`
   justify-content: flex-end;
   text-align: right;
+`
+
+const leftContainer = css`
+  justify-content: flex-start;
+`
+
+export const RightEmptyContainer = styled.div`
+  ${rightContainer}
+  flex: 1;
+`
+
+export const LeftEmptyContainer = styled.div`
+  ${leftContainer}
+  flex: 1;
+`
+
+export const StyledRightArrowContainer = styled.div`
+  ${rightContainer}
   ${sharedStyledArrowIcons}
 
   &:hover {
@@ -34,7 +52,7 @@ export const StyledRightArrowContainer = styled.div`
 `
 
 export const StyledLeftArrowContainer = styled.div`
-  justify-content: flex-start;
+  ${leftContainer}
   ${sharedStyledArrowIcons}
 
   &:hover {
