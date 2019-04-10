@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
   position: relative;
 
   ${({ autoPlay }) =>
-    autoPlay &&
+    !autoPlay &&
     css`
       cursor: pointer;
     `}
@@ -59,13 +59,13 @@ export class Video extends PureComponent {
   state = { showPlayer: false }
 
   handlePlayClick = () => {
-    if (this.state.showPlayer) {
+    if (this.state.showPlayer && this.props.autoPlay) {
       this.video.current.pause()
     } else {
       this.video.current.play()
     }
     this.setState({ showPlayer: true })
-    this.previewVideo.blur()
+    // this.previewVideo.blur()
   }
 
   handleKeyPress = event => {
@@ -122,12 +122,11 @@ export class Video extends PureComponent {
     return (
       <StyledContainer
         onClick={this.handlePlayClick}
-        autoPlay={autoPlay}
         {...this.a11yOnClickProps}
       >
         {loader}
 
-        <StyledVideo ref={this.video} {...props}>
+        <StyledVideo ref={this.video} autoPlay={autoPlay} {...props}>
           {childrenWithoutLoader}
         </StyledVideo>
 
