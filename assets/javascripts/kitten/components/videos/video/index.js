@@ -13,7 +13,12 @@ const StyledContainer = styled.div`
   height: 100%;
   overflow: hidden;
   position: relative;
-  cursor: ${props => (props.autoPlay ? 'pointer' : null)};
+
+  ${({ autoPlay }) =>
+    autoPlay &&
+    css`
+      cursor: pointer;
+    `}
 `
 
 const playerButtonSize = pxToRem(70)
@@ -29,8 +34,17 @@ const StyledPlayerButton = styled.div`
   align-items: center;
   justify-content: center;
   transition: opacity ease 600ms, z-index ease 600ms;
-  z-index: ${props => (props.autoPlay ? 0 : 1)};
-  opacity: ${props => (props.autoPlay ? 0 : 1)};
+  z-index: 1;
+
+  ${({ isVideoPlaying }) =>
+    isVideoPlaying
+      ? css`
+          opacity: 0;
+          z-index: 0;
+        `
+      : css`
+          opacity: 1;
+        `}
 `
 
 const StyledVideo = styled.video`
@@ -45,13 +59,13 @@ export class Video extends PureComponent {
   state = { showPlayer: false }
 
   handlePlayClick = () => {
-    // this.previewVideo.blur()
     if (this.state.showPlayer) {
       this.video.current.pause()
     } else {
       this.video.current.play()
     }
     this.setState({ showPlayer: true })
+    this.previewVideo.blur()
   }
 
   handleKeyPress = event => {
@@ -103,17 +117,22 @@ export class Video extends PureComponent {
       children,
       type: Video.Loader,
     })
+    const isVideoPlaying = !autoPlay && this.state.showPlayer
 
     return (
-      <StyledContainer>
+      <StyledContainer
+        onClick={this.handlePlayClick}
+        autoPlay={autoPlay}
+        {...this.a11yOnClickProps}
+      >
         {loader}
 
-        <StyledVideo {...props} ref={this.video} onClick={this.handlePlayClick}>
+        <StyledVideo ref={this.video} {...props}>
           {childrenWithoutLoader}
         </StyledVideo>
 
         {!autoPlay && (
-          <StyledPlayerButton>
+          <StyledPlayerButton isVideoPlaying={isVideoPlaying}>
             <Text size="default" weight="regular" aria-label={ariaLabel}>
               ►
             </Text>
