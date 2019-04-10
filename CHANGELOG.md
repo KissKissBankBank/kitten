@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: `getImagesPaths` has been removed and `getScssPaths` moved.
+  If you use Kitten paths, you will be update require by:
+  `import { getScssPaths } from '@kisskissbankbank/kitten'.
+- Feature: You can now import components from `@kisskissbankbank/kitten`.
+  Example: `import { Button, Text, Marger } from '@kisskissbankbank/kitten'.
+
 ## [1.26.0] - 2019-04-02
 
 Feature:
