@@ -59,13 +59,13 @@ export class Video extends PureComponent {
   state = { showPlayer: false }
 
   handlePlayClick = () => {
-    if (this.state.showPlayer && this.props.autoPlay) {
+    if (this.state.showPlayer && !this.props.autoPlay) {
       this.video.current.pause()
     } else {
       this.video.current.play()
     }
-    this.setState({ showPlayer: true })
-    // this.previewVideo.blur()
+    this.setState({ showPlayer: !this.state.showPlayer })
+    this.previewVideo.blur()
   }
 
   handleKeyPress = event => {
@@ -122,6 +122,7 @@ export class Video extends PureComponent {
     return (
       <StyledContainer
         onClick={this.handlePlayClick}
+        isVideoPlaying={isVideoPlaying}
         {...this.a11yOnClickProps}
       >
         {loader}
