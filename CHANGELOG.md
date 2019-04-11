@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `player` button on `Video` component.
+
 ## [1.26.0] - 2019-04-02
 
 Feature:
