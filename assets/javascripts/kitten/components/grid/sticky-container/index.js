@@ -42,7 +42,13 @@ function useScrollDirection() {
   return [difference > 0, difference < 0]
 }
 
-const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
+export const StickyContainer = ({
+  children,
+  top,
+  bottom,
+  isSticky,
+  ...other
+}) => {
   const currentStickyContainer = useRef(null)
 
   const [stuck, setStuckState] = useState(false)
@@ -182,5 +188,3 @@ StickyContainer.defaultProps = {
   top: 0,
   bottom: 0,
 }
-
-export default StickyContainer
