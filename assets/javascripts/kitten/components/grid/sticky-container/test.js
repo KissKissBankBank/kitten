@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import StickyContainer from './index'
+import { StickyContainer } from './index'
 
 describe('<StickyContainer />', () => {
   let component
