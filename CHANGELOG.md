@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: New `StickyContainer` component.
+- Feature: Add a new component `AdaptableGrid` to handle grids. From now, you can use this component instead of `Grid`.
 
 ## [2.0.1] - 2019-04-11
 
