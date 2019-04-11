@@ -879,12 +879,6 @@ Object.defineProperty(exports, "Video", {
     return _video.Video;
   }
 });
-Object.defineProperty(exports, "getScssPaths", {
-  enumerable: true,
-  get: function get() {
-    return _paths.getScssPaths;
-  }
-});
 
 var _accordeon = require("./components/accordeon");
 
@@ -1153,5 +1147,3 @@ var _simpleUploader = require("./components/uploaders/simple-uploader");
 var _uploader = require("./components/uploaders/uploader");
 
 var _video = require("./components/videos/video");
-
-var _paths = require("./config/paths");
