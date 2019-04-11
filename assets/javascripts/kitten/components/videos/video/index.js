@@ -102,7 +102,7 @@ export class Video extends PureComponent {
     if (this.props.autoPlay) return
 
     return {
-      onClick: this.handleClick,
+      onClick: this.handlePlayClick,
       onKeyPress: this.handleKeyPress,
       onFocus: this.handleFocus,
       role: 'button',
@@ -123,11 +123,16 @@ export class Video extends PureComponent {
       <StyledContainer
         onClick={this.handlePlayClick}
         isVideoPlaying={isVideoPlaying}
-        {...this.a11yOnClickProps}
+        {...this.a11yOnClickProps()}
       >
         {loader}
 
-        <StyledVideo ref={this.video} autoPlay={autoPlay} {...props}>
+        <StyledVideo
+          ref={this.video}
+          controls={this.state.showPlayer}
+          autoPlay={autoPlay}
+          {...props}
+        >
           {childrenWithoutLoader}
         </StyledVideo>
 
