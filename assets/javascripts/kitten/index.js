@@ -111,6 +111,7 @@ export { Grid, GridCol } from './components/grid/grid'
 export { LegoGrid } from './components/grid/lego-grid'
 export { Row } from './components/grid/row'
 export { SideGrid } from './components/grid/side-grid'
+export { StickyContainer } from './components/grid/sticky-container'
 
 // Headers
 export { HeaderLogo } from './components/headers/header-logo'
