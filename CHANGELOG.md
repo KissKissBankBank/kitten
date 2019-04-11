@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: New `StickyContainer` component.
 
+## [2.0.1] - 2019-04-11
+
+Fix:
+- Remove `getScssPaths` from `@kisskissbankbank/kitten`.
+  Prefer use `@kisskissbankbank/kitten/src/config/paths`.
+
 ## [2.0.0] - 2019-04-10
 
 Breaking changes:
