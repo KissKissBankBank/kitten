@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `player` button on `Video` component.
+- Feature: Add player button on `Video` component.
 - Fix: Remove `getScssPaths` from `@kisskissbankbank/kitten`.
   Prefer use `@kisskissbankbank/kitten/src/config/paths`.
 

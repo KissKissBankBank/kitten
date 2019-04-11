@@ -9,10 +9,10 @@ import {
 } from '../../../helpers/react/react-elements'
 
 const StyledContainer = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: relative;
 
   ${({ autoPlay }) =>
     !autoPlay &&
@@ -24,17 +24,16 @@ const StyledContainer = styled.div`
 const playerButtonSize = pxToRem(70)
 
 const StyledPlayerButton = styled.div`
+  position: absolute;
   width: ${playerButtonSize};
   height: ${playerButtonSize};
   background: ${COLORS.background1};
-  position: absolute;
   top: calc(50% - ${playerButtonSize} / 2);
   left: calc(50% - ${playerButtonSize} / 2);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity ease 600ms, z-index ease 600ms;
-  z-index: 1;
 
   ${({ isVideoPlaying }) =>
     isVideoPlaying
@@ -44,6 +43,7 @@ const StyledPlayerButton = styled.div`
         `
       : css`
           opacity: 1;
+          z-index: 1;
         `}
 `
 
