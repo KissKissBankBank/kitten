@@ -69,11 +69,11 @@ const StickyContainer = ({ children, top, bottom, isSticky, ...other }) => {
 
   const isOriginalContainerOutOfViewport = () => {
     if (isSticky === 'topOnScrollUp') {
-      let distanceToBorder = top || 0
+      const distanceToBorder = top || 0
       return window.pageYOffset > containerHeight + distanceToBorder
     }
     if (isSticky === 'bottomOnScrollDown') {
-      let distanceToBorder = bottom || 0
+      const distanceToBorder = bottom || 0
       return (
         window.pageYOffset + window.innerHeight <
         document.body.clientHeight - (containerHeight + distanceToBorder)

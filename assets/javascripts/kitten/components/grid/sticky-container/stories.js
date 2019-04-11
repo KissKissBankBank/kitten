@@ -44,7 +44,7 @@ const info = {
 }
 
 const BlockContent = () => {
-  let lines = createRangeFromZeroTo(100)
+  const lines = createRangeFromZeroTo(100)
 
   return (
     <ul>
