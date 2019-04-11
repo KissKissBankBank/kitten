@@ -6,15 +6,15 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 const path = require('path')
-const kittenPaths = require('../src')
-const modulesPath = ['node_modules']
+const kittenPaths = require('../src/config/paths')
 
 module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
-    modules: modulesPath.concat(kittenPaths.imagesPaths),
+    modules: ['node_modules'],
     alias: {
       kitten: path.join(__dirname, '../assets/javascripts/kitten'),
+      icons: path.join(__dirname, '../assets/images/icons'),
     },
   },
   module: {
@@ -28,6 +28,9 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        resolve: {
+          extensions: ['.scss', '.sass'],
+        },
         use: [{
           loader: 'style-loader'
         }, {
@@ -35,7 +38,7 @@ module.exports = {
         }, {
           loader: 'sass-loader',
           options: {
-            includePaths: kittenPaths.scssPaths,
+            includePaths: kittenPaths.getScssPaths(),
           }
         }]
       }
