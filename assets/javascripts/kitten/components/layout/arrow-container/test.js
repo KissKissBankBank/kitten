@@ -66,6 +66,18 @@ describe('<ArrowContainer />', () => {
     })
   })
 
+  describe('with `centered` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<ArrowContainer centered>Foobar</ArrowContainer>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with other props', () => {
     beforeEach(() => {
       component = renderer

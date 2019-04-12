@@ -1,7 +1,14 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, color, text, number, select } from '@storybook/addon-knobs'
+import {
+  withKnobs,
+  color,
+  text,
+  number,
+  select,
+  boolean,
+} from '@storybook/addon-knobs'
 import { ArrowContainer } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -56,6 +63,13 @@ const info = {
       MyContent
     </ArrowContainer>
     ~~~
+
+    #### Centered distance (priority on distance prop)
+    ~~~js
+    <ArrowContainer centered>
+      MyContent
+    </ArrowContainer>
+    ~~~
   `,
   header: false,
   propTables: false,
@@ -82,6 +96,7 @@ storiesOf('Layout/ArrowContainer', module)
                     Bottom: 'bottom',
                   })}
                   distance={number('Distance', 20)}
+                  centered={boolean('Centered?', false)}
                 >
                   <Text size="tiny" color="font1" weight="light">
                     {text('Content', 'Play with me!')}
