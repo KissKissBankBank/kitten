@@ -48,7 +48,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 frniMI"
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +85,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 frniMI"
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +122,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 frniMI"
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +166,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 frniMI"
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +203,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-ArrowIcon--disabled k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iiKmZI"
+          className="k-ArrowIcon k-ArrowIcon--right k-ArrowIcon--disabled k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 IIVFy"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +240,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 frniMI"
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"

@@ -52,8 +52,6 @@ describe('<List>', () => {
           .find(List.ButtonItem)
           .at(1)
           .dive()
-          .find('div')
-          .at(0)
 
         button.simulate('click')
 
@@ -93,8 +91,6 @@ describe('<List>', () => {
           .find(List.ButtonItem)
           .at(1)
           .dive()
-          .find('div')
-          .at(0)
 
         button.simulate('click')
 
