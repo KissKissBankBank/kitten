@@ -134,14 +134,14 @@ export const StickyContainer = ({
   }, []) // [] makes that Effect fire on Component mount only
 
   useEffect(() => {
-    if (isSticky !== 'always') {
-      if (shouldUnstickContainer()) {
-        setUnsticky()
-      } else if (shouldStickContainer()) {
-        setSticky()
-      } else if (shouldUnstickContainerWithTransition()) {
-        setUnstickyWithTransition()
-      }
+    if (isSticky === 'always') return
+
+    if (shouldUnstickContainer()) {
+      setUnsticky()
+    } else if (shouldStickContainer()) {
+      setSticky()
+    } else if (shouldUnstickContainerWithTransition()) {
+      setUnstickyWithTransition()
     }
   }, [scrollDirectionDown, scrollDirectionUp])
 
