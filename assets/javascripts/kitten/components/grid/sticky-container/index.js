@@ -168,7 +168,14 @@ export const StickyContainer = ({
 
   return (
     <Fragment>
-      {stuck && <div style={{ height: pxToRem(containerHeight) }} />}
+      {stuck && (
+        <div
+          style={{
+            height: pxToRem(containerHeight),
+            flex: '0 0 auto',
+          }}
+        />
+      )}
       <StyledStickyContainer
         ref={currentStickyContainer}
         stickyContainerStyleProps={stickyContainerStyleProps}
