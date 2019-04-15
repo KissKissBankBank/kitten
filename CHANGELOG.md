@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix buggy setting `isSticky="always"` on StickyContainer
+- Fix: Fix buggy settings on StickyContainer.
 
 ## [2.1.0] - 2019-04-11
 
