@@ -28,6 +28,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
 >
   <li>
     <div
+      aria-disabled={false}
       className="button-item__Item-sc-1xwobvm-0 eQyeg"
       disabled={false}
       onBlur={[Function]}
@@ -65,6 +66,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   </li>
   <li>
     <div
+      aria-disabled={false}
       className="button-item__Item-sc-1xwobvm-0 cXshSK"
       disabled={false}
       onBlur={[Function]}
@@ -102,6 +104,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   </li>
   <li>
     <div
+      aria-disabled={false}
       className="button-item__Item-sc-1xwobvm-0 cXshSK"
       disabled={false}
       onBlur={[Function]}
@@ -146,6 +149,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
 >
   <li>
     <div
+      aria-disabled={false}
       className="button-item__Item-sc-1xwobvm-0 eQyeg"
       disabled={false}
       onBlur={[Function]}
@@ -183,6 +187,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   </li>
   <li>
     <div
+      aria-disabled={true}
       className="button-item__Item-sc-1xwobvm-0 hDlIEc"
       disabled={true}
       onBlur={[Function]}
@@ -192,7 +197,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       role="button"
-      tabIndex="0"
+      tabIndex="-1"
     >
       <div
         className="button-item__Content-sc-1xwobvm-1 fKXndd"
@@ -220,6 +225,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   </li>
   <li>
     <div
+      aria-disabled={false}
       className="button-item__Item-sc-1xwobvm-0 cXshSK"
       disabled={false}
       onBlur={[Function]}
