@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List> by default matches with snapshot 1`] = `
+<ul
+  className="list__StyledList-sc-1ns0hml-0 hEwMDn"
+>
+  <li>
+    <div>
+      Item 1
+    </div>
+  </li>
+  <li>
+    <div>
+      Item 2
+    </div>
+  </li>
+  <li>
+    <div>
+      Item 3
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
+<ul
+  className="list__StyledList-sc-1ns0hml-0 hEwMDn"
+>
+  <li>
+    <div
+      className="button-item__Item-sc-1xwobvm-0 eQyeg"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+      >
+        Alice
+      </div>
+      <div
+        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 frniMI"
+          data-radium={true}
+          viewBox="0 0 6 6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Arrow
+          </title>
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      className="button-item__Item-sc-1xwobvm-0 cXshSK"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+      >
+        Cheshire Cat
+      </div>
+      <div
+        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 frniMI"
+          data-radium={true}
+          viewBox="0 0 6 6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Arrow
+          </title>
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      className="button-item__Item-sc-1xwobvm-0 cXshSK"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+      >
+        Mad Hatter
+      </div>
+      <div
+        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 frniMI"
+          data-radium={true}
+          viewBox="0 0 6 6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Arrow
+          </title>
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </div>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`<List> with <ListButtonItem> with a disabled button matches with snapshot 1`] = `
+<ul
+  className="list__StyledList-sc-1ns0hml-0 hEwMDn"
+>
+  <li>
+    <div
+      className="button-item__Item-sc-1xwobvm-0 eQyeg"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+      >
+        Alice
+      </div>
+      <div
+        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 frniMI"
+          data-radium={true}
+          viewBox="0 0 6 6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Arrow
+          </title>
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      className="button-item__Item-sc-1xwobvm-0 hDlIEc"
+      disabled={true}
+      onBlur={[Function]}
+      onClick={null}
+      onFocus={[Function]}
+      onKeyPress={null}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+      >
+        Cheshire Cat
+      </div>
+      <div
+        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--right k-ArrowIcon--disabled k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iiKmZI"
+          data-radium={true}
+          viewBox="0 0 6 6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Arrow
+          </title>
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div
+      className="button-item__Item-sc-1xwobvm-0 cXshSK"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyPress={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+      >
+        Mad Hatter
+      </div>
+      <div
+        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 frniMI"
+          data-radium={true}
+          viewBox="0 0 6 6"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Arrow
+          </title>
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </div>
+    </div>
+  </li>
+</ul>
+`;

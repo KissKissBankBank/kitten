@@ -1,26 +1,34 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import {
-  withKnobs,
-  text,
-  select,
-  boolean,
-  object,
-} from '@storybook/addon-knobs'
-import { StyleRoot } from 'radium'
-import { List } from '../../components/lists/list'
-import { Grid, GridCol } from '../../components/grid/grid'
-import { Text } from '../../components/typography/text'
-import { Marger } from '../../components/layout/marger'
-import COLORS from '../../constants/colors-config'
+import { withKnobs } from '@storybook/addon-knobs'
+import { List } from './index'
+import { Grid, GridCol } from '../../grid/grid'
+import { Text } from '../../typography/text'
+import { Marger } from '../../layout/marger'
+import { Container } from '../../grid/container'
+import styled from 'styled-components'
+import { pxToRem } from '../../../helpers/utils/typography'
+import { info } from './info'
+
+const ExampleWrapper = styled.div`
+  margin: ${pxToRem(16)} 0;
+  padding: 0;
+`
+
+const ExampleText = styled(Text)`
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+`
 
 storiesOf('List', module)
   .addDecorator(withKnobs)
+  .addDecorator(withInfo)
   .add(
     'Simple list',
-    withInfo('This is a simple list component')(() => (
-      <StyleRoot>
+    () => (
+      <Container>
         <Grid>
           <GridCol offset="1" col="10">
             <Marger top="1">
@@ -32,83 +40,68 @@ storiesOf('List', module)
             </Marger>
           </GridCol>
         </Grid>
-      </StyleRoot>
-    )),
+      </Container>
+    ),
+    { info },
   )
   .add(
     'List with ButtonItem',
-    withInfo('This is an example of List with ButtonItem')(() => (
-      <StyleRoot>
+    () => (
+      <Container>
         <Grid>
           <GridCol offset="1" col="10">
             <Marger top="1">
               <List>
-                <List.ButtonItem withTopBorder>
-                  <div style={styles.buttonListItem.wrapper}>
-                    <Text
+                <List.ButtonItem withTopBorder as="a" href="#camarche">
+                  <ExampleWrapper>
+                    <ExampleText
                       tag="p"
                       weight="regular"
                       color="font1"
                       size="tiny"
-                      style={styles.buttonListItem.base}
                     >
                       Taille XS
-                    </Text>
+                    </ExampleText>
                     <Text tag="small" color="font1" size="micro">
                       Disponibilité: 10/30
                     </Text>
-                  </div>
+                  </ExampleWrapper>
                 </List.ButtonItem>
                 <List.ButtonItem disabled>
-                  <div style={styles.buttonListItem.wrapper}>
-                    <Text
+                  <ExampleWrapper>
+                    <ExampleText
                       tag="p"
                       weight="regular"
                       color="font1"
                       size="tiny"
-                      style={styles.buttonListItem.base}
                     >
                       Taille M
-                    </Text>
+                    </ExampleText>
                     <Text tag="small" color="font1" size="micro">
                       Disponibilité: 10/30
                     </Text>
-                  </div>
+                  </ExampleWrapper>
                 </List.ButtonItem>
                 <List.ButtonItem>
-                  <div style={styles.buttonListItem.wrapper}>
-                    <Text
+                  <ExampleWrapper>
+                    <ExampleText
                       tag="p"
                       weight="regular"
                       color="font1"
                       size="tiny"
-                      style={styles.buttonListItem.base}
                     >
                       Taille XXL
-                    </Text>
+                    </ExampleText>
                     <Text tag="small" color="font1" size="micro">
                       Disponibilité: 10/30
                     </Text>
-                  </div>
+                  </ExampleWrapper>
                 </List.ButtonItem>
               </List>
             </Marger>
           </GridCol>
         </Grid>
-      </StyleRoot>
-    )),
+      </Container>
+    ),
+    { info },
   )
-
-const styles = {
-  buttonListItem: {
-    base: {
-      margin: 0,
-      padding: 0,
-      lineHeight: '1.2em',
-    },
-    wrapper: {
-      margin: '1em 0',
-      padding: 0,
-    },
-  },
-}

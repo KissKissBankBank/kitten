@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Use `styled-components` instead of `Radium` for `List` component.
+
 ## [2.1.0] - 2019-04-11
 
 Features:

@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { List } from '../../components/lists/list'
+import { List } from './index'
 import { shallow } from 'enzyme'
 
 describe('<List>', () => {
