@@ -52,7 +52,7 @@ storiesOf('List', module)
           <GridCol offset="1" col="10">
             <Marger top="1">
               <List>
-                <List.ButtonItem withTopBorder as="a" href="#camarche">
+                <List.ButtonItem withTopBorder>
                   <ExampleWrapper>
                     <ExampleText
                       tag="p"
