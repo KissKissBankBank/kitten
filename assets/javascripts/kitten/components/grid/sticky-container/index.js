@@ -121,21 +121,22 @@ export const StickyContainer = ({
   useEffect(() => {
     if (isSticky === 'always') {
       setSticky()
-    } else {
-      const currentContainerHeight = currentStickyContainer.current
-        ? currentStickyContainer.current.clientHeight
-        : 0
-      setContainerHeight(currentContainerHeight)
     }
+    const currentContainerHeight = currentStickyContainer.current
+      ? currentStickyContainer.current.clientHeight
+      : 0
+    setContainerHeight(currentContainerHeight)
   }, []) // [] makes that Effect fire on Component mount only
 
   useEffect(() => {
-    if (shouldUnstickContainer()) {
-      setUnsticky()
-    } else if (shouldStickContainer()) {
-      setSticky()
-    } else if (shouldUnstickContainerWithTransition()) {
-      setUnstickyWithTransition()
+    if (isSticky !== 'always') {
+      if (shouldUnstickContainer()) {
+        setUnsticky()
+      } else if (shouldStickContainer()) {
+        setSticky()
+      } else if (shouldUnstickContainerWithTransition()) {
+        setUnstickyWithTransition()
+      }
     }
   }, [scrollDirectionDown, scrollDirectionUp])
 
