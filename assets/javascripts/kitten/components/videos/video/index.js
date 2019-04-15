@@ -27,6 +27,7 @@ const ContainerButton = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
+  transition: opacity ease 600ms, z-index ease 600ms;
 
   ${({ isVideoPlaying }) =>
     isVideoPlaying
@@ -50,18 +51,6 @@ const StyledPlayerButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity ease 600ms, z-index ease 600ms;
-
-  ${({ isVideoPlaying }) =>
-    isVideoPlaying
-      ? css`
-          opacity: 0;
-          z-index: 0;
-        `
-      : css`
-          opacity: 1;
-          z-index: 1;
-        `}
 `
 
 const StyledVideo = styled.video`
@@ -145,8 +134,8 @@ export class Video extends PureComponent {
         {loader}
 
         {!autoPlay && (
-          <ContainerButton>
-            <StyledPlayerButton isVideoPlaying={isVideoPlaying}>
+          <ContainerButton isVideoPlaying={isVideoPlaying}>
+            <StyledPlayerButton>
               <Text size="default" weight="regular" aria-label={ariaLabel}>
                 ►
               </Text>
