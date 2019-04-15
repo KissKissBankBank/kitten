@@ -23,8 +23,25 @@ const StyledContainer = styled.div`
 
 const playerButtonSize = pxToRem(70)
 
-const StyledPlayerButton = styled.div`
+const ContainerButton = styled.div`
+  width: 100%;
+  height: 100%;
   position: absolute;
+
+  ${({ isVideoPlaying }) =>
+    isVideoPlaying
+      ? css`
+          opacity: 0;
+          z-index: 0;
+        `
+      : css`
+          opacity: 1;
+          z-index: 1;
+        `}
+`
+
+const StyledPlayerButton = styled.div`
+  position: relative;
   width: ${playerButtonSize};
   height: ${playerButtonSize};
   background: ${COLORS.background1};
@@ -127,6 +144,16 @@ export class Video extends PureComponent {
       >
         {loader}
 
+        {!autoPlay && (
+          <ContainerButton>
+            <StyledPlayerButton isVideoPlaying={isVideoPlaying}>
+              <Text size="default" weight="regular" aria-label={ariaLabel}>
+                ►
+              </Text>
+            </StyledPlayerButton>
+          </ContainerButton>
+        )}
+
         <StyledVideo
           ref={this.video}
           controls={this.state.showPlayer}
@@ -135,14 +162,6 @@ export class Video extends PureComponent {
         >
           {childrenWithoutLoader}
         </StyledVideo>
-
-        {!autoPlay && (
-          <StyledPlayerButton isVideoPlaying={isVideoPlaying}>
-            <Text size="default" weight="regular" aria-label={ariaLabel}>
-              ►
-            </Text>
-          </StyledPlayerButton>
-        )}
       </StyledContainer>
     )
   }
