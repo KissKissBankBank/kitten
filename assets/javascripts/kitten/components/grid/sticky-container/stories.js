@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import StickyContainer from './index'
+import { StickyContainer } from './index'
 import { Container } from '../../../components/grid/container'
 import { Marger } from '../../../components/layout/marger'
 import COLORS from '../../../constants/colors-config'
