@@ -119,8 +119,8 @@ export const ButtonItem = ({
 
   return (
     <Item
-      role="button"
-      tabIndex="0"
+      role={others.as !== 'a' ? 'button' : false}
+      tabIndex={disabled ? '-1' : '0'}
       onClick={disabled ? null : onClick}
       onKeyPress={disabled ? null : handleKeyPress}
       onMouseEnter={handleMouseEnter}
@@ -129,6 +129,7 @@ export const ButtonItem = ({
       onBlur={handleBlur}
       styles={style}
       disabled={disabled}
+      aria-disabled={disabled}
       withTopBorder={withTopBorder}
       {...others}
     >
@@ -155,6 +156,7 @@ ButtonItem.propTypes = {
   onBlur: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
+  onKeyPress: PropTypes.func,
 }
 
 ButtonItem.defaultProps = {
@@ -166,4 +168,5 @@ ButtonItem.defaultProps = {
   onBlur: () => {},
   onMouseEnter: () => {},
   onMouseLeave: () => {},
+  onKeyPress: () => {},
 }
