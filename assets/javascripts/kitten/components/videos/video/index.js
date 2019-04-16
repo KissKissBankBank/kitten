@@ -22,8 +22,10 @@ const StyledContainer = styled.div`
 `
 
 const StyledContainerButton = styled.div`
-  width: 100%;
-  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   position: absolute;
   transition: opacity ease 600ms, z-index ease 600ms;
   transition-delay: 0s, 0s, 0s;
@@ -78,16 +80,10 @@ export class Video extends PureComponent {
 
   handleKeyPress = event => {
     event.preventDefault()
-    const enterKey = event.key === 'Enter'
-    const spaceKey = event.key === ' '
+    const enterKeyCode = 13
+    const spaceKeyCode = 32
 
-    if (enterKey || spaceKey) this.handlePlayClick()
-  }
-
-  handleFocus = event => {
-    event.preventDefault()
-    this.previewVideo.focus()
-    this.handleKeyPress(event)
+    if (enterKeyCode || spaceKeyCode) this.handlePlayClick()
   }
 
   componentDidMount() {
@@ -111,8 +107,7 @@ export class Video extends PureComponent {
 
     return {
       onClick: this.handlePlayClick,
-      onKeyPress: this.handleKeyPress,
-      onFocus: this.handleFocus,
+      onKeyCodePress: this.handleKeyPress,
       role: 'button',
       tabIndex: 0,
     }
