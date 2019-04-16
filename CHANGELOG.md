@@ -4,9 +4,62 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `Field.Checkbox`.
-- Feature: Export `FLUID`, `DEFAULT`, `TINY` and `BIG` css from `Button`.
-- Fix: Update selected option style to `Select` component.
+- Fix: Add `VerticalStepper.Link` styles when is an `a`.
+- Fix: Fix `WarningIcon` warning.
+
+## [2.1.0] - 2019-04-11
+
+Features:
+- New `StickyContainer` component.
+- Add a new component `AdaptableGrid` to handle grids.
+  From now, you can use this component instead of `Grid`.
+
+## [2.0.1] - 2019-04-11
+
+Fix:
+- Remove `getScssPaths` from `@kisskissbankbank/kitten`.
+  Prefer use `@kisskissbankbank/kitten/src/config/paths`.
+
+## [2.0.0] - 2019-04-10
+
+Breaking changes:
+- Upgrade React/ReactDOM dependencies (`>= 16.8.x`).
+- `getImagesPaths` has been removed and `getScssPaths` moved.
+  If you use Kitten paths, you will be update require by:
+  `import { getScssPaths } from '@kisskissbankbank/kitten'.
+
+Feature:
+- You can now import components from `@kisskissbankbank/kitten`.
+  Example: `import { Button, Text, Marger } from '@kisskissbankbank/kitten'.
+
+## [1.26.0] - 2019-04-02
+
+Feature:
+- Add `others` props to `Switch` component
+
+Fix:
+- Set `vertical-align` property for `BulletList` component
+
+## [1.25.0] - 2019-03-21
+
+Feature:
+- Add `lightRed` (`#ffebe0`) to `COLORS` set.
+- Add `unit` prop to `Field.Input`.
+
+## [1.24.0] - 2019-03-21
+
+Features:
+- Add `link` props to `Field.Label`
+- Add `Field.Password` component
+
+## [1.23.0] - 2019-03-20
+
+Features:
+- Add `Field.Checkbox`.
+- Export `FLUID`, `DEFAULT`, `TINY` and `BIG` css from `Button`.
+
+Fix:
+- Update selected option style to `Select` component.
 
 ## [1.22.0] - 2019-03-18
 

@@ -60,6 +60,7 @@
       width: k-px-to-rem($bullet-size);
       height: k-px-to-rem($bullet-size);
       display: inline-block;
+      vertical-align: middle;
 
       content: '';
       background-color: $bullet-color;
