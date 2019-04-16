@@ -124,8 +124,7 @@ export class Video extends PureComponent {
       type: Video.Loader,
     })
     const isVideoPlaying = !autoPlay && this.state.showPlayer
-
-    const controls = this.state.showPlayer && isVideoPlaying
+    const controls = isVideoPlaying && this.state.showPlayer
 
     return (
       <StyledContainer
