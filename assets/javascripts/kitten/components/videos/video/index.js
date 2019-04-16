@@ -14,16 +14,14 @@ const StyledContainer = styled.div`
   height: 100%;
   overflow: hidden;
 
-  ${({ autoPlay }) =>
-    !autoPlay &&
+  ${({ isVideoPlaying }) =>
+    isVideoPlaying &&
     css`
       cursor: pointer;
     `}
 `
 
-const playerButtonSize = pxToRem(70)
-
-const ContainerButton = styled.div`
+const StyledContainerButton = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -40,6 +38,8 @@ const ContainerButton = styled.div`
           z-index: 1;
         `}
 `
+
+const playerButtonSize = pxToRem(70)
 
 const StyledPlayerButton = styled.div`
   position: relative;
@@ -125,6 +125,8 @@ export class Video extends PureComponent {
     })
     const isVideoPlaying = !autoPlay && this.state.showPlayer
 
+    const controls = this.state.showPlayer && isVideoPlaying
+
     return (
       <StyledContainer
         onClick={this.handlePlayClick}
@@ -134,18 +136,18 @@ export class Video extends PureComponent {
         {loader}
 
         {!autoPlay && (
-          <ContainerButton isVideoPlaying={isVideoPlaying}>
+          <StyledContainerButton isVideoPlaying={isVideoPlaying}>
             <StyledPlayerButton>
               <Text size="default" weight="regular" aria-label={ariaLabel}>
                 ►
               </Text>
             </StyledPlayerButton>
-          </ContainerButton>
+          </StyledContainerButton>
         )}
 
         <StyledVideo
           ref={this.video}
-          controls={this.state.showPlayer}
+          controls={controls}
           autoPlay={autoPlay}
           {...props}
         >
