@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix buggy settings on StickyContainer.
+- Fix: Add `VerticalStepper.Link` styles when is an `a`.
+- Fix: Fix `WarningIcon` warning.
+- Fix: Fix buggy settings on `StickyContainer`.
 
 ## [2.1.0] - 2019-04-11
 
