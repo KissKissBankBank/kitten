@@ -37,7 +37,9 @@ describe('<VerticalStepper />', () => {
                 <VerticalStepper.List.Item>Item</VerticalStepper.List.Item>
               </VerticalStepper.List>
 
-              <VerticalStepper.Link>Link</VerticalStepper.Link>
+              <VerticalStepper.Link as="a" href="#">
+                Link
+              </VerticalStepper.Link>
             </VerticalStepper.Step>
 
             <VerticalStepper.Step waiting href="#">

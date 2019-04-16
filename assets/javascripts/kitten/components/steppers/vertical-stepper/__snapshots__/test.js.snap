@@ -91,7 +91,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-color: #ffb2c7;
 }
 
-.c13 {
+.c14 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -121,7 +121,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-color: #bae8fd;
 }
 
-.c14 {
+.c15 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -228,6 +228,24 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   color: #19b4fa;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c13 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: normal;
+  color: #19b4fa;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.c13:hover,
+.c13:focus,
+.c13:active {
+  color: #0496cc;
 }
 
 .c10 {
@@ -417,7 +435,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             <path
               d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
               fill="#ff0046"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             />
           </svg>
         </span>
@@ -447,11 +465,12 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           <p
             className="c7"
           >
-            <span
-              className="VerticalStepper__link c8"
+            <a
+              className="VerticalStepper__link c13"
+              href="#"
             >
               Link
-            </span>
+            </a>
           </p>
         </div>
       </a>
@@ -464,7 +483,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="c13"
+          className="c14"
           disabled={false}
         >
           <svg
@@ -509,7 +528,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="c14"
+          className="c15"
           disabled={false}
         />
         <div
