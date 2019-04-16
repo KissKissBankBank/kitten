@@ -15,7 +15,8 @@ exports[`<Details /> with default props matches with snapshot 1`] = `
   cursor: pointer;
 }
 
-.c0::-webkit-details-marker {
+.c0::-webkit-details-marker,
+.c0::before {
   display: none;
 }
 
