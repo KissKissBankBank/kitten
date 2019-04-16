@@ -78,12 +78,14 @@ export class Video extends PureComponent {
     this.previewVideo.blur()
   }
 
-  handleKeyPress = event => {
-    event.preventDefault()
+  handleKeyDown = event => {
     const enterKeyCode = 13
     const spaceKeyCode = 32
 
-    if (enterKeyCode || spaceKeyCode) this.handlePlayClick()
+    if (event.keyCode === enterKeyCode || event.keyCode === spaceKeyCode) {
+      event.preventDefault()
+      this.handlePlayClick()
+    }
   }
 
   componentDidMount() {
@@ -107,7 +109,7 @@ export class Video extends PureComponent {
 
     return {
       onClick: this.handlePlayClick,
-      onKeyCodePress: this.handleKeyPress,
+      onKeyDown: this.handleKeyDown,
       role: 'button',
       tabIndex: 0,
     }
