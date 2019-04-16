@@ -21,12 +21,12 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _typography = require("../../helpers/utils/typography");
+var _detailsElementPolyfill = _interopRequireDefault(require("details-element-polyfill"));
 
 var Summary = _styledComponents.default.summary.withConfig({
   displayName: "details__Summary",
   componentId: "sc-11gfmdu-0"
-})(["display:inline-flex;list-style:none;touch-callout:none;user-select:none;cursor:pointer;::-webkit-details-marker{display:none;}"]);
+})(["display:inline-flex;list-style:none;touch-callout:none;user-select:none;cursor:pointer;::-webkit-details-marker,::before{display:none;}"]);
 
 var Details = function Details(_ref) {
   var children = _ref.children,

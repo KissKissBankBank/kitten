@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import DetailsElement from 'details-element-polyfill'
 
 const Summary = styled.summary`
   display: inline-flex;
@@ -9,7 +10,8 @@ const Summary = styled.summary`
   user-select: none;
   cursor: pointer;
 
-  ::-webkit-details-marker {
+  ::-webkit-details-marker,
+  ::before {
     display: none;
   }
 `
