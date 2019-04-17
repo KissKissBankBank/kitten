@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add player button on `Video` component.
 - Fix: Add `VerticalStepper.Link` styles when is an `a`.
 - Fix: Fix `WarningIcon` warning.
+- Fix: Fix buggy settings on `StickyContainer`.
 
 ## [2.1.0] - 2019-04-11
 

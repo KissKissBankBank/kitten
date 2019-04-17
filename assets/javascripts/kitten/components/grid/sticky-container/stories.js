@@ -1,9 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import StickyContainer from './index'
+import { StickyContainer } from './index'
 import { Container } from '../../../components/grid/container'
-import { Marger } from '../../../components/layout/marger'
 import COLORS from '../../../constants/colors-config'
 import { createRangeFromZeroTo } from '../../../helpers/utils/range'
 
@@ -55,18 +54,19 @@ const BlockContent = () => {
   )
 }
 
-storiesOf('Grid/StickyContainer', module).add(
-  'default',
-  withInfo(info)(() => (
-    <Container>
-      <Marger top={3}>
+storiesOf('Grid/StickyContainer', module)
+  .add(
+    'isSticky="always"',
+    withInfo(info)(() => (
+      <Container>
         <div
           style={{
             minHeight: '1200px',
             backgroundColor: COLORS.line1,
+            position: 'relative',
           }}
         >
-          <StickyContainer isSticky="topOnScrollUp">
+          <StickyContainer isSticky="always">
             <div
               style={{
                 fontSize: '40px',
@@ -78,7 +78,58 @@ storiesOf('Grid/StickyContainer', module).add(
           </StickyContainer>
           <BlockContent />
         </div>
-      </Marger>
-    </Container>
-  )),
-)
+      </Container>
+    )),
+  )
+  .add(
+    'isSticky="topOnScrollUp"',
+    withInfo(info)(() => (
+      <Container>
+        <div
+          style={{
+            minHeight: '1200px',
+            backgroundColor: COLORS.line1,
+            position: 'relative',
+          }}
+        >
+          <StickyContainer isSticky="topOnScrollUp" top="0">
+            <div
+              style={{
+                fontSize: '40px',
+                lineHeight: '40px',
+              }}
+            >
+              🐈
+            </div>
+          </StickyContainer>
+          <BlockContent />
+        </div>
+      </Container>
+    )),
+  )
+  .add(
+    'isSticky="bottomOnScrollDown"',
+    withInfo(info)(() => (
+      <Container>
+        <div
+          style={{
+            minHeight: '1200px',
+            backgroundColor: COLORS.line1,
+            position: 'relative',
+          }}
+        >
+          <StickyContainer isSticky="bottomOnScrollDown" bottom="0">
+            <div
+              style={{
+                fontSize: '40px',
+                lineHeight: '40px',
+              }}
+            >
+              🐈
+            </div>
+          </StickyContainer>
+          <BlockContent />
+        </div>
+      </Container>
+    )),
+  )
