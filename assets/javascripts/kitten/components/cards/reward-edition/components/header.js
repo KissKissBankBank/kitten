@@ -1,10 +1,10 @@
-import React, { PureComponent, CreateRef } from 'react'
-import styled, { keyframes } from 'styled-components'
-import { GarbageIcon } from '../../../../components/icons/garbage-icon'
-import { Button } from '../../../../components/buttons/button/button'
-import { Text } from '../../../../components/typography/text'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
+import { Text } from '../../../../components/typography/text'
+import { Button } from '../../../../components/buttons/button/button'
+import { GarbageIcon } from '../../../../components/icons/garbage-icon'
 
 const borderWidth = pxToRem(2)
 const borderColor = COLORS.line1
@@ -50,7 +50,7 @@ const StyledGarbageButton = styled(Button)`
   align-item: flex-end;
 `
 
-export class AddNewReward extends PureComponent {
+export class Header extends PureComponent {
   renderGarbageButton() {
     return (
       <StyledGarbageButton
