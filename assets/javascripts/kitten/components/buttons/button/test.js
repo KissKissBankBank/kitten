@@ -2,6 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { Button } from './button'
+import detailsElementPolyfill from 'details-element-polyfill'
 jest.mock('details-element-polyfill')
 
 describe('<Button />', () => {
