@@ -19,9 +19,9 @@ const Summary = styled.summary`
 export const Details = ({ children, summaryRender, onToggle, ...props }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const handleToggle = event => {
+  const handleToggle = () => {
     setIsOpen(!isOpen)
-    if (event) onToggle(event)
+    onToggle()
   }
 
   return (
