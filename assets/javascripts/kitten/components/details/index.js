@@ -21,7 +21,7 @@ export const Details = ({ children, summaryRender, onToggle, ...props }) => {
 
   const handleToggle = event => {
     setIsOpen(!isOpen)
-    onToggle(event)
+    if (event) onToggle(event)
   }
 
   return (
