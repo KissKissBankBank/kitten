@@ -1,8 +1,7 @@
-require('details-element-polyfill')
-
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import detailsElementPolyfill from 'details-element-polyfill'
 
 const Summary = styled.summary`
   display: inline-flex;

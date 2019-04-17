@@ -6,8 +6,8 @@ import { Button } from './button'
 describe('<Button />', () => {
   let component
 
-  beforeAll(() => {
-    Object.defineProperty(global, 'document', {})
+  beforeEach(() => {
+    jest.genMockFromModule('detailsElementPolyfill')
   })
 
   describe('with text', () => {
