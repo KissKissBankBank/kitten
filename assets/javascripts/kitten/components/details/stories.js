@@ -32,10 +32,10 @@ storiesOf('Details', module)
           <Grid>
             <GridCol>
               <Details
-                summaryRender={({ isOpen }) => (
+                summaryRender={({ open }) => (
                   <Link weight="regular" size="tiny" color="primary1">
-                    {isOpen && 'Close me!'}
-                    {!isOpen && 'Open me!'}
+                    {open && 'Close me!'}
+                    {!open && 'Open me!'}
                   </Link>
                 )}
               >

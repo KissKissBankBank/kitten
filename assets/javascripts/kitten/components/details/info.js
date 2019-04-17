@@ -13,7 +13,7 @@ export const info = {
 
     #### Default
     ~~~js
-    <Details summaryRender={ ({ isOpen }) => (…) }>
+    <Details summaryRender={ ({ open }) => (…) }>
       <p>My content</p>
     </Details>
     ~~~

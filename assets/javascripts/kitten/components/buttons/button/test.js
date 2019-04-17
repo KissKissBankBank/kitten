@@ -6,6 +6,10 @@ import { Button } from './button'
 describe('<Button />', () => {
   let component
 
+  beforeAll(() => {
+    Object.defineProperty(global, 'document', {})
+  })
+
   describe('with text', () => {
     beforeEach(() => {
       component = renderer.create(<Button>MyButton</Button>).toJSON()
