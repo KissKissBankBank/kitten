@@ -1,7 +1,9 @@
+require('details-element-polyfill')
+
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import DetailsElement from 'details-element-polyfill'
+import { domElementHelper } from '../../helpers/dom/element-helper'
 
 const Summary = styled.summary`
   display: inline-flex;
@@ -16,11 +18,18 @@ const Summary = styled.summary`
   }
 `
 
-export const Details = ({ children, summaryRender, ...props }) => {
+export const Details = ({ children, summaryRender, onToggle, ...props }) => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const handleToggle = () => {
+    if (!domElementHelper.canUseDom()) return
+
+    setIsOpen(!isOpen)
+    onToggle()
+  }
+
   return (
-    <details onToggle={() => setIsOpen(!isOpen)} {...props}>
+    <details onToggle={handleToggle} {...props}>
       <Summary>{summaryRender({ isOpen })}</Summary>
 
       {children}
@@ -30,4 +39,9 @@ export const Details = ({ children, summaryRender, ...props }) => {
 
 Details.propTypes = {
   summaryRender: PropTypes.func.isRequired,
+  onToggle: PropTypes.func,
+}
+
+Details.defaultProps = {
+  onToggle: () => {},
 }
