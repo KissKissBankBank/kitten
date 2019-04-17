@@ -16,16 +16,11 @@ const Summary = styled.summary`
   }
 `
 
-export const Details = ({ children, summaryRender, onToggle, ...props }) => {
+export const Details = ({ children, summaryRender, ...props }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen)
-    onToggle()
-  }
-
   return (
-    <details onToggle={handleToggle} {...props}>
+    <details onToggle={() => setIsOpen(!isOpen)} {...props}>
       <Summary>{summaryRender({ isOpen })}</Summary>
 
       {children}
@@ -35,9 +30,4 @@ export const Details = ({ children, summaryRender, onToggle, ...props }) => {
 
 Details.propTypes = {
   summaryRender: PropTypes.func.isRequired,
-  onToggle: PropTypes.func,
-}
-
-Details.defaultProps = {
-  onToggle: () => {},
 }
