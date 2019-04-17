@@ -31,31 +31,34 @@ var Summary = _styledComponents.default.summary.withConfig({
 var Details = function Details(_ref) {
   var children = _ref.children,
       summaryRender = _ref.summaryRender,
+      openDefault = _ref.open,
       onToggle = _ref.onToggle,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "summaryRender", "onToggle"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "summaryRender", "open", "onToggle"]);
 
-  var _useState = (0, _react.useState)(false),
+  var _useState = (0, _react.useState)(openDefault),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      isOpen = _useState2[0],
-      setIsOpen = _useState2[1];
+      open = _useState2[0],
+      setOpen = _useState2[1];
 
   var handleToggle = function handleToggle(event) {
-    setIsOpen(!isOpen);
+    setOpen(!open);
     onToggle(event);
   };
 
   return _react.default.createElement("details", (0, _extends2.default)({
     onToggle: handleToggle
   }, props), _react.default.createElement(Summary, null, summaryRender({
-    isOpen: isOpen
+    open: open
   })), children);
 };
 
 exports.Details = Details;
 Details.propTypes = {
   summaryRender: _propTypes.default.func.isRequired,
-  onToggle: _propTypes.default.func
+  onToggle: _propTypes.default.func,
+  open: _propTypes.default.bool
 };
 Details.defaultProps = {
-  onToggle: function onToggle() {}
+  onToggle: function onToggle() {},
+  open: false
 };
