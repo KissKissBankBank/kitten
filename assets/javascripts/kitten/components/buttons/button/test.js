@@ -2,13 +2,10 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { Button } from './button'
+jest.mock('details-element-polyfill')
 
 describe('<Button />', () => {
   let component
-
-  beforeEach(() => {
-    jest.genMockFromModule('detailsElementPolyfill')
-  })
 
   describe('with text', () => {
     beforeEach(() => {
