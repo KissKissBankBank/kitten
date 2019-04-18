@@ -1,7 +1,9 @@
 import React from 'react'
 import { Badge } from './badge'
+import Cart from '../icons/cart'
+import renderer from 'react-test-renderer'
 
-fdescribe('<Badge />', () => {
+describe('<Badge />', () => {
   describe('by default', () => {
     const badge = render(<Badge />)
 
@@ -32,7 +34,6 @@ fdescribe('<Badge />', () => {
 
   describe('with other prop', () => {
     const badge = render(<Badge aria-hidden="true" />)
-    console.log(badge.find('span'))
     it('has an aria-hidden attribute', () => {
       expect(badge.find('span').prop('aria-hidden')).toBe('true')
     })
@@ -43,6 +44,13 @@ fdescribe('<Badge />', () => {
 
     it('has text', () => {
       expect(badge.text()).toBe('42')
+    })
+  })
+
+  describe('with icon', () => {
+    it('should match the snapshot', () => {
+      const tree = renderer.create(<Badge color="red" Icon={Cart} />).toJSON()
+      expect(tree).toMatchSnapshot()
     })
   })
 })
