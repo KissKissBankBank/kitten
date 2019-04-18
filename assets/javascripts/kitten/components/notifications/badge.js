@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import classNames from 'classnames'
+import { pxToRem } from '../../helpers/utils/typography'
 
 const StyledBadge = styled.span`
   ${({ color }) =>
@@ -13,8 +14,8 @@ const StyledBadge = styled.span`
     withIcon &&
     css`
       position: absolute;
-      margin-left: -8px;
-      margin-top: -4px;
+      margin-left: ${pxToRem(-8)};
+      margin-top: ${pxToRem(-4)};
     `}
 `
 
