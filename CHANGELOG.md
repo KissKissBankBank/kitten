@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Fix `WarningIcon` warning.
 - Fix: Fix buggy settings on `StickyContainer`.
 - Feature: Add `Icon` and `color` props to `Badge` component.
+- Feature: Add `Cart` icon.
 
 ## [2.1.0] - 2019-04-11
 
