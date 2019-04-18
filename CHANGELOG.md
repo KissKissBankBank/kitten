@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Add `VerticalStepper.Link` styles when is an `a`.
 - Fix: Fix `WarningIcon` warning.
 - Fix: Fix buggy settings on `StickyContainer`.
+- Feature: Add `Icon` and `color` props to `Badge` component.
 
 ## [2.1.0] - 2019-04-11
 
