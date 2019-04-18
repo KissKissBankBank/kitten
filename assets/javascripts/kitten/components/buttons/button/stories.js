@@ -132,7 +132,7 @@ storiesOf('Buttons/Button', module)
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
-                  radius={number('Border radius', 12, radiusBorderRange)}
+                  borderRadius={number('Border radius', 0, radiusBorderRange)}
                 >
                   {text('Text', 'MyButton')}
                 </Button>
@@ -160,7 +160,7 @@ storiesOf('Buttons/Button', module)
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
-                  radius={number('Border radius', 12, radiusBorderRange)}
+                  borderRadius={number('Border radius', 0, radiusBorderRange)}
                 >
                   {iconPosition === 'left' && (
                     <BurgerIcon
@@ -199,7 +199,7 @@ storiesOf('Buttons/Button', module)
                   big={boolean('Big', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
-                  radius={number('Border radius', 12, radiusBorderRange)}
+                  borderRadius={number('Border radius', 0, radiusBorderRange)}
                   icon
                 >
                   <BurgerIcon

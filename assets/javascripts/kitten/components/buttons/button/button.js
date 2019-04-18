@@ -38,10 +38,10 @@ const StyledButton = styled.button`
     margin-right: 0;
   }
 
-  ${({ radius }) =>
-    radius > 0 &&
+  ${({ borderRadius }) =>
+    borderRadius > 0 &&
     css`
-      border-radius: ${pxToRem(radius)};
+      border-radius: ${pxToRem(borderRadius)};
     `}
 
   ${({ tiny }) => tiny && TINY}
@@ -103,7 +103,7 @@ export const BIG = css`
 
 export class Button extends Component {
   static propTypes = {
-    radius: PropTypes.number,
+    borderRadius: PropTypes.number,
     tiny: PropTypes.bool,
     big: PropTypes.bool,
     fluid: PropTypes.bool,
@@ -124,7 +124,7 @@ export class Button extends Component {
     fluid: false,
     icon: false,
     modifier: 'hydrogen',
-    radius: 0,
+    borderRadius: 0,
   }
 
   render() {

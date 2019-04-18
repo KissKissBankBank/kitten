@@ -60,7 +60,9 @@ describe('<Button />', () => {
 
   describe('with `radius` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<Button radius={4}>MyButton</Button>).toJSON()
+      component = renderer
+        .create(<Button borderRadius={4}>MyButton</Button>)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
