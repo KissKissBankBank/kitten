@@ -14,12 +14,21 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { BurgerIcon } from '../../icons/burger-icon'
+import { Badge } from '../../..'
+import { Cart } from '../../icons/cart'
 
 const svgSizeRange = {
   range: true,
   min: 5,
   max: 60,
   step: 5,
+}
+
+const radiusBorderRange = {
+  range: true,
+  min: 0,
+  max: 25,
+  step: 1,
 }
 
 const svgPositionOptions = {
@@ -63,6 +72,13 @@ const info = {
     #### Display
     ~~~js
     <Button fluid>MyButton</Button>
+    ~~~
+
+    #### With borderRadius
+    ~~~js
+    <Button borderRadius={4}>
+      <MyButton />
+    </Button>
     ~~~
 
     #### Modifier
@@ -125,6 +141,7 @@ storiesOf('Buttons/Button', module)
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
+                  borderRadius={number('Border radius', 0, radiusBorderRange)}
                 >
                   {text('Text', 'MyButton')}
                 </Button>
@@ -152,6 +169,7 @@ storiesOf('Buttons/Button', module)
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
+                  borderRadius={number('Border radius', 0, radiusBorderRange)}
                 >
                   {iconPosition === 'left' && (
                     <BurgerIcon
@@ -190,6 +208,7 @@ storiesOf('Buttons/Button', module)
                   big={boolean('Big', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
+                  borderRadius={number('Border radius', 0, radiusBorderRange)}
                   icon
                 >
                   <BurgerIcon
@@ -205,3 +224,26 @@ storiesOf('Buttons/Button', module)
     },
     { info },
   )
+  .add('with badge', () => {
+    return (
+      <Marger top="4" bottom="4">
+        <Container>
+          <Grid>
+            <GridCol>
+              <Button
+                tiny={boolean('Tiny', false)}
+                big={boolean('Big', false)}
+                modifier={select('Modifier', modifierOptions, 'helium')}
+                disabled={boolean('Disabled', false)}
+              >
+                <span>{text('Text', 'MyButton')}</span>
+                <Badge color={text('Badge color', 'red')} Icon={Cart}>
+                  {text('Count', '2')}
+                </Badge>
+              </Button>
+            </GridCol>
+          </Grid>
+        </Container>
+      </Marger>
+    )
+  })

@@ -19,9 +19,9 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -49,10 +49,10 @@ function (_Component) {
       // submit input state (as we cannot handle it directly in css).
 
     };
-    _this.handleSubmitFocus = _this.handleSubmitFocus.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleSubmitBlur = _this.handleSubmitBlur.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleSubmitMouseOver = _this.handleSubmitMouseOver.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleSubmitMouseOut = _this.handleSubmitMouseOut.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleSubmitFocus = _this.handleSubmitFocus.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleSubmitBlur = _this.handleSubmitBlur.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleSubmitMouseOver = _this.handleSubmitMouseOver.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleSubmitMouseOut = _this.handleSubmitMouseOut.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   } // Component listeners callbacks.
 

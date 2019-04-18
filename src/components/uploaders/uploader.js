@@ -15,9 +15,9 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -51,10 +51,10 @@ function (_React$Component) {
     _this.state = {
       fileName: _this.props.fileName
     };
-    _this.handleChangeAcceptedFiles = _this.handleChangeAcceptedFiles.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleChangeRejectedFiles = _this.handleChangeRejectedFiles.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleClick = _this.handleClick.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleCancel = _this.handleCancel.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleChangeAcceptedFiles = _this.handleChangeAcceptedFiles.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleChangeRejectedFiles = _this.handleChangeRejectedFiles.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleClick = _this.handleClick.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleCancel = _this.handleCancel.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   }
 

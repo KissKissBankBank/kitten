@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, number } from '@storybook/addon-knobs'
+import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -58,7 +58,7 @@ storiesOf('Videos/Video', module)
                 style={{ height: number('Height', 400) }}
               >
                 <Video
-                  autoPlay
+                  autoPlay={boolean('Autoplay', false)}
                   playsInline
                   loop
                   muted

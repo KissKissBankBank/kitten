@@ -17,9 +17,9 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -58,15 +58,15 @@ function (_React$Component) {
       imageSrc: _this.props.imageSrc,
       fileName: _this.props.fileName
     });
-    _this.handleUploaderSuccess = _this.handleUploaderSuccess.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleUploaderError = _this.handleUploaderError.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleUploaderReset = _this.handleUploaderReset.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleSliderChange = _this.handleSliderChange.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleSliderAction = _this.handleSliderAction.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleReady = _this.handleReady.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleCrop = _this.handleCrop.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.renderError = _this.renderError.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.setCropperHeight = _this.setCropperHeight.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleUploaderSuccess = _this.handleUploaderSuccess.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleUploaderError = _this.handleUploaderError.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleUploaderReset = _this.handleUploaderReset.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleSliderChange = _this.handleSliderChange.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleSliderAction = _this.handleSliderAction.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleReady = _this.handleReady.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleCrop = _this.handleCrop.bind((0, _assertThisInitialized2.default)(_this));
+    _this.renderError = _this.renderError.bind((0, _assertThisInitialized2.default)(_this));
+    _this.setCropperHeight = _this.setCropperHeight.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   }
 
