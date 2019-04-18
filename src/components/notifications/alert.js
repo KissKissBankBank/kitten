@@ -21,9 +21,9 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -47,8 +47,8 @@ function (_Component) {
       show: props.show,
       height: 'auto'
     };
-    _this.handleCloseClick = _this.handleCloseClick.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleAnimationEnd = _this.handleAnimationEnd.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleCloseClick = _this.handleCloseClick.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleAnimationEnd = _this.handleAnimationEnd.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   }
 

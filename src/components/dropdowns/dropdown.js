@@ -17,9 +17,9 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -47,9 +47,9 @@ function (_React$Component) {
       isExpanded: false,
       referenceElementHeight: 0
     };
-    _this.handleDropdownPosition = _this.handleDropdownPosition.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.revertHandleClickOnLinks = _this.revertHandleClickOnLinks.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.close = _this.close.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleDropdownPosition = _this.handleDropdownPosition.bind((0, _assertThisInitialized2.default)(_this));
+    _this.revertHandleClickOnLinks = _this.revertHandleClickOnLinks.bind((0, _assertThisInitialized2.default)(_this));
+    _this.close = _this.close.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   }
 

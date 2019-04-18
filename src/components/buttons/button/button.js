@@ -36,28 +36,31 @@ var _modifierStyles = require("./helpers/modifier-styles");
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "sc-1q5nte0-0"
-})(["display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appareance:none;outline:none;cursor:pointer;:disabled{cursor:not-allowed;}>:nth-child(n){margin-right:", ";text-align:left;}>:last-child{margin-right:0;}", " ", " ", " ", " ", ""], function () {
+})(["display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appareance:none;outline:none;cursor:pointer;:disabled{cursor:not-allowed;}>:nth-child(n){margin-right:", ";text-align:left;}>:last-child{margin-right:0;}", " ", " ", " ", " ", " ", ""], function () {
   return DEFAULT;
 }, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(14), _colorsConfig.default.font1, (0, _typography.pxToRem)(10), function (_ref) {
-  var tiny = _ref.tiny;
-  return tiny && TINY;
+  var borderRadius = _ref.borderRadius;
+  return borderRadius > 0 && (0, _styledComponents.css)(["border-radius:", ";"], (0, _typography.pxToRem)(borderRadius));
 }, function (_ref2) {
-  var big = _ref2.big;
-  return big && BIG;
+  var tiny = _ref2.tiny;
+  return tiny && TINY;
 }, function (_ref3) {
-  var fluid = _ref3.fluid;
-  return fluid && FLUID;
+  var big = _ref3.big;
+  return big && BIG;
 }, function (_ref4) {
-  var icon = _ref4.icon;
-  return icon && (0, _styledComponents.css)(["min-width:initial;min-height:initial;width:", ";height:", ";padding:0;", " ", ""], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), function (_ref5) {
-    var tiny = _ref5.tiny;
+  var fluid = _ref4.fluid;
+  return fluid && FLUID;
+}, function (_ref5) {
+  var icon = _ref5.icon;
+  return icon && (0, _styledComponents.css)(["min-width:initial;min-height:initial;width:", ";height:", ";padding:0;", " ", ""], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), function (_ref6) {
+    var tiny = _ref6.tiny;
     return tiny && (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40));
-  }, function (_ref6) {
-    var big = _ref6.big;
+  }, function (_ref7) {
+    var big = _ref7.big;
     return big && (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70));
   });
-}, function (_ref7) {
-  var modifier = _ref7.modifier;
+}, function (_ref8) {
+  var modifier = _ref8.modifier;
   return (0, _modifierStyles.modifierStyles)(modifier);
 });
 
@@ -91,6 +94,7 @@ function (_Component) {
 
 exports.Button = Button;
 Button.propTypes = {
+  borderRadius: _propTypes.default.number,
   tiny: _propTypes.default.bool,
   big: _propTypes.default.bool,
   fluid: _propTypes.default.bool,
@@ -102,5 +106,6 @@ Button.defaultProps = {
   big: false,
   fluid: false,
   icon: false,
-  modifier: 'hydrogen'
+  modifier: 'hydrogen',
+  borderRadius: 0
 };

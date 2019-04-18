@@ -17,9 +17,9 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -45,10 +45,10 @@ function (_Component) {
       currentIndex: 0,
       currentStep: _this.props.steps[0]
     };
-    _this.handleClickOnNext = _this.handleClickOnNext.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleClickOnPrev = _this.handleClickOnPrev.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleClickOnClose = _this.handleClickOnClose.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleTargetHighlightPosition = _this.handleTargetHighlightPosition.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleClickOnNext = _this.handleClickOnNext.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleClickOnPrev = _this.handleClickOnPrev.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleClickOnClose = _this.handleClickOnClose.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleTargetHighlightPosition = _this.handleTargetHighlightPosition.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   } // Component lifecycle.
 

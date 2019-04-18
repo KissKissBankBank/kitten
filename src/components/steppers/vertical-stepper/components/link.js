@@ -23,7 +23,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
@@ -66,4 +66,7 @@ var StyledParagraph = _styledComponents.default.p.withConfig({
 var StyledLink = _styledComponents.default.span.withConfig({
   displayName: "link__StyledLink",
   componentId: "sc-11s9i6i-1"
-})(["", ";font-size:", ";line-height:normal;color:", ";text-decoration:none;"], _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12), _colorsConfig.default.primary1);
+})(["", ";font-size:", ";line-height:normal;color:", ";text-decoration:none;", ""], _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12), _colorsConfig.default.primary1, function (_ref) {
+  var as = _ref.as;
+  return as === 'a' && (0, _styledComponents.css)(["transition:color 0.4s;:hover,:focus,:active{color:", ";}"], _colorsConfig.default.primary3);
+});
