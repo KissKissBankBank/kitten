@@ -15,7 +15,7 @@ import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { BurgerIcon } from '../../icons/burger-icon'
 import { Badge } from '../../..'
-import Cart from '../../icons/cart'
+import { Cart } from '../../icons/cart'
 
 const svgSizeRange = {
   range: true,
