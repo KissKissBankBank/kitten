@@ -22,6 +22,13 @@ const svgSizeRange = {
   step: 5,
 }
 
+const radiusBorderRange = {
+  range: true,
+  min: 0,
+  max: 25,
+  step: 1,
+}
+
 const svgPositionOptions = {
   Left: 'left',
   Right: 'right',
@@ -125,6 +132,7 @@ storiesOf('Buttons/Button', module)
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
+                  radius={number('Border radius', 12, radiusBorderRange)}
                 >
                   {text('Text', 'MyButton')}
                 </Button>
@@ -152,6 +160,7 @@ storiesOf('Buttons/Button', module)
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
+                  radius={number('Border radius', 12, radiusBorderRange)}
                 >
                   {iconPosition === 'left' && (
                     <BurgerIcon
@@ -190,6 +199,7 @@ storiesOf('Buttons/Button', module)
                   big={boolean('Big', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
+                  radius={number('Border radius', 12, radiusBorderRange)}
                   icon
                 >
                   <BurgerIcon
