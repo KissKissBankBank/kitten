@@ -13,51 +13,51 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _react = _interopRequireDefault(require("react"));
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _react = _interopRequireWildcard(require("react"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var Badge =
-/*#__PURE__*/
-function (_Component) {
-  (0, _inherits2.default)(Badge, _Component);
+var _typography = require("../../helpers/utils/typography");
 
-  function Badge() {
-    (0, _classCallCheck2.default)(this, Badge);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Badge).apply(this, arguments));
-  }
+var StyledBadge = _styledComponents.default.span.withConfig({
+  displayName: "badge__StyledBadge",
+  componentId: "sc-7liuod-0"
+})(["", " ", ""], function (_ref) {
+  var color = _ref.color;
+  return color && (0, _styledComponents.css)(["background-color:", ";"], color);
+}, function (_ref2) {
+  var withIcon = _ref2.withIcon;
+  return withIcon && (0, _styledComponents.css)(["position:absolute;margin-left:", ";margin-top:", ";"], (0, _typography.pxToRem)(-8), (0, _typography.pxToRem)(-4));
+});
 
-  (0, _createClass2.default)(Badge, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          spaced = _this$props.spaced,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "spaced"]);
-      var badgeClassName = (0, _classnames.default)('k-Badge', className, {
-        'k-Badge--spaced': spaced
-      });
-      return _react.default.createElement("span", (0, _extends2.default)({
-        role: "alert",
-        className: badgeClassName
-      }, others));
-    }
-  }]);
-  return Badge;
-}(_react.Component);
+var Badge = function Badge(_ref3) {
+  var className = _ref3.className,
+      spaced = _ref3.spaced,
+      Icon = _ref3.Icon,
+      others = (0, _objectWithoutProperties2.default)(_ref3, ["className", "spaced", "Icon"]);
+  return _react.default.createElement("div", null, Icon && _react.default.createElement(Icon, null), _react.default.createElement(StyledBadge, (0, _extends2.default)({
+    role: "alert",
+    className: (0, _classnames.default)('k-Badge', className, {
+      'k-Badge--spaced': spaced
+    }),
+    withIcon: Icon !== null
+  }, others)));
+};
 
 exports.Badge = Badge;
+Badge.propTypes = {
+  className: _propTypes.default.string,
+  spaced: _propTypes.default.bool,
+  color: _propTypes.default.string,
+  Icon: _propTypes.default.func
+};
 Badge.defaultProps = {
   className: null,
-  spaced: false
+  spaced: false,
+  Icon: null,
+  color: null
 };
