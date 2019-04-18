@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add player button on `Video` component.
+- Feature: Add `Details` component.
 - Fix: Use `styled-components` instead of `Radium` for `List` component.
 - Fix: Add `VerticalStepper.Link` styles when is an `a`.
 - Fix: Fix `WarningIcon` warning.
