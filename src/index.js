@@ -249,6 +249,12 @@ Object.defineProperty(exports, "DatePicker", {
     return _datePicker.DatePicker;
   }
 });
+Object.defineProperty(exports, "Details", {
+  enumerable: true,
+  get: function get() {
+    return _details.Details;
+  }
+});
 Object.defineProperty(exports, "DevGrid", {
   enumerable: true,
   get: function get() {
@@ -959,6 +965,8 @@ var _carouselPage = require("./components/carousel/carousel-page");
 var _simpleCarousel = require("./components/carousel/simple-carousel");
 
 var _datePicker = require("./components/date-picker");
+
+var _details = require("./components/details");
 
 var _devGrid = require("./components/dev/dev-grid");
 
