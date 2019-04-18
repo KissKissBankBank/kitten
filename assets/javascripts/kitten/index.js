@@ -61,6 +61,9 @@ export { SimpleCarousel } from './components/carousel/simple-carousel'
 // Date-picker
 export { DatePicker } from './components/date-picker'
 
+// Details
+export { Details } from './components/details'
+
 // Dev
 export { DevGrid } from './components/dev/dev-grid'
 
