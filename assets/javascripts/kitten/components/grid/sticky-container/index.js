@@ -12,6 +12,11 @@ const StyledStickyContainer = styled.div`
   ${({ stickyContainerStyleProps }) => stickyContainerStyleProps}
 `
 
+const StyledSpacer = styled.div`
+  height: ${({ containerHeight }) => pxToRem(containerHeight)};
+  flex: 0 0 auto;
+`
+
 function useScrollDirection() {
   // Returns an array with booleans:
   //
@@ -121,15 +126,16 @@ export const StickyContainer = ({
   useEffect(() => {
     if (isSticky === 'always') {
       setSticky()
-    } else {
-      const currentContainerHeight = currentStickyContainer.current
-        ? currentStickyContainer.current.clientHeight
-        : 0
-      setContainerHeight(currentContainerHeight)
     }
+    const currentContainerHeight = currentStickyContainer.current
+      ? currentStickyContainer.current.clientHeight
+      : 0
+    setContainerHeight(currentContainerHeight)
   }, []) // [] makes that Effect fire on Component mount only
 
   useEffect(() => {
+    if (isSticky === 'always') return
+
     if (shouldUnstickContainer()) {
       setUnsticky()
     } else if (shouldStickContainer()) {
@@ -167,7 +173,7 @@ export const StickyContainer = ({
 
   return (
     <Fragment>
-      {stuck && <div style={{ height: pxToRem(containerHeight) }} />}
+      {stuck && <StyledSpacer containerHeight={containerHeight} />}
       <StyledStickyContainer
         ref={currentStickyContainer}
         stickyContainerStyleProps={stickyContainerStyleProps}

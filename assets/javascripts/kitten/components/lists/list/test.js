@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { List } from '../../components/lists/list'
+import { List } from './index'
 import { shallow } from 'enzyme'
 
 describe('<List>', () => {
@@ -52,8 +52,6 @@ describe('<List>', () => {
           .find(List.ButtonItem)
           .at(1)
           .dive()
-          .find('div')
-          .at(0)
 
         button.simulate('click')
 
@@ -93,8 +91,6 @@ describe('<List>', () => {
           .find(List.ButtonItem)
           .at(1)
           .dive()
-          .find('div')
-          .at(0)
 
         button.simulate('click')
 
