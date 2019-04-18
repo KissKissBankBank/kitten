@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 const Container = styled.div`
   position: relative;
-  padding: ${pxToRem(30)} ${pxToRem(20)};
+  padding: ${pxToRem(20)};
   background-color: ${({ color }) => color};
 `
 

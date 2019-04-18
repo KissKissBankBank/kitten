@@ -3,7 +3,7 @@
 exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.875rem 1.25rem;
+  padding: 1.25rem;
   background-color: #f6f6f6;
 }
 
@@ -34,7 +34,7 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.875rem 1.25rem;
+  padding: 1.25rem;
   background-color: #ff0000;
 }
 
@@ -65,7 +65,7 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.875rem 1.25rem;
+  padding: 1.25rem;
   background-color: #f6f6f6;
 }
 
@@ -96,7 +96,7 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.875rem 1.25rem;
+  padding: 1.25rem;
   background-color: #f6f6f6;
 }
 
@@ -127,7 +127,7 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.875rem 1.25rem;
+  padding: 1.25rem;
   background-color: #f6f6f6;
 }
 
@@ -158,7 +158,7 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.875rem 1.25rem;
+  padding: 1.25rem;
   background-color: #f6f6f6;
 }
 
@@ -189,7 +189,7 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.875rem 1.25rem;
+  padding: 1.25rem;
   background-color: #f6f6f6;
 }
 
