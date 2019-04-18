@@ -72,6 +72,13 @@ const info = {
     <Button fluid>MyButton</Button>
     ~~~
 
+    #### With borderRadius
+    ~~~js
+    <Button borderRadius={4}>
+      <MyButton />
+    </Button>
+    ~~~
+
     #### Modifier
     ~~~js
     <Button modifier="hydrogen">MyButton</Button>
