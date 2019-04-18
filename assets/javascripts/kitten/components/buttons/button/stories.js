@@ -220,7 +220,7 @@ storiesOf('Buttons/Button', module)
                 disabled={boolean('Disabled', false)}
               >
                 <span>{text('Text', 'MyButton')}</span>
-                <Badge color={text('Badge color', 'red')} Icon={Cart} spaced>
+                <Badge color={text('Badge color', 'red')} Icon={Cart}>
                   {text('Count', '2')}
                 </Badge>
               </Button>
