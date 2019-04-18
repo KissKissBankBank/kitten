@@ -12,7 +12,6 @@ Features:
 - Add `Details` component.
 - Add `Icon` and `color` props to `Badge` component.
 - Add `Cart` icon.
-- Add `install` command to `bin/release` script
 
 Fixes:
 - Use `styled-components` instead of `Radium` for `List` component.
