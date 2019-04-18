@@ -28,7 +28,7 @@ const StyledContainerButton = styled.div`
   left: 0;
   position: absolute;
   transition: opacity ease 600ms, z-index ease 600ms;
-  transition-delay: 0s, 0s, 0s;
+  transition-delay: 0s, 0s;
 
   ${({ isVideoPlaying }) =>
     isVideoPlaying
@@ -39,7 +39,7 @@ const StyledContainerButton = styled.div`
       : css`
           opacity: 1;
           z-index: 1;
-          transition-delay: 0.4s, 0s, 0s;
+          transition-delay: 0s, 600ms;
         `}
 `
 
