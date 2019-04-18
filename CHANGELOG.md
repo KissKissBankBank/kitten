@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `radius` props on Button component.
+- Feature: Add `borderRadius` props on Button component.
 - Feature: Add player button on `Video` component.
 - Feature: Add `Details` component.
 - Fix: Use `styled-components` instead of `Radium` for `List` component.

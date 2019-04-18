@@ -58,7 +58,7 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `radius` prop', () => {
+  describe('with `borderRadius` prop', () => {
     beforeEach(() => {
       component = renderer
         .create(<Button borderRadius={4}>MyButton</Button>)
