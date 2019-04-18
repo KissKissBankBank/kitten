@@ -1,19 +1,50 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled, { css } from 'styled-components'
 import classNames from 'classnames'
+import { pxToRem } from '../../helpers/utils/typography'
 
-export class Badge extends Component {
-  render() {
-    const { className, spaced, ...others } = this.props
+const StyledBadge = styled.span`
+  ${({ color }) =>
+    color &&
+    css`
+      background-color: ${color};
+    `}
+  ${({ withIcon }) =>
+    withIcon &&
+    css`
+      position: absolute;
+      margin-left: ${pxToRem(-8)};
+      margin-top: ${pxToRem(-4)};
+    `}
+`
 
-    const badgeClassName = classNames('k-Badge', className, {
-      'k-Badge--spaced': spaced,
-    })
+export const Badge = ({ className, spaced, Icon, ...others }) => {
+  return (
+    <div>
+      {Icon && <Icon />}
+      <StyledBadge
+        role="alert"
+        className={classNames('k-Badge', className, {
+          'k-Badge--spaced': spaced,
+        })}
+        withIcon={Icon !== null}
+        {...others}
+      />
+    </div>
+  )
+}
 
-    return <span role="alert" className={badgeClassName} {...others} />
-  }
+Badge.propTypes = {
+  className: PropTypes.string,
+  spaced: PropTypes.bool,
+  color: PropTypes.string,
+  Icon: PropTypes.func,
 }
 
 Badge.defaultProps = {
   className: null,
   spaced: false,
+  Icon: null,
+  color: null,
 }

@@ -14,6 +14,8 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { BurgerIcon } from '../../icons/burger-icon'
+import { Badge } from '../../..'
+import Cart from '../../icons/cart'
 
 const svgSizeRange = {
   range: true,
@@ -222,3 +224,26 @@ storiesOf('Buttons/Button', module)
     },
     { info },
   )
+  .add('with badge', () => {
+    return (
+      <Marger top="4" bottom="4">
+        <Container>
+          <Grid>
+            <GridCol>
+              <Button
+                tiny={boolean('Tiny', false)}
+                big={boolean('Big', false)}
+                modifier={select('Modifier', modifierOptions, 'helium')}
+                disabled={boolean('Disabled', false)}
+              >
+                <span>{text('Text', 'MyButton')}</span>
+                <Badge color={text('Badge color', 'red')} Icon={Cart}>
+                  {text('Count', '2')}
+                </Badge>
+              </Button>
+            </GridCol>
+          </Grid>
+        </Container>
+      </Marger>
+    )
+  })
