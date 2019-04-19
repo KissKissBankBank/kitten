@@ -10,7 +10,6 @@ const StyledContainerFooter = styled.div`
   height: ${pxToRem(150)};
   border-top-width: ${borderWidth};
   border-top-style: solid;
-  border-style: solid;
   border-top-color: ${borderColor};
   padding: ${pxToRem(40)};
 `
