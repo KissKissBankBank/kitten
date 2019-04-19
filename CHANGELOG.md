@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `ArrowContainer` component.
+
 ## [2.2.0] - 2019-04-18
 
 Features:
