@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `ButtonGroup` component.
+
 ## [2.3.0] - 2019-04-19
 
 Feature:
