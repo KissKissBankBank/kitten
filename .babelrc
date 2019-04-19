@@ -1,32 +1,5 @@
 {
   "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "browsers": [
-            "last 2 versions",
-            "ie >= 10"
-          ]
-        }
-      }
-    ]
-  ],
-  "plugins": [
-    "@babel/plugin-transform-runtime",
-    "@babel/plugin-transform-react-jsx",
-    [
-      "@babel/plugin-proposal-object-rest-spread",
-      {
-        "loose": true
-      }
-    ],
-    [
-      "@babel/plugin-proposal-class-properties",
-      {
-        "loose": true
-      }
-    ],
-    "babel-plugin-styled-components"
+    "./.babel-preset.js"
   ]
 }

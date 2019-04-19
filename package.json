@@ -4,6 +4,7 @@
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
+  "module": "dist/es",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KissKissBankBank/kitten.git"
@@ -55,7 +56,10 @@
     "@babel/cli": "7.2.3",
     "@babel/core": "7.2.2",
     "@babel/plugin-proposal-class-properties": "7.3.4",
+    "@babel/plugin-proposal-export-default-from": "7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "7.2.0",
     "@babel/plugin-proposal-object-rest-spread": "7.3.4",
+    "@babel/plugin-syntax-dynamic-import": "7.2.0",
     "@babel/plugin-transform-react-jsx": "7.3.0",
     "@babel/plugin-transform-runtime": "7.2.0",
     "@babel/polyfill": "7.2.5",
@@ -111,19 +115,22 @@
     "react-dom": ">=16.8.x"
   },
   "scripts": {
-    "test": "jest --maxWorkers=2",
-    "test:update:snapshots": "jest --updateSnapshot",
-    "prepublishOnly": "npm run test && npm run build:js",
-    "precommit": "lint-staged",
-    "styleguide:start": "npm i && webpack-dev-server",
-    "styleguide:build": "rm -rf build && webpack --config webpack.config.build.js --progress --colors && htmlprocessor styleguide/index.html -o build/main.html && cp -R styleguide/assets build",
-    "storybook": "npm i && start-storybook -p 6006",
+    "build": "npm run build:js && npm run build:dist:es && npm run build:css",
+    "build:css": "webpack --config webpack.config.sass.js",
+    "build:dist:es": "npm run clean:dist && NODE_ENV=build-es babel assets/javascripts/kitten/ -d dist/es --ignore 'assets/**/stories.js,assets/**/*.stories.js,assets/**/test.js,assets/**/*.test.js,**/__mocks__,assets/**/karl'",
+    "build:js": "npm run clean:src && babel assets/javascripts/kitten/ -d src --ignore 'assets/**/stories.js,assets/**/*.stories.js,assets/**/test.js,assets/**/*.test.js,**/__mocks__,assets/**/karl'",
     "build-storybook": "build-storybook",
+    "clean:dist": "rm -rf dist",
+    "clean:src": "rm -rf src",
     "deploy-storybook": "storybook-to-ghpages",
-    "clean:src": "rm -rf src/components src/config src/constants src/handlers src/helpers src/hoc",
-    "build": "npm run build:js && npm run build:css",
-    "build:js": "npm run clean:src && babel assets/javascripts/kitten/ -d src --ignore 'assets/**/*.test.js','assets/**/test.js','assets/**/*.stories.js','assets/**/stories.js','assets/**/__mocks__/*.js','assets/javascripts/kitten/karl'",
-    "build:css": "webpack --config webpack.config.sass.js"
+    "install": "npm run build:dist:es",
+    "precommit": "lint-staged",
+    "prepublishOnly": "npm run test && npm run build:js",
+    "storybook": "npm i && start-storybook -p 6006",
+    "styleguide:build": "rm -rf build && webpack --config webpack.config.build.js --progress --colors && htmlprocessor styleguide/index.html -o build/main.html && cp -R styleguide/assets build",
+    "styleguide:start": "npm i && webpack-dev-server",
+    "test": "jest --maxWorkers=2",
+    "test:update:snapshots": "jest --updateSnapshot"
   },
   "lint-staged": {
     "assets/**/*.js": [
