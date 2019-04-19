@@ -23,11 +23,5 @@ const StoryContainer = ({ children }) => (
 storiesOf('Buttons/ButtonGroup', module)
   .addDecorator(withKnobs)
   .add('default', () => {
-    return (
-      <ButtonGroup>
-        <Button>Button1</Button>
-        <Button>Button2</Button>
-        <Button>Button3</Button>
-      </ButtonGroup>
-    )
+    return <ButtonGroup />
   })
