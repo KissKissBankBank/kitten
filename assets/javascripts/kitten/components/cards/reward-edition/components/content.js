@@ -6,23 +6,9 @@ import COLORS from '../../../../constants/colors-config'
 const borderWidth = pxToRem(2)
 const borderColor = COLORS.line1
 
-const StyledCard = styled.div`
-  width: 100%;
+const StyledContainerContent = styled.div`
   height: ${pxToRem(500)};
-  border-right-width: ${borderWidth};
-  border-left-width: ${borderWidth};
-  border-right-style: solid;
-  border-left-style: solid;
-  border-right-color: ${borderColor};
-  border-left-color: ${borderColor};
+  padding: ${pxToRem(40)};
 `
 
-export class Content extends PureComponent {
-  render() {
-    return (
-      <>
-        <StyledCard />
-      </>
-    )
-  }
-}
+export const Content = props => <StyledContainerContent />

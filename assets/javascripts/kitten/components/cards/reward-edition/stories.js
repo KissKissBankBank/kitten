@@ -9,9 +9,13 @@ import { RewardEdition } from './index'
 
 const StoryContainer = ({ children }) => (
   <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
+    <Grid>
+      <GridCol col-m="8">
+        <Marger top="5" bottom="5">
+          {children}
+        </Marger>
+      </GridCol>
+    </Grid>
   </Container>
 )
 
@@ -20,9 +24,11 @@ storiesOf('Cards/RewardEdition', module)
   .add('default', () => {
     return (
       <StoryContainer>
-        <RewardEdition.Header>Header</RewardEdition.Header>
-        <RewardEdition.Content>Content</RewardEdition.Content>
-        <RewardEdition.Footer>Footer</RewardEdition.Footer>
+        <RewardEdition>
+          <RewardEdition.Header />
+          <RewardEdition.Content />
+          <RewardEdition.Footer />
+        </RewardEdition>
       </StoryContainer>
     )
   })

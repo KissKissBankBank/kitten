@@ -9,28 +9,7 @@ import { GarbageIcon } from '../../../../components/icons/garbage-icon'
 const borderWidth = pxToRem(2)
 const borderColor = COLORS.line1
 
-const garbageButtonKeyframes = () =>
-  keyframes`
-    '0%': { opacity: 1 };
-    '100%': { opacity: 0, height: 0 };
-`
-
-const StyledContainerCard = styled.div`
-  width: 100%;
-  height: 100%;
-  border-width: ${borderWidth};
-  border-style: solid;
-  border-color: ${borderColor};
-
-  &[aria-hidden='true'] {
-    animation: x 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
-    animation-name: ${garbageButtonKeyframes};
-    pointer-events: none;
-    opacity: 1;
-  }
-`
-
-const StyledBanner = styled.div`
+const StyledContainerHeader = styled.div`
   border-bottom-width: ${borderWidth};
   border-bottom-style: solid;
   border-bottom-color: ${borderColor};
@@ -66,18 +45,14 @@ export class Header extends PureComponent {
     )
   }
 
-  renderBanner() {
+  render() {
     return (
-      <StyledBanner>
+      <StyledContainerHeader>
         <StyledRewardAmount weight="regular" size="default">
           Contrepartie pour _€
         </StyledRewardAmount>
         {this.renderGarbageButton()}
-      </StyledBanner>
+      </StyledContainerHeader>
     )
-  }
-
-  render() {
-    return <StyledContainerCard>{this.renderBanner()}</StyledContainerCard>
   }
 }
