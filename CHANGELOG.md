@@ -4,13 +4,25 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add player button on `Video` component.
-- Feature: Add `Details` component.
-- Fix: Use `styled-components` instead of `Radium` for `List` component.
-- Fix: Add `VerticalStepper.Link` styles when is an `a`.
-- Fix: Fix `WarningIcon` warning.
-- Fix: Fix buggy settings on `StickyContainer`.
-- Feature: Add `Icon` and `color` props to `Badge` component.
+## [2.3.0] - 2019-04-19
+
+Feature:
+- Add `ArrowContainer` component.
+
+## [2.2.0] - 2019-04-18
+
+Features:
+- Add `borderRadius` props on Button component.
+- Add player button on `Video` component.
+- Add `Details` component.
+- Add `Icon` and `color` props to `Badge` component.
+- Add `Cart` icon.
+
+Fixes:
+- Use `styled-components` instead of `Radium` for `List` component.
+- Add `VerticalStepper.Link` styles when is an `a`.
+- Fix `WarningIcon` warning.
+- Fix buggy settings on `StickyContainer`.
 
 ## [2.1.0] - 2019-04-11
 

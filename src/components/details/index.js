@@ -21,7 +21,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _detailsElementPolyfill = _interopRequireDefault(require("details-element-polyfill"));
+if (typeof document !== 'undefined') {
+  require('details-element-polyfill');
+}
 
 var Summary = _styledComponents.default.summary.withConfig({
   displayName: "details__Summary",

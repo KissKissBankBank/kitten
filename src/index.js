@@ -543,6 +543,12 @@ Object.defineProperty(exports, "ImageWithCaption", {
     return _imageWithCaption.ImageWithCaption;
   }
 });
+Object.defineProperty(exports, "ArrowContainer", {
+  enumerable: true,
+  get: function get() {
+    return _arrowContainer.ArrowContainer;
+  }
+});
 Object.defineProperty(exports, "HorizontalStroke", {
   enumerable: true,
   get: function get() {
@@ -1057,6 +1063,8 @@ var _hero = require("./components/heroes/hero");
 var _imageCropper = require("./components/images/image-cropper");
 
 var _imageWithCaption = require("./components/images/image-with-caption");
+
+var _arrowContainer = require("./components/layout/arrow-container");
 
 var _horizontalStroke = require("./components/layout/horizontal-stroke");
 
