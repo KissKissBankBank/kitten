@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import PropTypes from 'prop-types'
 import {
   StyledContainer,
   StyledScrollableContainer,
@@ -22,3 +23,8 @@ export const ScrollableContainer = ({
     </StyledScrollableContainer>
   </StyledContainer>
 )
+
+ScrollableContainer.PropTypes = {
+  backgroundColor: PropTypes.string,
+  shadowColor: PropTypes.string,
+}
