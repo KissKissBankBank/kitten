@@ -24,7 +24,13 @@ storiesOf('Buttons/ButtonGroup', module)
   .add('default', () => {
     return (
       <StoryContainer>
-        <ButtonGroup />
+        <ButtonGroup
+          buttons={[
+            { key: 1, name: 'Button1' },
+            { key: 2, name: 'Button2' },
+            { key: 3, name: 'Button3' },
+          ]}
+        />
       </StoryContainer>
     )
   })
