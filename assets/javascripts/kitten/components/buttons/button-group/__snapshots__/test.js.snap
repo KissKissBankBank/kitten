@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ButtonGroup /> matches with snapshot 1`] = `
+exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 .c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -92,9 +92,6 @@ exports[`<ButtonGroup /> matches with snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
 .c1 {
@@ -126,6 +123,7 @@ exports[`<ButtonGroup /> matches with snapshot 1`] = `
 }
 
 <div
+  aria-label="Button"
   className="c0"
   role="group"
 >
@@ -133,16 +131,6 @@ exports[`<ButtonGroup /> matches with snapshot 1`] = `
     className="c1 c2"
   >
     Button1
-  </button>
-  <button
-    className="c1 c2"
-  >
-    Button2
-  </button>
-  <button
-    className="c1 c2"
-  >
-    Button3
   </button>
 </div>
 `;

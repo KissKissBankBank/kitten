@@ -6,11 +6,15 @@ import { ButtonGroup } from './button-group'
 describe('<ButtonGroup />', () => {
   let component
 
-  beforeEach(() => {
-    component = renderer.create(<ButtonGroup>MyButton</ButtonGroup>).toJSON()
-  })
+  describe('with some props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<ButtonGroup buttons={[{ key: 1, name: 'Button1' }]} />)
+        .toJSON()
+    })
 
-  it('matches with snapshot', () => {
-    expect(component).toMatchSnapshot()
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
   })
 })

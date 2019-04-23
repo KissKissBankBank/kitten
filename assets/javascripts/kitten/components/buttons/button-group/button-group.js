@@ -43,9 +43,7 @@ export class ButtonGroup extends Component {
     return (
       <StyledButtonGroup role="group" aria-label={buttonLabel}>
         {buttons.map(button => (
-          <StyledButton type="button" key={button.key}>
-            {button.name}
-          </StyledButton>
+          <StyledButton key={button.key}>{button.name}</StyledButton>
         ))}
       </StyledButtonGroup>
     )
@@ -53,7 +51,7 @@ export class ButtonGroup extends Component {
 
   static propTypes = {
     buttonLabel: PropTypes.string,
-    buttons: PropTypes.arrayOf(PropTypes.string),
+    key: PropTypes.number,
   }
 
   static defaultProps = {
