@@ -5,39 +5,36 @@ import { Button } from '../../../components/buttons/button/button'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const borderWidth = pxToRem(2)
-const borderColor = COLORS.line1
+const borderRadius = pxToRem(4)
 
 const StyledButtonGroup = styled.div`
-  border-radius: ${pxToRem(4)};
-  border-style: solid;
-  border-width: ${borderWidth};
-  border-color: ${borderColor};
   display: flex;
   flex-wrap: wrap;
 `
 
 const StyledButton = styled(Button)`
   flex: 1;
-  border: none;
+  z-index: 0;
+
+  &:not(:last-child) {
+    margin-right: -${pxToRem(2)};
+  }
+
+  &:first-child {
+    border-top-left-radius: ${borderRadius};
+    border-bottom-left-radius: ${borderRadius};
+  }
+
+  &:last-child {
+    border-top-right-radius: ${borderRadius};
+    border-bottom-right-radius: ${borderRadius};
+  }
 
   :active,
   :hover,
   :focus {
-    border-radius: ${pxToRem(4)};
-    border-width: ${pxToRem(5)};
-  }
-
-  &:first-child {
-    border-right-style: solid;
-    border-right-width: ${borderWidth};
-    border-right-color: ${borderColor};
-  }
-
-  &:last-child {
-    border-left-style: solid;
-    border-left-width: ${borderWidth};
-    border-left-color: ${borderColor};
+    border-radius: ${borderRadius};
+    z-index: 1;
   }
 `
 
