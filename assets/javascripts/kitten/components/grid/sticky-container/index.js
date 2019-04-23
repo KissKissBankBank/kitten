@@ -9,6 +9,13 @@ const StyledStickyContainer = styled.div`
   transition-duration: 0.2s;
   transition-timing-function: ease;
 
+  ${({ isSticky }) =>
+    isSticky === 'always' &&
+    css`
+      position: fixed;
+      top: 0;
+    `}
+
   ${({ stickyContainerStyleProps }) => stickyContainerStyleProps}
 `
 
@@ -124,12 +131,6 @@ export const StickyContainer = ({
   }
 
   useEffect(() => {
-    if (isSticky === 'always') {
-      setSticky()
-    }
-  })
-
-  useEffect(() => {
     const currentContainerHeight = currentStickyContainer.current
       ? currentStickyContainer.current.clientHeight
       : 0
@@ -153,7 +154,6 @@ export const StickyContainer = ({
 
     if (isSticky === 'always') {
       return css`
-        position: ${position};
         top: ${top};
         bottom: ${bottom};
       `
@@ -176,10 +176,13 @@ export const StickyContainer = ({
 
   return (
     <Fragment>
-      {stuck && <StyledSpacer containerHeight={containerHeight} />}
+      {(stuck || isSticky === 'always') && (
+        <StyledSpacer containerHeight={containerHeight} />
+      )}
       <StyledStickyContainer
         ref={currentStickyContainer}
         stickyContainerStyleProps={stickyContainerStyleProps}
+        isSticky={isSticky}
         {...other}
       >
         {children}
