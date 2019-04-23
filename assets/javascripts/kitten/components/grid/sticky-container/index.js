@@ -13,7 +13,6 @@ const StyledStickyContainer = styled.div`
     isSticky === 'always' &&
     css`
       position: fixed;
-      top: 0;
     `}
 
   ${({ stickyContainerStyleProps }) => stickyContainerStyleProps}
@@ -153,10 +152,19 @@ export const StickyContainer = ({
     const position = stuck ? 'fixed' : 'static'
 
     if (isSticky === 'always') {
-      return css`
-        top: ${top};
-        bottom: ${bottom};
-      `
+      const alwaysStickyStyle = top
+        ? css`
+            top: ${pxToRem(top)};
+          `
+        : bottom
+        ? css`
+            bottom: ${pxToRem(bottom)};
+          `
+        : css`
+            top: 0;
+          `
+
+      return alwaysStickyStyle
     }
 
     const distance = currentlyUnsticking || !stuck ? containerHeight : 0
@@ -195,8 +203,4 @@ StickyContainer.propTypes = {
   top: PropTypes.number,
   bottom: PropTypes.number,
   isSticky: PropTypes.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always']),
-}
-StickyContainer.defaultProps = {
-  top: 0,
-  bottom: 0,
 }
