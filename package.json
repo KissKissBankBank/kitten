@@ -1,6 +1,6 @@
 {
   "name": "@kisskissbankbank/kitten",
-  "version": "2.2.0",
+  "version": "2.2.99",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
@@ -30,6 +30,7 @@
     "is-string-a-number": "2.0.2",
     "lodash": "4.17.11",
     "modularscale-sass": "3.0.8",
+    "polished": "^3.2.0",
     "prop-types": "^15.6.0",
     "prop-types-extra": "^1.0.1",
     "pubsub-js": "^1.5.3",
