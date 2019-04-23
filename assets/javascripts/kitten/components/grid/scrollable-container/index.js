@@ -9,8 +9,5 @@ import {
 export const ScrollableContainer = props => (
   <StyledContainer {...props}>
     <StyledScrollableContainer>{props.children}</StyledScrollableContainer>
-
-    <StyledLeftGradient />
-    <StyledRightGradient />
   </StyledContainer>
 )
