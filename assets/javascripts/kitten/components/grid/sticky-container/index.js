@@ -127,6 +127,9 @@ export const StickyContainer = ({
     if (isSticky === 'always') {
       setSticky()
     }
+  })
+
+  useEffect(() => {
     const currentContainerHeight = currentStickyContainer.current
       ? currentStickyContainer.current.clientHeight
       : 0
