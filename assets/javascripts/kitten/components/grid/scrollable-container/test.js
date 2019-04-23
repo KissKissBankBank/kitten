@@ -20,6 +20,7 @@ describe('<ScrollableContainer />', () => {
       component = renderer
         .create(
           <ScrollableContainer
+            shadowColor="#567890"
             className="custom__class"
             style={{ color: 'red' }}
             aria-hidden
