@@ -20,26 +20,27 @@ const StyledButton = styled.div`
 `
 
 const StyledButtonGroup = styled.div`
-  @media (min-width: ${ScreenConfig.S.min}px) {
+  @media (max-width: ${ScreenConfig.S.max}px) {
     display: none;
   }
 `
 
 const StyledExpandBoard = styled.div`
-  @media (max-width: ${ScreenConfig.S.max}px) {
+  @media (min-width: ${ScreenConfig.M.min}px) {
     display: none;
   }
 `
 
 export class Content extends PureComponent {
   renderButtonGroup() {
-    return <Button>Button</Button>
+    return <Button>{this.props.children}</Button>
   }
 
   renderExpandBoard() {
     return (
       <ExpandBoard withAnimation>
-        <ExpandBoard.Button>Button1</ExpandBoard.Button>
+        <ExpandBoard.Button>{this.props.children}</ExpandBoard.Button>
+        <ExpandBoard.Content>Button 2</ExpandBoard.Content>
       </ExpandBoard>
     )
   }
@@ -49,9 +50,13 @@ export class Content extends PureComponent {
       <StyledContainerContent>
         <StyledButton>
           <StyledButtonGroup>{this.renderButtonGroup()}</StyledButtonGroup>
-          <StyledExpandBoard>{this.renderExpandBoard}</StyledExpandBoard>
+          <StyledExpandBoard>{this.renderExpandBoard()}</StyledExpandBoard>
         </StyledButton>
       </StyledContainerContent>
     )
+  }
+
+  static defaultProps = {
+    children: 'Button 1',
   }
 }
