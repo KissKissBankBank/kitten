@@ -9,7 +9,11 @@ describe('<ButtonGroup />', () => {
   describe('with some props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<ButtonGroup buttons={[{ key: 1, name: 'Button1' }]} />)
+        .create(
+          <ButtonGroup>
+            <ButtonGroup.Button>Button1</ButtonGroup.Button>
+          </ButtonGroup>,
+        )
         .toJSON()
     })
 
