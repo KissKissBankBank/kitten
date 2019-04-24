@@ -12,6 +12,8 @@ describe('<ButtonGroup />', () => {
         .create(
           <ButtonGroup>
             <ButtonGroup.Button>Button1</ButtonGroup.Button>
+            <ButtonGroup.Button>Button2</ButtonGroup.Button>
+            <ButtonGroup.Button>Button3</ButtonGroup.Button>
           </ButtonGroup>,
         )
         .toJSON()
