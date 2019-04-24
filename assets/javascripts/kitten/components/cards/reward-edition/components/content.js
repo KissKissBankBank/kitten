@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import { Button } from '../../../../components/buttons/button/button'
+import { ExpandBoard } from '../../../../components/expandable/expand-board'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const borderWidth = pxToRem(2)
 const borderColor = COLORS.line1
@@ -17,14 +19,37 @@ const StyledButton = styled.div`
   justify-content: center;
 `
 
+const StyledButtonGroup = styled.div`
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    display: none;
+  }
+`
+
+const StyledExpandBoard = styled.div`
+  @media (max-width: ${ScreenConfig.S.max}px) {
+    display: none;
+  }
+`
+
 export class Content extends PureComponent {
+  renderButtonGroup() {
+    return <Button>Button</Button>
+  }
+
+  renderExpandBoard() {
+    return (
+      <ExpandBoard withAnimation>
+        <ExpandBoard.Button>Button1</ExpandBoard.Button>
+      </ExpandBoard>
+    )
+  }
+
   render() {
     return (
       <StyledContainerContent>
         <StyledButton>
-          <Button radius={4}>Button1</Button>
-          <Button radius={4}>Button2</Button>
-          <Button radius={4}>Button3</Button>
+          <StyledButtonGroup>{this.renderButtonGroup()}</StyledButtonGroup>
+          <StyledExpandBoard>{this.renderExpandBoard}</StyledExpandBoard>
         </StyledButton>
       </StyledContainerContent>
     )
