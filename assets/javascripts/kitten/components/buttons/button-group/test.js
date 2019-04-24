@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
-import { ButtonGroup } from './button-group'
+import { ButtonGroup } from './index'
 
 describe('<ButtonGroup />', () => {
   let component
