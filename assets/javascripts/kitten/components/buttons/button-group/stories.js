@@ -24,7 +24,7 @@ storiesOf('Buttons/ButtonGroup', module)
   .add('default', () => {
     return (
       <StoryContainer>
-        <ButtonGroup>
+        <ButtonGroup aria-label="Button label">
           <ButtonGroup.Button>Button1</ButtonGroup.Button>
           <ButtonGroup.Button>Button2</ButtonGroup.Button>
           <ButtonGroup.Button>Button3</ButtonGroup.Button>

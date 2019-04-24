@@ -37,33 +37,12 @@ const StyledButton = styled(Button)`
   }
 `
 
-class ButtonGroupButton extends Component {
-  render() {
-    const { children, key } = this.props
-
-    return <StyledButton key={key}>{children}</StyledButton>
-  }
-}
-
 export class ButtonGroup extends Component {
-  static Button = ButtonGroupButton
+  static Button = StyledButton
 
   render() {
-    const { buttonLabel } = this.props
+    const { ...others } = this.props
 
-    return (
-      <StyledButtonGroup role="group" aria-label={buttonLabel}>
-        {this.props.children}
-      </StyledButtonGroup>
-    )
-  }
-
-  static propTypes = {
-    buttonLabel: PropTypes.string,
-    key: PropTypes.string,
-  }
-
-  static defaultProps = {
-    buttonLabel: 'Button',
+    return <StyledButtonGroup role="group" {...others} />
   }
 }
