@@ -41,8 +41,6 @@ export class ButtonGroup extends Component {
   static Button = StyledButton
 
   render() {
-    const { ...others } = this.props
-
-    return <StyledButtonGroup role="group" {...others} />
+    return <StyledButtonGroup role="group" {...this.props} />
   }
 }
