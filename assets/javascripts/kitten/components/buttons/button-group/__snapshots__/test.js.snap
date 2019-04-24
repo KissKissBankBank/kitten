@@ -123,7 +123,6 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 <div
-  aria-label="Button"
   className="c0"
   role="group"
 >
