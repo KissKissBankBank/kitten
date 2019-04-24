@@ -5,6 +5,7 @@ import { Button } from '../../../components/buttons/button/button'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const borderRadius = pxToRem(4)
+const borderSize = pxToRem(2)
 
 const StyledButtonGroup = styled.div`
   display: flex;
@@ -15,7 +16,7 @@ const StyledButton = styled(Button)`
   z-index: 0;
 
   &:not(:last-child) {
-    margin-right: -${pxToRem(2)};
+    margin-right: -${borderSize};
   }
 
   &:first-child {
@@ -36,15 +37,23 @@ const StyledButton = styled(Button)`
   }
 `
 
-export class ButtonGroup extends Component {
+class ButtonGroupButton extends Component {
   render() {
-    const { buttons, buttonLabel } = this.props
+    const { children, key } = this.props
+
+    return <StyledButton key={key}>{children}</StyledButton>
+  }
+}
+
+export class ButtonGroup extends Component {
+  static Button = ButtonGroupButton
+
+  render() {
+    const { buttonLabel } = this.props
 
     return (
       <StyledButtonGroup role="group" aria-label={buttonLabel}>
-        {buttons.map(button => (
-          <StyledButton key={button.key}>{button.name}</StyledButton>
-        ))}
+        {this.props.children}
       </StyledButtonGroup>
     )
   }
