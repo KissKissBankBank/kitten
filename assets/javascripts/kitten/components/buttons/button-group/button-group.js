@@ -51,7 +51,7 @@ export class ButtonGroup extends Component {
 
   static propTypes = {
     buttonLabel: PropTypes.string,
-    key: PropTypes.number,
+    key: PropTypes.string,
   }
 
   static defaultProps = {
