@@ -12,6 +12,7 @@ export { ButtonIcon } from './components/buttons/button-icon'
 export {
   ButtonImageWithTextAndBadge,
 } from './components/buttons/button-image-with-text-and-badge'
+export { ButtonGroup } from './components/buttons/button-group'
 export { ButtonImage } from './components/buttons/button-image'
 export {
   ButtonQuestionMarkIcon,

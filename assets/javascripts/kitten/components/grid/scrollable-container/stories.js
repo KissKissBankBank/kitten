@@ -9,14 +9,11 @@ storiesOf('Grid/ScrollableContainer', module).add(
   'default',
   withInfo('common info')(() => (
     <Container>
-      <ScrollableContainer>
-        <div
-          style={{
-            height: '100px',
-            backgroundColor: COLORS.line1,
-            lineHeight: '100px',
-          }}
-        >
+      <ScrollableContainer
+        backgroundColor={COLORS.line1}
+        style={{ backgroundColor: COLORS.line1 }}
+      >
+        <div style={{ height: '100px', lineHeight: '100px' }}>
           {'🚗 '.repeat(100)}
         </div>
       </ScrollableContainer>
