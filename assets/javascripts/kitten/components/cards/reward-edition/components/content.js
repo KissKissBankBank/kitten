@@ -37,10 +37,14 @@ export class Content extends PureComponent {
   }
 
   renderExpandBoard() {
+    const { expandedButtonText } = this.props
+
     return (
       <ExpandBoard withAnimation>
-        <ExpandBoard.Button>{this.props.children}</ExpandBoard.Button>
-        <ExpandBoard.Content>Button 2</ExpandBoard.Content>
+        <ExpandBoard.Button expandChildren={expandedButtonText}>
+          {buttonText}
+        </ExpandBoard.Button>
+        <ExpandBoard.Content>{this.props.children}</ExpandBoard.Content>
       </ExpandBoard>
     )
   }
