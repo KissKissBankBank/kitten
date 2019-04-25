@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import ColorsConfig from '../../../constants/colors-config'
 import { Container } from '../../../components/grid/container'
+import { rgba } from 'polished'
 
 const gradientWidth = 20
 
@@ -12,7 +12,7 @@ export const StyledContainer = styled(Container)`
   padding-right: 0;
 `
 
-export const StyledScrollableContainer = styled.div`
+export const ScrollableContainerStyle = css`
   display: flex;
   white-space: nowrap;
   overflow-x: auto;
@@ -25,30 +25,43 @@ export const StyledScrollableContainer = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  background-image: linear-gradient(
+      to right,
+      ${props =>
+        `${rgba(props.backgroundColor, 1)} 30%, ${rgba(
+          props.backgroundColor,
+          0,
+        )}`}
+    ),
+    linear-gradient(
+      to left,
+      ${props =>
+        `${rgba(props.backgroundColor, 1)} 30%, ${rgba(
+          props.backgroundColor,
+          0,
+        )}`}
+    ),
+    radial-gradient(
+      farthest-side at 0 50%,
+      ${props =>
+        `${rgba(props.shadowColor, 0.3)}, ${rgba(props.shadowColor, 0)}`}
+    ),
+    radial-gradient(
+      farthest-side at 100% 50%,
+      ${props =>
+        `${rgba(props.shadowColor, 0.3)}, ${rgba(props.shadowColor, 0)}`}
+    );
+
+  background-repeat: no-repeat;
+  background-size: ${pxToRem(60)} 100%, ${pxToRem(60)} 100%, ${pxToRem(20)} 100%,
+    ${pxToRem(20)} 100%;
+  background-position: 0, 100%, 0, 100%;
+
+  /* Opera doesn't support this in the shorthand */
+  background-attachment: local, local, scroll, scroll;
 `
 
-export const StyledLeftGradient = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: ${pxToRem(gradientWidth)};
-  background: linear-gradient(
-    90deg,
-    ${ColorsConfig.background1},
-    rgba(255, 255, 255, 0)
-  );
-`
-
-export const StyledRightGradient = styled.div`
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: ${pxToRem(gradientWidth)};
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0),
-    ${ColorsConfig.background1}
-  );
+export const StyledScrollableContainer = styled.div`
+  ${ScrollableContainerStyle}
 `
