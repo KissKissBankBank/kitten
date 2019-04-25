@@ -31,19 +31,23 @@ export const scrollableContainerStyle = ({
 
   background-image: linear-gradient(
       to right,
-      ${props => `${rgba(backgroundColor, 1)} 30%, ${rgba(backgroundColor, 0)}`}
+      ${rgba(backgroundColor, 1)} 30%,
+      ${rgba(backgroundColor, 0)}
     ),
     linear-gradient(
       to left,
-      ${props => `${rgba(backgroundColor, 1)} 30%, ${rgba(backgroundColor, 0)}`}
+      ${rgba(backgroundColor, 1)} 30%,
+      ${rgba(backgroundColor, 0)}
     ),
     radial-gradient(
       farthest-side at 0 50%,
-      ${props => `${rgba(shadowColor, 0.3)}, ${rgba(shadowColor, 0)}`}
+      ${rgba(shadowColor, 0.3)},
+      ${rgba(shadowColor, 0)}
     ),
     radial-gradient(
       farthest-side at 100% 50%,
-      ${props => `${rgba(shadowColor, 0.3)}, ${rgba(shadowColor, 0)}`}
+      ${rgba(shadowColor, 0.3)},
+      ${rgba(shadowColor, 0)}
     );
 
   background-repeat: no-repeat;
