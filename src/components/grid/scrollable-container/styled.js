@@ -1,13 +1,11 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StyledRightGradient = exports.StyledLeftGradient = exports.StyledScrollableContainer = exports.StyledContainer = void 0;
+exports.StyledScrollableContainer = exports.scrollableContainerStyle = exports.StyledContainer = void 0;
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
@@ -15,9 +13,9 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
 var _container = require("../../../components/grid/container");
+
+var _polished = require("polished");
 
 var gradientWidth = 20;
 var StyledContainer = (0, _styledComponents.default)(_container.Container).withConfig({
@@ -26,23 +24,19 @@ var StyledContainer = (0, _styledComponents.default)(_container.Container).withC
 })(["position:relative;padding-left:0;padding-right:0;"]);
 exports.StyledContainer = StyledContainer;
 
+var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
+  var backgroundColor = _ref.backgroundColor,
+      shadowColor = _ref.shadowColor;
+  return (0, _styledComponents.css)(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}background-image:linear-gradient( to right,", " 30%,", " ),linear-gradient( to left,", " 30%,", " ),radial-gradient( farthest-side at 0 50%,", ",", " ),radial-gradient( farthest-side at 100% 50%,", ",", " );background-repeat:no-repeat;background-size:", " 100%,", " 100%,", " 100%,", " 100%;background-position:0,100%,0,100%;background-attachment:local,local,scroll,scroll;"], (0, _polished.rgba)(backgroundColor, 1), (0, _polished.rgba)(backgroundColor, 0), (0, _polished.rgba)(backgroundColor, 1), (0, _polished.rgba)(backgroundColor, 0), (0, _polished.rgba)(shadowColor, 0.3), (0, _polished.rgba)(shadowColor, 0), (0, _polished.rgba)(shadowColor, 0.3), (0, _polished.rgba)(shadowColor, 0), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20));
+};
+
+exports.scrollableContainerStyle = scrollableContainerStyle;
+
 var StyledScrollableContainer = _styledComponents.default.div.withConfig({
   displayName: "styled__StyledScrollableContainer",
   componentId: "d41exg-1"
-})(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}"]);
+})(["", ""], function (props) {
+  return scrollableContainerStyle(props);
+});
 
 exports.StyledScrollableContainer = StyledScrollableContainer;
-
-var StyledLeftGradient = _styledComponents.default.div.withConfig({
-  displayName: "styled__StyledLeftGradient",
-  componentId: "d41exg-2"
-})(["position:absolute;left:0;top:0;bottom:0;width:", ";background:linear-gradient( 90deg,", ",rgba(255,255,255,0) );"], (0, _typography.pxToRem)(gradientWidth), _colorsConfig.default.background1);
-
-exports.StyledLeftGradient = StyledLeftGradient;
-
-var StyledRightGradient = _styledComponents.default.div.withConfig({
-  displayName: "styled__StyledRightGradient",
-  componentId: "d41exg-3"
-})(["position:absolute;right:0;top:0;bottom:0;width:", ";background:linear-gradient( 90deg,rgba(255,255,255,0),", " );"], (0, _typography.pxToRem)(gradientWidth), _colorsConfig.default.background1);
-
-exports.StyledRightGradient = StyledRightGradient;

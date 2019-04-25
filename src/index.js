@@ -45,6 +45,12 @@ Object.defineProperty(exports, "ButtonImageWithTextAndBadge", {
     return _buttonImageWithTextAndBadge.ButtonImageWithTextAndBadge;
   }
 });
+Object.defineProperty(exports, "ButtonGroup", {
+  enumerable: true,
+  get: function get() {
+    return _buttonGroup.ButtonGroup;
+  }
+});
 Object.defineProperty(exports, "ButtonImage", {
   enumerable: true,
   get: function get() {
@@ -917,6 +923,8 @@ var _button = require("./components/buttons/button/button");
 var _buttonIcon = require("./components/buttons/button-icon");
 
 var _buttonImageWithTextAndBadge = require("./components/buttons/button-image-with-text-and-badge");
+
+var _buttonGroup = require("./components/buttons/button-group");
 
 var _buttonImage = require("./components/buttons/button-image");
 

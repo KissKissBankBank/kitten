@@ -61,7 +61,10 @@ var StyledPlayerButton = _styledComponents.default.div.withConfig({
 var StyledVideo = _styledComponents.default.video.withConfig({
   displayName: "video__StyledVideo",
   componentId: "lqao0j-3"
-})(["position:relative;width:100%;height:100%;object-fit:cover;"]);
+})(["position:relative;width:100%;height:100%;", ""], function (_ref3) {
+  var controls = _ref3.controls;
+  return !controls && (0, _styledComponents.css)(["object-fit:cover;"]);
+});
 
 var Video =
 /*#__PURE__*/
