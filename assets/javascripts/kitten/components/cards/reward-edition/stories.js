@@ -1,9 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import { ScreenConfig } from '../../../constants/screen-config'
-import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, number } from '@storybook/addon-knobs'
+import { withKnobs } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Text } from '../../../components/typography/text'
@@ -26,9 +24,11 @@ const StoryContainer = ({ children }) => (
   </Container>
 )
 
+const borderWidth = pxToRem(1)
+
 const StyledButton = styled(Button)`
   width: 100%;
-  margin-top: -${pxToRem(1)};
+  margin-top: -${borderWidth};
 `
 
 storiesOf('Cards/RewardEdition', module)
