@@ -4,8 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `cover` with used `controls` on Video.
 - Feature: Create `ButtonGroup` component.
 - Feature: `ScrollableContainer` new props `shadowColor`, `backgroundColor`
+- Fix: `StickyContainer` fix for `isSticky='always'`
 
 ## [2.3.0] - 2019-04-19
 
