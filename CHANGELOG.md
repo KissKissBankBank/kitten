@@ -4,7 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `ButtonGroup` component.
+- Feature: `ScrollableContainer` new props `shadowColor`, `backgroundColor`
 - Fix: `StickyContainer` fix for `isSticky='always'`
+
+## [2.3.0] - 2019-04-19
+
+Feature:
+- Add `ArrowContainer` component.
 
 ## [2.2.0] - 2019-04-18
 
