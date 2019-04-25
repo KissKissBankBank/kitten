@@ -26,7 +26,9 @@ storiesOf('Cards/RewardEdition', module)
       <StoryContainer>
         <RewardEdition>
           <RewardEdition.Header />
-          <RewardEdition.Content />
+          <RewardEdition.Content>Button1</RewardEdition.Content>
+          <RewardEdition.Content>Button2</RewardEdition.Content>
+          <RewardEdition.Content>Button3</RewardEdition.Content>
           <RewardEdition.Footer />
         </RewardEdition>
       </StoryContainer>

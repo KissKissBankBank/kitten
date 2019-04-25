@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
-import { Button } from '../../../../components/buttons/button/button'
+import { ButtonGroup } from '../../../../components/buttons/button-group'
 import { ExpandBoard } from '../../../../components/expandable/expand-board'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
@@ -33,11 +33,11 @@ const StyledExpandBoard = styled.div`
 
 export class Content extends PureComponent {
   renderButtonGroup() {
-    return <Button>{this.props.children}</Button>
+    return <ButtonGroup>{this.props.children}</ButtonGroup>
   }
 
   renderExpandBoard() {
-    const { expandedButtonText } = this.props
+    const { expandedButtonText, buttonText } = this.props
 
     return (
       <ExpandBoard withAnimation>
@@ -58,9 +58,5 @@ export class Content extends PureComponent {
         </StyledButton>
       </StyledContainerContent>
     )
-  }
-
-  static defaultProps = {
-    children: 'Button 1',
   }
 }
