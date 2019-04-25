@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `ButtonGroup` component.
 - Feature: `ScrollableContainer` new props `shadowColor`, `backgroundColor`
 
 ## [2.3.0] - 2019-04-19
