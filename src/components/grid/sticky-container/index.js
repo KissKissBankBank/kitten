@@ -28,16 +28,19 @@ var _typography = require("../../../helpers/utils/typography");
 var StyledStickyContainer = _styledComponents.default.div.withConfig({
   displayName: "sticky-container__StyledStickyContainer",
   componentId: "trwgvt-0"
-})(["will-change:transform;transition-duration:0.2s;transition-timing-function:ease;", ""], function (_ref) {
-  var stickyContainerStyleProps = _ref.stickyContainerStyleProps;
+})(["will-change:transform;transition-duration:0.2s;transition-timing-function:ease;", " ", ""], function (_ref) {
+  var isSticky = _ref.isSticky;
+  return isSticky === 'always' && (0, _styledComponents.css)(["position:fixed;"]);
+}, function (_ref2) {
+  var stickyContainerStyleProps = _ref2.stickyContainerStyleProps;
   return stickyContainerStyleProps;
 });
 
 var StyledSpacer = _styledComponents.default.div.withConfig({
   displayName: "sticky-container__StyledSpacer",
   componentId: "trwgvt-1"
-})(["height:", ";flex:0 0 auto;"], function (_ref2) {
-  var containerHeight = _ref2.containerHeight;
+})(["height:", ";flex:0 0 auto;"], function (_ref3) {
+  var containerHeight = _ref3.containerHeight;
   return (0, _typography.pxToRem)(containerHeight);
 });
 
@@ -74,12 +77,12 @@ function useScrollDirection() {
   return [difference > 0, difference < 0];
 }
 
-var StickyContainer = function StickyContainer(_ref3) {
-  var children = _ref3.children,
-      top = _ref3.top,
-      bottom = _ref3.bottom,
-      isSticky = _ref3.isSticky,
-      other = (0, _objectWithoutProperties2.default)(_ref3, ["children", "top", "bottom", "isSticky"]);
+var StickyContainer = function StickyContainer(_ref4) {
+  var children = _ref4.children,
+      top = _ref4.top,
+      bottom = _ref4.bottom,
+      isSticky = _ref4.isSticky,
+      other = (0, _objectWithoutProperties2.default)(_ref4, ["children", "top", "bottom", "isSticky"]);
   var currentStickyContainer = (0, _react.useRef)(null);
 
   var _useState3 = (0, _react.useState)(false),
@@ -152,10 +155,6 @@ var StickyContainer = function StickyContainer(_ref3) {
   };
 
   (0, _react.useEffect)(function () {
-    if (isSticky === 'always') {
-      setSticky();
-    }
-
     var currentContainerHeight = currentStickyContainer.current ? currentStickyContainer.current.clientHeight : 0;
     setContainerHeight(currentContainerHeight);
   }, []); // [] makes that Effect fire on Component mount only
@@ -176,7 +175,8 @@ var StickyContainer = function StickyContainer(_ref3) {
     var position = stuck ? 'fixed' : 'static';
 
     if (isSticky === 'always') {
-      return (0, _styledComponents.css)(["position:", ";top:", ";bottom:", ";"], position, top, bottom);
+      var alwaysStickyStyle = top ? (0, _styledComponents.css)(["top:", ";"], (0, _typography.pxToRem)(top)) : bottom ? (0, _styledComponents.css)(["bottom:", ";"], (0, _typography.pxToRem)(bottom)) : (0, _styledComponents.css)(["top:0;"]);
+      return alwaysStickyStyle;
     }
 
     var distance = currentlyUnsticking || !stuck ? containerHeight : 0;
@@ -186,11 +186,12 @@ var StickyContainer = function StickyContainer(_ref3) {
     return (0, _styledComponents.css)(["position:", ";", ":", ";transition-property:", ";"], position, directionToAnimate, directionDistance, directionToAnimate);
   };
 
-  return _react.default.createElement(_react.Fragment, null, stuck && _react.default.createElement(StyledSpacer, {
+  return _react.default.createElement(_react.Fragment, null, (stuck || isSticky === 'always') && _react.default.createElement(StyledSpacer, {
     containerHeight: containerHeight
   }), _react.default.createElement(StyledStickyContainer, (0, _extends2.default)({
     ref: currentStickyContainer,
-    stickyContainerStyleProps: stickyContainerStyleProps
+    stickyContainerStyleProps: stickyContainerStyleProps,
+    isSticky: isSticky
   }, other), children));
 };
 
@@ -199,8 +200,4 @@ StickyContainer.propTypes = {
   top: _propTypes.default.number,
   bottom: _propTypes.default.number,
   isSticky: _propTypes.default.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always'])
-};
-StickyContainer.defaultProps = {
-  top: 0,
-  bottom: 0
 };
