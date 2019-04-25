@@ -48,9 +48,7 @@ export class Header extends PureComponent {
   render() {
     return (
       <StyledContainerHeader>
-        <StyledRewardAmount weight="regular" size="default">
-          Contrepartie pour _€
-        </StyledRewardAmount>
+        <StyledRewardAmount>{this.props.children}</StyledRewardAmount>
         {this.renderGarbageButton()}
       </StyledContainerHeader>
     )
