@@ -9,6 +9,12 @@ const StyledStickyContainer = styled.div`
   transition-duration: 0.2s;
   transition-timing-function: ease;
 
+  ${({ isSticky }) =>
+    isSticky === 'always' &&
+    css`
+      position: fixed;
+    `}
+
   ${({ stickyContainerStyleProps }) => stickyContainerStyleProps}
 `
 
@@ -124,9 +130,6 @@ export const StickyContainer = ({
   }
 
   useEffect(() => {
-    if (isSticky === 'always') {
-      setSticky()
-    }
     const currentContainerHeight = currentStickyContainer.current
       ? currentStickyContainer.current.clientHeight
       : 0
@@ -149,11 +152,19 @@ export const StickyContainer = ({
     const position = stuck ? 'fixed' : 'static'
 
     if (isSticky === 'always') {
-      return css`
-        position: ${position};
-        top: ${top};
-        bottom: ${bottom};
-      `
+      const alwaysStickyStyle = top
+        ? css`
+            top: ${pxToRem(top)};
+          `
+        : bottom
+        ? css`
+            bottom: ${pxToRem(bottom)};
+          `
+        : css`
+            top: 0;
+          `
+
+      return alwaysStickyStyle
     }
 
     const distance = currentlyUnsticking || !stuck ? containerHeight : 0
@@ -173,10 +184,13 @@ export const StickyContainer = ({
 
   return (
     <Fragment>
-      {stuck && <StyledSpacer containerHeight={containerHeight} />}
+      {(stuck || isSticky === 'always') && (
+        <StyledSpacer containerHeight={containerHeight} />
+      )}
       <StyledStickyContainer
         ref={currentStickyContainer}
         stickyContainerStyleProps={stickyContainerStyleProps}
+        isSticky={isSticky}
         {...other}
       >
         {children}
@@ -189,8 +203,4 @@ StickyContainer.propTypes = {
   top: PropTypes.number,
   bottom: PropTypes.number,
   isSticky: PropTypes.oneOf(['topOnScrollUp', 'bottomOnScrollDown', 'always']),
-}
-StickyContainer.defaultProps = {
-  top: 0,
-  bottom: 0,
 }

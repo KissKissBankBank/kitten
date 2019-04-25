@@ -1,21 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<StickyContainer /> already sticky matches with snapshot 1`] = `
-<div
-  className="sticky-container__StyledStickyContainer-trwgvt-0 dkTkIA"
-/>
+Array [
+  <div
+    className="sticky-container__StyledSpacer-trwgvt-1 ctlyRa"
+  />,
+  <div
+    className="sticky-container__StyledStickyContainer-trwgvt-0 ehxgAs"
+  />,
+]
 `;
 
 exports[`<StickyContainer /> by default matches with snapshot 1`] = `
 <div
-  className="sticky-container__StyledStickyContainer-trwgvt-0 irbHjO"
+  className="sticky-container__StyledStickyContainer-trwgvt-0 idbjcB"
 />
 `;
 
 exports[`<StickyContainer /> with some props matches with snapshot 1`] = `
 <div
   aria-hidden={true}
-  className="custom__class sticky-container__StyledStickyContainer-trwgvt-0 ickmxm"
+  className="custom__class sticky-container__StyledStickyContainer-trwgvt-0 jpKiVq"
   style={
     Object {
       "color": "red",
