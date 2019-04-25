@@ -5,13 +5,7 @@ exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
   className="styled__StyledContainer-d41exg-0 lmcHcx styled__StyledContainer-z412rl-0 eTfKiw"
 >
   <div
-    className="styled__StyledScrollableContainer-d41exg-1 cygHPO"
-  />
-  <div
-    className="styled__StyledLeftGradient-d41exg-2 euYxbE"
-  />
-  <div
-    className="styled__StyledRightGradient-d41exg-3 eFLWvJ"
+    className="styled__StyledScrollableContainer-d41exg-1 bqQGKi"
   />
 </div>
 `;
@@ -21,7 +15,7 @@ exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
   className="styled__StyledContainer-d41exg-0 lmcHcx styled__StyledContainer-z412rl-0 eTfKiw"
 >
   <div
-    className="styled__StyledScrollableContainer-d41exg-1 cygHPO"
+    className="styled__StyledScrollableContainer-d41exg-1 bqQGKi"
   >
     <nav>
       <ul>
@@ -37,12 +31,6 @@ exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
       </ul>
     </nav>
   </div>
-  <div
-    className="styled__StyledLeftGradient-d41exg-2 euYxbE"
-  />
-  <div
-    className="styled__StyledRightGradient-d41exg-3 eFLWvJ"
-  />
 </div>
 `;
 
@@ -52,13 +40,7 @@ exports[`<ScrollableContainer /> with some props matches with snapshot 1`] = `
   className="custom__class styled__StyledContainer-d41exg-0 lmcHcx styled__StyledContainer-z412rl-0 jMLGYL"
 >
   <div
-    className="styled__StyledScrollableContainer-d41exg-1 cygHPO"
-  />
-  <div
-    className="styled__StyledLeftGradient-d41exg-2 euYxbE"
-  />
-  <div
-    className="styled__StyledRightGradient-d41exg-3 eFLWvJ"
+    className="styled__StyledScrollableContainer-d41exg-1 cJust"
   />
 </div>
 `;
