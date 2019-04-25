@@ -12,7 +12,10 @@ export const StyledContainer = styled(Container)`
   padding-right: 0;
 `
 
-export const ScrollableContainerStyle = css`
+export const scrollableContainerStyle = ({
+  backgroundColor,
+  shadowColor,
+}) => css`
   display: flex;
   white-space: nowrap;
   overflow-x: auto;
@@ -28,29 +31,19 @@ export const ScrollableContainerStyle = css`
 
   background-image: linear-gradient(
       to right,
-      ${props =>
-        `${rgba(props.backgroundColor, 1)} 30%, ${rgba(
-          props.backgroundColor,
-          0,
-        )}`}
+      ${props => `${rgba(backgroundColor, 1)} 30%, ${rgba(backgroundColor, 0)}`}
     ),
     linear-gradient(
       to left,
-      ${props =>
-        `${rgba(props.backgroundColor, 1)} 30%, ${rgba(
-          props.backgroundColor,
-          0,
-        )}`}
+      ${props => `${rgba(backgroundColor, 1)} 30%, ${rgba(backgroundColor, 0)}`}
     ),
     radial-gradient(
       farthest-side at 0 50%,
-      ${props =>
-        `${rgba(props.shadowColor, 0.3)}, ${rgba(props.shadowColor, 0)}`}
+      ${props => `${rgba(shadowColor, 0.3)}, ${rgba(shadowColor, 0)}`}
     ),
     radial-gradient(
       farthest-side at 100% 50%,
-      ${props =>
-        `${rgba(props.shadowColor, 0.3)}, ${rgba(props.shadowColor, 0)}`}
+      ${props => `${rgba(shadowColor, 0.3)}, ${rgba(shadowColor, 0)}`}
     );
 
   background-repeat: no-repeat;
@@ -63,5 +56,5 @@ export const ScrollableContainerStyle = css`
 `
 
 export const StyledScrollableContainer = styled.div`
-  ${ScrollableContainerStyle}
+  ${props => scrollableContainerStyle(props)}
 `
