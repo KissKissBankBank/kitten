@@ -35,6 +35,7 @@ const StyledContainerButton = styled.div`
       ? css`
           opacity: 0;
           z-index: 0;
+          cursor: pointer;
         `
       : css`
           opacity: 1;
