@@ -24,8 +24,9 @@ export const ScrollableContainer = ({
           event.target.scrollWidth - event.target.parentNode.clientWidth,
       )
     }
-    element.addEventListener('scroll', throttle(onScroll, 200))
-    return () => element.removeEventListener('scroll', throttle(onScroll, 200))
+    element && element.addEventListener('scroll', throttle(onScroll, 200))
+    return () =>
+      element && element.removeEventListener('scroll', throttle(onScroll, 200))
   }, [])
 
   return (
