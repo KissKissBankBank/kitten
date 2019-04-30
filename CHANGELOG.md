@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `cursor` for `poster` Video attribute.
+
 ## [2.4.0] - 2019-04-25
 
 Features:
