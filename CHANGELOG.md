@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Rework `ScrollableContainer` shadow display
-- Fix: Fix `cursor` for `poster` Video attribute.
+## [2.4.1] - 2019-04-30
+
+Fixes:
+- Rework `ScrollableContainer` shadow display
+- Fix `cursor` for `poster` Video attribute.
 
 ## [2.4.0] - 2019-04-25
 
