@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Rework `ScrollableContainer` shadow display
+
 ## [2.4.0] - 2019-04-25
 
 Features:
