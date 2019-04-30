@@ -15,11 +15,10 @@ const StyledContainer = styled.div`
   overflow: hidden;
 
   ${({ poster, autoPlay }) =>
-    poster ||
-    (!autoPlay &&
-      css`
-        cursor: pointer;
-      `)}
+    (poster || !autoPlay) &&
+    css`
+      cursor: pointer;
+    `}
 `
 
 const StyledContainerButton = styled.div`
