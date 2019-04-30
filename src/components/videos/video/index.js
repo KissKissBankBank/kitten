@@ -39,8 +39,9 @@ var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "video__StyledContainer",
   componentId: "lqao0j-0"
 })(["position:relative;width:100%;height:100%;overflow:hidden;", ""], function (_ref) {
-  var isVideoPlaying = _ref.isVideoPlaying;
-  return isVideoPlaying && (0, _styledComponents.css)(["cursor:pointer;"]);
+  var poster = _ref.poster,
+      autoPlay = _ref.autoPlay;
+  return (poster || !autoPlay) && (0, _styledComponents.css)(["cursor:pointer;"]);
 });
 
 var StyledContainerButton = _styledComponents.default.div.withConfig({
@@ -148,7 +149,8 @@ function (_PureComponent) {
           children = _this$props.children,
           ariaLabel = _this$props.ariaLabel,
           autoPlay = _this$props.autoPlay,
-          props = (0, _objectWithoutProperties2.default)(_this$props, ["children", "ariaLabel", "autoPlay"]);
+          poster = _this$props.poster,
+          props = (0, _objectWithoutProperties2.default)(_this$props, ["children", "ariaLabel", "autoPlay", "poster"]);
       var loader = (0, _reactElements.getReactElementsByType)({
         children: children,
         type: Video.Loader
@@ -172,7 +174,8 @@ function (_PureComponent) {
       }, "\u25BA"))), _react.default.createElement(StyledVideo, (0, _extends2.default)({
         ref: this.video,
         controls: controls,
-        autoPlay: autoPlay
+        autoPlay: autoPlay,
+        poster: poster
       }, props), childrenWithoutLoader));
     }
   }]);
