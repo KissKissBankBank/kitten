@@ -14,11 +14,12 @@ const StyledContainer = styled.div`
   height: 100%;
   overflow: hidden;
 
-  ${({ isVideoPlaying }) =>
-    isVideoPlaying &&
-    css`
-      cursor: pointer;
-    `}
+  ${({ poster, autoPlay }) =>
+    poster ||
+    (!autoPlay &&
+      css`
+        cursor: pointer;
+      `)}
 `
 
 const StyledContainerButton = styled.div`
@@ -35,7 +36,6 @@ const StyledContainerButton = styled.div`
       ? css`
           opacity: 0;
           z-index: 0;
-          cursor: pointer;
         `
       : css`
           opacity: 1;
@@ -122,7 +122,7 @@ export class Video extends PureComponent {
   }
 
   render() {
-    const { children, ariaLabel, autoPlay, ...props } = this.props
+    const { children, ariaLabel, autoPlay, poster, ...props } = this.props
     const loader = getReactElementsByType({ children, type: Video.Loader })
     const childrenWithoutLoader = getReactElementsWithoutType({
       children,
@@ -153,6 +153,7 @@ export class Video extends PureComponent {
           ref={this.video}
           controls={controls}
           autoPlay={autoPlay}
+          poster={poster}
           {...props}
         >
           {childrenWithoutLoader}
