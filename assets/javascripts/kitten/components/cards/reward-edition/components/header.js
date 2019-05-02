@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
