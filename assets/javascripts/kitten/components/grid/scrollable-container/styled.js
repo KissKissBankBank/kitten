@@ -4,7 +4,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { Container } from '../../../components/grid/container'
 import { rgba } from 'polished'
 
-const gradientWidth = 60
+const gradientWidth = 20
 
 export const StyledContainer = styled(Container)`
   position: relative;
