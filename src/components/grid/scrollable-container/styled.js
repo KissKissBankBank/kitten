@@ -21,7 +21,7 @@ var _container = require("../../../components/grid/container");
 
 var _polished = require("polished");
 
-var gradientWidth = 60;
+var gradientWidth = 20;
 var StyledContainer = (0, _styledComponents.default)(_container.Container).withConfig({
   displayName: "styled__StyledContainer",
   componentId: "d41exg-0"
@@ -30,7 +30,7 @@ exports.StyledContainer = StyledContainer;
 
 var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
   (0, _objectDestructuringEmpty2.default)(_ref);
-  return (0, _styledComponents.css)(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;}", " ", ""], function (_ref2) {
+  return (0, _styledComponents.css)(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;}", " ", ""], function (_ref2) {
     var displayLeftGradient = _ref2.displayLeftGradient,
         shadowColor = _ref2.shadowColor;
     return displayLeftGradient && (0, _styledComponents.css)(["&:before{left:0;width:", ";background-image:linear-gradient( to right,", ",", " );}"], (0, _typography.pxToRem)(gradientWidth), (0, _polished.rgba)(shadowColor, 1), (0, _polished.rgba)(shadowColor, 0));
