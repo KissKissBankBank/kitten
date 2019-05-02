@@ -33,6 +33,8 @@ export const scrollableContainerStyle = ({}) => css`
     position: absolute;
     top: 0;
     bottom: 0;
+    pointer-events: none;
+    touch-action: none;
   }
   ${({ displayLeftGradient, shadowColor }) =>
     displayLeftGradient &&
