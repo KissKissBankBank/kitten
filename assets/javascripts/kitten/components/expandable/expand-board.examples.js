@@ -1,12 +1,37 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import Radium, { StyleRoot } from 'radium'
+import styled, { keyframes } from 'styled-components'
 import { ExpandBoard } from 'kitten/components/expandable/expand-board'
 import { List } from 'kitten/components/lists/list'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Text } from 'kitten/components/typography/text'
 import COLORS from 'kitten/constants/colors-config'
 
-export class ExpandBoardWithButtonItemList extends Component {
+const fadeInAnimation = () =>
+  keyframes`
+    0%: {
+      opacity: 0;
+    }
+    100%: {
+      opacity: 1;
+    }
+  fadeIn;
+`
+
+const fadeOutAnimation = () =>
+  keyframes`
+    0%: {
+      opacity: 1;
+      height: auto
+    }
+    100%: {
+      opacity: 0;
+      height: 0;
+   }
+  fadeOut;
+`
+
+export class ExpandBoardWithButtonItemList extends PureComponent {
   list = [
     {
       size: 'Size XS',
@@ -93,22 +118,6 @@ export class ExpandBoardWithButtonItemList extends Component {
     )
   }
 }
-
-const fadeInAnimation = Radium.keyframes(
-  {
-    '0%': { opacity: 0 },
-    '100%': { opacity: 1 },
-  },
-  'fadeIn',
-)
-
-const fadeOutAnimation = Radium.keyframes(
-  {
-    '0%': { opacity: 1, height: 'auto' },
-    '100%': { opacity: 0, height: 0 },
-  },
-  'fadeOut',
-)
 
 const styles = {
   buttonListItem: {
