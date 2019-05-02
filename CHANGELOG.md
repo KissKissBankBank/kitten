@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.4.2] - 2019-05-02
+
+Fix:
+- `ScrollableContainer` style fixes
+
 ## [2.4.1] - 2019-04-30
 
 Fixes:
