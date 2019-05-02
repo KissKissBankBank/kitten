@@ -4,7 +4,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { Container } from '../../../components/grid/container'
 import { rgba } from 'polished'
 
-const gradientWidth = 20
+const gradientWidth = 60
 
 export const StyledContainer = styled(Container)`
   position: relative;
@@ -12,10 +12,7 @@ export const StyledContainer = styled(Container)`
   padding-right: 0;
 `
 
-export const scrollableContainerStyle = ({
-  backgroundColor,
-  shadowColor,
-}) => css`
+export const scrollableContainerStyle = ({}) => css`
   display: flex;
   white-space: nowrap;
   overflow-x: auto;
@@ -29,34 +26,40 @@ export const scrollableContainerStyle = ({
     display: none;
   }
 
-  background-image: linear-gradient(
-      to right,
-      ${rgba(backgroundColor, 1)} 30%,
-      ${rgba(backgroundColor, 0)}
-    ),
-    linear-gradient(
-      to left,
-      ${rgba(backgroundColor, 1)} 30%,
-      ${rgba(backgroundColor, 0)}
-    ),
-    radial-gradient(
-      farthest-side at 0 50%,
-      ${rgba(shadowColor, 0.3)},
-      ${rgba(shadowColor, 0)}
-    ),
-    radial-gradient(
-      farthest-side at 100% 50%,
-      ${rgba(shadowColor, 0.3)},
-      ${rgba(shadowColor, 0)}
-    );
-
-  background-repeat: no-repeat;
-  background-size: ${pxToRem(60)} 100%, ${pxToRem(60)} 100%, ${pxToRem(20)} 100%,
-    ${pxToRem(20)} 100%;
-  background-position: 0, 100%, 0, 100%;
-
-  /* Opera doesn't support this in the shorthand */
-  background-attachment: local, local, scroll, scroll;
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  ${({ displayLeftGradient, shadowColor }) =>
+    displayLeftGradient &&
+    css`
+      &:before {
+        left: 0;
+        width: ${pxToRem(gradientWidth)};
+        background-image: linear-gradient(
+          to right,
+          ${rgba(shadowColor, 1)},
+          ${rgba(shadowColor, 0)}
+        );
+      }
+    `}
+  ${({ displayRightGradient, shadowColor }) =>
+    displayRightGradient &&
+    css`
+      &:after {
+        right: 0;
+        width: ${pxToRem(gradientWidth)};
+        background-image: linear-gradient(
+          to left,
+          ${rgba(shadowColor, 1)},
+          ${rgba(shadowColor, 0)}
+        );
+      }
+    `}
 `
 
 export const StyledScrollableContainer = styled.div`

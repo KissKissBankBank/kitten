@@ -2,10 +2,14 @@
 
 var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.StyledScrollableContainer = exports.scrollableContainerStyle = exports.StyledContainer = void 0;
+
+var _objectDestructuringEmpty2 = _interopRequireDefault(require("@babel/runtime/helpers/objectDestructuringEmpty"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
@@ -17,7 +21,7 @@ var _container = require("../../../components/grid/container");
 
 var _polished = require("polished");
 
-var gradientWidth = 20;
+var gradientWidth = 60;
 var StyledContainer = (0, _styledComponents.default)(_container.Container).withConfig({
   displayName: "styled__StyledContainer",
   componentId: "d41exg-0"
@@ -25,9 +29,16 @@ var StyledContainer = (0, _styledComponents.default)(_container.Container).withC
 exports.StyledContainer = StyledContainer;
 
 var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
-  var backgroundColor = _ref.backgroundColor,
-      shadowColor = _ref.shadowColor;
-  return (0, _styledComponents.css)(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}background-image:linear-gradient( to right,", " 30%,", " ),linear-gradient( to left,", " 30%,", " ),radial-gradient( farthest-side at 0 50%,", ",", " ),radial-gradient( farthest-side at 100% 50%,", ",", " );background-repeat:no-repeat;background-size:", " 100%,", " 100%,", " 100%,", " 100%;background-position:0,100%,0,100%;background-attachment:local,local,scroll,scroll;"], (0, _polished.rgba)(backgroundColor, 1), (0, _polished.rgba)(backgroundColor, 0), (0, _polished.rgba)(backgroundColor, 1), (0, _polished.rgba)(backgroundColor, 0), (0, _polished.rgba)(shadowColor, 0.3), (0, _polished.rgba)(shadowColor, 0), (0, _polished.rgba)(shadowColor, 0.3), (0, _polished.rgba)(shadowColor, 0), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20));
+  (0, _objectDestructuringEmpty2.default)(_ref);
+  return (0, _styledComponents.css)(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;}", " ", ""], function (_ref2) {
+    var displayLeftGradient = _ref2.displayLeftGradient,
+        shadowColor = _ref2.shadowColor;
+    return displayLeftGradient && (0, _styledComponents.css)(["&:before{left:0;width:", ";background-image:linear-gradient( to right,", ",", " );}"], (0, _typography.pxToRem)(gradientWidth), (0, _polished.rgba)(shadowColor, 1), (0, _polished.rgba)(shadowColor, 0));
+  }, function (_ref3) {
+    var displayRightGradient = _ref3.displayRightGradient,
+        shadowColor = _ref3.shadowColor;
+    return displayRightGradient && (0, _styledComponents.css)(["&:after{right:0;width:", ";background-image:linear-gradient( to left,", ",", " );}"], (0, _typography.pxToRem)(gradientWidth), (0, _polished.rgba)(shadowColor, 1), (0, _polished.rgba)(shadowColor, 0));
+  });
 };
 
 exports.scrollableContainerStyle = scrollableContainerStyle;

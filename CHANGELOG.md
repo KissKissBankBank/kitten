@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Create `RewardEdition` component.
 
+## [2.4.1] - 2019-04-30
+
+Fixes:
+- Rework `ScrollableContainer` shadow display
+- Fix `cursor` for `poster` Video attribute.
+
 ## [2.4.0] - 2019-04-25
 
 Features:
