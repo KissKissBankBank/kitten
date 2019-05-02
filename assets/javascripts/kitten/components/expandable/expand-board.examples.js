@@ -122,7 +122,6 @@ const styles = {
       padding: 0,
     },
     expandAnimation: {
-      opacity: 0,
       animationDuration: '1s',
       animationIterationCount: 1,
       animationFillMode: 'forwards',
@@ -130,7 +129,6 @@ const styles = {
       animationTimingFunction: 'ease-in-out',
     },
     shrinkAnimation: {
-      opacity: 1,
       animationDuration: '.6s',
       animationIterationCount: 1,
       animationFillMode: 'forwards',
