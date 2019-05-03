@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import Radium from 'radium'
+import React, { PureComponent } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Button } from '../../components/buttons/button/button'
@@ -8,18 +7,18 @@ import COLORS from '../../constants/colors-config'
 import { pxToRem } from '../../helpers/utils/typography'
 
 const StyledButton = styled(Button)`
-  width: '100%';
-  display: 'flex';
-  align-items: 'center';
-  justify-content: 'center';
-  line-height: '1.3rem';
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: ${pxToRem(21)};
   padding: ${pxToRem(22)} ${pxToRem(30)};
 
   ${({ expanded }) =>
     expanded &&
     css`
-      background-color: COLORS.font1;
-      border-color: COLORS.font1;
+      background-color: ${COLORS.font1};
+      border-color: ${COLORS.font1};
     `}
 `
 
@@ -29,7 +28,7 @@ const StyledArrowIcon = styled(ArrowIcon)`
   margin-left: ${pxToRem(10)};
 `
 
-class ExpandBoardButton extends Component {
+export class ExpandBoardButton extends PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
     ariaId: PropTypes.string,
@@ -65,7 +64,7 @@ class ExpandBoardButton extends Component {
       <StyledButton
         icon
         iconOnRight
-        size="big"
+        big
         modifier="helium"
         disabled={disabled}
         aria-expanded={expanded}
@@ -86,7 +85,7 @@ class ExpandBoardButton extends Component {
   }
 }
 
-class ExpandBoardContentBase extends Component {
+export class ExpandBoardContent extends PureComponent {
   static propTypes = {
     children: PropTypes.node.isRequired,
     ariaId: PropTypes.string,
@@ -107,17 +106,15 @@ class ExpandBoardContentBase extends Component {
   }
 }
 
-const ExpandBoardContent = Radium(ExpandBoardContentBase)
-
 const growAnimation = () =>
   keyframes`
     0%: {
       opacity: 0;
-      maxHeight: 0;
+      max-height: 0;
     }
     100%: {
      opacity: 1;
-     maxHeight: this.props.animationMaxHeight;
+     max-height: this.props.animationMaxHeight;
     }
   grow;
 `
@@ -126,16 +123,16 @@ const shrinkAnimation = () =>
   keyframes`
     0%: {
       opacity: 1;
-      maxHeight: this.props.animationMaxHeight;
+      max-height: this.props.animationMaxHeight;
     }
     100%: {
       opacity: 0;
-      maxHeight: 0;
+      max-height: 0;
     }
   schrink;
 `
 
-class ExpandBoardBase extends Component {
+export class ExpandBoard extends PureComponent {
   static Button = ExpandBoardButton
   static Content = ExpandBoardContent
 
@@ -261,7 +258,7 @@ class ExpandBoardBase extends Component {
           disabled,
           expanded: this.state.expanded,
           onClick: this.handleClick,
-          style: styles.button,
+          style: <StyledButton />,
           ariaId,
         })
       }
@@ -282,27 +279,3 @@ class ExpandBoardBase extends Component {
     )
   }
 }
-
-const styles = {
-  button: {
-    base: {
-      width: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      lineHeight: '1.3rem',
-      padding: `${pxToRem(22)} ${pxToRem(30)}`,
-    },
-    expanded: {
-      backgroundColor: COLORS.font1,
-      borderColor: COLORS.font1,
-    },
-    arrow: {
-      width: pxToRem(8),
-      height: '0.75rem', // half of button base line-height
-      marginLeft: pxToRem(10),
-    },
-  },
-}
-
-export const ExpandBoard = Radium(ExpandBoardBase)
