@@ -54,10 +54,10 @@ export class ExpandBoardButton extends PureComponent {
       expandChildren,
       expanded,
       disabled,
-      style,
       onClick,
       ariaId,
     } = this.props
+
     const defaultExpandChildren = expandChildren ? expandChildren : children
 
     return (
@@ -96,13 +96,9 @@ export class ExpandBoardContent extends PureComponent {
   }
 
   render() {
-    const { children, ariaId, style } = this.props
+    const { children, ariaId } = this.props
 
-    return (
-      <div id={ariaId} style={style}>
-        {children}
-      </div>
-    )
+    return <div id={ariaId}>{children}</div>
   }
 }
 
@@ -110,11 +106,11 @@ const growAnimation = () =>
   keyframes`
     0%: {
       opacity: 0;
-      max-height: 0;
+      maxHeight: 0;
     }
     100%: {
      opacity: 1;
-     max-height: this.props.animationMaxHeight;
+     maxHeight: this.props.animationMaxHeight;
     }
   grow;
 `
@@ -123,11 +119,11 @@ const shrinkAnimation = () =>
   keyframes`
     0%: {
       opacity: 1;
-      max-height: this.props.animationMaxHeight;
+      maxHeight: this.props.animationMaxHeight;
     }
     100%: {
       opacity: 0;
-      max-height: 0;
+      maxHeight: 0;
     }
   schrink;
 `
@@ -227,7 +223,7 @@ export class ExpandBoard extends PureComponent {
         animationDelay: 0,
         animationIterationCount: 1,
         animationFillMode: 'forwards',
-        animationName: this.shrinkAnimation,
+        animationName: shrinkAnimation,
         animationTimingFunction: 'ease-in-out',
       }
     }
@@ -239,7 +235,7 @@ export class ExpandBoard extends PureComponent {
       animationDelay: 0,
       animationIterationCount: 1,
       animationFillMode: 'forwards',
-      animationName: this.growAnimation,
+      animationName: growAnimation,
       animationTimingFunction: 'ease-in-out',
     }
   }
