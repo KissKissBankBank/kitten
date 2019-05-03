@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react'
-import Radium, { StyleRoot } from 'radium'
 import styled, { keyframes } from 'styled-components'
 import { ExpandBoard } from 'kitten/components/expandable/expand-board'
 import { List } from 'kitten/components/lists/list'
 import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Text } from 'kitten/components/typography/text'
 import COLORS from 'kitten/constants/colors-config'
+import { pxToRem } from '../../helpers/utils/typography'
 
 const fadeInAnimation = () =>
   keyframes`
@@ -29,6 +29,17 @@ const fadeOutAnimation = () =>
       height: 0;
    }
   fadeOut;
+`
+
+const StyledButtonListItem = styled(Text)`
+  margin: 0;
+  padding: 0;
+  line-height: ${pxToRem(19.2)};
+`
+
+const StyledButtonList = styled.div`
+  margin: ${pxToRem(16)} ${pxToRem(0)};
+  padding: 0;
 `
 
 export class ExpandBoardWithButtonItemList extends PureComponent {
@@ -63,16 +74,24 @@ export class ExpandBoardWithButtonItemList extends PureComponent {
     if (!this.props.withAnimation) return null
 
     if (this.state.expanded) {
-      return [
-        styles.buttonListItem.expandAnimation,
-        { animationDelay: `${0.2 * key}s` },
-      ]
+      return {
+        animationDuration: '1s',
+        animationIterationCount: 1,
+        animationFillMode: 'forwards',
+        animationName: fadeInAnimation,
+        animationTimingFunction: 'ease-in-out',
+        animationDelay: `${0.2 * key}s`,
+      }
     }
 
-    return [
-      styles.buttonListItem.shrinkAnimation,
-      { animationDelay: `${0.1 * key}s` },
-    ]
+    return {
+      animationDuration: '.6s',
+      animationIterationCount: 1,
+      animationFillMode: 'forwards',
+      animationName: fadeOutAnimation,
+      animationTimingFunction: 'ease-in-out',
+      animationDelay: `${0.1 * key}s`,
+    }
   }
 
   render() {
@@ -89,18 +108,17 @@ export class ExpandBoardWithButtonItemList extends PureComponent {
                 <List.ButtonItem
                   key={item.size}
                   disabled={item.disabled}
-                  style={this.buttonListItemStyle(key)}
+                  {...this.buttonListItemStyle(key)}
                 >
-                  <div style={styles.buttonListItem.base}>
-                    <Text
+                  <StyledButtonList>
+                    <StyledButtonListItem
                       tag="p"
                       weight="regular"
                       color="font1"
                       size="tiny"
-                      style={styles.buttonListItem.content}
                     >
                       {item.size}
-                    </Text>
+                    </StyledButtonListItem>
                     <Text
                       tag="small"
                       color={item.disabled ? 'font2' : 'font1'}
@@ -108,7 +126,7 @@ export class ExpandBoardWithButtonItemList extends PureComponent {
                     >
                       {item.availability}
                     </Text>
-                  </div>
+                  </StyledButtonList>
                 </List.ButtonItem>
               )
             })}
@@ -117,32 +135,4 @@ export class ExpandBoardWithButtonItemList extends PureComponent {
       </ExpandBoard>
     )
   }
-}
-
-const styles = {
-  buttonListItem: {
-    content: {
-      margin: 0,
-      padding: 0,
-      lineHeight: '1.2rem',
-    },
-    base: {
-      margin: '1rem 0',
-      padding: 0,
-    },
-    expandAnimation: {
-      animationDuration: '1s',
-      animationIterationCount: 1,
-      animationFillMode: 'forwards',
-      animationName: fadeInAnimation,
-      animationTimingFunction: 'ease-in-out',
-    },
-    shrinkAnimation: {
-      animationDuration: '.6s',
-      animationIterationCount: 1,
-      animationFillMode: 'forwards',
-      animationName: fadeOutAnimation,
-      animationTimingFunction: 'ease-in-out',
-    },
-  },
 }
