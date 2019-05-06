@@ -22,6 +22,7 @@ exports[`<Details /> with default props matches with snapshot 1`] = `
 
 <details
   onToggle={[Function]}
+  open={false}
 >
   <summary
     className="c0"
