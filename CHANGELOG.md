@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add link styles when `VerticalStepper.Step` has `onClick` attribute.
+
 ## [2.4.3] - 2019-05-06
 
 Fix:

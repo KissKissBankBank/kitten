@@ -104,8 +104,9 @@ var StyledLink = _styledComponents.default.a.withConfig({
   displayName: "step__StyledLink",
   componentId: "sc-1you76f-1"
 })(["display:inline-flex;", ""], function (_ref) {
-  var as = _ref.as;
-  return as === 'a' && (0, _styledComponents.css)(["cursor:pointer;text-decoration:none;.", "{transition:transform 0.4s;}.", "{transition:color 0.4s;}:hover,:focus,:active{.", "{transform:translateX(", ");}.", "{color:", ";}}"], _index.STEP_CLASSNAME, _index.LINK_CLASSNAME, _index.STEP_CLASSNAME, (0, _typography.pxToRem)(5), _index.LINK_CLASSNAME, _colorsConfig.default.primary3);
+  var as = _ref.as,
+      onClick = _ref.onClick;
+  return (as === 'a' || onClick) && (0, _styledComponents.css)(["cursor:pointer;text-decoration:none;.", "{transition:transform 0.4s;}.", "{transition:color 0.4s;}:hover,:focus,:active{.", "{transform:translateX(", ");}.", "{color:", ";}}"], _index.STEP_CLASSNAME, _index.LINK_CLASSNAME, _index.STEP_CLASSNAME, (0, _typography.pxToRem)(5), _index.LINK_CLASSNAME, _colorsConfig.default.primary3);
 });
 
 var StyledContent = _styledComponents.default.div.withConfig({
