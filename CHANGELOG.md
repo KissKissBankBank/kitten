@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add link styles when `VerticalStepper.Step` has `onClick` attribute.
+## [2.4.4] - 2019-05-06
+
+Fix:
+- Add link styles when `VerticalStepper.Step` has `onClick` attribute.
 
 ## [2.4.3] - 2019-05-06
 
@@ -14,24 +17,23 @@ Fix:
 ## [2.4.2] - 2019-05-02
 
 Fix:
-- `ScrollableContainer` style fixes
+- `ScrollableContainer` style fixes.
 
 ## [2.4.1] - 2019-04-30
 
 Fixes:
-- Rework `ScrollableContainer` shadow display
+- Rework `ScrollableContainer` shadow display.
 - Fix `cursor` for `poster` Video attribute.
 
 ## [2.4.0] - 2019-04-25
 
 Features:
 - Create `ButtonGroup` component.
-- `ScrollableContainer` new props `shadowColor`, `backgroundColor`
+- `ScrollableContainer` new props `shadowColor`, `backgroundColor`.
 
 Fixes:
 - Fix `cover` with used `controls` on Video.
-- `StickyContainer` fix for `isSticky='always'`
-
+- `StickyContainer` fix for `isSticky='always'`.
 
 ## [2.3.0] - 2019-04-19
 
