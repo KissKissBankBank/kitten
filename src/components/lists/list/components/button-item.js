@@ -120,7 +120,7 @@ var ButtonItem = function ButtonItem(_ref7) {
   };
 
   return _react.default.createElement(Item, (0, _extends2.default)({
-    role: others.as !== 'a' ? 'button' : false,
+    role: others.as !== 'a' ? 'button' : null,
     tabIndex: disabled ? '-1' : '0',
     onClick: disabled ? null : onClick,
     onKeyPress: disabled ? null : handleKeyPress,
