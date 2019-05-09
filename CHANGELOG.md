@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove a HTML warning on `List.ButtonItem`.
+
 ## [2.4.4] - 2019-05-06
 
 Fix:
