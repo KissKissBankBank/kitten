@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `stepToRem` helper.
+## [2.5.0] - 2019-05-13
+
+Feature:
+- Add `stepToRem` helper.
 
 ## [2.4.5] - 2019-05-09
 
