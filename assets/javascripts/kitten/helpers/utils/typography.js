@@ -14,9 +14,9 @@ export const pxModularScale = step => {
     base: [TYPOGRAPHY.root],
     ratio: TYPOGRAPHY.scaleMultiplier,
   }
-  return ms(step, settings)
+  return ms(step, settings).toFixed(2)
 }
 
 export const modularScale = step => {
-  pxToRem(pxModularScale(step))
+  return pxToRem(pxModularScale(step))
 }
