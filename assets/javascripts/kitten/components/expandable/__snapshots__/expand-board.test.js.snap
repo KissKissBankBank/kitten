@@ -18,7 +18,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
         "display": "flex",
         "justifyContent": "center",
         "lineHeight": "1.3rem",
-        "padding": "1.375rem 1.875rem",
+        "padding": "1.38rem 1.88rem",
         "width": "100%",
       }
     }
@@ -37,7 +37,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
         style={
           Object {
             "height": "0.75rem",
-            "marginLeft": "0.625rem",
+            "marginLeft": "0.63rem",
             "transform": "rotate(180deg)",
             "width": "0.5rem",
           }
@@ -73,7 +73,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
         "display": "flex",
         "justifyContent": "center",
         "lineHeight": "1.3rem",
-        "padding": "1.375rem 1.875rem",
+        "padding": "1.38rem 1.88rem",
         "width": "100%",
       }
     }
@@ -92,7 +92,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
         style={
           Object {
             "height": "0.75rem",
-            "marginLeft": "0.625rem",
+            "marginLeft": "0.63rem",
             "transform": "rotate(180deg)",
             "width": "0.5rem",
           }

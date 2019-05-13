@@ -35,7 +35,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       }
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 xiXNu"
+        className="marger__StyledMarger-q3lecu-0 dIUTRq"
       >
         <div
           className="marger__StyledMarger-q3lecu-0 iyINNV"
@@ -54,7 +54,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
         
       </div>
       <div
-        className="rmq-e7aace01"
+        className="rmq-57ac475b"
         data-radium={true}
         style={
           Object {
@@ -84,7 +84,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
   <style
     dangerouslySetInnerHTML={
       Object {
-        "__html": "@media (min-width: 640px){ .rmq-e7aace01{padding-left: 1.875rem !important;
+        "__html": "@media (min-width: 640px){ .rmq-57ac475b{padding-left: 1.88rem !important;
 padding-right: 2rem !important;}}",
       }
     }
@@ -145,7 +145,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         }
       />
       <div
-        className="marger__StyledMarger-q3lecu-0 xiXNu"
+        className="marger__StyledMarger-q3lecu-0 dIUTRq"
       >
         <div
           className="marger__StyledMarger-q3lecu-0 cGMcrq"
@@ -173,7 +173,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="rmq-e7aace01"
+        className="rmq-57ac475b"
         data-radium={true}
         style={
           Object {
@@ -204,7 +204,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
     dangerouslySetInnerHTML={
       Object {
         "__html": "@media (min-width: 640px){ .rmq-d68686c{display: flex !important;}}
-@media (min-width: 640px){ .rmq-e7aace01{padding-left: 1.875rem !important;
+@media (min-width: 640px){ .rmq-57ac475b{padding-left: 1.88rem !important;
 padding-right: 2rem !important;}}",
       }
     }

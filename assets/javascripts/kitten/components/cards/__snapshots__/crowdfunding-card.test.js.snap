@@ -130,7 +130,7 @@ exports[`<CrowdfundingCard /> by default matches with snapshot 1`] = `
         className="marger__StyledMarger-q3lecu-0 kREYig"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 ifvkxH"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dDfskO"
         />
       </div>
     </div>
@@ -271,7 +271,7 @@ exports[`<CrowdfundingCard /> with loading prop matches with snapshot 1`] = `
         className="marger__StyledMarger-q3lecu-0 kREYig"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 RWndB"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dvMjKn"
         />
         <span
           data-radium={true}
@@ -453,7 +453,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         className="marger__StyledMarger-q3lecu-0 kREYig"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 ifvkxH"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dDfskO"
         />
         <p
           className="k-u-size-micro k-u-weight-regular"
