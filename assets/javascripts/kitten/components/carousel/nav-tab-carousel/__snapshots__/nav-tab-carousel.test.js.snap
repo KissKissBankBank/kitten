@@ -8,7 +8,7 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
     className="styled-components__StyledLeftArrowContainer-jws9qo-3 kSGIyY"
   >
     <svg
-      className="styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
+      className="styled-components__StyledArrowIcon-jws9qo-4 iqRCUK"
       data-radium={true}
       fill="#fff"
       height="5.64"
@@ -26,24 +26,24 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="styled-components__StyledPrevText-jws9qo-5 hXpeST"
+      className="styled-components__StyledPrevText-jws9qo-5 bHJbVU"
     >
       Foobar 1
     </div>
   </div>
   <div
-    className="pagination__PaginationStyles-sc-1thdyq2-1 hZuMTE"
+    className="pagination__PaginationStyles-sc-1thdyq2-1 leyuau"
   >
     <a
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 ceRjvp"
+      className="pagination__BulletPointStyles-sc-1thdyq2-0 JsRkQ"
       href="http://www.google.com"
     />
     <a
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 bgXPKF"
+      className="pagination__BulletPointStyles-sc-1thdyq2-0 hQhAyI"
       href="http://www.cowboybebop.com"
     />
     <a
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 ceRjvp"
+      className="pagination__BulletPointStyles-sc-1thdyq2-0 JsRkQ"
       href="http://www.starwars.com"
     />
   </div>
@@ -51,12 +51,12 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
     className="styled-components__StyledRightArrowContainer-jws9qo-2 ezvKBF"
   >
     <div
-      className="styled-components__StyledNextText-jws9qo-6 jKdWOE"
+      className="styled-components__StyledNextText-jws9qo-6 lewOJA"
     >
       Foobar 2
     </div>
     <svg
-      className="styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
+      className="styled-components__StyledArrowIcon-jws9qo-4 iqRCUK"
       data-radium={true}
       fill="#fff"
       height="5.64"
@@ -85,7 +85,7 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
     className="styled-components__StyledLeftArrowContainer-jws9qo-3 kSGIyY"
   >
     <svg
-      className="styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
+      className="styled-components__StyledArrowIcon-jws9qo-4 iqRCUK"
       data-radium={true}
       fill="#fff"
       height="5.64"
@@ -103,34 +103,34 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="styled-components__StyledPrevText-jws9qo-5 hXpeST"
+      className="styled-components__StyledPrevText-jws9qo-5 bHJbVU"
     >
       Foobar 1
     </div>
   </div>
   <div
-    className="pagination__PaginationStyles-sc-1thdyq2-1 hZuMTE"
+    className="pagination__PaginationStyles-sc-1thdyq2-1 leyuau"
   >
     <div
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 ceRjvp"
+      className="pagination__BulletPointStyles-sc-1thdyq2-0 JsRkQ"
     />
     <div
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 bgXPKF"
+      className="pagination__BulletPointStyles-sc-1thdyq2-0 hQhAyI"
     />
     <div
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 ceRjvp"
+      className="pagination__BulletPointStyles-sc-1thdyq2-0 JsRkQ"
     />
   </div>
   <div
     className="styled-components__StyledRightArrowContainer-jws9qo-2 ezvKBF"
   >
     <div
-      className="styled-components__StyledNextText-jws9qo-6 jKdWOE"
+      className="styled-components__StyledNextText-jws9qo-6 lewOJA"
     >
       Foobar 2
     </div>
     <svg
-      className="styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
+      className="styled-components__StyledArrowIcon-jws9qo-4 iqRCUK"
       data-radium={true}
       fill="#fff"
       height="5.64"

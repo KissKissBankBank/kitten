@@ -5,14 +5,14 @@ describe('typography helpers', () => {
     const range = pxToRem(16)
 
     it('returns "1rem"', () => {
-      expect(range).toEqual('1.00rem')
+      expect(range).toEqual('1rem')
     })
   })
   describe('stepToRem : 4', () => {
     const range = stepToRem(4)
 
     it('returns "1.601875rem"', () => {
-      expect(range).toEqual('1.60rem')
+      expect(range).toEqual('1.6rem')
     })
   })
   describe('stepToRem : -2', () => {
