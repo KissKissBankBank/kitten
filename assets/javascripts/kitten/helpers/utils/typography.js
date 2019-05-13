@@ -6,17 +6,13 @@ export const pxToRem = sizeInPx => {
 
   const sizeInRem = sizeInPx / TYPOGRAPHY.root
 
-  return `${sizeInRem}rem`
+  return `${sizeInRem.toFixed(2)}rem`
 }
 
-export const pxModularScale = step => {
+export const stepToRem = step => {
   const settings = {
-    base: [TYPOGRAPHY.root],
+    base: [1],
     ratio: TYPOGRAPHY.scaleMultiplier,
   }
-  return ms(step, settings).toFixed(2)
-}
-
-export const modularScale = step => {
-  return pxToRem(pxModularScale(step))
+  return `${ms(step, settings).toFixed(2)}rem`
 }
