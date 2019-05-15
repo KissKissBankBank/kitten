@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `descriptionTag` prop to `CartRewardCard`.
+
 ## [2.5.0] - 2019-05-13
 
 Feature:
