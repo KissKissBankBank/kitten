@@ -122,6 +122,13 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   z-index: 1;
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
+}
+
 <div
   className="c0"
   role="group"
