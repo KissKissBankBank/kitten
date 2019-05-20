@@ -119,7 +119,7 @@ export const ButtonItem = ({
 
   return (
     <Item
-      role={others.as !== 'a' ? 'button' : false}
+      role={others.as !== 'a' ? 'button' : null}
       tabIndex={disabled ? '-1' : '0'}
       onClick={disabled ? null : onClick}
       onKeyPress={disabled ? null : handleKeyPress}

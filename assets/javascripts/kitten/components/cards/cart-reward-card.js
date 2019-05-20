@@ -20,6 +20,7 @@ class CartRewardCardComponent extends Component {
     titleAmount: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
     subtitle: PropTypes.string,
+    descriptionTag: PropTypes.string,
     updateAmountTitle: PropTypes.string,
     updateAmountLink: PropTypes.string,
     onAfterClose: PropTypes.func,
@@ -43,6 +44,7 @@ class CartRewardCardComponent extends Component {
   static defaultProps = {
     titleTag: 'h1',
     subtitle: '',
+    descriptionTag: 'p',
     updateAmountTitle: '',
     updateAmountLink: '',
     onAfterClose: () => {},
@@ -107,6 +109,7 @@ class CartRewardCardComponent extends Component {
       titleTag,
       titleAmount,
       subtitle,
+      descriptionTag,
       children,
       viewportIsMobile,
       textDescription,
@@ -131,7 +134,7 @@ class CartRewardCardComponent extends Component {
           </Marger>
         )}
         <Marger top={viewportIsMobile && !subtitle ? 1 : 2} bottom="2">
-          <Paragraph margin={false} modifier="quaternary">
+          <Paragraph tag={descriptionTag} margin={false} modifier="quaternary">
             {textDescription}
             {description}
           </Paragraph>

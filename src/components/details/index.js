@@ -37,7 +37,7 @@ var Details = function Details(_ref) {
       onToggle = _ref.onToggle,
       props = (0, _objectWithoutProperties2.default)(_ref, ["children", "summaryRender", "open", "onToggle"]);
 
-  var _useState = (0, _react.useState)(openDefault),
+  var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
       open = _useState2[0],
       setOpen = _useState2[1];
@@ -48,7 +48,8 @@ var Details = function Details(_ref) {
   };
 
   return _react.default.createElement("details", (0, _extends2.default)({
-    onToggle: handleToggle
+    onToggle: handleToggle,
+    open: openDefault
   }, props), _react.default.createElement(Summary, null, summaryRender({
     open: open
   })), children);
