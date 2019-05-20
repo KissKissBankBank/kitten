@@ -12,8 +12,8 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: calc(50% - 0.625rem);
+  border: 0.63rem solid transparent;
+  top: calc(50% - 0.63rem);
   left: -1.25rem;
   border-right-color: #f6f6f6;
 }
@@ -43,7 +43,7 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
+  border: 0.63rem solid transparent;
   top: 1.25rem;
   left: -1.25rem;
   border-right-color: #ff0000;
@@ -74,8 +74,8 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: 1.875rem;
+  border: 0.63rem solid transparent;
+  top: 1.88rem;
   left: -1.25rem;
   border-right-color: #f6f6f6;
 }
@@ -105,7 +105,7 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
+  border: 0.63rem solid transparent;
   bottom: -1.25rem;
   left: 1.25rem;
   border-top-color: #f6f6f6;
@@ -167,7 +167,7 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
+  border: 0.63rem solid transparent;
   top: 1.25rem;
   left: -1.25rem;
   border-right-color: #f6f6f6;
@@ -198,7 +198,7 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
+  border: 0.63rem solid transparent;
   top: 1.25rem;
   left: -1.25rem;
   border-right-color: #f6f6f6;

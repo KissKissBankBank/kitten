@@ -26,7 +26,7 @@ export const Details = ({
   onToggle,
   ...props
 }) => {
-  const [open, setOpen] = useState(openDefault)
+  const [open, setOpen] = useState(false)
 
   const handleToggle = event => {
     setOpen(!open)
@@ -34,7 +34,7 @@ export const Details = ({
   }
 
   return (
-    <details onToggle={handleToggle} {...props}>
+    <details onToggle={handleToggle} open={openDefault} {...props}>
       <Summary>{summaryRender({ open })}</Summary>
 
       {children}

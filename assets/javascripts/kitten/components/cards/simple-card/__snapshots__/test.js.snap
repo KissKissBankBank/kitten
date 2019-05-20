@@ -31,7 +31,7 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
       className="image__PlayerStyle-sc-8olw7b-2 jEOAJp"
     >
       <div
-        className="image__PlayerButtonStyle-sc-8olw7b-1 jwKNkb"
+        className="image__PlayerButtonStyle-sc-8olw7b-1 haNito"
       >
         <span
           aria-label={null}

@@ -16,12 +16,12 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   justify-content: center;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.875rem;
+  min-height: 3.13rem;
+  padding: 0 1.88rem;
+  font-size: 0.88rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -31,7 +31,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.125rem solid #eee;
+  border: 0.13rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -43,7 +43,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 .c2 >:nth-child(n) {
-  margin-right: 0.625rem;
+  margin-right: 0.63rem;
   text-align: left;
 }
 
@@ -102,7 +102,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 .c1:not(:last-child) {
-  margin-right: -0.125rem;
+  margin-right: -0.13rem;
 }
 
 .c1:first-child {
