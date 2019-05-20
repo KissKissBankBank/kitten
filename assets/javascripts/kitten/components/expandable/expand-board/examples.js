@@ -94,10 +94,21 @@ export class ExpandBoardWithButtonItemList extends PureComponent {
   }
 
   render() {
-    const { withAnimation, expandedButtonText, buttonText } = this.props
+    const {
+      withAnimation,
+      expandedButtonText,
+      buttonText,
+      borderRadius,
+      big,
+    } = this.props
+
     return (
       <ExpandBoard onClick={this.handleClick} withAnimation={withAnimation}>
-        <ExpandBoard.Button expandChildren={expandedButtonText}>
+        <ExpandBoard.Button
+          expandChildren={expandedButtonText}
+          borderRadius={borderRadius}
+          big={big}
+        >
           {buttonText}
         </ExpandBoard.Button>
         <ExpandBoard.Content>
@@ -108,6 +119,7 @@ export class ExpandBoardWithButtonItemList extends PureComponent {
                   key={item.size}
                   disabled={item.disabled}
                   {...this.buttonListItemStyle(key)}
+                  borderRadius={4}
                 >
                   <StyledButtonList>
                     <StyledButtonListItem
