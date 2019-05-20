@@ -4,17 +4,25 @@ import { withInfo } from '@storybook/addon-info'
 import {
   withKnobs,
   text,
+  number,
   select,
   boolean,
   object,
 } from '@storybook/addon-knobs'
 import { StyleRoot } from 'radium'
-import { ExpandBoard } from '../../components/expandable/expand-board'
-import { ExpandBoardWithButtonItemList } from '../../components/expandable/expand-board.examples'
-import { Grid, GridCol } from '../../components/grid/grid'
-import { Text } from '../../components/typography/text'
-import COLORS from '../../constants/colors-config'
-import { pxToRem } from '../../helpers/utils/typography'
+import { ExpandBoard } from '../../../components/expandable/expand-board'
+import { ExpandBoardWithButtonItemList } from '../../../components/expandable/expand-board/examples'
+import { Grid, GridCol } from '../../../components/grid/grid'
+import { Text } from '../../../components/typography/text'
+import COLORS from '../../../constants/colors-config'
+import { pxToRem } from '../../../helpers/utils/typography'
+
+const radiusBorderRange = {
+  range: true,
+  min: 0,
+  max: 25,
+  step: 1,
+}
 
 storiesOf('Expandable', module)
   .addDecorator(withKnobs)
@@ -33,6 +41,8 @@ storiesOf('Expandable', module)
                     'Expanded button text',
                     'Lancez votre projet',
                   )}
+                  borderRadius={number('Border radius', 4, radiusBorderRange)}
+                  big={boolean('Big', false)}
                 >
                   {text('Button text', 'KissKissBankBank & Co')}
                 </ExpandBoard.Button>
@@ -70,6 +80,8 @@ storiesOf('Expandable', module)
                 )}
                 buttonText={text('Button text', 'Je soutiens')}
                 withAnimation={boolean('With animation', true)}
+                borderRadius={number('Border radius', 4, radiusBorderRange)}
+                big={boolean('Big', false)}
               />
             </GridCol>
           </Grid>
