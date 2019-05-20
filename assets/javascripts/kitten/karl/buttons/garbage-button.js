@@ -23,7 +23,6 @@ class KarlGarbageButtonComponent extends Component {
     return (
       <ButtonIcon
         type="button"
-        title="Garbage Button"
         aria-label="Garbage Button"
         modifier={modifier}
         size={size}

@@ -30,26 +30,22 @@ const StyledGarbageButton = styled(Button)`
 `
 
 export class Header extends PureComponent {
-  renderGarbageButton() {
-    return (
-      <StyledGarbageButton
-        type="button"
-        title="Garbage Button"
-        aria-label="Garbage Button"
-        modifier="beryllium"
-        tiny
-        icon
-      >
-        <GarbageIcon />
-      </StyledGarbageButton>
-    )
-  }
-
   render() {
+    const { children, onClick } = this.props
+
     return (
       <StyledContainerHeader>
-        <StyledRewardAmount>{this.props.children}</StyledRewardAmount>
-        {this.renderGarbageButton()}
+        <StyledRewardAmount>{children}</StyledRewardAmount>
+        <StyledGarbageButton
+          onClick={onClick}
+          type="button"
+          aria-label="Garbage Button"
+          modifier="beryllium"
+          tiny
+          icon
+        >
+          <GarbageIcon />
+        </StyledGarbageButton>
       </StyledContainerHeader>
     )
   }
