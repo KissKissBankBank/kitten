@@ -112,6 +112,7 @@ function (_Component) {
           titleTag = _this$props.titleTag,
           titleAmount = _this$props.titleAmount,
           subtitle = _this$props.subtitle,
+          descriptionTag = _this$props.descriptionTag,
           children = _this$props.children,
           viewportIsMobile = _this$props.viewportIsMobile,
           textDescription = _this$props.textDescription;
@@ -140,6 +141,7 @@ function (_Component) {
         top: viewportIsMobile && !subtitle ? 1 : 2,
         bottom: "2"
       }, _react.default.createElement(_paragraph.Paragraph, {
+        tag: descriptionTag,
         margin: false,
         modifier: "quaternary"
       }, textDescription, description)), this.renderBottomContent());
@@ -199,6 +201,7 @@ CartRewardCardComponent.propTypes = {
   titleAmount: _propTypes.default.string.isRequired,
   titleTag: _propTypes.default.string,
   subtitle: _propTypes.default.string,
+  descriptionTag: _propTypes.default.string,
   updateAmountTitle: _propTypes.default.string,
   updateAmountLink: _propTypes.default.string,
   onAfterClose: _propTypes.default.func,
@@ -211,6 +214,7 @@ CartRewardCardComponent.propTypes = {
 CartRewardCardComponent.defaultProps = {
   titleTag: 'h1',
   subtitle: '',
+  descriptionTag: 'p',
   updateAmountTitle: '',
   updateAmountLink: '',
   onAfterClose: function onAfterClose() {},

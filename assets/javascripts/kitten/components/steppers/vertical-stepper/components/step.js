@@ -69,8 +69,8 @@ const StyledItem = styled.li`
 const StyledLink = styled.a`
   display: inline-flex;
 
-  ${({ as }) =>
-    as === 'a' &&
+  ${({ as, onClick }) =>
+    (as === 'a' || onClick) &&
     css`
       cursor: pointer;
       text-decoration: none;

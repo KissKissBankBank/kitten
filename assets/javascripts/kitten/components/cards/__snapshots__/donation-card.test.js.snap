@@ -45,7 +45,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 fSrmLM"
         >
           <span
-            className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 fRKuJX"
+            className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dwjxAa"
           />
         </div>
         <form

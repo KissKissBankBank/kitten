@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { info } from './info'
 import { Details } from './index'
 import { Marger } from '../layout/marger'
@@ -32,6 +32,7 @@ storiesOf('Details', module)
           <Grid>
             <GridCol>
               <Details
+                open={boolean('Open by default', false)}
                 summaryRender={({ open }) => (
                   <Link weight="regular" size="tiny" color="primary1">
                     {open && 'Close me!'}
