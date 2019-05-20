@@ -10,6 +10,7 @@ import {
 } from '@storybook/addon-knobs'
 import { StyleRoot } from 'radium'
 import { ExpandBoard } from '../../components/expandable/expand-board'
+import { ExpandBoardWithButtonItemList } from '../../components/expandable/expand-board.examples'
 import { Grid, GridCol } from '../../components/grid/grid'
 import { Text } from '../../components/typography/text'
 import COLORS from '../../constants/colors-config'

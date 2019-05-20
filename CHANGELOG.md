@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `RewardEdition` component.
+
 ## [2.6.0] - 2019-05-15
 
 Feature:

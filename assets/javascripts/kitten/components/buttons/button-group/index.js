@@ -9,11 +9,13 @@ const borderSize = pxToRem(2)
 
 const StyledButtonGroup = styled.div`
   display: flex;
+  justify-content: center;
 `
 
 const StyledButton = styled(Button)`
-  flex: 1;
   z-index: 0;
+  min-width: auto;
+  width: auto;
 
   &:not(:last-child) {
     margin-right: -${borderSize};

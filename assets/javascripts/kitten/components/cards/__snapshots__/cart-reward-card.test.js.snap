@@ -43,7 +43,9 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       >
         <svg
           className="k-ButtonIcon__svg"
+          height="14"
           viewBox="0 0 12 14"
+          width="12"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -133,7 +135,9 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       >
         <svg
           className="k-ButtonIcon__svg"
+          height="14"
           viewBox="0 0 12 14"
+          width="12"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -223,7 +227,9 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       >
         <svg
           className="k-ButtonIcon__svg"
+          height="14"
           viewBox="0 0 12 14"
+          width="12"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
