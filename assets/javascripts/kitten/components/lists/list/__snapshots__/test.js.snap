@@ -2,7 +2,7 @@
 
 exports[`<List> by default matches with snapshot 1`] = `
 <ul
-  className="list__StyledList-sc-1ns0hml-0 hEwMDn"
+  className="list__StyledList-sc-1ns0hml-0 bowvYc"
 >
   <li>
     <div>
@@ -24,7 +24,7 @@ exports[`<List> by default matches with snapshot 1`] = `
 
 exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
 <ul
-  className="list__StyledList-sc-1ns0hml-0 hEwMDn"
+  className="list__StyledList-sc-1ns0hml-0 bowvYc"
 >
   <li>
     <div
@@ -145,7 +145,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
 
 exports[`<List> with <ListButtonItem> with a disabled button matches with snapshot 1`] = `
 <ul
-  className="list__StyledList-sc-1ns0hml-0 hEwMDn"
+  className="list__StyledList-sc-1ns0hml-0 bowvYc"
 >
   <li>
     <div
