@@ -24,6 +24,13 @@ const radiusBorderRange = {
   step: 1,
 }
 
+const radiusBottomBorderRange = {
+  range: true,
+  min: 0,
+  max: 25,
+  step: 1,
+}
+
 storiesOf('Expandable', module)
   .addDecorator(withKnobs)
   .add(
@@ -82,6 +89,11 @@ storiesOf('Expandable', module)
                 withAnimation={boolean('With animation', true)}
                 borderRadius={number('Border radius', 4, radiusBorderRange)}
                 big={boolean('Big', false)}
+                withBottomBorderRadius={number(
+                  'Border bottom radius',
+                  4,
+                  radiusBottomBorderRange,
+                )}
               />
             </GridCol>
           </Grid>
