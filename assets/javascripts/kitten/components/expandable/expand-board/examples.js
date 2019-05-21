@@ -118,8 +118,8 @@ export class ExpandBoardWithButtonItemList extends PureComponent {
                 <List.ButtonItem
                   key={item.size}
                   disabled={item.disabled}
+                  withBottomBorderRadius={4}
                   {...this.buttonListItemStyle(key)}
-                  borderRadius={4}
                 >
                   <StyledButtonList>
                     <StyledButtonListItem

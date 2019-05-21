@@ -23,6 +23,15 @@ const Item = styled.div`
       border-top: ${pxToRem(2)} solid ${COLORS.line1};
     `}
 
+  &:last-child {
+    ${({ withBottomBorderRadius }) =>
+      withBottomBorderRadius &&
+      css`
+        border-bottom-left-radius: ${pxToRem(withBottomBorderRadius)};
+        border-bottom-right-radius: ${pxToRem(withBottomBorderRadius)};
+      `}
+  }
+
   ${({ disabled }) =>
     disabled &&
     css`
@@ -73,6 +82,7 @@ export const ButtonItem = ({
   disabled,
   style,
   withTopBorder,
+  withBottomBorderRadius,
   onClick,
   onKeyPress,
   onFocus,
@@ -131,6 +141,7 @@ export const ButtonItem = ({
       disabled={disabled}
       aria-disabled={disabled}
       withTopBorder={withTopBorder}
+      withBottomBorderRadius={withBottomBorderRadius}
       {...others}
     >
       <Content>{children}</Content>
@@ -151,6 +162,7 @@ ButtonItem.propTypes = {
   style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   disabled: PropTypes.bool,
   withTopBorder: PropTypes.bool,
+  withBottomBorderRadius: PropTypes.bool,
   onClick: PropTypes.func,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
@@ -163,6 +175,7 @@ ButtonItem.defaultProps = {
   style: {},
   disabled: false,
   withTopBorder: false,
+  withBottomBorderRadius: false,
   onClick: () => {},
   onFocus: () => {},
   onBlur: () => {},
