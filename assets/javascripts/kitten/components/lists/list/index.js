@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { pxToRem } from '../../../helpers/utils/typography'
 import { ButtonItem } from './components/button-item'
 
 const StyledList = styled.ul`
@@ -7,14 +8,14 @@ const StyledList = styled.ul`
   margin: 0;
   padding: 0;
 
-  > :last-child {
-    ${({ withBottomBorderRadius }) =>
-      withBottomBorderRadius &&
-      css`
+  ${({ withBottomBorderRadius }) =>
+    withBottomBorderRadius &&
+    css`
+      & li:last-child .k-List__button {
         border-bottom-left-radius: ${pxToRem(withBottomBorderRadius)};
         border-bottom-right-radius: ${pxToRem(withBottomBorderRadius)};
-      `}
-  }
+      }
+    `}
 
   ${({ styles }) => styles}
 `

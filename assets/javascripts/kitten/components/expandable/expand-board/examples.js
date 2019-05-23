@@ -103,8 +103,6 @@ export class ExpandBoardWithButtonItemList extends PureComponent {
       big,
     } = this.props
 
-    console.log(withBottomBorderRadius, 'withBottomBorderRadius')
-
     return (
       <ExpandBoard onClick={this.handleClick} withAnimation={withAnimation}>
         <ExpandBoard.Button
@@ -115,13 +113,12 @@ export class ExpandBoardWithButtonItemList extends PureComponent {
           {buttonText}
         </ExpandBoard.Button>
         <ExpandBoard.Content>
-          <List>
+          <List withBottomBorderRadius={withBottomBorderRadius}>
             {this.list.map((item, key) => {
               return (
                 <List.ButtonItem
                   key={item.size}
                   disabled={item.disabled}
-                  withBottomBorderRadius={withBottomBorderRadius}
                   {...this.buttonListItemStyle(key)}
                 >
                   <StyledButtonList>
