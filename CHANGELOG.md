@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `RewardEdition` component.
+- Feature: Add `VisuallyHidden` component for accessibility.
 
 ## [2.6.0] - 2019-05-15
 
