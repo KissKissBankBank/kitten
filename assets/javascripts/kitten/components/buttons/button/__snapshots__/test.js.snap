@@ -87,6 +87,13 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   fill: #fff;
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
+}
+
 <input
   className="c0"
   type="submit"
@@ -185,6 +192,20 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   fill: #fff;
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 13.75rem;
+    height: 4.38rem;
+  }
+}
+
 <button
   className="c0"
 >
@@ -278,6 +299,13 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 .c0:disabled svg {
   fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
 }
 
 <button
@@ -376,6 +404,13 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   fill: #fff;
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
+}
+
 <button
   className="c0"
 >
@@ -468,6 +503,13 @@ exports[`<Button /> with \`modifier\` prop matches with snapshot 1`] = `
 
 .c0:disabled svg {
   fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
 }
 
 <button
@@ -566,6 +608,20 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0:disabled svg {
   fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 10rem;
+    height: 2.5rem;
+  }
 }
 
 <button
@@ -667,6 +723,13 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   fill: #fff;
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
+}
+
 <button
   className="c0"
 >
@@ -759,6 +822,13 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0:disabled svg {
   fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
 }
 
 <button
@@ -858,6 +928,13 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0:disabled svg {
   fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
 }
 
 <button

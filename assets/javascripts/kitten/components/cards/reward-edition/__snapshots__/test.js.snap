@@ -147,6 +147,20 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   border-color: #eee;
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
 @media (max-width:767px) {
   .c5 {
     padding: 1.88rem;
