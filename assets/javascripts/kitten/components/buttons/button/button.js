@@ -85,6 +85,10 @@ export const DEFAULT = css`
   min-height: ${pxToRem(50)};
   padding: 0 ${pxToRem(30)};
   font-size: ${pxToRem(14)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(200)};
+    height: ${pxToRem(50)};
+  }
 `
 
 export const TINY = css`
@@ -92,6 +96,10 @@ export const TINY = css`
   min-height: ${pxToRem(40)};
   padding: 0 ${pxToRem(20)};
   font-size: ${pxToRem(14)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(160)};
+    height: ${pxToRem(40)};
+  }
 `
 
 export const BIG = css`
@@ -99,6 +107,10 @@ export const BIG = css`
   min-height: ${pxToRem(70)};
   padding: 0 ${pxToRem(40)};
   font-size: ${pxToRem(16)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(220)};
+    height: ${pxToRem(70)};
+  }
 `
 
 export class Button extends Component {
