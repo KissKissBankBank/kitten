@@ -7,9 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ExpandBoard = void 0;
-
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+exports.ExpandBoard = exports.ExpandBoardContent = exports.ExpandBoardButton = void 0;
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
@@ -23,24 +21,34 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireDefault(require("radium"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _button = require("../../components/buttons/button");
+var _button = require("../../../components/buttons/button/button");
 
-var _arrowIcon = require("../../components/icons/arrow-icon");
+var _arrowIcon = require("../../../components/icons/arrow-icon");
 
-var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _typography = require("../../helpers/utils/typography");
+var _typography = require("../../../helpers/utils/typography");
 
-var Button = (0, _radium.default)(_button.Button);
+var StyledButton = (0, _styledComponents.default)(_button.Button).withConfig({
+  displayName: "expand-board__StyledButton",
+  componentId: "sc-5cysn4-0"
+})(["width:100%;display:flex;align-items:center;justify-content:center;line-height:", ";", ""], (0, _typography.pxToRem)(21), function (_ref) {
+  var expanded = _ref.expanded;
+  return expanded && (0, _styledComponents.css)(["background-color:", ";border-color:", ";"], _colorsConfig.default.font1, _colorsConfig.default.font1);
+});
+var StyledArrowIcon = (0, _styledComponents.default)(_arrowIcon.ArrowIcon).withConfig({
+  displayName: "expand-board__StyledArrowIcon",
+  componentId: "sc-5cysn4-1"
+})(["width:", ";height:", ";margin-left:", ";"], (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(10));
 
 var ExpandBoardButton =
 /*#__PURE__*/
-function (_Component) {
-  (0, _inherits2.default)(ExpandBoardButton, _Component);
+function (_PureComponent) {
+  (0, _inherits2.default)(ExpandBoardButton, _PureComponent);
 
   function ExpandBoardButton() {
     (0, _classCallCheck2.default)(this, ExpandBoardButton);
@@ -55,103 +63,109 @@ function (_Component) {
           expandChildren = _this$props.expandChildren,
           expanded = _this$props.expanded,
           disabled = _this$props.disabled,
-          style = _this$props.style,
           onClick = _this$props.onClick,
-          ariaId = _this$props.ariaId;
+          ariaId = _this$props.ariaId,
+          borderRadius = _this$props.borderRadius,
+          big = _this$props.big;
       var defaultExpandChildren = expandChildren ? expandChildren : children;
-      var buttonStyles = expanded ? (0, _extends2.default)({}, style.base, style.expanded) : style.base;
-      return _react.default.createElement(Button, {
-        icon: true,
-        iconOnRight: true,
-        size: "big",
+      return _react.default.createElement(StyledButton, {
+        big: big,
         modifier: "helium",
         disabled: disabled,
         "aria-expanded": expanded,
         "aria-controls": ariaId,
-        style: buttonStyles,
         onClick: onClick,
-        type: "button"
-      }, _react.default.createElement("div", null, expanded ? defaultExpandChildren : children, _react.default.createElement(_arrowIcon.ArrowIcon, {
+        type: "button",
+        borderRadius: borderRadius
+      }, _react.default.createElement("div", null, expanded ? defaultExpandChildren : children, _react.default.createElement(StyledArrowIcon, {
         version: "solid",
         direction: expanded ? 'top' : 'bottom',
-        fill: _colorsConfig.default.background1,
-        style: style.arrow
+        fill: _colorsConfig.default.background1
       })));
     }
   }]);
   return ExpandBoardButton;
-}(_react.Component);
+}(_react.PureComponent);
 
+exports.ExpandBoardButton = ExpandBoardButton;
 ExpandBoardButton.propTypes = {
   children: _propTypes.default.node.isRequired,
   ariaId: _propTypes.default.string,
   expandChildren: _propTypes.default.node,
   expanded: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
-  style: _propTypes.default.object,
-  onClick: _propTypes.default.func
+  onClick: _propTypes.default.func,
+  big: _propTypes.default.bool,
+  borderRadius: _propTypes.default.number
 };
 ExpandBoardButton.defaultProps = {
   expandChildren: null,
   expanded: false,
   disabled: false,
-  style: {},
   onClick: function onClick() {},
-  ariaId: ''
+  ariaId: '',
+  borderRadius: 0,
+  big: true
 };
 
-var ExpandBoardContentBase =
+var ExpandBoardContent =
 /*#__PURE__*/
-function (_Component2) {
-  (0, _inherits2.default)(ExpandBoardContentBase, _Component2);
+function (_PureComponent2) {
+  (0, _inherits2.default)(ExpandBoardContent, _PureComponent2);
 
-  function ExpandBoardContentBase() {
-    (0, _classCallCheck2.default)(this, ExpandBoardContentBase);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(ExpandBoardContentBase).apply(this, arguments));
+  function ExpandBoardContent() {
+    (0, _classCallCheck2.default)(this, ExpandBoardContent);
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(ExpandBoardContent).apply(this, arguments));
   }
 
-  (0, _createClass2.default)(ExpandBoardContentBase, [{
+  (0, _createClass2.default)(ExpandBoardContent, [{
     key: "render",
     value: function render() {
       var _this$props2 = this.props,
           children = _this$props2.children,
-          ariaId = _this$props2.ariaId,
-          style = _this$props2.style;
+          ariaId = _this$props2.ariaId;
       return _react.default.createElement("div", {
-        id: ariaId,
-        style: style
+        id: ariaId
       }, children);
     }
   }]);
-  return ExpandBoardContentBase;
-}(_react.Component);
+  return ExpandBoardContent;
+}(_react.PureComponent);
 
-ExpandBoardContentBase.propTypes = {
+exports.ExpandBoardContent = ExpandBoardContent;
+ExpandBoardContent.propTypes = {
   children: _propTypes.default.node.isRequired,
   ariaId: _propTypes.default.string
 };
-ExpandBoardContentBase.defaultProps = {
+ExpandBoardContent.defaultProps = {
   ariaId: ''
 };
-var ExpandBoardContent = (0, _radium.default)(ExpandBoardContentBase);
 
-var ExpandBoardBase =
+var growAnimation = function growAnimation() {
+  return (0, _styledComponents.keyframes)(["0%:{opacity:0;maxHeight:0;}100%:{opacity:1;maxHeight:this.props.animationMaxHeight;}grow;"]);
+};
+
+var shrinkAnimation = function shrinkAnimation() {
+  return (0, _styledComponents.keyframes)(["0%:{opacity:1;maxHeight:this.props.animationMaxHeight;}100%:{opacity:0;maxHeight:0;}schrink;"]);
+};
+
+var ExpandBoard =
 /*#__PURE__*/
-function (_Component3) {
-  (0, _inherits2.default)(ExpandBoardBase, _Component3);
+function (_PureComponent3) {
+  (0, _inherits2.default)(ExpandBoard, _PureComponent3);
 
-  function ExpandBoardBase() {
+  function ExpandBoard() {
     var _getPrototypeOf2;
 
     var _this;
 
-    (0, _classCallCheck2.default)(this, ExpandBoardBase);
+    (0, _classCallCheck2.default)(this, ExpandBoard);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(ExpandBoardBase)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(ExpandBoard)).call.apply(_getPrototypeOf2, [this].concat(args)));
     _this.state = {
       expanded: false,
       isShrinking: false,
@@ -165,27 +179,6 @@ function (_Component3) {
     _this.isContentComponent = function (component) {
       return component.type === ExpandBoardContent;
     };
-
-    _this.growAnimation = _radium.default.keyframes({
-      '0%': {
-        opacity: 0,
-        maxHeight: 0
-      },
-      '100%': {
-        opacity: 1,
-        maxHeight: _this.props.animationMaxHeight
-      }
-    }, 'grow');
-    _this.shrinkAnimation = _radium.default.keyframes({
-      '0%': {
-        opacity: 1,
-        maxHeight: _this.props.animationMaxHeight
-      },
-      '100%': {
-        opacity: 0,
-        maxHeight: 0
-      }
-    }, 'schrink');
 
     _this.handleAfterClick = function () {
       var _this$state = _this.state,
@@ -250,7 +243,7 @@ function (_Component3) {
           animationDelay: 0,
           animationIterationCount: 1,
           animationFillMode: 'forwards',
-          animationName: _this.shrinkAnimation,
+          animationName: shrinkAnimation,
           animationTimingFunction: 'ease-in-out'
         };
       }
@@ -262,7 +255,7 @@ function (_Component3) {
         animationDelay: 0,
         animationIterationCount: 1,
         animationFillMode: 'forwards',
-        animationName: _this.growAnimation,
+        animationName: growAnimation,
         animationTimingFunction: 'ease-in-out'
       };
     };
@@ -270,7 +263,7 @@ function (_Component3) {
     return _this;
   }
 
-  (0, _createClass2.default)(ExpandBoardBase, [{
+  (0, _createClass2.default)(ExpandBoard, [{
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -291,7 +284,7 @@ function (_Component3) {
             disabled: disabled,
             expanded: _this2.state.expanded,
             onClick: _this2.handleClick,
-            style: styles.button,
+            style: _react.default.createElement(StyledButton, null),
             ariaId: ariaId
           });
         }
@@ -309,12 +302,13 @@ function (_Component3) {
       }, button, this.state.expanded && content);
     }
   }]);
-  return ExpandBoardBase;
-}(_react.Component);
+  return ExpandBoard;
+}(_react.PureComponent);
 
-ExpandBoardBase.Button = ExpandBoardButton;
-ExpandBoardBase.Content = ExpandBoardContent;
-ExpandBoardBase.propTypes = {
+exports.ExpandBoard = ExpandBoard;
+ExpandBoard.Button = ExpandBoardButton;
+ExpandBoard.Content = ExpandBoardContent;
+ExpandBoard.propTypes = {
   children: _propTypes.default.node.isRequired,
   disabled: _propTypes.default.bool,
   style: _propTypes.default.object,
@@ -324,7 +318,7 @@ ExpandBoardBase.propTypes = {
   animationMaxHeight: _propTypes.default.string,
   animationShrinkingDuration: _propTypes.default.number
 };
-ExpandBoardBase.defaultProps = {
+ExpandBoard.defaultProps = {
   disabled: false,
   style: {},
   onClick: function onClick() {},
@@ -333,27 +327,3 @@ ExpandBoardBase.defaultProps = {
   animationMaxHeight: '100vh',
   animationShrinkingDuration: 0.5
 };
-var styles = {
-  button: {
-    base: {
-      width: '100%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      lineHeight: '1.3rem',
-      padding: "".concat((0, _typography.pxToRem)(22), " ").concat((0, _typography.pxToRem)(30))
-    },
-    expanded: {
-      backgroundColor: _colorsConfig.default.font1,
-      borderColor: _colorsConfig.default.font1
-    },
-    arrow: {
-      width: (0, _typography.pxToRem)(8),
-      height: '0.75rem',
-      // half of button base line-height
-      marginLeft: (0, _typography.pxToRem)(10)
-    }
-  }
-};
-var ExpandBoard = (0, _radium.default)(ExpandBoardBase);
-exports.ExpandBoard = ExpandBoard;

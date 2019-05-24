@@ -3,6 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "VisuallyHidden", {
+  enumerable: true,
+  get: function get() {
+    return _visuallyHidden.VisuallyHidden;
+  }
+});
 Object.defineProperty(exports, "Accordeon", {
   enumerable: true,
   get: function get() {
@@ -187,6 +193,12 @@ Object.defineProperty(exports, "RewardCard", {
   enumerable: true,
   get: function get() {
     return _rewardCard.RewardCard;
+  }
+});
+Object.defineProperty(exports, "RewardEdition", {
+  enumerable: true,
+  get: function get() {
+    return _rewardEdition.RewardEdition;
   }
 });
 Object.defineProperty(exports, "SimilarProjectsCard", {
@@ -910,6 +922,8 @@ Object.defineProperty(exports, "Video", {
   }
 });
 
+var _visuallyHidden = require("./components/accessibility/visually-hidden");
+
 var _accordeon = require("./components/accordeon");
 
 var _docLinkBox = require("./components/box/doc-link-box");
@@ -957,6 +971,8 @@ var _projectCreatorCard = require("./components/cards/project-creator-card");
 var _projectSimilarCard = require("./components/cards/project-similar-card");
 
 var _rewardCard = require("./components/cards/reward-card");
+
+var _rewardEdition = require("./components/cards/reward-edition");
 
 var _similarProjectsCard = require("./components/cards/similar-projects-card");
 

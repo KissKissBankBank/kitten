@@ -131,7 +131,8 @@ var ButtonItem = function ButtonItem(_ref7) {
     styles: style,
     disabled: disabled,
     "aria-disabled": disabled,
-    withTopBorder: withTopBorder
+    withTopBorder: withTopBorder,
+    className: "k-List__button"
   }, others), _react.default.createElement(Content, null, children), _react.default.createElement(Arrow, null, _react.default.createElement(ArrowIcon, {
     className: "k-Button__icon",
     focus: focus,

@@ -37,12 +37,12 @@ var borderSize = (0, _typography.pxToRem)(2);
 var StyledButtonGroup = _styledComponents.default.div.withConfig({
   displayName: "button-group__StyledButtonGroup",
   componentId: "sc-11uu9oe-0"
-})(["display:flex;"]);
+})(["display:flex;justify-content:center;"]);
 
 var StyledButton = (0, _styledComponents.default)(_button.Button).withConfig({
   displayName: "button-group__StyledButton",
   componentId: "sc-11uu9oe-1"
-})(["flex:1;z-index:0;&:not(:last-child){margin-right:-", ";}&:first-child{border-top-left-radius:", ";border-bottom-left-radius:", ";}&:last-child{border-top-right-radius:", ";border-bottom-right-radius:", ";}:active,:hover,:focus{border-radius:", ";z-index:1;}"], borderSize, borderRadius, borderRadius, borderRadius, borderRadius, borderRadius);
+})(["z-index:0;min-width:auto;width:auto;&:not(:last-child){margin-right:-", ";}&:first-child{border-top-left-radius:", ";border-bottom-left-radius:", ";}&:last-child{border-top-right-radius:", ";border-bottom-right-radius:", ";}:active,:hover,:focus{border-radius:", ";z-index:1;}"], borderSize, borderRadius, borderRadius, borderRadius, borderRadius, borderRadius);
 
 var ButtonGroup =
 /*#__PURE__*/

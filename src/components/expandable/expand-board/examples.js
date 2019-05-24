@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ExpandBoardWithButtonItemList = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -21,7 +23,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireWildcard(require("radium"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _expandBoard = require("kitten/components/expandable/expand-board");
 
@@ -31,12 +33,30 @@ var _grid = require("kitten/components/grid/grid");
 
 var _text = require("kitten/components/typography/text");
 
-var _colorsConfig = _interopRequireDefault(require("kitten/constants/colors-config"));
+var _typography = require("../../../helpers/utils/typography");
+
+var fadeInAnimation = function fadeInAnimation() {
+  return (0, _styledComponents.keyframes)(["0%:{opacity:0;}100%:{opacity:1;}fadeIn;"]);
+};
+
+var fadeOutAnimation = function fadeOutAnimation() {
+  return (0, _styledComponents.keyframes)(["0%:{opacity:1;height:auto}100%:{opacity:0;height:0;}fadeOut;"]);
+};
+
+var StyledButtonListItem = (0, _styledComponents.default)(_text.Text).withConfig({
+  displayName: "examples__StyledButtonListItem",
+  componentId: "ewll9p-0"
+})(["margin:0;padding:0;line-height:", ";"], (0, _typography.pxToRem)(19.2));
+
+var StyledButtonList = _styledComponents.default.div.withConfig({
+  displayName: "examples__StyledButtonList",
+  componentId: "ewll9p-1"
+})(["margin:", " ", ";padding:0;"], (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(0));
 
 var ExpandBoardWithButtonItemList =
 /*#__PURE__*/
-function (_Component) {
-  (0, _inherits2.default)(ExpandBoardWithButtonItemList, _Component);
+function (_PureComponent) {
+  (0, _inherits2.default)(ExpandBoardWithButtonItemList, _PureComponent);
 
   function ExpandBoardWithButtonItemList() {
     var _getPrototypeOf2;
@@ -82,14 +102,24 @@ function (_Component) {
       if (!_this.props.withAnimation) return null;
 
       if (_this.state.expanded) {
-        return [styles.buttonListItem.expandAnimation, {
+        return {
+          animationDuration: '1s',
+          animationIterationCount: 1,
+          animationFillMode: 'forwards',
+          animationName: fadeInAnimation,
+          animationTimingFunction: 'ease-in-out',
           animationDelay: "".concat(0.2 * key, "s")
-        }];
+        };
       }
 
-      return [styles.buttonListItem.shrinkAnimation, {
+      return {
+        animationDuration: '.6s',
+        animationIterationCount: 1,
+        animationFillMode: 'forwards',
+        animationName: fadeOutAnimation,
+        animationTimingFunction: 'ease-in-out',
         animationDelay: "".concat(0.1 * key, "s")
-      }];
+      };
     };
 
     return _this;
@@ -103,25 +133,28 @@ function (_Component) {
       var _this$props = this.props,
           withAnimation = _this$props.withAnimation,
           expandedButtonText = _this$props.expandedButtonText,
-          buttonText = _this$props.buttonText;
+          buttonText = _this$props.buttonText,
+          borderRadius = _this$props.borderRadius,
+          withBottomBorderRadius = _this$props.withBottomBorderRadius,
+          big = _this$props.big;
       return _react.default.createElement(_expandBoard.ExpandBoard, {
         onClick: this.handleClick,
         withAnimation: withAnimation
       }, _react.default.createElement(_expandBoard.ExpandBoard.Button, {
-        expandChildren: expandedButtonText
-      }, buttonText), _react.default.createElement(_expandBoard.ExpandBoard.Content, null, _react.default.createElement(_list.List, null, this.list.map(function (item, key) {
-        return _react.default.createElement(_list.List.ButtonItem, {
+        expandChildren: expandedButtonText,
+        borderRadius: borderRadius,
+        big: big
+      }, buttonText), _react.default.createElement(_expandBoard.ExpandBoard.Content, null, _react.default.createElement(_list.List, {
+        withBottomBorderRadius: withBottomBorderRadius
+      }, this.list.map(function (item, key) {
+        return _react.default.createElement(_list.List.ButtonItem, (0, _extends2.default)({
           key: item.size,
-          disabled: item.disabled,
-          style: _this2.buttonListItemStyle(key)
-        }, _react.default.createElement("div", {
-          style: styles.buttonListItem.base
-        }, _react.default.createElement(_text.Text, {
+          disabled: item.disabled
+        }, _this2.buttonListItemStyle(key)), _react.default.createElement(StyledButtonList, null, _react.default.createElement(StyledButtonListItem, {
           tag: "p",
           weight: "regular",
           color: "font1",
-          size: "tiny",
-          style: styles.buttonListItem.content
+          size: "tiny"
         }, item.size), _react.default.createElement(_text.Text, {
           tag: "small",
           color: item.disabled ? 'font2' : 'font1',
@@ -131,56 +164,6 @@ function (_Component) {
     }
   }]);
   return ExpandBoardWithButtonItemList;
-}(_react.Component);
+}(_react.PureComponent);
 
 exports.ExpandBoardWithButtonItemList = ExpandBoardWithButtonItemList;
-
-var fadeInAnimation = _radium.default.keyframes({
-  '0%': {
-    opacity: 0
-  },
-  '100%': {
-    opacity: 1
-  }
-}, 'fadeIn');
-
-var fadeOutAnimation = _radium.default.keyframes({
-  '0%': {
-    opacity: 1,
-    height: 'auto'
-  },
-  '100%': {
-    opacity: 0,
-    height: 0
-  }
-}, 'fadeOut');
-
-var styles = {
-  buttonListItem: {
-    content: {
-      margin: 0,
-      padding: 0,
-      lineHeight: '1.2rem'
-    },
-    base: {
-      margin: '1rem 0',
-      padding: 0
-    },
-    expandAnimation: {
-      opacity: 0,
-      animationDuration: '1s',
-      animationIterationCount: 1,
-      animationFillMode: 'forwards',
-      animationName: fadeInAnimation,
-      animationTimingFunction: 'ease-in-out'
-    },
-    shrinkAnimation: {
-      opacity: 1,
-      animationDuration: '.6s',
-      animationIterationCount: 1,
-      animationFillMode: 'forwards',
-      animationName: fadeOutAnimation,
-      animationTimingFunction: 'ease-in-out'
-    }
-  }
-};
