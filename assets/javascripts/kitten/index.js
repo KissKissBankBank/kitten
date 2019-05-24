@@ -1,3 +1,6 @@
+// Accessibility
+export { VisuallyHidden } from './components/accessibility/visually-hidden'
+
 // Accordeon
 export { Accordeon } from './components/accordeon'
 
