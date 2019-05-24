@@ -1,9 +1,34 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import classNames from 'classnames'
-import { Marger } from '../../components/layout/marger'
-import { CloseButton } from '../../components/buttons/close-button'
+import { Marger } from '../../../components/layout/marger'
+import { CloseButton } from '../../../components/buttons/close-button'
+import { pxToRem } from '../../../helpers/utils/typography'
+import COLORS from '../../../constants/colors-config'
 
-export class Popover extends Component {
+const StyledPopover = styled.div`
+  position: relative;
+  width: ${pxToRem(520)};
+  box-sizing: border-box;
+  background-color: ${COLORS.background1};
+`
+
+const StyledPopoverContainer = styled.div`
+  min-height: ${pxToRem(245)};
+  box-sizing: border-box;
+`
+
+export class Popover extends PureComponent {
+  static propTypes = {}
+
+  static defaultProps = {
+    onCloseClick: null,
+    closeButtonLabel: 'Close',
+    popoverClassName: '',
+    containerClassName: '',
+  }
+
   constructor(props) {
     super(props)
 
@@ -47,34 +72,19 @@ export class Popover extends Component {
       ...popoverAttributes
     } = this.props
 
-    const popoverClassNames = classNames('k-Popover', popoverClassName)
-
-    const containerClassNames = classNames(
-      'k-Popover__container',
-      containerClassName,
-    )
-
     return (
-      <div
+      <StyledPopover
         ref="popover"
-        className={popoverClassNames}
         role="dialog"
         aria-hidden="true"
         aria-labelledby={titleAriaLabelId}
         {...popoverAttributes}
       >
-        <div className={containerClassNames}>
+        <StyledPopoverContainer>
           {this.renderContent()}
           <div>{this.renderCloseButton()}</div>
-        </div>
-      </div>
+        </StyledPopoverContainer>
+      </StyledPopover>
     )
   }
-}
-
-Popover.defaultProps = {
-  onCloseClick: null,
-  closeButtonLabel: 'Close',
-  popoverClassName: '',
-  containerClassName: '',
 }
