@@ -34,16 +34,15 @@ export class ExpandBoardButton extends PureComponent {
     expandChildren: PropTypes.node,
     expanded: PropTypes.bool,
     disabled: PropTypes.bool,
-    style: PropTypes.object,
     onClick: PropTypes.func,
     big: PropTypes.bool,
+    borderRadius: PropTypes.number,
   }
 
   static defaultProps = {
     expandChildren: null,
     expanded: false,
     disabled: false,
-    style: {},
     onClick: () => {},
     ariaId: '',
     borderRadius: 0,
