@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `RewardEdition` stories.
-- Fix: IE11 Button height compatibility fix
-- Feature: Create `RewardEdition` component.
-- Feature: Add `VisuallyHidden` component for accessibility.
+## [2.7.0] - 2019-05-24
+
+Features:
+- Create `RewardEdition` component.
+- Update `RewardEdition` stories.
+- Add `VisuallyHidden` component for accessibility.
+
+Fix:
+- IE11 Button height compatibility fix.
 
 ## [2.6.0] - 2019-05-15
 
