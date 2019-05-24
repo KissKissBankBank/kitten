@@ -131,6 +131,7 @@ export const ButtonItem = ({
       disabled={disabled}
       aria-disabled={disabled}
       withTopBorder={withTopBorder}
+      className="k-List__button"
       {...others}
     >
       <Content>{children}</Content>

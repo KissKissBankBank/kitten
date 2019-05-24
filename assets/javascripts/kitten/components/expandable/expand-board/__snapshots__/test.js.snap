@@ -2,44 +2,26 @@
 
 exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by default matches with snapshot 1`] = `
 <div
-  data-radium={true}
   style={Object {}}
 >
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="k-Button k-Button--helium k-Button--big k-Button--icon k-Button--iconRight"
-    data-radium={true}
+    className="expand-board__StyledButton-sc-5cysn4-0 cOHgCM button__StyledButton-sc-1q5nte0-0 YinYP"
     disabled={false}
     onClick={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-        "lineHeight": "1.3rem",
-        "padding": "1.38rem 1.88rem",
-        "width": "100%",
-      }
-    }
-    tabIndex={null}
     type="button"
   >
-    <div
-      data-radium={true}
-    >
+    <div>
       Alice
       <svg
-        className=""
+        className="expand-board__StyledArrowIcon-sc-5cysn4-1 dNmHEq"
         data-radium={true}
         fill="#fff"
         height="5.64"
         style={
           Object {
-            "height": "0.75rem",
-            "marginLeft": "0.63rem",
             "transform": "rotate(180deg)",
-            "width": "0.5rem",
           }
         }
         viewBox="0 0 8.48 5.64"
@@ -57,44 +39,26 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
 
 exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> disabled matches with snapshot 1`] = `
 <div
-  data-radium={true}
   style={Object {}}
 >
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="k-Button k-Button--helium k-Button--big k-Button--icon k-Button--iconRight"
-    data-radium={true}
+    className="expand-board__StyledButton-sc-5cysn4-0 cOHgCM button__StyledButton-sc-1q5nte0-0 YinYP"
     disabled={true}
     onClick={[Function]}
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "justifyContent": "center",
-        "lineHeight": "1.3rem",
-        "padding": "1.38rem 1.88rem",
-        "width": "100%",
-      }
-    }
-    tabIndex={null}
     type="button"
   >
-    <div
-      data-radium={true}
-    >
+    <div>
       Alice
       <svg
-        className=""
+        className="expand-board__StyledArrowIcon-sc-5cysn4-1 dNmHEq"
         data-radium={true}
         fill="#fff"
         height="5.64"
         style={
           Object {
-            "height": "0.75rem",
-            "marginLeft": "0.63rem",
             "transform": "rotate(180deg)",
-            "width": "0.5rem",
           }
         }
         viewBox="0 0 8.48 5.64"
@@ -112,7 +76,6 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
 
 exports[`<ExpandBoard /> with random content matches with snapshot 1`] = `
 <div
-  data-radium={true}
   style={Object {}}
 />
 `;
