@@ -54,7 +54,13 @@ storiesOf('Cards/RewardEdition', module)
 
             <div className="k-u-hidden@m-up">
               <ExpandBoard>
-                <ExpandBoard.Button>Button1</ExpandBoard.Button>
+                <ExpandBoard.Button
+                  big={false}
+                  borderRadius={4}
+                  withBottomBorderRadius={4}
+                >
+                  Button1
+                </ExpandBoard.Button>
                 <ExpandBoard.Content>
                   <StyledButton>Button2</StyledButton>
                   <StyledButton>Button3</StyledButton>
