@@ -13,12 +13,6 @@ const StyledButton = styled.button`
   justify-content: center;
   position: relative;
 
-  ${({ modifier }) =>
-    modifier === 'valid' &&
-    css`
-      flex-direction: column;
-    `}
-
   box-sizing: border-box;
   ${() => DEFAULT}
 
@@ -38,13 +32,17 @@ const StyledButton = styled.button`
   }
 
   > :nth-child(n) {
-    ${({ modifier }) =>
-      modifier !== 'valid' &&
-      css`
-        margin-right: ${pxToRem(10)};
-        text-align: left;
-      `}
+    margin-right: ${pxToRem(10)};
+    text-align: left;
   }
+
+  ${({ modifier }) =>
+    modifier === 'valid' &&
+    css`
+      > :nth-last-child(2) {
+        margin-right: 0;
+      }
+    `}
 
   > :last-child {
     margin-right: 0;
@@ -84,11 +82,7 @@ const StyledButton = styled.button`
         `}
     `}
 
-  ${({ modifier }) => {
-    if (modifier !== 'valid') return modifierStyles(modifier)
-
-    return modifierStyles('valid')
-  }}
+  ${({ modifier }) => modifierStyles(modifier)}
 `
 
 const iconSize = 25
@@ -183,9 +177,10 @@ export class Button extends Component {
 
   render() {
     const { children, modifier, ...props } = this.props
+
     return (
       <StyledButton modifier={modifier} {...props}>
-        <span>{children}</span>
+        {children}
         {modifier === 'valid' && (
           <Checked>
             <CheckedIcon width="10" title={null} />
