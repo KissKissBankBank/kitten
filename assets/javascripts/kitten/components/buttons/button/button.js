@@ -5,11 +5,17 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
+import { CheckedIcon } from '../../icons/checked-icon'
 
 const StyledButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
+  ${({ isChecked }) => css`
+    flex-direction: column;
+  `}
 
   box-sizing: border-box;
   ${() => DEFAULT}
@@ -30,8 +36,12 @@ const StyledButton = styled.button`
   }
 
   > :nth-child(n) {
-    margin-right: ${pxToRem(10)};
-    text-align: left;
+    ${({ isChecked }) =>
+      !isChecked &&
+      css`
+        margin-right: ${pxToRem(10)};
+        text-align: left;
+      `}
   }
 
   > :last-child {
@@ -72,7 +82,36 @@ const StyledButton = styled.button`
         `}
     `}
 
-  ${({ modifier }) => modifierStyles(modifier)}
+  ${({ modifier, isChecked }) => {
+    if (!isChecked) return modifierStyles(modifier)
+
+    return modifierStyles('lithium', true)
+  }}
+`
+
+const iconSize = 25
+
+const Checked = styled.span`
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: ${pxToRem(iconSize)};
+  height: ${pxToRem(iconSize)};
+
+  background-color: ${COLORS.primary1};
+  border-color: ${COLORS.primary1};
+  border-radius: 100%;
+  box-sizing: border-box;
+
+  position: absolute;
+  bottom: -${pxToRem(iconSize / 2)};
+
+  & > svg {
+    fill: ${COLORS.background1};
+  }
 `
 
 export const FLUID = css`
@@ -120,6 +159,7 @@ export class Button extends Component {
     big: PropTypes.bool,
     fluid: PropTypes.bool,
     icon: PropTypes.bool,
+    isChecked: PropTypes.bool,
     modifier: PropTypes.oneOf([
       'hydrogen',
       'helium',
@@ -137,9 +177,20 @@ export class Button extends Component {
     icon: false,
     modifier: 'hydrogen',
     borderRadius: 0,
+    isChecked: false,
   }
 
   render() {
-    return <StyledButton {...this.props} />
+    const { children, isChecked, ...props } = this.props
+    return (
+      <StyledButton isChecked={isChecked} {...props}>
+        <span>{children}</span>
+        {isChecked && (
+          <Checked>
+            <CheckedIcon width="10" title={null} />
+          </Checked>
+        )}
+      </StyledButton>
+    )
   }
 }

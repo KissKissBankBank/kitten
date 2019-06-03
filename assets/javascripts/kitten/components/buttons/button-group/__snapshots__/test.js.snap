@@ -14,6 +14,10 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -139,17 +143,23 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   <button
     className="c1 c2"
   >
-    Button1
+    <span>
+      Button1
+    </span>
   </button>
   <button
     className="c1 c2"
   >
-    Button2
+    <span>
+      Button2
+    </span>
   </button>
   <button
     className="c1 c2"
   >
-    Button3
+    <span>
+      Button3
+    </span>
   </button>
 </div>
 `;

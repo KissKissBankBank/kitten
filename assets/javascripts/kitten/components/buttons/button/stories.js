@@ -154,6 +154,33 @@ storiesOf('Buttons/Button', module)
     { info },
   )
   .add(
+    'with text and checked icon',
+    () => {
+      return (
+        <Marger top="4" bottom="4">
+          <Container>
+            <Grid>
+              <GridCol>
+                <Button
+                  tiny={boolean('Tiny', false)}
+                  big={boolean('Big', false)}
+                  isChecked={boolean('Is ticked', true)}
+                  fluid={boolean('Fluid', false)}
+                  modifier={select('Modifier', modifierOptions, 'hydrogen')}
+                  disabled={boolean('Disabled', false)}
+                  borderRadius={number('Border radius', 0, radiusBorderRange)}
+                >
+                  {text('Text', 'MyButton')}
+                </Button>
+              </GridCol>
+            </Grid>
+          </Container>
+        </Marger>
+      )
+    },
+    { info },
+  )
+  .add(
     'with text and icon',
     () => {
       const iconPosition = radios('Icon position', svgPositionOptions, 'left')

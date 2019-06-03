@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 
-export const modifierStyles = modifier => {
+export const modifierStyles = (modifier, changeless = false) => {
   let borderColor
   let borderStyle = 'solid'
   let backgroundColor
@@ -58,26 +58,29 @@ export const modifierStyles = modifier => {
 
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
-    :hover,
-    :focus {
-      border-color: ${COLORS.primary2};
-      background-color: ${COLORS.primary2};
-      color: ${COLORS.background1};
+    ${!changeless &&
+      css`
+        :hover,
+        :focus {
+          border-color: ${COLORS.primary2};
+          background-color: ${COLORS.primary2};
+          color: ${COLORS.background1};
 
-      svg {
-        fill: ${COLORS.background1};
-      }
-    }
+          svg {
+            fill: ${COLORS.background1};
+          }
+        }
 
-    :active {
-      border-color: ${COLORS.primary3};
-      background-color: ${COLORS.primary3};
-      color: ${COLORS.background1};
+        :active {
+          border-color: ${COLORS.primary3};
+          background-color: ${COLORS.primary3};
+          color: ${COLORS.background1};
 
-      svg {
-        fill: ${COLORS.background1};
-      }
-    }
+          svg {
+            fill: ${COLORS.background1};
+          }
+        }
+      `}
 
     :disabled {
       border-color: ${COLORS.line2};

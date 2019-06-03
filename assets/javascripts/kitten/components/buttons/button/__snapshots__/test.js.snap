@@ -14,6 +14,10 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -98,7 +102,9 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   className="c0"
   type="submit"
   value="MyButton"
-/>
+>
+  <span />
+</input>
 `;
 
 exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
@@ -115,6 +121,10 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -209,7 +219,9 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 <button
   className="c0"
 >
-  MyButton
+  <span>
+    MyButton
+  </span>
 </button>
 `;
 
@@ -227,6 +239,10 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -311,7 +327,9 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 <button
   className="c0"
 >
-  MyButton
+  <span>
+    MyButton
+  </span>
 </button>
 `;
 
@@ -329,6 +347,10 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -414,7 +436,136 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 <button
   className="c0"
 >
-  MyButton
+  <span>
+    MyButton
+  </span>
+</button>
+`;
+
+exports[`<Button /> with \`isChecked\` prop matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.13rem;
+  padding: 0 1.88rem;
+  font-size: 0.88rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  border: 0.13rem solid #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg {
+  fill: #19b4fa;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg {
+  fill: #fff;
+}
+
+.c1 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 1.56rem;
+  height: 1.56rem;
+  background-color: #19b4fa;
+  border-color: #19b4fa;
+  border-radius: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -0.78rem;
+}
+
+.c1 > svg {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
+}
+
+<button
+  className="c0"
+>
+  <span>
+    MyButton
+  </span>
+  <span
+    className="c1"
+  >
+    <svg
+      fill="#fff"
+      viewBox="0 0 11 8"
+      width="10"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+      />
+      <path
+        d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+      />
+    </svg>
+  </span>
 </button>
 `;
 
@@ -432,6 +583,10 @@ exports[`<Button /> with \`modifier\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -515,7 +670,9 @@ exports[`<Button /> with \`modifier\` prop matches with snapshot 1`] = `
 <button
   className="c0"
 >
-  MyButton
+  <span>
+    MyButton
+  </span>
 </button>
 `;
 
@@ -533,6 +690,10 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -627,7 +788,9 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 <button
   className="c0"
 >
-  MyButton
+  <span>
+    MyButton
+  </span>
 </button>
 `;
 
@@ -645,6 +808,10 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -733,7 +900,9 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 <button
   className="c0"
 >
-  !
+  <span>
+    !
+  </span>
 </button>
 `;
 
@@ -751,6 +920,10 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -835,10 +1008,12 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   className="c0"
 >
   <span>
-    My
-  </span>
-  <span>
-    Button
+    <span>
+      My
+    </span>
+    <span>
+      Button
+    </span>
   </span>
 </button>
 `;
@@ -857,6 +1032,10 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -940,6 +1119,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 <button
   className="c0"
 >
-  MyButton
+  <span>
+    MyButton
+  </span>
 </button>
 `;
