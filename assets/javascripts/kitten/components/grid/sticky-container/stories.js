@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { StickyContainer } from './index'
@@ -54,6 +54,48 @@ const BlockContent = () => {
   )
 }
 
+const MainComponent = () => {
+  const component = useRef(null)
+
+  return (
+    <Container>
+      <div
+        style={{
+          minHeight: '1200px',
+          backgroundColor: COLORS.line1,
+          position: 'relative',
+        }}
+      >
+        <StickyContainer isSticky="topOnScrollUp" top="0" ref={component}>
+          <div
+            style={{
+              fontSize: '40px',
+              lineHeight: '40px',
+            }}
+          >
+            🐈
+          </div>
+        </StickyContainer>
+        <BlockContent />
+        <button
+          onClick={() => {
+            component.current.setSticky()
+          }}
+        >
+          Stik me!
+        </button>
+        <button
+          onClick={() => {
+            component.current.setUnsticky()
+          }}
+        >
+          Unstik me!
+        </button>
+      </div>
+    </Container>
+  )
+}
+
 storiesOf('Grid/StickyContainer', module)
   .add(
     'isSticky="always"',
@@ -81,32 +123,7 @@ storiesOf('Grid/StickyContainer', module)
       </Container>
     )),
   )
-  .add(
-    'isSticky="topOnScrollUp"',
-    withInfo(info)(() => (
-      <Container>
-        <div
-          style={{
-            minHeight: '1200px',
-            backgroundColor: COLORS.line1,
-            position: 'relative',
-          }}
-        >
-          <StickyContainer isSticky="topOnScrollUp" top="0">
-            <div
-              style={{
-                fontSize: '40px',
-                lineHeight: '40px',
-              }}
-            >
-              🐈
-            </div>
-          </StickyContainer>
-          <BlockContent />
-        </div>
-      </Container>
-    )),
-  )
+  .add('isSticky="topOnScrollUp"', withInfo(info)(() => <MainComponent />))
   .add(
     'isSticky="bottomOnScrollDown"',
     withInfo(info)(() => (
