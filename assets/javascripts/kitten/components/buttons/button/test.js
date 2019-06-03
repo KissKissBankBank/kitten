@@ -16,16 +16,6 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `isChecked` prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<Button isChecked>MyButton</Button>).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with `tiny` prop', () => {
     beforeEach(() => {
       component = renderer.create(<Button tiny>MyButton</Button>).toJSON()
