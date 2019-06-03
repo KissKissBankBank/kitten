@@ -139,19 +139,16 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 >
   <button
     className="c1 c2"
-    tabIndex={null}
   >
     Button1
   </button>
   <button
     className="c1 c2"
-    tabIndex={null}
   >
     Button2
   </button>
   <button
     className="c1 c2"
-    tabIndex={null}
   >
     Button3
   </button>

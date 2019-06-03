@@ -182,7 +182,6 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
     <button
       aria-label="Garbage Button"
       className="c3 c4"
-      tabIndex={null}
       type="button"
     >
       <svg

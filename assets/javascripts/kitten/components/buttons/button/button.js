@@ -162,10 +162,10 @@ export class Button extends Component {
 
   render() {
     const { children, modifier, ...props } = this.props
-    const tabIndex = modifier === 'valid' ? '-1' : null
+    const checked = modifier === 'valid' && { 'aria-checked': true }
 
     return (
-      <StyledButton modifier={modifier} tabIndex={tabIndex} {...props}>
+      <StyledButton modifier={modifier} {...checked} {...props}>
         {children}
         {modifier === 'valid' && (
           <CheckedCircleIcon
