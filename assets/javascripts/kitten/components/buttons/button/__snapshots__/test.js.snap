@@ -97,6 +97,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 <input
   className="c0"
+  tabIndex={null}
   type="submit"
   value="MyButton"
 />
@@ -210,6 +211,7 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 
 <button
   className="c0"
+  tabIndex={null}
 >
   MyButton
 </button>
@@ -313,6 +315,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 <button
   className="c0"
+  tabIndex={null}
 >
   MyButton
 </button>
@@ -417,6 +420,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 <button
   className="c0"
+  tabIndex={null}
 >
   MyButton
 </button>
@@ -519,6 +523,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 
 <button
   className="c0"
+  tabIndex={null}
 >
   MyButton
 </button>
@@ -632,6 +637,7 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 
 <button
   className="c0"
+  tabIndex={null}
 >
   MyButton
 </button>
@@ -746,6 +752,7 @@ exports[`<Button /> with \`valid\` \`modifier\` prop matches with snapshot 1`] =
 
 <button
   className="c0"
+  tabIndex="-1"
 >
   MyButton
   <span
@@ -870,6 +877,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 <button
   className="c0"
+  tabIndex={null}
 >
   !
 </button>
@@ -972,6 +980,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 <button
   className="c0"
+  tabIndex={null}
 >
   <span>
     My
@@ -1079,6 +1088,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 <button
   className="c0"
+  tabIndex={null}
 >
   MyButton
 </button>

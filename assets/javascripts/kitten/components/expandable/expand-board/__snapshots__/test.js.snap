@@ -10,6 +10,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
     className="expand-board__StyledButton-sc-5cysn4-0 cOHgCM button__StyledButton-sc-1q5nte0-0 kDmBiZ"
     disabled={false}
     onClick={[Function]}
+    tabIndex={null}
     type="button"
   >
     <div>
@@ -47,6 +48,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
     className="expand-board__StyledButton-sc-5cysn4-0 cOHgCM button__StyledButton-sc-1q5nte0-0 kDmBiZ"
     disabled={true}
     onClick={[Function]}
+    tabIndex={null}
     type="button"
   >
     <div>
