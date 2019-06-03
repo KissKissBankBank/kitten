@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Features:
-- Add checked icon to `Button` component.
+- Add valid modifier to `Button` component.
 
 ## [2.7.0] - 2019-05-24
 

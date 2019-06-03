@@ -13,9 +13,11 @@ const StyledButton = styled.button`
   justify-content: center;
   position: relative;
 
-  ${({ isChecked }) => css`
-    flex-direction: column;
-  `}
+  ${({ modifier }) =>
+    modifier === 'valid' &&
+    css`
+      flex-direction: column;
+    `}
 
   box-sizing: border-box;
   ${() => DEFAULT}
@@ -36,8 +38,8 @@ const StyledButton = styled.button`
   }
 
   > :nth-child(n) {
-    ${({ isChecked }) =>
-      !isChecked &&
+    ${({ modifier }) =>
+      modifier !== 'valid' &&
       css`
         margin-right: ${pxToRem(10)};
         text-align: left;
@@ -82,10 +84,10 @@ const StyledButton = styled.button`
         `}
     `}
 
-  ${({ modifier, isChecked }) => {
-    if (!isChecked) return modifierStyles(modifier)
+  ${({ modifier }) => {
+    if (modifier !== 'valid') return modifierStyles(modifier)
 
-    return modifierStyles('lithium', true)
+    return modifierStyles('valid')
   }}
 `
 
@@ -159,7 +161,6 @@ export class Button extends Component {
     big: PropTypes.bool,
     fluid: PropTypes.bool,
     icon: PropTypes.bool,
-    isChecked: PropTypes.bool,
     modifier: PropTypes.oneOf([
       'hydrogen',
       'helium',
@@ -167,6 +168,7 @@ export class Button extends Component {
       'beryllium',
       'carbon',
       'oxygen',
+      'valid',
     ]),
   }
 
@@ -177,15 +179,14 @@ export class Button extends Component {
     icon: false,
     modifier: 'hydrogen',
     borderRadius: 0,
-    isChecked: false,
   }
 
   render() {
-    const { children, isChecked, ...props } = this.props
+    const { children, modifier, ...props } = this.props
     return (
-      <StyledButton isChecked={isChecked} {...props}>
+      <StyledButton modifier={modifier} {...props}>
         <span>{children}</span>
-        {isChecked && (
+        {modifier === 'valid' && (
           <Checked>
             <CheckedIcon width="10" title={null} />
           </Checked>

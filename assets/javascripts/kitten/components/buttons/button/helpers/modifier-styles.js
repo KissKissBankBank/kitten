@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 
-export const modifierStyles = (modifier, changeless = false) => {
+export const modifierStyles = modifier => {
   let borderColor
   let borderStyle = 'solid'
   let backgroundColor
@@ -22,6 +22,7 @@ export const modifierStyles = (modifier, changeless = false) => {
       break
 
     case 'lithium':
+    case 'valid':
       borderColor = COLORS.primary4
       backgroundColor = COLORS.background1
       color = COLORS.primary1
@@ -58,7 +59,7 @@ export const modifierStyles = (modifier, changeless = false) => {
 
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
-    ${!changeless &&
+    ${modifier !== 'valid' &&
       css`
         :hover,
         :focus {

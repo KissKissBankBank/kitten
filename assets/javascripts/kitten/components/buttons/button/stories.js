@@ -43,6 +43,7 @@ const modifierOptions = {
   Beryllium: 'beryllium',
   Carbon: 'carbon',
   Oxygen: 'oxygen',
+  Valid: 'valid',
 }
 
 const info = {
@@ -138,33 +139,6 @@ storiesOf('Buttons/Button', module)
                 <Button
                   tiny={boolean('Tiny', false)}
                   big={boolean('Big', false)}
-                  fluid={boolean('Fluid', false)}
-                  modifier={select('Modifier', modifierOptions, 'hydrogen')}
-                  disabled={boolean('Disabled', false)}
-                  borderRadius={number('Border radius', 0, radiusBorderRange)}
-                >
-                  {text('Text', 'MyButton')}
-                </Button>
-              </GridCol>
-            </Grid>
-          </Container>
-        </Marger>
-      )
-    },
-    { info },
-  )
-  .add(
-    'with text and checked icon',
-    () => {
-      return (
-        <Marger top="4" bottom="4">
-          <Container>
-            <Grid>
-              <GridCol>
-                <Button
-                  tiny={boolean('Tiny', false)}
-                  big={boolean('Big', false)}
-                  isChecked={boolean('Is ticked', true)}
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
