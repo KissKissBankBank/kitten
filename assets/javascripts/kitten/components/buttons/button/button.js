@@ -177,9 +177,10 @@ export class Button extends Component {
 
   render() {
     const { children, modifier, ...props } = this.props
+    const tabIndex = modifier === 'valid' ? '-1' : null
 
     return (
-      <StyledButton modifier={modifier} {...props}>
+      <StyledButton modifier={modifier} tabIndex={tabIndex} {...props}>
         {children}
         {modifier === 'valid' && (
           <Checked>
