@@ -1,4 +1,11 @@
-import React, { Fragment, useRef, useState, useEffect } from 'react'
+import React, {
+  Fragment,
+  useRef,
+  useState,
+  useEffect,
+  useImperativeHandle,
+  forwardRef,
+} from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import throttle from 'lodash/throttle'
@@ -53,13 +60,10 @@ function useScrollDirection() {
   return [difference > 0, difference < 0]
 }
 
-export const StickyContainer = ({
-  children,
-  top,
-  bottom,
-  isSticky,
-  ...other
-}) => {
+const StickyContainerBase = (
+  { children, top, bottom, isSticky, ...other },
+  ref,
+) => {
   const currentStickyContainer = useRef(null)
 
   const [stuck, setStuckState] = useState(false)
@@ -67,6 +71,11 @@ export const StickyContainer = ({
   const [currentlyUnsticking, setCurrentlyUnstickingState] = useState(false)
 
   const [scrollDirectionDown, scrollDirectionUp] = useScrollDirection()
+
+  useImperativeHandle(ref, () => ({
+    setSticky,
+    setUnsticky,
+  }))
 
   const setSticky = () => {
     setStuckState(true)
@@ -198,6 +207,8 @@ export const StickyContainer = ({
     </Fragment>
   )
 }
+
+export const StickyContainer = forwardRef(StickyContainerBase)
 
 StickyContainer.propTypes = {
   top: PropTypes.number,
