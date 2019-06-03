@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Expose `setSticky`/`setUnsticky` methods in StickyContainer.
+- Feature: Expose `setSticky`/`setUnsticky` methods in StickyContainer.
 
 ## [2.7.0] - 2019-05-24
 
