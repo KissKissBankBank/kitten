@@ -77,7 +77,7 @@ function useScrollDirection() {
   return [difference > 0, difference < 0];
 }
 
-var StickyContainer = function StickyContainer(_ref4) {
+var StickyContainerBase = function StickyContainerBase(_ref4, ref) {
   var children = _ref4.children,
       top = _ref4.top,
       bottom = _ref4.bottom,
@@ -104,6 +104,13 @@ var StickyContainer = function StickyContainer(_ref4) {
       _useScrollDirection2 = (0, _slicedToArray2.default)(_useScrollDirection, 2),
       scrollDirectionDown = _useScrollDirection2[0],
       scrollDirectionUp = _useScrollDirection2[1];
+
+  (0, _react.useImperativeHandle)(ref, function () {
+    return {
+      setSticky: setSticky,
+      setUnsticky: setUnsticky
+    };
+  });
 
   var setSticky = function setSticky() {
     setStuckState(true);
@@ -195,6 +202,7 @@ var StickyContainer = function StickyContainer(_ref4) {
   }, other), children));
 };
 
+var StickyContainer = (0, _react.forwardRef)(StickyContainerBase);
 exports.StickyContainer = StickyContainer;
 StickyContainer.propTypes = {
   top: _propTypes.default.number,

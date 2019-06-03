@@ -7,6 +7,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 - Add valid modifier to `Button` component.
 
+## [2.8.0] - 2019-06-03
+
+Feature:
+- Expose `setSticky`/`setUnsticky` methods in StickyContainer.
+
 ## [2.7.0] - 2019-05-24
 
 Features:
