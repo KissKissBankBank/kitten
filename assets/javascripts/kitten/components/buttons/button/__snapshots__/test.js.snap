@@ -714,33 +714,10 @@ exports[`<Button /> with \`valid\` \`modifier\` prop matches with snapshot 1`] =
 }
 
 .c1 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   width: 1.56rem;
   height: 1.56rem;
-  background-color: #19b4fa;
-  border-color: #19b4fa;
-  border-radius: 100%;
-  box-sizing: border-box;
   position: absolute;
   bottom: -0.78rem;
-}
-
-.c1 > svg {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -755,23 +732,25 @@ exports[`<Button /> with \`valid\` \`modifier\` prop matches with snapshot 1`] =
   tabIndex="-1"
 >
   MyButton
-  <span
+  <svg
     className="c1"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    <svg
+    <title>
+      Checked circle
+    </title>
+    <circle
+      cx="10"
+      cy="10"
+      fill="#19b4fa"
+      r="10"
+    />
+    <path
+      d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
       fill="#fff"
-      viewBox="0 0 11 8"
-      width="10"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-      />
-      <path
-        d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
-      />
-    </svg>
-  </span>
+    />
+  </svg>
 </button>
 `;
 

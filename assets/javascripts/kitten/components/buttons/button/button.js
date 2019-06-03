@@ -5,7 +5,7 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
-import { CheckedIcon } from '../../icons/checked-icon'
+import { CheckedCircleIcon as KittenCheckedCircleIcon } from '../../icons/checked-circle-icon'
 
 const StyledButton = styled.button`
   display: inline-flex;
@@ -87,27 +87,12 @@ const StyledButton = styled.button`
 
 const iconSize = 25
 
-const Checked = styled.span`
-  flex-shrink: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+const CheckedCircleIcon = styled(KittenCheckedCircleIcon)`
   width: ${pxToRem(iconSize)};
   height: ${pxToRem(iconSize)};
 
-  background-color: ${COLORS.primary1};
-  border-color: ${COLORS.primary1};
-  border-radius: 100%;
-  box-sizing: border-box;
-
   position: absolute;
   bottom: -${pxToRem(iconSize / 2)};
-
-  & > svg {
-    fill: ${COLORS.background1};
-  }
 `
 
 export const FLUID = css`
@@ -183,9 +168,10 @@ export class Button extends Component {
       <StyledButton modifier={modifier} tabIndex={tabIndex} {...props}>
         {children}
         {modifier === 'valid' && (
-          <Checked>
-            <CheckedIcon width="10" title={null} />
-          </Checked>
+          <CheckedCircleIcon
+            circleColor={COLORS.primary1}
+            checkedColor={COLORS.background1}
+          />
         )}
       </StyledButton>
     )
