@@ -106,10 +106,12 @@ const checkedCircleIconStyle = size => {
   `
 }
 
-const CheckedCircleIcon = styled(KittenCheckedCircleIcon)`
+const CheckedCircleIcon = styled(({ big, tiny, ...others }) => (
+  <KittenCheckedCircleIcon {...others} />
+))`
   ${checkedCircleIconStyle()}
-  ${props => props['data-tiny'] && checkedCircleIconStyle('tiny')}
-  ${props => props['data-big'] && checkedCircleIconStyle('big')}
+  ${({ tiny }) => tiny && checkedCircleIconStyle('tiny')}
+  ${({ big }) => big && checkedCircleIconStyle('big')}
 
   position: absolute;
 `
@@ -188,8 +190,8 @@ export class Button extends Component {
         {children}
         {modifier === 'checked' && (
           <CheckedCircleIcon
-            data-big={props.big && props.big}
-            data-tiny={props.tiny && props.tiny}
+            big={props.big && props.big}
+            tiny={props.tiny && props.tiny}
             circleColor={COLORS.primary1}
             checkedColor={COLORS.background1}
           />
