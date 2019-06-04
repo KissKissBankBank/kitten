@@ -58,10 +58,10 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `valid` `modifier` prop', () => {
+  describe('with `checked` `modifier` prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<Button modifier="valid">MyButton</Button>)
+        .create(<Button modifier="checked">MyButton</Button>)
         .toJSON()
     })
 

@@ -22,7 +22,7 @@ export const modifierStyles = modifier => {
       break
 
     case 'lithium':
-    case 'valid':
+    case 'checked':
       borderColor = COLORS.primary4
       backgroundColor = COLORS.background1
       color = COLORS.primary1
@@ -59,7 +59,7 @@ export const modifierStyles = modifier => {
 
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
-    ${modifier !== 'valid' &&
+    ${modifier !== 'checked' &&
       css`
         :hover,
         :focus {

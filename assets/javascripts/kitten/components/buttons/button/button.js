@@ -37,7 +37,7 @@ const StyledButton = styled.button`
   }
 
   ${({ modifier }) =>
-    modifier === 'valid' &&
+    modifier === 'checked' &&
     css`
       > :nth-last-child(2) {
         margin-right: 0;
@@ -147,7 +147,7 @@ export class Button extends Component {
       'beryllium',
       'carbon',
       'oxygen',
-      'valid',
+      'checked',
     ]),
   }
 
@@ -162,12 +162,12 @@ export class Button extends Component {
 
   render() {
     const { children, modifier, ...props } = this.props
-    const checked = modifier === 'valid' && { 'aria-checked': true }
+    const checked = modifier === 'checked' && { 'aria-checked': true }
 
     return (
       <StyledButton modifier={modifier} {...checked} {...props}>
         {children}
-        {modifier === 'valid' && (
+        {modifier === 'checked' && (
           <CheckedCircleIcon
             circleColor={COLORS.primary1}
             checkedColor={COLORS.background1}
