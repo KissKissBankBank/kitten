@@ -6,15 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.9.2] - 2019-06-04
 
-Fix:
-  - Remove warning error from unknown `Button` props.
-  - Add `others` props to `SimpleCarousel` component.
+Fixes:
+- Remove warning error from unknown `Button` props.
+- Add `others` props to `SimpleCarousel` component.
 
 
 ## [2.9.1] - 2019-06-04
 
 Fix:
-  - Fix `checked` icon `Button` size.
+- Fix `checked` icon `Button` size.
 
 ## [2.9.0] - 2019-06-04
 
