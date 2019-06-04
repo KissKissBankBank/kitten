@@ -58,7 +58,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 gmSpwe"
+      className="marger__StyledMarger-q3lecu-0 jHHwGV"
     >
       <div
         className="marger__StyledMarger-q3lecu-0 jgfcQX"
@@ -150,7 +150,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       </button>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 gmSpwe"
+      className="marger__StyledMarger-q3lecu-0 jHHwGV"
     >
       <div
         className="marger__StyledMarger-q3lecu-0 jgfcQX"
@@ -242,7 +242,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 gmSpwe"
+      className="marger__StyledMarger-q3lecu-0 jHHwGV"
     >
       <div
         className="marger__StyledMarger-q3lecu-0 jgfcQX"

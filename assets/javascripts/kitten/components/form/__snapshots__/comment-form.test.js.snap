@@ -76,7 +76,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       }
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 gBXmMX"
+        className="marger__StyledMarger-q3lecu-0 koOrHT"
       >
         <textarea
           className="rmq-2904dc95 k-CommentForm__input k-u-weight-light"

@@ -77,7 +77,7 @@ exports[`<Timeline /> with default props matches with snapshot 1`] = `
         1
       </span>
       <div
-        className="marger__StyledMarger-q3lecu-0 gmxDmi"
+        className="marger__StyledMarger-q3lecu-0 kcPkMx"
       >
         foobar
       </div>
@@ -174,7 +174,7 @@ exports[`<Timeline /> with itemHeight props matches with snapshot 1`] = `
         1
       </span>
       <div
-        className="marger__StyledMarger-q3lecu-0 gmxDmi"
+        className="marger__StyledMarger-q3lecu-0 kcPkMx"
       >
         foobar
       </div>

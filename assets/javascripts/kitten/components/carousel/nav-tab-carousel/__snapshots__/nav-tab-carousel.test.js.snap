@@ -5,7 +5,7 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
   className="nav-tab-carousel__NavTabCarouselStyles-sc-1fg6mhx-0 drKXbI"
 >
   <div
-    className="styled-components__StyledLeftArrowContainer-jws9qo-3 kSGIyY"
+    className="styled-components__StyledLeftArrowContainer-jws9qo-3 bUljeS"
   >
     <svg
       className="styled-components__StyledArrowIcon-jws9qo-4 iqRCUK"
@@ -48,7 +48,7 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="styled-components__StyledRightArrowContainer-jws9qo-2 ezvKBF"
+    className="styled-components__StyledRightArrowContainer-jws9qo-2 fslvxn"
   >
     <div
       className="styled-components__StyledNextText-jws9qo-6 lewOJA"
@@ -82,7 +82,7 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
   className="nav-tab-carousel__NavTabCarouselStyles-sc-1fg6mhx-0 drKXbI"
 >
   <div
-    className="styled-components__StyledLeftArrowContainer-jws9qo-3 kSGIyY"
+    className="styled-components__StyledLeftArrowContainer-jws9qo-3 bUljeS"
   >
     <svg
       className="styled-components__StyledArrowIcon-jws9qo-4 iqRCUK"
@@ -122,7 +122,7 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="styled-components__StyledRightArrowContainer-jws9qo-2 ezvKBF"
+    className="styled-components__StyledRightArrowContainer-jws9qo-2 fslvxn"
   >
     <div
       className="styled-components__StyledNextText-jws9qo-6 lewOJA"

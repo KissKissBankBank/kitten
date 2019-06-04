@@ -17,7 +17,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 fiJAYL"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 dRjxbN"
     >
       <img
         alt=""
@@ -95,7 +95,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       className="marger__StyledMarger-q3lecu-0 jgfcQX"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 XfZGJ"
+        className="marger__StyledMarger-q3lecu-0 kmLYBJ"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -103,10 +103,10 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         />
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 kREYig"
+        className="marger__StyledMarger-q3lecu-0 deRNwX"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dDfskO"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 fqFQBk"
         />
       </div>
     </div>
@@ -138,7 +138,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     }
   >
     <div
-      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 fiJAYL"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 dRjxbN"
     >
       <img
         alt=""
@@ -216,7 +216,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       className="marger__StyledMarger-q3lecu-0 jgfcQX"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 XfZGJ"
+        className="marger__StyledMarger-q3lecu-0 kmLYBJ"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -226,10 +226,10 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         </p>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 kREYig"
+        className="marger__StyledMarger-q3lecu-0 deRNwX"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dDfskO"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 fqFQBk"
         />
         <p
           className="k-u-size-micro k-u-weight-regular"
@@ -299,7 +299,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 fiJAYL"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 dRjxbN"
     >
       <img
         alt=""
@@ -377,7 +377,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       className="marger__StyledMarger-q3lecu-0 jgfcQX"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 XfZGJ"
+        className="marger__StyledMarger-q3lecu-0 kmLYBJ"
       >
         <p
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -385,10 +385,10 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         />
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 kREYig"
+        className="marger__StyledMarger-q3lecu-0 deRNwX"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dDfskO"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 fqFQBk"
         />
       </div>
     </div>
@@ -420,7 +420,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     }
   >
     <div
-      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 fiJAYL"
+      className="k-Card__imageContainer marger__StyledMarger-q3lecu-0 dRjxbN"
     >
       <img
         alt="Image alt"
@@ -502,7 +502,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       className="marger__StyledMarger-q3lecu-0 jgfcQX"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 XfZGJ"
+        className="marger__StyledMarger-q3lecu-0 kmLYBJ"
       >
         <h4
           className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -512,10 +512,10 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         </h4>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 kREYig"
+        className="marger__StyledMarger-q3lecu-0 deRNwX"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dDfskO"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 fqFQBk"
         />
         <p
           className="k-u-size-micro k-u-weight-regular"

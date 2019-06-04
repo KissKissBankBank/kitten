@@ -2,7 +2,7 @@
 
 exports[`<DatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="date-picker__StyledDatePicker-snpu98-0 fXBBEq"
+  className="date-picker__StyledDatePicker-snpu98-0 ftQmZK"
 >
   <div
     className="DayPickerInput"
@@ -37,7 +37,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
 
 exports[`<DatePicker /> with custom input matches with snapshot 1`] = `
 <div
-  className="date-picker__StyledDatePicker-snpu98-0 fXBBEq"
+  className="date-picker__StyledDatePicker-snpu98-0 ftQmZK"
 >
   <div
     className="DayPickerInput"
