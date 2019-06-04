@@ -73,11 +73,35 @@ var StyledButton = _styledComponents.default.button.withConfig({
   return (0, _modifierStyles.modifierStyles)(modifier);
 });
 
-var iconSize = 25;
+var checkedCircleIconStyle = function checkedCircleIconStyle(size) {
+  var iconSize;
+
+  switch (size) {
+    case 'big':
+      iconSize = 24;
+      break;
+
+    case 'tiny':
+      iconSize = 15;
+      break;
+
+    default:
+      iconSize = 20;
+  }
+
+  return (0, _styledComponents.css)(["width:", ";height:", ";bottom:-", ";"], (0, _typography.pxToRem)(iconSize), (0, _typography.pxToRem)(iconSize), (0, _typography.pxToRem)(iconSize / 2));
+};
+
 var CheckedCircleIcon = (0, _styledComponents.default)(_checkedCircleIcon.CheckedCircleIcon).withConfig({
   displayName: "button__CheckedCircleIcon",
   componentId: "sc-1q5nte0-1"
-})(["width:", ";height:", ";position:absolute;bottom:-", ";"], (0, _typography.pxToRem)(iconSize), (0, _typography.pxToRem)(iconSize), (0, _typography.pxToRem)(iconSize / 2));
+})(["", " ", " ", " position:absolute;"], checkedCircleIconStyle(), function (_ref10) {
+  var tiny = _ref10.tiny;
+  return tiny && checkedCircleIconStyle('tiny');
+}, function (_ref11) {
+  var big = _ref11.big;
+  return big && checkedCircleIconStyle('big');
+});
 var FLUID = (0, _styledComponents.css)(["min-width:initial;width:100%;"]);
 exports.FLUID = FLUID;
 var DEFAULT = (0, _styledComponents.css)(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], (0, _typography.pxToRem)(200), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(200), (0, _typography.pxToRem)(50));
@@ -110,6 +134,8 @@ function (_Component) {
       return _react.default.createElement(StyledButton, (0, _extends2.default)({
         modifier: modifier
       }, checked, props), children, modifier === 'checked' && _react.default.createElement(CheckedCircleIcon, {
+        big: props.big,
+        tiny: props.tiny,
         circleColor: _colorsConfig.default.primary1,
         checkedColor: _colorsConfig.default.background1
       }));
