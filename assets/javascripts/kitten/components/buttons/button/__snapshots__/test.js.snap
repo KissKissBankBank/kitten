@@ -408,9 +408,7 @@ exports[`<Button /> with \`checked\` \`modifier\` prop matches with snapshot 1`]
 >
   MyButton
   <svg
-    big={false}
     className="c1"
-    tiny={false}
     viewBox="0 0 20 20"
     xmlns="http://www.w3.org/2000/svg"
   >

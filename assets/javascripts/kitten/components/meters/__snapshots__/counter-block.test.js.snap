@@ -38,7 +38,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       }
     >
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dGbQlI"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 hdUAoW"
       />
     </div>
     <p
@@ -69,7 +69,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       }
     >
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dGbQlI"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 hdUAoW"
       />
     </div>
   </div>
