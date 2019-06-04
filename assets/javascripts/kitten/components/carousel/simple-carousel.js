@@ -109,6 +109,7 @@ export class SimpleCarousel extends Component {
       paginationAlign,
       paginationStyle,
       bulletStyle,
+      ...others
     } = this.props
 
     const { totalPagesCount, currentPageNumber } = this.state
@@ -120,6 +121,7 @@ export class SimpleCarousel extends Component {
         <StyledContainer
           style={containerStyle}
           addBottomMargin={this.showPagination()}
+          {...others}
         >
           {React.Children.map(children, (item, index) => {
             return (
