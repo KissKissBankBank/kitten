@@ -22,6 +22,7 @@ export const modifierStyles = modifier => {
       break
 
     case 'lithium':
+    case 'checked':
       borderColor = COLORS.primary4
       backgroundColor = COLORS.background1
       color = COLORS.primary1
@@ -58,26 +59,29 @@ export const modifierStyles = modifier => {
 
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
-    :hover,
-    :focus {
-      border-color: ${COLORS.primary2};
-      background-color: ${COLORS.primary2};
-      color: ${COLORS.background1};
+    ${modifier !== 'checked' &&
+      css`
+        :hover,
+        :focus {
+          border-color: ${COLORS.primary2};
+          background-color: ${COLORS.primary2};
+          color: ${COLORS.background1};
 
-      svg {
-        fill: ${COLORS.background1};
-      }
-    }
+          svg {
+            fill: ${COLORS.background1};
+          }
+        }
 
-    :active {
-      border-color: ${COLORS.primary3};
-      background-color: ${COLORS.primary3};
-      color: ${COLORS.background1};
+        :active {
+          border-color: ${COLORS.primary3};
+          background-color: ${COLORS.primary3};
+          color: ${COLORS.background1};
 
-      svg {
-        fill: ${COLORS.background1};
-      }
-    }
+          svg {
+            fill: ${COLORS.background1};
+          }
+        }
+      `}
 
     :disabled {
       border-color: ${COLORS.line2};

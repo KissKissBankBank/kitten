@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add `checked` `modifier` to `Button` component.
+
 ## [2.8.0] - 2019-06-03
 
 Feature:

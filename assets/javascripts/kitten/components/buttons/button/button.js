@@ -5,11 +5,13 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
+import { CheckedCircleIcon as KittenCheckedCircleIcon } from '../../icons/checked-circle-icon'
 
 const StyledButton = styled.button`
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   box-sizing: border-box;
   ${() => DEFAULT}
@@ -33,6 +35,14 @@ const StyledButton = styled.button`
     margin-right: ${pxToRem(10)};
     text-align: left;
   }
+
+  ${({ modifier }) =>
+    modifier === 'checked' &&
+    css`
+      > :nth-last-child(2) {
+        margin-right: 0;
+      }
+    `}
 
   > :last-child {
     margin-right: 0;
@@ -73,6 +83,16 @@ const StyledButton = styled.button`
     `}
 
   ${({ modifier }) => modifierStyles(modifier)}
+`
+
+const iconSize = 25
+
+const CheckedCircleIcon = styled(KittenCheckedCircleIcon)`
+  width: ${pxToRem(iconSize)};
+  height: ${pxToRem(iconSize)};
+
+  position: absolute;
+  bottom: -${pxToRem(iconSize / 2)};
 `
 
 export const FLUID = css`
@@ -127,6 +147,7 @@ export class Button extends Component {
       'beryllium',
       'carbon',
       'oxygen',
+      'checked',
     ]),
   }
 
@@ -140,6 +161,19 @@ export class Button extends Component {
   }
 
   render() {
-    return <StyledButton {...this.props} />
+    const { children, modifier, ...props } = this.props
+    const checked = modifier === 'checked' && { 'aria-checked': true }
+
+    return (
+      <StyledButton modifier={modifier} {...checked} {...props}>
+        {children}
+        {modifier === 'checked' && (
+          <CheckedCircleIcon
+            circleColor={COLORS.primary1}
+            checkedColor={COLORS.background1}
+          />
+        )}
+      </StyledButton>
+    )
   }
 }

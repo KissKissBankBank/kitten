@@ -43,6 +43,7 @@ const modifierOptions = {
   Beryllium: 'beryllium',
   Carbon: 'carbon',
   Oxygen: 'oxygen',
+  Checked: 'checked',
 }
 
 const info = {

@@ -46,10 +46,22 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `modifier` prop', () => {
+  describe('with `oxygen` `modifier` prop', () => {
     beforeEach(() => {
       component = renderer
         .create(<Button modifier="oxygen">MyButton</Button>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `checked` `modifier` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<Button modifier="checked">MyButton</Button>)
         .toJSON()
     })
 

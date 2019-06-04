@@ -14,6 +14,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -115,6 +116,7 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -227,6 +229,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -315,6 +318,117 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> with \`checked\` \`modifier\` prop matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.13rem;
+  padding: 0 1.88rem;
+  font-size: 0.88rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  border: 0.13rem solid #bae8fd;
+  background-color: #fff;
+  color: #19b4fa;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.63rem;
+  text-align: left;
+}
+
+.c0 >:nth-last-child(2) {
+  margin-right: 0;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg {
+  fill: #19b4fa;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg {
+  fill: #fff;
+}
+
+.c1 {
+  width: 1.56rem;
+  height: 1.56rem;
+  position: absolute;
+  bottom: -0.78rem;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
+}
+
+<button
+  aria-checked={true}
+  className="c0"
+>
+  MyButton
+  <svg
+    className="c1"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Checked circle
+    </title>
+    <circle
+      cx="10"
+      cy="10"
+      fill="#19b4fa"
+      r="10"
+    />
+    <path
+      d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
+      fill="#fff"
+    />
+  </svg>
+</button>
+`;
+
 exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
@@ -329,6 +443,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -418,7 +533,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> with \`modifier\` prop matches with snapshot 1`] = `
+exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -432,6 +547,7 @@ exports[`<Button /> with \`modifier\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -533,6 +649,7 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -645,6 +762,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -751,6 +869,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
@@ -857,6 +976,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
   min-height: 3.13rem;
