@@ -33,6 +33,7 @@ var modifierStyles = function modifierStyles(modifier) {
       break;
 
     case 'lithium':
+    case 'checked':
       borderColor = _colorsConfig.default.primary4;
       backgroundColor = _colorsConfig.default.background1;
       color = _colorsConfig.default.primary1;
@@ -58,7 +59,7 @@ var modifierStyles = function modifierStyles(modifier) {
       break;
   }
 
-  return (0, _styledComponents.css)(["border:", " ", " ", ";background-color:", ";color:", ";svg{fill:", ";}transition:background-color 0.2s,color 0.2s,border-color 0.2s;:hover,:focus{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}:active{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}:disabled{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}"], (0, _typography.pxToRem)(2), borderStyle, borderColor, backgroundColor, color, color, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary3, _colorsConfig.default.primary3, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.background1);
+  return (0, _styledComponents.css)(["border:", " ", " ", ";background-color:", ";color:", ";svg{fill:", ";}transition:background-color 0.2s,color 0.2s,border-color 0.2s;", ":disabled{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}"], (0, _typography.pxToRem)(2), borderStyle, borderColor, backgroundColor, color, color, modifier !== 'checked' && (0, _styledComponents.css)([":hover,:focus{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}:active{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}"], _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary3, _colorsConfig.default.primary3, _colorsConfig.default.background1, _colorsConfig.default.background1), _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.background1);
 };
 
 exports.modifierStyles = modifierStyles;
