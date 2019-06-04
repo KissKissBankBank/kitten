@@ -4,6 +4,7 @@ exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
 Array [
   <div
     className="simple-carousel__StyledContainer-t6k8ig-0 eItgJi"
+    id=""
     style={Object {}}
   >
     <div
@@ -65,6 +66,7 @@ Array [
 exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 <div
   className="simple-carousel__StyledContainer-t6k8ig-0 kmkOnR"
+  id=""
   style={Object {}}
 >
   <div
@@ -83,6 +85,7 @@ exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 exports[`<SimpleCarousel /> with some props matches with snapshot 1`] = `
 <div
   className="simple-carousel__StyledContainer-t6k8ig-0 kmkOnR"
+  id="simpleCarousel"
   style={Object {}}
 >
   <div

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `others` props to `SimpleCarousel` component.
+
 ## [2.9.1] - 2019-06-04
 
 Fix:
