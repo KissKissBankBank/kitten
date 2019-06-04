@@ -85,14 +85,33 @@ const StyledButton = styled.button`
   ${({ modifier }) => modifierStyles(modifier)}
 `
 
-const iconSize = 25
+const checkedCircleIconStyle = size => {
+  let iconSize
+
+  switch (size) {
+    case 'big':
+      iconSize = 24
+      break
+    case 'tiny':
+      iconSize = 15
+      break
+    default:
+      iconSize = 20
+  }
+
+  return css`
+    width: ${pxToRem(iconSize)};
+    height: ${pxToRem(iconSize)};
+    bottom: -${pxToRem(iconSize / 2)};
+  `
+}
 
 const CheckedCircleIcon = styled(KittenCheckedCircleIcon)`
-  width: ${pxToRem(iconSize)};
-  height: ${pxToRem(iconSize)};
+  ${checkedCircleIconStyle()}
+  ${({ tiny }) => tiny && checkedCircleIconStyle('tiny')}
+  ${({ big }) => big && checkedCircleIconStyle('big')}
 
   position: absolute;
-  bottom: -${pxToRem(iconSize / 2)};
 `
 
 export const FLUID = css`
@@ -169,6 +188,8 @@ export class Button extends Component {
         {children}
         {modifier === 'checked' && (
           <CheckedCircleIcon
+            big={props.big}
+            tiny={props.tiny}
             circleColor={COLORS.primary1}
             checkedColor={COLORS.background1}
           />
