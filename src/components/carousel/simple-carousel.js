@@ -9,6 +9,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.SimpleCarousel = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -100,16 +104,17 @@ function (_Component) {
           paginationColor = _this$props.paginationColor,
           paginationAlign = _this$props.paginationAlign,
           paginationStyle = _this$props.paginationStyle,
-          bulletStyle = _this$props.bulletStyle;
+          bulletStyle = _this$props.bulletStyle,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "containerStyle", "activePaginationColor", "paginationColor", "paginationAlign", "paginationStyle", "bulletStyle"]);
       var _this$state = this.state,
           totalPagesCount = _this$state.totalPagesCount,
           currentPageNumber = _this$state.currentPageNumber;
       var rangePage = (0, _range.createRangeFromZeroTo)(totalPagesCount);
       var id = this.props.id ? this.props.id + '_' : '';
-      return _react.default.createElement(_react.Fragment, null, _react.default.createElement(StyledContainer, {
+      return _react.default.createElement(_react.Fragment, null, _react.default.createElement(StyledContainer, (0, _extends2.default)({
         style: containerStyle,
         addBottomMargin: this.showPagination()
-      }, _react.default.Children.map(children, function (item, index) {
+      }, others), _react.default.Children.map(children, function (item, index) {
         return _react.default.createElement("div", {
           key: item.key,
           "aria-hidden": index !== currentPageNumber,
