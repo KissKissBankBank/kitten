@@ -11,8 +11,6 @@ exports.Button = exports.BIG = exports.TINY = exports.DEFAULT = exports.FLUID = 
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -22,6 +20,8 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -92,14 +92,19 @@ var checkedCircleIconStyle = function checkedCircleIconStyle(size) {
   return (0, _styledComponents.css)(["width:", ";height:", ";bottom:-", ";"], (0, _typography.pxToRem)(iconSize), (0, _typography.pxToRem)(iconSize), (0, _typography.pxToRem)(iconSize / 2));
 };
 
-var CheckedCircleIcon = (0, _styledComponents.default)(_checkedCircleIcon.CheckedCircleIcon).withConfig({
+var CheckedCircleIcon = (0, _styledComponents.default)(function (_ref10) {
+  var big = _ref10.big,
+      tiny = _ref10.tiny,
+      others = (0, _objectWithoutProperties2.default)(_ref10, ["big", "tiny"]);
+  return _react.default.createElement(_checkedCircleIcon.CheckedCircleIcon, others);
+}).withConfig({
   displayName: "button__CheckedCircleIcon",
   componentId: "sc-1q5nte0-1"
-})(["", " ", " ", " position:absolute;"], checkedCircleIconStyle(), function (_ref10) {
-  var tiny = _ref10.tiny;
+})(["", " ", " ", " position:absolute;"], checkedCircleIconStyle(), function (_ref11) {
+  var tiny = _ref11.tiny;
   return tiny && checkedCircleIconStyle('tiny');
-}, function (_ref11) {
-  var big = _ref11.big;
+}, function (_ref12) {
+  var big = _ref12.big;
   return big && checkedCircleIconStyle('big');
 });
 var FLUID = (0, _styledComponents.css)(["min-width:initial;width:100%;"]);
@@ -134,8 +139,8 @@ function (_Component) {
       return _react.default.createElement(StyledButton, (0, _extends2.default)({
         modifier: modifier
       }, checked, props), children, modifier === 'checked' && _react.default.createElement(CheckedCircleIcon, {
-        big: props.big,
-        tiny: props.tiny,
+        big: props.big && props.big,
+        tiny: props.tiny && props.tiny,
         circleColor: _colorsConfig.default.primary1,
         checkedColor: _colorsConfig.default.background1
       }));

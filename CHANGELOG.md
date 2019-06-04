@@ -4,9 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.9.2] - 2019-06-04
+
 Fix:
   - Remove warning error from unknown `Button` props.
-  - Fix: Add `others` props to `SimpleCarousel` component.
+  - Add `others` props to `SimpleCarousel` component.
 
 
 ## [2.9.1] - 2019-06-04
