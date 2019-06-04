@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix:
+  - Fix `checked` icon `Button` size.
+
 ## [2.9.0] - 2019-06-04
 
 Feature:
