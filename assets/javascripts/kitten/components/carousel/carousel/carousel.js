@@ -213,8 +213,8 @@ class CarouselBase extends Component {
               visibleIndex={indexPageVisible}
             />
           ))}
-          <PageControlButton prev key="prev" onClick={this.goPrevPage} />
-          <PageControlButton next key="next" onClick={this.goNextPage} />
+          <PageControlButton prev onClick={this.goPrevPage} />
+          <PageControlButton next onClick={this.goNextPage} />
         </PageControl>
       )
     }
@@ -227,7 +227,6 @@ class CarouselBase extends Component {
         <ButtonIcon
           modifier="beryllium"
           onClick={this.goPrevPage}
-          key={`left-${indexPageVisible}`}
           disabled={indexPageVisible < 1 || numPages < 1}
         >
           <ArrowIcon
@@ -240,7 +239,6 @@ class CarouselBase extends Component {
         <ButtonIcon
           modifier="beryllium"
           onClick={this.goNextPage}
-          key={`right-${indexPageVisible}`}
           disabled={indexPageVisible >= numPages - 1}
         >
           <ArrowIcon
