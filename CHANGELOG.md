@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `SimpleCarousel` accessibility fixes
+
 ## [2.9.2] - 2019-06-04
 
 Fixes:

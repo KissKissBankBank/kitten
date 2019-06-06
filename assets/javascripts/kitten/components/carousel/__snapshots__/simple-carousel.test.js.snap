@@ -28,38 +28,35 @@ Array [
       </p>
     </div>
   </div>,
-  <ul
+  <div
     className="simple-carousel__StyledPagination-t6k8ig-1 fNLlfA"
+    onKeyDown={[Function]}
     role="tablist"
     style={Object {}}
   >
-    <li>
-      <button
-        aria-controls="carouselItem_0"
-        aria-label="Page 1"
-        aria-selected={true}
-        className="simple-carousel__StyledPaginationButton-t6k8ig-2 lcjxHC"
-        id="carouselTab_0"
-        onClick={[Function]}
-        role="tab"
-        style={Object {}}
-        type="button"
-      />
-    </li>
-    <li>
-      <button
-        aria-controls="carouselItem_1"
-        aria-label="Page 2"
-        aria-selected={false}
-        className="simple-carousel__StyledPaginationButton-t6k8ig-2 lcjxHC"
-        id="carouselTab_1"
-        onClick={[Function]}
-        role="tab"
-        style={Object {}}
-        type="button"
-      />
-    </li>
-  </ul>,
+    <button
+      aria-controls="carouselItem_0"
+      aria-label="Page 1"
+      aria-selected={true}
+      className="simple-carousel__StyledPaginationButton-t6k8ig-2 lcjxHC"
+      id="carouselTab_0"
+      onClick={[Function]}
+      role="tab"
+      style={Object {}}
+      type="button"
+    />
+    <button
+      aria-controls="carouselItem_1"
+      aria-label="Page 2"
+      aria-selected={false}
+      className="simple-carousel__StyledPaginationButton-t6k8ig-2 lcjxHC"
+      id="carouselTab_1"
+      onClick={[Function]}
+      role="tab"
+      style={Object {}}
+      type="button"
+    />
+  </div>,
 ]
 `;
 
