@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove warnings in `Carousel` component tests
+
 ## [2.9.2] - 2019-06-04
 
 Fixes:
