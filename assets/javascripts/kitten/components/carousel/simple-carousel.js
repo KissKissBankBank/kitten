@@ -103,7 +103,7 @@ export class SimpleCarousel extends Component {
   }
 
   handleKeyDown = event => {
-    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    if (['ArrowLeft', 'ArrowRight'].indexOf(event.key) !== -1) {
       const { currentPageNumber, totalPagesCount } = this.state
       const tabs = this.paginationRef.current.querySelectorAll('button')
       tabs[currentPageNumber].setAttribute('tabindex', -1)
