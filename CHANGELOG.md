@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature:
+- Add `modalProps` prop to `Modal` component.
+
 ## [2.9.2] - 2019-06-04
 
 Fixes:
