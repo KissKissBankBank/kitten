@@ -108,13 +108,15 @@ export class SimpleCarousel extends Component {
       const tabs = this.paginationRef.current.querySelectorAll('button')
       tabs[currentPageNumber].setAttribute('tabindex', -1)
 
-      if (event.key === 'ArrowLeft') {
-        var pageNumber = currentPageNumber - 1
-        if (pageNumber < 0) {
-          pageNumber = totalPagesCount - 1
-        }
-      } else if (event.key === 'ArrowRight') {
-        var pageNumber = currentPageNumber + 1
+      // default: ArrowLeft
+      let pageNumber = currentPageNumber - 1
+      if (pageNumber < 0) {
+        pageNumber = totalPagesCount - 1
+      }
+
+      // change in case of ArrowRight
+      if (event.key === 'ArrowRight') {
+        pageNumber = currentPageNumber + 1
         if (pageNumber >= totalPagesCount) {
           pageNumber = 0
         }
