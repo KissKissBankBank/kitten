@@ -56,6 +56,7 @@ export class Modal extends Component {
       className,
       closeButtonLabel,
       onClose,
+      modalProps,
       ...others
     } = this.props
 
@@ -85,6 +86,7 @@ export class Modal extends Component {
           ariaHideApp={false}
           onRequestClose={this.close}
           contentLabel={label}
+          {...modalProps}
         >
           {content}
 
@@ -100,6 +102,7 @@ Modal.propTypes = {
   labelledby: PropTypes.string,
   describedby: PropTypes.string,
   closeButtonLabel: PropTypes.string,
+  modalProps: PropTypes.object,
 }
 
 Modal.defaultProps = {
@@ -107,4 +110,5 @@ Modal.defaultProps = {
   labelledby: '',
   describedby: '',
   closeButtonLabel: '',
+  modalProps: {},
 }

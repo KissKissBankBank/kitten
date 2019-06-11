@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Remove warnings in `Carousel` component tests
 
+## [2.10.0] - 2019-06-07
+
+Feature:
+- Add `modalProps` prop to `Modal` component.
+
 ## [2.9.2] - 2019-06-04
 
 Fixes:
