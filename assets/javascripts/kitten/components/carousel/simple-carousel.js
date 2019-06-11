@@ -98,8 +98,12 @@ export class SimpleCarousel extends Component {
 
   showPagination = () => this.state.totalPagesCount > 1
 
+  updateCurrentPageNumber = pageNumber => {
+    this.setState({ currentPageNumber: pageNumber })
+  }
+
   handlePageClick = numPage => () => {
-    this.setState({ currentPageNumber: numPage })
+    this.updateCurrentPageNumber(numPage)
   }
 
   handleKeyDown = event => {
@@ -122,7 +126,7 @@ export class SimpleCarousel extends Component {
         }
       }
 
-      this.setState({ currentPageNumber: pageNumber })
+      this.updateCurrentPageNumber(pageNumber)
       tabs[pageNumber].setAttribute('tabindex', 0)
       tabs[pageNumber].focus()
     }
