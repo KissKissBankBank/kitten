@@ -1,6 +1,6 @@
 import React, { PureComponent, createRef } from 'react'
-import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
+import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 
@@ -20,16 +20,16 @@ const StyledInput = styled.input`
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
 
-  :placeholder {
+  &:placeholder {
     color: ${COLORS.font2};
   }
 
-  :focus {
+  &:focus {
     outline: none;
     border-color: ${COLORS.line2};
   }
 
-  :disabled {
+  &:disabled {
     color: ${COLORS.font2};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.line1};
@@ -73,20 +73,22 @@ export class TextInput extends PureComponent {
     error: PropTypes.bool,
     tiny: PropTypes.bool,
     disabled: PropTypes.bool,
+    name: PropTypes.text,
   }
 
   input = createRef()
 
   render() {
-    const { valid, error, disabled, digits, tiny, ...others } = this.props
+    const { valid, error, disabled, name, digits, tiny, ...others } = this.props
 
     return (
       <StyledInput
-        ref={this.input}
+        ref={this.input.focus && this.input.blur}
         valid={valid}
         error={error}
         disabled={disabled}
         tiny={tiny}
+        name={name}
         {...others}
       />
     )

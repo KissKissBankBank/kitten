@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInput } from './index'
 
@@ -48,6 +48,7 @@ storiesOf('Form/TextInput', module)
             error={boolean('Error', false)}
             disabled={boolean('Disabled', false)}
             tiny={boolean('Tiny', false)}
+            placeholder={text('Placeholder', 'Les props sont transmises')}
           />
         </GridCol>
       </Grid>
