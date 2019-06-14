@@ -9,6 +9,7 @@ const borderWidth = pxToRem(2)
 const styledTextInput = css`
   font-size: ${stepToRem(-1)};
   line-height: 1.3;
+  font-weight: lighter;
   box-sizing: border-box;
   border-width: ${borderWidth};
   border-style: solid;
