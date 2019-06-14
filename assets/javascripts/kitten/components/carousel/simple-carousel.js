@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components'
 import COLORS from '../../constants/colors-config'
 import { createRangeFromZeroTo } from '../../helpers/utils/range'
 import { pxToRem } from '../../helpers/utils/typography'
+import { VisuallyHidden } from '../../components/accessibility/visually-hidden'
 
 const StyledContainer = styled.div`
   ${({ addBottomMargin }) =>
@@ -185,14 +186,15 @@ export class SimpleCarousel extends Component {
                   id={`${id}carouselTab_${numPage}`}
                   type="button"
                   aria-controls={`${id}carouselItem_${numPage}`}
-                  aria-label={`Page ${numPage + 1}`}
                   role="tab"
                   aria-selected={numPage === currentPageNumber}
                   paginationColor={paginationColor}
                   activePaginationColor={activePaginationColor}
                   style={bulletStyle}
                   onClick={this.handlePageClick(numPage)}
-                />
+                >
+                  <VisuallyHidden>{`Page ${numPage + 1}`}</VisuallyHidden>
+                </StyledPaginationButton>
               )
             })}
           </StyledPagination>
