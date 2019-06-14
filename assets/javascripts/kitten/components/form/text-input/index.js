@@ -4,14 +4,15 @@ import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 
-const StyledInput = styled.input`
+const borderWidth = pxToRem(2)
+
+const styledTextInput = css`
   font-size: ${stepToRem(-1)};
-  font-style: light;
   line-height: 1.3;
   box-sizing: border-box;
-  border-width: ${pxToRem(2)};
+  border-width: ${borderWidth};
   border-style: solid;
-  border-radius: 0
+  border-radius: 0;
   width: 100%;
   height: ${pxToRem(50)};
   padding: ${pxToRem(10)} ${pxToRem(15)};
@@ -20,16 +21,16 @@ const StyledInput = styled.input`
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
 
-  &:placeholder {
+  :placeholder {
     color: ${COLORS.font2};
   }
 
-  &:focus {
+  :focus {
     outline: none;
     border-color: ${COLORS.line2};
   }
 
-  &:disabled {
+  :disabled {
     color: ${COLORS.font2};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.line1};
@@ -67,6 +68,64 @@ const StyledInput = styled.input`
     `}
 `
 
+const StyledTextarea = styled.div`
+  position: relative;
+  display: flex;
+`
+
+const StyledInput = styled.input`
+  ${styledTextInput}
+`
+
+const StyledInputTextarea = styled.textarea`
+  ${styledTextInput}
+  height: initial;
+  resize: vertical;
+
+  :disabled {
+    resize: none;
+  }
+`
+
+const verticalPadding = pxToRem(10)
+
+const StyledGradientTextarea = styled.div`
+  position: absolute;
+  left: ${verticalPadding};
+  right: ${verticalPadding};
+  bottom: ${borderWidth};
+  height: ${verticalPadding};
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    ${COLORS.background1}
+  );
+
+  pointer-events: none;
+
+  :disabled + & {
+    display: none;
+  }
+`
+export const digitsStyles = digits => {
+  const horizontalPadding = pxToRem(15)
+  const digitLength = pxToRem(15)
+
+  switch (digits) {
+    case 'twoDigits':
+      width = horizontalPadding * 2 + digitLength * 2
+      textAlign = 'center'
+      break
+    case 'sixDigits':
+      width = horizontalPadding * 2 + digitLength * 6
+      break
+    case 'twelveDigits':
+      width = horizontalPadding * 2 + digitLength * 12
+      break
+  }
+}
+
 export class TextInput extends PureComponent {
   static propTypes = {
     valid: PropTypes.bool,
@@ -74,23 +133,65 @@ export class TextInput extends PureComponent {
     tiny: PropTypes.bool,
     disabled: PropTypes.bool,
     name: PropTypes.text,
+    digits: PropTypes.number,
   }
 
-  input = createRef()
+  static defaultProps = {
+    tag: 'textarea', // or 'textarea'
+    valid: false,
+    error: false,
+    tiny: false,
+    disabled: false,
+    name: 'text',
+    digits: null,
+  }
+
+  constructor(props) {
+    super(props)
+    this.input = createRef()
+  }
 
   render() {
-    const { valid, error, disabled, name, digits, tiny, ...others } = this.props
+    const {
+      valid,
+      error,
+      disabled,
+      name,
+      digits,
+      tiny,
+      tag,
+      ...others
+    } = this.props
 
-    return (
-      <StyledInput
-        ref={this.input.focus && this.input.blur}
-        valid={valid}
-        error={error}
-        disabled={disabled}
-        tiny={tiny}
-        name={name}
-        {...others}
-      />
-    )
+    if (tag == 'textarea') {
+      return (
+        <StyledTextarea>
+          <StyledInputTextarea
+            ref={this.input.focus && this.input.blur}
+            valid={valid}
+            error={error}
+            disabled={disabled}
+            tiny={tiny}
+            digits={digits}
+            name={name}
+            {...others}
+          />
+          <StyledGradientTextarea />
+        </StyledTextarea>
+      )
+    } else {
+      return (
+        <StyledInput
+          ref={this.input.focus && this.input.blur}
+          valid={valid}
+          error={error}
+          disabled={disabled}
+          tiny={tiny}
+          digits={digits}
+          name={name}
+          {...others}
+        />
+      )
+    }
   }
 }
