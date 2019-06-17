@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextInput } from '../../components/form/text-input'
+import { TextInput } from '../../../components/form/text-input'
 
 describe('Text-input with default props', () => {
   const defaultComponent = shallow(<TextInput />)
