@@ -139,7 +139,7 @@ export class TextInput extends PureComponent {
   }
 
   static defaultProps = {
-    tag: 'textarea', // or 'textarea'
+    tag: 'input', // or 'textarea'
     valid: false,
     error: false,
     tiny: false,
