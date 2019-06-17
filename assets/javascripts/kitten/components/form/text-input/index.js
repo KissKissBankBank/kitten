@@ -105,10 +105,11 @@ const StyledGradientTextarea = styled.div`
 
   pointer-events: none;
 
-  :disabled + & {
+  ${StyledInputTextarea}:disabled + & {
     display: none;
   }
 `
+
 export const digitsStyles = digits => {
   const horizontalPadding = pxToRem(15)
   const digitLength = pxToRem(15)
