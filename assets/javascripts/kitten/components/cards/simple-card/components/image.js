@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Text } from '../../../../components/typography/text'
 import { Marger } from '../../../../components/layout/marger'
 import { pxToRem } from '../../../../helpers/utils/typography'
@@ -25,10 +25,34 @@ const PlayerButtonStyle = styled.div`
   z-index: 2;
 `
 
-const PlayerStyle = styled.div`
+const StyledImageContainer = styled(Marger)`
   position: relative;
   transition: opacity ease 600ms, z-index ease 600ms;
   z-index: 1;
+
+  ${({ imageContainerBackground }) =>
+    imageContainerBackground
+      ? css`
+          background-color: ${imageContainerBackground};
+        `
+      : css`
+          background-color: #caf4fe;
+        `}
+
+  ${({ imageContainerRatio }) =>
+    imageContainerRatio &&
+    css`
+      overflow: hidden;
+      position: relative;
+      padding-top: ${imageContainerRatio}%;
+
+      & > img {
+        position: absolute;
+        top: 0;
+        height: auto;
+        text-align: center;
+      }
+    `}
 `
 
 export class Image extends PureComponent {
@@ -38,6 +62,8 @@ export class Image extends PureComponent {
       withPlayerButtonOnImage,
       arrowColor,
       ariaLabel,
+      imageContainerBackground,
+      imageContainerRatio,
     } = this.props
 
     const PlayerButtonOnImage = props => (
@@ -54,21 +80,21 @@ export class Image extends PureComponent {
     )
 
     return (
-      <Marger bottom="2" className="k-Card__imageContainer">
-        <PlayerStyle>
-          {withPlayerButtonOnImage && (
-            <PlayerButtonOnImage
-              arrowColor={arrowColor}
-              ariaLabel={ariaLabel}
-            />
-          )}
-          <ImageStyle
-            {...imageProps}
-            alt={imageProps.alt || ''}
-            className="k-Card__image"
-          />
-        </PlayerStyle>
-      </Marger>
+      <StyledImageContainer
+        bottom="2"
+        className="k-Card__imageContainer"
+        imageContainerBackground={imageContainerBackground}
+        imageContainerRatio={imageContainerRatio}
+      >
+        {withPlayerButtonOnImage && (
+          <PlayerButtonOnImage arrowColor={arrowColor} ariaLabel={ariaLabel} />
+        )}
+        <ImageStyle
+          {...imageProps}
+          alt={imageProps.alt || ''}
+          className="k-Card__image"
+        />
+      </StyledImageContainer>
     )
   }
 }
@@ -79,18 +105,20 @@ Image.propTypes = {
     alt: PropTypes.string.isRequired,
   }),
   withPlayerButtonOnImage: PropTypes.bool,
-  ariaLabel: PropTypes.string,
+  ariaLabel: PropTypes.string.isRequired,
   arrowColor: PropTypes.string,
   href: PropTypes.string,
+  imageContainerBackground: PropTypes.string,
+  imageContainerRatio: PropTypes.number,
 }
 
 Image.defaultProps = {
   imageProps: {
-    src: 'https://placehold.it/200x200/caf4fe/caf4fe',
+    src: '',
     alt: '',
   },
   withPlayerButtonOnImage: false,
-  ariaLabel: null,
   arrowColor: 'background1',
   href: '#',
+  imageContainerBackground: '#caf4fe',
 }

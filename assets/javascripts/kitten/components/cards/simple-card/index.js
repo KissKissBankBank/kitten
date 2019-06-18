@@ -5,6 +5,7 @@ import { Image } from './components/image'
 import { TitleComponent } from './components/title'
 import { Subtitle } from './components/subtitle'
 import { Paragraph } from './components/paragraph'
+import COLORS from '../../../constants/colors-config'
 
 const ContainerStyle = styled.a`
   line-height: 1;
@@ -23,12 +24,16 @@ class SimpleCardComponent extends Component {
       titleProps,
       subtitle,
       paragraph,
+      imageContainerRatio,
+      imageContainerBackground,
       ...others
     } = this.props
 
     return (
       <ContainerStyle {...others} as={href ? 'a' : 'div'} href={href}>
         <Image
+          imageContainerRatio={imageContainerRatio}
+          imageContainerBackground={imageContainerBackground}
           imageProps={imageProps}
           withPlayerButtonOnImage={withPlayerButtonOnImage}
           arrowColor={arrowColor}
