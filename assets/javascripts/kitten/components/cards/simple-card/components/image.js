@@ -30,14 +30,8 @@ const StyledImageContainer = styled(Marger)`
   transition: opacity ease 600ms, z-index ease 600ms;
   z-index: 1;
 
-  ${({ imageContainerBackground }) =>
-    imageContainerBackground
-      ? css`
-          background-color: ${imageContainerBackground};
-        `
-      : css`
-          background-color: #caf4fe;
-        `}
+  background-color: ${({ imageContainerBackground }) =>
+    imageContainerBackground};
 
   ${({ imageContainerRatio }) =>
     imageContainerRatio &&
@@ -120,5 +114,5 @@ Image.defaultProps = {
   withPlayerButtonOnImage: false,
   arrowColor: 'background1',
   href: '#',
-  imageContainerBackground: '#caf4fe',
+  imageContainerBackground: COLORS.line1,
 }
