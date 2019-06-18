@@ -6,13 +6,13 @@ import { Marger } from '../../../../components/layout/marger'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 
-const ImageStyle = styled.img`
+const StyledImage = styled.img`
   width: 100%;
   display: block;
 `
 const playerButtonSize = pxToRem(70)
 
-const PlayerButtonStyle = styled.div`
+const StyledPlayerButton = styled.div`
   width: ${playerButtonSize};
   height: ${playerButtonSize};
   background: ${COLORS.font1};
@@ -67,7 +67,7 @@ export class Image extends PureComponent {
     } = this.props
 
     const PlayerButtonOnImage = props => (
-      <PlayerButtonStyle>
+      <StyledPlayerButton>
         <Text
           size="default"
           weight="regular"
@@ -76,7 +76,7 @@ export class Image extends PureComponent {
         >
           ►
         </Text>
-      </PlayerButtonStyle>
+      </StyledPlayerButton>
     )
 
     return (
@@ -89,7 +89,7 @@ export class Image extends PureComponent {
         {withPlayerButtonOnImage && (
           <PlayerButtonOnImage arrowColor={arrowColor} ariaLabel={ariaLabel} />
         )}
-        <ImageStyle
+        <StyledImage
           {...imageProps}
           alt={imageProps.alt || ''}
           className="k-Card__image"
