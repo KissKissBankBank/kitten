@@ -5,7 +5,7 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
   className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-8olw7b-2 jTbmGy marger__StyledMarger-q3lecu-0 jgfcQX"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-8olw7b-2 iPOTuX marger__StyledMarger-q3lecu-0 jgfcQX"
   >
     <img
       alt=""
@@ -21,7 +21,7 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
   className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-8olw7b-2 jTbmGy marger__StyledMarger-q3lecu-0 jgfcQX"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-8olw7b-2 iPOTuX marger__StyledMarger-q3lecu-0 jgfcQX"
   >
     <div
       className="image__StyledPlayerButton-sc-8olw7b-1 hjoZil"
@@ -46,7 +46,7 @@ exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
   className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-8olw7b-2 jTbmGy marger__StyledMarger-q3lecu-0 jgfcQX"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-8olw7b-2 iPOTuX marger__StyledMarger-q3lecu-0 jgfcQX"
   >
     <img
       alt=""

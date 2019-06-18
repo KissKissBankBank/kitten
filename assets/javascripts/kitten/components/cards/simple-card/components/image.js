@@ -99,7 +99,7 @@ Image.propTypes = {
     alt: PropTypes.string.isRequired,
   }),
   withPlayerButtonOnImage: PropTypes.bool,
-  ariaLabel: PropTypes.string.isRequired,
+  ariaLabel: PropTypes.string,
   arrowColor: PropTypes.string,
   href: PropTypes.string,
   imageContainerBackground: PropTypes.string,
