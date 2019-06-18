@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean, number, color } from '@storybook/addon-knobs'
 import { SimpleCard } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -57,7 +57,8 @@ storiesOf('Cards/SimpleCard', module)
                   'With player button on image?',
                   false,
                 )}
-                imageContainerRatio={number('Adjust Ratio', 56.65)}
+                imageContainerRatio={number('Adjust Ratio', 56.25)}
+                imageContainerBackground={color('Adjust Color', '#eee')}
               />
             </GridCol>
           </Grid>
