@@ -20,32 +20,32 @@ const info = {
 
     #### Default
     ~~~js
-    <TextInput>MyTextInput</TextInput>
+    <TextInput />
     ~~~
 
     #### Size
     ~~~js
-    <TextInput tiny>MyTextInput</TextInput>
+    <TextInput tiny />
     ~~~
 
     #### Tag
     ~~~js
-    <TextInput tag="textarea">MyTextInput</TextInput>
-    <TextInput tag="input">MyTextInput</TextInput>
+    <TextInput tag="textarea" />
+    <TextInput tag="input" />
     ~~~
 
     #### State
     ~~~js
-    <TextInput valid>MyTextInput</TextInput>
-    <TextInput error>MyTextInput</TextInput>
-    <TextInput disabled>MyTextInput</TextInput>
+    <TextInput valid />
+    <TextInput error />
+    <TextInput disabled />
     ~~~
 
     ### Digits
     ~~~js
-      <TextInput digits="2">MyTextInput</TextInput>
-      <TextInput digits="6">MyTextInput</TextInput>
-      <TextInput digits="12">MyTextInput</TextInput>
+      <TextInput digits="2" />
+      <TextInput digits="6" />
+      <TextInput digits="12" />
     ~~~
   `,
 }
@@ -63,7 +63,7 @@ storiesOf('Form/TextInput', module)
             disabled={boolean('Disabled', false)}
             tiny={boolean('Tiny', false)}
             placeholder={text('Placeholder', 'Les props sont transmises')}
-            digits={number('Digits', 6)}
+            digits={number('Digits', 12)}
           />
         </GridCol>
       </Grid>
