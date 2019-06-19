@@ -12,7 +12,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
     >
       <input
         autoComplete="off"
-        className="k-TextInput k-TextInputWithUnit__input"
+        className="k-TextInputWithUnit__input text-input__StyledInput-sc-11wej6v-1 bBanST"
         disabled={false}
         name="text"
         onBlur={[Function]}

@@ -45,7 +45,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="k-TextInput k-TextInputWithUnit__input"
+              className="k-TextInputWithUnit__input text-input__StyledInput-sc-11wej6v-1 bBanST"
               defaultValue=""
               disabled={false}
               id="donation-amount"
@@ -144,7 +144,7 @@ exports[`<TextInputWithUnitForm /> disabled matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="k-TextInput k-TextInputWithUnit__input is-disabled"
+              className="k-TextInputWithUnit__input text-input__StyledInput-sc-11wej6v-1 bBanST"
               defaultValue=""
               disabled={true}
               id="donation-amount"
@@ -243,7 +243,7 @@ exports[`<TextInputWithUnitForm /> on error matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="k-TextInput k-TextInputWithUnit__input is-error"
+              className="k-TextInputWithUnit__input text-input__StyledInput-sc-11wej6v-1 ksOZuA"
               defaultValue=""
               disabled={false}
               id="donation-amount"
