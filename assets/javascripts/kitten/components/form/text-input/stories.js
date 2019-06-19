@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, text } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text, number } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInput } from './index'
 
@@ -28,10 +28,24 @@ const info = {
     <TextInput tiny>MyTextInput</TextInput>
     ~~~
 
-  #### Tag
+    #### Tag
     ~~~js
-    <TextInput as="textarea">MyTextInput</TextInput>
-    <TextInput as="input">MyTextInput</TextInput>
+    <TextInput tag="textarea">MyTextInput</TextInput>
+    <TextInput tag="input">MyTextInput</TextInput>
+    ~~~
+
+    #### State
+    ~~~js
+    <TextInput valid>MyTextInput</TextInput>
+    <TextInput error>MyTextInput</TextInput>
+    <TextInput disabled>MyTextInput</TextInput>
+    ~~~
+
+    ### Digits
+    ~~~js
+      <TextInput digits="2">MyTextInput</TextInput>
+      <TextInput digits="6">MyTextInput</TextInput>
+      <TextInput digits="12">MyTextInput</TextInput>
     ~~~
   `,
 }
@@ -49,6 +63,7 @@ storiesOf('Form/TextInput', module)
             disabled={boolean('Disabled', false)}
             tiny={boolean('Tiny', false)}
             placeholder={text('Placeholder', 'Les props sont transmises')}
+            digits={number('Digits', 6)}
           />
         </GridCol>
       </Grid>

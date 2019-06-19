@@ -21,6 +21,7 @@ const styledTextInput = css`
   background-color: ${COLORS.background1};
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
+  ${({ digits }) => digitsStyles(digits)};
 
   :placeholder {
     color: ${COLORS.font2};
@@ -111,30 +112,34 @@ const StyledGradientTextarea = styled.div`
 `
 
 export const digitsStyles = digits => {
-  const horizontalPadding = pxToRem(15)
-  const digitLength = pxToRem(15)
+  const horizontalPadding = 15
+  const digitLength = 15
 
-  switch (digits) {
-    case 'twoDigits':
-      width = horizontalPadding * 2 + digitLength * 2
-      textAlign = 'center'
-      break
-    case 'sixDigits':
-      width = horizontalPadding * 2 + digitLength * 6
-      break
-    case 'twelveDigits':
-      width = horizontalPadding * 2 + digitLength * 12
-      break
+  switch (`${digits}`) {
+    case '2':
+      return css`
+        width: ${pxToRem(horizontalPadding * 2 + digitLength * 2)};
+        text-align: center;
+      `
+    case '6':
+      return css`
+        width: ${pxToRem(horizontalPadding * 2 + digitLength * 6)};
+      `
+    case '12':
+      return css`
+        width: ${pxToRem(horizontalPadding * 2 + digitLength * 12)};
+      `
   }
 }
 
 export class TextInput extends PureComponent {
   static propTypes = {
+    tag: PropTypes.string,
     valid: PropTypes.bool,
     error: PropTypes.bool,
     tiny: PropTypes.bool,
     disabled: PropTypes.bool,
-    name: PropTypes.text,
+    name: PropTypes.string,
     digits: PropTypes.number,
   }
 

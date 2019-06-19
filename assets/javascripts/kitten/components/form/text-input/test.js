@@ -45,4 +45,34 @@ describe('<TextInput />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with `name` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput name="foobar" />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `tag` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput tag="input" />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `digits` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput digits={12} />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
