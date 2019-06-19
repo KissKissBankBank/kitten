@@ -52,7 +52,7 @@ storiesOf('Form/TextInput', module)
             valid={boolean('Valid', false)}
             error={boolean('Error', false)}
             disabled={boolean('Disabled', false)}
-            textInputProps={object('Placeholder', {
+            textInputProps={object('textInputProps', {
               placeholder: 'Les props sont transmises',
             })}
           />

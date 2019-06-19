@@ -27,7 +27,7 @@ const StyledTextInputWithButtonButton = styled.button`
   padding: 0 ${pxToRem(30)};
   border-radius: 0;
 
-  ${({ modifier }) => modifierStyles(modifier)}
+  ${({ modifier }) => modifierStyles(modifier)};
 
   ${({ valid }) =>
     valid &&
@@ -67,6 +67,7 @@ export class TextInputWithButton extends PureComponent {
     modifier: 'beryllium',
     textInputProps: {
       tag: 'input',
+      name: 'text',
     },
   }
 
