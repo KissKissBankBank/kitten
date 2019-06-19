@@ -34,6 +34,7 @@ export const FieldInputExample = ({
   errorMessage,
   limit,
   unit,
+  button,
 }) => (
   <FieldBase
     id={id}
@@ -47,6 +48,7 @@ export const FieldInputExample = ({
       id={id}
       limit={limit}
       unit={unit}
+      button={button}
       name="field"
       placeholder={placeholder}
       error={error}
