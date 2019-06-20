@@ -54,24 +54,6 @@ export const FieldInputExample = ({
   </FieldBase>
 )
 
-export const FieldInputWithButtonExample = ({
-  id,
-  label,
-  placeholder,
-  button,
-}) => (
-  <FieldBase id={id} label={label}>
-    <Field.InputWithButton
-      id={id}
-      value={button}
-      textInputProps={{
-        placeholder,
-        name: 'field',
-      }}
-    />
-  </FieldBase>
-)
-
 export const FieldPasswordExample = ({
   id,
   label,

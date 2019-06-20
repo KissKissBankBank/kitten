@@ -4,7 +4,6 @@ import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
 import {
   FieldInputExample,
   FieldPasswordExample,
-  FieldInputWithButtonExample,
   FieldRadioButtonSetExample,
   FieldSelectExample,
 } from './field.examples'
@@ -39,18 +38,6 @@ storiesOf('Form/Field', module)
           errorMessage={text('Error', 'Error message…')}
           limit={number('Limit', undefined)}
           unit={text('Unit', undefined)}
-        />
-      </StoryGrid>
-    )
-  })
-  .add('input with button', () => {
-    return (
-      <StoryGrid>
-        <FieldInputWithButtonExample
-          id={text('ID', 'input')}
-          label={text('Label', 'Label')}
-          placeholder={text('Placeholder', 'Placeholder…')}
-          button={text('Button', undefined)}
         />
       </StoryGrid>
     )
