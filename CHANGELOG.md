@@ -4,7 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `SimpleCarousel` accessibility fixes
+Features:
+- Add `imageContainerBackground` and `imageContainerRatio` props to `SimpleCard`
+- Add Lazy class `LazyObserver`, hook `useLazyObserver`, HOC `withLazy`
+
+Fix:
+- `SimpleCarousel` accessibility fixes
 
 ## [2.10.0] - 2019-06-07
 
