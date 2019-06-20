@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import useLazyObserver from '../../helpers/utils/lazy-hook'
+import useLazyObserver from '../helpers/utils/lazy-hook'
 
 const withLazy = WrappedComponent => props => {
   const lazyComponentRef = useRef(null)
