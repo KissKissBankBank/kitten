@@ -148,7 +148,6 @@ export class TextInputWithUnit extends PureComponent {
       ...others
     } = this.props
 
-    console.log(tiny)
     return (
       <StyledTextInputWithUnit>
         <StyledTextInput

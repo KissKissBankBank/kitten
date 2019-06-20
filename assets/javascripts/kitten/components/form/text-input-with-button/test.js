@@ -63,4 +63,14 @@ describe('<TextInputWithButton />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with tiny prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInputWithButton tiny />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

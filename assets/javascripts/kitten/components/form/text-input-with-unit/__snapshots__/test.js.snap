@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 irBGFH"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 bFSpXv"
+    disabled={false}
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 irBGFH"
+    disabled={true}
+    name="text"
+    type="number"
+  />
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 hYbVRX"
+    disabled={true}
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 bDoovP"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 SoegA"
+    disabled={false}
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with error prop matches with snapshot 2`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 bDoovP"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 SoegA"
+    disabled={false}
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 irBGFH"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 bFSpXv"
+    disabled={false}
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 ccTEDj"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 jHZnpt"
+    disabled={false}
+  >
+    λ
+  </span>
+</div>
+`;
