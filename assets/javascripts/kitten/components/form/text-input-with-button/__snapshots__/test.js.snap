@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
+<div
+  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+>
+  <input
+    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 bBanST"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 edTByD"
+    disabled={false}
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+>
+  <input
+    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 bBanST"
+    disabled={true}
+    name="text"
+  />
+  <button
+    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 jTdjeb"
+    disabled={true}
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+>
+  <input
+    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 ksOZuA"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 cBJgVn"
+    disabled={false}
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with textInputProps matches with snapshot 1`] = `
+<div
+  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+>
+  <input
+    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 bBanST"
+    disabled={false}
+    name="text"
+    placeholder="Les props sont transmises"
+    value="Button"
+  />
+  <button
+    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 edTByD"
+    disabled={false}
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+>
+  <input
+    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 eKuQgx"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 ccJVuS"
+    disabled={false}
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;

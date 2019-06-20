@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, object } from '@storybook/addon-knobs'
+import { withKnobs, boolean, object, text } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithButton } from './index'
 
@@ -52,6 +52,7 @@ storiesOf('Form/TextInput', module)
             valid={boolean('Valid', false)}
             error={boolean('Error', false)}
             disabled={boolean('Disabled', false)}
+            value={text('Button', 'Button')}
             textInputProps={object('textInputProps', {
               placeholder: 'Les props sont transmises',
             })}
