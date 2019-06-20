@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import useLazyObserver from '../../helpers/utils/lazy-hook'
 
-const LazyHook = ({ children, ...others }) => {
+const LazyHook = ({ children }) => {
   const lazyComponentRef = useRef(null)
   const isVisible = useLazyObserver(lazyComponentRef)
 
