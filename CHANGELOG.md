@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.11.0] - 2019-06-20
+
 Features:
 - Add `imageContainerBackground` and `imageContainerRatio` props to `SimpleCard`
 - Add Lazy class `LazyObserver`, hook `useLazyObserver`, HOC `withLazy`
