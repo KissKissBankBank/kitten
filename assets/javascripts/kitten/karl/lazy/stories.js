@@ -4,12 +4,12 @@ import { Marger } from '../../components/layout/marger'
 import { Container } from '../../components/grid/container'
 import { Grid, GridCol } from '../../components/grid/grid'
 import LazyHook from './lazy-hook.js'
-import LazyHoc from './lazy-hoc.js'
+import ImgWithLazy from './img-with-lazy.js'
 
 storiesOf('Lazy', module)
   .add('using useLazyObserver hook', () => {
     return (
-      <Marger top="60" bottom="4">
+      <Marger top="100" bottom="4">
         <Container>
           <Grid>
             <GridCol col="6" col-xs="4" col-m="3" col-l="2">
@@ -24,11 +24,11 @@ storiesOf('Lazy', module)
   })
   .add('using withLazy HOC', () => {
     return (
-      <Marger top="60" bottom="4">
+      <Marger top="100" bottom="4">
         <Container>
           <Grid>
             <GridCol col="6" col-xs="4" col-m="3" col-l="2">
-              <LazyHoc
+              <ImgWithLazy
                 imgSrc="https://placeimg.com/800/800/any"
                 width={800}
                 height={800}

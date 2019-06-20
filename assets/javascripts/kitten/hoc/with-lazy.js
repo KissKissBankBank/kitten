@@ -8,7 +8,7 @@ const withLazy = WrappedComponent => props => {
   return (
     <>
       <div ref={lazyComponentRef} />
-      <WrappedComponent isLazyTriggered={isLazyTriggered} {...props} />
+      <WrappedComponent {...props} isLazyTriggered={isLazyTriggered} />
     </>
   )
 }
