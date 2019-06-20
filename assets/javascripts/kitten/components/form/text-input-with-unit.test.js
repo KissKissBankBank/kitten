@@ -1,7 +1,11 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
+import 'jest-styled-components'
 import { TextInputWithUnit } from '../../components/form/text-input-with-unit'
 
 describe('<TextInputWithUnit />', () => {
+  let component
+
   describe('by default', () => {
     const component = shallow(<TextInputWithUnit />)
 
@@ -32,51 +36,33 @@ describe('<TextInputWithUnit />', () => {
     })
   })
 
-  describe('tiny prop', () => {
-    const component = mount(<TextInputWithUnit tiny />)
-    const textInput = component.find('input')
-    const span = component.find('span')
-    const textInputExpectation = textInput.hasClass('k-TextInput--tiny')
-    const spanExpectation = span.hasClass('k-TextInputWithUnit__unit--tiny')
-
-    it('has an <input /> with "k-TextInput--tiny" class', () => {
-      expect(textInputExpectation).toBe(true)
+  describe('with `tiny` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInputWithUnit tiny />).toJSON()
     })
 
-    it('has a <span /> with "k-TextInputWithUnit__unit--tiny" class', () => {
-      expect(spanExpectation).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('valid prop', () => {
-    const component = mount(<TextInputWithUnit valid />)
-    const textInput = component.find('input')
-    const span = component.find('span')
-    const textInputExpectation = textInput.hasClass('is-valid')
-    const spanExpectation = span.hasClass('is-valid')
-
-    it('has an <input /> with "is-valid" class', () => {
-      expect(textInputExpectation).toBe(true)
+  describe('with `valid` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInputWithUnit valid />).toJSON()
     })
 
-    it('has a <span /> with "is-valid" class', () => {
-      expect(spanExpectation).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('error prop', () => {
-    const component = mount(<TextInputWithUnit error />)
-    const textInput = component.find('input')
-    const span = component.find('span')
-    const textInputExpectation = textInput.hasClass('is-error')
-    const spanExpectation = span.hasClass('is-error')
-
-    it('has an <input /> with "is-error" class', () => {
-      expect(textInputExpectation).toBe(true)
+  describe('with `error` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInputWithUnit error />).toJSON()
     })
 
-    it('has a <span /> with "is-error" class', () => {
-      expect(spanExpectation).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 

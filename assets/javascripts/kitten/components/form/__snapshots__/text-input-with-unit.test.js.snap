@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithUnit /> with \`error\` prop matches with snapshot 1`] = `
+.c0 {
+  font-size: 0.89rem;
+  line-height: 1.3;
+  font-weight: lighter;
+  box-sizing: border-box;
+  border-width: 0.13rem;
+  border-style: solid;
+  border-radius: 0;
+  width: 100%;
+  height: 3.13rem;
+  padding: 0.63rem 0.94rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  color: #222;
+  border-color: #eee;
+  color: #ffb2c7;
+  border-color: #ffb2c7;
+}
+
+.c0:placeholder {
+  color: #b8b8b8;
+}
+
+.c0:focus {
+  outline: none;
+  border-color: #d8d8d8;
+}
+
+.c0:disabled {
+  color: #b8b8b8;
+  border-color: #eee;
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.c0:focus {
+  color: #222;
+  border-color: #d8d8d8;
+}
+
+<div
+  className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
+>
+  <input
+    className="k-TextInputWithUnit__input c0"
+    disabled={false}
+    name="text"
+    placeholder={null}
+    type="number"
+  />
+  <span
+    className="k-TextInputWithUnit__unit is-error"
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with \`tiny\` prop matches with snapshot 1`] = `
+.c0 {
+  font-size: 0.89rem;
+  line-height: 1.3;
+  font-weight: lighter;
+  box-sizing: border-box;
+  border-width: 0.13rem;
+  border-style: solid;
+  border-radius: 0;
+  width: 100%;
+  height: 3.13rem;
+  padding: 0.63rem 0.94rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  color: #222;
+  border-color: #eee;
+  height: 2.5rem;
+}
+
+.c0:placeholder {
+  color: #b8b8b8;
+}
+
+.c0:focus {
+  outline: none;
+  border-color: #d8d8d8;
+}
+
+.c0:disabled {
+  color: #b8b8b8;
+  border-color: #eee;
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+<div
+  className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
+>
+  <input
+    className="k-TextInputWithUnit__input c0"
+    disabled={false}
+    name="text"
+    placeholder={null}
+    type="number"
+  />
+  <span
+    className="k-TextInputWithUnit__unit k-TextInputWithUnit__unit--tiny"
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with \`valid\` prop matches with snapshot 1`] = `
+.c0 {
+  font-size: 0.89rem;
+  line-height: 1.3;
+  font-weight: lighter;
+  box-sizing: border-box;
+  border-width: 0.13rem;
+  border-style: solid;
+  border-radius: 0;
+  width: 100%;
+  height: 3.13rem;
+  padding: 0.63rem 0.94rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  color: #222;
+  border-color: #eee;
+  color: #cff0d6;
+  border-color: #cff0d6;
+}
+
+.c0:placeholder {
+  color: #b8b8b8;
+}
+
+.c0:focus {
+  outline: none;
+  border-color: #d8d8d8;
+}
+
+.c0:disabled {
+  color: #b8b8b8;
+  border-color: #eee;
+  background-color: #eee;
+  cursor: not-allowed;
+}
+
+.c0:focus {
+  color: #222;
+  border-color: #d8d8d8;
+}
+
+<div
+  className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
+>
+  <input
+    className="k-TextInputWithUnit__input c0"
+    disabled={false}
+    name="text"
+    placeholder={null}
+    type="number"
+  />
+  <span
+    className="k-TextInputWithUnit__unit is-valid"
+  >
+    λ
+  </span>
+</div>
+`;
