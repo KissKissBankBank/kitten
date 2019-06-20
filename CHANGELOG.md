@@ -11,7 +11,7 @@ Features:
   `SimpleCard`.
 - Add Lazy class `LazyObserver`, hook `useLazyObserver` and HOC `withLazy`.
 
-Fix:
+Fixes:
 - `SimpleCarousel` accessibility fixes.
 - Remove warnings in `Carousel` component tests.
 
