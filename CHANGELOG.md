@@ -10,6 +10,7 @@ Features:
 
 Fix:
 - `SimpleCarousel` accessibility fixes
+- Remove warnings in `Carousel` component tests
 
 ## [2.10.0] - 2019-06-07
 
