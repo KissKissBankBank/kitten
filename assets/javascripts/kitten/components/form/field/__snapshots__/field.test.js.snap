@@ -174,6 +174,51 @@ Array [
 ]
 `;
 
+exports[`<Field /> with <Field.InputWithButton /> matches with snapshot 1`] = `
+Array [
+  <div
+    className="marger__StyledMarger-q3lecu-0 csmETU"
+  >
+    <div
+      className="k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
+    >
+      <div
+        className="k-Line__item"
+      >
+        <label
+          className="k-Label k-Label--tiny"
+          htmlFor="input"
+          onClick={[Function]}
+        >
+          Label
+        </label>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+  >
+    <input
+      className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 bBanST"
+      disabled={false}
+      name="field"
+    />
+    <button
+      className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 edTByD"
+      disabled={false}
+      type="button"
+    >
+      Button
+    </button>
+  </div>,
+]
+`;
+
 exports[`<Field /> with <Field.Password /> in error matches with snapshot 1`] = `
 Array [
   <div

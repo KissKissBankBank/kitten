@@ -5,6 +5,7 @@ import {
   FieldPasswordExample,
   FieldRadioButtonSetExample,
   FieldSelectExample,
+  FieldInputWithButtonExample,
 } from './field.examples'
 
 describe('<Field />', () => {
@@ -42,6 +43,28 @@ describe('<Field />', () => {
             placeholder="Placeholder…"
             error
             errorMessage="Error!"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with <Field.InputWithButton />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <FieldInputWithButtonExample
+            id="input"
+            label="Label"
+            value="Button"
+            textInputProps={{
+              placeholder: 'Placeholder…',
+              name: 'field',
+            }}
           />,
         )
         .toJSON()
