@@ -4,7 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remove warnings in `Carousel` component tests
+Features:
+- Add `imageContainerBackground` and `imageContainerRatio` props to `SimpleCard`
+- Add Lazy class `LazyObserver`, hook `useLazyObserver`, HOC `withLazy`
+
+Fix:
+- `SimpleCarousel` accessibility fixes
+- Remove warnings in `Carousel` component tests
 
 ## [2.10.0] - 2019-06-07
 
