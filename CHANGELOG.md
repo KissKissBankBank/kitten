@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add Lazy class `LazyObserver`, hook `useLazyObserver`, HOC `withLazy`
+
 ## [2.10.0] - 2019-06-07
 
 Feature:
