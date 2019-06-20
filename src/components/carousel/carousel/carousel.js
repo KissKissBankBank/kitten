@@ -204,11 +204,9 @@ function (_Component) {
           });
         }), _react.default.createElement(PageControlButton, {
           prev: true,
-          key: "prev",
           onClick: _this.goPrevPage
         }), _react.default.createElement(PageControlButton, {
           next: true,
-          key: "next",
           onClick: _this.goNextPage
         }));
       }
@@ -219,7 +217,6 @@ function (_Component) {
       }, _react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "beryllium",
         onClick: _this.goPrevPage,
-        key: "left-".concat(indexPageVisible),
         disabled: indexPageVisible < 1 || numPages < 1
       }, _react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
@@ -228,7 +225,6 @@ function (_Component) {
       })), _react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "beryllium",
         onClick: _this.goNextPage,
-        key: "right-".concat(indexPageVisible),
         disabled: indexPageVisible >= numPages - 1
       }, _react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",

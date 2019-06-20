@@ -37,6 +37,8 @@ var _subtitle = require("./components/subtitle");
 
 var _paragraph = require("./components/paragraph");
 
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
+
 var ContainerStyle = _styledComponents.default.a.withConfig({
   displayName: "simple-card__ContainerStyle",
   componentId: "sc-1g5bppt-0"
@@ -65,11 +67,15 @@ function (_Component) {
           titleProps = _this$props.titleProps,
           subtitle = _this$props.subtitle,
           paragraph = _this$props.paragraph,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph"]);
+          imageContainerRatio = _this$props.imageContainerRatio,
+          imageContainerBackground = _this$props.imageContainerBackground,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["imageProps", "withPlayerButtonOnImage", "arrowColor", "ariaLabel", "href", "title", "titleProps", "subtitle", "paragraph", "imageContainerRatio", "imageContainerBackground"]);
       return _react.default.createElement(ContainerStyle, (0, _extends2.default)({}, others, {
         as: href ? 'a' : 'div',
         href: href
       }), _react.default.createElement(_image.Image, {
+        imageContainerRatio: imageContainerRatio,
+        imageContainerBackground: imageContainerBackground,
         imageProps: imageProps,
         withPlayerButtonOnImage: withPlayerButtonOnImage,
         arrowColor: arrowColor,
