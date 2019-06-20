@@ -1,18 +1,18 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, text, number } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text, object } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
-import { TextInput } from './index'
+import { TextInputWithUnit } from './index'
 
 const info = {
   text: `
-    # TextInput
+    # TextInputWithUnit
     &nbsp;
 
     ## Import
     ~~~js
-    import { TextInput } from '@kisskissbankbank/kitten/src/components/form/text-input'
+    import { TextInputWithUnit } from '@kisskissbankbank/kitten/src/components/form/text-input-with-unit'
     ~~~
 
     ## Usage
@@ -20,32 +20,24 @@ const info = {
 
     #### Default
     ~~~js
-    <TextInput />
+    <TextInputWithUnit />
     ~~~
 
-    #### Size
+   #### Size
     ~~~js
-    <TextInput tiny />
-    ~~~
-
-    #### Tag
-    ~~~js
-    <TextInput tag="textarea" />
-    <TextInput tag="input" />
+    <TextInputWithUnit tiny />
     ~~~
 
     #### State
     ~~~js
-    <TextInput valid />
-    <TextInput error />
-    <TextInput disabled />
+    <TextInputWithUnit valid />
+    <TextInputWithUnit error />
+    <TextInputWithUnit disabled />
     ~~~
 
-    ### Digits
+    ### Unit
     ~~~js
-      <TextInput digits="2" />
-      <TextInput digits="6" />
-      <TextInput digits="12" />
+    <TextInputWithUnit>€</TextInputWithUnit>
     ~~~
   `,
 }
@@ -53,17 +45,17 @@ const info = {
 storiesOf('Form/Input', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('input', () => {
+  .add('input with unit', () => {
     return (
       <Grid style={{ marginTop: '5em' }}>
         <GridCol offset="1" col="6">
-          <TextInput
+          <TextInputWithUnit
             valid={boolean('Valid', false)}
             error={boolean('Error', false)}
             disabled={boolean('Disabled', false)}
             tiny={boolean('Tiny', false)}
-            placeholder={text('Placeholder', 'Les props sont transmises')}
-            digits={number('Digits', 12)}
+            error={boolean('Error', false)}
+            unit={text('Unit', '€')}
           />
         </GridCol>
       </Grid>

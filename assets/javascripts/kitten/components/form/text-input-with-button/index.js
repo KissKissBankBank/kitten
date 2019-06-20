@@ -55,6 +55,7 @@ export class TextInputWithButton extends PureComponent {
     valid: PropTypes.bool,
     error: PropTypes.bool,
     disabled: PropTypes.bool,
+    tiny: PropTypes.bool,
     modifier: PropTypes.string,
     value: PropTypes.string,
   }
@@ -63,6 +64,7 @@ export class TextInputWithButton extends PureComponent {
     valid: false,
     error: false,
     disabled: false,
+    tiny: false,
     value: 'Button',
     modifier: 'beryllium',
     textInputProps: {
@@ -76,6 +78,7 @@ export class TextInputWithButton extends PureComponent {
       valid,
       error,
       disabled,
+      tiny,
       value,
       textInputProps,
       modifier,
@@ -89,6 +92,7 @@ export class TextInputWithButton extends PureComponent {
           valid={valid}
           error={error}
           disabled={disabled}
+          tiny={tiny}
         />
         <StyledTextInputWithButtonButton
           type="button"

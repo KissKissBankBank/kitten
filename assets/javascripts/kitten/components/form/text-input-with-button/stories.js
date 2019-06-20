@@ -23,6 +23,11 @@ const info = {
     <TextInputWithButton />
     ~~~
 
+    #### Size
+    ~~~js
+    <TextInputWithButton tiny />
+    ~~~
+
     #### State
     ~~~js
     <TextInputWithButton valid />
@@ -41,10 +46,10 @@ const info = {
   `,
 }
 
-storiesOf('Form/TextInput', module)
+storiesOf('Form/Input', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('with text and button', () => {
+  .add('input with button', () => {
     return (
       <Grid style={{ marginTop: '5em' }}>
         <GridCol offset="1" col="6">
@@ -52,6 +57,7 @@ storiesOf('Form/TextInput', module)
             valid={boolean('Valid', false)}
             error={boolean('Error', false)}
             disabled={boolean('Disabled', false)}
+            tiny={boolean('Tiny', false)}
             value={text('Button', 'Button')}
             textInputProps={object('textInputProps', {
               placeholder: 'Les props sont transmises',

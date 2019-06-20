@@ -3,13 +3,14 @@ import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
 
 const borderWidth = pxToRem(2)
 
 const styledTextInput = css`
   font-size: ${stepToRem(-1)};
   line-height: 1.3;
-  font-weight: lighter;
+  ${TYPOGRAPHY.fontStyles.light};
   box-sizing: border-box;
   border-width: ${borderWidth};
   border-style: solid;
