@@ -7,12 +7,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [2.11.0] - 2019-06-20
 
 Features:
-- Add `imageContainerBackground` and `imageContainerRatio` props to `SimpleCard`
-- Add Lazy class `LazyObserver`, hook `useLazyObserver`, HOC `withLazy`
+- Add `imageContainerBackground` and `imageContainerRatio` props to
+  `SimpleCard`.
+- Add Lazy class `LazyObserver`, hook `useLazyObserver` and HOC `withLazy`.
 
 Fix:
-- `SimpleCarousel` accessibility fixes
-- Remove warnings in `Carousel` component tests
+- `SimpleCarousel` accessibility fixes.
+- Remove warnings in `Carousel` component tests.
 
 ## [2.10.0] - 2019-06-07
 
