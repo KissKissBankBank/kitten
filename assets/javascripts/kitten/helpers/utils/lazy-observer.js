@@ -25,19 +25,20 @@ class LazyObserver {
       : null
 
   observe = (elt, callback = () => {}) => {
-    if (this.observer !== null) {
-      this.observer.observe(elt)
-      this.observedComponents.set(elt, callback)
-    } else {
+    if (this.observer === null) {
       callback()
+      return
     }
+
+    this.observer.observe(elt)
+    this.observedComponents.set(elt, callback)
   }
 
   unobserve = elt => {
-    if (this.observer !== null) {
-      this.observedComponents.delete(elt)
-      this.observer.unobserve(elt)
-    }
+    if (this.observer === null) return
+
+    this.observedComponents.delete(elt)
+    this.observer.unobserve(elt)
   }
 }
 
