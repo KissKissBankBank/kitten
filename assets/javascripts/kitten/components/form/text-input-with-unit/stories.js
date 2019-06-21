@@ -42,10 +42,10 @@ const info = {
   `,
 }
 
-storiesOf('Form/Input', module)
+storiesOf('Form/TextInput', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('input with unit', () => {
+  .add('Text input with unit', () => {
     return (
       <Grid style={{ marginTop: '5em' }}>
         <GridCol offset="1" col="6">
