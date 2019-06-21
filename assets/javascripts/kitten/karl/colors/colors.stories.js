@@ -1,10 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import {
-  AdaptableGrid,
-  AdaptableGridCol,
-} from '../../components/grid/adaptable-grid'
 import { Container } from '../../components/grid/container'
 import { getColor, colorAliases } from '../../helpers/utils/get-color'
 import { GUTTER } from '../../constants/grid-config'
