@@ -29,6 +29,12 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
   font-size: 0.88rem;
 }
 
+.c3 img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
 .c2 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -97,7 +103,6 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
 >
   <ul
     className="c1"
-    role="tablist"
   >
     <li
       className="c2"
