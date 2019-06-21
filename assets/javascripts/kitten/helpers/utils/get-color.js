@@ -1,7 +1,7 @@
 const colorList = {
   black: { colorValue: '#000', invertedColorValue: '#fff' },
   greyDarker: { colorValue: '#222', invertedColorValue: '#fff' },
-  greyDark: { colorValue: '#b8b8b8', invertedColorValue: '#fff' },
+  greyDark: { colorValue: '#b8b8b8', invertedColorValue: '#000' },
   grey: { colorValue: '#d8d8d8', invertedColorValue: '#000' },
   greyLight: { colorValue: '#eee', invertedColorValue: '#000' },
 
@@ -25,7 +25,7 @@ const colorList = {
 
   greenDarker: { colorValue: '#25943d', invertedColorValue: '#fff' },
   greenDark: { colorValue: '#43b25b', invertedColorValue: '#fff' },
-  green: { colorValue: '#61d079', invertedColorValue: '#fff' },
+  green: { colorValue: '#61d079', invertedColorValue: '#000' },
   greenLight: { colorValue: '#cff0d6', invertedColorValue: '#000' },
   greenLighter: { colorValue: '#effaf1', invertedColorValue: '#000' },
   greenLightest: { colorValue: '#f7fcf8', invertedColorValue: '#000' },
@@ -38,8 +38,8 @@ const colorList = {
 
 export const colorAliases = {
   warning: colorList.red,
-  success: colorList.green,
   warningBackground: colorList.redLight,
+  success: colorList.green,
   successBackground: colorList.greenLighter,
 
   text: colorList.greyDarker,
@@ -48,7 +48,7 @@ export const colorAliases = {
   invertedBackground: colorList.greyDarker,
 
   light: colorList.greyLight,
-  dark: colorList.greyDark,
+  dark: colorList.greyDarker,
 
   primaryDarker: colorList.blueDarker,
   primaryDark: colorList.blueDark,
