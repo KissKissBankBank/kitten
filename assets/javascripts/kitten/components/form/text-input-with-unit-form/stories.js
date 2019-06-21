@@ -23,6 +23,13 @@ const info = {
     ## Usage
     &nbsp;
 
+    ### State
+    ~~~js
+      <TextInputWithUnitForm inputIsOnError />
+      <TextInputWithUnitForm formIsDisabled />
+    ~~~
+
+
     #### Default
     ~~~js
     <TextInputWithUnitForm />
@@ -44,6 +51,9 @@ storiesOf('Form/TextInput', module)
       <Grid style={{ marginTop: '5em' }}>
         <GridCol offset="1" col="6">
           <TextInputWithUnitForm
+            inputId={text('Id', '')}
+            inputLabel={text('Label', '')}
+            inputUnit={text('Unit', '€')}
             inputIsOnError={boolean('Error?', false)}
             errorMessage={text('Error', 'Error message…')}
             buttonLabel={text('Button', 'To contribute')}

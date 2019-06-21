@@ -68,6 +68,10 @@ export class TextInputWithUnitForm extends PureComponent {
   }
 
   static defaultProps = {
+    inputId: '',
+    inputLabel: '',
+    inputUnit: '',
+    buttonLabel: '',
     inputPlaceholder: '',
     inputDefaultValue: '',
     onInputBlur: () => {},
