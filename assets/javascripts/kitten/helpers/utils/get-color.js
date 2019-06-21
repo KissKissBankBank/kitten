@@ -36,7 +36,7 @@ const colorList = {
   redLightBis: { colorValue: '#ffebe0', invertedColorValue: '#000' },
 }
 
-const colorAliases = {
+export const colorAliases = {
   warning: colorList.red,
   success: colorList.green,
   warningBackground: colorList.redLight,
