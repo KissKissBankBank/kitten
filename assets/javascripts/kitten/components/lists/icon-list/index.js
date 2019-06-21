@@ -7,14 +7,18 @@ import { Item } from './components/item'
 export class IconList extends PureComponent {
   static Item = Item
 
-  render = () => (
-    <StyledNav>
-      <StyledList role="tablist">{this.props.children}</StyledList>
-    </StyledNav>
-  )
+  render() {
+    const { children, containerProps, listProps } = this.props
+
+    return (
+      <StyledContainer {...containerProps}>
+        <StyledList {...listProps}>{children}</StyledList>
+      </StyledContainer>
+    )
+  }
 }
 
-const StyledNav = styled.nav`
+const StyledContainer = styled.div`
   position: relative;
   padding: ${pxToRem(1)} 0;
 `
