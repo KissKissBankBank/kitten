@@ -1,9 +1,10 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component, createRef } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from '../../constants/colors-config'
 import { createRangeFromZeroTo } from '../../helpers/utils/range'
 import { pxToRem } from '../../helpers/utils/typography'
+import { VisuallyHidden } from '../../components/accessibility/visually-hidden'
 
 const StyledContainer = styled.div`
   ${({ addBottomMargin }) =>
@@ -30,7 +31,7 @@ const StyledContainer = styled.div`
     }
   }
 `
-const StyledPagination = styled.ul`
+const StyledPagination = styled.div`
   justify-content: ${({ paginationAlign }) => paginationAlign};
   margin: ${pxToRem(40)} 0;
   padding: 0;
@@ -88,6 +89,8 @@ export class SimpleCarousel extends Component {
   constructor(props) {
     super(props)
 
+    this.paginationRef = createRef()
+
     this.state = {
       currentPageNumber: 0,
       totalPagesCount: React.Children.toArray(props.children).length,
@@ -96,8 +99,38 @@ export class SimpleCarousel extends Component {
 
   showPagination = () => this.state.totalPagesCount > 1
 
+  updateCurrentPageNumber = pageNumber => {
+    this.setState({ currentPageNumber: pageNumber })
+  }
+
   handlePageClick = numPage => () => {
-    this.setState({ currentPageNumber: numPage })
+    this.updateCurrentPageNumber(numPage)
+  }
+
+  handleKeyDown = event => {
+    if (['ArrowLeft', 'ArrowRight'].includes(event.key)) {
+      const { currentPageNumber, totalPagesCount } = this.state
+      const tabs = this.paginationRef.current.querySelectorAll('button')
+      tabs[currentPageNumber].setAttribute('tabindex', -1)
+
+      // default: ArrowLeft
+      let pageNumber = currentPageNumber - 1
+      if (pageNumber < 0) {
+        pageNumber = totalPagesCount - 1
+      }
+
+      // change in case of ArrowRight
+      if (event.key === 'ArrowRight') {
+        pageNumber = currentPageNumber + 1
+        if (pageNumber >= totalPagesCount) {
+          pageNumber = 0
+        }
+      }
+
+      this.updateCurrentPageNumber(pageNumber)
+      tabs[pageNumber].setAttribute('tabindex', 0)
+      tabs[pageNumber].focus()
+    }
   }
 
   render() {
@@ -117,7 +150,7 @@ export class SimpleCarousel extends Component {
     const id = this.props.id ? this.props.id + '_' : ''
 
     return (
-      <Fragment>
+      <>
         <StyledContainer
           style={containerStyle}
           addBottomMargin={this.showPagination()}
@@ -143,28 +176,30 @@ export class SimpleCarousel extends Component {
             style={paginationStyle}
             paginationAlign={paginationAlign}
             role="tablist"
+            onKeyDown={this.handleKeyDown}
+            ref={this.paginationRef}
           >
             {rangePage.map(numPage => {
               return (
-                <li key={numPage}>
-                  <StyledPaginationButton
-                    id={`${id}carouselTab_${numPage}`}
-                    type="button"
-                    aria-controls={`${id}carouselItem_${numPage}`}
-                    aria-label={`Page ${numPage + 1}`}
-                    role="tab"
-                    aria-selected={numPage === currentPageNumber}
-                    paginationColor={paginationColor}
-                    activePaginationColor={activePaginationColor}
-                    style={bulletStyle}
-                    onClick={this.handlePageClick(numPage)}
-                  />
-                </li>
+                <StyledPaginationButton
+                  key={numPage}
+                  id={`${id}carouselTab_${numPage}`}
+                  type="button"
+                  aria-controls={`${id}carouselItem_${numPage}`}
+                  role="tab"
+                  aria-selected={numPage === currentPageNumber}
+                  paginationColor={paginationColor}
+                  activePaginationColor={activePaginationColor}
+                  style={bulletStyle}
+                  onClick={this.handlePageClick(numPage)}
+                >
+                  <VisuallyHidden>{`Page ${numPage + 1}`}</VisuallyHidden>
+                </StyledPaginationButton>
               )
             })}
           </StyledPagination>
         )}
-      </Fragment>
+      </>
     )
   }
 }

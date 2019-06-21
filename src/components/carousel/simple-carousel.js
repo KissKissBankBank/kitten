@@ -35,6 +35,8 @@ var _range = require("../../helpers/utils/range");
 
 var _typography = require("../../helpers/utils/typography");
 
+var _visuallyHidden = require("../../components/accessibility/visually-hidden");
+
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "simple-carousel__StyledContainer",
   componentId: "t6k8ig-0"
@@ -43,7 +45,7 @@ var StyledContainer = _styledComponents.default.div.withConfig({
   return addBottomMargin && (0, _styledComponents.css)(["margin-bottom:", ";"], (0, _typography.pxToRem)(40));
 });
 
-var StyledPagination = _styledComponents.default.ul.withConfig({
+var StyledPagination = _styledComponents.default.div.withConfig({
   displayName: "simple-carousel__StyledPagination",
   componentId: "t6k8ig-1"
 })(["justify-content:", ";margin:", " 0;padding:0;display:flex;li{list-style-type:none;line-height:", ";}"], function (_ref2) {
@@ -77,14 +79,51 @@ function (_Component) {
       return _this.state.totalPagesCount > 1;
     };
 
+    _this.updateCurrentPageNumber = function (pageNumber) {
+      _this.setState({
+        currentPageNumber: pageNumber
+      });
+    };
+
     _this.handlePageClick = function (numPage) {
       return function () {
-        _this.setState({
-          currentPageNumber: numPage
-        });
+        _this.updateCurrentPageNumber(numPage);
       };
     };
 
+    _this.handleKeyDown = function (event) {
+      if (['ArrowLeft', 'ArrowRight'].includes(event.key)) {
+        var _this$state = _this.state,
+            currentPageNumber = _this$state.currentPageNumber,
+            totalPagesCount = _this$state.totalPagesCount;
+
+        var tabs = _this.paginationRef.current.querySelectorAll('button');
+
+        tabs[currentPageNumber].setAttribute('tabindex', -1); // default: ArrowLeft
+
+        var pageNumber = currentPageNumber - 1;
+
+        if (pageNumber < 0) {
+          pageNumber = totalPagesCount - 1;
+        } // change in case of ArrowRight
+
+
+        if (event.key === 'ArrowRight') {
+          pageNumber = currentPageNumber + 1;
+
+          if (pageNumber >= totalPagesCount) {
+            pageNumber = 0;
+          }
+        }
+
+        _this.updateCurrentPageNumber(pageNumber);
+
+        tabs[pageNumber].setAttribute('tabindex', 0);
+        tabs[pageNumber].focus();
+      }
+    };
+
+    _this.paginationRef = (0, _react.createRef)();
     _this.state = {
       currentPageNumber: 0,
       totalPagesCount: _react.default.Children.toArray(props.children).length
@@ -106,12 +145,12 @@ function (_Component) {
           paginationStyle = _this$props.paginationStyle,
           bulletStyle = _this$props.bulletStyle,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "containerStyle", "activePaginationColor", "paginationColor", "paginationAlign", "paginationStyle", "bulletStyle"]);
-      var _this$state = this.state,
-          totalPagesCount = _this$state.totalPagesCount,
-          currentPageNumber = _this$state.currentPageNumber;
+      var _this$state2 = this.state,
+          totalPagesCount = _this$state2.totalPagesCount,
+          currentPageNumber = _this$state2.currentPageNumber;
       var rangePage = (0, _range.createRangeFromZeroTo)(totalPagesCount);
       var id = this.props.id ? this.props.id + '_' : '';
-      return _react.default.createElement(_react.Fragment, null, _react.default.createElement(StyledContainer, (0, _extends2.default)({
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledContainer, (0, _extends2.default)({
         style: containerStyle,
         addBottomMargin: this.showPagination()
       }, others), _react.default.Children.map(children, function (item, index) {
@@ -125,22 +164,22 @@ function (_Component) {
       })), this.showPagination() && _react.default.createElement(StyledPagination, {
         style: paginationStyle,
         paginationAlign: paginationAlign,
-        role: "tablist"
+        role: "tablist",
+        onKeyDown: this.handleKeyDown,
+        ref: this.paginationRef
       }, rangePage.map(function (numPage) {
-        return _react.default.createElement("li", {
-          key: numPage
-        }, _react.default.createElement(StyledPaginationButton, {
+        return _react.default.createElement(StyledPaginationButton, {
+          key: numPage,
           id: "".concat(id, "carouselTab_").concat(numPage),
           type: "button",
           "aria-controls": "".concat(id, "carouselItem_").concat(numPage),
-          "aria-label": "Page ".concat(numPage + 1),
           role: "tab",
           "aria-selected": numPage === currentPageNumber,
           paginationColor: paginationColor,
           activePaginationColor: activePaginationColor,
           style: bulletStyle,
           onClick: _this2.handlePageClick(numPage)
-        }));
+        }, _react.default.createElement(_visuallyHidden.VisuallyHidden, null, "Page ".concat(numPage + 1)));
       })));
     }
   }]);

@@ -38,8 +38,8 @@ describe('<Carousel />', () => {
           itemMinWidth={ProjectCardMinWidth}
           baseItemMarginBetween={ProjectCardMarginBetween}
         >
-          {data.map(item => (
-            <ProjectCard title={item.title} />
+          {data.map((item, index) => (
+            <ProjectCard title={item.title} key={index} />
           ))}
         </Carousel>,
       )
@@ -58,8 +58,8 @@ describe('<Carousel />', () => {
           itemMinWidth={ProjectCardMinWidth}
           baseItemMarginBetween={ProjectCardMarginBetween}
         >
-          {data.map(item => (
-            <ProjectCard title={item.title} />
+          {data.map((item, index) => (
+            <ProjectCard title={item.title} key={index} />
           ))}
         </Carousel>,
       )
