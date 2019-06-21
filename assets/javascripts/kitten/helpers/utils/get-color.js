@@ -90,7 +90,7 @@ export const getColor = (color, options) => {
   // Old way to get a color
   if (deprecatedColorNames[color]) {
     console.warn(
-      'getColor() deprecation warning: please use non-deprecated color names',
+      `getColor() deprecation warning: please use non-deprecated color names instead of '${color}'`,
     )
     return deprecatedColorNames[color].colorValue
   }
@@ -110,4 +110,6 @@ export const getColor = (color, options) => {
     }
     return colorList[color].colorValue
   }
+
+  throw 'getColor() exception: provided color argument doesn’t exist'
 }

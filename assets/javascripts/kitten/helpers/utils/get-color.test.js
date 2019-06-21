@@ -23,10 +23,10 @@ describe('getColor helper', () => {
     })
   })
   describe('getColor("fake color name")', () => {
-    const color = getColor('fake color name')
-
-    it('returns `undefined`', () => {
-      expect(color).toEqual(undefined)
+    it('throws an exception', () => {
+      expect(() => getColor('fake color name')).toThrow(
+        'getColor() exception: provided color argument doesn’t exist',
+      )
     })
   })
 })
