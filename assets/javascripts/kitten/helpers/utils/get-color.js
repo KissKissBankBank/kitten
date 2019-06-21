@@ -85,6 +85,7 @@ const deprecatedColorNames = {
 }
 
 export const getColor = (color, options) => {
+  // Old way to get a color
   if (deprecatedColorNames[color]) {
     console.warn(
       'getColor() deprecation warning: please use non-deprecated color names',
@@ -92,6 +93,7 @@ export const getColor = (color, options) => {
     return deprecatedColorNames[color].colorValue
   }
 
+  // Prefered way to get a color
   if (colorAliases[color]) {
     if (options && options.invert) {
       return colorAliases[color].invertedColorValue
@@ -99,6 +101,7 @@ export const getColor = (color, options) => {
     return colorAliases[color].colorValue
   }
 
+  // Last resort if your color has no alias
   if (colorList[color]) {
     if (options && options.invert) {
       return colorList[color].invertedColorValue
