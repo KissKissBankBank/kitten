@@ -49,26 +49,15 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           />
         </div>
         <form
+          className="text-input-with-unit-form__StyledFormContainer-wjoixz-0 iADQmK"
           onSubmit={[Function]}
-          style={
-            Object {
-              "margin": 0,
-              "padding": 0,
-            }
-          }
         >
           <div
             className="marger__StyledMarger-q3lecu-0 gKSWLw"
           >
             <div
-              className="k-Grid"
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "justifyContent": "center",
-                }
-              }
+              align="center"
+              className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
             >
               <div
                 className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
@@ -88,23 +77,17 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   className="marger__StyledMarger-q3lecu-0 cHJBWz"
                 >
                   <div
-                    className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
+                    className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
                   >
                     <input
-                      autoComplete="off"
-                      className="k-TextInputWithUnit__input text-input__StyledInput-sc-11wej6v-1 bBanST"
-                      defaultValue=""
+                      className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 irBGFH"
                       disabled={false}
-                      id="donation-amount"
                       name="text"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      placeholder="Your amount"
                       type="number"
                     />
                     <span
-                      className="k-TextInputWithUnit__unit"
+                      className="text-input-with-unit__StyledInputUnit-gjmccx-2 bFSpXv"
+                      disabled={false}
                     >
                       €
                     </span>
@@ -114,34 +97,20 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 hiYWHy"
+            className="text-input-with-unit-form__StyledButtonPosition-wjoixz-2 ljliJT"
           >
-            <div
-              className="rmq-2001d403"
-              data-radium={true}
-              style={Object {}}
+            <button
+              aria-label="To contribute"
+              className="k-Button k-Button--helium k-Button--big text-input-with-unit-form__StyledButton-wjoixz-3 dTXArD"
+              disabled={false}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              tabIndex={null}
+              type="submit"
+              version="default"
             >
-              <button
-                aria-label="To contribute"
-                className="rmq-2001d403 k-Button k-Button--helium k-Button--big"
-                data-radium={true}
-                disabled={false}
-                onMouseEnter={[Function]}
-                onMouseLeave={[Function]}
-                style={Object {}}
-                tabIndex={null}
-                type="submit"
-              >
-                To contribute
-              </button>
-              <style
-                dangerouslySetInnerHTML={
-                  Object {
-                    "__html": "@media (max-width: 639px){ .rmq-2001d403{width: 100% !important;}}",
-                  }
-                }
-              />
-            </div>
+              To contribute
+            </button>
           </div>
         </form>
       </div>

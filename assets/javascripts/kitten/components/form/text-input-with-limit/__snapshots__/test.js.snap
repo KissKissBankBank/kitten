@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
+<div
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 eZWavJ"
+>
+  <input
+    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jESCNL text-input__StyledInput-sc-11wej6v-1 irBGFH"
+    disabled={false}
+    name="text"
+  />
+  <div
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 cyvRuS"
+  >
+    80
+  </div>
+</div>
+`;
