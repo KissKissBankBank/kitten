@@ -23,16 +23,15 @@ const info = {
     ## Usage
     &nbsp;
 
+    #### Default
+    ~~~js
+    <TextInputWithUnitForm />
+    ~~~
+
     ### State
     ~~~js
       <TextInputWithUnitForm inputIsOnError />
       <TextInputWithUnitForm formIsDisabled />
-    ~~~
-
-
-    #### Default
-    ~~~js
-    <TextInputWithUnitForm />
     ~~~
 
    #### Version
