@@ -33,7 +33,7 @@ export class Item extends PureComponent {
 
 const StyledItem = styled.li`
   display: flex;
-  margin ${pxToRem(40)} 0;
+  margin: ${pxToRem(40)} 0;
 `
 
 const StyledContent = styled.div`
