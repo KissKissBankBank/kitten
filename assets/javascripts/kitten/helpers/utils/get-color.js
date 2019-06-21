@@ -44,6 +44,8 @@ const colorAliases = {
 
   text: colorList.greyDarker,
   background: colorList.white,
+  invertedText: colorList.white,
+  invertedBackground: colorList.greyDarker,
 
   light: colorList.greyLight,
   dark: colorList.greyDark,
