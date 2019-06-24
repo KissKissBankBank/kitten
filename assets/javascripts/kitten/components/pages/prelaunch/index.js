@@ -30,7 +30,7 @@ const Card = styled.div`
   transform: translate(-50%, -50%);
   width: 80%;
   padding: 0 5% ${pxToRem(40)};
-  @media (min-width: 690px) {
+  @media (min-width: pxToRem(690)) {
     width: ${pxToRem(440)};
     padding: 0 ${pxToRem(115)} ${pxToRem(40)};
   }
