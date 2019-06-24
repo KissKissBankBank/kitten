@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Title, Separator, Text, Field, Button } from '../../..'
+import { Title, Separator, Text, Field, Button } from '../../../index'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const User = styled(({ className }) => (
@@ -84,7 +84,7 @@ const Prelaunch = () => {
           <SubmitButton modifier="helium" fluid big>
             M'informer du lancement
           </SubmitButton>
-          <Text size="micro">
+          <Text size="micro" color="font1" weight="light">
             Votre adresse email sera utilisé uniquement pour vous alerter du
             lancement de ce projet
           </Text>
