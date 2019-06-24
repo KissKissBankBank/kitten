@@ -5,7 +5,7 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
   className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
 >
   <input
-    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 irBGFH"
+    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 eIDyGn"
     disabled={false}
     name="text"
     onChange={[Function]}
@@ -25,7 +25,7 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
   className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
 >
   <input
-    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 irBGFH"
+    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 eIDyGn"
     disabled={true}
     name="text"
     onChange={[Function]}
@@ -45,7 +45,7 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
   className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
 >
   <input
-    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 irBGFH"
+    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 eIDyGn"
     disabled={false}
     name="text"
     onChange={[Function]}
@@ -65,7 +65,7 @@ exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
   className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
 >
   <input
-    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 gYlMEj"
+    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 crQkbU"
     disabled={false}
     name="text"
     onChange={[Function]}

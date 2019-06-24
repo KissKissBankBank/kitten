@@ -11,7 +11,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
       className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
     >
       <input
-        className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 irBGFH"
+        className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 eIDyGn"
         disabled={false}
         name="text"
         type="text"

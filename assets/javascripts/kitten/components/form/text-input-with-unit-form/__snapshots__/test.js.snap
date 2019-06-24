@@ -33,7 +33,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
             className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
           >
             <input
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 irBGFH"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 eIDyGn"
               disabled={false}
               name="text"
               type="number"
@@ -101,7 +101,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
             className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
           >
             <input
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 irBGFH"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 eIDyGn"
               disabled={false}
               name="text"
               type="number"
@@ -167,7 +167,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
             className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
           >
             <input
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 irBGFH"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 eIDyGn"
               disabled={true}
               name="text"
               type="number"
@@ -233,7 +233,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
             className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
           >
             <input
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 bDoovP"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 ildLBg"
               disabled={false}
               name="text"
               type="number"

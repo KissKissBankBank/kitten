@@ -4,8 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `TextInput`, `TextInputWithButton`, `TextInputWithUnit`, `TextInputWithUnitForm` and `TextInputWithLimit`
-  with `styled-component`.
+- Feature: Update
+  `TextInput`,
+  `TextInputWithButton`,
+  `TextInputWithUnit`,
+  `TextInputWithUnitForm`,
+  `TextInputWithLimit` with `styled-component`.
   Remove `k-TextAreaWrapper`.
 
 ## [2.11.0] - 2019-06-20
