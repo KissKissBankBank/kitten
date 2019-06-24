@@ -62,7 +62,7 @@ const StyledPaginationButton = styled.button`
 
 export class SimpleCarousel extends Component {
   static propTypes = {
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
     containerStyle: PropTypes.object,
     activePaginationColor: PropTypes.string,
     paginationColor: PropTypes.string,
@@ -147,7 +147,7 @@ export class SimpleCarousel extends Component {
 
     const { totalPagesCount, currentPageNumber } = this.state
     const rangePage = createRangeFromZeroTo(totalPagesCount)
-    const id = this.props.id ? this.props.id + '_' : ''
+    const id = this.props.id + '_'
 
     return (
       <>
