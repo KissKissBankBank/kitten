@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, text } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text, number } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithUnit } from './index'
 
@@ -56,6 +56,7 @@ storiesOf('Form/TextInput', module)
             tiny={boolean('Tiny', false)}
             error={boolean('Error', false)}
             unit={text('Unit', '€')}
+            digits={number('Digits', 0)}
           />
         </GridCol>
       </Grid>

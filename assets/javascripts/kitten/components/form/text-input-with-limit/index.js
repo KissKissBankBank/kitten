@@ -106,6 +106,7 @@ export class TextInputWithLimit extends PureComponent {
       valid,
       tiny,
       limit,
+      tag,
       onChange,
       disabled,
       textInputProps,
@@ -119,6 +120,7 @@ export class TextInputWithLimit extends PureComponent {
       <StyledTextInputWithLimit>
         <StyledTextInput
           {...textInputProps}
+          tag={tag}
           value={this.state.value}
           onChange={this.handleChange}
           disabled={disabled}

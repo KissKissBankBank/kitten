@@ -24,7 +24,7 @@ const styledTextInput = css`
   border-color: ${COLORS.line1};
   ${({ digits }) => digitsStyles(digits)};
 
-  :placeholder {
+  ::placeholder {
     color: ${COLORS.font2};
   }
 
