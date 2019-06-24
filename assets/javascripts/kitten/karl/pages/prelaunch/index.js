@@ -19,10 +19,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  @media (min-height: 600px) {
-    position: fixed;
-    height: 100%;
-  }
+  height: 100vh;
 `
 
 const Card = styled.div`
@@ -76,8 +73,13 @@ const Prelaunch = () => {
             </Text>{' '}
             Vous aussi, faites parti des premiers à contribuer !
           </MiddleText>
-          <Field.Label>Indiquez votre adresse email</Field.Label>
-          <Field.Input placeholder="florent.duveau@kisskissbankbank.com" />
+          <Field.Label labelProps={{ htmlFor: 'email' }}>
+            Indiquez votre adresse email
+          </Field.Label>
+          <Field.Input
+            name="email"
+            placeholder="florent.duveau@kisskissbankbank.com"
+          />
           <SubmitButton modifier="helium" fluid big>
             M'informer du lancement
           </SubmitButton>
