@@ -11,12 +11,12 @@ const StyledTextInputWithButton = styled.div`
   display: flex;
 `
 
-const StyledTextInputWithButtonInput = styled(TextInput)`
+const StyledTextInput = styled(TextInput)`
   outline: none;
   border-right: 0;
 `
 
-const StyledTextInputWithButtonButton = styled.button`
+const StyledButton = styled.button`
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${stepToRem(-1)};
   line-height: 1.3;
@@ -87,14 +87,14 @@ export class TextInputWithButton extends PureComponent {
 
     return (
       <StyledTextInputWithButton>
-        <StyledTextInputWithButtonInput
+        <StyledTextInput
           {...textInputProps}
           valid={valid}
           error={error}
           disabled={disabled}
           tiny={tiny}
         />
-        <StyledTextInputWithButtonButton
+        <StyledButton
           type="button"
           modifier={modifier}
           valid={valid}
@@ -102,7 +102,7 @@ export class TextInputWithButton extends PureComponent {
           disabled={disabled}
         >
           {value}
-        </StyledTextInputWithButtonButton>
+        </StyledButton>
       </StyledTextInputWithButton>
     )
   }
