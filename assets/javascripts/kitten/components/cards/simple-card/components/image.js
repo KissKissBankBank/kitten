@@ -1,18 +1,18 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Text } from '../../../../components/typography/text'
 import { Marger } from '../../../../components/layout/marger'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 
-const ImageStyle = styled.img`
+const StyledImage = styled.img`
   width: 100%;
   display: block;
 `
 const playerButtonSize = pxToRem(70)
 
-const PlayerButtonStyle = styled.div`
+const StyledPlayerButton = styled.div`
   width: ${playerButtonSize};
   height: ${playerButtonSize};
   background: ${COLORS.font1};
@@ -25,10 +25,28 @@ const PlayerButtonStyle = styled.div`
   z-index: 2;
 `
 
-const PlayerStyle = styled.div`
+const StyledImageContainer = styled(Marger)`
   position: relative;
   transition: opacity ease 600ms, z-index ease 600ms;
   z-index: 1;
+
+  background-color: ${({ imageContainerBackground }) =>
+    imageContainerBackground};
+
+  ${({ imageContainerRatio }) =>
+    imageContainerRatio &&
+    css`
+      overflow: hidden;
+      position: relative;
+      padding-top: ${imageContainerRatio}%;
+
+      & > img {
+        position: absolute;
+        top: 0;
+        height: auto;
+        text-align: center;
+      }
+    `}
 `
 
 export class Image extends PureComponent {
@@ -38,10 +56,12 @@ export class Image extends PureComponent {
       withPlayerButtonOnImage,
       arrowColor,
       ariaLabel,
+      imageContainerBackground,
+      imageContainerRatio,
     } = this.props
 
     const PlayerButtonOnImage = props => (
-      <PlayerButtonStyle>
+      <StyledPlayerButton>
         <Text
           size="default"
           weight="regular"
@@ -50,25 +70,25 @@ export class Image extends PureComponent {
         >
           ►
         </Text>
-      </PlayerButtonStyle>
+      </StyledPlayerButton>
     )
 
     return (
-      <Marger bottom="2" className="k-Card__imageContainer">
-        <PlayerStyle>
-          {withPlayerButtonOnImage && (
-            <PlayerButtonOnImage
-              arrowColor={arrowColor}
-              ariaLabel={ariaLabel}
-            />
-          )}
-          <ImageStyle
-            {...imageProps}
-            alt={imageProps.alt || ''}
-            className="k-Card__image"
-          />
-        </PlayerStyle>
-      </Marger>
+      <StyledImageContainer
+        bottom="2"
+        className="k-Card__imageContainer"
+        imageContainerBackground={imageContainerBackground}
+        imageContainerRatio={imageContainerRatio}
+      >
+        {withPlayerButtonOnImage && (
+          <PlayerButtonOnImage arrowColor={arrowColor} ariaLabel={ariaLabel} />
+        )}
+        <StyledImage
+          {...imageProps}
+          alt={imageProps.alt || ''}
+          className="k-Card__image"
+        />
+      </StyledImageContainer>
     )
   }
 }
@@ -82,15 +102,17 @@ Image.propTypes = {
   ariaLabel: PropTypes.string,
   arrowColor: PropTypes.string,
   href: PropTypes.string,
+  imageContainerBackground: PropTypes.string,
+  imageContainerRatio: PropTypes.number,
 }
 
 Image.defaultProps = {
   imageProps: {
-    src: 'https://placehold.it/200x200/caf4fe/caf4fe',
+    src: '',
     alt: '',
   },
   withPlayerButtonOnImage: false,
-  ariaLabel: null,
   arrowColor: 'background1',
   href: '#',
+  imageContainerBackground: COLORS.line1,
 }
