@@ -70,16 +70,14 @@ const Prelaunch = () => {
           </Title>
           <TitleSeparator />
           <MiddleText>
-            Déjà 58 personnes attendent le lancement du projet :{' '}
+            Déjà 58 personnes attendent le projet :{' '}
             <Text weight="bold">
               Atelier d'optique bruxellois dédié à l'upcycling et au custom.
-            </Text>
+            </Text>{' '}
+            Vous aussi, faites parti des premiers à contribuer !
           </MiddleText>
-          <Text>Faites vous aussi parti des premiers à contribuer 🙌</Text>
-          <Field.Input
-            placeholder="Entrez votre email"
-            aria-label="Entrez votre email"
-          />
+          <Field.Label>Indiquez votre adresse email</Field.Label>
+          <Field.Input placeholder="florent.duveau@kisskissbankbank.com" />
           <SubmitButton modifier="helium" fluid big>
             M'informer du lancement
           </SubmitButton>
