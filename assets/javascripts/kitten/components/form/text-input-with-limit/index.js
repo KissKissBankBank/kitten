@@ -6,6 +6,14 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 
+const errorColor = css`
+  ${({ error }) =>
+    error &&
+    css`
+      color: ${COLORS.error};
+    `}
+`
+
 const StyledTextInputWithLimit = styled.div`
   position: relative;
   display: block;
@@ -53,15 +61,12 @@ const StyledCounter = styled.div`
       text-shadow: none;
     `}
 
-  ${({ error }) =>
-    error &&
-    css`
-      color: ${COLORS.error};
-    `}
+  ${errorColor};
 
   ${StyledTextInput}:focus + & {
     color: ${COLORS.font1};
-  }
+
+  ${errorColor};
 `
 
 export class TextInputWithLimit extends PureComponent {
@@ -117,7 +122,6 @@ export class TextInputWithLimit extends PureComponent {
           value={this.state.value}
           onChange={this.handleChange}
           disabled={disabled}
-          error={error}
           tiny={tiny}
         />
         <StyledCounter error={error} disabled={disabled}>

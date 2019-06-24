@@ -2,15 +2,78 @@
 
 exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 <div
-  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 eZWavJ"
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
 >
   <input
-    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jESCNL text-input__StyledInput-sc-11wej6v-1 irBGFH"
+    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 irBGFH"
     disabled={false}
     name="text"
+    onChange={[Function]}
+    value=""
   />
   <div
-    className="text-input-with-limit__StyledCounter-ufrmmb-2 cyvRuS"
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 kDZFYq"
+    disabled={false}
+  >
+    80
+  </div>
+</div>
+`;
+
+exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
+>
+  <input
+    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 irBGFH"
+    disabled={true}
+    name="text"
+    onChange={[Function]}
+    value=""
+  />
+  <div
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 cEEYvx"
+    disabled={true}
+  >
+    80
+  </div>
+</div>
+`;
+
+exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
+>
+  <input
+    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 irBGFH"
+    disabled={false}
+    name="text"
+    onChange={[Function]}
+    value=""
+  />
+  <div
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 kDZFYq"
+    disabled={false}
+  >
+    80
+  </div>
+</div>
+`;
+
+exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
+>
+  <input
+    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 gYlMEj"
+    disabled={false}
+    name="text"
+    onChange={[Function]}
+    value=""
+  />
+  <div
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 kDZFYq"
+    disabled={false}
   >
     80
   </div>
