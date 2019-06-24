@@ -8,7 +8,7 @@ const User = styled(({ className }) => (
 ))`
   border-radius: 50%;
   margin-top: ${pxToRem(-30)};
-  border: 4px solid #fff;
+  border: ${pxToRem(4)} solid #fff;
 `
 
 const Container = styled.div`
@@ -58,7 +58,7 @@ const SubmitButton = styled(Button)`
 `
 
 const ScrollableDiv = styled.div`
-  padding: 30px 0;
+  padding: ${pxToRem(30)} 0;
 `
 
 const Prelaunch = () => {
