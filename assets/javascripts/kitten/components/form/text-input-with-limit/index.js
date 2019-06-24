@@ -9,24 +9,20 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 const StyledTextInputWithLimit = styled.div`
   position: relative;
   display: block;
-
-  :disabled + & {
-    text-shadow: none;
-  }
 `
 
 const StyledTextInput = styled(TextInput)`
-  :focus + & {
+  appearance: none;
+  outline: none;
+
+  :focus {
+    border-color: ${COLORS.line2};
     color: ${COLORS.font1};
   }
 
-  ${({ error }) =>
-    error &&
-    css`
-      :focus + & {
-        color: ${COLORS.error};
-      }
-    `}
+  :disabled {
+    background-color: ${COLORS.line1};
+  }
 `
 
 const StyledCounter = styled.div`
@@ -50,6 +46,22 @@ const StyledCounter = styled.div`
     ${pxToRem(1)} -${pxToRem(1)} 0 ${COLORS.background1},
     -${pxToRem(1)} ${pxToRem(1)} 0 ${COLORS.background1};
   pointer-events: none;
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      text-shadow: none;
+    `}
+
+  ${({ error }) =>
+    error &&
+    css`
+      color: ${COLORS.error};
+    `}
+
+  ${StyledTextInput}:focus + & {
+    color: ${COLORS.font1};
+  }
 `
 
 export class TextInputWithLimit extends PureComponent {
@@ -58,6 +70,7 @@ export class TextInputWithLimit extends PureComponent {
     limit: PropTypes.number,
     defaultValue: PropTypes.string,
     disabled: PropTypes.bool,
+    tiny: PropTypes.bool,
     onChange: PropTypes.func,
   }
 
@@ -66,35 +79,50 @@ export class TextInputWithLimit extends PureComponent {
     limit: 80,
     defaultValue: '',
     disabled: false,
+    tiny: false,
     onChange: () => {},
   }
 
-  // constructor(props) {
-  //   super(props)
+  constructor(props) {
+    super(props)
 
-  //   this.state = {
-  //     value: props.defaultValue,
-  //   }
-  // }
+    this.state = {
+      value: props.defaultValue,
+    }
+  }
 
-  // handleChange() {
-  //   this.setState({ value: target.value })
-  // }
+  handleChange = e => {
+    const value = e.target.value
+    this.setState({ value })
+  }
 
   render() {
-    const { limit, defaultValue, onChange, disabled, ...others } = this.props
+    const {
+      valid,
+      tiny,
+      limit,
+      onChange,
+      disabled,
+      textInputProps,
+    } = this.props
 
-    // const length = this.state.value ? this.state.value.length : 0
+    const length = this.state.value ? this.state.value.length : 0
+
+    const error = length > limit
 
     return (
       <StyledTextInputWithLimit>
         <StyledTextInput
-          // value={this.state.value}
-          // onChange={this.handleChange}
+          {...textInputProps}
+          value={this.state.value}
+          onChange={this.handleChange}
           disabled={disabled}
-          {...others}
+          error={error}
+          tiny={tiny}
         />
-        <StyledCounter>{limit - length}</StyledCounter>
+        <StyledCounter error={error} disabled={disabled}>
+          {limit - length}
+        </StyledCounter>
       </StyledTextInputWithLimit>
     )
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, text, select } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithLimit } from './index'
 
@@ -18,10 +18,20 @@ const info = {
     ## Usage
     &nbsp;
 
-
     #### Default
     ~~~js
     <TextInputWithLimit />
+    ~~~
+
+   #### Size
+    ~~~js
+    <TextInputWithLimit tiny />
+    ~~~
+
+    #### State
+    ~~~js
+    <TextInputWithLimit error />
+    <TextInputWithLimit disabled />
     ~~~
   `,
 }
@@ -33,7 +43,10 @@ storiesOf('Form/TextInput', module)
     return (
       <Grid style={{ marginTop: '5em' }}>
         <GridCol offset="1" col="6">
-          <TextInputWithLimit />
+          <TextInputWithLimit
+            disabled={boolean('Disabled', false)}
+            tiny={boolean('Tiny', false)}
+          />
         </GridCol>
       </Grid>
     )
