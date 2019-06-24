@@ -4,19 +4,15 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { Item } from './components/item'
 
-export class IconList extends PureComponent {
-  static Item = Item
-
-  render() {
-    const { children, containerProps, listProps } = this.props
-
-    return (
-      <StyledContainer {...containerProps}>
-        <StyledList {...listProps}>{children}</StyledList>
-      </StyledContainer>
-    )
-  }
+export const IconList = ({ children, containerProps, listProps }) => {
+  return (
+    <StyledContainer {...containerProps}>
+      <StyledList {...listProps}>{children}</StyledList>
+    </StyledContainer>
+  )
 }
+
+IconList.Item = Item
 
 const StyledContainer = styled.div`
   position: relative;
