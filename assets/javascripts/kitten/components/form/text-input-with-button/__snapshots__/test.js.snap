@@ -5,12 +5,12 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 eIDyGn"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 cCFBdG text-input__StyledInput-sc-11wej6v-1 eIDyGn"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 edTByD"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 bYjAdx"
     disabled={false}
     type="button"
   >
@@ -24,12 +24,12 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 eIDyGn"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 cCFBdG text-input__StyledInput-sc-11wej6v-1 eIDyGn"
     disabled={true}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 jTdjeb"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 eYYFho"
     disabled={true}
     type="button"
   >
@@ -43,12 +43,12 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 ildLBg"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 cCFBdG text-input__StyledInput-sc-11wej6v-1 ildLBg"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 cBJgVn"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 cILJrK"
     disabled={false}
     type="button"
   >
@@ -62,14 +62,14 @@ exports[`<TextInputWithButton /> with textInputProps matches with snapshot 1`] =
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 eIDyGn"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 cCFBdG text-input__StyledInput-sc-11wej6v-1 eIDyGn"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
     value="Button"
   />
   <button
-    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 edTByD"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 bYjAdx"
     disabled={false}
     type="button"
   >
@@ -83,12 +83,12 @@ exports[`<TextInputWithButton /> with tiny prop matches with snapshot 1`] = `
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 crQkbU"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 cCFBdG text-input__StyledInput-sc-11wej6v-1 crQkbU"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 edTByD"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 bYjAdx"
     disabled={false}
     type="button"
   >
@@ -102,12 +102,12 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInputWithButtonInput-sc-1yqni7d-1 kZQSWf text-input__StyledInput-sc-11wej6v-1 hkFqJt"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 cCFBdG text-input__StyledInput-sc-11wej6v-1 hkFqJt"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledTextInputWithButtonButton-sc-1yqni7d-2 ccJVuS"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 jpomPQ"
     disabled={false}
     type="button"
   >
