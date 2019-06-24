@@ -23,15 +23,15 @@ const Container = styled.div`
 `
 
 const Card = styled.div`
-  margin: auto;
+  margin: auto ${pxToRem(30)};
   background-color: #fff;
   text-align: center;
-  width: 80%;
-  padding: 0 5% ${pxToRem(40)};
+  max-width: ${pxToRem(440)};
+  font-size: ${pxToRem(14)};
+  padding: 0 ${pxToRem(30)} ${pxToRem(40)};
 
   @media (min-width: 690px) {
-    width: ${pxToRem(440)};
-    padding: 0 ${pxToRem(115)} ${pxToRem(40)};
+    padding: 0 ${pxToRem(115)} ${pxToRem(50)};
   }
 `
 
@@ -45,6 +45,15 @@ const TitleSeparator = styled(Separator)`
 const MiddleText = styled(Text)`
   display: block;
   margin-bottom: ${pxToRem(40)};
+`
+
+const MediumText = styled(Text)`
+  font-weight: 500;
+`
+
+const BottomText = styled(Text)`
+  display: block;
+  line-height: ${pxToRem(16)};
 `
 
 const SubmitButton = styled(Button)`
@@ -68,9 +77,9 @@ const Prelaunch = () => {
           <TitleSeparator />
           <MiddleText>
             Déjà 58 personnes attendent le projet :{' '}
-            <Text weight="bold">
+            <MediumText>
               Atelier d'optique bruxellois dédié à l'upcycling et au custom.
-            </Text>{' '}
+            </MediumText>{' '}
             Vous aussi, faites parti des premiers à contribuer !
           </MiddleText>
           <Field.Label labelProps={{ htmlFor: 'email' }}>
@@ -83,10 +92,10 @@ const Prelaunch = () => {
           <SubmitButton modifier="helium" fluid big>
             M'informer du lancement
           </SubmitButton>
-          <Text size="micro" color="font1" weight="light">
+          <BottomText size="micro" color="font1" weight="light">
             Votre adresse email sera utilisé uniquement pour vous alerter du
             lancement de ce projet
-          </Text>
+          </BottomText>
         </Card>
       </ScrollableDiv>
     </Container>
