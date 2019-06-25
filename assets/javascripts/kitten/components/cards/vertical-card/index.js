@@ -34,15 +34,9 @@ const StyledHorizontalStroke = styled(HorizontalStroke)`
   margin-top: ${pxToRem(20)};
   margin-bottom: ${pxToRem(30)};
   width: ${pxToRem(30)};
-
-  ${({ selfAlign }) =>
-    selfAlign &&
-    css`
-      self-align: ${selfAlign};
-    `}
 `
 
-const alignItem = align => {
+const justifyContent = align => {
   switch (align) {
     case 'left':
       return 'flex-start'
@@ -58,7 +52,7 @@ const StrokePosition = styled.div`
     selfAlign &&
     css`
       display: flex;
-      justify-content: ${alignItem(selfAlign)};
+      justify-content: ${justifyContent(selfAlign)};
     `}
 `
 
