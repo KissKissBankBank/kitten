@@ -23,7 +23,7 @@ const Container = styled.div`
 `
 
 const Card = styled.div`
-  margin: auto ${pxToRem(30)};
+  margin: auto ${pxToRem(20)};
   background-color: #fff;
   text-align: center;
   max-width: ${pxToRem(440)};
@@ -62,7 +62,7 @@ const SubmitButton = styled(Button)`
 `
 
 const ScrollableDiv = styled.div`
-  padding: ${pxToRem(30)} 0;
+  padding: ${pxToRem(70)} 0 ${pxToRem(40)} 0;
 `
 
 const Prelaunch = () => {
