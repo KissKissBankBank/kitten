@@ -94,7 +94,6 @@ export class TextInputWithUnit extends PureComponent {
     error: PropTypes.bool,
     tiny: PropTypes.bool,
     disabled: PropTypes.bool,
-    digits: PropTypes.number,
     unit: PropTypes.string,
     unitWord: PropTypes.bool,
   }
@@ -108,7 +107,6 @@ export class TextInputWithUnit extends PureComponent {
     error: false,
     tiny: false,
     disabled: false,
-    digits: null,
   }
 
   constructor(props) {
@@ -123,7 +121,6 @@ export class TextInputWithUnit extends PureComponent {
       error,
       tiny,
       disabled,
-      digits,
       unit,
       unitWord,
       textInputProps,
@@ -136,12 +133,10 @@ export class TextInputWithUnit extends PureComponent {
           {...textInputProps}
           ref={this.input}
           type={type}
-          tag="input"
           valid={valid}
           error={error}
           tiny={tiny}
           disabled={disabled}
-          digits={digits}
         />
         <StyledInputUnit
           valid={valid}

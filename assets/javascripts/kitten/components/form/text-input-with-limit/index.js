@@ -59,7 +59,6 @@ const StyledCounter = styled.div`
 
 export class TextInputWithLimit extends PureComponent {
   static propTypes = {
-    tag: PropTypes.string,
     limit: PropTypes.number,
     defaultValue: PropTypes.string,
     disabled: PropTypes.bool,
@@ -68,7 +67,6 @@ export class TextInputWithLimit extends PureComponent {
   }
 
   static defaultProps = {
-    tag: 'input',
     limit: 80,
     defaultValue: '',
     disabled: false,
@@ -94,7 +92,6 @@ export class TextInputWithLimit extends PureComponent {
       valid,
       tiny,
       limit,
-      tag,
       onChange,
       disabled,
       textInputProps,
@@ -108,7 +105,6 @@ export class TextInputWithLimit extends PureComponent {
       <StyledTextInputWithLimit>
         <FocusTextInput
           {...textInputProps}
-          tag={tag}
           value={this.state.value}
           onChange={this.handleChange}
           disabled={disabled}

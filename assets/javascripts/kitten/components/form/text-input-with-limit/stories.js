@@ -1,14 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, text, select } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text, object } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithLimit } from './index'
-
-const tagOptions = {
-  Input: 'input',
-  Textarea: 'textarea',
-}
 
 const info = {
   text: `
@@ -55,9 +50,11 @@ storiesOf('Form/TextInput', module)
       <Grid style={{ marginTop: '5em' }}>
         <GridCol offset="1" col="6">
           <TextInputWithLimit
-            tag={select('Tag', tagOptions, 'input')}
             disabled={boolean('Disabled', false)}
             tiny={boolean('Tiny', false)}
+            textInputProps={object('textInputProps', {
+              tag: 'input', // textarea
+            })}
           />
         </GridCol>
       </Grid>
