@@ -22,15 +22,6 @@ const StyledTextInputWithLimit = styled.div`
 const StyledTextInput = styled(TextInput)`
   appearance: none;
   outline: none;
-
-  :focus {
-    border-color: ${COLORS.line2};
-    color: ${COLORS.font1};
-  }
-
-  :disabled {
-    background-color: ${COLORS.line1};
-  }
 `
 
 const StyledCounter = styled.div`

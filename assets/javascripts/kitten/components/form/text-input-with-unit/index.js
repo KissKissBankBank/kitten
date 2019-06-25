@@ -7,7 +7,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 
 const StyledTextInputWithUnit = styled.div`
-  display: table;
+  display: flex;
   position: relative; // to place an absolute unit
 
   border-collapse: separate;
@@ -21,20 +21,8 @@ const StyledTextInputWithUnit = styled.div`
 `
 
 const StyledTextInput = styled(TextInput)`
-  display: table-cell;
   outline: none;
   transition: all 0.2s;
-  appearance: none;
-
-  :focus {
-    border-color: ${COLORS.line2};
-    color: ${COLORS.font1};
-  }
-
-  :disabled {
-    background-color: ${COLORS.line1};
-    border: none;
-  }
 
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
@@ -45,7 +33,9 @@ const StyledTextInput = styled(TextInput)`
 
 const StyledInputUnit = styled.span`
   width: 1%;
-  display: table-cell;
+  height: 100%;
+  line-height: 1.3;
+  flex: 1 0 auto;
   position: relative;
   vertical-align: middle;
   background-color: ${COLORS.background1};
@@ -53,7 +43,6 @@ const StyledInputUnit = styled.span`
   border-left: 0;
   border-radius: 0;
   box-sizing: border-box;
-  height: 100%;
   padding: 0 ${pxToRem(15)};
   color: ${COLORS.font1};
   white-space: nowrap;
