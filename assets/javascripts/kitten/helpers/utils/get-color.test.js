@@ -15,13 +15,6 @@ describe('getColor helper', () => {
       expect(color).toEqual('#fff')
     })
   })
-  describe('getColor("greenLighter", {invert:true})', () => {
-    const color = getColor('greenLighter', { invert: true })
-
-    it('returns "#000"', () => {
-      expect(color).toEqual('#000')
-    })
-  })
   describe('getColor("fake color name")', () => {
     it('throws an exception', () => {
       expect(() => getColor('fake color name')).toThrow(
