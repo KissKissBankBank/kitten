@@ -27,12 +27,10 @@ const StyledTextInput = styled(TextInput)`
 `
 
 const StyledInputUnit = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 1%;
-  height: 100%;
-  line-height: 1.3;
-  flex: 1 0 auto;
-  position: relative;
-  vertical-align: middle;
   background-color: ${COLORS.background1};
   border: ${pxToRem(2)} solid ${COLORS.line1};
   border-left: 0;

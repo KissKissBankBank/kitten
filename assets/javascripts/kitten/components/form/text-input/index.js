@@ -6,6 +6,7 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 
 const borderWidth = pxToRem(2)
+const verticalPadding = pxToRem(10)
 
 const styledTextInput = css`
   font-size: ${stepToRem(-1)};
@@ -22,8 +23,8 @@ const styledTextInput = css`
   background-color: ${COLORS.background1};
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
-  ${({ digits }) => digitsStyles(digits)};
   outline: none;
+  ${({ digits }) => digitsStyles(digits)};
 
   ::placeholder {
     color: ${COLORS.font2};
@@ -85,8 +86,6 @@ const StyledInputTextarea = styled.textarea`
     resize: none;
   }
 `
-
-const verticalPadding = pxToRem(10)
 
 const StyledGradientTextarea = styled.div`
   position: absolute;
