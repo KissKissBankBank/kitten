@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `containerProps`, `listProps` to `IconList` component.
+
 ## [2.11.0] - 2019-06-20
 
 Features:
