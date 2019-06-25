@@ -12,7 +12,6 @@ const StyledTextInputWithButton = styled.div`
 `
 
 const StyledTextInput = styled(TextInput)`
-  outline: none;
   border-right: 0;
 `
 

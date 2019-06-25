@@ -8,10 +8,6 @@ import COLORS from '../../../constants/colors-config'
 
 const StyledTextInputWithUnit = styled.div`
   display: flex;
-  position: relative; // to place an absolute unit
-
-  border-collapse: separate;
-  box-sizing: border-box;
 
   ${({ digits }) =>
     !digits &&
@@ -21,7 +17,6 @@ const StyledTextInputWithUnit = styled.div`
 `
 
 const StyledTextInput = styled(TextInput)`
-  outline: none;
   transition: all 0.2s;
 
   &::-webkit-inner-spin-button,

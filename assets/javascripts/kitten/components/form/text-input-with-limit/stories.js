@@ -58,7 +58,6 @@ storiesOf('Form/TextInput', module)
             tag={select('Tag', tagOptions, 'input')}
             disabled={boolean('Disabled', false)}
             tiny={boolean('Tiny', false)}
-            error={boolean('Error', false)}
           />
         </GridCol>
       </Grid>

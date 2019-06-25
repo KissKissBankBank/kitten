@@ -23,6 +23,7 @@ const styledTextInput = css`
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
   ${({ digits }) => digitsStyles(digits)};
+  outline: none;
 
   ::placeholder {
     color: ${COLORS.font2};
@@ -30,6 +31,7 @@ const styledTextInput = css`
 
   :focus {
     outline: none;
+    color: ${COLORS.font1};
     border-color: ${COLORS.line2};
   }
 
@@ -43,24 +45,18 @@ const styledTextInput = css`
   ${({ valid }) =>
     valid &&
     css`
-      color: ${COLORS.tertiary2};
-      border-color: ${COLORS.tertiary2};
-
-      :focus {
-        color: ${COLORS.font1};
-        border-color: ${COLORS.line2};
+      &:not(:focus) {
+        color: ${COLORS.tertiary2};
+        border-color: ${COLORS.tertiary2};
       }
     `}
 
   ${({ error }) =>
     error &&
     css`
-      color: ${COLORS.error3};
-      border-color: ${COLORS.error3};
-
-      :focus {
-        color: ${COLORS.font1};
-        border-color: ${COLORS.line2};
+      &:not(:focus) {
+        color: ${COLORS.error3};
+        border-color: ${COLORS.error3};
       }
     `}
 
@@ -154,11 +150,6 @@ export class TextInput extends PureComponent {
     digits: null,
   }
 
-  constructor(props) {
-    super(props)
-    this.input = createRef()
-  }
-
   render() {
     const {
       valid,
@@ -175,7 +166,6 @@ export class TextInput extends PureComponent {
       return (
         <StyledTextarea>
           <StyledInputTextarea
-            ref={this.input.focus && this.input.blur}
             valid={valid}
             error={error}
             disabled={disabled}
@@ -190,7 +180,6 @@ export class TextInput extends PureComponent {
     } else {
       return (
         <StyledInput
-          ref={this.input.focus && this.input.blur}
           valid={valid}
           error={error}
           disabled={disabled}

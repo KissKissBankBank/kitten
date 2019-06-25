@@ -14,14 +14,16 @@ const errorColor = css`
     `}
 `
 
+const FocusTextInput = styled(TextInput)`
+  :focus + div {
+    color: ${COLORS.font1};
+    ${errorColor};
+  }
+`
+
 const StyledTextInputWithLimit = styled.div`
   position: relative;
   display: block;
-`
-
-const StyledTextInput = styled(TextInput)`
-  appearance: none;
-  outline: none;
 `
 
 const StyledCounter = styled.div`
@@ -46,18 +48,13 @@ const StyledCounter = styled.div`
     -${pxToRem(1)} ${pxToRem(1)} 0 ${COLORS.background1};
   pointer-events: none;
 
+  ${errorColor};
+
   ${({ disabled }) =>
     disabled &&
     css`
       text-shadow: none;
     `}
-
-  ${errorColor};
-
-  ${StyledTextInput}:focus + & {
-    color: ${COLORS.font1};
-
-  ${errorColor};
 `
 
 export class TextInputWithLimit extends PureComponent {
@@ -109,12 +106,13 @@ export class TextInputWithLimit extends PureComponent {
 
     return (
       <StyledTextInputWithLimit>
-        <StyledTextInput
+        <FocusTextInput
           {...textInputProps}
           tag={tag}
           value={this.state.value}
           onChange={this.handleChange}
           disabled={disabled}
+          error={error}
           tiny={tiny}
         />
         <StyledCounter error={error} disabled={disabled}>
