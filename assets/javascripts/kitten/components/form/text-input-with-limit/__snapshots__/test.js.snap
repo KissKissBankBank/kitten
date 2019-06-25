@@ -2,17 +2,17 @@
 
 exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 <div
-  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
 >
   <input
-    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 eIDyGn"
+    className="text-input-with-limit__FocusTextInput-ufrmmb-0 hKpbHD text-input__StyledInput-sc-11wej6v-1 jNJvhF"
     disabled={false}
     name="text"
     onChange={[Function]}
     value=""
   />
   <div
-    className="text-input-with-limit__StyledCounter-ufrmmb-2 kDZFYq"
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 jphJwp"
     disabled={false}
   >
     80
@@ -22,17 +22,17 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
 >
   <input
-    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 eIDyGn"
+    className="text-input-with-limit__FocusTextInput-ufrmmb-0 hKpbHD text-input__StyledInput-sc-11wej6v-1 jNJvhF"
     disabled={true}
     name="text"
     onChange={[Function]}
     value=""
   />
   <div
-    className="text-input-with-limit__StyledCounter-ufrmmb-2 cEEYvx"
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 kPQYGe"
     disabled={true}
   >
     80
@@ -42,17 +42,17 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
 
 exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
 >
   <input
-    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 eIDyGn"
+    className="text-input-with-limit__FocusTextInput-ufrmmb-0 hKpbHD text-input__StyledInput-sc-11wej6v-1 jNJvhF"
     disabled={false}
     name="text"
     onChange={[Function]}
     value=""
   />
   <div
-    className="text-input-with-limit__StyledCounter-ufrmmb-2 kDZFYq"
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 jphJwp"
     disabled={false}
   >
     80
@@ -62,17 +62,17 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-0 cPZPFZ"
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
 >
   <input
-    className="text-input-with-limit__StyledTextInput-ufrmmb-1 jxSANT text-input__StyledInput-sc-11wej6v-1 crQkbU"
+    className="text-input-with-limit__FocusTextInput-ufrmmb-0 hKpbHD text-input__StyledInput-sc-11wej6v-1 dnunGN"
     disabled={false}
     name="text"
     onChange={[Function]}
     value=""
   />
   <div
-    className="text-input-with-limit__StyledCounter-ufrmmb-2 kDZFYq"
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 jphJwp"
     disabled={false}
   >
     80

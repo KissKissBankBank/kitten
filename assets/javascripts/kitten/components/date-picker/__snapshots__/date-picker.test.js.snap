@@ -8,16 +8,16 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
     className="DayPickerInput"
   >
     <div
-      className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 hmedYd"
+      className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 cNrele"
     >
       <input
-        className="text-input-with-unit__StyledTextInput-gjmccx-1 eWbNNp text-input__StyledInput-sc-11wej6v-1 eIDyGn"
+        className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
         disabled={false}
         name="text"
         type="text"
       />
       <span
-        className="text-input-with-unit__StyledInputUnit-gjmccx-2 bFSpXv"
+        className="text-input-with-unit__StyledInputUnit-gjmccx-2 kxcQws"
         disabled={false}
       >
         📅
