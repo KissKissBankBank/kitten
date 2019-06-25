@@ -86,8 +86,8 @@ const deprecatedColorNames = {
   error3: colorList.redLighter,
 }
 
-// Old way to get a color
 export const getColor = color => {
+  // Old / deprecated way to get a color
   if (deprecatedColorNames[color]) {
     console.warn(
       `getColor() deprecation warning: please use non-deprecated color names instead of '${color}'`,
