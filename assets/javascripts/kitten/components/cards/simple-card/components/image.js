@@ -38,7 +38,7 @@ const StyledImageContainer = styled(Marger)`
     css`
       overflow: hidden;
       position: relative;
-      padding-top: ${imageContainerRatio}%;
+      padding-top: calc(100% / calc(${imageContainerRatio}));
 
       & > img {
         position: absolute;
