@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VerticalCard /> by default matches with snapshot 1`] = `
+<div
+  className="vertical-card__Card-ys1jp9-1 hMrCCl"
+>
+  <img
+    alt=""
+    className="vertical-card__Img-ys1jp9-0 cndFJr"
+    src="#image"
+    style={Object {}}
+  />
+  <h1
+    as="h1"
+    className="k-Title k-Title--senary k-Title--withoutMargin"
+  >
+    Custom title
+  </h1>
+  
+</div>
+`;
+
+exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
+<div
+  className="vertical-card__Card-ys1jp9-1 hMrCCl"
+>
+  <img
+    alt="Image alt"
+    className="vertical-card__Img-ys1jp9-0 cndFJr"
+    src="#image"
+    style={Object {}}
+  />
+  <h1
+    as="h1"
+    className="k-Title k-Title--senary k-Title--withoutMargin"
+  >
+    Custom title
+  </h1>
+  <div
+    className="marger__StyledMarger-q3lecu-0 WSKaG"
+  >
+    <p
+      as="p"
+      className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+    >
+      Custom text
+    </p>
+  </div>
+</div>
+`;
