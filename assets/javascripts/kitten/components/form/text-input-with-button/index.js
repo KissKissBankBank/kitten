@@ -57,7 +57,10 @@ export class TextInputWithButton extends PureComponent {
     tiny: PropTypes.bool,
     modifier: PropTypes.string,
     value: PropTypes.string,
-    textInputProps: PropTypes.shape({}),
+    textInputProps: PropTypes.shape({
+      tag: PropTypes.string,
+      name: PropTypes.string,
+    }),
   }
 
   static defaultProps = {
