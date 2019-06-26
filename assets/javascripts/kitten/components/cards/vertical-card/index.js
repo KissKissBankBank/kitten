@@ -69,8 +69,8 @@ export const VerticalCard = ({
 
   return (
     <Card {...others}>
-      <Img {...imgProps} style={{ ...style }} />
-      <Title modifier="senary" as={titleTag} margin={false}>
+      <Img {...imgProps} style={style} />
+      <Title modifier="senary" tag={titleTag} margin={false}>
         {title}
       </Title>
       {withTitleStroke && (
@@ -80,7 +80,7 @@ export const VerticalCard = ({
       )}
       {description && (
         <Marger top={withTitleStroke ? 0 : 1}>
-          <Paragraph modifier="quaternary" as={descriptionTag} margin={false}>
+          <Paragraph modifier="quaternary" tag={descriptionTag} margin={false}>
             {description}
           </Paragraph>
         </Marger>

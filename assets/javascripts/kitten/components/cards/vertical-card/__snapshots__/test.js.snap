@@ -11,7 +11,6 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
     style={Object {}}
   />
   <h1
-    as="h1"
     className="k-Title k-Title--senary k-Title--withoutMargin"
   >
     Custom title
@@ -31,7 +30,6 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     style={Object {}}
   />
   <h1
-    as="h1"
     className="k-Title k-Title--senary k-Title--withoutMargin"
   >
     Custom title
@@ -40,7 +38,6 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 WSKaG"
   >
     <p
-      as="p"
       className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
     >
       Custom text
