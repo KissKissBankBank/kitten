@@ -7,9 +7,9 @@ import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { Icon } from './icon'
 
-export const Item = ({ icon, iconProps, children, ...other }) => {
+export const Item = ({ icon, iconProps, children, ...others }) => {
   return (
-    <StyledItem {...other}>
+    <StyledItem {...others}>
       <Icon {...iconProps}>{icon}</Icon>
 
       <StyledContent>{children}</StyledContent>
