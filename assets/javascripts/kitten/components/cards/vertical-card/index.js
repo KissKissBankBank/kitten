@@ -13,10 +13,10 @@ const Img = styled.img`
   display: block;
   margin-bottom: ${pxToRem(30)};
 
-  ${({ style }) =>
-    style &&
+  ${({ styles }) =>
+    styles &&
     css`
-      ${style}
+      ${styles}
     `}
 `
 
@@ -70,7 +70,7 @@ export const VerticalCard = ({
 
   return (
     <Card textAlign={textAlign} {...others}>
-      <Img {...imgProps} style={style} />
+      <Img {...imgProps} styles={style} />
       <Title modifier="senary" tag={titleTag} margin={false}>
         {title}
       </Title>
