@@ -63,18 +63,19 @@ export const VerticalCard = ({
   description,
   descriptionTag,
   withTitleStroke,
+  textAlign,
   ...others
 }) => {
   const { style, ...imgProps } = imageProps
 
   return (
-    <Card {...others}>
+    <Card textAlign={textAlign} {...others}>
       <Img {...imgProps} style={style} />
       <Title modifier="senary" tag={titleTag} margin={false}>
         {title}
       </Title>
       {withTitleStroke && (
-        <StrokePosition selfAlign={others.textAlign}>
+        <StrokePosition selfAlign={textAlign}>
           <StyledHorizontalStroke />
         </StrokePosition>
       )}
@@ -100,6 +101,7 @@ VerticalCard.propTypes = {
   description: PropTypes.string,
   descriptionTag: PropTypes.string,
   withTitleStroke: PropTypes.bool,
+  textAlign: PropTypes.oneOf[('left', 'center', 'right')],
 }
 
 VerticalCard.defaultProps = {
