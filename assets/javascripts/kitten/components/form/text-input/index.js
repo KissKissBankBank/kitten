@@ -161,7 +161,7 @@ export class TextInput extends PureComponent {
       ...others
     } = this.props
 
-    if (tag == 'textarea') {
+    if (tag === 'textarea') {
       return (
         <StyledTextarea>
           <StyledInputTextarea

@@ -20,9 +20,9 @@ describe('<TextInputWithButton />', () => {
       component = renderer
         .create(
           <TextInputWithButton
+            value="Button"
             textInputProps={{
               placeholder: 'Les props sont transmises',
-              value: 'Button',
             }}
           />,
         )

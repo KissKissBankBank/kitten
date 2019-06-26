@@ -23,12 +23,6 @@ const info = {
     <TextInputWithLimit />
     ~~~
 
-    #### Tag
-    ~~~js
-    <TextInputWithLimit tag="input" />
-    <TextInputWithLimit tag="textarea" />
-    ~~~
-
    #### Size
     ~~~js
     <TextInputWithLimit tiny />

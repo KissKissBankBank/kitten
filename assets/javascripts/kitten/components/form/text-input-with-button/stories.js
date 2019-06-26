@@ -39,7 +39,7 @@ const info = {
     ~~~js
       <TextInputWithButton
         textInputProps={{
-          #show TextInput component
+          # show TextInput component
         }}
       />
     ~~~
