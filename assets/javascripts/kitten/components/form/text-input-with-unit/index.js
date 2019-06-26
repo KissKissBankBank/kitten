@@ -96,17 +96,21 @@ export class TextInputWithUnit extends PureComponent {
     disabled: PropTypes.bool,
     unit: PropTypes.string,
     unitWord: PropTypes.bool,
+    textInputProps: PropTypes.shape({}),
   }
 
   static defaultProps = {
     unit: 'λ',
     unitWord: false,
     type: 'number',
-    placeholder: null,
     valid: false,
     error: false,
     tiny: false,
     disabled: false,
+    textInputProps: {
+      digits: 0,
+      tag: 'input',
+    },
   }
 
   constructor(props) {
