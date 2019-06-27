@@ -60,7 +60,6 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
       onMouseLeave={[Function]}
       tabIndex={null}
       type="submit"
-      version="default"
     >
       To contribute
     </button>
@@ -126,7 +125,6 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
       onMouseLeave={[Function]}
       tabIndex={null}
       type="submit"
-      version="default"
     >
       
     </button>
@@ -192,7 +190,6 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
       onMouseLeave={[Function]}
       tabIndex={null}
       type="submit"
-      version="default"
     >
       
     </button>
@@ -267,7 +264,6 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
       onMouseLeave={[Function]}
       tabIndex={null}
       type="submit"
-      version="default"
     >
       
     </button>

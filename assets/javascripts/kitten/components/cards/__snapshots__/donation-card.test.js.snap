@@ -107,7 +107,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
               onMouseLeave={[Function]}
               tabIndex={null}
               type="submit"
-              version="default"
             >
               To contribute
             </button>

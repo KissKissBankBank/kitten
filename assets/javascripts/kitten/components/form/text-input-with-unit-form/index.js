@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithUnit } from '../../../components/form/text-input-with-unit'
 import { Text } from '../../../components/typography/text'
 import { Label } from '../../../components/form/label'
-import { Button } from '../../../components/buttons/button'
+import { Button as KittenButton } from '../../../components/buttons/button'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledFormContainer = styled.form`
@@ -31,11 +31,12 @@ const StyledButtonPosition = styled.div`
   ${formPosition}
 `
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(({ version, ...others }) => (
+  <KittenButton {...others} />
+))`
   @media (min-width: ${ScreenConfig.S.min}px) {
     width: 100%:
   }
-
   ${({ version }) =>
     version === 'tiny' &&
     css`
