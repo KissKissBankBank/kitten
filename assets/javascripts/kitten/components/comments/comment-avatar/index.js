@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from '../../components/layout/marger'
-import { ButtonImage } from '../../components/buttons/button-image'
-import { Text } from '../../components/typography/text'
-import COLORS from '../../constants/colors-config'
-import { mediaQueries } from '../../hoc/media-queries'
+import { Marger } from '../../../components/layout/marger'
+import { ButtonImage } from '../../../components/buttons/button-image'
+import { Text } from '../../../components/typography/text'
+import COLORS from '../../../constants/colors-config'
+import { mediaQueries } from '../../../hoc/media-queries'
 
 class CommentAvatarComponent extends Component {
   static propTypes = {
