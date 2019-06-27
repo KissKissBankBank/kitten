@@ -33,9 +33,33 @@ const Input = styled.input`
 
   transition: border-color 0.4s;
 
+  ::placeholder {
+    color: ${COLORS.font2};
+  }
+
+  ::-moz-placeholder {
+    color: ${COLORS.font2};
+  }
+
   :focus {
     border-color: ${COLORS.line2};
   }
+
+  ::-ms-clear {
+    display: none;
+  }
+
+  ${({ error }) =>
+    error &&
+    css`
+      border-color: ${COLORS.error3};
+      color: ${COLORS.error3};
+
+      :focus {
+        border-color: ${COLORS.line2};
+        color: ${COLORS.font1};
+      }
+    `}
 `
 
 const Suggestions = styled.ul`
@@ -90,6 +114,7 @@ const Item = styled.li`
 
 export const Autocomplete = ({
   items: defaultItems,
+  error,
   onChange,
   onBlur,
   onKeyDown,
@@ -202,6 +227,7 @@ export const Autocomplete = ({
     <Container>
       <Input
         {...props}
+        error={error}
         ref={inputEl}
         type="text"
         autoComplete="false"
@@ -253,12 +279,14 @@ export const Autocomplete = ({
 Autocomplete.propTypes = {
   name: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  error: PropTypes.bool,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onKeyDown: PropTypes.func,
 }
 
 Autocomplete.defaultProps = {
+  error: false,
   onChange: () => {},
   onBlur: () => {},
   onKeyDown: () => {},

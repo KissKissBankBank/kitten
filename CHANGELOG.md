@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Autocomplete` component.
+- Feature: Add `Field.Autocomplete` component.
+
 ## [2.12.0] - 2019-06-26
 
 Feature:

@@ -6,6 +6,7 @@ import {
   FieldPasswordExample,
   FieldRadioButtonSetExample,
   FieldSelectExample,
+  FieldAutocompleteExample,
 } from './field.examples'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -99,6 +100,33 @@ storiesOf('Form/Field', module)
             { value: 'a', label: text('Option A', 'Option A') },
             { value: 'b', label: text('Option B', 'Option B') },
             { value: 'c', label: text('Option C', 'Option C') },
+          ]}
+          error={boolean('Error?', false)}
+          errorMessage={text('Error', 'Error message…')}
+        />
+      </StoryGrid>
+    )
+  })
+  .add('with autocomplete', () => {
+    return (
+      <StoryGrid>
+        <FieldAutocompleteExample
+          id={text('ID', 'select')}
+          label={text('Label', 'Label')}
+          tooltip={text('Tooltip', null)}
+          tooltipId={text('Tooltip ID', 'tooltip')}
+          placeholder={text('Placeholder', 'Select…')}
+          items={[
+            'Abyssin',
+            'Anatoli',
+            'Angora turc',
+            'Asian',
+            'Chartreux',
+            'Cymric',
+            'Mandarin',
+            'Oriental shorthair',
+            'Persan',
+            'Sibérien',
           ]}
           error={boolean('Error?', false)}
           errorMessage={text('Error', 'Error message…')}
