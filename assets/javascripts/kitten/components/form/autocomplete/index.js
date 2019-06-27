@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
@@ -27,7 +27,7 @@ const Input = styled.input`
   outline: none;
 
   ${TYPOGRAPHY.fontStyles.light};
-  font-size: 14px;
+  font-size: ${stepToRem(-1)};
   line-height: 1.3;
   color: ${COLORS.font1};
 
@@ -90,7 +90,7 @@ const Item = styled.li`
   padding: ${pxToRem(10)} ${pxToRem(15)};
 
   ${TYPOGRAPHY.fontStyles.light};
-  font-size: 14px;
+  font-size: ${stepToRem(-1)};
   line-height: 1.3;
   color: ${COLORS.font1};
 
