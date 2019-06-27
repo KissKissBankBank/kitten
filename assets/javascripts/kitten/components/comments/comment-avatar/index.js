@@ -1,13 +1,35 @@
-import React, { Component } from 'react'
-import Radium from 'radium'
+import React, { PureComponent } from 'react'
+import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
 import { ButtonImage } from '../../../components/buttons/button-image'
 import { Text } from '../../../components/typography/text'
 import COLORS from '../../../constants/colors-config'
-import { mediaQueries } from '../../../hoc/media-queries'
+import { pxToRem } from '../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../constants/screen-config'
 
-class CommentAvatarComponent extends Component {
+const StyledAvatar = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const buttonImgHuge = pxToRem(80)
+const buttonImgBig = pxToRem(50)
+
+const StyledButtonImage = styled(ButtonImage)`
+  border-radius: calc(${buttonImgBig} / 2);
+  height: ${buttonImgBig};
+  width: ${buttonImgBig};
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    border-radius: calc(${buttonImgHuge} / 2);
+    height: ${buttonImgHuge};
+    width: ${buttonImgHuge};
+  }
+`
+
+export class CommentAvatar extends PureComponent {
   static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string,
@@ -18,22 +40,20 @@ class CommentAvatarComponent extends Component {
   }
 
   render() {
-    const { avatarImgProps, viewportIsMobile } = this.props
+    const { avatarImgProps } = this.props
 
     return (
-      <div style={styles.avatar}>
+      <StyledAvatar>
         <Marger bottom="1">
-          <ButtonImage
+          <StyledButtonImage
             tag="span"
-            huge={!viewportIsMobile}
-            big={viewportIsMobile}
             withoutPointerEvents
             img={avatarImgProps}
           />
         </Marger>
 
         {this.renderDate()}
-      </div>
+      </StyledAvatar>
     )
   }
 
@@ -49,15 +69,3 @@ class CommentAvatarComponent extends Component {
     )
   }
 }
-
-const styles = {
-  avatar: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-}
-
-export const CommentAvatar = mediaQueries(Radium(CommentAvatarComponent), {
-  viewportIsMobile: true,
-})
