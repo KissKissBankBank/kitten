@@ -11,6 +11,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   `TextInputWithUnitForm`,
   `TextInputWithLimit` with `styled-components`.
 
+## [2.12.0] - 2019-06-26
+
+Feature:
+- Add `textAlign` and `withTitleStroke` props to VerticalCard
+  component.
+
 ## [2.11.0] - 2019-06-20
 
 Features:

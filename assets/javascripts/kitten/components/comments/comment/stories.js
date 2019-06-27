@@ -3,10 +3,10 @@ import { StyleRoot } from 'radium'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, object } from '@storybook/addon-knobs'
-import { Comment } from './comment'
-import { Grid, GridCol } from '../../components/grid/grid'
+import { Comment } from './index'
+import { Grid, GridCol } from '../../../components/grid/grid'
 
-storiesOf('Form/Comment', module)
+storiesOf('Comment/Comment', module)
   .addDecorator(withKnobs)
   .add(
     'default',
