@@ -102,10 +102,10 @@ export const Autocomplete = ({
 
   useEffect(() => {
     updateSuggestions()
+    setShowSuggestions(!!value)
   }, [value])
 
   const handleChange = e => {
-    setShowSuggestions(!!e.target.value)
     setValue(e.target.value)
 
     onChange()
