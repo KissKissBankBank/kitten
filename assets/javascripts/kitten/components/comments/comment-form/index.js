@@ -36,7 +36,7 @@ const StyledTextarea = styled.textarea`
   overflow-y: hidden;
   resize: none;
   box-sizing: border-box;
-  border-width: 2;
+  border-width: ${pxToRem(2)};
   border-style: solid;
   border-color: ${COLORS.line1};
   color: ${COLORS.font1};
@@ -94,18 +94,18 @@ const StyledArrow = styled.div`
     css`
       border-right-color: ${COLORS.error3};
     `}
+`
 
-  ::before {
-    position: absolute;
-    width: 0;
-    height: 0;
-    margin-top: -${pxToRem(10)};
-    border-width: ${pxToRem(10)};
-    border-style: solid;
-    border-color: transparent;
-    border-right-color: white;
-    left: -${pxToRem(7)};
-  }
+const StyledArrowBefore = styled.span`
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: -${pxToRem(10)};
+  border-width: ${pxToRem(10)};
+  border-style: solid;
+  border-color: transparent;
+  border-right-color: ${COLORS.background1};
+  left: -${pxToRem(7)};
 `
 
 const StyledButton = styled(Button)`
@@ -206,7 +206,9 @@ export class CommentForm extends PureComponent {
             onChange={this.handleChange}
             rows="1"
           />
-          <StyledArrow />
+          <StyledArrow>
+            <StyledArrowBefore />
+          </StyledArrow>
         </StyledInput>
         {this.renderError()}
         {this.renderButton()}

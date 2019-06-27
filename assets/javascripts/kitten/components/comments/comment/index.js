@@ -5,7 +5,6 @@ import { Marger } from '../../../components/layout/marger'
 import { CommentAvatar } from '../../../components/comments/comment-avatar'
 import { Text } from '../../../components/typography/text'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { mediaQueries } from '../../../hoc/media-queries'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 

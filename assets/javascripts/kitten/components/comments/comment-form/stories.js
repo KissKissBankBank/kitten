@@ -5,7 +5,7 @@ import { withKnobs, text, object, boolean } from '@storybook/addon-knobs'
 import { CommentForm } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
-storiesOf('Comments/CommentForm', module)
+storiesOf('Comments', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
   .add('Comment form', () => {
