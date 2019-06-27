@@ -5,6 +5,7 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { Autocomplete } from './index'
+import { Field } from '../../form/field'
 
 const StoryGrid = ({ children }) => (
   <Container>
@@ -23,23 +24,31 @@ storiesOf('Form/Autocomplete', module)
   .add('by default', () => {
     return (
       <StoryGrid>
-        <Autocomplete
-          placeholder="Search a kitten…"
-          items={[
-            'Abyssin',
-            'Anatoli',
-            'Angora turc',
-            'Asian',
-            'Chartreux',
-            'Cymric',
-            'Mandarin',
-            'Oriental shorthair',
-            'Persan',
-            'Sibérien',
-          ]}
-        />
+        <Field>
+          <Field.Label labelProps={{ htmlFor: 'autocomplete' }}>
+            Choose your kitten:
+          </Field.Label>
 
-        <p>🐱 🐱 🐱 🐱 🐱</p>
+          <Autocomplete
+            id="autocomplete"
+            name="autocomplete"
+            placeholder="Search a kitten…"
+            items={[
+              'Abyssin',
+              'Anatoli',
+              'Angora turc',
+              'Asian',
+              'Chartreux',
+              'Cymric',
+              'Mandarin',
+              'Oriental shorthair',
+              'Persan',
+              'Sibérien',
+            ]}
+          />
+
+          <p>🐱 🐱 🐱 🐱 🐱</p>
+        </Field>
       </StoryGrid>
     )
   })

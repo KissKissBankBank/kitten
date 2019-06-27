@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
+import { VisuallyHidden } from '../../accessibility/visually-hidden'
+import slugify from 'slugify'
 
 const itemHeight = 38
 const maxItemsVisibled = 3
@@ -206,33 +208,50 @@ export const Autocomplete = ({
         onChange={handleChange}
         onBlur={handleBlur}
         onKeyDown={handleKeyDown}
+        aria-owns={`${props.name}-results`}
+        aria-expanded={showSuggestions && items.length > 0}
+        aria-autocomplete="both"
+        aria-activedescendant={
+          items[selectedItemIndex]
+            ? slugify(`${items[selectedItemIndex]}-${selectedItemIndex}`)
+            : ''
+        }
       />
 
       {showSuggestions && items.length > 0 && (
-        <Suggestions
-          ref={suggestionsEl}
-          role="listbox"
-          tabIndex="-1"
-          itemsLength={items.length}
-        >
-          {items.map((item, index) => (
-            <Item
-              key={item + index}
-              onClick={handleClickItem(item)}
-              role="option"
-              aria-selected={selectedItemIndex === index}
-              tabIndex="-1"
-            >
-              {item}
-            </Item>
-          ))}
-        </Suggestions>
+        <>
+          <Suggestions
+            ref={suggestionsEl}
+            id={`${props.name}-results`}
+            role="listbox"
+            tabIndex="-1"
+            itemsLength={items.length}
+          >
+            {items.map((item, index) => (
+              <Item
+                key={item + index}
+                id={slugify(`${item}-${index}`)}
+                onClick={handleClickItem(item)}
+                role="option"
+                aria-selected={selectedItemIndex === index}
+                tabIndex="-1"
+              >
+                {item}
+              </Item>
+            ))}
+          </Suggestions>
+
+          <VisuallyHidden aria-live="assertive">
+            {items.length} results are available.
+          </VisuallyHidden>
+        </>
       )}
     </Container>
   )
 }
 
 Autocomplete.propTypes = {
+  name: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
