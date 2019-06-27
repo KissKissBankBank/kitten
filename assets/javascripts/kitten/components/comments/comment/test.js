@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Comment } from '../../components/form/comment'
+import { Comment } from './index'
 
 const createMockMediaMatcher = matches => () => ({
   matches,
