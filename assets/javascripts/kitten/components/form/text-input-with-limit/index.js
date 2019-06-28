@@ -17,7 +17,7 @@ const errorColor = css`
 const FocusTextInput = styled(TextInput)`
   :focus + div {
     color: ${COLORS.font1};
-    ${errorColor};
+    ${errorColor}
   }
 `
 
@@ -48,7 +48,7 @@ const StyledCounter = styled.div`
     -${pxToRem(1)} ${pxToRem(1)} 0 ${COLORS.background1};
   pointer-events: none;
 
-  ${errorColor};
+  ${errorColor}
 
   ${({ disabled }) =>
     disabled &&

@@ -56,7 +56,6 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             className="marger__StyledMarger-q3lecu-0 gKSWLw"
           >
             <div
-              align="center"
               className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
             >
               <div
@@ -97,11 +96,11 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="text-input-with-unit-form__StyledButtonPosition-wjoixz-2 ljliJT"
+            className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
           >
             <button
               aria-label="To contribute"
-              className="k-Button k-Button--helium k-Button--big text-input-with-unit-form__StyledButton-wjoixz-3 dTXArD"
+              className="k-Button k-Button--helium k-Button--big text-input-with-unit-form__StyledButton-wjoixz-2 cWUtac"
               disabled={false}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}

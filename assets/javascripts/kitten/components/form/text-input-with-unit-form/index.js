@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
-import { Grid, GridCol } from '../../../components/grid/grid'
+import { Grid as KittenGrid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithUnit } from '../../../components/form/text-input-with-unit'
 import { Text } from '../../../components/typography/text'
 import { Label } from '../../../components/form/label'
@@ -14,21 +14,15 @@ const StyledFormContainer = styled.form`
   padding: 0;
 `
 
-const formPosition = css`
+const StyledGridPosition = styled(({ align, ...others }) => (
+  <KittenGrid {...others} />
+))`
   ${({ align }) =>
     align === 'center' &&
     css`
       display: flex;
       justify-content: center;
     `}
-`
-
-const StyledGridPosition = styled(Grid)`
-  ${formPosition}
-`
-
-const StyledButtonPosition = styled.div`
-  ${formPosition}
 `
 
 const StyledButton = styled(({ version, ...others }) => (
@@ -151,7 +145,7 @@ export class TextInputWithUnitForm extends PureComponent {
           </StyledGridPosition>
         </Marger>
 
-        <StyledButtonPosition align={align}>
+        <StyledGridPosition align={align}>
           <StyledButton
             size="big"
             modifier="helium"
@@ -164,7 +158,7 @@ export class TextInputWithUnitForm extends PureComponent {
           >
             {buttonLabel}
           </StyledButton>
-        </StyledButtonPosition>
+        </StyledGridPosition>
       </StyledFormContainer>
     )
   }

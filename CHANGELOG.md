@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update
+- Fix: Update
   `TextInput`,
   `TextInputWithButton`,
   `TextInputWithUnit`,
