@@ -8,25 +8,17 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
     className="DayPickerInput"
   >
     <div
-      className="k-TextInputWithUnit k-TextInputWithUnit--fullWidth"
+      className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 cNrele"
     >
       <input
-        autoComplete="off"
-        className="k-TextInput k-TextInputWithUnit__input"
+        className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
         disabled={false}
         name="text"
-        onBlur={[Function]}
-        onChange={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        placeholder="dd/mm/yyyy"
         type="text"
-        value=""
       />
       <span
-        className="k-TextInputWithUnit__unit"
+        className="text-input-with-unit__StyledInputUnit-gjmccx-2 kxcQws"
+        disabled={false}
       >
         📅
       </span>

@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update
+  `TextInput`,
+  `TextInputWithButton`,
+  `TextInputWithUnit`,
+  `TextInputWithUnitForm`,
+  `TextInputWithLimit` with `styled-components`.
+
 ## [2.12.0] - 2019-06-26
 
 Feature:
