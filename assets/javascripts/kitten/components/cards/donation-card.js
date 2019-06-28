@@ -51,7 +51,6 @@ const DonationCardComponent = ({
 
             <TextInputWithUnitForm
               {...donationForm}
-              {...textInputWithUnitForm}
               align="center"
               formIsDisabled={isDisabled}
               version={version}
