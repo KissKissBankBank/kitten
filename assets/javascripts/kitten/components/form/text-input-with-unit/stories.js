@@ -1,18 +1,18 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, object, text } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text, object } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
-import { TextInputWithButton } from './index'
+import { TextInputWithUnit } from './index'
 
 const info = {
   text: `
-    # TextInputWithButton
+    # TextInputWithUnit
     &nbsp;
 
     ## Import
     ~~~js
-    import { TextInputWithButton } from '@kisskissbankbank/kitten/src/components/form/text-input-with-button'
+    import { TextInputWithUnit } from '@kisskissbankbank/kitten/src/components/form/text-input-with-unit'
     ~~~
 
     ## Usage
@@ -20,28 +20,24 @@ const info = {
 
     #### Default
     ~~~js
-    <TextInputWithButton />
+    <TextInputWithUnit />
     ~~~
 
-    #### Size
+   #### Size
     ~~~js
-    <TextInputWithButton tiny />
+    <TextInputWithUnit tiny />
     ~~~
 
     #### State
     ~~~js
-    <TextInputWithButton valid />
-    <TextInputWithButton error />
-    <TextInputWithButton disabled />
+    <TextInputWithUnit valid />
+    <TextInputWithUnit error />
+    <TextInputWithUnit disabled />
     ~~~
 
-    ### Props
+    ### Unit
     ~~~js
-      <TextInputWithButton
-        textInputProps={{
-          # show TextInput component
-        }}
-      />
+    <TextInputWithUnit>€</TextInputWithUnit>
     ~~~
   `,
 }
@@ -49,18 +45,19 @@ const info = {
 storiesOf('Form/TextInput', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('Text input with button', () => {
+  .add('Text input with unit', () => {
     return (
       <Grid style={{ marginTop: '5em' }}>
         <GridCol offset="1" col="6">
-          <TextInputWithButton
+          <TextInputWithUnit
             valid={boolean('Valid', false)}
             error={boolean('Error', false)}
             disabled={boolean('Disabled', false)}
             tiny={boolean('Tiny', false)}
-            value={text('Button', 'Button')}
+            error={boolean('Error', false)}
+            unit={text('Unit', '€')}
             textInputProps={object('textInputProps', {
-              placeholder: 'Les props sont transmises',
+              digits: 0,
             })}
           />
         </GridCol>
