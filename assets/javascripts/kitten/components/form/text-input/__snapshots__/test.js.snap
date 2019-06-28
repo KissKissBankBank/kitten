@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
+<input
+  className="text-input__StyledInput-sc-11wej6v-1 dEDmMM"
+  disabled={false}
+  name="text"
+/>
+`;
+
+exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
+<input
+  className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+  disabled={true}
+  name="text"
+/>
+`;
+
+exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
+<input
+  className="text-input__StyledInput-sc-11wej6v-1 dERTZf"
+  disabled={false}
+  name="text"
+/>
+`;
+
+exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
+<input
+  className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+  disabled={false}
+  name="foobar"
+/>
+`;
+
+exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
+<input
+  className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+  disabled={false}
+  name="text"
+/>
+`;
+
+exports[`<TextInput /> with \`tiny\` prop matches with snapshot 1`] = `
+<input
+  className="text-input__StyledInput-sc-11wej6v-1 dnunGN"
+  disabled={false}
+  name="text"
+/>
+`;
+
+exports[`<TextInput /> with \`valid\` prop matches with snapshot 1`] = `
+<input
+  className="text-input__StyledInput-sc-11wej6v-1 culAbn"
+  disabled={false}
+  name="text"
+/>
+`;
