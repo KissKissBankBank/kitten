@@ -3,8 +3,8 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, boolean, object } from '@storybook/addon-knobs'
 import { StyleRoot } from 'radium'
-import { DonationCard } from '../../components/cards/donation-card'
-import { Grid, GridCol } from '../../components/grid/grid'
+import { DonationCard } from './index'
+import { Grid, GridCol } from '../../grid/grid'
 
 storiesOf('Cards/DonationCard', module)
   .addDecorator(withKnobs)

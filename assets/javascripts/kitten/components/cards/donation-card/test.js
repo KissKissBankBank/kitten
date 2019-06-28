@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { DonationCard } from '../../components/cards/donation-card'
+import { DonationCard } from './index'
 
 const createMockMediaMatcher = matches => () => ({
   matches,
