@@ -85,7 +85,7 @@ const StyledArrow = styled.div`
     top: ${pxToRem(35)};
   }
 
-  :focus {
+  ${StyledTextarea}:focus + & {
     border-right-color: ${COLORS.line2};
   }
 

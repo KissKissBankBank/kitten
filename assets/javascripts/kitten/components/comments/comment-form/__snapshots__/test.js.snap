@@ -39,7 +39,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         rows="1"
       />
       <div
-        className="comment-form__StyledArrow-sc-1yidca9-4 fcQCou"
+        className="comment-form__StyledArrow-sc-1yidca9-4 zxaAT"
       >
         <span
           className="comment-form__StyledArrowBefore-sc-1yidca9-5 WsPtJ"
