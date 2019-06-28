@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconContainer/> should match snapshot when we change color 1`] = `
+<div
+  className="icon-container__SytledContainer-x0wgk3-0 naGLM styled__StyledContainer-z412rl-0 eTfKiw"
+  color="#fff"
+>
+  <div
+    className="icon-container__IconWrapper-x0wgk3-1 eIKnIR"
+  >
+    <svg
+      height={25}
+      viewBox="0 0 20 20"
+      width={25}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Checked circle
+      </title>
+      <circle
+        cx="10"
+        cy="10"
+        fill="#fff"
+        r="10"
+      />
+      <path
+        d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
+        fill="#333"
+      />
+    </svg>
+  </div>
+  Foobar
+</div>
+`;
+
+exports[`<IconContainer/> should match snapshot when we change position 1`] = `
+<div
+  className="icon-container__SytledContainer-x0wgk3-0 hywnVF styled__StyledContainer-z412rl-0 eTfKiw"
+>
+  <div
+    className="icon-container__IconWrapper-x0wgk3-1 keaRa"
+  >
+    <svg
+      height={25}
+      viewBox="0 0 20 20"
+      width={25}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Checked circle
+      </title>
+      <circle
+        cx="10"
+        cy="10"
+        fill="#fff"
+        r="10"
+      />
+      <path
+        d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
+        fill="#333"
+      />
+    </svg>
+  </div>
+  Foobar
+</div>
+`;
+
+exports[`<IconContainer/> should match snapshot when we change width and height 1`] = `
+<div
+  className="icon-container__SytledContainer-x0wgk3-0 cThQGP styled__StyledContainer-z412rl-0 eTfKiw"
+>
+  <div
+    className="icon-container__IconWrapper-x0wgk3-1 eEeHSl"
+  >
+    <svg
+      height={50}
+      viewBox="0 0 20 20"
+      width={30}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Checked circle
+      </title>
+      <circle
+        cx="10"
+        cy="10"
+        fill="#fff"
+        r="10"
+      />
+      <path
+        d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
+        fill="#333"
+      />
+    </svg>
+  </div>
+  Foobar
+</div>
+`;
+
+exports[`<IconContainer/> should match snapshot with default behavior 1`] = `
+<div
+  className="icon-container__SytledContainer-x0wgk3-0 ckEKhd styled__StyledContainer-z412rl-0 eTfKiw"
+>
+  <div
+    className="icon-container__IconWrapper-x0wgk3-1 eIKnIR"
+  >
+    <svg
+      height={25}
+      viewBox="0 0 20 20"
+      width={25}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Checked circle
+      </title>
+      <circle
+        cx="10"
+        cy="10"
+        fill="#fff"
+        r="10"
+      />
+      <path
+        d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
+        fill="#333"
+      />
+    </svg>
+  </div>
+  Foobar
+</div>
+`;
