@@ -1,10 +1,9 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
 import { ButtonImage } from '../../../components/buttons/button-image'
 import { Text } from '../../../components/typography/text'
-import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
