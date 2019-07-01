@@ -2,11 +2,15 @@
 
 exports[`<IconContainer/> should match snapshot when we change color 1`] = `
 <div
-  className="icon-container__SytledContainer-x0wgk3-0 naGLM styled__StyledContainer-z412rl-0 eTfKiw"
+  className="icon-container__StyledContainer-x0wgk3-0 bKpIvW styled__StyledContainer-z412rl-0 eTfKiw"
   color="#fff"
 >
+  Foobar
   <div
+    aria-hidden="true"
     className="icon-container__IconWrapper-x0wgk3-1 eIKnIR"
+    marginHeight={12.5}
+    marginWidth={12.5}
   >
     <svg
       height={25}
@@ -29,16 +33,20 @@ exports[`<IconContainer/> should match snapshot when we change color 1`] = `
       />
     </svg>
   </div>
-  Foobar
 </div>
 `;
 
 exports[`<IconContainer/> should match snapshot when we change position 1`] = `
 <div
-  className="icon-container__SytledContainer-x0wgk3-0 hywnVF styled__StyledContainer-z412rl-0 eTfKiw"
+  className="icon-container__StyledContainer-x0wgk3-0 jObhvy styled__StyledContainer-z412rl-0 eTfKiw"
+  color="#fff"
 >
+  Foobar
   <div
+    aria-hidden="true"
     className="icon-container__IconWrapper-x0wgk3-1 keaRa"
+    marginHeight={12.5}
+    marginWidth={12.5}
   >
     <svg
       height={25}
@@ -61,16 +69,20 @@ exports[`<IconContainer/> should match snapshot when we change position 1`] = `
       />
     </svg>
   </div>
-  Foobar
 </div>
 `;
 
 exports[`<IconContainer/> should match snapshot when we change width and height 1`] = `
 <div
-  className="icon-container__SytledContainer-x0wgk3-0 cThQGP styled__StyledContainer-z412rl-0 eTfKiw"
+  className="icon-container__StyledContainer-x0wgk3-0 jASuhh styled__StyledContainer-z412rl-0 eTfKiw"
+  color="#fff"
 >
+  Foobar
   <div
+    aria-hidden="true"
     className="icon-container__IconWrapper-x0wgk3-1 eEeHSl"
+    marginHeight={25}
+    marginWidth={15}
   >
     <svg
       height={50}
@@ -93,16 +105,20 @@ exports[`<IconContainer/> should match snapshot when we change width and height 
       />
     </svg>
   </div>
-  Foobar
 </div>
 `;
 
 exports[`<IconContainer/> should match snapshot with default behavior 1`] = `
 <div
-  className="icon-container__SytledContainer-x0wgk3-0 ckEKhd styled__StyledContainer-z412rl-0 eTfKiw"
+  className="icon-container__StyledContainer-x0wgk3-0 bKpIvW styled__StyledContainer-z412rl-0 eTfKiw"
+  color="#fff"
 >
+  Foobar
   <div
+    aria-hidden="true"
     className="icon-container__IconWrapper-x0wgk3-1 eIKnIR"
+    marginHeight={12.5}
+    marginWidth={12.5}
   >
     <svg
       height={25}
@@ -125,6 +141,5 @@ exports[`<IconContainer/> should match snapshot with default behavior 1`] = `
       />
     </svg>
   </div>
-  Foobar
 </div>
 `;
