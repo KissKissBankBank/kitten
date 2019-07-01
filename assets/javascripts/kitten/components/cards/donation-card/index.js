@@ -49,28 +49,44 @@ export class DonationCard extends PureComponent {
   static propTypes = {
     title: PropTypes.string.isRequired,
     titleTag: PropTypes.string,
-    donationForm: PropTypes.object.isRequired,
     version: PropTypes.oneOf(['default', 'tiny']),
     isDisabled: PropTypes.bool,
+    donationForm: PropTypes.shape({
+      inputUnit: PropTypes.string,
+      inputLabel: PropTypes.string,
+      inputPlaceholder: PropTypes.string,
+      inputIsOnError: PropTypes.bool,
+      errorMessage: PropTypes.string,
+      buttonLabel: PropTypes.string,
+    }),
   }
 
   static defaultProps = {
     titleTag: 'h2',
     version: 'default',
+    isDisabled: false,
+    donationForm: {
+      inputUnit: '€',
+      inputLabel: 'Enter your amount',
+      inputPlaceholder: 'Enter your amount',
+      inputIsOnError: true,
+      errorMessage: 'lorem ipsum dolor sit amet',
+      buttonLabel: 'Choose',
+    },
   }
 
   render() {
     const {
-      isDisabled,
       title,
       titleTag,
+      isDisabled,
       version,
       donationForm,
       ...others
     } = this.props
 
     return (
-      <StyledCard>
+      <StyledCard isDisabled={isDisabled}>
         <Marger
           bottom={version === 'tiny' ? 3 : 4}
           top={version === 'tiny' ? 3 : 4}
@@ -95,7 +111,6 @@ export class DonationCard extends PureComponent {
               <TextInputWithUnitForm
                 {...donationForm}
                 align="center"
-                formIsDisabled={isDisabled}
                 version={version}
               />
             </GridCol>

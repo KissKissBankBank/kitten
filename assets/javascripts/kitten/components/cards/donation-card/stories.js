@@ -34,10 +34,32 @@ const info = {
     <DonationCard />
     ~~~
 
+    #### Title
+    ~~~js
+    <DonationCard>
+      title="…"
+      titleTag="…"
+    </DonationCard>
+    ~~~
+
+    #### With isDisabled
+    ~~~js
+    <DonationCard isDisabled />
+    ~~~
+
    #### Version
     ~~~js
     <DonationCard version="default" />
     <DonationCard version="tiny" />
+    ~~~
+
+    ### Props
+    ~~~js
+      <DonationCard
+        donationForm={{
+          # show TextInputWithUnitForm component
+        }}
+      />
     ~~~
   `,
 }
@@ -54,15 +76,14 @@ storiesOf('Cards/DonationCard', module)
               'Title Amount',
               'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
             )}
-            isDisabled={boolean('Is Disabled', false)}
-            amountLabel={text('Label Input', 'Enter your amount')}
-            amountPlaceholder={text('Placeholder input', 'Your amount')}
-            isDisabled={boolean('Is Disabled', false)}
-            isError={boolean('Is error', false)}
+            isDisabled={boolean('Disabled', false)}
             version={select('Version', versionOptions, 'default')}
-            errorTag={text('Error tag', 'lorem ipsum dolor sit amet')}
             donationForm={object('donationForm', {
               inputUnit: '€',
+              inputLabel: 'Enter your amount',
+              inputPlaceholder: 'Enter your amount',
+              inputIsOnError: false,
+              errorMessage: 'lorem ipsum dolor sit amet',
               buttonLabel: 'Choose',
             })}
           />
