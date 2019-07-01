@@ -51,6 +51,10 @@ const StyledTextarea = styled.textarea`
     color: ${COLORS.font1};
   }
 
+  ::placeholder {
+    color: ${COLORS.font2};
+  }
+
   ${({ isDisabled }) =>
     isDisabled &&
     css`
