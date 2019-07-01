@@ -3,7 +3,10 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-
+- Fix: Update
+  `Comment`,
+  `CommentForm`,
+  `CommentAvatar` with `styled-components`.
 - Fix: Update
   `TextInput`,
   `TextInputWithButton`,
