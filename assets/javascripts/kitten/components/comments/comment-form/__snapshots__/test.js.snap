@@ -29,7 +29,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       className="comment-form__StyledInput-sc-1yidca9-2 dxkHAQ"
     >
       <textarea
-        className="comment-form__StyledTextarea-sc-1yidca9-3 bROdtX"
+        className="comment-form__StyledTextarea-sc-1yidca9-3 GUTNa"
         defaultValue=""
         disabled={false}
         onBlur={[Function]}
