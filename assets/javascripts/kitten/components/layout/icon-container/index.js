@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import { Container } from '../../grid/container'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const SytledContainer = styled(Container)`
+const StyledContainer = styled(Container)`
   position: relative;
   padding: ${pxToRem(20)};
   background-color: ${({ color }) => color};
@@ -20,33 +20,33 @@ const SytledContainer = styled(Container)`
 
 const IconWrapper = styled.div`
   position: absolute;
-  ${({ position, marginTop, marginLeft }) => {
+  ${({ position, marginHeight, marginWidth }) => {
     if (position === 'top') {
       return css`
         left: 50%;
-        margin-left: ${pxToRem(-marginLeft)};
-        top: ${pxToRem(-marginTop)};
+        margin-left: ${pxToRem(-marginWidth)};
+        top: ${pxToRem(-marginHeight)};
       `
     }
     if (position === 'bottom') {
       return css`
         left: 50%;
-        margin-left: ${pxToRem(-marginLeft)};
-        bottom: ${pxToRem(-marginTop)};
+        margin-left: ${pxToRem(-marginWidth)};
+        bottom: ${pxToRem(-marginHeight)};
       `
     }
     if (position === 'left') {
       return css`
         top: 50%;
-        margin-top: ${pxToRem(-marginTop)};
-        left: ${pxToRem(-marginLeft)};
+        margin-top: ${pxToRem(-marginHeight)};
+        left: ${pxToRem(-marginWidth)};
       `
     }
     if (position === 'right') {
       return css`
         top: 50%;
-        margin-top: ${pxToRem(-marginTop)};
-        right: ${pxToRem(-marginLeft)};
+        margin-top: ${pxToRem(-marginHeight)};
+        right: ${pxToRem(-marginWidth)};
       `
     }
   }}
@@ -63,30 +63,31 @@ export const IconContainer = ({
 }) => {
   const height = iconHeight || iconWidth
   return (
-    <SytledContainer
+    <StyledContainer
       className={className}
       color={color}
       position={position}
       halfWidth={iconWidth / 2}
       halfHeight={height / 2}
     >
+      {children}
       <IconWrapper
-        marginTop={height / 2}
-        marginLeft={iconWidth / 2}
+        marginHeight={height / 2}
+        marginWidth={iconWidth / 2}
         position={position}
+        aria-hidden="true"
       >
         {React.cloneElement(icon, {
           width: iconWidth,
           height,
         })}
       </IconWrapper>
-      {children}
-    </SytledContainer>
+    </StyledContainer>
   )
 }
 
 IconContainer.propTypes = {
-  icon: PropTypes.node,
+  icon: PropTypes.node.isRequired,
   color: PropTypes.string,
   iconWidth: PropTypes.number,
   iconHeight: PropTypes.number,
@@ -95,6 +96,7 @@ IconContainer.propTypes = {
 
 IconContainer.defaultProps = {
   iconWidth: 25,
+  color: '#fff',
   iconHeight: undefined,
   position: 'top',
 }
