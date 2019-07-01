@@ -5,6 +5,51 @@ import { withKnobs, text, object, boolean } from '@storybook/addon-knobs'
 import { CommentForm } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
+const info = {
+  text: `
+    # CommentForm
+    &nbsp;
+
+    ## Import
+    ~~~js
+    import { CommentForm } from '@kisskissbankbank/kitten/src/components/comments/comment-form'
+    ~~~
+
+    ## Usage
+    &nbsp;
+
+    #### Default
+    ~~~js
+    <CommentForm>MyComment</CommentForm>
+    ~~~
+
+    ### With avatar
+    ~~~js
+    <CommentForm>
+      src=""
+      alt="…"
+    </CommentForm>
+    ~~~
+
+    ### With commentButton
+    ~~~js
+    <CommentForm>
+      commentButton="Button"
+    </CommentForm>
+    ~~~
+
+    ### With error
+    ~~~js
+    <CommentForm>
+      error
+      errorMessage="…"
+    </CommentForm>
+    ~~~
+  `,
+  header: false,
+  propTables: false,
+}
+
 storiesOf('Comments', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
