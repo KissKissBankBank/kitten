@@ -50,7 +50,7 @@ const info = {
   propTables: false,
 }
 
-storiesOf('Comments', module)
+storiesOf('Comments/CommentForm', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
   .add('Comment form', () => {

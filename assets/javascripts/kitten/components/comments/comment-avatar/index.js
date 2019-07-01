@@ -17,12 +17,12 @@ const buttonImgHuge = pxToRem(80)
 const buttonImgBig = pxToRem(50)
 
 const StyledButtonImage = styled(ButtonImage)`
-  border-radius: calc(${buttonImgBig} / 2);
+  border-radius: 50%;
   height: ${buttonImgBig};
   width: ${buttonImgBig};
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    border-radius: calc(${buttonImgHuge} / 2);
+    border-radius: 50%;
     height: ${buttonImgHuge};
     width: ${buttonImgHuge};
   }
