@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `DonationCard` with `styled-components`.
 - Fix: Update
   `TextInput`,
   `TextInputWithButton`,
