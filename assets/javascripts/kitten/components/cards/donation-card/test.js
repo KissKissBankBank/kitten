@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { DonationCard } from '../../components/cards/donation-card'
+import { DonationCard } from './index'
 
 const createMockMediaMatcher = matches => () => ({
   matches,
@@ -27,6 +27,9 @@ describe('<DonationCard />', () => {
       .create(
         <DonationCard
           title="Custom title mount"
+          titleTag="h2"
+          isDisabled
+          version="default"
           donationForm={{
             buttonLabel: 'To contribute',
             inputId: 'donation-amount',
