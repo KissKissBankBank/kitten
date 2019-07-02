@@ -187,9 +187,9 @@ export const Autocomplete = ({
   }
 
   const updateSuggestions = () => {
-    const regex = new RegExp(`^${value}`, 'gi')
+    const search = `${value}`.toLowerCase()
     const newItems = defaultItems.filter(
-      item => item.match(regex) && item !== value,
+      item => item.toLowerCase().includes(search) && item !== value,
     )
 
     setItems(newItems)
