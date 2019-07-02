@@ -20,7 +20,7 @@ const info = {
 
     #### Default
     ~~~js
-    <Comment>MyComment</Comment>
+    <Comment />
     ~~~
 
     ### With avatar

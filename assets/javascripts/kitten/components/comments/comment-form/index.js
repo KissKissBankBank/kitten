@@ -110,10 +110,6 @@ const StyledArrowBefore = styled.span`
   left: -${pxToRem(7)};
 `
 
-const StyledButton = styled(Button)`
-  margin-right: ${pxToRem(10)};
-`
-
 export class CommentForm extends PureComponent {
   static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
@@ -126,6 +122,8 @@ export class CommentForm extends PureComponent {
     errorMessage: PropTypes.string,
     onSubmit: PropTypes.func,
     defaultValue: PropTypes.string,
+    label: PropTypes.string,
+    ariaId: PropTypes.string,
   }
 
   static defaultProps = {
@@ -135,6 +133,8 @@ export class CommentForm extends PureComponent {
     isDisabled: false,
     commentButton: '',
     defaultValue: '',
+    ariaId: '',
+    label: '',
   }
 
   constructor(props) {
@@ -191,6 +191,8 @@ export class CommentForm extends PureComponent {
       isDisabled,
       placeholder,
       defaultValue,
+      label,
+      ariaId,
       error,
       errorMessage,
     } = this.props
@@ -199,6 +201,8 @@ export class CommentForm extends PureComponent {
       <StyledGridCol>
         <StyledInput>
           <StyledTextarea
+            aria-label={label}
+            aria-describedby={ariaId}
             defaultValue={defaultValue}
             key="comment-form"
             disabled={isDisabled}
@@ -225,25 +229,26 @@ export class CommentForm extends PureComponent {
 
     return (
       <Marger top="2">
-        <StyledButton
+        <Button
           type="button"
           modifier="helium"
           onClick={this.handleSubmit}
+          className="k-u-margin-right-single"
         >
           {commentButton}
-        </StyledButton>
+        </Button>
       </Marger>
     )
   }
 
   renderError() {
-    const { error, errorMessage } = this.props
+    const { error, errorMessage, ariaId } = this.props
 
     if (!error) return
 
     return (
       <Marger top=".5">
-        <Text color="error" size="micro" weight="regular">
+        <Text id={ariaId} color="error" size="micro" weight="regular">
           {errorMessage}
         </Text>
       </Marger>

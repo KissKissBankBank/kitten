@@ -22,7 +22,6 @@ const StyledButtonImage = styled(ButtonImage)`
   width: ${buttonImgBig};
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    border-radius: 50%;
     height: ${buttonImgHuge};
     width: ${buttonImgHuge};
   }

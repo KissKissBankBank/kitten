@@ -20,7 +20,7 @@ const info = {
 
     #### Default
     ~~~js
-    <CommentForm>MyComment</CommentForm>
+    <CommentForm />
     ~~~
 
     ### With avatar
