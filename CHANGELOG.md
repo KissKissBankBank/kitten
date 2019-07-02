@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   `Comment`,
   `CommentForm`,
   `CommentAvatar` with `styled-components`.
+- Fix: Update `DonationCard` with `styled-components`.
 - Fix: Update
   `TextInput`,
   `TextInputWithButton`,
