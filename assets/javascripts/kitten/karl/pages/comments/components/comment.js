@@ -5,7 +5,7 @@ import { Comment } from '../../../../components/comments/comment'
 import { CommentForm } from '../../../../components/comments/comment-form'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 
-const Comment = props => (
+const CommentPage = props => (
   <Container>
     <Grid>
       <GridCol col-l="8" offset-l="2">
@@ -15,4 +15,4 @@ const Comment = props => (
   </Container>
 )
 
-export default Comment
+export default CommentPage
