@@ -103,7 +103,10 @@ Image.propTypes = {
   arrowColor: PropTypes.string,
   href: PropTypes.string,
   imageContainerBackground: PropTypes.string,
-  imageContainerRatio: PropTypes.number,
+  imageContainerRatio: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
 }
 
 Image.defaultProps = {
