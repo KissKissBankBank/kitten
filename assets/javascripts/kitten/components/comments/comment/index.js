@@ -61,7 +61,7 @@ const StyledBottomNotes = styled(Text)`
 export class Comment extends PureComponent {
   static propTypes = {
     text: PropTypes.node.isRequired,
-    ownerName: PropTypes.string.isRequired,
+    ownerName: PropTypes.string,
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string.isRequired,
     bottomNotes: PropTypes.node,
@@ -69,6 +69,7 @@ export class Comment extends PureComponent {
 
   static defaultProps = {
     bottomNotes: '',
+    ownerName: '',
   }
 
   render() {
@@ -89,12 +90,15 @@ export class Comment extends PureComponent {
         />
         <StyledCommentContainer>
           <StyledCommentContent>
-            <Marger bottom="1">
-              <Text color="font1" size="tiny" weight="regular">
-                {ownerName}
-              </Text>
-            </Marger>
-            <Marger top="1">
+            {ownerName && (
+              <Marger bottom="1">
+                <Text color="font1" size="tiny" weight="regular">
+                  {ownerName}
+                </Text>
+              </Marger>
+            )}
+
+            <Marger top={ownerName ? 1 : null}>
               <StyledContentText color="font1" weight="light">
                 {text}
               </StyledContentText>
