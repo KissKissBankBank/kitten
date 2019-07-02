@@ -54,9 +54,7 @@ export const colorAliases = {
   primaryLighter: colorList.blueLighter,
   primaryLightest: colorList.blueLightest,
 
-  mdcBlue: colorList.blueLightBis,
-  mdcRed: colorList.redBis,
-  mdcRedLight: colorList.redLightBis,
+  defaultImageBackground: colorList.blueLightBis,
 }
 
 const deprecatedColorNames = {
