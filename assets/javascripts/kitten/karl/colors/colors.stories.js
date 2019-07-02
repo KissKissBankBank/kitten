@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { Container } from '../../components/grid/container'
-import { getColor, colorAliases } from '../../helpers/utils/get-color'
+import { colorAliases } from '../../constants/colors-config'
 import { GUTTER } from '../../constants/grid-config'
 import styled from 'styled-components'
 
@@ -16,27 +16,37 @@ const StyledGrid = styled.div`
 const StyledBox = styled.div`
   position: relative;
   padding-top: 100%;
-  background-color: ${({ colorObject }) => colorObject.colorValue};
-  color: ${({ colorObject }) => colorObject.invertedColorValue};
+  background-color: ${({ colorValue }) => colorValue};
 
   > code {
     position: absolute;
-    left: 0.8rem;
+    left: 0.5rem;
     bottom: 0.5rem;
+    background: white;
+    padding: 0 0.3rem;
+
+    ::-moz-selection {
+      background-color: ${({ colorValue }) => colorValue};
+    }
+
+    ::selection {
+      background-color: ${({ colorValue }) => colorValue};
+    }
   }
 `
 
 storiesOf('Colors', module).add(
-  'getColor()',
-  withInfo('getColor() aliases')(() => {
+  'COLOR',
+  withInfo('COLOR names')(() => {
     return (
       <Container>
         <StyledGrid>
           {Object.keys(colorAliases).map((item, index) => (
-            <StyledBox key={item} colorObject={colorAliases[item]}>
+            <StyledBox key={item} colorValue={colorAliases[item]()}>
               <code>
-                '{item}'<br />
-                {colorAliases[item].colorValue}
+                COLORS.{item}()
+                <br />
+                {colorAliases[item]()}
               </code>
             </StyledBox>
           ))}
