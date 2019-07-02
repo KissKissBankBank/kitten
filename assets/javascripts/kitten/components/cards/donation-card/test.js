@@ -27,7 +27,7 @@ describe('<DonationCard />', () => {
       .create(
         <DonationCard
           title="Custom title mount"
-          titleTag="Custom title tag"
+          titleTag="h2"
           isDisabled
           version="default"
           donationForm={{

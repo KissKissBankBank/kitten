@@ -36,10 +36,10 @@ const info = {
 
     #### Title
     ~~~js
-    <DonationCard>
+    <DonationCard
       title="…"
       titleTag="…"
-    </DonationCard>
+    />
     ~~~
 
     #### With isDisabled

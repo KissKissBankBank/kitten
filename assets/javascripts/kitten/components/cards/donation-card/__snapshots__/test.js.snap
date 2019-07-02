@@ -16,11 +16,11 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
         <div
           className="marger__StyledMarger-q3lecu-0 jgfcQX"
         >
-          <Custom title tag
+          <h2
             className="k-Title donation-card__StyledTitle-sc-19h76fz-2 dtGEFG k-Title--primary k-Title--withoutMargin"
           >
             Custom title mount
-          </Custom title tag>
+          </h2>
         </div>
         <div
           className="marger__StyledMarger-q3lecu-0 fSrmLM"
