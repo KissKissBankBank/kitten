@@ -37,8 +37,8 @@ Array [
         aria-autocomplete="both"
         aria-expanded={false}
         aria-owns="field-results"
-        autoComplete="false"
-        className="autocomplete__Input-lfeqwe-1 heeAXz"
+        autoComplete="off"
+        className="autocomplete__Input-lfeqwe-1 fSAKaA"
         id="autocomplete"
         name="field"
         onBlur={[Function]}

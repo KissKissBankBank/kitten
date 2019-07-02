@@ -16,7 +16,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 0.89rem;
   line-height: 1.3;
   color: #222;
   -webkit-transition: border-color 0.4s;
@@ -59,7 +59,7 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
     aria-autocomplete="both"
     aria-expanded={false}
     aria-owns="autocomplete-results"
-    autoComplete="false"
+    autoComplete="off"
     className="c1"
     id="autocomplete"
     name="autocomplete"
