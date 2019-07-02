@@ -6,5 +6,12 @@ import Comment from './components/comment'
 storiesOf('Pages/Comment', module)
   .addDecorator(withKnobs)
   .add('Comment', () => {
-    return <Comment />
+    return (
+      <Comment
+        avatarImgProps={{
+          src: 'https://placehold.it/80x80/caf4fe/caf4fe',
+          alt: '',
+        }}
+      />
+    )
   })
