@@ -30,7 +30,6 @@ const colorList = {
   greenLighter: '#effaf1',
   greenLightest: '#f7fcf8',
 
-  // MDC colors
   blueLightBis: '#caf4fe',
   redBis: '#ff0000',
   redLightBis: '#ffebe0',

@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: new `getColor` helper with more specific color names
+- Feature: Color config update with specific color names
 
 ## [2.11.0] - 2019-06-20
 
