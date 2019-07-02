@@ -26,10 +26,10 @@ const info = {
     ### With avatar
     ~~~js
     <CommentForm
-      avatarImgProps={
-        src="…"
-        alt="…"
-      }
+      avatarImgProps={{
+        src: '…'
+        alt: '…'
+      }}
     />
     ~~~
 
