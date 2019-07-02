@@ -42,11 +42,11 @@ storiesOf('Colors', module).add(
       <Container>
         <StyledGrid>
           {Object.keys(colorAliases).map((item, index) => (
-            <StyledBox key={item} colorValue={colorAliases[item]()}>
+            <StyledBox key={item} colorValue={colorAliases[item]}>
               <code>
-                COLORS.{item}()
+                COLORS.{item}
                 <br />
-                {colorAliases[item]()}
+                {colorAliases[item]}
               </code>
             </StyledBox>
           ))}
