@@ -25,7 +25,12 @@ const info = {
 
     ### With avatar
     ~~~js
-    <CommentForm src="" alt="…" />
+    <CommentForm
+      avatarImgProps={
+        src="…"
+        alt="…"
+      }
+    />
     ~~~
 
     ### With commentButton

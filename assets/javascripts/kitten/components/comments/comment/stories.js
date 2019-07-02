@@ -25,7 +25,12 @@ const info = {
 
     ### With avatar
     ~~~js
-    <Comment src="" alt="…" />
+    <Comment
+      avatarImgProps={
+        src="…"
+        alt="…"
+      }
+    />
     ~~~
 
     ### With commentDate
