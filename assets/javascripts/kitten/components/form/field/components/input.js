@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Marger } from '../../../layout/marger'
 import { TextInput } from '../../../form/text-input'
 import { TextInputWithLimit } from '../../../form/text-input-with-limit'
-import { TextInputWithUnit } from '../../text-input-with-unit'
+import { TextInputWithUnit } from '../../../form/text-input-with-unit'
 
 export const FieldInput = props => {
   let Input = TextInput

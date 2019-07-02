@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `Autocomplete` component.
 - Feature: Add `Field.Autocomplete` component.
+- Fix: Update
+  `TextInput`,
+  `TextInputWithButton`,
+  `TextInputWithUnit`,
+  `TextInputWithUnitForm`,
+  `TextInputWithLimit` with `styled-components`.
 
 ## [2.12.0] - 2019-06-26
 

@@ -15,7 +15,7 @@ import { Grid, GridCol } from '../../grid/grid'
 const StoryGrid = ({ children }) => (
   <Container>
     <Grid>
-      <GridCol col="3">
+      <GridCol col="6">
         <Marger top="5" bottom="5">
           {children}
         </Marger>

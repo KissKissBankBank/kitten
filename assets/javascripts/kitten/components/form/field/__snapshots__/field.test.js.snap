@@ -122,12 +122,11 @@ Array [
     className="marger__StyledMarger-q3lecu-0 cHJBWz"
   >
     <input
-      className="k-TextInput is-error"
+      className="text-input__StyledInput-sc-11wej6v-1 dERTZf"
       disabled={false}
       id="input"
       name="field"
       placeholder="Placeholder…"
-      type="text"
     />
   </div>,
   <div
@@ -217,12 +216,11 @@ Array [
     className="marger__StyledMarger-q3lecu-0 cHJBWz"
   >
     <input
-      className="k-TextInput"
+      className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
       disabled={false}
       id="input"
       name="field"
       placeholder="Placeholder…"
-      type="text"
     />
   </div>,
 ]
@@ -307,8 +305,7 @@ Array [
       }
     >
       <input
-        className="k-TextInput is-error"
-        data-radium={true}
+        className="text-input__StyledInput-sc-11wej6v-1 dERTZf"
         disabled={false}
         id="input"
         name="field"
@@ -461,8 +458,7 @@ Array [
       }
     >
       <input
-        className="k-TextInput"
-        data-radium={true}
+        className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
         disabled={false}
         id="input"
         name="field"
