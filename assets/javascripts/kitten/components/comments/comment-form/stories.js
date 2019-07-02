@@ -25,25 +25,17 @@ const info = {
 
     ### With avatar
     ~~~js
-    <CommentForm>
-      src=""
-      alt="…"
-    </CommentForm>
+    <CommentForm src="" alt="…" />
     ~~~
 
     ### With commentButton
     ~~~js
-    <CommentForm>
-      commentButton="Button"
-    </CommentForm>
+    <CommentForm commentButton="Button" />
     ~~~
 
     ### With error
     ~~~js
-    <CommentForm>
-      error
-      errorMessage="…"
-    </CommentForm>
+    <CommentForm error errorMessage="…" />
     ~~~
   `,
   header: false,

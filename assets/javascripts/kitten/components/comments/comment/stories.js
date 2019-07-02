@@ -25,25 +25,22 @@ const info = {
 
     ### With avatar
     ~~~js
-    <Comment>
-      src=""
-      alt="…"
-    </Comment>
+    <Comment src="" alt="…" />
     ~~~
 
     ### With commentDate
     ~~~js
-    <Comment>commentDate="…"</Comment>
+    <Comment commentDate="…" />
     ~~~
 
     ### With ownerName
     ~~~js
-    <Comment>ownerName="…"</Comment>
+    <Comment ownerName="…" />
     ~~~
 
     ### Text
     ~~~js
-    <Comment>text="…"</Comment>
+    <Comment text="…" />
     ~~~
   `,
   header: false,
