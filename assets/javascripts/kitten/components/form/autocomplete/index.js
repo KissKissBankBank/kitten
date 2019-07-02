@@ -267,7 +267,7 @@ export const Autocomplete = ({
             ))}
           </Suggestions>
 
-          <VisuallyHidden aria-live="assertive">
+          <VisuallyHidden lang="en" aria-live="assertive">
             {items.length} results are available.
           </VisuallyHidden>
         </>
