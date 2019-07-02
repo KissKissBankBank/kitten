@@ -153,4 +153,16 @@ describe('<SimpleCard />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with imageContainerRatio props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<SimpleCard imageContainerRatio={16 / 9} />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
