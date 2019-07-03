@@ -29,7 +29,7 @@ const ActionLinks = styled(({ children, className }) => {
   font-size: ${stepToRem(-2)};
 `
 
-const CommentPage = props => (
+const CommentsPage = props => (
   <Container>
     <Grid>
       <GridCol col-m="8" offset-m="2">
@@ -61,4 +61,4 @@ const CommentPage = props => (
   </Container>
 )
 
-export default CommentPage
+export default CommentsPage
