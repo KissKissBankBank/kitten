@@ -5,7 +5,29 @@ import { Comment } from '../../../../components/comments/comment'
 import { CommentForm } from '../../../../components/comments/comment-form'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
-import { ActionLinks } from './action-links'
+import { Text } from '../../../../components/typography/text'
+import { stepToRem } from '../../../../helpers/utils/typography'
+
+const ActionLinks = styled(({ children, className }) => {
+  return (
+    <Text
+      color="font1"
+      weight="bold"
+      type="button"
+      tag="button"
+      className={className}
+    >
+      {children}
+    </Text>
+  )
+})`
+  cursor: pointer;
+  text-decoration: underline;
+  border: 0;
+  margin: 0;
+  vertical-align: baseline;
+  font-size: ${stepToRem(-2)};
+`
 
 const CommentPage = props => (
   <Container>
@@ -31,7 +53,7 @@ const CommentPage = props => (
             text="Youpi Youpi !!!voila les bons jus qui arrivent! Pleins de bonheur de partage et de revitalisation ! Rose"
             ownerName="rose-jourdan"
             commentDate="20 jours"
-            bottomNotes={<ActionLinks />}
+            bottomNotes={<ActionLinks children="Supprimer" />}
           />
         </Marger>
       </GridCol>
