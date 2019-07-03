@@ -2,163 +2,64 @@
 
 exports[`<CommentForm /> should match its empty snapshot 1`] = `
 <div
-  data-radium={true}
+  className="comment-form__StyledGrid-sc-1yidca9-0 kwVmiQ"
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "display": "flex",
-      }
-    }
+    className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      data-radium={true}
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "flexDirection": "column",
-        }
-      }
+      className="marger__StyledMarger-q3lecu-0 gkLTfi"
     >
-      <div
-        className="marger__StyledMarger-q3lecu-0 gkLTfi"
+      <span
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
+        tabIndex={null}
       >
-        <span
-          className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
-          tabIndex={null}
-        >
-          <img
-            alt="Image alt"
-            className="k-ButtonImage__img"
-            src="#image"
-          />
-        </span>
-      </div>
-    </div>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": ".k-CommentForm__input::-webkit-input-placeholder{color: #b8b8b8;}",
-        }
-      }
-    />
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": ".k-CommentForm__input:-moz-placeholder{color: #b8b8b8;}",
-        }
-      }
-    />
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": ".k-CommentForm__input::-moz-placeholder{color: #b8b8b8;}",
-        }
-      }
-    />
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": ".k-CommentForm__input:-ms-input-placeholder{color: #b8b8b8;}",
-        }
-      }
-    />
-    <div
-      className="rmq-993edb07"
-      data-radium={true}
-      style={
-        Object {
-          "flex": 1,
-          "marginLeft": 20,
-        }
-      }
-    >
-      <div
-        className="marger__StyledMarger-q3lecu-0 koOrHT"
-      >
-        <textarea
-          className="rmq-2904dc95 k-CommentForm__input k-u-weight-light"
-          data-radium={true}
-          defaultValue=""
-          disabled={false}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          placeholder="Leave a comment on the project"
-          rows="1"
-          style={
-            Object {
-              "borderColor": "#ffb2c7",
-              "borderStyle": "solid",
-              "borderWidth": 2,
-              "boxSizing": "border-box",
-              "color": "#ffb2c7",
-              "fontSize": 14,
-              "height": "auto",
-              "overflowY": "hidden",
-              "padding": 30,
-              "resize": "none",
-              "width": "100%",
-            }
-          }
+        <img
+          alt="Image alt"
+          className="k-ButtonImage__img"
+          src="#image"
         />
-        <span
-          className="rmq-e4f3f344"
-          data-radium={true}
-          style={
-            Object {
-              "borderColor": "transparent",
-              "borderRightColor": "#ffb2c7",
-              "borderStyle": "solid",
-              "borderWidth": 10,
-              "display": "block",
-              "height": 0,
-              "left": -20,
-              "position": "absolute",
-              "top": 20,
-              "width": 0,
-            }
-          }
-        >
-          <span
-            data-radium={true}
-            style={
-              Object {
-                "borderColor": "transparent",
-                "borderRightColor": "white",
-                "borderStyle": "solid",
-                "borderWidth": 10,
-                "height": 0,
-                "left": -7,
-                "marginTop": -10,
-                "position": "absolute",
-                "width": 0,
-              }
-            }
-          />
-        </span>
-      </div>
-      <div
-        className="marger__StyledMarger-q3lecu-0 gWrqvV"
-      >
-        <span
-          className="k-u-color-error k-u-size-micro k-u-weight-regular"
-        >
-          Cum sociis natoque penatibus et magnis
-        </span>
-      </div>
+      </span>
     </div>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (min-width: 640px){ .rmq-993edb07{margin-left: 35px !important;}}
-@media (min-width: 640px){ .rmq-2904dc95{font-size: 16px !important;}}
-@media (min-width: 640px){ .rmq-e4f3f344{top: 35px !important;}}",
-      }
-    }
-  />
+  <div
+    className="comment-form__StyledGridCol-sc-1yidca9-1 jUUDNx"
+  >
+    <div
+      className="comment-form__StyledInput-sc-1yidca9-2 dxkHAQ"
+    >
+      <textarea
+        aria-describedby=""
+        aria-invalid="false"
+        aria-label=""
+        aria-required="true"
+        className="comment-form__StyledTextarea-sc-1yidca9-3 GUTNa"
+        defaultValue=""
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Leave a comment on the project"
+        rows="1"
+      />
+      <div
+        className="comment-form__StyledArrow-sc-1yidca9-4 zxaAT"
+      >
+        <span
+          className="comment-form__StyledArrowBefore-sc-1yidca9-5 WsPtJ"
+        />
+      </div>
+    </div>
+    <div
+      className="marger__StyledMarger-q3lecu-0 gWrqvV"
+    >
+      <span
+        className="k-u-color-error k-u-size-micro k-u-weight-regular"
+        id=""
+      >
+        Cum sociis natoque penatibus et magnis
+      </span>
+    </div>
+  </div>
 </div>
 `;

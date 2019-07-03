@@ -54,9 +54,9 @@ const info = {
 
     ### Digits
     ~~~js
-      <TextInput digits="2" />
-      <TextInput digits="6" />
-      <TextInput digits="12" />
+      <TextInput digits={2} />
+      <TextInput digits={6} />
+      <TextInput digits={12} />
     ~~~
   `,
 }

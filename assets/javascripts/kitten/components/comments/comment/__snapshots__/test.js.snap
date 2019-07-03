@@ -2,28 +2,16 @@
 
 exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
 <div
-  data-radium={true}
-  style={
-    Object {
-      "display": "flex",
-    }
-  }
+  className="comment__StyledGrid-sc-8s8e85-2 iFjxIp"
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexDirection": "column",
-      }
-    }
+    className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
       className="marger__StyledMarger-q3lecu-0 gkLTfi"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
         tabIndex={null}
       >
         <img
@@ -39,28 +27,11 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       Custom date
     </span>
   </div>
-  <div
-    className="rmq-993edb07"
-    data-radium={true}
-    style={
-      Object {
-        "marginLeft": 20,
-        "position": "relative",
-      }
-    }
+  <span
+    className="comment__StyledCommentContainer-sc-8s8e85-3 clcmhP"
   >
     <div
-      data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#f6f6f6",
-          "borderColor": "#f6f6f6",
-          "borderWidth": 2,
-          "color": "#222",
-          "fontSize": 16,
-          "padding": 30,
-        }
-      }
+      className="comment__StyledCommentContent-sc-8s8e85-4 jVltHf"
     >
       <div
         className="marger__StyledMarger-q3lecu-0 gkLTfi"
@@ -75,48 +46,20 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         className="marger__StyledMarger-q3lecu-0 WSKaG"
       >
         <span
-          className="k-u-color-font1 k-u-size-default k-u-weight-light"
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 kYdcHB"
         >
           Custom text
         </span>
       </div>
       <span
-        className="rmq-e4f3f344"
-        data-radium={true}
-        style={
-          Object {
-            "borderColor": "transparent",
-            "borderRightColor": "#f6f6f6",
-            "borderStyle": "solid",
-            "borderWidth": 10,
-            "display": "block",
-            "height": 0,
-            "left": -20,
-            "position": "absolute",
-            "top": 20,
-            "width": 0,
-          }
-        }
-      />
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "@media (min-width: 640px){ .rmq-e4f3f344{top: 35px !important;}}",
-          }
-        }
+        className="comment__StyledCommentArrow-sc-8s8e85-1 kcYuFb"
       />
     </div>
     <div
       className="marger__StyledMarger-q3lecu-0 gWrqvV"
     >
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-bold"
-        data-radium={true}
-        style={
-          Object {
-            "paddingLeft": 30,
-          }
-        }
+        className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-5 lnpAtv"
       >
         <div>
           <a
@@ -142,41 +85,22 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         </div>
       </p>
     </div>
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "@media (min-width: 640px){ .rmq-993edb07{margin-left: 35px !important;}}",
-        }
-      }
-    />
-  </div>
+  </span>
 </div>
 `;
 
 exports[`<Comment /> should match its empty snapshot 1`] = `
 <div
-  data-radium={true}
-  style={
-    Object {
-      "display": "flex",
-    }
-  }
+  className="comment__StyledGrid-sc-8s8e85-2 iFjxIp"
 >
   <div
-    data-radium={true}
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexDirection": "column",
-      }
-    }
+    className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
       className="marger__StyledMarger-q3lecu-0 gkLTfi"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
         tabIndex={null}
       >
         <img
@@ -192,28 +116,11 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
       Custom date
     </span>
   </div>
-  <div
-    className="rmq-993edb07"
-    data-radium={true}
-    style={
-      Object {
-        "marginLeft": 20,
-        "position": "relative",
-      }
-    }
+  <span
+    className="comment__StyledCommentContainer-sc-8s8e85-3 clcmhP"
   >
     <div
-      data-radium={true}
-      style={
-        Object {
-          "backgroundColor": "#f6f6f6",
-          "borderColor": "#f6f6f6",
-          "borderWidth": 2,
-          "color": "#222",
-          "fontSize": 16,
-          "padding": 30,
-        }
-      }
+      className="comment__StyledCommentContent-sc-8s8e85-4 jVltHf"
     >
       <div
         className="marger__StyledMarger-q3lecu-0 gkLTfi"
@@ -228,45 +135,16 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         className="marger__StyledMarger-q3lecu-0 WSKaG"
       >
         <span
-          className="k-u-color-font1 k-u-size-default k-u-weight-light"
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 kYdcHB"
         >
           Custom text
         </span>
       </div>
       <span
-        className="rmq-e4f3f344"
-        data-radium={true}
-        style={
-          Object {
-            "borderColor": "transparent",
-            "borderRightColor": "#f6f6f6",
-            "borderStyle": "solid",
-            "borderWidth": 10,
-            "display": "block",
-            "height": 0,
-            "left": -20,
-            "position": "absolute",
-            "top": 20,
-            "width": 0,
-          }
-        }
-      />
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "@media (min-width: 640px){ .rmq-e4f3f344{top: 35px !important;}}",
-          }
-        }
+        className="comment__StyledCommentArrow-sc-8s8e85-1 kcYuFb"
       />
     </div>
     
-    <style
-      dangerouslySetInnerHTML={
-        Object {
-          "__html": "@media (min-width: 640px){ .rmq-993edb07{margin-left: 35px !important;}}",
-        }
-      }
-    />
-  </div>
+  </span>
 </div>
 `;
