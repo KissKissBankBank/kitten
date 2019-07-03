@@ -1,30 +1,127 @@
-import React, { Component, Fragment } from 'react'
-import classNames from 'classnames'
-import Radium, { StyleRoot, Style } from 'radium'
+import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Marger as MargerBase } from '../../../components/layout/marger'
+import { Marger } from '../../../components/layout/marger'
 import { CommentAvatar } from '../../../components/comments/comment-avatar'
-import { ButtonImage } from '../../../components/buttons/button-image'
-import { Button as ButtonBase } from '../../../components/buttons/button'
+import { Button } from '../../../components/buttons/button'
 import { Text } from '../../../components/typography/text'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
-const Marger = Radium(MargerBase)
-const Button = Radium(ButtonBase)
+const StyledGrid = styled.div`
+  display: flex;
+`
 
-export class CommentForm extends Component {
+const StyledGridCol = styled.div`
+  flex: 1;
+  margin-left: ${pxToRem(20)};
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    margin-left: ${pxToRem(35)};
+  }
+`
+const StyledInput = styled.div`
+  margin-bottom: ${pxToRem(0.5)};
+  display: flex;
+  position: relative;
+`
+
+const StyledTextarea = styled.textarea`
+  color: ${COLORS.font2};
+  ${TYPOGRAPHY.fontStyles.light};
+  width: 100%;
+  overflow-y: hidden;
+  resize: none;
+  box-sizing: border-box;
+  border-width: ${pxToRem(2)};
+  border-style: solid;
+  border-color: ${COLORS.line1};
+  color: ${COLORS.font1};
+  padding: ${pxToRem(30)};
+  font-size: ${stepToRem(-1)};
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    font-size: ${stepToRem(0)};
+  }
+
+  :focus {
+    outline: none;
+    border-color: ${COLORS.line2};
+    color: ${COLORS.font1};
+  }
+
+  ::placeholder {
+    color: ${COLORS.font2};
+  }
+
+  ${({ isDisabled }) =>
+    isDisabled &&
+    css`
+      border-color: ${COLORS.line1};
+      color: ${COLORS.font2};
+      background-color: ${COLORS.line1};
+    `}
+
+  ${({ error }) =>
+    error &&
+    css`
+      border-color: ${COLORS.error3};
+      color: ${COLORS.error3};
+    `}
+`
+
+const StyledArrow = styled.div`
+  position: absolute;
+  top: ${pxToRem(20)};
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: ${pxToRem(10)};
+  border-style: solid;
+  border-color: transparent;
+  border-right-color: ${COLORS.line1};
+  left: -${pxToRem(20)};
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    top: ${pxToRem(35)};
+  }
+
+  ${StyledTextarea}:focus + & {
+    border-right-color: ${COLORS.line2};
+  }
+
+  ${({ error }) =>
+    error &&
+    css`
+      border-right-color: ${COLORS.error3};
+    `}
+`
+
+const StyledArrowBefore = styled.span`
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin-top: -${pxToRem(10)};
+  border-width: ${pxToRem(10)};
+  border-style: solid;
+  border-color: transparent;
+  border-right-color: ${COLORS.background1};
+  left: -${pxToRem(7)};
+`
+
+export class CommentForm extends PureComponent {
   static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
-
     isDisabled: PropTypes.bool,
     placeholder: PropTypes.string.isRequired,
-
     commentButton: PropTypes.string,
     error: PropTypes.bool,
     errorMessage: PropTypes.string,
     onSubmit: PropTypes.func,
     defaultValue: PropTypes.string,
+    commentLabel: PropTypes.string,
+    ariaId: PropTypes.string,
   }
 
   static defaultProps = {
@@ -34,6 +131,8 @@ export class CommentForm extends Component {
     isDisabled: false,
     commentButton: '',
     defaultValue: '',
+    ariaId: '',
+    commentLabel: '',
   }
 
   constructor(props) {
@@ -78,12 +177,10 @@ export class CommentForm extends Component {
     const { avatarImgProps } = this.props
 
     return (
-      <StyleRoot>
-        <div style={styles.grid}>
-          <CommentAvatar avatarImgProps={avatarImgProps} />
-          {this.renderInput()}
-        </div>
-      </StyleRoot>
+      <StyledGrid>
+        <CommentAvatar avatarImgProps={avatarImgProps} />
+        {this.renderInput()}
+      </StyledGrid>
     )
   }
 
@@ -92,72 +189,36 @@ export class CommentForm extends Component {
       isDisabled,
       placeholder,
       defaultValue,
+      commentLabel,
+      ariaId,
       error,
       errorMessage,
     } = this.props
 
-    const styleInput = [
-      styles.input.textarea,
-      error && styles.input.textarea.error,
-      this.state.isFocused && styles.input.textarea.focus,
-      isDisabled && styles.input.textarea.isDisabled,
-      { height: this.state.height },
-    ]
-
-    const styleArrow = [
-      styles.input.arrow,
-      error && styles.input.arrow.error,
-      this.state.isFocused && styles.input.arrow.focus,
-    ]
-
-    const textareaClassNames = classNames(
-      'k-CommentForm__input',
-      'k-u-weight-light',
-    )
-
-    // We are forced to duplicate <Style />, to avoid having space between the class and the pseudo-element.
-    // https://github.com/FormidableLabs/radium/issues/243
     return (
-      <Fragment>
-        <Style
-          scopeSelector=".k-CommentForm__input::-webkit-input-placeholder"
-          rules={{ color: COLORS.font2 }}
-        />
-        <Style
-          scopeSelector=".k-CommentForm__input:-moz-placeholder"
-          rules={{ color: COLORS.font2 }}
-        />
-        <Style
-          scopeSelector=".k-CommentForm__input::-moz-placeholder"
-          rules={{ color: COLORS.font2 }}
-        />
-        <Style
-          scopeSelector=".k-CommentForm__input:-ms-input-placeholder"
-          rules={{ color: COLORS.font2 }}
-        />
-
-        <div style={styles.grid.col}>
-          <Marger bottom=".5" style={styles.input}>
-            <textarea
-              className={textareaClassNames}
-              style={styleInput}
-              defaultValue={defaultValue}
-              key="comment-form"
-              disabled={isDisabled}
-              placeholder={placeholder}
-              onFocus={this.handleFocus}
-              onBlur={this.handleBlur}
-              onChange={this.handleChange}
-              rows="1"
-            />
-            <span style={styleArrow}>
-              <span style={styles.input.arrow.before} />
-            </span>
-          </Marger>
-          {this.renderError()}
-          {this.renderButton()}
-        </div>
-      </Fragment>
+      <StyledGridCol>
+        <StyledInput>
+          <StyledTextarea
+            aria-label={commentLabel}
+            aria-describedby={ariaId}
+            aria-invalid="false"
+            aria-required="true"
+            defaultValue={defaultValue}
+            key="comment-form"
+            disabled={isDisabled}
+            placeholder={placeholder}
+            onFocus={this.handleFocus}
+            onBlur={this.handleBlur}
+            onChange={this.handleChange}
+            rows="1"
+          />
+          <StyledArrow>
+            <StyledArrowBefore />
+          </StyledArrow>
+        </StyledInput>
+        {this.renderError()}
+        {this.renderButton()}
+      </StyledGridCol>
     )
   }
 
@@ -172,7 +233,7 @@ export class CommentForm extends Component {
           type="button"
           modifier="helium"
           onClick={this.handleSubmit}
-          style={styles.button.left}
+          className="k-u-margin-right-single"
         >
           {commentButton}
         </Button>
@@ -181,105 +242,16 @@ export class CommentForm extends Component {
   }
 
   renderError() {
-    const { error, errorMessage } = this.props
+    const { error, errorMessage, ariaId } = this.props
 
     if (!error) return
 
     return (
       <Marger top=".5">
-        <Text color="error" size="micro" weight="regular">
+        <Text id={ariaId} color="error" size="micro" weight="regular">
           {errorMessage}
         </Text>
       </Marger>
     )
   }
-}
-
-const styles = {
-  grid: {
-    display: 'flex',
-    col: {
-      flex: 1,
-      marginLeft: 20,
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        marginLeft: 35,
-      },
-    },
-  },
-
-  input: {
-    display: 'flex',
-    position: 'relative',
-
-    textarea: {
-      width: '100%',
-      overflowY: 'hidden',
-      resize: 'none',
-      boxSizing: 'border-box',
-      borderWidth: 2,
-      borderStyle: 'solid',
-      borderColor: COLORS.line1,
-      color: COLORS.font1,
-      padding: 30,
-      fontSize: 14,
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        fontSize: 16,
-      },
-      focus: {
-        outline: 'none',
-        borderColor: COLORS.line2,
-        color: COLORS.font1,
-      },
-
-      isDisabled: {
-        borderColor: COLORS.line1,
-        color: COLORS.font2,
-        backgroundColor: COLORS.line1,
-      },
-      error: {
-        borderColor: COLORS.error3,
-        color: COLORS.error3,
-      },
-    },
-
-    arrow: {
-      position: 'absolute',
-      top: 20,
-      display: 'block',
-      width: 0,
-      height: 0,
-      borderWidth: 10,
-      borderStyle: 'solid',
-      borderColor: 'transparent',
-      borderRightColor: COLORS.line1,
-      left: -20,
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        top: 35,
-      },
-
-      focus: {
-        borderRightColor: COLORS.line2,
-      },
-      error: {
-        borderRightColor: COLORS.error3,
-      },
-      before: {
-        position: 'absolute',
-        width: 0,
-        height: 0,
-        marginTop: -10,
-        borderWidth: 10,
-        borderStyle: 'solid',
-        borderColor: 'transparent',
-        borderRightColor: 'white',
-        left: -7,
-      },
-    },
-  },
-
-  button: {
-    left: {
-      marginRight: 10,
-    },
-  },
 }
