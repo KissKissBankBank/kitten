@@ -59,8 +59,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       className="marger__StyledMarger-q3lecu-0 gWrqvV"
     >
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-5 lnpAtv"
-        margin={false}
+        className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-5 kLqfi"
       >
         <div>
           <a
