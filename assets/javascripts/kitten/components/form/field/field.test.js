@@ -5,6 +5,7 @@ import {
   FieldPasswordExample,
   FieldRadioButtonSetExample,
   FieldSelectExample,
+  FieldAutocompleteExample,
 } from './field.examples'
 
 describe('<Field />', () => {
@@ -139,6 +140,25 @@ describe('<Field />', () => {
               { value: 'b', label: 'Option B' },
               { value: 'c', label: 'Option C' },
             ]}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with <Field.Autocomplete />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <FieldAutocompleteExample
+            id="autocomplete"
+            label="Label"
+            placeholder="Select…"
+            items={['Foo', 'Bar']}
           />,
         )
         .toJSON()
