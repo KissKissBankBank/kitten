@@ -56,7 +56,6 @@ const StyledCommentContent = styled.div`
 
 const StyledBottomNotes = styled(Text)`
   padding-left: ${pxToRem(30)};
-  margin-top: 0;
 `
 
 export class Comment extends PureComponent {
@@ -114,6 +113,7 @@ export class Comment extends PureComponent {
                 color="font1"
                 size="micro"
                 weight="bold"
+                margin={false}
               >
                 {bottomNotes}
               </StyledBottomNotes>
