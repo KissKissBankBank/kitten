@@ -130,3 +130,31 @@ export const FieldSelectExample = ({
     />
   </FieldBase>
 )
+
+export const FieldAutocompleteExample = ({
+  id,
+  label,
+  tooltip,
+  tooltipId,
+  placeholder,
+  error,
+  errorMessage,
+  items,
+}) => (
+  <FieldBase
+    id={id}
+    label={label}
+    tooltip={tooltip}
+    tooltipId={tooltipId}
+    error={error}
+    errorMessage={errorMessage}
+  >
+    <Field.Autocomplete
+      id={id}
+      name="field"
+      placeholder={placeholder}
+      error={error}
+      items={items}
+    />
+  </FieldBase>
+)
