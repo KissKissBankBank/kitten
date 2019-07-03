@@ -50,8 +50,8 @@ const CommentPage = props => (
               src: 'https://placehold.it/80x80/caf4fe/caf4fe',
               alt: '',
             }}
-            text="Youpi Youpi !!!voila les bons jus qui arrivent! Pleins de bonheur de partage et de revitalisation ! Rose"
-            ownerName="rose-jourdan"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            ownerName="At vero"
             commentDate="20 jours"
             bottomNotes={<ActionLinks children="Supprimer" />}
           />

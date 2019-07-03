@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `CommentPage` example.
 - Fix: Remove `isRequired` of the `ownerName` props on `Comment` component.
 - Fix: Update
   `Comment`,
