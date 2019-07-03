@@ -11,7 +11,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       className="marger__StyledMarger-q3lecu-0 gkLTfi"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 chbnBA"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
         tabIndex={null}
       >
         <img
@@ -100,7 +100,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
       className="marger__StyledMarger-q3lecu-0 gkLTfi"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 chbnBA"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
         tabIndex={null}
       >
         <img
