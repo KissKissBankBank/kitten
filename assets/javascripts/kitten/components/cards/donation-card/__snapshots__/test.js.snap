@@ -2,26 +2,13 @@
 
 exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
-  data-radium={true}
-  style={
-    Object {
-      "borderColor": "#eee",
-      "borderStyle": "solid",
-      "borderWidth": 2,
-    }
-  }
+  className="donation-card__StyledCard-sc-19h76fz-0 cKKhfB"
 >
   <div
     className="marger__StyledMarger-q3lecu-0 dhVuZS"
   >
     <div
-      className="k-Grid"
-      style={
-        Object {
-          "paddingLeft": 20,
-          "paddingRight": 20,
-        }
-      }
+      className="k-Grid donation-card__StyledGrid-sc-19h76fz-1 glvgJj"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--offset-1@m k-Grid__col--8@l k-Grid__col--offset-2@l"
@@ -30,13 +17,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 jgfcQX"
         >
           <h2
-            className="k-Title k-Title--quaternary k-Title--withoutMargin"
-            style={
-              Object {
-                "color": "#222",
-                "textAlign": "center",
-              }
-            }
+            className="k-Title donation-card__StyledTitle-sc-19h76fz-2 dtGEFG k-Title--primary k-Title--withoutMargin"
           >
             Custom title mount
           </h2>
@@ -45,7 +26,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 fSrmLM"
         >
           <span
-            className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dwjxAa"
+            className="donation-card__StyledHorizontalStroke-sc-19h76fz-3 jVTnEi horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dKtqdq"
           />
         </div>
         <form

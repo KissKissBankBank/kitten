@@ -1,126 +1,125 @@
-import React, { Component, Fragment } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import React, { PureComponent } from 'react'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
 import { CommentAvatar } from '../../../components/comments/comment-avatar'
-import { Text as TextBase } from '../../../components/typography/text'
+import { Text } from '../../../components/typography/text'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { mediaQueries } from '../../../hoc/media-queries'
 import COLORS from '../../../constants/colors-config'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
-const Text = Radium(TextBase)
-const CommentContent = ({ text, ownerName, viewportIsMobile, style }) => (
-  <StyleRoot style={style}>
-    <Marger bottom="1">
-      <Text color="font1" size="tiny" weight="regular">
-        {ownerName}
-      </Text>
-    </Marger>
-    <Marger top="1">
-      <Text
-        color="font1"
-        size={viewportIsMobile ? 'tiny' : 'default'}
-        weight="light"
-      >
-        {text}
-      </Text>
-    </Marger>
-    <span style={styles.comment.arrow} />
-  </StyleRoot>
-)
+const StyledContentText = styled(Text)`
+  font-size: ${stepToRem(-1)};
 
-export const CommentComponent = ({
-  text,
-  ownerName,
-  avatarImgProps,
-  commentDate,
-  viewportIsMobile,
-  bottomNotes,
-}) => (
-  <Fragment>
-    <div style={styles.grid}>
-      <CommentAvatar
-        avatarImgProps={avatarImgProps}
-        commentDate={commentDate}
-      />
-      <StyleRoot style={styles.commentContent}>
-        <CommentContent
-          style={styles.comment}
-          text={text}
-          ownerName={ownerName}
-          viewportIsMobile={viewportIsMobile}
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    font-size: ${stepToRem(0)};
+  }
+`
+
+const StyledCommentArrow = styled.span`
+  position: absolute;
+  top: ${pxToRem(20)};
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: ${pxToRem(10)};
+  border-style: solid;
+  border-color: transparent;
+  border-right-color: ${COLORS.background3};
+  left: -${pxToRem(20)};
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    top: ${pxToRem(35)};
+  }
+`
+
+const StyledGrid = styled.div`
+  display: flex;
+`
+
+const StyledCommentContainer = styled.span`
+  position: relative;
+  margin-left: ${pxToRem(20)};
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    margin-left: ${pxToRem(35)},
+  },
+`
+
+const StyledCommentContent = styled.div`
+  border-width: ${pxToRem(2)};
+  background-color: ${COLORS.background3};
+  border-color: ${COLORS.background3};
+  color: ${COLORS.font1};
+  padding: ${pxToRem(30)};
+  font-size: ${stepToRem(0)};
+`
+
+const StyledBottomNotes = styled(Text)`
+  padding-left: ${pxToRem(30)};
+`
+
+export class Comment extends PureComponent {
+  static propTypes = {
+    text: PropTypes.node.isRequired,
+    ownerName: PropTypes.string,
+    avatarImgProps: PropTypes.object.isRequired,
+    commentDate: PropTypes.string.isRequired,
+    bottomNotes: PropTypes.node,
+  }
+
+  static defaultProps = {
+    bottomNotes: '',
+    ownerName: '',
+  }
+
+  render() {
+    const {
+      text,
+      ownerName,
+      avatarImgProps,
+      commentDate,
+      bottomNotes,
+      ...props
+    } = this.props
+
+    return (
+      <StyledGrid>
+        <CommentAvatar
+          avatarImgProps={avatarImgProps}
+          commentDate={commentDate}
         />
-        {bottomNotes && (
-          <Marger top=".5">
-            <Text
-              style={styles.bottomNotes}
-              tag="p"
-              color="font1"
-              size="micro"
-              weight="bold"
-            >
-              {bottomNotes}
-            </Text>
-          </Marger>
-        )}
-      </StyleRoot>
-    </div>
-  </Fragment>
-)
+        <StyledCommentContainer>
+          <StyledCommentContent>
+            {ownerName && (
+              <Marger bottom="1">
+                <Text color="font1" size="tiny" weight="regular">
+                  {ownerName}
+                </Text>
+              </Marger>
+            )}
 
-CommentComponent.propTypes = {
-  text: PropTypes.node.isRequired,
-  ownerName: PropTypes.string.isRequired,
-  avatarImgProps: PropTypes.object.isRequired,
-  commentDate: PropTypes.string.isRequired,
-  viewportIsMobile: PropTypes.bool.isRequired,
-  bottomNotes: PropTypes.node,
+            <Marger top={ownerName ? 1 : null}>
+              <StyledContentText color="font1" weight="light">
+                {text}
+              </StyledContentText>
+            </Marger>
+            <StyledCommentArrow />
+          </StyledCommentContent>
+
+          {bottomNotes && (
+            <Marger top=".5">
+              <StyledBottomNotes
+                tag="p"
+                color="font1"
+                size="micro"
+                weight="bold"
+              >
+                {bottomNotes}
+              </StyledBottomNotes>
+            </Marger>
+          )}
+        </StyledCommentContainer>
+      </StyledGrid>
+    )
+  }
 }
-
-CommentComponent.defaultProps = {
-  bottomNotes: '',
-}
-
-const styles = {
-  grid: {
-    display: 'flex',
-  },
-  commentContent: {
-    position: 'relative',
-    marginLeft: 20,
-    [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-      marginLeft: 35,
-    },
-  },
-  bottomNotes: {
-    paddingLeft: 30,
-  },
-  comment: {
-    borderWidth: 2,
-    backgroundColor: COLORS.background3,
-    borderColor: COLORS.background3,
-    color: COLORS.font1,
-    padding: 30,
-    fontSize: 16,
-
-    arrow: {
-      position: 'absolute',
-      top: 20,
-      display: 'block',
-      width: 0,
-      height: 0,
-      borderWidth: 10,
-      borderStyle: 'solid',
-      borderColor: 'transparent',
-      borderRightColor: COLORS.background3,
-      left: -20,
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        top: 35,
-      },
-    },
-  },
-}
-
-export const Comment = mediaQueries(Radium(CommentComponent), {
-  viewportIsMobile: true,
-})
