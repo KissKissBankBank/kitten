@@ -11,7 +11,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       className="marger__StyledMarger-q3lecu-0 gkLTfi"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 chbnBA"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
         tabIndex={null}
       >
         <img
@@ -29,6 +29,10 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
       className="comment-form__StyledInput-sc-1yidca9-2 dxkHAQ"
     >
       <textarea
+        aria-describedby=""
+        aria-invalid="false"
+        aria-label=""
+        aria-required="true"
         className="comment-form__StyledTextarea-sc-1yidca9-3 GUTNa"
         defaultValue=""
         disabled={false}
@@ -51,6 +55,7 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     >
       <span
         className="k-u-color-error k-u-size-micro k-u-weight-regular"
+        id=""
       >
         Cum sociis natoque penatibus et magnis
       </span>

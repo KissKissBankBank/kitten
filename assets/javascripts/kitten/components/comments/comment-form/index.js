@@ -113,16 +113,14 @@ const StyledArrowBefore = styled.span`
 export class CommentForm extends PureComponent {
   static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
-
     isDisabled: PropTypes.bool,
     placeholder: PropTypes.string.isRequired,
-
     commentButton: PropTypes.string,
     error: PropTypes.bool,
     errorMessage: PropTypes.string,
     onSubmit: PropTypes.func,
     defaultValue: PropTypes.string,
-    label: PropTypes.string,
+    commentLabel: PropTypes.string,
     ariaId: PropTypes.string,
   }
 
@@ -134,7 +132,7 @@ export class CommentForm extends PureComponent {
     commentButton: '',
     defaultValue: '',
     ariaId: '',
-    label: '',
+    commentLabel: '',
   }
 
   constructor(props) {
@@ -191,7 +189,7 @@ export class CommentForm extends PureComponent {
       isDisabled,
       placeholder,
       defaultValue,
-      label,
+      commentLabel,
       ariaId,
       error,
       errorMessage,
@@ -201,8 +199,10 @@ export class CommentForm extends PureComponent {
       <StyledGridCol>
         <StyledInput>
           <StyledTextarea
-            aria-label={label}
+            aria-label={commentLabel}
             aria-describedby={ariaId}
+            aria-invalid="false"
+            aria-required="true"
             defaultValue={defaultValue}
             key="comment-form"
             disabled={isDisabled}
