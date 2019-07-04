@@ -5,17 +5,17 @@ exports[`<IconContainer/> should match snapshot when we add an icon description 
   className="icon-container__StyledContainer-x0wgk3-0 bKpIvW styled__StyledContainer-z412rl-0 eTfKiw"
   color="#fff"
 >
+  <span
+    className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+  >
+    checked icon circle
+  </span>
   Foobar
   <div
     className="icon-container__IconWrapper-x0wgk3-1 eIKnIR"
     marginHeight={12.5}
     marginWidth={12.5}
   >
-    <span
-      className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
-    >
-      checked icon circle
-    </span>
     <svg
       aria-hidden={true}
       height={25}
