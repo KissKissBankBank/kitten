@@ -70,6 +70,7 @@ storiesOf('Comments/Comment', module)
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
             )}
             ownerName={text('Owner name', 'Lorem ipsum')}
+            bottomNotes={text('Bottom notes', 'Supprimer')}
           />
         </GridCol>
       </Grid>

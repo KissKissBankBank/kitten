@@ -31,14 +31,16 @@ export class CommentAvatar extends PureComponent {
   static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string,
+    badge: PropTypes.node,
   }
 
   static defaultProps = {
     commentDate: '',
+    badge: '',
   }
 
   render() {
-    const { avatarImgProps } = this.props
+    const { avatarImgProps, badge } = this.props
 
     return (
       <StyledAvatar>
@@ -47,6 +49,7 @@ export class CommentAvatar extends PureComponent {
             tag="span"
             withoutPointerEvents
             img={avatarImgProps}
+            badge={badge}
           />
         </Marger>
 
