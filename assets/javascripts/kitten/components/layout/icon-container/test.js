@@ -49,4 +49,18 @@ describe('<IconContainer/>', () => {
       .toJSON()
     expect(component).toMatchSnapshot()
   })
+
+  it('should match snapshot when we add an icon description', () => {
+    const component = renderer
+      .create(
+        <IconContainer
+          iconDescription="checked icon circle"
+          icon={<CheckedCircleIcon />}
+        >
+          Foobar
+        </IconContainer>,
+      )
+      .toJSON()
+    expect(component).toMatchSnapshot()
+  })
 })

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { Container } from '../../grid/container'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { VisuallyHidden } from '../../accessibility/visually-hidden'
 
 const StyledContainer = styled(Container)`
   position: relative;
@@ -60,6 +61,7 @@ export const IconContainer = ({
   iconHeight,
   position,
   className,
+  iconDescription,
 }) => {
   const height = iconHeight || iconWidth
   return (
@@ -75,11 +77,12 @@ export const IconContainer = ({
         marginHeight={height / 2}
         marginWidth={iconWidth / 2}
         position={position}
-        aria-hidden="true"
       >
+        {iconDescription && <VisuallyHidden>{iconDescription}</VisuallyHidden>}
         {React.cloneElement(icon, {
           width: iconWidth,
           height,
+          ['aria-hidden']: true,
         })}
       </IconWrapper>
     </StyledContainer>
@@ -88,6 +91,7 @@ export const IconContainer = ({
 
 IconContainer.propTypes = {
   icon: PropTypes.node.isRequired,
+  iconDescription: PropTypes.string,
   color: PropTypes.string,
   iconWidth: PropTypes.number,
   iconHeight: PropTypes.number,
@@ -97,6 +101,7 @@ IconContainer.propTypes = {
 IconContainer.defaultProps = {
   iconWidth: 25,
   color: '#fff',
+  iconDescription: undefined,
   iconHeight: undefined,
   position: 'top',
 }

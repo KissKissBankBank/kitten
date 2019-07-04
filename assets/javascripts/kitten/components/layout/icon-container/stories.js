@@ -45,6 +45,7 @@ storiesOf('Layout/IconContainer', module)
           )}
           color={color('Color', COLORS.background3)}
           iconWidth={number('Width', 25)}
+          iconDescription={text('IconDescription')}
           icon={<CheckedCircleIcon circleColor="#61d079" checkedColor="#fff" />}
         >
           {text(
