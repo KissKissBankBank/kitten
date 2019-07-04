@@ -19,10 +19,7 @@ storiesOf('TextCopy', module)
     return (
       <StoryContainer>
         <TextCopy textToCopy={text('Other text to Copy', undefined)}>
-          {text(
-            'Text',
-            'My tex dklfj sfskl jsdlk jsdl kjsdflk jsdf slk fjsdlk jsd lskjf sl ksjd sdlf kjsdf lsdkjf sdlk jsdlk jsflksdj lkdsjf slkfj flksdj lsdkfj st',
-          )}
+          {text('Text', 'My text to copy on click')}
         </TextCopy>
       </StoryContainer>
     )
