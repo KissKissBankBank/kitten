@@ -20,7 +20,7 @@ storiesOf('TextCopy', module)
       <StoryContainer>
         <TextCopy
           textToCopy={text('Other text to Copy', undefined)}
-          alertMessage={('Alert Message', 'Copied link !')}
+          alertMessage={text('Alert Message', 'Copied link !')}
         >
           {text('Text', 'My text to copy on click')}
         </TextCopy>
