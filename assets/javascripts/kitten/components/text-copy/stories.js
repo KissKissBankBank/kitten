@@ -18,7 +18,10 @@ storiesOf('TextCopy', module)
   .add('default', () => {
     return (
       <StoryContainer>
-        <TextCopy textToCopy={text('Other text to Copy', undefined)}>
+        <TextCopy
+          textToCopy={text('Other text to Copy', undefined)}
+          alertMessage={('Alert Message', 'Copied link !')}
+        >
           {text('Text', 'My text to copy on click')}
         </TextCopy>
       </StoryContainer>

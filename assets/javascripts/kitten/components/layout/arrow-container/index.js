@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 
 const Container = styled.div`
   position: relative;
-  padding: ${pxToRem(20)};
+  padding: ${({ padding }) => pxToRem(padding)};
   background-color: ${({ color }) => color};
 `
 
@@ -61,9 +61,10 @@ export const ArrowContainer = ({
   distance,
   position,
   centered,
+  padding,
   ...props
 }) => (
-  <Container color={color} {...props}>
+  <Container color={color} padding={padding} {...props}>
     {children}
     <Arrow
       color={color}
@@ -81,6 +82,7 @@ ArrowContainer.propTypes = {
   position: PropTypes.string,
   distance: PropTypes.number,
   centered: PropTypes.bool,
+  padding: PropTypes.number,
 }
 
 ArrowContainer.defaultProps = {
@@ -88,5 +90,6 @@ ArrowContainer.defaultProps = {
   size: 10,
   position: 'left',
   distance: 20,
+  padding: 20,
   centered: false,
 }
