@@ -6,6 +6,7 @@ import { pxToRem } from '../../helpers/utils/typography'
 import { CopyIcon } from '../icons/copy-icon'
 import { ArrowContainer } from '../layout/arrow-container'
 import { Text } from '../..'
+import { VisuallyHidden } from '../accessibility/visually-hidden'
 
 const fadeIn = keyframes`
   0% {
@@ -46,7 +47,12 @@ const StyledArrowContainer = styled(ArrowContainer)`
   animation: 0.5s ${fadeIn} ease-out;
 `
 
-export const TextCopy = ({ children, textToCopy, alertMessage }) => {
+export const TextCopy = ({
+  children,
+  textToCopy,
+  alertMessage,
+  description,
+}) => {
   const [shouldShowMessage, isMessageShown] = useState(false)
   const textRef = useRef(null)
   const copyText = useCallback(() => {
@@ -72,6 +78,7 @@ export const TextCopy = ({ children, textToCopy, alertMessage }) => {
   return (
     <>
       <Wrapper onClick={copyText}>
+        {description && <VisuallyHidden>{description}</VisuallyHidden>}
         <StyledText weight="light" size="default">
           <span ref={textRef}>{children}</span>
         </StyledText>
@@ -98,8 +105,11 @@ export const TextCopy = ({ children, textToCopy, alertMessage }) => {
 TextCopy.propTypes = {
   alertMessage: PropTypes.string,
   textToCopy: PropTypes.string,
+  description: PropTypes.string,
 }
 
 TextCopy.defaultProps = {
+  alertMessage: undefined,
   textToCopy: undefined,
+  description: undefined,
 }
