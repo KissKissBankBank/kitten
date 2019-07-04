@@ -72,13 +72,13 @@ export const IconContainer = ({
       halfWidth={iconWidth / 2}
       halfHeight={height / 2}
     >
+      {iconDescription && <VisuallyHidden>{iconDescription}</VisuallyHidden>}
       {children}
       <IconWrapper
         marginHeight={height / 2}
         marginWidth={iconWidth / 2}
         position={position}
       >
-        {iconDescription && <VisuallyHidden>{iconDescription}</VisuallyHidden>}
         {React.cloneElement(icon, {
           width: iconWidth,
           height,
