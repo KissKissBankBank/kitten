@@ -4,7 +4,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Autocomplete` component.
+- Feature: Add `Field.Autocomplete` component.
+- Fix: Remove `isRequired` of the `ownerName` props on `Comment` component.
+- Fix: Update
+  `Comment`,
+  `CommentForm`,
+  `CommentAvatar` with `styled-components`.
+- Fix: Update `DonationCard` with `styled-components`.
+- Fix: Update
+  `TextInput`,
+  `TextInputWithButton`,
+  `TextInputWithUnit`,
+  `TextInputWithUnitForm`,
+  `TextInputWithLimit` with `styled-components`.
 - Fix: Use fraction for `imageContainerRatio` in `SimpleCard`.
+
+## [2.12.0] - 2019-06-26
+
+Feature:
+- Add `textAlign` and `withTitleStroke` props to VerticalCard
+  component.
 
 ## [2.11.0] - 2019-06-20
 

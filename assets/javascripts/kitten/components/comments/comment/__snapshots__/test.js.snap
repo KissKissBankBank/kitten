@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
+<div
+  className="comment__StyledGrid-sc-8s8e85-2 iFjxIp"
+>
+  <div
+    className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
+  >
+    <div
+      className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    >
+      <span
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
+        tabIndex={null}
+      >
+        <img
+          alt="Image alt"
+          className="k-ButtonImage__img"
+          src="#image"
+        />
+      </span>
+    </div>
+    <span
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+    >
+      Custom date
+    </span>
+  </div>
+  <span
+    className="comment__StyledCommentContainer-sc-8s8e85-3 clcmhP"
+  >
+    <div
+      className="comment__StyledCommentContent-sc-8s8e85-4 jVltHf"
+    >
+      <div
+        className="marger__StyledMarger-q3lecu-0 gkLTfi"
+      >
+        <span
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+        >
+          Custom name
+        </span>
+      </div>
+      <div
+        className="marger__StyledMarger-q3lecu-0 WSKaG"
+      >
+        <span
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 kYdcHB"
+        >
+          Custom text
+        </span>
+      </div>
+      <span
+        className="comment__StyledCommentArrow-sc-8s8e85-1 kcYuFb"
+      />
+    </div>
+    <div
+      className="marger__StyledMarger-q3lecu-0 gWrqvV"
+    >
+      <p
+        className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-5 kLqfi"
+      >
+        <div>
+          <a
+            href="#"
+            style={
+              Object {
+                "color": "#000",
+              }
+            }
+          >
+            Delete this comment
+          </a>
+          <a
+            href="#"
+            style={
+              Object {
+                "color": "#000",
+              }
+            }
+          >
+            Notify abuse
+          </a>
+        </div>
+      </p>
+    </div>
+  </span>
+</div>
+`;
+
+exports[`<Comment /> should match its empty snapshot 1`] = `
+<div
+  className="comment__StyledGrid-sc-8s8e85-2 iFjxIp"
+>
+  <div
+    className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
+  >
+    <div
+      className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    >
+      <span
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
+        tabIndex={null}
+      >
+        <img
+          alt="Image alt"
+          className="k-ButtonImage__img"
+          src="#image"
+        />
+      </span>
+    </div>
+    <span
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+    >
+      Custom date
+    </span>
+  </div>
+  <span
+    className="comment__StyledCommentContainer-sc-8s8e85-3 clcmhP"
+  >
+    <div
+      className="comment__StyledCommentContent-sc-8s8e85-4 jVltHf"
+    >
+      <div
+        className="marger__StyledMarger-q3lecu-0 gkLTfi"
+      >
+        <span
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+        >
+          Custom name
+        </span>
+      </div>
+      <div
+        className="marger__StyledMarger-q3lecu-0 WSKaG"
+      >
+        <span
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 kYdcHB"
+        >
+          Custom text
+        </span>
+      </div>
+      <span
+        className="comment__StyledCommentArrow-sc-8s8e85-1 kcYuFb"
+      />
+    </div>
+    
+  </span>
+</div>
+`;
