@@ -43,6 +43,7 @@ import { TypologyTagIcon } from './typology-tag-icon'
 import { VisaIcon } from './visa-icon'
 import { WarningCircleIcon } from './warning-circle-icon'
 import { YoutubeIcon } from './youtube-icon'
+import { CopyIcon } from './copy-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -137,6 +138,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<StarIcon />} />
         <IconContainer children={<TypologyTagIcon />} />
         <IconContainer children={<WarningCircleIcon />} />
+        <IconContainer children={<CopyIcon />} />
       </Group>
     </Container>
   )
