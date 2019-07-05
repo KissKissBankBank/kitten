@@ -174,11 +174,14 @@ export class CommentForm extends PureComponent {
   }
 
   render() {
-    const { avatarImgProps } = this.props
+    const { avatarImgProps, avatarBadge } = this.props
 
     return (
       <StyledGrid>
-        <CommentAvatar avatarImgProps={avatarImgProps} />
+        <CommentAvatar
+          avatarBadge={avatarBadge}
+          avatarImgProps={avatarImgProps}
+        />
         {this.renderInput()}
       </StyledGrid>
     )
