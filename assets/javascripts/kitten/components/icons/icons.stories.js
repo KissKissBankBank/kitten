@@ -44,6 +44,8 @@ import { VisaIcon } from './visa-icon'
 import { WarningCircleIcon } from './warning-circle-icon'
 import { YoutubeIcon } from './youtube-icon'
 import { CopyIcon } from './copy-icon'
+import { MessengerIcon } from './messenger-icon'
+import { WhatsappIcon } from './whatsapp-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -108,6 +110,8 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<LinkedinIcon />} />
         <IconContainer children={<TwitterIcon />} />
         <IconContainer children={<YoutubeIcon />} />
+        <IconContainer children={<MessengerIcon />} />
+        <IconContainer children={<WhatsappIcon />} />
       </Group>
       <Group title="Others">
         <IconContainer children={<BurgerIcon />} />
