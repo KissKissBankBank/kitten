@@ -19,6 +19,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   `TextInputWithUnit`,
   `TextInputWithUnitForm`,
   `TextInputWithLimit` with `styled-components`.
+- Fix: Use fraction for `imageContainerRatio` in `SimpleCard`.
 
 ## [2.12.0] - 2019-06-26
 

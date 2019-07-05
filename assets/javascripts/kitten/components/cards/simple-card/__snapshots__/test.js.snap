@@ -16,6 +16,22 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 </div>
 `;
 
+exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`] = `
+<div
+  className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
+>
+  <div
+    className="k-Card__imageContainer image__StyledImageContainer-sc-8olw7b-2 hQoFnZ marger__StyledMarger-q3lecu-0 jgfcQX"
+  >
+    <img
+      alt=""
+      className="k-Card__image image__StyledImage-sc-8olw7b-0 KMqEW"
+      src=""
+    />
+  </div>
+</div>
+`;
+
 exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot 1`] = `
 <div
   className="k-Card k-Card--withoutBoxShadowOnHover simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov"
