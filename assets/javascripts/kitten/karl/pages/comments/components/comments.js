@@ -7,7 +7,6 @@ import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
 import { Text } from '../../../../components/typography/text'
 import { stepToRem } from '../../../../helpers/utils/typography'
-import { CheckedCircleIcon } from '../../../../components/icons/checked-circle-icon'
 
 const ActionLinks = styled(({ children, className }) => {
   return (
@@ -30,10 +29,6 @@ const ActionLinks = styled(({ children, className }) => {
   font-size: ${stepToRem(-2)};
 `
 
-const Badge = styled(({ children, className }) => {
-  return <CheckedCircleIcon />
-})
-
 const CommentsPage = props => (
   <Container>
     <Grid>
@@ -46,7 +41,6 @@ const CommentsPage = props => (
             }}
             placeholder="Laisser un commentaire sur le projet"
             commentButton="Commenter"
-            badge={<Badge />}
           />
         </Marger>
 

@@ -6,6 +6,7 @@ import { ButtonImage } from '../../../components/buttons/button-image'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
+import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 
 const StyledAvatar = styled.div`
   display: flex;
@@ -31,16 +32,14 @@ export class CommentAvatar extends PureComponent {
   static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string,
-    badge: PropTypes.node,
   }
 
   static defaultProps = {
     commentDate: '',
-    badge: '',
   }
 
   render() {
-    const { avatarImgProps, badge } = this.props
+    const { avatarImgProps } = this.props
 
     return (
       <StyledAvatar>
@@ -49,13 +48,17 @@ export class CommentAvatar extends PureComponent {
             tag="span"
             withoutPointerEvents
             img={avatarImgProps}
-            badge={badge}
+            badge={this.renderBadge()}
           />
         </Marger>
 
         {this.renderDate()}
       </StyledAvatar>
     )
+  }
+
+  renderBadge() {
+    return <CheckedCircleIcon />
   }
 
   renderDate() {
