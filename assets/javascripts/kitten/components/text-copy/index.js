@@ -91,6 +91,7 @@ export const TextCopy = ({
             position="top"
             padding={10}
             centered
+            role="alert"
           >
             <Text color="background1" weight="light" size="micro">
               {alertMessage}
