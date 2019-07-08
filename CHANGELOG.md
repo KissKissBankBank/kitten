@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Use `domElementHelper` to check if DOM is present, in `Details`.
+
 ## [2.13.0] - 2019-07-08
 
 Features:
