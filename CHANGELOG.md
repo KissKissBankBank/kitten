@@ -5,22 +5,36 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `avatarBadge` props on `Comment` and `CommentForm`.
-- Feature: Add `TextCopy` component.
-- Feature: Add `Autocomplete` component.
-- Feature: Add `Field.Autocomplete` component.
-- Fix: Remove `isRequired` of the `ownerName` props on `Comment` component.
-- Fix: Update
+
+## [2.13.1] - 2019-07-08
+
+Fix:
+- Use `domElementHelper` to check if DOM is present, in `Details`.
+
+## [2.13.0] - 2019-07-08
+
+Features:
+- Add `MessengerIcon` and `WhatsAppIcon`.
+- Add `containerProps`, `listProps` to `IconList` component.
+- Add `TextCopy` component.
+- Add `Autocomplete` component.
+- Add `Field.Autocomplete` component.
+- Add `IconContainer` component.
+
+Fixes:
+- Remove `isRequired` of the `ownerName` props on `Comment` component.
+- Update
   `Comment`,
   `CommentForm`,
   `CommentAvatar` with `styled-components`.
-- Fix: Update `DonationCard` with `styled-components`.
-- Fix: Update
+- Update `DonationCard` with `styled-components`.
+- Update
   `TextInput`,
   `TextInputWithButton`,
   `TextInputWithUnit`,
   `TextInputWithUnitForm`,
   `TextInputWithLimit` with `styled-components`.
-- Fix: Use fraction for `imageContainerRatio` in `SimpleCard`.
+- Use fraction for `imageContainerRatio` in `SimpleCard`.
 
 ## [2.12.0] - 2019-06-26
 

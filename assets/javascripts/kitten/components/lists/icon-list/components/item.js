@@ -7,33 +7,29 @@ import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { Icon } from './icon'
 
-export class Item extends PureComponent {
-  static propTypes = {
-    icon: PropTypes.node,
-    iconProps: PropTypes.object,
-  }
+export const Item = ({ icon, iconProps, children, ...others }) => {
+  return (
+    <StyledItem {...others}>
+      <Icon {...iconProps}>{icon}</Icon>
 
-  static defaultProps = {
-    icon: null,
-    iconProps: {},
-  }
+      <StyledContent>{children}</StyledContent>
+    </StyledItem>
+  )
+}
 
-  render() {
-    const { icon, iconProps, children, ...other } = this.props
+Item.propTypes = {
+  icon: PropTypes.node,
+  iconProps: PropTypes.object,
+}
 
-    return (
-      <StyledItem {...other}>
-        <Icon {...iconProps}>{icon}</Icon>
-
-        <StyledContent>{children}</StyledContent>
-      </StyledItem>
-    )
-  }
+Item.defaultProps = {
+  icon: null,
+  iconProps: {},
 }
 
 const StyledItem = styled.li`
   display: flex;
-  margin ${pxToRem(40)} 0;
+  margin: ${pxToRem(40)} 0;
 `
 
 const StyledContent = styled.div`

@@ -31,6 +31,8 @@ var _checkbox = require("./components/checkbox");
 
 var _password = require("./components/password");
 
+var _autocomplete = require("./components/autocomplete");
+
 var Field =
 /*#__PURE__*/
 function (_Component) {
@@ -67,3 +69,4 @@ Field.Select = _select.FieldSelect;
 Field.Checkbox = _checkbox.FieldCheckbox;
 Field.ErrorMessage = _error.FieldError;
 Field.Password = _password.FieldPassword;
+Field.Autocomplete = _autocomplete.FieldAutocomplete;

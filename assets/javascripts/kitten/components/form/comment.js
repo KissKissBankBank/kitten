@@ -1,5 +1,5 @@
 import React from 'react'
-import { Comment } from '../../components/comments/comment'
+import { Comment as DefaultComment } from '../../components/comments/comment'
 import { Deprecated } from '../../helpers/utils/deprecated'
 
 export const Comment = props => {
@@ -8,7 +8,7 @@ export const Comment = props => {
 
   return (
     <Deprecated warningMessage={message}>
-      <Comment {...props} />
+      <DefaultComment {...props} />
     </Deprecated>
   )
 }

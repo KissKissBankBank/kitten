@@ -4,17 +4,17 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { Item } from './components/item'
 
-export class IconList extends PureComponent {
-  static Item = Item
-
-  render = () => (
-    <StyledNav>
-      <StyledList role="tablist">{this.props.children}</StyledList>
-    </StyledNav>
+export const IconList = ({ children, containerProps, listProps }) => {
+  return (
+    <StyledContainer {...containerProps}>
+      <StyledList {...listProps}>{children}</StyledList>
+    </StyledContainer>
   )
 }
 
-const StyledNav = styled.nav`
+IconList.Item = Item
+
+const StyledContainer = styled.div`
   position: relative;
   padding: ${pxToRem(1)} 0;
 `

@@ -118,7 +118,7 @@ describe('<TextInputWithSelect />', () => {
 
   describe('with digits prop', () => {
     it('removes k-FormComposer__element--main class from the input wrapper', () => {
-      const component = shallow(<TextInputAndSelect digits="2" />)
+      const component = shallow(<TextInputAndSelect digits={2} />)
       const input = component.find('.k-FormComposer__element--main')
 
       expect(input).toHaveLength(0)
