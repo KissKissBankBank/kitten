@@ -115,7 +115,7 @@ VerticalCard.propTypes = {
   description: _propTypes.default.string,
   descriptionTag: _propTypes.default.string,
   withTitleStroke: _propTypes.default.bool,
-  textAlign: _propTypes.default.oneOf[('left', 'center', 'right')]
+  textAlign: _propTypes.default.oneOf(['left', 'center', 'right'])
 };
 VerticalCard.defaultProps = {
   imageProps: {

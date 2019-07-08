@@ -17,7 +17,7 @@ var _textInput = require("../../../form/text-input");
 
 var _textInputWithLimit = require("../../../form/text-input-with-limit");
 
-var _textInputWithUnit = require("../../text-input-with-unit");
+var _textInputWithUnit = require("../../../form/text-input-with-unit");
 
 var FieldInput = function FieldInput(props) {
   var Input = _textInput.TextInput;

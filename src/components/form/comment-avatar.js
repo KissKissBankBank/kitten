@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -9,90 +7,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.CommentAvatar = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _react = _interopRequireDefault(require("react"));
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+var _commentAvatar = require("../../components/comments/comment-avatar");
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+var _deprecated = require("../../helpers/utils/deprecated");
 
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _radium = _interopRequireDefault(require("radium"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _marger = require("../../components/layout/marger");
-
-var _buttonImage = require("../../components/buttons/button-image");
-
-var _text = require("../../components/typography/text");
-
-var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
-
-var _mediaQueries = require("../../hoc/media-queries");
-
-var CommentAvatarComponent =
-/*#__PURE__*/
-function (_Component) {
-  (0, _inherits2.default)(CommentAvatarComponent, _Component);
-
-  function CommentAvatarComponent() {
-    (0, _classCallCheck2.default)(this, CommentAvatarComponent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CommentAvatarComponent).apply(this, arguments));
-  }
-
-  (0, _createClass2.default)(CommentAvatarComponent, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          avatarImgProps = _this$props.avatarImgProps,
-          viewportIsMobile = _this$props.viewportIsMobile;
-      return _react.default.createElement("div", {
-        style: styles.avatar
-      }, _react.default.createElement(_marger.Marger, {
-        bottom: "1"
-      }, _react.default.createElement(_buttonImage.ButtonImage, {
-        tag: "span",
-        huge: !viewportIsMobile,
-        big: viewportIsMobile,
-        withoutPointerEvents: true,
-        img: avatarImgProps
-      })), this.renderDate());
-    }
-  }, {
-    key: "renderDate",
-    value: function renderDate() {
-      var commentDate = this.props.commentDate;
-      if (!commentDate) return;
-      return _react.default.createElement(_text.Text, {
-        size: "micro",
-        weight: "light",
-        color: "font1"
-      }, commentDate);
-    }
-  }]);
-  return CommentAvatarComponent;
-}(_react.Component);
-
-CommentAvatarComponent.propTypes = {
-  avatarImgProps: _propTypes.default.object.isRequired,
-  commentDate: _propTypes.default.string
+var CommentAvatar = function CommentAvatar(props) {
+  var message = "You can use the CommentAvatar instead.\n    For more information: https://github.com/KissKissBankBank/../../blob/master/assets/javascripts/../../components/comments/comment-avatar.js";
+  return _react.default.createElement(_deprecated.Deprecated, {
+    warningMessage: message
+  }, _react.default.createElement(_commentAvatar.CommentAvatar, props));
 };
-CommentAvatarComponent.defaultProps = {
-  commentDate: ''
-};
-var styles = {
-  avatar: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
-  }
-};
-var CommentAvatar = (0, _mediaQueries.mediaQueries)((0, _radium.default)(CommentAvatarComponent), {
-  viewportIsMobile: true
-});
+
 exports.CommentAvatar = CommentAvatar;
