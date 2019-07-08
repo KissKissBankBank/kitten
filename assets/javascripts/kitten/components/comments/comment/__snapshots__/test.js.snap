@@ -1,5 +1,90 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
+<div
+  className="comment__StyledGrid-sc-8s8e85-2 iFjxIp"
+>
+  <div
+    className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
+  >
+    <div
+      className="marger__StyledMarger-q3lecu-0 eyQgpE"
+    >
+      <div
+        className="comment-avatar__StyledAvatarBadge-sc-10x87zp-2 cKwWuP"
+        role="alert"
+      >
+        <svg
+          height="25"
+          viewBox="0 0 20 20"
+          width="25"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Checked circle
+          </title>
+          <circle
+            cx="10"
+            cy="10"
+            fill="#19b4fa"
+            r="10"
+          />
+          <path
+            d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
+            fill="#fff"
+          />
+        </svg>
+      </div>
+      <span
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
+        tabIndex={null}
+      >
+        <img
+          alt="Image alt"
+          className="k-ButtonImage__img"
+          src="#image"
+        />
+      </span>
+    </div>
+    <span
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+    >
+      Custom date
+    </span>
+  </div>
+  <span
+    className="comment__StyledCommentContainer-sc-8s8e85-3 clcmhP"
+  >
+    <div
+      className="comment__StyledCommentContent-sc-8s8e85-4 jVltHf"
+    >
+      <div
+        className="marger__StyledMarger-q3lecu-0 gkLTfi"
+      >
+        <span
+          className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+        >
+          Custom name
+        </span>
+      </div>
+      <div
+        className="marger__StyledMarger-q3lecu-0 WSKaG"
+      >
+        <span
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 kYdcHB"
+        >
+          Custom text
+        </span>
+      </div>
+      <span
+        className="comment__StyledCommentArrow-sc-8s8e85-1 kcYuFb"
+      />
+    </div>
+    
+  </span>
+</div>
+`;
+
 exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
 <div
   className="comment__StyledGrid-sc-8s8e85-2 iFjxIp"
@@ -8,7 +93,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      className="marger__StyledMarger-q3lecu-0 gkLTfi"
+      className="marger__StyledMarger-q3lecu-0 eyQgpE"
     >
       <span
         className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
@@ -97,7 +182,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      className="marger__StyledMarger-q3lecu-0 gkLTfi"
+      className="marger__StyledMarger-q3lecu-0 eyQgpE"
     >
       <span
         className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"

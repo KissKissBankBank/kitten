@@ -66,11 +66,13 @@ export class Comment extends PureComponent {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string.isRequired,
     bottomNotes: PropTypes.node,
+    avatarBadge: PropTypes.node,
   }
 
   static defaultProps = {
     bottomNotes: '',
     ownerName: '',
+    avatarBadge: '',
   }
 
   render() {
