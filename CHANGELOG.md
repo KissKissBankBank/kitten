@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `avatarBadge` props on `Comment` and `CommentForm`.
+- Feature: Add `TextCopy` component.
 - Feature: Add `Autocomplete` component.
 - Feature: Add `Field.Autocomplete` component.
 - Fix: Remove `isRequired` of the `ownerName` props on `Comment` component.
@@ -19,6 +20,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   `TextInputWithUnit`,
   `TextInputWithUnitForm`,
   `TextInputWithLimit` with `styled-components`.
+- Fix: Use fraction for `imageContainerRatio` in `SimpleCard`.
 
 ## [2.12.0] - 2019-06-26
 
