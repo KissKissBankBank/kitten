@@ -21,7 +21,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-if (typeof document !== 'undefined') {
+if (document && typeof document !== 'undefined') {
   require('details-element-polyfill');
 }
 

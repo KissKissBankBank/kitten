@@ -4,13 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `MessengerIcon` and `WhatsAppIcon`
-- Feature: Add `containerProps`, `listProps` to `IconList` component.
-- Feature: Add `TextCopy` component.
-- Feature: Add `Autocomplete` component.
-- Feature: Add `Field.Autocomplete` component.
-- Fix: Remove `isRequired` of the `ownerName` props on `Comment` component.
-- Fix: Update
+## [2.13.0] - 2019-07-08
+
+Features:
+- Add `MessengerIcon` and `WhatsAppIcon`.
+- Add `containerProps`, `listProps` to `IconList` component.
+- Add `TextCopy` component.
+- Add `Autocomplete` component.
+- Add `Field.Autocomplete` component.
+- Add `IconContainer` component.
+
+Fixes:
+- Remove `isRequired` of the `ownerName` props on `Comment` component.
+- Update
   `Comment`,
   `CommentForm`,
   `CommentAvatar` with `styled-components`.
