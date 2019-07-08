@@ -55,7 +55,14 @@ const CommentsPage = props => (
             ownerName="At vero"
             commentDate="20 jours"
             bottomNotes={<ActionLinks children="Supprimer" />}
-            avatarBadge={<CheckedCircleIcon width="25" height="25" />}
+            avatarBadge={
+              <CheckedCircleIcon
+                width="25"
+                height="25"
+                circleColor="#19b4fa"
+                checkedColor="#fff"
+              />
+            }
           />
         </Marger>
       </GridCol>

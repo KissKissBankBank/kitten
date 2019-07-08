@@ -1,9 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, object } from '@storybook/addon-knobs'
+import { withKnobs, text, object, boolean } from '@storybook/addon-knobs'
 import { Comment } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
+import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 
 const info = {
   text: `
@@ -47,6 +49,11 @@ const info = {
     ~~~js
     <Comment text="…" />
     ~~~
+
+    ### With avatarBadge
+    ~~~js
+    <Comment avatarBadge="…" />
+    ~~~
   `,
   header: false,
   propTables: false,
@@ -71,6 +78,16 @@ storiesOf('Comments/Comment', module)
             )}
             ownerName={text('Owner name', 'Lorem ipsum')}
             bottomNotes={text('Bottom notes', 'Supprimer')}
+            avatarBadge={
+              boolean('Avatar badge', false) ? (
+                <CheckedCircleIcon
+                  width="25"
+                  height="25"
+                  circleColor="#19b4fa"
+                  checkedColor="#fff"
+                />
+              ) : null
+            }
           />
         </GridCol>
       </Grid>

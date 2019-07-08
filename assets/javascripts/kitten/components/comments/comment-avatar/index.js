@@ -29,6 +29,8 @@ const StyledButtonImage = styled(ButtonImage)`
 
 const StyledAvatarBadge = styled.div`
   position: absolute;
+  right: 0;
+  top: 0;
 `
 
 export class CommentAvatar extends PureComponent {
@@ -48,7 +50,7 @@ export class CommentAvatar extends PureComponent {
 
     return (
       <StyledAvatar>
-        <Marger bottom="1">
+        <Marger bottom="1" style={{ position: 'relative' }}>
           {this.renderBadge()}
           <StyledButtonImage
             tag="span"
@@ -66,7 +68,7 @@ export class CommentAvatar extends PureComponent {
 
     if (!avatarBadge) return
 
-    return <StyledAvatarBadge>{avatarBadge}</StyledAvatarBadge>
+    return <StyledAvatarBadge role="alert">{avatarBadge}</StyledAvatarBadge>
   }
 
   renderDate() {
