@@ -101,7 +101,7 @@ VerticalCard.propTypes = {
   description: PropTypes.string,
   descriptionTag: PropTypes.string,
   withTitleStroke: PropTypes.bool,
-  textAlign: PropTypes.oneOf[('left', 'center', 'right')],
+  textAlign: PropTypes.oneOf(['left', 'center', 'right']),
 }
 
 VerticalCard.defaultProps = {
