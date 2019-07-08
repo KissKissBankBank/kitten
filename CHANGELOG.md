@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `MessengerIcon` and `WhatsappIcon`
+- Feature: Add `MessengerIcon` and `WhatsAppIcon`
 - Feature: Add `containerProps`, `listProps` to `IconList` component.
 - Feature: Add `TextCopy` component.
 - Feature: Add `Autocomplete` component.
