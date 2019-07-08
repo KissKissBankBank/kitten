@@ -23,25 +23,40 @@ module.exports = {
         test: /\.(svg|png|jpe?g)$/,
         loader: 'file-loader',
         options: {
-          name: 'images/[name].[ext]'
-        }
+          name: 'images/[name].[ext]',
+        },
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+        ],
       },
       {
         test: /\.scss$/,
         resolve: {
           extensions: ['.scss', '.sass'],
         },
-        use: [{
-          loader: 'style-loader'
-        }, {
-          loader: 'css-loader'
-        }, {
-          loader: 'sass-loader',
-          options: {
-            includePaths: kittenPaths.getScssPaths(),
-          }
-        }]
-      }
-    ]
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: kittenPaths.getScssPaths(),
+            },
+          },
+        ],
+      },
+    ],
   },
-};
+}
