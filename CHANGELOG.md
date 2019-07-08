@@ -22,14 +22,14 @@ Fixes:
   `Comment`,
   `CommentForm`,
   `CommentAvatar` with `styled-components`.
-- Fix: Update `DonationCard` with `styled-components`.
-- Fix: Update
+- Update `DonationCard` with `styled-components`.
+- Update
   `TextInput`,
   `TextInputWithButton`,
   `TextInputWithUnit`,
   `TextInputWithUnitForm`,
   `TextInputWithLimit` with `styled-components`.
-- Fix: Use fraction for `imageContainerRatio` in `SimpleCard`.
+- Use fraction for `imageContainerRatio` in `SimpleCard`.
 
 ## [2.12.0] - 2019-06-26
 
