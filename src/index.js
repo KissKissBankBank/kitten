@@ -261,6 +261,24 @@ Object.defineProperty(exports, "SimpleCarousel", {
     return _simpleCarousel.SimpleCarousel;
   }
 });
+Object.defineProperty(exports, "CommentAvatar", {
+  enumerable: true,
+  get: function get() {
+    return _commentAvatar.CommentAvatar;
+  }
+});
+Object.defineProperty(exports, "CommentForm", {
+  enumerable: true,
+  get: function get() {
+    return _commentForm.CommentForm;
+  }
+});
+Object.defineProperty(exports, "Comment", {
+  enumerable: true,
+  get: function get() {
+    return _comment.Comment;
+  }
+});
 Object.defineProperty(exports, "DatePicker", {
   enumerable: true,
   get: function get() {
@@ -325,24 +343,6 @@ Object.defineProperty(exports, "Checkbox", {
   enumerable: true,
   get: function get() {
     return _checkbox.Checkbox;
-  }
-});
-Object.defineProperty(exports, "CommentAvatar", {
-  enumerable: true,
-  get: function get() {
-    return _commentAvatar.CommentAvatar;
-  }
-});
-Object.defineProperty(exports, "CommentForm", {
-  enumerable: true,
-  get: function get() {
-    return _commentForm.CommentForm;
-  }
-});
-Object.defineProperty(exports, "Comment", {
-  enumerable: true,
-  get: function get() {
-    return _comment.Comment;
   }
 });
 Object.defineProperty(exports, "FormActions", {
@@ -565,6 +565,12 @@ Object.defineProperty(exports, "ArrowContainer", {
   enumerable: true,
   get: function get() {
     return _arrowContainer.ArrowContainer;
+  }
+});
+Object.defineProperty(exports, "IconContainer", {
+  enumerable: true,
+  get: function get() {
+    return _iconContainer.IconContainer;
   }
 });
 Object.defineProperty(exports, "HorizontalStroke", {
@@ -994,6 +1000,12 @@ var _carouselPage = require("./components/carousel/carousel-page");
 
 var _simpleCarousel = require("./components/carousel/simple-carousel");
 
+var _commentAvatar = require("./components/comments/comment-avatar");
+
+var _commentForm = require("./components/comments/comment-form");
+
+var _comment = require("./components/comments/comment");
+
 var _datePicker = require("./components/date-picker");
 
 var _details = require("./components/details");
@@ -1015,12 +1027,6 @@ var _field = require("./components/form/field");
 var _textInputWithButton = require("./components/form/text-input-with-button");
 
 var _checkbox = require("./components/form/checkbox");
-
-var _commentAvatar = require("./components/form/comment-avatar");
-
-var _commentForm = require("./components/form/comment-form");
-
-var _comment = require("./components/form/comment");
 
 var _formActions = require("./components/form/form-actions");
 
@@ -1089,6 +1095,8 @@ var _imageCropper = require("./components/images/image-cropper");
 var _imageWithCaption = require("./components/images/image-with-caption");
 
 var _arrowContainer = require("./components/layout/arrow-container");
+
+var _iconContainer = require("./components/layout/icon-container");
 
 var _horizontalStroke = require("./components/layout/horizontal-stroke");
 

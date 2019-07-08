@@ -55,7 +55,7 @@ var StyledImageContainer = (0, _styledComponents.default)(_marger.Marger).withCo
   return imageContainerBackground;
 }, function (_ref2) {
   var imageContainerRatio = _ref2.imageContainerRatio;
-  return imageContainerRatio && (0, _styledComponents.css)(["overflow:hidden;position:relative;padding-top:", "%;& > img{position:absolute;top:0;height:auto;text-align:center;}"], imageContainerRatio);
+  return imageContainerRatio && (0, _styledComponents.css)(["overflow:hidden;position:relative;padding-top:calc(100% / calc(", "));& > img{position:absolute;top:0;height:auto;text-align:center;}"], imageContainerRatio);
 });
 
 var Image =
@@ -116,7 +116,7 @@ Image.propTypes = {
   arrowColor: _propTypes.default.string,
   href: _propTypes.default.string,
   imageContainerBackground: _propTypes.default.string,
-  imageContainerRatio: _propTypes.default.number
+  imageContainerRatio: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
 };
 Image.defaultProps = {
   imageProps: {

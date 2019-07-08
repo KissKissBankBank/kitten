@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.FieldSelectExample = exports.FieldRadioButtonSetExample = exports.FieldPasswordExample = exports.FieldInputExample = void 0;
+exports.FieldAutocompleteExample = exports.FieldSelectExample = exports.FieldRadioButtonSetExample = exports.FieldPasswordExample = exports.FieldInputExample = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -134,3 +134,30 @@ var FieldSelectExample = function FieldSelectExample(_ref5) {
 };
 
 exports.FieldSelectExample = FieldSelectExample;
+
+var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {
+  var id = _ref6.id,
+      label = _ref6.label,
+      tooltip = _ref6.tooltip,
+      tooltipId = _ref6.tooltipId,
+      placeholder = _ref6.placeholder,
+      error = _ref6.error,
+      errorMessage = _ref6.errorMessage,
+      items = _ref6.items;
+  return _react.default.createElement(FieldBase, {
+    id: id,
+    label: label,
+    tooltip: tooltip,
+    tooltipId: tooltipId,
+    error: error,
+    errorMessage: errorMessage
+  }, _react.default.createElement(_field.Field.Autocomplete, {
+    id: id,
+    name: "field",
+    placeholder: placeholder,
+    error: error,
+    items: items
+  }));
+};
+
+exports.FieldAutocompleteExample = FieldAutocompleteExample;
