@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import domElementHelper from '../../helpers/dom/element-helper'
 
-if (document && typeof document !== 'undefined') {
+if (domElementHelper.canUseDom() && typeof document !== 'undefined') {
   require('details-element-polyfill')
 }
 
