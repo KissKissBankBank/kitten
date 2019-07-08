@@ -1,5 +1,5 @@
 import React from 'react'
-import { CommentAvatar } from '../../components/comments/comment-avatar'
+import { CommentAvatar as DefaultCommentAvatar } from '../../components/comments/comment-avatar'
 import { Deprecated } from '../../helpers/utils/deprecated'
 
 export const CommentAvatar = props => {
@@ -8,7 +8,7 @@ export const CommentAvatar = props => {
 
   return (
     <Deprecated warningMessage={message}>
-      <CommentAvatar {...props} />
+      <DefaultCommentAvatar {...props} />
     </Deprecated>
   )
 }

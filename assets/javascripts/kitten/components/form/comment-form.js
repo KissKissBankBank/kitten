@@ -1,5 +1,5 @@
 import React from 'react'
-import { CommentForm } from '../../components/comments/comment-form'
+import { CommentForm as DefaultCommentForm } from '../../components/comments/comment-form'
 import { Deprecated } from '../../helpers/utils/deprecated'
 
 export const CommentForm = props => {
@@ -8,7 +8,7 @@ export const CommentForm = props => {
 
   return (
     <Deprecated warningMessage={message}>
-      <CommentForm {...props} />
+      <DefaultCommentForm {...props} />
     </Deprecated>
   )
 }
