@@ -63,6 +63,11 @@ export { CarouselInner } from './components/carousel/carousel-inner'
 export { CarouselPage } from './components/carousel/carousel-page'
 export { SimpleCarousel } from './components/carousel/simple-carousel'
 
+// Comment
+export { CommentAvatar } from './components/comments/comment-avatar'
+export { CommentForm } from './components/comments/comment-form'
+export { Comment } from './components/comments/comment'
+
 // Date-picker
 export { DatePicker } from './components/date-picker'
 
@@ -85,9 +90,6 @@ export { ExpandBoard } from './components/expandable/expand-board'
 export { Field } from './components/form/field'
 export { TextInputWithButton } from './components/form/text-input-with-button'
 export { Checkbox } from './components/form/checkbox'
-export { CommentAvatar } from './components/form/comment-avatar'
-export { CommentForm } from './components/form/comment-form'
-export { Comment } from './components/form/comment'
 export { FormActions } from './components/form/form-actions'
 export {
   FormAmountAndCurrency,
@@ -136,6 +138,7 @@ export { ImageWithCaption } from './components/images/image-with-caption'
 
 // Layout
 export { ArrowContainer } from './components/layout/arrow-container'
+export { IconContainer } from './components/layout/icon-container'
 export { HorizontalStroke } from './components/layout/horizontal-stroke'
 export { Line } from './components/layout/line'
 export { Marger } from './components/layout/marger'

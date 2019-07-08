@@ -1,5 +1,57 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Field /> with <Field.Autocomplete /> matches with snapshot 1`] = `
+Array [
+  <div
+    className="marger__StyledMarger-q3lecu-0 csmETU"
+  >
+    <div
+      className="k-Line"
+      style={
+        Object {
+          "lineHeight": 1,
+        }
+      }
+    >
+      <div
+        className="k-Line__item"
+      >
+        <label
+          className="k-Label k-Label--tiny"
+          htmlFor="autocomplete"
+          onClick={[Function]}
+        >
+          Label
+        </label>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+  >
+    <div
+      className="autocomplete__Container-lfeqwe-0 hIkTmT"
+    >
+      <input
+        aria-activedescendant=""
+        aria-autocomplete="both"
+        aria-expanded={false}
+        aria-owns="field-results"
+        autoComplete="off"
+        className="autocomplete__Input-lfeqwe-1 fSAKaA"
+        id="autocomplete"
+        name="field"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder="Select…"
+        type="text"
+      />
+    </div>
+  </div>,
+]
+`;
+
 exports[`<Field /> with <Field.Input /> in error matches with snapshot 1`] = `
 Array [
   <div
@@ -70,12 +122,11 @@ Array [
     className="marger__StyledMarger-q3lecu-0 cHJBWz"
   >
     <input
-      className="k-TextInput is-error"
+      className="text-input__StyledInput-sc-11wej6v-1 dERTZf"
       disabled={false}
       id="input"
       name="field"
       placeholder="Placeholder…"
-      type="text"
     />
   </div>,
   <div
@@ -165,12 +216,11 @@ Array [
     className="marger__StyledMarger-q3lecu-0 cHJBWz"
   >
     <input
-      className="k-TextInput"
+      className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
       disabled={false}
       id="input"
       name="field"
       placeholder="Placeholder…"
-      type="text"
     />
   </div>,
 ]
@@ -255,8 +305,7 @@ Array [
       }
     >
       <input
-        className="k-TextInput is-error"
-        data-radium={true}
+        className="text-input__StyledInput-sc-11wej6v-1 dERTZf"
         disabled={false}
         id="input"
         name="field"
@@ -409,8 +458,7 @@ Array [
       }
     >
       <input
-        className="k-TextInput"
-        data-radium={true}
+        className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
         disabled={false}
         id="input"
         name="field"
