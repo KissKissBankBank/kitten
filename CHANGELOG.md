@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `containerProps`, `listProps` to `IconList` component.
 - Feature: Add `TextCopy` component.
 - Feature: Add `Autocomplete` component.
 - Feature: Add `Field.Autocomplete` component.
