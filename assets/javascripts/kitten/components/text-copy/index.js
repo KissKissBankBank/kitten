@@ -5,7 +5,7 @@ import COLORS from '../../constants/colors-config'
 import { pxToRem } from '../../helpers/utils/typography'
 import { CopyIcon } from '../icons/copy-icon'
 import { ArrowContainer } from '../layout/arrow-container'
-import { Text } from '../..'
+import { Text } from '../typography/text'
 import { VisuallyHidden } from '../accessibility/visually-hidden'
 
 const fadeIn = keyframes`
