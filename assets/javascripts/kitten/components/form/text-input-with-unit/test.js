@@ -45,16 +45,6 @@ describe('<TextInputWithUnit />', () => {
     })
   })
 
-  describe('with error prop', () => {
-    beforeEach(() => {
-      component = renderer.create(<TextInputWithUnit error />).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with unit prop', () => {
     beforeEach(() => {
       component = renderer
