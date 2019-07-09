@@ -19,7 +19,7 @@ const StyledTextInput = styled(TextInput)`
 const StyledIcon = styled.span`
   display: flex;
   position: absolute;
-  z-index: 1,
+  z-index: 1;
   margin-right: ${pxToRem(11)};
   right: 0;
   top: 0;
@@ -28,9 +28,11 @@ const StyledIcon = styled.span`
 const StyledSvg = styled(PasswordIcon)`
   cursor: pointer;
 
-  :active {
-    fill: ${COLORS.primary1};
-  }
+  ${({ active }) =>
+    active &&
+    css`
+      fill: ${COLORS.primary1};
+    `}
 `
 
 export class PasswordInput extends PureComponent {
@@ -71,10 +73,7 @@ export class PasswordInput extends PureComponent {
 
     const type = this.state.isHidden ? 'password' : 'text'
 
-    const iconStyle = [
-      styles.icon.svg,
-      !this.state.isHidden && styles.icon.svg.active,
-    ]
+    const active = !this.state.isHidden
 
     const iconTitle = this.state.isHidden ? iconLabel : hiddenIconLabel
 
@@ -82,11 +81,12 @@ export class PasswordInput extends PureComponent {
       <StyledPasswordInput>
         <StyledTextInput {...textInputProps} name={name} type={type} />
         <StyledIcon title={iconTitle}>
-          <PasswordIcon
+          <StyledSvg
             tabIndex="0"
             onClick={this.handleClick}
             onKeyDown={this.handleKeyDown}
             title={iconTitle}
+            active={active}
           />
         </StyledIcon>
       </StyledPasswordInput>
