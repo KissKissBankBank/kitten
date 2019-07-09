@@ -183,7 +183,6 @@ export class CommentForm extends PureComponent {
         <CommentAvatar
           avatarBadge={avatarBadge}
           avatarImgProps={avatarImgProps}
-          avatarBadge={avatarBadge}
         />
         {this.renderInput()}
       </StyledGrid>
