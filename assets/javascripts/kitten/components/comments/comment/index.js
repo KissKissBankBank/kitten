@@ -7,6 +7,10 @@ import { Text } from '../../../components/typography/text'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { LikeButton } from './components/like-button'
+
+const desktopPadding = pxToRem(30)
+const tabletAndMobilePadding = pxToRem(20)
 
 const StyledContentText = styled(Text)`
   font-size: ${stepToRem(-1)};
@@ -27,6 +31,7 @@ const StyledCommentArrow = styled.span`
   border-color: transparent;
   border-right-color: ${COLORS.background3};
   left: -${pxToRem(20)};
+
   @media (min-width: ${ScreenConfig.S.min}px) {
     top: ${pxToRem(35)};
   }
@@ -41,7 +46,7 @@ const StyledCommentContainer = styled.span`
   margin-left: ${pxToRem(20)};
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    margin-left: ${pxToRem(35)},
+    margin-left: ${pxToRem(35)};
   },
 `
 
@@ -50,13 +55,28 @@ const StyledCommentContent = styled.div`
   background-color: ${COLORS.background3};
   border-color: ${COLORS.background3};
   color: ${COLORS.font1};
-  padding: ${pxToRem(30)};
+  padding: ${tabletAndMobilePadding};
   font-size: ${stepToRem(0)};
+
+  @media (min-width: ${ScreenConfig.M.min}px) {
+    padding: ${desktopPadding};
+  },
 `
 
 const StyledBottomNotes = styled(Text)`
   padding-left: ${pxToRem(30)};
   margin-top: 0;
+`
+
+const StyledLikeButton = styled.div`
+  position: absolute;
+  right: 0;
+  margin-top: ${pxToRem(-20)};
+  margin-right: ${tabletAndMobilePadding};
+
+  @media (min-width: ${ScreenConfig.M.min}px) {
+    margin-right: ${desktopPadding};
+  },
 `
 
 export class Comment extends PureComponent {
@@ -99,13 +119,17 @@ export class Comment extends PureComponent {
               </Marger>
             )}
 
-            <Marger top={ownerName ? 1 : null}>
+            <Marger top={ownerName ? 1 : null} bottom="1.5">
               <StyledContentText color="font1" weight="light">
                 {text}
               </StyledContentText>
             </Marger>
             <StyledCommentArrow />
           </StyledCommentContent>
+
+          <StyledLikeButton>
+            <LikeButton children="34" />
+          </StyledLikeButton>
 
           {bottomNotes && (
             <Marger top=".5">
