@@ -120,7 +120,7 @@ export class Comment extends PureComponent {
               </Marger>
             )}
 
-            <Marger top={ownerName ? 1 : null} bottom="1.5">
+            <Marger top={ownerName ? 1 : null} bottom={numberLike ? 1.5 : null}>
               <StyledContentText color="font1" weight="light">
                 {text}
               </StyledContentText>
@@ -128,9 +128,11 @@ export class Comment extends PureComponent {
             <StyledCommentArrow />
           </StyledCommentContent>
 
-          <StyledLikeButton>
-            <LikeButton children={numberLike} />
-          </StyledLikeButton>
+          {numberLike && (
+            <StyledLikeButton>
+              <LikeButton children={numberLike} />
+            </StyledLikeButton>
+          )}
 
           {bottomNotes && (
             <Marger top=".5">
