@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `LikeButton` for `Comment` component.
 - Fix: Fix `width` error styles `TextInputWithUnit`.
 
 ## [2.13.1] - 2019-07-08

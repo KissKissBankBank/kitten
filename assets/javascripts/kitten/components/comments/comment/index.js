@@ -100,6 +100,7 @@ export class Comment extends PureComponent {
       avatarImgProps,
       commentDate,
       bottomNotes,
+      numberLike,
       ...props
     } = this.props
 
@@ -128,7 +129,7 @@ export class Comment extends PureComponent {
           </StyledCommentContent>
 
           <StyledLikeButton>
-            <LikeButton children="34" />
+            <LikeButton children={numberLike} />
           </StyledLikeButton>
 
           {bottomNotes && (

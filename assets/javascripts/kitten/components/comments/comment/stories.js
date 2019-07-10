@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, object } from '@storybook/addon-knobs'
+import { withKnobs, text, object, number } from '@storybook/addon-knobs'
 import { Comment } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
@@ -47,6 +47,11 @@ const info = {
     ~~~js
     <Comment text="…" />
     ~~~
+
+    ### Number like
+    ~~~js
+    <Comment numberLike="…" />
+    ~~~
   `,
   header: false,
   propTables: false,
@@ -70,6 +75,7 @@ storiesOf('Comments/Comment', module)
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
             )}
             ownerName={text('Owner name', 'Lorem ipsum')}
+            numberLike={number('Number Like', 4)}
           />
         </GridCol>
       </Grid>

@@ -33,6 +33,7 @@ describe('<Comment />', () => {
           commentDate="Custom date"
           text="Custom text"
           ownerName="Custom name"
+          numberLike="4"
         />,
       )
       .toJSON()
@@ -64,6 +65,7 @@ describe('<Comment />', () => {
           text="Custom text"
           ownerName="Custom name"
           bottomNotes={<BottomNotes />}
+          numberLike="4"
         />,
       )
       .toJSON()
