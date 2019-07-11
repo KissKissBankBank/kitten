@@ -28,10 +28,10 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     </span>
   </div>
   <span
-    className="comment__StyledCommentContainer-sc-8s8e85-3 hbnNCk"
+    className="comment__StyledCommentContainer-sc-8s8e85-3 bJGCLq"
   >
     <div
-      className="comment__StyledCommentContent-sc-8s8e85-4 exFfbt"
+      className="comment__StyledCommentContent-sc-8s8e85-4 dfSJoR"
     >
       <div
         className="marger__StyledMarger-q3lecu-0 gkLTfi"
@@ -43,7 +43,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         </span>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 fXmpKT"
+        className="comment__StyledMargerText-sc-8s8e85-5 fflFHR"
       >
         <span
           className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 kYdcHB"
@@ -56,7 +56,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       />
     </div>
     <div
-      className="comment__StyledLikeButton-sc-8s8e85-6 hOZDDD"
+      className="comment__StyledLikeButton-sc-8s8e85-7 dKzXhL"
     >
       <button
         className="like-button__StyledButton-wk7ovs-0 iEpPvQ"
@@ -82,7 +82,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       className="marger__StyledMarger-q3lecu-0 gWrqvV"
     >
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-5 kLqfi"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-6 bWSYZb"
       >
         <div>
           <a
@@ -140,10 +140,10 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     </span>
   </div>
   <span
-    className="comment__StyledCommentContainer-sc-8s8e85-3 hbnNCk"
+    className="comment__StyledCommentContainer-sc-8s8e85-3 bJGCLq"
   >
     <div
-      className="comment__StyledCommentContent-sc-8s8e85-4 exFfbt"
+      className="comment__StyledCommentContent-sc-8s8e85-4 dfSJoR"
     >
       <div
         className="marger__StyledMarger-q3lecu-0 gkLTfi"
@@ -155,7 +155,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 fXmpKT"
+        className="comment__StyledMargerText-sc-8s8e85-5 fflFHR"
       >
         <span
           className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 kYdcHB"
@@ -168,7 +168,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
       />
     </div>
     <div
-      className="comment__StyledLikeButton-sc-8s8e85-6 hOZDDD"
+      className="comment__StyledLikeButton-sc-8s8e85-7 dKzXhL"
     >
       <button
         className="like-button__StyledButton-wk7ovs-0 iEpPvQ"

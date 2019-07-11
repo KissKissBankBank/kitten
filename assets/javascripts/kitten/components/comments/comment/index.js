@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
 import { CommentAvatar } from '../../../components/comments/comment-avatar'
@@ -30,7 +30,7 @@ const StyledCommentArrow = styled.span`
   border-style: solid;
   border-color: transparent;
   border-right-color: ${COLORS.background3};
-  left: -${pxToRem(20)};
+  left: ${pxToRem(-20)};
 
   @media (min-width: ${ScreenConfig.S.min}px) {
     top: ${pxToRem(35)};
@@ -47,7 +47,7 @@ const StyledCommentContainer = styled.span`
 
   @media (min-width: ${ScreenConfig.S.min}px) {
     margin-left: ${pxToRem(35)};
-  },
+  }
 `
 
 const StyledCommentContent = styled.div`
@@ -55,12 +55,32 @@ const StyledCommentContent = styled.div`
   background-color: ${COLORS.background3};
   border-color: ${COLORS.background3};
   color: ${COLORS.font1};
-  padding: ${tabletAndMobilePadding};
   font-size: ${stepToRem(0)};
+  padding: ${tabletAndMobilePadding};
 
   @media (min-width: ${ScreenConfig.M.min}px) {
-    padding: ${desktopPadding};
-  },
+    padding-top: ${desktopPadding};
+    padding-right: ${desktopPadding};
+    padding-left: ${desktopPadding};
+  }
+`
+
+const StyledMargerText = styled.div`
+  ${({ numberLike }) =>
+    numberLike &&
+    css`
+      margin-bottom: ${pxToRem(15)};
+
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        margin-bottom: ${pxToRem(20)};
+      }
+    `}
+
+  ${({ ownerName }) =>
+    ownerName &&
+    css`
+      margin-top: ${pxToRem(10)};
+    `}
 `
 
 const StyledBottomNotes = styled(Text)`
@@ -72,11 +92,11 @@ const StyledLikeButton = styled.div`
   position: absolute;
   right: 0;
   margin-top: ${pxToRem(-20)};
-  margin-right: ${tabletAndMobilePadding};
+  margin-right: ${pxToRem(20)};
 
   @media (min-width: ${ScreenConfig.M.min}px) {
-    margin-right: ${desktopPadding};
-  },
+    margin-right: ${pxToRem(20)};
+  }
 `
 
 export class Comment extends PureComponent {
@@ -111,7 +131,7 @@ export class Comment extends PureComponent {
           commentDate={commentDate}
         />
         <StyledCommentContainer>
-          <StyledCommentContent>
+          <StyledCommentContent numberLike={numberLike}>
             {ownerName && (
               <Marger bottom="1">
                 <Text color="font1" size="tiny" weight="regular">
@@ -120,11 +140,11 @@ export class Comment extends PureComponent {
               </Marger>
             )}
 
-            <Marger top={ownerName ? 1 : null} bottom={numberLike ? 1.5 : null}>
+            <StyledMargerText numberLike={numberLike} ownerName={ownerName}>
               <StyledContentText color="font1" weight="light">
                 {text}
               </StyledContentText>
-            </Marger>
+            </StyledMargerText>
             <StyledCommentArrow />
           </StyledCommentContent>
 
