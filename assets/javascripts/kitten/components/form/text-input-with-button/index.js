@@ -83,7 +83,6 @@ export class TextInputWithButton extends PureComponent {
       disabled,
       tiny,
       value,
-      textInputProps,
       modifier,
       ...others
     } = this.props
@@ -91,7 +90,6 @@ export class TextInputWithButton extends PureComponent {
     return (
       <StyledTextInputWithButton>
         <StyledTextInput
-          {...textInputProps}
           valid={valid}
           error={error}
           disabled={disabled}

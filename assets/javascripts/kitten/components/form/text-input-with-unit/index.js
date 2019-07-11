@@ -130,14 +130,12 @@ export class TextInputWithUnit extends PureComponent {
       disabled,
       unit,
       unitWord,
-      textInputProps,
       ...others
     } = this.props
 
     return (
       <StyledTextInputWithUnit>
         <StyledTextInput
-          {...textInputProps}
           ref={this.input}
           type={type}
           valid={valid}
