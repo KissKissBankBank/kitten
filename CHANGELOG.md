@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix props propagation in
+  `TextInputWithButton`,
+  `TextInputWithUnit`,
+  `TextInputWithLimit`.
 - Fix: Fix `width` error styles `TextInputWithUnit`.
 
 ## [2.13.1] - 2019-07-08
