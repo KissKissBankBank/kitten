@@ -131,7 +131,7 @@ export class Comment extends PureComponent {
           commentDate={commentDate}
         />
         <StyledCommentContainer>
-          <StyledCommentContent numberLike={numberLike}>
+          <StyledCommentContent>
             {ownerName && (
               <Marger bottom="1">
                 <Text color="font1" size="tiny" weight="regular">
