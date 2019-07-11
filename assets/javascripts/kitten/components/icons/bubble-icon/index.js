@@ -24,5 +24,5 @@ BubbleIcon.propTypes = {
 
 BubbleIcon.defaultProps = {
   color: '#222',
-  title: 'Lock',
+  title: 'Bubble',
 }
