@@ -65,9 +65,6 @@ export class TextInputWithLimit extends PureComponent {
     tiny: PropTypes.bool,
     error: PropTypes.bool,
     onChange: PropTypes.func,
-    textInputProps: PropTypes.shape({
-      tag: PropTypes.string,
-    }),
   }
 
   static defaultProps = {
@@ -77,9 +74,6 @@ export class TextInputWithLimit extends PureComponent {
     tiny: false,
     error: false,
     onChange: () => {},
-    textInputProps: {
-      tag: 'input',
-    },
   }
 
   constructor(props) {

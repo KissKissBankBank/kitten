@@ -53,7 +53,6 @@ storiesOf('Form/TextInput', module)
           <GridCol offset="1" col="6">
             <TextInputWithUnit
               valid={boolean('Valid', false)}
-              error={boolean('Error', false)}
               disabled={boolean('Disabled', false)}
               tiny={boolean('Tiny', false)}
               error={boolean('Error', false)}
