@@ -37,14 +37,12 @@ const StyledSvg = styled(PasswordIcon)`
 
 export class PasswordInput extends PureComponent {
   static propTypes = {
-    textInputProps: PropTypes.shape({}),
     iconLabel: PropTypes.string.isRequired,
     hiddenIconLabel: PropTypes.string.isRequired,
     name: PropTypes.string,
   }
 
   static defaultProps = {
-    textInputProps: {},
     name: 'password',
   }
 
@@ -69,7 +67,7 @@ export class PasswordInput extends PureComponent {
   }
 
   render() {
-    const { name, textInputProps, iconLabel, hiddenIconLabel } = this.props
+    const { name, iconLabel, hiddenIconLabel, ...others } = this.props
 
     const type = this.state.isHidden ? 'password' : 'text'
 
@@ -79,7 +77,7 @@ export class PasswordInput extends PureComponent {
 
     return (
       <StyledPasswordInput>
-        <StyledTextInput {...textInputProps} name={name} type={type} />
+        <StyledTextInput {...others} name={name} type={type} />
         <StyledIcon title={iconTitle}>
           <StyledSvg
             tabIndex="0"
