@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix props propagation in
+  `TextInputWithButton`,
+  `TextInputWithUnit`,
+  `TextInputWithLimit`.
 - Feature: Create `BubbleIcon` component.
 - Fix: Fix `width` error styles `TextInputWithUnit`.
 
