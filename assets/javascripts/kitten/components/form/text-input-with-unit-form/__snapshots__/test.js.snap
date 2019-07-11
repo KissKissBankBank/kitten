@@ -29,7 +29,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 cHJBWz"
         >
           <div
-            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 cNrele"
+            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
           >
             <input
               className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
@@ -38,7 +38,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="text-input-with-unit__StyledInputUnit-gjmccx-2 kxcQws"
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
               disabled={false}
             >
               €
@@ -95,7 +95,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 cHJBWz"
         >
           <div
-            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 cNrele"
+            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
           >
             <input
               className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
@@ -104,7 +104,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="text-input-with-unit__StyledInputUnit-gjmccx-2 kxcQws"
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
               disabled={false}
             />
           </div>
@@ -159,7 +159,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
           className="marger__StyledMarger-q3lecu-0 cHJBWz"
         >
           <div
-            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 cNrele"
+            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
           >
             <input
               className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
@@ -168,7 +168,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
               type="number"
             />
             <span
-              className="text-input-with-unit__StyledInputUnit-gjmccx-2 dZRNjl"
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 lfNJet"
               disabled={true}
             />
           </div>
@@ -223,7 +223,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 jSUHLH"
         >
           <div
-            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 cNrele"
+            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
           >
             <input
               className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 dERTZf"
@@ -232,7 +232,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="text-input-with-unit__StyledInputUnit-gjmccx-2 hPDcLd"
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 gXhzRE"
               disabled={false}
             />
           </div>

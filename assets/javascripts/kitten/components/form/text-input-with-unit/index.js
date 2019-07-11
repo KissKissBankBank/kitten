@@ -8,6 +8,7 @@ import COLORS from '../../../constants/colors-config'
 
 const StyledTextInputWithUnit = styled.div`
   display: flex;
+  width: 1%;
 
   ${({ digits }) =>
     !digits &&
@@ -30,7 +31,6 @@ const StyledInputUnit = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1%;
   background-color: ${COLORS.background1};
   border: ${pxToRem(2)} solid ${COLORS.line1};
   border-left: 0;
@@ -111,7 +111,7 @@ export class TextInputWithUnit extends PureComponent {
     tiny: false,
     disabled: false,
     textInputProps: {
-      digits: 0,
+      digits: null,
       tag: 'input',
     },
   }
