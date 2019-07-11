@@ -87,6 +87,7 @@ export class TextInputWithLimit extends PureComponent {
   handleChange = e => {
     const value = e.target.value
     this.setState({ value })
+    this.props.onChange(e)
   }
 
   render() {
@@ -99,12 +100,11 @@ export class TextInputWithLimit extends PureComponent {
     return (
       <StyledTextInputWithLimit>
         <FocusTextInput
-          value={this.state.value}
+          {...others}
           onChange={this.handleChange}
           disabled={disabled}
-          error={error}
           tiny={tiny}
-          {...others}
+          value={this.state.value}
         />
         <StyledCounter error={error} disabled={disabled}>
           {limit - length}
