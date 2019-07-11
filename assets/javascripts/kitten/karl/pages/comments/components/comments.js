@@ -54,6 +54,7 @@ const CommentsPage = props => (
             ownerName="At vero"
             commentDate="20 jours"
             bottomNotes={<ActionLinks children="Supprimer" />}
+            counterLikes="309"
           />
         </Marger>
       </GridCol>

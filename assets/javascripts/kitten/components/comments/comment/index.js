@@ -44,6 +44,7 @@ const StyledGrid = styled.div`
 const StyledCommentContainer = styled.span`
   position: relative;
   margin-left: ${pxToRem(20)};
+  flex: 1;
 
   @media (min-width: ${ScreenConfig.S.min}px) {
     margin-left: ${pxToRem(35)};

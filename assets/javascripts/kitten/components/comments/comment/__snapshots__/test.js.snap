@@ -28,7 +28,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     </span>
   </div>
   <span
-    className="comment__StyledCommentContainer-sc-8s8e85-3 bJGCLq"
+    className="comment__StyledCommentContainer-sc-8s8e85-3 eLGRSh"
   >
     <div
       className="comment__StyledCommentContent-sc-8s8e85-4 dfSJoR"
@@ -140,7 +140,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     </span>
   </div>
   <span
-    className="comment__StyledCommentContainer-sc-8s8e85-3 bJGCLq"
+    className="comment__StyledCommentContainer-sc-8s8e85-3 eLGRSh"
   >
     <div
       className="comment__StyledCommentContent-sc-8s8e85-4 dfSJoR"
