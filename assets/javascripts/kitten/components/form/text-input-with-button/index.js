@@ -82,11 +82,11 @@ export class TextInputWithButton extends PureComponent {
     return (
       <StyledTextInputWithButton>
         <StyledTextInput
+          {...others}
           valid={valid}
           error={error}
           disabled={disabled}
           tiny={tiny}
-          {...others}
         />
         <StyledButton
           type="button"

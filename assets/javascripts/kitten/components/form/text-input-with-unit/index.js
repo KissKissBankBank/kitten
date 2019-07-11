@@ -130,13 +130,13 @@ export class TextInputWithUnit extends PureComponent {
     return (
       <StyledTextInputWithUnit>
         <StyledTextInput
+          {...others}
           ref={this.input}
           type={type}
           valid={valid}
           error={error}
           tiny={tiny}
           disabled={disabled}
-          {...others}
         />
         <StyledInputUnit
           valid={valid}
