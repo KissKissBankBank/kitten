@@ -57,10 +57,6 @@ export class TextInputWithButton extends PureComponent {
     tiny: PropTypes.bool,
     modifier: PropTypes.string,
     value: PropTypes.string,
-    textInputProps: PropTypes.shape({
-      tag: PropTypes.string,
-      name: PropTypes.string,
-    }),
   }
 
   static defaultProps = {
@@ -70,10 +66,6 @@ export class TextInputWithButton extends PureComponent {
     tiny: false,
     value: 'Button',
     modifier: 'beryllium',
-    textInputProps: {
-      tag: 'input',
-      name: 'text',
-    },
   }
 
   render() {
