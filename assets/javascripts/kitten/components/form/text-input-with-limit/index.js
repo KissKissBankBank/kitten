@@ -103,6 +103,7 @@ export class TextInputWithLimit extends PureComponent {
       onChange,
       disabled,
       textInputProps,
+      ...others
     } = this.props
 
     const length = this.state.value ? this.state.value.length : 0
@@ -118,6 +119,7 @@ export class TextInputWithLimit extends PureComponent {
           disabled={disabled}
           error={error}
           tiny={tiny}
+          {...others}
         />
         <StyledCounter error={error} disabled={disabled}>
           {limit - length}

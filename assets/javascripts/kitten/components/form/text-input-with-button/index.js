@@ -96,6 +96,7 @@ export class TextInputWithButton extends PureComponent {
           error={error}
           disabled={disabled}
           tiny={tiny}
+          {...others}
         />
         <StyledButton
           type="button"
