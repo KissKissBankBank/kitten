@@ -66,8 +66,8 @@ const StyledCommentContent = styled.div`
 `
 
 const StyledMargerText = styled.div`
-  ${({ numberLike }) =>
-    numberLike &&
+  ${({ counterLikes }) =>
+    counterLikes &&
     css`
       margin-bottom: ${pxToRem(15)};
 
@@ -120,7 +120,7 @@ export class Comment extends PureComponent {
       avatarImgProps,
       commentDate,
       bottomNotes,
-      numberLike,
+      counterLikes,
       ...props
     } = this.props
 
@@ -140,7 +140,7 @@ export class Comment extends PureComponent {
               </Marger>
             )}
 
-            <StyledMargerText numberLike={numberLike} ownerName={ownerName}>
+            <StyledMargerText counterLikes={counterLikes} ownerName={ownerName}>
               <StyledContentText color="font1" weight="light">
                 {text}
               </StyledContentText>
@@ -148,9 +148,9 @@ export class Comment extends PureComponent {
             <StyledCommentArrow />
           </StyledCommentContent>
 
-          {numberLike && (
+          {counterLikes && (
             <StyledLikeButton>
-              <LikeButton children={numberLike} />
+              <LikeButton children={counterLikes} />
             </StyledLikeButton>
           )}
 

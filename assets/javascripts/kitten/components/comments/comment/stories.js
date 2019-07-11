@@ -48,9 +48,9 @@ const info = {
     <Comment text="…" />
     ~~~
 
-    ### Number like
+    ### Counter likes
     ~~~js
-    <Comment numberLike="…" />
+    <Comment counterLikes="…" />
     ~~~
   `,
   header: false,
@@ -77,7 +77,7 @@ storiesOf('Comments/Comment', module)
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
               )}
               ownerName={text('Owner name', 'Lorem ipsum')}
-              numberLike={text('Number Like', '100')}
+              counterLikes={text('Counter Likes', '100')}
             />
           </GridCol>
         </Grid>
