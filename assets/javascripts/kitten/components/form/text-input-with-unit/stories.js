@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, text, object } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text, number } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithUnit } from './index'
 
@@ -45,22 +45,23 @@ const info = {
 storiesOf('Form/TextInput', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('Text input with unit', () => {
-    return (
-      <Grid style={{ marginTop: '5em' }}>
-        <GridCol offset="1" col="6">
-          <TextInputWithUnit
-            valid={boolean('Valid', false)}
-            error={boolean('Error', false)}
-            disabled={boolean('Disabled', false)}
-            tiny={boolean('Tiny', false)}
-            error={boolean('Error', false)}
-            unit={text('Unit', '€')}
-            textInputProps={object('textInputProps', {
-              digits: 0,
-            })}
-          />
-        </GridCol>
-      </Grid>
-    )
-  })
+  .add(
+    'Text input with unit',
+    () => {
+      return (
+        <Grid style={{ marginTop: '5em' }}>
+          <GridCol offset="1" col="6">
+            <TextInputWithUnit
+              valid={boolean('Valid', false)}
+              disabled={boolean('Disabled', false)}
+              tiny={boolean('Tiny', false)}
+              error={boolean('Error', false)}
+              unit={text('Unit', '€')}
+              digits={number('Digits', 0)}
+            />
+          </GridCol>
+        </Grid>
+      )
+    },
+    { info },
+  )

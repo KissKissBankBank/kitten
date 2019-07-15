@@ -32,9 +32,16 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
             className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
           >
             <input
+              autoComplete="off"
               className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+              defaultValue=""
               disabled={false}
+              id="donation-amount"
               name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Your amount"
               type="number"
             />
             <span
@@ -98,9 +105,16 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
             className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
           >
             <input
+              autoComplete="off"
               className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+              defaultValue=""
               disabled={false}
+              id=""
               name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder=""
               type="number"
             />
             <span
@@ -162,9 +176,16 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
             className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
           >
             <input
+              autoComplete="off"
               className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+              defaultValue=""
               disabled={true}
+              id=""
               name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder=""
               type="number"
             />
             <span
@@ -226,9 +247,16 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
             className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
           >
             <input
+              autoComplete="off"
               className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 dERTZf"
+              defaultValue=""
               disabled={false}
+              id=""
               name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder=""
               type="number"
             />
             <span
