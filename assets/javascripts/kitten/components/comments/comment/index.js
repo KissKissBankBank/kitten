@@ -96,7 +96,7 @@ const StyledLikeButtonBox = styled.div`
   margin-right: ${pxToRem(20)};
 
   @media (min-width: ${ScreenConfig.M.min}px) {
-    margin-right: ${pxToRem(20)};
+    margin-right: ${pxToRem(30)};
   }
 `
 

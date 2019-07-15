@@ -56,16 +56,16 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       />
     </div>
     <div
-      className="comment__StyledLikeButtonBox-sc-8s8e85-7 hIyPui"
+      className="comment__StyledLikeButtonBox-sc-8s8e85-7 fCmQex"
     >
       <button
-        className="like-button__StyledButton-wk7ovs-0 iEpPvQ"
+        className="like-button__StyledButton-wk7ovs-0 bsinOM"
         role="button"
       >
         <span
           className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
         >
-          Cliquez ici pour indiquer que vous aimez commentaire.          4 personnes ont aimé ce commentaire.
+          Cliquez ici pour indiquer que vous aimez commentaire. 4          personnes ont aimé ce commentaire.
         </span>
         <svg
           aria-hidden="true"
@@ -175,16 +175,16 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
       />
     </div>
     <div
-      className="comment__StyledLikeButtonBox-sc-8s8e85-7 hIyPui"
+      className="comment__StyledLikeButtonBox-sc-8s8e85-7 fCmQex"
     >
       <button
-        className="like-button__StyledButton-wk7ovs-0 iEpPvQ"
+        className="like-button__StyledButton-wk7ovs-0 bsinOM"
         role="button"
       >
         <span
           className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
         >
-          Cliquez ici pour indiquer que vous aimez commentaire.          4 personnes ont aimé ce commentaire.
+          Cliquez ici pour indiquer que vous aimez commentaire. 4          personnes ont aimé ce commentaire.
         </span>
         <svg
           aria-hidden="true"
