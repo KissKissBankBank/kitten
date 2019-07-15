@@ -5,7 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `avatarBadge` props on `Comment` and `CommentForm`.
-- Fix: Fix `width` error styles `TextInputWithUnit`.
+
+## [2.14.0] - 2019-07-11
+
+Feature:
+- Create `BubbleIcon` component.
+
+Fixes:
+- Fix props propagation in
+  `TextInputWithButton`,
+  `TextInputWithUnit`,
+  `TextInputWithLimit`.
+- Fix `width` error styles `TextInputWithUnit`.
 
 ## [2.13.1] - 2019-07-08
 
