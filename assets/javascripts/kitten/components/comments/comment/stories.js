@@ -77,7 +77,6 @@ storiesOf('Comments/Comment', module)
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
             )}
             ownerName={text('Owner name', 'Lorem ipsum')}
-            bottomNotes={text('Bottom notes', 'Supprimer')}
             avatarBadge={
               boolean('Avatar badge', false) ? (
                 <span aria-label="Owner" role="aside">
@@ -90,6 +89,13 @@ storiesOf('Comments/Comment', module)
                   />
                 </span>
               ) : null
+            }
+            bottomNotes={
+              boolean('With bottom notes?', false) && (
+                <div>
+                  <p>Bottom notes</p>
+                </div>
+              )
             }
           />
         </GridCol>

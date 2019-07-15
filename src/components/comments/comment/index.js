@@ -106,7 +106,7 @@ function (_PureComponent) {
       }, text)), _react.default.createElement(StyledCommentArrow, null)), bottomNotes && _react.default.createElement(_marger.Marger, {
         top: ".5"
       }, _react.default.createElement(StyledBottomNotes, {
-        tag: "p",
+        tag: "div",
         color: "font1",
         size: "micro",
         weight: "bold"
