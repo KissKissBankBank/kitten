@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `avatarBadge` props on `Comment` and `CommentForm`.
+- Feature: Add `avatarBadge` props on `CommentAvatar`.
 
 ## [2.14.0] - 2019-07-11
 
