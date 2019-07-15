@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [2.14.1] - 2019-07-15
 
 Fix:
-- Remove HTML warning to `Comment`.
+- Remove HTML warning from `Comment`.
 
 ## [2.14.0] - 2019-07-11
 
