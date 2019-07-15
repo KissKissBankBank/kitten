@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove HTML warning to `Comment`.
+
 ## [2.14.0] - 2019-07-11
 
 Feature:

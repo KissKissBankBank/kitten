@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, object } from '@storybook/addon-knobs'
+import { withKnobs, text, object, boolean } from '@storybook/addon-knobs'
 import { Comment } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
@@ -70,6 +70,13 @@ storiesOf('Comments/Comment', module)
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
             )}
             ownerName={text('Owner name', 'Lorem ipsum')}
+            bottomNotes={
+              boolean('With bottom notes?', false) && (
+                <div>
+                  <p>Bottom notes</p>
+                </div>
+              )
+            }
           />
         </GridCol>
       </Grid>
