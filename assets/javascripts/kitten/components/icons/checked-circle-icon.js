@@ -1,6 +1,11 @@
 import React from 'react'
 
-export const CheckedCircleIcon = ({ circleColor, checkedColor, ...props }) => {
+export const CheckedCircleIcon = ({
+  circleColor,
+  checkedColor,
+  title,
+  ...props
+}) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" {...props}>
       {title && <title>Checked circle</title>}
@@ -16,4 +21,5 @@ export const CheckedCircleIcon = ({ circleColor, checkedColor, ...props }) => {
 CheckedCircleIcon.defaultProps = {
   circleColor: '#fff',
   checkedColor: '#333',
+  title: '',
 }
