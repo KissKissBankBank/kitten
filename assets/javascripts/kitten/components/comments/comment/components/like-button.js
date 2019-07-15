@@ -5,6 +5,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { HeartIcon } from '../../../../components/icons/heart-icon'
 import COLORS from '../../../../constants/colors-config'
+import { VisuallyHidden } from '../../../accessibility/visually-hidden'
 
 const StyledButton = styled.button`
   display: inline-flex;
@@ -52,7 +53,11 @@ export class LikeButton extends PureComponent {
 
     return (
       <StyledButton role="button" {...props}>
-        <StyledHeartIcon {...props} />
+        <VisuallyHidden>
+          {`Cliquez ici pour indiquer que vous aimez commentaire.\
+          ${children} personnes ont aimé ce commentaire.`}
+        </VisuallyHidden>
+        <StyledHeartIcon aria-hidden="true" focusable="false" />
         {children}
       </StyledButton>
     )

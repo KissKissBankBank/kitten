@@ -89,7 +89,7 @@ const StyledBottomNotes = styled(Text)`
   margin-top: 0;
 `
 
-const StyledLikeButton = styled.div`
+const StyledLikeButtonBox = styled.div`
   position: absolute;
   right: 0;
   margin-top: ${pxToRem(-20)};
@@ -150,9 +150,9 @@ export class Comment extends PureComponent {
           </StyledCommentContent>
 
           {counterLikes && (
-            <StyledLikeButton>
+            <StyledLikeButtonBox>
               <LikeButton children={counterLikes} />
-            </StyledLikeButton>
+            </StyledLikeButtonBox>
           )}
 
           {bottomNotes && (

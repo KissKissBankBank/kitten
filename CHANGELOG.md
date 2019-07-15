@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `LikeButton` for `Comment` component.
+- Feature: Create `counterLikes` props for `Comment` component.
 - Feature: Create `BubbleIcon` component.
 - Fix: Fix `width` error styles `TextInputWithUnit`.
 
