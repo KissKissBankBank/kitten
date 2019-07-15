@@ -32,6 +32,7 @@ const StyledSvg = styled(PasswordIcon)`
     active &&
     css`
       fill: ${COLORS.primary1};
+      transition: all 0.2s;
     `}
 `
 

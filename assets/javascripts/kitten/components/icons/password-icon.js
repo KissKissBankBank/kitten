@@ -21,4 +21,5 @@ export const PasswordIcon = ({ color, title, ...props }) => {
 
 PasswordIcon.defaultProps = {
   color: '#222',
+  title: '',
 }
