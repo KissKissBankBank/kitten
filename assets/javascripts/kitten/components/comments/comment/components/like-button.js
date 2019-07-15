@@ -30,7 +30,7 @@ const StyledButton = styled.button`
   :focus,
   :active {
     svg {
-     fill: #ff0000;
+     fill: ${COLORS.error};
   }
 `
 
