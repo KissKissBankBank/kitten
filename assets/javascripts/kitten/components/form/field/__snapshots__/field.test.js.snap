@@ -296,52 +296,24 @@ Array [
     className="marger__StyledMarger-q3lecu-0 cHJBWz"
   >
     <div
-      data-radium={true}
-      style={
-        Object {
-          "display": "flex",
-          "position": "relative",
-        }
-      }
+      className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
     >
       <input
-        className="text-input__StyledInput-sc-11wej6v-1 dERTZf"
+        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 jNJvhF"
         disabled={false}
-        id="input"
         name="field"
-        placeholder="Placeholder…"
-        style={
-          Object {
-            "paddingRight": "40px",
-          }
-        }
         type="password"
       />
       <span
-        data-radium={true}
-        style={
-          Object {
-            "bottom": 0,
-            "display": "flex",
-            "marginRight": "11px",
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "zIndex": 1,
-          }
-        }
+        className="password-input__StyledIcon-sc-1futz46-2 kjaLuN"
         title="Show password"
       >
         <svg
-          data-radium={true}
+          active={false}
+          className="password-input__StyledSvg-sc-1futz46-3 iOHZyP"
           fill="#222"
           onClick={[Function]}
           onKeyDown={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
           tabIndex="0"
           viewBox="0 0 18 12"
           width="18"
@@ -449,52 +421,24 @@ Array [
     className="marger__StyledMarger-q3lecu-0 cHJBWz"
   >
     <div
-      data-radium={true}
-      style={
-        Object {
-          "display": "flex",
-          "position": "relative",
-        }
-      }
+      className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
     >
       <input
-        className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 jNJvhF"
         disabled={false}
-        id="input"
         name="field"
-        placeholder="Placeholder…"
-        style={
-          Object {
-            "paddingRight": "40px",
-          }
-        }
         type="password"
       />
       <span
-        data-radium={true}
-        style={
-          Object {
-            "bottom": 0,
-            "display": "flex",
-            "marginRight": "11px",
-            "position": "absolute",
-            "right": 0,
-            "top": 0,
-            "zIndex": 1,
-          }
-        }
+        className="password-input__StyledIcon-sc-1futz46-2 kjaLuN"
         title="Show password"
       >
         <svg
-          data-radium={true}
+          active={false}
+          className="password-input__StyledSvg-sc-1futz46-3 iOHZyP"
           fill="#222"
           onClick={[Function]}
           onKeyDown={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-            }
-          }
           tabIndex="0"
           viewBox="0 0 18 12"
           width="18"
