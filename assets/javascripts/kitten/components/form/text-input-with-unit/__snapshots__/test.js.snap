@@ -66,7 +66,9 @@ exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
     disabled={false}
     name="text"
     type="number"
-  />
+  >
+    €
+  </input>
   <span
     className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
     disabled={false}
