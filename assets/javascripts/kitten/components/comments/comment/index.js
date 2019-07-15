@@ -114,7 +114,7 @@ export class Comment extends PureComponent {
           {bottomNotes && (
             <Marger top=".5">
               <StyledBottomNotes
-                tag="p"
+                tag="div"
                 color="font1"
                 size="micro"
                 weight="bold"

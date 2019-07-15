@@ -143,7 +143,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     <div
       className="marger__StyledMarger-q3lecu-0 gWrqvV"
     >
-      <p
+      <div
         className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-5 kLqfi"
       >
         <div>
@@ -168,7 +168,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
             Notify abuse
           </a>
         </div>
-      </p>
+      </div>
     </div>
   </span>
 </div>
