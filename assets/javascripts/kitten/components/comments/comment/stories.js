@@ -80,12 +80,15 @@ storiesOf('Comments/Comment', module)
             bottomNotes={text('Bottom notes', 'Supprimer')}
             avatarBadge={
               boolean('Avatar badge', false) ? (
-                <CheckedCircleIcon
-                  width="25"
-                  height="25"
-                  circleColor="#19b4fa"
-                  checkedColor="#fff"
-                />
+                <span aria-label="Owner" role="aside">
+                  <CheckedCircleIcon
+                    width="25"
+                    height="25"
+                    circleColor="#19b4fa"
+                    checkedColor="#fff"
+                    aria-hidden="true"
+                  />
+                </span>
               ) : null
             }
           />

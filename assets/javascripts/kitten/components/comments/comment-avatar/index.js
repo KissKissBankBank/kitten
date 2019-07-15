@@ -68,7 +68,7 @@ export class CommentAvatar extends PureComponent {
 
     if (!avatarBadge) return
 
-    return <StyledAvatarBadge role="alert">{avatarBadge}</StyledAvatarBadge>
+    return <StyledAvatarBadge>{avatarBadge}</StyledAvatarBadge>
   }
 
   renderDate() {

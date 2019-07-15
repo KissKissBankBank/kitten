@@ -3,7 +3,7 @@ import React from 'react'
 export const CheckedCircleIcon = ({ circleColor, checkedColor, ...props }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" {...props}>
-      <title>Checked circle</title>
+      {title && <title>Checked circle</title>}
       <circle fill={circleColor} cx="10" cy="10" r="10" />
       <path
         fill={checkedColor}
