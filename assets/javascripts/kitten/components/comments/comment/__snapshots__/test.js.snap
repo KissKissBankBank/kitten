@@ -56,15 +56,22 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       />
     </div>
     <div
-      className="comment__StyledLikeButton-sc-8s8e85-7 dKzXhL"
+      className="comment__StyledLikeButtonBox-sc-8s8e85-7 hIyPui"
     >
       <button
         className="like-button__StyledButton-wk7ovs-0 iEpPvQ"
         role="button"
       >
+        <span
+          className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+        >
+          Cliquez ici pour indiquer que vous aimez commentaire.          4 personnes ont aimé ce commentaire.
+        </span>
         <svg
+          aria-hidden="true"
           className="like-button__StyledHeartIcon-wk7ovs-1 jkganL"
           fill="#222"
+          focusable="false"
           viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -168,15 +175,22 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
       />
     </div>
     <div
-      className="comment__StyledLikeButton-sc-8s8e85-7 dKzXhL"
+      className="comment__StyledLikeButtonBox-sc-8s8e85-7 hIyPui"
     >
       <button
         className="like-button__StyledButton-wk7ovs-0 iEpPvQ"
         role="button"
       >
+        <span
+          className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+        >
+          Cliquez ici pour indiquer que vous aimez commentaire.          4 personnes ont aimé ce commentaire.
+        </span>
         <svg
+          aria-hidden="true"
           className="like-button__StyledHeartIcon-wk7ovs-1 jkganL"
           fill="#222"
+          focusable="false"
           viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"
         >
