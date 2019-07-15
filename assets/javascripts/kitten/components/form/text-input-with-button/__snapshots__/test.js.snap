@@ -57,7 +57,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 </div>
 `;
 
-exports[`<TextInputWithButton /> with textInputProps matches with snapshot 1`] = `
+exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 <div
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >

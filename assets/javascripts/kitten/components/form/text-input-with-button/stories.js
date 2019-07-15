@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, object, text } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithButton } from './index'
 
@@ -34,36 +34,32 @@ const info = {
     <TextInputWithButton error />
     <TextInputWithButton disabled />
     ~~~
-
-    ### Props
-    ~~~js
-      <TextInputWithButton
-        textInputProps={{
-          # show TextInput component
-        }}
-      />
-    ~~~
   `,
 }
 
 storiesOf('Form/TextInput', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('Text input with button', () => {
-    return (
-      <Grid style={{ marginTop: '5em' }}>
-        <GridCol offset="1" col="6">
-          <TextInputWithButton
-            valid={boolean('Valid', false)}
-            error={boolean('Error', false)}
-            disabled={boolean('Disabled', false)}
-            tiny={boolean('Tiny', false)}
-            value={text('Button', 'Button')}
-            textInputProps={object('textInputProps', {
-              placeholder: 'Les props sont transmises',
-            })}
-          />
-        </GridCol>
-      </Grid>
-    )
-  })
+  .add(
+    'Text input with button',
+    () => {
+      return (
+        <Grid style={{ marginTop: '5em' }}>
+          <GridCol offset="1" col="6">
+            <TextInputWithButton
+              valid={boolean('Valid', false)}
+              error={boolean('Error', false)}
+              disabled={boolean('Disabled', false)}
+              tiny={boolean('Tiny', false)}
+              value={text('Button', 'Button')}
+              placeholder={text(
+                'Les props sont transmises',
+                'Les props sont transmises',
+              )}
+            />
+          </GridCol>
+        </Grid>
+      )
+    },
+    { info },
+  )

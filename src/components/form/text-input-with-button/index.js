@@ -85,10 +85,9 @@ function (_PureComponent) {
           disabled = _this$props.disabled,
           tiny = _this$props.tiny,
           value = _this$props.value,
-          textInputProps = _this$props.textInputProps,
           modifier = _this$props.modifier,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "textInputProps", "modifier"]);
-      return _react.default.createElement(StyledTextInputWithButton, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, textInputProps, {
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "modifier"]);
+      return _react.default.createElement(StyledTextInputWithButton, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
         valid: valid,
         error: error,
         disabled: disabled,
@@ -112,11 +111,7 @@ TextInputWithButton.propTypes = {
   disabled: _propTypes.default.bool,
   tiny: _propTypes.default.bool,
   modifier: _propTypes.default.string,
-  value: _propTypes.default.string,
-  textInputProps: _propTypes.default.shape({
-    tag: _propTypes.default.string,
-    name: _propTypes.default.string
-  })
+  value: _propTypes.default.string
 };
 TextInputWithButton.defaultProps = {
   valid: false,
@@ -124,9 +119,5 @@ TextInputWithButton.defaultProps = {
   disabled: false,
   tiny: false,
   value: 'Button',
-  modifier: 'beryllium',
-  textInputProps: {
-    tag: 'input',
-    name: 'text'
-  }
+  modifier: 'beryllium'
 };
