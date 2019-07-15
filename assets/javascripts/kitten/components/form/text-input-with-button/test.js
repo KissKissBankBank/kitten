@@ -15,15 +15,13 @@ describe('<TextInputWithButton />', () => {
     })
   })
 
-  describe('with textInputProps', () => {
+  describe('with props', () => {
     beforeEach(() => {
       component = renderer
         .create(
           <TextInputWithButton
             value="Button"
-            textInputProps={{
-              placeholder: 'Les props sont transmises',
-            }}
+            placeholder="Les props sont transmises"
           />,
         )
         .toJSON()

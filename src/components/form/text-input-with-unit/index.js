@@ -40,7 +40,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 var StyledTextInputWithUnit = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-unit__StyledTextInputWithUnit",
   componentId: "gjmccx-0"
-})(["display:flex;", ""], function (_ref) {
+})(["display:flex;width:1%;", ""], function (_ref) {
   var digits = _ref.digits;
   return !digits && (0, _styledComponents.css)(["width:100%;"]);
 });
@@ -53,7 +53,7 @@ var StyledTextInput = (0, _styledComponents.default)(_textInput.TextInput).withC
 var StyledInputUnit = _styledComponents.default.span.withConfig({
   displayName: "text-input-with-unit__StyledInputUnit",
   componentId: "gjmccx-2"
-})(["display:flex;align-items:center;justify-content:center;width:1%;background-color:", ";border:", " solid ", ";border-left:0;border-radius:0;box-sizing:border-box;padding:0 ", ";color:", ";white-space:nowrap;transition:all .2s;font-size:", ";", ";:focus{border-color:", ";color:", ";}", " ", " ", " ", " ", " ", ":focus + &{border-color:", ";color:", ";}"], _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), _colorsConfig.default.font1, (0, _typography.stepToRem)(0), _typographyConfig.default.fontStyles.regular, _colorsConfig.default.line2, _colorsConfig.default.font1, function (_ref2) {
+})(["display:flex;align-items:center;justify-content:center;background-color:", ";border:", " solid ", ";border-left:0;border-radius:0;box-sizing:border-box;padding:0 ", ";color:", ";white-space:nowrap;transition:all .2s;font-size:", ";", ";:focus{border-color:", ";color:", ";}", " ", " ", " ", " ", " ", ":focus + &{border-color:", ";color:", ";}"], _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), _colorsConfig.default.font1, (0, _typography.stepToRem)(0), _typographyConfig.default.fontStyles.regular, _colorsConfig.default.line2, _colorsConfig.default.font1, function (_ref2) {
   var valid = _ref2.valid;
   return valid && (0, _styledComponents.css)(["border-color:", ";color:", ";"], _colorsConfig.default.tertiary2, _colorsConfig.default.valid);
 }, function (_ref3) {
@@ -95,9 +95,8 @@ function (_PureComponent) {
           disabled = _this$props.disabled,
           unit = _this$props.unit,
           unitWord = _this$props.unitWord,
-          textInputProps = _this$props.textInputProps,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["type", "valid", "error", "tiny", "disabled", "unit", "unitWord", "textInputProps"]);
-      return _react.default.createElement(StyledTextInputWithUnit, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, textInputProps, {
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["type", "valid", "error", "tiny", "disabled", "unit", "unitWord"]);
+      return _react.default.createElement(StyledTextInputWithUnit, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
         ref: this.input,
         type: type,
         valid: valid,
@@ -124,10 +123,7 @@ TextInputWithUnit.propTypes = {
   disabled: _propTypes.default.bool,
   unit: _propTypes.default.string,
   unitWord: _propTypes.default.bool,
-  textInputProps: _propTypes.default.shape({
-    digits: _propTypes.default.number,
-    tag: _propTypes.default.string
-  })
+  digits: _propTypes.default.number
 };
 TextInputWithUnit.defaultProps = {
   unit: 'λ',
@@ -137,8 +133,5 @@ TextInputWithUnit.defaultProps = {
   error: false,
   tiny: false,
   disabled: false,
-  textInputProps: {
-    digits: 0,
-    tag: 'input'
-  }
+  digits: null
 };
