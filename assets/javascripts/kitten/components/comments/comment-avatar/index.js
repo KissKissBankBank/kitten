@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../components/layout/marger'
 import { ButtonImage } from '../../../components/buttons/button-image'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -11,6 +10,11 @@ const StyledAvatar = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+const StyledPosition = styled.div`
+  position: relative;
+  margin-bottom: ${pxToRem(10)};
 `
 
 const buttonImgHuge = pxToRem(80)
@@ -27,14 +31,22 @@ const StyledButtonImage = styled(ButtonImage)`
   }
 `
 
+const StyledAvatarBadge = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+`
+
 export class CommentAvatar extends PureComponent {
   static propTypes = {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string,
+    avatarBadge: PropTypes.node,
   }
 
   static defaultProps = {
     commentDate: '',
+    avatarBadge: '',
   }
 
   render() {
@@ -42,17 +54,25 @@ export class CommentAvatar extends PureComponent {
 
     return (
       <StyledAvatar>
-        <Marger bottom="1">
+        <StyledPosition>
+          {this.renderBadge()}
           <StyledButtonImage
             tag="span"
             withoutPointerEvents
             img={avatarImgProps}
           />
-        </Marger>
-
+        </StyledPosition>
         {this.renderDate()}
       </StyledAvatar>
     )
+  }
+
+  renderBadge() {
+    const { avatarBadge } = this.props
+
+    if (!avatarBadge) return
+
+    return <StyledAvatarBadge>{avatarBadge}</StyledAvatarBadge>
   }
 
   renderDate() {

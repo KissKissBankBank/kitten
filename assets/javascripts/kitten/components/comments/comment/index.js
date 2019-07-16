@@ -110,6 +110,7 @@ export class Comment extends PureComponent {
     hasLike: PropTypes.boolean,
     counterLikes: PropTypes.string,
     accessibilityLabel: PropTypes.string,
+    avatarBadge: PropTypes.node,
   }
 
   static defaultProps = {
@@ -118,6 +119,7 @@ export class Comment extends PureComponent {
     hasLiked: '',
     counterLikes: '',
     accessibilityLabel: '',
+    avatarBadge: '',
   }
 
   render() {
@@ -130,6 +132,7 @@ export class Comment extends PureComponent {
       counterLikes,
       hasLiked,
       accessibilityLabel,
+      avatarBadge,
       ...props
     } = this.props
 
@@ -138,6 +141,7 @@ export class Comment extends PureComponent {
         <CommentAvatar
           avatarImgProps={avatarImgProps}
           commentDate={commentDate}
+          avatarBadge={avatarBadge}
         />
         <StyledCommentContainer>
           <StyledCommentContent>

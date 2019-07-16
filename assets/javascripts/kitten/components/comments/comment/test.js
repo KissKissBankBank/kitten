@@ -1,6 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { Comment } from './index'
+import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 
 const createMockMediaMatcher = matches => () => ({
   matches,
@@ -66,6 +67,35 @@ describe('<Comment />', () => {
           ownerName="Custom name"
           bottomNotes={<BottomNotes />}
           counterLikes="4"
+        />,
+      )
+      .toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('should match a snapshot with a complex avatar badge', () => {
+    window.matchMedia = createMockMediaMatcher(false)
+    const AvatarBadge = () => (
+      <CheckedCircleIcon
+        width="25"
+        height="25"
+        circleColor="#19b4fa"
+        checkedColor="#fff"
+      />
+    )
+
+    const tree = renderer
+      .create(
+        <Comment
+          avatarImgProps={{
+            src: '#image',
+            alt: 'Image alt',
+          }}
+          commentDate="Custom date"
+          text="Custom text"
+          ownerName="Custom name"
+          avatarBadge={<AvatarBadge />}
         />,
       )
       .toJSON()

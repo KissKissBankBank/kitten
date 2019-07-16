@@ -7,6 +7,7 @@ import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Marger } from '../../../../components/layout/marger'
 import { Text } from '../../../../components/typography/text'
 import { stepToRem } from '../../../../helpers/utils/typography'
+import { CheckedCircleIcon } from '../../../../components/icons/checked-circle-icon'
 
 const ActionLinks = styled(({ children, className }) => {
   return (
@@ -55,6 +56,14 @@ const CommentsPage = props => (
             commentDate="20 jours"
             bottomNotes={<ActionLinks children="Supprimer" />}
             counterLikes="309"
+            avatarBadge={
+              <CheckedCircleIcon
+                width="25"
+                height="25"
+                circleColor="#19b4fa"
+                checkedColor="#fff"
+              />
+            }
           />
         </Marger>
       </GridCol>
