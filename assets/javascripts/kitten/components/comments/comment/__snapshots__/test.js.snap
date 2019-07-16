@@ -89,7 +89,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       className="marger__StyledMarger-q3lecu-0 gWrqvV"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-5 kLqfi"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-6 bWSYZb"
       >
         <div>
           <a
