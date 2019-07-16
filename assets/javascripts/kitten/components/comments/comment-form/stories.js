@@ -4,6 +4,7 @@ import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, object, boolean } from '@storybook/addon-knobs'
 import { CommentForm } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
+import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 
 const info = {
   text: `
@@ -42,6 +43,11 @@ const info = {
     ~~~js
     <CommentForm error errorMessage="…" />
     ~~~
+
+    ### With avatarBadge
+    ~~~js
+    <Comment avatarBadge="…" />
+    ~~~
   `,
   header: false,
   propTables: false,
@@ -66,6 +72,18 @@ storiesOf('Comments/CommentForm', module)
               'Error message',
               'Cum sociis natoque penatibus et magnis',
             )}
+            avatarBadge={
+              boolean('Avatar badge', false) && (
+                <span aria-label="Owner" role="aside">
+                  <CheckedCircleIcon
+                    width="25"
+                    height="25"
+                    circleColor="#19b4fa"
+                    checkedColor="#fff"
+                  />
+                </span>
+              )
+            }
           />
         </GridCol>
       </Grid>

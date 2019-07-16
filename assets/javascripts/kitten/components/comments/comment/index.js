@@ -66,11 +66,13 @@ export class Comment extends PureComponent {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string.isRequired,
     bottomNotes: PropTypes.node,
+    avatarBadge: PropTypes.node,
   }
 
   static defaultProps = {
     bottomNotes: '',
     ownerName: '',
+    avatarBadge: '',
   }
 
   render() {
@@ -80,6 +82,7 @@ export class Comment extends PureComponent {
       avatarImgProps,
       commentDate,
       bottomNotes,
+      avatarBadge,
       ...props
     } = this.props
 
@@ -88,6 +91,7 @@ export class Comment extends PureComponent {
         <CommentAvatar
           avatarImgProps={avatarImgProps}
           commentDate={commentDate}
+          avatarBadge={avatarBadge}
         />
         <StyledCommentContainer>
           <StyledCommentContent>
