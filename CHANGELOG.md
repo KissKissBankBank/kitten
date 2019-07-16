@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `title` prop on `CheckedCircleIcon`.
+- Feature: Add `avatarBadge` prop on `CommentAvatar`, `Comment` and `CommentForm`.
+
 ## [2.15.0] - 2019-07-16
 
 Feature:
