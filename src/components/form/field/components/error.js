@@ -9,6 +9,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.FieldError = void 0;
 
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -38,10 +42,12 @@ function (_Component) {
   (0, _createClass2.default)(FieldError, [{
     key: "render",
     value: function render() {
-      var children = this.props.children;
+      var _this$props = this.props,
+          children = _this$props.children,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["children"]);
       return _react.default.createElement(_marger.Marger, {
         top: "1"
-      }, _react.default.createElement(_text.Text, {
+      }, _react.default.createElement(_text.Text, (0, _extends2.default)({
         tag: "p",
         color: "error",
         size: "micro",
@@ -50,7 +56,7 @@ function (_Component) {
         style: {
           margin: 0
         }
-      }, children));
+      }, others), children));
     }
   }]);
   return FieldError;

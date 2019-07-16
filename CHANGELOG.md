@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `avatarBadge` props on `CommentAvatar`.
 
+## [2.15.0] - 2019-07-16
+
+Feature:
+- Dispatch props to `Field.Error` subcomponent.
+
 ## [2.14.1] - 2019-07-15
 
 Fix:
