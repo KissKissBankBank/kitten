@@ -9,6 +9,7 @@ describe('<PasswordInput />', () => {
         <PasswordInput
           iconLabel="Custom icon label"
           hiddenIconLabel="Custom hidden icon label"
+          id="password"
         />,
       )
       .toJSON()
