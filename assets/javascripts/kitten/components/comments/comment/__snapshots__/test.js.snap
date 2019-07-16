@@ -204,7 +204,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         4
       </button>
     </div>
-
+    
   </span>
 </div>
 `;
