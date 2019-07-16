@@ -28,6 +28,7 @@ const StyledButton = styled.button`
 
   :hover,
   :focus,
+  &[aria-pressed='true'],
   :active {
     svg {
      fill: ${COLORS.error};
@@ -45,17 +46,21 @@ const StyledHeartIcon = styled(HeartIcon)`
 export class LikeButton extends PureComponent {
   static propTypes = {
     children: PropTypes.string.isRequired,
+    accessibilityLabel: PropTypes.string,
+    hasLiked: PropTypes.boolean,
+  }
+
+  static defaultProps = {
+    accessibilityLabel: '',
+    hasLiked: false,
   }
 
   render() {
-    const { children, ...props } = this.props
+    const { children, accessibilityLabel, hasLiked, ...props } = this.props
 
     return (
-      <StyledButton role="button" {...props}>
-        <VisuallyHidden>
-          {`Cliquez ici pour indiquer que vous aimez commentaire. ${children}\
-          personnes ont aimé ce commentaire.`}
-        </VisuallyHidden>
+      <StyledButton role="button" aria-pressed={`${hasLiked}`} {...props}>
+        <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
         <StyledHeartIcon aria-hidden="true" focusable="false" />
         {children}
       </StyledButton>

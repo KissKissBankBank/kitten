@@ -48,9 +48,9 @@ const info = {
     <Comment text="…" />
     ~~~
 
-    ### Counter likes
+    ### Likes
     ~~~js
-    <Comment counterLikes="…" />
+    <Comment counterLikes="…" hasLike="…" accessibilityLabel="…" />
     ~~~
   `,
   header: false,
@@ -75,6 +75,12 @@ storiesOf('Comments/Comment', module)
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
             )}
             ownerName={text('Owner name', 'Lorem ipsum')}
+            hasLiked={boolean('Is selected', true)}
+            accessibilityLabel={text(
+              'Label',
+              'Cliquez ici pour indiquer que vous aimez commentaire.`${children}` personnes ont aimé ce commentaire.',
+            )}
+            counterLikes={text('Counter Likes', '100')}
             bottomNotes={
               boolean('With bottom notes?', false) && (
                 <div>

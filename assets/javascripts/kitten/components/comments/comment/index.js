@@ -107,11 +107,17 @@ export class Comment extends PureComponent {
     avatarImgProps: PropTypes.object.isRequired,
     commentDate: PropTypes.string.isRequired,
     bottomNotes: PropTypes.node,
+    hasLike: PropTypes.boolean,
+    counterLikes: PropTypes.string,
+    accessibilityLabel: PropTypes.string,
   }
 
   static defaultProps = {
     bottomNotes: '',
     ownerName: '',
+    hasLiked: '',
+    counterLikes: '',
+    accessibilityLabel: '',
   }
 
   render() {
@@ -122,6 +128,8 @@ export class Comment extends PureComponent {
       commentDate,
       bottomNotes,
       counterLikes,
+      hasLiked,
+      accessibilityLabel,
       ...props
     } = this.props
 
@@ -151,7 +159,11 @@ export class Comment extends PureComponent {
 
           {counterLikes && (
             <StyledLikeButtonBox>
-              <LikeButton children={counterLikes} />
+              <LikeButton
+                hasLiked={hasLiked}
+                accessibilityLabel={accessibilityLabel}
+                children={counterLikes}
+              />
             </StyledLikeButtonBox>
           )}
 
