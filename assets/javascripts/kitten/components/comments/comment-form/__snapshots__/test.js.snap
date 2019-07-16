@@ -8,10 +8,10 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
     className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      className="marger__StyledMarger-q3lecu-0 eyQgpE"
+      className="comment-avatar__StyledPosition-sc-10x87zp-1 gwuSzB"
     >
       <div
-        className="comment-avatar__StyledAvatarBadge-sc-10x87zp-2 cKwWuP"
+        className="comment-avatar__StyledAvatarBadge-sc-10x87zp-3 giOOEs"
       >
         <svg
           height="25"
@@ -33,7 +33,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         </svg>
       </div>
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 cyfqAR"
         tabIndex={null}
       >
         <img
@@ -94,10 +94,10 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      className="marger__StyledMarger-q3lecu-0 eyQgpE"
+      className="comment-avatar__StyledPosition-sc-10x87zp-1 gwuSzB"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 cyfqAR"
         tabIndex={null}
       >
         <img

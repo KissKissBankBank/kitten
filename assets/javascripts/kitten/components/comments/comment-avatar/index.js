@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../components/layout/marger'
 import { ButtonImage } from '../../../components/buttons/button-image'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -11,6 +10,11 @@ const StyledAvatar = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+const StyledPosition = styled.div`
+  position: relative;
+  margin-bottom: ${pxToRem(10)};
 `
 
 const buttonImgHuge = pxToRem(80)
@@ -50,14 +54,14 @@ export class CommentAvatar extends PureComponent {
 
     return (
       <StyledAvatar>
-        <Marger bottom="1" style={{ position: 'relative' }}>
+        <StyledPosition>
           {this.renderBadge()}
           <StyledButtonImage
             tag="span"
             withoutPointerEvents
             img={avatarImgProps}
           />
-        </Marger>
+        </StyledPosition>
         {this.renderDate()}
       </StyledAvatar>
     )
