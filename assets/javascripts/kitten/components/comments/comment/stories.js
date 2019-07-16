@@ -78,7 +78,7 @@ storiesOf('Comments/Comment', module)
             )}
             ownerName={text('Owner name', 'Lorem ipsum')}
             avatarBadge={
-              boolean('Avatar badge', false) ? (
+              boolean('Avatar badge', false) && (
                 <span aria-label="Owner" role="aside">
                   <CheckedCircleIcon
                     width="25"
@@ -88,7 +88,7 @@ storiesOf('Comments/Comment', module)
                     aria-hidden="true"
                   />
                 </span>
-              ) : null
+              )
             }
             bottomNotes={
               boolean('With bottom notes?', false) && (

@@ -23,7 +23,9 @@ exports[`<IconContainer/> should match snapshot when we add an icon description 
       width={25}
       xmlns="http://www.w3.org/2000/svg"
     >
-      
+      <title>
+        Checked circle
+      </title>
       <circle
         cx="10"
         cy="10"
@@ -57,7 +59,9 @@ exports[`<IconContainer/> should match snapshot when we change color 1`] = `
       width={25}
       xmlns="http://www.w3.org/2000/svg"
     >
-      
+      <title>
+        Checked circle
+      </title>
       <circle
         cx="10"
         cy="10"
@@ -91,7 +95,9 @@ exports[`<IconContainer/> should match snapshot when we change position 1`] = `
       width={25}
       xmlns="http://www.w3.org/2000/svg"
     >
-      
+      <title>
+        Checked circle
+      </title>
       <circle
         cx="10"
         cy="10"
@@ -125,7 +131,9 @@ exports[`<IconContainer/> should match snapshot when we change width and height 
       width={30}
       xmlns="http://www.w3.org/2000/svg"
     >
-      
+      <title>
+        Checked circle
+      </title>
       <circle
         cx="10"
         cy="10"
@@ -159,7 +167,9 @@ exports[`<IconContainer/> should match snapshot with default behavior 1`] = `
       width={25}
       xmlns="http://www.w3.org/2000/svg"
     >
-      
+      <title>
+        Checked circle
+      </title>
       <circle
         cx="10"
         cy="10"

@@ -19,7 +19,9 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
           width="25"
           xmlns="http://www.w3.org/2000/svg"
         >
-          
+          <title>
+            Checked circle
+          </title>
           <circle
             cx="10"
             cy="10"

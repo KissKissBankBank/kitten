@@ -73,7 +73,7 @@ storiesOf('Comments/CommentForm', module)
               'Cum sociis natoque penatibus et magnis',
             )}
             avatarBadge={
-              boolean('Avatar badge', false) ? (
+              boolean('Avatar badge', false) && (
                 <span aria-label="Owner" role="aside">
                   <CheckedCircleIcon
                     width="25"
@@ -82,7 +82,7 @@ storiesOf('Comments/CommentForm', module)
                     checkedColor="#fff"
                   />
                 </span>
-              ) : null
+              )
             }
           />
         </GridCol>
