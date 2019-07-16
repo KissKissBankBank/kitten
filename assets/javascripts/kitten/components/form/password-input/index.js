@@ -25,6 +25,7 @@ const StyledIcon = styled.span`
   top: 0;
   bottom: 0;
 `
+
 const StyledSvg = styled(PasswordIcon)`
   cursor: pointer;
 
