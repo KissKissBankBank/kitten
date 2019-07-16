@@ -5,7 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `PasswordInput` with styled-components.
-- Fix: Fix `width` error styles `TextInputWithUnit`.
 
 ## [2.14.1] - 2019-07-15
 
