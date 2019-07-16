@@ -11,22 +11,21 @@ exports[`<PasswordInput /> should match its empty snapshot 1`] = `
     type="password"
   />
   <span
-    className="password-input__StyledIcon-sc-1futz46-2 kjaLuN"
+    aria-pressed={false}
+    className="password-input__StyledIcon-sc-1futz46-2 jGgtCB"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    tabIndex="0"
     title="Custom icon label"
   >
     <svg
-      active={false}
-      className="password-input__StyledSvg-sc-1futz46-3 iOHZyP"
       fill="#222"
-      onClick={[Function]}
-      onKeyDown={[Function]}
-      tabIndex="0"
       viewBox="0 0 18 12"
       width="18"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        Custom icon label
+        
       </title>
       <path
         d="M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"

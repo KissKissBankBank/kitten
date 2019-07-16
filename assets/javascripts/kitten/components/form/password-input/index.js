@@ -20,21 +20,18 @@ const StyledIcon = styled.span`
   display: flex;
   position: absolute;
   z-index: 1;
-  margin-right: ${pxToRem(11)};
+  padding: 0 ${pxToRem(11)};
   right: 0;
   top: 0;
   bottom: 0;
-`
-
-const StyledSvg = styled(PasswordIcon)`
   cursor: pointer;
 
-  ${({ active }) =>
-    active &&
-    css`
+  &[aria-pressed='true'] {
+    svg {
       fill: ${COLORS.primary1};
       transition: all 0.2s;
-    `}
+    }
+  }
 `
 
 export class PasswordInput extends PureComponent {
@@ -80,14 +77,14 @@ export class PasswordInput extends PureComponent {
     return (
       <StyledPasswordInput>
         <StyledTextInput {...others} name={name} type={type} />
-        <StyledIcon title={iconTitle}>
-          <StyledSvg
-            tabIndex="0"
-            onClick={this.handleClick}
-            onKeyDown={this.handleKeyDown}
-            title={iconTitle}
-            active={active}
-          />
+        <StyledIcon
+          title={iconTitle}
+          onClick={this.handleClick}
+          onKeyDown={this.handleKeyDown}
+          aria-pressed={active}
+          tabIndex="0"
+        >
+          <PasswordIcon />
         </StyledIcon>
       </StyledPasswordInput>
     )
