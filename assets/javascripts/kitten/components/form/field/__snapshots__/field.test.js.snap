@@ -299,28 +299,29 @@ Array [
       className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
     >
       <input
-        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 dERTZf"
         disabled={false}
+        id="input"
         name="field"
+        placeholder="Placeholder…"
         type="password"
       />
       <span
-        className="password-input__StyledIcon-sc-1futz46-2 kjaLuN"
+        aria-pressed={false}
+        className="password-input__StyledIcon-sc-1futz46-2 jvuiVZ"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
         title="Show password"
       >
         <svg
-          active={false}
-          className="password-input__StyledSvg-sc-1futz46-3 iOHZyP"
           fill="#222"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex="0"
           viewBox="0 0 18 12"
           width="18"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
-            Show password
+            
           </title>
           <path
             d="M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
@@ -426,26 +427,27 @@ Array [
       <input
         className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 jNJvhF"
         disabled={false}
+        id="input"
         name="field"
+        placeholder="Placeholder…"
         type="password"
       />
       <span
-        className="password-input__StyledIcon-sc-1futz46-2 kjaLuN"
+        aria-pressed={false}
+        className="password-input__StyledIcon-sc-1futz46-2 jvuiVZ"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        tabIndex="0"
         title="Show password"
       >
         <svg
-          active={false}
-          className="password-input__StyledSvg-sc-1futz46-3 iOHZyP"
           fill="#222"
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          tabIndex="0"
           viewBox="0 0 18 12"
           width="18"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
-            Show password
+            
           </title>
           <path
             d="M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
