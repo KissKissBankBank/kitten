@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react'
-import styled from 'styled-components'
+import React, { useEffect, useRef, useState } from 'react'
+import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
 import { CommentAvatar } from '../../../components/comments/comment-avatar'
@@ -7,6 +7,11 @@ import { Text } from '../../../components/typography/text'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { LikeButton } from './components/like-button'
+import domElementHelper from '../../../helpers/dom/element-helper'
+
+const desktopPadding = pxToRem(30)
+const tabletAndMobilePadding = pxToRem(20)
 
 const StyledContentText = styled(Text)`
   font-size: ${stepToRem(-1)};
@@ -26,7 +31,8 @@ const StyledCommentArrow = styled.span`
   border-style: solid;
   border-color: transparent;
   border-right-color: ${COLORS.background3};
-  left: -${pxToRem(20)};
+  left: ${pxToRem(-20)};
+
   @media (min-width: ${ScreenConfig.S.min}px) {
     top: ${pxToRem(35)};
   }
@@ -39,10 +45,11 @@ const StyledGrid = styled.div`
 const StyledCommentContainer = styled.span`
   position: relative;
   margin-left: ${pxToRem(20)};
+  flex: 1;
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    margin-left: ${pxToRem(35)},
-  },
+    margin-left: ${pxToRem(35)};
+  }
 `
 
 const StyledCommentContent = styled.div`
@@ -50,8 +57,32 @@ const StyledCommentContent = styled.div`
   background-color: ${COLORS.background3};
   border-color: ${COLORS.background3};
   color: ${COLORS.font1};
-  padding: ${pxToRem(30)};
   font-size: ${stepToRem(0)};
+  padding: ${tabletAndMobilePadding};
+
+  @media (min-width: ${ScreenConfig.M.min}px) {
+    padding-top: ${desktopPadding};
+    padding-right: ${desktopPadding};
+    padding-left: ${desktopPadding};
+  }
+`
+
+const StyledMargerText = styled.div`
+  ${({ hasLikeButton }) =>
+    hasLikeButton &&
+    css`
+      margin-bottom: ${pxToRem(15)};
+
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        margin-bottom: ${pxToRem(20)};
+      }
+    `}
+
+  ${({ ownerName }) =>
+    ownerName &&
+    css`
+      margin-top: ${pxToRem(10)};
+    `}
 `
 
 const StyledBottomNotes = styled(Text)`
@@ -59,72 +90,103 @@ const StyledBottomNotes = styled(Text)`
   margin-top: 0;
 `
 
-export class Comment extends PureComponent {
-  static propTypes = {
-    text: PropTypes.node.isRequired,
-    ownerName: PropTypes.string,
-    avatarImgProps: PropTypes.object.isRequired,
-    commentDate: PropTypes.string.isRequired,
-    bottomNotes: PropTypes.node,
-    avatarBadge: PropTypes.node,
+const StyledLikeButtonBox = styled.div`
+  position: absolute;
+  right: 0;
+  margin-top: ${pxToRem(-20)};
+  margin-right: ${pxToRem(20)};
+
+  @media (min-width: ${ScreenConfig.M.min}px) {
+    margin-right: ${pxToRem(30)};
   }
+`
 
-  static defaultProps = {
-    bottomNotes: '',
-    ownerName: '',
-    avatarBadge: '',
-  }
+export const Comment = ({
+  text,
+  ownerName,
+  avatarImgProps,
+  commentDate,
+  bottomNotes,
+  likeButtonProps,
+  avatarBadge,
+  ...props
+}) => {
+  const likeButtonElement = useRef(null)
+  const [likeButtonWidth, setLikeButtonWidth] = useState(0)
 
-  render() {
-    const {
-      text,
-      ownerName,
-      avatarImgProps,
-      commentDate,
-      bottomNotes,
-      avatarBadge,
-      ...props
-    } = this.props
+  useEffect(() => {
+    const marginLeftAndRight = 40
+    const elementWidth = domElementHelper.getComputedWidth(
+      likeButtonElement.current,
+    )
 
-    return (
-      <StyledGrid>
-        <CommentAvatar
-          avatarImgProps={avatarImgProps}
-          commentDate={commentDate}
-          avatarBadge={avatarBadge}
-        />
-        <StyledCommentContainer>
-          <StyledCommentContent>
-            {ownerName && (
-              <Marger bottom="1">
-                <Text color="font1" size="tiny" weight="regular">
-                  {ownerName}
-                </Text>
-              </Marger>
-            )}
+    setLikeButtonWidth(elementWidth + marginLeftAndRight)
+  }, [])
 
-            <Marger top={ownerName ? 1 : null}>
-              <StyledContentText color="font1" weight="light">
-                {text}
-              </StyledContentText>
-            </Marger>
-            <StyledCommentArrow />
-          </StyledCommentContent>
-
-          {bottomNotes && (
-            <Marger top=".5">
-              <StyledBottomNotes
-                tag="div"
-                color="font1"
-                size="micro"
-                weight="bold"
-              >
-                {bottomNotes}
-              </StyledBottomNotes>
+  return (
+    <StyledGrid>
+      <CommentAvatar
+        avatarImgProps={avatarImgProps}
+        commentDate={commentDate}
+        avatarBadge={avatarBadge}
+      />
+      <StyledCommentContainer>
+        <StyledCommentContent>
+          {ownerName && (
+            <Marger bottom="1">
+              <Text color="font1" size="tiny" weight="regular">
+                {ownerName}
+              </Text>
             </Marger>
           )}
-        </StyledCommentContainer>
-      </StyledGrid>
-    )
-  }
+
+          <StyledMargerText
+            hasLikeButton={!!likeButtonProps.children}
+            ownerName={ownerName}
+          >
+            <StyledContentText color="font1" weight="light">
+              {text}
+            </StyledContentText>
+          </StyledMargerText>
+          <StyledCommentArrow />
+        </StyledCommentContent>
+
+        {likeButtonProps.children && (
+          <StyledLikeButtonBox ref={likeButtonElement}>
+            <LikeButton {...likeButtonProps} />
+          </StyledLikeButtonBox>
+        )}
+
+        {bottomNotes && (
+          <Marger top=".5" style={{ marginRight: likeButtonWidth }}>
+            <StyledBottomNotes
+              tag="div"
+              color="font1"
+              size="micro"
+              weight="bold"
+            >
+              {bottomNotes}
+            </StyledBottomNotes>
+          </Marger>
+        )}
+      </StyledCommentContainer>
+    </StyledGrid>
+  )
+}
+
+Comment.propTypes = {
+  text: PropTypes.node.isRequired,
+  ownerName: PropTypes.string,
+  avatarImgProps: PropTypes.object.isRequired,
+  commentDate: PropTypes.string.isRequired,
+  bottomNotes: PropTypes.node,
+  likeButtonProps: PropTypes.object,
+  avatarBadge: PropTypes.node,
+}
+
+Comment.defaultProps = {
+  bottomNotes: '',
+  ownerName: '',
+  likeButtonProps: {},
+  avatarBadge: '',
 }

@@ -34,6 +34,10 @@ describe('<Comment />', () => {
           commentDate="Custom date"
           text="Custom text"
           ownerName="Custom name"
+          likeButtonProps={{
+            children: '4',
+            hasLiked: true,
+          }}
         />,
       )
       .toJSON()
