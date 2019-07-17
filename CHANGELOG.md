@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add like button event styles only when an event is attached (`Comment`).
+
 ## [2.16.0] - 2019-07-17
 
 Features:

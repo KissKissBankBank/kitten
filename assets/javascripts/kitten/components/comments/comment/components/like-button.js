@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import { HeartIcon } from '../../../../components/icons/heart-icon'
@@ -24,19 +24,29 @@ const StyledButton = styled.button`
   appareance: none;
   box-sizing: border-box;
   outline: none;
-  cursor: pointer;
 
-  :hover,
   &[aria-pressed='true'] {
     svg {
       fill: ${COLORS.error};
     }
   }
 
-  :focus,
-  :active {
-    border-color: ${COLORS.line2};
-  }
+  ${({ as, onClick }) =>
+    (as === 'a' || onClick) &&
+    css`
+      cursor: pointer;
+
+      :hover {
+        svg {
+          fill: ${COLORS.error};
+        }
+      }
+
+      :focus,
+      :active {
+        border-color: ${COLORS.line2};
+      }
+    `}
 `
 
 const StyledHeartIcon = styled(HeartIcon)`
