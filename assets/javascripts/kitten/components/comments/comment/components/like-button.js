@@ -27,11 +27,15 @@ const StyledButton = styled.button`
   cursor: pointer;
 
   :hover,
-  :focus,
-  &[aria-pressed='true'],
-  :active {
+  &[aria-pressed='true'] {
     svg {
-     fill: ${COLORS.error};
+      fill: ${COLORS.error};
+    }
+  }
+
+  :focus,
+  :active {
+    border-color: ${COLORS.line2};
   }
 `
 
@@ -47,7 +51,7 @@ export class LikeButton extends PureComponent {
   static propTypes = {
     children: PropTypes.string.isRequired,
     accessibilityLabel: PropTypes.string,
-    hasLiked: PropTypes.boolean,
+    hasLiked: PropTypes.bool,
   }
 
   static defaultProps = {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
@@ -8,6 +8,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { LikeButton } from './components/like-button'
+import domElementHelper from '../../../helpers/dom/element-helper'
 
 const desktopPadding = pxToRem(30)
 const tabletAndMobilePadding = pxToRem(20)
@@ -67,8 +68,8 @@ const StyledCommentContent = styled.div`
 `
 
 const StyledMargerText = styled.div`
-  ${({ counterLikes }) =>
-    counterLikes &&
+  ${({ hasLikeButton }) =>
+    hasLikeButton &&
     css`
       margin-bottom: ${pxToRem(15)};
 
@@ -106,12 +107,22 @@ export const Comment = ({
   avatarImgProps,
   commentDate,
   bottomNotes,
-  counterLikes,
-  hasLiked,
-  accessibilityLabel,
+  likeButtonProps,
   avatarBadge,
   ...props
 }) => {
+  const likeButtonElement = useRef(null)
+  const [likeButtonWidth, setLikeButtonWidth] = useState(0)
+
+  useEffect(() => {
+    const marginLeftAndRight = 40
+    const elementWidth = domElementHelper.getComputedWidth(
+      likeButtonElement.current,
+    )
+
+    setLikeButtonWidth(elementWidth + marginLeftAndRight)
+  }, [])
+
   return (
     <StyledGrid>
       <CommentAvatar
@@ -129,7 +140,10 @@ export const Comment = ({
             </Marger>
           )}
 
-          <StyledMargerText counterLikes={counterLikes} ownerName={ownerName}>
+          <StyledMargerText
+            hasLikeButton={!!likeButtonProps.children}
+            ownerName={ownerName}
+          >
             <StyledContentText color="font1" weight="light">
               {text}
             </StyledContentText>
@@ -137,18 +151,14 @@ export const Comment = ({
           <StyledCommentArrow />
         </StyledCommentContent>
 
-        {counterLikes && (
-          <StyledLikeButtonBox>
-            <LikeButton
-              hasLiked={hasLiked}
-              accessibilityLabel={accessibilityLabel}
-              children={counterLikes}
-            />
+        {likeButtonProps.children && (
+          <StyledLikeButtonBox ref={likeButtonElement}>
+            <LikeButton {...likeButtonProps} />
           </StyledLikeButtonBox>
         )}
 
         {bottomNotes && (
-          <Marger top=".5">
+          <Marger top=".5" style={{ marginRight: likeButtonWidth }}>
             <StyledBottomNotes
               tag="div"
               color="font1"
@@ -170,17 +180,13 @@ Comment.propTypes = {
   avatarImgProps: PropTypes.object.isRequired,
   commentDate: PropTypes.string.isRequired,
   bottomNotes: PropTypes.node,
-  hasLike: PropTypes.boolean,
-  counterLikes: PropTypes.string,
-  accessibilityLabel: PropTypes.string,
+  likeButtonProps: PropTypes.object,
   avatarBadge: PropTypes.node,
 }
 
 Comment.defaultProps = {
   bottomNotes: '',
   ownerName: '',
-  hasLiked: '',
-  counterLikes: '',
-  accessibilityLabel: '',
+  likeButtonProps: {},
   avatarBadge: '',
 }
