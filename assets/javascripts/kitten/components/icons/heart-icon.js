@@ -14,5 +14,5 @@ export const HeartIcon = ({ color, title, ...props }) => (
 
 HeartIcon.defaultProps = {
   color: '#222',
-  title: 'heart',
+  title: 'Heart',
 }

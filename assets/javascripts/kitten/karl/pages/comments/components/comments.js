@@ -57,9 +57,8 @@ const CommentsPage = props => (
             bottomNotes={<ActionLinks children="Supprimer" />}
             likeButtonProps={{
               hasliked: false,
-              children: '300',
+              children: '309',
             }}
-            counterLikes="309"
             avatarBadge={
               <CheckedCircleIcon
                 width="25"
