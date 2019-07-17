@@ -22,7 +22,7 @@ var PasswordIcon = function PasswordIcon(_ref) {
     viewBox: "0 0 18 12",
     fill: color,
     width: "18"
-  }, props), _react.default.createElement("title", null, title), _react.default.createElement("path", {
+  }, props), title && _react.default.createElement("title", null, title), _react.default.createElement("path", {
     d: "M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
   }), _react.default.createElement("circle", {
     cx: "9",
@@ -33,5 +33,6 @@ var PasswordIcon = function PasswordIcon(_ref) {
 
 exports.PasswordIcon = PasswordIcon;
 PasswordIcon.defaultProps = {
-  color: '#222'
+  color: '#222',
+  title: ''
 };
