@@ -27,7 +27,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _typography = require("../../../../helpers/utils/typography");
 
@@ -42,7 +42,11 @@ var _visuallyHidden = require("../../../accessibility/visually-hidden");
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "like-button__StyledButton",
   componentId: "wk7ovs-0"
-})(["display:inline-flex;align-items:center;justify-content:center;position:relative;height:", ";padding:0 ", ";border:", " solid ", ";background-color:", ";", ";font-size:", ";color:", ";text-decoration:none;appareance:none;box-sizing:border-box;outline:none;cursor:pointer;:hover,&[aria-pressed='true']{svg{fill:", ";}}:focus,:active{border-color:", ";}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.background1, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12), _colorsConfig.default.font1, _colorsConfig.default.error, _colorsConfig.default.line2);
+})(["display:inline-flex;align-items:center;justify-content:center;position:relative;height:", ";padding:0 ", ";border:", " solid ", ";background-color:", ";", ";font-size:", ";color:", ";text-decoration:none;appareance:none;box-sizing:border-box;outline:none;&[aria-pressed='true']{svg{fill:", ";}}", ""], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.background1, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(12), _colorsConfig.default.font1, _colorsConfig.default.error, function (_ref) {
+  var as = _ref.as,
+      onClick = _ref.onClick;
+  return (as === 'a' || onClick) && (0, _styledComponents.css)(["cursor:pointer;:hover{svg{fill:", ";}}:focus,:active{border-color:", ";}"], _colorsConfig.default.error, _colorsConfig.default.line2);
+});
 
 var StyledHeartIcon = (0, _styledComponents.default)(_heartIcon.HeartIcon).withConfig({
   displayName: "like-button__StyledHeartIcon",
