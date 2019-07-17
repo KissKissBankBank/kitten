@@ -28,10 +28,10 @@ const info = {
     ### With avatar
     ~~~js
     <Comment
-      avatarImgProps={
-        src="…"
-        alt="…"
-      }
+      avatarImgProps={{
+        src: '…',
+        alt: '…',
+     }}
     />
     ~~~
 
@@ -53,11 +53,11 @@ const info = {
     ### Likes
     ~~~js
     <Comment
-      likeButtonProps={
-        hasLiked="…"
-        children="…"
-        accessibilityLabel="…"
-      }
+      likeButtonProps={{
+        hasLiked: '…',
+        children: '…',
+        accessibilityLabel: '…',
+      }}
     />
 
     ### With avatarBadge
@@ -75,7 +75,7 @@ const CommentExample = props => {
 
   const handleClick = () => {
     setHasLiked(!hasLiked)
-    setLikeButtonChildren(hasLiked ? '100 ' : '101')
+    setLikeButtonChildren(hasLiked ? '100' : '101')
     document.activeElement.blur()
   }
 
