@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `title` and `color` props on `HeartIcon`.
-- Feature: Create `LikeButtonProps` props for `Comment` component.
+- Feature: Create `likeButtonProps` props for `Comment` component.
+- Feature: Update `PasswordInput` with styled-components.
 - Feature: Add `title` prop on `CheckedCircleIcon`.
 - Feature: Add `avatarBadge` prop on `CommentAvatar`, `Comment` and `CommentForm`.
 
