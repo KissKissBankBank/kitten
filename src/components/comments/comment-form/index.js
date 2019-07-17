@@ -163,22 +163,25 @@ function (_PureComponent) {
   (0, _createClass2.default)(CommentForm, [{
     key: "render",
     value: function render() {
-      var avatarImgProps = this.props.avatarImgProps;
+      var _this$props = this.props,
+          avatarImgProps = _this$props.avatarImgProps,
+          avatarBadge = _this$props.avatarBadge;
       return _react.default.createElement(StyledGrid, null, _react.default.createElement(_commentAvatar.CommentAvatar, {
+        avatarBadge: avatarBadge,
         avatarImgProps: avatarImgProps
       }), this.renderInput());
     }
   }, {
     key: "renderInput",
     value: function renderInput() {
-      var _this$props = this.props,
-          isDisabled = _this$props.isDisabled,
-          placeholder = _this$props.placeholder,
-          defaultValue = _this$props.defaultValue,
-          commentLabel = _this$props.commentLabel,
-          ariaId = _this$props.ariaId,
-          error = _this$props.error,
-          errorMessage = _this$props.errorMessage;
+      var _this$props2 = this.props,
+          isDisabled = _this$props2.isDisabled,
+          placeholder = _this$props2.placeholder,
+          defaultValue = _this$props2.defaultValue,
+          commentLabel = _this$props2.commentLabel,
+          ariaId = _this$props2.ariaId,
+          error = _this$props2.error,
+          errorMessage = _this$props2.errorMessage;
       return _react.default.createElement(StyledGridCol, null, _react.default.createElement(StyledInput, null, _react.default.createElement(StyledTextarea, {
         "aria-label": commentLabel,
         "aria-describedby": ariaId,
@@ -211,10 +214,10 @@ function (_PureComponent) {
   }, {
     key: "renderError",
     value: function renderError() {
-      var _this$props2 = this.props,
-          error = _this$props2.error,
-          errorMessage = _this$props2.errorMessage,
-          ariaId = _this$props2.ariaId;
+      var _this$props3 = this.props,
+          error = _this$props3.error,
+          errorMessage = _this$props3.errorMessage,
+          ariaId = _this$props3.ariaId;
       if (!error) return;
       return _react.default.createElement(_marger.Marger, {
         top: ".5"
@@ -240,7 +243,8 @@ CommentForm.propTypes = {
   onSubmit: _propTypes.default.func,
   defaultValue: _propTypes.default.string,
   commentLabel: _propTypes.default.string,
-  ariaId: _propTypes.default.string
+  ariaId: _propTypes.default.string,
+  avatarBadge: _propTypes.default.node
 };
 CommentForm.defaultProps = {
   onSubmit: function onSubmit() {},
@@ -250,5 +254,6 @@ CommentForm.defaultProps = {
   commentButton: '',
   defaultValue: '',
   ariaId: '',
-  commentLabel: ''
+  commentLabel: '',
+  avatarBadge: ''
 };
