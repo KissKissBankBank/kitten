@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `counterLikes` props for `Comment` component.
+- Feature: Add `title` prop on `HeartIcon`.
+- Feature: Create `LikeButtonProps` props for `Comment` component.
 - Feature: Add `title` prop on `CheckedCircleIcon`.
 - Feature: Add `avatarBadge` prop on `CommentAvatar`, `Comment` and `CommentForm`.
 

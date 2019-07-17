@@ -55,6 +55,10 @@ const CommentsPage = props => (
             ownerName="At vero"
             commentDate="20 jours"
             bottomNotes={<ActionLinks children="Supprimer" />}
+            likeButtonProps={{
+              hasliked: false,
+              children: '300',
+            }}
             counterLikes="309"
             avatarBadge={
               <CheckedCircleIcon

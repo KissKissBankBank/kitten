@@ -52,7 +52,13 @@ const info = {
 
     ### Likes
     ~~~js
-    <Comment counterLikes="…" hasLike="…" accessibilityLabel="…" />
+    <Comment
+      likeButtonProps={
+        hasLiked="…"
+        children="…"
+        accessibilityLabel="…"
+      }
+    />
 
     ### With avatarBadge
     ~~~js

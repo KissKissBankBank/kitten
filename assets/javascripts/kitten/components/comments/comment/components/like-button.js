@@ -44,7 +44,7 @@ const StyledHeartIcon = styled(HeartIcon)`
   height: ${pxToRem(12)};
   margin-right: ${pxToRem(10)};
   overflow: hidden;
-  transition: all 0.2s;
+  transition: fill 0.2s;
 `
 
 export class LikeButton extends PureComponent {
@@ -64,7 +64,9 @@ export class LikeButton extends PureComponent {
 
     return (
       <StyledButton role="button" aria-pressed={`${hasLiked}`} {...props}>
-        <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
+        {accessibilityLabel && (
+          <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
+        )}
         <StyledHeartIcon aria-hidden="true" focusable="false" />
         {children}
       </StyledButton>
