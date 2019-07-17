@@ -8,6 +8,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { LikeButton } from './components/like-button'
+import { domElementHelper } from '../../helpers/dom/element-helper'
 
 const desktopPadding = pxToRem(30)
 const tabletAndMobilePadding = pxToRem(20)

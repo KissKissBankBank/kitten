@@ -81,7 +81,7 @@ storiesOf('Comments/Comment', module)
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris',
             )}
             ownerName={text('Owner name', 'Lorem ipsum')}
-            hasLiked={boolean('Is selected', true)}
+            hasLiked={boolean('Is selected', false)}
             accessibilityLabel={text(
               'Label',
               'Cliquez ici pour indiquer que vous aimez commentaire.`${children}` personnes ont aimé ce commentaire.',
