@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
@@ -8,7 +8,6 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { LikeButton } from './components/like-button'
-import { domElementHelper } from '../../helpers/dom/element-helper'
 
 const desktopPadding = pxToRem(30)
 const tabletAndMobilePadding = pxToRem(20)
@@ -101,91 +100,87 @@ const StyledLikeButtonBox = styled.div`
   }
 `
 
-export class Comment extends PureComponent {
-  static propTypes = {
-    text: PropTypes.node.isRequired,
-    ownerName: PropTypes.string,
-    avatarImgProps: PropTypes.object.isRequired,
-    commentDate: PropTypes.string.isRequired,
-    bottomNotes: PropTypes.node,
-    hasLike: PropTypes.boolean,
-    counterLikes: PropTypes.string,
-    accessibilityLabel: PropTypes.string,
-    avatarBadge: PropTypes.node,
-  }
-
-  static defaultProps = {
-    bottomNotes: '',
-    ownerName: '',
-    hasLiked: '',
-    counterLikes: '',
-    accessibilityLabel: '',
-    avatarBadge: '',
-  }
-
-  render() {
-    const {
-      text,
-      ownerName,
-      avatarImgProps,
-      commentDate,
-      bottomNotes,
-      counterLikes,
-      hasLiked,
-      accessibilityLabel,
-      avatarBadge,
-      ...props
-    } = this.props
-
-    return (
-      <StyledGrid>
-        <CommentAvatar
-          avatarImgProps={avatarImgProps}
-          commentDate={commentDate}
-          avatarBadge={avatarBadge}
-        />
-        <StyledCommentContainer>
-          <StyledCommentContent>
-            {ownerName && (
-              <Marger bottom="1">
-                <Text color="font1" size="tiny" weight="regular">
-                  {ownerName}
-                </Text>
-              </Marger>
-            )}
-
-            <StyledMargerText counterLikes={counterLikes} ownerName={ownerName}>
-              <StyledContentText color="font1" weight="light">
-                {text}
-              </StyledContentText>
-            </StyledMargerText>
-            <StyledCommentArrow />
-          </StyledCommentContent>
-
-          {counterLikes && (
-            <StyledLikeButtonBox>
-              <LikeButton
-                hasLiked={hasLiked}
-                accessibilityLabel={accessibilityLabel}
-                children={counterLikes}
-              />
-            </StyledLikeButtonBox>
-          )}
-
-          {bottomNotes && (
-            <Marger top=".5">
-              <StyledBottomNotes
-                tag="div"
-                color="font1"
-                size="micro"
-                weight="bold"
-              >
-                {bottomNotes}
-              </StyledBottomNotes>
+export const Comment = ({
+  text,
+  ownerName,
+  avatarImgProps,
+  commentDate,
+  bottomNotes,
+  counterLikes,
+  hasLiked,
+  accessibilityLabel,
+  avatarBadge,
+  ...props
+}) => {
+  return (
+    <StyledGrid>
+      <CommentAvatar
+        avatarImgProps={avatarImgProps}
+        commentDate={commentDate}
+        avatarBadge={avatarBadge}
+      />
+      <StyledCommentContainer>
+        <StyledCommentContent>
+          {ownerName && (
+            <Marger bottom="1">
+              <Text color="font1" size="tiny" weight="regular">
+                {ownerName}
+              </Text>
             </Marger>
           )}
-        </StyledCommentContainer>
-      </StyledGrid>
-    )
-  }
+
+          <StyledMargerText counterLikes={counterLikes} ownerName={ownerName}>
+            <StyledContentText color="font1" weight="light">
+              {text}
+            </StyledContentText>
+          </StyledMargerText>
+          <StyledCommentArrow />
+        </StyledCommentContent>
+
+        {counterLikes && (
+          <StyledLikeButtonBox>
+            <LikeButton
+              hasLiked={hasLiked}
+              accessibilityLabel={accessibilityLabel}
+              children={counterLikes}
+            />
+          </StyledLikeButtonBox>
+        )}
+
+        {bottomNotes && (
+          <Marger top=".5">
+            <StyledBottomNotes
+              tag="div"
+              color="font1"
+              size="micro"
+              weight="bold"
+            >
+              {bottomNotes}
+            </StyledBottomNotes>
+          </Marger>
+        )}
+      </StyledCommentContainer>
+    </StyledGrid>
+  )
+}
+
+Comment.propTypes = {
+  text: PropTypes.node.isRequired,
+  ownerName: PropTypes.string,
+  avatarImgProps: PropTypes.object.isRequired,
+  commentDate: PropTypes.string.isRequired,
+  bottomNotes: PropTypes.node,
+  hasLike: PropTypes.boolean,
+  counterLikes: PropTypes.string,
+  accessibilityLabel: PropTypes.string,
+  avatarBadge: PropTypes.node,
+}
+
+Comment.defaultProps = {
+  bottomNotes: '',
+  ownerName: '',
+  hasLiked: '',
+  counterLikes: '',
+  accessibilityLabel: '',
+  avatarBadge: '',
 }
