@@ -11,6 +11,8 @@ exports.TextInputWithLimit = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -74,6 +76,8 @@ function (_PureComponent) {
       _this.setState({
         value: value
       });
+
+      _this.props.onChange(e);
     };
 
     _this.state = {
@@ -91,15 +95,14 @@ function (_PureComponent) {
           limit = _this$props.limit,
           onChange = _this$props.onChange,
           disabled = _this$props.disabled,
-          textInputProps = _this$props.textInputProps;
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "tiny", "limit", "onChange", "disabled"]);
       var length = this.state.value ? this.state.value.length : 0;
       var error = length > limit;
-      return _react.default.createElement(StyledTextInputWithLimit, null, _react.default.createElement(FocusTextInput, (0, _extends2.default)({}, textInputProps, {
-        value: this.state.value,
+      return _react.default.createElement(StyledTextInputWithLimit, null, _react.default.createElement(FocusTextInput, (0, _extends2.default)({}, others, {
         onChange: this.handleChange,
         disabled: disabled,
-        error: error,
-        tiny: tiny
+        tiny: tiny,
+        value: this.state.value
       })), _react.default.createElement(StyledCounter, {
         error: error,
         disabled: disabled
@@ -116,10 +119,7 @@ TextInputWithLimit.propTypes = {
   disabled: _propTypes.default.bool,
   tiny: _propTypes.default.bool,
   error: _propTypes.default.bool,
-  onChange: _propTypes.default.func,
-  textInputProps: _propTypes.default.shape({
-    tag: _propTypes.default.string
-  })
+  onChange: _propTypes.default.func
 };
 TextInputWithLimit.defaultProps = {
   limit: 80,
@@ -127,8 +127,5 @@ TextInputWithLimit.defaultProps = {
   disabled: false,
   tiny: false,
   error: false,
-  onChange: function onChange() {},
-  textInputProps: {
-    tag: 'input'
-  }
+  onChange: function onChange() {}
 };

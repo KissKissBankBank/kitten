@@ -65,9 +65,6 @@ export class TextInputWithLimit extends PureComponent {
     tiny: PropTypes.bool,
     error: PropTypes.bool,
     onChange: PropTypes.func,
-    textInputProps: PropTypes.shape({
-      tag: PropTypes.string,
-    }),
   }
 
   static defaultProps = {
@@ -77,9 +74,6 @@ export class TextInputWithLimit extends PureComponent {
     tiny: false,
     error: false,
     onChange: () => {},
-    textInputProps: {
-      tag: 'input',
-    },
   }
 
   constructor(props) {
@@ -93,17 +87,11 @@ export class TextInputWithLimit extends PureComponent {
   handleChange = e => {
     const value = e.target.value
     this.setState({ value })
+    this.props.onChange(e)
   }
 
   render() {
-    const {
-      valid,
-      tiny,
-      limit,
-      onChange,
-      disabled,
-      textInputProps,
-    } = this.props
+    const { valid, tiny, limit, onChange, disabled, ...others } = this.props
 
     const length = this.state.value ? this.state.value.length : 0
 
@@ -112,12 +100,11 @@ export class TextInputWithLimit extends PureComponent {
     return (
       <StyledTextInputWithLimit>
         <FocusTextInput
-          {...textInputProps}
-          value={this.state.value}
+          {...others}
           onChange={this.handleChange}
           disabled={disabled}
-          error={error}
           tiny={tiny}
+          value={this.state.value}
         />
         <StyledCounter error={error} disabled={disabled}>
           {limit - length}

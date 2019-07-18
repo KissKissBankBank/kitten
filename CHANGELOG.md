@@ -4,6 +4,42 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.16.1] - 2019-07-17
+
+Fix:
+- Add like button event styles only when an event is attached (`Comment`).
+
+## [2.16.0] - 2019-07-17
+
+Features:
+- Create `likeButtonProps` props for `Comment` component.
+- Add `avatarBadge` prop on `CommentAvatar`, `Comment` and `CommentForm`.
+- Add `title` prop on `CheckedCircleIcon`.
+- Add `title` and `color` props on `HeartIcon`.
+- Update `PasswordInput` with styled-components.
+
+## [2.15.0] - 2019-07-16
+
+Feature:
+- Dispatch props to `Field.Error` subcomponent.
+
+## [2.14.1] - 2019-07-15
+
+Fix:
+- Remove HTML warning from `Comment`.
+
+## [2.14.0] - 2019-07-11
+
+Feature:
+- Create `BubbleIcon` component.
+
+Fixes:
+- Fix props propagation in
+  `TextInputWithButton`,
+  `TextInputWithUnit`,
+  `TextInputWithLimit`.
+- Fix `width` error styles `TextInputWithUnit`.
+
 ## [2.13.1] - 2019-07-08
 
 Fix:

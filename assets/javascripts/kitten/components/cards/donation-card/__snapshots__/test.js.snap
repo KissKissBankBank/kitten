@@ -57,16 +57,23 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   className="marger__StyledMarger-q3lecu-0 cHJBWz"
                 >
                   <div
-                    className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 cNrele"
+                    className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
                   >
                     <input
+                      autoComplete="off"
                       className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+                      defaultValue=""
                       disabled={false}
+                      id="donation-amount"
                       name="text"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      placeholder="Your amount"
                       type="number"
                     />
                     <span
-                      className="text-input-with-unit__StyledInputUnit-gjmccx-2 kxcQws"
+                      className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
                       disabled={false}
                     >
                       €

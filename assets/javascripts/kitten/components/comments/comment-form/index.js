@@ -122,6 +122,7 @@ export class CommentForm extends PureComponent {
     defaultValue: PropTypes.string,
     commentLabel: PropTypes.string,
     ariaId: PropTypes.string,
+    avatarBadge: PropTypes.node,
   }
 
   static defaultProps = {
@@ -133,6 +134,7 @@ export class CommentForm extends PureComponent {
     defaultValue: '',
     ariaId: '',
     commentLabel: '',
+    avatarBadge: '',
   }
 
   constructor(props) {
@@ -174,11 +176,14 @@ export class CommentForm extends PureComponent {
   }
 
   render() {
-    const { avatarImgProps } = this.props
+    const { avatarImgProps, avatarBadge } = this.props
 
     return (
       <StyledGrid>
-        <CommentAvatar avatarImgProps={avatarImgProps} />
+        <CommentAvatar
+          avatarBadge={avatarBadge}
+          avatarImgProps={avatarImgProps}
+        />
         {this.renderInput()}
       </StyledGrid>
     )

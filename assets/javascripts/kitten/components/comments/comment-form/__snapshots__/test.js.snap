@@ -1,5 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`] = `
+<div
+  className="comment-form__StyledGrid-sc-1yidca9-0 kwVmiQ"
+>
+  <div
+    className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
+  >
+    <div
+      className="comment-avatar__StyledPosition-sc-10x87zp-1 gwuSzB"
+    >
+      <div
+        className="comment-avatar__StyledAvatarBadge-sc-10x87zp-3 giOOEs"
+      >
+        <svg
+          height="25"
+          viewBox="0 0 20 20"
+          width="25"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Checked circle
+          </title>
+          <circle
+            cx="10"
+            cy="10"
+            fill="#19b4fa"
+            r="10"
+          />
+          <path
+            d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
+            fill="#fff"
+          />
+        </svg>
+      </div>
+      <span
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 cyfqAR"
+        tabIndex={null}
+      >
+        <img
+          alt="Image alt"
+          className="k-ButtonImage__img"
+          src="#image"
+        />
+      </span>
+    </div>
+  </div>
+  <div
+    className="comment-form__StyledGridCol-sc-1yidca9-1 jUUDNx"
+  >
+    <div
+      className="comment-form__StyledInput-sc-1yidca9-2 dxkHAQ"
+    >
+      <textarea
+        aria-describedby=""
+        aria-invalid="false"
+        aria-label=""
+        aria-required="true"
+        className="comment-form__StyledTextarea-sc-1yidca9-3 GUTNa"
+        defaultValue=""
+        disabled={false}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="Leave a comment on the project"
+        rows="1"
+      />
+      <div
+        className="comment-form__StyledArrow-sc-1yidca9-4 zxaAT"
+      >
+        <span
+          className="comment-form__StyledArrowBefore-sc-1yidca9-5 WsPtJ"
+        />
+      </div>
+    </div>
+    <div
+      className="marger__StyledMarger-q3lecu-0 gWrqvV"
+    >
+      <span
+        className="k-u-color-error k-u-size-micro k-u-weight-regular"
+        id=""
+      >
+        Cum sociis natoque penatibus et magnis
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<CommentForm /> should match its empty snapshot 1`] = `
 <div
   className="comment-form__StyledGrid-sc-1yidca9-0 kwVmiQ"
@@ -8,10 +96,10 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      className="marger__StyledMarger-q3lecu-0 gkLTfi"
+      className="comment-avatar__StyledPosition-sc-10x87zp-1 gwuSzB"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-1 iiYztX"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 cyfqAR"
         tabIndex={null}
       >
         <img

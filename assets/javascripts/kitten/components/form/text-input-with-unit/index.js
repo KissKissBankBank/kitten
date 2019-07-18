@@ -8,6 +8,7 @@ import COLORS from '../../../constants/colors-config'
 
 const StyledTextInputWithUnit = styled.div`
   display: flex;
+  width: 1%;
 
   ${({ digits }) =>
     !digits &&
@@ -30,7 +31,6 @@ const StyledInputUnit = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1%;
   background-color: ${COLORS.background1};
   border: ${pxToRem(2)} solid ${COLORS.line1};
   border-left: 0;
@@ -96,10 +96,7 @@ export class TextInputWithUnit extends PureComponent {
     disabled: PropTypes.bool,
     unit: PropTypes.string,
     unitWord: PropTypes.bool,
-    textInputProps: PropTypes.shape({
-      digits: PropTypes.number,
-      tag: PropTypes.string,
-    }),
+    digits: PropTypes.number,
   }
 
   static defaultProps = {
@@ -110,10 +107,7 @@ export class TextInputWithUnit extends PureComponent {
     error: false,
     tiny: false,
     disabled: false,
-    textInputProps: {
-      digits: 0,
-      tag: 'input',
-    },
+    digits: null,
   }
 
   constructor(props) {
@@ -130,14 +124,13 @@ export class TextInputWithUnit extends PureComponent {
       disabled,
       unit,
       unitWord,
-      textInputProps,
       ...others
     } = this.props
 
     return (
       <StyledTextInputWithUnit>
         <StyledTextInput
-          {...textInputProps}
+          {...others}
           ref={this.input}
           type={type}
           valid={valid}
