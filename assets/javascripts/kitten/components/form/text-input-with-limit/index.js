@@ -67,9 +67,7 @@ export const TextInputWithLimit = ({
   ...others
 }) => {
   const [textValue] = useState(value || defaultValue)
-  const [length, setLength] = useState(
-    value ? value.length : defaultValue.length,
-  )
+  const [length, setLength] = useState(textValue.length)
   return (
     <StyledTextInputWithLimit>
       <FocusTextInput
