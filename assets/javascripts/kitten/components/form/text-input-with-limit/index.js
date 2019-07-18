@@ -63,9 +63,13 @@ export const TextInputWithLimit = ({
   onChange,
   disabled,
   value,
+  defaultValue,
   ...others
 }) => {
-  const [length, setLength] = useState(value ? value.length : 0)
+  const [textValue] = useState(value || defaultValue)
+  const [length, setLength] = useState(
+    value ? value.length : defaultValue.length,
+  )
   return (
     <StyledTextInputWithLimit>
       <FocusTextInput
@@ -76,7 +80,7 @@ export const TextInputWithLimit = ({
         }}
         disabled={disabled}
         tiny={tiny}
-        value={value}
+        defaultValue={textValue}
         {...others}
       />
       <StyledCounter error={length > limit} disabled={disabled}>
@@ -92,6 +96,7 @@ TextInputWithLimit.propTypes = {
   tiny: PropTypes.bool,
   error: PropTypes.bool,
   onChange: PropTypes.func,
+  defaultValue: PropTypes.string,
 }
 
 TextInputWithLimit.defaultProps = {
@@ -99,5 +104,6 @@ TextInputWithLimit.defaultProps = {
   disabled: false,
   tiny: false,
   error: false,
+  defaultValue: '',
   onChange: () => {},
 }

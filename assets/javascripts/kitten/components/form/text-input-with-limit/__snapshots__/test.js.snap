@@ -6,6 +6,7 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 >
   <input
     className="text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
@@ -25,6 +26,7 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
 >
   <input
     className="text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    defaultValue=""
     disabled={true}
     name="text"
     onChange={[Function]}
@@ -44,6 +46,7 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
 >
   <input
     className="text-input-with-limit__FocusTextInput-ufrmmb-0 fzFwMa text-input__StyledInput-sc-11wej6v-1 dERTZf"
+    defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
@@ -63,6 +66,7 @@ exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
 >
   <input
     className="text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ text-input__StyledInput-sc-11wej6v-1 dnunGN"
+    defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
