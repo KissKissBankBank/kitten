@@ -16,7 +16,7 @@ import { RewardCardRowSide } from '../../components/cards/reward-card/row-side'
 import { RewardCardStarredBadge } from '../../components/cards/reward-card/starred-badge'
 import { RewardCardCheckedSection } from '../../components/cards/reward-card/checked-section'
 
-const Infos = styled(Text)`
+const Infos = styled(({ withMarginBottom, ...props }) => <Text {...props} />)`
   display: block;
   line-height: ${pxToRem(20)};
   ${({ withMarginBottom }) =>
@@ -42,7 +42,9 @@ const RewardImage = styled.img`
     `}
 `
 
-const CardContainer = styled.div`
+const CardContainer = styled(({ withoutBorder, ...props }) => (
+  <div {...props} />
+))`
   background-color: ${COLORS.background1};
   width: 100%;
   padding: ${pxToRem(15)} 0;

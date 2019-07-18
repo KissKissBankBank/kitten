@@ -589,7 +589,7 @@ Array [
           onTouchMove={[Function]}
           onTouchStart={[Function]}
         >
-          <span
+          <div
             className="Select-multi-value-wrapper"
             id="react-select-2--value"
           >
@@ -616,7 +616,7 @@ Array [
               }
               tabIndex={0}
             />
-          </span>
+          </div>
           <span
             className="Select-arrow-zone"
             onMouseDown={[Function]}

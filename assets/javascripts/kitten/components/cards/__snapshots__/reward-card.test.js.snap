@@ -198,7 +198,6 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           <span
             className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 cjxEIS"
             disabled={false}
-            withMarginBottom={true}
           >
             Contributors: 
             <span
@@ -212,7 +211,6 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           <span
             className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 cjxEIS"
             disabled={false}
-            withMarginBottom={true}
           >
             Availability: 
             <span
@@ -226,7 +224,6 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           <span
             className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 JxXhL"
             disabled={false}
-            withMarginBottom={false}
           >
             Delivery: 
             <span
