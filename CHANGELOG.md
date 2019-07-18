@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+Feature: - Add `withoutBorder` prop to `RewardCard`.
 
 Fix:
 - Take back input refs on `TextInput`.
