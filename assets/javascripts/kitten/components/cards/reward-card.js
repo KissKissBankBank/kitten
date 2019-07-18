@@ -1,5 +1,5 @@
-import React, { Component, Fragment } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import React, { Component } from 'react'
+import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import COLORS from '../../constants/colors-config'
@@ -7,7 +7,7 @@ import {
   LegacyRewardCardContainer,
   styles as legacyStyles,
 } from '../../components/cards/reward-card/legacy-reward-card-container'
-import { Text as TextBase } from '../../components/typography/text'
+import { Text } from '../../components/typography/text'
 import { pxToRem } from '../../helpers/utils/typography'
 import { RewardCardTitle } from '../../components/cards/reward-card/title'
 import { RewardCardRow } from '../../components/cards/reward-card/row'
@@ -16,7 +16,43 @@ import { RewardCardRowSide } from '../../components/cards/reward-card/row-side'
 import { RewardCardStarredBadge } from '../../components/cards/reward-card/starred-badge'
 import { RewardCardCheckedSection } from '../../components/cards/reward-card/checked-section'
 
-const Text = Radium(TextBase)
+const Infos = styled(Text)`
+  display: block;
+  line-height: ${pxToRem(20)};
+  ${({ withMarginBottom }) =>
+    withMarginBottom &&
+    css`
+      margin-bottom: ${pxToRem(10)};
+    `}
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      color: ${COLORS.font2};
+      cursor: not-allowed;
+    `}
+`
+
+const RewardImage = styled.img`
+  width: 100%;
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      filter: grayscale(1) opacity(0.4);
+      cursor: not-allowed;
+    `}
+`
+
+const CardContainer = styled.div`
+  background-color: ${COLORS.background1};
+  width: 100%;
+  padding: ${pxToRem(15)} 0;
+  box-sizing: border-box;
+  ${({ withoutBorder }) =>
+    !withoutBorder &&
+    css`
+      border: ${pxToRem(2)} solid ${COLORS.line1};
+    `}
+`
 
 // TODO: Move this class to a separate file after deprecated component with the
 // same name will be deleted.
@@ -37,17 +73,17 @@ class RewardCardInfo extends Component {
   render() {
     const { label, value, withMarginBottom, disabled } = this.props
 
-    const infoStyles = [
-      style.info,
-      withMarginBottom && style.infoWithMargin,
-      disabled && style.disabled,
-    ]
-
     return (
-      <Text size="tiny" color="font1" weight="regular" style={infoStyles}>
+      <Infos
+        size="tiny"
+        color="font1"
+        weight="regular"
+        withMarginBottom={withMarginBottom}
+        disabled={disabled}
+      >
         {`${label} `}
         <Text weight="light">{value}</Text>
-      </Text>
+      </Infos>
     )
   }
 }
@@ -65,9 +101,7 @@ class RewardCardImage extends Component {
 
   render() {
     const { alt, disabled, ...others } = this.props
-    const imageStyles = [{ width: '100%' }, disabled && styles.disabled]
-
-    return <img {...others} alt={alt || ''} style={imageStyles} />
+    return <RewardImage {...others} alt={alt || ''} disabled={disabled} />
   }
 }
 
@@ -76,7 +110,7 @@ export class RewardCard extends Component {
   static RowContent = RewardCardRowContent
   static RowSide = RewardCardRowSide
   static Title = RewardCardTitle
-  static Image = Radium(RewardCardImage)
+  static Image = RewardCardImage
   static Info = RewardCardInfo
   static CheckedSection = RewardCardCheckedSection
   static StarredBadge = RewardCardStarredBadge
@@ -202,48 +236,27 @@ export class RewardCard extends Component {
       PropTypes.string,
       'Use `Reward.Info` to compose your card content now.',
     ),
+    withoutBorder: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    withoutBorder: false,
   }
 
   render() {
-    const { children, ...others } = this.props
+    const { children, withoutBorder, ...others } = this.props
 
     return (
-      <Fragment>
+      <>
         <LegacyRewardCardContainer {...this.props} />
         {children && (
-          <div {...others} style={style.card}>
+          <CardContainer withoutBorder={withoutBorder} {...others}>
             {children}
-          </div>
+          </CardContainer>
         )}
-      </Fragment>
+      </>
     )
   }
-}
-
-const style = {
-  card: {
-    backgroundColor: COLORS.background1,
-    borderWidth: 2,
-    borderStyle: 'solid',
-    borderColor: COLORS.line1,
-    width: '100%',
-    padding: `${pxToRem(15)} 0`,
-    boxSizing: 'border-box',
-  },
-  image: {
-    width: '100%',
-  },
-  info: {
-    display: 'block',
-    lineHeight: pxToRem(20),
-  },
-  infoWithMargin: {
-    marginBottom: pxToRem(10),
-  },
-  disabled: {
-    color: COLORS.font2,
-    cursor: 'not-allowed',
-  },
 }
 
 // This export handles retro-compatibility.
