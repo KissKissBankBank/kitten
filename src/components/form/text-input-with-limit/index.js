@@ -57,12 +57,17 @@ var TextInputWithLimit = function TextInputWithLimit(_ref3) {
       _onChange = _ref3.onChange,
       disabled = _ref3.disabled,
       value = _ref3.value,
-      others = (0, _objectWithoutProperties2.default)(_ref3, ["tiny", "limit", "onChange", "disabled", "value"]);
+      defaultValue = _ref3.defaultValue,
+      others = (0, _objectWithoutProperties2.default)(_ref3, ["tiny", "limit", "onChange", "disabled", "value", "defaultValue"]);
 
-  var _useState = (0, _react.useState)(value ? value.length : 0),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      length = _useState2[0],
-      setLength = _useState2[1];
+  var _useState = (0, _react.useState)(value || defaultValue),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 1),
+      textValue = _useState2[0];
+
+  var _useState3 = (0, _react.useState)(textValue.length),
+      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
+      length = _useState4[0],
+      setLength = _useState4[1];
 
   return _react.default.createElement(StyledTextInputWithLimit, null, _react.default.createElement(FocusTextInput, (0, _extends2.default)({
     onChange: function onChange(e) {
@@ -73,7 +78,7 @@ var TextInputWithLimit = function TextInputWithLimit(_ref3) {
     },
     disabled: disabled,
     tiny: tiny,
-    value: value
+    defaultValue: textValue
   }, others)), _react.default.createElement(StyledCounter, {
     error: length > limit,
     disabled: disabled
@@ -86,12 +91,14 @@ TextInputWithLimit.propTypes = {
   disabled: _propTypes.default.bool,
   tiny: _propTypes.default.bool,
   error: _propTypes.default.bool,
-  onChange: _propTypes.default.func
+  onChange: _propTypes.default.func,
+  defaultValue: _propTypes.default.string
 };
 TextInputWithLimit.defaultProps = {
   limit: 80,
   disabled: false,
   tiny: false,
   error: false,
+  defaultValue: '',
   onChange: function onChange() {}
 };
