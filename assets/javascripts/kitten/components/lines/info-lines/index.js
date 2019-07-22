@@ -1,5 +1,62 @@
 import React, { PureComponent } from 'react'
 import classNames from 'classnames'
+import styled, { css } from 'styled-components'
+import COLORS from '../../../constants/colors-config'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../constants/screen-config'
+
+const StyledInfoLines = styled.div`
+  border-top: ${pxToRem(1)} solid ${COLORS.line1};
+
+  ${({ withBorderRadius }) =>
+    withBorderRadius &&
+    css`
+      border-radius: ${pxToRem(8)};
+    `}
+
+  ${({ withLeftRightBorder }) =>
+    withLeftRightBorder &&
+    css`
+      border-left: ${pxToRem(1)} solid ${COLORS.line1};
+      border-right: ${pxToRem(1)} solid ${COLORS.line1};
+    `}
+
+/// checker le niveau class enfant
+  ${({ withoutResponsive }) =>
+    withoutResponsive &&
+    css`
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        flex-direction: row;
+      }
+    `}
+
+  ${({ withoutTopBottomBorder }) =>
+    withoutTopBottomBorder &&
+    css`
+      border-top: none;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    `}
+`
+
+const StyledLine = styled.div`
+  display: flex;
+  padding: ${pxToRem(15)};
+  border-bottom: ${pxToRem(1)} solid ${COLORS.line1};
+
+  @media (min-width: ${ScreenConfig.M.min}px) {
+    flex-direction: column;
+  }
+`
+
+const StyledValue = styled.div`
+  @media (min-width: ${ScreenConfig.M.min}px) {
+    margin-left: auto;
+    text-align: right;
+  }
+`
 
 export class InfoLines extends PureComponent {
   constructor(props) {
@@ -13,21 +70,16 @@ export class InfoLines extends PureComponent {
   }
 
   renderInfo(element) {
-    const { key, value, id, className, style, ...others } = element
+    const { key, value, id, className, ...others } = element
 
     const infoClassName = classNames('k-InfoLines__line', className)
 
-    const infoStyle = {
-      ...style,
-      borderColor: this.props.borderColor,
-    }
-
     return (
-      <div {...others} key={id} className={infoClassName} style={infoStyle}>
-        <div className="k-InfoLines__line__key">{key}</div>
+      <StyledLine {...others} borderColor={borderColor} key={id}>
+        <div>{key}</div>
 
-        <div className="k-InfoLines__line__value">{value}</div>
-      </div>
+        <StyledValue>{value}</StyledValue>
+      </StyledLine>
     )
   }
 
@@ -40,30 +92,20 @@ export class InfoLines extends PureComponent {
       withLeftRightBorder,
       withoutResponsive,
       withoutTopBottomBorder,
-      style,
       ...others
     } = this.props
 
-    const infoLinesClassName = classNames(
-      'k-InfoLines',
-      {
-        'k-InfoLines--withBorderRadius': withBorderRadius,
-        'k-InfoLines--withLeftRightBorder': withLeftRightBorder,
-        'k-InfoLines--withoutResponsive': withoutResponsive,
-        'k-InfoLines--withoutTopBottomBorder': withoutTopBottomBorder,
-      },
-      className,
-    )
-
-    const infoLinesStyle = {
-      ...style,
-      borderColor: borderColor,
-    }
-
     return (
-      <div {...others} className={infoLinesClassName} style={infoLinesStyle}>
+      <StyledInfoLines
+        {...others}
+        borderColor={borderColor}
+        withBorderRadius={withBorderRadius}
+        withLeftRightBorder={withLeftRightBorder}
+        withoutResponsive={withoutResponsive}
+        withoutTopBottomBorder={withoutTopBottomBorder}
+      >
         {this.renderInfos()}
-      </div>
+      </StyledInfoLines>
     )
   }
 }
