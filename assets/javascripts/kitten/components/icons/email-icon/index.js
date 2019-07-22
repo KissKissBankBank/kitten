@@ -9,7 +9,7 @@ export const EmailIcon = ({ color, title, ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <title>Email</title>
+    {title && <title>{title}</title>}
     <path d="M9.5 8l9-6v10H.5V2l9 6zm0-2l-9-6h18l-9 6z" fill={color} />
   </svg>
 )
