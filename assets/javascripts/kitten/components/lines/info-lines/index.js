@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 
-export class InfoLines extends Component {
+export class InfoLines extends PureComponent {
   constructor(props) {
     super(props)
 
