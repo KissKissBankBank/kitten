@@ -14,6 +14,7 @@ import { CopyIcon } from './copy-icon'
 import { CrossCircleIcon } from './cross-circle-icon'
 import { CrossIcon } from './cross-icon'
 import { EmailIcon } from './email-icon'
+import { ExportIcon } from './export-icon'
 import { FacebookIcon } from './facebook-icon'
 import { FacebookIconWithBackground } from './facebook-icon-with-background'
 import { FilterIcon } from './filter-icon'
@@ -145,6 +146,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<WarningCircleIcon />} />
         <IconContainer children={<CopyIcon />} />
         <IconContainer children={<BubbleIcon />} />
+        <IconContainer children={<ExportIcon />} />
       </Group>
     </Container>
   )
