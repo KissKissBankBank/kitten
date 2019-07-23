@@ -22,5 +22,5 @@ ExportIcon.propTypes = {
 
 ExportIcon.defaultProps = {
   color: '#fff',
-  title: 'Export',
+  title: '',
 }
