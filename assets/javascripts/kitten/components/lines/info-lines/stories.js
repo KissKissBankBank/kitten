@@ -18,6 +18,10 @@ storiesOf('Lines/Info Lines', module)
             withLeftRightBorder={boolean('with left right border', false)}
             withoutResponsive={boolean('without responsive', false)}
             withoutTopBottomBorder={boolean('without top bottom border', false)}
+            infos={[
+              { key: 'Lorem', value: 'Ipsum', id: 'item-1' },
+              { key: 'Dolor', value: 'Sit amet', id: 'item-2' },
+            ]}
           />
         </GridCol>
       </Grid>

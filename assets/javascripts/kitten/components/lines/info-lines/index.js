@@ -1,5 +1,4 @@
-import React, { PureComponent } from 'react'
-import classNames from 'classnames'
+import React, { PureComponent, Fragment } from 'react'
 import styled, { css } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -21,7 +20,6 @@ const StyledInfoLines = styled.div`
       border-right: ${pxToRem(1)} solid ${COLORS.line1};
     `}
 
-/// checker le niveau class enfant
   ${({ withoutResponsive }) =>
     withoutResponsive &&
     css`
@@ -59,41 +57,32 @@ const StyledValue = styled.div`
 `
 
 export class InfoLines extends PureComponent {
-  constructor(props) {
-    super(props)
-
-    this.renderInfo = this.renderInfo.bind(this)
-  }
-
   renderInfos() {
-    return this.props.infos.map(this.renderInfo)
-  }
+    const { borderColor, key, value, id, ...others } = this.props
 
-  renderInfo(element) {
-    const { key, value, id, className, ...others } = element
-
-    const infoClassName = classNames('k-InfoLines__line', className)
-
-    return (
-      <StyledLine {...others} borderColor={borderColor} key={id}>
-        <div>{key}</div>
-
-        <StyledValue>{value}</StyledValue>
-      </StyledLine>
-    )
+    return React.Children.map(this.props.children, child => {
+      return (
+        <StyledLine {...others} borderColor={borderColor} key={id}>
+          <div>{key}</div>
+          <StyledValue>{value}</StyledValue>
+        </StyledLine>
+      )
+    })
   }
 
   render() {
     const {
       borderColor,
-      className,
       infos,
       withBorderRadius,
       withLeftRightBorder,
       withoutResponsive,
       withoutTopBottomBorder,
+      children,
       ...others
     } = this.props
+
+    console.log(this.renderInfos(), 'infos')
 
     return (
       <StyledInfoLines
