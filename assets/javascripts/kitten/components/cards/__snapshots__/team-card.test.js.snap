@@ -59,7 +59,10 @@ Array [
     >
       <svg
         className="k-ButtonIcon__svg"
+        fill="#222"
+        height="12"
         viewBox="0 0 19 12"
+        width="19"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
