@@ -57,19 +57,6 @@ const StyledValue = styled.div`
 `
 
 export class InfoLines extends PureComponent {
-  renderInfos() {
-    const { borderColor, key, value, id, ...others } = this.props
-
-    return React.Children.map(this.props.children, child => {
-      return (
-        <StyledLine {...others} borderColor={borderColor} key={id}>
-          <div>{key}</div>
-          <StyledValue>{value}</StyledValue>
-        </StyledLine>
-      )
-    })
-  }
-
   render() {
     const {
       borderColor,
@@ -79,10 +66,21 @@ export class InfoLines extends PureComponent {
       withoutResponsive,
       withoutTopBottomBorder,
       children,
+      id,
+      key,
+      value,
       ...others
     } = this.props
 
-    console.log(this.renderInfos(), 'infos')
+    const InfoList = ({ borderColor, key, value, ...others }) =>
+      React.Children.toArray(
+        <StyledLine {...others} borderColor={borderColor} key={id}>
+          <div>{key}</div>
+          <StyledValue>{value}</StyledValue>
+        </StyledLine>,
+      )
+
+    console.log(<InfoList />, InfoList)
 
     return (
       <StyledInfoLines
@@ -93,7 +91,9 @@ export class InfoLines extends PureComponent {
         withoutResponsive={withoutResponsive}
         withoutTopBottomBorder={withoutTopBottomBorder}
       >
-        {this.renderInfos()}
+        {infos.map(info => (
+          <InfoList id={info.id} key={info.key} value={info.value} />
+        ))}
       </StyledInfoLines>
     )
   }
