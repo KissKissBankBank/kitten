@@ -6,7 +6,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
   onClick={[Function]}
 >
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 dQfUFz"
+    className="text-copy__StyledText-sc-1ikj7bl-1 dQfUFz"
   >
     <span>
       Text To Copy
@@ -40,7 +40,41 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     This is a description
   </span>
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 dQfUFz"
+    className="text-copy__StyledText-sc-1ikj7bl-1 dQfUFz"
+  >
+    <span>
+      Text To Copy
+    </span>
+  </span>
+  <div
+    aria-hidden={true}
+    className="text-copy__IconWrapper-sc-1ikj7bl-2 iMhRTo"
+  >
+    <svg
+      height="20"
+      width="20"
+    >
+      <path
+        d="M8.586 10a2 2 0 0 0-2.829 0L2.93 12.828a2 2 0 0 0 0 2.829l1.414 1.414a2 2 0 0 0 2.829 0L10 14.243a2 2 0 0 0 0-2.829l-.707.707a1 1 0 0 1-1.414-1.414L8.586 10zM10 8.586l.707-.707a1 1 0 1 1 1.414 1.414l-.707.707a2 2 0 0 0 2.829 0l2.828-2.828a2 2 0 0 0 0-2.829L15.657 2.93a2 2 0 0 0-2.829 0L10 5.757a2 2 0 0 0 0 2.829zm2.578 3.992a3.99 3.99 0 0 1-1.164 3.079l-2.828 2.828a4 4 0 0 1-5.657 0l-1.414-1.414a4 4 0 0 1 0-5.657l2.828-2.828a3.99 3.99 0 0 1 3.079-1.164 3.99 3.99 0 0 1 1.164-3.079l2.828-2.828a4 4 0 0 1 5.657 0l1.414 1.414a4 4 0 0 1 0 5.657l-2.828 2.828a3.99 3.99 0 0 1-3.079 1.164z"
+        fill="#000"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
+<div
+  className="text-copy__Wrapper-sc-1ikj7bl-0 eooUpn"
+  onClick={[Function]}
+>
+  <span
+    className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+  >
+    This is a description
+  </span>
+  <span
+    className="text-copy__StyledText-sc-1ikj7bl-1 iNiyhX"
   >
     <span>
       Text To Copy

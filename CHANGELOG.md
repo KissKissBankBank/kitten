@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Create `ExportIcon` component.
 - Feature: Update `EmailIcon` component.
+- Feature: Add `forceOneLine` prop to `TextCopy` component.
 
 ## [2.16.2] - 2019-07-19
 
