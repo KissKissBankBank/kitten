@@ -4,6 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `ExportIcon` component.
+- Feature: Update `EmailIcon` component.
+
+## [2.16.2] - 2019-07-19
+
+Fix:
+- Fix `TextInputWithLimit` value.
+
 ## [2.16.1] - 2019-07-17
 
 Fix:

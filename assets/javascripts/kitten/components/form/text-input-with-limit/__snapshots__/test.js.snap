@@ -10,7 +10,6 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
     disabled={false}
     name="text"
     onChange={[Function]}
-    value=""
   />
   <div
     className="text-input-with-limit__StyledCounter-ufrmmb-2 gDtxKV"
@@ -31,7 +30,6 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
     disabled={true}
     name="text"
     onChange={[Function]}
-    value=""
   />
   <div
     className="text-input-with-limit__StyledCounter-ufrmmb-2 eTtpPb"
@@ -52,7 +50,6 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
     disabled={false}
     name="text"
     onChange={[Function]}
-    value=""
   />
   <div
     className="text-input-with-limit__StyledCounter-ufrmmb-2 gDtxKV"
@@ -73,7 +70,6 @@ exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
     disabled={false}
     name="text"
     onChange={[Function]}
-    value=""
   />
   <div
     className="text-input-with-limit__StyledCounter-ufrmmb-2 gDtxKV"

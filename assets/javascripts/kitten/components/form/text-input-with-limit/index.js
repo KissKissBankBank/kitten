@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import { TextInput } from '../../../components/form/text-input'
 import PropTypes from 'prop-types'
@@ -57,59 +57,51 @@ const StyledCounter = styled.div`
     `}
 `
 
-export class TextInputWithLimit extends PureComponent {
-  static propTypes = {
-    limit: PropTypes.number,
-    defaultValue: PropTypes.string,
-    disabled: PropTypes.bool,
-    tiny: PropTypes.bool,
-    error: PropTypes.bool,
-    onChange: PropTypes.func,
-  }
+export const TextInputWithLimit = ({
+  tiny,
+  limit,
+  onChange,
+  disabled,
+  value,
+  defaultValue,
+  ...others
+}) => {
+  const [textValue] = useState(value || defaultValue)
+  const [length, setLength] = useState(textValue.length)
+  return (
+    <StyledTextInputWithLimit>
+      <FocusTextInput
+        onChange={e => {
+          const value = e.target.value
+          setLength(value.length)
+          onChange(e)
+        }}
+        disabled={disabled}
+        tiny={tiny}
+        defaultValue={textValue}
+        {...others}
+      />
+      <StyledCounter error={length > limit} disabled={disabled}>
+        {limit - length}
+      </StyledCounter>
+    </StyledTextInputWithLimit>
+  )
+}
 
-  static defaultProps = {
-    limit: 80,
-    defaultValue: '',
-    disabled: false,
-    tiny: false,
-    error: false,
-    onChange: () => {},
-  }
+TextInputWithLimit.propTypes = {
+  limit: PropTypes.number,
+  disabled: PropTypes.bool,
+  tiny: PropTypes.bool,
+  error: PropTypes.bool,
+  onChange: PropTypes.func,
+  defaultValue: PropTypes.string,
+}
 
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      value: props.defaultValue,
-    }
-  }
-
-  handleChange = e => {
-    const value = e.target.value
-    this.setState({ value })
-    this.props.onChange(e)
-  }
-
-  render() {
-    const { valid, tiny, limit, onChange, disabled, ...others } = this.props
-
-    const length = this.state.value ? this.state.value.length : 0
-
-    const error = length > limit
-
-    return (
-      <StyledTextInputWithLimit>
-        <FocusTextInput
-          {...others}
-          onChange={this.handleChange}
-          disabled={disabled}
-          tiny={tiny}
-          value={this.state.value}
-        />
-        <StyledCounter error={error} disabled={disabled}>
-          {limit - length}
-        </StyledCounter>
-      </StyledTextInputWithLimit>
-    )
-  }
+TextInputWithLimit.defaultProps = {
+  limit: 80,
+  disabled: false,
+  tiny: false,
+  error: false,
+  defaultValue: '',
+  onChange: () => {},
 }
