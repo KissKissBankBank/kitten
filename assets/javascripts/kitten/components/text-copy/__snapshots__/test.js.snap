@@ -6,8 +6,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
   onClick={[Function]}
 >
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 dQfUFz"
-    forceOneLine={false}
+    className="text-copy__StyledText-sc-1ikj7bl-1 dQfUFz"
   >
     <span>
       Text To Copy
@@ -41,8 +40,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     This is a description
   </span>
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 dQfUFz"
-    forceOneLine={false}
+    className="text-copy__StyledText-sc-1ikj7bl-1 dQfUFz"
   >
     <span>
       Text To Copy
@@ -76,8 +74,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     This is a description
   </span>
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 iNiyhX"
-    forceOneLine={true}
+    className="text-copy__StyledText-sc-1ikj7bl-1 iNiyhX"
   >
     <span>
       Text To Copy

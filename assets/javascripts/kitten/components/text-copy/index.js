@@ -27,7 +27,9 @@ const Wrapper = styled.div`
   cursor: pointer;
 `
 
-const StyledText = styled(Text)`
+const StyledText = styled(({ className, children }) => (
+  <Text className={className}>{children}</Text>
+))`
   padding: ${pxToRem(10)} ${pxToRem(15)};
   ${({ forceOneLine }) =>
     forceOneLine &&
