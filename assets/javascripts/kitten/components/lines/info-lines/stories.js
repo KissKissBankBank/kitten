@@ -27,6 +27,11 @@ const info = {
     />
     ~~~
 
+    #### with border color
+    ~~~js
+    <InfoLines borderColor="…" />
+    ~~~
+
     #### with borders
     ~~~js
     <InfoLines
@@ -59,7 +64,6 @@ storiesOf('Lines/Info Lines', module)
         <Grid style={{ marginTop: '5em' }}>
           <GridCol offset="1" col="8">
             <InfoLines
-              borderColor={color('custom border color', '#eee')}
               withBorderRadius={boolean('with border radius', false)}
               withLeftRightBorder={boolean('with left right border', false)}
               withoutTopBottomBorder={boolean(
@@ -67,24 +71,10 @@ storiesOf('Lines/Info Lines', module)
                 false,
               )}
               withoutResponsive={boolean('without responsive', false)}
+              borderColor={color('custom border color', '#eee')}
               infos={[
                 { number: 'Lorem', value: 'Ipsum', id: 'item-1' },
                 { number: 'Dolor', value: 'Sit amet', id: 'item-2' },
-                {
-                  number: 'Dolorismip oiy',
-                  value: 'Sit ametwelcome top',
-                  id: 'item-3',
-                },
-                {
-                  number: 'Dolorpmjezia dja',
-                  value: 'Sit amet dsjkq djai',
-                  id: 'item-4',
-                },
-                {
-                  number: 'Dolordjoai daz',
-                  value: 'Sit ametn dazj',
-                  id: 'item-5',
-                },
               ]}
             />
           </GridCol>

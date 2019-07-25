@@ -108,7 +108,7 @@ export class InfoLines extends PureComponent {
   }
 }
 
-InfoLines.PropTypes = {
+InfoLines.propTypes = {
   borderColor: PropTypes.string,
   id: PropTypes.string.isRequired,
   infos: PropTypes.array.isRequired,
