@@ -68,8 +68,23 @@ storiesOf('Lines/Info Lines', module)
               )}
               withoutResponsive={boolean('without responsive', false)}
               infos={[
-                { key: 'Lorem', value: 'Ipsum', id: 'item-1' },
-                { key: 'Dolor', value: 'Sit amet', id: 'item-2' },
+                { number: 'Lorem', value: 'Ipsum', id: 'item-1' },
+                { number: 'Dolor', value: 'Sit amet', id: 'item-2' },
+                {
+                  number: 'Dolorismip oiy',
+                  value: 'Sit ametwelcome top',
+                  id: 'item-3',
+                },
+                {
+                  number: 'Dolorpmjezia dja',
+                  value: 'Sit amet dsjkq djai',
+                  id: 'item-4',
+                },
+                {
+                  number: 'Dolordjoai daz',
+                  value: 'Sit ametn dazj',
+                  id: 'item-5',
+                },
               ]}
             />
           </GridCol>

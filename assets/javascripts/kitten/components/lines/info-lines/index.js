@@ -6,12 +6,11 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledInfoLines = styled.div`
-  border-top: ${pxToRem(1)} solid ${COLORS.line1};
-
   ${({ borderColor }) =>
     borderColor &&
     css`
-      border-color: ${borderColor};
+      border-top: ${pxToRem(1)} solid ${borderColor};
+      border-bottom: ${pxToRem(1)} solid ${borderColor};
     `}
 
   ${({ withBorderRadius }) =>
@@ -24,41 +23,41 @@ const StyledInfoLines = styled.div`
     withLeftRightBorder &&
     borderColor &&
     css`
-      border-left: ${pxToRem(1)} solid ${COLORS.line1};
-      border-right: ${pxToRem(1)} solid ${COLORS.line1};
-
-      border-color: ${borderColor};
+      border-left: ${pxToRem(1)} solid ${borderColor};
+      border-right: ${pxToRem(1)} solid ${borderColor};
     `}
 
   ${({ withoutTopBottomBorder }) =>
     withoutTopBottomBorder &&
     css`
       border-top: none;
-
-      &:last-child {
-        border-bottom: none;
-      }
+      border-bottom: none;
     `}
 
-    ${({ withoutResponsive }) =>
-      withoutResponsive &&
-      css`
-        @media (min-width: ${ScreenConfig.M.min}px) {
-          flex-direction: row;
-        }
-      `}
+  ${({ withoutResponsive }) =>
+    withoutResponsive &&
+    css`
+      ${StyledLine} {
+        flex-direction: row;
+      }
+      ${StyledValue} {
+        margin-left: auto;
+        text-align: right;
+      }
+    `}
 `
 
 const StyledLine = styled.div`
   flex-direction: column;
   display: flex;
   padding: ${pxToRem(15)};
-  border-bottom: ${pxToRem(1)} solid ${COLORS.line1};
 
   ${({ borderColor }) =>
     borderColor &&
     css`
-      border-color: ${borderColor};
+      :not(:last-child) {
+        border-bottom: ${pxToRem(1)} solid ${borderColor};
+      }
     `}
 
   @media (min-width: ${ScreenConfig.M.min}px) {
@@ -86,10 +85,10 @@ export class InfoLines extends PureComponent {
       ...others
     } = this.props
 
-    const InfoList = ({ key, value, ...others }) =>
+    const InfoList = ({ number, value, ...others }) =>
       React.Children.toArray(
         <StyledLine {...others} borderColor={borderColor} key={id}>
-          <div>{key}</div>
+          <div>{number}</div>
           <StyledValue>{value}</StyledValue>
         </StyledLine>,
       )
@@ -104,7 +103,7 @@ export class InfoLines extends PureComponent {
         withoutResponsive={withoutResponsive}
       >
         {infos.map(info => (
-          <InfoList key={info.key} value={info.value} id={info.id} />
+          <InfoList number={info.number} value={info.value} id={info.id} />
         ))}
       </StyledInfoLines>
     )
@@ -122,7 +121,7 @@ InfoLines.PropTypes = {
 }
 
 InfoLines.defaultProps = {
-  borderColor: null,
+  borderColor: '#eee',
   infos: [], // Eg: [{ key: …, value: …, id: … }]
   withBorderRadius: false,
   withLeftRightBorder: false,
