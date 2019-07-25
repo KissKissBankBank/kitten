@@ -40,9 +40,8 @@ const StyledInfoLines = styled.div`
       ${StyledLine} {
         flex-direction: row;
       }
-      ${StyledValue} {
-        margin-left: auto;
-        text-align: right;
+      ${StyledKey} {
+        flex: auto;
       }
     `}
 `
@@ -65,10 +64,9 @@ const StyledLine = styled.div`
   }
 `
 
-const StyledValue = styled.div`
+const StyledKey = styled.div`
   @media (min-width: ${ScreenConfig.M.min}px) {
-    margin-left: auto;
-    text-align: right;
+    flex: auto;
   }
 `
 
@@ -88,8 +86,8 @@ export class InfoLines extends PureComponent {
     const InfoList = ({ number, value, ...others }) =>
       React.Children.toArray(
         <StyledLine {...others} borderColor={borderColor} key={id}>
-          <div>{number}</div>
-          <StyledValue>{value}</StyledValue>
+          <StyledKey>{number}</StyledKey>
+          <div>{value}</div>
         </StyledLine>,
       )
 
