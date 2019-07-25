@@ -12,7 +12,7 @@ describe('<IconList />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <IconList>
+          <IconList containerProps={{ as: 'nav' }}>
             <IconList.Item
               icon={<LockIcon color="#333" />}
               iconProps={{

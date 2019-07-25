@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { SimpleCarousel } from '../../components/carousel/simple-carousel'
-import { Grid, GridCol } from '../../components/grid/grid'
 import { Marger } from '../../components/layout/marger'
 import { Title } from '../../components/typography/title'
 import { Paragraph } from '../../components/typography/paragraph'
@@ -11,7 +10,7 @@ const Item = ({ numItem }) => (
   <Fragment>
     <Marger bottom="3">
       <img
-        src={`https://placeimg.com/40${numItem}/540/nature`}
+        src={`https://placeimg.com/40${numItem}/40${numItem}/nature`}
         alt=""
         style={{ display: 'block', width: '100%' }}
       />
@@ -42,21 +41,19 @@ const Item = ({ numItem }) => (
 )
 
 export const KarlSimpleCarousel = props => (
-  <Grid>
-    <GridCol col="4">
-      <div
-        style={{
-          paddingLeft: 75,
-          background: '#222',
-          overflow: 'auto',
-        }}
-      >
-        <SimpleCarousel id="simpleCarousel">
-          <Item key="1" numItem="1" />
-          <Item key="2" numItem="2" />
-          <Item key="3" numItem="3" />
-        </SimpleCarousel>
-      </div>
-    </GridCol>
-  </Grid>
+  <div
+    style={{
+      paddingLeft: 75,
+      background: '#222',
+      overflow: 'auto',
+      minWidth: '300px',
+      maxWidth: '33vw',
+    }}
+  >
+    <SimpleCarousel id="simpleCarousel">
+      <Item key="1" numItem="1" />
+      <Item key="2" numItem="2" />
+      <Item key="3" numItem="3" />
+    </SimpleCarousel>
+  </div>
 )

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Details /> with default props matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style: none;
+  touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c0::-webkit-details-marker,
+.c0::before {
+  display: none;
+}
+
+<details
+  onToggle={[Function]}
+  open={false}
+>
+  <summary
+    className="c0"
+  >
+    <span>
+      Open me!
+    </span>
+  </summary>
+  <p>
+    Content
+  </p>
+</details>
+`;

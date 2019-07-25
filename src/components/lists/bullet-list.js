@@ -19,9 +19,9 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -37,7 +37,7 @@ function (_React$Component) {
 
     (0, _classCallCheck2.default)(this, BulletList);
     _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(BulletList).call(this, props));
-    _this.renderItem = _this.renderItem.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.renderItem = _this.renderItem.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   }
 

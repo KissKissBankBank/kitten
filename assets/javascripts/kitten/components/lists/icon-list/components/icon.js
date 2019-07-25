@@ -29,4 +29,10 @@ export const Icon = styled.span`
 
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${pxToRem(14)};
+
+  img {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+  }
 `

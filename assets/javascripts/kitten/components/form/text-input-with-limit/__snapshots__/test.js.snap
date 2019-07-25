@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
+<div
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
+>
+  <input
+    className="text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    defaultValue=""
+    disabled={false}
+    name="text"
+    onChange={[Function]}
+  />
+  <div
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 gDtxKV"
+    disabled={false}
+  >
+    80
+  </div>
+</div>
+`;
+
+exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
+>
+  <input
+    className="text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    defaultValue=""
+    disabled={true}
+    name="text"
+    onChange={[Function]}
+  />
+  <div
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 eTtpPb"
+    disabled={true}
+  >
+    80
+  </div>
+</div>
+`;
+
+exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
+>
+  <input
+    className="text-input-with-limit__FocusTextInput-ufrmmb-0 fzFwMa text-input__StyledInput-sc-11wej6v-1 dERTZf"
+    defaultValue=""
+    disabled={false}
+    name="text"
+    onChange={[Function]}
+  />
+  <div
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 gDtxKV"
+    disabled={false}
+  >
+    80
+  </div>
+</div>
+`;
+
+exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
+>
+  <input
+    className="text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ text-input__StyledInput-sc-11wej6v-1 dnunGN"
+    defaultValue=""
+    disabled={false}
+    name="text"
+    onChange={[Function]}
+  />
+  <div
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 gDtxKV"
+    disabled={false}
+  >
+    80
+  </div>
+</div>
+`;

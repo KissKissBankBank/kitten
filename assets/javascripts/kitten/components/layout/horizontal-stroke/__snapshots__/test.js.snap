@@ -5,7 +5,7 @@ exports[`<HorizontalStroke /> by default matches with snapshot 1`] = `
   display: block;
   border: none;
   background: #222;
-  width: 1.875rem;
+  width: 1.88rem;
   height: 0.25rem;
 }
 
@@ -19,7 +19,7 @@ exports[`<HorizontalStroke /> with \`big\` size matches with snapshot 1`] = `
   display: block;
   border: none;
   background: #222;
-  width: 3.125rem;
+  width: 3.13rem;
   height: 0.25rem;
 }
 
@@ -34,7 +34,7 @@ exports[`<HorizontalStroke /> with \`huge\` size matches with snapshot 1`] = `
   border: none;
   background: #222;
   width: 6.25rem;
-  height: 0.375rem;
+  height: 0.38rem;
 }
 
 <span
@@ -48,7 +48,7 @@ exports[`<HorizontalStroke /> with \`tiny\` size matches with snapshot 1`] = `
   border: none;
   background: #222;
   width: 1.25rem;
-  height: 0.125rem;
+  height: 0.13rem;
 }
 
 <span
@@ -61,10 +61,10 @@ exports[`<HorizontalStroke /> with with and height props matches with snapshot 1
   display: block;
   border: none;
   background: #222;
-  width: 1.875rem;
+  width: 1.88rem;
   height: 0.25rem;
   width: 6.25rem;
-  height: 3.125rem;
+  height: 3.13rem;
 }
 
 <span

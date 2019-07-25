@@ -45,7 +45,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       style={Object {}}
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 kWKGgx"
+        className="marger__StyledMarger-q3lecu-0 VJuPT"
       >
         <div>
           <div
@@ -122,7 +122,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 hKEBCQ"
+        className="marger__StyledMarger-q3lecu-0 jDfkeP"
       >
         <div
           data-radium={true}
@@ -209,7 +209,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       style={Object {}}
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 cFVKaf"
+        className="marger__StyledMarger-q3lecu-0 dkZGuS"
       >
         <div
           data-radium={true}

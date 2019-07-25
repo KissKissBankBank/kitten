@@ -4,6 +4,229 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.17.0] - 2019-07-24
+
+Features:
+- Create `ExportIcon` component.
+- Update `EmailIcon` component.
+- Add `forceOneLine` prop to `TextCopy` component.
+
+## [2.16.2] - 2019-07-19
+
+Fix:
+- Fix `TextInputWithLimit` value.
+
+## [2.16.1] - 2019-07-17
+
+Fix:
+- Add like button event styles only when an event is attached (`Comment`).
+
+## [2.16.0] - 2019-07-17
+
+Features:
+- Create `likeButtonProps` props for `Comment` component.
+- Add `avatarBadge` prop on `CommentAvatar`, `Comment` and `CommentForm`.
+- Add `title` prop on `CheckedCircleIcon`.
+- Add `title` and `color` props on `HeartIcon`.
+- Update `PasswordInput` with styled-components.
+
+## [2.15.0] - 2019-07-16
+
+Feature:
+- Dispatch props to `Field.Error` subcomponent.
+
+## [2.14.1] - 2019-07-15
+
+Fix:
+- Remove HTML warning from `Comment`.
+
+## [2.14.0] - 2019-07-11
+
+Feature:
+- Create `BubbleIcon` component.
+
+Fixes:
+- Fix props propagation in
+  `TextInputWithButton`,
+  `TextInputWithUnit`,
+  `TextInputWithLimit`.
+- Fix `width` error styles `TextInputWithUnit`.
+
+## [2.13.1] - 2019-07-08
+
+Fix:
+- Use `domElementHelper` to check if DOM is present, in `Details`.
+
+## [2.13.0] - 2019-07-08
+
+Features:
+- Add `MessengerIcon` and `WhatsAppIcon`.
+- Add `containerProps`, `listProps` to `IconList` component.
+- Add `TextCopy` component.
+- Add `Autocomplete` component.
+- Add `Field.Autocomplete` component.
+- Add `IconContainer` component.
+
+Fixes:
+- Remove `isRequired` of the `ownerName` props on `Comment` component.
+- Update
+  `Comment`,
+  `CommentForm`,
+  `CommentAvatar` with `styled-components`.
+- Update `DonationCard` with `styled-components`.
+- Update
+  `TextInput`,
+  `TextInputWithButton`,
+  `TextInputWithUnit`,
+  `TextInputWithUnitForm`,
+  `TextInputWithLimit` with `styled-components`.
+- Use fraction for `imageContainerRatio` in `SimpleCard`.
+
+## [2.12.0] - 2019-06-26
+
+Feature:
+- Add `textAlign` and `withTitleStroke` props to VerticalCard
+  component.
+
+## [2.11.0] - 2019-06-20
+
+Features:
+- Add `imageContainerBackground` and `imageContainerRatio` props to
+  `SimpleCard`.
+- Add Lazy class `LazyObserver`, hook `useLazyObserver` and HOC `withLazy`.
+
+Fixes:
+- `SimpleCarousel` accessibility fixes.
+- Remove warnings in `Carousel` component tests.
+
+## [2.10.0] - 2019-06-07
+
+Feature:
+- Add `modalProps` prop to `Modal` component.
+
+## [2.9.2] - 2019-06-04
+
+Fixes:
+- Remove warning error from unknown `Button` props.
+- Add `others` props to `SimpleCarousel` component.
+
+
+## [2.9.1] - 2019-06-04
+
+Fix:
+- Fix `checked` icon `Button` size.
+
+## [2.9.0] - 2019-06-04
+
+Feature:
+- Add `checked` `modifier` to `Button` component.
+
+## [2.8.0] - 2019-06-03
+
+Feature:
+- Expose `setSticky`/`setUnsticky` methods in StickyContainer.
+
+## [2.7.0] - 2019-05-24
+
+Features:
+- Create `RewardEdition` component.
+- Update `RewardEdition` stories.
+- Add `VisuallyHidden` component for accessibility.
+
+Fix:
+- IE11 Button height compatibility fix.
+
+## [2.6.0] - 2019-05-15
+
+Feature:
+- Add `descriptionTag` prop to `CartRewardCard`.
+
+## [2.5.0] - 2019-05-13
+
+Feature:
+- Add `stepToRem` helper.
+
+## [2.4.5] - 2019-05-09
+
+Fix:
+- Remove a HTML warning on `List.ButtonItem`.
+
+## [2.4.4] - 2019-05-06
+
+Fix:
+- Add link styles when `VerticalStepper.Step` has `onClick` attribute.
+
+## [2.4.3] - 2019-05-06
+
+Fix:
+- Fix `open` prop propagation to `Details` component.
+
+## [2.4.2] - 2019-05-02
+
+Fix:
+- `ScrollableContainer` style fixes.
+
+## [2.4.1] - 2019-04-30
+
+Fixes:
+- Rework `ScrollableContainer` shadow display.
+- Fix `cursor` for `poster` Video attribute.
+
+## [2.4.0] - 2019-04-25
+
+Features:
+- Create `ButtonGroup` component.
+- `ScrollableContainer` new props `shadowColor`, `backgroundColor`.
+
+Fixes:
+- Fix `cover` with used `controls` on Video.
+- `StickyContainer` fix for `isSticky='always'`.
+
+## [2.3.0] - 2019-04-19
+
+Feature:
+- Add `ArrowContainer` component.
+
+## [2.2.0] - 2019-04-18
+
+Features:
+- Add `borderRadius` props on Button component.
+- Add player button on `Video` component.
+- Add `Details` component.
+- Add `Icon` and `color` props to `Badge` component.
+- Add `Cart` icon.
+
+Fixes:
+- Use `styled-components` instead of `Radium` for `List` component.
+- Add `VerticalStepper.Link` styles when is an `a`.
+- Fix `WarningIcon` warning.
+- Fix buggy settings on `StickyContainer`.
+
+## [2.1.0] - 2019-04-11
+
+Features:
+- New `StickyContainer` component.
+- Add a new component `AdaptableGrid` to handle grids.
+  From now, you can use this component instead of `Grid`.
+
+## [2.0.1] - 2019-04-11
+
+Fix:
+- Remove `getScssPaths` from `@kisskissbankbank/kitten`.
+  Prefer use `@kisskissbankbank/kitten/src/config/paths`.
+
+## [2.0.0] - 2019-04-10
+
+Breaking changes:
+- Upgrade React/ReactDOM dependencies (`>= 16.8.x`).
+- `getImagesPaths` has been removed and `getScssPaths` moved.
+  If you use Kitten paths, you will be update require by:
+  `import { getScssPaths } from '@kisskissbankbank/kitten'.
+
+Feature:
+- You can now import components from `@kisskissbankbank/kitten`.
+  Example: `import { Button, Text, Marger } from '@kisskissbankbank/kitten'.
+
 ## [1.26.0] - 2019-04-02
 
 Feature:

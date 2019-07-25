@@ -25,7 +25,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _text = require("../../../../components/typography/text");
 
@@ -35,22 +35,28 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-var ImageStyle = _styledComponents.default.img.withConfig({
-  displayName: "image__ImageStyle",
+var StyledImage = _styledComponents.default.img.withConfig({
+  displayName: "image__StyledImage",
   componentId: "sc-8olw7b-0"
 })(["width:100%;display:block;"]);
 
 var playerButtonSize = (0, _typography.pxToRem)(70);
 
-var PlayerButtonStyle = _styledComponents.default.div.withConfig({
-  displayName: "image__PlayerButtonStyle",
+var StyledPlayerButton = _styledComponents.default.div.withConfig({
+  displayName: "image__StyledPlayerButton",
   componentId: "sc-8olw7b-1"
 })(["width:", ";height:", ";background:", ";position:absolute;top:calc(50% - ", " / 2);left:calc(50% - ", " / 2);display:flex;align-items:center;justify-content:center;z-index:2;"], playerButtonSize, playerButtonSize, _colorsConfig.default.font1, playerButtonSize, playerButtonSize);
 
-var PlayerStyle = _styledComponents.default.div.withConfig({
-  displayName: "image__PlayerStyle",
+var StyledImageContainer = (0, _styledComponents.default)(_marger.Marger).withConfig({
+  displayName: "image__StyledImageContainer",
   componentId: "sc-8olw7b-2"
-})(["position:relative;transition:opacity ease 600ms,z-index ease 600ms;z-index:1;"]);
+})(["position:relative;transition:opacity ease 600ms,z-index ease 600ms;z-index:1;background-color:", ";", ""], function (_ref) {
+  var imageContainerBackground = _ref.imageContainerBackground;
+  return imageContainerBackground;
+}, function (_ref2) {
+  var imageContainerRatio = _ref2.imageContainerRatio;
+  return imageContainerRatio && (0, _styledComponents.css)(["overflow:hidden;position:relative;padding-top:calc(100% / calc(", "));& > img{position:absolute;top:0;height:auto;text-align:center;}"], imageContainerRatio);
+});
 
 var Image =
 /*#__PURE__*/
@@ -69,10 +75,12 @@ function (_PureComponent) {
           imageProps = _this$props.imageProps,
           withPlayerButtonOnImage = _this$props.withPlayerButtonOnImage,
           arrowColor = _this$props.arrowColor,
-          ariaLabel = _this$props.ariaLabel;
+          ariaLabel = _this$props.ariaLabel,
+          imageContainerBackground = _this$props.imageContainerBackground,
+          imageContainerRatio = _this$props.imageContainerRatio;
 
       var PlayerButtonOnImage = function PlayerButtonOnImage(props) {
-        return _react.default.createElement(PlayerButtonStyle, null, _react.default.createElement(_text.Text, {
+        return _react.default.createElement(StyledPlayerButton, null, _react.default.createElement(_text.Text, {
           size: "default",
           weight: "regular",
           color: props.arrowColor,
@@ -80,16 +88,18 @@ function (_PureComponent) {
         }, "\u25BA"));
       };
 
-      return _react.default.createElement(_marger.Marger, {
+      return _react.default.createElement(StyledImageContainer, {
         bottom: "2",
-        className: "k-Card__imageContainer"
-      }, _react.default.createElement(PlayerStyle, null, withPlayerButtonOnImage && _react.default.createElement(PlayerButtonOnImage, {
+        className: "k-Card__imageContainer",
+        imageContainerBackground: imageContainerBackground,
+        imageContainerRatio: imageContainerRatio
+      }, withPlayerButtonOnImage && _react.default.createElement(PlayerButtonOnImage, {
         arrowColor: arrowColor,
         ariaLabel: ariaLabel
-      }), _react.default.createElement(ImageStyle, (0, _extends2.default)({}, imageProps, {
+      }), _react.default.createElement(StyledImage, (0, _extends2.default)({}, imageProps, {
         alt: imageProps.alt || '',
         className: "k-Card__image"
-      }))));
+      })));
     }
   }]);
   return Image;
@@ -104,15 +114,17 @@ Image.propTypes = {
   withPlayerButtonOnImage: _propTypes.default.bool,
   ariaLabel: _propTypes.default.string,
   arrowColor: _propTypes.default.string,
-  href: _propTypes.default.string
+  href: _propTypes.default.string,
+  imageContainerBackground: _propTypes.default.string,
+  imageContainerRatio: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
 };
 Image.defaultProps = {
   imageProps: {
-    src: 'https://placehold.it/200x200/caf4fe/caf4fe',
+    src: '',
     alt: ''
   },
   withPlayerButtonOnImage: false,
-  ariaLabel: null,
   arrowColor: 'background1',
-  href: '#'
+  href: '#',
+  imageContainerBackground: _colorsConfig.default.line1
 };

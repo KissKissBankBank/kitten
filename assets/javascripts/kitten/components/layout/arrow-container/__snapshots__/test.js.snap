@@ -1,0 +1,218 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #f6f6f6;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.63rem solid transparent;
+  top: calc(50% - 0.63rem);
+  left: -1.25rem;
+  border-right-color: #f6f6f6;
+}
+
+<div
+  className="c0"
+  color="#f6f6f6"
+>
+  Foobar
+  <span
+    className="c1"
+    color="#f6f6f6"
+    size={10}
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #ff0000;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.63rem solid transparent;
+  top: 1.25rem;
+  left: -1.25rem;
+  border-right-color: #ff0000;
+}
+
+<div
+  className="c0"
+  color="#ff0000"
+>
+  Foobar
+  <span
+    className="c1"
+    color="#ff0000"
+    size={10}
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #f6f6f6;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.63rem solid transparent;
+  top: 1.88rem;
+  left: -1.25rem;
+  border-right-color: #f6f6f6;
+}
+
+<div
+  className="c0"
+  color="#f6f6f6"
+>
+  Foobar
+  <span
+    className="c1"
+    color="#f6f6f6"
+    size={10}
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #f6f6f6;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.63rem solid transparent;
+  bottom: -1.25rem;
+  left: 1.25rem;
+  border-top-color: #f6f6f6;
+}
+
+<div
+  className="c0"
+  color="#f6f6f6"
+>
+  Foobar
+  <span
+    className="c1"
+    color="#f6f6f6"
+    size={10}
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #f6f6f6;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 1.25rem solid transparent;
+  top: 1.25rem;
+  left: -2.5rem;
+  border-right-color: #f6f6f6;
+}
+
+<div
+  className="c0"
+  color="#f6f6f6"
+>
+  Foobar
+  <span
+    className="c1"
+    color="#f6f6f6"
+    size={20}
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #f6f6f6;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.63rem solid transparent;
+  top: 1.25rem;
+  left: -1.25rem;
+  border-right-color: #f6f6f6;
+}
+
+<div
+  className="c0"
+  color="#f6f6f6"
+>
+  Foobar
+  <span
+    className="c1"
+    color="#f6f6f6"
+    size={10}
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #f6f6f6;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.63rem solid transparent;
+  top: 1.25rem;
+  left: -1.25rem;
+  border-right-color: #f6f6f6;
+}
+
+<article
+  className="k-u-example-class c0"
+  color="#f6f6f6"
+>
+  Foobar
+  <span
+    className="c1"
+    color="#f6f6f6"
+    size={10}
+  />
+</article>
+`;

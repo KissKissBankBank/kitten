@@ -108,11 +108,12 @@ function (_Component) {
           className = _this$props.className,
           closeButtonLabel = _this$props.closeButtonLabel,
           onClose = _this$props.onClose,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose"]);
+          modalProps = _this$props.modalProps,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps"]);
       var triggerClassNames = (0, _classnames.default)('k-Modal', className);
       return _react.default.createElement("div", (0, _extends2.default)({
         className: triggerClassNames
-      }, others), this.renderTriggerAction(), _react.default.createElement(_reactModal.default, {
+      }, others), this.renderTriggerAction(), _react.default.createElement(_reactModal.default, (0, _extends2.default)({
         role: "dialog",
         className: {
           base: 'k-Modal__content',
@@ -132,7 +133,7 @@ function (_Component) {
         ariaHideApp: false,
         onRequestClose: this.close,
         contentLabel: label
-      }, content, this.renderCloseModal()));
+      }, modalProps), content, this.renderCloseModal()));
     }
   }]);
   return Modal;
@@ -143,11 +144,13 @@ Modal.propTypes = {
   label: _propTypes.default.string,
   labelledby: _propTypes.default.string,
   describedby: _propTypes.default.string,
-  closeButtonLabel: _propTypes.default.string
+  closeButtonLabel: _propTypes.default.string,
+  modalProps: _propTypes.default.object
 };
 Modal.defaultProps = {
   label: 'Modal',
   labelledby: '',
   describedby: '',
-  closeButtonLabel: ''
+  closeButtonLabel: '',
+  modalProps: {}
 };

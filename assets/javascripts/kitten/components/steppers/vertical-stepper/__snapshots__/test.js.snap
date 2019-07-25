@@ -17,16 +17,16 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
+  width: 1.88rem;
+  height: 1.88rem;
+  border-radius: 1.88rem;
   box-sizing: border-box;
-  margin-right: 0.9375rem;
+  margin-right: 0.94rem;
   background-color: #fff;
   border: 2px solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   background-color: #61d079;
   border-color: #61d079;
 }
@@ -47,16 +47,16 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
+  width: 1.88rem;
+  height: 1.88rem;
+  border-radius: 1.88rem;
   box-sizing: border-box;
-  margin-right: 0.9375rem;
+  margin-right: 0.94rem;
   background-color: #fff;
   border: 2px solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   background-color: #19b4fa;
   border-color: #19b4fa;
 }
@@ -77,48 +77,18 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
+  width: 1.88rem;
+  height: 1.88rem;
+  border-radius: 1.88rem;
   box-sizing: border-box;
-  margin-right: 0.9375rem;
+  margin-right: 0.94rem;
   background-color: #fff;
   border: 2px solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
   color: #ff0046;
   border-color: #ffb2c7;
-}
-
-.c13 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
-  box-sizing: border-box;
-  margin-right: 0.9375rem;
-  background-color: #fff;
-  border: 2px solid #eee;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: #19b4fa;
-  border-color: #bae8fd;
 }
 
 .c14 {
@@ -137,20 +107,50 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
+  width: 1.88rem;
+  height: 1.88rem;
+  border-radius: 1.88rem;
   box-sizing: border-box;
-  margin-right: 0.9375rem;
+  margin-right: 0.94rem;
   background-color: #fff;
   border: 2px solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
+  color: #19b4fa;
+  border-color: #bae8fd;
+}
+
+.c15 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 1.88rem;
+  height: 1.88rem;
+  border-radius: 1.88rem;
+  box-sizing: border-box;
+  margin-right: 0.94rem;
+  background-color: #fff;
+  border: 2px solid #eee;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
 }
 
 .c2 {
-  margin: 1.875rem 0;
+  margin: 1.88rem 0;
 }
 
 .c3 {
@@ -177,9 +177,9 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c3:hover .VerticalStepper__step,
 .c3:focus .VerticalStepper__step,
 .c3:active .VerticalStepper__step {
-  -webkit-transform: translateX(0.3125rem);
-  -ms-transform: translateX(0.3125rem);
-  transform: translateX(0.3125rem);
+  -webkit-transform: translateX(0.31rem);
+  -ms-transform: translateX(0.31rem);
+  transform: translateX(0.31rem);
 }
 
 .c3:hover .VerticalStepper__link,
@@ -207,7 +207,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c6 {
-  margin: 0 0 0.125rem;
+  margin: 0 0 0.13rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -230,8 +230,26 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   text-decoration: none;
 }
 
+.c13 {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: normal;
+  color: #19b4fa;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.c13:hover,
+.c13:focus,
+.c13:active {
+  color: #0496cc;
+}
+
 .c10 {
-  margin: 0.3125rem 0 0.625rem;
+  margin: 0.31rem 0 0.63rem;
   padding: 0;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
@@ -248,13 +266,13 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
-  margin: 0 0 0.125rem;
+  margin: 0 0 0.13rem;
   padding: 0;
   list-style: none;
 }
 
 .c11:before {
-  padding-right: 0.625rem;
+  padding-right: 0.63rem;
   content: '●';
   font-size: 0.5rem;
 }
@@ -274,7 +292,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0.875rem;
+  left: 0.88rem;
   z-index: -1;
   content: '';
   border-left: 2px dashed #eee;
@@ -417,7 +435,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             <path
               d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
               fill="#ff0046"
-              fill-rule="evenodd"
+              fillRule="evenodd"
             />
           </svg>
         </span>
@@ -447,11 +465,12 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           <p
             className="c7"
           >
-            <span
-              className="VerticalStepper__link c8"
+            <a
+              className="VerticalStepper__link c13"
+              href="#"
             >
               Link
-            </span>
+            </a>
           </p>
         </div>
       </a>
@@ -464,7 +483,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="c13"
+          className="c14"
           disabled={false}
         >
           <svg
@@ -509,7 +528,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="c14"
+          className="c15"
           disabled={false}
         />
         <div

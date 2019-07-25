@@ -17,16 +17,22 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 3.125rem;
-  height: 3.125rem;
-  border-radius: 3.125rem;
+  width: 3.13rem;
+  height: 3.13rem;
+  border-radius: 3.13rem;
   box-sizing: border-box;
   margin-right: 1.25rem;
   background-color: #fff;
   border: 2px solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
+}
+
+.c3 img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
 }
 
 .c2 {
@@ -56,17 +62,17 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
   font-weight: 400;
   color: #222;
   line-height: 1.6;
-  font-size: 0.875rem;
+  font-size: 0.88rem;
 }
 
 .c0 {
   position: relative;
-  padding: 0.0625rem 0;
+  padding: 0.06rem 0;
 }
 
 .c1 {
   margin: 0;
-  padding: 0.625rem 0;
+  padding: 0.63rem 0;
   list-style: none;
 }
 
@@ -97,7 +103,6 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
 >
   <ul
     className="c1"
-    role="tablist"
   >
     <li
       className="c2"

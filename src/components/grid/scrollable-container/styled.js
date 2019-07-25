@@ -1,13 +1,15 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.StyledRightGradient = exports.StyledLeftGradient = exports.StyledScrollableContainer = exports.StyledContainer = void 0;
+exports.StyledScrollableContainer = exports.scrollableContainerStyle = exports.StyledContainer = void 0;
+
+var _objectDestructuringEmpty2 = _interopRequireDefault(require("@babel/runtime/helpers/objectDestructuringEmpty"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
@@ -15,9 +17,9 @@ var _screenConfig = require("../../../constants/screen-config");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
 var _container = require("../../../components/grid/container");
+
+var _polished = require("polished");
 
 var gradientWidth = 20;
 var StyledContainer = (0, _styledComponents.default)(_container.Container).withConfig({
@@ -26,23 +28,26 @@ var StyledContainer = (0, _styledComponents.default)(_container.Container).withC
 })(["position:relative;padding-left:0;padding-right:0;"]);
 exports.StyledContainer = StyledContainer;
 
+var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
+  (0, _objectDestructuringEmpty2.default)(_ref);
+  return (0, _styledComponents.css)(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;}", " ", ""], function (_ref2) {
+    var displayLeftGradient = _ref2.displayLeftGradient,
+        shadowColor = _ref2.shadowColor;
+    return displayLeftGradient && (0, _styledComponents.css)(["&:before{left:0;width:", ";background-image:linear-gradient( to right,", ",", " );}"], (0, _typography.pxToRem)(gradientWidth), (0, _polished.rgba)(shadowColor, 1), (0, _polished.rgba)(shadowColor, 0));
+  }, function (_ref3) {
+    var displayRightGradient = _ref3.displayRightGradient,
+        shadowColor = _ref3.shadowColor;
+    return displayRightGradient && (0, _styledComponents.css)(["&:after{right:0;width:", ";background-image:linear-gradient( to left,", ",", " );}"], (0, _typography.pxToRem)(gradientWidth), (0, _polished.rgba)(shadowColor, 1), (0, _polished.rgba)(shadowColor, 0));
+  });
+};
+
+exports.scrollableContainerStyle = scrollableContainerStyle;
+
 var StyledScrollableContainer = _styledComponents.default.div.withConfig({
   displayName: "styled__StyledScrollableContainer",
   componentId: "d41exg-1"
-})(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}"]);
+})(["", ""], function (props) {
+  return scrollableContainerStyle(props);
+});
 
 exports.StyledScrollableContainer = StyledScrollableContainer;
-
-var StyledLeftGradient = _styledComponents.default.div.withConfig({
-  displayName: "styled__StyledLeftGradient",
-  componentId: "d41exg-2"
-})(["position:absolute;left:0;top:0;bottom:0;width:", ";background:linear-gradient( 90deg,", ",rgba(255,255,255,0) );"], (0, _typography.pxToRem)(gradientWidth), _colorsConfig.default.background1);
-
-exports.StyledLeftGradient = StyledLeftGradient;
-
-var StyledRightGradient = _styledComponents.default.div.withConfig({
-  displayName: "styled__StyledRightGradient",
-  componentId: "d41exg-3"
-})(["position:absolute;right:0;top:0;bottom:0;width:", ";background:linear-gradient( 90deg,rgba(255,255,255,0),", " );"], (0, _typography.pxToRem)(gradientWidth), _colorsConfig.default.background1);
-
-exports.StyledRightGradient = StyledRightGradient;

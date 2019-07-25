@@ -1,0 +1,296 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
+<form
+  className="text-input-with-unit-form__StyledFormContainer-wjoixz-0 iADQmK"
+  onSubmit={[Function]}
+>
+  <div
+    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+  >
+    <div
+      className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+    >
+      <div
+        className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+      >
+        <div
+          className="marger__StyledMarger-q3lecu-0 csmETU"
+        >
+          <label
+            className="k-Label k-Label--micro"
+            htmlFor="donation-amount"
+            onClick={[Function]}
+          >
+            Enter your amount
+          </label>
+        </div>
+        <div
+          className="marger__StyledMarger-q3lecu-0 cHJBWz"
+        >
+          <div
+            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+          >
+            <input
+              autoComplete="off"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+              defaultValue=""
+              disabled={false}
+              id="donation-amount"
+              name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder="Your amount"
+              type="number"
+            />
+            <span
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+              disabled={false}
+            >
+              €
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+  >
+    <button
+      aria-label="To contribute"
+      className="k-Button k-Button--helium k-Button--big text-input-with-unit-form__StyledButton-wjoixz-2 cWUtac"
+      disabled={false}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      tabIndex={null}
+      type="submit"
+    >
+      To contribute
+    </button>
+  </div>
+</form>
+`;
+
+exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
+<form
+  className="text-input-with-unit-form__StyledFormContainer-wjoixz-0 iADQmK"
+  onSubmit={[Function]}
+>
+  <div
+    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+  >
+    <div
+      className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+    >
+      <div
+        className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+      >
+        <div
+          className="marger__StyledMarger-q3lecu-0 csmETU"
+        >
+          <label
+            className="k-Label k-Label--micro"
+            htmlFor=""
+            onClick={[Function]}
+          >
+            
+          </label>
+        </div>
+        <div
+          className="marger__StyledMarger-q3lecu-0 cHJBWz"
+        >
+          <div
+            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+          >
+            <input
+              autoComplete="off"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+              defaultValue=""
+              disabled={false}
+              id=""
+              name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder=""
+              type="number"
+            />
+            <span
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+              disabled={false}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+  >
+    <button
+      aria-label=""
+      className="k-Button k-Button--helium k-Button--big text-input-with-unit-form__StyledButton-wjoixz-2 cWUtac"
+      disabled={false}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      tabIndex={null}
+      type="submit"
+    >
+      
+    </button>
+  </div>
+</form>
+`;
+
+exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] = `
+<form
+  className="text-input-with-unit-form__StyledFormContainer-wjoixz-0 iADQmK"
+  onSubmit={[Function]}
+>
+  <div
+    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+  >
+    <div
+      className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+    >
+      <div
+        className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+      >
+        <div
+          className="marger__StyledMarger-q3lecu-0 csmETU"
+        >
+          <label
+            className="k-Label k-Label--micro"
+            htmlFor=""
+            onClick={[Function]}
+          >
+            
+          </label>
+        </div>
+        <div
+          className="marger__StyledMarger-q3lecu-0 cHJBWz"
+        >
+          <div
+            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+          >
+            <input
+              autoComplete="off"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+              defaultValue=""
+              disabled={true}
+              id=""
+              name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder=""
+              type="number"
+            />
+            <span
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 lfNJet"
+              disabled={true}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+  >
+    <button
+      aria-label=""
+      className="k-Button k-Button--helium k-Button--big text-input-with-unit-form__StyledButton-wjoixz-2 cWUtac"
+      disabled={true}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      tabIndex={null}
+      type="submit"
+    >
+      
+    </button>
+  </div>
+</form>
+`;
+
+exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
+<form
+  className="text-input-with-unit-form__StyledFormContainer-wjoixz-0 iADQmK"
+  onSubmit={[Function]}
+>
+  <div
+    className="marger__StyledMarger-q3lecu-0 eQydFv"
+  >
+    <div
+      className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+    >
+      <div
+        className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+      >
+        <div
+          className="marger__StyledMarger-q3lecu-0 csmETU"
+        >
+          <label
+            className="k-Label k-Label--micro"
+            htmlFor=""
+            onClick={[Function]}
+          >
+            
+          </label>
+        </div>
+        <div
+          className="marger__StyledMarger-q3lecu-0 jSUHLH"
+        >
+          <div
+            className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+          >
+            <input
+              autoComplete="off"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 dERTZf"
+              defaultValue=""
+              disabled={false}
+              id=""
+              name="text"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              placeholder=""
+              type="number"
+            />
+            <span
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 gXhzRE"
+              disabled={false}
+            />
+          </div>
+        </div>
+        <div
+          className="marger__StyledMarger-q3lecu-0 WSKaG"
+        >
+          <span
+            className="k-u-color-error k-u-size-micro k-u-weight-regular"
+          >
+            Error message…
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+  >
+    <button
+      aria-label=""
+      className="k-Button k-Button--helium k-Button--big text-input-with-unit-form__StyledButton-wjoixz-2 cWUtac"
+      disabled={false}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      tabIndex={null}
+      type="submit"
+    >
+      
+    </button>
+  </div>
+</form>
+`;

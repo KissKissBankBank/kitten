@@ -4,6 +4,7 @@ exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
 Array [
   <div
     className="simple-carousel__StyledContainer-t6k8ig-0 eItgJi"
+    id=""
     style={Object {}}
   >
     <div
@@ -27,44 +28,52 @@ Array [
       </p>
     </div>
   </div>,
-  <ul
-    className="simple-carousel__StyledPagination-t6k8ig-1 cJmvhm"
+  <div
+    className="simple-carousel__StyledPagination-t6k8ig-1 fNLlfA"
+    onKeyDown={[Function]}
     role="tablist"
     style={Object {}}
   >
-    <li>
-      <button
-        aria-controls="carouselItem_0"
-        aria-label="Page 1"
-        aria-selected={true}
-        className="simple-carousel__StyledPaginationButton-t6k8ig-2 iDakHt"
-        id="carouselTab_0"
-        onClick={[Function]}
-        role="tab"
-        style={Object {}}
-        type="button"
-      />
-    </li>
-    <li>
-      <button
-        aria-controls="carouselItem_1"
-        aria-label="Page 2"
-        aria-selected={false}
-        className="simple-carousel__StyledPaginationButton-t6k8ig-2 iDakHt"
-        id="carouselTab_1"
-        onClick={[Function]}
-        role="tab"
-        style={Object {}}
-        type="button"
-      />
-    </li>
-  </ul>,
+    <button
+      aria-controls="carouselItem_0"
+      aria-selected={true}
+      className="simple-carousel__StyledPaginationButton-t6k8ig-2 lcjxHC"
+      id="carouselTab_0"
+      onClick={[Function]}
+      role="tab"
+      style={Object {}}
+      type="button"
+    >
+      <span
+        className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+      >
+        Page 1
+      </span>
+    </button>
+    <button
+      aria-controls="carouselItem_1"
+      aria-selected={false}
+      className="simple-carousel__StyledPaginationButton-t6k8ig-2 lcjxHC"
+      id="carouselTab_1"
+      onClick={[Function]}
+      role="tab"
+      style={Object {}}
+      type="button"
+    >
+      <span
+        className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+      >
+        Page 2
+      </span>
+    </button>
+  </div>,
 ]
 `;
 
 exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 <div
   className="simple-carousel__StyledContainer-t6k8ig-0 kmkOnR"
+  id=""
   style={Object {}}
 >
   <div
@@ -83,6 +92,7 @@ exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 exports[`<SimpleCarousel /> with some props matches with snapshot 1`] = `
 <div
   className="simple-carousel__StyledContainer-t6k8ig-0 kmkOnR"
+  id="simpleCarousel"
   style={Object {}}
 >
   <div

@@ -17,9 +17,9 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -51,12 +51,12 @@ function (_React$Component) {
       dragged: !!props.initialInstallment,
       touched: props.initialTouched
     };
-    _this.handleFocus = _this.handleFocus.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleAmountChange = _this.handleAmountChange.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleEnter = _this.handleEnter.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleInstallmentLabelClick = _this.handleInstallmentLabelClick.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleInstallmentChange = _this.handleInstallmentChange.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleInstallmentAction = _this.handleInstallmentAction.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleFocus = _this.handleFocus.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleAmountChange = _this.handleAmountChange.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleEnter = _this.handleEnter.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleInstallmentLabelClick = _this.handleInstallmentLabelClick.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleInstallmentChange = _this.handleInstallmentChange.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleInstallmentAction = _this.handleInstallmentAction.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   }
 
@@ -193,8 +193,8 @@ function (_React$Component2) {
 
     (0, _classCallCheck2.default)(this, LoanSimulatorContent);
     _this2 = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LoanSimulatorContent).call(this, props));
-    _this2.handleAmountKeyDown = _this2.handleAmountKeyDown.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this2)));
-    _this2.handleInstallmentChange = _this2.handleInstallmentChange.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this2)));
+    _this2.handleAmountKeyDown = _this2.handleAmountKeyDown.bind((0, _assertThisInitialized2.default)(_this2));
+    _this2.handleInstallmentChange = _this2.handleInstallmentChange.bind((0, _assertThisInitialized2.default)(_this2));
     return _this2;
   } // Allow parents to focus the slider
 

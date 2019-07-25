@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by default matches with snapshot 1`] = `
+<div
+  style={Object {}}
+>
+  <button
+    aria-controls="k-ExpandBoard"
+    aria-expanded={false}
+    className="expand-board__StyledButton-sc-5cysn4-0 cOHgCM button__StyledButton-sc-1q5nte0-0 kBuqIn"
+    disabled={false}
+    onClick={[Function]}
+    type="button"
+  >
+    <div>
+      Alice
+      <svg
+        className="expand-board__StyledArrowIcon-sc-5cysn4-1 dNmHEq"
+        data-radium={true}
+        fill="#fff"
+        height="5.64"
+        style={
+          Object {
+            "transform": "rotate(180deg)",
+          }
+        }
+        viewBox="0 0 8.48 5.64"
+        width="8.48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+        />
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> disabled matches with snapshot 1`] = `
+<div
+  style={Object {}}
+>
+  <button
+    aria-controls="k-ExpandBoard"
+    aria-expanded={false}
+    className="expand-board__StyledButton-sc-5cysn4-0 cOHgCM button__StyledButton-sc-1q5nte0-0 kBuqIn"
+    disabled={true}
+    onClick={[Function]}
+    type="button"
+  >
+    <div>
+      Alice
+      <svg
+        className="expand-board__StyledArrowIcon-sc-5cysn4-1 dNmHEq"
+        data-radium={true}
+        fill="#fff"
+        height="5.64"
+        style={
+          Object {
+            "transform": "rotate(180deg)",
+          }
+        }
+        viewBox="0 0 8.48 5.64"
+        width="8.48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+        />
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
+exports[`<ExpandBoard /> with random content matches with snapshot 1`] = `
+<div
+  style={Object {}}
+/>
+`;

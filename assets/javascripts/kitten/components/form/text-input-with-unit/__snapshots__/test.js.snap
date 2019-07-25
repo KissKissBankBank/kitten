@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+    disabled={false}
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    disabled={true}
+    name="text"
+    type="number"
+  />
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 lfNJet"
+    disabled={true}
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 dERTZf"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 gXhzRE"
+    disabled={false}
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    disabled={false}
+    name="text"
+    type="number"
+  >
+    €
+  </input>
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+    disabled={false}
+  >
+    λ
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+>
+  <input
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 culAbn"
+    disabled={false}
+    name="text"
+    type="number"
+  />
+  <span
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 kUeknv"
+    disabled={false}
+  >
+    λ
+  </span>
+</div>
+`;

@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import ColorsConfig from '../../../constants/colors-config'
 import { Container } from '../../../components/grid/container'
+import { rgba } from 'polished'
 
 const gradientWidth = 20
 
@@ -12,7 +12,7 @@ export const StyledContainer = styled(Container)`
   padding-right: 0;
 `
 
-export const StyledScrollableContainer = styled.div`
+export const scrollableContainerStyle = ({}) => css`
   display: flex;
   white-space: nowrap;
   overflow-x: auto;
@@ -25,30 +25,45 @@ export const StyledScrollableContainer = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    pointer-events: none;
+    touch-action: none;
+  }
+  ${({ displayLeftGradient, shadowColor }) =>
+    displayLeftGradient &&
+    css`
+      &:before {
+        left: 0;
+        width: ${pxToRem(gradientWidth)};
+        background-image: linear-gradient(
+          to right,
+          ${rgba(shadowColor, 1)},
+          ${rgba(shadowColor, 0)}
+        );
+      }
+    `}
+  ${({ displayRightGradient, shadowColor }) =>
+    displayRightGradient &&
+    css`
+      &:after {
+        right: 0;
+        width: ${pxToRem(gradientWidth)};
+        background-image: linear-gradient(
+          to left,
+          ${rgba(shadowColor, 1)},
+          ${rgba(shadowColor, 0)}
+        );
+      }
+    `}
 `
 
-export const StyledLeftGradient = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: ${pxToRem(gradientWidth)};
-  background: linear-gradient(
-    90deg,
-    ${ColorsConfig.background1},
-    rgba(255, 255, 255, 0)
-  );
-`
-
-export const StyledRightGradient = styled.div`
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: ${pxToRem(gradientWidth)};
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0),
-    ${ColorsConfig.background1}
-  );
+export const StyledScrollableContainer = styled.div`
+  ${props => scrollableContainerStyle(props)}
 `

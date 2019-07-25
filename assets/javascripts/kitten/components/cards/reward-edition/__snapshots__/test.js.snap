@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.13rem;
+  padding: 0 1.88rem;
+  font-size: 0.88rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.88rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.13rem;
+  height: 3.13rem;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.13rem solid #222;
+  background-color: #222;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c4:disabled {
+  cursor: not-allowed;
+}
+
+.c4 >:nth-child(n) {
+  margin-right: 0.63rem;
+  text-align: left;
+}
+
+.c4 >:last-child {
+  margin-right: 0;
+}
+
+.c4 svg {
+  fill: #fff;
+}
+
+.c4:hover,
+.c4:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c4:hover svg,
+.c4:focus svg {
+  fill: #fff;
+}
+
+.c4:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c4:active svg {
+  fill: #fff;
+}
+
+.c4:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c4:disabled svg {
+  fill: #fff;
+}
+
+.c1 {
+  border-bottom-width: 0.13rem;
+  border-bottom-style: solid;
+  border-bottom-color: #eee;
+  padding: 0.94rem;
+  background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  -webkit-align-item: flex-end;
+  -webkit-box-align-item: flex-end;
+  -ms-flex-align-item: flex-end;
+  align-item: flex-end;
+}
+
+.c5 {
+  padding: 2.5rem;
+}
+
+.c0 {
+  width: 100%;
+  height: 100%;
+  border-width: 0.13rem;
+  border-style: solid;
+  border-color: #eee;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4 {
+    width: 12.5rem;
+    height: 3.13rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c4 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (max-width:767px) {
+  .c5 {
+    padding: 1.88rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <span
+      className="c2"
+    >
+      Header
+    </span>
+    <button
+      aria-label="Garbage Button"
+      className="c3 c4"
+      type="button"
+    >
+      <svg
+        height="14"
+        viewBox="0 0 12 14"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Garbage
+        </title>
+        <path
+          d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="c5"
+  >
+    Content
+  </div>
+</div>
+`;

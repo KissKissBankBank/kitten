@@ -4,7 +4,8 @@ if [ -z "$1" ]
     echo "You need to supply version (patch|minor|major or specific tag)"
     exit
 fi
-echo "You're about to release the next ${1} kitten's version"
+echo "You're about to release the next version of kitten (${1})"
+bin/install
 npm test
 git checkout -b release/v$1
 npm run build:js

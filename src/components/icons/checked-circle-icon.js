@@ -16,11 +16,12 @@ var _react = _interopRequireDefault(require("react"));
 var CheckedCircleIcon = function CheckedCircleIcon(_ref) {
   var circleColor = _ref.circleColor,
       checkedColor = _ref.checkedColor,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["circleColor", "checkedColor"]);
+      title = _ref.title,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["circleColor", "checkedColor", "title"]);
   return _react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _react.default.createElement("title", null, "Checked circle"), _react.default.createElement("circle", {
+  }, props), title && _react.default.createElement("title", null, title), _react.default.createElement("circle", {
     fill: circleColor,
     cx: "10",
     cy: "10",
@@ -34,5 +35,6 @@ var CheckedCircleIcon = function CheckedCircleIcon(_ref) {
 exports.CheckedCircleIcon = CheckedCircleIcon;
 CheckedCircleIcon.defaultProps = {
   circleColor: '#fff',
-  checkedColor: '#333'
+  checkedColor: '#333',
+  title: 'Checked circle'
 };

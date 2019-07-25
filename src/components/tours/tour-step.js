@@ -19,9 +19,9 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -44,9 +44,9 @@ function (_React$Component) {
       currentPositionTarget: _this.props.targetElement,
       popoverComputedStyles: null
     };
-    _this.handleResize = _this.handleResize.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handleTargetHighlightPosition = _this.handleTargetHighlightPosition.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
-    _this.handlePopoverPosition = _this.handlePopoverPosition.bind((0, _assertThisInitialized2.default)((0, _assertThisInitialized2.default)(_this)));
+    _this.handleResize = _this.handleResize.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handleTargetHighlightPosition = _this.handleTargetHighlightPosition.bind((0, _assertThisInitialized2.default)(_this));
+    _this.handlePopoverPosition = _this.handlePopoverPosition.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   } // Component lifecyle.
 

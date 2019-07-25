@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DonationCard /> by default matches with snapshot 1`] = `
+<div
+  className="donation-card__StyledCard-sc-19h76fz-0 cKKhfB"
+>
+  <div
+    className="marger__StyledMarger-q3lecu-0 dhVuZS"
+  >
+    <div
+      className="k-Grid donation-card__StyledGrid-sc-19h76fz-1 glvgJj"
+    >
+      <div
+        className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--offset-1@m k-Grid__col--8@l k-Grid__col--offset-2@l"
+      >
+        <div
+          className="marger__StyledMarger-q3lecu-0 jgfcQX"
+        >
+          <h2
+            className="k-Title donation-card__StyledTitle-sc-19h76fz-2 dtGEFG k-Title--primary k-Title--withoutMargin"
+          >
+            Custom title mount
+          </h2>
+        </div>
+        <div
+          className="marger__StyledMarger-q3lecu-0 fSrmLM"
+        >
+          <span
+            className="donation-card__StyledHorizontalStroke-sc-19h76fz-3 jVTnEi horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dKtqdq"
+          />
+        </div>
+        <form
+          className="text-input-with-unit-form__StyledFormContainer-wjoixz-0 iADQmK"
+          onSubmit={[Function]}
+        >
+          <div
+            className="marger__StyledMarger-q3lecu-0 gKSWLw"
+          >
+            <div
+              className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+            >
+              <div
+                className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+              >
+                <div
+                  className="marger__StyledMarger-q3lecu-0 csmETU"
+                >
+                  <label
+                    className="k-Label k-Label--micro"
+                    htmlFor="donation-amount"
+                    onClick={[Function]}
+                  >
+                    Enter your amount
+                  </label>
+                </div>
+                <div
+                  className="marger__StyledMarger-q3lecu-0 cHJBWz"
+                >
+                  <div
+                    className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+                  >
+                    <input
+                      autoComplete="off"
+                      className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+                      defaultValue=""
+                      disabled={false}
+                      id="donation-amount"
+                      name="text"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      placeholder="Your amount"
+                      type="number"
+                    />
+                    <span
+                      className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+                      disabled={false}
+                    >
+                      €
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+          >
+            <button
+              aria-label="To contribute"
+              className="k-Button k-Button--helium k-Button--big text-input-with-unit-form__StyledButton-wjoixz-2 cWUtac"
+              disabled={false}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              tabIndex={null}
+              type="submit"
+            >
+              To contribute
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

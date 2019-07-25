@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import classNames from 'classnames'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
@@ -31,4 +31,16 @@ const StyledLink = styled.span`
   line-height: normal;
   color: ${COLORS.primary1};
   text-decoration: none;
+
+  ${({ as }) =>
+    as === 'a' &&
+    css`
+      transition: color 0.4s;
+
+      :hover,
+      :focus,
+      :active {
+        color: ${COLORS.primary3};
+      }
+    `}
 `
