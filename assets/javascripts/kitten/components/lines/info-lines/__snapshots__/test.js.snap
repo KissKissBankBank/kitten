@@ -6,29 +6,31 @@ exports[`<InfoLines /> should match its empty snapshot 1`] = `
 >
   <div
     className="info-lines__StyledLine-sc-1tjj1rx-1 fkIqjP"
-    id="item-1"
   >
-    <div
-      className="info-lines__StyledKey-sc-1tjj1rx-2 jyphAu"
+    <span
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-light info-lines__StyledKey-sc-1tjj1rx-2 jyphAu"
     >
       Lorem
-    </div>
-    <div>
+    </span>
+    <span
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-light"
+    >
       Ipsum
-    </div>
+    </span>
   </div>
   <div
     className="info-lines__StyledLine-sc-1tjj1rx-1 fkIqjP"
-    id="item-2"
   >
-    <div
-      className="info-lines__StyledKey-sc-1tjj1rx-2 jyphAu"
+    <span
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-light info-lines__StyledKey-sc-1tjj1rx-2 jyphAu"
     >
       Dolor
-    </div>
-    <div>
+    </span>
+    <span
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-light"
+    >
       Sit amet
-    </div>
+    </span>
   </div>
 </div>
 `;
