@@ -73,7 +73,6 @@ const StyledKey = styled(Text)`
 export class InfoLines extends PureComponent {
   render() {
     const {
-      id,
       infos,
       withBorderRadius,
       withLeftRightBorder,
@@ -123,8 +122,8 @@ export class InfoLines extends PureComponent {
 }
 
 InfoLines.propTypes = {
-  borderColor: PropTypes.string,
   infos: PropTypes.array.isRequired,
+  borderColor: PropTypes.string,
   withBorderRadius: PropTypes.bool,
   withLeftRightBorder: PropTypes.bool,
   withoutTopBottomBorder: PropTypes.bool,
