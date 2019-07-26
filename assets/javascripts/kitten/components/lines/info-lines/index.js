@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
@@ -64,7 +63,7 @@ const StyledLine = styled.div`
   }
 `
 
-const StyledKey = styled(Text)`
+const StyledKey = styled.span`
   @media (min-width: ${ScreenConfig.M.min}px) {
     flex: auto;
   }
@@ -85,17 +84,8 @@ export class InfoLines extends PureComponent {
     const InfoList = ({ title, value, id, ...others }) =>
       React.Children.toArray(
         <StyledLine {...others} borderColor={borderColor} key={id}>
-          <StyledKey
-            color="font1"
-            size="default"
-            weight="light"
-            lineHeight="normal"
-          >
-            {title}
-          </StyledKey>
-          <Text color="font1" size="default" weight="light" lineHeight="normal">
-            {value}
-          </Text>
+          <StyledKey>{title}</StyledKey>
+          <span>{value}</span>
         </StyledLine>,
       )
 
