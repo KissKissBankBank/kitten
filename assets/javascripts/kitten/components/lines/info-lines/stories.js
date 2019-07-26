@@ -73,8 +73,8 @@ storiesOf('Lines/Info Lines', module)
               withoutResponsive={boolean('without responsive', false)}
               borderColor={color('custom border color', '#eee')}
               infos={[
-                { number: 'Lorem', value: 'Ipsum', id: 'item-1' },
-                { number: 'Dolor', value: 'Sit amet', id: 'item-2' },
+                { key: 'Lorem', value: 'Ipsum', id: 'item-1' },
+                { key: 'Dolor', value: 'Sit amet', id: 'item-2' },
               ]}
             />
           </GridCol>

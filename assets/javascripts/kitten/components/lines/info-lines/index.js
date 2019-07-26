@@ -84,7 +84,7 @@ export class InfoLines extends PureComponent {
       ...others
     } = this.props
 
-    const InfoList = ({ number, value, ...others }) =>
+    const InfoList = ({ title, value, id, ...others }) =>
       React.Children.toArray(
         <StyledLine {...others} borderColor={borderColor} key={id}>
           <StyledKey
@@ -93,7 +93,7 @@ export class InfoLines extends PureComponent {
             weight="light"
             lineHeight="normal"
           >
-            {number}
+            {title}
           </StyledKey>
           <Text color="font1" size="default" weight="light" lineHeight="normal">
             {value}
@@ -111,7 +111,12 @@ export class InfoLines extends PureComponent {
         withoutResponsive={withoutResponsive}
       >
         {infos.map(info => (
-          <InfoList number={info.number} value={info.value} id={info.id} />
+          <InfoList
+            key={info.key}
+            title={info.key}
+            value={info.value}
+            id={info.id}
+          />
         ))}
       </StyledInfoLines>
     )

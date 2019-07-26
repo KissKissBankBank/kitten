@@ -32,8 +32,8 @@ describe('<InfoLines />', () => {
           withoutResponsive={false}
           borderColor="#eee"
           infos={[
-            { number: 'Lorem', value: 'Ipsum', id: 'item-1' },
-            { number: 'Dolor', value: 'Sit amet', id: 'item-2' },
+            { key: 'Lorem', value: 'Ipsum', id: 'item-1' },
+            { key: 'Dolor', value: 'Sit amet', id: 'item-2' },
           ]}
         />,
       )
