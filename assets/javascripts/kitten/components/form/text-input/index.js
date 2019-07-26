@@ -165,6 +165,7 @@ export class TextInput extends PureComponent {
       return (
         <StyledTextarea>
           <StyledInputTextarea
+            ref={input => (this.input = input)}
             valid={valid}
             error={error}
             disabled={disabled}
@@ -179,6 +180,7 @@ export class TextInput extends PureComponent {
     } else {
       return (
         <StyledInput
+          ref={input => (this.input = input)}
           valid={valid}
           error={error}
           disabled={disabled}
