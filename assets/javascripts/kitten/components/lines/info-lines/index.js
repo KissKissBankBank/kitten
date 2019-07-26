@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
+import { Text } from '../../../components/typography/text'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -64,7 +65,7 @@ const StyledLine = styled.div`
   }
 `
 
-const StyledKey = styled.div`
+const StyledKey = styled(Text)`
   @media (min-width: ${ScreenConfig.M.min}px) {
     flex: auto;
   }
@@ -86,8 +87,17 @@ export class InfoLines extends PureComponent {
     const InfoList = ({ number, value, ...others }) =>
       React.Children.toArray(
         <StyledLine {...others} borderColor={borderColor} key={id}>
-          <StyledKey>{number}</StyledKey>
-          <div>{value}</div>
+          <StyledKey
+            color="font1"
+            size="default"
+            weight="light"
+            lineHeight="normal"
+          >
+            {number}
+          </StyledKey>
+          <Text color="font1" size="default" weight="light" lineHeight="normal">
+            {value}
+          </Text>
         </StyledLine>,
       )
 
@@ -110,7 +120,6 @@ export class InfoLines extends PureComponent {
 
 InfoLines.propTypes = {
   borderColor: PropTypes.string,
-  id: PropTypes.string.isRequired,
   infos: PropTypes.array.isRequired,
   withBorderRadius: PropTypes.bool,
   withLeftRightBorder: PropTypes.bool,
