@@ -23,7 +23,7 @@ const info = {
     ~~~js
     <InfoLines
       id="…"
-      infos={[ key:'…', value: '…', id: '…' ]}
+      infos={[ key: '…', value: '…', id: '…' ]}
     />
     ~~~
 

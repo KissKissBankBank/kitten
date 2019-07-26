@@ -1,9 +1,8 @@
-import React, { PureComponent, Fragment } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { Text } from '../../../components/typography/text'
-import COLORS from '../../../constants/colors-config'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledInfoLines = styled.div`
@@ -134,7 +133,6 @@ InfoLines.propTypes = {
 
 InfoLines.defaultProps = {
   borderColor: '#eee',
-  infos: [], // Eg: [{ key: …, value: …, id: … }]
   withBorderRadius: false,
   withLeftRightBorder: false,
   withoutTopBottomBorder: false,
