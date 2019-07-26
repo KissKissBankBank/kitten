@@ -1,6 +1,6 @@
 import React, { useRef, useCallback, useState } from 'react'
 import PropTypes from 'prop-types'
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 import COLORS from '../../constants/colors-config'
 import { pxToRem } from '../../helpers/utils/typography'
 import { CopyIcon } from '../icons/copy-icon'
@@ -27,8 +27,17 @@ const Wrapper = styled.div`
   cursor: pointer;
 `
 
-const StyledText = styled(Text)`
+const StyledText = styled(({ className, children }) => (
+  <Text className={className}>{children}</Text>
+))`
   padding: ${pxToRem(10)} ${pxToRem(15)};
+  ${({ forceOneLine }) =>
+    forceOneLine &&
+    css`
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    `}
 `
 
 const IconWrapper = styled.div`
@@ -52,6 +61,7 @@ export const TextCopy = ({
   textToCopy,
   alertMessage,
   description,
+  forceOneLine,
 }) => {
   const [shouldShowMessage, isMessageShown] = useState(false)
   const textRef = useRef(null)
@@ -79,7 +89,7 @@ export const TextCopy = ({
     <>
       <Wrapper onClick={copyText}>
         {description && <VisuallyHidden>{description}</VisuallyHidden>}
-        <StyledText weight="light" size="default">
+        <StyledText weight="light" size="default" forceOneLine={forceOneLine}>
           <span ref={textRef}>{children}</span>
         </StyledText>
         <IconWrapper aria-hidden={true}>
@@ -107,10 +117,12 @@ TextCopy.propTypes = {
   alertMessage: PropTypes.string,
   textToCopy: PropTypes.string,
   description: PropTypes.string,
+  forceOneLine: PropTypes.bool,
 }
 
 TextCopy.defaultProps = {
   alertMessage: undefined,
   textToCopy: undefined,
   description: undefined,
+  forceOneLine: false,
 }

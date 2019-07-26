@@ -3,9 +3,15 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 - Feature: Update `InfoLines` with styled-components.
-- Feature: Create `ExportIcon` component.
-- Feature: Update `EmailIcon` component.
+
+## [2.17.0] - 2019-07-24
+
+Features:
+- Create `ExportIcon` component.
+- Update `EmailIcon` component.
+- Add `forceOneLine` prop to `TextCopy` component.
 
 ## [2.16.2] - 2019-07-19
 

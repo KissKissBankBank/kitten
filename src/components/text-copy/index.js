@@ -36,10 +36,19 @@ var Wrapper = _styledComponents.default.div.withConfig({
   componentId: "sc-1ikj7bl-0"
 })(["position:relative;display:flex;align-items:center;justify-content:space-between;border:", " solid ", ";background-color:", ";cursor:pointer;"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, _colorsConfig.default.background1);
 
-var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
+var StyledText = (0, _styledComponents.default)(function (_ref) {
+  var className = _ref.className,
+      children = _ref.children;
+  return _react.default.createElement(_text.Text, {
+    className: className
+  }, children);
+}).withConfig({
   displayName: "text-copy__StyledText",
   componentId: "sc-1ikj7bl-1"
-})(["padding:", " ", ";"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15));
+})(["padding:", " ", ";", ""], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), function (_ref2) {
+  var forceOneLine = _ref2.forceOneLine;
+  return forceOneLine && (0, _styledComponents.css)(["overflow:hidden;white-space:nowrap;text-overflow:ellipsis;"]);
+});
 
 var IconWrapper = _styledComponents.default.div.withConfig({
   displayName: "text-copy__IconWrapper",
@@ -51,11 +60,12 @@ var StyledArrowContainer = (0, _styledComponents.default)(_arrowContainer.ArrowC
   componentId: "sc-1ikj7bl-3"
 })(["position:absolute;left:0;bottom:-", ";animation:0.5s ", " ease-out;"], (0, _typography.pxToRem)(50), fadeIn);
 
-var TextCopy = function TextCopy(_ref) {
-  var children = _ref.children,
-      textToCopy = _ref.textToCopy,
-      alertMessage = _ref.alertMessage,
-      description = _ref.description;
+var TextCopy = function TextCopy(_ref3) {
+  var children = _ref3.children,
+      textToCopy = _ref3.textToCopy,
+      alertMessage = _ref3.alertMessage,
+      description = _ref3.description,
+      forceOneLine = _ref3.forceOneLine;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -93,7 +103,8 @@ var TextCopy = function TextCopy(_ref) {
     onClick: copyText
   }, description && _react.default.createElement(_visuallyHidden.VisuallyHidden, null, description), _react.default.createElement(StyledText, {
     weight: "light",
-    size: "default"
+    size: "default",
+    forceOneLine: forceOneLine
   }, _react.default.createElement("span", {
     ref: textRef
   }, children)), _react.default.createElement(IconWrapper, {
@@ -115,10 +126,12 @@ exports.TextCopy = TextCopy;
 TextCopy.propTypes = {
   alertMessage: _propTypes.default.string,
   textToCopy: _propTypes.default.string,
-  description: _propTypes.default.string
+  description: _propTypes.default.string,
+  forceOneLine: _propTypes.default.bool
 };
 TextCopy.defaultProps = {
   alertMessage: undefined,
   textToCopy: undefined,
-  description: undefined
+  description: undefined,
+  forceOneLine: false
 };
