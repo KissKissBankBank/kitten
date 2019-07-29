@@ -2,17 +2,7 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  style={
-    Object {
-      "backgroundColor": "#fff",
-      "borderColor": "#eee",
-      "borderStyle": "solid",
-      "borderWidth": 2,
-      "boxSizing": "border-box",
-      "padding": "0.94rem 0",
-      "width": "100%",
-    }
-  }
+  className="reward-card__CardContainer-sc-1vkpp2h-2 eklQgn"
 >
   <div
     style={
@@ -60,17 +50,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  style={
-    Object {
-      "backgroundColor": "#fff",
-      "borderColor": "#eee",
-      "borderStyle": "solid",
-      "borderWidth": 2,
-      "boxSizing": "border-box",
-      "padding": "0.94rem 0",
-      "width": "100%",
-    }
-  }
+  className="reward-card__CardContainer-sc-1vkpp2h-2 eklQgn"
 >
   <div
     style={
@@ -216,15 +196,8 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       >
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
-            data-radium={true}
-            style={
-              Object {
-                "display": "block",
-                "lineHeight": "1.25rem",
-                "marginBottom": "0.63rem",
-              }
-            }
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 cjxEIS"
+            disabled={false}
           >
             Contributors: 
             <span
@@ -236,15 +209,8 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
-            data-radium={true}
-            style={
-              Object {
-                "display": "block",
-                "lineHeight": "1.25rem",
-                "marginBottom": "0.63rem",
-              }
-            }
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 cjxEIS"
+            disabled={false}
           >
             Availability: 
             <span
@@ -256,14 +222,8 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
-            data-radium={true}
-            style={
-              Object {
-                "display": "block",
-                "lineHeight": "1.25rem",
-              }
-            }
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 JxXhL"
+            disabled={false}
           >
             Delivery: 
             <span
@@ -290,13 +250,9 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     >
       <img
         alt="My reward"
-        data-radium={true}
+        className="reward-card__RewardImage-sc-1vkpp2h-1 cjPbTJ"
+        disabled={false}
         src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
       />
     </div>
   </div>
@@ -409,6 +365,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
       "borderWidth": 2,
     }
   }
+  withoutBorder={false}
 >
   <div
     className="marger__StyledMarger-q3lecu-0 dhVuZS"
