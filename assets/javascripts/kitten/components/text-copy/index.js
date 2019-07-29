@@ -24,24 +24,26 @@ const Wrapper = styled.div`
   justify-content: space-between;
   border: ${pxToRem(2)} solid ${COLORS.line1};
   background-color: ${COLORS.background1};
-  cursor: pointer;
 `
 
-const StyledText = styled(({ className, children }) => (
-  <Text className={className}>{children}</Text>
+const StyledText = styled(({ className, children, ...others }) => (
+  <Text className={className} {...others}>
+    {children}
+  </Text>
 ))`
   padding: ${pxToRem(10)} ${pxToRem(15)};
+  width: 100%;
   ${({ forceOneLine }) =>
     forceOneLine &&
     css`
       overflow: hidden;
       white-space: nowrap;
-      text-overflow: ellipsis;
     `}
 `
 
 const IconWrapper = styled.div`
   display: flex;
+  cursor: pointer;
   align-items: center;
   padding: ${pxToRem(10)};
   border-left: ${pxToRem(2)} solid ${COLORS.line1};
@@ -65,6 +67,11 @@ export const TextCopy = ({
 }) => {
   const [shouldShowMessage, isMessageShown] = useState(false)
   const textRef = useRef(null)
+  const selectText = useCallback(() => {
+    const range = document.createRange()
+    range.selectNode(textRef.current)
+    window.getSelection().addRange(range)
+  })
   const copyText = useCallback(() => {
     isMessageShown(false)
     if (textToCopy) {
@@ -78,21 +85,24 @@ export const TextCopy = ({
       range.selectNode(textRef.current)
       window.getSelection().addRange(range)
     } else {
-      const range = document.createRange()
-      range.selectNode(textRef.current)
-      window.getSelection().addRange(range)
+      selectText()
       document.execCommand('copy')
     }
     setTimeout(() => isMessageShown(true), 1)
   })
   return (
     <>
-      <Wrapper onClick={copyText}>
+      <Wrapper>
         {description && <VisuallyHidden>{description}</VisuallyHidden>}
-        <StyledText weight="light" size="default" forceOneLine={forceOneLine}>
+        <StyledText
+          weight="light"
+          size="default"
+          forceOneLine={forceOneLine}
+          onClick={selectText}
+        >
           <span ref={textRef}>{children}</span>
         </StyledText>
-        <IconWrapper aria-hidden={true}>
+        <IconWrapper aria-hidden={true} onClick={copyText}>
           <CopyIcon />
         </IconWrapper>
         {alertMessage && shouldShowMessage && (

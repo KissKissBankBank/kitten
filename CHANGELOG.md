@@ -4,8 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature: 
+Features: 
 - Add `withoutBorder` prop to `RewardCard`.
+- Clicking on `TextCopy input just select the text (no copy in clipboard)
 
 Fix:
 - Take back input refs on `TextInput`.
