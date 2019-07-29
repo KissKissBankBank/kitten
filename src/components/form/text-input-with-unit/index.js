@@ -103,7 +103,7 @@ function (_PureComponent) {
         error: error,
         tiny: tiny,
         disabled: disabled
-      })), _react.default.createElement(StyledInputUnit, {
+      }, others)), _react.default.createElement(StyledInputUnit, {
         valid: valid,
         error: error,
         disabled: disabled,

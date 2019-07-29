@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update `InfoLines` with styled-components.
 
+Fix:
+- Take back input refs on `TextInput`.
+
 ## [2.17.0] - 2019-07-24
 
 Features:
