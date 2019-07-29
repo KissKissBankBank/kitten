@@ -69,6 +69,14 @@ const StyledKey = styled.span`
   }
 `
 
+const InfoList = ({ title, value, id, ...others }) =>
+  React.Children.toArray(
+    <StyledLine {...others} key={id}>
+      <StyledKey>{title}</StyledKey>
+      <span>{value}</span>
+    </StyledLine>,
+  )
+
 export class InfoLines extends PureComponent {
   render() {
     const {
@@ -80,14 +88,6 @@ export class InfoLines extends PureComponent {
       borderColor,
       ...others
     } = this.props
-
-    const InfoList = ({ title, value, id, ...others }) =>
-      React.Children.toArray(
-        <StyledLine {...others} borderColor={borderColor} key={id}>
-          <StyledKey>{title}</StyledKey>
-          <span>{value}</span>
-        </StyledLine>,
-      )
 
     return (
       <StyledInfoLines
@@ -104,6 +104,7 @@ export class InfoLines extends PureComponent {
             title={info.key}
             value={info.value}
             id={info.id}
+            borderColor={borderColor}
           />
         ))}
       </StyledInfoLines>
