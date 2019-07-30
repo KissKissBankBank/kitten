@@ -49,6 +49,15 @@ const info = {
     ~~~js
     <InfoLines withoutResponsive="…" />
     ~~~
+
+    #### with A11Y
+    ~~~js
+    <InfoLines
+      descriptionTagList="…"
+      titleTagList="…"
+      itemTagList="…"
+    />
+    ~~~
   `,
   header: false,
   propTables: false,
