@@ -10,6 +10,10 @@ const StyledInfoLines = styled.div`
     css`
       border-top: ${pxToRem(1)} solid ${borderColor};
       border-bottom: ${pxToRem(1)} solid ${borderColor};
+
+      & > * + * {
+        border-top: ${pxToRem(1)} solid ${borderColor};
+      }
     `}
 
   ${({ withBorderRadius }) =>
@@ -50,14 +54,6 @@ const StyledLine = styled.div`
   display: flex;
   padding: ${pxToRem(15)};
 
-  ${({ borderColor }) =>
-    borderColor &&
-    css`
-      :not(:last-child) {
-        border-bottom: ${pxToRem(1)} solid ${borderColor};
-      }
-    `}
-
   @media (min-width: ${ScreenConfig.M.min}px) {
     flex-direction: row;
   }
@@ -68,6 +64,9 @@ const StyledKey = styled.span`
     flex: auto;
   }
 `
+const SpanTag = styled.span`
+  margin-inline-start: ${pxToRem(0)};
+`
 
 const InfoList = ({
   title,
@@ -77,12 +76,10 @@ const InfoList = ({
   itemTagList,
   ...others
 }) => {
-  const SpanTag = itemTagList
-
   return React.Children.toArray(
     <StyledLine {...others} key={id}>
       <StyledKey as={titleTagList}>{title}</StyledKey>
-      <SpanTag>{value}</SpanTag>
+      <SpanTag as={itemTagList}>{value}</SpanTag>
     </StyledLine>,
   )
 }
@@ -118,7 +115,6 @@ export class InfoLines extends PureComponent {
             title={info.key}
             value={info.value}
             id={info.id}
-            borderColor={borderColor}
             titleTagList={titleTagList}
             itemTagList={itemTagList}
           />
