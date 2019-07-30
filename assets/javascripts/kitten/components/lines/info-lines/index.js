@@ -69,13 +69,23 @@ const StyledKey = styled.span`
   }
 `
 
-const InfoList = ({ title, value, id, titleTagList, itemTagList, ...others }) =>
-  React.Children.toArray(
+const InfoList = ({
+  title,
+  value,
+  id,
+  titleTagList,
+  itemTagList,
+  ...others
+}) => {
+  const SpanTag = itemTagList
+
+  return React.Children.toArray(
     <StyledLine {...others} key={id}>
       <StyledKey as={titleTagList}>{title}</StyledKey>
-      <span tag={itemTagList}>{value}</span>
+      <SpanTag>{value}</SpanTag>
     </StyledLine>,
   )
+}
 
 export class InfoLines extends PureComponent {
   render() {

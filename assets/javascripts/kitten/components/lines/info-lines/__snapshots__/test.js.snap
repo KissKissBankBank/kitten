@@ -12,11 +12,9 @@ exports[`<InfoLines /> should match its empty snapshot 1`] = `
     >
       Lorem
     </dt>
-    <span
-      tag="dd"
-    >
+    <dd>
       Ipsum
-    </span>
+    </dd>
   </div>
   <div
     className="info-lines__StyledLine-sc-1tjj1rx-1 besKqr"
@@ -26,11 +24,9 @@ exports[`<InfoLines /> should match its empty snapshot 1`] = `
     >
       Dolor
     </dt>
-    <span
-      tag="dd"
-    >
+    <dd>
       Sit amet
-    </span>
+    </dd>
   </div>
 </dl>
 `;
