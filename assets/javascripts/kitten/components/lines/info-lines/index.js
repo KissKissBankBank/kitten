@@ -65,7 +65,7 @@ const StyledKey = styled.span`
   }
 `
 const StyledValue = styled.span`
-  margin-inline-start: ${pxToRem(0)};
+  margin: ${pxToRem(0)};
 `
 
 const InfoList = ({
