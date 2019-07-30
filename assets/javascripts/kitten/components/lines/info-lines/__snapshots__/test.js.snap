@@ -5,26 +5,30 @@ exports[`<InfoLines /> should match its empty snapshot 1`] = `
   className="info-lines__StyledInfoLines-sc-1tjj1rx-0 hmFxhJ"
 >
   <div
-    className="info-lines__StyledLine-sc-1tjj1rx-1 fkIqjP"
+    className="info-lines__StyledLine-sc-1tjj1rx-1 besKqr"
   >
     <span
       className="info-lines__StyledKey-sc-1tjj1rx-2 jyphAu"
     >
       Lorem
     </span>
-    <span>
+    <span
+      tag="dd"
+    >
       Ipsum
     </span>
   </div>
   <div
-    className="info-lines__StyledLine-sc-1tjj1rx-1 fkIqjP"
+    className="info-lines__StyledLine-sc-1tjj1rx-1 besKqr"
   >
     <span
       className="info-lines__StyledKey-sc-1tjj1rx-2 jyphAu"
     >
       Dolor
     </span>
-    <span>
+    <span
+      tag="dd"
+    >
       Sit amet
     </span>
   </div>

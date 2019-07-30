@@ -59,7 +59,7 @@ const StyledLine = styled.div`
     `}
 
   @media (min-width: ${ScreenConfig.M.min}px) {
-    flex-direction: unset;
+    flex-direction: row;
   }
 `
 
@@ -71,9 +71,9 @@ const StyledKey = styled.span`
 
 const InfoList = ({ title, value, id, ...others }) =>
   React.Children.toArray(
-    <StyledLine {...others} key={id}>
-      <StyledKey>{title}</StyledKey>
-      <span>{value}</span>
+    <StyledLine {...others} key={id} tag="dt">
+      <StyledKey tag="dd">{title}</StyledKey>
+      <span tag="dd">{value}</span>
     </StyledLine>,
   )
 
@@ -100,6 +100,7 @@ export class InfoLines extends PureComponent {
       >
         {infos.map(info => (
           <InfoList
+            tag="dl"
             key={info.key}
             title={info.key}
             value={info.value}
