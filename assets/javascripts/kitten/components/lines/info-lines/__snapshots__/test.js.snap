@@ -13,7 +13,7 @@ exports[`<InfoLines /> should match its empty snapshot 1`] = `
       Lorem
     </dt>
     <dd
-      className="info-lines__SpanTag-sc-1tjj1rx-3 jrKfDR"
+      className="info-lines__StyledValue-sc-1tjj1rx-3 icHRcm"
     >
       Ipsum
     </dd>
@@ -27,7 +27,7 @@ exports[`<InfoLines /> should match its empty snapshot 1`] = `
       Dolor
     </dt>
     <dd
-      className="info-lines__SpanTag-sc-1tjj1rx-3 jrKfDR"
+      className="info-lines__StyledValue-sc-1tjj1rx-3 icHRcm"
     >
       Sit amet
     </dd>

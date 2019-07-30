@@ -64,7 +64,7 @@ const StyledKey = styled.span`
     flex: auto;
   }
 `
-const SpanTag = styled.span`
+const StyledValue = styled.span`
   margin-inline-start: ${pxToRem(0)};
 `
 
@@ -79,7 +79,7 @@ const InfoList = ({
   return React.Children.toArray(
     <StyledLine {...others} key={id}>
       <StyledKey as={titleTagList}>{title}</StyledKey>
-      <SpanTag as={itemTagList}>{value}</SpanTag>
+      <StyledValue as={itemTagList}>{value}</StyledValue>
     </StyledLine>,
   )
 }
