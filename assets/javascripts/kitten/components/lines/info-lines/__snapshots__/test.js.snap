@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<InfoLines /> should match its empty snapshot 1`] = `
-<div
+<dl
   className="info-lines__StyledInfoLines-sc-1tjj1rx-0 hmFxhJ"
 >
   <div
     className="info-lines__StyledLine-sc-1tjj1rx-1 besKqr"
   >
-    <span
+    <dt
       className="info-lines__StyledKey-sc-1tjj1rx-2 jyphAu"
     >
       Lorem
-    </span>
+    </dt>
     <span
       tag="dd"
     >
@@ -21,16 +21,16 @@ exports[`<InfoLines /> should match its empty snapshot 1`] = `
   <div
     className="info-lines__StyledLine-sc-1tjj1rx-1 besKqr"
   >
-    <span
+    <dt
       className="info-lines__StyledKey-sc-1tjj1rx-2 jyphAu"
     >
       Dolor
-    </span>
+    </dt>
     <span
       tag="dd"
     >
       Sit amet
     </span>
   </div>
-</div>
+</dl>
 `;

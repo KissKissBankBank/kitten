@@ -69,11 +69,11 @@ const StyledKey = styled.span`
   }
 `
 
-const InfoList = ({ title, value, id, ...others }) =>
+const InfoList = ({ title, value, id, titleTagList, itemTagList, ...others }) =>
   React.Children.toArray(
-    <StyledLine {...others} key={id} tag="dt">
-      <StyledKey tag="dd">{title}</StyledKey>
-      <span tag="dd">{value}</span>
+    <StyledLine {...others} key={id}>
+      <StyledKey as={titleTagList}>{title}</StyledKey>
+      <span tag={itemTagList}>{value}</span>
     </StyledLine>,
   )
 
@@ -86,12 +86,16 @@ export class InfoLines extends PureComponent {
       withoutTopBottomBorder,
       withoutResponsive,
       borderColor,
+      descriptionTagList,
+      titleTagList,
+      itemTagList,
       ...others
     } = this.props
 
     return (
       <StyledInfoLines
         {...others}
+        as={descriptionTagList}
         borderColor={borderColor}
         withBorderRadius={withBorderRadius}
         withLeftRightBorder={withLeftRightBorder}
@@ -100,12 +104,13 @@ export class InfoLines extends PureComponent {
       >
         {infos.map(info => (
           <InfoList
-            tag="dl"
             key={info.key}
             title={info.key}
             value={info.value}
             id={info.id}
             borderColor={borderColor}
+            titleTagList={titleTagList}
+            itemTagList={itemTagList}
           />
         ))}
       </StyledInfoLines>
@@ -120,6 +125,9 @@ InfoLines.propTypes = {
   withLeftRightBorder: PropTypes.bool,
   withoutTopBottomBorder: PropTypes.bool,
   withoutResponsive: PropTypes.bool,
+  descriptionTagList: PropTypes.string,
+  titleTagList: PropTypes.string,
+  itemTagList: PropTypes.string,
 }
 
 InfoLines.defaultProps = {
@@ -128,4 +136,7 @@ InfoLines.defaultProps = {
   withLeftRightBorder: false,
   withoutTopBottomBorder: false,
   withoutResponsive: false,
+  descriptionTagList: 'dl',
+  titleTagList: 'dt',
+  itemTagList: 'dd',
 }
