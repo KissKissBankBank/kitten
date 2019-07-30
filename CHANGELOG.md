@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Features: 
+Features:
+- Update `InfoLines` with styled-components.
 - Add `withoutBorder` prop to `RewardCard`.
 - Clicking on `TextCopy input just select the text (no copy in clipboard)
 
