@@ -47,6 +47,11 @@ const styles = {
       backgroundColor: COLORS.primary1,
       color: '#fff',
     },
+    selectedStartAndEnd: {
+      backgroundColor: COLORS.primary6,
+      color: COLORS.primary1,
+      borderColor: COLORS.primary4,
+    },
   },
 }
 

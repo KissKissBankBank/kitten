@@ -129,6 +129,30 @@ const StyledDatePicker = styled.div`
     }
   }
 
+  .DayPicker-Day--selected {
+    &:not(.DayPicker-Day--start) {
+      &:not(.DayPicker-Day--end) {
+        &:not(.DayPicker-Day--outside) {
+          ${({ styles }) => css`
+            background-color: ${styles.day.selectedStartAndEnd.backgroundColor};
+            color: ${styles.day.selectedStartAndEnd.color};
+            border-color: ${styles.day.selectedStartAndEnd.borderColor};
+            border-width: ${borderSize};
+          `}
+          &:hover {
+            ${({ styles }) => css`
+              background-color: ${styles.day.selectedStartAndEnd
+                .backgroundColor};
+              color: ${styles.day.selectedStartAndEnd.color};
+              border-color: ${styles.day.selectedStartAndEnd.borderColor};
+              border-width: ${borderSize};
+            `}
+          }
+        }
+      }
+    }
+  }
+
   .DayPicker-Day--disabled {
     ${({ styles }) => css`
       color: ${styles.day.disabled.color};
@@ -179,7 +203,6 @@ const StyledDatePicker = styled.div`
         }
       }
     }
-  }
 `
 
 export class DatePicker extends PureComponent {
@@ -201,9 +224,6 @@ export class DatePicker extends PureComponent {
       header: {
         backgroundColor: COLORS.background1,
         color: COLORS.font1,
-        // icon: {
-        //   color: COLORS.background1,
-        // },
       },
       borderColor: COLORS.line1,
       weekdaysColor: COLORS.font1,
@@ -221,6 +241,11 @@ export class DatePicker extends PureComponent {
         selected: {
           backgroundColor: COLORS.primary1,
           color: COLORS.background1,
+        },
+        selectedStartAndEnd: {
+          backgroundColor: COLORS.primary6,
+          color: COLORS.primary1,
+          borderColor: COLORS.primary4,
         },
       },
     },
