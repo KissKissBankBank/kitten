@@ -65,6 +65,8 @@ const weekDays = [
   'Samedi',
 ]
 
+const disabledDays = ['(2019, 8, 2)', '(2019, 9, 9)']
+
 const months = [
   'Janvier',
   'Février',
@@ -94,6 +96,7 @@ storiesOf('Form/DatePickerButton', module)
         <DatePicker
           selectedDay={date('default selected Date', today)}
           locale="fr"
+          disabledDays={array('Disabled days', disabledDays)}
           weekDays={array('Week days', weekDays)}
           months={array('Months', months)}
           previousMonth={text('Aria-label for previous month', 'Mois suivant')}

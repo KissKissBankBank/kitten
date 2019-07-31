@@ -217,6 +217,7 @@ export class DatePicker extends PureComponent {
       disabledDays: [
         {
           after: new Date(),
+          before: new Date(),
         },
       ],
     },
@@ -278,6 +279,7 @@ export class DatePicker extends PureComponent {
       weekDays,
       weekdaysShort,
       previousMonth,
+      disabledDays,
       nextMonth,
       ...datePickerProps
     } = this.props
@@ -299,6 +301,7 @@ export class DatePicker extends PureComponent {
             weekdaysLong: weekDays,
             weekdaysShort: weekDays && weekDays.map(str => str.substr(0, 2)),
             firstDayOfWeek: 1,
+            disabledDays: disabledDays,
             labels: { previousMonth, nextMonth },
             navbarElement: <Navbar iconColor={styles.header.icon.color} />,
           }}
