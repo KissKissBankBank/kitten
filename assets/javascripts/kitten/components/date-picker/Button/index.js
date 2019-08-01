@@ -23,7 +23,7 @@ const StyledDatePicker = styled.div`
 
   .DayPickerInput-Overlay {
     box-shadow: none;
-    margin-top: 18px;
+    margin-top: ${pxToRem(18)};
     outline: none;
     min-width: calc(7 * ${tinyCellSize} + 2 * ${tinyDayPickerPadding});
 
@@ -207,6 +207,8 @@ const StyledDatePicker = styled.div`
     }
 `
 
+const NavBarComponent = () => {}
+
 export class DatePicker extends PureComponent {
   static propTypes = {
     numberOfMonths: PropTypes.number,
@@ -216,7 +218,8 @@ export class DatePicker extends PureComponent {
     months: PropTypes.array,
     navbarElement: PropTypes.node,
     disabledDays: PropTypes.array,
-    datePickerProps: PropTypes.shape({}),
+    title: PropTypes.string,
+    dayPickerProps: PropTypes.shape({}),
     styles: PropTypes.object,
   }
 
@@ -226,6 +229,7 @@ export class DatePicker extends PureComponent {
     previousMonth: 'Previous month',
     nextMonth: 'Next month',
     weekDays: null,
+    title: '',
     months: null,
     navbarElement: '',
     disabledDays: [
@@ -233,7 +237,7 @@ export class DatePicker extends PureComponent {
         after: new Date(),
       },
     ],
-    datePickerProps: {},
+    dayPickerProps: {},
 
     styles: {
       header: {
@@ -295,6 +299,7 @@ export class DatePicker extends PureComponent {
       previousMonth,
       disabledDays,
       nextMonth,
+      title,
       ...datePickerProps
     } = this.props
 
@@ -309,6 +314,9 @@ export class DatePicker extends PureComponent {
           modifiers={modifiers}
           onDayClick={this.handleDayClick}
           disabledDays={disabledDays}
+          navbarElement={
+            <Navbar title={title} iconColor={styles.header.icon.color} />
+          }
           dayPickerProps={{
             ...datePickerProps,
             locale: locale,
@@ -317,7 +325,6 @@ export class DatePicker extends PureComponent {
             weekdaysShort: weekDays && weekDays.map(str => str.substr(0, 2)),
             firstDayOfWeek: 1,
             labels: { previousMonth, nextMonth },
-            navbarElement: <Navbar iconColor={styles.header.icon.color} />,
           }}
         />
       </StyledDatePicker>

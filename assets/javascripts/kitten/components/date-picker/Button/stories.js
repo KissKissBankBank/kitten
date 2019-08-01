@@ -93,6 +93,7 @@ storiesOf('Form/DatePickerButton', module)
           disabledDays={array('Disabled days', disabledDays)}
           weekDays={array('Week days', weekDays)}
           months={array('Months', months)}
+          title={text('Title', 'Sélectionnez la période souhaitée')}
           previousMonth={text('Aria-label for previous month', 'Mois suivant')}
           nextMonth={text('Aria-label for next month', 'Mois précédent')}
           styles={object('Styles', styles)}
