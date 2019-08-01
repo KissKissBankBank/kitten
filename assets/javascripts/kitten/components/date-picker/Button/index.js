@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import DayPicker, { DateUtils } from 'react-day-picker'
 import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -156,6 +157,7 @@ const StyledDatePicker = styled.div`
   .DayPicker-Day--disabled {
     ${({ styles }) => css`
       color: ${styles.day.disabled.color};
+      cursor: not-allowed;
     `}
   }
 
@@ -206,6 +208,18 @@ const StyledDatePicker = styled.div`
 `
 
 export class DatePicker extends PureComponent {
+  static propTypes = {
+    numberOfMonths: PropTypes.number,
+    locale: PropTypes.string,
+    previousMonth: PropTypes.string,
+    weekDays: PropTypes.array,
+    months: PropTypes.array,
+    navbarElement: PropTypes.node,
+    disabledDays: PropTypes.array,
+    datePickerProps: PropTypes.shape({}),
+    styles: PropTypes.object,
+  }
+
   static defaultProps = {
     numberOfMonths: 2,
     locale: 'en',
@@ -213,14 +227,14 @@ export class DatePicker extends PureComponent {
     nextMonth: 'Next month',
     weekDays: null,
     months: null,
-    datePickerProps: {
-      disabledDays: [
-        {
-          after: new Date(),
-          before: new Date(),
-        },
-      ],
-    },
+    navbarElement: '',
+    disabledDays: [
+      {
+        after: new Date(),
+      },
+    ],
+    datePickerProps: {},
+
     styles: {
       header: {
         backgroundColor: COLORS.background1,
@@ -294,6 +308,7 @@ export class DatePicker extends PureComponent {
           selectedDays={[from, { from, to }]}
           modifiers={modifiers}
           onDayClick={this.handleDayClick}
+          disabledDays={disabledDays}
           dayPickerProps={{
             ...datePickerProps,
             locale: locale,
@@ -301,7 +316,6 @@ export class DatePicker extends PureComponent {
             weekdaysLong: weekDays,
             weekdaysShort: weekDays && weekDays.map(str => str.substr(0, 2)),
             firstDayOfWeek: 1,
-            disabledDays: disabledDays,
             labels: { previousMonth, nextMonth },
             navbarElement: <Navbar iconColor={styles.header.icon.color} />,
           }}

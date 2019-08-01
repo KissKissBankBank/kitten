@@ -65,7 +65,7 @@ const weekDays = [
   'Samedi',
 ]
 
-const disabledDays = ['(2019, 8, 2)', '(2019, 9, 9)']
+const disabledDays = [new Date(2019, 7, 2)]
 
 const months = [
   'Janvier',
@@ -81,12 +81,6 @@ const months = [
   'Novembre',
   'Décembre',
 ]
-
-class CustomInput extends Component {
-  render() {
-    return <input type="text" autoComplete="off" {...this.props} />
-  }
-}
 
 storiesOf('Form/DatePickerButton', module)
   .addDecorator(withKnobs)
