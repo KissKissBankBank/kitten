@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StatusBullet /> should match its empty snapshot 1`] = `
+<div
+  className="status-bullet__StyledStatus-r2z0r9-1 eXClCV"
+>
+  <span
+    aria-hidden="true"
+    className="status-bullet__StyledBullet-r2z0r9-0 kKQPby"
+  />
+  Status message
+</div>
+`;
