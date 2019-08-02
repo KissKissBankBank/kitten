@@ -13,7 +13,9 @@ const StyledText = styled(Text)`
 const StyledButton = styled.div`
   position: absolute;
   display: flex;
-  align-content: flex-end;
+  justify-content: space-between;
+  left: ${pxToRem(30)};
+  right: ${pxToRem(30)};
 `
 
 const StyledArrowIcon = styled(Button)`
@@ -39,7 +41,7 @@ export class Navbar extends PureComponent {
           {title}
         </StyledText>
         <StyledButton className={className}>
-          <Button
+          <StyledArrowIcon
             aria-label={labels.previoustMonth}
             onClick={() => onPreviousClick()}
             icon
@@ -52,9 +54,9 @@ export class Navbar extends PureComponent {
               width="8"
               height="8"
             />
-          </Button>
+          </StyledArrowIcon>
 
-          <Button
+          <StyledArrowIcon
             aria-label={labels.previoustMonth}
             onClick={() => onNextClick()}
             icon
@@ -67,7 +69,7 @@ export class Navbar extends PureComponent {
               height="8"
               right
             />
-          </Button>
+          </StyledArrowIcon>
         </StyledButton>
       </>
     )

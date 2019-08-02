@@ -7,6 +7,7 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Navbar } from './components/navbar'
+import { Footer } from './components/footer'
 
 const borderSize = pxToRem(2)
 const cellSize = pxToRem(50)
@@ -20,6 +21,23 @@ const fontSize = css`
 
 const StyledDatePicker = styled.div`
   box-sizing: border-box;
+
+  ${({ styles }) => css`
+    border: solid ${styles.borderColor} ${borderSize};
+  `}
+    border-radius: 0;
+
+    &.DayPicker-Day--outside {
+      border: 0;
+    }
+
+    padding: 0 ${tinyDayPickerPadding} ${tinyDayPickerPadding}
+      ${tinyDayPickerPadding};
+    outline: none;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: 0 ${dayPickerPadding} ${dayPickerPadding} ${dayPickerPadding};
+    }
 
   .DayPickerInput-Overlay {
     box-shadow: none;
@@ -63,7 +81,6 @@ const StyledDatePicker = styled.div`
     `}
 
     & div {
-      padding: ${pxToRem(23)} 0;
       margin: 0 ${pxToRem(63)};
       ${fontSize}
     }
@@ -90,17 +107,6 @@ const StyledDatePicker = styled.div`
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${cellSize};
       height: ${cellSize};
-    }
-  }
-
-  .DayPicker-Day {
-    ${({ styles }) => css`
-      border: solid ${styles.borderColor} ${borderSize};
-    `}
-    border-radius: 0;
-
-    &.DayPicker-Day--outside {
-      border: 0;
     }
   }
 
@@ -167,23 +173,13 @@ const StyledDatePicker = styled.div`
     }
   }
 
-  .DayPicker-wrapper {
-    padding: 0 ${tinyDayPickerPadding} ${tinyDayPickerPadding}
-      ${tinyDayPickerPadding};
-    outline: none;
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      padding: 0 ${dayPickerPadding} ${dayPickerPadding} ${dayPickerPadding};
-    }
-  }
-
   .DayPicker {
     ${fontSize}
     ${TYPOGRAPHY.fontStyles.light}
     outline: none;
 
     ${({ styles }) => css`
-      border: solid ${styles.borderColor} ${borderSize};
+      border: none;
     `}
     /* Hovered selectable day*/
     &:not(.DayPicker--interactionDisabled) {
@@ -207,9 +203,7 @@ const StyledDatePicker = styled.div`
     }
 `
 
-const NavBarComponent = () => {}
-
-export class DatePicker extends PureComponent {
+export class DatePickerPanel extends PureComponent {
   static propTypes = {
     numberOfMonths: PropTypes.number,
     locale: PropTypes.string,
@@ -221,6 +215,8 @@ export class DatePicker extends PureComponent {
     title: PropTypes.string,
     dayPickerProps: PropTypes.shape({}),
     styles: PropTypes.object,
+    cleanText: PropTypes.string,
+    choiceText: PropTypes.string,
   }
 
   static defaultProps = {
@@ -232,6 +228,8 @@ export class DatePicker extends PureComponent {
     title: '',
     months: null,
     navbarElement: '',
+    cleanText: '',
+    choiceText: '',
     disabledDays: [
       {
         after: new Date(),
@@ -300,11 +298,14 @@ export class DatePicker extends PureComponent {
       disabledDays,
       nextMonth,
       title,
+      cleanText,
+      choiceText,
       ...datePickerProps
     } = this.props
 
     const { from, to } = this.state
     const modifiers = { start: from, end: to }
+
     return (
       <StyledDatePicker styles={styles}>
         <DayPicker
@@ -327,6 +328,7 @@ export class DatePicker extends PureComponent {
             labels: { previousMonth, nextMonth },
           }}
         />
+        <Footer cleanText={cleanText} choiceText={choiceText} />
       </StyledDatePicker>
     )
   }

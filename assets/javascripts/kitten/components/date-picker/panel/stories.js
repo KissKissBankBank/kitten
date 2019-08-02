@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { DatePicker } from './index'
+import { DatePickerPanel } from './index'
 import { storiesOf } from '@storybook/react'
 import {
   withKnobs,
@@ -7,11 +7,13 @@ import {
   select,
   text,
   object,
+  boolean,
   array,
 } from '@storybook/addon-knobs'
 import { Container } from '../../../components/grid/container'
 import { Marger } from '../../../components/layout/marger'
 import COLORS from '../../../constants/colors-config'
+import { Footer } from './components/footer'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -22,6 +24,7 @@ const StoryContainer = ({ children }) => (
 )
 
 const today = new Date()
+
 const styles = {
   header: {
     backgroundColor: COLORS.font1,
@@ -65,7 +68,7 @@ const weekDays = [
   'Samedi',
 ]
 
-const disabledDays = [new Date(2019, 7, 2)]
+const disabledDays = [new Date(2019, 7, 16)]
 
 const months = [
   'Janvier',
@@ -82,12 +85,12 @@ const months = [
   'Décembre',
 ]
 
-storiesOf('Form/DatePickerButton', module)
+storiesOf('Form/DatePicker', module)
   .addDecorator(withKnobs)
-  .add('with default', () => {
+  .add('with panel', () => {
     return (
       <StoryContainer>
-        <DatePicker
+        <DatePickerPanel
           selectedDay={date('default selected Date', today)}
           locale="fr"
           disabledDays={array('Disabled days', disabledDays)}
@@ -97,6 +100,8 @@ storiesOf('Form/DatePickerButton', module)
           previousMonth={text('Aria-label for previous month', 'Mois suivant')}
           nextMonth={text('Aria-label for next month', 'Mois précédent')}
           styles={object('Styles', styles)}
+          cleanText={text('Clean text', 'Effacer')}
+          choiceText={text('Choice text', 'Appliquer')}
         />
       </StoryContainer>
     )
