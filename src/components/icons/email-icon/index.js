@@ -31,7 +31,7 @@ var EmailIcon = function EmailIcon(_ref) {
 };
 
 exports.EmailIcon = EmailIcon;
-EmailIcon.PropTypes = {
+EmailIcon.propTypes = {
   color: _propTypes.default.string,
   title: _propTypes.default.string
 };
