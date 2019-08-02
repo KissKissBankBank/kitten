@@ -2,11 +2,11 @@
 
 exports[`<StatusBullet /> should match its empty snapshot 1`] = `
 <div
-  className="status-bullet__StyledStatus-r2z0r9-1 eXClCV"
+  className="status-bullet__StyledStatus-r2z0r9-1 kxhZHt"
 >
   <span
     aria-hidden="true"
-    className="status-bullet__StyledBullet-r2z0r9-0 kKQPby"
+    className="status-bullet__StyledBullet-r2z0r9-0 cHcuQX"
   />
   Status message
 </div>
