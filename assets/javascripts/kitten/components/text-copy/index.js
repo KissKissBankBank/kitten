@@ -1,6 +1,6 @@
 import React, { useRef, useCallback, useState } from 'react'
 import PropTypes from 'prop-types'
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 import COLORS from '../../constants/colors-config'
 import { pxToRem } from '../../helpers/utils/typography'
 import { CopyIcon } from '../icons/copy-icon'
@@ -24,15 +24,26 @@ const Wrapper = styled.div`
   justify-content: space-between;
   border: ${pxToRem(2)} solid ${COLORS.line1};
   background-color: ${COLORS.background1};
-  cursor: pointer;
 `
 
-const StyledText = styled(Text)`
+const StyledText = styled(({ className, children, ...others }) => (
+  <Text className={className} {...others}>
+    {children}
+  </Text>
+))`
   padding: ${pxToRem(10)} ${pxToRem(15)};
+  width: 100%;
+  ${({ forceOneLine }) =>
+    forceOneLine &&
+    css`
+      overflow: hidden;
+      white-space: nowrap;
+    `}
 `
 
 const IconWrapper = styled.div`
   display: flex;
+  cursor: pointer;
   align-items: center;
   padding: ${pxToRem(10)};
   border-left: ${pxToRem(2)} solid ${COLORS.line1};
@@ -52,9 +63,15 @@ export const TextCopy = ({
   textToCopy,
   alertMessage,
   description,
+  forceOneLine,
 }) => {
   const [shouldShowMessage, isMessageShown] = useState(false)
   const textRef = useRef(null)
+  const selectText = useCallback(() => {
+    const range = document.createRange()
+    range.selectNode(textRef.current)
+    window.getSelection().addRange(range)
+  })
   const copyText = useCallback(() => {
     isMessageShown(false)
     if (textToCopy) {
@@ -68,21 +85,24 @@ export const TextCopy = ({
       range.selectNode(textRef.current)
       window.getSelection().addRange(range)
     } else {
-      const range = document.createRange()
-      range.selectNode(textRef.current)
-      window.getSelection().addRange(range)
+      selectText()
       document.execCommand('copy')
     }
     setTimeout(() => isMessageShown(true), 1)
   })
   return (
     <>
-      <Wrapper onClick={copyText}>
+      <Wrapper>
         {description && <VisuallyHidden>{description}</VisuallyHidden>}
-        <StyledText weight="light" size="default">
+        <StyledText
+          weight="light"
+          size="default"
+          forceOneLine={forceOneLine}
+          onClick={selectText}
+        >
           <span ref={textRef}>{children}</span>
         </StyledText>
-        <IconWrapper aria-hidden={true}>
+        <IconWrapper aria-hidden={true} onClick={copyText}>
           <CopyIcon />
         </IconWrapper>
         {alertMessage && shouldShowMessage && (
@@ -107,10 +127,12 @@ TextCopy.propTypes = {
   alertMessage: PropTypes.string,
   textToCopy: PropTypes.string,
   description: PropTypes.string,
+  forceOneLine: PropTypes.bool,
 }
 
 TextCopy.defaultProps = {
   alertMessage: undefined,
   textToCopy: undefined,
   description: undefined,
+  forceOneLine: false,
 }

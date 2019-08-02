@@ -10,6 +10,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
       "borderWidth": 2,
     }
   }
+  withoutBorder={false}
 >
   <div
     className="marger__StyledMarger-q3lecu-0 dhVuZS"
@@ -98,6 +99,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
       "borderWidth": 2,
     }
   }
+  withoutBorder={false}
 >
   <div
     className="marger__StyledMarger-q3lecu-0 dhVuZS"
@@ -413,6 +415,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
       "borderWidth": 2,
     }
   }
+  withoutBorder={false}
 >
   <div
     className="marger__StyledMarger-q3lecu-0 lgDgPO"

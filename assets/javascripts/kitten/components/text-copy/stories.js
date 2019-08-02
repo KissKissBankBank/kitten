@@ -2,7 +2,7 @@ import { Container } from '../grid/container'
 import { Marger } from '../..'
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 import { TextCopy } from './index'
 
 const StoryContainer = ({ children }) => (
@@ -21,6 +21,7 @@ storiesOf('TextCopy', module)
         <TextCopy
           textToCopy={text('Other text to Copy', undefined)}
           alertMessage={text('Alert Message', 'Copied link !')}
+          forceOneLine={boolean('Force one line', false)}
         >
           {text('Text', 'My text to copy on click')}
         </TextCopy>

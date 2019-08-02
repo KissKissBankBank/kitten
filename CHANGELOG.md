@@ -4,8 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `ExportIcon` component.
-- Feature: Update `EmailIcon` component.
+## [2.18.0] - 2019-08-02
+
+Features:
+- Update `InfoLines` with styled-components.
+- Add `withoutBorder` prop to `RewardCard`.
+- Clicking on `TextCopy` input just select the text (no copy in clipboard).
+
+Fix:
+- Take back input refs on `TextInput`.
+
+## [2.17.0] - 2019-07-24
+
+Features:
+- Create `ExportIcon` component.
+- Update `EmailIcon` component.
+- Add `forceOneLine` prop to `TextCopy` component.
 
 ## [2.16.2] - 2019-07-19
 

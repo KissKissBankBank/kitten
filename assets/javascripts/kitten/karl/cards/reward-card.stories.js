@@ -1,17 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import {
-  withKnobs,
-  text,
-  select,
-  boolean,
-  object,
-} from '@storybook/addon-knobs'
-import { StyleRoot } from 'radium'
+import { withKnobs, text, boolean, object } from '@storybook/addon-knobs'
 import { RewardCard } from '../../components/cards/reward-card'
 import { Grid, GridCol } from '../../components/grid/grid'
-import { Marger } from '../../components/layout/marger'
 import { Text as TextBase } from '../../components/typography/text'
 import { pxToRem } from '../../helpers/utils/typography'
 import Radium from 'radium'
@@ -64,7 +56,9 @@ storiesOf('Cards/RewardCard', module)
         <div style={styles.storyContainer}>
           <Grid>
             <GridCol offset="1" col="10">
-              <RewardCard>
+              <RewardCard
+                withoutBorder={boolean('withoutBorder', false, versionGroupId)}
+              >
                 <RewardCard.Row>
                   <RewardCard.RowContent>
                     {starred && (

@@ -137,6 +137,7 @@ export class TextInputWithUnit extends PureComponent {
           error={error}
           tiny={tiny}
           disabled={disabled}
+          {...others}
         />
         <StyledInputUnit
           valid={valid}
