@@ -22,23 +22,6 @@ const fontSize = css`
 const StyledDatePicker = styled.div`
   box-sizing: border-box;
 
-  ${({ styles }) => css`
-    border: solid ${styles.borderColor} ${borderSize};
-  `}
-    border-radius: 0;
-
-    &.DayPicker-Day--outside {
-      border: 0;
-    }
-
-    padding: 0 ${tinyDayPickerPadding} ${tinyDayPickerPadding}
-      ${tinyDayPickerPadding};
-    outline: none;
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      padding: 0 ${dayPickerPadding} ${dayPickerPadding} ${dayPickerPadding};
-    }
-
   .DayPickerInput-Overlay {
     box-shadow: none;
     margin-top: ${pxToRem(18)};
@@ -110,6 +93,17 @@ const StyledDatePicker = styled.div`
     }
   }
 
+  .DayPicker-Day {
+    ${({ styles }) => css`
+      border: solid ${styles.borderColor} ${borderSize};
+    `}
+    border-radius: 0;
+
+    &.DayPicker-Day--outside {
+      border: 0;
+    }
+  }
+
   .DayPicker-Day--today {
     ${TYPOGRAPHY.fontStyles.regular}
     ${({ styles }) => css`
@@ -170,6 +164,16 @@ const StyledDatePicker = styled.div`
   .DayPicker-Month {
     &:first-child {
       margin-right: ${pxToRem(30)};
+    }
+  }
+
+  .DayPicker-wrapper {
+    padding: 0 ${tinyDayPickerPadding} ${tinyDayPickerPadding}
+      ${tinyDayPickerPadding};
+    outline: none;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      padding: 0 ${dayPickerPadding} ${dayPickerPadding} ${dayPickerPadding};
     }
   }
 
