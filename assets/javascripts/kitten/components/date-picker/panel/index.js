@@ -31,22 +31,8 @@ const StyledDatePicker = styled.div`
     @media (min-width: ${ScreenConfig.S.min}px) {
       min-width: calc(7 * ${cellSize} + 2 * ${dayPickerPadding});
     }
-
-    /* Arrow's top header */
-    &:before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: ${pxToRem(9)} solid transparent;
-      border-right: ${pxToRem(9)} solid transparent;
-      ${({ styles }) => css`
-        border-bottom: ${pxToRem(8)} solid ${styles.header.backgroundColor};
-      `}
-      position: absolute;
-      top: -${pxToRem(8)};
-      left: ${pxToRem(15)};
-    }
   }
+
   /* Header */
   .DayPicker-Caption {
     text-align: center;
