@@ -17,35 +17,42 @@ const StyledShadowPanel = styled.div`
   &::after {
     content: '';
     position: absolute;
-    border: 0 solid ${COLORS.line1};
 
     ${({ arrowSide, arrowPositionFromOrigin }) => {
       if (arrowSide === 'top') {
         return css`
           top: ${pxToRem(-10)};
           left: ${pxToRem(arrowPositionFromOrigin)};
-          ${arrowTopStyle}
+          border-left: ${pxToRem(9)} solid transparent;
+          border-right: ${pxToRem(9)} solid transparent;
+          border-bottom: ${pxToRem(8)} solid ${COLORS.line1};
         `
       }
       if (arrowSide === 'bottom') {
         return css`
           bottom: ${pxToRem(-10)};
           left: ${pxToRem(arrowPositionFromOrigin)};
-          ${arrowBottomStyle}
+          border-left: ${pxToRem(9)} solid transparent;
+          border-right: ${pxToRem(9)} solid transparent;
+          border-top: ${pxToRem(8)} solid ${COLORS.line1};
         `
       }
       if (arrowSide === 'left') {
         return css`
           left: ${pxToRem(-10)};
           top: ${pxToRem(arrowPositionFromOrigin)};
-          ${arrowLeftStyle}
+          border-top: ${pxToRem(9)} solid transparent;
+          border-bottom: ${pxToRem(9)} solid transparent;
+          border-right: ${pxToRem(8)} solid ${COLORS.line1};
         `
       }
       if (arrowSide === 'right') {
         return css`
           right: ${pxToRem(-10)};
           top: ${pxToRem(arrowPositionFromOrigin)};
-          ${arrowRightStyle}
+          border-bottom: ${pxToRem(9)} solid transparent;
+          border-top: ${pxToRem(9)} solid transparent;
+          border-left: ${pxToRem(8)} solid ${COLORS.line1};
         `
       }
     }}
@@ -78,31 +85,6 @@ const StyledShadowPanel = styled.div`
       }
     }}
   }
-`
-
-const arrowTopStyle = css`
-  border-top: 0 solid transparent;
-  border-left: ${pxToRem(9)} solid transparent;
-  border-right: ${pxToRem(9)} solid transparent;
-  border-bottom-width: ${pxToRem(8)};
-`
-const arrowBottomStyle = css`
-  border-bottom: 0 solid transparent;
-  border-left: ${pxToRem(9)} solid transparent;
-  border-right: ${pxToRem(9)} solid transparent;
-  border-top-width: ${pxToRem(8)};
-`
-const arrowLeftStyle = css`
-  border-left: 0 solid transparent;
-  border-top: ${pxToRem(9)} solid transparent;
-  border-bottom: ${pxToRem(9)} solid transparent;
-  border-right-width: ${pxToRem(8)};
-`
-const arrowRightStyle = css`
-  border-right: 0 solid transparent;
-  border-bottom: ${pxToRem(9)} solid transparent;
-  border-top: ${pxToRem(9)} solid transparent;
-  border-left-width: ${pxToRem(8)};
 `
 
 export const ShadowPanel = ({ ...props }) => {
