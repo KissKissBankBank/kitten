@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InfoLines /> should match its empty snapshot 1`] = `
+<dl
+  className="info-lines__StyledInfoLines-sc-1tjj1rx-0 kBvmcc"
+>
+  <div
+    className="info-lines__StyledLine-sc-1tjj1rx-1 bGPTZH"
+  >
+    <dt
+      className="info-lines__StyledKey-sc-1tjj1rx-2 jyphAu"
+    >
+      Lorem
+    </dt>
+    <dd
+      className="info-lines__StyledValue-sc-1tjj1rx-3 jNOoMi"
+    >
+      Ipsum
+    </dd>
+  </div>
+  <div
+    className="info-lines__StyledLine-sc-1tjj1rx-1 bGPTZH"
+  >
+    <dt
+      className="info-lines__StyledKey-sc-1tjj1rx-2 jyphAu"
+    >
+      Dolor
+    </dt>
+    <dd
+      className="info-lines__StyledValue-sc-1tjj1rx-3 jNOoMi"
+    >
+      Sit amet
+    </dd>
+  </div>
+</dl>
+`;

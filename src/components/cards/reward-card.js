@@ -11,8 +11,6 @@ exports.styles = exports.RewardCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -23,9 +21,11 @@ var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/ge
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireWildcard(require("radium"));
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -51,7 +51,40 @@ var _starredBadge = require("../../components/cards/reward-card/starred-badge");
 
 var _checkedSection = require("../../components/cards/reward-card/checked-section");
 
-var Text = (0, _radium.default)(_text.Text); // TODO: Move this class to a separate file after deprecated component with the
+var Infos = (0, _styledComponents.default)(function (_ref) {
+  var withMarginBottom = _ref.withMarginBottom,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["withMarginBottom"]);
+  return _react.default.createElement(_text.Text, props);
+}).withConfig({
+  displayName: "reward-card__Infos",
+  componentId: "sc-1vkpp2h-0"
+})(["display:block;line-height:", ";", " ", ""], (0, _typography.pxToRem)(20), function (_ref2) {
+  var withMarginBottom = _ref2.withMarginBottom;
+  return withMarginBottom && (0, _styledComponents.css)(["margin-bottom:", ";"], (0, _typography.pxToRem)(10));
+}, function (_ref3) {
+  var disabled = _ref3.disabled;
+  return disabled && (0, _styledComponents.css)(["color:", ";cursor:not-allowed;"], _colorsConfig.default.font2);
+});
+
+var RewardImage = _styledComponents.default.img.withConfig({
+  displayName: "reward-card__RewardImage",
+  componentId: "sc-1vkpp2h-1"
+})(["width:100%;", ""], function (_ref4) {
+  var disabled = _ref4.disabled;
+  return disabled && (0, _styledComponents.css)(["filter:grayscale(1) opacity(0.4);cursor:not-allowed;"]);
+});
+
+var CardContainer = (0, _styledComponents.default)(function (_ref5) {
+  var withoutBorder = _ref5.withoutBorder,
+      props = (0, _objectWithoutProperties2.default)(_ref5, ["withoutBorder"]);
+  return _react.default.createElement("div", props);
+}).withConfig({
+  displayName: "reward-card__CardContainer",
+  componentId: "sc-1vkpp2h-2"
+})(["background-color:", ";width:100%;padding:", " 0;box-sizing:border-box;", ""], _colorsConfig.default.background1, (0, _typography.pxToRem)(15), function (_ref6) {
+  var withoutBorder = _ref6.withoutBorder;
+  return !withoutBorder && (0, _styledComponents.css)(["border:", " solid ", ";"], (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
+}); // TODO: Move this class to a separate file after deprecated component with the
 // same name will be deleted.
 
 var RewardCardInfo =
@@ -72,13 +105,13 @@ function (_Component) {
           value = _this$props.value,
           withMarginBottom = _this$props.withMarginBottom,
           disabled = _this$props.disabled;
-      var infoStyles = [style.info, withMarginBottom && style.infoWithMargin, disabled && style.disabled];
-      return _react.default.createElement(Text, {
+      return _react.default.createElement(Infos, {
         size: "tiny",
         color: "font1",
         weight: "regular",
-        style: infoStyles
-      }, "".concat(label, " "), _react.default.createElement(Text, {
+        withMarginBottom: withMarginBottom,
+        disabled: disabled
+      }, "".concat(label, " "), _react.default.createElement(_text.Text, {
         weight: "light"
       }, value));
     }
@@ -117,12 +150,9 @@ function (_Component2) {
           alt = _this$props2.alt,
           disabled = _this$props2.disabled,
           others = (0, _objectWithoutProperties2.default)(_this$props2, ["alt", "disabled"]);
-      var imageStyles = [{
-        width: '100%'
-      }, disabled && styles.disabled];
-      return _react.default.createElement("img", (0, _extends2.default)({}, others, {
+      return _react.default.createElement(RewardImage, (0, _extends2.default)({}, others, {
         alt: alt || '',
-        style: imageStyles
+        disabled: disabled
       }));
     }
   }]);
@@ -151,21 +181,24 @@ function (_Component3) {
     value: function render() {
       var _this$props3 = this.props,
           children = _this$props3.children,
-          others = (0, _objectWithoutProperties2.default)(_this$props3, ["children"]);
-      return _react.default.createElement(_react.Fragment, null, _react.default.createElement(_legacyRewardCardContainer.LegacyRewardCardContainer, this.props), children && _react.default.createElement("div", (0, _extends2.default)({}, others, {
-        style: style.card
-      }), children));
+          withoutBorder = _this$props3.withoutBorder,
+          others = (0, _objectWithoutProperties2.default)(_this$props3, ["children", "withoutBorder"]);
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_legacyRewardCardContainer.LegacyRewardCardContainer, this.props), children && _react.default.createElement(CardContainer, (0, _extends2.default)({
+        withoutBorder: withoutBorder
+      }, others), children));
     }
   }]);
   return RewardCard;
-}(_react.Component);
+}(_react.Component); // This export handles retro-compatibility.
+// TODO: remove this export when deleting all deprecated components.
+
 
 exports.RewardCard = RewardCard;
 RewardCard.Row = _row.RewardCardRow;
 RewardCard.RowContent = _rowContent.RewardCardRowContent;
 RewardCard.RowSide = _rowSide.RewardCardRowSide;
 RewardCard.Title = _title.RewardCardTitle;
-RewardCard.Image = (0, _radium.default)(RewardCardImage);
+RewardCard.Image = RewardCardImage;
 RewardCard.Info = RewardCardInfo;
 RewardCard.CheckedSection = _checkedSection.RewardCardCheckedSection;
 RewardCard.StarredBadge = _starredBadge.RewardCardStarredBadge;
@@ -200,34 +233,11 @@ RewardCard.propTypes = {
   titleAvailability: (0, _deprecated.default)(_propTypes.default.string, 'Use `Reward.Info` to compose your card content now.'),
   valueContributors: (0, _deprecated.default)(_propTypes.default.string, 'Use `Reward.Info` to compose your card content now.'),
   valueDelivery: (0, _deprecated.default)(_propTypes.default.string, 'Use `Reward.Info` to compose your card content now.'),
-  valueAvailability: (0, _deprecated.default)(_propTypes.default.string, 'Use `Reward.Info` to compose your card content now.')
+  valueAvailability: (0, _deprecated.default)(_propTypes.default.string, 'Use `Reward.Info` to compose your card content now.'),
+  withoutBorder: _propTypes.default.bool
 };
-var style = {
-  card: {
-    backgroundColor: _colorsConfig.default.background1,
-    borderWidth: 2,
-    borderStyle: 'solid',
-    borderColor: _colorsConfig.default.line1,
-    width: '100%',
-    padding: "".concat((0, _typography.pxToRem)(15), " 0"),
-    boxSizing: 'border-box'
-  },
-  image: {
-    width: '100%'
-  },
-  info: {
-    display: 'block',
-    lineHeight: (0, _typography.pxToRem)(20)
-  },
-  infoWithMargin: {
-    marginBottom: (0, _typography.pxToRem)(10)
-  },
-  disabled: {
-    color: _colorsConfig.default.font2,
-    cursor: 'not-allowed'
-  } // This export handles retro-compatibility.
-  // TODO: remove this export when deleting all deprecated components.
-
+RewardCard.defaultProps = {
+  withoutBorder: false
 };
 var styles = _legacyRewardCardContainer.styles;
 exports.styles = styles;

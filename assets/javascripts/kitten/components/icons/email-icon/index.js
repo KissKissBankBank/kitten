@@ -15,7 +15,7 @@ export const EmailIcon = ({ color, title, ...props }) => (
   </svg>
 )
 
-EmailIcon.PropTypes = {
+EmailIcon.propTypes = {
   color: PropTypes.string,
   title: PropTypes.string,
 }
