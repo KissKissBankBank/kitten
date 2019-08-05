@@ -93,17 +93,6 @@ const StyledDatePicker = styled.div`
     }
   }
 
-  .DayPicker-Day {
-    ${({ styles }) => css`
-      border: solid ${styles.borderColor} ${borderSize};
-    `}
-    border-radius: 0;
-
-    &.DayPicker-Day--outside {
-      border: 0;
-    }
-  }
-
   .DayPicker-Day--today {
     ${TYPOGRAPHY.fontStyles.regular}
     ${({ styles }) => css`
@@ -112,43 +101,49 @@ const StyledDatePicker = styled.div`
   }
 
   .DayPicker-Day--selected {
-    &:not(.DayPicker-Day--disabled) {
-      &:not(.DayPicker-Day--outside) {
+    outline-offset: calc(-1 * ${borderSize} / 2);
+
+    &:not(.DayPicker-Day--outside):not(.DayPicker-Day--disabled) {
+      /* REGULAR STYLES */
+      &, &:hover {
         ${({ styles }) => css`
           background-color: ${styles.day.selected.backgroundColor};
           color: ${styles.day.selected.color};
-          border: double ${styles.day.selected.backgroundColor} ${borderSize};
+          border-color: ${styles.day.selected.borderColor};
+          border-width: ${borderSize};
+          outline: ${styles.day.selected.borderColor} solid ${borderSize};
+          z-index: 15;
         `}
-        &:hover {
-          ${({ styles }) => css`
-            background-color: ${styles.day.selected.backgroundColor};
-            color: ${styles.day.selected.color};
-            border: double ${styles.day.selected.backgroundColor} ${borderSize};
-          `}
-        }
       }
-    }
-  }
+      &:focus {
+        ${({ styles }) => css`
+          outline-color: ${styles.day.focus.color};
+        `}
+        outline-offset: 0;
+        z-index: 25;
+      }
 
-  .DayPicker-Day--selected {
-    &:not(.DayPicker-Day--start) {
-      &:not(.DayPicker-Day--end) {
-        &:not(.DayPicker-Day--outside) {
+      /* START AND END STYLES */
+      &.DayPicker-Day--start, &.DayPicker-Day--end {
+        &, &:hover {
           ${({ styles }) => css`
             background-color: ${styles.day.selectedStartAndEnd.backgroundColor};
             color: ${styles.day.selectedStartAndEnd.color};
-            border-color: ${styles.day.selectedStartAndEnd.borderColor};
-            border-width: ${borderSize};
+            border: ${styles.day.selectedStartAndEnd.backgroundColor}
+              ${borderSize};
+            outline: ${styles.day.selectedStartAndEnd.backgroundColor} solid
+              ${borderSize};
+            position: relative;
+            z-index: 20;
           `}
-          &:hover {
-            ${({ styles }) => css`
-              background-color: ${styles.day.selectedStartAndEnd
-                .backgroundColor};
-              color: ${styles.day.selectedStartAndEnd.color};
-              border-color: ${styles.day.selectedStartAndEnd.borderColor};
-              border-width: ${borderSize};
-            `}
-          }
+        }
+
+        &:focus {
+          ${({ styles }) => css`
+            outline: ${styles.day.focus.color} solid calc(${borderSize} * 2);
+          `}
+          outline-offset: calc(${borderSize} / -2);
+          z-index: 25;
         }
       }
     }
@@ -157,8 +152,8 @@ const StyledDatePicker = styled.div`
   .DayPicker-Day--disabled {
     ${({ styles }) => css`
       color: ${styles.day.disabled.color};
-      cursor: not-allowed;
     `}
+    pointer-events: none;
   }
 
   .DayPicker-Month {
@@ -186,25 +181,41 @@ const StyledDatePicker = styled.div`
       border: none;
     `}
     /* Hovered selectable day*/
-    &:not(.DayPicker--interactionDisabled) {
-      .DayPicker-Day {
-        &:not(.DayPicker-Day--disabled) {
-          &:not(.DayPicker-Day--selected) {
-            &:not(.DayPicker-Day--outside) {
-              &:hover {
-                ${TYPOGRAPHY.fontStyles.light}
-                ${({ styles }) => css`
-                  background-color: ${styles.day.hover.backgroundColor};
-                  color: ${styles.day.hover.color};
-                  border: double ${styles.day.hover.backgroundColor}
-                    ${borderSize};
-                `}
-              }
-            }
-          }
-        }
-      }
+    &:not(.DayPicker--interactionDisabled)
+      .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+      ${TYPOGRAPHY.fontStyles.light}
+      ${({ styles }) => css`
+        background-color: ${styles.day.hover.backgroundColor};
+        color: ${styles.day.hover.color};
+        border: ${styles.day.hover.backgroundColor};
+        outline: ${borderSize};
+      `}
     }
+  }
+
+  .DayPicker-Day {
+    ${({ styles }) => css`
+      border: solid ${styles.borderColor} ${borderSize};
+    `}
+    border-radius: 0;
+
+    &.DayPicker-Day--outside {
+      border: 0;
+    }
+
+    &:not(.DayPicker-Day--disabled):focus {
+      ${({ styles }) => css`
+        outline-color: ${styles.day.focus.color};
+        outline-offset: 0;
+      `}
+      outline-style: solid;
+      outline-width: ${borderSize};
+      z-index: 25;
+      position: relative;
+    }
+  }
+
+
 `
 
 export class DatePickerPanel extends PureComponent {
@@ -249,6 +260,9 @@ export class DatePickerPanel extends PureComponent {
       borderColor: COLORS.line1,
       weekdaysColor: COLORS.font1,
       day: {
+        focus: {
+          color: COLORS.primary1,
+        },
         hover: {
           backgroundColor: COLORS.primary1,
           color: COLORS.background1,
@@ -260,13 +274,13 @@ export class DatePickerPanel extends PureComponent {
           color: COLORS.line2,
         },
         selected: {
-          backgroundColor: COLORS.primary1,
-          color: COLORS.background1,
-        },
-        selectedStartAndEnd: {
           backgroundColor: COLORS.primary6,
           color: COLORS.primary1,
           borderColor: COLORS.primary4,
+        },
+        selectedStartAndEnd: {
+          backgroundColor: COLORS.primary1,
+          color: COLORS.background1,
         },
       },
     },

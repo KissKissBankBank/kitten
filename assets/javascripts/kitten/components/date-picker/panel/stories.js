@@ -36,6 +36,9 @@ const styles = {
   borderColor: COLORS.line1,
   weekdaysColor: COLORS.font1,
   day: {
+    focus: {
+      color: COLORS.primary1,
+    },
     hover: {
       backgroundColor: COLORS.primary1,
       color: '#fff',
@@ -47,13 +50,13 @@ const styles = {
       color: COLORS.line2,
     },
     selected: {
-      backgroundColor: COLORS.primary1,
-      color: '#fff',
-    },
-    selectedStartAndEnd: {
       backgroundColor: COLORS.primary6,
       color: COLORS.primary1,
       borderColor: COLORS.primary4,
+    },
+    selectedStartAndEnd: {
+      backgroundColor: COLORS.primary1,
+      color: '#fff',
     },
   },
 }
