@@ -21,6 +21,7 @@ const fontSize = css`
 
 const StyledDatePicker = styled.div`
   box-sizing: border-box;
+  display: inline-block;
 
   .DayPickerInput-Overlay {
     box-shadow: none;
@@ -143,8 +144,12 @@ const StyledDatePicker = styled.div`
   }
 
   .DayPicker-Month {
-    &:first-child {
+    &:first-of-type {
+      margin-left: 0;
       margin-right: ${pxToRem(30)};
+    }
+    &:last-of-type {
+      margin-right:0;
     }
   }
 
