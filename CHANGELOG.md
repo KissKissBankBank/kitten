@@ -6,6 +6,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.18.0] - 2019-08-02
 
+Fix:
+- Add old ref prop to `TextInputWithUnit`
+
 Features:
 - Update `InfoLines` with styled-components.
 - Add `withoutBorder` prop to `RewardCard`.
