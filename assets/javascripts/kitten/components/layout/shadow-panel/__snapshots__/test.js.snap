@@ -13,7 +13,7 @@ exports[`<ShadowPanel /> with custom props matches with snapshot 1`] = `
 
 .c0::before,
 .c0::after {
-  content: "";
+  content: '';
   position: absolute;
   border: 0 solid #eee;
   right: -0.63rem;
@@ -50,7 +50,7 @@ exports[`<ShadowPanel /> with default props matches with snapshot 1`] = `
 
 .c0::before,
 .c0::after {
-  content: "";
+  content: '';
   position: absolute;
   border: 0 solid #eee;
   top: -0.63rem;
