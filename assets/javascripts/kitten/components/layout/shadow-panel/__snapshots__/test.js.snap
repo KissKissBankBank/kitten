@@ -15,13 +15,11 @@ exports[`<ShadowPanel /> with custom props matches with snapshot 1`] = `
 .c0::after {
   content: '';
   position: absolute;
-  border: 0 solid #eee;
   right: -0.63rem;
   top: 50rem;
-  border-right: 0 solid transparent;
   border-bottom: 0.56rem solid transparent;
   border-top: 0.56rem solid transparent;
-  border-left-width: 0.5rem;
+  border-left: 0.5rem solid #eee;
 }
 
 .c0::after {
@@ -52,13 +50,11 @@ exports[`<ShadowPanel /> with default props matches with snapshot 1`] = `
 .c0::after {
   content: '';
   position: absolute;
-  border: 0 solid #eee;
   top: -0.63rem;
   left: 1.88rem;
-  border-top: 0 solid transparent;
   border-left: 0.56rem solid transparent;
   border-right: 0.56rem solid transparent;
-  border-bottom-width: 0.5rem;
+  border-bottom: 0.5rem solid #eee;
 }
 
 .c0::after {
