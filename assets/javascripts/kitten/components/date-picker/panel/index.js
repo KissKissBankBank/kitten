@@ -322,13 +322,13 @@ export class DatePickerPanel extends PureComponent {
           navbarElement={
             <Navbar title={title} iconColor={styles.header.icon.color} />
           }
+          weekdaysLong={weekDays}
+          weekdaysShort={weekDays && weekDays.map(str => str.substr(0, 2))}
+          firstDayOfWeek={1}
+          locale={locale}
+          months={months}
           dayPickerProps={{
             ...datePickerProps,
-            locale: locale,
-            months: months,
-            weekdaysLong: weekDays,
-            weekdaysShort: weekDays && weekDays.map(str => str.substr(0, 2)),
-            firstDayOfWeek: 1,
             labels: { previousMonth, nextMonth },
           }}
         />
