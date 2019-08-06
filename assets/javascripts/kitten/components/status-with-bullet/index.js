@@ -23,8 +23,8 @@ const StyledStatus = styled.div`
   font-size: ${stepToRem(-1)};
 `
 
-export const StatusBullet = ({ statusMessage, statusType }) => {
-  var statusColor = COLORS.valid
+export const StatusWithBullet = ({ statusMessage, statusType }) => {
+  let statusColor = COLORS.valid
   if (statusType === 'danger') {
     statusColor = COLORS.error
   }
@@ -37,11 +37,11 @@ export const StatusBullet = ({ statusMessage, statusType }) => {
   )
 }
 
-StatusBullet.propTypes = {
+StatusWithBullet.propTypes = {
   statusMessage: PropTypes.string.isRequired,
   statusType: PropTypes.oneOf(['danger', 'success']),
 }
 
-StatusBullet.defaultProps = {
+StatusWithBullet.defaultProps = {
   statusType: 'success',
 }

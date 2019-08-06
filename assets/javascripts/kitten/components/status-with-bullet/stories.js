@@ -3,17 +3,17 @@ import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, select } from '@storybook/addon-knobs'
-import { StatusBullet } from './index'
+import { StatusWithBullet } from './index'
 import { Grid, GridCol } from '../../components/grid/grid'
 
 const info = {
   text: `
-    # StatusBullet
+    # StatusWithBullet
     &nbsp;
 
     ## Import
     ~~~js
-    import { StatusBullet } from '@kisskissbankbank/kitten/src/components/status-bullet'
+    import { StatusWithBullet } from '@kisskissbankbank/kitten/src/components/status-bullet'
     ~~~
 
     ## Usage
@@ -21,7 +21,7 @@ const info = {
 
     #### Default
     ~~~js
-    <StatusBullet
+    <StatusWithBullet
       statusMessage="Message"
       statusType="success"
     />
@@ -32,16 +32,16 @@ const info = {
   propTables: false,
 }
 
-storiesOf('StatusBullet', module)
+storiesOf('StatusWithBullet', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
   .add(
-    'StatusBullet',
+    'StatusWithBullet',
     () => {
       return (
         <Grid style={{ marginTop: '5em' }}>
           <GridCol offset="1" col="8">
-            <StatusBullet
+            <StatusWithBullet
               statusMessage={text('Status message', 'Message')}
               statusType={select('Status type', ['success', 'danger'])}
             />
