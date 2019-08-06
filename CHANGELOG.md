@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `StatusBullet` component.
+- Feature: Add `StatusWithBullet` component.
 
 ## [2.18.0] - 2019-08-02
 
