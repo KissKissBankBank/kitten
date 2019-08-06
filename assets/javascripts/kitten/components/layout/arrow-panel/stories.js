@@ -3,16 +3,16 @@ import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, number, select } from '@storybook/addon-knobs'
-import { ShadowPanel } from './index'
+import { ArrowPanel } from './index'
 
 const info = {
   text: `
-    # ShadowPanel
+    # ArrowPanel
     &nbsp;
 
     ## Import
     ~~~js
-    import { ShadowPanel } from '@kisskissbankbank/kitten/src/components/layout/shadow-panel'
+    import { ArrowPanel } from '@kisskissbankbank/kitten/src/components/layout/shadow-panel'
     ~~~
 
     ## Usage
@@ -20,12 +20,12 @@ const info = {
 
     #### Default
     ~~~js
-    <ShadowPanel
+    <ArrowPanel
       arrowSide="left"
       arrowPositionFromOrigin={30}
     >
       …
-    </ShadowPanel>
+    </ArrowPanel>
     ~~~
 
   `,
@@ -33,7 +33,7 @@ const info = {
   propTables: false,
 }
 
-storiesOf('Layout/ShadowPanel', module)
+storiesOf('Layout/ArrowPanel', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
   .add(
@@ -41,7 +41,7 @@ storiesOf('Layout/ShadowPanel', module)
     () => {
       return (
         <div style={{ margin: '5em' }}>
-          <ShadowPanel
+          <ArrowPanel
             arrowSide={select(
               'Arrow side',
               ['left', 'right', 'top', 'bottom'],
@@ -57,7 +57,7 @@ storiesOf('Layout/ShadowPanel', module)
             >
               Play with my knob!
             </div>
-          </ShadowPanel>
+          </ArrowPanel>
         </div>
       )
     },

@@ -1,14 +1,14 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
-import { ShadowPanel } from './index'
+import { ArrowPanel } from './index'
 
-describe('<ShadowPanel />', () => {
+describe('<ArrowPanel />', () => {
   let component
 
   describe('with default props', () => {
     beforeEach(() => {
-      component = renderer.create(<ShadowPanel>Foobar</ShadowPanel>).toJSON()
+      component = renderer.create(<ArrowPanel>Foobar</ArrowPanel>).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -20,13 +20,13 @@ describe('<ShadowPanel />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <ShadowPanel
+          <ArrowPanel
             arrowSide="right"
             arrowPositionFromOrigin={800}
             aria-label="ARIA label"
           >
             Foobar
-          </ShadowPanel>,
+          </ArrowPanel>,
         )
         .toJSON()
     })

@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const StyledShadowPanel = styled.div`
+const StyledArrowPanel = styled.div`
   display: inline-block;
   background: ${COLORS.background1};
   border: 2px solid ${COLORS.line1};
@@ -87,16 +87,16 @@ const StyledShadowPanel = styled.div`
   }
 `
 
-export const ShadowPanel = ({ ...props }) => {
-  return <StyledShadowPanel {...props} />
+export const ArrowPanel = ({ ...props }) => {
+  return <StyledArrowPanel {...props} />
 }
 
-ShadowPanel.propTypes = {
+ArrowPanel.propTypes = {
   arrowSide: PropTypes.oneOf(['left', 'right', 'top', 'bottom']),
   arrowPositionFromOrigin: PropTypes.number,
 }
 
-ShadowPanel.defaultProps = {
+ArrowPanel.defaultProps = {
   arrowSide: 'top',
   arrowPositionFromOrigin: 30,
 }

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ShadowPanel /> with custom props matches with snapshot 1`] = `
+exports[`<ArrowPanel /> with custom props matches with snapshot 1`] = `
 .c0 {
   display: inline-block;
   background: #fff;
@@ -35,7 +35,7 @@ exports[`<ShadowPanel /> with custom props matches with snapshot 1`] = `
 </div>
 `;
 
-exports[`<ShadowPanel /> with default props matches with snapshot 1`] = `
+exports[`<ArrowPanel /> with default props matches with snapshot 1`] = `
 .c0 {
   display: inline-block;
   background: #fff;
