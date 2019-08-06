@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: New `ShadowPanel` component.
+- Feature: Add `ShadowPanel` component.
 
 ## [2.18.0] - 2019-08-02
 
