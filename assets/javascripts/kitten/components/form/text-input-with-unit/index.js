@@ -1,4 +1,4 @@
-import React, { PureComponent, createRef } from 'react'
+import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import { TextInput } from '../../../components/form/text-input'
 import PropTypes from 'prop-types'
@@ -112,7 +112,6 @@ export class TextInputWithUnit extends PureComponent {
 
   constructor(props) {
     super(props)
-    this.input = createRef()
   }
 
   render() {
@@ -130,8 +129,7 @@ export class TextInputWithUnit extends PureComponent {
     return (
       <StyledTextInputWithUnit>
         <StyledTextInput
-          {...others}
-          ref={this.input}
+          ref={input => { this.input = input }}
           type={type}
           valid={valid}
           error={error}
