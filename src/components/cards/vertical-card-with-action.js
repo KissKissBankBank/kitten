@@ -79,7 +79,7 @@ function (_Component) {
           style = _this$props$imageProp.style,
           imageProps = (0, _objectWithoutProperties2.default)(_this$props$imageProp, ["style"]);
       return _react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
-        style: (0, _extends2.default)({}, style, styles.image)
+        style: (0, _extends2.default)({}, style, {}, styles.image)
       }));
     }
   }, {
