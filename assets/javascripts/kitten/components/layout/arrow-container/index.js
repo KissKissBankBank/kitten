@@ -113,7 +113,6 @@ const Arrow = styled.span`
         return css`
           top: -${pxToRem(borderSize)};
           left: -${pxToRem(distanceValue + borderSize)};
-
           border: ${pxToRem(borderSize)} solid transparent;
           border-right-color: ${borderColor};
         `
