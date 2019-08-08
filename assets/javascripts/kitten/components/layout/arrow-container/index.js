@@ -74,49 +74,49 @@ const Arrow = styled.span`
     z-index: -1;
 
     ${({ position, size, borderColor, borderWidth }) => {
-      if (borderWidth > 0) {
-        const rawDistanceValue = Math.sqrt(Math.pow(borderWidth, 2) * 2)
-        const distanceValue =
-          borderWidth % 2 === 0
-            ? Math.floor(rawDistanceValue)
-            : Math.ceil(rawDistanceValue)
+      if (borderWidth <= 0) return
 
-        const borderSize = distanceValue + size
+      const rawDistanceValue = Math.sqrt(Math.pow(borderWidth, 2) * 2)
+      const distanceValue =
+        borderWidth % 2 === 0
+          ? Math.floor(rawDistanceValue)
+          : Math.ceil(rawDistanceValue)
 
-        if (position === 'top') {
-          return css`
-            top: -${pxToRem(distanceValue + borderSize)};
-            left: -${pxToRem(borderSize)};
-            border: ${pxToRem(borderSize)} solid transparent;
-            border-bottom-color: ${borderColor};
-          `
-        }
+      const borderSize = distanceValue + size
 
-        if (position === 'bottom') {
-          return css`
-            bottom: -${pxToRem(distanceValue + borderSize)};
-            left: -${pxToRem(borderSize)};
-            border: ${pxToRem(borderSize)} solid transparent;
-            border-top-color: ${borderColor};
-          `
-        }
-
-        if (position === 'right') {
-          return css`
-            right: -${pxToRem(distanceValue + borderSize)};
-            top: -${pxToRem(borderSize)};
-            border: ${pxToRem(borderSize)} solid transparent;
-            border-left-color: ${borderColor};
-          `
-        }
-
+      if (position === 'top') {
         return css`
-          top: -${pxToRem(borderSize)};
-          left: -${pxToRem(distanceValue + borderSize)};
+          top: -${pxToRem(distanceValue + borderSize)};
+          left: -${pxToRem(borderSize)};
           border: ${pxToRem(borderSize)} solid transparent;
-          border-right-color: ${borderColor};
+          border-bottom-color: ${borderColor};
         `
       }
+
+      if (position === 'bottom') {
+        return css`
+          bottom: -${pxToRem(distanceValue + borderSize)};
+          left: -${pxToRem(borderSize)};
+          border: ${pxToRem(borderSize)} solid transparent;
+          border-top-color: ${borderColor};
+        `
+      }
+
+      if (position === 'right') {
+        return css`
+          right: -${pxToRem(distanceValue + borderSize)};
+          top: -${pxToRem(borderSize)};
+          border: ${pxToRem(borderSize)} solid transparent;
+          border-left-color: ${borderColor};
+        `
+      }
+
+      return css`
+        top: -${pxToRem(borderSize)};
+        left: -${pxToRem(distanceValue + borderSize)};
+        border: ${pxToRem(borderSize)} solid transparent;
+        border-right-color: ${borderColor};
+      `
     }}
   }
 `
