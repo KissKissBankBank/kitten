@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react'
+import React from 'react'
 
 export const DoubleArrowIcon = props => {
   return (
