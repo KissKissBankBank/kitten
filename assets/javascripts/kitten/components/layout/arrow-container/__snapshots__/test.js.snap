@@ -33,13 +33,10 @@ exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] 
 
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </div>
 `;
@@ -77,13 +74,10 @@ exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`]
 
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </div>
 `;
@@ -125,13 +119,10 @@ exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] 
 
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </div>
 `;
@@ -169,13 +160,10 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
 
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </div>
 `;
@@ -213,13 +201,10 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
 
 <div
   className="c0"
-  color="#ff0000"
 >
   Foobar
   <span
     className="c1"
-    color="#ff0000"
-    size={10}
   />
 </div>
 `;
@@ -257,13 +242,10 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
 
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </div>
 `;
@@ -301,13 +283,10 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
 
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </div>
 `;
@@ -346,13 +325,10 @@ exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
 
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </div>
 `;
@@ -390,13 +366,10 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
 
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={20}
   />
 </div>
 `;
@@ -434,13 +407,10 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
 
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </div>
 `;
@@ -483,8 +453,6 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </article>
 `;

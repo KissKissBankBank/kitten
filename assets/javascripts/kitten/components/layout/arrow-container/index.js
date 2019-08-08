@@ -4,7 +4,17 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import PropTypes from 'prop-types'
 
-const Container = styled.div`
+const Container = styled(
+  ({
+    color,
+    padding,
+    shadow,
+    borderRadius,
+    borderColor,
+    borderWidth,
+    ...others
+  }) => <div {...others} />,
+)`
   position: relative;
   padding: ${({ padding }) => pxToRem(padding)};
   background-color: ${({ color }) => color};
@@ -22,7 +32,18 @@ const Container = styled.div`
   z-index: 1;
 `
 
-const Arrow = styled.span`
+const Arrow = styled(
+  ({
+    color,
+    size,
+    distance,
+    position,
+    centered,
+    borderColor,
+    borderWidth,
+    ...others
+  }) => <span {...others} />,
+)`
   position: absolute;
   display: block;
   width: 0;
