@@ -81,7 +81,7 @@ describe('<ArrowContainer />', () => {
   describe('with `shadow` prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<ArrowContainer shadow={true}>Foobar</ArrowContainer>)
+        .create(<ArrowContainer shadow>Foobar</ArrowContainer>)
         .toJSON()
     })
 
