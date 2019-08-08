@@ -85,7 +85,7 @@ const Arrow = styled.span`
 
         if (position === 'top') {
           return css`
-            top: -${pxToRem(size + distanceValue)};
+            top: -${pxToRem(distanceValue + borderSize)};
             left: -${pxToRem(borderSize)};
             border: ${pxToRem(borderSize)} solid transparent;
             border-bottom-color: ${borderColor};
@@ -94,7 +94,7 @@ const Arrow = styled.span`
 
         if (position === 'bottom') {
           return css`
-            bottom: -${pxToRem(size + distanceValue)};
+            bottom: -${pxToRem(distanceValue + borderSize)};
             left: -${pxToRem(borderSize)};
             border: ${pxToRem(borderSize)} solid transparent;
             border-top-color: ${borderColor};
@@ -103,7 +103,7 @@ const Arrow = styled.span`
 
         if (position === 'right') {
           return css`
-            right: -${pxToRem(size + distanceValue)};
+            right: -${pxToRem(distanceValue + borderSize)};
             top: -${pxToRem(borderSize)};
             border: ${pxToRem(borderSize)} solid transparent;
             border-left-color: ${borderColor};
