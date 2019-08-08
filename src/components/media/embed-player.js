@@ -128,7 +128,7 @@ function (_Component) {
         cursor: 'pointer'
       } : null, isVideoPlaying ? styles.player.hide : styles.player.show];
       return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("div", (0, _extends2.default)({
-        style: (0, _extends2.default)({}, mainStyle, styles.container),
+        style: (0, _extends2.default)({}, mainStyle, {}, styles.container),
         ref: function ref(node) {
           _this2.previewVideo = node;
         }

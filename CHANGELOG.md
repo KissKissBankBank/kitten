@@ -7,6 +7,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `shadow`, `borderRadius`, `borderColor`, `borderWidth` props
   to `ArrowContainer` component.
 
+## [2.18.1] - 2019-08-07
+
+Fix:
+- Add old ref prop to `TextInputWithUnit`
+
 ## [2.18.0] - 2019-08-02
 
 Features:
