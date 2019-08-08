@@ -78,6 +78,54 @@ describe('<ArrowContainer />', () => {
     })
   })
 
+  describe('with `shadow` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<ArrowContainer shadow={true}>Foobar</ArrowContainer>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `borderRadius` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<ArrowContainer borderRadius={4}>Foobar</ArrowContainer>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `borderColor` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<ArrowContainer borderColor="#1CAFE1">Foobar</ArrowContainer>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `borderWidth` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<ArrowContainer borderWidth={3}>Foobar</ArrowContainer>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with other props', () => {
     beforeEach(() => {
       component = renderer
