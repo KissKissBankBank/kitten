@@ -56,7 +56,7 @@ function (_React$Component) {
           className: "k-Tour__popover__svg--primary"
         })
       };
-      return (0, _extends2.default)({}, content, illustration);
+      return (0, _extends2.default)({}, content, {}, illustration);
     }
   }, {
     key: "crowdStep",
@@ -67,7 +67,7 @@ function (_React$Component) {
           className: "k-Tour__popover__svg--primary"
         })
       };
-      return (0, _extends2.default)({}, content, illustration);
+      return (0, _extends2.default)({}, content, {}, illustration);
     }
   }, {
     key: "steps",

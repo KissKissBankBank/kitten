@@ -164,7 +164,7 @@ function (_React$Component) {
         top: 0
       };
       var arrowHorizontalPosition = this.props.arrowHorizontalPosition;
-      return (0, _extends2.default)({}, defaultPosition, arrowHorizontalPosition);
+      return (0, _extends2.default)({}, defaultPosition, {}, arrowHorizontalPosition);
     }
   }, {
     key: "getContentPosition",
@@ -173,7 +173,7 @@ function (_React$Component) {
         top: this.state.referenceElementHeight
       };
       var horizontalPosition = this.props.contentHorizontalPosition;
-      return (0, _extends2.default)({}, defaultPosition, horizontalPosition);
+      return (0, _extends2.default)({}, defaultPosition, {}, horizontalPosition);
     } // Component listener callbacks
 
   }, {

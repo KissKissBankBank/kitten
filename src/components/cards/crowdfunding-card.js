@@ -125,7 +125,7 @@ function (_Component) {
       }, !this.props.loading && _react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
         alt: alt || '',
         className: imageClassName,
-        style: (0, _extends2.default)({}, imageProps.style, styles.image, {
+        style: (0, _extends2.default)({}, imageProps.style, {}, styles.image, {
           color: color
         })
       })));
@@ -178,7 +178,7 @@ function (_Component) {
       }, this.props.cardTitle), !this.props.titleTruncate && this.props.cardTitle), this.props.loading && _react.default.createElement("div", null, _react.default.createElement("span", {
         style: styles.title.loading
       }), _react.default.createElement("span", {
-        style: (0, _extends2.default)({}, styles.title.loading, styles.title.loading.small)
+        style: (0, _extends2.default)({}, styles.title.loading, {}, styles.title.loading.small)
       })));
     }
   }, {
@@ -220,7 +220,7 @@ function (_Component) {
       var lastItemStyles = lastItem ? styles.informations.info.lastItem : {};
       return _react.default.createElement(Marger, {
         top: "0.5",
-        style: (0, _extends2.default)({}, styles.informations.info, lastItemStyles)
+        style: (0, _extends2.default)({}, styles.informations.info, {}, lastItemStyles)
       }, !this.props.loading && _react.default.createElement(Text, {
         size: "micro",
         lineHeight: "normal",
@@ -228,7 +228,7 @@ function (_Component) {
       }, text), this.props.loading && _react.default.createElement("div", null, _react.default.createElement("span", {
         style: styles.informations.info.loading
       }), _react.default.createElement("span", {
-        style: (0, _extends2.default)({}, styles.informations.info.loading, styles.informations.info.loading.large)
+        style: (0, _extends2.default)({}, styles.informations.info.loading, {}, styles.informations.info.loading.large)
       })));
     }
   }, {
