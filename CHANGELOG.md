@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Refactor styles for `isAnimated=false` prop on `Accordeon`.
+
 ## [2.18.1] - 2019-08-07
 
 Fix:
