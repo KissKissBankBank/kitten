@@ -4,12 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Refactor styles for `isAnimated=false` prop on `Accordeon`.
+
+## [2.18.2] - 2019-08-08
+
+Fix:
+- Refactor styles for `isAnimated=false` prop on `Accordeon`.
 
 ## [2.18.1] - 2019-08-07
 
 Fix:
-- Add old ref prop to `TextInputWithUnit`
+- Add old ref prop to `TextInputWithUnit`.
 
 ## [2.18.0] - 2019-08-02
 
