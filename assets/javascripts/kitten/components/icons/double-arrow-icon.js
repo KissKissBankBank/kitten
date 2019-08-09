@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import COLORS from '../../constants/colors-config'
 
 export const DoubleArrowIcon = ({ color, ...props }) => {
@@ -24,4 +25,8 @@ export const DoubleArrowIcon = ({ color, ...props }) => {
 
 DoubleArrowIcon.defaultProps = {
   color: COLORS.font1,
+}
+
+DoubleArrowIcon.propTypes = {
+  color: PropTypes.string,
 }
