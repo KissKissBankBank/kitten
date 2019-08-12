@@ -9,7 +9,7 @@ exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
     className="header__StyledHeader-sc-1f8str-0 sDJi"
   >
     <ul
-      className="header__StyledList-sc-1f8str-1 jAzmXb"
+      className="header__StyledList-sc-1f8str-1 iEMMuj"
     >
       <li
         aria-describedby={false}
@@ -34,70 +34,69 @@ exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
       </li>
     </ul>
   </header>
-  <div>
-    <ul
-      className="body__StyledList-kjc0pl-0 dxCtwZ"
+  <ul
+    className="body__ListTableBody-kjc0pl-0 kyLkIG"
+  >
+    <li
+      className="row__StyledItem-sc-1vlimsn-0 bgbwbi"
+      selected={true}
     >
-      <li
-        className="row__StyledItem-sc-1vlimsn-0 iXmWso"
-        selected={true}
+      <ul
+        className="row__StyledItemList-sc-1vlimsn-1 eRYPpF"
       >
-        <ul
-          className="row__StyledItemList-sc-1vlimsn-1 dyLjXZ"
+        <li
+          aria-describedby="TestListTable-col-1"
+          className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+          id={false}
         >
-          <li
-            aria-describedby="TestListTable-col-1"
-            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
-            id={false}
-          >
-            Content 1
-          </li>
-          <li
-            aria-describedby="TestListTable-col-2"
-            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
-            id={false}
-          >
-            Content 2
-          </li>
-          <li
-            aria-describedby="TestListTable-col-3"
-            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
-            id={false}
-          >
-            Content 3
-          </li>
-        </ul>
-      </li>
-      <li
-        className="row__StyledItem-sc-1vlimsn-0 iXmWso"
+          Content 1
+        </li>
+        <li
+          aria-describedby="TestListTable-col-2"
+          className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+          id={false}
+        >
+          Content 2
+        </li>
+        <li
+          aria-describedby="TestListTable-col-3"
+          className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+          id={false}
+        >
+          Content 3
+        </li>
+      </ul>
+    </li>
+    <li
+      className="row__StyledItem-sc-1vlimsn-0 iXmWso"
+      selected={false}
+    >
+      <ul
+        className="row__StyledItemList-sc-1vlimsn-1 eRYPpF"
       >
-        <ul
-          className="row__StyledItemList-sc-1vlimsn-1 dyLjXZ"
+        <li
+          aria-describedby="TestListTable-col-1"
+          className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+          id={false}
         >
-          <li
-            aria-describedby="TestListTable-col-1"
-            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
-            id={false}
-          >
-            Content 1
-          </li>
-          <li
-            aria-describedby="TestListTable-col-2"
-            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
-            id={false}
-          >
-            Content 2
-          </li>
-          <li
-            aria-describedby="TestListTable-col-3"
-            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
-            id={false}
-          >
-            Content 3
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
+          Content 1
+        </li>
+        <li
+          aria-describedby="TestListTable-col-2"
+          className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+          id={false}
+        >
+          Content 2
+        </li>
+        <li
+          aria-describedby="TestListTable-col-3"
+          className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+          id={false}
+        >
+          Content 3
+        </li>
+      </ul>
+    </li>
+  </ul>
 </section>
 `;
