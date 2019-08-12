@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
@@ -18,14 +19,15 @@ const StyledItem = styled.li`
   border-bottom: 2px solid ${COLORS.line1};
 
   ${({ selected }) => {
-    selected &&
-      css`
-        background: rgb(243, 251, 255);
+    if (!selected) return
 
-        &:hover {
-          background: ${COLORS.background3};
-        }
-      `
+    return css`
+      background: ${COLORS.primary6};
+
+      &:hover {
+        background: ${COLORS.primary5};
+      }
+    `
   }}
 `
 
@@ -46,14 +48,17 @@ const StyledItemList = styled.ul`
   }
 `
 
-export class ListTableRow extends Component {
-  render() {
-    const { selected, ...others } = this.props
+export const ListTableRow = ({ selected, ...others }) => {
+  return (
+    <StyledItem selected={selected}>
+      <StyledItemList {...others} />
+    </StyledItem>
+  )
+}
 
-    return (
-      <StyledItem selected={selected}>
-        <StyledItemList {...others} />
-      </StyledItem>
-    )
-  }
+ListTableRow.defaultProps = {
+  selected: false,
+}
+ListTableRow.propTypes = {
+  selected: PropTypes.bool,
 }

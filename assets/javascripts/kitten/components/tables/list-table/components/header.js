@@ -17,15 +17,15 @@ const StyledHeader = styled.header`
 `
 
 const StyledList = styled.ul`
-  list-style: none;
-  max-width: ${pxToRem(CONTAINER_MAX_WIDTH)};
-  display: flex;
+  height: ${pxToRem(90)};
   margin: 0 auto;
-  justify-content: space-between;
+  max-width: ${pxToRem(CONTAINER_MAX_WIDTH)};
   padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
   padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
-  height: ${pxToRem(90)};
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  list-style: none;
 
   @media screen and (min-width: ${ScreenConfig.M.min}px) {
     padding-left: ${pxToRem(CONTAINER_PADDING)};
@@ -33,12 +33,10 @@ const StyledList = styled.ul`
   }
 `
 
-export class ListTableHeader extends Component {
-  render() {
-    return (
-      <StyledHeader>
-        <StyledList>{this.props.children}</StyledList>
-      </StyledHeader>
-    )
-  }
+export const ListTableHeader = props => {
+  return (
+    <StyledHeader>
+      <StyledList {...props} />
+    </StyledHeader>
+  )
 }

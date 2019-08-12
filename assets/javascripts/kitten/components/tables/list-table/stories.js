@@ -61,13 +61,13 @@ const flexCellStyle = css`
 const StyledCol1 = styled(ListTable.Col)`
   text-align: center;
 
-  @media screen and (max-width: ${ScreenConfig.S.max}px) {
+  @media (max-width: ${ScreenConfig.S.max}px) {
     flex-basis: ${pxToRem(40)};
   }
-  @media screen and (min-width: ${ScreenConfig.M.min}px) {
+  @media (min-width: ${ScreenConfig.M.min}px) {
     flex-basis: ${pxToRem(60)};
   }
-  @media screen and (min-width: ${ScreenConfig.L.min}px) {
+  @media (min-width: ${ScreenConfig.L.min}px) {
     flex-basis: ${pxToRem(90)};
   }
 `
@@ -75,73 +75,63 @@ const StyledCol1 = styled(ListTable.Col)`
 const StyledCol2 = styled(ListTable.Col)`
   ${flexCellStyle}
 
-  @media screen and (max-width: ${ScreenConfig.S.max}px) {
-    flex-basis: calc(90% - 150px);
-  }
-  @media screen and (min-width: ${ScreenConfig.M.min}px) {
-    flex-basis: calc(50% - 170px);
-  }
-  @media screen and (min-width: ${ScreenConfig.L.min}px) {
-    flex-basis: 15%;
-  }
+  @media (max-width: ${ScreenConfig.S.max}px) { flex-basis: calc(90% - 150px); }
+  @media (min-width: ${ScreenConfig.M.min}px) { flex-basis: calc(50% - 170px); }
+  @media (min-width: ${ScreenConfig.L.min}px) { flex-basis: 15%; }
 `
 
 const StyledCol3 = styled(ListTable.Col)`
   ${flexCellStyle}
 
-  @media screen and (max-width: ${ScreenConfig.M.max}px) {
-    display: none;
-  }
-  @media screen and (min-width: ${ScreenConfig.L.min}px) {
-    flex-basis: 25%;
-  }
+  @media (max-width: ${ScreenConfig.M.max}px) { display: none; }
+  @media (min-width: ${ScreenConfig.L.min}px) { flex-basis: 25%; }
 `
 
 const StyledCol4 = styled(ListTable.Col)`
   text-align: right;
 
-  @media screen and (max-width: ${ScreenConfig.S.max}px) {
+  @media (max-width: ${ScreenConfig.S.max}px) {
     flex-basis: 110px;
   }
-  @media screen and (min-width: ${ScreenConfig.M.min}px) {
+  @media (min-width: ${ScreenConfig.M.min}px) {
     flex-basis: 110px;
   }
-  @media screen and (min-width: ${ScreenConfig.L.min}px) {
+  @media (min-width: ${ScreenConfig.L.min}px) {
     flex-basis: 8%;
   }
 `
 const StyledCol5 = styled(ListTable.Col)`
-  @media screen and (max-width: ${ScreenConfig.S.max}px) {
+  @media (max-width: ${ScreenConfig.S.max}px) {
     display: none;
   }
-  @media screen and (min-width: ${ScreenConfig.M.min}px) {
+  @media (min-width: ${ScreenConfig.M.min}px) {
     flex-basis: 20%;
   }
-  @media screen and (min-width: ${ScreenConfig.L.min}px) {
+  @media (min-width: ${ScreenConfig.L.min}px) {
     flex-basis: 15%;
   }
 `
 const StyledCol6 = styled(ListTable.Col)`
-  @media screen and (max-width: ${ScreenConfig.M.max}px) {
+  @media (max-width: ${ScreenConfig.M.max}px) {
     display: none;
   }
-  @media screen and (min-width: ${ScreenConfig.L.min}px) {
+  @media (min-width: ${ScreenConfig.L.min}px) {
     flex-basis: calc(33% - 200px);
   }
 `
 const StyledCol7 = styled(ListTable.Col)`
-  @media screen and (max-width: ${ScreenConfig.S.max}px) {
+  @media (max-width: ${ScreenConfig.S.max}px) {
     display: none;
   }
-  @media screen and (min-width: ${ScreenConfig.M.min}px) {
+  @media (min-width: ${ScreenConfig.M.min}px) {
     flex-basis: 20%;
   }
-  @media screen and (min-width: ${ScreenConfig.L.min}px) {
+  @media (min-width: ${ScreenConfig.L.min}px) {
     flex-basis: 12%;
   }
 `
 const StyledCol8 = styled(ListTable.Col)`
-  @media screen and (min-width: ${ScreenConfig.L.min}px) {
+  @media (min-width: ${ScreenConfig.L.min}px) {
     display: none;
   }
 `

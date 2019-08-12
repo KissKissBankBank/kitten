@@ -26,23 +26,18 @@ const StyledItem = styled.li`
   }
 `
 
-export class ListTableCol extends Component {
-  render() {
-    const { isHeader, colNumber, ...others } = this.props
-    return (
-      <Context.Consumer>
-        {id => (
-          <StyledItem
-            id={isHeader && colNumber && `${id}-col-${colNumber}`}
-            aria-describedby={
-              !isHeader && colNumber && `${id}-col-${colNumber}`
-            }
-            {...others}
-          />
-        )}
-      </Context.Consumer>
-    )
-  }
+export const ListTableCol = ({ isHeader, colNumber, ...others }) => {
+  return (
+    <Context.Consumer>
+      {id => (
+        <StyledItem
+          id={isHeader && colNumber && `${id}-col-${colNumber}`}
+          aria-describedby={!isHeader && colNumber && `${id}-col-${colNumber}`}
+          {...others}
+        />
+      )}
+    </Context.Consumer>
+  )
 }
 
 ListTableCol.defaultProps = {
