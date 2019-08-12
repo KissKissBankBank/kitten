@@ -9,8 +9,9 @@ import {
   CONTAINER_PADDING,
 } from '../../../../constants/grid-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
+import { Context } from './context'
 
-const StyledItem = styled.li`
+const StyledRow = styled.li`
   &:hover {
     cursor: pointer;
     background: ${COLORS.background2};
@@ -48,11 +49,23 @@ const StyledItemList = styled.ul`
   }
 `
 
-export const ListTableRow = ({ selected, ...others }) => {
+export const ListTableRow = ({ selected, children, ...others }) => {
   return (
-    <StyledItem selected={selected}>
-      <StyledItemList {...others} />
-    </StyledItem>
+    <StyledRow selected={selected}>
+      <StyledItemList {...others}>
+        <Context.Consumer>
+          {({ id }) => (
+            <>
+              {React.Children.map(children, (child, index) => {
+                return React.cloneElement(child, {
+                  'aria-describedby': `${id}-col-${index}`,
+                })
+              })}
+            </>
+          )}
+        </Context.Consumer>
+      </StyledItemList>
+    </StyledRow>
   )
 }
 

@@ -24,7 +24,7 @@ export class ListTable extends Component {
     const { id, children, ...props } = this.props
 
     return (
-      <Context.Provider value={id}>
+      <Context.Provider value={{ id }}>
         <StyledSection id={id} {...props}>
           {children}
         </StyledSection>

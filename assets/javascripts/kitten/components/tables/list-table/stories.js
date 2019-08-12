@@ -27,19 +27,19 @@ const info = {
     <ListTable id="…">
 
       <ListTable.Header>
-        <ListTable.Col isHeader colNumber={…}>
+        <ListTable.Col>
           …
         </ListTable.Col>
       </ListTable.Header>
 
       <ListTable.Body>
         <ListTable.Row selected>
-          <ListTable.Col colNumber={…}>
+          <ListTable.Col>
             …
           </ListTable.Col>
         </ListTable.Row>
         <ListTable.Row>
-          <ListTable.Col colNumber={…}>
+          <ListTable.Col>
             …
           </ListTable.Col>
         </ListTable.Row>
@@ -146,7 +146,7 @@ storiesOf('Tables/ListTable', module)
         <div style={{ margin: '5em 0' }}>
           <ListTable id="CustomListTable">
             <ListTable.Header>
-              <StyledCol1 isHeader colNumber={1}>
+              <StyledCol1>
                 <VisuallyHidden>Sélection</VisuallyHidden>
                 <input
                   type="checkbox"
@@ -154,39 +154,29 @@ storiesOf('Tables/ListTable', module)
                 />
               </StyledCol1>
 
-              <StyledCol2 isHeader colNumber={2}>
+              <StyledCol2>
                 <span className="k-u-hidden@s-down k-u-hidden@m">
                   Date contribution
                 </span>
                 <span className="k-u-hidden@l-up">Contributeur</span>
               </StyledCol2>
 
-              <StyledCol3 isHeader colNumber={3}>
-                Contributeur
-              </StyledCol3>
+              <StyledCol3>Contributeur</StyledCol3>
 
-              <StyledCol4 isHeader colNumber={4}>
-                Montant
-              </StyledCol4>
+              <StyledCol4>Montant</StyledCol4>
 
-              <StyledCol5 isHeader colNumber={5}>
-                Statut de paiement
-              </StyledCol5>
+              <StyledCol5>Statut de paiement</StyledCol5>
 
-              <StyledCol6 isHeader colNumber={6}>
-                Mode de livraison
-              </StyledCol6>
+              <StyledCol6>Mode de livraison</StyledCol6>
 
-              <StyledCol7 isHeader colNumber={7}>
-                Statut de livraison
-              </StyledCol7>
+              <StyledCol7>Statut de livraison</StyledCol7>
 
-              <StyledCol8 isHeader colNumber={8}></StyledCol8>
+              <StyledCol8></StyledCol8>
             </ListTable.Header>
 
             <ListTable.Body>
               <ListTable.Row selected>
-                <StyledCol1 colNumber={1}>
+                <StyledCol1>
                   <VisuallyHidden>
                     <h2>
                       Contribution #888888 par Prénom NOM le 12 septembre 2019
@@ -201,7 +191,7 @@ storiesOf('Tables/ListTable', module)
                   />
                 </StyledCol1>
 
-                <StyledCol2 colNumber={2}>
+                <StyledCol2>
                   <p>
                     <strong>
                       <time dateTime="2019-09-12">12/09/2019</time>
@@ -219,7 +209,7 @@ storiesOf('Tables/ListTable', module)
                   </a>
                 </StyledCol2>
 
-                <StyledCol3 colNumber={3}>
+                <StyledCol3>
                   <p>
                     <strong>Prénom NOM</strong>
                     <br />
@@ -234,23 +224,23 @@ storiesOf('Tables/ListTable', module)
                   </a>
                 </StyledCol3>
 
-                <StyledCol4 colNumber={4}>72&nbsp;€</StyledCol4>
+                <StyledCol4>72&nbsp;€</StyledCol4>
 
-                <StyledCol5 colNumber={5}>● Validé</StyledCol5>
+                <StyledCol5>● Validé</StyledCol5>
 
-                <StyledCol6 colNumber={6}>Livraison</StyledCol6>
+                <StyledCol6>Livraison</StyledCol6>
 
-                <StyledCol7 colNumber={7}>
+                <StyledCol7>
                   <select name="" id="">
                     <option value="">À expédier</option>
                   </select>
                 </StyledCol7>
 
-                <StyledCol8 colNumber={8}>&gt;</StyledCol8>
+                <StyledCol8>&gt;</StyledCol8>
               </ListTable.Row>
 
               <ListTable.Row>
-                <StyledCol1 colNumber={1}>
+                <StyledCol1>
                   <VisuallyHidden>
                     <h2>
                       Contribution #44654 par Prénom NOM le 12 septembre 2019
@@ -265,7 +255,7 @@ storiesOf('Tables/ListTable', module)
                   />
                 </StyledCol1>
 
-                <StyledCol2 colNumber={2}>
+                <StyledCol2>
                   <p>
                     <strong>
                       <time dateTime="2019-09-12">12/09/2019</time>
@@ -283,7 +273,7 @@ storiesOf('Tables/ListTable', module)
                   </a>
                 </StyledCol2>
 
-                <StyledCol3 colNumber={3}>
+                <StyledCol3>
                   <p>
                     <strong>Prénom NOM</strong>
                     <br />
@@ -298,19 +288,19 @@ storiesOf('Tables/ListTable', module)
                   </a>
                 </StyledCol3>
 
-                <StyledCol4 colNumber={4}>72&nbsp;€</StyledCol4>
+                <StyledCol4>72&nbsp;€</StyledCol4>
 
-                <StyledCol5 colNumber={5}>● Validé</StyledCol5>
+                <StyledCol5>● Validé</StyledCol5>
 
-                <StyledCol6 colNumber={6}>Livraison</StyledCol6>
+                <StyledCol6>Livraison</StyledCol6>
 
-                <StyledCol7 colNumber={7}>
+                <StyledCol7>
                   <select name="" id="">
                     <option value="">À expédier</option>
                   </select>
                 </StyledCol7>
 
-                <StyledCol8 colNumber={8}>&gt;</StyledCol8>
+                <StyledCol8>&gt;</StyledCol8>
               </ListTable.Row>
             </ListTable.Body>
           </ListTable>

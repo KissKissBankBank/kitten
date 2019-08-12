@@ -8,6 +8,7 @@ import {
   CONTAINER_PADDING,
 } from '../../../../constants/grid-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
+import { Context } from './context'
 
 const StyledHeader = styled.header`
   position: sticky;
@@ -36,7 +37,17 @@ const StyledList = styled.ul`
 export const ListTableHeader = props => {
   return (
     <StyledHeader>
-      <StyledList {...props} />
+      <StyledList>
+        <Context.Consumer>
+          {({ id }) => (
+            <>
+              {React.Children.map(props.children, (child, index) => {
+                return React.cloneElement(child, { id: `${id}-col-${index}` })
+              })}
+            </>
+          )}
+        </Context.Consumer>
+      </StyledList>
     </StyledHeader>
   )
 }

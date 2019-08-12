@@ -1,17 +1,13 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import {
-  CONTAINER_MAX_WIDTH,
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../../constants/grid-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { Context } from './context'
 
-const StyledItem = styled.li`
+export const ListTableCol = styled.li`
   flex-grow: 0;
   flex-shrink: 0;
 
@@ -25,25 +21,3 @@ const StyledItem = styled.li`
     }
   }
 `
-
-export const ListTableCol = ({ isHeader, colNumber, ...others }) => {
-  return (
-    <Context.Consumer>
-      {id => (
-        <StyledItem
-          id={isHeader && colNumber && `${id}-col-${colNumber}`}
-          aria-describedby={!isHeader && colNumber && `${id}-col-${colNumber}`}
-          {...others}
-        />
-      )}
-    </Context.Consumer>
-  )
-}
-
-ListTableCol.defaultProps = {
-  isHeader: false,
-}
-ListTableCol.propTypes = {
-  isHeader: PropTypes.bool,
-  colNumber: PropTypes.number.isRequired,
-}
