@@ -36,7 +36,6 @@ exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
   >
     <li
       className="row__StyledRow-sc-1vlimsn-0 knJHQs"
-      selected={true}
     >
       <ul
         className="row__StyledItemList-sc-1vlimsn-1 eRYPpF"
@@ -63,7 +62,6 @@ exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
     </li>
     <li
       className="row__StyledRow-sc-1vlimsn-0 bbOOoM"
-      selected={false}
     >
       <ul
         className="row__StyledItemList-sc-1vlimsn-1 eRYPpF"
