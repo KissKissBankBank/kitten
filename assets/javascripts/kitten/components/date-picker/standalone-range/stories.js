@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { DatePickerPanel } from './index'
+import { SandaloneRangeDatePicker } from './index'
 import { storiesOf } from '@storybook/react'
 import {
   withKnobs,
@@ -13,11 +13,10 @@ import {
 import { Container } from '../../../components/grid/container'
 import { Marger } from '../../../components/layout/marger'
 import COLORS from '../../../constants/colors-config'
-import { Footer } from './components/footer'
 
 const StoryContainer = ({ children }) => (
   <Container>
-    <Marger top="5" bottom="5">
+    <Marger top="5" bottom="5" style={{ width: 715 }}>
       {children}
     </Marger>
   </Container>
@@ -90,10 +89,10 @@ const months = [
 
 storiesOf('Form/DatePicker', module)
   .addDecorator(withKnobs)
-  .add('with panel', () => {
+  .add('Standalone Range DatePicker', () => {
     return (
       <StoryContainer>
-        <DatePickerPanel
+        <SandaloneRangeDatePicker
           selectedDay={date('default selected Date', today)}
           locale="fr"
           disabledDays={array('Disabled days', disabledDays)}

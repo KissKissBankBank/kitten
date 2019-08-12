@@ -14,8 +14,8 @@ const StyledButton = styled.div`
   position: absolute;
   display: flex;
   justify-content: space-between;
-  left: ${pxToRem(30)};
-  right: ${pxToRem(30)};
+  left: 0;
+  right: 0;
 `
 
 const StyledArrowIcon = styled(Button)`

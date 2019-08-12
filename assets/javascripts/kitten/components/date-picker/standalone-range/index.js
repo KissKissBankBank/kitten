@@ -7,11 +7,10 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Navbar } from './components/navbar'
-import { Footer } from './components/footer'
 
 const borderSize = pxToRem(2)
-const cellSize = pxToRem(50)
-const tinyCellSize = pxToRem(40)
+const cellSize = pxToRem(49)
+const tinyCellSize = pxToRem(38)
 const dayPickerPadding = pxToRem(30)
 const tinyDayPickerPadding = pxToRem(20)
 
@@ -37,13 +36,11 @@ const StyledDatePicker = styled.div`
   /* Header */
   .DayPicker-Caption {
     text-align: center;
-    height: ${pxToRem(70)};
-    margin: -${pxToRem(2)} -${pxToRem(22)} 0;
+    height: ${cellSize};
+    line-height: ${cellSize};
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      margin: -${pxToRem(2)} -${pxToRem(32)} 0;
-    }
 
     ${({ styles }) => css`
       backgroundColor: ${styles.header.backgroundColor}
@@ -51,7 +48,7 @@ const StyledDatePicker = styled.div`
     `}
 
     & div {
-      margin: 0 ${pxToRem(63)};
+      margin: 0;
       ${fontSize}
     }
   }
@@ -144,22 +141,10 @@ const StyledDatePicker = styled.div`
   }
 
   .DayPicker-Month {
+    margin: 0;
+
     &:first-of-type {
-      margin-left: 0;
       margin-right: ${pxToRem(30)};
-    }
-    &:last-of-type {
-      margin-right:0;
-    }
-  }
-
-  .DayPicker-wrapper {
-    padding: 0 ${tinyDayPickerPadding} ${tinyDayPickerPadding}
-      ${tinyDayPickerPadding};
-    outline: none;
-
-    @media (min-width: ${ScreenConfig.S.min}px) {
-      padding: 0 ${dayPickerPadding} ${dayPickerPadding} ${dayPickerPadding};
     }
   }
 
@@ -209,7 +194,7 @@ const StyledDatePicker = styled.div`
 
 `
 
-export class DatePickerPanel extends PureComponent {
+export class SandaloneRangeDatePicker extends PureComponent {
   static propTypes = {
     numberOfMonths: PropTypes.number,
     locale: PropTypes.string,
@@ -337,7 +322,6 @@ export class DatePickerPanel extends PureComponent {
             labels: { previousMonth, nextMonth },
           }}
         />
-        <Footer cleanText={cleanText} choiceText={choiceText} />
       </StyledDatePicker>
     )
   }
