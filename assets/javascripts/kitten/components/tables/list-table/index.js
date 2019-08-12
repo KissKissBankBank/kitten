@@ -14,24 +14,20 @@ const StyledSection = styled.section`
   }
 `
 
-export class ListTable extends Component {
-  static Header = ListTableHeader
-  static Body = ListTableBody
-  static Row = ListTableRow
-  static Col = ListTableCol
-
-  render() {
-    const { id, children, ...props } = this.props
-
-    return (
-      <Context.Provider value={{ id }}>
-        <StyledSection id={id} {...props}>
-          {children}
-        </StyledSection>
-      </Context.Provider>
-    )
-  }
+export const ListTable = ({ id, children, ...props }) => {
+  return (
+    <Context.Provider value={{ id }}>
+      <StyledSection id={id} {...props}>
+        {children}
+      </StyledSection>
+    </Context.Provider>
+  )
 }
+
+ListTable.Header = ListTableHeader
+ListTable.Body = ListTableBody
+ListTable.Row = ListTableRow
+ListTable.Col = ListTableCol
 
 ListTable.defaultProps = {
   id: 'ListTable',
