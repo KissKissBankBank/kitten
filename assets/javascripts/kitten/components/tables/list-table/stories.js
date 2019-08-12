@@ -32,7 +32,7 @@ const info = {
       </ListTable.Header>
 
       <ListTable.Body>
-        <ListTable.Row selected>
+        <ListTable.Row isHighlighted>
           <ListTable.Col>
             …
           </ListTable.Col>
