@@ -19,17 +19,15 @@ const StyledRow = styled.li`
 
   border-bottom: 2px solid ${COLORS.line1};
 
-  ${({ isHighlighted }) => {
-    if (!isHighlighted) return
-
-    return css`
+  ${({ isHighlighted }) =>
+    isHighlighted &&
+    css`
       background: ${COLORS.primary6};
 
       &:hover {
         background: ${COLORS.primary5};
       }
-    `
-  }}
+    `}
 `
 
 const StyledItemList = styled.ul`
