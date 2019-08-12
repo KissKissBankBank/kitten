@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
+<section
+  className="list-table__StyledSection-sc-1q4tayn-0 gbaDiG"
+  id="TestListTable"
+>
+  <header
+    className="header__StyledHeader-sc-1f8str-0 sDJi"
+  >
+    <ul
+      className="header__StyledList-sc-1f8str-1 jAzmXb"
+    >
+      <li
+        aria-describedby={false}
+        className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+        id="TestListTable-col-1"
+      >
+        Header 1
+      </li>
+      <li
+        aria-describedby={false}
+        className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+        id="TestListTable-col-2"
+      >
+        Header 2
+      </li>
+      <li
+        aria-describedby={false}
+        className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+        id="TestListTable-col-3"
+      >
+        Header 3
+      </li>
+    </ul>
+  </header>
+  <div>
+    <ul
+      className="body__StyledList-kjc0pl-0 dxCtwZ"
+    >
+      <li
+        className="row__StyledItem-sc-1vlimsn-0 iXmWso"
+        selected={true}
+      >
+        <ul
+          className="row__StyledItemList-sc-1vlimsn-1 dyLjXZ"
+        >
+          <li
+            aria-describedby="TestListTable-col-1"
+            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+            id={false}
+          >
+            Content 1
+          </li>
+          <li
+            aria-describedby="TestListTable-col-2"
+            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+            id={false}
+          >
+            Content 2
+          </li>
+          <li
+            aria-describedby="TestListTable-col-3"
+            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+            id={false}
+          >
+            Content 3
+          </li>
+        </ul>
+      </li>
+      <li
+        className="row__StyledItem-sc-1vlimsn-0 iXmWso"
+      >
+        <ul
+          className="row__StyledItemList-sc-1vlimsn-1 dyLjXZ"
+        >
+          <li
+            aria-describedby="TestListTable-col-1"
+            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+            id={false}
+          >
+            Content 1
+          </li>
+          <li
+            aria-describedby="TestListTable-col-2"
+            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+            id={false}
+          >
+            Content 2
+          </li>
+          <li
+            aria-describedby="TestListTable-col-3"
+            className="col__StyledItem-sc-1vota8e-0 dVeQrB"
+            id={false}
+          >
+            Content 3
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+`;
