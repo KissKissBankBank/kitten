@@ -25,7 +25,6 @@ const info = {
     #### Default
     ~~~js
     <ListTable id="…">
-
       <ListTable.Header>
         <ListTable.Col>
           …
