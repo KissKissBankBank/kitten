@@ -29,9 +29,6 @@ ListTable.Body = ListTableBody
 ListTable.Row = ListTableRow
 ListTable.Col = ListTableCol
 
-ListTable.defaultProps = {
-  id: 'ListTable',
-}
 ListTable.propTypes = {
   id: PropTypes.string.isRequired,
 }
