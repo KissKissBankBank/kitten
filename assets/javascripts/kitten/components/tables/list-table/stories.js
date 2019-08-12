@@ -16,7 +16,7 @@ const info = {
 
     ## Import
     ~~~js
-    import { ListTable } from '@kisskissbankbank/kitten/src/components/layout/shadow-panel'
+    import { ListTable } from '@kisskissbankbank/kitten/src/components/tables/list-table'
     ~~~
 
     ## Usage
@@ -24,11 +24,26 @@ const info = {
 
     #### Default
     ~~~js
-    <ListTable
-      arrowSide="left"
-      arrowPositionFromOrigin={30}
-    >
-      …
+    <ListTable id="…">
+
+      <ListTable.Header>
+        <ListTable.Col isHeader colNumber={…}>
+          …
+        </ListTable.Col>
+      </ListTable.Header>
+
+      <ListTable.Body>
+        <ListTable.Row selected>
+          <ListTable.Col colNumber={…}>
+            …
+          </ListTable.Col>
+        </ListTable.Row>
+        <ListTable.Row>
+          <ListTable.Col colNumber={…}>
+            …
+          </ListTable.Col>
+        </ListTable.Row>
+      </ListTable.Body>
     </ListTable>
     ~~~
 
