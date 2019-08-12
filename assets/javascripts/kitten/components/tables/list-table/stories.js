@@ -154,7 +154,7 @@ storiesOf('Tables/ListTable', module)
     () => {
       return (
         <div style={{ margin: '5em 0' }}>
-          <ListTable id="ListTable">
+          <ListTable id="CustomListTable">
             <ListTable.Header>
               <StyledCol1 isHeader colNumber={1}>
                 <VisuallyHidden>Sélection</VisuallyHidden>
