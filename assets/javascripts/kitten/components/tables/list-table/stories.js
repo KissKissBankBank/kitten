@@ -175,7 +175,7 @@ storiesOf('Tables/ListTable', module)
             </ListTable.Header>
 
             <ListTable.Body>
-              <ListTable.Row selected>
+              <ListTable.Row isHighlighted>
                 <StyledCol1>
                   <VisuallyHidden>
                     <h2>

@@ -17,7 +17,7 @@ describe('<ListTable />', () => {
             </ListTable.Header>
 
             <ListTable.Body>
-              <ListTable.Row selected>
+              <ListTable.Row isHighlighted>
                 <ListTable.Col>Content 1</ListTable.Col>
                 <ListTable.Col>Content 2</ListTable.Col>
                 <ListTable.Col>Content 3</ListTable.Col>

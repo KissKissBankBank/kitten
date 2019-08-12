@@ -19,8 +19,8 @@ const StyledRow = styled.li`
 
   border-bottom: 2px solid ${COLORS.line1};
 
-  ${({ selected }) => {
-    if (!selected) return
+  ${({ isHighlighted }) => {
+    if (!isHighlighted) return
 
     return css`
       background: ${COLORS.primary6};
@@ -49,9 +49,9 @@ const StyledItemList = styled.ul`
   }
 `
 
-export const ListTableRow = ({ selected, children, ...others }) => {
+export const ListTableRow = ({ isHighlighted, children, ...others }) => {
   return (
-    <StyledRow selected={selected}>
+    <StyledRow isHighlighted={isHighlighted}>
       <StyledItemList {...others}>
         <Context.Consumer>
           {({ id }) => (
@@ -70,8 +70,8 @@ export const ListTableRow = ({ selected, children, ...others }) => {
 }
 
 ListTableRow.defaultProps = {
-  selected: false,
+  isHighlighted: false,
 }
 ListTableRow.propTypes = {
-  selected: PropTypes.bool,
+  isHighlighted: PropTypes.bool,
 }
