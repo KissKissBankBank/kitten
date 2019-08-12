@@ -37,5 +37,5 @@ ListTable.defaultProps = {
   id: 'ListTable',
 }
 ListTable.propTypes = {
-  id: PropTypes.string,
+  id: PropTypes.string.isRequired,
 }
