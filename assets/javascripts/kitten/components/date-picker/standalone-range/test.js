@@ -85,8 +85,6 @@ describe('<SandaloneRangeDatePicker />', () => {
             previousMonth="Mois précédent"
             nextMonth="Mois suivant"
             styles={styles}
-            cleanText="Effacer"
-            choiceText="Appliquer"
           />,
         )
         .toJSON()
