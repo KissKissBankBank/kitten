@@ -203,6 +203,7 @@ export class SandaloneRangeDatePicker extends PureComponent {
     title: PropTypes.string,
     dayPickerProps: PropTypes.shape({}),
     styles: PropTypes.object,
+    firstDayOfWeek: PropTypes.number,
   }
 
   static defaultProps = {
@@ -214,6 +215,7 @@ export class SandaloneRangeDatePicker extends PureComponent {
     title: '',
     months: null,
     navbarElement: '',
+    firstDayOfWeek: 1,
     disabledDays: [
       {
         after: new Date(),
@@ -285,6 +287,7 @@ export class SandaloneRangeDatePicker extends PureComponent {
       disabledDays,
       nextMonth,
       title,
+      firstDayOfWeek,
       ...datePickerProps
     } = this.props
 
@@ -309,10 +312,10 @@ export class SandaloneRangeDatePicker extends PureComponent {
           }
           weekdaysLong={weekDays}
           weekdaysShort={weekDays && weekDays.map(str => str.substr(0, 2))}
-          firstDayOfWeek={1}
           locale={locale}
           months={months}
           labels={{ previousMonth, nextMonth }}
+          firstDayOfWeek={firstDayOfWeek}
           dayPickerProps={{
             ...datePickerProps,
           }}

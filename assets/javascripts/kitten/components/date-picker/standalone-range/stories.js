@@ -107,6 +107,7 @@ storiesOf('Form/DatePicker', module)
           styles={object('Styles', styles)}
           cleanText={text('Clean text', 'Effacer')}
           choiceText={text('Choice text', 'Appliquer')}
+          firstDayOfWeek={number('First day of the week', 1)}
         />
       </StoryContainer>
     )
