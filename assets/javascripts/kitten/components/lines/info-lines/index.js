@@ -111,7 +111,7 @@ export class InfoLines extends PureComponent {
       >
         {infos.map(info => (
           <InfoList
-            key={info.key}
+            key={info.id}
             title={info.key}
             value={info.value}
             id={info.id}
