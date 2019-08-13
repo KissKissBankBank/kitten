@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { NUM_COLUMNS, GUTTER } from '../../../constants/grid-config'
 import { ScreenConfig } from '../../../constants/screen-config'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 const GridProperties = createContext({})
 
@@ -41,7 +42,7 @@ export const AdaptableGridCol = ({ children, col, offset, ...other }) => {
       }
 
       return css`
-        @media (min-width: ${ScreenConfig[size].min}px) {
+        @media (min-width: ${pxToRem(ScreenConfig[size].min)}) {
           ${col &&
             css`
               width: ${(col * 100) / colNumber}%;
@@ -93,15 +94,15 @@ const StyledGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: ${({ colAlign }) => colAlign};
-  margin-left: -${({ gutter }) => gutter / 2}px;
-  margin-right: -${({ gutter }) => gutter / 2}px;
+  margin-left: ${({ gutter }) => pxToRem(-gutter / 2)};
+  margin-right: ${({ gutter }) => pxToRem(-gutter / 2)};
 `
 
 const StyledGridCol = styled.div`
   display: block;
   box-sizing: border-box;
-  padding-left: ${({ gutter }) => gutter / 2}px;
-  padding-right: ${({ gutter }) => gutter / 2}px;
+  padding-left: ${({ gutter }) => pxToRem(gutter / 2)};
+  padding-right: ${({ gutter }) => pxToRem(gutter / 2)};
   flex: 0 0 auto;
   width: ${({ col, colNumber }) => (col * 100) / colNumber}%;
   ${({ offset, colNumber, colAlign, marginDirection }) => {
