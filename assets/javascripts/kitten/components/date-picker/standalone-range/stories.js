@@ -16,7 +16,7 @@ import COLORS from '../../../constants/colors-config'
 
 const StoryContainer = ({ children }) => (
   <Container>
-    <Marger top="5" bottom="5" style={{ width: 715 }}>
+    <Marger top="5" bottom="5">
       {children}
     </Marger>
   </Container>
@@ -26,10 +26,10 @@ const today = new Date()
 
 const styles = {
   header: {
-    backgroundColor: COLORS.font1,
-    color: '#fff',
+    backgroundColor: '#fff',
+    color: COLORS.font1,
     icon: {
-      color: '#fff',
+      color: COLORS.font1,
     },
   },
   borderColor: COLORS.line1,
