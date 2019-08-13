@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix warning error about key conflict in `InfoLines` component.
+## [2.18.3] - 2019-08-13
+
+Fix:
+- Fix warning error about key conflict in `InfoLines` component.
 
 ## [2.18.2] - 2019-08-08
 
