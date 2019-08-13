@@ -99,8 +99,11 @@ storiesOf('Form/DatePicker', module)
           weekDays={array('Week days', weekDays)}
           months={array('Months', months)}
           title={text('Title', 'Sélectionnez la période souhaitée')}
-          previousMonth={text('Aria-label for previous month', 'Mois suivant')}
-          nextMonth={text('Aria-label for next month', 'Mois précédent')}
+          previousMonth={text(
+            'Aria-label for previous month',
+            'Mois précédent',
+          )}
+          nextMonth={text('Aria-label for next month', 'Mois suivant')}
           styles={object('Styles', styles)}
           cleanText={text('Clean text', 'Effacer')}
           choiceText={text('Choice text', 'Appliquer')}

@@ -33,6 +33,9 @@ export class Navbar extends PureComponent {
       iconColor,
       title,
       labels,
+      previousMonth,
+      nextMonth,
+      months,
     } = this.props
 
     return (
@@ -42,10 +45,11 @@ export class Navbar extends PureComponent {
         </StyledText>
         <StyledButton className={className}>
           <StyledArrowIcon
-            aria-label={labels.previoustMonth}
+            aria-label={`${labels.previousMonth}, ${
+              months[previousMonth.getMonth()]
+            } ${previousMonth.getFullYear()}`}
             onClick={() => onPreviousClick()}
             icon
-            left
           >
             <ArrowIcon
               version="solid"
@@ -57,7 +61,9 @@ export class Navbar extends PureComponent {
           </StyledArrowIcon>
 
           <StyledArrowIcon
-            aria-label={labels.previoustMonth}
+            aria-label={`${labels.nextMonth}, ${
+              months[nextMonth.getMonth()]
+            } ${nextMonth.getFullYear()}`}
             onClick={() => onNextClick()}
             icon
           >
@@ -67,7 +73,6 @@ export class Navbar extends PureComponent {
               direction="right"
               width="8"
               height="8"
-              right
             />
           </StyledArrowIcon>
         </StyledButton>

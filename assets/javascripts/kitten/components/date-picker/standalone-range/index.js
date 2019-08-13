@@ -310,16 +310,20 @@ export class SandaloneRangeDatePicker extends PureComponent {
           onDayClick={this.handleDayClick}
           disabledDays={disabledDays}
           navbarElement={
-            <Navbar title={title} iconColor={styles.header.icon.color} />
+            <Navbar
+              title={title}
+              iconColor={styles.header.icon.color}
+              months={months}
+            />
           }
           weekdaysLong={weekDays}
           weekdaysShort={weekDays && weekDays.map(str => str.substr(0, 2))}
           firstDayOfWeek={1}
           locale={locale}
           months={months}
+          labels={{ previousMonth, nextMonth }}
           dayPickerProps={{
             ...datePickerProps,
-            labels: { previousMonth, nextMonth },
           }}
         />
       </StyledDatePicker>
