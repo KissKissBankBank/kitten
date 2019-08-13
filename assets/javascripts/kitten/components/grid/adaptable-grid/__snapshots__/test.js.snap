@@ -2,7 +2,7 @@
 
 exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 kagzol"
+  className="adaptable-grid__StyledGrid-txsbu0-0 hOokLL"
 >
   <div
     className="adaptable-grid__StyledGridCol-txsbu0-1 hmIwSN"
@@ -19,7 +19,7 @@ exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 gIXwnE"
+  className="adaptable-grid__StyledGrid-txsbu0-0 jSELWV"
 >
   <div
     className="adaptable-grid__StyledGridCol-txsbu0-1 cluiNN"
