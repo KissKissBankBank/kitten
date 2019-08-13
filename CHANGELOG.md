@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix negative container margins in `AdaptableGrid`.
+
 ## [2.18.3] - 2019-08-13
 
 Fix:
