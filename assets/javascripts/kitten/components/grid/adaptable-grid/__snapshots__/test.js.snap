@@ -2,15 +2,15 @@
 
 exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 hOokLL"
+  className="adaptable-grid__StyledGrid-txsbu0-0 kscnci"
 >
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 hmIwSN"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 fmGblY"
   >
     Test
   </div>
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 dGZHoz"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 gZQldn"
   >
     Test
   </div>
@@ -19,16 +19,16 @@ exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 jSELWV"
+  className="adaptable-grid__StyledGrid-txsbu0-0 cSerqo"
 >
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 cluiNN"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 kKqTcF"
     offset={3}
   >
     Test
   </div>
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 ecouGL"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 gxolfR"
   >
     Test
   </div>
