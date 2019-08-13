@@ -93,8 +93,8 @@ const StyledGrid = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: ${({ colAlign }) => colAlign};
-  margin-left: ${({ gutter }) => gutter / 2}px;
-  margin-right: ${({ gutter }) => gutter / 2}px;
+  margin-left: -${({ gutter }) => gutter / 2}px;
+  margin-right: -${({ gutter }) => gutter / 2}px;
 `
 
 const StyledGridCol = styled.div`
