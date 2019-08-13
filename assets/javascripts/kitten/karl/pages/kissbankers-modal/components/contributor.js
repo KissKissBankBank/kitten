@@ -38,6 +38,13 @@ const StyledLink = styled.a`
   }
 `
 
+const StyledStrong = styled.strong`
+  display: inline-block;
+  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    margin-top: ${pxToRem(15)};
+  }
+`
+
 export const Contributor = ({
   firstName,
   lastName,
@@ -59,7 +66,7 @@ export const Contributor = ({
             <StyledLink href={`mailto:${email}`}>{email}</StyledLink>
           </GridCol>
           <GridCol col={2} col-m={1}>
-            <strong>Adresse</strong>
+            <StyledStrong>Adresse</StyledStrong>
             <br />
             {address}
           </GridCol>
