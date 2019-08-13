@@ -206,8 +206,6 @@ export class SandaloneRangeDatePicker extends PureComponent {
     title: PropTypes.string,
     dayPickerProps: PropTypes.shape({}),
     styles: PropTypes.object,
-    cleanText: PropTypes.string,
-    choiceText: PropTypes.string,
   }
 
   static defaultProps = {
@@ -219,8 +217,6 @@ export class SandaloneRangeDatePicker extends PureComponent {
     title: '',
     months: null,
     navbarElement: '',
-    cleanText: '',
-    choiceText: '',
     disabledDays: [
       {
         after: new Date(),
@@ -292,8 +288,6 @@ export class SandaloneRangeDatePicker extends PureComponent {
       disabledDays,
       nextMonth,
       title,
-      cleanText,
-      choiceText,
       ...datePickerProps
     } = this.props
 
