@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
@@ -67,4 +68,19 @@ export const ContributionDetails = ({
       </StyledContainer>
     </section>
   )
+}
+
+ContributionDetails.defaultProps = {
+  overallTotal: 0,
+  rewardsTotal: 0,
+  donation: 0,
+  petitPlus: 0,
+  fdp: 0,
+}
+ContributionDetails.propTypes = {
+  overallTotal: PropTypes.number,
+  rewardsTotal: PropTypes.number,
+  donation: PropTypes.number,
+  petitPlus: PropTypes.number,
+  fdp: PropTypes.number,
 }

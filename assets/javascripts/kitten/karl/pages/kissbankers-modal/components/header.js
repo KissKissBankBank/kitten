@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
@@ -39,4 +40,9 @@ export const Header = ({ orderId, orderDate }) => {
       </StyledTitle>
     </StyledHeader>
   )
+}
+
+Header.propTypes = {
+  orderId: PropTypes.string.isRequired,
+  orderDate: PropTypes.instanceOf(Date).isRequired,
 }

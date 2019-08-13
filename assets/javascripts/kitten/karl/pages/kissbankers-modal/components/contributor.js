@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
@@ -66,4 +67,15 @@ export const Contributor = ({
       </StyledContainer>
     </section>
   )
+}
+
+Contributor.defaultProps = {
+  hasMultipleContributions: false,
+}
+Contributor.propTypes = {
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  address: PropTypes.string.isRequired,
+  hasMultipleContributions: PropTypes.bool,
 }

@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
@@ -80,4 +81,17 @@ export class ContributionGroup extends PureComponent {
   render() {
     return <section {...this.props} />
   }
+}
+
+Card.defaultProps = {
+  description: '',
+  quantity: 0,
+  price: 0,
+}
+Card.propTypes = {
+  description: PropTypes.string,
+  option: PropTypes.string,
+  deliveryDate: PropTypes.instanceOf(Date),
+  quantity: PropTypes.number,
+  price: PropTypes.number,
 }
