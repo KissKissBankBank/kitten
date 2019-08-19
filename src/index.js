@@ -801,6 +801,12 @@ Object.defineProperty(exports, "SliderWithTooltipAndPower", {
     return _sliderWithTooltipAndPower.SliderWithTooltipAndPower;
   }
 });
+Object.defineProperty(exports, "StatusWithBullet", {
+  enumerable: true,
+  get: function get() {
+    return _statusWithBullet.StatusWithBullet;
+  }
+});
 Object.defineProperty(exports, "VerticalStepper", {
   enumerable: true,
   get: function get() {
@@ -1173,6 +1179,8 @@ var _sliderBar = require("./components/sliders/slider-bar");
 var _sliderTooltip = require("./components/sliders/slider-tooltip");
 
 var _sliderWithTooltipAndPower = require("./components/sliders/slider-with-tooltip-and-power");
+
+var _statusWithBullet = require("./components/status-with-bullet");
 
 var _verticalStepper = require("./components/steppers/vertical-stepper");
 
