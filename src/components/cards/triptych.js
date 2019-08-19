@@ -140,7 +140,7 @@ function (_Component) {
         "col-l": "4",
         "col-m": "6"
       }, _react.default.createElement(Marger, {
-        style: (0, _extends2.default)({}, styles.secondCard, styles.gutter.secondItem),
+        style: (0, _extends2.default)({}, styles.secondCard, {}, styles.gutter.secondItem),
         top: this.state.secondCardComputedTopMargin / 10,
         bottom: viewportIsMOrLess ? 5 : 0
       }, item2)), _react.default.createElement(GridCol, {

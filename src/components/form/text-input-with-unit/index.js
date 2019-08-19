@@ -76,17 +76,15 @@ function (_PureComponent) {
   (0, _inherits2.default)(TextInputWithUnit, _PureComponent);
 
   function TextInputWithUnit(props) {
-    var _this;
-
     (0, _classCallCheck2.default)(this, TextInputWithUnit);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TextInputWithUnit).call(this, props));
-    _this.input = (0, _react.createRef)();
-    return _this;
+    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TextInputWithUnit).call(this, props));
   }
 
   (0, _createClass2.default)(TextInputWithUnit, [{
     key: "render",
     value: function render() {
+      var _this = this;
+
       var _this$props = this.props,
           type = _this$props.type,
           valid = _this$props.valid,
@@ -96,8 +94,10 @@ function (_PureComponent) {
           unit = _this$props.unit,
           unitWord = _this$props.unitWord,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["type", "valid", "error", "tiny", "disabled", "unit", "unitWord"]);
-      return _react.default.createElement(StyledTextInputWithUnit, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
-        ref: this.input,
+      return _react.default.createElement(StyledTextInputWithUnit, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({
+        ref: function ref(input) {
+          _this.input = input;
+        },
         type: type,
         valid: valid,
         error: error,

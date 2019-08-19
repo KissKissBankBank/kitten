@@ -30,7 +30,7 @@ var BackerCard = function BackerCard(_ref) {
       description = _ref.description,
       others = (0, _objectWithoutProperties2.default)(_ref, ["title", "subtitle", "imgProps", "description"]);
   return _react.default.createElement("div", (0, _extends2.default)({}, others, {
-    style: (0, _extends2.default)({}, styles.card, others.style)
+    style: (0, _extends2.default)({}, styles.card, {}, others.style)
   }), _react.default.createElement(_marger.Marger, {
     top: "4",
     bottom: "1"
