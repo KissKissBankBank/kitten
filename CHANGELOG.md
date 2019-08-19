@@ -6,11 +6,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `shadow`, `borderRadius`, `borderColor`, `borderWidth` props
   to `ArrowContainer` component.
+- Feature: Add `StatusWithBullet` component.
+
+## [2.18.4] - 2019-08-13
+
+Fix:
+- Fix negative container margins in `AdaptableGrid`.
+
+## [2.18.3] - 2019-08-13
+
+Fix:
+- Fix warning error about key conflict in `InfoLines` component.
+
+## [2.18.2] - 2019-08-08
+
+Fix:
+- Refactor styles for `isAnimated=false` prop on `Accordeon`.
 
 ## [2.18.1] - 2019-08-07
 
 Fix:
-- Add old ref prop to `TextInputWithUnit`
+- Add old ref prop to `TextInputWithUnit`.
 
 ## [2.18.0] - 2019-08-02
 
