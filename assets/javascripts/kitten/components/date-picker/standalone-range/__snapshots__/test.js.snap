@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
+exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
   className="standalone-range__StyledDatePicker-yne6lo-0 dBvIpB"
 >
@@ -23,7 +23,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         className="DayPicker-NavBar navbar__StyledButton-sc-1v9dr3-1 TCbUf"
       >
         <button
-          aria-label="Mois précédent, Juillet 2019"
+          aria-label="Mois précédent, Décembre 2018"
           className="navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv button__StyledButton-sc-1q5nte0-0 jyaGPz"
           onClick={[Function]}
         >
@@ -47,7 +47,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
           </svg>
         </button>
         <button
-          aria-label="Mois suivant, Octobre 2019"
+          aria-label="Mois suivant, Mars 2019"
           className="navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv button__StyledButton-sc-1q5nte0-0 jyaGPz"
           onClick={[Function]}
         >
@@ -85,7 +85,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
             <div
               onKeyUp={[Function]}
             >
-              Août 2019
+              Janvier 2019
             </div>
           </div>
           <div
@@ -181,16 +181,8 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
                 className="DayPicker-Day DayPicker-Day--outside"
               />
               <div
-                aria-disabled={true}
-                className="DayPicker-Day DayPicker-Day--outside"
-              />
-              <div
-                aria-disabled={true}
-                className="DayPicker-Day DayPicker-Day--outside"
-              />
-              <div
                 aria-disabled={false}
-                aria-label="Thu Aug 01 2019"
+                aria-label="Tue Jan 01 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -202,7 +194,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Fri Aug 02 2019"
+                aria-label="Wed Jan 02 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -214,7 +206,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sat Aug 03 2019"
+                aria-label="Thu Jan 03 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -226,7 +218,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sun Aug 04 2019"
+                aria-label="Fri Jan 04 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -236,14 +228,9 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 4
               </div>
-            </div>
-            <div
-              className="DayPicker-Week"
-              role="row"
-            >
               <div
                 aria-disabled={false}
-                aria-label="Mon Aug 05 2019"
+                aria-label="Sat Jan 05 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -255,7 +242,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Tue Aug 06 2019"
+                aria-label="Sun Jan 06 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -265,9 +252,14 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 6
               </div>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="row"
+            >
               <div
                 aria-disabled={false}
-                aria-label="Wed Aug 07 2019"
+                aria-label="Mon Jan 07 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -279,7 +271,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Thu Aug 08 2019"
+                aria-label="Tue Jan 08 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -291,7 +283,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Fri Aug 09 2019"
+                aria-label="Wed Jan 09 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -303,7 +295,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sat Aug 10 2019"
+                aria-label="Thu Jan 10 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -315,7 +307,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sun Aug 11 2019"
+                aria-label="Fri Jan 11 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -325,14 +317,9 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 11
               </div>
-            </div>
-            <div
-              className="DayPicker-Week"
-              role="row"
-            >
               <div
                 aria-disabled={false}
-                aria-label="Mon Aug 12 2019"
+                aria-label="Sat Jan 12 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -344,7 +331,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Tue Aug 13 2019"
+                aria-label="Sun Jan 13 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -354,9 +341,14 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 13
               </div>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="row"
+            >
               <div
                 aria-disabled={false}
-                aria-label="Wed Aug 14 2019"
+                aria-label="Mon Jan 14 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -368,7 +360,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Thu Aug 15 2019"
+                aria-label="Tue Jan 15 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -379,10 +371,10 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
                 15
               </div>
               <div
-                aria-disabled={true}
-                aria-label="Fri Aug 16 2019"
+                aria-disabled={false}
+                aria-label="Wed Jan 16 2019"
                 aria-selected={false}
-                className="DayPicker-Day DayPicker-Day--disabled"
+                className="DayPicker-Day"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="gridcell"
@@ -392,7 +384,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sat Aug 17 2019"
+                aria-label="Thu Jan 17 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -404,7 +396,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sun Aug 18 2019"
+                aria-label="Fri Jan 18 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -414,16 +406,11 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 18
               </div>
-            </div>
-            <div
-              className="DayPicker-Week"
-              role="row"
-            >
               <div
                 aria-disabled={false}
-                aria-label="Mon Aug 19 2019"
+                aria-label="Sat Jan 19 2019"
                 aria-selected={false}
-                className="DayPicker-Day DayPicker-Day--today"
+                className="DayPicker-Day"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="gridcell"
@@ -433,7 +420,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Tue Aug 20 2019"
+                aria-label="Sun Jan 20 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -443,9 +430,14 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 20
               </div>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="row"
+            >
               <div
                 aria-disabled={false}
-                aria-label="Wed Aug 21 2019"
+                aria-label="Mon Jan 21 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -457,7 +449,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Thu Aug 22 2019"
+                aria-label="Tue Jan 22 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -469,7 +461,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Fri Aug 23 2019"
+                aria-label="Wed Jan 23 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -481,7 +473,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sat Aug 24 2019"
+                aria-label="Thu Jan 24 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -493,7 +485,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sun Aug 25 2019"
+                aria-label="Fri Jan 25 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -503,14 +495,9 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 25
               </div>
-            </div>
-            <div
-              className="DayPicker-Week"
-              role="row"
-            >
               <div
                 aria-disabled={false}
-                aria-label="Mon Aug 26 2019"
+                aria-label="Sat Jan 26 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -522,7 +509,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Tue Aug 27 2019"
+                aria-label="Sun Jan 27 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -532,9 +519,14 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 27
               </div>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="row"
+            >
               <div
                 aria-disabled={false}
-                aria-label="Wed Aug 28 2019"
+                aria-label="Mon Jan 28 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -546,7 +538,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Thu Aug 29 2019"
+                aria-label="Tue Jan 29 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -558,7 +550,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Fri Aug 30 2019"
+                aria-label="Wed Jan 30 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -570,7 +562,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sat Aug 31 2019"
+                aria-label="Thu Jan 31 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -580,6 +572,14 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 31
               </div>
+              <div
+                aria-disabled={true}
+                className="DayPicker-Day DayPicker-Day--outside"
+              />
+              <div
+                aria-disabled={true}
+                className="DayPicker-Day DayPicker-Day--outside"
+              />
               <div
                 aria-disabled={true}
                 className="DayPicker-Day DayPicker-Day--outside"
@@ -598,7 +598,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
             <div
               onKeyUp={[Function]}
             >
-              Septembre 2019
+              Février 2019
             </div>
           </div>
           <div
@@ -706,16 +706,8 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
                 className="DayPicker-Day DayPicker-Day--outside"
               />
               <div
-                aria-disabled={true}
-                className="DayPicker-Day DayPicker-Day--outside"
-              />
-              <div
-                aria-disabled={true}
-                className="DayPicker-Day DayPicker-Day--outside"
-              />
-              <div
                 aria-disabled={false}
-                aria-label="Sun Sep 01 2019"
+                aria-label="Fri Feb 01 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -725,14 +717,9 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 1
               </div>
-            </div>
-            <div
-              className="DayPicker-Week"
-              role="row"
-            >
               <div
                 aria-disabled={false}
-                aria-label="Mon Sep 02 2019"
+                aria-label="Sat Feb 02 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -744,7 +731,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Tue Sep 03 2019"
+                aria-label="Sun Feb 03 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -754,9 +741,14 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 3
               </div>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="row"
+            >
               <div
                 aria-disabled={false}
-                aria-label="Wed Sep 04 2019"
+                aria-label="Mon Feb 04 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -768,7 +760,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Thu Sep 05 2019"
+                aria-label="Tue Feb 05 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -780,7 +772,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Fri Sep 06 2019"
+                aria-label="Wed Feb 06 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -792,7 +784,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sat Sep 07 2019"
+                aria-label="Thu Feb 07 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -804,7 +796,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sun Sep 08 2019"
+                aria-label="Fri Feb 08 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -814,14 +806,9 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 8
               </div>
-            </div>
-            <div
-              className="DayPicker-Week"
-              role="row"
-            >
               <div
                 aria-disabled={false}
-                aria-label="Mon Sep 09 2019"
+                aria-label="Sat Feb 09 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -833,7 +820,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Tue Sep 10 2019"
+                aria-label="Sun Feb 10 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -843,9 +830,14 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 10
               </div>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="row"
+            >
               <div
                 aria-disabled={false}
-                aria-label="Wed Sep 11 2019"
+                aria-label="Mon Feb 11 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -857,7 +849,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Thu Sep 12 2019"
+                aria-label="Tue Feb 12 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -869,7 +861,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Fri Sep 13 2019"
+                aria-label="Wed Feb 13 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -881,7 +873,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sat Sep 14 2019"
+                aria-label="Thu Feb 14 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -893,7 +885,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sun Sep 15 2019"
+                aria-label="Fri Feb 15 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -903,14 +895,9 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 15
               </div>
-            </div>
-            <div
-              className="DayPicker-Week"
-              role="row"
-            >
               <div
                 aria-disabled={false}
-                aria-label="Mon Sep 16 2019"
+                aria-label="Sat Feb 16 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -922,7 +909,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Tue Sep 17 2019"
+                aria-label="Sun Feb 17 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -932,9 +919,14 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 17
               </div>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="row"
+            >
               <div
                 aria-disabled={false}
-                aria-label="Wed Sep 18 2019"
+                aria-label="Mon Feb 18 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -946,7 +938,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Thu Sep 19 2019"
+                aria-label="Tue Feb 19 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -958,7 +950,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Fri Sep 20 2019"
+                aria-label="Wed Feb 20 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -970,7 +962,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sat Sep 21 2019"
+                aria-label="Thu Feb 21 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -982,7 +974,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sun Sep 22 2019"
+                aria-label="Fri Feb 22 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -992,14 +984,9 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 22
               </div>
-            </div>
-            <div
-              className="DayPicker-Week"
-              role="row"
-            >
               <div
                 aria-disabled={false}
-                aria-label="Mon Sep 23 2019"
+                aria-label="Sat Feb 23 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -1011,7 +998,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Tue Sep 24 2019"
+                aria-label="Sun Feb 24 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -1021,9 +1008,14 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 24
               </div>
+            </div>
+            <div
+              className="DayPicker-Week"
+              role="row"
+            >
               <div
                 aria-disabled={false}
-                aria-label="Wed Sep 25 2019"
+                aria-label="Mon Feb 25 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -1035,7 +1027,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Thu Sep 26 2019"
+                aria-label="Tue Feb 26 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -1047,7 +1039,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Fri Sep 27 2019"
+                aria-label="Wed Feb 27 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -1059,7 +1051,7 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               </div>
               <div
                 aria-disabled={false}
-                aria-label="Sat Sep 28 2019"
+                aria-label="Thu Feb 28 2019"
                 aria-selected={false}
                 className="DayPicker-Day"
                 onClick={[Function]}
@@ -1069,47 +1061,6 @@ exports[`<SandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
               >
                 28
               </div>
-              <div
-                aria-disabled={false}
-                aria-label="Sun Sep 29 2019"
-                aria-selected={false}
-                className="DayPicker-Day"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="gridcell"
-                tabIndex={-1}
-              >
-                29
-              </div>
-            </div>
-            <div
-              className="DayPicker-Week"
-              role="row"
-            >
-              <div
-                aria-disabled={false}
-                aria-label="Mon Sep 30 2019"
-                aria-selected={false}
-                className="DayPicker-Day"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="gridcell"
-                tabIndex={-1}
-              >
-                30
-              </div>
-              <div
-                aria-disabled={true}
-                className="DayPicker-Day DayPicker-Day--outside"
-              />
-              <div
-                aria-disabled={true}
-                className="DayPicker-Day DayPicker-Day--outside"
-              />
-              <div
-                aria-disabled={true}
-                className="DayPicker-Day DayPicker-Day--outside"
-              />
               <div
                 aria-disabled={true}
                 className="DayPicker-Day DayPicker-Day--outside"

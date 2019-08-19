@@ -194,6 +194,7 @@ storiesOf('Form/DatePicker', module)
             nextMonth={text('Aria-label for next month', 'Mois suivant')}
             styles={object('Styles', styles)}
             firstDayOfWeek={number('First day of the week', 1)}
+            initialMonth={new Date('2019-01-01T03:24:00')}
           />
         </StoryContainer>
       )

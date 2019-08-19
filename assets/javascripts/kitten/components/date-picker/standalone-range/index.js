@@ -288,6 +288,7 @@ export class SandaloneRangeDatePicker extends PureComponent {
       nextMonth,
       title,
       firstDayOfWeek,
+      initialMonth,
       ...datePickerProps
     } = this.props
 
@@ -316,6 +317,7 @@ export class SandaloneRangeDatePicker extends PureComponent {
           months={months}
           labels={{ previousMonth, nextMonth }}
           firstDayOfWeek={firstDayOfWeek}
+          initialMonth={initialMonth}
           dayPickerProps={{
             ...datePickerProps,
           }}

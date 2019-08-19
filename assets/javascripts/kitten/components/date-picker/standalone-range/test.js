@@ -85,6 +85,7 @@ describe('<SandaloneRangeDatePicker />', () => {
             previousMonth="Mois précédent"
             nextMonth="Mois suivant"
             styles={styles}
+            initialMonth={new Date('2019-01-01T03:24:00')}
           />,
         )
         .toJSON()
