@@ -5,6 +5,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `StandaloneRangeDatePicker` component
+- Feature: Add `DoubleArrowIcon` component.
+- Feature: Add `shadow`, `borderRadius`, `borderColor`, `borderWidth` props
+  to `ArrowContainer` component.
+- Feature: Add `StatusWithBullet` component.
+
+## [2.18.4] - 2019-08-13
+
+Fix:
+- Fix negative container margins in `AdaptableGrid`.
+
+## [2.18.3] - 2019-08-13
+
+Fix:
+- Fix warning error about key conflict in `InfoLines` component.
 
 ## [2.18.2] - 2019-08-08
 
