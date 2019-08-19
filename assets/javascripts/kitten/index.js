@@ -214,6 +214,9 @@ export {
   SliderWithTooltipAndPower,
 } from './components/sliders/slider-with-tooltip-and-power'
 
+// Status with Bullet
+export { StatusWithBullet } from './components/status-with-bullet'
+
 // Steppers
 export { VerticalStepper } from './components/steppers/vertical-stepper'
 export {
