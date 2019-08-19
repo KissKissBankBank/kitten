@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `ListTable` component.
+- Feature: Add `DoubleArrowIcon` component.
+- Feature: Add `shadow`, `borderRadius`, `borderColor`, `borderWidth` props
+  to `ArrowContainer` component.
+- Feature: Add `StatusWithBullet` component.
+
 ## [2.18.4] - 2019-08-13
 
 Fix:
