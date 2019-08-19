@@ -8,10 +8,7 @@ import { Marger } from '../../layout/marger'
 const ContentStyled = styled.div`
   box-sizing: border-box;
   visibility: visible;
-  overflow: hidden;
   height: auto;
-
-  max-height: ${({ maxHeight }) => pxToRem(maxHeight)};
 
   background-color: ${COLORS.background3};
   border: ${pxToRem(2)} solid ${COLORS.line1};
@@ -20,18 +17,25 @@ const ContentStyled = styled.div`
   border-bottom-right-radius: ${pxToRem(3)};
   opacity: 1;
 
-  padding: 0 ${pxToRem(30)};
+  padding: ${pxToRem(0.1)} ${pxToRem(30)};
 
-  ${({ isAnimated }) =>
-    isAnimated &&
-    css`
-      transition: visibility 0s ease, max-height 0.4s ease, opacity 0.4s ease;
-      transition-delay: 0s, 0s, 0s;
+  ${({ isAnimated, maxHeight }) =>
+    isAnimated
+      ? css`
+          overflow: hidden;
+          max-height: ${pxToRem(maxHeight)};
+          transition: visibility 0s ease, max-height 0.4s ease,
+            opacity 0.4s ease;
+          transition-delay: 0s, 0s, 0s;
 
-      &[aria-hidden='true'] {
-        transition-delay: 0.4s, 0s, 0s;
-      }
-    `}
+          &[aria-hidden='true'] {
+            transition-delay: 0.4s, 0s, 0s;
+          }
+        `
+      : css`
+          max-height: unset;
+          overflow: visible;
+        `}
 
   &[aria-hidden='true'] {
     visibility: hidden;

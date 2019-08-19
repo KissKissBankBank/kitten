@@ -118,7 +118,7 @@ function (_PureComponent) {
         withoutResponsive: withoutResponsive
       }), infos.map(function (info) {
         return _react.default.createElement(InfoList, {
-          key: info.key,
+          key: info.id,
           title: info.key,
           value: info.value,
           id: info.id,

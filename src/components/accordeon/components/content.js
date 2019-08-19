@@ -34,12 +34,10 @@ var _marger = require("../../layout/marger");
 var ContentStyled = _styledComponents.default.div.withConfig({
   displayName: "content__ContentStyled",
   componentId: "sc-5kfom2-0"
-})(["box-sizing:border-box;visibility:visible;overflow:hidden;height:auto;max-height:", ";background-color:", ";border:", " solid ", ";border-top:0;border-bottom-left-radius:", ";border-bottom-right-radius:", ";opacity:1;padding:0 ", ";", " &[aria-hidden='true']{visibility:hidden;opacity:0;max-height:0;}@media (prefers-reduced-motion:reduce){transition:none;}"], function (_ref) {
-  var maxHeight = _ref.maxHeight;
-  return (0, _typography.pxToRem)(maxHeight);
-}, _colorsConfig.default.background3, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(30), function (_ref2) {
-  var isAnimated = _ref2.isAnimated;
-  return isAnimated && (0, _styledComponents.css)(["transition:visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;transition-delay:0s,0s,0s;&[aria-hidden='true']{transition-delay:0.4s,0s,0s;}"]);
+})(["box-sizing:border-box;visibility:visible;height:auto;background-color:", ";border:", " solid ", ";border-top:0;border-bottom-left-radius:", ";border-bottom-right-radius:", ";opacity:1;padding:", " ", ";", " &[aria-hidden='true']{visibility:hidden;opacity:0;max-height:0;}@media (prefers-reduced-motion:reduce){transition:none;}"], _colorsConfig.default.background3, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(0.1), (0, _typography.pxToRem)(30), function (_ref) {
+  var isAnimated = _ref.isAnimated,
+      maxHeight = _ref.maxHeight;
+  return isAnimated ? (0, _styledComponents.css)(["overflow:hidden;max-height:", ";transition:visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;transition-delay:0s,0s,0s;&[aria-hidden='true']{transition-delay:0.4s,0s,0s;}"], (0, _typography.pxToRem)(maxHeight)) : (0, _styledComponents.css)(["max-height:unset;overflow:visible;"]);
 });
 
 var Content =
@@ -85,10 +83,10 @@ function (_Component) {
           id = _this$props.id,
           children = _this$props.children;
       var maxHeight = this.state.maxHeight;
-      return _react.default.createElement(_context.Context.Consumer, null, function (_ref3) {
-        var selectedItem = _ref3.selectedItem,
-            isAnimated = _ref3.isAnimated,
-            componentId = _ref3.componentId;
+      return _react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
+        var selectedItem = _ref2.selectedItem,
+            isAnimated = _ref2.isAnimated,
+            componentId = _ref2.componentId;
         return _react.default.createElement(ContentStyled, {
           "aria-hidden": selectedItem !== id,
           ref: function ref(contentDiv) {
