@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [2.19.0] - 2019-08-19
 
 Features:
-- Add `StandaloneRangeDatePicker` component
+- Add `StandaloneRangeDatePicker` component.
 - Add `ListTable` component.
 - Add `DoubleArrowIcon` component.
 - Add `shadow`, `borderRadius`, `borderColor`, `borderWidth` props
