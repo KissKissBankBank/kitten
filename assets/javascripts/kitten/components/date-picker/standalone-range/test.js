@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer'
 import { SandaloneRangeDatePicker } from './index'
 import COLORS from '../../../constants/colors-config'
 
-const today = new Date()
+const testDate = new Date('2019-01-01T03:24:00')
 
 const styles = {
   header: {
@@ -76,7 +76,7 @@ describe('<SandaloneRangeDatePicker />', () => {
       component = renderer
         .create(
           <SandaloneRangeDatePicker
-            selectedDay={today}
+            selectedDay={testDate}
             locale="fr"
             disabledDays={disabledDays}
             weekDays={weekDays}
