@@ -13,6 +13,7 @@ import { ClockIcon } from './clock-icon'
 import { CopyIcon } from './copy-icon'
 import { CrossCircleIcon } from './cross-circle-icon'
 import { CrossIcon } from './cross-icon'
+import { DoubleArrowIcon } from './double-arrow-icon'
 import { EmailIcon } from './email-icon'
 import { ExportIcon } from './export-icon'
 import { FacebookIcon } from './facebook-icon'
@@ -130,6 +131,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<ClockIcon />} />
         <IconContainer children={<CrossCircleIcon />} />
         <IconContainer children={<CrossIcon />} />
+        <IconContainer children={<DoubleArrowIcon />} />
         <IconContainer children={<FilterIcon />} />
         <IconContainer children={<GrabberIcon />} />
         <IconContainer children={<HeartIcon />} />
