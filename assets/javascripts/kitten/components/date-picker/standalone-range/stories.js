@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { SandaloneRangeDatePicker } from './index'
+import { StandaloneRangeDatePicker } from './index'
 import { storiesOf } from '@storybook/react'
 import {
   withKnobs,
@@ -91,17 +91,17 @@ const months = [
 
 const info = {
   text: `
-  # SandaloneRangeDatePicker
+  # StandaloneRangeDatePicker
     &nbsp;
 
     ## Import
     ~~~js
-    import { SandaloneRangeDatePicker } from '@kisskissbankbank/kitten/src/components/date-picker/standalone-range'
+    import { StandaloneRangeDatePicker } from '@kisskissbankbank/kitten/src/components/date-picker/standalone-range'
     ~~~
 
     ## Usage
     ~~~js
-    <SandaloneRangeDatePicker
+    <StandaloneRangeDatePicker
       selectedDay={new Date()}
       locale="fr"
       disabledDays={[new Date(2019, 7, 16), new Date(2019, 7, 18)]}
@@ -180,7 +180,7 @@ storiesOf('Form/DatePicker', module)
     () => {
       return (
         <StoryContainer>
-          <SandaloneRangeDatePicker
+          <StandaloneRangeDatePicker
             selectedDay={date('default selected Date', today)}
             locale="fr"
             disabledDays={array('Disabled days', disabledDays)}

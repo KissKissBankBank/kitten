@@ -191,7 +191,7 @@ const StyledDatePicker = styled.div`
   }
 `
 
-export class SandaloneRangeDatePicker extends PureComponent {
+export class StandaloneRangeDatePicker extends PureComponent {
   static propTypes = {
     numberOfMonths: PropTypes.number,
     locale: PropTypes.string,

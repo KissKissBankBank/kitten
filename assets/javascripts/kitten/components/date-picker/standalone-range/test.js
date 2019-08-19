@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import renderer from 'react-test-renderer'
-import { SandaloneRangeDatePicker } from './index'
+import { StandaloneRangeDatePicker } from './index'
 import COLORS from '../../../constants/colors-config'
 
 const testDate = new Date('2019-01-01T03:24:00')
@@ -68,14 +68,14 @@ const months = [
   'Décembre',
 ]
 
-describe('<SandaloneRangeDatePicker />', () => {
+describe('<StandaloneRangeDatePicker />', () => {
   let component
 
   describe('by default', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <SandaloneRangeDatePicker
+          <StandaloneRangeDatePicker
             selectedDay={testDate}
             locale="fr"
             disabledDays={disabledDays}
