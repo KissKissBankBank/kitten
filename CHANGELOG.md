@@ -4,8 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: KissBankers order modal page
-
 ## [2.18.4] - 2019-08-13
 
 Fix:
