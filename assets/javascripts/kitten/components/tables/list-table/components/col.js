@@ -11,6 +11,11 @@ export const ListTableCol = styled.li`
   flex-grow: 0;
   flex-shrink: 0;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
   &:not(:first-child) {
     padding-left: ${pxToRem(CONTAINER_PADDING_THIN)};
   }
