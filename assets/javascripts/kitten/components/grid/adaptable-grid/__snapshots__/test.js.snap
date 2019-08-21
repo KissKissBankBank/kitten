@@ -17,13 +17,29 @@ exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 </div>
 `;
 
+exports[`<AdaptableGrid /> with custom HTML tags matches with snapshot 1`] = `
+<dl
+  className="adaptable-grid__StyledGrid-txsbu0-0 kscnci"
+>
+  <dd
+    className="adaptable-grid__StyledGridCol-txsbu0-1 fmGblY"
+  >
+    Test
+  </dd>
+  <dt
+    className="adaptable-grid__StyledGridCol-txsbu0-1 gZQldn"
+  >
+    Test
+  </dt>
+</dl>
+`;
+
 exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
 <div
   className="adaptable-grid__StyledGrid-txsbu0-0 cSerqo"
 >
   <div
     className="adaptable-grid__StyledGridCol-txsbu0-1 kKqTcF"
-    offset={3}
   >
     Test
   </div>

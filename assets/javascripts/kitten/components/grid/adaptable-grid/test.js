@@ -22,6 +22,27 @@ describe('<AdaptableGrid />', () => {
     })
   })
 
+  describe('with custom HTML tags', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <AdaptableGrid tag="dl">
+            <AdaptableGridCol tag="dd" col={4}>
+              Test
+            </AdaptableGridCol>
+            <AdaptableGridCol tag="dt" col={8}>
+              Test
+            </AdaptableGridCol>
+          </AdaptableGrid>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with some props', () => {
     beforeEach(() => {
       component = renderer

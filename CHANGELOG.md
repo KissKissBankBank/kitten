@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add a `tag` prop on `AdaptableGrid` and `AdaptableGridCol` to custom
+  HTML tags name.
+
 ## [2.19.1] - 2019-08-20
 
 Fix:

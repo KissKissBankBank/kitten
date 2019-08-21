@@ -12,11 +12,12 @@ export const AdaptableGrid = ({
   gutter,
   colNumber,
   colAlign,
+  tag,
   ...other
 }) => {
   const gridProperties = { colAlign, colNumber, gutter }
   return (
-    <StyledGrid gutter={gutter} colAlign={colAlign}>
+    <StyledGrid gutter={gutter} colAlign={colAlign} tag={tag}>
       <GridProperties.Provider value={gridProperties}>
         {children}
       </GridProperties.Provider>
@@ -24,7 +25,7 @@ export const AdaptableGrid = ({
   )
 }
 
-export const AdaptableGridCol = ({ children, col, offset, ...other }) => {
+export const AdaptableGridCol = ({ children, col, offset, tag, ...other }) => {
   const [styles, setStyles] = useState(null)
   const { colAlign, colNumber, gutter } = useContext(GridProperties)
   const marginDirection = colAlign === 'right' ? 'right' : 'left'
@@ -72,23 +73,33 @@ export const AdaptableGridCol = ({ children, col, offset, ...other }) => {
       marginDirection={marginDirection}
       props={{ ...other }}
       stylesByMediaQuery={styles}
+      tag={tag}
     >
       {children}
     </StyledGridCol>
   )
 }
 
+const dynamicTag = ({ tag, className, children }) => {
+  const Tag = tag || 'div'
+
+  return <Tag className={className}>{children}</Tag>
+}
+
 AdaptableGrid.propTypes = {
   gutter: PropTypes.number,
   colNumber: PropTypes.number,
   colAlign: PropTypes.oneOf(['left', 'right', 'center']),
+  tag: PropTypes.string,
 }
+
 AdaptableGrid.defaultProps = {
   gutter: GUTTER,
   colNumber: NUM_COLUMNS,
   colAlign: 'left',
 }
-const StyledGrid = styled.div`
+
+const StyledGrid = styled(dynamicTag)`
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -98,7 +109,7 @@ const StyledGrid = styled.div`
   margin-right: ${({ gutter }) => pxToRem(-gutter / 2)};
 `
 
-const StyledGridCol = styled.div`
+const StyledGridCol = styled(dynamicTag)`
   display: block;
   box-sizing: border-box;
   padding-left: ${({ gutter }) => pxToRem(gutter / 2)};
