@@ -26,11 +26,11 @@ describe('<AdaptableGrid />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <AdaptableGrid tag="dl">
-            <AdaptableGridCol tag="dd" col={4}>
+          <AdaptableGrid as="dl">
+            <AdaptableGridCol as="dd" col={4}>
               Test
             </AdaptableGridCol>
-            <AdaptableGridCol tag="dt" col={8}>
+            <AdaptableGridCol as="dt" col={8}>
               Test
             </AdaptableGridCol>
           </AdaptableGrid>,

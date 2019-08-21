@@ -12,12 +12,12 @@ export const AdaptableGrid = ({
   gutter,
   colNumber,
   colAlign,
-  tag,
+  as,
   ...other
 }) => {
   const gridProperties = { colAlign, colNumber, gutter }
   return (
-    <StyledGrid gutter={gutter} colAlign={colAlign} tag={tag}>
+    <StyledGrid gutter={gutter} colAlign={colAlign} as={as}>
       <GridProperties.Provider value={gridProperties}>
         {children}
       </GridProperties.Provider>
@@ -25,7 +25,7 @@ export const AdaptableGrid = ({
   )
 }
 
-export const AdaptableGridCol = ({ children, col, offset, tag, ...other }) => {
+export const AdaptableGridCol = ({ children, col, offset, as, ...other }) => {
   const [styles, setStyles] = useState(null)
   const { colAlign, colNumber, gutter } = useContext(GridProperties)
   const marginDirection = colAlign === 'right' ? 'right' : 'left'
@@ -73,32 +73,17 @@ export const AdaptableGridCol = ({ children, col, offset, tag, ...other }) => {
       marginDirection={marginDirection}
       props={{ ...other }}
       stylesByMediaQuery={styles}
-      tag={tag}
+      as={as}
     >
       {children}
     </StyledGridCol>
   )
 }
 
-const DynamicTag = ({ tag, className, children }) => {
-  const Tag = tag
-
-  return <Tag className={className}>{children}</Tag>
-}
-
-DynamicTag.propTypes = {
-  tag: PropTypes.string,
-}
-
-DynamicTag.defaultProps = {
-  tag: 'div',
-}
-
 AdaptableGrid.propTypes = {
   gutter: PropTypes.number,
   colNumber: PropTypes.number,
   colAlign: PropTypes.oneOf(['left', 'right', 'center']),
-  tag: PropTypes.string,
 }
 
 AdaptableGrid.defaultProps = {
@@ -107,7 +92,7 @@ AdaptableGrid.defaultProps = {
   colAlign: 'left',
 }
 
-const StyledGrid = styled(DynamicTag)`
+const StyledGrid = styled.div`
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -117,7 +102,7 @@ const StyledGrid = styled(DynamicTag)`
   margin-right: ${({ gutter }) => pxToRem(-gutter / 2)};
 `
 
-const StyledGridCol = styled(DynamicTag)`
+const StyledGridCol = styled.div`
   display: block;
   box-sizing: border-box;
   padding-left: ${({ gutter }) => pxToRem(gutter / 2)};

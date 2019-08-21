@@ -40,6 +40,7 @@ exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
 >
   <div
     className="adaptable-grid__StyledGridCol-txsbu0-1 kKqTcF"
+    offset={3}
   >
     Test
   </div>

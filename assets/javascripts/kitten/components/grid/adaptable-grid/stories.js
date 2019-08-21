@@ -14,9 +14,9 @@ storiesOf('Grid/AdaptableGrid', module)
   )
   .add('default', () => (
     <Container>
-      <AdaptableGrid colNumber={10} tag={text('Container tag', 'div')}>
+      <AdaptableGrid colNumber={10} as={text('Container tag', 'div')}>
         <AdaptableGridCol
-          tag={text('First child tag', 'div')}
+          as={text('First child tag', 'div')}
           col={4}
           offset={3}
           col-s={5}
@@ -28,7 +28,7 @@ storiesOf('Grid/AdaptableGrid', module)
           </div>
         </AdaptableGridCol>
         <AdaptableGridCol
-          tag={text('Second child tag', 'div')}
+          as={text('Second child tag', 'div')}
           col-s={3}
           offset-s={2}
           col-l={6}
