@@ -80,10 +80,18 @@ export const AdaptableGridCol = ({ children, col, offset, tag, ...other }) => {
   )
 }
 
-const dynamicTag = ({ tag, className, children }) => {
-  const Tag = tag || 'div'
+const DynamicTag = ({ tag, className, children }) => {
+  const Tag = tag
 
   return <Tag className={className}>{children}</Tag>
+}
+
+DynamicTag.propTypes = {
+  tag: PropTypes.string,
+}
+
+DynamicTag.defaultProps = {
+  tag: 'div',
 }
 
 AdaptableGrid.propTypes = {
@@ -99,7 +107,7 @@ AdaptableGrid.defaultProps = {
   colAlign: 'left',
 }
 
-const StyledGrid = styled(dynamicTag)`
+const StyledGrid = styled(DynamicTag)`
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -109,7 +117,7 @@ const StyledGrid = styled(dynamicTag)`
   margin-right: ${({ gutter }) => pxToRem(-gutter / 2)};
 `
 
-const StyledGridCol = styled(dynamicTag)`
+const StyledGridCol = styled(DynamicTag)`
   display: block;
   box-sizing: border-box;
   padding-left: ${({ gutter }) => pxToRem(gutter / 2)};
