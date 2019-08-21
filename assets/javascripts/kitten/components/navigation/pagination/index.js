@@ -2,15 +2,86 @@ import React, { Component } from 'react'
 import Styled from 'styled-components'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Text as TextBase } from '../../components/typography/text'
-import { ArrowIcon as ArrowIconBase } from '../../components/icons/arrow-icon'
-import { ScreenConfig } from '../../constants/screen-config'
-import COLORS from '../../constants/colors-config'
-import { parseHtml } from '../../helpers/utils/parser'
-import { mediaQueries } from '../../hoc/media-queries'
+import { Text } from '../../../components/typography/text'
+import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import { ScreenConfig } from '../../../constants/screen-config'
+import COLORS from '../../../constants/colors-config'
+import { parseHtml } from '../../../helpers/utils/parser'
+import { mediaQueries } from '../../../hoc/media-queries'
+import { pxToRem } from '../../../helpers/utils/typography'
 
-const Text = Radium(TextBase)
-const ArrowIcon = Radium(ArrowIconBase)
+const StyledGroup = styled.ul`
+  display: inline-flex;
+  padding: 0;
+`
+const StyledList = styled.li`
+  list-style: none;
+  margin-right: 0;
+
+  @media (min-width: ${ScreenConfig.M.min}px) {
+    margin-right: ${pxToRem(8)};
+    margin-left: ${pxToRem(8)};
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+`
+
+const StyledButtonIcon = styled(Text)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: ${pxToRem(40)};
+  height: ${pxToRem(40)};
+  border-radius: 0;
+  border-width: 0;
+  border-style: solid;
+  text-decoration: none;
+  outline: none;
+  color: ${COLORS.font1};
+  border-color: ${COLORS.line1};
+  background-color: ${COLORS.background1};
+
+  &:hover,
+  &:focus {
+    color: ${COLORS.primary1};
+    border-color: ${COLORS.primary1};
+    background-color: ${COLORS.background1};
+  }
+
+  &:active {
+    color: ${COLORS.background1};
+    border-color: ${COLORS.primary1};
+    background-color: ${COLORS.primary1};
+  }
+
+  @media (min-width: ${ScreenConfig.S.min}px) : {
+    width: ${pxToRem(50)};
+    height: ${pxToRem(50)};
+    border-width: ${pxToRem(2)};
+  }
+`
+const StyledSvg = styled(ArrowIcon)`
+  align-self: center;
+  margin: 0;
+  padding: 0;
+  width: ${pxToRem(6)};
+  height: ${pxToRem(6)};
+  pointer-events: none;
+
+  &:hover,
+  &:focus {
+    fill: ${COLORS.primary1};
+  }
+
+  &:active,
+  &:disabled {
+    fill: ${COLORS.background1};
+  }
+`
 
 // Returns an array with the given bounds
 const range = (start, end) =>
@@ -77,11 +148,11 @@ class PaginationBase extends Component {
 
     return (
       <nav role="navigation" aria-label={this.props['aria-label']}>
-        <ul style={styles.group}>
+        <StyledGroup>
           {this.renderArrowButton('left')}
           {pageNumbers.map(this.renderPage)}
           {this.renderArrowButton('right')}
-        </ul>
+        </StyledGroup>
       </nav>
     )
   }
@@ -103,20 +174,20 @@ class PaginationBase extends Component {
     ]
 
     return (
-      <li style={styles.group.list} key={`page-${number}`}>
-        <Text
-          tag={tag}
+      <StyledList key={`page-${number}`}>
+        <StyledButtonIcon
+          as={tag}
           weight="regular"
           size="tiny"
           href={href}
           key={`link-${number}`}
-          style={styleButtonIcon}
+          // style={styleButtonIcon}
           aria-label={this.props.goToPageLabel(number)}
           onClick={isActive ? null : this.pageClickHandler(number)}
         >
           {number}
-        </Text>
-      </li>
+        </StyledButtonIcon>
+      </StyledList>
     )
   }
 
@@ -144,21 +215,21 @@ class PaginationBase extends Component {
     const isDisabled =
       direction == 'left' ? currentPage == 1 : currentPage == totalPages
 
-    const linkIsHovered = Radium.getState(
-      this.state,
-      `link-${direction}`,
-      ':hover',
-    )
-    const linkIsFocused = Radium.getState(
-      this.state,
-      `link-${direction}`,
-      ':focus',
-    )
-    const linkIsActived = Radium.getState(
-      this.state,
-      `link-${direction}`,
-      ':active',
-    )
+    // const linkIsHovered = Radium.getState(
+    //   this.state,
+    //   `link-${direction}`,
+    //   ':hover',
+    // )
+    // const linkIsFocused = Radium.getState(
+    //   this.state,
+    //   `link-${direction}`,
+    //   ':focus',
+    // )
+    // const linkIsActived = Radium.getState(
+    //   this.state,
+    //   `link-${direction}`,
+    //   ':active',
+    // )
 
     const styleList = [
       direction == 'left' && styles.group.list.left,
@@ -168,13 +239,6 @@ class PaginationBase extends Component {
     const styleButtonIcon = [
       styles.group.list.buttonIcon,
       isDisabled && styles.group.list.buttonIcon.isDisabled,
-    ]
-
-    const styleSvg = [
-      styles.group.list.buttonIcon.svg,
-      linkIsHovered && !isDisabled && styles.group.list.buttonIcon.svg.hover,
-      linkIsFocused && !isDisabled && styles.group.list.buttonIcon.svg.focus,
-      linkIsActived && !isDisabled && styles.group.list.buttonIcon.svg.active,
     ]
 
     const number =
@@ -201,11 +265,7 @@ class PaginationBase extends Component {
               : this.pageClickHandler(number)
           }
         >
-          <ArrowIcon
-            direction={direction}
-            disabled={isDisabled}
-            style={styleSvg}
-          />
+          <StyledSvg direction={direction} disabled={isDisabled} />
         </a>
       </li>
     )
