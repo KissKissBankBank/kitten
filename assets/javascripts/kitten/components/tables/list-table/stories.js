@@ -51,12 +51,6 @@ const info = {
   propTables: false,
 }
 
-const flexCellStyle = css`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`
-
 const StyledCol1 = styled(ListTable.Col)`
   text-align: center;
 
@@ -72,18 +66,24 @@ const StyledCol1 = styled(ListTable.Col)`
 `
 
 const StyledCol2 = styled(ListTable.Col)`
-  ${flexCellStyle}
-
-  @media (max-width: ${ScreenConfig.S.max}px) { flex-basis: calc(90% - 150px); }
-  @media (min-width: ${ScreenConfig.M.min}px) { flex-basis: calc(50% - 170px); }
-  @media (min-width: ${ScreenConfig.L.min}px) { flex-basis: 15%; }
+  @media (max-width: ${ScreenConfig.S.max}px) {
+    flex-basis: calc(90% - 150px);
+  }
+  @media (min-width: ${ScreenConfig.M.min}px) {
+    flex-basis: calc(50% - 170px);
+  }
+  @media (min-width: ${ScreenConfig.L.min}px) {
+    flex-basis: 15%;
+  }
 `
 
 const StyledCol3 = styled(ListTable.Col)`
-  ${flexCellStyle}
-
-  @media (max-width: ${ScreenConfig.M.max}px) { display: none; }
-  @media (min-width: ${ScreenConfig.L.min}px) { flex-basis: 25%; }
+  @media (max-width: ${ScreenConfig.M.max}px) {
+    display: none;
+  }
+  @media (min-width: ${ScreenConfig.L.min}px) {
+    flex-basis: 25%;
+  }
 `
 
 const StyledCol4 = styled(ListTable.Col)`

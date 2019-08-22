@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.19.1] - 2019-08-20
+
+Fix:
+- Default `ListTable` column style to Flex.
+
 ## [2.19.0] - 2019-08-19
 
 Features:

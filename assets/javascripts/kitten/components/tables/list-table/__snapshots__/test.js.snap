@@ -12,19 +12,19 @@ exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
       className="header__StyledList-sc-1f8str-1 iEMMuj"
     >
       <li
-        className="col__ListTableCol-sc-1vota8e-0 lnRqgi"
+        className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
         id="TestListTable-col-0"
       >
         Header 1
       </li>
       <li
-        className="col__ListTableCol-sc-1vota8e-0 lnRqgi"
+        className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
         id="TestListTable-col-1"
       >
         Header 2
       </li>
       <li
-        className="col__ListTableCol-sc-1vota8e-0 lnRqgi"
+        className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
         id="TestListTable-col-2"
       >
         Header 3
@@ -42,19 +42,19 @@ exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
       >
         <li
           aria-describedby="TestListTable-col-0"
-          className="col__ListTableCol-sc-1vota8e-0 lnRqgi"
+          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
         >
           Content 1
         </li>
         <li
           aria-describedby="TestListTable-col-1"
-          className="col__ListTableCol-sc-1vota8e-0 lnRqgi"
+          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
         >
           Content 2
         </li>
         <li
           aria-describedby="TestListTable-col-2"
-          className="col__ListTableCol-sc-1vota8e-0 lnRqgi"
+          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
         >
           Content 3
         </li>
@@ -68,19 +68,19 @@ exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
       >
         <li
           aria-describedby="TestListTable-col-0"
-          className="col__ListTableCol-sc-1vota8e-0 lnRqgi"
+          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
         >
           Content 1
         </li>
         <li
           aria-describedby="TestListTable-col-1"
-          className="col__ListTableCol-sc-1vota8e-0 lnRqgi"
+          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
         >
           Content 2
         </li>
         <li
           aria-describedby="TestListTable-col-2"
-          className="col__ListTableCol-sc-1vota8e-0 lnRqgi"
+          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
         >
           Content 3
         </li>
