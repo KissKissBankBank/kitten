@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Styled from 'styled-components'
+import React, { PureComponent } from 'react'
+import styled, { css } from 'styled-components'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Text } from '../../../components/typography/text'
@@ -8,7 +8,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import { parseHtml } from '../../../helpers/utils/parser'
 import { mediaQueries } from '../../../hoc/media-queries'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
 const StyledGroup = styled.ul`
   display: inline-flex;
@@ -18,7 +18,7 @@ const StyledList = styled.li`
   list-style: none;
   margin-right: 0;
 
-  @media (min-width: ${ScreenConfig.M.min}px) {
+  @media (min-width: ${ScreenConfig.S.min}px) {
     margin-right: ${pxToRem(8)};
     margin-left: ${pxToRem(8)};
   }
@@ -26,6 +26,28 @@ const StyledList = styled.li`
   &:last-child {
     margin-right: 0;
   }
+`
+
+const StyledArrowIconDirection = styled.li`
+  ${({ direction }) =>
+    direction === 'left' &&
+    css`
+      margin-right: ${pxToRem(30)};
+      list-style: none;
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        margin-right: ${pxToRem(22)};
+      }
+    `}
+
+  ${({ direction }) =>
+    direction === 'right' &&
+    css`
+      margin-left: ${pxToRem(30)};
+      list-style: none;
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        margin-left: ${pxToRem(22)};
+      }
+    `}
 `
 
 const StyledButtonIcon = styled(Text)`
@@ -40,10 +62,18 @@ const StyledButtonIcon = styled(Text)`
   border-width: 0;
   border-style: solid;
   text-decoration: none;
+  font-weight: 500;
+  font-size: ${stepToRem(-1)};
   outline: none;
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
   background-color: ${COLORS.background1};
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    width: ${pxToRem(50)};
+    height: ${pxToRem(50)};
+    border-width: ${pxToRem(2)};
+  }
 
   &:hover,
   &:focus {
@@ -58,12 +88,41 @@ const StyledButtonIcon = styled(Text)`
     background-color: ${COLORS.primary1};
   }
 
-  @media (min-width: ${ScreenConfig.S.min}px) : {
-    width: ${pxToRem(50)};
-    height: ${pxToRem(50)};
-    border-width: ${pxToRem(2)};
-  }
+  ${({ isActive }) =>
+    isActive &&
+    css`
+      cursor: auto;
+      color: ${COLORS.background1};
+      border-color: ${COLORS.primary1};
+      background-color: ${COLORS.primary1};
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: ${COLORS.background1};
+        border-color: ${COLORS.primary1};
+        background-color: ${COLORS.primary1};
+      }
+    `}
+
+  ${({ isDisabled }) =>
+    isDisabled &&
+    css`
+      color: ${COLORS.background1};
+      border-color: ${COLORS.line2};
+      background-color: ${COLORS.line2};
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: ${COLORS.background1};
+        border-color: ${COLORS.line2};
+        background-color: ${COLORS.line2};
+      }
+    `}
 `
+
 const StyledSvg = styled(ArrowIcon)`
   align-self: center;
   margin: 0;
@@ -72,14 +131,39 @@ const StyledSvg = styled(ArrowIcon)`
   height: ${pxToRem(6)};
   pointer-events: none;
 
-  &:hover,
-  &:focus {
+  ${StyledButtonIcon}:hover &,
+  ${StyledButtonIcon}:focus & {
     fill: ${COLORS.primary1};
   }
 
-  &:active,
-  &:disabled {
+  ${StyledButtonIcon}:active & {
     fill: ${COLORS.background1};
+  }
+
+  ${({ isDisabled }) =>
+    isDisabled &&
+    css`
+      fill: ${COLORS.background1};
+
+      ${StyledButtonIcon}:hover &,
+      ${StyledButtonIcon}:focus &,
+      ${StyledButtonIcon}:active & {
+        fill: ${COLORS.background1};
+      }
+    `}
+`
+
+const StyledSpacer = styled.li`
+  list-style: none;
+  text-decoration: none;
+  text-align: center;
+  align-self: center;
+  width: ${pxToRem(40)};
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    margin-left: ${pxToRem(8)};
+    margin-right: ${pxToRem(8)};
+    width: ${pxToRem(50)};
   }
 `
 
@@ -118,7 +202,7 @@ export function pages(min, max, currentPage, availableSlots) {
   ]
 }
 
-class PaginationBase extends Component {
+class PaginationBase extends PureComponent {
   static propTypes = {
     prevButtonLabel: PropTypes.string,
     nextButtonLabel: PropTypes.string,
@@ -168,20 +252,13 @@ class PaginationBase extends Component {
     const tag = isActive ? 'span' : 'a'
     const href = isActive ? null : this.props.goToPageHref(number)
 
-    const styleButtonIcon = [
-      styles.group.list.buttonIcon,
-      isActive && styles.group.list.buttonIcon.isActive,
-    ]
-
     return (
       <StyledList key={`page-${number}`}>
         <StyledButtonIcon
           as={tag}
-          weight="regular"
-          size="tiny"
           href={href}
           key={`link-${number}`}
-          // style={styleButtonIcon}
+          isActive={isActive}
           aria-label={this.props.goToPageLabel(number)}
           onClick={isActive ? null : this.pageClickHandler(number)}
         >
@@ -192,11 +269,7 @@ class PaginationBase extends Component {
   }
 
   renderSpacer(index) {
-    return (
-      <li key={`spacer-${index}`} style={styles.group.list.points}>
-        {'…'}
-      </li>
-    )
+    return <StyledSpacer key={`spacer-${index}`}>{'…'}</StyledSpacer>
   }
 
   renderArrowButton(direction) {
@@ -205,6 +278,7 @@ class PaginationBase extends Component {
       nextButtonLabel,
       currentPage,
       totalPages,
+      isActive,
     } = this.props
 
     const buttonLabel =
@@ -214,32 +288,6 @@ class PaginationBase extends Component {
 
     const isDisabled =
       direction == 'left' ? currentPage == 1 : currentPage == totalPages
-
-    // const linkIsHovered = Radium.getState(
-    //   this.state,
-    //   `link-${direction}`,
-    //   ':hover',
-    // )
-    // const linkIsFocused = Radium.getState(
-    //   this.state,
-    //   `link-${direction}`,
-    //   ':focus',
-    // )
-    // const linkIsActived = Radium.getState(
-    //   this.state,
-    //   `link-${direction}`,
-    //   ':active',
-    // )
-
-    const styleList = [
-      direction == 'left' && styles.group.list.left,
-      direction == 'right' && styles.group.list.right,
-    ]
-
-    const styleButtonIcon = [
-      styles.group.list.buttonIcon,
-      isDisabled && styles.group.list.buttonIcon.isDisabled,
-    ]
 
     const number =
       direction == 'left'
@@ -251,13 +299,14 @@ class PaginationBase extends Component {
         : currentPage + 1
 
     return (
-      <li style={styleList}>
-        <a
+      <StyledArrowIconDirection direction={direction}>
+        <StyledButtonIcon
+          as="a"
           href={this.props.goToPageHref(number)}
           key={`link-${direction}`}
-          style={styleButtonIcon}
           aria-label={buttonLabel}
           title={buttonLabel}
+          isDisabled={isDisabled}
           tabIndex={isDisabled ? -1 : null}
           onClick={
             isDisabled
@@ -265,148 +314,13 @@ class PaginationBase extends Component {
               : this.pageClickHandler(number)
           }
         >
-          <StyledSvg direction={direction} disabled={isDisabled} />
-        </a>
-      </li>
+          <StyledSvg direction={direction} isDisabled={isDisabled} />
+        </StyledButtonIcon>
+      </StyledArrowIconDirection>
     )
   }
 }
 
-const linkHoveredAndFocused = {
-  color: COLORS.primary1,
-  borderColor: COLORS.primary1,
-  backgroundColor: COLORS.background1,
-}
-
-const disabledPseudoClass = {
-  color: COLORS.background1,
-  borderColor: COLORS.line2,
-  backgroundColor: COLORS.line2,
-}
-
-const isActivedPseudoClass = {
-  color: COLORS.background1,
-  borderColor: COLORS.primary1,
-  backgroundColor: COLORS.primary1,
-}
-
-const styles = {
-  group: {
-    display: 'inline-flex',
-    padding: 0,
-
-    list: {
-      listStyle: 'none',
-      marginRight: 0,
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        marginRight: '8px',
-        marginLeft: '8px',
-      },
-
-      lastChild: {
-        marginRight: 0,
-      },
-
-      left: {
-        marginRight: '30px',
-        listStyle: 'none',
-        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          marginRight: '22px',
-        },
-      },
-
-      right: {
-        marginLeft: '30px',
-        listStyle: 'none',
-        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          marginLeft: '22px',
-        },
-      },
-
-      points: {
-        listStyle: 'none',
-        textDecoration: 'none',
-        textAlign: 'center',
-        alignSelf: 'center',
-        width: '40px',
-        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          marginLeft: '8px',
-          marginRight: '8px',
-          width: '50px',
-        },
-      },
-
-      buttonIcon: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        boxSizing: 'border-box',
-        cursor: 'pointer',
-        width: '40px',
-        height: '40px',
-        borderRadius: 0,
-        borderWidth: 0,
-        borderStyle: 'solid',
-        textDecoration: 'none',
-        outline: 'none',
-        color: COLORS.font1,
-        borderColor: COLORS.line1,
-        backgroundColor: COLORS.background1,
-        ':hover': linkHoveredAndFocused,
-        ':focus': linkHoveredAndFocused,
-        ':active': isActivedPseudoClass,
-
-        [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-          width: '50px',
-          height: '50px',
-          borderWidth: '2px',
-        },
-
-        isActive: {
-          cursor: 'auto',
-          color: COLORS.background1,
-          borderColor: COLORS.primary1,
-          backgroundColor: COLORS.primary1,
-          ':hover': isActivedPseudoClass,
-          ':focus': isActivedPseudoClass,
-          ':active': isActivedPseudoClass,
-        },
-
-        isDisabled: {
-          color: COLORS.background1,
-          borderColor: COLORS.line2,
-          backgroundColor: COLORS.line2,
-          cursor: 'not-allowed',
-          ':hover': disabledPseudoClass,
-          ':focus': disabledPseudoClass,
-          ':active': disabledPseudoClass,
-        },
-
-        svg: {
-          alignSelf: 'center',
-          margin: '0',
-          padding: '0',
-          width: '6px',
-          height: '6px',
-          pointerEvents: 'none',
-          hover: {
-            fill: COLORS.primary1,
-          },
-          focus: {
-            fill: COLORS.primary1,
-          },
-          active: {
-            fill: COLORS.background1,
-          },
-          isDisabled: {
-            fill: COLORS.background1,
-          },
-        },
-      },
-    },
-  },
-}
-
-export const Pagination = mediaQueries(Radium(PaginationBase), {
+export const Pagination = mediaQueries(PaginationBase, {
   viewportIsTabletOrLess: true,
 })

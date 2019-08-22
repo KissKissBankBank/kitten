@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Styled from 'styled-components'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Text as TextBase } from '../../components/typography/text'
