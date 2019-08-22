@@ -1,7 +1,7 @@
 import React from 'react'
 import sinon from 'sinon'
 import { StyleRoot } from 'radium'
-import { pages, Pagination } from '../../components/navigation/pagination'
+import { pages, Pagination } from './index'
 import renderer from 'react-test-renderer'
 
 const createMockMediaMatcher = matches => () => ({

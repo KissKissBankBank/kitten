@@ -8,7 +8,38 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 
 const info = {
   text: `
+    #Pagination
+    &nbsp;
+
+    ## Import
+    ~~~js
+    import { Pagination } from '@kisskissbankbank/kitten/src/components/navigation/pagination'
+    ~~~
+
+    ## Usage
+    &nbsp;
+
+    #### Default
+    ~~~js
+    <Pagination />
+    ~~~
+
+    ### With total pages
+    ~~~js
+    <Pagination
+      totalPages={…}
+    />
+    ~~~
+
+    ### With current page
+    ~~~js
+    <Pagination
+      currentPage={…}
+    />
+    ~~~
   `,
+  header: false,
+  propTables: false,
 }
 
 storiesOf('Navigation/Pagination', module)

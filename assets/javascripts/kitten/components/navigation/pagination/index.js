@@ -34,6 +34,7 @@ const StyledArrowIconDirection = styled.li`
     css`
       margin-right: ${pxToRem(30)};
       list-style: none;
+
       @media (min-width: ${ScreenConfig.S.min}px) {
         margin-right: ${pxToRem(22)};
       }
@@ -44,6 +45,7 @@ const StyledArrowIconDirection = styled.li`
     css`
       margin-left: ${pxToRem(30)};
       list-style: none;
+
       @media (min-width: ${ScreenConfig.S.min}px) {
         margin-left: ${pxToRem(22)};
       }
@@ -153,7 +155,7 @@ const StyledSvg = styled(ArrowIcon)`
     `}
 `
 
-const StyledSpacer = styled.li`
+const StyledPoints = styled.li`
   list-style: none;
   text-decoration: none;
   text-align: center;
@@ -269,7 +271,7 @@ class PaginationBase extends PureComponent {
   }
 
   renderSpacer(index) {
-    return <StyledSpacer key={`spacer-${index}`}>{'…'}</StyledSpacer>
+    return <StyledPoints key={`spacer-${index}`}>{'…'}</StyledPoints>
   }
 
   renderArrowButton(direction) {
@@ -314,7 +316,7 @@ class PaginationBase extends PureComponent {
               : this.pageClickHandler(number)
           }
         >
-          <StyledSvg direction={direction} isDisabled={isDisabled} />
+          <StyledSvg direction={direction} disabled={isDisabled} />
         </StyledButtonIcon>
       </StyledArrowIconDirection>
     )

@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> by default should match its empty snapshot 1`] = `
+<div
+  data-radium={true}
+>
+  <nav
+    aria-label="Pagination navigation"
+    role="navigation"
+  >
+    <ul
+      className="pagination__StyledGroup-sc-19bydjm-0 jkFRqJ"
+    >
+      <li
+        className="pagination__StyledArrowIconDirection-sc-19bydjm-2 cuHNoN"
+        direction="left"
+      >
+        <a
+          aria-label="Previous page"
+          className="pagination__StyledButtonIcon-sc-19bydjm-3 cFouqi"
+          href="#9"
+          onClick={[Function]}
+          tabIndex={null}
+          title="Previous page"
+        >
+          <svg
+            className="k-ArrowIcon k-ArrowIcon--left pagination__StyledSvg-sc-19bydjm-4 hHJkFN"
+            data-radium={true}
+            isDisabled={false}
+            viewBox="0 0 6 6"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Arrow
+            </title>
+            <path
+              d="M6 0H0v6h2V2h4z"
+            />
+          </svg>
+        </a>
+      </li>
+      <li
+        className="pagination__StyledList-sc-19bydjm-1 iFVFuY"
+      >
+        <a
+          aria-label="Go to page 1"
+          className="pagination__StyledButtonIcon-sc-19bydjm-3 cFouqi"
+          href="#1"
+          onClick={[Function]}
+        >
+          1
+        </a>
+      </li>
+      <li
+        className="pagination__StyledPoints-sc-19bydjm-5 jciCyQ"
+      >
+        …
+      </li>
+      <li
+        className="pagination__StyledList-sc-19bydjm-1 iFVFuY"
+      >
+        <a
+          aria-label="Go to page 9"
+          className="pagination__StyledButtonIcon-sc-19bydjm-3 cFouqi"
+          href="#9"
+          onClick={[Function]}
+        >
+          9
+        </a>
+      </li>
+      <li
+        className="pagination__StyledList-sc-19bydjm-1 iFVFuY"
+      >
+        <span
+          aria-label="Go to page 10"
+          className="pagination__StyledButtonIcon-sc-19bydjm-3 lhLtdU"
+          href={null}
+          onClick={null}
+        >
+          10
+        </span>
+      </li>
+      <li
+        className="pagination__StyledList-sc-19bydjm-1 iFVFuY"
+      >
+        <a
+          aria-label="Go to page 11"
+          className="pagination__StyledButtonIcon-sc-19bydjm-3 cFouqi"
+          href="#11"
+          onClick={[Function]}
+        >
+          11
+        </a>
+      </li>
+      <li
+        className="pagination__StyledPoints-sc-19bydjm-5 jciCyQ"
+      >
+        …
+      </li>
+      <li
+        className="pagination__StyledList-sc-19bydjm-1 iFVFuY"
+      >
+        <a
+          aria-label="Go to page 42"
+          className="pagination__StyledButtonIcon-sc-19bydjm-3 cFouqi"
+          href="#42"
+          onClick={[Function]}
+        >
+          42
+        </a>
+      </li>
+      <li
+        className="pagination__StyledArrowIconDirection-sc-19bydjm-2 ikVpnO"
+        direction="right"
+      >
+        <a
+          aria-label="Next page"
+          className="pagination__StyledButtonIcon-sc-19bydjm-3 cFouqi"
+          href="#11"
+          onClick={[Function]}
+          tabIndex={null}
+          title="Next page"
+        >
+          <svg
+            className="k-ArrowIcon k-ArrowIcon--right pagination__StyledSvg-sc-19bydjm-4 hHJkFN"
+            data-radium={true}
+            isDisabled={false}
+            viewBox="0 0 6 6"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              Arrow
+            </title>
+            <path
+              d="M6 0H0v6h2V2h4z"
+            />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <style
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "",
+      }
+    }
+  />
+</div>
+`;
