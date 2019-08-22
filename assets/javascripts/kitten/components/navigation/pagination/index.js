@@ -19,8 +19,7 @@ const StyledList = styled.li`
   margin-right: 0;
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    margin-right: ${pxToRem(8)};
-    margin-left: ${pxToRem(8)};
+    margin: ${pxToRem(0)} ${pxToRem(8)};
   }
 
   &:last-child {
@@ -107,22 +106,20 @@ const StyledButtonIcon = styled(Text)`
       }
     `}
 
-  ${({ isDisabled }) =>
-    isDisabled &&
-    css`
+  &[aria-disabled="true"] {
+    color: ${COLORS.background1};
+    border-color: ${COLORS.line2};
+    background-color: ${COLORS.line2};
+    cursor: not-allowed;
+
+    &:hover,
+    &:focus,
+    &:active {
       color: ${COLORS.background1};
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
-      cursor: not-allowed;
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: ${COLORS.background1};
-        border-color: ${COLORS.line2};
-        background-color: ${COLORS.line2};
-      }
-    `}
+    }
+  }
 `
 
 const StyledSvg = styled(ArrowIcon)`
@@ -132,27 +129,8 @@ const StyledSvg = styled(ArrowIcon)`
   width: ${pxToRem(6)};
   height: ${pxToRem(6)};
   pointer-events: none;
-
-  ${StyledButtonIcon}:hover &,
-  ${StyledButtonIcon}:focus & {
-    fill: ${COLORS.primary1};
-  }
-
-  ${StyledButtonIcon}:active & {
-    fill: ${COLORS.background1};
-  }
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      fill: ${COLORS.background1};
-
-      ${StyledButtonIcon}:hover &,
-      ${StyledButtonIcon}:focus &,
-      ${StyledButtonIcon}:active & {
-        fill: ${COLORS.background1};
-      }
-    `}
+  color: inherit;
+  fill: currentColor;
 `
 
 const StyledPoints = styled.li`
@@ -213,6 +191,7 @@ class PaginationBase extends PureComponent {
     totalPages: PropTypes.number,
     currentPage: PropTypes.number,
     'aria-label': PropTypes.string,
+    currentPageLabel: PropTypes.func,
   }
 
   static defaultProps = {
@@ -224,6 +203,7 @@ class PaginationBase extends PureComponent {
     currentPage: 1,
     totalPages: 1,
     'aria-label': 'Pagination navigation',
+    currentPageLabel: n => `Page ${n}, this is the current page`,
   }
 
   render() {
@@ -253,6 +233,10 @@ class PaginationBase extends PureComponent {
     const tag = isActive ? 'span' : 'a'
     const href = isActive ? null : this.props.goToPageHref(number)
 
+    const ariaLabel = isActive
+      ? this.props.currentPageLabel(number)
+      : this.props.goToPageLabel(number)
+
     return (
       <StyledList key={`page-${number}`}>
         <StyledButtonIcon
@@ -260,7 +244,8 @@ class PaginationBase extends PureComponent {
           href={href}
           key={`link-${number}`}
           isActive={isActive}
-          aria-label={this.props.goToPageLabel(number)}
+          aria-current={isActive && 'page'}
+          aria-label={ariaLabel}
           onClick={isActive ? null : this.pageClickHandler(number)}
         >
           {number}
@@ -306,6 +291,7 @@ class PaginationBase extends PureComponent {
           href={this.props.goToPageHref(number)}
           key={`link-${direction}`}
           aria-label={buttonLabel}
+          aria-disabled={isDisabled}
           title={buttonLabel}
           isDisabled={isDisabled}
           tabIndex={isDisabled ? -1 : null}
