@@ -163,8 +163,7 @@ const StyledPoints = styled.li`
   width: ${pxToRem(40)};
 
   @media (min-width: ${ScreenConfig.S.min}px) {
-    margin-left: ${pxToRem(8)};
-    margin-right: ${pxToRem(8)};
+    margin: ${pxToRem(0)} ${pxToRem(8)};
     width: ${pxToRem(50)};
   }
 `

@@ -51,7 +51,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         </a>
       </li>
       <li
-        className="pagination__StyledPoints-sc-19bydjm-5 jciCyQ"
+        className="pagination__StyledPoints-sc-19bydjm-5 bjKQLe"
       >
         …
       </li>
@@ -92,7 +92,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         </a>
       </li>
       <li
-        className="pagination__StyledPoints-sc-19bydjm-5 jciCyQ"
+        className="pagination__StyledPoints-sc-19bydjm-5 bjKQLe"
       >
         …
       </li>
