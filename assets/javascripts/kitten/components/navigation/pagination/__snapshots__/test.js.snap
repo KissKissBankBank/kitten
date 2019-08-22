@@ -26,7 +26,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           <svg
             className="k-ArrowIcon k-ArrowIcon--left pagination__StyledSvg-sc-19bydjm-4 hHJkFN"
             data-radium={true}
-            isDisabled={false}
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -124,7 +123,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           <svg
             className="k-ArrowIcon k-ArrowIcon--right pagination__StyledSvg-sc-19bydjm-4 hHJkFN"
             data-radium={true}
-            isDisabled={false}
             viewBox="0 0 6 6"
             xmlns="http://www.w3.org/2000/svg"
           >

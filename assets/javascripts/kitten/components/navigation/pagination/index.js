@@ -142,8 +142,8 @@ const StyledSvg = styled(ArrowIcon)`
     fill: ${COLORS.background1};
   }
 
-  ${({ isDisabled }) =>
-    isDisabled &&
+  ${({ disabled }) =>
+    disabled &&
     css`
       fill: ${COLORS.background1};
 
