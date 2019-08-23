@@ -116,5 +116,5 @@ Modal.defaultProps = {
   describedby: '',
   closeButtonLabel: '',
   modalProps: {},
-  disableOutsideScroll: true,
+  disableOutsideScroll: false,
 }
