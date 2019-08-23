@@ -57,6 +57,7 @@ export class Modal extends Component {
       closeButtonLabel,
       onClose,
       modalProps,
+      disableOutsideScroll,
       ...others
     } = this.props
 
