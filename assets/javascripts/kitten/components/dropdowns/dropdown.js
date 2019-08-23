@@ -66,7 +66,7 @@ export class Dropdown extends React.Component {
     emitter.off('dropdown:opening:trigger', this.close)
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     // Enable wrapper component to expand the dropdown.
     if (nextProps.isExpanded != this.state.isExpanded) {
       this.toggle(nextProps.isExpanded)
