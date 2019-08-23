@@ -19,13 +19,16 @@ describe('<ListTable />', () => {
               <ListTable.Col>Header 3</ListTable.Col>
             </ListTable.Header>
 
-            <ListTable.Body className="customBodyClass">
+            <ListTable.Body>
               <ListTable.Row isHighlighted>
                 <ListTable.Col>Content 1</ListTable.Col>
                 <ListTable.Col>Content 2</ListTable.Col>
                 <ListTable.Col>Content 3</ListTable.Col>
               </ListTable.Row>
-              <ListTable.Row rowClass={{ className: 'customRowClass' }}>
+              <ListTable.Row
+                className="customRowClass"
+                listProps={{ className: 'customListClass' }}
+              >
                 <ListTable.Col>Content 1</ListTable.Col>
                 <ListTable.Col>Content 2</ListTable.Col>
                 <ListTable.Col>Content 3</ListTable.Col>
