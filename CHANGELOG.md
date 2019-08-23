@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add props to `ListTable` elements.
+
 ## [2.19.1] - 2019-08-20
 
 Fix:
