@@ -9,6 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `listProps` to `ListTable.Row`.
 - Fix: Move `ListTable.Row` `...others` props propagation
   on `row` element instead of `list` element.
+- Feature: Add a `as` prop on `AdaptableGrid` and `AdaptableGridCol` to custom
+  HTML tags name.
 - Feature: Update `Pagination` with styled-components.
 
 ## [2.19.1] - 2019-08-20
