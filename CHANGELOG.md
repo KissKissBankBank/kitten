@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove styles (`:hover` styles on `ListTable.Row`) not in the Spec.
 - Feature: Add `disableOutsideScroll` prop to Modal (defaults to `false`
   to prevent Breaking Change).
 - Feature: Propagate props and add `listProps` to `ListTable.Header`.

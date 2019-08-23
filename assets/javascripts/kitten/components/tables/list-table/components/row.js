@@ -12,21 +12,12 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { Context } from './context'
 
 const StyledRow = styled.li`
-  &:hover {
-    cursor: pointer;
-    background: ${COLORS.background2};
-  }
-
   border-bottom: 2px solid ${COLORS.line1};
 
   ${({ isHighlighted }) =>
     isHighlighted &&
     css`
       background: ${COLORS.primary6};
-
-      &:hover {
-        background: ${COLORS.primary5};
-      }
     `}
 `
 
