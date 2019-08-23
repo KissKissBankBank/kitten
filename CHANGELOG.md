@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `disableOutsideScroll` prop to Modal (defaults to `false`
   to prevent Breaking Change).
+- Feature: Propagate props and add `listProps` to `ListTable.Header`.
+  (`listProps` is passing props to the list inside the Header row.)
+- Feature: Add `listProps` to `ListTable.Row`.
+- Fix: Move `ListTable.Row` `...others` props propagation
+  on `row` element instead of `list` element.
+- Feature: Add a `as` prop on `AdaptableGrid` and `AdaptableGridCol` to custom
+  HTML tags name.
+- Feature: Update `Pagination` with styled-components.
 
 ## [2.19.1] - 2019-08-20
 

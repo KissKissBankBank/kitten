@@ -47,10 +47,10 @@ const StyledItemList = styled.ul`
   }
 `
 
-export const ListTableRow = ({ isHighlighted, children, ...others }) => {
+export const ListTableRow = ({ children, listProps, ...others }) => {
   return (
-    <StyledRow isHighlighted={isHighlighted}>
-      <StyledItemList {...others}>
+    <StyledRow {...others}>
+      <StyledItemList {...listProps}>
         <Context.Consumer>
           {({ id }) => (
             <>
@@ -69,7 +69,9 @@ export const ListTableRow = ({ isHighlighted, children, ...others }) => {
 
 ListTableRow.defaultProps = {
   isHighlighted: false,
+  listProps: {},
 }
 ListTableRow.propTypes = {
   isHighlighted: PropTypes.bool,
+  listProps: PropTypes.object,
 }
