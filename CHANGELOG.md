@@ -4,17 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remove styles (`:hover` styles on `ListTable.Row`) not in the Spec.
-- Feature: Add `disableOutsideScroll` prop to Modal (defaults to `false`
+## [2.20.0] - 2019-08-23
+
+Features:
+- Add `disableOutsideScroll` prop to Modal (defaults to `false`
   to prevent Breaking Change).
-- Feature: Propagate props and add `listProps` to `ListTable.Header`.
+- Propagate props and add `listProps` to `ListTable.Header`.
   (`listProps` is passing props to the list inside the Header row.)
-- Feature: Add `listProps` to `ListTable.Row`.
-- Fix: Move `ListTable.Row` `...others` props propagation
-  on `row` element instead of `list` element.
-- Feature: Add a `as` prop on `AdaptableGrid` and `AdaptableGridCol` to custom
+- Add `listProps` to `ListTable.Row`.
+- Add a `as` prop on `AdaptableGrid` and `AdaptableGridCol` to custom
   HTML tags name.
-- Feature: Update `Pagination` with styled-components.
+- Update `Pagination` with styled-components.
+
+Fixes:
+- Remove styles (`:hover` styles on `ListTable.Row`) not in the Spec.
+- Move `ListTable.Row` `...others` props propagation
+  on `row` element instead of `list` element.
+
+
 
 ## [2.19.1] - 2019-08-20
 
