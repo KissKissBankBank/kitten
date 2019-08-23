@@ -1,6 +1,5 @@
 import React from 'react'
 import sinon from 'sinon'
-import { StyleRoot } from 'radium'
 import { pages, Pagination } from './index'
 import renderer from 'react-test-renderer'
 
@@ -25,9 +24,9 @@ describe('<Pagination />', () => {
     it('should match its empty snapshot', () => {
       const tree = renderer
         .create(
-          <StyleRoot>
+          <>
             <Pagination currentPage={10} totalPages={42} />
-          </StyleRoot>,
+          </>,
         )
         .toJSON()
 
@@ -40,9 +39,9 @@ describe('<Pagination />', () => {
       const sandbox = sinon.createSandbox()
       const onClickSpy = sandbox.spy()
       const pagination = mount(
-        <StyleRoot>
+        <>
           <Pagination onPageClick={onClickSpy} totalPages={5} />
-        </StyleRoot>,
+        </>,
       )
       const event = {
         foo: 'bar',
