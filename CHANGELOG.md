@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Propagate props and add `listProps` to `ListTable.Header`.
+  (`listProps` is passing props to the list inside the Header row.)
 - Feature: Add `listProps` to `ListTable.Row`.
 - Fix: Move `ListTable.Row` `...others` props propagation
   on `row` element instead of `list` element.
