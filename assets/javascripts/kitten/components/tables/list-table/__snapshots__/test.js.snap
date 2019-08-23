@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
+exports[`<ListTable /> with a complete structure and custom classes matches with snapshot 1`] = `
 <section
   className="list-table__StyledSection-sc-1q4tayn-0 gbaDiG"
   id="TestListTable"
 >
   <header
-    className="header__StyledHeader-sc-1f8str-0 sDJi"
+    className="customHeaderClass header__StyledHeader-sc-1f8str-0 sDJi"
   >
     <ul
-      className="header__StyledList-sc-1f8str-1 iEMMuj"
+      className="customListClass header__StyledList-sc-1f8str-1 iEMMuj"
     >
       <li
         className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
@@ -61,10 +61,10 @@ exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
       </ul>
     </li>
     <li
-      className="row__StyledRow-sc-1vlimsn-0 bbOOoM"
+      className="customRowClass row__StyledRow-sc-1vlimsn-0 bbOOoM"
     >
       <ul
-        className="row__StyledItemList-sc-1vlimsn-1 eRYPpF"
+        className="customListClass row__StyledItemList-sc-1vlimsn-1 eRYPpF"
       >
         <li
           aria-describedby="TestListTable-col-0"
