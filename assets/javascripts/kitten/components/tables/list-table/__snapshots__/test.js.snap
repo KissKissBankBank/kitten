@@ -35,7 +35,7 @@ exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
     className="body__ListTableBody-kjc0pl-0 kyLkIG"
   >
     <li
-      className="row__StyledRow-sc-1vlimsn-0 knJHQs"
+      className="row__StyledRow-sc-1vlimsn-0 dtKcON"
     >
       <ul
         className="row__StyledItemList-sc-1vlimsn-1 eRYPpF"
@@ -61,7 +61,7 @@ exports[`<ListTable /> with a complete structure matches with snapshot 1`] = `
       </ul>
     </li>
     <li
-      className="row__StyledRow-sc-1vlimsn-0 bbOOoM"
+      className="row__StyledRow-sc-1vlimsn-0 kpFNeD"
     >
       <ul
         className="row__StyledItemList-sc-1vlimsn-1 eRYPpF"
