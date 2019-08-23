@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remove styles not in the Spec.
+- Fix: Remove styles (`:hover` styles on `ListTable.Row`) not in the Spec.
 
 ## [2.19.1] - 2019-08-20
 
