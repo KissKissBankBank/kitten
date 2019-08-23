@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `listProps` to `ListTable.Row`.
 - Fix: Move `ListTable.Row` `...others` props propagation
   on `row` element instead of `list` element.
+- Feature: Update `Pagination` with styled-components.
 
 ## [2.19.1] - 2019-08-20
 
