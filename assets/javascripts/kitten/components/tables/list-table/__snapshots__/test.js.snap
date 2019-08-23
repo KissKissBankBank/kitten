@@ -32,7 +32,7 @@ exports[`<ListTable /> with a complete structure and custom classes matches with
     </ul>
   </header>
   <ul
-    className="customBodyClass body__ListTableBody-kjc0pl-0 kyLkIG"
+    className="body__ListTableBody-kjc0pl-0 kyLkIG"
   >
     <li
       className="row__StyledRow-sc-1vlimsn-0 knJHQs"
@@ -61,10 +61,10 @@ exports[`<ListTable /> with a complete structure and custom classes matches with
       </ul>
     </li>
     <li
-      className="row__StyledRow-sc-1vlimsn-0 bbOOoM"
+      className="customRowClass row__StyledRow-sc-1vlimsn-0 bbOOoM"
     >
       <ul
-        className="row__StyledItemList-sc-1vlimsn-1 eRYPpF"
+        className="customListClass row__StyledItemList-sc-1vlimsn-1 eRYPpF"
       >
         <li
           aria-describedby="TestListTable-col-0"
