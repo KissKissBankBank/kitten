@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add a `as` prop on `AdaptableGrid` and `AdaptableGridCol` to custom
+  HTML tags name.
 - Feature: Update `Pagination` with styled-components.
 
 ## [2.19.1] - 2019-08-20
