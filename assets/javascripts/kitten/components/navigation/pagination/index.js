@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
-import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Text } from '../../../components/typography/text'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
@@ -14,6 +13,7 @@ const StyledGroup = styled.ul`
   display: inline-flex;
   padding: 0;
 `
+
 const StyledList = styled.li`
   list-style: none;
   margin-right: 0;
@@ -23,7 +23,9 @@ const StyledList = styled.li`
   }
 `
 
-const StyledArrowIconDirection = styled.li`
+const StyledArrowIconDirection = styled(({ direction, ...others }) => (
+  <li {...others} />
+))`
   list-style: none;
 
   ${({ direction }) =>

@@ -13,7 +13,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     >
       <li
         className="pagination__StyledArrowIconDirection-sc-19bydjm-2 iAEjrC"
-        direction="left"
       >
         <a
           aria-disabled={false}
@@ -119,7 +118,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       </li>
       <li
         className="pagination__StyledArrowIconDirection-sc-19bydjm-2 lnGiPh"
-        direction="right"
       >
         <a
           aria-disabled={false}
