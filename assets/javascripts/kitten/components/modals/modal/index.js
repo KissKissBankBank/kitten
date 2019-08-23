@@ -87,9 +87,7 @@ export class Modal extends Component {
           ariaHideApp={false}
           onRequestClose={this.close}
           contentLabel={label}
-          bodyOpenClassName={
-            disableOutsideScroll ? 'k-Modal__body--open' : null
-          }
+          bodyOpenClassName={disableOutsideScroll && 'k-Modal__body--open'}
           {...modalProps}
         >
           {content}
