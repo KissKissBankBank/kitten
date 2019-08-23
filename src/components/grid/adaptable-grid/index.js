@@ -34,7 +34,8 @@ var AdaptableGrid = function AdaptableGrid(_ref) {
       gutter = _ref.gutter,
       colNumber = _ref.colNumber,
       colAlign = _ref.colAlign,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["children", "gutter", "colNumber", "colAlign"]);
+      as = _ref.as,
+      other = (0, _objectWithoutProperties2.default)(_ref, ["children", "gutter", "colNumber", "colAlign", "as"]);
   var gridProperties = {
     colAlign: colAlign,
     colNumber: colNumber,
@@ -42,7 +43,8 @@ var AdaptableGrid = function AdaptableGrid(_ref) {
   };
   return _react.default.createElement(StyledGrid, {
     gutter: gutter,
-    colAlign: colAlign
+    colAlign: colAlign,
+    as: as
   }, _react.default.createElement(GridProperties.Provider, {
     value: gridProperties
   }, children));
@@ -54,7 +56,8 @@ var AdaptableGridCol = function AdaptableGridCol(_ref2) {
   var children = _ref2.children,
       col = _ref2.col,
       offset = _ref2.offset,
-      other = (0, _objectWithoutProperties2.default)(_ref2, ["children", "col", "offset"]);
+      as = _ref2.as,
+      other = (0, _objectWithoutProperties2.default)(_ref2, ["children", "col", "offset", "as"]);
 
   var _useState = (0, _react.useState)(null),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -90,7 +93,8 @@ var AdaptableGridCol = function AdaptableGridCol(_ref2) {
     colAlign: colAlign,
     marginDirection: marginDirection,
     props: (0, _extends2.default)({}, other),
-    stylesByMediaQuery: styles
+    stylesByMediaQuery: styles,
+    as: as
   }, children);
 };
 
