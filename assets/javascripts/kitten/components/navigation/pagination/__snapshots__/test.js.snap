@@ -12,7 +12,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       className="pagination__StyledGroup-sc-19bydjm-0 jkFRqJ"
     >
       <li
-        className="pagination__StyledArrowIconDirection-sc-19bydjm-2 cuHNoN"
+        className="pagination__StyledArrowIconDirection-sc-19bydjm-2 iAEjrC"
         direction="left"
       >
         <a
@@ -25,6 +25,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           title="Previous page"
         >
           <svg
+            aria-hidden="true"
             className="k-ArrowIcon k-ArrowIcon--left pagination__StyledSvg-sc-19bydjm-4 RXZJI"
             data-radium={true}
             viewBox="0 0 6 6"
@@ -40,7 +41,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         </a>
       </li>
       <li
-        className="pagination__StyledList-sc-19bydjm-1 eCvjwK"
+        className="pagination__StyledList-sc-19bydjm-1 hOXHOd"
       >
         <a
           aria-current={false}
@@ -53,12 +54,13 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         </a>
       </li>
       <li
+        aria-hidden="true"
         className="pagination__StyledPoints-sc-19bydjm-5 bjKQLe"
       >
         …
       </li>
       <li
-        className="pagination__StyledList-sc-19bydjm-1 eCvjwK"
+        className="pagination__StyledList-sc-19bydjm-1 hOXHOd"
       >
         <a
           aria-current={false}
@@ -71,7 +73,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         </a>
       </li>
       <li
-        className="pagination__StyledList-sc-19bydjm-1 eCvjwK"
+        className="pagination__StyledList-sc-19bydjm-1 hOXHOd"
       >
         <span
           aria-current="page"
@@ -84,7 +86,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         </span>
       </li>
       <li
-        className="pagination__StyledList-sc-19bydjm-1 eCvjwK"
+        className="pagination__StyledList-sc-19bydjm-1 hOXHOd"
       >
         <a
           aria-current={false}
@@ -97,12 +99,13 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         </a>
       </li>
       <li
+        aria-hidden="true"
         className="pagination__StyledPoints-sc-19bydjm-5 bjKQLe"
       >
         …
       </li>
       <li
-        className="pagination__StyledList-sc-19bydjm-1 eCvjwK"
+        className="pagination__StyledList-sc-19bydjm-1 hOXHOd"
       >
         <a
           aria-current={false}
@@ -115,7 +118,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         </a>
       </li>
       <li
-        className="pagination__StyledArrowIconDirection-sc-19bydjm-2 ikVpnO"
+        className="pagination__StyledArrowIconDirection-sc-19bydjm-2 lnGiPh"
         direction="right"
       >
         <a
@@ -128,6 +131,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
           title="Next page"
         >
           <svg
+            aria-hidden="true"
             className="k-ArrowIcon k-ArrowIcon--right pagination__StyledSvg-sc-19bydjm-4 RXZJI"
             data-radium={true}
             viewBox="0 0 6 6"

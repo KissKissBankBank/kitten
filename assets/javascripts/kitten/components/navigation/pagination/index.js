@@ -21,18 +21,15 @@ const StyledList = styled.li`
   @media (min-width: ${ScreenConfig.S.min}px) {
     margin: ${pxToRem(0)} ${pxToRem(8)};
   }
-
-  &:last-child {
-    margin-right: 0;
-  }
 `
 
 const StyledArrowIconDirection = styled.li`
+  list-style: none;
+
   ${({ direction }) =>
     direction === 'left' &&
     css`
       margin-right: ${pxToRem(30)};
-      list-style: none;
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         margin-right: ${pxToRem(22)};
@@ -43,7 +40,6 @@ const StyledArrowIconDirection = styled.li`
     direction === 'right' &&
     css`
       margin-left: ${pxToRem(30)};
-      list-style: none;
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         margin-left: ${pxToRem(22)};
@@ -190,8 +186,8 @@ class PaginationBase extends PureComponent {
     onPageClick: PropTypes.func,
     totalPages: PropTypes.number,
     currentPage: PropTypes.number,
-    'aria-label': PropTypes.string,
     currentPageLabel: PropTypes.func,
+    'aria-label': PropTypes.string,
   }
 
   static defaultProps = {
@@ -200,10 +196,10 @@ class PaginationBase extends PureComponent {
     goToPageLabel: n => `Go to page ${n}`,
     goToPageHref: n => `#${n}`,
     onPageClick: () => {},
+    currentPageLabel: n => `Page ${n}, this is the current page`,
     currentPage: 1,
     totalPages: 1,
     'aria-label': 'Pagination navigation',
-    currentPageLabel: n => `Page ${n}, this is the current page`,
   }
 
   render() {
@@ -255,7 +251,11 @@ class PaginationBase extends PureComponent {
   }
 
   renderSpacer(index) {
-    return <StyledPoints key={`spacer-${index}`}>{'…'}</StyledPoints>
+    return (
+      <StyledPoints key={`spacer-${index}`} aria-hidden="true">
+        {'…'}
+      </StyledPoints>
+    )
   }
 
   renderArrowButton(direction) {
@@ -301,7 +301,11 @@ class PaginationBase extends PureComponent {
               : this.pageClickHandler(number)
           }
         >
-          <StyledSvg direction={direction} disabled={isDisabled} />
+          <StyledSvg
+            direction={direction}
+            disabled={isDisabled}
+            aria-hidden="true"
+          />
         </StyledButtonIcon>
       </StyledArrowIconDirection>
     )
