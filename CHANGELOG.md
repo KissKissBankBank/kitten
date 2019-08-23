@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `disableOutsideScroll` prop to Modal (defaults to `true`
+- Feature: Add `disableOutsideScroll` prop to Modal (defaults to `false`
   to prevent Breaking Change).
 
 ## [2.19.1] - 2019-08-20
