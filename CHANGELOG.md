@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Center scroll horizontally on `HorizontalNav` selected item.
+
 ## [2.20.0] - 2019-08-23
 
 Features:
