@@ -85,7 +85,7 @@ class CarouselInnerBase extends React.Component {
     this.observer.disconnect()
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.indexPageVisible !== this.props.indexPageVisible) {
       this.scrollToPage(nextProps.indexPageVisible)
     }

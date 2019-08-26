@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export class Deprecated extends Component {
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (process.env.NODE_ENV === 'development') {
       const owner = React.Children.only(this.props.children)._owner
 
