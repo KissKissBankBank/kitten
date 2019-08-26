@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { Text as KittenText } from '../../../components/typography/text'
+import { Text } from '../../../components/typography/text'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
@@ -50,7 +50,7 @@ const StyledArrowIconDirection = styled(({ direction, ...others }) => (
 `
 
 const StyledButtonIcon = styled(({ isDisabled, isActive, ...others }) => (
-  <KittenText {...others} />
+  <Text {...others} />
 ))`
   display: flex;
   justify-content: center;
