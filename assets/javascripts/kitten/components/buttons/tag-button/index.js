@@ -35,6 +35,42 @@ const StyledTagButton = styled.button`
     text-align: left;
   }
 
+  ${({ icon }) =>
+    icon &&
+    css`
+      ${() => HYDROGEN}
+    `}
+
+  ${({ tiny }) => tiny && TINY}
+  ${({ big }) => big && BIG}
+
+  ${({ modifier }) =>
+    (modifier === 'helium' || 'hydrogen') &&
+    css`
+      ${() => HYDROGEN}
+    `}
+
+  ${({ modifier }) =>
+    modifier === 'carbon' &&
+    css`
+      color: ${COLORS.font1};
+      border-color: ${COLORS.background1};
+      background-color: ${COLORS.background1};
+
+      &:hover,
+      &:focus {
+        color: ${COLORS.primary1};
+        border-color: ${COLORS.background1};
+        background-color: ${COLORS.background1};
+      }
+
+      &:active {
+        color: ${COLORS.primary1};
+        border-color: ${COLORS.background1};
+        background-color: ${COLORS.background1};
+      }
+    `}
+
   ${({ selected }) =>
     selected &&
     css`
@@ -42,30 +78,25 @@ const StyledTagButton = styled.button`
       border-color: ${COLORS.primary1};
       background-color: ${COLORS.primary1};
     `}
+`
 
-  ${({ tiny }) => tiny && TINY}
-  ${({ big }) => big && BIG}
+export const HYDROGEN = css`
+  color: ${COLORS.font1};
+  border-color: ${COLORS.line1};
+  background-color: ${COLORS.background1};
 
-  ${({ modifier }) =>
-    modifier === 'hydrogen' &&
-    css`
-      color: ${COLORS.font1};
-      border-color: ${COLORS.line1};
-      background-color: ${COLORS.background1};
+  &:hover,
+  &:focus {
+    color: ${COLORS.background1};
+    border-color: ${COLORS.primary2};
+    background-color: ${COLORS.primary2};
+  }
 
-      &:hover,
-      &:focus {
-        border-color: ${COLORS.primary2};
-        background-color: ${COLORS.primary2};
-        color: ${COLORS.background1};
-      }
-
-      &:active {
-        border-color: ${COLORS.primary3};
-        background-color: ${COLORS.primary3};
-        color: ${COLORS.background1};
-      }
-    `}
+  &:active {
+    color: ${COLORS.background1};
+    border-color: ${COLORS.primary3};
+    background-color: ${COLORS.primary3};
+  }
 `
 
 export const DEFAULT = css`
@@ -106,6 +137,7 @@ export class TagButton extends PureComponent {
     modifier: PropTypes.string,
     tiny: PropTypes.bool,
     big: PropTypes.bool,
+    icon: PropTypes.bool,
     selected: PropTypes.bool,
   }
 
@@ -134,6 +166,7 @@ export class TagButton extends PureComponent {
         selected={selected}
         tiny={tiny}
         big={big}
+        icon={icon}
         {...others}
       >
         {children}
