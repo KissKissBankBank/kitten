@@ -1,5 +1,5 @@
 import React from 'react'
-import { HorizontalNav } from './horizontal-nav'
+import { HorizontalNav } from './index'
 
 describe('<HorizontalNav />', () => {
   const component = shallow(
