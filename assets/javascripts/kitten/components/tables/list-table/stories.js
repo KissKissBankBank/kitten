@@ -25,7 +25,10 @@ const info = {
     #### Default
     ~~~js
     <ListTable id="…">
-      <ListTable.Header>
+      <ListTable.Header
+        {...props}
+        listProps={{…}}
+      >
         <ListTable.Col>
           …
         </ListTable.Col>
@@ -37,7 +40,10 @@ const info = {
             …
           </ListTable.Col>
         </ListTable.Row>
-        <ListTable.Row>
+        <ListTable.Row
+          {...props}
+          listProps={{…}}
+        >
           <ListTable.Col>
             …
           </ListTable.Col>
@@ -144,7 +150,10 @@ storiesOf('Tables/ListTable', module)
       return (
         <div style={{ margin: '5em 0' }}>
           <ListTable id="CustomListTable">
-            <ListTable.Header>
+            <ListTable.Header
+              className="customHeaderClass"
+              listProps={{ className: 'customListClass' }}
+            >
               <StyledCol1>
                 <VisuallyHidden>Sélection</VisuallyHidden>
                 <input
@@ -238,7 +247,10 @@ storiesOf('Tables/ListTable', module)
                 <StyledCol8>&gt;</StyledCol8>
               </ListTable.Row>
 
-              <ListTable.Row>
+              <ListTable.Row
+                className="customRowClass"
+                listProps={{ className: 'customListClass' }}
+              >
                 <StyledCol1>
                   <VisuallyHidden>
                     <h2>

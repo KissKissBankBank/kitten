@@ -6,6 +6,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update `TagButton` with styled-components.
 
+## [2.20.0] - 2019-08-23
+
+Features:
+- Add `disableOutsideScroll` prop to Modal (defaults to `false`
+  to prevent Breaking Change).
+- Propagate props and add `listProps` to `ListTable.Header`.
+  (`listProps` is passing props to the list inside the Header row.)
+- Add `listProps` to `ListTable.Row`.
+- Add a `as` prop on `AdaptableGrid` and `AdaptableGridCol` to custom
+  HTML tags name.
+- Update `Pagination` with styled-components.
+
+Fixes:
+- Remove styles (`:hover` styles on `ListTable.Row`) not in the Spec.
+- Move `ListTable.Row` `...others` props propagation
+  on `row` element instead of `list` element.
+
 ## [2.19.1] - 2019-08-20
 
 Fix:

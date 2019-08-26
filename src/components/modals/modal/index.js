@@ -109,7 +109,8 @@ function (_Component) {
           closeButtonLabel = _this$props.closeButtonLabel,
           onClose = _this$props.onClose,
           modalProps = _this$props.modalProps,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps"]);
+          disableOutsideScroll = _this$props.disableOutsideScroll,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "disableOutsideScroll"]);
       var triggerClassNames = (0, _classnames.default)('k-Modal', className);
       return _react.default.createElement("div", (0, _extends2.default)({
         className: triggerClassNames
@@ -132,7 +133,8 @@ function (_Component) {
         },
         ariaHideApp: false,
         onRequestClose: this.close,
-        contentLabel: label
+        contentLabel: label,
+        bodyOpenClassName: disableOutsideScroll && 'k-Modal__body--open'
       }, modalProps), content, this.renderCloseModal()));
     }
   }]);
@@ -145,12 +147,14 @@ Modal.propTypes = {
   labelledby: _propTypes.default.string,
   describedby: _propTypes.default.string,
   closeButtonLabel: _propTypes.default.string,
-  modalProps: _propTypes.default.object
+  modalProps: _propTypes.default.object,
+  disableOutsideScroll: _propTypes.default.bool
 };
 Modal.defaultProps = {
   label: 'Modal',
   labelledby: '',
   describedby: '',
   closeButtonLabel: '',
-  modalProps: {}
+  modalProps: {},
+  disableOutsideScroll: false
 };

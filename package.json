@@ -1,6 +1,6 @@
 {
   "name": "@kisskissbankbank/kitten",
-  "version": "2.19.1",
+  "version": "2.20.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
@@ -109,8 +109,8 @@
     "webpack-dev-server": "3.7.2"
   },
   "peerDependencies": {
-    "react": ">=16.8.x",
-    "react-dom": ">=16.8.x"
+    "react": ">=16.9.x",
+    "react-dom": ">=16.9.x"
   },
   "scripts": {
     "test": "jest --maxWorkers=2",

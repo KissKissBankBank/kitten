@@ -12,21 +12,12 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { Context } from './context'
 
 const StyledRow = styled.li`
-  &:hover {
-    cursor: pointer;
-    background: ${COLORS.background2};
-  }
-
   border-bottom: 2px solid ${COLORS.line1};
 
   ${({ isHighlighted }) =>
     isHighlighted &&
     css`
       background: ${COLORS.primary6};
-
-      &:hover {
-        background: ${COLORS.primary5};
-      }
     `}
 `
 
@@ -47,10 +38,10 @@ const StyledItemList = styled.ul`
   }
 `
 
-export const ListTableRow = ({ isHighlighted, children, ...others }) => {
+export const ListTableRow = ({ children, listProps, ...others }) => {
   return (
-    <StyledRow isHighlighted={isHighlighted}>
-      <StyledItemList {...others}>
+    <StyledRow {...others}>
+      <StyledItemList {...listProps}>
         <Context.Consumer>
           {({ id }) => (
             <>
@@ -69,7 +60,9 @@ export const ListTableRow = ({ isHighlighted, children, ...others }) => {
 
 ListTableRow.defaultProps = {
   isHighlighted: false,
+  listProps: {},
 }
 ListTableRow.propTypes = {
   isHighlighted: PropTypes.bool,
+  listProps: PropTypes.object,
 }
