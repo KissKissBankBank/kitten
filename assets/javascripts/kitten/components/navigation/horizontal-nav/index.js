@@ -29,9 +29,7 @@ export const HorizontalNav = ({
     'k-HorizontalNav--center': center,
   })
 
-  const renderItems = () => {
-    return items.map(item => renderItem(item))
-  }
+  const renderItems = () => items.map(item => renderItem(item))
 
   const renderItem = ({
     className,
