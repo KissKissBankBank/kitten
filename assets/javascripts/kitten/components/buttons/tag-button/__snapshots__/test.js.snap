@@ -80,7 +80,6 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
 
 <button
   className="c0"
-  modifier="hydrogen"
 >
   MyButton
 </button>
@@ -155,7 +154,6 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 
 <button
   className="c0"
-  modifier="helium"
 >
   MyButton
 </button>
@@ -233,7 +231,6 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 
 <button
   className="c0"
-  modifier="hydrogen"
 >
   MyButton
 </button>
@@ -319,7 +316,6 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 <button
   className="c0"
-  modifier="hydrogen"
 >
   MyButton
 </button>
@@ -410,7 +406,6 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 
 <button
   className="c0"
-  modifier="hydrogen"
 >
   <svg
     viewBox="0 0 732 224.43"
@@ -501,7 +496,6 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 
 <button
   className="c0"
-  modifier="hydrogen"
 >
   MyButton
 </button>
