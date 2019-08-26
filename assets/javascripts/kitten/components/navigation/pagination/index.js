@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { Text } from '../../../components/typography/text'
+import { Text as KittenText } from '../../../components/typography/text'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
@@ -49,7 +49,9 @@ const StyledArrowIconDirection = styled(({ direction, ...others }) => (
     `}
 `
 
-const StyledButtonIcon = styled(Text)`
+const StyledButtonIcon = styled(({ isDisabled, isActive, ...others }) => (
+  <KittenText {...others} />
+))`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,7 +268,6 @@ class PaginationBase extends PureComponent {
       nextButtonLabel,
       currentPage,
       totalPages,
-      isActive,
     } = this.props
 
     const buttonLabel =
