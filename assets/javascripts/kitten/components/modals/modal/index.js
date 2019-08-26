@@ -57,6 +57,7 @@ export class Modal extends Component {
       closeButtonLabel,
       onClose,
       modalProps,
+      disableOutsideScroll,
       ...others
     } = this.props
 
@@ -86,6 +87,7 @@ export class Modal extends Component {
           ariaHideApp={false}
           onRequestClose={this.close}
           contentLabel={label}
+          bodyOpenClassName={disableOutsideScroll && 'k-Modal__body--open'}
           {...modalProps}
         >
           {content}
@@ -103,6 +105,7 @@ Modal.propTypes = {
   describedby: PropTypes.string,
   closeButtonLabel: PropTypes.string,
   modalProps: PropTypes.object,
+  disableOutsideScroll: PropTypes.bool,
 }
 
 Modal.defaultProps = {
@@ -111,4 +114,5 @@ Modal.defaultProps = {
   describedby: '',
   closeButtonLabel: '',
   modalProps: {},
+  disableOutsideScroll: false,
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
@@ -34,14 +35,14 @@ const StyledList = styled.ul`
   }
 `
 
-export const ListTableHeader = props => {
+export const ListTableHeader = ({ children, listProps, ...others }) => {
   return (
-    <StyledHeader>
-      <StyledList>
+    <StyledHeader {...others}>
+      <StyledList {...listProps}>
         <Context.Consumer>
           {({ id }) => (
             <>
-              {React.Children.map(props.children, (child, index) => {
+              {React.Children.map(children, (child, index) => {
                 return React.cloneElement(child, { id: `${id}-col-${index}` })
               })}
             </>
@@ -50,4 +51,12 @@ export const ListTableHeader = props => {
       </StyledList>
     </StyledHeader>
   )
+}
+
+ListTableHeader.defaultProps = {
+  listProps: {},
+}
+
+ListTableHeader.propTypes = {
+  listProps: PropTypes.object,
 }

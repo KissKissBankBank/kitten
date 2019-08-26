@@ -11,7 +11,7 @@ export class SimilarProjectsCard extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.projects != nextProps.projects) {
       this.setState({ currentIndex: 0 })
     }
