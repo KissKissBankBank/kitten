@@ -1,76 +1,79 @@
 import React from 'react'
-import { TagButton } from '../../components/buttons/tag-button'
+import renderer from 'react-test-renderer'
+import 'jest-styled-components'
+import { TagButton } from './index'
+import { VisaIcon } from '../../icons/visa-icon'
 
-describe('TagButton', () => {
-  const defaultComponent = shallow(<TagButton />)
+describe('<TagButton />', () => {
+  let component
 
-  it('renders <div class="k-TagButton">', () => {
-    expect(defaultComponent.find('.k-TagButton')).toHaveLength(1)
-  })
-
-  it('has a default tag', () => {
-    expect(defaultComponent.type()).toBe('button')
-  })
-
-  it('with children', () => {
-    expect(defaultComponent.text()).toBe('Tag')
-  })
-
-  describe('<TagButton />', () => {
-    describe('basic props', () => {
-      const component = shallow(
-        <TagButton className="k-TagButton--custom" selected={false} />,
-      )
-
-      it('renders a <Button class="k-TagButton" />', () => {
-        expect(component.type()).toBe('button')
-        expect(component.text()).toBe('Tag')
-        expect(component.hasClass('k-TagButton--custom')).toBe(true)
-      })
-
-      describe('with tiny prop', () => {
-        const component = shallow(<TagButton tiny />)
-
-        it('renders a <Button class="k-TagButton--tiny" />', () => {
-          expect(component.hasClass('k-TagButton--tiny')).toBe(true)
-        })
-      })
-
-      describe('with big prop', () => {
-        const component = shallow(<TagButton big />)
-
-        it('renders a <Button class="k-TagButton--big" />', () => {
-          expect(component.hasClass('k-TagButton--big')).toBe(true)
-        })
-      })
-
-      describe('tag prop', () => {
-        const component = shallow(<a className="k-TagButton" />)
-
-        it('accepts <a className"k-TagButton" />', () => {
-          expect(component.type()).toBe('a')
-        })
-      })
-
-      describe('children', () => {
-        const component = shallow(
-          <TagButton>
-            <svg />
-          </TagButton>,
-        )
-
-        it('has children', () => {
-          expect(component.children().type()).toBe('svg')
-        })
-      })
+  describe('with text', () => {
+    beforeEach(() => {
+      component = renderer.create(<TagButton>MyButton</TagButton>).toJSON()
     })
 
-    describe('modifier prop', () => {
-      it('adds a class to the component', () => {
-        const component = shallow(<TagButton modifier="helium" />)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 
-        expect(component.hasClass('k-TagButton--helium')).toBe(true)
-      })
+  describe('with `tiny` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TagButton tiny>MyButton</TagButton>).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `big` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TagButton big>MyButton</TagButton>).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `modifier` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TagButton modifier="helium">MyButton</TagButton>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with `selected` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TagButton selected>MyButton</TagButton>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with icon', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <TagButton icon>
+            <VisaIcon />
+          </TagButton>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 })
