@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useRef, useEffect } from 'react'
+import React, { Component, useRef, useEffect } from 'react'
 import { Badge } from '../../../components/notifications/badge'
 import classNames from 'classnames'
 import Markdown from 'react-markdown'
@@ -45,10 +45,10 @@ export const HorizontalNav = ({
     })
 
     const renderBadge = (
-      <Fragment>
+      <>
         {text}
         <Badge className="k-HorizontalNav__badge">{badge}</Badge>
-      </Fragment>
+      </>
     )
 
     const renderMarkdown = markdown ? (
