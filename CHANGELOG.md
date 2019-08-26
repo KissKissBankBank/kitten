@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Center scroll horizontally on `HorizontalNav` selected item.
+- Fix: Update `Text` component styles on `Pagination`.
 
 ## [2.20.0] - 2019-08-23
 
@@ -22,8 +23,6 @@ Fixes:
 - Remove styles (`:hover` styles on `ListTable.Row`) not in the Spec.
 - Move `ListTable.Row` `...others` props propagation
   on `row` element instead of `list` element.
-
-
 
 ## [2.19.1] - 2019-08-20
 
