@@ -5,7 +5,9 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
 
-const StyledTagButton = styled.button`
+const StyledTagButton = styled(({ selected, icon, tiny, big, ...others }) => (
+  <button {...others} />
+))`
   display: inline-flex;
   align-items: center;
   justify-content: center;
