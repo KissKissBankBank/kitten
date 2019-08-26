@@ -2,14 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { storiesOf } from '@storybook/react'
-import {
-  withKnobs,
-  text,
-  boolean,
-  number,
-  radios,
-  select,
-} from '@storybook/addon-knobs'
+import { withKnobs } from '@storybook/addon-knobs'
 import { HorizontalNav } from './index'
 
 const StyledContainer = styled.div`
