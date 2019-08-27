@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Center scroll horizontally on `HorizontalNav` selected item.
 - Feature: Update `TagButton` with styled-components.
 - Fix: Remove console Warning in `Modal` component.
 - Fix: Update `Text` component styles on `Pagination`.
