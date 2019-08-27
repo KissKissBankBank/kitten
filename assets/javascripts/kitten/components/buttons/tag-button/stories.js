@@ -41,6 +41,8 @@ const info = {
     #### Modifier
     ~~~js
     <TagButton modifier="hydrogen">MyTag</TagButton>
+    <TagButton modifier="helium">MyTag</TagButton>
+    <TagButton modifier="carbon">MyTag</TagButton>
     ~~~
 
     #### Tag
