@@ -107,8 +107,8 @@ function (_React$Component) {
       _emitter.default.off('dropdown:opening:trigger', this.close);
     }
   }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(nextProps) {
       // Enable wrapper component to expand the dropdown.
       if (nextProps.isExpanded != this.state.isExpanded) {
         this.toggle(nextProps.isExpanded);
