@@ -134,7 +134,7 @@ function (_Component) {
         ariaHideApp: false,
         onRequestClose: this.close,
         contentLabel: label,
-        bodyOpenClassName: disableOutsideScroll && 'k-Modal__body--open'
+        bodyOpenClassName: disableOutsideScroll ? 'k-Modal__body--open' : null
       }, modalProps), content, this.renderCloseModal()));
     }
   }]);

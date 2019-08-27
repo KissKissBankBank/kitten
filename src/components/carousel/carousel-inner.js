@@ -194,8 +194,8 @@ function (_React$Component) {
       this.observer.disconnect();
     }
   }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.indexPageVisible !== this.props.indexPageVisible) {
         this.scrollToPage(nextProps.indexPageVisible);
       }

@@ -68,11 +68,16 @@ var StyledArrowIconDirection = (0, _styledComponents.default)(function (_ref) {
   var direction = _ref3.direction;
   return direction === 'right' && (0, _styledComponents.css)(["margin-left:", ";@media (min-width:", "px){margin-left:", ";}"], (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(22));
 });
-var StyledButtonIcon = (0, _styledComponents.default)(_text.Text).withConfig({
+var StyledButtonIcon = (0, _styledComponents.default)(function (_ref4) {
+  var isDisabled = _ref4.isDisabled,
+      isActive = _ref4.isActive,
+      others = (0, _objectWithoutProperties2.default)(_ref4, ["isDisabled", "isActive"]);
+  return _react.default.createElement(_text.Text, others);
+}).withConfig({
   displayName: "pagination__StyledButtonIcon",
   componentId: "sc-19bydjm-3"
-})(["display:flex;justify-content:center;align-items:center;box-sizing:border-box;cursor:pointer;width:", ";height:", ";border-radius:0;border-width:0;border-style:solid;text-decoration:none;font-weight:500;font-size:", ";outline:none;color:", ";border-color:", ";background-color:", ";@media (min-width:", "px){width:", ";height:", ";border-width:", ";}&:hover,&:focus{color:", ";border-color:", ";background-color:", ";}&:active{color:", ";border-color:", ";background-color:", ";}", " &[aria-disabled=\"true\"]{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.line1, _colorsConfig.default.background1, _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(2), _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, function (_ref4) {
-  var isActive = _ref4.isActive;
+})(["display:flex;justify-content:center;align-items:center;box-sizing:border-box;cursor:pointer;width:", ";height:", ";border-radius:0;border-width:0;border-style:solid;outline:none;color:", ";border-color:", ";background-color:", ";@media (min-width:", "px){width:", ";height:", ";border-width:", ";}&:hover,&:focus{color:", ";border-color:", ";background-color:", ";}&:active{color:", ";border-color:", ";background-color:", ";}", " &[aria-disabled=\"true\"]{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), _colorsConfig.default.font1, _colorsConfig.default.line1, _colorsConfig.default.background1, _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(2), _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, function (_ref5) {
+  var isActive = _ref5.isActive;
   return isActive && (0, _styledComponents.css)(["cursor:auto;color:", ";border-color:", ";background-color:", ";&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}"], _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1);
 }, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2);
 var StyledSvg = (0, _styledComponents.default)(_arrowIcon.ArrowIcon).withConfig({
@@ -152,9 +157,12 @@ function (_PureComponent) {
       return _react.default.createElement(StyledList, {
         key: "page-".concat(number)
       }, _react.default.createElement(StyledButtonIcon, {
-        as: tag,
+        tag: tag,
         href: href,
         key: "link-".concat(number),
+        weight: "regular",
+        decoration: "none",
+        size: "tiny",
         isActive: isActive,
         "aria-current": isActive && 'page',
         "aria-label": ariaLabel,
@@ -193,15 +201,14 @@ function (_PureComponent) {
           prevButtonLabel = _this$props2.prevButtonLabel,
           nextButtonLabel = _this$props2.nextButtonLabel,
           currentPage = _this$props2.currentPage,
-          totalPages = _this$props2.totalPages,
-          isActive = _this$props2.isActive;
+          totalPages = _this$props2.totalPages;
       var buttonLabel = direction == 'left' ? (0, _parser.parseHtml)(prevButtonLabel) : (0, _parser.parseHtml)(nextButtonLabel);
       var isDisabled = direction == 'left' ? currentPage == 1 : currentPage == totalPages;
       var number = direction == 'left' ? currentPage == 1 ? 1 : currentPage - 1 : currentPage == totalPages ? totalPages : currentPage + 1;
       return _react.default.createElement(StyledArrowIconDirection, {
         direction: direction
       }, _react.default.createElement(StyledButtonIcon, {
-        as: "a",
+        tag: "a",
         href: this.props.goToPageHref(number),
         key: "link-".concat(direction),
         "aria-label": buttonLabel,
