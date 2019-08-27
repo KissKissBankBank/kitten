@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Remove console Warning in `Modal` component.
+- Fix: Update `Text` component styles on `Pagination`.
 
 ## [2.20.0] - 2019-08-23
 
