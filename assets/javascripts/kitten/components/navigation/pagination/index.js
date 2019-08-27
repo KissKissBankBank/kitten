@@ -49,7 +49,9 @@ const StyledArrowIconDirection = styled(({ direction, ...others }) => (
     `}
 `
 
-const StyledButtonIcon = styled(Text)`
+const StyledButtonIcon = styled(({ isDisabled, isActive, ...others }) => (
+  <Text {...others} />
+))`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,9 +62,6 @@ const StyledButtonIcon = styled(Text)`
   border-radius: 0;
   border-width: 0;
   border-style: solid;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: ${stepToRem(-1)};
   outline: none;
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
@@ -238,9 +237,12 @@ class PaginationBase extends PureComponent {
     return (
       <StyledList key={`page-${number}`}>
         <StyledButtonIcon
-          as={tag}
+          tag={tag}
           href={href}
           key={`link-${number}`}
+          weight="regular"
+          decoration="none"
+          size="tiny"
           isActive={isActive}
           aria-current={isActive && 'page'}
           aria-label={ariaLabel}
@@ -266,7 +268,6 @@ class PaginationBase extends PureComponent {
       nextButtonLabel,
       currentPage,
       totalPages,
-      isActive,
     } = this.props
 
     const buttonLabel =
@@ -289,7 +290,7 @@ class PaginationBase extends PureComponent {
     return (
       <StyledArrowIconDirection direction={direction}>
         <StyledButtonIcon
-          as="a"
+          tag="a"
           href={this.props.goToPageHref(number)}
           key={`link-${direction}`}
           aria-label={buttonLabel}

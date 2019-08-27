@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `TagButton` with styled-components.
+- Fix: Update `Text` component styles on `Pagination`.
 
 ## [2.20.0] - 2019-08-23
 
