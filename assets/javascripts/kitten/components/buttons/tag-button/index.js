@@ -10,24 +10,33 @@ const StyledTagButton = styled(
     <button {...others} />
   ),
 )`
+
+  min-height: ${pxToRem(40)};
+  min-width: ${pxToRem(60)};
+  padding: 0 ${pxToRem(20)};
+  font-size: ${stepToRem(-2)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    height: ${pxToRem(40)};
+    width: ${pxToRem(60)};
+  }
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   position: relative;
   border-radius: ${pxToRem(4)};
-
+  border-width: ${pxToRem(2)};
+  border-style: solid;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
-  ${() => DEFAULT}
 
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${stepToRem(-2)};
   color: ${COLORS.font1};
   line-height: 1.3;
   text-decoration: none;
-
   appareance: none;
   outline: none;
-
   cursor: pointer;
 
   :disabled {
@@ -42,16 +51,39 @@ const StyledTagButton = styled(
   ${({ icon }) =>
     icon &&
     css`
-      ${() => HYDROGEN}
+      ${hydrogen}
     `}
 
-  ${({ tiny }) => tiny && TINY}
-  ${({ big }) => big && BIG}
+  ${({ tiny }) =>
+    tiny &&
+    css`
+      min-height: ${pxToRem(30)};
+      min-width: ${pxToRem(60)};
+      padding: 0 ${pxToRem(20)};
+      font-size: ${stepToRem(-2)};
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        height: ${pxToRem(40)};
+        width: ${pxToRem(60)};
+      }
+    `}
+
+  ${({ big }) =>
+    big &&
+    css`
+      min-height: ${pxToRem(50)};
+      min-width: ${pxToRem(80)};
+      padding: 0 ${pxToRem(30)};
+      font-size: ${stepToRem(-1)};
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        height: ${pxToRem(50)};
+        width: ${pxToRem(80)};
+      }
+    `}
 
   ${({ modifier }) =>
     (modifier === 'helium' || 'hydrogen') &&
     css`
-      ${() => HYDROGEN}
+      ${hydrogen}
     `}
 
   ${({ modifier }) =>
@@ -84,7 +116,7 @@ const StyledTagButton = styled(
     `}
 `
 
-export const HYDROGEN = css`
+const hydrogen = css`
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
   background-color: ${COLORS.background1};
@@ -100,39 +132,6 @@ export const HYDROGEN = css`
     color: ${COLORS.background1};
     border-color: ${COLORS.primary3};
     background-color: ${COLORS.primary3};
-  }
-`
-
-export const DEFAULT = css`
-  min-height: ${pxToRem(40)};
-  min-width: ${pxToRem(60)};
-  padding: 0 ${pxToRem(20)};
-  font-size: ${stepToRem(-2)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    height: ${pxToRem(40)};
-    width: ${pxToRem(60)};
-  }
-`
-
-export const TINY = css`
-  min-height: ${pxToRem(30)};
-  min-width: ${pxToRem(60)};
-  padding: 0 ${pxToRem(20)};
-  font-size: ${stepToRem(-2)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    height: ${pxToRem(40)};
-    width: ${pxToRem(60)};
-  }
-`
-
-export const BIG = css`
-  min-height: ${pxToRem(50)};
-  min-width: ${pxToRem(80)};
-  padding: 0 ${pxToRem(30)};
-  font-size: ${stepToRem(-1)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    height: ${pxToRem(50)};
-    width: ${pxToRem(80)};
   }
 `
 
