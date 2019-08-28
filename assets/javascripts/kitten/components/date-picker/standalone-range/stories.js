@@ -102,6 +102,11 @@ const info = {
     ## Usage
     ~~~js
     <StandaloneRangeDatePicker
+      disabledDays: [
+        {
+          after: new Date(),
+        },
+      ],
       selectedDay={new Date()}
       locale="fr"
       disabledDays={[new Date(2019, 7, 16), new Date(2019, 7, 18)]}
@@ -195,6 +200,8 @@ storiesOf('Form/DatePicker', module)
             styles={object('Styles', styles)}
             firstDayOfWeek={number('First day of the week', 1)}
             initialMonth={new Date('2019-01-01T03:24:00')}
+            numberOfMonths={number('Number of months', 2)}
+            navbarElement={boolean('NavBar component', false)}
           />
         </StoryContainer>
       )
