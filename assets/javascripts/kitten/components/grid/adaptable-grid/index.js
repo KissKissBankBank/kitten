@@ -13,11 +13,17 @@ export const AdaptableGrid = ({
   colNumber,
   colAlign,
   as,
+  className,
   ...other
 }) => {
   const gridProperties = { colAlign, colNumber, gutter }
   return (
-    <StyledGrid gutter={gutter} colAlign={colAlign} as={as}>
+    <StyledGrid
+      gutter={gutter}
+      colAlign={colAlign}
+      as={as}
+      className={className}
+    >
       <GridProperties.Provider value={gridProperties}>
         {children}
       </GridProperties.Provider>
@@ -25,7 +31,14 @@ export const AdaptableGrid = ({
   )
 }
 
-export const AdaptableGridCol = ({ children, col, offset, as, ...other }) => {
+export const AdaptableGridCol = ({
+  children,
+  col,
+  offset,
+  as,
+  className,
+  ...other
+}) => {
   const [styles, setStyles] = useState(null)
   const { colAlign, colNumber, gutter } = useContext(GridProperties)
   const marginDirection = colAlign === 'right' ? 'right' : 'left'
@@ -74,6 +87,7 @@ export const AdaptableGridCol = ({ children, col, offset, as, ...other }) => {
       props={{ ...other }}
       stylesByMediaQuery={styles}
       as={as}
+      className={className}
     >
       {children}
     </StyledGridCol>

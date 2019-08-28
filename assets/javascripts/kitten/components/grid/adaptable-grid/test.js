@@ -43,6 +43,27 @@ describe('<AdaptableGrid />', () => {
     })
   })
 
+  describe('with className', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <AdaptableGrid className="my_classname">
+            <AdaptableGridCol className="my_second_classname">
+              Test
+            </AdaptableGridCol>
+            <AdaptableGridCol className="my_third_classname">
+              Test
+            </AdaptableGridCol>
+          </AdaptableGrid>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with some props', () => {
     beforeEach(() => {
       component = renderer

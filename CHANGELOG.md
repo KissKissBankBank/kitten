@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Pass `className` prop to `AdaptableGrid` and `AdaptableGridCol` to
+  enable styling with `styled-components`.
+
 ## [2.21.0] - 2019-08-27
 
 Features:
