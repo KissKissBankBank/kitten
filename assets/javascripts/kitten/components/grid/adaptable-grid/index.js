@@ -107,7 +107,6 @@ AdaptableGrid.defaultProps = {
 }
 
 const StyledGrid = styled.div`
-  width: calc(100% + ${({ gutter }) => pxToRem(gutter)});
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
