@@ -208,3 +208,15 @@ storiesOf('Form/DatePicker', module)
     },
     { info },
   )
+
+  .add(
+    'Standalone Range DatePicker without props',
+    () => {
+      return (
+        <StoryContainer>
+          <StandaloneRangeDatePicker />
+        </StoryContainer>
+      )
+    },
+    { info },
+  )

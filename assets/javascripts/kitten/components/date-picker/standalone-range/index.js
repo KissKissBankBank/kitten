@@ -194,9 +194,15 @@ const StyledDatePicker = styled.div`
 export class StandaloneRangeDatePicker extends PureComponent {
   static propTypes = {
     styles: PropTypes.object,
+    months: PropTypes.array,
+    previousMonth: PropTypes.string,
+    nextMonth: PropTypes.string,
   }
 
   static defaultProps = {
+    months: '',
+    previousMonth: '',
+    nextMonth: '',
     styles: {
       header: {
         backgroundColor: COLORS.background1,
@@ -266,6 +272,7 @@ export class StandaloneRangeDatePicker extends PureComponent {
       title,
       firstDayOfWeek,
       initialMonth,
+      numberOfMonths,
       ...datePickerProps
     } = this.props
 
@@ -276,7 +283,7 @@ export class StandaloneRangeDatePicker extends PureComponent {
       <StyledDatePicker styles={styles}>
         <DayPicker
           className="Selectable"
-          numberOfMonths={this.props.numberOfMonths}
+          numberOfMonths={numberOfMonths}
           selectedDays={[from, { from, to }]}
           modifiers={modifiers}
           onDayClick={this.handleDayClick}

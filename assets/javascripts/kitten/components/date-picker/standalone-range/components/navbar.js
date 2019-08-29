@@ -7,7 +7,6 @@ import { Text } from '../../../../components/typography/text'
 
 const StyledText = styled(Text)`
   margin-top: ${pxToRem(30)};
-  font-weight: 500;
 `
 
 const StyledButton = styled.div`
@@ -38,16 +37,28 @@ export class Navbar extends PureComponent {
       months,
     } = this.props
 
+    const previousAriaLabel =
+      months !== undefined && months.length > 0
+        ? `${labels && labels.previousMonth}, ${
+            months[previousMonth.getMonth()]
+          } ${previousMonth.getFullYear()}`
+        : `${labels && labels.previousMonth}`
+
+    const nextAriaLabel =
+      months !== undefined && months.length > 0
+        ? `${labels && labels.nextMonth}, ${
+            months[nextMonth.getMonth()]
+          } ${nextMonth.getFullYear()}`
+        : `${labels && labels.nextMonth}`
+
     return (
       <>
-        <StyledText as="p" size="tiny">
+        <StyledText tag="p" size="tiny" weight="regular">
           {title}
         </StyledText>
         <StyledButton className={className}>
           <StyledArrowIcon
-            aria-label={`${labels.previousMonth}, ${
-              months[previousMonth.getMonth()]
-            } ${previousMonth.getFullYear()}`}
+            aria-label={previousAriaLabel}
             onClick={() => onPreviousClick()}
             icon
           >
@@ -61,9 +72,7 @@ export class Navbar extends PureComponent {
           </StyledArrowIcon>
 
           <StyledArrowIcon
-            aria-label={`${labels.nextMonth}, ${
-              months[nextMonth.getMonth()]
-            } ${nextMonth.getFullYear()}`}
+            aria-label={nextAriaLabel}
             onClick={() => onNextClick()}
             icon
           >
