@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `defaultProps` in `StandaloneRangeDatePicker` component.
+
 ## [2.22.0] - 2019-08-28
 
 Feature:
