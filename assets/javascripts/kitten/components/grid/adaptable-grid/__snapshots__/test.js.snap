@@ -2,7 +2,7 @@
 
 exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 kscnci"
+  className="adaptable-grid__StyledGrid-txsbu0-0 icUhCB"
 >
   <div
     className="adaptable-grid__StyledGridCol-txsbu0-1 fmGblY"
@@ -19,7 +19,7 @@ exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with className matches with snapshot 1`] = `
 <div
-  className="my_classname adaptable-grid__StyledGrid-txsbu0-0 kscnci"
+  className="my_classname adaptable-grid__StyledGrid-txsbu0-0 icUhCB"
 >
   <div
     className="my_second_classname adaptable-grid__StyledGridCol-txsbu0-1 gxolfR"
@@ -36,7 +36,7 @@ exports[`<AdaptableGrid /> with className matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with custom HTML tags matches with snapshot 1`] = `
 <dl
-  className="adaptable-grid__StyledGrid-txsbu0-0 kscnci"
+  className="adaptable-grid__StyledGrid-txsbu0-0 icUhCB"
 >
   <dd
     className="adaptable-grid__StyledGridCol-txsbu0-1 fmGblY"
@@ -53,7 +53,7 @@ exports[`<AdaptableGrid /> with custom HTML tags matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 cSerqo"
+  className="adaptable-grid__StyledGrid-txsbu0-0 jyuqWb"
 >
   <div
     className="adaptable-grid__StyledGridCol-txsbu0-1 kKqTcF"
