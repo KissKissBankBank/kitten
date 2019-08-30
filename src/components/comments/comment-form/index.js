@@ -229,7 +229,8 @@ CommentForm.propTypes = {
   defaultValue: _propTypes.default.string,
   commentLabel: _propTypes.default.string,
   ariaId: _propTypes.default.string,
-  avatarBadge: _propTypes.default.node
+  avatarBadge: _propTypes.default.node,
+  textareaId: _propTypes.default.string
 };
 CommentForm.defaultProps = {
   onSubmit: function onSubmit() {},
