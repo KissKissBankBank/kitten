@@ -123,6 +123,7 @@ export class CommentForm extends PureComponent {
     commentLabel: PropTypes.string,
     ariaId: PropTypes.string,
     avatarBadge: PropTypes.node,
+    textareaId: PropTypes.string,
   }
 
   static defaultProps = {
