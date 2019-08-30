@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Remove `defaultProps` in `StandaloneRangeDatePicker` component.
-- Feature: Add `textareaId` prop to `CommentForm`.
-- Fix: Fix `AdaptableGrid` width.
+## [2.23.0] - 2019-08-30
+
+Feature:
+- Add `textareaId` prop to `CommentForm`.
+
+Fixes:
+- Remove `defaultProps` in `StandaloneRangeDatePicker` component.
+- Fix `AdaptableGrid` width.
 
 ## [2.22.0] - 2019-08-28
 
@@ -20,7 +25,7 @@ Features:
 - Center scroll horizontally on `HorizontalNav` selected item.
 - Update `TagButton` with styled-components.
 
- Fixes:
+Fixes:
 - Remove console Warning in `Modal` component.
 - Update `Text` component styles on `Pagination`.
 

@@ -34,7 +34,7 @@ var _text = require("../../../../components/typography/text");
 var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "navbar__StyledText",
   componentId: "sc-1v9dr3-0"
-})(["margin-top:", ";font-weight:500;"], (0, _typography.pxToRem)(30));
+})(["margin-top:", ";"], (0, _typography.pxToRem)(30));
 
 var StyledButton = _styledComponents.default.div.withConfig({
   displayName: "navbar__StyledButton",
@@ -69,13 +69,16 @@ function (_PureComponent) {
           previousMonth = _this$props.previousMonth,
           nextMonth = _this$props.nextMonth,
           months = _this$props.months;
+      var previousAriaLabel = months !== undefined && months.length > 0 ? "".concat(labels && labels.previousMonth, ", ").concat(months[previousMonth.getMonth()], " ").concat(previousMonth.getFullYear()) : "".concat(labels && labels.previousMonth);
+      var nextAriaLabel = months !== undefined && months.length > 0 ? "".concat(labels && labels.nextMonth, ", ").concat(months[nextMonth.getMonth()], " ").concat(nextMonth.getFullYear()) : "".concat(labels && labels.nextMonth);
       return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledText, {
-        as: "p",
-        size: "tiny"
+        tag: "p",
+        size: "tiny",
+        weight: "regular"
       }, title), _react.default.createElement(StyledButton, {
         className: className
       }, _react.default.createElement(StyledArrowIcon, {
-        "aria-label": "".concat(labels.previousMonth, ", ").concat(months[previousMonth.getMonth()], " ").concat(previousMonth.getFullYear()),
+        "aria-label": previousAriaLabel,
         onClick: function onClick() {
           return onPreviousClick();
         },
@@ -87,7 +90,7 @@ function (_PureComponent) {
         width: "8",
         height: "8"
       })), _react.default.createElement(StyledArrowIcon, {
-        "aria-label": "".concat(labels.nextMonth, ", ").concat(months[nextMonth.getMonth()], " ").concat(nextMonth.getFullYear()),
+        "aria-label": nextAriaLabel,
         onClick: function onClick() {
           return onNextClick();
         },
