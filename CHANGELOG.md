@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `textareaId` prop to `CommentForm`.
 - Fix: Fix `AdaptableGrid` width.
 
 ## [2.22.0] - 2019-08-28

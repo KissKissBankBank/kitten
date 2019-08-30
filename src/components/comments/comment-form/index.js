@@ -123,18 +123,6 @@ function (_PureComponent) {
     (0, _classCallCheck2.default)(this, CommentForm);
     _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CommentForm).call(this, props));
 
-    _this.handleFocus = function () {
-      _this.setState({
-        isFocused: true
-      });
-    };
-
-    _this.handleBlur = function () {
-      _this.setState({
-        isFocused: false
-      });
-    };
-
     _this.handleChange = function (e) {
       var element = e.target;
 
@@ -153,7 +141,6 @@ function (_PureComponent) {
     };
 
     _this.state = {
-      isFocused: false,
       value: _this.props.defaultValue,
       height: 'auto'
     };
@@ -180,9 +167,9 @@ function (_PureComponent) {
           defaultValue = _this$props2.defaultValue,
           commentLabel = _this$props2.commentLabel,
           ariaId = _this$props2.ariaId,
-          error = _this$props2.error,
-          errorMessage = _this$props2.errorMessage;
+          textareaId = _this$props2.textareaId;
       return _react.default.createElement(StyledGridCol, null, _react.default.createElement(StyledInput, null, _react.default.createElement(StyledTextarea, {
+        id: textareaId,
         "aria-label": commentLabel,
         "aria-describedby": ariaId,
         "aria-invalid": "false",
@@ -191,8 +178,6 @@ function (_PureComponent) {
         key: "comment-form",
         disabled: isDisabled,
         placeholder: placeholder,
-        onFocus: this.handleFocus,
-        onBlur: this.handleBlur,
         onChange: this.handleChange,
         rows: "1"
       }), _react.default.createElement(StyledArrow, null, _react.default.createElement(StyledArrowBefore, null))), this.renderError(), this.renderButton());
@@ -255,5 +240,6 @@ CommentForm.defaultProps = {
   defaultValue: '',
   ariaId: '',
   commentLabel: '',
-  avatarBadge: ''
+  avatarBadge: '',
+  textareaId: null
 };

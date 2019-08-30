@@ -27,6 +27,7 @@ describe('<CommentForm />', () => {
     const tree = renderer
       .create(
         <CommentForm
+          textareaId="custom-textarea-id"
           avatarImgProps={{
             src: '#image',
             alt: 'Image alt',
