@@ -60,9 +60,8 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         className="comment-form__StyledTextarea-sc-1yidca9-3 GUTNa"
         defaultValue=""
         disabled={false}
-        onBlur={[Function]}
+        id={null}
         onChange={[Function]}
-        onFocus={[Function]}
         placeholder="Leave a comment on the project"
         rows="1"
       />
@@ -124,9 +123,8 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         className="comment-form__StyledTextarea-sc-1yidca9-3 GUTNa"
         defaultValue=""
         disabled={false}
-        onBlur={[Function]}
+        id="custom-textarea-id"
         onChange={[Function]}
-        onFocus={[Function]}
         placeholder="Leave a comment on the project"
         rows="1"
       />

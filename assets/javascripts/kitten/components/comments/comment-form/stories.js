@@ -46,7 +46,12 @@ const info = {
 
     ### With avatarBadge
     ~~~js
-    <Comment avatarBadge="…" />
+    <CommentForm avatarBadge="…" />
+    ~~~
+
+    ### With textarea ID
+    ~~~js
+    <CommentForm textareaId="…" />
     ~~~
   `,
   header: false,
