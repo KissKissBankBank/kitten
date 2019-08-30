@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `defaultProps` in `StandaloneRangeDatePicker` component.
 - Feature: Add `textareaId` prop to `CommentForm`.
 - Fix: Fix `AdaptableGrid` width.
 
