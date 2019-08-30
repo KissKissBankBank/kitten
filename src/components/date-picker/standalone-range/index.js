@@ -138,7 +138,8 @@ function (_PureComponent) {
           title = _this$props.title,
           firstDayOfWeek = _this$props.firstDayOfWeek,
           initialMonth = _this$props.initialMonth,
-          datePickerProps = (0, _objectWithoutProperties2.default)(_this$props, ["styles", "locale", "months", "weekDays", "weekdaysShort", "previousMonth", "disabledDays", "nextMonth", "title", "firstDayOfWeek", "initialMonth"]);
+          numberOfMonths = _this$props.numberOfMonths,
+          datePickerProps = (0, _objectWithoutProperties2.default)(_this$props, ["styles", "locale", "months", "weekDays", "weekdaysShort", "previousMonth", "disabledDays", "nextMonth", "title", "firstDayOfWeek", "initialMonth", "numberOfMonths"]);
       var _this$state = this.state,
           from = _this$state.from,
           to = _this$state.to;
@@ -150,7 +151,7 @@ function (_PureComponent) {
         styles: styles
       }, _react.default.createElement(_reactDayPicker.default, {
         className: "Selectable",
-        numberOfMonths: this.props.numberOfMonths,
+        numberOfMonths: numberOfMonths,
         selectedDays: [from, {
           from: from,
           to: to
@@ -184,36 +185,22 @@ function (_PureComponent) {
 
 exports.StandaloneRangeDatePicker = StandaloneRangeDatePicker;
 StandaloneRangeDatePicker.propTypes = {
-  numberOfMonths: _propTypes.default.number,
-  locale: _propTypes.default.string,
-  previousMonth: _propTypes.default.string,
-  weekDays: _propTypes.default.array,
-  months: _propTypes.default.array,
-  navbarElement: _propTypes.default.node,
-  disabledDays: _propTypes.default.array,
-  title: _propTypes.default.string,
-  dayPickerProps: _propTypes.default.shape({}),
   styles: _propTypes.default.object,
-  firstDayOfWeek: _propTypes.default.number
+  months: _propTypes.default.array,
+  previousMonth: _propTypes.default.string,
+  nextMonth: _propTypes.default.string
 };
 StandaloneRangeDatePicker.defaultProps = {
-  numberOfMonths: 2,
-  locale: 'en',
-  previousMonth: 'Previous month',
-  nextMonth: 'Next month',
-  weekDays: null,
-  title: '',
-  months: null,
-  navbarElement: '',
-  firstDayOfWeek: 1,
-  disabledDays: [{
-    after: new Date()
-  }],
-  dayPickerProps: {},
+  months: '',
+  previousMonth: '',
+  nextMonth: '',
   styles: {
     header: {
       backgroundColor: _colorsConfig.default.background1,
-      color: _colorsConfig.default.font1
+      color: _colorsConfig.default.font1,
+      icon: {
+        color: _colorsConfig.default.font1
+      }
     },
     borderColor: _colorsConfig.default.line1,
     weekdaysColor: _colorsConfig.default.font1,

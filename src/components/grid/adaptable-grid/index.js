@@ -117,7 +117,7 @@ AdaptableGrid.defaultProps = {
 var StyledGrid = _styledComponents.default.div.withConfig({
   displayName: "adaptable-grid__StyledGrid",
   componentId: "txsbu0-0"
-})(["width:100%;box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:", ";margin-left:", ";margin-right:", ";"], function (_ref3) {
+})(["box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:", ";margin-left:", ";margin-right:", ";"], function (_ref3) {
   var colAlign = _ref3.colAlign;
   return colAlign;
 }, function (_ref4) {
