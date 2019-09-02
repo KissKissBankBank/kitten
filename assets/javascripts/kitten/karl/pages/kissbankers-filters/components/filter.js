@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { ArrowContainer } from '../../../../components/layout/arrow-container'
@@ -11,29 +11,48 @@ const ActionsMarger = styled(Marger)`
   justify-content: space-between;
 `
 
-const Filter = ({ children, values }) => {
+function useClickOutside(ref, onFilterClose) {
+  function handleStatusChange(event) {
+    if (!ref.current.contains(event.target)) {
+      onFilterClose()
+    }
+  }
+
+  document.addEventListener('click', handleStatusChange)
+  return function cleanup() {
+    document.removeEventListener('click', handleStatusChange)
+  }
+}
+
+const Filter = ({ children, values, isOpen, onFilterClose }) => {
+  const filterRef = useRef(null)
+  useEffect(() => useClickOutside(filterRef, onFilterClose))
+
   return (
-    <ArrowContainer
-      padding={30}
-      color={COLORS.background1}
-      position="top"
-      borderWidth={1}
-      borderRadius={4}
-      borderColor={COLORS.line1}
-      shadow
-    >
-      {children}
+    <div ref={filterRef}>
+      <ArrowContainer
+        padding={30}
+        color={COLORS.background1}
+        position="top"
+        borderWidth={1}
+        borderRadius={4}
+        borderColor={COLORS.line1}
+        shadow
+        style={{ marginTop: 20 }}
+      >
+        {children}
 
-      <ActionsMarger top="3">
-        <Text tag="button" color="font1" size="tiny" weight="regular">
-          Effacer
-        </Text>
+        <ActionsMarger top="3">
+          <Text tag="button" color="font1" size="tiny" weight="regular">
+            Effacer
+          </Text>
 
-        <Text tag="button" color="primary1" size="tiny" weight="regular">
-          Appliquer
-        </Text>
-      </ActionsMarger>
-    </ArrowContainer>
+          <Text tag="button" color="primary1" size="tiny" weight="regular">
+            Appliquer
+          </Text>
+        </ActionsMarger>
+      </ArrowContainer>
+    </div>
   )
 }
 
