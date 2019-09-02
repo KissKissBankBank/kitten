@@ -38,7 +38,7 @@ const Filter = ({ children, values, isOpen, onFilterClose }) => {
         borderRadius={4}
         borderColor={COLORS.line1}
         shadow
-        style={{ marginTop: 20 }}
+        style={{ marginTop: 20, position: 'absolute' }}
       >
         {children}
 

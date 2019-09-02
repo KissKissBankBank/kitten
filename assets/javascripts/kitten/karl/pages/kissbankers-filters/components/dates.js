@@ -5,18 +5,21 @@ import { Container } from '../../../../components/grid/container'
 import Filter from './filter'
 
 const Dates = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [showFilter, setShowFilter] = useState(false)
 
-  const onButtonClick = () => setIsOpen(true)
-  const onFilterClose = () => setIsOpen(false)
+  const onButtonClick = () => setShowFilter(true)
+  const onFilterClose = () => setShowFilter(false)
 
   return (
     <>
       <TagButton onClick={onButtonClick}>Dates</TagButton>
 
-      {isOpen && (
+      {showFilter && (
         <Filter onFilterClose={onFilterClose}>
-          <StandaloneRangeDatePicker numberOfMonths={2} />
+          <StandaloneRangeDatePicker
+            numberOfMonths={2}
+            title="Sélectionnez la période souhaitée"
+          />
         </Filter>
       )}
     </>
