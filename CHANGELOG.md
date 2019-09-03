@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `TextInputWithIcon` with `styled-components`.
+
 ## [2.23.0] - 2019-08-30
 
 Feature:
