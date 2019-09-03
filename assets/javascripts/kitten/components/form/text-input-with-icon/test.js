@@ -8,7 +8,13 @@ describe('<TextInputWithIcon />', () => {
 
   describe('by default', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithIcon />).toJSON()
+      component = renderer
+        .create(
+          <TextInputWithIcon>
+            <SearchIcon />
+          </TextInputWithIcon>,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -19,19 +25,11 @@ describe('<TextInputWithIcon />', () => {
   describe('with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TextInputWithIcon placeholder="Les props sont transmises" />)
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with children prop', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(<TextInputWithIcon children={<SearchIcon />} />)
+        .create(
+          <TextInputWithIcon placeholder="Les props sont transmises">
+            <SearchIcon />
+          </TextInputWithIcon>,
+        )
         .toJSON()
     })
 
@@ -42,7 +40,13 @@ describe('<TextInputWithIcon />', () => {
 
   describe('with valid prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithIcon valid />).toJSON()
+      component = renderer
+        .create(
+          <TextInputWithIcon valid>
+            <SearchIcon />
+          </TextInputWithIcon>,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -52,7 +56,13 @@ describe('<TextInputWithIcon />', () => {
 
   describe('with error prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithIcon error />).toJSON()
+      component = renderer
+        .create(
+          <TextInputWithIcon error>
+            <SearchIcon />
+          </TextInputWithIcon>,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -62,7 +72,13 @@ describe('<TextInputWithIcon />', () => {
 
   describe('with disabled prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithIcon disabled />).toJSON()
+      component = renderer
+        .create(
+          <TextInputWithIcon disabled>
+            <SearchIcon />
+          </TextInputWithIcon>,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -72,7 +88,13 @@ describe('<TextInputWithIcon />', () => {
 
   describe('with tiny prop', () => {
     beforeEach(() => {
-      component = renderer.create(<TextInputWithIcon tiny />).toJSON()
+      component = renderer
+        .create(
+          <TextInputWithIcon tiny>
+            <SearchIcon />
+          </TextInputWithIcon>,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
