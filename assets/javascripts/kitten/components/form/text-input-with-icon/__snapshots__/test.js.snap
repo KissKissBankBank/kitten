@@ -11,7 +11,6 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
   />
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
-    disabled={false}
   />
 </div>
 `;
@@ -27,7 +26,6 @@ exports[`<TextInputWithIcon /> with children prop matches with snapshot 1`] = `
   />
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
-    disabled={false}
   >
     <svg
       viewBox="-0.7 -0.7 18 18"
@@ -63,8 +61,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
     name="text"
   />
   <span
-    className="text-input-with-icon__StyledIcon-rvt8kr-2 fqRTAQ"
-    disabled={true}
+    className="text-input-with-icon__StyledIcon-rvt8kr-2 hzWCjh"
   />
 </div>
 `;
@@ -80,7 +77,6 @@ exports[`<TextInputWithIcon /> with error prop matches with snapshot 1`] = `
   />
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
-    disabled={false}
   />
 </div>
 `;
@@ -97,7 +93,6 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
   />
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
-    disabled={false}
   />
 </div>
 `;
@@ -113,7 +108,6 @@ exports[`<TextInputWithIcon /> with tiny prop matches with snapshot 1`] = `
   />
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
-    disabled={false}
   />
 </div>
 `;
@@ -129,7 +123,6 @@ exports[`<TextInputWithIcon /> with valid prop matches with snapshot 1`] = `
   />
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
-    disabled={false}
   />
 </div>
 `;

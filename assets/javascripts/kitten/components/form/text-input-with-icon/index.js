@@ -14,7 +14,7 @@ const StyledTextInput = styled(TextInput)`
   padding-left: ${pxToRem(50)};
 `
 
-const StyledIcon = styled.span`
+const StyledIcon = styled(({ disabled, ...others }) => <span {...others} />)`
   display: flex;
   position: absolute;
   align-self: center;

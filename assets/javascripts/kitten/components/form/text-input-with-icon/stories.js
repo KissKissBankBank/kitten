@@ -59,14 +59,13 @@ storiesOf('Form/TextInput', module)
               error={boolean('Error', false)}
               disabled={boolean('Disabled', false)}
               tiny={boolean('Tiny', false)}
-              children={
-                boolean('Icon', true) && <SearchIcon width="15" height="15" />
-              }
               placeholder={text(
                 'Les props sont transmises',
                 'Les props sont transmises',
               )}
-            />
+            >
+              <SearchIcon width="15" height="15" />
+            </TextInputWithIcon>
           </GridCol>
         </Grid>
       )
