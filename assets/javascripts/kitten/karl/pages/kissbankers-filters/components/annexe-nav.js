@@ -28,7 +28,7 @@ class AnnexeNav extends PureComponent {
             <ExportIcon />
             <span>Exporter</span>
           </Button>
-          <StyledInput />
+          <StyledInput placeholder="Via un email, un nom ou un #" />
         </StyledButtonContainer>
       </>
     )
