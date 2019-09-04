@@ -120,4 +120,36 @@ describe('<Button />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with icon and tiny', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button icon tiny>
+            !
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with icon and big', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button icon big>
+            !
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
