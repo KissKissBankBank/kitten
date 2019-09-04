@@ -11,10 +11,6 @@ const StyledTextInputWithIcon = styled.div`
   position: relative;
 `
 
-const StyledTextInput = styled(TextInput)`
-  padding-left: ${pxToRem(50)};
-`
-
 const StyledIcon = styled(({ disabled, ...others }) => <span {...others} />)`
   display: flex;
   position: absolute;
@@ -52,7 +48,11 @@ export class TextInputWithIcon extends PureComponent {
 
     return (
       <StyledTextInputWithIcon>
-        <StyledTextInput {...others} disabled={disabled} />
+        <TextInput
+          {...others}
+          style={{ paddingLeft: `${pxToRem(50)}`, ...others.style }}
+          disabled={disabled}
+        />
 
         {accessibilityLabel && (
           <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
