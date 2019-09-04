@@ -9,6 +9,7 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
     disabled={false}
     name="text"
   />
+  
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
   >
@@ -45,6 +46,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
     disabled={true}
     name="text"
   />
+  
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 hzWCjh"
   >
@@ -81,6 +83,7 @@ exports[`<TextInputWithIcon /> with error prop matches with snapshot 1`] = `
     disabled={false}
     name="text"
   />
+  
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
   >
@@ -118,6 +121,7 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
     name="text"
     placeholder="Les props sont transmises"
   />
+  
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
   >
@@ -154,6 +158,7 @@ exports[`<TextInputWithIcon /> with tiny prop matches with snapshot 1`] = `
     disabled={false}
     name="text"
   />
+  
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
   >
@@ -190,6 +195,7 @@ exports[`<TextInputWithIcon /> with valid prop matches with snapshot 1`] = `
     disabled={false}
     name="text"
   />
+  
   <span
     className="text-input-with-icon__StyledIcon-rvt8kr-2 bsIBbo"
   >

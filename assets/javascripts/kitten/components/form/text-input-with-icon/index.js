@@ -4,6 +4,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { TextInput } from '../../../components/form/text-input'
 import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
+import { VisuallyHidden } from '../../accessibility/visually-hidden'
 
 const StyledTextInputWithIcon = styled.div`
   display: flex;
@@ -40,10 +41,12 @@ export class TextInputWithIcon extends PureComponent {
     error: PropTypes.bool,
     disabled: PropTypes.bool,
     tiny: PropTypes.bool,
+    accessibilityLabel: PropTypes.string,
     children: PropTypes.node.isRequired,
   }
 
   static defaultProps = {
+    accessibilityLabel: '',
     valid: false,
     error: false,
     disabled: false,
@@ -51,7 +54,15 @@ export class TextInputWithIcon extends PureComponent {
   }
 
   render() {
-    const { valid, error, disabled, tiny, children, ...others } = this.props
+    const {
+      valid,
+      error,
+      disabled,
+      tiny,
+      children,
+      accessibilityLabel,
+      ...others
+    } = this.props
 
     return (
       <StyledTextInputWithIcon>
@@ -62,6 +73,9 @@ export class TextInputWithIcon extends PureComponent {
           disabled={disabled}
           tiny={tiny}
         />
+        {accessibilityLabel && (
+          <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
+        )}
         <StyledIcon disabled={disabled}>{children}</StyledIcon>
       </StyledTextInputWithIcon>
     )

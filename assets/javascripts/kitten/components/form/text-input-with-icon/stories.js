@@ -64,7 +64,12 @@ storiesOf('Form/TextInput', module)
                 'Les props sont transmises',
               )}
             >
-              <SearchIcon width="15" height="15" />
+              <SearchIcon
+                aria-label="Search icon"
+                aria-hidden="true"
+                width="15"
+                height="15"
+              />
             </TextInputWithIcon>
           </GridCol>
         </Grid>
