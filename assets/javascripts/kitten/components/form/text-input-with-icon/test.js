@@ -9,11 +9,7 @@ describe('<TextInputWithIcon />', () => {
   describe('by default', () => {
     beforeEach(() => {
       component = renderer
-        .create(
-          <TextInputWithIcon>
-            <SearchIcon />
-          </TextInputWithIcon>,
-        )
+        .create(<TextInputWithIcon icon={<SearchIcon />} />)
         .toJSON()
     })
 
@@ -26,41 +22,10 @@ describe('<TextInputWithIcon />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <TextInputWithIcon placeholder="Les props sont transmises">
-            <SearchIcon />
-          </TextInputWithIcon>,
-        )
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with valid prop', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(
-          <TextInputWithIcon valid>
-            <SearchIcon />
-          </TextInputWithIcon>,
-        )
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with error prop', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(
-          <TextInputWithIcon error>
-            <SearchIcon />
-          </TextInputWithIcon>,
+          <TextInputWithIcon
+            icon={<SearchIcon />}
+            placeholder="Les props sont transmises"
+          />,
         )
         .toJSON()
     })
@@ -73,27 +38,7 @@ describe('<TextInputWithIcon />', () => {
   describe('with disabled prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(
-          <TextInputWithIcon disabled>
-            <SearchIcon />
-          </TextInputWithIcon>,
-        )
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('with tiny prop', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(
-          <TextInputWithIcon tiny>
-            <SearchIcon />
-          </TextInputWithIcon>,
-        )
+        .create(<TextInputWithIcon disabled icon={<SearchIcon />} />)
         .toJSON()
     })
 

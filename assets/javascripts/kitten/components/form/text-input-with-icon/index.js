@@ -37,46 +37,27 @@ const StyledIcon = styled(({ disabled, ...others }) => <span {...others} />)`
 
 export class TextInputWithIcon extends PureComponent {
   static propTypes = {
-    valid: PropTypes.bool,
-    error: PropTypes.bool,
     disabled: PropTypes.bool,
-    tiny: PropTypes.bool,
     accessibilityLabel: PropTypes.string,
-    children: PropTypes.node.isRequired,
+    icon: PropTypes.node.isRequired,
   }
 
   static defaultProps = {
     accessibilityLabel: '',
-    valid: false,
-    error: false,
     disabled: false,
-    tiny: false,
   }
 
   render() {
-    const {
-      valid,
-      error,
-      disabled,
-      tiny,
-      children,
-      accessibilityLabel,
-      ...others
-    } = this.props
+    const { disabled, icon, accessibilityLabel, ...others } = this.props
 
     return (
       <StyledTextInputWithIcon>
-        <StyledTextInput
-          {...others}
-          valid={valid}
-          error={error}
-          disabled={disabled}
-          tiny={tiny}
-        />
+        <StyledTextInput {...others} disabled={disabled} />
+
         {accessibilityLabel && (
           <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
         )}
-        <StyledIcon disabled={disabled}>{children}</StyledIcon>
+        <StyledIcon disabled={disabled}>{icon}</StyledIcon>
       </StyledTextInputWithIcon>
     )
   }

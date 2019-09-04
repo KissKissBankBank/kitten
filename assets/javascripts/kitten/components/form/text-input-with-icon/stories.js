@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, boolean, text } from '@storybook/addon-knobs'
+import { withKnobs, boolean, text, object } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithIcon } from './index'
 import { SearchIcon } from '../../../components/icons/search-icon'
@@ -30,6 +30,7 @@ const info = {
     ~~~
 
     #### State
+    ### Default props for "TextInput"
     ~~~js
     <TextInputWithIcon valid />
     <TextInputWithIcon error />
@@ -43,6 +44,8 @@ const info = {
     <TextInputWithIcon>
     ~~~
   `,
+  header: false,
+  propTables: false,
 }
 
 storiesOf('Form/TextInput', module)
@@ -55,22 +58,20 @@ storiesOf('Form/TextInput', module)
         <Grid style={{ marginTop: '5em' }}>
           <GridCol offset="1" col="6">
             <TextInputWithIcon
-              valid={boolean('Valid', false)}
-              error={boolean('Error', false)}
               disabled={boolean('Disabled', false)}
-              tiny={boolean('Tiny', false)}
               placeholder={text(
                 'Les props sont transmises',
                 'Les props sont transmises',
               )}
-            >
-              <SearchIcon
-                aria-label="Search icon"
-                aria-hidden="true"
-                width="15"
-                height="15"
-              />
-            </TextInputWithIcon>
+              icon={
+                <SearchIcon
+                  aria-label="Search icon"
+                  aria-hidden="true"
+                  width="15"
+                  height="15"
+                />
+              }
+            />
           </GridCol>
         </Grid>
       )
