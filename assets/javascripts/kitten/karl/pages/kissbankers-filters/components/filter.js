@@ -10,6 +10,9 @@ const ActionsMarger = styled(Marger)`
   display: flex;
   justify-content: space-between;
 `
+const StyledText = styled(Text)`
+  border: none;
+`
 
 function useClickOutside(ref, onFilterClose) {
   function handleStatusChange(event) {
@@ -43,13 +46,18 @@ const Filter = ({ children, values, isOpen, onFilterClose }) => {
         {children}
 
         <ActionsMarger top="3">
-          <Text tag="button" color="font1" size="tiny" weight="regular">
+          <StyledText tag="button" color="font1" size="tiny" weight="regular">
             Effacer
-          </Text>
+          </StyledText>
 
-          <Text tag="button" color="primary1" size="tiny" weight="regular">
+          <StyledText
+            tag="button"
+            color="primary1"
+            size="tiny"
+            weight="regular"
+          >
             Appliquer
-          </Text>
+          </StyledText>
         </ActionsMarger>
       </ArrowContainer>
     </div>
