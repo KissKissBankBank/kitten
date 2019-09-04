@@ -57,30 +57,9 @@ const StyledButton = styled.button`
   ${({ tiny }) => tiny && TINY}
   ${({ big }) => big && BIG}
   ${({ fluid }) => fluid && FLUID}
-
-  ${({ icon }) =>
-    icon &&
-    css`
-      min-width: initial;
-      min-height: initial;
-      width: ${pxToRem(50)};
-      height: ${pxToRem(50)};
-      padding: 0;
-
-      ${({ tiny }) =>
-        tiny &&
-        css`
-          width: ${pxToRem(40)};
-          height: ${pxToRem(40)};
-        `}
-
-      ${({ big }) =>
-        big &&
-        css`
-          width: ${pxToRem(70)};
-          height: ${pxToRem(70)};
-        `}
-    `}
+  ${({ icon }) => icon && ICON}
+  ${({ icon, tiny }) => icon && tiny && ICON_TINY}
+  ${({ icon, big }) => icon && big && ICON_BIG}
 
   ${({ modifier }) => modifierStyles(modifier)}
 `
@@ -152,6 +131,23 @@ export const BIG = css`
     width: ${pxToRem(220)};
     height: ${pxToRem(70)};
   }
+`
+export const ICON = css`
+  min-width: initial;
+  min-height: initial;
+  width: ${pxToRem(50)};
+  height: ${pxToRem(50)};
+  padding: 0;
+`
+
+export const ICON_TINY = css`
+  width: ${pxToRem(40)};
+  height: ${pxToRem(40)};
+`
+
+export const ICON_BIG = css`
+  width: ${pxToRem(70)};
+  height: ${pxToRem(70)};
 `
 
 export class Button extends Component {
