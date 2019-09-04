@@ -8,11 +8,10 @@ import { SearchIcon } from '../../../../components/icons/search-icon'
 
 const StyledButtonContainer = styled.div`
   display: flex;
+  flex: 1 1 auto;
 `
 
-const StyledInput = styled(TextInput)`
-  justify-content: flex-end;
-`
+const StyledInput = styled(TextInput)``
 
 class AnnexeNav extends PureComponent {
   render() {
@@ -24,7 +23,7 @@ class AnnexeNav extends PureComponent {
             <span>Contacter</span>
           </Button>
 
-          <Button modifier="helium" style={{ marginRight: 80 }}>
+          <Button modifier="helium">
             <ExportIcon />
             <span>Exporter</span>
           </Button>
