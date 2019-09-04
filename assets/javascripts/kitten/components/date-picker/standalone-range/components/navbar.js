@@ -6,7 +6,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
 
 const StyledText = styled(Text)`
-  margin-top: ${pxToRem(30)};
+  margin-top: 0;
 `
 
 const StyledButton = styled.div`
