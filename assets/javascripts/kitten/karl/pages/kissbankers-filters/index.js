@@ -5,6 +5,7 @@ import Variations from './components/variations'
 import Messages from './components/messages'
 import Statutes from './components/statutes'
 import Deliveries from './components/deliveries'
+import Result from './components/result'
 import AnnexeNav from './components/annexe-nav'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -22,7 +23,10 @@ const StyledContainer = styled.ul`
   }
 
   & li:last-child {
+    flex: 1;
+    align-self: center;
     margin-right: 0;
+    text-align: end;
   }
 `
 
@@ -46,6 +50,9 @@ const KissbankersFilters = props => (
       </li>
       <li>
         <Deliveries />
+      </li>
+      <li>
+        <Result />
       </li>
     </StyledContainer>
     <AnnexeNav />

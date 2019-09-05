@@ -19,6 +19,9 @@ const Variations = () => {
         <Filter onFilterClose={onFilterClose}>
           <Field>
             <Field.Checkbox>Hello</Field.Checkbox>
+            <Field.Checkbox>Hello</Field.Checkbox>
+            <Field.Checkbox>Hello</Field.Checkbox>
+            <Field.Checkbox>Lorem Ipsum</Field.Checkbox>
           </Field>
         </Filter>
       )}
