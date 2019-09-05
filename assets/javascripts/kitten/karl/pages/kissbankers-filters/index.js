@@ -5,10 +5,12 @@ import Variations from './components/variations'
 import Messages from './components/messages'
 import Statutes from './components/statutes'
 import Deliveries from './components/deliveries'
+import MoreFilters from './components/more-filters'
 import Result from './components/result'
 import AnnexeNav from './components/annexe-nav'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledContainer = styled.ul`
   display: flex;
@@ -18,15 +20,45 @@ const StyledContainer = styled.ul`
   position: relative;
   padding-inline-start: 0;
 
-  & li {
+  li {
     margin-right: ${pxToRem(15)};
   }
 
-  & li:last-child {
+  li:last-child {
     flex: 1;
     align-self: center;
     margin-right: 0;
     text-align: end;
+  }
+
+  li:nth-child(2) {
+    @media (max-width: ${ScreenConfig.S.max}px) {
+      display: none;
+    }
+  }
+
+  li:nth-child(3) {
+    @media (max-width: ${ScreenConfig.M.max}px) {
+      display: none;
+    }
+  }
+
+  li:nth-child(4) {
+    @media (max-width: ${ScreenConfig.S.max}px) {
+      display: none;
+    }
+  }
+
+  li:nth-child(5) {
+    @media (max-width: ${ScreenConfig.M.max}px) {
+      display: none;
+    }
+  }
+
+  li:nth-child(6) {
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      display: none;
+    }
   }
 `
 
@@ -50,6 +82,9 @@ const KissbankersFilters = props => (
       </li>
       <li>
         <Deliveries />
+      </li>
+      <li>
+        <MoreFilters />
       </li>
       <li>
         <Result />
