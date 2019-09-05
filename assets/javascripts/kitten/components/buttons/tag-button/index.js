@@ -129,9 +129,9 @@ const hydrogen = css`
   }
 
   &:active {
-    color: ${COLORS.background1};
-    border-color: ${COLORS.primary3};
-    background-color: ${COLORS.primary3};
+    color: ${COLORS.primary2};
+    border-color: ${COLORS.primary2};
+    background-color: ${COLORS.background1};
   }
 `
 
