@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `TextInputWithIcon` component.
 - Feature: Export `ICON`, `ICON_TINY` and `ICON_BIG` css from `Button`.
 
 ## [2.23.0] - 2019-08-30
