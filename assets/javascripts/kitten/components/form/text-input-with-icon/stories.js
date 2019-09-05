@@ -30,7 +30,7 @@ const info = {
     ~~~
 
     #### State
-    ### Default props for "TextInput"
+    ### Default props's "TextInput"
     ~~~js
     <TextInputWithIcon valid />
     <TextInputWithIcon error />
@@ -59,10 +59,7 @@ storiesOf('Form/TextInput', module)
           <GridCol offset="1" col="6">
             <TextInputWithIcon
               disabled={boolean('Disabled', false)}
-              placeholder={text(
-                'Les props sont transmises',
-                'Les props sont transmises',
-              )}
+              placeholder={text('Placeholder', 'Les props sont transmises')}
               icon={
                 <SearchIcon
                   aria-label="Search icon"
