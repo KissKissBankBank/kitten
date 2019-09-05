@@ -16,10 +16,6 @@ const StyledButtonContainer = styled.div`
   }
 `
 
-const StyledInput = styled(TextInput)`
-  flex: 1;
-`
-
 const buttonMargin = css`
   @media (max-width: ${ScreenConfig.M.max}px) {
     ${ICON}
@@ -32,7 +28,6 @@ const buttonMargin = css`
 
 const StyledEmailButton = styled(Button)`
   ${buttonMargin}
-
   margin-right: ${pxToRem(10)};
 
   @media (min-width: ${ScreenConfig.S.min}px) {
@@ -42,7 +37,6 @@ const StyledEmailButton = styled(Button)`
 
 const StyledExportButton = styled(Button)`
   ${buttonMargin}
-
   margin-right: ${pxToRem(20)};
 
   @media (min-width: ${ScreenConfig.S.min}px) {
@@ -70,7 +64,10 @@ class AnnexeNav extends PureComponent {
             <ExportIcon width="14" height="16" />
             <StyledButtonText>Exporter</StyledButtonText>
           </StyledExportButton>
-          <StyledInput placeholder="Via un email, un nom ou un #" />
+          <TextInput
+            placeholder="Via un email, un nom ou un #"
+            style={{ flex: 1 }}
+          />
         </StyledButtonContainer>
       </>
     )
