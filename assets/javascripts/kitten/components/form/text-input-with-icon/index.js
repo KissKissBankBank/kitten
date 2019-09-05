@@ -48,16 +48,17 @@ export class TextInputWithIcon extends PureComponent {
 
     return (
       <StyledTextInputWithIcon>
+        {accessibilityLabel && (
+          <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
+        )}
         <TextInput
           {...others}
           style={{ paddingLeft: `${pxToRem(50)}`, ...others.style }}
           disabled={disabled}
         />
-
-        {accessibilityLabel && (
-          <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
-        )}
-        <StyledIcon disabled={disabled}>{icon}</StyledIcon>
+        <StyledIcon aria-hidden="true" disabled={disabled}>
+          {icon}
+        </StyledIcon>
       </StyledTextInputWithIcon>
     )
   }
