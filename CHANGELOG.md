@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `active` pseudo-class to `TagButton`.
 - Feature: Add `TextInputWithIcon` component.
 - Feature: Export `ICON`, `ICON_TINY` and `ICON_BIG` css from `Button`.
 
