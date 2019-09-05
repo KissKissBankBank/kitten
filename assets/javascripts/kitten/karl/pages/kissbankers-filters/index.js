@@ -29,30 +29,6 @@ const StyledContainer = styled.ul`
     margin-right: 0;
     text-align: end;
   }
-
-  li:nth-child(2) {
-    @media (max-width: ${ScreenConfig.S.max}px) {
-      display: none;
-    }
-  }
-
-  li:nth-child(3) {
-    @media (max-width: ${ScreenConfig.S.max}px) {
-      display: none;
-    }
-  }
-
-  li:nth-child(4) {
-    @media (max-width: ${ScreenConfig.S.max}px) {
-      display: none;
-    }
-  }
-
-  li:nth-child(5) {
-    @media (min-width: ${ScreenConfig.M.min}px) {
-      display: none;
-    }
-  }
 `
 
 const KissbankersFilters = props => (
@@ -64,16 +40,16 @@ const KissbankersFilters = props => (
       <li>
         <Dates />
       </li>
-      <li>
+      <li className="k-u-hidden@s-down">
         <Variations />
       </li>
-      <li>
+      <li className="k-u-hidden@s-down">
         <Statutes />
       </li>
-      <li>
+      <li className="k-u-hidden@s-down">
         <Deliveries />
       </li>
-      <li>
+      <li className="k-u-hidden@m-up">
         <MoreFilters />
       </li>
       <li>

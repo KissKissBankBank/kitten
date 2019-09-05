@@ -12,10 +12,10 @@ const StyledContribute = styled(Text)`
 const Result = () => (
   <>
     <Text size="tiny" weight="light">
-      Résultat :
+      Résultat&nbsp;:
       <StyledContribute size="tiny" weight="regular">
         {' '}
-        1 contribution
+        1&nbsp;contribution
       </StyledContribute>
     </Text>
   </>

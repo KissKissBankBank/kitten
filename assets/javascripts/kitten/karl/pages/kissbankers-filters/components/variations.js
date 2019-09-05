@@ -11,7 +11,9 @@ const Variations = () => {
 
   return (
     <>
-      <TagButton onClick={onButtonClick}>Contrepartie</TagButton>
+      <TagButton onClick={onButtonClick} aria-expanded={showFilter}>
+        Contrepartie
+      </TagButton>
 
       {showFilter && (
         <Filter onFilterClose={onFilterClose}>

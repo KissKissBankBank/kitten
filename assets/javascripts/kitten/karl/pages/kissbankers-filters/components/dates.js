@@ -11,7 +11,9 @@ const Dates = () => {
 
   return (
     <>
-      <TagButton onClick={onButtonClick}>Dates</TagButton>
+      <TagButton onClick={onButtonClick} aria-expanded={showFilter}>
+        Dates
+      </TagButton>
 
       {showFilter && (
         <Filter onFilterClose={onFilterClose}>

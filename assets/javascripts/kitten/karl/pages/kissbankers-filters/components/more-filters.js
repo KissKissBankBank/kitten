@@ -13,7 +13,9 @@ const MoreFilters = () => {
 
   return (
     <>
-      <TagButton onClick={onButtonClick}>Plus de filtres</TagButton>
+      <TagButton onClick={onButtonClick} aria-expanded={showFilter}>
+        Plus de filtres
+      </TagButton>
 
       {showFilter && (
         <Filter onFilterClose={onFilterClose}>

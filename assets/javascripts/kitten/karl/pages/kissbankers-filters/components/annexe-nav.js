@@ -20,7 +20,7 @@ const buttonMargin = css`
   @media (max-width: ${ScreenConfig.M.max}px) {
     ${ICON}
 
-    > : nth-child(n) {
+    > :nth-child(n) {
       margin-right: 0;
     }
   }
@@ -44,12 +44,6 @@ const StyledExportButton = styled(Button)`
   }
 `
 
-const StyledButtonText = styled.span`
-  @media (max-width: ${ScreenConfig.M.max}px) {
-    display: none;
-  }
-`
-
 class AnnexeNav extends PureComponent {
   render() {
     return (
@@ -57,14 +51,15 @@ class AnnexeNav extends PureComponent {
         <StyledButtonContainer>
           <StyledEmailButton modifier="helium">
             <EmailIcon width="19" height="12" />
-            <StyledButtonText>Contacter</StyledButtonText>
+            <span className="k-u-hidden@m-down">Contacter</span>
           </StyledEmailButton>
 
           <StyledExportButton modifier="helium">
             <ExportIcon width="14" height="16" />
-            <StyledButtonText>Exporter</StyledButtonText>
+            <span className="k-u-hidden@m-down">Exporter</span>
           </StyledExportButton>
           <TextInput
+            aria-label="Via un email, un nom ou un #"
             placeholder="Via un email, un nom ou un #"
             style={{ flex: 1 }}
           />

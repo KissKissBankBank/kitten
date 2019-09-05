@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { ArrowContainer } from '../../../../components/layout/arrow-container'
 import { Text } from '../../../../components/typography/text'
-import { Marger } from '../../../../components/layout/marger'
 import COLORS from '../../../../constants/colors-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
-const ActionsMarger = styled(Marger)`
+const ActionsMarger = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-top: ${pxToRem(30)};
 `
 
 function useClickOutside(ref, onFilterClose) {
@@ -42,7 +43,7 @@ const Filter = ({ children, values, isOpen, onFilterClose }) => {
       >
         {children}
 
-        <ActionsMarger top="3">
+        <ActionsMarger>
           <Text
             as="button"
             color="font1"
