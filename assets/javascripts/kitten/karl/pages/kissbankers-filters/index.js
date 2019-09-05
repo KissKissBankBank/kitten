@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Dates from './components/dates'
 import Variations from './components/variations'
-import Messages from './components/messages'
 import Statutes from './components/statutes'
 import Deliveries from './components/deliveries'
 import MoreFilters from './components/more-filters'
@@ -38,7 +37,7 @@ const StyledContainer = styled.ul`
   }
 
   li:nth-child(3) {
-    @media (max-width: ${ScreenConfig.M.max}px) {
+    @media (max-width: ${ScreenConfig.S.max}px) {
       display: none;
     }
   }
@@ -50,13 +49,7 @@ const StyledContainer = styled.ul`
   }
 
   li:nth-child(5) {
-    @media (max-width: ${ScreenConfig.M.max}px) {
-      display: none;
-    }
-  }
-
-  li:nth-child(6) {
-    @media (min-width: ${ScreenConfig.L.min}px) {
+    @media (min-width: ${ScreenConfig.M.min}px) {
       display: none;
     }
   }
@@ -75,9 +68,6 @@ const KissbankersFilters = props => (
         <Variations />
       </li>
       <li>
-        <Messages />
-      </li>
-      <li>
         <Statutes />
       </li>
       <li>
@@ -91,6 +81,15 @@ const KissbankersFilters = props => (
       </li>
     </StyledContainer>
     <AnnexeNav />
+    <Text
+      as="button"
+      color="primary1"
+      size="tiny"
+      weight="regular"
+      style={{ border: 'none' }}
+    >
+      Réinitialiser les résultats
+    </Text>
   </nav>
 )
 

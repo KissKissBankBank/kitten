@@ -9,6 +9,11 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 
 const StyledButtonContainer = styled.div`
   display: flex;
+  margin-bottom: ${pxToRem(15)};
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    margin-bottom: ${pxToRem(20)};
+  }
 `
 
 const StyledInput = styled(TextInput)`
