@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
+<div
+  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fEDZEZ"
+>
+  
+  <input
+    className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    disabled={false}
+    name="text"
+    style={
+      Object {
+        "paddingLeft": "3.13rem",
+      }
+    }
+  />
+  <span
+    aria-hidden="true"
+    className="text-input-with-icon__StyledIcon-rvt8kr-1 jUNPCs"
+  >
+    <svg
+      viewBox="-0.7 -0.7 18 18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Search
+      </title>
+      <circle
+        cx="7"
+        cy="7"
+        fill="none"
+        r="7"
+        stroke="#333"
+        strokeWidth="1.1"
+      />
+      <path
+        d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z"
+        fill="#333"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
+<div
+  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fEDZEZ"
+>
+  
+  <input
+    className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    disabled={true}
+    name="text"
+    style={
+      Object {
+        "paddingLeft": "3.13rem",
+      }
+    }
+  />
+  <span
+    aria-hidden="true"
+    className="text-input-with-icon__StyledIcon-rvt8kr-1 gdWvZU"
+  >
+    <svg
+      viewBox="-0.7 -0.7 18 18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Search
+      </title>
+      <circle
+        cx="7"
+        cy="7"
+        fill="none"
+        r="7"
+        stroke="#333"
+        strokeWidth="1.1"
+      />
+      <path
+        d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z"
+        fill="#333"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
+<div
+  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fEDZEZ"
+>
+  
+  <input
+    className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    disabled={false}
+    name="text"
+    placeholder="Les props sont transmises"
+    style={
+      Object {
+        "paddingLeft": "3.13rem",
+      }
+    }
+  />
+  <span
+    aria-hidden="true"
+    className="text-input-with-icon__StyledIcon-rvt8kr-1 jUNPCs"
+  >
+    <svg
+      viewBox="-0.7 -0.7 18 18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Search
+      </title>
+      <circle
+        cx="7"
+        cy="7"
+        fill="none"
+        r="7"
+        stroke="#333"
+        strokeWidth="1.1"
+      />
+      <path
+        d="M13 11 L17 15 L15.5 16.5 L11.5 12.7z"
+        fill="#333"
+      />
+    </svg>
+  </span>
+</div>
+`;
