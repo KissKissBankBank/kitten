@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import { Button, ICON } from '../../../../components/buttons/button/button'
-import { TextInput } from '../../../../components/form/text-input'
+import { TextInputWithIcon } from '../../../../components/form/text-input-with-icon'
+import { SearchIcon } from '../../../../components/icons/search-icon'
 import { ExportIcon } from '../../../../components/icons/export-icon'
 import { EmailIcon } from '../../../../components/icons/email-icon'
 import { ScreenConfig } from '../../../../constants/screen-config'
@@ -58,11 +59,20 @@ class AnnexeNav extends PureComponent {
             <ExportIcon width="14" height="16" />
             <span className="k-u-hidden@m-down">Exporter</span>
           </StyledExportButton>
-          <TextInput
-            aria-label="Via un email, un nom ou un #"
-            placeholder="Via un email, un nom ou un #"
-            style={{ flex: 1 }}
-          />
+          <div style={{ flex: 1 }}>
+            <TextInputWithIcon
+              aria-label="Via un email, un nom ou un #"
+              placeholder="Via un email, un nom ou un #"
+              icon={
+                <SearchIcon
+                  aria-label="Search icon"
+                  aria-hidden="true"
+                  width="15"
+                  height="15"
+                />
+              }
+            />
+          </div>
         </StyledButtonContainer>
       </>
     )
