@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `modalClassNames` and `hasCloseButton` to `Modal`.
+- Page: New `MobileModal` page in Karl.
+
 ## [2.24.0] - 2019-09-06
 
 Features:
