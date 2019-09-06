@@ -102,6 +102,18 @@ Modal.propTypes = {
   closeButtonLabel: PropTypes.string,
   modalProps: PropTypes.object,
   disableOutsideScroll: PropTypes.bool,
+  modalClassNames: PropTypes.shape({
+    className: PropTypes.shape({
+      base: PropTypes.string,
+      afterOpen: PropTypes.string,
+      beforeClose: PropTypes.string,
+    }),
+    overlayClassName: PropTypes.shape({
+      base: PropTypes.string,
+      afterOpen: PropTypes.string,
+      beforeClose: PropTypes.string,
+    }),
+  }),
   hasCloseButton: PropTypes.bool,
 }
 
