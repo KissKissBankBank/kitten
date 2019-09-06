@@ -65,7 +65,7 @@ var StyledTagButton = (0, _styledComponents.default)(function (_ref) {
   var selected = _ref7.selected;
   return selected && (0, _styledComponents.css)(["color:", ";border-color:", ";background-color:", ";"], _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1);
 });
-var hydrogen = (0, _styledComponents.css)(["color:", ";border-color:", ";background-color:", ";&:hover,&:focus{color:", ";border-color:", ";background-color:", ";}&:active{color:", ";border-color:", ";background-color:", ";}"], _colorsConfig.default.font1, _colorsConfig.default.line1, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.primary3, _colorsConfig.default.primary3);
+var hydrogen = (0, _styledComponents.css)(["color:", ";border-color:", ";background-color:", ";&:hover,&:focus{color:", ";border-color:", ";background-color:", ";}&:active{color:", ";border-color:", ";background-color:", ";}"], _colorsConfig.default.font1, _colorsConfig.default.line1, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.background1);
 
 var TagButton =
 /*#__PURE__*/

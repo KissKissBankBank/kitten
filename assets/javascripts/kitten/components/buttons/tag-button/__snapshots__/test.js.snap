@@ -63,9 +63,9 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 .c0:active {
-  color: #fff;
-  border-color: #0496cc;
-  background-color: #0496cc;
+  color: #05a8e6;
+  border-color: #05a8e6;
+  background-color: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -148,9 +148,9 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 .c0:active {
-  color: #fff;
-  border-color: #0496cc;
-  background-color: #0496cc;
+  color: #05a8e6;
+  border-color: #05a8e6;
+  background-color: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -229,9 +229,9 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 }
 
 .c0:active {
-  color: #fff;
-  border-color: #0496cc;
-  background-color: #0496cc;
+  color: #05a8e6;
+  border-color: #05a8e6;
+  background-color: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -311,9 +311,9 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c0:active {
-  color: #fff;
-  border-color: #0496cc;
-  background-color: #0496cc;
+  color: #05a8e6;
+  border-color: #05a8e6;
+  background-color: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -399,9 +399,9 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 }
 
 .c0:active {
-  color: #fff;
-  border-color: #0496cc;
-  background-color: #0496cc;
+  color: #05a8e6;
+  border-color: #05a8e6;
+  background-color: #fff;
 }
 
 .c0:hover,
@@ -412,9 +412,9 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 }
 
 .c0:active {
-  color: #fff;
-  border-color: #0496cc;
-  background-color: #0496cc;
+  color: #05a8e6;
+  border-color: #05a8e6;
+  background-color: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -506,9 +506,9 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 .c0:active {
-  color: #fff;
-  border-color: #0496cc;
-  background-color: #0496cc;
+  color: #05a8e6;
+  border-color: #05a8e6;
+  background-color: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
