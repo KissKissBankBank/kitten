@@ -156,6 +156,7 @@
 // Modals
 
 @include k-Modal((z-index: 10));
+@include k-MobileModal((z-index: 10));
 
 // Navigation
 
