@@ -12,7 +12,7 @@ describe('typography helpers', () => {
     const range = stepToRem(4)
 
     it('returns "1.601875rem"', () => {
-      expect(range).toEqual('1.6rem')
+      expect(range).toEqual('1.602rem')
     })
   })
   describe('stepToRem : -2', () => {
