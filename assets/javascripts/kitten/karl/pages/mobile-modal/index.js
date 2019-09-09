@@ -13,7 +13,7 @@ const borderWidth = pxToRem(2)
 const borderColor = COLORS.line1
 
 const GlobalStyle = createGlobalStyle`
-  body.k-MobileModal__body--open {
+  body.k-Modal__body--open {
     overflow: hidden;
   }
 
