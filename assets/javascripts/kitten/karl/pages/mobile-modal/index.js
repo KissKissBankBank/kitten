@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useRef, useEffect } from 'react'
 import { Modal } from '../../../components/modals/modal'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig, SCREEN_SIZE_S } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
@@ -11,6 +11,51 @@ const ModalProperties = createContext({})
 
 const borderWidth = pxToRem(2)
 const borderColor = COLORS.line1
+
+const GlobalStyle = createGlobalStyle`
+  body.k-MobileModal__body--open {
+    overflow: hidden;
+  }
+
+  .k-MobileModal__content {
+    position: relative;
+    max-height: 100vh;
+    max-width: 100vw;
+
+    background-color: ${COLORS.background1};
+    text-align: left;
+
+    outline: none;
+    box-sizing: border-box;
+    overflow: scroll;
+
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      width: 100vw;
+      height: 100vh;
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      max-height: calc(100vh - ${pxToRem(20)} * 2);
+      max-width: ${pxToRem(900)};
+      margin: 0 ${pxToRem(20)};
+      width: 100%;
+    }
+  }
+
+  .k-MobileModal__overlay {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(34, 34, 34, .9);
+  }
+`
 
 const StyledHeader = styled.header`
   position: sticky;
@@ -70,29 +115,32 @@ const MobileModal = ({ children, ...props }) => {
   const modalRef = useRef(null)
 
   return (
-    <Modal
-      ref={modalRef}
-      modalClassNames={{
-        className: {
-          base: 'k-MobileModal__content',
-          afterOpen: 'k-MobileModal--afterOpen',
-          beforeClose: 'k-MobileModal--beforeClose',
-        },
-        overlayClassName: {
-          base: 'k-Modal__overlay',
-          afterOpen: 'k-Modal__overlay--afterOpen',
-          beforeClose: 'k-Modal__overlay--beforeClose',
-        },
-        closeContainerClassName: 'k-MobileModal__close',
-      }}
-      content={
-        <ModalProperties.Provider value={{ modalRef }}>
-          {children}
-        </ModalProperties.Provider>
-      }
-      hasCloseButton={false}
-      {...props}
-    />
+    <>
+      <GlobalStyle />
+      <Modal
+        ref={modalRef}
+        modalClassNames={{
+          className: {
+            base: 'k-MobileModal__content',
+            afterOpen: 'k-MobileModal--afterOpen',
+            beforeClose: 'k-MobileModal--beforeClose',
+          },
+          overlayClassName: {
+            base: 'k-MobileModal__overlay',
+            afterOpen: 'k-MobileModal__overlay--afterOpen',
+            beforeClose: 'k-MobileModal__overlay--beforeClose',
+          },
+          closeContainerClassName: 'k-MobileModal__close',
+        }}
+        content={
+          <ModalProperties.Provider value={{ modalRef }}>
+            {children}
+          </ModalProperties.Provider>
+        }
+        hasCloseButton={false}
+        {...props}
+      />
+    </>
   )
 }
 
