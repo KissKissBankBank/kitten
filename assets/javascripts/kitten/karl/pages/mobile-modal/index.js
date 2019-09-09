@@ -4,7 +4,6 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
-import { createMatchMediaMax } from '../../../helpers/utils/media-queries'
 import { CloseButton } from '../../../components/buttons/close-button'
 
 const ModalProperties = createContext({})
