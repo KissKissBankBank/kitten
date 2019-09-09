@@ -8,7 +8,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
     className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      className="comment-avatar__StyledPosition-sc-10x87zp-1 gwuSzB"
+      className="comment-avatar__StyledPosition-sc-10x87zp-1 cBLdwX"
     >
       <div
         className="comment-avatar__StyledAvatarBadge-sc-10x87zp-3 giOOEs"
@@ -35,7 +35,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         </svg>
       </div>
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 cyfqAR"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 DuzOU"
         tabIndex={null}
       >
         <img
@@ -47,17 +47,17 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
     </div>
   </div>
   <div
-    className="comment-form__StyledGridCol-sc-1yidca9-1 jUUDNx"
+    className="comment-form__StyledGridCol-sc-1yidca9-1 XZIme"
   >
     <div
-      className="comment-form__StyledInput-sc-1yidca9-2 dxkHAQ"
+      className="comment-form__StyledInput-sc-1yidca9-2 kGPLCq"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="comment-form__StyledTextarea-sc-1yidca9-3 GUTNa"
+        className="comment-form__StyledTextarea-sc-1yidca9-3 cadkuh"
         defaultValue=""
         disabled={false}
         id={null}
@@ -66,10 +66,10 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         rows="1"
       />
       <div
-        className="comment-form__StyledArrow-sc-1yidca9-4 zxaAT"
+        className="comment-form__StyledArrow-sc-1yidca9-4 byYHHG"
       >
         <span
-          className="comment-form__StyledArrowBefore-sc-1yidca9-5 WsPtJ"
+          className="comment-form__StyledArrowBefore-sc-1yidca9-5 dqidpL"
         />
       </div>
     </div>
@@ -95,10 +95,10 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      className="comment-avatar__StyledPosition-sc-10x87zp-1 gwuSzB"
+      className="comment-avatar__StyledPosition-sc-10x87zp-1 cBLdwX"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 cyfqAR"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 DuzOU"
         tabIndex={null}
       >
         <img
@@ -110,17 +110,17 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     </div>
   </div>
   <div
-    className="comment-form__StyledGridCol-sc-1yidca9-1 jUUDNx"
+    className="comment-form__StyledGridCol-sc-1yidca9-1 XZIme"
   >
     <div
-      className="comment-form__StyledInput-sc-1yidca9-2 dxkHAQ"
+      className="comment-form__StyledInput-sc-1yidca9-2 kGPLCq"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="comment-form__StyledTextarea-sc-1yidca9-3 GUTNa"
+        className="comment-form__StyledTextarea-sc-1yidca9-3 cadkuh"
         defaultValue=""
         disabled={false}
         id="custom-textarea-id"
@@ -129,10 +129,10 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         rows="1"
       />
       <div
-        className="comment-form__StyledArrow-sc-1yidca9-4 zxaAT"
+        className="comment-form__StyledArrow-sc-1yidca9-4 byYHHG"
       >
         <span
-          className="comment-form__StyledArrowBefore-sc-1yidca9-5 WsPtJ"
+          className="comment-form__StyledArrowBefore-sc-1yidca9-5 dqidpL"
         />
       </div>
     </div>

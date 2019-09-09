@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="autocomplete__Input-lfeqwe-1 fSAKaA"
+        className="autocomplete__Input-lfeqwe-1 liTbEZ"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -122,7 +122,7 @@ Array [
     className="marger__StyledMarger-q3lecu-0 cHJBWz"
   >
     <input
-      className="text-input__StyledInput-sc-11wej6v-1 dERTZf"
+      className="text-input__StyledInput-sc-11wej6v-1 igKCIp"
       disabled={false}
       id="input"
       name="field"
@@ -216,7 +216,7 @@ Array [
     className="marger__StyledMarger-q3lecu-0 cHJBWz"
   >
     <input
-      className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+      className="text-input__StyledInput-sc-11wej6v-1 klwChc"
       disabled={false}
       id="input"
       name="field"
@@ -299,7 +299,7 @@ Array [
       className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
     >
       <input
-        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 dERTZf"
+        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 igKCIp"
         disabled={false}
         id="input"
         name="field"
@@ -308,7 +308,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="password-input__StyledIcon-sc-1futz46-2 jvuiVZ"
+        className="password-input__StyledIcon-sc-1futz46-2 zXloy"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -423,7 +423,7 @@ Array [
       className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
     >
       <input
-        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 klwChc"
         disabled={false}
         id="input"
         name="field"
@@ -432,7 +432,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="password-input__StyledIcon-sc-1futz46-2 jvuiVZ"
+        className="password-input__StyledIcon-sc-1futz46-2 zXloy"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"

@@ -2,10 +2,10 @@
 
 exports[`<TextCopy /> should match snapshot 1`] = `
 <div
-  className="text-copy__Wrapper-sc-1ikj7bl-0 hsoZhM"
+  className="text-copy__Wrapper-sc-1ikj7bl-0 qkRJ"
 >
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 bOrRYf"
+    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 fNDwkQ"
     forceOneLine={false}
     onClick={[Function]}
   >
@@ -15,7 +15,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
   </span>
   <div
     aria-hidden={true}
-    className="text-copy__IconWrapper-sc-1ikj7bl-2 fXiZvS"
+    className="text-copy__IconWrapper-sc-1ikj7bl-2 eyJNPm"
     onClick={[Function]}
   >
     <svg
@@ -33,7 +33,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
 
 exports[`<TextCopy /> should match snapshot with description 1`] = `
 <div
-  className="text-copy__Wrapper-sc-1ikj7bl-0 hsoZhM"
+  className="text-copy__Wrapper-sc-1ikj7bl-0 qkRJ"
 >
   <span
     className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
@@ -41,7 +41,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     This is a description
   </span>
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 bOrRYf"
+    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 fNDwkQ"
     forceOneLine={false}
     onClick={[Function]}
   >
@@ -51,7 +51,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
   </span>
   <div
     aria-hidden={true}
-    className="text-copy__IconWrapper-sc-1ikj7bl-2 fXiZvS"
+    className="text-copy__IconWrapper-sc-1ikj7bl-2 eyJNPm"
     onClick={[Function]}
   >
     <svg
@@ -69,7 +69,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
 
 exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
 <div
-  className="text-copy__Wrapper-sc-1ikj7bl-0 hsoZhM"
+  className="text-copy__Wrapper-sc-1ikj7bl-0 qkRJ"
 >
   <span
     className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
@@ -77,7 +77,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     This is a description
   </span>
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 zsAbu"
+    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-1 jqndsW"
     forceOneLine={true}
     onClick={[Function]}
   >
@@ -87,7 +87,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
   </span>
   <div
     aria-hidden={true}
-    className="text-copy__IconWrapper-sc-1ikj7bl-2 fXiZvS"
+    className="text-copy__IconWrapper-sc-1ikj7bl-2 eyJNPm"
     onClick={[Function]}
   >
     <svg

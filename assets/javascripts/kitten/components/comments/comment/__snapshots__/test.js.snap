@@ -8,7 +8,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
     className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      className="comment-avatar__StyledPosition-sc-10x87zp-1 gwuSzB"
+      className="comment-avatar__StyledPosition-sc-10x87zp-1 cBLdwX"
     >
       <div
         className="comment-avatar__StyledAvatarBadge-sc-10x87zp-3 giOOEs"
@@ -35,7 +35,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         </svg>
       </div>
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 cyfqAR"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 DuzOU"
         tabIndex={null}
       >
         <img
@@ -52,10 +52,10 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
     </span>
   </div>
   <span
-    className="comment__StyledCommentContainer-sc-8s8e85-3 eLGRSh"
+    className="comment__StyledCommentContainer-sc-8s8e85-3 ljFjYq"
   >
     <div
-      className="comment__StyledCommentContent-sc-8s8e85-4 dfSJoR"
+      className="comment__StyledCommentContent-sc-8s8e85-4 gwDopp"
     >
       <div
         className="marger__StyledMarger-q3lecu-0 gkLTfi"
@@ -67,16 +67,16 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         </span>
       </div>
       <div
-        className="comment__StyledMargerText-sc-8s8e85-5 bXaYeS"
+        className="comment__StyledMargerText-sc-8s8e85-5 gvdfbv"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 kYdcHB"
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 dtvvjO"
         >
           Custom text
         </span>
       </div>
       <span
-        className="comment__StyledCommentArrow-sc-8s8e85-1 kcYuFb"
+        className="comment__StyledCommentArrow-sc-8s8e85-1 iPaNrC"
       />
     </div>
     
@@ -92,10 +92,10 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      className="comment-avatar__StyledPosition-sc-10x87zp-1 gwuSzB"
+      className="comment-avatar__StyledPosition-sc-10x87zp-1 cBLdwX"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 cyfqAR"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 DuzOU"
         tabIndex={null}
       >
         <img
@@ -112,10 +112,10 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     </span>
   </div>
   <span
-    className="comment__StyledCommentContainer-sc-8s8e85-3 eLGRSh"
+    className="comment__StyledCommentContainer-sc-8s8e85-3 ljFjYq"
   >
     <div
-      className="comment__StyledCommentContent-sc-8s8e85-4 dfSJoR"
+      className="comment__StyledCommentContent-sc-8s8e85-4 gwDopp"
     >
       <div
         className="marger__StyledMarger-q3lecu-0 gkLTfi"
@@ -127,23 +127,23 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         </span>
       </div>
       <div
-        className="comment__StyledMargerText-sc-8s8e85-5 bXaYeS"
+        className="comment__StyledMargerText-sc-8s8e85-5 gvdfbv"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 kYdcHB"
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 dtvvjO"
         >
           Custom text
         </span>
       </div>
       <span
-        className="comment__StyledCommentArrow-sc-8s8e85-1 kcYuFb"
+        className="comment__StyledCommentArrow-sc-8s8e85-1 iPaNrC"
       />
     </div>
     <div
       className="marger__StyledMarger-q3lecu-0 hPZhRT"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-6 bWSYZb"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-bold comment__StyledBottomNotes-sc-8s8e85-6 ffzJdk"
       >
         <div>
           <a
@@ -181,10 +181,10 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
   >
     <div
-      className="comment-avatar__StyledPosition-sc-10x87zp-1 gwuSzB"
+      className="comment-avatar__StyledPosition-sc-10x87zp-1 cBLdwX"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 cyfqAR"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 DuzOU"
         tabIndex={null}
       >
         <img
@@ -201,10 +201,10 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     </span>
   </div>
   <span
-    className="comment__StyledCommentContainer-sc-8s8e85-3 eLGRSh"
+    className="comment__StyledCommentContainer-sc-8s8e85-3 ljFjYq"
   >
     <div
-      className="comment__StyledCommentContent-sc-8s8e85-4 dfSJoR"
+      className="comment__StyledCommentContent-sc-8s8e85-4 gwDopp"
     >
       <div
         className="marger__StyledMarger-q3lecu-0 gkLTfi"
@@ -216,30 +216,30 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         </span>
       </div>
       <div
-        className="comment__StyledMargerText-sc-8s8e85-5 fflFHR"
+        className="comment__StyledMargerText-sc-8s8e85-5 frzRFh"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 kYdcHB"
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 dtvvjO"
         >
           Custom text
         </span>
       </div>
       <span
-        className="comment__StyledCommentArrow-sc-8s8e85-1 kcYuFb"
+        className="comment__StyledCommentArrow-sc-8s8e85-1 iPaNrC"
       />
     </div>
     <div
-      className="comment__StyledLikeButtonBox-sc-8s8e85-7 fCmQex"
+      className="comment__StyledLikeButtonBox-sc-8s8e85-7 cBMFHf"
     >
       <button
         aria-pressed="true"
-        className="like-button__StyledButton-wk7ovs-0 fyuygq"
+        className="like-button__StyledButton-wk7ovs-0 hodykL"
         role="button"
       >
         
         <svg
           aria-hidden="true"
-          className="like-button__StyledHeartIcon-wk7ovs-1 ljTbhm"
+          className="like-button__StyledHeartIcon-wk7ovs-1 dxqOkK"
           fill="#222"
           focusable="false"
           viewBox="0 0 14 12"

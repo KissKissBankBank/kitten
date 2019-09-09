@@ -2,7 +2,7 @@
 
 exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
-  className="donation-card__StyledCard-sc-19h76fz-0 cKKhfB"
+  className="donation-card__StyledCard-sc-19h76fz-0 GsFsR"
 >
   <div
     className="marger__StyledMarger-q3lecu-0 dhVuZS"
@@ -17,7 +17,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 jgfcQX"
         >
           <h2
-            className="k-Title donation-card__StyledTitle-sc-19h76fz-2 dtGEFG k-Title--primary k-Title--withoutMargin"
+            className="k-Title donation-card__StyledTitle-sc-19h76fz-2 daSOev k-Title--primary k-Title--withoutMargin"
           >
             Custom title mount
           </h2>
@@ -26,7 +26,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 fSrmLM"
         >
           <span
-            className="donation-card__StyledHorizontalStroke-sc-19h76fz-3 jVTnEi horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dKtqdq"
+            className="donation-card__StyledHorizontalStroke-sc-19h76fz-3 jVTnEi horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
           />
         </div>
         <form
@@ -61,7 +61,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   >
                     <input
                       autoComplete="off"
-                      className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+                      className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 klwChc"
                       defaultValue=""
                       disabled={false}
                       id="donation-amount"
@@ -73,7 +73,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                       type="number"
                     />
                     <span
-                      className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+                      className="text-input-with-unit__StyledInputUnit-gjmccx-2 kpdgHw"
                       disabled={false}
                     >
                       €

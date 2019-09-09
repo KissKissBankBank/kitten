@@ -106,7 +106,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         className="marger__StyledMarger-q3lecu-0 deRNwX"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 fqFQBk"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cpsTLp"
         />
       </div>
     </div>
@@ -229,7 +229,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         className="marger__StyledMarger-q3lecu-0 deRNwX"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 fqFQBk"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cpsTLp"
         />
         <p
           className="k-u-size-micro k-u-weight-regular"
@@ -388,7 +388,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         className="marger__StyledMarger-q3lecu-0 deRNwX"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 fqFQBk"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cpsTLp"
         />
       </div>
     </div>
@@ -515,7 +515,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         className="marger__StyledMarger-q3lecu-0 deRNwX"
       >
         <span
-          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 fqFQBk"
+          className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cpsTLp"
         />
         <p
           className="k-u-size-micro k-u-weight-regular"

@@ -6,7 +6,7 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
 >
   <img
     alt=""
-    className="vertical-card__Img-ys1jp9-0 cndFJr"
+    className="vertical-card__Img-ys1jp9-0 bnjgeK"
     src="#image"
   />
   <h1
@@ -24,7 +24,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
 >
   <img
     alt="Image alt"
-    className="vertical-card__Img-ys1jp9-0 cndFJr"
+    className="vertical-card__Img-ys1jp9-0 bnjgeK"
     src="#image"
   />
   <h1
