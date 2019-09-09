@@ -19,6 +19,7 @@ const StyledTitle = styled.div`
   text-align: center;
   font-size: ${stepToRem(-1)};
   line-height: 1.2;
+  flex-grow: 1;
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
     font-size: ${stepToRem(3)};

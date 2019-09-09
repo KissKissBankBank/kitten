@@ -119,6 +119,7 @@ const MobileModal = ({ children, ...props }) => {
       <GlobalStyle />
       <Modal
         ref={modalRef}
+        disableOutsideScroll={true}
         modalClassNames={{
           className: {
             base: 'k-MobileModal__content',
