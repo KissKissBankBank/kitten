@@ -113,6 +113,7 @@ Modal.propTypes = {
       afterOpen: PropTypes.string,
       beforeClose: PropTypes.string,
     }),
+    closeContainerClassName: PropTypes.string,
   }),
   hasCloseButton: PropTypes.bool,
 }
