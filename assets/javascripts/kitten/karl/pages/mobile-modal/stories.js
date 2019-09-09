@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import MobileModal from './index'
-import { Button } from '../../../components/buttons/button'
+import { Button } from '../../../components/buttons/button/button'
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -31,7 +31,7 @@ const Footer = props => {
 
   return (
     <MobileModal.Footer shouldClose={isOpen}>
-      <StyledButton modifier="helium" size="big" onClick={() => close(true)}>
+      <StyledButton modifier="helium" big={true} onClick={() => close(true)}>
         Close
       </StyledButton>
     </MobileModal.Footer>
