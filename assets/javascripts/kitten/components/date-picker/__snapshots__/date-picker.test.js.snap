@@ -2,7 +2,7 @@
 
 exports[`<DatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="date-picker__StyledDatePicker-snpu98-0 ftQmZK"
+  className="date-picker__StyledDatePicker-snpu98-0 iUOaq"
 >
   <div
     className="DayPickerInput"
@@ -12,7 +12,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
     >
       <input
         autoComplete="off"
-        className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+        className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 bVMChg"
         disabled={false}
         name="text"
         onBlur={[Function]}
@@ -26,7 +26,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
         value=""
       />
       <span
-        className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+        className="text-input-with-unit__StyledInputUnit-gjmccx-2 gbKmhA"
         disabled={false}
       >
         📅
@@ -38,7 +38,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
 
 exports[`<DatePicker /> with custom input matches with snapshot 1`] = `
 <div
-  className="date-picker__StyledDatePicker-snpu98-0 ftQmZK"
+  className="date-picker__StyledDatePicker-snpu98-0 iUOaq"
 >
   <div
     className="DayPickerInput"
