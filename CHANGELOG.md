@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Move `Modal` CSS styles over to React component.
 - Feature: Add `modalClassNames` and `hasCloseButton` to `Modal`.
 - Page: New `MobileModal` page in Karl.
 
