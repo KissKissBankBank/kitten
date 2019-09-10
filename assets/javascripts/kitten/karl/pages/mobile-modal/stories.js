@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
-const StoryButton = ({ children }) => <Button modifier="helium">Toggle</Button>
+const StoryButton = () => <Button modifier="helium">Toggle</Button>
 
 const StyledButton = styled(Button)`
   @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {

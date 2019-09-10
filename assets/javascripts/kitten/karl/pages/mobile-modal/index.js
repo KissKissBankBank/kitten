@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useRef, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { Modal } from '../../../components/modals/modal'
 import styled, { createGlobalStyle } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -7,9 +8,6 @@ import COLORS from '../../../constants/colors-config'
 import { CloseButton } from '../../../components/buttons/close-button'
 
 const ModalProperties = createContext({})
-
-const borderWidth = pxToRem(2)
-const borderColor = COLORS.line1
 
 const GlobalStyle = createGlobalStyle`
   body.k-Modal__body--open {
@@ -64,7 +62,7 @@ const StyledHeader = styled.header`
 
   @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
     padding: ${pxToRem(20)} ${pxToRem(70)};
-    border-bottom: ${borderWidth} solid ${borderColor};
+    border-bottom: ${pxToRem(2)} solid ${COLORS.line1};
     min-height: ${pxToRem(40)};
     display: flex;
     align-items: center;
@@ -118,7 +116,7 @@ const MobileModal = ({ children, ...props }) => {
       <GlobalStyle />
       <Modal
         ref={modalRef}
-        disableOutsideScroll={true}
+        disableOutsideScroll
         modalClassNames={{
           className: {
             base: 'k-MobileModal__content',
@@ -168,19 +166,27 @@ const MobileModalHeader = props => {
 }
 
 const MobileModalContent = props => {
-  return <StyledContent>{props.children}</StyledContent>
+  return <StyledContent {...props} />
 }
 
-const MobileModalFooter = props => {
+const MobileModalFooter = ({ shouldClose, children, ...others }) => {
   const { modalRef } = useContext(ModalProperties)
 
   useEffect(() => {
-    if (props.shouldClose) {
+    if (shouldClose) {
       modalRef.current.close()
     }
-  }, [props.shouldClose])
+  }, [shouldClose])
 
-  return <StyledFooter>{props.children}</StyledFooter>
+  return <StyledFooter {...others}>{children}</StyledFooter>
+}
+
+MobileModal.defaultProps = {
+  closeButtonLabel: 'Close',
+}
+
+MobileModal.propTypes = {
+  closeButtonLabel: PropTypes.string,
 }
 
 MobileModal.Header = MobileModalHeader
