@@ -111,9 +111,9 @@ exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] 
   width: 0;
   height: 0;
   z-index: -1;
-  top: -0.938rem;
+  top: -0.9375rem;
   left: -1.25rem;
-  border: 0.938rem solid transparent;
+  border: 0.9375rem solid transparent;
   border-right-color: #eee;
 }
 

@@ -2,7 +2,7 @@
 
 exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="standalone-range__StyledDatePicker-yne6lo-0 coxqDE"
+  className="standalone-range__StyledDatePicker-yne6lo-0 dWVLwI"
 >
   <div
     className="DayPicker Selectable"

@@ -6,7 +6,7 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 klwChc"
+    className="text-input__StyledInput-sc-11wej6v-1 bVMChg"
     disabled={false}
     name="text"
     style={
@@ -49,7 +49,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 klwChc"
+    className="text-input__StyledInput-sc-11wej6v-1 bVMChg"
     disabled={true}
     name="text"
     style={
@@ -92,7 +92,7 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 klwChc"
+    className="text-input__StyledInput-sc-11wej6v-1 bVMChg"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"

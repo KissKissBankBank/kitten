@@ -5,7 +5,7 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -27,7 +27,7 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -40,7 +40,7 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
-  font-size: 0.889rem;
+  font-size: 0.8888888888888888rem;
   color: #222;
   border-color: #eee;
   background-color: #fff;
@@ -94,7 +94,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -116,7 +116,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -172,7 +172,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -194,7 +194,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -253,7 +253,7 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -275,7 +275,7 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -288,7 +288,7 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   color: #222;
   border-color: #eee;
   background-color: #fff;
@@ -342,7 +342,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -364,7 +364,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -452,7 +452,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   min-height: 2.5rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -474,7 +474,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.79rem;
+  font-size: 0.7901234567901234rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;

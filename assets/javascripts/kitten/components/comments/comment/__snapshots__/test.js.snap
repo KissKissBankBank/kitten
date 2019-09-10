@@ -52,7 +52,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
     </span>
   </div>
   <span
-    className="comment__StyledCommentContainer-sc-8s8e85-3 ljFjYq"
+    className="comment__StyledCommentContainer-sc-8s8e85-3 ddLiaT"
   >
     <div
       className="comment__StyledCommentContent-sc-8s8e85-4 gwDopp"
@@ -70,13 +70,13 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         className="comment__StyledMargerText-sc-8s8e85-5 gvdfbv"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 dtvvjO"
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 jhrUEz"
         >
           Custom text
         </span>
       </div>
       <span
-        className="comment__StyledCommentArrow-sc-8s8e85-1 iPaNrC"
+        className="comment__StyledCommentArrow-sc-8s8e85-1 joOriz"
       />
     </div>
     
@@ -112,7 +112,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     </span>
   </div>
   <span
-    className="comment__StyledCommentContainer-sc-8s8e85-3 ljFjYq"
+    className="comment__StyledCommentContainer-sc-8s8e85-3 ddLiaT"
   >
     <div
       className="comment__StyledCommentContent-sc-8s8e85-4 gwDopp"
@@ -130,13 +130,13 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         className="comment__StyledMargerText-sc-8s8e85-5 gvdfbv"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 dtvvjO"
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 jhrUEz"
         >
           Custom text
         </span>
       </div>
       <span
-        className="comment__StyledCommentArrow-sc-8s8e85-1 iPaNrC"
+        className="comment__StyledCommentArrow-sc-8s8e85-1 joOriz"
       />
     </div>
     <div
@@ -201,7 +201,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     </span>
   </div>
   <span
-    className="comment__StyledCommentContainer-sc-8s8e85-3 ljFjYq"
+    className="comment__StyledCommentContainer-sc-8s8e85-3 ddLiaT"
   >
     <div
       className="comment__StyledCommentContent-sc-8s8e85-4 gwDopp"
@@ -216,16 +216,16 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         </span>
       </div>
       <div
-        className="comment__StyledMargerText-sc-8s8e85-5 frzRFh"
+        className="comment__StyledMargerText-sc-8s8e85-5 eYhLGU"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 dtvvjO"
+          className="k-u-color-font1 k-u-weight-light comment__StyledContentText-sc-8s8e85-0 jhrUEz"
         >
           Custom text
         </span>
       </div>
       <span
-        className="comment__StyledCommentArrow-sc-8s8e85-1 iPaNrC"
+        className="comment__StyledCommentArrow-sc-8s8e85-1 joOriz"
       />
     </div>
     <div
@@ -233,7 +233,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     >
       <button
         aria-pressed="true"
-        className="like-button__StyledButton-wk7ovs-0 hodykL"
+        className="like-button__StyledButton-wk7ovs-0 dunvtc"
         role="button"
       >
         

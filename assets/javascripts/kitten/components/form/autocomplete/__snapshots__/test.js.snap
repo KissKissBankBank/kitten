@@ -12,11 +12,11 @@ exports[`<Autocomplete /> by default matches with snapshot 1`] = `
   box-sizing: border-box;
   background: #fff;
   border: 0.125rem solid #eee;
-  padding: 0 0.938rem;
+  padding: 0 0.9375rem;
   outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  font-size: 0.889rem;
+  font-size: 0.8888888888888888rem;
   line-height: 1.3;
   color: #222;
   -webkit-transition: border-color 0.4s;

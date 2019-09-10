@@ -17,7 +17,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 jgfcQX"
         >
           <h2
-            className="k-Title donation-card__StyledTitle-sc-19h76fz-2 daSOev k-Title--primary k-Title--withoutMargin"
+            className="k-Title donation-card__StyledTitle-sc-19h76fz-2 fGWXlh k-Title--primary k-Title--withoutMargin"
           >
             Custom title mount
           </h2>
@@ -61,7 +61,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   >
                     <input
                       autoComplete="off"
-                      className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 klwChc"
+                      className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 bVMChg"
                       defaultValue=""
                       disabled={false}
                       id="donation-amount"
@@ -73,7 +73,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                       type="number"
                     />
                     <span
-                      className="text-input-with-unit__StyledInputUnit-gjmccx-2 kpdgHw"
+                      className="text-input-with-unit__StyledInputUnit-gjmccx-2 gbKmhA"
                       disabled={false}
                     >
                       €

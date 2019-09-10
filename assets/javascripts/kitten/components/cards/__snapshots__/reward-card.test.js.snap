@@ -2,23 +2,23 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="reward-card__CardContainer-sc-1vkpp2h-2 kogSFI"
+  className="reward-card__CardContainer-sc-1vkpp2h-2 gPtcIU"
 >
   <div
     style={
       Object {
         "display": "flex",
         "flexWrap": "wrap",
-        "padding": "0 0.938rem",
+        "padding": "0 0.9375rem",
       }
     }
   >
     <div
       style={
         Object {
-          "flexBasis": "17.188rem",
+          "flexBasis": "17.1875rem",
           "flexGrow": 9999,
-          "margin": "0.938rem",
+          "margin": "0.9375rem",
         }
       }
     >
@@ -29,7 +29,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
           Object {
             "fontSize": "1.5rem",
             "lineHeight": "2.125rem",
-            "margin": "0 0 0.938rem 0",
+            "margin": "0 0 0.9375rem 0",
           }
         }
       >
@@ -50,23 +50,23 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="reward-card__CardContainer-sc-1vkpp2h-2 kogSFI"
+  className="reward-card__CardContainer-sc-1vkpp2h-2 gPtcIU"
 >
   <div
     style={
       Object {
         "display": "flex",
         "flexWrap": "wrap",
-        "padding": "0 0.938rem",
+        "padding": "0 0.9375rem",
       }
     }
   >
     <div
       style={
         Object {
-          "flexBasis": "17.188rem",
+          "flexBasis": "17.1875rem",
           "flexGrow": 9999,
-          "margin": "0.938rem",
+          "margin": "0.9375rem",
         }
       }
     >
@@ -172,7 +172,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           Object {
             "fontSize": "1.5rem",
             "lineHeight": "2.125rem",
-            "margin": "0 0 0.938rem 0",
+            "margin": "0 0 0.9375rem 0",
           }
         }
       >
@@ -241,10 +241,10 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Object {
           "flexBasis": "11.875rem",
           "flexGrow": 1,
-          "marginBottom": "0.938rem",
-          "marginLeft": "0.938rem",
-          "marginRight": "0.938rem",
-          "marginTop": "0.938rem",
+          "marginBottom": "0.9375rem",
+          "marginLeft": "0.9375rem",
+          "marginRight": "0.9375rem",
+          "marginTop": "0.9375rem",
         }
       }
     >
@@ -278,7 +278,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             "borderRadius": 30,
             "display": "flex",
             "justifyContent": "center",
-            "marginTop": "-0.938rem",
+            "marginTop": "-0.9375rem",
             "minHeight": 30,
             "minWidth": 30,
             "padding": 0,
@@ -334,9 +334,9 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         "flexDirection": "column",
         "flexWrap": "wrap",
         "justifyContent": "center",
-        "marginBottom": "0.313rem",
+        "marginBottom": "0.3125rem",
         "marginTop": "0.625rem",
-        "padding": "0 0.938rem",
+        "padding": "0 0.9375rem",
       }
     }
   >

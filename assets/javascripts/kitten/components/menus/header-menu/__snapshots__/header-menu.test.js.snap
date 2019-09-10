@@ -4,7 +4,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 .c1 {
   display: block;
   position: relative;
-  padding: 1.125rem 1.875rem 1.063rem;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   outline: none;
@@ -23,7 +23,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   top: -1px;
   left: -1px;
   bottom: -1px;
-  width: 0.063rem;
+  width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -96,7 +96,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c1 {
   display: block;
   position: relative;
-  padding: 1.125rem 1.875rem 1.063rem;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   outline: none;
@@ -115,7 +115,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   top: -1px;
   left: -1px;
   bottom: -1px;
-  width: 0.063rem;
+  width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -133,7 +133,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c2 {
   display: block;
   position: relative;
-  padding: 1.125rem 1.875rem 1.063rem;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   outline: none;
@@ -149,7 +149,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   height: 1.5rem;
-  padding: 1.438rem 1.313rem 1.375rem 1.875rem;
+  padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -172,7 +172,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   top: -1px;
   left: -1px;
   bottom: -1px;
-  width: 0.063rem;
+  width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -275,7 +275,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c1 {
   display: block;
   position: relative;
-  padding: 1.125rem 1.875rem 1.063rem;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   outline: none;
@@ -294,7 +294,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   top: -1px;
   left: -1px;
   bottom: -1px;
-  width: 0.063rem;
+  width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -312,7 +312,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c2 {
   display: block;
   position: relative;
-  padding: 1.125rem 1.875rem 1.063rem;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   outline: none;
@@ -332,7 +332,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   top: -1px;
   left: -1px;
   bottom: -1px;
-  width: 0.063rem;
+  width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -405,7 +405,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c1 {
   display: block;
   position: relative;
-  padding: 1.125rem 1.875rem 1.063rem;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   outline: none;
@@ -424,7 +424,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   top: -1px;
   left: -1px;
   bottom: -1px;
-  width: 0.063rem;
+  width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -442,7 +442,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c2 {
   display: block;
   position: relative;
-  padding: 1.125rem 1.875rem 1.063rem;
+  padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   outline: none;
@@ -462,7 +462,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   top: -1px;
   left: -1px;
   bottom: -1px;
-  width: 0.063rem;
+  width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;

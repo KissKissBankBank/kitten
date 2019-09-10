@@ -67,7 +67,7 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
 
 .c0 {
   position: relative;
-  padding: 0.063rem 0;
+  padding: 0.0625rem 0;
 }
 
 .c1 {

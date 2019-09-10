@@ -47,17 +47,17 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
     </div>
   </div>
   <div
-    className="comment-form__StyledGridCol-sc-1yidca9-1 XZIme"
+    className="comment-form__StyledGridCol-sc-1yidca9-1 jLIWaw"
   >
     <div
-      className="comment-form__StyledInput-sc-1yidca9-2 kGPLCq"
+      className="comment-form__StyledInput-sc-1yidca9-2 bYAxli"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="comment-form__StyledTextarea-sc-1yidca9-3 cadkuh"
+        className="comment-form__StyledTextarea-sc-1yidca9-3 isQSPk"
         defaultValue=""
         disabled={false}
         id={null}
@@ -66,10 +66,10 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         rows="1"
       />
       <div
-        className="comment-form__StyledArrow-sc-1yidca9-4 byYHHG"
+        className="comment-form__StyledArrow-sc-1yidca9-4 fhIhpw"
       >
         <span
-          className="comment-form__StyledArrowBefore-sc-1yidca9-5 dqidpL"
+          className="comment-form__StyledArrowBefore-sc-1yidca9-5 bbqecq"
         />
       </div>
     </div>
@@ -110,17 +110,17 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     </div>
   </div>
   <div
-    className="comment-form__StyledGridCol-sc-1yidca9-1 XZIme"
+    className="comment-form__StyledGridCol-sc-1yidca9-1 jLIWaw"
   >
     <div
-      className="comment-form__StyledInput-sc-1yidca9-2 kGPLCq"
+      className="comment-form__StyledInput-sc-1yidca9-2 bYAxli"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="comment-form__StyledTextarea-sc-1yidca9-3 cadkuh"
+        className="comment-form__StyledTextarea-sc-1yidca9-3 isQSPk"
         defaultValue=""
         disabled={false}
         id="custom-textarea-id"
@@ -129,10 +129,10 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         rows="1"
       />
       <div
-        className="comment-form__StyledArrow-sc-1yidca9-4 byYHHG"
+        className="comment-form__StyledArrow-sc-1yidca9-4 fhIhpw"
       >
         <span
-          className="comment-form__StyledArrowBefore-sc-1yidca9-5 dqidpL"
+          className="comment-form__StyledArrowBefore-sc-1yidca9-5 bbqecq"
         />
       </div>
     </div>

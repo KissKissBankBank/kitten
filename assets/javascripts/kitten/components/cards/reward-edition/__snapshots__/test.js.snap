@@ -103,7 +103,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   border-bottom-width: 0.125rem;
   border-bottom-style: solid;
   border-bottom-color: #eee;
-  padding: 0.938rem;
+  padding: 0.9375rem;
   background-color: #f6f6f6;
   display: -webkit-box;
   display: -webkit-flex;
