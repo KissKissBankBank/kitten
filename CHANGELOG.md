@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove rounding in `pxToRem` and `stepToRem`.
+
 ## [2.24.0] - 2019-09-06
 
 Features:

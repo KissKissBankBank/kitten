@@ -40,7 +40,7 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
     className="k-Card__imageContainer image__StyledImageContainer-sc-8olw7b-2 iPOTuX marger__StyledMarger-q3lecu-0 jgfcQX"
   >
     <div
-      className="image__StyledPlayerButton-sc-8olw7b-1 hjoZil"
+      className="image__StyledPlayerButton-sc-8olw7b-1 bgJcrr"
     >
       <span
         className="k-u-color-background1 k-u-size-default k-u-weight-regular"

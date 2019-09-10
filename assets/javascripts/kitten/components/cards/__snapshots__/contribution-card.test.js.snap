@@ -52,7 +52,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             className="marger__StyledMarger-q3lecu-0 fSrmLM"
           >
             <span
-              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dKtqdq"
+              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
             />
           </div>
           
@@ -141,7 +141,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="marger__StyledMarger-q3lecu-0 fSrmLM"
           >
             <span
-              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dKtqdq"
+              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
             />
           </div>
           <div
@@ -248,7 +248,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
                 "display": "flex",
                 "justifyContent": "center",
                 "lineHeight": "1.3rem",
-                "padding": "1.38rem 1.88rem",
+                "padding": "1.375rem 1.875rem",
                 "width": "100%",
               }
             }
@@ -457,7 +457,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="marger__StyledMarger-q3lecu-0 fSrmLM"
           >
             <span
-              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 dKtqdq"
+              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
             />
           </div>
           <div
