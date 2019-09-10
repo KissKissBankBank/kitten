@@ -4,6 +4,62 @@ import classNames from 'classnames'
 // Via "https://github.com/reactjs/react-modal"
 import ReactModal from 'react-modal'
 import { CloseButton } from '../../../components/buttons/close-button'
+import { createGlobalStyle } from 'styled-components'
+import { pxToRem } from '../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../constants/screen-config'
+import COLORS from '../../../constants/colors-config'
+
+const GlobalStyle = createGlobalStyle`
+  body.k-Modal__body--open {
+    overflow: hidden;
+  }
+
+  .k-Modal__content {
+    position: relative;
+    max-height: calc(100vh - ${pxToRem(20)} * 2);
+    max-width: calc(100vw - ${pxToRem(20)} * 2);
+
+    background-color: ${COLORS.background1};
+    text-align: center;
+    padding-left: ${pxToRem(60)};
+    padding-right: ${pxToRem(60)};
+
+    outline: none;
+    box-sizing: border-box;
+    overflow: scroll;
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      max-width: ${pxToRem(690)};
+      padding-left: ${pxToRem(110)};
+      padding-right: ${pxToRem(110)};
+    }
+  }
+
+  .k-Modal__close {
+    position: absolute;
+    top: 0;
+    right: ${pxToRem(50)};
+  }
+
+  .k-Modal__close--fixed {
+    position: fixed;
+  }
+
+  .k-Modal__overlay {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(34, 34, 34, .9);
+  }
+`
 
 export class Modal extends Component {
   state = {
@@ -39,11 +95,19 @@ export class Modal extends Component {
   renderTriggerAction() {
     if (!this.props.trigger) return
 
-    return (
-      <span className="k-Modal__trigger" onClick={this.open}>
-        {this.props.trigger}
-      </span>
+    return <span onClick={this.open}>{this.props.trigger}</span>
+  }
+
+  renderGlobalStyle() {
+    const modalClassNames = this.props.modalClassNames
+
+    if (
+      modalClassNames.className.base !== 'k-Modal__content' &&
+      modalClassNames.overlayClassName.base !== 'k-Modal__overlay'
     )
+      return
+
+    return <GlobalStyle />
   }
 
   render() {
@@ -68,6 +132,8 @@ export class Modal extends Component {
     return (
       <div className={triggerClassNames} {...others}>
         {this.renderTriggerAction()}
+
+        {this.renderGlobalStyle()}
 
         <ReactModal
           role="dialog"
