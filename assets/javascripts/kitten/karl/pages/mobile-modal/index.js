@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useRef, useEffect } from 'react'
+import React, {
+  createContext,
+  useContext,
+  useRef,
+  forwardRef,
+  useImperativeHandle,
+} from 'react'
 import PropTypes from 'prop-types'
 import { Modal } from '../../../components/modals/modal'
 import styled, { createGlobalStyle } from 'styled-components'
@@ -108,8 +114,14 @@ const StyledCloseButton = styled(CloseButton)`
   }
 `
 
-const MobileModal = ({ children, ...props }) => {
+const MobileModal = forwardRef(({ children, ...props }, ref) => {
   const modalRef = useRef(null)
+
+  useImperativeHandle(ref, () => ({
+    close: () => {
+      modalRef.current.close()
+    },
+  }))
 
   return (
     <>
@@ -140,7 +152,7 @@ const MobileModal = ({ children, ...props }) => {
       />
     </>
   )
-}
+})
 
 const MobileModalHeader = props => {
   const { modalRef } = useContext(ModalProperties)
@@ -165,18 +177,6 @@ const MobileModalHeader = props => {
   )
 }
 
-const MobileModalFooter = ({ shouldClose, children, ...others }) => {
-  const { modalRef } = useContext(ModalProperties)
-
-  useEffect(() => {
-    if (shouldClose) {
-      modalRef.current.close()
-    }
-  }, [shouldClose])
-
-  return <StyledFooter {...others}>{children}</StyledFooter>
-}
-
 MobileModal.defaultProps = {
   closeButtonLabel: 'Close',
 }
@@ -187,6 +187,6 @@ MobileModal.propTypes = {
 
 MobileModal.Header = MobileModalHeader
 MobileModal.Content = StyledContent
-MobileModal.Footer = MobileModalFooter
+MobileModal.Footer = StyledFooter
 
 export default MobileModal

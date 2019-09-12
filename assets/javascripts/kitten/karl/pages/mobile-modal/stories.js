@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef } from 'react'
 import { storiesOf } from '@storybook/react'
 import MobileModal from './index'
 import { Button } from '../../../components/buttons/button/button'
@@ -27,20 +27,28 @@ const StyledTitle = styled.div`
 `
 
 const Footer = props => {
-  const [isOpen, close] = useState(false)
-
   return (
-    <MobileModal.Footer shouldClose={isOpen}>
-      <StyledButton modifier="helium" big={true} onClick={() => close(true)}>
+    <MobileModal.Footer>
+      <StyledButton
+        modifier="helium"
+        big={true}
+        onClick={() => props.mobileModalRef.current.close()}
+      >
         Close
       </StyledButton>
     </MobileModal.Footer>
   )
 }
 
-storiesOf('Pages/MobileModal', module).add('Mobile-modal', () => {
+const Modal = () => {
+  const mobileModalRef = useRef(null)
+
   return (
-    <MobileModal closeButtonLabel="Fermer" trigger={<StoryButton />}>
+    <MobileModal
+      closeButtonLabel="Fermer"
+      trigger={<StoryButton />}
+      ref={mobileModalRef}
+    >
       <MobileModal.Header>
         <StyledTitle>
           Contribution <strong>#146788</strong> du <strong>10/04/2019</strong>
@@ -92,7 +100,11 @@ storiesOf('Pages/MobileModal', module).add('Mobile-modal', () => {
         🚲
         <br />
       </MobileModal.Content>
-      <Footer />
+      <Footer mobileModalRef={mobileModalRef} />
     </MobileModal>
   )
+}
+
+storiesOf('Pages/MobileModal', module).add('Mobile-modal', () => {
+  return <Modal />
 })
