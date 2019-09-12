@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Move `Modal` CSS styles over to React component.
 - Feature: Add `modalClassNames` and `hasCloseButton` to `Modal`.
 - Fix: Update title style on `StandaloneRange` component.
 - Fix: Remove rounding in `pxToRem` and `stepToRem`.
