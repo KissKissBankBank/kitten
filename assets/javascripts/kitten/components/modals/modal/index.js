@@ -58,6 +58,8 @@ export class Modal extends Component {
       onClose,
       modalProps,
       disableOutsideScroll,
+      modalClassNames,
+      hasCloseButton,
       ...others
     } = this.props
 
@@ -69,16 +71,8 @@ export class Modal extends Component {
 
         <ReactModal
           role="dialog"
-          className={{
-            base: 'k-Modal__content',
-            afterOpen: 'k-Modal--afterOpen',
-            beforeClose: 'k-Modal--beforeClose',
-          }}
-          overlayClassName={{
-            base: 'k-Modal__overlay',
-            afterOpen: 'k-Modal__overlay--afterOpen',
-            beforeClose: 'k-Modal__overlay--beforeClose',
-          }}
+          className={{ ...modalClassNames.className }}
+          overlayClassName={{ ...modalClassNames.overlayClassName }}
           isOpen={this.state.showModal}
           aria={{
             labelledby,
@@ -94,7 +88,7 @@ export class Modal extends Component {
         >
           {content}
 
-          {this.renderCloseModal()}
+          {hasCloseButton && this.renderCloseModal()}
         </ReactModal>
       </div>
     )
@@ -108,6 +102,20 @@ Modal.propTypes = {
   closeButtonLabel: PropTypes.string,
   modalProps: PropTypes.object,
   disableOutsideScroll: PropTypes.bool,
+  modalClassNames: PropTypes.shape({
+    className: PropTypes.shape({
+      base: PropTypes.string,
+      afterOpen: PropTypes.string,
+      beforeClose: PropTypes.string,
+    }),
+    overlayClassName: PropTypes.shape({
+      base: PropTypes.string,
+      afterOpen: PropTypes.string,
+      beforeClose: PropTypes.string,
+    }),
+    closeContainerClassName: PropTypes.string,
+  }),
+  hasCloseButton: PropTypes.bool,
 }
 
 Modal.defaultProps = {
@@ -117,4 +125,18 @@ Modal.defaultProps = {
   closeButtonLabel: '',
   modalProps: {},
   disableOutsideScroll: false,
+  modalClassNames: {
+    className: {
+      base: 'k-Modal__content',
+      afterOpen: 'k-Modal--afterOpen',
+      beforeClose: 'k-Modal--beforeClose',
+    },
+    overlayClassName: {
+      base: 'k-Modal__overlay',
+      afterOpen: 'k-Modal__overlay--afterOpen',
+      beforeClose: 'k-Modal__overlay--beforeClose',
+    },
+    closeContainerClassName: 'k-Modal__close',
+  },
+  hasCloseButton: true,
 }
