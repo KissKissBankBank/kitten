@@ -14,7 +14,7 @@ var _typographyConfig = _interopRequireDefault(require("../../constants/typograp
 var pxToRem = function pxToRem(sizeInPx) {
   if (sizeInPx === 0) return 0;
   var sizeInRem = sizeInPx / _typographyConfig.default.root;
-  return "".concat(parseFloat(sizeInRem.toFixed(2)), "rem");
+  return "".concat(parseFloat(sizeInRem), "rem");
 };
 
 exports.pxToRem = pxToRem;
@@ -24,7 +24,7 @@ var stepToRem = function stepToRem(step) {
     base: [1],
     ratio: _typographyConfig.default.scaleMultiplier
   };
-  return "".concat(parseFloat((0, _modularscaleJs.default)(step, settings).toFixed(2)), "rem");
+  return "".concat(parseFloat((0, _modularscaleJs.default)(step, settings)), "rem");
 };
 
 exports.stepToRem = stepToRem;

@@ -23,6 +23,8 @@ var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/ge
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
+var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
+
 var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
@@ -33,7 +35,26 @@ var _reactModal = _interopRequireDefault(require("react-modal"));
 
 var _closeButton = require("../../../components/buttons/close-button");
 
-// Via "https://github.com/reactjs/react-modal"
+var _styledComponents = require("styled-components");
+
+var _typography = require("../../../helpers/utils/typography");
+
+var _screenConfig = require("../../../constants/screen-config");
+
+var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
+
+function _templateObject() {
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  body.k-Modal__body--open {\n    overflow: hidden;\n  }\n\n  .k-Modal__content {\n    position: relative;\n    max-height: calc(100vh - ", " * 2);\n    max-width: calc(100vw - ", " * 2);\n\n    background-color: ", ";\n    text-align: center;\n    padding-left: ", ";\n    padding-right: ", ";\n\n    outline: none;\n    box-sizing: border-box;\n    overflow: scroll;\n\n    @media (min-width: ", ") {\n      max-width: ", ";\n      padding-left: ", ";\n      padding-right: ", ";\n    }\n  }\n\n  .k-Modal__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n  }\n\n  .k-Modal__close--fixed {\n    position: fixed;\n  }\n\n  .k-Modal__overlay {\n    position: fixed;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    background-color: rgba(34, 34, 34, .9);\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject(), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.background1, (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(690), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(50));
+
 var Modal =
 /*#__PURE__*/
 function (_Component) {
@@ -92,9 +113,15 @@ function (_Component) {
     value: function renderTriggerAction() {
       if (!this.props.trigger) return;
       return _react.default.createElement("span", {
-        className: "k-Modal__trigger",
         onClick: this.open
       }, this.props.trigger);
+    }
+  }, {
+    key: "renderGlobalStyle",
+    value: function renderGlobalStyle() {
+      var modalClassNames = this.props.modalClassNames;
+      if (modalClassNames.className.base !== 'k-Modal__content' && modalClassNames.overlayClassName.base !== 'k-Modal__overlay') return;
+      return _react.default.createElement(GlobalStyle, null);
     }
   }, {
     key: "render",
@@ -110,22 +137,16 @@ function (_Component) {
           onClose = _this$props.onClose,
           modalProps = _this$props.modalProps,
           disableOutsideScroll = _this$props.disableOutsideScroll,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "disableOutsideScroll"]);
+          modalClassNames = _this$props.modalClassNames,
+          hasCloseButton = _this$props.hasCloseButton,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "disableOutsideScroll", "modalClassNames", "hasCloseButton"]);
       var triggerClassNames = (0, _classnames.default)('k-Modal', className);
       return _react.default.createElement("div", (0, _extends2.default)({
         className: triggerClassNames
-      }, others), this.renderTriggerAction(), _react.default.createElement(_reactModal.default, (0, _extends2.default)({
+      }, others), this.renderTriggerAction(), this.renderGlobalStyle(), _react.default.createElement(_reactModal.default, (0, _extends2.default)({
         role: "dialog",
-        className: {
-          base: 'k-Modal__content',
-          afterOpen: 'k-Modal--afterOpen',
-          beforeClose: 'k-Modal--beforeClose'
-        },
-        overlayClassName: {
-          base: 'k-Modal__overlay',
-          afterOpen: 'k-Modal__overlay--afterOpen',
-          beforeClose: 'k-Modal__overlay--beforeClose'
-        },
+        className: (0, _extends2.default)({}, modalClassNames.className),
+        overlayClassName: (0, _extends2.default)({}, modalClassNames.overlayClassName),
         isOpen: this.state.showModal,
         aria: {
           labelledby: labelledby,
@@ -135,7 +156,7 @@ function (_Component) {
         onRequestClose: this.close,
         contentLabel: label,
         bodyOpenClassName: disableOutsideScroll ? 'k-Modal__body--open' : null
-      }, modalProps), content, this.renderCloseModal()));
+      }, modalProps), content, hasCloseButton && this.renderCloseModal()));
     }
   }]);
   return Modal;
@@ -148,7 +169,21 @@ Modal.propTypes = {
   describedby: _propTypes.default.string,
   closeButtonLabel: _propTypes.default.string,
   modalProps: _propTypes.default.object,
-  disableOutsideScroll: _propTypes.default.bool
+  disableOutsideScroll: _propTypes.default.bool,
+  modalClassNames: _propTypes.default.shape({
+    className: _propTypes.default.shape({
+      base: _propTypes.default.string,
+      afterOpen: _propTypes.default.string,
+      beforeClose: _propTypes.default.string
+    }),
+    overlayClassName: _propTypes.default.shape({
+      base: _propTypes.default.string,
+      afterOpen: _propTypes.default.string,
+      beforeClose: _propTypes.default.string
+    }),
+    closeContainerClassName: _propTypes.default.string
+  }),
+  hasCloseButton: _propTypes.default.bool
 };
 Modal.defaultProps = {
   label: 'Modal',
@@ -156,5 +191,19 @@ Modal.defaultProps = {
   describedby: '',
   closeButtonLabel: '',
   modalProps: {},
-  disableOutsideScroll: false
+  disableOutsideScroll: false,
+  modalClassNames: {
+    className: {
+      base: 'k-Modal__content',
+      afterOpen: 'k-Modal--afterOpen',
+      beforeClose: 'k-Modal--beforeClose'
+    },
+    overlayClassName: {
+      base: 'k-Modal__overlay',
+      afterOpen: 'k-Modal__overlay--afterOpen',
+      beforeClose: 'k-Modal__overlay--beforeClose'
+    },
+    closeContainerClassName: 'k-Modal__close'
+  },
+  hasCloseButton: true
 };
