@@ -165,10 +165,6 @@ const MobileModalHeader = props => {
   )
 }
 
-const MobileModalContent = props => {
-  return <StyledContent {...props} />
-}
-
 const MobileModalFooter = ({ shouldClose, children, ...others }) => {
   const { modalRef } = useContext(ModalProperties)
 
@@ -190,7 +186,7 @@ MobileModal.propTypes = {
 }
 
 MobileModal.Header = MobileModalHeader
-MobileModal.Content = MobileModalContent
+MobileModal.Content = StyledContent
 MobileModal.Footer = MobileModalFooter
 
 export default MobileModal
