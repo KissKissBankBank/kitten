@@ -14,7 +14,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       tabIndex={0}
     >
       <p
-        className="k-u-size-tiny k-u-weight-regular navbar__StyledText-sc-1v9dr3-0 chhWeJ"
+        className="k-u-size-tiny k-u-weight-regular navbar__StyledText-sc-1v9dr3-0 kglrxq"
       >
         Sélectionnez la période souhaitée
       </p>
