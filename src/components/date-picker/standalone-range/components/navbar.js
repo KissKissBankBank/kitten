@@ -34,7 +34,7 @@ var _text = require("../../../../components/typography/text");
 var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "navbar__StyledText",
   componentId: "sc-1v9dr3-0"
-})(["margin-top:", ";"], (0, _typography.pxToRem)(30));
+})(["margin-top:0;margin-bottom:", ";"], (0, _typography.pxToRem)(10));
 
 var StyledButton = _styledComponents.default.div.withConfig({
   displayName: "navbar__StyledButton",
