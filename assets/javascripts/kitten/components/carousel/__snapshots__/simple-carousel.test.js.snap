@@ -29,7 +29,7 @@ Array [
     </div>
   </div>,
   <div
-    className="simple-carousel__StyledPagination-t6k8ig-1 fNLlfA"
+    className="simple-carousel__StyledPagination-t6k8ig-1 cJmvhm"
     onKeyDown={[Function]}
     role="tablist"
     style={Object {}}
@@ -37,7 +37,7 @@ Array [
     <button
       aria-controls="carouselItem_0"
       aria-selected={true}
-      className="simple-carousel__StyledPaginationButton-t6k8ig-2 lcjxHC"
+      className="simple-carousel__StyledPaginationButton-t6k8ig-2 iDakHt"
       id="carouselTab_0"
       onClick={[Function]}
       role="tab"
@@ -53,7 +53,7 @@ Array [
     <button
       aria-controls="carouselItem_1"
       aria-selected={false}
-      className="simple-carousel__StyledPaginationButton-t6k8ig-2 lcjxHC"
+      className="simple-carousel__StyledPaginationButton-t6k8ig-2 iDakHt"
       id="carouselTab_1"
       onClick={[Function]}
       role="tab"

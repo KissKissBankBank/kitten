@@ -5,12 +5,12 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 bVMChg"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 bYjAdx"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 egUqPU"
     disabled={false}
     type="button"
   >
@@ -24,12 +24,12 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 bVMChg"
     disabled={true}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 eYYFho"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 gEpkkv"
     disabled={true}
     type="button"
   >
@@ -43,12 +43,12 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 dERTZf"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 eWAcap"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 cILJrK"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 cFvDaw"
     disabled={false}
     type="button"
   >
@@ -62,13 +62,13 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 bVMChg"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 bYjAdx"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 egUqPU"
     disabled={false}
     type="button"
   >
@@ -82,12 +82,12 @@ exports[`<TextInputWithButton /> with tiny prop matches with snapshot 1`] = `
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 dnunGN"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 iVhmmM"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 bYjAdx"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 egUqPU"
     disabled={false}
     type="button"
   >
@@ -101,12 +101,12 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
 >
   <input
-    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 culAbn"
+    className="text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc text-input__StyledInput-sc-11wej6v-1 kTychE"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 jpomPQ"
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 jLTowg"
     disabled={false}
     type="button"
   >

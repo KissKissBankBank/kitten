@@ -6,18 +6,18 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    className="text-input__StyledInput-sc-11wej6v-1 bVMChg"
     disabled={false}
     name="text"
     style={
       Object {
-        "paddingLeft": "3.13rem",
+        "paddingLeft": "3.125rem",
       }
     }
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 jUNPCs"
+    className="text-input-with-icon__StyledIcon-rvt8kr-1 iSmOxb"
   >
     <svg
       viewBox="-0.7 -0.7 18 18"
@@ -49,18 +49,18 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    className="text-input__StyledInput-sc-11wej6v-1 bVMChg"
     disabled={true}
     name="text"
     style={
       Object {
-        "paddingLeft": "3.13rem",
+        "paddingLeft": "3.125rem",
       }
     }
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 gdWvZU"
+    className="text-input-with-icon__StyledIcon-rvt8kr-1 gtJNGX"
   >
     <svg
       viewBox="-0.7 -0.7 18 18"
@@ -92,19 +92,19 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    className="text-input__StyledInput-sc-11wej6v-1 bVMChg"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
     style={
       Object {
-        "paddingLeft": "3.13rem",
+        "paddingLeft": "3.125rem",
       }
     }
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 jUNPCs"
+    className="text-input-with-icon__StyledIcon-rvt8kr-1 iSmOxb"
   >
     <svg
       viewBox="-0.7 -0.7 18 18"

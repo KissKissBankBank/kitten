@@ -1,4 +1,11 @@
-import React, { createContext, useContext, useRef, useEffect } from 'react'
+import React, {
+  createContext,
+  useContext,
+  useRef,
+  forwardRef,
+  useImperativeHandle,
+} from 'react'
+import PropTypes from 'prop-types'
 import { Modal } from '../../../components/modals/modal'
 import styled, { createGlobalStyle } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -7,9 +14,6 @@ import COLORS from '../../../constants/colors-config'
 import { CloseButton } from '../../../components/buttons/close-button'
 
 const ModalProperties = createContext({})
-
-const borderWidth = pxToRem(2)
-const borderColor = COLORS.line1
 
 const GlobalStyle = createGlobalStyle`
   body.k-Modal__body--open {
@@ -64,7 +68,7 @@ const StyledHeader = styled.header`
 
   @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
     padding: ${pxToRem(20)} ${pxToRem(70)};
-    border-bottom: ${borderWidth} solid ${borderColor};
+    border-bottom: ${pxToRem(2)} solid ${COLORS.line1};
     min-height: ${pxToRem(40)};
     display: flex;
     align-items: center;
@@ -110,15 +114,21 @@ const StyledCloseButton = styled(CloseButton)`
   }
 `
 
-const MobileModal = ({ children, ...props }) => {
+const MobileModal = forwardRef(({ children, ...props }, ref) => {
   const modalRef = useRef(null)
+
+  useImperativeHandle(ref, () => ({
+    close: () => {
+      modalRef.current.close()
+    },
+  }))
 
   return (
     <>
       <GlobalStyle />
       <Modal
         ref={modalRef}
-        disableOutsideScroll={true}
+        disableOutsideScroll
         modalClassNames={{
           className: {
             base: 'k-MobileModal__content',
@@ -142,7 +152,7 @@ const MobileModal = ({ children, ...props }) => {
       />
     </>
   )
-}
+})
 
 const MobileModalHeader = props => {
   const { modalRef } = useContext(ModalProperties)
@@ -167,24 +177,16 @@ const MobileModalHeader = props => {
   )
 }
 
-const MobileModalContent = props => {
-  return <StyledContent>{props.children}</StyledContent>
+MobileModal.defaultProps = {
+  closeButtonLabel: 'Close',
 }
 
-const MobileModalFooter = props => {
-  const { modalRef } = useContext(ModalProperties)
-
-  useEffect(() => {
-    if (props.shouldClose) {
-      modalRef.current.close()
-    }
-  }, [props.shouldClose])
-
-  return <StyledFooter>{props.children}</StyledFooter>
+MobileModal.propTypes = {
+  closeButtonLabel: PropTypes.string,
 }
 
 MobileModal.Header = MobileModalHeader
-MobileModal.Content = MobileModalContent
-MobileModal.Footer = MobileModalFooter
+MobileModal.Content = StyledContent
+MobileModal.Footer = StyledFooter
 
 export default MobileModal

@@ -9,7 +9,7 @@ exports[`<ListTable /> with a complete structure and custom classes matches with
     className="customHeaderClass header__StyledHeader-sc-1f8str-0 sDJi"
   >
     <ul
-      className="customListClass header__StyledList-sc-1f8str-1 iEMMuj"
+      className="customListClass header__StyledList-sc-1f8str-1 djXrzp"
     >
       <li
         className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
@@ -38,7 +38,7 @@ exports[`<ListTable /> with a complete structure and custom classes matches with
       className="row__StyledRow-sc-1vlimsn-0 dtKcON"
     >
       <ul
-        className="row__StyledItemList-sc-1vlimsn-1 eRYPpF"
+        className="row__StyledItemList-sc-1vlimsn-1 icGmBR"
       >
         <li
           aria-describedby="TestListTable-col-0"
@@ -64,7 +64,7 @@ exports[`<ListTable /> with a complete structure and custom classes matches with
       className="customRowClass row__StyledRow-sc-1vlimsn-0 kpFNeD"
     >
       <ul
-        className="customListClass row__StyledItemList-sc-1vlimsn-1 eRYPpF"
+        className="customListClass row__StyledItemList-sc-1vlimsn-1 icGmBR"
       >
         <li
           aria-describedby="TestListTable-col-0"

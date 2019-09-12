@@ -17,12 +17,12 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -32,7 +32,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.13rem solid #eee;
+  border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -44,7 +44,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -91,7 +91,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
@@ -119,12 +119,12 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -135,10 +135,10 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   outline: none;
   cursor: pointer;
   min-width: 13.75rem;
-  min-height: 4.38rem;
+  min-height: 4.375rem;
   padding: 0 2.5rem;
   font-size: 1rem;
-  border: 0.13rem solid #eee;
+  border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -150,7 +150,7 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -197,14 +197,14 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 13.75rem;
-    height: 4.38rem;
+    height: 4.375rem;
   }
 }
 
@@ -232,12 +232,12 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -248,7 +248,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   outline: none;
   cursor: pointer;
   border-radius: 0.25rem;
-  border: 0.13rem solid #eee;
+  border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -260,7 +260,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -307,7 +307,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
@@ -335,12 +335,12 @@ exports[`<Button /> with \`checked\` \`modifier\` prop matches with snapshot 1`]
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -350,7 +350,7 @@ exports[`<Button /> with \`checked\` \`modifier\` prop matches with snapshot 1`]
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.13rem solid #bae8fd;
+  border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -362,7 +362,7 @@ exports[`<Button /> with \`checked\` \`modifier\` prop matches with snapshot 1`]
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -391,14 +391,14 @@ exports[`<Button /> with \`checked\` \`modifier\` prop matches with snapshot 1`]
 .c1 {
   width: 1.25rem;
   height: 1.25rem;
-  bottom: -0.63rem;
+  bottom: -0.625rem;
   position: absolute;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
@@ -446,12 +446,12 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -463,7 +463,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: initial;
   width: 100%;
-  border: 0.13rem solid #eee;
+  border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -475,7 +475,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -522,7 +522,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
@@ -550,12 +550,12 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -565,7 +565,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.13rem dashed #bae8fd;
+  border: 0.125rem dashed #bae8fd;
   background-color: #fff;
   color: #19b4fa;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -577,7 +577,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -624,7 +624,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
@@ -652,12 +652,12 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -670,8 +670,8 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   min-width: 10rem;
   min-height: 2.5rem;
   padding: 0 1.25rem;
-  font-size: 0.88rem;
-  border: 0.13rem solid #eee;
+  font-size: 0.875rem;
+  border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -683,7 +683,7 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -730,7 +730,7 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
@@ -765,12 +765,12 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -781,17 +781,17 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   outline: none;
   cursor: pointer;
   min-width: 13.75rem;
-  min-height: 4.38rem;
+  min-height: 4.375rem;
   padding: 0 2.5rem;
   font-size: 1rem;
   min-width: initial;
   min-height: initial;
-  width: 3.13rem;
-  height: 3.13rem;
+  width: 3.125rem;
+  height: 3.125rem;
   padding: 0;
-  width: 4.38rem;
-  height: 4.38rem;
-  border: 0.13rem solid #eee;
+  width: 4.375rem;
+  height: 4.375rem;
+  border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -803,7 +803,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -850,14 +850,14 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 13.75rem;
-    height: 4.38rem;
+    height: 4.375rem;
   }
 }
 
@@ -885,12 +885,12 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -903,15 +903,15 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   min-width: 10rem;
   min-height: 2.5rem;
   padding: 0 1.25rem;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   min-width: initial;
   min-height: initial;
-  width: 3.13rem;
-  height: 3.13rem;
+  width: 3.125rem;
+  height: 3.125rem;
   padding: 0;
   width: 2.5rem;
   height: 2.5rem;
-  border: 0.13rem solid #eee;
+  border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -923,7 +923,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -970,7 +970,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
@@ -1005,12 +1005,12 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1022,10 +1022,10 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   cursor: pointer;
   min-width: initial;
   min-height: initial;
-  width: 3.13rem;
-  height: 3.13rem;
+  width: 3.125rem;
+  height: 3.125rem;
   padding: 0;
-  border: 0.13rem solid #eee;
+  border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1037,7 +1037,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -1084,7 +1084,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
@@ -1112,12 +1112,12 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1127,7 +1127,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.13rem solid #eee;
+  border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1139,7 +1139,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -1186,7 +1186,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
@@ -1219,12 +1219,12 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   position: relative;
   box-sizing: border-box;
   min-width: 12.5rem;
-  min-height: 3.13rem;
-  padding: 0 1.88rem;
-  font-size: 0.88rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -1234,7 +1234,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.13rem solid #eee;
+  border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
@@ -1246,7 +1246,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 .c0 >:nth-child(n) {
-  margin-right: 0.63rem;
+  margin-right: 0.625rem;
   text-align: left;
 }
 
@@ -1293,7 +1293,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 12.5rem;
-    height: 3.13rem;
+    height: 3.125rem;
   }
 }
 
