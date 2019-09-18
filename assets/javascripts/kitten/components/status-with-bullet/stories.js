@@ -43,7 +43,11 @@ storiesOf('StatusWithBullet', module)
           <GridCol offset="1" col="8">
             <StatusWithBullet
               statusMessage={text('Status message', 'Message')}
-              statusType={select('Status type', ['success', 'danger'])}
+              statusType={select('Status type', [
+                'success',
+                'danger',
+                'warning',
+              ])}
             />
           </GridCol>
         </Grid>

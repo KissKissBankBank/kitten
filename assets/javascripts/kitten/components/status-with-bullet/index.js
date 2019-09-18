@@ -28,6 +28,9 @@ export const StatusWithBullet = ({ statusMessage, statusType }) => {
   if (statusType === 'danger') {
     statusColor = COLORS.error
   }
+  if (statusType === 'warning') {
+    statusColor = COLORS.error
+  }
 
   return (
     <StyledStatus statusColor={statusColor}>
@@ -39,7 +42,7 @@ export const StatusWithBullet = ({ statusMessage, statusType }) => {
 
 StatusWithBullet.propTypes = {
   statusMessage: PropTypes.string.isRequired,
-  statusType: PropTypes.oneOf(['danger', 'success']),
+  statusType: PropTypes.oneOf(['danger', 'success', 'warning']),
 }
 
 StatusWithBullet.defaultProps = {
