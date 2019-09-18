@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `warning` status to `StatusWithBullet`
+
 ## [2.25.0] - 2019-09-12
 
 Features:
