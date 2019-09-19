@@ -38,7 +38,7 @@ exports[`<ListTable /> with a complete structure and custom classes matches with
       className="row__StyledRow-sc-1vlimsn-0 dtKcON"
     >
       <ul
-        className="row__StyledItemList-sc-1vlimsn-1 icGmBR"
+        className="row__StyledItemList-sc-1vlimsn-1 ybKEK"
       >
         <li
           aria-describedby="TestListTable-col-0"
@@ -64,7 +64,7 @@ exports[`<ListTable /> with a complete structure and custom classes matches with
       className="customRowClass row__StyledRow-sc-1vlimsn-0 kpFNeD"
     >
       <ul
-        className="customListClass row__StyledItemList-sc-1vlimsn-1 icGmBR"
+        className="customListClass row__StyledItemList-sc-1vlimsn-1 ybKEK"
       >
         <li
           aria-describedby="TestListTable-col-0"
