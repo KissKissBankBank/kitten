@@ -118,6 +118,7 @@ export const Autocomplete = ({
   onChange,
   onBlur,
   onKeyDown,
+  onSelect,
   ...props
 }) => {
   const [items, setItems] = useState(defaultItems)
@@ -135,15 +136,15 @@ export const Autocomplete = ({
   const handleChange = e => {
     setValue(e.target.value)
 
-    onChange()
+    onChange(e)
   }
 
-  const handleBlur = () => {
+  const handleBlur = e => {
     setTimeout(() => {
       setShowSuggestions(false)
     }, 100)
 
-    onBlur()
+    onBlur(e)
   }
 
   const handleKeyDown = e => {
@@ -173,7 +174,7 @@ export const Autocomplete = ({
       }
     }
 
-    onKeyDown()
+    onKeyDown(e)
   }
 
   const handleClickItem = value => () => {
@@ -184,6 +185,7 @@ export const Autocomplete = ({
 
     setValue(value)
     setShowSuggestions(false)
+    onSelect(value)
   }
 
   const updateSuggestions = () => {
@@ -283,6 +285,7 @@ Autocomplete.propTypes = {
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onKeyDown: PropTypes.func,
+  onSelect: PropTypes.func,
 }
 
 Autocomplete.defaultProps = {
@@ -290,4 +293,5 @@ Autocomplete.defaultProps = {
   onChange: () => {},
   onBlur: () => {},
   onKeyDown: () => {},
+  onSelect: () => {},
 }
