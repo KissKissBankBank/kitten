@@ -29,7 +29,7 @@ const StyledItemList = styled.ul`
   padding-right: ${pxToRem(CONTAINER_PADDING_THIN)};
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   list-style: none;
 
   @media screen and (min-width: ${ScreenConfig.M.min}px) {
