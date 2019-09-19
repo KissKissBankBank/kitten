@@ -3,11 +3,13 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 Features:
 - Add `onSelect` prop on `Autocomplete` component.
 
 Fixes:
 - Passing value through `Autocomplete` callbacks.
+- Fix weird `ListTable` bottom margin bug on KissKiss
 
 ## [2.25.0] - 2019-09-12
 
