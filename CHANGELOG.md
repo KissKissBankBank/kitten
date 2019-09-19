@@ -9,7 +9,7 @@ Features:
 
 Fixes:
 - Passing value through `Autocomplete` callbacks.
-- Fix weird `ListTable` bottom margin bug
+- Fix weird `ListTable` bottom margin bug.
 
 ## [2.25.0] - 2019-09-12
 
