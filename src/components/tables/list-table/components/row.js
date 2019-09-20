@@ -38,7 +38,7 @@ var StyledRow = _styledComponents.default.li.withConfig({
 var StyledItemList = _styledComponents.default.ul.withConfig({
   displayName: "row__StyledItemList",
   componentId: "sc-1vlimsn-1"
-})(["height:", ";margin:0 auto;max-width:", ";padding-left:", ";padding-right:", ";display:flex;justify-content:space-between;align-items:center;list-style:none;@media screen and (min-width:", "px){padding-left:", ";padding-right:", ";}"], (0, _typography.pxToRem)(90), (0, _typography.pxToRem)(_gridConfig.CONTAINER_MAX_WIDTH), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING));
+})(["height:", ";margin:0 auto;max-width:", ";padding-left:", ";padding-right:", ";display:flex;justify-content:space-between;align-items:flex-end;list-style:none;@media screen and (min-width:", "px){padding-left:", ";padding-right:", ";}"], (0, _typography.pxToRem)(90), (0, _typography.pxToRem)(_gridConfig.CONTAINER_MAX_WIDTH), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING));
 
 var ListTableRow = function ListTableRow(_ref2) {
   var children = _ref2.children,
