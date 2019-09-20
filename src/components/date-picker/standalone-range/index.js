@@ -11,19 +11,9 @@ exports.StandaloneRangeDatePicker = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -87,111 +77,87 @@ var StyledDatePicker = _styledComponents.default.div.withConfig({
   return (0, _styledComponents.css)(["background-color:", ";color:", ";border:", ";outline:", ";"], styles.day.hover.backgroundColor, styles.day.hover.color, styles.day.hover.backgroundColor, borderSize);
 });
 
-var StandaloneRangeDatePicker =
-/*#__PURE__*/
-function (_PureComponent) {
-  (0, _inherits2.default)(StandaloneRangeDatePicker, _PureComponent);
+var StandaloneRangeDatePicker = function StandaloneRangeDatePicker(_ref12) {
+  var from = _ref12.from,
+      to = _ref12.to,
+      onChange = _ref12.onChange,
+      styles = _ref12.styles,
+      locale = _ref12.locale,
+      months = _ref12.months,
+      weekDays = _ref12.weekDays,
+      weekdaysShort = _ref12.weekdaysShort,
+      previousMonth = _ref12.previousMonth,
+      disabledDays = _ref12.disabledDays,
+      nextMonth = _ref12.nextMonth,
+      title = _ref12.title,
+      firstDayOfWeek = _ref12.firstDayOfWeek,
+      initialMonth = _ref12.initialMonth,
+      numberOfMonths = _ref12.numberOfMonths,
+      datePickerProps = (0, _objectWithoutProperties2.default)(_ref12, ["from", "to", "onChange", "styles", "locale", "months", "weekDays", "weekdaysShort", "previousMonth", "disabledDays", "nextMonth", "title", "firstDayOfWeek", "initialMonth", "numberOfMonths"]);
 
-  function StandaloneRangeDatePicker(props) {
-    var _this;
+  var _useState = (0, _react.useState)({
+    from: from,
+    to: to
+  }),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      dateRange = _useState2[0],
+      setDateRange = _useState2[1];
 
-    (0, _classCallCheck2.default)(this, StandaloneRangeDatePicker);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(StandaloneRangeDatePicker).call(this, props));
-    _this.handleDayClick = _this.handleDayClick.bind((0, _assertThisInitialized2.default)(_this));
-    _this.handleResetClick = _this.handleResetClick.bind((0, _assertThisInitialized2.default)(_this));
-    _this.state = _this.getInitialState();
-    return _this;
-  }
+  (0, _react.useEffect)(function () {
+    onChange(dateRange);
+  }, [dateRange]);
 
-  (0, _createClass2.default)(StandaloneRangeDatePicker, [{
-    key: "getInitialState",
-    value: function getInitialState() {
-      return {
-        from: undefined,
-        to: undefined
-      };
-    }
-  }, {
-    key: "handleDayClick",
-    value: function handleDayClick(day) {
-      var range = _reactDayPicker.DateUtils.addDayToRange(day, this.state);
+  var handleDayClick = function handleDayClick(day) {
+    setDateRange(_reactDayPicker.DateUtils.addDayToRange(day, dateRange));
+  };
 
-      this.setState(range);
-    }
-  }, {
-    key: "handleResetClick",
-    value: function handleResetClick() {
-      this.setState(this.getInitialState());
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          styles = _this$props.styles,
-          locale = _this$props.locale,
-          months = _this$props.months,
-          weekDays = _this$props.weekDays,
-          weekdaysShort = _this$props.weekdaysShort,
-          previousMonth = _this$props.previousMonth,
-          disabledDays = _this$props.disabledDays,
-          nextMonth = _this$props.nextMonth,
-          title = _this$props.title,
-          firstDayOfWeek = _this$props.firstDayOfWeek,
-          initialMonth = _this$props.initialMonth,
-          numberOfMonths = _this$props.numberOfMonths,
-          datePickerProps = (0, _objectWithoutProperties2.default)(_this$props, ["styles", "locale", "months", "weekDays", "weekdaysShort", "previousMonth", "disabledDays", "nextMonth", "title", "firstDayOfWeek", "initialMonth", "numberOfMonths"]);
-      var _this$state = this.state,
-          from = _this$state.from,
-          to = _this$state.to;
-      var modifiers = {
-        start: from,
-        end: to
-      };
-      return _react.default.createElement(StyledDatePicker, {
-        styles: styles
-      }, _react.default.createElement(_reactDayPicker.default, {
-        className: "Selectable",
-        numberOfMonths: numberOfMonths,
-        selectedDays: [from, {
-          from: from,
-          to: to
-        }],
-        modifiers: modifiers,
-        onDayClick: this.handleDayClick,
-        disabledDays: disabledDays,
-        navbarElement: _react.default.createElement(_navbar.Navbar, {
-          title: title,
-          iconColor: styles.header.icon.color,
-          months: months
-        }),
-        weekdaysLong: weekDays,
-        weekdaysShort: weekDays && weekDays.map(function (str) {
-          return str.substr(0, 2);
-        }),
-        locale: locale,
-        months: months,
-        labels: {
-          previousMonth: previousMonth,
-          nextMonth: nextMonth
-        },
-        firstDayOfWeek: firstDayOfWeek,
-        initialMonth: initialMonth,
-        dayPickerProps: (0, _extends2.default)({}, datePickerProps)
-      }));
-    }
-  }]);
-  return StandaloneRangeDatePicker;
-}(_react.PureComponent);
+  return _react.default.createElement(StyledDatePicker, {
+    styles: styles
+  }, _react.default.createElement(_reactDayPicker.default, (0, _extends2.default)({
+    className: "Selectable",
+    numberOfMonths: numberOfMonths,
+    selectedDays: [dateRange.from, dateRange],
+    modifiers: {
+      start: dateRange.from,
+      end: dateRange.to
+    },
+    onDayClick: handleDayClick,
+    disabledDays: disabledDays,
+    navbarElement: _react.default.createElement(_navbar.Navbar, {
+      title: title,
+      iconColor: styles.header.icon.color,
+      months: months
+    }),
+    weekdaysLong: weekDays,
+    weekdaysShort: weekDays && weekDays.map(function (str) {
+      return str.substr(0, 2);
+    }),
+    locale: locale,
+    months: months,
+    labels: {
+      previousMonth: previousMonth,
+      nextMonth: nextMonth
+    },
+    firstDayOfWeek: firstDayOfWeek,
+    initialMonth: initialMonth
+  }, datePickerProps)));
+};
 
 exports.StandaloneRangeDatePicker = StandaloneRangeDatePicker;
 StandaloneRangeDatePicker.propTypes = {
-  styles: _propTypes.default.object,
+  from: _propTypes.default.instanceOf(Date),
+  to: _propTypes.default.instanceOf(Date),
+  onChange: _propTypes.default.func,
   months: _propTypes.default.array,
   previousMonth: _propTypes.default.string,
-  nextMonth: _propTypes.default.string
+  nextMonth: _propTypes.default.string,
+  styles: _propTypes.default.object
 };
 StandaloneRangeDatePicker.defaultProps = {
-  months: '',
+  from: undefined,
+  to: undefined,
+  onChange: function onChange() {},
+  months: [],
   previousMonth: '',
   nextMonth: '',
   styles: {

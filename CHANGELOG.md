@@ -4,9 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `onChange` prop to `StandaloneRangeDatePicker`.
+
 ## [2.26.0] - 2019-09-20
 
-Features:
+Feature:
 - Add `onSelect` prop on `Autocomplete` component.
 
 Fixes:
