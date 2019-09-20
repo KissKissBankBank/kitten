@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.26.0] - 2019-09-20
+
 Features:
 - Add `onSelect` prop on `Autocomplete` component.
 

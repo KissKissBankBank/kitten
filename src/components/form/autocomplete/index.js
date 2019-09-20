@@ -67,7 +67,8 @@ var Autocomplete = function Autocomplete(_ref3) {
       onChange = _ref3.onChange,
       onBlur = _ref3.onBlur,
       onKeyDown = _ref3.onKeyDown,
-      props = (0, _objectWithoutProperties2.default)(_ref3, ["items", "error", "onChange", "onBlur", "onKeyDown"]);
+      onSelect = _ref3.onSelect,
+      props = (0, _objectWithoutProperties2.default)(_ref3, ["items", "error", "onChange", "onBlur", "onKeyDown", "onSelect"]);
 
   var _useState = (0, _react.useState)(defaultItems),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -98,14 +99,14 @@ var Autocomplete = function Autocomplete(_ref3) {
 
   var handleChange = function handleChange(e) {
     setValue(e.target.value);
-    onChange();
+    onChange(e);
   };
 
-  var handleBlur = function handleBlur() {
+  var handleBlur = function handleBlur(e) {
     setTimeout(function () {
       setShowSuggestions(false);
     }, 100);
-    onBlur();
+    onBlur(e);
   };
 
   var handleKeyDown = function handleKeyDown(e) {
@@ -133,7 +134,7 @@ var Autocomplete = function Autocomplete(_ref3) {
       }
     }
 
-    onKeyDown();
+    onKeyDown(e);
   };
 
   var handleClickItem = function handleClickItem(value) {
@@ -143,6 +144,7 @@ var Autocomplete = function Autocomplete(_ref3) {
       inputEl.current.focus();
       setValue(value);
       setShowSuggestions(false);
+      onSelect(value);
     };
   };
 
@@ -220,11 +222,13 @@ Autocomplete.propTypes = {
   error: _propTypes.default.bool,
   onChange: _propTypes.default.func,
   onBlur: _propTypes.default.func,
-  onKeyDown: _propTypes.default.func
+  onKeyDown: _propTypes.default.func,
+  onSelect: _propTypes.default.func
 };
 Autocomplete.defaultProps = {
   error: false,
   onChange: function onChange() {},
   onBlur: function onBlur() {},
-  onKeyDown: function onKeyDown() {}
+  onKeyDown: function onKeyDown() {},
+  onSelect: function onSelect() {}
 };
