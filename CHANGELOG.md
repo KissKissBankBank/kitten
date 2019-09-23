@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `onChange`, `from` and `to` props to `StandaloneRangeDatePicker`.
+## [2.27.0] - 2019-09-23
+
+Feature:
+- Add `onChange`, `from` and `to` props to `StandaloneRangeDatePicker`.
 
 ## [2.26.0] - 2019-09-20
 

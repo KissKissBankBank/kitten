@@ -271,8 +271,8 @@ PhoneDropdown.defaultProps = {
   // Add custom value to compute horizontal position.
   spaceAroundGrid: 0,
   // Notifications count on badge.
-  buttonNotifications: 0 // DEPRECATED: do not use default export.
+  buttonNotifications: 0
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = PhoneDropdown;
 exports.default = _default;

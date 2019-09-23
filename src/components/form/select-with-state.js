@@ -235,8 +235,8 @@ SelectWithState.defaultProps = {
   tiny: false,
   name: null,
   inputProps: {},
-  autoFill: undefined // DEPRECATED: do not use default export.
+  autoFill: undefined
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = SelectWithState;
 exports.default = _default;

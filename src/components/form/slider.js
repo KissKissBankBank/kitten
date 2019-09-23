@@ -30,7 +30,6 @@ var _sliderBar = require("../../components/sliders/slider-bar");
 var _sliderKeyDownHandler = require("../../handlers/sliders/slider-key-down-handler");
 
 // TODO move to the "sliders" group (breaking change)
-// Slider input to choose an integer value between two bounds
 var Slider =
 /*#__PURE__*/
 function (_React$Component) {
@@ -146,8 +145,8 @@ Slider.defaultProps = {
   max: 100,
   step: 1,
   onChange: function onChange() {},
-  onChangeEnd: function onChangeEnd() {} // DEPRECATED: do not use default export.
+  onChangeEnd: function onChangeEnd() {}
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = Slider;
 exports.default = _default;

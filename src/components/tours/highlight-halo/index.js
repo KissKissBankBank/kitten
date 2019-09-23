@@ -152,7 +152,8 @@ HighlightHalo.propTypes = {
   haloColor: _propTypes.default.string,
   haloSize: _propTypes.default.number,
   animationCycles: _propTypes.default.oneOfType([_propTypes.default.oneOf(['infinite']), // `infinite` will cause no shutdown
-  _propTypes.default.number]),
+  _propTypes.default.number // number of 'breathing' cycles before shutting down
+  ]),
   animationCycleDuration: _propTypes.default.number,
   // time in seconds
   animationDelay: _propTypes.default.number,

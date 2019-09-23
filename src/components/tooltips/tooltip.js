@@ -74,8 +74,8 @@ exports.Tooltip = Tooltip;
 Tooltip.defaultProps = {
   id: '',
   place: 'right',
-  children: null // DEPRECATED: do not use default export.
+  children: null
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = Tooltip;
 exports.default = _default;

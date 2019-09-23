@@ -45,10 +45,10 @@ function (_Component) {
     _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Search).call(this, props));
     _this.state = {
       focus: false,
-      hover: false // These listeners help us to handle the text input display depending on the
-      // submit input state (as we cannot handle it directly in css).
+      hover: false
+    }; // These listeners help us to handle the text input display depending on the
+    // submit input state (as we cannot handle it directly in css).
 
-    };
     _this.handleSubmitFocus = _this.handleSubmitFocus.bind((0, _assertThisInitialized2.default)(_this));
     _this.handleSubmitBlur = _this.handleSubmitBlur.bind((0, _assertThisInitialized2.default)(_this));
     _this.handleSubmitMouseOver = _this.handleSubmitMouseOver.bind((0, _assertThisInitialized2.default)(_this));
