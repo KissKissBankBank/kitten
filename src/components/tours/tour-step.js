@@ -179,8 +179,8 @@ function (_React$Component) {
 exports.TourStep = TourStep;
 TourStep.defaultProps = {
   position: null // 'left' | 'right'
-  // DEPRECATED: do not use default export.
 
-};
+}; // DEPRECATED: do not use default export.
+
 var _default = TourStep;
 exports.default = _default;

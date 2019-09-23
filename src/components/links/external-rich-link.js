@@ -67,8 +67,8 @@ function (_React$Component) {
 exports.ExternalRichLink = ExternalRichLink;
 ExternalRichLink.defaultProps = {
   href: '#',
-  children: 'I am a rich link!' // DEPRECATED: do not use default export.
+  children: 'I am a rich link!'
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = ExternalRichLink;
 exports.default = _default;

@@ -457,8 +457,8 @@ LoanSimulator.defaultProps = {
   currencySymbol: '$',
   installmentSymbol: '$/month',
   locale: 'en',
-  actionLabel: null // DEPRECATED: do not use default export.
+  actionLabel: null
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = LoanSimulator;
 exports.default = _default;

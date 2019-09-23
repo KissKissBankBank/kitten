@@ -41,7 +41,6 @@ var _screenConfig = require("../../constants/screen-config");
 
 var _navbar = require("./components/navbar");
 
-// Doc available here: http://react-day-picker.js.org/docs/getting-started
 var borderSize = (0, _typography.pxToRem)(2);
 var cellSize = (0, _typography.pxToRem)(50);
 var tinyCellSize = (0, _typography.pxToRem)(40);

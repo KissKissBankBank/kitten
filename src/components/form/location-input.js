@@ -31,10 +31,6 @@ var _reactPlacesAutocomplete = _interopRequireWildcard(require("react-places-aut
 
 var _locationIcon = require("../../components/icons/location-icon");
 
-// Via "https://github.com/kenny-hibino/react-places-autocomplete"
-// Make sure you include a script to the Google Maps places API.
-// For example:
-//   <script src="https://maps.googleapis.com/maps/api/js?key=…&libraries=places"></script>
 var LocationInput =
 /*#__PURE__*/
 function (_Component) {
