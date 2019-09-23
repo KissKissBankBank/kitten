@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import DayPicker, { DateUtils } from 'react-day-picker'
 import styled, { css } from 'styled-components'
@@ -191,122 +191,113 @@ const StyledDatePicker = styled.div`
   }
 `
 
-export class StandaloneRangeDatePicker extends PureComponent {
-  static propTypes = {
-    styles: PropTypes.object,
-    months: PropTypes.array,
-    previousMonth: PropTypes.string,
-    nextMonth: PropTypes.string,
+export const StandaloneRangeDatePicker = ({
+  from,
+  to,
+  onChange,
+  styles,
+  locale,
+  months,
+  weekDays,
+  weekdaysShort,
+  previousMonth,
+  disabledDays,
+  nextMonth,
+  title,
+  firstDayOfWeek,
+  initialMonth,
+  numberOfMonths,
+  ...datePickerProps
+}) => {
+  const [dateRange, setDateRange] = useState({ from, to })
+
+  useEffect(() => {
+    onChange(dateRange)
+  }, [dateRange])
+
+  const handleDayClick = day => {
+    setDateRange(DateUtils.addDayToRange(day, dateRange))
   }
 
-  static defaultProps = {
-    months: '',
-    previousMonth: '',
-    nextMonth: '',
-    styles: {
-      header: {
-        backgroundColor: COLORS.background1,
+  return (
+    <StyledDatePicker styles={styles}>
+      <DayPicker
+        className="Selectable"
+        numberOfMonths={numberOfMonths}
+        selectedDays={[dateRange.from, dateRange]}
+        modifiers={{ start: dateRange.from, end: dateRange.to }}
+        onDayClick={handleDayClick}
+        disabledDays={disabledDays}
+        navbarElement={
+          <Navbar
+            title={title}
+            iconColor={styles.header.icon.color}
+            months={months}
+          />
+        }
+        weekdaysLong={weekDays}
+        weekdaysShort={weekDays && weekDays.map(str => str.substr(0, 2))}
+        locale={locale}
+        months={months}
+        labels={{ previousMonth, nextMonth }}
+        firstDayOfWeek={firstDayOfWeek}
+        initialMonth={initialMonth}
+        {...datePickerProps}
+      />
+    </StyledDatePicker>
+  )
+}
+
+StandaloneRangeDatePicker.propTypes = {
+  from: PropTypes.instanceOf(Date),
+  to: PropTypes.instanceOf(Date),
+  onChange: PropTypes.func,
+  months: PropTypes.array,
+  previousMonth: PropTypes.string,
+  nextMonth: PropTypes.string,
+  styles: PropTypes.object,
+}
+
+StandaloneRangeDatePicker.defaultProps = {
+  from: undefined,
+  to: undefined,
+  onChange: () => {},
+  months: [],
+  previousMonth: '',
+  nextMonth: '',
+  styles: {
+    header: {
+      backgroundColor: COLORS.background1,
+      color: COLORS.font1,
+      icon: {
         color: COLORS.font1,
-        icon: {
-          color: COLORS.font1,
-        },
-      },
-      borderColor: COLORS.line1,
-      weekdaysColor: COLORS.font1,
-      day: {
-        focus: {
-          color: COLORS.primary1,
-        },
-        hover: {
-          backgroundColor: COLORS.primary1,
-          color: COLORS.background1,
-        },
-        today: {
-          color: COLORS.primary1,
-        },
-        disabled: {
-          color: COLORS.line2,
-        },
-        selected: {
-          backgroundColor: COLORS.primary6,
-          color: COLORS.primary1,
-          borderColor: COLORS.primary4,
-        },
-        selectedStartAndEnd: {
-          backgroundColor: COLORS.primary1,
-          color: COLORS.background1,
-        },
       },
     },
-  }
-
-  constructor(props) {
-    super(props)
-    this.handleDayClick = this.handleDayClick.bind(this)
-    this.handleResetClick = this.handleResetClick.bind(this)
-    this.state = this.getInitialState()
-  }
-  getInitialState() {
-    return {
-      from: undefined,
-      to: undefined,
-    }
-  }
-  handleDayClick(day) {
-    const range = DateUtils.addDayToRange(day, this.state)
-    this.setState(range)
-  }
-  handleResetClick() {
-    this.setState(this.getInitialState())
-  }
-  render() {
-    const {
-      styles,
-      locale,
-      months,
-      weekDays,
-      weekdaysShort,
-      previousMonth,
-      disabledDays,
-      nextMonth,
-      title,
-      firstDayOfWeek,
-      initialMonth,
-      numberOfMonths,
-      ...datePickerProps
-    } = this.props
-
-    const { from, to } = this.state
-    const modifiers = { start: from, end: to }
-
-    return (
-      <StyledDatePicker styles={styles}>
-        <DayPicker
-          className="Selectable"
-          numberOfMonths={numberOfMonths}
-          selectedDays={[from, { from, to }]}
-          modifiers={modifiers}
-          onDayClick={this.handleDayClick}
-          disabledDays={disabledDays}
-          navbarElement={
-            <Navbar
-              title={title}
-              iconColor={styles.header.icon.color}
-              months={months}
-            />
-          }
-          weekdaysLong={weekDays}
-          weekdaysShort={weekDays && weekDays.map(str => str.substr(0, 2))}
-          locale={locale}
-          months={months}
-          labels={{ previousMonth, nextMonth }}
-          firstDayOfWeek={firstDayOfWeek}
-          initialMonth={initialMonth}
-          dayPickerProps={{
-            ...datePickerProps,
-          }}
-        />
-      </StyledDatePicker>
-    )
-  }
+    borderColor: COLORS.line1,
+    weekdaysColor: COLORS.font1,
+    day: {
+      focus: {
+        color: COLORS.primary1,
+      },
+      hover: {
+        backgroundColor: COLORS.primary1,
+        color: COLORS.background1,
+      },
+      today: {
+        color: COLORS.primary1,
+      },
+      disabled: {
+        color: COLORS.line2,
+      },
+      selected: {
+        backgroundColor: COLORS.primary6,
+        color: COLORS.primary1,
+        borderColor: COLORS.primary4,
+      },
+      selectedStartAndEnd: {
+        backgroundColor: COLORS.primary1,
+        color: COLORS.background1,
+      },
+    },
+  },
 }

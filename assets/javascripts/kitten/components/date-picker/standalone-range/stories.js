@@ -174,6 +174,23 @@ const info = {
       firstDayOfWeek={1}
     />
     ~~~
+
+    ## Initialize range
+    ~~~js
+    <StandaloneRangeDatePicker
+      …
+      from={ new Date() }
+      to={ new Date() }
+    />
+    ~~~
+
+    ## Get range
+    ~~~js
+    <StandaloneRangeDatePicker
+      …
+      onChange={ range => { … } }
+    />
+    ~~~
   `,
 }
 
