@@ -31,7 +31,9 @@ export class FieldLabel extends Component {
       <Marger bottom="1.5" {...others}>
         <Line style={{ lineHeight: 1 }}>
           <Line.Item>
-            <Label {...labelProps}>{children}</Label>
+            <Label {...labelProps} size={labelProps.size || 'tiny'}>
+              {children}
+            </Label>
           </Line.Item>
 
           {tooltip && (
