@@ -1,0 +1,32 @@
+/// Cursor utilities.
+///
+/// @group cursor
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-cursor;
+///
+/// @example html
+///
+///   <span class="k-u-cursor-default">…</span>
+///   <span class="k-u-cursor-pointer">…</span>
+///   <span class="k-u-cursor-not-allowed">…</span>
+///   <span class="k-u-cursor-crosshair">…</span>
+
+@mixin k-utilities-cursor {
+  .k-u-cursor-default {
+    cursor: default;
+  }
+
+  .k-u-cursor-pointer {
+    cursor: pointer;
+  }
+
+  .k-u-cursor-not-allowed {
+    cursor: not-allowed;
+  }
+
+  .k-u-cursor-crosshair {
+    cursor: crosshair;
+  }
+}
