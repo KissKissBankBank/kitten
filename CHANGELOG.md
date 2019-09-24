@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [2.28.0] - 2019-09-23
+## [2.28.0] - 2019-09-24
 
 Feature:
 - New `k-u-cursor-*` CSS utility.
