@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -69,7 +69,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -163,7 +163,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -243,7 +243,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -367,7 +367,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -477,7 +477,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -563,7 +563,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label"
           htmlFor="select"
           onClick={[Function]}
         >
