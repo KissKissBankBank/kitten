@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `StrokeIcon` component.
 - Fix: Remove default `font-size` on `Field.Label`.
 
 ## [2.28.0] - 2019-09-24
