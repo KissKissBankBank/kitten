@@ -41,6 +41,7 @@ import { QuestionMarkIcon } from './question-mark-icon'
 import { SearchIcon } from './search-icon'
 import { SofortIcon } from './sofort-icon'
 import { StarIcon } from './star-icon'
+import { StrokeIcon } from './stroke-icon'
 import { TwitterIcon } from './twitter-icon'
 import { TypologyTagIcon } from './typology-tag-icon'
 import { VisaIcon } from './visa-icon'
@@ -149,6 +150,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<CopyIcon />} />
         <IconContainer children={<BubbleIcon />} />
         <IconContainer children={<ExportIcon />} />
+        <IconContainer children={<StrokeIcon />} />
       </Group>
     </Container>
   )
