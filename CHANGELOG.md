@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Create `StrokeIcon` component.
 - Fix: Remove default `font-size` on `Field.Label`.
-- Feature: Add `icon` and `iconPosition` props to `<Autocomplete />`.
+- Feature: Add `icon`, `iconPosition` and `rawResults` props to `<Autocomplete />`.
 
 ## [2.28.0] - 2019-09-24
 
