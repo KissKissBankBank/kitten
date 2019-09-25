@@ -12,6 +12,7 @@ const maxItemsVisibled = 3
 const borderSize = 2
 
 const Container = styled.div`
+  display: flex;
   position: relative;
 `
 
@@ -59,6 +60,46 @@ const Input = styled.input`
         border-color: ${COLORS.line2};
         color: ${COLORS.font1};
       }
+    `}
+
+  ${({ hasIcon, iconPosition }) => {
+    if (!hasIcon) {
+      return false
+    }
+    return iconPosition === 'left'
+      ? css`
+          padding-left: ${pxToRem(45)};
+        `
+      : css`
+          padding-right: ${pxToRem(45)};
+        `
+  }}
+`
+
+const StyledIcon = styled(({ disabled, ...others }) => <span {...others} />)`
+  display: flex;
+  position: absolute;
+  align-self: center;
+  padding: 0 ${pxToRem(18)};
+  z-index: 1;
+  left: 0;
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      & > svg [stroke]:not([stroke='none']) {
+        stroke: ${COLORS.font2};
+      }
+      & > svg [fill]:not([fill='none']) {
+        fill: ${COLORS.font2};
+      }
+    `}
+
+  ${({ iconPosition }) =>
+    iconPosition === 'right' &&
+    css`
+      left: initial;
+      right: 0;
     `}
 `
 
@@ -119,6 +160,8 @@ export const Autocomplete = ({
   onBlur,
   onKeyDown,
   onSelect,
+  icon,
+  iconPosition,
   ...props
 }) => {
   const [items, setItems] = useState(defaultItems)
@@ -239,12 +282,23 @@ export const Autocomplete = ({
         aria-owns={`${props.name}-results`}
         aria-expanded={showSuggestions && items.length > 0}
         aria-autocomplete="both"
+        hasIcon={!!icon}
+        iconPosition={iconPosition}
         aria-activedescendant={
           items[selectedItemIndex]
             ? slugify(`${items[selectedItemIndex]}-${selectedItemIndex}`)
             : ''
         }
       />
+      {icon && (
+        <StyledIcon
+          aria-hidden="true"
+          disabled={props.disabled}
+          iconPosition={iconPosition}
+        >
+          {React.cloneElement(icon, { width: 15, height: 15 })}
+        </StyledIcon>
+      )}
 
       {showSuggestions && items.length > 0 && (
         <>
@@ -282,6 +336,8 @@ Autocomplete.propTypes = {
   name: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
   error: PropTypes.bool,
+  icon: PropTypes.object,
+  iconPosition: PropTypes.oneOf(['left', 'right']),
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onKeyDown: PropTypes.func,
@@ -290,6 +346,7 @@ Autocomplete.propTypes = {
 
 Autocomplete.defaultProps = {
   error: false,
+  iconPosition: 'left',
   onChange: () => {},
   onBlur: () => {},
   onKeyDown: () => {},
