@@ -162,6 +162,7 @@ export const Autocomplete = ({
   onSelect,
   icon,
   iconPosition,
+  rawResults,
   ...props
 }) => {
   const [items, setItems] = useState(defaultItems)
@@ -232,12 +233,16 @@ export const Autocomplete = ({
   }
 
   const updateSuggestions = () => {
-    const search = `${value}`.toLowerCase()
-    const newItems = defaultItems.filter(
-      item => item.toLowerCase().includes(search) && item !== value,
-    )
+    if (rawResults) {
+      setItems(defaultItems)
+    } else {
+      const search = `${value}`.toLowerCase()
+      const newItems = defaultItems.filter(
+        item => item.toLowerCase().includes(search) && item !== value,
+      )
 
-    setItems(newItems)
+      setItems(newItems)
+    }
     resetSelectedItem()
   }
 
@@ -338,6 +343,7 @@ Autocomplete.propTypes = {
   error: PropTypes.bool,
   icon: PropTypes.object,
   iconPosition: PropTypes.oneOf(['left', 'right']),
+  rawResults: PropTypes.bool,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onKeyDown: PropTypes.func,
@@ -346,6 +352,7 @@ Autocomplete.propTypes = {
 
 Autocomplete.defaultProps = {
   error: false,
+  rawResults: false,
   iconPosition: 'left',
   onChange: () => {},
   onBlur: () => {},
