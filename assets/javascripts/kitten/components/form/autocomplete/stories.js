@@ -164,6 +164,17 @@ const info = {
       items={ ['foo', 'bar'] }
     />
     ~~~
+    &nbsp;
+    
+    ## Props
+    
+     - **updateSuggestionsStrategy**: define custom filter strategy of items
+        ~~~js
+          updateStrategy={({ items, value }) =>
+            items.filter(item => item.startsWith(value))
+          }
+        ~~~
+         
   `,
   header: false,
   propTables: false,
