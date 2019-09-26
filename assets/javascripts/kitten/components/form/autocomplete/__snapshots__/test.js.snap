@@ -327,7 +327,6 @@ exports[`<Autocomplete /> with loading matches with snapshot 1`] = `
     </svg>
   </div>
   <span
-    aria-live="assertive"
     className="c3"
     lang="en"
   >
