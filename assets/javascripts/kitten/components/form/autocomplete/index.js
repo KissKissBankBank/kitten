@@ -311,10 +311,15 @@ export const Autocomplete = ({
         }
       />
       {isLoading && (
-        <StyledLoader
-          color={COLORS.font2}
-          hasIcon={icon && iconPosition === 'right'}
-        />
+        <>
+          <StyledLoader
+            color={COLORS.font2}
+            hasIcon={icon && iconPosition === 'right'}
+          />
+          <VisuallyHidden lang="en" aria-live="assertive">
+            loading
+          </VisuallyHidden>
+        </>
       )}
       {icon && (
         <StyledIcon
