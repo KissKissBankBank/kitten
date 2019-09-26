@@ -316,9 +316,7 @@ export const Autocomplete = ({
             color={COLORS.font2}
             hasIcon={icon && iconPosition === 'right'}
           />
-          <VisuallyHidden lang="en" aria-live="assertive">
-            loading
-          </VisuallyHidden>
+          <VisuallyHidden lang="en">loading</VisuallyHidden>
         </>
       )}
       {icon && (
