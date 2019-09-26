@@ -77,15 +77,17 @@ const Input = styled.input`
   }}
 `
 
-const StyledLoader = styled(({ hasIcon, ...others }) => <Loader {...others} />)`
+const StyledLoader = styled(({ addRightPadding, ...others }) => (
+  <Loader {...others} />
+))`
   display: flex;
   position: absolute;
   align-self: center;
   padding: 0 ${pxToRem(18)};
   z-index: 1;
   right: 0;
-  ${({ hasIcon }) =>
-    hasIcon &&
+  ${({ addRightPadding }) =>
+    addRightPadding &&
     css`
       padding-right: ${pxToRem(45)};
     `}
@@ -314,7 +316,7 @@ export const Autocomplete = ({
         <>
           <StyledLoader
             color={COLORS.font2}
-            hasIcon={icon && iconPosition === 'right'}
+            addRightPadding={icon && iconPosition === 'right'}
           />
           <VisuallyHidden lang="en">loading</VisuallyHidden>
         </>
