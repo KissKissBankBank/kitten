@@ -168,7 +168,7 @@ const info = {
     
     ## Props
     
-     - **updateStrategy**: define custom filter strategy of items
+     - **updateSuggestionsStrategy**: define custom filter strategy of items
         ~~~js
           updateStrategy={({ items, value }) =>
             items.filter(item => item.startsWith(value))
