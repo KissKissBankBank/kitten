@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, optionsKnob } from '@storybook/addon-knobs'
+import { withKnobs, optionsKnob, boolean } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -197,6 +197,7 @@ storiesOf('Form/Autocomplete', module)
               id="autocomplete"
               name="autocomplete"
               placeholder="Search a kitten…"
+              isLoading={boolean('isLoading', false)}
               items={items}
             />
 
@@ -221,6 +222,7 @@ storiesOf('Form/Autocomplete', module)
               id="autocomplete"
               name="autocomplete"
               placeholder="Search a kitten…"
+              isLoading={boolean('isLoading', false)}
               icon={<LocationIcon />}
               iconPosition={optionsKnob(
                 'iconPosition',
