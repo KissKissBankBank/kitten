@@ -173,7 +173,7 @@ const info = {
           updateStrategy={({ items, value }) =>
             items.filter(item => item.startsWith(value))
           }
-        ~~
+        ~~~
          
   `,
   header: false,
