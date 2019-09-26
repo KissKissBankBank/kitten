@@ -162,6 +162,7 @@ export const Autocomplete = ({
   onSelect,
   icon,
   iconPosition,
+  updateStrategy,
   ...props
 }) => {
   const [items, setItems] = useState(defaultItems)
@@ -233,9 +234,12 @@ export const Autocomplete = ({
 
   const updateSuggestions = () => {
     const search = `${value}`.toLowerCase()
-    const newItems = defaultItems.filter(
-      item => item.toLowerCase().includes(search) && item !== value,
-    )
+
+    const newItems = updateStrategy
+      ? updateStrategy({ items: defaultItems, value })
+      : defaultItems.filter(
+          item => item.toLowerCase().includes(search) && item !== value,
+        )
 
     setItems(newItems)
     resetSelectedItem()
@@ -338,6 +342,7 @@ Autocomplete.propTypes = {
   error: PropTypes.bool,
   icon: PropTypes.object,
   iconPosition: PropTypes.oneOf(['left', 'right']),
+  updateStrategy: PropTypes.func,
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onKeyDown: PropTypes.func,
