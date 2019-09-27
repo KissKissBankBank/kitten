@@ -363,9 +363,6 @@ export const Autocomplete = ({
                 {noResultMessage}
               </NoResultItem>
             </Suggestions>
-            <VisuallyHidden lang="en" aria-live="assertive">
-              no result available.
-            </VisuallyHidden>
           </>
         )}
 
