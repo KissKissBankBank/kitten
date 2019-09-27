@@ -62,7 +62,7 @@ function (_Component) {
           lineHeight: 1
         }
       }, _react.default.createElement(_line.Line.Item, null, _react.default.createElement(_label.Label, (0, _extends2.default)({}, labelProps, {
-        size: "tiny"
+        size: labelProps.size || 'tiny'
       }), children)), tooltip && _react.default.createElement(_line.Line.Item, null, _react.default.createElement(_tooltip.Tooltip, {
         id: tooltipId
       }, tooltip)), link && _react.default.createElement(_line.Line.Item, null, link)));
