@@ -19,6 +19,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
+var _isFunction = _interopRequireDefault(require("lodash/fp/isFunction"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typography = require("../../../helpers/utils/typography");
@@ -31,6 +33,8 @@ var _visuallyHidden = require("../../accessibility/visually-hidden");
 
 var _slugify = _interopRequireDefault(require("slugify"));
 
+var _loader = require("../../loaders/loader");
+
 var itemHeight = 38;
 var maxItemsVisibled = 3;
 var borderSize = 2;
@@ -38,37 +42,83 @@ var borderSize = 2;
 var Container = _styledComponents.default.div.withConfig({
   displayName: "autocomplete__Container",
   componentId: "lfeqwe-0"
-})(["position:relative;"]);
+})(["display:flex;position:relative;"]);
 
 var Input = _styledComponents.default.input.withConfig({
   displayName: "autocomplete__Input",
   componentId: "lfeqwe-1"
-})(["display:block;width:100%;height:", ";box-sizing:border-box;background:", ";border:", " solid ", ";padding:0 ", ";outline:none;", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}:focus{border-color:", ";}::-ms-clear{display:none;}", ""], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.font2, _colorsConfig.default.font2, _colorsConfig.default.line2, function (_ref) {
+})(["display:block;width:100%;height:", ";box-sizing:border-box;background:", ";border:", " solid ", ";padding:0 ", ";outline:none;", ";font-size:", ";line-height:1.3;color:", ";transition:border-color 0.4s;::placeholder{color:", ";}::-moz-placeholder{color:", ";}:focus{border-color:", ";}::-ms-clear{display:none;}", " ", ""], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.font2, _colorsConfig.default.font2, _colorsConfig.default.line2, function (_ref) {
   var error = _ref.error;
   return error && (0, _styledComponents.css)(["border-color:", ";color:", ";:focus{border-color:", ";color:", ";}"], _colorsConfig.default.error3, _colorsConfig.default.error3, _colorsConfig.default.line2, _colorsConfig.default.font1);
+}, function (_ref2) {
+  var hasIcon = _ref2.hasIcon,
+      iconPosition = _ref2.iconPosition;
+
+  if (!hasIcon) {
+    return false;
+  }
+
+  return iconPosition === 'left' ? (0, _styledComponents.css)(["padding-left:", ";"], (0, _typography.pxToRem)(45)) : (0, _styledComponents.css)(["padding-right:", ";"], (0, _typography.pxToRem)(45));
+});
+
+var StyledLoader = (0, _styledComponents.default)(function (_ref3) {
+  var addRightPadding = _ref3.addRightPadding,
+      others = (0, _objectWithoutProperties2.default)(_ref3, ["addRightPadding"]);
+  return _react.default.createElement(_loader.Loader, others);
+}).withConfig({
+  displayName: "autocomplete__StyledLoader",
+  componentId: "lfeqwe-2"
+})(["display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;right:0;", ""], (0, _typography.pxToRem)(18), function (_ref4) {
+  var addRightPadding = _ref4.addRightPadding;
+  return addRightPadding && (0, _styledComponents.css)(["padding-right:", ";"], (0, _typography.pxToRem)(45));
+});
+var StyledIcon = (0, _styledComponents.default)(function (_ref5) {
+  var disabled = _ref5.disabled,
+      others = (0, _objectWithoutProperties2.default)(_ref5, ["disabled"]);
+  return _react.default.createElement("span", others);
+}).withConfig({
+  displayName: "autocomplete__StyledIcon",
+  componentId: "lfeqwe-3"
+})(["display:flex;position:absolute;align-self:center;padding:0 ", ";z-index:1;left:0;", " ", ""], (0, _typography.pxToRem)(18), function (_ref6) {
+  var disabled = _ref6.disabled;
+  return disabled && (0, _styledComponents.css)(["& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}"], _colorsConfig.default.font2, _colorsConfig.default.font2);
+}, function (_ref7) {
+  var iconPosition = _ref7.iconPosition;
+  return iconPosition === 'right' && (0, _styledComponents.css)(["left:initial;right:0;"]);
 });
 
 var Suggestions = _styledComponents.default.ul.withConfig({
   displayName: "autocomplete__Suggestions",
-  componentId: "lfeqwe-2"
-})(["position:absolute;top:", ";left:0;right:0;overflow-y:auto;margin:0;padding:0;background:", ";border:", " solid ", ";border-top:none;list-style:none;", ""], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, function (_ref2) {
-  var itemsLength = _ref2.itemsLength;
+  componentId: "lfeqwe-4"
+})(["position:absolute;top:", ";left:0;right:0;overflow-y:auto;margin:0;padding:0;background:", ";border:", " solid ", ";border-top:none;list-style:none;", ""], (0, _typography.pxToRem)(50), _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, function (_ref8) {
+  var itemsLength = _ref8.itemsLength;
   return itemsLength > 0 && (0, _styledComponents.css)(["height:", ";"], (0, _typography.pxToRem)(itemHeight * (itemsLength > 2 ? maxItemsVisibled : itemsLength)));
 });
 
+var NoResultItem = _styledComponents.default.li.withConfig({
+  displayName: "autocomplete__NoResultItem",
+  componentId: "lfeqwe-5"
+})(["padding:", " ", ";", ";font-size:", ";font-style:italic;line-height:1.3;color:", ";"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1);
+
 var Item = _styledComponents.default.li.withConfig({
   displayName: "autocomplete__Item",
-  componentId: "lfeqwe-3"
+  componentId: "lfeqwe-6"
 })(["padding:", " ", ";", ";font-size:", ";line-height:1.3;color:", ";cursor:pointer;transition:background-color 0.2s;:hover,:focus,:active{background-color:", ";}:focus{outline:none;}&[aria-selected='true']{background-color:", ";}"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _typographyConfig.default.fontStyles.light, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, _colorsConfig.default.background3, _colorsConfig.default.line1);
 
-var Autocomplete = function Autocomplete(_ref3) {
-  var defaultItems = _ref3.items,
-      error = _ref3.error,
-      onChange = _ref3.onChange,
-      onBlur = _ref3.onBlur,
-      onKeyDown = _ref3.onKeyDown,
-      onSelect = _ref3.onSelect,
-      props = (0, _objectWithoutProperties2.default)(_ref3, ["items", "error", "onChange", "onBlur", "onKeyDown", "onSelect"]);
+var Autocomplete = function Autocomplete(_ref9) {
+  var defaultItems = _ref9.items,
+      error = _ref9.error,
+      onChange = _ref9.onChange,
+      onBlur = _ref9.onBlur,
+      onKeyDown = _ref9.onKeyDown,
+      onSelect = _ref9.onSelect,
+      icon = _ref9.icon,
+      iconPosition = _ref9.iconPosition,
+      updateSuggestionsStrategy = _ref9.updateSuggestionsStrategy,
+      isLoading = _ref9.isLoading,
+      noResultMessage = _ref9.noResultMessage,
+      shouldShowNoResultMessage = _ref9.shouldShowNoResultMessage,
+      props = (0, _objectWithoutProperties2.default)(_ref9, ["items", "error", "onChange", "onBlur", "onKeyDown", "onSelect", "icon", "iconPosition", "updateSuggestionsStrategy", "isLoading", "noResultMessage", "shouldShowNoResultMessage"]);
 
   var _useState = (0, _react.useState)(defaultItems),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -92,6 +142,10 @@ var Autocomplete = function Autocomplete(_ref3) {
 
   var inputEl = (0, _react.useRef)(null);
   var suggestionsEl = (0, _react.useRef)(null);
+  var showNoResultMessage = (0, _isFunction.default)(shouldShowNoResultMessage) ? shouldShowNoResultMessage({
+    items: items,
+    value: value
+  }) : shouldShowNoResultMessage;
   (0, _react.useEffect)(function () {
     updateSuggestions();
     setShowSuggestions(!!value);
@@ -150,7 +204,10 @@ var Autocomplete = function Autocomplete(_ref3) {
 
   var updateSuggestions = function updateSuggestions() {
     var search = "".concat(value).toLowerCase();
-    var newItems = defaultItems.filter(function (item) {
+    var newItems = updateSuggestionsStrategy ? updateSuggestionsStrategy({
+      items: defaultItems,
+      value: value
+    }) : defaultItems.filter(function (item) {
       return item.toLowerCase().includes(search) && item !== value;
     });
     setItems(newItems);
@@ -193,8 +250,31 @@ var Autocomplete = function Autocomplete(_ref3) {
     "aria-owns": "".concat(props.name, "-results"),
     "aria-expanded": showSuggestions && items.length > 0,
     "aria-autocomplete": "both",
+    hasIcon: !!icon,
+    iconPosition: iconPosition,
     "aria-activedescendant": items[selectedItemIndex] ? (0, _slugify.default)("".concat(items[selectedItemIndex], "-").concat(selectedItemIndex)) : ''
-  })), showSuggestions && items.length > 0 && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(Suggestions, {
+  })), isLoading && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledLoader, {
+    color: _colorsConfig.default.font2,
+    addRightPadding: icon && iconPosition === 'right'
+  }), _react.default.createElement(_visuallyHidden.VisuallyHidden, {
+    lang: "en"
+  }, "loading")), icon && _react.default.createElement(StyledIcon, {
+    "aria-hidden": "true",
+    disabled: props.disabled,
+    iconPosition: iconPosition
+  }, _react.default.cloneElement(icon, {
+    width: 15,
+    height: 15
+  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(Suggestions, {
+    ref: suggestionsEl,
+    id: "".concat(props.name, "-results"),
+    role: "listbox",
+    tabIndex: "-1",
+    itemsLength: "1"
+  }, _react.default.createElement(NoResultItem, {
+    role: "option",
+    tabIndex: "-1"
+  }, noResultMessage))), showSuggestions && items.length > 0 && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(Suggestions, {
     ref: suggestionsEl,
     id: "".concat(props.name, "-results"),
     role: "listbox",
@@ -220,15 +300,24 @@ Autocomplete.propTypes = {
   name: _propTypes.default.string.isRequired,
   items: _propTypes.default.arrayOf(_propTypes.default.string).isRequired,
   error: _propTypes.default.bool,
+  icon: _propTypes.default.object,
+  iconPosition: _propTypes.default.oneOf(['left', 'right']),
+  updateSuggestionsStrategy: _propTypes.default.func,
+  noResultMessage: _propTypes.default.string,
+  shouldShowNoResultMessage: _propTypes.default.oneOfType([_propTypes.default.bool, _propTypes.default.func]),
   onChange: _propTypes.default.func,
   onBlur: _propTypes.default.func,
   onKeyDown: _propTypes.default.func,
-  onSelect: _propTypes.default.func
+  onSelect: _propTypes.default.func,
+  isLoading: _propTypes.default.bool
 };
 Autocomplete.defaultProps = {
   error: false,
+  shouldShowNoResultMessage: true,
+  iconPosition: 'left',
   onChange: function onChange() {},
   onBlur: function onBlur() {},
   onKeyDown: function onKeyDown() {},
-  onSelect: function onSelect() {}
+  onSelect: function onSelect() {},
+  isLoading: false
 };
