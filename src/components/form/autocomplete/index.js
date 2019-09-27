@@ -149,7 +149,7 @@ var Autocomplete = function Autocomplete(_ref9) {
   (0, _react.useEffect)(function () {
     updateSuggestions();
     setShowSuggestions(!!value);
-  }, [value]);
+  }, [value, defaultItems]);
 
   var handleChange = function handleChange(e) {
     setValue(e.target.value);
