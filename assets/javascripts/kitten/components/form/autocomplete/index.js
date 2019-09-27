@@ -6,6 +6,7 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
 import slugify from 'slugify'
+import { Loader } from '../../loaders/loader'
 
 const itemHeight = 38
 const maxItemsVisibled = 3
@@ -74,6 +75,22 @@ const Input = styled.input`
           padding-right: ${pxToRem(45)};
         `
   }}
+`
+
+const StyledLoader = styled(({ addRightPadding, ...others }) => (
+  <Loader {...others} />
+))`
+  display: flex;
+  position: absolute;
+  align-self: center;
+  padding: 0 ${pxToRem(18)};
+  z-index: 1;
+  right: 0;
+  ${({ addRightPadding }) =>
+    addRightPadding &&
+    css`
+      padding-right: ${pxToRem(45)};
+    `}
 `
 
 const StyledIcon = styled(({ disabled, ...others }) => <span {...others} />)`
@@ -163,6 +180,7 @@ export const Autocomplete = ({
   icon,
   iconPosition,
   updateSuggestionsStrategy,
+  isLoading,
   ...props
 }) => {
   const [items, setItems] = useState(defaultItems)
@@ -294,6 +312,15 @@ export const Autocomplete = ({
             : ''
         }
       />
+      {isLoading && (
+        <>
+          <StyledLoader
+            color={COLORS.font2}
+            addRightPadding={icon && iconPosition === 'right'}
+          />
+          <VisuallyHidden lang="en">loading</VisuallyHidden>
+        </>
+      )}
       {icon && (
         <StyledIcon
           aria-hidden="true"
@@ -347,6 +374,7 @@ Autocomplete.propTypes = {
   onBlur: PropTypes.func,
   onKeyDown: PropTypes.func,
   onSelect: PropTypes.func,
+  isLoading: PropTypes.bool,
 }
 
 Autocomplete.defaultProps = {
@@ -356,4 +384,5 @@ Autocomplete.defaultProps = {
   onBlur: () => {},
   onKeyDown: () => {},
   onSelect: () => {},
+  isLoading: false,
 }

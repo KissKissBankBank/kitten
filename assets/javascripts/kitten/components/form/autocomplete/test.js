@@ -4,6 +4,19 @@ import 'jest-styled-components'
 import { Autocomplete } from './index'
 import { LocationIcon } from '../../icons/location-icon'
 
+const items = [
+  'Abyssin',
+  'Anatoli',
+  'Angora turc',
+  'Asian',
+  'Chartreux',
+  'Cymric',
+  'Mandarin',
+  'Oriental shorthair',
+  'Persan',
+  'Sibérien',
+]
+
 describe('<Autocomplete />', () => {
   let component
 
@@ -15,18 +28,7 @@ describe('<Autocomplete />', () => {
             id="autocomplete"
             name="autocomplete"
             placeholder="Search a kitten…"
-            items={[
-              'Abyssin',
-              'Anatoli',
-              'Angora turc',
-              'Asian',
-              'Chartreux',
-              'Cymric',
-              'Mandarin',
-              'Oriental shorthair',
-              'Persan',
-              'Sibérien',
-            ]}
+            items={items}
           />,
         )
         .toJSON()
@@ -46,18 +48,27 @@ describe('<Autocomplete />', () => {
             name="autocomplete"
             placeholder="Search a kitten…"
             icon={<LocationIcon />}
-            items={[
-              'Abyssin',
-              'Anatoli',
-              'Angora turc',
-              'Asian',
-              'Chartreux',
-              'Cymric',
-              'Mandarin',
-              'Oriental shorthair',
-              'Persan',
-              'Sibérien',
-            ]}
+            items={items}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with loading', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Autocomplete
+            id="autocomplete"
+            name="autocomplete"
+            placeholder="Search a kitten…"
+            isLoading={true}
+            items={items}
           />,
         )
         .toJSON()
