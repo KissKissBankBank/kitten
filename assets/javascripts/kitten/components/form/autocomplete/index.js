@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled, { css } from 'styled-components'
+import isFunction from 'lodash/fp/isFunction'
 import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -144,6 +145,16 @@ const Suggestions = styled.ul`
     `}
 `
 
+const NoResultItem = styled.li`
+  padding: ${pxToRem(10)} ${pxToRem(15)};
+
+  ${TYPOGRAPHY.fontStyles.light};
+  font-size: ${stepToRem(-1)};
+  font-style: italic;
+  line-height: 1.3;
+  color: ${COLORS.font1};
+`
+
 const Item = styled.li`
   padding: ${pxToRem(10)} ${pxToRem(15)};
 
@@ -181,6 +192,8 @@ export const Autocomplete = ({
   iconPosition,
   updateSuggestionsStrategy,
   isLoading,
+  noResultMessage,
+  shouldShowNoResultMessage,
   ...props
 }) => {
   const [items, setItems] = useState(defaultItems)
@@ -189,6 +202,9 @@ export const Autocomplete = ({
   const [showSuggestions, setShowSuggestions] = useState(false)
   const inputEl = useRef(null)
   const suggestionsEl = useRef(null)
+  const showNoResultMessage = isFunction(shouldShowNoResultMessage)
+    ? shouldShowNoResultMessage({ items, value })
+    : shouldShowNoResultMessage
 
   useEffect(() => {
     updateSuggestions()
@@ -331,6 +347,25 @@ export const Autocomplete = ({
         </StyledIcon>
       )}
 
+      {showSuggestions &&
+        items.length === 0 &&
+        noResultMessage &&
+        showNoResultMessage && (
+          <>
+            <Suggestions
+              ref={suggestionsEl}
+              id={`${props.name}-results`}
+              role="listbox"
+              tabIndex="-1"
+              itemsLength="1"
+            >
+              <NoResultItem role="option" tabIndex="-1">
+                {noResultMessage}
+              </NoResultItem>
+            </Suggestions>
+          </>
+        )}
+
       {showSuggestions && items.length > 0 && (
         <>
           <Suggestions
@@ -370,6 +405,11 @@ Autocomplete.propTypes = {
   icon: PropTypes.object,
   iconPosition: PropTypes.oneOf(['left', 'right']),
   updateSuggestionsStrategy: PropTypes.func,
+  noResultMessage: PropTypes.string,
+  shouldShowNoResultMessage: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.func,
+  ]),
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onKeyDown: PropTypes.func,
@@ -379,6 +419,7 @@ Autocomplete.propTypes = {
 
 Autocomplete.defaultProps = {
   error: false,
+  shouldShowNoResultMessage: true,
   iconPosition: 'left',
   onChange: () => {},
   onBlur: () => {},
