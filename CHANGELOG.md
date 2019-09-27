@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
--Fix : Update suggestions when items prop changes on `<Autocomplete />`.
+## [2.29.1] - 2019-09-27
+
+Fix: 
+- Update suggestions when items prop changes on `<Autocomplete />`.
 
 ## [2.29.0] - 2019-09-27
 
