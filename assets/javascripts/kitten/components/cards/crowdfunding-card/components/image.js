@@ -14,7 +14,7 @@ const StyledImageContainer = styled(
   overflow: hidden;
   position: relative;
   background-color: ${({ imageContainerBackground }) =>
-    imageContainerBackground};
+  imageContainerBackground};
   padding-top: ${(9 / 16) * 100}%;
 
   & > img {
@@ -26,8 +26,8 @@ const StyledImageContainer = styled(
   }
 
   ${({ loading }) =>
-    loading &&
-    css`
+  loading &&
+  css`
       overflow: hidden;
       background-color: ${COLORS.line2};
     `}
@@ -55,8 +55,8 @@ const StyledOwner = styled.div`
 
 const StyledTitle = styled(Text)`
   ${({ loading }) =>
-    loading &&
-    css`
+  loading &&
+  css`
       background-color: ${COLORS.line2};
       border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
       width: ${pxToRem(70)};
@@ -66,8 +66,8 @@ const StyledTitle = styled(Text)`
 
 const StyledDescription = styled(Text)`
   ${({ loading }) =>
-    loading &&
-    css`
+  loading &&
+  css`
       background-color: ${COLORS.line2};
       border-top: ${pxToRem(1)} solid ${COLORS.background1};
       width: ${pxToRem(100)};
