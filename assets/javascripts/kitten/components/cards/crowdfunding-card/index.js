@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import Image from './components/image'
 import Description from './components/description'
+import Informations from './components/informations'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledContainer = styled.div`
@@ -25,6 +26,7 @@ export class CrowdfundingCard extends PureComponent {
       >
         <Image />
         <Description />
+        <Informations />
       </StyledContainer>
     )
   }
