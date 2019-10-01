@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Feature:
 - Add `indeterminate` prop and style to `Checkbox`.
+- Update `Checkbox` with Styled Components.
 
 ## [2.29.1] - 2019-09-27
 
