@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature: Add `bulletProps` and change type of `statusMessage` in `StatusWithBullet`.
+
 ## [2.30.0] - 2019-10-01
 
 Feature:
