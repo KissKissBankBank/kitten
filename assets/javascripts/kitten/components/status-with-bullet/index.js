@@ -26,8 +26,9 @@ const StyledStatus = styled.div`
 export const StatusWithBullet = ({
   statusMessage,
   statusType,
-  bulletClass,
-  messageClass,
+  bulletProps,
+  messageAttributes,
+  ...props
 }) => {
   let statusColor = COLORS.valid
   if (statusType === 'danger') {
@@ -35,9 +36,9 @@ export const StatusWithBullet = ({
   }
 
   return (
-    <StyledStatus statusColor={statusColor}>
-      <StyledBullet aria-hidden="true" className={bulletClass} />
-      <span className={messageClass}>{statusMessage}</span>
+    <StyledStatus statusColor={statusColor} {...props}>
+      <StyledBullet aria-hidden="true" {...bulletProps} />
+      <span {...messageAttributes}>{statusMessage}</span>
     </StyledStatus>
   )
 }
@@ -45,12 +46,12 @@ export const StatusWithBullet = ({
 StatusWithBullet.propTypes = {
   statusMessage: PropTypes.string.isRequired,
   statusType: PropTypes.oneOf(['danger', 'success']),
-  bulletClass: PropTypes.string,
-  messageClass: PropTypes.string,
+  bulletProps: PropTypes.object,
+  messageAttributes: PropTypes.object,
 }
 
 StatusWithBullet.defaultProps = {
   statusType: 'success',
-  bulletClass: '',
-  messageClass: '',
+  bulletProps: {},
+  messageAttributes: {},
 }

@@ -11,6 +11,9 @@ describe('<StatusWithBullet />', () => {
         <StatusWithBullet
           statusMessage="Status message"
           statusType="success"
+          messageAttributes={{ className: 'k-u-sample-class' }}
+          bulletProps={{ className: 'k-u-sample-class' }}
+          className="k-u-sample-class"
         />,
       )
       .toJSON()
