@@ -7,8 +7,7 @@ import COLORS from '../../constants/colors-config'
 import TYPOGRAPHY from '../../constants/typography-config'
 
 const CheckboxContainer = styled.div`
-  font-family: ${TYPOGRAPHY.fontStyles.light.fontFamily};
-  font-weight: ${TYPOGRAPHY.fontStyles.light.fontWeight};
+  ${TYPOGRAPHY.fontStyles.light}
   line-height: normal;
   font-size: ${stepToRem(-1)};
 
