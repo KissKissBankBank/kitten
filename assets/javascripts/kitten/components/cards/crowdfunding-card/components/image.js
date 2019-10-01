@@ -2,14 +2,14 @@ import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import { card } from '../../../../hoc/card'
+// import { card } from '../../../../hoc/card'
 import COLORS from '../../../../constants/colors-config'
 import { Marger } from '../../../../components/layout/marger'
 import { ButtonImage } from '../../../../components/buttons/button-image'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
 
-const componentGutter = pxToRem(10)
+const COMPONENT_GUTTER = pxToRem(10)
 
 const StyledImage = styled.img`
   width: 100%;
@@ -53,13 +53,13 @@ const StyledContainerAvatar = styled.div`
   background-color: ${COLORS.background1};
 `
 const StyledAvatar = styled(ButtonImage)`
-  margin-left: ${componentGutter};
+  margin-left: ${COMPONENT_GUTTER};
   background-color: ${COLORS.line2};
 `
 
 const StyledOwner = styled.div`
-  margin-left: ${componentGutter};
-  margin-right: calc(2 * calc(${componentGutter}));
+  margin-left: ${COMPONENT_GUTTER};
+  margin-right: calc(2 * calc(${COMPONENT_GUTTER}));
   line-height: 1.2;
 `
 
@@ -92,7 +92,7 @@ const StyledState = styled.div`
   display: inline-flex;
   align-items: center;
   background-color: ${COLORS.background1};
-  padding: ${componentGutter};
+  padding: ${COMPONENT_GUTTER};
   line-height: 1;
 `
 
@@ -110,6 +110,7 @@ class Image extends PureComponent {
     ownerTitle: PropTypes.string,
     ownerDescription: PropTypes.string,
     state: PropTypes.string,
+    loading: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -125,6 +126,7 @@ class Image extends PureComponent {
     ownerTitle: 'Hello',
     ownerDescription: 'lundi, mardi',
     state: 'Lorem ipsum',
+    loading: false,
   }
 
   render() {
