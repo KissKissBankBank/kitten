@@ -23,7 +23,12 @@ const StyledStatus = styled.div`
   font-size: ${stepToRem(-1)};
 `
 
-export const StatusWithBullet = ({ statusMessage, statusType }) => {
+export const StatusWithBullet = ({
+  statusMessage,
+  statusType,
+  bulletClass,
+  messageClass,
+}) => {
   let statusColor = COLORS.valid
   if (statusType === 'danger') {
     statusColor = COLORS.error
@@ -31,8 +36,8 @@ export const StatusWithBullet = ({ statusMessage, statusType }) => {
 
   return (
     <StyledStatus statusColor={statusColor}>
-      <StyledBullet aria-hidden="true" />
-      {statusMessage}
+      <StyledBullet aria-hidden="true" className={bulletClass} />
+      <span className={messageClass}>{statusMessage}</span>
     </StyledStatus>
   )
 }
@@ -40,8 +45,12 @@ export const StatusWithBullet = ({ statusMessage, statusType }) => {
 StatusWithBullet.propTypes = {
   statusMessage: PropTypes.string.isRequired,
   statusType: PropTypes.oneOf(['danger', 'success']),
+  bulletClass: PropTypes.string,
+  messageClass: PropTypes.string,
 }
 
 StatusWithBullet.defaultProps = {
   statusType: 'success',
+  bulletClass: '',
+  messageClass: '',
 }
