@@ -42,7 +42,7 @@ class Informations extends PureComponent {
   render() {
     const { info1, info2, info3 } = this.props
 
-    if (!info1 && !info2 && !info3) return
+    if (!info1 && !info2 && !info3) return null
 
     return (
       <StyledContainer>
