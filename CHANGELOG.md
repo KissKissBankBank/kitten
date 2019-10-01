@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Update `Checkbox` with Styled Components.
 
+## [2.31.0] - 2019-10-01
+
+Feature:
+- Add `bulletProps` and change type of `statusMessage` in `StatusWithBullet`.
+
 ## [2.30.0] - 2019-10-01
 
 Feature:
