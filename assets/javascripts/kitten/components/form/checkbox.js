@@ -3,6 +3,16 @@ import classNames from 'classnames'
 import { Text } from '../../components/typography/text'
 
 export class Checkbox extends Component {
+  componentDidMount = () => {
+    this.el.indeterminate = this.props.indeterminate
+  }
+
+  componentDidUpdate = prevProps => {
+    if (prevProps.indeterminate !== this.props.indeterminate) {
+      this.el.indeterminate = this.props.indeterminate
+    }
+  }
+
   render() {
     const {
       className,
@@ -12,6 +22,7 @@ export class Checkbox extends Component {
       error,
       textProps,
       onLabelClick,
+      indeterminate,
       ...inputProps
     } = this.props
 
@@ -27,6 +38,7 @@ export class Checkbox extends Component {
           id={id}
           type="checkbox"
           className={checkboxInputClassNames}
+          ref={el => (this.el = el)}
           {...inputProps}
         />
 
@@ -45,4 +57,5 @@ export class Checkbox extends Component {
 Checkbox.defaultProps = {
   children: 'Filter 1',
   textProps: {},
+  indeterminate: false,
 }
