@@ -1,13 +1,17 @@
 "use strict";
 
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-
 var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.StatusWithBullet = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -36,25 +40,30 @@ var StyledStatus = _styledComponents.default.div.withConfig({
 
 var StatusWithBullet = function StatusWithBullet(_ref2) {
   var statusMessage = _ref2.statusMessage,
-      statusType = _ref2.statusType;
+      statusType = _ref2.statusType,
+      bulletProps = _ref2.bulletProps,
+      messageAttributes = _ref2.messageAttributes,
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["statusMessage", "statusType", "bulletProps", "messageAttributes"]);
   var statusColor = _colorsConfig.default.valid;
 
   if (statusType === 'danger') {
     statusColor = _colorsConfig.default.error;
   }
 
-  return _react.default.createElement(StyledStatus, {
+  return _react.default.createElement(StyledStatus, (0, _extends2.default)({
     statusColor: statusColor
-  }, _react.default.createElement(StyledBullet, {
+  }, props), _react.default.createElement(StyledBullet, (0, _extends2.default)({
     "aria-hidden": "true"
-  }), statusMessage);
+  }, bulletProps)), statusMessage);
 };
 
 exports.StatusWithBullet = StatusWithBullet;
 StatusWithBullet.propTypes = {
-  statusMessage: _propTypes.default.string.isRequired,
-  statusType: _propTypes.default.oneOf(['danger', 'success'])
+  statusMessage: _propTypes.default.node.isRequired,
+  statusType: _propTypes.default.oneOf(['danger', 'success']),
+  bulletProps: _propTypes.default.object
 };
 StatusWithBullet.defaultProps = {
-  statusType: 'success'
+  statusType: 'success',
+  bulletProps: {}
 };
