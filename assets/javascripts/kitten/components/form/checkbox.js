@@ -3,13 +3,23 @@ import classNames from 'classnames'
 import { Text } from '../../components/typography/text'
 
 export class Checkbox extends Component {
-  componentDidMount = () => {
-    this.el.indeterminate = this.props.indeterminate
+  constructor(props) {
+    super(props)
+    this.el = React.createRef()
   }
 
-  componentDidUpdate = prevProps => {
-    if (prevProps.indeterminate !== this.props.indeterminate) {
-      this.el.indeterminate = this.props.indeterminate
+  componentDidMount() {
+    if (this.el.current != null) {
+      this.el.current.indeterminate = this.props.indeterminate
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    if (
+      this.el.current != null &&
+      prevProps.indeterminate !== this.props.indeterminate
+    ) {
+      this.el.current.indeterminate = this.props.indeterminate
     }
   }
 
@@ -35,10 +45,10 @@ export class Checkbox extends Component {
     return (
       <div className={classNames('k-Checkbox', className)}>
         <input
+          ref={this.el}
           id={id}
           type="checkbox"
           className={checkboxInputClassNames}
-          ref={el => (this.el = el)}
           {...inputProps}
         />
 
