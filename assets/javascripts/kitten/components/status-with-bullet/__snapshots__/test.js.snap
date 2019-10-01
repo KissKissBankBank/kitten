@@ -11,7 +11,7 @@ exports[`<StatusWithBullet /> should match its empty snapshot 1`] = `
   <span
     className="k-u-sample-class"
   >
-    Status message
+    This is a text
   </span>
 </div>
 `;

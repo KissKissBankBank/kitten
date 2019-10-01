@@ -38,20 +38,18 @@ export const StatusWithBullet = ({
   return (
     <StyledStatus statusColor={statusColor} {...props}>
       <StyledBullet aria-hidden="true" {...bulletProps} />
-      <span {...messageAttributes}>{statusMessage}</span>
+      {statusMessage}
     </StyledStatus>
   )
 }
 
 StatusWithBullet.propTypes = {
-  statusMessage: PropTypes.string.isRequired,
+  statusMessage: PropTypes.node.isRequired,
   statusType: PropTypes.oneOf(['danger', 'success']),
   bulletProps: PropTypes.object,
-  messageAttributes: PropTypes.object,
 }
 
 StatusWithBullet.defaultProps = {
   statusType: 'success',
   bulletProps: {},
-  messageAttributes: {},
 }

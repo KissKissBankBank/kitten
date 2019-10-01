@@ -9,9 +9,10 @@ describe('<StatusWithBullet />', () => {
     const tree = renderer
       .create(
         <StatusWithBullet
-          statusMessage="Status message"
+          statusMessage={
+            <span className="k-u-sample-class">This is a text</span>
+          }
           statusType="success"
-          messageAttributes={{ className: 'k-u-sample-class' }}
           bulletProps={{ className: 'k-u-sample-class' }}
           className="k-u-sample-class"
         />,
