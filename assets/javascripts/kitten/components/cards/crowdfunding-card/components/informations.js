@@ -1,14 +1,13 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Text } from '../../../../components/typography/text'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
 const StyledContainer = styled.div`
-  margin-top: ${pxToRem(20)};
+  margin-top: ${pxToRem(15)};
   margin-bottom: ${pxToRem(5)};
   display: flex;
   flex-wrap: wrap;
@@ -33,37 +32,23 @@ const StyledInfoLoading = styled.span`
   height: ${pxToRem(16)};
 `
 
-const StyledInfoLoadingLarge = styled(StyledInfoLoading)`
+const StyledInfoLoadingLarge = styled.span`
   width: ${pxToRem(65)};
   border-top: ${pxToRem(1)} solid ${COLORS.background1};
   border-bottom: 0;
 `
 
 class Informations extends PureComponent {
-  static propTypes = {
-    info1: PropTypes.string,
-    info2: PropTypes.string,
-    info3: PropTypes.string,
-    loading: PropTypes.bool,
-  }
-
-  static defaultProps = {
-    info1: '',
-    info2: '',
-    info3: '',
-    loading: false,
-  }
-
   render() {
     const { info1, info2, info3 } = this.props
 
-    if (!info1 && !info2 && !info3) return null
+    if (!info1 && !info2 && !info3) return
 
     return (
       <StyledContainer>
         {this.renderInfo(info1)}
         {this.renderInfo(info2)}
-        {this.renderInfo(info3)}
+        {this.renderInfo(info3, true)}
       </StyledContainer>
     )
   }
@@ -74,7 +59,7 @@ class Informations extends PureComponent {
     return (
       <StyledInfo>
         {!loading && (
-          <Text size="micro" lineHeight="normal" weight="light" color="font1">
+          <Text size="micro" lineHeight="normal" weight="light">
             {text}
           </Text>
         )}
