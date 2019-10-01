@@ -1,10 +1,12 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
 import { Title } from '../../../../components/typography/title'
 import COLORS from '../../../../constants/colors-config'
+import { Marger } from '../../../../components/layout/marger'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import Truncate from 'react-truncate'
 
@@ -13,7 +15,6 @@ const COMPONENT_GUTTER = pxToRem(10)
 const StyledTruncate = styled(Truncate)`
   white-space: nowrap;
 `
-
 const StyledContainer = styled.div`
   margin-bottom: ${pxToRem(20)};
 
@@ -37,7 +38,7 @@ const StyledTitleLoading = styled.span`
   height: ${pxToRem(24)};
 `
 
-const StyledTitleSmallLoading = styled(StyledTitleLoading)`
+const StyledTitleSmallLoading = styled.span`
   width: 70%;
   border-top: ${pxToRem(1)} solid ${COLORS.background1};
   border-bottom: 0;
@@ -51,9 +52,7 @@ const StyledContainerSubtitle = styled.div`
   margin-top: ${pxToRem(10)};
 `
 
-const StyledHorizontalStroke = styled(({ loading, ...others }) => (
-  <HorizontalStroke {...others} />
-))`
+const StyledHorizontalStroke = styled(HorizontalStroke)`
   flex-shrink: 0;
   margin: ${pxToRem(5)} ${COMPONENT_GUTTER} ${pxToRem(5)} 0;
 
@@ -84,30 +83,28 @@ const StyledSubtitleLoading = styled.span`
 
 class Description extends PureComponent {
   static propTypes = {
-    title: PropTypes.string,
-    subTitle: PropTypes.string,
+    cardTitle: PropTypes.string,
+    cardSubtitle: PropTypes.string,
     titlesMinHeight: PropTypes.bool,
     titleTruncate: PropTypes.bool,
     subTitleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
-    titleProps: PropTypes.shape(),
   }
 
   static defaultProps = {
-    title: '',
-    subTitle: '',
+    cardTitle: 'Lorem Ipsim',
+    cardSubtitle: 'Sed ut perspiciatis unde omnis iste natus error Lorem',
     titlesMinHeight: true,
     titleTruncate: true,
     subTitleTruncate: true,
     loading: false,
-    titleProps: {},
   }
 
   render() {
     const {
       loading,
-      title,
-      subTitle,
+      cardTitle,
+      cardSubtitle,
       titleTruncate,
       subTitleTruncate,
       titlesMinHeight,
@@ -115,7 +112,7 @@ class Description extends PureComponent {
     } = this.props
 
     return (
-      <StyledContainer titlesMinHeight={titlesMinHeight}>
+      <StyledContainer>
         {this.renderTitle()}
         {this.renderSubtitle()}
       </StyledContainer>
@@ -123,7 +120,7 @@ class Description extends PureComponent {
   }
 
   renderTitle() {
-    const { loading, titleProps, titleTruncate, title } = this.props
+    const { loading, titleProps, titleTruncate, cardTitle } = this.props
 
     return (
       <StyledTitle>
@@ -136,10 +133,10 @@ class Description extends PureComponent {
             className="k-Card__title"
           >
             {titleTruncate && (
-              <StyledTruncate lines={2}>{title}</StyledTruncate>
+              <StyledTruncate lines={2}>{cardTitle}</StyledTruncate>
             )}
 
-            {!titleTruncate && title}
+            {!titleTruncate && cardTitle}
           </Title>
         )}
 
@@ -154,17 +151,17 @@ class Description extends PureComponent {
   }
 
   renderSubtitle() {
-    const { subTitle, loading, subTitleTruncate } = this.props
+    const { cardSubtitle, loading, subTitleTruncate } = this.props
 
     return (
       <StyledContainerSubtitle>
-        <StyledHorizontalStroke size="tiny" loading={loading} />
+        <StyledHorizontalStroke size="tiny" />
 
-        {subTitle && !loading && (
-          <StyledSubtitle size="micro" weight="regular" tag="p" color="font1">
-            {subTitleTruncate && <StyledTruncate>{subTitle}</StyledTruncate>}
+        {cardSubtitle && !loading && (
+          <StyledSubtitle size="micro" weight="regular" tag="p">
+            {subTitleTruncate && <Truncate>{cardSubtitle}</Truncate>}
 
-            {!subTitleTruncate && subTitle}
+            {!subTitleTruncate && cardSubtitle}
           </StyledSubtitle>
         )}
 
