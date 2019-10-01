@@ -19,6 +19,7 @@ storiesOf('Form/Checkbox', module)
               id={text('id', 'checkbox_id')}
               onLabelClick={action('label-click')}
               indeterminate={boolean('indeterminate', false)}
+              error={boolean('error', false)}
             >
               {text('text', 'Checkbox Label')}
             </Checkbox>
