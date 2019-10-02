@@ -92,8 +92,8 @@ class Description extends PureComponent {
   }
 
   static defaultProps = {
-    cardTitle: 'Lorem Ipsim',
-    cardSubtitle: 'Sed ut perspiciatis unde omnis iste natus error Lorem',
+    cardTitle: '',
+    cardSubtitle: '',
     titlesMinHeight: true,
     titleTruncate: true,
     subTitleTruncate: true,

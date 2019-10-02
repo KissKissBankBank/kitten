@@ -123,9 +123,9 @@ class Image extends PureComponent {
       src: 'https://placehold.it/100x100/caf4fe/caf4fe',
       alt: '',
     },
-    ownerTitle: 'Hello',
-    ownerDescription: 'lundi, mardi',
-    state: 'Lorem ipsum',
+    ownerTitle: '',
+    ownerDescription: '',
+    state: '',
     loading: false,
   }
 
