@@ -17,11 +17,11 @@ const StyledLoading = styled.span`
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0),
-    rgba(255, 255, 255, 0.3),
+    \rgba(255, 255, 255, 0.3),
     rgba(0, 0, 0, 0)
   );
   animation: x 1s linear infinite;
-  animation-name: ${loadingKeyframes};
+  animationname: ${loadingKeyframes};
 `
 
 class Loading extends PureComponent {
@@ -38,7 +38,7 @@ class Loading extends PureComponent {
 
     if (!loading) return null
 
-    return <StyledLoading loading={loading} />
+    return <StyledLoading />
   }
 }
 

@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Progress } from '../../../../components/meters/progress'
+import { Text } from '../../../../components/typography/text'
 import COLORS from '../../../../constants/colors-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
@@ -34,7 +35,7 @@ const StyledLoading = styled.span`
   height: ${pxToRem(16)};
 `
 
-class Progress extends PureComponent {
+class ProgressBar extends PureComponent {
   static propTypes = {
     progress: PropTypes.bool,
     progressColor: PropTypes.string,
@@ -75,4 +76,4 @@ class Progress extends PureComponent {
   }
 }
 
-export default Progress
+export default ProgressBar

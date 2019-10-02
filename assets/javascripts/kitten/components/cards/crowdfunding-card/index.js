@@ -3,7 +3,9 @@ import styled from 'styled-components'
 import Image from './components/image'
 import Description from './components/description'
 import Informations from './components/informations'
-import Progress from './components/progress'
+import ProgressBar from './components/progress'
+import Loading from './components/loading'
+import State from './components/state'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledContainer = styled.div`
@@ -72,11 +74,13 @@ export class CrowdfundingCard extends PureComponent {
           info3={info3}
           loading={loading}
         />
-        <Progress
+        <ProgressBar
           progress={progress}
           progressColor={progressColor}
           loading={loading}
         />
+        <Loading />
+        <State state={state} loading={loading} />
       </StyledContainer>
     )
   }

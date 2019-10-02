@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-// import { card } from '../../../../hoc/card'
+import { card } from '../../../../hoc/card'
 import COLORS from '../../../../constants/colors-config'
 import { Marger } from '../../../../components/layout/marger'
 import { ButtonImage } from '../../../../components/buttons/button-image'
@@ -85,17 +85,6 @@ const StyledDescription = styled(Text)`
     `}
 `
 
-const StyledState = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-flex;
-  align-items: center;
-  background-color: ${COLORS.background1};
-  padding: ${COMPONENT_GUTTER};
-  line-height: 1;
-`
-
 class Image extends PureComponent {
   static propTypes = {
     imageProps: PropTypes.shape({
@@ -125,7 +114,6 @@ class Image extends PureComponent {
     },
     ownerTitle: '',
     ownerDescription: '',
-    state: '',
     loading: false,
   }
 
@@ -138,7 +126,6 @@ class Image extends PureComponent {
       ownerDescription,
       ownerTitle,
       loading,
-      state,
     } = this.props
 
     return (
@@ -174,14 +161,6 @@ class Image extends PureComponent {
               </StyledDescription>
             </StyledOwner>
           </StyledContainerAvatar>
-        )}
-
-        {state && !loading && (
-          <StyledState>
-            <Text size="micro" lineHeight="normal" weight="regular">
-              {state}
-            </Text>
-          </StyledState>
         )}
       </>
     )
