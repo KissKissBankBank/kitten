@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Progress } from '../../../../components/meters/progress'
-import { Text } from '../../../../components/typography/text'
 import COLORS from '../../../../constants/colors-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
@@ -23,7 +23,7 @@ const StyledProgress = styled(Progress)`
 
 const StyledPercent = styled(Text)`
   flex-shrink: 0;
-  margin-left: calc(2 * ${COMPONENT_GUTTER});
+  margin-left: calc(2 * calc(${COMPONENT_GUTTER}));
 `
 
 const StyledLoading = styled.span`
@@ -34,15 +34,15 @@ const StyledLoading = styled.span`
   height: ${pxToRem(16)};
 `
 
-class ProgressBar extends PureComponent {
+class Progress extends PureComponent {
   static propTypes = {
-    progress: PropTypes.number,
+    progress: PropTypes.bool,
     progressColor: PropTypes.string,
     loading: PropTypes.bool,
   }
 
   static defaultProps = {
-    progress: 0,
+    progress: false,
     progressColor: '',
     loading: false,
   }
@@ -50,7 +50,7 @@ class ProgressBar extends PureComponent {
   render() {
     const { progress, progressColor, loading } = this.props
 
-    if (progress === false) return null
+    if (progress === false) return
 
     const progressValue = loading ? 65 : progress
 
@@ -65,7 +65,7 @@ class ProgressBar extends PureComponent {
           }}
         />
 
-        <StyledPercent weight="regular" size="micro" color="font1">
+        <StyledPercent weight="regular" size="micro">
           {loading && <StyledLoading />}
 
           {!loading && `${progress} %`}
@@ -75,4 +75,4 @@ class ProgressBar extends PureComponent {
   }
 }
 
-export default ProgressBar
+export default Progress

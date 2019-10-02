@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { Text } from '../../../../components/typography/text'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 
@@ -39,6 +40,20 @@ const StyledInfoLoadingLarge = styled.span`
 `
 
 class Informations extends PureComponent {
+  static propTypes = {
+    info1: PropTypes.string,
+    info2: PropTypes.string,
+    info3: PropTypes.string,
+    loading: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    info1: null,
+    info2: null,
+    info3: null,
+    loading: false,
+  }
+
   render() {
     const { info1, info2, info3 } = this.props
 
@@ -48,7 +63,7 @@ class Informations extends PureComponent {
       <StyledContainer>
         {this.renderInfo(info1)}
         {this.renderInfo(info2)}
-        {this.renderInfo(info3, true)}
+        {this.renderInfo(info3)}
       </StyledContainer>
     )
   }
