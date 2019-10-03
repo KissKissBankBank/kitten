@@ -1,32 +1,27 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
-import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { card } from '../../../../hoc/card'
 import COLORS from '../../../../constants/colors-config'
-import { Marger } from '../../../../components/layout/marger'
 import { ButtonImage } from '../../../../components/buttons/button-image'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
-const StyledImage = styled.img`
-  width: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  text-align: center;
-`
-
-const StyledImageContainer = styled(Marger)`
+const StyledImageContainer = styled.div`
   position: relative;
   transition: opacity ease 600ms, z-index ease 600ms;
   padding-top: ${(9 / 16) * 100}%;
-  margin-bottom: 0;
-
   background-color: ${({ imageContainerBackground }) =>
     imageContainerBackground};
+
+  ${({ loading }) =>
+    loading &&
+    css`
+      overflow: hidden;
+      background-color: ${COLORS.line2};
+    `}
 
   ${({ imageContainerRatio }) =>
     imageContainerRatio &&
@@ -42,6 +37,14 @@ const StyledImageContainer = styled(Marger)`
         text-align: center;
       }
     `}
+`
+
+const StyledImage = styled.img`
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  text-align: center;
 `
 
 const StyledContainerAvatar = styled.div`
@@ -131,37 +134,38 @@ class Image extends PureComponent {
     return (
       <>
         <StyledImageContainer
-          bottom="2"
           className="k-Card__imageContainer"
           imageContainerBackground={imageContainerBackground}
           imageContainerRatio={imageContainerRatio}
         >
           {!loading && (
-            <StyledImage {...imageProps} alt={imageProps.alt || ''} />
+            <StyledImage
+              {...imageProps}
+              alt={imageProps.alt || ''}
+              className="k-Card__image"
+            />
           )}
         </StyledImageContainer>
 
-        {avatarProps && (
-          <StyledContainerAvatar>
-            <Marger top="1" bottom="1">
-              <StyledAvatar
-                tag="span"
-                img={!loading && avatarProps}
-                withoutPointerEvents
-              />
-            </Marger>
+        <StyledContainerAvatar>
+          <div className="k-u-margin-bottom-single k-u-margin-top-single">
+            <StyledAvatar
+              tag="span"
+              img={!loading && avatarProps}
+              withoutPointerEvents
+            />
+          </div>
 
-            <StyledOwner>
-              <StyledTitle tag="div" size="micro" weight="regular">
-                {!loading && ownerTitle}
-              </StyledTitle>
+          <StyledOwner>
+            <StyledTitle tag="div" size="micro" weight="regular">
+              {!loading && ownerTitle}
+            </StyledTitle>
 
-              <StyledDescription tag="div" size="micro" weight="light">
-                {!loading && ownerDescription}
-              </StyledDescription>
-            </StyledOwner>
-          </StyledContainerAvatar>
-        )}
+            <StyledDescription tag="div" size="micro" weight="light">
+              {!loading && ownerDescription}
+            </StyledDescription>
+          </StyledOwner>
+        </StyledContainerAvatar>
       </>
     )
   }
