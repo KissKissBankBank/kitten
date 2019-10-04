@@ -4,18 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `CrowdfundingCard` with styled-components.
+
 ## [2.29.1] - 2019-09-27
 
-Fix: 
+Fix:
 - Update suggestions when items prop changes on `<Autocomplete />`.
 
 ## [2.29.0] - 2019-09-27
 
-Features: 
+Features:
 - Create `StrokeIcon` component.
 - Add `icon`, `iconPosition`, `updateSuggestionsStrategy`, `isLoading`, `noResultMessage` and `shouldShowNoResultMessage` props to `<Autocomplete />`.
 
-Fix: 
+Fix:
 - Remove default `font-size` on `Field.Label`.
 
 ## [2.28.0] - 2019-09-24
