@@ -51,7 +51,7 @@ class ProgressBar extends PureComponent {
   render() {
     const { progress, progressColor, loading } = this.props
 
-    if (progress === false) return
+    if (progress === false) return null
 
     const progressValue = loading ? 65 : progress
 

@@ -21,7 +21,7 @@ const StyledLoading = styled.span`
     rgba(0, 0, 0, 0)
   );
   animation: x 1s linear infinite;
-  animationname: ${loadingKeyframes};
+  animation-name: ${loadingKeyframes};
 `
 
 class Loading extends PureComponent {
