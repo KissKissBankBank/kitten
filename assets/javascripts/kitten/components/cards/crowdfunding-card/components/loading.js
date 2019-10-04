@@ -17,7 +17,7 @@ const StyledLoading = styled.span`
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0),
-    \rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3),
     rgba(0, 0, 0, 0)
   );
   animation: x 1s linear infinite;
@@ -38,7 +38,7 @@ class Loading extends PureComponent {
 
     if (!loading) return null
 
-    return <StyledLoading />
+    return <StyledLoading loading={loading} />
   }
 }
 
