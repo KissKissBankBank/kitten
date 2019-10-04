@@ -30,7 +30,7 @@ export class CrowdfundingCard extends PureComponent {
       loading,
       state,
       cardTitle,
-      cardSubtitle,
+      cardSubTitle,
       titleTruncate,
       subTitleTruncate,
       titlesMinHeight,
@@ -61,7 +61,7 @@ export class CrowdfundingCard extends PureComponent {
         />
         <Description
           cardTitle={cardTitle}
-          cardSubtitle={cardSubtitle}
+          cardSubTitle={cardSubTitle}
           titleTruncate={titleTruncate}
           subTitleTruncate={subTitleTruncate}
           titlesMinHeight={titlesMinHeight}
@@ -79,7 +79,7 @@ export class CrowdfundingCard extends PureComponent {
           progressColor={progressColor}
           loading={loading}
         />
-        <Loading />
+        <Loading loading={loading} />
         <State state={state} loading={loading} />
       </StyledContainer>
     )

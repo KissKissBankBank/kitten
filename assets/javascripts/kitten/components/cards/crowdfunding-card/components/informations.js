@@ -33,7 +33,7 @@ const StyledInfoLoading = styled.span`
   height: ${pxToRem(16)};
 `
 
-const StyledInfoLoadingLarge = styled.span`
+const StyledInfoLoadingLarge = styled(StyledInfoLoading)`
   width: ${pxToRem(65)};
   border-top: ${pxToRem(1)} solid ${COLORS.background1};
   border-bottom: 0;
