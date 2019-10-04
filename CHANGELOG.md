@@ -6,6 +6,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Update `CrowdfundingCard` with styled-components.
 
+## [2.31.0] - 2019-10-01
+
+Feature:
+- Add `bulletProps` and change type of `statusMessage` in `StatusWithBullet`.
+
+## [2.30.0] - 2019-10-01
+
+Feature:
+- Add `indeterminate` prop and style to `Checkbox`.
+
 ## [2.29.1] - 2019-09-27
 
 Fix:
