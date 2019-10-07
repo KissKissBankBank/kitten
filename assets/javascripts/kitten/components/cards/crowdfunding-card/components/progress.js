@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
-import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Progress } from '../../../../components/meters/progress'

@@ -43,7 +43,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
   line-height: 1.2;
 }
 
-.c9 {
+.c10 {
   display: block;
   border: none;
   background: #222;
@@ -51,8 +51,13 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
   height: 0.125rem;
 }
 
+.c7 {
+  white-space: nowrap;
+}
+
 .c5 {
   margin-bottom: 1.25rem;
+  min-height: 4.6875rem;
 }
 
 .c6 {
@@ -61,7 +66,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
   margin-bottom: 0.625rem;
 }
 
-.c7 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,22 +80,22 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
   margin-top: 0.625rem;
 }
 
-.c8 {
+.c9 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 0.3125rem 0.625rem 0.3125rem 0;
 }
 
-.c10 {
+.c11 {
   line-height: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c11 {
-  margin-top: 0.9375rem;
+.c12 {
+  margin-top: 1.25rem;
   margin-bottom: 0.3125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -103,16 +108,16 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
   line-height: 1;
 }
 
-.c12 {
+.c13 {
   margin-top: 0.3125rem;
   margin-right: 1.875rem;
 }
 
-.c12:last-child {
+.c13:last-child {
   margin-right: 0;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -129,20 +134,20 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
   margin-bottom: 1.25rem;
 }
 
-.c14 {
+.c15 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c15 {
+.c16 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-left: calc(2 * calc(0.625rem));
 }
 
-.c16 {
+.c17 {
   position: absolute;
   top: 0;
   right: 0;
@@ -161,11 +166,12 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
 
 .c0 {
   position: relative;
-  cursor: pointer;
+  padding-bottom: 0.3125rem;
 }
 
 <div
   className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover c0"
+  href={null}
   onClick={[Function]}
 >
   <div
@@ -219,28 +225,68 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       <p
         className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
       >
-        Lorem ipsum…
+        <span
+          className="c7"
+          width={0}
+        >
+          <span />
+          <span>
+            Lorem ipsum…
+          </span>
+          <span
+            style={
+              Object {
+                "left": 0,
+                "position": "fixed",
+                "top": 0,
+                "visibility": "hidden",
+              }
+            }
+          >
+            …
+          </span>
+        </span>
       </p>
     </div>
     <div
-      className="c7"
+      className="c8"
     >
       <span
-        className="c8 c9"
+        className="c9 c10"
         loading={false}
       />
       <p
-        className="k-u-size-micro k-u-weight-regular c10"
+        className="k-u-size-micro k-u-weight-regular c11"
       >
-        Sed ut perspiciatis unde omnis iste natus error Lorem
+        <span
+          className="c7"
+          width={0}
+        >
+          <span />
+          <span>
+            Sed ut perspiciatis unde omnis iste natus error Lorem
+          </span>
+          <span
+            style={
+              Object {
+                "left": 0,
+                "position": "fixed",
+                "top": 0,
+                "visibility": "hidden",
+              }
+            }
+          >
+            …
+          </span>
+        </span>
       </p>
     </div>
   </div>
   <div
-    className="c11"
+    className="c12"
   >
     <div
-      className="c12"
+      className="c13"
     >
       <span
         className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -249,7 +295,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="c12"
+      className="c13"
     >
       <span
         className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -258,7 +304,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="c12"
+      className="c13"
     >
       <span
         className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -268,13 +314,13 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="c13"
+    className="c14"
   >
     <div
       aria-valuemax="100"
       aria-valuemin="0"
       aria-valuenow={42}
-      className="k-Progress c14"
+      className="k-Progress c15"
       role="progressbar"
     >
       <div
@@ -297,13 +343,13 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <span
-      className="k-u-size-micro k-u-weight-regular c15"
+      className="k-u-size-micro k-u-weight-regular c16"
     >
       42 %
     </span>
   </div>
   <div
-    className="c16"
+    className="c17"
   >
     <span
       className="k-u-line-height-normal k-u-size-micro k-u-weight-regular"

@@ -8,7 +8,7 @@ import COLORS from '../../../../constants/colors-config'
 const COMPONENT_GUTTER = pxToRem(10)
 
 const StyledContainer = styled.div`
-  margin-top: ${pxToRem(15)};
+  margin-top: ${pxToRem(20)};
   margin-bottom: ${pxToRem(5)};
   display: flex;
   flex-wrap: wrap;
