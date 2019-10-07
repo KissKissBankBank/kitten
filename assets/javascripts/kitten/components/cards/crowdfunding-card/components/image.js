@@ -76,10 +76,10 @@ const StyledDescription = styled(Text)`
 class Image extends PureComponent {
   static propTypes = {
     imageProps: PropTypes.shape({
-      backgroundColor: PropTypes.string.isRequired,
-      src: PropTypes.string.isRequired,
-      alt: PropTypes.string.isRequired,
-    }).isRequired,
+      backgroundColor: PropTypes.string,
+      src: PropTypes.string,
+      alt: PropTypes.string,
+    }),
     avatarProps: PropTypes.shape({
       src: PropTypes.string,
       alt: PropTypes.string,
@@ -94,11 +94,11 @@ class Image extends PureComponent {
   static defaultProps = {
     imageProps: {
       backgroundColor: COLORS.line2,
-      src: 'http://placekitten.com/350/200',
+      src: 'https://placehold.it/350x200/caf4fe/caf4fe',
       alt: '',
     },
     avatarProps: {
-      src: 'http://placekitten.com/100/100',
+      src: 'https://placehold.it/100x100/caf4fe/caf4fe',
       alt: '',
     },
     ownerTitle: '',
