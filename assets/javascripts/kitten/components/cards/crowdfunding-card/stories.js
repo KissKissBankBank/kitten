@@ -5,6 +5,7 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { CrowdfundingCard } from './index'
+import { WidgetCard } from './widget/index.js'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -20,7 +21,7 @@ const StoryContainer = ({ children }) => (
 
 storiesOf('Cards/CrowdfundingCard', module)
   .addDecorator(withKnobs)
-  .add('default', () => {
+  .add('Crowdfunding card', () => {
     return (
       <StoryContainer>
         <CrowdfundingCard
@@ -38,6 +39,26 @@ storiesOf('Cards/CrowdfundingCard', module)
           info3={text('info3', 'Lorem ipsum…')}
           progress={text('progress', '42')}
           state={text('state', 'Lorem ipsum…')}
+        />
+      </StoryContainer>
+    )
+  })
+
+  .addDecorator(withKnobs)
+  .add('Widget card', () => {
+    return (
+      <StoryContainer>
+        <WidgetCard
+          href={text('Link', '#')}
+          ownerTitle={text('Owner title', 'Owner title')}
+          ownerDescription={text('Owner description', 'Owner description')}
+          loading={boolean('Loading', false)}
+          cardTitle={text('Card title', 'Lorem ipsum…')}
+          cardSubTitle={text(
+            'Card subTitle',
+            'Sed ut perspiciatis unde omnis iste natus error Lorem',
+          )}
+          buttonText={text('Button text', 'hello')}
         />
       </StoryContainer>
     )

@@ -1,44 +1,66 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../components/layout/marger'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { Title } from '../../../components/typography/title'
-import COLORS from '../../../constants/colors-config'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { Button } from '../../../components/buttons/button/button'
-import { Text } from '../../../components/typography/text'
+import Image from '../components/image'
+import Description from '../components/description'
+import Informations from '../components/informations'
+import ButtonCard from '../components/button'
+import Loading from '../components/loading'
+import State from '../components/state'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
-class WidgetCard extends PureComponent {
-  static propTypes = {
-    buttonProps: PropTypes.shape({
-      onClick: PropTypes.func,
-      href: PropTypes.string,
-    }).isRequired,
-    cardTitle: PropTypes.string,
-    cardDescription: PropTypes.string,
-    remainindDay: PropTypes.string,
-  }
+const StyledContainer = styled.div`
+  position: relative;
+`
 
-  static defaultProps = {
-    buttonProps: {},
-    cardTitle: null,
-    cardDescription: null,
-    remainindDay: null,
-  }
-
+export class WidgetCard extends PureComponent {
   render() {
     const {
+      href,
+      imageContainerBackground,
       imageProps,
       avatarProps,
-      buttonProps,
-      ownerTitle,
       ownerDescription,
+      ownerTitle,
+      loading,
+      state,
       cardTitle,
-      cardDescription,
-      remainindDay,
+      cardSubTitle,
+      titleTruncate,
+      subTitleTruncate,
+      titlesMinHeight,
+      titleProps,
+      buttonText,
       ...others
     } = this.props
+
+    return (
+      <StyledContainer
+        {...others}
+        as={href ? 'a' : 'div'}
+        onClick={this.removeCurrentFocus}
+        className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+        href={href}
+      >
+        <Image
+          ownerTitle={ownerTitle}
+          ownerDescription={ownerDescription}
+          imageContainerBackground={imageContainerBackground}
+          imageProps={imageProps}
+          avatarProps={avatarProps}
+          loading={loading}
+        />
+        <Description
+          cardTitle={cardTitle}
+          cardSubTitle={cardSubTitle}
+          titleTruncate={titleTruncate}
+          subTitleTruncate={subTitleTruncate}
+          titlesMinHeight={titlesMinHeight}
+          titleProps={titleProps}
+          loading={loading}
+        />
+        <ButtonCard buttonText={buttonText} />
+      </StyledContainer>
+    )
   }
 }
-export default WidgetCard
