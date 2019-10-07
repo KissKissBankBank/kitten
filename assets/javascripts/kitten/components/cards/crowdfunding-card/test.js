@@ -19,8 +19,8 @@ describe('<CrowdfundingCard />', () => {
             loading={false}
             cardTitle="Lorem ipsum…"
             cardSubTitle="Sed ut perspiciatis unde omnis iste natus error Lorem"
-            titleTruncate={false}
-            subTitleTruncate={false}
+            titleTruncate
+            subTitleTruncate
             info1="Lorem ipsum…"
             info2="Lorem ipsum…"
             info3="Lorem ipsum…"

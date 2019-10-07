@@ -1,12 +1,10 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
-import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
 import { Title } from '../../../../components/typography/title'
 import COLORS from '../../../../constants/colors-config'
-import { Marger } from '../../../../components/layout/marger'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import Truncate from 'react-truncate'
 
@@ -112,7 +110,7 @@ class Description extends PureComponent {
     } = this.props
 
     return (
-      <StyledContainer>
+      <StyledContainer titlesMinHeight={titlesMinHeight}>
         {this.renderTitle()}
         {this.renderSubtitle()}
       </StyledContainer>

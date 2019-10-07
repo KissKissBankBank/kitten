@@ -24,9 +24,9 @@ storiesOf('Cards/CrowdfundingCard', module)
     return (
       <StoryContainer>
         <CrowdfundingCard
+          href={text('Link', '#')}
           ownerTitle={text('Owner title', 'Owner title')}
           ownerDescription={text('Owner description', 'Owner description')}
-          href={text('Link', '#')}
           loading={boolean('Loading', false)}
           cardTitle={text('Card title', 'Lorem ipsum…')}
           cardSubTitle={text(
