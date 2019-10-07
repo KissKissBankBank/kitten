@@ -10,7 +10,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledContainer = styled.div`
   position: relative;
-  padding-bottom: ${pxToRem(5)};
+  cursor: pointer;
 `
 
 export class CrowdfundingCard extends PureComponent {
@@ -22,7 +22,6 @@ export class CrowdfundingCard extends PureComponent {
     const {
       href,
       imageContainerBackground,
-      imageContainerRatio,
       imageProps,
       avatarProps,
       ownerDescription,
@@ -45,18 +44,17 @@ export class CrowdfundingCard extends PureComponent {
 
     return (
       <StyledContainer
+        {...others}
         as={href ? 'a' : 'div'}
         onClick={this.removeCurrentFocus}
-        {...others}
+        className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
       >
         <Image
           ownerTitle={ownerTitle}
           ownerDescription={ownerDescription}
           imageContainerBackground={imageContainerBackground}
-          imageContainerRatio={imageContainerRatio}
           imageProps={imageProps}
           avatarProps={avatarProps}
-          state={state}
           loading={loading}
         />
         <Description
@@ -79,8 +77,8 @@ export class CrowdfundingCard extends PureComponent {
           progressColor={progressColor}
           loading={loading}
         />
-        <Loading loading={loading} />
         <State state={state} loading={loading} />
+        <Loading loading={loading} />
       </StyledContainer>
     )
   }

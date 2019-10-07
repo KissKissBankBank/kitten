@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { card } from '../../../../hoc/card'
 import COLORS from '../../../../constants/colors-config'
 import { ButtonImage } from '../../../../components/buttons/button-image'
 import { pxToRem } from '../../../../helpers/utils/typography'
@@ -17,35 +16,20 @@ const StyledImageContainer = styled.div`
   background-color: ${({ imageContainerBackground }) =>
     imageContainerBackground};
 
+  & > img {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    text-align: center;
+  }
+
   ${({ loading }) =>
     loading &&
     css`
       overflow: hidden;
       background-color: ${COLORS.line2};
     `}
-
-  ${({ imageContainerRatio }) =>
-    imageContainerRatio &&
-    css`
-      overflow: hidden;
-      position: relative;
-      padding-top: calc(100% / calc(${imageContainerRatio}));
-
-      & > img {
-        position: absolute;
-        top: 0;
-        height: auto;
-        text-align: center;
-      }
-    `}
-`
-
-const StyledImage = styled.img`
-  width: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  text-align: center;
 `
 
 const StyledContainerAvatar = styled.div`
@@ -104,27 +88,28 @@ class Image extends PureComponent {
     ownerDescription: PropTypes.string,
     state: PropTypes.string,
     loading: PropTypes.bool,
+    imageContainerBackground: PropTypes.string,
   }
 
   static defaultProps = {
     imageProps: {
       backgroundColor: COLORS.line2,
-      src: 'https://placehold.it/350x200/caf4fe/caf4fe',
+      src: 'http://placekitten.com/350/200',
       alt: '',
     },
     avatarProps: {
-      src: 'https://placehold.it/100x100/caf4fe/caf4fe',
+      src: 'http://placekitten.com/100/100',
       alt: '',
     },
     ownerTitle: '',
     ownerDescription: '',
     loading: false,
+    imageContainerBackground: '',
   }
 
   render() {
     const {
       imageContainerBackground,
-      imageContainerRatio,
       imageProps,
       avatarProps,
       ownerDescription,
@@ -137,11 +122,10 @@ class Image extends PureComponent {
         <StyledImageContainer
           className="k-Card__imageContainer"
           imageContainerBackground={imageContainerBackground}
-          imageContainerRatio={imageContainerRatio}
           loading={loading}
         >
           {!loading && (
-            <StyledImage
+            <img
               {...imageProps}
               alt={imageProps.alt || ''}
               className="k-Card__image"

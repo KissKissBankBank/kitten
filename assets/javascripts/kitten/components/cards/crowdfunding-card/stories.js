@@ -9,7 +9,7 @@ import { CrowdfundingCard } from './index'
 const StoryContainer = ({ children }) => (
   <Container>
     <Grid>
-      <GridCol col="8">
+      <GridCol col="6">
         <Marger top="5" bottom="5">
           {children}
         </Marger>
