@@ -53,7 +53,9 @@ storiesOf('Cards/CrowdfundingCard', module)
           ownerTitle={text('Owner title', 'Owner title')}
           ownerDescription={text('Owner description', 'Owner description')}
           loading={boolean('Loading', false)}
-          cardTitle={text('Card title', 'Lorem ipsum…')}
+          widgetCardTitle={text('Card title', 'Lorem ipsum…')}
+          counterDay={text('Counter Day', '27 jours')}
+          stateDay={text('State Day', 'restant')}
           cardSubTitle={text(
             'Card subTitle',
             'Sed ut perspiciatis unde omnis iste natus error Lorem',

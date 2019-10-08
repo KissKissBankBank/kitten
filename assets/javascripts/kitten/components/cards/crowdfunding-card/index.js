@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Image from './components/image'
+import TitleComponent from './components/title'
 import Description from './components/description'
 import Informations from './components/informations'
 import ProgressBar from './components/progress'
@@ -67,13 +68,15 @@ export class CrowdfundingCard extends PureComponent {
           avatarProps={avatarProps}
           loading={loading}
         />
-        <Description
+        <TitleComponent
           cardTitle={cardTitle}
-          cardSubTitle={cardSubTitle}
-          titleTruncate={titleTruncate}
-          subTitleTruncate={subTitleTruncate}
           titlesMinHeight={titlesMinHeight}
-          titleProps={titleProps}
+          titleTruncate={titleTruncate}
+          loading={loading}
+        />
+        <Description
+          cardSubTitle={cardSubTitle}
+          subTitleTruncate={subTitleTruncate}
           loading={loading}
         />
         <Informations

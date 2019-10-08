@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import Image from '../components/image'
+import TitleComponent from '../components/title'
 import Description from '../components/description'
 import Informations from '../components/informations'
 import ButtonCard from '../components/button'
@@ -24,11 +25,13 @@ export class WidgetCard extends PureComponent {
       ownerTitle,
       loading,
       state,
-      cardTitle,
       cardSubTitle,
       titleTruncate,
       subTitleTruncate,
       titlesMinHeight,
+      widgetCardTitle,
+      counterDay,
+      stateDay,
       titleProps,
       buttonText,
       ...others
@@ -50,13 +53,17 @@ export class WidgetCard extends PureComponent {
           avatarProps={avatarProps}
           loading={loading}
         />
-        <Description
-          cardTitle={cardTitle}
-          cardSubTitle={cardSubTitle}
-          titleTruncate={titleTruncate}
-          subTitleTruncate={subTitleTruncate}
+        <TitleComponent
           titlesMinHeight={titlesMinHeight}
-          titleProps={titleProps}
+          titleTruncate={titleTruncate}
+          loading={loading}
+          widgetCardTitle={widgetCardTitle}
+          counterDay={counterDay}
+          stateDay={stateDay}
+        />
+        <Description
+          cardSubTitle={cardSubTitle}
+          subTitleTruncate={subTitleTruncate}
           loading={loading}
         />
         <ButtonCard buttonText={buttonText} />

@@ -13,34 +13,6 @@ const COMPONENT_GUTTER = pxToRem(10)
 const StyledTruncate = styled(Truncate)`
   white-space: nowrap;
 `
-const StyledContainer = styled.div`
-  margin-bottom: ${pxToRem(20)};
-
-  ${({ titlesMinHeight }) =>
-    titlesMinHeight &&
-    css`
-      min-height: ${pxToRem(75)};
-    `}
-`
-
-const StyledTitle = styled.div`
-  padding: 0 ${COMPONENT_GUTTER};
-  line-height: 1;
-  margin-bottom: ${pxToRem(10)};
-`
-
-const StyledTitleLoading = styled.span`
-  display: block;
-  background-color: ${COLORS.line2};
-  border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
-  height: ${pxToRem(24)};
-`
-
-const StyledTitleSmallLoading = styled(StyledTitleLoading)`
-  width: 70%;
-  border-top: ${pxToRem(1)} solid ${COLORS.background1};
-  border-bottom: 0;
-`
 
 const StyledContainerSubtitle = styled.div`
   display: flex;
@@ -81,75 +53,19 @@ const StyledSubtitleLoading = styled.span`
 
 class Description extends PureComponent {
   static propTypes = {
-    cardTitle: PropTypes.string,
     cardSubTitle: PropTypes.string,
-    titlesMinHeight: PropTypes.bool,
-    titleTruncate: PropTypes.bool,
     subTitleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
   }
 
   static defaultProps = {
-    cardTitle: '',
     cardSubTitle: '',
-    titlesMinHeight: true,
-    titleTruncate: true,
     subTitleTruncate: true,
     loading: false,
   }
 
   render() {
-    const {
-      loading,
-      cardTitle,
-      cardSubTitle,
-      titleTruncate,
-      subTitleTruncate,
-      titlesMinHeight,
-      titleProps,
-    } = this.props
-
-    return (
-      <StyledContainer titlesMinHeight={titlesMinHeight}>
-        {this.renderTitle()}
-        {this.renderSubtitle()}
-      </StyledContainer>
-    )
-  }
-
-  renderTitle() {
-    const { loading, titleProps, titleTruncate, cardTitle } = this.props
-
-    return (
-      <StyledTitle>
-        {!loading && (
-          <Title
-            tag="p"
-            {...titleProps}
-            modifier="senary"
-            margin={false}
-            className="k-Card__title"
-          >
-            {titleTruncate && (
-              <StyledTruncate lines={2}>{cardTitle}</StyledTruncate>
-            )}
-
-            {!titleTruncate && cardTitle}
-          </Title>
-        )}
-
-        {loading && (
-          <>
-            <StyledTitleLoading />
-            <StyledTitleSmallLoading />
-          </>
-        )}
-      </StyledTitle>
-    )
-  }
-
-  renderSubtitle() {
-    const { cardSubTitle, loading, subTitleTruncate } = this.props
+    const { loading, cardSubTitle, subTitleTruncate } = this.props
 
     return (
       <StyledContainerSubtitle>
