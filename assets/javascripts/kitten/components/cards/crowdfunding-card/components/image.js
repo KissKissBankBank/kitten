@@ -8,10 +8,11 @@ import { Text } from '../../../../components/typography/text'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
-const StyledImageContainer = styled.div`
+const StyledImageContainer = styled(({ loading, ...others }) => (
+  <div {...others} />
+))`
   overflow: hidden;
   position: relative;
-  transition: opacity ease 600ms, z-index ease 600ms;
   padding-top: ${(9 / 16) * 100}%;
   background-color: ${({ imageContainerBackground }) =>
     imageContainerBackground};

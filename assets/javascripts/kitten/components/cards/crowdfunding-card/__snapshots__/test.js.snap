@@ -4,8 +4,6 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
 .c1 {
   overflow: hidden;
   position: relative;
-  -webkit-transition: opacity ease 600ms,z-index ease 600ms;
-  transition: opacity ease 600ms,z-index ease 600ms;
   padding-top: 56.25%;
 }
 
@@ -176,7 +174,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
 >
   <div
     className="k-Card__imageContainer c1"
-    loading={false}
+    imageContainerBackground=""
   >
     <img
       alt=""
