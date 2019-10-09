@@ -38,7 +38,7 @@ storiesOf('Cards/CrowdfundingCard', module)
           info2={text('info2', 'Lorem ipsum…')}
           info3={text('info3', 'Lorem ipsum…')}
           progress={number('progress', 42)}
-          state={text('state', 'Lorem ipsum…')}
+          state={text('State', 'Lorem ipsum…')}
         />
       </StoryContainer>
     )
@@ -64,6 +64,7 @@ storiesOf('Cards/CrowdfundingCard', module)
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma',
           )}
           buttonText={text('Button text', 'Contribuer dès 5 €')}
+          stateWidget={text('State widget', 'Sur')}
         />
       </StoryContainer>
     )

@@ -49,7 +49,7 @@ export class WidgetCard extends PureComponent {
       ownerDescription,
       ownerTitle,
       loading,
-      state,
+      stateWidget,
       subTitleWidget,
       titleTruncate,
       titlesMinHeight,
@@ -93,6 +93,8 @@ export class WidgetCard extends PureComponent {
           />
         </StyledTitleAndDescription>
         <ButtonCard buttonText={buttonText} />
+        <State stateWidget={stateWidget} loading={loading} />
+        <Loading loading={loading} />
       </StyledContainer>
     )
   }
