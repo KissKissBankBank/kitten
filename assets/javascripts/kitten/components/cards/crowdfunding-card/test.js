@@ -6,7 +6,7 @@ import { CrowdfundingCard } from './index'
 describe('<CrowdfundingCard />', () => {
   let component
 
-  describe('with some props', () => {
+  describe('CrowdfundingCard props', () => {
     beforeEach(() => {
       component = renderer
         .create(
@@ -25,6 +25,34 @@ describe('<CrowdfundingCard />', () => {
             info2="Lorem ipsum…"
             info3="Lorem ipsum…"
             progress={42}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('WidgetCard props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <CrowdfundingCard
+            ownerTitle="Owner title"
+            ownerDescription="Owner description"
+            imageProps={{ src: '#image', alt: '' }}
+            avatarProps={{ src: '#image', alt: '' }}
+            stateWidget="Sur"
+            loading={false}
+            titleWidget="Lorem ipsum…"
+            subTitleWidget="Sed ut perspiciatis unde omnis iste natus error Lorem"
+            titleTruncate
+            subTitleTruncate
+            buttonText="Lorem ipsum"
+            counterDay="27days"
+            stateDay=""
           />,
         )
         .toJSON()
