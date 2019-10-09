@@ -37,7 +37,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
 
 .c4 {
   margin-left: 0.625rem;
-  margin-right: calc(2 * calc(0.625rem));
+  margin-right: calc(2 * 0.625rem);
   line-height: 1.2;
 }
 
@@ -142,7 +142,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin-left: calc(2 * calc(0.625rem));
+  margin-left: calc(2 * 0.625rem);
 }
 
 .c17 {
