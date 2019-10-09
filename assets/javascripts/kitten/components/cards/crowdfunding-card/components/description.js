@@ -50,7 +50,9 @@ const StyledContainerSubtitle = styled.div`
   margin-top: ${pxToRem(10)};
 `
 
-const StyledHorizontalStroke = styled(HorizontalStroke)`
+const StyledHorizontalStroke = styled(({ loading, ...others }) => (
+  <HorizontalStroke {...others} />
+))`
   flex-shrink: 0;
   margin: ${pxToRem(5)} ${COMPONENT_GUTTER} ${pxToRem(5)} 0;
 

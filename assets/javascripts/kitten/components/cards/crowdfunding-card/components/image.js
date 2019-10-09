@@ -8,9 +8,9 @@ import { Text } from '../../../../components/typography/text'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
-const StyledImageContainer = styled(({ loading, ...others }) => (
-  <div {...others} />
-))`
+const StyledImageContainer = styled(
+  ({ loading, imageContainerBackground, ...others }) => <div {...others} />,
+)`
   overflow: hidden;
   position: relative;
   padding-top: ${(9 / 16) * 100}%;
@@ -64,9 +64,7 @@ const StyledTitle = styled(Text)`
     `}
 `
 
-const StyledDescription = styled(({ loading, ...others }) => (
-  <Text {...others} />
-))`
+const StyledDescription = styled(Text)`
   ${({ loading }) =>
     loading &&
     css`
