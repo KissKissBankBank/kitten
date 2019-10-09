@@ -8,10 +8,11 @@ import { Text } from '../../../../components/typography/text'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
-const StyledImageContainer = styled.div`
+const StyledImageContainer = styled(
+  ({ loading, imageContainerBackground, ...others }) => <div {...others} />,
+)`
   overflow: hidden;
   position: relative;
-  transition: opacity ease 600ms, z-index ease 600ms;
   padding-top: ${(9 / 16) * 100}%;
   background-color: ${({ imageContainerBackground }) =>
     imageContainerBackground};
@@ -40,6 +41,7 @@ const StyledContainerAvatar = styled.div`
   margin-top: ${pxToRem(-30)};
   background-color: ${COLORS.background1};
 `
+
 const StyledAvatar = styled(ButtonImage)`
   margin-left: ${COMPONENT_GUTTER};
   background-color: ${COLORS.line2};
@@ -47,7 +49,7 @@ const StyledAvatar = styled(ButtonImage)`
 
 const StyledOwner = styled.div`
   margin-left: ${COMPONENT_GUTTER};
-  margin-right: calc(2 * calc(${COMPONENT_GUTTER}));
+  margin-right: calc(2 * ${COMPONENT_GUTTER});
   line-height: 1.2;
 `
 

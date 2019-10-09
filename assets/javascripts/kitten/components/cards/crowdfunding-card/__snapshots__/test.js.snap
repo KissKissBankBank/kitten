@@ -4,8 +4,6 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
 .c1 {
   overflow: hidden;
   position: relative;
-  -webkit-transition: opacity ease 600ms,z-index ease 600ms;
-  transition: opacity ease 600ms,z-index ease 600ms;
   padding-top: 56.25%;
 }
 
@@ -39,7 +37,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
 
 .c4 {
   margin-left: 0.625rem;
-  margin-right: calc(2 * calc(0.625rem));
+  margin-right: calc(2 * 0.625rem);
   line-height: 1.2;
 }
 
@@ -144,7 +142,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  margin-left: calc(2 * calc(0.625rem));
+  margin-left: calc(2 * 0.625rem);
 }
 
 .c17 {
@@ -176,7 +174,6 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
 >
   <div
     className="k-Card__imageContainer c1"
-    loading={false}
   >
     <img
       alt=""
@@ -253,7 +250,6 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     >
       <span
         className="c9 c10"
-        loading={false}
       />
       <p
         className="k-u-size-micro k-u-weight-regular c11"

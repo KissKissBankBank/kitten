@@ -23,7 +23,7 @@ const StyledProgress = styled(Progress)`
 
 const StyledPercent = styled(Text)`
   flex-shrink: 0;
-  margin-left: calc(2 * calc(${COMPONENT_GUTTER}));
+  margin-left: calc(2 * ${COMPONENT_GUTTER});
 `
 
 const StyledLoading = styled.span`
@@ -36,13 +36,13 @@ const StyledLoading = styled.span`
 
 class ProgressBar extends PureComponent {
   static propTypes = {
-    progress: PropTypes.bool,
+    progress: PropTypes.number,
     progressColor: PropTypes.string,
     loading: PropTypes.bool,
   }
 
   static defaultProps = {
-    progress: false,
+    progress: '',
     progressColor: '',
     loading: false,
   }

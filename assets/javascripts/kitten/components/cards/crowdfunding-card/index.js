@@ -71,14 +71,8 @@ export class CrowdfundingCard extends PureComponent {
         <TitleComponent
           cardTitle={cardTitle}
           titlesMinHeight={titlesMinHeight}
-          titleTruncate={titleTruncate}
-          loading={loading}
         />
-        <Description
-          cardSubTitle={cardSubTitle}
-          subTitleTruncate={subTitleTruncate}
-          loading={loading}
-        />
+        <Description titleTruncate={titleTruncate} loading={loading} />
         <Informations
           info1={info1}
           info2={info2}

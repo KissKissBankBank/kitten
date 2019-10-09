@@ -22,7 +22,9 @@ const StyledContainerSubtitle = styled.div`
   margin-top: ${pxToRem(10)};
 `
 
-const StyledHorizontalStroke = styled(HorizontalStroke)`
+const StyledHorizontalStroke = styled(({ loading, ...others }) => (
+  <HorizontalStroke {...others} />
+))`
   flex-shrink: 0;
   margin: ${pxToRem(5)} ${COMPONENT_GUTTER} ${pxToRem(5)} 0;
 
@@ -53,31 +55,85 @@ const StyledSubtitleLoading = styled.span`
 
 class Description extends PureComponent {
   static propTypes = {
-    cardSubTitle: PropTypes.string,
+    title: PropTypes.string,
+    subTitle: PropTypes.string,
+    titlesMinHeight: PropTypes.bool,
+    titleTruncate: PropTypes.bool,
     subTitleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
   }
 
   static defaultProps = {
-    cardSubTitle: '',
+    title: '',
+    subTitle: '',
+    titlesMinHeight: true,
+    titleTruncate: true,
     subTitleTruncate: true,
     loading: false,
   }
 
   render() {
-    const { loading, cardSubTitle, subTitleTruncate } = this.props
+    const {
+      loading,
+      title,
+      subTitle,
+      titleTruncate,
+      subTitleTruncate,
+      titlesMinHeight,
+      titleProps,
+    } = this.props
+
+    return (
+      <StyledContainer titlesMinHeight={titlesMinHeight}>
+        {this.renderTitle()}
+        {this.renderSubtitle()}
+      </StyledContainer>
+    )
+  }
+
+  renderTitle() {
+    const { loading, titleProps, titleTruncate, title } = this.props
+
+    return (
+      <StyledTitle>
+        {!loading && (
+          <Title
+            tag="p"
+            {...titleProps}
+            modifier="senary"
+            margin={false}
+            className="k-Card__title"
+          >
+            {titleTruncate && (
+              <StyledTruncate lines={2}>{title}</StyledTruncate>
+            )}
+
+            {!titleTruncate && title}
+          </Title>
+        )}
+
+        {loading && (
+          <>
+            <StyledTitleLoading />
+            <StyledTitleSmallLoading />
+          </>
+        )}
+      </StyledTitle>
+    )
+  }
+
+  renderSubtitle() {
+    const { subTitle, loading, subTitleTruncate } = this.props
 
     return (
       <StyledContainerSubtitle>
         <StyledHorizontalStroke size="tiny" loading={loading} />
 
-        {cardSubTitle && !loading && (
+        {subTitle && !loading && (
           <StyledSubtitle size="micro" weight="regular" tag="p">
-            {subTitleTruncate && (
-              <StyledTruncate>{cardSubTitle}</StyledTruncate>
-            )}
+            {subTitleTruncate && <StyledTruncate>{subTitle}</StyledTruncate>}
 
-            {!subTitleTruncate && cardSubTitle}
+            {!subTitleTruncate && subTitle}
           </StyledSubtitle>
         )}
 
