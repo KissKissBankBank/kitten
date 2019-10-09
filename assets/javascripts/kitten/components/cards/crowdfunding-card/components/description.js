@@ -81,8 +81,8 @@ const StyledSubtitleLoading = styled.span`
 
 class Description extends PureComponent {
   static propTypes = {
-    cardTitle: PropTypes.string,
-    cardSubTitle: PropTypes.string,
+    title: PropTypes.string,
+    subTitle: PropTypes.string,
     titlesMinHeight: PropTypes.bool,
     titleTruncate: PropTypes.bool,
     subTitleTruncate: PropTypes.bool,
@@ -90,8 +90,8 @@ class Description extends PureComponent {
   }
 
   static defaultProps = {
-    cardTitle: '',
-    cardSubTitle: '',
+    title: '',
+    subTitle: '',
     titlesMinHeight: true,
     titleTruncate: true,
     subTitleTruncate: true,
@@ -101,8 +101,8 @@ class Description extends PureComponent {
   render() {
     const {
       loading,
-      cardTitle,
-      cardSubTitle,
+      title,
+      subTitle,
       titleTruncate,
       subTitleTruncate,
       titlesMinHeight,
@@ -118,7 +118,7 @@ class Description extends PureComponent {
   }
 
   renderTitle() {
-    const { loading, titleProps, titleTruncate, cardTitle } = this.props
+    const { loading, titleProps, titleTruncate, title } = this.props
 
     return (
       <StyledTitle>
@@ -131,10 +131,10 @@ class Description extends PureComponent {
             className="k-Card__title"
           >
             {titleTruncate && (
-              <StyledTruncate lines={2}>{cardTitle}</StyledTruncate>
+              <StyledTruncate lines={2}>{title}</StyledTruncate>
             )}
 
-            {!titleTruncate && cardTitle}
+            {!titleTruncate && title}
           </Title>
         )}
 
@@ -149,19 +149,17 @@ class Description extends PureComponent {
   }
 
   renderSubtitle() {
-    const { cardSubTitle, loading, subTitleTruncate } = this.props
+    const { subTitle, loading, subTitleTruncate } = this.props
 
     return (
       <StyledContainerSubtitle>
         <StyledHorizontalStroke size="tiny" loading={loading} />
 
-        {cardSubTitle && !loading && (
+        {subTitle && !loading && (
           <StyledSubtitle size="micro" weight="regular" tag="p">
-            {subTitleTruncate && (
-              <StyledTruncate>{cardSubTitle}</StyledTruncate>
-            )}
+            {subTitleTruncate && <StyledTruncate>{subTitle}</StyledTruncate>}
 
-            {!subTitleTruncate && cardSubTitle}
+            {!subTitleTruncate && subTitle}
           </StyledSubtitle>
         )}
 

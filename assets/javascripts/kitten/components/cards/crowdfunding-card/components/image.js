@@ -41,6 +41,7 @@ const StyledContainerAvatar = styled.div`
   margin-top: ${pxToRem(-30)};
   background-color: ${COLORS.background1};
 `
+
 const StyledAvatar = styled(ButtonImage)`
   margin-left: ${COMPONENT_GUTTER};
   background-color: ${COLORS.line2};
@@ -48,7 +49,7 @@ const StyledAvatar = styled(ButtonImage)`
 
 const StyledOwner = styled.div`
   margin-left: ${COMPONENT_GUTTER};
-  margin-right: calc(2 * calc(${COMPONENT_GUTTER}));
+  margin-right: calc(2 * ${COMPONENT_GUTTER});
   line-height: 1.2;
 `
 
