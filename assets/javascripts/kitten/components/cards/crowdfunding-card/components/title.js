@@ -111,20 +111,21 @@ class TitleComponent extends PureComponent {
   }
 
   renderTitleWidget() {
-    const { titleWidget, counterDay, stateDay, titleProps } = this.props
+    const { titleWidget, counterDay, stateDay } = this.props
 
     return (
       <StyledWidgetContainer>
         <StyledTitle>
-          <Title
-            tag="p"
-            {...titleProps}
-            modifier="quinary"
-            margin={false}
+          <Text
+            tag="span"
+            color="font1"
+            size="default"
+            weight="bold"
+            lineHeight="normal"
             className="k-Card__title"
           >
             {titleWidget}
-          </Title>
+          </Text>
         </StyledTitle>
         <StyledCounterDay>
           <Text size="tiny" color="font1" weight="bold" lineHeight="normal">

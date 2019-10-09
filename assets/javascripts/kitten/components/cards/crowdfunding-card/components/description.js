@@ -109,7 +109,7 @@ class Description extends PureComponent {
     return (
       <StyledSubtitleWidget
         tag="p"
-        size="default"
+        size="micro"
         color="font1"
         lineHeight="normal"
         weight="light"
