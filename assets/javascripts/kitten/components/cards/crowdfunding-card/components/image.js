@@ -64,7 +64,9 @@ const StyledTitle = styled(Text)`
     `}
 `
 
-const StyledDescription = styled(Text)`
+const StyledDescription = styled(({ loading, ...others }) => (
+  <Text {...others} />
+))`
   ${({ loading }) =>
     loading &&
     css`
