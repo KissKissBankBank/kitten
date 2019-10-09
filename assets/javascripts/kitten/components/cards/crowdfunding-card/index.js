@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import Image from './components/image'
 import TitleComponent from './components/title'
@@ -15,13 +15,25 @@ const StyledContainer = styled.div`
   padding-bottom: ${pxToRem(5)};
 `
 
+const StyledTitleAndDescription = styled.div`
+  margin-bottom: ${pxToRem(10)};
+
+  ${({ titlesMinHeight }) =>
+    titlesMinHeight &&
+    css`
+      min-height: ${pxToRem(75)};
+    `}
+`
+
 export class CrowdfundingCard extends PureComponent {
   static propTypes = {
     href: PropTypes.string,
+    titlesMinHeight: PropTypes.bool,
   }
 
   static defaultProps = {
     href: null,
+    titlesMinHeight: true,
   }
 
   removeCurrentFocus = () => {
@@ -68,11 +80,18 @@ export class CrowdfundingCard extends PureComponent {
           avatarProps={avatarProps}
           loading={loading}
         />
-        <TitleComponent
-          cardTitle={cardTitle}
-          titlesMinHeight={titlesMinHeight}
-        />
-        <Description titleTruncate={titleTruncate} loading={loading} />
+        <StyledTitleAndDescription titlesMinHeight={titlesMinHeight}>
+          <TitleComponent
+            title={cardTitle}
+            loading={loading}
+            titleTruncate={titleTruncate}
+          />
+          <Description
+            subTitle={cardSubTitle}
+            titleTruncate={titleTruncate}
+            loading={loading}
+          />
+        </StyledTitleAndDescription>
         <Informations
           info1={info1}
           info2={info2}

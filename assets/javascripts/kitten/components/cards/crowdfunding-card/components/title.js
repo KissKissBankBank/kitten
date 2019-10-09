@@ -14,15 +14,9 @@ const StyledTruncate = styled(Truncate)`
 `
 
 const StyledTitle = styled.div`
+  flex: 1;
   padding: 0 ${COMPONENT_GUTTER};
   line-height: 1;
-  margin-bottom: ${pxToRem(10)};
-
-  ${({ titlesMinHeight }) =>
-    titlesMinHeight &&
-    css`
-      min-height: ${pxToRem(75)};
-    `}
 `
 
 const StyledTitleLoading = styled.span`
@@ -44,60 +38,52 @@ const StyledWidgetContainer = styled.div`
 
 const StyledCounterDay = styled.div`
   justify-content: flex-end;
+  line-height: 1;
 `
 
 class TitleComponent extends PureComponent {
   static propTypes = {
-    cardTitle: PropTypes.string,
-    titlesMinHeight: PropTypes.bool,
+    title: PropTypes.string,
     titleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
-    widgetCardTitle: PropTypes.string,
+    titleWidget: PropTypes.string,
     counterDay: PropTypes.string,
     stateDay: PropTypes.string,
   }
 
   static defaultProps = {
-    cardTitle: '',
-    titlesMinHeight: true,
+    title: '',
     titleTruncate: true,
     loading: false,
-    widgetCardTitle: '',
+    titleWidget: '',
     counterDay: '',
     stateDay: '',
   }
 
   render() {
     const {
-      cardTitle,
+      title,
       titleTruncate,
-      titlesMinHeight,
       titleProps,
       loading,
-      widgetCardTitle,
+      titleWidget,
       counterDay,
       stateDay,
     } = this.props
 
     return (
       <>
-        {cardTitle && this.renderTitle()}
-        {widgetCardTitle && this.renderWidgetTitle()}
+        {title && this.renderTitle()}
+        {titleWidget && this.renderTitleWidget()}
       </>
     )
   }
 
   renderTitle() {
-    const {
-      loading,
-      titleProps,
-      titleTruncate,
-      cardTitle,
-      titlesMinHeight,
-    } = this.props
+    const { loading, titleProps, titleTruncate, title } = this.props
 
     return (
-      <StyledTitle titlesMinHeight={titlesMinHeight}>
+      <StyledTitle>
         {!loading && (
           <Title
             tag="p"
@@ -107,10 +93,10 @@ class TitleComponent extends PureComponent {
             className="k-Card__title"
           >
             {titleTruncate && (
-              <StyledTruncate lines={2}>{cardTitle}</StyledTruncate>
+              <StyledTruncate lines={2}>{title}</StyledTruncate>
             )}
 
-            {!titleTruncate && cardTitle}
+            {!titleTruncate && title}
           </Title>
         )}
 
@@ -124,25 +110,32 @@ class TitleComponent extends PureComponent {
     )
   }
 
-  renderWidgetTitle() {
-    const {
-      widgetCardTitle,
-      counterDay,
-      stateDay,
-      titlesMinHeight,
-    } = this.props
+  renderTitleWidget() {
+    const { titleWidget, counterDay, stateDay, titleProps } = this.props
 
     return (
       <StyledWidgetContainer>
-        <StyledTitle titlesMinHeight={titlesMinHeight}>
-          <Text size="default" color="font1" weight="bold" lineHeight="normal">
-            {widgetCardTitle}
-          </Text>
+        <StyledTitle>
+          <Title
+            tag="p"
+            {...titleProps}
+            modifier="quinary"
+            margin={false}
+            className="k-Card__title"
+          >
+            {titleWidget}
+          </Title>
         </StyledTitle>
         <StyledCounterDay>
           <Text size="tiny" color="font1" weight="bold" lineHeight="normal">
             {counterDay}
-            <Text size="micro" color="font1" weight="light" lineHeight="normal">
+            <Text
+              size="micro"
+              color="font1"
+              weight="light"
+              lineHeight="normal"
+              style={{ display: 'block' }}
+            >
               {stateDay}
             </Text>
           </Text>

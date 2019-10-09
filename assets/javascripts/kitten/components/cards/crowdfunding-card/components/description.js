@@ -53,77 +53,39 @@ const StyledSubtitleLoading = styled.span`
   height: ${pxToRem(12)};
 `
 
+const StyledSubtitleWidget = styled(Text)`
+  padding-left: ${COMPONENT_GUTTER};
+  margin: ${pxToRem(5)} 0 ${pxToRem(30)} 0;
+`
+
 class Description extends PureComponent {
   static propTypes = {
-    title: PropTypes.string,
     subTitle: PropTypes.string,
-    titlesMinHeight: PropTypes.bool,
-    titleTruncate: PropTypes.bool,
+    subTitleWidget: PropTypes.string,
     subTitleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
   }
 
   static defaultProps = {
-    title: '',
     subTitle: '',
-    titlesMinHeight: true,
-    titleTruncate: true,
+    subTitleWidget: '',
     subTitleTruncate: true,
     loading: false,
   }
 
   render() {
-    const {
-      loading,
-      title,
-      subTitle,
-      titleTruncate,
-      subTitleTruncate,
-      titlesMinHeight,
-      titleProps,
-    } = this.props
+    const { loading, subTitle, subTitleTruncate, subTitleWidget } = this.props
 
     return (
-      <StyledContainer titlesMinHeight={titlesMinHeight}>
-        {this.renderTitle()}
-        {this.renderSubtitle()}
-      </StyledContainer>
+      <>
+        {subTitle && this.renderDescription()}
+        {subTitleWidget && this.renderDescriptionWidget()}
+      </>
     )
   }
 
-  renderTitle() {
-    const { loading, titleProps, titleTruncate, title } = this.props
-
-    return (
-      <StyledTitle>
-        {!loading && (
-          <Title
-            tag="p"
-            {...titleProps}
-            modifier="senary"
-            margin={false}
-            className="k-Card__title"
-          >
-            {titleTruncate && (
-              <StyledTruncate lines={2}>{title}</StyledTruncate>
-            )}
-
-            {!titleTruncate && title}
-          </Title>
-        )}
-
-        {loading && (
-          <>
-            <StyledTitleLoading />
-            <StyledTitleSmallLoading />
-          </>
-        )}
-      </StyledTitle>
-    )
-  }
-
-  renderSubtitle() {
-    const { subTitle, loading, subTitleTruncate } = this.props
+  renderDescription() {
+    const { loading, subTitle, subTitleTruncate } = this.props
 
     return (
       <StyledContainerSubtitle>
@@ -139,6 +101,21 @@ class Description extends PureComponent {
 
         {loading && <StyledSubtitleLoading />}
       </StyledContainerSubtitle>
+    )
+  }
+
+  renderDescriptionWidget() {
+    const { subTitleWidget } = this.props
+    return (
+      <StyledSubtitleWidget
+        tag="p"
+        size="default"
+        color="font1"
+        lineHeight="normal"
+        weight="light"
+      >
+        {subTitleWidget}
+      </StyledSubtitleWidget>
     )
   }
 }

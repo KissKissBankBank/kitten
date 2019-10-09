@@ -53,14 +53,17 @@ storiesOf('Cards/CrowdfundingCard', module)
           ownerTitle={text('Owner title', 'Owner title')}
           ownerDescription={text('Owner description', 'Owner description')}
           loading={boolean('Loading', false)}
-          widgetCardTitle={text('Card title', 'Lorem ipsum…')}
+          titleWidget={text(
+            'Card title',
+            'Les Arts dessinés : devenez abonné-fondateur',
+          )}
           counterDay={text('Counter Day', '27 jours')}
           stateDay={text('State Day', 'restant')}
-          cardSubTitle={text(
+          subTitleWidget={text(
             'Card subTitle',
-            'Sed ut perspiciatis unde omnis iste natus error Lorem',
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma',
           )}
-          buttonText={text('Button text', 'hello')}
+          buttonText={text('Button text', 'Contribuer dès 5 €')}
         />
       </StoryContainer>
     )

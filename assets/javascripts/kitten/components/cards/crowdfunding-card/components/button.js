@@ -5,12 +5,12 @@ import { Button } from '../../../../components/buttons/button/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
 
 const StyledMargerButton = styled(Button)`
-  margin: ${pxToRem(20)} 0;
+  margin-bottom: ${pxToRem(20)};
 `
 
 const ButtonCard = ({ buttonText }) => {
   return (
-    <StyledMargerButton fluid modifier="helium">
+    <StyledMargerButton fluid big modifier="helium">
       {buttonText}
     </StyledMargerButton>
   )

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import Image from '../components/image'
 import TitleComponent from '../components/title'
@@ -14,7 +14,32 @@ const StyledContainer = styled.div`
   position: relative;
 `
 
+const StyledTitleAndDescription = styled.div`
+  margin-top: ${pxToRem(20)};
+  margin-bottom: ${pxToRem(10)};
+
+  ${({ titlesMinHeight }) =>
+    titlesMinHeight &&
+    css`
+      min-height: ${pxToRem(75)};
+    `}
+`
+
 export class WidgetCard extends PureComponent {
+  static propTypes = {
+    href: PropTypes.string,
+    titlesMinHeight: PropTypes.bool,
+  }
+
+  static defaultProps = {
+    href: null,
+    titlesMinHeight: true,
+  }
+
+  removeCurrentFocus = () => {
+    document.activeElement.blur()
+  }
+
   render() {
     const {
       href,
@@ -25,11 +50,11 @@ export class WidgetCard extends PureComponent {
       ownerTitle,
       loading,
       state,
-      cardSubTitle,
+      subTitleWidget,
       titleTruncate,
-      subTitleTruncate,
       titlesMinHeight,
-      widgetCardTitle,
+      subTitleTruncate,
+      titleWidget,
       counterDay,
       stateDay,
       titleProps,
@@ -53,19 +78,20 @@ export class WidgetCard extends PureComponent {
           avatarProps={avatarProps}
           loading={loading}
         />
-        <TitleComponent
-          titlesMinHeight={titlesMinHeight}
-          titleTruncate={titleTruncate}
-          loading={loading}
-          widgetCardTitle={widgetCardTitle}
-          counterDay={counterDay}
-          stateDay={stateDay}
-        />
-        <Description
-          cardSubTitle={cardSubTitle}
-          subTitleTruncate={subTitleTruncate}
-          loading={loading}
-        />
+        <StyledTitleAndDescription titlesMinHeight={titlesMinHeight}>
+          <TitleComponent
+            titleTruncate={titleTruncate}
+            loading={loading}
+            titleWidget={titleWidget}
+            counterDay={counterDay}
+            stateDay={stateDay}
+          />
+          <Description
+            subTitleWidget={subTitleWidget}
+            subTitleTruncate={subTitleTruncate}
+            loading={loading}
+          />
+        </StyledTitleAndDescription>
         <ButtonCard buttonText={buttonText} />
       </StyledContainer>
     )
