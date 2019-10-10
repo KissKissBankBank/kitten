@@ -42,7 +42,7 @@ class ProgressBar extends PureComponent {
   }
 
   static defaultProps = {
-    progress: '',
+    progress: 0,
     progressColor: '',
     loading: false,
   }
