@@ -152,7 +152,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 .c5 {
-  margin-bottom: 0.625rem;
   min-height: 4.6875rem;
 }
 
@@ -416,7 +415,6 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
 }
 
 .c5 {
-  margin-bottom: 0.625rem;
   min-height: 4.6875rem;
 }
 

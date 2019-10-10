@@ -10,7 +10,7 @@ const StyledMargerButton = styled(Button)`
 
 const ButtonCard = ({ buttonText }) => {
   return (
-    <StyledMargerButton fluid big modifier="helium">
+    <StyledMargerButton fluid modifier="helium">
       {buttonText}
     </StyledMargerButton>
   )

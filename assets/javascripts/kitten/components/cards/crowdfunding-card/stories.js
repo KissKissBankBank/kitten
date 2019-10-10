@@ -10,7 +10,7 @@ import { WidgetCard } from './widget/index.js'
 const StoryContainer = ({ children }) => (
   <Container>
     <Grid>
-      <GridCol col="6">
+      <GridCol col-m="6">
         <Marger top="5" bottom="5">
           {children}
         </Marger>
@@ -61,7 +61,7 @@ storiesOf('Cards/CrowdfundingCard', module)
           stateDay={text('State Day', 'restant')}
           subTitleWidget={text(
             'Card subTitle',
-            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma',
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma Aenean massa. Cum sociis natoque penatibus et ma',
           )}
           buttonText={text('Button text', 'Contribuer dès 5 €')}
           stateWidget={text('State widget', 'Sur')}
