@@ -7,7 +7,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 hRLHCJ"
   >
     <img
       alt=""
@@ -37,12 +37,12 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
         
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
         
       </div>
@@ -79,7 +79,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 hRLHCJ"
   >
     <img
       alt=""
@@ -109,12 +109,12 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
         
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
         
       </div>
@@ -139,7 +139,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         className="description__StyledHorizontalStroke-sc-1kqqtcu-6 cWydpT horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
       />
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular description__StyledSubtitle-sc-1kqqtcu-7 tkkwM"
+        className="k-u-size-micro k-u-weight-regular description__StyledSubtitle-sc-1kqqtcu-7 tkkwM"
       >
         <span
           className="description__StyledTruncate-sc-1kqqtcu-0 kxbktE"
@@ -175,7 +175,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 hRLHCJ"
   >
     <img
       alt=""
@@ -205,12 +205,12 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
         
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
         
       </div>
@@ -247,7 +247,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 hRLHCJ"
   >
     <img
       alt="Image alt"
@@ -278,12 +278,12 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
         Custom title
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
         Custom description
       </div>
@@ -308,7 +308,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         className="description__StyledHorizontalStroke-sc-1kqqtcu-6 cWydpT horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
       />
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular description__StyledSubtitle-sc-1kqqtcu-7 tkkwM"
+        className="k-u-size-micro k-u-weight-regular description__StyledSubtitle-sc-1kqqtcu-7 tkkwM"
       >
         <span
           className="description__StyledTruncate-sc-1kqqtcu-0 kxbktE"
