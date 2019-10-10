@@ -48,9 +48,9 @@ class Informations extends PureComponent {
   }
 
   static defaultProps = {
-    info1: null,
-    info2: null,
-    info3: null,
+    info1: '',
+    info2: '',
+    info3: '',
     loading: false,
   }
 
