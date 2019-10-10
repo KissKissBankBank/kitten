@@ -74,7 +74,7 @@ class Informations extends PureComponent {
     return (
       <StyledInfo>
         {!loading && (
-          <Text size="micro" lineHeight="normal" weight="light">
+          <Text size="micro" lineHeight="normal" weight="light" color="font1">
             {text}
           </Text>
         )}

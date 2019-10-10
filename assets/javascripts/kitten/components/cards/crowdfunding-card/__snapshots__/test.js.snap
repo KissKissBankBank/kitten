@@ -202,12 +202,12 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       className="c4"
     >
       <div
-        className="k-u-size-micro k-u-weight-regular "
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular "
       >
         Owner title
       </div>
       <div
-        className="k-u-size-micro k-u-weight-light "
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light "
       >
         Owner description
       </div>
@@ -252,7 +252,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
         className="c9 c10"
       />
       <p
-        className="k-u-size-micro k-u-weight-regular c11"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular c11"
       >
         <span
           className="c7"
@@ -285,7 +285,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       className="c13"
     >
       <span
-        className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
+        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
       >
         Lorem ipsum…
       </span>
@@ -294,7 +294,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       className="c13"
     >
       <span
-        className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
+        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
       >
         Lorem ipsum…
       </span>
@@ -303,7 +303,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       className="c13"
     >
       <span
-        className="k-u-line-height-normal k-u-size-micro k-u-weight-light"
+        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
       >
         Lorem ipsum…
       </span>
@@ -339,7 +339,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
       </div>
     </div>
     <span
-      className="k-u-size-micro k-u-weight-regular c16"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c16"
     >
       42 %
     </span>
@@ -348,7 +348,7 @@ exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
     className="c17"
   >
     <span
-      className="k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
     >
       Lorem ipsum…
     </span>

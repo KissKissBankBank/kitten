@@ -65,7 +65,7 @@ class ProgressBar extends PureComponent {
           }}
         />
 
-        <StyledPercent weight="regular" size="micro">
+        <StyledPercent weight="regular" size="micro" color="font1">
           {loading && <StyledLoading />}
 
           {!loading && `${progress} %`}
