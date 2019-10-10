@@ -39,24 +39,24 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       <div
         className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
-        
+
       </div>
       <div
         className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
-        
+
       </div>
     </div>
   </div>
   <div
     className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
   >
-    
-    
-    
-    
+
+
+
+
   </div>
-  
+
 </div>
 `;
 
@@ -99,12 +99,12 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       <div
         className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
-        
+
       </div>
       <div
         className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
-        
+
       </div>
     </div>
   </div>
@@ -120,7 +120,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         Custom title
       </p>
     </div>
-    
+
     <div
       className="description__StyledContainerSubtitle-sc-1kqqtcu-1 bHSOZz"
     >
@@ -153,9 +153,9 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         </span>
       </p>
     </div>
-    
+
   </div>
-  
+
 </div>
 `;
 
@@ -198,24 +198,24 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       <div
         className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
-        
+
       </div>
       <div
         className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
-        
+
       </div>
     </div>
   </div>
   <div
     className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
   >
-    
-    
-    
-    
+
+
+
+
   </div>
-  
+
 </div>
 `;
 
@@ -280,7 +280,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         Custom title
       </p>
     </div>
-    
+
     <div
       className="description__StyledContainerSubtitle-sc-1kqqtcu-1 bHSOZz"
     >
@@ -313,8 +313,8 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         </span>
       </p>
     </div>
-    
+
   </div>
-  
+
 </a>
 `;
