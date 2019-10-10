@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `CrowdfundingCard` with styled-components.
+
 ## [2.31.0] - 2019-10-01
 
 Feature:

@@ -1,0 +1,357 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CrowdfundingCard /> with some props matches with snapshot 1`] = `
+.c1 {
+  overflow: hidden;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.c1 > img {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  top: 0;
+  margin-top: -1.875rem;
+  background-color: #fff;
+}
+
+.c3 {
+  margin-left: 0.625rem;
+  background-color: #d8d8d8;
+}
+
+.c4 {
+  margin-left: 0.625rem;
+  margin-right: calc(2 * 0.625rem);
+  line-height: 1.2;
+}
+
+.c10 {
+  display: block;
+  border: none;
+  background: #222;
+  width: 1.25rem;
+  height: 0.125rem;
+}
+
+.c7 {
+  white-space: nowrap;
+}
+
+.c5 {
+  margin-bottom: 1.25rem;
+  min-height: 4.6875rem;
+}
+
+.c6 {
+  padding: 0 0.625rem;
+  line-height: 1;
+  margin-bottom: 0.625rem;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 1;
+  padding: 0 0.625rem;
+  margin-top: 0.625rem;
+}
+
+.c9 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 0.3125rem 0.625rem 0.3125rem 0;
+}
+
+.c11 {
+  line-height: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c12 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.3125rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 0.625rem;
+  line-height: 1;
+}
+
+.c13 {
+  margin-top: 0.3125rem;
+  margin-right: 1.875rem;
+}
+
+.c13:last-child {
+  margin-right: 0;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 0.625rem;
+  margin-top: 0.3125rem;
+  margin-bottom: 1.25rem;
+}
+
+.c15 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c16 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-left: calc(2 * 0.625rem);
+}
+
+.c17 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.625rem;
+  line-height: 1;
+}
+
+.c0 {
+  position: relative;
+  padding-bottom: 0.3125rem;
+}
+
+<div
+  className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover c0"
+  href={null}
+  onClick={[Function]}
+>
+  <div
+    className="k-Card__imageContainer c1"
+  >
+    <img
+      alt=""
+      className="k-Card__image"
+      src="#image"
+    />
+  </div>
+  <div
+    className="c2"
+  >
+    <div
+      className="k-u-margin-bottom-single k-u-margin-top-single"
+    >
+      <span
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents c3"
+        tabIndex={null}
+      >
+        <img
+          alt=""
+          className="k-ButtonImage__img"
+          src="#image"
+        />
+      </span>
+    </div>
+    <div
+      className="c4"
+    >
+      <div
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular "
+      >
+        Owner title
+      </div>
+      <div
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light "
+      >
+        Owner description
+      </div>
+    </div>
+  </div>
+  <div
+    className="c5"
+  >
+    <div
+      className="c6"
+    >
+      <p
+        className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+      >
+        <span
+          className="c7"
+          width={0}
+        >
+          <span />
+          <span>
+            Lorem ipsum…
+          </span>
+          <span
+            style={
+              Object {
+                "left": 0,
+                "position": "fixed",
+                "top": 0,
+                "visibility": "hidden",
+              }
+            }
+          >
+            …
+          </span>
+        </span>
+      </p>
+    </div>
+    <div
+      className="c8"
+    >
+      <span
+        className="c9 c10"
+      />
+      <p
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular c11"
+      >
+        <span
+          className="c7"
+          width={0}
+        >
+          <span />
+          <span>
+            Sed ut perspiciatis unde omnis iste natus error Lorem
+          </span>
+          <span
+            style={
+              Object {
+                "left": 0,
+                "position": "fixed",
+                "top": 0,
+                "visibility": "hidden",
+              }
+            }
+          >
+            …
+          </span>
+        </span>
+      </p>
+    </div>
+  </div>
+  <div
+    className="c12"
+  >
+    <div
+      className="c13"
+    >
+      <span
+        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
+      >
+        Lorem ipsum…
+      </span>
+    </div>
+    <div
+      className="c13"
+    >
+      <span
+        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
+      >
+        Lorem ipsum…
+      </span>
+    </div>
+    <div
+      className="c13"
+    >
+      <span
+        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
+      >
+        Lorem ipsum…
+      </span>
+    </div>
+  </div>
+  <div
+    className="c14"
+  >
+    <div
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow={42}
+      className="k-Progress c15"
+      role="progressbar"
+    >
+      <div
+        className="k-Progress__ramp"
+        style={
+          Object {
+            "height": "4px",
+          }
+        }
+      >
+        <div
+          className="k-Progress__slider"
+          style={
+            Object {
+              "backgroundColor": "",
+              "width": "42%",
+            }
+          }
+        />
+      </div>
+    </div>
+    <span
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c16"
+    >
+      42 %
+    </span>
+  </div>
+  <div
+    className="c17"
+  >
+    <span
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+    >
+      Lorem ipsum…
+    </span>
+  </div>
+</div>
+`;
