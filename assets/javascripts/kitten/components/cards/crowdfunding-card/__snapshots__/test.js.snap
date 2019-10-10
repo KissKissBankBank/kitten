@@ -233,7 +233,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
         </span>
       </p>
     </div>
-
+    
     <div
       className="c8"
     >
@@ -266,7 +266,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
         </span>
       </p>
     </div>
-
+    
   </div>
   <div
     className="c13"
@@ -329,12 +329,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       </div>
     </div>
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c16"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c17"
     >
       42 %
     </span>
   </div>
-
+  
 </div>
 `;
 
@@ -584,12 +584,12 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
       className="c4"
     >
       <div
-        className="k-u-size-micro k-u-weight-regular "
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular "
       >
         Owner title
       </div>
       <div
-        className="k-u-size-micro k-u-weight-light "
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light "
       >
         Owner description
       </div>
@@ -598,7 +598,7 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
   <div
     className="c5"
   >
-
+    
     <div
       className="c6"
     >
@@ -646,12 +646,12 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
               }
             }
           >
-
+            
           </span>
         </span>
       </div>
     </div>
-
+    
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light c10"
     >
@@ -687,7 +687,7 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
     className="c13"
   >
     <span
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="k-u-color-background1 k-u-line-height-normal k-u-size-micro k-u-weight-regular c14"
     >
       Sur
       <svg
