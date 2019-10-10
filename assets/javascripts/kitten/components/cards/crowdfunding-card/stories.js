@@ -5,7 +5,7 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { CrowdfundingCard } from './index'
-import { WidgetCard } from './widget/index.js'
+import { WidgetCard } from './widget'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -64,7 +64,6 @@ storiesOf('Cards/CrowdfundingCard', module)
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma Aenean massa. Cum sociis natoque penatibus et ma',
           )}
           buttonText={text('Button text', 'Contribuer dès 5 €')}
-          stateWidget={text('State widget', 'Sur')}
         />
       </StoryContainer>
     )
