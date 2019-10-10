@@ -7,7 +7,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 hRLHCJ"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
   >
     <img
       alt=""
@@ -37,26 +37,38 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
     >
       <div
-        className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
 
       </div>
       <div
-        className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
 
       </div>
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="description__StyledContainer-sc-1kqqtcu-1 gskEBS"
   >
+    <div
+      className="description__StyledTitle-sc-1kqqtcu-2 hJodRF"
+    >
+      <p
+        className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+      >
 
+      </p>
+    </div>
+    <div
+      className="description__StyledContainerSubtitle-sc-1kqqtcu-5 tWhBV"
+    >
+      <span
+        className="description__StyledHorizontalStroke-sc-1kqqtcu-6 cWydpT horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
+      />
 
-
-
+    </div>
   </div>
-
 </div>
 `;
 
@@ -67,7 +79,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 hRLHCJ"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
   >
     <img
       alt=""
@@ -97,22 +109,22 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
     >
       <div
-        className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
 
       </div>
       <div
-        className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
 
       </div>
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="description__StyledContainer-sc-1kqqtcu-1 gskEBS"
   >
     <div
-      className="title__StyledTitle-sc-1wv1kzg-1 jPVxSr"
+      className="description__StyledTitle-sc-1kqqtcu-2 hJodRF"
     >
       <p
         className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -120,15 +132,14 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         Custom title
       </p>
     </div>
-
     <div
-      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 bHSOZz"
+      className="description__StyledContainerSubtitle-sc-1kqqtcu-5 tWhBV"
     >
       <span
-        className="description__StyledHorizontalStroke-sc-1kqqtcu-2 gIAYQP horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
+        className="description__StyledHorizontalStroke-sc-1kqqtcu-6 cWydpT horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
       />
       <p
-        className="k-u-size-micro k-u-weight-regular description__StyledSubtitle-sc-1kqqtcu-3 esHpmS"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular description__StyledSubtitle-sc-1kqqtcu-7 tkkwM"
       >
         <span
           className="description__StyledTruncate-sc-1kqqtcu-0 kxbktE"
@@ -153,9 +164,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         </span>
       </p>
     </div>
-
   </div>
-
 </div>
 `;
 
@@ -166,7 +175,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 hRLHCJ"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
   >
     <img
       alt=""
@@ -196,26 +205,38 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
     >
       <div
-        className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
 
       </div>
       <div
-        className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
 
       </div>
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="description__StyledContainer-sc-1kqqtcu-1 gskEBS"
   >
+    <div
+      className="description__StyledTitle-sc-1kqqtcu-2 hJodRF"
+    >
+      <p
+        className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+      >
 
+      </p>
+    </div>
+    <div
+      className="description__StyledContainerSubtitle-sc-1kqqtcu-5 tWhBV"
+    >
+      <span
+        className="description__StyledHorizontalStroke-sc-1kqqtcu-6 cWydpT horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
+      />
 
-
-
+    </div>
   </div>
-
 </div>
 `;
 
@@ -226,7 +247,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 hRLHCJ"
+    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
   >
     <img
       alt="Image alt"
@@ -257,38 +278,37 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
     >
       <div
-        className="k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
         Custom title
       </div>
       <div
-        className="k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
         Custom description
       </div>
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="description__StyledContainer-sc-1kqqtcu-1 gskEBS"
   >
     <div
-      className="title__StyledTitle-sc-1wv1kzg-1 jPVxSr"
+      className="description__StyledTitle-sc-1kqqtcu-2 hJodRF"
     >
-      <p
+      <h4
         className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
       >
         Custom title
-      </p>
+      </h4>
     </div>
-
     <div
-      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 bHSOZz"
+      className="description__StyledContainerSubtitle-sc-1kqqtcu-5 tWhBV"
     >
       <span
-        className="description__StyledHorizontalStroke-sc-1kqqtcu-2 gIAYQP horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
+        className="description__StyledHorizontalStroke-sc-1kqqtcu-6 cWydpT horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
       />
       <p
-        className="k-u-size-micro k-u-weight-regular description__StyledSubtitle-sc-1kqqtcu-3 esHpmS"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular description__StyledSubtitle-sc-1kqqtcu-7 tkkwM"
       >
         <span
           className="description__StyledTruncate-sc-1kqqtcu-0 kxbktE"
@@ -313,8 +333,6 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         </span>
       </p>
     </div>
-
   </div>
-
 </a>
 `;
