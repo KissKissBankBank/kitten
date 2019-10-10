@@ -91,7 +91,7 @@ export class WidgetCard extends PureComponent {
             loading={loading}
           />
         </StyledTitleAndDescription>
-        <ButtonCard buttonText={buttonText} />
+        <ButtonCard buttonText={buttonText} loading={loading} />
         <State stateWidget={stateWidget} loading={loading} />
         <Loading loading={loading} />
       </StyledContainer>

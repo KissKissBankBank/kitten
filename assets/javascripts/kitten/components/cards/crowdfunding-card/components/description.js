@@ -105,17 +105,27 @@ class Description extends PureComponent {
   }
 
   renderDescriptionWidget() {
-    const { subTitleWidget } = this.props
+    const { subTitleWidget, subTitleTruncate, loading } = this.props
     return (
-      <StyledSubtitleWidget
-        tag="p"
-        size="micro"
-        color="font1"
-        lineHeight="normal"
-        weight="light"
-      >
-        {subTitleWidget}
-      </StyledSubtitleWidget>
+      <>
+        {StyledSubtitleWidget && !loading && (
+          <StyledSubtitleWidget
+            tag="p"
+            size="micro"
+            color="font1"
+            lineHeight="normal"
+            weight="light"
+          >
+            {subTitleTruncate && (
+              <StyledTruncate>{subTitleWidget}</StyledTruncate>
+            )}
+
+            {!subTitleTruncate && subTitleWidget}
+          </StyledSubtitleWidget>
+        )}
+
+        {loading && <StyledSubtitleLoading />}
+      </>
     )
   }
 }

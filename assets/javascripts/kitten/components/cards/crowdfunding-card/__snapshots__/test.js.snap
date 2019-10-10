@@ -379,6 +379,10 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
   line-height: 1.2;
 }
 
+.c8 {
+  white-space: nowrap;
+}
+
 .c7 {
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -394,7 +398,7 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
   display: flex;
 }
 
-.c8 {
+.c9 {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
@@ -402,12 +406,16 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
   line-height: 1;
 }
 
-.c9 {
+.c11 {
+  white-space: nowrap;
+}
+
+.c10 {
   padding-left: 0.625rem;
   margin: 0.3125rem 0 1.25rem 0;
 }
 
-.c11 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -421,7 +429,7 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
   padding: 0.625rem 1.25rem;
 }
 
-.c12 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -432,11 +440,11 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
   align-items: center;
 }
 
-.c13 {
+.c15 {
   margin-left: 0.3125rem;
 }
 
-.c10 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -476,52 +484,52 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c10:disabled {
+.c12:disabled {
   cursor: not-allowed;
 }
 
-.c10 >:nth-child(n) {
+.c12 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c10 >:last-child {
+.c12 >:last-child {
   margin-right: 0;
 }
 
-.c10 svg {
+.c12 svg {
   fill: #fff;
 }
 
-.c10:hover,
-.c10:focus {
+.c12:hover,
+.c12:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c10:hover svg,
-.c10:focus svg {
+.c12:hover svg,
+.c12:focus svg {
   fill: #fff;
 }
 
-.c10:active {
+.c12:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c10:active svg {
+.c12:active svg {
   fill: #fff;
 }
 
-.c10:disabled {
+.c12:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c10:disabled svg {
+.c12:disabled svg {
   fill: #fff;
 }
 
@@ -535,7 +543,7 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c10 {
+  .c12 {
     width: 12.5rem;
     height: 3.125rem;
   }
@@ -600,11 +608,31 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
         <span
           className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-bold k-Card__title"
         >
-          Lorem ipsum…
+          <span
+            className="c8"
+            width={0}
+          >
+            <span />
+            <span>
+              Lorem ipsum…
+            </span>
+            <span
+              style={
+                Object {
+                  "left": 0,
+                  "position": "fixed",
+                  "top": 0,
+                  "visibility": "hidden",
+                }
+              }
+            >
+              …
+            </span>
+          </span>
         </span>
       </div>
       <div
-        className="c8"
+        className="c9"
       >
         <span
           className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-bold"
@@ -625,25 +653,45 @@ exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
     </div>
     
     <p
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light c9"
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light c10"
     >
-      Sed ut perspiciatis unde omnis iste natus error Lorem
+      <span
+        className="c11"
+        width={0}
+      >
+        <span />
+        <span>
+          Sed ut perspiciatis unde omnis iste natus error Lorem
+        </span>
+        <span
+          style={
+            Object {
+              "left": 0,
+              "position": "fixed",
+              "top": 0,
+              "visibility": "hidden",
+            }
+          }
+        >
+          …
+        </span>
+      </span>
     </p>
   </div>
   <button
-    className="c10"
+    className="c12"
   >
     Lorem ipsum
   </button>
   <div
-    className="c11"
+    className="c13"
   >
     <span
-      className="k-u-color-background1 k-u-line-height-normal k-u-size-micro k-u-weight-regular c12"
+      className="k-u-color-background1 k-u-line-height-normal k-u-size-micro k-u-weight-regular c14"
     >
       Sur
       <svg
-        className="c13"
+        className="c15"
         fill="#fff"
         height="30"
         viewBox="0 0 134 30"

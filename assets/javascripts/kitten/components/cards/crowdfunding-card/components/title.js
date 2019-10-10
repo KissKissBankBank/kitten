@@ -111,37 +111,61 @@ class TitleComponent extends PureComponent {
   }
 
   renderTitleWidget() {
-    const { titleWidget, counterDay, stateDay } = this.props
+    const {
+      titleWidget,
+      counterDay,
+      stateDay,
+      loading,
+      titleTruncate,
+    } = this.props
 
     return (
-      <StyledWidgetContainer>
-        <StyledTitle>
-          <Text
-            tag="span"
-            color="font1"
-            size="default"
-            weight="bold"
-            lineHeight="normal"
-            className="k-Card__title"
-          >
-            {titleWidget}
-          </Text>
-        </StyledTitle>
-        <StyledCounterDay>
-          <Text size="tiny" color="font1" weight="bold" lineHeight="normal">
-            {counterDay}
-            <Text
-              size="micro"
-              color="font1"
-              weight="light"
-              lineHeight="normal"
-              style={{ display: 'block' }}
-            >
-              {stateDay}
-            </Text>
-          </Text>
-        </StyledCounterDay>
-      </StyledWidgetContainer>
+      <>
+        <StyledWidgetContainer>
+          <StyledTitle>
+            {!loading && (
+              <Text
+                tag="span"
+                color="font1"
+                size="default"
+                weight="bold"
+                lineHeight="normal"
+                className="k-Card__title"
+              >
+                {titleTruncate && (
+                  <StyledTruncate lines={2}>{titleWidget}</StyledTruncate>
+                )}
+
+                {!titleTruncate && titleWidget}
+              </Text>
+            )}
+          </StyledTitle>
+
+          {!loading && (
+            <StyledCounterDay>
+              <Text size="tiny" color="font1" weight="bold" lineHeight="normal">
+                {counterDay}
+                <Text
+                  size="micro"
+                  color="font1"
+                  weight="light"
+                  lineHeight="normal"
+                  style={{ display: 'block' }}
+                >
+                  {stateDay}
+                </Text>
+              </Text>
+            </StyledCounterDay>
+          )}
+        </StyledWidgetContainer>
+
+        {loading && (
+          <>
+            <StyledTitleLoading />
+            <StyledTitleSmallLoading />
+          </>
+        )}
+      </>
     )
   }
 }
