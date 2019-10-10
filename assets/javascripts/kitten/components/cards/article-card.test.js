@@ -71,7 +71,7 @@ describe('<ArticleCard />', () => {
         .create(
           <ArticleCard
             info1="Custom information #1"
-            progress="42"
+            progress={42}
             state="Custom state"
             titlesMinHeight
             titleTruncate
