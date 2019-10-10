@@ -108,6 +108,7 @@ class Description extends PureComponent {
 
   renderDescriptionWidget() {
     const { subTitleWidget, subTitleTruncate, loading } = this.props
+
     return (
       <>
         {StyledSubtitleWidget && !loading && (
@@ -119,7 +120,7 @@ class Description extends PureComponent {
             weight="light"
           >
             {subTitleTruncate && (
-              <StyledTruncate>{subTitleWidget}</StyledTruncate>
+              <StyledTruncate lines={2}>{subTitleWidget}</StyledTruncate>
             )}
 
             {!subTitleTruncate && subTitleWidget}

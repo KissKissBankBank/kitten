@@ -41,6 +41,10 @@ const StyledCounterDay = styled.div`
   line-height: 1;
 `
 
+const StyledStateDay = styled(Text)`
+  display: flex;
+`
+
 class TitleComponent extends PureComponent {
   static propTypes = {
     title: PropTypes.string,
@@ -49,6 +53,7 @@ class TitleComponent extends PureComponent {
     titleWidget: PropTypes.string,
     counterDay: PropTypes.string,
     stateDay: PropTypes.string,
+    titleProps: PropTypes.shape(),
   }
 
   static defaultProps = {
@@ -58,6 +63,7 @@ class TitleComponent extends PureComponent {
     titleWidget: '',
     counterDay: '',
     stateDay: '',
+    titleProps: {},
   }
 
   render() {
@@ -145,15 +151,14 @@ class TitleComponent extends PureComponent {
             <StyledCounterDay>
               <Text size="tiny" color="font1" weight="bold" lineHeight="normal">
                 {counterDay}
-                <Text
+                <StyledStateDay
                   size="micro"
                   color="font1"
                   weight="light"
                   lineHeight="normal"
-                  style={{ display: 'block' }}
                 >
                   {stateDay}
-                </Text>
+                </StyledStateDay>
               </Text>
             </StyledCounterDay>
           )}
