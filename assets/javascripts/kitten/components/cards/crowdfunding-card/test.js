@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { CrowdfundingCard } from './index'
-import { WidgetCard } from './widget'
+import { CrowdfundingCardWidget } from './widget'
 
 describe('<CrowdfundingCard />', () => {
   let component
@@ -36,11 +36,11 @@ describe('<CrowdfundingCard />', () => {
     })
   })
 
-  describe('WidgetCard props', () => {
+  describe('CrowdfundingCardWidget props', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <WidgetCard
+          <CrowdfundingCardWidget
             ownerTitle="Owner title"
             ownerDescription="Owner description"
             imageProps={{ src: '#image', alt: '' }}

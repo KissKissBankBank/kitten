@@ -5,7 +5,7 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { CrowdfundingCard } from './index'
-import { WidgetCard } from './widget'
+import { CrowdfundingCardWidget } from './widget'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -21,7 +21,7 @@ const StoryContainer = ({ children }) => (
 
 storiesOf('Cards/CrowdfundingCard', module)
   .addDecorator(withKnobs)
-  .add('Crowdfunding card', () => {
+  .add('Crowdfunding Card', () => {
     return (
       <StoryContainer>
         <CrowdfundingCard
@@ -29,9 +29,9 @@ storiesOf('Cards/CrowdfundingCard', module)
           ownerTitle={text('Owner title', 'Owner title')}
           ownerDescription={text('Owner description', 'Owner description')}
           loading={boolean('Loading', false)}
-          cardTitle={text('Card title', 'Lorem ipsum…')}
+          cardTitle={text('Title', 'Lorem ipsum…')}
           cardSubTitle={text(
-            'Card subTitle',
+            'SubTitle',
             'Sed ut perspiciatis unde omnis iste natus error Lorem',
           )}
           info1={text('info1', 'Lorem ipsum…')}
@@ -45,22 +45,22 @@ storiesOf('Cards/CrowdfundingCard', module)
   })
 
   .addDecorator(withKnobs)
-  .add('Widget card', () => {
+  .add('Crowdfunding Card Widget', () => {
     return (
       <StoryContainer>
-        <WidgetCard
+        <CrowdfundingCardWidget
           href={text('Link', '#')}
           ownerTitle={text('Owner title', 'Owner title')}
           ownerDescription={text('Owner description', 'Owner description')}
           loading={boolean('Loading', false)}
           titleWidget={text(
-            'Card title',
+            'Title',
             'Les Arts dessinés : devenez abonné-fondateur',
           )}
           counterDay={text('Counter Day', '27 jours')}
           stateDay={text('State Day', 'restant')}
           subTitleWidget={text(
-            'Card subTitle',
+            'SubTitle',
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
           )}
           buttonText={text('Button text', 'Contribuer dès 5 €')}

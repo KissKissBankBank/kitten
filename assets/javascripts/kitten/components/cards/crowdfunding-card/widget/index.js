@@ -24,7 +24,7 @@ const StyledTitleAndDescription = styled.div`
     `}
 `
 
-export class WidgetCard extends PureComponent {
+export class CrowdfundingCardWidget extends PureComponent {
   static propTypes = {
     href: PropTypes.string,
     titlesMinHeight: PropTypes.bool,

@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `WidgetCard` component.
+- Feature: Create `CrowdfundingCardWidget` component.
 - Feature: Update `CrowdfundingCard` with styled-components.
 
 ## [2.31.0] - 2019-10-01

@@ -338,7 +338,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 </div>
 `;
 
-exports[`<CrowdfundingCard /> WidgetCard props matches with snapshot 1`] = `
+exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot 1`] = `
 .c1 {
   overflow: hidden;
   position: relative;
