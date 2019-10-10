@@ -13,6 +13,7 @@ const COMPONENT_GUTTER = pxToRem(10)
 const StyledTruncate = styled(Truncate)`
   white-space: nowrap;
 `
+
 const StyledContainer = styled.div`
   margin-bottom: ${pxToRem(20)};
 
@@ -89,6 +90,7 @@ class Description extends PureComponent {
     titleTruncate: PropTypes.bool,
     subTitleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
+    titleProps: PropTypes.shape(),
   }
 
   static defaultProps = {
@@ -98,6 +100,7 @@ class Description extends PureComponent {
     titleTruncate: true,
     subTitleTruncate: true,
     loading: false,
+    titleProps: {},
   }
 
   render() {
@@ -158,7 +161,7 @@ class Description extends PureComponent {
         <StyledHorizontalStroke size="tiny" loading={loading} />
 
         {subTitle && !loading && (
-          <StyledSubtitle size="micro" weight="regular" tag="p">
+          <StyledSubtitle size="micro" weight="regular" tag="p" color="font1">
             {subTitleTruncate && <StyledTruncate>{subTitle}</StyledTruncate>}
 
             {!subTitleTruncate && subTitle}

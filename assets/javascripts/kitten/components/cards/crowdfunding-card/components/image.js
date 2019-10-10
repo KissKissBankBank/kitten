@@ -13,9 +13,9 @@ const StyledImageContainer = styled(
 )`
   overflow: hidden;
   position: relative;
-  padding-top: ${(9 / 16) * 100}%;
   background-color: ${({ imageContainerBackground }) =>
     imageContainerBackground};
+  padding-top: ${(9 / 16) * 100}%;
 
   & > img {
     width: 100%;
@@ -107,6 +107,7 @@ class Image extends PureComponent {
     ownerDescription: '',
     loading: false,
     imageContainerBackground: '',
+    state: '',
   }
 
   render() {
@@ -145,11 +146,16 @@ class Image extends PureComponent {
           </div>
 
           <StyledOwner>
-            <StyledTitle tag="div" size="micro" weight="regular">
+            <StyledTitle tag="div" size="micro" weight="regular" color="font1">
               {!loading && ownerTitle}
             </StyledTitle>
 
-            <StyledDescription tag="div" size="micro" weight="light">
+            <StyledDescription
+              tag="div"
+              size="micro"
+              weight="light"
+              color="font1"
+            >
               {!loading && ownerDescription}
             </StyledDescription>
           </StyledOwner>

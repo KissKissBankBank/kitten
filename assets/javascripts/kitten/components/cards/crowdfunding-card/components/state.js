@@ -36,7 +36,12 @@ class State extends PureComponent {
       <>
         {state && !loading && (
           <StyledState>
-            <Text size="micro" lineHeight="normal" weight="regular">
+            <Text
+              size="micro"
+              lineHeight="normal"
+              weight="regular"
+              color="font1"
+            >
               {state}
             </Text>
           </StyledState>
