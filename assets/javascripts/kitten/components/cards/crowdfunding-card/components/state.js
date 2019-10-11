@@ -53,44 +53,56 @@ class State extends PureComponent {
   }
 
   render() {
-    const { state, stateWidget, loading } = this.props
+    const { state, stateWidget } = this.props
 
     return (
       <>
-        {!loading &&
-          (state && this.renderState(),
-          stateWidget && this.renderStateWidget())}
+        {state && this.renderState()}
+        {stateWidget && this.renderStateWidget()}
       </>
     )
   }
 
   renderState() {
-    const { state } = this.props
+    const { state, loading } = this.props
 
     return (
-      <StyledState>
-        <Text size="micro" lineHeight="normal" weight="regular" color="font1">
-          {state}
-        </Text>
-      </StyledState>
+      <>
+        {!loading && (
+          <StyledState>
+            <Text
+              size="micro"
+              lineHeight="normal"
+              weight="regular"
+              color="font1"
+            >
+              {state}
+            </Text>
+          </StyledState>
+        )}
+      </>
     )
   }
 
   renderStateWidget() {
-    const { stateWidget } = this.props
+    const { stateWidget, loading } = this.props
 
     return (
-      <StyledWidgetContainer>
-        <StyledTextWidget
-          size="micro"
-          lineHeight="normal"
-          weight="regular"
-          color="background1"
-        >
-          {stateWidget}
-          <StyledLogoWidget width="80" />
-        </StyledTextWidget>
-      </StyledWidgetContainer>
+      <>
+        {!loading && (
+          <StyledWidgetContainer>
+            <StyledTextWidget
+              size="micro"
+              lineHeight="normal"
+              weight="regular"
+              color="background1"
+            >
+              {stateWidget}
+              <StyledLogoWidget width="80" />
+            </StyledTextWidget>
+          </StyledWidgetContainer>
+        )}
+      </>
     )
   }
 }
