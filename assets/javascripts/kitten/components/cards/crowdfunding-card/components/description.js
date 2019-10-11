@@ -7,6 +7,7 @@ import { Title } from '../../../../components/typography/title'
 import COLORS from '../../../../constants/colors-config'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import Truncate from 'react-truncate'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
@@ -15,11 +16,15 @@ const StyledTruncate = styled(Truncate)`
 `
 
 const StyledContainerSubtitle = styled.div`
-  display: flex;
+  display: none;
   align-items: center;
   line-height: 1;
   padding: 0 ${COMPONENT_GUTTER};
   margin-top: ${pxToRem(10)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    display: flex;
+  }
 `
 
 const StyledHorizontalStroke = styled(({ loading, ...others }) => (
