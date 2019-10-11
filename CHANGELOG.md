@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `CrowdfundingCard` mobile version.
 - Feature: Create `KissKissBankBankLogo` component.
 - Feature: Create `CrowdfundingCardWidget` component.
 - Feature: Update `CrowdfundingCard` with styled-components.
