@@ -29,7 +29,10 @@ storiesOf('Cards/CrowdfundingCard', module)
           ownerTitle={text('Owner title', 'Owner title')}
           ownerDescription={text('Owner description', 'Owner description')}
           loading={boolean('Loading', false)}
-          cardTitle={text('Title', 'Lorem ipsum…')}
+          cardTitle={text(
+            'Title',
+            'Sed ut perspiciatis unde omnis iste natus error et puis le temps passe tellement vite trop vite',
+          )}
           cardSubTitle={text(
             'SubTitle',
             'Sed ut perspiciatis unde omnis iste natus error Lorem',
@@ -55,7 +58,7 @@ storiesOf('Cards/CrowdfundingCard', module)
           loading={boolean('Loading', false)}
           titleWidget={text(
             'Title',
-            'Les Arts dessinés : devenez abonné-fondateur',
+            'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
           )}
           counterDay={text('Counter Day', '27 jours')}
           stateDay={text('State Day', 'restant')}
