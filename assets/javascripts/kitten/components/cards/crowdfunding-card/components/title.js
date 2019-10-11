@@ -37,8 +37,8 @@ const StyledWidgetContainer = styled.div`
 `
 
 const StyledCounterDay = styled.div`
-  justify-content: flex-end;
   line-height: 1;
+  margin-left: calc(4 * ${COMPONENT_GUTTER});
 `
 
 const StyledStateDay = styled(Text)`
@@ -117,13 +117,7 @@ class TitleComponent extends PureComponent {
   }
 
   renderTitleWidget() {
-    const {
-      titleWidget,
-      counterDay,
-      stateDay,
-      loading,
-      titleTruncate,
-    } = this.props
+    const { titleWidget, counterDay, stateDay, loading } = this.props
 
     return (
       <>
@@ -138,11 +132,7 @@ class TitleComponent extends PureComponent {
                 lineHeight="normal"
                 className="k-Card__title"
               >
-                {titleTruncate && (
-                  <StyledTruncate lines={2}>{titleWidget}</StyledTruncate>
-                )}
-
-                {!titleTruncate && titleWidget}
+                {titleWidget}
               </Text>
             )}
           </StyledTitle>
