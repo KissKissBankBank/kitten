@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `CrowdfundingCard` mobile version.
+- Feature: Add `CrowdfundingCard` mobile version.
 - Feature: Create `CrowdfundingCardWidget` component.
 - Feature: Update `CrowdfundingCard` with styled-components.
 
