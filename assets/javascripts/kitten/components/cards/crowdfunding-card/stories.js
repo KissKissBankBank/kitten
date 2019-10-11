@@ -64,6 +64,7 @@ storiesOf('Cards/CrowdfundingCard', module)
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
           )}
           buttonText={text('Button text', 'Contribuer dès 5 €')}
+          stateWidget={text('State Widget', 'Sur')}
         />
       </StoryContainer>
     )
