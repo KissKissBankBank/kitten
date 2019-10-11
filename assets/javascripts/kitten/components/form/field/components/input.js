@@ -17,7 +17,7 @@ export const FieldInput = props => {
   }
 
   return (
-    <Marger top="1.5">
+    <Marger top="1">
       <Input {...props} />
     </Marger>
   )
