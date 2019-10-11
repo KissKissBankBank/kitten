@@ -17,10 +17,10 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 eRJQDD"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 kCDtHN"
   >
     <div
-      className="k-u-margin-bottom-single k-u-margin-top-single"
+      className="k-u-margin-top-single"
     >
       <span
         className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 cfJjjq"
@@ -49,7 +49,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 hTRDSs"
   >
     
     
@@ -77,10 +77,10 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 eRJQDD"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 kCDtHN"
   >
     <div
-      className="k-u-margin-bottom-single k-u-margin-top-single"
+      className="k-u-margin-top-single"
     >
       <span
         className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 cfJjjq"
@@ -109,20 +109,20 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 hTRDSs"
   >
     <div
       className="title__StyledTitle-sc-1wv1kzg-1 jPVxSr"
     >
       <p
-        className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+        className="k-Title k-Card__title title__StyledTitleCustom-sc-1wv1kzg-2 BMpow k-Title--primary k-Title--withoutMargin"
       >
         Custom title
       </p>
     </div>
     
     <div
-      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 bHSOZz"
+      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 qwxjg"
     >
       <span
         className="description__StyledHorizontalStroke-sc-1kqqtcu-2 gIAYQP horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
@@ -176,10 +176,10 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 eRJQDD"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 kCDtHN"
   >
     <div
-      className="k-u-margin-bottom-single k-u-margin-top-single"
+      className="k-u-margin-top-single"
     >
       <span
         className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 cfJjjq"
@@ -208,7 +208,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 hTRDSs"
   >
     
     
@@ -237,10 +237,10 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 eRJQDD"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 kCDtHN"
   >
     <div
-      className="k-u-margin-bottom-single k-u-margin-top-single"
+      className="k-u-margin-top-single"
     >
       <span
         className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 cfJjjq"
@@ -269,20 +269,20 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 hTRDSs"
   >
     <div
       className="title__StyledTitle-sc-1wv1kzg-1 jPVxSr"
     >
       <p
-        className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+        className="k-Title k-Card__title title__StyledTitleCustom-sc-1wv1kzg-2 BMpow k-Title--primary k-Title--withoutMargin"
       >
         Custom title
       </p>
     </div>
     
     <div
-      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 bHSOZz"
+      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 qwxjg"
     >
       <span
         className="description__StyledHorizontalStroke-sc-1kqqtcu-2 gIAYQP horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
