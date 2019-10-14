@@ -5,7 +5,7 @@ import { SelectWithState } from '../../../form/select-with-state'
 export class FieldSelect extends Component {
   render() {
     return (
-      <Marger top="1.5">
+      <Marger top="1">
         <SelectWithState {...this.props} />
       </Marger>
     )

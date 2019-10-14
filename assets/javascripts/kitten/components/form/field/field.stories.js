@@ -31,6 +31,7 @@ storiesOf('Form/Field', module)
       <StoryGrid>
         <FieldInputExample
           id={text('ID', 'input')}
+          tiny={boolean('Tiny', false)}
           label={text('Label', 'Label')}
           tooltip={text('Tooltip', null)}
           tooltipId={text('Tooltip ID', 'tooltip')}
@@ -48,6 +49,7 @@ storiesOf('Form/Field', module)
       <StoryGrid>
         <FieldPasswordExample
           id={text('ID', 'input')}
+          tiny={boolean('Tiny', false)}
           label={text('Label', 'Label')}
           tooltip={text('Tooltip', null)}
           tooltipId={text('Tooltip ID', 'tooltip')}
@@ -63,6 +65,7 @@ storiesOf('Form/Field', module)
       <StoryGrid>
         <FieldRadioButtonSetExample
           id={text('ID', 'option-a')}
+          tiny={boolean('Tiny', false)}
           label={text('Label', 'Label')}
           tooltip={text('Tooltip', null)}
           tooltipId={text('Tooltip ID', 'tooltip')}
@@ -92,6 +95,7 @@ storiesOf('Form/Field', module)
       <StoryGrid>
         <FieldSelectExample
           id={text('ID', 'select')}
+          tiny={boolean('Tiny', false)}
           label={text('Label', 'Label')}
           tooltip={text('Tooltip', null)}
           tooltipId={text('Tooltip ID', 'tooltip')}
@@ -112,6 +116,7 @@ storiesOf('Form/Field', module)
       <StoryGrid>
         <FieldAutocompleteExample
           id={text('ID', 'select')}
+          tiny={boolean('Tiny', false)}
           label={text('Label', 'Label')}
           tooltip={text('Tooltip', null)}
           tooltipId={text('Tooltip ID', 'tooltip')}

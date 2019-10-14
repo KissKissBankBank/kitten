@@ -34,6 +34,7 @@ export const FieldInputExample = ({
   errorMessage,
   limit,
   unit,
+  tiny,
 }) => (
   <FieldBase
     id={id}
@@ -45,6 +46,7 @@ export const FieldInputExample = ({
   >
     <Field.Input
       id={id}
+      tiny={tiny}
       limit={limit}
       unit={unit}
       name="field"
@@ -62,6 +64,7 @@ export const FieldPasswordExample = ({
   placeholder,
   error,
   errorMessage,
+  tiny,
 }) => (
   <FieldBase
     id={id}
@@ -73,6 +76,7 @@ export const FieldPasswordExample = ({
   >
     <Field.Password
       id={id}
+      tiny={tiny}
       name="field"
       iconLabel="Show password"
       hiddenIconLabel="Hide password"
@@ -140,6 +144,7 @@ export const FieldAutocompleteExample = ({
   error,
   errorMessage,
   items,
+  tiny,
 }) => (
   <FieldBase
     id={id}
@@ -151,6 +156,7 @@ export const FieldAutocompleteExample = ({
   >
     <Field.Autocomplete
       id={id}
+      tiny={tiny}
       name="field"
       placeholder={placeholder}
       error={error}

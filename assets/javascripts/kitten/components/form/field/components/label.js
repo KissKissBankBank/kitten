@@ -28,10 +28,10 @@ export class FieldLabel extends Component {
     } = this.props
 
     return (
-      <Marger bottom="1.5" {...others}>
+      <Marger bottom="1" {...others}>
         <Line style={{ lineHeight: 1 }}>
           <Line.Item>
-            <Label {...labelProps} size={labelProps.size || 'tiny'}>
+            <Label {...labelProps} size={labelProps.size || 'micro'}>
               {children}
             </Label>
           </Line.Item>

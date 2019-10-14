@@ -3,7 +3,7 @@
 exports[`<Field /> with <Field.Autocomplete /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 csmETU"
+    className="marger__StyledMarger-q3lecu-0 gkLTfi"
   >
     <div
       className="k-Line"
@@ -17,7 +17,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label k-Label--micro"
           htmlFor="autocomplete"
           onClick={[Function]}
         >
@@ -27,7 +27,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+    className="marger__StyledMarger-q3lecu-0 WSKaG"
   >
     <div
       className="autocomplete__Container-lfeqwe-0 dWXmqi"
@@ -55,7 +55,7 @@ Array [
 exports[`<Field /> with <Field.Input /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 csmETU"
+    className="marger__StyledMarger-q3lecu-0 gkLTfi"
   >
     <div
       className="k-Line"
@@ -69,7 +69,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -119,7 +119,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+    className="marger__StyledMarger-q3lecu-0 WSKaG"
   >
     <input
       className="text-input__StyledInput-sc-11wej6v-1 eWAcap"
@@ -149,7 +149,7 @@ Array [
 exports[`<Field /> with <Field.Input /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 csmETU"
+    className="marger__StyledMarger-q3lecu-0 gkLTfi"
   >
     <div
       className="k-Line"
@@ -163,7 +163,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -213,7 +213,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+    className="marger__StyledMarger-q3lecu-0 WSKaG"
   >
     <input
       className="text-input__StyledInput-sc-11wej6v-1 bVMChg"
@@ -229,7 +229,7 @@ Array [
 exports[`<Field /> with <Field.Password /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 csmETU"
+    className="marger__StyledMarger-q3lecu-0 gkLTfi"
   >
     <div
       className="k-Line"
@@ -243,7 +243,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -293,7 +293,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+    className="marger__StyledMarger-q3lecu-0 WSKaG"
   >
     <div
       className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
@@ -353,7 +353,7 @@ Array [
 exports[`<Field /> with <Field.Password /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 csmETU"
+    className="marger__StyledMarger-q3lecu-0 gkLTfi"
   >
     <div
       className="k-Line"
@@ -367,7 +367,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label k-Label--micro"
           htmlFor="input"
           onClick={[Function]}
         >
@@ -417,7 +417,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+    className="marger__StyledMarger-q3lecu-0 WSKaG"
   >
     <div
       className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
@@ -463,7 +463,7 @@ Array [
 exports[`<Field /> with <Field.RadioButtonSet /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 csmETU"
+    className="marger__StyledMarger-q3lecu-0 gkLTfi"
   >
     <div
       className="k-Line"
@@ -477,7 +477,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label k-Label--micro"
           htmlFor="option-a"
           onClick={[Function]}
         >
@@ -487,7 +487,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+    className="marger__StyledMarger-q3lecu-0 WSKaG"
   >
     <div
       className="k-RadioButtonSet"
@@ -549,7 +549,7 @@ Array [
 exports[`<Field /> with <Field.Select /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 csmETU"
+    className="marger__StyledMarger-q3lecu-0 gkLTfi"
   >
     <div
       className="k-Line"
@@ -563,7 +563,7 @@ Array [
         className="k-Line__item"
       >
         <label
-          className="k-Label k-Label--tiny"
+          className="k-Label k-Label--micro"
           htmlFor="select"
           onClick={[Function]}
         >
@@ -573,7 +573,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 cHJBWz"
+    className="marger__StyledMarger-q3lecu-0 WSKaG"
   >
     <div
       className="k-Select"
