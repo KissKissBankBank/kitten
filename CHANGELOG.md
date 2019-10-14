@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `Field.Label` styles.
 - Feature: Update `CrowdfundingCard` with styled-components.
 
 ## [2.31.0] - 2019-10-01
