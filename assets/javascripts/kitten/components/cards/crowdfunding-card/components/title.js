@@ -18,14 +18,14 @@ const StyledTitle = styled.div`
   flex: 1;
   padding: 0 ${COMPONENT_GUTTER};
   line-height: 1;
-`
 
-const StyledTitleCustom = styled(Title)`
-  font-size: ${stepToRem(-1)};
-  margin-top: ${pxToRem(10)};
+  & .k-Card__title {
+    font-size: ${stepToRem(-1)};
+    margin-top: ${pxToRem(10)};
 
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    font-size: ${stepToRem(2)};
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      font-size: ${stepToRem(2)};
+    }
   }
 `
 
@@ -101,7 +101,7 @@ class TitleComponent extends PureComponent {
     return (
       <StyledTitle>
         {!loading && (
-          <StyledTitleCustom
+          <Title
             tag="p"
             margin={false}
             className="k-Card__title"
@@ -112,7 +112,7 @@ class TitleComponent extends PureComponent {
             )}
 
             {!titleTruncate && title}
-          </StyledTitleCustom>
+          </Title>
         )}
 
         {loading && (
