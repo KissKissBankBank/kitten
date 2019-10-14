@@ -41,7 +41,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   line-height: 1.2;
 }
 
-.c8 {
+.c7 {
   white-space: nowrap;
 }
 
@@ -53,12 +53,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   line-height: 1;
 }
 
-.c7 {
+.c6 .k-Card__title {
   font-size: 0.8888888888888888rem;
   margin-top: 0.625rem;
 }
 
-.c11 {
+.c10 {
   display: block;
   border: none;
   background: #222;
@@ -66,36 +66,29 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   height: 0.125rem;
 }
 
-.c13 {
+.c12 {
   white-space: nowrap;
 }
 
-.c9 {
+.c8 {
   display: none;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  line-height: 1;
-  padding: 0 0.625rem;
-  margin-top: 0.625rem;
 }
 
-.c10 {
+.c9 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 0.3125rem 0.625rem 0.3125rem 0;
 }
 
-.c12 {
+.c11 {
   line-height: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c14 {
+.c13 {
   margin-top: 0.9375rem;
   margin-bottom: 0.3125rem;
   display: -webkit-box;
@@ -109,16 +102,16 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   line-height: 1;
 }
 
-.c15 {
+.c14 {
   margin-top: 0.3125rem;
   margin-right: 1.875rem;
 }
 
-.c15:last-child {
+.c14:last-child {
   margin-right: 0;
 }
 
-.c16 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -135,20 +128,20 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   margin-bottom: 1.25rem;
 }
 
-.c17 {
+.c16 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c18 {
+.c17 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-left: calc(2 * 0.625rem);
 }
 
-.c19 {
+.c18 {
   position: absolute;
   top: 0;
   right: 0;
@@ -177,34 +170,41 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 @media (min-width:40rem) {
-  .c7 {
+  .c6 .k-Card__title {
     font-size: 1.265625rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c9 {
+  .c8 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    line-height: 1;
+    padding: 0 0.625rem;
+    margin-top: 0.625rem;
   }
 }
 
 @media (min-width:40rem) {
-  .c14 {
+  .c13 {
     margin-top: 1.25rem;
   }
 }
 
 @media (max-width:47.9375rem) {
-  .c18 {
+  .c17 {
     display: none;
   }
 }
 
 @media (max-width:47.9375rem) {
-  .c19 {
+  .c18 {
     display: none;
   }
 }
@@ -268,10 +268,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       className="c6"
     >
       <p
-        className="k-Title k-Card__title c7 k-Title--primary k-Title--withoutMargin"
+        className="k-Title k-Card__title k-Title--primary k-Title--withoutMargin"
       >
         <span
-          className="c8"
+          className="c7"
           width={0}
         >
           <span />
@@ -295,16 +295,16 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     </div>
     
     <div
-      className="c9"
+      className="c8"
     >
       <span
-        className="c10 c11"
+        className="c9 c10"
       />
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular c12"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular c11"
       >
         <span
-          className="c13"
+          className="c12"
           width={0}
         >
           <span />
@@ -329,10 +329,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     
   </div>
   <div
-    className="c14"
+    className="c13"
   >
     <div
-      className="c15"
+      className="c14"
     >
       <span
         className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -341,7 +341,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       </span>
     </div>
     <div
-      className="c15"
+      className="c14"
     >
       <span
         className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -350,7 +350,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       </span>
     </div>
     <div
-      className="c15"
+      className="c14"
     >
       <span
         className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
@@ -360,13 +360,13 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     </div>
   </div>
   <div
-    className="c16"
+    className="c15"
   >
     <div
       aria-valuemax="100"
       aria-valuemin="0"
       aria-valuenow={42}
-      className="k-Progress c17"
+      className="k-Progress c16"
       role="progressbar"
     >
       <div
@@ -389,13 +389,13 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       </div>
     </div>
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c18"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c17"
     >
       42 %
     </span>
   </div>
   <div
-    className="c19"
+    className="c18"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
@@ -454,6 +454,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   flex: 1;
   padding: 0 0.625rem;
   line-height: 1;
+}
+
+.c7 .k-Card__title {
+  font-size: 0.8888888888888888rem;
+  margin-top: 0.625rem;
 }
 
 .c6 {
@@ -614,6 +619,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 @media (max-width:47.9375rem) {
   .c2 {
     display: none;
+  }
+}
+
+@media (min-width:40rem) {
+  .c7 .k-Card__title {
+    font-size: 1.265625rem;
   }
 }
 

@@ -112,17 +112,17 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 hTRDSs"
   >
     <div
-      className="title__StyledTitle-sc-1wv1kzg-1 jPVxSr"
+      className="title__StyledTitle-sc-1wv1kzg-1 kxRkqJ"
     >
       <p
-        className="k-Title k-Card__title title__StyledTitleCustom-sc-1wv1kzg-2 BMpow k-Title--primary k-Title--withoutMargin"
+        className="k-Title k-Card__title k-Title--primary k-Title--withoutMargin"
       >
         Custom title
       </p>
     </div>
     
     <div
-      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 qwxjg"
+      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 fPkkUM"
     >
       <span
         className="description__StyledHorizontalStroke-sc-1kqqtcu-2 gIAYQP horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
@@ -272,17 +272,17 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 hTRDSs"
   >
     <div
-      className="title__StyledTitle-sc-1wv1kzg-1 jPVxSr"
+      className="title__StyledTitle-sc-1wv1kzg-1 kxRkqJ"
     >
       <p
-        className="k-Title k-Card__title title__StyledTitleCustom-sc-1wv1kzg-2 BMpow k-Title--primary k-Title--withoutMargin"
+        className="k-Title k-Card__title k-Title--primary k-Title--withoutMargin"
       >
         Custom title
       </p>
     </div>
     
     <div
-      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 qwxjg"
+      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 fPkkUM"
     >
       <span
         className="description__StyledHorizontalStroke-sc-1kqqtcu-2 gIAYQP horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
