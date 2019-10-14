@@ -122,7 +122,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     </div>
     
     <div
-      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 bHSOZz"
+      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 fPkkUM"
     >
       <span
         className="description__StyledHorizontalStroke-sc-1kqqtcu-2 gIAYQP horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
@@ -282,7 +282,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     </div>
     
     <div
-      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 bHSOZz"
+      className="description__StyledContainerSubtitle-sc-1kqqtcu-1 fPkkUM"
     >
       <span
         className="description__StyledHorizontalStroke-sc-1kqqtcu-2 gIAYQP horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"

@@ -30,35 +30,35 @@ const StyledWidgetContainer = styled.div`
   padding: ${pxToRem(10)} ${pxToRem(20)};
 `
 
-const StyledTextWidget = styled(Text)`
+const StyledWidgetText = styled(Text)`
   display: flex;
   align-items: center;
 `
 
-const StyledLogoWidget = styled(KissKissBankBankIcon)`
+const StyledWidgetLogo = styled(KissKissBankBankIcon)`
   margin-left: ${pxToRem(5)};
 `
 
 class State extends PureComponent {
   static propTypes = {
     state: PropTypes.string,
-    stateWidget: PropTypes.string,
+    widgetState: PropTypes.string,
     loading: PropTypes.bool,
   }
 
   static defaultProps = {
     state: '',
-    stateWidget: '',
+    widgetState: '',
     loading: false,
   }
 
   render() {
-    const { state, stateWidget } = this.props
+    const { state, widgetState } = this.props
 
     return (
       <>
         {state && this.renderState()}
-        {stateWidget && this.renderStateWidget()}
+        {widgetState && this.renderWidgetState()}
       </>
     )
   }
@@ -84,22 +84,22 @@ class State extends PureComponent {
     )
   }
 
-  renderStateWidget() {
-    const { stateWidget, loading } = this.props
+  renderWidgetState() {
+    const { widgetState, loading } = this.props
 
     return (
       <>
         {!loading && (
           <StyledWidgetContainer>
-            <StyledTextWidget
+            <StyledWidgetText
               size="micro"
               lineHeight="normal"
               weight="regular"
               color="background1"
             >
-              {stateWidget}
-              <StyledLogoWidget width="80" />
-            </StyledTextWidget>
+              {widgetState}
+              <StyledWidgetLogo width="80" />
+            </StyledWidgetText>
           </StyledWidgetContainer>
         )}
       </>

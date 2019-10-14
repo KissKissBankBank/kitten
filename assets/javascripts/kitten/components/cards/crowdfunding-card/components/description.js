@@ -7,6 +7,7 @@ import { Title } from '../../../../components/typography/title'
 import COLORS from '../../../../constants/colors-config'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import Truncate from 'react-truncate'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
@@ -15,11 +16,15 @@ const StyledTruncate = styled(Truncate)`
 `
 
 const StyledContainerSubtitle = styled.div`
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  padding: 0 ${COMPONENT_GUTTER};
-  margin-top: ${pxToRem(10)};
+  display: none;
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    padding: 0 ${COMPONENT_GUTTER};
+    margin-top: ${pxToRem(10)};
+  }
 `
 
 const StyledHorizontalStroke = styled(({ loading, ...others }) => (
@@ -53,7 +58,7 @@ const StyledSubtitleLoading = styled.span`
   height: ${pxToRem(12)};
 `
 
-const StyledSubtitleWidget = styled(Text)`
+const StyledWidgetSubtitle = styled(Text)`
   padding-left: ${COMPONENT_GUTTER};
   margin: ${pxToRem(5)} 0 ${pxToRem(20)} 0;
 `
@@ -61,7 +66,7 @@ const StyledSubtitleWidget = styled(Text)`
 class Description extends PureComponent {
   static propTypes = {
     subTitle: PropTypes.string,
-    subTitleWidget: PropTypes.string,
+    widgetSubTitle: PropTypes.string,
     subTitleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
     titleProps: PropTypes.shape(),
@@ -69,19 +74,19 @@ class Description extends PureComponent {
 
   static defaultProps = {
     subTitle: '',
-    subTitleWidget: '',
+    widgetSubTitle: '',
     subTitleTruncate: true,
     loading: false,
     titleProps: {},
   }
 
   render() {
-    const { loading, subTitle, subTitleTruncate, subTitleWidget } = this.props
+    const { loading, subTitle, subTitleTruncate, widgetSubTitle } = this.props
 
     return (
       <>
         {subTitle && this.renderDescription()}
-        {subTitleWidget && this.renderDescriptionWidget()}
+        {widgetSubTitle && this.renderWidgetDescription()}
       </>
     )
   }
@@ -106,13 +111,13 @@ class Description extends PureComponent {
     )
   }
 
-  renderDescriptionWidget() {
-    const { subTitleWidget, subTitleTruncate, loading } = this.props
+  renderWidgetDescription() {
+    const { widgetSubTitle, subTitleTruncate, loading } = this.props
 
     return (
       <>
-        {StyledSubtitleWidget && !loading && (
-          <StyledSubtitleWidget
+        {StyledWidgetSubtitle && !loading && (
+          <StyledWidgetSubtitle
             tag="p"
             size="micro"
             color="font1"
@@ -120,11 +125,11 @@ class Description extends PureComponent {
             weight="light"
           >
             {subTitleTruncate && (
-              <StyledTruncate lines={2}>{subTitleWidget}</StyledTruncate>
+              <StyledTruncate lines={2}>{widgetSubTitle}</StyledTruncate>
             )}
 
-            {!subTitleTruncate && subTitleWidget}
-          </StyledSubtitleWidget>
+            {!subTitleTruncate && widgetSubTitle}
+          </StyledWidgetSubtitle>
         )}
 
         {loading && <StyledSubtitleLoading />}

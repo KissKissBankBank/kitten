@@ -36,7 +36,7 @@ const StyledWidgetContainer = styled.div`
   display: flex;
 `
 
-const StyledCounterDay = styled.div`
+const StyledDayCounter = styled.div`
   line-height: 1;
   margin-left: calc(4 * ${COMPONENT_GUTTER});
 `
@@ -50,8 +50,8 @@ class TitleComponent extends PureComponent {
     title: PropTypes.string,
     titleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
-    titleWidget: PropTypes.string,
-    counterDay: PropTypes.string,
+    widgetTitle: PropTypes.string,
+    dayCounter: PropTypes.string,
     stateDay: PropTypes.string,
     titleProps: PropTypes.shape(),
   }
@@ -60,8 +60,8 @@ class TitleComponent extends PureComponent {
     title: '',
     titleTruncate: true,
     loading: false,
-    titleWidget: '',
-    counterDay: '',
+    widgetTitle: '',
+    dayCounter: '',
     stateDay: '',
     titleProps: {},
   }
@@ -72,15 +72,15 @@ class TitleComponent extends PureComponent {
       titleTruncate,
       titleProps,
       loading,
-      titleWidget,
-      counterDay,
+      widgetTitle,
+      dayCounter,
       stateDay,
     } = this.props
 
     return (
       <>
         {title && this.renderTitle()}
-        {titleWidget && this.renderTitleWidget()}
+        {widgetTitle && this.renderWidgetTitle()}
       </>
     )
   }
@@ -116,8 +116,8 @@ class TitleComponent extends PureComponent {
     )
   }
 
-  renderTitleWidget() {
-    const { titleWidget, counterDay, stateDay, loading } = this.props
+  renderWidgetTitle() {
+    const { widgetTitle, dayCounter, stateDay, loading } = this.props
 
     return (
       <>
@@ -132,15 +132,15 @@ class TitleComponent extends PureComponent {
                 lineHeight="normal"
                 className="k-Card__title"
               >
-                {titleWidget}
+                {widgetTitle}
               </Text>
             )}
           </StyledTitle>
 
           {!loading && (
-            <StyledCounterDay>
+            <StyledDayCounter>
               <Text size="tiny" color="font1" weight="bold" lineHeight="normal">
-                {counterDay}
+                {dayCounter}
                 <StyledStateDay
                   size="micro"
                   color="font1"
@@ -150,7 +150,7 @@ class TitleComponent extends PureComponent {
                   {stateDay}
                 </StyledStateDay>
               </Text>
-            </StyledCounterDay>
+            </StyledDayCounter>
           )}
         </StyledWidgetContainer>
 

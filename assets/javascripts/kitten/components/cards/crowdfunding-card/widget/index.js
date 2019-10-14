@@ -5,7 +5,7 @@ import Image from '../components/image'
 import TitleComponent from '../components/title'
 import Description from '../components/description'
 import Informations from '../components/informations'
-import ButtonCard from '../components/button'
+import CardButton from '../components/button'
 import Loading from '../components/loading'
 import State from '../components/state'
 import { pxToRem } from '../../../../helpers/utils/typography'
@@ -48,13 +48,13 @@ export class CrowdfundingCardWidget extends PureComponent {
       ownerDescription,
       ownerTitle,
       loading,
-      stateWidget,
-      subTitleWidget,
+      widgetState,
+      widgetSubTitle,
       titleTruncate,
       titlesMinHeight,
       subTitleTruncate,
-      titleWidget,
-      counterDay,
+      widgetTitle,
+      dayCounter,
       stateDay,
       titleProps,
       buttonText,
@@ -81,18 +81,18 @@ export class CrowdfundingCardWidget extends PureComponent {
           <TitleComponent
             titleTruncate={titleTruncate}
             loading={loading}
-            titleWidget={titleWidget}
-            counterDay={counterDay}
+            widgetTitle={widgetTitle}
+            dayCounter={dayCounter}
             stateDay={stateDay}
           />
           <Description
-            subTitleWidget={subTitleWidget}
+            widgetSubTitle={widgetSubTitle}
             subTitleTruncate={subTitleTruncate}
             loading={loading}
           />
         </StyledTitleAndDescription>
-        <ButtonCard buttonText={buttonText} loading={loading} />
-        <State stateWidget={stateWidget} loading={loading} />
+        <CardButton buttonText={buttonText} loading={loading} />
+        <State widgetState={widgetState} loading={loading} />
         <Loading loading={loading} />
       </StyledContainer>
     )
