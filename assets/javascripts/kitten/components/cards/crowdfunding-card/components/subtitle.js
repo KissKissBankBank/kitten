@@ -63,7 +63,7 @@ const StyledWidgetSubtitle = styled(Text)`
   margin: ${pxToRem(5)} 0 ${pxToRem(20)} 0;
 `
 
-class Description extends PureComponent {
+class Subtitle extends PureComponent {
   static propTypes = {
     subTitle: PropTypes.string,
     widgetSubTitle: PropTypes.string,
@@ -85,13 +85,13 @@ class Description extends PureComponent {
 
     return (
       <>
-        {subTitle && this.renderDescription()}
-        {widgetSubTitle && this.renderWidgetDescription()}
+        {subTitle && this.renderSubtitle()}
+        {widgetSubTitle && this.renderWidgetSubtitle()}
       </>
     )
   }
 
-  renderDescription() {
+  renderSubtitle() {
     const { loading, subTitle, subTitleTruncate } = this.props
 
     return (
@@ -111,7 +111,7 @@ class Description extends PureComponent {
     )
   }
 
-  renderWidgetDescription() {
+  renderWidgetSubtitle() {
     const { widgetSubTitle, subTitleTruncate, loading } = this.props
 
     return (
@@ -138,4 +138,4 @@ class Description extends PureComponent {
   }
 }
 
-export default Description
+export default Subtitle

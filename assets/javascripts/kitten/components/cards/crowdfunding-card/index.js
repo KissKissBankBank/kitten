@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import Image from './components/image'
 import TitleComponent from './components/title'
-import Description from './components/description'
+import Subtitle from './components/subtitle'
 import Informations from './components/informations'
 import ProgressBar from './components/progress'
 import Loading from './components/loading'
@@ -84,7 +84,7 @@ export class CrowdfundingCard extends PureComponent {
             loading={loading}
             titleTruncate={titleTruncate}
           />
-          <Description
+          <Subtitle
             subTitle={cardSubTitle}
             titleTruncate={titleTruncate}
             loading={loading}

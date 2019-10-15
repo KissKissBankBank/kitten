@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import Image from '../components/image'
 import TitleComponent from '../components/title'
-import Description from '../components/description'
+import Subtitle from '../components/subtitle'
 import Informations from '../components/informations'
 import CardButton from '../components/button'
 import Loading from '../components/loading'
@@ -85,7 +85,7 @@ export class CrowdfundingCardWidget extends PureComponent {
             dayCounter={dayCounter}
             stateDay={stateDay}
           />
-          <Description
+          <Subtitle
             widgetSubTitle={widgetSubTitle}
             subTitleTruncate={subTitleTruncate}
             loading={loading}
