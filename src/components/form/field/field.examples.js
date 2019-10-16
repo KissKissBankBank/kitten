@@ -37,7 +37,8 @@ var FieldInputExample = function FieldInputExample(_ref2) {
       error = _ref2.error,
       errorMessage = _ref2.errorMessage,
       limit = _ref2.limit,
-      unit = _ref2.unit;
+      unit = _ref2.unit,
+      tiny = _ref2.tiny;
   return _react.default.createElement(FieldBase, {
     id: id,
     label: label,
@@ -47,6 +48,7 @@ var FieldInputExample = function FieldInputExample(_ref2) {
     errorMessage: errorMessage
   }, _react.default.createElement(_field.Field.Input, {
     id: id,
+    tiny: tiny,
     limit: limit,
     unit: unit,
     name: "field",
@@ -64,7 +66,8 @@ var FieldPasswordExample = function FieldPasswordExample(_ref3) {
       tooltipId = _ref3.tooltipId,
       placeholder = _ref3.placeholder,
       error = _ref3.error,
-      errorMessage = _ref3.errorMessage;
+      errorMessage = _ref3.errorMessage,
+      tiny = _ref3.tiny;
   return _react.default.createElement(FieldBase, {
     id: id,
     label: label,
@@ -74,6 +77,7 @@ var FieldPasswordExample = function FieldPasswordExample(_ref3) {
     errorMessage: errorMessage
   }, _react.default.createElement(_field.Field.Password, {
     id: id,
+    tiny: tiny,
     name: "field",
     iconLabel: "Show password",
     hiddenIconLabel: "Hide password",
@@ -143,7 +147,8 @@ var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {
       placeholder = _ref6.placeholder,
       error = _ref6.error,
       errorMessage = _ref6.errorMessage,
-      items = _ref6.items;
+      items = _ref6.items,
+      tiny = _ref6.tiny;
   return _react.default.createElement(FieldBase, {
     id: id,
     label: label,
@@ -153,6 +158,7 @@ var FieldAutocompleteExample = function FieldAutocompleteExample(_ref6) {
     errorMessage: errorMessage
   }, _react.default.createElement(_field.Field.Autocomplete, {
     id: id,
+    tiny: tiny,
     name: "field",
     placeholder: placeholder,
     error: error,

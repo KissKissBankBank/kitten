@@ -31,7 +31,7 @@ var FieldInput = function FieldInput(props) {
   }
 
   return _react.default.createElement(_marger.Marger, {
-    top: "1.5"
+    top: "1"
   }, _react.default.createElement(Input, props));
 };
 

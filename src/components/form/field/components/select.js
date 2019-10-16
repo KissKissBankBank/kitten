@@ -39,7 +39,7 @@ function (_Component) {
     key: "render",
     value: function render() {
       return _react.default.createElement(_marger.Marger, {
-        top: "1.5"
+        top: "1"
       }, _react.default.createElement(_selectWithState.SelectWithState, this.props));
     }
   }]);
