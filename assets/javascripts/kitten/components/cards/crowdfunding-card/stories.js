@@ -31,7 +31,7 @@ storiesOf('Cards/CrowdfundingCard', module)
           loading={boolean('Loading', false)}
           cardTitle={text(
             'Title',
-            'Sed ut perspiciatis unde omnis iste natus error et puis le temps passe tellement vite trop vite',
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
           )}
           cardSubTitle={text(
             'SubTitle',
@@ -56,18 +56,18 @@ storiesOf('Cards/CrowdfundingCard', module)
           ownerTitle={text('Owner title', 'Owner title')}
           ownerDescription={text('Owner description', 'Owner description')}
           loading={boolean('Loading', false)}
-          widgetTitle={text(
+          title={text(
             'Title',
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
           )}
           dayCounter={text('Counter Day', '27 jours')}
           stateDay={text('State Day', 'restant')}
-          widgetSubTitle={text(
-            'SubTitle',
+          subtitle={text(
+            'Subtitle',
             'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
           )}
           buttonText={text('Button text', 'Contribuer dès 5 €')}
-          widgetState={text('State Widget', 'Sur')}
+          state={text('State', 'Sur')}
         />
       </StoryContainer>
     )

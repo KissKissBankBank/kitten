@@ -45,10 +45,10 @@ describe('<CrowdfundingCard />', () => {
             ownerDescription="Owner description"
             imageProps={{ src: '#image', alt: '' }}
             avatarProps={{ src: '#image', alt: '' }}
-            stateWidget="Sur"
+            state="Sur"
             loading={false}
-            titleWidget="Lorem ipsum…"
-            subTitleWidget="Sed ut perspiciatis unde omnis iste natus error Lorem"
+            title="Lorem ipsum…"
+            subtitle="Sed ut perspiciatis unde omnis iste natus error Lorem"
             titleTruncate
             subTitleTruncate
             buttonText="Lorem ipsum"

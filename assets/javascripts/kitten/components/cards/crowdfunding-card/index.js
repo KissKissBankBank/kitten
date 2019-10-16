@@ -86,7 +86,7 @@ export class CrowdfundingCard extends PureComponent {
           />
           <Subtitle
             subTitle={cardSubTitle}
-            titleTruncate={titleTruncate}
+            subTitleTruncate={subTitleTruncate}
             loading={loading}
           />
         </StyledTitleAndDescription>

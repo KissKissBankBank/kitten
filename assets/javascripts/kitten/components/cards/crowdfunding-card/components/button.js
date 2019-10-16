@@ -10,11 +10,11 @@ const StyledLoading = styled(Button)`
   border-color: ${COLORS.line2};
 `
 
-const CardButton = ({ buttonText, loading }) => (
+const CardButton = ({ text, loading }) => (
   <>
     {!loading && (
       <Button fluid modifier="helium">
-        {buttonText}
+        {text}
       </Button>
     )}
 
@@ -25,11 +25,11 @@ const CardButton = ({ buttonText, loading }) => (
 export default CardButton
 
 CardButton.propTypes = {
-  buttonText: PropTypes.string,
+  text: PropTypes.string,
   loading: PropTypes.bool,
 }
 
 CardButton.defaultProps = {
-  buttonText: '',
+  text: '',
   loading: false,
 }

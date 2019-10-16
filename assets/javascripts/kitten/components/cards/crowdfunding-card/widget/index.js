@@ -48,12 +48,12 @@ export class CrowdfundingCardWidget extends PureComponent {
       ownerDescription,
       ownerTitle,
       loading,
-      widgetState,
-      widgetSubTitle,
+      state,
+      subtitle,
+      title,
       titleTruncate,
       titlesMinHeight,
       subTitleTruncate,
-      widgetTitle,
       dayCounter,
       stateDay,
       titleProps,
@@ -81,18 +81,18 @@ export class CrowdfundingCardWidget extends PureComponent {
           <TitleComponent
             titleTruncate={titleTruncate}
             loading={loading}
-            widgetTitle={widgetTitle}
+            widgetTitle={title}
             dayCounter={dayCounter}
             stateDay={stateDay}
           />
           <Subtitle
-            widgetSubTitle={widgetSubTitle}
+            widgetSubtitle={subtitle}
             subTitleTruncate={subTitleTruncate}
             loading={loading}
           />
         </StyledTitleAndDescription>
-        <CardButton buttonText={buttonText} loading={loading} />
-        <State widgetState={widgetState} loading={loading} />
+        <CardButton text={buttonText} loading={loading} />
+        <State widgetState={state} loading={loading} />
         <Loading loading={loading} />
       </StyledContainer>
     )

@@ -66,7 +66,7 @@ const StyledWidgetSubtitle = styled(Text)`
 class Subtitle extends PureComponent {
   static propTypes = {
     subTitle: PropTypes.string,
-    widgetSubTitle: PropTypes.string,
+    widgetSubtitle: PropTypes.string,
     subTitleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
     titleProps: PropTypes.shape(),
@@ -74,19 +74,19 @@ class Subtitle extends PureComponent {
 
   static defaultProps = {
     subTitle: '',
-    widgetSubTitle: '',
+    widgetSubtitle: '',
     subTitleTruncate: true,
     loading: false,
     titleProps: {},
   }
 
   render() {
-    const { loading, subTitle, subTitleTruncate, widgetSubTitle } = this.props
+    const { loading, subTitle, subTitleTruncate, widgetSubtitle } = this.props
 
     return (
       <>
         {subTitle && this.renderSubtitle()}
-        {widgetSubTitle && this.renderWidgetSubtitle()}
+        {widgetSubtitle && this.renderWidgetSubtitle()}
       </>
     )
   }
@@ -112,7 +112,7 @@ class Subtitle extends PureComponent {
   }
 
   renderWidgetSubtitle() {
-    const { widgetSubTitle, subTitleTruncate, loading } = this.props
+    const { widgetSubtitle, subTitleTruncate, loading } = this.props
 
     return (
       <>
@@ -125,10 +125,10 @@ class Subtitle extends PureComponent {
             weight="light"
           >
             {subTitleTruncate && (
-              <StyledTruncate lines={2}>{widgetSubTitle}</StyledTruncate>
+              <StyledTruncate lines={2}>{widgetSubtitle}</StyledTruncate>
             )}
 
-            {!subTitleTruncate && widgetSubTitle}
+            {!subTitleTruncate && widgetSubtitle}
           </StyledWidgetSubtitle>
         )}
 
