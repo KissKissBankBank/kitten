@@ -93,10 +93,10 @@ class TitleComponent extends PureComponent {
         {!loading && (
           <Title
             tag="p"
-            {...titleProps}
             modifier="senary"
             margin={false}
             className="k-Card__title"
+            {...titleProps}
           >
             {titleTruncate && (
               <StyledTruncate lines={2}>{title}</StyledTruncate>

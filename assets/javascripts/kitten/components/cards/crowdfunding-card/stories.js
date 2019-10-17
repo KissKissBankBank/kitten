@@ -41,10 +41,10 @@ storiesOf('Cards/CrowdfundingCard', module)
             'SubTitle',
             'Sed ut perspiciatis unde omnis iste natus error Lorem',
           )}
-          info1={text('info1', 'Lorem ipsum…')}
-          info2={text('info2', 'Lorem ipsum…')}
-          info3={text('info3', 'Lorem ipsum…')}
-          progress={number('progress', 42)}
+          info1={text('Info1', 'Lorem ipsum…')}
+          info2={text('Info2', 'Lorem ipsum…')}
+          info3={text('Info3', 'Lorem ipsum…')}
+          progress={number('Progress', 42)}
           state={text('State', 'Lorem ipsum…')}
         />
       </StoryContainer>
