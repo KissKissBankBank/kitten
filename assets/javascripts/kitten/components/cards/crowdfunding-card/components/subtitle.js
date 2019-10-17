@@ -7,6 +7,7 @@ import { Title } from '../../../../components/typography/title'
 import COLORS from '../../../../constants/colors-config'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import Truncate from 'react-truncate'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
@@ -14,41 +15,16 @@ const StyledTruncate = styled(Truncate)`
   white-space: nowrap;
 `
 
-const StyledContainer = styled.div`
-  margin-bottom: ${pxToRem(20)};
-
-  ${({ titlesMinHeight }) =>
-    titlesMinHeight &&
-    css`
-      min-height: ${pxToRem(75)};
-    `}
-`
-
-const StyledTitle = styled.div`
-  padding: 0 ${COMPONENT_GUTTER};
-  line-height: 1;
-  margin-bottom: ${pxToRem(10)};
-`
-
-const StyledTitleLoading = styled.span`
-  display: block;
-  background-color: ${COLORS.line2};
-  border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
-  height: ${pxToRem(24)};
-`
-
-const StyledTitleSmallLoading = styled(StyledTitleLoading)`
-  width: 70%;
-  border-top: ${pxToRem(1)} solid ${COLORS.background1};
-  border-bottom: 0;
-`
-
 const StyledContainerSubtitle = styled.div`
-  display: flex;
-  align-items: center;
-  line-height: 1;
-  padding: 0 ${COMPONENT_GUTTER};
-  margin-top: ${pxToRem(10)};
+  display: none;
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    padding: 0 ${COMPONENT_GUTTER};
+    margin-top: ${pxToRem(10)};
+  }
 `
 
 const StyledHorizontalStroke = styled(({ loading, ...others }) => (
@@ -82,79 +58,41 @@ const StyledSubtitleLoading = styled.span`
   height: ${pxToRem(12)};
 `
 
-class Description extends PureComponent {
+const StyledWidgetSubtitle = styled(Text)`
+  padding-left: ${COMPONENT_GUTTER};
+  margin: ${pxToRem(5)} 0 ${pxToRem(20)} 0;
+`
+
+class Subtitle extends PureComponent {
   static propTypes = {
-    title: PropTypes.string,
     subTitle: PropTypes.string,
-    titlesMinHeight: PropTypes.bool,
-    titleTruncate: PropTypes.bool,
+    widgetSubtitle: PropTypes.string,
     subTitleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
     titleProps: PropTypes.shape(),
   }
 
   static defaultProps = {
-    title: '',
     subTitle: '',
-    titlesMinHeight: true,
-    titleTruncate: true,
+    widgetSubtitle: '',
     subTitleTruncate: true,
     loading: false,
     titleProps: {},
   }
 
   render() {
-    const {
-      loading,
-      title,
-      subTitle,
-      titleTruncate,
-      subTitleTruncate,
-      titlesMinHeight,
-      titleProps,
-    } = this.props
+    const { loading, subTitle, subTitleTruncate, widgetSubtitle } = this.props
 
     return (
-      <StyledContainer titlesMinHeight={titlesMinHeight}>
-        {this.renderTitle()}
-        {this.renderSubtitle()}
-      </StyledContainer>
-    )
-  }
-
-  renderTitle() {
-    const { loading, titleProps, titleTruncate, title } = this.props
-
-    return (
-      <StyledTitle>
-        {!loading && (
-          <Title
-            tag="p"
-            {...titleProps}
-            modifier="senary"
-            margin={false}
-            className="k-Card__title"
-          >
-            {titleTruncate && (
-              <StyledTruncate lines={2}>{title}</StyledTruncate>
-            )}
-
-            {!titleTruncate && title}
-          </Title>
-        )}
-
-        {loading && (
-          <>
-            <StyledTitleLoading />
-            <StyledTitleSmallLoading />
-          </>
-        )}
-      </StyledTitle>
+      <>
+        {subTitle && this.renderSubtitle()}
+        {widgetSubtitle && this.renderWidgetSubtitle()}
+      </>
     )
   }
 
   renderSubtitle() {
-    const { subTitle, loading, subTitleTruncate } = this.props
+    const { loading, subTitle, subTitleTruncate } = this.props
 
     return (
       <StyledContainerSubtitle>
@@ -172,6 +110,32 @@ class Description extends PureComponent {
       </StyledContainerSubtitle>
     )
   }
+
+  renderWidgetSubtitle() {
+    const { widgetSubtitle, subTitleTruncate, loading } = this.props
+
+    return (
+      <>
+        {StyledWidgetSubtitle && !loading && (
+          <StyledWidgetSubtitle
+            tag="p"
+            size="micro"
+            color="font1"
+            lineHeight="normal"
+            weight="light"
+          >
+            {subTitleTruncate && (
+              <StyledTruncate lines={2}>{widgetSubtitle}</StyledTruncate>
+            )}
+
+            {!subTitleTruncate && widgetSubtitle}
+          </StyledWidgetSubtitle>
+        )}
+
+        {loading && <StyledSubtitleLoading />}
+      </>
+    )
+  }
 }
 
-export default Description
+export default Subtitle

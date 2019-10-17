@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Update `Label` styles.
+- Feature: Create `KissKissBankBankLogo` component.
+- Feature: Create `CrowdfundingCardWidget` component.
 
 ## [2.32.0] - 2019-10-16
 

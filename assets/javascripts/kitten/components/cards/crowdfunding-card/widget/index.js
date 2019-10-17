@@ -1,21 +1,22 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import Image from './components/image'
-import TitleComponent from './components/title'
-import Subtitle from './components/subtitle'
-import Informations from './components/informations'
-import ProgressBar from './components/progress'
-import Loading from './components/loading'
-import State from './components/state'
-import { pxToRem } from '../../../helpers/utils/typography'
+import Image from '../components/image'
+import TitleComponent from '../components/title'
+import Subtitle from '../components/subtitle'
+import Informations from '../components/informations'
+import CardButton from '../components/button'
+import Loading from '../components/loading'
+import State from '../components/state'
+import { pxToRem } from '../../../../helpers/utils/typography'
 
 const StyledContainer = styled.div`
   position: relative;
-  padding-bottom: ${pxToRem(5)};
 `
 
 const StyledTitleAndDescription = styled.div`
+  margin-top: ${pxToRem(10)};
+
   ${({ titlesMinHeight }) =>
     titlesMinHeight &&
     css`
@@ -23,7 +24,7 @@ const StyledTitleAndDescription = styled.div`
     `}
 `
 
-export class CrowdfundingCard extends PureComponent {
+export class CrowdfundingCardWidget extends PureComponent {
   static propTypes = {
     href: PropTypes.string,
     titlesMinHeight: PropTypes.bool,
@@ -48,17 +49,15 @@ export class CrowdfundingCard extends PureComponent {
       ownerTitle,
       loading,
       state,
-      cardTitle,
-      cardSubTitle,
+      subtitle,
+      title,
       titleTruncate,
-      subTitleTruncate,
       titlesMinHeight,
+      subTitleTruncate,
+      dayCounter,
+      stateDay,
       titleProps,
-      info1,
-      info2,
-      info3,
-      progress,
-      progressColor,
+      buttonText,
       ...others
     } = this.props
 
@@ -80,28 +79,20 @@ export class CrowdfundingCard extends PureComponent {
         />
         <StyledTitleAndDescription titlesMinHeight={titlesMinHeight}>
           <TitleComponent
-            title={cardTitle}
-            loading={loading}
             titleTruncate={titleTruncate}
+            loading={loading}
+            widgetTitle={title}
+            dayCounter={dayCounter}
+            stateDay={stateDay}
           />
           <Subtitle
-            subTitle={cardSubTitle}
+            widgetSubtitle={subtitle}
             subTitleTruncate={subTitleTruncate}
             loading={loading}
           />
         </StyledTitleAndDescription>
-        <Informations
-          info1={info1}
-          info2={info2}
-          info3={info3}
-          loading={loading}
-        />
-        <ProgressBar
-          progress={progress}
-          progressColor={progressColor}
-          loading={loading}
-        />
-        <State state={state} loading={loading} />
+        <CardButton text={buttonText} loading={loading} />
+        <State widgetState={state} loading={loading} />
         <Loading loading={loading} />
       </StyledContainer>
     )
