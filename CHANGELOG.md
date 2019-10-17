@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `Label` styles.
+
 ## [2.32.0] - 2019-10-16
 
 Feature:

@@ -221,7 +221,7 @@ export class ImageCropper extends React.Component {
   renderSliderTitle() {
     return (
       <Marger top="1.5" bottom="1">
-        <Label size="tiny">{this.props.sliderTitle}</Label>
+        <Label size="micro">{this.props.sliderTitle}</Label>
       </Marger>
     )
   }
