@@ -71,7 +71,7 @@ export class KarlSideLayout extends React.Component {
         <Label
           className="k-u-margin-bottom-single"
           tag="span"
-          size="tiny"
+          size="micro"
           focusId={false}
         >
           {this.shortDescField().label}
