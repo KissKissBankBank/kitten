@@ -50,8 +50,6 @@ storiesOf('Cards/CrowdfundingCard', module)
       </StoryContainer>
     )),
   )
-
-  .addDecorator(withKnobs)
   .add('Crowdfunding Card Widget', () => (
     <StoryContainer>
       <CrowdfundingCardWidget
