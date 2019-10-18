@@ -7,6 +7,7 @@ import { Title } from '../../../../components/typography/title'
 import COLORS from '../../../../constants/colors-config'
 import Truncate from 'react-truncate'
 import { ScreenConfig } from '../../../../constants/screen-config'
+import { withMediaQueries } from '../../../../hoc/media-queries'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
@@ -23,7 +24,7 @@ const StyledTitle = styled.div`
     font-size: ${stepToRem(-1)};
     margin-top: ${pxToRem(10)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       font-size: ${stepToRem(2)};
     }
   }
@@ -85,6 +86,7 @@ class TitleComponent extends PureComponent {
       widgetTitle,
       dayCounter,
       stateDay,
+      viewportIsSOrLess,
     } = this.props
 
     return (
@@ -96,20 +98,27 @@ class TitleComponent extends PureComponent {
   }
 
   renderTitle() {
-    const { loading, titleProps, titleTruncate, title } = this.props
+    const {
+      loading,
+      titleProps,
+      titleTruncate,
+      title,
+      viewportIsSOrLess,
+    } = this.props
 
     return (
       <StyledTitle>
         {!loading && (
           <Title
             tag="p"
-            modifier="senary"
             margin={false}
             className="k-Card__title"
             {...titleProps}
           >
             {titleTruncate && (
-              <StyledTruncate lines={2}>{title}</StyledTruncate>
+              <StyledTruncate lines={viewportIsSOrLess ? 3 : 2}>
+                {title}
+              </StyledTruncate>
             )}
 
             {!titleTruncate && title}
@@ -175,4 +184,6 @@ class TitleComponent extends PureComponent {
   }
 }
 
-export default TitleComponent
+export default withMediaQueries({
+  viewportIsSOrLess: true,
+})(TitleComponent)

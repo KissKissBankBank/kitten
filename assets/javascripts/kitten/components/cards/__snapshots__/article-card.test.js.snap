@@ -49,7 +49,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 hPlKae"
+    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 cKinRA"
   >
     
     
@@ -109,20 +109,20 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 hPlKae"
+    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 cKinRA"
   >
     <div
-      className="title__StyledTitle-sc-1wv1kzg-1 kxRkqJ"
+      className="title__StyledTitle-sc-1wv1kzg-1 gmeiBW"
     >
       <p
-        className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+        className="k-Title k-Card__title k-Title--primary k-Title--withoutMargin"
       >
         Custom title
       </p>
     </div>
     
     <div
-      className="subtitle__StyledContainerSubtitle-hzl57w-1 cuARNU"
+      className="subtitle__StyledContainerSubtitle-hzl57w-1 fVLWtT"
     >
       <span
         className="subtitle__StyledHorizontalStroke-hzl57w-2 dVssq horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
@@ -208,7 +208,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 hPlKae"
+    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 cKinRA"
   >
     
     
@@ -269,20 +269,20 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 hPlKae"
+    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 cKinRA"
   >
     <div
-      className="title__StyledTitle-sc-1wv1kzg-1 kxRkqJ"
+      className="title__StyledTitle-sc-1wv1kzg-1 gmeiBW"
     >
       <p
-        className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
+        className="k-Title k-Card__title k-Title--primary k-Title--withoutMargin"
       >
         Custom title
       </p>
     </div>
     
     <div
-      className="subtitle__StyledContainerSubtitle-hzl57w-1 cuARNU"
+      className="subtitle__StyledContainerSubtitle-hzl57w-1 fVLWtT"
     >
       <span
         className="subtitle__StyledHorizontalStroke-hzl57w-2 dVssq horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"

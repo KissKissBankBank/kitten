@@ -18,7 +18,7 @@ const StyledTruncate = styled(Truncate)`
 const StyledContainerSubtitle = styled.div`
   display: none;
 
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
     display: flex;
     align-items: center;
     line-height: 1;
