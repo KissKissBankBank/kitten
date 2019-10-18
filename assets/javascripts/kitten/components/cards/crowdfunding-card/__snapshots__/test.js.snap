@@ -640,7 +640,26 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
         <span
           className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-bold k-Card__title"
         >
-          Lorem ipsum…
+          <span
+            width={0}
+          >
+            <span />
+            <span>
+              Lorem ipsum…
+            </span>
+            <span
+              style={
+                Object {
+                  "left": 0,
+                  "position": "fixed",
+                  "top": 0,
+                  "visibility": "hidden",
+                }
+              }
+            >
+              …
+            </span>
+          </span>
         </span>
       </div>
       <div
