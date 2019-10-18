@@ -22,6 +22,7 @@ const StyledTitle = styled.div`
   & .k-Card__title {
     font-size: ${stepToRem(-1)};
     margin-top: ${pxToRem(10)};
+
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       font-size: ${stepToRem(2)};
     }
