@@ -53,6 +53,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   line-height: 1;
 }
 
+.c6 .k-Card__title {
+  font-size: 0.8888888888888888rem;
+  margin-top: 0.625rem;
+}
+
 .c10 {
   display: block;
   border: none;
@@ -84,7 +89,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 .c13 {
-  margin-top: 1.25rem;
+  margin-top: 0.9375rem;
   margin-bottom: 0.3125rem;
   display: -webkit-box;
   display: -webkit-flex;
@@ -158,8 +163,16 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   padding-bottom: 0.3125rem;
 }
 
-.c5 {
-  min-height: 4.6875rem;
+@media (max-width:47.9375rem) {
+  .c2 {
+    display: none;
+  }
+}
+
+@media (min-width:40rem) {
+  .c6 .k-Card__title {
+    font-size: 1.265625rem;
+  }
 }
 
 @media (min-width:40rem) {
@@ -175,6 +188,30 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     line-height: 1;
     padding: 0 0.625rem;
     margin-top: 0.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c13 {
+    margin-top: 1.25rem;
+  }
+}
+
+@media (max-width:47.9375rem) {
+  .c17 {
+    display: none;
+  }
+}
+
+@media (max-width:47.9375rem) {
+  .c18 {
+    display: none;
+  }
+}
+
+@media (min-width:40rem) {
+  .c5 {
+    min-height: 4.6875rem;
   }
 }
 
@@ -196,7 +233,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     className="c2"
   >
     <div
-      className="k-u-margin-bottom-single k-u-margin-top-single"
+      className="k-u-margin-top-single"
     >
       <span
         className="k-ButtonImage k-ButtonImage--withoutPointerEvents c3"
@@ -419,6 +456,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   line-height: 1;
 }
 
+.c7 .k-Card__title {
+  font-size: 0.8888888888888888rem;
+  margin-top: 0.625rem;
+}
+
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -574,6 +616,18 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   min-height: 4.6875rem;
 }
 
+@media (max-width:47.9375rem) {
+  .c2 {
+    display: none;
+  }
+}
+
+@media (min-width:40rem) {
+  .c7 .k-Card__title {
+    font-size: 1.265625rem;
+  }
+}
+
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c12 {
     width: 12.5rem;
@@ -599,7 +653,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
     className="c2"
   >
     <div
-      className="k-u-margin-bottom-single k-u-margin-top-single"
+      className="k-u-margin-top-single"
     >
       <span
         className="k-ButtonImage k-ButtonImage--withoutPointerEvents c3"
