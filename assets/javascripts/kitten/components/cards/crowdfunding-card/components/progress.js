@@ -5,6 +5,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { Progress } from '../../../../components/meters/progress'
 import { Text } from '../../../../components/typography/text'
 import COLORS from '../../../../constants/colors-config'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
@@ -24,6 +25,10 @@ const StyledProgress = styled(Progress)`
 const StyledPercent = styled(Text)`
   flex-shrink: 0;
   margin-left: calc(2 * ${COMPONENT_GUTTER});
+
+  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    display: none;
+  }
 `
 
 const StyledLoading = styled.span`

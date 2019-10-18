@@ -9,18 +9,21 @@ import ProgressBar from './components/progress'
 import Loading from './components/loading'
 import State from './components/state'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledContainer = styled.div`
   position: relative;
   padding-bottom: ${pxToRem(5)};
 `
 
-const StyledTitleAndDescription = styled.div`
-  ${({ titlesMinHeight }) =>
-    titlesMinHeight &&
-    css`
-      min-height: ${pxToRem(75)};
-    `}
+const StyledTitleAndSubtitle = styled.div`
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    ${({ titlesMinHeight }) =>
+      titlesMinHeight &&
+      css`
+        min-height: ${pxToRem(75)};
+      `}
+  }
 `
 
 export class CrowdfundingCard extends PureComponent {
@@ -78,7 +81,7 @@ export class CrowdfundingCard extends PureComponent {
           avatarProps={avatarProps}
           loading={loading}
         />
-        <StyledTitleAndDescription titlesMinHeight={titlesMinHeight}>
+        <StyledTitleAndSubtitle titlesMinHeight={titlesMinHeight}>
           <TitleComponent
             title={cardTitle}
             loading={loading}
@@ -89,7 +92,7 @@ export class CrowdfundingCard extends PureComponent {
             subTitleTruncate={subTitleTruncate}
             loading={loading}
           />
-        </StyledTitleAndDescription>
+        </StyledTitleAndSubtitle>
         <Informations
           info1={info1}
           info2={info2}

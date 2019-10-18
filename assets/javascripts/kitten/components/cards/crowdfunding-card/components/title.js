@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
 import { Title } from '../../../../components/typography/title'
 import COLORS from '../../../../constants/colors-config'
 import Truncate from 'react-truncate'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
@@ -17,6 +18,14 @@ const StyledTitle = styled.div`
   flex: 1;
   padding: 0 ${COMPONENT_GUTTER};
   line-height: 1;
+
+  & .k-Card__title {
+    font-size: ${stepToRem(-1)};
+    margin-top: ${pxToRem(10)};
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      font-size: ${stepToRem(2)};
+    }
+  }
 `
 
 const StyledTitleLoading = styled.span`

@@ -5,6 +5,7 @@ import COLORS from '../../../../constants/colors-config'
 import { ButtonImage } from '../../../../components/buttons/button-image'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
@@ -40,6 +41,10 @@ const StyledContainerAvatar = styled.div`
   top: 0;
   margin-top: ${pxToRem(-30)};
   background-color: ${COLORS.background1};
+
+  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    display: none;
+  }
 `
 
 const StyledAvatar = styled(ButtonImage)`
@@ -137,7 +142,7 @@ class Image extends PureComponent {
         </StyledImageContainer>
 
         <StyledContainerAvatar>
-          <div className="k-u-margin-bottom-single k-u-margin-top-single">
+          <div className="k-u-margin-top-single">
             <StyledAvatar
               tag="span"
               img={!loading && avatarProps}
