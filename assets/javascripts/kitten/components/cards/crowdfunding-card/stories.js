@@ -59,7 +59,7 @@ storiesOf('Cards/CrowdfundingCard', module)
         loading={boolean('Loading', false)}
         title={text(
           'Title',
-          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+          'Lorem ipsum dolor sit amet, consectetuer adipiscing elit…',
         )}
         dayCounter={text('Counter Day', '27 jours')}
         stateDay={text('State Day', 'restant')}

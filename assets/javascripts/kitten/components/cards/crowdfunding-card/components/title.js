@@ -136,7 +136,13 @@ class TitleComponent extends PureComponent {
   }
 
   renderWidgetTitle() {
-    const { widgetTitle, dayCounter, stateDay, loading } = this.props
+    const {
+      widgetTitle,
+      dayCounter,
+      stateDay,
+      loading,
+      titleTruncate,
+    } = this.props
 
     return (
       <>
@@ -151,7 +157,9 @@ class TitleComponent extends PureComponent {
                 lineHeight="normal"
                 className="k-Card__title"
               >
-                {widgetTitle}
+                {titleTruncate && <Truncate lines={2}>{widgetTitle}</Truncate>}
+
+                {!titleTruncate && widgetTitle}
               </Text>
             )}
           </StyledTitle>
