@@ -134,12 +134,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 @media (max-width:47.9375rem) {
-  .c10 {
-    display: none;
-  }
-}
-
-@media (max-width:47.9375rem) {
   .c11 {
     display: none;
   }
@@ -267,7 +261,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       </div>
     </div>
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c10"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-u-hidden@s-down c10"
     >
       42 %
     </span>
