@@ -25,10 +25,6 @@ const StyledProgress = styled(Progress)`
 const StyledPercent = styled(Text)`
   flex-shrink: 0;
   margin-left: calc(2 * ${COMPONENT_GUTTER});
-
-  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-    display: none;
-  }
 `
 
 const StyledLoading = styled.span`
@@ -70,7 +66,12 @@ class ProgressBar extends PureComponent {
           }}
         />
 
-        <StyledPercent weight="regular" size="micro" color="font1">
+        <StyledPercent
+          weight="regular"
+          size="micro"
+          color="font1"
+          className="k-u-hidden@s-down"
+        >
           {loading && <StyledLoading />}
 
           {!loading && `${progress} %`}
