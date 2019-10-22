@@ -5,17 +5,23 @@ import { Button } from '../../../../components/buttons/button/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 
+const COMPONENT_GUTTER = pxToRem(10)
+
 const StyledLoading = styled(Button)`
   background-color: ${COLORS.line2};
   border-color: ${COLORS.line2};
 `
 
+const StyledButton = styled(Button)`
+  margin: 0 ${COMPONENT_GUTTER};
+`
+
 const CardButton = ({ text, loading }) => (
   <>
     {!loading && (
-      <Button fluid modifier="helium">
+      <StyledButton fluid modifier="helium">
         {text}
-      </Button>
+      </StyledButton>
     )}
 
     {loading && <StyledLoading fluid />}

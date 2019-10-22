@@ -61,6 +61,7 @@ const StyledSubtitleLoading = styled.span`
 const StyledWidgetSubtitle = styled(Text)`
   padding-left: ${COMPONENT_GUTTER};
   margin: ${pxToRem(5)} 0 ${pxToRem(20)} 0;
+  text-align: left;
 `
 
 class Subtitle extends PureComponent {
@@ -99,13 +100,7 @@ class Subtitle extends PureComponent {
         <StyledHorizontalStroke size="tiny" loading={loading} />
 
         {subTitle && !loading && (
-          <StyledSubtitle
-            size="micro"
-            weight="regular"
-            tag="p"
-            color="font1"
-            className="k-u-align-left"
-          >
+          <StyledSubtitle size="micro" weight="regular" tag="p" color="font1">
             {subTitleTruncate && <StyledTruncate>{subTitle}</StyledTruncate>}
 
             {!subTitleTruncate && subTitle}

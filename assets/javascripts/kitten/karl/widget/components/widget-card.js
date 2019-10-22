@@ -15,6 +15,7 @@ const ButtonTrigger = ({ children }) => (
 
 const StyledContainer = styled.div`
   margin: ${pxToRem(80)} 0;
+  text-align: left;
 `
 
 const Content = props => (
@@ -22,7 +23,7 @@ const Content = props => (
     <Title
       modifier="tertiary"
       margin={false}
-      className="k-u-margin-bottom-double"
+      className="k-u-margin-bottom-double k-u-align-center"
     >
       Aperçu du widget
     </Title>
