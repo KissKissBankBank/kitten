@@ -17,7 +17,6 @@ const StyledTitle = styled.div`
   flex: 1;
   padding: 0 ${COMPONENT_GUTTER};
   line-height: 1;
-  text-align: left;
 `
 
 const StyledTitleLoading = styled.span`

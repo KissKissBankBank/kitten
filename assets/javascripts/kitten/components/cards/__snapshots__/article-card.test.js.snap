@@ -17,7 +17,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 lldcmA"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 eRJQDD"
   >
     <div
       className="k-u-margin-bottom-single k-u-margin-top-single"
@@ -77,7 +77,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 lldcmA"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 eRJQDD"
   >
     <div
       className="k-u-margin-bottom-single k-u-margin-top-single"
@@ -112,7 +112,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
   >
     <div
-      className="title__StyledTitle-sc-1wv1kzg-1 izzJO"
+      className="title__StyledTitle-sc-1wv1kzg-1 jPVxSr"
     >
       <p
         className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -176,7 +176,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 lldcmA"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 eRJQDD"
   >
     <div
       className="k-u-margin-bottom-single k-u-margin-top-single"
@@ -237,7 +237,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 lldcmA"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 eRJQDD"
   >
     <div
       className="k-u-margin-bottom-single k-u-margin-top-single"
@@ -272,7 +272,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
   >
     <div
-      className="title__StyledTitle-sc-1wv1kzg-1 izzJO"
+      className="title__StyledTitle-sc-1wv1kzg-1 jPVxSr"
     >
       <p
         className="k-Title k-Card__title k-Title--senary k-Title--withoutMargin"
