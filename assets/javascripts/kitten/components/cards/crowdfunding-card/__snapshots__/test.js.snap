@@ -28,6 +28,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   top: 0;
   margin-top: -1.875rem;
   background-color: #fff;
+  text-align: left;
 }
 
 .c3 {
@@ -51,6 +52,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   flex: 1;
   padding: 0 0.625rem;
   line-height: 1;
+  text-align: left;
 }
 
 .c10 {
@@ -398,6 +400,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   top: 0;
   margin-top: -1.875rem;
   background-color: #fff;
+  text-align: left;
 }
 
 .c3 {
@@ -417,6 +420,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   flex: 1;
   padding: 0 0.625rem;
   line-height: 1;
+  text-align: left;
 }
 
 .c6 {
@@ -445,9 +449,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 .c10 {
   padding-left: 0.625rem;
   margin: 0.3125rem 0 1.25rem 0;
+  text-align: left;
 }
 
-.c13 {
+.c14 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -461,7 +466,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   padding: 0.625rem 1.25rem;
 }
 
-.c14 {
+.c15 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -472,11 +477,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   align-items: center;
 }
 
-.c15 {
+.c16 {
   margin-left: 0.3125rem;
 }
 
-.c12 {
+.c13 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -516,53 +521,57 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c12:disabled {
+.c13:disabled {
   cursor: not-allowed;
 }
 
-.c12 >:nth-child(n) {
+.c13 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c12 >:last-child {
+.c13 >:last-child {
   margin-right: 0;
 }
 
-.c12 svg {
+.c13 svg {
   fill: #fff;
 }
 
-.c12:hover,
-.c12:focus {
+.c13:hover,
+.c13:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c12:hover svg,
-.c12:focus svg {
+.c13:hover svg,
+.c13:focus svg {
   fill: #fff;
 }
 
-.c12:active {
+.c13:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c12:active svg {
+.c13:active svg {
   fill: #fff;
 }
 
-.c12:disabled {
+.c13:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c12:disabled svg {
+.c13:disabled svg {
   fill: #fff;
+}
+
+.c12 {
+  margin: 0 0.625rem;
 }
 
 .c0 {
@@ -575,7 +584,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c12 {
+  .c13 {
     width: 12.5rem;
     height: 3.125rem;
   }
@@ -705,20 +714,20 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
     </p>
   </div>
   <button
-    className="c12"
+    className="c12 c13"
   >
     Lorem ipsum
   </button>
   
   <div
-    className="c13"
+    className="c14"
   >
     <span
-      className="k-u-color-background1 k-u-line-height-normal k-u-size-micro k-u-weight-regular c14"
+      className="k-u-color-background1 k-u-line-height-normal k-u-size-micro k-u-weight-regular c15"
     >
       Sur
       <svg
-        className="c15"
+        className="c16"
         fill="#fff"
         height="30"
         viewBox="0 0 134 30"
