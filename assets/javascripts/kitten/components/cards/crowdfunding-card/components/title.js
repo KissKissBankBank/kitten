@@ -95,7 +95,7 @@ class TitleComponent extends PureComponent {
             tag="p"
             modifier="senary"
             margin={false}
-            className="k-Card__title"
+            className="k-Card__title k-u-align-left"
             {...titleProps}
           >
             {titleTruncate && (

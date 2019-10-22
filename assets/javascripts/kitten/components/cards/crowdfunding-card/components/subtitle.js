@@ -99,7 +99,13 @@ class Subtitle extends PureComponent {
         <StyledHorizontalStroke size="tiny" loading={loading} />
 
         {subTitle && !loading && (
-          <StyledSubtitle size="micro" weight="regular" tag="p" color="font1">
+          <StyledSubtitle
+            size="micro"
+            weight="regular"
+            tag="p"
+            color="font1"
+            className="k-u-align-left"
+          >
             {subTitleTruncate && <StyledTruncate>{subTitle}</StyledTruncate>}
 
             {!subTitleTruncate && subTitle}

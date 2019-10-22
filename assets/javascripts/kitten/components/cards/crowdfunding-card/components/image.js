@@ -40,6 +40,7 @@ const StyledContainerAvatar = styled.div`
   top: 0;
   margin-top: ${pxToRem(-30)};
   background-color: ${COLORS.background1};
+  text-align: left;
 `
 
 const StyledAvatar = styled(ButtonImage)`
