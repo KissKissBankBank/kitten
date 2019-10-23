@@ -80,7 +80,6 @@ const WidgetCard = props => (
       <GridCol col="4">
         <GlobalStyle />
         <Modal
-          style={{ height: '100%' }}
           closeButtonLabel="Fermer"
           trigger={<ButtonTrigger children="Widget" />}
           content={<Content />}
