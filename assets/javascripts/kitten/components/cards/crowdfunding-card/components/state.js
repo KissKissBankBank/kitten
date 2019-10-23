@@ -98,7 +98,7 @@ class State extends PureComponent {
               color="background1"
             >
               {widgetState}
-              <StyledWidgetLogo width="80" />
+              <StyledWidgetLogo width="80" height="18" />
             </StyledWidgetText>
           </StyledWidgetContainer>
         )}

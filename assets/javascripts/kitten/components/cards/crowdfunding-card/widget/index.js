@@ -10,11 +10,14 @@ import Loading from '../components/loading'
 import State from '../components/state'
 import { pxToRem } from '../../../../helpers/utils/typography'
 
+const COMPONENT_GUTTER = pxToRem(10)
+
 const StyledContainer = styled.div`
   position: relative;
 `
 
 const StyledTitleAndDescription = styled.div`
+  padding: 0 ${COMPONENT_GUTTER};
   margin-top: ${pxToRem(10)};
 
   ${({ titlesMinHeight }) =>

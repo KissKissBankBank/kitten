@@ -417,6 +417,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   flex: 1;
   padding: 0 0.625rem;
   line-height: 1;
+  padding: 0;
 }
 
 .c6 {
@@ -428,7 +429,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 
 .c8 {
   line-height: 1;
-  margin-left: calc(4 * 0.625rem);
+  margin-left: calc(2 * 0.625rem);
 }
 
 .c9 {
@@ -443,7 +444,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 .c10 {
-  padding-left: 0.625rem;
   margin: 0.3125rem 0 1.25rem 0;
 }
 
@@ -566,7 +566,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 .c12 {
-  margin: 0 0.625rem;
+  padding: 0 0.625rem;
 }
 
 .c0 {
@@ -574,6 +574,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 .c5 {
+  padding: 0 0.625rem;
   margin-top: 0.625rem;
   min-height: 4.6875rem;
 }
@@ -708,11 +709,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
       </span>
     </p>
   </div>
-  <button
-    className="c12 c13"
+  <div
+    className="c12"
   >
-    Lorem ipsum
-  </button>
+    <button
+      className="c13"
+    >
+      Lorem ipsum
+    </button>
+  </div>
   
   <div
     className="c14"
@@ -724,7 +729,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
       <svg
         className="c16"
         fill="#fff"
-        height="30"
+        height="18"
         viewBox="0 0 134 30"
         width="80"
         xmlns="http://www.w3.org/2000/svg"
