@@ -7,14 +7,14 @@ exports[`<ToggleSwitch /> with \`big\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="toggle-switch__StyledSwitch-ski4b0-1 bTBEHX"
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
     type="button"
   />
   <label
-    className="toggle-switch__StyledLabel-ski4b0-2 fkoDWj"
+    className="toggle-switch__StyledLabel-ski4b0-2 gvNwhr"
     for="switch-component"
   >
     switch
@@ -29,14 +29,14 @@ exports[`<ToggleSwitch /> with \`checkedColor\` \`defaultColor\` & \`disabledCol
   <button
     aria-label={null}
     aria-pressed={false}
-    className="toggle-switch__StyledSwitch-ski4b0-1 iKThTk"
+    className="toggle-switch__StyledSwitch-ski4b0-1 bmeMAS"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
     type="button"
   />
   <label
-    className="toggle-switch__StyledLabel-ski4b0-2 iPHmHV"
+    className="toggle-switch__StyledLabel-ski4b0-2 ZFoTg"
     for="switch-component"
   >
     switch
@@ -51,14 +51,14 @@ exports[`<ToggleSwitch /> with \`disabled\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="toggle-switch__StyledSwitch-ski4b0-1 bTBEHX"
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
     disabled={true}
     id="switch-component"
     onClick={[Function]}
     type="button"
   />
   <label
-    className="toggle-switch__StyledLabel-ski4b0-2 doOYGH"
+    className="toggle-switch__StyledLabel-ski4b0-2 jEniVU"
     for="switch-component"
   >
     switch
@@ -73,14 +73,14 @@ exports[`<ToggleSwitch /> with \`isChecked\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={true}
-    className="toggle-switch__StyledSwitch-ski4b0-1 bTBEHX"
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
     type="button"
   />
   <label
-    className="toggle-switch__StyledLabel-ski4b0-2 doOYGH"
+    className="toggle-switch__StyledLabel-ski4b0-2 jEniVU"
     for="switch-component"
   >
     switch
@@ -95,7 +95,7 @@ exports[`<ToggleSwitch /> with \`isLabelVisible\` prop matches with snapshot 1`]
   <button
     aria-label="switch"
     aria-pressed={false}
-    className="toggle-switch__StyledSwitch-ski4b0-1 bTBEHX"
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
@@ -111,14 +111,14 @@ exports[`<ToggleSwitch /> with \`label\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="toggle-switch__StyledSwitch-ski4b0-1 bTBEHX"
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
     type="button"
   />
   <label
-    className="toggle-switch__StyledLabel-ski4b0-2 doOYGH"
+    className="toggle-switch__StyledLabel-ski4b0-2 jEniVU"
     for="switch-component"
   >
     A test label
@@ -133,14 +133,14 @@ exports[`<ToggleSwitch /> with default props matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="toggle-switch__StyledSwitch-ski4b0-1 bTBEHX"
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
     type="button"
   />
   <label
-    className="toggle-switch__StyledLabel-ski4b0-2 doOYGH"
+    className="toggle-switch__StyledLabel-ski4b0-2 jEniVU"
     for="switch-component"
   >
     switch
