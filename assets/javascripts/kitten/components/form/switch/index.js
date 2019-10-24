@@ -109,13 +109,12 @@ const StyledLabel = styled.label`
   }
 `
 
-export const Switch = ({
+export const ToggleSwitch = ({
   id,
   isChecked,
   disabled,
   label,
   big,
-
   isLabelVisible,
   reverseOrder,
   checkedColor,
@@ -159,7 +158,7 @@ export const Switch = ({
   )
 }
 
-Switch.defaultProps = {
+ToggleSwitch.defaultProps = {
   id: 'switch-component',
   isChecked: false,
   disabled: false,

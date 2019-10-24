@@ -1,13 +1,13 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Switch } from './index'
+import { ToggleSwitch } from './index'
 
-describe('<Switch />', () => {
+describe('<ToggleSwitch />', () => {
   let component
 
   describe('with default props', () => {
     beforeEach(() => {
-      component = renderer.create(<Switch />).toJSON()
+      component = renderer.create(<ToggleSwitch />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -17,7 +17,9 @@ describe('<Switch />', () => {
 
   describe('with `label` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<Switch label="A test label" />).toJSON()
+      component = renderer
+        .create(<ToggleSwitch label="A test label" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -27,7 +29,7 @@ describe('<Switch />', () => {
 
   describe('with `isChecked` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<Switch isChecked />).toJSON()
+      component = renderer.create(<ToggleSwitch isChecked />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -37,7 +39,7 @@ describe('<Switch />', () => {
 
   describe('with `big` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<Switch big />).toJSON()
+      component = renderer.create(<ToggleSwitch big />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -47,7 +49,7 @@ describe('<Switch />', () => {
 
   describe('with `disabled` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<Switch disabled />).toJSON()
+      component = renderer.create(<ToggleSwitch disabled />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -57,7 +59,9 @@ describe('<Switch />', () => {
 
   describe('with `isLabelVisible` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<Switch isLabelVisible={false} />).toJSON()
+      component = renderer
+        .create(<ToggleSwitch isLabelVisible={false} />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -69,7 +73,7 @@ describe('<Switch />', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Switch
+          <ToggleSwitch
             checkedColor="#000"
             defaultColor="#000"
             disabledColor="#000"
