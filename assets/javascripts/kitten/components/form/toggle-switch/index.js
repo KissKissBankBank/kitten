@@ -5,9 +5,9 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
 const transitionDuration = '.15s'
-const switchWidth = 50
-const switchHeight = 25
-const borderSize = 1
+const switchWidth = 60
+const switchHeight = 30
+const borderSize = 2
 const borderRadius = 18
 
 const StyledSwitchContainer = styled.div`
@@ -40,9 +40,11 @@ const StyledSwitch = styled.button`
   height: ${pxToRem(switchHeight)};
   color: ${({ defaultColor }) => defaultColor};
   background-color: currentColor;
-  border: ${pxToRem(1)} solid currentColor;
+  border: ${pxToRem(borderSize)} solid ${COLORS.line2};
   border-radius: ${pxToRem(borderRadius)};
-  transition: color ${transitionDuration} ease;
+  transition: color ${transitionDuration} ease,
+    border-color ${transitionDuration} ease,
+    background-color ${transitionDuration} ease;
   cursor: pointer;
 
   &:focus {
@@ -53,33 +55,42 @@ const StyledSwitch = styled.button`
 
   &::before {
     position: absolute;
-    left: 0;
-    top: 0;
     box-sizing: border-box;
     display: inline-block;
-    width: ${pxToRem(switchHeight - borderSize * 2)};
-    height: ${pxToRem(switchHeight - borderSize * 2)};
+    left: -${pxToRem(borderSize)};
+    top: -${pxToRem(borderSize)};
+    width: ${pxToRem(switchHeight)};
+    height: ${pxToRem(switchHeight)};
     content: '';
     background-color: ${COLORS.background1};
-    border: ${pxToRem(borderSize)} solid currentColor;
+    border: ${pxToRem(borderSize)} solid ${COLORS.line2};
     border-radius: ${pxToRem(switchHeight)};
-    transition: left ${transitionDuration} ease;
+    transition: left ${transitionDuration} ease,
+      color ${transitionDuration} ease, border-color ${transitionDuration} ease,
+      background-color ${transitionDuration} ease;
   }
 
   &[aria-pressed='true'] {
     color: ${({ checkedColor }) => checkedColor};
+    border-color: currentColor;
 
     &::before {
-      left: ${pxToRem(switchWidth - switchHeight)};
+      left: ${pxToRem(switchWidth - switchHeight - borderSize)};
+      border-color: currentColor;
     }
   }
 
   &:active {
     color: ${COLORS.primary3};
+    &,
+    &::before {
+      border-color: ${COLORS.primary3};
+    }
   }
 
   &[disabled] {
     color: ${({ disabledColor }) => disabledColor};
+    border-color: currentColor;
     cursor: not-allowed;
   }
 `
