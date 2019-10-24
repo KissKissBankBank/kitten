@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CrowdfundingCard = void 0;
+exports.CrowdfundingCardWidget = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -29,52 +29,52 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _image = _interopRequireDefault(require("./components/image"));
+var _image = _interopRequireDefault(require("../components/image"));
 
-var _title = _interopRequireDefault(require("./components/title"));
+var _title = _interopRequireDefault(require("../components/title"));
 
-var _subtitle = _interopRequireDefault(require("./components/subtitle"));
+var _subtitle = _interopRequireDefault(require("../components/subtitle"));
 
-var _informations = _interopRequireDefault(require("./components/informations"));
+var _informations = _interopRequireDefault(require("../components/informations"));
 
-var _progress = _interopRequireDefault(require("./components/progress"));
+var _button = _interopRequireDefault(require("../components/button"));
 
-var _loading = _interopRequireDefault(require("./components/loading"));
+var _loading = _interopRequireDefault(require("../components/loading"));
 
-var _state = _interopRequireDefault(require("./components/state"));
+var _state = _interopRequireDefault(require("../components/state"));
 
-var _typography = require("../../../helpers/utils/typography");
+var _typography = require("../../../../helpers/utils/typography");
 
 var StyledContainer = _styledComponents.default.div.withConfig({
-  displayName: "crowdfunding-card__StyledContainer",
-  componentId: "sc-1b0f5ki-0"
-})(["position:relative;padding-bottom:", ";"], (0, _typography.pxToRem)(5));
+  displayName: "widget__StyledContainer",
+  componentId: "sc-1tlhy8x-0"
+})(["position:relative;"]);
 
 var StyledTitleAndDescription = _styledComponents.default.div.withConfig({
-  displayName: "crowdfunding-card__StyledTitleAndDescription",
-  componentId: "sc-1b0f5ki-1"
-})(["", ""], function (_ref) {
+  displayName: "widget__StyledTitleAndDescription",
+  componentId: "sc-1tlhy8x-1"
+})(["margin-top:", ";", ""], (0, _typography.pxToRem)(10), function (_ref) {
   var titlesMinHeight = _ref.titlesMinHeight;
   return titlesMinHeight && (0, _styledComponents.css)(["min-height:", ";"], (0, _typography.pxToRem)(75));
 });
 
-var CrowdfundingCard =
+var CrowdfundingCardWidget =
 /*#__PURE__*/
 function (_PureComponent) {
-  (0, _inherits2.default)(CrowdfundingCard, _PureComponent);
+  (0, _inherits2.default)(CrowdfundingCardWidget, _PureComponent);
 
-  function CrowdfundingCard() {
+  function CrowdfundingCardWidget() {
     var _getPrototypeOf2;
 
     var _this;
 
-    (0, _classCallCheck2.default)(this, CrowdfundingCard);
+    (0, _classCallCheck2.default)(this, CrowdfundingCardWidget);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(CrowdfundingCard)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(CrowdfundingCardWidget)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
     _this.removeCurrentFocus = function () {
       document.activeElement.blur();
@@ -83,7 +83,7 @@ function (_PureComponent) {
     return _this;
   }
 
-  (0, _createClass2.default)(CrowdfundingCard, [{
+  (0, _createClass2.default)(CrowdfundingCardWidget, [{
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -95,18 +95,16 @@ function (_PureComponent) {
           ownerTitle = _this$props.ownerTitle,
           loading = _this$props.loading,
           state = _this$props.state,
-          cardTitle = _this$props.cardTitle,
-          cardSubTitle = _this$props.cardSubTitle,
+          subtitle = _this$props.subtitle,
+          title = _this$props.title,
           titleTruncate = _this$props.titleTruncate,
-          subTitleTruncate = _this$props.subTitleTruncate,
           titlesMinHeight = _this$props.titlesMinHeight,
+          subTitleTruncate = _this$props.subTitleTruncate,
+          dayCounter = _this$props.dayCounter,
+          stateDay = _this$props.stateDay,
           titleProps = _this$props.titleProps,
-          info1 = _this$props.info1,
-          info2 = _this$props.info2,
-          info3 = _this$props.info3,
-          progress = _this$props.progress,
-          progressColor = _this$props.progressColor,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["href", "imageContainerBackground", "imageProps", "avatarProps", "ownerDescription", "ownerTitle", "loading", "state", "cardTitle", "cardSubTitle", "titleTruncate", "subTitleTruncate", "titlesMinHeight", "titleProps", "info1", "info2", "info3", "progress", "progressColor"]);
+          buttonText = _this$props.buttonText,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["href", "imageContainerBackground", "imageProps", "avatarProps", "ownerDescription", "ownerTitle", "loading", "state", "subtitle", "title", "titleTruncate", "titlesMinHeight", "subTitleTruncate", "dayCounter", "stateDay", "titleProps", "buttonText"]);
       return _react.default.createElement(StyledContainer, (0, _extends2.default)({}, others, {
         as: href ? 'a' : 'div',
         onClick: this.removeCurrentFocus,
@@ -122,39 +120,35 @@ function (_PureComponent) {
       }), _react.default.createElement(StyledTitleAndDescription, {
         titlesMinHeight: titlesMinHeight
       }, _react.default.createElement(_title.default, {
-        title: cardTitle,
+        titleTruncate: titleTruncate,
         loading: loading,
-        titleTruncate: titleTruncate
+        widgetTitle: title,
+        dayCounter: dayCounter,
+        stateDay: stateDay
       }), _react.default.createElement(_subtitle.default, {
-        subTitle: cardSubTitle,
+        widgetSubtitle: subtitle,
         subTitleTruncate: subTitleTruncate,
         loading: loading
-      })), _react.default.createElement(_informations.default, {
-        info1: info1,
-        info2: info2,
-        info3: info3,
-        loading: loading
-      }), _react.default.createElement(_progress.default, {
-        progress: progress,
-        progressColor: progressColor,
+      })), _react.default.createElement(_button.default, {
+        text: buttonText,
         loading: loading
       }), _react.default.createElement(_state.default, {
-        state: state,
+        widgetState: state,
         loading: loading
       }), _react.default.createElement(_loading.default, {
         loading: loading
       }));
     }
   }]);
-  return CrowdfundingCard;
+  return CrowdfundingCardWidget;
 }(_react.PureComponent);
 
-exports.CrowdfundingCard = CrowdfundingCard;
-CrowdfundingCard.propTypes = {
+exports.CrowdfundingCardWidget = CrowdfundingCardWidget;
+CrowdfundingCardWidget.propTypes = {
   href: _propTypes.default.string,
   titlesMinHeight: _propTypes.default.bool
 };
-CrowdfundingCard.defaultProps = {
+CrowdfundingCardWidget.defaultProps = {
   href: null,
   titlesMinHeight: true
 };
