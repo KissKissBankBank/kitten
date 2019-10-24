@@ -31,12 +31,28 @@ var _text = require("../../../../components/typography/text");
 
 var _typography = require("../../../../helpers/utils/typography");
 
+var _kisskissbankbankIcon = require("../../../../components/icons/kisskissbankbank-icon");
+
 var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 
 var StyledState = _styledComponents.default.div.withConfig({
   displayName: "state__StyledState",
   componentId: "colp6f-0"
 })(["position:absolute;top:0;right:0;display:inline-flex;align-items:center;background-color:", ";padding:", ";line-height:1;"], _colorsConfig.default.background1, COMPONENT_GUTTER);
+
+var StyledWidgetContainer = _styledComponents.default.div.withConfig({
+  displayName: "state__StyledWidgetContainer",
+  componentId: "colp6f-1"
+})(["display:flex;position:absolute;background:", ";border-radius:", ";margin:", " ", " 0 0;right:0;top:0;padding:", " ", ";"], _colorsConfig.default.font1, (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20));
+
+var StyledWidgetText = (0, _styledComponents.default)(_text.Text).withConfig({
+  displayName: "state__StyledWidgetText",
+  componentId: "colp6f-2"
+})(["display:flex;align-items:center;"]);
+var StyledWidgetLogo = (0, _styledComponents.default)(_kisskissbankbankIcon.KissKissBankBankIcon).withConfig({
+  displayName: "state__StyledWidgetLogo",
+  componentId: "colp6f-3"
+})(["margin-left:", ";"], (0, _typography.pxToRem)(5));
 
 var State =
 /*#__PURE__*/
@@ -53,13 +69,36 @@ function (_PureComponent) {
     value: function render() {
       var _this$props = this.props,
           state = _this$props.state,
-          loading = _this$props.loading;
-      return _react.default.createElement(_react.default.Fragment, null, state && !loading && _react.default.createElement(StyledState, null, _react.default.createElement(_text.Text, {
+          widgetState = _this$props.widgetState;
+      return _react.default.createElement(_react.default.Fragment, null, state && this.renderState(), widgetState && this.renderWidgetState());
+    }
+  }, {
+    key: "renderState",
+    value: function renderState() {
+      var _this$props2 = this.props,
+          state = _this$props2.state,
+          loading = _this$props2.loading;
+      return _react.default.createElement(_react.default.Fragment, null, !loading && _react.default.createElement(StyledState, null, _react.default.createElement(_text.Text, {
         size: "micro",
         lineHeight: "normal",
         weight: "regular",
         color: "font1"
       }, state)));
+    }
+  }, {
+    key: "renderWidgetState",
+    value: function renderWidgetState() {
+      var _this$props3 = this.props,
+          widgetState = _this$props3.widgetState,
+          loading = _this$props3.loading;
+      return _react.default.createElement(_react.default.Fragment, null, !loading && _react.default.createElement(StyledWidgetContainer, null, _react.default.createElement(StyledWidgetText, {
+        size: "micro",
+        lineHeight: "normal",
+        weight: "regular",
+        color: "background1"
+      }, widgetState, _react.default.createElement(StyledWidgetLogo, {
+        width: "80"
+      }))));
     }
   }]);
   return State;
@@ -67,10 +106,12 @@ function (_PureComponent) {
 
 State.propTypes = {
   state: _propTypes.default.string,
+  widgetState: _propTypes.default.string,
   loading: _propTypes.default.bool
 };
 State.defaultProps = {
   state: '',
+  widgetState: '',
   loading: false
 };
 var _default = State;
