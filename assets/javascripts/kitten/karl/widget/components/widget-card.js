@@ -5,9 +5,9 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { Container } from '../../../components/grid/container'
 import { Modal } from '../../../components/modals/modal'
 import { Button } from '../../../components/buttons/button/button'
-import { TextInputWithUnit } from '../../../components/form/text-input-with-unit'
-import { CopyIcon } from '../../../components/icons/copy-icon'
+import { TextCopy } from '../../../components/text-copy'
 import { Title } from '../../../components/typography/title'
+import { Marger } from '../../../components/layout/marger'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
@@ -46,36 +46,32 @@ const StyledContainer = styled.div`
   }
 `
 
+const StyledWidgetContainer = styled(Container)`
+  margin-top: ${pxToRem(50)};
+`
+
 const Content = props => (
   <StyledContainer>
     <StyledTitle>Aperçu du widget</StyledTitle>
-    <TextInputWithUnit
-      unit={
-        <CopyIcon
-          aria-label="copy icon"
-          aria-hidden="true"
-          width="17"
-          height="17"
-        />
-      }
-    />
-    <CrowdfundingCardWidget
-      ownerTitle="Les Arts Dessinés"
-      ownerDescription="Paris (75)"
-      loading={false}
-      title="Les Arts dessinés : devenez abonné-fondateur"
-      dayCounter="27 jours"
-      stateDay="restant"
-      subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma"
-      buttonText="Contribuer dès 5 €"
-      state="Sur"
-      style={{ marginTop: 20 }}
-    />
+    <TextCopy />
+    <Marger top="2">
+      <CrowdfundingCardWidget
+        ownerTitle="Les Arts Dessinés"
+        ownerDescription="Paris (75)"
+        loading={false}
+        title="Les Arts dessinés : devenez abonné-fondateur"
+        dayCounter="27 jours"
+        stateDay="restant"
+        subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma"
+        buttonText="Contribuer dès 5 €"
+        state="Sur"
+      />
+    </Marger>
   </StyledContainer>
 )
 
 const WidgetCard = props => (
-  <Container style={{ marginTop: 50 }}>
+  <StyledWidgetContainer>
     <Grid>
       <GridCol col="4">
         <GlobalStyle />
@@ -86,7 +82,7 @@ const WidgetCard = props => (
         />
       </GridCol>
     </Grid>
-  </Container>
+  </StyledWidgetContainer>
 )
 
 export default WidgetCard

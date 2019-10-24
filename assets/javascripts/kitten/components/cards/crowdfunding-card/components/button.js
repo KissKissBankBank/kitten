@@ -12,12 +12,12 @@ const StyledLoading = styled(Button)`
   border-color: ${COLORS.line2};
 `
 
-const StyledButton = styled.div`
+const StyledButtonContainer = styled.div`
   padding: 0 ${COMPONENT_GUTTER};
 `
 
 const CardButton = ({ text, loading }) => (
-  <StyledButton>
+  <StyledButtonContainer>
     {!loading && (
       <Button fluid modifier="helium">
         {text}
@@ -25,7 +25,7 @@ const CardButton = ({ text, loading }) => (
     )}
 
     {loading && <StyledLoading fluid />}
-  </StyledButton>
+  </StyledButtonContainer>
 )
 
 export default CardButton

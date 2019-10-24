@@ -24,5 +24,5 @@ CopyIcon.propTypes = {
 
 CopyIcon.defaultProps = {
   color: '#000',
-  title: 'Copy',
+  title: '',
 }
