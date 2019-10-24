@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Switch /> with \`big\` prop matches with snapshot 1`] = `
+<div
+  className="switch__StyledSwitchContainer-yvlpyn-0 jIlmXV"
+>
+  <button
+    aria-label={null}
+    aria-pressed={false}
+    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    disabled={false}
+    id="switch-component"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="switch__StyledLabel-yvlpyn-2 cnbMLE"
+    for="switch-component"
+  >
+    switch
+  </label>
+</div>
+`;
+
+exports[`<Switch /> with \`checkedColor\` \`defaultColor\` & \`disabledColor\` props matches with snapshot 1`] = `
+<div
+  className="switch__StyledSwitchContainer-yvlpyn-0 jIlmXV"
+>
+  <button
+    aria-label={null}
+    aria-pressed={false}
+    className="switch__StyledSwitch-yvlpyn-1 iDCgTg"
+    disabled={false}
+    id="switch-component"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="switch__StyledLabel-yvlpyn-2 iCoIfp"
+    for="switch-component"
+  >
+    switch
+  </label>
+</div>
+`;
+
+exports[`<Switch /> with \`disabled\` prop matches with snapshot 1`] = `
+<div
+  className="switch__StyledSwitchContainer-yvlpyn-0 kGNIkQ"
+>
+  <button
+    aria-label={null}
+    aria-pressed={false}
+    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    disabled={true}
+    id="switch-component"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="switch__StyledLabel-yvlpyn-2 joTCcp"
+    for="switch-component"
+  >
+    switch
+  </label>
+</div>
+`;
+
+exports[`<Switch /> with \`isChecked\` prop matches with snapshot 1`] = `
+<div
+  className="switch__StyledSwitchContainer-yvlpyn-0 jIlmXV"
+>
+  <button
+    aria-label={null}
+    aria-pressed={true}
+    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    disabled={false}
+    id="switch-component"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="switch__StyledLabel-yvlpyn-2 joTCcp"
+    for="switch-component"
+  >
+    switch
+  </label>
+</div>
+`;
+
+exports[`<Switch /> with \`isLabelVisible\` prop matches with snapshot 1`] = `
+<div
+  className="switch__StyledSwitchContainer-yvlpyn-0 jIlmXV"
+>
+  <button
+    aria-label="switch"
+    aria-pressed={false}
+    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    disabled={false}
+    id="switch-component"
+    onClick={[Function]}
+    type="button"
+  />
+</div>
+`;
+
+exports[`<Switch /> with \`label\` prop matches with snapshot 1`] = `
+<div
+  className="switch__StyledSwitchContainer-yvlpyn-0 jIlmXV"
+>
+  <button
+    aria-label={null}
+    aria-pressed={false}
+    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    disabled={false}
+    id="switch-component"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="switch__StyledLabel-yvlpyn-2 joTCcp"
+    for="switch-component"
+  >
+    A test label
+  </label>
+</div>
+`;
+
+exports[`<Switch /> with default props matches with snapshot 1`] = `
+<div
+  className="switch__StyledSwitchContainer-yvlpyn-0 jIlmXV"
+>
+  <button
+    aria-label={null}
+    aria-pressed={false}
+    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    disabled={false}
+    id="switch-component"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="switch__StyledLabel-yvlpyn-2 joTCcp"
+    for="switch-component"
+  >
+    switch
+  </label>
+</div>
+`;
