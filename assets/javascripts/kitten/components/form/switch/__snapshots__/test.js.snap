@@ -7,7 +7,7 @@ exports[`<Switch /> with \`big\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    className="switch__StyledSwitch-yvlpyn-1 jIroTX"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
@@ -29,7 +29,7 @@ exports[`<Switch /> with \`checkedColor\` \`defaultColor\` & \`disabledColor\` p
   <button
     aria-label={null}
     aria-pressed={false}
-    className="switch__StyledSwitch-yvlpyn-1 iDCgTg"
+    className="switch__StyledSwitch-yvlpyn-1 hCKwAj"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
@@ -51,7 +51,7 @@ exports[`<Switch /> with \`disabled\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    className="switch__StyledSwitch-yvlpyn-1 jIroTX"
     disabled={true}
     id="switch-component"
     onClick={[Function]}
@@ -73,7 +73,7 @@ exports[`<Switch /> with \`isChecked\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={true}
-    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    className="switch__StyledSwitch-yvlpyn-1 jIroTX"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
@@ -95,7 +95,7 @@ exports[`<Switch /> with \`isLabelVisible\` prop matches with snapshot 1`] = `
   <button
     aria-label="switch"
     aria-pressed={false}
-    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    className="switch__StyledSwitch-yvlpyn-1 jIroTX"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
@@ -111,7 +111,7 @@ exports[`<Switch /> with \`label\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    className="switch__StyledSwitch-yvlpyn-1 jIroTX"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
@@ -133,7 +133,7 @@ exports[`<Switch /> with default props matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="switch__StyledSwitch-yvlpyn-1 fOKIWd"
+    className="switch__StyledSwitch-yvlpyn-1 jIroTX"
     disabled={false}
     id="switch-component"
     onClick={[Function]}
