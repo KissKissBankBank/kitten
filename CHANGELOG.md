@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `ToggleSwitch` with styled-components.
+## [2.34.0] - 2019-10-25
+
+Feature:
+- Add `ToggleSwitch` component.
 
 ## [2.33.0] - 2019-10-24
 
