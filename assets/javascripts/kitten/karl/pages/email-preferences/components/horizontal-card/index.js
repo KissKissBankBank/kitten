@@ -4,7 +4,7 @@ import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../../constants/screen-config'
 import COLORS from '../../../../../constants/colors-config'
 
-const StyledContainer = styled.div`
+const HorizontalCard = styled.div`
   max-width: 100%;
   display: grid;
   padding: ${pxToRem(30)} 0;
@@ -97,12 +97,8 @@ const Text = props => (
   </TextContainer>
 )
 
-export default class HorizontalCard extends PureComponent {
-  static Image = Image
-  static Text = Text
-  static Action = Action
+HorizontalCard.Image = Image
+HorizontalCard.Text = Text
+HorizontalCard.Action = Action
 
-  render() {
-    return <StyledContainer {...this.props} />
-  }
-}
+export default HorizontalCard
