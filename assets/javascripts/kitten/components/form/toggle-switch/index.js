@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
@@ -170,7 +171,6 @@ export const ToggleSwitch = ({
 }
 
 ToggleSwitch.defaultProps = {
-  id: 'switch-component',
   isChecked: false,
   disabled: false,
   label: 'switch',
@@ -180,4 +180,17 @@ ToggleSwitch.defaultProps = {
   checkedColor: COLORS.primary1,
   defaultColor: COLORS.line1,
   disabledColor: COLORS.line2,
+}
+
+ToggleSwitch.propTypes = {
+  id: PropTypes.string.isRequired,
+  isChecked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  label: PropTypes.string,
+  big: PropTypes.bool,
+  isLabelVisible: PropTypes.bool,
+  reverseOrder: PropTypes.bool,
+  checkedColor: PropTypes.string,
+  defaultColor: PropTypes.string,
+  disabledColor: PropTypes.string,
 }

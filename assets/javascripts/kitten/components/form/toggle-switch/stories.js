@@ -20,42 +20,42 @@ const info = {
 
     #### Default
     ~~~js
-    <ToggleSwitch />
+    <ToggleSwitch id="toggle-switch" />
     ~~~
 
     #### Big label text
     ~~~js
-    <ToggleSwitch big />
+    <ToggleSwitch id="toggle-switch" big />
     ~~~
 
     #### Disabled
     ~~~js
-    <ToggleSwitch disabled />
+    <ToggleSwitch id="toggle-switch" disabled />
     ~~~
 
     #### Change label text
     ~~~js
-    <ToggleSwitch label="custom label text" />
+    <ToggleSwitch id="toggle-switch" label="custom label text" />
     ~~~
 
     #### Change visibility of label
     ~~~js
-    <ToggleSwitch isLabelVisible={ false } />
+    <ToggleSwitch id="toggle-switch" isLabelVisible={ false } />
     ~~~
 
     #### Reverse order of label & switch
     ~~~js
-    <ToggleSwitch reverseOrder />
+    <ToggleSwitch id="toggle-switch" reverseOrder />
     ~~~
 
     #### Have component switched on load
     ~~~js
-    <ToggleSwitch isChecked />
+    <ToggleSwitch id="toggle-switch" isChecked />
     ~~~
 
     #### Change colors
     ~~~js
-    <ToggleSwitch checkedColor="#000" defaultColor="#000" disabledColor="#ccc" />
+    <ToggleSwitch id="toggle-switch" checkedColor="#000" defaultColor="#000" disabledColor="#ccc" />
     ~~~
 
   `,
@@ -69,6 +69,7 @@ storiesOf('Form/ToggleSwitch', module)
       <Grid style={{ marginTop: '5em' }}>
         <GridCol offset="1" col="6">
           <ToggleSwitch
+            id="toggle-switch"
             disabled={boolean('Disabled', false)}
             big={boolean('Big', false)}
             label={text('Label', 'Le label')}

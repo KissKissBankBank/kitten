@@ -7,7 +7,7 @@ describe('<ToggleSwitch />', () => {
 
   describe('with default props', () => {
     beforeEach(() => {
-      component = renderer.create(<ToggleSwitch />).toJSON()
+      component = renderer.create(<ToggleSwitch id="toggle-switch" />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -18,7 +18,7 @@ describe('<ToggleSwitch />', () => {
   describe('with `label` prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<ToggleSwitch label="A test label" />)
+        .create(<ToggleSwitch id="toggle-switch" label="A test label" />)
         .toJSON()
     })
 
@@ -29,7 +29,9 @@ describe('<ToggleSwitch />', () => {
 
   describe('with `isChecked` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<ToggleSwitch isChecked />).toJSON()
+      component = renderer
+        .create(<ToggleSwitch id="toggle-switch" isChecked />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -39,7 +41,9 @@ describe('<ToggleSwitch />', () => {
 
   describe('with `big` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<ToggleSwitch big />).toJSON()
+      component = renderer
+        .create(<ToggleSwitch id="toggle-switch" big />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -49,7 +53,9 @@ describe('<ToggleSwitch />', () => {
 
   describe('with `disabled` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<ToggleSwitch disabled />).toJSON()
+      component = renderer
+        .create(<ToggleSwitch id="toggle-switch" disabled />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -60,7 +66,7 @@ describe('<ToggleSwitch />', () => {
   describe('with `isLabelVisible` prop', () => {
     beforeEach(() => {
       component = renderer
-        .create(<ToggleSwitch isLabelVisible={false} />)
+        .create(<ToggleSwitch id="toggle-switch" isLabelVisible={false} />)
         .toJSON()
     })
 
@@ -74,6 +80,7 @@ describe('<ToggleSwitch />', () => {
       component = renderer
         .create(
           <ToggleSwitch
+            id="toggle-switch"
             checkedColor="#000"
             defaultColor="#000"
             disabledColor="#000"
