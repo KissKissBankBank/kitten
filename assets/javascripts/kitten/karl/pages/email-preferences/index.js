@@ -4,7 +4,8 @@ import HorizontalCard from './components/horizontal-card'
 import { Container } from '../../../components/grid/container'
 import { Title } from '../../../components/typography/title'
 import { Text } from '../../../components/typography/text'
-import { Switch } from '../../../components/form/switch'
+import { ToggleSwitch } from '../../../components/form/toggle-switch'
+import COLORS from '../../../constants/colors-config'
 
 import styled from 'styled-components'
 
@@ -39,7 +40,11 @@ const EmailPreferences = props => (
         </Text>
       </HorizontalCard.Text>
       <HorizontalCard.Action>
-        <Switch />
+        <ToggleSwitch
+          isLabelVisible={false}
+          checkedColor={COLORS.valid}
+          id="switch-1"
+        />
       </HorizontalCard.Action>
     </HorizontalCard>
     <HorizontalCard>
@@ -62,7 +67,11 @@ const EmailPreferences = props => (
         </Text>
       </HorizontalCard.Text>
       <HorizontalCard.Action>
-        <Switch />
+        <ToggleSwitch
+          isLabelVisible={false}
+          checkedColor={COLORS.valid}
+          id="switch-2"
+        />
       </HorizontalCard.Action>
     </HorizontalCard>
     <HorizontalCard>
@@ -83,7 +92,11 @@ const EmailPreferences = props => (
         </Text>
       </HorizontalCard.Text>
       <HorizontalCard.Action>
-        <Switch />
+        <ToggleSwitch
+          isLabelVisible={false}
+          checkedColor={COLORS.valid}
+          id="switch-3"
+        />
       </HorizontalCard.Action>
     </HorizontalCard>
     <HorizontalCard>
@@ -106,7 +119,11 @@ const EmailPreferences = props => (
         </Text>
       </HorizontalCard.Text>
       <HorizontalCard.Action>
-        <Switch />
+        <ToggleSwitch
+          isLabelVisible={false}
+          checkedColor={COLORS.valid}
+          id="switch-4"
+        />
       </HorizontalCard.Action>
     </HorizontalCard>
     <HorizontalCard>
@@ -127,7 +144,11 @@ const EmailPreferences = props => (
         </Text>
       </HorizontalCard.Text>
       <HorizontalCard.Action>
-        <Switch />
+        <ToggleSwitch
+          isLabelVisible={false}
+          checkedColor={COLORS.valid}
+          id="switch-5"
+        />
       </HorizontalCard.Action>
     </HorizontalCard>
   </Container>
