@@ -11,26 +11,28 @@ const HorizontalCard = styled.div`
 
   grid-gap: ${pxToRem(20)} ${pxToRem(40)};
 
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: ${pxToRem(136)} auto;
   grid-template-rows: auto;
 
   grid-template-areas:
     'hc-image hc-action'
     'hc-text  hc-text';
 
-  -ms-grid-columns: auto ${pxToRem(40)} auto;
+  -ms-grid-columns: ${pxToRem(136)} ${pxToRem(40)} auto;
   -ms-grid-rows: auto ${pxToRem(20)} auto;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: ${pxToRem(157)} repeat(2, auto);
     grid-template-areas: 'hc-image hc-text hc-action';
 
-    -ms-grid-columns: auto ${pxToRem(40)} 1fr ${pxToRem(40)} auto;
+    -ms-grid-columns: ${pxToRem(157)} ${pxToRem(40)} 1fr ${pxToRem(40)} auto;
     -ms-grid-rows: auto;
   }
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    grid-template-columns: auto minmax(${pxToRem(606)}, 1fr) auto;
+    grid-template-columns: ${pxToRem(200)} 1fr auto;
+
+    -ms-grid-columns: ${pxToRem(200)} ${pxToRem(40)} 1fr ${pxToRem(40)} auto;
   }
 
   /* IE 11 */
@@ -48,15 +50,6 @@ const Image = styled.div`
 
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-
-  width: ${pxToRem(136)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    width: ${pxToRem(157)};
-  }
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    width: ${pxToRem(200)};
-  }
 `
 
 const TextContainer = styled.div`
@@ -85,6 +78,7 @@ const Action = styled.div`
     -ms-grid-column: 5;
   }
 `
+
 const TextContent = styled.div`
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
     max-width: ${pxToRem(606)};
