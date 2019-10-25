@@ -5,10 +5,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `CrowdfundingCard` mobile version.
-- Fix: Update truncated title on `CrowdfundingCardWidget` component.
-- Fix: Update `Label` styles.
-- Feature: Create `KissKissBankBankLogo` component.
-- Feature: Create `CrowdfundingCardWidget` component.
+- Feature: Add `ToggleSwitch` with styled-components.
+
+## [2.33.0] - 2019-10-24
+
+Features:
+- Create `KissKissBankBankLogo` component.
+- Create `CrowdfundingCardWidget` component.
+
+Fixes:
+- Update truncated title on `CrowdfundingCardWidget` component.
+- Update `Label` styles.
 
 ## [2.32.0] - 2019-10-16
 
