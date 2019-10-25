@@ -18,13 +18,24 @@ const StyledContainer = styled.div`
     'hc-image hc-action'
     'hc-text  hc-text';
 
+  -ms-grid-columns: auto ${pxToRem(40)} auto;
+  -ms-grid-rows: auto ${pxToRem(20)} auto;
+
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     grid-template-columns: repeat(3, auto);
     grid-template-areas: 'hc-image hc-text hc-action';
+
+    -ms-grid-columns: auto ${pxToRem(40)} 1fr ${pxToRem(40)} auto;
+    -ms-grid-rows: auto;
   }
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     grid-template-columns: auto minmax(${pxToRem(606)}, 1fr) auto;
+  }
+
+  /* IE 11 */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    display: -ms-grid;
   }
 
   & + & {
@@ -35,6 +46,9 @@ const StyledContainer = styled.div`
 const Image = styled.div`
   grid-area: hc-image;
 
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+
   width: ${pxToRem(136)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
@@ -44,18 +58,44 @@ const Image = styled.div`
     width: ${pxToRem(200)};
   }
 `
-const Text = styled.div`
+
+const TextContainer = styled.div`
   grid-area: hc-text;
 
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    max-width: ${pxToRem(606)};
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
   }
 `
+
 const Action = styled.div`
   grid-area: hc-action;
   align-self: center;
   justify-self: end;
+
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: end;
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    -ms-grid-column: 5;
+  }
 `
+const TextContent = styled.div`
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    max-width: ${pxToRem(606)};
+  }
+`
+
+const Text = props => (
+  <TextContainer>
+    <TextContent {...props} />
+  </TextContainer>
+)
 
 export default class HorizontalCard extends PureComponent {
   static Image = Image
