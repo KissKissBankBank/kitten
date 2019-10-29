@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `.k-u-background-color-primary6` utility.
+
 ## [2.34.0] - 2019-10-25
 
 Feature:
