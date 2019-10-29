@@ -19,7 +19,7 @@ const StyledTitle = styled.div`
   line-height: 1;
 `
 
-const StyledTitleWidget = styled(StyledTitle)`
+const StyledWidgetTitle = styled(StyledTitle)`
   padding: 0;
 `
 
@@ -132,7 +132,7 @@ class TitleComponent extends PureComponent {
     return (
       <>
         <StyledWidgetContainer>
-          <StyledTitleWidget>
+          <StyledWidgetTitle>
             {!loading && (
               <Text
                 tag="span"
@@ -147,7 +147,7 @@ class TitleComponent extends PureComponent {
                 {!titleTruncate && widgetTitle}
               </Text>
             )}
-          </StyledTitleWidget>
+          </StyledWidgetTitle>
 
           {!loading && (
             <StyledDayCounter>

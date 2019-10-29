@@ -5,14 +5,19 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { Container } from '../../../components/grid/container'
 import { Modal } from '../../../components/modals/modal'
 import { Button } from '../../../components/buttons/button/button'
-import { TextCopy } from '../../../components/text-copy'
+import { TextInput } from '../../../components/form/text-input'
 import { Title } from '../../../components/typography/title'
+import { Text } from '../../../components/typography/text'
 import { Marger } from '../../../components/layout/marger'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
+import { EmbedIcon } from '../../../components/icons/embed-icon'
+import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
 
 const ButtonTrigger = ({ children }) => (
-  <Button modifier="helium">{children}</Button>
+  <Button icon modifier="hydrogen">
+    {children}
+  </Button>
 )
 
 const GlobalStyle = createGlobalStyle`
@@ -50,21 +55,42 @@ const StyledWidgetContainer = styled(Container)`
   margin-top: ${pxToRem(50)};
 `
 
+const StyledWidgetText = styled(Text)`
+  display: flex;
+  align-items: center;
+`
+
+const StyledWidgetLogo = styled(KissKissBankBankIcon)`
+  margin-left: ${pxToRem(5)};
+`
+
+const WidgetContainerState = () => (
+  <StyledWidgetText
+    size="micro"
+    lineHeight="normal"
+    weight="regular"
+    color="background1"
+  >
+    Sur
+    <StyledWidgetLogo width="80" height="18" />
+  </StyledWidgetText>
+)
+
 const Content = props => (
   <StyledContainer>
     <StyledTitle>Aperçu du widget</StyledTitle>
-    <TextCopy />
+    <TextInput tag="textarea" />
     <Marger top="2">
       <CrowdfundingCardWidget
-        ownerTitle="Les Arts Dessinés"
-        ownerDescription="Paris (75)"
+        ownerTitle="LesArtsDessinés"
+        ownerDescription="Paris"
         loading={false}
         title="Les Arts dessinés : devenez abonné-fondateur"
         dayCounter="27 jours"
         stateDay="restant"
         subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma"
-        buttonText="Contribuer dès 5 €"
-        state="Sur"
+        buttonText="Contribuer"
+        state={<WidgetContainerState />}
       />
     </Marger>
   </StyledContainer>
@@ -77,7 +103,7 @@ const WidgetCard = props => (
         <GlobalStyle />
         <Modal
           closeButtonLabel="Fermer"
-          trigger={<ButtonTrigger children="Widget" />}
+          trigger={<ButtonTrigger children={<EmbedIcon />} />}
           content={<Content />}
         />
       </GridCol>

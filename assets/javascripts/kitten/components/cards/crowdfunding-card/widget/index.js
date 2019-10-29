@@ -18,7 +18,7 @@ const StyledContainer = styled.div`
 
 const StyledTitleAndDescription = styled.div`
   padding: 0 ${COMPONENT_GUTTER};
-  margin-top: ${pxToRem(10)};
+  margin-top: ${pxToRem(5)};
 
   ${({ titlesMinHeight }) =>
     titlesMinHeight &&
