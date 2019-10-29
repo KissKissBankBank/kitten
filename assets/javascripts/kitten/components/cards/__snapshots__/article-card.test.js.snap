@@ -49,7 +49,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ctCiBb"
   >
     
     
@@ -109,7 +109,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ctCiBb"
   >
     <div
       className="title__StyledTitle-sc-1wv1kzg-1 jPVxSr"
@@ -208,7 +208,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ctCiBb"
   >
     
     
@@ -269,7 +269,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ctCiBb"
   >
     <div
       className="title__StyledTitle-sc-1wv1kzg-1 jPVxSr"
