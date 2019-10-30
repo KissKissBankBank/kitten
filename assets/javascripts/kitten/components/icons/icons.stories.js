@@ -51,6 +51,7 @@ import { WarningCircleIcon } from './warning-circle-icon'
 import { WhatsAppIcon } from './whatsapp-icon'
 import { YoutubeIcon } from './youtube-icon'
 import { KissKissBankBankIcon } from './kisskissbankbank-icon'
+import { EmbedIcon } from './embed-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -152,7 +153,8 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<BubbleIcon />} />
         <IconContainer children={<ExportIcon />} />
         <IconContainer children={<StrokeIcon />} />
-        <IconContainer children={<KissKissBankBankIcon width="130" />} />
+        <IconContainer children={<KissKissBankBankIcon width="70" />} />
+        <IconContainer children={<EmbedIcon />} />
       </Group>
     </Container>
   )

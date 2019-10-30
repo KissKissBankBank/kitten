@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
@@ -7,6 +8,9 @@ import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { CrowdfundingCard } from './index'
 import { CrowdfundingCardWidget } from './widget'
+import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
+import { Text } from '../../../components/typography/text'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -18,6 +22,27 @@ const StoryContainer = ({ children }) => (
       </GridCol>
     </Grid>
   </Container>
+)
+
+const StyledWidgetText = styled(Text)`
+  display: flex;
+  align-items: center;
+`
+
+const StyledWidgetLogo = styled(KissKissBankBankIcon)`
+  margin-left: ${pxToRem(5)};
+`
+
+const WidgetContainerState = () => (
+  <StyledWidgetText
+    size="micro"
+    lineHeight="normal"
+    weight="regular"
+    color="background1"
+  >
+    Sur
+    <StyledWidgetLogo width="80" height="18" />
+  </StyledWidgetText>
 )
 
 storiesOf('Cards/CrowdfundingCard', module)
@@ -67,8 +92,8 @@ storiesOf('Cards/CrowdfundingCard', module)
           'Subtitle',
           'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
         )}
-        buttonText={text('Button text', 'Contribuer dès 5 €')}
-        state={text('State', 'Sur')}
+        buttonText={text('Button text', 'Contribuer')}
+        state={<WidgetContainerState />}
       />
     </StoryContainer>
   ))

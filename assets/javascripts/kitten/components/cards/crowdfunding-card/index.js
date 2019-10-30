@@ -16,6 +16,8 @@ const StyledContainer = styled.div`
 `
 
 const StyledTitleAndDescription = styled.div`
+  margin-top: ${pxToRem(5)};
+
   ${({ titlesMinHeight }) =>
     titlesMinHeight &&
     css`
