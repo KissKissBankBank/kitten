@@ -9,7 +9,7 @@ export const ArticleCard = ({ articleTitle, articleSubTitle, ...props }) => (
     info1=""
     info2=""
     info3=""
-    progress={0}
+    progress={false}
     state=""
     titlesMinHeight={false}
     titleTruncate={false}
