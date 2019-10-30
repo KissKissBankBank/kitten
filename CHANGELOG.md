@@ -6,7 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `color` and `title` props on `CopyIcon` component.
 - Feature: Create `EmbedIcon` component.
-- Feature: Add `.k-u-background-color-primary6` utility.
+
+## [2.35.0] - 2019-10-29
+
+Feature:
+- Add `.k-u-background-color-primary6` utility.
 
 ## [2.34.0] - 2019-10-25
 
