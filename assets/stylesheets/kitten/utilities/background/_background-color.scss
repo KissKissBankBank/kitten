@@ -10,6 +10,8 @@
 ///
 ///   <span class="k-u-background-color-background1">…</span>
 ///   <span class="k-u-background-color-background2">…</span>
+///   <span class="k-u-background-color-primary5">…</span>
+///   <span class="k-u-background-color-primary6">…</span>
 
 @mixin k-utilities-background-color {
   .k-u-background-color-background1 {
@@ -22,5 +24,9 @@
 
   .k-u-background-color-primary5 {
     background-color: map-get($k-colors, 'primary-5');
+  }
+
+  .k-u-background-color-primary6 {
+    background-color: map-get($k-colors, 'primary-6');
   }
 }

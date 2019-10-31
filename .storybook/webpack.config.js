@@ -21,21 +21,16 @@ module.exports = {
     rules: [
       {
         test: /\.(svg|png|jpe?g)$/,
-        loader: 'file-loader',
-        options: {
-          name: 'images/[name].[ext]',
-        },
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: 'images/[name].[ext]',
+          },
+        }],
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-        ],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
@@ -43,12 +38,8 @@ module.exports = {
           extensions: ['.scss', '.sass'],
         },
         use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
+          'style-loader',
+          'css-loader',
           {
             loader: 'sass-loader',
             options: {

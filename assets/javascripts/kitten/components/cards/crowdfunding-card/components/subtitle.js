@@ -59,7 +59,6 @@ const StyledSubtitleLoading = styled.span`
 `
 
 const StyledWidgetSubtitle = styled(Text)`
-  padding-left: ${COMPONENT_GUTTER};
   margin: ${pxToRem(5)} 0 ${pxToRem(20)} 0;
 `
 

@@ -30,6 +30,10 @@ const StyledTitle = styled.div`
   }
 `
 
+const StyledWidgetTitle = styled(StyledTitle)`
+  padding: 0;
+`
+
 const StyledTitleLoading = styled.span`
   display: block;
   background-color: ${COLORS.line2};
@@ -49,7 +53,7 @@ const StyledWidgetContainer = styled.div`
 
 const StyledDayCounter = styled.div`
   line-height: 1;
-  margin-left: calc(4 * ${COMPONENT_GUTTER});
+  margin-left: calc(2 * ${COMPONENT_GUTTER});
 `
 
 const StyledStateDay = styled(Text)`
@@ -147,7 +151,7 @@ class TitleComponent extends PureComponent {
     return (
       <>
         <StyledWidgetContainer>
-          <StyledTitle>
+          <StyledWidgetTitle>
             {!loading && (
               <Text
                 tag="span"
@@ -162,7 +166,7 @@ class TitleComponent extends PureComponent {
                 {!titleTruncate && widgetTitle}
               </Text>
             )}
-          </StyledTitle>
+          </StyledWidgetTitle>
 
           {!loading && (
             <StyledDayCounter>

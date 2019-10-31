@@ -5,7 +5,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `CrowdfundingCard` mobile version.
-- Feature: Add `ToggleSwitch` with styled-components.
+- Feature: Add `color` and `title` props on `CopyIcon` component.
+- Feature: Create `EmbedIcon` component.
+
+## [2.35.0] - 2019-10-29
+
+Feature:
+- Add `.k-u-background-color-primary6` utility.
+
+## [2.34.0] - 2019-10-25
+
+Feature:
+- Add `ToggleSwitch` component.
 
 ## [2.33.0] - 2019-10-24
 
