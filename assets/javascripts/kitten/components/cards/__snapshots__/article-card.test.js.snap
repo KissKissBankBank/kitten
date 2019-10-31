@@ -39,26 +39,24 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       <div
         className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
-
+        
       </div>
       <div
         className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
-
+        
       </div>
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 cKinRA"
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ctCiBb"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgQTOc"
   >
-
-
-
-
+    
+    
+    
+    
   </div>
-
+  
 </div>
 `;
 
@@ -101,23 +99,17 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       <div
         className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
-
+        
       </div>
       <div
         className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
-
+        
       </div>
     </div>
   </div>
   <div
-<<<<<<< HEAD
-    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 cKinRA"
-||||||| merged common ancestors
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
-=======
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ctCiBb"
->>>>>>> origin
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgQTOc"
   >
     <div
       className="title__StyledTitle-sc-1wv1kzg-1 gmeiBW"
@@ -128,7 +120,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         Custom title
       </p>
     </div>
-
+    
     <div
       className="subtitle__StyledContainerSubtitle-hzl57w-1 fVLWtT"
     >
@@ -161,9 +153,9 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         </span>
       </p>
     </div>
-
+    
   </div>
-
+  
 </div>
 `;
 
@@ -206,30 +198,24 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       <div
         className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
       >
-
+        
       </div>
       <div
         className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
       >
-
+        
       </div>
     </div>
   </div>
   <div
-<<<<<<< HEAD
-    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 cKinRA"
-||||||| merged common ancestors
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
-=======
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ctCiBb"
->>>>>>> origin
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgQTOc"
   >
-
-
-
-
+    
+    
+    
+    
   </div>
-
+  
 </div>
 `;
 
@@ -283,13 +269,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-<<<<<<< HEAD
-    className="crowdfunding-card__StyledTitleAndSubtitle-sc-1b0f5ki-1 cKinRA"
-||||||| merged common ancestors
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgWFMm"
-=======
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ctCiBb"
->>>>>>> origin
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 cgQTOc"
   >
     <div
       className="title__StyledTitle-sc-1wv1kzg-1 gmeiBW"
@@ -300,7 +280,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         Custom title
       </p>
     </div>
-
+    
     <div
       className="subtitle__StyledContainerSubtitle-hzl57w-1 fVLWtT"
     >
@@ -333,8 +313,8 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         </span>
       </p>
     </div>
-
+    
   </div>
-
+  
 </a>
 `;

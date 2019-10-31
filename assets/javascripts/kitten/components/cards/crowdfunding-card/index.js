@@ -83,7 +83,7 @@ export class CrowdfundingCard extends PureComponent {
           avatarProps={avatarProps}
           loading={loading}
         />
-        <StyledTitleAndSubtitle titlesMinHeight={titlesMinHeight}>
+        <StyledTitleAndDescription titlesMinHeight={titlesMinHeight}>
           <TitleComponent
             title={cardTitle}
             loading={loading}
@@ -94,7 +94,7 @@ export class CrowdfundingCard extends PureComponent {
             subTitleTruncate={subTitleTruncate}
             loading={loading}
           />
-        </StyledTitleAndSubtitle>
+        </StyledTitleAndDescription>
         <Informations
           info1={info1}
           info2={info2}
