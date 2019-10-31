@@ -115,10 +115,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   padding-bottom: 0.3125rem;
 }
 
-.c5 {
-  margin-top: 0.3125rem;
-}
-
 @media (max-width:47.9375rem) {
   .c2 {
     display: none;
@@ -333,11 +329,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   padding: 0;
 }
 
-.c7 .k-Card__title {
-  font-size: 0.8888888888888888rem;
-  margin-top: 0.625rem;
-}
-
 .c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -485,12 +476,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 @media (max-width:47.9375rem) {
   .c2 {
     display: none;
-  }
-}
-
-@media (min-width:48rem) {
-  .c7 .k-Card__title {
-    font-size: 1.265625rem;
   }
 }
 

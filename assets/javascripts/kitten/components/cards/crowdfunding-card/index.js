@@ -17,8 +17,6 @@ const StyledContainer = styled.div`
 `
 
 const StyledTitleAndDescription = styled.div`
-  margin-top: ${pxToRem(5)};
-
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
     ${({ titlesMinHeight }) =>
       titlesMinHeight &&
