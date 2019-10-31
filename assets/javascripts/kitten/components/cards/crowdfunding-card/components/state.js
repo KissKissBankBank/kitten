@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { KissKissBankBankIcon } from '../../../../components/icons/kisskissbankbank-icon'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { Text } from '../../../../components/typography/text'
 
