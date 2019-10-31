@@ -79,7 +79,7 @@ var StyledSubtitleLoading = _styledComponents.default.span.withConfig({
 var StyledWidgetSubtitle = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "subtitle__StyledWidgetSubtitle",
   componentId: "hzl57w-5"
-})(["padding-left:", ";margin:", " 0 ", " 0;"], COMPONENT_GUTTER, (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(20));
+})(["margin:", " 0 ", " 0;"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(20));
 
 var Subtitle =
 /*#__PURE__*/

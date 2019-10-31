@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `color` and `title` props on `CopyIcon` component.
-- Feature: Create `EmbedIcon` component.
+## [2.36.0] - 2019-10-31
+
+Features:
+- Add `color` and `title` props on `CopyIcon` component.
+- Create `EmbedIcon` component.
 
 ## [2.35.0] - 2019-10-29
 
