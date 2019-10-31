@@ -93,7 +93,7 @@ function (_PureComponent) {
 }(_react.PureComponent);
 
 ProgressBar.propTypes = {
-  progress: _propTypes.default.number,
+  progress: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.bool]),
   progressColor: _propTypes.default.string,
   loading: _propTypes.default.bool
 };
