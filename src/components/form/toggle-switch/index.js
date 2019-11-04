@@ -53,36 +53,43 @@ var StyledSwitch = _styledComponents.default.button.withConfig({
 }, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line2, (0, _typography.pxToRem)(borderRadius), transitionDuration, transitionDuration, transitionDuration, _colorsConfig.default.primary1, (0, _typography.pxToRem)(2), _colorsConfig.default.primary4, (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(switchHeight), (0, _typography.pxToRem)(switchHeight), _colorsConfig.default.background1, (0, _typography.pxToRem)(borderSize), _colorsConfig.default.line2, (0, _typography.pxToRem)(switchHeight), transitionDuration, transitionDuration, transitionDuration, transitionDuration, function (_ref4) {
   var checkedColor = _ref4.checkedColor;
   return checkedColor;
-}, (0, _typography.pxToRem)(switchWidth - switchHeight - borderSize), _colorsConfig.default.primary3, _colorsConfig.default.primary3, function (_ref5) {
-  var disabledColor = _ref5.disabledColor;
+}, (0, _typography.pxToRem)(switchWidth - switchHeight - borderSize), function (_ref5) {
+  var activeColor = _ref5.activeColor;
+  return activeColor;
+}, function (_ref6) {
+  var activeColor = _ref6.activeColor;
+  return activeColor;
+}, function (_ref7) {
+  var disabledColor = _ref7.disabledColor;
   return disabledColor;
 });
 
 var StyledLabel = _styledComponents.default.label.withConfig({
   displayName: "toggle-switch__StyledLabel",
   componentId: "ski4b0-2"
-})(["padding-left:", ";", " font-size:", ";line-height:", ";color:", ";transition:color ", " ease;cursor:pointer;::selection{background:transparent;}::-moz-selection{background:transparent;}", ":hover &{color:", ";}", ":active &{color:", ";}", " button[disabled] + &{color:", ";cursor:not-allowed;}"], (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.light, function (_ref6) {
-  var big = _ref6.big;
+})(["padding-left:", ";", " font-size:", ";line-height:", ";color:", ";transition:color ", " ease;cursor:pointer;::selection{background:transparent;}::-moz-selection{background:transparent;}", ":hover &{color:", ";}", ":active &{color:", ";}", " button[disabled] + &{color:", ";cursor:not-allowed;}"], (0, _typography.pxToRem)(10), _typographyConfig.default.fontStyles.light, function (_ref8) {
+  var big = _ref8.big;
   return (0, _typography.stepToRem)(big ? 3 : 0);
-}, (0, _typography.pxToRem)(switchHeight), _colorsConfig.default.font1, transitionDuration, StyledSwitchContainer, _colorsConfig.default.primary1, StyledSwitchContainer, _colorsConfig.default.primary3, StyledSwitchContainer, function (_ref7) {
-  var disabledColor = _ref7.disabledColor;
+}, (0, _typography.pxToRem)(switchHeight), _colorsConfig.default.font1, transitionDuration, StyledSwitchContainer, _colorsConfig.default.primary1, StyledSwitchContainer, _colorsConfig.default.primary3, StyledSwitchContainer, function (_ref9) {
+  var disabledColor = _ref9.disabledColor;
   return disabledColor;
 });
 
-var ToggleSwitch = function ToggleSwitch(_ref8) {
-  var id = _ref8.id,
-      isChecked = _ref8.isChecked,
-      disabled = _ref8.disabled,
-      label = _ref8.label,
-      big = _ref8.big,
-      isLabelVisible = _ref8.isLabelVisible,
-      reverseOrder = _ref8.reverseOrder,
-      checkedColor = _ref8.checkedColor,
-      defaultColor = _ref8.defaultColor,
-      disabledColor = _ref8.disabledColor,
-      switchProps = _ref8.switchProps,
-      labelProps = _ref8.labelProps,
-      others = (0, _objectWithoutProperties2.default)(_ref8, ["id", "isChecked", "disabled", "label", "big", "isLabelVisible", "reverseOrder", "checkedColor", "defaultColor", "disabledColor", "switchProps", "labelProps"]);
+var ToggleSwitch = function ToggleSwitch(_ref10) {
+  var activeColor = _ref10.activeColor,
+      big = _ref10.big,
+      checkedColor = _ref10.checkedColor,
+      defaultColor = _ref10.defaultColor,
+      disabled = _ref10.disabled,
+      disabledColor = _ref10.disabledColor,
+      id = _ref10.id,
+      isChecked = _ref10.isChecked,
+      isLabelVisible = _ref10.isLabelVisible,
+      label = _ref10.label,
+      labelProps = _ref10.labelProps,
+      reverseOrder = _ref10.reverseOrder,
+      switchProps = _ref10.switchProps,
+      others = (0, _objectWithoutProperties2.default)(_ref10, ["activeColor", "big", "checkedColor", "defaultColor", "disabled", "disabledColor", "id", "isChecked", "isLabelVisible", "label", "labelProps", "reverseOrder", "switchProps"]);
 
   var _useState = (0, _react.useState)(isChecked),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -103,7 +110,8 @@ var ToggleSwitch = function ToggleSwitch(_ref8) {
     "aria-label": isLabelVisible ? null : label,
     checkedColor: checkedColor,
     defaultColor: defaultColor,
-    disabledColor: disabledColor
+    disabledColor: disabledColor,
+    activeColor: activeColor
   }, switchProps)), isLabelVisible && _react.default.createElement(StyledLabel, (0, _extends2.default)({
     for: id,
     disabledColor: disabledColor,
@@ -113,25 +121,27 @@ var ToggleSwitch = function ToggleSwitch(_ref8) {
 
 exports.ToggleSwitch = ToggleSwitch;
 ToggleSwitch.defaultProps = {
-  isChecked: false,
-  disabled: false,
-  label: 'switch',
+  activeColor: _colorsConfig.default.primary3,
   big: false,
-  isLabelVisible: true,
-  reverseOrder: false,
   checkedColor: _colorsConfig.default.primary1,
   defaultColor: _colorsConfig.default.line1,
-  disabledColor: _colorsConfig.default.line2
+  disabled: false,
+  disabledColor: _colorsConfig.default.line2,
+  isChecked: false,
+  isLabelVisible: true,
+  label: 'switch',
+  reverseOrder: false
 };
 ToggleSwitch.propTypes = {
-  id: _propTypes.default.string.isRequired,
-  isChecked: _propTypes.default.bool,
-  disabled: _propTypes.default.bool,
-  label: _propTypes.default.string,
+  activeColor: _propTypes.default.string,
   big: _propTypes.default.bool,
-  isLabelVisible: _propTypes.default.bool,
-  reverseOrder: _propTypes.default.bool,
   checkedColor: _propTypes.default.string,
   defaultColor: _propTypes.default.string,
-  disabledColor: _propTypes.default.string
+  disabled: _propTypes.default.bool,
+  disabledColor: _propTypes.default.string,
+  id: _propTypes.default.string.isRequired,
+  isChecked: _propTypes.default.bool,
+  isLabelVisible: _propTypes.default.bool,
+  label: _propTypes.default.string,
+  reverseOrder: _propTypes.default.bool
 };
