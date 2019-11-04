@@ -71,4 +71,16 @@ describe('<TextInputWithButton />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with buttonProps prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInputWithButton buttonProps={{ onClick: () => {} }} />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
