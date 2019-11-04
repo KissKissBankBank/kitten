@@ -42,6 +42,11 @@ const StyledButton = styled.button`
       border-color: ${COLORS.error};
     `}
 
+  input:invalid:not(:focus) + & {
+    background-color: ${COLORS.error};
+    border-color: ${COLORS.error};
+  }
+
   ${({ disabled }) =>
     disabled &&
     css`
