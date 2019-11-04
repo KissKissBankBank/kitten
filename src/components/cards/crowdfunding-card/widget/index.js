@@ -45,6 +45,8 @@ var _state = _interopRequireDefault(require("../components/state"));
 
 var _typography = require("../../../../helpers/utils/typography");
 
+var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
+
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "widget__StyledContainer",
   componentId: "sc-1tlhy8x-0"
@@ -53,7 +55,7 @@ var StyledContainer = _styledComponents.default.div.withConfig({
 var StyledTitleAndDescription = _styledComponents.default.div.withConfig({
   displayName: "widget__StyledTitleAndDescription",
   componentId: "sc-1tlhy8x-1"
-})(["margin-top:", ";", ""], (0, _typography.pxToRem)(10), function (_ref) {
+})(["padding:0 ", ";margin-top:", ";", ""], COMPONENT_GUTTER, (0, _typography.pxToRem)(5), function (_ref) {
   var titlesMinHeight = _ref.titlesMinHeight;
   return titlesMinHeight && (0, _styledComponents.css)(["min-height:", ";"], (0, _typography.pxToRem)(75));
 });
