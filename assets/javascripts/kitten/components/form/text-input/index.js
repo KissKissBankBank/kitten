@@ -61,6 +61,16 @@ const styledTextInput = css`
       }
     `}
 
+  &:invalid {
+    box-shadow: none;
+    outline: none;
+
+    &:not(:focus) {
+      color: ${COLORS.error3};
+      border-color: ${COLORS.error3};
+    }
+  }
+
   ${({ tiny }) =>
     tiny &&
     css`
