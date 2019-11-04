@@ -2,20 +2,13 @@
 
 exports[`<BackerCard /> by default matches with snapshot 1`] = `
 <div
-  style={
-    Object {
-      "border": "2px solid #eee",
-      "padding": "0 20px",
-      "textAlign": "center",
-      "wordBreak": "break-word",
-    }
-  }
+  className="backer-card__StyledCard-zl7grf-0 hSpaUR"
 >
   <div
     className="marger__StyledMarger-q3lecu-0 ktAgUq"
   >
     <span
-      className="k-u-color-primary1 k-u-line-height-normal k-u-weight-regular"
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
     >
       Backer name
     </span>
@@ -24,12 +17,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 hAgZUM"
   >
     <span
-      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
-      style={
-        Object {
-          "margin": "0 auto",
-        }
-      }
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents backer-card__StyledButtonImage-zl7grf-2 hDlTRo"
       tabIndex={null}
     >
       <img
@@ -43,12 +31,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 bsSajs"
   >
     <p
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
-      style={
-        Object {
-          "margin": 0,
-        }
-      }
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
     >
       Description
     </p>
@@ -58,29 +41,17 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
 
 exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
 <div
-  style={
-    Object {
-      "border": "2px solid #eee",
-      "padding": "0 20px",
-      "textAlign": "center",
-      "wordBreak": "break-word",
-    }
-  }
+  className="backer-card__StyledCard-zl7grf-0 hSpaUR"
 >
   <div
     className="marger__StyledMarger-q3lecu-0 ktAgUq"
   >
     <span
-      className="k-u-color-primary1 k-u-line-height-normal k-u-weight-regular"
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
     >
       Backer name
       <span
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light"
-        style={
-          Object {
-            "display": "block",
-          }
-        }
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light backer-card__StyledSubtitle-zl7grf-1 dNoqEO"
       >
         Subtitle
       </span>
@@ -90,12 +61,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 hAgZUM"
   >
     <span
-      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents"
-      style={
-        Object {
-          "margin": "0 auto",
-        }
-      }
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents backer-card__StyledButtonImage-zl7grf-2 hDlTRo"
       tabIndex={null}
     >
       <img
@@ -109,12 +75,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 bsSajs"
   >
     <p
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
-      style={
-        Object {
-          "margin": 0,
-        }
-      }
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
     >
       Description
     </p>
