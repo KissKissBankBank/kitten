@@ -86,19 +86,20 @@ function (_PureComponent) {
           tiny = _this$props.tiny,
           value = _this$props.value,
           modifier = _this$props.modifier,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "modifier"]);
+          buttonProps = _this$props.buttonProps,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "modifier", "buttonProps"]);
       return _react.default.createElement(StyledTextInputWithButton, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
         valid: valid,
         error: error,
         disabled: disabled,
         tiny: tiny
-      })), _react.default.createElement(StyledButton, {
+      })), _react.default.createElement(StyledButton, (0, _extends2.default)({
         type: "button",
         modifier: modifier,
         valid: valid,
         error: error,
         disabled: disabled
-      }, value));
+      }, buttonProps), value));
     }
   }]);
   return TextInputWithButton;
