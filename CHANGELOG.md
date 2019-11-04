@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Change color for `BackerCard` title.
+
 ## [2.36.0] - 2019-10-31
 
 Features:
