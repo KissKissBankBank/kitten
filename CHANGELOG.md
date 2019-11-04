@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `activeColor` prop to `ToogleSwitch` component.
 - Feature: Add `buttonProps` to `TextInputWithButton` component.
 - Fix: Change color for `BackerCard` title.
 

@@ -55,7 +55,7 @@ const info = {
 
     #### Change colors
     ~~~js
-    <ToggleSwitch id="toggle-switch" checkedColor="#000" defaultColor="#000" disabledColor="#ccc" />
+    <ToggleSwitch id="toggle-switch" checkedColor="#000" defaultColor="#000" disabledColor="#ccc" activeColor="#333" />
     ~~~
 
   `,
