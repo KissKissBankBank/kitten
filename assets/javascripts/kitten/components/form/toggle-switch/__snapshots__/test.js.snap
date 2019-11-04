@@ -29,7 +29,7 @@ exports[`<ToggleSwitch /> with \`checkedColor\` \`defaultColor\` & \`disabledCol
   <button
     aria-label={null}
     aria-pressed={false}
-    className="toggle-switch__StyledSwitch-ski4b0-1 bmeMAS"
+    className="toggle-switch__StyledSwitch-ski4b0-1 hyIFDQ"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}

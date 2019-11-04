@@ -84,6 +84,7 @@ describe('<ToggleSwitch />', () => {
             checkedColor="#000"
             defaultColor="#000"
             disabledColor="#000"
+            activeColor="#000"
           />,
         )
         .toJSON()
