@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `buttonProps` to `TextInputWithButton` component.
+- Fix: Change color for `BackerCard` title.
 
 ## [2.36.0] - 2019-10-31
 
