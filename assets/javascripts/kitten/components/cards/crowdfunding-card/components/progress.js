@@ -36,7 +36,7 @@ const StyledLoading = styled.span`
 
 class ProgressBar extends PureComponent {
   static propTypes = {
-    progress: PropTypes.number,
+    progress: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
     progressColor: PropTypes.string,
     loading: PropTypes.bool,
   }

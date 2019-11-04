@@ -53,7 +53,7 @@ var StyledContainer = _styledComponents.default.div.withConfig({
 var StyledTitleAndDescription = _styledComponents.default.div.withConfig({
   displayName: "crowdfunding-card__StyledTitleAndDescription",
   componentId: "sc-1b0f5ki-1"
-})(["", ""], function (_ref) {
+})(["margin-top:", ";", ""], (0, _typography.pxToRem)(5), function (_ref) {
   var titlesMinHeight = _ref.titlesMinHeight;
   return titlesMinHeight && (0, _styledComponents.css)(["min-height:", ";"], (0, _typography.pxToRem)(75));
 });
