@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Browser `:invalid` style handling by `TextInput`
+## [2.37.1] - 2019-11-04
+
+Fix:
+- Browser `:invalid` style handling by `TextInput`.
 
 ## [2.37.0] - 2019-11-04
 
