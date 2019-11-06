@@ -51,7 +51,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 0 0.625rem;
+  padding: 0;
   line-height: 1;
 }
 
@@ -75,7 +75,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 0.625rem;
+  padding: 0;
   margin-top: 0.3125rem;
   margin-bottom: 1.25rem;
 }
@@ -115,21 +115,32 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   padding-bottom: 0.3125rem;
 }
 
+.c5 {
+  min-height: 3.125rem;
+}
+
 @media (max-width:47.9375rem) {
   .c2 {
     display: none;
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:48rem) {
   .c6 {
     margin-top: 1.25rem;
+    padding: 0 0.625rem;
   }
 }
 
 @media (min-width:48rem) {
   .c7 {
     margin-right: 1.875rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c8 {
+    padding: 0 0.625rem;
   }
 }
 
@@ -324,8 +335,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  padding: 0 0.625rem;
+  padding: 0;
   line-height: 1;
+  margin-top: 0.625rem;
   padding: 0;
 }
 
@@ -476,6 +488,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 @media (max-width:47.9375rem) {
   .c2 {
     display: none;
+  }
+}
+
+@media (min-width:48rem) {
+  .c7 {
+    padding: 0 0.625rem;
   }
 }
 

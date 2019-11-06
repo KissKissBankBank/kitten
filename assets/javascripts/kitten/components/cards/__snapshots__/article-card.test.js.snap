@@ -49,7 +49,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ZlHYq"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 dhknit"
   >
     
     
@@ -109,13 +109,13 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ZlHYq"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 dhknit"
   >
     <div
-      className="title__StyledTitleContainer-sc-1wv1kzg-1 bCGzoJ"
+      className="title__StyledTitleContainer-sc-1wv1kzg-1 faWlNg"
     >
       <p
-        className="k-Title k-Card__title title__StyledTitle-sc-1wv1kzg-2 fLwdHS k-Title--primary k-Title--withoutMargin"
+        className="k-Title k-Card__title title__StyledTitle-sc-1wv1kzg-2 hnn k-Title--primary k-Title--withoutMargin"
       >
         Custom title
       </p>
@@ -208,7 +208,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ZlHYq"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 dhknit"
   >
     
     
@@ -269,13 +269,13 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 ZlHYq"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 dhknit"
   >
     <div
-      className="title__StyledTitleContainer-sc-1wv1kzg-1 bCGzoJ"
+      className="title__StyledTitleContainer-sc-1wv1kzg-1 faWlNg"
     >
       <p
-        className="k-Title k-Card__title title__StyledTitle-sc-1wv1kzg-2 fLwdHS k-Title--primary k-Title--withoutMargin"
+        className="k-Title k-Card__title title__StyledTitle-sc-1wv1kzg-2 hnn k-Title--primary k-Title--withoutMargin"
       >
         Custom title
       </p>
