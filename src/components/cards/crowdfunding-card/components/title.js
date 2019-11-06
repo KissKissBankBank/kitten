@@ -48,29 +48,34 @@ var StyledTitle = _styledComponents.default.div.withConfig({
   componentId: "sc-1wv1kzg-1"
 })(["flex:1;padding:0 ", ";line-height:1;"], COMPONENT_GUTTER);
 
+var StyledWidgetTitle = (0, _styledComponents.default)(StyledTitle).withConfig({
+  displayName: "title__StyledWidgetTitle",
+  componentId: "sc-1wv1kzg-2"
+})(["padding:0;"]);
+
 var StyledTitleLoading = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitleLoading",
-  componentId: "sc-1wv1kzg-2"
+  componentId: "sc-1wv1kzg-3"
 })(["display:block;background-color:", ";border-bottom:", " solid ", ";height:", ";"], _colorsConfig.default.line2, (0, _typography.pxToRem)(1), _colorsConfig.default.background1, (0, _typography.pxToRem)(24));
 
 var StyledTitleSmallLoading = (0, _styledComponents.default)(StyledTitleLoading).withConfig({
   displayName: "title__StyledTitleSmallLoading",
-  componentId: "sc-1wv1kzg-3"
+  componentId: "sc-1wv1kzg-4"
 })(["width:70%;border-top:", " solid ", ";border-bottom:0;"], (0, _typography.pxToRem)(1), _colorsConfig.default.background1);
 
 var StyledWidgetContainer = _styledComponents.default.div.withConfig({
   displayName: "title__StyledWidgetContainer",
-  componentId: "sc-1wv1kzg-4"
+  componentId: "sc-1wv1kzg-5"
 })(["display:flex;"]);
 
 var StyledDayCounter = _styledComponents.default.div.withConfig({
   displayName: "title__StyledDayCounter",
-  componentId: "sc-1wv1kzg-5"
-})(["line-height:1;margin-left:calc(4 * ", ");"], COMPONENT_GUTTER);
+  componentId: "sc-1wv1kzg-6"
+})(["line-height:1;margin-left:calc(2 * ", ");"], COMPONENT_GUTTER);
 
 var StyledStateDay = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "title__StyledStateDay",
-  componentId: "sc-1wv1kzg-6"
+  componentId: "sc-1wv1kzg-7"
 })(["display:flex;"]);
 
 var TitleComponent =
@@ -122,7 +127,7 @@ function (_PureComponent) {
           stateDay = _this$props3.stateDay,
           loading = _this$props3.loading,
           titleTruncate = _this$props3.titleTruncate;
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledWidgetContainer, null, _react.default.createElement(StyledTitle, null, !loading && _react.default.createElement(_text.Text, {
+      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledWidgetContainer, null, _react.default.createElement(StyledWidgetTitle, null, !loading && _react.default.createElement(_text.Text, {
         tag: "span",
         color: "font1",
         size: "default",

@@ -82,10 +82,10 @@ const StyledSwitch = styled.button`
   }
 
   &:active {
-    color: ${COLORS.primary3};
+    color: ${({ activeColor }) => activeColor};
     &,
     &::before {
-      border-color: ${COLORS.primary3};
+      border-color: ${({ activeColor }) => activeColor};
     }
   }
 
@@ -122,18 +122,19 @@ const StyledLabel = styled.label`
 `
 
 export const ToggleSwitch = ({
-  id,
-  isChecked,
-  disabled,
-  label,
+  activeColor,
   big,
-  isLabelVisible,
-  reverseOrder,
   checkedColor,
   defaultColor,
+  disabled,
   disabledColor,
-  switchProps,
+  id,
+  isChecked,
+  isLabelVisible,
+  label,
   labelProps,
+  reverseOrder,
+  switchProps,
   ...others
 }) => {
   const [isPressed, setPressedState] = useState(isChecked)
@@ -154,6 +155,7 @@ export const ToggleSwitch = ({
         checkedColor={checkedColor}
         defaultColor={defaultColor}
         disabledColor={disabledColor}
+        activeColor={activeColor}
         {...switchProps}
       />
       {isLabelVisible && (
@@ -171,26 +173,28 @@ export const ToggleSwitch = ({
 }
 
 ToggleSwitch.defaultProps = {
-  isChecked: false,
-  disabled: false,
-  label: 'switch',
+  activeColor: COLORS.primary3,
   big: false,
-  isLabelVisible: true,
-  reverseOrder: false,
   checkedColor: COLORS.primary1,
   defaultColor: COLORS.line1,
+  disabled: false,
   disabledColor: COLORS.line2,
+  isChecked: false,
+  isLabelVisible: true,
+  label: 'switch',
+  reverseOrder: false,
 }
 
 ToggleSwitch.propTypes = {
-  id: PropTypes.string.isRequired,
-  isChecked: PropTypes.bool,
-  disabled: PropTypes.bool,
-  label: PropTypes.string,
+  activeColor: PropTypes.string,
   big: PropTypes.bool,
-  isLabelVisible: PropTypes.bool,
-  reverseOrder: PropTypes.bool,
   checkedColor: PropTypes.string,
   defaultColor: PropTypes.string,
+  disabled: PropTypes.bool,
   disabledColor: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  isChecked: PropTypes.bool,
+  isLabelVisible: PropTypes.bool,
+  label: PropTypes.string,
+  reverseOrder: PropTypes.bool,
 }

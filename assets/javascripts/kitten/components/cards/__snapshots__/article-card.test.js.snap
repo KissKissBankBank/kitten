@@ -57,6 +57,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     
   </div>
   
+  
 </div>
 `;
 
@@ -156,6 +157,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     
   </div>
   
+  
 </div>
 `;
 
@@ -215,6 +217,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     
     
   </div>
+  
   
 </div>
 `;
@@ -315,6 +318,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     </div>
     
   </div>
+  
   
 </a>
 `;

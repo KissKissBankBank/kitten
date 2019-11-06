@@ -122,7 +122,7 @@ Array [
     className="marger__StyledMarger-q3lecu-0 WSKaG"
   >
     <input
-      className="text-input__StyledInput-sc-11wej6v-1 eWAcap"
+      className="text-input__StyledInput-sc-11wej6v-1 kfptEQ"
       disabled={false}
       id="input"
       name="field"
@@ -216,7 +216,7 @@ Array [
     className="marger__StyledMarger-q3lecu-0 WSKaG"
   >
     <input
-      className="text-input__StyledInput-sc-11wej6v-1 bVMChg"
+      className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
       disabled={false}
       id="input"
       name="field"
@@ -299,7 +299,7 @@ Array [
       className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
     >
       <input
-        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 eWAcap"
+        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 kfptEQ"
         disabled={false}
         id="input"
         name="field"
@@ -423,7 +423,7 @@ Array [
       className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
     >
       <input
-        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 bVMChg"
+        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 iDULaY"
         disabled={false}
         id="input"
         name="field"

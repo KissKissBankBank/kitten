@@ -19,15 +19,21 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
+var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 var StyledLoading = (0, _styledComponents.default)(_button.Button).withConfig({
   displayName: "button__StyledLoading",
   componentId: "sc-1ws1im9-0"
 })(["background-color:", ";border-color:", ";"], _colorsConfig.default.line2, _colorsConfig.default.line2);
 
+var StyledButtonContainer = _styledComponents.default.div.withConfig({
+  displayName: "button__StyledButtonContainer",
+  componentId: "sc-1ws1im9-1"
+})(["padding:0 ", ";"], COMPONENT_GUTTER);
+
 var CardButton = function CardButton(_ref) {
   var text = _ref.text,
       loading = _ref.loading;
-  return _react.default.createElement(_react.default.Fragment, null, !loading && _react.default.createElement(_button.Button, {
+  return _react.default.createElement(StyledButtonContainer, null, !loading && _react.default.createElement(_button.Button, {
     fluid: true,
     modifier: "helium"
   }, text), loading && _react.default.createElement(StyledLoading, {

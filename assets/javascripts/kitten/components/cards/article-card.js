@@ -6,11 +6,11 @@ export const ArticleCard = ({ articleTitle, articleSubTitle, ...props }) => (
     cardTitle={articleTitle}
     cardSubTitle={articleSubTitle}
     {...props}
-    info1={false}
-    info2={false}
-    info3={false}
+    info1=""
+    info2=""
+    info3=""
     progress={false}
-    state={false}
+    state=""
     titlesMinHeight={false}
     titleTruncate={false}
   />

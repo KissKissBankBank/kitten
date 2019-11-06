@@ -7,15 +7,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.BackerCard = void 0;
 
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
 var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
+
+var _typography = require("../../helpers/utils/typography");
 
 var _marger = require("../../components/layout/marger");
 
@@ -23,35 +25,44 @@ var _text = require("../../components/typography/text");
 
 var _buttonImage = require("../../components/buttons/button-image");
 
+var StyledCard = _styledComponents.default.div.withConfig({
+  displayName: "backer-card__StyledCard",
+  componentId: "zl7grf-0"
+})(["padding:0 ", ";border:", " solid ", ";text-align:center;word-break:break-word;"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
+
+var StyledSubtitle = (0, _styledComponents.default)(_text.Text).withConfig({
+  displayName: "backer-card__StyledSubtitle",
+  componentId: "zl7grf-1"
+})(["display:block;"]);
+var StyledButtonImage = (0, _styledComponents.default)(_buttonImage.ButtonImage).withConfig({
+  displayName: "backer-card__StyledButtonImage",
+  componentId: "zl7grf-2"
+})(["margin:0 auto;"]);
+
 var BackerCard = function BackerCard(_ref) {
   var title = _ref.title,
       subtitle = _ref.subtitle,
       imgProps = _ref.imgProps,
       description = _ref.description,
       others = (0, _objectWithoutProperties2.default)(_ref, ["title", "subtitle", "imgProps", "description"]);
-  return _react.default.createElement("div", (0, _extends2.default)({}, others, {
-    style: (0, _extends2.default)({}, styles.card, {}, others.style)
-  }), _react.default.createElement(_marger.Marger, {
+  return _react.default.createElement(StyledCard, others, _react.default.createElement(_marger.Marger, {
     top: "4",
     bottom: "1"
   }, _react.default.createElement(_text.Text, {
-    color: "primary1",
+    color: "font1",
     weight: "regular",
-    lineHeight: "normal"
-  }, title, subtitle && _react.default.createElement(_text.Text, {
+    lineHeight: "normal",
+    size: "tiny"
+  }, title, subtitle && _react.default.createElement(StyledSubtitle, {
     color: "font1",
     weight: "light",
-    size: "micro",
-    style: {
-      display: 'block'
-    }
+    size: "micro"
   }, subtitle))), _react.default.createElement(_marger.Marger, {
     top: "1",
     bottom: "1"
-  }, _react.default.createElement(_buttonImage.ButtonImage, {
+  }, _react.default.createElement(StyledButtonImage, {
     tag: "span",
     img: imgProps,
-    style: styles.buttonImage,
     withoutPointerEvents: true,
     huge: true
   })), _react.default.createElement(_marger.Marger, {
@@ -63,9 +74,7 @@ var BackerCard = function BackerCard(_ref) {
     weight: "light",
     size: "micro",
     lineHeight: "normal",
-    style: {
-      margin: 0
-    }
+    className: "k-u-margin-none"
   }, description)));
 };
 
@@ -78,15 +87,4 @@ BackerCard.propTypes = {
 };
 BackerCard.defaultProps = {
   subtitle: null
-};
-var styles = {
-  card: {
-    padding: '0 20px',
-    border: "2px solid ".concat(_colorsConfig.default.line1),
-    textAlign: 'center',
-    wordBreak: 'break-word'
-  },
-  buttonImage: {
-    margin: '0 auto'
-  }
 };

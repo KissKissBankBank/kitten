@@ -8,6 +8,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `color` and `title` props on `CopyIcon` component.
 - Feature: Create `EmbedIcon` component.
 
+## [2.37.1] - 2019-11-04
+
+Fix:
+- Browser `:invalid` style handling by `TextInput`.
+
+## [2.37.0] - 2019-11-04
+
+Features:
+- Add `activeColor` prop to `ToogleSwitch` component.
+- Add `buttonProps` to `TextInputWithButton` component.
+
+Fix:
+- Change color for `BackerCard` title.
+
+## [2.36.0] - 2019-10-31
+
+Features:
+- Add `color` and `title` props on `CopyIcon` component.
+- Create `EmbedIcon` component.
+>>>>>>> origin
+
 ## [2.35.0] - 2019-10-29
 
 Feature:
