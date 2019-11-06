@@ -13,11 +13,12 @@ const StyledContainer = styled.div`
   margin-bottom: ${pxToRem(5)};
   display: flex;
   flex-wrap: wrap;
-  padding: 0 ${COMPONENT_GUTTER};
+  padding: 0;
   line-height: 1;
 
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
     margin-top: ${pxToRem(20)};
+    padding: 0 ${COMPONENT_GUTTER};
   }
 `
 

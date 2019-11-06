@@ -16,9 +16,13 @@ const StyledTruncate = styled(Truncate)`
 
 const StyledTitleContainer = styled.div`
   flex: 1;
-  padding: 0 ${COMPONENT_GUTTER};
+  padding: 0;
   line-height: 1;
   margin-top: ${pxToRem(10)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    padding: 0 ${COMPONENT_GUTTER};
+  }
 `
 
 const StyledTitle = styled(Title)`
