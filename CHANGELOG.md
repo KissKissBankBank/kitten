@@ -27,7 +27,6 @@ Fix:
 Features:
 - Add `color` and `title` props on `CopyIcon` component.
 - Create `EmbedIcon` component.
->>>>>>> origin
 
 ## [2.35.0] - 2019-10-29
 
