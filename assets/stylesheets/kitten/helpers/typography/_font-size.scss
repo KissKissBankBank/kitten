@@ -63,9 +63,9 @@
     $line-height: ceil($font-size / $base-line-height) * $base-line-height;
   }
 
-  $is-important: '';
+  $is-important: null;
   @if $important {
-    $is-important: '!important';
+    $is-important: !important;
   };
 
   // Apply font size and line height.

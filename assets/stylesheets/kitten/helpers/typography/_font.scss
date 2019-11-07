@@ -11,9 +11,9 @@
   $transform: map-get($font, 'transform');
   $letter-spacing: map-get($font, 'letter-spacing');
 
-  $is-important: '';
+  $is-important: null;
   @if $important {
-    $is-important: '!important';
+    $is-important: !important;
   };
 
   font-family: $family $is-important;
