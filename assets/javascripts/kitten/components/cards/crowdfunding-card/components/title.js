@@ -56,7 +56,7 @@ class TitleComponent extends PureComponent {
     loading: PropTypes.bool,
     widgetTitle: PropTypes.string,
     dayCounter: PropTypes.string,
-    stateDay: PropTypes.string,
+    stateDay: PropTypes.element,
     titleProps: PropTypes.shape(),
   }
 
