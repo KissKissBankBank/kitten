@@ -21,14 +21,14 @@
     @include k-typographyFont('light');
   }
   .k-u-weight-light--important {
-    @include k-typographyFont('light') !important;
+    @include k-typographyFont('light', $important: true);
   }
 
   .k-u-weight-regular {
     @include k-typographyFont('regular');
   }
   .k-u-weight-regular--important {
-    @include k-typographyFont('regular') !important;
+    @include k-typographyFont('regular', $important: true);
   }
 
   .k-u-strong,
@@ -37,6 +37,6 @@
   }
   .k-u-strong--important,
   .k-u-weight-bold--important {
-    @include k-typographyFont('bold') !important;
+    @include k-typographyFont('bold', $important: true);
   }
 }

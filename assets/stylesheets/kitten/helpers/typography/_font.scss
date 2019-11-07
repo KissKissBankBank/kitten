@@ -1,21 +1,29 @@
 /// Apply a font from the global list of available fonts
 ///
 /// @group typography
-@mixin k-typographyFont($font-name) {
+@mixin k-typographyFont(
+  $font-name,
+  $important: false
+) {
   $font: k-map-fetch($k-fonts, $font-name);
   $family: map-get($font, 'family');
   $weight: map-get($font, 'weight');
   $transform: map-get($font, 'transform');
   $letter-spacing: map-get($font, 'letter-spacing');
 
-  font-family: $family;
+  $is-important: '';
+  @if $important {
+    $is-important: '!important';
+  };
+
+  font-family: $family $is-important;
   @if $weight {
-    font-weight: $weight;
+    font-weight: $weight $is-important;
   }
   @if $transform {
-    text-transform: $transform;
+    text-transform: $transform $is-important;
   }
   @if $letter-spacing {
-    letter-spacing: $letter-spacing;
+    letter-spacing: $letter-spacing $is-important;
   }
 }
