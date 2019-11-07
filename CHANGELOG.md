@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Feature: Add `--important` utility definitions.
+Feature: Add `important` argument to `k-typographyFontSize` definition.
+Feature: Add `important` argument to `k-typographyFont` definition.
 
 ## [2.37.1] - 2019-11-04
 
