@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `stateDay` propTypes on `CrowdfundingCard`.
+
 ## [2.37.1] - 2019-11-04
 
 Fix:
