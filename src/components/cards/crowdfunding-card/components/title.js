@@ -157,8 +157,8 @@ TitleComponent.propTypes = {
   titleTruncate: _propTypes.default.bool,
   loading: _propTypes.default.bool,
   widgetTitle: _propTypes.default.string,
-  dayCounter: _propTypes.default.string,
-  stateDay: _propTypes.default.element,
+  dayCounter: _propTypes.default.element,
+  stateDay: _propTypes.default.string,
   titleProps: _propTypes.default.shape()
 };
 TitleComponent.defaultProps = {
@@ -166,7 +166,7 @@ TitleComponent.defaultProps = {
   titleTruncate: true,
   loading: false,
   widgetTitle: '',
-  dayCounter: '',
+  dayCounter: null,
   stateDay: '',
   titleProps: {}
 };
