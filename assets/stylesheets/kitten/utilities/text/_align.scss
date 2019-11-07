@@ -101,11 +101,6 @@
   @include k-u-align('left', left);
   @include k-u-align('right', right);
 
-  // DEPRECATED
-  .k-u-centered {
-    text-align: center;
-  }
-
   .k-u-spacedHorizontally {
     margin: k-px-to-rem(10px) 0;
   }
@@ -134,5 +129,10 @@
   .k-u-align-center-block--important {
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+
+  // DEPRECATED
+  .k-u-centered {
+    text-align: center;
   }
 }
