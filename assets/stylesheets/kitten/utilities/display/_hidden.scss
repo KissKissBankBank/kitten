@@ -41,7 +41,7 @@
     display: none;
   }
   .k-u-hidden--important {
-    display: none;
+    display: none !important;
   }
 
   @each $name, $query in $k-media-queries {
