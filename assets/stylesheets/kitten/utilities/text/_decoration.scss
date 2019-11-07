@@ -15,15 +15,17 @@
 @mixin k-utilities-decoration {
   .k-u-decoration-underline {
     text-decoration: underline;
-  }
-  .k-u-decoration-underline--important {
-    text-decoration: underline !important;
+
+    &--important {
+      text-decoration: underline !important;
+    }
   }
 
   .k-u-decoration-none {
     text-decoration: none;
-  }
-  .k-u-decoration-none--important {
-    text-decoration: none !important;
+
+    &--important {
+      text-decoration: none !important;
+    }
   }
 }

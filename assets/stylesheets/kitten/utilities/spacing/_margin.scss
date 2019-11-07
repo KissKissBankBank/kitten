@@ -87,9 +87,10 @@
 
   .k-u-margin-#{$position}-#{$slug} {
     margin-#{$position}: $value;
-  }
-  .k-u-margin-#{$position}-#{$slug}--important {
-    margin-#{$position}: $value !important;
+
+    &--important {
+      margin-#{$position}: $value !important;
+    }
   }
 
   @each $name, $query in $k-media-queries {
@@ -97,11 +98,10 @@
       .k-u-margin-#{$position}-#{$slug}\@#{$name}-down {
         @include k-media-max($name) {
           margin-#{$position}: $value;
-        }
-      }
-      .k-u-margin-#{$position}-#{$slug}\@#{$name}-down--important {
-        @include k-media-max($name) {
-          margin-#{$position}: $value !important;
+
+          &--important {
+            margin-#{$position}: $value !important;
+          }
         }
       }
     }
@@ -110,11 +110,10 @@
       .k-u-margin-#{$position}-#{$slug}\@#{$name}-up {
         @include k-media-min($name) {
           margin-#{$position}: $value;
-        }
-      }
-      .k-u-margin-#{$position}-#{$slug}\@#{$name}-up--important {
-        @include k-media-min($name) {
-          margin-#{$position}: $value !important;
+
+          &--important {
+            margin-#{$position}: $value !important;
+          }
         }
       }
     }
@@ -124,9 +123,10 @@
 @mixin k-utilities-margin {
   .k-u-margin-none {
     margin: 0;
-  }
-  .k-u-margin-none--important {
-    margin: 0 !important;
+
+    &--important {
+      margin: 0 !important;
+    }
   }
 
   $k-sizes: (

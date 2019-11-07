@@ -39,9 +39,10 @@
 @mixin k-utilities-hidden {
   .k-u-hidden {
     display: none;
-  }
-  .k-u-hidden--important {
-    display: none !important;
+
+    &--important {
+      display: none !important;
+    }
   }
 
   @each $name, $query in $k-media-queries {
@@ -50,11 +51,10 @@
       .k-u-hidden\@#{$name}-down {
         @include k-media-max($name) {
           display: none;
-        }
-      }
-      .k-u-hidden\@#{$name}-down--important {
-        @include k-media-max($name) {
-          display: none !important;
+
+          &--important {
+            display: none !important;
+          }
         }
       }
     }
@@ -63,11 +63,10 @@
       .k-u-hidden\@#{$name}-up {
         @include k-media-min($name) {
           display: none;
-        }
-      }
-      .k-u-hidden\@#{$name}-up--important {
-        @include k-media-min($name) {
-          display: none !important;
+
+          &--important {
+            display: none !important;
+          }
         }
       }
     }
@@ -75,11 +74,10 @@
     .k-u-hidden\@#{$name} {
       @include k-media-within($name) {
         display: none;
-      }
-    }
-    .k-u-hidden\@#{$name}--important {
-      @include k-media-within($name) {
-        display: none !important;
+
+        &--important {
+            display: none !important;
+          }
       }
     }
   }

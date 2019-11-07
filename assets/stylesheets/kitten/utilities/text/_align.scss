@@ -61,9 +61,10 @@
 
   .k-u-align-#{$position} {
     text-align: $value;
-  }
-  .k-u-align-#{$position}--important {
-    text-align: $value !important;
+
+    &--important {
+      text-align: $value !important;
+    }
   }
 
   @each $name, $query in $k-media-queries {
@@ -71,11 +72,10 @@
       .k-u-align-#{$position}\@#{$name}-down {
         @include k-media-max($name) {
           text-align: $value;
-        }
-      }
-      .k-u-align-#{$position}\@#{$name}-down--important {
-        @include k-media-max($name) {
-          text-align: $value !important;
+
+          &--important {
+            text-align: $value !important;
+          }
         }
       }
     }
@@ -84,11 +84,10 @@
       .k-u-align-#{$position}\@#{$name}-up {
         @include k-media-min($name) {
           text-align: $value;
-        }
-      }
-      .k-u-align-#{$position}\@#{$name}-up--important {
-        @include k-media-min($name) {
-          text-align: $value !important;
+
+          &--important {
+            text-align: $value !important;
+          }
         }
       }
     }
@@ -103,32 +102,36 @@
 
   .k-u-spacedHorizontally {
     margin: k-px-to-rem(10px) 0;
-  }
-  .k-u-spacedHorizontally--important {
-    margin: k-px-to-rem(10px) 0 !important;
+
+    &--important {
+      margin: k-px-to-rem(10px) 0 !important;
+    }
   }
 
   .k-u-spacedVertically {
     margin: 0 k-px-to-rem(10px);
-  }
-  .k-u-spacedVertically--important {
-    margin: 0 k-px-to-rem(10px) !important;
+
+    &--important {
+      margin: 0 k-px-to-rem(10px) !important;
+    }
   }
 
   .k-u-spaced {
     margin: k-px-to-rem(10px);
-  }
-  .k-u-spaced--important {
-    margin: k-px-to-rem(10px) !important;
+
+    &--important {
+      margin: k-px-to-rem(10px) !important;
+    }
   }
 
   .k-u-align-center-block {
     margin-left: auto;
     margin-right: auto;
-  }
-  .k-u-align-center-block--important {
-    margin-left: auto !important;
-    margin-right: auto !important;
+
+    &--important {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
   }
 
   // DEPRECATED

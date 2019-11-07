@@ -19,24 +19,26 @@
 @mixin k-utilities-weight {
   .k-u-weight-light {
     @include k-typographyFont('light');
-  }
-  .k-u-weight-light--important {
-    @include k-typographyFont('light', $important: true);
+
+    &--important {
+      @include k-typographyFont('light', $important: true);
+    }
   }
 
   .k-u-weight-regular {
     @include k-typographyFont('regular');
-  }
-  .k-u-weight-regular--important {
-    @include k-typographyFont('regular', $important: true);
+
+    &--important {
+      @include k-typographyFont('regular', $important: true);
+    }
   }
 
   .k-u-strong,
   .k-u-weight-bold {
     @include k-typographyFont('bold');
-  }
-  .k-u-strong--important,
-  .k-u-weight-bold--important {
-    @include k-typographyFont('bold', $important: true);
+
+    &--important {
+      @include k-typographyFont('bold', $important: true);
+    }
   }
 }

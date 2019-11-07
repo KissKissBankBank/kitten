@@ -15,8 +15,9 @@
 @mixin k-utilities-transform {
   .k-u-transform-uppercase {
     text-transform: uppercase;
-  }
-  .k-u-transform-uppercase--important {
-    text-transform: uppercase !important;
+
+    &--important {
+      text-transform: uppercase !important;
+    }
   }
 }

@@ -21,29 +21,33 @@
 @mixin k-utilities-background-color {
   .k-u-background-color-background1 {
     background-color: map-get($k-colors, 'background-1');
-  }
-  .k-u-background-color-background1--important {
-    background-color: map-get($k-colors, 'background-1') !important;
+
+    &--important {
+      background-color: map-get($k-colors, 'background-1') !important;
+    }
   }
 
   .k-u-background-color-background2 {
     background-color: map-get($k-colors, 'background-2');
-  }
-  .k-u-background-color-background2--important {
-    background-color: map-get($k-colors, 'background-2') !important;
+
+    &--important {
+      background-color: map-get($k-colors, 'background-2') !important;
+    }
   }
 
   .k-u-background-color-primary5 {
     background-color: map-get($k-colors, 'primary-5');
-  }
-  .k-u-background-color-primary5--important {
-    background-color: map-get($k-colors, 'primary-5') !important;
+
+    &--important {
+      background-color: map-get($k-colors, 'primary-5') !important;
+    }
   }
 
   .k-u-background-color-primary6 {
     background-color: map-get($k-colors, 'primary-6');
-  }
-  .k-u-background-color-primary6--important {
-    background-color: map-get($k-colors, 'primary-6') !important;
+
+    &--important {
+      background-color: map-get($k-colors, 'primary-6') !important;
+    }
   }
 }

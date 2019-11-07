@@ -18,11 +18,12 @@
 
     max-width: 100%;
     height: auto;
-  }
-  .k-u-image-responsive--important {
-    display: block !important;
 
-    max-width: 100% !important;
-    height: auto !important;
+    &--important {
+      display: block !important;
+
+      max-width: 100% !important;
+      height: auto !important;
+    }
   }
 }

@@ -21,29 +21,33 @@
 @mixin k-utilities-cursor {
   .k-u-cursor-default {
     cursor: default;
-  }
-  .k-u-cursor-default--important {
-    cursor: default !important;
+
+    &--important {
+      cursor: default !important;
+    }
   }
 
   .k-u-cursor-pointer {
     cursor: pointer;
-  }
-  .k-u-cursor-pointer--important {
-    cursor: pointer !important;
+
+    &--important {
+      cursor: pointer !important;
+    }
   }
 
   .k-u-cursor-not-allowed {
     cursor: not-allowed;
-  }
-  .k-u-cursor-not-allowed--important {
-    cursor: not-allowed !important;
+
+    &--important {
+      cursor: not-allowed !important;
+    }
   }
 
   .k-u-cursor-crosshair {
     cursor: crosshair;
-  }
-  .k-u-cursor-crosshair--important {
-    cursor: crosshair !important;
+
+    &--important {
+      cursor: crosshair !important;
+    }
   }
 }

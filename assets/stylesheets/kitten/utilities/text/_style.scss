@@ -17,15 +17,17 @@
 @mixin k-utilities-style {
   .k-u-style-normal {
     font-style: normal;
-  }
-  .k-u-style-normal--important {
-    font-style: normal !important;
+
+    &--important {
+      font-style: normal !important;
+    }
   }
 
   .k-u-style-italic {
     font-style: italic;
-  }
-  .k-u-style-italic--important {
-    font-style: italic !important;
+
+    &--important {
+      font-style: italic !important;
+    }
   }
 }

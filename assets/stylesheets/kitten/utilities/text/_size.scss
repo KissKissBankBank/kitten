@@ -15,45 +15,51 @@
 @mixin k-utilities-size {
   .k-u-size-huge {
     @include k-typographyFontSize(2, $without-line-height: true);
-  }
-  .k-u-size-huge--important {
-    @include k-typographyFontSize(2, $without-line-height: true, $important: true);
+
+    &--important {
+      @include k-typographyFontSize(2, $without-line-height: true, $important: true);
+    }
   }
 
   .k-u-size-big {
     @include k-typographyFontSize(1, $without-line-height: true);
-  }
-  .k-u-size-big--important {
-    @include k-typographyFontSize(1, $without-line-height: true, $important: true);
+
+    &--important {
+      @include k-typographyFontSize(1, $without-line-height: true, $important: true);
+    }
   }
 
   .k-u-size-default {
     @include k-typographyFontSize(0, $without-line-height: true);
-  }
-  .k-u-size-default--important {
-    @include k-typographyFontSize(0, $without-line-height: true, $important: true);
+
+    &--important {
+      @include k-typographyFontSize(0, $without-line-height: true, $important: true);
+    }
   }
 
   .k-u-size-tiny {
     @include k-typographyFontSize(-1, $without-line-height: true);
-  }
-  .k-u-size-tiny--important {
-    @include k-typographyFontSize(-1, $without-line-height: true, $important: true);
+
+    &--important {
+      @include k-typographyFontSize(-1, $without-line-height: true, $important: true);
+    }
   }
 
   .k-u-size-micro,
   .k-u-small {
     @include k-typographyFontSize(-2, $without-line-height: true);
-  }
-  .k-u-size-micro--important,
-  .k-u-small--important{
-    @include k-typographyFontSize(-2, $without-line-height: true, $important: true);
+
+    &--important,
+    &--important{
+      @include k-typographyFontSize(-2, $without-line-height: true, $important: true);
+    }
   }
 
   .k-u-size-nano {
     @include k-typographyFontSize(-3, $without-line-height: true);
-  }
-  .k-u-size-nano--important {
-    @include k-typographyFontSize(-3, $without-line-height: true, $important: true);
+
+    &--important {
+      @include k-typographyFontSize(-3, $without-line-height: true, $important: true);
+    }
   }
 }

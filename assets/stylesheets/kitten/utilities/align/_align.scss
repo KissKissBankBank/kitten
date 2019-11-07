@@ -45,9 +45,10 @@
 
   .k-u-blockAlign-#{position} {
     align-self: $value;
-  }
-  .k-u-blockAlign-#{position}--important {
-    align-self: $value !important;
+
+    &--important {
+      align-self: $value !important;
+    }
   }
 
   @each $name, $query in $k-media-queries {
@@ -55,11 +56,10 @@
       .k-u-blockAlign-#{$position}\@#{$name}-down {
         @include k-media-max($name) {
           align-self: $value;
-        }
-      }
-      .k-u-blockAlign-#{$position}\@#{$name}-down--important {
-        @include k-media-max($name) {
-          align-self: $value !important;
+
+          &--important {
+            align-self: $value !important;
+          }
         }
       }
     }
@@ -68,11 +68,10 @@
       .k-u-blockAlign-#{$position}\@#{$name}-up {
         @include k-media-min($name) {
           align-self: $value;
-        }
-      }
-      .k-u-blockAlign-#{$position}\@#{$name}-up--important {
-        @include k-media-min($name) {
-          align-self: $value !important;
+
+          &--important {
+            align-self: $value !important;
+          }
         }
       }
     }
