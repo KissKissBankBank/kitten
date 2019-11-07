@@ -11,10 +11,7 @@
   $transform: map-get($font, 'transform');
   $letter-spacing: map-get($font, 'letter-spacing');
 
-  $is-important: null;
-  @if $important {
-    $is-important: !important;
-  };
+  $is-important: if($important, !important, null);
 
   font-family: $family $is-important;
   @if $weight {
