@@ -9,29 +9,49 @@
 /// @example html
 ///
 ///   <span class="k-u-color-primary1">…</span>
+///
+///   <span class="k-u-color-primary1--important">…</span>
 
 @mixin k-utilities-color {
   .k-u-color-font1 {
     color: map-get($k-colors, 'font-1');
   }
+  .k-u-color-font1--important {
+    color: map-get($k-colors, 'font-1') !important;
+  }
 
   .k-u-color-font2 {
     color: map-get($k-colors, 'font-2');
+  }
+  .k-u-color-font2--important {
+    color: map-get($k-colors, 'font-2') !important;
   }
 
   .k-u-color-primary1 {
     color: map-get($k-colors, 'primary-1');
   }
+  .k-u-color-primary1--important {
+    color: map-get($k-colors, 'primary-1') !important;
+  }
 
   .k-u-color-background1 {
     color: map-get($k-colors, 'background-1');
+  }
+  .k-u-color-background1--important {
+    color: map-get($k-colors, 'background-1') !important;
   }
 
   .k-u-color-error {
     color: map-get($k-colors, 'error');
   }
+  .k-u-color-error--important {
+    color: map-get($k-colors, 'error') !important;
+  }
 
   .k-u-color-valid {
     color: map-get($k-colors, 'valid');
+  }
+  .k-u-color-valid--important {
+    color: map-get($k-colors, 'valid') !important;
   }
 }

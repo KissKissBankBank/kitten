@@ -9,9 +9,14 @@
 /// @example html
 ///
 ///     <p class="k-u-transform-uppercase">…</p>
+///
+///     <p class="k-u-transform-uppercase--important">…</p>
 
 @mixin k-utilities-transform {
   .k-u-transform-uppercase {
     text-transform: uppercase;
+  }
+  .k-u-transform-uppercase--important {
+    text-transform: uppercase !important;
   }
 }

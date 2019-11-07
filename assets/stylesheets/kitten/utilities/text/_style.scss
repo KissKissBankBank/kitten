@@ -10,13 +10,22 @@
 ///
 ///     <p class="k-u-style-normal">…</p>
 ///     <p class="k-u-style-italic">…</p>
+///
+///     <p class="k-u-style-normal--important">…</p>
+///     <p class="k-u-style-italic--important">…</p>
 
 @mixin k-utilities-style {
   .k-u-style-normal {
     font-style: normal;
   }
+  .k-u-style-normal--important {
+    font-style: normal !important;
+  }
 
   .k-u-style-italic {
     font-style: italic;
+  }
+  .k-u-style-italic--important {
+    font-style: italic !important;
   }
 }

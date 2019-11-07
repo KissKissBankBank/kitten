@@ -21,9 +21,26 @@
 ///   <div class="k-u-hidden@m-up">…</div>
 ///   <div class="k-u-hidden@l-up">…</div>
 ///   <div class="k-u-hidden@xl-up">…</div>
+///
+///   <div class="k-u-hidden--important">…</div>
+///
+///   <div class="k-u-hidden@xxs-down--important">…</div>
+///   <div class="k-u-hidden@xs-down--important">…</div>
+///   <div class="k-u-hidden@s-down--important">…</div>
+///   <div class="k-u-hidden@m-down--important">…</div>
+///   <div class="k-u-hidden@l-down--important">…</div>
+///
+///   <div class="k-u-hidden@xs-up--important">…</div>
+///   <div class="k-u-hidden@s-up--important">…</div>
+///   <div class="k-u-hidden@m-up--important">…</div>
+///   <div class="k-u-hidden@l-up--important">…</div>
+///   <div class="k-u-hidden@xl-up--important">…</div>
 
 @mixin k-utilities-hidden {
   .k-u-hidden {
+    display: none;
+  }
+  .k-u-hidden--important {
     display: none;
   }
 
@@ -35,6 +52,11 @@
           display: none;
         }
       }
+      .k-u-hidden\@#{$name}-down--important {
+        @include k-media-max($name) {
+          display: none !important;
+        }
+      }
     }
 
     @if $name != "xxs" {
@@ -43,11 +65,21 @@
           display: none;
         }
       }
+      .k-u-hidden\@#{$name}-up--important {
+        @include k-media-min($name) {
+          display: none !important;
+        }
+      }
     }
 
     .k-u-hidden\@#{$name} {
       @include k-media-within($name) {
         display: none;
+      }
+    }
+    .k-u-hidden\@#{$name}--important {
+      @include k-media-within($name) {
+        display: none !important;
       }
     }
   }

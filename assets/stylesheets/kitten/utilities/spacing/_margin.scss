@@ -44,6 +44,43 @@
 ///   <div class="k-u-margin-right-quadruple">…</div>
 ///   <div class="k-u-margin-right-quintuple">…</div>
 ///   <div class="k-u-margin-right-none">…</div>
+///
+///   <div class="k-u-margin-none--important">…</div>
+///
+///   <div class="k-u-margin-top-single--important">…</div>
+///
+///   <div class="k-u-margin-top-single@xxs-down--important">…</div>
+///   <div class="k-u-margin-top-single@xs-down--important">…</div>
+///   <div class="k-u-margin-top-single@s-down--important">…</div>
+///   <div class="k-u-margin-top-single@m-down--important">…</div>
+///   <div class="k-u-margin-top-single@l-down--important">…</div>
+///
+///   <div class="k-u-margin-top-single@xs-up--important">…</div>
+///   <div class="k-u-margin-top-single@s-up--important">…</div>
+///   <div class="k-u-margin-top-single@m-up--important">…</div>
+///   <div class="k-u-margin-top-single@l-up--important">…</div>
+///   <div class="k-u-margin-top-single@xl-up--important">…</div>
+///
+///   <div class="k-u-margin-bottom-single--important">…</div>
+///   <div class="k-u-margin-bottom-double--important">…</div>
+///   <div class="k-u-margin-bottom-triple--important">…</div>
+///   <div class="k-u-margin-bottom-quadruple--important">…</div>
+///   <div class="k-u-margin-bottom-quintuple--important">…</div>
+///   <div class="k-u-margin-bottom-none--important">…</div>
+///
+///   <div class="k-u-margin-left-single--important">…</div>
+///   <div class="k-u-margin-left-double--important">…</div>
+///   <div class="k-u-margin-left-triple--important">…</div>
+///   <div class="k-u-margin-left-quadruple--important">…</div>
+///   <div class="k-u-margin-left-quintuple--important">…</div>
+///   <div class="k-u-margin-left-none--important">…</div>
+///
+///   <div class="k-u-margin-right-single--important">…</div>
+///   <div class="k-u-margin-right-double--important">…</div>
+///   <div class="k-u-margin-right-triple--important">…</div>
+///   <div class="k-u-margin-right-quadruple--important">…</div>
+///   <div class="k-u-margin-right-quintuple--important">…</div>
+///   <div class="k-u-margin-right-none--important">…</div>
 
 @mixin k-u-margin($position, $slug, $size) {
   $value: k-px-to-rem($size);
@@ -51,12 +88,20 @@
   .k-u-margin-#{$position}-#{$slug} {
     margin-#{$position}: $value;
   }
+  .k-u-margin-#{$position}-#{$slug}--important {
+    margin-#{$position}: $value !important;
+  }
 
   @each $name, $query in $k-media-queries {
     @if $name != "xl" {
       .k-u-margin-#{$position}-#{$slug}\@#{$name}-down {
         @include k-media-max($name) {
           margin-#{$position}: $value;
+        }
+      }
+      .k-u-margin-#{$position}-#{$slug}\@#{$name}-down--important {
+        @include k-media-max($name) {
+          margin-#{$position}: $value !important;
         }
       }
     }
@@ -67,6 +112,11 @@
           margin-#{$position}: $value;
         }
       }
+      .k-u-margin-#{$position}-#{$slug}\@#{$name}-up--important {
+        @include k-media-min($name) {
+          margin-#{$position}: $value !important;
+        }
+      }
     }
   }
 }
@@ -74,6 +124,9 @@
 @mixin k-utilities-margin {
   .k-u-margin-none {
     margin: 0;
+  }
+  .k-u-margin-none--important {
+    margin: 0 !important;
   }
 
   $k-sizes: (

@@ -9,6 +9,8 @@
 /// @example html
 ///
 ///   <img class="k-u-image-responsive" href="…" alt="…" />
+///
+///   <img class="k-u-image-responsive--important" href="…" alt="…" />
 
 @mixin k-utilities-responsive {
   .k-u-image-responsive {
@@ -16,5 +18,11 @@
 
     max-width: 100%;
     height: auto;
+  }
+  .k-u-image-responsive--important {
+    display: block !important;
+
+    max-width: 100% !important;
+    height: auto !important;
   }
 }
