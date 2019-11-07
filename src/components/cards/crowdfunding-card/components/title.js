@@ -158,7 +158,7 @@ TitleComponent.propTypes = {
   loading: _propTypes.default.bool,
   widgetTitle: _propTypes.default.string,
   dayCounter: _propTypes.default.string,
-  stateDay: _propTypes.default.string,
+  stateDay: _propTypes.default.element,
   titleProps: _propTypes.default.shape()
 };
 TitleComponent.defaultProps = {
