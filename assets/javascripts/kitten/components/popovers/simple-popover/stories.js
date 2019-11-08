@@ -59,3 +59,70 @@ storiesOf('Popovers & Tours/SimplePopover', module)
       </StoryContainer>
     )
   })
+  .add('without illustration', () => {
+    const [isVisible, setVisibility] = useState(true)
+
+    const closeClick = () => {
+      console.log('Close or Cancel clicked')
+      setVisibility(false)
+    }
+
+    return (
+      <StoryContainer>
+        <SimplePopover
+          isVisible={isVisible}
+          onCloseClick={closeClick}
+          titleId="popover-title"
+          closeButtonLabel="Close"
+          title="This popover has a title"
+          content="Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. "
+          buttons={[
+            {
+              label: 'Cancel',
+              modifier: 'hydrogen',
+              tiny: true,
+              clickOptions: {
+                closeOnClick: true,
+              },
+            },
+            {
+              label: 'OK',
+              modifier: 'helium',
+              tiny: true,
+              onClick: () => console.log('Ok clicked'),
+            },
+          ]}
+        />
+
+        {!isVisible && (
+          <Button onClick={() => setVisibility(true)}>Show Popover</Button>
+        )}
+      </StoryContainer>
+    )
+  })
+  .add('without buttons', () => {
+    const [isVisible, setVisibility] = useState(true)
+
+    const closeClick = () => {
+      console.log('Close clicked')
+      setVisibility(false)
+    }
+
+    return (
+      <StoryContainer>
+        <SimplePopover
+          isVisible={isVisible}
+          onCloseClick={closeClick}
+          titleId="popover-title"
+          closeButtonLabel="Close"
+          title="This popover has a title"
+          content="Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. "
+          illustration={<p>🐱</p>}
+        />
+
+        {!isVisible && (
+          <Button onClick={() => setVisibility(true)}>Show Popover</Button>
+        )}
+      </StoryContainer>
+    )
+  })
