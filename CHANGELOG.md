@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `SimplePopover` component.
+
 ## [2.37.2] - 2019-11-07
 
 Fix:
