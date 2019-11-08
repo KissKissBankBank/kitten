@@ -313,6 +313,17 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   flex-basis: 100%;
   margin-bottom: 1.25rem;
   background-color: #fff;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease,visibility 0s ease;
+  transition: opacity 0.3s ease,visibility 0s ease;
+  -webkit-transition-delay: 0s,0.3s;
+  transition-delay: 0s,0.3s;
+}
+
+.c0[aria-hidden='true'] {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .c3 {
@@ -450,12 +461,12 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
     <div
       className="c4"
     >
-      <h1
+      <h2
         className="k-Title k-Title--senary k-Title--withoutMargin"
         id="popover-title"
       >
         This popover has a title
-      </h1>
+      </h2>
     </div>
     <div
       className="c5"
@@ -613,6 +624,17 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   flex-basis: 100%;
   margin-bottom: 1.25rem;
   background-color: #fff;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease,visibility 0s ease;
+  transition: opacity 0.3s ease,visibility 0s ease;
+  -webkit-transition-delay: 0s,0.3s;
+  transition-delay: 0s,0.3s;
+}
+
+.c0[aria-hidden='true'] {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .c1 {
@@ -678,12 +700,12 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
     <div
       className="c3"
     >
-      <h1
+      <h2
         className="k-Title k-Title--senary k-Title--withoutMargin"
         id="popover-title"
       >
         
-      </h1>
+      </h2>
     </div>
     <div
       className="c4"
