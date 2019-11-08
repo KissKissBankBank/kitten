@@ -84,7 +84,7 @@ export const SimplePopover = ({
   titleId,
   closeButtonLabel,
   title,
-  content,
+  text,
   illustration,
   illustrationBackground,
   buttons,
@@ -118,7 +118,7 @@ export const SimplePopover = ({
         </Title>
       </Marger>
       <Marger top=".5" bottom="1">
-        <Paragraph modifier="quaternary">{content}</Paragraph>
+        <Paragraph modifier="quaternary">{text}</Paragraph>
       </Marger>
       {buttons.length > 0 && (
         <ButtonsContainer top="3">
@@ -147,7 +147,7 @@ SimplePopover.defaultProps = {
   titleId: 'popover-title',
   closeButtonLabel: 'Close',
   title: '',
-  content: '',
+  text: '',
   illustration: null,
   illustrationBackground: COLORS.primary4,
   buttons: [],
@@ -159,7 +159,7 @@ SimplePopover.propTypes = {
   titleId: PropTypes.string,
   closeButtonLabel: PropTypes.string,
   title: PropTypes.string,
-  content: PropTypes.string,
+  text: PropTypes.string,
   illustration: PropTypes.object,
   illustrationBackground: PropTypes.string,
   buttons: PropTypes.array,

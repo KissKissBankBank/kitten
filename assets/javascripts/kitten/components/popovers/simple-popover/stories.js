@@ -33,7 +33,7 @@ storiesOf('Popovers & Tours/SimplePopover', module)
           titleId="popover-title"
           closeButtonLabel="Close"
           title="This popover has a title"
-          content="Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. "
+          text="Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. "
           illustration={<p>🐱</p>}
           buttons={[
             {
@@ -75,7 +75,7 @@ storiesOf('Popovers & Tours/SimplePopover', module)
           titleId="popover-title"
           closeButtonLabel="Close"
           title="This popover has a title"
-          content="Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. "
+          text="Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. "
           buttons={[
             {
               label: 'Cancel',
@@ -116,7 +116,7 @@ storiesOf('Popovers & Tours/SimplePopover', module)
           titleId="popover-title"
           closeButtonLabel="Close"
           title="This popover has a title"
-          content="Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. "
+          text="Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. "
           illustration={<p>🐱</p>}
         />
 
