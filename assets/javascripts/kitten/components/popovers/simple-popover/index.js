@@ -99,11 +99,11 @@ export const SimplePopover = ({
   onCloseClick,
   titleId,
   closeButtonLabel,
-  popoverTitle,
-  popoverContent,
-  popoverIllustration,
-  popoverIllustrationBackground,
-  popoverButtons,
+  title,
+  content,
+  illustration,
+  illustrationBackground,
+  buttons,
   ...simplePopoverProps
 }) => (
   <PopoverContainer
@@ -123,23 +123,23 @@ export const SimplePopover = ({
     >
       <CrossIcon width="8" height="8" fill={COLORS.background1} />
     </CrossIconButton>
-    {popoverIllustration && (
-      <IconContainer backgroundColor={popoverIllustrationBackground}>
-        {popoverIllustration}
+    {illustration && (
+      <IconContainer backgroundColor={illustrationBackground}>
+        {illustration}
       </IconContainer>
     )}
     <div>
       <Marger bottom=".5">
         <Title id={titleId} modifier="senary" margin={false}>
-          {popoverTitle}
+          {title}
         </Title>
       </Marger>
       <Marger top=".5" bottom="1">
-        <Paragraph modifier="quaternary">{popoverContent}</Paragraph>
+        <Paragraph modifier="quaternary">{content}</Paragraph>
       </Marger>
-      {popoverButtons.length > 0 && (
+      {buttons.length > 0 && (
         <ButtonsContainer top="3">
-          {popoverButtons.map(({ label, clickOptions, ...buttonProps }, i) => {
+          {buttons.map(({ label, clickOptions, ...buttonProps }, i) => {
             const clickHandler =
               clickOptions && clickOptions.closeOnClick && onCloseClick
 
@@ -163,11 +163,11 @@ SimplePopover.defaultProps = {
   onCloseClick: () => {},
   titleId: 'popover-title',
   closeButtonLabel: 'Close',
-  popoverTitle: '',
-  popoverContent: '',
-  popoverIllustration: null,
-  popoverIllustrationBackground: COLORS.primary4,
-  popoverButtons: [],
+  title: '',
+  content: '',
+  illustration: null,
+  illustrationBackground: COLORS.primary4,
+  buttons: [],
 }
 
 SimplePopover.propTypes = {
@@ -175,9 +175,9 @@ SimplePopover.propTypes = {
   onCloseClick: PropTypes.func,
   titleId: PropTypes.string,
   closeButtonLabel: PropTypes.string,
-  popoverTitle: PropTypes.string,
-  popoverContent: PropTypes.string,
-  popoverIllustration: PropTypes.object,
-  popoverIllustrationBackground: PropTypes.string,
-  popoverButtons: PropTypes.array,
+  title: PropTypes.string,
+  content: PropTypes.string,
+  illustration: PropTypes.object,
+  illustrationBackground: PropTypes.string,
+  buttons: PropTypes.array,
 }
