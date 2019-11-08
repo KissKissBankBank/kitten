@@ -421,6 +421,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
     type="button"
   >
     <svg
+      aria-hidden={true}
       fill="#fff"
       height="8"
       viewBox="0 0 8 8"
@@ -655,6 +656,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
     type="button"
   >
     <svg
+      aria-hidden={true}
       fill="#fff"
       height="8"
       viewBox="0 0 8 8"
