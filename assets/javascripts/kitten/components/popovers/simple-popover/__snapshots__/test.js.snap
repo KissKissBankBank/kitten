@@ -386,7 +386,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   }
 }
 
-@media (min-width:640px) {
+@media (min-width:40rem) {
   .c0 {
     padding: 3.125rem 2.5rem;
   }
@@ -637,7 +637,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:640px) {
+@media (min-width:40rem) {
   .c0 {
     padding: 3.125rem 2.5rem;
   }
