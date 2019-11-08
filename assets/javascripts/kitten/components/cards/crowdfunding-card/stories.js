@@ -86,8 +86,7 @@ storiesOf('Cards/CrowdfundingCard', module)
           'Title',
           'Lorem ipsum dolor sit amet, consectetuer adipiscing elit…',
         )}
-        dayCounter={text('Counter Day', '27 jours')}
-        stateDay={text('State Day', 'restant')}
+        dayCounter={text('Counter Day', '27 jours restants')}
         subtitle={text(
           'Subtitle',
           'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',

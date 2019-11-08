@@ -45,10 +45,6 @@ const StyledDayCounter = styled.div`
   margin-left: calc(2 * ${COMPONENT_GUTTER});
 `
 
-const StyledStateDay = styled(Text)`
-  display: flex;
-`
-
 class TitleComponent extends PureComponent {
   static propTypes = {
     title: PropTypes.string,
@@ -56,7 +52,6 @@ class TitleComponent extends PureComponent {
     loading: PropTypes.bool,
     widgetTitle: PropTypes.string,
     dayCounter: PropTypes.element,
-    stateDay: PropTypes.string,
     titleProps: PropTypes.shape(),
   }
 
@@ -66,7 +61,6 @@ class TitleComponent extends PureComponent {
     loading: false,
     widgetTitle: '',
     dayCounter: null,
-    stateDay: '',
     titleProps: {},
   }
 
@@ -78,7 +72,6 @@ class TitleComponent extends PureComponent {
       loading,
       widgetTitle,
       dayCounter,
-      stateDay,
     } = this.props
 
     return (
@@ -121,13 +114,7 @@ class TitleComponent extends PureComponent {
   }
 
   renderWidgetTitle() {
-    const {
-      widgetTitle,
-      dayCounter,
-      stateDay,
-      loading,
-      titleTruncate,
-    } = this.props
+    const { widgetTitle, dayCounter, loading, titleTruncate } = this.props
 
     return (
       <>
@@ -151,16 +138,13 @@ class TitleComponent extends PureComponent {
 
           {!loading && (
             <StyledDayCounter>
-              <Text size="tiny" color="font1" weight="bold" lineHeight="normal">
+              <Text
+                size="tiny"
+                color="font1"
+                weight="regular"
+                lineHeight="normal"
+              >
                 {dayCounter}
-                <StyledStateDay
-                  size="micro"
-                  color="font1"
-                  weight="light"
-                  lineHeight="normal"
-                >
-                  {stateDay}
-                </StyledStateDay>
               </Text>
             </StyledDayCounter>
           )}
