@@ -14,22 +14,6 @@ import { Button } from '../../../components/buttons/button/button'
 
 const borderSize = 2
 
-const tourFadeOut = () =>
-  keyframes`
-  0 {
-    opacity: 1;
-    visibility: visible;
-  }
-  99% {
-    opacity: 0;
-    visibility: visible;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-`
-
 const StyledLoudSpeaker = styled.div`
   display: block;
   margin: 0 auto;
@@ -46,19 +30,19 @@ const PopoverContainer = styled.div`
   flex-basis: 100%;
   margin-bottom: ${pxToRem(CONTAINER_PADDING_THIN)};
   background-color: ${COLORS.background1};
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0s ease;
+  transition-delay: 0s, 0.3s;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     padding: ${pxToRem(50)} ${pxToRem(40)};
   }
 
-  ${({ hide }) =>
-    hide &&
-    css`
-      animation-name: ${tourFadeOut};
-      animation-fill-mode: forwards;
-      animation-duration: 0.5s;
-      animation-timing-function: ease-in-quart;
-    `}
+  &[aria-hidden='true'] {
+    opacity: 0;
+    visibility: hidden;
+  }
 `
 
 const IconContainer = styled.div`
@@ -111,7 +95,6 @@ export const SimplePopover = ({
     role="dialog"
     aria-hidden={!isVisible}
     aria-labelledby={titleId}
-    hide={!isVisible}
   >
     <CrossIconButton
       aria-label={closeButtonLabel}
