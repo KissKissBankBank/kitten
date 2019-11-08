@@ -47,7 +47,7 @@ const PopoverContainer = styled.div`
   margin-bottom: ${pxToRem(CONTAINER_PADDING_THIN)};
   background-color: ${COLORS.background1};
 
-  @media (min-width: ${ScreenConfig.S.min}px) {
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     padding: ${pxToRem(50)} ${pxToRem(40)};
   }
 
