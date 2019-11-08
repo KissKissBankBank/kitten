@@ -121,7 +121,7 @@ export const SimplePopover = ({
       tiny
       icon
     >
-      <CrossIcon width="8" height="8" fill={COLORS.background1} />
+      <CrossIcon aria-hidden width="8" height="8" fill={COLORS.background1} />
     </CrossIconButton>
     {illustration && (
       <IconContainer backgroundColor={illustrationBackground}>
