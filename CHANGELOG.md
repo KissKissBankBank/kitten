@@ -8,6 +8,11 @@ Feature: Add `--important` utility definitions.
 Feature: Add `important` argument to `k-typographyFontSize` definition.
 Feature: Add `important` argument to `k-typographyFont` definition.
 
+## [2.37.2] - 2019-11-07
+
+Fix:
+- Update `dayCounter` propTypes on `CrowdfundingCard`.
+
 ## [2.37.1] - 2019-11-04
 
 Fix:
