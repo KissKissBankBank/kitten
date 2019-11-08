@@ -11,18 +11,34 @@
 ///     <p class="k-u-weight-light">…</p>
 ///     <p class="k-u-weight-regular">…</p>
 ///     <p class="k-u-weight-bold">…</p>
+///
+///     <p class="k-u-weight-light--important">…</p>
+///     <p class="k-u-weight-regular--important">…</p>
+///     <p class="k-u-weight-bold--important">…</p>
 
 @mixin k-utilities-weight {
   .k-u-weight-light {
     @include k-typographyFont('light');
+
+    &--important {
+      @include k-typographyFont('light', $important: true);
+    }
   }
 
   .k-u-weight-regular {
     @include k-typographyFont('regular');
+
+    &--important {
+      @include k-typographyFont('regular', $important: true);
+    }
   }
 
   .k-u-strong,
   .k-u-weight-bold {
     @include k-typographyFont('bold');
+
+    &--important {
+      @include k-typographyFont('bold', $important: true);
+    }
   }
 }

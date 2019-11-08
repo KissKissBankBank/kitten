@@ -9,9 +9,15 @@
 /// @example html
 ///
 ///     <p class="k-u-text--inactive">…</p>
+///
+///     <p class="k-u-text--inactive--important">…</p>
 
 @mixin k-utilities-inactive {
   .k-u-text--inactive {
     color: map-get($k-colors, 'line-2');
+
+    &--important {
+      color: map-get($k-colors, 'line-2') !important;
+    }
   }
 }

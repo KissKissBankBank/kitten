@@ -23,12 +23,32 @@
 ///   <div class="k-u-blockAlign-center">…</div>
 ///   <div class="k-u-blockAlign-start">…</div>
 ///   <div class="k-u-blockAlign-end">…</div>
+///
+///   <div class="k-u-blockAlign-center@xxs-down--important">…</div>
+///   <div class="k-u-blockAlign-center@xs-down--important">…</div>
+///   <div class="k-u-blockAlign-center@s-down--important">…</div>
+///   <div class="k-u-blockAlign-center@m-down--important">…</div>
+///   <div class="k-u-blockAlign-center@l-down--important">…</div>
+///
+///   <div class="k-u-blockAlign-center@xs-up--important">…</div>
+///   <div class="k-u-blockAlign-center@s-up--important">…</div>
+///   <div class="k-u-blockAlign-center@m-up--important">…</div>
+///   <div class="k-u-blockAlign-center@l-up--important">…</div>
+///   <div class="k-u-blockAlign-center@xl-up--important">…</div>
+///
+///   <div class="k-u-blockAlign-center--important">…</div>
+///   <div class="k-u-blockAlign-start--important">…</div>
+///   <div class="k-u-blockAlign-end--important">…</div>
 
 @mixin k-u-blockAlign($position, $align) {
   $value: $align;
 
   .k-u-blockAlign-#{position} {
     align-self: $value;
+
+    &--important {
+      align-self: $value !important;
+    }
   }
 
   @each $name, $query in $k-media-queries {
@@ -36,6 +56,10 @@
       .k-u-blockAlign-#{$position}\@#{$name}-down {
         @include k-media-max($name) {
           align-self: $value;
+
+          &--important {
+            align-self: $value !important;
+          }
         }
       }
     }
@@ -44,6 +68,10 @@
       .k-u-blockAlign-#{$position}\@#{$name}-up {
         @include k-media-min($name) {
           align-self: $value;
+
+          &--important {
+            align-self: $value !important;
+          }
         }
       }
     }
