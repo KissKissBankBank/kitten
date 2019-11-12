@@ -2,10 +2,11 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
-## [unreleased]
+## [2.39.0] - 2019-11-12
 
-- Feature: Add `CrowdfundingCard` mobile version.
-- Feature: Delete `stateDay` and update `dayCounter` props on `CrowdfundingCardWidget`
+Features:
+- Add `CrowdfundingCard` mobile version.
+- Delete `stateDay` and update `dayCounter` props on `CrowdfundingCardWidget`
 
 ## [2.38.0] - 2019-11-08
 

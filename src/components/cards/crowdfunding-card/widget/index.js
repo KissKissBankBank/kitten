@@ -103,10 +103,9 @@ function (_PureComponent) {
           titlesMinHeight = _this$props.titlesMinHeight,
           subTitleTruncate = _this$props.subTitleTruncate,
           dayCounter = _this$props.dayCounter,
-          stateDay = _this$props.stateDay,
           titleProps = _this$props.titleProps,
           buttonText = _this$props.buttonText,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["href", "imageContainerBackground", "imageProps", "avatarProps", "ownerDescription", "ownerTitle", "loading", "state", "subtitle", "title", "titleTruncate", "titlesMinHeight", "subTitleTruncate", "dayCounter", "stateDay", "titleProps", "buttonText"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["href", "imageContainerBackground", "imageProps", "avatarProps", "ownerDescription", "ownerTitle", "loading", "state", "subtitle", "title", "titleTruncate", "titlesMinHeight", "subTitleTruncate", "dayCounter", "titleProps", "buttonText"]);
       return _react.default.createElement(StyledContainer, (0, _extends2.default)({}, others, {
         as: href ? 'a' : 'div',
         onClick: this.removeCurrentFocus,
@@ -125,8 +124,7 @@ function (_PureComponent) {
         titleTruncate: titleTruncate,
         loading: loading,
         widgetTitle: title,
-        dayCounter: dayCounter,
-        stateDay: stateDay
+        dayCounter: dayCounter
       }), _react.default.createElement(_subtitle.default, {
         widgetSubtitle: subtitle,
         subTitleTruncate: subTitleTruncate,

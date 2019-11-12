@@ -50,7 +50,7 @@ var StyledTruncate = (0, _styledComponents.default)(_reactTruncate.default).with
 var StyledContainerSubtitle = _styledComponents.default.div.withConfig({
   displayName: "subtitle__StyledContainerSubtitle",
   componentId: "hzl57w-1"
-})(["display:none;@media (min-width:", "){display:flex;align-items:center;line-height:1;padding:0 ", ";margin-top:", ";}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), COMPONENT_GUTTER, (0, _typography.pxToRem)(10));
+})(["display:none;@media (min-width:", "){display:flex;align-items:center;line-height:1;padding:0 ", ";margin-top:", ";}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), COMPONENT_GUTTER, (0, _typography.pxToRem)(10));
 
 var StyledHorizontalStroke = (0, _styledComponents.default)(function (_ref) {
   var loading = _ref.loading,

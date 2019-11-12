@@ -33,12 +33,14 @@ var _text = require("../../../../components/typography/text");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
+var _screenConfig = require("../../../../constants/screen-config");
+
 var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "progress__StyledContainer",
   componentId: "sc-4iuf3q-0"
-})(["display:flex;flex-direction:row;align-items:center;padding:0 ", ";margin-top:", ";margin-bottom:", ";"], COMPONENT_GUTTER, (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(20));
+})(["display:flex;flex-direction:row;align-items:center;padding:0;margin-top:", ";margin-bottom:", ";@media (min-width:", "){padding:0 ", ";}"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), COMPONENT_GUTTER);
 
 var StyledProgress = (0, _styledComponents.default)(_progress.Progress).withConfig({
   displayName: "progress__StyledProgress",
@@ -85,7 +87,8 @@ function (_PureComponent) {
       }), _react.default.createElement(StyledPercent, {
         weight: "regular",
         size: "micro",
-        color: "font1"
+        color: "font1",
+        className: "k-u-hidden@s-down"
       }, loading && _react.default.createElement(StyledLoading, null), !loading && "".concat(progress, " %")));
     }
   }]);

@@ -45,6 +45,8 @@ var _state = _interopRequireDefault(require("./components/state"));
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _screenConfig = require("../../../constants/screen-config");
+
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "crowdfunding-card__StyledContainer",
   componentId: "sc-1b0f5ki-0"
@@ -53,8 +55,11 @@ var StyledContainer = _styledComponents.default.div.withConfig({
 var StyledTitleAndDescription = _styledComponents.default.div.withConfig({
   displayName: "crowdfunding-card__StyledTitleAndDescription",
   componentId: "sc-1b0f5ki-1"
-})(["margin-top:", ";", ""], (0, _typography.pxToRem)(5), function (_ref) {
+})(["", " @media (min-width:", "){", "}"], function (_ref) {
   var titlesMinHeight = _ref.titlesMinHeight;
+  return titlesMinHeight && (0, _styledComponents.css)(["min-height:", ";"], (0, _typography.pxToRem)(50));
+}, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), function (_ref2) {
+  var titlesMinHeight = _ref2.titlesMinHeight;
   return titlesMinHeight && (0, _styledComponents.css)(["min-height:", ";"], (0, _typography.pxToRem)(75));
 });
 
