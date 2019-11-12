@@ -44,6 +44,7 @@ const modifierOptions = {
   Carbon: 'carbon',
   Oxygen: 'oxygen',
   Checked: 'checked',
+  Copper: 'copper',
 }
 
 const info = {

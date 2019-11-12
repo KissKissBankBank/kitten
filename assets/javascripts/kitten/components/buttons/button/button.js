@@ -164,6 +164,7 @@ export class Button extends Component {
       'beryllium',
       'carbon',
       'oxygen',
+      'copper',
       'checked',
     ]),
   }

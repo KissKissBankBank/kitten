@@ -8,6 +8,11 @@ export const modifierStyles = modifier => {
   let backgroundColor
   let color
 
+  let hoverBorderColor = COLORS.primary2
+  let hoverColor = COLORS.background1
+  let activeBorderColor = COLORS.primary3
+  let activeColor = COLORS.background1
+
   switch (modifier) {
     case 'hydrogen':
       borderColor = COLORS.line1
@@ -46,6 +51,16 @@ export const modifierStyles = modifier => {
       backgroundColor = COLORS.background1
       color = COLORS.primary1
       break
+
+    case 'copper':
+      borderColor = COLORS.error3
+      backgroundColor = COLORS.background1
+      color = COLORS.error
+      hoverBorderColor = 'currentColor'
+      hoverColor = COLORS.error
+      activeBorderColor = 'currentColor'
+      activeColor = COLORS.error
+      break
   }
 
   return css`
@@ -63,22 +78,22 @@ export const modifierStyles = modifier => {
       css`
         :hover,
         :focus {
-          border-color: ${COLORS.primary2};
-          background-color: ${COLORS.primary2};
-          color: ${COLORS.background1};
+          border-color: ${hoverBorderColor};
+          background-color: ${backgroundColor};
+          color: ${hoverColor};
 
           svg {
-            fill: ${COLORS.background1};
+            fill: ${hoverColor};
           }
         }
 
         :active {
-          border-color: ${COLORS.primary3};
-          background-color: ${COLORS.primary3};
-          color: ${COLORS.background1};
+          border-color: ${activeBorderColor};
+          background-color: ${backgroundColor};
+          color: ${activeColor};
 
           svg {
-            fill: ${COLORS.background1};
+            fill: ${activeColor};
           }
         }
       `}
