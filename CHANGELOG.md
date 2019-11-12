@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `copper` modifier to `Button`.
 - Feature: Add `encodeSvgString` util.
+- Feature: Add `CheckableButton` component.
 
 ## [2.39.0] - 2019-11-12
 
