@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Delete `stateDay` and update `dayCounter` props on `CrowdfundingCardWidget`
 
+## [2.38.0] - 2019-11-08
+
+Features:
+- Add `SimplePopover` component.
+- Add `--important` utility definitions.
+- Add `important` argument to `k-typographyFontSize` definition.
+- Add `important` argument to `k-typographyFont` definition.
+
 ## [2.37.2] - 2019-11-07
 
 Fix:

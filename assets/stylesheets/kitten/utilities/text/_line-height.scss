@@ -9,9 +9,15 @@
 /// @example html
 ///
 ///     <p class="k-u-line-height-normal">…</p>
+///
+///     <p class="k-u-line-height-normal--important">…</p>
 
 @mixin k-utilities-line-height {
   .k-u-line-height-normal {
     line-height: normal;
+
+    &--important {
+      line-height: normal !important;
+    }
   }
 }

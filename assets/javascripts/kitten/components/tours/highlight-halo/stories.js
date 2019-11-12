@@ -14,7 +14,7 @@ const StoryContainer = ({ children }) => (
   </Container>
 )
 
-storiesOf('Tour/HighlightHalo', module)
+storiesOf('Popovers & Tours/HighlightHalo', module)
   .addDecorator(withKnobs)
   .add('default', () => {
     return (

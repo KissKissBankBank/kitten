@@ -9,10 +9,17 @@
 /// @example html
 ///
 ///   <p class="k-u-anti-aliasing">…</p>
+///
+///   <p class="k-u-anti-aliasing--important">…</p>
 
 @mixin k-utilities-aliasing {
   .k-u-anti-aliasing {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    &--important {
+      -webkit-font-smoothing: antialiased !important;
+      -moz-osx-font-smoothing: grayscale !important;
+    }
   }
 }
