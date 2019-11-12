@@ -9,8 +9,10 @@ export const modifierStyles = modifier => {
   let color
 
   let hoverBorderColor = COLORS.primary2
+  let hoverBgColor = COLORS.primary2
   let hoverColor = COLORS.background1
   let activeBorderColor = COLORS.primary3
+  let activeBgColor = COLORS.primary3
   let activeColor = COLORS.background1
 
   switch (modifier) {
@@ -57,8 +59,10 @@ export const modifierStyles = modifier => {
       backgroundColor = COLORS.background1
       color = COLORS.error
       hoverBorderColor = 'currentColor'
+      hoverBgColor = COLORS.background1
       hoverColor = COLORS.error
       activeBorderColor = 'currentColor'
+      activeBgColor = COLORS.background1
       activeColor = COLORS.error
       break
   }
@@ -79,7 +83,7 @@ export const modifierStyles = modifier => {
         :hover,
         :focus {
           border-color: ${hoverBorderColor};
-          background-color: ${backgroundColor};
+          background-color: ${hoverBgColor};
           color: ${hoverColor};
 
           svg {
@@ -89,7 +93,7 @@ export const modifierStyles = modifier => {
 
         :active {
           border-color: ${activeBorderColor};
-          background-color: ${backgroundColor};
+          background-color: ${activeBgColor};
           color: ${activeColor};
 
           svg {
