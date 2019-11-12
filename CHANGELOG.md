@@ -2,6 +2,8 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [unreleased]
+
 ## [2.39.0] - 2019-11-12
 
 Features:
