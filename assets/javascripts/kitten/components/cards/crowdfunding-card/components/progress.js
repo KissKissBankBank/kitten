@@ -5,6 +5,7 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 import { Progress } from '../../../../components/meters/progress'
 import { Text } from '../../../../components/typography/text'
 import COLORS from '../../../../constants/colors-config'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
@@ -12,9 +13,13 @@ const StyledContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 ${COMPONENT_GUTTER};
+  padding: 0;
   margin-top: ${pxToRem(5)};
   margin-bottom: ${pxToRem(20)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    padding: 0 ${COMPONENT_GUTTER};
+  }
 `
 
 const StyledProgress = styled(Progress)`
@@ -65,7 +70,12 @@ class ProgressBar extends PureComponent {
           }}
         />
 
-        <StyledPercent weight="regular" size="micro" color="font1">
+        <StyledPercent
+          weight="regular"
+          size="micro"
+          color="font1"
+          className="k-u-hidden@s-down"
+        >
           {loading && <StyledLoading />}
 
           {!loading && `${progress} %`}

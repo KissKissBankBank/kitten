@@ -9,6 +9,7 @@ import ProgressBar from './components/progress'
 import Loading from './components/loading'
 import State from './components/state'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledContainer = styled.div`
   position: relative;
@@ -16,13 +17,19 @@ const StyledContainer = styled.div`
 `
 
 const StyledTitleAndDescription = styled.div`
-  margin-top: ${pxToRem(5)};
-
   ${({ titlesMinHeight }) =>
     titlesMinHeight &&
     css`
-      min-height: ${pxToRem(75)};
+      min-height: ${pxToRem(50)};
     `}
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    ${({ titlesMinHeight }) =>
+      titlesMinHeight &&
+      css`
+        min-height: ${pxToRem(75)};
+      `}
+  }
 `
 
 export class CrowdfundingCard extends PureComponent {

@@ -4,11 +4,28 @@ import 'jest-styled-components'
 import { CrowdfundingCard } from './index'
 import { CrowdfundingCardWidget } from './widget'
 
+const createMockMediaMatcher = matches => () => ({
+  matches,
+  addListener: () => {},
+  removeListener: () => {},
+})
+
 describe('<CrowdfundingCard />', () => {
+  let originalMatchMedia
   let component
+
+  beforeEach(() => {
+    originalMatchMedia = window.matchMedia
+  })
+
+  afterEach(() => {
+    window.matchMedia = originalMatchMedia
+  })
 
   describe('CrowdfundingCard props', () => {
     beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(false)
+
       component = renderer
         .create(
           <CrowdfundingCard
@@ -18,8 +35,8 @@ describe('<CrowdfundingCard />', () => {
             avatarProps={{ src: '#image', alt: '' }}
             state="Lorem ipsum…"
             loading={false}
-            cardTitle="Lorem ipsum…"
-            cardSubTitle="Sed ut perspiciatis unde omnis iste natus error Lorem"
+            title="Lorem ipsum…"
+            subTitle="Sed ut perspiciatis unde omnis iste natus error Lorem"
             titleTruncate
             subTitleTruncate
             info1="Lorem ipsum…"
@@ -38,6 +55,8 @@ describe('<CrowdfundingCard />', () => {
 
   describe('CrowdfundingCardWidget props', () => {
     beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(false)
+
       component = renderer
         .create(
           <CrowdfundingCardWidget
@@ -52,7 +71,7 @@ describe('<CrowdfundingCard />', () => {
             titleTruncate
             subTitleTruncate
             buttonText="Lorem ipsum"
-            counterDay="27days"
+            dayCounter={null}
           />,
         )
         .toJSON()

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../constants/screen-config'
 import { Text } from '../../../../components/typography/text'
 
 const COMPONENT_GUTTER = pxToRem(10)
@@ -16,6 +17,10 @@ const StyledState = styled.div`
   background-color: ${COLORS.background1};
   padding: ${COMPONENT_GUTTER};
   line-height: 1;
+
+  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    display: none;
+  }
 `
 
 const StyledWidgetContainer = styled.div`

@@ -1,11 +1,12 @@
 import React, { PureComponent } from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
 import { Title } from '../../../../components/typography/title'
 import COLORS from '../../../../constants/colors-config'
 import Truncate from 'react-truncate'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
@@ -13,13 +14,26 @@ const StyledTruncate = styled(Truncate)`
   white-space: nowrap;
 `
 
-const StyledTitle = styled.div`
+const StyledTitleContainer = styled.div`
   flex: 1;
-  padding: 0 ${COMPONENT_GUTTER};
+  padding: 0;
   line-height: 1;
+  margin-top: ${pxToRem(10)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    padding: 0 ${COMPONENT_GUTTER};
+  }
 `
 
-const StyledWidgetTitle = styled(StyledTitle)`
+const StyledTitle = styled(Title)`
+  font-size: ${stepToRem(-1)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    font-size: ${stepToRem(2)};
+  }
+`
+
+const StyledWidgetTitle = styled(StyledTitleContainer)`
   padding: 0;
 `
 
@@ -86,21 +100,27 @@ class TitleComponent extends PureComponent {
     const { loading, titleProps, titleTruncate, title } = this.props
 
     return (
-      <StyledTitle>
+      <StyledTitleContainer>
         {!loading && (
-          <Title
+          <StyledTitle
             tag="p"
-            modifier="senary"
             margin={false}
             className="k-Card__title"
             {...titleProps}
           >
             {titleTruncate && (
-              <StyledTruncate lines={2}>{title}</StyledTruncate>
+              <>
+                <StyledTruncate lines={2} className="k-u-hidden@s-down">
+                  {title}
+                </StyledTruncate>
+                <StyledTruncate lines={3} className="k-u-hidden@m-up">
+                  {title}
+                </StyledTruncate>
+              </>
             )}
 
             {!titleTruncate && title}
-          </Title>
+          </StyledTitle>
         )}
 
         {loading && (
@@ -109,7 +129,7 @@ class TitleComponent extends PureComponent {
             <StyledTitleSmallLoading />
           </>
         )}
-      </StyledTitle>
+      </StyledTitleContainer>
     )
   }
 

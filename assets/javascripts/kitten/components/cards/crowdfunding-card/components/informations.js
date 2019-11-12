@@ -4,24 +4,33 @@ import PropTypes from 'prop-types'
 import { Text } from '../../../../components/typography/text'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
 
 const StyledContainer = styled.div`
-  margin-top: ${pxToRem(20)};
+  margin-top: ${pxToRem(15)};
   margin-bottom: ${pxToRem(5)};
   display: flex;
   flex-wrap: wrap;
-  padding: 0 ${COMPONENT_GUTTER};
+  padding: 0;
   line-height: 1;
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    margin-top: ${pxToRem(20)};
+    padding: 0 ${COMPONENT_GUTTER};
+  }
 `
 
 const StyledInfo = styled.div`
-  margin-top: ${pxToRem(5)};
-  margin-right: ${pxToRem(30)};
+  margin-right: ${pxToRem(15)};
 
   &:last-child {
     margin-right: 0;
+  }
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    margin-right: ${pxToRem(30)};
   }
 `
 
