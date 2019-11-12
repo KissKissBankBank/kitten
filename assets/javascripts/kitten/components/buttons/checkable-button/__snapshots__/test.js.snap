@@ -101,15 +101,15 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: opacity .2s ease,-webkit-transform .2s cubic-bezier(0.3,-.5,0.8,1);
-  -webkit-transition: opacity .2s ease,transform .2s cubic-bezier(0.3,-.5,0.8,1);
-  transition: opacity .2s ease,transform .2s cubic-bezier(0.3,-.5,0.8,1);
+  -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
 }
 
-.c0[aria-checked="true"]::after {
+.c0[aria-checked='true']::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -252,15 +252,15 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: opacity .2s ease,-webkit-transform .2s cubic-bezier(0.3,-.5,0.8,1);
-  -webkit-transition: opacity .2s ease,transform .2s cubic-bezier(0.3,-.5,0.8,1);
-  transition: opacity .2s ease,transform .2s cubic-bezier(0.3,-.5,0.8,1);
+  -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
 }
 
-.c0[aria-checked="true"]::after {
+.c0[aria-checked='true']::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -406,15 +406,15 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: opacity .2s ease,-webkit-transform .2s cubic-bezier(0.3,-.5,0.8,1);
-  -webkit-transition: opacity .2s ease,transform .2s cubic-bezier(0.3,-.5,0.8,1);
-  transition: opacity .2s ease,transform .2s cubic-bezier(0.3,-.5,0.8,1);
+  -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
 }
 
-.c0[aria-checked="true"]::after {
+.c0[aria-checked='true']::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -540,15 +540,15 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: opacity .2s ease,-webkit-transform .2s cubic-bezier(0.3,-.5,0.8,1);
-  -webkit-transition: opacity .2s ease,transform .2s cubic-bezier(0.3,-.5,0.8,1);
-  transition: opacity .2s ease,transform .2s cubic-bezier(0.3,-.5,0.8,1);
+  -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
 }
 
-.c0[aria-checked="true"]::after {
+.c0[aria-checked='true']::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -678,15 +678,15 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
-  -webkit-transition: opacity .2s ease,-webkit-transform .2s cubic-bezier(0.3,-.5,0.8,1);
-  -webkit-transition: opacity .2s ease,transform .2s cubic-bezier(0.3,-.5,0.8,1);
-  transition: opacity .2s ease,transform .2s cubic-bezier(0.3,-.5,0.8,1);
+  -webkit-transition: opacity 0.2s ease,-webkit-transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  -webkit-transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
+  transition: opacity 0.2s ease,transform 0.2s cubic-bezier(0.3,-0.5,0.8,1);
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
 }
 
-.c0[aria-checked="true"]::after {
+.c0[aria-checked='true']::after {
   opacity: 1;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
