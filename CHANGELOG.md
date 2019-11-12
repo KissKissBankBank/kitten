@@ -5,9 +5,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `CrowdfundingCard` mobile version.
-- Feature: Add `color` and `title` props on `CopyIcon` component.
-- Feature: Create `EmbedIcon` component.
 
+## [2.38.0] - 2019-11-08
+
+Features:
+- Add `SimplePopover` component.
+- Add `--important` utility definitions.
+- Add `important` argument to `k-typographyFontSize` definition.
+- Add `important` argument to `k-typographyFont` definition.
+
+## [2.37.2] - 2019-11-07
+
+Fix:
+- Update `dayCounter` propTypes on `CrowdfundingCard`.
+
+>>>>>>> origin
 ## [2.37.1] - 2019-11-04
 
 Fix:

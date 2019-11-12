@@ -206,10 +206,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   <div
     className="c5"
   >
-    
-    
-    
-    
+
+
+
+
   </div>
   <div
     className="c6"
@@ -286,7 +286,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       Lorem ipsum…
     </span>
   </div>
-  
+
 </div>
 `;
 
@@ -553,7 +553,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   <div
     className="c5"
   >
-    
+
     <div
       className="c6"
     >
@@ -600,7 +600,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
         </span>
       </div>
     </div>
-    
+
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light c10"
     >
@@ -636,7 +636,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
       Lorem ipsum
     </button>
   </div>
-  
+
   <div
     className="c14"
   >

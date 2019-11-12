@@ -69,7 +69,7 @@ class TitleComponent extends PureComponent {
     titleTruncate: PropTypes.bool,
     loading: PropTypes.bool,
     widgetTitle: PropTypes.string,
-    dayCounter: PropTypes.string,
+    dayCounter: PropTypes.element,
     stateDay: PropTypes.string,
     titleProps: PropTypes.shape(),
   }
@@ -79,7 +79,7 @@ class TitleComponent extends PureComponent {
     titleTruncate: true,
     loading: false,
     widgetTitle: '',
-    dayCounter: '',
+    dayCounter: null,
     stateDay: '',
     titleProps: {},
   }

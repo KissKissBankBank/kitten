@@ -771,6 +771,12 @@ Object.defineProperty(exports, "Popover", {
     return _popover.Popover;
   }
 });
+Object.defineProperty(exports, "SimplePopover", {
+  enumerable: true,
+  get: function get() {
+    return _simplePopover.SimplePopover;
+  }
+});
 Object.defineProperty(exports, "SearchInput", {
   enumerable: true,
   get: function get() {
@@ -1169,6 +1175,8 @@ var _markdown = require("./components/pages/markdown");
 var _callToActionPopover = require("./components/popovers/call-to-action-popover");
 
 var _popover = require("./components/popovers/popover");
+
+var _simplePopover = require("./components/popovers/simple-popover");
 
 var _searchInput = require("./components/search/search-input");
 

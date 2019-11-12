@@ -29,7 +29,8 @@
 @mixin k-typographyFontSize(
   $step: 0,
   $line-height: null,
-  $without-line-height: false
+  $without-line-height: false,
+  $important: false
 ) {
 
   // Modular scale multiplier
@@ -62,10 +63,12 @@
     $line-height: ceil($font-size / $base-line-height) * $base-line-height;
   }
 
+  $is-important: if($important, !important, null);
+
   // Apply font size and line height.
-  font-size: $font-size;
+  font-size: $font-size $is-important;
 
   @if not $without-line-height {
-    line-height: $line-height;
+    line-height: $line-height $is-important;
   }
 }

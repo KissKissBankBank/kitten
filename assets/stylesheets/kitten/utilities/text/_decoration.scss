@@ -9,13 +9,23 @@
 /// @example html
 ///
 ///     <p class="k-u-decoration-underline">…</p>
+///
+///     <p class="k-u-decoration-underline--important">…</p>
 
 @mixin k-utilities-decoration {
   .k-u-decoration-underline {
     text-decoration: underline;
+
+    &--important {
+      text-decoration: underline !important;
+    }
   }
 
   .k-u-decoration-none {
     text-decoration: none;
+
+    &--important {
+      text-decoration: none !important;
+    }
   }
 }

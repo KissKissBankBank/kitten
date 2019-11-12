@@ -31,6 +31,27 @@
 ///   <div class="k-u-spaced">…</div>
 ///   <div class="k-u-align-center-block">…</div>
 ///
+///   <div class="k-u-align-center@xxs-down--important">…</div>
+///   <div class="k-u-align-center@xs-down--important">…</div>
+///   <div class="k-u-align-center@s-down--important">…</div>
+///   <div class="k-u-align-center@m-down--important">…</div>
+///   <div class="k-u-align-center@l-down--important">…</div>
+///
+///   <div class="k-u-align-center@xs-up--important">…</div>
+///   <div class="k-u-align-center@s-up--important">…</div>
+///   <div class="k-u-align-center@m-up--important">…</div>
+///   <div class="k-u-align-center@l-up--important">…</div>
+///   <div class="k-u-align-center@xl-up--important">…</div>
+///
+///   <div class="k-u-align-center--important">…</div>
+///   <div class="k-u-align-left--important">…</div>
+///   <div class="k-u-align-right--important">…</div>
+///
+///   <div class="k-u-spacedHorizontally--important">…</div>
+///   <div class="k-u-spacedVertically--important">…</div>
+///   <div class="k-u-spaced--important">…</div>
+///   <div class="k-u-align-center-block--important">…</div>
+///
 ///  @example html - Deprecated
 ///
 ///    <div class="k-u-centered">…</div>
@@ -40,6 +61,10 @@
 
   .k-u-align-#{$position} {
     text-align: $value;
+
+    &--important {
+      text-align: $value !important;
+    }
   }
 
   @each $name, $query in $k-media-queries {
@@ -47,6 +72,10 @@
       .k-u-align-#{$position}\@#{$name}-down {
         @include k-media-max($name) {
           text-align: $value;
+
+          &--important {
+            text-align: $value !important;
+          }
         }
       }
     }
@@ -55,6 +84,10 @@
       .k-u-align-#{$position}\@#{$name}-up {
         @include k-media-min($name) {
           text-align: $value;
+
+          &--important {
+            text-align: $value !important;
+          }
         }
       }
     }
@@ -67,25 +100,42 @@
   @include k-u-align('left', left);
   @include k-u-align('right', right);
 
-  // DEPRECATED
-  .k-u-centered {
-    text-align: center;
-  }
-
   .k-u-spacedHorizontally {
     margin: k-px-to-rem(10px) 0;
+
+    &--important {
+      margin: k-px-to-rem(10px) 0 !important;
+    }
   }
 
   .k-u-spacedVertically {
     margin: 0 k-px-to-rem(10px);
+
+    &--important {
+      margin: 0 k-px-to-rem(10px) !important;
+    }
   }
 
   .k-u-spaced {
     margin: k-px-to-rem(10px);
+
+    &--important {
+      margin: k-px-to-rem(10px) !important;
+    }
   }
 
   .k-u-align-center-block {
     margin-left: auto;
     margin-right: auto;
+
+    &--important {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+
+  // DEPRECATED
+  .k-u-centered {
+    text-align: center;
   }
 }
