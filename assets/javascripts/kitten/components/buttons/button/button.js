@@ -179,13 +179,17 @@ export class Button extends Component {
   }
 
   render() {
-    const { children, modifier, ...props } = this.props
-    const checked = modifier === 'checked' && { 'aria-checked': true }
+    const { children, ...props } = this.props
+
+    props.modifier === 'checked' &&
+      console.warn(
+        `Warning: In <Button /> component, 'checked' modifier is deprecated.`,
+      )
 
     return (
-      <StyledButton modifier={modifier} {...checked} {...props}>
+      <StyledButton aria-checked={props.modifier === 'checked'} {...props}>
         {children}
-        {modifier === 'checked' && (
+        {props.modifier === 'checked' && (
           <CheckedCircleIcon
             big={props.big && props.big}
             tiny={props.tiny && props.tiny}
