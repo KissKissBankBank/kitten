@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Delete `stateDay` and update `dayCounter` props on `CrowdfundingCardWidget`
+
 ## [2.38.0] - 2019-11-08
 
 Features:

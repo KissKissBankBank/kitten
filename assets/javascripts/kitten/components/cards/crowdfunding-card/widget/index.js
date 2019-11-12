@@ -58,7 +58,6 @@ export class CrowdfundingCardWidget extends PureComponent {
       titlesMinHeight,
       subTitleTruncate,
       dayCounter,
-      stateDay,
       titleProps,
       buttonText,
       ...others
@@ -86,7 +85,6 @@ export class CrowdfundingCardWidget extends PureComponent {
             loading={loading}
             widgetTitle={title}
             dayCounter={dayCounter}
-            stateDay={stateDay}
           />
           <Subtitle
             widgetSubtitle={subtitle}

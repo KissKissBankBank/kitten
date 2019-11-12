@@ -86,8 +86,7 @@ const Content = props => (
         ownerDescription="Paris"
         loading={false}
         title="Les Arts dessinés : devenez abonné-fondateur"
-        dayCounter="27 jours"
-        stateDay="restant"
+        dayCounter="27 jours restant"
         subtitle="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma"
         buttonText="Contribuer"
         state={<WidgetContainerState />}
