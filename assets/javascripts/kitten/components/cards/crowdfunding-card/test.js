@@ -72,7 +72,6 @@ describe('<CrowdfundingCard />', () => {
             subTitleTruncate
             buttonText="Lorem ipsum"
             dayCounter="27days"
-            stateDay="restant"
           />,
         )
         .toJSON()

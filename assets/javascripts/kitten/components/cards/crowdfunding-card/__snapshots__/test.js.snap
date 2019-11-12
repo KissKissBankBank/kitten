@@ -353,22 +353,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   margin-left: calc(2 * 0.625rem);
 }
 
-.c9 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c11 {
+.c10 {
   white-space: nowrap;
 }
 
-.c10 {
+.c9 {
   margin: 0.3125rem 0 1.25rem 0;
 }
 
-.c14 {
+.c13 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -382,7 +375,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   padding: 0.625rem 1.25rem;
 }
 
-.c13 {
+.c12 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -422,56 +415,56 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c13:disabled {
+.c12:disabled {
   cursor: not-allowed;
 }
 
-.c13 >:nth-child(n) {
+.c12 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c13 >:last-child {
+.c12 >:last-child {
   margin-right: 0;
 }
 
-.c13 svg {
+.c12 svg {
   fill: #fff;
 }
 
-.c13:hover,
-.c13:focus {
+.c12:hover,
+.c12:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c13:hover svg,
-.c13:focus svg {
+.c12:hover svg,
+.c12:focus svg {
   fill: #fff;
 }
 
-.c13:active {
+.c12:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c13:active svg {
+.c12:active svg {
   fill: #fff;
 }
 
-.c13:disabled {
+.c12:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c13:disabled svg {
+.c12:disabled svg {
   fill: #fff;
 }
 
-.c12 {
+.c11 {
   padding: 0 0.625rem;
 }
 
@@ -498,7 +491,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c13 {
+  .c12 {
     width: 12.5rem;
     height: 3.125rem;
   }
@@ -589,23 +582,16 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
         className="c8"
       >
         <span
-          className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-bold"
-        >
-          27days
-          <span
-            className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light c9"
-          >
-            restant
-          </span>
-        </span>
+          className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+        />
       </div>
     </div>
 
     <p
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light c10"
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light c9"
     >
       <span
-        className="c11"
+        className="c10"
         width={0}
       >
         <span />
@@ -628,17 +614,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
     </p>
   </div>
   <div
-    className="c12"
+    className="c11"
   >
     <button
-      className="c13"
+      className="c12"
     >
       Lorem ipsum
     </button>
   </div>
 
   <div
-    className="c14"
+    className="c13"
   >
     Sur
   </div>
