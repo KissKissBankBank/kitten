@@ -37,6 +37,8 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _text = require("../../../../components/typography/text");
 
+var _screenConfig = require("../../../../constants/screen-config");
+
 var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 var StyledImageContainer = (0, _styledComponents.default)(function (_ref) {
   var loading = _ref.loading,
@@ -57,7 +59,7 @@ var StyledImageContainer = (0, _styledComponents.default)(function (_ref) {
 var StyledContainerAvatar = _styledComponents.default.div.withConfig({
   displayName: "image__StyledContainerAvatar",
   componentId: "sc-166p1i9-1"
-})(["display:inline-flex;align-items:center;position:relative;top:0;margin-top:", ";background-color:", ";"], (0, _typography.pxToRem)(-30), _colorsConfig.default.background1);
+})(["display:inline-flex;align-items:center;position:relative;top:0;margin-top:", ";background-color:", ";@media (max-width:", "){display:none;}"], (0, _typography.pxToRem)(-30), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.max));
 
 var StyledAvatar = (0, _styledComponents.default)(_buttonImage.ButtonImage).withConfig({
   displayName: "image__StyledAvatar",
@@ -112,7 +114,7 @@ function (_PureComponent) {
         alt: imageProps.alt || '',
         className: "k-Card__image"
       }))), _react.default.createElement(StyledContainerAvatar, null, _react.default.createElement("div", {
-        className: "k-u-margin-bottom-single k-u-margin-top-single"
+        className: "k-u-margin-top-single"
       }, _react.default.createElement(StyledAvatar, {
         tag: "span",
         img: !loading && avatarProps,

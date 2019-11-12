@@ -29,6 +29,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _typography = require("../../../../helpers/utils/typography");
 
+var _screenConfig = require("../../../../constants/screen-config");
+
 var _text = require("../../../../components/typography/text");
 
 var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
@@ -36,7 +38,7 @@ var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 var StyledState = _styledComponents.default.div.withConfig({
   displayName: "state__StyledState",
   componentId: "colp6f-0"
-})(["position:absolute;top:0;right:0;display:inline-flex;align-items:center;background-color:", ";padding:", ";line-height:1;"], _colorsConfig.default.background1, COMPONENT_GUTTER);
+})(["position:absolute;top:0;right:0;display:inline-flex;align-items:center;background-color:", ";padding:", ";line-height:1;@media (max-width:", "){display:none;}"], _colorsConfig.default.background1, COMPONENT_GUTTER, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.max));
 
 var StyledWidgetContainer = _styledComponents.default.div.withConfig({
   displayName: "state__StyledWidgetContainer",
