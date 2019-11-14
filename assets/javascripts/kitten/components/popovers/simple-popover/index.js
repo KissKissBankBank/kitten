@@ -42,6 +42,7 @@ const PopoverContainer = styled.div`
   &[aria-hidden='true'] {
     opacity: 0;
     visibility: hidden;
+    transition-delay: 0s, 0s;
   }
 `
 
