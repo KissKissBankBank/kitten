@@ -82,11 +82,16 @@ const StyledCheckableButton = styled(Button)`
 `
 
 export const CheckableButton = ({ isChecked, children, error, ...props }) => {
-  const checkedModifier = error
-    ? 'copper'
-    : isChecked === true
-    ? 'lithium'
-    : 'hydrogen'
+  const checkedModifier = (() => {
+    switch (true) {
+      case error:
+        return 'copper'
+      case isChecked:
+        return 'lithium'
+      default:
+        return 'hydrogen'
+    }
+  })()
 
   return (
     <StyledCheckableButton
@@ -101,22 +106,16 @@ export const CheckableButton = ({ isChecked, children, error, ...props }) => {
 
 CheckableButton.propTypes = {
   big: PropTypes.bool,
-  borderRadius: PropTypes.number,
   disabled: PropTypes.bool,
   error: PropTypes.bool,
-  fluid: PropTypes.bool,
-  icon: PropTypes.bool,
   isChecked: PropTypes.bool,
   tiny: PropTypes.bool,
 }
 
 CheckableButton.defaultProps = {
   big: false,
-  borderRadius: 0,
   disabled: false,
   error: false,
-  fluid: false,
-  icon: false,
   isChecked: false,
   tiny: false,
 }
