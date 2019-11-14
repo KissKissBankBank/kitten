@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Delete `margin` on last items of the list on `CrowdfundingCard`.
+
 ## [2.39.0] - 2019-11-12
 
 Features:
