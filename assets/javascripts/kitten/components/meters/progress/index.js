@@ -9,7 +9,9 @@ const StyledProgress = styled.div`
   max-width: 100%;
 `
 
-const StyledRamp = styled(({ style, ...props }) => <div {...props} />)`
+const StyledRamp = styled(({ style, sliderColor, progressValue, ...props }) => (
+  <div {...props} />
+))`
   position: relative;
   height: ${pxToRem(2)};
   background: ${COLORS.line1};
@@ -35,8 +37,6 @@ const StyledRamp = styled(({ style, ...props }) => <div {...props} />)`
 export const Progress = ({ color, value, rampProps, ...others }) => {
   const valueMax = 100
   const [progressValue, setProgressValue] = useState(0)
-
-  console.table({ color, theOther: others.progressColor })
 
   useEffect(() => {
     setProgressValue(value > valueMax ? valueMax : value)

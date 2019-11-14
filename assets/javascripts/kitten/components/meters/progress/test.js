@@ -1,42 +1,37 @@
 import React from 'react'
-import { Progress } from '../../components/meters/progress'
+import renderer from 'react-test-renderer'
+import 'jest-styled-components'
+import { Progress } from './index'
+import COLORS from '../../../constants/colors-config'
 
 describe('<Progress />', () => {
-  describe('by default', () => {
-    const defaultComponent = shallow(<Progress />)
+  let component
 
-    it('renders <div class="k-Progress">', () => {
-      expect(defaultComponent.find('.k-Progress')).toHaveLength(1)
+  describe('simple Progress ', () => {
+    beforeEach(() => {
+      component = renderer.create(<Progress />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  it('renders a <Progress class="k-Progress" />', () => {
-    const component = shallow(<Progress className="k-Progress--custom" />)
-    expect(component.hasClass('k-Progress--custom')).toBe(true)
-  })
-
-  it('renders a value', () => {
-    const component = shallow(<Progress value={42} />)
-    const slider = component.find('.k-Progress__slider')
-
-    expect(component.props()['aria-valuenow']).toBe(42)
-    expect(slider.props().style).toMatchObject({ width: '42%' })
-  })
-
-  describe('with color prop', () => {
-    const component = shallow(<Progress color="red" />)
-    const slider = component.find('.k-Progress__slider')
-
-    it('renders a progress bar with red color', () => {
-      expect(slider.props().style).toMatchObject({ backgroundColor: 'red' })
+  describe('Progress with multiple props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Progress
+            color={COLORS.primary1}
+            value={50}
+            rampProps={{ style: { height: 6 } }}
+          />,
+        )
+        .toJSON()
     })
-  })
 
-  describe('with a superior value of maximum limit', () => {
-    const component = shallow(<Progress value={120} />)
-    const slider = component.find('.k-Progress__slider')
-
-    expect(component.props()['aria-valuenow']).toBe(100)
-    expect(slider.props().style).toMatchObject({ width: '100%' })
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
   })
 })
