@@ -5,6 +5,8 @@ import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
+const valueMax = 100
+
 const StyledProgress = styled.div`
   max-width: 100%;
 `
@@ -35,7 +37,6 @@ const StyledRamp = styled(({ style, sliderColor, progressValue, ...props }) => (
 `
 
 export const Progress = ({ color, value, rampProps, ...others }) => {
-  const valueMax = 100
   const [progressValue, setProgressValue] = useState(0)
 
   useEffect(() => {
