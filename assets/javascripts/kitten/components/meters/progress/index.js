@@ -46,7 +46,7 @@ export const Progress = ({ color, value, rampProps, ...others }) => {
     <StyledProgress
       {...others}
       role="progressbar"
-      aria-valuemin="0"
+      aria-valuemin={0}
       aria-valuemax={valueMax}
       aria-valuenow={progressValue}
     >
