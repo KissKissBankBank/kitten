@@ -33,7 +33,7 @@ const PopoverContainer = styled.div`
   opacity: 1;
   visibility: visible;
   transition: opacity 0.3s ease, visibility 0s ease;
-  transition-delay: 0s, 0.3s;
+  transition-delay: 0s, 0s;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     padding: ${pxToRem(50)} ${pxToRem(40)};
@@ -42,6 +42,7 @@ const PopoverContainer = styled.div`
   &[aria-hidden='true'] {
     opacity: 0;
     visibility: hidden;
+    transition-delay: 0s, 0.3s;
   }
 `
 
