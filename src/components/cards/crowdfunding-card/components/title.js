@@ -57,7 +57,7 @@ var StyledTitle = (0, _styledComponents.default)(_title.Title).withConfig({
 var StyledWidgetTitle = (0, _styledComponents.default)(StyledTitleContainer).withConfig({
   displayName: "title__StyledWidgetTitle",
   componentId: "sc-1wv1kzg-3"
-})(["padding:0;"]);
+})(["padding:0;@media (min-width:", "){padding-left:0;}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min));
 
 var StyledTitleLoading = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitleLoading",
@@ -77,7 +77,7 @@ var StyledWidgetContainer = _styledComponents.default.div.withConfig({
 var StyledDayCounter = _styledComponents.default.div.withConfig({
   displayName: "title__StyledDayCounter",
   componentId: "sc-1wv1kzg-7"
-})(["line-height:1;margin-left:calc(2 * ", ");"], COMPONENT_GUTTER);
+})(["line-height:1;margin-left:calc(2 * ", ");margin-top:", ";"], COMPONENT_GUTTER, (0, _typography.pxToRem)(10));
 
 var TitleComponent =
 /*#__PURE__*/

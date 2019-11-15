@@ -102,7 +102,7 @@ ProgressBar.propTypes = {
 };
 ProgressBar.defaultProps = {
   progress: 0,
-  progressColor: '',
+  progressColor: _colorsConfig.default.primary1,
   loading: false
 };
 var _default = ProgressBar;
