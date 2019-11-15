@@ -58,18 +58,6 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `checked` `modifier` prop', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(<Button modifier="checked">MyButton</Button>)
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with `borderRadius` prop', () => {
     beforeEach(() => {
       component = renderer

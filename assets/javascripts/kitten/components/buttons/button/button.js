@@ -164,6 +164,7 @@ export class Button extends Component {
       'beryllium',
       'carbon',
       'oxygen',
+      'copper',
       'checked',
     ]),
   }
@@ -180,6 +181,11 @@ export class Button extends Component {
   render() {
     const { children, modifier, ...props } = this.props
     const checked = modifier === 'checked' && { 'aria-checked': true }
+
+    modifier === 'checked' &&
+      console.warn(
+        `Warning: In <Button /> component, 'checked' modifier is deprecated.`,
+      )
 
     return (
       <StyledButton modifier={modifier} {...checked} {...props}>

@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `Progress` with Styled Components.
+- Feature: Add `copper` modifier to `Button`.
+- Feature: Add `encodeSvgString` util.
+- Feature: Add `CheckableButton` component.
+- Fix: Modifier `checked` on `Button` is now deprecated.
 - Fix: Delete `margin` on last items of the list on `CrowdfundingCard`.
 - Fix: Update styles on `CrowdfundingCardWidget` component.
 - Fix: Add incoming animation to `SimplePopover`.
