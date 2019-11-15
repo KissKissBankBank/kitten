@@ -63,6 +63,34 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   margin-right: 0;
 }
 
+.c11 {
+  max-width: 100%;
+}
+
+.c12 {
+  position: relative;
+  height: 0.125rem;
+  background: #eee;
+  height: 4px;
+}
+
+.c12::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 0%;
+  -webkit-transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
+  transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
+  background: #19b4fa;
+}
+
+.c10.is-disabled .c12::after {
+  background: #d8d8d8;
+}
+
 .c8 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -86,14 +114,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   flex: 1;
 }
 
-.c10 {
+.c13 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-left: calc(2 * 0.625rem);
 }
 
-.c11 {
+.c14 {
   position: absolute;
   top: 0;
   right: 0;
@@ -145,7 +173,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 @media (max-width:47.9375rem) {
-  .c11 {
+  .c14 {
     display: none;
   }
 }
@@ -246,39 +274,24 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     className="c8"
   >
     <div
-      aria-valuemax="100"
-      aria-valuemin="0"
-      aria-valuenow={42}
-      className="k-Progress c9"
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={0}
+      className="c9 c10 c11"
       role="progressbar"
     >
       <div
-        className="k-Progress__ramp"
-        style={
-          Object {
-            "height": "4px",
-          }
-        }
-      >
-        <div
-          className="k-Progress__slider"
-          style={
-            Object {
-              "backgroundColor": "",
-              "width": "42%",
-            }
-          }
-        />
-      </div>
+        className="c12"
+      />
     </div>
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-u-hidden@s-down c10"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-u-hidden@s-down c13"
     >
       42 %
     </span>
   </div>
   <div
-    className="c11"
+    className="c14"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"

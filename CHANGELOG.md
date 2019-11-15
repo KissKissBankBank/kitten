@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `Progress` with Styled Components.
 - Fix: Delete `margin` on last items of the list on `CrowdfundingCard`.
 - Fix: Update styles on `CrowdfundingCardWidget` component.
 
@@ -11,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Features:
 - Add `CrowdfundingCard` mobile version.
-- Delete `stateDay` and update `dayCounter` props on `CrowdfundingCardWidget`
+- Delete `stateDay` and update `dayCounter` props on `CrowdfundingCardWidget`.
 
 ## [2.38.0] - 2019-11-08
 
