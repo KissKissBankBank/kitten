@@ -35,6 +35,10 @@ const StyledTitle = styled(Title)`
 
 const StyledWidgetTitle = styled(StyledTitleContainer)`
   padding: 0;
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    padding-left: 0;
+  }
 `
 
 const StyledTitleLoading = styled.span`
@@ -57,6 +61,7 @@ const StyledWidgetContainer = styled.div`
 const StyledDayCounter = styled.div`
   line-height: 1;
   margin-left: calc(2 * ${COMPONENT_GUTTER});
+  margin-top: ${pxToRem(10)};
 `
 
 class TitleComponent extends PureComponent {

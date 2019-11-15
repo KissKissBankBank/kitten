@@ -364,6 +364,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 .c8 {
   line-height: 1;
   margin-left: calc(2 * 0.625rem);
+  margin-top: 0.625rem;
 }
 
 .c10 {
@@ -500,6 +501,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 @media (min-width:48rem) {
   .c7 {
     padding: 0 0.625rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c7 {
+    padding-left: 0;
   }
 }
 

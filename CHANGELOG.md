@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature: Update `Progress` with Styled Components.
+- Feature: Update `Progress` with Styled Components.
+- Fix: Delete `margin` on last items of the list on `CrowdfundingCard`.
+- Fix: Update styles on `CrowdfundingCardWidget` component.
 
 ## [2.39.0] - 2019-11-12
 
