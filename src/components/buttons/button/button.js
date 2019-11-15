@@ -144,6 +144,7 @@ function (_Component) {
       var checked = modifier === 'checked' && {
         'aria-checked': true
       };
+      modifier === 'checked' && console.warn("Warning: In <Button /> component, 'checked' modifier is deprecated.");
       return _react.default.createElement(StyledButton, (0, _extends2.default)({
         modifier: modifier
       }, checked, props), children, modifier === 'checked' && _react.default.createElement(CheckedCircleIcon, {
@@ -164,7 +165,7 @@ Button.propTypes = {
   big: _propTypes.default.bool,
   fluid: _propTypes.default.bool,
   icon: _propTypes.default.bool,
-  modifier: _propTypes.default.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'checked'])
+  modifier: _propTypes.default.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked'])
 };
 Button.defaultProps = {
   tiny: false,

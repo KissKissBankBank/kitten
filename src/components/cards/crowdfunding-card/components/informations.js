@@ -79,6 +79,7 @@ function (_PureComponent) {
     key: "renderInfo",
     value: function renderInfo(text) {
       var loading = this.props.loading;
+      if (!text) return null;
       return _react.default.createElement(StyledInfo, null, !loading && _react.default.createElement(_text.Text, {
         size: "micro",
         lineHeight: "normal",

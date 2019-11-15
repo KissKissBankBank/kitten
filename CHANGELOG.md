@@ -4,14 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `Progress` with Styled Components.
-- Feature: Add `copper` modifier to `Button`.
-- Feature: Add `encodeSvgString` util.
-- Feature: Add `CheckableButton` component.
-- Fix: Modifier `checked` on `Button` is now deprecated.
-- Fix: Delete `margin` on last items of the list on `CrowdfundingCard`.
-- Fix: Update styles on `CrowdfundingCardWidget` component.
-- Fix: Add incoming animation to `SimplePopover`.
+## [2.40.0] - 2019-11-15
+
+Features:
+- Update `Progress` with Styled Components.
+- Add `copper` modifier to `Button`.
+- Add `encodeSvgString` util.
+- Add `CheckableButton` component.
+
+Fixes:
+- Modifier `checked` on `Button` is now deprecated.
+- Delete `margin` on last items of the list on `CrowdfundingCard`.
+- Update styles on `CrowdfundingCardWidget` component.
+- Add incoming animation to `SimplePopover`.
 
 ## [2.39.0] - 2019-11-12
 
