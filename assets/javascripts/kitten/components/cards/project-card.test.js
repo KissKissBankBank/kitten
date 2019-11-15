@@ -148,12 +148,12 @@ describe('<ProjectCard />', () => {
   })
 
   describe('with progress prop', () => {
-    const projectCard = mount(<ProjectCard progress="42" />)
+    const projectCard = mount(<ProjectCard progress={42} />)
     const progress = projectCard.find(Progress)
 
     it('renders a <Progress value="42" />', () => {
       expect(progress.exists()).toBe(true)
-      expect(progress.props().value).toBe('42')
+      expect(progress.props().value).toBe(42)
     })
   })
 

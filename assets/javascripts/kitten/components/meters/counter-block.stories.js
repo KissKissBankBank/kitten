@@ -12,7 +12,7 @@ const createMockMediaMatcher = matches => () => ({
   removeListener: () => {},
 })
 
-storiesOf('metrics/CounterBlock', module)
+storiesOf('Meters/CounterBlock', module)
   .addDecorator(withKnobs)
   .add(
     'default',

@@ -80,6 +80,8 @@ class Informations extends PureComponent {
   renderInfo(text) {
     const { loading } = this.props
 
+    if (!text) return null
+
     return (
       <StyledInfo>
         {!loading && (
