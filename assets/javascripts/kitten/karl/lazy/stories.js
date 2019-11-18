@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../components/grid/grid'
 import LazyHook from './lazy-hook.js'
 import ImgWithLazy from './img-with-lazy.js'
 
-storiesOf('Lazy', module)
+storiesOf('IntersectionObserverClass/Lazy', module)
   .add('using useLazyObserver hook', () => {
     return (
       <Marger top="100" bottom="4">
