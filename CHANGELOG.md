@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `IntersectionObserverClass`.
+
 ## [2.40.0] - 2019-11-15
 
 Features:
