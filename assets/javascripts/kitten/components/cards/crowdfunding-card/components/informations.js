@@ -48,6 +48,10 @@ const StyledInfoLoadingLarge = styled(StyledInfoLoading)`
   border-bottom: 0;
 `
 
+const StyledText = styled(Text)`
+  font-size: ${pxToRem(12)};
+`
+
 class Informations extends PureComponent {
   static propTypes = {
     info1: PropTypes.string,
@@ -85,9 +89,9 @@ class Informations extends PureComponent {
     return (
       <StyledInfo>
         {!loading && (
-          <Text size="micro" lineHeight="normal" weight="light" color="font1">
+          <StyledText lineHeight="normal" weight="light" color="font1">
             {text}
-          </Text>
+          </StyledText>
         )}
 
         {loading && (
