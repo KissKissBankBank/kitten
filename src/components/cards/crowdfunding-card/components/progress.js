@@ -40,7 +40,7 @@ var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "progress__StyledContainer",
   componentId: "sc-4iuf3q-0"
-})(["display:flex;flex-direction:row;align-items:center;padding:0;margin-top:", ";margin-bottom:", ";@media (min-width:", "){padding:0 ", ";}"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), COMPONENT_GUTTER);
+})(["display:flex;flex-direction:row;align-items:center;padding:0;margin-top:", ";margin-bottom:", ";@media (min-width:", "){padding:0 ", ";margin-bottom:", ";}"], (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), COMPONENT_GUTTER, (0, _typography.pxToRem)(20));
 
 var StyledProgress = (0, _styledComponents.default)(_progress.Progress).withConfig({
   displayName: "progress__StyledProgress",

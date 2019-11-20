@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update `Truncate` in mobile on `CrowdfundingCard`.
-- Fix: Update `font-size` information in mobile and others fixes on `CrowdfundingCard`.
+## [2.40.1] - 2019-11-20
+
+Fixes:
+- Update `Truncate` in mobile on `CrowdfundingCard`.
+- Update `font-size` information in mobile and others fixes on `CrowdfundingCard`.
 
 ## [2.40.0] - 2019-11-15
 
