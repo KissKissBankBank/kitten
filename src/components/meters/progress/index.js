@@ -27,6 +27,7 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
+var valueMin = 0;
 var valueMax = 100;
 
 var StyledProgress = _styledComponents.default.div.withConfig({
@@ -66,11 +67,13 @@ var Progress = function Progress(_ref5) {
       setProgressValue = _useState2[1];
 
   (0, _react.useEffect)(function () {
-    setProgressValue(value > valueMax ? valueMax : value);
-  }, []);
+    var progress = 0;
+    if (value < valueMin) progress = valueMin;else if (value > valueMax) progress = valueMax;else progress = value;
+    setProgressValue(progress);
+  }, [value]);
   return _react.default.createElement(StyledProgress, (0, _extends2.default)({}, others, {
     role: "progressbar",
-    "aria-valuemin": 0,
+    "aria-valuemin": valueMin,
     "aria-valuemax": valueMax,
     "aria-valuenow": progressValue
   }), _react.default.createElement(StyledRamp, (0, _extends2.default)({}, rampProps, {

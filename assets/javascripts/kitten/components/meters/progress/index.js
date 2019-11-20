@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
+const valueMin = 0
 const valueMax = 100
 
 const StyledProgress = styled.div`
@@ -40,14 +41,20 @@ export const Progress = ({ color, value, rampProps, ...others }) => {
   const [progressValue, setProgressValue] = useState(0)
 
   useEffect(() => {
-    setProgressValue(value > valueMax ? valueMax : value)
-  }, [])
+    let progress = 0
+
+    if (value < valueMin) progress = valueMin
+    else if (value > valueMax) progress = valueMax
+    else progress = value
+
+    setProgressValue(progress)
+  }, [value])
 
   return (
     <StyledProgress
       {...others}
       role="progressbar"
-      aria-valuemin={0}
+      aria-valuemin={valueMin}
       aria-valuemax={valueMax}
       aria-valuenow={progressValue}
     >
