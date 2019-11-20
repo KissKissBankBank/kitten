@@ -54,6 +54,10 @@ var StyledInfoLoadingLarge = (0, _styledComponents.default)(StyledInfoLoading).w
   displayName: "informations__StyledInfoLoadingLarge",
   componentId: "qg8b01-3"
 })(["width:", ";border-top:", " solid ", ";border-bottom:0;"], (0, _typography.pxToRem)(65), (0, _typography.pxToRem)(1), _colorsConfig.default.background1);
+var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
+  displayName: "informations__StyledText",
+  componentId: "qg8b01-4"
+})(["font-size:", ";"], (0, _typography.pxToRem)(12));
 
 var Informations =
 /*#__PURE__*/
@@ -80,8 +84,7 @@ function (_PureComponent) {
     value: function renderInfo(text) {
       var loading = this.props.loading;
       if (!text) return null;
-      return _react.default.createElement(StyledInfo, null, !loading && _react.default.createElement(_text.Text, {
-        size: "micro",
+      return _react.default.createElement(StyledInfo, null, !loading && _react.default.createElement(StyledText, {
         lineHeight: "normal",
         weight: "light",
         color: "font1"
