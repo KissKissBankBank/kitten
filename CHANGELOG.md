@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Re-render `Progress` when `value` is updated.
+- Fix: Fix `value` to `valueMin` when `value` is negative.
+
 ## [2.40.1] - 2019-11-20
 
 Fixes:
