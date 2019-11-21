@@ -52,6 +52,7 @@ import { WhatsAppIcon } from './whatsapp-icon'
 import { YoutubeIcon } from './youtube-icon'
 import { KissKissBankBankIcon } from './kisskissbankbank-icon'
 import { EmbedIcon } from './embed-icon'
+import { GiftIcon } from './gift-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -155,6 +156,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<StrokeIcon />} />
         <IconContainer children={<KissKissBankBankIcon width="70" />} />
         <IconContainer children={<EmbedIcon />} />
+        <IconContainer children={<GiftIcon />} />
       </Group>
     </Container>
   )
