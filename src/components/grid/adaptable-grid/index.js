@@ -25,6 +25,8 @@ var _gridConfig = require("../../../constants/grid-config");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _typography = require("../../../helpers/utils/typography");
+
 var GridProperties = (0, _react.createContext)({});
 
 var AdaptableGrid = function AdaptableGrid(_ref) {
@@ -32,7 +34,9 @@ var AdaptableGrid = function AdaptableGrid(_ref) {
       gutter = _ref.gutter,
       colNumber = _ref.colNumber,
       colAlign = _ref.colAlign,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["children", "gutter", "colNumber", "colAlign"]);
+      as = _ref.as,
+      className = _ref.className,
+      other = (0, _objectWithoutProperties2.default)(_ref, ["children", "gutter", "colNumber", "colAlign", "as", "className"]);
   var gridProperties = {
     colAlign: colAlign,
     colNumber: colNumber,
@@ -40,7 +44,9 @@ var AdaptableGrid = function AdaptableGrid(_ref) {
   };
   return _react.default.createElement(StyledGrid, {
     gutter: gutter,
-    colAlign: colAlign
+    colAlign: colAlign,
+    as: as,
+    className: className
   }, _react.default.createElement(GridProperties.Provider, {
     value: gridProperties
   }, children));
@@ -52,7 +58,9 @@ var AdaptableGridCol = function AdaptableGridCol(_ref2) {
   var children = _ref2.children,
       col = _ref2.col,
       offset = _ref2.offset,
-      other = (0, _objectWithoutProperties2.default)(_ref2, ["children", "col", "offset"]);
+      as = _ref2.as,
+      className = _ref2.className,
+      other = (0, _objectWithoutProperties2.default)(_ref2, ["children", "col", "offset", "as", "className"]);
 
   var _useState = (0, _react.useState)(null),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -76,7 +84,7 @@ var AdaptableGridCol = function AdaptableGridCol(_ref2) {
         return false;
       }
 
-      return (0, _styledComponents.css)(["@media (min-width:", "px){", " ", " ", "}"], _screenConfig.ScreenConfig[size].min, col && (0, _styledComponents.css)(["width:", "%;"], col * 100 / colNumber), offset > 0 && (0, _styledComponents.css)(["margin-", ":", "%;"], marginDirection, offset * 100 / colNumber), offset === 0 && (0, _styledComponents.css)(["margin-", ":0;"], marginDirection));
+      return (0, _styledComponents.css)(["@media (min-width:", "){", " ", " ", "}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig[size].min), col && (0, _styledComponents.css)(["width:", "%;"], col * 100 / colNumber), offset > 0 && (0, _styledComponents.css)(["margin-", ":", "%;"], marginDirection, offset * 100 / colNumber), offset === 0 && (0, _styledComponents.css)(["margin-", ":0;"], marginDirection));
     });
     setStyles(stylesByMediaQuery);
   }, []);
@@ -88,7 +96,9 @@ var AdaptableGridCol = function AdaptableGridCol(_ref2) {
     colAlign: colAlign,
     marginDirection: marginDirection,
     props: (0, _extends2.default)({}, other),
-    stylesByMediaQuery: styles
+    stylesByMediaQuery: styles,
+    as: as,
+    className: className
   }, children);
 };
 
@@ -107,26 +117,26 @@ AdaptableGrid.defaultProps = {
 var StyledGrid = _styledComponents.default.div.withConfig({
   displayName: "adaptable-grid__StyledGrid",
   componentId: "txsbu0-0"
-})(["width:100%;box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:", ";margin-left:", "px;margin-right:", "px;"], function (_ref3) {
+})(["box-sizing:border-box;display:flex;flex-wrap:wrap;justify-content:", ";margin-left:", ";margin-right:", ";"], function (_ref3) {
   var colAlign = _ref3.colAlign;
   return colAlign;
 }, function (_ref4) {
   var gutter = _ref4.gutter;
-  return gutter / 2;
+  return (0, _typography.pxToRem)(-gutter / 2);
 }, function (_ref5) {
   var gutter = _ref5.gutter;
-  return gutter / 2;
+  return (0, _typography.pxToRem)(-gutter / 2);
 });
 
 var StyledGridCol = _styledComponents.default.div.withConfig({
   displayName: "adaptable-grid__StyledGridCol",
   componentId: "txsbu0-1"
-})(["display:block;box-sizing:border-box;padding-left:", "px;padding-right:", "px;flex:0 0 auto;width:", "%;", " ", ""], function (_ref6) {
+})(["display:block;box-sizing:border-box;padding-left:", ";padding-right:", ";flex:0 0 auto;width:", "%;", " ", ""], function (_ref6) {
   var gutter = _ref6.gutter;
-  return gutter / 2;
+  return (0, _typography.pxToRem)(gutter / 2);
 }, function (_ref7) {
   var gutter = _ref7.gutter;
-  return gutter / 2;
+  return (0, _typography.pxToRem)(gutter / 2);
 }, function (_ref8) {
   var col = _ref8.col,
       colNumber = _ref8.colNumber;

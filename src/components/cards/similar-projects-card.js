@@ -46,8 +46,8 @@ function (_Component) {
   }
 
   (0, _createClass2.default)(SimilarProjectsCard, [{
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(nextProps) {
       if (this.props.projects != nextProps.projects) {
         this.setState({
           currentIndex: 0

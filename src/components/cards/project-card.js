@@ -388,13 +388,13 @@ ProjectCardComponent.defaultProps = {
   statusGreyBackground: false,
   statusErrorBackground: false,
   statusErrorReverseBackground: false,
-  statusWithoutTopBorder: false // Deprecated props
+  statusWithoutTopBorder: false
+}; // Deprecated props
 
-};
 ProjectCardComponent.propTypes = {
-  tags: (0, _deprecated.default)(_propTypes.default.array, 'Use `tagLists` prop instead') // Add card generic styles.
+  tags: (0, _deprecated.default)(_propTypes.default.array, 'Use `tagLists` prop instead')
+}; // Add card generic styles.
 
-};
 var ProjectCard = (0, _card.card)(ProjectCardComponent, {
   light: true
 });

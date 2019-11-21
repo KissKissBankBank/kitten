@@ -52,7 +52,7 @@ var StyledTextInput = (0, _styledComponents.default)(_textInput.TextInput).withC
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "text-input-with-button__StyledButton",
   componentId: "sc-1yqni7d-2"
-})(["", ";font-size:", ";line-height:1.3;flex:1 0 auto;outline:none;appearance:none;cursor:pointer;padding:0 ", ";border-radius:0;", ";", " ", " ", ""], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(30), function (_ref) {
+})(["", ";font-size:", ";line-height:1.3;flex:1 0 auto;outline:none;appearance:none;cursor:pointer;padding:0 ", ";border-radius:0;", ";", " ", " input:invalid:not(:focus) + &{background-color:", ";border-color:", ";}", ""], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(30), function (_ref) {
   var modifier = _ref.modifier;
   return (0, _modifierStyles.modifierStyles)(modifier);
 }, function (_ref2) {
@@ -61,7 +61,7 @@ var StyledButton = _styledComponents.default.button.withConfig({
 }, function (_ref3) {
   var error = _ref3.error;
   return error && (0, _styledComponents.css)(["background-color:", ";border-color:", ";"], _colorsConfig.default.error, _colorsConfig.default.error);
-}, function (_ref4) {
+}, _colorsConfig.default.error, _colorsConfig.default.error, function (_ref4) {
   var disabled = _ref4.disabled;
   return disabled && (0, _styledComponents.css)(["cursor:not-allowed;"]);
 });
@@ -86,19 +86,20 @@ function (_PureComponent) {
           tiny = _this$props.tiny,
           value = _this$props.value,
           modifier = _this$props.modifier,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "modifier"]);
+          buttonProps = _this$props.buttonProps,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "modifier", "buttonProps"]);
       return _react.default.createElement(StyledTextInputWithButton, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
         valid: valid,
         error: error,
         disabled: disabled,
         tiny: tiny
-      })), _react.default.createElement(StyledButton, {
+      })), _react.default.createElement(StyledButton, (0, _extends2.default)({
         type: "button",
         modifier: modifier,
         valid: valid,
         error: error,
         disabled: disabled
-      }, value));
+      }, buttonProps), value));
     }
   }]);
   return TextInputWithButton;

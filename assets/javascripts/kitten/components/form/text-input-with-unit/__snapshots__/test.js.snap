@@ -5,13 +5,13 @@ exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
   className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
 >
   <input
-    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 iDULaY"
     disabled={false}
     name="text"
     type="number"
   />
   <span
-    className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 gbKmhA"
     disabled={false}
   >
     λ
@@ -24,13 +24,13 @@ exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
   className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
 >
   <input
-    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 iDULaY"
     disabled={true}
     name="text"
     type="number"
   />
   <span
-    className="text-input-with-unit__StyledInputUnit-gjmccx-2 lfNJet"
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 dWrezv"
     disabled={true}
   >
     λ
@@ -43,13 +43,13 @@ exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
   className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
 >
   <input
-    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 dERTZf"
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 kfptEQ"
     disabled={false}
     name="text"
     type="number"
   />
   <span
-    className="text-input-with-unit__StyledInputUnit-gjmccx-2 gXhzRE"
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 jgjsaU"
     disabled={false}
   >
     λ
@@ -62,7 +62,7 @@ exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
   className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
 >
   <input
-    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 iDULaY"
     disabled={false}
     name="text"
     type="number"
@@ -70,7 +70,7 @@ exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
     €
   </input>
   <span
-    className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 gbKmhA"
     disabled={false}
   >
     λ
@@ -83,13 +83,13 @@ exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
   className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
 >
   <input
-    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 culAbn"
+    className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 bfvwuD"
     disabled={false}
     name="text"
     type="number"
   />
   <span
-    className="text-input-with-unit__StyledInputUnit-gjmccx-2 kUeknv"
+    className="text-input-with-unit__StyledInputUnit-gjmccx-2 ggDYat"
     disabled={false}
   >
     λ

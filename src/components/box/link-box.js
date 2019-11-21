@@ -212,8 +212,8 @@ var styles = {
     paddingRight: (0, _typography.pxToRem)(32)
   }), (0, _defineProperty2.default)(_navigation, "hover", {
     transform: 'translate(5px, 0px)'
-  }), _navigation) // DEPRECATED: do not use default export.
+  }), _navigation)
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = LinkBox;
 exports.default = _default;

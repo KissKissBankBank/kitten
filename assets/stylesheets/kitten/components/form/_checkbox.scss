@@ -36,6 +36,7 @@
   $border-size: k-px-to-rem(2px);
   $icon: '~icons/checked.svg';
   $icon-disabled: '~icons/checked-disabled.svg';
+  $icon-indeterminate: '~icons/checked-indeterminate.svg';
 
   .k-Checkbox {
     @include k-typographyFont($font);
@@ -81,6 +82,14 @@
     .k-Checkbox__input:checked + &:before {
       background: $background-color-checked
                   url($icon)
+                  no-repeat
+                  center;
+      border-color: $border-color-hover;
+    }
+
+    .k-Checkbox__input:indeterminate + &:before {
+      background: $background-color-checked
+                  url($icon-indeterminate)
                   no-repeat
                   center;
       border-color: $border-color-hover;

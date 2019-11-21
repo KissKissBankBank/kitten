@@ -350,9 +350,9 @@ SimilarProjectCardComponent.defaultProps = {
   //   className: 'link-custom-classname',
   //   …
   // }
-  link: null // Add generic card styles.
+  link: null
+}; // Add generic card styles.
 
-};
 var SimilarProjectCard = (0, _card.card)(SimilarProjectCardComponent, {
   light: true,
   withBorder: true,

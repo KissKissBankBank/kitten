@@ -771,6 +771,12 @@ Object.defineProperty(exports, "Popover", {
     return _popover.Popover;
   }
 });
+Object.defineProperty(exports, "SimplePopover", {
+  enumerable: true,
+  get: function get() {
+    return _simplePopover.SimplePopover;
+  }
+});
 Object.defineProperty(exports, "SearchInput", {
   enumerable: true,
   get: function get() {
@@ -799,6 +805,12 @@ Object.defineProperty(exports, "SliderWithTooltipAndPower", {
   enumerable: true,
   get: function get() {
     return _sliderWithTooltipAndPower.SliderWithTooltipAndPower;
+  }
+});
+Object.defineProperty(exports, "StatusWithBullet", {
+  enumerable: true,
+  get: function get() {
+    return _statusWithBullet.StatusWithBullet;
   }
 });
 Object.defineProperty(exports, "VerticalStepper", {
@@ -1164,6 +1176,8 @@ var _callToActionPopover = require("./components/popovers/call-to-action-popover
 
 var _popover = require("./components/popovers/popover");
 
+var _simplePopover = require("./components/popovers/simple-popover");
+
 var _searchInput = require("./components/search/search-input");
 
 var _loanSimulator = require("./components/simulators/loan-simulator");
@@ -1173,6 +1187,8 @@ var _sliderBar = require("./components/sliders/slider-bar");
 var _sliderTooltip = require("./components/sliders/slider-tooltip");
 
 var _sliderWithTooltipAndPower = require("./components/sliders/slider-with-tooltip-and-power");
+
+var _statusWithBullet = require("./components/status-with-bullet");
 
 var _verticalStepper = require("./components/steppers/vertical-stepper");
 

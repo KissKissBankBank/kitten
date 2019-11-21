@@ -1,13 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Marger } from '../../../layout/marger'
 import { SelectWithState } from '../../../form/select-with-state'
 
-export class FieldSelect extends Component {
-  render() {
-    return (
-      <Marger top="1.5">
-        <SelectWithState {...this.props} />
-      </Marger>
-    )
-  }
-}
+export const FieldSelect = props => (
+  <Marger top="1">
+    <SelectWithState {...props} />
+  </Marger>
+)

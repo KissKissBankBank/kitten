@@ -13,6 +13,7 @@ import { ClockIcon } from './clock-icon'
 import { CopyIcon } from './copy-icon'
 import { CrossCircleIcon } from './cross-circle-icon'
 import { CrossIcon } from './cross-icon'
+import { DoubleArrowIcon } from './double-arrow-icon'
 import { EmailIcon } from './email-icon'
 import { ExportIcon } from './export-icon'
 import { FacebookIcon } from './facebook-icon'
@@ -40,6 +41,7 @@ import { QuestionMarkIcon } from './question-mark-icon'
 import { SearchIcon } from './search-icon'
 import { SofortIcon } from './sofort-icon'
 import { StarIcon } from './star-icon'
+import { StrokeIcon } from './stroke-icon'
 import { TwitterIcon } from './twitter-icon'
 import { TypologyTagIcon } from './typology-tag-icon'
 import { VisaIcon } from './visa-icon'
@@ -48,6 +50,8 @@ import { WarningIcon } from './warning-icon'
 import { WarningCircleIcon } from './warning-circle-icon'
 import { WhatsAppIcon } from './whatsapp-icon'
 import { YoutubeIcon } from './youtube-icon'
+import { KissKissBankBankIcon } from './kisskissbankbank-icon'
+import { EmbedIcon } from './embed-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -130,6 +134,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<ClockIcon />} />
         <IconContainer children={<CrossCircleIcon />} />
         <IconContainer children={<CrossIcon />} />
+        <IconContainer children={<DoubleArrowIcon />} />
         <IconContainer children={<FilterIcon />} />
         <IconContainer children={<GrabberIcon />} />
         <IconContainer children={<HeartIcon />} />
@@ -147,6 +152,9 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<CopyIcon />} />
         <IconContainer children={<BubbleIcon />} />
         <IconContainer children={<ExportIcon />} />
+        <IconContainer children={<StrokeIcon />} />
+        <IconContainer children={<KissKissBankBankIcon width="70" />} />
+        <IconContainer children={<EmbedIcon />} />
       </Group>
     </Container>
   )

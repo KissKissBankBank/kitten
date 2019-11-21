@@ -100,8 +100,8 @@ ButtonImageWithTextAndBadge.propTypes = {
 };
 ButtonImageWithTextAndBadge.defaultProps = {
   children: 'Toggle button',
-  onClick: function onClick() {} // DEPRECATED: do not use default export.
+  onClick: function onClick() {}
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = ButtonImageWithTextAndBadge;
 exports.default = _default;

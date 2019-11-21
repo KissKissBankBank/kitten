@@ -107,8 +107,8 @@ function (_React$Component) {
       _emitter.default.off('dropdown:opening:trigger', this.close);
     }
   }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
+    key: "UNSAFE_componentWillReceiveProps",
+    value: function UNSAFE_componentWillReceiveProps(nextProps) {
       // Enable wrapper component to expand the dropdown.
       if (nextProps.isExpanded != this.state.isExpanded) {
         this.toggle(nextProps.isExpanded);
@@ -301,8 +301,8 @@ Dropdown.defaultProps = {
   // Called when one of the `refreshEvents` is triggered.
   onPositionUpdate: function onPositionUpdate() {},
   // Called when the dropdown is opened or closed
-  onToggle: function onToggle() {} // DEPRECATED: do not use default export.
+  onToggle: function onToggle() {}
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = Dropdown;
 exports.default = _default;

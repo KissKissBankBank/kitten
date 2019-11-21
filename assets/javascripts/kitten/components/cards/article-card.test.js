@@ -2,11 +2,28 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { ArticleCard } from '../../components/cards/article-card'
 
+const createMockMediaMatcher = matches => () => ({
+  matches,
+  addListener: () => {},
+  removeListener: () => {},
+})
+
 describe('<ArticleCard />', () => {
   let component
+  let originalMatchMedia
+
+  beforeEach(() => {
+    originalMatchMedia = window.matchMedia
+  })
+
+  afterEach(() => {
+    window.matchMedia = originalMatchMedia
+  })
 
   describe('by default', () => {
     beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(false)
+
       component = renderer.create(<ArticleCard />).toJSON()
     })
 
@@ -17,6 +34,8 @@ describe('<ArticleCard />', () => {
 
   describe('with some props', () => {
     beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(false)
+
       component = renderer
         .create(
           <ArticleCard
@@ -50,6 +69,8 @@ describe('<ArticleCard />', () => {
 
   describe('with articleTitle and articleSubTitle props', () => {
     beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(false)
+
       component = renderer
         .create(
           <ArticleCard
@@ -67,11 +88,13 @@ describe('<ArticleCard />', () => {
 
   describe('with ignored props', () => {
     beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(false)
+
       component = renderer
         .create(
           <ArticleCard
             info1="Custom information #1"
-            progress="42"
+            progress={42}
             state="Custom state"
             titlesMinHeight
             titleTruncate

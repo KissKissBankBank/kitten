@@ -123,6 +123,7 @@ export class CommentForm extends PureComponent {
     commentLabel: PropTypes.string,
     ariaId: PropTypes.string,
     avatarBadge: PropTypes.node,
+    textareaId: PropTypes.string,
   }
 
   static defaultProps = {
@@ -135,24 +136,16 @@ export class CommentForm extends PureComponent {
     ariaId: '',
     commentLabel: '',
     avatarBadge: '',
+    textareaId: null,
   }
 
   constructor(props) {
     super(props)
 
     this.state = {
-      isFocused: false,
       value: this.props.defaultValue,
       height: 'auto',
     }
-  }
-
-  handleFocus = () => {
-    this.setState({ isFocused: true })
-  }
-
-  handleBlur = () => {
-    this.setState({ isFocused: false })
   }
 
   handleChange = e => {
@@ -196,14 +189,14 @@ export class CommentForm extends PureComponent {
       defaultValue,
       commentLabel,
       ariaId,
-      error,
-      errorMessage,
+      textareaId,
     } = this.props
 
     return (
       <StyledGridCol>
         <StyledInput>
           <StyledTextarea
+            id={textareaId}
             aria-label={commentLabel}
             aria-describedby={ariaId}
             aria-invalid="false"
@@ -212,15 +205,15 @@ export class CommentForm extends PureComponent {
             key="comment-form"
             disabled={isDisabled}
             placeholder={placeholder}
-            onFocus={this.handleFocus}
-            onBlur={this.handleBlur}
             onChange={this.handleChange}
             rows="1"
           />
+
           <StyledArrow>
             <StyledArrowBefore />
           </StyledArrow>
         </StyledInput>
+
         {this.renderError()}
         {this.renderButton()}
       </StyledGridCol>

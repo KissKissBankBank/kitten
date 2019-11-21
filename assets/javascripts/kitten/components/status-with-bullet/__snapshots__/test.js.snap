@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StatusWithBullet /> should match its empty snapshot 1`] = `
+<div
+  className="k-u-sample-class status-with-bullet__StyledStatus-sc-1kiyplj-1 kXsTYr"
+>
+  <span
+    aria-hidden="true"
+    className="k-u-sample-class status-with-bullet__StyledBullet-sc-1kiyplj-0 bGcUxQ"
+  />
+  <span
+    className="k-u-sample-class"
+  >
+    This is a text
+  </span>
+</div>
+`;

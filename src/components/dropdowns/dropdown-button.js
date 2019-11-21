@@ -64,8 +64,8 @@ DropdownButton.propTypes = {
 DropdownButton.defaultProps = {
   children: 'Toggle button',
   onClick: function onClick() {},
-  isExpanded: false // DEPRECATED: do not use default export.
+  isExpanded: false
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = DropdownButton;
 exports.default = _default;

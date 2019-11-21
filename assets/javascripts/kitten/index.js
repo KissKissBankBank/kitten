@@ -200,6 +200,7 @@ export {
   CallToActionPopover,
 } from './components/popovers/call-to-action-popover'
 export { Popover } from './components/popovers/popover'
+export { SimplePopover } from './components/popovers/simple-popover'
 
 // Search
 export { SearchInput } from './components/search/search-input'
@@ -213,6 +214,9 @@ export { SliderTooltip } from './components/sliders/slider-tooltip'
 export {
   SliderWithTooltipAndPower,
 } from './components/sliders/slider-with-tooltip-and-power'
+
+// Status with Bullet
+export { StatusWithBullet } from './components/status-with-bullet'
 
 // Steppers
 export { VerticalStepper } from './components/steppers/vertical-stepper'

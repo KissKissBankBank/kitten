@@ -18,6 +18,12 @@ var modifierStyles = function modifierStyles(modifier) {
   var borderStyle = 'solid';
   var backgroundColor;
   var color;
+  var hoverBorderColor = _colorsConfig.default.primary2;
+  var hoverBgColor = _colorsConfig.default.primary2;
+  var hoverColor = _colorsConfig.default.background1;
+  var activeBorderColor = _colorsConfig.default.primary3;
+  var activeBgColor = _colorsConfig.default.primary3;
+  var activeColor = _colorsConfig.default.background1;
 
   switch (modifier) {
     case 'hydrogen':
@@ -57,9 +63,21 @@ var modifierStyles = function modifierStyles(modifier) {
       backgroundColor = _colorsConfig.default.background1;
       color = _colorsConfig.default.primary1;
       break;
+
+    case 'copper':
+      borderColor = _colorsConfig.default.error3;
+      backgroundColor = _colorsConfig.default.background1;
+      color = _colorsConfig.default.error;
+      hoverBorderColor = 'currentColor';
+      hoverBgColor = _colorsConfig.default.background1;
+      hoverColor = _colorsConfig.default.error;
+      activeBorderColor = 'currentColor';
+      activeBgColor = _colorsConfig.default.background1;
+      activeColor = _colorsConfig.default.error;
+      break;
   }
 
-  return (0, _styledComponents.css)(["border:", " ", " ", ";background-color:", ";color:", ";svg{fill:", ";}transition:background-color 0.2s,color 0.2s,border-color 0.2s;", ":disabled{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}"], (0, _typography.pxToRem)(2), borderStyle, borderColor, backgroundColor, color, color, modifier !== 'checked' && (0, _styledComponents.css)([":hover,:focus{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}:active{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}"], _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary3, _colorsConfig.default.primary3, _colorsConfig.default.background1, _colorsConfig.default.background1), _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.background1);
+  return (0, _styledComponents.css)(["border:", " ", " ", ";background-color:", ";color:", ";svg{fill:", ";}transition:background-color 0.2s,color 0.2s,border-color 0.2s;", ":disabled{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}"], (0, _typography.pxToRem)(2), borderStyle, borderColor, backgroundColor, color, color, modifier !== 'checked' && (0, _styledComponents.css)([":hover,:focus{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}:active{border-color:", ";background-color:", ";color:", ";svg{fill:", ";}}"], hoverBorderColor, hoverBgColor, hoverColor, hoverColor, activeBorderColor, activeBgColor, activeColor, activeColor), _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.background1);
 };
 
 exports.modifierStyles = modifierStyles;

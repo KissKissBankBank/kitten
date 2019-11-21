@@ -70,6 +70,34 @@ const info = {
       MyContent
     </ArrowContainer>
     ~~~
+
+    #### Add a drop shadow on the box
+    ~~~js
+    <ArrowContainer shadow>
+      MyContent
+    </ArrowContainer>
+    ~~~
+
+    #### Add a border radius
+    ~~~js
+    <ArrowContainer borderRadius={4}>
+      MyContent
+    </ArrowContainer>
+    ~~~
+
+    #### Add a border color
+    ~~~js
+    <ArrowContainer borderColor={COLORS.line1}>
+      MyContent
+    </ArrowContainer>
+    ~~~
+
+    #### Add a border width
+    ~~~js
+    <ArrowContainer borderWidth={2}>
+      MyContent
+    </ArrowContainer>
+    ~~~
   `,
   header: false,
   propTables: false,
@@ -97,6 +125,10 @@ storiesOf('Layout/ArrowContainer', module)
                   })}
                   distance={number('Distance', 20)}
                   centered={boolean('Centered?', false)}
+                  shadow={boolean('Shadow?', false)}
+                  borderRadius={number('Border radius', 0)}
+                  borderColor={color('Border color', COLORS.line1)}
+                  borderWidth={number('Border width', 0)}
                 >
                   <Text size="tiny" color="font1" weight="light">
                     {text('Content', 'Play with me!')}

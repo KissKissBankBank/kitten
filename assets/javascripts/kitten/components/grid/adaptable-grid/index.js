@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { NUM_COLUMNS, GUTTER } from '../../../constants/grid-config'
 import { ScreenConfig } from '../../../constants/screen-config'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 const GridProperties = createContext({})
 
@@ -11,11 +12,18 @@ export const AdaptableGrid = ({
   gutter,
   colNumber,
   colAlign,
+  as,
+  className,
   ...other
 }) => {
   const gridProperties = { colAlign, colNumber, gutter }
   return (
-    <StyledGrid gutter={gutter} colAlign={colAlign}>
+    <StyledGrid
+      gutter={gutter}
+      colAlign={colAlign}
+      as={as}
+      className={className}
+    >
       <GridProperties.Provider value={gridProperties}>
         {children}
       </GridProperties.Provider>
@@ -23,7 +31,14 @@ export const AdaptableGrid = ({
   )
 }
 
-export const AdaptableGridCol = ({ children, col, offset, ...other }) => {
+export const AdaptableGridCol = ({
+  children,
+  col,
+  offset,
+  as,
+  className,
+  ...other
+}) => {
   const [styles, setStyles] = useState(null)
   const { colAlign, colNumber, gutter } = useContext(GridProperties)
   const marginDirection = colAlign === 'right' ? 'right' : 'left'
@@ -41,7 +56,7 @@ export const AdaptableGridCol = ({ children, col, offset, ...other }) => {
       }
 
       return css`
-        @media (min-width: ${ScreenConfig[size].min}px) {
+        @media (min-width: ${pxToRem(ScreenConfig[size].min)}) {
           ${col &&
             css`
               width: ${(col * 100) / colNumber}%;
@@ -71,6 +86,8 @@ export const AdaptableGridCol = ({ children, col, offset, ...other }) => {
       marginDirection={marginDirection}
       props={{ ...other }}
       stylesByMediaQuery={styles}
+      as={as}
+      className={className}
     >
       {children}
     </StyledGridCol>
@@ -82,26 +99,27 @@ AdaptableGrid.propTypes = {
   colNumber: PropTypes.number,
   colAlign: PropTypes.oneOf(['left', 'right', 'center']),
 }
+
 AdaptableGrid.defaultProps = {
   gutter: GUTTER,
   colNumber: NUM_COLUMNS,
   colAlign: 'left',
 }
+
 const StyledGrid = styled.div`
-  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: ${({ colAlign }) => colAlign};
-  margin-left: ${({ gutter }) => gutter / 2}px;
-  margin-right: ${({ gutter }) => gutter / 2}px;
+  margin-left: ${({ gutter }) => pxToRem(-gutter / 2)};
+  margin-right: ${({ gutter }) => pxToRem(-gutter / 2)};
 `
 
 const StyledGridCol = styled.div`
   display: block;
   box-sizing: border-box;
-  padding-left: ${({ gutter }) => gutter / 2}px;
-  padding-right: ${({ gutter }) => gutter / 2}px;
+  padding-left: ${({ gutter }) => pxToRem(gutter / 2)};
+  padding-right: ${({ gutter }) => pxToRem(gutter / 2)};
   flex: 0 0 auto;
   width: ${({ col, colNumber }) => (col * 100) / colNumber}%;
   ${({ offset, colNumber, colAlign, marginDirection }) => {

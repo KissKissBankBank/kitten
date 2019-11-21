@@ -37,7 +37,7 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var borderWidth = (0, _typography.pxToRem)(2);
 var verticalPadding = (0, _typography.pxToRem)(10);
-var styledTextInput = (0, _styledComponents.css)(["font-size:", ";line-height:1.3;", ";box-sizing:border-box;border-width:", ";border-style:solid;border-radius:0;width:100%;height:", ";padding:", " ", ";appearance:none;background-color:", ";color:", ";border-color:", ";outline:none;", ";::placeholder{color:", ";}:focus{outline:none;color:", ";border-color:", ";}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}", " ", " ", ""], (0, _typography.stepToRem)(-1), _typographyConfig.default.fontStyles.light, borderWidth, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _colorsConfig.default.background1, _colorsConfig.default.font1, _colorsConfig.default.line1, function (_ref) {
+var styledTextInput = (0, _styledComponents.css)(["font-size:", ";line-height:1.3;", ";box-sizing:border-box;border-width:", ";border-style:solid;border-radius:0;width:100%;height:", ";padding:", " ", ";appearance:none;background-color:", ";color:", ";border-color:", ";outline:none;", ";::placeholder{color:", ";}:focus{outline:none;color:", ";border-color:", ";}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}", " ", " &:invalid{box-shadow:none;outline:none;&:not(:focus){color:", ";border-color:", ";}}", ""], (0, _typography.stepToRem)(-1), _typographyConfig.default.fontStyles.light, borderWidth, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _colorsConfig.default.background1, _colorsConfig.default.font1, _colorsConfig.default.line1, function (_ref) {
   var digits = _ref.digits;
   return digitsStyles(digits);
 }, _colorsConfig.default.font2, _colorsConfig.default.font1, _colorsConfig.default.line2, _colorsConfig.default.font2, _colorsConfig.default.line1, _colorsConfig.default.line1, function (_ref2) {
@@ -46,7 +46,7 @@ var styledTextInput = (0, _styledComponents.css)(["font-size:", ";line-height:1.
 }, function (_ref3) {
   var error = _ref3.error;
   return error && (0, _styledComponents.css)(["&:not(:focus){color:", ";border-color:", ";}"], _colorsConfig.default.error3, _colorsConfig.default.error3);
-}, function (_ref4) {
+}, _colorsConfig.default.error3, _colorsConfig.default.error3, function (_ref4) {
   var tiny = _ref4.tiny;
   return tiny && (0, _styledComponents.css)(["height:", ";"], (0, _typography.pxToRem)(40));
 });

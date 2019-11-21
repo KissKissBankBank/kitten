@@ -29,8 +29,6 @@ var _mixIllustration = require("../../components/illustrations/mix-illustration"
 
 var _loudspeakerIllustration = require("../../components/illustrations/loudspeaker-illustration");
 
-// We directly use svg-react loader for the moment.
-// TODO: update webpack config to manage svg in jsx files.
 var HeaderTour =
 /*#__PURE__*/
 function (_React$Component) {
@@ -92,8 +90,8 @@ function (_React$Component) {
 
 exports.HeaderTour = HeaderTour;
 HeaderTour.defaultProps = {
-  storeName: 'kitten.HeaderTour' // DEPRECATED: do not use default export.
+  storeName: 'kitten.HeaderTour'
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = HeaderTour;
 exports.default = _default;

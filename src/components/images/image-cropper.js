@@ -256,7 +256,7 @@ function (_React$Component) {
         top: "1.5",
         bottom: "1"
       }, _react.default.createElement(_label.Label, {
-        size: "tiny"
+        size: "micro"
       }, this.props.sliderTitle));
     }
   }, {

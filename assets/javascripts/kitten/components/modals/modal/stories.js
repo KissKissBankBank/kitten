@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, text } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 import { Button } from '../../../components/buttons/button'
 import { Title } from '../../../components/typography/title'
 import { Paragraph } from '../../../components/typography/paragraph'
@@ -71,6 +71,7 @@ storiesOf('Modals/Modal', module)
         closeButtonLabel="Fermer"
         trigger={<StoryButton children={text('bouton', 'open')} />}
         content={<StoryContent content={text('content', paragraphContainer)} />}
+        disableOutsideScroll={boolean('Disable outside scroll', false)}
       />
     </Marger>
   ))

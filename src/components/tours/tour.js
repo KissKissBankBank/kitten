@@ -217,8 +217,8 @@ Tour.defaultProps = {
   closeButtonLabel: 'Close',
   pagingLabel: 'on',
   storeName: 'kitten.Tour',
-  useStore: true // DEPRECATED: do not use default export.
+  useStore: true
+}; // DEPRECATED: do not use default export.
 
-};
 var _default = Tour;
 exports.default = _default;

@@ -27,7 +27,6 @@ var _elementHelper = require("../../helpers/dom/element-helper");
 
 var _grabberIcon = require("../../components/icons/grabber-icon");
 
-// DOM for the Slider component. See Slider for state and
 var SliderBar =
 /*#__PURE__*/
 function (_React$Component) {

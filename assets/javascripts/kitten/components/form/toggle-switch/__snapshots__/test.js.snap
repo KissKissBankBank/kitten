@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ToggleSwitch /> with \`big\` prop matches with snapshot 1`] = `
+<div
+  className="toggle-switch__StyledSwitchContainer-ski4b0-0 geFWyC"
+>
+  <button
+    aria-label={null}
+    aria-pressed={false}
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
+    disabled={false}
+    id="toggle-switch"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="toggle-switch__StyledLabel-ski4b0-2 gvNwhr"
+    for="toggle-switch"
+  >
+    switch
+  </label>
+</div>
+`;
+
+exports[`<ToggleSwitch /> with \`checkedColor\` \`defaultColor\` & \`disabledColor\` props matches with snapshot 1`] = `
+<div
+  className="toggle-switch__StyledSwitchContainer-ski4b0-0 geFWyC"
+>
+  <button
+    aria-label={null}
+    aria-pressed={false}
+    className="toggle-switch__StyledSwitch-ski4b0-1 hyIFDQ"
+    disabled={false}
+    id="toggle-switch"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="toggle-switch__StyledLabel-ski4b0-2 ZFoTg"
+    for="toggle-switch"
+  >
+    switch
+  </label>
+</div>
+`;
+
+exports[`<ToggleSwitch /> with \`disabled\` prop matches with snapshot 1`] = `
+<div
+  className="toggle-switch__StyledSwitchContainer-ski4b0-0 zihLl"
+>
+  <button
+    aria-label={null}
+    aria-pressed={false}
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
+    disabled={true}
+    id="toggle-switch"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="toggle-switch__StyledLabel-ski4b0-2 jEniVU"
+    for="toggle-switch"
+  >
+    switch
+  </label>
+</div>
+`;
+
+exports[`<ToggleSwitch /> with \`isChecked\` prop matches with snapshot 1`] = `
+<div
+  className="toggle-switch__StyledSwitchContainer-ski4b0-0 geFWyC"
+>
+  <button
+    aria-label={null}
+    aria-pressed={true}
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
+    disabled={false}
+    id="toggle-switch"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="toggle-switch__StyledLabel-ski4b0-2 jEniVU"
+    for="toggle-switch"
+  >
+    switch
+  </label>
+</div>
+`;
+
+exports[`<ToggleSwitch /> with \`isLabelVisible\` prop matches with snapshot 1`] = `
+<div
+  className="toggle-switch__StyledSwitchContainer-ski4b0-0 geFWyC"
+>
+  <button
+    aria-label="switch"
+    aria-pressed={false}
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
+    disabled={false}
+    id="toggle-switch"
+    onClick={[Function]}
+    type="button"
+  />
+</div>
+`;
+
+exports[`<ToggleSwitch /> with \`label\` prop matches with snapshot 1`] = `
+<div
+  className="toggle-switch__StyledSwitchContainer-ski4b0-0 geFWyC"
+>
+  <button
+    aria-label={null}
+    aria-pressed={false}
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
+    disabled={false}
+    id="toggle-switch"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="toggle-switch__StyledLabel-ski4b0-2 jEniVU"
+    for="toggle-switch"
+  >
+    A test label
+  </label>
+</div>
+`;
+
+exports[`<ToggleSwitch /> with default props matches with snapshot 1`] = `
+<div
+  className="toggle-switch__StyledSwitchContainer-ski4b0-0 geFWyC"
+>
+  <button
+    aria-label={null}
+    aria-pressed={false}
+    className="toggle-switch__StyledSwitch-ski4b0-1 gemjMM"
+    disabled={false}
+    id="toggle-switch"
+    onClick={[Function]}
+    type="button"
+  />
+  <label
+    className="toggle-switch__StyledLabel-ski4b0-2 jEniVU"
+    for="toggle-switch"
+  >
+    switch
+  </label>
+</div>
+`;

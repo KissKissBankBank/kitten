@@ -4,10 +4,238 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.40.2] - 2019-11-20
+
+Fixes:
+- Re-render `Progress` when `value` is updated.
+- Fix `value` to `valueMin` when `value` is negative.
+
+## [2.40.1] - 2019-11-20
+
+Fixes:
+- Update `Truncate` in mobile on `CrowdfundingCard`.
+- Update `font-size` information in mobile and others fixes on `CrowdfundingCard`.
+
+## [2.40.0] - 2019-11-15
+
+Features:
+- Update `Progress` with Styled Components.
+- Add `copper` modifier to `Button`.
+- Add `encodeSvgString` util.
+- Add `CheckableButton` component.
+
+Fixes:
+- Modifier `checked` on `Button` is now deprecated.
+- Delete `margin` on last items of the list on `CrowdfundingCard`.
+- Update styles on `CrowdfundingCardWidget` component.
+- Add incoming animation to `SimplePopover`.
+
+## [2.39.0] - 2019-11-12
+
+Features:
+- Add `CrowdfundingCard` mobile version.
+- Delete `stateDay` and update `dayCounter` props on `CrowdfundingCardWidget`.
+
+## [2.38.0] - 2019-11-08
+
+Features:
+- Add `SimplePopover` component.
+- Add `--important` utility definitions.
+- Add `important` argument to `k-typographyFontSize` definition.
+- Add `important` argument to `k-typographyFont` definition.
+
+## [2.37.2] - 2019-11-07
+
+Fix:
+- Update `dayCounter` propTypes on `CrowdfundingCard`.
+
+## [2.37.1] - 2019-11-04
+
+Fix:
+- Browser `:invalid` style handling by `TextInput`.
+
+## [2.37.0] - 2019-11-04
+
+Features:
+- Add `activeColor` prop to `ToogleSwitch` component.
+- Add `buttonProps` to `TextInputWithButton` component.
+
+Fix:
+- Change color for `BackerCard` title.
+
+## [2.36.0] - 2019-10-31
+
+Features:
+- Add `color` and `title` props on `CopyIcon` component.
+- Create `EmbedIcon` component.
+
+## [2.35.0] - 2019-10-29
+
+Feature:
+- Add `.k-u-background-color-primary6` utility.
+
+## [2.34.0] - 2019-10-25
+
+Feature:
+- Add `ToggleSwitch` component.
+
+## [2.33.0] - 2019-10-24
+
+Features:
+- Create `KissKissBankBankLogo` component.
+- Create `CrowdfundingCardWidget` component.
+
+Fixes:
+- Update truncated title on `CrowdfundingCardWidget` component.
+- Update `Label` styles.
+
+## [2.32.0] - 2019-10-16
+
+Feature:
+- Update `CrowdfundingCard` with styled-components.
+
+Fix:
+- Update `Field.Label` styles.
+
+## [2.31.0] - 2019-10-01
+
+Feature:
+- Add `bulletProps` and change type of `statusMessage` in `StatusWithBullet`.
+
+## [2.30.0] - 2019-10-01
+
+Feature:
+- Add `indeterminate` prop and style to `Checkbox`.
+
+## [2.29.1] - 2019-09-27
+
+Fix:
+- Update suggestions when items prop changes on `<Autocomplete />`.
+
+## [2.29.0] - 2019-09-27
+
+Features:
+- Create `StrokeIcon` component.
+- Add `icon`, `iconPosition`, `updateSuggestionsStrategy`, `isLoading`, `noResultMessage` and `shouldShowNoResultMessage` props to `<Autocomplete />`.
+
+Fix:
+- Remove default `font-size` on `Field.Label`.
+
+## [2.28.0] - 2019-09-24
+
+Feature:
+- New `k-u-cursor-*` CSS utility.
+
+## [2.27.0] - 2019-09-23
+
+Feature:
+- Add `onChange`, `from` and `to` props to `StandaloneRangeDatePicker`.
+
+## [2.26.0] - 2019-09-20
+
+Feature:
+- Add `onSelect` prop on `Autocomplete` component.
+
+Fixes:
+- Passing value through `Autocomplete` callbacks.
+- Fix weird `ListTable` bottom margin bug.
+
+## [2.25.0] - 2019-09-12
+
+Features:
+- Move `Modal` CSS styles over to React component.
+- Add `modalClassNames` and `hasCloseButton` to `Modal`.
+
+Fixes:
+- Update title style on `StandaloneRange` component.
+- Remove rounding in `pxToRem` and `stepToRem`.
+
+## [2.24.0] - 2019-09-06
+
+Features:
+- Add `TextInputWithIcon` component.
+- Export `ICON`, `ICON_TINY` and `ICON_BIG` css from `Button`.
+
+Fix:
+- Update `active` pseudo-class to `TagButton`.
+
+
+## [2.23.0] - 2019-08-30
+
+Feature:
+- Add `textareaId` prop to `CommentForm`.
+
+Fixes:
+- Remove `defaultProps` in `StandaloneRangeDatePicker` component.
+- Fix `AdaptableGrid` width.
+
+## [2.22.0] - 2019-08-28
+
+Feature:
+- Pass `className` prop to `AdaptableGrid` and `AdaptableGridCol` to
+  enable styling with `styled-components`.
+
+## [2.21.0] - 2019-08-27
+
+Features:
+- Center scroll horizontally on `HorizontalNav` selected item.
+- Update `TagButton` with styled-components.
+
+Fixes:
+- Remove console Warning in `Modal` component.
+- Update `Text` component styles on `Pagination`.
+
+## [2.20.0] - 2019-08-23
+
+Features:
+- Add `disableOutsideScroll` prop to Modal (defaults to `false`
+  to prevent Breaking Change).
+- Propagate props and add `listProps` to `ListTable.Header`.
+  (`listProps` is passing props to the list inside the Header row.)
+- Add `listProps` to `ListTable.Row`.
+- Add a `as` prop on `AdaptableGrid` and `AdaptableGridCol` to custom
+  HTML tags name.
+- Update `Pagination` with styled-components.
+
+Fixes:
+- Remove styles (`:hover` styles on `ListTable.Row`) not in the Spec.
+- Move `ListTable.Row` `...others` props propagation
+  on `row` element instead of `list` element.
+
+## [2.19.1] - 2019-08-20
+
+Fix:
+- Default `ListTable` column style to Flex.
+
+## [2.19.0] - 2019-08-19
+
+Features:
+- Add `StandaloneRangeDatePicker` component.
+- Add `ListTable` component.
+- Add `DoubleArrowIcon` component.
+- Add `shadow`, `borderRadius`, `borderColor`, `borderWidth` props
+  to `ArrowContainer` component.
+- Add `StatusWithBullet` component.
+
+## [2.18.4] - 2019-08-13
+
+Fix:
+- Fix negative container margins in `AdaptableGrid`.
+
+## [2.18.3] - 2019-08-13
+
+Fix:
+- Fix warning error about key conflict in `InfoLines` component.
+
+## [2.18.2] - 2019-08-08
+
+Fix:
+- Refactor styles for `isAnimated=false` prop on `Accordeon`.
+
 ## [2.18.1] - 2019-08-07
 
 Fix:
-- Add old ref prop to `TextInputWithUnit`
+- Add old ref prop to `TextInputWithUnit`.
 
 ## [2.18.0] - 2019-08-02
 

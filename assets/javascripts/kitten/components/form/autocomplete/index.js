@@ -1,17 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react'
 import styled, { css } from 'styled-components'
+import isFunction from 'lodash/fp/isFunction'
 import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
 import slugify from 'slugify'
+import { Loader } from '../../loaders/loader'
 
 const itemHeight = 38
 const maxItemsVisibled = 3
 const borderSize = 2
 
 const Container = styled.div`
+  display: flex;
   position: relative;
 `
 
@@ -60,6 +63,62 @@ const Input = styled.input`
         color: ${COLORS.font1};
       }
     `}
+
+  ${({ hasIcon, iconPosition }) => {
+    if (!hasIcon) {
+      return false
+    }
+    return iconPosition === 'left'
+      ? css`
+          padding-left: ${pxToRem(45)};
+        `
+      : css`
+          padding-right: ${pxToRem(45)};
+        `
+  }}
+`
+
+const StyledLoader = styled(({ addRightPadding, ...others }) => (
+  <Loader {...others} />
+))`
+  display: flex;
+  position: absolute;
+  align-self: center;
+  padding: 0 ${pxToRem(18)};
+  z-index: 1;
+  right: 0;
+  ${({ addRightPadding }) =>
+    addRightPadding &&
+    css`
+      padding-right: ${pxToRem(45)};
+    `}
+`
+
+const StyledIcon = styled(({ disabled, ...others }) => <span {...others} />)`
+  display: flex;
+  position: absolute;
+  align-self: center;
+  padding: 0 ${pxToRem(18)};
+  z-index: 1;
+  left: 0;
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      & > svg [stroke]:not([stroke='none']) {
+        stroke: ${COLORS.font2};
+      }
+      & > svg [fill]:not([fill='none']) {
+        fill: ${COLORS.font2};
+      }
+    `}
+
+  ${({ iconPosition }) =>
+    iconPosition === 'right' &&
+    css`
+      left: initial;
+      right: 0;
+    `}
 `
 
 const Suggestions = styled.ul`
@@ -84,6 +143,16 @@ const Suggestions = styled.ul`
         itemHeight * (itemsLength > 2 ? maxItemsVisibled : itemsLength),
       )};
     `}
+`
+
+const NoResultItem = styled.li`
+  padding: ${pxToRem(10)} ${pxToRem(15)};
+
+  ${TYPOGRAPHY.fontStyles.light};
+  font-size: ${stepToRem(-1)};
+  font-style: italic;
+  line-height: 1.3;
+  color: ${COLORS.font1};
 `
 
 const Item = styled.li`
@@ -118,6 +187,13 @@ export const Autocomplete = ({
   onChange,
   onBlur,
   onKeyDown,
+  onSelect,
+  icon,
+  iconPosition,
+  updateSuggestionsStrategy,
+  isLoading,
+  noResultMessage,
+  shouldShowNoResultMessage,
   ...props
 }) => {
   const [items, setItems] = useState(defaultItems)
@@ -126,24 +202,27 @@ export const Autocomplete = ({
   const [showSuggestions, setShowSuggestions] = useState(false)
   const inputEl = useRef(null)
   const suggestionsEl = useRef(null)
+  const showNoResultMessage = isFunction(shouldShowNoResultMessage)
+    ? shouldShowNoResultMessage({ items, value })
+    : shouldShowNoResultMessage
 
   useEffect(() => {
     updateSuggestions()
     setShowSuggestions(!!value)
-  }, [value])
+  }, [value, defaultItems])
 
   const handleChange = e => {
     setValue(e.target.value)
 
-    onChange()
+    onChange(e)
   }
 
-  const handleBlur = () => {
+  const handleBlur = e => {
     setTimeout(() => {
       setShowSuggestions(false)
     }, 100)
 
-    onBlur()
+    onBlur(e)
   }
 
   const handleKeyDown = e => {
@@ -173,7 +252,7 @@ export const Autocomplete = ({
       }
     }
 
-    onKeyDown()
+    onKeyDown(e)
   }
 
   const handleClickItem = value => () => {
@@ -184,13 +263,17 @@ export const Autocomplete = ({
 
     setValue(value)
     setShowSuggestions(false)
+    onSelect(value)
   }
 
   const updateSuggestions = () => {
     const search = `${value}`.toLowerCase()
-    const newItems = defaultItems.filter(
-      item => item.toLowerCase().includes(search) && item !== value,
-    )
+
+    const newItems = updateSuggestionsStrategy
+      ? updateSuggestionsStrategy({ items: defaultItems, value })
+      : defaultItems.filter(
+          item => item.toLowerCase().includes(search) && item !== value,
+        )
 
     setItems(newItems)
     resetSelectedItem()
@@ -237,12 +320,51 @@ export const Autocomplete = ({
         aria-owns={`${props.name}-results`}
         aria-expanded={showSuggestions && items.length > 0}
         aria-autocomplete="both"
+        hasIcon={!!icon}
+        iconPosition={iconPosition}
         aria-activedescendant={
           items[selectedItemIndex]
             ? slugify(`${items[selectedItemIndex]}-${selectedItemIndex}`)
             : ''
         }
       />
+      {isLoading && (
+        <>
+          <StyledLoader
+            color={COLORS.font2}
+            addRightPadding={icon && iconPosition === 'right'}
+          />
+          <VisuallyHidden lang="en">loading</VisuallyHidden>
+        </>
+      )}
+      {icon && (
+        <StyledIcon
+          aria-hidden="true"
+          disabled={props.disabled}
+          iconPosition={iconPosition}
+        >
+          {React.cloneElement(icon, { width: 15, height: 15 })}
+        </StyledIcon>
+      )}
+
+      {showSuggestions &&
+        items.length === 0 &&
+        noResultMessage &&
+        showNoResultMessage && (
+          <>
+            <Suggestions
+              ref={suggestionsEl}
+              id={`${props.name}-results`}
+              role="listbox"
+              tabIndex="-1"
+              itemsLength="1"
+            >
+              <NoResultItem role="option" tabIndex="-1">
+                {noResultMessage}
+              </NoResultItem>
+            </Suggestions>
+          </>
+        )}
 
       {showSuggestions && items.length > 0 && (
         <>
@@ -280,14 +402,28 @@ Autocomplete.propTypes = {
   name: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
   error: PropTypes.bool,
+  icon: PropTypes.object,
+  iconPosition: PropTypes.oneOf(['left', 'right']),
+  updateSuggestionsStrategy: PropTypes.func,
+  noResultMessage: PropTypes.string,
+  shouldShowNoResultMessage: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.func,
+  ]),
   onChange: PropTypes.func,
   onBlur: PropTypes.func,
   onKeyDown: PropTypes.func,
+  onSelect: PropTypes.func,
+  isLoading: PropTypes.bool,
 }
 
 Autocomplete.defaultProps = {
   error: false,
+  shouldShowNoResultMessage: true,
+  iconPosition: 'left',
   onChange: () => {},
   onBlur: () => {},
   onKeyDown: () => {},
+  onSelect: () => {},
+  isLoading: false,
 }

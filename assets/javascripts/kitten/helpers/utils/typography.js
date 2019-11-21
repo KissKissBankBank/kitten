@@ -6,7 +6,7 @@ export const pxToRem = sizeInPx => {
 
   const sizeInRem = sizeInPx / TYPOGRAPHY.root
 
-  return `${parseFloat(sizeInRem.toFixed(2))}rem`
+  return `${parseFloat(sizeInRem)}rem`
 }
 
 export const stepToRem = step => {
@@ -14,5 +14,5 @@ export const stepToRem = step => {
     base: [1],
     ratio: TYPOGRAPHY.scaleMultiplier,
   }
-  return `${parseFloat(ms(step, settings).toFixed(2))}rem`
+  return `${parseFloat(ms(step, settings))}rem`
 }

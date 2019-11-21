@@ -32,8 +32,8 @@ function (_Component) {
   }
 
   (0, _createClass2.default)(Deprecated, [{
-    key: "componentWillMount",
-    value: function componentWillMount() {
+    key: "UNSAFE_componentWillMount",
+    value: function UNSAFE_componentWillMount() {
       if (process.env.NODE_ENV === 'development') {
         var owner = _react.default.Children.only(this.props.children)._owner;
 

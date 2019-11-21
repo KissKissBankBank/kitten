@@ -21,6 +21,10 @@
 
   $background-color: map-get($k-colors, 'background-1');
 
+  body.k-Modal__body--open {
+    overflow: hidden;
+  }
+
   .k-Modal__content {
     position: relative;
     max-height: calc(100vh - #{$outer-gutters-size} * 2);

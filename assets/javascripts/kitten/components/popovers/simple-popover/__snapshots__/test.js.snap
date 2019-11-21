@@ -1,0 +1,725 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SimplePopover /> SimplePopover with multiple props matches with snapshot 1`] = `
+.c4 {
+  margin-bottom: 0.3125rem;
+}
+
+.c5 {
+  margin-top: 0.3125rem;
+  margin-bottom: 0.625rem;
+}
+
+.c7 {
+  margin-top: 1.875rem;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.125rem solid #222;
+  background-color: #222;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2:disabled {
+  cursor: not-allowed;
+}
+
+.c2 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c2 >:last-child {
+  margin-right: 0;
+}
+
+.c2 svg {
+  fill: #fff;
+}
+
+.c2:hover,
+.c2:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c2:hover svg,
+.c2:focus svg {
+  fill: #fff;
+}
+
+.c2:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c2:active svg {
+  fill: #fff;
+}
+
+.c2:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2:disabled svg {
+  fill: #fff;
+}
+
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  border: 0.125rem solid #eee;
+  background-color: #fff;
+  color: #222;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c8:disabled {
+  cursor: not-allowed;
+}
+
+.c8 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c8 >:last-child {
+  margin-right: 0;
+}
+
+.c8 svg {
+  fill: #222;
+}
+
+.c8:hover,
+.c8:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c8:hover svg,
+.c8:focus svg {
+  fill: #fff;
+}
+
+.c8:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c8:active svg {
+  fill: #fff;
+}
+
+.c8:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c8:disabled svg {
+  fill: #fff;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  border: 0.125rem solid #19b4fa;
+  background-color: #19b4fa;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c9:disabled {
+  cursor: not-allowed;
+}
+
+.c9 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c9 >:last-child {
+  margin-right: 0;
+}
+
+.c9 svg {
+  fill: #fff;
+}
+
+.c9:hover,
+.c9:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c9:hover svg,
+.c9:focus svg {
+  fill: #fff;
+}
+
+.c9:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c9:active svg {
+  fill: #fff;
+}
+
+.c9:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c9:disabled svg {
+  fill: #fff;
+}
+
+.c0 {
+  padding: 2.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border: solid #eee 0.125rem;
+  box-sizing: border-box;
+  max-width: 34.6875rem;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin-bottom: 1.25rem;
+  background-color: #fff;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease,visibility 0s ease;
+  transition: opacity 0.3s ease,visibility 0s ease;
+  -webkit-transition-delay: 0s,0s;
+  transition-delay: 0s,0s;
+}
+
+.c0[aria-hidden='true'] {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-delay: 0s,0.3s;
+  transition-delay: 0s,0.3s;
+}
+
+.c3 {
+  display: none;
+  min-width: 5rem;
+  min-height: 5rem;
+  margin-right: 2.5rem;
+  border-radius: 100%;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #bae8fd;
+}
+
+.c1 {
+  position: absolute;
+  top: -0.125rem;
+  right: -0.125rem;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c6 > * + * {
+  margin-top: 1.25rem;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c8 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c8 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c9 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c9 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 {
+    padding: 3.125rem 2.5rem;
+  }
+}
+
+@media (min-width:640px) {
+  .c3 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width:640px) {
+  .c6 > * + * {
+    margin-top: 0;
+    margin-left: 1.25rem;
+  }
+}
+
+<div
+  aria-hidden={false}
+  aria-labelledby="popover-title"
+  className="c0"
+  role="dialog"
+>
+  <button
+    aria-label="Close"
+    className="c1 c2"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      aria-hidden={true}
+      fill="#fff"
+      height="8"
+      viewBox="0 0 8 8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Cross
+      </title>
+      <path
+        d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+      />
+      <path
+        d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+      />
+    </svg>
+  </button>
+  <div
+    className="c3"
+  >
+    <p>
+      illus
+    </p>
+  </div>
+  <div>
+    <div
+      className="c4"
+    >
+      <h2
+        className="k-Title k-Title--senary k-Title--withoutMargin"
+        id="popover-title"
+      >
+        This popover has a title
+      </h2>
+    </div>
+    <div
+      className="c5"
+    >
+      <p
+        className="k-Paragraph k-Paragraph--quaternary"
+      >
+        Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
+      </p>
+    </div>
+    <div
+      className="c6 c7"
+    >
+      <button
+        className="c8"
+        onClick={[Function]}
+      >
+        J’ai compris
+      </button>
+      <button
+        className="c9"
+        onClick={[Function]}
+      >
+        Mes préférences
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
+.c3 {
+  margin-bottom: 0.3125rem;
+}
+
+.c4 {
+  margin-top: 0.3125rem;
+  margin-bottom: 0.625rem;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.875rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.125rem solid #222;
+  background-color: #222;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c2:disabled {
+  cursor: not-allowed;
+}
+
+.c2 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c2 >:last-child {
+  margin-right: 0;
+}
+
+.c2 svg {
+  fill: #fff;
+}
+
+.c2:hover,
+.c2:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c2:hover svg,
+.c2:focus svg {
+  fill: #fff;
+}
+
+.c2:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c2:active svg {
+  fill: #fff;
+}
+
+.c2:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c2:disabled svg {
+  fill: #fff;
+}
+
+.c0 {
+  padding: 2.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  border: solid #eee 0.125rem;
+  box-sizing: border-box;
+  max-width: 34.6875rem;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin-bottom: 1.25rem;
+  background-color: #fff;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s ease,visibility 0s ease;
+  transition: opacity 0.3s ease,visibility 0s ease;
+  -webkit-transition-delay: 0s,0s;
+  transition-delay: 0s,0s;
+}
+
+.c0[aria-hidden='true'] {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition-delay: 0s,0.3s;
+  transition-delay: 0s,0.3s;
+}
+
+.c1 {
+  position: absolute;
+  top: -0.125rem;
+  right: -0.125rem;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 {
+    padding: 3.125rem 2.5rem;
+  }
+}
+
+<div
+  aria-hidden={false}
+  aria-labelledby="popover-title"
+  className="c0"
+  role="dialog"
+>
+  <button
+    aria-label="Close"
+    className="c1 c2"
+    onClick={[Function]}
+    type="button"
+  >
+    <svg
+      aria-hidden={true}
+      fill="#fff"
+      height="8"
+      viewBox="0 0 8 8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Cross
+      </title>
+      <path
+        d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+      />
+      <path
+        d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+      />
+    </svg>
+  </button>
+  <div>
+    <div
+      className="c3"
+    >
+      <h2
+        className="k-Title k-Title--senary k-Title--withoutMargin"
+        id="popover-title"
+      >
+        
+      </h2>
+    </div>
+    <div
+      className="c4"
+    >
+      <p
+        className="k-Paragraph k-Paragraph--quaternary"
+      >
+        
+      </p>
+    </div>
+  </div>
+</div>
+`;

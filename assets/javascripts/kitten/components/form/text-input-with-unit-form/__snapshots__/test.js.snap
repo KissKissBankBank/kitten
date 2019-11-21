@@ -33,7 +33,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 iDULaY"
               defaultValue=""
               disabled={false}
               id="donation-amount"
@@ -45,7 +45,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 gbKmhA"
               disabled={false}
             >
               €
@@ -106,7 +106,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 iDULaY"
               defaultValue=""
               disabled={false}
               id=""
@@ -118,7 +118,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="text-input-with-unit__StyledInputUnit-gjmccx-2 cKZtfM"
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 gbKmhA"
               disabled={false}
             />
           </div>
@@ -177,7 +177,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
           >
             <input
               autoComplete="off"
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 jNJvhF"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 iDULaY"
               defaultValue=""
               disabled={true}
               id=""
@@ -189,7 +189,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
               type="number"
             />
             <span
-              className="text-input-with-unit__StyledInputUnit-gjmccx-2 lfNJet"
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 dWrezv"
               disabled={true}
             />
           </div>
@@ -248,7 +248,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 dERTZf"
+              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 kfptEQ"
               defaultValue=""
               disabled={false}
               id=""
@@ -260,7 +260,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="text-input-with-unit__StyledInputUnit-gjmccx-2 gXhzRE"
+              className="text-input-with-unit__StyledInputUnit-gjmccx-2 jgjsaU"
               disabled={false}
             />
           </div>

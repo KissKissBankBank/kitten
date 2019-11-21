@@ -42,6 +42,11 @@ const StyledButton = styled.button`
       border-color: ${COLORS.error};
     `}
 
+  input:invalid:not(:focus) + & {
+    background-color: ${COLORS.error};
+    border-color: ${COLORS.error};
+  }
+
   ${({ disabled }) =>
     disabled &&
     css`
@@ -76,6 +81,7 @@ export class TextInputWithButton extends PureComponent {
       tiny,
       value,
       modifier,
+      buttonProps,
       ...others
     } = this.props
 
@@ -94,6 +100,7 @@ export class TextInputWithButton extends PureComponent {
           valid={valid}
           error={error}
           disabled={disabled}
+          {...buttonProps}
         >
           {value}
         </StyledButton>

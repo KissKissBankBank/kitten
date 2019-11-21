@@ -58,18 +58,6 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `checked` `modifier` prop', () => {
-    beforeEach(() => {
-      component = renderer
-        .create(<Button modifier="checked">MyButton</Button>)
-        .toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
   describe('with `borderRadius` prop', () => {
     beforeEach(() => {
       component = renderer
@@ -114,6 +102,38 @@ describe('<Button />', () => {
   describe('with icon', () => {
     beforeEach(() => {
       component = renderer.create(<Button icon>!</Button>).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with icon and tiny', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button icon tiny>
+            !
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with icon and big', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button icon big>
+            !
+          </Button>,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {

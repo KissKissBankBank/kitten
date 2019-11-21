@@ -1,8 +1,6 @@
 import React from 'react'
 import { Line } from '../../components/layout/line'
 import { Tooltip } from '../../components/tooltips/tooltip'
-import { Label } from '../../components/form/label'
-import { TextInput } from '../../components/form/text-input'
 import { HeartIcon } from '../../components/icons/heart-icon'
 
 export const KarlLineWithTooltip = props => {

@@ -1,10 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
+exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
   padding: 1.25rem;
   background-color: #f6f6f6;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 0px solid #1CAFE1;
+  z-index: 1;
 }
 
 .c1 {
@@ -12,21 +16,154 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.63rem solid transparent;
-  top: calc(50% - 0.63rem);
+  border: 0.625rem solid transparent;
+  top: 1.25rem;
   left: -1.25rem;
   border-right-color: #f6f6f6;
 }
 
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #f6f6f6;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  border: 0px solid #eee;
+  z-index: 1;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.625rem solid transparent;
+  top: 1.25rem;
+  left: -1.25rem;
+  border-right-color: #f6f6f6;
+}
+
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+<div
+  className="c0"
+>
+  Foobar
+  <span
+    className="c1"
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #f6f6f6;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 3px solid #eee;
+  z-index: 1;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.625rem solid transparent;
+  top: 1.25rem;
+  left: -1.25rem;
+  border-right-color: #f6f6f6;
+}
+
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  top: -0.9375rem;
+  left: -1.25rem;
+  border: 0.9375rem solid transparent;
+  border-right-color: #eee;
+}
+
+<div
+  className="c0"
+>
+  Foobar
+  <span
+    className="c1"
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #f6f6f6;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 0px solid #eee;
+  z-index: 1;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.625rem solid transparent;
+  top: calc(50% - 0.625rem);
+  left: -1.25rem;
+  border-right-color: #f6f6f6;
+}
+
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+<div
+  className="c0"
+>
+  Foobar
+  <span
+    className="c1"
   />
 </div>
 `;
@@ -36,6 +173,10 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
   position: relative;
   padding: 1.25rem;
   background-color: #ff0000;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 0px solid #eee;
+  z-index: 1;
 }
 
 .c1 {
@@ -43,21 +184,27 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.63rem solid transparent;
+  border: 0.625rem solid transparent;
   top: 1.25rem;
   left: -1.25rem;
   border-right-color: #ff0000;
 }
 
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
 <div
   className="c0"
-  color="#ff0000"
 >
   Foobar
   <span
     className="c1"
-    color="#ff0000"
-    size={10}
   />
 </div>
 `;
@@ -67,6 +214,10 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
   position: relative;
   padding: 1.25rem;
   background-color: #f6f6f6;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 0px solid #eee;
+  z-index: 1;
 }
 
 .c1 {
@@ -74,21 +225,27 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.63rem solid transparent;
-  top: 1.88rem;
+  border: 0.625rem solid transparent;
+  top: 1.875rem;
   left: -1.25rem;
   border-right-color: #f6f6f6;
 }
 
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </div>
 `;
@@ -98,6 +255,10 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
   position: relative;
   padding: 1.25rem;
   background-color: #f6f6f6;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 0px solid #eee;
+  z-index: 1;
 }
 
 .c1 {
@@ -105,21 +266,69 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.63rem solid transparent;
+  border: 0.625rem solid transparent;
   bottom: -1.25rem;
   left: 1.25rem;
   border-top-color: #f6f6f6;
 }
 
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  padding: 1.25rem;
+  background-color: #f6f6f6;
+  border-radius: 0;
+  box-sizing: border-box;
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+  border: 0px solid #eee;
+  z-index: 1;
+}
+
+.c1 {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: 0.625rem solid transparent;
+  top: 1.25rem;
+  left: -1.25rem;
+  border-right-color: #f6f6f6;
+}
+
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+<div
+  className="c0"
+>
+  Foobar
+  <span
+    className="c1"
   />
 </div>
 `;
@@ -129,6 +338,10 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
   position: relative;
   padding: 1.25rem;
   background-color: #f6f6f6;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 0px solid #eee;
+  z-index: 1;
 }
 
 .c1 {
@@ -142,15 +355,21 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
   border-right-color: #f6f6f6;
 }
 
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={20}
   />
 </div>
 `;
@@ -160,6 +379,10 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
   position: relative;
   padding: 1.25rem;
   background-color: #f6f6f6;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 0px solid #eee;
+  z-index: 1;
 }
 
 .c1 {
@@ -167,21 +390,27 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.63rem solid transparent;
+  border: 0.625rem solid transparent;
   top: 1.25rem;
   left: -1.25rem;
   border-right-color: #f6f6f6;
 }
 
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
 <div
   className="c0"
-  color="#f6f6f6"
 >
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </div>
 `;
@@ -191,6 +420,10 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
   position: relative;
   padding: 1.25rem;
   background-color: #f6f6f6;
+  border-radius: 0;
+  box-sizing: border-box;
+  border: 0px solid #eee;
+  z-index: 1;
 }
 
 .c1 {
@@ -198,10 +431,19 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
   display: block;
   width: 0;
   height: 0;
-  border: 0.63rem solid transparent;
+  border: 0.625rem solid transparent;
   top: 1.25rem;
   left: -1.25rem;
   border-right-color: #f6f6f6;
+}
+
+.c1::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
 }
 
 <article
@@ -211,8 +453,6 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
   Foobar
   <span
     className="c1"
-    color="#f6f6f6"
-    size={10}
   />
 </article>
 `;
