@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Fix: Cancel emitter on UserMenu unmount
 
 ## [2.40.2] - 2019-11-20
 
