@@ -116,7 +116,7 @@ function (_PureComponent) {
       }, titleProps), titleTruncate && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledTruncate, {
         lines: 2,
         className: "k-u-hidden@s-down"
-      }, title), _react.default.createElement(StyledTruncate, {
+      }, title), _react.default.createElement(_reactTruncate.default, {
         lines: 3,
         className: "k-u-hidden@m-up"
       }, title)), !titleTruncate && title), loading && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledTitleLoading, null), _react.default.createElement(StyledTitleSmallLoading, null)));

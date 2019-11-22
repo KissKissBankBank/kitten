@@ -15,10 +15,11 @@ const StyledContainer = styled.div`
   align-items: center;
   padding: 0;
   margin-top: ${pxToRem(5)};
-  margin-bottom: ${pxToRem(20)};
+  margin-bottom: ${pxToRem(10)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
     padding: 0 ${COMPONENT_GUTTER};
+    margin-bottom: ${pxToRem(20)};
   }
 `
 

@@ -118,9 +118,9 @@ class TitleComponent extends PureComponent {
                 <StyledTruncate lines={2} className="k-u-hidden@s-down">
                   {title}
                 </StyledTruncate>
-                <StyledTruncate lines={3} className="k-u-hidden@m-up">
+                <Truncate lines={3} className="k-u-hidden@m-up">
                   {title}
-                </StyledTruncate>
+                </Truncate>
               </>
             )}
 

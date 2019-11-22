@@ -6,6 +6,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `IntersectionObserverClass`.
 
+## [2.40.2] - 2019-11-20
+
+Fixes:
+- Re-render `Progress` when `value` is updated.
+- Fix `value` to `valueMin` when `value` is negative.
+
+## [2.40.1] - 2019-11-20
+
+Fixes:
+- Update `Truncate` in mobile on `CrowdfundingCard`.
+- Update `font-size` information in mobile and others fixes on `CrowdfundingCard`.
+
 ## [2.40.0] - 2019-11-15
 
 Features:
