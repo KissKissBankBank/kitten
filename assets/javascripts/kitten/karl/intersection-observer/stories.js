@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../components/grid/grid'
 
 import useIntersectionObserver from '../../helpers/utils/intersection-hook'
 
-const ObservedComponent = ({ children, tag, ...props }) => {
+const ObservedComponent = ({ children, ...props }) => {
   const options = {
     rootMargin: '-20% 0px',
     threshold: 0.01,
@@ -14,12 +14,11 @@ const ObservedComponent = ({ children, tag, ...props }) => {
 
   const observedComponentRef = useRef(null)
   const isVisible = useIntersectionObserver({ observedComponentRef, options })
-  const Element = tag || 'div'
 
   return (
-    <Element ref={observedComponentRef} {...props}>
+    <span ref={observedComponentRef} {...props}>
       {isVisible && children}
-    </Element>
+    </span>
   )
 }
 
@@ -33,9 +32,7 @@ storiesOf('IntersectionObserverClass', module).add(
             A kitten will become visible on scroll.
             <Marger top="100" bottom="50" style={{ background: '#eee' }}>
               Here:
-              <ObservedComponent tag="span">
-                🐱 I’m visible! 🐱
-              </ObservedComponent>
+              <ObservedComponent>🐱 I’m visible! 🐱</ObservedComponent>
             </Marger>
           </GridCol>
         </Grid>
