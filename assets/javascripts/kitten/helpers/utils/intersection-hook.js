@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react'
 import { IntersectionObserverClass } from './intersection-observer'
 
 const useIntersectionObserver = ({ observedComponentRef, options }) => {
-  const observerOptions = {
+  const Observer = new IntersectionObserverClass({
     root: null,
     rootMargin: '0px 0px',
     threshold: 0.01,
     ...options,
-  }
-  const Observer = new IntersectionObserverClass(observerOptions)
+  })
   const [withIntersectionObserver, setIntersectionObserver] = useState(false)
 
   useEffect(() => {
