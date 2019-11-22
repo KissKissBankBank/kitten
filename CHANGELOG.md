@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `GiftIcon` component.
+
 ## [2.40.2] - 2019-11-20
 
 Fixes:
