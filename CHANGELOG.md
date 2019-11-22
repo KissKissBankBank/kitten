@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `IntersectionObserverClass`.
 - Feature: Create `GiftIcon` component.
 - Feature: Use delay to disappear `SimplePopover` from DOM.
 
