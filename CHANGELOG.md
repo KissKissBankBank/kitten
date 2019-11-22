@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `IntersectionObserverClass`.
-- Feature: Create `GiftIcon` component.
+## [2.41.0] - 2019-11-22
+
+Features:
+- Add `IntersectionObserverClass`.
+- Create `GiftIcon` component.
 
 ## [2.40.2] - 2019-11-20
 
