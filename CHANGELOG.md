@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `GiftIcon` component.
+- Feature: Use delay to disappear `SimplePopover` from DOM.
 
 ## [2.40.2] - 2019-11-20
 
