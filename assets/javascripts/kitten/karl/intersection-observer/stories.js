@@ -8,7 +8,7 @@ import useIntersectionObserver from '../../helpers/utils/intersection-hook'
 
 const ObservedComponent = ({ children, ...props }) => {
   const options = {
-    rootMargin: '-20% 0px',
+    rootMargin: '-40% 0px',
     threshold: 0.01,
   }
 
