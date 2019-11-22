@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css, keyframes } from 'styled-components'
 import { Marger } from '../../../components/layout/marger'
@@ -90,57 +90,73 @@ export const SimplePopover = ({
   illustrationBackground,
   buttons,
   ...simplePopoverProps
-}) => (
-  <PopoverContainer
-    {...simplePopoverProps}
-    role="dialog"
-    aria-hidden={!isVisible}
-    aria-labelledby={titleId}
-  >
-    <CrossIconButton
-      aria-label={closeButtonLabel}
-      onClick={onCloseClick}
-      type="button"
-      modifier="beryllium"
-      tiny
-      icon
-    >
-      <CrossIcon aria-hidden width="8" height="8" fill={COLORS.background1} />
-    </CrossIconButton>
-    {illustration && (
-      <IconContainer backgroundColor={illustrationBackground}>
-        {illustration}
-      </IconContainer>
-    )}
-    <div>
-      <Marger bottom=".5">
-        <Title id={titleId} modifier="senary" margin={false} tag="h2">
-          {title}
-        </Title>
-      </Marger>
-      <Marger top=".5" bottom="1">
-        <Paragraph modifier="quaternary">{text}</Paragraph>
-      </Marger>
-      {buttons.length > 0 && (
-        <ButtonsContainer top="3">
-          {buttons.map(({ label, clickOptions, ...buttonProps }, i) => {
-            const clickHandler =
-              clickOptions && clickOptions.closeOnClick && onCloseClick
+}) => {
+  const [isRemovedFromDOM, removeFromDom] = useState(false)
 
-            return (
-              <Button
-                onClick={clickHandler}
-                key={i}
-                children={label}
-                {...buttonProps}
-              />
-            )
-          })}
-        </ButtonsContainer>
+  useEffect(() => {
+    isVisible && removeFromDom(false)
+
+    const delayAfterMount = isVisible
+      ? null
+      : window.setTimeout(() => removeFromDom(true), 400)
+
+    return () => {
+      delayAfterMount && window.clearTimeout(delayAfterMount)
+    }
+  }, [isVisible])
+
+  return isRemovedFromDOM ? null : (
+    <PopoverContainer
+      {...simplePopoverProps}
+      role="dialog"
+      aria-hidden={!isVisible}
+      aria-labelledby={titleId}
+    >
+      <CrossIconButton
+        aria-label={closeButtonLabel}
+        onClick={onCloseClick}
+        type="button"
+        modifier="beryllium"
+        tiny
+        icon
+      >
+        <CrossIcon aria-hidden width="8" height="8" fill={COLORS.background1} />
+      </CrossIconButton>
+      {illustration && (
+        <IconContainer backgroundColor={illustrationBackground}>
+          {illustration}
+        </IconContainer>
       )}
-    </div>
-  </PopoverContainer>
-)
+      <div>
+        <Marger bottom=".5">
+          <Title id={titleId} modifier="senary" margin={false} tag="h2">
+            {title}
+          </Title>
+        </Marger>
+        <Marger top=".5" bottom="1">
+          <Paragraph modifier="quaternary">{text}</Paragraph>
+        </Marger>
+        {buttons.length > 0 && (
+          <ButtonsContainer top="3">
+            {buttons.map(({ label, clickOptions, ...buttonProps }, i) => {
+              const clickHandler =
+                clickOptions && clickOptions.closeOnClick && onCloseClick
+
+              return (
+                <Button
+                  onClick={clickHandler}
+                  key={i}
+                  children={label}
+                  {...buttonProps}
+                />
+              )
+            })}
+          </ButtonsContainer>
+        )}
+      </div>
+    </PopoverContainer>
+  )
+}
 
 SimplePopover.defaultProps = {
   isVisible: true,
