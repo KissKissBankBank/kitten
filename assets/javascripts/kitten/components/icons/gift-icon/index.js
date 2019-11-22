@@ -25,5 +25,5 @@ GiftIcon.propTypes = {
 
 GiftIcon.defaultProps = {
   color: '#fff',
-  title: '',
+  title: null,
 }
