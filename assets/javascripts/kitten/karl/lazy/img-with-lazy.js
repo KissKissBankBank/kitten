@@ -6,6 +6,7 @@ const ImgWithLazy = ({ isLazyTriggered, imgSrc, width, height }) => (
     src={isLazyTriggered ? imgSrc : undefined}
     width={width}
     height={height}
+    style={{ background: '#eee' }}
   />
 )
 
