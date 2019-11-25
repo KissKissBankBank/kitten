@@ -12,20 +12,22 @@ storiesOf('Heroes/Hero', module)
   .add(
     'default',
     withInfo('common info')(() => (
-      <Hero
-        direction={select(
-          'direction',
-          { Left: 'left', Right: 'right' },
-          'left',
-        )}
-        imageSrc={text('imageSrc', 'http://placekitten.com/800/800')}
-        tiny={boolean('Tiny', false)}
-        contentBackgroundColor={color('contentBackgroundColor', COLORS.font1)}
-        contentColor={color('contentColor', COLORS.background1)}
-      >
-        <Marger top={10} bottom={10}>
-          FooBar
-        </Marger>
-      </Hero>
+      <StyleRoot>
+        <Hero
+          direction={select(
+            'direction',
+            { Left: 'left', Right: 'right' },
+            'left',
+          )}
+          imageSrc={text('imageSrc', 'http://placekitten.com/800/800')}
+          tiny={boolean('Tiny', false)}
+          contentBackgroundColor={color('contentBackgroundColor', COLORS.font1)}
+          contentColor={color('contentColor', COLORS.background1)}
+        >
+          <Marger top={10} bottom={10}>
+            FooBar
+          </Marger>
+        </Hero>
+      </StyleRoot>
     )),
   )
