@@ -124,7 +124,7 @@ class Subtitle extends PureComponent {
             weight="light"
           >
             {subTitleTruncate && (
-              <StyledTruncate lines={2}>{widgetSubtitle}</StyledTruncate>
+              <Truncate lines={2}>{widgetSubtitle}</Truncate>
             )}
 
             {!subTitleTruncate && widgetSubtitle}
