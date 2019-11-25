@@ -131,8 +131,8 @@ function (_PureComponent) {
         color: "font1",
         lineHeight: "normal",
         weight: "light"
-      }, subTitleTruncate && _react.default.createElement(StyledTruncate, {
-        lines: 2
+      }, subTitleTruncate && _react.default.createElement(_reactTruncate.default, {
+        lines: 3
       }, widgetSubtitle), !subTitleTruncate && widgetSubtitle), loading && _react.default.createElement(StyledSubtitleLoading, null));
     }
   }]);
