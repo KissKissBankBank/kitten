@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Cancel emitter on UserMenu unMount.
+- Fix: Update subtitle's truncate on `CrowdfundindCardWidget` component.
+
+## [2.41.0] - 2019-11-22
+
+Features:
+- Add `IntersectionObserverClass` and `useIntersectionObserver` hook.
+- Create `GiftIcon` component.
 
 ## [2.40.2] - 2019-11-20
 

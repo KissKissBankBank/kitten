@@ -372,15 +372,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   margin-top: 0.625rem;
 }
 
-.c10 {
-  white-space: nowrap;
-}
-
 .c9 {
   margin: 0.3125rem 0 1.25rem 0;
 }
 
-.c13 {
+.c12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -394,7 +390,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   padding: 0.625rem 1.25rem;
 }
 
-.c12 {
+.c11 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -434,56 +430,56 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c12:disabled {
+.c11:disabled {
   cursor: not-allowed;
 }
 
-.c12 >:nth-child(n) {
+.c11 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c12 >:last-child {
+.c11 >:last-child {
   margin-right: 0;
 }
 
-.c12 svg {
+.c11 svg {
   fill: #fff;
 }
 
-.c12:hover,
-.c12:focus {
+.c11:hover,
+.c11:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c12:hover svg,
-.c12:focus svg {
+.c11:hover svg,
+.c11:focus svg {
   fill: #fff;
 }
 
-.c12:active {
+.c11:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c12:active svg {
+.c11:active svg {
   fill: #fff;
 }
 
-.c12:disabled {
+.c11:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c12:disabled svg {
+.c11:disabled svg {
   fill: #fff;
 }
 
-.c11 {
+.c10 {
   padding: 0 0.625rem;
 }
 
@@ -516,7 +512,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c12 {
+  .c11 {
     width: 12.5rem;
     height: 3.125rem;
   }
@@ -616,7 +612,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light c9"
     >
       <span
-        className="c10"
         width={0}
       >
         <span />
@@ -639,17 +634,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
     </p>
   </div>
   <div
-    className="c11"
+    className="c10"
   >
     <button
-      className="c12"
+      className="c11"
     >
       Lorem ipsum
     </button>
   </div>
   
   <div
-    className="c13"
+    className="c12"
   >
     Sur
   </div>
