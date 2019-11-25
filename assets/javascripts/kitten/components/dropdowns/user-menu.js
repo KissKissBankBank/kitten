@@ -37,6 +37,8 @@ export class UserMenu extends Component {
   }
 
   componentWillUnmount() {
+    emitter.off('dropdown:opening:trigger', this.handleOtherDropdownsOpening)
+
     if (this.props.closeEvents) {
       this.props.closeEvents.forEach(ev => {
         window.removeEventListener(ev, this.handleOtherDropdownsOpening)
