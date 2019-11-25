@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium from 'radium'
+import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Container } from '../../components/grid/container'
 import {
@@ -37,10 +37,12 @@ class HeroBase extends Component {
   render() {
     return (
       <Container>
-        <Grid>
-          {this.renderContent()}
-          {this.renderImage()}
-        </Grid>
+        <StyleRoot>
+          <Grid>
+            {this.renderContent()}
+            {this.renderImage()}
+          </Grid>
+        </StyleRoot>
       </Container>
     )
   }
