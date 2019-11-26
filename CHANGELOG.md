@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `StyleRoot` place in `Hero` component.
+
 ## [2.41.1] - 2019-11-25
 
 Fixes:
