@@ -23,7 +23,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireDefault(require("radium"));
+var _radium = _interopRequireWildcard(require("radium"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -55,7 +55,7 @@ function (_Component) {
   (0, _createClass2.default)(HeroBase, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_container.Container, null, _react.default.createElement(Grid, null, this.renderContent(), this.renderImage()));
+      return _react.default.createElement(_container.Container, null, _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(Grid, null, this.renderContent(), this.renderImage())));
     }
   }, {
     key: "renderContent",
