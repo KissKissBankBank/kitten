@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Allow `Progress` prop `value` to be a `string`.
 - Fix: Fix fluidity on `icon` `Buttons`.
+- Fix: Remove `Button` underline on hover.
 
 ## [2.41.2] - 2019-11-26
 
