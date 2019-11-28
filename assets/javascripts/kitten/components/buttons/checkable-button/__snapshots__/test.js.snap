@@ -43,6 +43,11 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   cursor: not-allowed;
 }
 
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c1 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -192,6 +197,11 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c1:disabled {
   cursor: not-allowed;
+}
+
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c1 >:nth-child(n) {
@@ -348,6 +358,11 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   cursor: not-allowed;
 }
 
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c1 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -480,6 +495,11 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 
 .c1:disabled {
   cursor: not-allowed;
+}
+
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c1 >:nth-child(n) {
@@ -618,6 +638,11 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c1:disabled {
   cursor: not-allowed;
+}
+
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c1 >:nth-child(n) {

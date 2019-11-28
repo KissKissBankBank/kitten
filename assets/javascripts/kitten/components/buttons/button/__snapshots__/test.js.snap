@@ -43,6 +43,11 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   cursor: not-allowed;
 }
 
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -147,6 +152,11 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0:disabled {
   cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 >:nth-child(n) {
@@ -259,6 +269,11 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   cursor: not-allowed;
 }
 
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -363,6 +378,11 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   cursor: not-allowed;
 }
 
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -463,6 +483,11 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 
 .c0:disabled {
   cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 >:nth-child(n) {
@@ -569,6 +594,11 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0:disabled {
   cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 >:nth-child(n) {
@@ -691,6 +721,11 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   cursor: not-allowed;
 }
 
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -807,6 +842,11 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   cursor: not-allowed;
 }
 
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -918,6 +958,11 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 .c0:disabled {
   cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 >:nth-child(n) {
@@ -1034,6 +1079,11 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   cursor: not-allowed;
 }
 
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c0 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -1134,6 +1184,11 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0:disabled {
   cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 >:nth-child(n) {
@@ -1241,6 +1296,11 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0:disabled {
   cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0 >:nth-child(n) {
