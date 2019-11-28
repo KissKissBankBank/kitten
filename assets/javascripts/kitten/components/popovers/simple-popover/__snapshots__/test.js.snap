@@ -67,6 +67,11 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   cursor: not-allowed;
 }
 
+.c2:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c2 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -158,6 +163,11 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   cursor: not-allowed;
 }
 
+.c8:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c8 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
@@ -247,6 +257,11 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c9:disabled {
   cursor: not-allowed;
+}
+
+.c9:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c9 >:nth-child(n) {
@@ -560,6 +575,11 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 
 .c2:disabled {
   cursor: not-allowed;
+}
+
+.c2:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c2 >:nth-child(n) {

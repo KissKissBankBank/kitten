@@ -434,6 +434,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   cursor: not-allowed;
 }
 
+.c11:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
 .c11 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
