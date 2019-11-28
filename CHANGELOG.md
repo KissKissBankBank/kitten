@@ -4,9 +4,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `IntersectionObserverClass`.
-- Feature: Create `GiftIcon` component.
 - Feature: Use delay to disappear `SimplePopover` from DOM.
+- Fix: Allow `Progress` prop `value` to be a `string`.
+- Fix: Fix fluidity on `icon` `Buttons`.
+
+## [2.41.2] - 2019-11-26
+
+Fix:
+- Fix `StyleRoot` place in `Hero` component.
+
+## [2.41.1] - 2019-11-25
+
+Fixes:
+- Cancel emitter on UserMenu unMount.
+- Update subtitle's truncate on `CrowdfundindCardWidget` component.
+
+## [2.41.0] - 2019-11-22
+
+Features:
+- Add `IntersectionObserverClass` and `useIntersectionObserver` hook.
+- Create `GiftIcon` component.
 
 ## [2.40.2] - 2019-11-20
 

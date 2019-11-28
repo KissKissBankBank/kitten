@@ -56,10 +56,10 @@ const StyledButton = styled.button`
 
   ${({ tiny }) => tiny && TINY}
   ${({ big }) => big && BIG}
-  ${({ fluid }) => fluid && FLUID}
   ${({ icon }) => icon && ICON}
   ${({ icon, tiny }) => icon && tiny && ICON_TINY}
   ${({ icon, big }) => icon && big && ICON_BIG}
+  ${({ fluid }) => fluid && FLUID}
 
   ${({ modifier }) => modifierStyles(modifier)}
 `

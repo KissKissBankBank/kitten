@@ -88,6 +88,8 @@ function (_Component) {
     value: function componentWillUnmount() {
       var _this3 = this;
 
+      _emitter.default.off('dropdown:opening:trigger', this.handleOtherDropdownsOpening);
+
       if (this.props.closeEvents) {
         this.props.closeEvents.forEach(function (ev) {
           window.removeEventListener(ev, _this3.handleOtherDropdownsOpening);
