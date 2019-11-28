@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Allow `Progress` prop `value` to be a `string`.
 - Fix: Fix fluidity on `icon` `Buttons`.
 
 ## [2.41.2] - 2019-11-26
