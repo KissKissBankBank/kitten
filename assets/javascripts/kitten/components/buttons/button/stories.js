@@ -209,6 +209,7 @@ storiesOf('Buttons/Button', module)
                   tiny={boolean('Tiny', false)}
                   big={boolean('Big', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
+                  fluid={boolean('Fluid', false)}
                   disabled={boolean('Disabled', false)}
                   borderRadius={number('Border radius', 0, radiusBorderRange)}
                   icon
