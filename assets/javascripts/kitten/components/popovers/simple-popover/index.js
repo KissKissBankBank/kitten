@@ -94,9 +94,9 @@ export const SimplePopover = ({
   const [isDisplayedInDOM, displayInDom] = useState(true)
   const [isAriaVisible, setAriaVisible] = useState(false)
 
-  useEffect(() => {
-    let delayAfterMount = null
+  let delayAfterMount = null
 
+  useEffect(() => {
     if (isVisible) {
       displayInDom(true)
       delayAfterMount = window.setTimeout(() => setAriaVisible(true), 50)
@@ -106,7 +106,7 @@ export const SimplePopover = ({
     }
 
     return () => {
-      delayAfterMount && window.clearTimeout(delayAfterMount)
+      window.clearTimeout(delayAfterMount)
     }
   }, [isVisible])
 
