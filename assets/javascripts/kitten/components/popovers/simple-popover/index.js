@@ -91,25 +91,32 @@ export const SimplePopover = ({
   buttons,
   ...simplePopoverProps
 }) => {
-  const [isRemovedFromDOM, removeFromDom] = useState(false)
+  const [isDisplayedInDOM, displayInDom] = useState(true)
+  const [isAriaVisible, setAriaVisible] = useState(false)
 
   useEffect(() => {
-    isVisible && removeFromDom(false)
+    let delayAfterMount = null
 
-    const delayAfterMount = isVisible
-      ? null
-      : window.setTimeout(() => removeFromDom(true), 400)
+    if (isVisible) {
+      displayInDom(true)
+      delayAfterMount = window.setTimeout(() => setAriaVisible(true), 50)
+    } else {
+      setAriaVisible(false)
+      delayAfterMount = window.setTimeout(() => displayInDom(false), 300)
+    }
 
     return () => {
       delayAfterMount && window.clearTimeout(delayAfterMount)
     }
   }, [isVisible])
 
-  return isRemovedFromDOM ? null : (
+  if (!isDisplayedInDOM) return null
+
+  return (
     <PopoverContainer
       {...simplePopoverProps}
       role="dialog"
-      aria-hidden={!isVisible}
+      aria-hidden={!isAriaVisible}
       aria-labelledby={titleId}
     >
       <CrossIconButton
