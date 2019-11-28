@@ -7,7 +7,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="expand-board__StyledButton-sc-5cysn4-0 ibKmMD button__StyledButton-sc-1q5nte0-0 jrWCk"
+    className="expand-board__StyledButton-sc-5cysn4-0 ibKmMD button__StyledButton-sc-1q5nte0-0 hJdvjM"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -44,7 +44,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="expand-board__StyledButton-sc-5cysn4-0 ibKmMD button__StyledButton-sc-1q5nte0-0 jrWCk"
+    className="expand-board__StyledButton-sc-5cysn4-0 ibKmMD button__StyledButton-sc-1q5nte0-0 hJdvjM"
     disabled={true}
     onClick={[Function]}
     type="button"

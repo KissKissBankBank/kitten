@@ -27,8 +27,12 @@ const StyledButton = styled.button`
 
   cursor: pointer;
 
-  :disabled {
+  &:disabled {
     cursor: not-allowed;
+  }
+
+  &:hover {
+    text-decoration: none;
   }
 
   > :nth-child(n) {
