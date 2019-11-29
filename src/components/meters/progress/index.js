@@ -68,7 +68,8 @@ var Progress = function Progress(_ref5) {
 
   (0, _react.useEffect)(function () {
     var progress = 0;
-    if (value < valueMin) progress = valueMin;else if (value > valueMax) progress = valueMax;else progress = value;
+    var valueAsNumber = parseInt(value, 10);
+    if (valueAsNumber < valueMin) progress = valueMin;else if (valueAsNumber > valueMax) progress = valueMax;else progress = valueAsNumber;
     setProgressValue(progress);
   }, [value]);
   return _react.default.createElement(StyledProgress, (0, _extends2.default)({}, others, {
@@ -90,6 +91,6 @@ Progress.defaultProps = {
 };
 Progress.propTypes = {
   color: _propTypes.default.string,
-  value: _propTypes.default.number,
+  value: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   rampProps: _propTypes.default.object
 };
