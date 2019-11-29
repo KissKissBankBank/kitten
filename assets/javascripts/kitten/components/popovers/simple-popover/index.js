@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css, keyframes } from 'styled-components'
 import { Marger } from '../../../components/layout/marger'
@@ -90,57 +90,80 @@ export const SimplePopover = ({
   illustrationBackground,
   buttons,
   ...simplePopoverProps
-}) => (
-  <PopoverContainer
-    {...simplePopoverProps}
-    role="dialog"
-    aria-hidden={!isVisible}
-    aria-labelledby={titleId}
-  >
-    <CrossIconButton
-      aria-label={closeButtonLabel}
-      onClick={onCloseClick}
-      type="button"
-      modifier="beryllium"
-      tiny
-      icon
-    >
-      <CrossIcon aria-hidden width="8" height="8" fill={COLORS.background1} />
-    </CrossIconButton>
-    {illustration && (
-      <IconContainer backgroundColor={illustrationBackground}>
-        {illustration}
-      </IconContainer>
-    )}
-    <div>
-      <Marger bottom=".5">
-        <Title id={titleId} modifier="senary" margin={false} tag="h2">
-          {title}
-        </Title>
-      </Marger>
-      <Marger top=".5" bottom="1">
-        <Paragraph modifier="quaternary">{text}</Paragraph>
-      </Marger>
-      {buttons.length > 0 && (
-        <ButtonsContainer top="3">
-          {buttons.map(({ label, clickOptions, ...buttonProps }, i) => {
-            const clickHandler =
-              clickOptions && clickOptions.closeOnClick && onCloseClick
+}) => {
+  const [isDisplayedInDOM, displayInDom] = useState(true)
+  const [isAriaVisible, setAriaVisible] = useState(false)
 
-            return (
-              <Button
-                onClick={clickHandler}
-                key={i}
-                children={label}
-                {...buttonProps}
-              />
-            )
-          })}
-        </ButtonsContainer>
+  let delayAfterMount = null
+
+  useEffect(() => {
+    if (isVisible) {
+      displayInDom(true)
+      delayAfterMount = window.setTimeout(() => setAriaVisible(true), 50)
+    } else {
+      setAriaVisible(false)
+      delayAfterMount = window.setTimeout(() => displayInDom(false), 300)
+    }
+
+    return () => {
+      window.clearTimeout(delayAfterMount)
+    }
+  }, [isVisible])
+
+  if (!isDisplayedInDOM) return null
+
+  return (
+    <PopoverContainer
+      {...simplePopoverProps}
+      role="dialog"
+      aria-hidden={!isAriaVisible}
+      aria-labelledby={titleId}
+    >
+      <CrossIconButton
+        aria-label={closeButtonLabel}
+        onClick={onCloseClick}
+        type="button"
+        modifier="beryllium"
+        tiny
+        icon
+      >
+        <CrossIcon aria-hidden width="8" height="8" fill={COLORS.background1} />
+      </CrossIconButton>
+      {illustration && (
+        <IconContainer backgroundColor={illustrationBackground}>
+          {illustration}
+        </IconContainer>
       )}
-    </div>
-  </PopoverContainer>
-)
+      <div>
+        <Marger bottom=".5">
+          <Title id={titleId} modifier="senary" margin={false} tag="h2">
+            {title}
+          </Title>
+        </Marger>
+        <Marger top=".5" bottom="1">
+          <Paragraph modifier="quaternary">{text}</Paragraph>
+        </Marger>
+        {buttons.length > 0 && (
+          <ButtonsContainer top="3">
+            {buttons.map(({ label, clickOptions, ...buttonProps }, i) => {
+              const clickHandler =
+                clickOptions && clickOptions.closeOnClick && onCloseClick
+
+              return (
+                <Button
+                  onClick={clickHandler}
+                  key={i}
+                  children={label}
+                  {...buttonProps}
+                />
+              )
+            })}
+          </ButtonsContainer>
+        )}
+      </div>
+    </PopoverContainer>
+  )
+}
 
 SimplePopover.defaultProps = {
   isVisible: true,

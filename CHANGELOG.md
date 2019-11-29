@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Use delay to disappear `SimplePopover` from DOM.
 - Fix: Allow `Progress` prop `value` to be a `string`.
 - Fix: Fix fluidity on `icon` `Buttons`.
 - Fix: Remove `Button` underline on hover.

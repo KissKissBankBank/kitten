@@ -437,7 +437,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 <div
-  aria-hidden={false}
+  aria-hidden={true}
   aria-labelledby="popover-title"
   className="c0"
   role="dialog"
@@ -690,7 +690,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 }
 
 <div
-  aria-hidden={false}
+  aria-hidden={true}
   aria-labelledby="popover-title"
   className="c0"
   role="dialog"
