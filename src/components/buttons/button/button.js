@@ -42,7 +42,7 @@ var _checkedCircleIcon = require("../../icons/checked-circle-icon");
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "sc-1q5nte0-0"
-})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appareance:none;outline:none;cursor:pointer;:disabled{cursor:not-allowed;}>:nth-child(n){margin-right:", ";text-align:left;}", " >:last-child{margin-right:0;}", " ", " ", " ", " ", " ", " ", " ", ""], function () {
+})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appareance:none;outline:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}", " >:last-child{margin-right:0;}", " ", " ", " ", " ", " ", " ", " ", ""], function () {
   return DEFAULT;
 }, _typographyConfig.default.fontStyles.regular, (0, _typography.pxToRem)(14), _colorsConfig.default.font1, (0, _typography.pxToRem)(10), function (_ref) {
   var modifier = _ref.modifier;
@@ -57,19 +57,19 @@ var StyledButton = _styledComponents.default.button.withConfig({
   var big = _ref4.big;
   return big && BIG;
 }, function (_ref5) {
-  var fluid = _ref5.fluid;
-  return fluid && FLUID;
-}, function (_ref6) {
-  var icon = _ref6.icon;
+  var icon = _ref5.icon;
   return icon && ICON;
+}, function (_ref6) {
+  var icon = _ref6.icon,
+      tiny = _ref6.tiny;
+  return icon && tiny && ICON_TINY;
 }, function (_ref7) {
   var icon = _ref7.icon,
-      tiny = _ref7.tiny;
-  return icon && tiny && ICON_TINY;
-}, function (_ref8) {
-  var icon = _ref8.icon,
-      big = _ref8.big;
+      big = _ref7.big;
   return icon && big && ICON_BIG;
+}, function (_ref8) {
+  var fluid = _ref8.fluid;
+  return fluid && FLUID;
 }, function (_ref9) {
   var modifier = _ref9.modifier;
   return (0, _modifierStyles.modifierStyles)(modifier);

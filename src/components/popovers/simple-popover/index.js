@@ -11,6 +11,8 @@ exports.SimplePopover = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireWildcard(require("react"));
@@ -79,9 +81,39 @@ var SimplePopover = function SimplePopover(_ref2) {
       illustrationBackground = _ref2.illustrationBackground,
       buttons = _ref2.buttons,
       simplePopoverProps = (0, _objectWithoutProperties2.default)(_ref2, ["isVisible", "onCloseClick", "titleId", "closeButtonLabel", "title", "text", "illustration", "illustrationBackground", "buttons"]);
+
+  var _useState = (0, _react.useState)(true),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      isDisplayedInDOM = _useState2[0],
+      displayInDom = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(false),
+      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
+      isAriaVisible = _useState4[0],
+      setAriaVisible = _useState4[1];
+
+  var delayAfterMount = null;
+  (0, _react.useEffect)(function () {
+    if (isVisible) {
+      displayInDom(true);
+      delayAfterMount = window.setTimeout(function () {
+        return setAriaVisible(true);
+      }, 50);
+    } else {
+      setAriaVisible(false);
+      delayAfterMount = window.setTimeout(function () {
+        return displayInDom(false);
+      }, 300);
+    }
+
+    return function () {
+      window.clearTimeout(delayAfterMount);
+    };
+  }, [isVisible]);
+  if (!isDisplayedInDOM) return null;
   return _react.default.createElement(PopoverContainer, (0, _extends2.default)({}, simplePopoverProps, {
     role: "dialog",
-    "aria-hidden": !isVisible,
+    "aria-hidden": !isAriaVisible,
     "aria-labelledby": titleId
   }), _react.default.createElement(CrossIconButton, {
     "aria-label": closeButtonLabel,
