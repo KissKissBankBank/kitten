@@ -1,91 +1,117 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
+import React, { useRef, useState } from 'react'
+import styled, { css, keyframes } from 'styled-components'
 import { CloseButton } from '../../components/buttons/close-button'
-import { domElementHelper } from '../../helpers/dom/element-helper'
+import COLORS from '../../constants/colors-config'
+import TYPOGRAPHY from '../../constants/typography-config'
+import { ScreenConfig } from '../../constants/screen-config'
+import { pxToRem } from '../../helpers/utils/typography'
 
-export class Alert extends Component {
-  constructor(props) {
-    super(props)
+const fadeOut = keyframes`
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+`
 
-    this.state = {
-      show: props.show,
-      height: 'auto',
-    }
-
-    this.handleCloseClick = this.handleCloseClick.bind(this)
-    this.handleAnimationEnd = this.handleAnimationEnd.bind(this)
+const AlertWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: ${pxToRem(13)} ${pxToRem(20)};
+  font-size: ${pxToRem(14)};
+  font-family: ${TYPOGRAPHY.fontStyles.light.fontFamily};
+  font-weight: ${TYPOGRAPHY.fontStyles.light.fontWeight};
+  background-color: ${COLORS.primary5};
+  color: ${COLORS.primary1};
+  
+  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    text-align: left;
   }
-
-  handleCloseClick() {
-    this.setState({
-      show: false,
-
-      // The css animation on the close button requires a fixed height.
-      height: domElementHelper.getComputedHeight(this.container),
-    })
+  
+  a {
+     color: inherit;
+     text-decoration: underline;
+     font-family: ${TYPOGRAPHY.fontStyles.bold.fontFamily};
+     font-weight: ${TYPOGRAPHY.fontStyles.bold.fontWeight};
   }
+  
+  ${props =>
+    props.success &&
+    css`
+      background-color: ${COLORS.tertiary1};
+      color: ${COLORS.valid};
+    `}
+  ${props =>
+    props.error &&
+    css`
+      background-color: ${COLORS.error2};
+      color: ${COLORS.error};
+    `}
+  ${props =>
+    props.warning &&
+    css`
+      background-color: ${COLORS.warning};
+      color: ${COLORS.warning2};
+    `}
+  ${props =>
+    props.shouldHide &&
+    css`
+      pointer-events: none;
+      animation: ${fadeOut} 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
+    `}
+`
 
-  handleAnimationEnd() {
-    this.props.onAfterClose()
+const StyledCloseButton = styled(CloseButton)`
+  position: absolute;
+  top: 0;
+  right: 0;
+`
+
+export const Alert = ({
+  className,
+  show,
+  error,
+  success,
+  warning,
+  closeButton,
+  closeButtonLabel,
+  children,
+  onAfterClose,
+  ...others
+}) => {
+  const [isTrashed, trashIt] = useState(false)
+  const [isMounted, setMounted] = useState(true)
+  const alertRef = useRef(null)
+  if (isTrashed || !show) {
+    return null
   }
-
-  renderCloseButton() {
-    if (!this.props.closeButton) return
-
-    return (
-      <CloseButton
-        modifier="carbon"
-        className="k-Alert__close"
-        closeButtonLabel={this.props.closeButtonLabel}
-        onClick={this.handleCloseClick}
-      />
-    )
-  }
-
-  render() {
-    if (!this.props.show) return null
-
-    const {
-      className,
-      show,
-      error,
-      success,
-      closeButton,
-      closeButtonLabel,
-      children,
-      onAfterClose,
-      ...others
-    } = this.props
-
-    const alertClassName = classNames(
-      'k-Alert',
-      {
-        'k-Alert--success': success,
-        'k-Alert--error': error,
-        'k-Alert--hidden': !this.state.show,
-      },
-      className,
-    )
-
-    return (
-      <div
-        ref={div => (this.container = div)}
-        role="alert"
-        style={{ height: this.state.height }}
-        className={alertClassName}
-        onAnimationEnd={this.handleAnimationEnd}
-        {...others}
-      >
-        <div className="k-Alert__container">
-          <div className="k-Alert__row">
-            <div className="k-Alert__content">{children}</div>
-          </div>
-        </div>
-
-        {this.renderCloseButton()}
-      </div>
-    )
-  }
+  return (
+    <AlertWrapper
+      ref={alertRef}
+      role="alert"
+      success={success}
+      error={error}
+      warning={warning}
+      shouldHide={!isMounted}
+      className={className}
+      onAnimationEnd={() => {
+        trashIt(true)
+        onAfterClose()
+      }}
+      {...others}
+    >
+      <>
+        {children}
+        {closeButton && (
+          <StyledCloseButton
+            modifier="carbon"
+            closeButtonLabel={closeButtonLabel}
+            onClick={() => {
+              setMounted(false)
+            }}
+          />
+        )}
+      </>
+    </AlertWrapper>
+  )
 }
 
 Alert.defaultProps = {
@@ -93,6 +119,7 @@ Alert.defaultProps = {
   show: true,
   error: false,
   success: false,
+  warning: false,
   closeButton: false,
   closeButtonLabel: 'Close',
   onAfterClose: () => {},

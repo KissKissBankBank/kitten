@@ -54,20 +54,20 @@
 @import './components/grid/container';
 @import './components/grid/grid';
 @import './components/grid/lego-grid';
-@import "./components/grid/row";
-@import "./components/grid/side-grid";
-@import "./components/grid/single-column";
-@import "./components/grid/vertical-grid";
+@import './components/grid/row';
+@import './components/grid/side-grid';
+@import './components/grid/single-column';
+@import './components/grid/vertical-grid';
 
 // Headers
 @import './components/headers/header';
 
 // Icons
-@import "./components/icons/arrow-icon";
+@import './components/icons/arrow-icon';
 
 // Images
-@import "./components/images/cropper";
-@import "./components/images/image-with-caption";
+@import './components/images/cropper';
+@import './components/images/image-with-caption';
 
 // Layout
 @import './components/layout/horizontal-stroke';
@@ -105,7 +105,6 @@
 @import './components/navigation/user-menu';
 
 // Notifications
-@import './components/notifications/alert';
 @import './components/notifications/badge';
 @import './components/notifications/icon-badge';
 
@@ -122,11 +121,11 @@
 @import './components/steppers/stepper';
 
 // Teaser
-@import "./components/teaser/teaser";
+@import './components/teaser/teaser';
 
 // Testimonies
-@import "./components/testimonies/testimony-list";
-@import "./components/testimonies/testimony";
+@import './components/testimonies/testimony-list';
+@import './components/testimonies/testimony';
 
 // Titles
 @import './components/titles/title-with-actions';

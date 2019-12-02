@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> should matches with closeButton snapshot 1`] = `
+<div
+  className="alert__AlertWrapper-j865fd-0 fzezcI"
+  onAnimationEnd={[Function]}
+  role="alert"
+>
+  Alert !
+  <button
+    aria-label="Close"
+    className="k-ButtonIcon k-ButtonIcon--cross alert__StyledCloseButton-j865fd-1 fmFwlC k-ButtonIcon--carbon"
+    onClick={[Function]}
+    tabIndex={null}
+    title="Close"
+    type="button"
+  >
+    <svg
+      className="k-ButtonIcon__svg k-ButtonIcon__svgRotate"
+      viewBox="0 0 8 8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        Cross
+      </title>
+      <path
+        d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+      />
+      <path
+        d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+      />
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`<Alert /> should matches with default snapshot 1`] = `
+<div
+  className="alert__AlertWrapper-j865fd-0 fzezcI"
+  onAnimationEnd={[Function]}
+  role="alert"
+>
+  Alert !
+</div>
+`;
+
+exports[`<Alert /> should matches with error snapshot 1`] = `
+<div
+  className="alert__AlertWrapper-j865fd-0 cGbfiS"
+  onAnimationEnd={[Function]}
+  role="alert"
+>
+  Alert !
+</div>
+`;
+
+exports[`<Alert /> should matches with success snapshot 1`] = `
+<div
+  className="alert__AlertWrapper-j865fd-0 jDflRF"
+  onAnimationEnd={[Function]}
+  role="alert"
+>
+  Alert !
+</div>
+`;
+
+exports[`<Alert /> should matches with warning snapshot 1`] = `
+<div
+  className="alert__AlertWrapper-j865fd-0 gGIOAg"
+  onAnimationEnd={[Function]}
+  role="alert"
+>
+  Alert !
+</div>
+`;
