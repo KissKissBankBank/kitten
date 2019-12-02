@@ -103,6 +103,7 @@ storiesOf('Cards/RewardEdition', module)
                 <Marger top="2" bottom="3">
                   <ArrowContainer position="top" color={COLORS.primary5}>
                     <BulletList
+                      small
                       items={[
                         {
                           key: '1',
@@ -128,18 +129,27 @@ storiesOf('Cards/RewardEdition', module)
                     placeholder="Entrez votre description du code"
                   />
                 </Marger>
-                <Marger top="3" bottom="3">
+                <Marger top="3">
                   <Field.Label labelProps={{ htmlFor: 'amount' }}>
                     Montant minimum d'activation
                     <Text weight="light">(optionnel)</Text>
                   </Field.Label>
-                  <Field.Input id="amount" name="amount" placeholder="0" />
+                  <Field.Input
+                    unit="€"
+                    id="amount"
+                    name="amount"
+                    placeholder="0"
+                  />
                 </Marger>
               </Field>
             </div>
           </RewardEdition.Content>
 
-          <RewardEdition.Footer />
+          <RewardEdition.Footer>
+            <Button fluid big modifier="helium">
+              Valider
+            </Button>
+          </RewardEdition.Footer>
         </RewardEdition>
       </StoryContainer>
     )
