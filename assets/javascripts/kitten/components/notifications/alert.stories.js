@@ -14,7 +14,6 @@ storiesOf('Alert', module)
       {text('Message', 'Alert info message')}
     </Alert>
   ))
-
   .add('success', () => (
     <Alert
       success
