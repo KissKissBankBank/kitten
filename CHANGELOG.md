@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Update `BulletList` component with `styled-components`.
+- Feature: Add `warning` prop to `<Alert />`
 
 ## [2.42.0] - 2019-11-29
 
