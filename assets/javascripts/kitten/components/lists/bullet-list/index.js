@@ -10,14 +10,16 @@ const StyledBulletList = styled.ul`
   padding: ${pxToRem(0)};
   list-style: none;
   text-align: left;
-  ${TYPOGRAPHY.fontStyles.light};
-  font-size: ${stepToRem(-1)};
-  line-height: 1.5;
 `
 
 const StyledItem = styled.li`
   margin: ${pxToRem(5)} ${pxToRem(16)};
   display: block;
+  ${TYPOGRAPHY.fontStyles.light};
+  font-size: ${stepToRem(-1)};
+  line-height: 1.5;
+  color: ${COLORS.font1};
+  text-decoration: none;
 
   &:before {
     margin-left: -${pxToRem(16)};
@@ -33,10 +35,23 @@ const StyledItem = styled.li`
     background-color: ${COLORS.font1};
   }
 
+  &:hover {
+    color: ${COLORS.primary2};
+  }
+
+  &:active {
+    color: ${COLORS.primary3};
+  }
+
   ${({ small }) =>
     small &&
     css`
       font-size: ${stepToRem(-2)};
+
+      &:before {
+        width: ${pxToRem(4)};
+        height: ${pxToRem(4)};
+      }
     `}
 
   ${({ large }) =>
@@ -58,46 +73,52 @@ const StyledItem = styled.li`
       font-size: ${stepToRem(2)};
       margin: ${pxToRem(10)} 0;
     `}
-
-  ${({ link }) =>
-    link &&
-    css`
-      ${TYPOGRAPHY.fontStyles.regular};
-      font-size: ${stepToRem(-1)};
-      text-decoration: none;
-
-      &:hover {
-        color: ${COLORS.primary2};
-      }
-
-      &:active {
-        color: ${COLORS.primary3};
-      }
-    `}
 `
 
+const Item = ({ small, large, big, huge, ...others }) => {
+  return (
+    <StyledItem small={small} large={large} big={big} huge={huge} {...others} />
+  )
+}
+
 export class BulletList extends PureComponent {
-  static propTypes = {
-    small: PropTypes.bool,
-    large: PropTypes.bool,
-    big: PropTypes.bool,
-    huge: PropTypes.bool,
-  }
-
-  static defaultProps = {
-    small: false,
-    large: false,
-    big: false,
-    huge: false,
-  }
-
   render() {
-    const { small, large, big, huge, ...others } = this.props
+    const { href, items, small, large, big, huge, ...others } = this.props
 
     return (
-      <StyledBulletList>
-        <StyledItem small={small} large={large} big={big} huge={huge} />
+      <StyledBulletList {...others}>
+        {items.map(item => (
+          <Item
+            as={href ? 'a' : 'div'}
+            key={item.key}
+            small={small}
+            large={large}
+            big={big}
+            huge={huge}
+            href={href}
+          >
+            {item.item}
+          </Item>
+        ))}
       </StyledBulletList>
     )
   }
+}
+
+BulletList.propTypes = {
+  small: PropTypes.bool,
+  large: PropTypes.bool,
+  big: PropTypes.bool,
+  huge: PropTypes.bool,
+  items: PropTypes.array,
+  href: PropTypes.string,
+}
+
+BulletList.defaultProps = {
+  small: false,
+  large: false,
+  big: false,
+  huge: false,
+  href: null,
+  items: [],
 }

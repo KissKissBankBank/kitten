@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BulletList /> should match its empty snapshot 1`] = `
+<ul
+  className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
+>
+  <li
+    className="bullet-list__StyledItem-rdyx84-1 eayMWT"
+  >
+    Dis Manibus
+  </li>
+  <li
+    className="bullet-list__StyledItem-rdyx84-1 eayMWT"
+  >
+    Calpurnia Felicla
+  </li>
+  <li
+    className="bullet-list__StyledItem-rdyx84-1 eayMWT"
+  >
+    Germulio coniugi
+  </li>
+</ul>
+`;
