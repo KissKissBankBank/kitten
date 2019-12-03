@@ -5,17 +5,20 @@ exports[`<BulletList /> should match its empty snapshot 1`] = `
   className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
 >
   <li
-    className="bullet-list__StyledItem-rdyx84-1 eayMWT"
+    className="bullet-list__StyledItem-rdyx84-1 dEbQoF"
+    href={null}
   >
     Dis Manibus
   </li>
   <li
-    className="bullet-list__StyledItem-rdyx84-1 eayMWT"
+    className="bullet-list__StyledItem-rdyx84-1 dEbQoF"
+    href={null}
   >
     Calpurnia Felicla
   </li>
   <li
-    className="bullet-list__StyledItem-rdyx84-1 eayMWT"
+    className="bullet-list__StyledItem-rdyx84-1 dEbQoF"
+    href={null}
   >
     Germulio coniugi
   </li>

@@ -115,7 +115,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 gIybqr"
+        className="bullet-list__StyledItem-rdyx84-1 faLRxJ"
+        href={null}
       >
         Unordered list can use asterisks
       </li>
@@ -128,7 +129,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 gIybqr"
+        className="bullet-list__StyledItem-rdyx84-1 faLRxJ"
+        href={null}
       >
         Or minuses
       </li>
@@ -141,7 +143,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 gIybqr"
+        className="bullet-list__StyledItem-rdyx84-1 faLRxJ"
+        href={null}
       >
         Or pluses
       </li>
@@ -296,7 +299,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 gIybqr"
+        className="bullet-list__StyledItem-rdyx84-1 faLRxJ"
+        href={null}
       >
         Unordered list can use asterisks
       </li>
@@ -309,7 +313,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 gIybqr"
+        className="bullet-list__StyledItem-rdyx84-1 faLRxJ"
+        href={null}
       >
         Or minuses
       </li>
@@ -322,7 +327,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 gIybqr"
+        className="bullet-list__StyledItem-rdyx84-1 faLRxJ"
+        href={null}
       >
         Or pluses
       </li>

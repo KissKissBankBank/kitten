@@ -89,7 +89,7 @@ export class BulletList extends PureComponent {
       <StyledBulletList {...others}>
         {items.map(item => (
           <Item
-            as={href ? 'a' : 'div'}
+            as={href ? 'a' : 'li'}
             key={item.key}
             small={small}
             large={large}
