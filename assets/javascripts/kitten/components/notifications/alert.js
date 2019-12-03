@@ -12,44 +12,41 @@ const fadeOut = keyframes`
 `
 
 const AlertWrapper = styled.div`
+  ${TYPOGRAPHY.fontStyles.light};
   position: relative;
   overflow: hidden;
-  text-align: center;
   padding: ${pxToRem(13)} ${pxToRem(20)};
   font-size: ${pxToRem(14)};
-  font-family: ${TYPOGRAPHY.fontStyles.light.fontFamily};
-  font-weight: ${TYPOGRAPHY.fontStyles.light.fontWeight};
   background-color: ${COLORS.primary5};
   color: ${COLORS.primary1};
   
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    text-align: left;
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    text-align: center;
   }
   
   a {
-     color: inherit;
-     text-decoration: underline;
-     font-family: ${TYPOGRAPHY.fontStyles.bold.fontFamily};
-     font-weight: ${TYPOGRAPHY.fontStyles.bold.fontWeight};
+    ${TYPOGRAPHY.fontStyles.bold};
+    color: inherit;
+    text-decoration: underline;
   }
   
   ${props =>
     props.success &&
     css`
-      background-color: ${COLORS.tertiary1};
       color: ${COLORS.valid};
+      background-color: ${COLORS.tertiary1};
     `}
   ${props =>
     props.error &&
     css`
-      background-color: ${COLORS.error2};
       color: ${COLORS.error};
+      background-color: ${COLORS.error2};
     `}
   ${props =>
     props.warning &&
     css`
-      background-color: ${COLORS.warning};
-      color: ${COLORS.warning2};
+      color: ${COLORS.warning};
+      background-color: ${COLORS.warning2};
     `}
   ${props =>
     props.shouldHide &&
@@ -65,8 +62,6 @@ const StyledCloseButton = styled(CloseButton)`
   right: 0;
 `
 
-let clearDelayBeforeTrash
-
 export const Alert = ({
   className,
   show,
@@ -81,10 +76,13 @@ export const Alert = ({
 }) => {
   const [isTrashed, trashIt] = useState(false)
   const [isMounted, setMounted] = useState(true)
-  const delayBeforeTrash = () => {
-    clearDelayBeforeTrash = setTimeout(() => trashIt(true), 400)
-  }
-  useEffect(() => () => clearTimeout(clearDelayBeforeTrash), [])
+  useEffect(() => {
+    let clearDelayBeforeTrash
+    if (!isMounted) {
+      clearDelayBeforeTrash = setTimeout(() => trashIt(true), 400)
+    }
+    return () => clearTimeout(clearDelayBeforeTrash)
+  }, [isMounted])
   const alertRef = useRef(null)
   if (isTrashed || !show) {
     return null
@@ -106,10 +104,7 @@ export const Alert = ({
           <StyledCloseButton
             modifier="carbon"
             closeButtonLabel={closeButtonLabel}
-            onClick={() => {
-              setMounted(false)
-              delayBeforeTrash()
-            }}
+            onClick={() => setMounted(false)}
           />
         )}
       </>

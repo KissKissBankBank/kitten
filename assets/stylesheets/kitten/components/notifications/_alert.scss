@@ -1,0 +1,130 @@
+/// Alert
+///
+/// @group notifications
+///
+/// @example scss - usage
+///
+///   @include k-Alert;
+///
+/// @example html
+///
+///   <div class="k-Alert k-Alert--success" role="alert">
+///     <div class="k-Alert__row">
+///       <div class="k-Alert__content">
+///         Lorem ipsum…
+///       </div>
+///     </div>
+///
+///     <button class="k-Alert__close">x</button>
+///   </div>
+
+@mixin k-Alert {
+  $font: 'light';
+  $strong-font: 'regular';
+  $font-step: -1; // 14px
+
+  $color: map-get($k-colors, 'primary-1');
+  $colorError: map-get($k-colors, 'error');
+  $colorSuccess: map-get($k-colors, 'valid');
+
+  $background: map-get($k-colors, 'primary-5');
+  $backgroundError: map-get($k-colors, 'error-2');
+  $backgroundSuccess: map-get($k-colors, 'tertiary-1');
+
+  $easeInQuart: cubic-bezier(.895, .03, .685, .22);
+
+  .k-Alert {
+    position: relative;
+    overflow: hidden;
+    background-color: $background;
+  }
+
+  .k-Alert__container {
+    @include k-container;
+  }
+
+  .k-Alert__row {
+    @include k-grid;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .k-Alert__content {
+    @include k-grid-col(10);
+
+    color: $color;
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-step);
+
+    @include k-media-min('s') {
+      @include k-grid-col(8);
+      @include k-grid-offset(2);
+      text-align: center;
+    }
+
+    @include k-media-min('m') {
+      @include k-grid-col(6);
+      @include k-grid-offset(3);
+    }
+  }
+
+  .k-Alert__paragraph {
+    margin: 0;
+  }
+
+  .k-Alert__strong {
+    @include k-typographyFont($strong-font);
+  }
+
+  .k-Alert__link,
+  .k-Alert__link:link,
+  .k-Alert__link:visited,
+  .k-Alert__link:hover,
+  .k-Alert__link:active {
+    @include k-typographyFont($strong-font);
+
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .k-Alert__list {
+    margin: 0;
+    text-align: left;
+  }
+
+  .k-Alert__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  // Modifiers.
+
+  .k-Alert--success {
+    background-color: $backgroundSuccess;
+
+    .k-Alert__content {
+      color: $colorSuccess;
+    }
+  }
+
+  .k-Alert--error {
+    background-color: $backgroundError;
+
+    .k-Alert__content {
+      color: $colorError;
+    }
+  }
+
+  .k-Alert--hidden {
+    pointer-events: none;
+    animation: kAlertFadeOut .4s $easeInQuart forwards;
+  }
+
+  // FadeOut animation.
+
+  @keyframes kAlertFadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; height: 0; }
+  }
+}
