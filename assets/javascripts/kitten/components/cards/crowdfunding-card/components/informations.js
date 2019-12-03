@@ -54,21 +54,9 @@ const StyledText = styled(Text)`
 
 class Informations extends PureComponent {
   static propTypes = {
-    info1: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object,
-      PropTypes.node,
-    ]),
-    info2: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object,
-      PropTypes.node,
-    ]),
-    info3: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object,
-      PropTypes.node,
-    ]),
+    info1: PropTypes.node,
+    info2: PropTypes.node,
+    info3: PropTypes.node,
     loading: PropTypes.bool,
   }
 
