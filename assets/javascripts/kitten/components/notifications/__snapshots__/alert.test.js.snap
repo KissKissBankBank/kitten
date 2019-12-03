@@ -3,7 +3,6 @@
 exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 <div
   className="alert__AlertWrapper-j865fd-0 fzezcI"
-  onAnimationEnd={[Function]}
   role="alert"
 >
   Alert !
@@ -37,7 +36,6 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 exports[`<Alert /> should matches with default snapshot 1`] = `
 <div
   className="alert__AlertWrapper-j865fd-0 fzezcI"
-  onAnimationEnd={[Function]}
   role="alert"
 >
   Alert !
@@ -47,7 +45,6 @@ exports[`<Alert /> should matches with default snapshot 1`] = `
 exports[`<Alert /> should matches with error snapshot 1`] = `
 <div
   className="alert__AlertWrapper-j865fd-0 cGbfiS"
-  onAnimationEnd={[Function]}
   role="alert"
 >
   Alert !
@@ -57,7 +54,6 @@ exports[`<Alert /> should matches with error snapshot 1`] = `
 exports[`<Alert /> should matches with success snapshot 1`] = `
 <div
   className="alert__AlertWrapper-j865fd-0 jDflRF"
-  onAnimationEnd={[Function]}
   role="alert"
 >
   Alert !
@@ -67,7 +63,6 @@ exports[`<Alert /> should matches with success snapshot 1`] = `
 exports[`<Alert /> should matches with warning snapshot 1`] = `
 <div
   className="alert__AlertWrapper-j865fd-0 gGIOAg"
-  onAnimationEnd={[Function]}
   role="alert"
 >
   Alert !

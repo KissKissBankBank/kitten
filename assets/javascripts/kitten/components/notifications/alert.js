@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import { CloseButton } from '../../components/buttons/close-button'
 import COLORS from '../../constants/colors-config'
@@ -65,6 +65,8 @@ const StyledCloseButton = styled(CloseButton)`
   right: 0;
 `
 
+let clearDelayBeforeTrash
+
 export const Alert = ({
   className,
   show,
@@ -79,6 +81,10 @@ export const Alert = ({
 }) => {
   const [isTrashed, trashIt] = useState(false)
   const [isMounted, setMounted] = useState(true)
+  const delayBeforeTrash = () => {
+    clearDelayBeforeTrash = setTimeout(() => trashIt(true), 400)
+  }
+  useEffect(() => () => clearTimeout(clearDelayBeforeTrash), [])
   const alertRef = useRef(null)
   if (isTrashed || !show) {
     return null
@@ -92,10 +98,6 @@ export const Alert = ({
       warning={warning}
       shouldHide={!isMounted}
       className={className}
-      onAnimationEnd={() => {
-        trashIt(true)
-        onAfterClose()
-      }}
       {...others}
     >
       <>
@@ -106,6 +108,7 @@ export const Alert = ({
             closeButtonLabel={closeButtonLabel}
             onClick={() => {
               setMounted(false)
+              delayBeforeTrash()
             }}
           />
         )}
@@ -122,5 +125,4 @@ Alert.defaultProps = {
   warning: false,
   closeButton: false,
   closeButtonLabel: 'Close',
-  onAfterClose: () => {},
 }
