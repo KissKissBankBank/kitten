@@ -67,10 +67,6 @@
     }
   }
 
-  .k-BulletList__item--small {
-    @include k-typographyFontSize(-2);
-  }
-
   .k-BulletList__item--large {
     @include k-typographyFontSize($font-step-on-media);
   }

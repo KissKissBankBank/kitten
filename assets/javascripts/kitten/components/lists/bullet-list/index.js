@@ -19,7 +19,6 @@ const StyledItem = styled.li`
   font-size: ${stepToRem(-1)};
   line-height: 1.5;
   color: ${COLORS.font1};
-  text-decoration: none;
 
   &:before {
     margin-left: -${pxToRem(16)};
@@ -30,9 +29,9 @@ const StyledItem = styled.li`
     height: ${pxToRem(6)};
     display: inline-block;
     vertical-align: middle;
+    background-color: ${COLORS.font1};
 
     content: '';
-    background-color: ${COLORS.font1};
   }
 
   ${({ small }) =>
