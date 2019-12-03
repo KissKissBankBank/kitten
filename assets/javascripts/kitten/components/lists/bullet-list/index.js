@@ -35,14 +35,6 @@ const StyledItem = styled.li`
     background-color: ${COLORS.font1};
   }
 
-  &:hover {
-    color: ${COLORS.primary2};
-  }
-
-  &:active {
-    color: ${COLORS.primary3};
-  }
-
   ${({ small }) =>
     small &&
     css`
@@ -83,19 +75,17 @@ const Item = ({ small, large, big, huge, ...others }) => {
 
 export class BulletList extends PureComponent {
   render() {
-    const { href, items, small, large, big, huge, ...others } = this.props
+    const { items, small, large, big, huge, ...others } = this.props
 
     return (
       <StyledBulletList {...others}>
         {items.map(item => (
           <Item
-            as={href ? 'a' : 'li'}
             key={item.key}
             small={small}
             large={large}
             big={big}
             huge={huge}
-            href={href}
           >
             {item.item}
           </Item>
@@ -111,7 +101,6 @@ BulletList.propTypes = {
   big: PropTypes.bool,
   huge: PropTypes.bool,
   items: PropTypes.array,
-  href: PropTypes.string,
 }
 
 BulletList.defaultProps = {
@@ -119,6 +108,5 @@ BulletList.defaultProps = {
   large: false,
   big: false,
   huge: false,
-  href: null,
   items: [],
 }
