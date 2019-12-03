@@ -4,7 +4,7 @@ import { CloseButton } from '../../components/buttons/close-button'
 import COLORS from '../../constants/colors-config'
 import TYPOGRAPHY from '../../constants/typography-config'
 import { ScreenConfig } from '../../constants/screen-config'
-import { pxToRem } from '../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../helpers/utils/typography'
 
 const fadeOut = keyframes`
   0% { opacity: 1; }
@@ -16,7 +16,7 @@ const AlertWrapper = styled.div`
   position: relative;
   overflow: hidden;
   padding: ${pxToRem(13)} ${pxToRem(20)};
-  font-size: ${pxToRem(14)};
+  font-size: ${stepToRem(-1)};
   background-color: ${COLORS.primary5};
   color: ${COLORS.primary1};
   
