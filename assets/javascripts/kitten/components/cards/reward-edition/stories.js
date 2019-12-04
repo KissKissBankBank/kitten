@@ -35,11 +35,7 @@ const StyledButton = styled(Button)`
   margin-top: -${borderWidth};
 `
 
-const StyledContentContainer = styled(RewardEdition.Content)`
-  padding: ${pxToRem(30)};
-`
-
-const StyledFooterContainer = styled(RewardEdition.Footer)`
+const StyledContainer = styled(RewardEdition.Content && RewardEdition.Footer)`
   padding: ${pxToRem(30)};
 `
 
@@ -102,7 +98,7 @@ storiesOf('Cards/RewardEdition', module)
               </Text>
             </RewardEdition.Header>
 
-            <StyledContentContainer>
+            <StyledContainer>
               <StyledText tag="p" size="tiny" color="font1" weight="regular">
                 Code
               </StyledText>
@@ -134,13 +130,13 @@ storiesOf('Cards/RewardEdition', module)
                   30 €
                 </StyledText>
               </Marger>
-            </StyledContentContainer>
+            </StyledContainer>
 
-            <StyledFooterContainer>
+            <StyledContainer>
               <Button fluid big modifier="helium">
                 Editer le code cadeau
               </Button>
-            </StyledFooterContainer>
+            </StyledContainer>
           </RewardEdition>
         </StoryContainer>
 
@@ -152,7 +148,7 @@ storiesOf('Cards/RewardEdition', module)
               </Text>
             </RewardEdition.Header>
 
-            <StyledContentContainer>
+            <StyledContainer>
               <Field>
                 <Field.Label labelProps={{ htmlFor: 'gift-code' }}>
                   Code <Text weight="light">(obligatoire)</Text>
@@ -204,13 +200,13 @@ storiesOf('Cards/RewardEdition', module)
                   />
                 </Marger>
               </Field>
-            </StyledContentContainer>
+            </StyledContainer>
 
-            <StyledFooterContainer>
+            <StyledContainer>
               <Button fluid big modifier="helium">
                 Valider
               </Button>
-            </StyledFooterContainer>
+            </StyledContainer>
           </RewardEdition>
         </StoryContainer>
       </>
