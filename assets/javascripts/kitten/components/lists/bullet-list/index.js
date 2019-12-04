@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
@@ -30,7 +30,6 @@ const StyledItem = styled.li`
     display: inline-block;
     vertical-align: middle;
     background-color: ${COLORS.font1};
-
     content: '';
   }
 
@@ -66,32 +65,23 @@ const StyledItem = styled.li`
     `}
 `
 
-const Item = ({ small, large, big, huge, ...others }) => {
+export const BulletList = ({ items, small, large, big, huge, ...others }) => {
   return (
-    <StyledItem small={small} large={large} big={big} huge={huge} {...others} />
+    <StyledBulletList {...others}>
+      {items.map(item => (
+        <StyledItem
+          key={item.key}
+          small={small}
+          large={large}
+          big={big}
+          huge={huge}
+          {...others}
+        >
+          {item.item}
+        </StyledItem>
+      ))}
+    </StyledBulletList>
   )
-}
-
-export class BulletList extends PureComponent {
-  render() {
-    const { items, small, large, big, huge, ...others } = this.props
-
-    return (
-      <StyledBulletList {...others}>
-        {items.map(item => (
-          <Item
-            key={item.key}
-            small={small}
-            large={large}
-            big={big}
-            huge={huge}
-          >
-            {item.item}
-          </Item>
-        ))}
-      </StyledBulletList>
-    )
-  }
 }
 
 BulletList.propTypes = {
