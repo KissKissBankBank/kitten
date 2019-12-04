@@ -22,5 +22,5 @@ EditIcon.propTypes = {
 
 EditIcon.defaultProps = {
   color: '#fff',
-  title: 'Email',
+  title: 'Edit',
 }
