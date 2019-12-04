@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `EditIcon` component.
+
 ## [2.43.0] - 2019-12-04
 
 Features:
