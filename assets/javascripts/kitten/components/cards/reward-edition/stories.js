@@ -15,12 +15,11 @@ import { Grid, GridCol } from '../../grid/grid'
 import { RewardEdition } from './index'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { WarningIcon } from '../../../components/icons/warning-icon'
 
 const StoryContainer = ({ children }) => (
   <Container>
     <Grid>
-      <GridCol col="8">
+      <GridCol col="6">
         <Marger top="5" bottom="5">
           {children}
         </Marger>
@@ -46,10 +45,6 @@ const StyledFooterContainer = styled(RewardEdition.Footer)`
 
 const StyledText = styled(Text)`
   margin: 0;
-`
-
-const StyledIcon = styled(WarningIcon)`
-  padding-right: ${pxToRem(10)};
 `
 
 storiesOf('Cards/RewardEdition', module)
@@ -98,123 +93,126 @@ storiesOf('Cards/RewardEdition', module)
 
   .add('Reward Edition KissKissCode', () => {
     return (
-      <StoryContainer>
-        <RewardEdition>
-          <RewardEdition.Header>
-            <Text weight="regular" size="default">
-              KissKiss Code
-            </Text>
-          </RewardEdition.Header>
+      <>
+        <StoryContainer>
+          <RewardEdition>
+            <RewardEdition.Header>
+              <Text weight="regular" size="default">
+                KissKiss Code
+              </Text>
+            </RewardEdition.Header>
 
-          <StyledContentContainer>
-            <StyledText tag="p" size="tiny" color="font1" weight="regular">
-              Code
-            </StyledText>
-            <StyledText tag="p" size="tiny" color="font1" weigth="light">
-              KissKiss Code
-            </StyledText>
-
-            <Marger top="3" bottom="3">
+            <StyledContentContainer>
               <StyledText tag="p" size="tiny" color="font1" weight="regular">
-                Description du code
+                Code
               </StyledText>
               <StyledText tag="p" size="tiny" color="font1" weigth="light">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor.
+                KissKiss Code
               </StyledText>
-            </Marger>
 
-            <Marger top="3">
-              <StyledText tag="p" size="tiny" color="font1" weight="regular">
-                Montant minimum d'activation
-              </StyledText>
-              <StyledText tag="p" size="tiny" color="font1" weigth="light">
-                30 €
-              </StyledText>
-            </Marger>
-          </StyledContentContainer>
-
-          <StyledFooterContainer>
-            <Button fluid big modifier="helium">
-              <StyledIcon height="19" widht="15" />
-              Editer le code cadeau
-            </Button>
-          </StyledFooterContainer>
-        </RewardEdition>
-      </StoryContainer>
-    )
-  })
-
-  .add('Reward Edition Gift', () => {
-    return (
-      <StoryContainer>
-        <RewardEdition>
-          <RewardEdition.Header>
-            <Text weight="regular" size="default">
-              Code cadeau
-            </Text>
-          </RewardEdition.Header>
-
-          <StyledContentContainer>
-            <Field>
-              <Field.Label labelProps={{ htmlFor: 'gift-code' }}>
-                Code <Text weight="light">(obligatoire)</Text>
-              </Field.Label>
-              <Field.Input
-                id="gift-code"
-                name="gift-code"
-                placeholder="Entrez votre code"
-              />
-              <Marger top="2" bottom="3">
-                <ArrowContainer position="top" color={COLORS.primary5}>
-                  <BulletList
-                    small
-                    items={[
-                      {
-                        key: '1',
-                        item: 'Uniquement des lettres et des chiffres',
-                      },
-                      { key: '2', item: "Pas d'espaces" },
-                      { key: '3', item: '30 caractères maximal' },
-                    ]}
-                  />
-                </ArrowContainer>
-              </Marger>
               <Marger top="3" bottom="3">
-                <Field.Label
-                  labelProps={{ htmlFor: 'description-code' }}
-                  tooltipId="code-tooltip"
-                  tooltip="BlaBla"
+                <StyledText tag="p" size="tiny" color="font1" weight="regular">
+                  Description du code
+                </StyledText>
+                <StyledText
+                  tag="p"
+                  size="tiny"
+                  color="font1"
+                  weigth="light"
+                  lineHeight="normal"
                 >
-                  Description du code <Text weight="light">(optionnel)</Text>
-                </Field.Label>
-                <Field.Input
-                  id="description-code"
-                  name="description-code"
-                  placeholder="Entrez votre description du code"
-                />
+                  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                  Aenean commodo ligula eget dolor.
+                </StyledText>
               </Marger>
-              <Marger top="3">
-                <Field.Label labelProps={{ htmlFor: 'amount' }}>
-                  Montant minimum d'activation
-                  <Text weight="light"> (optionnel)</Text>
-                </Field.Label>
-                <Field.Input
-                  unit="€"
-                  id="amount"
-                  name="amount"
-                  placeholder="0"
-                />
-              </Marger>
-            </Field>
-          </StyledContentContainer>
 
-          <StyledFooterContainer>
-            <Button fluid big modifier="helium">
-              Valider
-            </Button>
-          </StyledFooterContainer>
-        </RewardEdition>
-      </StoryContainer>
+              <Marger top="3">
+                <StyledText tag="p" size="tiny" color="font1" weight="regular">
+                  Montant minimum d'activation
+                </StyledText>
+                <StyledText tag="p" size="tiny" color="font1" weigth="light">
+                  30 €
+                </StyledText>
+              </Marger>
+            </StyledContentContainer>
+
+            <StyledFooterContainer>
+              <Button fluid big modifier="helium">
+                Editer le code cadeau
+              </Button>
+            </StyledFooterContainer>
+          </RewardEdition>
+        </StoryContainer>
+
+        <StoryContainer>
+          <RewardEdition>
+            <RewardEdition.Header>
+              <Text weight="regular" size="default">
+                Code cadeau
+              </Text>
+            </RewardEdition.Header>
+
+            <StyledContentContainer>
+              <Field>
+                <Field.Label labelProps={{ htmlFor: 'gift-code' }}>
+                  Code <Text weight="light">(obligatoire)</Text>
+                </Field.Label>
+                <Field.Input
+                  id="gift-code"
+                  name="gift-code"
+                  placeholder="Entrez votre code"
+                />
+                <Marger top="2" bottom="3">
+                  <ArrowContainer position="top" color={COLORS.primary5}>
+                    <BulletList
+                      small
+                      items={[
+                        {
+                          key: '1',
+                          item: 'Uniquement des lettres et des chiffres',
+                        },
+                        { key: '2', item: "Pas d'espaces" },
+                        { key: '3', item: '30 caractères maximal' },
+                      ]}
+                    />
+                  </ArrowContainer>
+                </Marger>
+                <Marger top="3" bottom="3">
+                  <Field.Label
+                    labelProps={{ htmlFor: 'description-code' }}
+                    tooltipId="code-tooltip"
+                    tooltip="BlaBla"
+                  >
+                    Description du code <Text weight="light">(optionnel)</Text>
+                  </Field.Label>
+                  <Field.Input
+                    id="description-code"
+                    name="description-code"
+                    placeholder="Entrez votre description du code"
+                  />
+                </Marger>
+                <Marger top="3">
+                  <Field.Label labelProps={{ htmlFor: 'amount' }}>
+                    Montant minimum d'activation
+                    <Text weight="light"> (optionnel)</Text>
+                  </Field.Label>
+                  <Field.Input
+                    unit="€"
+                    id="amount"
+                    name="amount"
+                    placeholder="0"
+                  />
+                </Marger>
+              </Field>
+            </StyledContentContainer>
+
+            <StyledFooterContainer>
+              <Button fluid big modifier="helium">
+                Valider
+              </Button>
+            </StyledFooterContainer>
+          </RewardEdition>
+        </StoryContainer>
+      </>
     )
   })
