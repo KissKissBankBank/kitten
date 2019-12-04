@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<BulletList /> should match its empty snapshot 1`] = `
+exports[`<BulletList /> default matches with snapshot 1`] = `
 <ul
+  aria-hidden="true"
   className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
 >
   <li
     className="bullet-list__StyledItem-rdyx84-1 gwNmJF"
+    id="1"
   >
     Dis Manibus
   </li>
@@ -20,4 +22,10 @@ exports[`<BulletList /> should match its empty snapshot 1`] = `
     Germulio coniugi
   </li>
 </ul>
+`;
+
+exports[`<BulletList /> with differents size props matches with snapshot 1`] = `
+<ul
+  className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
+/>
 `;
