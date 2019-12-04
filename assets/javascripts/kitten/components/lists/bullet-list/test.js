@@ -22,11 +22,33 @@ describe('<BulletList />', () => {
     })
   })
 
-  describe('with differents size props', () => {
+  describe('with small props', () => {
     it('matches with snapshot', () => {
-      const component = renderer
-        .create(<BulletList small large big huge />)
-        .toJSON()
+      const component = renderer.create(<BulletList small />).toJSON()
+
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with large props', () => {
+    it('matches with snapshot', () => {
+      const component = renderer.create(<BulletList large />).toJSON()
+
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with big props', () => {
+    it('matches with snapshot', () => {
+      const component = renderer.create(<BulletList big />).toJSON()
+
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with huge props', () => {
+    it('matches with snapshot', () => {
+      const component = renderer.create(<BulletList huge />).toJSON()
 
       expect(component).toMatchSnapshot()
     })
