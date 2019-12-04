@@ -68,16 +68,16 @@ const StyledItem = styled.li`
 export const BulletList = ({ items, small, large, big, huge, ...others }) => {
   return (
     <StyledBulletList {...others}>
-      {items.map(item => (
+      {items.map(({ item, key, ...itemOthers }) => (
         <StyledItem
-          key={item.key}
+          key={key}
           small={small}
           large={large}
           big={big}
           huge={huge}
-          {...others}
+          {...itemOthers}
         >
-          {item.item}
+          {item}
         </StyledItem>
       ))}
     </StyledBulletList>
