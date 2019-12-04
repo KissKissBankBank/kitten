@@ -15,6 +15,7 @@ import { Grid, GridCol } from '../../grid/grid'
 import { RewardEdition } from './index'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { PhoneIcon } from '../../../components/icons/phone-icon'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -41,6 +42,9 @@ const StyledContainer = styled(RewardEdition.Content && RewardEdition.Footer)`
 
 const StyledText = styled(Text)`
   margin: 0;
+`
+const StyledIcon = styled(PhoneIcon)`
+  padding-right: ${pxToRem(10)};
 `
 
 storiesOf('Cards/RewardEdition', module)
@@ -134,6 +138,7 @@ storiesOf('Cards/RewardEdition', module)
 
             <StyledContainer>
               <Button fluid big modifier="helium">
+                <StyledIcon width="14" />
                 Editer le code cadeau
               </Button>
             </StyledContainer>
