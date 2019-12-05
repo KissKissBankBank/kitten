@@ -14,6 +14,7 @@ import { CopyIcon } from './copy-icon'
 import { CrossCircleIcon } from './cross-circle-icon'
 import { CrossIcon } from './cross-icon'
 import { DoubleArrowIcon } from './double-arrow-icon'
+import { EditIcon } from './edit-icon'
 import { EmailIcon } from './email-icon'
 import { ExportIcon } from './export-icon'
 import { FacebookIcon } from './facebook-icon'
@@ -157,6 +158,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<KissKissBankBankIcon width="70" />} />
         <IconContainer children={<EmbedIcon />} />
         <IconContainer children={<GiftIcon />} />
+        <IconContainer children={<EditIcon />} />
       </Group>
     </Container>
   )
