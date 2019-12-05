@@ -11,7 +11,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 - Update `BulletList` component with `styled-components`.
 - Add `warning` prop to `<Alert />`.
-- Create `error3`, `warning` and `warning2` in colors-config.
+- Create `warning` and `warning2` in colors-config.
 
 ## [2.42.0] - 2019-11-29
 
