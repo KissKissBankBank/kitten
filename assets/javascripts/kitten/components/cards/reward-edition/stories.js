@@ -15,7 +15,7 @@ import { Grid, GridCol } from '../../grid/grid'
 import { RewardEdition } from './index'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { PhoneIcon } from '../../../components/icons/phone-icon'
+import { EditIcon } from '../../../components/icons/edit-icon'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -43,7 +43,7 @@ const StyledContainer = styled(RewardEdition.Content && RewardEdition.Footer)`
 const StyledText = styled(Text)`
   margin: 0;
 `
-const StyledIcon = styled(PhoneIcon)`
+const StyledIcon = styled(EditIcon)`
   padding-right: ${pxToRem(10)};
 `
 
