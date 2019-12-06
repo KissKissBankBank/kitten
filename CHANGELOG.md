@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Switch `IconBadge` to Styled Components and add `disabled` prop.
 - Feature: Switch `StarredBadge` to Styled Components.
+- Feature: Add `RewardCard.DiamondBadge` component.
 
 ## [2.44.0] - 2019-12-05
 
