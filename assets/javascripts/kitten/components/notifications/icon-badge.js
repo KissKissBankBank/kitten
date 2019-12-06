@@ -1,77 +1,95 @@
-import React, { Component } from 'react'
-import { StyleRoot } from 'radium'
+import React from 'react'
+import PropTypes from 'prop-types'
 import COLORS from '../../constants/colors-config'
+import styled, { css } from 'styled-components'
+import { pxToRem, stepToRem } from '../../helpers/utils/typography'
 
-export class IconBadge extends Component {
-  render() {
-    const { children, valid, big, huge, style, ...others } = this.props
+const StyledBadge = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  min-width: ${pxToRem(30)};
+  min-height: ${pxToRem(30)};
+  border-radius: ${pxToRem(30)};
+  background-color: ${COLORS.primary1};
 
-    const styleBadge = [
-      styles.badge,
-      valid && styles.badge.isValid,
-      big && styles.badge.big,
-      huge && styles.badge.huge,
-      style,
-    ]
+  ${({ valid }) =>
+    valid &&
+    css`
+      background-color: ${COLORS.valid};
+    `}
 
-    const styleContent = [
-      styles.content,
-      big && styles.content.big,
-      huge && styles.content.huge,
-    ]
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      background-color: ${COLORS.line2};
+    `}
 
-    return (
-      <StyleRoot>
-        <span {...others} style={styleBadge}>
-          <span style={styleContent}>{children}</span>
-        </span>
-      </StyleRoot>
-    )
-  }
+  ${({ big }) =>
+    big &&
+    css`
+      min-width: ${pxToRem(40)};
+      min-height: ${pxToRem(40)};
+      border-radius: ${pxToRem(40)};
+    `}
+  ${({ huge }) =>
+    huge &&
+    css`
+      min-width: ${pxToRem(50)};
+      min-height: ${pxToRem(50)};
+      border-radius: ${pxToRem(50)};
+    `}
+
+`
+
+const StyledContent = styled.span`
+  flex-basis: ${pxToRem(11)};
+  fill: ${COLORS.background1};
+  color: ${COLORS.background1};
+  text-align: center;
+  font-weight: bold;
+  font-size: ${stepToRem(-2)};
+  line-height: 0;
+
+  ${({ big, huge }) =>
+    (big || huge) &&
+    css`
+      font-size: ${stepToRem(-1)};
+    `}
+`
+
+export const IconBadge = ({
+  children,
+  disabled,
+  valid,
+  big,
+  huge,
+  ...others
+}) => (
+  <StyledBadge
+    disabled={disabled}
+    valid={valid}
+    big={big}
+    huge={huge}
+    {...others}
+  >
+    <StyledContent big={big} huge={huge}>
+      {children}
+    </StyledContent>
+  </StyledBadge>
+)
+
+IconBadge.defaultProps = {
+  disabled: false,
+  valid: false,
+  big: false,
+  huge: false,
 }
 
-const bigSize = {
-  minWidth: 40,
-  minHeight: 40,
-  borderRadius: 40,
-}
-
-const hugeSize = {
-  minWidth: 50,
-  minHeight: 50,
-  borderRadius: 50,
-}
-
-const styles = {
-  badge: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 0,
-    minWidth: 30,
-    minHeight: 30,
-    borderRadius: 30,
-    backgroundColor: COLORS.primary1,
-    big: bigSize,
-    huge: hugeSize,
-    isValid: {
-      backgroundColor: COLORS.valid,
-    },
-  },
-
-  content: {
-    flexBasis: 11,
-    fill: COLORS.background1,
-    color: COLORS.background1,
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 12,
-    lineHeight: 0,
-    big: {
-      fontSize: 14,
-    },
-    huge: {
-      fontSize: 14,
-    },
-  },
+IconBadge.propTypes = {
+  disabled: PropTypes.bool,
+  valid: PropTypes.bool,
+  big: PropTypes.bool,
+  huge: PropTypes.bool,
 }

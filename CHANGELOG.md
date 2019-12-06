@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Switch `IconBadge` to Styled Components and add `disabled` prop.
+
 ## [2.44.0] - 2019-12-05
 
 Feature:
