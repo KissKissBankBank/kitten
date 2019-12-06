@@ -64,7 +64,6 @@ export class ButtonImageWithTextAndBadge extends React.Component {
 }
 
 ButtonImageWithTextAndBadge.propTypes = {
-  children: PropTypes.string,
   onClick: PropTypes.func,
   isExpanded: PropTypes.bool,
   text: PropTypes.string,
@@ -78,7 +77,6 @@ ButtonImageWithTextAndBadge.propTypes = {
 }
 
 ButtonImageWithTextAndBadge.defaultProps = {
-  children: 'Toggle button',
   onClick: () => {},
   badgeColor: COLORS.primary1,
 }
