@@ -59,6 +59,32 @@ const GlobalStyle = createGlobalStyle`
 
     background-color: rgba(34, 34, 34, .9);
   }
+
+  .k-Modal__overlay {
+    opacity: 0;
+  }
+  .k-Modal__content {
+    opacity: 0;
+    margin-top: 33%;
+  }
+
+  .k-Modal__overlay--afterOpen {
+    transition: opacity .3s ease;
+    opacity: 1;
+  }
+  .k-Modal--afterOpen {
+    transition: opacity .3s ease, margin-top .5s ease;
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  .k-Modal__overlay--beforeClose {
+    opacity: 0;
+  }
+  .k-Modal--beforeClose {
+    margin-top: -33%;
+    opacity: 0;
+  }
 `
 
 export class Modal extends Component {
@@ -136,6 +162,7 @@ export class Modal extends Component {
         {this.renderGlobalStyle()}
 
         <ReactModal
+          closeTimeoutMS={500}
           role="dialog"
           className={{ ...modalClassNames.className }}
           overlayClassName={{ ...modalClassNames.overlayClassName }}
