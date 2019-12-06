@@ -1,70 +1,56 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
-import { IconBadge as IconBadgeBase } from '../../../components/notifications/icon-badge'
+import { IconBadge } from '../../../components/notifications/icon-badge'
 import { StarIcon } from '../../../components/icons/star-icon'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
+import styled, { css } from 'styled-components'
 
-const IconBadge = Radium(IconBadgeBase)
+const StyledBase = styled.div`
+  display: flex;
+  line-height: 1rem;
+  align-items: center;
+  margin-bottom: ${pxToRem(20)};
 
-class RewardCardStarredBadgeBase extends Component {
-  static propTypes = {
-    disabled: PropTypes.bool,
-    children: PropTypes.node,
+  & > * + * {
+    margin-left: ${pxToRem(10)};
   }
 
-  static defaultProps = {
-    disabled: false,
-    children: null,
-  }
+  ${({ isDisabled }) =>
+    isDisabled &&
+    css`
+      color: ${COLORS.font2};
+      cursor: not-allowed;
+    `}
+`
 
-  render() {
-    const { children, disabled } = this.props
-    const starredBadgeStyles = [styles.base, disabled && styles.disabled]
-    const iconBadgeStyles = [
-      styles.badge.base,
-      disabled && styles.badge.disabled,
-    ]
+const StyledContent = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
-    return (
-      <div style={starredBadgeStyles}>
-        <IconBadge big style={iconBadgeStyles}>
-          <StarIcon className="k-IconBadge__svg" style={styles.icon} />
-        </IconBadge>
-        <div style={styles.content}>{children}</div>
-      </div>
-    )
-  }
+const StyledStarIcon = styled(StarIcon)`
+  height: ${pxToRem(14)};
+  width: ${pxToRem(14)};
+`
+
+export const RewardCardStarredBadge = ({ children, disabled }) => {
+  return (
+    <StyledBase isDisabled={disabled}>
+      <IconBadge big disabled={disabled}>
+        <StyledStarIcon className="k-IconBadge__svg" aria-hidden />
+      </IconBadge>
+      <StyledContent>{children}</StyledContent>
+    </StyledBase>
+  )
 }
 
-const styles = {
-  base: {
-    display: 'flex',
-    lineHeight: '1rem',
-    alignItems: 'center',
-    marginBottom: pxToRem(20),
-  },
-  content: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  badge: {
-    base: {
-      marginRight: pxToRem(10),
-    },
-    disabled: {
-      backgroundColor: COLORS.line2,
-    },
-  },
-  icon: {
-    height: pxToRem(14),
-    width: pxToRem(14),
-  },
-  disabled: {
-    color: COLORS.font2,
-    cursor: 'not-allowed',
-  },
+RewardCardStarredBadge.propTypes = {
+  disabled: PropTypes.bool,
+  children: PropTypes.node,
 }
 
-export const RewardCardStarredBadge = Radium(RewardCardStarredBadgeBase)
+RewardCardStarredBadge.defaultProps = {
+  disabled: false,
+  children: null,
+}
