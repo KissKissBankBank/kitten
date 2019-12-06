@@ -125,6 +125,37 @@ describe('<RewardCard />', () => {
     })
   })
 
+  describe('with DiamondBadge', () => {
+    it('matches with snapshot', () => {
+      window.matchMedia = createMockMediaMatcher(false)
+      const component = renderer
+        .create(
+          <RewardCard>
+            <RewardCard.Row>
+              <RewardCard.RowContent>
+                <RewardCard.DiamondBadge>
+                  <Text size="nano" color="font1" weight="bold">
+                    Starred label
+                  </Text>
+                  <Text size="nano" color="font1">
+                    Lorem ipsum
+                  </Text>
+                </RewardCard.DiamondBadge>
+
+                <RewardCard.Title>Custom title mount</RewardCard.Title>
+
+                <Paragraph modifier="quaternary" margin={false}>
+                  Custom text description
+                </Paragraph>
+              </RewardCard.RowContent>
+            </RewardCard.Row>
+          </RewardCard>,
+        )
+        .toJSON()
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with legacy props', () => {
     it('matches with snapshot', () => {
       window.matchMedia = createMockMediaMatcher(false)
