@@ -71,87 +71,34 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1rem",
-            "marginBottom": "1.25rem",
-          }
-        }
+        className="starred-badge__StyledBase-sc-1bjkj6l-0 eZZnrI"
       >
-        <div
-          data-radium={true}
+        <span
+          className="icon-badge__StyledBadge-sc-13mitia-0 guEFSS"
+          disabled={false}
         >
           <span
-            data-radium={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#19b4fa",
-                "borderRadius": 40,
-                "display": "flex",
-                "justifyContent": "center",
-                "marginRight": "0.625rem",
-                "minHeight": 40,
-                "minWidth": 40,
-                "padding": 0,
-              }
-            }
+            className="icon-badge__StyledContent-sc-13mitia-1 klBhcy"
           >
-            <span
-              data-radium={true}
-              style={
-                Object {
-                  "color": "#fff",
-                  "fill": "#fff",
-                  "flexBasis": 11,
-                  "fontSize": 14,
-                  "fontWeight": "bold",
-                  "lineHeight": 0,
-                  "textAlign": "center",
-                }
-              }
+            <svg
+              aria-hidden={true}
+              className="k-IconBadge__svg starred-badge__StyledStarIcon-sc-1bjkj6l-2 enLUaF"
+              height="16"
+              viewBox="0 0 18 16"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                className="k-IconBadge__svg"
-                height="16"
-                style={
-                  Object {
-                    "height": "0.875rem",
-                    "width": "0.875rem",
-                  }
-                }
-                viewBox="0 0 18 16"
-                width="18"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>
-                  Star
-                </title>
-                <path
-                  d="M8.999 0l1.93 5.974c.028.09.112.15.206.15l6.274-.013-5.084 3.68a.216.216 0 0 0-.079.242L14.198 16l-5.072-3.7a.216.216 0 0 0-.255 0L3.801 16l1.953-5.967a.216.216 0 0 0-.079-.243L.591 6.111l6.274.012c.094 0 .178-.06.207-.15L8.999 0z"
-                />
-              </svg>
-            </span>
+              <title>
+                Star
+              </title>
+              <path
+                d="M8.999 0l1.93 5.974c.028.09.112.15.206.15l6.274-.013-5.084 3.68a.216.216 0 0 0-.079.242L14.198 16l-5.072-3.7a.216.216 0 0 0-.255 0L3.801 16l1.953-5.967a.216.216 0 0 0-.079-.243L.591 6.111l6.274.012c.094 0 .178-.06.207-.15L8.999 0z"
+              />
+            </svg>
           </span>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
-          />
-        </div>
+        </span>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "display": "flex",
-              "flexDirection": "column",
-            }
-          }
+          className="starred-badge__StyledContent-sc-1bjkj6l-1 kLOlqc"
         >
           <span
             className="k-u-color-font1 k-u-size-nano k-u-weight-bold"
@@ -266,65 +213,36 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       }
     }
   >
-    <div
-      data-radium={true}
+    <span
+      className="icon-badge__StyledBadge-sc-13mitia-0 iysqhm"
+      disabled={false}
+      style={
+        Object {
+          "marginTop": "-0.9375rem",
+        }
+      }
     >
       <span
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#61d079",
-            "borderRadius": 30,
-            "display": "flex",
-            "justifyContent": "center",
-            "marginTop": "-0.9375rem",
-            "minHeight": 30,
-            "minWidth": 30,
-            "padding": 0,
-          }
-        }
+        className="icon-badge__StyledContent-sc-13mitia-1 iTNHVn"
       >
-        <span
-          data-radium={true}
-          style={
-            Object {
-              "color": "#fff",
-              "fill": "#fff",
-              "flexBasis": 11,
-              "fontSize": 12,
-              "fontWeight": "bold",
-              "lineHeight": 0,
-              "textAlign": "center",
-            }
-          }
+        <svg
+          className="k-IconBadge__svg"
+          fill="#fff"
+          viewBox="0 0 11 8"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            className="k-IconBadge__svg"
-            fill="#fff"
-            viewBox="0 0 11 8"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>
-              Checked
-            </title>
-            <path
-              d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-            />
-            <path
-              d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
-            />
-          </svg>
-        </span>
+          <title>
+            Checked
+          </title>
+          <path
+            d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+          />
+          <path
+            d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+          />
+        </svg>
       </span>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
-    </div>
+    </span>
   </div>
   <div
     style={
@@ -535,65 +453,36 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
                 }
               }
             >
-              <div
-                data-radium={true}
+              <span
+                className="icon-badge__StyledBadge-sc-13mitia-0 iysqhm"
+                disabled={false}
+                style={
+                  Object {
+                    "marginRight": 10,
+                  }
+                }
               >
                 <span
-                  data-radium={true}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "#61d079",
-                      "borderRadius": 30,
-                      "display": "flex",
-                      "justifyContent": "center",
-                      "marginRight": 10,
-                      "minHeight": 30,
-                      "minWidth": 30,
-                      "padding": 0,
-                    }
-                  }
+                  className="icon-badge__StyledContent-sc-13mitia-1 iTNHVn"
                 >
-                  <span
-                    data-radium={true}
-                    style={
-                      Object {
-                        "color": "#fff",
-                        "fill": "#fff",
-                        "flexBasis": 11,
-                        "fontSize": 12,
-                        "fontWeight": "bold",
-                        "lineHeight": 0,
-                        "textAlign": "center",
-                      }
-                    }
+                  <svg
+                    className="k-IconBadge__svg"
+                    fill="#fff"
+                    viewBox="0 0 11 8"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      className="k-IconBadge__svg"
-                      fill="#fff"
-                      viewBox="0 0 11 8"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Checked
-                      </title>
-                      <path
-                        d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-                      />
-                      <path
-                        d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
-                      />
-                    </svg>
-                  </span>
+                    <title>
+                      Checked
+                    </title>
+                    <path
+                      d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+                    />
+                    <path
+                      d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+                    />
+                  </svg>
                 </span>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
+              </span>
               <div
                 data-radium={true}
                 style={
