@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add boolean on `garbageButton` of `RewardEdition.Header` component.
+- Feature: Add `garbageButton` boolean on `RewardEdition.Header` component.
 
 ## [2.44.0] - 2019-12-05
 
