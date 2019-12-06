@@ -4,7 +4,6 @@ exports[`<ButtonImageWithTextAndBadge /> default snapshot 1`] = `
 <button
   aria-expanded={false}
   aria-haspopup="true"
-  badgeColor="#19b4fa"
   className="k-ButtonImageWithText"
   onClick={[Function]}
   title="Custom title"
@@ -23,16 +22,6 @@ exports[`<ButtonImageWithTextAndBadge /> default snapshot 1`] = `
         width={300}
       />
     </span>
-    <span
-      className="k-ButtonWithBadge__badge k-Badge"
-      style={
-        Object {
-          "backgroundColor": "#19b4fa",
-        }
-      }
-    >
-      5
-    </span>
   </span>
   <p
     className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight"
@@ -46,7 +35,6 @@ exports[`<ButtonImageWithTextAndBadge /> snapshot with notifications 1`] = `
 <button
   aria-expanded={false}
   aria-haspopup="true"
-  badgeColor="#FF0000"
   className="k-ButtonImageWithText"
   onClick={[Function]}
   title="Custom title"

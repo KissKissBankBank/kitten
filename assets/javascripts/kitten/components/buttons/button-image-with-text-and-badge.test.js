@@ -14,7 +14,6 @@ describe('<ButtonImageWithTextAndBadge />', () => {
           widthImg={300}
           heightImg={300}
           altImg="Custom alt"
-          notifications={5}
         />,
       )
       .toJSON()

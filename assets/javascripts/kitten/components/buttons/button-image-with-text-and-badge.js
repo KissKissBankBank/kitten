@@ -3,18 +3,16 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import COLORS from '../../constants/colors-config'
 
-export class ButtonImageWithTextAndBadge extends React.Component {
-  renderNotificationBadge() {
-    return (
-      <span
-        className="k-ButtonWithBadge__badge k-Badge"
-        style={{ backgroundColor: this.props.badgeColor }}
-      >
-        {this.props.notifications}
-      </span>
-    )
-  }
+const NotificationBadge = ({ notifications, badgeColor }) => (
+  <span
+    className="k-ButtonWithBadge__badge k-Badge"
+    style={{ backgroundColor: badgeColor }}
+  >
+    {notifications}
+  </span>
+)
 
+export class ButtonImageWithTextAndBadge extends React.Component {
   render() {
     const {
       className,
@@ -27,6 +25,7 @@ export class ButtonImageWithTextAndBadge extends React.Component {
       heightImg,
       altImg,
       notifications,
+      badgeColor,
       ...rest
     } = this.props
 
@@ -55,7 +54,12 @@ export class ButtonImageWithTextAndBadge extends React.Component {
               alt={altImg}
             />
           </span>
-          {notifications ? this.renderNotificationBadge() : ''}
+          {notifications && (
+            <NotificationBadge
+              notifications={notifications}
+              badgeColor={badgeColor}
+            />
+          )}
         </span>
         <p className={textClass}>{text}</p>
       </button>
