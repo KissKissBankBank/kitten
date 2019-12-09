@@ -44,7 +44,7 @@ var _screenConfig = require("../../../constants/screen-config");
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n  body.k-Modal__body--open {\n    overflow: hidden;\n  }\n\n  .k-Modal__content {\n    position: relative;\n    max-height: calc(100vh - ", " * 2);\n    max-width: calc(100vw - ", " * 2);\n\n    background-color: ", ";\n    text-align: center;\n    padding-left: ", ";\n    padding-right: ", ";\n\n    outline: none;\n    box-sizing: border-box;\n    overflow: scroll;\n\n    @media (min-width: ", ") {\n      max-width: ", ";\n      padding-left: ", ";\n      padding-right: ", ";\n    }\n  }\n\n  .k-Modal__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n  }\n\n  .k-Modal__close--fixed {\n    position: fixed;\n  }\n\n  .k-Modal__overlay {\n    position: fixed;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    background-color: rgba(34, 34, 34, .9);\n  }\n"]);
+  var data = (0, _taggedTemplateLiteral2.default)(["\n  body.k-Modal__body--open {\n    overflow: hidden;\n  }\n\n  .k-Modal__content {\n    position: relative;\n    max-height: calc(100vh - ", " * 2);\n    max-width: calc(100vw - ", " * 2);\n\n    background-color: ", ";\n    text-align: center;\n    padding-left: ", ";\n    padding-right: ", ";\n\n    outline: none;\n    box-sizing: border-box;\n    overflow: scroll;\n\n    @media (min-width: ", ") {\n      max-width: ", ";\n      padding-left: ", ";\n      padding-right: ", ";\n    }\n  }\n\n  .k-Modal__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n  }\n\n  .k-Modal__close--fixed {\n    position: fixed;\n  }\n\n  .k-Modal__overlay {\n    position: fixed;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    background-color: rgba(34, 34, 34, .9);\n  }\n\n  .k-Modal__overlay {\n    opacity: 0;\n  }\n  .k-Modal__content {\n    opacity: 0;\n    margin-top: 33%;\n  }\n\n  .k-Modal__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-Modal--afterOpen {\n    transition: opacity .3s ease, margin-top .5s ease;\n    margin-top: 0;\n    opacity: 1;\n  }\n\n  .k-Modal__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-Modal--beforeClose {\n    margin-top: -33%;\n    opacity: 0;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -144,6 +144,7 @@ function (_Component) {
       return _react.default.createElement("div", (0, _extends2.default)({
         className: triggerClassNames
       }, others), this.renderTriggerAction(), this.renderGlobalStyle(), _react.default.createElement(_reactModal.default, (0, _extends2.default)({
+        closeTimeoutMS: 500,
         role: "dialog",
         className: (0, _extends2.default)({}, modalClassNames.className),
         overlayClassName: (0, _extends2.default)({}, modalClassNames.overlayClassName),
