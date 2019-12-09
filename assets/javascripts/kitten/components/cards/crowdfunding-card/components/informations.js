@@ -54,9 +54,9 @@ const StyledText = styled(Text)`
 
 class Informations extends PureComponent {
   static propTypes = {
-    info1: PropTypes.string,
-    info2: PropTypes.string,
-    info3: PropTypes.string,
+    info1: PropTypes.node,
+    info2: PropTypes.node,
+    info3: PropTypes.node,
     loading: PropTypes.bool,
   }
 
