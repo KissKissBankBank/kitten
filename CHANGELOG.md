@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `tnum` Typography CSS helper for Tabular Numerals.
+
 ## [2.45.0] - 2019-12-09
 
 Feature:
