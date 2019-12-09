@@ -16,8 +16,8 @@ const StyledBase = styled.div`
     margin-left: ${pxToRem(10)};
   }
 
-  ${({ isDisabled }) =>
-    isDisabled &&
+  ${({ disabled }) =>
+    disabled &&
     css`
       color: ${COLORS.font2};
       cursor: not-allowed;
@@ -36,7 +36,7 @@ const StyledDiamondIcon = styled(DiamondIcon)`
 
 export const RewardCardDiamondBadge = ({ children, disabled }) => {
   return (
-    <StyledBase isDisabled={disabled}>
+    <StyledBase disabled={disabled}>
       <IconBadge big disabled={disabled}>
         <StyledDiamondIcon className="k-IconBadge__svg" aria-hidden />
       </IconBadge>
