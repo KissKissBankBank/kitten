@@ -5,6 +5,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Remove console warnings related to `CrowdfundingCard` propTypes.
+- Feature: Add `tnum` Typography CSS helper for Tabular Numerals.
+
+## [2.45.0] - 2019-12-09
+
+Feature:
+- Add `garbageButton` boolean on `RewardEdition.Header` component.
+
+## [2.44.0] - 2019-12-05
+
+Feature:
+- Create `EditIcon` component.
+
+## [2.43.0] - 2019-12-04
+
+Features:
+- Update `BulletList` component with `styled-components`.
+- Add `warning` prop to `<Alert />`.
+- Create `warning` and `warning2` in colors-config.
 
 ## [2.42.0] - 2019-11-29
 

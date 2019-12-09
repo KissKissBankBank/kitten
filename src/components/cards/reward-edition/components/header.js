@@ -23,6 +23,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var _typography = require("../../../../helpers/utils/typography");
@@ -65,8 +67,9 @@ function (_PureComponent) {
     value: function render() {
       var _this$props = this.props,
           children = _this$props.children,
-          onClick = _this$props.onClick;
-      return _react.default.createElement(StyledContainerHeader, null, _react.default.createElement(StyledRewardAmount, null, children), _react.default.createElement(StyledGarbageButton, {
+          onClick = _this$props.onClick,
+          garbageButton = _this$props.garbageButton;
+      return _react.default.createElement(StyledContainerHeader, null, _react.default.createElement(StyledRewardAmount, null, children), garbageButton && _react.default.createElement(StyledGarbageButton, {
         onClick: onClick,
         type: "button",
         "aria-label": "Garbage Button",
@@ -80,3 +83,9 @@ function (_PureComponent) {
 }(_react.PureComponent);
 
 exports.Header = Header;
+Header.propTypes = {
+  garbageButton: _propTypes.default.bool
+};
+Header.defaultProps = {
+  garbageButton: true
+};
