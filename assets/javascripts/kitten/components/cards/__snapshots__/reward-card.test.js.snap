@@ -72,7 +72,6 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
     >
       <div
         className="diamond-badge__StyledBase-ixajco-0 hcTLkI"
-        disabled={false}
       >
         <span
           className="icon-badge__StyledBadge-sc-13mitia-0 guEFSS"
@@ -162,7 +161,6 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     >
       <div
         className="starred-badge__StyledBase-sc-1bjkj6l-0 eZZnrI"
-        disabled={false}
       >
         <span
           className="icon-badge__StyledBadge-sc-13mitia-0 guEFSS"

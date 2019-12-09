@@ -6,7 +6,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import styled, { css } from 'styled-components'
 
-const StyledBase = styled.div`
+const StyledBase = styled(({ disabled, ...props }) => <div {...props} />)`
   display: flex;
   line-height: 1rem;
   align-items: center;
