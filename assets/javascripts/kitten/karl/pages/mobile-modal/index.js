@@ -58,6 +58,32 @@ const GlobalStyle = createGlobalStyle`
 
     background-color: rgba(34, 34, 34, .9);
   }
+
+  .k-MobileModal__overlay {
+    opacity: 0;
+  }
+  .k-MobileModal__content {
+    opacity: 0;
+    margin-top: 33%;
+  }
+
+  .k-MobileModal__overlay--afterOpen {
+    transition: opacity .3s ease;
+    opacity: 1;
+  }
+  .k-MobileModal--afterOpen {
+    transition: opacity .3s ease, margin-top .5s ease;
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  .k-MobileModal__overlay--beforeClose {
+    opacity: 0;
+  }
+  .k-MobileModal--beforeClose {
+    margin-top: -33%;
+    opacity: 0;
+  }
 `
 
 const StyledHeader = styled.header`

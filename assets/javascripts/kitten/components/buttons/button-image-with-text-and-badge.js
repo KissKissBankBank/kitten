@@ -1,16 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import COLORS from '../../constants/colors-config'
+
+const NotificationBadge = ({ notifications, badgeColor }) => (
+  <span
+    className="k-ButtonWithBadge__badge k-Badge"
+    style={{ backgroundColor: badgeColor }}
+  >
+    {notifications}
+  </span>
+)
 
 export class ButtonImageWithTextAndBadge extends React.Component {
-  renderNotificationBadge() {
-    return (
-      <span className="k-ButtonWithBadge__badge k-Badge">
-        {this.props.notifications}
-      </span>
-    )
-  }
-
   render() {
     const {
       className,
@@ -23,6 +25,7 @@ export class ButtonImageWithTextAndBadge extends React.Component {
       heightImg,
       altImg,
       notifications,
+      badgeColor,
       ...rest
     } = this.props
 
@@ -51,7 +54,12 @@ export class ButtonImageWithTextAndBadge extends React.Component {
               alt={altImg}
             />
           </span>
-          {notifications ? this.renderNotificationBadge() : ''}
+          {notifications && (
+            <NotificationBadge
+              notifications={notifications}
+              badgeColor={badgeColor}
+            />
+          )}
         </span>
         <p className={textClass}>{text}</p>
       </button>
@@ -60,7 +68,6 @@ export class ButtonImageWithTextAndBadge extends React.Component {
 }
 
 ButtonImageWithTextAndBadge.propTypes = {
-  children: PropTypes.string,
   onClick: PropTypes.func,
   isExpanded: PropTypes.bool,
   text: PropTypes.string,
@@ -69,12 +76,13 @@ ButtonImageWithTextAndBadge.propTypes = {
   widthImg: PropTypes.number,
   heightImg: PropTypes.number,
   altImg: PropTypes.string,
-  notifications: PropTypes.number,
+  notifications: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  badgeColor: PropTypes.string,
 }
 
 ButtonImageWithTextAndBadge.defaultProps = {
-  children: 'Toggle button',
   onClick: () => {},
+  badgeColor: COLORS.primary1,
 }
 
 // DEPRECATED: do not use default export.
