@@ -150,6 +150,7 @@ export class UserMenu extends Component {
         text={this.props.buttonText}
         title={this.props.buttonTitle}
         notifications={this.props.buttonNotifications}
+        badgeColor={this.props.badgeColor}
         textClassName="k-Header__userMenuText--withEllipsis"
       />
     )
@@ -231,6 +232,7 @@ UserMenu.propTypes = {
   refreshEvents: PropTypes.array,
   closeEvents: PropTypes.array,
   onPositionUpdate: PropTypes.func,
+  badgeColor: PropTypes.string,
 }
 
 UserMenu.defaultProps = {
