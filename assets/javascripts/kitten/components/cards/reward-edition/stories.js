@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Text } from '../../../components/typography/text'
@@ -53,7 +53,7 @@ storiesOf('Cards/RewardEdition', module)
     return (
       <StoryContainer>
         <RewardEdition>
-          <RewardEdition.Header>
+          <RewardEdition.Header garbageButton={boolean('Garbage button', true)}>
             <Text weight="regular" size="default">
               Contrepartie pour _€
             </Text>
