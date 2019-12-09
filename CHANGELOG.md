@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Add `isAnimated` prop to `Modal`, defaults to true.
 
+## [2.46.1] - 2019-12-09
+
+Fix:
+- Add `badgeColor` prop to `UserMenu` component for
+  `ButtonImageWithTextAndBadge`.
+
 ## [2.46.0] - 2019-12-09
 
 Features:
