@@ -1,14 +1,30 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import COLORS from '../../constants/colors-config'
 
-export const DiamondIcon = props => (
+export const DiamondIcon = ({ title, color, ...others }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="18"
-    height="16"
-    viewBox="0 0 18 16"
-    {...props}
+    width="19"
+    height="28"
+    viewBox="0 0 19 28"
+    {...others}
   >
-    <title>Star</title>
-    <path d="M8.999 0l1.93 5.974c.028.09.112.15.206.15l6.274-.013-5.084 3.68a.216.216 0 0 0-.079.242L14.198 16l-5.072-3.7a.216.216 0 0 0-.255 0L3.801 16l1.953-5.967a.216.216 0 0 0-.079-.243L.591 6.111l6.274.012c.094 0 .178-.06.207-.15L8.999 0z" />
+    {title && <title>{title}</title>}
+    <path
+      fill={color}
+      fill-rule="evenodd"
+      d="M14 14l-4 10-4-10h8zm5 0l-7 10 4-10h3zM4 14l4 10-7-10h3zm8-6l2 4H6l2-4h4zm3 0l4 4h-3l-2-4h1zM6 8l-2 4H1l4-4h1zm12.1070508-5.64951905l.75 1.2990381-3.4641016 2.00000005-.75-1.2990382 3.4641016-1.99999995zm-16.7141016 0L4.8570508 4.3504809l-.75 1.2990382L.6429492 3.64951905l.75-1.2990381zM10.5 0v4H9V0h1.5z"
+    />
   </svg>
 )
+
+DiamondIcon.defaultProps = {
+  title: null,
+  color: COLORS.background1,
+}
+
+DiamondIcon.propTypes = {
+  title: PropTypes.string,
+  color: PropTypes.string,
+}

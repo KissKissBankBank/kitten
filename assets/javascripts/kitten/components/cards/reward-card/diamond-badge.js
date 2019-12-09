@@ -30,8 +30,8 @@ const StyledContent = styled.div`
 `
 
 const StyledDiamondIcon = styled(DiamondIcon)`
-  height: ${pxToRem(22)};
-  width: ${pxToRem(18)};
+  height: ${pxToRem(28)};
+  width: ${pxToRem(19)};
 `
 
 export const RewardCardDiamondBadge = ({ children, disabled }) => {
