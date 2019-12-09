@@ -5,6 +5,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `badgeColor` prop to `ButtonImageWithTextAndBadge`.
+- Fix: Remove console warnings related to `CrowdfundingCard` propTypes.
+- Feature: Add `tnum` Typography CSS helper for Tabular Numerals.
+
+## [2.45.0] - 2019-12-09
+
+Feature:
+- Add `garbageButton` boolean on `RewardEdition.Header` component.
 
 ## [2.44.0] - 2019-12-05
 
