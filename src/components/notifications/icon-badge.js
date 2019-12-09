@@ -13,94 +13,70 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _react = _interopRequireDefault(require("react"));
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _radium = require("radium");
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var IconBadge =
-/*#__PURE__*/
-function (_Component) {
-  (0, _inherits2.default)(IconBadge, _Component);
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
-  function IconBadge() {
-    (0, _classCallCheck2.default)(this, IconBadge);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(IconBadge).apply(this, arguments));
-  }
+var _typography = require("../../helpers/utils/typography");
 
-  (0, _createClass2.default)(IconBadge, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          children = _this$props.children,
-          valid = _this$props.valid,
-          big = _this$props.big,
-          huge = _this$props.huge,
-          style = _this$props.style,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "valid", "big", "huge", "style"]);
-      var styleBadge = [styles.badge, valid && styles.badge.isValid, big && styles.badge.big, huge && styles.badge.huge, style];
-      var styleContent = [styles.content, big && styles.content.big, huge && styles.content.huge];
-      return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("span", (0, _extends2.default)({}, others, {
-        style: styleBadge
-      }), _react.default.createElement("span", {
-        style: styleContent
-      }, children)));
-    }
-  }]);
-  return IconBadge;
-}(_react.Component);
+var StyledBadge = _styledComponents.default.span.withConfig({
+  displayName: "icon-badge__StyledBadge",
+  componentId: "sc-13mitia-0"
+})(["display:flex;justify-content:center;align-items:center;padding:0;min-width:", ";min-height:", ";border-radius:", ";background-color:", ";", " ", " ", " ", ""], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(30), _colorsConfig.default.primary1, function (_ref) {
+  var valid = _ref.valid;
+  return valid && (0, _styledComponents.css)(["background-color:", ";"], _colorsConfig.default.valid);
+}, function (_ref2) {
+  var disabled = _ref2.disabled;
+  return disabled && (0, _styledComponents.css)(["background-color:", ";"], _colorsConfig.default.line2);
+}, function (_ref3) {
+  var big = _ref3.big;
+  return big && (0, _styledComponents.css)(["min-width:", ";min-height:", ";border-radius:", ";"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40));
+}, function (_ref4) {
+  var huge = _ref4.huge;
+  return huge && (0, _styledComponents.css)(["min-width:", ";min-height:", ";border-radius:", ";"], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50));
+});
+
+var StyledContent = _styledComponents.default.span.withConfig({
+  displayName: "icon-badge__StyledContent",
+  componentId: "sc-13mitia-1"
+})(["flex-basis:", ";fill:", ";color:", ";text-align:center;font-weight:bold;font-size:", ";line-height:0;", ""], (0, _typography.pxToRem)(11), _colorsConfig.default.background1, _colorsConfig.default.background1, (0, _typography.stepToRem)(-2), function (_ref5) {
+  var big = _ref5.big,
+      huge = _ref5.huge;
+  return (big || huge) && (0, _styledComponents.css)(["font-size:", ";"], (0, _typography.stepToRem)(-1));
+});
+
+var IconBadge = function IconBadge(_ref6) {
+  var children = _ref6.children,
+      disabled = _ref6.disabled,
+      valid = _ref6.valid,
+      big = _ref6.big,
+      huge = _ref6.huge,
+      others = (0, _objectWithoutProperties2.default)(_ref6, ["children", "disabled", "valid", "big", "huge"]);
+  return _react.default.createElement(StyledBadge, (0, _extends2.default)({
+    disabled: disabled,
+    valid: valid,
+    big: big,
+    huge: huge
+  }, others), _react.default.createElement(StyledContent, {
+    big: big,
+    huge: huge
+  }, children));
+};
 
 exports.IconBadge = IconBadge;
-var bigSize = {
-  minWidth: 40,
-  minHeight: 40,
-  borderRadius: 40
+IconBadge.defaultProps = {
+  disabled: false,
+  valid: false,
+  big: false,
+  huge: false
 };
-var hugeSize = {
-  minWidth: 50,
-  minHeight: 50,
-  borderRadius: 50
-};
-var styles = {
-  badge: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 0,
-    minWidth: 30,
-    minHeight: 30,
-    borderRadius: 30,
-    backgroundColor: _colorsConfig.default.primary1,
-    big: bigSize,
-    huge: hugeSize,
-    isValid: {
-      backgroundColor: _colorsConfig.default.valid
-    }
-  },
-  content: {
-    flexBasis: 11,
-    fill: _colorsConfig.default.background1,
-    color: _colorsConfig.default.background1,
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 12,
-    lineHeight: 0,
-    big: {
-      fontSize: 14
-    },
-    huge: {
-      fontSize: 14
-    }
-  }
+IconBadge.propTypes = {
+  disabled: _propTypes.default.bool,
+  valid: _propTypes.default.bool,
+  big: _propTypes.default.bool,
+  huge: _propTypes.default.bool
 };

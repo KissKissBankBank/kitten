@@ -89,7 +89,7 @@ function (_PureComponent) {
 }(_react.PureComponent);
 
 State.propTypes = {
-  state: _propTypes.default.string,
+  state: _propTypes.default.node,
   widgetState: _propTypes.default.node,
   loading: _propTypes.default.bool
 };

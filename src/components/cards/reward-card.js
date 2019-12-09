@@ -49,6 +49,8 @@ var _rowSide = require("../../components/cards/reward-card/row-side");
 
 var _starredBadge = require("../../components/cards/reward-card/starred-badge");
 
+var _diamondBadge = require("../../components/cards/reward-card/diamond-badge");
+
 var _checkedSection = require("../../components/cards/reward-card/checked-section");
 
 var Infos = (0, _styledComponents.default)(function (_ref) {
@@ -202,6 +204,7 @@ RewardCard.Image = RewardCardImage;
 RewardCard.Info = RewardCardInfo;
 RewardCard.CheckedSection = _checkedSection.RewardCardCheckedSection;
 RewardCard.StarredBadge = _starredBadge.RewardCardStarredBadge;
+RewardCard.DiamondBadge = _diamondBadge.RewardCardDiamondBadge;
 RewardCard.propTypes = {
   titleAmount: (0, _deprecated.default)(_propTypes.default.string, 'Use `RewardCard.Title` instead.'),
   titleTag: (0, _deprecated.default)(_propTypes.default.string, 'Use `RewardCard.Title` instead.'),

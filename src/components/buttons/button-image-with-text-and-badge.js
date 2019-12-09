@@ -27,6 +27,19 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
+
+var NotificationBadge = function NotificationBadge(_ref) {
+  var notifications = _ref.notifications,
+      badgeColor = _ref.badgeColor;
+  return _react.default.createElement("span", {
+    className: "k-ButtonWithBadge__badge k-Badge",
+    style: {
+      backgroundColor: badgeColor
+    }
+  }, notifications);
+};
+
 var ButtonImageWithTextAndBadge =
 /*#__PURE__*/
 function (_React$Component) {
@@ -38,13 +51,6 @@ function (_React$Component) {
   }
 
   (0, _createClass2.default)(ButtonImageWithTextAndBadge, [{
-    key: "renderNotificationBadge",
-    value: function renderNotificationBadge() {
-      return _react.default.createElement("span", {
-        className: "k-ButtonWithBadge__badge k-Badge"
-      }, this.props.notifications);
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this$props = this.props,
@@ -58,7 +64,8 @@ function (_React$Component) {
           heightImg = _this$props.heightImg,
           altImg = _this$props.altImg,
           notifications = _this$props.notifications,
-          rest = (0, _objectWithoutProperties2.default)(_this$props, ["className", "isExpanded", "text", "title", "textClassName", "srcImg", "widthImg", "heightImg", "altImg", "notifications"]);
+          badgeColor = _this$props.badgeColor,
+          rest = (0, _objectWithoutProperties2.default)(_this$props, ["className", "isExpanded", "text", "title", "textClassName", "srcImg", "widthImg", "heightImg", "altImg", "notifications", "badgeColor"]);
       var textClass = (0, _classnames.default)('k-ButtonImageWithText__text', 'k-ButtonImageWithText__text--withoutPaddingRight', textClassName);
       var buttonClassName = (0, _classnames.default)('k-ButtonImageWithText', className);
       return _react.default.createElement("button", (0, _extends2.default)({
@@ -77,7 +84,10 @@ function (_React$Component) {
         width: widthImg,
         height: heightImg,
         alt: altImg
-      })), notifications ? this.renderNotificationBadge() : ''), _react.default.createElement("p", {
+      })), notifications && _react.default.createElement(NotificationBadge, {
+        notifications: notifications,
+        badgeColor: badgeColor
+      })), _react.default.createElement("p", {
         className: textClass
       }, text));
     }
@@ -87,7 +97,6 @@ function (_React$Component) {
 
 exports.ButtonImageWithTextAndBadge = ButtonImageWithTextAndBadge;
 ButtonImageWithTextAndBadge.propTypes = {
-  children: _propTypes.default.string,
   onClick: _propTypes.default.func,
   isExpanded: _propTypes.default.bool,
   text: _propTypes.default.string,
@@ -96,11 +105,12 @@ ButtonImageWithTextAndBadge.propTypes = {
   widthImg: _propTypes.default.number,
   heightImg: _propTypes.default.number,
   altImg: _propTypes.default.string,
-  notifications: _propTypes.default.number
+  notifications: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
+  badgeColor: _propTypes.default.string
 };
 ButtonImageWithTextAndBadge.defaultProps = {
-  children: 'Toggle button',
-  onClick: function onClick() {}
+  onClick: function onClick() {},
+  badgeColor: _colorsConfig.default.primary1
 }; // DEPRECATED: do not use default export.
 
 var _default = ButtonImageWithTextAndBadge;
