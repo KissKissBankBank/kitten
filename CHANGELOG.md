@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add open/close animations to `Modal` component.
 - Feature: Add `badgeColor` prop to `ButtonImageWithTextAndBadge`.
 - Fix: Remove console warnings related to `CrowdfundingCard` propTypes.
 - Feature: Add `tnum` Typography CSS helper for Tabular Numerals.
