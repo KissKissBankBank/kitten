@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
@@ -31,22 +32,32 @@ const StyledGarbageButton = styled(Button)`
 
 export class Header extends PureComponent {
   render() {
-    const { children, onClick } = this.props
+    const { children, onClick, garbageButton } = this.props
 
     return (
       <StyledContainerHeader>
         <StyledRewardAmount>{children}</StyledRewardAmount>
-        <StyledGarbageButton
-          onClick={onClick}
-          type="button"
-          aria-label="Garbage Button"
-          modifier="beryllium"
-          tiny
-          icon
-        >
-          <GarbageIcon />
-        </StyledGarbageButton>
+        {garbageButton && (
+          <StyledGarbageButton
+            onClick={onClick}
+            type="button"
+            aria-label="Garbage Button"
+            modifier="beryllium"
+            tiny
+            icon
+          >
+            <GarbageIcon />
+          </StyledGarbageButton>
+        )}
       </StyledContainerHeader>
     )
   }
+}
+
+Header.propTypes = {
+  garbageButton: PropTypes.bool,
+}
+
+Header.defaultProps = {
+  garbageButton: true,
 }
