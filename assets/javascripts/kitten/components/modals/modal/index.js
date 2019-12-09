@@ -167,7 +167,7 @@ export class Modal extends Component {
         {isAnimated && <AnimatedGlobalStyle />}
 
         <ReactModal
-          closeTimeoutMS={500}
+          closeTimeoutMS={isAnimated ? 500 : 0}
           role="dialog"
           className={{ ...modalClassNames.className }}
           overlayClassName={{ ...modalClassNames.overlayClassName }}
