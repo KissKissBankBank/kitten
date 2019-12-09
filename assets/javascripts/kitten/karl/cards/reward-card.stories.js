@@ -28,6 +28,7 @@ storiesOf('Cards/RewardCard', module)
       const contentGroupId = 'Content'
 
       const starred = boolean('Starred', true, versionGroupId)
+      const diamond = boolean('Diamond', false, versionGroupId)
       const alreadyContributed = boolean(
         'Has user contributed?',
         true,
@@ -87,6 +88,33 @@ storiesOf('Cards/RewardCard', module)
                           )}
                         </Text>
                       </RewardCard.StarredBadge>
+                    )}
+                    {diamond && (
+                      <RewardCard.DiamondBadge disabled={disabled}>
+                        <Text
+                          size="nano"
+                          color="font1"
+                          weight="bold"
+                          style={[disabled && styles.disabled]}
+                        >
+                          {text(
+                            'Diamond label',
+                            'Diamond reward',
+                            contentGroupId,
+                          )}
+                        </Text>
+                        <Text
+                          size="nano"
+                          color="font1"
+                          style={[disabled && styles.disabled]}
+                        >
+                          {text(
+                            'Diamond description',
+                            'Lorem ipsum',
+                            contentGroupId,
+                          )}
+                        </Text>
+                      </RewardCard.DiamondBadge>
                     )}
                     <RewardCard.Title disabled={disabled}>
                       {text('Title', '100$', contentGroupId)}

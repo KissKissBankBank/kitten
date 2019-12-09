@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { IconBadge } from '../../../components/notifications/icon-badge'
-import { StarIcon } from '../../../components/icons/star-icon'
+import { DiamondIcon } from '../../../components/icons/diamond-icon'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import styled, { css } from 'styled-components'
@@ -29,28 +29,28 @@ const StyledContent = styled.div`
   flex-direction: column;
 `
 
-const StyledStarIcon = styled(StarIcon)`
-  height: ${pxToRem(14)};
-  width: ${pxToRem(14)};
+const StyledDiamondIcon = styled(DiamondIcon)`
+  height: ${pxToRem(28)};
+  width: ${pxToRem(19)};
 `
 
-export const RewardCardStarredBadge = ({ children, disabled }) => {
+export const RewardCardDiamondBadge = ({ children, disabled }) => {
   return (
     <StyledBase disabled={disabled}>
       <IconBadge big disabled={disabled}>
-        <StyledStarIcon className="k-IconBadge__svg" aria-hidden />
+        <StyledDiamondIcon className="k-IconBadge__svg" aria-hidden />
       </IconBadge>
       <StyledContent>{children}</StyledContent>
     </StyledBase>
   )
 }
 
-RewardCardStarredBadge.propTypes = {
+RewardCardDiamondBadge.propTypes = {
   disabled: PropTypes.bool,
   children: PropTypes.node,
 }
 
-RewardCardStarredBadge.defaultProps = {
+RewardCardDiamondBadge.defaultProps = {
   disabled: false,
   children: null,
 }

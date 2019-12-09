@@ -48,6 +48,95 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 </div>
 `;
 
+exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
+<div
+  className="reward-card__CardContainer-sc-1vkpp2h-2 gPtcIU"
+>
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flexWrap": "wrap",
+        "padding": "0 0.9375rem",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "flexBasis": "17.1875rem",
+          "flexGrow": 9999,
+          "margin": "0.9375rem",
+        }
+      }
+    >
+      <div
+        className="diamond-badge__StyledBase-ixajco-0 hcTLkI"
+      >
+        <span
+          className="icon-badge__StyledBadge-sc-13mitia-0 guEFSS"
+          disabled={false}
+        >
+          <span
+            className="icon-badge__StyledContent-sc-13mitia-1 klBhcy"
+          >
+            <svg
+              aria-hidden={true}
+              className="k-IconBadge__svg diamond-badge__StyledDiamondIcon-ixajco-2 khKPvt"
+              height="28"
+              viewBox="0 0 19 28"
+              width="19"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 14l-4 10-4-10h8zm5 0l-7 10 4-10h3zM4 14l4 10-7-10h3zm8-6l2 4H6l2-4h4zm3 0l4 4h-3l-2-4h1zM6 8l-2 4H1l4-4h1zm12.1070508-5.64951905l.75 1.2990381-3.4641016 2.00000005-.75-1.2990382 3.4641016-1.99999995zm-16.7141016 0L4.8570508 4.3504809l-.75 1.2990382L.6429492 3.64951905l.75-1.2990381zM10.5 0v4H9V0h1.5z"
+                fill="#fff"
+                fillRule="evenodd"
+              />
+            </svg>
+          </span>
+        </span>
+        <div
+          className="diamond-badge__StyledContent-ixajco-1 bAYOmL"
+        >
+          <span
+            className="k-u-color-font1 k-u-size-nano k-u-weight-bold"
+          >
+            Starred label
+          </span>
+          <span
+            className="k-u-color-font1 k-u-size-nano"
+          >
+            Lorem ipsum
+          </span>
+        </div>
+      </div>
+      <h6
+        className="k-u-color-font1 k-u-style-italic k-u-weight-bold"
+        data-radium={true}
+        style={
+          Object {
+            "fontSize": "1.5rem",
+            "lineHeight": "2.125rem",
+            "margin": "0 0 0.9375rem 0",
+          }
+        }
+      >
+        Custom title mount
+      </h6>
+      <span
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 MGUQ"
+      />
+      <p
+        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+      >
+        Custom text description
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
   className="reward-card__CardContainer-sc-1vkpp2h-2 gPtcIU"
@@ -71,87 +160,34 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       }
     >
       <div
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-            "lineHeight": "1rem",
-            "marginBottom": "1.25rem",
-          }
-        }
+        className="starred-badge__StyledBase-sc-1bjkj6l-0 eZZnrI"
       >
-        <div
-          data-radium={true}
+        <span
+          className="icon-badge__StyledBadge-sc-13mitia-0 guEFSS"
+          disabled={false}
         >
           <span
-            data-radium={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#19b4fa",
-                "borderRadius": 40,
-                "display": "flex",
-                "justifyContent": "center",
-                "marginRight": "0.625rem",
-                "minHeight": 40,
-                "minWidth": 40,
-                "padding": 0,
-              }
-            }
+            className="icon-badge__StyledContent-sc-13mitia-1 klBhcy"
           >
-            <span
-              data-radium={true}
-              style={
-                Object {
-                  "color": "#fff",
-                  "fill": "#fff",
-                  "flexBasis": 11,
-                  "fontSize": 14,
-                  "fontWeight": "bold",
-                  "lineHeight": 0,
-                  "textAlign": "center",
-                }
-              }
+            <svg
+              aria-hidden={true}
+              className="k-IconBadge__svg starred-badge__StyledStarIcon-sc-1bjkj6l-2 enLUaF"
+              height="16"
+              viewBox="0 0 18 16"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                className="k-IconBadge__svg"
-                height="16"
-                style={
-                  Object {
-                    "height": "0.875rem",
-                    "width": "0.875rem",
-                  }
-                }
-                viewBox="0 0 18 16"
-                width="18"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>
-                  Star
-                </title>
-                <path
-                  d="M8.999 0l1.93 5.974c.028.09.112.15.206.15l6.274-.013-5.084 3.68a.216.216 0 0 0-.079.242L14.198 16l-5.072-3.7a.216.216 0 0 0-.255 0L3.801 16l1.953-5.967a.216.216 0 0 0-.079-.243L.591 6.111l6.274.012c.094 0 .178-.06.207-.15L8.999 0z"
-                />
-              </svg>
-            </span>
+              <title>
+                Star
+              </title>
+              <path
+                d="M8.999 0l1.93 5.974c.028.09.112.15.206.15l6.274-.013-5.084 3.68a.216.216 0 0 0-.079.242L14.198 16l-5.072-3.7a.216.216 0 0 0-.255 0L3.801 16l1.953-5.967a.216.216 0 0 0-.079-.243L.591 6.111l6.274.012c.094 0 .178-.06.207-.15L8.999 0z"
+              />
+            </svg>
           </span>
-          <style
-            dangerouslySetInnerHTML={
-              Object {
-                "__html": "",
-              }
-            }
-          />
-        </div>
+        </span>
         <div
-          data-radium={true}
-          style={
-            Object {
-              "display": "flex",
-              "flexDirection": "column",
-            }
-          }
+          className="starred-badge__StyledContent-sc-1bjkj6l-1 kLOlqc"
         >
           <span
             className="k-u-color-font1 k-u-size-nano k-u-weight-bold"
@@ -266,65 +302,36 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       }
     }
   >
-    <div
-      data-radium={true}
+    <span
+      className="icon-badge__StyledBadge-sc-13mitia-0 iysqhm"
+      disabled={false}
+      style={
+        Object {
+          "marginTop": "-0.9375rem",
+        }
+      }
     >
       <span
-        data-radium={true}
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#61d079",
-            "borderRadius": 30,
-            "display": "flex",
-            "justifyContent": "center",
-            "marginTop": "-0.9375rem",
-            "minHeight": 30,
-            "minWidth": 30,
-            "padding": 0,
-          }
-        }
+        className="icon-badge__StyledContent-sc-13mitia-1 iTNHVn"
       >
-        <span
-          data-radium={true}
-          style={
-            Object {
-              "color": "#fff",
-              "fill": "#fff",
-              "flexBasis": 11,
-              "fontSize": 12,
-              "fontWeight": "bold",
-              "lineHeight": 0,
-              "textAlign": "center",
-            }
-          }
+        <svg
+          className="k-IconBadge__svg"
+          fill="#fff"
+          viewBox="0 0 11 8"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <svg
-            className="k-IconBadge__svg"
-            fill="#fff"
-            viewBox="0 0 11 8"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>
-              Checked
-            </title>
-            <path
-              d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-            />
-            <path
-              d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
-            />
-          </svg>
-        </span>
+          <title>
+            Checked
+          </title>
+          <path
+            d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+          />
+          <path
+            d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+          />
+        </svg>
       </span>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
-    </div>
+    </span>
   </div>
   <div
     style={
@@ -535,65 +542,36 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
                 }
               }
             >
-              <div
-                data-radium={true}
+              <span
+                className="icon-badge__StyledBadge-sc-13mitia-0 iysqhm"
+                disabled={false}
+                style={
+                  Object {
+                    "marginRight": 10,
+                  }
+                }
               >
                 <span
-                  data-radium={true}
-                  style={
-                    Object {
-                      "alignItems": "center",
-                      "backgroundColor": "#61d079",
-                      "borderRadius": 30,
-                      "display": "flex",
-                      "justifyContent": "center",
-                      "marginRight": 10,
-                      "minHeight": 30,
-                      "minWidth": 30,
-                      "padding": 0,
-                    }
-                  }
+                  className="icon-badge__StyledContent-sc-13mitia-1 iTNHVn"
                 >
-                  <span
-                    data-radium={true}
-                    style={
-                      Object {
-                        "color": "#fff",
-                        "fill": "#fff",
-                        "flexBasis": 11,
-                        "fontSize": 12,
-                        "fontWeight": "bold",
-                        "lineHeight": 0,
-                        "textAlign": "center",
-                      }
-                    }
+                  <svg
+                    className="k-IconBadge__svg"
+                    fill="#fff"
+                    viewBox="0 0 11 8"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      className="k-IconBadge__svg"
-                      fill="#fff"
-                      viewBox="0 0 11 8"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>
-                        Checked
-                      </title>
-                      <path
-                        d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-                      />
-                      <path
-                        d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
-                      />
-                    </svg>
-                  </span>
+                    <title>
+                      Checked
+                    </title>
+                    <path
+                      d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
+                    />
+                    <path
+                      d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+                    />
+                  </svg>
                 </span>
-                <style
-                  dangerouslySetInnerHTML={
-                    Object {
-                      "__html": "",
-                    }
-                  }
-                />
-              </div>
+              </span>
               <div
                 data-radium={true}
                 style={

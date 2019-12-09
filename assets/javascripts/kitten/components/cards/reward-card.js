@@ -14,6 +14,7 @@ import { RewardCardRow } from '../../components/cards/reward-card/row'
 import { RewardCardRowContent } from '../../components/cards/reward-card/row-content'
 import { RewardCardRowSide } from '../../components/cards/reward-card/row-side'
 import { RewardCardStarredBadge } from '../../components/cards/reward-card/starred-badge'
+import { RewardCardDiamondBadge } from '../../components/cards/reward-card/diamond-badge'
 import { RewardCardCheckedSection } from '../../components/cards/reward-card/checked-section'
 
 const Infos = styled(({ withMarginBottom, ...props }) => <Text {...props} />)`
@@ -116,6 +117,7 @@ export class RewardCard extends Component {
   static Info = RewardCardInfo
   static CheckedSection = RewardCardCheckedSection
   static StarredBadge = RewardCardStarredBadge
+  static DiamondBadge = RewardCardDiamondBadge
 
   static propTypes = {
     titleAmount: deprecated(

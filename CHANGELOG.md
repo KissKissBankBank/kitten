@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Switch `IconBadge` to Styled Components and add `disabled` prop.
+- Feature: Switch `StarredBadge` to Styled Components.
+- Feature: Add `RewardCard.DiamondBadge` component.
 - Feature: Add open/close animations to `Modal` component.
 - Feature: Add `badgeColor` prop to `ButtonImageWithTextAndBadge`.
 - Fix: Remove console warnings related to `CrowdfundingCard` propTypes.
