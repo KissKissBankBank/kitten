@@ -112,10 +112,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 gKSWLw"
   >
     <ul
-      className="k-BulletList list__BulletListStyle-sc-1hya2vn-0 eFVhGi"
+      className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--big"
+        className="bullet-list__StyledItem-rdyx84-1 giXrSy"
       >
         Unordered list can use asterisks
       </li>
@@ -125,10 +125,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 gKSWLw"
   >
     <ul
-      className="k-BulletList list__BulletListStyle-sc-1hya2vn-0 eFVhGi"
+      className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--big"
+        className="bullet-list__StyledItem-rdyx84-1 giXrSy"
       >
         Or minuses
       </li>
@@ -138,10 +138,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 gKSWLw"
   >
     <ul
-      className="k-BulletList list__BulletListStyle-sc-1hya2vn-0 eFVhGi"
+      className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--big"
+        className="bullet-list__StyledItem-rdyx84-1 giXrSy"
       >
         Or pluses
       </li>
@@ -293,10 +293,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 gKSWLw"
   >
     <ul
-      className="k-BulletList list__BulletListStyle-sc-1hya2vn-0 eFVhGi"
+      className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--big"
+        className="bullet-list__StyledItem-rdyx84-1 giXrSy"
       >
         Unordered list can use asterisks
       </li>
@@ -306,10 +306,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 gKSWLw"
   >
     <ul
-      className="k-BulletList list__BulletListStyle-sc-1hya2vn-0 eFVhGi"
+      className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--big"
+        className="bullet-list__StyledItem-rdyx84-1 giXrSy"
       >
         Or minuses
       </li>
@@ -319,10 +319,10 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 gKSWLw"
   >
     <ul
-      className="k-BulletList list__BulletListStyle-sc-1hya2vn-0 eFVhGi"
+      className="list__BulletListStyle-sc-1hya2vn-0 eFVhGi bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
     >
       <li
-        className="k-BulletList__item k-BulletList__item--big"
+        className="bullet-list__StyledItem-rdyx84-1 giXrSy"
       >
         Or pluses
       </li>
