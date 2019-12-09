@@ -196,6 +196,7 @@ function (_Component) {
         text: this.props.buttonText,
         title: this.props.buttonTitle,
         notifications: this.props.buttonNotifications,
+        badgeColor: this.props.badgeColor,
         textClassName: "k-Header__userMenuText--withEllipsis"
       });
     }
@@ -286,7 +287,8 @@ UserMenu.propTypes = {
   notifications: _propTypes.default.number,
   refreshEvents: _propTypes.default.array,
   closeEvents: _propTypes.default.array,
-  onPositionUpdate: _propTypes.default.func
+  onPositionUpdate: _propTypes.default.func,
+  badgeColor: _propTypes.default.string
 };
 UserMenu.defaultProps = {
   // Add custom value to compute horizontal position

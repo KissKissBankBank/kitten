@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `badgeColor` prop to `UserMenu` component for
+## [2.46.1] - 2019-12-09
+
+Fix:
+- Add `badgeColor` prop to `UserMenu` component for
   `ButtonImageWithTextAndBadge`.
 
 ## [2.46.0] - 2019-12-09
