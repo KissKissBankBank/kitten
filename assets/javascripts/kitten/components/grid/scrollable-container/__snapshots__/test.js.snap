@@ -2,7 +2,7 @@
 
 exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
 <div
-  className="styled__StyledContainer-d41exg-0 lmcHcx styled__StyledContainer-z412rl-0 eTfKiw"
+  className="styled__StyledContainer-z412rl-0 eTfKiw styled__StyledContainer-d41exg-0 lmcHcx"
 >
   <div
     className="styled__StyledScrollableContainer-d41exg-1 blPcky"
@@ -12,7 +12,7 @@ exports[`<ScrollableContainer /> by default matches with snapshot 1`] = `
 
 exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
 <div
-  className="styled__StyledContainer-d41exg-0 lmcHcx styled__StyledContainer-z412rl-0 eTfKiw"
+  className="styled__StyledContainer-z412rl-0 eTfKiw styled__StyledContainer-d41exg-0 lmcHcx"
 >
   <div
     className="styled__StyledScrollableContainer-d41exg-1 blPcky"
@@ -37,7 +37,7 @@ exports[`<ScrollableContainer /> with children matches with snapshot 1`] = `
 exports[`<ScrollableContainer /> with some props matches with snapshot 1`] = `
 <div
   aria-hidden={true}
-  className="custom__class styled__StyledContainer-d41exg-0 lmcHcx styled__StyledContainer-z412rl-0 jMLGYL"
+  className="styled__StyledContainer-z412rl-0 jMLGYL styled__StyledContainer-d41exg-0 lmcHcx custom__class"
 >
   <div
     className="styled__StyledScrollableContainer-d41exg-1 kzFptD"

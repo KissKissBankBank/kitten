@@ -13,7 +13,7 @@ exports[`<Badge /> with icon should match the snapshot 1`] = `
     />
   </svg>
   <span
-    className="k-Badge badge__StyledBadge-sc-7liuod-0 jXPjAe"
+    className="badge__StyledBadge-sc-7liuod-0 jXPjAe k-Badge"
     color="red"
     role="alert"
   />
