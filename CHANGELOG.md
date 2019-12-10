@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add `isAnimated` prop to `Modal`, defaults to true.
+- Feature: Add `isAnimated` prop to `Modal`, defaults to true.
 
 ## [2.46.1] - 2019-12-09
 
