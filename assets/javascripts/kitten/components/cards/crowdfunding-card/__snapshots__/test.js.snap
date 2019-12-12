@@ -67,7 +67,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   font-size: 0.75rem;
 }
 
-.c12 {
+.c11 {
   max-width: 100%;
 }
 
@@ -91,7 +91,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   background: #19b4fa;
 }
 
-.c11.is-disabled .c13::after {
+.c10.is-disabled .c13::after {
   background: #d8d8d8;
 }
 
@@ -112,7 +112,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   margin-bottom: 0.625rem;
 }
 
-.c10 {
+.c12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -190,13 +190,13 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 <div
-  className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover c0"
+  className="c0 k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
   title="Lorem ipsum…"
 >
   <div
-    className="k-Card__imageContainer c1"
+    className="c1 k-Card__imageContainer"
   >
     <img
       alt=""
@@ -290,7 +290,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       />
     </div>
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-u-hidden@s-down c14"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c14 k-u-hidden@s-down"
     >
       42 %
     </span>
@@ -524,12 +524,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 <div
-  className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover c0"
+  className="c0 k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer c1"
+    className="c1 k-Card__imageContainer"
   >
     <img
       alt=""

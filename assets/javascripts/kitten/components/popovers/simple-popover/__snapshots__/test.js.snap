@@ -10,11 +10,11 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   margin-bottom: 0.625rem;
 }
 
-.c7 {
+.c6 {
   margin-top: 1.875rem;
 }
 
-.c2 {
+.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -63,57 +63,57 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c2:disabled {
+.c1:disabled {
   cursor: not-allowed;
 }
 
-.c2:hover {
+.c1:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c2 >:nth-child(n) {
+.c1 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c2 >:last-child {
+.c1 >:last-child {
   margin-right: 0;
 }
 
-.c2 svg {
+.c1 svg {
   fill: #fff;
 }
 
-.c2:hover,
-.c2:focus {
+.c1:hover,
+.c1:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c2:hover svg,
-.c2:focus svg {
+.c1:hover svg,
+.c1:focus svg {
   fill: #fff;
 }
 
-.c2:active {
+.c1:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c2:active svg {
+.c1:active svg {
   fill: #fff;
 }
 
-.c2:disabled {
+.c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c2:disabled svg {
+.c1:disabled svg {
   fill: #fff;
 }
 
@@ -360,7 +360,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   background-color: #bae8fd;
 }
 
-.c1 {
+.c2 {
   position: absolute;
   top: -0.125rem;
   right: -0.125rem;
@@ -368,19 +368,19 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c6 > * + * {
+.c7 > * + * {
   margin-top: 1.25rem;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
+  .c1 {
     width: 12.5rem;
     height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
+  .c1 {
     width: 10rem;
     height: 2.5rem;
   }
@@ -430,7 +430,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media (min-width:640px) {
-  .c6 > * + * {
+  .c7 > * + * {
     margin-top: 0;
     margin-left: 1.25rem;
   }
@@ -524,7 +524,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   margin-bottom: 0.625rem;
 }
 
-.c2 {
+.c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -573,57 +573,57 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c2:disabled {
+.c1:disabled {
   cursor: not-allowed;
 }
 
-.c2:hover {
+.c1:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c2 >:nth-child(n) {
+.c1 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c2 >:last-child {
+.c1 >:last-child {
   margin-right: 0;
 }
 
-.c2 svg {
+.c1 svg {
   fill: #fff;
 }
 
-.c2:hover,
-.c2:focus {
+.c1:hover,
+.c1:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c2:hover svg,
-.c2:focus svg {
+.c1:hover svg,
+.c1:focus svg {
   fill: #fff;
 }
 
-.c2:active {
+.c1:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c2:active svg {
+.c1:active svg {
   fill: #fff;
 }
 
-.c2:disabled {
+.c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c2:disabled svg {
+.c1:disabled svg {
   fill: #fff;
 }
 
@@ -661,7 +661,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   transition-delay: 0s,0.3s;
 }
 
-.c1 {
+.c2 {
   position: absolute;
   top: -0.125rem;
   right: -0.125rem;
@@ -670,14 +670,14 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
+  .c1 {
     width: 12.5rem;
     height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
+  .c1 {
     width: 10rem;
     height: 2.5rem;
   }

@@ -19,11 +19,11 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         Sélectionnez la période souhaitée
       </p>
       <div
-        className="DayPicker-NavBar navbar__StyledButton-sc-1v9dr3-1 TCbUf"
+        className="navbar__StyledButton-sc-1v9dr3-1 TCbUf DayPicker-NavBar"
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv button__StyledButton-sc-1q5nte0-0 gZQndu"
+          className="button__StyledButton-sc-1q5nte0-0 gZQndu navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv"
           onClick={[Function]}
         >
           <svg
@@ -47,7 +47,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv button__StyledButton-sc-1q5nte0-0 gZQndu"
+          className="button__StyledButton-sc-1q5nte0-0 gZQndu navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv"
           onClick={[Function]}
         >
           <svg

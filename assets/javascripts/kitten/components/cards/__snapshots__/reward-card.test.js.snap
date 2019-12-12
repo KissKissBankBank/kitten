@@ -82,7 +82,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
           >
             <svg
               aria-hidden={true}
-              className="k-IconBadge__svg diamond-badge__StyledDiamondIcon-ixajco-2 khKPvt"
+              className="diamond-badge__StyledDiamondIcon-ixajco-2 khKPvt k-IconBadge__svg"
               height="28"
               viewBox="0 0 19 28"
               width="19"
@@ -171,7 +171,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           >
             <svg
               aria-hidden={true}
-              className="k-IconBadge__svg starred-badge__StyledStarIcon-sc-1bjkj6l-2 enLUaF"
+              className="starred-badge__StyledStarIcon-sc-1bjkj6l-2 enLUaF k-IconBadge__svg"
               height="16"
               viewBox="0 0 18 16"
               width="18"

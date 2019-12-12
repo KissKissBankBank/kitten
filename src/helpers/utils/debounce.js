@@ -5,8 +5,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.debounce = void 0;
 
-var _this = void 0,
-    _arguments = arguments;
+var _arguments = arguments,
+    _this = void 0;
 
 var debounce = function debounce(fn, msDelay) {
   var inDebounce;
