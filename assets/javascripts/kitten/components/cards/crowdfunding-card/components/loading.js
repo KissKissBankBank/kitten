@@ -38,7 +38,7 @@ class Loading extends PureComponent {
 
     if (!loading) return null
 
-    return <StyledLoading loading={loading} />
+    return <StyledLoading />
   }
 }
 
