@@ -6,7 +6,7 @@ import { Context } from './context'
 
 const BulletListStyle = styled(BulletList)`
   li {
-    line-height: 1.8rem;
+    line-height: 1.8em;
   }
 `
 
