@@ -447,7 +447,7 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
 }
 
 <article
-  className="k-u-example-class c0"
+  className="c0 k-u-example-class"
   color="#f6f6f6"
 >
   Foobar

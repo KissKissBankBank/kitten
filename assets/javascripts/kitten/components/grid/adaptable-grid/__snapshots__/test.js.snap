@@ -19,15 +19,15 @@ exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with className matches with snapshot 1`] = `
 <div
-  className="my_classname adaptable-grid__StyledGrid-txsbu0-0 eaVPuD"
+  className="adaptable-grid__StyledGrid-txsbu0-0 eaVPuD my_classname"
 >
   <div
-    className="my_second_classname adaptable-grid__StyledGridCol-txsbu0-1 WhXQT"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 WhXQT my_second_classname"
   >
     Test
   </div>
   <div
-    className="my_third_classname adaptable-grid__StyledGridCol-txsbu0-1 WhXQT"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 WhXQT my_third_classname"
   >
     Test
   </div>

@@ -331,7 +331,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="VerticalStepper__step c5"
+          className="c5 VerticalStepper__step"
           disabled={false}
         >
           <p
@@ -343,7 +343,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c7"
           >
             <span
-              className="VerticalStepper__link c8"
+              className="c8 VerticalStepper__link"
             >
               Link
             </span>
@@ -377,7 +377,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="VerticalStepper__step c5"
+          className="c5 VerticalStepper__step"
           disabled={false}
         >
           <p
@@ -408,7 +408,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c7"
           >
             <span
-              className="VerticalStepper__link c8"
+              className="c8 VerticalStepper__link"
             >
               Link
             </span>
@@ -440,7 +440,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="VerticalStepper__step c5"
+          className="c5 VerticalStepper__step"
           disabled={false}
         >
           <p
@@ -466,7 +466,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c7"
           >
             <a
-              className="VerticalStepper__link c13"
+              className="c13 VerticalStepper__link"
               href="#"
             >
               Link
@@ -500,7 +500,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="VerticalStepper__step c5"
+          className="c5 VerticalStepper__step"
           disabled={false}
         >
           <p
@@ -512,7 +512,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c7"
           >
             <span
-              className="VerticalStepper__link c8"
+              className="c8 VerticalStepper__link"
             >
               Link
             </span>
@@ -532,7 +532,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           disabled={false}
         />
         <div
-          className="VerticalStepper__step c5"
+          className="c5 VerticalStepper__step"
           disabled={false}
         >
           <p
@@ -544,7 +544,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="c7"
           >
             <span
-              className="VerticalStepper__link c8"
+              className="c8 VerticalStepper__link"
             >
               Link
             </span>

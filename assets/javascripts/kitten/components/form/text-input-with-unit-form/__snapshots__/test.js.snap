@@ -33,7 +33,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 iDULaY"
+              className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg"
               defaultValue=""
               disabled={false}
               id="donation-amount"
@@ -106,7 +106,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 iDULaY"
+              className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg"
               defaultValue=""
               disabled={false}
               id=""
@@ -177,7 +177,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
           >
             <input
               autoComplete="off"
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 iDULaY"
+              className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg"
               defaultValue=""
               disabled={true}
               id=""
@@ -248,7 +248,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg text-input__StyledInput-sc-11wej6v-1 kfptEQ"
+              className="text-input__StyledInput-sc-11wej6v-1 kfptEQ text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg"
               defaultValue=""
               disabled={false}
               id=""

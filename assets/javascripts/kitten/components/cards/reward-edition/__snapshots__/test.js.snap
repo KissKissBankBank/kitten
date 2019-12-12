@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
-.c4 {
+.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -50,57 +50,57 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c4:disabled {
+.c3:disabled {
   cursor: not-allowed;
 }
 
-.c4:hover {
+.c3:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c4 >:nth-child(n) {
+.c3 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c4 >:last-child {
+.c3 >:last-child {
   margin-right: 0;
 }
 
-.c4 svg {
+.c3 svg {
   fill: #fff;
 }
 
-.c4:hover,
-.c4:focus {
+.c3:hover,
+.c3:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c4:hover svg,
-.c4:focus svg {
+.c3:hover svg,
+.c3:focus svg {
   fill: #fff;
 }
 
-.c4:active {
+.c3:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c4:active svg {
+.c3:active svg {
   fill: #fff;
 }
 
-.c4:disabled {
+.c3:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c4:disabled svg {
+.c3:disabled svg {
   fill: #fff;
 }
 
@@ -134,7 +134,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   align-items: center;
 }
 
-.c3 {
+.c4 {
   -webkit-align-item: flex-end;
   -webkit-box-align-item: flex-end;
   -ms-flex-align-item: flex-end;
@@ -154,14 +154,14 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c4 {
+  .c3 {
     width: 12.5rem;
     height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c4 {
+  .c3 {
     width: 10rem;
     height: 2.5rem;
   }

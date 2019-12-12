@@ -5,7 +5,7 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
   className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
 >
   <input
-    className="text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ text-input__StyledInput-sc-11wej6v-1 iDULaY"
+    className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ"
     defaultValue=""
     disabled={false}
     name="text"
@@ -25,7 +25,7 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
   className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
 >
   <input
-    className="text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ text-input__StyledInput-sc-11wej6v-1 iDULaY"
+    className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ"
     defaultValue=""
     disabled={true}
     name="text"
@@ -45,7 +45,7 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
   className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
 >
   <input
-    className="text-input-with-limit__FocusTextInput-ufrmmb-0 fzFwMa text-input__StyledInput-sc-11wej6v-1 kfptEQ"
+    className="text-input__StyledInput-sc-11wej6v-1 kfptEQ text-input-with-limit__FocusTextInput-ufrmmb-0 fzFwMa"
     defaultValue=""
     disabled={false}
     name="text"
@@ -65,7 +65,7 @@ exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
   className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
 >
   <input
-    className="text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ text-input__StyledInput-sc-11wej6v-1 iXzQrK"
+    className="text-input__StyledInput-sc-11wej6v-1 iXzQrK text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ"
     defaultValue=""
     disabled={false}
     name="text"

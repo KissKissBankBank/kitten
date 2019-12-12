@@ -29,7 +29,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   <li>
     <div
       aria-disabled={false}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 eQyeg"
+      className="button-item__Item-sc-1xwobvm-0 eQyeg k-List__button"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -49,7 +49,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
+          className="k-ArrowIcon k-ArrowIcon--right button-item__ArrowIcon-sc-1xwobvm-3 iooXxv k-Button__icon"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +67,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   <li>
     <div
       aria-disabled={false}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 cXshSK"
+      className="button-item__Item-sc-1xwobvm-0 cXshSK k-List__button"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -87,7 +87,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
+          className="k-ArrowIcon k-ArrowIcon--right button-item__ArrowIcon-sc-1xwobvm-3 iooXxv k-Button__icon"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +105,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   <li>
     <div
       aria-disabled={false}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 cXshSK"
+      className="button-item__Item-sc-1xwobvm-0 cXshSK k-List__button"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -125,7 +125,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
+          className="k-ArrowIcon k-ArrowIcon--right button-item__ArrowIcon-sc-1xwobvm-3 iooXxv k-Button__icon"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   <li>
     <div
       aria-disabled={false}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 eQyeg"
+      className="button-item__Item-sc-1xwobvm-0 eQyeg k-List__button"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -170,7 +170,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
+          className="k-ArrowIcon k-ArrowIcon--right button-item__ArrowIcon-sc-1xwobvm-3 iooXxv k-Button__icon"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +188,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   <li>
     <div
       aria-disabled={true}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 hDlIEc"
+      className="button-item__Item-sc-1xwobvm-0 hDlIEc k-List__button"
       disabled={true}
       onBlur={[Function]}
       onClick={null}
@@ -208,7 +208,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-ArrowIcon--disabled k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 IIVFy"
+          className="k-ArrowIcon k-ArrowIcon--right k-ArrowIcon--disabled button-item__ArrowIcon-sc-1xwobvm-3 IIVFy k-Button__icon"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +226,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   <li>
     <div
       aria-disabled={false}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 cXshSK"
+      className="button-item__Item-sc-1xwobvm-0 cXshSK k-List__button"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -246,7 +246,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
         className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
+          className="k-ArrowIcon k-ArrowIcon--right button-item__ArrowIcon-sc-1xwobvm-3 iooXxv k-Button__icon"
           data-radium={true}
           viewBox="0 0 6 6"
           xmlns="http://www.w3.org/2000/svg"

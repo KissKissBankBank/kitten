@@ -2,12 +2,12 @@
 
 exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 <div
-  className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW"
+  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
+    className="image__StyledImageContainer-sc-166p1i9-0 jmZvoc k-Card__imageContainer"
   >
     <img
       alt=""
@@ -63,12 +63,12 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches with snapshot 1`] = `
 <div
-  className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW"
+  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
+    className="image__StyledImageContainer-sc-166p1i9-0 jmZvoc k-Card__imageContainer"
   >
     <img
       alt=""
@@ -116,7 +116,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       className="title__StyledTitleContainer-sc-1wv1kzg-1 faWlNg"
     >
       <p
-        className="k-Title k-Card__title title__StyledTitle-sc-1wv1kzg-2 hnn k-Title--primary k-Title--withoutMargin"
+        className="k-Title title__StyledTitle-sc-1wv1kzg-2 hnn k-Card__title k-Title--primary k-Title--withoutMargin"
       >
         Custom title
       </p>
@@ -126,7 +126,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       className="subtitle__StyledContainerSubtitle-hzl57w-1 fVLWtT"
     >
       <span
-        className="subtitle__StyledHorizontalStroke-hzl57w-2 dVssq horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl subtitle__StyledHorizontalStroke-hzl57w-2 dVssq"
       />
       <p
         className="k-u-color-font1 k-u-size-micro k-u-weight-regular subtitle__StyledSubtitle-hzl57w-3 krHPNc"
@@ -163,12 +163,12 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
 
 exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 <div
-  className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW"
+  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
+    className="image__StyledImageContainer-sc-166p1i9-0 jmZvoc k-Card__imageContainer"
   >
     <img
       alt=""
@@ -224,12 +224,12 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
 <a
-  className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW"
+  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href="#foobar"
   onClick={[Function]}
 >
   <div
-    className="k-Card__imageContainer image__StyledImageContainer-sc-166p1i9-0 jmZvoc"
+    className="image__StyledImageContainer-sc-166p1i9-0 jmZvoc k-Card__imageContainer"
   >
     <img
       alt="Image alt"
@@ -278,7 +278,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       className="title__StyledTitleContainer-sc-1wv1kzg-1 faWlNg"
     >
       <p
-        className="k-Title k-Card__title title__StyledTitle-sc-1wv1kzg-2 hnn k-Title--primary k-Title--withoutMargin"
+        className="k-Title title__StyledTitle-sc-1wv1kzg-2 hnn k-Card__title k-Title--primary k-Title--withoutMargin"
       >
         Custom title
       </p>
@@ -288,7 +288,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       className="subtitle__StyledContainerSubtitle-hzl57w-1 fVLWtT"
     >
       <span
-        className="subtitle__StyledHorizontalStroke-hzl57w-2 dVssq horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl subtitle__StyledHorizontalStroke-hzl57w-2 dVssq"
       />
       <p
         className="k-u-color-font1 k-u-size-micro k-u-weight-regular subtitle__StyledSubtitle-hzl57w-3 krHPNc"
