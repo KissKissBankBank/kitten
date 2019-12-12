@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove (some) console warnings.
+
 ## [2.46.1] - 2019-12-09
 
 Fix:
