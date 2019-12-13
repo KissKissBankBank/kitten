@@ -108,6 +108,9 @@ export const TextCopy = ({
   forceOneLine,
   buttonText,
   modifier,
+  valid,
+  error,
+  disabled,
 }) => {
   const [shouldShowMessage, isMessageShown] = useState(false)
   const textRef = useRef(null)
@@ -142,6 +145,8 @@ export const TextCopy = ({
     valid,
     error,
     disabled,
+    buttonProps,
+    ...others
   }) => (
     <>
       {!buttonText && (
@@ -159,6 +164,7 @@ export const TextCopy = ({
           disabled={disabled}
           aria-hidden={true}
           onClick={copyText}
+          {...buttonProps}
         >
           {buttonText}
         </StyledButton>
@@ -221,5 +227,5 @@ TextCopy.defaultProps = {
   description: undefined,
   forceOneLine: false,
   buttonText: undefined,
-  modifier: 'beryllium',
+  modifier: 'helium',
 }
