@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Transmit size modifiers to lists in `Markdown`.
+- Fix: Remove (some) console warnings.
 
 ## [2.46.1] - 2019-12-09
 
