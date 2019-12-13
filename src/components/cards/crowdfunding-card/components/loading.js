@@ -47,9 +47,7 @@ function (_PureComponent) {
     value: function render() {
       var loading = this.props.loading;
       if (!loading) return null;
-      return _react.default.createElement(StyledLoading, {
-        loading: loading
-      });
+      return _react.default.createElement(StyledLoading, null);
     }
   }]);
   return Loading;

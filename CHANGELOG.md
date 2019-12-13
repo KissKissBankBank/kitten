@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `isAnimated` prop to `Modal`, defaults to true.
-- Feature: Transmit size modifiers to lists in `Markdown`.
-- Fix: Remove (some) console warnings.
+## [2.47.0] - 2019-12-13
+
+Feature:
+- Add `isAnimated` prop to `Modal`, defaults to true.
+
+Fixes:
+- Transmit size modifiers to lists in `Markdown`.
+- Remove (some) console warnings.
 
 ## [2.46.1] - 2019-12-09
 
