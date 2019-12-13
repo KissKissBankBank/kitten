@@ -1,12 +1,54 @@
 import React, { useRef, useCallback, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes, css } from 'styled-components'
+import TYPOGRAPHY from '../../constants/typography-config'
 import COLORS from '../../constants/colors-config'
-import { pxToRem } from '../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../helpers/utils/typography'
 import { CopyIcon } from '../icons/copy-icon'
+import { Button } from '../buttons/button/button'
 import { ArrowContainer } from '../layout/arrow-container'
 import { Text } from '../typography/text'
 import { VisuallyHidden } from '../accessibility/visually-hidden'
+import { modifierStyles } from '../../components/buttons/button/helpers/modifier-styles'
+
+const StyledButton = styled.button`
+  ${TYPOGRAPHY.fontStyles.regular};
+  font-size: ${stepToRem(-1)};
+  line-height: 1.3;
+  flex: 1 0 auto;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 0 ${pxToRem(30)};
+  border-radius: 0;
+
+  ${({ modifier }) => modifierStyles(modifier)};
+
+  ${({ valid }) =>
+    valid &&
+    css`
+      background-color: ${COLORS.valid};
+      border-color: ${COLORS.valid};
+    `}
+
+  ${({ error }) =>
+    error &&
+    css`
+      background-color: ${COLORS.error};
+      border-color: ${COLORS.error};
+    `}
+
+  input:invalid:not(:focus) + & {
+    background-color: ${COLORS.error};
+    border-color: ${COLORS.error};
+  }
+
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      cursor: not-allowed;
+    `}
+`
 
 const fadeIn = keyframes`
   0% {
@@ -64,6 +106,8 @@ export const TextCopy = ({
   alertMessage,
   description,
   forceOneLine,
+  buttonText,
+  modifier,
 }) => {
   const [shouldShowMessage, isMessageShown] = useState(false)
   const textRef = useRef(null)
@@ -90,6 +134,38 @@ export const TextCopy = ({
     }
     setTimeout(() => isMessageShown(true), 1)
   })
+
+  const Action = ({
+    copyText,
+    buttonText,
+    modifier,
+    valid,
+    error,
+    disabled,
+  }) => (
+    <>
+      {!buttonText && (
+        <IconWrapper aria-hidden={true} onClick={copyText}>
+          <CopyIcon />
+        </IconWrapper>
+      )}
+
+      {buttonText && (
+        <StyledButton
+          type="button"
+          modifier={modifier}
+          valid={valid}
+          error={error}
+          disabled={disabled}
+          aria-hidden={true}
+          onClick={copyText}
+        >
+          {buttonText}
+        </StyledButton>
+      )}
+    </>
+  )
+
   return (
     <>
       <Wrapper>
@@ -102,9 +178,16 @@ export const TextCopy = ({
         >
           <span ref={textRef}>{children}</span>
         </StyledText>
-        <IconWrapper aria-hidden={true} onClick={copyText}>
-          <CopyIcon />
-        </IconWrapper>
+
+        <Action
+          copyText={copyText}
+          buttonText={buttonText}
+          modifier={modifier}
+          valid={valid}
+          error={error}
+          disabled={disabled}
+        />
+
         {alertMessage && shouldShowMessage && (
           <StyledArrowContainer
             color={COLORS.primary1}
@@ -128,6 +211,8 @@ TextCopy.propTypes = {
   textToCopy: PropTypes.string,
   description: PropTypes.string,
   forceOneLine: PropTypes.bool,
+  buttonText: PropTypes.string,
+  modifier: PropTypes.string,
 }
 
 TextCopy.defaultProps = {
@@ -135,4 +220,6 @@ TextCopy.defaultProps = {
   textToCopy: undefined,
   description: undefined,
   forceOneLine: false,
+  buttonText: undefined,
+  modifier: 'beryllium',
 }
