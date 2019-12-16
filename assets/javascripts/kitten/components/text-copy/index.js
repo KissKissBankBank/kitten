@@ -23,7 +23,7 @@ const StyledButton = styled.button`
   align-self: stretch;
   box-sizing: border-box;
 
-  ${({ modifier }) => modifierStyles(modifier)};
+  ${({ buttonModifier }) => modifierStyles(buttonModifier)};
 
   ${({ valid }) =>
     valid &&
@@ -122,7 +122,7 @@ export const TextCopy = ({
   description,
   forceOneLine,
   buttonText,
-  modifier,
+  buttonModifier,
   valid,
   error,
   disabled,
@@ -156,7 +156,7 @@ export const TextCopy = ({
   const Action = ({
     copyText,
     buttonText,
-    modifier,
+    buttonModifier,
     valid,
     error,
     disabled,
@@ -173,7 +173,7 @@ export const TextCopy = ({
       {buttonText && (
         <StyledButton
           type="button"
-          modifier={modifier}
+          buttonModifier={buttonModifier}
           valid={valid}
           error={error}
           disabled={disabled}
@@ -204,7 +204,7 @@ export const TextCopy = ({
         <Action
           copyText={copyText}
           buttonText={buttonText}
-          modifier={modifier}
+          buttonModifier={buttonModifier}
           valid={valid}
           error={error}
           disabled={disabled}
@@ -234,7 +234,7 @@ TextCopy.propTypes = {
   description: PropTypes.string,
   forceOneLine: PropTypes.bool,
   buttonText: PropTypes.string,
-  modifier: PropTypes.string,
+  buttonModifier: PropTypes.string,
 }
 
 TextCopy.defaultProps = {
@@ -243,5 +243,5 @@ TextCopy.defaultProps = {
   description: undefined,
   forceOneLine: false,
   buttonText: undefined,
-  modifier: 'helium',
+  buttonModifier: 'helium',
 }
