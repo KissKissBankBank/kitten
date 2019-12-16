@@ -59,7 +59,9 @@ const GlobalStyle = createGlobalStyle`
 
     background-color: rgba(34, 34, 34, .9);
   }
+`
 
+const AnimatedGlobalStyle = createGlobalStyle`
   .k-Modal__overlay {
     opacity: 0;
   }
@@ -150,6 +152,7 @@ export class Modal extends Component {
       disableOutsideScroll,
       modalClassNames,
       hasCloseButton,
+      isAnimated,
       ...others
     } = this.props
 
@@ -161,8 +164,10 @@ export class Modal extends Component {
 
         {this.renderGlobalStyle()}
 
+        {isAnimated && <AnimatedGlobalStyle />}
+
         <ReactModal
-          closeTimeoutMS={500}
+          closeTimeoutMS={isAnimated ? 500 : 0}
           role="dialog"
           className={{ ...modalClassNames.className }}
           overlayClassName={{ ...modalClassNames.overlayClassName }}
@@ -209,6 +214,7 @@ Modal.propTypes = {
     closeContainerClassName: PropTypes.string,
   }),
   hasCloseButton: PropTypes.bool,
+  isAnimated: PropTypes.bool,
 }
 
 Modal.defaultProps = {
@@ -232,4 +238,5 @@ Modal.defaultProps = {
     closeContainerClassName: 'k-Modal__close',
   },
   hasCloseButton: true,
+  isAnimated: true,
 }

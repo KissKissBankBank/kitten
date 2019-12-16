@@ -95,9 +95,9 @@ function (_PureComponent) {
 }(_react.PureComponent);
 
 Informations.propTypes = {
-  info1: _propTypes.default.node,
-  info2: _propTypes.default.node,
-  info3: _propTypes.default.node,
+  info1: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.bool]),
+  info2: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.bool]),
+  info3: _propTypes.default.oneOfType([_propTypes.default.node, _propTypes.default.bool]),
   loading: _propTypes.default.bool
 };
 Informations.defaultProps = {

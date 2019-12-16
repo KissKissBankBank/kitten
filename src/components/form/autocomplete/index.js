@@ -74,7 +74,8 @@ var StyledLoader = (0, _styledComponents.default)(function (_ref3) {
 });
 var StyledIcon = (0, _styledComponents.default)(function (_ref5) {
   var disabled = _ref5.disabled,
-      others = (0, _objectWithoutProperties2.default)(_ref5, ["disabled"]);
+      iconPosition = _ref5.iconPosition,
+      others = (0, _objectWithoutProperties2.default)(_ref5, ["disabled", "iconPosition"]);
   return _react.default.createElement("span", others);
 }).withConfig({
   displayName: "autocomplete__StyledIcon",
