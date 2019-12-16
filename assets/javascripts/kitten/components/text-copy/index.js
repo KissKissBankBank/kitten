@@ -49,11 +49,18 @@ const Wrapper = styled.div`
     `}
 `
 
-const StyledText = styled(({ className, children, ...others }) => (
-  <Text className={className} {...others}>
-    {children}
-  </Text>
-))`
+const StyledText = styled(
+  ({ buttonText, forceOnLine, className, children, ...others }) => (
+    <Text
+      className={className}
+      buttonText={buttonText}
+      forceOnLine={forceOnLine}
+      {...others}
+    >
+      {children}
+    </Text>
+  ),
+)`
   padding: ${pxToRem(10)} ${pxToRem(15)};
   width: 100%;
 
@@ -143,8 +150,8 @@ export const TextCopy = ({
         <StyledButton
           type="button"
           buttonModifier={buttonModifier}
-          aria-hidden={true}
           onClick={copyText}
+          aria-label={copyText}
           {...buttonProps}
         >
           {buttonText}

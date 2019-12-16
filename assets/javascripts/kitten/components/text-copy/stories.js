@@ -22,7 +22,7 @@ storiesOf('TextCopy', module)
           textToCopy={text('Other text to Copy', undefined)}
           alertMessage={text('Alert Message', 'Copied link !')}
           forceOneLine={boolean('Force one line', false)}
-          buttonText={text('button text', 'Copier url')}
+          buttonText={text('button text', 'Je suis button !')}
         >
           {text('Text', 'My text to copy on click')}
         </TextCopy>
