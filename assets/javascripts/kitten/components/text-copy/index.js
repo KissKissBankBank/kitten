@@ -5,7 +5,6 @@ import TYPOGRAPHY from '../../constants/typography-config'
 import COLORS from '../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../helpers/utils/typography'
 import { CopyIcon } from '../icons/copy-icon'
-import { Button } from '../buttons/button/button'
 import { ArrowContainer } from '../layout/arrow-container'
 import { Text } from '../typography/text'
 import { VisuallyHidden } from '../accessibility/visually-hidden'
@@ -21,6 +20,8 @@ const StyledButton = styled.button`
   cursor: pointer;
   padding: 0 ${pxToRem(30)};
   border-radius: 0;
+  align-self: stretch;
+  box-sizing: border-box;
 
   ${({ modifier }) => modifierStyles(modifier)};
 
@@ -64,8 +65,13 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-  background-color: ${COLORS.background1};
+
+  ${({ buttonText }) =>
+    !buttonText &&
+    css`
+      border: ${pxToRem(2)} solid ${COLORS.line1};
+      background-color: ${COLORS.background1};
+    `}
 `
 
 const StyledText = styled(({ className, children, ...others }) => (
@@ -75,6 +81,15 @@ const StyledText = styled(({ className, children, ...others }) => (
 ))`
   padding: ${pxToRem(10)} ${pxToRem(15)};
   width: 100%;
+
+  ${({ buttonText }) =>
+    buttonText &&
+    css`
+      border: ${pxToRem(2)} solid ${COLORS.line1};
+      background-color: ${COLORS.background1};
+      border-right: 0;
+    `}
+
   ${({ forceOneLine }) =>
     forceOneLine &&
     css`
@@ -174,13 +189,14 @@ export const TextCopy = ({
 
   return (
     <>
-      <Wrapper>
+      <Wrapper buttonText={buttonText}>
         {description && <VisuallyHidden>{description}</VisuallyHidden>}
         <StyledText
           weight="light"
           size="default"
           forceOneLine={forceOneLine}
           onClick={selectText}
+          buttonText={buttonText}
         >
           <span ref={textRef}>{children}</span>
         </StyledText>
