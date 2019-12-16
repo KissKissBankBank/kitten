@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkBox /> by default matches with snapshot 1`] = `
+<a
+  className="link-box__Link-km85a5-0 cRyYyS"
+  href="#"
+>
+  <div
+    className="link-box__Container-km85a5-4 gVfOVe"
+  >
+    <div
+      className="marger__StyledMarger-q3lecu-0 jyDYur link-box__ParagraphMarger-km85a5-1 dSDxqj"
+    >
+      <div
+        className="marger__StyledMarger-q3lecu-0 iyINNV"
+      >
+        <span
+          className="k-u-color-font1 k-u-size-default k-u-weight-regular"
+          style={
+            Object {
+              "lineHeight": 1,
+            }
+          }
+        >
+          My title
+        </span>
+      </div>
+      
+    </div>
+    <div
+      className="link-box__Arrow-km85a5-3 lkWbvq"
+    >
+      <svg
+        className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
+        data-radium={true}
+        viewBox="0 0 6 6"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Arrow
+        </title>
+        <path
+          d="M6 0H0v6h2V2h4z"
+        />
+      </svg>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`<LinkBox /> with some props matches with snapshot 1`] = `
+<a
+  className="link-box__Link-km85a5-0 cRyYyS"
+  href="#foobar"
+  rel="noopener"
+  target="_blank"
+>
+  <div
+    className="link-box__Container-km85a5-4 gVfOVe"
+  >
+    <div
+      className="link-box__Icon-km85a5-2 SjPzd"
+    />
+    <div
+      className="marger__StyledMarger-q3lecu-0 jyDYur link-box__ParagraphMarger-km85a5-1 dSDxqj"
+    >
+      <div
+        className="marger__StyledMarger-q3lecu-0 cGMcrq"
+      >
+        <span
+          className="k-u-color-font1 k-u-size-default k-u-weight-regular"
+          style={
+            Object {
+              "lineHeight": 1,
+            }
+          }
+        >
+          Lorem ipsum
+        </span>
+      </div>
+      <span
+        className="k-u-color-font1 k-u-size-tiny k-u-weight-light"
+        style={
+          Object {
+            "lineHeight": 1.3,
+          }
+        }
+      >
+        In enim justo, rhoncus ut,
+      </span>
+    </div>
+    <div
+      className="link-box__Arrow-km85a5-3 lkWbvq"
+    >
+      <svg
+        className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
+        data-radium={true}
+        viewBox="0 0 6 6"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Arrow
+        </title>
+        <path
+          d="M6 0H0v6h2V2h4z"
+        />
+      </svg>
+    </div>
+  </div>
+</a>
+`;
