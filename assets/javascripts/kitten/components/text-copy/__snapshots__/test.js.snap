@@ -44,7 +44,6 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     This is a description
   </span>
   <span
-    buttonText="Button text"
     className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 gYedjB"
     forceOneLine={false}
     onClick={[Function]}

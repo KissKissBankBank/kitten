@@ -10,7 +10,9 @@ import { Text } from '../typography/text'
 import { VisuallyHidden } from '../accessibility/visually-hidden'
 import { modifierStyles } from '../../components/buttons/button/helpers/modifier-styles'
 
-const StyledButton = styled.button`
+const StyledButton = styled(({ buttonModifier, ...others }) => (
+  <button {...others} />
+))`
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${stepToRem(-1)};
   line-height: 1.3;
@@ -35,7 +37,7 @@ const fadeIn = keyframes`
   }
 `
 
-const Wrapper = styled.div`
+const Wrapper = styled(({ buttonText, ...others }) => <div {...others} />)`
   position: relative;
   display: flex;
   align-items: center;
@@ -51,12 +53,7 @@ const Wrapper = styled.div`
 
 const StyledText = styled(
   ({ buttonText, forceOnLine, className, children, ...others }) => (
-    <Text
-      className={className}
-      buttonText={buttonText}
-      forceOnLine={forceOnLine}
-      {...others}
-    >
+    <Text className={className} {...others}>
       {children}
     </Text>
   ),
