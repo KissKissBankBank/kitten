@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `buttonText` props on `TextCopy` component.
+
 ## [2.47.0] - 2019-12-13
 
 Feature:

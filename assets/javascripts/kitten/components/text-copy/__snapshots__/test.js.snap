@@ -55,7 +55,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
   </span>
   <button
     aria-hidden={true}
-    className="text-copy__StyledButton-sc-1ikj7bl-0 gzldTE"
+    className="text-copy__StyledButton-sc-1ikj7bl-0 fkoKon"
     onClick={[Function]}
     type="button"
   >

@@ -24,31 +24,6 @@ const StyledButton = styled.button`
   box-sizing: border-box;
 
   ${({ buttonModifier }) => modifierStyles(buttonModifier)};
-
-  ${({ valid }) =>
-    valid &&
-    css`
-      background-color: ${COLORS.valid};
-      border-color: ${COLORS.valid};
-    `}
-
-  ${({ error }) =>
-    error &&
-    css`
-      background-color: ${COLORS.error};
-      border-color: ${COLORS.error};
-    `}
-
-  input:invalid:not(:focus) + & {
-    background-color: ${COLORS.error};
-    border-color: ${COLORS.error};
-  }
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      cursor: not-allowed;
-    `}
 `
 
 const fadeIn = keyframes`
@@ -123,9 +98,6 @@ export const TextCopy = ({
   forceOneLine,
   buttonText,
   buttonModifier,
-  valid,
-  error,
-  disabled,
 }) => {
   const [shouldShowMessage, isMessageShown] = useState(false)
   const textRef = useRef(null)
@@ -157,9 +129,6 @@ export const TextCopy = ({
     copyText,
     buttonText,
     buttonModifier,
-    valid,
-    error,
-    disabled,
     buttonProps,
     ...others
   }) => (
@@ -174,9 +143,6 @@ export const TextCopy = ({
         <StyledButton
           type="button"
           buttonModifier={buttonModifier}
-          valid={valid}
-          error={error}
-          disabled={disabled}
           aria-hidden={true}
           onClick={copyText}
           {...buttonProps}
@@ -205,9 +171,6 @@ export const TextCopy = ({
           copyText={copyText}
           buttonText={buttonText}
           buttonModifier={buttonModifier}
-          valid={valid}
-          error={error}
-          disabled={disabled}
         />
 
         {alertMessage && shouldShowMessage && (
