@@ -66,7 +66,7 @@ const Container = styled.div`
   background-color: ${COLORS.background1};
   border: ${pxToRem(2)} solid ${COLORS.line1};
 
-  :hover {
+  &:hover {
     background-color: ${COLORS.background2};
 
     ${Arrow} {
@@ -74,7 +74,7 @@ const Container = styled.div`
     }
   }
 
-  :active {
+  &:active {
     background-color: ${COLORS.background3};
   }
 `
