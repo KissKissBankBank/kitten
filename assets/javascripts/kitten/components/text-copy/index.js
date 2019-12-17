@@ -52,7 +52,7 @@ const Wrapper = styled(({ buttonText, ...others }) => <div {...others} />)`
 `
 
 const StyledText = styled(
-  ({ buttonText, forceOnLine, className, children, ...others }) => (
+  ({ buttonText, forceOneLine, className, children, ...others }) => (
     <Text className={className} {...others}>
       {children}
     </Text>
