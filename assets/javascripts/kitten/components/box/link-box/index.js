@@ -131,23 +131,26 @@ export const LinkBox = ({
 }
 
 LinkBox.propTypes = {
-  displayIcon: PropTypes.bool,
-  href: PropTypes.string,
-  isExternal: PropTypes.bool,
   title: PropTypes.string.isRequired,
   titleTag: PropTypes.string,
+  isExternal: PropTypes.bool,
+  href: PropTypes.string,
   text: PropTypes.string,
   textTag: PropTypes.string,
   linkProps: PropTypes.object,
+  viewportIsMobile: PropTypes.bool,
+  displayIcon: PropTypes.bool,
 }
 
 LinkBox.defaultProps = {
-  displayIcon: false,
-  href: '#',
-  isExternal: false,
   titleTag: 'span',
+  isExternal: false,
+  href: '#',
   text: '',
   textTag: 'span',
+  linkProps: {},
+  viewportIsMobile: false,
+  displayIcon: false,
 }
 
 // DEPRECATED: do not use default export.

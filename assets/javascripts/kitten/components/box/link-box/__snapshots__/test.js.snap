@@ -6,7 +6,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
   href="#"
 >
   <div
-    className="link-box__Container-km85a5-4 gVfOVe"
+    className="link-box__Container-km85a5-4 hAydRh"
   >
     <div
       className="marger__StyledMarger-q3lecu-0 jyDYur link-box__ParagraphMarger-km85a5-1 dSDxqj"
@@ -56,7 +56,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
   target="_blank"
 >
   <div
-    className="link-box__Container-km85a5-4 gVfOVe"
+    className="link-box__Container-km85a5-4 hAydRh"
   >
     <div
       className="link-box__Icon-km85a5-2 SjPzd"
