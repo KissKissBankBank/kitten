@@ -1,12 +1,32 @@
 import React, { useRef, useCallback, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes, css } from 'styled-components'
+import TYPOGRAPHY from '../../constants/typography-config'
 import COLORS from '../../constants/colors-config'
-import { pxToRem } from '../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../helpers/utils/typography'
 import { CopyIcon } from '../icons/copy-icon'
 import { ArrowContainer } from '../layout/arrow-container'
 import { Text } from '../typography/text'
 import { VisuallyHidden } from '../accessibility/visually-hidden'
+import { modifierStyles } from '../../components/buttons/button/helpers/modifier-styles'
+
+const StyledButton = styled(({ buttonModifier, ...others }) => (
+  <button {...others} />
+))`
+  ${TYPOGRAPHY.fontStyles.regular};
+  font-size: ${stepToRem(-1)};
+  line-height: 1.3;
+  flex: 1 0 auto;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  padding: 0 ${pxToRem(30)};
+  border-radius: 0;
+  align-self: stretch;
+  box-sizing: border-box;
+
+  ${({ buttonModifier }) => modifierStyles(buttonModifier)};
+`
 
 const fadeIn = keyframes`
   0% {
@@ -17,22 +37,38 @@ const fadeIn = keyframes`
   }
 `
 
-const Wrapper = styled.div`
+const Wrapper = styled(({ buttonText, ...others }) => <div {...others} />)`
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-  background-color: ${COLORS.background1};
+
+  ${({ buttonText }) =>
+    !buttonText &&
+    css`
+      border: ${pxToRem(2)} solid ${COLORS.line1};
+      background-color: ${COLORS.background1};
+    `}
 `
 
-const StyledText = styled(({ className, children, ...others }) => (
-  <Text className={className} {...others}>
-    {children}
-  </Text>
-))`
+const StyledText = styled(
+  ({ buttonText, forceOneLine, className, children, ...others }) => (
+    <Text className={className} {...others}>
+      {children}
+    </Text>
+  ),
+)`
   padding: ${pxToRem(10)} ${pxToRem(15)};
   width: 100%;
+
+  ${({ buttonText }) =>
+    buttonText &&
+    css`
+      border: ${pxToRem(2)} solid ${COLORS.line1};
+      background-color: ${COLORS.background1};
+      border-right: 0;
+    `}
+
   ${({ forceOneLine }) =>
     forceOneLine &&
     css`
@@ -64,6 +100,8 @@ export const TextCopy = ({
   alertMessage,
   description,
   forceOneLine,
+  buttonText,
+  buttonModifier,
 }) => {
   const [shouldShowMessage, isMessageShown] = useState(false)
   const textRef = useRef(null)
@@ -90,21 +128,55 @@ export const TextCopy = ({
     }
     setTimeout(() => isMessageShown(true), 1)
   })
+
+  const Action = ({
+    copyText,
+    buttonText,
+    buttonModifier,
+    buttonProps,
+    ...others
+  }) => (
+    <>
+      {!buttonText && (
+        <IconWrapper aria-hidden={true} onClick={copyText}>
+          <CopyIcon />
+        </IconWrapper>
+      )}
+
+      {buttonText && (
+        <StyledButton
+          type="button"
+          buttonModifier={buttonModifier}
+          onClick={copyText}
+          aria-label={copyText}
+          {...buttonProps}
+        >
+          {buttonText}
+        </StyledButton>
+      )}
+    </>
+  )
+
   return (
     <>
-      <Wrapper>
+      <Wrapper buttonText={buttonText}>
         {description && <VisuallyHidden>{description}</VisuallyHidden>}
         <StyledText
           weight="light"
           size="default"
           forceOneLine={forceOneLine}
           onClick={selectText}
+          buttonText={buttonText}
         >
           <span ref={textRef}>{children}</span>
         </StyledText>
-        <IconWrapper aria-hidden={true} onClick={copyText}>
-          <CopyIcon />
-        </IconWrapper>
+
+        <Action
+          copyText={copyText}
+          buttonText={buttonText}
+          buttonModifier={buttonModifier}
+        />
+
         {alertMessage && shouldShowMessage && (
           <StyledArrowContainer
             color={COLORS.primary1}
@@ -128,6 +200,8 @@ TextCopy.propTypes = {
   textToCopy: PropTypes.string,
   description: PropTypes.string,
   forceOneLine: PropTypes.bool,
+  buttonText: PropTypes.string,
+  buttonModifier: PropTypes.string,
 }
 
 TextCopy.defaultProps = {
@@ -135,4 +209,6 @@ TextCopy.defaultProps = {
   textToCopy: undefined,
   description: undefined,
   forceOneLine: false,
+  buttonText: undefined,
+  buttonModifier: 'helium',
 }

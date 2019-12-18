@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.48.0] - 2019-12-17
+
+Feature:
+- Add `buttonText` and `buttonModifier` props on `TextCopy` component.
+
 ## [2.47.0] - 2019-12-13
 
 Feature:
