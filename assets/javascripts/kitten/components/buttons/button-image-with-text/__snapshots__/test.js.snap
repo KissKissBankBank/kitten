@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
+<div
+  className="button-image-with-text__Container-sc-18377kn-0 dWrZeH"
+>
+  <span
+    className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+    tabIndex={null}
+  >
+    <img
+      alt=""
+      className="k-ButtonImage__img"
+      src="https://placehold.it/100x100/caf4fe/caf4fe"
+    />
+  </span>
+  <div
+    className="button-image-with-text__TextContainer-sc-18377kn-1 cvCizi"
+  >
+    <p
+      className="k-u-size-tiny k-u-weight-light button-image-with-text__StyledText-sc-18377kn-2 hgxQJX"
+    >
+      Custom title
+    </p>
+    <p
+      className="k-u-size-tiny k-u-weight-light button-image-with-text__StyledText-sc-18377kn-2 hgxQJX"
+    >
+      Custom description
+    </p>
+  </div>
+</div>
+`;
