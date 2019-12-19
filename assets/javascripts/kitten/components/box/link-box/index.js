@@ -27,7 +27,7 @@ const ParagraphMarger = styled(Marger)`
 `
 
 const Icon = styled.div`
-  display: none;
+  display: flex;
   margin-top: ${pxToRem(-2)};
   margin-left: ${pxToRem(-2)};
   margin-bottom: ${pxToRem(-2)};
@@ -35,10 +35,6 @@ const Icon = styled.div`
   justify-content: center;
   min-width: ${pxToRem(90)};
   background-color: ${COLORS.primary4};
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    display: flex;
-  }
 `
 
 const Arrow = styled(props => (
@@ -49,7 +45,7 @@ const Arrow = styled(props => (
   display: flex;
   align-items: center;
   padding: ${pxToRem(15)} ${pxToRem(22)} ${pxToRem(15)} ${pxToRem(18)};
-  transition: all 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     padding-left: ${pxToRem(30)};
@@ -96,7 +92,9 @@ export const LinkBox = ({
   return (
     <Link {...linkProps} href={href} {...target}>
       <Container>
-        {!!displayIcon && <Icon>{children}</Icon>}
+        {!!displayIcon && (
+          <Icon className="k-u-hidden@xs-down--important">{children}</Icon>
+        )}
 
         <ParagraphMarger top="2" bottom="2">
           <Marger bottom={text ? 0.5 : 0}>
