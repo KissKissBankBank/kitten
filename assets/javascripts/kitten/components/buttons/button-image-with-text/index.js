@@ -45,7 +45,6 @@ export const ButtonImageWithText = ({
   avatarProps,
 }) => {
   const size = micro ? 'micro' : 'tiny'
-  const Tag = tag
   const titleWeight = titleRegular ? 'regular' : 'light'
   const textWeight = textRegular ? 'regular' : 'light'
 
@@ -54,11 +53,11 @@ export const ButtonImageWithText = ({
       <ButtonImage tag="span" img={avatarProps} withoutPointerEvents />
 
       <TextContainer largeGutter={largeGutter}>
-        <StyledText tag={Tag} size={size} weight={titleWeight}>
+        <StyledText tag={tag} size={size} weight={titleWeight}>
           {title}
         </StyledText>
 
-        <StyledText tag={Tag} size={size} weight={textWeight}>
+        <StyledText tag={tag} size={size} weight={textWeight}>
           {description}
         </StyledText>
       </TextContainer>
