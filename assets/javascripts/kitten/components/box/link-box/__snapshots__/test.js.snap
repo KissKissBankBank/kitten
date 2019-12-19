@@ -28,7 +28,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       
     </div>
     <div
-      className="link-box__Arrow-km85a5-3 lkWbvq"
+      className="link-box__Arrow-km85a5-3 bzCsBT"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
@@ -59,7 +59,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
     className="link-box__Container-km85a5-4 hAydRh"
   >
     <div
-      className="link-box__Icon-km85a5-2 SjPzd"
+      className="link-box__Icon-km85a5-2 jzhPYJ k-u-hidden@xs-down--important"
     />
     <div
       className="marger__StyledMarger-q3lecu-0 jyDYur link-box__ParagraphMarger-km85a5-1 dSDxqj"
@@ -90,7 +90,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="link-box__Arrow-km85a5-3 lkWbvq"
+      className="link-box__Arrow-km85a5-3 bzCsBT"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
