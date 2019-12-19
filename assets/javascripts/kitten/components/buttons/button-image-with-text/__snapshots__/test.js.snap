@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ButtonImageWithText /> should match its empty snapshot 1`] = `
+exports[`<ButtonImageWithText /> should match with snapshot 1`] = `
 <div
   className="button-image-with-text__Container-sc-18377kn-0 dWrZeH"
 >
