@@ -36,4 +36,18 @@ describe('<TextCopy />', () => {
       .toJSON()
     expect(component).toMatchSnapshot()
   })
+  it('should match snapshot with button text', () => {
+    const component = renderer
+      .create(
+        <TextCopy
+          alertMessage="Text copied!"
+          description="This is a description"
+          buttonText="Button text"
+        >
+          Text To Copy
+        </TextCopy>,
+      )
+      .toJSON()
+    expect(component).toMatchSnapshot()
+  })
 })
