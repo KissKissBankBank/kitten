@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update margin on project Informations on `CrowdfundingCard`.
+
 ## [2.48.0] - 2019-12-17
 
 Feature:

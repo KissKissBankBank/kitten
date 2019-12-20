@@ -23,14 +23,12 @@ const StyledContainer = styled.div`
 `
 
 const StyledInfo = styled.div`
-  margin-right: ${pxToRem(15)};
+  & + & {
+    margin-left: ${pxToRem(15)};
 
-  &:last-child {
-    margin-right: 0;
-  }
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    margin-right: ${pxToRem(30)};
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      margin-left: ${pxToRem(20)};
+    }
   }
 `
 
