@@ -43,7 +43,7 @@ var StyledContainer = _styledComponents.default.div.withConfig({
 var StyledInfo = _styledComponents.default.div.withConfig({
   displayName: "informations__StyledInfo",
   componentId: "qg8b01-1"
-})(["margin-right:", ";&:last-child{margin-right:0;}@media (min-width:", "){margin-right:", ";}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(30));
+})(["& + &{margin-left:", ";@media (min-width:", "){margin-left:", ";}}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(20));
 
 var StyledInfoLoading = _styledComponents.default.span.withConfig({
   displayName: "informations__StyledInfoLoading",
