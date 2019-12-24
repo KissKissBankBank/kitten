@@ -50,6 +50,9 @@ storiesOf('Buttons', module)
             largeGutter={boolean('Large gutter', false)}
             titleRegular={boolean('Regular title', false)}
             textRegular={boolean('Regular text', false)}
+            avatarProps={{
+              src: 'https://placehold.it/100x100/caf4fe/caf4fe',
+            }}
           />
         </GridCol>
       </Grid>

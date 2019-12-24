@@ -83,7 +83,7 @@ ButtonImageWithText.defaultProps = {
   textRegular: false,
   largeGutter: false,
   avatarProps: {
-    src: 'https://placehold.it/100x100/caf4fe/caf4fe',
+    src: '',
     alt: '',
   },
 }
