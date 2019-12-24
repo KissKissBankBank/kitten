@@ -13,6 +13,9 @@ describe('<ButtonImageWithText />', () => {
           largeGutter={false}
           titleRegular={false}
           textRegular={false}
+          avatarProps={{
+            src: 'https://placehold.it/100x100/caf4fe/caf4fe',
+          }}
         />,
       )
       .toJSON()
