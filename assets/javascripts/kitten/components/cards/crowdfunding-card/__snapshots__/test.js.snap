@@ -55,30 +55,26 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   line-height: 1;
 }
 
-.c7 {
-  margin-right: 0.9375rem;
+.c8 + .c7 {
+  margin-left: 0.9375rem;
 }
 
-.c7:last-child {
-  margin-right: 0;
-}
-
-.c8 {
+.c9 {
   font-size: 0.75rem;
 }
 
-.c11 {
+.c12 {
   max-width: 100%;
 }
 
-.c13 {
+.c14 {
   position: relative;
   height: 0.125rem;
   background: #eee;
   height: 4px;
 }
 
-.c13::after {
+.c14::after {
   content: '';
   position: absolute;
   top: 0;
@@ -91,11 +87,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   background: #19b4fa;
 }
 
-.c10.is-disabled .c13::after {
+.c11.is-disabled .c14::after {
   background: #d8d8d8;
 }
 
-.c9 {
+.c10 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -112,20 +108,20 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   margin-bottom: 0.625rem;
 }
 
-.c12 {
+.c13 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c14 {
+.c15 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-left: calc(2 * 0.625rem);
 }
 
-.c15 {
+.c16 {
   position: absolute;
   top: 0;
   right: 0;
@@ -165,20 +161,20 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 @media (min-width:48rem) {
-  .c7 {
-    margin-right: 1.875rem;
+  .c8 + .c7 {
+    margin-left: 1.25rem;
   }
 }
 
 @media (min-width:48rem) {
-  .c9 {
+  .c10 {
     padding: 0 0.625rem;
     margin-bottom: 1.25rem;
   }
 }
 
 @media (max-width:47.9375rem) {
-  .c15 {
+  .c16 {
     display: none;
   }
 }
@@ -248,55 +244,55 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     className="c6"
   >
     <div
-      className="c7"
+      className="c7 c8"
     >
       <span
-        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c8"
+        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c9"
       >
         Lorem ipsum…
       </span>
     </div>
     <div
-      className="c7"
+      className="c7 c8"
     >
       <span
-        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c8"
+        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c9"
       >
         Lorem ipsum…
       </span>
     </div>
     <div
-      className="c7"
+      className="c7 c8"
     >
       <span
-        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c8"
+        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c9"
       >
         Lorem ipsum…
       </span>
     </div>
   </div>
   <div
-    className="c9"
+    className="c10"
   >
     <div
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c10 c11 c12"
+      className="c11 c12 c13"
       role="progressbar"
     >
       <div
-        className="c13"
+        className="c14"
       />
     </div>
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c14 k-u-hidden@s-down"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c15 k-u-hidden@s-down"
     >
       42 %
     </span>
   </div>
   <div
-    className="c15"
+    className="c16"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
