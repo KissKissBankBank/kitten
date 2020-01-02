@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Use `styled-components` instead of `Radium` to `LinkBox` component.
+- Feature: Use `styled-components` instead of `Radium` to `ButtonImageWithText`.
 
 ## [2.48.1] - 2019-12-20
 
