@@ -50,7 +50,7 @@ export class HeaderItem extends React.Component {
   }
 }
 
-export const headerHeight = 65
+export const HEADER_HEIGHT = 65
 
 Header.defaultProps = {
   fixed: false,
