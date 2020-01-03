@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Use `styled-components` instead of `Radium` to `LinkBox` component.
 - Feature: Use `styled-components` instead of `Radium` to `ButtonImageWithText`.
+- Feature: Add `HEADER_HEIGHT` export to `Header` component.
 
 ## [2.48.1] - 2019-12-20
 
