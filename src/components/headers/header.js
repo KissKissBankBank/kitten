@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.HeaderItem = exports.HeaderItems = exports.Header = void 0;
+exports.HEADER_HEIGHT = exports.HeaderItem = exports.HeaderItems = exports.Header = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -124,6 +124,8 @@ function (_React$Component3) {
 }(_react.default.Component);
 
 exports.HeaderItem = HeaderItem;
+var HEADER_HEIGHT = 65;
+exports.HEADER_HEIGHT = HEADER_HEIGHT;
 Header.defaultProps = {
   fixed: false
 };
