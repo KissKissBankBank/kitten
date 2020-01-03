@@ -32,7 +32,6 @@
     "lodash": "4.17.15",
     "modularscale-js": "3.0.1",
     "modularscale-sass": "3.0.10",
-    "polished": "3.4.2",
     "prop-types": "15.7.2",
     "prop-types-extra": "1.1.0",
     "pubsub-js": "1.7.0",
