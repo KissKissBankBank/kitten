@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `.k-u-line-height-*` utilities.
 - Feature: Add `hexToRgba` helper, remove `polished` dependency.
 - Fix: Fix `Modal` animation and mobile styles.
 
