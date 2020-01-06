@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useState } from 'react'
+import React, { useRef, useCallback, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes, css } from 'styled-components'
 import TYPOGRAPHY from '../../constants/typography-config'
@@ -28,11 +28,11 @@ const StyledButton = styled(({ buttonModifier, ...others }) => (
   ${({ buttonModifier }) => modifierStyles(buttonModifier)};
 `
 
-const fadeIn = keyframes`
-  0% {
+const fadeInAndOut = keyframes`
+  0%, 100% {
    opacity: 0;
   }
-  100% {
+  10%, 90% {
     opacity: 1;
   }
 `
@@ -91,7 +91,7 @@ const StyledArrowContainer = styled(ArrowContainer)`
   position: absolute;
   left: 0;
   bottom: -${pxToRem(50)};
-  animation: 0.5s ${fadeIn} ease-out;
+  animation: 3s ${fadeInAndOut} ease-out;
 `
 
 export const TextCopy = ({
@@ -110,6 +110,13 @@ export const TextCopy = ({
     range.selectNode(textRef.current)
     window.getSelection().addRange(range)
   })
+  useEffect(() => {
+    let hideTimeout
+    if (shouldShowMessage) {
+      hideTimeout = setTimeout(() => isMessageShown(false), 3000)
+    }
+    return () => clearTimeout(hideTimeout)
+  }, [shouldShowMessage])
   const copyText = useCallback(() => {
     isMessageShown(false)
     if (textToCopy) {
