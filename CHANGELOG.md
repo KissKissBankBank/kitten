@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature: Add `.k-u-line-height-*` utilities.
+
 ## [2.49.0] - 2020-01-03
 
 Features:
