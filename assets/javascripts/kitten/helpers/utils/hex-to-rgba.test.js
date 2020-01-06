@@ -1,4 +1,4 @@
-import { hexToRgba } from '../../helpers/utils/hex-to-rgba'
+import { hexToRgba } from './hex-to-rgba'
 
 describe('hexToRgba()', () => {
   it('converts short hex color', () => {
@@ -17,5 +17,17 @@ describe('hexToRgba()', () => {
     const hex = '3f6f9f'
 
     expect(hexToRgba(hex)).toBe('rgba(63,111,159,1)')
+  })
+
+  it('handles bad hex', () => {
+    const hex = '123xyz'
+
+    expect(hexToRgba(hex)).toBe('rgba(0,0,0,1)')
+  })
+
+  it('handles null', () => {
+    const hex = null
+
+    expect(hexToRgba(hex)).toBe('rgba(0,0,0,1)')
   })
 })
