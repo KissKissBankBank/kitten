@@ -16,8 +16,8 @@ const GlobalStyle = createGlobalStyle`
 
   .k-Modal__content {
     position: relative;
-    max-height: calc(100vh - ${pxToRem(20)} * 2);
-    max-width: calc(100vw - ${pxToRem(20)} * 2);
+    max-height: 100vh;
+    max-width: 100vw;
 
     background-color: ${COLORS.background1};
     text-align: center;
@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
       height: 100%;
     }
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      max-height: calc(100vh - ${pxToRem(20)} * 2);
       max-width: ${pxToRem(690)};
       padding-left: ${pxToRem(110)};
       padding-right: ${pxToRem(110)};
