@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   .k-Modal__content {
     position: relative;
-    max-height: calc(100vh - ${pxToRem(20)} * 2);
+    max-height: calc(100% - ${pxToRem(20)} * 2);
     max-width: calc(100vw - ${pxToRem(20)} * 2);
 
     background-color: ${COLORS.background1};
@@ -67,7 +67,7 @@ const AnimatedGlobalStyle = createGlobalStyle`
   }
   .k-Modal__content {
     opacity: 0;
-    margin-top: 33%;
+    transform: scale(.94);
   }
 
   .k-Modal__overlay--afterOpen {
@@ -75,8 +75,8 @@ const AnimatedGlobalStyle = createGlobalStyle`
     opacity: 1;
   }
   .k-Modal--afterOpen {
-    transition: opacity .3s ease, margin-top .5s ease;
-    margin-top: 0;
+    transition: opacity .3s ease, transform .3s ease;
+    transform: scale(1);
     opacity: 1;
   }
 
@@ -84,7 +84,8 @@ const AnimatedGlobalStyle = createGlobalStyle`
     opacity: 0;
   }
   .k-Modal--beforeClose {
-    margin-top: -33%;
+    transition: opacity .3s ease, transform .5s ease;
+    transform: scale(1.06);
     opacity: 0;
   }
 `

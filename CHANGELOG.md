@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `hexToRgba` helper, remove `polished` dependency.
+- Fix: Fix `Modal` animation and mobile styles.
 
 ## [2.49.0] - 2020-01-03
 
