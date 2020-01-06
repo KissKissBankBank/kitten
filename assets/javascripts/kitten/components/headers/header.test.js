@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, HeaderItems, HeaderItem } from './header'
+import { Header, HeaderItems, HeaderItem, HEADER_HEIGHT } from './header'
 
 describe('<Header />', () => {
   const header = shallow(
@@ -98,5 +98,11 @@ describe('<HeaderItem />', () => {
     it('renders a <nav />', () => {
       expect(headerItem.is('nav')).toBe(true)
     })
+  })
+})
+
+describe('HEADER_HEIGHT', () => {
+  it('is equal to 65', () => {
+    expect(HEADER_HEIGHT).toBe(65)
   })
 })
