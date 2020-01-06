@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `Modal` animation.
+- Fix: Fix `Modal` animation and mobile styles.
 
 ## [2.49.0] - 2020-01-03
 
