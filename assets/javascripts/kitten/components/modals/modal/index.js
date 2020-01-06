@@ -28,6 +28,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     overflow: scroll;
 
+    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+      width: 100vw;
+      height: 100%;
+    }
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       max-width: ${pxToRem(690)};
       padding-left: ${pxToRem(110)};

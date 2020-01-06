@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
       width: 100vw;
-      height: 100vh;
+      height: 100%;
     }
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       max-height: calc(100vh - ${pxToRem(20)} * 2);
