@@ -19,7 +19,7 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _container = require("../../../components/grid/container");
 
-var _polished = require("polished");
+var _hexToRgba = require("../../../helpers/utils/hex-to-rgba");
 
 var gradientWidth = 20;
 var StyledContainer = (0, _styledComponents.default)(_container.Container).withConfig({
@@ -33,11 +33,11 @@ var scrollableContainerStyle = function scrollableContainerStyle(_ref) {
   return (0, _styledComponents.css)(["display:flex;white-space:nowrap;overflow-x:auto;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;&::-webkit-scrollbar{display:none;}&:before,&:after{content:'';display:block;position:absolute;top:0;bottom:0;pointer-events:none;touch-action:none;}", " ", ""], function (_ref2) {
     var displayLeftGradient = _ref2.displayLeftGradient,
         shadowColor = _ref2.shadowColor;
-    return displayLeftGradient && (0, _styledComponents.css)(["&:before{left:0;width:", ";background-image:linear-gradient( to right,", ",", " );}"], (0, _typography.pxToRem)(gradientWidth), (0, _polished.rgba)(shadowColor, 1), (0, _polished.rgba)(shadowColor, 0));
+    return displayLeftGradient && (0, _styledComponents.css)(["&:before{left:0;width:", ";background-image:linear-gradient( to right,", ",", " );}"], (0, _typography.pxToRem)(gradientWidth), (0, _hexToRgba.hexToRgba)(shadowColor, 1), (0, _hexToRgba.hexToRgba)(shadowColor, 0));
   }, function (_ref3) {
     var displayRightGradient = _ref3.displayRightGradient,
         shadowColor = _ref3.shadowColor;
-    return displayRightGradient && (0, _styledComponents.css)(["&:after{right:0;width:", ";background-image:linear-gradient( to left,", ",", " );}"], (0, _typography.pxToRem)(gradientWidth), (0, _polished.rgba)(shadowColor, 1), (0, _polished.rgba)(shadowColor, 0));
+    return displayRightGradient && (0, _styledComponents.css)(["&:after{right:0;width:", ";background-image:linear-gradient( to left,", ",", " );}"], (0, _typography.pxToRem)(gradientWidth), (0, _hexToRgba.hexToRgba)(shadowColor, 1), (0, _hexToRgba.hexToRgba)(shadowColor, 0));
   });
 };
 

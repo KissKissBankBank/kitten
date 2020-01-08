@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
       width: 100vw;
-      height: 100vh;
+      height: 100%;
     }
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       max-height: calc(100vh - ${pxToRem(20)} * 2);
@@ -64,7 +64,7 @@ const GlobalStyle = createGlobalStyle`
   }
   .k-MobileModal__content {
     opacity: 0;
-    margin-top: 33%;
+    transform: scale(.94);
   }
 
   .k-MobileModal__overlay--afterOpen {
@@ -72,8 +72,8 @@ const GlobalStyle = createGlobalStyle`
     opacity: 1;
   }
   .k-MobileModal--afterOpen {
-    transition: opacity .3s ease, margin-top .5s ease;
-    margin-top: 0;
+    transition: opacity .3s ease, transform .3s ease;
+    transform: scale(1);
     opacity: 1;
   }
 
@@ -81,7 +81,8 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0;
   }
   .k-MobileModal--beforeClose {
-    margin-top: -33%;
+    transition: opacity .3s ease, transform .5s ease;
+    transform: scale(1.06);
     opacity: 0;
   }
 `
