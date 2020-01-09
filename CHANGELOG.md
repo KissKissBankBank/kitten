@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 - Feature: Make copy text message disapear after 3sec on `<TextCopy />`. 
-- Feature: Update copy text message size of `<TextCopy />` to `micro`. 
+- Fix: Update copy text message size of `<TextCopy />` to `micro`. 
 
 ## [2.50.0] - 2020-01-06
 
