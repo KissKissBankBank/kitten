@@ -170,7 +170,8 @@ export const TextCopy = ({
         {description && <VisuallyHidden>{description}</VisuallyHidden>}
         <StyledText
           weight="light"
-          size="default"
+          size="micro"
+          lineHeight="normal"
           forceOneLine={forceOneLine}
           onClick={selectText}
           buttonText={buttonText}
