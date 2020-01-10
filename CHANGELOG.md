@@ -3,8 +3,10 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Feature: Make copy text message disapear after 3sec on `<TextCopy />`. 
-- Fix: Update copy text message size of `<TextCopy />` to `micro`. 
+
+- Feature: Add `k-u-link-primary1` and `k-u-link-background1` utilities.
+- Feature: Make copy text message disapear after 3sec on `<TextCopy />`.
+- Fix: Update copy text message size of `<TextCopy />` to `micro`.
 
 ## [2.50.0] - 2020-01-06
 
