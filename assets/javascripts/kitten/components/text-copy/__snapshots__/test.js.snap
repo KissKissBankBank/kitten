@@ -5,7 +5,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
   className="text-copy__Wrapper-sc-1ikj7bl-1 hxEtXb"
 >
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 ksGaXM"
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 ksGaXM"
     onClick={[Function]}
   >
     <span>
@@ -43,7 +43,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     This is a description
   </span>
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 gYedjB"
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 gYedjB"
     onClick={[Function]}
   >
     <span>
@@ -71,7 +71,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
     This is a description
   </span>
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 ksGaXM"
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 ksGaXM"
     onClick={[Function]}
   >
     <span>
@@ -109,7 +109,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
     This is a description
   </span>
   <span
-    className="k-u-size-default k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 EtpoX"
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 EtpoX"
     onClick={[Function]}
   >
     <span>
