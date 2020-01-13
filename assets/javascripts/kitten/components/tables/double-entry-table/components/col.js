@@ -8,7 +8,7 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 const colStyle = css`
   height: ${pxToRem(68)};
   padding: 0 ${pxToRem(20)};
-  border: ${pxToRem(2)} solid rgba(0, 0, 0, 6.7%);
+  border: ${pxToRem(2)} solid rgba(0, 0, 0, 0.067);
   font-size: ${stepToRem(-1)};
   line-height: 1.3;
   box-sizing: border-box;
@@ -51,7 +51,7 @@ export const TitleCol = styled(props => <th scope="row" {...props} />)`
 export const HeaderCol = styled(props => <th scope="column" {...props} />)`
   ${colStyle}
   ${TYPOGRAPHY.fontStyles.bold}
-  background: rgba(0,0,0,1.6%);
+  background: rgba(0,0,0,.016);
   border-left-width: 0;
   width: ${pxToRem(135)};
 
