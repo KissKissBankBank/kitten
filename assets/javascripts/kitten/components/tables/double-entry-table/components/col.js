@@ -14,6 +14,11 @@ const colStyle = css`
   box-sizing: border-box;
   text-align: left;
   width: ${pxToRem(120)} !important;
+
+  @media screen and (min-width: 0\0) {
+    /* IE */
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+  }
 `
 
 const firstColStyle = css`
@@ -49,6 +54,11 @@ export const HeaderCol = styled(props => <th scope="column" {...props} />)`
   background: rgba(0,0,0,1.6%);
   border-left-width: 0;
   width: ${pxToRem(135)};
+
+  @media screen and (min-width: 0\0) {
+    /* IE */
+    background: ${COLORS.background2};
+  }
 
   &:first-child {
     background: ${COLORS.background2};

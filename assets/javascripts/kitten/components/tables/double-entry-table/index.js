@@ -43,6 +43,11 @@ const StyledTableContainer = styled.div`
   /* Opera doesn't support this in the shorthand */
   background-attachment: local, local, scroll, scroll;
 
+  @media screen and (min-width: 0\0) {
+    /* IE */
+    background: ${COLORS.background1};
+  }
+
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
     background-position: ${pxToRem(210)}, 100%;
   }
@@ -53,6 +58,11 @@ const StyledTable = styled.table`
   border-spacing: 0;
   table-layout: fixed;
   border-collapse: separate;
+
+  @media screen and (min-width: 0\0) {
+    /* IE */
+    border-collapse: collapse;
+  }
 `
 
 export const DoubleEntryTable = props => (
