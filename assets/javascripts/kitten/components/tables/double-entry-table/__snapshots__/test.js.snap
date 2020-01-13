@@ -5,10 +5,10 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
   className="double-entry-table__StyledContainer-sc-155z2j1-0 gokPmz"
 >
   <div
-    className="double-entry-table__StyledTableContainer-sc-155z2j1-1 jMxoFN"
+    className="double-entry-table__StyledTableContainer-sc-155z2j1-1 dqlYgU"
   >
     <table
-      className="double-entry-table__StyledTable-sc-155z2j1-2 cnpwFb"
+      className="double-entry-table__StyledTable-sc-155z2j1-2 chApSZ"
       id="DestBoubleEntryTable"
     >
       <thead
@@ -16,19 +16,19 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
       >
         <tr>
           <th
-            className="col__HeaderCol-sc-11pa91d-2 fhLHmp"
+            className="col__HeaderCol-sc-11pa91d-2 qakfj"
             scope="column"
           >
             Header 1
           </th>
           <th
-            className="col__HeaderCol-sc-11pa91d-2 fhLHmp"
+            className="col__HeaderCol-sc-11pa91d-2 qakfj"
             scope="column"
           >
             Header 2
           </th>
           <th
-            className="col__HeaderCol-sc-11pa91d-2 fhLHmp"
+            className="col__HeaderCol-sc-11pa91d-2 qakfj"
             scope="column"
           >
             Header 3
@@ -40,18 +40,18 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
           isHighlighted={true}
         >
           <th
-            className="col__TitleCol-sc-11pa91d-1 iqXiCk"
+            className="col__TitleCol-sc-11pa91d-1 jSqcNs"
             scope="row"
           >
             Content 1
           </th>
           <td
-            className="col__Col-sc-11pa91d-0 bgCGyq"
+            className="col__Col-sc-11pa91d-0 fVaKBm"
           >
             Content 2
           </td>
           <td
-            className="col__Col-sc-11pa91d-0 bgCGyq"
+            className="col__Col-sc-11pa91d-0 fVaKBm"
           >
             Content 3
           </td>
@@ -60,18 +60,18 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
           className="customRowClass"
         >
           <th
-            className="col__TitleCol-sc-11pa91d-1 iqXiCk"
+            className="col__TitleCol-sc-11pa91d-1 jSqcNs"
             scope="row"
           >
             Content 1
           </th>
           <td
-            className="col__Col-sc-11pa91d-0 bgCGyq"
+            className="col__Col-sc-11pa91d-0 fVaKBm"
           >
             Content 2
           </td>
           <td
-            className="col__Col-sc-11pa91d-0 bgCGyq"
+            className="col__Col-sc-11pa91d-0 fVaKBm"
           >
             Content 3
           </td>
