@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DoubleEntryTable /> with a complete structure and custom classes matches with snapshot 1`] = `
+<div
+  className="double-entry-table__StyledContainer-sc-155z2j1-0 gokPmz"
+>
+  <div
+    className="double-entry-table__StyledTableContainer-sc-155z2j1-1 dscjfP"
+  >
+    <table
+      className="double-entry-table__StyledTable-sc-155z2j1-2 cnpwFb"
+      id="DestBoubleEntryTable"
+    >
+      <thead
+        className="customHeaderClass"
+      >
+        <tr>
+          <th
+            className="col__HeaderCol-sc-11pa91d-2 fhLHmp"
+            scope="column"
+          >
+            Header 1
+          </th>
+          <th
+            className="col__HeaderCol-sc-11pa91d-2 fhLHmp"
+            scope="column"
+          >
+            Header 2
+          </th>
+          <th
+            className="col__HeaderCol-sc-11pa91d-2 fhLHmp"
+            scope="column"
+          >
+            Header 3
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          isHighlighted={true}
+        >
+          <th
+            className="col__TitleCol-sc-11pa91d-1 iqXiCk"
+            scope="row"
+          >
+            Content 1
+          </th>
+          <td
+            className="col__Col-sc-11pa91d-0 bgCGyq"
+          >
+            Content 2
+          </td>
+          <td
+            className="col__Col-sc-11pa91d-0 bgCGyq"
+          >
+            Content 3
+          </td>
+        </tr>
+        <tr
+          className="customRowClass"
+        >
+          <th
+            className="col__TitleCol-sc-11pa91d-1 iqXiCk"
+            scope="row"
+          >
+            Content 1
+          </th>
+          <td
+            className="col__Col-sc-11pa91d-0 bgCGyq"
+          >
+            Content 2
+          </td>
+          <td
+            className="col__Col-sc-11pa91d-0 bgCGyq"
+          >
+            Content 3
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
