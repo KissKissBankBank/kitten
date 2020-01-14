@@ -31,7 +31,7 @@ const info = {
         headerRowProps={{…}}
       >
         <DoubleEntryTable.HeaderCol />
-          …
+        …
         <DoubleEntryTable.HeaderCol />
       </DoubleEntryTable.Header>
 
@@ -116,7 +116,7 @@ storiesOf('Tables/DoubleEntryTable', module)
                 <DoubleEntryTable.Col>Content 12</DoubleEntryTable.Col>
                 <DoubleEntryTable.Col>Content 13</DoubleEntryTable.Col>
               </DoubleEntryTable.Row>
-              <DoubleEntryTable.Row isHighlighted>
+              <DoubleEntryTable.Row>
                 <DoubleEntryTable.TitleCol>Content 0</DoubleEntryTable.TitleCol>
                 <DoubleEntryTable.Col>Content 1</DoubleEntryTable.Col>
                 <DoubleEntryTable.Col>Content 2</DoubleEntryTable.Col>

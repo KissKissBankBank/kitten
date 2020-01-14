@@ -17,7 +17,7 @@ describe('<DoubleEntryTable />', () => {
             </DoubleEntryTable.Header>
 
             <DoubleEntryTable.Body>
-              <DoubleEntryTable.Row isHighlighted>
+              <DoubleEntryTable.Row>
                 <DoubleEntryTable.TitleCol>Content 1</DoubleEntryTable.TitleCol>
                 <DoubleEntryTable.Col>Content 2</DoubleEntryTable.Col>
                 <DoubleEntryTable.Col>Content 3</DoubleEntryTable.Col>

@@ -16,19 +16,19 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
       >
         <tr>
           <th
-            className="col__HeaderCol-sc-11pa91d-2 qakfj"
+            className="col__HeaderCol-sc-11pa91d-2 gvMEHE"
             scope="column"
           >
             Header 1
           </th>
           <th
-            className="col__HeaderCol-sc-11pa91d-2 qakfj"
+            className="col__HeaderCol-sc-11pa91d-2 gvMEHE"
             scope="column"
           >
             Header 2
           </th>
           <th
-            className="col__HeaderCol-sc-11pa91d-2 qakfj"
+            className="col__HeaderCol-sc-11pa91d-2 gvMEHE"
             scope="column"
           >
             Header 3
@@ -36,22 +36,20 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
         </tr>
       </thead>
       <tbody>
-        <tr
-          isHighlighted={true}
-        >
+        <tr>
           <th
-            className="col__TitleCol-sc-11pa91d-1 jSqcNs"
+            className="col__TitleCol-sc-11pa91d-1 jWDktE"
             scope="row"
           >
             Content 1
           </th>
           <td
-            className="col__Col-sc-11pa91d-0 fVaKBm"
+            className="col__Col-sc-11pa91d-0 heJaFc"
           >
             Content 2
           </td>
           <td
-            className="col__Col-sc-11pa91d-0 fVaKBm"
+            className="col__Col-sc-11pa91d-0 heJaFc"
           >
             Content 3
           </td>
@@ -60,18 +58,18 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
           className="customRowClass"
         >
           <th
-            className="col__TitleCol-sc-11pa91d-1 jSqcNs"
+            className="col__TitleCol-sc-11pa91d-1 jWDktE"
             scope="row"
           >
             Content 1
           </th>
           <td
-            className="col__Col-sc-11pa91d-0 fVaKBm"
+            className="col__Col-sc-11pa91d-0 heJaFc"
           >
             Content 2
           </td>
           <td
-            className="col__Col-sc-11pa91d-0 fVaKBm"
+            className="col__Col-sc-11pa91d-0 heJaFc"
           >
             Content 3
           </td>
