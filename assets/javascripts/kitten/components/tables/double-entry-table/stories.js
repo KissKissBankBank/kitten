@@ -17,7 +17,7 @@ const info = {
 
     ## Import
     ~~~js
-    import { DoubleEntryTable } from '@kisskissbankbank/kitten/src/components/tables/data-table'
+    import { DoubleEntryTable } from '@kisskissbankbank/kitten/src/components/tables/double-entry-table'
     ~~~
 
     ## Usage
