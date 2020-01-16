@@ -109,7 +109,7 @@ export const Comment = ({
   bottomNotes,
   likeButtonProps,
   avatarBadge,
-  ...props
+  id,
 }) => {
   const likeButtonElement = useRef(null)
   const [likeButtonWidth, setLikeButtonWidth] = useState(0)
@@ -124,7 +124,7 @@ export const Comment = ({
   }, [])
 
   return (
-    <StyledGrid>
+    <StyledGrid id={id}>
       <CommentAvatar
         avatarImgProps={avatarImgProps}
         commentDate={commentDate}
