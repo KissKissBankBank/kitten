@@ -1,14 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { stepToRem } from '../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import withContinuousIntersectionObserver from '../../../hoc/with-continuous-intersection-observer'
 
-const NUMBER_ANIM_DELAY = 0.07
+const NUMBER_ANIM_DELAY = 0.05
 const MAX_DIGITS = 11
 const NUMBER_FONT_SIZE = stepToRem(16)
 
 const StyledContainer = styled.section`
-  height: 300vh;
+  height: 110vh;
   background: black;
   color: white;
 `
@@ -72,7 +72,7 @@ const NumberSpan = styled.span`
 
 const LegendBox = styled.span`
   display: block;
-  transition: transform .3s ease-out, opacity .3s ease;
+  transition: transform .3s ease-in-out, opacity .3s ease;
   ${({ transitionDelay, visibleElement }) => {
     if (transitionDelay && visibleElement === 'target') {
       return css`
@@ -87,9 +87,9 @@ const LegendBox = styled.span`
         return '0'
       }
       if (visibleElement === 'after') {
-        return '-50%'
+        return pxToRem(-100)
       }
-      return '100%'
+      return pxToRem(100)
     }});
 
   opacity:
@@ -148,14 +148,14 @@ const AnimatedNumberSection = ({
           <AnimatedNumberItem
             number={45}
             legend="Legend 2"
-            transitionDelay={0.6}
+            transitionDelay={0.4}
             isCompletelyVisible={isCompletelyVisible}
             visibleElement={visibleElement}
           />
           <AnimatedNumberItem
             number="344&nbsp;558&nbsp;022"
             legend="Legend 3"
-            transitionDelay={1.2}
+            transitionDelay={0.8}
             isCompletelyVisible={isCompletelyVisible}
             visibleElement={visibleElement}
           />
