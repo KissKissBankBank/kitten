@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Update copy text message size of `<TextCopy />` to `micro`. 
 - Feature: Add `useContinuousIntersectionObserver` hook.
 - Feature: Add `withContinuousIntersectionObserver` HOC.
+- Feature: Add `AnimatedNumber` component.
 
 ## [2.50.0] - 2020-01-06
 
