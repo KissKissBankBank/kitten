@@ -94,13 +94,18 @@ const toggleableListTableInfo = {
         listProps={{…}}
       >
         <ListTable.Col>
-          <button type="button" onClick={() => setDisplayState(!displayed)}>
+          <button
+            type="button"
+            onClick={() => setDisplayState(!displayed)}
+            aria-expanded={displayed}
+            aria-controls="toggleableListTable"
+          >
             Voir les détails
           </button>
         </ListTable.Col>
       </ListTable.Header>
       { displayed && (
-        <ListTable.Body>
+        <ListTable.Body id="toggleableListTable">
           <ListTable.Row isHighlighted>
             <ListTable.Col>
               …
@@ -297,7 +302,7 @@ const Row = styled(ListTable.Row)`
     padding-right: ${pxToRem(CONTAINER_PADDING / 2)};
   }
 
-  &.even {
+  &:nth-of-type(even) {
     background-color: ${COLORS.background2};
   }
 
@@ -564,6 +569,8 @@ storiesOf('Tables/ListTable', module)
                 <ToggleButton
                   type="button"
                   onClick={() => setDisplayState(!displayed)}
+                  aria-expanded={displayed}
+                  aria-controls="toggleableListTable"
                 >
                   Voir les détails
                   <ArrowIcon
@@ -574,7 +581,7 @@ storiesOf('Tables/ListTable', module)
               </Col>
             </HeaderRow>
             {displayed && (
-              <ListTable.Body>
+              <ListTable.Body id="toggleableListTable">
                 <Row>
                   <Col width={defaultColWidth}>
                     <CellWithLabelValue
@@ -606,7 +613,7 @@ storiesOf('Tables/ListTable', module)
                     </p>
                   </Col>
                 </Row>
-                <Row className="even">
+                <Row>
                   <Col width={defaultColWidth}>
                     <CellWithLabelValue
                       label="Urba 133"
@@ -668,7 +675,7 @@ storiesOf('Tables/ListTable', module)
                     </p>
                   </Col>
                 </Row>
-                <Row className="even">
+                <Row>
                   <Col width={defaultColWidth}>
                     <CellWithLabelValue
                       label="Urba 133"
