@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Make copy text message disapear after 3sec on `<TextCopy />`. 
 - Feature: Add `id` prop to `<Comment />`.
 - Fix: Update copy text message size of `<TextCopy />` to `micro`. 
+- Feature: Add `useContinuousIntersectionObserver` hook.
+- Feature: Add `withContinuousIntersectionObserver` HOC.
 
 ## [2.50.0] - 2020-01-06
 
