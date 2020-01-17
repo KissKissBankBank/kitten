@@ -3,10 +3,11 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 - Feature: Add `toggleable` `ListTable` story example.
 - Feature: Make copy text message disappear after 3sec on `<TextCopy />`.
 - Feature: Add `id` prop to `<Comment />`.
-- Fix: Update copy text message size of `<TextCopy />` to `micro`. 
+- Fix: Update copy text message size of `<TextCopy />` to `micro`.
 
 ## [2.50.0] - 2020-01-06
 
