@@ -75,6 +75,8 @@ const withContinuousIntersectionObserver = WrappedComponent => props => {
           isPartlyVisible={isPartlyVisible}
           isCompletelyVisible={isCompletelyVisible}
           visibleElement={visibleElement}
+          isBeforeVisible={isPartlyVisible && visibleElement === 'before'}
+          isAfterVisible={isPartlyVisible && visibleElement === 'after'}
         />
       </div>
       <div ref={afterEl} {...props.afterComponentProps} />
