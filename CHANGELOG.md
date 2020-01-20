@@ -5,7 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `DoubleEntryTable` component.
-- Feature: Make copy text message disapear after 3sec on `<TextCopy />`.
+- Feature: Add `k-u-link-primary1` and `k-u-link-background1` utilities.
+- Feature: Add `toggleable` `ListTable` story example.
+- Feature: Make copy text message disappear after 3sec on `<TextCopy />`.
+- Feature: Add `id` prop to `<Comment />`.
 - Fix: Update copy text message size of `<TextCopy />` to `micro`.
 
 ## [2.50.0] - 2020-01-06
