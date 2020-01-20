@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `DoubleEntryTable` component.
 - Feature: Add `k-u-link-primary1` and `k-u-link-background1` utilities.
 - Feature: Add `toggleable` `ListTable` story example.
 - Feature: Make copy text message disappear after 3sec on `<TextCopy />`.

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DoubleEntryTable /> with a complete structure and custom classes matches with snapshot 1`] = `
+<div
+  className="double-entry-table__StyledContainer-sc-155z2j1-0 gokPmz"
+>
+  <div
+    className="double-entry-table__StyledTableContainer-sc-155z2j1-1 dqlYgU"
+  >
+    <table
+      className="double-entry-table__StyledTable-sc-155z2j1-2 chApSZ"
+      id="DestBoubleEntryTable"
+    >
+      <thead
+        className="customHeaderClass"
+      >
+        <tr>
+          <th
+            className="col__HeaderCol-sc-11pa91d-2 gvMEHE"
+            scope="column"
+          >
+            Header 1
+          </th>
+          <th
+            className="col__HeaderCol-sc-11pa91d-2 gvMEHE"
+            scope="column"
+          >
+            Header 2
+          </th>
+          <th
+            className="col__HeaderCol-sc-11pa91d-2 gvMEHE"
+            scope="column"
+          >
+            Header 3
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th
+            className="col__TitleCol-sc-11pa91d-1 jWDktE"
+            scope="row"
+          >
+            Content 1
+          </th>
+          <td
+            className="col__Col-sc-11pa91d-0 heJaFc"
+          >
+            Content 2
+          </td>
+          <td
+            className="col__Col-sc-11pa91d-0 heJaFc"
+          >
+            Content 3
+          </td>
+        </tr>
+        <tr
+          className="customRowClass"
+        >
+          <th
+            className="col__TitleCol-sc-11pa91d-1 jWDktE"
+            scope="row"
+          >
+            Content 1
+          </th>
+          <td
+            className="col__Col-sc-11pa91d-0 heJaFc"
+          >
+            Content 2
+          </td>
+          <td
+            className="col__Col-sc-11pa91d-0 heJaFc"
+          >
+            Content 3
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
