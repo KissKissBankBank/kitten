@@ -39,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
     position: absolute;
     top: 0;
     right: ${pxToRem(50)};
+
+    button {
+      margin: 0;
+    }
   }
 
   .k-Modal__close--fixed {
