@@ -50,6 +50,10 @@
     position: absolute;
     top: 0;
     right: k-px-to-rem(50px);
+
+    button {
+      margin: 0;
+    }
   }
 
   .k-Modal__close--fixed {
