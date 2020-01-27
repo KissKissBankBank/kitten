@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import withContinuousIntersectionObserver from '../../../hoc/with-continuous-intersection-observer'
+import { pxToRem, stepToRem } from '../../helpers/utils/typography'
+import withContinuousIntersectionObserver from '../../hoc/with-continuous-intersection-observer'
 
 const NUMBER_ANIM_DELAY = 0.05
 const MAX_DIGITS = 11

@@ -25,7 +25,10 @@ const StyledSection = styled.section`
   align-items: center;
 `
 
-storiesOf('Animated/Number in Box', module).add('default', () => {
+storiesOf(
+  'IntersectionObserver/withContinuousIntersectionObserver',
+  module,
+).add('Animated numbers on scroll w/ scroll direction', () => {
   return (
     <StyledMain>
       <GlobalStyle />
