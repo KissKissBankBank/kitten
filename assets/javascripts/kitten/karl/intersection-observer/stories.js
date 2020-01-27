@@ -22,7 +22,7 @@ const ObservedComponent = ({ children, ...props }) => {
   )
 }
 
-storiesOf('IntersectionObserverClass', module).add(
+storiesOf('IntersectionObserver/IntersectionObserverClass', module).add(
   'using IntersectionObserverClass hook',
   () => {
     return (
