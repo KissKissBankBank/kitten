@@ -11,8 +11,6 @@ exports.Comment = void 0;
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
 var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
@@ -91,7 +89,7 @@ var Comment = function Comment(_ref3) {
       bottomNotes = _ref3.bottomNotes,
       likeButtonProps = _ref3.likeButtonProps,
       avatarBadge = _ref3.avatarBadge,
-      props = (0, _objectWithoutProperties2.default)(_ref3, ["text", "ownerName", "avatarImgProps", "commentDate", "bottomNotes", "likeButtonProps", "avatarBadge"]);
+      id = _ref3.id;
   var likeButtonElement = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(0),
@@ -106,7 +104,9 @@ var Comment = function Comment(_ref3) {
 
     setLikeButtonWidth(elementWidth + marginLeftAndRight);
   }, []);
-  return _react.default.createElement(StyledGrid, null, _react.default.createElement(_commentAvatar.CommentAvatar, {
+  return _react.default.createElement(StyledGrid, {
+    id: id
+  }, _react.default.createElement(_commentAvatar.CommentAvatar, {
     avatarImgProps: avatarImgProps,
     commentDate: commentDate,
     avatarBadge: avatarBadge

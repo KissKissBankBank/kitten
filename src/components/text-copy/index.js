@@ -48,7 +48,7 @@ var StyledButton = (0, _styledComponents.default)(function (_ref) {
   var buttonModifier = _ref2.buttonModifier;
   return (0, _modifierStyles.modifierStyles)(buttonModifier);
 });
-var fadeIn = (0, _styledComponents.keyframes)(["0%{opacity:0;}100%{opacity:1;}"]);
+var fadeInAndOut = (0, _styledComponents.keyframes)(["0%,100%{opacity:0;}10%,90%{opacity:1;}"]);
 var Wrapper = (0, _styledComponents.default)(function (_ref3) {
   var buttonText = _ref3.buttonText,
       others = (0, _objectWithoutProperties2.default)(_ref3, ["buttonText"]);
@@ -88,7 +88,7 @@ var IconWrapper = _styledComponents.default.div.withConfig({
 var StyledArrowContainer = (0, _styledComponents.default)(_arrowContainer.ArrowContainer).withConfig({
   displayName: "text-copy__StyledArrowContainer",
   componentId: "sc-1ikj7bl-4"
-})(["position:absolute;left:0;bottom:-", ";animation:0.5s ", " ease-out;"], (0, _typography.pxToRem)(50), fadeIn);
+})(["position:absolute;left:0;bottom:-", ";animation:3s ", " ease-out;"], (0, _typography.pxToRem)(50), fadeInAndOut);
 
 var TextCopy = function TextCopy(_ref8) {
   var children = _ref8.children,
@@ -110,6 +110,19 @@ var TextCopy = function TextCopy(_ref8) {
     range.selectNode(textRef.current);
     window.getSelection().addRange(range);
   });
+  (0, _react.useEffect)(function () {
+    var hideTimeout;
+
+    if (shouldShowMessage) {
+      hideTimeout = setTimeout(function () {
+        return isMessageShown(false);
+      }, 3000);
+    }
+
+    return function () {
+      return clearTimeout(hideTimeout);
+    };
+  }, [shouldShowMessage]);
   var copyText = (0, _react.useCallback)(function () {
     isMessageShown(false);
 
@@ -154,7 +167,8 @@ var TextCopy = function TextCopy(_ref8) {
     buttonText: buttonText
   }, description && _react.default.createElement(_visuallyHidden.VisuallyHidden, null, description), _react.default.createElement(StyledText, {
     weight: "light",
-    size: "default",
+    size: "micro",
+    lineHeight: "normal",
     forceOneLine: forceOneLine,
     onClick: selectText,
     buttonText: buttonText

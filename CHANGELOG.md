@@ -4,16 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `DoubleEntryTable` component.
-- Feature: Add `k-u-link-primary1` and `k-u-link-background1` utilities.
-- Feature: Add `toggleable` `ListTable` story example.
-- Feature: Make copy text message disappear after 3sec on `<TextCopy />`.
-- Feature: Add `id` prop to `<Comment />`.
 - Feature: Add `useContinuousIntersectionObserver` hook.
 - Feature: Add `withContinuousIntersectionObserver` HOC.
-- Feature: Add `AnimatedNumber` component.
-- Fix: Update copy text message size of `<TextCopy />` to `micro`.
-- Fix: Remove Margin on `Modal__close` button on `Modal`.
+
+## [2.51.0] - 2020-01-20
+
+Features:
+- Add `DoubleEntryTable` component.
+- Add `k-u-link-primary1` and `k-u-link-background1` utilities.
+- Add `toggleable` `ListTable` story example.
+- Make copy text message disappear after 3sec on `<TextCopy />`.
+- Add `id` prop to `<Comment />`.
+
+Fixes:
+- Update copy text message size of `<TextCopy />` to `micro`.
+- Remove Margin on `Modal__close` button on `Modal`.
 
 ## [2.50.0] - 2020-01-06
 
