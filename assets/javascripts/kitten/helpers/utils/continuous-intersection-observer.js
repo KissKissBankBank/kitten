@@ -1,10 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
-import useContinuousIntersectionObserver from '../helpers/utils/continuous-intersection-hook'
+import useContinuousIntersectionObserver from './continuous-intersection-hook'
 
-const withContinuousIntersectionObserver = WrappedComponent => ({
-  options,
-  ...props
-}) => {
+const ContinuousIntersectionObserver = ({ options, render, ...props }) => {
   const beforeEl = useRef(null)
   const afterEl = useRef(null)
   const targetEl = useRef(null)
@@ -74,16 +71,15 @@ const withContinuousIntersectionObserver = WrappedComponent => ({
     <>
       <div ref={beforeEl} {...props.beforeComponentProps} />
       <div ref={targetEl} {...props.targetComponentProps}>
-        <WrappedComponent
-          {...props}
-          isPartlyVisible={isPartlyVisible}
-          isCompletelyVisible={isCompletelyVisible}
-          visibleElement={visibleElement}
-        />
+        {render({
+          isPartlyVisible: isPartlyVisible,
+          isCompletelyVisible: isCompletelyVisible,
+          visibleElement: visibleElement,
+        })}
       </div>
       <div ref={afterEl} {...props.afterComponentProps} />
     </>
   )
 }
 
-export default withContinuousIntersectionObserver
+export default ContinuousIntersectionObserver
