@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.52.0] - 2020-01-27
+
 - Feature: Add `useContinuousIntersectionObserver` hook.
 - Feature: Add `ContinuousIntersectionObserver` component with Render Prop.
 
