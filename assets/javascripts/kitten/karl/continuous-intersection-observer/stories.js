@@ -49,18 +49,15 @@ storiesOf('IntersectionObserver/ContinuousIntersectionObserver', module)
         <ContinuousIntersectionObserver
           beforeComponentProps={{ style: { scrollSnapAlign: 'none' } }}
           afterComponentProps={{ style: { scrollSnapAlign: 'none' } }}
-          render={({
-            isPartlyVisible,
-            isCompletelyVisible,
-            visibleElement,
-          }) => (
+        >
+          {({ isPartlyVisible, isCompletelyVisible, visibleElement }) => (
             <AnimatedNumbers
               isPartlyVisible={isPartlyVisible}
               isCompletelyVisible={isCompletelyVisible}
               visibleElement={visibleElement}
             />
           )}
-        />
+        </ContinuousIntersectionObserver>
         <StyledSection>3</StyledSection>
       </StyledMain>
     )

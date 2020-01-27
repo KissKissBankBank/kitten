@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import useContinuousIntersectionObserver from './continuous-intersection-hook'
 
-const ContinuousIntersectionObserver = ({ options, render, ...props }) => {
+const ContinuousIntersectionObserver = ({ options, children, ...props }) => {
   const beforeEl = useRef(null)
   const afterEl = useRef(null)
   const targetEl = useRef(null)
@@ -71,7 +71,7 @@ const ContinuousIntersectionObserver = ({ options, render, ...props }) => {
     <>
       <div ref={beforeEl} {...props.beforeComponentProps} />
       <div ref={targetEl} {...props.targetComponentProps}>
-        {render({
+        {children({
           isPartlyVisible: isPartlyVisible,
           isCompletelyVisible: isCompletelyVisible,
           visibleElement: visibleElement,
