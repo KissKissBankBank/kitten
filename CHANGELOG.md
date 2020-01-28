@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Style fixes for `DoubleEntryTable` cols.
+## [2.52.1] - 2020-01-28
+
+Fix:
+- Style fixes for `DoubleEntryTable` cols.
 
 ## [2.52.0] - 2020-01-27
 

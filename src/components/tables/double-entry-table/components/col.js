@@ -23,13 +23,13 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _typographyConfig = _interopRequireDefault(require("../../../../constants/typography-config"));
 
-var colStyle = (0, _styledComponents.css)(["height:", ";padding:0 ", ";border:", " solid rgba(0,0,0,0.067);font-size:", ";line-height:1.3;box-sizing:border-box;text-align:left;width:", " !important;@media screen and (min-width:0\0){border:", " solid ", ";}"], (0, _typography.pxToRem)(68), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(2), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(120), (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
+var colStyle = (0, _styledComponents.css)(["height:", ";padding:0 ", ";border:", " solid rgba(0,0,0,0.067);font-size:", ";line-height:1.3;box-sizing:border-box;text-align:left;width:", " !important;vertical-align:middle;@media screen and (min-width:0\0){border:", " solid ", ";}"], (0, _typography.pxToRem)(68), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(2), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(120), (0, _typography.pxToRem)(2), _colorsConfig.default.line1);
 var firstColStyle = (0, _styledComponents.css)(["position:sticky;left:0;@media (min-width:", "){width:", " !important;}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(210));
 
 var Col = _styledComponents.default.td.withConfig({
   displayName: "col__Col",
   componentId: "sc-11pa91d-0"
-})(["", " white-space:nowrap;border-left-width:0;border-top-width:0;"], colStyle);
+})(["", " ", " white-space:nowrap;border-left-width:0;border-top-width:0;"], colStyle, _typographyConfig.default.fontStyles.light);
 
 exports.Col = Col;
 var TitleCol = (0, _styledComponents.default)(function (props) {
