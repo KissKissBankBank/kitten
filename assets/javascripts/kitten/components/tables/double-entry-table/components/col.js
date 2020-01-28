@@ -14,6 +14,7 @@ const colStyle = css`
   box-sizing: border-box;
   text-align: left;
   width: ${pxToRem(120)} !important;
+  vertical-align: middle;
 
   @media screen and (min-width: 0\0) {
     /* IE */
@@ -32,6 +33,7 @@ const firstColStyle = css`
 
 export const Col = styled.td`
   ${colStyle}
+  ${TYPOGRAPHY.fontStyles.light}
   white-space: nowrap;
   border-left-width: 0;
   border-top-width: 0;
