@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Style fixes for `DoubleEntryTable` cols.
+
 ## [2.52.0] - 2020-01-27
 
 - Feature: Add `useContinuousIntersectionObserver` hook.
