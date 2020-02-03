@@ -39,6 +39,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _modifierStyles = require("../../../components/buttons/button/helpers/modifier-styles");
 
+var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
+
 var StyledTextInputWithButton = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-button__StyledTextInputWithButton",
   componentId: "sc-1yqni7d-0"
@@ -85,21 +87,24 @@ function (_PureComponent) {
           disabled = _this$props.disabled,
           tiny = _this$props.tiny,
           value = _this$props.value,
+          buttonValue = _this$props.buttonValue,
           modifier = _this$props.modifier,
           buttonProps = _this$props.buttonProps,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "modifier", "buttonProps"]);
+          inputValue = _this$props.inputValue,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "buttonValue", "modifier", "buttonProps", "inputValue"]);
       return _react.default.createElement(StyledTextInputWithButton, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
         valid: valid,
         error: error,
         disabled: disabled,
-        tiny: tiny
+        tiny: tiny,
+        value: inputValue
       })), _react.default.createElement(StyledButton, (0, _extends2.default)({
         type: "button",
         modifier: modifier,
         valid: valid,
         error: error,
         disabled: disabled
-      }, buttonProps), value));
+      }, buttonProps), value || buttonValue));
     }
   }]);
   return TextInputWithButton;
@@ -112,13 +117,16 @@ TextInputWithButton.propTypes = {
   disabled: _propTypes.default.bool,
   tiny: _propTypes.default.bool,
   modifier: _propTypes.default.string,
-  value: _propTypes.default.string
+  inputValue: _propTypes.default.string,
+  // DEPRECATED: do not use prop `value`. Use `buttonValue` instead.
+  value: (0, _deprecated.default)(_propTypes.default.node, 'Use `buttonValue` instead.'),
+  buttonValue: _propTypes.default.node
 };
 TextInputWithButton.defaultProps = {
   valid: false,
   error: false,
   disabled: false,
   tiny: false,
-  value: 'Button',
+  buttonValue: 'Button',
   modifier: 'beryllium'
 };
