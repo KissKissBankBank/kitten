@@ -145,6 +145,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
+    value="foobar"
   />
   <button
     className="text-input-with-button__StyledButton-sc-1yqni7d-2 jpFdnp"

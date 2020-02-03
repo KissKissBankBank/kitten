@@ -22,6 +22,7 @@ describe('<TextInputWithButton />', () => {
         .create(
           <TextInputWithButton
             buttonValue="Button"
+            inputValue="foobar"
             placeholder="Les props sont transmises"
           />,
         )
