@@ -52,7 +52,7 @@ storiesOf('Form/TextInput', module)
               error={boolean('Error', false)}
               disabled={boolean('Disabled', false)}
               tiny={boolean('Tiny', false)}
-              value={<Loader />}
+              buttonValue={<Loader />}
               inputValue={text('inputValue', 'Une valeur')}
               placeholder={text(
                 'Les props sont transmises',
