@@ -38,10 +38,6 @@ const info = {
   `,
 }
 
-const handleChange = e => {
-  console.log('e', e)
-}
-
 storiesOf('Form/TextInput', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
@@ -62,7 +58,6 @@ storiesOf('Form/TextInput', module)
                 'Les props sont transmises',
                 'Les props sont transmises',
               )}
-              onChange={handleChange}
             />
           </GridCol>
         </Grid>

@@ -64,11 +64,8 @@ export class TextInputWithButton extends PureComponent {
     modifier: PropTypes.string,
     inputValue: PropTypes.string,
     // DEPRECATED: do not use prop `value`. Use `buttonValue` instead.
-    value: deprecated(
-      PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-      'Use `buttonValue` instead.',
-    ),
-    buttonValue: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    value: deprecated(PropTypes.node, 'Use `buttonValue` instead.'),
+    buttonValue: PropTypes.node,
   }
 
   static defaultProps = {
