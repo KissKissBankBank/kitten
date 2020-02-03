@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, boolean, text } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
+import { Loader } from '../../../components/loaders/loader'
 import { TextInputWithButton } from './index'
 
 const info = {
@@ -51,7 +52,8 @@ storiesOf('Form/TextInput', module)
               error={boolean('Error', false)}
               disabled={boolean('Disabled', false)}
               tiny={boolean('Tiny', false)}
-              value={text('Button', 'Button')}
+              buttonValue={<Loader />}
+              inputValue={text('inputValue', 'Une valeur')}
               placeholder={text(
                 'Les props sont transmises',
                 'Les props sont transmises',
