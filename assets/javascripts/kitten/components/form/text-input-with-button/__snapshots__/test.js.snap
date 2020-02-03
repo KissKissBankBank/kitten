@@ -39,6 +39,65 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
 </div>
 `;
 
+exports[`<TextInputWithButton /> with component inside button value matches with snapshot 1`] = `
+<div
+  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+>
+  <input
+    className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc"
+    disabled={false}
+    name="text"
+    placeholder="Les props sont transmises"
+  />
+  <button
+    className="text-input-with-button__StyledButton-sc-1yqni7d-2 jpFdnp"
+    disabled={false}
+    type="button"
+  >
+    <div
+      className="k-Loader"
+    >
+      <svg
+        className="k-Loader__circle"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={5}
+          cy={5}
+          fill={null}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={5}
+          cy={5}
+          fill={null}
+          r={5}
+        />
+      </svg>
+      <svg
+        className="k-Loader__circle"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx={5}
+          cy={5}
+          fill={null}
+          r={5}
+        />
+      </svg>
+    </div>
+  </button>
+</div>
+`;
+
 exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = `
 <div
   className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"

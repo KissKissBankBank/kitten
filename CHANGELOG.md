@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `value` prop from `TextInputWithButton` is now deprecated. Use
+  `buttonValue` instead. Also, allow React component inside this prop.
+
 ## [2.52.1] - 2020-01-28
 
 Fix:
