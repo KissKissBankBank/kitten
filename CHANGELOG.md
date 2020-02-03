@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `value` prop from `TextInputWithButton` is now deprecated. Use
+## [2.53.0] - 2020-02-03
+
+Feature:
+- Add `inputValue` prop to `TextInputWithButton` component.
+
+Fix:
+- `value` prop from `TextInputWithButton` is now deprecated. Use
   `buttonValue` instead. Also, allow React component inside this prop.
-- Feature: Add `inputValue` prop to `TextInputWithButton` component.
 
 ## [2.52.1] - 2020-01-28
 
@@ -15,8 +20,9 @@ Fix:
 
 ## [2.52.0] - 2020-01-27
 
-- Feature: Add `useContinuousIntersectionObserver` hook.
-- Feature: Add `ContinuousIntersectionObserver` component with Render Prop.
+Features:
+- Add `useContinuousIntersectionObserver` hook.
+- Add `ContinuousIntersectionObserver` component with Render Prop.
 
 ## [2.51.0] - 2020-01-20
 
