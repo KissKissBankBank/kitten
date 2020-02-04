@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EngagementCard /> by default matches with snapshot 1`] = `
+<div
+  className="engagement-card__StyledCard-sc-1unf5bb-0 deFzuK"
+>
+  <span
+    className="k-u-color-font1 k-u-size-micro engagement-card__StyledText-sc-1unf5bb-1 gYYoXM"
+  >
+    Custom categorie
+  </span>
+</div>
+`;

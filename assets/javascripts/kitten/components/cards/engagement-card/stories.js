@@ -53,20 +53,26 @@ storiesOf('Cards/EngagementCard', module)
       return (
         <Container>
           <Grid style={{ marginTop: '3em' }}>
-            <GridCol offset="1" col="10" style={{ display: 'flex' }}>
+            <GridCol style={{ display: 'flex' }}>
               <EngagementCard
                 style={{ marginRight: '20px' }}
                 categorie={text('Categorie', 'Fabrication française')}
                 colorText={select('Color text', colorTextOptions, 'Black')}
+                imageSrc={text(
+                  'Image',
+                  'https://via.placeholder.com/150/caf4fe',
+                )}
               />
               <EngagementCard
                 style={{ marginRight: '20px' }}
-                categorie={text('Categorie 1', 'Education')}
+                categorie={text('Categorie', 'Education')}
                 colorText={select('Color text', colorTextOptions, 'Black')}
+                imageSrc={text('Image', 'https://via.placeholder.com/150/fff')}
               />
               <EngagementCard
-                categorie={text('Categorie 2', 'Bio')}
+                categorie={text('Categorie', 'Bio')}
                 colorText={select('Color text', colorTextOptions, 'Black')}
+                imageSrc={text('Image', 'https://via.placeholder.com/150')}
               />
             </GridCol>
           </Grid>
