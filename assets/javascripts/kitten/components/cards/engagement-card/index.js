@@ -50,7 +50,7 @@ EngagementCard.propTypes = {
 }
 
 EngagementCard.defaultProps = {
-  children: 'Autoproduction culturelle',
+  children: '',
   imageSrc: '',
   href: '',
 }
