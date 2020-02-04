@@ -13,8 +13,8 @@ exports[`<Card /> with all props matches with snapshot 1`] = `
 }
 
 a.c0 {
-  -webkit-transition: border-color .4s;
-  transition: border-color .4s;
+  -webkit-transition: border-color 0.4s;
+  transition: border-color 0.4s;
 }
 
 a.c0:hover,
@@ -23,8 +23,8 @@ a.c0:active {
 }
 
 a.c0 {
-  -webkit-transition: border-color .4s,box-shadow .4s;
-  transition: border-color .4s,box-shadow .4s;
+  -webkit-transition: border-color 0.4s,box-shadow 0.4s;
+  transition: border-color 0.4s,box-shadow 0.4s;
 }
 
 a.c0:hover,
@@ -48,8 +48,8 @@ exports[`<Card /> without prop matches with snapshot 1`] = `
 }
 
 a.c0 {
-  -webkit-transition: border-color .4s;
-  transition: border-color .4s;
+  -webkit-transition: border-color 0.4s;
+  transition: border-color 0.4s;
 }
 
 a.c0:hover,
