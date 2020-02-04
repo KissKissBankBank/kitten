@@ -1,15 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, select } from '@storybook/addon-knobs'
+import { withKnobs, text, color } from '@storybook/addon-knobs'
 import { EngagementCard } from './index'
 import { Grid, GridCol } from '../../grid/grid'
 import { Container } from '../../grid/container'
-
-const colorTextOptions = {
-  Black: 'font1',
-  White: 'background1',
-}
 
 const info = {
   text: `
@@ -33,12 +28,6 @@ const info = {
     ~~~js
     <EngagementCard categorie="…" />
     ~~~
-
-    #### ColorText
-    ~~~js
-    <EngagementCard colorText="font1" />
-    <EngagementCard colorText="background1" />
-    ~~~
   `,
   header: false,
   propTables: false,
@@ -55,23 +44,23 @@ storiesOf('Cards/EngagementCard', module)
           <Grid style={{ marginTop: '3em' }}>
             <GridCol style={{ display: 'flex' }}>
               <EngagementCard
+                href="#"
                 style={{ marginRight: '20px' }}
-                categorie={text('Categorie', 'Fabrication française')}
-                colorText={select('Color text', colorTextOptions, 'Black')}
+                children={text('Categorie', 'Fabrication française')}
                 imageSrc={text(
                   'Image',
-                  'https://via.placeholder.com/150/caf4fe',
+                  'https://via.placeholder.com/150x150/caf4fe',
                 )}
               />
               <EngagementCard
+                href="#"
                 style={{ marginRight: '20px' }}
-                categorie={text('Categorie', 'Education')}
-                colorText={select('Color text', colorTextOptions, 'Black')}
+                children={text('Categorie', 'Education')}
                 imageSrc={text('Image', 'https://via.placeholder.com/150/fff')}
               />
               <EngagementCard
-                categorie={text('Categorie', 'Bio')}
-                colorText={select('Color text', colorTextOptions, 'Black')}
+                href="#"
+                children={text('Categorie', 'Bio')}
                 imageSrc={text('Image', 'https://via.placeholder.com/150')}
               />
             </GridCol>

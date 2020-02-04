@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../components/layout/marger'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -11,14 +10,13 @@ const StyledCard = styled.div`
   border-radius: ${pxToRem(15)};
   position: relative;
   overflow: hidden;
-  width: ${pxToRem(102)};
+  width: ${pxToRem(100)};
   height: ${pxToRem(130)};
   background-image: url(${({ imageSrc }) => imageSrc});
-  background-repeat: no-repeat;
-  cursor: pointer;
+  padding: ${pxToRem(10)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    width: ${pxToRem(111)};
+    width: ${pxToRem(110)};
     height: ${pxToRem(150)};
   }
 `
@@ -26,37 +24,33 @@ const StyledCard = styled.div`
 const StyledText = styled(Text)`
   position: absolute;
   text-align: center;
-  bottom 5%;
+  bottom: 5%;
   line-height: 1.2;
 `
 
-export const EngagementCard = ({
-  title,
-  imageSrc,
-  imageAlt,
-  imageWidth,
-  imageHeight,
-  categorie,
-  colorText,
-  ...others
-}) => {
+export const EngagementCard = ({ imageSrc, children, href, ...others }) => {
   return (
-    <StyledCard imageSrc={imageSrc} {...others}>
-      <StyledText size="micro" weight="normal" color={colorText}>
-        {categorie}
+    <StyledCard
+      {...others}
+      as={href ? 'a' : 'div'}
+      href={href}
+      imageSrc={imageSrc}
+    >
+      <StyledText size="micro" weight="regular" color="font1">
+        {children}
       </StyledText>
     </StyledCard>
   )
 }
 
 EngagementCard.propTypes = {
-  categorie: PropTypes.string,
-  colorText: PropTypes.oneOf(['font1', 'background1']),
+  children: PropTypes.string,
   imageSrc: PropTypes.string,
+  href: PropTypes.string,
 }
 
 EngagementCard.defaultProps = {
-  categorie: 'Autoproduction culturelle',
-  colorText: 'font1',
-  imageSrc: 'https://via.placeholder.com/150',
+  children: 'Autoproduction culturelle',
+  imageSrc: '',
+  href: '',
 }

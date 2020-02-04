@@ -12,7 +12,8 @@ describe('<EngagementCard />', () => {
           <EngagementCard
             categorie="Custom categorie"
             imageSrc="url …"
-            colorText="font1"
+            textColor="font1"
+            href="#"
           />,
         )
         .toJSON()
