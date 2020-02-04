@@ -10,7 +10,7 @@ export const Card = styled.div`
   overflow: auto;
 
   a& {
-    transition: border-color .4s;
+    transition: border-color 0.4s;
 
     &:hover, &:active {
       border-color: ${COLORS.line2};
