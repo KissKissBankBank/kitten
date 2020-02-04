@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
 import { Text } from '../../../components/typography/text'
@@ -50,9 +50,9 @@ export const EngagementCard = ({
 }
 
 EngagementCard.propTypes = {
-  categorie: PropTypes.string.isRequired,
+  categorie: PropTypes.string,
   colorText: PropTypes.oneOf(['font1', 'background1']),
-  imageSrc: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string,
 }
 
 EngagementCard.defaultProps = {
