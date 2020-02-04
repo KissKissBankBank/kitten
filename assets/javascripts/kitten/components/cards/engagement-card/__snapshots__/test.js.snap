@@ -8,7 +8,7 @@ exports[`<EngagementCard /> by default matches with snapshot 1`] = `
   <span
     className="k-u-color-font1 k-u-size-micro k-u-weight-regular engagement-card__StyledText-sc-1unf5bb-1 fsQSJS"
   >
-    Autoproduction culturelle
+    
   </span>
 </a>
 `;
