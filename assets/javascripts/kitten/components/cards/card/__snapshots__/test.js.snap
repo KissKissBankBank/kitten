@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> with all props matches with snapshot 1`] = `
+.c0 {
+  display: block;
+  overflow: auto;
+  background: #fff;
+  color: #222;
+  box-shadow: 0 0.3125rem 0.9375rem #eee;
+  border-radius: 0.9375rem;
+  box-sizing: border-box;
+  border: 0.125rem solid #eee;
+}
+
+a.c0 {
+  -webkit-transition: border-color .4s;
+  transition: border-color .4s;
+}
+
+a.c0:hover,
+a.c0:active {
+  border-color: #d8d8d8;
+}
+
+a.c0 {
+  -webkit-transition: border-color .4s,box-shadow .4s;
+  transition: border-color .4s,box-shadow .4s;
+}
+
+a.c0:hover,
+a.c0:active {
+  box-shadow: 0 0.3125rem 0.9375rem #d8d8d8;
+}
+
+<a
+  className="c0"
+  href="protocol://test@server"
+  radius={15}
+>
+  This is a test.
+</a>
+`;
+
+exports[`<Card /> without prop matches with snapshot 1`] = `
+.c0 {
+  display: block;
+  overflow: auto;
+}
+
+a.c0 {
+  -webkit-transition: border-color .4s;
+  transition: border-color .4s;
+}
+
+a.c0:hover,
+a.c0:active {
+  border-color: #d8d8d8;
+}
+
+<div
+  className="c0"
+  radius={0}
+>
+  This is a test.
+</div>
+`;
