@@ -3,10 +3,25 @@ import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
 import { Text } from '../../../components/typography/text'
-import { Checkbox } from '../../../components/form/checkbox'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledCard = styled.div`
-  display: flex;
+  border: solid transparent;
+  border-radius: ${pxToRem(15)};
+  position: relative;
+  overflow: hidden;
+  width: ${pxToRem(111)};
+  height: ${pxToRem(150)};
+  background-image: url(${({ imageSrc }) => imageSrc});
+  background-repeat: no-repeat;
+  cursor: pointer;
+`
+
+const StyledText = styled(Text)`
+  position: absolute;
+  text-align: center;
+  bottom 5%;
+  line-height: 1.2;
 `
 
 export const EngagementCard = ({
@@ -20,16 +35,10 @@ export const EngagementCard = ({
   ...others
 }) => {
   return (
-    <StyledCard className="k-Card--rounded" {...others}>
-      <img
-        src={imageSrc}
-        alt={imageAlt}
-        width={imageWidth}
-        height={imageHeight}
-      />
-      <Text size="micro" weight="normal" color={colorText}>
+    <StyledCard imageSrc={imageSrc} {...others}>
+      <StyledText size="micro" weight="normal" color={colorText}>
         {categorie}
-      </Text>
+      </StyledText>
     </StyledCard>
   )
 }
@@ -37,12 +46,11 @@ export const EngagementCard = ({
 EngagementCard.propTypes = {
   categorie: PropTypes.string.isRequired,
   colorText: PropTypes.oneOf(['font1', 'background1']),
+  imageSrc: PropTypes.string.isRequired,
 }
 
 EngagementCard.defaultProps = {
   categorie: 'Autoproduction culturelle',
   colorText: 'font1',
-  imageWidth: '111px',
-  imageHeight: '150px',
   imageSrc: 'https://via.placeholder.com/150',
 }
