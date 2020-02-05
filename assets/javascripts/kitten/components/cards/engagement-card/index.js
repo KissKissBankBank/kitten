@@ -3,22 +3,14 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledCard = styled.div`
   border: solid transparent;
   border-radius: ${pxToRem(15)};
   position: relative;
   overflow: hidden;
-  width: ${pxToRem(100)};
-  height: ${pxToRem(130)};
   background-image: url(${({ imageSrc }) => imageSrc});
   padding: ${pxToRem(10)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    width: ${pxToRem(110)};
-    height: ${pxToRem(150)};
-  }
 `
 
 const StyledText = styled(Text)`
