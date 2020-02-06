@@ -14,7 +14,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     </p>
   </div>
   <div
-    className="counter-block__FlexGrid-dpxp7s-1 ktWtCM"
+    className="counter-block__FlexContainer-dpxp7s-1 dMNmNG"
   >
     <div
       className="counter-block__StrokeContainer-dpxp7s-2 dIBsco k-u-hidden@m-down"

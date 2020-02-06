@@ -46,7 +46,7 @@ const Container = styled.div`
   }
 `
 
-const FlexGrid = styled.div`
+const FlexContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +90,7 @@ export const CounterBlock = ({
       ) : (
         title
       )}
-      <FlexGrid>
+      <FlexContainer>
         <StrokeContainer className="k-u-hidden@m-down">
           <HorizontalStroke className="styledStroke" size="big" />
         </StrokeContainer>
@@ -111,7 +111,7 @@ export const CounterBlock = ({
         <StrokeContainer className="k-u-hidden@m-down">
           <HorizontalStroke className="styledStroke" size="big" />
         </StrokeContainer>
-      </FlexGrid>
+      </FlexContainer>
       {isString(subTitle) ? (
         <Marger top={margin}>
           <Text
