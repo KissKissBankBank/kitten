@@ -115,7 +115,7 @@ export const CounterBlock = ({
       {isString(subTitle) ? (
         <Marger top={margin}>
           <Text
-            className="{styledSubTitle"
+            className="styledSubTitle"
             size="huge"
             tag={subTitleTag}
             tag="p"
