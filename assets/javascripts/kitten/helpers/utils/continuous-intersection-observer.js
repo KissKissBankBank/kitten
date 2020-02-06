@@ -17,7 +17,6 @@ const ContinuousIntersectionObserver = ({ options, children, ...props }) => {
   const [isAfterElIntersecting, setAfterElIntersecting] = useState(false)
 
   const [isPartlyVisible, setPartlyVisible] = useState(false)
-  const [isCompletelyVisible, setCompletelyVisible] = useState(false)
   const [visibleElement, setVisibleElement] = useState('before')
 
   useContinuousIntersectionObserver({
@@ -51,7 +50,6 @@ const ContinuousIntersectionObserver = ({ options, children, ...props }) => {
   })
 
   useEffect(() => {
-    setCompletelyVisible(false)
     setPartlyVisible(false)
 
     if (isTargetElIntersecting) {
@@ -62,7 +60,6 @@ const ContinuousIntersectionObserver = ({ options, children, ...props }) => {
         (isBeforeElIntersecting && isAfterElIntersecting)
       ) {
         setVisibleElement('target')
-        setCompletelyVisible(true)
       }
     }
   }, [isBeforeElIntersecting, isTargetElIntersecting, isAfterElIntersecting])
@@ -73,7 +70,7 @@ const ContinuousIntersectionObserver = ({ options, children, ...props }) => {
       <div ref={targetEl} {...props.targetComponentProps}>
         {children({
           isPartlyVisible: isPartlyVisible,
-          isCompletelyVisible: isCompletelyVisible,
+          isCompletelyVisible: visibleElement === 'target',
           visibleElement: visibleElement,
         })}
       </div>

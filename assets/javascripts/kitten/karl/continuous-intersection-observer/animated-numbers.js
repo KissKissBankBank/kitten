@@ -1,29 +1,28 @@
 import React, { useRef, useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
 import { pxToRem, stepToRem } from '../../helpers/utils/typography'
+import COLORS from '../../constants/colors-config'
 
 const NUMBER_ANIM_DELAY = 0.05
 const MAX_DIGITS = 11
 const NUMBER_FONT_SIZE = stepToRem(16)
 
 const StyledContainer = styled.section`
-  height: 110vh;
-  background: black;
-  color: white;
-`
+  position: relative;
+  min-height: 110vh;
+  box-sizing: border-box;
+  background: ${COLORS.font1};
+  color: ${COLORS.background1};
+  scroll-snap-align: center;
 
-const FixedBox = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  padding: ${pxToRem(60)} 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 `
+
 const AnimatedBox = styled.div`
   padding: 0 5vw;
 `
@@ -40,8 +39,8 @@ const NumberSpan = styled.span`
   transition: transform 0.3s ease;
 
   transform: translateY(
-    ${({ isCompletelyVisible, visibleElement }) => {
-      if (isCompletelyVisible) {
+    ${({ visibleElement }) => {
+      if (visibleElement === 'target') {
         return '0'
       }
 
@@ -81,8 +80,8 @@ const LegendBox = styled.span`
   }}
 
   transform: translateX(
-    ${({ isCompletelyVisible, visibleElement }) => {
-      if (isCompletelyVisible) {
+    ${({ visibleElement }) => {
+      if (visibleElement === 'target') {
         return '0'
       }
       if (visibleElement === 'after') {
@@ -92,8 +91,8 @@ const LegendBox = styled.span`
     }});
 
   opacity:
-    ${({ isCompletelyVisible }) => {
-      if (isCompletelyVisible) return 1
+    ${({ visibleElement }) => {
+      if (visibleElement === 'target') return 1
       return 0
     }};
 `
@@ -102,7 +101,6 @@ const AnimatedNumberItem = ({
   number,
   legend,
   transitionDelay,
-  isCompletelyVisible,
   visibleElement,
   ...props
 }) => (
@@ -110,7 +108,6 @@ const AnimatedNumberItem = ({
     <NumberBox>
       {Array.from(number.toString(10)).map(num => (
         <NumberSpan
-          isCompletelyVisible={isCompletelyVisible}
           visibleElement={visibleElement}
           transitionDelay={transitionDelay}
         >
@@ -119,7 +116,6 @@ const AnimatedNumberItem = ({
       ))}
     </NumberBox>
     <LegendBox
-      isCompletelyVisible={isCompletelyVisible}
       visibleElement={visibleElement}
       transitionDelay={transitionDelay}
     >
@@ -128,38 +124,27 @@ const AnimatedNumberItem = ({
   </AnimatedBox>
 )
 
-const AnimatedNumbers = ({
-  isCompletelyVisible,
-  isPartlyVisible,
-  visibleElement,
-}) => {
+const AnimatedNumbers = ({ visibleElement }) => {
   return (
     <StyledContainer>
-      {isPartlyVisible && (
-        <FixedBox>
-          <AnimatedNumberItem
-            number={345}
-            legend="Legend 1"
-            transitionDelay={0}
-            isCompletelyVisible={isCompletelyVisible}
-            visibleElement={visibleElement}
-          />
-          <AnimatedNumberItem
-            number={45}
-            legend="Legend 2"
-            transitionDelay={0.4}
-            isCompletelyVisible={isCompletelyVisible}
-            visibleElement={visibleElement}
-          />
-          <AnimatedNumberItem
-            number="344&nbsp;558&nbsp;022"
-            legend="Legend 3"
-            transitionDelay={0.8}
-            isCompletelyVisible={isCompletelyVisible}
-            visibleElement={visibleElement}
-          />
-        </FixedBox>
-      )}
+      <AnimatedNumberItem
+        number={345}
+        legend="Legend 1"
+        transitionDelay={0}
+        visibleElement={visibleElement}
+      />
+      <AnimatedNumberItem
+        number={45}
+        legend="Legend 2"
+        transitionDelay={0.4}
+        visibleElement={visibleElement}
+      />
+      <AnimatedNumberItem
+        number="344&nbsp;558&nbsp;022"
+        legend="Legend 3"
+        transitionDelay={0.8}
+        visibleElement={visibleElement}
+      />
     </StyledContainer>
   )
 }

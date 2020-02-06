@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
+<div
+  className="counter-block__Container-dpxp7s-0 hBIoVh"
+>
+  <div
+    className="marger__StyledMarger-q3lecu-0 dnQPiu"
+  >
+    <p
+      className="k-Title k-Title--tertiary k-Title--withoutMargin"
+    >
+      foo
+    </p>
+  </div>
+  <div
+    className="counter-block__FlexContainer-dpxp7s-1 dMNmNG"
+  >
+    <div
+      className="counter-block__StrokeContainer-dpxp7s-2 dIBsco k-u-hidden@m-down"
+    >
+      <span
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj styledStroke"
+      />
+    </div>
+    <p
+      className="k-u-style-italic k-u-weight-bold styledText"
+    >
+      13 106
+    </p>
+    <div
+      className="counter-block__StrokeContainer-dpxp7s-2 dIBsco k-u-hidden@m-down"
+    >
+      <span
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj styledStroke"
+      />
+    </div>
+  </div>
+  <div
+    className="marger__StyledMarger-q3lecu-0 hDepGR"
+  >
+    <p
+      className="k-u-size-huge k-u-style-italic styledSubTitle"
+    >
+      bar
+    </p>
+  </div>
+</div>
+`;
