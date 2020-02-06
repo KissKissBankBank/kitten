@@ -136,7 +136,7 @@ CounterBlock.propTypes = {
   titleTag: PropTypes.string,
   subTitle: PropTypes.node,
   subTitleTag: PropTypes.string,
-  counter: PropTypes.string,
+  counter: PropTypes.node,
   unit: PropTypes.string,
 }
 
