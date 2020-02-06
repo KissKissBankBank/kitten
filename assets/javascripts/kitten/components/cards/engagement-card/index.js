@@ -10,6 +10,7 @@ const StyledCard = styled.div`
   position: relative;
   overflow: hidden;
   background-image: url(${({ imageSrc }) => imageSrc});
+  background-size: contain;
   padding: ${pxToRem(10)};
 `
 
@@ -17,6 +18,8 @@ const StyledText = styled(Text)`
   position: absolute;
   text-align: center;
   bottom: 5%;
+  right: ${pxToRem(10)};
+  left: ${pxToRem(10)};
   line-height: 1.2;
 `
 
@@ -36,7 +39,7 @@ export const EngagementCard = ({ imageSrc, children, href, ...others }) => {
 }
 
 EngagementCard.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.node,
   imageSrc: PropTypes.string,
   href: PropTypes.string,
 }

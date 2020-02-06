@@ -62,18 +62,26 @@ storiesOf('Cards/EngagementCard', module)
                 children={text('Categorie', 'Fabrication française')}
                 imageSrc={text(
                   'Image',
-                  'https://via.placeholder.com/150x150/caf4fe',
+                  'https://via.placeholder.com/130x100/caf4fe',
                 )}
               />
               <StyledEngagementCard
+                className="k-u-hidden@s-down--important"
                 href="#"
                 children={text('Categorie', 'Education')}
-                imageSrc={text('Image', 'https://via.placeholder.com/150/fff')}
+                imageSrc={text(
+                  'Image',
+                  'https://via.placeholder.com/130x100/caf4fe',
+                )}
               />
               <StyledEngagementCard
+                className="k-u-hidden@s-down--important"
                 href="#"
                 children={text('Categorie', 'Bio')}
-                imageSrc={text('Image', 'https://via.placeholder.com/150')}
+                imageSrc={text(
+                  'Image',
+                  'https://via.placeholder.com/130x100/caf4fe',
+                )}
               />
             </GridCol>
           </Grid>
