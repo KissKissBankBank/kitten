@@ -40,7 +40,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 hDepGR"
   >
     <p
-      className="k-u-size-huge k-u-style-italic {styledSubTitle"
+      className="k-u-size-huge k-u-style-italic styledSubTitle"
     >
       bar
     </p>
