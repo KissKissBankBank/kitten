@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: use style-components for `CounterBlock` and fix `title` and `subTitle`
+  props.
+- Feature: add `unit` prop to `CounterBlock` component.
+
 ## [2.53.0] - 2020-02-03
 
 Feature:
