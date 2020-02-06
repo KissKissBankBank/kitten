@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Simplify code for `ContinuousIntersectionObserver`.
+
 ## [2.54.0] - 2020-02-06
 
 Feature:
