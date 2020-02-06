@@ -59,30 +59,33 @@ storiesOf('Cards/EngagementCard', module)
             <GridCol style={{ display: 'flex' }}>
               <StyledEngagementCard
                 href="#"
-                children={text('Categorie', 'Fabrication française')}
                 imageSrc={text(
                   'Image',
                   'https://via.placeholder.com/130x100/caf4fe',
                 )}
-              />
+              >
+                {text('Categorie', 'Fabrication française')}
+              </StyledEngagementCard>
               <StyledEngagementCard
                 className="k-u-hidden@s-down--important"
                 href="#"
-                children={text('Categorie', 'Education')}
                 imageSrc={text(
                   'Image',
                   'https://via.placeholder.com/130x100/caf4fe',
                 )}
-              />
+              >
+                {text('Categorie', 'Education')}
+              </StyledEngagementCard>
               <StyledEngagementCard
                 className="k-u-hidden@s-down--important"
                 href="#"
-                children={text('Categorie', 'Bio')}
                 imageSrc={text(
                   'Image',
                   'https://via.placeholder.com/130x100/caf4fe',
                 )}
-              />
+              >
+                {text('Categorie', 'Bio')}
+              </StyledEngagementCard>
             </GridCol>
           </Grid>
         </Container>

@@ -39,13 +39,11 @@ export const EngagementCard = ({ imageSrc, children, href, ...others }) => {
 }
 
 EngagementCard.propTypes = {
-  children: PropTypes.node,
   imageSrc: PropTypes.string,
   href: PropTypes.string,
 }
 
 EngagementCard.defaultProps = {
-  children: '',
   imageSrc: '',
   href: '',
 }
