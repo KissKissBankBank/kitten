@@ -2,11 +2,11 @@
 
 exports[`<EngagementCard /> by default matches with snapshot 1`] = `
 <a
-  className="engagement-card__StyledCard-sc-1unf5bb-0 jYgjxG"
+  className="engagement-card__StyledCard-sc-1unf5bb-0 kSoaha"
   href="#"
 >
   <span
-    className="k-u-color-font1 k-u-size-micro k-u-weight-regular engagement-card__StyledText-sc-1unf5bb-1 fsQSJS"
+    className="k-u-color-font1 k-u-size-micro k-u-weight-regular engagement-card__StyledText-sc-1unf5bb-1 jlAwha"
   >
     
   </span>
