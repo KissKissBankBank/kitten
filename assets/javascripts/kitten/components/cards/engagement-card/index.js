@@ -5,6 +5,11 @@ import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 
+const borderStyle = css`
+  box-shadow: 0 0 0 ${pxToRem(3)} ${COLORS.background1},
+    0 0 0 ${pxToRem(6)} ${({ hoverBorder }) => hoverBorder};
+`
+
 const StyledCard = styled.div`
   border: solid transparent;
   border-radius: ${pxToRem(15)};
@@ -16,14 +21,17 @@ const StyledCard = styled.div`
   background-size: contain;
   padding: ${pxToRem(10)};
 
-  ${({ as, onClick }) =>
-    (as === 'a' || onClick) &&
+  ${({ as }) =>
+    (as === 'a' || as === 'button') &&
     css`
-      :hover {
-        box-shadow: 0 0 0 3px ${COLORS.background1},
-          0 0 0 6px ${({ borderHover }) => borderHover};
+      :hover,
+      :active,
+      :focus {
+        ${borderStyle}
       }
     `}
+
+  ${({ isActive }) => isActive && borderStyle}
 `
 
 const StyledText = styled(Text)`
@@ -40,7 +48,8 @@ export const EngagementCard = ({
   backgroundColor,
   href,
   children,
-  borderHover,
+  hoverBorder,
+  isActive,
   ...others
 }) => {
   return (
@@ -50,7 +59,8 @@ export const EngagementCard = ({
       href={href}
       imageSrc={imageSrc}
       backgroundColor={backgroundColor}
-      borderHover={borderHover}
+      hoverBorder={hoverBorder}
+      isActive={isActive}
     >
       <StyledText size="micro" weight="regular" color="font1">
         {children}
@@ -63,12 +73,14 @@ EngagementCard.propTypes = {
   imageSrc: PropTypes.string,
   href: PropTypes.string,
   backgroundColor: PropTypes.string,
-  borderHover: PropTypes.string,
+  hoverBorder: PropTypes.string,
+  isActive: PropTypes.bool,
 }
 
 EngagementCard.defaultProps = {
   imageSrc: '',
   href: '',
   backgroundColor: '',
-  borderHover: '',
+  hoverBorder: '',
+  isActive: false,
 }

@@ -4,7 +4,6 @@ import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, color } from '@storybook/addon-knobs'
 import { EngagementCard } from './index'
-import { Grid, GridCol } from '../../grid/grid'
 import { Container } from '../../grid/container'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -21,6 +20,7 @@ const StyledEngagementCard = styled(EngagementCard)`
     height: ${pxToRem(150)};
   }
 `
+
 const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
@@ -29,11 +29,13 @@ const StyledList = styled.ul`
     position: relative;
   }
 
-  :hover li {
+  :hover li,
+  :active li {
     opacity: 0.5;
   }
 
-  li:hover {
+  li:hover,
+  li:active {
     opacity: 1;
   }
 `
@@ -66,9 +68,9 @@ const info = {
     <EngagementCard backgroundColor="…" />
     ~~~
 
-    #### Border color
+    #### Hover's border
     ~~~js
-    <EngagementCard borderColor="…" />
+    <EngagementCard hoverBorder="…" />
     ~~~
   `,
   header: false,
@@ -87,13 +89,14 @@ storiesOf('Cards/EngagementCard', module)
             <StyledList>
               <li>
                 <StyledEngagementCard
+                  isActive
                   href="#"
                   imageSrc={text(
                     'Image',
                     'https://via.placeholder.com/130x100/caf4fe',
                   )}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
-                  borderHover={(color, ('borderHover', '#caf4fe'))}
+                  hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
                 >
                   {text('Categorie', 'Fabrication française')}
                 </StyledEngagementCard>
@@ -107,7 +110,7 @@ storiesOf('Cards/EngagementCard', module)
                     'https://via.placeholder.com/130x100/caf4fe',
                   )}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
-                  borderHover={(color, ('borderHover', '#caf4fe'))}
+                  hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
                 >
                   {text('Categorie', 'Education')}
                 </StyledEngagementCard>
@@ -121,7 +124,7 @@ storiesOf('Cards/EngagementCard', module)
                     'https://via.placeholder.com/130x100/caf4fe',
                   )}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
-                  borderHover={(color, ('borderHover', '#caf4fe'))}
+                  hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
                 >
                   {text('Categorie', 'Bio')}
                 </StyledEngagementCard>
