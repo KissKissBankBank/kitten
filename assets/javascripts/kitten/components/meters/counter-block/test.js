@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { CounterBlock } from '../../components/meters/counter-block'
+import { CounterBlock } from './index'
 
 const createMockMediaMatcher = matches => () => ({
   matches,
