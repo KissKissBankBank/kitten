@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
+import COLORS from '../../../constants/colors-config'
 
 const StyledCard = styled.div`
   border: solid transparent;
@@ -22,7 +23,7 @@ const StyledCard = styled.div`
 
       :hover {
         box-shadow:
-          0 0 0 3px white,
+          0 0 0 3px ${COLORS.background1},
           0 0 0 6px ${({ borderHover }) => borderHover};
     `}
 `
