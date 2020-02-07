@@ -10,7 +10,7 @@ import {
   CONTAINER_PADDING_MOBILE,
   GUTTER,
 } from '../../../constants/grid-config'
-import ColorsConfig from '../../../constants/colors-config'
+import COLORS from '../../../constants/colors-config'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { ButtonIcon } from '../../../components/buttons/button-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
@@ -434,12 +434,12 @@ const PageDot = styled.div`
   margin-left: ${pxToRem(4)};
   margin-right: ${pxToRem(4)};
   border-radius: ${pxToRem(4)};
-  background-color: ${ColorsConfig.font1};
+  background-color: ${COLORS.font1};
 
   ${({ visibleIndex, index }) =>
     visibleIndex === index &&
     css`
-      background-color: ${ColorsConfig.primary2};
+      background-color: ${COLORS.primary2};
     `}}
 `
 
