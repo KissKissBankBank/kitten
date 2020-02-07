@@ -19,12 +19,10 @@ const StyledCard = styled.div`
   ${({ as, onClick }) =>
     (as === 'a' || onClick) &&
     css`
-      cursor: pointer;
-
       :hover {
-        box-shadow:
-          0 0 0 3px ${COLORS.background1},
+        box-shadow: 0 0 0 3px ${COLORS.background1},
           0 0 0 6px ${({ borderHover }) => borderHover};
+      }
     `}
 `
 
