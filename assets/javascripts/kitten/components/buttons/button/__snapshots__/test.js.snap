@@ -785,6 +785,18 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 4.375rem;
+  }
+}
+
 <button
   className="c0"
 >
@@ -896,6 +908,12 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   .c0 {
     width: 12.5rem;
     height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
   }
 }
 
@@ -1024,6 +1042,18 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   }
 }
 
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 2.5rem;
+  }
+}
+
 <button
   className="c0"
 >
@@ -1133,6 +1163,12 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   .c0 {
     width: 12.5rem;
     height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
   }
 }
 
