@@ -170,6 +170,8 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c3 {
     width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
   }
 }
 

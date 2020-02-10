@@ -389,6 +389,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c1 {
     width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
   }
 }
 
@@ -698,6 +700,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c1 {
     width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
   }
 }
 

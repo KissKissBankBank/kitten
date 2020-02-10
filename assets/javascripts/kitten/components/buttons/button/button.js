@@ -144,6 +144,8 @@ export const ICON = css`
   padding: 0;
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     width: ${pxToRem(50)};
+    min-width: 0;
+    min-height: 0;
   }
 `
 
