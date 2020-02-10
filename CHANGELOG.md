@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Simplify code for `ContinuousIntersectionObserver`.
+- Fix: Remove warnings about `fill-rule` in SVG icons.
 
 ## [2.54.0] - 2020-02-06
 

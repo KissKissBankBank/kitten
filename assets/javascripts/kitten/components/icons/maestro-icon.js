@@ -9,7 +9,7 @@ export const MaestroIcon = props => (
     {...props}
   >
     <title>Maestro</title>
-    <g fill="none" fill-rule="nonzero">
+    <g fill="none" fillRule="nonzero">
       <path fill="#6C6BBD" d="M24.514 21.304H14.08V2.55h10.435z" />
       <path
         d="M14.741 11.927c0-3.804 1.781-7.193 4.555-9.377A11.875 11.875 0 0 0 11.926 0C5.339 0 0 5.34 0 11.927s5.34 11.927 11.926 11.927c2.782 0 5.342-.953 7.37-2.55a11.907 11.907 0 0 1-4.555-9.377"
