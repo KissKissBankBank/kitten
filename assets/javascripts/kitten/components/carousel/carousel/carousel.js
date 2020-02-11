@@ -48,6 +48,14 @@ export const checkPage = (numPages, newPage) => {
   return newPage
 }
 
+export const checkColumn = (numColumns, newColumn) => {
+  if (numColumns < 1) return 0
+  if (newColumn < 0) return 0
+  if (newColumn >= numColumns) return numColumns - 1
+
+  return newColumn
+}
+
 const getMarginBetweenAccordingToViewport = (
   baseItemMarginBetween,
   viewportIsXSOrLess,
@@ -64,6 +72,7 @@ const propTypesPositions = PropTypes.oneOf(['top', 'right', 'bottom', 'left'])
 class CarouselBase extends Component {
   static defaultProps = {
     hidePaginationOnMobile: false,
+    hidePaginationOnTablet: false,
     paginationPosition: {
       default: 'right',
       fromM: 'bottom',
@@ -77,6 +86,7 @@ class CarouselBase extends Component {
     viewportIsMOrLess: PropTypes.bool.isRequired,
     viewportIsXSOrLess: PropTypes.bool.isRequired,
     hidePaginationOnMobile: PropTypes.bool,
+    hidePaginationOnTablet: PropTypes.bool,
     paginationPosition: PropTypes.shape({
       default: propTypesPositions,
       fromXxs: propTypesPositions,
@@ -90,6 +100,7 @@ class CarouselBase extends Component {
 
   state = {
     indexPageVisible: 0,
+    indexColumnVisible: 0,
     numColumns: 3,
     numPages: getNumPagesForColumnsAndDataLength(
       React.Children.count(this.props.children),
@@ -148,6 +159,12 @@ class CarouselBase extends Component {
     this.setState({ indexPageVisible: newPage })
   }
 
+  goNextColumn = () => {
+    const { numColumns, indexColumnVisible } = this.state
+    const newColumn = checkColumn(numColumns, indexColumnVisible + 1)
+    this.setState({ indexColumnVisible: newColumn })
+  }
+
   goToPage = indexPageToGo => {
     const { numPages } = this.state
     const newPage = checkPage(numPages, indexPageToGo)
@@ -162,7 +179,13 @@ class CarouselBase extends Component {
       viewportIsXSOrLess,
       viewportIsMOrLess,
     } = this.props
-    const { indexPageVisible, numColumns, numPages } = this.state
+    const {
+      indexPageVisible,
+      indexColumnVisible,
+      numColumns,
+      numPages,
+    } = this.state
+
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
       viewportIsXSOrLess,
@@ -174,6 +197,7 @@ class CarouselBase extends Component {
         itemMinWidth={itemMinWidth}
         renderItem={children}
         indexPageVisible={indexPageVisible}
+        indexColumnVisible={indexColumnVisible}
         numColumns={numColumns}
         numPages={numPages}
         itemMarginBetween={itemMarginBetween}
@@ -189,9 +213,15 @@ class CarouselBase extends Component {
       viewportIsMOrLess,
       viewportIsXSOrLess,
       hidePaginationOnMobile,
+      hidePaginationOnTablet,
       paginationPosition,
     } = this.props
-    const { indexPageVisible, numPages } = this.state
+    const {
+      indexPageVisible,
+      indexColumnVisible,
+      numPages,
+      numColumns,
+    } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
       viewportIsXSOrLess,
@@ -199,7 +229,10 @@ class CarouselBase extends Component {
     )
 
     if (viewportIsXSOrLess && hidePaginationOnMobile) return
+    if (viewportIsMOrLess && hidePaginationOnTablet) return
+
     if (numPages <= 1) return
+    if (numColumns <= 1) return
 
     if (viewportIsXSOrLess) {
       const rangePage = createRangeFromZeroTo(numPages)
@@ -210,11 +243,17 @@ class CarouselBase extends Component {
             <PageDot
               index={index}
               key={index}
-              visibleIndex={indexPageVisible}
+              visibleIndex={indexPageVisible || indexColumnVisible}
             />
           ))}
-          <PageControlButton prev onClick={this.goPrevPage} />
-          <PageControlButton next onClick={this.goNextPage} />
+          <PageControlButton
+            prev
+            onClick={this.goPrevPage || this.goPrevColumn}
+          />
+          <PageControlButton
+            next
+            onClick={this.goNextPage || this.goNextPage}
+          />
         </PageControl>
       )
     }
@@ -238,7 +277,7 @@ class CarouselBase extends Component {
 
         <ButtonIcon
           modifier="beryllium"
-          onClick={this.goNextPage}
+          onClick={this.goNextPage || this.goNextColumn}
           disabled={indexPageVisible >= numPages - 1}
         >
           <ArrowIcon
