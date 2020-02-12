@@ -9,7 +9,7 @@ export const IdealIcon = props => (
     {...props}
   >
     <title>Ideal</title>
-    <g fill="none" fill-rule="evenodd">
+    <g fill="none" fillRule="evenodd">
       <path fill="#0A0B09" d="M3.57 24.305h5.145v-8.544H3.57z" />
       <path d="M0 .001h32.112v27.996H0z" />
       <path
