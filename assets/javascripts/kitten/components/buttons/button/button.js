@@ -142,16 +142,27 @@ export const ICON = css`
   width: ${pxToRem(50)};
   height: ${pxToRem(50)};
   padding: 0;
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(50)};
+    min-width: 0;
+    min-height: 0;
+  }
 `
 
 export const ICON_TINY = css`
   width: ${pxToRem(40)};
   height: ${pxToRem(40)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(40)};
+  }
 `
 
 export const ICON_BIG = css`
   width: ${pxToRem(70)};
   height: ${pxToRem(70)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(70)};
+  }
 `
 
 export class Button extends Component {
