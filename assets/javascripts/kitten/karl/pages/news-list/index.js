@@ -47,14 +47,13 @@ const LeftArrowIcon = styled(ArrowIcon)`
 `
 
 const NewsContainer = styled.div`
-  padding: 0 ${pxToRem(160)};
-  @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-    padding: 0 ${pxToRem(20)};
-  }
-  @media (min-width: ${pxToRem(ScreenConfig.S.max)}) and (max-width: ${pxToRem(
-      ScreenConfig.M.max,
-    )}) {
+  padding: 0 ${pxToRem(20)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.max)}) {
     padding: 0 ${pxToRem(100)};
+  }
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    padding: 0 ${pxToRem(160)};
   }
 `
 

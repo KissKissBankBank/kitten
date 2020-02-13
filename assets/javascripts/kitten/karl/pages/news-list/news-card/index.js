@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   padding: ${pxToRem(wrapperPadding)};
 `
 
-const GarbagButton = styled(ButtonIcon)`
+const GarbageButton = styled(ButtonIcon)`
   position: absolute;
   top: -${pxToRem(borderWidth)};
   right: -${pxToRem(borderWidth)};
@@ -53,7 +53,7 @@ const ShowMoreLink = styled(Text)`
 const NewsCard = ({ title, children, publishedAt }) => {
   return (
     <Wrapper>
-      <GarbagButton
+      <GarbageButton
         type="button"
         title="Garbage Button"
         aria-label="Supprimer cet item"
@@ -61,7 +61,7 @@ const NewsCard = ({ title, children, publishedAt }) => {
         size="tiny"
       >
         <GarbageIcon className="k-ButtonIcon__svg" />
-      </GarbagButton>
+      </GarbageButton>
       {publishedAt && (
         <Publication>
           <Text weight="light" color="font1">
