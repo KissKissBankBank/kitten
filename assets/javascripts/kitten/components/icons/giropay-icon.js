@@ -9,7 +9,7 @@ export const GiropayIcon = props => (
     {...props}
   >
     <title>Giropay</title>
-    <g fill="none" fill-rule="evenodd">
+    <g fill="none" fillRule="evenodd">
       <path
         d="M.038 3.586A3.587 3.587 0 0 1 3.633.007H42.82a3.587 3.587 0 0 1 3.596 3.579v12.787a3.587 3.587 0 0 1-3.596 3.578H3.633a3.587 3.587 0 0 1-3.595-3.578V3.586z"
         fill="#000268"
