@@ -33,23 +33,13 @@ const Splitter = styled.div`
   display: flex;
 `
 
-const Body = styled(Text)`
-  margin-top: ${pxToRem(10)};
-  margin-right: ${pxToRem(20)};
-`
-
 const Actions = styled.div`
   display: flex;
   align-items: flex-end;
 `
 
-const PublishButton = styled(Button)`
-  margin-left: ${pxToRem(20)};
-`
-
 const ShowMoreLink = styled(Text)`
   display: block;
-  cursor: pointer;
   margin-top: ${pxToRem(15)};
 `
 
@@ -70,9 +60,7 @@ const NewsCard = ({ title, children, publishedAt }) => {
           <Text weight="light" color="font1">
             Programmé pour le{' '}
           </Text>
-          <Text weight="bold" color="font1">
-            {publishedAt}
-          </Text>
+          <strong className="k-u-strong">{publishedAt}</strong>
         </Publication>
       )}
       <Title tag="h3" modifier="quaternary" margin={false}>
@@ -80,18 +68,25 @@ const NewsCard = ({ title, children, publishedAt }) => {
       </Title>
       <Splitter>
         <div>
-          <Body weight="light" size="default" tag="div">
+          <Text
+            weight="light"
+            size="default"
+            tag="div"
+            className="k-u-margin-top-single k-u-margin-right-double"
+          >
             {children}
-          </Body>
+          </Text>
           <ShowMoreLink weight="bold" color="primary1" tag="a">
             Voir tout
           </ShowMoreLink>
         </div>
         <Actions>
           <ButtonIcon modifier="hydrogen">
-            <EditIcon className="k-ButtonIcon__svg"  aria-label="Éditer" />
+            <EditIcon className="k-ButtonIcon__svg" aria-label="Éditer" />
           </ButtonIcon>
-          <PublishButton modifier="helium">Publier</PublishButton>
+          <Button modifier="helium" className="k-u-margin-left-double">
+            Publier
+          </Button>
         </Actions>
       </Splitter>
     </Wrapper>

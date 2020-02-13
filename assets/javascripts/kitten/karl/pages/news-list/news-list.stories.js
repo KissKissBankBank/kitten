@@ -56,11 +56,6 @@ const BlockTitle = styled(Title)`
   margin-top: ${pxToRem(100)};
 `
 
-const Separator = styled(HorizontalStroke)`
-  margin-top: ${pxToRem(20)};
-  margin-bottom: ${pxToRem(40)};
-`
-
 storiesOf('Pages/Actus', module)
   .addDecorator(withKnobs)
   .add(
@@ -123,7 +118,10 @@ storiesOf('Pages/Actus', module)
             <BlockTitle tag="h2" modifier="secondary" margin={false}>
               Mes Brouillons
             </BlockTitle>
-            <Separator size="big" />
+            <HorizontalStroke
+              size="big"
+              className="k-u-margin-top-double k-u-margin-bottom-quadruple"
+            />
             <Paragraph modifier="secondary">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Cum sociis natoque penatibus et magnis
@@ -142,7 +140,10 @@ storiesOf('Pages/Actus', module)
             <BlockTitle tag="h2" modifier="secondary" margin={false}>
               Programmées
             </BlockTitle>
-            <Separator size="big" />
+            <HorizontalStroke
+              size="big"
+              className="k-u-margin-top-double k-u-margin-bottom-quadruple"
+            />
             <Paragraph modifier="secondary">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Cum sociis natoque penatibus et magnis
