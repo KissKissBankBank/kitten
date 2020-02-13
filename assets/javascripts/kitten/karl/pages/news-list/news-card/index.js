@@ -59,7 +59,7 @@ const NewsCard = ({ title, children, publishedAt }) => {
       <GarbagButton
         type="button"
         title="Garbage Button"
-        aria-label="Garbage Button"
+        aria-label="Supprimer cet item"
         modifier="beryllium"
         size="tiny"
       >
