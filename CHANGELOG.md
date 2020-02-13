@@ -5,7 +5,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Create `EngagementCard` component.
-
 - Fix: Simplify code for `ContinuousIntersectionObserver`.
 - Fix: Remove warnings about `fill-rule` in SVG icons.
 - Fix: IE11 fix for `Button` with `icon` modifier.

@@ -11,7 +11,6 @@ const borderStyle = css`
 `
 
 const StyledCard = styled.div`
-  border: solid transparent;
   border-radius: ${pxToRem(15)};
   position: relative;
   overflow: hidden;
