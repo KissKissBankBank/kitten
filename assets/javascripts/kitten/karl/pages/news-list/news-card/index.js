@@ -89,7 +89,7 @@ const NewsCard = ({ title, children, publishedAt }) => {
         </div>
         <Actions>
           <ButtonIcon modifier="hydrogen">
-            <EditIcon className="k-ButtonIcon__svg" />
+            <EditIcon className="k-ButtonIcon__svg"  aria-label="Éditer" />
           </ButtonIcon>
           <PublishButton modifier="helium">Publier</PublishButton>
         </Actions>
