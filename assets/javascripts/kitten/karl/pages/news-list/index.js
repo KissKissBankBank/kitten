@@ -49,7 +49,7 @@ const LeftArrowIcon = styled(ArrowIcon)`
 const NewsContainer = styled.div`
   padding: 0 ${pxToRem(20)};
 
-  @media (min-width: ${pxToRem(ScreenConfig.S.max)}) {
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
     padding: 0 ${pxToRem(100)};
   }
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
