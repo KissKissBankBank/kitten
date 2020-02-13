@@ -8,6 +8,7 @@ import { ButtonIcon } from '../../../../components/buttons/button-icon'
 import { Title } from '../../../../components/typography/title'
 import { Text } from '../../../../components/typography/text'
 import { Button } from '../../../../components/buttons/button/button'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const borderWidth = 2
 const wrapperPadding = 30
@@ -31,11 +32,17 @@ const Publication = styled.div`
 
 const Splitter = styled.div`
   display: flex;
+  @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+    flex-direction: column;
+  }
 `
 
 const Actions = styled.div`
   display: flex;
   align-items: flex-end;
+  @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+    margin-top: ${pxToRem(30)};
+  }
 `
 
 const ShowMoreLink = styled(Text)`
