@@ -23,7 +23,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="button__StyledButton-sc-1q5nte0-0 gZQndu navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv"
+          className="button__StyledButton-sc-1q5nte0-0 bUHVxt navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv"
           onClick={[Function]}
         >
           <svg
@@ -47,7 +47,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="button__StyledButton-sc-1q5nte0-0 gZQndu navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv"
+          className="button__StyledButton-sc-1q5nte0-0 bUHVxt navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv"
           onClick={[Function]}
         >
           <svg
