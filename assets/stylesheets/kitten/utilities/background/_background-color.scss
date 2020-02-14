@@ -10,11 +10,13 @@
 ///
 ///   <span class="k-u-background-color-background1">…</span>
 ///   <span class="k-u-background-color-background2">…</span>
+///   <span class="k-u-background-color-background3">…</span>
 ///   <span class="k-u-background-color-primary5">…</span>
 ///   <span class="k-u-background-color-primary6">…</span>
 ///
 ///   <span class="k-u-background-color-background1--important">…</span>
 ///   <span class="k-u-background-color-background2--important">…</span>
+///   <span class="k-u-background-color-background3--important">…</span>
 ///   <span class="k-u-background-color-primary5--important">…</span>
 ///   <span class="k-u-background-color-primary6--important">…</span>
 
@@ -32,6 +34,14 @@
 
     &--important {
       background-color: map-get($k-colors, 'background-2') !important;
+    }
+  }
+
+  .k-u-background-color-background3 {
+    background-color: map-get($k-colors, 'background-3');
+
+    &--important {
+      background-color: map-get($k-colors, 'background-3') !important;
     }
   }
 
