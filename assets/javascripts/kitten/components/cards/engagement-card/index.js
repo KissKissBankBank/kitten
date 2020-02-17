@@ -21,6 +21,7 @@ const StyledCard = styled.div`
   padding: ${pxToRem(10)};
 
   ${({ href }) =>
+    href &&
     css`
       :hover,
       :active,
