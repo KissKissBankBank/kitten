@@ -20,8 +20,7 @@ const StyledCard = styled.div`
   background-size: contain;
   padding: ${pxToRem(10)};
 
-  ${({ as }) =>
-    (as === 'a' || as === 'button') &&
+  ${({ href }) =>
     css`
       :hover,
       :active,
@@ -49,6 +48,7 @@ export const EngagementCard = ({
   children,
   hoverBorder,
   isActive,
+  as,
   ...others
 }) => {
   return (
