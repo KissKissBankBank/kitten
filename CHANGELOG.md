@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `EngagementCard` component.
 - Feature: Add `.k-u-background-color-background3` utility.
 - Fix: Simplify code for `ContinuousIntersectionObserver`.
 - Fix: Remove warnings about `fill-rule` in SVG icons.
