@@ -4,11 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Create `EngagementCard` component.
-- Feature: Add `.k-u-background-color-background3` utility.
-- Fix: Simplify code for `ContinuousIntersectionObserver`.
-- Fix: Remove warnings about `fill-rule` in SVG icons.
-- Fix: IE11 fix for `Button` with `icon` modifier.
+## [2.55.0] - 2020-02-19
+
+Features:
+- Create `EngagementCard` component.
+- Add `.k-u-background-color-background3` utility.
+
+Fixes:
+- Simplify code for `ContinuousIntersectionObserver`.
+- Remove warnings about `fill-rule` in SVG icons.
+- IE11 fix for `Button` with `icon` modifier.
 
 ## [2.54.0] - 2020-02-06
 
