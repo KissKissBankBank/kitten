@@ -10,6 +10,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Simplify code for `ContinuousIntersectionObserver`.
 - Fix: Remove warnings about `fill-rule` in SVG icons.
 - Fix: IE11 fix for `Button` with `icon` modifier.
+- Fix: Fix unused `onAfterClose` props for Alert component.
 
 ## [2.54.0] - 2020-02-06
 

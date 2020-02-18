@@ -19,17 +19,17 @@ const AlertWrapper = styled.div`
   font-size: ${stepToRem(-1)};
   background-color: ${COLORS.primary5};
   color: ${COLORS.primary1};
-  
+
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     text-align: center;
   }
-  
+
   a {
     ${TYPOGRAPHY.fontStyles.bold};
     color: inherit;
     text-decoration: underline;
   }
-  
+
   ${props =>
     props.success &&
     css`
@@ -79,7 +79,10 @@ export const Alert = ({
   useEffect(() => {
     let clearDelayBeforeTrash
     if (!isMounted) {
-      clearDelayBeforeTrash = setTimeout(() => trashIt(true), 400)
+      clearDelayBeforeTrash = setTimeout(() => {
+        trashIt(true)
+        onAfterClose()
+      }, 400)
     }
     return () => clearTimeout(clearDelayBeforeTrash)
   }, [isMounted])
