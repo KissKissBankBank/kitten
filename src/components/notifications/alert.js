@@ -76,7 +76,8 @@ var Alert = function Alert(_ref) {
 
     if (!isMounted) {
       clearDelayBeforeTrash = setTimeout(function () {
-        return trashIt(true);
+        trashIt(true);
+        onAfterClose();
       }, 400);
     }
 
