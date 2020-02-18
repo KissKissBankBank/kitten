@@ -43,7 +43,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 .c6 {
   margin-top: 0.9375rem;
-  margin-bottom: 0.3125rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -55,26 +54,31 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   line-height: 1;
 }
 
-.c8 + .c7 {
-  margin-left: 0.9375rem;
+.c7 {
+  margin-right: 0.9375rem;
+  margin-bottom: 0.3125rem;
 }
 
-.c9 {
+.c7:last-child {
+  margin-right: 0;
+}
+
+.c8 {
   font-size: 0.75rem;
 }
 
-.c12 {
+.c11 {
   max-width: 100%;
 }
 
-.c14 {
+.c13 {
   position: relative;
   height: 0.125rem;
   background: #eee;
   height: 4px;
 }
 
-.c14::after {
+.c13::after {
   content: '';
   position: absolute;
   top: 0;
@@ -87,11 +91,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   background: #19b4fa;
 }
 
-.c11.is-disabled .c14::after {
+.c10.is-disabled .c13::after {
   background: #d8d8d8;
 }
 
-.c10 {
+.c9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -108,20 +112,20 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   margin-bottom: 0.625rem;
 }
 
-.c13 {
+.c12 {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 
-.c15 {
+.c14 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-left: calc(2 * 0.625rem);
 }
 
-.c16 {
+.c15 {
   position: absolute;
   top: 0;
   right: 0;
@@ -161,20 +165,20 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 @media (min-width:48rem) {
-  .c8 + .c7 {
-    margin-left: 1.25rem;
+  .c7 {
+    margin-right: 1.25rem;
   }
 }
 
 @media (min-width:48rem) {
-  .c10 {
+  .c9 {
     padding: 0 0.625rem;
     margin-bottom: 1.25rem;
   }
 }
 
 @media (max-width:47.9375rem) {
-  .c16 {
+  .c15 {
     display: none;
   }
 }
@@ -244,55 +248,55 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     className="c6"
   >
     <div
-      className="c7 c8"
+      className="c7"
     >
       <span
-        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c9"
+        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c8"
       >
         Lorem ipsum…
       </span>
     </div>
     <div
-      className="c7 c8"
+      className="c7"
     >
       <span
-        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c9"
+        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c8"
       >
         Lorem ipsum…
       </span>
     </div>
     <div
-      className="c7 c8"
+      className="c7"
     >
       <span
-        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c9"
+        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light c8"
       >
         Lorem ipsum…
       </span>
     </div>
   </div>
   <div
-    className="c10"
+    className="c9"
   >
     <div
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c11 c12 c13"
+      className="c10 c11 c12"
       role="progressbar"
     >
       <div
-        className="c14"
+        className="c13"
       />
     </div>
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c15 k-u-hidden@s-down"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular c14 k-u-hidden@s-down"
     >
       42 %
     </span>
   </div>
   <div
-    className="c16"
+    className="c15"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
