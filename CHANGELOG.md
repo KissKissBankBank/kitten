@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `CrowdfundingCard` info styles.
 - Feature: Create `EngagementCard` component.
 - Feature: Add `.k-u-background-color-background3` utility.
 - Fix: Simplify code for `ContinuousIntersectionObserver`.

@@ -38,12 +38,12 @@ var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "informations__StyledContainer",
   componentId: "qg8b01-0"
-})(["margin-top:", ";margin-bottom:", ";display:flex;flex-wrap:wrap;padding:0;line-height:1;@media (min-width:", "){margin-top:", ";padding:0 ", ";}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(20), COMPONENT_GUTTER);
+})(["margin-top:", ";display:flex;flex-wrap:wrap;padding:0;line-height:1;@media (min-width:", "){margin-top:", ";padding:0 ", ";}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(20), COMPONENT_GUTTER);
 
 var StyledInfo = _styledComponents.default.div.withConfig({
   displayName: "informations__StyledInfo",
   componentId: "qg8b01-1"
-})(["& + &{margin-left:", ";@media (min-width:", "){margin-left:", ";}}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(20));
+})(["margin-right:", ";margin-bottom:", ";@media (min-width:", "){margin-right:", ";}:last-child{margin-right:0;}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(20));
 
 var StyledInfoLoading = _styledComponents.default.span.withConfig({
   displayName: "informations__StyledInfoLoading",
@@ -77,7 +77,7 @@ function (_PureComponent) {
           info2 = _this$props.info2,
           info3 = _this$props.info3;
       if (!info1 && !info2 && !info3) return null;
-      return _react.default.createElement(StyledContainer, null, this.renderInfo(info1), this.renderInfo(info2), this.renderInfo(info3));
+      return _react.default.createElement(StyledContainer, null, this.renderInfo(info1), this.renderInfo(info2), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3));
     }
   }, {
     key: "renderInfo",

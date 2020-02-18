@@ -10,7 +10,6 @@ const COMPONENT_GUTTER = pxToRem(10)
 
 const StyledContainer = styled.div`
   margin-top: ${pxToRem(15)};
-  margin-bottom: ${pxToRem(5)};
   display: flex;
   flex-wrap: wrap;
   padding: 0;
@@ -23,12 +22,15 @@ const StyledContainer = styled.div`
 `
 
 const StyledInfo = styled.div`
-  & + & {
-    margin-left: ${pxToRem(15)};
+  margin-right: ${pxToRem(15)};
+  margin-bottom: ${pxToRem(5)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-      margin-left: ${pxToRem(20)};
-    }
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    margin-right: ${pxToRem(20)};
+  }
+
+  :last-child {
+    margin-right: 0;
   }
 `
 
@@ -74,6 +76,15 @@ class Informations extends PureComponent {
       <StyledContainer>
         {this.renderInfo(info1)}
         {this.renderInfo(info2)}
+        {this.renderInfo(info3)}
+        {this.renderInfo(info3)}
+        {this.renderInfo(info3)}
+        {this.renderInfo(info3)}
+        {this.renderInfo(info3)}
+        {this.renderInfo(info3)}
+        {this.renderInfo(info3)}
+        {this.renderInfo(info3)}
+        {this.renderInfo(info3)}
         {this.renderInfo(info3)}
       </StyledContainer>
     )
