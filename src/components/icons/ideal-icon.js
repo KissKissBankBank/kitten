@@ -19,7 +19,7 @@ var IdealIcon = function IdealIcon(props) {
     xmlns: "http://www.w3.org/2000/svg"
   }, props), _react.default.createElement("title", null, "Ideal"), _react.default.createElement("g", {
     fill: "none",
-    "fill-rule": "evenodd"
+    fillRule: "evenodd"
   }, _react.default.createElement("path", {
     fill: "#0A0B09",
     d: "M3.57 24.305h5.145v-8.544H3.57z"

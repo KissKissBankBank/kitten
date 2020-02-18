@@ -52,15 +52,10 @@ var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_re
       isPartlyVisible = _useState8[0],
       setPartlyVisible = _useState8[1];
 
-  var _useState9 = (0, _react.useState)(false),
+  var _useState9 = (0, _react.useState)('before'),
       _useState10 = (0, _slicedToArray2.default)(_useState9, 2),
-      isCompletelyVisible = _useState10[0],
-      setCompletelyVisible = _useState10[1];
-
-  var _useState11 = (0, _react.useState)('before'),
-      _useState12 = (0, _slicedToArray2.default)(_useState11, 2),
-      visibleElement = _useState12[0],
-      setVisibleElement = _useState12[1];
+      visibleElement = _useState10[0],
+      setVisibleElement = _useState10[1];
 
   (0, _continuousIntersectionHook.default)((0, _extends2.default)({
     onIntersect: function onIntersect(entries) {
@@ -89,7 +84,6 @@ var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_re
     observedComponentRef: afterEl
   }, consolidatedOptions));
   (0, _react.useEffect)(function () {
-    setCompletelyVisible(false);
     setPartlyVisible(false);
 
     if (isTargetElIntersecting) {
@@ -97,7 +91,6 @@ var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_re
 
       if (!isBeforeElIntersecting && !isAfterElIntersecting || isBeforeElIntersecting && isAfterElIntersecting) {
         setVisibleElement('target');
-        setCompletelyVisible(true);
       }
     }
   }, [isBeforeElIntersecting, isTargetElIntersecting, isAfterElIntersecting]);
@@ -107,7 +100,7 @@ var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_re
     ref: targetEl
   }, props.targetComponentProps), children({
     isPartlyVisible: isPartlyVisible,
-    isCompletelyVisible: isCompletelyVisible,
+    isCompletelyVisible: visibleElement === 'target',
     visibleElement: visibleElement
   })), _react.default.createElement("div", (0, _extends2.default)({
     ref: afterEl

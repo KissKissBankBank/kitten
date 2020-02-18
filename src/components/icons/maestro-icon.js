@@ -19,7 +19,7 @@ var MaestroIcon = function MaestroIcon(props) {
     xmlns: "http://www.w3.org/2000/svg"
   }, props), _react.default.createElement("title", null, "Maestro"), _react.default.createElement("g", {
     fill: "none",
-    "fill-rule": "nonzero"
+    fillRule: "nonzero"
   }, _react.default.createElement("path", {
     fill: "#6C6BBD",
     d: "M24.514 21.304H14.08V2.55h10.435z"

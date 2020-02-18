@@ -19,7 +19,7 @@ var BancontactIcon = function BancontactIcon(props) {
     xmlns: "http://www.w3.org/2000/svg"
   }, props), _react.default.createElement("title", null, "Bancontact"), _react.default.createElement("g", {
     fill: "none",
-    "fill-rule": "evenodd"
+    fillRule: "evenodd"
   }, _react.default.createElement("path", {
     d: "M40.174 4.923H26.221l-6.024 6.782-1.42 1.598H5.008L8.464 9.3H2.12c-1.16 0-2.108.973-2.108 2.161v4.56c0 1.188.949 2.16 2.108 2.16h24.289c1.159 0 2.742-.721 3.518-1.604L40.174 4.923",
     fill: "#00528E"

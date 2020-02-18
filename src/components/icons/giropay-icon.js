@@ -19,7 +19,7 @@ var GiropayIcon = function GiropayIcon(props) {
     xmlns: "http://www.w3.org/2000/svg"
   }, props), _react.default.createElement("title", null, "Giropay"), _react.default.createElement("g", {
     fill: "none",
-    "fill-rule": "evenodd"
+    fillRule: "evenodd"
   }, _react.default.createElement("path", {
     d: "M.038 3.586A3.587 3.587 0 0 1 3.633.007H42.82a3.587 3.587 0 0 1 3.596 3.579v12.787a3.587 3.587 0 0 1-3.596 3.578H3.633a3.587 3.587 0 0 1-3.595-3.578V3.586z",
     fill: "#000268"

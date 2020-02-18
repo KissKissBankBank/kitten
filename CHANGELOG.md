@@ -4,13 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `CrowdfundingCard` info styles.
-- Feature: Create `EngagementCard` component.
-- Feature: Add `.k-u-background-color-background3` utility.
-- Fix: Simplify code for `ContinuousIntersectionObserver`.
-- Fix: Remove warnings about `fill-rule` in SVG icons.
-- Fix: IE11 fix for `Button` with `icon` modifier.
-- Fix: Fix unused `onAfterClose` props for Alert component.
+## [2.55.0] - 2020-02-18
+
+Features:
+- Create `EngagementCard` component.
+- Add `.k-u-background-color-background3` utility.
+
+Fixes:
+- Fix `CrowdfundingCard` info styles.
+- Simplify code for `ContinuousIntersectionObserver`.
+- Remove warnings about `fill-rule` in SVG icons.
+- IE11 fix for `Button` with `icon` modifier.
+- Fix unused `onAfterClose` props for Alert component.
 
 ## [2.54.0] - 2020-02-06
 
