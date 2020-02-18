@@ -77,7 +77,7 @@ function (_PureComponent) {
           info2 = _this$props.info2,
           info3 = _this$props.info3;
       if (!info1 && !info2 && !info3) return null;
-      return _react.default.createElement(StyledContainer, null, this.renderInfo(info1), this.renderInfo(info2), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3), this.renderInfo(info3));
+      return _react.default.createElement(StyledContainer, null, this.renderInfo(info1), this.renderInfo(info2), this.renderInfo(info3));
     }
   }, {
     key: "renderInfo",

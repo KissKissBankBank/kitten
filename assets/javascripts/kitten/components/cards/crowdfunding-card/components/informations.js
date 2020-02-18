@@ -77,15 +77,6 @@ class Informations extends PureComponent {
         {this.renderInfo(info1)}
         {this.renderInfo(info2)}
         {this.renderInfo(info3)}
-        {this.renderInfo(info3)}
-        {this.renderInfo(info3)}
-        {this.renderInfo(info3)}
-        {this.renderInfo(info3)}
-        {this.renderInfo(info3)}
-        {this.renderInfo(info3)}
-        {this.renderInfo(info3)}
-        {this.renderInfo(info3)}
-        {this.renderInfo(info3)}
       </StyledContainer>
     )
   }
