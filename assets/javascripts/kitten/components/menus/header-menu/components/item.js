@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
@@ -11,10 +11,14 @@ const StyledItem = styled.a`
   display: block;
   position: relative;
 
-  padding: ${pxToRem(18)} ${pxToRem(30)} ${pxToRem(17)};
+  padding: ${({ largeItem }) =>
+    largeItem
+      ? `${pxToRem(28)} ${pxToRem(21)} ${pxToRem(28)} ${pxToRem(40)}`
+      : `${pxToRem(18)} ${pxToRem(30)} ${pxToRem(17)}`};
 
   background-color: ${COLORS.background1};
-  border-bottom: 1px solid ${COLORS.line1};
+  border-bottom: ${({ noBorder }) =>
+    noBorder ? null : `${pxToRem(1)} solid ${COLORS.line1}`};
   outline: none;
 
   ${TYPOGRAPHY.fontStyles.regular}
@@ -26,9 +30,9 @@ const StyledItem = styled.a`
   ::before {
     content: '';
     position: absolute;
-    top: -1px;
-    left: -1px;
-    bottom: -1px;
+    top: ${({ noBorder }) => (noBorder ? 0 : pxToRem(-1))};
+    left: ${({ noBorder }) => (noBorder ? 0 : pxToRem(-1))};
+    bottom: ${({ noBorder }) => (noBorder ? 0 : pxToRem(-1))};
 
     width: ${pxToRem(1)};
 
@@ -106,53 +110,50 @@ const ExternalStyledItem = styled(StyledItem)`
   }
 `
 
-export class Item extends Component {
-  static propTypes = {
-    href: PropTypes.string,
-    isSelected: PropTypes.bool,
-    modifier: PropTypes.oneOf(['light', 'default']),
-    external: PropTypes.bool,
-    liProps: PropTypes.object,
-  }
-
-  static defaultProps = {
-    href: null,
-    isSelected: false,
-    modifier: 'default',
-    external: false,
-    liProps: {},
-  }
-
-  render() {
-    const { children, href, external, liProps, ...other } = this.props
-
-    return (
-      <Context.Consumer>
-        {({ borderSide }) => (
-          <li role="menuitem" {...liProps}>
-            {external ? (
-              <ExternalStyledItem
-                href={href}
-                borderSide={borderSide}
-                external={external}
-                {...other}
-              >
-                <span>{children}</span>
-                <ArrowIcon direction="right" />
-              </ExternalStyledItem>
-            ) : (
-              <StyledItem
-                href={href}
-                borderSide={borderSide}
-                external={external}
-                {...other}
-              >
-                {children}
-              </StyledItem>
-            )}
-          </li>
+export const Item = ({ children, href, external, liProps, ...other }) => (
+  <Context.Consumer>
+    {({ borderSide, largeItem, noBorder }) => (
+      <li role="menuitem" {...liProps}>
+        {external ? (
+          <ExternalStyledItem
+            href={href}
+            borderSide={borderSide}
+            external={external}
+            noBorder={noBorder}
+            {...other}
+          >
+            <span>{children}</span>
+            <ArrowIcon version="solid" direction="right" />
+          </ExternalStyledItem>
+        ) : (
+          <StyledItem
+            href={href}
+            borderSide={borderSide}
+            external={external}
+            largeItem={largeItem}
+            noBorder={noBorder}
+            {...other}
+          >
+            {children}
+          </StyledItem>
         )}
-      </Context.Consumer>
-    )
-  }
+      </li>
+    )}
+  </Context.Consumer>
+)
+
+Item.propTypes = {
+  href: PropTypes.string,
+  isSelected: PropTypes.bool,
+  modifier: PropTypes.oneOf(['light', 'default']),
+  external: PropTypes.bool,
+  liProps: PropTypes.object,
+}
+
+Item.defaultProps = {
+  href: null,
+  isSelected: false,
+  modifier: 'default',
+  external: false,
+  liProps: {},
 }

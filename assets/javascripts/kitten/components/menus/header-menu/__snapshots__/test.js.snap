@@ -6,7 +6,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.0625rem solid #eee;
   outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -20,9 +20,9 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 .c1::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
   width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
@@ -47,8 +47,8 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 0.0625rem solid #eee;
+  border-right: 0.0625rem solid #eee;
 }
 
 <nav
@@ -98,7 +98,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.0625rem solid #eee;
   outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -112,9 +112,9 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c1::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
   width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
@@ -135,7 +135,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.0625rem solid #eee;
   outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -169,9 +169,9 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c2::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
   width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
@@ -207,8 +207,8 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 0.0625rem solid #eee;
+  border-right: 0.0625rem solid #eee;
 }
 
 <nav
@@ -253,16 +253,20 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
           </a>
         </span>
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right"
+          className=""
           data-radium={true}
-          viewBox="0 0 6 6"
+          height="5.64"
+          style={
+            Object {
+              "transform": "rotate(90deg)",
+            }
+          }
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Arrow
-          </title>
           <path
-            d="M6 0H0v6h2V2h4z"
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
           />
         </svg>
       </a>
@@ -277,7 +281,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.0625rem solid #eee;
   outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -291,9 +295,9 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c1::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
   width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
@@ -314,7 +318,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.0625rem solid #eee;
   outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -329,9 +333,9 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c2::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
   width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
@@ -356,8 +360,8 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 0.0625rem solid #eee;
+  border-right: 0.0625rem solid #eee;
 }
 
 <nav
@@ -407,7 +411,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.0625rem solid #eee;
   outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -421,9 +425,9 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c1::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
   width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
@@ -444,7 +448,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.0625rem solid #eee;
   outline: none;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -459,9 +463,9 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c2::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: -0.0625rem;
   width: 0.0625rem;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
@@ -481,8 +485,8 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 0.0625rem solid #eee;
+  border-right: 0.0625rem solid #eee;
 }
 
 <nav

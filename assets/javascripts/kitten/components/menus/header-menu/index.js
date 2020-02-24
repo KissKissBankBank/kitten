@@ -1,52 +1,63 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Item } from './components/item'
 import { Context } from './components/context'
 import COLORS from '../../../constants/colors-config'
+import { pxToRem } from '../../../helpers/utils/typography'
+
+const borderStyle = `${pxToRem(1)} solid ${COLORS.line1}`
 
 const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 1px solid ${COLORS.line1};
-  border-right: 1px solid ${COLORS.line1};
+  border-left: ${({ noBorder }) => (noBorder ? 0 : borderStyle)};
+  border-right: ${({ noBorder }) => (noBorder ? 0 : borderStyle)};
 `
 
-export class HeaderMenu extends Component {
-  static Item = Item
+export const HeaderMenu = ({ borderSide, largeItem, noBorder, children }) => {
+  const [borderSideState, setBorderSide] = useState(borderSide)
+  const [largeItemState, setLargeItem] = useState(largeItem)
+  const [noBorderState, setNoBorder] = useState(noBorder)
 
-  static propTypes = {
-    borderSide: PropTypes.oneOf(['left', 'right']),
-  }
+  useEffect(() => {
+    setBorderSide(borderSide)
+  }, [borderSide])
+  useEffect(() => {
+    setLargeItem(largeItem)
+  }, [largeItem])
+  useEffect(() => {
+    setNoBorder(noBorder)
+  }, [noBorder])
 
-  static defaultProps = {
-    borderSide: 'left',
-  }
+  return (
+    <Context.Provider
+      value={{
+        borderSide: borderSideState,
+        largeItem: largeItemState,
+        noBorder: noBorderState,
+      }}
+    >
+      <nav role="navigation">
+        <List noBorder={noBorderState} role="menubar">
+          {children}
+        </List>
+      </nav>
+    </Context.Provider>
+  )
+}
 
-  constructor(props) {
-    super(props)
+HeaderMenu.Item = Item
 
-    this.state = {
-      borderSide: props.borderSide,
-    }
-  }
+HeaderMenu.propTypes = {
+  borderSide: PropTypes.oneOf(['left', 'right']),
+  largeItem: PropTypes.bool,
+  noBorder: PropTypes.bool,
+}
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.borderSide !== this.props.borderSide) {
-      this.setState({ borderSide: this.props.borderSide })
-    }
-  }
-
-  render() {
-    const { children } = this.props
-
-    return (
-      <Context.Provider value={this.state}>
-        <nav role="navigation">
-          <List role="menubar">{children}</List>
-        </nav>
-      </Context.Provider>
-    )
-  }
+HeaderMenu.defaultProps = {
+  borderSide: 'left',
+  largeItem: false,
+  noBorder: false,
 }
