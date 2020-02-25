@@ -82,7 +82,10 @@ const ExternalStyledItem = styled(StyledItem)`
   display: flex;
 
   height: ${pxToRem(24)};
-  padding: ${pxToRem(23)} ${pxToRem(21)} ${pxToRem(22)} ${pxToRem(30)};
+  padding: ${({ largeItem }) =>
+    largeItem
+      ? `${pxToRem(23)} ${pxToRem(21)} ${pxToRem(22)} ${pxToRem(40)}`
+      : `${pxToRem(23)} ${pxToRem(21)} ${pxToRem(22)} ${pxToRem(30)}`};
 
   align-items: center;
   align-self: flex-start;
@@ -90,7 +93,15 @@ const ExternalStyledItem = styled(StyledItem)`
 
   background-color: ${COLORS.background3};
 
-  transition: padding-right 0.2s;
+  .itemNextToArrowIcon {
+    margin-right: ${pxToRem(20)};
+  }
+
+  .headerMenuArrowIcon {
+    position: relative;
+    left: 0;
+    transition: left 0.2s;
+  }
 
   svg,
   img {
@@ -100,9 +111,11 @@ const ExternalStyledItem = styled(StyledItem)`
 
   :focus,
   :hover {
-    padding-right: ${pxToRem(16)};
-
     color: ${COLORS.font1};
+
+    .headerMenuArrowIcon {
+      left: ${pxToRem(5)};
+    }
   }
 
   ::before {
@@ -119,11 +132,16 @@ export const Item = ({ children, href, external, liProps, ...other }) => (
             href={href}
             borderSide={borderSide}
             external={external}
+            largeItem={largeItem}
             noBorder={noBorder}
             {...other}
           >
-            <span>{children}</span>
-            <ArrowIcon version="solid" direction="right" />
+            <span className="itemNextToArrowIcon">{children}</span>
+            <ArrowIcon
+              className="headerMenuArrowIcon"
+              version="solid"
+              direction="right"
+            />
           </ExternalStyledItem>
         ) : (
           <StyledItem
