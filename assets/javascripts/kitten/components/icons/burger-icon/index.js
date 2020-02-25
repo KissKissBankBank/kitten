@@ -34,25 +34,23 @@ export const BurgerIcon = ({
   isActive,
   iconTitle,
   ...props
-}) => {
-  return (
-    <StyledItem
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 12 10"
-      width="12"
-      height="10"
-      isActive={isActive}
-      mainColor={mainColor}
-      hoverColor={hoverColor}
-      {...props}
-    >
-      {iconTitle && <title>{iconTitle}</title>}
-      <rect y="0" width="12" height="2" className="item-buns" />
-      <rect y="4" width="12" height="2" className="item-patty" />
-      <rect y="8" width="12" height="2" className="item-buns" />
-    </StyledItem>
-  )
-}
+}) => (
+  <StyledItem
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 12 10"
+    width="12"
+    height="10"
+    isActive={isActive}
+    mainColor={mainColor}
+    hoverColor={hoverColor}
+    {...props}
+  >
+    {iconTitle && <title>{iconTitle}</title>}
+    <rect y="0" width="12" height="2" className="item-buns" />
+    <rect y="4" width="12" height="2" className="item-patty" />
+    <rect y="8" width="12" height="2" className="item-buns" />
+  </StyledItem>
+)
 
 BurgerIcon.propTypes = {
   mainColor: PropTypes.string,

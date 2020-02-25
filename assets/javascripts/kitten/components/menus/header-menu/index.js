@@ -24,9 +24,11 @@ export const HeaderMenu = ({ borderSide, largeItem, noBorder, children }) => {
   useEffect(() => {
     setBorderSide(borderSide)
   }, [borderSide])
+
   useEffect(() => {
     setLargeItem(largeItem)
   }, [largeItem])
+
   useEffect(() => {
     setNoBorder(noBorder)
   }, [noBorder])
