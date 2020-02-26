@@ -4,6 +4,8 @@ import { storiesOf } from '@storybook/react'
 import HeaderNav from './index'
 import { LendopolisLogo } from '../../../components/logos/lendopolis-logo'
 import { HeaderMenu } from '../../../components/menus/header-menu'
+import { SearchIcon } from '../../../components/icons/search-icon'
+import COLORS from '../../../constants/colors-config'
 
 const Container = styled.div`
   height: 200vh;
@@ -65,7 +67,23 @@ storiesOf('Navigation/HeaderNav', module).add('default', () => (
       </HeaderNav.Hidden>
 
       <HeaderNav.Right>
-        <HeaderNav.Button></HeaderNav.Button>
+        <HeaderNav.Button
+          icon={<SearchIcon />}
+          backgroundColor={COLORS.background3}
+          backgroundColorHover={COLORS.line1}
+          color={COLORS.font1}
+          text="Rechercher"
+          href="#"
+          hiddenText={{ max: 'm' }}
+        />
+
+        <HeaderNav.Button
+          backgroundColor={COLORS.primary1}
+          backgroundColorHover={COLORS.primary2}
+          color={COLORS.background1}
+          text="Se connecter / S'inscrire"
+          href="#"
+        />
       </HeaderNav.Right>
     </HeaderNav>
   </Container>

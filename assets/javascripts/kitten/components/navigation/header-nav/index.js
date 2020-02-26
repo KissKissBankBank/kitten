@@ -12,10 +12,11 @@ import { Context } from './components/context'
 import { Right } from './components/right'
 import { Unlogged } from './components/unlogged'
 import { Hidden } from './components/hidden'
-
-export const MOBILE_HEADER_HEIGHT = pxToRem(65)
-export const TABLET_HEADER_HEIGHT = pxToRem(80)
-export const DESKTOP_HEADER_HEIGHT = pxToRem(80)
+import {
+  MOBILE_HEADER_HEIGHT,
+  TABLET_HEADER_HEIGHT,
+  DESKTOP_HEADER_HEIGHT,
+} from './config'
 
 const Header = styled.header`
   height: ${MOBILE_HEADER_HEIGHT};
