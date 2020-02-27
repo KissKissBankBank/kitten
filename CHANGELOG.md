@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature : Add `SaveIcon` and `DocIcon`
+- Feature : Add `DoubleEntryTableLite` Component.
 
 ## [2.55.0] - 2020-02-18
 

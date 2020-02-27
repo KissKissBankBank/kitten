@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DoubleEntryTableLite /> with a complete structure and custom classes matches with snapshot 1`] = `
+<div
+  className="styles__Styles-g3g6vr-0 bwzpIB DoubleEntryTable__Container"
+>
+  <div
+    className="DoubleEntryTable__TableContainer"
+  >
+    <table
+      className="DoubleEntryTable__Table"
+      id="DestBoubleEntryTable"
+    >
+      <thead
+        className="customHeaderClass"
+      >
+        <tr>
+          <th
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol"
+            scope="column"
+          >
+            Header 1
+          </th>
+          <th
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol"
+            scope="column"
+          >
+            Header 2
+          </th>
+          <th
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol"
+            scope="column"
+          >
+            Header 3
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol"
+            scope="row"
+          >
+            Content 1
+          </th>
+          <td
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--Col"
+          >
+            Content 2
+          </td>
+          <td
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--Col"
+          >
+            Content 3
+          </td>
+        </tr>
+        <tr
+          className="customRowClass"
+        >
+          <th
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol"
+            scope="row"
+          >
+            Content 1
+          </th>
+          <td
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--Col"
+          >
+            Content 2
+          </td>
+          <td
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--Col"
+          >
+            Content 3
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
