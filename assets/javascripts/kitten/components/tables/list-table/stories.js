@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styled, { css } from 'styled-components'
+import styled, { css, createGlobalStyle } from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, number, select } from '@storybook/addon-knobs'
@@ -129,87 +129,89 @@ const toggleableListTableInfo = {
   propTables: false,
 }
 
-const StyledCol1 = styled(ListTable.Col)`
-  text-align: center;
+const ListTableStyles = createGlobalStyle`
+  .customCol_1 {
+    text-align: center;
 
-  @media (max-width: ${ScreenConfig.S.max}px) {
-    flex-basis: ${pxToRem(40)};
+    @media (max-width: ${ScreenConfig.S.max}px) {
+      flex-basis: ${pxToRem(40)};
+    }
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      flex-basis: ${pxToRem(60)};
+    }
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      flex-basis: ${pxToRem(90)};
+    }
   }
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    flex-basis: ${pxToRem(60)};
-  }
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    flex-basis: ${pxToRem(90)};
-  }
-`
 
-const StyledCol2 = styled(ListTable.Col)`
-  @media (max-width: ${ScreenConfig.S.max}px) {
-    flex-basis: calc(90% - 150px);
+  .customCol_2 {
+    @media (max-width: ${ScreenConfig.S.max}px) {
+      flex-basis: calc(90% - 150px);
+    }
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      flex-basis: calc(50% - 170px);
+    }
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      flex-basis: 15%;
+    }
   }
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    flex-basis: calc(50% - 170px);
-  }
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    flex-basis: 15%;
-  }
-`
 
-const StyledCol3 = styled(ListTable.Col)`
-  @media (max-width: ${ScreenConfig.M.max}px) {
-    display: none;
+  .customCol_3 {
+    @media (max-width: ${ScreenConfig.M.max}px) {
+      display: none;
+    }
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      flex-basis: 25%;
+    }
   }
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    flex-basis: 25%;
-  }
-`
 
-const StyledCol4 = styled(ListTable.Col)`
-  text-align: right;
+  .customCol_4 {
+    text-align: right;
 
-  @media (max-width: ${ScreenConfig.S.max}px) {
-    flex-basis: 110px;
+    @media (max-width: ${ScreenConfig.S.max}px) {
+      flex-basis: 110px;
+    }
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      flex-basis: 110px;
+    }
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      flex-basis: 8%;
+    }
   }
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    flex-basis: 110px;
+  .customCol_5 {
+    @media (max-width: ${ScreenConfig.S.max}px) {
+      display: none;
+    }
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      flex-basis: 20%;
+    }
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      flex-basis: 15%;
+    }
   }
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    flex-basis: 8%;
+  .customCol_6 {
+    @media (max-width: ${ScreenConfig.M.max}px) {
+      display: none;
+    }
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      flex-basis: calc(33% - 200px);
+    }
   }
-`
-const StyledCol5 = styled(ListTable.Col)`
-  @media (max-width: ${ScreenConfig.S.max}px) {
-    display: none;
+  .customCol_7 {
+    @media (max-width: ${ScreenConfig.S.max}px) {
+      display: none;
+    }
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      flex-basis: 20%;
+    }
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      flex-basis: 12%;
+    }
   }
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    flex-basis: 20%;
-  }
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    flex-basis: 15%;
-  }
-`
-const StyledCol6 = styled(ListTable.Col)`
-  @media (max-width: ${ScreenConfig.M.max}px) {
-    display: none;
-  }
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    flex-basis: calc(33% - 200px);
-  }
-`
-const StyledCol7 = styled(ListTable.Col)`
-  @media (max-width: ${ScreenConfig.S.max}px) {
-    display: none;
-  }
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    flex-basis: 20%;
-  }
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    flex-basis: 12%;
-  }
-`
-const StyledCol8 = styled(ListTable.Col)`
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    display: none;
+  .customCol_8 {
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      display: none;
+    }
   }
 `
 
@@ -349,7 +351,7 @@ const ToggleableTable = styled(ListTable)`
   border-bottom: 0;
 
   ul {
-    height: initial;
+    height: auto;
     flex-wrap: wrap;
   }
 `
@@ -361,43 +363,52 @@ storiesOf('Tables/ListTable', module)
     'default',
     () => {
       return (
-        <div style={{ margin: '5em 0' }}>
+        <div className="k-u-margin-top-quintuple k-u-margin-bottom-quintuple">
+          <ListTableStyles />
           <ListTable id="CustomListTable">
             <ListTable.Header
               className="customHeaderClass"
               listProps={{ className: 'customListClass' }}
             >
-              <StyledCol1>
+              <ListTable.Col className="customCol_1">
                 <VisuallyHidden>Sélection</VisuallyHidden>
                 <input
                   type="checkbox"
                   aria-label="Sélectionner toutes les contributions de la liste"
                 />
-              </StyledCol1>
+              </ListTable.Col>
 
-              <StyledCol2>
+              <ListTable.Col className="customCol_2">
                 <span className="k-u-hidden@s-down k-u-hidden@m">
                   Date contribution
                 </span>
                 <span className="k-u-hidden@l-up">Contributeur</span>
-              </StyledCol2>
+              </ListTable.Col>
 
-              <StyledCol3>Contributeur</StyledCol3>
+              <ListTable.Col className="customCol_3">
+                Contributeur
+              </ListTable.Col>
 
-              <StyledCol4>Montant</StyledCol4>
+              <ListTable.Col className="customCol_4">Montant</ListTable.Col>
 
-              <StyledCol5>Statut de paiement</StyledCol5>
+              <ListTable.Col className="customCol_5">
+                Statut de paiement
+              </ListTable.Col>
 
-              <StyledCol6>Mode de livraison</StyledCol6>
+              <ListTable.Col className="customCol_6">
+                Mode de livraison
+              </ListTable.Col>
 
-              <StyledCol7>Statut de livraison</StyledCol7>
+              <ListTable.Col className="customCol_7">
+                Statut de livraison
+              </ListTable.Col>
 
-              <StyledCol8></StyledCol8>
+              <ListTable.Col className="customCol_8"></ListTable.Col>
             </ListTable.Header>
 
             <ListTable.Body>
               <ListTable.Row isHighlighted>
-                <StyledCol1>
+                <ListTable.Col className="customCol_1">
                   <VisuallyHidden>
                     <h2>
                       Contribution #888888 par Prénom NOM le 12 septembre 2019
@@ -410,9 +421,9 @@ storiesOf('Tables/ListTable', module)
                     type="checkbox"
                     aria-label="Sélectionner toutes les contributions de la liste"
                   />
-                </StyledCol1>
+                </ListTable.Col>
 
-                <StyledCol2>
+                <ListTable.Col className="customCol_2">
                   <p>
                     <strong>
                       <time dateTime="2019-09-12">12/09/2019</time>
@@ -428,9 +439,9 @@ storiesOf('Tables/ListTable', module)
                   >
                     2
                   </a>
-                </StyledCol2>
+                </ListTable.Col>
 
-                <StyledCol3>
+                <ListTable.Col className="customCol_3">
                   <p>
                     <strong>Prénom NOM</strong>
                     <br />
@@ -443,28 +454,28 @@ storiesOf('Tables/ListTable', module)
                   >
                     2
                   </a>
-                </StyledCol3>
+                </ListTable.Col>
 
-                <StyledCol4>72&nbsp;€</StyledCol4>
+                <ListTable.Col className="customCol_4">72&nbsp;€</ListTable.Col>
 
-                <StyledCol5>● Validé</StyledCol5>
+                <ListTable.Col className="customCol_5">● Validé</ListTable.Col>
 
-                <StyledCol6>Livraison</StyledCol6>
+                <ListTable.Col className="customCol_6">Livraison</ListTable.Col>
 
-                <StyledCol7>
+                <ListTable.Col className="customCol_7">
                   <select name="" id="">
                     <option value="">À expédier</option>
                   </select>
-                </StyledCol7>
+                </ListTable.Col>
 
-                <StyledCol8>&gt;</StyledCol8>
+                <ListTable.Col className="customCol_8">&gt;</ListTable.Col>
               </ListTable.Row>
 
               <ListTable.Row
                 className="customRowClass"
                 listProps={{ className: 'customListClass' }}
               >
-                <StyledCol1>
+                <ListTable.Col className="customCol_1">
                   <VisuallyHidden>
                     <h2>
                       Contribution #44654 par Prénom NOM le 12 septembre 2019
@@ -477,9 +488,9 @@ storiesOf('Tables/ListTable', module)
                     type="checkbox"
                     aria-label="Sélectionner toutes les contributions de la liste"
                   />
-                </StyledCol1>
+                </ListTable.Col>
 
-                <StyledCol2>
+                <ListTable.Col className="customCol_2">
                   <p>
                     <strong>
                       <time dateTime="2019-09-12">12/09/2019</time>
@@ -495,9 +506,9 @@ storiesOf('Tables/ListTable', module)
                   >
                     2
                   </a>
-                </StyledCol2>
+                </ListTable.Col>
 
-                <StyledCol3>
+                <ListTable.Col className="customCol_3">
                   <p>
                     <strong>Prénom NOM</strong>
                     <br />
@@ -510,21 +521,21 @@ storiesOf('Tables/ListTable', module)
                   >
                     2
                   </a>
-                </StyledCol3>
+                </ListTable.Col>
 
-                <StyledCol4>72&nbsp;€</StyledCol4>
+                <ListTable.Col className="customCol_4">72&nbsp;€</ListTable.Col>
 
-                <StyledCol5>● Validé</StyledCol5>
+                <ListTable.Col className="customCol_5">● Validé</ListTable.Col>
 
-                <StyledCol6>Livraison</StyledCol6>
+                <ListTable.Col className="customCol_6">Livraison</ListTable.Col>
 
-                <StyledCol7>
+                <ListTable.Col className="customCol_7">
                   <select name="" id="">
                     <option value="">À expédier</option>
                   </select>
-                </StyledCol7>
+                </ListTable.Col>
 
-                <StyledCol8>&gt;</StyledCol8>
+                <ListTable.Col className="customCol_8">&gt;</ListTable.Col>
               </ListTable.Row>
             </ListTable.Body>
           </ListTable>

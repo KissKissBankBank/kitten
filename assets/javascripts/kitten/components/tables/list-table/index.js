@@ -1,33 +1,105 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { ListTableHeader } from './components/header'
-import { ListTableBody } from './components/body'
-import { ListTableRow } from './components/row'
-import { ListTableCol } from './components/col'
-import styled from 'styled-components'
-import { Context } from './components/context'
+import { ListTableStyles } from './styles'
 
-const StyledSection = styled.section`
-  &,
-  & * {
-    box-sizing: border-box;
-  }
-`
+const Context = React.createContext({ id: null })
 
-export const ListTable = ({ id, children, ...props }) => {
+export const ListTable = ({ id, children, className, ...props }) => {
   return (
     <Context.Provider value={{ id }}>
-      <StyledSection id={id} {...props}>
+      <ListTableStyles />
+      <section
+        id={id}
+        className={`ListTable ${className ? className : ''}`}
+        {...props}
+      >
         {children}
-      </StyledSection>
+      </section>
     </Context.Provider>
   )
 }
 
-ListTable.Header = ListTableHeader
-ListTable.Body = ListTableBody
-ListTable.Row = ListTableRow
-ListTable.Col = ListTableCol
+ListTable.Header = ({
+  className = '',
+  children,
+  listProps = {},
+  ...others
+}) => {
+  return (
+    <header
+      {...others}
+      className={`ListTable__Header ${className ? className : ''}`}
+    >
+      <ul
+        {...listProps}
+        className={`ListTable__HeaderList ${
+          listProps.className ? listProps.className : ''
+        }`}
+      >
+        <Context.Consumer>
+          {({ id }) => (
+            <>
+              {React.Children.map(children, (child, index) => {
+                return React.cloneElement(child, { id: `${id}-col-${index}` })
+              })}
+            </>
+          )}
+        </Context.Consumer>
+      </ul>
+    </header>
+  )
+}
+
+ListTable.Body = ({ className, ...props }) => {
+  return (
+    <ul
+      className={`ListTable__Body ${className ? className : ''}`}
+      {...props}
+    />
+  )
+}
+
+ListTable.Row = ({
+  className = '',
+  children,
+  listProps = {},
+  isHighlighted = false,
+  ...others
+}) => {
+  return (
+    <li
+      className={`ListTable__Row ${
+        className ? className : ''
+      } ${isHighlighted && 'ListTable__Row--is_highlighted'}`}
+      {...others}
+    >
+      <ul
+        {...listProps}
+        className={`ListTable__RowList ${
+          listProps.className ? listProps.className : ''
+        }`}
+      >
+        <Context.Consumer>
+          {({ id }) => (
+            <>
+              {React.Children.map(children, (child, index) => {
+                return React.cloneElement(child, {
+                  'aria-describedby': `${id}-col-${index}`,
+                })
+              })}
+            </>
+          )}
+        </Context.Consumer>
+      </ul>
+    </li>
+  )
+}
+
+ListTable.Col = ({ className, ...props }) => {
+  return (
+    <li className={`ListTable__Col ${className ? className : ''}`} {...props} />
+  )
+}
 
 ListTable.propTypes = {
   id: PropTypes.string.isRequired,
