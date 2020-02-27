@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature : Add `SaveIcon` and `DocIcon`
+- Feature : Bump to `node@12.x`
 
 ## [2.55.0] - 2020-02-18
 
