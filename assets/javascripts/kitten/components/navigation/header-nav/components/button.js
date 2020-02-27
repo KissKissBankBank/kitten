@@ -72,7 +72,16 @@ const StyledLink = styled.a`
 const IconContainer = styled.span`
   svg {
     display: flex;
-    fill: ${({ color }) => color};
+    width: ${pxToRem(14)};
+    height: ${pxToRem(14)};
+
+    [fill^='#'] {
+      fill: ${({ color }) => color};
+    }
+
+    [stroke^='#'] {
+      stroke: ${({ color }) => color};
+    }
   }
 `
 
@@ -112,8 +121,8 @@ export const Button = ({
       textShownFromMediaQuery={mediaQuery}
     >
       {icon && (
-        <IconContainer className={classNameIcon}>
-          {React.cloneElement(icon, { width: 14, height: 14, color })}
+        <IconContainer className={classNameIcon} color={color}>
+          {icon}
         </IconContainer>
       )}
       <span className={classNameText}>{text}</span>
