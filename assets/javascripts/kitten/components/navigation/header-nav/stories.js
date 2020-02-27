@@ -78,11 +78,17 @@ storiesOf('Navigation/HeaderNav', module).add('default', () => (
         />
 
         <HeaderNav.Button
+          icon={
+            <HeaderNav.Hidden min="s">
+              <SearchIcon />
+            </HeaderNav.Hidden>
+          }
           backgroundColor={COLORS.primary1}
           backgroundColorHover={COLORS.primary2}
           color={COLORS.background1}
           text="Se connecter / S'inscrire"
           href="#"
+          hiddenText={{ max: 'xs' }}
         />
       </HeaderNav.Right>
     </HeaderNav>
