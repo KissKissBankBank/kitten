@@ -2,13 +2,13 @@
 
 exports[`<DoubleEntryTable /> with a complete structure and custom classes matches with snapshot 1`] = `
 <div
-  className="double-entry-table__StyledContainer-sc-155z2j1-0 gokPmz"
+  className="styles__Styles-sc-1rikehi-0 burKmu DoubleEntryTable__Container"
 >
   <div
-    className="double-entry-table__StyledTableContainer-sc-155z2j1-1 dqlYgU"
+    className="DoubleEntryTable__TableContainer"
   >
     <table
-      className="double-entry-table__StyledTable-sc-155z2j1-2 chApSZ"
+      className="DoubleEntryTable__Table"
       id="DestBoubleEntryTable"
     >
       <thead
@@ -16,19 +16,19 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
       >
         <tr>
           <th
-            className="col__HeaderCol-sc-11pa91d-2 kFfOSz"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol"
             scope="column"
           >
             Header 1
           </th>
           <th
-            className="col__HeaderCol-sc-11pa91d-2 kFfOSz"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol"
             scope="column"
           >
             Header 2
           </th>
           <th
-            className="col__HeaderCol-sc-11pa91d-2 kFfOSz"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol"
             scope="column"
           >
             Header 3
@@ -38,18 +38,18 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
       <tbody>
         <tr>
           <th
-            className="col__TitleCol-sc-11pa91d-1 kirOhs"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol"
             scope="row"
           >
             Content 1
           </th>
           <td
-            className="col__Col-sc-11pa91d-0 fjxktT"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--Col"
           >
             Content 2
           </td>
           <td
-            className="col__Col-sc-11pa91d-0 fjxktT"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--Col"
           >
             Content 3
           </td>
@@ -58,18 +58,18 @@ exports[`<DoubleEntryTable /> with a complete structure and custom classes match
           className="customRowClass"
         >
           <th
-            className="col__TitleCol-sc-11pa91d-1 kirOhs"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol"
             scope="row"
           >
             Content 1
           </th>
           <td
-            className="col__Col-sc-11pa91d-0 fjxktT"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--Col"
           >
             Content 2
           </td>
           <td
-            className="col__Col-sc-11pa91d-0 fjxktT"
+            className="DoubleEntryTable__Column DoubleEntryTable__Column--Col"
           >
             Content 3
           </td>

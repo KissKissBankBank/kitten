@@ -12,12 +12,12 @@ import { pxToRem } from '../../../helpers/utils/typography'
 
 const info = {
   text: `
-    # DoubleEntryTable
+    # DoubleEntryTable-Lite
     &nbsp;
 
     ## Import
     ~~~js
-    import { DoubleEntryTable } from '@kisskissbankbank/kitten/src/components/tables/double-entry-table'
+    import { DoubleEntryTable as DoubleEntryTable } from '@kisskissbankbank/kitten/src/components/tables/double-entry-table'
     ~~~
 
     ## Usage
@@ -57,7 +57,7 @@ const info = {
   propTables: false,
 }
 
-storiesOf('Tables/DoubleEntryTable', module)
+storiesOf('Tables/DoubleEntryTable-Lite', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
   .add(
@@ -84,38 +84,6 @@ storiesOf('Tables/DoubleEntryTable', module)
             </DoubleEntryTable.Header>
 
             <DoubleEntryTable.Body>
-              <DoubleEntryTable.Row>
-                <DoubleEntryTable.TitleCol>Content 0</DoubleEntryTable.TitleCol>
-                <DoubleEntryTable.Col>Content 1</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 2</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 3</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 4</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 5</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 6</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 7</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 8</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 9</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 10</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 11</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 12</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 13</DoubleEntryTable.Col>
-              </DoubleEntryTable.Row>
-              <DoubleEntryTable.Row>
-                <DoubleEntryTable.TitleCol>Content 0</DoubleEntryTable.TitleCol>
-                <DoubleEntryTable.Col>Content 1</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 2</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 3</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 4</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 5</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 6</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 7</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 8</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 9</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 10</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 11</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 12</DoubleEntryTable.Col>
-                <DoubleEntryTable.Col>Content 13</DoubleEntryTable.Col>
-              </DoubleEntryTable.Row>
               <DoubleEntryTable.Row>
                 <DoubleEntryTable.TitleCol>Content 0</DoubleEntryTable.TitleCol>
                 <DoubleEntryTable.Col>Content 1</DoubleEntryTable.Col>
