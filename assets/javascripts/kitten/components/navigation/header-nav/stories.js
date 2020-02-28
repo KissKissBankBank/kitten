@@ -10,7 +10,7 @@ import COLORS from '../../../constants/colors-config'
 import { Title } from '../../../components/typography/title'
 import { Text } from '../../../components/typography/text'
 import { AvatarWithTextAndBadge } from '../../../components/avatar/avatar-with-text-and-badge'
-import { withKnobs, boolean } from '@storybook/addon-knobs'
+import { withKnobs, boolean, number } from '@storybook/addon-knobs'
 
 const Container = styled.div`
   height: 200vh;
@@ -100,7 +100,7 @@ storiesOf('Navigation/HeaderNav', module)
           <LendopolisInnerBurgerMenu />
         </HeaderNav.BurgerMenu>
 
-        <HeaderNav.Logo>
+        <HeaderNav.Logo href="#">
           <HeaderNav.Hidden min="xs">
             <LendopolisLogo tiny width="40" height="40" primaryColor="#000" />
           </HeaderNav.Hidden>
@@ -128,17 +128,23 @@ storiesOf('Navigation/HeaderNav', module)
                   ),
                   backgroundColor: '#002e7d',
                 }}
-                notifications="2"
+                notifications={number('Notifications', 2)}
                 text={
                   <Text lineHeight="normal" weight="bold">
                     Jean Charles Édouard
                   </Text>
                 }
                 subText={
-                  <Text weight="light">Solde : 42&nbsp;000,97&nbsp;€</Text>
+                  <Text weight="light">
+                    <Text className="k-u-weight-light k-u-hidden@xs-down">
+                      Solde&nbsp;:
+                    </Text>{' '}
+                    42&nbsp;000,97&nbsp;€
+                  </Text>
                 }
               />
             </HeaderNav.UserMenu.Button>
+
             <HeaderNav.UserMenu.Navigation>
               <LendopolisInnerUserMenu />
             </HeaderNav.UserMenu.Navigation>
@@ -179,7 +185,7 @@ storiesOf('Navigation/HeaderNav', module)
           <KissKissBankbankInnerBurgerMenu />
         </HeaderNav.BurgerMenu>
 
-        <HeaderNav.Logo>
+        <HeaderNav.Logo href="#">
           <KissKissBankBankLogo color="#000" />
         </HeaderNav.Logo>
 
@@ -199,6 +205,26 @@ storiesOf('Navigation/HeaderNav', module)
             href="#"
             hiddenText={{ max: 'm' }}
           />
+
+          <HeaderNav.UserMenu>
+            <HeaderNav.UserMenu.Button>
+              <AvatarWithTextAndBadge
+                imageProps={{
+                  src: 'https://via.placeholder.com/40x40.png',
+                }}
+                notifications={number('Notifications', 2)}
+                text={
+                  <Text lineHeight="normal" weight="bold">
+                    Jean Charles Édouard
+                  </Text>
+                }
+              />
+            </HeaderNav.UserMenu.Button>
+
+            <HeaderNav.UserMenu.Navigation>
+              <LendopolisInnerUserMenu />
+            </HeaderNav.UserMenu.Navigation>
+          </HeaderNav.UserMenu>
 
           <HeaderNav.Unlogged>
             <HeaderNav.Button
@@ -223,7 +249,7 @@ storiesOf('Navigation/HeaderNav', module)
   .add('Minimalist', () => (
     <Container>
       <HeaderNav id="kkbbAndCoHeaderNav">
-        <HeaderNav.Logo>
+        <HeaderNav.Logo href="#">
           <KissKissBankBankLogo color="#000" />
         </HeaderNav.Logo>
 

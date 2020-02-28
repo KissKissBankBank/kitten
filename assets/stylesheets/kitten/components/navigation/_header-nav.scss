@@ -42,12 +42,17 @@
 
   $border-width: k-px-to-rem(4px);
   $padding-x: k-px-to-rem(40px);
-  $padding-y: k-px-to-rem(10px);
 
   $transition-speed: .2s;
 
   .k-HeaderNav * {
     @include k-typographyFont($font);
+  }
+
+  .k-HeaderNav-Logo {
+    padding: k-px-to-rem(10px);
+    display: flex;
+    align-items: center;
   }
 
   .k-HeaderNav--right,
@@ -96,12 +101,16 @@
   }
 
   .k-HeaderNav__UserMenuButton {
-    padding: $padding-y $padding-x;
+    padding: 0 $padding-x;
     border: 0;
     @include k-typographyFontSize(
       $font-step,
       $line-height: $line-height
     );
+
+    @include k-media-max('xs') {
+      padding: 0 $padding-x / 2;
+    }
 
     &:hover {
       cursor: pointer;
