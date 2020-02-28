@@ -23,7 +23,7 @@ const buttonClassNames = [
 
 export const BurgerMenu = ({ children }) => {
   const dropdownComponent = useRef(null)
-  const getHeaderElement = id => () => document.getElementById(id)
+  const getElementById = id => () => document.getElementById(id)
 
   return (
     <Context.Consumer>
@@ -32,7 +32,7 @@ export const BurgerMenu = ({ children }) => {
           ref={dropdownComponent}
           className={DROPDOWN_CLASS}
           positionedWithBorder
-          positionedWith={getHeaderElement(id)}
+          positionedVerticallyWith={getElementById(id)}
           buttonId={`${id}PlateformMenu`}
           buttonClassName={buttonClassNames}
           buttonContentOnExpanded={<ButtonIcon isActive />}

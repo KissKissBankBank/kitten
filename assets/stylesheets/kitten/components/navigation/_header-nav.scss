@@ -41,15 +41,40 @@
   $is-selected-color: map-get($k-colors, 'primary-1');
 
   $border-width: k-px-to-rem(4px);
-  $padding: k-px-to-rem(40px);
+  $padding-x: k-px-to-rem(40px);
+  $padding-y: k-px-to-rem(10px);
 
   $transition-speed: .2s;
-  .k-HeaderNav-right {
-    display: flex;
+
+  .k-HeaderNav * {
+    @include k-typographyFont($font);
+  }
+
+  .k-HeaderNav--right,
+  .k-HeaderNav--centered {
+    &, & .k-HeaderNav-hidden {
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+  }
+
+  .k-HeaderNav--right {
     justify-content: flex-end;
     flex-grow: 1;
-    height: 100%;
-    align-items: center;
+  }
+
+  .k-HeaderNav--centered {
+    &, & .k-HeaderNav-hidden {
+      justify-content: center;
+      flex-grow: 100;
+    }
+  }
+
+  .k-HeaderNav--column {
+    &, & .k-HeaderNav-hidden {
+      flex-direction: column;
+    }
   }
 
   .k-HeaderNav-nav {
@@ -62,6 +87,24 @@
 
   .k-HeaderNav-hidden {
     height: 100%;
+  }
+
+  .k-HeaderNav__UserMenu {
+    height: 100%;
+    display: flex;
+  }
+
+  .k-HeaderNav__UserMenuButton {
+    padding: $padding-y $padding-x;
+    border: 0;
+    @include k-typographyFontSize(
+      $font-step,
+      $line-height: $line-height
+    );
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .k-HeaderNav-nav__list {
@@ -95,7 +138,7 @@
     display: flex;
     align-items: center;
 
-    padding: 0 $padding;
+    padding: 0 $padding-x;
     border-top: $border-width solid transparent;
 
     @include k-typographyFont($font);

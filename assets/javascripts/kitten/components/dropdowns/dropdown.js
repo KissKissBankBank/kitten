@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react'
+import has from 'lodash/fp/has'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import emitter from '../../helpers/utils/emitter'
 import { DropdownButton } from '../../components/dropdowns/dropdown-button'
+import deprecated from 'prop-types-extra/lib/deprecated'
 import domElementHelper from '../../helpers/dom/element-helper'
 
 export const Dropdown = React.forwardRef(
@@ -10,20 +12,23 @@ export const Dropdown = React.forwardRef(
     {
       arrowHorizontalPosition,
       button,
+      buttonClassName,
       buttonContentOnCollapsed,
       buttonContentOnExpanded,
-      className,
       buttonId,
-      buttonClassName,
+      className,
       closeEvents,
       contentHorizontalPosition,
       dropdownContent,
       dropdownListArrow,
       isExpanded,
+      keepInitialButtonAction,
       notifications,
       onPositionUpdate,
       onToggle,
+      positionedHorizontallyWith,
       positionedOn,
+      positionedVerticallyWith,
       positionedWith,
       positionedWithBorder,
       refreshEvents,
@@ -32,6 +37,7 @@ export const Dropdown = React.forwardRef(
   ) => {
     const [isExpandedState, setIsExpanded] = useState(false)
     const [referenceElementHeightState, setReferenceElementHeight] = useState(0)
+    const [referenceElementWidthState, setReferenceElementWidth] = useState(0)
     const dropdownContentRef = useRef(null)
     const arrowRef = useRef(null)
     const dropdownButtonRef = useRef(null)
@@ -40,6 +46,7 @@ export const Dropdown = React.forwardRef(
       if (domElementHelper.canUseDom()) {
         // Update dropdown content position after DOM is build.
         setReferenceElementHeight(getReferenceElementHeight())
+        setReferenceElementWidth(getReferenceElementWidth())
       }
 
       // Handle events.
@@ -57,6 +64,12 @@ export const Dropdown = React.forwardRef(
         closeEvents.forEach(ev => {
           window.addEventListener(ev, closeDropdown)
         })
+      }
+
+      if (!has('current')(dropdownRef)) {
+        console.warn(
+          'The `ref` prop from <Dropdown /> should be set using `useRef`.',
+        )
       }
 
       return () => {
@@ -98,12 +111,16 @@ export const Dropdown = React.forwardRef(
     }
 
     const hasDefaultHorizontalPosition = () => positionedOn === 'left'
-    const isSelfReference = () => typeof positionedWith === 'undefined'
+    const isSelfReference = () =>
+      typeof positionedWith === 'undefined' &&
+      typeof positionedVerticallyWith === 'undefined'
 
     const getReferenceElement = () => {
-      if (!isSelfReference()) return positionedWith()
-
-      return dropdownRef.current
+      if (!isSelfReference()) {
+        return (positionedVerticallyWith || positionedWith)()
+      }
+      // Prevent error from ref no set by `useRef`.
+      return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef
     }
 
     const getReferenceElementHeight = () =>
@@ -112,12 +129,21 @@ export const Dropdown = React.forwardRef(
         positionedWithBorder,
       )
 
+    const getReferenceElementWidth = () =>
+      positionedHorizontallyWith
+        ? domElementHelper.getComputedLeft(positionedHorizontallyWith())
+        : 0
+
     const getArrowPositionStyle = () => {
       return { position: 'absolute', top: 0, ...arrowHorizontalPosition }
     }
 
     const getContentPosition = () => {
-      return { top: referenceElementHeightState, ...contentHorizontalPosition }
+      return {
+        top: referenceElementHeightState,
+        left: referenceElementWidthState || 0,
+        ...contentHorizontalPosition,
+      }
     }
 
     // Component listener callbacks
@@ -141,6 +167,11 @@ export const Dropdown = React.forwardRef(
       if (domElementHelper.canUseDom()) {
         onPositionUpdate()
         setReferenceElementHeight(getReferenceElementHeight())
+
+        const getComputedWidth = domElementHelper.getComputedWidth(
+          getReferenceElement(),
+          positionedWithBorder,
+        )
       }
     }
 
@@ -179,9 +210,26 @@ export const Dropdown = React.forwardRef(
       className,
     )
 
+    console.log('button', button)
+
     return (
       <div ref={dropdownRef} className={dropdownClassName}>
-        {button || (
+        {button &&
+          (keepInitialButtonAction ? (
+            <DropdownButton
+              ref={dropdownButtonRef}
+              className={buttonClassName}
+              id={buttonId}
+              isExpanded={isExpandedState}
+              onClick={handleButtonClick}
+            >
+              {button}
+            </DropdownButton>
+          ) : (
+            button
+          ))}
+
+        {!button && (
           <DropdownButton
             ref={dropdownButtonRef}
             className={buttonClassName}
@@ -209,25 +257,46 @@ export const Dropdown = React.forwardRef(
 )
 
 Dropdown.propTypes = {
-  isExpanded: PropTypes.bool,
-  positionedWith: PropTypes.func,
-  positionedWithBorder: PropTypes.bool,
-  positionedOn: PropTypes.string,
-  notifications: PropTypes.number,
-  refreshEvents: PropTypes.array,
+  arrowHorizontalPosition: PropTypes.object,
+  button: PropTypes.node,
+  keepInitialButtonAction: PropTypes.boolean,
+  buttonClassName: PropTypes.string,
+  buttonContentOnCollapsed: PropTypes.node,
+  buttonContentOnExpanded: PropTypes.node,
+  buttonId: PropTypes.string,
+  className: PropTypes.string,
   closeEvents: PropTypes.array,
+  contentHorizontalPosition: PropTypes.object,
+  dropdownContent: PropTypes.node,
+  dropdownListArrow: PropTypes.node,
+  isExpanded: PropTypes.bool,
+  notifications: PropTypes.number,
   onPositionUpdate: PropTypes.func,
+  onToggle: PropTypes.func,
+  positionedHorizontallyWith: PropTypes.func,
+  positionedOn: PropTypes.string,
+  positionedVerticallyWith: PropTypes.func,
+  positionedWith: deprecated(
+    PropTypes.func,
+    'Prefere use `positionedVerticallyWith` when using `Dropdown` component.',
+  ),
+  positionedWithBorder: PropTypes.bool,
+  refreshEvents: PropTypes.array,
 }
 
 Dropdown.defaultProps = {
   // Take border into account to compute reference element height.
   positionedWithBorder: true,
 
+  // Set to true to keep the inital event et just design the button trough
+  // `button` prop.
+  keepInitialButtonAction: false,
+
   // Fix the dropdown on the left or on the right.
   positionedOn: 'left', // 'left' | 'right'
 
   // Custom horizontal position for content and content arrow.
-  contentHorizontalPosition: { left: '0' },
+  contentHorizontalPosition: {}, // { left: '0' },
   arrowHorizontalPosition: { left: '50%' },
 
   // Button settings

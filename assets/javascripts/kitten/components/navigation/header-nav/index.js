@@ -10,6 +10,7 @@ import { Nav } from './components/nav'
 import { UserMenu } from './components/user-menu'
 import { Context } from './components/context'
 import { Right } from './components/right'
+import { Centered } from './components/centered'
 import { Unlogged } from './components/unlogged'
 import { Hidden } from './components/hidden'
 import {
@@ -48,7 +49,7 @@ const HeaderNav = ({ isLogged, id, children, ...props }) => {
 
   return (
     <Context.Provider value={{ isLogged: isLoggedState, id: idState }}>
-      <Header role="banner" id={idState}>
+      <Header role="banner" id={idState} className="k-HeaderNav">
         {children}
       </Header>
     </Context.Provider>
@@ -61,6 +62,7 @@ HeaderNav.BurgerMenu = BurgerMenu
 HeaderNav.Nav = Nav
 HeaderNav.UserMenu = UserMenu
 HeaderNav.Right = Right
+HeaderNav.Centered = Centered
 HeaderNav.Unlogged = Unlogged
 HeaderNav.Hidden = Hidden
 

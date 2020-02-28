@@ -33,6 +33,10 @@ const StyledLink = styled.a`
     if (!textShownFromMediaQuery)
       return css`
         width: inherit;
+
+        @media (min-width: ${ScreenConfig.L.min}px) {
+          min-width: ${pxToRem(200)};
+        }
       `
 
     const defaultWidthForLowerScreenSize =
@@ -41,6 +45,10 @@ const StyledLink = styled.a`
         @media (${textShownFromMediaQuery.min}) {
           width: inherit;
         }
+
+        @media (min-width: ${ScreenConfig.L.min}px) {
+          min-width: ${pxToRem(200)};
+        }
       `
 
     const defaultWidthForUpperScreenSize =
@@ -48,6 +56,10 @@ const StyledLink = styled.a`
       css`
         @media (${textShownFromMediaQuery.max}) {
           width: inherit;
+        }
+
+        @media (min-width: ${ScreenConfig.L.min}px) {
+          min-width: ${pxToRem(200)};
         }
       `
     return css`
@@ -92,7 +104,9 @@ export const Button = ({
   color,
   text,
   href,
+  type,
   hiddenText: { min, max } = {},
+  ...others
 }) => {
   const previousScreenSize = min && getScreenSizeFrom('previous')(min)
   const nextScreenSize = max && getScreenSizeFrom('next')(max)
@@ -112,9 +126,12 @@ export const Button = ({
     max: max && `min-width: ${ScreenConfig[nextScreenSize].min}px`,
   }
 
+  const buttonProps = type === 'button' ? { as: 'button', type } : { href }
+
   return (
     <StyledLink
-      href={href}
+      {...others}
+      {...buttonProps}
       backgroundColor={backgroundColor}
       backgroundColorHover={backgroundColorHover}
       color={color}
@@ -137,6 +154,7 @@ Button.propTypes = {
   color: PropTypes.string,
   text: PropTypes.node,
   href: PropTypes.string,
+  type: PropTypes.oneOf(['button']),
   hiddenText: PropTypes.shape({
     min: PropTypes.string,
     max: PropTypes.string,
@@ -149,5 +167,4 @@ Button.defaultProps = {
   backgroundColorHover: COLORS.line2,
   color: COLORS.font1,
   text: 'Button',
-  href: '#',
 }

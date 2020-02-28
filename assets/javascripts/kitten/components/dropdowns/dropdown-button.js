@@ -10,6 +10,7 @@ export class DropdownButton extends React.Component {
     return (
       <button
         ref="dropdownButton"
+        type="button"
         className={buttonClassName}
         aria-haspopup="true"
         aria-expanded={isExpanded}
