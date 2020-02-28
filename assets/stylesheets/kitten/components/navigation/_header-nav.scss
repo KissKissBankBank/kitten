@@ -52,7 +52,7 @@
 
   .k-HeaderNav--right,
   .k-HeaderNav--centered {
-    &, & .k-HeaderNav-hidden {
+    &, & .k-HeaderNav--hidden {
       display: flex;
       height: 100%;
       align-items: center;
@@ -65,14 +65,14 @@
   }
 
   .k-HeaderNav--centered {
-    &, & .k-HeaderNav-hidden {
+    &, & .k-HeaderNav--hidden {
       justify-content: center;
       flex-grow: 100;
     }
   }
 
   .k-HeaderNav--column {
-    &, & .k-HeaderNav-hidden {
+    &, & .k-HeaderNav--hidden {
       flex-direction: column;
     }
   }
@@ -80,13 +80,14 @@
   .k-HeaderNav-nav {
     height: 100%;
 
-    .k-HeaderNav-hidden {
+    .k-HeaderNav--hidden {
       display: flex;
     }
   }
 
-  .k-HeaderNav-hidden {
+  .k-HeaderNav--hidden {
     height: 100%;
+    line-height: 1;
   }
 
   .k-HeaderNav__UserMenu {

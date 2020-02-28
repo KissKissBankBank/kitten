@@ -210,8 +210,6 @@ export const Dropdown = React.forwardRef(
       className,
     )
 
-    console.log('button', button)
-
     return (
       <div ref={dropdownRef} className={dropdownClassName}>
         {button &&
@@ -259,7 +257,7 @@ export const Dropdown = React.forwardRef(
 Dropdown.propTypes = {
   arrowHorizontalPosition: PropTypes.object,
   button: PropTypes.node,
-  keepInitialButtonAction: PropTypes.boolean,
+  keepInitialButtonAction: PropTypes.bool,
   buttonClassName: PropTypes.string,
   buttonContentOnCollapsed: PropTypes.node,
   buttonContentOnExpanded: PropTypes.node,

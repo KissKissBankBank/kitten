@@ -73,20 +73,20 @@ const KissKissBankbankInnerBurgerMenu = () => (
 
 const LendopolisNavigation = () => (
   <>
-    <HeaderNav.Nav.Item href="#">Lancez votre projet</HeaderNav.Nav.Item>
-    <HeaderNav.Nav.Item href="#" className="is-selected">
-      Découvrez les projets
-    </HeaderNav.Nav.Item>
-  </>
-)
-
-const KissKissBankBankNavigation = () => (
-  <>
     <HeaderNav.Nav.Item href="#">Comment investir</HeaderNav.Nav.Item>
     <HeaderNav.Nav.Item href="#" className="is-selected">
       Découvrez les projets
     </HeaderNav.Nav.Item>
     <HeaderNav.Nav.Item href="#">Blog</HeaderNav.Nav.Item>
+  </>
+)
+
+const KissKissBankBankNavigation = () => (
+  <>
+    <HeaderNav.Nav.Item href="#">Lancez votre projet</HeaderNav.Nav.Item>
+    <HeaderNav.Nav.Item href="#" className="is-selected">
+      Découvrez les projets
+    </HeaderNav.Nav.Item>
   </>
 )
 
@@ -99,7 +99,13 @@ storiesOf('Navigation/HeaderNav', module)
         </HeaderNav.BurgerMenu>
 
         <HeaderNav.Logo>
-          <LendopolisLogo primaryColor="#000" />
+          <HeaderNav.Hidden min="xs">
+            <LendopolisLogo tiny width="40" height="40" primaryColor="#000" />
+          </HeaderNav.Hidden>
+
+          <HeaderNav.Hidden max="xxs">
+            <LendopolisLogo primaryColor="#000" />
+          </HeaderNav.Hidden>
         </HeaderNav.Logo>
 
         <HeaderNav.Hidden max="m">
@@ -167,18 +173,19 @@ storiesOf('Navigation/HeaderNav', module)
   .add('KissKissBankBank', () => (
     <Container>
       <HeaderNav id="kkbbAndCoHeaderNav" isLogged={false}>
+        <HeaderNav.BurgerMenu>
+          <KissKissBankbankInnerBurgerMenu />
+        </HeaderNav.BurgerMenu>
+
         <HeaderNav.Logo>
           <KissKissBankBankLogo color="#000" />
         </HeaderNav.Logo>
 
         <HeaderNav.Hidden max="m">
           <HeaderNav.Nav>
-            <LendopolisNavigation />
+            <KissKissBankBankNavigation />
           </HeaderNav.Nav>
         </HeaderNav.Hidden>
-        <HeaderNav.BurgerMenu>
-          <KissKissBankbankInnerBurgerMenu />
-        </HeaderNav.BurgerMenu>
 
         <HeaderNav.Right>
           <HeaderNav.Button
@@ -230,7 +237,7 @@ storiesOf('Navigation/HeaderNav', module)
             >
               Ma page mentor
             </Text>
-            <Text size="tiny" lineHeight="normal">
+            <Text weight="light" size="tiny" lineHeight="normal">
               Créé le 12/02/2020
             </Text>
           </HeaderNav.Hidden>

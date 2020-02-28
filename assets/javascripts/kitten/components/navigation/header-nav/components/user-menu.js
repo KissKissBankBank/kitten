@@ -17,12 +17,6 @@ export const UserMenu = ({ children, ...props }) => {
     children,
     type: UserMenu.Navigation,
   })[0]
-  console.log('button', button)
-  console.log('navigation', navigation)
-  console.log(
-    'React.Children.toArray(children)',
-    React.Children.toArray(children),
-  )
 
   return (
     <Context.Consumer>
