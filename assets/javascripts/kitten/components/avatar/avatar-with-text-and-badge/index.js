@@ -6,6 +6,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 const textClassName = [
   'k-ButtonImageWithText__text',
   'k-ButtonImageWithText__text--withoutPaddingRight',
+  'always-visible',
 ].join(' ')
 
 export const AvatarWithTextAndBadge = ({
@@ -52,7 +53,7 @@ export const AvatarWithTextAndBadge = ({
           )}
         </span>
 
-        {notifications && (
+        {!!notifications && (
           <span
             className="k-ButtonWithBadge__badge k-Badge"
             style={{ backgroundColor: badgeColor }}
