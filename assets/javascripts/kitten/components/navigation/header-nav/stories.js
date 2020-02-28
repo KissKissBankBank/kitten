@@ -10,6 +10,7 @@ import COLORS from '../../../constants/colors-config'
 import { Title } from '../../../components/typography/title'
 import { Text } from '../../../components/typography/text'
 import { AvatarWithTextAndBadge } from '../../../components/avatar/avatar-with-text-and-badge'
+import { withKnobs, boolean } from '@storybook/addon-knobs'
 
 const Container = styled.div`
   height: 200vh;
@@ -91,9 +92,10 @@ const KissKissBankBankNavigation = () => (
 )
 
 storiesOf('Navigation/HeaderNav', module)
+  .addDecorator(withKnobs)
   .add('Lendopolis', () => (
     <Container>
-      <HeaderNav id="kkbbAndCoHeaderNav" isLogged={true}>
+      <HeaderNav id="kkbbAndCoHeaderNav" isLogged={boolean('Is logged', false)}>
         <HeaderNav.BurgerMenu>
           <LendopolisInnerBurgerMenu />
         </HeaderNav.BurgerMenu>
@@ -129,11 +131,11 @@ storiesOf('Navigation/HeaderNav', module)
                 notifications="2"
                 text={
                   <Text lineHeight="normal" weight="bold">
-                    Jean Charles
+                    Jean Charles Édouard
                   </Text>
                 }
                 subText={
-                  <Text weight="light">Solde : 1&nbsp;000,97&nbsp;€</Text>
+                  <Text weight="light">Solde : 42&nbsp;000,97&nbsp;€</Text>
                 }
               />
             </HeaderNav.UserMenu.Button>
@@ -172,7 +174,7 @@ storiesOf('Navigation/HeaderNav', module)
 
   .add('KissKissBankBank', () => (
     <Container>
-      <HeaderNav id="kkbbAndCoHeaderNav" isLogged={false}>
+      <HeaderNav id="kkbbAndCoHeaderNav" isLogged={boolean('Is logged', false)}>
         <HeaderNav.BurgerMenu>
           <KissKissBankbankInnerBurgerMenu />
         </HeaderNav.BurgerMenu>
@@ -220,7 +222,7 @@ storiesOf('Navigation/HeaderNav', module)
 
   .add('Minimalist', () => (
     <Container>
-      <HeaderNav id="kkbbAndCoHeaderNav" isLogged={false}>
+      <HeaderNav id="kkbbAndCoHeaderNav">
         <HeaderNav.Logo>
           <KissKissBankBankLogo color="#000" />
         </HeaderNav.Logo>
