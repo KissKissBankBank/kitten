@@ -35,13 +35,11 @@ const StyledQuickNav = styled.a`
   }
 `
 
-export const QuickAccessLink = ({ text, href, zIndex }) => {
-  return (
-    <StyledQuickNav href={href} zIndex={zIndex}>
-      {text}
-    </StyledQuickNav>
-  )
-}
+export const QuickAccessLink = ({ text, href, zIndex }) => (
+  <StyledQuickNav href={href} zIndex={zIndex}>
+    {text}
+  </StyledQuickNav>
+)
 
 QuickAccessLink.propTypes = {
   text: PropTypes.node,
