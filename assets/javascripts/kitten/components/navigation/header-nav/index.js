@@ -13,6 +13,7 @@ import { Right } from './components/right'
 import { Centered } from './components/centered'
 import { Unlogged } from './components/unlogged'
 import { Hidden } from './components/hidden'
+import { QuickAccessLink } from './components/quick-access-link'
 import {
   MOBILE_HEADER_HEIGHT,
   TABLET_HEADER_HEIGHT,
@@ -23,6 +24,7 @@ const Header = styled.header`
   height: ${MOBILE_HEADER_HEIGHT};
   display: flex;
   align-items: center;
+  position: relative;
   padding-left: ${pxToRem(20)};
   background: #fff;
 
@@ -35,7 +37,7 @@ const Header = styled.header`
   }
 `
 
-const HeaderNav = ({ isLogged, id, children, ...props }) => {
+const HeaderNav = ({ isLogged, id, children, quickAccessProps, ...props }) => {
   const [isLoggedState, setIsLogged] = useState(isLogged)
   const [idState, setId] = useState(id)
 
@@ -50,6 +52,7 @@ const HeaderNav = ({ isLogged, id, children, ...props }) => {
   return (
     <Context.Provider value={{ isLogged: isLoggedState, id: idState }}>
       <Header role="banner" id={idState} className="k-HeaderNav">
+        <QuickAccessLink {...quickAccessProps} />
         {children}
       </Header>
     </Context.Provider>

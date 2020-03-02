@@ -14,7 +14,14 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 
 export const MinimalistHeaderNavStory = ({ text, subText }) => (
-  <HeaderNav id={HEADER_NAV_ID}>
+  <HeaderNav
+    id={HEADER_NAV_ID}
+    quickAccessProps={{
+      href: '#mainContent',
+      text: 'Aller au contenu principal',
+      zIndex: 300,
+    }}
+  >
     <HeaderNav.Logo href="#">
       <KissKissBankBankLogo />
     </HeaderNav.Logo>

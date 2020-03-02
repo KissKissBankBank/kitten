@@ -82,7 +82,15 @@ export const LendopolisHeaderNavStory = ({ isLogged }) => {
   }, [isLogged])
 
   return (
-    <HeaderNav id={HEADER_NAV_ID} isLogged={isLogged}>
+    <HeaderNav
+      id={HEADER_NAV_ID}
+      isLogged={isLogged}
+      quickAccessProps={{
+        href: '#mainContent',
+        text: 'Aller au contenu principal',
+        zIndex: 300,
+      }}
+    >
       <HeaderNav.BurgerMenu dropdownContentWidth={pxToRem(burgerMenuWidth)}>
         <InnerBurgerMenu />
       </HeaderNav.BurgerMenu>
