@@ -27,7 +27,6 @@ export const Dropdown = React.forwardRef(
       onPositionUpdate,
       onToggle,
       positionedHorizontallyWith,
-      positionedOn,
       positionedVerticallyWith,
       positionedWith,
       positionedWithBorder,
@@ -109,8 +108,6 @@ export const Dropdown = React.forwardRef(
       onToggle()
       setIsExpanded(nextExpandedState)
     }
-
-    const hasDefaultHorizontalPosition = () => positionedOn === 'left'
 
     const isSelfReference = () =>
       typeof positionedWith === 'undefined' &&
@@ -271,7 +268,6 @@ Dropdown.propTypes = {
   onPositionUpdate: PropTypes.func,
   onToggle: PropTypes.func,
   positionedHorizontallyWith: PropTypes.func,
-  positionedOn: PropTypes.string,
   positionedVerticallyWith: PropTypes.func,
   positionedWith: deprecated(
     PropTypes.func,
@@ -288,9 +284,6 @@ Dropdown.defaultProps = {
   // Set to true to keep the inital event et just design the button trough
   // `button` prop.
   keepInitialButtonAction: false,
-
-  // Fix the dropdown on the left or on the right.
-  positionedOn: 'left', // 'left' | 'right'
 
   // Custom horizontal position for content and content arrow.
   contentHorizontalPosition: {}, // { left: '0' },

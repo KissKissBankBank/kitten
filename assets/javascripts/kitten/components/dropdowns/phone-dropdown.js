@@ -216,7 +216,6 @@ PhoneDropdown.propTypes = {
   buttonClassName: PropTypes.string,
   positionedWith: PropTypes.func,
   positionedWithBorder: PropTypes.bool,
-  positionedOn: PropTypes.string,
   refreshEvents: PropTypes.array,
   closeEvents: PropTypes.array,
   onPositionUpdate: PropTypes.func,

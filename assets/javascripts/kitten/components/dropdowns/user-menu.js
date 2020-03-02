@@ -227,7 +227,6 @@ UserMenu.propTypes = {
   dropdownList: PropTypes.array,
   positionedWith: PropTypes.func,
   positionedWithBorder: PropTypes.bool,
-  positionedOn: PropTypes.string,
   notifications: PropTypes.number,
   refreshEvents: PropTypes.array,
   closeEvents: PropTypes.array,
