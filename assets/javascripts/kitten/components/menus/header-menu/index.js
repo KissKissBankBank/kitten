@@ -53,7 +53,7 @@ export const HeaderMenu = ({ borderSide, largeItem, noBorder, children }) => {
 HeaderMenu.Item = Item
 
 HeaderMenu.propTypes = {
-  borderSide: PropTypes.oneOf(['left', 'right']),
+  borderSide: PropTypes.oneOf(['left', 'right', false]),
   largeItem: PropTypes.bool,
   noBorder: PropTypes.bool,
 }

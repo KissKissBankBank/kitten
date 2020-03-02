@@ -20,6 +20,7 @@ export const Dropdown = React.forwardRef(
       closeEvents,
       contentHorizontalPosition,
       dropdownContent,
+      dropdownContentWidth,
       dropdownListArrow,
       isExpanded,
       keepInitialButtonAction,
@@ -34,18 +35,19 @@ export const Dropdown = React.forwardRef(
     },
     dropdownRef,
   ) => {
+    const dropdownContentRef = useRef(null)
+    const arrowRef = useRef(null)
+    const dropdownButtonRef = useRef(null)
     const [isExpandedState, setIsExpanded] = useState(false)
     const [
       verticalReferenceElementState,
       setVerticalReferenceElement,
     ] = useState(0)
+
     const [
       horizontalReferenceElementState,
       setHorizontalReferenceElement,
     ] = useState(0)
-    const dropdownContentRef = useRef(null)
-    const arrowRef = useRef(null)
-    const dropdownButtonRef = useRef(null)
 
     useEffect(() => {
       handleDropdownPosition()
@@ -144,10 +146,11 @@ export const Dropdown = React.forwardRef(
       return { position: 'absolute', top: 0, ...arrowHorizontalPosition }
     }
 
-    const getContentPosition = () => {
+    const getDropdownContentStyle = () => {
       return {
         top: verticalReferenceElementState,
         left: horizontalReferenceElementState || 0,
+        width: dropdownContentWidth,
         ...contentHorizontalPosition,
       }
     }
@@ -238,7 +241,7 @@ export const Dropdown = React.forwardRef(
         <div
           ref={dropdownContentRef}
           className="k-Dropdown__content"
-          style={getContentPosition()}
+          style={getDropdownContentStyle()}
           aria-hidden="true"
           aria-labelledby={buttonId}
         >
@@ -260,6 +263,10 @@ Dropdown.propTypes = {
   className: PropTypes.string,
   closeEvents: PropTypes.array,
   contentHorizontalPosition: PropTypes.object,
+  dropdownContentWidth: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
   dropdownContent: PropTypes.node,
   dropdownListArrow: PropTypes.node,
   isExpanded: PropTypes.bool,

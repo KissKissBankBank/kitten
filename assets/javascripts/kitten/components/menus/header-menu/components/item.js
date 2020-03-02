@@ -27,37 +27,45 @@ const StyledItem = styled.a`
   font-size: ${pxToRem(14)};
   text-decoration: none;
 
-  ::before {
-    content: '';
-    position: absolute;
-    top: ${({ noBorder }) => (noBorder ? 0 : pxToRem(-1))};
-    left: ${({ noBorder }) => (noBorder ? 0 : pxToRem(-1))};
-    bottom: ${({ noBorder }) => (noBorder ? 0 : pxToRem(-1))};
+  ${({ borderSide }) =>
+    borderSide
+      ? css`
+          ::before {
+            content: '';
+            position: absolute;
+            top: ${pxToRem(-1)};
+            left: ${pxToRem(-1)};
+            bottom: 0;
+            width: ${pxToRem(0)};
+            background-color: transparent;
+            transition: background-color 0.2s, width 0.2s;
+          }
 
-    width: ${pxToRem(1)};
-
-    background-color: transparent;
-    transition: background-color 0.2s, width 0.2s;
-  }
-
-  :hover::before,
-  :focus::before {
-    width: ${pxToRem(4)};
-
-    background-color: ${COLORS.primary1};
-
-    color: ${COLORS.font1};
-
-    transition: width 0.2s;
-  }
+          :hover,
+          :focus {
+            &::before {
+              width: ${pxToRem(4)};
+              background-color: ${COLORS.primary1};
+              transition: width 0.2s;
+            }
+          }
+        `
+      : css`
+          :hover,
+          :focus {
+            color: ${COLORS.primary1};
+            background-color: ${COLORS.line1};
+            transition: color 0.2s, background-color 0.4s;
+          }
+        `}
 
   ${({ isSelected }) =>
     isSelected &&
     css`
       color: ${COLORS.primary1};
+
       ::before {
         width: ${pxToRem(4)};
-
         background-color: ${COLORS.primary1};
       }
     `}
@@ -80,7 +88,6 @@ const StyledItem = styled.a`
 
 const ExternalStyledItem = styled(StyledItem)`
   display: flex;
-
   height: ${pxToRem(24)};
   padding: ${({ largeItem }) =>
     largeItem

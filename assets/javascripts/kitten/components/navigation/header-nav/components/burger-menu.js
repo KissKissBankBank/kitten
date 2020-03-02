@@ -21,7 +21,7 @@ const buttonClassNames = [
   'k-ButtonIcon--tiny',
 ].join(' ')
 
-export const BurgerMenu = ({ children }) => {
+export const BurgerMenu = ({ children, dropdownContentWidth, ...props }) => {
   const dropdownComponent = useRef(null)
   const getElementById = id => () => document.getElementById(id)
 
@@ -38,9 +38,11 @@ export const BurgerMenu = ({ children }) => {
           buttonContentOnExpanded={<ButtonIcon isActive />}
           buttonContentOnCollapsed={<ButtonIcon />}
           dropdownContent={children}
+          dropdownContentWidth={dropdownContentWidth}
           closeEvents={[CLOSE_EVENT]}
           isExpanded={false}
           refreshEvents={['resize']}
+          {...props}
         />
       )}
     </Context.Consumer>

@@ -7,7 +7,7 @@ const namespace = 'kkbbAndCo'
 const DROPDOWN_CLASS = `${namespace}-UserMenu k-HeaderNav__UserMenu`
 const CLOSE_EVENT = `${namespace}:userMenu:close`
 
-export const UserMenu = ({ children, ...props }) => {
+export const UserMenu = ({ children, dropdownContentWidth, ...props }) => {
   const userDropdownRef = useRef(null)
   const getElementById = id => () => document.getElementById(id)
   const getButtonId = id => `${id}UserMenu`
@@ -32,6 +32,7 @@ export const UserMenu = ({ children, ...props }) => {
             button={button}
             buttonClassName="k-HeaderNav__UserMenuButton"
             dropdownContent={navigation}
+            dropdownContentWidth={dropdownContentWidth}
             closeEvents={[CLOSE_EVENT]}
             isExpanded={false}
             refreshEvents={['resize']}
