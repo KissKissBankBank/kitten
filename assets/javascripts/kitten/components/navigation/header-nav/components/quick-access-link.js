@@ -7,7 +7,8 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 
 const StyledQuickNav = styled.a`
   position: absolute;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   left: -100%;
   top: 0;
   bottom: 0;
