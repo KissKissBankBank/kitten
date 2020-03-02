@@ -36,20 +36,20 @@ export const Dropdown = React.forwardRef(
     dropdownRef,
   ) => {
     const [isExpandedState, setIsExpanded] = useState(false)
-    const [referenceElementHeightState, setReferenceElementHeight] = useState(0)
-    const [referenceElementWidthState, setReferenceElementWidth] = useState(0)
+    const [
+      verticalReferenceElementState,
+      setVerticalReferenceElement,
+    ] = useState(0)
+    const [
+      horizontalReferenceElementState,
+      setHorizontalReferenceElement,
+    ] = useState(0)
     const dropdownContentRef = useRef(null)
     const arrowRef = useRef(null)
     const dropdownButtonRef = useRef(null)
 
     useEffect(() => {
-      if (domElementHelper.canUseDom()) {
-        // Update dropdown content position after DOM is build.
-        setReferenceElementHeight(getReferenceElementHeight())
-        setReferenceElementWidth(getReferenceElementWidth())
-      }
-
-      // Handle events.
+      handleDropdownPosition()
       handleClickOnLinks()
 
       emitter.on('dropdown:opening:trigger', closeDropdown)
@@ -132,13 +132,13 @@ export const Dropdown = React.forwardRef(
       return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef
     }
 
-    const getReferenceElementHeight = () =>
+    const getComputedHeightElement = () =>
       domElementHelper.getComputedHeight(
         getVerticalReferenceElement(),
         positionedWithBorder,
       )
 
-    const getReferenceElementWidth = () =>
+    const getComputedLeftElement = () =>
       positionedHorizontallyWith
         ? domElementHelper.getComputedLeft(positionedHorizontallyWith())
         : 0
@@ -149,20 +149,14 @@ export const Dropdown = React.forwardRef(
 
     const getContentPosition = () => {
       return {
-        top: referenceElementHeightState,
-        left: referenceElementWidthState || 0,
+        top: verticalReferenceElementState,
+        left: horizontalReferenceElementState || 0,
         ...contentHorizontalPosition,
       }
     }
 
     // Component listener callbacks
-    const revertHandleClickOnLinks = () => {
-      const links = dropdownContentRef.current.getElementsByTagName('a')
-
-      Array.prototype.forEach.call(links, link => {
-        link.removeEventListener('click', closeDropdown)
-      })
-    }
+    const revertHandleClickOnLinks = () => handleClickOnLinks()
 
     const handleClickOnLinks = () => {
       const links = dropdownContentRef.current.getElementsByTagName('a')
@@ -175,8 +169,8 @@ export const Dropdown = React.forwardRef(
     const handleDropdownPosition = () => {
       if (domElementHelper.canUseDom()) {
         onPositionUpdate()
-        setReferenceElementHeight(getReferenceElementHeight())
-        setReferenceElementWidth(getReferenceElementWidth())
+        setVerticalReferenceElement(getComputedHeightElement())
+        setHorizontalReferenceElement(getComputedLeftElement())
       }
     }
 
