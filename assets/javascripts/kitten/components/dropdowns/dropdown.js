@@ -119,7 +119,7 @@ export const Dropdown = React.forwardRef(
       if (!isSelfReference()) {
         return (positionedVerticallyWith || positionedWith)()
       }
-      // Prevent error from ref no set by `useRef`.
+      // Prevent error from ref not set by `useRef`.
       return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef
     }
 
