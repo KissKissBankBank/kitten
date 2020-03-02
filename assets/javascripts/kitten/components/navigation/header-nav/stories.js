@@ -186,7 +186,13 @@ storiesOf('Navigation/HeaderNav', module)
         </HeaderNav.BurgerMenu>
 
         <HeaderNav.Logo href="#">
-          <KissKissBankBankLogo color="#000" />
+          <HeaderNav.Hidden min="xs">
+            <KissKissBankBankLogo tiny width="40" height="40" />
+          </HeaderNav.Hidden>
+
+          <HeaderNav.Hidden max="xxs">
+            <KissKissBankBankLogo />
+          </HeaderNav.Hidden>
         </HeaderNav.Logo>
 
         <HeaderNav.Hidden max="m">
