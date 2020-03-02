@@ -30,7 +30,7 @@ exports[`<AvatarWithTextAndBadge /> with avatar should match with snapshot 1`] =
     </span>
   </span>
   <span
-    className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight"
+    className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight always-visible"
   >
     Jean-Luc
   </span>
@@ -79,7 +79,7 @@ exports[`<AvatarWithTextAndBadge /> without avatar should match with snapshot 1`
     </span>
   </span>
   <span
-    className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight"
+    className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight always-visible"
   >
     <span
       className="k-u-line-height-normal k-u-weight-bold"
