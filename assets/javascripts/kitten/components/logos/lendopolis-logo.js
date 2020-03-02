@@ -14,14 +14,13 @@ export const LendopolisLogo = ({
   const DEFAULT_HEIGHT = 28
   const viewBox = {
     x: tiny ? DEFAULT_HEIGHT : DEFAULT_WIDTH,
-    y: tiny ? DEFAULT_HEIGHT : DEFAULT_HEIGHT,
+    y: DEFAULT_HEIGHT,
   }
 
   return (
     <svg
       role="img"
       aria-label="Lendopolis"
-      preserveAspectRatio="xMidYMin slice"
       xmlns="http://www.w3.org/2000/svg"
       viewBox={`0 0 ${viewBox.x} ${viewBox.y}`}
       width={width}
