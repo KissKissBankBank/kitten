@@ -1,8 +1,8 @@
 import React from 'react'
 import { Context } from './context'
 
-export const Unlogged = props => (
+export const Unlogged = ({ children }) => (
   <Context.Consumer>
-    {({ isLogged }) => (!isLogged ? <>{props.children}</> : null)}
+    {({ isLogged }) => (!isLogged ? <>{children}</> : null)}
   </Context.Consumer>
 )

@@ -63,7 +63,9 @@ const StyledLink = styled.a`
         }
       `
     return css`
-      width: ${MOBILE_HEADER_HEIGHT} @media (min-width: ${ScreenConfig.S.min}px) {
+      width: ${MOBILE_HEADER_HEIGHT};
+
+      @media (min-width: ${ScreenConfig.S.min}px) {
         width: ${TABLET_HEADER_HEIGHT};
       }
 

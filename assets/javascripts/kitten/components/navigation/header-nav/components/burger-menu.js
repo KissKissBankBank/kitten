@@ -8,11 +8,7 @@ const DROPDOWN_CLASS = `${namespace}-PlatformMenu`
 const CLOSE_EVENT = `${namespace}:platformMenu:close`
 
 const ButtonIcon = props => (
-  <BurgerIcon
-    className="k-ButtonIcon__svg"
-    style={{ transition: 'none' }}
-    {...props}
-  />
+  <BurgerIcon className="k-ButtonIcon__svg" {...props} />
 )
 
 const buttonClassNames = [
