@@ -253,7 +253,6 @@ export const Dropdown = React.forwardRef(
 Dropdown.propTypes = {
   arrowHorizontalPosition: PropTypes.object,
   button: PropTypes.node,
-  keepInitialButtonAction: PropTypes.bool,
   buttonClassName: PropTypes.string,
   buttonContentOnCollapsed: PropTypes.node,
   buttonContentOnExpanded: PropTypes.node,
@@ -264,6 +263,7 @@ Dropdown.propTypes = {
   dropdownContent: PropTypes.node,
   dropdownListArrow: PropTypes.node,
   isExpanded: PropTypes.bool,
+  keepInitialButtonAction: PropTypes.bool,
   notifications: PropTypes.number,
   onPositionUpdate: PropTypes.func,
   onToggle: PropTypes.func,
@@ -281,8 +281,8 @@ Dropdown.defaultProps = {
   // Take border into account to compute reference element height.
   positionedWithBorder: true,
 
-  // Set to true to keep the inital event et just design the button trough
-  // `button` prop.
+  // If set to true, keep the inital toggle events to focus on design button
+  // trough `button` prop.
   keepInitialButtonAction: false,
 
   // Custom horizontal position for content and content arrow.
