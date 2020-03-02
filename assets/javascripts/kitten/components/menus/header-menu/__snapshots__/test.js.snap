@@ -22,8 +22,8 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   position: absolute;
   top: -0.0625rem;
   left: -0.0625rem;
-  bottom: -0.0625rem;
-  width: 0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -33,7 +33,6 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 .c1:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -114,8 +113,8 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   position: absolute;
   top: -0.0625rem;
   left: -0.0625rem;
-  bottom: -0.0625rem;
-  width: 0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -125,7 +124,6 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c1:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -169,8 +167,8 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   position: absolute;
   top: -0.0625rem;
   left: -0.0625rem;
-  bottom: -0.0625rem;
-  width: 0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -180,7 +178,6 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c2:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -312,8 +309,8 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   position: absolute;
   top: -0.0625rem;
   left: -0.0625rem;
-  bottom: -0.0625rem;
-  width: 0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -323,7 +320,6 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c1:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -350,8 +346,8 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   position: absolute;
   top: -0.0625rem;
   left: -0.0625rem;
-  bottom: -0.0625rem;
-  width: 0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -361,7 +357,6 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c2:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -442,8 +437,8 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   position: absolute;
   top: -0.0625rem;
   left: -0.0625rem;
-  bottom: -0.0625rem;
-  width: 0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -453,7 +448,6 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c1:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -480,8 +474,8 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   position: absolute;
   top: -0.0625rem;
   left: -0.0625rem;
-  bottom: -0.0625rem;
-  width: 0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -491,7 +485,6 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c2:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
