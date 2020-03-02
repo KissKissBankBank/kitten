@@ -111,11 +111,20 @@ export const Dropdown = React.forwardRef(
     }
 
     const hasDefaultHorizontalPosition = () => positionedOn === 'left'
+
     const isSelfReference = () =>
       typeof positionedWith === 'undefined' &&
       typeof positionedVerticallyWith === 'undefined'
 
-    const getReferenceElement = () => {
+    const getVerticalReferenceElement = () => {
+      if (!isSelfReference()) {
+        return (positionedVerticallyWith || positionedWith)()
+      }
+      // Prevent error from ref not set by `useRef`.
+      return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef
+    }
+
+    const getHorizontalReferenceElement = () => {
       if (!isSelfReference()) {
         return (positionedVerticallyWith || positionedWith)()
       }
@@ -125,7 +134,7 @@ export const Dropdown = React.forwardRef(
 
     const getReferenceElementHeight = () =>
       domElementHelper.getComputedHeight(
-        getReferenceElement(),
+        getVerticalReferenceElement(),
         positionedWithBorder,
       )
 
@@ -167,11 +176,7 @@ export const Dropdown = React.forwardRef(
       if (domElementHelper.canUseDom()) {
         onPositionUpdate()
         setReferenceElementHeight(getReferenceElementHeight())
-
-        const getComputedWidth = domElementHelper.getComputedWidth(
-          getReferenceElement(),
-          positionedWithBorder,
-        )
+        setReferenceElementWidth(getReferenceElementWidth())
       }
     }
 

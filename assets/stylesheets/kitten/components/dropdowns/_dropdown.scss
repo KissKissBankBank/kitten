@@ -72,6 +72,9 @@
     @include k-media-xs {
       min-width: 0;
       width: 100%;
+      left: 0 !important;
+      right: 0 !important;
+      overflow: hidden;
     }
 
     visibility: hidden;

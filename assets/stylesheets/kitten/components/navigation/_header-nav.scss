@@ -103,10 +103,7 @@
   .k-HeaderNav__UserMenuButton {
     padding: 0 $padding-x;
     border: 0;
-    @include k-typographyFontSize(
-      $font-step,
-      $line-height: $line-height
-    );
+    @include k-typographyFontSize($font-step, $line-height);
 
     @include k-media-max('xs') {
       padding: 0 $padding-x / 2;
@@ -152,10 +149,7 @@
     border-top: $border-width solid transparent;
 
     @include k-typographyFont($font);
-    @include k-typographyFontSize(
-      $font-step,
-      $line-height: $line-height
-    );
+    @include k-typographyFontSize($font-step, $line-height);
 
     color: $base-color;
     text-align: center;
