@@ -47,17 +47,25 @@
 
   .k-HeaderNav * {
     @include k-typographyFont($font);
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .k-HeaderNav-Logo {
     padding: k-px-to-rem(10px);
     display: flex;
     align-items: center;
+
+    &:focus {
+      outline: k-px-to-rem(5px) auto -webkit-focus-ring-color;
+    }
   }
 
   .k-HeaderNav--right,
   .k-HeaderNav--centered {
-    &, & .k-HeaderNav--hidden {
+    &, .k-HeaderNav--hidden {
       display: flex;
       height: 100%;
       align-items: center;
@@ -70,14 +78,14 @@
   }
 
   .k-HeaderNav--centered {
-    &, & .k-HeaderNav--hidden {
+    &, .k-HeaderNav--hidden {
       justify-content: center;
       flex-grow: 100;
     }
   }
 
   .k-HeaderNav--column {
-    &, & .k-HeaderNav--hidden {
+    &, .k-HeaderNav--hidden {
       flex-direction: column;
     }
   }
@@ -101,12 +109,15 @@
   }
 
   .k-HeaderNav__UserMenuButton {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
     padding: 0 $padding-x;
     border: 0;
     @include k-typographyFontSize($font-step, $line-height);
 
     @include k-media-max('xs') {
-      padding: 0 $padding-x / 2;
+      padding: 0;
     }
 
     &:hover {
@@ -158,7 +169,7 @@
     cursor: pointer;
     transition: color $transition-speed, border-color $transition-speed;
 
-    &:hover {
+    &:hover, &:focus {
       color: $hover-color;
       text-decoration: none;
     }
@@ -171,14 +182,6 @@
     &.is-selected {
       border-color: $is-selected-color;
       color: $is-selected-color;
-    }
-
-    &:focus {
-      color: $hover-color;
-      text-decoration: none;
-
-      outline: 0;
-      box-shadow: 0 0 k-px-to-rem(16px) $hover-color;
     }
   }
 }
