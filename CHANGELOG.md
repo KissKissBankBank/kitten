@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remplace `imageSrc` by `icon` props on `EngagementCard`.
 - Feature : Add `SaveIcon` and `DocIcon`
 - Feature : Bump to `node@12.x`
 
