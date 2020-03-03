@@ -74,7 +74,7 @@ export const EngagementCard = ({
 }
 
 EngagementCard.propTypes = {
-  icon: PropTypes.node.isRequired,
+  icon: PropTypes.element.isRequired,
   href: PropTypes.string,
   backgroundColor: PropTypes.string,
   hoverBorder: PropTypes.string,
