@@ -113,7 +113,14 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged }) => {
 
       <HeaderNav.Right>
         <HeaderNav.Button
-          icon={<SearchIcon />}
+          icon={
+            <SearchIcon
+              width="14"
+              height="14"
+              color={COLORS.font1}
+              title="Aller sur la page de recherche"
+            />
+          }
           backgroundColor={COLORS.background3}
           backgroundColorHover={COLORS.line1}
           color={COLORS.font1}

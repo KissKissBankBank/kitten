@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { BurgerIcon } from '../../../../components/icons/burger-icon'
 import { Dropdown } from '../../../../components/dropdowns/dropdown'
+import COLORS from '../../../../constants/colors-config'
 import { Context } from './context'
 
 const namespace = 'kkbbAndCo'
@@ -8,7 +9,11 @@ const DROPDOWN_CLASS = `${namespace}-PlatformMenu`
 const CLOSE_EVENT = `${namespace}:platformMenu:close`
 
 const ButtonIcon = props => (
-  <BurgerIcon className="k-ButtonIcon__svg" {...props} />
+  <BurgerIcon
+    {...props}
+    hoverColor={COLORS.font1}
+    className="k-ButtonIcon__svg"
+  />
 )
 
 const buttonClassNames = [
@@ -32,7 +37,7 @@ export const BurgerMenu = ({ children, dropdownContentWidth, ...props }) => {
           buttonId={`${id}PlateformMenu`}
           buttonClassName={buttonClassNames}
           buttonContentOnExpanded={<ButtonIcon isActive />}
-          buttonContentOnCollapsed={<ButtonIcon />}
+          buttonContentOnCollapsed={<ButtonIcon isAnimatedOnHover={true} />}
           dropdownContent={children}
           dropdownContentWidth={dropdownContentWidth}
           closeEvents={[CLOSE_EVENT]}
