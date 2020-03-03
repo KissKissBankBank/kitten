@@ -98,7 +98,7 @@ export const LendopolisHeaderNavStory = ({ isLogged }) => {
 
       <HeaderNav.Logo href="#">
         <HeaderNav.Hidden min="xs">
-          <LendopolisLogo tiny width="40" height="40" primaryColor="#000" />
+          <LendopolisLogo height="25" primaryColor="#000" />
         </HeaderNav.Hidden>
 
         <HeaderNav.Hidden max="xxs">

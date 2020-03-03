@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../helpers/utils/typography'
+import { computeFromRatio } from '../..//helpers/utils/ratio'
 
 export const LendopolisLogo = ({
   primaryColor,
@@ -12,6 +13,13 @@ export const LendopolisLogo = ({
 }) => {
   const DEFAULT_WIDTH = 150
   const DEFAULT_HEIGHT = 28
+  const computed = computeFromRatio({
+    defaultWidth: DEFAULT_WIDTH,
+    defaultHeight: DEFAULT_HEIGHT,
+    width,
+    height,
+  })
+
   const viewBox = {
     x: tiny ? DEFAULT_HEIGHT : DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT,
@@ -23,8 +31,8 @@ export const LendopolisLogo = ({
       aria-label="Lendopolis"
       xmlns="http://www.w3.org/2000/svg"
       viewBox={`0 0 ${viewBox.x} ${viewBox.y}`}
-      width={width}
-      height={tiny ? width : height}
+      width={computed.width}
+      height={tiny ? computed.width : computed.height}
       {...props}
     >
       <title>Lendopolis</title>
@@ -57,7 +65,7 @@ LendopolisLogo.propTypes = {
 LendopolisLogo.defaultProps = {
   primaryColor: '#fff',
   secondaryColor: '#caf4fe',
-  width: 150,
-  height: 28,
+  width: null,
+  height: null,
   tiny: false,
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { computeFromRatio } from '../..//helpers/utils/ratio'
 
 export const KissKissBankBankLogo = ({
   color,
@@ -11,6 +12,13 @@ export const KissKissBankBankLogo = ({
   const DEFAULT_WIDTH = 134
   const DEFAULT_HEIGHT = 30
   const TINY_WIDTH = 32
+  const computed = computeFromRatio({
+    defaultWidth: DEFAULT_WIDTH,
+    defaultHeight: DEFAULT_HEIGHT,
+    width,
+    height,
+  })
+
   const viewBox = {
     x: tiny ? TINY_WIDTH : DEFAULT_WIDTH,
     y: DEFAULT_HEIGHT,
@@ -22,8 +30,8 @@ export const KissKissBankBankLogo = ({
       aria-label="KissKissBankBank"
       xmlns="http://www.w3.org/2000/svg"
       viewBox={`0 0 ${viewBox.x} ${viewBox.y}`}
-      width={width}
-      height={tiny ? width : height}
+      width={computed.width}
+      height={tiny ? computed.width : computed.height}
       fill={color}
       {...props}
     >
