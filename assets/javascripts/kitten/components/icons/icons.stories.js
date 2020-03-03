@@ -54,6 +54,8 @@ import { YoutubeIcon } from './youtube-icon'
 import { KissKissBankBankIcon } from './kisskissbankbank-icon'
 import { EmbedIcon } from './embed-icon'
 import { GiftIcon } from './gift-icon'
+import { SaveIcon } from './save-icon'
+import { DocIcon } from './doc-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -159,6 +161,8 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<EmbedIcon />} />
         <IconContainer children={<GiftIcon />} />
         <IconContainer children={<EditIcon />} />
+        <IconContainer children={<SaveIcon />} />
+        <IconContainer children={<DocIcon />} />
       </Group>
     </Container>
   )
