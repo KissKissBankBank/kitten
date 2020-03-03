@@ -116,7 +116,7 @@
     border: 0;
     @include k-typographyFontSize($font-step, $line-height);
 
-    @include k-media-max('xs') {
+    @include k-media-max('xxs') {
       padding: 0;
     }
 
