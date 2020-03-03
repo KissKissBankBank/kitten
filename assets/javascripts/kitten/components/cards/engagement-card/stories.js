@@ -9,6 +9,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Marger } from '../../layout/marger'
 import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
+import { PhoneIllustration } from '../../../components/illustrations/phone-illustration'
 
 const StyledEngagementCard = styled(EngagementCard)`
   display: flex;
@@ -61,7 +62,7 @@ const info = {
 
     #### Icon
     ~~~js
-    <EngagementCard icon="…" />
+    <EngagementCard icon={<MyIcon />} />
     ~~~
 
     #### Background color
@@ -72,11 +73,6 @@ const info = {
     #### Hover's border
     ~~~js
     <EngagementCard hoverBorder="…" />
-    ~~~
-
-    #### Title
-    ~~~js
-    <EngagementCard title="…" />
     ~~~
   `,
   header: false,
@@ -97,11 +93,12 @@ storiesOf('Cards/EngagementCard', module)
                 <StyledEngagementCard
                   isActive
                   href="#"
-                  icon={<KissKissBankBankIcon height="25" />}
+                  icon={<PhoneIllustration />}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
                   hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
-                  title={text('Categorie', 'Fabrication française')}
-                />
+                >
+                  {text('Categorie', 'Fabrication française')}
+                </StyledEngagementCard>
               </li>
               <li>
                 <StyledEngagementCard
@@ -110,8 +107,9 @@ storiesOf('Cards/EngagementCard', module)
                   icon={<KissKissBankBankIcon height="25" />}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
                   hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
-                  title={text('Categorie', 'Education')}
-                />
+                >
+                  {text('Categorie 2', 'Education')}
+                </StyledEngagementCard>
               </li>
               <li>
                 <StyledEngagementCard
@@ -120,8 +118,9 @@ storiesOf('Cards/EngagementCard', module)
                   icon={<KissKissBankBankIcon height="25" />}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
                   hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
-                  title={text('Categorie', 'Bio')}
-                />
+                >
+                  {text('Categorie 3', 'Bio')}
+                </StyledEngagementCard>
               </li>
             </StyledList>
           </Marger>

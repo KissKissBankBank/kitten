@@ -43,13 +43,14 @@ const StyledText = styled(Text)`
 
 const StyledIcon = styled.div`
   align-self: center;
+  margin: 0 auto;
 `
 
 export const EngagementCard = ({
   icon,
   backgroundColor,
   href,
-  title,
+  children,
   hoverBorder,
   isActive,
   as,
@@ -66,24 +67,21 @@ export const EngagementCard = ({
     >
       <StyledIcon>{icon}</StyledIcon>
       <StyledText size="micro" weight="regular" color="font1">
-        {title}
+        {children}
       </StyledText>
     </StyledCard>
   )
 }
 
 EngagementCard.propTypes = {
-  icon: PropTypes.node,
+  icon: PropTypes.node.isRequired,
   href: PropTypes.string,
   backgroundColor: PropTypes.string,
   hoverBorder: PropTypes.string,
   isActive: PropTypes.bool,
-  title: PropTypes.string,
 }
 
 EngagementCard.defaultProps = {
-  icon: '',
-  title: '',
   href: '',
   backgroundColor: '',
   hoverBorder: '',
