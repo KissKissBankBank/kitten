@@ -64,7 +64,7 @@ const info = {
     <EngagementCard icon="…" />
     ~~~
 
-  #### Background color
+    #### Background color
     ~~~js
     <EngagementCard backgroundColor="…" />
     ~~~
@@ -72,6 +72,11 @@ const info = {
     #### Hover's border
     ~~~js
     <EngagementCard hoverBorder="…" />
+    ~~~
+
+    #### Title
+    ~~~js
+    <EngagementCard title="…" />
     ~~~
   `,
   header: false,
