@@ -8,6 +8,7 @@ import { Container } from '../../grid/container'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Marger } from '../../layout/marger'
+import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
 
 const StyledEngagementCard = styled(EngagementCard)`
   display: flex;
@@ -58,9 +59,9 @@ const info = {
     <EngagementCard />
     ~~~
 
-    #### Image
+    #### Icon
     ~~~js
-    <EngagementCard imageSrc="…" />
+    <EngagementCard icon="…" />
     ~~~
 
   #### Background color
@@ -91,43 +92,31 @@ storiesOf('Cards/EngagementCard', module)
                 <StyledEngagementCard
                   isActive
                   href="#"
-                  imageSrc={text(
-                    'Image',
-                    'https://via.placeholder.com/130x100/caf4fe',
-                  )}
+                  icon={<KissKissBankBankIcon height="25" />}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
                   hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
-                >
-                  {text('Categorie', 'Fabrication française')}
-                </StyledEngagementCard>
+                  title={text('Categorie', 'Fabrication française')}
+                />
               </li>
               <li>
                 <StyledEngagementCard
                   className="k-u-hidden@s-down--important"
                   href="#"
-                  imageSrc={text(
-                    'Image',
-                    'https://via.placeholder.com/130x100/caf4fe',
-                  )}
+                  icon={<KissKissBankBankIcon height="25" />}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
                   hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
-                >
-                  {text('Categorie', 'Education')}
-                </StyledEngagementCard>
+                  title={text('Categorie', 'Education')}
+                />
               </li>
               <li>
                 <StyledEngagementCard
                   className="k-u-hidden@s-down--important"
                   href="#"
-                  imageSrc={text(
-                    'Image',
-                    'https://via.placeholder.com/130x100/caf4fe',
-                  )}
+                  icon={<KissKissBankBankIcon height="25" />}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
                   hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
-                >
-                  {text('Categorie', 'Bio')}
-                </StyledEngagementCard>
+                  title={text('Categorie', 'Bio')}
+                />
               </li>
             </StyledList>
           </Marger>
