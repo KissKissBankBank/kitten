@@ -1,15 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 export const SearchIcon = ({
   iconTitle,
+  title,
   color,
   circleProps,
   pathProps,
-  ...other
+  width,
+  height,
+  ...props
 }) => (
-  <svg viewBox="-0.7 -0.7 18 18" xmlns="http://www.w3.org/2000/svg" {...other}>
-    {iconTitle && <title>{iconTitle}</title>}
+  <svg
+    role="img"
+    aria-label={iconTitle || title}
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="-0.7 -0.7 18 18"
+    width={width}
+    height={height}
+    {...props}
+  >
+    {(iconTitle || title) && <title>{iconTitle || title}</title>}
     <circle
       cx="7"
       cy="7"
@@ -28,15 +40,20 @@ export const SearchIcon = ({
 )
 
 SearchIcon.propTypes = {
-  iconTitle: PropTypes.string,
+  iconTitle: deprecated(PropTypes.string, 'Prefere use `title` prop instead'),
+  title: PropTypes.string,
   color: PropTypes.string,
   circleProps: PropTypes.object,
   pathProps: PropTypes.object,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
 SearchIcon.defaultProps = {
-  iconTitle: 'Search',
+  title: 'Search',
   color: '#333',
   circleProps: {},
   pathProps: {},
+  width: 14,
+  height: 14,
 }
