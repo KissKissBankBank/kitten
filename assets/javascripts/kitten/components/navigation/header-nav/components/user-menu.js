@@ -44,7 +44,7 @@ export const UserMenu = ({ children, dropdownContentWidth, ...props }) => {
   )
 }
 
-UserMenu.Button = ({ children, ...props }) => <span {...props}>{children}</span>
+UserMenu.Button = ({ children }) => <>{children}</>
 
 UserMenu.Navigation = ({ children, ...props }) => (
   <div {...props}>{children}</div>
