@@ -12,27 +12,50 @@ import {
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { getScreenSizeFrom } from '../../../../helpers/utils/media-queries'
 
+const horizontalPadding = css`
+  padding-left: ${pxToRem(30)};
+  padding-right: ${pxToRem(30)};
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    padding-left: ${pxToRem(40)};
+    padding-right: ${pxToRem(40)};
+  }
+`
+
 const StyledLink = styled.a`
   ${TYPOGRAPHY.fontStyles.regular}
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: ${pxToRem(25)} ${pxToRem(30)};
   height: 100%;
   font-size: ${stepToRem(-1)};
   color: ${({ color }) => color};
   background-color: ${({ backgroundColor }) => backgroundColor};
   text-decoration: none;
 
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    padding: ${pxToRem(30)} ${pxToRem(40)};
-  }
+  ${({ textShownFromMediaQuery, icon, text }) => {
+    if (icon && !text) {
+      return css`
+        width: ${MOBILE_HEADER_HEIGHT};
+        height: ${MOBILE_HEADER_HEIGHT};
 
-  ${({ textShownFromMediaQuery }) => {
+        @media (min-width: ${ScreenConfig.S.min}px) {
+          width: ${TABLET_HEADER_HEIGHT};
+          height: ${TABLET_HEADER_HEIGHT};
+        }
+
+        @media (min-width: ${ScreenConfig.L.min}px) {
+          width: ${DESKTOP_HEADER_HEIGHT};
+          height: ${DESKTOP_HEADER_HEIGHT};
+        }
+      `
+    }
+
     if (!textShownFromMediaQuery)
       return css`
         width: inherit;
+        ${horizontalPadding}
 
         @media (min-width: ${ScreenConfig.L.min}px) {
           min-width: ${pxToRem(200)};
@@ -43,6 +66,7 @@ const StyledLink = styled.a`
       textShownFromMediaQuery.min &&
       css`
         @media (${textShownFromMediaQuery.min}) {
+          ${horizontalPadding}
           width: inherit;
         }
 
@@ -55,6 +79,7 @@ const StyledLink = styled.a`
       textShownFromMediaQuery.max &&
       css`
         @media (${textShownFromMediaQuery.max}) {
+          ${horizontalPadding}
           width: inherit;
         }
 
@@ -63,6 +88,7 @@ const StyledLink = styled.a`
         }
       `
     return css`
+      padding: 0;
       width: ${MOBILE_HEADER_HEIGHT};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
@@ -78,24 +104,8 @@ const StyledLink = styled.a`
     `
   }}
 
-  &:hover {
+  &:hover, &:focus {
     background-color: ${({ backgroundColorHover }) => backgroundColorHover};
-  }
-`
-
-const IconContainer = styled.span`
-  svg {
-    display: flex;
-    width: ${pxToRem(14)};
-    height: ${pxToRem(14)};
-
-    [fill^='#'] {
-      fill: ${({ color }) => color};
-    }
-
-    [stroke^='#'] {
-      stroke: ${({ color }) => color};
-    }
   }
 `
 
@@ -108,6 +118,7 @@ export const Button = ({
   href,
   type,
   hiddenText: { min, max } = {},
+  as,
   ...others
 }) => {
   const previousScreenSize = min && getScreenSizeFrom('previous')(min)
@@ -128,7 +139,11 @@ export const Button = ({
     max: max && `min-width: ${ScreenConfig[nextScreenSize].min}px`,
   }
 
-  const buttonProps = type === 'button' ? { as: 'button', type } : { href }
+  const buttonProps = as
+    ? { as }
+    : type === 'button'
+    ? { as: 'button', type }
+    : { href }
 
   return (
     <StyledLink
@@ -138,13 +153,12 @@ export const Button = ({
       backgroundColorHover={backgroundColorHover}
       color={color}
       textShownFromMediaQuery={mediaQuery}
+      icon={icon}
+      text={text}
     >
-      {icon && (
-        <IconContainer className={classNameIcon} color={color}>
-          {icon}
-        </IconContainer>
-      )}
-      <span className={classNameText}>{text}</span>
+      {icon && React.cloneElement(icon, { className: classNameIcon })}
+
+      {text && <span className={classNameText}>{text}</span>}
     </StyledLink>
   )
 }
@@ -168,5 +182,5 @@ Button.defaultProps = {
   backgroundColor: COLORS.line1,
   backgroundColorHover: COLORS.line2,
   color: COLORS.font1,
-  text: 'Button',
+  text: null,
 }
