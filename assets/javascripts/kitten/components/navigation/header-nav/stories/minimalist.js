@@ -32,7 +32,7 @@ export const MinimalistHeaderNavStory = ({ text, subText }) => (
           style={{ margin: 0 }}
           tag="h1"
           size="tiny"
-          weight="bold"
+          weight="regular"
           transform="uppercase"
           lineHeight="normal"
         >

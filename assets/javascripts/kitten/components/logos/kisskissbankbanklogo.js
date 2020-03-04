@@ -56,7 +56,7 @@ KissKissBankBankLogo.propTypes = {
 
 KissKissBankBankLogo.defaultProps = {
   color: '#000',
-  width: 134,
-  height: 30,
+  width: null,
+  height: null,
   tiny: false,
 }

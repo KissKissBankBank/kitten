@@ -115,42 +115,28 @@ export const LendopolisHeaderNavStory = ({ isLogged }) => {
       <HeaderNav.Right>
         <HeaderNav.UserMenu dropdownContentWidth={pxToRem(userMenuWidth)}>
           <HeaderNav.UserMenu.Button>
-            <HeaderNav.Hidden max="xxs">
-              <AvatarWithTextAndBadge
-                imageProps={{
-                  text: (
-                    <Text size="micro" weight="bold">
-                      JC
-                    </Text>
-                  ),
-                  backgroundColor: '#002e7d',
-                }}
-                notifications="2"
-                text={
-                  <Text lineHeight="normal" weight="bold">
-                    Jean Charles Édouard
-                  </Text>
-                }
-                subText={
-                  <Text weight="light">
-                    <Text className="k-u-weight-light k-u-hidden@xs-down">
-                      Solde&nbsp;:
-                    </Text>{' '}
-                    42&nbsp;000,97&nbsp;€
-                  </Text>
-                }
-              />
-            </HeaderNav.Hidden>
+            <AvatarWithTextAndBadge>
+              <AvatarWithTextAndBadge.Image backgroundColor="#002e7d">
+                JC
+                <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
+              </AvatarWithTextAndBadge.Image>
 
-            <HeaderNav.Hidden min="xs">
-              <HeaderNav.Button
-                icon={<LoginIcon />}
-                backgroundColor={COLORS.primary1}
-                backgroundColorHover={COLORS.primary2}
-                color={COLORS.background1}
-                as="span"
-              />
-            </HeaderNav.Hidden>
+              <AvatarWithTextAndBadge.Text
+                textClassName="k-u-hidden@xxs-down"
+                withEllipsisOverflow={true}
+              >
+                <Text lineHeight="normal" weight="regular">
+                  Jean Charles Édouard
+                </Text>
+                <br />
+                <Text weight="light">
+                  <Text className="k-u-weight-light k-u-hidden@xs-down">
+                    Solde&nbsp;:
+                  </Text>{' '}
+                  2&nbsp;000,97&nbsp;€
+                </Text>
+              </AvatarWithTextAndBadge.Text>
+            </AvatarWithTextAndBadge>
           </HeaderNav.UserMenu.Button>
 
           <HeaderNav.UserMenu.Navigation>
@@ -159,13 +145,25 @@ export const LendopolisHeaderNavStory = ({ isLogged }) => {
         </HeaderNav.UserMenu>
 
         <HeaderNav.Unlogged>
-          <HeaderNav.Button
-            backgroundColor={COLORS.background3}
-            backgroundColorHover={COLORS.line1}
-            color={COLORS.font1}
-            text="Se connecter"
-            href="#"
-          />
+          <HeaderNav.Hidden max="xs">
+            <HeaderNav.Button
+              backgroundColor={COLORS.background3}
+              backgroundColorHover={COLORS.line1}
+              color={COLORS.font1}
+              text="Se connecter"
+              href="#"
+            />
+          </HeaderNav.Hidden>
+
+          <HeaderNav.Hidden min="xs">
+            <HeaderNav.Button
+              icon={<LoginIcon />}
+              backgroundColor={COLORS.primary1}
+              backgroundColorHover={COLORS.primary2}
+              color={COLORS.background1}
+              as="span"
+            />
+          </HeaderNav.Hidden>
 
           <HeaderNav.Button
             icon={

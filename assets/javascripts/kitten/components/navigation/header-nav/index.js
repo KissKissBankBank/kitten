@@ -22,10 +22,6 @@ import {
 
 const Header = styled.header`
   height: ${MOBILE_HEADER_HEIGHT};
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding-left: ${pxToRem(20)};
   background: #fff;
 
   @media (min-width: ${ScreenConfig.S.min}px) {

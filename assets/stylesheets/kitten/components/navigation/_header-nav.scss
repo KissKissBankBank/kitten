@@ -45,6 +45,18 @@
 
   $transition-speed: .2s;
 
+  .k-HeaderNav {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-left: k-px-to-rem(10px);
+
+    @include k-media-min('s') {
+      padding-left: k-px-to-rem(20px);
+    }
+  }
+
   .k-HeaderNav * {
     @include k-typographyFont($font);
 
@@ -57,6 +69,11 @@
     padding: k-px-to-rem(10px);
     display: flex;
     align-items: center;
+
+    @include k-media-max('xxs') {
+      padding-left: k-px-to-rem(5px);
+      padding-right: k-px-to-rem(5px);
+    }
 
     &:focus {
       outline: k-px-to-rem(5px) auto -webkit-focus-ring-color;
@@ -106,6 +123,13 @@
   .k-HeaderNav__UserMenu {
     height: 100%;
     display: flex;
+
+    .text--withEllipsis {
+      text-overflow: ellipsis;
+      max-width: k-px-to-rem(130px);
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
 
   .k-HeaderNav__UserMenuButton {
@@ -117,7 +141,7 @@
     @include k-typographyFontSize($font-step, $line-height);
 
     @include k-media-max('xxs') {
-      padding: 0;
+      padding: 0 k-px-to-rem(15px);
     }
 
     &:hover {

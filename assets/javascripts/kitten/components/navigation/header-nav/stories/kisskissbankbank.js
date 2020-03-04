@@ -131,17 +131,20 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged }) => {
 
         <HeaderNav.UserMenu dropdownContentWidth={pxToRem(userMenuWidth)}>
           <HeaderNav.UserMenu.Button>
-            <AvatarWithTextAndBadge
-              imageProps={{
-                src: 'https://via.placeholder.com/40x40.png',
-              }}
-              notifications="2"
-              text={
-                <Text lineHeight="normal" weight="bold">
+            <AvatarWithTextAndBadge>
+              <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
+                <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
+              </AvatarWithTextAndBadge.Image>
+
+              <AvatarWithTextAndBadge.Text
+                textClassName="k-u-hidden@xxs-down"
+                withEllipsisOverflow={true}
+              >
+                <Text lineHeight="normal" weight="regular">
                   Jean Charles Édouard
                 </Text>
-              }
-            />
+              </AvatarWithTextAndBadge.Text>
+            </AvatarWithTextAndBadge>
           </HeaderNav.UserMenu.Button>
 
           <HeaderNav.UserMenu.Navigation>
