@@ -3,95 +3,68 @@
 exports[`<AvatarWithTextAndBadge /> with avatar should match with snapshot 1`] = `
 <div
   className="k-ButtonImageWithText"
->
-  <span
-    className="k-ButtonWithBadge"
-  >
-    <span
-      className="k-ButtonImage"
-    >
-      <img
-        alt="Default image"
-        className="k-ButtonImage__img"
-        height="2.5rem"
-        src="https://via.placeholder.com/40x40.png"
-        width="2.5rem"
-      />
-    </span>
-    <span
-      className="k-ButtonWithBadge__badge k-Badge"
-      style={
-        Object {
-          "backgroundColor": "#19b4fa",
-        }
-      }
-    >
-      5
-    </span>
-  </span>
-  <span
-    className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight always-visible"
-  >
-    Jean-Luc
-  </span>
-</div>
+  imageProps={
+    Object {
+      "alt": "Default image",
+      "src": "https://via.placeholder.com/40x40.png",
+    }
+  }
+  notifications="5"
+  text="Jean-Luc"
+/>
 `;
 
 exports[`<AvatarWithTextAndBadge /> without avatar should match with snapshot 1`] = `
 <div
   className="k-ButtonImageWithText"
->
-  <span
-    className="k-ButtonWithBadge"
-  >
-    <span
-      className="k-ButtonImage"
-    >
-      <span
-        style={
-          Object {
-            "alignItems": "center",
-            "backgroundColor": "#002e7d",
-            "color": "#fff",
-            "display": "flex",
-            "height": "2.5rem",
-            "justifyContent": "center",
-            "width": "2.5rem",
-          }
-        }
+  imageProps={
+    Object {
+      "backgroundColor": "#002e7d",
+      "text": <Text
+        className={null}
+        color={null}
+        decoration={null}
+        fontStyle={null}
+        lineHeight={null}
+        size="micro"
+        tag="span"
+        transform={null}
+        weight="bold"
       >
-        <span
-          className="k-u-size-micro k-u-weight-bold"
-        >
-          JC
-        </span>
-      </span>
-    </span>
-    <span
-      className="k-ButtonWithBadge__badge k-Badge"
-      style={
-        Object {
-          "backgroundColor": "#19b4fa",
-        }
-      }
-    >
-      2
-    </span>
-  </span>
-  <span
-    className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight always-visible"
-  >
-    <span
-      className="k-u-line-height-normal k-u-weight-bold"
-    >
-      Jean Charles
-    </span>
-    <br />
-    <span
-      className="k-u-weight-light"
+        JC
+      </Text>,
+    }
+  }
+  notifications="2"
+  subText={
+    <Text
+      className={null}
+      color={null}
+      decoration={null}
+      fontStyle={null}
+      lineHeight={null}
+      size={null}
+      tag="span"
+      transform={null}
+      weight="light"
     >
       Solde : 1 000,97 €
-    </span>
-  </span>
-</div>
+    </Text>
+  }
+  text={
+    <Text
+      className={null}
+      color={null}
+      decoration={null}
+      fontStyle={null}
+      lineHeight="normal"
+      size={null}
+      tag="span"
+      transform={null}
+      weight="bold"
+    >
+      Jean Charles
+    </Text>
+  }
+/>
 `;

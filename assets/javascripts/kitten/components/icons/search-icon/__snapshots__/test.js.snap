@@ -2,7 +2,9 @@
 
 exports[`<SearchIcon /> default matches the snapshot 1`] = `
 <svg
+  aria-label="Search"
   height="10"
+  role="img"
   viewBox="-0.7 -0.7 18 18"
   width="12"
   xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +29,9 @@ exports[`<SearchIcon /> default matches the snapshot 1`] = `
 
 exports[`<SearchIcon /> with some props matches the snapshot 1`] = `
 <svg
+  aria-label="Search"
   height="10"
+  role="img"
   viewBox="-0.7 -0.7 18 18"
   width="12"
   xmlns="http://www.w3.org/2000/svg"
@@ -54,11 +58,16 @@ exports[`<SearchIcon /> with some props matches the snapshot 1`] = `
 
 exports[`<SearchIcon /> with some props with no \`title\` matches the snapshot 1`] = `
 <svg
+  aria-label="Search"
   height="10"
+  role="img"
   viewBox="-0.7 -0.7 18 18"
   width="12"
   xmlns="http://www.w3.org/2000/svg"
 >
+  <title>
+    Search
+  </title>
   <circle
     cx="7"
     cy="7"
