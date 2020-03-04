@@ -133,7 +133,7 @@ export const LendopolisHeaderNavStory = ({ isLogged }) => {
                   <Text className="k-u-weight-light k-u-hidden@xs-down">
                     Solde&nbsp;:
                   </Text>{' '}
-                  2&nbsp;000,97&nbsp;€
+                  24&nbsp;093,39&nbsp;€
                 </Text>
               </AvatarWithTextAndBadge.Text>
             </AvatarWithTextAndBadge>
