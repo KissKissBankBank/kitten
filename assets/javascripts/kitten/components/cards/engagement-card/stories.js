@@ -13,12 +13,11 @@ import { PhoneIllustration } from '../../../components/illustrations/phone-illus
 
 const StyledEngagementCard = styled(EngagementCard)`
   display: flex;
-  width: ${pxToRem(100)};
+  width: ${pxToRem(110)};
   height: ${pxToRem(130)};
   margin-right: ${pxToRem(20)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    width: ${pxToRem(110)};
     height: ${pxToRem(150)};
   }
 `
@@ -26,6 +25,7 @@ const StyledEngagementCard = styled(EngagementCard)`
 const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
+  overflow: hidden;
 
   li {
     position: relative;
