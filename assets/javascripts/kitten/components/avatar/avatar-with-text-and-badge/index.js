@@ -14,6 +14,7 @@ const Image = ({
   backgroundColor,
   alt,
   children,
+  text,
 }) => {
   const badgeElement = getReactElementsByType({
     children,
@@ -25,7 +26,6 @@ const Image = ({
   })
 
   const badge = badgeElement && badgeElement[0]
-  const text = textElement && textElement[0]
 
   return (
     <span className="k-ButtonWithBadge">

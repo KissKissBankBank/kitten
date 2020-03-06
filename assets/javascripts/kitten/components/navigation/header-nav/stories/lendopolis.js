@@ -59,6 +59,9 @@ const InnerUserMenu = () => (
   <HeaderMenu noBorder borderSide={false}>
     <HeaderMenu.Item href="#">
       Mon espace personnel <span className="k-Badge">2</span>
+      <div className="k-u-hidden@xs-up--important k-u-margin-top-noneHalf">
+        <Text weight="light">Solde&nbsp;: 24&nbsp;093,39&nbsp;€</Text>
+      </div>
     </HeaderMenu.Item>
     <HeaderMenu.Item href="#">Déconnexion</HeaderMenu.Item>
   </HeaderMenu>
@@ -116,8 +119,7 @@ export const LendopolisHeaderNavStory = ({ isLogged }) => {
         <HeaderNav.UserMenu dropdownContentWidth={pxToRem(userMenuWidth)}>
           <HeaderNav.UserMenu.Button>
             <AvatarWithTextAndBadge>
-              <AvatarWithTextAndBadge.Image backgroundColor="#002e7d">
-                JC
+              <AvatarWithTextAndBadge.Image text="JC" backgroundColor="#002e7d">
                 <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
               </AvatarWithTextAndBadge.Image>
 
