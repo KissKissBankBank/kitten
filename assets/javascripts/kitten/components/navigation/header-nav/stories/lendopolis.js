@@ -58,7 +58,8 @@ const Navigation = () => (
 const InnerUserMenu = () => (
   <HeaderMenu noBorder borderSide={false}>
     <HeaderMenu.Item href="#">
-      Mon espace personnel <span className="k-Badge">2</span>
+      Mon espace personnel
+      <span className="k-Badge k-Badge--spaced">2</span>
       <div className="k-u-hidden@xs-up--important k-u-margin-top-noneHalf">
         <Text weight="light">Solde&nbsp;: 24&nbsp;093,39&nbsp;€</Text>
       </div>
