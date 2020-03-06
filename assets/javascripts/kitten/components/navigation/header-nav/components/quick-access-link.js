@@ -11,9 +11,8 @@ const StyledQuickNav = styled.a`
   align-items: center;
   left: -100%;
   top: 0;
-  bottom: 0;
   z-index: ${({ zIndex }) => zIndex};
-  padding: ${pxToRem(25)} ${pxToRem(30)};
+  padding: 0 ${pxToRem(30)};
   background-color: ${COLORS.background1};
   border-right: ${pxToRem(1)} solid ${COLORS.line1};
   ${TYPOGRAPHY.fontStyles.regular}
@@ -21,7 +20,7 @@ const StyledQuickNav = styled.a`
   line-height: 1;
   font-size: ${pxToRem(16)};
   text-decoration: none;
-  transition: left .2s ease, opacity 0;
+  transition: all .2s ease;
   transition-delay: 0, 0;
   opacity: 0;
 
@@ -29,6 +28,7 @@ const StyledQuickNav = styled.a`
     left: 0;
     opacity: 1;
     transition-delay: 0, .2s;
+    outline: ${pxToRem(5)} auto -webkit-focus-ring-color;
   }
 `
 

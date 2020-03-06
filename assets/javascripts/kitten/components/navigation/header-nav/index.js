@@ -21,15 +21,18 @@ import {
 } from './config'
 
 const Header = styled.header`
-  height: ${MOBILE_HEADER_HEIGHT};
-  background: #fff;
+  &,
+  .quickAccessLink {
+    height: ${MOBILE_HEADER_HEIGHT};
+    background: #fff;
 
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    height: ${TABLET_HEADER_HEIGHT};
-  }
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      height: ${TABLET_HEADER_HEIGHT};
+    }
 
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    height: ${DESKTOP_HEADER_HEIGHT};
+    @media (min-width: ${ScreenConfig.L.min}px) {
+      height: ${DESKTOP_HEADER_HEIGHT};
+    }
   }
 `
 
@@ -48,7 +51,7 @@ const HeaderNav = ({ isLogged, id, children, quickAccessProps, ...props }) => {
   return (
     <Context.Provider value={{ isLogged: isLoggedState, id: idState }}>
       <Header role="banner" id={idState} className="k-HeaderNav">
-        <QuickAccessLink {...quickAccessProps} />
+        <QuickAccessLink className="quickAccessLink" {...quickAccessProps} />
         {children}
       </Header>
     </Context.Provider>
