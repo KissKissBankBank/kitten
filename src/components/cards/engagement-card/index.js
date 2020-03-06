@@ -25,18 +25,18 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var borderStyle = (0, _styledComponents.css)(["box-shadow:0 0 0 ", " ", ",0 0 0 ", " ", ";"], (0, _typography.pxToRem)(3), _colorsConfig.default.background1, (0, _typography.pxToRem)(6), function (_ref) {
+var borderStyle = (0, _styledComponents.css)(["box-shadow:inset 0 0 0 ", " ", ",inset 0 0 0 ", " ", ";"], (0, _typography.pxToRem)(3), function (_ref) {
   var hoverBorder = _ref.hoverBorder;
   return hoverBorder;
-});
+}, (0, _typography.pxToRem)(6), _colorsConfig.default.background1);
 
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "engagement-card__StyledCard",
   componentId: "sc-1unf5bb-0"
-})(["border-radius:", ";position:relative;overflow:hidden;background-repeat:no-repeat;background-color:", ";background-size:contain;padding:", ";", " ", ""], (0, _typography.pxToRem)(15), function (_ref2) {
+})(["box-sizing:border-box;display:flex;flex-direction:column;border-radius:", ";position:relative;overflow:hidden;background-repeat:no-repeat;background-color:", ";background-size:contain;padding:", ";text-decoration:none;box-shadow:inset 0 0 0 ", " ", ";", " ", ""], (0, _typography.pxToRem)(15), function (_ref2) {
   var backgroundColor = _ref2.backgroundColor;
   return backgroundColor;
-}, (0, _typography.pxToRem)(10), function (_ref3) {
+}, (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(6), _colorsConfig.default.background1, function (_ref3) {
   var href = _ref3.href;
   return href && (0, _styledComponents.css)([":hover,:active,:focus{", "}"], borderStyle);
 }, function (_ref4) {
@@ -47,12 +47,12 @@ var StyledCard = _styledComponents.default.div.withConfig({
 var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "engagement-card__StyledText",
   componentId: "sc-1unf5bb-1"
-})(["position:absolute;text-align:center;bottom:5%;right:", ";left:", ";line-height:1.2;"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10));
+})(["text-align:center;right:", ";left:", ";line-height:1.2;"], (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(16));
 
 var StyledIcon = _styledComponents.default.div.withConfig({
   displayName: "engagement-card__StyledIcon",
   componentId: "sc-1unf5bb-2"
-})(["align-self:center;margin:0 auto;"]);
+})(["display:flex;align-self:center;align-items:center;height:100%;"]);
 
 var EngagementCard = function EngagementCard(_ref5) {
   var icon = _ref5.icon,
