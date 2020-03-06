@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `EngagementCard` styles.
+
 ## [2.56.0] - 2020-03-03
 
 Features:

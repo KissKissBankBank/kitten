@@ -22,7 +22,6 @@ const StyledCard = styled.div`
   background-size: contain;
   padding: ${pxToRem(16)};
   text-decoration: none;
-
   box-shadow: inset 0 0 0 ${pxToRem(6)} ${COLORS.background1};
 
   ${({ href }) =>
