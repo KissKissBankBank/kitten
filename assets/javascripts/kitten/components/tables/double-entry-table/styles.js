@@ -10,7 +10,7 @@ export const Styles = styled.div`
 
   .DoubleEntryTable__TableContainer {
     overflow-x: scroll;
-    margin-bottom: 1.875rem;
+    margin-bottom: ${pxToRem(30)};
     border-left: ${pxToRem(2)} solid ${rgba(COLORS.background1, 0.0667)};
     border-right: ${pxToRem(2)} solid ${rgba(COLORS.background1, 0.0667)};
 
