@@ -11,6 +11,7 @@ const borderStyle = css`
 `
 
 const StyledCard = styled.div`
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   border-radius: ${pxToRem(15)};
@@ -19,8 +20,10 @@ const StyledCard = styled.div`
   background-repeat: no-repeat;
   background-color: ${({ backgroundColor }) => backgroundColor};
   background-size: contain;
-  padding: ${pxToRem(10)};
+  padding: ${pxToRem(16)};
   text-decoration: none;
+
+  box-shadow: inset 0 0 0 ${pxToRem(6)} ${COLORS.background1};
 
   ${({ href }) =>
     href &&
@@ -37,9 +40,8 @@ const StyledCard = styled.div`
 
 const StyledText = styled(Text)`
   text-align: center;
-  bottom: 7%;
-  right: ${pxToRem(10)};
-  left: ${pxToRem(10)};
+  right: ${pxToRem(16)};
+  left: ${pxToRem(16)};
   line-height: 1.2;
 `
 
