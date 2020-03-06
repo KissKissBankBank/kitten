@@ -1,6 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { EngagementCard } from './index'
+import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
 
 describe('<EngagementCard />', () => {
   let component
@@ -10,10 +11,11 @@ describe('<EngagementCard />', () => {
       component = renderer
         .create(
           <EngagementCard
-            categorie="Custom categorie"
-            imageSrc="url …"
+            icon={<KissKissBankBankIcon />}
             textColor="font1"
             href="#"
+            title="Hello word"
+            backgroundColor="background1"
           />,
         )
         .toJSON()

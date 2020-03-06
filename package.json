@@ -1,6 +1,6 @@
 {
   "name": "@kisskissbankbank/kitten",
-  "version": "2.55.0",
+  "version": "2.56.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
@@ -9,7 +9,7 @@
     "url": "git+https://github.com/KissKissBankBank/kitten.git"
   },
   "engines": {
-    "node": ">=8.x"
+    "node": ">=12.x"
   },
   "keywords": [
     "sass",
@@ -95,7 +95,7 @@
     "lint-staged": "9.5.0",
     "mini-css-extract-plugin": "0.8.0",
     "mocha": "6.2.2",
-    "node-sass": "4.13.0",
+    "node-sass": "4.13.1",
     "prettier": "1.19.1",
     "react": "16.8.1",
     "react-dom": "16.8.1",

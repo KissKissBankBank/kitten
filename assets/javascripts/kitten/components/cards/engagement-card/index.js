@@ -15,7 +15,6 @@ const StyledCard = styled.div`
   position: relative;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-image: url(${({ imageSrc }) => imageSrc});
   background-color: ${({ backgroundColor }) => backgroundColor};
   background-size: contain;
   padding: ${pxToRem(10)};
@@ -42,8 +41,13 @@ const StyledText = styled(Text)`
   line-height: 1.2;
 `
 
+const StyledIcon = styled.div`
+  align-self: center;
+  margin: 0 auto;
+`
+
 export const EngagementCard = ({
-  imageSrc,
+  icon,
   backgroundColor,
   href,
   children,
@@ -57,11 +61,11 @@ export const EngagementCard = ({
       {...others}
       as={href ? 'a' : 'div'}
       href={href}
-      imageSrc={imageSrc}
       backgroundColor={backgroundColor}
       hoverBorder={hoverBorder}
       isActive={isActive}
     >
+      <StyledIcon>{icon}</StyledIcon>
       <StyledText size="micro" weight="regular" color="font1">
         {children}
       </StyledText>
@@ -70,7 +74,7 @@ export const EngagementCard = ({
 }
 
 EngagementCard.propTypes = {
-  imageSrc: PropTypes.string,
+  icon: PropTypes.element.isRequired,
   href: PropTypes.string,
   backgroundColor: PropTypes.string,
   hoverBorder: PropTypes.string,
@@ -78,7 +82,6 @@ EngagementCard.propTypes = {
 }
 
 EngagementCard.defaultProps = {
-  imageSrc: '',
   href: '',
   backgroundColor: '',
   hoverBorder: '',
