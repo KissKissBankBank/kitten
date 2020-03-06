@@ -6,18 +6,23 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 
 const borderStyle = css`
-  box-shadow: 0 0 0 ${pxToRem(3)} ${COLORS.background1},
-    0 0 0 ${pxToRem(6)} ${({ hoverBorder }) => hoverBorder};
+  box-shadow: inset 0 0 0 ${pxToRem(3)} ${({ hoverBorder }) => hoverBorder},
+    inset 0 0 0 ${pxToRem(6)} ${COLORS.background1};
 `
 
 const StyledCard = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   border-radius: ${pxToRem(15)};
   position: relative;
   overflow: hidden;
   background-repeat: no-repeat;
   background-color: ${({ backgroundColor }) => backgroundColor};
   background-size: contain;
-  padding: ${pxToRem(10)};
+  padding: ${pxToRem(16)};
+  text-decoration: none;
+  box-shadow: inset 0 0 0 ${pxToRem(6)} ${COLORS.background1};
 
   ${({ href }) =>
     href &&
@@ -33,17 +38,17 @@ const StyledCard = styled.div`
 `
 
 const StyledText = styled(Text)`
-  position: absolute;
   text-align: center;
-  bottom: 5%;
-  right: ${pxToRem(10)};
-  left: ${pxToRem(10)};
+  right: ${pxToRem(16)};
+  left: ${pxToRem(16)};
   line-height: 1.2;
 `
 
 const StyledIcon = styled.div`
+  display: flex;
   align-self: center;
-  margin: 0 auto;
+  align-items: center;
+  height: 100%;
 `
 
 export const EngagementCard = ({

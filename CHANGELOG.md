@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `EngagementCard` styles.
 - Feature: Add `margin` utility classes for new steps and half steps.
 
 ## [2.56.0] - 2020-03-03
