@@ -114,10 +114,6 @@ export class CarouselInner extends Component {
     const closest = getClosest(rangePageScrollLeft, scrollLeft)
     const indexClosest = rangePageScrollLeft.indexOf(closest)
 
-    console.log('rangePageScrollLeft >>>', rangePageScrollLeft)
-    console.log('closest >>>', closest)
-    console.log('indexClosest >>>', indexClosest)
-
     if (indexClosest !== indexPageVisible) return goToPage(indexClosest)
     // if the user doesn't scroll enough to change page
     // we need to scroll back to the fake snap page

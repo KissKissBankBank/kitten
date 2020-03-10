@@ -23,14 +23,6 @@ const StyledEngagementCard = styled(EngagementCard)`
 const StyledContainer = styled(Container)`
   margin-top: ${pxToRem(20)};
   box-sizing: border-box;
-
-  [class^='carousel-page']:hover > [class^='carousel-page'] a:hover {
-    opacity: 1;
-  }
-
-  [class^='carousel-page']:hover > [class^='carousel-page'] a {
-    opacity: 0.5;
-  }
 `
 
 const StyledList = styled.ul`
