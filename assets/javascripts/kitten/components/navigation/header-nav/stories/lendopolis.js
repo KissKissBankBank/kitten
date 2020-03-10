@@ -21,7 +21,7 @@ const getComputedLeft = id =>
   domElementHelper.getComputedLeft(getElementById(id))
 
 const InnerBurgerMenu = () => (
-  <HeaderMenu borderSide="right" largeItem noBorder>
+  <HeaderMenu borderSide="right" borderSideOnHover={false} largeItem noBorder>
     <HeaderNav.Hidden min="l">
       <HeaderMenu.Item href="#">Comment investir</HeaderMenu.Item>
       <HeaderMenu.Item href="#">Découvrez les projets</HeaderMenu.Item>

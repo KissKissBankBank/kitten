@@ -16,14 +16,27 @@ const List = styled.ul`
   border-right: ${({ noBorder }) => (noBorder ? 0 : borderStyle)};
 `
 
-export const HeaderMenu = ({ borderSide, largeItem, noBorder, children }) => {
+export const HeaderMenu = ({
+  borderSide,
+  borderSideOnHover,
+  largeItem,
+  noBorder,
+  children,
+}) => {
   const [borderSideState, setBorderSide] = useState(borderSide)
   const [largeItemState, setLargeItem] = useState(largeItem)
   const [noBorderState, setNoBorder] = useState(noBorder)
+  const [borderSideOnHoverState, setBorderSideOnHover] = useState(
+    borderSideOnHover,
+  )
 
   useEffect(() => {
     setBorderSide(borderSide)
   }, [borderSide])
+
+  useEffect(() => {
+    setBorderSideOnHover(borderSideOnHover)
+  }, [borderSideOnHover])
 
   useEffect(() => {
     setLargeItem(largeItem)
@@ -37,6 +50,7 @@ export const HeaderMenu = ({ borderSide, largeItem, noBorder, children }) => {
     <Context.Provider
       value={{
         borderSide: borderSideState,
+        borderSideOnHover: borderSideOnHoverState,
         largeItem: largeItemState,
         noBorder: noBorderState,
       }}
@@ -54,12 +68,14 @@ HeaderMenu.Item = Item
 
 HeaderMenu.propTypes = {
   borderSide: PropTypes.oneOf(['left', 'right', false]),
+  borderSideOnHover: PropTypes.bool,
   largeItem: PropTypes.bool,
   noBorder: PropTypes.bool,
 }
 
 HeaderMenu.defaultProps = {
   borderSide: 'left',
+  borderSideOnHover: true,
   largeItem: false,
   noBorder: false,
 }

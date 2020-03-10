@@ -43,8 +43,12 @@ const StyledItem = styled.a`
 
           :hover,
           :focus {
+            color: ${({ borderSideOnHover }) =>
+              !borderSideOnHover && COLORS.primary1};
+
             &::before {
-              width: ${pxToRem(4)};
+              width: ${({ borderSideOnHover }) =>
+                borderSideOnHover && pxToRem(4)};
               background-color: ${COLORS.primary1};
               transition: width 0.2s;
             }
@@ -132,7 +136,7 @@ const ExternalStyledItem = styled(StyledItem)`
 
 export const Item = ({ children, href, external, liProps, ...other }) => (
   <Context.Consumer>
-    {({ borderSide, largeItem, noBorder }) => (
+    {({ borderSide, borderSideOnHover, largeItem, noBorder }) => (
       <li role="menuitem" {...liProps}>
         {external ? (
           <ExternalStyledItem
@@ -154,6 +158,7 @@ export const Item = ({ children, href, external, liProps, ...other }) => (
           <StyledItem
             href={href}
             borderSide={borderSide}
+            borderSideOnHover={borderSideOnHover}
             external={external}
             largeItem={largeItem}
             noBorder={noBorder}
