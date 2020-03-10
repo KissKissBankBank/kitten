@@ -181,8 +181,10 @@ export class CarouselInner extends Component {
 }
 
 const StyledCarouselInner = styled.div`
+  padding: 0 20px;
+  scroll-padding: 20px;
   display: flex;
-  flex-direct: row;
+  flex-direction: row;
   overflow-x: scroll;
   scroll-behavior: smooth;
   /* hide scrollbar on IE and Edge */

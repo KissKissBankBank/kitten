@@ -10,15 +10,73 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import { Marger } from '../../layout/marger'
 import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
 import { PhoneIllustration } from '../../../components/illustrations/phone-illustration'
+import { Carousel } from '../../../components/carousel/carousel/carousel'
+
+const data = [
+  {
+    bgColor: '#ffebe1',
+    children: 'autoproduction culturelle',
+  },
+  {
+    bgColor: '#8fd9fa',
+    children: 'Autoproduction culturelle',
+  },
+  {
+    bgColor: '#ffebe1',
+    children: 'education',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'bio',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'Made in france',
+  },
+  {
+    bgColor: '#8fd9fa',
+    children: 'zero-dechet',
+  },
+  {
+    bgColor: '#fd8081',
+    children: 'media independant',
+  },
+  {
+    bgColor: '#ffebe1',
+    children: 'maladie-handicap',
+  },
+  {
+    bgColor: '#8fd9fa',
+    children: 'biodiversite',
+  },
+  {
+    bgColor: '#ffebe1',
+    children: 'developpement-local',
+  },
+  {
+    bgColor: '#ffebe1',
+    children: 'solidarite-internationale',
+  },
+]
 
 const StyledEngagementCard = styled(EngagementCard)`
   display: flex;
-  width: ${pxToRem(122)};
-  height: ${pxToRem(142)};
-  margin-right: ${pxToRem(8)};
+  height: ${pxToRem(130)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    height: ${pxToRem(162)};
+    height: ${pxToRem(140)};
+  }
+`
+const StyledContainer = styled(Container)`
+  margin-top: ${pxToRem(20)};
+  box-sizing: border-box;
+
+  [class^='carousel-page']:hover > [class^='carousel-page'] a:hover {
+    opacity: 1;
+  }
+
+  [class^='carousel-page']:hover > [class^='carousel-page'] a {
+    opacity: 0.5;
   }
 `
 
@@ -86,7 +144,7 @@ storiesOf('Cards/EngagementCard', module)
     'default',
     () => {
       return (
-        <Container>
+        <StyledContainer>
           <Marger top="3">
             <StyledList>
               <li>
@@ -124,8 +182,37 @@ storiesOf('Cards/EngagementCard', module)
               </li>
             </StyledList>
           </Marger>
-        </Container>
+        </StyledContainer>
       )
     },
     { info },
   )
+
+storiesOf('Cards/EngagementCardWithCarousel', module)
+  .addDecorator(withKnobs)
+  .addDecorator(withInfo)
+  .add('default', () => {
+    return (
+      <StyledContainer fullWidthBelowScreenSize="S">
+        <Carousel
+          itemMinWidth={110}
+          hidePaginationOnMobile
+          baseItemMarginBetween={20}
+          paginationPosition={{ default: 'right' }}
+        >
+          {data.map(data => {
+            return (
+              <StyledEngagementCard
+                href="#"
+                icon={<PhoneIllustration />}
+                backgroundColor={data.bgColor}
+                hoverBorder={data.bgColor}
+              >
+                {data.children}
+              </StyledEngagementCard>
+            )
+          })}
+        </Carousel>
+      </StyledContainer>
+    )
+  })
