@@ -162,6 +162,7 @@ export class CarouselInner extends Component {
       numPages,
       itemMarginBetween,
       showOtherPages,
+      pagesClassName,
     } = this.props
 
     const rangePage = createRangeFromZeroTo(numPages)
@@ -182,6 +183,7 @@ export class CarouselInner extends Component {
             itemMarginBetween={itemMarginBetween}
             onClick={this.handlePageClick(index)}
             showOtherPages={showOtherPages}
+            className={pagesClassName}
           >
             <CarouselPage
               numColumns={numColumns}

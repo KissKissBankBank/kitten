@@ -86,7 +86,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 iqOkuU"
+      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 iqOkuU custom-class"
       onClick={[Function]}
     >
       <div

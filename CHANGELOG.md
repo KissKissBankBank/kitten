@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `showOtherPages` to `Carousel`.
+- Feature: Add `showOtherPages` and `pagesClassName` to `Carousel`.
 - Fix: Remove `isActive` styles to `EngagementCard`.
 
 ## [2.57.0] - 2020-03-06
