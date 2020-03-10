@@ -174,9 +174,13 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   transition: background-color 0.2s,width 0.2s;
 }
 
+.c2:hover,
+.c2:focus {
+  color: #19b4fa;
+}
+
 .c2:hover::before,
 .c2:focus::before {
-  width: 0.25rem;
   background-color: #19b4fa;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
