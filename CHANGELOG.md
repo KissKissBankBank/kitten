@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `showOtherPages` to `Carousel`.
+
 ## [2.57.0] - 2020-03-06
 
 Feature:
