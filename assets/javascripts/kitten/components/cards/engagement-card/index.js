@@ -15,9 +15,13 @@ const StyledCard = styled.div`
   background-repeat: no-repeat;
   background-color: ${({ backgroundColor }) => backgroundColor};
   background-size: contain;
-  padding: ${pxToRem(10)};
+  padding: ${pxToRem(5)};
   text-decoration: none;
   border-color: ${COLORS.background1};
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    padding: ${pxToRem(10)};
+  }
 `
 
 const StyledText = styled(Text)`
