@@ -13,13 +13,16 @@ import { PhoneIllustration } from '../../../components/illustrations/phone-illus
 
 const StyledEngagementCard = styled(EngagementCard)`
   display: flex;
-  width: ${pxToRem(122)};
-  height: ${pxToRem(142)};
-  margin-right: ${pxToRem(8)};
+  height: ${pxToRem(130)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    height: ${pxToRem(162)};
+    height: ${pxToRem(140)};
   }
+`
+
+const StyledContainer = styled(Container)`
+  margin-top: ${pxToRem(20)};
+  box-sizing: border-box;
 `
 
 const StyledList = styled.ul`
@@ -86,7 +89,7 @@ storiesOf('Cards/EngagementCard', module)
     'default',
     () => {
       return (
-        <Container>
+        <StyledContainer>
           <Marger top="3">
             <StyledList>
               <li>
@@ -124,7 +127,7 @@ storiesOf('Cards/EngagementCard', module)
               </li>
             </StyledList>
           </Marger>
-        </Container>
+        </StyledContainer>
       )
     },
     { info },

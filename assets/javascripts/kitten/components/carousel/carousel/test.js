@@ -57,6 +57,7 @@ describe('<Carousel />', () => {
         <Carousel
           itemMinWidth={ProjectCardMinWidth}
           baseItemMarginBetween={ProjectCardMarginBetween}
+          pagesClassName="custom-class"
         >
           {data.map((item, index) => (
             <ProjectCard title={item.title} key={index} />

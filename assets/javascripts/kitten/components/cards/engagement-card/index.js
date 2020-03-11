@@ -5,11 +5,6 @@ import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 
-const borderStyle = css`
-  box-shadow: inset 0 0 0 ${pxToRem(3)} ${({ hoverBorder }) => hoverBorder},
-    inset 0 0 0 ${pxToRem(6)} ${COLORS.background1};
-`
-
 const StyledCard = styled.div`
   box-sizing: border-box;
   display: flex;
@@ -20,27 +15,15 @@ const StyledCard = styled.div`
   background-repeat: no-repeat;
   background-color: ${({ backgroundColor }) => backgroundColor};
   background-size: contain;
-  padding: ${pxToRem(16)};
+  padding: ${pxToRem(10)};
   text-decoration: none;
-  box-shadow: inset 0 0 0 ${pxToRem(6)} ${COLORS.background1};
-
-  ${({ href }) =>
-    href &&
-    css`
-      :hover,
-      :active,
-      :focus {
-        ${borderStyle}
-      }
-    `}
-
-  ${({ isActive }) => isActive && borderStyle}
+  border-color: ${COLORS.background1};
 `
 
 const StyledText = styled(Text)`
   text-align: center;
-  right: ${pxToRem(16)};
-  left: ${pxToRem(16)};
+  right: ${pxToRem(10)};
+  left: ${pxToRem(10)};
   line-height: 1.2;
 `
 
