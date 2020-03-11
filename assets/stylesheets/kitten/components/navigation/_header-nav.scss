@@ -148,6 +148,10 @@
     }
   }
 
+  .k-HeaderNav__UserMenuButton--nopadding {
+    padding: 0;
+  }
+
   .k-HeaderNav-nav__list {
     list-style-type: none;
     display: flex;

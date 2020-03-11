@@ -79,6 +79,19 @@ const InnerUserMenu = () => (
   </HeaderMenu>
 )
 
+const InnerAnonymousMenu = () => (
+  <HeaderMenu
+    noBorder
+    borderSide={false}
+    backgroundColors={{
+      hover: COLORS.background1,
+    }}
+  >
+    <HeaderMenu.Item href="#">Se connecter</HeaderMenu.Item>
+    <HeaderMenu.Item href="#">S'inscrire</HeaderMenu.Item>
+  </HeaderMenu>
+)
+
 export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const [userMenuWidth, setUserMenuWidth] = useState(null)
@@ -129,38 +142,43 @@ export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
       </HeaderNav.Hidden>
 
       <HeaderNav.Right>
-        <HeaderNav.UserMenu dropdownContentWidth={pxToRem(userMenuWidth)}>
-          <HeaderNav.UserMenu.Button>
-            <AvatarWithTextAndBadge>
-              <AvatarWithTextAndBadge.Image text="JC" backgroundColor="#002e7d">
-                <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
-              </AvatarWithTextAndBadge.Image>
+        <HeaderNav.Logged>
+          <HeaderNav.UserMenu dropdownContentWidth={pxToRem(userMenuWidth)}>
+            <HeaderNav.UserMenu.Button>
+              <AvatarWithTextAndBadge>
+                <AvatarWithTextAndBadge.Image
+                  text="JC"
+                  backgroundColor="#002e7d"
+                >
+                  <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
+                </AvatarWithTextAndBadge.Image>
 
-              <AvatarWithTextAndBadge.Text
-                textClassName="k-u-hidden@xxs-down"
-                withEllipsisOverflow={true}
-              >
-                <Text lineHeight="normal" weight="regular">
-                  Jean Charles Édouard
-                </Text>
-                <br />
-                <Text weight="light">
-                  <Text className="k-u-weight-light k-u-hidden@xs-down">
-                    Solde&nbsp;:
-                  </Text>{' '}
-                  24&nbsp;093,39&nbsp;€
-                </Text>
-              </AvatarWithTextAndBadge.Text>
-            </AvatarWithTextAndBadge>
-          </HeaderNav.UserMenu.Button>
+                <AvatarWithTextAndBadge.Text
+                  textClassName="k-u-hidden@xxs-down"
+                  withEllipsisOverflow={true}
+                >
+                  <Text lineHeight="normal" weight="regular">
+                    Jean Charles Édouard
+                  </Text>
+                  <br />
+                  <Text weight="light">
+                    <Text className="k-u-weight-light k-u-hidden@xs-down">
+                      Solde&nbsp;:
+                    </Text>{' '}
+                    24&nbsp;093,39&nbsp;€
+                  </Text>
+                </AvatarWithTextAndBadge.Text>
+              </AvatarWithTextAndBadge>
+            </HeaderNav.UserMenu.Button>
 
-          <HeaderNav.UserMenu.Navigation>
-            <InnerUserMenu />
-          </HeaderNav.UserMenu.Navigation>
-        </HeaderNav.UserMenu>
+            <HeaderNav.UserMenu.Navigation>
+              <InnerUserMenu />
+            </HeaderNav.UserMenu.Navigation>
+          </HeaderNav.UserMenu>
+        </HeaderNav.Logged>
 
         <HeaderNav.Unlogged>
-          <HeaderNav.Hidden max="xs">
+          <HeaderNav.Hidden max="xxs">
             <HeaderNav.Button
               backgroundColor={COLORS.background3}
               backgroundColorHover={COLORS.line1}
@@ -168,36 +186,35 @@ export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
               text="Se connecter"
               href="#"
             />
-          </HeaderNav.Hidden>
-
-          <HeaderNav.Hidden min="xs">
             <HeaderNav.Button
-              icon={<LoginIcon />}
               backgroundColor={COLORS.primary1}
               backgroundColorHover={COLORS.primary2}
               color={COLORS.background1}
-              as="span"
+              text="S'inscrire"
+              href="#"
             />
           </HeaderNav.Hidden>
 
-          <HeaderNav.Button
-            icon={
-              <HeaderNav.Hidden min="s">
-                <SearchIcon
-                  width="14"
-                  height="14"
+          <HeaderNav.Hidden min="xs">
+            <HeaderNav.UserMenu
+              dropdownContentWidth={pxToRem(userMenuWidth)}
+              padding={false}
+            >
+              <HeaderNav.UserMenu.Button>
+                <HeaderNav.Button
+                  icon={<LoginIcon />}
+                  backgroundColor={COLORS.primary1}
+                  backgroundColorHover={COLORS.primary2}
                   color={COLORS.background1}
-                  title="Aller sur la page de recherche"
+                  as="span"
                 />
-              </HeaderNav.Hidden>
-            }
-            backgroundColor={COLORS.primary1}
-            backgroundColorHover={COLORS.primary2}
-            color={COLORS.background1}
-            text="S'inscrire"
-            href="#"
-            hiddenText={{ max: 'xs' }}
-          />
+              </HeaderNav.UserMenu.Button>
+
+              <HeaderNav.UserMenu.Navigation>
+                <InnerAnonymousMenu />
+              </HeaderNav.UserMenu.Navigation>
+            </HeaderNav.UserMenu>
+          </HeaderNav.Hidden>
         </HeaderNav.Unlogged>
       </HeaderNav.Right>
     </HeaderNav>

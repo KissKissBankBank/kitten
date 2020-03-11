@@ -130,28 +130,30 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
           hiddenText={{ max: 'm' }}
         />
 
-        <HeaderNav.UserMenu dropdownContentWidth={pxToRem(userMenuWidth)}>
-          <HeaderNav.UserMenu.Button>
-            <AvatarWithTextAndBadge>
-              <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
-                <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
-              </AvatarWithTextAndBadge.Image>
+        <HeaderNav.Logged>
+          <HeaderNav.UserMenu dropdownContentWidth={pxToRem(userMenuWidth)}>
+            <HeaderNav.UserMenu.Button>
+              <AvatarWithTextAndBadge>
+                <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
+                  <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
+                </AvatarWithTextAndBadge.Image>
 
-              <AvatarWithTextAndBadge.Text
-                textClassName="k-u-hidden@xxs-down"
-                withEllipsisOverflow={true}
-              >
-                <Text lineHeight="normal" weight="regular">
-                  Jean Charles Édouard
-                </Text>
-              </AvatarWithTextAndBadge.Text>
-            </AvatarWithTextAndBadge>
-          </HeaderNav.UserMenu.Button>
+                <AvatarWithTextAndBadge.Text
+                  textClassName="k-u-hidden@xxs-down"
+                  withEllipsisOverflow={true}
+                >
+                  <Text lineHeight="normal" weight="regular">
+                    Jean Charles Édouard
+                  </Text>
+                </AvatarWithTextAndBadge.Text>
+              </AvatarWithTextAndBadge>
+            </HeaderNav.UserMenu.Button>
 
-          <HeaderNav.UserMenu.Navigation>
-            <InnerUserMenu />
-          </HeaderNav.UserMenu.Navigation>
-        </HeaderNav.UserMenu>
+            <HeaderNav.UserMenu.Navigation>
+              <InnerUserMenu />
+            </HeaderNav.UserMenu.Navigation>
+          </HeaderNav.UserMenu>
+        </HeaderNav.Logged>
 
         <HeaderNav.Unlogged>
           <HeaderNav.Button

@@ -12,6 +12,7 @@ import { Context } from './components/context'
 import { Right } from './components/right'
 import { Centered } from './components/centered'
 import { Unlogged } from './components/unlogged'
+import { Logged } from './components/logged'
 import { Hidden } from './components/hidden'
 import { QuickAccessLink } from './components/quick-access-link'
 import {
@@ -130,6 +131,7 @@ HeaderNav.UserMenu = UserMenu
 HeaderNav.Right = Right
 HeaderNav.Centered = Centered
 HeaderNav.Unlogged = Unlogged
+HeaderNav.Logged = Logged
 HeaderNav.Hidden = Hidden
 
 HeaderNav.propTypes = {

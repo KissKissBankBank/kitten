@@ -10,6 +10,7 @@ import { Text } from '../../../../components/typography/text'
 import { AvatarWithTextAndBadge } from '../../../../components/avatar/avatar-with-text-and-badge'
 import domElementHelper from '../../../../helpers/dom/element-helper'
 import { pxToRem } from '../../../../helpers/utils/typography'
+import { parseHtml } from '../../../../helpers/utils/parser'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 
@@ -29,19 +30,23 @@ export const MinimalistHeaderNavStory = ({ text, subText, isFixed }) => (
 
     <HeaderNav.Centered display="column">
       <HeaderNav.Hidden max="s">
-        <Text
-          style={{ margin: 0 }}
-          tag="h1"
-          size="tiny"
-          weight="bold"
-          transform="uppercase"
-          lineHeight="normal"
-        >
-          {text}
-        </Text>
-        <Text weight="light" size="tiny" lineHeight="normal">
-          {subText}
-        </Text>
+        {text && (
+          <Text
+            style={{ margin: 0 }}
+            tag="h1"
+            size="tiny"
+            weight="bold"
+            transform="uppercase"
+            lineHeight="normal"
+          >
+            {parseHtml(text)}
+          </Text>
+        )}
+        {subText && (
+          <Text weight="light" size="tiny" lineHeight="normal">
+            {parseHtml(subText)}
+          </Text>
+        )}
       </HeaderNav.Hidden>
     </HeaderNav.Centered>
 
