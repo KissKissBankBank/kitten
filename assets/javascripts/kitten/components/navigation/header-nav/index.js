@@ -39,6 +39,7 @@ const Container = styled.div`
 const Header = styled.header`
   width: 100vw;
   overflow: hidden;
+  box-sizing: border-box;
 
   &,
   .quickAccessLink {
