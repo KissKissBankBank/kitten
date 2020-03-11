@@ -282,7 +282,7 @@ Dropdown.propTypes = {
   buttonId: PropTypes.string,
   className: PropTypes.string,
   closeEvents: PropTypes.array,
-  closeOnOuterClick: PropTypes.boolean,
+  closeOnOuterClick: PropTypes.bool,
   contentHorizontalPosition: PropTypes.object,
   dropdownContentWidth: PropTypes.oneOfType([
     PropTypes.number,
