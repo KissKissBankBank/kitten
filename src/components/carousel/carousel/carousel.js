@@ -162,7 +162,9 @@ function (_Component) {
           children = _this$props2.children,
           baseItemMarginBetween = _this$props2.baseItemMarginBetween,
           viewportIsXSOrLess = _this$props2.viewportIsXSOrLess,
-          viewportIsMOrLess = _this$props2.viewportIsMOrLess;
+          viewportIsMOrLess = _this$props2.viewportIsMOrLess,
+          showOtherPages = _this$props2.showOtherPages,
+          pagesClassName = _this$props2.pagesClassName;
       var _this$state3 = _this.state,
           indexPageVisible = _this$state3.indexPageVisible,
           numColumns = _this$state3.numColumns,
@@ -176,7 +178,9 @@ function (_Component) {
         numPages: numPages,
         itemMarginBetween: itemMarginBetween,
         onResizeInner: _this.onResizeInner,
-        goToPage: _this.goToPage
+        goToPage: _this.goToPage,
+        showOtherPages: showOtherPages,
+        pagesClassName: pagesClassName
       });
     };
 
@@ -253,6 +257,8 @@ function (_Component) {
 
 CarouselBase.defaultProps = {
   hidePaginationOnMobile: false,
+  showOtherPages: false,
+  pagesClassName: null,
   paginationPosition: {
     default: 'right',
     fromM: 'bottom'
@@ -265,6 +271,8 @@ CarouselBase.propTypes = {
   viewportIsMOrLess: _propTypes.default.bool.isRequired,
   viewportIsXSOrLess: _propTypes.default.bool.isRequired,
   hidePaginationOnMobile: _propTypes.default.bool,
+  showOtherPages: _propTypes.default.bool,
+  pagesClassName: _propTypes.default.string,
   paginationPosition: _propTypes.default.shape({
     default: propTypesPositions,
     fromXxs: propTypesPositions,
