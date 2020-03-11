@@ -13,19 +13,22 @@ import { PhoneIllustration } from '../../../components/illustrations/phone-illus
 
 const StyledEngagementCard = styled(EngagementCard)`
   display: flex;
-  width: ${pxToRem(100)};
   height: ${pxToRem(130)};
-  margin-right: ${pxToRem(20)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    width: ${pxToRem(110)};
-    height: ${pxToRem(150)};
+    height: ${pxToRem(140)};
   }
+`
+
+const StyledContainer = styled(Container)`
+  margin-top: ${pxToRem(20)};
+  box-sizing: border-box;
 `
 
 const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
+  overflow: hidden;
 
   li {
     position: relative;
@@ -86,7 +89,7 @@ storiesOf('Cards/EngagementCard', module)
     'default',
     () => {
       return (
-        <Container>
+        <StyledContainer>
           <Marger top="3">
             <StyledList>
               <li>
@@ -124,7 +127,7 @@ storiesOf('Cards/EngagementCard', module)
               </li>
             </StyledList>
           </Marger>
-        </Container>
+        </StyledContainer>
       )
     },
     { info },

@@ -29,6 +29,12 @@ var _resizeObserverPolyfill = _interopRequireDefault(require("resize-observer-po
 
 var _typography = require("../../../../helpers/utils/typography");
 
+var _gridConfig = require("../../../../constants/grid-config");
+
+var _screenConfig = require("../../../../constants/screen-config");
+
+var _elementHelper = require("../../../../helpers/dom/element-helper");
+
 var _range = require("../../../../helpers/utils/range");
 
 var _featureDetection = require("../../../../helpers/utils/feature-detection");
@@ -67,9 +73,9 @@ var getDataForPage = function getDataForPage(data, indexPage, numColumns) {
   return data.slice(startIndex, startIndex + numColumns);
 };
 
-var getRangePageScrollLeft = function getRangePageScrollLeft(targetClientWidth, numPages, itemMarginBetween) {
+var getRangePageScrollLeft = function getRangePageScrollLeft(targetClientWidth, numPages, itemMarginBetween, containerPadding) {
   return (0, _range.createRangeFromZeroTo)(numPages).map(function (numPage) {
-    return numPage * (targetClientWidth + itemMarginBetween);
+    return numPage * (targetClientWidth + itemMarginBetween - containerPadding);
   });
 };
 
@@ -104,6 +110,10 @@ function (_Component) {
       _this.props.onResizeInner(widthInner);
     };
 
+    _this.getElementPadding = function (element) {
+      return parseInt(_elementHelper.domElementHelper.getComputedStyle(element, 'padding-left')) + parseInt(_elementHelper.domElementHelper.getComputedStyle(element, 'padding-right'));
+    };
+
     _this.handleInnerScroll = scrollStop(function (target) {
       if (_this.state.isTouched) return;
       var _this$props = _this.props,
@@ -113,7 +123,7 @@ function (_Component) {
           goToPage = _this$props.goToPage;
       var scrollLeft = target.scrollLeft,
           clientWidth = target.clientWidth;
-      var rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, itemMarginBetween);
+      var rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, itemMarginBetween, _this.getElementPadding(target));
       var closest = getClosest(rangePageScrollLeft, scrollLeft);
       var indexClosest = rangePageScrollLeft.indexOf(closest);
       if (indexClosest !== indexPageVisible) return goToPage(indexClosest); // if the user doesn't scroll enough to change page
@@ -135,7 +145,7 @@ function (_Component) {
       var target = _this.carouselInner.current;
       var scrollLeft = target.scrollLeft,
           clientWidth = target.clientWidth;
-      var rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, itemMarginBetween);
+      var rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, itemMarginBetween, _this.getElementPadding(target));
       var closest = rangePageScrollLeft[indexPageToScroll];
 
       if (closest !== scrollLeft) {
@@ -197,26 +207,30 @@ function (_Component) {
       var _this2 = this;
 
       var _this$props3 = this.props,
-          data = _this$props3.data,
           itemMinWidth = _this$props3.itemMinWidth,
           renderItem = _this$props3.renderItem,
           indexPageVisible = _this$props3.indexPageVisible,
           numColumns = _this$props3.numColumns,
           numPages = _this$props3.numPages,
-          itemMarginBetween = _this$props3.itemMarginBetween;
+          itemMarginBetween = _this$props3.itemMarginBetween,
+          showOtherPages = _this$props3.showOtherPages,
+          pagesClassName = _this$props3.pagesClassName;
       var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
       return _react.default.createElement(StyledCarouselInner, {
         ref: this.carouselInner,
         onScroll: this.handleInnerScroll,
         onTouchStart: this.handleTouchStart,
-        onTouchEnd: this.handleTouchEnd
+        onTouchEnd: this.handleTouchEnd,
+        showOtherPages: showOtherPages
       }, rangePage.map(function (index) {
         return _react.default.createElement(StyledCarouselPageContainer, {
           key: index,
           index: index,
           indexPageVisible: indexPageVisible,
           itemMarginBetween: itemMarginBetween,
-          onClick: _this2.handlePageClick(index)
+          onClick: _this2.handlePageClick(index),
+          showOtherPages: showOtherPages,
+          className: pagesClassName
         }, _react.default.createElement(_carouselPage.CarouselPage, {
           numColumns: numColumns,
           itemMinWidth: itemMinWidth,
@@ -234,17 +248,23 @@ exports.CarouselInner = CarouselInner;
 var StyledCarouselInner = _styledComponents.default.div.withConfig({
   displayName: "carousel-inner__StyledCarouselInner",
   componentId: "wljpd2-0"
-})(["display:flex;flex-direct:row;overflow-x:scroll;scroll-behavior:smooth;-ms-over-flow-style:none;-webkit-overflow-scrolling:touch;scroll-snap-type:", ";min-height:1;&::-webkit-scrollbar{display:none;}"], supportScrollSnap ? 'mandatory' : 'none');
+})(["display:flex;flex-direction:row;overflow-x:scroll;scroll-behavior:smooth;-ms-over-flow-style:none;-webkit-overflow-scrolling:touch;scroll-snap-type:", ";min-height:1;&::-webkit-scrollbar{display:none;}", ""], supportScrollSnap ? 'mandatory' : 'none', function (_ref3) {
+  var showOtherPages = _ref3.showOtherPages;
+  return showOtherPages && (0, _styledComponents.css)(["padding:0 ", ";scroll-padding:", ";@media (min-width:", "){padding:0 ", ";scroll-padding:", ";}"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING));
+});
 
 var StyledCarouselPageContainer = _styledComponents.default.div.withConfig({
   displayName: "carousel-inner__StyledCarouselPageContainer",
   componentId: "wljpd2-1"
-})(["width:100%;flex-shrink:0;scroll-snap-align:", ";}", " ", ""], supportScrollSnap ? 'center' : 'none', function (_ref3) {
-  var index = _ref3.index,
-      indexPageVisible = _ref3.indexPageVisible;
+})(["width:100%;flex-shrink:0;scroll-snap-align:", ";", " ", " ", ""], supportScrollSnap ? 'center' : 'none', function (_ref4) {
+  var showOtherPages = _ref4.showOtherPages;
+  return showOtherPages && (0, _styledComponents.css)(["&:last-child{padding-right:", ";@media (min-width:", "){padding-right:", ";}}"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING));
+}, function (_ref5) {
+  var index = _ref5.index,
+      indexPageVisible = _ref5.indexPageVisible;
   return index !== indexPageVisible && (0, _styledComponents.css)(["cursor:pointer;"]);
-}, function (_ref4) {
-  var index = _ref4.index,
-      itemMarginBetween = _ref4.itemMarginBetween;
+}, function (_ref6) {
+  var index = _ref6.index,
+      itemMarginBetween = _ref6.itemMarginBetween;
   return index && (0, _styledComponents.css)(["margin-left:", ";"], (0, _typography.pxToRem)(itemMarginBetween));
 });

@@ -5,12 +5,10 @@ import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 
-const borderStyle = css`
-  box-shadow: 0 0 0 ${pxToRem(3)} ${COLORS.background1},
-    0 0 0 ${pxToRem(6)} ${({ hoverBorder }) => hoverBorder};
-`
-
 const StyledCard = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   border-radius: ${pxToRem(15)};
   position: relative;
   overflow: hidden;
@@ -18,32 +16,22 @@ const StyledCard = styled.div`
   background-color: ${({ backgroundColor }) => backgroundColor};
   background-size: contain;
   padding: ${pxToRem(10)};
-
-  ${({ href }) =>
-    href &&
-    css`
-      :hover,
-      :active,
-      :focus {
-        ${borderStyle}
-      }
-    `}
-
-  ${({ isActive }) => isActive && borderStyle}
+  text-decoration: none;
+  border-color: ${COLORS.background1};
 `
 
 const StyledText = styled(Text)`
-  position: absolute;
   text-align: center;
-  bottom: 5%;
   right: ${pxToRem(10)};
   left: ${pxToRem(10)};
   line-height: 1.2;
 `
 
 const StyledIcon = styled.div`
+  display: flex;
   align-self: center;
-  margin: 0 auto;
+  align-items: center;
+  height: 100%;
 `
 
 export const EngagementCard = ({
