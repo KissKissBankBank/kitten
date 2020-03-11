@@ -17,9 +17,22 @@ export const UserMenu = ({ children, dropdownContentWidth, ...props }) => {
     type: UserMenu.Navigation,
   })[0]
 
+  const buttonClassName = (expandBy, id) => {
+    const isOpen = new RegExp(expandBy).test(id)
+
+    return [
+      'k-HeaderNav__UserMenuButton',
+      isOpen
+        ? 'k-u-background-color-background1'
+        : 'k-u-background-color-background3',
+    ]
+      .filter(v => !!v)
+      .join(' ')
+  }
+
   return (
     <Context.Consumer>
-      {({ isLogged, id, callOnToggle }) =>
+      {({ isLogged, id, callOnToggle, expandBy }) =>
         isLogged ? (
           <Dropdown
             ref={userDropdownRef}
@@ -29,7 +42,7 @@ export const UserMenu = ({ children, dropdownContentWidth, ...props }) => {
             positionedHorizontallyWith={getElementById(getButtonId(id))}
             buttonId={getButtonId(id)}
             button={button}
-            buttonClassName="k-HeaderNav__UserMenuButton"
+            buttonClassName={buttonClassName(expandBy, getButtonId(id))}
             dropdownContent={navigation}
             dropdownContentWidth={dropdownContentWidth}
             closeEvents={[CLOSE_EVENT]}

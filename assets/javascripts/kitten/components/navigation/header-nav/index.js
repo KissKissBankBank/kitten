@@ -44,8 +44,8 @@ const Header = styled.header`
   &,
   .quickAccessLink {
     height: ${MOBILE_HEADER_HEIGHT};
-    background: ${({ isMenuExpanded }) =>
-      isMenuExpanded ? COLORS.background3 : COLORS.background1};
+    background: ${({ updateBackground }) =>
+      updateBackground ? COLORS.background3 : COLORS.background1};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       height: ${TABLET_HEADER_HEIGHT};
@@ -69,6 +69,7 @@ const HeaderNav = ({
   const [isLoggedState, setIsLogged] = useState(isLogged)
   const [idState, setId] = useState(id)
   const [isMenuExpanded, setMenuExpanded] = useState(false)
+  const [menuExpandBy, setMenuExpandBy] = useState(null)
   const stickyContainerRef = useRef(null)
 
   useEffect(() => {
@@ -79,11 +80,13 @@ const HeaderNav = ({
     setId(idState)
   }, [id])
 
-  const callOnToggle = ({ isExpanded }) => {
-    if (!isExpanded) {
-      stickyContainerRef.current.setSticky()
-    }
+  const updateHeaderBackground = () => /UserMenu/.test(menuExpandBy)
+
+  const callOnToggle = ({ isExpanded, expandBy }) => {
+    if (!isExpanded) stickyContainerRef.current.setSticky()
+
     setMenuExpanded(isExpanded)
+    setMenuExpandBy(expandBy)
   }
 
   return (
@@ -91,6 +94,7 @@ const HeaderNav = ({
       value={{
         isLogged: isLoggedState,
         id: idState,
+        expandBy: menuExpandBy,
         callOnToggle,
       }}
     >
@@ -100,7 +104,12 @@ const HeaderNav = ({
           isSticky={isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp'}
           isMenuExpanded={isMenuExpanded}
         >
-          <Header role="banner" id={idState} className="k-HeaderNav">
+          <Header
+            role="banner"
+            id={idState}
+            className="k-HeaderNav"
+            updateBackground={updateHeaderBackground()}
+          >
             <QuickAccessLink
               className="quickAccessLink"
               {...quickAccessProps}

@@ -56,7 +56,13 @@ const Navigation = () => (
 )
 
 const InnerUserMenu = () => (
-  <HeaderMenu noBorder borderSide={false}>
+  <HeaderMenu
+    noBorder
+    borderSide={false}
+    backgroundColors={{
+      hover: COLORS.background1,
+    }}
+  >
     <HeaderMenu.Item href="#">
       Mon espace personnel
       <span className="k-Badge k-Badge--spaced">2</span>
@@ -64,7 +70,12 @@ const InnerUserMenu = () => (
         <Text weight="light">Solde&nbsp;: 24&nbsp;093,39&nbsp;€</Text>
       </div>
     </HeaderMenu.Item>
-    <HeaderMenu.Item href="#">Déconnexion</HeaderMenu.Item>
+    <HeaderMenu.Item
+      className="k-u-background-color-background3--important"
+      href="#"
+    >
+      Déconnexion
+    </HeaderMenu.Item>
   </HeaderMenu>
 )
 

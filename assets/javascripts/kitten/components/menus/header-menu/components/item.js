@@ -58,7 +58,8 @@ const StyledItem = styled.a`
           :hover,
           :focus {
             color: ${COLORS.primary1};
-            background-color: ${COLORS.line1};
+            background-color: ${({ backgroundColors }) =>
+              backgroundColors.hover ? backgroundColors.hover : COLORS.line1};
             transition: color 0.2s, background-color 0.4s;
           }
         `}
@@ -136,7 +137,13 @@ const ExternalStyledItem = styled(StyledItem)`
 
 export const Item = ({ children, href, external, liProps, ...other }) => (
   <Context.Consumer>
-    {({ borderSide, borderSideOnHover, largeItem, noBorder }) => (
+    {({
+      borderSide,
+      borderSideOnHover,
+      largeItem,
+      noBorder,
+      backgroundColors,
+    }) => (
       <li role="menuitem" {...liProps}>
         {external ? (
           <ExternalStyledItem
@@ -162,6 +169,7 @@ export const Item = ({ children, href, external, liProps, ...other }) => (
             external={external}
             largeItem={largeItem}
             noBorder={noBorder}
+            backgroundColors={backgroundColors}
             {...other}
           >
             {children}
@@ -173,17 +181,17 @@ export const Item = ({ children, href, external, liProps, ...other }) => (
 )
 
 Item.propTypes = {
+  external: PropTypes.bool,
   href: PropTypes.string,
   isSelected: PropTypes.bool,
-  modifier: PropTypes.oneOf(['light', 'default']),
-  external: PropTypes.bool,
   liProps: PropTypes.object,
+  modifier: PropTypes.oneOf(['light', 'default']),
 }
 
 Item.defaultProps = {
+  external: false,
   href: null,
   isSelected: false,
-  modifier: 'default',
-  external: false,
   liProps: {},
+  modifier: 'default',
 }

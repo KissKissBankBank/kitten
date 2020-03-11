@@ -17,12 +17,16 @@ const List = styled.ul`
 `
 
 export const HeaderMenu = ({
+  backgroundColors,
   borderSide,
   borderSideOnHover,
   largeItem,
   noBorder,
   children,
 }) => {
+  const [backgroundColorsState, setBackgroundColors] = useState(
+    backgroundColors,
+  )
   const [borderSideState, setBorderSide] = useState(borderSide)
   const [largeItemState, setLargeItem] = useState(largeItem)
   const [noBorderState, setNoBorder] = useState(noBorder)
@@ -46,9 +50,14 @@ export const HeaderMenu = ({
     setNoBorder(noBorder)
   }, [noBorder])
 
+  useEffect(() => {
+    setNoBorder(noBorder)
+  }, [noBorder])
+
   return (
     <Context.Provider
       value={{
+        backgroundColors: backgroundColorsState,
         borderSide: borderSideState,
         borderSideOnHover: borderSideOnHoverState,
         largeItem: largeItemState,
@@ -67,6 +76,7 @@ export const HeaderMenu = ({
 HeaderMenu.Item = Item
 
 HeaderMenu.propTypes = {
+  backgroundColors: PropTypes.object,
   borderSide: PropTypes.oneOf(['left', 'right', false]),
   borderSideOnHover: PropTypes.bool,
   largeItem: PropTypes.bool,
@@ -74,6 +84,7 @@ HeaderMenu.propTypes = {
 }
 
 HeaderMenu.defaultProps = {
+  backgroundColors: {},
   borderSide: 'left',
   borderSideOnHover: true,
   largeItem: false,

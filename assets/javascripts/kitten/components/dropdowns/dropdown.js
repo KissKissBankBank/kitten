@@ -125,7 +125,10 @@ export const Dropdown = React.forwardRef(
       }
 
       setIsExpanded(nextExpandedState)
-      onToggle({ isExpanded: nextExpandedState })
+      onToggle({
+        isExpanded: nextExpandedState,
+        expandBy: nextExpandedState ? buttonId : null,
+      })
     }
 
     const isSelfReference = () =>

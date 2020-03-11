@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, boolean, number, text } from '@storybook/addon-knobs'
 import { LendopolisHeaderNavStory } from './stories/lendopolis'
