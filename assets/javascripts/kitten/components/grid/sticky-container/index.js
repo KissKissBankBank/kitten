@@ -1,5 +1,4 @@
 import React, {
-  Fragment,
   useRef,
   useState,
   useEffect,
@@ -192,7 +191,7 @@ const StickyContainerBase = (
   }
 
   return (
-    <Fragment>
+    <>
       {(stuck || isSticky === 'always') && (
         <StyledSpacer containerHeight={containerHeight} />
       )}
@@ -204,7 +203,7 @@ const StickyContainerBase = (
       >
         {children}
       </StyledStickyContainer>
-    </Fragment>
+    </>
   )
 }
 

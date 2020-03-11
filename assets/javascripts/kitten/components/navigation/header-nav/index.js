@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -19,12 +19,32 @@ import {
   TABLET_HEADER_HEIGHT,
   DESKTOP_HEADER_HEIGHT,
 } from './config'
+import { StickyContainer } from '../../../components/grid/sticky-container'
+import COLORS from '../../../constants/colors-config'
+
+const StyledStickyContainer = styled(StickyContainer)`
+  ${({ isMenuExpanded }) =>
+    isMenuExpanded &&
+    css`
+      transition: none;
+    `}
+`
+
+const Container = styled.div`
+  position: relative;
+  z-index: ${({ isMenuExpanded, zIndex }) =>
+    isMenuExpanded ? zIndex.headerWithOpenMenu : zIndex.header};
+`
 
 const Header = styled.header`
+  width: 100vw;
+  overflow: hidden;
+
   &,
   .quickAccessLink {
     height: ${MOBILE_HEADER_HEIGHT};
-    background: #fff;
+    background: ${({ isMenuExpanded }) =>
+      isMenuExpanded ? COLORS.background3 : COLORS.background1};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       height: ${TABLET_HEADER_HEIGHT};
@@ -36,9 +56,19 @@ const Header = styled.header`
   }
 `
 
-const HeaderNav = ({ isLogged, id, children, quickAccessProps, ...props }) => {
+const HeaderNav = ({
+  children,
+  id,
+  isFixed,
+  isLogged,
+  quickAccessProps,
+  zIndexConfig,
+  ...props
+}) => {
   const [isLoggedState, setIsLogged] = useState(isLogged)
   const [idState, setId] = useState(id)
+  const [isMenuExpanded, setMenuExpanded] = useState(false)
+  const stickyContainerRef = useRef(null)
 
   useEffect(() => {
     setIsLogged(isLogged)
@@ -48,12 +78,36 @@ const HeaderNav = ({ isLogged, id, children, quickAccessProps, ...props }) => {
     setId(idState)
   }, [id])
 
+  const callOnToggle = ({ isExpanded }) => {
+    if (!isExpanded) {
+      stickyContainerRef.current.setSticky()
+    }
+    setMenuExpanded(isExpanded)
+  }
+
   return (
-    <Context.Provider value={{ isLogged: isLoggedState, id: idState }}>
-      <Header role="banner" id={idState} className="k-HeaderNav">
-        <QuickAccessLink className="quickAccessLink" {...quickAccessProps} />
-        {children}
-      </Header>
+    <Context.Provider
+      value={{
+        isLogged: isLoggedState,
+        id: idState,
+        callOnToggle,
+      }}
+    >
+      <Container zIndex={zIndexConfig}>
+        <StyledStickyContainer
+          ref={stickyContainerRef}
+          isSticky={isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp'}
+          isMenuExpanded={isMenuExpanded}
+        >
+          <Header role="banner" id={idState} className="k-HeaderNav">
+            <QuickAccessLink
+              className="quickAccessLink"
+              {...quickAccessProps}
+            />
+            {children}
+          </Header>
+        </StyledStickyContainer>
+      </Container>
     </Context.Provider>
   )
 }
@@ -70,10 +124,28 @@ HeaderNav.Hidden = Hidden
 
 HeaderNav.propTypes = {
   id: PropTypes.string,
+  isFixed: PropTypes.bool,
+  isLogged: PropTypes.bool,
+  quickAccessProps: PropTypes.shape({
+    href: PropTypes.string,
+    text: PropTypes.string,
+    zIndex: PropTypes.number,
+  }),
+  zIndexConfig: PropTypes.shape({
+    header: PropTypes.number,
+    headerWithOpenMenu: PropTypes.number,
+  }),
 }
 
 HeaderNav.defaultProps = {
   id: 'kkbbAndCoHeaderNav',
+  isFixed: false,
+  isLogged: false,
+  quickAccessProps: {},
+  zIndexConfig: {
+    header: 1,
+    headerWithOpenMenu: 3,
+  },
 }
 
 export default HeaderNav

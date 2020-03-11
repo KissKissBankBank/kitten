@@ -68,7 +68,7 @@ const InnerUserMenu = () => (
   </HeaderMenu>
 )
 
-export const LendopolisHeaderNavStory = ({ isLogged }) => {
+export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const [userMenuWidth, setUserMenuWidth] = useState(null)
 
@@ -90,9 +90,10 @@ export const LendopolisHeaderNavStory = ({ isLogged }) => {
     <HeaderNav
       id={HEADER_NAV_ID}
       isLogged={isLogged}
+      isFixed={isFixed}
       quickAccessProps={{
-        href: '#mainContent',
-        text: 'Aller au contenu principal',
+        href: '#view',
+        text: 'Aller au contenu',
         zIndex: 300,
       }}
     >

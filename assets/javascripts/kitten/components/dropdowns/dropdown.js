@@ -18,6 +18,7 @@ export const Dropdown = React.forwardRef(
       buttonId,
       className,
       closeEvents,
+      closeOnOuterClick,
       contentHorizontalPosition,
       dropdownContent,
       dropdownContentWidth,
@@ -98,6 +99,22 @@ export const Dropdown = React.forwardRef(
       }
     }, [isExpanded])
 
+    useEffect(() => {
+      if (!closeOnOuterClick || !isExpandedState) return
+
+      const handleBodyClick = event => {
+        if (!event.target.matches(`.${className.replace(/\s+/g, '.')} *`)) {
+          toggle(false)
+        }
+      }
+
+      document.body.addEventListener('click', handleBodyClick)
+
+      return () => {
+        document.body.removeEventListener('click', handleBodyClick)
+      }
+    }, [closeOnOuterClick, isExpandedState])
+
     const closeDropdown = () => {
       setIsExpanded(false)
     }
@@ -107,8 +124,8 @@ export const Dropdown = React.forwardRef(
         emitter.emit('dropdown:opening:trigger')
       }
 
-      onToggle()
       setIsExpanded(nextExpandedState)
+      onToggle({ isExpanded: nextExpandedState })
     }
 
     const isSelfReference = () =>
@@ -262,6 +279,7 @@ Dropdown.propTypes = {
   buttonId: PropTypes.string,
   className: PropTypes.string,
   closeEvents: PropTypes.array,
+  closeOnOuterClick: PropTypes.boolean,
   contentHorizontalPosition: PropTypes.object,
   dropdownContentWidth: PropTypes.oneOfType([
     PropTypes.number,
@@ -306,6 +324,9 @@ Dropdown.defaultProps = {
 
   // List of events that will trigger the closure.
   closeEvents: [],
+
+  // If set to true, close dropdown on outer click.
+  closeOnOuterClick: false,
 
   // Called when one of the `refreshEvents` is triggered.
   onPositionUpdate: function() {},

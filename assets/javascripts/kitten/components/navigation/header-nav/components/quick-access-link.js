@@ -47,5 +47,5 @@ QuickAccessLink.propTypes = {
 QuickAccessLink.defaultProps = {
   text: 'Aller au contenu',
   href: '#main',
-  zIndex: 1,
+  zIndex: 2,
 }

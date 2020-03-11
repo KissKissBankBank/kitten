@@ -63,7 +63,7 @@ const Navigation = () => (
   </>
 )
 
-export const KissKissBankBankHeaderNavStory = ({ isLogged }) => {
+export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const [userMenuWidth, setUserMenuWidth] = useState(null)
 
@@ -85,6 +85,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged }) => {
     <HeaderNav
       id={HEADER_NAV_ID}
       isLogged={isLogged}
+      isFixed={isFixed}
       quickAccessProps={{
         href: '#mainContent',
         text: 'Aller au contenu principal',

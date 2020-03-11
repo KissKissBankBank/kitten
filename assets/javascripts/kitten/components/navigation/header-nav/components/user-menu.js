@@ -11,7 +11,6 @@ export const UserMenu = ({ children, dropdownContentWidth, ...props }) => {
   const userDropdownRef = useRef(null)
   const getElementById = id => () => document.getElementById(id)
   const getButtonId = id => `${id}UserMenu`
-
   const button = getReactElementsByType({ children, type: UserMenu.Button })[0]
   const navigation = getReactElementsByType({
     children,
@@ -20,7 +19,7 @@ export const UserMenu = ({ children, dropdownContentWidth, ...props }) => {
 
   return (
     <Context.Consumer>
-      {({ isLogged, id }) =>
+      {({ isLogged, id, callOnToggle }) =>
         isLogged ? (
           <Dropdown
             ref={userDropdownRef}
@@ -36,6 +35,8 @@ export const UserMenu = ({ children, dropdownContentWidth, ...props }) => {
             closeEvents={[CLOSE_EVENT]}
             isExpanded={false}
             refreshEvents={['resize']}
+            onToggle={callOnToggle}
+            closeOnOuterClick={true}
             {...props}
           />
         ) : null

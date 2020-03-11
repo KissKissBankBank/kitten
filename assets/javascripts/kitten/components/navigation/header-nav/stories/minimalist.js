@@ -13,9 +13,10 @@ import { pxToRem } from '../../../../helpers/utils/typography'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 
-export const MinimalistHeaderNavStory = ({ text, subText }) => (
+export const MinimalistHeaderNavStory = ({ text, subText, isFixed }) => (
   <HeaderNav
     id={HEADER_NAV_ID}
+    isFixed={isFixed}
     quickAccessProps={{
       href: '#mainContent',
       text: 'Aller au contenu principal',
@@ -32,7 +33,7 @@ export const MinimalistHeaderNavStory = ({ text, subText }) => (
           style={{ margin: 0 }}
           tag="h1"
           size="tiny"
-          weight="regular"
+          weight="bold"
           transform="uppercase"
           lineHeight="normal"
         >
@@ -65,7 +66,7 @@ export const MinimalistHeaderNavStory = ({ text, subText }) => (
           backgroundColor={COLORS.primary1}
           backgroundColorHover={COLORS.primary2}
           color={COLORS.background1}
-          text="Se connecter / S'inscrire"
+          text="Sauvegarder"
           href="#"
           hiddenText={{ max: 'xs' }}
         />

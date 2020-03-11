@@ -28,7 +28,7 @@ export const BurgerMenu = ({ children, dropdownContentWidth, ...props }) => {
 
   return (
     <Context.Consumer>
-      {({ id }) => (
+      {({ id, callOnToggle }) => (
         <Dropdown
           ref={dropdownComponent}
           className={DROPDOWN_CLASS}
@@ -43,6 +43,8 @@ export const BurgerMenu = ({ children, dropdownContentWidth, ...props }) => {
           closeEvents={[CLOSE_EVENT]}
           isExpanded={false}
           refreshEvents={['resize']}
+          onToggle={callOnToggle}
+          closeOnOuterClick={true}
           {...props}
         />
       )}
