@@ -6,6 +6,12 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Context } from './context'
 import { ArrowIcon } from '../../../icons/arrow-icon'
+import { Button } from '../../../../components/buttons/button/button'
+
+const ButtonContainer = styled.div`
+  padding: ${pxToRem(20)};
+  background-color: ${COLORS.background1};
+`
 
 const StyledItem = styled.a`
   display: block;
@@ -135,7 +141,15 @@ const ExternalStyledItem = styled(StyledItem)`
   }
 `
 
-export const Item = ({ children, href, external, liProps, ...other }) => (
+export const Item = ({
+  children,
+  href,
+  external,
+  liProps,
+  modifier,
+  button,
+  ...other
+}) => (
   <Context.Consumer>
     {({
       borderSide,
@@ -145,7 +159,7 @@ export const Item = ({ children, href, external, liProps, ...other }) => (
       backgroundColors,
     }) => (
       <li role="menuitem" {...liProps}>
-        {external ? (
+        {external && (
           <ExternalStyledItem
             href={href}
             borderSide={borderSide}
@@ -161,7 +175,17 @@ export const Item = ({ children, href, external, liProps, ...other }) => (
               direction="right"
             />
           </ExternalStyledItem>
-        ) : (
+        )}
+
+        {button && (
+          <ButtonContainer>
+            <Button as="a" href={href} modifier={modifier} fluid {...other}>
+              {children}
+            </Button>
+          </ButtonContainer>
+        )}
+
+        {!(external || button) && (
           <StyledItem
             href={href}
             borderSide={borderSide}
@@ -182,6 +206,8 @@ export const Item = ({ children, href, external, liProps, ...other }) => (
 
 Item.propTypes = {
   external: PropTypes.bool,
+  button: PropTypes.bool,
+  modifier: PropTypes.string,
   href: PropTypes.string,
   isSelected: PropTypes.bool,
   liProps: PropTypes.object,
@@ -190,6 +216,8 @@ Item.propTypes = {
 
 Item.defaultProps = {
   external: false,
+  button: false,
+  modifier: null,
   href: null,
   isSelected: false,
   liProps: {},

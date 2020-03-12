@@ -30,6 +30,9 @@ const InnerBurgerMenu = () => (
       Vos questions
     </HeaderMenu.Item>
     <HeaderMenu.Item href="#">Blog</HeaderMenu.Item>
+    <HeaderMenu.Item button modifier="helium" href="#">
+      Mon projet en cours
+    </HeaderMenu.Item>
     <HeaderMenu.Item external href="#">
       <LendopolisLogo primaryColor="#000" />
     </HeaderMenu.Item>
@@ -103,7 +106,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
         zIndex: 300,
       }}
     >
-      <HeaderNav.BurgerMenu dropdownContentWidth={pxToRem(burgerMenuWidth)}>
+      <HeaderNav.BurgerMenu>
         <InnerBurgerMenu />
       </HeaderNav.BurgerMenu>
 

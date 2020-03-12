@@ -29,6 +29,10 @@ const StyledStickyContainer = styled(StickyContainer)`
     css`
       transition: none;
     `}
+
+  .k-Spacer + & {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
 `
 
 const Container = styled.div`

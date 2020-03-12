@@ -193,7 +193,7 @@ const StickyContainerBase = (
   return (
     <>
       {(stuck || isSticky === 'always') && (
-        <StyledSpacer containerHeight={containerHeight} />
+        <StyledSpacer className="k-Spacer" containerHeight={containerHeight} />
       )}
       <StyledStickyContainer
         ref={currentStickyContainer}
