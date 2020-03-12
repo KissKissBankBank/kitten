@@ -145,13 +145,12 @@
     }
 
     .is-expanded & {
-
       &, &:hover {
         background-color: map-get($k-colors, 'background-1');
-      }
 
-      .k-Badge {
-        border-color: map-get($k-colors, 'background-1');
+        .k-Badge {
+          border-color: map-get($k-colors, 'background-1');
+        }
       }
     }
 
