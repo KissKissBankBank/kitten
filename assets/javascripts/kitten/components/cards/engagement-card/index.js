@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledCard = styled.div`
   box-sizing: border-box;
@@ -15,9 +16,13 @@ const StyledCard = styled.div`
   background-repeat: no-repeat;
   background-color: ${({ backgroundColor }) => backgroundColor};
   background-size: contain;
-  padding: ${pxToRem(10)};
+  padding: ${pxToRem(5)};
   text-decoration: none;
   border-color: ${COLORS.background1};
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    padding: ${pxToRem(10)};
+  }
 `
 
 const StyledText = styled(Text)`
