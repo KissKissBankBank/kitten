@@ -25,7 +25,6 @@ const InnerBurgerMenu = () => (
     <HeaderNav.Hidden min="l">
       <HeaderMenu.Item href="#">Comment investir</HeaderMenu.Item>
       <HeaderMenu.Item href="#">Découvrez les projets</HeaderMenu.Item>
-      <HeaderMenu.Item href="#">Blog</HeaderMenu.Item>
     </HeaderNav.Hidden>
 
     <HeaderMenu.Item href="#">Comment emprunter</HeaderMenu.Item>
@@ -51,7 +50,6 @@ const Navigation = () => (
     <HeaderNav.Nav.Item href="#" className="is-selected">
       Découvrez les projets
     </HeaderNav.Nav.Item>
-    <HeaderNav.Nav.Item href="#">Blog</HeaderNav.Nav.Item>
   </>
 )
 
