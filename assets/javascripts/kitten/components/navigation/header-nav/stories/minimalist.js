@@ -51,16 +51,6 @@ export const MinimalistHeaderNavStory = ({ text, subText, isFixed }) => (
     </HeaderNav.Centered>
 
     <HeaderNav.Right>
-      <HeaderNav.Button
-        icon={<SearchIcon />}
-        backgroundColor={COLORS.background3}
-        backgroundColorHover={COLORS.line1}
-        color={COLORS.font1}
-        text="Rechercher"
-        href="#"
-        hiddenText={{ max: 'm' }}
-      />
-
       <HeaderNav.Unlogged>
         <HeaderNav.Button
           icon={

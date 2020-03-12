@@ -112,7 +112,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
 
       <HeaderNav.Logo href="#">
         <HeaderNav.Hidden min="xs">
-          <KissKissBankBankLogo tiny width="40" height="40" />
+          <KissKissBankBankLogo height="25" />
         </HeaderNav.Hidden>
 
         <HeaderNav.Hidden max="xxs">
