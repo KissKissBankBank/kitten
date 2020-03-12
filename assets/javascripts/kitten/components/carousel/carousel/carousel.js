@@ -454,4 +454,5 @@ const PageDot = styled.div`
 export const Carousel = withMediaQueries({
   viewportIsXSOrLess: true,
   viewportIsMOrLess: true,
+  exposedMethods: ['goToPage'],
 })(CarouselBase)
