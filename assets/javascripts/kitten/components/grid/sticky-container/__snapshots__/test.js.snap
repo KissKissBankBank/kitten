@@ -3,7 +3,7 @@
 exports[`<StickyContainer /> already sticky matches with snapshot 1`] = `
 Array [
   <div
-    className="sticky-container__StyledSpacer-trwgvt-1 ctlyRa"
+    className="sticky-container__StyledSpacer-trwgvt-1 ctlyRa k-Spacer"
   />,
   <div
     className="sticky-container__StyledStickyContainer-trwgvt-0 ehxgAs"

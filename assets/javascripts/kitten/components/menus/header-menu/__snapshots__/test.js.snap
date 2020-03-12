@@ -456,43 +456,6 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   transition: width 0.2s;
 }
 
-.c2 {
-  display: block;
-  position: relative;
-  padding: 1.125rem 1.875rem 1.0625rem;
-  background-color: #fff;
-  border-bottom: 0.0625rem solid #eee;
-  outline: none;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  color: #222;
-  line-height: 1;
-  font-size: 0.875rem;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  color: #b8b8b8;
-}
-
-.c2::before {
-  content: '';
-  position: absolute;
-  top: -0.0625rem;
-  left: -0.0625rem;
-  bottom: 0;
-  width: 0;
-  background-color: transparent;
-  -webkit-transition: background-color 0.2s,width 0.2s;
-  transition: background-color 0.2s,width 0.2s;
-}
-
-.c2:hover::before,
-.c2:focus::before {
-  width: 0.25rem;
-  background-color: #19b4fa;
-  -webkit-transition: width 0.2s;
-  transition: width 0.2s;
-}
-
 .c0 {
   margin: 0;
   padding: 0;
@@ -522,7 +485,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
       role="menuitem"
     >
       <a
-        className="c2"
+        className="c1"
         href="#"
       >
         Item 2
