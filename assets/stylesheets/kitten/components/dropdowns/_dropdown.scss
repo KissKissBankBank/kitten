@@ -67,24 +67,27 @@
     top: 0;
     z-index: 20;
     min-width: k-px-to-rem(200px);
-    margin-top: -10px;
+    margin-top: k-px-to-rem(-10px);
+    visibility: hidden;
+    opacity: 0;
+    transition: margin .2s, visibility .2s, opacity .2s;
+    // Height is needed to allow scroll on navigation. The 100% is equal to the
+    // header height.
+    height: calc(100vh - 100%);
 
     @include k-media-xs {
       min-width: 0;
       width: 100% !important;
       left: 0 !important;
       right: 0 !important;
-      overflow: hidden;
     }
-
-    visibility: hidden;
-    opacity: 0;
-    transition: margin .2s, visibility .2s, opacity .2s;
 
     .k-Dropdown.is-expanded & {
       margin-top: 0;
       visibility: visible;
       opacity: 1;
+      overflow-x: hidden;
+      overflow-y: scroll;
     }
   }
 
