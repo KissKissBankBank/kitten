@@ -73,7 +73,7 @@
     transition: margin .2s, visibility .2s, opacity .2s;
     // Height is needed to allow scroll on navigation. The 100% is equal to the
     // header height.
-    height: calc(100vh - 100%);
+    max-height: calc(100vh - 100%);
 
     @include k-media-xs {
       min-width: 0;
