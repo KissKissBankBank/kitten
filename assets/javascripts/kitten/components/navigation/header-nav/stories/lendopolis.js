@@ -65,7 +65,7 @@ const InnerUserMenu = () => (
   >
     <HeaderMenu.Item href="#">
       Mon espace personnel
-      <span className="k-Badge k-Badge--spaced">2</span>
+      <span className="k-Badge k-Badge--spaced k-Badge--no-border">2</span>
       <div className="k-u-hidden@xs-up--important k-u-margin-top-noneHalf">
         <Text weight="light">Solde&nbsp;: 24&nbsp;093,39&nbsp;€</Text>
       </div>
