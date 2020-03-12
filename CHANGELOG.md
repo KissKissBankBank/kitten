@@ -4,13 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [2.59.0] - 2020-03-13
-
-Feature:
-- Expose `goToPage` method in `Carousel`.
-
-Fix:
-- Update padding mobile version on EngagementCard.
+- Fix: Update padding mobile version on EngagementCard.
+- Feature: Expose `goToPage` method in `Carousel`.
 
 ## [2.58.0] - 2020-03-11
 
