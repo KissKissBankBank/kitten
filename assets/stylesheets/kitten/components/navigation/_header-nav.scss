@@ -54,13 +54,13 @@
     @include k-media-min('s') {
       padding-left: k-px-to-rem(20px);
     }
-  }
 
-  .k-HeaderNav * {
-    @include k-typographyFont($font);
+    & * {
+      @include k-typographyFont($font);
 
-    &:focus {
-      outline: none;
+      &:focus {
+        outline: none;
+      }
     }
   }
 
@@ -138,6 +138,22 @@
     padding: 0 $padding-x;
     border: 0;
     @include k-typographyFontSize($font-step, $line-height);
+    background-color: map-get($k-colors, 'background-3');
+
+    .k-Badge {
+      border-color: map-get($k-colors, 'background-3');
+    }
+
+    .is-expanded & {
+
+      &, &:hover {
+        background-color: map-get($k-colors, 'background-1');
+      }
+
+      .k-Badge {
+        border-color: map-get($k-colors, 'background-1');
+      }
+    }
 
     @include k-media-max('xxs') {
       padding: 0 k-px-to-rem(15px);
@@ -145,6 +161,15 @@
 
     &:hover {
       cursor: pointer;
+      background-color: map-get($k-colors, 'line-1');
+
+      .k-Badge {
+        border-color: map-get($k-colors, 'line-1');
+      }
+
+      .k-ButtonImageWithText__text {
+        color: map-get($k-colors, 'font-1');
+      }
     }
   }
 

@@ -43,14 +43,25 @@ const InnerBurgerMenu = () => (
 )
 
 const InnerUserMenu = () => (
-  <HeaderMenu noBorder>
+  <HeaderMenu
+    noBorder
+    borderSide={false}
+    backgroundColors={{
+      hover: COLORS.background1,
+    }}
+  >
     <HeaderMenu.Item href="#">Mon espace personnel</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Mes projets</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Mes contributions</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Mes messages</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Modifier mon profil</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Mon projet en cours</HeaderMenu.Item>
-    <HeaderMenu.Item href="#">Déconnexion</HeaderMenu.Item>
+    <HeaderMenu.Item
+      href="#"
+      className="k-u-background-color-background3--important"
+    >
+      Déconnexion
+    </HeaderMenu.Item>
   </HeaderMenu>
 )
 

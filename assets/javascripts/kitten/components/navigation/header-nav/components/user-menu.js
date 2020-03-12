@@ -23,24 +23,17 @@ export const UserMenu = ({
     type: UserMenu.Navigation,
   })[0]
 
-  const buttonClassName = (expandBy, id) => {
-    const isOpen = new RegExp(expandBy).test(id)
-
-    return [
-      'k-HeaderNav__UserMenuButton',
-      padding ? '' : 'k-HeaderNav__UserMenuButton--nopadding',
-      isOpen
-        ? 'k-u-background-color-background1'
-        : 'k-u-background-color-background3',
-      ...(props.className || '').split(' '),
-    ]
-      .filter(v => !!v)
-      .join(' ')
-  }
+  const buttonClassName = [
+    'k-HeaderNav__UserMenuButton',
+    padding ? '' : 'k-HeaderNav__UserMenuButton--nopadding',
+    ...(props.className || '').split(' '),
+  ]
+    .filter(v => !!v)
+    .join(' ')
 
   return (
     <Context.Consumer>
-      {({ id, callOnToggle, expandBy }) => (
+      {({ id, callOnToggle }) => (
         <Dropdown
           ref={userDropdownRef}
           className={DROPDOWN_CLASS}
@@ -49,7 +42,7 @@ export const UserMenu = ({
           positionedHorizontallyWith={getElementById(getButtonId(id))}
           buttonId={getButtonId(id)}
           button={button}
-          buttonClassName={buttonClassName(expandBy, getButtonId(id))}
+          buttonClassName={buttonClassName}
           dropdownContent={navigation}
           dropdownContentWidth={dropdownContentWidth}
           closeEvents={[CLOSE_EVENT]}
