@@ -2,15 +2,15 @@
 
 exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 eaVPuD"
+  className="adaptable-grid__StyledGrid-txsbu0-0 bVkKoh"
 >
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 iweQMd"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 eAsauo"
   >
     Test
   </div>
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 iUkZox"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 ewFUaP"
   >
     Test
   </div>
@@ -19,15 +19,15 @@ exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with className matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 eaVPuD my_classname"
+  className="adaptable-grid__StyledGrid-txsbu0-0 bVkKoh my_classname"
 >
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 WhXQT my_second_classname"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 kpypux my_second_classname"
   >
     Test
   </div>
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 WhXQT my_third_classname"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 kpypux my_third_classname"
   >
     Test
   </div>
@@ -36,15 +36,15 @@ exports[`<AdaptableGrid /> with className matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with custom HTML tags matches with snapshot 1`] = `
 <dl
-  className="adaptable-grid__StyledGrid-txsbu0-0 eaVPuD"
+  className="adaptable-grid__StyledGrid-txsbu0-0 bVkKoh"
 >
   <dd
-    className="adaptable-grid__StyledGridCol-txsbu0-1 iweQMd"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 eAsauo"
   >
     Test
   </dd>
   <dt
-    className="adaptable-grid__StyledGridCol-txsbu0-1 iUkZox"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 ewFUaP"
   >
     Test
   </dt>
@@ -53,16 +53,16 @@ exports[`<AdaptableGrid /> with custom HTML tags matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 cHmwhM"
+  className="adaptable-grid__StyledGrid-txsbu0-0 gnoTuV"
 >
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 iQyJqa"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 humRof"
     offset={3}
   >
     Test
   </div>
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 WhXQT"
+    className="adaptable-grid__StyledGridCol-txsbu0-1 kpypux"
   >
     Test
   </div>

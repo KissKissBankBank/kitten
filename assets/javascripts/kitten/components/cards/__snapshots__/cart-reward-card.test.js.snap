@@ -58,10 +58,10 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 jHHwGV"
+      className="marger__StyledMarger-q3lecu-0 jbYTkS"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 jgfcQX"
+        className="marger__StyledMarger-q3lecu-0 cPjjMS"
       >
         <h1
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -71,7 +71,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </div>
       
       <div
-        className="marger__StyledMarger-q3lecu-0 jyDYur"
+        className="marger__StyledMarger-q3lecu-0 hNjDrl"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -150,10 +150,10 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       </button>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 jHHwGV"
+      className="marger__StyledMarger-q3lecu-0 jbYTkS"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 jgfcQX"
+        className="marger__StyledMarger-q3lecu-0 cPjjMS"
       >
         <h1
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -163,7 +163,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       </div>
       
       <div
-        className="marger__StyledMarger-q3lecu-0 jyDYur"
+        className="marger__StyledMarger-q3lecu-0 hNjDrl"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -242,10 +242,10 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 jHHwGV"
+      className="marger__StyledMarger-q3lecu-0 jbYTkS"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 jgfcQX"
+        className="marger__StyledMarger-q3lecu-0 cPjjMS"
       >
         <Custom title tag
           className="k-Title k-Title--quinary k-Title--withoutMargin k-Title--italic"
@@ -254,7 +254,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </Custom title tag>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 evHeqt"
+        className="marger__StyledMarger-q3lecu-0 jizFlm"
       >
         <span
           className="k-u-size-default k-u-weight-bold"
@@ -263,7 +263,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 jyDYur"
+        className="marger__StyledMarger-q3lecu-0 hNjDrl"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -285,7 +285,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="marger__StyledMarger-q3lecu-0 cOWOpW"
+        className="marger__StyledMarger-q3lecu-0 kPywua"
       >
         <a
           className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"

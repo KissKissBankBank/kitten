@@ -2,7 +2,7 @@
 
 exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 dZktpm"
+  className="text-input__StyledInput-sc-11wej6v-1 iikjLD"
   disabled={false}
   name="text"
 />
@@ -10,7 +10,7 @@ exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+  className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
   disabled={true}
   name="text"
 />
@@ -18,7 +18,7 @@ exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 kfptEQ"
+  className="text-input__StyledInput-sc-11wej6v-1 qldNZ"
   disabled={false}
   name="text"
 />
@@ -26,7 +26,7 @@ exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+  className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
   disabled={false}
   name="foobar"
 />
@@ -34,7 +34,7 @@ exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+  className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
   disabled={false}
   name="text"
 />
@@ -42,7 +42,7 @@ exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`tiny\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 iXzQrK"
+  className="text-input__StyledInput-sc-11wej6v-1 bXbHeB"
   disabled={false}
   name="text"
 />
@@ -50,7 +50,7 @@ exports[`<TextInput /> with \`tiny\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`valid\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 bfvwuD"
+  className="text-input__StyledInput-sc-11wej6v-1 LSiDR"
   disabled={false}
   name="text"
 />

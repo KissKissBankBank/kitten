@@ -2,17 +2,17 @@
 
 exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 <div
-  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 chCKLd"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ"
+    className="text-input__StyledInput-sc-11wej6v-1 ilMIhk text-input-with-limit__FocusTextInput-ufrmmb-0 bILKXf"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="text-input-with-limit__StyledCounter-ufrmmb-2 jBWfBa"
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 dIACjQ"
     disabled={false}
   >
     80
@@ -22,17 +22,17 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 chCKLd"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ"
+    className="text-input__StyledInput-sc-11wej6v-1 ilMIhk text-input-with-limit__FocusTextInput-ufrmmb-0 bILKXf"
     defaultValue=""
     disabled={true}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="text-input-with-limit__StyledCounter-ufrmmb-2 kCeqRf"
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 dpgsPp"
     disabled={true}
   >
     80
@@ -42,17 +42,17 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
 
 exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 chCKLd"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 kfptEQ text-input-with-limit__FocusTextInput-ufrmmb-0 fzFwMa"
+    className="text-input__StyledInput-sc-11wej6v-1 qldNZ text-input-with-limit__FocusTextInput-ufrmmb-0 leevUC"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="text-input-with-limit__StyledCounter-ufrmmb-2 jBWfBa"
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 dIACjQ"
     disabled={false}
   >
     80
@@ -62,17 +62,17 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 OpERo"
+  className="text-input-with-limit__StyledTextInputWithLimit-ufrmmb-1 chCKLd"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iXzQrK text-input-with-limit__FocusTextInput-ufrmmb-0 cjHeAQ"
+    className="text-input__StyledInput-sc-11wej6v-1 bXbHeB text-input-with-limit__FocusTextInput-ufrmmb-0 bILKXf"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="text-input-with-limit__StyledCounter-ufrmmb-2 jBWfBa"
+    className="text-input-with-limit__StyledCounter-ufrmmb-2 dIACjQ"
     disabled={false}
   >
     80

@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="reward-card__CardContainer-sc-1vkpp2h-2 gPtcIU"
+  className="reward-card__CardContainer-sc-1vkpp2h-2 kUUUyS"
 >
   <div
     style={
@@ -36,7 +36,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 MGUQ"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 jfbyZN"
       />
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -50,7 +50,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 <div
-  className="reward-card__CardContainer-sc-1vkpp2h-2 gPtcIU"
+  className="reward-card__CardContainer-sc-1vkpp2h-2 kUUUyS"
 >
   <div
     style={
@@ -71,18 +71,18 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
       }
     >
       <div
-        className="diamond-badge__StyledBase-ixajco-0 hcTLkI"
+        className="diamond-badge__StyledBase-ixajco-0 jgIPrK"
       >
         <span
-          className="icon-badge__StyledBadge-sc-13mitia-0 guEFSS"
+          className="icon-badge__StyledBadge-sc-13mitia-0 lbqteo"
           disabled={false}
         >
           <span
-            className="icon-badge__StyledContent-sc-13mitia-1 klBhcy"
+            className="icon-badge__StyledContent-sc-13mitia-1 dAjyuZ"
           >
             <svg
               aria-hidden={true}
-              className="diamond-badge__StyledDiamondIcon-ixajco-2 khKPvt k-IconBadge__svg"
+              className="diamond-badge__StyledDiamondIcon-ixajco-2 Bdjbr k-IconBadge__svg"
               height="28"
               viewBox="0 0 19 28"
               width="19"
@@ -97,7 +97,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
           </span>
         </span>
         <div
-          className="diamond-badge__StyledContent-ixajco-1 bAYOmL"
+          className="diamond-badge__StyledContent-ixajco-1 cNpCTC"
         >
           <span
             className="k-u-color-font1 k-u-size-nano k-u-weight-bold"
@@ -125,7 +125,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 MGUQ"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 jfbyZN"
       />
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -139,7 +139,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="reward-card__CardContainer-sc-1vkpp2h-2 gPtcIU"
+  className="reward-card__CardContainer-sc-1vkpp2h-2 kUUUyS"
 >
   <div
     style={
@@ -160,18 +160,18 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       }
     >
       <div
-        className="starred-badge__StyledBase-sc-1bjkj6l-0 eZZnrI"
+        className="starred-badge__StyledBase-sc-1bjkj6l-0 knddDo"
       >
         <span
-          className="icon-badge__StyledBadge-sc-13mitia-0 guEFSS"
+          className="icon-badge__StyledBadge-sc-13mitia-0 lbqteo"
           disabled={false}
         >
           <span
-            className="icon-badge__StyledContent-sc-13mitia-1 klBhcy"
+            className="icon-badge__StyledContent-sc-13mitia-1 dAjyuZ"
           >
             <svg
               aria-hidden={true}
-              className="starred-badge__StyledStarIcon-sc-1bjkj6l-2 enLUaF k-IconBadge__svg"
+              className="starred-badge__StyledStarIcon-sc-1bjkj6l-2 jxlUBk k-IconBadge__svg"
               height="16"
               viewBox="0 0 18 16"
               width="18"
@@ -187,7 +187,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           </span>
         </span>
         <div
-          className="starred-badge__StyledContent-sc-1bjkj6l-1 kLOlqc"
+          className="starred-badge__StyledContent-sc-1bjkj6l-1 gTWbBE"
         >
           <span
             className="k-u-color-font1 k-u-size-nano k-u-weight-bold"
@@ -215,7 +215,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         100$
       </h6>
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 MGUQ"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 jfbyZN"
       />
       <p
         className="k-u-color-font1 k-u-weight-bold"
@@ -228,11 +228,11 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
       </p>
       <ul
-        className="list__StyledList-sc-1ns0hml-0 ehUmXC"
+        className="list__StyledList-sc-1ns0hml-0 iOAPpw"
       >
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 fnFYs"
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 zKcGP"
             disabled={false}
           >
             Contributors: 
@@ -245,7 +245,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 fnFYs"
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 zKcGP"
             disabled={false}
           >
             Availability: 
@@ -258,7 +258,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 JxXhL"
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular reward-card__Infos-sc-1vkpp2h-0 bFulfT"
             disabled={false}
           >
             Delivery: 
@@ -286,7 +286,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     >
       <img
         alt="My reward"
-        className="reward-card__RewardImage-sc-1vkpp2h-1 cjPbTJ"
+        className="reward-card__RewardImage-sc-1vkpp2h-1 dzMefp"
         disabled={false}
         src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
       />
@@ -303,7 +303,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     }
   >
     <span
-      className="icon-badge__StyledBadge-sc-13mitia-0 iysqhm"
+      className="icon-badge__StyledBadge-sc-13mitia-0 jgxDpH"
       disabled={false}
       style={
         Object {
@@ -312,7 +312,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       }
     >
       <span
-        className="icon-badge__StyledContent-sc-13mitia-1 iTNHVn"
+        className="icon-badge__StyledContent-sc-13mitia-1 fBEOZb"
       >
         <svg
           className="k-IconBadge__svg"
@@ -375,7 +375,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
   withoutBorder={false}
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 dhVuZS"
+    className="marger__StyledMarger-q3lecu-0 ePlHZd"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -397,7 +397,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 bNPfXK"
+            className="marger__StyledMarger-q3lecu-0 ZIphl"
           >
             <h1
               className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
@@ -411,14 +411,14 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="marger__StyledMarger-q3lecu-0 XMXms"
           >
             <span
-              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN"
             />
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 eQydFv"
+            className="marger__StyledMarger-q3lecu-0 gZgiJP"
           >
             <p
               className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
@@ -432,7 +432,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 WSKaG"
+            className="marger__StyledMarger-q3lecu-0 jKlRCh"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -452,7 +452,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="marger__StyledMarger-q3lecu-0 XMXms"
           >
             <span
               className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
@@ -505,7 +505,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="marger__StyledMarger-q3lecu-0 gNBLBo"
+          className="marger__StyledMarger-q3lecu-0 fmda-DP"
         >
           <button
             aria-labelledby="Custom text button"
@@ -531,7 +531,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             Custom text button
           </button>
           <div
-            className="marger__StyledMarger-q3lecu-0 cOWOpW"
+            className="marger__StyledMarger-q3lecu-0 kPywua"
           >
             <div
               data-radium={true}
@@ -543,7 +543,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
               }
             >
               <span
-                className="icon-badge__StyledBadge-sc-13mitia-0 iysqhm"
+                className="icon-badge__StyledBadge-sc-13mitia-0 jgxDpH"
                 disabled={false}
                 style={
                   Object {
@@ -552,7 +552,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
                 }
               >
                 <span
-                  className="icon-badge__StyledContent-sc-13mitia-1 iTNHVn"
+                  className="icon-badge__StyledContent-sc-13mitia-1 fBEOZb"
                 >
                   <svg
                     className="k-IconBadge__svg"
@@ -604,7 +604,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
         style={Object {}}
       >
         <div
-          className="marger__StyledMarger-q3lecu-0 jMGtVA"
+          className="marger__StyledMarger-q3lecu-0 iPkgPx"
         >
           <div
             data-radium={true}

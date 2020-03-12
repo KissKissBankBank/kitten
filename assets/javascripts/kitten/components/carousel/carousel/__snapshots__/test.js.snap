@@ -2,23 +2,23 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="carousel__FlexContainer-sc-1o67jdh-0 lesGh"
+  className="carousel__FlexContainer-sc-1o67jdh-0 cYidMx"
 >
   <div
-    className="carousel-inner__StyledCarouselInner-wljpd2-0 jBSEkH"
+    className="carousel-inner__StyledCarouselInner-wljpd2-0 ffDrrB"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 iqOkuU"
+      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 ddDhFH"
       onClick={[Function]}
     >
       <div
-        className="carousel-page__StyledPage-sc-12ynwqa-0 fKfWlh"
+        className="carousel-page__StyledPage-sc-12ynwqa-0 bKxLtX"
       >
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 cTnAZH"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 htAxIJ"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -29,7 +29,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="marger__StyledMarger-q3lecu-0 evHeqt k-ProjectCard__grid--flex"
+                className="marger__StyledMarger-q3lecu-0 jizFlm k-ProjectCard__grid--flex"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -52,7 +52,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="marger__StyledMarger-q3lecu-0 fXmpKT k-ProjectCard__grid--flex"
+                className="marger__StyledMarger-q3lecu-0 dtnuLs k-ProjectCard__grid--flex"
               >
                 <p
                   className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -64,10 +64,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 bdXrGE"
         />
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 bdXrGE"
         />
       </div>
     </div>
@@ -77,23 +77,23 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="carousel__FlexContainer-sc-1o67jdh-0 lesGh"
+  className="carousel__FlexContainer-sc-1o67jdh-0 cYidMx"
 >
   <div
-    className="carousel-inner__StyledCarouselInner-wljpd2-0 jBSEkH"
+    className="carousel-inner__StyledCarouselInner-wljpd2-0 ffDrrB"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 iqOkuU custom-class"
+      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 ddDhFH custom-class"
       onClick={[Function]}
     >
       <div
-        className="carousel-page__StyledPage-sc-12ynwqa-0 fKfWlh"
+        className="carousel-page__StyledPage-sc-12ynwqa-0 bKxLtX"
       >
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 cTnAZH"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 htAxIJ"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -104,7 +104,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="marger__StyledMarger-q3lecu-0 evHeqt k-ProjectCard__grid--flex"
+                className="marger__StyledMarger-q3lecu-0 jizFlm k-ProjectCard__grid--flex"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -127,7 +127,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="marger__StyledMarger-q3lecu-0 fXmpKT k-ProjectCard__grid--flex"
+                className="marger__StyledMarger-q3lecu-0 dtnuLs k-ProjectCard__grid--flex"
               >
                 <p
                   className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
@@ -139,10 +139,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 dGWhDF"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 fXrLHN"
         />
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 dGWhDF"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 fXrLHN"
         />
       </div>
     </div>

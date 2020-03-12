@@ -7,7 +7,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="button__StyledButton-sc-1q5nte0-0 hJdvjM expand-board__StyledButton-sc-5cysn4-0 ibKmMD"
+    className="button__StyledButton-sc-1q5nte0-0 fxcSns expand-board__StyledButton-sc-5cysn4-0 fckQzG"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -15,7 +15,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
     <div>
       Alice
       <svg
-        className="expand-board__StyledArrowIcon-sc-5cysn4-1 kZobdv"
+        className="expand-board__StyledArrowIcon-sc-5cysn4-1 nZGJE"
         data-radium={true}
         fill="#fff"
         height="5.64"
@@ -44,7 +44,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="button__StyledButton-sc-1q5nte0-0 hJdvjM expand-board__StyledButton-sc-5cysn4-0 ibKmMD"
+    className="button__StyledButton-sc-1q5nte0-0 fxcSns expand-board__StyledButton-sc-5cysn4-0 fckQzG"
     disabled={true}
     onClick={[Function]}
     type="button"
@@ -52,7 +52,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
     <div>
       Alice
       <svg
-        className="expand-board__StyledArrowIcon-sc-5cysn4-1 kZobdv"
+        className="expand-board__StyledArrowIcon-sc-5cysn4-1 nZGJE"
         data-radium={true}
         fill="#fff"
         height="5.64"

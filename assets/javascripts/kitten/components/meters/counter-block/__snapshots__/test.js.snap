@@ -2,10 +2,10 @@
 
 exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
 <div
-  className="counter-block__Container-dpxp7s-0 hBIoVh"
+  className="counter-block__Container-dpxp7s-0 iAgYYc"
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 dnQPiu"
+    className="marger__StyledMarger-q3lecu-0 dZaGay"
   >
     <p
       className="k-Title k-Title--tertiary k-Title--withoutMargin"
@@ -14,13 +14,13 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     </p>
   </div>
   <div
-    className="counter-block__FlexContainer-dpxp7s-1 dMNmNG"
+    className="counter-block__FlexContainer-dpxp7s-1 jiRIRa"
   >
     <div
-      className="counter-block__StrokeContainer-dpxp7s-2 dIBsco k-u-hidden@m-down"
+      className="counter-block__StrokeContainer-dpxp7s-2 lhhVum k-u-hidden@m-down"
     >
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj styledStroke"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN styledStroke"
       />
     </div>
     <p
@@ -29,15 +29,15 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       13 106
     </p>
     <div
-      className="counter-block__StrokeContainer-dpxp7s-2 dIBsco k-u-hidden@m-down"
+      className="counter-block__StrokeContainer-dpxp7s-2 lhhVum k-u-hidden@m-down"
     >
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj styledStroke"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN styledStroke"
       />
     </div>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 hDepGR"
+    className="marger__StyledMarger-q3lecu-0 gipxTe"
   >
     <p
       className="k-u-size-huge k-u-style-italic styledSubTitle"

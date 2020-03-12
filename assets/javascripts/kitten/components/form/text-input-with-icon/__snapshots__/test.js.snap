@@ -2,11 +2,11 @@
 
 exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 <div
-  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fEDZEZ"
+  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fBAZZE"
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+    className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
     disabled={false}
     name="text"
     style={
@@ -17,7 +17,7 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 iSmOxb"
+    className="text-input-with-icon__StyledIcon-rvt8kr-1 eTfgiN"
   >
     <svg
       viewBox="-0.7 -0.7 18 18"
@@ -45,11 +45,11 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fEDZEZ"
+  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fBAZZE"
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+    className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
     disabled={true}
     name="text"
     style={
@@ -60,7 +60,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 gtJNGX"
+    className="text-input-with-icon__StyledIcon-rvt8kr-1 gCOqRa"
   >
     <svg
       viewBox="-0.7 -0.7 18 18"
@@ -88,11 +88,11 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 <div
-  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fEDZEZ"
+  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fBAZZE"
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+    className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -104,7 +104,7 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 iSmOxb"
+    className="text-input-with-icon__StyledIcon-rvt8kr-1 eTfgiN"
   >
     <svg
       viewBox="-0.7 -0.7 18 18"

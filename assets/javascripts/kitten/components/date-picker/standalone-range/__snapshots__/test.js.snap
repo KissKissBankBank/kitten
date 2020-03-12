@@ -2,7 +2,7 @@
 
 exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="standalone-range__StyledDatePicker-yne6lo-0 dWVLwI"
+  className="standalone-range__StyledDatePicker-yne6lo-0 ikQeaj"
 >
   <div
     className="DayPicker Selectable"
@@ -14,16 +14,16 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       tabIndex={0}
     >
       <p
-        className="k-u-size-tiny k-u-weight-regular navbar__StyledText-sc-1v9dr3-0 kglrxq"
+        className="k-u-size-tiny k-u-weight-regular navbar__StyledText-sc-1v9dr3-0 cnaYll"
       >
         Sélectionnez la période souhaitée
       </p>
       <div
-        className="navbar__StyledButton-sc-1v9dr3-1 TCbUf DayPicker-NavBar"
+        className="navbar__StyledButton-sc-1v9dr3-1 fKgUBJ DayPicker-NavBar"
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="button__StyledButton-sc-1q5nte0-0 bUHVxt navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv"
+          className="button__StyledButton-sc-1q5nte0-0 fvcbJS navbar__StyledArrowIcon-sc-1v9dr3-2 iIcAqi"
           onClick={[Function]}
         >
           <svg
@@ -47,7 +47,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="button__StyledButton-sc-1q5nte0-0 bUHVxt navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv"
+          className="button__StyledButton-sc-1q5nte0-0 fvcbJS navbar__StyledArrowIcon-sc-1v9dr3-2 iIcAqi"
           onClick={[Function]}
         >
           <svg

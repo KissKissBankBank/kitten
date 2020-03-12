@@ -3,7 +3,7 @@
 exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot 1`] = `
 <div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h1
       className="k-Title k-Title--secondary"
@@ -13,14 +13,14 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="marger__StyledMarger-q3lecu-0 fPeLkM"
   >
     <span
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN"
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h2
       className="k-Title k-Title--quaternary"
@@ -30,7 +30,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     </h2>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h3
       className="k-Title k-Title--quinary"
@@ -40,7 +40,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     </h3>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h1
       className="k-Title k-Title--secondary"
@@ -50,14 +50,14 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="marger__StyledMarger-q3lecu-0 fPeLkM"
   >
     <span
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN"
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 loOPNX"
+    className="marger__StyledMarger-q3lecu-0 jyjgro"
   >
     <p
       className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
@@ -92,7 +92,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     </p>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h1
       className="k-Title k-Title--secondary"
@@ -102,53 +102,53 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="marger__StyledMarger-q3lecu-0 fPeLkM"
   >
     <span
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN"
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="marger__StyledMarger-q3lecu-0 fnnfRJ"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB list__BulletListStyle-sc-1hya2vn-0 djxla-d"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kWeiWM"
+        className="bullet-list__StyledItem-rdyx84-1 iyzgTs"
       >
         Unordered list can use asterisks
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="marger__StyledMarger-q3lecu-0 fnnfRJ"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB list__BulletListStyle-sc-1hya2vn-0 djxla-d"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kWeiWM"
+        className="bullet-list__StyledItem-rdyx84-1 iyzgTs"
       >
         Or minuses
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="marger__StyledMarger-q3lecu-0 fnnfRJ"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB list__BulletListStyle-sc-1hya2vn-0 djxla-d"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kWeiWM"
+        className="bullet-list__StyledItem-rdyx84-1 iyzgTs"
       >
         Or pluses
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h1
       className="k-Title k-Title--secondary"
@@ -158,14 +158,14 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="marger__StyledMarger-q3lecu-0 fPeLkM"
   >
     <span
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN"
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 loOPNX"
+    className="marger__StyledMarger-q3lecu-0 jyjgro"
   >
     <p
       className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
@@ -184,7 +184,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
 <div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h1
       className="k-Title k-Title--secondary"
@@ -194,14 +194,14 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="marger__StyledMarger-q3lecu-0 fPeLkM"
   >
     <span
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN"
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h2
       className="k-Title k-Title--quaternary"
@@ -211,7 +211,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     </h2>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h3
       className="k-Title k-Title--quinary"
@@ -221,7 +221,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     </h3>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h1
       className="k-Title k-Title--secondary"
@@ -231,14 +231,14 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="marger__StyledMarger-q3lecu-0 fPeLkM"
   >
     <span
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN"
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 loOPNX"
+    className="marger__StyledMarger-q3lecu-0 jyjgro"
   >
     <p
       className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -273,7 +273,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     </p>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h1
       className="k-Title k-Title--secondary"
@@ -283,53 +283,53 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="marger__StyledMarger-q3lecu-0 fPeLkM"
   >
     <span
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN"
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="marger__StyledMarger-q3lecu-0 fnnfRJ"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB list__BulletListStyle-sc-1hya2vn-0 djxla-d"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kXnRej"
+        className="bullet-list__StyledItem-rdyx84-1 eYPRdi"
       >
         Unordered list can use asterisks
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="marger__StyledMarger-q3lecu-0 fnnfRJ"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB list__BulletListStyle-sc-1hya2vn-0 djxla-d"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kXnRej"
+        className="bullet-list__StyledItem-rdyx84-1 eYPRdi"
       >
         Or minuses
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="marger__StyledMarger-q3lecu-0 fnnfRJ"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB list__BulletListStyle-sc-1hya2vn-0 djxla-d"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kXnRej"
+        className="bullet-list__StyledItem-rdyx84-1 eYPRdi"
       >
         Or pluses
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="marger__StyledMarger-q3lecu-0 howlXy"
   >
     <h1
       className="k-Title k-Title--secondary"
@@ -339,14 +339,14 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="marger__StyledMarger-q3lecu-0 fPeLkM"
   >
     <span
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN"
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 loOPNX"
+    className="marger__StyledMarger-q3lecu-0 jyjgro"
   >
     <p
       className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"

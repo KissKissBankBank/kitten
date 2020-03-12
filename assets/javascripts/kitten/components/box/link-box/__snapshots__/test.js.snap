@@ -2,17 +2,17 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="link-box__Link-km85a5-0 cRyYyS"
+  className="link-box__Link-km85a5-0 hEpeCP"
   href="#"
 >
   <div
-    className="link-box__Container-km85a5-4 hAydRh"
+    className="link-box__Container-km85a5-4 bUUkIV"
   >
     <div
-      className="marger__StyledMarger-q3lecu-0 jyDYur link-box__ParagraphMarger-km85a5-1 dSDxqj"
+      className="marger__StyledMarger-q3lecu-0 hNjDrl link-box__ParagraphMarger-km85a5-1 ftdiji"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 iyINNV"
+        className="marger__StyledMarger-q3lecu-0 knIeYu"
       >
         <span
           className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -28,7 +28,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       
     </div>
     <div
-      className="link-box__Arrow-km85a5-3 bzCsBT"
+      className="link-box__Arrow-km85a5-3 jvVWvn"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
@@ -50,22 +50,22 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="link-box__Link-km85a5-0 cRyYyS"
+  className="link-box__Link-km85a5-0 hEpeCP"
   href="#foobar"
   rel="noopener"
   target="_blank"
 >
   <div
-    className="link-box__Container-km85a5-4 hAydRh"
+    className="link-box__Container-km85a5-4 bUUkIV"
   >
     <div
-      className="link-box__Icon-km85a5-2 jzhPYJ k-u-hidden@xs-down--important"
+      className="link-box__Icon-km85a5-2 bjOXEX k-u-hidden@xs-down--important"
     />
     <div
-      className="marger__StyledMarger-q3lecu-0 jyDYur link-box__ParagraphMarger-km85a5-1 dSDxqj"
+      className="marger__StyledMarger-q3lecu-0 hNjDrl link-box__ParagraphMarger-km85a5-1 ftdiji"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 cGMcrq"
+        className="marger__StyledMarger-q3lecu-0 hVhcXJ"
       >
         <span
           className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -90,7 +90,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="link-box__Arrow-km85a5-3 bzCsBT"
+      className="link-box__Arrow-km85a5-3 jvVWvn"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
