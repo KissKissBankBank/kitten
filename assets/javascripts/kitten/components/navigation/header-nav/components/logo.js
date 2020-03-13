@@ -1,6 +1,5 @@
 import React from 'react'
 import { Context } from './context'
-import { pxToRem } from '../../../../helpers/utils/typography'
 
 export const Logo = ({ className = '', children, ...props }) => (
   <Context.Consumer>

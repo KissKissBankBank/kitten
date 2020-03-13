@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef } from 'react'
 import { BurgerIcon } from '../../../../components/icons/burger-icon'
 import { Dropdown } from '../../../../components/dropdowns/dropdown'
 import COLORS from '../../../../constants/colors-config'

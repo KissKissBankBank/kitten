@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Text as KittenText } from '../../../components/typography/text'
 import COLORS from '../../../constants/colors-config'
@@ -75,7 +74,7 @@ Image.defaultProps = {
   alt: null,
 }
 
-const Badge = ({ backgroundColor, children, ...props }) => (
+const Badge = ({ backgroundColor, children }) => (
   <span
     className="k-ButtonWithBadge__badge k-Badge"
     style={{ backgroundColor }}

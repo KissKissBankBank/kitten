@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Button } from './components/button'
 import { Logo } from './components/logo'
@@ -69,7 +68,6 @@ const HeaderNav = ({
   isLogged,
   quickAccessProps,
   zIndexConfig,
-  ...props
 }) => {
   const [isLoggedState, setIsLogged] = useState(isLogged)
   const [idState, setId] = useState(id)

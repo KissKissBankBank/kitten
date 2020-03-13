@@ -1,7 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { HorizontalNav } from '../../../../components/navigation/horizontal-nav'
-import { pxToRem } from '../../../../helpers/utils/typography'
 
 const Item = ({ children, href, className, ...others }) => (
   <li className="k-HeaderNav-nav__element" role="menuitem">
