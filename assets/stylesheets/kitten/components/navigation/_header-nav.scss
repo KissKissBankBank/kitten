@@ -134,7 +134,8 @@
   .k-HeaderNav__UserMenuButton {
     box-sizing: border-box;
     display: flex;
-    align-items: center;
+    align-self: center;
+    height: 100%;
     padding: 0 $padding-x;
     border: 0;
     @include k-typographyFontSize($font-step, $line-height);
@@ -152,6 +153,10 @@
           border-color: map-get($k-colors, 'background-1');
         }
       }
+    }
+
+    .k-ButtonImageWithText {
+      align-self: center;
     }
 
     @include k-media-max('xxs') {
