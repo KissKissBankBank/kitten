@@ -20,10 +20,6 @@ const Image = ({
     children,
     type: AvatarWithTextAndBadge.Badge,
   })
-  const textElement = getReactElementsByType({
-    children,
-    type: AvatarWithTextAndBadge.Text,
-  })
 
   const badge = badgeElement && badgeElement[0]
 
