@@ -194,6 +194,7 @@ export const Item = ({
             largeItem={largeItem}
             noBorder={noBorder}
             backgroundColors={backgroundColors}
+            modifier={modifier || 'light'}
             {...other}
           >
             {children}
@@ -207,11 +208,23 @@ export const Item = ({
 Item.propTypes = {
   external: PropTypes.bool,
   button: PropTypes.bool,
-  modifier: PropTypes.string,
   href: PropTypes.string,
   isSelected: PropTypes.bool,
   liProps: PropTypes.object,
-  modifier: PropTypes.oneOf(['light', 'default']),
+  modifier: PropTypes.oneOf([
+    null,
+    undefined,
+    'light',
+    'default',
+    'hydrogen',
+    'helium',
+    'lithium',
+    'beryllium',
+    'carbon',
+    'oxygen',
+    'copper',
+    'checked',
+  ]),
 }
 
 Item.defaultProps = {
@@ -221,5 +234,4 @@ Item.defaultProps = {
   href: null,
   isSelected: false,
   liProps: {},
-  modifier: 'default',
 }
