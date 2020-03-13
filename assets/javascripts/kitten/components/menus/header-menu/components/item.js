@@ -194,7 +194,7 @@ export const Item = ({
             largeItem={largeItem}
             noBorder={noBorder}
             backgroundColors={backgroundColors}
-            modifier={modifier || 'light'}
+            modifier={modifier}
             {...other}
           >
             {children}
