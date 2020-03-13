@@ -51,8 +51,8 @@ export const HeaderMenu = ({
   }, [noBorder])
 
   useEffect(() => {
-    setNoBorder(noBorder)
-  }, [noBorder])
+    setBackgroundColors(backgroundColorsState)
+  }, [backgroundColorsState])
 
   return (
     <Context.Provider
