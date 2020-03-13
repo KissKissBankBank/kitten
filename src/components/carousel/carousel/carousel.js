@@ -363,6 +363,7 @@ var PageDot = _styledComponents.default.div.withConfig({
 
 var Carousel = (0, _mediaQueries.withMediaQueries)({
   viewportIsXSOrLess: true,
-  viewportIsMOrLess: true
+  viewportIsMOrLess: true,
+  exposedMethods: ['goToPage']
 })(CarouselBase);
 exports.Carousel = Carousel;
