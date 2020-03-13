@@ -25,13 +25,15 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
+var _screenConfig = require("../../../constants/screen-config");
+
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "engagement-card__StyledCard",
   componentId: "sc-1unf5bb-0"
-})(["box-sizing:border-box;display:flex;flex-direction:column;border-radius:", ";position:relative;overflow:hidden;background-repeat:no-repeat;background-color:", ";background-size:contain;padding:", ";text-decoration:none;border-color:", ";"], (0, _typography.pxToRem)(15), function (_ref) {
+})(["box-sizing:border-box;display:flex;flex-direction:column;border-radius:", ";position:relative;overflow:hidden;background-repeat:no-repeat;background-color:", ";background-size:contain;padding:", ";text-decoration:none;border-color:", ";@media (min-width:", "){padding:", ";}"], (0, _typography.pxToRem)(15), function (_ref) {
   var backgroundColor = _ref.backgroundColor;
   return backgroundColor;
-}, (0, _typography.pxToRem)(10), _colorsConfig.default.background1);
+}, (0, _typography.pxToRem)(5), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(10));
 
 var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "engagement-card__StyledText",
