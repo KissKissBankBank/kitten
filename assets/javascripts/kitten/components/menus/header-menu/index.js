@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Item } from './components/item'
@@ -23,55 +23,23 @@ export const HeaderMenu = ({
   largeItem,
   noBorder,
   children,
-}) => {
-  const [backgroundColorsState, setBackgroundColors] = useState(
-    backgroundColors,
-  )
-  const [borderSideState, setBorderSide] = useState(borderSide)
-  const [largeItemState, setLargeItem] = useState(largeItem)
-  const [noBorderState, setNoBorder] = useState(noBorder)
-  const [borderSideOnHoverState, setBorderSideOnHover] = useState(
-    borderSideOnHover,
-  )
-
-  useEffect(() => {
-    setBorderSide(borderSide)
-  }, [borderSide])
-
-  useEffect(() => {
-    setBorderSideOnHover(borderSideOnHover)
-  }, [borderSideOnHover])
-
-  useEffect(() => {
-    setLargeItem(largeItem)
-  }, [largeItem])
-
-  useEffect(() => {
-    setNoBorder(noBorder)
-  }, [noBorder])
-
-  useEffect(() => {
-    setBackgroundColors(backgroundColorsState)
-  }, [backgroundColorsState])
-
-  return (
-    <Context.Provider
-      value={{
-        backgroundColors: backgroundColorsState,
-        borderSide: borderSideState,
-        borderSideOnHover: borderSideOnHoverState,
-        largeItem: largeItemState,
-        noBorder: noBorderState,
-      }}
-    >
-      <nav role="navigation">
-        <List noBorder={noBorderState} role="menubar">
-          {children}
-        </List>
-      </nav>
-    </Context.Provider>
-  )
-}
+}) => (
+  <Context.Provider
+    value={{
+      backgroundColors: backgroundColors,
+      borderSide: borderSide,
+      borderSideOnHover: borderSideOnHover,
+      largeItem: largeItem,
+      noBorder: noBorder,
+    }}
+  >
+    <nav role="navigation">
+      <List noBorder={noBorder} role="menubar">
+        {children}
+      </List>
+    </nav>
+  </Context.Provider>
+)
 
 HeaderMenu.Item = Item
 
