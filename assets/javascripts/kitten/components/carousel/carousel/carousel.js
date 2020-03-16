@@ -196,7 +196,6 @@ class CarouselBase extends Component {
       baseItemMarginBetween,
       viewportIsMOrLess,
       viewportIsXSOrLess,
-      hidePaginationOnMobile,
       paginationPosition,
     } = this.props
     const { indexPageVisible, numPages } = this.state
@@ -206,7 +205,6 @@ class CarouselBase extends Component {
       viewportIsMOrLess,
     )
 
-    if (viewportIsXSOrLess && hidePaginationOnMobile) return
     if (numPages <= 1) return
 
     if (viewportIsXSOrLess) {
@@ -260,14 +258,21 @@ class CarouselBase extends Component {
   }
 
   render() {
-    const { paginationPosition, children } = this.props
+    const {
+      paginationPosition,
+      children,
+      viewportIsXSOrLess,
+      hidePaginationOnMobile,
+    } = this.props
 
     if (React.Children.count(children) === 0) return null
 
     return (
       <FlexContainer paginationPosition={paginationPosition}>
         {this.renderCarouselInner()}
-        {this.renderPagination()}
+        {!viewportIsXSOrLess &&
+          hidePaginationOnMobile &&
+          this.renderPagination()}
       </FlexContainer>
     )
   }
