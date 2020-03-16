@@ -27,15 +27,11 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
           onClick={[Function]}
         >
           <svg
-            className=""
-            data-radium={true}
+            className="arrow-icon__SvgArrow-sc-3d3g2f-0 iWClnN"
+            direction="left"
+            disabled={false}
             fill="#222"
             height="8"
-            style={
-              Object {
-                "transform": "rotate(-90deg)",
-              }
-            }
             viewBox="0 0 8.48 5.64"
             width="8"
             xmlns="http://www.w3.org/2000/svg"
@@ -51,15 +47,11 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
           onClick={[Function]}
         >
           <svg
-            className=""
-            data-radium={true}
+            className="arrow-icon__SvgArrow-sc-3d3g2f-0 iNzhvt"
+            direction="right"
+            disabled={false}
             fill="#222"
             height="8"
-            style={
-              Object {
-                "transform": "rotate(90deg)",
-              }
-            }
             viewBox="0 0 8.48 5.64"
             width="8"
             xmlns="http://www.w3.org/2000/svg"

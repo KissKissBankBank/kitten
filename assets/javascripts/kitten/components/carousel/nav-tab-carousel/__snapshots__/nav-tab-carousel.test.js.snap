@@ -8,15 +8,11 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
     className="styled-components__StyledLeftArrowContainer-jws9qo-3 bUljeS"
   >
     <svg
-      className="styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
-      data-radium={true}
+      className="arrow-icon__SvgArrow-sc-3d3g2f-0 iWClnN styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
+      direction="left"
+      disabled={false}
       fill="#fff"
       height="5.64"
-      style={
-        Object {
-          "transform": "rotate(-90deg)",
-        }
-      }
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
@@ -56,15 +52,11 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
       Foobar 2
     </div>
     <svg
-      className="styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
-      data-radium={true}
+      className="arrow-icon__SvgArrow-sc-3d3g2f-0 iNzhvt styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
+      direction="right"
+      disabled={false}
       fill="#fff"
       height="5.64"
-      style={
-        Object {
-          "transform": "rotate(90deg)",
-        }
-      }
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
@@ -85,15 +77,11 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
     className="styled-components__StyledLeftArrowContainer-jws9qo-3 bUljeS"
   >
     <svg
-      className="styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
-      data-radium={true}
+      className="arrow-icon__SvgArrow-sc-3d3g2f-0 iWClnN styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
+      direction="left"
+      disabled={false}
       fill="#fff"
       height="5.64"
-      style={
-        Object {
-          "transform": "rotate(-90deg)",
-        }
-      }
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
@@ -130,15 +118,11 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
       Foobar 2
     </div>
     <svg
-      className="styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
-      data-radium={true}
+      className="arrow-icon__SvgArrow-sc-3d3g2f-0 iNzhvt styled-components__StyledArrowIcon-jws9qo-4 kblVTX"
+      direction="right"
+      disabled={false}
       fill="#fff"
       height="5.64"
-      style={
-        Object {
-          "transform": "rotate(90deg)",
-        }
-      }
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
