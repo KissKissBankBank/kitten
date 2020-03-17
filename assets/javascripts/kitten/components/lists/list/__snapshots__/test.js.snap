@@ -50,8 +50,9 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
       >
         <svg
           className="k-ArrowIcon k-ArrowIcon--right button-item__ArrowIcon-sc-1xwobvm-3 iooXxv k-Button__icon"
-          data-radium={true}
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -88,8 +89,9 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
       >
         <svg
           className="k-ArrowIcon k-ArrowIcon--right button-item__ArrowIcon-sc-1xwobvm-3 iooXxv k-Button__icon"
-          data-radium={true}
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -126,8 +128,9 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
       >
         <svg
           className="k-ArrowIcon k-ArrowIcon--right button-item__ArrowIcon-sc-1xwobvm-3 iooXxv k-Button__icon"
-          data-radium={true}
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -171,8 +174,9 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
       >
         <svg
           className="k-ArrowIcon k-ArrowIcon--right button-item__ArrowIcon-sc-1xwobvm-3 iooXxv k-Button__icon"
-          data-radium={true}
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -209,8 +213,9 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
       >
         <svg
           className="k-ArrowIcon k-ArrowIcon--right k-ArrowIcon--disabled button-item__ArrowIcon-sc-1xwobvm-3 IIVFy k-Button__icon"
-          data-radium={true}
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -247,8 +252,9 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
       >
         <svg
           className="k-ArrowIcon k-ArrowIcon--right button-item__ArrowIcon-sc-1xwobvm-3 iooXxv k-Button__icon"
-          data-radium={true}
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>

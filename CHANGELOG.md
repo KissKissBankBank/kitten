@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix ArrowIcon component size.
+- Fix: Fix warning in Pagination component.
+
 ## [2.59.0] - 2020-03-13
 
 Feature:
