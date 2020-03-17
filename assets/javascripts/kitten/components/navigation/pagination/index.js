@@ -78,12 +78,14 @@ const StyledButtonIcon = styled(({ isDisabled, isActive, ...others }) => (
     color: ${COLORS.primary1};
     border-color: ${COLORS.primary1};
     background-color: ${COLORS.background1};
+    text-decoration: none;
   }
 
   &:active {
     color: ${COLORS.background1};
     border-color: ${COLORS.primary1};
     background-color: ${COLORS.primary1};
+    text-decoration: none;
   }
 
   ${({ isActive }) =>
