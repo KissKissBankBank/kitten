@@ -23,8 +23,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         <svg
           aria-hidden="true"
           className="arrow-icon__SvgArrow-sc-3d3g2f-0 iWClnN pagination__StyledSvg-sc-19bydjm-4 duFENn"
-          direction="left"
-          disabled={false}
           height="5.64"
           viewBox="0 0 8.48 5.64"
           width="8.48"
@@ -128,8 +126,6 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         <svg
           aria-hidden="true"
           className="arrow-icon__SvgArrow-sc-3d3g2f-0 iNzhvt pagination__StyledSvg-sc-19bydjm-4 duFENn"
-          direction="right"
-          disabled={false}
           height="5.64"
           viewBox="0 0 8.48 5.64"
           width="8.48"

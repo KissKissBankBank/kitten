@@ -16,8 +16,6 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
       Alice
       <svg
         className="arrow-icon__SvgArrow-sc-3d3g2f-0 GePsz expand-board__StyledArrowIcon-sc-5cysn4-1 kZobdv"
-        direction="bottom"
-        disabled={false}
         fill="#fff"
         height="5.64"
         viewBox="0 0 8.48 5.64"
@@ -49,8 +47,6 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
       Alice
       <svg
         className="arrow-icon__SvgArrow-sc-3d3g2f-0 GePsz expand-board__StyledArrowIcon-sc-5cysn4-1 kZobdv"
-        direction="bottom"
-        disabled={false}
         fill="#fff"
         height="5.64"
         viewBox="0 0 8.48 5.64"

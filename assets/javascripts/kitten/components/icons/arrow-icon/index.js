@@ -72,7 +72,9 @@ DeprecatedArrowIcon.defaultProps = {
   className: '',
 }
 
-const SvgArrow = styled.svg`
+const SvgArrow = styled(({ direction, disabled, ...props }) => (
+  <svg {...props} />
+))`
   transform: ${({ direction }) => {
     switch (direction) {
       case 'right':

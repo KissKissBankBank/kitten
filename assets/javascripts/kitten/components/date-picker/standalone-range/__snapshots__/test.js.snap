@@ -28,8 +28,6 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         >
           <svg
             className="arrow-icon__SvgArrow-sc-3d3g2f-0 iWClnN"
-            direction="left"
-            disabled={false}
             fill="#222"
             height="8"
             viewBox="0 0 8.48 5.64"
@@ -48,8 +46,6 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         >
           <svg
             className="arrow-icon__SvgArrow-sc-3d3g2f-0 iNzhvt"
-            direction="right"
-            disabled={false}
             fill="#222"
             height="8"
             viewBox="0 0 8.48 5.64"
