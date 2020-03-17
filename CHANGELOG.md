@@ -6,6 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Update `hidePaginationOnMobile` props to `Carousel`, default to true.
 
+## [2.59.1] - 2020-03-17
+
+Fixes:
+- ArrowIcon component size.
+- Fix warning in Pagination component.
+
 ## [2.59.0] - 2020-03-13
 
 Feature:
