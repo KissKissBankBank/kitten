@@ -29,7 +29,7 @@ export const SelectWithState = ({
   id,
   ...props
 }) => {
-  const [selectedValue, setSelectedValue] = useState({ value })
+  const [selectedValue, setSelectedValue] = useState(value)
 
   useEffect(() => {
     setSelectedValue(value)
