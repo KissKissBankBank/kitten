@@ -579,8 +579,14 @@ Array [
       className="k-Select"
     >
       <div
-        className="Select Select--single"
+        className="Select Select--single has-value"
       >
+        <input
+          disabled={false}
+          name="select"
+          type="hidden"
+          value=""
+        />
         <div
           className="Select-control"
           onKeyDown={[Function]}
@@ -594,9 +600,14 @@ Array [
             id="react-select-2--value"
           >
             <div
-              className="Select-placeholder"
+              className="Select-value"
             >
-              Select…
+              <span
+                aria-selected="true"
+                className="Select-value-label"
+                id="react-select-2--value-item"
+                role="option"
+              />
             </div>
             <div
               aria-activedescendant="react-select-2--value"

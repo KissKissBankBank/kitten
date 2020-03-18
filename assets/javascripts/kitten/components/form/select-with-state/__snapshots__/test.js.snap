@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SelectWithState /> with classes props matches with snapshot 1`] = `
+<div
+  className="k-Select k-Select--tiny is-error is-valid is-disabled"
+>
+  <div
+    className="Select Select--single is-disabled has-value"
+  >
+    <div
+      className="Select-control"
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <span
+        className="Select-multi-value-wrapper"
+        id="react-select-5--value"
+      >
+        <div
+          className="Select-value"
+        >
+          <span
+            aria-selected="true"
+            className="Select-value-label"
+            id="react-select-5--value-item"
+            role="option"
+          />
+        </div>
+        <div
+          aria-activedescendant="react-select-5--value"
+          aria-disabled="true"
+          aria-expanded={false}
+          aria-owns=""
+          className="Select-input"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          style={
+            Object {
+              "border": 0,
+              "display": "inline-block",
+              "width": 1,
+            }
+          }
+          tabIndex={0}
+        />
+      </span>
+      <span
+        className="Select-arrow-zone"
+        onMouseDown={[Function]}
+      >
+        <span
+          className="Select-arrow"
+          onMouseDown={[Function]}
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SelectWithState /> with default props matches with snapshot 1`] = `
+<div
+  className="k-Select"
+>
+  <div
+    className="Select Select--single has-value"
+  >
+    <div
+      className="Select-control"
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <span
+        className="Select-multi-value-wrapper"
+        id="react-select-2--value"
+      >
+        <div
+          className="Select-value"
+        >
+          <span
+            aria-selected="true"
+            className="Select-value-label"
+            id="react-select-2--value-item"
+            role="option"
+          />
+        </div>
+        <div
+          aria-activedescendant="react-select-2--value"
+          aria-disabled="false"
+          aria-expanded={false}
+          aria-owns=""
+          className="Select-input"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          style={
+            Object {
+              "border": 0,
+              "display": "inline-block",
+              "width": 1,
+            }
+          }
+          tabIndex={0}
+        />
+      </span>
+      <span
+        className="Select-arrow-zone"
+        onMouseDown={[Function]}
+      >
+        <span
+          className="Select-arrow"
+          onMouseDown={[Function]}
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SelectWithState /> with default value matches with snapshot 1`] = `
+<div
+  className="k-Select"
+>
+  <div
+    className="Select Select--single has-value"
+  >
+    <div
+      className="Select-control"
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <span
+        className="Select-multi-value-wrapper"
+        id="react-select-3--value"
+      >
+        <div
+          className="Select-value"
+        >
+          <span
+            aria-selected="true"
+            className="Select-value-label"
+            id="react-select-3--value-item"
+            role="option"
+          />
+        </div>
+        <div
+          aria-activedescendant="react-select-3--value"
+          aria-disabled="false"
+          aria-expanded={false}
+          aria-owns=""
+          className="Select-input"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          style={
+            Object {
+              "border": 0,
+              "display": "inline-block",
+              "width": 1,
+            }
+          }
+          tabIndex={0}
+        />
+      </span>
+      <span
+        className="Select-arrow-zone"
+        onMouseDown={[Function]}
+      >
+        <span
+          className="Select-arrow"
+          onMouseDown={[Function]}
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<SelectWithState /> with label matches with snapshot 1`] = `
+<div
+  className="k-Select"
+>
+  <label
+    className="k-Select__label"
+  >
+    FooBar
+  </label>
+  <div
+    className="Select Select--single has-value"
+  >
+    <div
+      className="Select-control"
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+    >
+      <span
+        className="Select-multi-value-wrapper"
+        id="react-select-4--value"
+      >
+        <div
+          className="Select-value"
+        >
+          <span
+            aria-selected="true"
+            className="Select-value-label"
+            id="react-select-4--value-item"
+            role="option"
+          />
+        </div>
+        <div
+          aria-activedescendant="react-select-4--value"
+          aria-disabled="false"
+          aria-expanded={false}
+          aria-owns=""
+          className="Select-input"
+          onBlur={[Function]}
+          onFocus={[Function]}
+          role="combobox"
+          style={
+            Object {
+              "border": 0,
+              "display": "inline-block",
+              "width": 1,
+            }
+          }
+          tabIndex={0}
+        />
+      </span>
+      <span
+        className="Select-arrow-zone"
+        onMouseDown={[Function]}
+      >
+        <span
+          className="Select-arrow"
+          onMouseDown={[Function]}
+        />
+      </span>
+    </div>
+  </div>
+</div>
+`;
