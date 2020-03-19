@@ -58,6 +58,7 @@ describe('<Carousel />', () => {
           itemMinWidth={ProjectCardMinWidth}
           baseItemMarginBetween={ProjectCardMarginBetween}
           pagesClassName="custom-class"
+          hidePagination
         >
           {data.map((item, index) => (
             <ProjectCard title={item.title} key={index} />
