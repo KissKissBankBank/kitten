@@ -189,12 +189,14 @@ function (_Component) {
           baseItemMarginBetween = _this$props3.baseItemMarginBetween,
           viewportIsMOrLess = _this$props3.viewportIsMOrLess,
           viewportIsXSOrLess = _this$props3.viewportIsXSOrLess,
+          hidePagination = _this$props3.hidePagination,
           hidePaginationOnMobile = _this$props3.hidePaginationOnMobile,
           paginationPosition = _this$props3.paginationPosition;
       var _this$state4 = _this.state,
           indexPageVisible = _this$state4.indexPageVisible,
           numPages = _this$state4.numPages;
       var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
+      if (hidePagination) return;
       if (viewportIsXSOrLess && hidePaginationOnMobile) return;
       if (numPages <= 1) return;
 
@@ -257,6 +259,7 @@ function (_Component) {
 
 CarouselBase.defaultProps = {
   hidePaginationOnMobile: false,
+  hidePagination: false,
   showOtherPages: false,
   pagesClassName: null,
   paginationPosition: {
@@ -271,6 +274,7 @@ CarouselBase.propTypes = {
   viewportIsMOrLess: _propTypes.default.bool.isRequired,
   viewportIsXSOrLess: _propTypes.default.bool.isRequired,
   hidePaginationOnMobile: _propTypes.default.bool,
+  hidePagination: _propTypes.default.bool,
   showOtherPages: _propTypes.default.bool,
   pagesClassName: _propTypes.default.string,
   paginationPosition: _propTypes.default.shape({
