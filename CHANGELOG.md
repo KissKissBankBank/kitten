@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Update `hidePaginationOnMobile` props to `Carousel`, default to true.
+- Fix: Add `hidePagination` props to `Carousel`.
 
 ## [2.59.1] - 2020-03-17
 
