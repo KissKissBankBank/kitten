@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Add `hidePagination` props to `Carousel`.
+- Feature: Create `CameraIcon` component.
 
 ## [2.59.1] - 2020-03-17
 
