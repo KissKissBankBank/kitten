@@ -1,90 +1,50 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const valueMin = 0
-const valueMax = 360
-
-const rotate = keyframes`
+const rotateAnimate = keyframes`
   from {
-    transform: rotate(${valueMin}deg);
+    stroke-dashoffset: 157;
   }
   to {
-    transform: rotate(${valueMax}deg);
+    stroke-dashoffset: 100;
   }
 `
 
-const StyledSpinner = styled.div`
-  max-width: 100%;
+const StyleSvg = styled.svg`
+  width: 70px;
+  height: 70px;
 `
 
-const StyledLoad = styled(
-  ({ spinnerColor, sliderColor, progressValue, ...props }) => (
-    <div {...props} />
-  ),
-)`
-  position: relative;
-  border: ${pxToRem(5)} solid #f3f3f3;
-  border-radius: 50%;
-  height: ${pxToRem(60)};
-  width: ${pxToRem(60)};
-  background-color: ${COLORS.background1};
-  animation: ${rotate} 2s linear infinite;
-  border-top: ${pxToRem(5)} solid ;
+const StyledCircle = styled.circle`
+  fill: none;
+  stroke-width: 4px;
+  stroke-linecap: square;
+  stroke-dasharray: 157;
+  stroke-dashoffset: 100;
+  stroke: #19b4fa;
 
-  // &::after {
-  //   content: '';
-  //   top: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   left: 0;
-  //   position: absolute;
-  //   max-width:${({ progressValue }) => progressValue};
-  // }
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  animation: ${rotateAnimate} 3s ease-in-out;
 `
 
-export const Spinner = ({ color, value, rampProps, ...others }) => {
-  const [progressValue, setProgressValue] = useState(0)
+const StyledCircleBackground = styled.circle`
+  fill: none;
+  stroke: #eee;
+  stroke-width: 4px;
+`
 
-  useEffect(() => {
-    let progress = 0
-    let valueAsNumber = parseInt(value, 10)
-
-    if (valueAsNumber < valueMin) progress = valueMin
-    else if (valueAsNumber > valueMax) progress = valueMax
-    else progress = valueAsNumber
-
-    setProgressValue(progress)
-  }, [value])
-
+export const SpinnerLoader = ({ percentage }) => {
   return (
-    <StyledSpinner
-      {...others}
-      role="progressbar"
-      aria-valuemin={valueMin}
-      aria-valuemax={valueMax}
-      aria-valuenow={progressValue}
-    >
-      <StyledLoad
-        {...rampProps}
-        spinnerColor={color}
-        progressValue={`${progressValue}%`}
-      />
-    </StyledSpinner>
+    <div>
+      <svg viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg">
+        <StyledCircleBackground cx="35" cy="35" r="30" />
+        <StyledCircle cx="35" cy="35" r="30" />
+      </svg>
+    </div>
   )
-}
-
-Spinner.defaultProps = {
-  color: COLORS.primary1,
-  value: 50,
-  rampProps: {},
-}
-
-Spinner.propTypes = {
-  color: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  rampProps: PropTypes.object,
 }
