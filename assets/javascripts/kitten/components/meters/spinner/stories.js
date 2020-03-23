@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, number, color } from '@storybook/addon-knobs'
@@ -6,7 +7,16 @@ import { SpinnerLoader } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
-import COLORS from '../../../constants/colors-config'
+import { Text } from '../../../components/typography/text'
+
+const StyledContainer = styled.div`
+  display: flex;
+`
+
+const StyledText = styled(Text)`
+  margin-left: 10px;
+  align-self: center;
+`
 
 storiesOf('Meters/Spinner', module)
   .addDecorator(withKnobs)
@@ -16,7 +26,12 @@ storiesOf('Meters/Spinner', module)
       <Container>
         <Grid>
           <GridCol col={4}>
-            <SpinnerLoader />
+            <StyledContainer>
+              <SpinnerLoader />
+              <StyledText size="micro" color="font1" weight="regular">
+                Financé à 75%
+              </StyledText>
+            </StyledContainer>
           </GridCol>
         </Grid>
       </Container>
