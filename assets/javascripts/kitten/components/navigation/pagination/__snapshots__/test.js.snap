@@ -14,7 +14,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       <a
         aria-disabled={false}
         aria-label="Previous page"
-        className="pagination__StyledButtonIcon-sc-19bydjm-3 hTFGZG"
+        className="pagination__StyledButtonIcon-sc-19bydjm-3 jugDKo"
         href="#9"
         onClick={[Function]}
         tabIndex={null}
@@ -22,16 +22,14 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="k-ArrowIcon k-ArrowIcon--left pagination__StyledSvg-sc-19bydjm-4 hWXurN"
-          data-radium={true}
-          viewBox="0 0 6 6"
+          className="arrow-icon__SvgArrow-sc-3d3g2f-0 iWClnN pagination__StyledSvg-sc-19bydjm-4 duFENn"
+          height="5.64"
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Arrow
-          </title>
           <path
-            d="M6 0H0v6h2V2h4z"
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
           />
         </svg>
       </a>
@@ -42,7 +40,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       <a
         aria-current={false}
         aria-label="Go to page 1"
-        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular pagination__StyledButtonIcon-sc-19bydjm-3 hTFGZG"
+        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular pagination__StyledButtonIcon-sc-19bydjm-3 jugDKo"
         href="#1"
         onClick={[Function]}
       >
@@ -61,7 +59,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       <a
         aria-current={false}
         aria-label="Go to page 9"
-        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular pagination__StyledButtonIcon-sc-19bydjm-3 hTFGZG"
+        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular pagination__StyledButtonIcon-sc-19bydjm-3 jugDKo"
         href="#9"
         onClick={[Function]}
       >
@@ -74,7 +72,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       <span
         aria-current="page"
         aria-label="Page 10, this is the current page"
-        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular pagination__StyledButtonIcon-sc-19bydjm-3 ifCHly"
+        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular pagination__StyledButtonIcon-sc-19bydjm-3 jjAPlG"
         href={null}
         onClick={null}
       >
@@ -87,7 +85,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       <a
         aria-current={false}
         aria-label="Go to page 11"
-        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular pagination__StyledButtonIcon-sc-19bydjm-3 hTFGZG"
+        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular pagination__StyledButtonIcon-sc-19bydjm-3 jugDKo"
         href="#11"
         onClick={[Function]}
       >
@@ -106,7 +104,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       <a
         aria-current={false}
         aria-label="Go to page 42"
-        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular pagination__StyledButtonIcon-sc-19bydjm-3 hTFGZG"
+        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular pagination__StyledButtonIcon-sc-19bydjm-3 jugDKo"
         href="#42"
         onClick={[Function]}
       >
@@ -119,7 +117,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       <a
         aria-disabled={false}
         aria-label="Next page"
-        className="pagination__StyledButtonIcon-sc-19bydjm-3 hTFGZG"
+        className="pagination__StyledButtonIcon-sc-19bydjm-3 jugDKo"
         href="#11"
         onClick={[Function]}
         tabIndex={null}
@@ -127,16 +125,14 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="k-ArrowIcon k-ArrowIcon--right pagination__StyledSvg-sc-19bydjm-4 hWXurN"
-          data-radium={true}
-          viewBox="0 0 6 6"
+          className="arrow-icon__SvgArrow-sc-3d3g2f-0 iNzhvt pagination__StyledSvg-sc-19bydjm-4 duFENn"
+          height="5.64"
+          viewBox="0 0 8.48 5.64"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Arrow
-          </title>
           <path
-            d="M6 0H0v6h2V2h4z"
+            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
           />
         </svg>
       </a>
