@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking change: Add new defaults for `k-u-link-*` utility classes.
 
 ## [2.60.0] - 2020-03-19
 
