@@ -6,6 +6,42 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: More performant `DoubleEntryTable` Component.
 
+## [2.60.0] - 2020-03-19
+
+Features:
+- Add `hidePagination` props to `Carousel`.
+- Create `CameraIcon` component.
+
+## [2.59.1] - 2020-03-17
+
+Fixes:
+- ArrowIcon component size.
+- Fix warning in Pagination component.
+
+## [2.59.0] - 2020-03-13
+
+Feature:
+- Expose `goToPage` method in `Carousel`.
+
+Fix:
+- Update padding mobile version on EngagementCard.
+
+## [2.58.0] - 2020-03-11
+
+Feature:
+- Add `showOtherPages` and `pagesClassName` to `Carousel`.
+
+Fix:
+- Remove `isActive` styles to `EngagementCard`.
+
+## [2.57.0] - 2020-03-06
+
+Feature:
+- Add `margin` utility classes for new steps and half steps.
+
+Fix:
+- Update `EngagementCard` styles.
+
 ## [2.56.0] - 2020-03-03
 
 Features:
