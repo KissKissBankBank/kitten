@@ -3,11 +3,12 @@ import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, number, color } from '@storybook/addon-knobs'
-import { SpinnerLoader } from './index'
+import { SpinnerProgress } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { Text } from '../../../components/typography/text'
+import COLORS from '../../../constants/colors-config'
 
 const StyledContainer = styled.div`
   display: flex;
@@ -27,7 +28,10 @@ storiesOf('Meters/Spinner', module)
         <Grid>
           <GridCol col={4}>
             <StyledContainer>
-              <SpinnerLoader />
+              <SpinnerProgress
+                color={color('Color', COLORS.primary2)}
+                value={number('Value', 75)}
+              />
               <StyledText size="micro" color="font1" weight="regular">
                 Financé à 75%
               </StyledText>
