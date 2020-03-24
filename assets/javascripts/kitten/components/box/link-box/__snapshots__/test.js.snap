@@ -32,8 +32,9 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
-        data-radium={true}
+        height="5.64"
         viewBox="0 0 6 6"
+        width="8.48"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -94,8 +95,9 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
-        data-radium={true}
+        height="5.64"
         viewBox="0 0 6 6"
+        width="8.48"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>

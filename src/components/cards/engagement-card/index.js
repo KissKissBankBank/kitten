@@ -25,44 +25,35 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var borderStyle = (0, _styledComponents.css)(["box-shadow:0 0 0 ", " ", ",0 0 0 ", " ", ";"], (0, _typography.pxToRem)(3), _colorsConfig.default.background1, (0, _typography.pxToRem)(6), function (_ref) {
-  var hoverBorder = _ref.hoverBorder;
-  return hoverBorder;
-});
+var _screenConfig = require("../../../constants/screen-config");
 
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "engagement-card__StyledCard",
   componentId: "sc-1unf5bb-0"
-})(["border-radius:", ";position:relative;overflow:hidden;background-repeat:no-repeat;background-color:", ";background-size:contain;padding:", ";", " ", ""], (0, _typography.pxToRem)(15), function (_ref2) {
-  var backgroundColor = _ref2.backgroundColor;
+})(["box-sizing:border-box;display:flex;flex-direction:column;border-radius:", ";position:relative;overflow:hidden;background-repeat:no-repeat;background-color:", ";background-size:contain;padding:", ";text-decoration:none;border-color:", ";@media (min-width:", "){padding:", ";}"], (0, _typography.pxToRem)(15), function (_ref) {
+  var backgroundColor = _ref.backgroundColor;
   return backgroundColor;
-}, (0, _typography.pxToRem)(10), function (_ref3) {
-  var href = _ref3.href;
-  return href && (0, _styledComponents.css)([":hover,:active,:focus{", "}"], borderStyle);
-}, function (_ref4) {
-  var isActive = _ref4.isActive;
-  return isActive && borderStyle;
-});
+}, (0, _typography.pxToRem)(5), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(10));
 
 var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "engagement-card__StyledText",
   componentId: "sc-1unf5bb-1"
-})(["position:absolute;text-align:center;bottom:5%;right:", ";left:", ";line-height:1.2;"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10));
+})(["text-align:center;right:", ";left:", ";line-height:1.2;"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10));
 
 var StyledIcon = _styledComponents.default.div.withConfig({
   displayName: "engagement-card__StyledIcon",
   componentId: "sc-1unf5bb-2"
-})(["align-self:center;margin:0 auto;"]);
+})(["display:flex;align-self:center;align-items:center;height:100%;"]);
 
-var EngagementCard = function EngagementCard(_ref5) {
-  var icon = _ref5.icon,
-      backgroundColor = _ref5.backgroundColor,
-      href = _ref5.href,
-      children = _ref5.children,
-      hoverBorder = _ref5.hoverBorder,
-      isActive = _ref5.isActive,
-      as = _ref5.as,
-      others = (0, _objectWithoutProperties2.default)(_ref5, ["icon", "backgroundColor", "href", "children", "hoverBorder", "isActive", "as"]);
+var EngagementCard = function EngagementCard(_ref2) {
+  var icon = _ref2.icon,
+      backgroundColor = _ref2.backgroundColor,
+      href = _ref2.href,
+      children = _ref2.children,
+      hoverBorder = _ref2.hoverBorder,
+      isActive = _ref2.isActive,
+      as = _ref2.as,
+      others = (0, _objectWithoutProperties2.default)(_ref2, ["icon", "backgroundColor", "href", "children", "hoverBorder", "isActive", "as"]);
   return _react.default.createElement(StyledCard, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',
     href: href,

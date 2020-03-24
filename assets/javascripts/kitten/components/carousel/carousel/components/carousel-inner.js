@@ -2,6 +2,12 @@ import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 import ResizeObserver from 'resize-observer-polyfill'
 import { pxToRem } from '../../../../helpers/utils/typography'
+import {
+  CONTAINER_PADDING,
+  CONTAINER_PADDING_MOBILE,
+} from '../../../../constants/grid-config'
+import { ScreenConfig } from '../../../../constants/screen-config'
+import { domElementHelper } from '../../../../helpers/dom/element-helper'
 
 if (typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill()
@@ -49,9 +55,11 @@ const getRangePageScrollLeft = (
   targetClientWidth,
   numPages,
   itemMarginBetween,
+  containerPadding,
 ) =>
   createRangeFromZeroTo(numPages).map(
-    numPage => numPage * (targetClientWidth + itemMarginBetween),
+    numPage =>
+      numPage * (targetClientWidth + itemMarginBetween - containerPadding),
   )
 
 export class CarouselInner extends Component {
@@ -81,6 +89,10 @@ export class CarouselInner extends Component {
     }
   }
 
+  getElementPadding = element =>
+    parseInt(domElementHelper.getComputedStyle(element, 'padding-left')) +
+    parseInt(domElementHelper.getComputedStyle(element, 'padding-right'))
+
   handleInnerScroll = scrollStop(target => {
     if (this.state.isTouched) return
 
@@ -96,6 +108,7 @@ export class CarouselInner extends Component {
       clientWidth,
       numPages,
       itemMarginBetween,
+      this.getElementPadding(target),
     )
 
     const closest = getClosest(rangePageScrollLeft, scrollLeft)
@@ -119,6 +132,7 @@ export class CarouselInner extends Component {
       clientWidth,
       numPages,
       itemMarginBetween,
+      this.getElementPadding(target),
     )
 
     const closest = rangePageScrollLeft[indexPageToScroll]
@@ -141,13 +155,14 @@ export class CarouselInner extends Component {
 
   render() {
     const {
-      data,
       itemMinWidth,
       renderItem,
       indexPageVisible,
       numColumns,
       numPages,
       itemMarginBetween,
+      showOtherPages,
+      pagesClassName,
     } = this.props
 
     const rangePage = createRangeFromZeroTo(numPages)
@@ -158,6 +173,7 @@ export class CarouselInner extends Component {
         onScroll={this.handleInnerScroll}
         onTouchStart={this.handleTouchStart}
         onTouchEnd={this.handleTouchEnd}
+        showOtherPages={showOtherPages}
       >
         {rangePage.map(index => (
           <StyledCarouselPageContainer
@@ -166,6 +182,8 @@ export class CarouselInner extends Component {
             indexPageVisible={indexPageVisible}
             itemMarginBetween={itemMarginBetween}
             onClick={this.handlePageClick(index)}
+            showOtherPages={showOtherPages}
+            className={pagesClassName}
           >
             <CarouselPage
               numColumns={numColumns}
@@ -182,7 +200,7 @@ export class CarouselInner extends Component {
 
 const StyledCarouselInner = styled.div`
   display: flex;
-  flex-direct: row;
+  flex-direction: row;
   overflow-x: scroll;
   scroll-behavior: smooth;
   /* hide scrollbar on IE and Edge */
@@ -197,13 +215,36 @@ const StyledCarouselInner = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  ${({ showOtherPages }) =>
+    showOtherPages &&
+    css`
+      padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
+      scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        padding: 0 ${pxToRem(CONTAINER_PADDING)};
+        scroll-padding: ${pxToRem(CONTAINER_PADDING)};
+      }
+    `}
 `
 
 const StyledCarouselPageContainer = styled.div`
   width: 100%;
   flex-shrink: 0;
   scroll-snap-align: ${supportScrollSnap ? 'center' : 'none'};
-  }
+
+  ${({ showOtherPages }) =>
+    showOtherPages &&
+    css`
+      &:last-child {
+        padding-right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+
+        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+          padding-right: ${pxToRem(CONTAINER_PADDING)};
+        }
+      }
+    `}
 
   ${({ index, indexPageVisible }) =>
     index !== indexPageVisible &&
