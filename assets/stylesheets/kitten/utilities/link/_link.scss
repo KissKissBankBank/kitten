@@ -16,14 +16,19 @@
 
 @mixin k-utilities-link {
   $transition-speed: .3s;
+  $font: 'regular';
 
   .k-u-link-primary1 {
     color: map-get($k-colors, 'primary-1');
     transition: color $transition-speed;
+    @include k-typographyFont($font);
+    text-decoration: none;
 
     &--important {
       color: map-get($k-colors, 'primary-1') !important;
       transition: color $transition-speed !important;
+      @include k-typographyFont($font, true);
+      text-decoration: none !important;
     }
 
     &:hover,
@@ -39,10 +44,14 @@
   .k-u-link-background1 {
     color: map-get($k-colors, 'background-1');
     transition: color $transition-speed;
+    @include k-typographyFont($font);
+    text-decoration: none;
 
     &--important {
       color: map-get($k-colors, 'background-1') !important;
       transition: color $transition-speed !important;
+      @include k-typographyFont($font, true);
+      text-decoration: none !important;
     }
 
     &:hover,
