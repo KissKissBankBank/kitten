@@ -87,7 +87,6 @@ export const Styles = styled.div`
 
     &.DoubleEntryTable__Column--TitleCol {
       ${TYPOGRAPHY.fontStyles.regular}
-      white-space: nowrap;
       background: ${COLORS.background1};
       border-top-width: 0;
       border-left-width: ${pxToRem(2)};
