@@ -30,10 +30,11 @@ storiesOf('Meters/Spinner', module)
             <StyledContainer>
               <SpinnerProgress
                 color={color('Color', COLORS.primary2)}
-                value={number('Value', 75)}
+                value={number('Value', 40)}
+                rampProps={{ style: { width: 70, height: 70 } }}
               />
               <StyledText size="micro" color="font1" weight="regular">
-                Financé à 75%
+                Financé à …%
               </StyledText>
             </StyledContainer>
           </GridCol>
