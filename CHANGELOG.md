@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Update `CopyIcon`.
 
 ## [2.60.0] - 2020-03-19
 
