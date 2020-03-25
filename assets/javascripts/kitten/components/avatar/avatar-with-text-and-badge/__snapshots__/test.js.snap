@@ -2,7 +2,7 @@
 
 exports[`<AvatarWithTextAndBadge /> with avatar should match with snapshot 1`] = `
 <div
-  className="k-ButtonImageWithText"
+  className="k-ButtonImageWithText k-u-avoid-click"
   imageProps={
     Object {
       "alt": "Default image",
@@ -16,7 +16,7 @@ exports[`<AvatarWithTextAndBadge /> with avatar should match with snapshot 1`] =
 
 exports[`<AvatarWithTextAndBadge /> without avatar should match with snapshot 1`] = `
 <div
-  className="k-ButtonImageWithText"
+  className="k-ButtonImageWithText k-u-avoid-click"
   imageProps={
     Object {
       "backgroundColor": "#002e7d",

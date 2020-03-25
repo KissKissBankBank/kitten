@@ -50,42 +50,40 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   border-right: 0.0625rem solid #eee;
 }
 
-<nav>
-  <ul
-    className="c0"
+<ul
+  className="c0"
+>
+  <li
+    role="menuitem"
   >
-    <li
-      role="menuitem"
+    <a
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 1
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 1
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 2
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 2
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 3
-      </a>
-    </li>
-  </ul>
-</nav>
+      Item 3
+    </a>
+  </li>
+</ul>
 `;
 
 exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
@@ -228,61 +226,59 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   border-right: 0.0625rem solid #eee;
 }
 
-<nav>
-  <ul
-    className="c0"
+<ul
+  className="c0"
+>
+  <li
+    role="menuitem"
   >
-    <li
-      role="menuitem"
+    <a
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 1
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 1
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 2
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 2
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      className="c2"
+      href="#"
     >
-      <a
-        className="c2"
-        href="#"
+      <span
+        className="itemNextToArrowIcon"
       >
-        <span
-          className="itemNextToArrowIcon"
+        <a
+          href="#custom-component"
         >
-          <a
-            href="#custom-component"
-          >
-            Custom component
-          </a>
-        </span>
-        <svg
-          className="c3 headerMenuArrowIcon"
-          height="5.64"
-          viewBox="0 0 8.48 5.64"
-          width="8.48"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
-          />
-        </svg>
-      </a>
-    </li>
-  </ul>
-</nav>
+          Custom component
+        </a>
+      </span>
+      <svg
+        className="c3 headerMenuArrowIcon"
+        height="5.64"
+        viewBox="0 0 8.48 5.64"
+        width="8.48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
 `;
 
 exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
@@ -372,42 +368,40 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   border-right: 0.0625rem solid #eee;
 }
 
-<nav>
-  <ul
-    className="c0"
+<ul
+  className="c0"
+>
+  <li
+    role="menuitem"
   >
-    <li
-      role="menuitem"
+    <a
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 1
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 1
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      className="c2"
+      href="#"
     >
-      <a
-        className="c2"
-        href="#"
-      >
-        Item 2
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 2
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 3
-      </a>
-    </li>
-  </ul>
-</nav>
+      Item 3
+    </a>
+  </li>
+</ul>
 `;
 
 exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
@@ -492,41 +486,39 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   border-right: 0.0625rem solid #eee;
 }
 
-<nav>
-  <ul
-    className="c0"
+<ul
+  className="c0"
+>
+  <li
+    role="menuitem"
   >
-    <li
-      role="menuitem"
+    <a
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 1
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 1
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      className="c2"
+      href="#"
     >
-      <a
-        className="c2"
-        href="#"
-      >
-        Item 2
-      </a>
-    </li>
-    <li
-      className="customLiClass"
-      role="menuitem"
+      Item 2
+    </a>
+  </li>
+  <li
+    className="customLiClass"
+    role="menuitem"
+  >
+    <a
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 3
-      </a>
-    </li>
-  </ul>
-</nav>
+      Item 3
+    </a>
+  </li>
+</ul>
 `;
