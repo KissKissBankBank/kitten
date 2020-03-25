@@ -21,6 +21,12 @@ import {
 } from './config'
 import { StickyContainer } from '../../../components/grid/sticky-container'
 import COLORS from '../../../constants/colors-config'
+import { pxToRem } from '../../../helpers/utils/typography'
+import {
+  getFocusableElementsFrom,
+  keyboardNavigation,
+} from '../../../helpers/dom/a11y'
+import domEvents from '../../../helpers/dom/events'
 
 const StyledStickyContainer = styled(StickyContainer)`
   ${({ isMenuExpanded }) =>
@@ -30,17 +36,17 @@ const StyledStickyContainer = styled(StickyContainer)`
     `}
 
   .k-Spacer + & {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 ${pxToRem(2)} ${pxToRem(4)} rgba(0, 0, 0, 0.1);
   }
 `
 
-const Container = styled.div`
+const Header = styled.header`
   position: relative;
   z-index: ${({ isMenuExpanded, zIndex }) =>
     isMenuExpanded ? zIndex.headerWithOpenMenu : zIndex.header};
 `
 
-const Header = styled.header`
+const Navigation = styled.nav`
   width: 100vw;
   overflow: hidden;
   box-sizing: border-box;
@@ -74,6 +80,7 @@ const HeaderNav = ({
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const [menuExpandBy, setMenuExpandBy] = useState(null)
   const stickyContainerRef = useRef(null)
+  const headerRef = useRef(null)
 
   useEffect(() => {
     setIsLogged(isLogged)
@@ -82,6 +89,35 @@ const HeaderNav = ({
   useEffect(() => {
     setId(idState)
   }, [id])
+
+  useEffect(() => {
+    if (!headerRef.current) return
+
+    headerRef.current.addEventListener('keydown', handleKeyboardNavigation)
+
+    return () => {
+      headerRef.current.removeEventListener('keydown', handleKeyboardNavigation)
+    }
+  }, [isMenuExpanded])
+
+  const { keyboard } = domEvents
+
+  const isArrowKeyCode = keycode =>
+    [keyboard.left, keyboard.up, keyboard.right, keyboard.down].includes(
+      keycode,
+    )
+
+  const handleKeyboardNavigation = event => {
+    if (isArrowKeyCode(event.keyCode)) {
+      event.preventDefault()
+
+      const focusableElements = getFocusableElementsFrom(headerRef.current)
+      const kbdNav = keyboardNavigation(focusableElements)
+
+      if (event.keyCode === keyboard.right) return kbdNav.next()
+      if (event.keyCode === keyboard.left) return kbdNav.prev()
+    }
+  }
 
   const updateHeaderBackground = () => /UserMenu/.test(menuExpandBy)
 
@@ -101,13 +137,14 @@ const HeaderNav = ({
         callOnToggle,
       }}
     >
-      <Container zIndex={zIndexConfig}>
+      <Header zIndex={zIndexConfig}>
         <StyledStickyContainer
           ref={stickyContainerRef}
           isSticky={isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp'}
           isMenuExpanded={isMenuExpanded}
         >
-          <Header
+          <Navigation
+            ref={headerRef}
             role="banner"
             id={idState}
             className="k-HeaderNav"
@@ -118,9 +155,9 @@ const HeaderNav = ({
               {...quickAccessProps}
             />
             {children}
-          </Header>
+          </Navigation>
         </StyledStickyContainer>
-      </Container>
+      </Header>
     </Context.Provider>
   )
 }

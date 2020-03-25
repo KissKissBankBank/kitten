@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 const Item = ({ children, href, className, ...others }) => (
   <li className="k-HeaderNav-nav__element" role="menuitem">
@@ -14,12 +15,10 @@ Item.proptypes = {
   children: PropTypes.node.isRequired,
 }
 
-export const Nav = ({ children }) => (
-  <nav className="k-HeaderNav-nav">
-    <ul role="menubar" className="k-HeaderNav-nav__list">
-      {children}
-    </ul>
-  </nav>
+export const Nav = ({ children, className }) => (
+  <ul role="menubar" className={classNames('k-HeaderNav-nav', className)}>
+    {children}
+  </ul>
 )
 
 Nav.Item = Item

@@ -1,6 +1,8 @@
 import React from 'react'
+import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { Text as KittenText } from '../../../components/typography/text'
+import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { getReactElementsByType } from '../../../helpers/react/react-elements'
@@ -74,21 +76,25 @@ Image.defaultProps = {
   alt: null,
 }
 
-const Badge = ({ backgroundColor, children }) => (
+const Badge = ({ backgroundColor, children, altText }) => (
   <span
     className="k-ButtonWithBadge__badge k-Badge"
     style={{ backgroundColor }}
+    aria-hidden="true"
   >
     {children}
+    <VisuallyHidden>{`${children.toString()} ${altText}`}</VisuallyHidden>
   </span>
 )
 
 Badge.propTypes = {
   backgroundColor: PropTypes.string,
+  altText: PropTypes.string,
 }
 
 Badge.defaultProps = {
   backgroundColor: COLORS.primary1,
+  altText: 'Notification(s)',
 }
 
 const Text = ({ textClassName, withEllipsisOverflow, children, ...props }) => {
@@ -114,12 +120,14 @@ Text.defaultProps = {
 }
 
 export const AvatarWithTextAndBadge = ({ children, className, ...props }) => {
-  const classNames = [className, 'k-ButtonImageWithText']
-    .filter(className => !!className)
-    .join(' ')
+  const componentClassNames = classNames(
+    className,
+    'k-ButtonImageWithText',
+    'k-u-avoid-click',
+  )
 
   return (
-    <div className={classNames} {...props}>
+    <div className={componentClassNames} {...props}>
       {children}
     </div>
   )

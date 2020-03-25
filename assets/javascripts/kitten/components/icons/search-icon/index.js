@@ -50,7 +50,7 @@ SearchIcon.propTypes = {
 }
 
 SearchIcon.defaultProps = {
-  title: 'Search',
+  title: null,
   color: '#333',
   circleProps: {},
   pathProps: {},

@@ -37,6 +37,8 @@
   // Focus
   $focus-color: map-get($k-colors, 'primary-1');
 
+  $focus-alt-color: map-get($k-colors, 'primary-3');
+
   // State 'is-selected'
   $is-selected-color: map-get($k-colors, 'primary-1');
 
@@ -55,12 +57,8 @@
       padding-left: k-px-to-rem(20px);
     }
 
-    & * {
+    &, * {
       @include k-typographyFont($font);
-
-      &:focus {
-        outline: none;
-      }
     }
   }
 
@@ -73,19 +71,13 @@
       padding-left: k-px-to-rem(5px);
       padding-right: k-px-to-rem(5px);
     }
-
-    &:focus {
-      outline: k-px-to-rem(5px) auto -webkit-focus-ring-color;
-    }
   }
 
   .k-HeaderNav--right,
   .k-HeaderNav--centered {
-    &, .k-HeaderNav--hidden {
-      display: flex;
-      height: 100%;
-      align-items: center;
-    }
+    display: flex;
+    height: 100%;
+    align-items: center;
   }
 
   .k-HeaderNav--right {
@@ -94,29 +86,20 @@
   }
 
   .k-HeaderNav--centered {
-    &, .k-HeaderNav--hidden {
-      justify-content: center;
-      flex-grow: 100;
-    }
+    justify-content: center;
+    flex-grow: 100;
   }
 
   .k-HeaderNav--column {
-    &, .k-HeaderNav--hidden {
-      flex-direction: column;
-    }
+    flex-direction: column;
   }
 
   .k-HeaderNav-nav {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
     height: 100%;
-
-    .k-HeaderNav--hidden {
-      display: flex;
-    }
-  }
-
-  .k-HeaderNav--hidden {
-    height: 100%;
-    line-height: 1;
   }
 
   .k-HeaderNav__UserMenu {
@@ -179,14 +162,6 @@
 
   .k-HeaderNav__UserMenuButton--nopadding {
     padding: 0;
-  }
-
-  .k-HeaderNav-nav__list {
-    list-style-type: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    height: 100%;
   }
 
   .k-HeaderNav-nav--center {

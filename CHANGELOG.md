@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `.k-u-avoid-click` utility.
+- Feature: Create `HeaderNav` components.
+- Feature: Create `AvatarWithTextAndBadge` components.
+- Fix: Fix `Dropdown` components events and accessibility.
 
 ## [2.60.0] - 2020-03-19
 

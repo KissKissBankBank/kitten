@@ -158,7 +158,11 @@ export const Button = ({
     >
       {icon && React.cloneElement(icon, { className: classNameIcon })}
 
-      {text && <span className={classNameText}>{text}</span>}
+      {text && classNameText ? (
+        <span className={classNameText}>{text}</span>
+      ) : (
+        text
+      )}
     </StyledLink>
   )
 }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Dropdown from '../../../../components/dropdowns/dropdown'
 import { Context } from './context'
 import { getReactElementsByType } from '../../../../helpers/react/react-elements'
+import classNames from 'classnames'
 
 const namespace = 'kkbbAndCo'
 const DROPDOWN_CLASS = `${namespace}-UserMenu k-HeaderNav__UserMenu`
@@ -23,13 +24,11 @@ export const UserMenu = ({
     type: UserMenu.Navigation,
   })[0]
 
-  const buttonClassName = [
+  const buttonClassName = classNames(
     'k-HeaderNav__UserMenuButton',
-    padding ? '' : 'k-HeaderNav__UserMenuButton--nopadding',
-    ...(props.className || '').split(' '),
-  ]
-    .filter(v => !!v)
-    .join(' ')
+    { 'k-HeaderNav__UserMenuButton--nopadding': !padding },
+    props.className,
+  )
 
   return (
     <Context.Consumer>
@@ -37,7 +36,7 @@ export const UserMenu = ({
         <Dropdown
           ref={userDropdownRef}
           className={DROPDOWN_CLASS}
-          keepInitialButtonAction={true}
+          keepInitialButtonAction
           positionedVerticallyWith={getElementById(id)}
           positionedHorizontallyWith={getElementById(getButtonId(id))}
           buttonId={getButtonId(id)}

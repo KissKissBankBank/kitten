@@ -6,6 +6,11 @@ import emitter from '../../helpers/utils/emitter'
 import { DropdownButton } from '../../components/dropdowns/dropdown-button'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import domElementHelper from '../../helpers/dom/element-helper'
+import domEvents, { OPENING_DROPDOWN_EVENT } from '../../helpers/dom/events'
+import {
+  getFocusableElementsFrom,
+  keyboardNavigation,
+} from '../../helpers/dom/a11y'
 
 export const Dropdown = React.forwardRef(
   (
@@ -50,11 +55,27 @@ export const Dropdown = React.forwardRef(
       setHorizontalReferenceElement,
     ] = useState(0)
 
+    const { keyboard } = domEvents
+
+    const closeDropdownOnEsc = ({ keyCode }) =>
+      keyCode === keyboard.esc ? toggle(false) : null
+
+    const dropdownOnUpAndDown = ({ keyCode }) => {
+      if (keyCode === keyboard.down) return toggle(true)
+      if (keyCode === keyboard.up) return toggle(false)
+    }
+
+    const blur = event => {
+      console.log('blur', event)
+
+      event.target.blur()
+    }
+
     useEffect(() => {
       handleDropdownPosition()
       handleClickOnLinks()
 
-      emitter.on('dropdown:opening:trigger', closeDropdown)
+      emitter.on(OPENING_DROPDOWN_EVENT, closeDropdown)
 
       if (refreshEvents) {
         refreshEvents.forEach(ev => {
@@ -68,6 +89,10 @@ export const Dropdown = React.forwardRef(
         })
       }
 
+      window.addEventListener('keydown', closeDropdownOnEsc)
+      dropdownButtonRef.current.addEventListener('keydown', dropdownOnUpAndDown)
+      dropdownButtonRef.current.addEventListener('mouseup', blur)
+
       if (!has('current')(dropdownRef)) {
         console.warn(
           'The `ref` prop from <Dropdown /> should be set using `useRef`.',
@@ -76,6 +101,8 @@ export const Dropdown = React.forwardRef(
 
       return () => {
         revertHandleClickOnLinks()
+
+        emitter.off(OPENING_DROPDOWN_EVENT, closeDropdown)
 
         if (refreshEvents) {
           refreshEvents.forEach(ev => {
@@ -89,9 +116,31 @@ export const Dropdown = React.forwardRef(
           })
         }
 
-        emitter.off('dropdown:opening:trigger', closeDropdown)
+        window.removeEventListener('keydown', closeDropdownOnEsc)
+        dropdownButtonRef.current.removeEventListener(
+          'keydown',
+          dropdownOnUpAndDown,
+        )
+        dropdownButtonRef.current.removeEventListener('mouseup', blur)
       }
     }, [])
+
+    const manageA11y = ({ keyCode }) => {
+      const focusableElements = getFocusableElementsFrom(
+        dropdownContentRef.current,
+        { force: 'all' },
+      )
+
+      console.log('focus first', focusableElements[0])
+      console.log('focusableElements', focusableElements)
+
+      focusableElements[0].focus()
+
+      const kbdNav = keyboardNavigation(focusableElements)
+
+      if (keyCode === keyboard.up) return kbdNav.prev()
+      if (keyCode === keyboard.down) return kbdNav.next()
+    }
 
     useEffect(() => {
       if (isExpanded != isExpandedState) {
@@ -121,7 +170,11 @@ export const Dropdown = React.forwardRef(
 
     const toggle = nextExpandedState => {
       if (nextExpandedState) {
-        emitter.emit('dropdown:opening:trigger')
+        emitter.emit(OPENING_DROPDOWN_EVENT)
+
+        dropdownButtonRef.current.addEventListener('keydown', manageA11y)
+      } else {
+        dropdownButtonRef.current.removeEventListener('keydown', manageA11y)
       }
 
       setIsExpanded(nextExpandedState)
@@ -262,7 +315,7 @@ export const Dropdown = React.forwardRef(
           ref={dropdownContentRef}
           className="k-Dropdown__content"
           style={getDropdownContentStyle()}
-          aria-hidden="true"
+          aria-hidden={!isExpandedState}
           aria-labelledby={buttonId}
         >
           {dropdownContent}

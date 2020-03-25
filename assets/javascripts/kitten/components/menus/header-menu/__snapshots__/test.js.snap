@@ -50,12 +50,9 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   border-right: 0.0625rem solid #eee;
 }
 
-<nav
-  role="navigation"
->
+<nav>
   <ul
     className="c0"
-    role="menubar"
   >
     <li
       role="menuitem"
@@ -231,12 +228,9 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   border-right: 0.0625rem solid #eee;
 }
 
-<nav
-  role="navigation"
->
+<nav>
   <ul
     className="c0"
-    role="menubar"
   >
     <li
       role="menuitem"
@@ -378,12 +372,9 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   border-right: 0.0625rem solid #eee;
 }
 
-<nav
-  role="navigation"
->
+<nav>
   <ul
     className="c0"
-    role="menubar"
   >
     <li
       role="menuitem"
@@ -501,12 +492,9 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   border-right: 0.0625rem solid #eee;
 }
 
-<nav
-  role="navigation"
->
+<nav>
   <ul
     className="c0"
-    role="menubar"
   >
     <li
       role="menuitem"

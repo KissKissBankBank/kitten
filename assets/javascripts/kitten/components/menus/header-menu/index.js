@@ -33,11 +33,7 @@ export const HeaderMenu = ({
       noBorder: noBorder,
     }}
   >
-    <nav role="navigation">
-      <List noBorder={noBorder} role="menubar">
-        {children}
-      </List>
-    </nav>
+    <List noBorder={noBorder}>{children}</List>
   </Context.Provider>
 )
 

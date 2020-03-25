@@ -9,6 +9,7 @@ import { AvatarWithTextAndBadge } from '../../../../components/avatar/avatar-wit
 import { LoginIcon } from '../../../../components/icons/login-icon'
 import domElementHelper from '../../../../helpers/dom/element-helper'
 import { pxToRem } from '../../../../helpers/utils/typography'
+import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 const getElementById = id => document.getElementById(id)
@@ -197,12 +198,13 @@ export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
             >
               <HeaderNav.UserMenu.Button>
                 <HeaderNav.Button
-                  icon={<LoginIcon />}
+                  icon={<LoginIcon aria-hidden="true" />}
                   backgroundColor={COLORS.primary1}
                   backgroundColorHover={COLORS.primary2}
                   color={COLORS.background1}
                   as="span"
                 />
+                <VisuallyHidden>Se connecter / S'inscrire</VisuallyHidden>
               </HeaderNav.UserMenu.Button>
 
               <HeaderNav.UserMenu.Navigation>

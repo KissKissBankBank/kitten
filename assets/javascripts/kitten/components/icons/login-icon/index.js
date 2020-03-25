@@ -31,7 +31,7 @@ LoginIcon.propTypes = {
 
 LoginIcon.defaultProps = {
   color: '#fff',
-  title: 'Login',
+  title: null,
   width: 15,
   height: 17,
 }

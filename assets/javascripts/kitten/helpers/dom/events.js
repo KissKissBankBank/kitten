@@ -15,8 +15,14 @@ export const domEvents = {
     pageDown: 34,
     end: 36,
     home: 36,
+    tab: 9,
+    esc: 27,
+    space: 32,
+    enter: 13,
   },
 }
+
+export const OPENING_DROPDOWN_EVENT = 'dropdown:opening:trigger'
 
 // DEPRECATED: do not use default export.
 export default domEvents
