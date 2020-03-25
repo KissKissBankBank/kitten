@@ -5,27 +5,24 @@ import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const valueMin = 0
-const valueMax = 100
-
 const rotateAnimate = keyframes`
   from {
-    stroke-dashoffset: calc(283 * ${({ progressValue }) =>
-      progressValue} / 100);
+    stroke-dashoffset: 180;
   }
   to {
-    stroke-dashoffset: ${({ progressValue }) => progressValue};
+    stroke-dashoffset: calc(283 * ${({ progressValue }) =>
+      progressValue} / 100);
   }
 `
 
 const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
   <circle {...props} />
 ))`
-  fill: none;
+  fill: transparent;
   stroke-width: ${pxToRem(4)};
   stroke-linecap: square;
-  stroke-dasharray: calc(283 * ${({ progressValue }) => progressValue} / 100);
-  stroke-dashoffset: ${({ progressValue }) => progressValue};
+  stroke-dasharray: 180;
+  stroke-dashoffset: calc(283 * ${({ progressValue }) => progressValue} / 100);
   stroke: ${({ progressColor }) => progressColor};
 
   transform: rotate(-90deg);
@@ -34,52 +31,29 @@ const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
 `
 
 const StyledCircleBackground = styled.circle`
-  fill: none;
+  fill: transparent;
   stroke: ${COLORS.line1};
   stroke-width: ${pxToRem(4)};
 `
 
-export const SpinnerProgress = ({ color, value, rampProps, ...others }) => {
-  const [progressValue, setProgressValue] = useState(0)
-
-  useEffect(() => {
-    let progress = 0
-    let valueAsNumber = parseInt(value, 10)
-
-    if (valueAsNumber < valueMin) progress = valueMin
-    else if (valueAsNumber > valueMax) progress = valueMax
-    else progress = valueAsNumber
-
-    setProgressValue(progress)
-  }, [value])
-
-  return (
-    <div
-      {...others}
-      role="progressbar"
-      aria-valuemin={valueMin}
-      aria-valuemax={valueMax}
-      aria-valuenow={progressValue}
-    >
-      <svg
-        {...rampProps}
-        width="70"
-        height="70"
-        viewBox="0 0 70 70"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <StyledCircleBackground cx="35" cy="35" r="30" />
-        <StyledCircle
-          progressColor={color}
-          progressValue={progressValue}
-          cx="35"
-          cy="35"
-          r="30"
-        />
-      </svg>
-    </div>
-  )
-}
+export const SpinnerProgress = ({ color, value, rampProps, ...others }) => (
+  <svg
+    {...rampProps}
+    width="70"
+    height="70"
+    viewBox="0 0 70 70"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <StyledCircleBackground cx="35" cy="35" r="30" />
+    <StyledCircle
+      progressColor={color}
+      progressValue={value}
+      cx="35"
+      cy="35"
+      r="30"
+    />
+  </svg>
+)
 
 SpinnerProgress.defaultProps = {
   color: COLORS.primary1,
