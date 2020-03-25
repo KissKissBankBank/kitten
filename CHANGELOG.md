@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `SpinnerProgress` component.
 
+## [2.60.1] - 2020-03-25
+
+Fix:
+- Update `CopyIcon`.
+
 ## [2.60.0] - 2020-03-19
 
 Features:
