@@ -23,7 +23,7 @@ const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
 ))`
   fill: transparent;
   stroke-width: ${pxToRem(4)};
-  stroke-linecap: square;
+  stroke-linecap: butt;
   stroke-dasharray: ${dashLength};
   stroke-dashoffset: calc(
     ${dashLength} * ${({ progressValue }) => 100 - progressValue} / 100
@@ -41,7 +41,7 @@ const StyledCircleBackground = styled.circle`
   stroke-width: ${pxToRem(4)};
 `
 
-export const SpinnerProgress = ({
+export const Spinner = ({
   color,
   value,
   width,
@@ -75,18 +75,20 @@ export const SpinnerProgress = ({
   )
 }
 
-SpinnerProgress.defaultProps = {
+Spinner.defaultProps = {
   color: COLORS.primary1,
   value: '',
   rampProps: {},
   width: 50,
   height: 50,
+  circleRadius: 20,
 }
 
-SpinnerProgress.PropTypes = {
+Spinner.PropTypes = {
   color: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rampProps: PropTypes.object,
   width: PropTypes.number,
   height: PropTypes.number,
+  circleRadius: PropTypes.number,
 }

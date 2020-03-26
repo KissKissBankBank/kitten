@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, number, color } from '@storybook/addon-knobs'
-import { SpinnerProgress } from './index'
+import { Spinner } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -28,10 +28,10 @@ storiesOf('Meters/Spinner', module)
         <Grid>
           <GridCol col={4}>
             <StyledContainer>
-              <SpinnerProgress
+              <Spinner
                 color={color('Color', COLORS.primary2)}
                 value={number('Value', 40)}
-                // rampProps={{ style: { width: 50, height: 50 } }}
+                rampProps={{ style: { width: 50, height: 50 } }}
               />
               <StyledText size="micro" color="font1" weight="regular">
                 Financé à …%

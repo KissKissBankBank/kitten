@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `SpinnerProgress` component.
+- Feature: Add `Spinner` component.
 
 ## [2.60.1] - 2020-03-25
 
