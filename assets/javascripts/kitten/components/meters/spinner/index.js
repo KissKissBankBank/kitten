@@ -5,13 +5,16 @@ import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
+const circleRadius = 30
+const dashLength = `calc(2 * 3.141592 * ${pxToRem(circleRadius)})`
+
 const rotateAnimate = keyframes`
   from {
-    stroke-dashoffset: 180;
+    stroke-dashoffset: ${dashLength};
   }
   to {
-    stroke-dashoffset: calc(283 * ${({ progressValue }) =>
-      progressValue} / 100);
+    stroke-dashoffset: calc(${dashLength} * ${({ progressValue }) =>
+  100 - progressValue} / 100);
   }
 `
 
@@ -21,13 +24,15 @@ const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
   fill: transparent;
   stroke-width: ${pxToRem(4)};
   stroke-linecap: square;
-  stroke-dasharray: 180;
-  stroke-dashoffset: calc(283 * ${({ progressValue }) => progressValue} / 100);
+  stroke-dasharray: ${dashLength};
+  stroke-dashoffset: calc(
+    ${dashLength} * ${({ progressValue }) => 100 - progressValue} / 100
+  );
   stroke: ${({ progressColor }) => progressColor};
 
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
-  animation: ${rotateAnimate} 3s ease-in-out;
+  animation: ${rotateAnimate} 3s ease-out;
 `
 
 const StyledCircleBackground = styled.circle`
@@ -44,13 +49,13 @@ export const SpinnerProgress = ({ color, value, rampProps, ...others }) => (
     viewBox="0 0 70 70"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <StyledCircleBackground cx="35" cy="35" r="30" />
+    <StyledCircleBackground cx="35" cy="35" r={circleRadius} />
     <StyledCircle
       progressColor={color}
       progressValue={value}
       cx="35"
       cy="35"
-      r="30"
+      r={circleRadius}
     />
   </svg>
 )
