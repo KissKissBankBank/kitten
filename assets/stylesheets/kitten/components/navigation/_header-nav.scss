@@ -60,6 +60,14 @@
     &, * {
       @include k-typographyFont($font);
     }
+
+    *:focus {
+      outline-offset: k-px-to-rem(-3px);
+
+      &:hover {
+        outline: none;
+      }
+    }
   }
 
   .k-HeaderNav-Logo {

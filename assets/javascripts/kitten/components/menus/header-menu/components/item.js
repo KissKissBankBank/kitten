@@ -25,13 +25,16 @@ const StyledItem = styled.a`
   background-color: ${COLORS.background1};
   border-bottom: ${({ noBorder }) =>
     noBorder ? null : `${pxToRem(1)} solid ${COLORS.line1}`};
-  outline: none;
 
   ${TYPOGRAPHY.fontStyles.regular}
   color: ${COLORS.font1};
   line-height: 1;
   font-size: ${pxToRem(14)};
   text-decoration: none;
+
+  &:focus {
+    outline-offset: ${pxToRem(-3)};
+  }
 
   ${({ borderSide }) =>
     borderSide
