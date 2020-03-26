@@ -31,7 +31,7 @@ storiesOf('Meters/Spinner', module)
               <SpinnerProgress
                 color={color('Color', COLORS.primary2)}
                 value={number('Value', 40)}
-                rampProps={{ style: { width: 70, height: 70 } }}
+                // rampProps={{ style: { width: 50, height: 50 } }}
               />
               <StyledText size="micro" color="font1" weight="regular">
                 Financé à …%

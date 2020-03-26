@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const circleRadius = 30
+const circleRadius = 20
 const dashLength = `calc(2 * 3.141592 * ${pxToRem(circleRadius)})`
 
 const rotateAnimate = keyframes`
@@ -32,7 +32,7 @@ const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
 
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
-  animation: ${rotateAnimate} 3s ease-out;
+  animation: ${rotateAnimate} 1.4s ease-out;
 `
 
 const StyledCircleBackground = styled.circle`
@@ -41,33 +41,52 @@ const StyledCircleBackground = styled.circle`
   stroke-width: ${pxToRem(4)};
 `
 
-export const SpinnerProgress = ({ color, value, rampProps, ...others }) => (
-  <svg
-    {...rampProps}
-    width="70"
-    height="70"
-    viewBox="0 0 70 70"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <StyledCircleBackground cx="35" cy="35" r={circleRadius} />
-    <StyledCircle
-      progressColor={color}
-      progressValue={value}
-      cx="35"
-      cy="35"
-      r={circleRadius}
-    />
-  </svg>
-)
+export const SpinnerProgress = ({
+  color,
+  value,
+  width,
+  height,
+  rampProps,
+  ...others
+}) => {
+  const circleX = `calc( ${width} / 2 )`
+  const circleY = `calc( ${height} / 2 )`
+  const circleRadius = `calc( ${circleX} - 5)`
+
+  const viewBox = `0 0 ${width} ${height}`
+
+  return (
+    <svg
+      {...rampProps}
+      width={width}
+      height={height}
+      viewBox={viewBox}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <StyledCircleBackground cx={circleX} cy={circleY} r={circleRadius} />
+      <StyledCircle
+        progressColor={color}
+        progressValue={value}
+        cx={circleX}
+        cy={circleY}
+        r={circleRadius}
+      />
+    </svg>
+  )
+}
 
 SpinnerProgress.defaultProps = {
   color: COLORS.primary1,
   value: '',
   rampProps: {},
+  width: 50,
+  height: 50,
 }
 
 SpinnerProgress.PropTypes = {
   color: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rampProps: PropTypes.object,
+  width: PropTypes.number,
+  height: PropTypes.number,
 }
