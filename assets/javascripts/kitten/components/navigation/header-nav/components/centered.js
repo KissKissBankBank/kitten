@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 export const Centered = ({ children, className, display, ...props }) => {
-  const classNameProps = [
-    className,
-    display === 'column' ? 'k-HeaderNav--column' : null,
+  const classNameProps = classNames(
     'k-HeaderNav--centered',
-  ].join(' ')
+    { 'k-HeaderNav--column': display === 'column' },
+    className,
+  )
 
   return (
     <div {...props} className={classNameProps}>

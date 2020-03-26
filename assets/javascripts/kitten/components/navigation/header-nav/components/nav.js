@@ -2,9 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const Item = ({ children, href, className, ...others }) => (
+const Item = ({ children, href, className, ...props }) => (
   <li className="k-HeaderNav-nav__element" role="menuitem">
-    <a href={href} className={`k-HeaderNav-nav__item ${className}`} {...others}>
+    <a
+      {...props}
+      href={href}
+      className={classNames('k-HeaderNav-nav__item', className)}
+    >
       {children}
     </a>
   </li>
@@ -15,8 +19,12 @@ Item.proptypes = {
   children: PropTypes.node.isRequired,
 }
 
-export const Nav = ({ children, className }) => (
-  <ul role="menubar" className={classNames('k-HeaderNav-nav', className)}>
+export const Nav = ({ children, className, ...props }) => (
+  <ul
+    {...props}
+    role="menubar"
+    className={classNames('k-HeaderNav-nav', className)}
+  >
     {children}
   </ul>
 )

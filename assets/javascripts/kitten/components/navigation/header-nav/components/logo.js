@@ -5,9 +5,9 @@ export const Logo = ({ className = '', children, ...props }) => (
   <Context.Consumer>
     {({ id }) => (
       <a
+        {...props}
         id={`${id}Logo`}
         className={`k-HeaderNav-Logo ${className}`.trim()}
-        {...props}
       >
         {children}
       </a>
