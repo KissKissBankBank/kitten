@@ -4,9 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `.k-u-avoid-click` utility.
 - Feature: Create `HeaderNav` components.
 - Feature: Create `AvatarWithTextAndBadge` components.
+- Feature: Create a11y helper.
+- Feature: Add keyboard key code and event name in `event.js`.
+- Feature: Add `.k-u-avoid-click` utility.
+- Feature: Add a11y events to `DropdownButton` component.
 - Fix: Fix `Dropdown` components events and accessibility.
 
 ## [2.60.1] - 2020-03-25
