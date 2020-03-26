@@ -5,15 +5,14 @@ import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const circleRadius = 20
-const dashLength = `calc(2 * 3.141592 * ${pxToRem(circleRadius)})`
+const getDashLength = radius => `calc(2 * ${Math.PI} * ${pxToRem(radius)})`
 
-const rotateAnimate = keyframes`
+const rotateAnimate = radius => keyframes`
   from {
-    stroke-dashoffset: ${dashLength};
+    stroke-dashoffset: ${getDashLength(radius)};
   }
   to {
-    stroke-dashoffset: calc(${dashLength} * ${({ progressValue }) =>
+    stroke-dashoffset: calc(${getDashLength(radius)} * ${({ progressValue }) =>
   100 - progressValue} / 100);
   }
 `
@@ -24,9 +23,10 @@ const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
   fill: transparent;
   stroke-width: ${pxToRem(4)};
   stroke-linecap: butt;
-  stroke-dasharray: ${dashLength};
+  stroke-dasharray: ${({ radius }) => getDashLength(radius)};
   stroke-dashoffset: calc(
-    ${dashLength} * ${({ progressValue }) => 100 - progressValue} / 100
+    ${({ radius }) => getDashLength(radius)} *
+      ${({ progressValue }) => 100 - progressValue} / 100
   );
   stroke: ${({ progressColor }) => progressColor};
 
@@ -49,9 +49,9 @@ export const Spinner = ({
   rampProps,
   ...others
 }) => {
-  const circleX = `calc( ${width} / 2 )`
-  const circleY = `calc( ${height} / 2 )`
-  const circleRadius = `calc( ${circleX} - 5)`
+  const circleX = width / 2
+  const circleY = height / 2
+  const radius = circleX - 5
 
   const viewBox = `0 0 ${width} ${height}`
 
@@ -63,13 +63,13 @@ export const Spinner = ({
       viewBox={viewBox}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <StyledCircleBackground cx={circleX} cy={circleY} r={circleRadius} />
+      <StyledCircleBackground cx={circleX} cy={circleY} r={radius} />
       <StyledCircle
         progressColor={color}
         progressValue={value}
         cx={circleX}
         cy={circleY}
-        r={circleRadius}
+        r={radius}
       />
     </svg>
   )
@@ -81,7 +81,7 @@ Spinner.defaultProps = {
   rampProps: {},
   width: 50,
   height: 50,
-  circleRadius: 20,
+  radius: 20,
 }
 
 Spinner.PropTypes = {
@@ -90,5 +90,5 @@ Spinner.PropTypes = {
   rampProps: PropTypes.object,
   width: PropTypes.number,
   height: PropTypes.number,
-  circleRadius: PropTypes.number,
+  radius: PropTypes.number,
 }
