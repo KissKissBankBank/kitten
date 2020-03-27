@@ -11,6 +11,10 @@ import { Button } from '../../../../components/buttons/button/button'
 const ButtonContainer = styled.div`
   padding: ${pxToRem(20)};
   background-color: ${COLORS.background1};
+
+  a:focus {
+    outline: ${pxToRem(5)} auto -webkit-focus-ring-color;
+  }
 `
 
 const StyledItem = styled.a`

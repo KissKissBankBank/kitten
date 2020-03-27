@@ -29,9 +29,6 @@ const InnerBurgerMenu = () => (
       Vos questions
     </HeaderMenu.Item>
     <HeaderMenu.Item href="#">Blog</HeaderMenu.Item>
-    <HeaderMenu.Item button modifier="helium" href="#">
-      Mon projet en cours
-    </HeaderMenu.Item>
     <HeaderMenu.Item external href="#">
       <LendopolisLogo primaryColor="#000" />
     </HeaderMenu.Item>
@@ -57,7 +54,9 @@ const InnerUserMenu = () => (
     <HeaderMenu.Item href="#">Mes contributions</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Mes messages</HeaderMenu.Item>
     <HeaderMenu.Item href="#">Modifier mon profil</HeaderMenu.Item>
-    <HeaderMenu.Item href="#">Mon projet en cours</HeaderMenu.Item>
+    <HeaderMenu.Item button modifier="helium" href="#">
+      Mon projet en cours
+    </HeaderMenu.Item>
     <HeaderMenu.Item
       href="#"
       className="k-u-background-color-background3--important"
