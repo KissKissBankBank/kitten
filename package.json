@@ -67,7 +67,7 @@
     "@storybook/addon-a11y": "5.2.8",
     "@storybook/addon-actions": "5.2.8",
     "@storybook/addon-docs": "5.3.17",
-    "@storybook/addon-info": "5.2.8",
+    "@storybook/addon-info": "5.3.17",
     "@storybook/addon-knobs": "5.2.8",
     "@storybook/addon-links": "5.2.8",
     "@storybook/addon-viewport": "5.2.8",
@@ -75,6 +75,7 @@
     "@storybook/react": "5.2.8",
     "@storybook/storybook-deployer": "2.8.1",
     "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "10.1.0",
     "babel-jest": "24.9.0",
     "babel-loader": "8.0.6",
     "babel-plugin-styled-components": "1.10.6",
@@ -84,6 +85,10 @@
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.15.1",
     "enzyme-to-json": "3.4.3",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.10.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-react": "7.19.0",
     "file-loader": "5.0.2",
     "htmlprocessor": "0.2.6",
     "husky": "3.1.0",
@@ -126,11 +131,12 @@
     "clean:src": "rm -rf src/components src/config src/constants src/handlers src/helpers src/hoc",
     "build": "npm run build:js && npm run build:css",
     "build:js": "npm run clean:src && babel assets/javascripts/kitten/ -d src --ignore 'assets/**/*.test.js','assets/**/test.js','assets/**/*.stories.js','assets/**/stories.js','assets/**/__mocks__/*.js','assets/javascripts/kitten/karl'",
-    "build:css": "webpack --config webpack.config.sass.js"
+    "build:css": "webpack --config webpack.config.sass.js",
+    "eslint": "eslint --fix assets/javascripts/**"
   },
   "lint-staged": {
     "assets/**/*.js": [
-      "prettier --single-quote --no-semi --trailing-comma all --write",
+      "eslint --fix ",
       "git add"
     ]
   },
