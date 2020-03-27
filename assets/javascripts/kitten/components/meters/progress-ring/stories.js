@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, number, color } from '@storybook/addon-knobs'
-import { Spinner } from './index'
+import { ProgressRing } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -19,7 +19,7 @@ const StyledText = styled(Text)`
   align-self: center;
 `
 
-storiesOf('Meters/Spinner', module)
+storiesOf('Meters/ProgressRing', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
   .add('default', () => (
@@ -28,7 +28,7 @@ storiesOf('Meters/Spinner', module)
         <Grid>
           <GridCol col={4}>
             <StyledContainer>
-              <Spinner
+              <ProgressRing
                 color={color('Color', COLORS.primary2)}
                 value={number('Value', 40)}
                 width={number('Width', 60)}

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
-import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
@@ -40,7 +39,7 @@ const StyledCircleBackground = styled.circle`
   stroke-width: ${({ strokeWidth }) => pxToRem(strokeWidth)};
 `
 
-export const Spinner = ({
+export const ProgressRing = ({
   color,
   value,
   width,
@@ -51,7 +50,7 @@ export const Spinner = ({
   const circleX = width / 2
   const circleY = width / 2
 
-  const radius = circleX - 5
+  const radius = circleX - strokeWidth
 
   const viewBox = `0 0 ${width} ${width}`
 
@@ -81,7 +80,7 @@ export const Spinner = ({
   )
 }
 
-Spinner.defaultProps = {
+ProgressRing.defaultProps = {
   color: COLORS.primary1,
   value: '',
   svgProps: {},
@@ -90,7 +89,7 @@ Spinner.defaultProps = {
   strokeWidth: 5,
 }
 
-Spinner.PropTypes = {
+ProgressRing.propTypes = {
   color: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   svgProps: PropTypes.object,

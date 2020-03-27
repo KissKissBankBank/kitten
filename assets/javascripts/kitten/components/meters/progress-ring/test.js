@@ -1,26 +1,16 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Spinner } from './index'
+import { ProgressRing } from './index'
 import COLORS from '../../../constants/colors-config'
 
-describe('<Spinner />', () => {
+describe('<ProgressRing />', () => {
   let component
 
-  describe('simple Spinner ', () => {
-    beforeEach(() => {
-      component = renderer.create(<Spinner />).toJSON()
-    })
-
-    it('matches with snapshot', () => {
-      expect(component).toMatchSnapshot()
-    })
-  })
-
-  describe('Spinner with multiple props', () => {
+  describe('by default', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Spinner
+          <ProgressRing
             color={COLORS.primary1}
             value={50}
             width={50}
