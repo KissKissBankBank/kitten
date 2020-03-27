@@ -21,15 +21,21 @@ const getComputedLeft = id =>
 const InnerBurgerMenu = () => (
   <HeaderMenu borderSide="right" borderSideOnHover={false} largeItem noBorder>
     <HeaderNav.Hidden min="l">
-      <HeaderMenu.Item href="#">Comment investir</HeaderMenu.Item>
-      <HeaderMenu.Item href="#">Découvrez les projets</HeaderMenu.Item>
+      <HeaderMenu.Item href="#comment_investir">
+        Comment investir
+      </HeaderMenu.Item>
+      <HeaderMenu.Item href="#decouvrez_les_projets">
+        Découvrez les projets
+      </HeaderMenu.Item>
     </HeaderNav.Hidden>
 
-    <HeaderMenu.Item href="#">Comment emprunter</HeaderMenu.Item>
-    <HeaderMenu.Item href="#" isSelected>
+    <HeaderMenu.Item href="#comment_emprunter">
+      Comment emprunter
+    </HeaderMenu.Item>
+    <HeaderMenu.Item href="#a_propos" isSelected>
       À propos
     </HeaderMenu.Item>
-    <HeaderMenu.Item href="#">Blog</HeaderMenu.Item>
+    <HeaderMenu.Item href="#blog">Blog</HeaderMenu.Item>
     <HeaderMenu.Item external href="#">
       <KissKissBankBankLogo />
     </HeaderMenu.Item>

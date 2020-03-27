@@ -26,7 +26,13 @@ import {
   getFocusableElementsFrom,
   keyboardNavigation,
 } from '../../../helpers/dom/a11y'
-import domEvents from '../../../helpers/dom/events'
+import domEvents, {
+  DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
+  DROPDOWN_LAST_FOCUS_REACHED_EVENT,
+  TOGGLE_DROPDOWN_EVENT,
+  dispatchEvent,
+} from '../../../helpers/dom/events'
+import emitter from '../../../helpers/utils/emitter'
 
 const StyledStickyContainer = styled(StickyContainer)`
   ${({ isMenuExpanded }) =>
@@ -75,28 +81,51 @@ const HeaderNav = ({
   quickAccessProps,
   zIndexConfig,
 }) => {
-  const [isLoggedState, setIsLogged] = useState(isLogged)
-  const [idState, setId] = useState(id)
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const [menuExpandBy, setMenuExpandBy] = useState(null)
   const stickyContainerRef = useRef(null)
   const headerRef = useRef(null)
 
-  useEffect(() => {
-    setIsLogged(isLogged)
-  }, [isLogged])
+  const focusDropdown = ({ detail: dropdown }) => {
+    dropdown.focus()
+    emitter.emit(TOGGLE_DROPDOWN_EVENT, false)
+  }
 
-  useEffect(() => {
-    setId(idState)
-  }, [id])
+  const focusElementNextToDropdown = ({ detail: dropdown }) => {
+    if (!headerRef.current) return
+    const focusableElements = getFocusableElementsFrom(headerRef.current)
+
+    if (focusableElements.length < 1) return
+
+    const currentElementIndex = focusableElements.indexOf(
+      document.activeElement,
+    )
+    const nextElement = focusableElements[currentElementIndex + 1] || dropdown
+
+    nextElement.focus()
+    emitter.emit(TOGGLE_DROPDOWN_EVENT, false)
+  }
 
   useEffect(() => {
     if (!headerRef.current) return
 
     headerRef.current.addEventListener('keydown', handleKeyboardNavigation)
+    window.addEventListener(DROPDOWN_FIRST_FOCUS_REACHED_EVENT, focusDropdown)
+    window.addEventListener(
+      DROPDOWN_LAST_FOCUS_REACHED_EVENT,
+      focusElementNextToDropdown,
+    )
 
     return () => {
       headerRef.current.removeEventListener('keydown', handleKeyboardNavigation)
+      window.removeEventListener(
+        DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
+        focusDropdown,
+      )
+      window.removeEventListener(
+        DROPDOWN_LAST_FOCUS_REACHED_EVENT,
+        focusElementNextToDropdown,
+      )
     }
   }, [isMenuExpanded])
 
@@ -131,8 +160,8 @@ const HeaderNav = ({
   return (
     <Context.Provider
       value={{
-        isLogged: isLoggedState,
-        id: idState,
+        isLogged,
+        id,
         expandBy: menuExpandBy,
         callOnToggle,
       }}
@@ -146,7 +175,7 @@ const HeaderNav = ({
           <Navigation
             ref={headerRef}
             role="banner"
-            id={idState}
+            id={id}
             className="k-HeaderNav"
             updateBackground={updateHeaderBackground()}
           >

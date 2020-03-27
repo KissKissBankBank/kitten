@@ -5,7 +5,7 @@ import { DropdownButton } from '../../components/dropdowns/dropdown-button'
 import domElementHelper from '../../helpers/dom/element-helper'
 import emitter from '../../helpers/utils/emitter'
 import classNames from 'classnames'
-import { OPENING_DROPDOWN_EVENT } from '../../helpers/dom/events'
+import { TOGGLE_DROPDOWN_EVENT } from '../../helpers/dom/events'
 
 export class PhoneDropdown extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ export class PhoneDropdown extends React.Component {
   componentDidMount() {
     this.handlePositionUpdate()
 
-    emitter.on(OPENING_DROPDOWN_EVENT, this.handleOtherDropdownsOpening)
+    emitter.on(TOGGLE_DROPDOWN_EVENT, this.handleOtherDropdownsOpening)
     emitter.on('element:update', this.handlePositionUpdate)
 
     if (this.props.closeEvents) {
@@ -45,7 +45,7 @@ export class PhoneDropdown extends React.Component {
       })
     }
 
-    emitter.off(OPENING_DROPDOWN_EVENT, this.handleOtherDropdownsOpening)
+    emitter.off(TOGGLE_DROPDOWN_EVENT, this.handleOtherDropdownsOpening)
     emitter.off('element:update', this.handlePositionUpdate)
   }
 

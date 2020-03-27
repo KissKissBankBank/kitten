@@ -6,7 +6,12 @@ import emitter from '../../helpers/utils/emitter'
 import { DropdownButton } from '../../components/dropdowns/dropdown-button'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import domElementHelper from '../../helpers/dom/element-helper'
-import domEvents, { OPENING_DROPDOWN_EVENT } from '../../helpers/dom/events'
+import domEvents, {
+  TOGGLE_DROPDOWN_EVENT,
+  DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
+  DROPDOWN_LAST_FOCUS_REACHED_EVENT,
+  dispatchEvent,
+} from '../../helpers/dom/events'
 import {
   getFocusableElementsFrom,
   keyboardNavigation,
@@ -44,7 +49,7 @@ export const Dropdown = React.forwardRef(
     const dropdownContentRef = useRef(null)
     const arrowRef = useRef(null)
     const dropdownButtonRef = useRef(null)
-    const [isExpandedState, setIsExpanded] = useState(false)
+    const [isExpandedState, setIsExpanded] = useState(isExpanded)
     const [
       verticalReferenceElementState,
       setVerticalReferenceElement,
@@ -61,13 +66,11 @@ export const Dropdown = React.forwardRef(
       keyCode === keyboard.esc ? toggle(false) : null
 
     const dropdownOnUpAndDown = ({ keyCode }) => {
-      if (keyCode === keyboard.down) return toggle(true)
-      if (keyCode === keyboard.up) return toggle(false)
+      if (keyCode === keyboard.down) toggle(true)
+      if (keyCode === keyboard.up) toggle(false)
     }
 
     const blur = event => {
-      console.log('blur', event)
-
       event.target.blur()
     }
 
@@ -75,7 +78,7 @@ export const Dropdown = React.forwardRef(
       handleDropdownPosition()
       handleClickOnLinks()
 
-      emitter.on(OPENING_DROPDOWN_EVENT, closeDropdown)
+      emitter.on(TOGGLE_DROPDOWN_EVENT, toggle)
 
       if (refreshEvents) {
         refreshEvents.forEach(ev => {
@@ -102,7 +105,7 @@ export const Dropdown = React.forwardRef(
       return () => {
         revertHandleClickOnLinks()
 
-        emitter.off(OPENING_DROPDOWN_EVENT, closeDropdown)
+        emitter.off(TOGGLE_DROPDOWN_EVENT, toggle)
 
         if (refreshEvents) {
           refreshEvents.forEach(ev => {
@@ -125,28 +128,51 @@ export const Dropdown = React.forwardRef(
       }
     }, [])
 
-    const manageA11y = ({ keyCode }) => {
+    const manageA11yOn = event => {
+      event.stopPropagation()
+      event.preventDefault()
       const focusableElements = getFocusableElementsFrom(
         dropdownContentRef.current,
-        { force: 'all' },
       )
+      const kbdNav = keyboardNavigation(focusableElements, {
+        events: {
+          prev: DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
+          next: DROPDOWN_LAST_FOCUS_REACHED_EVENT,
+        },
+        triggeredElement: dropdownButtonRef.current,
+      })
+      const { tab, up, down, esc } = keyboard
+      const backwardTab = event.shiftKey && event.keyCode === tab
 
-      console.log('focus first', focusableElements[0])
-      console.log('focusableElements', focusableElements)
-
-      focusableElements[0].focus()
-
-      const kbdNav = keyboardNavigation(focusableElements)
-
-      if (keyCode === keyboard.up) return kbdNav.prev()
-      if (keyCode === keyboard.down) return kbdNav.next()
+      if (event.keyCode === esc) return toggle(false)
+      if (backwardTab || event.keyCode === up) {
+        return kbdNav.prev()
+      }
+      if (!event.shiftKey && [down, tab].includes(event.keyCode)) {
+        return kbdNav.next()
+      }
     }
 
     useEffect(() => {
-      if (isExpanded != isExpandedState) {
-        toggle(isExpanded)
+      let focusableElements
+
+      if (isExpandedState) {
+        setTimeout(() => {
+          const focusableElements = getFocusableElementsFrom(
+            dropdownContentRef.current,
+          )
+
+          if (focusableElements.length > 0) {
+            focusableElements[0].focus()
+            dropdownContentRef.current.addEventListener('keydown', manageA11yOn)
+          }
+        }, 200) // As the dropdown content is display after 200ms
       }
-    }, [isExpanded])
+
+      return () => {
+        dropdownContentRef.current.removeEventListener('keydown', manageA11yOn)
+      }
+    }, [isExpandedState])
 
     useEffect(() => {
       if (!closeOnOuterClick || !isExpandedState) return
@@ -164,19 +190,11 @@ export const Dropdown = React.forwardRef(
       }
     }, [closeOnOuterClick, isExpandedState])
 
-    const closeDropdown = () => {
-      setIsExpanded(false)
+    const closeDropdown = state => {
+      toggle(false)
     }
 
     const toggle = nextExpandedState => {
-      if (nextExpandedState) {
-        emitter.emit(OPENING_DROPDOWN_EVENT)
-
-        dropdownButtonRef.current.addEventListener('keydown', manageA11y)
-      } else {
-        dropdownButtonRef.current.removeEventListener('keydown', manageA11y)
-      }
-
       setIsExpanded(nextExpandedState)
       onToggle({
         isExpanded: nextExpandedState,
@@ -373,6 +391,8 @@ Dropdown.defaultProps = {
   // Button settings
   buttonContentOnExpanded: 'Close me',
   buttonContentOnCollapsed: 'Expand me',
+
+  isExpanded: false,
 
   // List of events that will trigger the update of the reference element
   // height.

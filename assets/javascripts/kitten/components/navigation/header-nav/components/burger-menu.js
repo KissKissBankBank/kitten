@@ -3,6 +3,7 @@ import { BurgerIcon } from '../../../../components/icons/burger-icon'
 import { Dropdown } from '../../../../components/dropdowns/dropdown'
 import COLORS from '../../../../constants/colors-config'
 import { Context } from './context'
+import classNames from 'classnames'
 
 const namespace = 'kkbbAndCo'
 const DROPDOWN_CLASS = `${namespace}-PlatformMenu`
@@ -16,11 +17,11 @@ const ButtonIcon = props => (
   />
 )
 
-const buttonClassNames = [
+const buttonClassNames = classNames(
   'k-Dropdown__button',
   'k-ButtonIcon',
   'k-ButtonIcon--tiny',
-].join(' ')
+)
 
 export const BurgerMenu = ({ children, dropdownContentWidth, ...props }) => {
   const dropdownComponent = useRef(null)
@@ -30,22 +31,21 @@ export const BurgerMenu = ({ children, dropdownContentWidth, ...props }) => {
     <Context.Consumer>
       {({ id, callOnToggle }) => (
         <Dropdown
-          ref={dropdownComponent}
-          className={DROPDOWN_CLASS}
-          positionedWithBorder
-          positionedVerticallyWith={getElementById(id)}
-          buttonId={`${id}PlateformMenu`}
+          {...props}
           buttonClassName={buttonClassNames}
-          buttonContentOnExpanded={<ButtonIcon isActive />}
           buttonContentOnCollapsed={<ButtonIcon isAnimatedOnHover={true} />}
+          buttonContentOnExpanded={<ButtonIcon isActive />}
+          buttonId={`${id}PlateformMenu`}
+          className={DROPDOWN_CLASS}
+          closeEvents={[CLOSE_EVENT]}
+          closeOnOuterClick={true}
           dropdownContent={children}
           dropdownContentWidth={dropdownContentWidth}
-          closeEvents={[CLOSE_EVENT]}
-          isExpanded={false}
-          refreshEvents={['resize']}
           onToggle={callOnToggle}
-          closeOnOuterClick={true}
-          {...props}
+          positionedVerticallyWith={getElementById(id)}
+          positionedWithBorder
+          ref={dropdownComponent}
+          refreshEvents={['resize']}
         />
       )}
     </Context.Consumer>

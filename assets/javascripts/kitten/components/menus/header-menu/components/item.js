@@ -151,6 +151,7 @@ export const Item = ({
   liProps,
   modifier,
   button,
+  isSelected,
   ...other
 }) => (
   <Context.Consumer>
@@ -190,7 +191,9 @@ export const Item = ({
 
         {!(external || button) && (
           <StyledItem
-            href={href}
+            href={isSelected ? null : href}
+            as={isSelected ? 'span' : null}
+            isSelected={isSelected}
             borderSide={borderSide}
             borderSideOnHover={borderSideOnHover}
             external={external}

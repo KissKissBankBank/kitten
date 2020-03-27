@@ -1,5 +1,6 @@
 import React from 'react'
 import { Context } from './context'
+import classNames from 'classnames'
 
 export const Logo = ({ className = '', children, ...props }) => (
   <Context.Consumer>
@@ -7,7 +8,7 @@ export const Logo = ({ className = '', children, ...props }) => (
       <a
         {...props}
         id={`${id}Logo`}
-        className={`k-HeaderNav-Logo ${className}`.trim()}
+        className={classNames('k-HeaderNav-Logo', className)}
       >
         {children}
       </a>

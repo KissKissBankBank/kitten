@@ -34,22 +34,21 @@ export const UserMenu = ({
     <Context.Consumer>
       {({ id, callOnToggle }) => (
         <Dropdown
-          ref={userDropdownRef}
-          className={DROPDOWN_CLASS}
-          keepInitialButtonAction
-          positionedVerticallyWith={getElementById(id)}
-          positionedHorizontallyWith={getElementById(getButtonId(id))}
-          buttonId={getButtonId(id)}
+          {...props}
           button={button}
           buttonClassName={buttonClassName}
+          buttonId={getButtonId(id)}
+          className={DROPDOWN_CLASS}
+          closeEvents={[CLOSE_EVENT]}
+          closeOnOuterClick
           dropdownContent={navigation}
           dropdownContentWidth={dropdownContentWidth}
-          closeEvents={[CLOSE_EVENT]}
-          isExpanded={false}
-          refreshEvents={['resize']}
+          keepInitialButtonAction
           onToggle={callOnToggle}
-          closeOnOuterClick={true}
-          {...props}
+          positionedHorizontallyWith={getElementById(getButtonId(id))}
+          positionedVerticallyWith={getElementById(id)}
+          ref={userDropdownRef}
+          refreshEvents={['resize']}
         />
       )}
     </Context.Consumer>

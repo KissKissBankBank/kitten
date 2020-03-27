@@ -6,7 +6,7 @@ import { ButtonImageWithTextAndBadge } from '../../components/buttons/button-ima
 import { NavList } from '../../components/lists/nav-list'
 import domElementHelper from '../../helpers/dom/element-helper'
 import emitter from '../../helpers/utils/emitter'
-import { OPENING_DROPDOWN_EVENT } from '../../helpers/dom/events'
+import { TOGGLE_DROPDOWN_EVENT } from '../../helpers/dom/events'
 
 export class UserMenu extends Component {
   constructor(props) {
@@ -28,7 +28,7 @@ export class UserMenu extends Component {
   componentDidMount() {
     this.handlePositionUpdate()
 
-    emitter.on(OPENING_DROPDOWN_EVENT, this.handleOtherDropdownsOpening)
+    emitter.on(TOGGLE_DROPDOWN_EVENT, this.handleOtherDropdownsOpening)
 
     if (this.props.closeEvents) {
       this.props.closeEvents.forEach(ev => {
@@ -38,7 +38,7 @@ export class UserMenu extends Component {
   }
 
   componentWillUnmount() {
-    emitter.off(OPENING_DROPDOWN_EVENT, this.handleOtherDropdownsOpening)
+    emitter.off(TOGGLE_DROPDOWN_EVENT, this.handleOtherDropdownsOpening)
 
     if (this.props.closeEvents) {
       this.props.closeEvents.forEach(ev => {
