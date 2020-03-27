@@ -399,12 +399,12 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   <li
     role="menuitem"
   >
-    <a
+    <span
       className="c2"
-      href="#"
+      href={null}
     >
       Item 2
-    </a>
+    </span>
   </li>
   <li
     role="menuitem"
