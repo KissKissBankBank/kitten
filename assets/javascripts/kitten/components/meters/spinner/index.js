@@ -21,7 +21,7 @@ const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
   <circle {...props} />
 ))`
   fill: transparent;
-  stroke-width: ${pxToRem(4)};
+  stroke-width: ${({ strokeWidth }) => pxToRem(strokeWidth)};
   stroke-linecap: butt;
   stroke-dasharray: ${({ radius }) => getDashLength(radius)};
   stroke-dashoffset: calc(
@@ -38,7 +38,7 @@ const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
 const StyledCircleBackground = styled.circle`
   fill: transparent;
   stroke: ${COLORS.line1};
-  stroke-width: ${pxToRem(4)};
+  stroke-width: ${({ strokeWidth }) => pxToRem(strokeWidth)};
 `
 
 export const Spinner = ({
@@ -46,12 +46,13 @@ export const Spinner = ({
   value,
   width,
   height,
+  radius,
+  strokeWidth,
   rampProps,
   ...others
 }) => {
   const circleX = width / 2
   const circleY = height / 2
-  const radius = circleX - 5
 
   const viewBox = `0 0 ${width} ${height}`
 
@@ -63,13 +64,19 @@ export const Spinner = ({
       viewBox={viewBox}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <StyledCircleBackground cx={circleX} cy={circleY} r={radius} />
+      <StyledCircleBackground
+        cx={circleX}
+        cy={circleY}
+        r={radius}
+        strokeWidth={strokeWidth}
+      />
       <StyledCircle
         progressColor={color}
         progressValue={value}
         cx={circleX}
         cy={circleY}
         r={radius}
+        strokeWidth={strokeWidth}
       />
     </svg>
   )
@@ -82,6 +89,7 @@ Spinner.defaultProps = {
   width: 50,
   height: 50,
   radius: 20,
+  strokeWidth: 5,
 }
 
 Spinner.PropTypes = {
@@ -91,4 +99,5 @@ Spinner.PropTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   radius: PropTypes.number,
+  strokeWidth: PropTypes.number,
 }

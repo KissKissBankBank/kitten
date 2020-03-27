@@ -19,7 +19,15 @@ describe('<Spinner />', () => {
   describe('Spinner with multiple props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<Spinner color={COLORS.primary1} value={50} />)
+        .create(
+          <Spinner
+            color={COLORS.primary1}
+            value={50}
+            width={50}
+            height={50}
+            strokeWidth={5}
+          />,
+        )
         .toJSON()
     })
 
