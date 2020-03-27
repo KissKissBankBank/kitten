@@ -210,7 +210,7 @@ export const Dropdown = React.forwardRef(
       }
     }, [closeOnOuterClick, isExpandedState])
 
-    const closeDropdown = state => {
+    const closeDropdown = () => {
       toggle(false)
     }
 

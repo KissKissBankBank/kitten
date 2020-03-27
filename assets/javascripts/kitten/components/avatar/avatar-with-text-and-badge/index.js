@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { Text as KittenText } from '../../../components/typography/text'
@@ -6,6 +7,17 @@ import { VisuallyHidden } from '../../../components/accessibility/visually-hidde
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { getReactElementsByType } from '../../../helpers/react/react-elements'
+
+const WithoutAvatar = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: ${({ color }) => color};
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+`
 
 const Image = ({
   src,
@@ -36,21 +48,16 @@ const Image = ({
             alt={alt}
           />
         ) : (
-          <span
-            style={{
-              color: textColor,
-              backgroundColor: backgroundColor,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: width,
-              height: height,
-            }}
+          <WithoutAvatar
+            color={textColor}
+            backgroundColor={backgroundColor}
+            width={width}
+            height={height}
           >
             <KittenText size="micro" weight="regular">
               {text}
             </KittenText>
-          </span>
+          </WithoutAvatar>
         )}
       </span>
       {badge}

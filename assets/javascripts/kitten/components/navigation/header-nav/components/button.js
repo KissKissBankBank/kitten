@@ -132,8 +132,8 @@ export const Button = ({
   const marginLeftMax = max
     ? `${singleRightMargin}@${nextScreenSize.toLowerCase()}-up--important`
     : ''
-  const classNameText = `${hiddenMin} ${hiddenMax}`.trim()
-  const classNameIcon = `${marginLeftMin} ${marginLeftMax}`.trim()
+  const textClassName = `${hiddenMin} ${hiddenMax}`.trim()
+  const iconClassName = `${marginLeftMin} ${marginLeftMax}`.trim()
   const mediaQuery = (min || max) && {
     min: min && `max-width: ${ScreenConfig[previousScreenSize].max}px`,
     max: max && `min-width: ${ScreenConfig[nextScreenSize].min}px`,
@@ -156,10 +156,10 @@ export const Button = ({
       icon={icon}
       text={text}
     >
-      {icon && React.cloneElement(icon, { className: classNameIcon })}
+      {icon && React.cloneElement(icon, { className: iconClassName })}
 
-      {text && classNameText ? (
-        <span className={classNameText}>{text}</span>
+      {text && textClassName ? (
+        <span className={textClassName}>{text}</span>
       ) : (
         text
       )}
