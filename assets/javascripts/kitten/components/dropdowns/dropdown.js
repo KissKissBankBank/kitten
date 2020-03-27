@@ -16,6 +16,7 @@ import {
   getFocusableElementsFrom,
   keyboardNavigation,
 } from '../../helpers/dom/a11y'
+import { DROPDOWN_ANIMATED_DELAY } from '../../constants/dropdown-config'
 
 export const Dropdown = React.forwardRef(
   (
@@ -185,7 +186,7 @@ export const Dropdown = React.forwardRef(
             focusableElements[0].focus()
             dropdownContentRef.current.addEventListener('keydown', manageA11yOn)
           }
-        }, 210) // As the dropdown content is display after 200ms
+        }, DROPDOWN_ANIMATED_DELAY)
       }
 
       return () => {

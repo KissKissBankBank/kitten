@@ -33,6 +33,7 @@ import domEvents, {
   dispatchEvent,
 } from '../../../helpers/dom/events'
 import emitter from '../../../helpers/utils/emitter'
+import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config'
 
 const StyledStickyContainer = styled(StickyContainer)`
   ${({ isMenuExpanded }) =>
@@ -105,7 +106,7 @@ const HeaderNav = ({
       const nextElement = focusableElements[currentElementIndex + 1] || dropdown
 
       nextElement.focus()
-    }, 210) // As the dropdown content is display after 200ms
+    }, DROPDOWN_ANIMATED_DELAY)
   }
 
   useEffect(() => {
