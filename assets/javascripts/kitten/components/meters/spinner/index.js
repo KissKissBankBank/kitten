@@ -29,7 +29,6 @@ const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
       ${({ progressValue }) => 100 - progressValue} / 100
   );
   stroke: ${({ progressColor }) => progressColor};
-
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   animation: ${rotateAnimate} 1.4s ease-out;
@@ -46,7 +45,7 @@ export const Spinner = ({
   value,
   width,
   strokeWidth,
-  rampProps,
+  svgProps,
   ...others
 }) => {
   const circleX = width / 2
@@ -58,7 +57,7 @@ export const Spinner = ({
 
   return (
     <svg
-      {...rampProps}
+      {...svgProps}
       width={width}
       height={width}
       viewBox={viewBox}
@@ -85,7 +84,7 @@ export const Spinner = ({
 Spinner.defaultProps = {
   color: COLORS.primary1,
   value: '',
-  rampProps: {},
+  svgProps: {},
   width: 50,
   radius: null,
   strokeWidth: 5,
@@ -94,7 +93,7 @@ Spinner.defaultProps = {
 Spinner.PropTypes = {
   color: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  rampProps: PropTypes.object,
+  svgProps: PropTypes.object,
   width: PropTypes.number,
   radius: PropTypes.number,
   strokeWidth: PropTypes.number,
