@@ -6,6 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `Spinner` component.
 
+## [2.60.2] - 2020-03-26
+
+Fix:
+- More performant `DoubleEntryTable` Component.
+
 ## [2.60.1] - 2020-03-25
 
 Fix:

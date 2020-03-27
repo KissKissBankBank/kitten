@@ -2,52 +2,42 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.DoubleEntryTable = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
+
+var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _header = require("./components/header");
+var _styles = require("./styles");
 
-var _col = require("./components/col");
-
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
-
-var _typography = require("../../../helpers/utils/typography");
-
-var _hexToRgba = require("../../../helpers/utils/hex-to-rgba");
-
-var _screenConfig = require("../../../constants/screen-config");
-
-var StyledContainer = _styledComponents.default.div.withConfig({
-  displayName: "double-entry-table__StyledContainer",
-  componentId: "sc-155z2j1-0"
-})(["position:relative;"]);
-
-var StyledTableContainer = _styledComponents.default.div.withConfig({
-  displayName: "double-entry-table__StyledTableContainer",
-  componentId: "sc-155z2j1-1"
-})(["overflow-x:scroll;margin-bottom:1.875rem;border-left:", " solid ", ";border-right:", " solid ", ";background:linear-gradient( to right,white 30%,", " ),linear-gradient(to left,white 30%,", "),radial-gradient( farthest-side at 0 50%,", ",", " ),radial-gradient( farthest-side at 100% 50%,", ",", " );background-repeat:no-repeat;background-size:", " 100%,", " 100%,", " 100%,", " 100%;background-position:", ",100%;background-attachment:local,local,scroll,scroll;@media screen and (min-width:0\0){background:", ";}@media (min-width:", "){background-position:", ",100%;}"], (0, _typography.pxToRem)(2), (0, _hexToRgba.hexToRgba)(_colorsConfig.default.background1, 0.0667), (0, _typography.pxToRem)(2), (0, _hexToRgba.hexToRgba)(_colorsConfig.default.background1, 0.0667), (0, _hexToRgba.hexToRgba)(_colorsConfig.default.background1, 0), (0, _hexToRgba.hexToRgba)(_colorsConfig.default.background1, 0), (0, _hexToRgba.hexToRgba)(_colorsConfig.default.font1, 0.2), (0, _hexToRgba.hexToRgba)(_colorsConfig.default.font1, 0), (0, _hexToRgba.hexToRgba)(_colorsConfig.default.font1, 0.2), (0, _hexToRgba.hexToRgba)(_colorsConfig.default.font1, 0), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(120), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(210));
-
-var StyledTable = _styledComponents.default.table.withConfig({
-  displayName: "double-entry-table__StyledTable",
-  componentId: "sc-155z2j1-2"
-})(["width:100%;border-spacing:0;table-layout:fixed;border-collapse:separate;@media screen and (min-width:0\0){border-collapse:collapse;}"]);
-
-var DoubleEntryTable = function DoubleEntryTable(props) {
-  return _react.default.createElement(StyledContainer, null, _react.default.createElement(StyledTableContainer, null, _react.default.createElement(StyledTable, props)));
+var DoubleEntryTable = function DoubleEntryTable(_ref) {
+  var firstColWidth = _ref.firstColWidth,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["firstColWidth"]);
+  return _react.default.createElement(_styles.Styles, {
+    className: "DoubleEntryTable__Container",
+    firstColWidth: firstColWidth
+  }, _react.default.createElement("div", {
+    className: "DoubleEntryTable__TableContainer"
+  }, _react.default.createElement("table", (0, _extends2.default)({
+    className: "DoubleEntryTable__Table"
+  }, props))));
 };
 
 exports.DoubleEntryTable = DoubleEntryTable;
-DoubleEntryTable.Header = _header.Header;
+
+DoubleEntryTable.Header = function (_ref2) {
+  var children = _ref2.children,
+      headerRowProps = _ref2.headerRowProps,
+      others = (0, _objectWithoutProperties2.default)(_ref2, ["children", "headerRowProps"]);
+  return _react.default.createElement("thead", others, _react.default.createElement("tr", headerRowProps, children));
+};
 
 DoubleEntryTable.Body = function (props) {
   return _react.default.createElement("tbody", props);
@@ -57,6 +47,29 @@ DoubleEntryTable.Row = function (props) {
   return _react.default.createElement("tr", props);
 };
 
-DoubleEntryTable.Col = _col.Col;
-DoubleEntryTable.HeaderCol = _col.HeaderCol;
-DoubleEntryTable.TitleCol = _col.TitleCol;
+DoubleEntryTable.Col = function (props) {
+  return _react.default.createElement("td", (0, _extends2.default)({
+    className: "DoubleEntryTable__Column DoubleEntryTable__Column--Col"
+  }, props));
+};
+
+DoubleEntryTable.HeaderCol = function (props) {
+  return _react.default.createElement("th", (0, _extends2.default)({
+    className: "DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol",
+    scope: "column"
+  }, props));
+};
+
+DoubleEntryTable.TitleCol = function (props) {
+  return _react.default.createElement("th", (0, _extends2.default)({
+    className: "DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol",
+    scope: "row"
+  }, props));
+};
+
+DoubleEntryTable.defaultProps = {
+  firstColWidth: 240
+};
+DoubleEntryTable.propTypes = {
+  firstColWidth: _propTypes.default.number
+};
