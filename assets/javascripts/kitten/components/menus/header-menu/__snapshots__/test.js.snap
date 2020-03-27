@@ -60,6 +60,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
     role="menuitem"
   >
     <a
+      aria-current={null}
       className="c1"
       href="#"
     >
@@ -70,6 +71,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
     role="menuitem"
   >
     <a
+      aria-current={null}
       className="c1"
       href="#"
     >
@@ -80,6 +82,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
     role="menuitem"
   >
     <a
+      aria-current={null}
       className="c1"
       href="#"
     >
@@ -242,6 +245,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
     role="menuitem"
   >
     <a
+      aria-current={null}
       className="c1"
       href="#"
     >
@@ -252,6 +256,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
     role="menuitem"
   >
     <a
+      aria-current={null}
       className="c1"
       href="#"
     >
@@ -390,6 +395,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
     role="menuitem"
   >
     <a
+      aria-current={null}
       className="c1"
       href="#"
     >
@@ -399,17 +405,19 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   <li
     role="menuitem"
   >
-    <span
+    <a
+      aria-current="page"
       className="c2"
-      href={null}
+      href="#"
     >
       Item 2
-    </span>
+    </a>
   </li>
   <li
     role="menuitem"
   >
     <a
+      aria-current={null}
       className="c1"
       href="#"
     >
@@ -514,6 +522,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
     role="menuitem"
   >
     <a
+      aria-current={null}
       className="c1"
       href="#"
     >
@@ -524,6 +533,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
     role="menuitem"
   >
     <a
+      aria-current={null}
       className="c2"
       href="#"
     >
@@ -535,6 +545,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
     role="menuitem"
   >
     <a
+      aria-current={null}
       className="c1"
       href="#"
     >

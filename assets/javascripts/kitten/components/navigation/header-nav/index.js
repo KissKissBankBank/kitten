@@ -87,23 +87,25 @@ const HeaderNav = ({
   const headerRef = useRef(null)
 
   const focusDropdown = ({ detail: dropdown }) => {
-    dropdown.focus()
     emitter.emit(TOGGLE_DROPDOWN_EVENT, false)
+    dropdown.focus()
   }
 
   const focusElementNextToDropdown = ({ detail: dropdown }) => {
-    if (!headerRef.current) return
-    const focusableElements = getFocusableElementsFrom(headerRef.current)
-
-    if (focusableElements.length < 1) return
-
-    const currentElementIndex = focusableElements.indexOf(
-      document.activeElement,
-    )
-    const nextElement = focusableElements[currentElementIndex + 1] || dropdown
-
-    nextElement.focus()
     emitter.emit(TOGGLE_DROPDOWN_EVENT, false)
+
+    if (!headerRef.current) return
+
+    setTimeout(() => {
+      const focusableElements = getFocusableElementsFrom(headerRef.current)
+
+      if (focusableElements.length < 1) return
+
+      const currentElementIndex = focusableElements.indexOf(dropdown)
+      const nextElement = focusableElements[currentElementIndex + 1] || dropdown
+
+      nextElement.focus()
+    }, 210) // As the dropdown content is display after 200ms
   }
 
   useEffect(() => {

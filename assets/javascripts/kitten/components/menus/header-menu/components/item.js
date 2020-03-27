@@ -165,12 +165,12 @@ export const Item = ({
       <li role="menuitem" {...liProps}>
         {external && (
           <ExternalStyledItem
+            {...other}
             href={href}
             borderSide={borderSide}
             external={external}
             largeItem={largeItem}
             noBorder={noBorder}
-            {...other}
           >
             <span className="itemNextToArrowIcon">{children}</span>
             <ArrowIcon
@@ -191,9 +191,10 @@ export const Item = ({
 
         {!(external || button) && (
           <StyledItem
-            href={isSelected ? null : href}
-            as={isSelected ? 'span' : null}
+            {...other}
+            href={href}
             isSelected={isSelected}
+            aria-current={isSelected ? 'page' : null}
             borderSide={borderSide}
             borderSideOnHover={borderSideOnHover}
             external={external}
@@ -201,7 +202,6 @@ export const Item = ({
             noBorder={noBorder}
             backgroundColors={backgroundColors}
             modifier={modifier}
-            {...other}
           >
             {children}
           </StyledItem>

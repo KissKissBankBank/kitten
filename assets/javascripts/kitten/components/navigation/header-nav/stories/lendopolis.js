@@ -51,7 +51,7 @@ const InnerBurgerMenu = () => (
 const Navigation = () => (
   <>
     <HeaderNav.Nav.Item href="#">Comment investir</HeaderNav.Nav.Item>
-    <HeaderNav.Nav.Item href="#" className="is-selected">
+    <HeaderNav.Nav.Item href="#" isSelected>
       Découvrez les projets
     </HeaderNav.Nav.Item>
   </>

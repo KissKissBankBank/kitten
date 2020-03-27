@@ -131,9 +131,11 @@ export const Dropdown = React.forwardRef(
     const manageA11yOn = event => {
       event.stopPropagation()
       event.preventDefault()
+
       const focusableElements = getFocusableElementsFrom(
         dropdownContentRef.current,
       )
+
       const kbdNav = keyboardNavigation(focusableElements, {
         events: {
           prev: DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
@@ -141,13 +143,30 @@ export const Dropdown = React.forwardRef(
         },
         triggeredElement: dropdownButtonRef.current,
       })
-      const { tab, up, down, esc } = keyboard
+
+      const { tab, up, down, left, right, esc } = keyboard
       const backwardTab = event.shiftKey && event.keyCode === tab
 
       if (event.keyCode === esc) return toggle(false)
+
+      if (event.keyCode === left) {
+        return dispatchEvent(
+          DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
+          dropdownButtonRef.current,
+        )()
+      }
+
+      if (event.keyCode === right) {
+        return dispatchEvent(
+          DROPDOWN_LAST_FOCUS_REACHED_EVENT,
+          dropdownButtonRef.current,
+        )()
+      }
+
       if (backwardTab || event.keyCode === up) {
         return kbdNav.prev()
       }
+
       if (!event.shiftKey && [down, tab].includes(event.keyCode)) {
         return kbdNav.next()
       }
@@ -166,7 +185,7 @@ export const Dropdown = React.forwardRef(
             focusableElements[0].focus()
             dropdownContentRef.current.addEventListener('keydown', manageA11yOn)
           }
-        }, 200) // As the dropdown content is display after 200ms
+        }, 210) // As the dropdown content is display after 200ms
       }
 
       return () => {
