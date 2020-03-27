@@ -7,12 +7,12 @@ import { pxToRem } from '../../../helpers/utils/typography'
 
 const getDashLength = radius => `calc(2 * ${Math.PI} * ${pxToRem(radius)})`
 
-const rotateAnimate = radius => keyframes`
+const rotateAnimate = ({ r }) => keyframes`
   from {
-    stroke-dashoffset: ${getDashLength(radius)};
+    stroke-dashoffset: ${getDashLength(r)};
   }
   to {
-    stroke-dashoffset: calc(${getDashLength(radius)} * ${({ progressValue }) =>
+    stroke-dashoffset: calc(${getDashLength(r)} * ${({ progressValue }) =>
   100 - progressValue} / 100);
   }
 `
@@ -23,9 +23,9 @@ const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
   fill: transparent;
   stroke-width: ${({ strokeWidth }) => pxToRem(strokeWidth)};
   stroke-linecap: butt;
-  stroke-dasharray: ${({ radius }) => getDashLength(radius)};
+  stroke-dasharray: ${({ r }) => getDashLength(r)};
   stroke-dashoffset: calc(
-    ${({ radius }) => getDashLength(radius)} *
+    ${({ r }) => getDashLength(r)} *
       ${({ progressValue }) => 100 - progressValue} / 100
   );
   stroke: ${({ progressColor }) => progressColor};
@@ -45,22 +45,22 @@ export const Spinner = ({
   color,
   value,
   width,
-  height,
-  radius,
   strokeWidth,
   rampProps,
   ...others
 }) => {
   const circleX = width / 2
-  const circleY = height / 2
+  const circleY = width / 2
 
-  const viewBox = `0 0 ${width} ${height}`
+  const radius = circleX - 5
+
+  const viewBox = `0 0 ${width} ${width}`
 
   return (
     <svg
       {...rampProps}
       width={width}
-      height={height}
+      height={width}
       viewBox={viewBox}
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -87,8 +87,7 @@ Spinner.defaultProps = {
   value: '',
   rampProps: {},
   width: 50,
-  height: 50,
-  radius: 20,
+  radius: null,
   strokeWidth: 5,
 }
 
@@ -97,7 +96,6 @@ Spinner.PropTypes = {
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rampProps: PropTypes.object,
   width: PropTypes.number,
-  height: PropTypes.number,
   radius: PropTypes.number,
   strokeWidth: PropTypes.number,
 }

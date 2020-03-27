@@ -30,10 +30,8 @@ storiesOf('Meters/Spinner', module)
             <StyledContainer>
               <Spinner
                 color={color('Color', COLORS.primary2)}
-                rampProps={{ style: { width: 50, height: 50 } }}
                 value={number('Value', 40)}
-                width={number('Width', 50)}
-                height={number('Height', 50)}
+                width={number('Width', 60)}
                 strokeWidth={number('Stroke width', 5)}
               />
               <StyledText size="micro" color="font1" weight="regular">
