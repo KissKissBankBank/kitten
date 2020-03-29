@@ -64,6 +64,7 @@ const propTypesPositions = PropTypes.oneOf(['top', 'right', 'bottom', 'left'])
 class CarouselBase extends Component {
   static defaultProps = {
     hidePaginationOnMobile: false,
+    hidePagination: false,
     showOtherPages: false,
     pagesClassName: null,
     paginationPosition: {
@@ -79,6 +80,7 @@ class CarouselBase extends Component {
     viewportIsMOrLess: PropTypes.bool.isRequired,
     viewportIsXSOrLess: PropTypes.bool.isRequired,
     hidePaginationOnMobile: PropTypes.bool,
+    hidePagination: PropTypes.bool,
     showOtherPages: PropTypes.bool,
     pagesClassName: PropTypes.string,
     paginationPosition: PropTypes.shape({
@@ -196,6 +198,7 @@ class CarouselBase extends Component {
       baseItemMarginBetween,
       viewportIsMOrLess,
       viewportIsXSOrLess,
+      hidePagination,
       hidePaginationOnMobile,
       paginationPosition,
     } = this.props
@@ -206,6 +209,7 @@ class CarouselBase extends Component {
       viewportIsMOrLess,
     )
 
+    if (hidePagination) return
     if (viewportIsXSOrLess && hidePaginationOnMobile) return
     if (numPages <= 1) return
 

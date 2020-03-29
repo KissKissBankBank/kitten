@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.CopyIcon = void 0;
+exports.CameraIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -15,27 +15,28 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var CopyIcon = function CopyIcon(_ref) {
+var CameraIcon = function CameraIcon(_ref) {
   var color = _ref.color,
       title = _ref.title,
       props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
   return _react.default.createElement("svg", (0, _extends2.default)({
-    width: "22",
-    height: "22",
-    viewBox: "0 0 22 22",
-    xmlns: "http://www.w3.org/2000/svg"
-  }, props), title && _react.default.createElement("title", null, title), _react.default.createElement("path", {
-    d: "M21.607 6.05l-7.071 7.071L12.414 11 11 12.414l2.121 2.122-7.07 7.07L.392 15.95l7.071-7.071L9.586 11 11 9.586 8.879 7.464l7.07-7.07 5.658 5.656zm-11.314 8.486l-.707-.708-1.414 1.415-1.415-1.415 1.415-1.414-.708-.707-4.242 4.243 2.828 2.828 4.243-4.242zm8.485-8.486L15.95 3.222l-4.243 4.242.707.708 1.414-1.415 1.415 1.415-1.415 1.414.708.707 4.242-4.243z",
+    width: "20",
+    height: "16",
+    viewBox: "0 0 20 16",
+    xmlns: "http://www.w3.org/2000/svg",
     fill: color
+  }, props), title && _react.default.createElement("title", null, title), _react.default.createElement("path", {
+    d: "M13 0l2 3h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3l2-3h6zm-3 5.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM16.5 5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zM12 1H8L7 3h6l-1-2z",
+    fillRule: "evenodd"
   }));
 };
 
-exports.CopyIcon = CopyIcon;
-CopyIcon.propTypes = {
+exports.CameraIcon = CameraIcon;
+CameraIcon.propTypes = {
   color: _propTypes.default.string,
   title: _propTypes.default.string
 };
-CopyIcon.defaultProps = {
-  color: '#000',
-  title: ''
+CameraIcon.defaultProps = {
+  color: '#222',
+  title: 'Camera'
 };

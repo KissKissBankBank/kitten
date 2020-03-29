@@ -176,6 +176,18 @@ const engagementsData = [
     bgColor: '#8fd9fa',
     children: 'zero-dechet',
   },
+  {
+    bgColor: '#caf4fe',
+    children: 'bio',
+  },
+  {
+    bgColor: '#caf4fe',
+    children: 'Made in france',
+  },
+  {
+    bgColor: '#8fd9fa',
+    children: 'zero-dechet',
+  },
 ]
 
 const StyledContainer = styled(Container)`
@@ -207,7 +219,7 @@ storiesOf('Carousel/EngagementsCarousel', module)
       <StyledContainer fullWidthBelowScreenSize="S">
         <Carousel
           itemMinWidth={110}
-          hidePaginationOnMobile
+          hidePagination
           baseItemMarginBetween={20}
           paginationPosition={{ default: 'right' }}
           showOtherPages={boolean('Show other pages?', false)}

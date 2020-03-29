@@ -56,6 +56,7 @@ import { EmbedIcon } from './embed-icon'
 import { GiftIcon } from './gift-icon'
 import { SaveIcon } from './save-icon'
 import { DocIcon } from './doc-icon'
+import { CameraIcon } from './camera-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -163,6 +164,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<EditIcon />} />
         <IconContainer children={<SaveIcon />} />
         <IconContainer children={<DocIcon />} />
+        <IconContainer children={<CameraIcon />} />
       </Group>
     </Container>
   )
