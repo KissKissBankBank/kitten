@@ -14,6 +14,7 @@ import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import Select from 'react-select'
+import domEvents from '../../../helpers/dom/events'
 
 export const SelectWithState = ({
   value,
@@ -30,31 +31,29 @@ export const SelectWithState = ({
   ...props
 }) => {
   const [selectedValue, setSelectedValue] = useState(value)
+  const { keyboard } = domEvents
 
   useEffect(() => {
     setSelectedValue(value)
   }, [value])
 
   const handleChange = option => {
-    const value = option && option.value ? option : { value: null, label: null }
+    const val = option && option.value ? option : { value: null, label: null }
 
-    setSelectedValue(value)
-    onChange(value)
-    onInputChange({ value, name })
+    setSelectedValue(val)
+    onChange(val)
+    onInputChange({ value: val, name })
   }
 
   const handleLightChange = e => {
-    const value = e.target.value
+    const val = e.target.value
 
-    setSelectedValue(value)
-    onChange({ value })
+    setSelectedValue(val)
+    onChange({ value: val })
   }
 
   const onKeyDown = event => {
-    const enterKeyCode = 13
-    const spaceKeyCode = 32
-
-    if ([enterKeyCode, spaceKeyCode].includes(event.keyCode)) {
+    if ([keyboard.enter, keyboard.space].includes(event.keyCode)) {
       event.preventDefault()
       event.stopPropagation()
       onRemove(event)
