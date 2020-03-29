@@ -67,7 +67,7 @@ const InnerUserMenu = () => (
   >
     <HeaderMenu.Item href="#">
       Mon espace personnel
-      <span className="k-Badge k-Badge--spaced k-Badge--no-border">2</span>
+      <HeaderMenu.Badge>2</HeaderMenu.Badge>
       <div className="k-u-hidden@xs-up--important k-u-margin-top-noneHalf">
         <Text weight="light">Solde&nbsp;: 24&nbsp;093,39&nbsp;€</Text>
       </div>
@@ -204,13 +204,13 @@ export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
             >
               <HeaderNav.UserMenu.Button>
                 <HeaderNav.Button
-                  icon={<LoginIcon aria-hidden="true" />}
+                  icon={<LoginIcon />}
+                  a11yText="Se connecter / S'inscrire"
                   backgroundColor={COLORS.primary1}
                   backgroundColorHover={COLORS.primary2}
                   color={COLORS.background1}
                   as="span"
                 />
-                <VisuallyHidden>Se connecter / S'inscrire</VisuallyHidden>
               </HeaderNav.UserMenu.Button>
 
               <HeaderNav.UserMenu.Navigation>

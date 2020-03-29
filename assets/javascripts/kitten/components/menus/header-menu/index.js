@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Item } from './components/item'
+import { Badge } from './components/badge'
 import { Context } from './components/context'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -38,6 +39,7 @@ export const HeaderMenu = ({
 )
 
 HeaderMenu.Item = Item
+HeaderMenu.Badge = Badge
 
 HeaderMenu.propTypes = {
   backgroundColors: PropTypes.object,

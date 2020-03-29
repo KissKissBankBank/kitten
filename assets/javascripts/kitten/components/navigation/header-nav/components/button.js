@@ -11,6 +11,7 @@ import {
 } from '../config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { getScreenSizeFrom } from '../../../../helpers/utils/media-queries'
+import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
 
 const horizontalPadding = css`
   padding-left: ${pxToRem(30)};
@@ -110,6 +111,7 @@ const StyledLink = styled.a`
 `
 
 export const Button = ({
+  a11yText,
   icon,
   backgroundColor,
   backgroundColorHover,
@@ -156,12 +158,20 @@ export const Button = ({
       icon={icon}
       text={text}
     >
-      {icon && React.cloneElement(icon, { className: iconClassName })}
+      {icon &&
+        React.cloneElement(icon, {
+          className: iconClassName,
+          'aria-hidden': true,
+        })}
 
       {text && textClassName ? (
         <span className={textClassName}>{text}</span>
       ) : (
         text
+      )}
+
+      {(a11yText || text) && (
+        <VisuallyHidden>{a11yText || text}</VisuallyHidden>
       )}
     </StyledLink>
   )
@@ -174,6 +184,7 @@ Button.propTypes = {
   color: PropTypes.string,
   text: PropTypes.node,
   href: PropTypes.string,
+  a11yText: PropTypes.string,
   type: PropTypes.oneOf(['button']),
   hiddenText: PropTypes.shape({
     min: PropTypes.string,

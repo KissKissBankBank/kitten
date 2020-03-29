@@ -83,25 +83,25 @@ Image.defaultProps = {
   alt: null,
 }
 
-const Badge = ({ backgroundColor, children, altText }) => (
+const Badge = ({ backgroundColor, children, a11yText }) => (
   <span
     className="k-ButtonWithBadge__badge k-Badge"
     style={{ backgroundColor }}
     aria-hidden="true"
   >
     {children}
-    <VisuallyHidden>{`${children.toString()} ${altText}`}</VisuallyHidden>
+    <VisuallyHidden>{`${children.toString()} ${a11yText}`}</VisuallyHidden>
   </span>
 )
 
 Badge.propTypes = {
   backgroundColor: PropTypes.string,
-  altText: PropTypes.string,
+  a11yText: PropTypes.string,
 }
 
 Badge.defaultProps = {
   backgroundColor: COLORS.primary1,
-  altText: 'Notification(s)',
+  a11yText: 'Notification(s)',
 }
 
 const Text = ({ textClassName, withEllipsisOverflow, children, ...props }) => {
