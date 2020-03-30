@@ -88,6 +88,15 @@ const StyledNewsBlock = styled.div`
     margin-top: ${pxToRem(10)};
   }
 
+  &.NewsBlock--1cols {
+    .newsBlock__NewsCard__picture {
+      padding-top: calc(100% * 1 / 2);
+    }
+    .newsBlock__NewsCard__text {
+      margin-top: ${pxToRem(20)};
+    }
+  }
+
   @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
     &.NewsBlock--3cols,
     &.NewsBlock--4cols {
@@ -186,7 +195,7 @@ const StyledNewsBlock = styled.div`
   }
 `
 
-export const NewsCard = ({ contents, horizontal = false }) => (
+export const NewsCard = ({ contents, horizontal = false, alone = false }) => (
   <a
     href="#"
     className={classNames('newsBlock__NewsCard', {
@@ -195,14 +204,18 @@ export const NewsCard = ({ contents, horizontal = false }) => (
     })}
   >
     <picture className="newsBlock__NewsCard__picture">
-      <source
-        media="(orientation: portrait)"
-        srcSet={contents.imageUrlPortrait}
-      />
-      <source
-        media="(orientation: landscape)"
-        srcSet={contents.imageUrlLandscape}
-      />
+      {!alone && (
+        <>
+          <source
+            media="(orientation: portrait)"
+            srcSet={contents.imageUrlPortrait}
+          />
+          <source
+            media="(orientation: landscape)"
+            srcSet={contents.imageUrlLandscape}
+          />
+        </>
+      )}
       <img src={contents.imageUrlLandscape} alt="" />
     </picture>
     <div className="newsBlock__NewsCard__text">
@@ -217,7 +230,12 @@ export const NewsBlock = ({ contents, horizontal = false }) => {
     <StyledNewsBlock className={`NewsBlock--${contents.length}cols`}>
       <div className="NewsBlockContent">
         {contents.map((card, index) => (
-          <NewsCard contents={card} key={index} horizontal={horizontal} />
+          <NewsCard
+            contents={card}
+            key={index}
+            horizontal={horizontal}
+            alone={contents.length === 1}
+          />
         ))}
       </div>
     </StyledNewsBlock>
