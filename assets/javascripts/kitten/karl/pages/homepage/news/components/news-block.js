@@ -11,6 +11,9 @@ import {
 } from '../../../../../constants/grid-config'
 
 const gridGapThin = pxToRem(10)
+const mobileCardWidth = `(50vw - ${pxToRem(
+  CONTAINER_PADDING_THIN,
+)} - (${gridGapThin} / 2))`
 
 const StyledNewsBlock = styled.div`
   .NewsBlockContent {
@@ -105,27 +108,11 @@ const StyledNewsBlock = styled.div`
     }
     &.NewsBlock--3cols .NewsBlockContent {
       padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
-      width: calc(
-        (
-            3 *
-              (
-                50vw - (2 * ${pxToRem(CONTAINER_PADDING_THIN)}) -
-                  (${gridGapThin} / 2)
-              )
-          ) + (2 * ${gridGapThin}) + (3 * ${pxToRem(CONTAINER_PADDING_THIN)})
-      );
+      width: calc((3 * ${mobileCardWidth}) + (2 * ${gridGapThin}));
     }
     &.NewsBlock--4cols .NewsBlockContent {
       padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
-      width: calc(
-        (
-            4 *
-              (
-                50vw - (2 * ${pxToRem(CONTAINER_PADDING_THIN)}) -
-                  (${gridGapThin} / 2)
-              )
-          ) + (3 * ${gridGapThin}) + (4 * ${pxToRem(CONTAINER_PADDING_THIN)})
-      );
+      width: calc((4 * ${mobileCardWidth}) + (3 * ${gridGapThin}));
     }
   }
 
