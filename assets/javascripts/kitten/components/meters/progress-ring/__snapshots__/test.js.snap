@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressRing /> by default matches with snapshot 1`] = `
+<svg
+  height={50}
+  viewBox="0 0 50 50"
+  width={50}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    className="progress-ring__StyledCircleBackground-ysg5f3-1 icOZrP"
+    cx={25}
+    cy={25}
+    r={20}
+    strokeWidth={5}
+  />
+  <circle
+    className="progress-ring__StyledCircle-ysg5f3-0 bfdsVK"
+    cx={25}
+    cy={25}
+    r={20}
+    strokeWidth={5}
+  />
+</svg>
+`;
