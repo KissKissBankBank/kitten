@@ -36,13 +36,22 @@ const StyledParagraph = styled(GridCol)`
 const StyledTitle = styled(Text)`
   margin-top: ${pxToRem(20)};
   margin-bottom: ${pxToRem(15)};
-  font-size: ${stepToRem(4)};
+  font-size: ${stepToRem(2)};
+  line-height: 1.2;
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    font-size: ${stepToRem(4)};
+  }
 
   ${({ horizontalCard }) =>
     horizontalCard &&
     css`
       margin: ${pxToRem(10)} 0;
-      font-size: ${stepToRem(2)};
+      font-size: ${stepToRem(-1)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        font-size: ${stepToRem(2)};
+      }
     `}
 `
 
@@ -101,7 +110,12 @@ const Card = ({ imageProps, title, text, horizontalCard, ...props }) => {
         >
           {title}
         </StyledTitle>
-        <StyledText tag="p" color="font1" horizontalCard={horizontalCard}>
+        <StyledText
+          tag="p"
+          color="font1"
+          horizontalCard={horizontalCard}
+          // className="k-u-hidden@s-down"
+        >
           {text}
         </StyledText>
       </StyledParagraph>

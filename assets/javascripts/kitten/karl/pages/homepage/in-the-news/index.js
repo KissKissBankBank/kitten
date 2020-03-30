@@ -7,7 +7,7 @@ import { Grid, GridCol } from '../../../../components/grid/grid'
 const InTheNews = () => (
   <Container>
     <Grid>
-      <GridCol col="6">
+      <GridCol col-l="6">
         <Text
           tag="p"
           weight="bold"
@@ -27,14 +27,13 @@ const InTheNews = () => (
         />
       </GridCol>
 
-      <GridCol col="6">
+      <GridCol col-l="6">
         <Text
           tag="p"
           weight="bold"
           size="default"
           color="font1"
-          className="k-u-margin-bottom-single"
-          // className="k-u-hidden@l-up"
+          className="k-u-margin-bottom-single k-u-hidden@l-down"
         >
           Notre sélection
         </Text>
