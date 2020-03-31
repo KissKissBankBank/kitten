@@ -10,7 +10,7 @@ import { UserMenu } from './components/user-menu'
 import { Context } from './components/context'
 import { Right } from './components/right'
 import { Centered } from './components/centered'
-import { Unlogged } from './components/unlogged'
+import { LoggedOut } from './components/logged-out'
 import { Logged } from './components/logged'
 import { Hidden } from './components/hidden'
 import { QuickAccessLink } from './components/quick-access-link'
@@ -205,7 +205,7 @@ HeaderNav.Nav = Nav
 HeaderNav.UserMenu = UserMenu
 HeaderNav.Right = Right
 HeaderNav.Centered = Centered
-HeaderNav.Unlogged = Unlogged
+HeaderNav.LoggedOut = LoggedOut
 HeaderNav.Logged = Logged
 HeaderNav.Hidden = Hidden
 

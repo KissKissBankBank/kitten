@@ -181,7 +181,7 @@ export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
           </HeaderNav.UserMenu>
         </HeaderNav.Logged>
 
-        <HeaderNav.Unlogged>
+        <HeaderNav.LoggedOut>
           <HeaderNav.Hidden max="xxs">
             <HeaderNav.Button
               backgroundColor={COLORS.background3}
@@ -220,7 +220,7 @@ export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
               </HeaderNav.UserMenu.Navigation>
             </HeaderNav.UserMenu>
           </HeaderNav.Hidden>
-        </HeaderNav.Unlogged>
+        </HeaderNav.LoggedOut>
       </HeaderNav.Right>
     </HeaderNav>
   )

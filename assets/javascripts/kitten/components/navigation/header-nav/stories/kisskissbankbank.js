@@ -160,7 +160,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
           </HeaderNav.UserMenu>
         </HeaderNav.Logged>
 
-        <HeaderNav.Unlogged>
+        <HeaderNav.LoggedOut>
           <HeaderNav.Button
             icon={
               <HeaderNav.Hidden min="s">
@@ -174,7 +174,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
             href="#"
             hiddenText={{ max: 'xs' }}
           />
-        </HeaderNav.Unlogged>
+        </HeaderNav.LoggedOut>
       </HeaderNav.Right>
     </HeaderNav>
   )

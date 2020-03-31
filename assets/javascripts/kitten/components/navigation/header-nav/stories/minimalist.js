@@ -45,7 +45,7 @@ export const MinimalistHeaderNavStory = ({ text, subText, isFixed }) => (
     </HeaderNav.Centered>
 
     <HeaderNav.Right>
-      <HeaderNav.Unlogged>
+      <HeaderNav.LoggedOut>
         <HeaderNav.Button
           icon={
             <HeaderNav.Hidden min="s">
@@ -59,7 +59,7 @@ export const MinimalistHeaderNavStory = ({ text, subText, isFixed }) => (
           href="#"
           hiddenText={{ max: 'xs' }}
         />
-      </HeaderNav.Unlogged>
+      </HeaderNav.LoggedOut>
     </HeaderNav.Right>
   </HeaderNav>
 )
