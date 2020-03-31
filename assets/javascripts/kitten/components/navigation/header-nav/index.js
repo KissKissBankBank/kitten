@@ -146,8 +146,12 @@ const HeaderNav = ({
       const focusableElements = getFocusableElementsFrom(headerRef.current)
       const kbdNav = keyboardNavigation(focusableElements)
 
-      if (event.keyCode === keyboard.right) return kbdNav.next()
-      if (event.keyCode === keyboard.left) return kbdNav.prev()
+      if ([keyboard.right, keyboard.tab].includes(event.keyCode)) {
+        return kbdNav.next()
+      }
+      if (event.keyCode === keyboard.left || keyboard.shiftTab(event)) {
+        return kbdNav.prev()
+      }
     }
   }
 

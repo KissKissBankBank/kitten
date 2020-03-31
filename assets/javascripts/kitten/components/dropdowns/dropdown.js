@@ -145,7 +145,7 @@ export const Dropdown = React.forwardRef(
         triggeredElement: dropdownButtonRef.current,
       })
 
-      const { tab, up, down, left, right, esc } = keyboard
+      const { tab, up, down, left, right, esc, shiftTab } = keyboard
       const backwardTab = event.shiftKey && event.keyCode === tab
 
       if (event.keyCode === esc) return toggle(false)
@@ -164,7 +164,7 @@ export const Dropdown = React.forwardRef(
         )()
       }
 
-      if (backwardTab || event.keyCode === up) {
+      if (shiftTab(event) || event.keyCode === up) {
         return kbdNav.prev()
       }
 
@@ -405,7 +405,7 @@ Dropdown.defaultProps = {
   keepInitialButtonAction: false,
 
   // Custom horizontal position for content and content arrow.
-  contentHorizontalPosition: {}, // { left: '0' },
+  contentHorizontalPosition: {},
   arrowHorizontalPosition: { left: '50%' },
 
   // Button settings

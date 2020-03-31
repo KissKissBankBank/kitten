@@ -170,9 +170,7 @@ export const Button = ({
         text
       )}
 
-      {(a11yText || text) && (
-        <VisuallyHidden>{a11yText || text}</VisuallyHidden>
-      )}
+      {a11yText && <VisuallyHidden>{a11yText}</VisuallyHidden>}
     </StyledLink>
   )
 }

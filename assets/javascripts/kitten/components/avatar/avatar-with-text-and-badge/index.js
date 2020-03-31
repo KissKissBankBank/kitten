@@ -87,10 +87,9 @@ const Badge = ({ backgroundColor, children, a11yText }) => (
   <span
     className="k-ButtonWithBadge__badge k-Badge"
     style={{ backgroundColor }}
-    aria-hidden="true"
   >
-    {children}
-    <VisuallyHidden>{`${children.toString()} ${a11yText}`}</VisuallyHidden>
+    <span aria-hidden="true">{children}</span>
+    {a11yText && <VisuallyHidden>{a11yText}</VisuallyHidden>}
   </span>
 )
 
@@ -105,15 +104,13 @@ Badge.defaultProps = {
 }
 
 const Text = ({ textClassName, withEllipsisOverflow, children, ...props }) => {
-  const textClassNames = [
+  const textClassNames = classNames(
     textClassName,
-    withEllipsisOverflow ? 'text--withEllipsis' : '',
     'k-ButtonImageWithText__text',
     'k-ButtonImageWithText__text--withoutPaddingRight',
     'always-visible',
-  ]
-    .filter(className => !!className)
-    .join(' ')
+    { 'text--withEllipsis': withEllipsisOverflow },
+  )
 
   return <span className={textClassNames}>{children}</span>
 }

@@ -67,7 +67,7 @@ const InnerUserMenu = () => (
   >
     <HeaderMenu.Item href="#">
       Mon espace personnel
-      <HeaderMenu.Badge>2</HeaderMenu.Badge>
+      <HeaderMenu.Badge a11yText="2 notifications">2</HeaderMenu.Badge>
       <div className="k-u-hidden@xs-up--important k-u-margin-top-noneHalf">
         <Text weight="light">Solde&nbsp;: 24&nbsp;093,39&nbsp;€</Text>
       </div>
@@ -152,7 +152,9 @@ export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
                   text="JC"
                   backgroundColor="#002e7d"
                 >
-                  <AvatarWithTextAndBadge.Badge>2</AvatarWithTextAndBadge.Badge>
+                  <AvatarWithTextAndBadge.Badge a11yText="2 notifications">
+                    2
+                  </AvatarWithTextAndBadge.Badge>
                 </AvatarWithTextAndBadge.Image>
 
                 <AvatarWithTextAndBadge.Text

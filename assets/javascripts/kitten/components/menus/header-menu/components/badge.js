@@ -26,7 +26,7 @@ export const Badge = ({
       style={{ backgroundColor }}
     >
       {children}
-      <VisuallyHidden>{`${children.toString()} ${a11yText}`}</VisuallyHidden>
+      {a11yText && <VisuallyHidden>{a11yText}</VisuallyHidden>}
     </span>
   )
 }

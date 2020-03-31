@@ -64,6 +64,16 @@
     *:focus {
       outline-offset: k-px-to-rem(-3px);
 
+      outline-width: k-px-to-rem(2px);
+      outline-style: solid;
+      outline-color: Highlight;
+
+      @media (-webkit-min-device-pixel-ratio:0) {
+        outline-color: -webkit-focus-ring-color;
+        outline-style: auto;
+        outline-width: k-px-to-rem(5px);
+      }
+
       &:hover {
         outline: none;
       }

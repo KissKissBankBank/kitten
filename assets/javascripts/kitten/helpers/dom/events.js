@@ -19,6 +19,9 @@ export const domEvents = {
     esc: 27,
     space: 32,
     enter: 13,
+    shiftTab: event => {
+      return event.keyCode === domEvents.keyboard.tab && event.shiftKey
+    },
   },
 }
 // Accessibility events
