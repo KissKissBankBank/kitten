@@ -7,11 +7,29 @@ import { ScreenConfig } from '../../../../constants/screen-config'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 
 const StyledCard = styled.div`
+  margin-bottom: ${pxToRem(30)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    margin-bottom: ${pxToRem(40)};
+  }
+
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    margin-bottom: 0;
+  }
+
   ${({ horizontalCard }) =>
     horizontalCard &&
     css`
       display: flex;
-      margin-bottom: ${pxToRem(50)};
+      margin-bottom: ${pxToRem(20)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+        margin-bottom: ${pxToRem(30)};
+      }
+
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        margin-bottom: ${pxToRem(50)};
+      }
 
       :last-child {
         margin-bottom: 0;
@@ -20,16 +38,26 @@ const StyledCard = styled.div`
 `
 
 const StyledImageContainer = styled(GridCol)`
-  paddin-right: 0;
+  padding-right: 0;
   padding-left: 0;
 `
 
-const StyledParagraph = styled(GridCol)`
+const StyledDescription = styled(GridCol)`
   ${({ horizontalCard }) =>
     horizontalCard &&
     css`
       display: block;
       align-self: center;
+      padding-right: 0;
+      padding-left: ${pxToRem(15)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+        padding-left: ${pxToRem(20)};
+      }
+
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        padding-left: ${pxToRem(30)};
+      }
     `}
 `
 
@@ -58,12 +86,18 @@ const StyledTitle = styled(Text)`
 const StyledText = styled(Text)`
   font-size: ${stepToRem(0)};
   margin-top: ${pxToRem(15)};
+  margin-bottom: ${pxToRem(0)};
+  line-height: 1.5;
 
   ${({ horizontalCard }) =>
     horizontalCard &&
     css`
       margin-top: ${pxToRem(10)};
       font-size: ${stepToRem(-1)};
+
+      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+        display: none;
+      }
     `}
 `
 
@@ -98,7 +132,7 @@ const Card = ({ imageProps, title, text, horizontalCard, ...props }) => {
       <StyledImageContainer col={horizontalCard ? 5 : 0}>
         <StyledImage {...imageProps} horizontalCard={horizontalCard} />
       </StyledImageContainer>
-      <StyledParagraph
+      <StyledDescription
         col={horizontalCard ? 7 : 0}
         horizontalCard={horizontalCard}
       >
@@ -110,15 +144,10 @@ const Card = ({ imageProps, title, text, horizontalCard, ...props }) => {
         >
           {title}
         </StyledTitle>
-        <StyledText
-          tag="p"
-          color="font1"
-          horizontalCard={horizontalCard}
-          // className="k-u-hidden@s-down"
-        >
+        <StyledText tag="p" color="font1" horizontalCard={horizontalCard}>
           {text}
         </StyledText>
-      </StyledParagraph>
+      </StyledDescription>
     </StyledCard>
   )
 }

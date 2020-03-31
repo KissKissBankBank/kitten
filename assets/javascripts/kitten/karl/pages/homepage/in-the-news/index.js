@@ -13,7 +13,8 @@ const InTheNews = () => (
           weight="bold"
           size="default"
           color="font1"
-          className="k-u-margin-bottom-single"
+          className="k-u-margin-bottom-singleHalf@s-up
+          k-u-margin-bottom-single@s-down"
         >
           A la une
         </Text>
@@ -33,7 +34,7 @@ const InTheNews = () => (
           weight="bold"
           size="default"
           color="font1"
-          className="k-u-margin-bottom-single k-u-hidden@l-down"
+          className="k-u-margin-bottom-singleHalf k-u-hidden@m-down"
         >
           Notre sélection
         </Text>
