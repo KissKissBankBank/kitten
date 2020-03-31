@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { AvatarWithTextAndBadge } from './index'
-import { withKnobs, text } from '@storybook/addon-knobs'
+import { withKnobs, text, color } from '@storybook/addon-knobs'
 import { Text } from '../../../components/typography/text'
 
 const Container = styled.div`
@@ -14,34 +14,59 @@ storiesOf('Avatar/AvatarWithTextAndBadge', module)
 
   .add('With avatar', () => (
     <Container>
-      <AvatarWithTextAndBadge
-        imageProps={{
-          src: text('Image src', 'https://via.placeholder.com/40x40.png'),
-          alt: text('Image Alt', 'Avatar'),
-        }}
-        notifications={text('Total notifications', '2')}
-        text={text('Text', 'Jean Charles')}
-      />
+      <AvatarWithTextAndBadge>
+        <AvatarWithTextAndBadge.Image
+          src={text('Image src', 'https://via.placeholder.com/40x40.png')}
+          alt={text('Image Alt', 'Avatar')}
+        >
+          <AvatarWithTextAndBadge.Badge
+            a11yText={text('Accessibility Badge text', '2 notifications')}
+            children={text('Badge value', '2')}
+          />
+        </AvatarWithTextAndBadge.Image>
+
+        <AvatarWithTextAndBadge.Text
+          textClassName="k-u-hidden@xxs-down"
+          withEllipsisOverflow={true}
+        >
+          <Text
+            lineHeight="normal"
+            weight="regular"
+            children={text('Text', 'Jean Charles Édouard')}
+          />
+        </AvatarWithTextAndBadge.Text>
+      </AvatarWithTextAndBadge>
     </Container>
   ))
 
   .add('With text', () => (
     <Container>
-      <AvatarWithTextAndBadge
-        imageProps={{
-          text: (
-            <Text size="micro" weight="bold">
-              JC
-            </Text>
-          ),
-        }}
-        notifications={text('Total notifications', '2')}
-        text={
-          <Text lineHeight="normal" weight="bold">
-            Jean Charles
+      <AvatarWithTextAndBadge>
+        <AvatarWithTextAndBadge.Image
+          text={text('', 'JC')}
+          backgroundColor={color('color', '#002e7d')}
+        >
+          <AvatarWithTextAndBadge.Badge
+            a11yText={text('Accessibility Badge text', '2 notifications')}
+            children={text('Badge value', '2')}
+          />
+        </AvatarWithTextAndBadge.Image>
+
+        <AvatarWithTextAndBadge.Text
+          textClassName="k-u-hidden@xxs-down"
+          withEllipsisOverflow={true}
+        >
+          <Text lineHeight="normal" weight="regular">
+            Jean Charles Édouard
           </Text>
-        }
-        subText={<Text weight="light">Solde : 1&nbsp;000,97&nbsp;€</Text>}
-      />
+          <br />
+          <Text weight="light">
+            <Text className="k-u-weight-light k-u-hidden@xs-down">
+              Solde&nbsp;:
+            </Text>{' '}
+            24&nbsp;093,39&nbsp;€
+          </Text>
+        </AvatarWithTextAndBadge.Text>
+      </AvatarWithTextAndBadge>
     </Container>
   ))
