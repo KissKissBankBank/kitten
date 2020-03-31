@@ -61,7 +61,11 @@ const InTheNews = () => (
         >
           Notre sélection
         </Text>
-        <Carousel itemMinWidth="150" baseItemMarginBetween="20">
+        <Carousel
+          itemMinWidth="150"
+          baseItemMarginBetween="15"
+          hidePaginationOnMobile
+        >
           {selectionData.map((item, index) => (
             <div>
               <Card
@@ -75,6 +79,7 @@ const InTheNews = () => (
                 horizontalCard
               />
               <Card
+                key={`SelectionCard${item.title}`}
                 title={item.title}
                 text={item.text}
                 imageProps={{
@@ -84,6 +89,7 @@ const InTheNews = () => (
                 horizontalCard
               />
               <Card
+                key={`SelectionCard${item.title}`}
                 title={item.title}
                 text={item.text}
                 imageProps={{
