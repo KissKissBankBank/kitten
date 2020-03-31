@@ -44,11 +44,13 @@ storiesOf('Avatar/AvatarWithTextAndBadge', module)
       <AvatarWithTextAndBadge>
         <AvatarWithTextAndBadge.Image
           text={text('', 'JC')}
-          backgroundColor={color('color', '#002e7d')}
+          backgroundColor={color('Avatar background color', '#002e7d')}
+          textColor={color('Text color', '#fff')}
         >
           <AvatarWithTextAndBadge.Badge
             a11yText={text('Accessibility Badge text', '2 notifications')}
             children={text('Badge value', '2')}
+            backgroundColor={color('Badge color', '#19b4fa')}
           />
         </AvatarWithTextAndBadge.Image>
 
