@@ -22,8 +22,8 @@ const StyledTitle = styled(Title)`
 
 const HomepageNews = props => (
   <Container>
-    <StyledSection tag="h2">
-      <StyledTitle>Nos 4 actus</StyledTitle>
+    <StyledSection>
+      <StyledTitle tag="h2">Nos 4 actus</StyledTitle>
       <NewsBlock
         contents={[
           {
