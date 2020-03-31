@@ -38,8 +38,7 @@ const StyledCard = styled.div`
 `
 
 const StyledImageContainer = styled(GridCol)`
-  padding-right: 0;
-  padding-left: 0;
+  padding: 0;
 `
 
 const StyledDescription = styled(GridCol)`
@@ -95,7 +94,7 @@ const StyledText = styled(Text)`
       margin-top: ${pxToRem(10)};
       font-size: ${stepToRem(-1)};
 
-      @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
         display: none;
       }
     `}
