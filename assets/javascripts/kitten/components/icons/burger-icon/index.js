@@ -91,7 +91,7 @@ BurgerIcon.defaultProps = {
   mainColor: COLORS.font1,
   hoverColor: COLORS.primary1,
   isActive: false,
-  title: 'Menu',
+  title: null,
   width: 12,
   height: 10,
   isAnimatedOnHover: false,
