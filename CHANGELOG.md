@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix warning in `SelectWithState` component.
+
 ## [2.60.2] - 2020-03-26
 
 Fix:
@@ -23,8 +25,8 @@ Features:
 ## [2.59.1] - 2020-03-17
 
 Fixes:
-- ArrowIcon component size.
-- Fix warning in Pagination component.
+- `ArrowIcon` component size.
+- Fix warning in `Pagination` component.
 
 ## [2.59.0] - 2020-03-13
 
