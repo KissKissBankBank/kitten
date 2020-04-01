@@ -51,6 +51,7 @@ export const Dropdown = React.forwardRef(
     const arrowRef = useRef(null)
     const dropdownButtonRef = useRef(null)
     const [isExpandedState, setIsExpanded] = useState(isExpanded)
+    const [toggleByEventType, setToggleByEventType] = useState(null)
     const [
       verticalReferenceElementState,
       setVerticalReferenceElement,
@@ -183,7 +184,7 @@ export const Dropdown = React.forwardRef(
           )
 
           if (focusableElements.length > 0) {
-            focusableElements[0].focus()
+            toggleByEventType === 'keyboard' && focusableElements[0].focus()
             dropdownContentRef.current.addEventListener('keydown', manageA11yOn)
           }
         }, DROPDOWN_ANIMATED_DELAY)
@@ -214,7 +215,8 @@ export const Dropdown = React.forwardRef(
       toggle(false)
     }
 
-    const toggle = nextExpandedState => {
+    const toggle = (nextExpandedState, eventType = 'keyboard') => {
+      setToggleByEventType(eventType)
       setIsExpanded(nextExpandedState)
       onToggle({
         isExpanded: nextExpandedState,
@@ -289,7 +291,7 @@ export const Dropdown = React.forwardRef(
       event.stopPropagation()
       event.preventDefault()
 
-      toggle(!isExpandedState)
+      toggle(!isExpandedState, 'click')
     }
 
     // Rendering
