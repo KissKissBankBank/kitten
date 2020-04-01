@@ -12,18 +12,47 @@ const selectionData = [
     text:
       'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
     imageSrc: 'http://placekitten.com/315/198',
-  },
-  {
-    title: 'Lancement des prochains pantalons à plis intemporels',
-    text:
+    title2:
+      'Sloe, le soin nomade et naturel à la conquête de vos salles de bain',
+    text2:
+      'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
+    imageSrc2: 'http://placekitten.com/315/198',
+    title3: 'Lancement des prochains pantalons à plis intemporels',
+    text3:
       'Soutenez le lancement des prochains pantalons à plis intemporels fabriqués à Paris',
-    imageSrc: 'http://placekitten.com/315/198',
+    imageSrc3: 'http://placekitten.com/315/198',
   },
   {
-    title: 'Les Arts dessinés : devenez abonné-fondateur',
+    title:
+      'Sloe, le soin nomade et naturel à la conquête de vos salles de bain',
     text:
-      'Les Arts dessinés, un magazine uniquement consacré au dessin, sous toutes ses formes.',
+      'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
     imageSrc: 'http://placekitten.com/315/198',
+    title2:
+      'Sloe, le soin nomade et naturel à la conquête de vos salles de bain',
+    text2:
+      'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
+    imageSrc2: 'http://placekitten.com/315/198',
+    title3: 'Lancement des prochains pantalons à plis intemporels',
+    text3:
+      'Soutenez le lancement des prochains pantalons à plis intemporels fabriqués à Paris',
+    imageSrc3: 'http://placekitten.com/315/198',
+  },
+  {
+    title:
+      'Sloe, le soin nomade et naturel à la conquête de vos salles de bain',
+    text:
+      'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
+    imageSrc: 'http://placekitten.com/315/198',
+    title2:
+      'Sloe, le soin nomade et naturel à la conquête de vos salles de bain',
+    text2:
+      'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
+    imageSrc2: 'http://placekitten.com/315/198',
+    title3: 'Lancement des prochains pantalons à plis intemporels',
+    text3:
+      'Soutenez le lancement des prochains pantalons à plis intemporels fabriqués à Paris',
+    imageSrc3: 'http://placekitten.com/315/198',
   },
 ]
 
@@ -62,8 +91,8 @@ const InTheNews = () => (
           Notre sélection
         </Text>
         <Carousel
-          itemMinWidth="150"
-          baseItemMarginBetween="15"
+          itemMinWidth="110"
+          baseItemMarginBetween="10"
           hidePaginationOnMobile
         >
           {selectionData.map((item, index) => (
@@ -79,21 +108,21 @@ const InTheNews = () => (
                 horizontalCard
               />
               <Card
-                key={`SelectionCard${item.title}`}
-                title={item.title}
-                text={item.text}
+                key={`SelectionCard${item.title2}`}
+                title={item.title2}
+                text={item.text2}
                 imageProps={{
-                  src: item.imageSrc,
+                  src: item.imageSrc2,
                   alt: 'Image alt',
                 }}
                 horizontalCard
               />
               <Card
-                key={`SelectionCard${item.title}`}
-                title={item.title}
-                text={item.text}
+                key={`SelectionCard${item.title3}`}
+                title={item.title3}
+                text={item.text3}
                 imageProps={{
-                  src: item.imageSrc,
+                  src: item.imageSrc3,
                   alt: 'Image alt',
                 }}
                 horizontalCard
