@@ -112,10 +112,6 @@ const HeaderNav = ({
   useEffect(() => {
     if (!headerRef.current) return
 
-    ;[...headerRef.current.querySelectorAll('[href]')].forEach(link => {
-      link.addEventListener('keydown', handleSpaceEnterKeyboard)
-    })
-
     headerRef.current.addEventListener('keydown', handleKeyboardNavigation)
     window.addEventListener(DROPDOWN_FIRST_FOCUS_REACHED_EVENT, focusDropdown)
     window.addEventListener(
@@ -124,10 +120,6 @@ const HeaderNav = ({
     )
 
     return () => {
-      ;[...headerRef.current.querySelectorAll('[href]')].forEach(link => {
-        link.removeEventListener('keydown', handleSpaceEnterKeyboard)
-      })
-
       headerRef.current.removeEventListener('keydown', handleKeyboardNavigation)
       window.removeEventListener(
         DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
@@ -146,14 +138,6 @@ const HeaderNav = ({
     [keyboard.left, keyboard.up, keyboard.right, keyboard.down].includes(
       keycode,
     )
-
-  const handleSpaceEnterKeyboard = event => {
-    event.preventDefault()
-
-    if ([keyboard.space, keyboard.enter].includes(event.keyCode)) {
-      event.target.click()
-    }
-  }
 
   const handleKeyboardNavigation = event => {
     if (isArrowKeyCode(event.keyCode)) {
