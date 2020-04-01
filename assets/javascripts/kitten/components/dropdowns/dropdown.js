@@ -67,7 +67,8 @@ export const Dropdown = React.forwardRef(
     const closeDropdownOnEsc = ({ keyCode }) =>
       keyCode === keyboard.esc ? toggle(false) : null
 
-    const dropdownOnUpAndDown = ({ keyCode }) => {
+    const dropdownKbdTrigger = ({ keyCode }) => {
+      setToggleByEventType('keyboard')
       if (keyCode === keyboard.down) toggle(true)
       if (keyCode === keyboard.up) toggle(false)
     }
@@ -95,7 +96,7 @@ export const Dropdown = React.forwardRef(
       }
 
       window.addEventListener('keydown', closeDropdownOnEsc)
-      dropdownButtonRef.current.addEventListener('keydown', dropdownOnUpAndDown)
+      dropdownButtonRef.current.addEventListener('keydown', dropdownKbdTrigger)
       dropdownButtonRef.current.addEventListener('mouseup', blur)
 
       if (!has('current')(dropdownRef)) {
@@ -124,7 +125,7 @@ export const Dropdown = React.forwardRef(
         window.removeEventListener('keydown', closeDropdownOnEsc)
         dropdownButtonRef.current.removeEventListener(
           'keydown',
-          dropdownOnUpAndDown,
+          dropdownKbdTrigger,
         )
         dropdownButtonRef.current.removeEventListener('mouseup', blur)
       }
@@ -215,8 +216,13 @@ export const Dropdown = React.forwardRef(
       toggle(false)
     }
 
-    const toggle = (nextExpandedState, eventType = 'keyboard') => {
-      setToggleByEventType(eventType)
+    const toggle = nextExpandedState => {
+      // Set toggleByEventType to click by default when dropdown menu is hidden.
+      // The value will be override on keyboard event. This fix a bug on
+      // space/enter keyboard events which trigger click event.
+      if (!nextExpandedState) {
+        setToggleByEventType('click')
+      }
       setIsExpanded(nextExpandedState)
       onToggle({
         isExpanded: nextExpandedState,
@@ -291,7 +297,7 @@ export const Dropdown = React.forwardRef(
       event.stopPropagation()
       event.preventDefault()
 
-      toggle(!isExpandedState, 'click')
+      toggle(!isExpandedState)
     }
 
     // Rendering
