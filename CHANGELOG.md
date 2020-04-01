@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix warning in `SelectWithState` component.
+## [2.60.3] - 2020-04-01
+
+Fix:
+- Fix warning in `SelectWithState` component.
 
 ## [2.60.2] - 2020-03-26
 
