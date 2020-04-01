@@ -1,0 +1,14 @@
+import { Meta, Story, Props } from '@storybook/addon-docs/blocks'
+import { withKnobs, select, boolean } from '@storybook/addon-knobs'
+
+import { Button } from './button'
+
+<Meta title="Buttons|Button" component={Button} />
+
+# Button
+
+<Story name="with text">
+  <Button tiny>MyButton</Button>
+</Story>
+
+<Props of={Button} />
