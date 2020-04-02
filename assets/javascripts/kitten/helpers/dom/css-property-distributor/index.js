@@ -10,34 +10,29 @@ export const cssPropertyDistributor = ({
 }) => {
   if (!domElementHelper.canUseDom()) return null
 
-  const propertyArray = elements.map(el => {
-    switch (property) {
-      case 'width':
-        return domElementHelper.getComputedWidth(el)
-      case 'height':
-        return domElementHelper.getComputedHeight(el)
-      default:
-        return null
-    }
-  })
-
-  const newValue = () => {
-    switch (direction) {
-      case 'min':
-        return min(propertyArray)
-      case 'max':
-      default:
-        return max(propertyArray)
-    }
+  const directionGetter = {
+    min: min,
+    max: max,
   }
 
-  if (property) {
-    elements.map(el => {
-      el.style[property] = pxToRem(newValue())
-    })
-  } else {
-    console.warn(
-      "cssPropertyDistributor warning: property has a wrong value. Accepted values are 'width' and 'height'",
+  const propertyGetter = {
+    width: domElementHelper.getComputedWidth,
+    height: domElementHelper.getComputedHeight,
+  }
+
+  if (!propertyGetter[property]) {
+    return console.warn(
+      `cssPropertyDistributor warning: property has a wrong value. Accepted values are ${Object.keys(
+        propertyGetter,
+      )}.`,
     )
   }
+
+  const propertyArray = elements.map(el => propertyGetter[property](el))
+
+  const newValue = directionGetter[direction](propertyArray)
+
+  elements.map(el => {
+    el.style[property] = pxToRem(newValue)
+  })
 }
