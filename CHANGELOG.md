@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `cssPropertyDistributor` utility.
+
 ## [2.60.3] - 2020-04-01
 
 Fix:
