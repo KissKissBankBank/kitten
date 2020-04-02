@@ -33,6 +33,10 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledInfoLines = _styledComponents.default.div.withConfig({
   displayName: "info-lines__StyledInfoLines",
   componentId: "sc-1tjj1rx-0"
@@ -85,14 +89,14 @@ var InfoList = function InfoList(_ref6) {
   }, value)));
 };
 
-var InfoLines =
-/*#__PURE__*/
-function (_PureComponent) {
+var InfoLines = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(InfoLines, _PureComponent);
+
+  var _super = _createSuper(InfoLines);
 
   function InfoLines() {
     (0, _classCallCheck2.default)(this, InfoLines);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(InfoLines).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(InfoLines, [{

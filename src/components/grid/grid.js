@@ -31,14 +31,18 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _screenConfig = require("../../constants/screen-config");
 
-var Grid =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var Grid = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Grid, _Component);
+
+  var _super = _createSuper(Grid);
 
   function Grid() {
     (0, _classCallCheck2.default)(this, Grid);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Grid).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Grid, [{
@@ -58,14 +62,14 @@ function (_Component) {
 
 exports.Grid = Grid;
 
-var GridCol =
-/*#__PURE__*/
-function (_React$Component) {
+var GridCol = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(GridCol, _React$Component);
+
+  var _super2 = _createSuper(GridCol);
 
   function GridCol() {
     (0, _classCallCheck2.default)(this, GridCol);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(GridCol).apply(this, arguments));
+    return _super2.apply(this, arguments);
   }
 
   (0, _createClass2.default)(GridCol, [{

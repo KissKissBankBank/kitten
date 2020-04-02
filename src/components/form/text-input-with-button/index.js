@@ -41,6 +41,10 @@ var _modifierStyles = require("../../../components/buttons/button/helpers/modifi
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledTextInputWithButton = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-button__StyledTextInputWithButton",
   componentId: "sc-1yqni7d-0"
@@ -68,14 +72,14 @@ var StyledButton = _styledComponents.default.button.withConfig({
   return disabled && (0, _styledComponents.css)(["cursor:not-allowed;"]);
 });
 
-var TextInputWithButton =
-/*#__PURE__*/
-function (_PureComponent) {
+var TextInputWithButton = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInputWithButton, _PureComponent);
+
+  var _super = _createSuper(TextInputWithButton);
 
   function TextInputWithButton() {
     (0, _classCallCheck2.default)(this, TextInputWithButton);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TextInputWithButton).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TextInputWithButton, [{
