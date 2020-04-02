@@ -39,6 +39,10 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _typography = require("../../../helpers/utils/typography");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledPasswordInput = _styledComponents.default.div.withConfig({
   displayName: "password-input__StyledPasswordInput",
   componentId: "sc-1futz46-0"
@@ -54,16 +58,16 @@ var StyledIcon = _styledComponents.default.span.withConfig({
   componentId: "sc-1futz46-2"
 })(["display:flex;position:absolute;z-index:1;padding:0 ", ";right:0;top:0;bottom:0;cursor:pointer;&[aria-pressed='true']{svg{fill:", ";transition:all 0.2s;}}"], (0, _typography.pxToRem)(11), _colorsConfig.default.primary1);
 
-var PasswordInput =
-/*#__PURE__*/
-function (_PureComponent) {
+var PasswordInput = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(PasswordInput, _PureComponent);
+
+  var _super = _createSuper(PasswordInput);
 
   function PasswordInput(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, PasswordInput);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(PasswordInput).call(this, props));
+    _this = _super.call(this, props);
 
     _this.handleClick = function () {
       _this.setState({

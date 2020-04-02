@@ -33,6 +33,10 @@ var _content = require("./components/content");
 
 var _footer = require("./components/footer");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var borderWidth = (0, _typography.pxToRem)(2);
 var borderColor = _colorsConfig.default.line1;
 
@@ -41,14 +45,14 @@ var StyledContainer = _styledComponents.default.div.withConfig({
   componentId: "hyhbiq-0"
 })(["width:100%;height:100%;border-width:", ";border-style:solid;border-color:", ";"], borderWidth, borderColor);
 
-var RewardEdition =
-/*#__PURE__*/
-function (_PureComponent) {
+var RewardEdition = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(RewardEdition, _PureComponent);
+
+  var _super = _createSuper(RewardEdition);
 
   function RewardEdition() {
     (0, _classCallCheck2.default)(this, RewardEdition);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RewardEdition).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(RewardEdition, [{

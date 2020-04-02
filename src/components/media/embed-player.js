@@ -41,6 +41,10 @@ var _screenConfig = require("../../constants/screen-config");
 
 var _gridConfig = require("../../constants/grid-config");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var PlayerButton = function PlayerButton(props) {
   return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("div", {
     style: styles.playerButton
@@ -55,16 +59,16 @@ PlayerButton.propTypes = {
   playButtonLabel: _propTypes.default.string.isRequired
 };
 
-var EmbedPlayerBase =
-/*#__PURE__*/
-function (_Component) {
+var EmbedPlayerBase = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(EmbedPlayerBase, _Component);
+
+  var _super = _createSuper(EmbedPlayerBase);
 
   function EmbedPlayerBase(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, EmbedPlayerBase);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(EmbedPlayerBase).call(this, props));
+    _this = _super.call(this, props);
 
     _this.handleClick = function () {
       _this.setState({

@@ -43,6 +43,10 @@ var _textInputWithUnitForm = require("../../../components/form/text-input-with-u
 
 var _typography = require("../../../helpers/utils/typography");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "donation-card__StyledCard",
   componentId: "sc-19h76fz-0"
@@ -71,14 +75,14 @@ var StyledHorizontalStroke = (0, _styledComponents.default)(_horizontalStroke.Ho
   componentId: "sc-19h76fz-3"
 })(["margin:0 auto;"]);
 
-var DonationCard =
-/*#__PURE__*/
-function (_PureComponent) {
+var DonationCard = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(DonationCard, _PureComponent);
+
+  var _super = _createSuper(DonationCard);
 
   function DonationCard() {
     (0, _classCallCheck2.default)(this, DonationCard);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(DonationCard).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(DonationCard, [{

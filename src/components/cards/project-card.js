@@ -13,11 +13,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -55,21 +55,25 @@ var _typologyTagIcon = require("../../components/icons/typology-tag-icon");
 
 var _instrumentTagIcon = require("../../components/icons/instrument-tag-icon");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var MIN_WIDTH = 280;
 exports.MIN_WIDTH = MIN_WIDTH;
 var MARGIN_BETWEEN = 40;
 exports.MARGIN_BETWEEN = MARGIN_BETWEEN;
 
-var ProjectCardComponent =
-/*#__PURE__*/
-function (_Component) {
+var ProjectCardComponent = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(ProjectCardComponent, _Component);
+
+  var _super = _createSuper(ProjectCardComponent);
 
   function ProjectCardComponent() {
     var _this;
 
     (0, _classCallCheck2.default)(this, ProjectCardComponent);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ProjectCardComponent).call(this));
+    _this = _super.call(this);
     _this.renderTagsInList = _this.renderTagsInList.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   }

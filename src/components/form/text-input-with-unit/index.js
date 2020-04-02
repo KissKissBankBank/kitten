@@ -37,6 +37,10 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledTextInputWithUnit = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-unit__StyledTextInputWithUnit",
   componentId: "gjmccx-0"
@@ -70,14 +74,14 @@ var StyledInputUnit = _styledComponents.default.span.withConfig({
   return unitWord && (0, _styledComponents.css)(["font-size:", ";"], (0, _typography.stepToRem)(-1));
 }, StyledTextInput, _colorsConfig.default.line2, _colorsConfig.default.font1);
 
-var TextInputWithUnit =
-/*#__PURE__*/
-function (_PureComponent) {
+var TextInputWithUnit = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInputWithUnit, _PureComponent);
+
+  var _super = _createSuper(TextInputWithUnit);
 
   function TextInputWithUnit(props) {
     (0, _classCallCheck2.default)(this, TextInputWithUnit);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TextInputWithUnit).call(this, props));
+    return _super.call(this, props);
   }
 
   (0, _createClass2.default)(TextInputWithUnit, [{

@@ -31,6 +31,10 @@ var _button = require("../../../components/buttons/button/button");
 
 var _typography = require("../../../helpers/utils/typography");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var borderRadius = (0, _typography.pxToRem)(4);
 var borderSize = (0, _typography.pxToRem)(2);
 
@@ -44,14 +48,14 @@ var StyledButton = (0, _styledComponents.default)(_button.Button).withConfig({
   componentId: "sc-11uu9oe-1"
 })(["z-index:0;min-width:auto;width:auto;&:not(:last-child){margin-right:-", ";}&:first-child{border-top-left-radius:", ";border-bottom-left-radius:", ";}&:last-child{border-top-right-radius:", ";border-bottom-right-radius:", ";}:active,:hover,:focus{border-radius:", ";z-index:1;}"], borderSize, borderRadius, borderRadius, borderRadius, borderRadius, borderRadius);
 
-var ButtonGroup =
-/*#__PURE__*/
-function (_Component) {
+var ButtonGroup = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(ButtonGroup, _Component);
+
+  var _super = _createSuper(ButtonGroup);
 
   function ButtonGroup() {
     (0, _classCallCheck2.default)(this, ButtonGroup);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ButtonGroup).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(ButtonGroup, [{

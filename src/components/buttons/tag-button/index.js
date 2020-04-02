@@ -35,6 +35,10 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledTagButton = (0, _styledComponents.default)(function (_ref) {
   var selected = _ref.selected,
       icon = _ref.icon,
@@ -67,14 +71,14 @@ var StyledTagButton = (0, _styledComponents.default)(function (_ref) {
 });
 var hydrogen = (0, _styledComponents.css)(["color:", ";border-color:", ";background-color:", ";&:hover,&:focus{color:", ";border-color:", ";background-color:", ";}&:active{color:", ";border-color:", ";background-color:", ";}"], _colorsConfig.default.font1, _colorsConfig.default.line1, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.primary2, _colorsConfig.default.background1);
 
-var TagButton =
-/*#__PURE__*/
-function (_PureComponent) {
+var TagButton = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TagButton, _PureComponent);
+
+  var _super = _createSuper(TagButton);
 
   function TagButton() {
     (0, _classCallCheck2.default)(this, TagButton);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TagButton).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TagButton, [{

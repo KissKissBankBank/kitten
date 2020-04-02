@@ -31,16 +31,20 @@ var _phoneIcon = require("../../icons/phone-icon");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var TeamCardButtonWithTooltip =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var TeamCardButtonWithTooltip = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(TeamCardButtonWithTooltip, _Component);
+
+  var _super = _createSuper(TeamCardButtonWithTooltip);
 
   function TeamCardButtonWithTooltip(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, TeamCardButtonWithTooltip);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TeamCardButtonWithTooltip).call(this, props));
+    _this = _super.call(this, props);
 
     _this.handleSubmitFocus = function () {
       _this.setState({

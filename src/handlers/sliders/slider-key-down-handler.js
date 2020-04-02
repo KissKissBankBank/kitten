@@ -7,6 +7,8 @@ exports.sliderKeyDownHandler = sliderKeyDownHandler;
 
 var _events = require("../../helpers/dom/events");
 
+// KeyDown on a Slider should move the handle left and right with the keyboard.
+// The component needs a `move()` function that takes a value.
 function sliderKeyDownHandler(e) {
   // Make bigger steps when alt or shift key is being held
   var _this$props = this.props,

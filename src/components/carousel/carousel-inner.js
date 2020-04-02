@@ -17,7 +17,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -32,6 +32,10 @@ var _range = require("../../helpers/utils/range");
 var _featureDetection = require("../../helpers/utils/feature-detection");
 
 var _carouselPage = require("../../components/carousel/carousel-page");
+
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 if (typeof window !== 'undefined') {
   require('smoothscroll-polyfill').polyfill();
@@ -76,14 +80,12 @@ var getRangePageScrollLeft = function getRangePageScrollLeft(targetClientWidth, 
   });
 };
 
-var CarouselInnerBase =
-/*#__PURE__*/
-function (_React$Component) {
+var CarouselInnerBase = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(CarouselInnerBase, _React$Component);
 
-  function CarouselInnerBase() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(CarouselInnerBase);
 
+  function CarouselInnerBase() {
     var _this;
 
     (0, _classCallCheck2.default)(this, CarouselInnerBase);
@@ -92,7 +94,7 @@ function (_React$Component) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(CarouselInnerBase)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
     _this.state = {
       isTouched: false
     };

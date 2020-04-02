@@ -37,6 +37,10 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _visuallyHidden = require("../../accessibility/visually-hidden");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledTextInputWithIcon = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-icon__StyledTextInputWithIcon",
   componentId: "rvt8kr-0"
@@ -54,14 +58,14 @@ var StyledIcon = (0, _styledComponents.default)(function (_ref) {
   return disabled && (0, _styledComponents.css)(["& > svg [stroke]:not([stroke='none']){stroke:", ";}& > svg [fill]:not([fill='none']){fill:", ";}"], _colorsConfig.default.font2, _colorsConfig.default.font2);
 });
 
-var TextInputWithIcon =
-/*#__PURE__*/
-function (_PureComponent) {
+var TextInputWithIcon = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInputWithIcon, _PureComponent);
+
+  var _super = _createSuper(TextInputWithIcon);
 
   function TextInputWithIcon() {
     (0, _classCallCheck2.default)(this, TextInputWithIcon);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TextInputWithIcon).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TextInputWithIcon, [{

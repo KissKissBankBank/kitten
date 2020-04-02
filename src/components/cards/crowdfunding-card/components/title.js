@@ -39,6 +39,10 @@ var _reactTruncate = _interopRequireDefault(require("react-truncate"));
 
 var _screenConfig = require("../../../../constants/screen-config");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 var StyledTruncate = (0, _styledComponents.default)(_reactTruncate.default).withConfig({
   displayName: "title__StyledTruncate",
@@ -79,14 +83,14 @@ var StyledDayCounter = _styledComponents.default.div.withConfig({
   componentId: "sc-1wv1kzg-7"
 })(["line-height:1;margin-left:calc(2 * ", ");margin-top:", ";"], COMPONENT_GUTTER, (0, _typography.pxToRem)(10));
 
-var TitleComponent =
-/*#__PURE__*/
-function (_PureComponent) {
+var TitleComponent = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TitleComponent, _PureComponent);
+
+  var _super = _createSuper(TitleComponent);
 
   function TitleComponent() {
     (0, _classCallCheck2.default)(this, TitleComponent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TitleComponent).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TitleComponent, [{
