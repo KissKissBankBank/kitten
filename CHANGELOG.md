@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add API check to `ContinuousIntersectionObserver` utils.
+
 ## [2.60.2] - 2020-03-26
 
 Fix:
