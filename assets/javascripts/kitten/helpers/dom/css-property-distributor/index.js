@@ -31,7 +31,13 @@ export const cssPropertyDistributor = ({
     }
   }
 
-  elements.map(el => {
-    el.style[property] = pxToRem(newValue())
-  })
+  if (property) {
+    elements.map(el => {
+      el.style[property] = pxToRem(newValue())
+    })
+  } else {
+    console.warn(
+      "cssPropertyDistributor warning: property has a wrong value. Accepted values are 'width' and 'height'",
+    )
+  }
 }

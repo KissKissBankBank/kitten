@@ -135,7 +135,7 @@ const MinHeightComponent = () => {
 }
 
 storiesOf('helpers/dom/cssPropertyDistributor', module)
-  .add('distributing max width', () => <MaxWidthComponent />)
-  .add('distributing min width', () => <MinWidthComponent />)
-  .add('distributing max height', () => <MaxHeightComponent />)
-  .add('distributing min height', () => <MinHeightComponent />)
+  .add('distributing max width', MaxWidthComponent)
+  .add('distributing min width', MinWidthComponent)
+  .add('distributing max height', MaxHeightComponent)
+  .add('distributing min height', MinHeightComponent)
