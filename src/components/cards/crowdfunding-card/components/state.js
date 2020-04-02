@@ -33,6 +33,10 @@ var _screenConfig = require("../../../../constants/screen-config");
 
 var _text = require("../../../../components/typography/text");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 
 var StyledState = _styledComponents.default.div.withConfig({
@@ -45,14 +49,14 @@ var StyledWidgetContainer = _styledComponents.default.div.withConfig({
   componentId: "colp6f-1"
 })(["display:flex;position:absolute;background:", ";border-radius:", ";margin:", " ", " 0 0;right:0;top:0;padding:", " ", ";"], _colorsConfig.default.font1, (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(20));
 
-var State =
-/*#__PURE__*/
-function (_PureComponent) {
+var State = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(State, _PureComponent);
+
+  var _super = _createSuper(State);
 
   function State() {
     (0, _classCallCheck2.default)(this, State);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(State).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(State, [{

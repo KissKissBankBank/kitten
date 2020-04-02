@@ -31,6 +31,10 @@ var _typographyConfig = _interopRequireDefault(require("../../../../constants/ty
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledList = _styledComponents.default.ul.withConfig({
   displayName: "list__StyledList",
   componentId: "sc-1m61gol-0"
@@ -44,14 +48,14 @@ var StyledItem = _styledComponents.default.li.withConfig({
   componentId: "sc-1m61gol-1"
 })(["display:flex;align-items:baseline;margin:0 0 ", ";padding:0;list-style:none;:before{padding-right:", ";content:'\u25CF';font-size:", ";}"], (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(8));
 
-var List =
-/*#__PURE__*/
-function (_Component) {
+var List = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(List, _Component);
+
+  var _super = _createSuper(List);
 
   function List() {
     (0, _classCallCheck2.default)(this, List);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(List).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(List, [{

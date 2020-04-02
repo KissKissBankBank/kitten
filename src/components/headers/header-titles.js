@@ -27,14 +27,18 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _header = require("../../components/headers/header");
 
-var HeaderTitles =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var HeaderTitles = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(HeaderTitles, _React$Component);
+
+  var _super = _createSuper(HeaderTitles);
 
   function HeaderTitles() {
     (0, _classCallCheck2.default)(this, HeaderTitles);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(HeaderTitles).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(HeaderTitles, [{

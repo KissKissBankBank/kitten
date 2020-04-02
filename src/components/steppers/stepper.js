@@ -29,20 +29,24 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _stepperIcon = require("./stepper-icon");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var iconTypeComponents = {
   default: _stepperIcon.StepperIconDefault,
   inProgress: _stepperIcon.StepperIconInProgress,
   validated: _stepperIcon.StepperIconValidated
 };
 
-var Stepper =
-/*#__PURE__*/
-function (_Component) {
+var Stepper = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Stepper, _Component);
+
+  var _super = _createSuper(Stepper);
 
   function Stepper() {
     (0, _classCallCheck2.default)(this, Stepper);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Stepper).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Stepper, [{
