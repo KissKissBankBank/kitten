@@ -16,6 +16,8 @@ describe('<ProgressRing />', () => {
             width={50}
             height={50}
             strokeWidth={5}
+            overtimeProgress={false}
+            successProgress={false}
           />,
         )
         .toJSON()
