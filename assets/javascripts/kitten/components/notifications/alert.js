@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import PropTypes from 'prop-types'
 import styled, { css, keyframes } from 'styled-components'
 import { CloseButton } from '../../components/buttons/close-button'
 import COLORS from '../../constants/colors-config'
@@ -92,27 +93,38 @@ export const Alert = ({
   }
   return (
     <AlertWrapper
-      ref={alertRef}
+      ref={ alertRef }
       role="alert"
-      success={success}
-      error={error}
-      warning={warning}
-      shouldHide={!isMounted}
-      className={className}
-      {...others}
+      success={ success }
+      error={ error }
+      warning={ warning }
+      shouldHide={ !isMounted }
+      className={ className }
+      { ...others }
     >
       <>
-        {children}
-        {closeButton && (
+        { children }
+        { closeButton && (
           <StyledCloseButton
             modifier="carbon"
-            closeButtonLabel={closeButtonLabel}
-            onClick={() => setMounted(false)}
+            closeButtonLabel={ closeButtonLabel }
+            onClick={ () => setMounted(false) }
           />
-        )}
+        ) }
       </>
     </AlertWrapper>
   )
+}
+
+Alert.propTypes = {
+  className: PropTypes.string,
+  show: PropTypes.bool,
+  error: PropTypes.bool,
+  success: PropTypes.bool,
+  warning: PropTypes.bool,
+  closeButton: PropTypes.bool,
+  closeButtonLabel: PropTypes.string,
+  onAfterClose: PropTypes.func,
 }
 
 Alert.defaultProps = {
@@ -123,4 +135,5 @@ Alert.defaultProps = {
   warning: false,
   closeButton: false,
   closeButtonLabel: 'Close',
+  onAfterClose: () => { },
 }
