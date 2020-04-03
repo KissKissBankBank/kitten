@@ -25,14 +25,18 @@ var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var Header =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var Header = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(Header, _React$Component);
+
+  var _super = _createSuper(Header);
 
   function Header() {
     (0, _classCallCheck2.default)(this, Header);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Header).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Header, [{
@@ -61,14 +65,14 @@ function (_React$Component) {
 
 exports.Header = Header;
 
-var HeaderItems =
-/*#__PURE__*/
-function (_React$Component2) {
+var HeaderItems = /*#__PURE__*/function (_React$Component2) {
   (0, _inherits2.default)(HeaderItems, _React$Component2);
+
+  var _super2 = _createSuper(HeaderItems);
 
   function HeaderItems() {
     (0, _classCallCheck2.default)(this, HeaderItems);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(HeaderItems).apply(this, arguments));
+    return _super2.apply(this, arguments);
   }
 
   (0, _createClass2.default)(HeaderItems, [{
@@ -91,14 +95,14 @@ function (_React$Component2) {
 
 exports.HeaderItems = HeaderItems;
 
-var HeaderItem =
-/*#__PURE__*/
-function (_React$Component3) {
+var HeaderItem = /*#__PURE__*/function (_React$Component3) {
   (0, _inherits2.default)(HeaderItem, _React$Component3);
+
+  var _super3 = _createSuper(HeaderItem);
 
   function HeaderItem() {
     (0, _classCallCheck2.default)(this, HeaderItem);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(HeaderItem).apply(this, arguments));
+    return _super3.apply(this, arguments);
   }
 
   (0, _createClass2.default)(HeaderItem, [{

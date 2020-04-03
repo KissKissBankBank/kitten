@@ -35,6 +35,10 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var borderWidth = (0, _typography.pxToRem)(2);
 var verticalPadding = (0, _typography.pxToRem)(10);
 var styledTextInput = (0, _styledComponents.css)(["font-size:", ";line-height:1.3;", ";box-sizing:border-box;border-width:", ";border-style:solid;border-radius:0;width:100%;height:", ";padding:", " ", ";appearance:none;background-color:", ";color:", ";border-color:", ";outline:none;", ";::placeholder{color:", ";}:focus{outline:none;color:", ";border-color:", ";}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}", " ", " &:invalid{box-shadow:none;outline:none;&:not(:focus){color:", ";border-color:", ";}}", ""], (0, _typography.stepToRem)(-1), _typographyConfig.default.fontStyles.light, borderWidth, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _colorsConfig.default.background1, _colorsConfig.default.font1, _colorsConfig.default.line1, function (_ref) {
@@ -89,14 +93,14 @@ var digitsStyles = function digitsStyles(digits) {
 
 exports.digitsStyles = digitsStyles;
 
-var TextInput =
-/*#__PURE__*/
-function (_PureComponent) {
+var TextInput = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInput, _PureComponent);
+
+  var _super = _createSuper(TextInput);
 
   function TextInput() {
     (0, _classCallCheck2.default)(this, TextInput);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TextInput).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TextInput, [{

@@ -23,6 +23,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: add `getScreenSizeFrom` helper in `media-queries` file.
 - Fix: Fix `Dropdown` components events and accessibility.
 
+## [2.61.0] - 2020-04-02
+
+Feature:
+- Add `cssPropertyDistributor` utility.
+
+Fix:
+- Add API check to `ContinuousIntersectionObserver` utils.
+
 ## [2.60.3] - 2020-04-01
 
 Fix:
