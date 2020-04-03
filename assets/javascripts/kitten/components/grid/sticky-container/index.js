@@ -20,6 +20,8 @@ const StyledStickyContainer = styled.div`
     isSticky === 'always' &&
     css`
       position: fixed;
+
+
     `}
 
   ${({ stickyContainerStyleProps }) => stickyContainerStyleProps}
