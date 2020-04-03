@@ -15,7 +15,7 @@ exports[`<ProgressRing /> by default matches with snapshot 1`] = `
     strokeWidth={5}
   />
   <circle
-    className="progress-ring__StyledCircle-ysg5f3-0 bfdsVK"
+    className="progress-ring__StyledCircle-ysg5f3-0 poahb"
     cx={25}
     cy={25}
     r={20}
