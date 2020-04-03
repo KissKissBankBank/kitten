@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, number, color } from '@storybook/addon-knobs'
+import { withKnobs, number, color, boolean } from '@storybook/addon-knobs'
 import { ProgressRing } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -26,13 +26,15 @@ storiesOf('Meters/ProgressRing', module)
     <Marger top="4" bottom="4">
       <Container>
         <Grid>
-          <GridCol col={4}>
+          <GridCol col={6}>
             <StyledContainer>
               <ProgressRing
                 color={color('Color', COLORS.primary2)}
-                value={number('Value', 40)}
-                width={number('Width', 60)}
-                strokeWidth={number('Stroke width', 5)}
+                value={number('Value', 50)}
+                width={number('Width', 24)}
+                strokeWidth={number('Stroke width', 4)}
+                overtimeProgress={boolean('Overtime', false)}
+                successProgress={boolean('Suucess', false)}
               />
               <StyledText size="micro" color="font1" weight="regular">
                 Financé à …%
