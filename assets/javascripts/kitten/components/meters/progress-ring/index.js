@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
+import { RocketIcon } from '../../../components/icons/rocket-icon'
+import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const getDashLength = radius => `calc(2 * ${Math.PI} * ${pxToRem(radius)})`
 
@@ -38,6 +41,53 @@ const StyledCircleBackground = styled.circle`
   stroke: ${COLORS.line1};
   stroke-width: ${({ strokeWidth }) => pxToRem(strokeWidth)};
 `
+const StyledOvertimeProgress = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: ${pxToRem(20)};
+  height: ${pxToRem(20)};
+  border-radius: ${pxToRem(50)};
+  background-color: ${COLORS.valid};
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    width: ${pxToRem(24)};
+    height: ${pxToRem(24)};
+  }
+`
+
+const StyledSvgOvertime = styled(RocketIcon)`
+  width: ${pxToRem(10)};
+  height: ${pxToRem(12)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    width: ${pxToRem(12)};
+    height: ${pxToRem(15)};
+  }
+`
+
+const StyledCheckedCircleIcon = styled(CheckedCircleIcon)`
+  width: ${pxToRem(20)};
+  height: ${pxToRem(20)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    width: ${pxToRem(24)};
+    height: ${pxToRem(24)};
+  }
+`
+
+const OvertimeProgress = () => (
+  <StyledOvertimeProgress>
+    <StyledSvgOvertime />
+  </StyledOvertimeProgress>
+)
+
+const SuccessProgress = () => (
+  <StyledCheckedCircleIcon
+    circleColor={COLORS.valid}
+    checkedColor={COLORS.background1}
+  />
+)
 
 export const ProgressRing = ({
   color,
@@ -45,6 +95,8 @@ export const ProgressRing = ({
   width,
   strokeWidth,
   svgProps,
+  overtimeProgress,
+  successProgress,
   ...others
 }) => {
   const circleX = width / 2
@@ -55,28 +107,35 @@ export const ProgressRing = ({
   const viewBox = `0 0 ${width} ${width}`
 
   return (
-    <svg
-      {...svgProps}
-      width={width}
-      height={width}
-      viewBox={viewBox}
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <StyledCircleBackground
-        cx={circleX}
-        cy={circleY}
-        r={radius}
-        strokeWidth={strokeWidth}
-      />
-      <StyledCircle
-        progressColor={color}
-        progressValue={value}
-        cx={circleX}
-        cy={circleY}
-        r={radius}
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+    <>
+      {(overtimeProgress && <OvertimeProgress />) ||
+        (successProgress && <SuccessProgress />)}
+
+      {!overtimeProgress && !successProgress && (
+        <svg
+          {...svgProps}
+          width={width}
+          height={width}
+          viewBox={viewBox}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <StyledCircleBackground
+            cx={circleX}
+            cy={circleY}
+            r={radius}
+            strokeWidth={strokeWidth}
+          />
+          <StyledCircle
+            progressColor={color}
+            progressValue={value}
+            cx={circleX}
+            cy={circleY}
+            r={radius}
+            strokeWidth={strokeWidth}
+          />
+        </svg>
+      )}
+    </>
   )
 }
 
@@ -87,6 +146,8 @@ ProgressRing.defaultProps = {
   width: 50,
   radius: null,
   strokeWidth: 5,
+  overtimeProgress: false,
+  successProgress: false,
 }
 
 ProgressRing.propTypes = {
@@ -96,4 +157,6 @@ ProgressRing.propTypes = {
   width: PropTypes.number,
   radius: PropTypes.number,
   strokeWidth: PropTypes.number,
+  overtimeProgress: PropTypes.bool,
+  successProgress: PropTypes.bool,
 }
