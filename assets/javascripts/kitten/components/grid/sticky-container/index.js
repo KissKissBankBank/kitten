@@ -20,8 +20,6 @@ const StyledStickyContainer = styled.div`
     isSticky === 'always' &&
     css`
       position: fixed;
-
-
     `}
 
   ${({ stickyContainerStyleProps }) => stickyContainerStyleProps}
@@ -170,10 +168,10 @@ const StickyContainerBase = (
             top: ${pxToRem(top)};
           `
         : bottom
-          ? css`
+        ? css`
             bottom: ${pxToRem(bottom)};
           `
-          : css`
+        : css`
             top: 0;
           `
 
@@ -197,16 +195,16 @@ const StickyContainerBase = (
 
   return (
     <Fragment>
-      { (stuck || isSticky === 'always') && (
-        <StyledSpacer containerHeight={ containerHeight } />
-      ) }
+      {(stuck || isSticky === 'always') && (
+        <StyledSpacer containerHeight={containerHeight} />
+      )}
       <StyledStickyContainer
-        ref={ currentStickyContainer }
-        stickyContainerStyleProps={ stickyContainerStyleProps }
-        isSticky={ isSticky }
-        { ...other }
+        ref={currentStickyContainer}
+        stickyContainerStyleProps={stickyContainerStyleProps}
+        isSticky={isSticky}
+        {...other}
       >
-        { children }
+        {children}
       </StyledStickyContainer>
     </Fragment>
   )
