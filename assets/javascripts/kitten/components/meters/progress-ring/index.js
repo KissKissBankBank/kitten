@@ -9,13 +9,15 @@ import { ScreenConfig } from '../../../constants/screen-config'
 
 const getDashLength = radius => `calc(2 * ${Math.PI} * ${pxToRem(radius)})`
 
-const rotateAnimate = ({ r }) => keyframes`
+const getDashOffset = ({ r, progressValue }) =>
+  `calc(${getDashLength(r)} * ${100 - progressValue} / 100)`
+
+const rotateAnimate = ({ r, progressValue }) => keyframes`
   from {
     stroke-dashoffset: ${getDashLength(r)};
   }
   to {
-    stroke-dashoffset: calc(${getDashLength(r)} * ${({ progressValue }) =>
-  100 - progressValue} / 100);
+    stroke-dashoffset: ${getDashOffset({ r, progressValue })};
   }
 `
 
@@ -26,10 +28,8 @@ const StyledCircle = styled(({ progressColor, progressValue, ...props }) => (
   stroke-width: ${({ strokeWidth }) => pxToRem(strokeWidth)};
   stroke-linecap: butt;
   stroke-dasharray: ${({ r }) => getDashLength(r)};
-  stroke-dashoffset: calc(
-    ${({ r }) => getDashLength(r)} *
-      ${({ progressValue }) => 100 - progressValue} / 100
-  );
+  stroke-dashoffset: ${({ r, progressValue }) =>
+    getDashOffset({ r, progressValue })};
   stroke: ${({ progressColor }) => progressColor};
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
