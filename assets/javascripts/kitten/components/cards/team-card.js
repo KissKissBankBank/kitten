@@ -1,3 +1,4 @@
+import { Component } from 'react'
 import { TeamCardTitle } from './team-card/title'
 import { TeamCardImage } from './team-card/image'
 import { TeamCardIcons } from './team-card/icons'
