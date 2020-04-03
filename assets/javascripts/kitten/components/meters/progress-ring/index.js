@@ -106,6 +106,8 @@ export const ProgressRing = ({
 
   const viewBox = `0 0 ${width} ${width}`
 
+  const progressValue = value < 100 ? value : 100
+
   return (
     <>
       {(overtimeProgress && <OvertimeProgress />) ||
@@ -127,7 +129,7 @@ export const ProgressRing = ({
           />
           <StyledCircle
             progressColor={color}
-            progressValue={value}
+            progressValue={progressValue}
             cx={circleX}
             cy={circleY}
             r={radius}
