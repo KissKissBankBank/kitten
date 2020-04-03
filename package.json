@@ -132,7 +132,8 @@
     "build": "npm run build:js && npm run build:css",
     "build:js": "npm run clean:src && babel assets/javascripts/kitten/ -d src --ignore 'assets/**/*.test.js','assets/**/test.js','assets/**/*.stories.js','assets/**/stories.js','assets/**/__mocks__/*.js','assets/javascripts/kitten/karl'",
     "build:css": "webpack --config webpack.config.sass.js",
-    "eslint": "eslint --fix assets/javascripts/**"
+    "eslint": "eslint --fix assets/javascripts/**",
+    "prettier": "find ./assets/javascripts -regex '.*.js' | xargs prettier --config prettier.config.js --write"
   },
   "lint-staged": {
     "assets/**/*.js": [
