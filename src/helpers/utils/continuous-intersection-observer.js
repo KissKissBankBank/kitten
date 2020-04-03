@@ -19,6 +19,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _continuousIntersectionHook = _interopRequireDefault(require("./continuous-intersection-hook"));
 
+var _elementHelper = _interopRequireDefault(require("../dom/element-helper"));
+
 var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_ref) {
   var options = _ref.options,
       children = _ref.children,
@@ -31,6 +33,7 @@ var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_re
     rootMargin: '0px',
     threshold: 0
   }, options);
+  var isIOpossible = _elementHelper.default.canUseDom() && 'IntersectionObserver' in window;
 
   var _useState = (0, _react.useState)(false),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -57,43 +60,50 @@ var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_re
       visibleElement = _useState10[0],
       setVisibleElement = _useState10[1];
 
-  (0, _continuousIntersectionHook.default)((0, _extends2.default)({
-    onIntersect: function onIntersect(entries) {
-      entries.forEach(function (entry) {
-        setBeforeElIntersecting(entry.isIntersecting);
-        entry.isIntersecting && setVisibleElement('before');
-      });
-    },
-    observedComponentRef: beforeEl
-  }, consolidatedOptions));
-  (0, _continuousIntersectionHook.default)((0, _extends2.default)({
-    onIntersect: function onIntersect(entries) {
-      entries.forEach(function (entry) {
-        setTargetElIntersecting(entry.isIntersecting);
-      });
-    },
-    observedComponentRef: targetEl
-  }, consolidatedOptions));
-  (0, _continuousIntersectionHook.default)((0, _extends2.default)({
-    onIntersect: function onIntersect(entries) {
-      entries.forEach(function (entry) {
-        setAfterElIntersecting(entry.isIntersecting);
-        entry.isIntersecting && setVisibleElement('after');
-      });
-    },
-    observedComponentRef: afterEl
-  }, consolidatedOptions));
-  (0, _react.useEffect)(function () {
-    setPartlyVisible(false);
+  if (isIOpossible) {
+    (0, _continuousIntersectionHook.default)((0, _extends2.default)({
+      onIntersect: function onIntersect(entries) {
+        entries.forEach(function (entry) {
+          setBeforeElIntersecting(entry.isIntersecting);
+          entry.isIntersecting && setVisibleElement('before');
+        });
+      },
+      observedComponentRef: beforeEl
+    }, consolidatedOptions));
+    (0, _continuousIntersectionHook.default)((0, _extends2.default)({
+      onIntersect: function onIntersect(entries) {
+        entries.forEach(function (entry) {
+          setTargetElIntersecting(entry.isIntersecting);
+        });
+      },
+      observedComponentRef: targetEl
+    }, consolidatedOptions));
+    (0, _continuousIntersectionHook.default)((0, _extends2.default)({
+      onIntersect: function onIntersect(entries) {
+        entries.forEach(function (entry) {
+          setAfterElIntersecting(entry.isIntersecting);
+          entry.isIntersecting && setVisibleElement('after');
+        });
+      },
+      observedComponentRef: afterEl
+    }, consolidatedOptions));
+    (0, _react.useEffect)(function () {
+      setPartlyVisible(false);
 
-    if (isTargetElIntersecting) {
-      setPartlyVisible(true);
+      if (isTargetElIntersecting) {
+        setPartlyVisible(true);
 
-      if (!isBeforeElIntersecting && !isAfterElIntersecting || isBeforeElIntersecting && isAfterElIntersecting) {
-        setVisibleElement('target');
+        if (!isBeforeElIntersecting && !isAfterElIntersecting || isBeforeElIntersecting && isAfterElIntersecting) {
+          setVisibleElement('target');
+        }
       }
-    }
-  }, [isBeforeElIntersecting, isTargetElIntersecting, isAfterElIntersecting]);
+    }, [isBeforeElIntersecting, isTargetElIntersecting, isAfterElIntersecting]);
+  } else {
+    // if there's not IntersectionObserver
+    setVisibleElement('target');
+    setPartlyVisible(true);
+  }
+
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", (0, _extends2.default)({
     ref: beforeEl
   }, props.beforeComponentProps)), _react.default.createElement("div", (0, _extends2.default)({

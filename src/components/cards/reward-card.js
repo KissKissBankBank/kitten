@@ -53,6 +53,10 @@ var _diamondBadge = require("../../components/cards/reward-card/diamond-badge");
 
 var _checkedSection = require("../../components/cards/reward-card/checked-section");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var Infos = (0, _styledComponents.default)(function (_ref) {
   var withMarginBottom = _ref.withMarginBottom,
       props = (0, _objectWithoutProperties2.default)(_ref, ["withMarginBottom"]);
@@ -89,14 +93,14 @@ var CardContainer = (0, _styledComponents.default)(function (_ref5) {
 }); // TODO: Move this class to a separate file after deprecated component with the
 // same name will be deleted.
 
-var RewardCardInfo =
-/*#__PURE__*/
-function (_Component) {
+var RewardCardInfo = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(RewardCardInfo, _Component);
+
+  var _super = _createSuper(RewardCardInfo);
 
   function RewardCardInfo() {
     (0, _classCallCheck2.default)(this, RewardCardInfo);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RewardCardInfo).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(RewardCardInfo, [{
@@ -135,14 +139,14 @@ RewardCardInfo.defaultProps = {
   disabled: false
 };
 
-var RewardCardImage =
-/*#__PURE__*/
-function (_Component2) {
+var RewardCardImage = /*#__PURE__*/function (_Component2) {
   (0, _inherits2.default)(RewardCardImage, _Component2);
+
+  var _super2 = _createSuper(RewardCardImage);
 
   function RewardCardImage() {
     (0, _classCallCheck2.default)(this, RewardCardImage);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RewardCardImage).apply(this, arguments));
+    return _super2.apply(this, arguments);
   }
 
   (0, _createClass2.default)(RewardCardImage, [{
@@ -168,14 +172,14 @@ RewardCardImage.defaultProps = {
   disabled: false
 };
 
-var RewardCard =
-/*#__PURE__*/
-function (_Component3) {
+var RewardCard = /*#__PURE__*/function (_Component3) {
   (0, _inherits2.default)(RewardCard, _Component3);
+
+  var _super3 = _createSuper(RewardCard);
 
   function RewardCard() {
     (0, _classCallCheck2.default)(this, RewardCard);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RewardCard).apply(this, arguments));
+    return _super3.apply(this, arguments);
   }
 
   (0, _createClass2.default)(RewardCard, [{

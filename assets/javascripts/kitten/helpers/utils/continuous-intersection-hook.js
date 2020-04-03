@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import domElementHelper from '../dom/element-helper'
 
 const useContinuousIntersectionObserver = ({
   observedComponentRef,
@@ -18,15 +19,20 @@ const useContinuousIntersectionObserver = ({
       return
     }
 
-    const observer = new IntersectionObserver(onIntersect, {
+    const intersectorOptions = {
       root: root && root.current,
       rootMargin,
       threshold,
-    })
+    }
 
-    observer.observe(observedComponentRef.current)
+    const observer =
+      domElementHelper.canUseDom() && 'IntersectionObserver' in window
+        ? new IntersectionObserver(onIntersect, intersectorOptions)
+        : null
 
-    return () => observer.unobserve(observedComponentRef.current)
+    observer && observer.observe(observedComponentRef.current)
+
+    return () => observer && observer.unobserve(observedComponentRef.current)
   }, [])
 }
 

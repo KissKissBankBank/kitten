@@ -15,7 +15,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -39,16 +39,18 @@ var _phoneIcon = require("./phone-icon");
 
 var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var Marger = (0, _radium.default)(_marger.Marger);
 
-var TeamCardIcons =
-/*#__PURE__*/
-function (_Component) {
+var TeamCardIcons = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(TeamCardIcons, _Component);
 
-  function TeamCardIcons() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(TeamCardIcons);
 
+  function TeamCardIcons() {
     var _this;
 
     (0, _classCallCheck2.default)(this, TeamCardIcons);
@@ -57,7 +59,7 @@ function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(TeamCardIcons)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
 
     _this.getSocialLinks = function () {
       var _this$props = _this.props,
@@ -118,14 +120,14 @@ TeamCardIcons.defaultProps = {
   links: []
 };
 
-var SocialLinks =
-/*#__PURE__*/
-function (_Component2) {
+var SocialLinks = /*#__PURE__*/function (_Component2) {
   (0, _inherits2.default)(SocialLinks, _Component2);
+
+  var _super2 = _createSuper(SocialLinks);
 
   function SocialLinks() {
     (0, _classCallCheck2.default)(this, SocialLinks);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(SocialLinks).apply(this, arguments));
+    return _super2.apply(this, arguments);
   }
 
   (0, _createClass2.default)(SocialLinks, [{

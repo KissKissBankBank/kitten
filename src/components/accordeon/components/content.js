@@ -31,6 +31,10 @@ var _context = require("./context");
 
 var _marger = require("../../layout/marger");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var ContentStyled = _styledComponents.default.div.withConfig({
   displayName: "content__ContentStyled",
   componentId: "sc-5kfom2-0"
@@ -40,16 +44,16 @@ var ContentStyled = _styledComponents.default.div.withConfig({
   return isAnimated ? (0, _styledComponents.css)(["overflow:hidden;max-height:", ";transition:visibility 0s ease,max-height 0.4s ease,opacity 0.4s ease;transition-delay:0s,0s,0s;&[aria-hidden='true']{transition-delay:0.4s,0s,0s;}"], (0, _typography.pxToRem)(maxHeight)) : (0, _styledComponents.css)(["max-height:unset;overflow:visible;"]);
 });
 
-var Content =
-/*#__PURE__*/
-function (_Component) {
+var Content = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Content, _Component);
+
+  var _super = _createSuper(Content);
 
   function Content(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, Content);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Content).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       maxHeight: 0
     };

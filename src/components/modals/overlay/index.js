@@ -31,6 +31,10 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledOverlay = _styledComponents.default.div.withConfig({
   displayName: "overlay__StyledOverlay",
   componentId: "l2d0zz-0"
@@ -39,16 +43,16 @@ var StyledOverlay = _styledComponents.default.div.withConfig({
   return zIndex;
 });
 
-var Overlay =
-/*#__PURE__*/
-function (_Component) {
+var Overlay = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Overlay, _Component);
+
+  var _super = _createSuper(Overlay);
 
   function Overlay(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, Overlay);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Overlay).call(this, props));
+    _this = _super.call(this, props);
 
     _this.toggleActiveState = function () {
       return _this.setState({
