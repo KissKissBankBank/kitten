@@ -160,8 +160,8 @@ SelectWithState.propTypes = {
 }
 
 SelectWithState.defaultProps = {
-  onChange: function() {},
-  onInputChange: function() {},
+  onChange: function () {},
+  onInputChange: function () {},
   clearable: false,
   searchable: false,
   deleteRemoves: false,

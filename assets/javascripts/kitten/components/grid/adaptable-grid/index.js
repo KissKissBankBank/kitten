@@ -56,18 +56,24 @@ export const AdaptableGridCol = ({
 
       return css`
         @media (min-width: ${pxToRem(ScreenConfig[size].min)}) {
-          ${col &&
+          ${
+            col &&
             css`
               width: ${(col * 100) / colNumber}%;
-            `}
-          ${offset > 0 &&
+            `
+          }
+          ${
+            offset > 0 &&
             css`
               margin-${marginDirection}: ${(offset * 100) / colNumber}%;
-            `}
-          ${offset === 0 &&
+            `
+          }
+          ${
+            offset === 0 &&
             css`
               margin-${marginDirection}: 0;
-            `}
+            `
+          }
         }
       `
     })
