@@ -45,13 +45,15 @@ function useScrollDirection() {
   const oldScrollPos = useRef(0)
 
   useEffect(() => {
-    function onScroll() {
+    const onScroll = () => {
       setScrollPos(window.pageYOffset)
       // save the old scroll position in the ref
       oldScrollPos.current = window.pageYOffset
     }
-    window.addEventListener('scroll', throttle(onScroll, 200))
-    return () => window.removeEventListener('scroll', throttle(onScroll, 200))
+    const scrollThrottle = throttle(onScroll, 200)
+
+    window.addEventListener('scroll', scrollThrottle)
+    return () => window.removeEventListener('scroll', scrollThrottle)
   }, [])
 
   // current scroll position minus the old scroll position saved in state.
@@ -166,10 +168,10 @@ const StickyContainerBase = (
             top: ${pxToRem(top)};
           `
         : bottom
-        ? css`
+          ? css`
             bottom: ${pxToRem(bottom)};
           `
-        : css`
+          : css`
             top: 0;
           `
 
@@ -193,16 +195,16 @@ const StickyContainerBase = (
 
   return (
     <Fragment>
-      {(stuck || isSticky === 'always') && (
-        <StyledSpacer containerHeight={containerHeight} />
-      )}
+      { (stuck || isSticky === 'always') && (
+        <StyledSpacer containerHeight={ containerHeight } />
+      ) }
       <StyledStickyContainer
-        ref={currentStickyContainer}
-        stickyContainerStyleProps={stickyContainerStyleProps}
-        isSticky={isSticky}
-        {...other}
+        ref={ currentStickyContainer }
+        stickyContainerStyleProps={ stickyContainerStyleProps }
+        isSticky={ isSticky }
+        { ...other }
       >
-        {children}
+        { children }
       </StyledStickyContainer>
     </Fragment>
   )

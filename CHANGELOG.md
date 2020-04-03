@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix a memory leak to unmounted `StickyContainer`.
+
 ## [2.61.0] - 2020-04-02
 
 Feature:
