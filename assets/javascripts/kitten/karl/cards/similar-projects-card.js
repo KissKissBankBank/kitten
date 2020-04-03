@@ -30,14 +30,23 @@ const projectsWithImage = [
   },
 ]
 
-const tags = [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }]
+const tags = [
+  { key: 'tag-1', item: 'Tag 1' },
+  { key: 'tag-2', item: 'Tag 2' },
+]
 
 const tagLists = [
   {
-    items: [{ key: 'tag-1', item: 'Tag 1' }, { key: 'tag-2', item: 'Tag 2' }],
+    items: [
+      { key: 'tag-1', item: 'Tag 1' },
+      { key: 'tag-2', item: 'Tag 2' },
+    ],
   },
   {
-    items: [{ key: 'tag-3', item: 'Tag 3' }, { key: 'tag-4', item: 'Tag 4' }],
+    items: [
+      { key: 'tag-3', item: 'Tag 3' },
+      { key: 'tag-4', item: 'Tag 4' },
+    ],
   },
 ]
 

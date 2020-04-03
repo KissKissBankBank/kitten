@@ -4,7 +4,10 @@ import { TypologyTagIcon } from '../../components/icons/typology-tag-icon'
 import { InstrumentTagIcon } from '../../components/icons/instrument-tag-icon'
 
 describe('<TagList />', () => {
-  const items = [{ key: 'foo', item: 'Foo' }, { key: 'bar', item: 'Bar' }]
+  const items = [
+    { key: 'foo', item: 'Foo' },
+    { key: 'bar', item: 'Bar' },
+  ]
 
   describe('by default', () => {
     const tagList = shallow(<TagList icon={TypologyTagIcon} items={items} />)

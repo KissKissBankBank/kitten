@@ -123,7 +123,10 @@ storiesOf('Grid/StickyContainer', module)
       </Container>
     )),
   )
-  .add('isSticky="topOnScrollUp"', withInfo(info)(() => <MainComponent />))
+  .add(
+    'isSticky="topOnScrollUp"',
+    withInfo(info)(() => <MainComponent />),
+  )
   .add(
     'isSticky="bottomOnScrollDown"',
     withInfo(info)(() => (
