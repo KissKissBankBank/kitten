@@ -20,7 +20,9 @@ var domEvents = {
     pageUp: 33,
     pageDown: 34,
     end: 36,
-    home: 36
+    home: 36,
+    space: 32,
+    enter: 13
   }
 }; // DEPRECATED: do not use default export.
 

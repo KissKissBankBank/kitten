@@ -15,6 +15,8 @@ export const domEvents = {
     pageDown: 34,
     end: 36,
     home: 36,
+    space: 32,
+    enter: 13,
   },
 }
 

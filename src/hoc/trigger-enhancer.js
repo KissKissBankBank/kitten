@@ -13,11 +13,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -25,17 +25,21 @@ var _react = _interopRequireDefault(require("react"));
 
 var _elementHelper = require("../helpers/dom/element-helper");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var triggerEnhancer = function triggerEnhancer(WrappedComponent, wrappedComponentProps) {
-  var TriggerWrapper =
-  /*#__PURE__*/
-  function (_React$Component) {
+  var TriggerWrapper = /*#__PURE__*/function (_React$Component) {
     (0, _inherits2.default)(TriggerWrapper, _React$Component);
+
+    var _super = _createSuper(TriggerWrapper);
 
     function TriggerWrapper(props) {
       var _this;
 
       (0, _classCallCheck2.default)(this, TriggerWrapper);
-      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TriggerWrapper).call(this, props));
+      _this = _super.call(this, props);
       _this.state = {
         play: false
       };
