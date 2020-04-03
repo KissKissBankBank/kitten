@@ -26,7 +26,6 @@ const StyledItem = styled.div`
 export class CarouselPage extends Component {
   render() {
     const {
-      data,
       numColumns,
       itemMinWidth,
       itemMarginBetween,

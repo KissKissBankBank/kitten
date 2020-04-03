@@ -2,7 +2,6 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { shallow } from 'enzyme'
 import { ExpandBoard } from '../../../components/expandable/expand-board'
-import { Button } from '../../../components/buttons/button'
 
 describe('<ExpandBoard />', () => {
   describe('with <ExpandBoard.Button> and <ExpandBoard.Content>', () => {

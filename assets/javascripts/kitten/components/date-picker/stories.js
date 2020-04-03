@@ -1,14 +1,7 @@
 import React, { Component } from 'react'
 import { DatePicker } from './index'
 import { storiesOf } from '@storybook/react'
-import {
-  withKnobs,
-  date,
-  select,
-  text,
-  object,
-  array,
-} from '@storybook/addon-knobs'
+import { withKnobs, date, text, object, array } from '@storybook/addon-knobs'
 import { Container } from '../../components/grid/container'
 import { Marger } from '../../components/layout/marger'
 import COLORS from '../../constants/colors-config'

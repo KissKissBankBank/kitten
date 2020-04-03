@@ -11,7 +11,6 @@ import {
   GUTTER,
 } from '../../../constants/grid-config'
 import ColorsConfig from '../../../constants/colors-config'
-import { Grid, GridCol } from '../../../components/grid/grid'
 import { ButtonIcon } from '../../../components/buttons/button-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'

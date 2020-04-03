@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import { ScreenConfig } from '../../constants/screen-config'
-import { mediaQueries } from '../../hoc/media-queries'
 import Radium, { StyleRoot } from 'radium'
 import { Text as TextBase } from '../../components/typography/text'
 import { Marger as MargerBase } from '../../components/layout/marger'
 import COLORS from '../../constants/colors-config'
-import pathOr from 'ramda/src/pathOr'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../constants/typography-config'
 

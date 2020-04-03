@@ -32,7 +32,7 @@ export class Tour extends Component {
 
   // Component listener callbacks.
 
-  handleTargetHighlightPosition(step) {
+  handleTargetHighlightPosition() {
     this.setState({ visible: true })
   }
 

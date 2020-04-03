@@ -1,5 +1,5 @@
 import React from 'react'
-import Radium, { StyleRoot } from 'radium'
+import { StyleRoot } from 'radium'
 import { RewardCard } from '../../components/cards/reward-card'
 import { Container } from '../../components/grid/container'
 import { Marger } from '../../components/layout/marger'

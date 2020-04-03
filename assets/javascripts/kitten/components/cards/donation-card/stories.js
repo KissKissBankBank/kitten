@@ -67,27 +67,31 @@ const info = {
 storiesOf('Cards/DonationCard', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('default', () => {
-    return (
-      <Grid style={{ marginTop: '3em' }}>
-        <GridCol offset="1" col="10">
-          <DonationCard
-            title={text(
-              'Title Amount',
-              'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
-            )}
-            isDisabled={boolean('Disabled', false)}
-            version={select('Version', versionOptions, 'default')}
-            donationForm={object('donationForm', {
-              inputUnit: '€',
-              inputLabel: 'Enter your amount',
-              inputPlaceholder: 'Enter your amount',
-              inputIsOnError: false,
-              errorMessage: 'lorem ipsum dolor sit amet',
-              buttonLabel: 'Choose',
-            })}
-          />
-        </GridCol>
-      </Grid>
-    )
-  })
+  .add(
+    'default',
+    () => {
+      return (
+        <Grid style={{ marginTop: '3em' }}>
+          <GridCol offset="1" col="10">
+            <DonationCard
+              title={text(
+                'Title Amount',
+                'In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.',
+              )}
+              isDisabled={boolean('Disabled', false)}
+              version={select('Version', versionOptions, 'default')}
+              donationForm={object('donationForm', {
+                inputUnit: '€',
+                inputLabel: 'Enter your amount',
+                inputPlaceholder: 'Enter your amount',
+                inputIsOnError: false,
+                errorMessage: 'lorem ipsum dolor sit amet',
+                buttonLabel: 'Choose',
+              })}
+            />
+          </GridCol>
+        </Grid>
+      )
+    },
+    { info },
+  )

@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Container } from '../../../../components/grid/container'
 import { Comment } from '../../../../components/comments/comment'
@@ -30,7 +30,7 @@ const ActionLinks = styled(({ children, className }) => {
   font-size: ${stepToRem(-2)};
 `
 
-const CommentsPage = props => (
+const CommentsPage = () => (
   <Container>
     <Grid>
       <GridCol col-m="8" offset-m="2">

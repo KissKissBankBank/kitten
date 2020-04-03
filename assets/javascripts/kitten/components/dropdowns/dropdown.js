@@ -20,8 +20,6 @@ export class Dropdown extends React.Component {
   }
 
   componentDidMount() {
-    const dropdown = this
-
     if (domElementHelper.canUseDom()) {
       // Update dropdown content position after DOM is build.
       let referenceElementHeight = this.getReferenceElementHeight()

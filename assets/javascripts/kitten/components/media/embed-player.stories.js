@@ -1,13 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import {
-  withKnobs,
-  text,
-  select,
-  boolean,
-  object,
-} from '@storybook/addon-knobs'
+import { withKnobs, text, object } from '@storybook/addon-knobs'
 import { StyleRoot } from 'radium'
 import { Container } from '../../components/grid/container'
 import { EmbedPlayer } from '../../components/media/embed-player'

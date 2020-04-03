@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { SimilarProjectsCard } from '../../components/cards/similar-projects-card'
 
 const projectsWithImage = [

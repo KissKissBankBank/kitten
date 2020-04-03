@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import useLazyObserver from '../../helpers/utils/lazy-hook'
 
 const LazyHook = ({ children }) => {
