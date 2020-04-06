@@ -38,17 +38,17 @@ const StyledLink = styled.a`
   ${({ textShownFromMediaQuery, icon, text }) => {
     if (icon && !text) {
       return css`
-        width: ${MOBILE_HEADER_HEIGHT};
-        height: ${MOBILE_HEADER_HEIGHT};
+        width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
+        height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
 
         @media (min-width: ${ScreenConfig.S.min}px) {
-          width: ${TABLET_HEADER_HEIGHT};
-          height: ${TABLET_HEADER_HEIGHT};
+          width: ${pxToRem(TABLET_HEADER_HEIGHT)};
+          height: ${pxToRem(TABLET_HEADER_HEIGHT)};
         }
 
         @media (min-width: ${ScreenConfig.L.min}px) {
-          width: ${DESKTOP_HEADER_HEIGHT};
-          height: ${DESKTOP_HEADER_HEIGHT};
+          width: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
+          height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
         }
       `
     }
@@ -90,14 +90,14 @@ const StyledLink = styled.a`
       `
     return css`
       padding: 0;
-      width: ${MOBILE_HEADER_HEIGHT};
+      width: ${pxToRem(MOBILE_HEADER_HEIGHT)};
 
       @media (min-width: ${ScreenConfig.S.min}px) {
-        width: ${TABLET_HEADER_HEIGHT};
+        width: ${pxToRem(TABLET_HEADER_HEIGHT)};
       }
 
       @media (min-width: ${ScreenConfig.L.min}px) {
-        width: ${DESKTOP_HEADER_HEIGHT};
+        width: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
       }
 
       ${defaultWidthForLowerScreenSize}

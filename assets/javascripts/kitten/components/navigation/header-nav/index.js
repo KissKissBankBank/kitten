@@ -30,7 +30,6 @@ import domEvents, {
   DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
   DROPDOWN_LAST_FOCUS_REACHED_EVENT,
   TOGGLE_DROPDOWN_EVENT,
-  dispatchEvent,
 } from '../../../helpers/dom/events'
 import emitter from '../../../helpers/utils/emitter'
 import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config'
@@ -60,16 +59,16 @@ const Navigation = styled.nav`
 
   &,
   .quickAccessLink {
-    height: ${MOBILE_HEADER_HEIGHT};
+    height: ${pxToRem(MOBILE_HEADER_HEIGHT)};
     background: ${({ updateBackground }) =>
       updateBackground ? COLORS.background3 : COLORS.background1};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      height: ${TABLET_HEADER_HEIGHT};
+      height: ${pxToRem(TABLET_HEADER_HEIGHT)};
     }
 
     @media (min-width: ${ScreenConfig.L.min}px) {
-      height: ${DESKTOP_HEADER_HEIGHT};
+      height: ${pxToRem(DESKTOP_HEADER_HEIGHT)};
     }
   }
 `
