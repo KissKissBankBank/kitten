@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `k-u-link` utility class for basic link styling.
+
 ## [2.61.1] - 2020-04-06
 
 Fixes:

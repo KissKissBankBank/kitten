@@ -16,6 +16,17 @@
 
 @mixin k-utilities-link {
   $transition-speed: .3s;
+  $font: 'regular';
+
+  .k-u-link {
+    @include k-typographyFont($font);
+    text-decoration: none;
+
+    &--important {
+      @include k-typographyFont($font, true);
+      text-decoration: none !important;
+    }
+  }
 
   .k-u-link-primary1 {
     color: map-get($k-colors, 'primary-1');
