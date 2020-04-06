@@ -41,6 +41,8 @@ var _elementHelper = _interopRequireDefault(require("../../helpers/dom/element-h
 
 var _emitter = _interopRequireDefault(require("../../helpers/utils/emitter"));
 
+var _events = require("../../helpers/dom/events");
+
 function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
@@ -79,7 +81,7 @@ var UserMenu = /*#__PURE__*/function (_Component) {
 
       this.handlePositionUpdate();
 
-      _emitter.default.on('dropdown:opening:trigger', this.handleOtherDropdownsOpening);
+      _emitter.default.on(_events.TOGGLE_DROPDOWN_EVENT, this.handleOtherDropdownsOpening);
 
       if (this.props.closeEvents) {
         this.props.closeEvents.forEach(function (ev) {
@@ -92,7 +94,7 @@ var UserMenu = /*#__PURE__*/function (_Component) {
     value: function componentWillUnmount() {
       var _this3 = this;
 
-      _emitter.default.off('dropdown:opening:trigger', this.handleOtherDropdownsOpening);
+      _emitter.default.off(_events.TOGGLE_DROPDOWN_EVENT, this.handleOtherDropdownsOpening);
 
       if (this.props.closeEvents) {
         this.props.closeEvents.forEach(function (ev) {
@@ -287,7 +289,6 @@ UserMenu.propTypes = {
   dropdownList: _propTypes.default.array,
   positionedWith: _propTypes.default.func,
   positionedWithBorder: _propTypes.default.bool,
-  positionedOn: _propTypes.default.string,
   notifications: _propTypes.default.number,
   refreshEvents: _propTypes.default.array,
   closeEvents: _propTypes.default.array,

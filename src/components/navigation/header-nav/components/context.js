@@ -10,11 +10,10 @@ exports.Context = void 0;
 var _react = _interopRequireDefault(require("react"));
 
 var Context = _react.default.createContext({
-  backgroundColors: {},
-  borderSide: 'left',
-  borderSideOnHover: true,
-  largeItem: false,
-  noBorder: false
+  id: 'kkbbAndCoHeaderNav',
+  isLogged: false,
+  callOnToggle: function callOnToggle() {},
+  expandBy: null
 });
 
 exports.Context = Context;

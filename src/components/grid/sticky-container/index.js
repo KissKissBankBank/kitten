@@ -194,7 +194,8 @@ var StickyContainerBase = function StickyContainerBase(_ref4, ref) {
     return (0, _styledComponents.css)(["position:", ";", ":", ";transition-property:", ";"], position, directionToAnimate, directionDistance, directionToAnimate);
   };
 
-  return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, (stuck || isSticky === 'always') && /*#__PURE__*/_react.default.createElement(StyledSpacer, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, (stuck || isSticky === 'always') && /*#__PURE__*/_react.default.createElement(StyledSpacer, {
+    className: "k-Spacer",
     containerHeight: containerHeight
   }), /*#__PURE__*/_react.default.createElement(StyledStickyContainer, (0, _extends2.default)({
     ref: currentStickyContainer,
