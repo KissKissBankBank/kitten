@@ -1,24 +1,45 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled, { css } from 'styled-components'
+import TYPOGRAPHY from '../../../constants/typography-config'
+import { modifierStyles } from './helpers/modifier-styles'
 
-export class Title extends Component {
-  render() {
-    const { className, modifier, tag, margin, italic, ...other } = this.props
+const StyledTitle = styled.span`
+  ${TYPOGRAPHY.fontStyles.bold};
+  ${({ modifier }) => modifierStyles(modifier)};
 
-    const titleClassNames = classNames(
-      'k-Title',
-      className,
-      `k-Title--${modifier}`,
-      {
-        'k-Title--withoutMargin': !margin,
-        'k-Title--italic': italic,
-      },
-    )
+  ${({ margin }) =>
+    margin &&
+    css`
+      margin-top: 0;
+      margin-bottom: 0;
+    `}
 
-    const Tag = tag
+  ${({ italic }) =>
+    italic &&
+    css`
+      font-style: italic;
+    `}
+`
 
-    return <Tag className={titleClassNames} {...other} />
-  }
+export const Title = ({
+  modifier,
+  tag,
+  margin,
+  italic,
+  ...other
+)} => {
+
+  const Tag = tag
+
+  return (
+    <Tag
+      {...other}
+      modifier={modifier}
+      margin={margin}
+      italic={italic}
+    />
+  )
 }
 
 Title.defaultProps = {
@@ -27,4 +48,11 @@ Title.defaultProps = {
   children: 'Lorem ipsum dolor sit amet…',
   margin: true,
   italic: false,
+}
+
+Title.propTypes = {
+  tag: PropTypes.string,
+  modifier: PropTypes.string,
+  margin: PropTypes.bool,
+  italic: PropTypes.bool,
 }
