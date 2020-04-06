@@ -22,6 +22,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: add `ORDERED_SCREEN_SIZES` constant in `screen-config` file.
 - Feature: add `getScreenSizeFrom` helper in `media-queries` file.
 - Fix: Fix `Dropdown` components events and accessibility.
+- Feature: Add new `k-u-link` utility class for basic link styling.
+
+## [2.61.1] - 2020-04-06
 
 Fixes:
 - Fix a memory leak to unmounted `StickyContainer`.
