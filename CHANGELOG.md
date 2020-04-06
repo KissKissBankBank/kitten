@@ -22,8 +22,8 @@ Features:
 - Add a11y events to `DropdownButton` component.
 - Add `tiny` prop in `KissKissBankBankLogo` and `LendopolisLogo`
   components.
-- add `ORDERED_SCREEN_SIZES` constant in `screen-config` file.
-- add `getScreenSizeFrom` helper in `media-queries` file.
+- Add `ORDERED_SCREEN_SIZES` constant in `screen-config` file.
+- Add `getScreenSizeFrom` helper in `media-queries` file.
 - Add new `k-u-link` utility class for basic link styling.
 
 Fix:
