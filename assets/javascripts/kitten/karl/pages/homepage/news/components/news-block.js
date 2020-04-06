@@ -8,9 +8,16 @@ import { ScreenConfig } from '../../../../../constants/screen-config'
 import { CONTAINER_PADDING_THIN } from '../../../../../constants/grid-config'
 
 const gridGapThin = pxToRem(10)
+const gridGapMedium = pxToRem(20)
+const gridGapLarge = pxToRem(40)
+
 const mobileCardWidth = `(50vw - ${pxToRem(
   CONTAINER_PADDING_THIN,
 )} - (${gridGapThin} / 2))`
+
+const tabletCardWidth = `(50vw - ${pxToRem(
+  CONTAINER_PADDING,
+)} - (${gridGapMedium} / 2))`
 
 const StyledNewsBlock = styled.div`
   .NewsBlockContent {
@@ -58,6 +65,7 @@ const StyledNewsBlock = styled.div`
 
   .newsBlock__NewsCard__text {
     color: ${COLORS.font1};
+    margin-top: ${pxToRem(15)};
 
     .newsBlock__NewsCard__title {
       margin: 0;
@@ -84,10 +92,6 @@ const StyledNewsBlock = styled.div`
     }
   }
 
-  .newsBlock__NewsCard__text {
-    margin-top: ${pxToRem(10)};
-  }
-
   &.NewsBlock--1cols {
     .newsBlock__NewsCard__picture {
       padding-top: calc(100% * 1 / 2);
@@ -97,83 +101,120 @@ const StyledNewsBlock = styled.div`
     }
   }
 
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    &.NewsBlock--3cols,
-    &.NewsBlock--4cols {
-      overflow-y: scroll;
-      margin: 0 ${pxToRem(-CONTAINER_PADDING_THIN)};
-    }
-    &.NewsBlock--3cols .NewsBlockContent {
-      padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
-      width: calc((3 * ${mobileCardWidth}) + (2 * ${gridGapThin}));
-    }
-    &.NewsBlock--4cols .NewsBlockContent {
-      padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
-      width: calc((4 * ${mobileCardWidth}) + (3 * ${gridGapThin}));
-    }
+  &.NewsBlock--3cols,
+  &.NewsBlock--4cols {
+    overflow-y: scroll;
+    margin: 0 ${pxToRem(-CONTAINER_PADDING_THIN)};
+  }
+  &.NewsBlock--3cols .NewsBlockContent {
+    padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
+    width: calc((3 * ${mobileCardWidth}) + (2 * ${gridGapThin}));
+  }
+  &.NewsBlock--4cols .NewsBlockContent {
+    padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
+    width: calc((4 * ${mobileCardWidth}) + (3 * ${gridGapThin}));
   }
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    margin: 0;
-
-    .NewsBlockContent {
-      grid-gap: ${pxToRem(40)};
+    &.NewsBlock--3cols,
+    &.NewsBlock--4cols {
+      overflow-y: scroll;
+      margin: 0 ${pxToRem(-CONTAINER_PADDING)};
+    }
+    &.NewsBlock--3cols .NewsBlockContent {
+      grid-gap: ${gridGapMedium};
+      padding: 0 ${pxToRem(CONTAINER_PADDING)};
+      width: calc((3 * ${tabletCardWidth}) + (2 * ${gridGapMedium}));
+    }
+    &.NewsBlock--4cols .NewsBlockContent {
+      grid-gap: ${gridGapMedium};
+      padding: 0 ${pxToRem(CONTAINER_PADDING)};
+      width: calc((4 * ${tabletCardWidth}) + (3 * ${gridGapMedium}));
     }
 
-    .newsBlock__NewsCard.NewsCard--horizontal {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
+    .newsBlock__NewsCard__text {
+      margin-top: ${pxToRem(20)};
 
-      .newsBlock__NewsCard__text {
-        flex: 0 1 calc(50% - ${pxToRem(15)});
-        margin-top: 0;
-      }
-
-      .newsBlock__NewsCard__picture {
-        flex: 0 1 calc(50% - ${pxToRem(15)});
-
-        @media (orientation: landscape) {
-          padding-top: calc(50% * 1 / 2);
-        }
-      }
-    }
-
-    .NewsCard--vertical .newsBlock__NewsCard__text {
-      margin-top: ${pxToRem(30)};
-    }
-
-    &.NewsBlock--2cols .NewsCard--vertical,
-    &.NewsBlock--1cols {
       .newsBlock__NewsCard__title {
-        font-size: ${stepToRem(3)};
-      }
-      .newsBlock__NewsCard__excerpt {
-        margin-top: ${pxToRem(15)};
-        font-size: ${stepToRem(0)};
-        line-height: ${stepToRem(4)};
+        font-size: ${stepToRem(1)};
       }
     }
 
-    .newsBlock__NewsCard:first-child:last-child {
-      flex-direction: row;
-      align-items: center;
+    &.NewsBlock--1cols .newsBlock__NewsCard__text .newsBlock__NewsCard__title {
+      font-size: ${stepToRem(2)};
+    }
+  }
 
-      .newsBlock__NewsCard__picture {
-        width: calc(7 / 12 * 100%);
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    && {
+      overflow-y: auto;
+      margin: 0;
 
-        @media (orientation: portrait) {
-          padding-top: calc(7 / 12 * 100% * 4 / 3);
+      .NewsBlockContent {
+        grid-gap: ${gridGapLarge};
+        padding: 0;
+        width: auto;
+      }
+
+      .newsBlock__NewsCard__text .newsBlock__NewsCard__title {
+        font-size: ${stepToRem(2)};
+      }
+
+      .newsBlock__NewsCard.NewsCard--horizontal {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .newsBlock__NewsCard__text {
+          flex: 0 1 calc(50% - ${pxToRem(15)});
+          margin-top: 0;
         }
-        @media (orientation: landscape) {
-          padding-top: calc(7 / 12 * 100% * 1 / 2);
+
+        .newsBlock__NewsCard__picture {
+          flex: 0 1 calc(50% - ${pxToRem(15)});
+
+          @media (orientation: landscape) {
+            padding-top: calc(50% * 1 / 2);
+          }
         }
       }
 
-      .newsBlock__NewsCard__text {
-        margin-top: 0;
-        margin-left: ${pxToRem(40)};
-        width: calc(1 / 3 * 100%);
+      .newsBlock__NewsCard.NewsCard--vertical .newsBlock__NewsCard__text {
+        margin-top: ${pxToRem(30)};
+      }
+
+      &.NewsBlock--2cols .NewsCard--vertical,
+      &.NewsBlock--1cols {
+        .newsBlock__NewsCard__title {
+          font-size: ${stepToRem(3)};
+        }
+        .newsBlock__NewsCard__excerpt {
+          margin-top: ${pxToRem(15)};
+          font-size: ${stepToRem(0)};
+          line-height: ${stepToRem(4)};
+        }
+      }
+
+      .newsBlock__NewsCard:first-child:last-child {
+        flex-direction: row;
+        align-items: center;
+
+        .newsBlock__NewsCard__picture {
+          width: calc(7 / 12 * 100%);
+
+          @media (orientation: portrait) {
+            padding-top: calc(7 / 12 * 100% * 4 / 3);
+          }
+          @media (orientation: landscape) {
+            padding-top: calc(7 / 12 * 100% * 1 / 2);
+          }
+        }
+
+        .newsBlock__NewsCard__text {
+          margin-top: 0;
+          margin-left: ${pxToRem(40)};
+          width: calc(1 / 3 * 100%);
+        }
       }
     }
   }
