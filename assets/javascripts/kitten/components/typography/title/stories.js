@@ -26,7 +26,7 @@ storiesOf('Typography/Title', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
   .add(
-    'with text',
+    'default',
     () => {
       return (
         <Marger top="4">
