@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
+import { pxToRem } from '../../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../../constants/screen-config'
 import COLORS from '../../../../../constants/colors-config'
 

@@ -29,7 +29,6 @@ describe('<RadioButton />', () => {
 
   describe('largeContent prop', () => {
     const component = shallow(<RadioButton largeContent>Hello</RadioButton>)
-    const label = component.find('label')
     const labelContents = component.find('.k-RadioButton__labelContents')
 
     it('passes the right props to the `contentLarge` component', () => {

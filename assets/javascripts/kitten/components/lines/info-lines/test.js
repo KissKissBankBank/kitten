@@ -10,7 +10,6 @@ const createMockMediaMatcher = matches => () => ({
 
 describe('<InfoLines />', () => {
   let originalMatchMedia
-  let component
 
   beforeEach(() => {
     originalMatchMedia = window.matchMedia

@@ -40,7 +40,7 @@ const Item = ({ numItem }) => (
   </Fragment>
 )
 
-export const KarlSimpleCarousel = props => (
+export const KarlSimpleCarousel = () => (
   <div
     style={{
       paddingLeft: 75,

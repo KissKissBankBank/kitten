@@ -71,7 +71,7 @@ describe('<Checkbox />', () => {
   describe('onLabelClick', () => {
     it(
       'should handle click callback on click label',
-      sinonTest(function() {
+      sinonTest(function () {
         const clickSpy = this.spy()
         const wrapper = shallow(
           <Checkbox onLabelClick={clickSpy}>CLICK</Checkbox>,

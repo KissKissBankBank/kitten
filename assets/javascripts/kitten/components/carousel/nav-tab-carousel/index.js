@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
-import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import { Prev } from './components/prev'
 import { Next } from './components/next'
 import { Pagination } from './components/pagination'

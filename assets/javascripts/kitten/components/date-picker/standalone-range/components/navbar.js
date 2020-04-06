@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { ArrowIcon } from '../../../../components/icons/arrow-icon'
 import { Button } from '../../../../components/buttons/button/button'
 import { pxToRem } from '../../../../helpers/utils/typography'

@@ -28,7 +28,7 @@ class TipsSection extends Component {
   }
 
   renderImage() {
-    const imgKeyStyle = [imgBackground('fff'), styles.image]
+    const imgKeyStyle = [imgBackground(), styles.image]
 
     return (
       <GridCol offset-l="1" col-s="5" offset-s="0" col-xs="10" offset-xs="1">
@@ -91,7 +91,7 @@ class TipsSection extends Component {
 const imgHeight = 416
 const imgWidth = 555
 
-const imgBackground = image => ({
+const imgBackground = () => ({
   backgroundColor: '#caf4fe',
   backgroundSize: 'cover',
   backgroundPosition: 'center bottom',

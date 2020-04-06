@@ -2,7 +2,6 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { Container } from './index'
-import { SCREEN_SIZE_M } from '../../../constants/screen-config'
 
 describe('<Container />', () => {
   let component

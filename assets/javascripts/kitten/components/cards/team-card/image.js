@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from '../../layout/marger'
 import COLORS from '../../../constants/colors-config'

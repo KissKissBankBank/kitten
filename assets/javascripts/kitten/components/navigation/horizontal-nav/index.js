@@ -1,4 +1,4 @@
-import React, { Component, useRef, useEffect } from 'react'
+import React, { useRef, useEffect } from 'react'
 import { Badge } from '../../../components/notifications/badge'
 import classNames from 'classnames'
 import Markdown from 'react-markdown'
@@ -11,7 +11,6 @@ export const HorizontalNav = ({
   id,
   items,
   markdown,
-  ...others
 }) => {
   const selectedItem = useRef(null)
   const defaultItem = useRef(null)

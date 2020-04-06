@@ -6,12 +6,6 @@ import { Text } from '../../components/typography/text'
 import { ResponsiveIframeContainer } from '../../components/layout/responsive-iframe-container'
 import { parseHtml } from '../../helpers/utils/parser'
 import { ScreenConfig } from '../../constants/screen-config'
-import {
-  NUM_COLUMNS,
-  GUTTER,
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
-} from '../../constants/grid-config'
 
 const PlayerButton = props => (
   <StyleRoot>
@@ -72,11 +66,10 @@ class EmbedPlayerBase extends Component {
       iframeHtml,
       playButtonLabel,
       style: mainStyle = void 0,
-      t,
     } = this.props
 
     const validRatio = parseInt(ratio, 10)
-    const { thumbnail, badgeComponent, style } = previewProps
+    const { thumbnail, badgeComponent } = previewProps
     const isVideoPlaying = iframeHtml && this.state.showPlayer
     const playerPreviewStyle = [
       styles.player.base,

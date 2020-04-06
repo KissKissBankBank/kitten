@@ -1,19 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import {
-  withKnobs,
-  text,
-  number,
-  select,
-  boolean,
-  object,
-} from '@storybook/addon-knobs'
+import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
 import { StyleRoot } from 'radium'
 import { ExpandBoard } from '../../../components/expandable/expand-board'
 import { ExpandBoardWithButtonItemList } from '../../../components/expandable/expand-board/examples'
 import { Grid, GridCol } from '../../../components/grid/grid'
-import { Text } from '../../../components/typography/text'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
