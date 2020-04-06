@@ -1,5 +1,6 @@
 import { css } from 'styled-components'
-import { stepToRem } from '../../../../helpers/utils/typography'
+import { stepToRem, pxToRem } from '../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const modifierStyles = modifier => {
   let fontStep
@@ -38,6 +39,11 @@ export const modifierStyles = modifier => {
   }
 
   return css`
-    line-height: 1.2,
+    font-size: ${stepToRem(fontStepOnMedia)};
+    line-height: 1.2;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      font-size: ${stepToRem(fontStep)};
+    }
   `
 }

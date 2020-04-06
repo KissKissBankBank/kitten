@@ -6,10 +6,10 @@ import { modifierStyles } from './helpers/modifier-styles'
 
 const StyledTitle = styled.span`
   ${TYPOGRAPHY.fontStyles.bold};
-  ${({ modifier }) => modifierStyles(modifier)};
+  ${({ modifier }) => modifierStyles(modifier)}
 
   ${({ margin }) =>
-    margin &&
+    !margin &&
     css`
       margin-top: 0;
       margin-bottom: 0;
@@ -28,13 +28,12 @@ export const Title = ({
   margin,
   italic,
   ...other
-)} => {
-
-  const Tag = tag
+}) => {
 
   return (
-    <Tag
+    <StyledTitle
       {...other}
+      tag={tag}
       modifier={modifier}
       margin={margin}
       italic={italic}
@@ -52,7 +51,14 @@ Title.defaultProps = {
 
 Title.propTypes = {
   tag: PropTypes.string,
-  modifier: PropTypes.string,
+  modifier: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'tertiary',
+    'quaternary',
+    'quinary',
+    'senary',
+  ]),
   margin: PropTypes.bool,
   italic: PropTypes.bool,
 }
