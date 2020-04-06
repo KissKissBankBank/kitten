@@ -10,6 +10,49 @@ import { Grid, GridCol } from '../../grid/grid'
 import { Text } from '../../../components/typography/text'
 import COLORS from '../../../constants/colors-config'
 
+const info = {
+  text:`
+    # ProgressRing
+    &nbsp;
+
+    ## Import
+    ~~~js
+    import { ProgressRing } from '@kisskissbankbank/kitten/src/components/meters/progress-ring'
+    ~~~
+
+    ## Usage
+    &nbsp;
+
+    #### Default
+    ~~~js
+    <ProgressRing />
+    ~~~
+
+    ### Props
+    ~~~js
+      <ProgressRing
+        color="…"
+        value="…"
+        width="…"
+        radius="…"
+        strokeWidth="…"
+      />
+    ~~~
+
+    ### overtimeProgress props
+    ~~~js
+      <ProgressRing overtimeProgress />
+    ~~~
+
+    ### successProgress props
+    ~~~js
+      <ProgressRing successProgress />
+    ~~~
+  `,
+  header: false,
+  propTables: false,
+}
+
 const StyledContainer = styled.div`
   display: flex;
 `
@@ -34,7 +77,7 @@ storiesOf('Meters/ProgressRing', module)
                 width={number('Width', 24)}
                 strokeWidth={number('Stroke width', 4)}
                 overtimeProgress={boolean('Overtime', false)}
-                successProgress={boolean('Suucess', false)}
+                successProgress={boolean('Success', false)}
               />
               <StyledText size="micro" color="font1" weight="regular">
                 Financé à …%
@@ -44,4 +87,6 @@ storiesOf('Meters/ProgressRing', module)
         </Grid>
       </Container>
     </Marger>
-  ))
+  ),
+  { info },
+)
