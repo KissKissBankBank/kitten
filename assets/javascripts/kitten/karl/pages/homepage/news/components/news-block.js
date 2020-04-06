@@ -5,7 +5,10 @@ import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
 import COLORS from '../../../../../constants/colors-config'
 import TYPOGRAPHY from '../../../../../constants/typography-config'
 import { ScreenConfig } from '../../../../../constants/screen-config'
-import { CONTAINER_PADDING_THIN } from '../../../../../constants/grid-config'
+import {
+  CONTAINER_PADDING,
+  CONTAINER_PADDING_THIN,
+} from '../../../../../constants/grid-config'
 
 const gridGapThin = pxToRem(10)
 const gridGapMedium = pxToRem(20)
