@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -11,55 +13,27 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-var DropdownButton = /*#__PURE__*/function (_React$Component) {
-  (0, _inherits2.default)(DropdownButton, _React$Component);
-
-  var _super = _createSuper(DropdownButton);
-
-  function DropdownButton() {
-    (0, _classCallCheck2.default)(this, DropdownButton);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(DropdownButton, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          isExpanded = _this$props.isExpanded,
-          rest = (0, _objectWithoutProperties2.default)(_this$props, ["className", "isExpanded"]);
-      var buttonClassName = (0, _classnames.default)('k-Dropdown__button', className);
-      return /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
-        ref: "dropdownButton",
-        className: buttonClassName,
-        "aria-haspopup": "true",
-        "aria-expanded": isExpanded
-      }, rest));
-    }
-  }]);
-  return DropdownButton;
-}(_react.default.Component);
-
+var DropdownButton = (0, _react.forwardRef)(function (_ref, dropdownButtonRef) {
+  var id = _ref.id,
+      className = _ref.className,
+      isExpanded = _ref.isExpanded,
+      rest = (0, _objectWithoutProperties2.default)(_ref, ["id", "className", "isExpanded"]);
+  var buttonClassName = (0, _classnames.default)('k-Dropdown__button', className);
+  return /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
+    ref: dropdownButtonRef,
+    id: id,
+    type: "button",
+    className: buttonClassName,
+    "aria-haspopup": "true",
+    "aria-expanded": isExpanded
+  }, rest));
+});
 exports.DropdownButton = DropdownButton;
 DropdownButton.propTypes = {
   onClick: _propTypes.default.func,
