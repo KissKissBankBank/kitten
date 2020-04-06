@@ -42,12 +42,12 @@ var AdaptableGrid = function AdaptableGrid(_ref) {
     colNumber: colNumber,
     gutter: gutter
   };
-  return _react.default.createElement(StyledGrid, {
+  return /*#__PURE__*/_react.default.createElement(StyledGrid, {
     gutter: gutter,
     colAlign: colAlign,
     as: as,
     className: className
-  }, _react.default.createElement(GridProperties.Provider, {
+  }, /*#__PURE__*/_react.default.createElement(GridProperties.Provider, {
     value: gridProperties
   }, children));
 };
@@ -88,7 +88,7 @@ var AdaptableGridCol = function AdaptableGridCol(_ref2) {
     });
     setStyles(stylesByMediaQuery);
   }, []);
-  return _react.default.createElement(StyledGridCol, {
+  return /*#__PURE__*/_react.default.createElement(StyledGridCol, {
     col: col || colNumber,
     offset: offset,
     gutter: gutter,

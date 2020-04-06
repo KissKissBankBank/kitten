@@ -82,13 +82,13 @@ var IconContainer = function IconContainer(_ref7) {
       className = _ref7.className,
       iconDescription = _ref7.iconDescription;
   var height = iconHeight || iconWidth;
-  return _react.default.createElement(StyledContainer, {
+  return /*#__PURE__*/_react.default.createElement(StyledContainer, {
     className: className,
     color: color,
     position: position,
     halfWidth: iconWidth / 2,
     halfHeight: height / 2
-  }, iconDescription && _react.default.createElement(_visuallyHidden.VisuallyHidden, null, iconDescription), children, _react.default.createElement(IconWrapper, {
+  }, iconDescription && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, iconDescription), children, /*#__PURE__*/_react.default.createElement(IconWrapper, {
     marginHeight: height / 2,
     marginWidth: iconWidth / 2,
     position: position

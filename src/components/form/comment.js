@@ -15,9 +15,9 @@ var _deprecated = require("../../helpers/utils/deprecated");
 
 var Comment = function Comment(props) {
   var message = "You can use the Comment instead.\n    For more information: https://github.com/KissKissBankBank/../../blob/master/assets/javascripts/../../components/comments/comment.js";
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: message
-  }, _react.default.createElement(_comment.Comment, props));
+  }, /*#__PURE__*/_react.default.createElement(_comment.Comment, props));
 };
 
 exports.Comment = Comment;

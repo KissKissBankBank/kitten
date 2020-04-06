@@ -53,7 +53,7 @@ var RadioButtonSet = /*#__PURE__*/function (_React$Component) {
       var className = item.className,
           itemProps = (0, _objectWithoutProperties2.default)(item, ["className"]);
       var radioButtonClassName = (0, _classnames.default)('k-RadioButtonSet__radioButton', className);
-      return _react.default.createElement(_radioButton.RadioButton, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_radioButton.RadioButton, (0, _extends2.default)({
         className: radioButtonClassName,
         error: this.props.error,
         name: this.props.name,
@@ -70,7 +70,7 @@ var RadioButtonSet = /*#__PURE__*/function (_React$Component) {
           error = _this$props.error,
           radioButtonSetProps = (0, _objectWithoutProperties2.default)(_this$props, ["items", "className", "name", "error"]);
       var radioButtonSetClassName = (0, _classnames.default)('k-RadioButtonSet', className);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: radioButtonSetClassName
       }, radioButtonSetProps), this.props.items.map(this.renderRadioButton));
     }

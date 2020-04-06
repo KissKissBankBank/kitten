@@ -70,19 +70,19 @@ var Timeline = /*#__PURE__*/function (_Component) {
       var arrayOfChildren = _react.default.Children.toArray(children);
 
       var bulletStyle = [styles.circle, styles.circleMarger[itemHeight]];
-      return _react.default.createElement(_radium.StyleRoot, {
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, {
         style: styles.timelineContainer
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         style: styles.verticalDashedLine
-      }), _react.default.createElement("ol", {
+      }), /*#__PURE__*/_react.default.createElement("ol", {
         style: styles.customList
       }, _react.default.Children.map(arrayOfChildren, function (child, index) {
-        return _react.default.createElement("li", {
+        return /*#__PURE__*/_react.default.createElement("li", {
           style: styles.list
-        }, _react.default.createElement(Text, {
+        }, /*#__PURE__*/_react.default.createElement(Text, {
           size: "tiny",
           style: bulletStyle
-        }, ++index), _react.default.createElement(Marger, {
+        }, ++index), /*#__PURE__*/_react.default.createElement(Marger, {
           top: "2.5",
           bottom: "2.5",
           style: styles.textList

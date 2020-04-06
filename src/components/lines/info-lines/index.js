@@ -80,11 +80,11 @@ var InfoList = function InfoList(_ref6) {
       titleTagList = _ref6.titleTagList,
       itemTagList = _ref6.itemTagList,
       others = (0, _objectWithoutProperties2.default)(_ref6, ["title", "value", "id", "titleTagList", "itemTagList"]);
-  return _react.default.Children.toArray(_react.default.createElement(StyledLine, (0, _extends2.default)({}, others, {
+  return _react.default.Children.toArray( /*#__PURE__*/_react.default.createElement(StyledLine, (0, _extends2.default)({}, others, {
     key: id
-  }), _react.default.createElement(StyledKey, {
+  }), /*#__PURE__*/_react.default.createElement(StyledKey, {
     as: titleTagList
-  }, title), _react.default.createElement(StyledValue, {
+  }, title), /*#__PURE__*/_react.default.createElement(StyledValue, {
     as: itemTagList
   }, value)));
 };
@@ -113,7 +113,7 @@ var InfoLines = /*#__PURE__*/function (_PureComponent) {
           titleTagList = _this$props.titleTagList,
           itemTagList = _this$props.itemTagList,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"]);
-      return _react.default.createElement(StyledInfoLines, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(StyledInfoLines, (0, _extends2.default)({}, others, {
         as: descriptionTagList,
         borderColor: borderColor,
         withBorderRadius: withBorderRadius,
@@ -121,7 +121,7 @@ var InfoLines = /*#__PURE__*/function (_PureComponent) {
         withoutTopBottomBorder: withoutTopBottomBorder,
         withoutResponsive: withoutResponsive
       }), infos.map(function (info) {
-        return _react.default.createElement(InfoList, {
+        return /*#__PURE__*/_react.default.createElement(InfoList, {
           key: info.id,
           title: info.key,
           value: info.value,

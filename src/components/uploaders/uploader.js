@@ -106,7 +106,7 @@ var Uploader = /*#__PURE__*/function (_React$Component) {
     value: function renderTheme() {
       if (!this.props.theme) return;
       var Theme = this.props.theme;
-      return _react.default.createElement(Theme, {
+      return /*#__PURE__*/_react.default.createElement(Theme, {
         buttonLabel: this.props.buttonLabel,
         fileName: this.state.fileName,
         onClick: this.handleClick,
@@ -120,7 +120,7 @@ var Uploader = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return _react.default.createElement(_reactDropzone.default, {
+      return /*#__PURE__*/_react.default.createElement(_reactDropzone.default, {
         ref: function ref(node) {
           _this2.dropzoneRef = node;
         },

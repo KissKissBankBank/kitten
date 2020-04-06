@@ -61,25 +61,25 @@ var Navbar = /*#__PURE__*/function (_Component) {
           className = _this$props.className,
           iconColor = _this$props.iconColor,
           labels = _this$props.labels;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: className
-      }, _react.default.createElement(StyledArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         "aria-label": labels.previoustMonth,
         onClick: function onClick() {
           return onPreviousClick();
         },
         left: true
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         fill: iconColor,
         direction: "left"
-      })), _react.default.createElement(StyledArrowIcon, {
+      })), /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         "aria-label": labels.nextMonth,
         onClick: function onClick() {
           return onNextClick();
         },
         right: true
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         fill: iconColor
       })));

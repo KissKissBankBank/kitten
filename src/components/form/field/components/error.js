@@ -49,9 +49,9 @@ var FieldError = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           children = _this$props.children,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["children"]);
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1"
-      }, _react.default.createElement(_text.Text, (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
         tag: "p",
         color: "error",
         size: "micro",

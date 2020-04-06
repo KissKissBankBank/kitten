@@ -49,7 +49,7 @@ var StyledTextInputWithIcon = _styledComponents.default.div.withConfig({
 var StyledIcon = (0, _styledComponents.default)(function (_ref) {
   var disabled = _ref.disabled,
       others = (0, _objectWithoutProperties2.default)(_ref, ["disabled"]);
-  return _react.default.createElement("span", others);
+  return /*#__PURE__*/_react.default.createElement("span", others);
 }).withConfig({
   displayName: "text-input-with-icon__StyledIcon",
   componentId: "rvt8kr-1"
@@ -76,12 +76,12 @@ var TextInputWithIcon = /*#__PURE__*/function (_PureComponent) {
           icon = _this$props.icon,
           accessibilityLabel = _this$props.accessibilityLabel,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["disabled", "icon", "accessibilityLabel"]);
-      return _react.default.createElement(StyledTextInputWithIcon, null, accessibilityLabel && _react.default.createElement(_visuallyHidden.VisuallyHidden, null, accessibilityLabel), _react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(StyledTextInputWithIcon, null, accessibilityLabel && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, accessibilityLabel), /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({}, others, {
         style: (0, _extends2.default)({
           paddingLeft: "".concat((0, _typography.pxToRem)(50))
         }, others.style),
         disabled: disabled
-      })), _react.default.createElement(StyledIcon, {
+      })), /*#__PURE__*/_react.default.createElement(StyledIcon, {
         "aria-hidden": "true",
         disabled: disabled
       }, icon));

@@ -30,9 +30,9 @@ var FieldInput = function FieldInput(props) {
     Input = _textInputWithUnit.TextInputWithUnit;
   }
 
-  return _react.default.createElement(_marger.Marger, {
+  return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "1"
-  }, _react.default.createElement(Input, props));
+  }, /*#__PURE__*/_react.default.createElement(Input, props));
 };
 
 exports.FieldInput = FieldInput;

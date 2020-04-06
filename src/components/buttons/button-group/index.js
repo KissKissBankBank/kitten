@@ -61,7 +61,7 @@ var ButtonGroup = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(ButtonGroup, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(StyledButtonGroup, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledButtonGroup, (0, _extends2.default)({
         role: "group"
       }, this.props));
     }

@@ -46,7 +46,7 @@ var TooltipNew = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(TooltipNew, [{
     key: "renderArrow",
     value: function renderArrow() {
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         className: "k-TooltipNew__arrow"
       });
     }
@@ -58,10 +58,10 @@ var TooltipNew = /*#__PURE__*/function (_Component) {
           className = _this$props.className,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "className"]);
       var tooltipNewClassName = (0, _classnames.default)('k-TooltipNew', className);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: tooltipNewClassName,
         role: "tooltip"
-      }, others), _react.default.createElement(_marger.Marger, {
+      }, others), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",
         bottom: "2"
       }, children, this.renderArrow()));

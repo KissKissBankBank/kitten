@@ -54,7 +54,7 @@ var HeaderTour = /*#__PURE__*/function (_React$Component) {
     value: function platformSwitchStep() {
       var content = this.props.platformSwitchStep;
       var illustration = {
-        illustration: _react.default.createElement(_mixIllustration.MixIllustration, {
+        illustration: /*#__PURE__*/_react.default.createElement(_mixIllustration.MixIllustration, {
           className: "k-Tour__popover__svg--primary"
         })
       };
@@ -65,7 +65,7 @@ var HeaderTour = /*#__PURE__*/function (_React$Component) {
     value: function crowdStep() {
       var content = this.props.crowdStep;
       var illustration = {
-        illustration: _react.default.createElement(_loudspeakerIllustration.LoudspeakerIllustration, {
+        illustration: /*#__PURE__*/_react.default.createElement(_loudspeakerIllustration.LoudspeakerIllustration, {
           className: "k-Tour__popover__svg--primary"
         })
       };
@@ -83,7 +83,7 @@ var HeaderTour = /*#__PURE__*/function (_React$Component) {
           platformSwitchStep = _this$props.platformSwitchStep,
           crowdStep = _this$props.crowdStep,
           otherProps = (0, _objectWithoutProperties2.default)(_this$props, ["platformSwitchStep", "crowdStep"]);
-      return _react.default.createElement(_tour.Tour, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_tour.Tour, (0, _extends2.default)({
         className: "k-HeaderTour",
         steps: this.steps()
       }, otherProps));

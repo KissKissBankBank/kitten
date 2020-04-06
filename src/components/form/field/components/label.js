@@ -59,17 +59,17 @@ var FieldLabel = /*#__PURE__*/function (_Component) {
           labelProps = _this$props.labelProps,
           link = _this$props.link,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "tooltip", "tooltipId", "labelProps", "link"]);
-      return _react.default.createElement(_marger.Marger, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, (0, _extends2.default)({
         bottom: "1"
-      }, others), _react.default.createElement(_line.Line, {
+      }, others), /*#__PURE__*/_react.default.createElement(_line.Line, {
         style: {
           lineHeight: 1
         }
-      }, _react.default.createElement(_line.Line.Item, null, _react.default.createElement(_label.Label, (0, _extends2.default)({}, labelProps, {
+      }, /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({}, labelProps, {
         size: labelProps.size || 'micro'
-      }), children)), tooltip && _react.default.createElement(_line.Line.Item, null, _react.default.createElement(_tooltip.Tooltip, {
+      }), children)), tooltip && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, /*#__PURE__*/_react.default.createElement(_tooltip.Tooltip, {
         id: tooltipId
-      }, tooltip)), link && _react.default.createElement(_line.Line.Item, null, link)));
+      }, tooltip)), link && /*#__PURE__*/_react.default.createElement(_line.Line.Item, null, link)));
     }
   }]);
   return FieldLabel;

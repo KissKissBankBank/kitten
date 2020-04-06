@@ -56,12 +56,12 @@ var IconBadge = function IconBadge(_ref6) {
       big = _ref6.big,
       huge = _ref6.huge,
       others = (0, _objectWithoutProperties2.default)(_ref6, ["children", "disabled", "valid", "big", "huge"]);
-  return _react.default.createElement(StyledBadge, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({
     disabled: disabled,
     valid: valid,
     big: big,
     huge: huge
-  }, others), _react.default.createElement(StyledContent, {
+  }, others), /*#__PURE__*/_react.default.createElement(StyledContent, {
     big: big,
     huge: huge
   }, children));

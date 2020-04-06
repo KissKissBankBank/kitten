@@ -56,7 +56,7 @@ var VerticalStroke = /*#__PURE__*/function (_Component) {
         'k-VerticalStroke--big': size == 'big',
         'k-VerticalStroke--huge': size == 'huge'
       }, className);
-      return _react.default.createElement("span", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("span", (0, _extends2.default)({
         className: verticalStrokeClassName
       }, others));
     }

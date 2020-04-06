@@ -61,7 +61,7 @@ var List = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(List, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(StyledList, this.props);
+      return /*#__PURE__*/_react.default.createElement(StyledList, this.props);
     }
   }]);
   return List;

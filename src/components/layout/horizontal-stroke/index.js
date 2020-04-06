@@ -68,7 +68,7 @@ var HorizontalStroke = function HorizontalStroke(_ref4) {
   var style = _ref4.style,
       size = _ref4.size,
       props = (0, _objectWithoutProperties2.default)(_ref4, ["style", "size"]);
-  return _react.default.createElement(StyledHorizontalStroke, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(StyledHorizontalStroke, (0, _extends2.default)({}, props, {
     modifierSize: size,
     styles: style
   }));

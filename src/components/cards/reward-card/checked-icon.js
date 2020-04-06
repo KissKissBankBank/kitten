@@ -20,10 +20,10 @@ var _rewardCard = require("../../../components/cards/reward-card");
 var IconBadge = (0, _radium.default)(_iconBadge.IconBadge);
 
 var RewardCardCheckedIcon = function RewardCardCheckedIcon() {
-  return _react.default.createElement(IconBadge, {
+  return /*#__PURE__*/_react.default.createElement(IconBadge, {
     valid: true,
     style: _rewardCard.styles.iconBadge
-  }, _react.default.createElement(_checkedIcon.CheckedIcon, {
+  }, /*#__PURE__*/_react.default.createElement(_checkedIcon.CheckedIcon, {
     className: "k-IconBadge__svg"
   }));
 };

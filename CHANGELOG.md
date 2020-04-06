@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.61.1] - 2020-04-06
+
+Fixes:
+- Fix a memory leak to unmounted `StickyContainer`.
+- Fix `Alert` error when `onAfterClose` is not defined.
+
 ## [2.61.0] - 2020-04-02
 
 Feature:

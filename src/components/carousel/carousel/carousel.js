@@ -172,7 +172,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           numColumns = _this$state3.numColumns,
           numPages = _this$state3.numPages;
       var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
-      return _react.default.createElement(_carouselInner.CarouselInner, {
+      return /*#__PURE__*/_react.default.createElement(_carouselInner.CarouselInner, {
         itemMinWidth: itemMinWidth,
         renderItem: children,
         indexPageVisible: indexPageVisible,
@@ -204,37 +204,37 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
 
       if (viewportIsXSOrLess) {
         var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
-        return _react.default.createElement(PageControl, null, rangePage.map(function (index) {
-          return _react.default.createElement(PageDot, {
+        return /*#__PURE__*/_react.default.createElement(PageControl, null, rangePage.map(function (index) {
+          return /*#__PURE__*/_react.default.createElement(PageDot, {
             index: index,
             key: index,
             visibleIndex: indexPageVisible
           });
-        }), _react.default.createElement(PageControlButton, {
+        }), /*#__PURE__*/_react.default.createElement(PageControlButton, {
           prev: true,
           onClick: _this.goPrevPage
-        }), _react.default.createElement(PageControlButton, {
+        }), /*#__PURE__*/_react.default.createElement(PageControlButton, {
           next: true,
           onClick: _this.goNextPage
         }));
       }
 
-      return _react.default.createElement(CarouselPagination, {
+      return /*#__PURE__*/_react.default.createElement(CarouselPagination, {
         position: paginationPosition,
         itemMarginBetween: itemMarginBetween
-      }, _react.default.createElement(_buttonIcon.ButtonIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "beryllium",
         onClick: _this.goPrevPage,
         disabled: indexPageVisible < 1 || numPages < 1
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         className: "k-ButtonIcon__svg",
         direction: "left"
-      })), _react.default.createElement(_buttonIcon.ButtonIcon, {
+      })), /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "beryllium",
         onClick: _this.goNextPage,
         disabled: indexPageVisible >= numPages - 1
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         className: "k-ButtonIcon__svg",
         direction: "right"
@@ -251,7 +251,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           paginationPosition = _this$props4.paginationPosition,
           children = _this$props4.children;
       if (_react.default.Children.count(children) === 0) return null;
-      return _react.default.createElement(FlexContainer, {
+      return /*#__PURE__*/_react.default.createElement(FlexContainer, {
         paginationPosition: paginationPosition
       }, this.renderCarouselInner(), this.renderPagination());
     }

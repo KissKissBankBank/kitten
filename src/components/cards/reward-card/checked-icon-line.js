@@ -50,12 +50,12 @@ var RewardCardCheckedIconLine = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(RewardCardCheckedIconLine, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         style: styles.base
-      }, _react.default.createElement(_iconBadge.IconBadge, {
+      }, /*#__PURE__*/_react.default.createElement(_iconBadge.IconBadge, {
         valid: true,
         style: styles.iconBadge
-      }, _react.default.createElement(_checkedIcon.CheckedIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_checkedIcon.CheckedIcon, {
         className: "k-IconBadge__svg"
       })));
     }

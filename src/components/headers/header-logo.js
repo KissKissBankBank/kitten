@@ -61,9 +61,9 @@ var HeaderLogo = /*#__PURE__*/function (_React$Component) {
         'k-Header__logo--lightOnM': lightOnM,
         'k-Header__logo--lightOnXxs': lightOnXxs
       });
-      return _react.default.createElement("a", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
         className: linkClassName
-      }, other), _react.default.createElement("img", imgProps));
+      }, other), /*#__PURE__*/_react.default.createElement("img", imgProps));
     }
   }]);
   return HeaderLogo;

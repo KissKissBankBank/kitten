@@ -49,9 +49,9 @@ var TeamCardImage = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           src = _this$props.src,
           title = _this$props.title;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "2"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         style: imgBackground(src),
         title: title
       }));

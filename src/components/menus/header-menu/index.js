@@ -69,11 +69,11 @@ var HeaderMenu = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var children = this.props.children;
-      return _react.default.createElement(_context.Context.Provider, {
+      return /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
         value: this.state
-      }, _react.default.createElement("nav", {
+      }, /*#__PURE__*/_react.default.createElement("nav", {
         role: "navigation"
-      }, _react.default.createElement(List, {
+      }, /*#__PURE__*/_react.default.createElement(List, {
         role: "menubar"
       }, children)));
     }

@@ -62,7 +62,7 @@ var Button = /*#__PURE__*/function (_Component) {
 
       var tabindex = tag == 'a' && !this.props.href ? 0 : null;
       var Tag = tag;
-      return _react.default.createElement(Tag, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
         className: buttonClassNames,
         tabIndex: tabindex
       }, others));

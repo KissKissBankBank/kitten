@@ -107,20 +107,20 @@ var Search = /*#__PURE__*/function (_Component) {
       }, {
         'is-hover': this.state.hover
       });
-      return _react.default.createElement("form", {
+      return /*#__PURE__*/_react.default.createElement("form", {
         className: "k-SearchInput",
         role: "search",
         action: actionUrl,
         acceptCharset: "UTF-8",
         method: "get"
-      }, _react.default.createElement(_textInput.TextInput, {
+      }, /*#__PURE__*/_react.default.createElement(_textInput.TextInput, {
         className: inputClassName,
         type: "search",
         id: inputId,
         name: inputName,
         placeholder: inputPlaceholder,
         "aria-label": inputLabel
-      }), _react.default.createElement("button", {
+      }), /*#__PURE__*/_react.default.createElement("button", {
         type: "submit",
         "aria-label": submitLabel,
         className: "k-SearchInput__submit k-SearchInput__submit--tiny",
@@ -128,7 +128,7 @@ var Search = /*#__PURE__*/function (_Component) {
         onBlur: this.handleSubmitBlur,
         onMouseOver: this.handleSubmitMouseOver,
         onMouseOut: this.handleSubmitMouseOut
-      }, _react.default.createElement(_searchIcon.SearchIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_searchIcon.SearchIcon, {
         width: "14",
         height: "14",
         circleProps: {

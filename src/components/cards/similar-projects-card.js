@@ -121,7 +121,7 @@ var SimilarProjectsCard = /*#__PURE__*/function (_Component) {
           others = (0, _objectWithoutProperties2.default)(_this$props, ["projects", "onLeftArrowClick", "onRightArrowClick"]);
       var nextIndex = this.state.currentIndex + 1;
       var previousIndex = this.state.currentIndex - 1;
-      return _react.default.createElement(_projectSimilarCard.SimilarProjectCard, (0, _extends2.default)({}, others, this.currentProjectProps(), {
+      return /*#__PURE__*/_react.default.createElement(_projectSimilarCard.SimilarProjectCard, (0, _extends2.default)({}, others, this.currentProjectProps(), {
         step: this.currentStep(),
         onLeftArrowClick: this.curryHandleArrowClick(previousIndex, this.props.onLeftArrowClick),
         onRightArrowClick: this.curryHandleArrowClick(nextIndex, this.props.onRightArrowClick),

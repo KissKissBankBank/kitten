@@ -72,13 +72,13 @@ var SideLayout = /*#__PURE__*/function (_React$Component) {
       var sideLayoutClassName = (0, _classnames.default)(className, {
         'k-VerticalGrid__fullHeight': hasFullHeightLayout
       });
-      return _react.default.createElement(_sideGrid.SideGrid, {
+      return /*#__PURE__*/_react.default.createElement(_sideGrid.SideGrid, {
         className: sideLayoutClassName,
         containerClassName: "k-VerticalGrid__container",
         rowClassName: "k-VerticalGrid__element"
-      }, _react.default.createElement(_sideGrid.SideGridContent, null, _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {
+      }, /*#__PURE__*/_react.default.createElement(_sideGrid.SideGridContent, null, /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         "col-s": "12"
-      }, this.props.children))), _react.default.createElement(_sideGrid.SideGridAside, {
+      }, this.props.children))), /*#__PURE__*/_react.default.createElement(_sideGrid.SideGridAside, {
         className: "k-VerticalGrid__element"
       }, this.props.sidebar));
     }

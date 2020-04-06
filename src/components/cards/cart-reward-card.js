@@ -101,7 +101,7 @@ var CartRewardCardComponent = /*#__PURE__*/function (_Component) {
       var cartRewardStyles = [styles.card, this.state.isHidden && styles.card.hidden, {
         height: this.state.height
       }];
-      return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, null, /*#__PURE__*/_react.default.createElement("div", {
         ref: function ref(div) {
           _this2.container = div;
         },
@@ -125,26 +125,26 @@ var CartRewardCardComponent = /*#__PURE__*/function (_Component) {
         return child.type === CartRewardCard.Description;
       });
 
-      return _react.default.createElement(Marger, {
+      return /*#__PURE__*/_react.default.createElement(Marger, {
         bottom: "4",
         style: styles.description
-      }, _react.default.createElement(Marger, {
+      }, /*#__PURE__*/_react.default.createElement(Marger, {
         bottom: viewportIsMobile && !subtitle ? 1 : 2
-      }, _react.default.createElement(_title.Title, {
+      }, /*#__PURE__*/_react.default.createElement(_title.Title, {
         italic: true,
         modifier: "quinary",
         margin: false,
         tag: titleTag
-      }, titleAmount)), subtitle && _react.default.createElement(Marger, {
+      }, titleAmount)), subtitle && /*#__PURE__*/_react.default.createElement(Marger, {
         top: "2",
         bottom: "1"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         weight: "bold",
         size: "default"
-      }, subtitle)), _react.default.createElement(Marger, {
+      }, subtitle)), /*#__PURE__*/_react.default.createElement(Marger, {
         top: viewportIsMobile && !subtitle ? 1 : 2,
         bottom: "2"
-      }, _react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
         tag: descriptionTag,
         margin: false,
         modifier: "quaternary"
@@ -153,9 +153,9 @@ var CartRewardCardComponent = /*#__PURE__*/function (_Component) {
   }, {
     key: "renderGarbage",
     value: function renderGarbage() {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         style: styles.cart
-      }, _react.default.createElement(_buttonIcon.ButtonIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         type: "button",
         title: "Garbage Button",
         "aria-label": "Garbage Button",
@@ -163,7 +163,7 @@ var CartRewardCardComponent = /*#__PURE__*/function (_Component) {
         size: "tiny",
         onClick: this.handleCloseClick,
         style: styles.garbage
-      }, _react.default.createElement(_garbageIcon.GarbageIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, {
         className: "k-ButtonIcon__svg"
       })));
     }
@@ -181,14 +181,14 @@ var CartRewardCardComponent = /*#__PURE__*/function (_Component) {
         return child.type === CartRewardCard.Information;
       });
 
-      return _react.default.createElement(_react.Fragment, null, shippingTitle && shippingValue && _react.default.createElement(Marger, {
+      return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, shippingTitle && shippingValue && /*#__PURE__*/_react.default.createElement(Marger, {
         top: "2"
-      }, _react.default.createElement(CartRewardCard.Information, {
+      }, /*#__PURE__*/_react.default.createElement(CartRewardCard.Information, {
         title: shippingTitle,
         value: shippingValue
-      })), informationElements, updateAmountTitle && _react.default.createElement(Marger, {
+      })), informationElements, updateAmountTitle && /*#__PURE__*/_react.default.createElement(Marger, {
         top: "2"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         tag: "a",
         href: updateAmountLink,
         color: "primary1",
@@ -277,10 +277,10 @@ exports.CartRewardCard = CartRewardCard;
 CartRewardCard.Information = function (_ref) {
   var title = _ref.title,
       value = _ref.value;
-  return _react.default.createElement("div", null, _react.default.createElement(_text.Text, {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_text.Text, {
     weight: "regular",
     size: "tiny"
-  }, title, " ", _react.default.createElement(_text.Text, {
+  }, title, " ", /*#__PURE__*/_react.default.createElement(_text.Text, {
     weight: "light"
   }, value)));
 };
@@ -292,5 +292,5 @@ CartRewardCard.Information.propTypes = {
 
 CartRewardCard.Description = function (_ref2) {
   var children = _ref2.children;
-  return _react.default.createElement(_react.Fragment, null, children);
+  return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, children);
 };

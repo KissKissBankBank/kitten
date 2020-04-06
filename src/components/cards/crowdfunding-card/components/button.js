@@ -33,10 +33,10 @@ var StyledButtonContainer = _styledComponents.default.div.withConfig({
 var CardButton = function CardButton(_ref) {
   var text = _ref.text,
       loading = _ref.loading;
-  return _react.default.createElement(StyledButtonContainer, null, !loading && _react.default.createElement(_button.Button, {
+  return /*#__PURE__*/_react.default.createElement(StyledButtonContainer, null, !loading && /*#__PURE__*/_react.default.createElement(_button.Button, {
     fluid: true,
     modifier: "helium"
-  }, text), loading && _react.default.createElement(StyledLoading, {
+  }, text), loading && /*#__PURE__*/_react.default.createElement(StyledLoading, {
     fluid: true
   }));
 };

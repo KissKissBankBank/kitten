@@ -36,7 +36,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 var NotificationBadge = function NotificationBadge(_ref) {
   var notifications = _ref.notifications,
       badgeColor = _ref.badgeColor;
-  return _react.default.createElement("span", {
+  return /*#__PURE__*/_react.default.createElement("span", {
     className: "k-ButtonWithBadge__badge k-Badge",
     style: {
       backgroundColor: badgeColor
@@ -72,26 +72,26 @@ var ButtonImageWithTextAndBadge = /*#__PURE__*/function (_React$Component) {
           rest = (0, _objectWithoutProperties2.default)(_this$props, ["className", "isExpanded", "text", "title", "textClassName", "srcImg", "widthImg", "heightImg", "altImg", "notifications", "badgeColor"]);
       var textClass = (0, _classnames.default)('k-ButtonImageWithText__text', 'k-ButtonImageWithText__text--withoutPaddingRight', textClassName);
       var buttonClassName = (0, _classnames.default)('k-ButtonImageWithText', className);
-      return _react.default.createElement("button", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
         className: buttonClassName,
         "aria-haspopup": "true",
         "aria-expanded": isExpanded,
         title: title
-      }, rest), _react.default.createElement("span", {
+      }, rest), /*#__PURE__*/_react.default.createElement("span", {
         className: "k-ButtonWithBadge"
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         ref: "buttonImage",
         className: "k-ButtonImage"
-      }, _react.default.createElement("img", {
+      }, /*#__PURE__*/_react.default.createElement("img", {
         className: "k-ButtonImage__img",
         src: srcImg,
         width: widthImg,
         height: heightImg,
         alt: altImg
-      })), notifications && _react.default.createElement(NotificationBadge, {
+      })), notifications && /*#__PURE__*/_react.default.createElement(NotificationBadge, {
         notifications: notifications,
         badgeColor: badgeColor
-      })), _react.default.createElement("p", {
+      })), /*#__PURE__*/_react.default.createElement("p", {
         className: textClass
       }, text));
     }

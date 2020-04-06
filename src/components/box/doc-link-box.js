@@ -42,9 +42,9 @@ var DocLinkBox = /*#__PURE__*/function (_React$Component) {
   (0, _createClass2.default)(DocLinkBox, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_linkBox.default, (0, _extends2.default)({}, this.props, {
+      return /*#__PURE__*/_react.default.createElement(_linkBox.default, (0, _extends2.default)({}, this.props, {
         displayIcon: true
-      }), _react.default.createElement(_linkBoxIllustration.LinkBoxIllustration, {
+      }), /*#__PURE__*/_react.default.createElement(_linkBoxIllustration.LinkBoxIllustration, {
         className: "k-LinkBox__icon--svg"
       }));
     }

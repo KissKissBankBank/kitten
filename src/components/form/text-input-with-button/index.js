@@ -96,13 +96,13 @@ var TextInputWithButton = /*#__PURE__*/function (_PureComponent) {
           buttonProps = _this$props.buttonProps,
           inputValue = _this$props.inputValue,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "buttonValue", "modifier", "buttonProps", "inputValue"]);
-      return _react.default.createElement(StyledTextInputWithButton, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(StyledTextInputWithButton, null, /*#__PURE__*/_react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
         valid: valid,
         error: error,
         disabled: disabled,
         tiny: tiny,
         value: inputValue
-      })), _react.default.createElement(StyledButton, (0, _extends2.default)({
+      })), /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
         type: "button",
         modifier: modifier,
         valid: valid,

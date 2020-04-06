@@ -24,7 +24,7 @@ var ResponsiveIframeContainer = function ResponsiveIframeContainer(_ref) {
   var styles = (0, _extends2.default)({}, style, {
     paddingBottom: "".concat(ratio, "%")
   });
-  return _react.default.createElement("div", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: componentClassName,
     style: styles
   }, props));
@@ -33,5 +33,5 @@ var ResponsiveIframeContainer = function ResponsiveIframeContainer(_ref) {
 exports.ResponsiveIframeContainer = ResponsiveIframeContainer;
 ResponsiveIframeContainer.defaultProps = {
   ratio: '67.5',
-  children: _react.default.createElement("iframe", null)
+  children: /*#__PURE__*/_react.default.createElement("iframe", null)
 };

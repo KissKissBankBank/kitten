@@ -74,7 +74,7 @@ var NavTabCarousel = /*#__PURE__*/function (_Component) {
         children: children,
         type: NavTabCarousel.Pagination
       })[0];
-      return _react.default.createElement(NavTabCarouselStyles, null, prev || _react.default.createElement(_styledComponents2.LeftEmptyContainer, null), pagination, next || _react.default.createElement(_styledComponents2.RightEmptyContainer, null));
+      return /*#__PURE__*/_react.default.createElement(NavTabCarouselStyles, null, prev || /*#__PURE__*/_react.default.createElement(_styledComponents2.LeftEmptyContainer, null), pagination, next || /*#__PURE__*/_react.default.createElement(_styledComponents2.RightEmptyContainer, null));
     }
   }]);
   return NavTabCarousel;

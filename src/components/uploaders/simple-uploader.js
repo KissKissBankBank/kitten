@@ -21,25 +21,25 @@ var _crossIcon = require("../../components/icons/cross-icon");
 
 var Theme = function Theme(props) {
   var handleClick = props.disabled ? null : props.onCancel;
-  var deleteButton = props.deletable && props.fileName ? _react.default.createElement(_buttonIcon.ButtonIcon, {
+  var deleteButton = props.deletable && props.fileName ? /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
     className: "k-SimpleUploader__buttonIcon",
     size: "nano",
     disabled: props.disabled,
     onClick: handleClick
-  }, _react.default.createElement(_crossIcon.CrossIcon, {
+  }, /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
     className: "k-ButtonIcon__svg"
   })) : null;
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "k-SimpleUploader"
-  }, _react.default.createElement(_button.Button, {
+  }, /*#__PURE__*/_react.default.createElement(_button.Button, {
     size: "tiny",
     type: "button",
     className: "k-SimpleUploader__button",
     disabled: props.disabled,
     onClick: props.onClick
-  }, props.buttonLabel), _react.default.createElement("div", {
+  }, props.buttonLabel), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-SimpleUploader__link"
-  }, _react.default.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "k-SimpleUploader__text"
   }, props.fileName), deleteButton));
 };
@@ -54,7 +54,7 @@ Theme.defaultProps = {
 };
 
 var SimpleUploader = function SimpleUploader(props) {
-  return _react.default.createElement(_uploader.Uploader, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(_uploader.Uploader, (0, _extends2.default)({}, props, {
     theme: Theme
   }));
 };

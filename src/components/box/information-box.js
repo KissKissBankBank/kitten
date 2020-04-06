@@ -52,17 +52,17 @@ var InformationBox = /*#__PURE__*/function (_Component) {
           title = _this$props.title,
           children = _this$props.children,
           other = (0, _objectWithoutProperties2.default)(_this$props, ["title", "children"]);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: "k-InformationBox"
-      }, other), _react.default.createElement("div", {
+      }, other), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-InformationBox__container"
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "1"
-      }, _react.default.createElement(_title.Title, {
+      }, /*#__PURE__*/_react.default.createElement(_title.Title, {
         tag: "p",
         margin: false,
         modifier: "quaternary"
-      }, title)), _react.default.createElement(_marger.Marger, {
+      }, title)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1"
       }, children)));
     }

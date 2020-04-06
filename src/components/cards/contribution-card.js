@@ -15,9 +15,9 @@ var _deprecated = require("../../helpers/utils/deprecated");
 
 var ContributionCard = function ContributionCard(props) {
   var message = "You can use the RewardComponent instead.\n    For more information: https://github.com/KissKissBankBank/../../blob/master/assets/javascripts/../../components/cards/reward-card.js";
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: message
-  }, _react.default.createElement(_rewardCard.RewardCard, props));
+  }, /*#__PURE__*/_react.default.createElement(_rewardCard.RewardCard, props));
 };
 
 exports.ContributionCard = ContributionCard;

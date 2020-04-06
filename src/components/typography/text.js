@@ -88,7 +88,7 @@ var Text = /*#__PURE__*/function (_Component) {
         'k-u-weight-regular': weight == 'regular',
         'k-u-weight-bold': weight == 'bold'
       }, className);
-      return _react.default.createElement(Tag, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({}, others, {
         className: textClassName
       }));
     }

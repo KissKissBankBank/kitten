@@ -57,7 +57,7 @@ var Stepper = /*#__PURE__*/function (_Component) {
         'k-Stepper__break': !this.props.withAlignStart
       });
       return text.split(regex).map(function (line, index) {
-        return line.match(regex) ? _react.default.createElement("br", {
+        return line.match(regex) ? /*#__PURE__*/_react.default.createElement("br", {
           className: brClassNames,
           key: index
         }) : line;
@@ -74,10 +74,10 @@ var Stepper = /*#__PURE__*/function (_Component) {
       var Tag = href ? 'a' : 'span';
       var IconType = iconTypeComponents[iconType];
       var className = (0, _classnames.default)('k-Stepper__link', linkClassNames);
-      return _react.default.createElement(Tag, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
         className: className,
         href: href
-      }, other), _react.default.createElement(IconType, null), this.lineBreaks(text));
+      }, other), /*#__PURE__*/_react.default.createElement(IconType, null), this.lineBreaks(text));
     }
   }, {
     key: "renderItems",
@@ -89,7 +89,7 @@ var Stepper = /*#__PURE__*/function (_Component) {
         'k-Stepper__item--tinySpacing': this.props.withTinySpacing
       });
       return items.map(function (item, index) {
-        return _react.default.createElement("li", {
+        return /*#__PURE__*/_react.default.createElement("li", {
           className: itemClassNames,
           key: index
         }, _this.renderLink(item, index));
@@ -101,10 +101,10 @@ var Stepper = /*#__PURE__*/function (_Component) {
       var listClassNames = (0, _classnames.default)('k-Stepper__list', {
         'k-Stepper__list--alignStart': this.props.withAlignStart
       });
-      return _react.default.createElement("nav", {
+      return /*#__PURE__*/_react.default.createElement("nav", {
         className: "k-Stepper",
         role: "navigation"
-      }, _react.default.createElement("ul", {
+      }, /*#__PURE__*/_react.default.createElement("ul", {
         className: listClassNames
       }, this.renderItems()));
     }

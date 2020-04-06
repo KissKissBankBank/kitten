@@ -14,9 +14,9 @@ var _marger = require("../../../layout/marger");
 var _passwordInput = require("../../password-input");
 
 var FieldPassword = function FieldPassword(props) {
-  return _react.default.createElement(_marger.Marger, {
+  return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "1"
-  }, _react.default.createElement(_passwordInput.PasswordInput, props));
+  }, /*#__PURE__*/_react.default.createElement(_passwordInput.PasswordInput, props));
 };
 
 exports.FieldPassword = FieldPassword;

@@ -32,7 +32,7 @@ var Item = function Item(_ref) {
       iconProps = _ref.iconProps,
       children = _ref.children,
       others = (0, _objectWithoutProperties2.default)(_ref, ["icon", "iconProps", "children"]);
-  return _react.default.createElement(StyledItem, others, _react.default.createElement(_icon.Icon, iconProps, icon), _react.default.createElement(StyledContent, null, children));
+  return /*#__PURE__*/_react.default.createElement(StyledItem, others, /*#__PURE__*/_react.default.createElement(_icon.Icon, iconProps, icon), /*#__PURE__*/_react.default.createElement(StyledContent, null, children));
 };
 
 exports.Item = Item;
