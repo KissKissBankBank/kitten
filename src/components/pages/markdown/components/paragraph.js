@@ -17,11 +17,11 @@ var _context = require("./context");
 
 var MarkdownParagraph = function MarkdownParagraph(_ref) {
   var children = _ref.children;
-  return _react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
+  return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
     var paragraphModifier = _ref2.paragraphModifier;
-    return _react.default.createElement(_marger.Marger, {
+    return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
       bottom: "2.6"
-    }, _react.default.createElement(_paragraph.Paragraph, {
+    }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
       modifier: paragraphModifier,
       margin: false
     }, children));

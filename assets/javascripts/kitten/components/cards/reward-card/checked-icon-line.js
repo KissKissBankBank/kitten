@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import Radium from 'radium'
 import { IconBadge } from '../../../components/notifications/icon-badge'
 import { CheckedIcon } from '../../../components/icons/checked-icon'
 import { pxToRem } from '../../../helpers/utils/typography'

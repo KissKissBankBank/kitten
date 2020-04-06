@@ -78,7 +78,6 @@ export class KarlFooterKisskiss extends Component {
       hrefFacebook,
       hrefTwitter,
       hrefInstagram,
-      ...others
     } = this.props
 
     return (

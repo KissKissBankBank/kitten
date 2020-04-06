@@ -25,7 +25,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireWildcard(require("radium"));
+var _radium = require("radium");
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -39,14 +39,18 @@ var _button = require("../../components/buttons/button");
 
 var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var VerticalCardWithAction =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var VerticalCardWithAction = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(VerticalCardWithAction, _Component);
+
+  var _super = _createSuper(VerticalCardWithAction);
 
   function VerticalCardWithAction() {
     (0, _classCallCheck2.default)(this, VerticalCardWithAction);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(VerticalCardWithAction).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(VerticalCardWithAction, [{
@@ -62,12 +66,12 @@ function (_Component) {
           buttonModifier = _this$props.buttonModifier,
           buttonProps = _this$props.buttonProps,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["imageProps", "title", "titleTag", "description", "descriptionTag", "button", "buttonModifier", "buttonProps"]);
-      return _react.default.createElement(_radium.StyleRoot, others, _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, others, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "3"
-      }, this.renderImage()), _react.default.createElement(_marger.Marger, {
+      }, this.renderImage()), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "3",
         bottom: "3"
-      }, this.renderDescription()), _react.default.createElement(_marger.Marger, {
+      }, this.renderDescription()), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "3",
         style: styles.button
       }, this.renderAction()));
@@ -78,7 +82,7 @@ function (_Component) {
       var _this$props$imageProp = this.props.imageProps,
           style = _this$props$imageProp.style,
           imageProps = (0, _objectWithoutProperties2.default)(_this$props$imageProp, ["style"]);
-      return _react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
+      return /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
         style: (0, _extends2.default)({}, style, {}, styles.image)
       }));
     }
@@ -90,16 +94,16 @@ function (_Component) {
           titleTag = _this$props2.titleTag,
           description = _this$props2.description,
           descriptionTag = _this$props2.descriptionTag;
-      return _react.default.createElement("div", null, _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: description ? 1.5 : 0
-      }, _react.default.createElement(_title.Title, {
+      }, /*#__PURE__*/_react.default.createElement(_title.Title, {
         modifier: "senary",
         tag: titleTag,
         margin: false,
         style: styles.text
-      }, title)), description && _react.default.createElement(_marger.Marger, {
+      }, title)), description && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.5"
-      }, _react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
         modifier: "quaternary",
         tag: descriptionTag,
         margin: false,
@@ -116,7 +120,7 @@ function (_Component) {
       var onClick = buttonProps.onClick,
           href = buttonProps.href,
           others = (0, _objectWithoutProperties2.default)(buttonProps, ["onClick", "href"]);
-      return _react.default.createElement(_button.Button, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, others, {
         modifier: buttonModifier,
         type: "button",
         onClick: onClick,

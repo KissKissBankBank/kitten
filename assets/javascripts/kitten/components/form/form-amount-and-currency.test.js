@@ -1,6 +1,4 @@
 import React from 'react'
-import { SelectWithState } from '../../components/form/select-with-state'
-import { TextInput } from '../../components/form/text-input'
 import { FormAmountAndCurrency } from '../../components/form/form-amount-and-currency'
 
 describe('<FormAmountAndCurrency />', () => {

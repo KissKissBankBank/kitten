@@ -20,7 +20,7 @@ const StyledTitle = styled(Title)`
   margin-top: 0;
 `
 
-const EmailPreferences = props => (
+const EmailPreferences = () => (
   <Container>
     <HorizontalCard>
       <HorizontalCard.Image>

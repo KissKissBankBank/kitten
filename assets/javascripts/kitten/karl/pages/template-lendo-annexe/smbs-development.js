@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 import { SimpleTemplate } from './simple-template'
 import { Title } from '../../../../components/typography/title'
-import { Text } from '../../../../components/typography/text'
 import { Paragraph } from '../../../../components/typography/paragraph'
 import { BulletList } from '../../../../components/lists/bullet-list'
 import { Marger } from '../../../../components/layout/marger'
 import { withMediaQueries } from '../../../../hoc/media-queries'
-import { parseHtml } from '../../../../helpers/utils/parser'
 
 class SmbsDevelopmentBase extends Component {
   render() {

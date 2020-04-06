@@ -21,8 +21,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _typography = require("../../../helpers/utils/typography");
@@ -40,7 +38,7 @@ var StyledRamp = (0, _styledComponents.default)(function (_ref) {
       sliderColor = _ref.sliderColor,
       progressValue = _ref.progressValue,
       props = (0, _objectWithoutProperties2.default)(_ref, ["style", "sliderColor", "progressValue"]);
-  return _react.default.createElement("div", props);
+  return /*#__PURE__*/_react.default.createElement("div", props);
 }).withConfig({
   displayName: "progress__StyledRamp",
   componentId: "sc-11kqp3l-1"
@@ -72,12 +70,12 @@ var Progress = function Progress(_ref5) {
     if (valueAsNumber < valueMin) progress = valueMin;else if (valueAsNumber > valueMax) progress = valueMax;else progress = valueAsNumber;
     setProgressValue(progress);
   }, [value]);
-  return _react.default.createElement(StyledProgress, (0, _extends2.default)({}, others, {
+  return /*#__PURE__*/_react.default.createElement(StyledProgress, (0, _extends2.default)({}, others, {
     role: "progressbar",
     "aria-valuemin": valueMin,
     "aria-valuemax": valueMax,
     "aria-valuenow": progressValue
-  }), _react.default.createElement(StyledRamp, (0, _extends2.default)({}, rampProps, {
+  }), /*#__PURE__*/_react.default.createElement(StyledRamp, (0, _extends2.default)({}, rampProps, {
     sliderColor: color,
     progressValue: "".concat(progressValue, "%")
   })));

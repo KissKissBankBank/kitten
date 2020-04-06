@@ -1,8 +1,7 @@
 import React from 'react'
-import Radium, { StyleRoot } from 'radium'
+import { StyleRoot } from 'radium'
 import { Grid, GridCol } from '../../components/grid/grid'
 import { VerticalCard } from '../../components/cards/vertical-card'
-import { Container } from '../../components/grid/container'
 import { Marger } from '../../components/layout/marger'
 import { KarlExampleTitle } from '../../karl/examples/title'
 

@@ -39,6 +39,10 @@ var _context = require("./context");
 
 var _arrowIcon = require("../../../icons/arrow-icon");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledItem = _styledComponents.default.a.withConfig({
   displayName: "item__StyledItem",
   componentId: "sc-5lownc-0"
@@ -58,14 +62,14 @@ var ExternalStyledItem = (0, _styledComponents.default)(StyledItem).withConfig({
   componentId: "sc-5lownc-1"
 })(["display:flex;height:", ";padding:", " ", " ", " ", ";align-items:center;align-self:flex-start;justify-content:space-between;background-color:", ";transition:padding-right 0.2s;svg,img{max-height:", ";width:auto;}:focus,:hover{padding-right:", ";color:", ";}::before{display:none;}"], (0, _typography.pxToRem)(24), (0, _typography.pxToRem)(23), (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(22), (0, _typography.pxToRem)(30), _colorsConfig.default.background3, (0, _typography.pxToRem)(24), (0, _typography.pxToRem)(16), _colorsConfig.default.font1);
 
-var Item =
-/*#__PURE__*/
-function (_Component) {
+var Item = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Item, _Component);
+
+  var _super = _createSuper(Item);
 
   function Item() {
     (0, _classCallCheck2.default)(this, Item);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Item).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Item, [{
@@ -77,17 +81,17 @@ function (_Component) {
           external = _this$props.external,
           liProps = _this$props.liProps,
           other = (0, _objectWithoutProperties2.default)(_this$props, ["children", "href", "external", "liProps"]);
-      return _react.default.createElement(_context.Context.Consumer, null, function (_ref4) {
+      return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref4) {
         var borderSide = _ref4.borderSide;
-        return _react.default.createElement("li", (0, _extends2.default)({
+        return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
           role: "menuitem"
-        }, liProps), external ? _react.default.createElement(ExternalStyledItem, (0, _extends2.default)({
+        }, liProps), external ? /*#__PURE__*/_react.default.createElement(ExternalStyledItem, (0, _extends2.default)({
           href: href,
           borderSide: borderSide,
           external: external
-        }, other), _react.default.createElement("span", null, children), _react.default.createElement(_arrowIcon.ArrowIcon, {
+        }, other), /*#__PURE__*/_react.default.createElement("span", null, children), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
           direction: "right"
-        })) : _react.default.createElement(StyledItem, (0, _extends2.default)({
+        })) : /*#__PURE__*/_react.default.createElement(StyledItem, (0, _extends2.default)({
           href: href,
           borderSide: borderSide,
           external: external

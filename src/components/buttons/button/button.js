@@ -39,6 +39,10 @@ var _modifierStyles = require("./helpers/modifier-styles");
 
 var _checkedCircleIcon = require("../../icons/checked-circle-icon");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "sc-1q5nte0-0"
@@ -98,7 +102,7 @@ var CheckedCircleIcon = (0, _styledComponents.default)(function (_ref10) {
   var big = _ref10.big,
       tiny = _ref10.tiny,
       others = (0, _objectWithoutProperties2.default)(_ref10, ["big", "tiny"]);
-  return _react.default.createElement(_checkedCircleIcon.CheckedCircleIcon, others);
+  return /*#__PURE__*/_react.default.createElement(_checkedCircleIcon.CheckedCircleIcon, others);
 }).withConfig({
   displayName: "button__CheckedCircleIcon",
   componentId: "sc-1q5nte0-1"
@@ -124,14 +128,14 @@ exports.ICON_TINY = ICON_TINY;
 var ICON_BIG = (0, _styledComponents.css)(["width:", ";height:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70));
 exports.ICON_BIG = ICON_BIG;
 
-var Button =
-/*#__PURE__*/
-function (_Component) {
+var Button = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Button, _Component);
+
+  var _super = _createSuper(Button);
 
   function Button() {
     (0, _classCallCheck2.default)(this, Button);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Button).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Button, [{
@@ -145,9 +149,9 @@ function (_Component) {
         'aria-checked': true
       };
       modifier === 'checked' && console.warn("Warning: In <Button /> component, 'checked' modifier is deprecated.");
-      return _react.default.createElement(StyledButton, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
         modifier: modifier
-      }, checked, props), children, modifier === 'checked' && _react.default.createElement(CheckedCircleIcon, {
+      }, checked, props), children, modifier === 'checked' && /*#__PURE__*/_react.default.createElement(CheckedCircleIcon, {
         big: props.big && props.big,
         tiny: props.tiny && props.tiny,
         circleColor: _colorsConfig.default.primary1,

@@ -53,10 +53,14 @@ var _diamondBadge = require("../../components/cards/reward-card/diamond-badge");
 
 var _checkedSection = require("../../components/cards/reward-card/checked-section");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var Infos = (0, _styledComponents.default)(function (_ref) {
   var withMarginBottom = _ref.withMarginBottom,
       props = (0, _objectWithoutProperties2.default)(_ref, ["withMarginBottom"]);
-  return _react.default.createElement(_text.Text, props);
+  return /*#__PURE__*/_react.default.createElement(_text.Text, props);
 }).withConfig({
   displayName: "reward-card__Infos",
   componentId: "sc-1vkpp2h-0"
@@ -79,7 +83,7 @@ var RewardImage = _styledComponents.default.img.withConfig({
 var CardContainer = (0, _styledComponents.default)(function (_ref5) {
   var withoutBorder = _ref5.withoutBorder,
       props = (0, _objectWithoutProperties2.default)(_ref5, ["withoutBorder"]);
-  return _react.default.createElement("div", props);
+  return /*#__PURE__*/_react.default.createElement("div", props);
 }).withConfig({
   displayName: "reward-card__CardContainer",
   componentId: "sc-1vkpp2h-2"
@@ -89,14 +93,14 @@ var CardContainer = (0, _styledComponents.default)(function (_ref5) {
 }); // TODO: Move this class to a separate file after deprecated component with the
 // same name will be deleted.
 
-var RewardCardInfo =
-/*#__PURE__*/
-function (_Component) {
+var RewardCardInfo = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(RewardCardInfo, _Component);
+
+  var _super = _createSuper(RewardCardInfo);
 
   function RewardCardInfo() {
     (0, _classCallCheck2.default)(this, RewardCardInfo);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RewardCardInfo).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(RewardCardInfo, [{
@@ -107,13 +111,13 @@ function (_Component) {
           value = _this$props.value,
           withMarginBottom = _this$props.withMarginBottom,
           disabled = _this$props.disabled;
-      return _react.default.createElement(Infos, {
+      return /*#__PURE__*/_react.default.createElement(Infos, {
         size: "tiny",
         color: "font1",
         weight: "regular",
         withMarginBottom: withMarginBottom,
         disabled: disabled
-      }, "".concat(label, " "), _react.default.createElement(_text.Text, {
+      }, "".concat(label, " "), /*#__PURE__*/_react.default.createElement(_text.Text, {
         weight: "light"
       }, value));
     }
@@ -135,14 +139,14 @@ RewardCardInfo.defaultProps = {
   disabled: false
 };
 
-var RewardCardImage =
-/*#__PURE__*/
-function (_Component2) {
+var RewardCardImage = /*#__PURE__*/function (_Component2) {
   (0, _inherits2.default)(RewardCardImage, _Component2);
+
+  var _super2 = _createSuper(RewardCardImage);
 
   function RewardCardImage() {
     (0, _classCallCheck2.default)(this, RewardCardImage);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RewardCardImage).apply(this, arguments));
+    return _super2.apply(this, arguments);
   }
 
   (0, _createClass2.default)(RewardCardImage, [{
@@ -152,7 +156,7 @@ function (_Component2) {
           alt = _this$props2.alt,
           disabled = _this$props2.disabled,
           others = (0, _objectWithoutProperties2.default)(_this$props2, ["alt", "disabled"]);
-      return _react.default.createElement(RewardImage, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(RewardImage, (0, _extends2.default)({}, others, {
         alt: alt || '',
         disabled: disabled
       }));
@@ -168,14 +172,14 @@ RewardCardImage.defaultProps = {
   disabled: false
 };
 
-var RewardCard =
-/*#__PURE__*/
-function (_Component3) {
+var RewardCard = /*#__PURE__*/function (_Component3) {
   (0, _inherits2.default)(RewardCard, _Component3);
+
+  var _super3 = _createSuper(RewardCard);
 
   function RewardCard() {
     (0, _classCallCheck2.default)(this, RewardCard);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RewardCard).apply(this, arguments));
+    return _super3.apply(this, arguments);
   }
 
   (0, _createClass2.default)(RewardCard, [{
@@ -185,7 +189,7 @@ function (_Component3) {
           children = _this$props3.children,
           withoutBorder = _this$props3.withoutBorder,
           others = (0, _objectWithoutProperties2.default)(_this$props3, ["children", "withoutBorder"]);
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_legacyRewardCardContainer.LegacyRewardCardContainer, this.props), children && _react.default.createElement(CardContainer, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_legacyRewardCardContainer.LegacyRewardCardContainer, this.props), children && /*#__PURE__*/_react.default.createElement(CardContainer, (0, _extends2.default)({
         withoutBorder: withoutBorder
       }, others), children));
     }

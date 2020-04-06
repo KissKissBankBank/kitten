@@ -21,7 +21,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _arrowIcon = require("../../../../components/icons/arrow-icon");
 
@@ -30,6 +30,10 @@ var _button = require("../../../../components/buttons/button/button");
 var _typography = require("../../../../helpers/utils/typography");
 
 var _text = require("../../../../components/typography/text");
+
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "navbar__StyledText",
@@ -46,14 +50,14 @@ var StyledArrowIcon = (0, _styledComponents.default)(_button.Button).withConfig(
   componentId: "sc-1v9dr3-2"
 })(["align-items:center;justify-content:center;display:flex;"]);
 
-var Navbar =
-/*#__PURE__*/
-function (_PureComponent) {
+var Navbar = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(Navbar, _PureComponent);
+
+  var _super = _createSuper(Navbar);
 
   function Navbar() {
     (0, _classCallCheck2.default)(this, Navbar);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Navbar).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Navbar, [{
@@ -71,31 +75,31 @@ function (_PureComponent) {
           months = _this$props.months;
       var previousAriaLabel = months !== undefined && months.length > 0 ? "".concat(labels && labels.previousMonth, ", ").concat(months[previousMonth.getMonth()], " ").concat(previousMonth.getFullYear()) : "".concat(labels && labels.previousMonth);
       var nextAriaLabel = months !== undefined && months.length > 0 ? "".concat(labels && labels.nextMonth, ", ").concat(months[nextMonth.getMonth()], " ").concat(nextMonth.getFullYear()) : "".concat(labels && labels.nextMonth);
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledText, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledText, {
         tag: "p",
         size: "tiny",
         weight: "regular"
-      }, title), _react.default.createElement(StyledButton, {
+      }, title), /*#__PURE__*/_react.default.createElement(StyledButton, {
         className: className
-      }, _react.default.createElement(StyledArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         "aria-label": previousAriaLabel,
         onClick: function onClick() {
           return onPreviousClick();
         },
         icon: true
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         fill: iconColor,
         direction: "left",
         width: "8",
         height: "8"
-      })), _react.default.createElement(StyledArrowIcon, {
+      })), /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         "aria-label": nextAriaLabel,
         onClick: function onClick() {
           return onNextClick();
         },
         icon: true
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         fill: iconColor,
         direction: "right",

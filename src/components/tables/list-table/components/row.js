@@ -44,9 +44,9 @@ var ListTableRow = function ListTableRow(_ref2) {
   var children = _ref2.children,
       listProps = _ref2.listProps,
       others = (0, _objectWithoutProperties2.default)(_ref2, ["children", "listProps"]);
-  return _react.default.createElement(StyledRow, others, _react.default.createElement(StyledItemList, listProps, _react.default.createElement(_context.Context.Consumer, null, function (_ref3) {
+  return /*#__PURE__*/_react.default.createElement(StyledRow, others, /*#__PURE__*/_react.default.createElement(StyledItemList, listProps, /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref3) {
     var id = _ref3.id;
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.Children.map(children, function (child, index) {
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, _react.default.Children.map(children, function (child, index) {
       return _react.default.cloneElement(child, {
         'aria-describedby': "".concat(id, "-col-").concat(index)
       });

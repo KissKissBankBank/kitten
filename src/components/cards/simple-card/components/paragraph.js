@@ -31,30 +31,34 @@ var _horizontalStroke = require("../../../../components/layout/horizontal-stroke
 
 var _parser = require("../../../../helpers/utils/parser");
 
-var Paragraph =
-/*#__PURE__*/
-function (_PureComponent) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var Paragraph = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(Paragraph, _PureComponent);
+
+  var _super = _createSuper(Paragraph);
 
   function Paragraph() {
     (0, _classCallCheck2.default)(this, Paragraph);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Paragraph).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Paragraph, [{
     key: "render",
     value: function render() {
       var paragraph = this.props.paragraph;
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: ".3",
         bottom: "1.5"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         lineHeight: "normal",
         size: "micro",
         weight: "light"
-      }, (0, _parser.parseHtml)(paragraph))), _react.default.createElement(_marger.Marger, {
+      }, (0, _parser.parseHtml)(paragraph))), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.5"
-      }, _react.default.createElement(_horizontalStroke.HorizontalStroke, {
+      }, /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
         size: "tiny"
       })));
     }

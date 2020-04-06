@@ -49,10 +49,7 @@ describe('<TabBar />', () => {
         component.find('.k-TabBar__list').hasClass('list-custom-class'),
       ).toBe(true)
       expect(
-        component
-          .find('.k-TabBar__item')
-          .first()
-          .hasClass('item-custom-class'),
+        component.find('.k-TabBar__item').first().hasClass('item-custom-class'),
       ).toBe(true)
     })
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Hero } from '../../components/heroes/hero'
 import { Title } from '../../components/typography/title'
 import { Paragraph } from '../../components/typography/paragraph'
@@ -6,7 +6,6 @@ import { Marger } from '../../components/layout/marger'
 import { Button } from '../../components/buttons/button'
 import { StyleRoot } from 'radium'
 import { Grid, GridCol } from '../../components/grid/grid'
-import COLORS from '../../constants/colors-config'
 
 const lorem = 'Lorem ipsum dolor sit amet.'
 
@@ -24,7 +23,7 @@ const loremIpsumSitAmet =
 
 const imageSrc = 'https://placehold.it/40x40/caf4fe/caf4fe'
 
-export const KarlHeroExamples = props => (
+export const KarlHeroExamples = () => (
   <StyleRoot>
     <Grid>
       <GridCol>

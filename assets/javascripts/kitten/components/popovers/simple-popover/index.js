@@ -1,23 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import styled, { css, keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { Marger } from '../../../components/layout/marger'
 import { CrossIcon } from '../../../components/icons/cross-icon'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Title } from '../../../components/typography/title'
-import { Text } from '../../../components/typography/text'
 import { Paragraph } from '../../../components/typography/paragraph'
 import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Button } from '../../../components/buttons/button/button'
 
 const borderSize = 2
-
-const StyledLoudSpeaker = styled.div`
-  display: block;
-  margin: 0 auto;
-`
 
 const PopoverContainer = styled.div`
   padding: ${pxToRem(40)};

@@ -38,18 +38,24 @@ const info = {
 storiesOf('Meters/Progress', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('default', () => (
-    <Marger top="4" bottom="4">
-      <Container>
-        <Grid>
-          <GridCol col={4}>
-            <Progress
-              value={number('Value', 50)}
-              color={color('Color', COLORS.primary1)}
-              rampProps={{ style: { height: 6 } }}
-            />
-          </GridCol>
-        </Grid>
-      </Container>
-    </Marger>
-  ))
+  .add(
+    'default',
+    () => {
+      return (
+        <Marger top="4" bottom="4">
+          <Container>
+            <Grid>
+              <GridCol col={4}>
+                <Progress
+                  value={number('Value', 50)}
+                  color={color('Color', COLORS.primary1)}
+                  rampProps={{ style: { height: 6 } }}
+                />
+              </GridCol>
+            </Grid>
+          </Container>
+        </Marger>
+      )
+    },
+    { info },
+  )

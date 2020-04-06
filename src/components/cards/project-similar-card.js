@@ -17,11 +17,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -30,8 +30,6 @@ var _react = _interopRequireWildcard(require("react"));
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _card = require("../../hoc/card");
-
-var _grid = require("../../components/grid/grid");
 
 var _marger = require("../../components/layout/marger");
 
@@ -55,16 +53,20 @@ var _typologyTagIcon = require("../../components/icons/typology-tag-icon");
 
 var _instrumentTagIcon = require("../../components/icons/instrument-tag-icon");
 
-var SimilarProjectCardComponent =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var SimilarProjectCardComponent = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(SimilarProjectCardComponent, _Component);
+
+  var _super = _createSuper(SimilarProjectCardComponent);
 
   function SimilarProjectCardComponent() {
     var _this;
 
     (0, _classCallCheck2.default)(this, SimilarProjectCardComponent);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(SimilarProjectCardComponent).call(this));
+    _this = _super.call(this);
     _this.renderInfo = _this.renderInfo.bind((0, _assertThisInitialized2.default)(_this));
     _this.renderTagsInList = _this.renderTagsInList.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
@@ -76,9 +78,9 @@ function (_Component) {
       var _this$props = this.props,
           refresh = _this$props.refresh,
           onRefreshClick = _this$props.onRefreshClick;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectSimilarCard__refresh"
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         className: "k-ProjectSimilarCard__refresh__link",
         onClick: onRefreshClick
       }, refresh));
@@ -86,13 +88,13 @@ function (_Component) {
   }, {
     key: "renderLeftArrow",
     value: function renderLeftArrow() {
-      return _react.default.createElement(_buttonIcon.ButtonIcon, {
+      return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         size: "tiny",
         type: "button",
         verticalArrow: true,
         disabled: this.props.leftArrowDisabled,
         onClick: this.props.onLeftArrowClick
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         direction: "left",
         className: "k-ButtonIcon__svg"
       }));
@@ -100,13 +102,13 @@ function (_Component) {
   }, {
     key: "renderRightArrow",
     value: function renderRightArrow() {
-      return _react.default.createElement(_buttonIcon.ButtonIcon, {
+      return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         size: "tiny",
         type: "button",
         verticalArrow: true,
         disabled: this.props.rightArrowDisabled,
         onClick: this.props.onRightArrowClick
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         className: "k-ButtonIcon__svg"
       }));
     }
@@ -114,18 +116,18 @@ function (_Component) {
     key: "renderHeader",
     value: function renderHeader() {
       var step = this.props.step;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectSimilarCard__grid"
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "1"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectSimilarCard__grid--flex"
-      }, this.renderRefresh(), _react.default.createElement("div", {
+      }, this.renderRefresh(), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectSimilarCard__navigation"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectSimilarCard__header--step"
-      }, step), _react.default.createElement("div", {
+      }, step), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectSimilarCard__header--button"
       }, this.renderLeftArrow(), this.renderRightArrow())))));
     }
@@ -134,13 +136,13 @@ function (_Component) {
     value: function renderImage() {
       var imageSrc = this.props.imageSrc;
       if (!imageSrc) return;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",
         bottom: "1",
         key: "image"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectSimilarCard__grid"
-      }, _react.default.createElement("img", {
+      }, /*#__PURE__*/_react.default.createElement("img", {
         className: "k-ProjectSimilarCard__img",
         src: imageSrc,
         alt: ""
@@ -153,10 +155,10 @@ function (_Component) {
           title = _this$props2.title,
           imageSrc = _this$props2.imageSrc;
       var top = imageSrc ? 1 : 2;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: top,
         bottom: "1"
-      }, _react.default.createElement(_title.Title, {
+      }, /*#__PURE__*/_react.default.createElement(_title.Title, {
         modifier: "senary",
         margin: false,
         tag: "p"
@@ -166,13 +168,13 @@ function (_Component) {
     key: "renderDescription",
     value: function renderDescription() {
       var paragraph = this.props.paragraph;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         key: "description",
         className: "k-ProjectSimilarCard__grid"
-      }, this.renderTitle(), this.renderTagsArea(), _react.default.createElement(_marger.Marger, {
+      }, this.renderTitle(), this.renderTagsArea(), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "2"
-      }, _react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
         modifier: "tertiary",
         margin: false
       }, paragraph)));
@@ -180,10 +182,10 @@ function (_Component) {
   }, {
     key: "renderTags",
     value: function renderTags() {
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "1"
-      }, _react.default.createElement(_tagList.TagList, {
+      }, /*#__PURE__*/_react.default.createElement(_tagList.TagList, {
         icon: _typologyTagIcon.TypologyTagIcon,
         items: this.props.tags,
         tiny: true
@@ -194,23 +196,23 @@ function (_Component) {
     value: function renderTagsInList(tagList, index) {
       var icon = this.convertToClass(tagList.icon);
 
-      var list = _react.default.createElement(_tagList.TagList, {
+      var list = /*#__PURE__*/_react.default.createElement(_tagList.TagList, {
         icon: icon,
         items: tagList.items,
         tiny: true
       });
 
-      var separator = _react.default.createElement("div", {
+      var separator = /*#__PURE__*/_react.default.createElement("div", {
         className: "k-u-margin-left-single"
-      }, _react.default.createElement("hr", {
+      }, /*#__PURE__*/_react.default.createElement("hr", {
         className: (0, _classnames.default)('k-VerticalSeparator', 'k-VerticalSeparator--darker')
       }));
 
-      var tagListWithMargin = _react.default.createElement("div", {
+      var tagListWithMargin = /*#__PURE__*/_react.default.createElement("div", {
         className: "k-u-margin-left-single"
       }, list);
 
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         key: "tag-list-".concat(index),
         className: "k-ProjectCard__grid--flex"
       }, index != 0 && separator, index != 0 && tagListWithMargin, index == 0 && list);
@@ -229,7 +231,7 @@ function (_Component) {
   }, {
     key: "renderTagLists",
     value: function renderTagLists() {
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "1",
         className: "k-ProjectCard__grid--flex"
@@ -246,9 +248,9 @@ function (_Component) {
     value: function renderInfos() {
       var infos = this.props.infos;
       if (!infos) return;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         key: "infos"
-      }, _react.default.createElement(_separator.Separator, null), _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_separator.Separator, null), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.5",
         bottom: "1.5",
         className: "k-ProjectCard__grid--flex"
@@ -261,12 +263,12 @@ function (_Component) {
       var infoClassName = (0, _classnames.default)('k-ProjectSimilarCard__info__value', {
         'k-u-color-primary1': coloredInfosValues
       });
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         key: info.text,
         className: (0, _classnames.default)('k-u-align-center', 'k-ProjectSimilarCard__info')
-      }, info.text, _react.default.createElement("br", null), _react.default.createElement("span", {
+      }, info.text, /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement("span", {
         className: infoClassName
-      }, info.locked ? _react.default.createElement(_lockIcon.LockIcon, {
+      }, info.locked ? /*#__PURE__*/_react.default.createElement(_lockIcon.LockIcon, {
         width: "12"
       }) : info.value));
     }
@@ -275,12 +277,12 @@ function (_Component) {
     value: function renderLoader() {
       var loading = this.props.loading;
       if (!loading) return;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "9",
         bottom: "9"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectSimilarCard__grid"
-      }, _react.default.createElement(_loader.Loader, {
+      }, /*#__PURE__*/_react.default.createElement(_loader.Loader, {
         className: "k-ProjectSimilarCard__loading"
       })));
     }
@@ -318,9 +320,9 @@ function (_Component) {
       var className = this.props.className;
       var ProjectSimilarCardClassName = (0, _classnames.default)('k-ProjectSimilarCard', className);
       var Tag = this.hasLink() ? 'a' : 'div';
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: ProjectSimilarCardClassName
-      }, this.renderHeader(), _react.default.createElement(_separator.Separator, null), _react.default.createElement(Tag, this.contentTagProps(), this.renderProject(), this.renderLoader()));
+      }, this.renderHeader(), /*#__PURE__*/_react.default.createElement(_separator.Separator, null), /*#__PURE__*/_react.default.createElement(Tag, this.contentTagProps(), this.renderProject(), this.renderLoader()));
     }
   }]);
   return SimilarProjectCardComponent;

@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from 'react'
-import { NavList } from '../../components/lists/nav-list'
+import React from 'react'
 import { TagButton } from '../../components/buttons/tag-button'
 import { ScrollableContainer } from '../../components/grid/scrollable-container'
 
@@ -11,7 +10,7 @@ const items = [
   { key: '5', children: 'Example 5', href: '#example-5' },
 ]
 
-export const KarlScrollableContainer = props => {
+export const KarlScrollableContainer = () => {
   return (
     <ScrollableContainer>
       <nav>

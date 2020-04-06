@@ -57,7 +57,7 @@ var card = function card(WrappedComponent, wrappedProps) {
       'k-Card--withVerticalPadding': withVerticalPadding,
       'k-Card--withoutBoxShadowOnHover': withoutBoxShadowOnHover
     }, className);
-    return _react.default.createElement(WrappedComponent, (0, _extends2.default)({
+    return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends2.default)({
       className: cardClassName
     }, others));
   };

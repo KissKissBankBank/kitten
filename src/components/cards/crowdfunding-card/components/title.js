@@ -23,7 +23,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -38,6 +38,10 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 var _reactTruncate = _interopRequireDefault(require("react-truncate"));
 
 var _screenConfig = require("../../../../constants/screen-config");
+
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 var StyledTruncate = (0, _styledComponents.default)(_reactTruncate.default).withConfig({
@@ -79,14 +83,14 @@ var StyledDayCounter = _styledComponents.default.div.withConfig({
   componentId: "sc-1wv1kzg-7"
 })(["line-height:1;margin-left:calc(2 * ", ");margin-top:", ";"], COMPONENT_GUTTER, (0, _typography.pxToRem)(10));
 
-var TitleComponent =
-/*#__PURE__*/
-function (_PureComponent) {
+var TitleComponent = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TitleComponent, _PureComponent);
+
+  var _super = _createSuper(TitleComponent);
 
   function TitleComponent() {
     (0, _classCallCheck2.default)(this, TitleComponent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TitleComponent).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TitleComponent, [{
@@ -94,12 +98,8 @@ function (_PureComponent) {
     value: function render() {
       var _this$props = this.props,
           title = _this$props.title,
-          titleTruncate = _this$props.titleTruncate,
-          titleProps = _this$props.titleProps,
-          loading = _this$props.loading,
-          widgetTitle = _this$props.widgetTitle,
-          dayCounter = _this$props.dayCounter;
-      return _react.default.createElement(_react.default.Fragment, null, title && this.renderTitle(), widgetTitle && this.renderWidgetTitle());
+          widgetTitle = _this$props.widgetTitle;
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, title && this.renderTitle(), widgetTitle && this.renderWidgetTitle());
     }
   }, {
     key: "renderTitle",
@@ -109,17 +109,17 @@ function (_PureComponent) {
           titleProps = _this$props2.titleProps,
           titleTruncate = _this$props2.titleTruncate,
           title = _this$props2.title;
-      return _react.default.createElement(StyledTitleContainer, null, !loading && _react.default.createElement(StyledTitle, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledTitleContainer, null, !loading && /*#__PURE__*/_react.default.createElement(StyledTitle, (0, _extends2.default)({
         tag: "p",
         margin: false,
         className: "k-Card__title"
-      }, titleProps), titleTruncate && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledTruncate, {
+      }, titleProps), titleTruncate && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledTruncate, {
         lines: 2,
         className: "k-u-hidden@s-down"
-      }, title), _react.default.createElement(_reactTruncate.default, {
+      }, title), /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
         lines: 3,
         className: "k-u-hidden@m-up"
-      }, title)), !titleTruncate && title), loading && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledTitleLoading, null), _react.default.createElement(StyledTitleSmallLoading, null)));
+      }, title)), !titleTruncate && title), loading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledTitleLoading, null), /*#__PURE__*/_react.default.createElement(StyledTitleSmallLoading, null)));
     }
   }, {
     key: "renderWidgetTitle",
@@ -129,21 +129,21 @@ function (_PureComponent) {
           dayCounter = _this$props3.dayCounter,
           loading = _this$props3.loading,
           titleTruncate = _this$props3.titleTruncate;
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledWidgetContainer, null, _react.default.createElement(StyledWidgetTitle, null, !loading && _react.default.createElement(_text.Text, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledWidgetContainer, null, /*#__PURE__*/_react.default.createElement(StyledWidgetTitle, null, !loading && /*#__PURE__*/_react.default.createElement(_text.Text, {
         tag: "span",
         color: "font1",
         size: "default",
         weight: "bold",
         lineHeight: "normal",
         className: "k-Card__title"
-      }, titleTruncate && _react.default.createElement(_reactTruncate.default, {
+      }, titleTruncate && /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
         lines: 2
-      }, widgetTitle), !titleTruncate && widgetTitle)), !loading && _react.default.createElement(StyledDayCounter, null, _react.default.createElement(_text.Text, {
+      }, widgetTitle), !titleTruncate && widgetTitle)), !loading && /*#__PURE__*/_react.default.createElement(StyledDayCounter, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "tiny",
         color: "font1",
         weight: "regular",
         lineHeight: "normal"
-      }, dayCounter))), loading && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledTitleLoading, null), _react.default.createElement(StyledTitleSmallLoading, null)));
+      }, dayCounter))), loading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledTitleLoading, null), /*#__PURE__*/_react.default.createElement(StyledTitleSmallLoading, null)));
     }
   }]);
   return TitleComponent;

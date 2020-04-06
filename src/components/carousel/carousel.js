@@ -39,6 +39,10 @@ var _arrowIcon = require("../../components/icons/arrow-icon");
 
 var _carouselInner = require("../../components/carousel/carousel-inner");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var getNumColumnsForWidth = function getNumColumnsForWidth(width, itemMinWidth, itemMarginBetween) {
   if (width === 0 || itemMinWidth === 0) {
     return 0;
@@ -87,16 +91,16 @@ var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToVi
   }
 };
 
-var CarouselBase =
-/*#__PURE__*/
-function (_React$Component) {
+var CarouselBase = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(CarouselBase, _React$Component);
+
+  var _super = _createSuper(CarouselBase);
 
   function CarouselBase(props, context) {
     var _this;
 
     (0, _classCallCheck2.default)(this, CarouselBase);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CarouselBase).call(this, props, context));
+    _this = _super.call(this, props, context);
 
     _this.onResizeInner = function (widthInner) {
       var _this$props = _this.props,
@@ -164,7 +168,7 @@ function (_React$Component) {
           numColumns = _this$state3.numColumns,
           numPages = _this$state3.numPages;
       var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
-      return _react.default.createElement(_carouselInner.CarouselInner, {
+      return /*#__PURE__*/_react.default.createElement(_carouselInner.CarouselInner, {
         data: data,
         itemMinWidth: itemMinWidth,
         renderItem: renderItem,
@@ -193,46 +197,46 @@ function (_React$Component) {
 
       if (viewportIsXSOrLess) {
         var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
-        return _react.default.createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           style: styles.pageControl
         }, rangePage.map(function (index) {
-          return _react.default.createElement("div", {
+          return /*#__PURE__*/_react.default.createElement("div", {
             key: index,
             style: [styles.pageDot, indexPageVisible === index && styles.pageDotActive]
           });
-        }), _react.default.createElement("div", {
+        }), /*#__PURE__*/_react.default.createElement("div", {
           key: "prev",
           style: styles.pageControlButtonPrev,
           onClick: _this.goPrevPage
-        }), _react.default.createElement("div", {
+        }), /*#__PURE__*/_react.default.createElement("div", {
           key: "next",
           style: styles.pageControlButtonNext,
           onClick: _this.goNextPage
         }));
       }
 
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         style: [styles.carouselPagination, viewportIsMOrLess && styles.carouselPaginationTablet, {
           marginTop: viewportIsMOrLess ? itemMarginBetween : 0,
           marginLeft: viewportIsMOrLess ? itemMarginBetween * 2 : 0
         }]
-      }, _react.default.createElement(_buttonIcon.ButtonIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "beryllium",
         onClick: _this.goPrevPage,
         key: "left-".concat(indexPageVisible),
         disabled: indexPageVisible < 1 || numPages < 1,
         style: styles.carouselButtonPagination
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         className: "k-ButtonIcon__svg",
         direction: "left"
-      })), _react.default.createElement(_buttonIcon.ButtonIcon, {
+      })), /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "beryllium",
         onClick: _this.goNextPage,
         key: "right-".concat(indexPageVisible),
         disabled: indexPageVisible >= numPages - 1,
         style: styles.carouselButtonPagination
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         className: "k-ButtonIcon__svg",
         direction: "right"
@@ -256,13 +260,13 @@ function (_React$Component) {
           viewportIsMOrLess = _this$props4.viewportIsMOrLess;
 
       if (viewportIsMOrLess) {
-        return _react.default.createElement("div", null, this.renderCarouselInner(), this.renderPagination());
+        return /*#__PURE__*/_react.default.createElement("div", null, this.renderCarouselInner(), this.renderPagination());
       }
 
-      return _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {
+      return /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         col: withoutLeftOffset ? '11' : '10',
         offset: withoutLeftOffset ? '0' : '1'
-      }, this.renderCarouselInner()), _react.default.createElement(_grid.GridCol, {
+      }, this.renderCarouselInner()), /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         col: "1"
       }, this.renderPagination()));
     }

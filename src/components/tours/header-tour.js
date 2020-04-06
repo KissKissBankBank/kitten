@@ -29,14 +29,18 @@ var _mixIllustration = require("../../components/illustrations/mix-illustration"
 
 var _loudspeakerIllustration = require("../../components/illustrations/loudspeaker-illustration");
 
-var HeaderTour =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var HeaderTour = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(HeaderTour, _React$Component);
+
+  var _super = _createSuper(HeaderTour);
 
   function HeaderTour(props) {
     (0, _classCallCheck2.default)(this, HeaderTour);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(HeaderTour).call(this, props));
+    return _super.call(this, props);
   } // Component methods.
 
 
@@ -50,7 +54,7 @@ function (_React$Component) {
     value: function platformSwitchStep() {
       var content = this.props.platformSwitchStep;
       var illustration = {
-        illustration: _react.default.createElement(_mixIllustration.MixIllustration, {
+        illustration: /*#__PURE__*/_react.default.createElement(_mixIllustration.MixIllustration, {
           className: "k-Tour__popover__svg--primary"
         })
       };
@@ -61,7 +65,7 @@ function (_React$Component) {
     value: function crowdStep() {
       var content = this.props.crowdStep;
       var illustration = {
-        illustration: _react.default.createElement(_loudspeakerIllustration.LoudspeakerIllustration, {
+        illustration: /*#__PURE__*/_react.default.createElement(_loudspeakerIllustration.LoudspeakerIllustration, {
           className: "k-Tour__popover__svg--primary"
         })
       };
@@ -79,7 +83,7 @@ function (_React$Component) {
           platformSwitchStep = _this$props.platformSwitchStep,
           crowdStep = _this$props.crowdStep,
           otherProps = (0, _objectWithoutProperties2.default)(_this$props, ["platformSwitchStep", "crowdStep"]);
-      return _react.default.createElement(_tour.Tour, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_tour.Tour, (0, _extends2.default)({
         className: "k-HeaderTour",
         steps: this.steps()
       }, otherProps));

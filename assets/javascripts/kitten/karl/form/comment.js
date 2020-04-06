@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import Radium from 'radium'
 import { Comment } from '../../components/comments/comment'
 import { CommentForm } from '../../components/comments/comment-form'
 import { Container } from '../../components/grid/container'

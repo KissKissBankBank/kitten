@@ -28,7 +28,7 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 var StyledBase = (0, _styledComponents.default)(function (_ref) {
   var disabled = _ref.disabled,
       props = (0, _objectWithoutProperties2.default)(_ref, ["disabled"]);
-  return _react.default.createElement("div", props);
+  return /*#__PURE__*/_react.default.createElement("div", props);
 }).withConfig({
   displayName: "starred-badge__StyledBase",
   componentId: "sc-1bjkj6l-0"
@@ -50,15 +50,15 @@ var StyledStarIcon = (0, _styledComponents.default)(_starIcon.StarIcon).withConf
 var RewardCardStarredBadge = function RewardCardStarredBadge(_ref3) {
   var children = _ref3.children,
       disabled = _ref3.disabled;
-  return _react.default.createElement(StyledBase, {
+  return /*#__PURE__*/_react.default.createElement(StyledBase, {
     disabled: disabled
-  }, _react.default.createElement(_iconBadge.IconBadge, {
+  }, /*#__PURE__*/_react.default.createElement(_iconBadge.IconBadge, {
     big: true,
     disabled: disabled
-  }, _react.default.createElement(StyledStarIcon, {
+  }, /*#__PURE__*/_react.default.createElement(StyledStarIcon, {
     className: "k-IconBadge__svg",
     "aria-hidden": true
-  })), _react.default.createElement(StyledContent, null, children));
+  })), /*#__PURE__*/_react.default.createElement(StyledContent, null, children));
 };
 
 exports.RewardCardStarredBadge = RewardCardStarredBadge;

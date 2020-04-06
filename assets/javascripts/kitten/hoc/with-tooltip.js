@@ -1,7 +1,7 @@
 import React from 'react'
 import { TooltipNew } from '../components/tooltips/tooltip-new'
 
-export const withTooltip = (WrappedComponent, wrappedProps) => {
+export const withTooltip = WrappedComponent => {
   const WithTooltip = props => {
     const { children, id, ...others } = props
 

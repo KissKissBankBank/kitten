@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { StandaloneRangeDatePicker } from './index'
 import { storiesOf } from '@storybook/react'
 import {
   withKnobs,
   date,
-  select,
   text,
   object,
-  boolean,
   array,
   number,
 } from '@storybook/addon-knobs'

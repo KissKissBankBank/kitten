@@ -35,6 +35,10 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _screenConfig = require("../../../../constants/screen-config");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var COMPONENT_GUTTER = (0, _typography.pxToRem)(10);
 
 var StyledContainer = _styledComponents.default.div.withConfig({
@@ -56,14 +60,14 @@ var StyledLoading = _styledComponents.default.span.withConfig({
   componentId: "sc-4iuf3q-3"
 })(["display:block;background-color:", ";border-bottom:", " solid ", ";width:", ";height:", ";"], _colorsConfig.default.line2, (0, _typography.pxToRem)(1), _colorsConfig.default.background1, (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(16));
 
-var ProgressBar =
-/*#__PURE__*/
-function (_PureComponent) {
+var ProgressBar = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(ProgressBar, _PureComponent);
+
+  var _super = _createSuper(ProgressBar);
 
   function ProgressBar() {
     (0, _classCallCheck2.default)(this, ProgressBar);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ProgressBar).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(ProgressBar, [{
@@ -75,7 +79,7 @@ function (_PureComponent) {
           loading = _this$props.loading;
       if (progress === false) return null;
       var progressValue = loading ? 65 : progress;
-      return _react.default.createElement(StyledContainer, null, _react.default.createElement(StyledProgress, {
+      return /*#__PURE__*/_react.default.createElement(StyledContainer, null, /*#__PURE__*/_react.default.createElement(StyledProgress, {
         value: progressValue,
         className: loading && 'is-disabled',
         color: progressColor,
@@ -84,12 +88,12 @@ function (_PureComponent) {
             height: '4px'
           }
         }
-      }), _react.default.createElement(StyledPercent, {
+      }), /*#__PURE__*/_react.default.createElement(StyledPercent, {
         weight: "regular",
         size: "micro",
         color: "font1",
         className: "k-u-hidden@s-down"
-      }, loading && _react.default.createElement(StyledLoading, null), !loading && "".concat(progress, " %")));
+      }, loading && /*#__PURE__*/_react.default.createElement(StyledLoading, null), !loading && "".concat(progress, " %")));
     }
   }]);
   return ProgressBar;

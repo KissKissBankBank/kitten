@@ -7,7 +7,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import { parseHtml } from '../../../helpers/utils/parser'
 import { mediaQueries } from '../../../hoc/media-queries'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledGroup = styled.ul`
   display: inline-flex;

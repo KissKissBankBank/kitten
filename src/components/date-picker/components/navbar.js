@@ -27,6 +27,10 @@ var _arrowIcon = require("../../../components/icons/arrow-icon");
 
 var _typography = require("../../../helpers/utils/typography");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledArrowIcon = _styledComponents.default.div.withConfig({
   displayName: "navbar__StyledArrowIcon",
   componentId: "sc-9n4jek-0"
@@ -38,14 +42,14 @@ var StyledArrowIcon = _styledComponents.default.div.withConfig({
   return right && (0, _styledComponents.css)(["right:-", ";&:hover{transform:translate(", ");}"], (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(8));
 });
 
-var Navbar =
-/*#__PURE__*/
-function (_Component) {
+var Navbar = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Navbar, _Component);
+
+  var _super = _createSuper(Navbar);
 
   function Navbar() {
     (0, _classCallCheck2.default)(this, Navbar);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Navbar).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Navbar, [{
@@ -57,25 +61,25 @@ function (_Component) {
           className = _this$props.className,
           iconColor = _this$props.iconColor,
           labels = _this$props.labels;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: className
-      }, _react.default.createElement(StyledArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         "aria-label": labels.previoustMonth,
         onClick: function onClick() {
           return onPreviousClick();
         },
         left: true
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         fill: iconColor,
         direction: "left"
-      })), _react.default.createElement(StyledArrowIcon, {
+      })), /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         "aria-label": labels.nextMonth,
         onClick: function onClick() {
           return onNextClick();
         },
         right: true
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         fill: iconColor
       })));

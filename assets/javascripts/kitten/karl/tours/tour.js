@@ -10,7 +10,7 @@ import { ArrowIcon } from '../../components/icons/arrow-icon'
 import { MixIllustration } from '../../components/illustrations/mix-illustration'
 import { LoudspeakerIllustration } from '../../components/illustrations/loudspeaker-illustration'
 
-export const KarlHeaderTour1 = props => (
+export const KarlHeaderTour1 = () => (
   <div
     className="k-Popover"
     role="dialog"
@@ -81,7 +81,7 @@ export const KarlHeaderTour1 = props => (
   </div>
 )
 
-export const KarlHeaderTour2 = props => (
+export const KarlHeaderTour2 = () => (
   <div
     className="k-Popover"
     role="dialog"

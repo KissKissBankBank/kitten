@@ -17,11 +17,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -41,16 +41,20 @@ var _elementHelper = _interopRequireDefault(require("../../helpers/dom/element-h
 
 var _emitter = _interopRequireDefault(require("../../helpers/utils/emitter"));
 
-var UserMenu =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var UserMenu = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(UserMenu, _Component);
+
+  var _super = _createSuper(UserMenu);
 
   function UserMenu(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, UserMenu);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(UserMenu).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       isExpanded: false,
       contentPosition: {
@@ -174,7 +178,7 @@ function (_Component) {
   }, {
     key: "getDropdownContent",
     value: function getDropdownContent() {
-      return _react.default.createElement(_navList.NavList, {
+      return /*#__PURE__*/_react.default.createElement(_navList.NavList, {
         className: (0, _classnames.default)('k-UserMenu', 'k-UserMenu--withoutBorderTop'),
         role: "menubar",
         list: this.props.dropdownList
@@ -183,7 +187,7 @@ function (_Component) {
   }, {
     key: "getDropdownButton",
     value: function getDropdownButton() {
-      return _react.default.createElement(_buttonImageWithTextAndBadge.ButtonImageWithTextAndBadge, {
+      return /*#__PURE__*/_react.default.createElement(_buttonImageWithTextAndBadge.ButtonImageWithTextAndBadge, {
         ref: "dropdownButton",
         className: this.props.buttonClassName,
         id: this.getButtonId(),
@@ -203,7 +207,7 @@ function (_Component) {
   }, {
     key: "getDropdownArrow",
     value: function getDropdownArrow() {
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         className: "k-UserMenu__arrow"
       });
     }
@@ -255,7 +259,7 @@ function (_Component) {
       var _this$props = this.props,
           dropdownList = _this$props.dropdownList,
           otherProps = (0, _objectWithoutProperties2.default)(_this$props, ["dropdownList"]);
-      return _react.default.createElement(_dropdown.Dropdown, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_dropdown.Dropdown, (0, _extends2.default)({
         ref: "dropdown",
         button: this.getDropdownButton(),
         dropdownContent: this.getDropdownContent(),

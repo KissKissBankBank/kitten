@@ -39,7 +39,7 @@ var BurgerIcon = function BurgerIcon(_ref2) {
       isActive = _ref2.isActive,
       iconTitle = _ref2.iconTitle,
       props = (0, _objectWithoutProperties2.default)(_ref2, ["mainColor", "hoverColor", "isActive", "iconTitle"]);
-  return _react.default.createElement(StyledItem, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(StyledItem, (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 12 10",
     width: "12",
@@ -47,17 +47,17 @@ var BurgerIcon = function BurgerIcon(_ref2) {
     isActive: isActive,
     mainColor: mainColor,
     hoverColor: hoverColor
-  }, props), iconTitle && _react.default.createElement("title", null, iconTitle), _react.default.createElement("rect", {
+  }, props), iconTitle && /*#__PURE__*/_react.default.createElement("title", null, iconTitle), /*#__PURE__*/_react.default.createElement("rect", {
     y: "0",
     width: "12",
     height: "2",
     className: "item-buns"
-  }), _react.default.createElement("rect", {
+  }), /*#__PURE__*/_react.default.createElement("rect", {
     y: "4",
     width: "12",
     height: "2",
     className: "item-patty"
-  }), _react.default.createElement("rect", {
+  }), /*#__PURE__*/_react.default.createElement("rect", {
     y: "8",
     width: "12",
     height: "2",

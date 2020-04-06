@@ -19,7 +19,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -32,6 +32,10 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _typography = require("../../../helpers/utils/typography");
+
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var bubbleAnimationKeyframes = function bubbleAnimationKeyframes() {
   return (0, _styledComponents.keyframes)(["0%{transform:scale(0);opacity:0;}33.33%{transform:scale(1.1);opacity:0.2;}50%{transform:scale(0.8);}66.66%{transform:scale(1.05);}83.33%{transform:scale(0.9);}100%{transform:scale(1);opacity:0.2;}"]);
@@ -74,14 +78,12 @@ var StyledHighlightHalo = _styledComponents.default.div.withConfig({
   return (0, _styledComponents.css)(["animation-delay:", "s,", "s,", "s;"], animationDelay + 0.2, animationDelay + 0.2 + 0.5, animationDelay + 0.2 + 0.5 + getAnimationDelay);
 });
 
-var HighlightHalo =
-/*#__PURE__*/
-function (_Component) {
+var HighlightHalo = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(HighlightHalo, _Component);
 
-  function HighlightHalo() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(HighlightHalo);
 
+  function HighlightHalo() {
     var _this;
 
     (0, _classCallCheck2.default)(this, HighlightHalo);
@@ -90,7 +92,7 @@ function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(HighlightHalo)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
 
     _this.highlightHaloAnimation = function () {
       var animationEasing = 'ease-in-out';
@@ -132,12 +134,12 @@ function (_Component) {
       var _this$props = this.props,
           onHaloAnimationEnd = _this$props.onHaloAnimationEnd,
           other = (0, _objectWithoutProperties2.default)(_this$props, ["onHaloAnimationEnd"]);
-      return _react.default.createElement(StyledHighlightHalo, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledHighlightHalo, (0, _extends2.default)({
         highlightHaloAnimation: this.highlightHaloAnimation(),
         getAnimationDelay: this.getAnimationDelay()
       }, other, {
         onAnimationEnd: this.handleAnimationEnd
-      }), _react.default.createElement("div", null), _react.default.createElement("div", null), _react.default.createElement("div", {
+      }), /*#__PURE__*/_react.default.createElement("div", null), /*#__PURE__*/_react.default.createElement("div", null), /*#__PURE__*/_react.default.createElement("div", {
         ref: function ref(_ref8) {
           return _this2.lastAnimatedDiv = _ref8;
         }

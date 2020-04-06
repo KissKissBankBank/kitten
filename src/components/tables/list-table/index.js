@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -13,7 +11,7 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -38,11 +36,11 @@ var ListTable = function ListTable(_ref) {
   var id = _ref.id,
       children = _ref.children,
       props = (0, _objectWithoutProperties2.default)(_ref, ["id", "children"]);
-  return _react.default.createElement(_context.Context.Provider, {
+  return /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
     value: {
       id: id
     }
-  }, _react.default.createElement(StyledSection, (0, _extends2.default)({
+  }, /*#__PURE__*/_react.default.createElement(StyledSection, (0, _extends2.default)({
     id: id
   }, props), children));
 };

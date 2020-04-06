@@ -23,8 +23,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireDefault(require("radium"));
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _buttonIcon = require("../../buttons/button-icon");
@@ -35,14 +33,18 @@ var _buttonWithTooltip = require("./button-with-tooltip");
 
 var _mediaQueries = require("../../../hoc/media-queries");
 
-var TeamCardPhoneIconBase =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var TeamCardPhoneIconBase = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(TeamCardPhoneIconBase, _Component);
+
+  var _super = _createSuper(TeamCardPhoneIconBase);
 
   function TeamCardPhoneIconBase() {
     (0, _classCallCheck2.default)(this, TeamCardPhoneIconBase);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TeamCardPhoneIconBase).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TeamCardPhoneIconBase, [{
@@ -52,7 +54,7 @@ function (_Component) {
           phoneNumber = _this$props.phoneNumber,
           viewportIsXSOrLess = _this$props.viewportIsXSOrLess,
           tooltipColor = _this$props.tooltipColor;
-      return _react.default.createElement(_react.Fragment, null, viewportIsXSOrLess && _react.default.createElement(_buttonIcon.ButtonIcon, {
+      return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, viewportIsXSOrLess && /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         tag: "a",
         href: "tel:".concat(phoneNumber),
         modifier: "hydrogen",
@@ -60,9 +62,9 @@ function (_Component) {
         style: {
           marginRight: 15
         }
-      }, _react.default.createElement(_phoneIcon.PhoneIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_phoneIcon.PhoneIcon, {
         className: "k-ButtonIcon__svg"
-      })), !viewportIsXSOrLess && _react.default.createElement(_buttonWithTooltip.TeamCardButtonWithTooltip, (0, _extends2.default)({}, this.props, {
+      })), !viewportIsXSOrLess && /*#__PURE__*/_react.default.createElement(_buttonWithTooltip.TeamCardButtonWithTooltip, (0, _extends2.default)({}, this.props, {
         color: tooltipColor
       })));
     }

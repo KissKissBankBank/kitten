@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import renderer from 'react-test-renderer'
 import { StandaloneRangeDatePicker } from './index'
 import COLORS from '../../../constants/colors-config'

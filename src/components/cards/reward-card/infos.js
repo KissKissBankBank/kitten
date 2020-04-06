@@ -2,14 +2,12 @@
 
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.RewardCardInfos = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _radium = _interopRequireDefault(require("radium"));
 
@@ -30,16 +28,16 @@ var RewardCardInfosBase = function RewardCardInfosBase(_ref) {
       isTinyVersion = _ref.isTinyVersion;
   var styleInfos = [isDisabled && _rewardCard.styles.disabled];
   if (infos.length === 0) return null;
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     style: styleInfos,
     disabled: isDisabled
-  }, _react.default.createElement(_marger.Marger, {
+  }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "2",
     bottom: "3"
   }, infos && infos.map(function (info) {
-    return _react.default.createElement(_info.Info, {
+    return /*#__PURE__*/_react.default.createElement(_info.Info, {
       key: info.label,
       label: info.label,
       value: info.value,

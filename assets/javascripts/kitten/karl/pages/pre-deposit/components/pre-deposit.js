@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import { StyleRoot } from 'radium'
 import HeaderWithBackground from './header-with-background'
 import KeySection from './key-section'
 import SolutionsTriptych from './triptych/solutions-triptych'

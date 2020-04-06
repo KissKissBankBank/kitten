@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import { card } from '../../hoc/card'
-import { Grid, GridCol } from '../../components/grid/grid'
 import { Marger } from '../../components/layout/marger'
 import { Title } from '../../components/typography/title'
 import { Paragraph } from '../../components/typography/paragraph'

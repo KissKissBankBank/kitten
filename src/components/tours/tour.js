@@ -13,11 +13,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -29,16 +29,20 @@ var _elementHelper = require("../../helpers/dom/element-helper");
 
 var _tourStep = require("../../components/tours/tour-step");
 
-var Tour =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var Tour = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Tour, _Component);
+
+  var _super = _createSuper(Tour);
 
   function Tour(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, Tour);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Tour).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       play: false,
       visible: false,
@@ -63,7 +67,7 @@ function (_Component) {
 
   }, {
     key: "handleTargetHighlightPosition",
-    value: function handleTargetHighlightPosition(step) {
+    value: function handleTargetHighlightPosition() {
       this.setState({
         visible: true
       });
@@ -179,7 +183,7 @@ function (_Component) {
     key: "renderTourStep",
     value: function renderTourStep() {
       if (!this.state.play) return;
-      return _react.default.createElement(_tourStep.TourStep, {
+      return /*#__PURE__*/_react.default.createElement(_tourStep.TourStep, {
         onNextClick: this.handleClickOnNext,
         onPrevClick: this.handleClickOnPrev,
         onCloseClick: this.handleClickOnClose,
@@ -200,7 +204,7 @@ function (_Component) {
       var tourClassName = (0, _classnames.default)('k-Tour', {
         'is-hidden': !this.state.visible
       }, this.props.className);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: tourClassName
       }, this.renderTourStep());
     }

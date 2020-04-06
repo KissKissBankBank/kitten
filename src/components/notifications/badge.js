@@ -39,7 +39,7 @@ var Badge = function Badge(_ref3) {
       spaced = _ref3.spaced,
       Icon = _ref3.Icon,
       others = (0, _objectWithoutProperties2.default)(_ref3, ["className", "spaced", "Icon"]);
-  return _react.default.createElement("div", null, Icon && _react.default.createElement(Icon, null), _react.default.createElement(StyledBadge, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("div", null, Icon && /*#__PURE__*/_react.default.createElement(Icon, null), /*#__PURE__*/_react.default.createElement(StyledBadge, (0, _extends2.default)({
     role: "alert",
     className: (0, _classnames.default)('k-Badge', className, {
       'k-Badge--spaced': spaced

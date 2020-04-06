@@ -33,6 +33,10 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledAvatar = _styledComponents.default.div.withConfig({
   displayName: "comment-avatar__StyledAvatar",
   componentId: "sc-10x87zp-0"
@@ -55,21 +59,21 @@ var StyledAvatarBadge = _styledComponents.default.div.withConfig({
   componentId: "sc-10x87zp-3"
 })(["position:absolute;right:0;top:0;"]);
 
-var CommentAvatar =
-/*#__PURE__*/
-function (_PureComponent) {
+var CommentAvatar = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(CommentAvatar, _PureComponent);
+
+  var _super = _createSuper(CommentAvatar);
 
   function CommentAvatar() {
     (0, _classCallCheck2.default)(this, CommentAvatar);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CommentAvatar).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(CommentAvatar, [{
     key: "render",
     value: function render() {
       var avatarImgProps = this.props.avatarImgProps;
-      return _react.default.createElement(StyledAvatar, null, _react.default.createElement(StyledPosition, null, this.renderBadge(), _react.default.createElement(StyledButtonImage, {
+      return /*#__PURE__*/_react.default.createElement(StyledAvatar, null, /*#__PURE__*/_react.default.createElement(StyledPosition, null, this.renderBadge(), /*#__PURE__*/_react.default.createElement(StyledButtonImage, {
         tag: "span",
         withoutPointerEvents: true,
         img: avatarImgProps
@@ -80,14 +84,14 @@ function (_PureComponent) {
     value: function renderBadge() {
       var avatarBadge = this.props.avatarBadge;
       if (!avatarBadge) return;
-      return _react.default.createElement(StyledAvatarBadge, null, avatarBadge);
+      return /*#__PURE__*/_react.default.createElement(StyledAvatarBadge, null, avatarBadge);
     }
   }, {
     key: "renderDate",
     value: function renderDate() {
       var commentDate = this.props.commentDate;
       if (!commentDate) return;
-      return _react.default.createElement(_text.Text, {
+      return /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "micro",
         weight: "light",
         color: "font1"

@@ -19,12 +19,12 @@ var StrokeIcon = function StrokeIcon(_ref) {
   var color = _ref.color,
       title = _ref.title,
       props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
-  return _react.default.createElement("svg", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     width: "8",
     height: "2",
     viewBox: "0 0 8 2",
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), title && _react.default.createElement("title", null, title), _react.default.createElement("path", {
+  }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("path", {
     fill: color,
     d: "M0 0h8v2H0z"
   }));

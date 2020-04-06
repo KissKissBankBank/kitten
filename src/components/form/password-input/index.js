@@ -25,7 +25,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _textInput = require("../../../components/form/text-input");
 
@@ -35,9 +35,11 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
-
 var _typography = require("../../../helpers/utils/typography");
+
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var StyledPasswordInput = _styledComponents.default.div.withConfig({
   displayName: "password-input__StyledPasswordInput",
@@ -54,16 +56,16 @@ var StyledIcon = _styledComponents.default.span.withConfig({
   componentId: "sc-1futz46-2"
 })(["display:flex;position:absolute;z-index:1;padding:0 ", ";right:0;top:0;bottom:0;cursor:pointer;&[aria-pressed='true']{svg{fill:", ";transition:all 0.2s;}}"], (0, _typography.pxToRem)(11), _colorsConfig.default.primary1);
 
-var PasswordInput =
-/*#__PURE__*/
-function (_PureComponent) {
+var PasswordInput = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(PasswordInput, _PureComponent);
+
+  var _super = _createSuper(PasswordInput);
 
   function PasswordInput(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, PasswordInput);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(PasswordInput).call(this, props));
+    _this = _super.call(this, props);
 
     _this.handleClick = function () {
       _this.setState({
@@ -96,16 +98,16 @@ function (_PureComponent) {
       var type = this.state.isHidden ? 'password' : 'text';
       var active = !this.state.isHidden;
       var iconTitle = this.state.isHidden ? iconLabel : hiddenIconLabel;
-      return _react.default.createElement(StyledPasswordInput, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(StyledPasswordInput, null, /*#__PURE__*/_react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
         name: name,
         type: type
-      })), _react.default.createElement(StyledIcon, {
+      })), /*#__PURE__*/_react.default.createElement(StyledIcon, {
         title: iconTitle,
         onClick: this.handleClick,
         onKeyDown: this.handleKeyDown,
         "aria-pressed": active,
         tabIndex: "0"
-      }, _react.default.createElement(_passwordIcon.PasswordIcon, null)));
+      }, /*#__PURE__*/_react.default.createElement(_passwordIcon.PasswordIcon, null)));
     }
   }]);
   return PasswordInput;

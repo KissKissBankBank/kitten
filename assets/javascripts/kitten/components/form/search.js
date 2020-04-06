@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import classNames from 'classnames'
-import { domElementHelper } from '../../helpers/dom/element-helper'
 import { TextInput } from '../../components/form/text-input'
 import { SearchIcon } from '../../components/icons/search-icon'
 
@@ -43,14 +41,12 @@ export class Search extends Component {
 
   render() {
     const {
-      className,
       actionUrl,
       inputId,
       inputName,
       inputPlaceholder,
       inputLabel,
       submitLabel,
-      ...others
     } = this.props
 
     let inputClassName = classNames(

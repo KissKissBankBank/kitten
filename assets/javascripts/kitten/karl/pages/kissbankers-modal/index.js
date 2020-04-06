@@ -1,11 +1,10 @@
 import React from 'react'
-import { Modal } from '../../../components/modals/modal'
 import { Header } from './components/header'
 import { ContributionDetails } from './components/details'
 import { Contributor } from './components/contributor'
 import { ContributionGroup } from './components/group'
 
-const KissbankersModal = props => (
+const KissbankersModal = () => (
   <>
     <Header orderId="1498800" orderDate={new Date()} />
     <ContributionDetails

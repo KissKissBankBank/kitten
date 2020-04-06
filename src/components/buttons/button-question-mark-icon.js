@@ -16,13 +16,13 @@ var _questionMarkIcon = require("../../components/icons/question-mark-icon");
 var _buttonIcon = require("../../components/buttons/button-icon");
 
 var ButtonQuestionMarkIcon = function ButtonQuestionMarkIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({
     className: "k-ButtonIcon--tooltip--nano",
     modifier: "helium",
     size: "nano",
     type: "button",
     rounded: true
-  }, props), _react.default.createElement(_questionMarkIcon.QuestionMarkIcon, {
+  }, props), /*#__PURE__*/_react.default.createElement(_questionMarkIcon.QuestionMarkIcon, {
     className: "k-ButtonIcon__svg"
   }));
 };

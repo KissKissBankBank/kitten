@@ -39,9 +39,9 @@ var ListTableHeader = function ListTableHeader(_ref) {
   var children = _ref.children,
       listProps = _ref.listProps,
       others = (0, _objectWithoutProperties2.default)(_ref, ["children", "listProps"]);
-  return _react.default.createElement(StyledHeader, others, _react.default.createElement(StyledList, listProps, _react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
+  return /*#__PURE__*/_react.default.createElement(StyledHeader, others, /*#__PURE__*/_react.default.createElement(StyledList, listProps, /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
     var id = _ref2.id;
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.Children.map(children, function (child, index) {
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, _react.default.Children.map(children, function (child, index) {
       return _react.default.cloneElement(child, {
         id: "".concat(id, "-col-").concat(index)
       });

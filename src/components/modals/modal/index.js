@@ -19,7 +19,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -42,6 +42,10 @@ var _typography = require("../../../helpers/utils/typography");
 var _screenConfig = require("../../../constants/screen-config");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
+
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _templateObject2() {
   var data = (0, _taggedTemplateLiteral2.default)(["\n  .k-Modal__overlay {\n    opacity: 0;\n  }\n  .k-Modal__content {\n    opacity: 0;\n    transform: scale(.94);\n  }\n\n  .k-Modal__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-Modal--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-Modal__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-Modal--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n"]);
@@ -66,14 +70,12 @@ function _templateObject() {
 var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject(), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.background1, (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(690), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(50));
 var AnimatedGlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject2());
 
-var Modal =
-/*#__PURE__*/
-function (_Component) {
+var Modal = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Modal, _Component);
 
-  function Modal() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(Modal);
 
+  function Modal() {
     var _this;
 
     (0, _classCallCheck2.default)(this, Modal);
@@ -82,7 +84,7 @@ function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(Modal)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
     _this.state = {
       showModal: false
     };
@@ -110,9 +112,9 @@ function (_Component) {
     key: "renderCloseModal",
     value: function renderCloseModal() {
       var closeButtonLabel = this.props.closeButtonLabel;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Modal__close"
-      }, _react.default.createElement(_closeButton.CloseButton, {
+      }, /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
         className: "k-Modal__close--fixed",
         modifier: "beryllium",
         onClick: this.close,
@@ -123,7 +125,7 @@ function (_Component) {
     key: "renderTriggerAction",
     value: function renderTriggerAction() {
       if (!this.props.trigger) return;
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         onClick: this.open
       }, this.props.trigger);
     }
@@ -132,7 +134,7 @@ function (_Component) {
     value: function renderGlobalStyle() {
       var modalClassNames = this.props.modalClassNames;
       if (modalClassNames.className.base !== 'k-Modal__content' && modalClassNames.overlayClassName.base !== 'k-Modal__overlay') return;
-      return _react.default.createElement(GlobalStyle, null);
+      return /*#__PURE__*/_react.default.createElement(GlobalStyle, null);
     }
   }, {
     key: "render",
@@ -153,9 +155,9 @@ function (_Component) {
           isAnimated = _this$props.isAnimated,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "disableOutsideScroll", "modalClassNames", "hasCloseButton", "isAnimated"]);
       var triggerClassNames = (0, _classnames.default)('k-Modal', className);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: triggerClassNames
-      }, others), this.renderTriggerAction(), this.renderGlobalStyle(), isAnimated && _react.default.createElement(AnimatedGlobalStyle, null), _react.default.createElement(_reactModal.default, (0, _extends2.default)({
+      }, others), this.renderTriggerAction(), this.renderGlobalStyle(), isAnimated && /*#__PURE__*/_react.default.createElement(AnimatedGlobalStyle, null), /*#__PURE__*/_react.default.createElement(_reactModal.default, (0, _extends2.default)({
         closeTimeoutMS: isAnimated ? 500 : 0,
         role: "dialog",
         className: (0, _extends2.default)({}, modalClassNames.className),

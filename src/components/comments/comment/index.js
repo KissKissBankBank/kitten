@@ -104,32 +104,32 @@ var Comment = function Comment(_ref3) {
 
     setLikeButtonWidth(elementWidth + marginLeftAndRight);
   }, []);
-  return _react.default.createElement(StyledGrid, {
+  return /*#__PURE__*/_react.default.createElement(StyledGrid, {
     id: id
-  }, _react.default.createElement(_commentAvatar.CommentAvatar, {
+  }, /*#__PURE__*/_react.default.createElement(_commentAvatar.CommentAvatar, {
     avatarImgProps: avatarImgProps,
     commentDate: commentDate,
     avatarBadge: avatarBadge
-  }), _react.default.createElement(StyledCommentContainer, null, _react.default.createElement(StyledCommentContent, null, ownerName && _react.default.createElement(_marger.Marger, {
+  }), /*#__PURE__*/_react.default.createElement(StyledCommentContainer, null, /*#__PURE__*/_react.default.createElement(StyledCommentContent, null, ownerName && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     bottom: "1"
-  }, _react.default.createElement(_text.Text, {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     color: "font1",
     size: "tiny",
     weight: "regular"
-  }, ownerName)), _react.default.createElement(StyledMargerText, {
+  }, ownerName)), /*#__PURE__*/_react.default.createElement(StyledMargerText, {
     hasLikeButton: !!likeButtonProps.children,
     ownerName: ownerName
-  }, _react.default.createElement(StyledContentText, {
+  }, /*#__PURE__*/_react.default.createElement(StyledContentText, {
     color: "font1",
     weight: "light"
-  }, text)), _react.default.createElement(StyledCommentArrow, null)), likeButtonProps.children && _react.default.createElement(StyledLikeButtonBox, {
+  }, text)), /*#__PURE__*/_react.default.createElement(StyledCommentArrow, null)), likeButtonProps.children && /*#__PURE__*/_react.default.createElement(StyledLikeButtonBox, {
     ref: likeButtonElement
-  }, _react.default.createElement(_likeButton.LikeButton, likeButtonProps)), bottomNotes && _react.default.createElement(_marger.Marger, {
+  }, /*#__PURE__*/_react.default.createElement(_likeButton.LikeButton, likeButtonProps)), bottomNotes && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: ".5",
     style: {
       marginRight: likeButtonWidth
     }
-  }, _react.default.createElement(StyledBottomNotes, {
+  }, /*#__PURE__*/_react.default.createElement(StyledBottomNotes, {
     tag: "div",
     color: "font1",
     size: "micro",

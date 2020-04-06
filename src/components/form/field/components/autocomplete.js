@@ -14,9 +14,9 @@ var _marger = require("../../../layout/marger");
 var _autocomplete = require("../../../form/autocomplete");
 
 var FieldAutocomplete = function FieldAutocomplete(props) {
-  return _react.default.createElement(_marger.Marger, {
+  return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "1"
-  }, _react.default.createElement(_autocomplete.Autocomplete, props));
+  }, /*#__PURE__*/_react.default.createElement(_autocomplete.Autocomplete, props));
 };
 
 exports.FieldAutocomplete = FieldAutocomplete;

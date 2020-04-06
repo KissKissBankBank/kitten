@@ -94,8 +94,6 @@ const tooltipColor = backgroundTooltipColor => ({
   borderColor: `${backgroundTooltipColor}`,
 })
 
-const backgroundColor = COLORS.primary1
-
 const styles = {
   tooltip: {
     position: 'relative',

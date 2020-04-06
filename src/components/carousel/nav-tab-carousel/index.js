@@ -21,9 +21,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _prev = require("./components/prev");
 
@@ -39,19 +37,23 @@ var _typography = require("./../../../helpers/utils/typography");
 
 var _styledComponents2 = require("./components/styled-components");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var NavTabCarouselStyles = _styledComponents.default.div.withConfig({
   displayName: "nav-tab-carousel__NavTabCarouselStyles",
   componentId: "sc-1fg6mhx-0"
 })(["box-sizing:border-box;display:flex;width:100%;justify-content:space-between;align-items:center;background-color:", ";padding:", " ", ";min-width:", ";"], _colorsConfig.default.font1, (0, _typography.pxToRem)(32), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(320));
 
-var NavTabCarousel =
-/*#__PURE__*/
-function (_Component) {
+var NavTabCarousel = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(NavTabCarousel, _Component);
+
+  var _super = _createSuper(NavTabCarousel);
 
   function NavTabCarousel() {
     (0, _classCallCheck2.default)(this, NavTabCarousel);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(NavTabCarousel).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(NavTabCarousel, [{
@@ -70,7 +72,7 @@ function (_Component) {
         children: children,
         type: NavTabCarousel.Pagination
       })[0];
-      return _react.default.createElement(NavTabCarouselStyles, null, prev || _react.default.createElement(_styledComponents2.LeftEmptyContainer, null), pagination, next || _react.default.createElement(_styledComponents2.RightEmptyContainer, null));
+      return /*#__PURE__*/_react.default.createElement(NavTabCarouselStyles, null, prev || /*#__PURE__*/_react.default.createElement(_styledComponents2.LeftEmptyContainer, null), pagination, next || /*#__PURE__*/_react.default.createElement(_styledComponents2.RightEmptyContainer, null));
     }
   }]);
   return NavTabCarousel;

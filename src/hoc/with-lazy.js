@@ -19,9 +19,9 @@ var withLazy = function withLazy(WrappedComponent) {
   return function (props) {
     var lazyComponentRef = (0, _react.useRef)(null);
     var isLazyTriggered = (0, _lazyHook.default)(lazyComponentRef);
-    return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", {
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
       ref: lazyComponentRef
-    }), _react.default.createElement(WrappedComponent, (0, _extends2.default)({}, props, {
+    }), /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends2.default)({}, props, {
       isLazyTriggered: isLazyTriggered
     })));
   };

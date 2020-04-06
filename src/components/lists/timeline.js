@@ -27,8 +27,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _screenConfig = require("../../constants/screen-config");
 
-var _mediaQueries = require("../../hoc/media-queries");
-
 var _radium = _interopRequireWildcard(require("radium"));
 
 var _text = require("../../components/typography/text");
@@ -37,23 +35,25 @@ var _marger = require("../../components/layout/marger");
 
 var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
-var _pathOr = _interopRequireDefault(require("ramda/src/pathOr"));
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typographyConfig = _interopRequireDefault(require("../../constants/typography-config"));
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var Marger = (0, _radium.default)(_marger.Marger);
 var Text = (0, _radium.default)(_text.Text);
 
-var Timeline =
-/*#__PURE__*/
-function (_Component) {
+var Timeline = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Timeline, _Component);
+
+  var _super = _createSuper(Timeline);
 
   function Timeline() {
     (0, _classCallCheck2.default)(this, Timeline);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Timeline).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Timeline, [{
@@ -66,19 +66,19 @@ function (_Component) {
       var arrayOfChildren = _react.default.Children.toArray(children);
 
       var bulletStyle = [styles.circle, styles.circleMarger[itemHeight]];
-      return _react.default.createElement(_radium.StyleRoot, {
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, {
         style: styles.timelineContainer
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         style: styles.verticalDashedLine
-      }), _react.default.createElement("ol", {
+      }), /*#__PURE__*/_react.default.createElement("ol", {
         style: styles.customList
       }, _react.default.Children.map(arrayOfChildren, function (child, index) {
-        return _react.default.createElement("li", {
+        return /*#__PURE__*/_react.default.createElement("li", {
           style: styles.list
-        }, _react.default.createElement(Text, {
+        }, /*#__PURE__*/_react.default.createElement(Text, {
           size: "tiny",
           style: bulletStyle
-        }, ++index), _react.default.createElement(Marger, {
+        }, ++index), /*#__PURE__*/_react.default.createElement(Marger, {
           top: "2.5",
           bottom: "2.5",
           style: styles.textList

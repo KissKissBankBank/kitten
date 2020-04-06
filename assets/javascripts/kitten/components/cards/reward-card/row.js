@@ -8,9 +8,7 @@ export class RewardCardRow extends Component {
   }
 
   render() {
-    const { children, style } = this.props
-
-    return <div style={styles}>{children}</div>
+    return <div style={styles}>{this.props.children}</div>
   }
 }
 

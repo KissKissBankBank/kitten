@@ -4,7 +4,36 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking change: Add new defaults for `k-u-link-*` utility classes.
+- Feature: Add new `k-u-link` utility class for basic link styling.
+
+## [2.61.1] - 2020-04-06
+
+Fixes:
+- Fix a memory leak to unmounted `StickyContainer`.
+- Fix `Alert` error when `onAfterClose` is not defined.
+
+## [2.61.0] - 2020-04-02
+
+Feature:
+- Add `cssPropertyDistributor` utility.
+
+Fix:
+- Add API check to `ContinuousIntersectionObserver` utils.
+
+## [2.60.3] - 2020-04-01
+
+Fix:
+- Fix warning in `SelectWithState` component.
+
+## [2.60.2] - 2020-03-26
+
+Fix:
+- More performant `DoubleEntryTable` Component.
+
+## [2.60.1] - 2020-03-25
+
+Fix:
+- Update `CopyIcon`.
 
 ## [2.60.0] - 2020-03-19
 
@@ -15,8 +44,8 @@ Features:
 ## [2.59.1] - 2020-03-17
 
 Fixes:
-- ArrowIcon component size.
-- Fix warning in Pagination component.
+- `ArrowIcon` component size.
+- Fix warning in `Pagination` component.
 
 ## [2.59.0] - 2020-03-13
 

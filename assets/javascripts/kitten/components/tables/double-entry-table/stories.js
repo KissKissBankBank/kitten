@@ -1,14 +1,8 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, number, select } from '@storybook/addon-knobs'
 import { DoubleEntryTable } from './index'
 import { Container } from '../../grid/container'
-
-import { ScreenConfig } from '../../../constants/screen-config'
-import { VisuallyHidden } from '../../accessibility/visually-hidden'
-import { pxToRem } from '../../../helpers/utils/typography'
 
 const info = {
   text: `
@@ -58,7 +52,6 @@ const info = {
 }
 
 storiesOf('Tables/DoubleEntryTable', module)
-  .addDecorator(withKnobs)
   .addDecorator(withInfo)
   .add(
     'default',

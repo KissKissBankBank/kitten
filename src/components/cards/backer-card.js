@@ -45,30 +45,30 @@ var BackerCard = function BackerCard(_ref) {
       imgProps = _ref.imgProps,
       description = _ref.description,
       others = (0, _objectWithoutProperties2.default)(_ref, ["title", "subtitle", "imgProps", "description"]);
-  return _react.default.createElement(StyledCard, others, _react.default.createElement(_marger.Marger, {
+  return /*#__PURE__*/_react.default.createElement(StyledCard, others, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "4",
     bottom: "1"
-  }, _react.default.createElement(_text.Text, {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     color: "font1",
     weight: "regular",
     lineHeight: "normal",
     size: "tiny"
-  }, title, subtitle && _react.default.createElement(StyledSubtitle, {
+  }, title, subtitle && /*#__PURE__*/_react.default.createElement(StyledSubtitle, {
     color: "font1",
     weight: "light",
     size: "micro"
-  }, subtitle))), _react.default.createElement(_marger.Marger, {
+  }, subtitle))), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "1",
     bottom: "1"
-  }, _react.default.createElement(StyledButtonImage, {
+  }, /*#__PURE__*/_react.default.createElement(StyledButtonImage, {
     tag: "span",
     img: imgProps,
     withoutPointerEvents: true,
     huge: true
-  })), _react.default.createElement(_marger.Marger, {
+  })), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "1",
     bottom: "4"
-  }, _react.default.createElement(_text.Text, {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: "p",
     color: "font1",
     weight: "light",
