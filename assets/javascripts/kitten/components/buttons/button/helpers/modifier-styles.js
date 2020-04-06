@@ -99,8 +99,8 @@ export const modifierStyles = modifier => {
           svg {
             fill: ${activeColor};
           }
-        }
-      `}
+        }`
+    }
 
     :disabled {
       border-color: ${COLORS.line2};

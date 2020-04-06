@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, number, color } from '@storybook/addon-knobs'
 import { SimplePopover } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
-import COLORS from '../../../constants/colors-config'
 import { Button } from '../../../components/buttons/button/button'
 
 const StoryContainer = ({ children }) => (
@@ -16,12 +14,11 @@ const StoryContainer = ({ children }) => (
 )
 
 storiesOf('Popovers & Tours/SimplePopover', module)
-  .addDecorator(withKnobs)
   .add('default', () => {
     const [isVisible, setVisibility] = useState(true)
 
     const closeClick = () => {
-      console.log('Close or Cancel clicked')
+      console.warn('Close or Cancel clicked')
       setVisibility(false)
     }
 
@@ -48,7 +45,7 @@ storiesOf('Popovers & Tours/SimplePopover', module)
               label: 'OK',
               modifier: 'helium',
               tiny: true,
-              onClick: () => console.log('Ok clicked'),
+              onClick: () => console.warn('Ok clicked'),
             },
           ]}
         />
@@ -63,7 +60,7 @@ storiesOf('Popovers & Tours/SimplePopover', module)
     const [isVisible, setVisibility] = useState(true)
 
     const closeClick = () => {
-      console.log('Close or Cancel clicked')
+      console.warn('Close or Cancel clicked')
       setVisibility(false)
     }
 
@@ -89,7 +86,7 @@ storiesOf('Popovers & Tours/SimplePopover', module)
               label: 'OK',
               modifier: 'helium',
               tiny: true,
-              onClick: () => console.log('Ok clicked'),
+              onClick: () => console.warn('Ok clicked'),
             },
           ]}
         />
@@ -104,7 +101,7 @@ storiesOf('Popovers & Tours/SimplePopover', module)
     const [isVisible, setVisibility] = useState(true)
 
     const closeClick = () => {
-      console.log('Close clicked')
+      console.warn('Close clicked')
       setVisibility(false)
     }
 

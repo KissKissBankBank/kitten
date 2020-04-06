@@ -3,7 +3,6 @@ import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
-import { Title } from '../../../../components/typography/title'
 import COLORS from '../../../../constants/colors-config'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import Truncate from 'react-truncate'
@@ -80,7 +79,7 @@ class Subtitle extends PureComponent {
   }
 
   render() {
-    const { loading, subTitle, subTitleTruncate, widgetSubtitle } = this.props
+    const { subTitle, widgetSubtitle } = this.props
 
     return (
       <>

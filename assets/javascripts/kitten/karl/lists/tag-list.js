@@ -3,7 +3,7 @@ import { TagList } from '../../components/lists/tag-list'
 import { TypologyTagIcon } from '../../components/icons/typology-tag-icon'
 import { InstrumentTagIcon } from '../../components/icons/instrument-tag-icon'
 
-export const KarlTagList = props => {
+export const KarlTagList = () => {
   const typologyItems = [
     { key: 'tag-1', item: 'Tag 1' },
     { key: 'tag-2', item: 'Tag 2' },

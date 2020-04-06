@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
-import COLORS from '../../constants/colors-config'
 import { Button as ButtonBase } from '../../components/buttons/button'
 import { FilterIcon as FilterIconBase } from '../../components/icons/filter-icon'
 

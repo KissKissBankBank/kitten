@@ -71,7 +71,7 @@ TextInputAndSelect.defaultProps = {
   selectOptions: [{ value: 'myValue', label: 'My label' }],
   selectName: null,
   selectValue: null,
-  onSelectChange: function() {},
+  onSelectChange: function () {},
   errorOnSelect: false,
   validOnSelect: false,
   disabled: false,

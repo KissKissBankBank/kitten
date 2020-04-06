@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import { ScreenConfig } from '../../../../../constants/screen-config'
-import { card } from '../../../../../hoc/card'
 import { Marger } from '../../../../../components/layout/marger'
 import { Title as TitleBase } from '../../../../../components/typography/title'
 import { Text } from '../../../../../components/typography/text'
@@ -23,7 +22,6 @@ export class CardWithButton extends Component {
       paragraph,
       notice,
       horizontalStroke,
-      buttonProps,
       marginBetweenImgAndContent,
       style,
     } = this.props
@@ -109,9 +107,4 @@ CardWithButton.defaultProps = {
   marginTop: '3',
   marginBottom: '0',
   marginBetweenImgAndContent: '2',
-  buttonProps: {
-    text: 'En savoir plus',
-    url: '',
-    modifier: 'hydrogen',
-  },
 }

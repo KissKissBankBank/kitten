@@ -29,7 +29,7 @@ export class LoanSimulator extends React.Component {
     this.handleInstallmentAction = this.handleInstallmentAction.bind(this)
   }
 
-  handleFocus(e) {
+  handleFocus() {
     this.setState({
       touched: false,
       installmentAmount: null,
@@ -40,7 +40,7 @@ export class LoanSimulator extends React.Component {
     this.setState({ amount: e.target.value })
   }
 
-  handleEnter(e) {
+  handleEnter() {
     this.setState({ touched: true })
   }
 
@@ -246,15 +246,11 @@ class LoanSimulatorContent extends React.Component {
   }
 
   render() {
-    const { label, dragged, touched, duration, error } = this.props
+    const { label, duration, error } = this.props
     const amountValid = !this.props.amountError
-    const showResult = !error && touched && duration
     const installmentMin = amountValid ? this.props.installmentMin : 0
     const installmentMax = amountValid ? this.props.installmentMax : 0
     const installmentAmount = amountValid ? this.props.installmentAmount : 0
-    const installmentPercentage = amountValid
-      ? this.props.installmentPercentage
-      : 0
 
     let errorClass, errorTag, tooltipClass, tooltipText
 

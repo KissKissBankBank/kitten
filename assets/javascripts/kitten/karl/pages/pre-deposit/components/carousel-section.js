@@ -12,10 +12,6 @@ import {
   ScreenConfig,
   SCREEN_SIZE_M,
 } from '../../../../constants/screen-config'
-import {
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
-} from '../../../../constants/grid-config'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 

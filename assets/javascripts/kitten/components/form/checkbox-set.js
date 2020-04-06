@@ -8,7 +8,7 @@ export class CheckboxSet extends React.Component {
     this.renderCheckbox = this.renderCheckbox.bind(this)
   }
 
-  renderCheckbox(item, index) {
+  renderCheckbox(item) {
     const { className, ...itemProps } = item
     const checkboxClassName = classNames('k-CheckboxSet__checkbox', className)
 
