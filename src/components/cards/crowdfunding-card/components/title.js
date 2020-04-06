@@ -103,7 +103,7 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
           loading = _this$props.loading,
           widgetTitle = _this$props.widgetTitle,
           dayCounter = _this$props.dayCounter;
-      return _react.default.createElement(_react.default.Fragment, null, title && this.renderTitle(), widgetTitle && this.renderWidgetTitle());
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, title && this.renderTitle(), widgetTitle && this.renderWidgetTitle());
     }
   }, {
     key: "renderTitle",
@@ -113,17 +113,17 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
           titleProps = _this$props2.titleProps,
           titleTruncate = _this$props2.titleTruncate,
           title = _this$props2.title;
-      return _react.default.createElement(StyledTitleContainer, null, !loading && _react.default.createElement(StyledTitle, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledTitleContainer, null, !loading && /*#__PURE__*/_react.default.createElement(StyledTitle, (0, _extends2.default)({
         tag: "p",
         margin: false,
         className: "k-Card__title"
-      }, titleProps), titleTruncate && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledTruncate, {
+      }, titleProps), titleTruncate && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledTruncate, {
         lines: 2,
         className: "k-u-hidden@s-down"
-      }, title), _react.default.createElement(_reactTruncate.default, {
+      }, title), /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
         lines: 3,
         className: "k-u-hidden@m-up"
-      }, title)), !titleTruncate && title), loading && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledTitleLoading, null), _react.default.createElement(StyledTitleSmallLoading, null)));
+      }, title)), !titleTruncate && title), loading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledTitleLoading, null), /*#__PURE__*/_react.default.createElement(StyledTitleSmallLoading, null)));
     }
   }, {
     key: "renderWidgetTitle",
@@ -133,21 +133,21 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
           dayCounter = _this$props3.dayCounter,
           loading = _this$props3.loading,
           titleTruncate = _this$props3.titleTruncate;
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledWidgetContainer, null, _react.default.createElement(StyledWidgetTitle, null, !loading && _react.default.createElement(_text.Text, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledWidgetContainer, null, /*#__PURE__*/_react.default.createElement(StyledWidgetTitle, null, !loading && /*#__PURE__*/_react.default.createElement(_text.Text, {
         tag: "span",
         color: "font1",
         size: "default",
         weight: "bold",
         lineHeight: "normal",
         className: "k-Card__title"
-      }, titleTruncate && _react.default.createElement(_reactTruncate.default, {
+      }, titleTruncate && /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
         lines: 2
-      }, widgetTitle), !titleTruncate && widgetTitle)), !loading && _react.default.createElement(StyledDayCounter, null, _react.default.createElement(_text.Text, {
+      }, widgetTitle), !titleTruncate && widgetTitle)), !loading && /*#__PURE__*/_react.default.createElement(StyledDayCounter, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "tiny",
         color: "font1",
         weight: "regular",
         lineHeight: "normal"
-      }, dayCounter))), loading && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledTitleLoading, null), _react.default.createElement(StyledTitleSmallLoading, null)));
+      }, dayCounter))), loading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledTitleLoading, null), /*#__PURE__*/_react.default.createElement(StyledTitleSmallLoading, null)));
     }
   }]);
   return TitleComponent;

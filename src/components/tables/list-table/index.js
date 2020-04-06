@@ -38,11 +38,11 @@ var ListTable = function ListTable(_ref) {
   var id = _ref.id,
       children = _ref.children,
       props = (0, _objectWithoutProperties2.default)(_ref, ["id", "children"]);
-  return _react.default.createElement(_context.Context.Provider, {
+  return /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
     value: {
       id: id
     }
-  }, _react.default.createElement(StyledSection, (0, _extends2.default)({
+  }, /*#__PURE__*/_react.default.createElement(StyledSection, (0, _extends2.default)({
     id: id
   }, props), children));
 };

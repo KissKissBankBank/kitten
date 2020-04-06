@@ -60,21 +60,21 @@ var HorizontalNav = function HorizontalNav(_ref) {
       'is-selected': selected
     });
 
-    var renderBadge = _react.default.createElement(_react.default.Fragment, null, text, _react.default.createElement(_badge.Badge, {
+    var renderBadge = /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, text, /*#__PURE__*/_react.default.createElement(_badge.Badge, {
       className: "k-HorizontalNav__badge"
     }, badge));
 
-    var renderMarkdown = markdown ? _react.default.createElement(_reactMarkdown.default, {
+    var renderMarkdown = markdown ? /*#__PURE__*/_react.default.createElement(_reactMarkdown.default, {
       softBreak: "br",
       source: text
     }) : text;
     var renderText = badge ? renderBadge : renderMarkdown;
-    return _react.default.createElement("li", (0, _extends2.default)({
+    return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
       className: (0, _classnames.default)('k-HorizontalNav__element', elementClassName),
       key: key,
       ref: selected ? selectedItem : defaultItem,
       role: "menuitem"
-    }, others), _react.default.createElement("a", {
+    }, others), /*#__PURE__*/_react.default.createElement("a", {
       href: href,
       className: itemClassName,
       style: {
@@ -83,7 +83,7 @@ var HorizontalNav = function HorizontalNav(_ref) {
     }, renderText));
   };
 
-  return _react.default.createElement("ul", {
+  return /*#__PURE__*/_react.default.createElement("ul", {
     role: "menubar",
     id: id,
     className: navClassNames

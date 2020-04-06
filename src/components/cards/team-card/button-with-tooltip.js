@@ -85,7 +85,7 @@ var TeamCardButtonWithTooltip = /*#__PURE__*/function (_Component) {
           color = _this$props.color;
       var tooltipStyle = [tooltipColor(color), styles.tooltip.content, this.state.hover && styles.tooltip.content.hover, this.state.focus && styles.tooltip.content.focus];
       var arrowTooltipStyle = [styles.tooltip.content.after, arrowTooltipColor(color)];
-      return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("a", {
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, null, /*#__PURE__*/_react.default.createElement("a", {
         href: "tel:".concat(phoneNumber),
         onMouseEnter: this.handleOnMouseEnter,
         onMouseLeave: this.handleOnMouseLeave,
@@ -94,19 +94,19 @@ var TeamCardButtonWithTooltip = /*#__PURE__*/function (_Component) {
         style: {
           outline: 'none'
         }
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         style: styles.tooltip
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         style: tooltipStyle
-      }, phoneNumber, _react.default.createElement("span", {
+      }, phoneNumber, /*#__PURE__*/_react.default.createElement("span", {
         style: arrowTooltipStyle
-      })), _react.default.createElement(_buttonIcon.ButtonIcon, {
+      })), /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "hydrogen",
         className: "k-ButtonIcon--phone",
         style: {
           marginRight: 15
         }
-      }, _react.default.createElement(_phoneIcon.PhoneIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_phoneIcon.PhoneIcon, {
         className: "k-ButtonIcon__svg"
       })))));
     }

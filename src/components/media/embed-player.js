@@ -46,9 +46,9 @@ function _createSuper(Derived) { return function () { var Super = (0, _getProtot
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var PlayerButton = function PlayerButton(props) {
-  return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, null, /*#__PURE__*/_react.default.createElement("div", {
     style: styles.playerButton
-  }, _react.default.createElement(_text.Text, {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "default",
     weight: "regular",
     "aria-label": props.playButtonLabel
@@ -131,22 +131,22 @@ var EmbedPlayerBase = /*#__PURE__*/function (_Component) {
       var playerPreviewStyle = [styles.player.base, iframeHtml ? {
         cursor: 'pointer'
       } : null, isVideoPlaying ? styles.player.hide : styles.player.show];
-      return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, null, /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         style: (0, _extends2.default)({}, mainStyle, {}, styles.container),
         ref: function ref(node) {
           _this2.previewVideo = node;
         }
-      }, this.a11yOnClickProps()), _react.default.createElement("div", {
+      }, this.a11yOnClickProps()), /*#__PURE__*/_react.default.createElement("div", {
         style: playerPreviewStyle
-      }, iframeHtml && _react.default.createElement(PlayerButton, {
+      }, iframeHtml && /*#__PURE__*/_react.default.createElement(PlayerButton, {
         playButtonLabel: playButtonLabel
-      }), _react.default.createElement("img", {
+      }), /*#__PURE__*/_react.default.createElement("img", {
         style: styles.thumbnail,
         src: thumbnail.src,
         alt: thumbnail.alt
-      }), badgeComponent), iframeHtml && _react.default.createElement("div", {
+      }), badgeComponent), iframeHtml && /*#__PURE__*/_react.default.createElement("div", {
         style: styles.embedPlayer
-      }, _react.default.createElement(_responsiveIframeContainer.ResponsiveIframeContainer, {
+      }, /*#__PURE__*/_react.default.createElement(_responsiveIframeContainer.ResponsiveIframeContainer, {
         ratio: validRatio
       }, (0, _parser.parseHtml)(iframeHtml)))));
     }

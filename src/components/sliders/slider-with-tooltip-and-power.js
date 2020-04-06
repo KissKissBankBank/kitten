@@ -140,10 +140,10 @@ var SliderWithTooltipAndPower = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _React$createElement;
 
-      return _react.default.createElement("div", null, _react.default.createElement(_sliderTooltip.SliderTooltip, {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_sliderTooltip.SliderTooltip, {
         className: this.props.tooltipClass,
         percentage: this.ratio() * 100 + '%'
-      }, this.props.tooltipText), _react.default.createElement(_sliderBar.SliderBar, (_React$createElement = {
+      }, this.props.tooltipText), /*#__PURE__*/_react.default.createElement(_sliderBar.SliderBar, (_React$createElement = {
         onAction: this.props.onAction,
         onMove: this.props.onMove,
         name: this.props.name,

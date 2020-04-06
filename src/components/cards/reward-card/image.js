@@ -27,12 +27,12 @@ var RewardCardImageBase = function RewardCardImageBase(_ref) {
   var imageStyles = [isDisabled && _rewardCard.styles.disabled];
   var shouldDisplayImage = imageProps && imageProps.src;
   if (!shouldDisplayImage) return null;
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     style: imageStyles,
     disabled: isDisabled
-  }, _react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
+  }, /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
     alt: imageProps.alt || '',
     style: _rewardCard.styles.image
   }))));

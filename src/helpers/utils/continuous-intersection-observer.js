@@ -104,15 +104,15 @@ var ContinuousIntersectionObserver = function ContinuousIntersectionObserver(_re
     setPartlyVisible(true);
   }
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("div", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     ref: beforeEl
-  }, props.beforeComponentProps)), _react.default.createElement("div", (0, _extends2.default)({
+  }, props.beforeComponentProps)), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     ref: targetEl
   }, props.targetComponentProps), children({
     isPartlyVisible: isPartlyVisible,
     isCompletelyVisible: visibleElement === 'target',
     visibleElement: visibleElement
-  })), _react.default.createElement("div", (0, _extends2.default)({
+  })), /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     ref: afterEl
   }, props.afterComponentProps)));
 };

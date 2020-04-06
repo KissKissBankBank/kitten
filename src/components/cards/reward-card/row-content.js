@@ -43,7 +43,7 @@ var RewardCardRowContent = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var children = this.props.children;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         style: styles
       }, children);
     }

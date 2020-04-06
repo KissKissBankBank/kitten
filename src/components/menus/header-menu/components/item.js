@@ -81,17 +81,17 @@ var Item = /*#__PURE__*/function (_Component) {
           external = _this$props.external,
           liProps = _this$props.liProps,
           other = (0, _objectWithoutProperties2.default)(_this$props, ["children", "href", "external", "liProps"]);
-      return _react.default.createElement(_context.Context.Consumer, null, function (_ref4) {
+      return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref4) {
         var borderSide = _ref4.borderSide;
-        return _react.default.createElement("li", (0, _extends2.default)({
+        return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
           role: "menuitem"
-        }, liProps), external ? _react.default.createElement(ExternalStyledItem, (0, _extends2.default)({
+        }, liProps), external ? /*#__PURE__*/_react.default.createElement(ExternalStyledItem, (0, _extends2.default)({
           href: href,
           borderSide: borderSide,
           external: external
-        }, other), _react.default.createElement("span", null, children), _react.default.createElement(_arrowIcon.ArrowIcon, {
+        }, other), /*#__PURE__*/_react.default.createElement("span", null, children), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
           direction: "right"
-        })) : _react.default.createElement(StyledItem, (0, _extends2.default)({
+        })) : /*#__PURE__*/_react.default.createElement(StyledItem, (0, _extends2.default)({
           href: href,
           borderSide: borderSide,
           external: external

@@ -43,8 +43,8 @@ var Pagination = function Pagination(_ref2) {
       totalIndex = _ref2.totalIndex,
       activeColor = _ref2.activeColor;
   var hasNoLinks = !links && totalIndex;
-  return _react.default.createElement(PaginationStyles, null, links && links.map(function (link, index) {
-    return _react.default.createElement(BulletPointStyles, {
+  return /*#__PURE__*/_react.default.createElement(PaginationStyles, null, links && links.map(function (link, index) {
+    return /*#__PURE__*/_react.default.createElement(BulletPointStyles, {
       as: "a",
       href: link,
       key: index,
@@ -52,7 +52,7 @@ var Pagination = function Pagination(_ref2) {
       activeColor: activeColor
     });
   }), hasNoLinks && (0, _range.createRangeFromZeroTo)(totalIndex).map(function (_, index) {
-    return _react.default.createElement(BulletPointStyles, {
+    return /*#__PURE__*/_react.default.createElement(BulletPointStyles, {
       key: index,
       isSelected: activeIndex === index + 1,
       activeColor: activeColor

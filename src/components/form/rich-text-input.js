@@ -71,7 +71,7 @@ var RichTextInput = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement(_reactCkeditorWrapper.default, {
+      return /*#__PURE__*/_react.default.createElement(_reactCkeditorWrapper.default, {
         value: this.state.content,
         config: this.config(),
         onChange: this.handleChange

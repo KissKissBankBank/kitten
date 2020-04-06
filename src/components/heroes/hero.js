@@ -59,7 +59,7 @@ var HeroBase = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(HeroBase, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_container.Container, null, _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(Grid, null, this.renderContent(), this.renderImage())));
+      return /*#__PURE__*/_react.default.createElement(_container.Container, null, /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, null, /*#__PURE__*/_react.default.createElement(Grid, null, this.renderContent(), this.renderImage())));
     }
   }, {
     key: "renderContent",
@@ -69,12 +69,12 @@ var HeroBase = /*#__PURE__*/function (_Component) {
         backgroundColor: this.props.contentBackgroundColor,
         color: this.props.contentColor
       }];
-      return _react.default.createElement(GridCol, {
+      return /*#__PURE__*/_react.default.createElement(GridCol, {
         col: "12",
         "col-s": "10",
         "col-l": "6",
         style: gridStyles
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         style: contentStyles
       }, this.props.children));
     }
@@ -85,11 +85,11 @@ var HeroBase = /*#__PURE__*/function (_Component) {
       var imageStyles = [styles.image, this.props.direction == 'right' && styles.image.right, {
         backgroundImage: "url(".concat(this.props.imageSrc, ")")
       }];
-      return _react.default.createElement(GridCol, {
+      return /*#__PURE__*/_react.default.createElement(GridCol, {
         col: "12",
         "col-l": "7",
         style: gridStyles
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         style: imageStyles
       }));
     }

@@ -66,8 +66,8 @@ var CarouselPage = /*#__PURE__*/function (_Component) {
           itemMarginBetween = _this$props.itemMarginBetween,
           renderItem = _this$props.renderItem;
       var rangeCard = (0, _range.createRangeFromZeroTo)(numColumns);
-      return _react.default.createElement(StyledPage, null, rangeCard.map(function (index) {
-        return _react.default.createElement(StyledItem, {
+      return /*#__PURE__*/_react.default.createElement(StyledPage, null, rangeCard.map(function (index) {
+        return /*#__PURE__*/_react.default.createElement(StyledItem, {
           key: index,
           index: index,
           itemMinWidth: itemMinWidth,

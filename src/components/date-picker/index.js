@@ -132,9 +132,9 @@ var DatePicker = /*#__PURE__*/function (_Component) {
           weekDays = _this$props.weekDays,
           months = _this$props.months,
           children = _this$props.children;
-      return _react.default.createElement(StyledDatePicker, {
+      return /*#__PURE__*/_react.default.createElement(StyledDatePicker, {
         styles: styles
-      }, _react.default.createElement(_DayPickerInput.default, {
+      }, /*#__PURE__*/_react.default.createElement(_DayPickerInput.default, {
         formatDate: this.formatDate,
         format: "dd/mm/yyyy",
         placeholder: "dd/mm/yyyy",
@@ -151,7 +151,7 @@ var DatePicker = /*#__PURE__*/function (_Component) {
             previousMonth: previousMonth,
             nextMonth: nextMonth
           },
-          navbarElement: _react.default.createElement(_navbar.Navbar, {
+          navbarElement: /*#__PURE__*/_react.default.createElement(_navbar.Navbar, {
             iconColor: styles.header.icon.color
           })
         })
@@ -221,7 +221,7 @@ var TextInputWithUnit = /*#__PURE__*/function (_Component2) {
   (0, _createClass2.default)(TextInputWithUnit, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_textInputWithUnit.TextInputWithUnit, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_textInputWithUnit.TextInputWithUnit, (0, _extends2.default)({
         type: "text",
         unit: "\uD83D\uDCC5",
         autoComplete: "off"

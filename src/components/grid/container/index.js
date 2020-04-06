@@ -47,7 +47,7 @@ var Container = /*#__PURE__*/function (_React$PureComponent) {
       var _this$props = this.props,
           style = _this$props.style,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["style"]);
-      return _react.default.createElement(_styled.StyledContainer, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_styled.StyledContainer, (0, _extends2.default)({
         styles: style
       }, others));
     }

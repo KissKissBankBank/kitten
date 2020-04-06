@@ -111,44 +111,44 @@ var SimplePopover = function SimplePopover(_ref2) {
     };
   }, [isVisible]);
   if (!isDisplayedInDOM) return null;
-  return _react.default.createElement(PopoverContainer, (0, _extends2.default)({}, simplePopoverProps, {
+  return /*#__PURE__*/_react.default.createElement(PopoverContainer, (0, _extends2.default)({}, simplePopoverProps, {
     role: "dialog",
     "aria-hidden": !isAriaVisible,
     "aria-labelledby": titleId
-  }), _react.default.createElement(CrossIconButton, {
+  }), /*#__PURE__*/_react.default.createElement(CrossIconButton, {
     "aria-label": closeButtonLabel,
     onClick: onCloseClick,
     type: "button",
     modifier: "beryllium",
     tiny: true,
     icon: true
-  }, _react.default.createElement(_crossIcon.CrossIcon, {
+  }, /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
     "aria-hidden": true,
     width: "8",
     height: "8",
     fill: _colorsConfig.default.background1
-  })), illustration && _react.default.createElement(IconContainer, {
+  })), illustration && /*#__PURE__*/_react.default.createElement(IconContainer, {
     backgroundColor: illustrationBackground
-  }, illustration), _react.default.createElement("div", null, _react.default.createElement(_marger.Marger, {
+  }, illustration), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     bottom: ".5"
-  }, _react.default.createElement(_title.Title, {
+  }, /*#__PURE__*/_react.default.createElement(_title.Title, {
     id: titleId,
     modifier: "senary",
     margin: false,
     tag: "h2"
-  }, title)), _react.default.createElement(_marger.Marger, {
+  }, title)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: ".5",
     bottom: "1"
-  }, _react.default.createElement(_paragraph.Paragraph, {
+  }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
     modifier: "quaternary"
-  }, text)), buttons.length > 0 && _react.default.createElement(ButtonsContainer, {
+  }, text)), buttons.length > 0 && /*#__PURE__*/_react.default.createElement(ButtonsContainer, {
     top: "3"
   }, buttons.map(function (_ref3, i) {
     var label = _ref3.label,
         clickOptions = _ref3.clickOptions,
         buttonProps = (0, _objectWithoutProperties2.default)(_ref3, ["label", "clickOptions"]);
     var clickHandler = clickOptions && clickOptions.closeOnClick && onCloseClick;
-    return _react.default.createElement(_button.Button, (0, _extends2.default)({
+    return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
       onClick: clickHandler,
       key: i,
       children: label

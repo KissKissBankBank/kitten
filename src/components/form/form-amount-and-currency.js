@@ -22,7 +22,7 @@ var FormAmountAndCurrency = function FormAmountAndCurrency(props) {
       currencyName = props.currencyName,
       currencyValue = props.currencyValue,
       textInputAndSelectProps = (0, _objectWithoutProperties2.default)(props, ["currencyOptions", "currencyName", "currencyValue"]);
-  return _react.default.createElement(_textInputAndSelect.TextInputAndSelect, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_textInputAndSelect.TextInputAndSelect, (0, _extends2.default)({
     selectOptions: currencyOptions,
     selectName: currencyName,
     selectValue: currencyValue,

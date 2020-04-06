@@ -23,7 +23,7 @@ var IconList = function IconList(_ref) {
   var children = _ref.children,
       containerProps = _ref.containerProps,
       listProps = _ref.listProps;
-  return _react.default.createElement(StyledContainer, containerProps, _react.default.createElement(StyledList, listProps, children));
+  return /*#__PURE__*/_react.default.createElement(StyledContainer, containerProps, /*#__PURE__*/_react.default.createElement(StyledList, listProps, children));
 };
 
 exports.IconList = IconList;

@@ -62,7 +62,7 @@ var StyledGrid = (0, _styledComponents.default)(_grid.Grid).withConfig({
 var StyledTitle = (0, _styledComponents.default)(function (_ref2) {
   var version = _ref2.version,
       others = (0, _objectWithoutProperties2.default)(_ref2, ["version"]);
-  return _react.default.createElement(_title.Title, others);
+  return /*#__PURE__*/_react.default.createElement(_title.Title, others);
 }).withConfig({
   displayName: "donation-card__StyledTitle",
   componentId: "sc-19h76fz-2"
@@ -95,27 +95,27 @@ var DonationCard = /*#__PURE__*/function (_PureComponent) {
           version = _this$props.version,
           donationForm = _this$props.donationForm,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["title", "titleTag", "isDisabled", "version", "donationForm"]);
-      return _react.default.createElement(StyledCard, {
+      return /*#__PURE__*/_react.default.createElement(StyledCard, {
         isDisabled: isDisabled
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: version === 'tiny' ? 3 : 4,
         top: version === 'tiny' ? 3 : 4
-      }, _react.default.createElement(StyledGrid, null, _react.default.createElement(_grid.GridCol, {
+      }, /*#__PURE__*/_react.default.createElement(StyledGrid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         "col-m": version === 'tiny' ? 0 : 10,
         "offset-m": version === 'tiny' ? 0 : 1,
         "col-l": version === 'tiny' ? 0 : 8,
         "offset-l": version === 'tiny' ? 0 : 2
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "2"
-      }, _react.default.createElement(StyledTitle, {
+      }, /*#__PURE__*/_react.default.createElement(StyledTitle, {
         margin: false,
         tag: titleTag
-      }, title)), _react.default.createElement(_marger.Marger, {
+      }, title)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",
         bottom: "3"
-      }, _react.default.createElement(StyledHorizontalStroke, {
+      }, /*#__PURE__*/_react.default.createElement(StyledHorizontalStroke, {
         size: "big"
-      })), _react.default.createElement(_textInputWithUnitForm.TextInputWithUnitForm, (0, _extends2.default)({}, donationForm, {
+      })), /*#__PURE__*/_react.default.createElement(_textInputWithUnitForm.TextInputWithUnitForm, (0, _extends2.default)({}, donationForm, {
         align: "center",
         version: version
       }))))));

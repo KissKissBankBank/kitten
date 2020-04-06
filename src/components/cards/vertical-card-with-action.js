@@ -66,12 +66,12 @@ var VerticalCardWithAction = /*#__PURE__*/function (_Component) {
           buttonModifier = _this$props.buttonModifier,
           buttonProps = _this$props.buttonProps,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["imageProps", "title", "titleTag", "description", "descriptionTag", "button", "buttonModifier", "buttonProps"]);
-      return _react.default.createElement(_radium.StyleRoot, others, _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, others, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "3"
-      }, this.renderImage()), _react.default.createElement(_marger.Marger, {
+      }, this.renderImage()), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "3",
         bottom: "3"
-      }, this.renderDescription()), _react.default.createElement(_marger.Marger, {
+      }, this.renderDescription()), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "3",
         style: styles.button
       }, this.renderAction()));
@@ -82,7 +82,7 @@ var VerticalCardWithAction = /*#__PURE__*/function (_Component) {
       var _this$props$imageProp = this.props.imageProps,
           style = _this$props$imageProp.style,
           imageProps = (0, _objectWithoutProperties2.default)(_this$props$imageProp, ["style"]);
-      return _react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
+      return /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
         style: (0, _extends2.default)({}, style, {}, styles.image)
       }));
     }
@@ -94,16 +94,16 @@ var VerticalCardWithAction = /*#__PURE__*/function (_Component) {
           titleTag = _this$props2.titleTag,
           description = _this$props2.description,
           descriptionTag = _this$props2.descriptionTag;
-      return _react.default.createElement("div", null, _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: description ? 1.5 : 0
-      }, _react.default.createElement(_title.Title, {
+      }, /*#__PURE__*/_react.default.createElement(_title.Title, {
         modifier: "senary",
         tag: titleTag,
         margin: false,
         style: styles.text
-      }, title)), description && _react.default.createElement(_marger.Marger, {
+      }, title)), description && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.5"
-      }, _react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
         modifier: "quaternary",
         tag: descriptionTag,
         margin: false,
@@ -120,7 +120,7 @@ var VerticalCardWithAction = /*#__PURE__*/function (_Component) {
       var onClick = buttonProps.onClick,
           href = buttonProps.href,
           others = (0, _objectWithoutProperties2.default)(buttonProps, ["onClick", "href"]);
-      return _react.default.createElement(_button.Button, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({}, others, {
         modifier: buttonModifier,
         type: "button",
         onClick: onClick,

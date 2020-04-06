@@ -54,11 +54,11 @@ var BulletList = function BulletList(_ref5) {
       big = _ref5.big,
       huge = _ref5.huge,
       others = (0, _objectWithoutProperties2.default)(_ref5, ["items", "small", "large", "big", "huge"]);
-  return _react.default.createElement(StyledBulletList, others, items.map(function (_ref6) {
+  return /*#__PURE__*/_react.default.createElement(StyledBulletList, others, items.map(function (_ref6) {
     var item = _ref6.item,
         key = _ref6.key,
         itemOthers = (0, _objectWithoutProperties2.default)(_ref6, ["item", "key"]);
-    return _react.default.createElement(StyledItem, (0, _extends2.default)({
+    return /*#__PURE__*/_react.default.createElement(StyledItem, (0, _extends2.default)({
       key: key,
       small: small,
       large: large,

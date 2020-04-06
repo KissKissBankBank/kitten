@@ -52,7 +52,7 @@ var StaticTooltip = /*#__PURE__*/function (_Component) {
         };
       }
 
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         style: style,
         className: "k-StaticTooltip__arrow"
       });
@@ -66,9 +66,9 @@ var StaticTooltip = /*#__PURE__*/function (_Component) {
           arrowLeftPosition = _this$props.arrowLeftPosition,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "className", "arrowLeftPosition"]);
       var staticTooltipClassName = (0, _classnames.default)('k-StaticTooltip', className);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: staticTooltipClassName
-      }, others), _react.default.createElement("div", {
+      }, others), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-StaticTooltip__content"
       }, this.renderArrow(), children));
     }

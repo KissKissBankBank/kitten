@@ -90,7 +90,7 @@ var CheckableButton = function CheckableButton(_ref4) {
     }
   }();
 
-  return _react.default.createElement(StyledCheckableButton, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(StyledCheckableButton, (0, _extends2.default)({}, props, {
     "aria-checked": isChecked,
     modifier: checkedModifier
   }), children);

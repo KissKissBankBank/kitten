@@ -53,7 +53,7 @@ var CheckboxSet = /*#__PURE__*/function (_React$Component) {
       var className = item.className,
           itemProps = (0, _objectWithoutProperties2.default)(item, ["className"]);
       var checkboxClassName = (0, _classnames.default)('k-CheckboxSet__checkbox', className);
-      return _react.default.createElement(_checkbox.Checkbox, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_checkbox.Checkbox, (0, _extends2.default)({
         className: checkboxClassName,
         error: this.props.error,
         name: this.props.name,
@@ -70,7 +70,7 @@ var CheckboxSet = /*#__PURE__*/function (_React$Component) {
           error = _this$props.error,
           checkboxSetProps = (0, _objectWithoutProperties2.default)(_this$props, ["items", "className", "name", "error"]);
       var checkboxSetClassName = (0, _classnames.default)('k-CheckboxSet', className);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: checkboxSetClassName
       }, checkboxSetProps), this.props.items.map(this.renderCheckbox));
     }

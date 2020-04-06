@@ -21,17 +21,17 @@ var SearchIcon = function SearchIcon(_ref) {
       circleProps = _ref.circleProps,
       pathProps = _ref.pathProps,
       other = (0, _objectWithoutProperties2.default)(_ref, ["iconTitle", "color", "circleProps", "pathProps"]);
-  return _react.default.createElement("svg", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     viewBox: "-0.7 -0.7 18 18",
     xmlns: "http://www.w3.org/2000/svg"
-  }, other), iconTitle && _react.default.createElement("title", null, iconTitle), _react.default.createElement("circle", (0, _extends2.default)({
+  }, other), iconTitle && /*#__PURE__*/_react.default.createElement("title", null, iconTitle), /*#__PURE__*/_react.default.createElement("circle", (0, _extends2.default)({
     cx: "7",
     cy: "7",
     r: "7",
     stroke: color,
     strokeWidth: "1.1",
     fill: "none"
-  }, circleProps)), _react.default.createElement("path", (0, _extends2.default)({
+  }, circleProps)), /*#__PURE__*/_react.default.createElement("path", (0, _extends2.default)({
     d: "M13 11 L17 15 L15.5 16.5 L11.5 12.7z",
     fill: color
   }, pathProps)));

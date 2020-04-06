@@ -84,7 +84,7 @@ var Image = /*#__PURE__*/function (_PureComponent) {
           imageContainerRatio = _this$props.imageContainerRatio;
 
       var PlayerButtonOnImage = function PlayerButtonOnImage(props) {
-        return _react.default.createElement(StyledPlayerButton, null, _react.default.createElement(_text.Text, {
+        return /*#__PURE__*/_react.default.createElement(StyledPlayerButton, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
           size: "default",
           weight: "regular",
           color: props.arrowColor,
@@ -92,15 +92,15 @@ var Image = /*#__PURE__*/function (_PureComponent) {
         }, "\u25BA"));
       };
 
-      return _react.default.createElement(StyledImageContainer, {
+      return /*#__PURE__*/_react.default.createElement(StyledImageContainer, {
         bottom: "2",
         className: "k-Card__imageContainer",
         imageContainerBackground: imageContainerBackground,
         imageContainerRatio: imageContainerRatio
-      }, withPlayerButtonOnImage && _react.default.createElement(PlayerButtonOnImage, {
+      }, withPlayerButtonOnImage && /*#__PURE__*/_react.default.createElement(PlayerButtonOnImage, {
         arrowColor: arrowColor,
         ariaLabel: ariaLabel
-      }), _react.default.createElement(StyledImage, (0, _extends2.default)({}, imageProps, {
+      }), /*#__PURE__*/_react.default.createElement(StyledImage, (0, _extends2.default)({}, imageProps, {
         alt: imageProps.alt || '',
         className: "k-Card__image"
       })));

@@ -82,10 +82,10 @@ var TeamCardIcons = /*#__PURE__*/function (_Component) {
       var _this$props2 = this.props,
           email = _this$props2.email,
           phoneNumber = _this$props2.phoneNumber;
-      return _react.default.createElement(Marger, {
+      return /*#__PURE__*/_react.default.createElement(Marger, {
         top: "1.5",
         style: styles.icons
-      }, email && _react.default.createElement(_buttonIcon.ButtonIcon, {
+      }, email && /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         tag: "a",
         href: "mailto:".concat(email),
         modifier: "hydrogen",
@@ -93,9 +93,9 @@ var TeamCardIcons = /*#__PURE__*/function (_Component) {
         style: {
           marginRight: 15
         }
-      }, _react.default.createElement(_emailIcon.EmailIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_emailIcon.EmailIcon, {
         className: "k-ButtonIcon__svg"
-      })), phoneNumber && _react.default.createElement(_phoneIcon.TeamCardPhoneIcon, this.props), _react.default.createElement(SocialLinks, {
+      })), phoneNumber && /*#__PURE__*/_react.default.createElement(_phoneIcon.TeamCardPhoneIcon, this.props), /*#__PURE__*/_react.default.createElement(SocialLinks, {
         links: this.getSocialLinks()
       }));
     }
@@ -134,7 +134,7 @@ var SocialLinks = /*#__PURE__*/function (_Component2) {
     key: "render",
     value: function render() {
       var links = this.props.links;
-      return _react.default.createElement(_react.Fragment, null, links.map(function (link, index) {
+      return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, links.map(function (link, index) {
         if (!link.href) return;
         var buttonStyle;
 
@@ -144,7 +144,7 @@ var SocialLinks = /*#__PURE__*/function (_Component2) {
           };
         }
 
-        return _react.default.createElement(_buttonIcon.ButtonIcon, {
+        return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
           tag: "a",
           key: link.name,
           href: link.href,
@@ -153,9 +153,9 @@ var SocialLinks = /*#__PURE__*/function (_Component2) {
           target: "_blank",
           rel: "noopener",
           style: buttonStyle
-        }, link.name === 'linkedin' && _react.default.createElement(_linkedinIcon.LinkedinIcon, {
+        }, link.name === 'linkedin' && /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
           className: "k-ButtonIcon__svg"
-        }), link.name === 'twitter' && _react.default.createElement(_twitterIcon.TwitterIcon, {
+        }), link.name === 'twitter' && /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {
           className: "k-ButtonIcon__svg"
         }));
       }));

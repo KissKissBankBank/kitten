@@ -26,7 +26,7 @@ var FormActions = function FormActions(props) {
       spreadOutAt = props.spreadOutAt,
       others = (0, _objectWithoutProperties2.default)(props, ["className", "spreadOutAt"]);
   var formActionsClassName = (0, _classnames.default)('k-FormActions', className, (0, _defineProperty2.default)({}, "k-FormActions--spreadOut@".concat(spreadOutAt), spreadOutAt));
-  return _react.default.createElement("div", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: formActionsClassName
   }, others));
 };
@@ -34,7 +34,7 @@ var FormActions = function FormActions(props) {
 exports.FormActions = FormActions;
 
 FormActions.Item = function (props) {
-  return _react.default.createElement("div", (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-FormActions__item', props.className)
   }));
 };

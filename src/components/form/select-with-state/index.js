@@ -96,12 +96,12 @@ var SelectWithState = function SelectWithState(_ref) {
     'is-valid': valid,
     'is-disabled': disabled
   });
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: selectClassName
-  }, labelText && _react.default.createElement("label", {
+  }, labelText && /*#__PURE__*/_react.default.createElement("label", {
     className: "k-Select__label",
     htmlFor: id
-  }, labelText), autoFill && _react.default.createElement("input", {
+  }, labelText), autoFill && /*#__PURE__*/_react.default.createElement("input", {
     autoComplete: autoFill,
     "x-autocompletetype": autoFill,
     xautocompletetype: autoFill,
@@ -113,7 +113,7 @@ var SelectWithState = function SelectWithState(_ref) {
       opacity: '0'
     },
     onChange: handleLightChange
-  }), _react.default.createElement(SelectWithMultiLevel, (0, _extends2.default)({
+  }), /*#__PURE__*/_react.default.createElement(SelectWithMultiLevel, (0, _extends2.default)({
     id: id,
     value: selectedValue,
     onKeyDown: onKeyDown,
@@ -156,7 +156,7 @@ var SelectWithMultiLevel = function SelectWithMultiLevel(_ref2) {
     var level = _ref3.level,
         label = _ref3.label;
     if (!level) return label;
-    return _react.default.createElement("span", {
+    return /*#__PURE__*/_react.default.createElement("span", {
       className: "k-Select__option--level".concat(level)
     }, label);
   };
@@ -165,7 +165,7 @@ var SelectWithMultiLevel = function SelectWithMultiLevel(_ref2) {
     inputProps['aria-labelledby'] = id;
   }
 
-  return _react.default.createElement(_reactSelect.default, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_reactSelect.default, (0, _extends2.default)({
     optionRenderer: optionRenderer,
     id: id
   }, props, {

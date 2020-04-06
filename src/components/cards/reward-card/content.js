@@ -44,14 +44,14 @@ var RewardCardContentBase = function RewardCardContentBase(_ref) {
       isDisabled = _ref.isDisabled,
       isTinyVersion = _ref.isTinyVersion;
   var descriptionStyle = [isDisabled && _rewardCard.styles.disabled];
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     style: descriptionStyle,
     disabled: isDisabled
-  }, starred && _react.default.createElement(_marger.Marger, {
+  }, starred && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     bottom: "2"
-  }, _react.default.createElement(_button.Button, {
+  }, /*#__PURE__*/_react.default.createElement(_button.Button, {
     icon: true,
     readonly: true,
     tag: "span",
@@ -60,34 +60,34 @@ var RewardCardContentBase = function RewardCardContentBase(_ref) {
     style: {
       borderRadius: 5
     }
-  }, _react.default.createElement(_starIcon.StarIcon, {
+  }, /*#__PURE__*/_react.default.createElement(_starIcon.StarIcon, {
     className: "k-Button__icon is-readonly"
-  }), starLabel)), _react.default.createElement(_marger.Marger, {
+  }), starLabel)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: starred ? 2 : 0,
     bottom: "2"
-  }, _react.default.createElement(_title.Title, {
+  }, /*#__PURE__*/_react.default.createElement(_title.Title, {
     modifier: isTinyVersion ? 'quaternary' : 'tertiary',
     italic: true,
     margin: false,
     tag: titleTag,
     style: _rewardCard.styles.textColor
-  }, titleAmount)), _react.default.createElement(_marger.Marger, {
+  }, titleAmount)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "2",
     bottom: "3"
-  }, _react.default.createElement(_horizontalStroke.HorizontalStroke, {
+  }, /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
     size: "big"
-  })), subtitle && _react.default.createElement(_marger.Marger, {
+  })), subtitle && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "3",
     bottom: "1"
-  }, _react.default.createElement(_text.Text, {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     color: "font1",
     size: isTinyVersion ? 'big' : 'huge',
     tag: subtitleTag,
     weight: "bold",
     style: _rewardCard.styles.textMargin
-  }, subtitle)), _react.default.createElement(_marger.Marger, {
+  }, subtitle)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: !subtitle ? 3 : 1
-  }, _react.default.createElement(_paragraph.Paragraph, {
+  }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
     style: _rewardCard.styles.textColor,
     modifier: isTinyVersion ? 'quaternary' : 'tertiary',
     margin: false

@@ -53,7 +53,7 @@ var ScrollableContainer = function ScrollableContainer(_ref) {
       return element && element.removeEventListener('scroll', (0, _throttle.default)(onScroll, 200));
     };
   }, []);
-  return _react.default.createElement(_styled.StyledContainer, other, _react.default.createElement(_styled.StyledScrollableContainer, {
+  return /*#__PURE__*/_react.default.createElement(_styled.StyledContainer, other, /*#__PURE__*/_react.default.createElement(_styled.StyledScrollableContainer, {
     shadowColor: shadowColor,
     ref: refScrollableContainer,
     displayLeftGradient: !leftGradientState,

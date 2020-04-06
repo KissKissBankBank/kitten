@@ -46,21 +46,21 @@ var ExternalRichLink = /*#__PURE__*/function (_React$Component) {
           className = _this$props.className,
           rest = (0, _objectWithoutProperties2.default)(_this$props, ["className"]);
       var linkClassName = (0, _classnames.default)('k-ExternalRichLink', className);
-      return _react.default.createElement("a", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
         className: linkClassName
-      }, rest), _react.default.createElement("div", {
+      }, rest), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ExternalRichLink__element"
-      }, this.props.children), _react.default.createElement("div", {
+      }, this.props.children), /*#__PURE__*/_react.default.createElement("div", {
         className: (0, _classnames.default)('k-ExternalRichLink__element', 'k-ExternalRichLink__element--animate')
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         className: (0, _classnames.default)('k-ButtonIcon', 'k-ButtonIcon--hydrogen', 'k-ButtonIcon--withoutHover', 'k-ButtonIcon--tiny', 'k-ButtonIcon--verticalArrow')
-      }, _react.default.createElement("svg", {
+      }, /*#__PURE__*/_react.default.createElement("svg", {
         className: "k-ButtonIcon__svg",
         viewBox: "0 0 10 10",
         xmlns: "http://www.w3.org/2000/svg"
-      }, _react.default.createElement("path", {
+      }, /*#__PURE__*/_react.default.createElement("path", {
         d: "M7.828,5L6.414,6.413L2.172,2.172l1.414-1.415L7.828,5z"
-      }), _react.default.createElement("path", {
+      }), /*#__PURE__*/_react.default.createElement("path", {
         d: "M7.828,5L3.586,9.243L2.172,7.827l4.242-4.241L7.828,5z"
       })))));
     }

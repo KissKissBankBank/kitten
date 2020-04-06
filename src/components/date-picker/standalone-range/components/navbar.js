@@ -75,31 +75,31 @@ var Navbar = /*#__PURE__*/function (_PureComponent) {
           months = _this$props.months;
       var previousAriaLabel = months !== undefined && months.length > 0 ? "".concat(labels && labels.previousMonth, ", ").concat(months[previousMonth.getMonth()], " ").concat(previousMonth.getFullYear()) : "".concat(labels && labels.previousMonth);
       var nextAriaLabel = months !== undefined && months.length > 0 ? "".concat(labels && labels.nextMonth, ", ").concat(months[nextMonth.getMonth()], " ").concat(nextMonth.getFullYear()) : "".concat(labels && labels.nextMonth);
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledText, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledText, {
         tag: "p",
         size: "tiny",
         weight: "regular"
-      }, title), _react.default.createElement(StyledButton, {
+      }, title), /*#__PURE__*/_react.default.createElement(StyledButton, {
         className: className
-      }, _react.default.createElement(StyledArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         "aria-label": previousAriaLabel,
         onClick: function onClick() {
           return onPreviousClick();
         },
         icon: true
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         fill: iconColor,
         direction: "left",
         width: "8",
         height: "8"
-      })), _react.default.createElement(StyledArrowIcon, {
+      })), /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         "aria-label": nextAriaLabel,
         onClick: function onClick() {
           return onNextClick();
         },
         icon: true
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         fill: iconColor,
         direction: "right",

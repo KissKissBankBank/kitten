@@ -24,11 +24,11 @@ var _linkedinIcon = require("../../components/icons/linkedin-icon");
 var FacebookButtonIconWords = function FacebookButtonIconWords(_ref) {
   var children = _ref.children,
       props = (0, _objectWithoutProperties2.default)(_ref, ["children"]);
-  return _react.default.createElement(_button.Button, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
     icon: true,
     size: "big",
     modifier: "facebook"
-  }, props), _react.default.createElement(_facebookIcon.FacebookIcon, {
+  }, props), /*#__PURE__*/_react.default.createElement(_facebookIcon.FacebookIcon, {
     className: "k-Button__icon"
   }), children);
 };
@@ -38,11 +38,11 @@ exports.FacebookButtonIconWords = FacebookButtonIconWords;
 var TwitterButtonIconWords = function TwitterButtonIconWords(_ref2) {
   var children = _ref2.children,
       props = (0, _objectWithoutProperties2.default)(_ref2, ["children"]);
-  return _react.default.createElement(_button.Button, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
     icon: true,
     size: "big",
     modifier: "twitter"
-  }, props), _react.default.createElement(_twitterIcon.TwitterIcon, {
+  }, props), /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {
     className: "k-Button__icon"
   }), children);
 };
@@ -52,11 +52,11 @@ exports.TwitterButtonIconWords = TwitterButtonIconWords;
 var LinkedinButtonIconWords = function LinkedinButtonIconWords(_ref3) {
   var children = _ref3.children,
       props = (0, _objectWithoutProperties2.default)(_ref3, ["children"]);
-  return _react.default.createElement(_button.Button, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
     icon: true,
     size: "big",
     modifier: "linkedin"
-  }, props), _react.default.createElement(_linkedinIcon.LinkedinIcon, {
+  }, props), /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
     className: "k-Button__icon"
   }), children);
 };
