@@ -61,11 +61,11 @@ var TagList = /*#__PURE__*/function (_React$Component) {
         'k-TagList__item--last': isLastItem
       });
 
-      var icon = isFirstItem && _react.default.createElement(TagIcon, {
+      var icon = isFirstItem && /*#__PURE__*/_react.default.createElement(TagIcon, {
         className: "k-TagList__icon"
       });
 
-      return _react.default.createElement("li", {
+      return /*#__PURE__*/_react.default.createElement("li", {
         key: key,
         className: itemClassName
       }, icon, item);
@@ -83,7 +83,7 @@ var TagList = /*#__PURE__*/function (_React$Component) {
       var listClassName = (0, _classnames.default)('k-TagList', {
         'k-TagList--tiny': tiny
       }, className);
-      return _react.default.createElement("ul", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({
         className: listClassName
       }, others), items.map(this.renderItem));
     }

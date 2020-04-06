@@ -18,15 +18,15 @@ var CheckedCircleIcon = function CheckedCircleIcon(_ref) {
       checkedColor = _ref.checkedColor,
       title = _ref.title,
       props = (0, _objectWithoutProperties2.default)(_ref, ["circleColor", "checkedColor", "title"]);
-  return _react.default.createElement("svg", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), title && _react.default.createElement("title", null, title), _react.default.createElement("circle", {
+  }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("circle", {
     fill: circleColor,
     cx: "10",
     cy: "10",
     r: "10"
-  }), _react.default.createElement("path", {
+  }), /*#__PURE__*/_react.default.createElement("path", {
     fill: checkedColor,
     d: "M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
   }));

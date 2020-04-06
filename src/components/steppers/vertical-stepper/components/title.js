@@ -13,8 +13,6 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _typographyConfig = _interopRequireDefault(require("../../../../constants/typography-config"));
 
-var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
-
 var Title = _styledComponents.default.p.withConfig({
   displayName: "title__Title",
   componentId: "zdw2ns-0"

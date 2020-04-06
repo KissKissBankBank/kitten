@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import styled, { keyframes } from 'styled-components'
 import { ExpandBoard } from 'kitten/components/expandable/expand-board'
 import { List } from 'kitten/components/lists/list'
-import { Grid, GridCol } from 'kitten/components/grid/grid'
 import { Text } from 'kitten/components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 

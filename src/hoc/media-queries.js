@@ -145,7 +145,7 @@ var mediaQueries = function mediaQueries(WrappedComponent) {
     }, {
       key: "render",
       value: function render() {
-        return _react.default.createElement(WrappedComponent, (0, _extends3.default)({
+        return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends3.default)({
           ref: this.setExposedMethods
         }, this.props, this.state));
       }

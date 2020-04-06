@@ -87,11 +87,11 @@ var Content = /*#__PURE__*/function (_Component) {
           id = _this$props.id,
           children = _this$props.children;
       var maxHeight = this.state.maxHeight;
-      return _react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
+      return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
         var selectedItem = _ref2.selectedItem,
             isAnimated = _ref2.isAnimated,
             componentId = _ref2.componentId;
-        return _react.default.createElement(ContentStyled, {
+        return /*#__PURE__*/_react.default.createElement(ContentStyled, {
           "aria-hidden": selectedItem !== id,
           ref: function ref(contentDiv) {
             return _this2.div = contentDiv;
@@ -100,7 +100,7 @@ var Content = /*#__PURE__*/function (_Component) {
           isAnimated: isAnimated,
           id: "".concat(componentId, "-content").concat(id),
           "aria-labelledby": "".concat(componentId, "-header").concat(id)
-        }, _react.default.createElement(_marger.Marger, {
+        }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
           top: "3",
           bottom: "3"
         }, children));

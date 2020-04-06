@@ -39,7 +39,7 @@ var defaultProps = function defaultProps(WrappedComponent, props) {
     (0, _createClass2.default)(defaultProps, [{
       key: "render",
       value: function render() {
-        return _react.default.createElement(WrappedComponent, (0, _extends2.default)({}, props, this.props));
+        return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends2.default)({}, props, this.props));
       }
     }]);
     return defaultProps;

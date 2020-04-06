@@ -31,8 +31,6 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _text = require("../../../../components/typography/text");
 
-var _title = require("../../../../components/typography/title");
-
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var _horizontalStroke = require("../../../../components/layout/horizontal-stroke");
@@ -59,7 +57,7 @@ var StyledContainerSubtitle = _styledComponents.default.div.withConfig({
 var StyledHorizontalStroke = (0, _styledComponents.default)(function (_ref) {
   var loading = _ref.loading,
       others = (0, _objectWithoutProperties2.default)(_ref, ["loading"]);
-  return _react.default.createElement(_horizontalStroke.HorizontalStroke, others);
+  return /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, others);
 }).withConfig({
   displayName: "subtitle__StyledHorizontalStroke",
   componentId: "hzl57w-2"
@@ -99,11 +97,9 @@ var Subtitle = /*#__PURE__*/function (_PureComponent) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          loading = _this$props.loading,
           subTitle = _this$props.subTitle,
-          subTitleTruncate = _this$props.subTitleTruncate,
           widgetSubtitle = _this$props.widgetSubtitle;
-      return _react.default.createElement(_react.default.Fragment, null, subTitle && this.renderSubtitle(), widgetSubtitle && this.renderWidgetSubtitle());
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, subTitle && this.renderSubtitle(), widgetSubtitle && this.renderWidgetSubtitle());
     }
   }, {
     key: "renderSubtitle",
@@ -112,15 +108,15 @@ var Subtitle = /*#__PURE__*/function (_PureComponent) {
           loading = _this$props2.loading,
           subTitle = _this$props2.subTitle,
           subTitleTruncate = _this$props2.subTitleTruncate;
-      return _react.default.createElement(StyledContainerSubtitle, null, _react.default.createElement(StyledHorizontalStroke, {
+      return /*#__PURE__*/_react.default.createElement(StyledContainerSubtitle, null, /*#__PURE__*/_react.default.createElement(StyledHorizontalStroke, {
         size: "tiny",
         loading: loading
-      }), subTitle && !loading && _react.default.createElement(StyledSubtitle, {
+      }), subTitle && !loading && /*#__PURE__*/_react.default.createElement(StyledSubtitle, {
         size: "micro",
         weight: "regular",
         tag: "p",
         color: "font1"
-      }, subTitleTruncate && _react.default.createElement(StyledTruncate, null, subTitle), !subTitleTruncate && subTitle), loading && _react.default.createElement(StyledSubtitleLoading, null));
+      }, subTitleTruncate && /*#__PURE__*/_react.default.createElement(StyledTruncate, null, subTitle), !subTitleTruncate && subTitle), loading && /*#__PURE__*/_react.default.createElement(StyledSubtitleLoading, null));
     }
   }, {
     key: "renderWidgetSubtitle",
@@ -129,15 +125,15 @@ var Subtitle = /*#__PURE__*/function (_PureComponent) {
           widgetSubtitle = _this$props3.widgetSubtitle,
           subTitleTruncate = _this$props3.subTitleTruncate,
           loading = _this$props3.loading;
-      return _react.default.createElement(_react.default.Fragment, null, StyledWidgetSubtitle && !loading && _react.default.createElement(StyledWidgetSubtitle, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, StyledWidgetSubtitle && !loading && /*#__PURE__*/_react.default.createElement(StyledWidgetSubtitle, {
         tag: "p",
         size: "micro",
         color: "font1",
         lineHeight: "normal",
         weight: "light"
-      }, subTitleTruncate && _react.default.createElement(_reactTruncate.default, {
+      }, subTitleTruncate && /*#__PURE__*/_react.default.createElement(_reactTruncate.default, {
         lines: 3
-      }, widgetSubtitle), !subTitleTruncate && widgetSubtitle), loading && _react.default.createElement(StyledSubtitleLoading, null));
+      }, widgetSubtitle), !subTitleTruncate && widgetSubtitle), loading && /*#__PURE__*/_react.default.createElement(StyledSubtitleLoading, null));
     }
   }]);
   return Subtitle;

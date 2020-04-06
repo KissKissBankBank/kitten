@@ -81,18 +81,18 @@ var Informations = /*#__PURE__*/function (_PureComponent) {
           info2 = _this$props.info2,
           info3 = _this$props.info3;
       if (!info1 && !info2 && !info3) return null;
-      return _react.default.createElement(StyledContainer, null, this.renderInfo(info1), this.renderInfo(info2), this.renderInfo(info3));
+      return /*#__PURE__*/_react.default.createElement(StyledContainer, null, this.renderInfo(info1), this.renderInfo(info2), this.renderInfo(info3));
     }
   }, {
     key: "renderInfo",
     value: function renderInfo(text) {
       var loading = this.props.loading;
       if (!text) return null;
-      return _react.default.createElement(StyledInfo, null, !loading && _react.default.createElement(StyledText, {
+      return /*#__PURE__*/_react.default.createElement(StyledInfo, null, !loading && /*#__PURE__*/_react.default.createElement(StyledText, {
         lineHeight: "normal",
         weight: "light",
         color: "font1"
-      }, text), loading && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledInfoLoading, null), _react.default.createElement(StyledInfoLoadingLarge, null)));
+      }, text), loading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledInfoLoading, null), /*#__PURE__*/_react.default.createElement(StyledInfoLoadingLarge, null)));
     }
   }]);
   return Informations;

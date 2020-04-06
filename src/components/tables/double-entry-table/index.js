@@ -20,12 +20,12 @@ var _styles = require("./styles");
 var DoubleEntryTable = function DoubleEntryTable(_ref) {
   var firstColWidth = _ref.firstColWidth,
       props = (0, _objectWithoutProperties2.default)(_ref, ["firstColWidth"]);
-  return _react.default.createElement(_styles.Styles, {
+  return /*#__PURE__*/_react.default.createElement(_styles.Styles, {
     className: "DoubleEntryTable__Container",
     firstColWidth: firstColWidth
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "DoubleEntryTable__TableContainer"
-  }, _react.default.createElement("table", (0, _extends2.default)({
+  }, /*#__PURE__*/_react.default.createElement("table", (0, _extends2.default)({
     className: "DoubleEntryTable__Table"
   }, props))));
 };
@@ -36,32 +36,32 @@ DoubleEntryTable.Header = function (_ref2) {
   var children = _ref2.children,
       headerRowProps = _ref2.headerRowProps,
       others = (0, _objectWithoutProperties2.default)(_ref2, ["children", "headerRowProps"]);
-  return _react.default.createElement("thead", others, _react.default.createElement("tr", headerRowProps, children));
+  return /*#__PURE__*/_react.default.createElement("thead", others, /*#__PURE__*/_react.default.createElement("tr", headerRowProps, children));
 };
 
 DoubleEntryTable.Body = function (props) {
-  return _react.default.createElement("tbody", props);
+  return /*#__PURE__*/_react.default.createElement("tbody", props);
 };
 
 DoubleEntryTable.Row = function (props) {
-  return _react.default.createElement("tr", props);
+  return /*#__PURE__*/_react.default.createElement("tr", props);
 };
 
 DoubleEntryTable.Col = function (props) {
-  return _react.default.createElement("td", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("td", (0, _extends2.default)({
     className: "DoubleEntryTable__Column DoubleEntryTable__Column--Col"
   }, props));
 };
 
 DoubleEntryTable.HeaderCol = function (props) {
-  return _react.default.createElement("th", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("th", (0, _extends2.default)({
     className: "DoubleEntryTable__Column DoubleEntryTable__Column--HeaderCol",
     scope: "column"
   }, props));
 };
 
 DoubleEntryTable.TitleCol = function (props) {
-  return _react.default.createElement("th", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("th", (0, _extends2.default)({
     className: "DoubleEntryTable__Column DoubleEntryTable__Column--TitleCol",
     scope: "row"
   }, props));

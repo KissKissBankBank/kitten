@@ -54,10 +54,10 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
           title = _this$props.title,
           titleProps = _this$props.titleProps;
       var titleClassName = (0, _classnames.default)('k-Card__title', titleProps.className);
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",
         bottom: ".3"
-      }, _react.default.createElement(_title.Title, (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement(_title.Title, (0, _extends2.default)({
         tag: "p"
       }, titleProps, {
         className: titleClassName,

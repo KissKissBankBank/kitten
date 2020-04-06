@@ -136,13 +136,7 @@ export const TextCopy = ({
     setTimeout(() => isMessageShown(true), 1)
   })
 
-  const Action = ({
-    copyText,
-    buttonText,
-    buttonModifier,
-    buttonProps,
-    ...others
-  }) => (
+  const Action = ({ copyText, buttonText, buttonModifier, buttonProps }) => (
     <>
       {!buttonText && (
         <IconWrapper aria-hidden={true} onClick={copyText}>

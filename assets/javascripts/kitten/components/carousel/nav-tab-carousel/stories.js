@@ -5,7 +5,6 @@ import { NavTabCarousel } from './index'
 import { Marger } from './../../layout/marger'
 import { Container } from './../../grid/container'
 import { Grid, GridCol } from './../../grid/grid'
-import { parseHtml } from './../../../helpers/utils/parser'
 import COLORS from './../../../constants/colors-config'
 
 const StoryGrid = ({ children }) => (
@@ -25,7 +24,6 @@ const links = [
   'http://www.foo.bar',
   'http://www.bar.foo',
 ]
-const totalIndex = 3
 
 storiesOf('Carousel/NavTabCarousel', module)
   .addDecorator(withKnobs)

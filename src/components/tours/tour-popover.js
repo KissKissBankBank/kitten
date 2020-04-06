@@ -81,16 +81,16 @@ var TourPopover = /*#__PURE__*/function (_React$Component) {
         'k-Button--helium': !isDisabled,
         'k-Button--hydrogen': isDisabled
       });
-      return _react.default.createElement("button", {
+      return /*#__PURE__*/_react.default.createElement("button", {
         onClick: isDisabled ? null : this.props.onNextClick,
         title: this.props.buttons.next.title,
         className: buttonClassName,
         disabled: isDisabled
-      }, this.props.buttons.next.label, _react.default.createElement("svg", {
+      }, this.props.buttons.next.label, /*#__PURE__*/_react.default.createElement("svg", {
         className: "k-Button__icon",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 6 6"
-      }, _react.default.createElement("path", {
+      }, /*#__PURE__*/_react.default.createElement("path", {
         d: "M6 0H0v6h2V2h4z"
       })));
     }
@@ -102,66 +102,66 @@ var TourPopover = /*#__PURE__*/function (_React$Component) {
         'k-Button--helium': !isDisabled,
         'k-Button--hydrogen': isDisabled
       });
-      return _react.default.createElement("button", {
+      return /*#__PURE__*/_react.default.createElement("button", {
         onClick: isDisabled ? null : this.props.onPrevClick,
         title: this.props.buttons.prev.title,
         className: buttonClassName,
         disabled: isDisabled
-      }, _react.default.createElement("svg", {
+      }, /*#__PURE__*/_react.default.createElement("svg", {
         className: "k-Button__icon--tiny",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 6 6",
         fill: "#fff"
-      }, _react.default.createElement("path", {
+      }, /*#__PURE__*/_react.default.createElement("path", {
         d: "M6 0H0v6h2V2h4z"
       })), this.props.buttons.prev.label);
     }
   }, {
     key: "renderCloseButton",
     value: function renderCloseButton() {
-      return _react.default.createElement("button", {
+      return /*#__PURE__*/_react.default.createElement("button", {
         title: this.props.buttons.close.label,
         "aria-label": this.props.buttons.close.label,
         onClick: this.props.onCloseClick,
         className: "k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--tiny"
-      }, _react.default.createElement("svg", {
+      }, /*#__PURE__*/_react.default.createElement("svg", {
         className: "k-ButtonIcon__svg k-ButtonIcon__svgRotate",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "-11 -4 125 105"
-      }, _react.default.createElement("path", {
+      }, /*#__PURE__*/_react.default.createElement("path", {
         d: "M91.968 21.407l-70.56 70.56-13.44-13.44 70.56-70.56z"
-      }), _react.default.createElement("path", {
+      }), /*#__PURE__*/_react.default.createElement("path", {
         d: "M91.968 78.527l-13.44 13.44-70.56-70.56 13.44-13.44z"
       })));
     }
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         ref: "popover",
         className: "k-Popover k-Tour__popover",
         role: "dialog",
         "aria-hidden": "true",
         "aria-labelledby": "dialogtitle",
         style: this.props.style
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Popover__container k-Tour__popover__container"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tour__popover__illustration"
-      }, this.props.illustration), _react.default.createElement("div", {
+      }, this.props.illustration), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tour__popover__content"
-      }, _react.default.createElement("p", {
+      }, /*#__PURE__*/_react.default.createElement("p", {
         id: "dialogtitle",
         className: "k-Tour__popover__title"
-      }, this.props.title), _react.default.createElement("p", {
+      }, this.props.title), /*#__PURE__*/_react.default.createElement("p", {
         className: "k-Tour__popover__text"
-      }, this.props.content), _react.default.createElement("div", {
+      }, this.props.content), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tour__popover__navigation"
-      }, _react.default.createElement("p", {
+      }, /*#__PURE__*/_react.default.createElement("p", {
         className: "k-Tour__popover__numbering"
-      }, this.props.progress), _react.default.createElement("div", {
+      }, this.props.progress), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tour__popover__buttons"
-      }, this.renderPrevButton(), this.renderNextButton()))), _react.default.createElement("div", {
+      }, this.renderPrevButton(), this.renderNextButton()))), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Popover__close"
       }, this.renderCloseButton())));
     }

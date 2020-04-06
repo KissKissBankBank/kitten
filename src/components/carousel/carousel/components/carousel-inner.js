@@ -218,14 +218,14 @@ var CarouselInner = /*#__PURE__*/function (_Component) {
           showOtherPages = _this$props3.showOtherPages,
           pagesClassName = _this$props3.pagesClassName;
       var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
-      return _react.default.createElement(StyledCarouselInner, {
+      return /*#__PURE__*/_react.default.createElement(StyledCarouselInner, {
         ref: this.carouselInner,
         onScroll: this.handleInnerScroll,
         onTouchStart: this.handleTouchStart,
         onTouchEnd: this.handleTouchEnd,
         showOtherPages: showOtherPages
       }, rangePage.map(function (index) {
-        return _react.default.createElement(StyledCarouselPageContainer, {
+        return /*#__PURE__*/_react.default.createElement(StyledCarouselPageContainer, {
           key: index,
           index: index,
           indexPageVisible: indexPageVisible,
@@ -233,7 +233,7 @@ var CarouselInner = /*#__PURE__*/function (_Component) {
           onClick: _this2.handlePageClick(index),
           showOtherPages: showOtherPages,
           className: pagesClassName
-        }, _react.default.createElement(_carouselPage.CarouselPage, {
+        }, /*#__PURE__*/_react.default.createElement(_carouselPage.CarouselPage, {
           numColumns: numColumns,
           itemMinWidth: itemMinWidth,
           itemMarginBetween: itemMarginBetween,

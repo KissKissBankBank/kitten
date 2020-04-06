@@ -63,11 +63,11 @@ var TabBar = /*#__PURE__*/function (_Component) {
       var itemClassName = (0, _classnames.default)('k-TabBar__item', className, {
         'is-selected': selected
       });
-      return _react.default.createElement("li", {
+      return /*#__PURE__*/_react.default.createElement("li", {
         key: key
-      }, _react.default.createElement("a", (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
         className: itemClassName
-      }, linkProps), _react.default.createElement(_reactMarkdown.default, {
+      }, linkProps), /*#__PURE__*/_react.default.createElement(_reactMarkdown.default, {
         softBreak: "br",
         source: text
       })));
@@ -75,12 +75,12 @@ var TabBar = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         id: this.props.id,
         className: (0, _classnames.default)('k-TabBar', this.props.className)
-      }, _react.default.createElement("nav", {
+      }, /*#__PURE__*/_react.default.createElement("nav", {
         className: (0, _classnames.default)('k-TabBar__nav', this.props.navClassName)
-      }, _react.default.createElement("ul", {
+      }, /*#__PURE__*/_react.default.createElement("ul", {
         className: (0, _classnames.default)('k-TabBar__list', this.props.listClassName)
       }, this.renderItems())));
     }

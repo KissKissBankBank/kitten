@@ -98,7 +98,7 @@ var TextInputWithUnit = /*#__PURE__*/function (_PureComponent) {
           unit = _this$props.unit,
           unitWord = _this$props.unitWord,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["type", "valid", "error", "tiny", "disabled", "unit", "unitWord"]);
-      return _react.default.createElement(StyledTextInputWithUnit, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledTextInputWithUnit, null, /*#__PURE__*/_react.default.createElement(StyledTextInput, (0, _extends2.default)({
         ref: function ref(input) {
           _this.input = input;
         },
@@ -107,7 +107,7 @@ var TextInputWithUnit = /*#__PURE__*/function (_PureComponent) {
         error: error,
         tiny: tiny,
         disabled: disabled
-      }, others)), _react.default.createElement(StyledInputUnit, {
+      }, others)), /*#__PURE__*/_react.default.createElement(StyledInputUnit, {
         valid: valid,
         error: error,
         disabled: disabled,

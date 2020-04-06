@@ -75,10 +75,10 @@ var LikeButton = /*#__PURE__*/function (_PureComponent) {
           accessibilityLabel = _this$props.accessibilityLabel,
           hasLiked = _this$props.hasLiked,
           props = (0, _objectWithoutProperties2.default)(_this$props, ["children", "accessibilityLabel", "hasLiked"]);
-      return _react.default.createElement(StyledButton, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
         role: "button",
         "aria-pressed": "".concat(hasLiked)
-      }, props), accessibilityLabel && _react.default.createElement(_visuallyHidden.VisuallyHidden, null, accessibilityLabel), _react.default.createElement(StyledHeartIcon, {
+      }, props), accessibilityLabel && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, accessibilityLabel), /*#__PURE__*/_react.default.createElement(StyledHeartIcon, {
         "aria-hidden": "true",
         focusable: "false"
       }), children);

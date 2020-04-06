@@ -61,9 +61,7 @@ export const mediaQueries = (WrappedComponent, hocProps = {}) =>
 
         if (Object.keys(deprecatedPropsToNewProps).includes(prop)) {
           console.warn(
-            `${prop} is deprecated. Please use ${
-              deprecatedPropsToNewProps[prop]
-            } instead now.`,
+            `${prop} is deprecated. Please use ${deprecatedPropsToNewProps[prop]} instead now.`,
           )
         }
       }

@@ -76,14 +76,7 @@ export class DonationCard extends PureComponent {
   }
 
   render() {
-    const {
-      title,
-      titleTag,
-      isDisabled,
-      version,
-      donationForm,
-      ...others
-    } = this.props
+    const { title, titleTag, isDisabled, version, donationForm } = this.props
 
     return (
       <StyledCard isDisabled={isDisabled}>

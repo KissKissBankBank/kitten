@@ -64,7 +64,7 @@ var Input = _styledComponents.default.input.withConfig({
 var StyledLoader = (0, _styledComponents.default)(function (_ref3) {
   var addRightPadding = _ref3.addRightPadding,
       others = (0, _objectWithoutProperties2.default)(_ref3, ["addRightPadding"]);
-  return _react.default.createElement(_loader.Loader, others);
+  return /*#__PURE__*/_react.default.createElement(_loader.Loader, others);
 }).withConfig({
   displayName: "autocomplete__StyledLoader",
   componentId: "lfeqwe-2"
@@ -76,7 +76,7 @@ var StyledIcon = (0, _styledComponents.default)(function (_ref5) {
   var disabled = _ref5.disabled,
       iconPosition = _ref5.iconPosition,
       others = (0, _objectWithoutProperties2.default)(_ref5, ["disabled", "iconPosition"]);
-  return _react.default.createElement("span", others);
+  return /*#__PURE__*/_react.default.createElement("span", others);
 }).withConfig({
   displayName: "autocomplete__StyledIcon",
   componentId: "lfeqwe-3"
@@ -240,7 +240,7 @@ var Autocomplete = function Autocomplete(_ref9) {
     suggestionsEl.current.scrollTop = value > 0 ? value : 0;
   };
 
-  return _react.default.createElement(Container, null, _react.default.createElement(Input, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(Input, (0, _extends2.default)({}, props, {
     error: error,
     ref: inputEl,
     type: "text",
@@ -254,35 +254,35 @@ var Autocomplete = function Autocomplete(_ref9) {
     hasIcon: !!icon,
     iconPosition: iconPosition,
     "aria-activedescendant": items[selectedItemIndex] ? (0, _slugify.default)("".concat(items[selectedItemIndex], "-").concat(selectedItemIndex)) : ''
-  })), isLoading && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledLoader, {
+  })), isLoading && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledLoader, {
     color: _colorsConfig.default.font2,
     addRightPadding: icon && iconPosition === 'right'
-  }), _react.default.createElement(_visuallyHidden.VisuallyHidden, {
+  }), /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, {
     lang: "en"
-  }, "loading")), icon && _react.default.createElement(StyledIcon, {
+  }, "loading")), icon && /*#__PURE__*/_react.default.createElement(StyledIcon, {
     "aria-hidden": "true",
     disabled: props.disabled,
     iconPosition: iconPosition
   }, _react.default.cloneElement(icon, {
     width: 15,
     height: 15
-  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(Suggestions, {
+  })), showSuggestions && items.length === 0 && noResultMessage && showNoResultMessage && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(Suggestions, {
     ref: suggestionsEl,
     id: "".concat(props.name, "-results"),
     role: "listbox",
     tabIndex: "-1",
     itemsLength: "1"
-  }, _react.default.createElement(NoResultItem, {
+  }, /*#__PURE__*/_react.default.createElement(NoResultItem, {
     role: "option",
     tabIndex: "-1"
-  }, noResultMessage))), showSuggestions && items.length > 0 && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(Suggestions, {
+  }, noResultMessage))), showSuggestions && items.length > 0 && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(Suggestions, {
     ref: suggestionsEl,
     id: "".concat(props.name, "-results"),
     role: "listbox",
     tabIndex: "-1",
     itemsLength: items.length
   }, items.map(function (item, index) {
-    return _react.default.createElement(Item, {
+    return /*#__PURE__*/_react.default.createElement(Item, {
       key: item + index,
       id: (0, _slugify.default)("".concat(item, "-").concat(index)),
       onClick: handleClickItem(item),
@@ -290,7 +290,7 @@ var Autocomplete = function Autocomplete(_ref9) {
       "aria-selected": selectedItemIndex === index,
       tabIndex: "-1"
     }, item);
-  })), _react.default.createElement(_visuallyHidden.VisuallyHidden, {
+  })), /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, {
     lang: "en",
     "aria-live": "assertive"
   }, items.length, " results are available.")));

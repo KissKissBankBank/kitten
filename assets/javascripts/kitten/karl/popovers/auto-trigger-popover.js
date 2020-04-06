@@ -1,4 +1,3 @@
-import React from 'react'
 import { triggerEnhancer } from '../../hoc/trigger-enhancer'
 import { Popover } from '../../components/popovers/popover'
 

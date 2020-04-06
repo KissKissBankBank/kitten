@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from '../../../constants/colors-config'

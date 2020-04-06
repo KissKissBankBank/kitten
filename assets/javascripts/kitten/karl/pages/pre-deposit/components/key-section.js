@@ -11,7 +11,6 @@ import { Button } from '../../../../components/buttons/button'
 import { withMediaQueries } from '../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
-import { parseHtml } from '../../../../helpers/utils/parser'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 
@@ -36,7 +35,7 @@ class KeySection extends Component {
   }
 
   renderTitle() {
-    const { titleKeyImg, viewportIsXSOrLess } = this.props
+    const { viewportIsXSOrLess } = this.props
 
     return (
       <Grid>
@@ -58,7 +57,7 @@ class KeySection extends Component {
   }
 
   renderImage() {
-    const imgKeyStyle = [imgBackground('fff'), styles.image]
+    const imgKeyStyle = [imgBackground(), styles.image]
 
     return (
       <GridCol offset-l="1" col-s="5" offset-s="1">
@@ -134,7 +133,7 @@ class KeySection extends Component {
 const imgHeight = 416
 const imgWidth = 555
 
-const imgBackground = image => ({
+const imgBackground = () => ({
   backgroundColor: '#caf4fe',
   backgroundSize: 'cover',
   backgroundPosition: 'center bottom',

@@ -217,7 +217,7 @@ var CarouselInnerBase = /*#__PURE__*/function (_React$Component) {
           itemMarginBetween = _this$props3.itemMarginBetween,
           siblingPageVisible = _this$props3.siblingPageVisible;
       var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         ref: function ref(div) {
           _this2.carouselInner = div;
         },
@@ -230,24 +230,24 @@ var CarouselInnerBase = /*#__PURE__*/function (_React$Component) {
         onTouchStart: this.handleTouchStart,
         onTouchEnd: this.handleTouchEnd
       }, rangePage.map(function (index) {
-        return _react.default.createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           key: index,
           style: [styles.carouselPageContainer, index !== indexPageVisible && styles.carouselPageContainerClickable, {
             marginLeft: index ? itemMarginBetween : 0
           }],
           onClick: _this2.handlePageClick(index)
-        }, _react.default.createElement(_carouselPage.CarouselPage, {
+        }, /*#__PURE__*/_react.default.createElement(_carouselPage.CarouselPage, {
           data: getDataForPage(data, index, numColumns),
           numColumns: numColumns,
           itemMinWidth: itemMinWidth,
           itemMarginBetween: itemMarginBetween,
           renderItem: renderItem
         }));
-      }), siblingPageVisible && _react.default.createElement("div", {
+      }), siblingPageVisible && /*#__PURE__*/_react.default.createElement("div", {
         style: {
           minWidth: itemMarginBetween * 2
         }
-      }), _react.default.createElement(_radium.Style, {
+      }), /*#__PURE__*/_react.default.createElement(_radium.Style, {
         scopeSelector: ".k-CarouselInner::-webkit-scrollbar",
         rules: {
           display: 'none'

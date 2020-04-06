@@ -93,10 +93,7 @@ describe('<Accordeon />', () => {
         </Accordeon>,
       )
 
-      component
-        .find(Accordeon.Header)
-        .last()
-        .simulate('click')
+      component.find(Accordeon.Header).last().simulate('click')
     })
 
     it('has selected styles', () => {
@@ -119,10 +116,7 @@ describe('<Accordeon />', () => {
         </Accordeon>,
       )
 
-      component
-        .find(Accordeon.Header)
-        .first()
-        .simulate('click')
+      component.find(Accordeon.Header).first().simulate('click')
     })
 
     it('trigger method', () => {
@@ -141,10 +135,7 @@ describe('<Accordeon />', () => {
         </Accordeon.Item>
       </Accordeon>,
     )
-    component
-      .find(Accordeon.Header)
-      .first()
-      .simulate('click')
+    component.find(Accordeon.Header).first().simulate('click')
     expect(id).toEqual('CLICKED')
   })
 

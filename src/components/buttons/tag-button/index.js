@@ -46,7 +46,7 @@ var StyledTagButton = (0, _styledComponents.default)(function (_ref) {
       big = _ref.big,
       modifier = _ref.modifier,
       others = (0, _objectWithoutProperties2.default)(_ref, ["selected", "icon", "tiny", "big", "modifier"]);
-  return _react.default.createElement("button", others);
+  return /*#__PURE__*/_react.default.createElement("button", others);
 }).withConfig({
   displayName: "tag-button__StyledTagButton",
   componentId: "sc-1cbu4s-0"
@@ -92,7 +92,7 @@ var TagButton = /*#__PURE__*/function (_PureComponent) {
           big = _this$props.big,
           icon = _this$props.icon,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "modifier", "selected", "tiny", "big", "icon"]);
-      return _react.default.createElement(StyledTagButton, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledTagButton, (0, _extends2.default)({
         modifier: modifier,
         selected: selected,
         tiny: tiny,

@@ -18,10 +18,10 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 var DocIcon = function DocIcon(_ref) {
   var color = _ref.color,
       props = (0, _objectWithoutProperties2.default)(_ref, ["color"]);
-  return _react.default.createElement("svg", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     width: 14,
     height: 20
-  }, props), _react.default.createElement("title", null, "Doc"), _react.default.createElement("path", {
+  }, props), /*#__PURE__*/_react.default.createElement("title", null, "Doc"), /*#__PURE__*/_react.default.createElement("path", {
     d: "M7 0v7h7v13H0V0h7zm4 14H3v2h8v-2zm0-4H3v2h8v-2zM9 0l5 5H9V0z",
     fill: color,
     fillRule: "evenodd"

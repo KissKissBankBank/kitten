@@ -31,7 +31,7 @@ var MarkdownList = function MarkdownList(props) {
       item: item.props.children[0]
     };
   });
-  return _react.default.createElement(_context.Context.Consumer, null, function (_ref) {
+  return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref) {
     var paragraphModifier = _ref.paragraphModifier;
     var modifier = {};
 
@@ -53,10 +53,10 @@ var MarkdownList = function MarkdownList(props) {
       };
     }
 
-    return _react.default.createElement(_marger.Marger, {
+    return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
       top: "3",
       bottom: "3"
-    }, _react.default.createElement(BulletListStyle, (0, _extends2.default)({}, modifier, {
+    }, /*#__PURE__*/_react.default.createElement(BulletListStyle, (0, _extends2.default)({}, modifier, {
       items: items
     })));
   });

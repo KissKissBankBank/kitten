@@ -25,8 +25,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
 var _projectSimilarCard = require("../../components/cards/project-similar-card");
 
 function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
@@ -121,7 +119,7 @@ var SimilarProjectsCard = /*#__PURE__*/function (_Component) {
           others = (0, _objectWithoutProperties2.default)(_this$props, ["projects", "onLeftArrowClick", "onRightArrowClick"]);
       var nextIndex = this.state.currentIndex + 1;
       var previousIndex = this.state.currentIndex - 1;
-      return _react.default.createElement(_projectSimilarCard.SimilarProjectCard, (0, _extends2.default)({}, others, this.currentProjectProps(), {
+      return /*#__PURE__*/_react.default.createElement(_projectSimilarCard.SimilarProjectCard, (0, _extends2.default)({}, others, this.currentProjectProps(), {
         step: this.currentStep(),
         onLeftArrowClick: this.curryHandleArrowClick(previousIndex, this.props.onLeftArrowClick),
         onRightArrowClick: this.curryHandleArrowClick(nextIndex, this.props.onRightArrowClick),

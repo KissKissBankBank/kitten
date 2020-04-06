@@ -48,10 +48,7 @@ describe('<List>', () => {
           </List>,
         )
 
-        const button = component
-          .find(List.ButtonItem)
-          .at(1)
-          .dive()
+        const button = component.find(List.ButtonItem).at(1).dive()
 
         button.simulate('click')
 
@@ -87,10 +84,7 @@ describe('<List>', () => {
           </List>,
         )
 
-        const button = component
-          .find(List.ButtonItem)
-          .at(1)
-          .dive()
+        const button = component.find(List.ButtonItem).at(1).dive()
 
         button.simulate('click')
 

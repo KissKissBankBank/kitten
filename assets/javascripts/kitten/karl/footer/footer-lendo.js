@@ -15,7 +15,6 @@ import {
   InstagramButtonIcon,
 } from '../../components/buttons/social-button-icon'
 import { LinkList } from '../../components/links/link-list'
-import { SelectWithState } from '../../components/form/select-with-state'
 import { LendopolisLogo as LendopolisLogoBase } from '../../karl/logos/lendopolis-logo'
 import { ScreenConfig } from '../../constants/screen-config'
 import { mediaQueries } from '../../hoc/media-queries'
@@ -228,7 +227,6 @@ class KarlFooterLendoBase extends Component {
       hrefTwitter,
       hrefInstagram,
       viewportIsTabletOrLess,
-      ...others
     } = this.props
 
     return (

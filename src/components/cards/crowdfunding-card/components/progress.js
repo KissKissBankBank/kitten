@@ -79,7 +79,7 @@ var ProgressBar = /*#__PURE__*/function (_PureComponent) {
           loading = _this$props.loading;
       if (progress === false) return null;
       var progressValue = loading ? 65 : progress;
-      return _react.default.createElement(StyledContainer, null, _react.default.createElement(StyledProgress, {
+      return /*#__PURE__*/_react.default.createElement(StyledContainer, null, /*#__PURE__*/_react.default.createElement(StyledProgress, {
         value: progressValue,
         className: loading && 'is-disabled',
         color: progressColor,
@@ -88,12 +88,12 @@ var ProgressBar = /*#__PURE__*/function (_PureComponent) {
             height: '4px'
           }
         }
-      }), _react.default.createElement(StyledPercent, {
+      }), /*#__PURE__*/_react.default.createElement(StyledPercent, {
         weight: "regular",
         size: "micro",
         color: "font1",
         className: "k-u-hidden@s-down"
-      }, loading && _react.default.createElement(StyledLoading, null), !loading && "".concat(progress, " %")));
+      }, loading && /*#__PURE__*/_react.default.createElement(StyledLoading, null), !loading && "".concat(progress, " %")));
     }
   }]);
   return ProgressBar;

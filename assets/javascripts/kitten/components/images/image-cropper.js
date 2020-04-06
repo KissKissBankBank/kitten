@@ -252,7 +252,7 @@ export class ImageCropper extends React.Component {
     )
   }
 
-  renderError(error) {
+  renderError() {
     if (!this.state.hasErrorOnUploader) return
 
     return (

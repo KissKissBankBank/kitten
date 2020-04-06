@@ -82,10 +82,10 @@ var LinkList = /*#__PURE__*/function (_Component) {
         'k-LinkList__item--doubleMargin': itemMargin == 'double',
         'k-LinkList__item--tripleMargin': itemMargin == 'triple'
       });
-      return _react.default.createElement("li", {
+      return /*#__PURE__*/_react.default.createElement("li", {
         className: linkListItemClassName,
         key: key
-      }, _react.default.createElement("a", (0, _extends2.default)({}, others, {
+      }, /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({}, others, {
         href: href,
         className: linkListClassName
       }), item));
@@ -103,7 +103,7 @@ var LinkList = /*#__PURE__*/function (_Component) {
       var listClassName = (0, _classnames.default)('k-LinkList', className, {
         'k-LinkList--withoutMargin': !margin
       });
-      return _react.default.createElement("ul", (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({}, others, {
         className: listClassName
       }), this.renderItems());
     }

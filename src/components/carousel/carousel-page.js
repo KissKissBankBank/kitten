@@ -47,10 +47,10 @@ var CarouselPageBase = /*#__PURE__*/function (_React$Component) {
           itemMarginBetween = _this$props.itemMarginBetween,
           renderItem = _this$props.renderItem;
       var rangeCard = (0, _range.createRangeFromZeroTo)(numColumns);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         style: styles.page
       }, rangeCard.map(function (index) {
-        return _react.default.createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           key: index,
           style: [styles.item, {
             minWidth: itemMinWidth,

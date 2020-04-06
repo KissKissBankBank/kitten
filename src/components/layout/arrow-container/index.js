@@ -31,7 +31,7 @@ var Container = (0, _styledComponents.default)(function (_ref) {
       borderColor = _ref.borderColor,
       borderWidth = _ref.borderWidth,
       others = (0, _objectWithoutProperties2.default)(_ref, ["color", "padding", "shadow", "borderRadius", "borderColor", "borderWidth"]);
-  return _react.default.createElement("div", others);
+  return /*#__PURE__*/_react.default.createElement("div", others);
 }).withConfig({
   displayName: "arrow-container__Container",
   componentId: "sc-10kgymk-0"
@@ -63,7 +63,7 @@ var Arrow = (0, _styledComponents.default)(function (_ref8) {
       borderColor = _ref8.borderColor,
       borderWidth = _ref8.borderWidth,
       others = (0, _objectWithoutProperties2.default)(_ref8, ["color", "size", "distance", "position", "centered", "borderColor", "borderWidth"]);
-  return _react.default.createElement("span", others);
+  return /*#__PURE__*/_react.default.createElement("span", others);
 }).withConfig({
   displayName: "arrow-container__Arrow",
   componentId: "sc-10kgymk-1"
@@ -129,14 +129,14 @@ var ArrowContainer = function ArrowContainer(_ref12) {
       borderColor = _ref12.borderColor,
       borderWidth = _ref12.borderWidth,
       props = (0, _objectWithoutProperties2.default)(_ref12, ["children", "color", "size", "distance", "position", "centered", "padding", "shadow", "borderRadius", "borderColor", "borderWidth"]);
-  return _react.default.createElement(Container, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(Container, (0, _extends2.default)({
     color: color,
     padding: padding,
     shadow: shadow,
     borderRadius: borderRadius,
     borderColor: borderColor,
     borderWidth: borderWidth
-  }, props), children, _react.default.createElement(Arrow, {
+  }, props), children, /*#__PURE__*/_react.default.createElement(Arrow, {
     color: color,
     size: size,
     distance: distance,

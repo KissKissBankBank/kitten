@@ -163,17 +163,17 @@ var Video = /*#__PURE__*/function (_PureComponent) {
       });
       var isVideoPlaying = !autoPlay && this.state.showPlayer;
       var controls = isVideoPlaying && this.state.showPlayer;
-      return _react.default.createElement(StyledContainer, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledContainer, (0, _extends2.default)({
         onClick: this.handlePlayClick,
         isVideoPlaying: isVideoPlaying
-      }, this.a11yOnClickProps()), loader, !autoPlay && _react.default.createElement(StyledContainerButton, {
+      }, this.a11yOnClickProps()), loader, !autoPlay && /*#__PURE__*/_react.default.createElement(StyledContainerButton, {
         isVideoPlaying: isVideoPlaying
-      }, _react.default.createElement(StyledPlayerButton, {
+      }, /*#__PURE__*/_react.default.createElement(StyledPlayerButton, {
         "aria-label": ariaLabel
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "default",
         weight: "regular"
-      }, "\u25BA"))), _react.default.createElement(StyledVideo, (0, _extends2.default)({
+      }, "\u25BA"))), /*#__PURE__*/_react.default.createElement(StyledVideo, (0, _extends2.default)({
         ref: this.video,
         controls: controls,
         autoPlay: autoPlay,

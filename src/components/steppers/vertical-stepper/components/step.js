@@ -63,15 +63,15 @@ var Step = /*#__PURE__*/function (_Component) {
           statusProps = _this$props.statusProps,
           children = _this$props.children,
           other = (0, _objectWithoutProperties2.default)(_this$props, ["success", "valid", "error", "waiting", "disabled", "statusProps", "children"]);
-      return _react.default.createElement(StyledItem, null, _react.default.createElement(StyledLink, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledItem, null, /*#__PURE__*/_react.default.createElement(StyledLink, (0, _extends2.default)({
         as: other.href ? 'a' : 'span'
-      }, other), _react.default.createElement(_status.Status, (0, _extends2.default)({
+      }, other), /*#__PURE__*/_react.default.createElement(_status.Status, (0, _extends2.default)({
         success: success,
         valid: valid,
         error: error,
         waiting: waiting,
         disabled: disabled
-      }, statusProps)), _react.default.createElement(StyledContent, {
+      }, statusProps)), /*#__PURE__*/_react.default.createElement(StyledContent, {
         error: error,
         disabled: disabled,
         className: _index.STEP_CLASSNAME

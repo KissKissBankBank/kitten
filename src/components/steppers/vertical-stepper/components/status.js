@@ -68,24 +68,24 @@ var Status = /*#__PURE__*/function (_Component) {
           error = _this$props.error,
           waiting = _this$props.waiting,
           disabled = _this$props.disabled;
-      if (valid) return _react.default.createElement(_checkedIcon.CheckedIcon, {
+      if (valid) return /*#__PURE__*/_react.default.createElement(_checkedIcon.CheckedIcon, {
         width: "10",
         title: null
       });
-      if (success) return _react.default.createElement(_checkedIcon.CheckedIcon, {
+      if (success) return /*#__PURE__*/_react.default.createElement(_checkedIcon.CheckedIcon, {
         width: "10",
         title: null
       });
-      if (error) return _react.default.createElement(_warningIcon.WarningIcon, {
+      if (error) return /*#__PURE__*/_react.default.createElement(_warningIcon.WarningIcon, {
         color: _colorsConfig.default.error,
         title: null
       });
-      if (waiting) return _react.default.createElement(_waitingIcon.WaitingIcon, {
+      if (waiting) return /*#__PURE__*/_react.default.createElement(_waitingIcon.WaitingIcon, {
         height: "4",
         color: _colorsConfig.default.primary1,
         title: null
       });
-      if (disabled) return _react.default.createElement(_lockIcon.LockIcon, {
+      if (disabled) return /*#__PURE__*/_react.default.createElement(_lockIcon.LockIcon, {
         width: "10",
         color: _colorsConfig.default.background1,
         title: null
@@ -102,7 +102,7 @@ var Status = /*#__PURE__*/function (_Component) {
       var _this$props2 = this.props,
           children = _this$props2.children,
           other = (0, _objectWithoutProperties2.default)(_this$props2, ["children"]);
-      return _react.default.createElement(StyledStatus, other, this.iconByStatus() || children);
+      return /*#__PURE__*/_react.default.createElement(StyledStatus, other, this.iconByStatus() || children);
     }
   }]);
   return Status;

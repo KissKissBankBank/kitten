@@ -76,7 +76,7 @@ const WidgetContainerState = () => (
   </StyledWidgetText>
 )
 
-const Content = props => (
+const Content = () => (
   <StyledContainer>
     <StyledTitle>Aperçu du widget</StyledTitle>
     <TextInput tag="textarea" />
@@ -95,7 +95,7 @@ const Content = props => (
   </StyledContainer>
 )
 
-const WidgetCard = props => (
+const WidgetCard = () => (
   <StyledWidgetContainer>
     <Grid>
       <GridCol col="4">

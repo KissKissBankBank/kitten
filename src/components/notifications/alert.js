@@ -17,6 +17,8 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _closeButton = require("../../components/buttons/close-button");
@@ -91,7 +93,7 @@ var Alert = function Alert(_ref) {
     return null;
   }
 
-  return _react.default.createElement(AlertWrapper, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(AlertWrapper, (0, _extends2.default)({
     ref: alertRef,
     role: "alert",
     success: success,
@@ -99,7 +101,7 @@ var Alert = function Alert(_ref) {
     warning: warning,
     shouldHide: !isMounted,
     className: className
-  }, others), _react.default.createElement(_react.default.Fragment, null, children, closeButton && _react.default.createElement(StyledCloseButton, {
+  }, others), /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, children, closeButton && /*#__PURE__*/_react.default.createElement(StyledCloseButton, {
     modifier: "carbon",
     closeButtonLabel: closeButtonLabel,
     onClick: function onClick() {
@@ -109,6 +111,16 @@ var Alert = function Alert(_ref) {
 };
 
 exports.Alert = Alert;
+Alert.propTypes = {
+  className: _propTypes.default.string,
+  show: _propTypes.default.bool,
+  error: _propTypes.default.bool,
+  success: _propTypes.default.bool,
+  warning: _propTypes.default.bool,
+  closeButton: _propTypes.default.bool,
+  closeButtonLabel: _propTypes.default.string,
+  onAfterClose: _propTypes.default.func
+};
 Alert.defaultProps = {
   className: null,
   show: true,
@@ -116,5 +128,6 @@ Alert.defaultProps = {
   success: false,
   warning: false,
   closeButton: false,
-  closeButtonLabel: 'Close'
+  closeButtonLabel: 'Close',
+  onAfterClose: function onAfterClose() {}
 };

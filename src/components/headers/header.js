@@ -50,12 +50,12 @@ var Header = /*#__PURE__*/function (_React$Component) {
       var headerClassName = (0, _classnames.default)('k-Header', {
         'is-fixed': fixed
       }, className);
-      return _react.default.createElement("header", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("header", (0, _extends2.default)({
         className: headerClassName,
         role: "banner"
-      }, other), _react.default.createElement("div", {
+      }, other), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Header__container"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Header__row"
       }, children)));
     }
@@ -85,7 +85,7 @@ var HeaderItems = /*#__PURE__*/function (_React$Component2) {
       var itemsClassName = (0, _classnames.default)('k-Header__items', {
         'k-Header__items--fixedSize': fixedSize
       }, className);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: itemsClassName
       }, other));
     }
@@ -119,7 +119,7 @@ var HeaderItem = /*#__PURE__*/function (_React$Component3) {
         'k-Header__item--fixedSize': fixedSize,
         'k-Header__item--centered': centered
       }, className);
-      return _react.default.createElement(Tag, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
         className: itemClassName
       }, other));
     }

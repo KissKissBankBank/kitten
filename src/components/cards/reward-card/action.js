@@ -37,19 +37,19 @@ var RewardCardAction = function RewardCardAction(_ref) {
       topMargin = _ref.topMargin;
   var hasActionContent = buttonLabel || manageContributionDescription;
   if (!hasActionContent) return null;
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-  }, _react.default.createElement(_react.Fragment, null, manageContributionDescription && _react.default.createElement(_marger.Marger, {
+  }, /*#__PURE__*/_react.default.createElement(_react.Fragment, null, manageContributionDescription && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: topMargin,
     bottom: !manageContributionDescription ? 0 : 2
-  }, _react.default.createElement(_manageContribution.ManageContribution, {
+  }, /*#__PURE__*/_react.default.createElement(_manageContribution.ManageContribution, {
     description: manageContributionDescription,
     linkLabel: manageContributionLinkLabel,
     linkHref: manageContributionLinkHref,
     isDisabled: isDisabled,
     isTinyVersion: isTinyVersion,
     isSOrLessVersion: isSOrLessVersion
-  })), _react.default.createElement(_button.RewardCardButton, {
+  })), /*#__PURE__*/_react.default.createElement(_button.RewardCardButton, {
     label: buttonLabel,
     onMouseEnter: buttonOnMouseEnter,
     onMouseLeave: buttonOnMouseLeave,
@@ -74,20 +74,20 @@ var RewardCardActionOnMOrMore = function RewardCardActionOnMOrMore(_ref2) {
       isSOrLessVersion = _ref2.isSOrLessVersion;
   var hasActionContent = buttonLabel || manageContributionDescription;
   if (!hasActionContent) return null;
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-  }, _react.default.createElement(_marger.Marger, {
+  }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "3"
-  }, _react.default.createElement(_button.RewardCardButton, {
+  }, /*#__PURE__*/_react.default.createElement(_button.RewardCardButton, {
     label: buttonLabel,
     onMouseEnter: buttonOnMouseEnter,
     onMouseLeave: buttonOnMouseLeave,
     onClick: buttonOnClick,
     isDisabled: isDisabled,
     isTinyVersion: isTinyVersion
-  }), manageContributionDescription && _react.default.createElement(_marger.Marger, {
+  }), manageContributionDescription && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: !manageContributionDescription ? 0 : 2
-  }, _react.default.createElement(_manageContribution.ManageContribution, {
+  }, /*#__PURE__*/_react.default.createElement(_manageContribution.ManageContribution, {
     description: manageContributionDescription,
     linkLabel: manageContributionLinkLabel,
     linkHref: manageContributionLinkHref,
