@@ -49,7 +49,7 @@ var CheckboxSet = /*#__PURE__*/function (_React$Component) {
 
   (0, _createClass2.default)(CheckboxSet, [{
     key: "renderCheckbox",
-    value: function renderCheckbox(item, index) {
+    value: function renderCheckbox(item) {
       var className = item.className,
           itemProps = (0, _objectWithoutProperties2.default)(item, ["className"]);
       var checkboxClassName = (0, _classnames.default)('k-CheckboxSet__checkbox', className);

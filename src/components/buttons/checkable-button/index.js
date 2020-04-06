@@ -29,8 +29,6 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
-
 var checkedCircleIconStyle = function checkedCircleIconStyle(size) {
   return (0, _styledComponents.css)(["width:", ";height:", ";bottom:-", ";"], (0, _typography.pxToRem)(size), (0, _typography.pxToRem)(size), (0, _typography.pxToRem)(size / 2 + 1));
 };

@@ -29,8 +29,6 @@ var _text = require("../../../components/typography/text");
 
 var _horizontalStroke = require("../../../components/layout/horizontal-stroke");
 
-var _marger = require("../../../components/layout/marger");
-
 var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));

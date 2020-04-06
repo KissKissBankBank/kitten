@@ -9,8 +9,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.Search = void 0;
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -24,10 +22,6 @@ var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/ge
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
-
-var _classnames = _interopRequireDefault(require("classnames"));
-
-var _elementHelper = require("../../helpers/dom/element-helper");
 
 var _textInput = require("../../components/form/text-input");
 
@@ -94,15 +88,13 @@ var Search = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          className = _this$props.className,
           actionUrl = _this$props.actionUrl,
           inputId = _this$props.inputId,
           inputName = _this$props.inputName,
           inputPlaceholder = _this$props.inputPlaceholder,
           inputLabel = _this$props.inputLabel,
-          submitLabel = _this$props.submitLabel,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "actionUrl", "inputId", "inputName", "inputPlaceholder", "inputLabel", "submitLabel"]);
-      var inputClassName = (0, _classnames.default)('k-TextInput', 'k-TextInput--tiny', 'k-SearchInput__input', {
+          submitLabel = _this$props.submitLabel;
+      var inputClassName = classNames('k-TextInput', 'k-TextInput--tiny', 'k-SearchInput__input', {
         'is-active': this.state.focus
       }, {
         'is-hover': this.state.hover

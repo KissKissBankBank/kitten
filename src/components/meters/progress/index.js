@@ -21,8 +21,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _typography = require("../../../helpers/utils/typography");

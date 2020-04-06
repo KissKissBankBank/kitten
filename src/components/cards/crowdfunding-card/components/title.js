@@ -23,7 +23,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -98,11 +98,7 @@ var TitleComponent = /*#__PURE__*/function (_PureComponent) {
     value: function render() {
       var _this$props = this.props,
           title = _this$props.title,
-          titleTruncate = _this$props.titleTruncate,
-          titleProps = _this$props.titleProps,
-          loading = _this$props.loading,
-          widgetTitle = _this$props.widgetTitle,
-          dayCounter = _this$props.dayCounter;
+          widgetTitle = _this$props.widgetTitle;
       return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, title && this.renderTitle(), widgetTitle && this.renderWidgetTitle());
     }
   }, {

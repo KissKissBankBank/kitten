@@ -67,7 +67,7 @@ var Tour = /*#__PURE__*/function (_Component) {
 
   }, {
     key: "handleTargetHighlightPosition",
-    value: function handleTargetHighlightPosition(step) {
+    value: function handleTargetHighlightPosition() {
       this.setState({
         visible: true
       });

@@ -49,7 +49,7 @@ var RadioButtonSet = /*#__PURE__*/function (_React$Component) {
 
   (0, _createClass2.default)(RadioButtonSet, [{
     key: "renderRadioButton",
-    value: function renderRadioButton(item, index) {
+    value: function renderRadioButton(item) {
       var className = item.className,
           itemProps = (0, _objectWithoutProperties2.default)(item, ["className"]);
       var radioButtonClassName = (0, _classnames.default)('k-RadioButtonSet__radioButton', className);

@@ -25,8 +25,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
 var _title = require("../../components/typography/title");
 
 var _marger = require("../../components/layout/marger");

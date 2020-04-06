@@ -21,10 +21,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _radium = _interopRequireDefault(require("radium"));
-
 var _iconBadge = require("../../../components/notifications/icon-badge");
 
 var _checkedIcon = require("../../../components/icons/checked-icon");

@@ -31,8 +31,6 @@ var _typography = require("../../../../helpers/utils/typography");
 
 var _text = require("../../../../components/typography/text");
 
-var _title = require("../../../../components/typography/title");
-
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var _horizontalStroke = require("../../../../components/layout/horizontal-stroke");
@@ -99,9 +97,7 @@ var Subtitle = /*#__PURE__*/function (_PureComponent) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          loading = _this$props.loading,
           subTitle = _this$props.subTitle,
-          subTitleTruncate = _this$props.subTitleTruncate,
           widgetSubtitle = _this$props.widgetSubtitle;
       return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, subTitle && this.renderSubtitle(), widgetSubtitle && this.renderWidgetSubtitle());
     }

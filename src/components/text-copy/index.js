@@ -150,8 +150,7 @@ var TextCopy = function TextCopy(_ref8) {
     var copyText = _ref9.copyText,
         buttonText = _ref9.buttonText,
         buttonModifier = _ref9.buttonModifier,
-        buttonProps = _ref9.buttonProps,
-        others = (0, _objectWithoutProperties2.default)(_ref9, ["copyText", "buttonText", "buttonModifier", "buttonProps"]);
+        buttonProps = _ref9.buttonProps;
     return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !buttonText && /*#__PURE__*/_react.default.createElement(IconWrapper, {
       "aria-hidden": true,
       onClick: copyText

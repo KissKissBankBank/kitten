@@ -28,8 +28,7 @@ var HorizontalNav = function HorizontalNav(_ref) {
       height = _ref.height,
       id = _ref.id,
       items = _ref.items,
-      markdown = _ref.markdown,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["center", "className", "elementClassName", "height", "id", "items", "markdown"]);
+      markdown = _ref.markdown;
   var selectedItem = (0, _react.useRef)(null);
   var defaultItem = (0, _react.useRef)(null);
   (0, _react.useEffect)(function () {
