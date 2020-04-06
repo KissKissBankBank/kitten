@@ -283,7 +283,7 @@ var ImageCropper = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "renderError",
-    value: function renderError(error) {
+    value: function renderError() {
       if (!this.state.hasErrorOnUploader) return;
       return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1",

@@ -42,12 +42,9 @@ var RewardCardRow = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(RewardCardRow, [{
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          children = _this$props.children,
-          style = _this$props.style;
       return /*#__PURE__*/_react.default.createElement("div", {
         style: styles
-      }, children);
+      }, this.props.children);
     }
   }]);
   return RewardCardRow;

@@ -136,7 +136,6 @@ var tooltipColor = function tooltipColor(backgroundTooltipColor) {
   };
 };
 
-var backgroundColor = _colorsConfig.default.primary1;
 var styles = {
   tooltip: {
     position: 'relative',

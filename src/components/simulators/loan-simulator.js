@@ -64,7 +64,7 @@ var LoanSimulator = /*#__PURE__*/function (_React$Component) {
 
   (0, _createClass2.default)(LoanSimulator, [{
     key: "handleFocus",
-    value: function handleFocus(e) {
+    value: function handleFocus() {
       this.setState({
         touched: false,
         installmentAmount: null
@@ -79,7 +79,7 @@ var LoanSimulator = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "handleEnter",
-    value: function handleEnter(e) {
+    value: function handleEnter() {
       this.setState({
         touched: true
       });
@@ -289,16 +289,12 @@ var LoanSimulatorContent = /*#__PURE__*/function (_React$Component2) {
 
       var _this$props2 = this.props,
           label = _this$props2.label,
-          dragged = _this$props2.dragged,
-          touched = _this$props2.touched,
           duration = _this$props2.duration,
           error = _this$props2.error;
       var amountValid = !this.props.amountError;
-      var showResult = !error && touched && duration;
       var installmentMin = amountValid ? this.props.installmentMin : 0;
       var installmentMax = amountValid ? this.props.installmentMax : 0;
       var installmentAmount = amountValid ? this.props.installmentAmount : 0;
-      var installmentPercentage = amountValid ? this.props.installmentPercentage : 0;
       var errorClass, errorTag, tooltipClass, tooltipText;
 
       if (error) {

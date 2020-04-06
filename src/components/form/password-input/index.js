@@ -25,7 +25,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _textInput = require("../../../components/form/text-input");
 
@@ -34,8 +34,6 @@ var _passwordIcon = require("../../../components/icons/password-icon");
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
 var _typography = require("../../../helpers/utils/typography");
 

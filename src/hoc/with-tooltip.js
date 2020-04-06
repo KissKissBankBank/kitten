@@ -15,7 +15,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _tooltipNew = require("../components/tooltips/tooltip-new");
 
-var withTooltip = function withTooltip(WrappedComponent, wrappedProps) {
+var withTooltip = function withTooltip(WrappedComponent) {
   var WithTooltip = function WithTooltip(props) {
     var children = props.children,
         id = props.id,

@@ -17,8 +17,6 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _colorsConfig = _interopRequireDefault(require("./../../../../constants/colors-config"));
 
-var _marger = require("./../../../layout/marger");
-
 var _typography = require("./../../../../helpers/utils/typography");
 
 var _range = require("./../../../../helpers/utils/range");

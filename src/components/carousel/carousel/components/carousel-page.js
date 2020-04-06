@@ -60,7 +60,6 @@ var CarouselPage = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          data = _this$props.data,
           numColumns = _this$props.numColumns,
           itemMinWidth = _this$props.itemMinWidth,
           itemMarginBetween = _this$props.itemMarginBetween,

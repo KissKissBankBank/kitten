@@ -19,7 +19,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _marger = require("../../../components/layout/marger");
 
@@ -31,8 +31,6 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _title = require("../../../components/typography/title");
 
-var _text = require("../../../components/typography/text");
-
 var _paragraph = require("../../../components/typography/paragraph");
 
 var _gridConfig = require("../../../constants/grid-config");
@@ -43,19 +41,14 @@ var _button = require("../../../components/buttons/button/button");
 
 var borderSize = 2;
 
-var StyledLoudSpeaker = _styledComponents.default.div.withConfig({
-  displayName: "simple-popover__StyledLoudSpeaker",
-  componentId: "kz8b88-0"
-})(["display:block;margin:0 auto;"]);
-
 var PopoverContainer = _styledComponents.default.div.withConfig({
   displayName: "simple-popover__PopoverContainer",
-  componentId: "kz8b88-1"
+  componentId: "kz8b88-0"
 })(["padding:", ";display:flex;align-items:center;position:relative;border:solid ", " ", ";box-sizing:border-box;max-width:", ";flex-basis:100%;margin-bottom:", ";background-color:", ";opacity:1;visibility:visible;transition:opacity 0.3s ease,visibility 0s ease;transition-delay:0s,0s;@media (min-width:", "){padding:", " ", ";}&[aria-hidden='true']{opacity:0;visibility:hidden;transition-delay:0s,0.3s;}"], (0, _typography.pxToRem)(40), _colorsConfig.default.line1, (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(555), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_THIN), _colorsConfig.default.background1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(40));
 
 var IconContainer = _styledComponents.default.div.withConfig({
   displayName: "simple-popover__IconContainer",
-  componentId: "kz8b88-2"
+  componentId: "kz8b88-1"
 })(["display:none;min-width:", ";min-height:", ";margin-right:", ";border-radius:100%;align-items:center;justify-content:center;background-color:", ";@media (min-width:", "px){display:flex;}"], (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(80), (0, _typography.pxToRem)(40), function (_ref) {
   var backgroundColor = _ref.backgroundColor;
   return backgroundColor;
@@ -63,11 +56,11 @@ var IconContainer = _styledComponents.default.div.withConfig({
 
 var CrossIconButton = (0, _styledComponents.default)(_button.Button).withConfig({
   displayName: "simple-popover__CrossIconButton",
-  componentId: "kz8b88-3"
+  componentId: "kz8b88-2"
 })(["position:absolute;top:-", ";right:-", ";transition:background-color 0.2s,color 0.2s,border-color 0.2s;"], (0, _typography.pxToRem)(borderSize), (0, _typography.pxToRem)(borderSize));
 var ButtonsContainer = (0, _styledComponents.default)(_marger.Marger).withConfig({
   displayName: "simple-popover__ButtonsContainer",
-  componentId: "kz8b88-4"
+  componentId: "kz8b88-3"
 })(["& > * + *{margin-top:", ";@media (min-width:", "px){margin-top:0;margin-left:", ";}}"], (0, _typography.pxToRem)(20), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(20));
 
 var SimplePopover = function SimplePopover(_ref2) {

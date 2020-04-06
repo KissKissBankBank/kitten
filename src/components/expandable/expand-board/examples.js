@@ -29,8 +29,6 @@ var _expandBoard = require("kitten/components/expandable/expand-board");
 
 var _list = require("kitten/components/lists/list");
 
-var _grid = require("kitten/components/grid/grid");
-
 var _text = require("kitten/components/typography/text");
 
 var _typography = require("../../../helpers/utils/typography");

@@ -93,8 +93,7 @@ var DonationCard = /*#__PURE__*/function (_PureComponent) {
           titleTag = _this$props.titleTag,
           isDisabled = _this$props.isDisabled,
           version = _this$props.version,
-          donationForm = _this$props.donationForm,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["title", "titleTag", "isDisabled", "version", "donationForm"]);
+          donationForm = _this$props.donationForm;
       return /*#__PURE__*/_react.default.createElement(StyledCard, {
         isDisabled: isDisabled
       }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {

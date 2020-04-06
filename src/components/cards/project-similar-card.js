@@ -31,8 +31,6 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _card = require("../../hoc/card");
 
-var _grid = require("../../components/grid/grid");
-
 var _marger = require("../../components/layout/marger");
 
 var _title = require("../../components/typography/title");

@@ -103,8 +103,7 @@ var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
           onInputBlur = _this$props.onInputBlur,
           onInputChange = _this$props.onInputChange,
           onInputFocus = _this$props.onInputFocus,
-          version = _this$props.version,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["align", "formIsDisabled", "inputId", "inputPlaceholder", "inputUnit", "inputLabel", "inputDefaultValue", "inputIsOnError", "errorMessage", "buttonLabel", "onButtonMouseEnter", "onButtonMouseLeave", "onFormSubmit", "onInputBlur", "onInputChange", "onInputFocus", "version"]);
+          version = _this$props.version;
       return /*#__PURE__*/_react.default.createElement(StyledFormContainer, {
         onSubmit: onFormSubmit
       }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {

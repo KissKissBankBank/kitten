@@ -27,8 +27,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _screenConfig = require("../../constants/screen-config");
 
-var _mediaQueries = require("../../hoc/media-queries");
-
 var _radium = _interopRequireWildcard(require("radium"));
 
 var _text = require("../../components/typography/text");
@@ -36,8 +34,6 @@ var _text = require("../../components/typography/text");
 var _marger = require("../../components/layout/marger");
 
 var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
-
-var _pathOr = _interopRequireDefault(require("ramda/src/pathOr"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 

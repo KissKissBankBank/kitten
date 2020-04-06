@@ -19,8 +19,6 @@ var _horizontalStroke = require("../../../layout/horizontal-stroke");
 
 var _marger = require("../../../layout/marger");
 
-var _typography = require("../../../../helpers/utils/typography");
-
 var MarkdownHeading = function MarkdownHeading(props) {
   var modifier;
   var tag;

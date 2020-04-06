@@ -37,8 +37,6 @@ var _gridConfig = require("../../../constants/grid-config");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _grid = require("../../../components/grid/grid");
-
 var _buttonIcon = require("../../../components/buttons/button-icon");
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");

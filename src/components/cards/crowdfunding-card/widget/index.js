@@ -35,8 +35,6 @@ var _title = _interopRequireDefault(require("../components/title"));
 
 var _subtitle = _interopRequireDefault(require("../components/subtitle"));
 
-var _informations = _interopRequireDefault(require("../components/informations"));
-
 var _button = _interopRequireDefault(require("../components/button"));
 
 var _loading = _interopRequireDefault(require("../components/loading"));

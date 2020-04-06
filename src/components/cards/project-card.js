@@ -31,8 +31,6 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _card = require("../../hoc/card");
 
-var _grid = require("../../components/grid/grid");
-
 var _marger = require("../../components/layout/marger");
 
 var _title = require("../../components/typography/title");
