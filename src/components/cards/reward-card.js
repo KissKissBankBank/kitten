@@ -60,7 +60,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 var Infos = (0, _styledComponents.default)(function (_ref) {
   var withMarginBottom = _ref.withMarginBottom,
       props = (0, _objectWithoutProperties2.default)(_ref, ["withMarginBottom"]);
-  return _react.default.createElement(_text.Text, props);
+  return /*#__PURE__*/_react.default.createElement(_text.Text, props);
 }).withConfig({
   displayName: "reward-card__Infos",
   componentId: "sc-1vkpp2h-0"
@@ -83,7 +83,7 @@ var RewardImage = _styledComponents.default.img.withConfig({
 var CardContainer = (0, _styledComponents.default)(function (_ref5) {
   var withoutBorder = _ref5.withoutBorder,
       props = (0, _objectWithoutProperties2.default)(_ref5, ["withoutBorder"]);
-  return _react.default.createElement("div", props);
+  return /*#__PURE__*/_react.default.createElement("div", props);
 }).withConfig({
   displayName: "reward-card__CardContainer",
   componentId: "sc-1vkpp2h-2"
@@ -111,13 +111,13 @@ var RewardCardInfo = /*#__PURE__*/function (_Component) {
           value = _this$props.value,
           withMarginBottom = _this$props.withMarginBottom,
           disabled = _this$props.disabled;
-      return _react.default.createElement(Infos, {
+      return /*#__PURE__*/_react.default.createElement(Infos, {
         size: "tiny",
         color: "font1",
         weight: "regular",
         withMarginBottom: withMarginBottom,
         disabled: disabled
-      }, "".concat(label, " "), _react.default.createElement(_text.Text, {
+      }, "".concat(label, " "), /*#__PURE__*/_react.default.createElement(_text.Text, {
         weight: "light"
       }, value));
     }
@@ -156,7 +156,7 @@ var RewardCardImage = /*#__PURE__*/function (_Component2) {
           alt = _this$props2.alt,
           disabled = _this$props2.disabled,
           others = (0, _objectWithoutProperties2.default)(_this$props2, ["alt", "disabled"]);
-      return _react.default.createElement(RewardImage, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(RewardImage, (0, _extends2.default)({}, others, {
         alt: alt || '',
         disabled: disabled
       }));
@@ -189,7 +189,7 @@ var RewardCard = /*#__PURE__*/function (_Component3) {
           children = _this$props3.children,
           withoutBorder = _this$props3.withoutBorder,
           others = (0, _objectWithoutProperties2.default)(_this$props3, ["children", "withoutBorder"]);
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_legacyRewardCardContainer.LegacyRewardCardContainer, this.props), children && _react.default.createElement(CardContainer, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_legacyRewardCardContainer.LegacyRewardCardContainer, this.props), children && /*#__PURE__*/_react.default.createElement(CardContainer, (0, _extends2.default)({
         withoutBorder: withoutBorder
       }, others), children));
     }

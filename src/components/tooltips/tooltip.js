@@ -51,15 +51,15 @@ var Tooltip = /*#__PURE__*/function (_Component) {
           children = _this$props.children,
           id = _this$props.id,
           buttonQuestionMarkIconProps = (0, _objectWithoutProperties2.default)(_this$props, ["place", "children", "id"]);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tooltip"
-      }, _react.default.createElement(_buttonQuestionMarkIcon.ButtonQuestionMarkIcon, (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement(_buttonQuestionMarkIcon.ButtonQuestionMarkIcon, (0, _extends2.default)({
         "data-tip": true,
         "data-for": id,
         "data-event": "click",
         "data-dismiss": id,
         "aria-describedby": id
-      }, buttonQuestionMarkIconProps)), _react.default.createElement(_reactTooltip.default, {
+      }, buttonQuestionMarkIconProps)), /*#__PURE__*/_react.default.createElement(_reactTooltip.default, {
         id: id // This is not a mistake, this attribute is called
         // class not className!
         ,

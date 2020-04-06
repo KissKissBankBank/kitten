@@ -228,7 +228,7 @@ var Dropdown = /*#__PURE__*/function (_React$Component) {
     key: "renderButton",
     value: function renderButton() {
       if (this.props.button) return this.props.button;
-      return _react.default.createElement(_dropdownButton.DropdownButton, {
+      return /*#__PURE__*/_react.default.createElement(_dropdownButton.DropdownButton, {
         ref: "dropdownButton",
         className: this.props.buttonClassName,
         id: this.props.buttonId,
@@ -241,7 +241,7 @@ var Dropdown = /*#__PURE__*/function (_React$Component) {
     value: function renderArrow() {
       if (!this.props.dropdownListArrow) return;
       var style = this.getArrowPosition();
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         ref: "arrow",
         style: style
       }, this.props.dropdownListArrow);
@@ -254,10 +254,10 @@ var Dropdown = /*#__PURE__*/function (_React$Component) {
         'is-expanded': this.state.isExpanded,
         'k-Dropdown--asReference': this.isSelfReference()
       }, this.props.className);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         ref: "dropdown",
         className: dropdownClassName
-      }, button, _react.default.createElement("div", {
+      }, button, /*#__PURE__*/_react.default.createElement("div", {
         ref: "dropdownContent",
         className: "k-Dropdown__content",
         style: this.getContentPosition(),

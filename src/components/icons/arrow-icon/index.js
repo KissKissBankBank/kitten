@@ -36,11 +36,11 @@ var DeprecatedArrowIconSvg = function DeprecatedArrowIconSvg(_ref) {
       version = _ref.version,
       others = (0, _objectWithoutProperties2.default)(_ref, ["className", "direction", "disabled", "version"]);
   var arrowIconClassNames = (0, _classnames.default)('k-ArrowIcon', (_classNames = {}, (0, _defineProperty2.default)(_classNames, "k-ArrowIcon--".concat(direction), direction), (0, _defineProperty2.default)(_classNames, 'k-ArrowIcon--disabled', disabled), _classNames), className);
-  return _react.default.createElement("svg", (0, _extends2.default)({}, others, {
+  return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({}, others, {
     xmlns: "http://www.w3.org/2000/svg",
     className: arrowIconClassNames,
     viewBox: "0 0 6 6"
-  }), _react.default.createElement("title", null, "Arrow"), _react.default.createElement("path", {
+  }), /*#__PURE__*/_react.default.createElement("title", null, "Arrow"), /*#__PURE__*/_react.default.createElement("path", {
     d: "M6 0H0v6h2V2h4z"
   }));
 };
@@ -59,9 +59,9 @@ DeprecatedArrowIconSvg.defaultProps = {
 
 var DeprecatedArrowIcon = function DeprecatedArrowIcon(props) {
   var warningMessage = 'The previous version of ArrowIcon does not handle ' + 'correctly the center of gravity of the arrow. Please use now the prop ' + '`version` with the value `solid` to display an arrow with the right ' + 'center of gravity.';
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: warningMessage
-  }, _react.default.createElement(DeprecatedArrowIconSvg, props));
+  }, /*#__PURE__*/_react.default.createElement(DeprecatedArrowIconSvg, props));
 };
 
 exports.DeprecatedArrowIcon = DeprecatedArrowIcon;
@@ -79,7 +79,7 @@ var SvgArrow = (0, _styledComponents.default)(function (_ref2) {
   var direction = _ref2.direction,
       disabled = _ref2.disabled,
       props = (0, _objectWithoutProperties2.default)(_ref2, ["direction", "disabled"]);
-  return _react.default.createElement("svg", props);
+  return /*#__PURE__*/_react.default.createElement("svg", props);
 }).withConfig({
   displayName: "arrow-icon__SvgArrow",
   componentId: "sc-3d3g2f-0"
@@ -111,19 +111,19 @@ var ArrowIcon = function ArrowIcon(_ref5) {
       others = (0, _objectWithoutProperties2.default)(_ref5, ["version", "direction", "disabled"]);
 
   if (version === 'deprecated-center-of-gravity') {
-    return _react.default.createElement(DeprecatedArrowIcon, (0, _extends2.default)({
+    return /*#__PURE__*/_react.default.createElement(DeprecatedArrowIcon, (0, _extends2.default)({
       version: version,
       direction: direction,
       disabled: disabled
     }, others));
   }
 
-  return _react.default.createElement(SvgArrow, (0, _extends2.default)({}, others, {
+  return /*#__PURE__*/_react.default.createElement(SvgArrow, (0, _extends2.default)({}, others, {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 8.48 5.64",
     direction: direction,
     disabled: disabled
-  }), _react.default.createElement("path", {
+  }), /*#__PURE__*/_react.default.createElement("path", {
     d: "M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
   }));
 };

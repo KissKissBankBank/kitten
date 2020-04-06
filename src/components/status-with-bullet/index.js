@@ -50,9 +50,9 @@ var StatusWithBullet = function StatusWithBullet(_ref2) {
     statusColor = _colorsConfig.default.error;
   }
 
-  return _react.default.createElement(StyledStatus, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(StyledStatus, (0, _extends2.default)({
     statusColor: statusColor
-  }, props), _react.default.createElement(StyledBullet, (0, _extends2.default)({
+  }, props), /*#__PURE__*/_react.default.createElement(StyledBullet, (0, _extends2.default)({
     "aria-hidden": "true"
   }, bulletProps)), statusMessage);
 };

@@ -56,7 +56,7 @@ var Title = /*#__PURE__*/function (_Component) {
         'k-Title--italic': italic
       });
       var Tag = tag;
-      return _react.default.createElement(Tag, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
         className: titleClassNames
       }, other));
     }

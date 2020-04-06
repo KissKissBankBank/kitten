@@ -40,7 +40,7 @@ var _modifierStyles = require("../../components/buttons/button/helpers/modifier-
 var StyledButton = (0, _styledComponents.default)(function (_ref) {
   var buttonModifier = _ref.buttonModifier,
       others = (0, _objectWithoutProperties2.default)(_ref, ["buttonModifier"]);
-  return _react.default.createElement("button", others);
+  return /*#__PURE__*/_react.default.createElement("button", others);
 }).withConfig({
   displayName: "text-copy__StyledButton",
   componentId: "sc-1ikj7bl-0"
@@ -52,7 +52,7 @@ var fadeInAndOut = (0, _styledComponents.keyframes)(["0%,100%{opacity:0;}10%,90%
 var Wrapper = (0, _styledComponents.default)(function (_ref3) {
   var buttonText = _ref3.buttonText,
       others = (0, _objectWithoutProperties2.default)(_ref3, ["buttonText"]);
-  return _react.default.createElement("div", others);
+  return /*#__PURE__*/_react.default.createElement("div", others);
 }).withConfig({
   displayName: "text-copy__Wrapper",
   componentId: "sc-1ikj7bl-1"
@@ -66,7 +66,7 @@ var StyledText = (0, _styledComponents.default)(function (_ref5) {
       className = _ref5.className,
       children = _ref5.children,
       others = (0, _objectWithoutProperties2.default)(_ref5, ["buttonText", "forceOneLine", "className", "children"]);
-  return _react.default.createElement(_text.Text, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_text.Text, (0, _extends2.default)({
     className: className
   }, others), children);
 }).withConfig({
@@ -152,10 +152,10 @@ var TextCopy = function TextCopy(_ref8) {
         buttonModifier = _ref9.buttonModifier,
         buttonProps = _ref9.buttonProps,
         others = (0, _objectWithoutProperties2.default)(_ref9, ["copyText", "buttonText", "buttonModifier", "buttonProps"]);
-    return _react.default.createElement(_react.default.Fragment, null, !buttonText && _react.default.createElement(IconWrapper, {
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !buttonText && /*#__PURE__*/_react.default.createElement(IconWrapper, {
       "aria-hidden": true,
       onClick: copyText
-    }, _react.default.createElement(_copyIcon.CopyIcon, null)), buttonText && _react.default.createElement(StyledButton, (0, _extends2.default)({
+    }, /*#__PURE__*/_react.default.createElement(_copyIcon.CopyIcon, null)), buttonText && /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
       type: "button",
       buttonModifier: buttonModifier,
       onClick: copyText,
@@ -163,28 +163,28 @@ var TextCopy = function TextCopy(_ref8) {
     }, buttonProps), buttonText));
   };
 
-  return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(Wrapper, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(Wrapper, {
     buttonText: buttonText
-  }, description && _react.default.createElement(_visuallyHidden.VisuallyHidden, null, description), _react.default.createElement(StyledText, {
+  }, description && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, description), /*#__PURE__*/_react.default.createElement(StyledText, {
     weight: "light",
     size: "micro",
     lineHeight: "normal",
     forceOneLine: forceOneLine,
     onClick: selectText,
     buttonText: buttonText
-  }, _react.default.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     ref: textRef
-  }, children)), _react.default.createElement(Action, {
+  }, children)), /*#__PURE__*/_react.default.createElement(Action, {
     copyText: copyText,
     buttonText: buttonText,
     buttonModifier: buttonModifier
-  }), alertMessage && shouldShowMessage && _react.default.createElement(StyledArrowContainer, {
+  }), alertMessage && shouldShowMessage && /*#__PURE__*/_react.default.createElement(StyledArrowContainer, {
     color: _colorsConfig.default.primary1,
     position: "top",
     padding: 10,
     centered: true,
     role: "alert"
-  }, _react.default.createElement(_text.Text, {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     color: "background1",
     weight: "light",
     size: "micro"

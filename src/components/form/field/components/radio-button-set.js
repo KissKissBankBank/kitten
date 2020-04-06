@@ -42,9 +42,9 @@ var FieldRadioButtonSet = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(FieldRadioButtonSet, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1"
-      }, _react.default.createElement(_radioButtonSet.RadioButtonSet, this.props));
+      }, /*#__PURE__*/_react.default.createElement(_radioButtonSet.RadioButtonSet, this.props));
     }
   }]);
   return FieldRadioButtonSet;

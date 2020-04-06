@@ -17,15 +17,15 @@ var ClockCircleIcon = function ClockCircleIcon(_ref) {
   var circleColor = _ref.circleColor,
       clockColor = _ref.clockColor,
       props = (0, _objectWithoutProperties2.default)(_ref, ["circleColor", "clockColor"]);
-  return _react.default.createElement("svg", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 20 20"
-  }, props), _react.default.createElement("title", null, "Clock circle"), _react.default.createElement("circle", {
+  }, props), /*#__PURE__*/_react.default.createElement("title", null, "Clock circle"), /*#__PURE__*/_react.default.createElement("circle", {
     fill: circleColor,
     cx: "10",
     cy: "10",
     r: "10"
-  }), _react.default.createElement("path", {
+  }), /*#__PURE__*/_react.default.createElement("path", {
     fill: clockColor,
     d: "M11 9h3v2H9V4h2v5z"
   }));

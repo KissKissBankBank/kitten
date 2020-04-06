@@ -53,7 +53,7 @@ var StyledFormContainer = _styledComponents.default.form.withConfig({
 var StyledGridPosition = (0, _styledComponents.default)(function (_ref) {
   var align = _ref.align,
       others = (0, _objectWithoutProperties2.default)(_ref, ["align"]);
-  return _react.default.createElement(_grid.Grid, others);
+  return /*#__PURE__*/_react.default.createElement(_grid.Grid, others);
 }).withConfig({
   displayName: "text-input-with-unit-form__StyledGridPosition",
   componentId: "wjoixz-1"
@@ -64,7 +64,7 @@ var StyledGridPosition = (0, _styledComponents.default)(function (_ref) {
 var StyledButton = (0, _styledComponents.default)(function (_ref3) {
   var version = _ref3.version,
       others = (0, _objectWithoutProperties2.default)(_ref3, ["version"]);
-  return _react.default.createElement(_button.Button, others);
+  return /*#__PURE__*/_react.default.createElement(_button.Button, others);
 }).withConfig({
   displayName: "text-input-with-unit-form__StyledButton",
   componentId: "wjoixz-2"
@@ -105,25 +105,25 @@ var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
           onInputFocus = _this$props.onInputFocus,
           version = _this$props.version,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["align", "formIsDisabled", "inputId", "inputPlaceholder", "inputUnit", "inputLabel", "inputDefaultValue", "inputIsOnError", "errorMessage", "buttonLabel", "onButtonMouseEnter", "onButtonMouseLeave", "onFormSubmit", "onInputBlur", "onInputChange", "onInputFocus", "version"]);
-      return _react.default.createElement(StyledFormContainer, {
+      return /*#__PURE__*/_react.default.createElement(StyledFormContainer, {
         onSubmit: onFormSubmit
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "3",
         bottom: !inputIsOnError ? 3 : 1
-      }, _react.default.createElement(StyledGridPosition, {
+      }, /*#__PURE__*/_react.default.createElement(StyledGridPosition, {
         align: align
-      }, _react.default.createElement(_grid.GridCol, {
+      }, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         "col-m": version === 'tiny' ? 0 : 5,
         "col-xs": version === 'tiny' ? 0 : 7
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "1.5"
-      }, _react.default.createElement(_label.Label, {
+      }, /*#__PURE__*/_react.default.createElement(_label.Label, {
         size: "micro",
         htmlFor: inputId
-      }, inputLabel)), _react.default.createElement(_marger.Marger, {
+      }, inputLabel)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.5",
         bottom: inputIsOnError ? 1 : null
-      }, _react.default.createElement(_textInputWithUnit.TextInputWithUnit, {
+      }, /*#__PURE__*/_react.default.createElement(_textInputWithUnit.TextInputWithUnit, {
         error: inputIsOnError,
         id: inputId,
         type: "number",
@@ -135,15 +135,15 @@ var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
         onFocus: onInputFocus,
         defaultValue: inputDefaultValue,
         autoComplete: "off"
-      })), inputIsOnError && _react.default.createElement(_marger.Marger, {
+      })), inputIsOnError && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "micro",
         color: "error",
         weight: "regular"
-      }, errorMessage))))), _react.default.createElement(StyledGridPosition, {
+      }, errorMessage))))), /*#__PURE__*/_react.default.createElement(StyledGridPosition, {
         align: align
-      }, _react.default.createElement(StyledButton, {
+      }, /*#__PURE__*/_react.default.createElement(StyledButton, {
         size: "big",
         modifier: "helium",
         type: "submit",

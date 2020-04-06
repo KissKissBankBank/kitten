@@ -45,7 +45,7 @@ var RewardCardCheckedSection = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var children = this.props.children;
-      return _react.default.createElement(_react.Fragment, null, _react.default.createElement(_checkedIconLine.RewardCardCheckedIconLine, null), _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, /*#__PURE__*/_react.default.createElement(_checkedIconLine.RewardCardCheckedIconLine, null), /*#__PURE__*/_react.default.createElement("div", {
         style: styles
       }, children));
     }

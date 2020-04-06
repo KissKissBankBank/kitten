@@ -26,11 +26,11 @@ var _context = require("./components/context");
 var MarkdownPage = function MarkdownPage(_ref) {
   var children = _ref.children,
       paragraphModifier = _ref.paragraphModifier;
-  return _react.default.createElement(_context.Context.Provider, {
+  return /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
     value: {
       paragraphModifier: paragraphModifier
     }
-  }, _react.default.createElement(_reactMarkdown.default, {
+  }, /*#__PURE__*/_react.default.createElement(_reactMarkdown.default, {
     source: children,
     renderers: markdownRenderers,
     escapeHtml: false

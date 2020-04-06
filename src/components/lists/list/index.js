@@ -32,12 +32,12 @@ var List = function List(_ref3) {
   var children = _ref3.children,
       style = _ref3.style,
       withBottomBorderRadius = _ref3.withBottomBorderRadius;
-  return _react.default.createElement(StyledList, {
+  return /*#__PURE__*/_react.default.createElement(StyledList, {
     styles: style,
     withBottomBorderRadius: withBottomBorderRadius
   }, _react.default.Children.map(children, function (child) {
     if (!_react.default.isValidElement(child)) return null;
-    return _react.default.createElement("li", null, child);
+    return /*#__PURE__*/_react.default.createElement("li", null, child);
   }));
 };
 

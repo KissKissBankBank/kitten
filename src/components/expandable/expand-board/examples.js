@@ -139,25 +139,25 @@ var ExpandBoardWithButtonItemList = /*#__PURE__*/function (_PureComponent) {
           borderRadius = _this$props.borderRadius,
           withBottomBorderRadius = _this$props.withBottomBorderRadius,
           big = _this$props.big;
-      return _react.default.createElement(_expandBoard.ExpandBoard, {
+      return /*#__PURE__*/_react.default.createElement(_expandBoard.ExpandBoard, {
         onClick: this.handleClick,
         withAnimation: withAnimation
-      }, _react.default.createElement(_expandBoard.ExpandBoard.Button, {
+      }, /*#__PURE__*/_react.default.createElement(_expandBoard.ExpandBoard.Button, {
         expandChildren: expandedButtonText,
         borderRadius: borderRadius,
         big: big
-      }, buttonText), _react.default.createElement(_expandBoard.ExpandBoard.Content, null, _react.default.createElement(_list.List, {
+      }, buttonText), /*#__PURE__*/_react.default.createElement(_expandBoard.ExpandBoard.Content, null, /*#__PURE__*/_react.default.createElement(_list.List, {
         withBottomBorderRadius: withBottomBorderRadius
       }, this.list.map(function (item, key) {
-        return _react.default.createElement(_list.List.ButtonItem, (0, _extends2.default)({
+        return /*#__PURE__*/_react.default.createElement(_list.List.ButtonItem, (0, _extends2.default)({
           key: item.size,
           disabled: item.disabled
-        }, _this2.buttonListItemStyle(key)), _react.default.createElement(StyledButtonList, null, _react.default.createElement(StyledButtonListItem, {
+        }, _this2.buttonListItemStyle(key)), /*#__PURE__*/_react.default.createElement(StyledButtonList, null, /*#__PURE__*/_react.default.createElement(StyledButtonListItem, {
           tag: "p",
           weight: "regular",
           color: "font1",
           size: "tiny"
-        }, item.size), _react.default.createElement(_text.Text, {
+        }, item.size), /*#__PURE__*/_react.default.createElement(_text.Text, {
           tag: "small",
           color: item.disabled ? 'font2' : 'font1',
           size: "micro"

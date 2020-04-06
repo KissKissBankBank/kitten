@@ -112,9 +112,9 @@ var Modal = /*#__PURE__*/function (_Component) {
     key: "renderCloseModal",
     value: function renderCloseModal() {
       var closeButtonLabel = this.props.closeButtonLabel;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Modal__close"
-      }, _react.default.createElement(_closeButton.CloseButton, {
+      }, /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
         className: "k-Modal__close--fixed",
         modifier: "beryllium",
         onClick: this.close,
@@ -125,7 +125,7 @@ var Modal = /*#__PURE__*/function (_Component) {
     key: "renderTriggerAction",
     value: function renderTriggerAction() {
       if (!this.props.trigger) return;
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         onClick: this.open
       }, this.props.trigger);
     }
@@ -134,7 +134,7 @@ var Modal = /*#__PURE__*/function (_Component) {
     value: function renderGlobalStyle() {
       var modalClassNames = this.props.modalClassNames;
       if (modalClassNames.className.base !== 'k-Modal__content' && modalClassNames.overlayClassName.base !== 'k-Modal__overlay') return;
-      return _react.default.createElement(GlobalStyle, null);
+      return /*#__PURE__*/_react.default.createElement(GlobalStyle, null);
     }
   }, {
     key: "render",
@@ -155,9 +155,9 @@ var Modal = /*#__PURE__*/function (_Component) {
           isAnimated = _this$props.isAnimated,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["trigger", "content", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "disableOutsideScroll", "modalClassNames", "hasCloseButton", "isAnimated"]);
       var triggerClassNames = (0, _classnames.default)('k-Modal', className);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: triggerClassNames
-      }, others), this.renderTriggerAction(), this.renderGlobalStyle(), isAnimated && _react.default.createElement(AnimatedGlobalStyle, null), _react.default.createElement(_reactModal.default, (0, _extends2.default)({
+      }, others), this.renderTriggerAction(), this.renderGlobalStyle(), isAnimated && /*#__PURE__*/_react.default.createElement(AnimatedGlobalStyle, null), /*#__PURE__*/_react.default.createElement(_reactModal.default, (0, _extends2.default)({
         closeTimeoutMS: isAnimated ? 500 : 0,
         role: "dialog",
         className: (0, _extends2.default)({}, modalClassNames.className),

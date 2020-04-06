@@ -45,7 +45,7 @@ var HeaderTitles = /*#__PURE__*/function (_React$Component) {
     key: "renderSubtitle",
     value: function renderSubtitle() {
       if (!this.props.subtitle) return;
-      return _react.default.createElement("p", {
+      return /*#__PURE__*/_react.default.createElement("p", {
         className: (0, _classnames.default)('k-Header__subtitle', this.props.subtitleClassName)
       }, this.props.subtitle);
     }
@@ -59,9 +59,9 @@ var HeaderTitles = /*#__PURE__*/function (_React$Component) {
           titleClassName = _this$props.titleClassName,
           subtitleClassName = _this$props.subtitleClassName,
           headerItemProps = (0, _objectWithoutProperties2.default)(_this$props, ["title", "subtitle", "className", "titleClassName", "subtitleClassName"]);
-      return _react.default.createElement(_header.HeaderItem, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_header.HeaderItem, (0, _extends2.default)({
         className: (0, _classnames.default)('k-Header__titles', className)
-      }, headerItemProps), _react.default.createElement("p", {
+      }, headerItemProps), /*#__PURE__*/_react.default.createElement("p", {
         className: (0, _classnames.default)('k-Header__title', titleClassName)
       }, title), this.renderSubtitle());
     }

@@ -22,7 +22,7 @@ var Separator = function Separator(_ref) {
   var separatorClassName = (0, _classnames.default)('k-Separator', {
     'k-Separator--darker': darker
   }, className);
-  return _react.default.createElement("hr", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("hr", (0, _extends2.default)({
     className: separatorClassName
   }, props));
 };

@@ -114,44 +114,44 @@ var TriptychBase = /*#__PURE__*/function (_Component) {
           item1 = _this$props.item1,
           item2 = _this$props.item2,
           item3 = _this$props.item3;
-      return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement(_grid.Grid, {
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, null, /*#__PURE__*/_react.default.createElement(_grid.Grid, {
         className: "k-u-align-center"
-      }, _react.default.createElement(GridCol, {
+      }, /*#__PURE__*/_react.default.createElement(GridCol, {
         "col-l": "10",
         "offset-l": "1",
         "col-m": "6",
         "offset-m": "0"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         ref: this.setRef('title')
-      }, _react.default.createElement(Marger, {
+      }, /*#__PURE__*/_react.default.createElement(Marger, {
         bottom: "2"
-      }, title), _react.default.createElement(Marger, {
+      }, title), /*#__PURE__*/_react.default.createElement(Marger, {
         bottom: "2"
-      }, _react.default.createElement(VerticalStroke, {
+      }, /*#__PURE__*/_react.default.createElement(VerticalStroke, {
         size: "huge",
         style: styles.verticalStroke
-      })))), _react.default.createElement(GridCol, {
+      })))), /*#__PURE__*/_react.default.createElement(GridCol, {
         "col-l": "4",
         "col-m": "6",
         style: styles.oddMargin
-      }, _react.default.createElement(Marger, {
+      }, /*#__PURE__*/_react.default.createElement(Marger, {
         style: styles.gutter.firstItem
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         ref: this.setRef('firstCard')
-      }, _react.default.createElement(Marger, {
+      }, /*#__PURE__*/_react.default.createElement(Marger, {
         bottom: viewportIsMOrLess ? 5 : 0
-      }, item1)))), _react.default.createElement(GridCol, {
+      }, item1)))), /*#__PURE__*/_react.default.createElement(GridCol, {
         "col-l": "4",
         "col-m": "6"
-      }, _react.default.createElement(Marger, {
+      }, /*#__PURE__*/_react.default.createElement(Marger, {
         style: (0, _extends2.default)({}, styles.secondCard, {}, styles.gutter.secondItem),
         top: this.state.secondCardComputedTopMargin / 10,
         bottom: viewportIsMOrLess ? 5 : 0
-      }, item2)), _react.default.createElement(GridCol, {
+      }, item2)), /*#__PURE__*/_react.default.createElement(GridCol, {
         "col-l": "4",
         "col-m": "6",
         style: styles.oddMargin
-      }, _react.default.createElement(Marger, {
+      }, /*#__PURE__*/_react.default.createElement(Marger, {
         style: styles.gutter.thirdItem
       }, item3))));
     }

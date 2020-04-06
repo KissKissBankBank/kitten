@@ -58,7 +58,7 @@ var RewardEdition = /*#__PURE__*/function (_PureComponent) {
   (0, _createClass2.default)(RewardEdition, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(StyledContainer, null, this.props.children);
+      return /*#__PURE__*/_react.default.createElement(StyledContainer, null, this.props.children);
     }
   }]);
   return RewardEdition;

@@ -20,7 +20,7 @@ var StyledElement = _styledComponents.default.span.withConfig({
 
 var VisuallyHidden = function VisuallyHidden(_ref) {
   var props = (0, _extends2.default)({}, _ref);
-  return _react.default.createElement(StyledElement, props);
+  return /*#__PURE__*/_react.default.createElement(StyledElement, props);
 };
 
 exports.VisuallyHidden = VisuallyHidden;

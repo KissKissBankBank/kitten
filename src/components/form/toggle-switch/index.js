@@ -96,10 +96,10 @@ var ToggleSwitch = function ToggleSwitch(_ref10) {
       isPressed = _useState2[0],
       setPressedState = _useState2[1];
 
-  return _react.default.createElement(StyledSwitchContainer, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(StyledSwitchContainer, (0, _extends2.default)({
     isDisabled: disabled,
     reverseOrder: reverseOrder
-  }, others), _react.default.createElement(StyledSwitch, (0, _extends2.default)({
+  }, others), /*#__PURE__*/_react.default.createElement(StyledSwitch, (0, _extends2.default)({
     onClick: function onClick() {
       return setPressedState(!isPressed);
     },
@@ -112,7 +112,7 @@ var ToggleSwitch = function ToggleSwitch(_ref10) {
     defaultColor: defaultColor,
     disabledColor: disabledColor,
     activeColor: activeColor
-  }, switchProps)), isLabelVisible && _react.default.createElement(StyledLabel, (0, _extends2.default)({
+  }, switchProps)), isLabelVisible && /*#__PURE__*/_react.default.createElement(StyledLabel, (0, _extends2.default)({
     for: id,
     disabledColor: disabledColor,
     big: big

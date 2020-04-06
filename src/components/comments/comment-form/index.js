@@ -157,7 +157,7 @@ var CommentForm = /*#__PURE__*/function (_PureComponent) {
       var _this$props = this.props,
           avatarImgProps = _this$props.avatarImgProps,
           avatarBadge = _this$props.avatarBadge;
-      return _react.default.createElement(StyledGrid, null, _react.default.createElement(_commentAvatar.CommentAvatar, {
+      return /*#__PURE__*/_react.default.createElement(StyledGrid, null, /*#__PURE__*/_react.default.createElement(_commentAvatar.CommentAvatar, {
         avatarBadge: avatarBadge,
         avatarImgProps: avatarImgProps
       }), this.renderInput());
@@ -172,7 +172,7 @@ var CommentForm = /*#__PURE__*/function (_PureComponent) {
           commentLabel = _this$props2.commentLabel,
           ariaId = _this$props2.ariaId,
           textareaId = _this$props2.textareaId;
-      return _react.default.createElement(StyledGridCol, null, _react.default.createElement(StyledInput, null, _react.default.createElement(StyledTextarea, {
+      return /*#__PURE__*/_react.default.createElement(StyledGridCol, null, /*#__PURE__*/_react.default.createElement(StyledInput, null, /*#__PURE__*/_react.default.createElement(StyledTextarea, {
         id: textareaId,
         "aria-label": commentLabel,
         "aria-describedby": ariaId,
@@ -184,16 +184,16 @@ var CommentForm = /*#__PURE__*/function (_PureComponent) {
         placeholder: placeholder,
         onChange: this.handleChange,
         rows: "1"
-      }), _react.default.createElement(StyledArrow, null, _react.default.createElement(StyledArrowBefore, null))), this.renderError(), this.renderButton());
+      }), /*#__PURE__*/_react.default.createElement(StyledArrow, null, /*#__PURE__*/_react.default.createElement(StyledArrowBefore, null))), this.renderError(), this.renderButton());
     }
   }, {
     key: "renderButton",
     value: function renderButton() {
       if (!this.state.value) return;
       var commentButton = this.props.commentButton;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2"
-      }, _react.default.createElement(_button.Button, {
+      }, /*#__PURE__*/_react.default.createElement(_button.Button, {
         type: "button",
         modifier: "helium",
         onClick: this.handleSubmit,
@@ -208,9 +208,9 @@ var CommentForm = /*#__PURE__*/function (_PureComponent) {
           errorMessage = _this$props3.errorMessage,
           ariaId = _this$props3.ariaId;
       if (!error) return;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: ".5"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         id: ariaId,
         color: "error",
         size: "micro",

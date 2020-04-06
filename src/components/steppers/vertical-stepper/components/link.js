@@ -52,7 +52,7 @@ var Link = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(Link, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(StyledParagraph, null, _react.default.createElement(StyledLink, (0, _extends2.default)({}, this.props, {
+      return /*#__PURE__*/_react.default.createElement(StyledParagraph, null, /*#__PURE__*/_react.default.createElement(StyledLink, (0, _extends2.default)({}, this.props, {
         className: (0, _classnames.default)(_index.LINK_CLASSNAME, this.props.className)
       })));
     }

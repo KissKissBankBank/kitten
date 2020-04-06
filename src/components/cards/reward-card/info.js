@@ -31,17 +31,17 @@ var Info = function Info(_ref) {
   if (!label) return null;
   var infosLists = isTinyVersion ? _rewardCard.styles.infos.lists.tinyVersion : _rewardCard.styles.infos.lists;
 
-  var InfoBase = _react.default.createElement(_deprecated.Deprecated, {
+  var InfoBase = /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-  }, _react.default.createElement(Text, {
+  }, /*#__PURE__*/_react.default.createElement(Text, {
     color: "font1",
     weight: "regular",
     style: infosLists
-  }, "".concat(label, " "), _react.default.createElement(Text, {
+  }, "".concat(label, " "), /*#__PURE__*/_react.default.createElement(Text, {
     weight: "light"
   }, value)));
 
-  return _react.default.createElement(_react.Fragment, null, (viewportIsTabletOrLess || isTinyVersion) && _react.default.createElement("div", null, InfoBase), !viewportIsTabletOrLess && !isTinyVersion && InfoBase);
+  return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, (viewportIsTabletOrLess || isTinyVersion) && /*#__PURE__*/_react.default.createElement("div", null, InfoBase), !viewportIsTabletOrLess && !isTinyVersion && InfoBase);
 };
 
 exports.Info = Info;

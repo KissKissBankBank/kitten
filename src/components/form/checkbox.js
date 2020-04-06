@@ -38,18 +38,18 @@ var Checkbox = function Checkbox(_ref) {
   var checkboxInputClassNames = (0, _classnames.default)('k-Checkbox__input', inputClassName, {
     'is-error': error
   });
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-Checkbox', className)
-  }, _react.default.createElement("input", (0, _extends2.default)({
+  }, /*#__PURE__*/_react.default.createElement("input", (0, _extends2.default)({
     ref: inputElement,
     id: id,
     type: "checkbox",
     className: checkboxInputClassNames
-  }, inputProps)), _react.default.createElement("label", {
+  }, inputProps)), /*#__PURE__*/_react.default.createElement("label", {
     htmlFor: id,
     className: "k-Checkbox__label",
     onClick: onLabelClick
-  }, _react.default.createElement(_text.Text, textProps, children)));
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, textProps, children)));
 };
 
 exports.Checkbox = Checkbox;

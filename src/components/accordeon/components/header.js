@@ -27,11 +27,11 @@ var HeaderStyled = _styledComponents.default.button.withConfig({
 var Header = function Header(_ref) {
   var id = _ref.id,
       children = _ref.children;
-  return _react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
+  return /*#__PURE__*/_react.default.createElement(_context.Context.Consumer, null, function (_ref2) {
     var updateSelectedItem = _ref2.updateSelectedItem,
         selectedItem = _ref2.selectedItem,
         componentId = _ref2.componentId;
-    return _react.default.createElement(HeaderStyled, {
+    return /*#__PURE__*/_react.default.createElement(HeaderStyled, {
       onClick: function onClick() {
         return updateSelectedItem(id);
       },

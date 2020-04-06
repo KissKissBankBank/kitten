@@ -38,7 +38,7 @@ var NavList = /*#__PURE__*/function (_React$Component) {
   (0, _createClass2.default)(NavList, [{
     key: "renderItem",
     value: function renderItem(item, i) {
-      return _react.default.createElement("li", {
+      return /*#__PURE__*/_react.default.createElement("li", {
         key: i,
         role: "menuitem"
       }, item);
@@ -51,9 +51,9 @@ var NavList = /*#__PURE__*/function (_React$Component) {
           others = (0, _objectWithoutProperties2.default)(_this$props, ["list"]);
       var items = list.map(this.renderItem);
       var defaultItem = 'No choice';
-      return _react.default.createElement("nav", {
+      return /*#__PURE__*/_react.default.createElement("nav", {
         role: "navigation"
-      }, _react.default.createElement("ul", others, items.length ? items : defaultItem));
+      }, /*#__PURE__*/_react.default.createElement("ul", others, items.length ? items : defaultItem));
     }
   }]);
   return NavList;

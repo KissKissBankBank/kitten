@@ -75,7 +75,7 @@ var Label = /*#__PURE__*/function (_Component) {
       var Tag = tag;
       var labelClassName = (0, _classnames.default)('k-Label', className, (_classNames = {}, (0, _defineProperty2.default)(_classNames, "k-Label--".concat(size), size), (0, _defineProperty2.default)(_classNames, 'k-Label--withoutPointerEvents', withoutPointerEvents), _classNames));
       var htmlFor = tag == 'label' && focusId ? focusId : null;
-      return _react.default.createElement(Tag, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
         className: labelClassName,
         htmlFor: htmlFor,
         onClick: this.handleClick

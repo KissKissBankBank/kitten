@@ -87,10 +87,10 @@ var Accordeon = /*#__PURE__*/function (_Component) {
         children: children,
         type: Accordeon.Item
       });
-      return _react.default.createElement(_context.Context.Provider, {
+      return /*#__PURE__*/_react.default.createElement(_context.Context.Provider, {
         value: this.state
       }, items.map(function (item, index) {
-        return _react.default.createElement(_marger.Marger, {
+        return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
           key: index,
           bottom: index === items.length - 1 ? 0 : 1.5
         }, _react.default.cloneElement(item, {

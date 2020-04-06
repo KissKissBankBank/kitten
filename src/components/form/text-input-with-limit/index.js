@@ -69,7 +69,7 @@ var TextInputWithLimit = function TextInputWithLimit(_ref3) {
       length = _useState4[0],
       setLength = _useState4[1];
 
-  return _react.default.createElement(StyledTextInputWithLimit, null, _react.default.createElement(FocusTextInput, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(StyledTextInputWithLimit, null, /*#__PURE__*/_react.default.createElement(FocusTextInput, (0, _extends2.default)({
     onChange: function onChange(e) {
       var value = e.target.value;
       setLength(value.length);
@@ -79,7 +79,7 @@ var TextInputWithLimit = function TextInputWithLimit(_ref3) {
     disabled: disabled,
     tiny: tiny,
     defaultValue: textValue
-  }, others)), _react.default.createElement(StyledCounter, {
+  }, others)), /*#__PURE__*/_react.default.createElement(StyledCounter, {
     error: length > limit,
     disabled: disabled
   }, limit - length));

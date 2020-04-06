@@ -40,7 +40,7 @@ var FormRow = /*#__PURE__*/function (_React$Component) {
   (0, _createClass2.default)(FormRow, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", (0, _extends2.default)({}, this.props, {
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, this.props, {
         className: (0, _classnames.default)('k-FormRow', this.props.className)
       }));
     }
