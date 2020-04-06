@@ -1,4 +1,7 @@
-import { ScreenConfig } from '../../constants/screen-config'
+import {
+  ScreenConfig,
+  ORDERED_SCREEN_SIZES,
+} from '../../constants/screen-config'
 
 export const getMinQuery = num => `(min-width: ${num}px)`
 export const getMaxQuery = num => `(max-width: ${num}px)`
@@ -37,4 +40,20 @@ export const createMatchMediaWithin = configName => {
   const query = getJoinedQueries([minQuery, maxQuery])
 
   return createMatchMedia(query)
+}
+
+export const getScreenSizeFrom = direction => screenSize => {
+  const currentIndex = ORDERED_SCREEN_SIZES.indexOf(screenSize.toUpperCase())
+  const lastIndex = ORDERED_SCREEN_SIZES.length - 1
+  const nextIndex = currentIndex === lastIndex ? currentIndex : currentIndex + 1
+  const prevIndex = currentIndex === 0 ? 0 : currentIndex - 1
+
+  switch (direction) {
+    case 'previous':
+      return ORDERED_SCREEN_SIZES[prevIndex]
+    case 'next':
+      return ORDERED_SCREEN_SIZES[nextIndex]
+    default:
+      return ORDERED_SCREEN_SIZES[currentIndex]
+  }
 }
