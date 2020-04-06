@@ -47,7 +47,7 @@ var StyledList = _styledComponents.default.li.withConfig({
 var StyledArrowIconDirection = (0, _styledComponents.default)(function (_ref2) {
   var direction = _ref2.direction,
       others = (0, _objectWithoutProperties2.default)(_ref2, ["direction"]);
-  return _react.default.createElement("li", others);
+  return /*#__PURE__*/_react.default.createElement("li", others);
 }).withConfig({
   displayName: "pagination__StyledArrowIconDirection",
   componentId: "sc-19bydjm-2"
@@ -62,7 +62,7 @@ var StyledButtonIcon = (0, _styledComponents.default)(function (_ref5) {
   var isDisabled = _ref5.isDisabled,
       isActive = _ref5.isActive,
       others = (0, _objectWithoutProperties2.default)(_ref5, ["isDisabled", "isActive"]);
-  return _react.default.createElement(_text.Text, others);
+  return /*#__PURE__*/_react.default.createElement(_text.Text, others);
 }).withConfig({
   displayName: "pagination__StyledButtonIcon",
   componentId: "sc-19bydjm-3"
@@ -140,9 +140,9 @@ var PaginationBase = (0, _react.forwardRef)(function (_ref7, _ref) {
     var tag = isActive ? 'span' : 'a';
     var href = isActive ? null : goToPageHref(number);
     var ariaLabel = isActive ? currentPageLabel(number) : goToPageLabel(number);
-    return _react.default.createElement(StyledList, {
+    return /*#__PURE__*/_react.default.createElement(StyledList, {
       key: "page-".concat(number)
-    }, _react.default.createElement(StyledButtonIcon, {
+    }, /*#__PURE__*/_react.default.createElement(StyledButtonIcon, {
       tag: tag,
       href: href,
       key: "link-".concat(number),
@@ -157,7 +157,7 @@ var PaginationBase = (0, _react.forwardRef)(function (_ref7, _ref) {
   };
 
   var renderSpacer = function renderSpacer(index) {
-    return _react.default.createElement(StyledPoints, {
+    return /*#__PURE__*/_react.default.createElement(StyledPoints, {
       key: "spacer-".concat(index),
       "aria-hidden": "true"
     }, '…');
@@ -167,9 +167,9 @@ var PaginationBase = (0, _react.forwardRef)(function (_ref7, _ref) {
     var buttonLabel = direction == 'left' ? (0, _parser.parseHtml)(prevButtonLabel) : (0, _parser.parseHtml)(nextButtonLabel);
     var isDisabled = direction == 'left' ? currentPage == 1 : currentPage == totalPages;
     var number = direction == 'left' ? currentPage == 1 ? 1 : currentPage - 1 : currentPage == totalPages ? totalPages : currentPage + 1;
-    return _react.default.createElement(StyledArrowIconDirection, {
+    return /*#__PURE__*/_react.default.createElement(StyledArrowIconDirection, {
       direction: direction
-    }, _react.default.createElement(StyledButtonIcon, {
+    }, /*#__PURE__*/_react.default.createElement(StyledButtonIcon, {
       tag: "a",
       href: goToPageHref(number),
       key: "link-".concat(direction),
@@ -179,7 +179,7 @@ var PaginationBase = (0, _react.forwardRef)(function (_ref7, _ref) {
       isDisabled: isDisabled,
       tabIndex: isDisabled ? -1 : null,
       onClick: isDisabled ? preventClickDefault : pageClickHandler(number)
-    }, _react.default.createElement(StyledSvg, {
+    }, /*#__PURE__*/_react.default.createElement(StyledSvg, {
       direction: direction,
       disabled: isDisabled,
       "aria-hidden": "true",
@@ -187,10 +187,10 @@ var PaginationBase = (0, _react.forwardRef)(function (_ref7, _ref) {
     })));
   };
 
-  return _react.default.createElement("nav", {
+  return /*#__PURE__*/_react.default.createElement("nav", {
     role: "navigation",
     "aria-label": ariaLabelProp
-  }, _react.default.createElement(StyledGroup, null, renderArrowButton('left'), pageNumbers.map(renderPage), renderArrowButton('right')));
+  }, /*#__PURE__*/_react.default.createElement(StyledGroup, null, renderArrowButton('left'), pageNumbers.map(renderPage), renderArrowButton('right')));
 });
 PaginationBase.propTypes = {
   prevButtonLabel: _propTypes.default.string,

@@ -23,8 +23,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _button = require("../../../components/buttons/button/button");
@@ -61,7 +59,7 @@ var ButtonGroup = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(ButtonGroup, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(StyledButtonGroup, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledButtonGroup, (0, _extends2.default)({
         role: "group"
       }, this.props));
     }

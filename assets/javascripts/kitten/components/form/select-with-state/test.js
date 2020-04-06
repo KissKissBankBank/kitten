@@ -1,7 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { SelectWithState } from './index'
-import Select from 'react-select'
 
 describe('<SelectWithState />', () => {
   let select

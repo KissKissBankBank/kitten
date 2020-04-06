@@ -178,7 +178,7 @@ var UserMenu = /*#__PURE__*/function (_Component) {
   }, {
     key: "getDropdownContent",
     value: function getDropdownContent() {
-      return _react.default.createElement(_navList.NavList, {
+      return /*#__PURE__*/_react.default.createElement(_navList.NavList, {
         className: (0, _classnames.default)('k-UserMenu', 'k-UserMenu--withoutBorderTop'),
         role: "menubar",
         list: this.props.dropdownList
@@ -187,7 +187,7 @@ var UserMenu = /*#__PURE__*/function (_Component) {
   }, {
     key: "getDropdownButton",
     value: function getDropdownButton() {
-      return _react.default.createElement(_buttonImageWithTextAndBadge.ButtonImageWithTextAndBadge, {
+      return /*#__PURE__*/_react.default.createElement(_buttonImageWithTextAndBadge.ButtonImageWithTextAndBadge, {
         ref: "dropdownButton",
         className: this.props.buttonClassName,
         id: this.getButtonId(),
@@ -207,7 +207,7 @@ var UserMenu = /*#__PURE__*/function (_Component) {
   }, {
     key: "getDropdownArrow",
     value: function getDropdownArrow() {
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         className: "k-UserMenu__arrow"
       });
     }
@@ -259,7 +259,7 @@ var UserMenu = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           dropdownList = _this$props.dropdownList,
           otherProps = (0, _objectWithoutProperties2.default)(_this$props, ["dropdownList"]);
-      return _react.default.createElement(_dropdown.Dropdown, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_dropdown.Dropdown, (0, _extends2.default)({
         ref: "dropdown",
         button: this.getDropdownButton(),
         dropdownContent: this.getDropdownContent(),

@@ -27,8 +27,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _screenConfig = require("../../constants/screen-config");
 
-var _mediaQueries = require("../../hoc/media-queries");
-
 var _radium = _interopRequireWildcard(require("radium"));
 
 var _text = require("../../components/typography/text");
@@ -36,8 +34,6 @@ var _text = require("../../components/typography/text");
 var _marger = require("../../components/layout/marger");
 
 var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
-
-var _pathOr = _interopRequireDefault(require("ramda/src/pathOr"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -70,19 +66,19 @@ var Timeline = /*#__PURE__*/function (_Component) {
       var arrayOfChildren = _react.default.Children.toArray(children);
 
       var bulletStyle = [styles.circle, styles.circleMarger[itemHeight]];
-      return _react.default.createElement(_radium.StyleRoot, {
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, {
         style: styles.timelineContainer
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         style: styles.verticalDashedLine
-      }), _react.default.createElement("ol", {
+      }), /*#__PURE__*/_react.default.createElement("ol", {
         style: styles.customList
       }, _react.default.Children.map(arrayOfChildren, function (child, index) {
-        return _react.default.createElement("li", {
+        return /*#__PURE__*/_react.default.createElement("li", {
           style: styles.list
-        }, _react.default.createElement(Text, {
+        }, /*#__PURE__*/_react.default.createElement(Text, {
           size: "tiny",
           style: bulletStyle
-        }, ++index), _react.default.createElement(Marger, {
+        }, ++index), /*#__PURE__*/_react.default.createElement(Marger, {
           top: "2.5",
           bottom: "2.5",
           style: styles.textList

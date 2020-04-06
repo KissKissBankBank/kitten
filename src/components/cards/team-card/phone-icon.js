@@ -23,8 +23,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireDefault(require("radium"));
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _buttonIcon = require("../../buttons/button-icon");
@@ -56,7 +54,7 @@ var TeamCardPhoneIconBase = /*#__PURE__*/function (_Component) {
           phoneNumber = _this$props.phoneNumber,
           viewportIsXSOrLess = _this$props.viewportIsXSOrLess,
           tooltipColor = _this$props.tooltipColor;
-      return _react.default.createElement(_react.Fragment, null, viewportIsXSOrLess && _react.default.createElement(_buttonIcon.ButtonIcon, {
+      return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, viewportIsXSOrLess && /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         tag: "a",
         href: "tel:".concat(phoneNumber),
         modifier: "hydrogen",
@@ -64,9 +62,9 @@ var TeamCardPhoneIconBase = /*#__PURE__*/function (_Component) {
         style: {
           marginRight: 15
         }
-      }, _react.default.createElement(_phoneIcon.PhoneIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_phoneIcon.PhoneIcon, {
         className: "k-ButtonIcon__svg"
-      })), !viewportIsXSOrLess && _react.default.createElement(_buttonWithTooltip.TeamCardButtonWithTooltip, (0, _extends2.default)({}, this.props, {
+      })), !viewportIsXSOrLess && /*#__PURE__*/_react.default.createElement(_buttonWithTooltip.TeamCardButtonWithTooltip, (0, _extends2.default)({}, this.props, {
         color: tooltipColor
       })));
     }

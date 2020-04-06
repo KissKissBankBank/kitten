@@ -57,13 +57,13 @@ var CloseButton = /*#__PURE__*/function (_Component) {
           buttonModifier = _this$props.buttonModifier,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "closeButtonLabel", "size", "buttonModifier"]);
       var buttonClassName = (0, _classnames.default)('k-ButtonIcon--cross', (0, _defineProperty2.default)({}, "k-ButtonIcon--cross--".concat(size), size), className);
-      return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({
         type: "button",
         className: buttonClassName,
         title: closeButtonLabel,
         "aria-label": closeButtonLabel,
         modifier: buttonModifier
-      }, others), _react.default.createElement(_crossIcon.CrossIcon, {
+      }, others), /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
         className: (0, _classnames.default)('k-ButtonIcon__svg', 'k-ButtonIcon__svgRotate')
       }));
     }

@@ -49,7 +49,7 @@ var ImageWithCaption = /*#__PURE__*/function (_Component) {
           className = _this$props.className,
           captionProps = _this$props.captionProps;
       var figcaptionClassName = (0, _classnames.default)('k-ImageWithCaption__caption', className);
-      return _react.default.createElement("figcaption", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("figcaption", (0, _extends2.default)({
         className: figcaptionClassName
       }, captionProps), children);
     }
@@ -63,9 +63,9 @@ var ImageWithCaption = /*#__PURE__*/function (_Component) {
           imageHeight = _this$props2.imageHeight,
           captionProps = _this$props2.captionProps,
           others = (0, _objectWithoutProperties2.default)(_this$props2, ["imageSrc", "imageAlt", "imageWidth", "imageHeight", "captionProps"]);
-      return _react.default.createElement("figure", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("figure", (0, _extends2.default)({
         className: "k-ImageWithCaption"
-      }, others), _react.default.createElement("img", {
+      }, others), /*#__PURE__*/_react.default.createElement("img", {
         src: imageSrc,
         alt: imageAlt,
         width: imageWidth,

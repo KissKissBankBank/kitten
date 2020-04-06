@@ -154,11 +154,11 @@ var TourStep = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "renderTargetHighlight",
     value: function renderTargetHighlight() {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         ref: "targetHighlight",
         className: "k-Tour__step__targetHighlight",
         style: this.state.targetHighlightStyles
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         className: "k-Tour__step__targetHighlightContent"
       }));
     }
@@ -168,9 +168,9 @@ var TourStep = /*#__PURE__*/function (_React$Component) {
       var _this$props = this.props,
           targetElement = _this$props.targetElement,
           popoverProps = (0, _objectWithoutProperties2.default)(_this$props, ["targetElement"]);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tour__step"
-      }, this.renderTargetHighlight(), _react.default.createElement(_tourPopover.TourPopover, (0, _extends2.default)({
+      }, this.renderTargetHighlight(), /*#__PURE__*/_react.default.createElement(_tourPopover.TourPopover, (0, _extends2.default)({
         ref: "popover",
         onPopoverPosition: this.handlePopoverPosition,
         style: this.state.popoverComputedStyles

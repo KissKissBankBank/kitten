@@ -1,8 +1,7 @@
 import React from 'react'
 
 export const KarlToggleClassLink = props => {
-  const { label, elementSelector, toggledClass } = props
-  const onClick = event => {}
+  const { label } = props
 
   return (
     <a className="karl-link" href="#">

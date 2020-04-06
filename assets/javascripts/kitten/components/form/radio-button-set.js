@@ -8,7 +8,7 @@ export class RadioButtonSet extends React.Component {
     this.renderRadioButton = this.renderRadioButton.bind(this)
   }
 
-  renderRadioButton(item, index) {
+  renderRadioButton(item) {
     const { className, ...itemProps } = item
     const radioButtonClassName = classNames(
       'k-RadioButtonSet__radioButton',

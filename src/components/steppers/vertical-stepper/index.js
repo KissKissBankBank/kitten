@@ -58,7 +58,7 @@ var VerticalStepper = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var children = this.props.children;
-      return _react.default.createElement(StyledNav, null, _react.default.createElement(StyledList, {
+      return /*#__PURE__*/_react.default.createElement(StyledNav, null, /*#__PURE__*/_react.default.createElement(StyledList, {
         role: "tablist"
       }, children));
     }

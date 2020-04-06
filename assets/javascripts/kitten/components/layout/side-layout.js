@@ -26,7 +26,7 @@ export class SideLayout extends React.Component {
   }
 
   render() {
-    const { className, ...sideGridProps } = this.props
+    const { className } = this.props
     const hasFluidLayout =
       (className || '').search('k-VerticalGrid__fluid') != -1
     const hasFullHeightLayout = hasFluidLayout && this.state.needsFullHeight

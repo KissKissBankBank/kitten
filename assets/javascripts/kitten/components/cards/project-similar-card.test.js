@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { SimilarProjectCard } from '../../components/cards/project-similar-card'
 import { Title } from '../../components/typography/title'
 import { Paragraph } from '../../components/typography/paragraph'

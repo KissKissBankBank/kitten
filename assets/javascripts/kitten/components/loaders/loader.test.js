@@ -36,10 +36,7 @@ describe('<Loader />', () => {
 
   describe('with color prop', () => {
     const loader = mount(<Loader color="red" />)
-    const circle = loader
-      .find('.k-Loader__circle')
-      .first()
-      .find('circle')
+    const circle = loader.find('.k-Loader__circle').first().find('circle')
 
     it('has circles with red color', () => {
       expect(circle.props().fill).toBe('red')

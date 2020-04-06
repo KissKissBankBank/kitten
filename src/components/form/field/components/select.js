@@ -14,9 +14,9 @@ var _marger = require("../../../layout/marger");
 var _selectWithState = require("../../../form/select-with-state");
 
 var FieldSelect = function FieldSelect(props) {
-  return _react.default.createElement(_marger.Marger, {
+  return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "1"
-  }, _react.default.createElement(_selectWithState.SelectWithState, props));
+  }, /*#__PURE__*/_react.default.createElement(_selectWithState.SelectWithState, props));
 };
 
 exports.FieldSelect = FieldSelect;

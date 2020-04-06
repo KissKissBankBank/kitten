@@ -7,8 +7,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.SideLayout = void 0;
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
@@ -64,21 +62,19 @@ var SideLayout = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          className = _this$props.className,
-          sideGridProps = (0, _objectWithoutProperties2.default)(_this$props, ["className"]);
+      var className = this.props.className;
       var hasFluidLayout = (className || '').search('k-VerticalGrid__fluid') != -1;
       var hasFullHeightLayout = hasFluidLayout && this.state.needsFullHeight;
       var sideLayoutClassName = (0, _classnames.default)(className, {
         'k-VerticalGrid__fullHeight': hasFullHeightLayout
       });
-      return _react.default.createElement(_sideGrid.SideGrid, {
+      return /*#__PURE__*/_react.default.createElement(_sideGrid.SideGrid, {
         className: sideLayoutClassName,
         containerClassName: "k-VerticalGrid__container",
         rowClassName: "k-VerticalGrid__element"
-      }, _react.default.createElement(_sideGrid.SideGridContent, null, _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {
+      }, /*#__PURE__*/_react.default.createElement(_sideGrid.SideGridContent, null, /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         "col-s": "12"
-      }, this.props.children))), _react.default.createElement(_sideGrid.SideGridAside, {
+      }, this.props.children))), /*#__PURE__*/_react.default.createElement(_sideGrid.SideGridAside, {
         className: "k-VerticalGrid__element"
       }, this.props.sidebar));
     }

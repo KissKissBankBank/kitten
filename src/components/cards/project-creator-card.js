@@ -55,12 +55,12 @@ var ProjectCreatorCardComponent = /*#__PURE__*/function (_React$Component) {
     key: "renderDate",
     value: function renderDate() {
       if (!this.props.date) return;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__content"
-      }, _react.default.createElement(_clockIcon.ClockIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_clockIcon.ClockIcon, {
         width: "10px",
         height: "10px"
-      }), _react.default.createElement("span", {
+      }), /*#__PURE__*/_react.default.createElement("span", {
         className: "k-ProjectCreatorCard__date"
       }, this.props.date));
     }
@@ -76,29 +76,29 @@ var ProjectCreatorCardComponent = /*#__PURE__*/function (_React$Component) {
         backgroundColor: statusBackgroundColor,
         borderColor: statusBorderColor ? statusBorderColor : statusBackgroundColor
       };
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__status"
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         className: "k-ProjectCreatorCard__status--icon",
         style: statusStyles
-      }), _react.default.createElement("div", {
+      }), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__status--text"
       }, statusText));
     }
   }, {
     key: "renderDescription",
     value: function renderDescription() {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__grid"
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",
         bottom: "1"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__grid--flexEnd"
-      }, this.renderDate(), this.renderStatus())), _react.default.createElement(_marger.Marger, {
+      }, this.renderDate(), this.renderStatus())), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "2"
-      }, _react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
         margin: false
       }, this.props.children)));
     }
@@ -109,22 +109,22 @@ var ProjectCreatorCardComponent = /*#__PURE__*/function (_React$Component) {
       var target = this.props.isExternal ? {
         target: '_blank'
       } : {};
-      return _react.default.createElement("a", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
         className: "k-ProjectCreatorCard__link",
         href: this.props.href
-      }, target), _react.default.createElement(_separator.Separator, {
+      }, target), /*#__PURE__*/_react.default.createElement(_separator.Separator, {
         darker: true
-      }), _react.default.createElement("div", {
+      }), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__grid"
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.2",
         bottom: "1.2",
         className: "k-ProjectCreatorCard__grid--flex"
-      }, this.props.linkText, _react.default.createElement(_buttonIcon.ButtonIcon, {
+      }, this.props.linkText, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         size: "tiny",
         withoutHover: true,
         verticalArrow: true
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         className: "k-ButtonIcon__svg"
       })))));
     }
@@ -132,7 +132,7 @@ var ProjectCreatorCardComponent = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var ProjectCreatorCardClassName = (0, _classnames.default)('k-ProjectCreatorCard', this.props.className);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: ProjectCreatorCardClassName
       }, this.renderDescription(), this.renderLink());
     }
@@ -142,7 +142,7 @@ var ProjectCreatorCardComponent = /*#__PURE__*/function (_React$Component) {
 
 var ProjectCreatorCard = function ProjectCreatorCard(props) {
   var ProjectCreatorCardContent = (0, _card.card)(ProjectCreatorCardComponent);
-  return _react.default.createElement(ProjectCreatorCardContent, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(ProjectCreatorCardContent, (0, _extends2.default)({
     withDarkBorder: !!props.href,
     light: true,
     withBorder: true,

@@ -112,7 +112,7 @@ var SliderBar = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "renderInput",
     value: function renderInput() {
-      if (this.props.name) return _react.default.createElement("input", {
+      if (this.props.name) return /*#__PURE__*/_react.default.createElement("input", {
         type: "hidden",
         name: this.props.name,
         value: this.props.value || ''
@@ -129,16 +129,16 @@ var SliderBar = /*#__PURE__*/function (_React$Component) {
         left: percentage
       };
       var grabbingClass = this.state.grabbing ? 'is-grabbing' : null;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: (0, _classnames.default)('k-Slider', grabbingClass),
         onClick: this.handleClick
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Slider__ramp",
         ref: "track"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Slider__progress",
         style: trackStyles
-      }), _react.default.createElement("div", {
+      }), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Slider__handle",
         ref: "thumb",
         style: thumbStyles,
@@ -152,7 +152,7 @@ var SliderBar = /*#__PURE__*/function (_React$Component) {
         onTouchStart: this.handleStart,
         onClick: this.handleClick,
         onFocus: this.props.onAction
-      }, _react.default.createElement(_grabberIcon.GrabberIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_grabberIcon.GrabberIcon, {
         className: "k-Slider__handleIcon",
         width: "32",
         height: "32"

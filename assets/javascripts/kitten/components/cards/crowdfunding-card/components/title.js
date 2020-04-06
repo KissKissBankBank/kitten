@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
@@ -84,14 +84,7 @@ class TitleComponent extends PureComponent {
   }
 
   render() {
-    const {
-      title,
-      titleTruncate,
-      titleProps,
-      loading,
-      widgetTitle,
-      dayCounter,
-    } = this.props
+    const { title, widgetTitle } = this.props
 
     return (
       <>

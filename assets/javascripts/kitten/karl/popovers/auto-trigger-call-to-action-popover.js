@@ -1,4 +1,3 @@
-import React from 'react'
 import { triggerEnhancer } from '../../hoc/trigger-enhancer'
 import { PhoneIllustration } from '../../components/illustrations/phone-illustration'
 import { CallToActionPopover } from '../../components/popovers/call-to-action-popover'

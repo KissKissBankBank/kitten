@@ -17,14 +17,14 @@ var PasswordIcon = function PasswordIcon(_ref) {
   var color = _ref.color,
       title = _ref.title,
       props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
-  return _react.default.createElement("svg", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 18 12",
     fill: color,
     width: "18"
-  }, props), title && _react.default.createElement("title", null, title), _react.default.createElement("path", {
+  }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("path", {
     d: "M9 0C4 0 0 4 0 6s4 6 9 6 9-4 9-6-4-6-9-6zm0 10c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"
-  }), _react.default.createElement("circle", {
+  }), /*#__PURE__*/_react.default.createElement("circle", {
     cx: "9",
     cy: "6",
     r: "2"

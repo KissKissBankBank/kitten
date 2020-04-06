@@ -50,7 +50,7 @@ var SupTitle = /*#__PURE__*/function (_Component) {
           supTitleProps = (0, _objectWithoutProperties2.default)(_this$props, ["className", "tag"]);
       var supTitleClassName = (0, _classnames.default)('k-SupTitle', className);
       var Tag = tag;
-      return _react.default.createElement(Tag, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
         className: supTitleClassName
       }, supTitleProps));
     }

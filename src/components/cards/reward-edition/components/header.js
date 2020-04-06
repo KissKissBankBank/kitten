@@ -73,14 +73,14 @@ var Header = /*#__PURE__*/function (_PureComponent) {
           children = _this$props.children,
           onClick = _this$props.onClick,
           garbageButton = _this$props.garbageButton;
-      return _react.default.createElement(StyledContainerHeader, null, _react.default.createElement(StyledRewardAmount, null, children), garbageButton && _react.default.createElement(StyledGarbageButton, {
+      return /*#__PURE__*/_react.default.createElement(StyledContainerHeader, null, /*#__PURE__*/_react.default.createElement(StyledRewardAmount, null, children), garbageButton && /*#__PURE__*/_react.default.createElement(StyledGarbageButton, {
         onClick: onClick,
         type: "button",
         "aria-label": "Garbage Button",
         modifier: "beryllium",
         tiny: true,
         icon: true
-      }, _react.default.createElement(_garbageIcon.GarbageIcon, null)));
+      }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, null)));
     }
   }]);
   return Header;

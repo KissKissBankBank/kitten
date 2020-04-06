@@ -134,12 +134,12 @@ var HighlightHalo = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           onHaloAnimationEnd = _this$props.onHaloAnimationEnd,
           other = (0, _objectWithoutProperties2.default)(_this$props, ["onHaloAnimationEnd"]);
-      return _react.default.createElement(StyledHighlightHalo, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledHighlightHalo, (0, _extends2.default)({
         highlightHaloAnimation: this.highlightHaloAnimation(),
         getAnimationDelay: this.getAnimationDelay()
       }, other, {
         onAnimationEnd: this.handleAnimationEnd
-      }), _react.default.createElement("div", null), _react.default.createElement("div", null), _react.default.createElement("div", {
+      }), /*#__PURE__*/_react.default.createElement("div", null), /*#__PURE__*/_react.default.createElement("div", null), /*#__PURE__*/_react.default.createElement("div", {
         ref: function ref(_ref8) {
           return _this2.lastAnimatedDiv = _ref8;
         }

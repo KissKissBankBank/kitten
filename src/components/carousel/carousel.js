@@ -168,7 +168,7 @@ var CarouselBase = /*#__PURE__*/function (_React$Component) {
           numColumns = _this$state3.numColumns,
           numPages = _this$state3.numPages;
       var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
-      return _react.default.createElement(_carouselInner.CarouselInner, {
+      return /*#__PURE__*/_react.default.createElement(_carouselInner.CarouselInner, {
         data: data,
         itemMinWidth: itemMinWidth,
         renderItem: renderItem,
@@ -197,46 +197,46 @@ var CarouselBase = /*#__PURE__*/function (_React$Component) {
 
       if (viewportIsXSOrLess) {
         var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
-        return _react.default.createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           style: styles.pageControl
         }, rangePage.map(function (index) {
-          return _react.default.createElement("div", {
+          return /*#__PURE__*/_react.default.createElement("div", {
             key: index,
             style: [styles.pageDot, indexPageVisible === index && styles.pageDotActive]
           });
-        }), _react.default.createElement("div", {
+        }), /*#__PURE__*/_react.default.createElement("div", {
           key: "prev",
           style: styles.pageControlButtonPrev,
           onClick: _this.goPrevPage
-        }), _react.default.createElement("div", {
+        }), /*#__PURE__*/_react.default.createElement("div", {
           key: "next",
           style: styles.pageControlButtonNext,
           onClick: _this.goNextPage
         }));
       }
 
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         style: [styles.carouselPagination, viewportIsMOrLess && styles.carouselPaginationTablet, {
           marginTop: viewportIsMOrLess ? itemMarginBetween : 0,
           marginLeft: viewportIsMOrLess ? itemMarginBetween * 2 : 0
         }]
-      }, _react.default.createElement(_buttonIcon.ButtonIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "beryllium",
         onClick: _this.goPrevPage,
         key: "left-".concat(indexPageVisible),
         disabled: indexPageVisible < 1 || numPages < 1,
         style: styles.carouselButtonPagination
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         className: "k-ButtonIcon__svg",
         direction: "left"
-      })), _react.default.createElement(_buttonIcon.ButtonIcon, {
+      })), /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "beryllium",
         onClick: _this.goNextPage,
         key: "right-".concat(indexPageVisible),
         disabled: indexPageVisible >= numPages - 1,
         style: styles.carouselButtonPagination
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         className: "k-ButtonIcon__svg",
         direction: "right"
@@ -260,13 +260,13 @@ var CarouselBase = /*#__PURE__*/function (_React$Component) {
           viewportIsMOrLess = _this$props4.viewportIsMOrLess;
 
       if (viewportIsMOrLess) {
-        return _react.default.createElement("div", null, this.renderCarouselInner(), this.renderPagination());
+        return /*#__PURE__*/_react.default.createElement("div", null, this.renderCarouselInner(), this.renderPagination());
       }
 
-      return _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {
+      return /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         col: withoutLeftOffset ? '11' : '10',
         offset: withoutLeftOffset ? '0' : '1'
-      }, this.renderCarouselInner()), _react.default.createElement(_grid.GridCol, {
+      }, this.renderCarouselInner()), /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         col: "1"
       }, this.renderPagination()));
     }

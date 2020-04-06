@@ -136,18 +136,8 @@ describe('<ImageCropper />', () => {
         const slider = component.find('.k-Slider')
 
         expect(slider).toHaveLength(1)
-        expect(
-          component
-            .find('Label')
-            .at(1)
-            .text(),
-        ).toBe('Zoom…')
-        expect(
-          component
-            .find('Paragraph')
-            .at(1)
-            .text(),
-        ).toBe('Move the image…')
+        expect(component.find('Label').at(1).text()).toBe('Zoom…')
+        expect(component.find('Paragraph').at(1).text()).toBe('Move the image…')
       })
 
       describe('with disabled prop', () => {

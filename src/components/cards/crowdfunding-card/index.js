@@ -114,41 +114,41 @@ var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
           progress = _this$props.progress,
           progressColor = _this$props.progressColor,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["href", "imageContainerBackground", "imageProps", "avatarProps", "ownerDescription", "ownerTitle", "loading", "state", "cardTitle", "cardSubTitle", "titleTruncate", "subTitleTruncate", "titlesMinHeight", "titleProps", "info1", "info2", "info3", "progress", "progressColor"]);
-      return _react.default.createElement(StyledContainer, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(StyledContainer, (0, _extends2.default)({}, others, {
         as: href ? 'a' : 'div',
         onClick: this.removeCurrentFocus,
         className: "k-Card k-Card--light k-Card--withoutBoxShadowOnHover",
         href: href
-      }), _react.default.createElement(_image.default, {
+      }), /*#__PURE__*/_react.default.createElement(_image.default, {
         ownerTitle: ownerTitle,
         ownerDescription: ownerDescription,
         imageContainerBackground: imageContainerBackground,
         imageProps: imageProps,
         avatarProps: avatarProps,
         loading: loading
-      }), _react.default.createElement(StyledTitleAndDescription, {
+      }), /*#__PURE__*/_react.default.createElement(StyledTitleAndDescription, {
         titlesMinHeight: titlesMinHeight
-      }, _react.default.createElement(_title.default, {
+      }, /*#__PURE__*/_react.default.createElement(_title.default, {
         title: cardTitle,
         loading: loading,
         titleTruncate: titleTruncate
-      }), _react.default.createElement(_subtitle.default, {
+      }), /*#__PURE__*/_react.default.createElement(_subtitle.default, {
         subTitle: cardSubTitle,
         subTitleTruncate: subTitleTruncate,
         loading: loading
-      })), _react.default.createElement(_informations.default, {
+      })), /*#__PURE__*/_react.default.createElement(_informations.default, {
         info1: info1,
         info2: info2,
         info3: info3,
         loading: loading
-      }), _react.default.createElement(_progress.default, {
+      }), /*#__PURE__*/_react.default.createElement(_progress.default, {
         progress: progress,
         progressColor: progressColor,
         loading: loading
-      }), _react.default.createElement(_state.default, {
+      }), /*#__PURE__*/_react.default.createElement(_state.default, {
         state: state,
         loading: loading
-      }), _react.default.createElement(_loading.default, {
+      }), /*#__PURE__*/_react.default.createElement(_loading.default, {
         loading: loading
       }));
     }

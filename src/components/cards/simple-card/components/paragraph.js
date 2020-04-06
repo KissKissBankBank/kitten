@@ -49,16 +49,16 @@ var Paragraph = /*#__PURE__*/function (_PureComponent) {
     key: "render",
     value: function render() {
       var paragraph = this.props.paragraph;
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: ".3",
         bottom: "1.5"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         lineHeight: "normal",
         size: "micro",
         weight: "light"
-      }, (0, _parser.parseHtml)(paragraph))), _react.default.createElement(_marger.Marger, {
+      }, (0, _parser.parseHtml)(paragraph))), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.5"
-      }, _react.default.createElement(_horizontalStroke.HorizontalStroke, {
+      }, /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
         size: "tiny"
       })));
     }

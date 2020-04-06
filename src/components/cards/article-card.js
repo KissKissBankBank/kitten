@@ -19,7 +19,7 @@ var ArticleCard = function ArticleCard(_ref) {
   var articleTitle = _ref.articleTitle,
       articleSubTitle = _ref.articleSubTitle,
       props = (0, _objectWithoutProperties2.default)(_ref, ["articleTitle", "articleSubTitle"]);
-  return _react.default.createElement(_crowdfundingCard.CrowdfundingCard, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_crowdfundingCard.CrowdfundingCard, (0, _extends2.default)({
     cardTitle: articleTitle,
     cardSubTitle: articleSubTitle
   }, props, {

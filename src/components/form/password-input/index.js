@@ -25,7 +25,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _textInput = require("../../../components/form/text-input");
 
@@ -34,8 +34,6 @@ var _passwordIcon = require("../../../components/icons/password-icon");
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
 var _typography = require("../../../helpers/utils/typography");
 
@@ -100,16 +98,16 @@ var PasswordInput = /*#__PURE__*/function (_PureComponent) {
       var type = this.state.isHidden ? 'password' : 'text';
       var active = !this.state.isHidden;
       var iconTitle = this.state.isHidden ? iconLabel : hiddenIconLabel;
-      return _react.default.createElement(StyledPasswordInput, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(StyledPasswordInput, null, /*#__PURE__*/_react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
         name: name,
         type: type
-      })), _react.default.createElement(StyledIcon, {
+      })), /*#__PURE__*/_react.default.createElement(StyledIcon, {
         title: iconTitle,
         onClick: this.handleClick,
         onKeyDown: this.handleKeyDown,
         "aria-pressed": active,
         tabIndex: "0"
-      }, _react.default.createElement(_passwordIcon.PasswordIcon, null)));
+      }, /*#__PURE__*/_react.default.createElement(_passwordIcon.PasswordIcon, null)));
     }
   }]);
   return PasswordInput;

@@ -52,7 +52,7 @@ var Grid = /*#__PURE__*/function (_Component) {
           className = _this$props.className,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["className"]);
       var gridClassName = (0, _classnames.default)('k-Grid', className);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: gridClassName
       }, others));
     }
@@ -103,7 +103,7 @@ var GridCol = /*#__PURE__*/function (_React$Component) {
         delete others["col-".concat(mediaQuery)];
         delete others["offset-".concat(mediaQuery)];
       });
-      return _react.default.createElement("div", (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, others, {
         className: gridClassNames
       }));
     }

@@ -21,10 +21,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
-var _radium = _interopRequireDefault(require("radium"));
-
 var _iconBadge = require("../../../components/notifications/icon-badge");
 
 var _checkedIcon = require("../../../components/icons/checked-icon");
@@ -50,12 +46,12 @@ var RewardCardCheckedIconLine = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(RewardCardCheckedIconLine, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         style: styles.base
-      }, _react.default.createElement(_iconBadge.IconBadge, {
+      }, /*#__PURE__*/_react.default.createElement(_iconBadge.IconBadge, {
         valid: true,
         style: styles.iconBadge
-      }, _react.default.createElement(_checkedIcon.CheckedIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_checkedIcon.CheckedIcon, {
         className: "k-IconBadge__svg"
       })));
     }

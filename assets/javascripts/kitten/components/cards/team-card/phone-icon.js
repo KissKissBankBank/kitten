@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { ButtonIcon } from '../../buttons/button-icon'
 import { PhoneIcon } from '../../icons/phone-icon'

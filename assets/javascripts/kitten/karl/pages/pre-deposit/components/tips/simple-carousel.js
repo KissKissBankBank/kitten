@@ -1,12 +1,9 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import { StyleRoot } from 'radium'
 import { Marger } from '../../../../../components/layout/marger'
 import { Title } from '../../../../../components/typography/title'
 import { Paragraph } from '../../../../../components/typography/paragraph'
 import { HorizontalStroke } from '../../../../../components/layout/horizontal-stroke'
-import { Button } from '../../../../../components/buttons/button'
-import COLORS from '../../../../../constants/colors-config'
-import { withMediaQueries } from '../../../../../hoc/media-queries'
 import { ScreenConfig } from '../../../../../constants/screen-config'
 import { pxToRem } from '../../../../../helpers/utils/typography'
 

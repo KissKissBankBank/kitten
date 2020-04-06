@@ -1,10 +1,9 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { TextInput } from '../../../components/form/text-input'
 import { PasswordIcon } from '../../../components/icons/password-icon'
 import COLORS from '../../../constants/colors-config'
 import PropTypes from 'prop-types'
-import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledPasswordInput = styled.div`

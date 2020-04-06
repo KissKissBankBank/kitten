@@ -47,10 +47,10 @@ var Subtitle = /*#__PURE__*/function (_PureComponent) {
     key: "render",
     value: function render() {
       var subtitle = this.props.subtitle;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: ".3",
         bottom: "1.5"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "micro",
         weight: "regular"
       }, (0, _parser.parseHtml)(subtitle)));

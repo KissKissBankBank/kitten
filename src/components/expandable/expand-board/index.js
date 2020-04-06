@@ -72,7 +72,7 @@ var ExpandBoardButton = /*#__PURE__*/function (_PureComponent) {
           borderRadius = _this$props.borderRadius,
           big = _this$props.big;
       var defaultExpandChildren = expandChildren ? expandChildren : children;
-      return _react.default.createElement(StyledButton, {
+      return /*#__PURE__*/_react.default.createElement(StyledButton, {
         big: big,
         modifier: "helium",
         disabled: disabled,
@@ -81,7 +81,7 @@ var ExpandBoardButton = /*#__PURE__*/function (_PureComponent) {
         onClick: onClick,
         type: "button",
         borderRadius: borderRadius
-      }, _react.default.createElement("div", null, expanded ? defaultExpandChildren : children, _react.default.createElement(StyledArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement("div", null, expanded ? defaultExpandChildren : children, /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         version: "solid",
         direction: expanded ? 'top' : 'bottom',
         fill: _colorsConfig.default.background1
@@ -128,7 +128,7 @@ var ExpandBoardContent = /*#__PURE__*/function (_PureComponent2) {
       var _this$props2 = this.props,
           children = _this$props2.children,
           ariaId = _this$props2.ariaId;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         id: ariaId
       }, children);
     }
@@ -286,7 +286,7 @@ var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
             disabled: disabled,
             expanded: _this2.state.expanded,
             onClick: _this2.handleClick,
-            style: _react.default.createElement(StyledButton, null),
+            style: /*#__PURE__*/_react.default.createElement(StyledButton, null),
             ariaId: ariaId
           });
         }
@@ -299,7 +299,7 @@ var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
         }
       });
 
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         style: style
       }, button, this.state.expanded && content);
     }

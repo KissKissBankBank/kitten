@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import { LegoGrid } from '../../components/grid/lego-grid'
 import Masonry from 'react-masonry-component'
 import { NUM_COLUMNS } from '../../constants/grid-config'

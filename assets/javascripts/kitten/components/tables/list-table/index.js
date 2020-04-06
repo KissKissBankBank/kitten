@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { ListTableHeader } from './components/header'
 import { ListTableBody } from './components/body'
