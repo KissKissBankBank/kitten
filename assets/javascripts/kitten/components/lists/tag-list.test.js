@@ -40,13 +40,9 @@ describe('<TagList />', () => {
     })
 
     it('renders a <TypologyTagIcon /> in first child', () => {
-      expect(
-        tagList
-          .children()
-          .first()
-          .find(TypologyTagIcon)
-          .exists(),
-      ).toBe(true)
+      expect(tagList.children().first().find(TypologyTagIcon).exists()).toBe(
+        true,
+      )
     })
 
     it('renders a <InstrumentTagIcon /> in first child', () => {

@@ -28,12 +28,7 @@ describe('<Hero />', () => {
     })
 
     it('renders children value in the first GridCol', () => {
-      expect(
-        component
-          .find('.k-Grid__col--12')
-          .first()
-          .text(),
-      ).toBe('FooBar')
+      expect(component.find('.k-Grid__col--12').first().text()).toBe('FooBar')
     })
   })
 })

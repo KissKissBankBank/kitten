@@ -34,12 +34,9 @@ describe('<SimpleUploader />', () => {
     const component = mount(<SimpleUploader buttonLabel="Custom label" />)
 
     it('has a custom label', () => {
-      expect(
-        component
-          .render()
-          .find('.k-SimpleUploader__button')
-          .text(),
-      ).toBe('Custom label')
+      expect(component.render().find('.k-SimpleUploader__button').text()).toBe(
+        'Custom label',
+      )
     })
   })
 

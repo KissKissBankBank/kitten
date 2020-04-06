@@ -47,10 +47,7 @@ describe('<Pagination />', () => {
         foo: 'bar',
       }
 
-      pagination
-        .find('a')
-        .last()
-        .simulate('click', event)
+      pagination.find('a').last().simulate('click', event)
 
       expect(onClickSpy.called).toBe(true)
       expect(onClickSpy.calledWithMatch(2, event)).toBe(true)

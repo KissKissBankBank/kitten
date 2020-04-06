@@ -109,8 +109,8 @@ Slider.defaultProps = {
   min: 0,
   max: 100,
   step: 1,
-  onChange: function() {},
-  onChangeEnd: function() {},
+  onChange: function () {},
+  onChangeEnd: function () {},
 }
 
 // DEPRECATED: do not use default export.

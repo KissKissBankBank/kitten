@@ -433,10 +433,10 @@ Dropdown.defaultProps = {
   closeOnOuterClick: false,
 
   // Called when one of the `refreshEvents` is triggered.
-  onPositionUpdate: function() {},
+  onPositionUpdate: function () {},
 
   // Called when the dropdown is opened or closed
-  onToggle: function() {},
+  onToggle: function () {},
 }
 
 // DEPRECATED: do not use default export.
