@@ -46,7 +46,7 @@ storiesOf('Popovers & Tours/HighlightHalo', module)
             step: 1,
           })}
           onHaloAnimationEnd={() => {
-            console.log('Animation has ended.')
+            console.warn('Animation has ended.')
           }}
         />
       </StoryContainer>

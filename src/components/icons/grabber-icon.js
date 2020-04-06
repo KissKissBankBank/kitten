@@ -47,15 +47,15 @@ var GrabberIcon = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("svg", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
         viewBox: "0 0 100 100",
         width: "32",
         height: "32"
-      }, this.props), _react.default.createElement("title", null, "Grabber"), _react.default.createElement("path", {
+      }, this.props), /*#__PURE__*/_react.default.createElement("title", null, "Grabber"), /*#__PURE__*/_react.default.createElement("path", {
         d: "M0 0 v100 h20 v-100 z"
-      }), _react.default.createElement("path", {
+      }), /*#__PURE__*/_react.default.createElement("path", {
         d: "M40 0 v100 h20 v-100 z"
-      }), _react.default.createElement("path", {
+      }), /*#__PURE__*/_react.default.createElement("path", {
         d: "M80 0 v100 h20 v-100 z"
       }));
     }

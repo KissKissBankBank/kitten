@@ -154,25 +154,25 @@ var SimpleCarousel = /*#__PURE__*/function (_Component) {
           currentPageNumber = _this$state2.currentPageNumber;
       var rangePage = (0, _range.createRangeFromZeroTo)(totalPagesCount);
       var id = this.props.id ? this.props.id + '_' : '';
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledContainer, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledContainer, (0, _extends2.default)({
         style: containerStyle,
         addBottomMargin: this.showPagination()
       }, others), _react.default.Children.map(children, function (item, index) {
-        return _react.default.createElement("div", {
+        return /*#__PURE__*/_react.default.createElement("div", {
           key: item.key,
           "aria-hidden": index !== currentPageNumber,
           id: "".concat(id, "carouselItem_").concat(index),
           "aria-labelledby": "".concat(id, "carouselTab_").concat(index),
           role: "tabpanel"
         }, item);
-      })), this.showPagination() && _react.default.createElement(StyledPagination, {
+      })), this.showPagination() && /*#__PURE__*/_react.default.createElement(StyledPagination, {
         style: paginationStyle,
         paginationAlign: paginationAlign,
         role: "tablist",
         onKeyDown: this.handleKeyDown,
         ref: this.paginationRef
       }, rangePage.map(function (numPage) {
-        return _react.default.createElement(StyledPaginationButton, {
+        return /*#__PURE__*/_react.default.createElement(StyledPaginationButton, {
           key: numPage,
           id: "".concat(id, "carouselTab_").concat(numPage),
           type: "button",
@@ -183,7 +183,7 @@ var SimpleCarousel = /*#__PURE__*/function (_Component) {
           activePaginationColor: activePaginationColor,
           style: bulletStyle,
           onClick: _this2.handlePageClick(numPage)
-        }, _react.default.createElement(_visuallyHidden.VisuallyHidden, null, "Page ".concat(numPage + 1)));
+        }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, "Page ".concat(numPage + 1)));
       })));
     }
   }]);

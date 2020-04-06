@@ -69,9 +69,9 @@ var CallToActionPopover = /*#__PURE__*/function (_Component) {
     value: function renderIllustration() {
       if (!this.props.illustration) return;
       var Illustration = this.props.illustration;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Popover__illustration"
-      }, _react.default.createElement(Illustration, null));
+      }, /*#__PURE__*/_react.default.createElement(Illustration, null));
     }
   }, {
     key: "renderButton",
@@ -80,7 +80,7 @@ var CallToActionPopover = /*#__PURE__*/function (_Component) {
           clickOptions = options.clickOptions,
           others = (0, _objectWithoutProperties2.default)(options, ["label", "clickOptions"]);
       var clickHandler = this.getButtonClickHandler(clickOptions);
-      return _react.default.createElement(_button.Button, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
         onClick: clickHandler,
         key: i,
         children: label
@@ -101,29 +101,29 @@ var CallToActionPopover = /*#__PURE__*/function (_Component) {
           buttons = _this$props.buttons,
           illustration = _this$props.illustration,
           popoverProps = (0, _objectWithoutProperties2.default)(_this$props, ["title", "text", "titleAriaLabelId", "buttons", "illustration"]);
-      return _react.default.createElement(_popover.Popover, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_popover.Popover, (0, _extends2.default)({
         titleAriaLabelId: titleAriaLabelId
-      }, popoverProps), this.renderIllustration(), _react.default.createElement(_marger.Marger, {
+      }, popoverProps), this.renderIllustration(), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "4",
         bottom: "4",
         className: "k-Popover__content"
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "1"
-      }, _react.default.createElement(_title.Title, {
+      }, /*#__PURE__*/_react.default.createElement(_title.Title, {
         id: titleAriaLabelId,
         modifier: "senary",
         margin: false
-      }, title)), _react.default.createElement(_marger.Marger, {
+      }, title)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "3"
-      }, _react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
         modifier: "tertiary",
         margin: false
-      }, text)), _react.default.createElement(_marger.Marger, {
+      }, text)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "3"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Popover__navigation"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Popover__buttons"
       }, this.renderButtonsList())))));
     }

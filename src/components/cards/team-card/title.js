@@ -47,13 +47,13 @@ var TeamCardTitle = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           children = _this$props.children,
           subTitle = _this$props.subTitle;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "default",
         weight: "bold",
         color: "font1"
-      }, children), _react.default.createElement("br", null), _react.default.createElement(_text.Text, {
+      }, children), /*#__PURE__*/_react.default.createElement("br", null), /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "micro",
         color: "font1",
         weight: "light"

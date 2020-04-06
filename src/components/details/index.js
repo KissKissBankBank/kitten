@@ -49,10 +49,10 @@ var Details = function Details(_ref) {
     onToggle(event);
   };
 
-  return _react.default.createElement("details", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("details", (0, _extends2.default)({
     onToggle: handleToggle,
     open: openDefault
-  }, props), _react.default.createElement(Summary, null, summaryRender({
+  }, props), /*#__PURE__*/_react.default.createElement(Summary, null, summaryRender({
     open: open
   })), children);
 };

@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -15,7 +13,7 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -54,13 +52,13 @@ var EngagementCard = function EngagementCard(_ref2) {
       isActive = _ref2.isActive,
       as = _ref2.as,
       others = (0, _objectWithoutProperties2.default)(_ref2, ["icon", "backgroundColor", "href", "children", "hoverBorder", "isActive", "as"]);
-  return _react.default.createElement(StyledCard, (0, _extends2.default)({}, others, {
+  return /*#__PURE__*/_react.default.createElement(StyledCard, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',
     href: href,
     backgroundColor: backgroundColor,
     hoverBorder: hoverBorder,
     isActive: isActive
-  }), _react.default.createElement(StyledIcon, null, icon), _react.default.createElement(StyledText, {
+  }), /*#__PURE__*/_react.default.createElement(StyledIcon, null, icon), /*#__PURE__*/_react.default.createElement(StyledText, {
     size: "micro",
     weight: "regular",
     color: "font1"

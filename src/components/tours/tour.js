@@ -67,7 +67,7 @@ var Tour = /*#__PURE__*/function (_Component) {
 
   }, {
     key: "handleTargetHighlightPosition",
-    value: function handleTargetHighlightPosition(step) {
+    value: function handleTargetHighlightPosition() {
       this.setState({
         visible: true
       });
@@ -183,7 +183,7 @@ var Tour = /*#__PURE__*/function (_Component) {
     key: "renderTourStep",
     value: function renderTourStep() {
       if (!this.state.play) return;
-      return _react.default.createElement(_tourStep.TourStep, {
+      return /*#__PURE__*/_react.default.createElement(_tourStep.TourStep, {
         onNextClick: this.handleClickOnNext,
         onPrevClick: this.handleClickOnPrev,
         onCloseClick: this.handleClickOnClose,
@@ -204,7 +204,7 @@ var Tour = /*#__PURE__*/function (_Component) {
       var tourClassName = (0, _classnames.default)('k-Tour', {
         'is-hidden': !this.state.visible
       }, this.props.className);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: tourClassName
       }, this.renderTourStep());
     }

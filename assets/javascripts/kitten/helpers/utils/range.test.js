@@ -1,4 +1,3 @@
-import React from 'react'
 import { createRangeFromZeroTo } from '../../helpers/utils/range'
 
 describe('utils range', () => {

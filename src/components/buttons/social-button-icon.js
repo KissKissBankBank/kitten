@@ -26,9 +26,9 @@ var _youtubeIcon = require("../../components/icons/youtube-icon");
 var _pinterestIcon = require("../../components/icons/pinterest-icon");
 
 var FacebookButtonIcon = function FacebookButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "facebook"
-  }), _react.default.createElement(_facebookIcon.FacebookIcon, {
+  }), /*#__PURE__*/_react.default.createElement(_facebookIcon.FacebookIcon, {
     className: "k-ButtonIcon__svg"
   }));
 };
@@ -36,9 +36,9 @@ var FacebookButtonIcon = function FacebookButtonIcon(props) {
 exports.FacebookButtonIcon = FacebookButtonIcon;
 
 var TwitterButtonIcon = function TwitterButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "twitter"
-  }), _react.default.createElement(_twitterIcon.TwitterIcon, {
+  }), /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {
     className: "k-ButtonIcon__svg"
   }));
 };
@@ -46,9 +46,9 @@ var TwitterButtonIcon = function TwitterButtonIcon(props) {
 exports.TwitterButtonIcon = TwitterButtonIcon;
 
 var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "linkedin"
-  }), _react.default.createElement(_linkedinIcon.LinkedinIcon, {
+  }), /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
     className: "k-ButtonIcon__svg"
   }));
 };
@@ -56,9 +56,9 @@ var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
 exports.LinkedinButtonIcon = LinkedinButtonIcon;
 
 var InstagramButtonIcon = function InstagramButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "instagram"
-  }), _react.default.createElement(_instagramIcon.InstagramIcon, {
+  }), /*#__PURE__*/_react.default.createElement(_instagramIcon.InstagramIcon, {
     className: "k-ButtonIcon__svg"
   }));
 };
@@ -66,9 +66,9 @@ var InstagramButtonIcon = function InstagramButtonIcon(props) {
 exports.InstagramButtonIcon = InstagramButtonIcon;
 
 var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "youtube"
-  }), _react.default.createElement(_youtubeIcon.YoutubeIcon, {
+  }), /*#__PURE__*/_react.default.createElement(_youtubeIcon.YoutubeIcon, {
     className: "k-ButtonIcon__svg"
   }));
 };
@@ -76,9 +76,9 @@ var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
 exports.YoutubeButtonIcon = YoutubeButtonIcon;
 
 var PinterestButtonIcon = function PinterestButtonIcon(props) {
-  return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({}, props, {
     modifier: "pinterest"
-  }), _react.default.createElement(_pinterestIcon.PinterestIcon, {
+  }), /*#__PURE__*/_react.default.createElement(_pinterestIcon.PinterestIcon, {
     className: "k-ButtonIcon__svg"
   }));
 };

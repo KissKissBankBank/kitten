@@ -88,11 +88,11 @@ var LegoGridBase = /*#__PURE__*/function (_Component) {
 
       var gridClassName = (0, _classnames.default)('k-LegoGrid', classByMediaQuery(), className);
       var masonryStyle = [styles.masonry, !this.state.show && styles.masonry.hidden, others.style];
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: gridClassName
       }, others, {
         style: masonryStyle
-      }), _react.default.createElement(_reactMasonryComponent.default, masonryProps, children));
+      }), /*#__PURE__*/_react.default.createElement(_reactMasonryComponent.default, masonryProps, children));
     }
   }]);
   return LegoGridBase;
@@ -109,9 +109,9 @@ LegoGrid.Item = function (_ref) {
   var children = _ref.children,
       props = (0, _objectWithoutProperties2.default)(_ref, ["children"]);
   var itemClassName = (0, _classnames.default)('k-LegoGrid__item', props.className);
-  return _react.default.createElement("div", (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
     className: itemClassName
-  }), _react.default.createElement("div", {
+  }), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-LegoGrid__item__content"
   }, children));
 };

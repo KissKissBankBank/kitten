@@ -35,10 +35,10 @@ var Circle = function Circle(_ref) {
   var color = _ref.color,
       others = (0, _objectWithoutProperties2.default)(_ref, ["color"]);
   var size = 5;
-  return _react.default.createElement("svg", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 ".concat(size * 2, " ").concat(size * 2)
-  }, others), _react.default.createElement("circle", {
+  }, others), /*#__PURE__*/_react.default.createElement("circle", {
     fill: color,
     cx: size,
     cy: size,
@@ -67,12 +67,12 @@ var Loader = /*#__PURE__*/function (_Component) {
       var Tag = tag;
       var loaderClassName = (0, _classnames.default)('k-Loader', className);
 
-      var circle = _react.default.createElement(Circle, {
+      var circle = /*#__PURE__*/_react.default.createElement(Circle, {
         className: "k-Loader__circle",
         color: color
       });
 
-      return _react.default.createElement(Tag, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
         className: loaderClassName
       }, others), circle, circle, circle);
     }

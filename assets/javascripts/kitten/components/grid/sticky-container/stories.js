@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef } from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { StickyContainer } from './index'
@@ -123,7 +123,10 @@ storiesOf('Grid/StickyContainer', module)
       </Container>
     )),
   )
-  .add('isSticky="topOnScrollUp"', withInfo(info)(() => <MainComponent />))
+  .add(
+    'isSticky="topOnScrollUp"',
+    withInfo(info)(() => <MainComponent />),
+  )
   .add(
     'isSticky="bottomOnScrollDown"',
     withInfo(info)(() => (

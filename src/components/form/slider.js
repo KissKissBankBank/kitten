@@ -108,7 +108,7 @@ var Slider = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement(_sliderBar.SliderBar, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_sliderBar.SliderBar, (0, _extends2.default)({
         ref: "contents"
       }, this.props, this.state, {
         onMove: this.handleMove,

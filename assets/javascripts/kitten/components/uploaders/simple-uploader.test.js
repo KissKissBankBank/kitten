@@ -6,7 +6,6 @@ import { ButtonIcon } from '../../components/buttons/button-icon'
 describe('<SimpleUploader />', () => {
   describe('by default', () => {
     const component = mount(<SimpleUploader />)
-    const theme = component.find('.k-SimpleUploader')
 
     it('it has an <Uploader />', () => {
       expect(component.find(Uploader)).toHaveLength(1)

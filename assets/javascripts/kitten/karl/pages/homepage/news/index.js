@@ -20,7 +20,7 @@ const StyledTitle = styled(Title)`
   }
 `
 
-const HomepageNews = props => (
+const HomepageNews = () => (
   <Container>
     <StyledSection>
       <StyledTitle tag="h2">Nos 4 actus</StyledTitle>

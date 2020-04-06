@@ -49,7 +49,7 @@ var DropdownButton = /*#__PURE__*/function (_React$Component) {
           isExpanded = _this$props.isExpanded,
           rest = (0, _objectWithoutProperties2.default)(_this$props, ["className", "isExpanded"]);
       var buttonClassName = (0, _classnames.default)('k-Dropdown__button', className);
-      return _react.default.createElement("button", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
         ref: "dropdownButton",
         className: buttonClassName,
         "aria-haspopup": "true",

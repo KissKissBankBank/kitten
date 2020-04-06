@@ -73,7 +73,7 @@ var CommentAvatar = /*#__PURE__*/function (_PureComponent) {
     key: "render",
     value: function render() {
       var avatarImgProps = this.props.avatarImgProps;
-      return _react.default.createElement(StyledAvatar, null, _react.default.createElement(StyledPosition, null, this.renderBadge(), _react.default.createElement(StyledButtonImage, {
+      return /*#__PURE__*/_react.default.createElement(StyledAvatar, null, /*#__PURE__*/_react.default.createElement(StyledPosition, null, this.renderBadge(), /*#__PURE__*/_react.default.createElement(StyledButtonImage, {
         tag: "span",
         withoutPointerEvents: true,
         img: avatarImgProps
@@ -84,14 +84,14 @@ var CommentAvatar = /*#__PURE__*/function (_PureComponent) {
     value: function renderBadge() {
       var avatarBadge = this.props.avatarBadge;
       if (!avatarBadge) return;
-      return _react.default.createElement(StyledAvatarBadge, null, avatarBadge);
+      return /*#__PURE__*/_react.default.createElement(StyledAvatarBadge, null, avatarBadge);
     }
   }, {
     key: "renderDate",
     value: function renderDate() {
       var commentDate = this.props.commentDate;
       if (!commentDate) return;
-      return _react.default.createElement(_text.Text, {
+      return /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "micro",
         weight: "light",
         color: "font1"

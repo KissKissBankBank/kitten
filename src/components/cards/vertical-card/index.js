@@ -84,19 +84,19 @@ var VerticalCard = function VerticalCard(_ref4) {
       others = (0, _objectWithoutProperties2.default)(_ref4, ["imageProps", "title", "titleTag", "description", "descriptionTag", "withTitleStroke", "textAlign"]);
   var style = imageProps.style,
       imgProps = (0, _objectWithoutProperties2.default)(imageProps, ["style"]);
-  return _react.default.createElement(Card, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(Card, (0, _extends2.default)({
     textAlign: textAlign
-  }, others), _react.default.createElement(Img, (0, _extends2.default)({}, imgProps, {
+  }, others), /*#__PURE__*/_react.default.createElement(Img, (0, _extends2.default)({}, imgProps, {
     styles: style
-  })), _react.default.createElement(_title.Title, {
+  })), /*#__PURE__*/_react.default.createElement(_title.Title, {
     modifier: "senary",
     tag: titleTag,
     margin: false
-  }, title), withTitleStroke && _react.default.createElement(StrokePosition, {
+  }, title), withTitleStroke && /*#__PURE__*/_react.default.createElement(StrokePosition, {
     selfAlign: textAlign
-  }, _react.default.createElement(StyledHorizontalStroke, null)), description && _react.default.createElement(_marger.Marger, {
+  }, /*#__PURE__*/_react.default.createElement(StyledHorizontalStroke, null)), description && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: withTitleStroke ? 0 : 1
-  }, _react.default.createElement(_paragraph.Paragraph, {
+  }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
     modifier: "quaternary",
     tag: descriptionTag,
     margin: false

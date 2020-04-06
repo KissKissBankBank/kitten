@@ -21,9 +21,7 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
-
-var _propTypes = _interopRequireDefault(require("prop-types"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _prev = require("./components/prev");
 
@@ -74,7 +72,7 @@ var NavTabCarousel = /*#__PURE__*/function (_Component) {
         children: children,
         type: NavTabCarousel.Pagination
       })[0];
-      return _react.default.createElement(NavTabCarouselStyles, null, prev || _react.default.createElement(_styledComponents2.LeftEmptyContainer, null), pagination, next || _react.default.createElement(_styledComponents2.RightEmptyContainer, null));
+      return /*#__PURE__*/_react.default.createElement(NavTabCarouselStyles, null, prev || /*#__PURE__*/_react.default.createElement(_styledComponents2.LeftEmptyContainer, null), pagination, next || /*#__PURE__*/_react.default.createElement(_styledComponents2.RightEmptyContainer, null));
     }
   }]);
   return NavTabCarousel;

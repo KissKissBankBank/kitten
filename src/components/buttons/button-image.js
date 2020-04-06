@@ -48,7 +48,7 @@ var ButtonImage = /*#__PURE__*/function (_Component) {
           alt = props.alt,
           others = (0, _objectWithoutProperties2.default)(props, ["className", "alt"]);
       var imgClassName = (0, _classnames.default)('k-ButtonImage__img', className);
-      return _react.default.createElement("img", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({
         className: imgClassName,
         alt: alt || ''
       }, others));
@@ -76,7 +76,7 @@ var ButtonImage = /*#__PURE__*/function (_Component) {
 
       var tabindex = tag == 'a' && !this.props.href ? 0 : null;
       var Tag = tag;
-      return _react.default.createElement(Tag, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
         className: buttonClassName,
         tabIndex: tabindex
       }, others), this.renderImage(img));

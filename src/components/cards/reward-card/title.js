@@ -29,8 +29,6 @@ var _text = require("../../../components/typography/text");
 
 var _horizontalStroke = require("../../../components/layout/horizontal-stroke");
 
-var _marger = require("../../../components/layout/marger");
-
 var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
@@ -61,13 +59,13 @@ var RewardCardTitleBase = /*#__PURE__*/function (_Component) {
           disabled = _this$props.disabled;
       var titleStyles = [styles.base, disabled && styles.disabled];
       var strokeStyles = [styles.stroke.base, disabled && styles.stroke.disabled];
-      return _react.default.createElement(_react.Fragment, null, _react.default.createElement(Text, {
+      return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, /*#__PURE__*/_react.default.createElement(Text, {
         fontStyle: "italic",
         weight: "bold",
         tag: tagName,
         color: "font1",
         style: titleStyles
-      }, children), _react.default.createElement(HorizontalStroke, {
+      }, children), /*#__PURE__*/_react.default.createElement(HorizontalStroke, {
         size: "default",
         style: strokeStyles
       }));

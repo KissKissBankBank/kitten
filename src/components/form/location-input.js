@@ -107,12 +107,12 @@ var LocationInput = /*#__PURE__*/function (_Component) {
 
       var autocompleteItem = function autocompleteItem(_ref) {
         var formattedSuggestion = _ref.formattedSuggestion;
-        return _react.default.createElement("div", null, _react.default.createElement(_locationIcon.LocationIcon, {
+        return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_locationIcon.LocationIcon, {
           width: "12px",
           height: "15px"
-        }), _react.default.createElement("span", {
+        }), /*#__PURE__*/_react.default.createElement("span", {
           className: "k-LocationInput__autocompleteItem__mainText"
-        }, formattedSuggestion.mainText), ' ', _react.default.createElement("span", {
+        }, formattedSuggestion.mainText), ' ', /*#__PURE__*/_react.default.createElement("span", {
           className: "k-LocationInput__autocompleteItem__secondaryText"
         }, formattedSuggestion.secondaryText));
       };
@@ -121,11 +121,11 @@ var LocationInput = /*#__PURE__*/function (_Component) {
         value: this.state.address,
         onChange: this.handleChange
       });
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-LocationInput"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-LocationInput__icon"
-      }, _react.default.createElement(_locationIcon.LocationIcon, null)), _react.default.createElement(_reactPlacesAutocomplete.default, (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement(_locationIcon.LocationIcon, null)), /*#__PURE__*/_react.default.createElement(_reactPlacesAutocomplete.default, (0, _extends2.default)({
         classNames: placesClassNames,
         autocompleteItem: autocompleteItem,
         inputProps: finalInputProps,

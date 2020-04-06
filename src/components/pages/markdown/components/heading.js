@@ -19,8 +19,6 @@ var _horizontalStroke = require("../../../layout/horizontal-stroke");
 
 var _marger = require("../../../layout/marger");
 
-var _typography = require("../../../../helpers/utils/typography");
-
 var MarkdownHeading = function MarkdownHeading(props) {
   var modifier;
   var tag;
@@ -49,10 +47,10 @@ var MarkdownHeading = function MarkdownHeading(props) {
 
   var renderHorizontalStroke = function renderHorizontalStroke() {
     if (props.level > 1) return;
-    return _react.default.createElement(_marger.Marger, {
+    return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
       top: "2",
       bottom: "4"
-    }, _react.default.createElement(_horizontalStroke.HorizontalStroke, {
+    }, /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
       size: "big"
     }));
   };
@@ -61,13 +59,13 @@ var MarkdownHeading = function MarkdownHeading(props) {
     lower: true,
     remove: /'/g
   });
-  return _react.default.createElement(_react.Fragment, null, _react.default.createElement(_marger.Marger, {
+  return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: {
       default: 8,
       fromS: 10
     },
     bottom: "2"
-  }, _react.default.createElement(_title.Title, {
+  }, /*#__PURE__*/_react.default.createElement(_title.Title, {
     modifier: modifier,
     tag: tag,
     id: id

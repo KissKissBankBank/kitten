@@ -198,14 +198,14 @@ var ImageCropper = /*#__PURE__*/function (_React$Component) {
         height: this.state.cropperHeight
       };
       var dragMode = this.props.disabled || !this.props.isCropEnabled ? 'none' : 'move';
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",
         key: "cropper"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         ref: function ref(node) {
           _this2.cropperContainer = node;
         }
-      }, this.state.cropperWidth && this.state.cropperHeight && _react.default.createElement(_reactCropper.default // This helps unmount and remount a new cropper to keep
+      }, this.state.cropperWidth && this.state.cropperHeight && /*#__PURE__*/_react.default.createElement(_reactCropper.default // This helps unmount and remount a new cropper to keep
       // the component responsive.
       , {
         key: "cropper-".concat(this.state.cropperHeight),
@@ -231,10 +231,10 @@ var ImageCropper = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "renderCropperInfo",
     value: function renderCropperInfo() {
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",
         bottom: "1.5"
-      }, _react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
         modifier: "quaternary",
         margin: false
       }, this.props.cropperInfo));
@@ -242,9 +242,9 @@ var ImageCropper = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "renderSlider",
     value: function renderSlider() {
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1"
-      }, _react.default.createElement(_slider.Slider, {
+      }, /*#__PURE__*/_react.default.createElement(_slider.Slider, {
         name: "zoom",
         min: this.state.sliderMin,
         max: this.state.sliderMax,
@@ -256,10 +256,10 @@ var ImageCropper = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "renderSliderTitle",
     value: function renderSliderTitle() {
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.5",
         bottom: "1"
-      }, _react.default.createElement(_label.Label, {
+      }, /*#__PURE__*/_react.default.createElement(_label.Label, {
         size: "micro"
       }, this.props.sliderTitle));
     }
@@ -267,7 +267,7 @@ var ImageCropper = /*#__PURE__*/function (_React$Component) {
     key: "renderSliderAndCropperInfo",
     value: function renderSliderAndCropperInfo() {
       if (this.props.disabled) return;
-      return _react.default.createElement(_grid.GridCol, {
+      return /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         col: "12",
         "col-m": "6"
       }, this.renderCropperInfo(), this.renderSliderTitle(), this.renderSlider());
@@ -276,19 +276,19 @@ var ImageCropper = /*#__PURE__*/function (_React$Component) {
     key: "renderCroppingImage",
     value: function renderCroppingImage() {
       if (!this.state.imageSrc) return;
-      return _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {
+      return /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         col: "12",
         "col-m": "6"
       }, this.renderCropper()), this.props.isCropEnabled && this.renderSliderAndCropperInfo());
     }
   }, {
     key: "renderError",
-    value: function renderError(error) {
+    value: function renderError() {
       if (!this.state.hasErrorOnUploader) return;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "1"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         color: "error",
         size: "tiny",
         weight: "regular"
@@ -297,7 +297,7 @@ var ImageCropper = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "renderUploader",
     value: function renderUploader() {
-      return _react.default.createElement(_simpleUploader.SimpleUploader, {
+      return /*#__PURE__*/_react.default.createElement(_simpleUploader.SimpleUploader, {
         name: this.props.name,
         maxSize: this.props.maxSize,
         acceptedFiles: this.props.acceptedFiles,
@@ -314,18 +314,18 @@ var ImageCropper = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("section", null, _react.default.createElement(_grid.Grid, null, _react.default.createElement(_grid.GridCol, {
+      return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         col: "12"
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "1.5"
-      }, _react.default.createElement(_label.Label, {
+      }, /*#__PURE__*/_react.default.createElement(_label.Label, {
         size: "tiny"
-      }, this.props.label)), _react.default.createElement(_marger.Marger, {
+      }, this.props.label)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.5",
         bottom: "1"
-      }, this.renderUploader()), this.renderError(), _react.default.createElement(_marger.Marger, {
+      }, this.renderUploader()), this.renderError(), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1"
-      }, _react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
         modifier: "quaternary",
         margin: false
       }, this.props.description)))), this.renderCroppingImage());

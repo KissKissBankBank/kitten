@@ -21,8 +21,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _radium = _interopRequireDefault(require("radium"));
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _marger = require("../../layout/marger");
@@ -49,9 +47,9 @@ var TeamCardImage = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           src = _this$props.src,
           title = _this$props.title;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "2"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         style: imgBackground(src),
         title: title
       }));

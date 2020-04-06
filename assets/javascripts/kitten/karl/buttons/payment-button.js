@@ -4,7 +4,6 @@ import { TagButton } from '../../components/buttons/tag-button'
 import { VisaIcon } from '../../components/icons/visa-icon'
 import { MasterCardIcon } from '../../components/icons/mastercard-icon'
 import { CbIcon } from '../../components/icons/cb-icon'
-import { Line } from '../../components/layout/line'
 
 const paymentButtonWrapper = (WrappedComponent, props) => {
   return class PaymentButtonWrapper extends Component {
@@ -45,7 +44,7 @@ const KarlPaymentButtonCb = paymentButtonWrapper(CbIcon, {
   width: '36',
 })
 
-const KarlPaymentButtonBankTransfer = props => {
+const KarlPaymentButtonBankTransfer = () => {
   const text = (
     <TagButton big tag="span">
       Virement

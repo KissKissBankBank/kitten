@@ -175,37 +175,37 @@ var LegacyRewardCardContainerBase = /*#__PURE__*/function (_Component) {
       };
       var withImageOnTinyVersion = shouldDisplayImage && this.isTinyVersion();
       if (!titleAmount) return null;
-      return _react.default.createElement(_deprecated.Deprecated, {
+      return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
         warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-      }, _react.default.createElement(_radium.StyleRoot, (0, _extends2.default)({}, others, {
+      }, /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, (0, _extends2.default)({}, others, {
         style: cardStyles
-      }), _react.default.createElement(_marger.Marger, {
+      }), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: this.isSOrLessVersion() ? 0 : 4,
         top: this.isSOrLessVersion() ? 3 : 4
-      }, _react.default.createElement(Grid, {
+      }, /*#__PURE__*/_react.default.createElement(Grid, {
         style: cardPaddings
-      }, _react.default.createElement(GridCol, leftColumnProps, titleAmount && _react.default.createElement(_content.RewardCardContent, (0, _extends2.default)({}, this.props, {
+      }, /*#__PURE__*/_react.default.createElement(GridCol, leftColumnProps, titleAmount && /*#__PURE__*/_react.default.createElement(_content.RewardCardContent, (0, _extends2.default)({}, this.props, {
         subtitle: subtitle || titleDescription,
         subtitleTag: subtitleTag || textTag,
         description: description || textDescription,
         isTinyVersion: this.isTinyVersion()
-      })), _react.default.createElement(_infos.RewardCardInfos, (0, _extends2.default)({
+      })), /*#__PURE__*/_react.default.createElement(_infos.RewardCardInfos, (0, _extends2.default)({
         infos: this.legacyInfos()
       }, this.props, {
         isTinyVersion: this.isTinyVersion(),
         viewportIsTabletOrLess: viewportIsTabletOrLess
-      })), !this.isSOrLessVersion() && _react.default.createElement(_action.RewardCardActionOnMOrMore, (0, _extends2.default)({}, this.props, {
+      })), !this.isSOrLessVersion() && /*#__PURE__*/_react.default.createElement(_action.RewardCardActionOnMOrMore, (0, _extends2.default)({}, this.props, {
         manageContributionDescription: manageContributionDescription || myContribution,
         manageContributionLinkLabel: manageContributionLinkLabel || manageContribution,
         manageContributionLinkHref: manageContributionLinkHref || manageContributionLink,
         buttonLabel: buttonLabel || button,
         isTinyVersion: this.isTinyVersion(),
         isSOrLessVersion: this.isSOrLessVersion()
-      }))), shouldDisplayImage && _react.default.createElement(GridCol, (0, _extends2.default)({}, rightColumnProps, {
+      }))), shouldDisplayImage && /*#__PURE__*/_react.default.createElement(GridCol, (0, _extends2.default)({}, rightColumnProps, {
         style: cardImageStyles
-      }), _react.default.createElement(_marger.Marger, {
+      }), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: !myContribution ? 2 : null
-      }, _react.default.createElement(_image2.RewardCardImage, this.props)))), this.isSOrLessVersion() && _react.default.createElement(_action.RewardCardAction, (0, _extends2.default)({}, this.props, {
+      }, /*#__PURE__*/_react.default.createElement(_image2.RewardCardImage, this.props)))), this.isSOrLessVersion() && /*#__PURE__*/_react.default.createElement(_action.RewardCardAction, (0, _extends2.default)({}, this.props, {
         manageContributionDescription: manageContributionDescription || myContribution,
         manageContributionLinkLabel: manageContributionLinkLabel || manageContribution,
         manageContributionLinkHref: manageContributionLinkHref || manageContributionLink,

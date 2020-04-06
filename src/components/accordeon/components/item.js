@@ -30,7 +30,7 @@ var Item = function Item(_ref) {
     children: children,
     type: _content.Content
   });
-  return _react.default.createElement(_react.Fragment, null, header[0] && _react.default.cloneElement(header[0], {
+  return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, header[0] && _react.default.cloneElement(header[0], {
     id: id
   }), content[0] && _react.default.cloneElement(content[0], {
     id: id

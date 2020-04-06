@@ -48,7 +48,7 @@ var RewardCardRowSideBase = /*#__PURE__*/function (_Component) {
           children = _this$props.children,
           withVerticalMargins = _this$props.withVerticalMargins;
       var rowSideStyle = [styles.base, withVerticalMargins && styles.withVerticalMargins];
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         style: rowSideStyle
       }, children);
     }

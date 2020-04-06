@@ -64,14 +64,14 @@ var LoaderWithParagraph = /*#__PURE__*/function (_Component) {
         'k-u-margin-right-single': loaderPosition == 'left'
       }, loaderProps.className);
 
-      var loader = _react.default.createElement(_loader.Loader, (0, _extends2.default)({}, loaderProps, {
+      var loader = /*#__PURE__*/_react.default.createElement(_loader.Loader, (0, _extends2.default)({}, loaderProps, {
         className: loaderClassName
       }));
 
       var loaderBefore = loaderPosition == 'top' || loaderPosition == 'left';
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: containerClassName
-      }, others), loaderBefore ? loader : null, _react.default.createElement(_paragraph.Paragraph, (0, _extends2.default)({
+      }, others), loaderBefore ? loader : null, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, (0, _extends2.default)({
         modifier: "secondary",
         margin: false
       }, paragraphProps), this.props.children), loaderBefore ? null : loader);

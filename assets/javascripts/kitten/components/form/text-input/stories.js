@@ -64,20 +64,24 @@ const info = {
 storiesOf('Form/TextInput', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('Text input', () => {
-    return (
-      <Grid style={{ marginTop: '5em' }}>
-        <GridCol offset="1" col="6">
-          <TextInput
-            tag={select('Tag', tagOptions, 'input')}
-            valid={boolean('Valid', false)}
-            error={boolean('Error', false)}
-            disabled={boolean('Disabled', false)}
-            tiny={boolean('Tiny', false)}
-            placeholder={text('Placeholder', 'Les props sont transmises')}
-            digits={number('Digits', 12)}
-          />
-        </GridCol>
-      </Grid>
-    )
-  })
+  .add(
+    'Text input',
+    () => {
+      return (
+        <Grid style={{ marginTop: '5em' }}>
+          <GridCol offset="1" col="6">
+            <TextInput
+              tag={select('Tag', tagOptions, 'input')}
+              valid={boolean('Valid', false)}
+              error={boolean('Error', false)}
+              disabled={boolean('Disabled', false)}
+              tiny={boolean('Tiny', false)}
+              placeholder={text('Placeholder', 'Les props sont transmises')}
+              digits={number('Digits', 12)}
+            />
+          </GridCol>
+        </Grid>
+      )
+    },
+    { info },
+  )

@@ -48,7 +48,7 @@ var StyledImageContainer = (0, _styledComponents.default)(function (_ref) {
   var loading = _ref.loading,
       imageContainerBackground = _ref.imageContainerBackground,
       others = (0, _objectWithoutProperties2.default)(_ref, ["loading", "imageContainerBackground"]);
-  return _react.default.createElement("div", others);
+  return /*#__PURE__*/_react.default.createElement("div", others);
 }).withConfig({
   displayName: "image__StyledImageContainer",
   componentId: "sc-166p1i9-0"
@@ -110,25 +110,25 @@ var Image = /*#__PURE__*/function (_PureComponent) {
           ownerDescription = _this$props.ownerDescription,
           ownerTitle = _this$props.ownerTitle,
           loading = _this$props.loading;
-      return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement(StyledImageContainer, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(StyledImageContainer, {
         className: "k-Card__imageContainer",
         imageContainerBackground: imageContainerBackground,
         loading: loading
-      }, !loading && _react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
+      }, !loading && /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, imageProps, {
         alt: imageProps.alt || '',
         className: "k-Card__image"
-      }))), _react.default.createElement(StyledContainerAvatar, null, _react.default.createElement("div", {
+      }))), /*#__PURE__*/_react.default.createElement(StyledContainerAvatar, null, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-u-margin-top-single"
-      }, _react.default.createElement(StyledAvatar, {
+      }, /*#__PURE__*/_react.default.createElement(StyledAvatar, {
         tag: "span",
         img: !loading && avatarProps,
         withoutPointerEvents: true
-      })), _react.default.createElement(StyledOwner, null, _react.default.createElement(StyledTitle, {
+      })), /*#__PURE__*/_react.default.createElement(StyledOwner, null, /*#__PURE__*/_react.default.createElement(StyledTitle, {
         tag: "div",
         size: "micro",
         weight: "regular",
         color: "font1"
-      }, !loading && ownerTitle), _react.default.createElement(StyledDescription, {
+      }, !loading && ownerTitle), /*#__PURE__*/_react.default.createElement(StyledDescription, {
         tag: "div",
         size: "micro",
         weight: "light",

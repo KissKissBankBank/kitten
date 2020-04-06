@@ -119,7 +119,7 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
           others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "name", "digits", "tiny", "tag"]);
 
       if (tag === 'textarea') {
-        return _react.default.createElement(StyledTextarea, null, _react.default.createElement(StyledInputTextarea, (0, _extends2.default)({
+        return /*#__PURE__*/_react.default.createElement(StyledTextarea, null, /*#__PURE__*/_react.default.createElement(StyledInputTextarea, (0, _extends2.default)({
           ref: function ref(input) {
             return _this.input = input;
           },
@@ -129,9 +129,9 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
           tiny: tiny,
           digits: digits,
           name: name
-        }, others)), _react.default.createElement(StyledGradientTextarea, null));
+        }, others)), /*#__PURE__*/_react.default.createElement(StyledGradientTextarea, null));
       } else {
-        return _react.default.createElement(StyledInput, (0, _extends2.default)({
+        return /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
           ref: function ref(input) {
             return _this.input = input;
           },

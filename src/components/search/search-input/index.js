@@ -7,8 +7,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.SearchInput = void 0;
 
-var _react = _interopRequireDefault(require("react"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _screenConfig = require("../../../constants/screen-config");

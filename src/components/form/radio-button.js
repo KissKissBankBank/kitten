@@ -25,8 +25,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _classnames = _interopRequireDefault(require("classnames"));
 
 function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
@@ -53,7 +51,7 @@ var RadioButton = /*#__PURE__*/function (_Component) {
       var labelContentsClassNames = (0, _classnames.default)('k-RadioButton__labelContents', {
         'k-RadioButton__labelContents--large': largeContent
       });
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: labelContentsClassNames
       }, children);
     }
@@ -70,7 +68,7 @@ var RadioButton = /*#__PURE__*/function (_Component) {
       }, {
         'k-RadioButton__label--withContents': !!children
       });
-      return _react.default.createElement("label", {
+      return /*#__PURE__*/_react.default.createElement("label", {
         htmlFor: id,
         className: radioButtonLabelClassNames
       }, text);
@@ -92,10 +90,10 @@ var RadioButton = /*#__PURE__*/function (_Component) {
       var radioButtonInputClassNames = (0, _classnames.default)('k-RadioButton__input', inputClassName, {
         'is-error': error
       });
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: (0, _classnames.default)('k-RadioButton', className),
         style: style
-      }, _react.default.createElement("input", (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement("input", (0, _extends2.default)({
         id: id,
         type: "radio",
         className: radioButtonInputClassNames

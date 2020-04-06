@@ -395,41 +395,6 @@ export const KarlLoggedHeaderPlatformSwitch = defaultProps(
   loggedPlatformSwitchProps,
 )
 
-const userMenuDropdownList = [
-  <a className="k-UserMenu__item" href="#">
-    Mon profil
-  </a>,
-  <a className="k-UserMenu__item" href="#">
-    Mes projets
-  </a>,
-  <a className="k-UserMenu__item" href="#">
-    Mes contributions
-  </a>,
-  <a className="k-UserMenu__item" href="#">
-    Mes messages
-  </a>,
-  <a
-    className="k-UserMenu__item
-                k-UserMenu__item--secondary
-                k-UserMenu__borderTop"
-    href="#"
-  >
-    Admin
-  </a>,
-  <a className="k-UserMenu__item k-UserMenu__item--secondary" href="#">
-    Rapports
-  </a>,
-  <a className="k-UserMenu__item k-UserMenu__borderTop" href="#">
-    Profil
-  </a>,
-  <a className="k-UserMenu__item" href="#">
-    Réglages
-  </a>,
-  <a className="k-UserMenu__item" href="#">
-    Déconnexion
-  </a>,
-]
-
 export const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
   // Position
   positionedWith: () => document.getElementById('header-logged'),

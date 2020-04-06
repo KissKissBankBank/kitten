@@ -23,6 +23,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: add `getScreenSizeFrom` helper in `media-queries` file.
 - Fix: Fix `Dropdown` components events and accessibility.
 
+Fixes:
+- Fix a memory leak to unmounted `StickyContainer`.
+- Fix `Alert` error when `onAfterClose` is not defined.
+
 ## [2.61.0] - 2020-04-02
 
 Feature:

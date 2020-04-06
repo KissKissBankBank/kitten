@@ -27,7 +27,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
@@ -100,7 +100,7 @@ var Overlay = /*#__PURE__*/function (_Component) {
           zIndex = _this$props.zIndex,
           other = (0, _objectWithoutProperties2.default)(_this$props, ["className", "zIndex"]);
       var isActive = this.state.isActive;
-      return _react.default.createElement(StyledOverlay, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledOverlay, (0, _extends2.default)({
         zIndex: zIndex,
         className: (0, _classnames.default)(isActive && 'is-active', className)
       }, other));

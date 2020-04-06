@@ -39,16 +39,14 @@ var _parser = require("../../helpers/utils/parser");
 
 var _screenConfig = require("../../constants/screen-config");
 
-var _gridConfig = require("../../constants/grid-config");
-
 function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var PlayerButton = function PlayerButton(props) {
-  return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, null, /*#__PURE__*/_react.default.createElement("div", {
     style: styles.playerButton
-  }, _react.default.createElement(_text.Text, {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     size: "default",
     weight: "regular",
     "aria-label": props.playButtonLabel
@@ -121,32 +119,30 @@ var EmbedPlayerBase = /*#__PURE__*/function (_Component) {
           iframeHtml = _this$props.iframeHtml,
           playButtonLabel = _this$props.playButtonLabel,
           _this$props$style = _this$props.style,
-          mainStyle = _this$props$style === void 0 ? void 0 : _this$props$style,
-          t = _this$props.t;
+          mainStyle = _this$props$style === void 0 ? void 0 : _this$props$style;
       var validRatio = parseInt(ratio, 10);
       var thumbnail = previewProps.thumbnail,
-          badgeComponent = previewProps.badgeComponent,
-          style = previewProps.style;
+          badgeComponent = previewProps.badgeComponent;
       var isVideoPlaying = iframeHtml && this.state.showPlayer;
       var playerPreviewStyle = [styles.player.base, iframeHtml ? {
         cursor: 'pointer'
       } : null, isVideoPlaying ? styles.player.hide : styles.player.show];
-      return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, null, /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         style: (0, _extends2.default)({}, mainStyle, {}, styles.container),
         ref: function ref(node) {
           _this2.previewVideo = node;
         }
-      }, this.a11yOnClickProps()), _react.default.createElement("div", {
+      }, this.a11yOnClickProps()), /*#__PURE__*/_react.default.createElement("div", {
         style: playerPreviewStyle
-      }, iframeHtml && _react.default.createElement(PlayerButton, {
+      }, iframeHtml && /*#__PURE__*/_react.default.createElement(PlayerButton, {
         playButtonLabel: playButtonLabel
-      }), _react.default.createElement("img", {
+      }), /*#__PURE__*/_react.default.createElement("img", {
         style: styles.thumbnail,
         src: thumbnail.src,
         alt: thumbnail.alt
-      }), badgeComponent), iframeHtml && _react.default.createElement("div", {
+      }), badgeComponent), iframeHtml && /*#__PURE__*/_react.default.createElement("div", {
         style: styles.embedPlayer
-      }, _react.default.createElement(_responsiveIframeContainer.ResponsiveIframeContainer, {
+      }, /*#__PURE__*/_react.default.createElement(_responsiveIframeContainer.ResponsiveIframeContainer, {
         ratio: validRatio
       }, (0, _parser.parseHtml)(iframeHtml)))));
     }

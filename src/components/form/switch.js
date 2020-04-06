@@ -22,15 +22,15 @@ var Switch = function Switch(_ref) {
       label = _ref.label,
       big = _ref.big,
       others = (0, _objectWithoutProperties2.default)(_ref, ["id", "isChecked", "disabled", "label", "big"]);
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Switch"
-  }, _react.default.createElement("input", (0, _extends2.default)({}, others, {
+  }, /*#__PURE__*/_react.default.createElement("input", (0, _extends2.default)({}, others, {
     id: id,
     type: "checkbox",
     className: (0, _classnames.default)('k-Switch__input', others.className),
     defaultChecked: isChecked,
     disabled: disabled
-  })), _react.default.createElement("label", {
+  })), /*#__PURE__*/_react.default.createElement("label", {
     htmlFor: id,
     className: (0, _classnames.default)('k-Switch__label', {
       'k-Switch__label--big': big

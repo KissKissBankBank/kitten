@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { GarbageIcon } from '../../components/icons/garbage-icon'
 import { ButtonIcon } from '../../components/buttons/button-icon'

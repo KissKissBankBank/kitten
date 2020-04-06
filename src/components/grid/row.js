@@ -35,9 +35,9 @@ var Row = function Row(_ref) {
     'k-Row--padded': padded
   }, className);
   var rowContentClassName = (0, _classnames.default)('k-Row__content', contentClassName);
-  return _react.default.createElement("div", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
     className: rowClassName
-  }, others), _react.default.createElement("div", {
+  }, others), /*#__PURE__*/_react.default.createElement("div", {
     className: rowContentClassName
   }, children));
 };

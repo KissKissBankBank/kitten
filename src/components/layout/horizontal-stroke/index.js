@@ -13,9 +13,7 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _react = _interopRequireWildcard(require("react"));
-
-var _classnames = _interopRequireDefault(require("classnames"));
+var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -68,7 +66,7 @@ var HorizontalStroke = function HorizontalStroke(_ref4) {
   var style = _ref4.style,
       size = _ref4.size,
       props = (0, _objectWithoutProperties2.default)(_ref4, ["style", "size"]);
-  return _react.default.createElement(StyledHorizontalStroke, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(StyledHorizontalStroke, (0, _extends2.default)({}, props, {
     modifierSize: size,
     styles: style
   }));

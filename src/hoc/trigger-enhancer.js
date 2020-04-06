@@ -129,7 +129,7 @@ var triggerEnhancer = function triggerEnhancer(WrappedComponent, wrappedComponen
       key: "render",
       value: function render() {
         if (!this.state.play) return null;
-        return _react.default.createElement(WrappedComponent, (0, _extends2.default)({}, this.handlerProps(), wrappedComponentProps));
+        return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends2.default)({}, this.handlerProps(), wrappedComponentProps));
       }
     }]);
     return TriggerWrapper;

@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { HorizontalNav } from '../../components/navigation/horizontal-nav'
 import { Row } from '../../components/grid/row'
 import COLORS from '../../constants/colors-config'
 
-export const KarlHorizontalNav = props => {
+export const KarlHorizontalNav = () => {
   const horizontalNavItems = [
     { key: 'key1', text: 'Nav link 1', href: '#', selected: true },
     { key: 'key2', text: 'Nav link 2', href: '#' },
@@ -14,7 +14,7 @@ export const KarlHorizontalNav = props => {
   return <HorizontalNav items={horizontalNavItems} />
 }
 
-export const KarlTouchHorizontalNav = props => {
+export const KarlTouchHorizontalNav = () => {
   const rowStyles = {
     backgroundColor: COLORS.background3,
   }
@@ -32,7 +32,7 @@ export const KarlTouchHorizontalNav = props => {
   )
 }
 
-export const KarlTouchHorizontalNavWithNotification = props => {
+export const KarlTouchHorizontalNavWithNotification = () => {
   const rowStyles = {
     backgroundColor: COLORS.background3,
   }

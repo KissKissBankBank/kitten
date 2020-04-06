@@ -64,30 +64,30 @@ var CounterBlock = function CounterBlock(_ref) {
     default: 2,
     fromS: 4
   };
-  return _react.default.createElement(Container, null, isString(title) ? _react.default.createElement(_marger.Marger, {
+  return /*#__PURE__*/_react.default.createElement(Container, null, isString(title) ? /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     bottom: margin
-  }, _react.default.createElement(_title.Title, {
+  }, /*#__PURE__*/_react.default.createElement(_title.Title, {
     modifier: "tertiary",
     margin: false,
     tag: titleTag
-  }, title)) : title, _react.default.createElement(FlexContainer, null, _react.default.createElement(StrokeContainer, {
+  }, title)) : title, /*#__PURE__*/_react.default.createElement(FlexContainer, null, /*#__PURE__*/_react.default.createElement(StrokeContainer, {
     className: "k-u-hidden@m-down"
-  }, _react.default.createElement(_horizontalStroke.HorizontalStroke, {
+  }, /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
     className: "styledStroke",
     size: "big"
-  })), isString(counter) ? _react.default.createElement(_text.Text, {
+  })), isString(counter) ? /*#__PURE__*/_react.default.createElement(_text.Text, {
     className: "styledText",
     weight: "bold",
     tag: titleTag,
     fontStyle: "italic"
-  }, counter, unit && _react.default.createElement(Unit, null, "\xA0", unit)) : counter, _react.default.createElement(StrokeContainer, {
+  }, counter, unit && /*#__PURE__*/_react.default.createElement(Unit, null, "\xA0", unit)) : counter, /*#__PURE__*/_react.default.createElement(StrokeContainer, {
     className: "k-u-hidden@m-down"
-  }, _react.default.createElement(_horizontalStroke.HorizontalStroke, {
+  }, /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
     className: "styledStroke",
     size: "big"
-  }))), isString(subTitle) ? _react.default.createElement(_marger.Marger, {
+  }))), isString(subTitle) ? /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: margin
-  }, _react.default.createElement(_text.Text, (_React$createElement = {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, (_React$createElement = {
     className: "styledSubTitle",
     size: "huge",
     tag: subTitleTag

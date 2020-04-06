@@ -102,7 +102,7 @@ var CheckedCircleIcon = (0, _styledComponents.default)(function (_ref10) {
   var big = _ref10.big,
       tiny = _ref10.tiny,
       others = (0, _objectWithoutProperties2.default)(_ref10, ["big", "tiny"]);
-  return _react.default.createElement(_checkedCircleIcon.CheckedCircleIcon, others);
+  return /*#__PURE__*/_react.default.createElement(_checkedCircleIcon.CheckedCircleIcon, others);
 }).withConfig({
   displayName: "button__CheckedCircleIcon",
   componentId: "sc-1q5nte0-1"
@@ -149,9 +149,9 @@ var Button = /*#__PURE__*/function (_Component) {
         'aria-checked': true
       };
       modifier === 'checked' && console.warn("Warning: In <Button /> component, 'checked' modifier is deprecated.");
-      return _react.default.createElement(StyledButton, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
         modifier: modifier
-      }, checked, props), children, modifier === 'checked' && _react.default.createElement(CheckedCircleIcon, {
+      }, checked, props), children, modifier === 'checked' && /*#__PURE__*/_react.default.createElement(CheckedCircleIcon, {
         big: props.big && props.big,
         tiny: props.tiny && props.tiny,
         circleColor: _colorsConfig.default.primary1,

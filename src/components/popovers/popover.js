@@ -59,7 +59,7 @@ var Popover = /*#__PURE__*/function (_Component) {
   }, {
     key: "renderCloseButton",
     value: function renderCloseButton() {
-      return _react.default.createElement(_closeButton.CloseButton, {
+      return /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
         modifier: "beryllium",
         closeButtonLabel: this.props.closeButtonLabel,
         onClick: this.handleCloseClick
@@ -72,7 +72,7 @@ var Popover = /*#__PURE__*/function (_Component) {
         return this.props.children;
       }
 
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "5",
         bottom: "5",
         className: "k-Popover__content"
@@ -91,15 +91,15 @@ var Popover = /*#__PURE__*/function (_Component) {
           popoverAttributes = (0, _objectWithoutProperties2.default)(_this$props, ["children", "popoverClassName", "containerClassName", "titleAriaLabelId", "onCloseClick", "closeButtonLabel"]);
       var popoverClassNames = (0, _classnames.default)('k-Popover', popoverClassName);
       var containerClassNames = (0, _classnames.default)('k-Popover__container', containerClassName);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         ref: "popover",
         className: popoverClassNames,
         role: "dialog",
         "aria-hidden": "true",
         "aria-labelledby": titleAriaLabelId
-      }, popoverAttributes), _react.default.createElement("div", {
+      }, popoverAttributes), /*#__PURE__*/_react.default.createElement("div", {
         className: containerClassNames
-      }, this.renderContent(), _react.default.createElement("div", null, this.renderCloseButton())));
+      }, this.renderContent(), /*#__PURE__*/_react.default.createElement("div", null, this.renderCloseButton())));
     }
   }]);
   return Popover;

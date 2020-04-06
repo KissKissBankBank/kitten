@@ -23,7 +23,7 @@ describe('<DonationCard />', () => {
   describe('by default', () => {
     window.matchMedia = createMockMediaMatcher(false)
 
-    const component = renderer
+    component = renderer
       .create(
         <DonationCard
           title="Custom title mount"

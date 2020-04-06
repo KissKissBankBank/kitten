@@ -16,12 +16,7 @@ const Button = Radium(ButtonBase)
 
 class SimpleTemplateBase extends Component {
   render() {
-    const {
-      header,
-      children,
-      viewportIsMOrLess,
-      viewportIsXSOrLess,
-    } = this.props
+    const { header, children, viewportIsXSOrLess } = this.props
 
     const containerStyle = {
       ...styles.header,
@@ -161,5 +156,4 @@ const styles = {
 
 export const SimpleTemplate = withMediaQueries({
   viewportIsXSOrLess: true,
-  viewportIsMOrLess: true,
 })(SimpleTemplateBase)

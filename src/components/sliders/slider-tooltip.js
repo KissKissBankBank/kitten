@@ -15,18 +15,18 @@ var SliderTooltip = function SliderTooltip(_ref) {
   var className = _ref.className,
       percentage = _ref.percentage,
       children = _ref.children;
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: (0, _classnames.default)('k-SliderTooltip', className)
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-SliderTooltip__tip"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-SliderTooltip__tip__content",
     style: {
       left: percentage
     }
-  }, children)), _react.default.createElement("div", {
+  }, children)), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-SliderTooltip__arrow"
-  }, _react.default.createElement("div", {
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-SliderTooltip__arrow__content",
     style: {
       left: percentage

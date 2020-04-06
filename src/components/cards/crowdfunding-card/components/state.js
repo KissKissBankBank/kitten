@@ -65,7 +65,7 @@ var State = /*#__PURE__*/function (_PureComponent) {
       var _this$props = this.props,
           state = _this$props.state,
           widgetState = _this$props.widgetState;
-      return _react.default.createElement(_react.default.Fragment, null, state && this.renderState(), widgetState && this.renderWidgetState());
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, state && this.renderState(), widgetState && this.renderWidgetState());
     }
   }, {
     key: "renderState",
@@ -73,7 +73,7 @@ var State = /*#__PURE__*/function (_PureComponent) {
       var _this$props2 = this.props,
           state = _this$props2.state,
           loading = _this$props2.loading;
-      return _react.default.createElement(_react.default.Fragment, null, !loading && _react.default.createElement(StyledState, null, _react.default.createElement(_text.Text, {
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !loading && /*#__PURE__*/_react.default.createElement(StyledState, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "micro",
         lineHeight: "normal",
         weight: "regular",
@@ -86,7 +86,7 @@ var State = /*#__PURE__*/function (_PureComponent) {
       var _this$props3 = this.props,
           widgetState = _this$props3.widgetState,
           loading = _this$props3.loading;
-      return _react.default.createElement(_react.default.Fragment, null, !loading && _react.default.createElement(StyledWidgetContainer, null, widgetState));
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, !loading && /*#__PURE__*/_react.default.createElement(StyledWidgetContainer, null, widgetState));
     }
   }]);
   return State;
