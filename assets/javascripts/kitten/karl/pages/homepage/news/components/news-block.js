@@ -14,6 +14,13 @@ const gridGapThin = pxToRem(10)
 const gridGapMedium = pxToRem(20)
 const gridGapLarge = pxToRem(40)
 
+const fourColumns = 'calc(1 / 3 * 100%)'
+const sixColumns = '50%'
+const sevenColumns = 'calc(7 / 12 * 100%)'
+const twelveColumns = '100%'
+const portraitImageRatio = 4 / 3
+const landscapeImageRatio = 1 / 2
+
 const mobileCardWidth = `(50vw - ${pxToRem(
   CONTAINER_PADDING_THIN,
 )} - (${gridGapThin} / 2))`
@@ -46,14 +53,14 @@ const StyledNewsBlock = styled.div`
   }
 
   .newsBlock__NewsCard__picture {
-    max-width: 100%;
+    max-width: ${twelveColumns};
     position: relative;
 
     @media (orientation: portrait) {
-      padding-top: calc(100% * 4 / 3);
+      padding-top: calc(${twelveColumns} * ${portraitImageRatio});
     }
     @media (orientation: landscape) {
-      padding-top: calc(100% * 1 / 2);
+      padding-top: calc(${twelveColumns} * ${landscapeImageRatio});
     }
 
     img {
@@ -97,7 +104,7 @@ const StyledNewsBlock = styled.div`
 
   &.NewsBlock--1cols {
     .newsBlock__NewsCard__picture {
-      padding-top: calc(100% * 1 / 2);
+      padding-top: calc(${twelveColumns} * ${landscapeImageRatio});
     }
     .newsBlock__NewsCard__text {
       margin-top: ${pxToRem(20)};
@@ -169,15 +176,15 @@ const StyledNewsBlock = styled.div`
         justify-content: space-between;
 
         .newsBlock__NewsCard__text {
-          flex: 0 1 calc(50% - ${pxToRem(15)});
+          flex: 0 1 calc(${sixColumns} - ${pxToRem(15)});
           margin-top: 0;
         }
 
         .newsBlock__NewsCard__picture {
-          flex: 0 1 calc(50% - ${pxToRem(15)});
+          flex: 0 1 calc(${sixColumns} - ${pxToRem(15)});
 
           @media (orientation: landscape) {
-            padding-top: calc(50% * 1 / 2);
+            padding-top: calc(${sixColumns} * ${landscapeImageRatio});
           }
         }
       }
@@ -203,20 +210,20 @@ const StyledNewsBlock = styled.div`
         align-items: center;
 
         .newsBlock__NewsCard__picture {
-          width: calc(7 / 12 * 100%);
+          width: ${sevenColumns};
 
           @media (orientation: portrait) {
-            padding-top: calc(7 / 12 * 100% * 4 / 3);
+            padding-top: calc(${sevenColumns} * ${portraitImageRatio});
           }
           @media (orientation: landscape) {
-            padding-top: calc(7 / 12 * 100% * 1 / 2);
+            padding-top: calc(${sevenColumns} * ${landscapeImageRatio});
           }
         }
 
         .newsBlock__NewsCard__text {
           margin-top: 0;
           margin-left: ${pxToRem(40)};
-          width: calc(1 / 3 * 100%);
+          width: ${fourColumns};
         }
       }
     }
