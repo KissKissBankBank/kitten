@@ -1,23 +1,24 @@
-import React from 'react'
+import React, { useEffect, forwardRef } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-export class DropdownButton extends React.Component {
-  render() {
-    const { className, isExpanded, ...rest } = this.props
+export const DropdownButton = forwardRef(
+  ({ id, className, isExpanded, ...rest }, dropdownButtonRef) => {
     const buttonClassName = classNames('k-Dropdown__button', className)
 
     return (
       <button
-        ref="dropdownButton"
+        ref={dropdownButtonRef}
+        id={id}
+        type="button"
         className={buttonClassName}
         aria-haspopup="true"
         aria-expanded={isExpanded}
         {...rest}
       />
     )
-  }
-}
+  },
+)
 
 DropdownButton.propTypes = {
   onClick: PropTypes.func,
