@@ -4,6 +4,49 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.64.0] - 2020-04-07
+
+Feature:
+- Add a11y options for new `Carousel` buttons.
+
+Fix:
+- Fix arrow size on new `Carousel` buttons.
+
+## [2.63.0] - 2020-04-07
+
+Features:
+- Add new Dropdown in `dropdowns/v2`.
+- Add a11y options for new `Carousel` buttons.
+
+Fixes:
+- Revert old Dropdown.
+- Fix arrow size on new `Carousel` buttons.
+
+## [2.62.0] - 2020-04-06
+
+Features:
+- Create `HeaderNav` components.
+- Create `AvatarWithTextAndBadge` components.
+- Create `a11y` helper.
+- Create `LoginIcon` component.
+- Create `HeaderMenu.Badge` component.
+- Create `dropdown-config` file to store component constants.
+- Create `ratio` file with `computeFromRatio` helper.
+- Add `borderSideOnHover`, `largeItem`, `noBorder`, `backgroundColors`
+  props to `HeaderMenu` component.
+- Add `Button` prop to `HeaderMenu.Item` component.
+- Add keyboard key code and event name in `events` file.
+- Add `.k-u-avoid-click` utility.
+- Add a11y events to `DropdownButton` component.
+- Add `tiny` prop in `KissKissBankBankLogo` and `LendopolisLogo`
+  components.
+- Add `ORDERED_SCREEN_SIZES` constant in `screen-config` file.
+- Add `getScreenSizeFrom` helper in `media-queries` file.
+- Add new `k-u-link` utility class for basic link styling.
+
+Fix:
+- Fix `Dropdown` components events and accessibility.
+
 ## [2.61.1] - 2020-04-06
 
 Fixes:

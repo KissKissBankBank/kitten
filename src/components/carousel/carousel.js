@@ -33,9 +33,11 @@ var _colorsConfig = _interopRequireDefault(require("../../constants/colors-confi
 
 var _grid = require("../../components/grid/grid");
 
-var _buttonIcon = require("../../components/buttons/button-icon");
+var _button = require("../../components/buttons/button/button");
 
 var _arrowIcon = require("../../components/icons/arrow-icon");
+
+var _visuallyHidden = require("../../components/accessibility/visually-hidden");
 
 var _carouselInner = require("../../components/carousel/carousel-inner");
 
@@ -187,7 +189,9 @@ var CarouselBase = /*#__PURE__*/function (_React$Component) {
           baseItemMarginBetween = _this$props3.baseItemMarginBetween,
           viewportIsMOrLess = _this$props3.viewportIsMOrLess,
           viewportIsXSOrLess = _this$props3.viewportIsXSOrLess,
-          hidePaginationOnMobile = _this$props3.hidePaginationOnMobile;
+          hidePaginationOnMobile = _this$props3.hidePaginationOnMobile,
+          prevButtonText = _this$props3.prevButtonText,
+          nextButtonText = _this$props3.nextButtonText;
       var _this$state4 = _this.state,
           indexPageVisible = _this$state4.indexPageVisible,
           numPages = _this$state4.numPages;
@@ -220,25 +224,27 @@ var CarouselBase = /*#__PURE__*/function (_React$Component) {
           marginTop: viewportIsMOrLess ? itemMarginBetween : 0,
           marginLeft: viewportIsMOrLess ? itemMarginBetween * 2 : 0
         }]
-      }, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_button.Button, {
+        icon: true,
         modifier: "beryllium",
         onClick: _this.goPrevPage,
         key: "left-".concat(indexPageVisible),
         disabled: indexPageVisible < 1 || numPages < 1,
         style: styles.carouselButtonPagination
-      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, prevButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+        "aria-hidden": true,
         version: "solid",
-        className: "k-ButtonIcon__svg",
         direction: "left"
-      })), /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
+      })), /*#__PURE__*/_react.default.createElement(_button.Button, {
+        icon: true,
         modifier: "beryllium",
         onClick: _this.goNextPage,
         key: "right-".concat(indexPageVisible),
         disabled: indexPageVisible >= numPages - 1,
         style: styles.carouselButtonPagination
-      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, nextButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+        "aria-hidden": true,
         version: "solid",
-        className: "k-ButtonIcon__svg",
         direction: "right"
       })));
     };
@@ -327,7 +333,9 @@ var styles = {
 };
 CarouselBase.defaultProps = {
   withoutLeftOffset: false,
-  hidePaginationOnMobile: false
+  hidePaginationOnMobile: false,
+  prevButtonText: 'Previous items',
+  nextButtonText: 'Next items'
 };
 CarouselBase.propTypes = {
   itemMinWidth: _propTypes.default.number.isRequired,
@@ -335,7 +343,9 @@ CarouselBase.propTypes = {
   renderItem: _propTypes.default.func.isRequired,
   viewportIsMOrLess: _propTypes.default.bool.isRequired,
   viewportIsXSOrLess: _propTypes.default.bool.isRequired,
-  hidePaginationOnMobile: _propTypes.default.bool
+  hidePaginationOnMobile: _propTypes.default.bool,
+  prevButtonText: _propTypes.default.string,
+  nextButtonText: _propTypes.default.string
 };
 var Carousel = (0, _mediaQueries.withMediaQueries)({
   viewportIsXSOrLess: true,

@@ -20,6 +20,8 @@ export class Dropdown extends React.Component {
   }
 
   componentDidMount() {
+    const dropdown = this
+
     if (domElementHelper.canUseDom()) {
       // Update dropdown content position after DOM is build.
       let referenceElementHeight = this.getReferenceElementHeight()
@@ -258,10 +260,10 @@ Dropdown.defaultProps = {
   closeEvents: [],
 
   // Called when one of the `refreshEvents` is triggered.
-  onPositionUpdate: function () {},
+  onPositionUpdate: function() {},
 
   // Called when the dropdown is opened or closed
-  onToggle: function () {},
+  onToggle: function() {},
 }
 
 // DEPRECATED: do not use default export.

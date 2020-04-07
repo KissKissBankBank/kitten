@@ -62,6 +62,8 @@ var Dropdown = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
+      var dropdown = this;
+
       if (_elementHelper.default.canUseDom()) {
         // Update dropdown content position after DOM is build.
         var referenceElementHeight = this.getReferenceElementHeight();

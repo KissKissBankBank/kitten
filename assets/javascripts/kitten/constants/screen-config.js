@@ -5,6 +5,15 @@ export const SCREEN_SIZE_M = 'M'
 export const SCREEN_SIZE_L = 'L'
 export const SCREEN_SIZE_XL = 'XL'
 
+export const ORDERED_SCREEN_SIZES = [
+  SCREEN_SIZE_XXS,
+  SCREEN_SIZE_XS,
+  SCREEN_SIZE_S,
+  SCREEN_SIZE_M,
+  SCREEN_SIZE_L,
+  SCREEN_SIZE_XL,
+]
+
 export const ScreenConfig = {
   [SCREEN_SIZE_XXS]: {
     min: null,

@@ -1,6 +1,6 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { withKnobs, select } from '@storybook/addon-knobs'
+import { withKnobs, select, boolean } from '@storybook/addon-knobs'
 import { HeaderMenu } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -30,6 +30,8 @@ storiesOf('Menus/HeaderMenu', module)
             { Left: 'left', Right: 'right' },
             'left',
           )}
+          largeItem={boolean('Large item', false)}
+          noBorder={boolean('No border', false)}
         >
           <HeaderMenu.Item href="#">Item 1</HeaderMenu.Item>
           <HeaderMenu.Item href="#" isSelected>

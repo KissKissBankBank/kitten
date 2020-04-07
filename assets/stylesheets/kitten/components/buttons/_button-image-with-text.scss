@@ -52,6 +52,16 @@
     margin: 0;
     text-align: left;
 
+    &:not(.always-visible) {
+      @include k-media-max('m') {
+        display: none;
+      }
+
+      @include k-media-within('s') {
+        display: block;
+      }
+    }
+
     @include k-typographyFont($text-font);
     @include k-typographyFontSize($text-size, $text-line-height);
 
@@ -63,14 +73,6 @@
     .k-ButtonImageWithText:active &,
     &:active {
       color: $color-active;
-    }
-
-    @include k-media-max('m') {
-      display: none;
-    }
-
-    @include k-media-within('s') {
-      display: block;
     }
   }
 

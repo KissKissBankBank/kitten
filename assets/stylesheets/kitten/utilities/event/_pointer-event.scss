@@ -1,0 +1,22 @@
+/// Utilities to avoid click on element.
+///
+/// @group event
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-event;
+///
+/// @example html
+///
+///   <div class="k-u-avoid-click">…</div>
+///
+
+@mixin k-utilities-event {
+  .k-u-avoid-click {
+    pointer-events: none;
+
+    &--important {
+      pointer-events: none !important;
+    }
+  }
+}
