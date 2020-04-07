@@ -3,7 +3,7 @@ import has from 'lodash/fp/has'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import emitter from '../../../helpers/utils/emitter'
-import { DropdownButton } from '../../../components/dropdowns/navigation-dropdown/dropdown-button'
+import { DropdownButton } from './dropdown-button'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import domElementHelper from '../../../helpers/dom/element-helper'
 import domEvents, {
