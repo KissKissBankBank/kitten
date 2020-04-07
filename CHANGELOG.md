@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Move new Dropdown to `navigation-dropdown` and revert old Dropdown.
 - Fix: Fix arrow size on `ProjectCarousel` buttons.
 - Feature: Add a11y options for `ProjectCarousel` buttons.
 
