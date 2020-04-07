@@ -1,5 +1,5 @@
 import { css } from 'styled-components'
-import { stepToRem, pxToRem } from '../../../../helpers/utils/typography'
+import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 export const strokeStyles = stroke => {
@@ -32,9 +32,12 @@ export const strokeStyles = stroke => {
   }
 
   return css`
-    width: ${strokeWidth};
-    heigth: ${strokeHeight};
-    margin-top: ${strokeMarginTop};
-    margin-bottom: ${strokeMarginBottom};
+    display: block;
+    border: none;
+    background-color: currentColor;
+    width: ${pxToRem(strokeWidth)};
+    height: ${pxToRem(strokeHeight)};
+    margin-top: ${pxToRem(strokeMarginTop)};
+    margin-bottom: ${pxToRem(strokeMarginBottom)};
   `
 }

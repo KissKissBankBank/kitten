@@ -9,7 +9,6 @@ import { strokeStyles } from './helpers/stroke-styles'
 const StyledTitle = styled.span`
   ${TYPOGRAPHY.fontStyles.bold};
   ${({ modifier }) => modifierStyles(modifier)}
-  ${({ stroke }) => strokeStyles(stroke)}
 
   ${({ margin }) =>
     !margin &&
@@ -25,6 +24,9 @@ const StyledTitle = styled.span`
     `}
 `
 
+const StyledStroke = styled.div`
+  ${({ stroke }) => strokeStyles(stroke)}
+`
 export const Title = ({
   modifier,
   tag,
@@ -36,14 +38,18 @@ export const Title = ({
 
 
   return (
-    <StyledTitle
-      {...other}
-      tag={tag}
-      modifier={modifier}
-      margin={margin}
-      italic={italic}
-      stroke={stroke}
-    />
+    <>
+      <StyledTitle
+        {...other}
+        tag={tag}
+        modifier={modifier}
+        margin={margin}
+        italic={italic}
+      />
+      <StyledStroke
+        stroke={stroke}
+      />
+    </>
   )
 }
 

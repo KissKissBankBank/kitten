@@ -22,6 +22,12 @@ const modifierOptions = {
   Senary: 'senary',
 }
 
+const strokeOptions = {
+  Big: 'big',
+  Default: 'default',
+  Tiny: 'tiny',
+}
+
 storiesOf('Typography/Title', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
@@ -37,6 +43,7 @@ storiesOf('Typography/Title', module)
                   modifier={select('Modifier', modifierOptions, 'primary')}
                   margin={boolean('Margin', false)}
                   italic={boolean('Italic', false)}
+                  stroke={select('Stroke', strokeOptions, 'default')}
                 >
                   {text('Title', 'MyTitle')}
                 </Title>

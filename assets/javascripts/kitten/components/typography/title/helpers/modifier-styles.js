@@ -12,7 +12,6 @@ export const modifierStyles = modifier => {
       fontStepOnMobile = 7
       fontStepOnTablet = 9
       fontStepOnDesktop = 12
-
       break
 
     case 'secondary' :
