@@ -17,7 +17,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _burgerIcon = require("../../../../components/icons/burger-icon");
 
-var _dropdown = require("../../../../components/dropdowns/dropdown");
+var _dropdown = require("../../../../components/dropdowns/v2/dropdown");
 
 var _visuallyHidden = require("../../../../components/accessibility/visually-hidden");
 

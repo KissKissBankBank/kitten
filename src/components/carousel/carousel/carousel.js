@@ -37,11 +37,13 @@ var _gridConfig = require("../../../constants/grid-config");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _buttonIcon = require("../../../components/buttons/button-icon");
+var _button = require("../../../components/buttons/button/button");
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");
 
 var _carouselInner = require("./components/carousel-inner");
+
+var _visuallyHidden = require("../../../components/accessibility/visually-hidden");
 
 function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
@@ -191,7 +193,9 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           viewportIsXSOrLess = _this$props3.viewportIsXSOrLess,
           hidePagination = _this$props3.hidePagination,
           hidePaginationOnMobile = _this$props3.hidePaginationOnMobile,
-          paginationPosition = _this$props3.paginationPosition;
+          paginationPosition = _this$props3.paginationPosition,
+          prevButtonText = _this$props3.prevButtonText,
+          nextButtonText = _this$props3.nextButtonText;
       var _this$state4 = _this.state,
           indexPageVisible = _this$state4.indexPageVisible,
           numPages = _this$state4.numPages;
@@ -220,22 +224,24 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/_react.default.createElement(CarouselPagination, {
         position: paginationPosition,
         itemMarginBetween: itemMarginBetween
-      }, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_button.Button, {
+        icon: true,
         modifier: "beryllium",
         onClick: _this.goPrevPage,
         disabled: indexPageVisible < 1 || numPages < 1
-      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, prevButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
-        className: "k-ButtonIcon__svg",
-        direction: "left"
-      })), /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
+        direction: "left",
+        "aria-hidden": true
+      })), /*#__PURE__*/_react.default.createElement(_button.Button, {
+        icon: true,
         modifier: "beryllium",
         onClick: _this.goNextPage,
         disabled: indexPageVisible >= numPages - 1
-      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, nextButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
-        className: "k-ButtonIcon__svg",
-        direction: "right"
+        direction: "right",
+        "aria-hidden": true
       })));
     };
 
@@ -265,7 +271,9 @@ CarouselBase.defaultProps = {
   paginationPosition: {
     default: 'right',
     fromM: 'bottom'
-  }
+  },
+  prevButtonText: 'Previous items',
+  nextButtonText: 'Next items'
 };
 CarouselBase.propTypes = {
   itemMinWidth: _propTypes.default.number.isRequired,
@@ -285,7 +293,9 @@ CarouselBase.propTypes = {
     fromM: propTypesPositions,
     fromL: propTypesPositions,
     fromXl: propTypesPositions
-  })
+  }),
+  prevButtonText: _propTypes.default.string,
+  nextButtonText: _propTypes.default.string
 };
 
 var flexContainerdirectionStyle = function flexContainerdirectionStyle(positionType) {

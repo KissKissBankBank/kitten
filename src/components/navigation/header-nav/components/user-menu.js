@@ -17,7 +17,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _dropdown = _interopRequireDefault(require("../../../../components/dropdowns/dropdown"));
+var _dropdown = _interopRequireDefault(require("../../../../components/dropdowns/v2/dropdown"));
 
 var _context = require("./context");
 

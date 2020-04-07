@@ -4,10 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add new Dropdown in `dropdowns/v2`.
-- Fix: Revert old Dropdown.
-- Fix: Fix arrow size on `ProjectCarousel` buttons.
-- Feature: Add a11y options for `ProjectCarousel` buttons.
+## [2.63.0] - 2020-04-07
+
+Feature:
+- Add new Dropdown in `dropdowns/v2`.
+- Add a11y options for `ProjectCarousel` buttons.
+
+Fixes:
+- Revert old Dropdown.
+- Fix arrow size on `ProjectCarousel` buttons.
 
 ## [2.62.0] - 2020-04-06
 
