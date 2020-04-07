@@ -10,9 +10,9 @@ import {
 import ColorsConfig from '../../constants/colors-config'
 
 import { Grid, GridCol } from '../../components/grid/grid'
-import { ButtonIcon } from '../../components/buttons/button-icon'
+import { Button } from '../../components/buttons/button/button'
 import { ArrowIcon } from '../../components/icons/arrow-icon'
-
+import { VisuallyHidden } from '../../components/accessibility/visually-hidden'
 import { CarouselInner } from '../../components/carousel/carousel-inner'
 
 export const getNumColumnsForWidth = (
@@ -168,6 +168,8 @@ class CarouselBase extends React.Component {
       viewportIsMOrLess,
       viewportIsXSOrLess,
       hidePaginationOnMobile,
+      prevButtonText,
+      nextButtonText,
     } = this.props
     const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -219,33 +221,37 @@ class CarouselBase extends React.Component {
           },
         ]}
       >
-        <ButtonIcon
+        <Button
+          icon
           modifier="beryllium"
           onClick={this.goPrevPage}
           key={`left-${indexPageVisible}`}
           disabled={indexPageVisible < 1 || numPages < 1}
           style={styles.carouselButtonPagination}
         >
+          <VisuallyHidden>{prevButtonText}</VisuallyHidden>
           <ArrowIcon
+            aria-hidden
             version="solid"
-            className="k-ButtonIcon__svg"
             direction="left"
           />
-        </ButtonIcon>
+        </Button>
 
-        <ButtonIcon
+        <Button
+          icon
           modifier="beryllium"
           onClick={this.goNextPage}
           key={`right-${indexPageVisible}`}
           disabled={indexPageVisible >= numPages - 1}
           style={styles.carouselButtonPagination}
         >
+          <VisuallyHidden>{nextButtonText}</VisuallyHidden>
           <ArrowIcon
+            aria-hidden
             version="solid"
-            className="k-ButtonIcon__svg"
             direction="right"
           />
-        </ButtonIcon>
+        </Button>
       </div>
     )
   }
@@ -335,6 +341,8 @@ const styles = {
 CarouselBase.defaultProps = {
   withoutLeftOffset: false,
   hidePaginationOnMobile: false,
+  prevButtonText:'Previous items',
+  nextButtonText:'Next items',
 }
 
 CarouselBase.propTypes = {
@@ -344,6 +352,8 @@ CarouselBase.propTypes = {
   viewportIsMOrLess: PropTypes.bool.isRequired,
   viewportIsXSOrLess: PropTypes.bool.isRequired,
   hidePaginationOnMobile: PropTypes.bool,
+  prevButtonText: PropTypes.string,
+  nextButtonText: PropTypes.string,
 }
 
 export const Carousel = withMediaQueries({

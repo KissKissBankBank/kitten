@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
-import Dropdown from '../../../../components/dropdowns/dropdown'
+import Dropdown from '../../../../components/dropdowns/v2/dropdown'
 import { Context } from './context'
 import { getReactElementsByType } from '../../../../helpers/react/react-elements'
 import classNames from 'classnames'

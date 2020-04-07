@@ -1,426 +1,256 @@
-import React, { useState, useEffect, useRef } from 'react'
-import has from 'lodash/fp/has'
+import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import emitter from '../../helpers/utils/emitter'
 import { DropdownButton } from '../../components/dropdowns/dropdown-button'
-import deprecated from 'prop-types-extra/lib/deprecated'
 import domElementHelper from '../../helpers/dom/element-helper'
-import domEvents, {
-  TOGGLE_DROPDOWN_EVENT,
-  DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
-  DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-  dispatchEvent,
-} from '../../helpers/dom/events'
-import {
-  getFocusableElementsFrom,
-  keyboardNavigation,
-} from '../../helpers/dom/a11y'
-import { DROPDOWN_ANIMATED_DELAY } from '../../constants/dropdown-config'
 
-export const Dropdown = React.forwardRef(
-  (
-    {
-      arrowHorizontalPosition,
-      button,
-      buttonClassName,
-      buttonContentOnCollapsed,
-      buttonContentOnExpanded,
-      buttonId,
-      className,
-      closeEvents,
-      closeOnOuterClick,
-      contentHorizontalPosition,
-      dropdownContent,
-      dropdownContentWidth,
-      dropdownListArrow,
-      isExpanded,
-      keepInitialButtonAction,
-      notifications,
-      onPositionUpdate,
-      onToggle,
-      positionedHorizontallyWith,
-      positionedVerticallyWith,
-      positionedWith,
-      positionedWithBorder,
-      refreshEvents,
-    },
-    dropdownRef,
-  ) => {
-    const dropdownContentRef = useRef(null)
-    const arrowRef = useRef(null)
-    const dropdownButtonRef = useRef(null)
-    const [isExpandedState, setIsExpanded] = useState(isExpanded)
-    const [toggleByEventType, setToggleByEventType] = useState(null)
-    const [
-      verticalReferenceElementState,
-      setVerticalReferenceElement,
-    ] = useState(0)
+export class Dropdown extends React.Component {
+  constructor(props) {
+    super(props)
 
-    const [
-      horizontalReferenceElementState,
-      setHorizontalReferenceElement,
-    ] = useState(0)
-
-    const { keyboard } = domEvents
-
-    const closeDropdownOnEsc = ({ keyCode }) =>
-      keyCode === keyboard.esc ? toggle(false) : null
-
-    const dropdownKbdTrigger = ({ keyCode }) => {
-      setToggleByEventType('keyboard')
-      if (keyCode === keyboard.down) toggle(true)
-      if (keyCode === keyboard.up) toggle(false)
+    this.state = {
+      isExpanded: false,
+      referenceElementHeight: 0,
     }
 
-    const blur = event => {
-      event.target.blur()
+    this.handleDropdownPosition = this.handleDropdownPosition.bind(this)
+    this.revertHandleClickOnLinks = this.revertHandleClickOnLinks.bind(this)
+    this.close = this.close.bind(this)
+  }
+
+  componentDidMount() {
+    const dropdown = this
+
+    if (domElementHelper.canUseDom()) {
+      // Update dropdown content position after DOM is build.
+      let referenceElementHeight = this.getReferenceElementHeight()
+
+      this.setState({ referenceElementHeight: referenceElementHeight })
     }
 
-    useEffect(() => {
-      handleDropdownPosition()
-      handleClickOnLinks()
+    // Handle events.
 
-      emitter.on(TOGGLE_DROPDOWN_EVENT, toggle)
+    this.handleClickOnLinks()
 
-      if (refreshEvents) {
-        refreshEvents.forEach(ev => {
-          window.addEventListener(ev, handleDropdownPosition)
-        })
-      }
+    emitter.on('dropdown:opening:trigger', this.close)
 
-      if (closeEvents) {
-        closeEvents.forEach(ev => {
-          window.addEventListener(ev, closeDropdown)
-        })
-      }
-
-      window.addEventListener('keydown', closeDropdownOnEsc)
-      dropdownButtonRef.current.addEventListener('keydown', dropdownKbdTrigger)
-      dropdownButtonRef.current.addEventListener('mouseup', blur)
-
-      if (!has('current')(dropdownRef)) {
-        console.warn(
-          'The `ref` prop from <Dropdown /> should be set using `useRef`.',
-        )
-      }
-
-      return () => {
-        revertHandleClickOnLinks()
-
-        emitter.off(TOGGLE_DROPDOWN_EVENT, toggle)
-
-        if (refreshEvents) {
-          refreshEvents.forEach(ev => {
-            window.removeEventListener(ev, handleDropdownPosition)
-          })
-        }
-
-        if (closeEvents) {
-          closeEvents.forEach(ev => {
-            window.removeEventListener(ev, closeDropdown)
-          })
-        }
-
-        window.removeEventListener('keydown', closeDropdownOnEsc)
-        dropdownButtonRef.current.removeEventListener(
-          'keydown',
-          dropdownKbdTrigger,
-        )
-        dropdownButtonRef.current.removeEventListener('mouseup', blur)
-      }
-    }, [])
-
-    const manageA11yOn = event => {
-      event.stopPropagation()
-      event.preventDefault()
-
-      const focusableElements = getFocusableElementsFrom(
-        dropdownContentRef.current,
-      )
-
-      const kbdNav = keyboardNavigation(focusableElements, {
-        events: {
-          prev: DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
-          next: DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-        },
-        triggeredElement: dropdownButtonRef.current,
-      })
-
-      const { tab, up, down, left, right, esc, shiftTab } = keyboard
-      const backwardTab = event.shiftKey && event.keyCode === tab
-
-      if (event.keyCode === esc) return toggle(false)
-
-      if (event.keyCode === left) {
-        return dispatchEvent(
-          DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
-          dropdownButtonRef.current,
-        )()
-      }
-
-      if (event.keyCode === right) {
-        return dispatchEvent(
-          DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-          dropdownButtonRef.current,
-        )()
-      }
-
-      if (shiftTab(event) || event.keyCode === up) {
-        return kbdNav.prev()
-      }
-
-      if (!event.shiftKey && [down, tab].includes(event.keyCode)) {
-        return kbdNav.next()
-      }
-    }
-
-    useEffect(() => {
-      let focusableElements
-
-      if (isExpandedState) {
-        setTimeout(() => {
-          const focusableElements = getFocusableElementsFrom(
-            dropdownContentRef.current,
-          )
-
-          if (focusableElements.length > 0) {
-            toggleByEventType === 'keyboard' && focusableElements[0].focus()
-            dropdownContentRef.current.addEventListener('keydown', manageA11yOn)
-          }
-        }, DROPDOWN_ANIMATED_DELAY)
-      }
-
-      return () => {
-        dropdownContentRef.current.removeEventListener('keydown', manageA11yOn)
-      }
-    }, [isExpandedState])
-
-    useEffect(() => {
-      if (!closeOnOuterClick || !isExpandedState) return
-
-      const handleBodyClick = event => {
-        if (!event.target.matches(`.${className.replace(/\s+/g, '.')} *`)) {
-          toggle(false)
-        }
-      }
-
-      document.body.addEventListener('click', handleBodyClick)
-
-      return () => {
-        document.body.removeEventListener('click', handleBodyClick)
-      }
-    }, [closeOnOuterClick, isExpandedState])
-
-    const closeDropdown = () => {
-      toggle(false)
-    }
-
-    const toggle = nextExpandedState => {
-      // Set toggleByEventType to click by default when dropdown menu is hidden.
-      // The value will be override on keyboard event. This fix a bug on
-      // space/enter keyboard events which trigger click event.
-      if (!nextExpandedState) {
-        setToggleByEventType('click')
-      }
-      setIsExpanded(nextExpandedState)
-      onToggle({
-        isExpanded: nextExpandedState,
-        expandBy: nextExpandedState ? buttonId : null,
+    if (this.props.refreshEvents) {
+      this.props.refreshEvents.forEach(ev => {
+        window.addEventListener(ev, this.handleDropdownPosition)
       })
     }
 
-    const isSelfReference = () =>
-      typeof positionedWith === 'undefined' &&
-      typeof positionedVerticallyWith === 'undefined'
-
-    const getVerticalReferenceElement = () => {
-      if (!isSelfReference()) {
-        return (positionedVerticallyWith || positionedWith)()
-      }
-      // Prevent error from ref not set by `useRef`.
-      return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef
+    if (this.props.closeEvents) {
+      this.props.closeEvents.forEach(ev => {
+        window.addEventListener(ev, this.close)
+      })
     }
+  }
 
-    const getHorizontalReferenceElement = () => {
-      if (!isSelfReference()) {
-        return (positionedVerticallyWith || positionedWith)()
-      }
-      // Prevent error from ref not set by `useRef`.
-      return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef
-    }
+  componentWillUnmount() {
+    this.revertHandleClickOnLinks()
 
-    const getComputedHeightElement = () =>
-      domElementHelper.getComputedHeight(
-        getVerticalReferenceElement(),
-        positionedWithBorder,
-      )
-
-    const getComputedLeftElement = () =>
-      positionedHorizontallyWith
-        ? domElementHelper.getComputedLeft(positionedHorizontallyWith())
-        : 0
-
-    const getArrowPositionStyle = () => {
-      return { position: 'absolute', top: 0, ...arrowHorizontalPosition }
-    }
-
-    const getDropdownContentStyle = () => {
-      return {
-        top: verticalReferenceElementState,
-        left: horizontalReferenceElementState || 0,
-        width: dropdownContentWidth,
-        ...contentHorizontalPosition,
-      }
-    }
-
-    // Component listener callbacks
-    const revertHandleClickOnLinks = () => handleClickOnLinks()
-
-    const handleClickOnLinks = () => {
-      const links = dropdownContentRef.current.getElementsByTagName('a')
-
-      Array.prototype.forEach.call(links, link => {
-        link.removeEventListener('click', closeDropdown)
+    if (this.props.refreshEvents) {
+      this.props.refreshEvents.forEach(ev => {
+        window.removeEventListener(ev, this.handleDropdownPosition)
       })
     }
 
-    const handleDropdownPosition = () => {
-      if (domElementHelper.canUseDom()) {
-        onPositionUpdate()
-        setVerticalReferenceElement(getComputedHeightElement())
-        setHorizontalReferenceElement(getComputedLeftElement())
-      }
+    if (this.props.closeEvents) {
+      this.props.closeEvents.forEach(ev => {
+        window.removeEventListener(ev, this.close)
+      })
     }
 
-    const handleButtonClick = event => {
-      event.stopPropagation()
-      event.preventDefault()
+    emitter.off('dropdown:opening:trigger', this.close)
+  }
 
-      toggle(!isExpandedState)
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    // Enable wrapper component to expand the dropdown.
+    if (nextProps.isExpanded != this.state.isExpanded) {
+      this.toggle(nextProps.isExpanded)
+    }
+  }
+
+  // Component methods
+
+  close() {
+    this.setState({ isExpanded: false })
+  }
+
+  toggle(nextExpandedState) {
+    if (nextExpandedState) {
+      emitter.emit('dropdown:opening:trigger', this)
     }
 
-    // Rendering
-    const renderButtonContentElement = () => {
-      if (isExpandedState) {
-        return buttonContentOnExpanded
-      }
+    this.props.onToggle()
 
-      return buttonContentOnCollapsed
+    this.setState({
+      isExpanded: nextExpandedState,
+    })
+  }
+
+  hasDefaultHorizontalPosition() {
+    return this.props.positionedOn == 'left'
+  }
+
+  isSelfReference() {
+    return typeof this.props.positionedWith == 'undefined'
+  }
+
+  getReferenceElement() {
+    if (!this.isSelfReference()) return this.props.positionedWith()
+
+    return this.refs.dropdown
+  }
+
+  getReferenceElementHeight() {
+    let referenceElement = this.getReferenceElement()
+
+    return domElementHelper.getComputedHeight(
+      referenceElement,
+      this.props.positionedWithBorder,
+    )
+  }
+
+  getArrowPosition() {
+    const defaultPosition = { position: 'absolute', top: 0 }
+    const arrowHorizontalPosition = this.props.arrowHorizontalPosition
+
+    return { ...defaultPosition, ...arrowHorizontalPosition }
+  }
+
+  getContentPosition() {
+    const defaultPosition = { top: this.state.referenceElementHeight }
+    const horizontalPosition = this.props.contentHorizontalPosition
+
+    return { ...defaultPosition, ...horizontalPosition }
+  }
+
+  // Component listener callbacks
+
+  revertHandleClickOnLinks() {
+    const links = this.refs.dropdownContent.getElementsByTagName('a')
+
+    Array.prototype.forEach.call(links, link => {
+      link.removeEventListener('click', this.close)
+    })
+  }
+
+  handleClickOnLinks() {
+    const links = this.refs.dropdownContent.getElementsByTagName('a')
+
+    Array.prototype.forEach.call(links, link => {
+      link.removeEventListener('click', this.close)
+    })
+  }
+
+  handleDropdownPosition() {
+    if (domElementHelper.canUseDom()) {
+      this.props.onPositionUpdate()
+    }
+  }
+
+  handleButtonClick(event) {
+    event.stopPropagation()
+    event.preventDefault()
+
+    this.toggle(!this.state.isExpanded)
+  }
+
+  // Rendering
+
+  renderButtonContentElement() {
+    if (this.state.isExpanded) {
+      return this.props.buttonContentOnExpanded
     }
 
-    const Arrow = () => {
-      if (!dropdownListArrow) return null
+    return this.props.buttonContentOnCollapsed
+  }
 
-      return (
-        <span ref={arrowRef} style={getArrowPositionStyle()}>
-          {dropdownListArrow}
-        </span>
-      )
-    }
+  renderButton() {
+    if (this.props.button) return this.props.button
 
+    return (
+      <DropdownButton
+        ref="dropdownButton"
+        className={this.props.buttonClassName}
+        id={this.props.buttonId}
+        isExpanded={this.state.isExpanded}
+        onClick={this.handleButtonClick.bind(this)}
+      >
+        {this.renderButtonContentElement()}
+      </DropdownButton>
+    )
+  }
+
+  renderArrow() {
+    if (!this.props.dropdownListArrow) return
+
+    const style = this.getArrowPosition()
+
+    return (
+      <span ref="arrow" style={style}>
+        {this.props.dropdownListArrow}
+      </span>
+    )
+  }
+
+  render() {
+    const button = this.renderButton()
     const dropdownClassName = classNames(
       'k-Dropdown',
       {
-        'is-expanded': isExpandedState,
-        'k-Dropdown--asReference': isSelfReference(),
+        'is-expanded': this.state.isExpanded,
+        'k-Dropdown--asReference': this.isSelfReference(),
       },
-      className,
+      this.props.className,
     )
 
     return (
-      <div ref={dropdownRef} className={dropdownClassName}>
-        {button &&
-          (keepInitialButtonAction ? (
-            <DropdownButton
-              ref={dropdownButtonRef}
-              className={buttonClassName}
-              id={buttonId}
-              isExpanded={isExpandedState}
-              onClick={handleButtonClick}
-            >
-              {button}
-            </DropdownButton>
-          ) : (
-            button
-          ))}
-
-        {!button && (
-          <DropdownButton
-            ref={dropdownButtonRef}
-            className={buttonClassName}
-            id={buttonId}
-            isExpanded={isExpandedState}
-            onClick={handleButtonClick}
-          >
-            {renderButtonContentElement()}
-          </DropdownButton>
-        )}
-
+      <div ref="dropdown" className={dropdownClassName}>
+        {button}
         <div
-          ref={dropdownContentRef}
+          ref="dropdownContent"
           className="k-Dropdown__content"
-          style={getDropdownContentStyle()}
-          aria-hidden={!isExpandedState}
-          aria-labelledby={buttonId}
+          style={this.getContentPosition()}
+          aria-hidden="true"
+          aria-labelledby={this.props.buttonId}
         >
-          {dropdownContent}
-          <Arrow />
+          {this.props.dropdownContent}
+          {this.renderArrow()}
         </div>
       </div>
     )
-  },
-)
+  }
+}
 
 Dropdown.propTypes = {
-  arrowHorizontalPosition: PropTypes.object,
-  button: PropTypes.node,
-  buttonClassName: PropTypes.string,
-  buttonContentOnCollapsed: PropTypes.node,
-  buttonContentOnExpanded: PropTypes.node,
-  buttonId: PropTypes.string,
-  className: PropTypes.string,
-  closeEvents: PropTypes.array,
-  closeOnOuterClick: PropTypes.bool,
-  contentHorizontalPosition: PropTypes.object,
-  dropdownContentWidth: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-  ]),
-  dropdownContent: PropTypes.node,
-  dropdownListArrow: PropTypes.node,
   isExpanded: PropTypes.bool,
-  keepInitialButtonAction: PropTypes.bool,
-  notifications: PropTypes.number,
-  onPositionUpdate: PropTypes.func,
-  onToggle: PropTypes.func,
-  positionedHorizontallyWith: PropTypes.func,
-  positionedVerticallyWith: PropTypes.func,
-  positionedWith: deprecated(
-    PropTypes.func,
-    'Prefere use `positionedVerticallyWith` when using `Dropdown` component.',
-  ),
+  positionedWith: PropTypes.func,
   positionedWithBorder: PropTypes.bool,
+  positionedOn: PropTypes.string,
+  notifications: PropTypes.number,
   refreshEvents: PropTypes.array,
+  closeEvents: PropTypes.array,
+  onPositionUpdate: PropTypes.func,
 }
 
 Dropdown.defaultProps = {
   // Take border into account to compute reference element height.
   positionedWithBorder: true,
 
-  // If set to true, keep the inital toggle events to focus on design button
-  // trough `button` prop.
-  keepInitialButtonAction: false,
+  // Fix the dropdown on the left or on the right.
+  positionedOn: 'left', // 'left' | 'right'
 
   // Custom horizontal position for content and content arrow.
-  contentHorizontalPosition: {},
+  contentHorizontalPosition: { left: '0' },
   arrowHorizontalPosition: { left: '50%' },
 
   // Button settings
   buttonContentOnExpanded: 'Close me',
   buttonContentOnCollapsed: 'Expand me',
-
-  isExpanded: false,
 
   // List of events that will trigger the update of the reference element
   // height.
@@ -429,14 +259,11 @@ Dropdown.defaultProps = {
   // List of events that will trigger the closure.
   closeEvents: [],
 
-  // If set to true, close dropdown on outer click.
-  closeOnOuterClick: false,
-
   // Called when one of the `refreshEvents` is triggered.
-  onPositionUpdate: function () {},
+  onPositionUpdate: function() {},
 
   // Called when the dropdown is opened or closed
-  onToggle: function () {},
+  onToggle: function() {},
 }
 
 // DEPRECATED: do not use default export.
