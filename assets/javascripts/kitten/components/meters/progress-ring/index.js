@@ -158,7 +158,7 @@ ProgressRing.propTypes = {
   svgProps: PropTypes.object,
   width: PropTypes.number,
   radius: PropTypes.number,
-  strokeWidth: PropTypes.number,
+  strokeWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   overtimeProgress: PropTypes.bool,
   successProgress: PropTypes.bool,
 }
