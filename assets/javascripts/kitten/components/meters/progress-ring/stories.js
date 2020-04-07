@@ -66,10 +66,6 @@ const StyledCheckedCircleIcon = styled(CheckedCircleIcon)`
   }
 `
 
-const StyledRocketCircleIcon = styled(RocketCircleIcon)`
-  ${StyledCheckedCircleIcon}
-`
-
 const Success = () => (
   <StyledCheckedCircleIcon
     circleColor={COLORS.valid}
@@ -78,7 +74,7 @@ const Success = () => (
 )
 
 const Overtime = () => (
-  <StyledRocketCircleIcon />
+  <RocketCircleIcon />
 )
 
 storiesOf('Meters/ProgressRing', module)
@@ -137,7 +133,7 @@ storiesOf('Meters/ProgressRing', module)
       <Marger top="4" bottom="4">
         <Container>
           <Grid>
-            <GridCol col={6}>
+            <GridCol col={10}>
               <StyledContainer>
                 <Overtime />
                 <StyledText size="micro" color="font1" weight="regular">
