@@ -12,7 +12,7 @@ import ColorsConfig from '../../constants/colors-config'
 import { Grid, GridCol } from '../../components/grid/grid'
 import { Button } from '../../components/buttons/button/button'
 import { ArrowIcon } from '../../components/icons/arrow-icon'
-import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
+import { VisuallyHidden } from '../../components/accessibility/visually-hidden'
 import { CarouselInner } from '../../components/carousel/carousel-inner'
 
 export const getNumColumnsForWidth = (
