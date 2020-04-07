@@ -399,7 +399,6 @@ export const KarlLoggedHeaderUserMenu = defaultProps(UserMenu, {
   // Position
   positionedWith: () => document.getElementById('header-logged'),
   positionedWithBorder: true,
-  positionedOn: 'right',
   spaceAroundGrid: 20,
 
   // Button

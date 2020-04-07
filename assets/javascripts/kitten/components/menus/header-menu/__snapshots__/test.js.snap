@@ -6,8 +6,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
-  outline: none;
+  border-bottom: 0.0625rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: #222;
@@ -17,13 +16,17 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   text-decoration: none;
 }
 
+.c1:focus {
+  outline-offset: -0.1875rem;
+}
+
 .c1::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  width: 0.0625rem;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -33,7 +36,6 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 .c1:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -47,59 +49,62 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 0.0625rem solid #eee;
+  border-right: 0.0625rem solid #eee;
 }
 
-<nav
-  role="navigation"
+<ul
+  className="c0"
 >
-  <ul
-    className="c0"
-    role="menubar"
+  <li
+    role="menuitem"
   >
-    <li
-      role="menuitem"
+    <a
+      aria-current={null}
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 1
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 1
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      aria-current={null}
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 2
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 2
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      aria-current={null}
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 3
-      </a>
-    </li>
-  </ul>
-</nav>
+      Item 3
+    </a>
+  </li>
+</ul>
 `;
 
 exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
+.c3 {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
 .c1 {
   display: block;
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
-  outline: none;
+  border-bottom: 0.0625rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: #222;
@@ -109,13 +114,17 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   text-decoration: none;
 }
 
+.c1:focus {
+  outline-offset: -0.1875rem;
+}
+
 .c1::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  width: 0.0625rem;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -125,7 +134,6 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c1:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -135,8 +143,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
-  outline: none;
+  border-bottom: 0.0625rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: #222;
@@ -162,29 +169,45 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   background-color: #f6f6f6;
-  -webkit-transition: padding-right 0.2s;
-  transition: padding-right 0.2s;
+}
+
+.c2:focus {
+  outline-offset: -0.1875rem;
 }
 
 .c2::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  width: 0.0625rem;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
 }
 
+.c2:hover,
+.c2:focus {
+  color: #19b4fa;
+}
+
 .c2:hover::before,
 .c2:focus::before {
-  width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
+}
+
+.c2 .itemNextToArrowIcon {
+  margin-right: 1.25rem;
+}
+
+.c2 .headerMenuArrowIcon {
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.2s;
+  transition: left 0.2s;
 }
 
 .c2 svg,
@@ -195,8 +218,12 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 
 .c2:focus,
 .c2:hover {
-  padding-right: 1rem;
   color: #222;
+}
+
+.c2:focus .headerMenuArrowIcon,
+.c2:hover .headerMenuArrowIcon {
+  left: 0.3125rem;
 }
 
 .c2::before {
@@ -207,69 +234,65 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 0.0625rem solid #eee;
+  border-right: 0.0625rem solid #eee;
 }
 
-<nav
-  role="navigation"
+<ul
+  className="c0"
 >
-  <ul
-    className="c0"
-    role="menubar"
+  <li
+    role="menuitem"
   >
-    <li
-      role="menuitem"
+    <a
+      aria-current={null}
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 1
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 1
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      aria-current={null}
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 2
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 2
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      className="c2"
+      href="#"
     >
-      <a
-        className="c2"
-        href="#"
+      <span
+        className="itemNextToArrowIcon"
       >
-        <span>
-          <a
-            href="#custom-component"
-          >
-            Custom component
-          </a>
-        </span>
-        <svg
-          className="k-ArrowIcon k-ArrowIcon--right"
-          height="5.64"
-          viewBox="0 0 6 6"
-          width="8.48"
-          xmlns="http://www.w3.org/2000/svg"
+        <a
+          href="#custom-component"
         >
-          <title>
-            Arrow
-          </title>
-          <path
-            d="M6 0H0v6h2V2h4z"
-          />
-        </svg>
-      </a>
-    </li>
-  </ul>
-</nav>
+          Custom component
+        </a>
+      </span>
+      <svg
+        className="c3 headerMenuArrowIcon"
+        height="5.64"
+        viewBox="0 0 8.48 5.64"
+        width="8.48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
 `;
 
 exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
@@ -278,8 +301,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
-  outline: none;
+  border-bottom: 0.0625rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: #222;
@@ -289,13 +311,17 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   text-decoration: none;
 }
 
+.c1:focus {
+  outline-offset: -0.1875rem;
+}
+
 .c1::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  width: 0.0625rem;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -305,7 +331,6 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c1:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -315,8 +340,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
-  outline: none;
+  border-bottom: 0.0625rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: #222;
@@ -327,13 +351,17 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   color: #19b4fa;
 }
 
+.c2:focus {
+  outline-offset: -0.1875rem;
+}
+
 .c2::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  width: 0.0625rem;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -343,7 +371,6 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c2:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -357,49 +384,47 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 0.0625rem solid #eee;
+  border-right: 0.0625rem solid #eee;
 }
 
-<nav
-  role="navigation"
+<ul
+  className="c0"
 >
-  <ul
-    className="c0"
-    role="menubar"
+  <li
+    role="menuitem"
   >
-    <li
-      role="menuitem"
+    <a
+      aria-current={null}
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 1
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 1
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      aria-current="page"
+      className="c2"
+      href="#"
     >
-      <a
-        className="c2"
-        href="#"
-      >
-        Item 2
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 2
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      aria-current={null}
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 3
-      </a>
-    </li>
-  </ul>
-</nav>
+      Item 3
+    </a>
+  </li>
+</ul>
 `;
 
 exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
@@ -408,8 +433,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
-  outline: none;
+  border-bottom: 0.0625rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: #222;
@@ -419,13 +443,17 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   text-decoration: none;
 }
 
+.c1:focus {
+  outline-offset: -0.1875rem;
+}
+
 .c1::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  width: 0.0625rem;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -435,7 +463,6 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c1:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -445,8 +472,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
   background-color: #fff;
-  border-bottom: 1px solid #eee;
-  outline: none;
+  border-bottom: 0.0625rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   color: #222;
@@ -457,13 +483,17 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   color: #b8b8b8;
 }
 
+.c2:focus {
+  outline-offset: -0.1875rem;
+}
+
 .c2::before {
   content: '';
   position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  width: 0.0625rem;
+  top: -0.0625rem;
+  left: -0.0625rem;
+  bottom: 0;
+  width: 0;
   background-color: transparent;
   -webkit-transition: background-color 0.2s,width 0.2s;
   transition: background-color 0.2s,width 0.2s;
@@ -473,7 +503,6 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c2:focus::before {
   width: 0.25rem;
   background-color: #19b4fa;
-  color: #222;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -482,48 +511,46 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
+  border-left: 0.0625rem solid #eee;
+  border-right: 0.0625rem solid #eee;
 }
 
-<nav
-  role="navigation"
+<ul
+  className="c0"
 >
-  <ul
-    className="c0"
-    role="menubar"
+  <li
+    role="menuitem"
   >
-    <li
-      role="menuitem"
+    <a
+      aria-current={null}
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 1
-      </a>
-    </li>
-    <li
-      role="menuitem"
+      Item 1
+    </a>
+  </li>
+  <li
+    role="menuitem"
+  >
+    <a
+      aria-current={null}
+      className="c2"
+      href="#"
     >
-      <a
-        className="c2"
-        href="#"
-      >
-        Item 2
-      </a>
-    </li>
-    <li
-      className="customLiClass"
-      role="menuitem"
+      Item 2
+    </a>
+  </li>
+  <li
+    className="customLiClass"
+    role="menuitem"
+  >
+    <a
+      aria-current={null}
+      className="c1"
+      href="#"
     >
-      <a
-        className="c1"
-        href="#"
-      >
-        Item 3
-      </a>
-    </li>
-  </ul>
-</nav>
+      Item 3
+    </a>
+  </li>
+</ul>
 `;

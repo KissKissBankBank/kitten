@@ -6,6 +6,34 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `RocketIcon` component.
 - Feature: Create `ProgressRing` component.
 
+- Fix: Fix arrow size on `ProjectCarousel` buttons.
+- Feature: Add a11y options for `ProjectCarousel` buttons.
+
+## [2.62.0] - 2020-04-06
+
+Features:
+- Create `HeaderNav` components.
+- Create `AvatarWithTextAndBadge` components.
+- Create `a11y` helper.
+- Create `LoginIcon` component.
+- Create `HeaderMenu.Badge` component.
+- Create `dropdown-config` file to store component constants.
+- Create `ratio` file with `computeFromRatio` helper.
+- Add `borderSideOnHover`, `largeItem`, `noBorder`, `backgroundColors`
+  props to `HeaderMenu` component.
+- Add `Button` prop to `HeaderMenu.Item` component.
+- Add keyboard key code and event name in `events` file.
+- Add `.k-u-avoid-click` utility.
+- Add a11y events to `DropdownButton` component.
+- Add `tiny` prop in `KissKissBankBankLogo` and `LendopolisLogo`
+  components.
+- Add `ORDERED_SCREEN_SIZES` constant in `screen-config` file.
+- Add `getScreenSizeFrom` helper in `media-queries` file.
+- Add new `k-u-link` utility class for basic link styling.
+
+Fix:
+- Fix `Dropdown` components events and accessibility.
+
 ## [2.61.1] - 2020-04-06
 
 Fixes:
