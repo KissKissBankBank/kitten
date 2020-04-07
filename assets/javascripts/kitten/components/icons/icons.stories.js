@@ -57,6 +57,7 @@ import { SaveIcon } from './save-icon'
 import { DocIcon } from './doc-icon'
 import { CameraIcon } from './camera-icon'
 import { RocketIcon } from './rocket-icon'
+import { RocketCircleIcon } from './rocket-circle-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -166,6 +167,7 @@ export const AllIcons = () => {
         <IconContainer children={<DocIcon />} />
         <IconContainer children={<CameraIcon />} />
         <IconContainer children={<RocketIcon />} />
+        <IconContainer children={<RocketCircleIcon />} />
       </Group>
     </Container>
   )
