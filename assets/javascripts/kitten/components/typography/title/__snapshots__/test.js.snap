@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Title /> by default matches with snapshot 1`] = `
+<span
+  className="title__StyledTitle-sc-46lshq-0 jqndyC"
+>
+  Lorem ipsum dolor sit amet…
+</span>
+`;
