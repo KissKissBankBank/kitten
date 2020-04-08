@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
-import { horizontalStroke } from '../../../components/layout/horizontal-stroke'
-import { strokeStyles } from './helpers/stroke-styles'
 
 const StyledTitle = styled.span`
   ${TYPOGRAPHY.fontStyles.bold};
@@ -24,32 +22,23 @@ const StyledTitle = styled.span`
     `}
 `
 
-const StyledStroke = styled.div`
-  ${({ stroke }) => strokeStyles(stroke)}
-`
 export const Title = ({
   modifier,
   tag,
   margin,
   italic,
-  stroke,
   ...other
 }) => {
 
 
   return (
-    <>
-      <StyledTitle
-        {...other}
-        tag={tag}
-        modifier={modifier}
-        margin={margin}
-        italic={italic}
-      />
-      <StyledStroke
-        stroke={stroke}
-      />
-    </>
+    <StyledTitle
+      {...other}
+      tag={tag}
+      modifier={modifier}
+      margin={margin}
+      italic={italic}
+    />
   )
 }
 
@@ -57,7 +46,6 @@ Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
   children: 'Lorem ipsum dolor sit amet…',
-  stroke: 'default',
   margin: true,
   italic: false,
 }
@@ -71,11 +59,6 @@ Title.propTypes = {
     'quaternary',
     'quinary',
     'senary',
-  ]),
-  stroke: PropTypes.oneOf([
-    'big',
-    'default',
-    'tiny',
   ]),
   margin: PropTypes.bool,
   italic: PropTypes.bool,

@@ -8,10 +8,18 @@ import {
   select,
 } from '@storybook/addon-knobs'
 import { Title } from './index'
-import { Marger } from '../../layout/marger'
-import { Container } from '../../grid/container'
-import { Grid, GridCol } from '../../grid/grid'
 
+export default {
+  component: Title,
+  title: 'Title',
+  decorators: [withKnobs],
+}
+
+export const asDymanicVariables = () => {
+  const modifier = text("Modifier", "primary")
+  const margin = boolean('Margin', false)
+  const italic = boolean('Italic', false)
+}
 
 const modifierOptions = {
   Primary: 'primary',
@@ -22,34 +30,3 @@ const modifierOptions = {
   Senary: 'senary',
 }
 
-const strokeOptions = {
-  Big: 'big',
-  Default: 'default',
-  Tiny: 'tiny',
-}
-
-storiesOf('Typography/Title', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withInfo)
-  .add(
-    'default',
-    () => {
-      return (
-        <Marger top="4">
-          <Container>
-            <Grid>
-              <GridCol col="10">
-                <Title
-                  modifier={select('Modifier', modifierOptions, 'primary')}
-                  margin={boolean('Margin', false)}
-                  italic={boolean('Italic', false)}
-                  stroke={select('Stroke', strokeOptions, 'default')}
-                >
-                  {text('Title', 'MyTitle')}
-                </Title>
-              </GridCol>
-            </Grid>
-          </Container>
-        </Marger>
-      )
-    })
