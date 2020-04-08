@@ -1,6 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
 import {
   withKnobs,
   text,
@@ -25,6 +23,11 @@ export default {
   component: Title,
   title: 'Typography/Title',
   decorators: [withKnobs],
+
+  parameters: {
+    component: Title,
+    componentSubtitle: 'List of Title',
+  }
 }
 
 export const defaultProps = () => (

@@ -52,6 +52,9 @@ Title.defaultProps = {
 
 Title.propTypes = {
   tag: PropTypes.string,
+  /**
+    Title have seven modifiers. With different size depending on the device (desktop, tablet and mobile)
+  */
   modifier: PropTypes.oneOf([
     'primary',
     'secondary',
@@ -61,6 +64,12 @@ Title.propTypes = {
     'senary',
     'septenary',
   ]),
+  /**
+    Remove default margins of `title` attribut.
+  */
   margin: PropTypes.bool,
+  /**
+    Use `font-style: italic`.
+  */
   italic: PropTypes.bool,
 }
