@@ -59,6 +59,7 @@ Title.propTypes = {
     'quaternary',
     'quinary',
     'senary',
+    'septenary',
   ]),
   margin: PropTypes.bool,
   italic: PropTypes.bool,

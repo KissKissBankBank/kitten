@@ -59,7 +59,7 @@ export const modifierStyles = modifier => {
       font-size: ${stepToRem(fontStepOnTablet)};
     }
 
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       font-size: ${stepToRem(fontStepOnDesktop)};
     }
   `

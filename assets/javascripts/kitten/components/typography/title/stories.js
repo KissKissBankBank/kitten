@@ -8,18 +8,8 @@ import {
   select,
 } from '@storybook/addon-knobs'
 import { Title } from './index'
-
-export default {
-  component: Title,
-  title: 'Title',
-  decorators: [withKnobs],
-}
-
-export const asDymanicVariables = () => {
-  const modifier = text("Modifier", "primary")
-  const margin = boolean('Margin', false)
-  const italic = boolean('Italic', false)
-}
+import { Marger } from '../../layout/marger'
+import { Container } from '../../grid/container'
 
 const modifierOptions = {
   Primary: 'primary',
@@ -28,5 +18,25 @@ const modifierOptions = {
   Quaternary: 'quaternary',
   Quinary: 'quinary',
   Senary: 'senary',
+  Septenary: 'septenary',
 }
 
+export default {
+  component: Title,
+  title: 'Typography/Title',
+  decorators: [withKnobs],
+}
+
+export const defaultProps = () => (
+  <Container>
+    <Marger top="4">
+      <Title
+        modifier={select("Modifier", modifierOptions, 'primary')}
+        italic={boolean("Italic", false)}
+        margin={boolean("Margin", false)}
+      >
+        {text('Title', "Lorem ipsum dolor sit amet")}
+      </Title>
+    </Marger>
+  </Container>
+)
