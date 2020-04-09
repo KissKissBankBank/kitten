@@ -3,7 +3,7 @@
 exports[`<ProgressRing /> by default matches with snapshot 1`] = `
 <svg
   height={50}
-  radius={null}
+  radius={100}
   viewBox="0 0 50 50"
   width={50}
   xmlns="http://www.w3.org/2000/svg"

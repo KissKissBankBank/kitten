@@ -12,7 +12,7 @@ const StyledRocketCircle = styled.div`
   align-items: center;
   width: ${({ circleWidthMobile }) => pxToRem(circleWidthMobile)};
   height: ${({ circleWidthMobile }) => pxToRem(circleWidthMobile)};
-  border-radius: ${pxToRem(100)};
+  border-radius: 100%;
   background-color: ${({ circleColor }) => circleColor};
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -20,7 +20,16 @@ const StyledRocketCircle = styled.div`
     height: ${({ circleWidth }) => pxToRem(circleWidth)};
   }
 `
-const StyledRocketIcon = styled(RocketIcon)`
+
+const StyledRocketIcon = styled(({
+  rocketWidth,
+  rocketHeight,
+  rocketHeightMobile,
+  rocketWidthMobile,
+  ...others
+}) => (
+<RocketIcon {...others} />
+))`
   width: ${({ rocketWidthMobile }) => pxToRem(rocketWidthMobile)};
   height: ${({ rocketHeightMobile }) => pxToRem(rocketHeightMobile)};
 
@@ -68,6 +77,7 @@ RocketCircleIcon.defaultProps = {
   rocketWidthMobile: 10,
   rocketHeightMobile: 12,
   rocketColor: COLORS.background1,
+  rocketTitle: '',
 }
 
 RocketCircleIcon.propTypes = {
@@ -78,4 +88,6 @@ RocketCircleIcon.propTypes = {
   rocketHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rocketWidthMobile: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rocketHeightMobile: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  rocketTitle: PropTypes.string,
+  rocketColor: PropTypes.string,
 }

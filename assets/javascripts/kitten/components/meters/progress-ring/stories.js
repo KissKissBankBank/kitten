@@ -16,7 +16,7 @@ const StyledContainer = styled.div`
 `
 
 const StyledText = styled(Text)`
-  margin-left: 10px;
+  margin-left: ${pxToRem(10)};
   align-self: center;
 `
 
@@ -46,13 +46,12 @@ export default {
   component: ProgressRing,
   title: 'Meters/ProgressRing',
   decorators: [withKnobs],
-
   parameters: {
     component: ProgressRing,
-  }
+  },
 }
 
-export const defaultProps = () => (
+export const DefaultProps = () => (
   <Marger top="4" bottom="4">
     <Container>
       <StyledContainer>
@@ -70,7 +69,7 @@ export const defaultProps = () => (
   </Marger>
 )
 
-export const successProgress = () => (
+export const SuccessProgress = () => (
   <Marger top="4" bottom="4">
     <Container>
       <StyledContainer>
@@ -83,7 +82,7 @@ export const successProgress = () => (
   </Marger>
 )
 
-export const overtimeProgress = () => (
+export const OvertimeProgress = () => (
   <Marger top="4" bottom="4">
     <Container>
       <StyledContainer>
