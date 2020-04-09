@@ -24,14 +24,13 @@ export default {
   component: Title,
   title: 'Typography/Title',
   decorators: [withKnobs],
-
   parameters: {
     component: Title,
     componentSubtitle: 'List of Title',
-  }
+  },
 }
 
-export const defaultProps = () => (
+export const DefaultProps = () => (
   <Container>
     <Marger top="4">
       <Title
@@ -45,7 +44,7 @@ export const defaultProps = () => (
   </Container>
 )
 
-export const modifier = () => (
+export const Modifier = () => (
   <>
     <Marger>
       <Text weight="bold">Primary</Text>
@@ -175,10 +174,10 @@ export const modifier = () => (
   </>
 )
 
-export const withoutMargin = () => (
+export const WithoutMargin = () => (
   <Title modifier="primary" margin={false}>Lorem ipsum dolor sit amet…</Title>
 )
 
-export const italic = () => (
+export const Italic = () => (
   <Title modifier="primary" italic>Lorem ipsum dolor sit amet…</Title>
 )

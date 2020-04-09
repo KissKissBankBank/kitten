@@ -30,7 +30,6 @@ export const Title = ({
   ...other
 }) => {
 
-
   return (
     <StyledTitle
       {...other}
