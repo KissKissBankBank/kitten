@@ -39,6 +39,7 @@ export const RocketCircleIcon = ({
   rocketHeight,
   rocketHeightMobile,
   rocketColor,
+  rocketTitle,
   ...others
 }) => (
   <StyledRocketCircle
@@ -52,7 +53,8 @@ export const RocketCircleIcon = ({
       rocketHeight={rocketHeight}
       rocketHeightMobile={rocketHeightMobile}
       rocketWidthMobile={rocketWidthMobile}
-      rocketColor={rocketColor}
+      color={rocketColor}
+      title={rocketTitle}
     />
   </StyledRocketCircle>
 )
@@ -65,6 +67,7 @@ RocketCircleIcon.defaultProps = {
   rocketHeight: 15,
   rocketWidthMobile: 10,
   rocketHeightMobile: 12,
+  rocketColor: COLORS.background1,
 }
 
 RocketCircleIcon.propTypes = {

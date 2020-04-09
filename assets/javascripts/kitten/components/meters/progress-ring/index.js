@@ -42,7 +42,6 @@ export const ProgressRing = ({
   value,
   width,
   strokeWidth,
-  svgProps,
   ...others
 }) => {
   const circleX = width / 2
@@ -56,7 +55,7 @@ export const ProgressRing = ({
 
   return (
     <svg
-      {...svgProps}
+      {...others}
       width={width}
       height={width}
       viewBox={viewBox}
@@ -83,17 +82,30 @@ export const ProgressRing = ({
 ProgressRing.defaultProps = {
   color: COLORS.primary1,
   value: '',
-  svgProps: {},
   width: 50,
   radius: null,
   strokeWidth: 5,
 }
 
 ProgressRing.propTypes = {
+  /**
+    ProgressRing color
+  */
   color: PropTypes.string,
+  /**
+    Percentage of progress %
+  */
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  svgProps: PropTypes.object,
+  /**
+    Width of ProgressRing
+  */
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  /**
+    Radius value of ProgressRing
+  */
   radius: PropTypes.number,
+   /**
+    Width of circle (stroke)
+  */
   strokeWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }

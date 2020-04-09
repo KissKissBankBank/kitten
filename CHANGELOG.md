@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 - Feature: Add `RocketIcon` and `RocketCircleIcon` component.
 - Feature: Create `ProgressRing` component.
 
