@@ -8,6 +8,7 @@ import {
 import { Title } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
+import { Text } from '../../typography/text'
 
 const modifierOptions = {
   Primary: 'primary',
@@ -42,4 +43,134 @@ export const defaultProps = () => (
       </Title>
     </Marger>
   </Container>
+)
+
+export const modifier = () => (
+  <>
+    <Marger>
+      <Text weight="bold">Primary</Text>
+      <br/>
+      <Text size="micro">• Desktop version - 64px</Text>
+      <br/>
+      <Title modifier="primary">Lorem ipsum dolor sit amet…</Title>
+      <Marger top="1">
+        <Text size="micro">• Tablet version - 48px</Text>
+        <br/>
+        <Title modifier="secondary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+      <Marger top="1">
+        <Text size="micro">• Mobile version - 36px</Text>
+        <br/>
+        <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+    </Marger>
+
+    <Marger top="7">
+      <Text weight="bold">Secondary</Text>
+      <br/>
+      <Text size="micro">• Desktop version - 48px</Text>
+      <br/>
+      <Title modifier="secondary">Lorem ipsum dolor sit amet…</Title>
+      <Marger top="1">
+        <Text size="micro">• Tablet version - 36px</Text>
+        <br/>
+        <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+      <Marger top="1">
+        <Text size="micro">• Mobile version - 32px</Text>
+        <br/>
+        <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+    </Marger>
+
+    <Marger top="7">
+      <Text weight="bold">Tertiary</Text>
+      <br/>
+      <Text size="micro">• Desktop version - 36px</Text>
+      <br/>
+      <Title modifier="tertiary">Lorem ipsum dolor sit amet…</Title>
+      <Marger top="1">
+        <Text size="micro">• Tablet version - 32px</Text>
+        <br/>
+        <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+      <Marger top="1">
+        <Text size="micro">• Mobile version - 28px</Text>
+        <br/>
+        <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+    </Marger>
+
+    <Marger top="7">
+      <Text weight="bold">Quaternary</Text>
+      <br/>
+      <Text size="micro">• Desktop version - 32px</Text>
+      <br/>
+      <Title modifier="quaternary">Lorem ipsum dolor sit amet…</Title>
+      <Marger top="1">
+        <Text size="micro">• Tablet version - 28px</Text>
+        <br/>
+        <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+      <Marger top="1">
+        <Text size="micro">• Mobile version - 24px</Text>
+        <br/>
+        <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+    </Marger>
+
+     <Marger top="7">
+      <Text weight="bold">Quinary</Text>
+      <br/>
+      <Text size="micro">• Desktop version - 28px</Text>
+      <br/>
+      <Title modifier="quinary">Lorem ipsum dolor sit amet…</Title>
+      <Marger top="1">
+        <Text size="micro">• Tablet version - 24px</Text>
+        <br/>
+        <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+      <Marger top="1">
+        <Text size="micro">• Mobile version - 20px</Text>
+        <br/>
+        <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+    </Marger>
+
+     <Marger top="7">
+      <Text weight="bold">Senary</Text>
+      <br/>
+      <Text size="micro">• Desktop version - 24px</Text>
+      <br/>
+      <Title modifier="senary">Lorem ipsum dolor sit amet…</Title>
+      <Marger top="1">
+        <Text size="micro">• Tablet version - 20px</Text>
+        <br/>
+        <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
+      </Marger>
+      <Marger top="1">
+        <Text size="micro">• Mobile version - 18px</Text>
+        <br/>
+        <Text size="big" weight="bold">Lorem ipsum dolor sit amet…</Text>
+      </Marger>
+    </Marger>
+
+     <Marger top="7">
+      <Text weight="bold">Septenary</Text>
+      <br/>
+      <Text size="micro">• Desktop version - 20px</Text>
+      <br/>
+      <Title modifier="septenary">Lorem ipsum dolor sit amet…</Title>
+      <Marger top="1">
+        <Text size="micro">• Tablet version - 18px</Text>
+        <br/>
+        <Text size="big" weight="bold">Lorem ipsum dolor sit amet…</Text>
+      </Marger>
+      <Marger top="1">
+        <Text size="micro">• Mobile version - 16px</Text>
+        <br/>
+        <Text size="default" weight="bold">Lorem ipsum dolor sit amet…</Text>
+      </Marger>
+    </Marger>
+  </>
 )

@@ -15,6 +15,7 @@ describe('<Title />', () => {
             modifier="primary"
             margin={false}
             italic={false}
+            children="Lorem ipsum dolor sit amet…"
           />,
         )
         .toJSON()

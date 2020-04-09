@@ -45,7 +45,6 @@ export const Title = ({
 Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
-  children: 'Lorem ipsum dolor sit amet…',
   margin: true,
   italic: false,
 }
