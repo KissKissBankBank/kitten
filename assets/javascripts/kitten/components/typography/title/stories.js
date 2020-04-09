@@ -174,3 +174,11 @@ export const modifier = () => (
     </Marger>
   </>
 )
+
+export const withoutMargin = () => (
+  <Title modifier="primary" margin={false}>Lorem ipsum dolor sit amet…</Title>
+)
+
+export const italic = () => (
+  <Title modifier="primary" italic>Lorem ipsum dolor sit amet…</Title>
+)
