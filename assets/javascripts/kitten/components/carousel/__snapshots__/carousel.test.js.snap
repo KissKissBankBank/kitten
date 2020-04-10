@@ -96,7 +96,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                   className="marger__StyledMarger-q3lecu-0 fXmpKT k-ProjectCard__grid--flex"
                 >
                   <p
-                    className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                    className="title__StyledTitle-sc-46lshq-0 gvbUmN k-ProjectCard__grid--flex__item-fluid k-Card__title"
                   >
                     A
                   </p>
@@ -238,7 +238,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
                 className="marger__StyledMarger-q3lecu-0 fXmpKT k-ProjectCard__grid--flex"
               >
                 <p
-                  className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                  className="title__StyledTitle-sc-46lshq-0 gvbUmN k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -387,7 +387,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                   className="marger__StyledMarger-q3lecu-0 fXmpKT k-ProjectCard__grid--flex"
                 >
                   <p
-                    className="k-Title k-ProjectCard__grid--flex__item-fluid k-Card__title k-Title--senary k-Title--withoutMargin"
+                    className="title__StyledTitle-sc-46lshq-0 gvbUmN k-ProjectCard__grid--flex__item-fluid k-Card__title"
                   >
                     A
                   </p>

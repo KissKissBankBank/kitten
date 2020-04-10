@@ -18,7 +18,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 jgfcQX"
         >
           <h2
-            className="k-Title k-Title--secondary k-Title--withoutMargin"
+            className="title__StyledTitle-sc-46lshq-0 isNeGz"
           >
             Main title goes here !
           </h2>
@@ -79,7 +79,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                     className="marger__StyledMarger-q3lecu-0 iyINNV"
                   >
                     <h1
-                      className="k-Title k-Title--senary k-Title--withoutMargin"
+                      className="title__StyledTitle-sc-46lshq-0 gvbUmN"
                       style={
                         Object {
                           "color": "#222",
@@ -152,7 +152,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 className="marger__StyledMarger-q3lecu-0 csmETU"
               >
                 <h1
-                  className="k-Title k-Title--senary k-Title--withoutMargin"
+                  className="title__StyledTitle-sc-46lshq-0 gvbUmN"
                   style={
                     Object {
                       "color": "#222",
@@ -239,7 +239,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 className="marger__StyledMarger-q3lecu-0 iyINNV"
               >
                 <h1
-                  className="k-Title k-Title--senary k-Title--withoutMargin"
+                  className="title__StyledTitle-sc-46lshq-0 gvbUmN"
                   style={
                     Object {
                       "color": "#222",
