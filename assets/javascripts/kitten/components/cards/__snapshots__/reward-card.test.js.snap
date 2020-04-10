@@ -400,7 +400,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             className="marger__StyledMarger-q3lecu-0 bNPfXK"
           >
             <h1
-              className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
+              className="title__StyledTitle-sc-46lshq-0 fyNmMc"
               style={
                 Object {
                   "color": "#222",

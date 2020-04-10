@@ -17,7 +17,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="marger__StyledMarger-q3lecu-0 jgfcQX"
         >
           <h2
-            className="k-Title donation-card__StyledTitle-sc-19h76fz-2 fGWXlh k-Title--primary k-Title--withoutMargin"
+            className="title__StyledTitle-sc-46lshq-0 jqndyC donation-card__StyledTitle-sc-19h76fz-2 fGWXlh"
           >
             Custom title mount
           </h2>
