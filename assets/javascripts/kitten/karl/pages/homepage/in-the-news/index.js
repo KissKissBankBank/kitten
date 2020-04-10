@@ -1,9 +1,13 @@
 import React from 'react'
+import styled from 'styled-components'
 import Card from './components/card'
 import { Text } from '../../../../components/typography/text'
 import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
+import { CONTAINER_PADDING } from '../../../../constants/grid-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../constants/screen-config'
 
 const selectionData = [
   {
@@ -58,10 +62,17 @@ const selectionData = [
   },
 ]
 
+const StyledGridCol = styled(GridCol)`
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    padding: 0;
+    padding-right: ${pxToRem(CONTAINER_PADDING)};
+  }
+`
+
 const InTheNews = () => (
   <Container>
     <Grid>
-      <GridCol col-l="6">
+      <StyledGridCol col-l="6">
         <Text
           tag="p"
           weight="bold"
@@ -80,9 +91,9 @@ const InTheNews = () => (
             alt: '',
           }}
         />
-      </GridCol>
+      </StyledGridCol>
 
-      <GridCol col-l="6">
+      <StyledGridCol col-l="6">
         <Text
           tag="p"
           weight="bold"
@@ -93,9 +104,8 @@ const InTheNews = () => (
           Notre sélection
         </Text>
         <Carousel
-          itemMinWidth="110"
-          baseItemMarginBetween="10"
-          hidePaginationOnMobile
+          itemMinWidth={500}
+          baseItemMarginBetween={10}
         >
           {selectionData.map((item, index) => (
             <div>
@@ -134,7 +144,7 @@ const InTheNews = () => (
             </div>
           ))}
         </Carousel>
-      </GridCol>
+      </StyledGridCol>
     </Grid>
   </Container>
 )

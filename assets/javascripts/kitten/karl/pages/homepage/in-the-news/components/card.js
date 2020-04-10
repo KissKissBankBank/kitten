@@ -37,7 +37,7 @@ const StyledCard = styled.div`
       }
 
       :last-child {
-        margin-bottom: 0;
+        margin-bottom: ${pxToRem(20)};
       }
     `}
 `
@@ -66,12 +66,13 @@ const StyledDescription = styled(GridCol)`
 `
 
 const StyledTitle = styled(Title)`
-  margin: ${pxToRem(15)} 0;
-  font-size: ${stepToRem(2)};
+  margin: ${pxToRem(10)} 0;
+  font-size: ${stepToRem(1)};
   line-height: 1.2;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     font-size: ${stepToRem(4)};
+    margin: ${pxToRem(15)} 0;
   }
 
   ${({ horizontalCard }) =>
@@ -82,24 +83,28 @@ const StyledTitle = styled(Title)`
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         font-size: ${stepToRem(2)};
+        margin: ${pxToRem(10)} 0;
       }
     `}
 `
 
 const StyledText = styled(Text)`
-  font-size: ${stepToRem(0)};
-  margin-top: ${pxToRem(15)};
+  font-size: ${stepToRem(-1)};
+  margin-top: ${pxToRem(10)};
   margin-bottom: ${pxToRem(0)};
   line-height: 1.5;
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    font-size: ${stepToRem(0)};
+    margin-top: ${pxToRem(15)};
+  }
 
   ${({ horizontalCard }) =>
     horizontalCard &&
     css`
-      margin-top: ${pxToRem(10)};
-      font-size: ${stepToRem(-1)};
-
-      @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
-        display: none;
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        font-size: ${stepToRem(-1)};
+        margin-top: ${pxToRem(10)};
       }
     `}
 `
@@ -205,6 +210,7 @@ const Card = ({
             </StyledProgressText>
           </StyledProgress>
         )}
+
         <StyledTitle
           tag="p"
           modifier="septenary"
@@ -212,9 +218,11 @@ const Card = ({
         >
           {title}
         </StyledTitle>
+
         <StyledText tag="p" color="font1" horizontalCard={horizontalCard}>
           {text}
         </StyledText>
+
       </StyledDescription>
     </StyledCard>
   )
