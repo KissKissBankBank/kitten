@@ -203,11 +203,7 @@
     }
   }
 
-  .k-Button--big {
-    @include k-buttonBig($buttonBigOptions);
-  }
-
-  .k-Button--big\@s-up {
+  .k-Button--big, .k-Button--big\@s-up {
     @include k-media-min('s') {
       @include k-buttonBig($buttonBigOptions);
     }

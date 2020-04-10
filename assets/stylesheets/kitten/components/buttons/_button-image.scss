@@ -47,7 +47,9 @@
   }
 
   .k-ButtonImage--big {
-    @include k-buttonRoundedImage($button-size-big);
+    @include k-media-min('s') {
+      @include k-buttonRoundedImage($button-size-big);
+    }
   }
 
   .k-ButtonImage--huge {
