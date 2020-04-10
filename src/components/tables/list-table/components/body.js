@@ -7,8 +7,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.ListTableBody = void 0;
 
-var _react = _interopRequireDefault(require("react"));
-
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var ListTableBody = _styledComponents.default.ul.withConfig({

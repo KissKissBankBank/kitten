@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -13,7 +11,7 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -50,9 +48,9 @@ var StatusWithBullet = function StatusWithBullet(_ref2) {
     statusColor = _colorsConfig.default.error;
   }
 
-  return _react.default.createElement(StyledStatus, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(StyledStatus, (0, _extends2.default)({
     statusColor: statusColor
-  }, props), _react.default.createElement(StyledBullet, (0, _extends2.default)({
+  }, props), /*#__PURE__*/_react.default.createElement(StyledBullet, (0, _extends2.default)({
     "aria-hidden": "true"
   }, bulletProps)), statusMessage);
 };

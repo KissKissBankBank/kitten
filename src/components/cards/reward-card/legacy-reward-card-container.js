@@ -21,7 +21,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -53,17 +53,19 @@ var _mediaQueries = require("../../../hoc/media-queries");
 
 var _paddings, _image, _lists, _paddings2;
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var Grid = (0, _radium.default)(_grid.Grid);
 var GridCol = (0, _radium.default)(_grid.GridCol);
 
-var LegacyRewardCardContainerBase =
-/*#__PURE__*/
-function (_Component) {
+var LegacyRewardCardContainerBase = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(LegacyRewardCardContainerBase, _Component);
 
-  function LegacyRewardCardContainerBase() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(LegacyRewardCardContainerBase);
 
+  function LegacyRewardCardContainerBase() {
     var _this;
 
     (0, _classCallCheck2.default)(this, LegacyRewardCardContainerBase);
@@ -72,7 +74,7 @@ function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(LegacyRewardCardContainerBase)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
 
     _this.isTinyVersion = function () {
       return _this.props.version === 'tiny' || _this.props.viewportIsMobile;
@@ -173,37 +175,37 @@ function (_Component) {
       };
       var withImageOnTinyVersion = shouldDisplayImage && this.isTinyVersion();
       if (!titleAmount) return null;
-      return _react.default.createElement(_deprecated.Deprecated, {
+      return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
         warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-      }, _react.default.createElement(_radium.StyleRoot, (0, _extends2.default)({}, others, {
+      }, /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, (0, _extends2.default)({}, others, {
         style: cardStyles
-      }), _react.default.createElement(_marger.Marger, {
+      }), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: this.isSOrLessVersion() ? 0 : 4,
         top: this.isSOrLessVersion() ? 3 : 4
-      }, _react.default.createElement(Grid, {
+      }, /*#__PURE__*/_react.default.createElement(Grid, {
         style: cardPaddings
-      }, _react.default.createElement(GridCol, leftColumnProps, titleAmount && _react.default.createElement(_content.RewardCardContent, (0, _extends2.default)({}, this.props, {
+      }, /*#__PURE__*/_react.default.createElement(GridCol, leftColumnProps, titleAmount && /*#__PURE__*/_react.default.createElement(_content.RewardCardContent, (0, _extends2.default)({}, this.props, {
         subtitle: subtitle || titleDescription,
         subtitleTag: subtitleTag || textTag,
         description: description || textDescription,
         isTinyVersion: this.isTinyVersion()
-      })), _react.default.createElement(_infos.RewardCardInfos, (0, _extends2.default)({
+      })), /*#__PURE__*/_react.default.createElement(_infos.RewardCardInfos, (0, _extends2.default)({
         infos: this.legacyInfos()
       }, this.props, {
         isTinyVersion: this.isTinyVersion(),
         viewportIsTabletOrLess: viewportIsTabletOrLess
-      })), !this.isSOrLessVersion() && _react.default.createElement(_action.RewardCardActionOnMOrMore, (0, _extends2.default)({}, this.props, {
+      })), !this.isSOrLessVersion() && /*#__PURE__*/_react.default.createElement(_action.RewardCardActionOnMOrMore, (0, _extends2.default)({}, this.props, {
         manageContributionDescription: manageContributionDescription || myContribution,
         manageContributionLinkLabel: manageContributionLinkLabel || manageContribution,
         manageContributionLinkHref: manageContributionLinkHref || manageContributionLink,
         buttonLabel: buttonLabel || button,
         isTinyVersion: this.isTinyVersion(),
         isSOrLessVersion: this.isSOrLessVersion()
-      }))), shouldDisplayImage && _react.default.createElement(GridCol, (0, _extends2.default)({}, rightColumnProps, {
+      }))), shouldDisplayImage && /*#__PURE__*/_react.default.createElement(GridCol, (0, _extends2.default)({}, rightColumnProps, {
         style: cardImageStyles
-      }), _react.default.createElement(_marger.Marger, {
+      }), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: !myContribution ? 2 : null
-      }, _react.default.createElement(_image2.RewardCardImage, this.props)))), this.isSOrLessVersion() && _react.default.createElement(_action.RewardCardAction, (0, _extends2.default)({}, this.props, {
+      }, /*#__PURE__*/_react.default.createElement(_image2.RewardCardImage, this.props)))), this.isSOrLessVersion() && /*#__PURE__*/_react.default.createElement(_action.RewardCardAction, (0, _extends2.default)({}, this.props, {
         manageContributionDescription: manageContributionDescription || myContribution,
         manageContributionLinkLabel: manageContributionLinkLabel || manageContribution,
         manageContributionLinkHref: manageContributionLinkHref || manageContributionLink,

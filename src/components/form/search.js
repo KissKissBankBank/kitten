@@ -9,40 +9,38 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.Search = void 0;
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
+
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
-
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
-
-var _classnames = _interopRequireDefault(require("classnames"));
-
-var _elementHelper = require("../../helpers/dom/element-helper");
 
 var _textInput = require("../../components/form/text-input");
 
 var _searchIcon = require("../../components/icons/search-icon");
 
-var Search =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var Search = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Search, _Component);
+
+  var _super = _createSuper(Search);
 
   function Search(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, Search);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Search).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       focus: false,
       hover: false
@@ -90,33 +88,31 @@ function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
-          className = _this$props.className,
           actionUrl = _this$props.actionUrl,
           inputId = _this$props.inputId,
           inputName = _this$props.inputName,
           inputPlaceholder = _this$props.inputPlaceholder,
           inputLabel = _this$props.inputLabel,
-          submitLabel = _this$props.submitLabel,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "actionUrl", "inputId", "inputName", "inputPlaceholder", "inputLabel", "submitLabel"]);
-      var inputClassName = (0, _classnames.default)('k-TextInput', 'k-TextInput--tiny', 'k-SearchInput__input', {
+          submitLabel = _this$props.submitLabel;
+      var inputClassName = classNames('k-TextInput', 'k-TextInput--tiny', 'k-SearchInput__input', {
         'is-active': this.state.focus
       }, {
         'is-hover': this.state.hover
       });
-      return _react.default.createElement("form", {
+      return /*#__PURE__*/_react.default.createElement("form", {
         className: "k-SearchInput",
         role: "search",
         action: actionUrl,
         acceptCharset: "UTF-8",
         method: "get"
-      }, _react.default.createElement(_textInput.TextInput, {
+      }, /*#__PURE__*/_react.default.createElement(_textInput.TextInput, {
         className: inputClassName,
         type: "search",
         id: inputId,
         name: inputName,
         placeholder: inputPlaceholder,
         "aria-label": inputLabel
-      }), _react.default.createElement("button", {
+      }), /*#__PURE__*/_react.default.createElement("button", {
         type: "submit",
         "aria-label": submitLabel,
         className: "k-SearchInput__submit k-SearchInput__submit--tiny",
@@ -124,7 +120,7 @@ function (_Component) {
         onBlur: this.handleSubmitBlur,
         onMouseOver: this.handleSubmitMouseOver,
         onMouseOut: this.handleSubmitMouseOut
-      }, _react.default.createElement(_searchIcon.SearchIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_searchIcon.SearchIcon, {
         width: "14",
         height: "14",
         circleProps: {

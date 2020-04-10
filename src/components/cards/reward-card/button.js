@@ -34,9 +34,9 @@ var RewardCardButton = function RewardCardButton(_ref) {
       isTinyVersion = _ref.isTinyVersion;
   if (!label) return null;
   var buttonStyles = isTinyVersion ? styles.tinyVersion : styles.base;
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-  }, _react.default.createElement(Button, {
+  }, /*#__PURE__*/_react.default.createElement(Button, {
     size: "big",
     modifier: "helium",
     type: "button",

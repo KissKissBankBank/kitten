@@ -27,14 +27,18 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var ImageWithCaption =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var ImageWithCaption = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(ImageWithCaption, _Component);
+
+  var _super = _createSuper(ImageWithCaption);
 
   function ImageWithCaption() {
     (0, _classCallCheck2.default)(this, ImageWithCaption);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ImageWithCaption).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(ImageWithCaption, [{
@@ -45,7 +49,7 @@ function (_Component) {
           className = _this$props.className,
           captionProps = _this$props.captionProps;
       var figcaptionClassName = (0, _classnames.default)('k-ImageWithCaption__caption', className);
-      return _react.default.createElement("figcaption", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("figcaption", (0, _extends2.default)({
         className: figcaptionClassName
       }, captionProps), children);
     }
@@ -59,9 +63,9 @@ function (_Component) {
           imageHeight = _this$props2.imageHeight,
           captionProps = _this$props2.captionProps,
           others = (0, _objectWithoutProperties2.default)(_this$props2, ["imageSrc", "imageAlt", "imageWidth", "imageHeight", "captionProps"]);
-      return _react.default.createElement("figure", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("figure", (0, _extends2.default)({
         className: "k-ImageWithCaption"
-      }, others), _react.default.createElement("img", {
+      }, others), /*#__PURE__*/_react.default.createElement("img", {
         src: imageSrc,
         alt: imageAlt,
         width: imageWidth,

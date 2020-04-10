@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import { ArrowIcon } from './arrow-icon'
 import { BancontactIcon } from './bancontact-icon'
@@ -57,6 +56,8 @@ import { GiftIcon } from './gift-icon'
 import { SaveIcon } from './save-icon'
 import { DocIcon } from './doc-icon'
 import { CameraIcon } from './camera-icon'
+import { RocketIcon } from './rocket-icon'
+import { RocketCircleIcon } from './rocket-circle-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -99,7 +100,7 @@ const IconContainer = styled(({ className, children }) => {
   padding: ${pxToRem(10)};
 `
 
-storiesOf('Icons/List', module).add('default', () => {
+export const AllIcons = () => {
   return (
     <Container>
       <Group title="Bank">
@@ -165,7 +166,11 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<SaveIcon />} />
         <IconContainer children={<DocIcon />} />
         <IconContainer children={<CameraIcon />} />
+        <IconContainer children={<RocketIcon />} />
+        <IconContainer children={<RocketCircleIcon />} />
       </Group>
     </Container>
   )
-})
+}
+
+export default { title: 'Icons/List' }

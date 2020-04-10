@@ -1,10 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import COLORS from '../../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { containerStyles, titleStyles } from './styles'
-import TYPOGRAPHY from '../../../../constants/typography-config'
 
 const StyledTitle = styled.h2`
   ${titleStyles}

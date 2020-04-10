@@ -15,9 +15,9 @@ var _deprecated = require("../../../helpers/utils/deprecated");
 
 var NavTabCarousel = function NavTabCarousel(props) {
   var message = "DEPRECATED:\n    Import `NavTabCarousel` from `\u2026/nav-tab-carousel`\n    instead of `\u2026/tab-bar-carousel.";
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: message
-  }, _react.default.createElement(_navTabCarousel.NavTabCarousel, props));
+  }, /*#__PURE__*/_react.default.createElement(_navTabCarousel.NavTabCarousel, props));
 };
 
 exports.NavTabCarousel = NavTabCarousel;

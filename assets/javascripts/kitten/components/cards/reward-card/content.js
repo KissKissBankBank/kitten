@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
 import { styles } from '../../../components/cards/reward-card'

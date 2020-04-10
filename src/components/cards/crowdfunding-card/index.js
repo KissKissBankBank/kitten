@@ -19,7 +19,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -47,6 +47,10 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledContainer = _styledComponents.default.div.withConfig({
   displayName: "crowdfunding-card__StyledContainer",
   componentId: "sc-1b0f5ki-0"
@@ -63,14 +67,12 @@ var StyledTitleAndDescription = _styledComponents.default.div.withConfig({
   return titlesMinHeight && (0, _styledComponents.css)(["min-height:", ";"], (0, _typography.pxToRem)(75));
 });
 
-var CrowdfundingCard =
-/*#__PURE__*/
-function (_PureComponent) {
+var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(CrowdfundingCard, _PureComponent);
 
-  function CrowdfundingCard() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(CrowdfundingCard);
 
+  function CrowdfundingCard() {
     var _this;
 
     (0, _classCallCheck2.default)(this, CrowdfundingCard);
@@ -79,7 +81,7 @@ function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(CrowdfundingCard)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
 
     _this.removeCurrentFocus = function () {
       document.activeElement.blur();
@@ -112,41 +114,41 @@ function (_PureComponent) {
           progress = _this$props.progress,
           progressColor = _this$props.progressColor,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["href", "imageContainerBackground", "imageProps", "avatarProps", "ownerDescription", "ownerTitle", "loading", "state", "cardTitle", "cardSubTitle", "titleTruncate", "subTitleTruncate", "titlesMinHeight", "titleProps", "info1", "info2", "info3", "progress", "progressColor"]);
-      return _react.default.createElement(StyledContainer, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(StyledContainer, (0, _extends2.default)({}, others, {
         as: href ? 'a' : 'div',
         onClick: this.removeCurrentFocus,
         className: "k-Card k-Card--light k-Card--withoutBoxShadowOnHover",
         href: href
-      }), _react.default.createElement(_image.default, {
+      }), /*#__PURE__*/_react.default.createElement(_image.default, {
         ownerTitle: ownerTitle,
         ownerDescription: ownerDescription,
         imageContainerBackground: imageContainerBackground,
         imageProps: imageProps,
         avatarProps: avatarProps,
         loading: loading
-      }), _react.default.createElement(StyledTitleAndDescription, {
+      }), /*#__PURE__*/_react.default.createElement(StyledTitleAndDescription, {
         titlesMinHeight: titlesMinHeight
-      }, _react.default.createElement(_title.default, {
+      }, /*#__PURE__*/_react.default.createElement(_title.default, {
         title: cardTitle,
         loading: loading,
         titleTruncate: titleTruncate
-      }), _react.default.createElement(_subtitle.default, {
+      }), /*#__PURE__*/_react.default.createElement(_subtitle.default, {
         subTitle: cardSubTitle,
         subTitleTruncate: subTitleTruncate,
         loading: loading
-      })), _react.default.createElement(_informations.default, {
+      })), /*#__PURE__*/_react.default.createElement(_informations.default, {
         info1: info1,
         info2: info2,
         info3: info3,
         loading: loading
-      }), _react.default.createElement(_progress.default, {
+      }), /*#__PURE__*/_react.default.createElement(_progress.default, {
         progress: progress,
         progressColor: progressColor,
         loading: loading
-      }), _react.default.createElement(_state.default, {
+      }), /*#__PURE__*/_react.default.createElement(_state.default, {
         state: state,
         loading: loading
-      }), _react.default.createElement(_loading.default, {
+      }), /*#__PURE__*/_react.default.createElement(_loading.default, {
         loading: loading
       }));
     }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
+import { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { Marger } from '../../components/layout/marger'
 import { Title } from '../../components/typography/title'

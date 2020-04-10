@@ -33,14 +33,18 @@ var _buttonIcon = require("../../components/buttons/button-icon");
 
 var _crossIcon = require("../../components/icons/cross-icon");
 
-var CloseButton =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var CloseButton = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(CloseButton, _Component);
+
+  var _super = _createSuper(CloseButton);
 
   function CloseButton() {
     (0, _classCallCheck2.default)(this, CloseButton);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CloseButton).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(CloseButton, [{
@@ -53,13 +57,13 @@ function (_Component) {
           buttonModifier = _this$props.buttonModifier,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "closeButtonLabel", "size", "buttonModifier"]);
       var buttonClassName = (0, _classnames.default)('k-ButtonIcon--cross', (0, _defineProperty2.default)({}, "k-ButtonIcon--cross--".concat(size), size), className);
-      return _react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, (0, _extends2.default)({
         type: "button",
         className: buttonClassName,
         title: closeButtonLabel,
         "aria-label": closeButtonLabel,
         modifier: buttonModifier
-      }, others), _react.default.createElement(_crossIcon.CrossIcon, {
+      }, others), /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
         className: (0, _classnames.default)('k-ButtonIcon__svg', 'k-ButtonIcon__svgRotate')
       }));
     }

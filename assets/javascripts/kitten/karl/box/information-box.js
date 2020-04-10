@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import { Title } from '../../components/typography/title'
+import React from 'react'
 import { Paragraph } from '../../components/typography/paragraph'
 import { InformationBox } from '../../components/box/information-box'
 

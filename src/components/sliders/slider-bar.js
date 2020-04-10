@@ -11,11 +11,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -27,16 +27,21 @@ var _elementHelper = require("../../helpers/dom/element-helper");
 
 var _grabberIcon = require("../../components/icons/grabber-icon");
 
-var SliderBar =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+// DOM for the Slider component. See Slider for state and
+var SliderBar = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(SliderBar, _React$Component);
+
+  var _super = _createSuper(SliderBar);
 
   function SliderBar(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, SliderBar);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(SliderBar).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       grabbing: false
     };
@@ -107,7 +112,7 @@ function (_React$Component) {
   }, {
     key: "renderInput",
     value: function renderInput() {
-      if (this.props.name) return _react.default.createElement("input", {
+      if (this.props.name) return /*#__PURE__*/_react.default.createElement("input", {
         type: "hidden",
         name: this.props.name,
         value: this.props.value || ''
@@ -124,16 +129,16 @@ function (_React$Component) {
         left: percentage
       };
       var grabbingClass = this.state.grabbing ? 'is-grabbing' : null;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: (0, _classnames.default)('k-Slider', grabbingClass),
         onClick: this.handleClick
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Slider__ramp",
         ref: "track"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Slider__progress",
         style: trackStyles
-      }), _react.default.createElement("div", {
+      }), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Slider__handle",
         ref: "thumb",
         style: thumbStyles,
@@ -147,7 +152,7 @@ function (_React$Component) {
         onTouchStart: this.handleStart,
         onClick: this.handleClick,
         onFocus: this.props.onAction
-      }, _react.default.createElement(_grabberIcon.GrabberIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_grabberIcon.GrabberIcon, {
         className: "k-Slider__handleIcon",
         width: "32",
         height: "32"

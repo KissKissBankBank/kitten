@@ -6,4 +6,7 @@ import { KarlSimpleCarousel } from '../../karl/carousel/simple-carousel'
 
 storiesOf('Carousel/SimpleCarousel', module)
   .addDecorator(withKnobs)
-  .add('default', withInfo('common info')(() => <KarlSimpleCarousel />))
+  .add(
+    'default',
+    withInfo('common info')(() => <KarlSimpleCarousel />),
+  )

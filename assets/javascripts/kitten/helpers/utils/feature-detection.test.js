@@ -1,4 +1,3 @@
-import sinon from 'sinon'
 import { cssSupports } from './feature-detection'
 
 describe('cssSupports', () => {

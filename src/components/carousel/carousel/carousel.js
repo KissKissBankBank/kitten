@@ -15,7 +15,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -37,13 +37,17 @@ var _gridConfig = require("../../../constants/grid-config");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var _grid = require("../../../components/grid/grid");
-
-var _buttonIcon = require("../../../components/buttons/button-icon");
+var _button = require("../../../components/buttons/button/button");
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");
 
 var _carouselInner = require("./components/carousel-inner");
+
+var _visuallyHidden = require("../../../components/accessibility/visually-hidden");
+
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var getNumColumnsForWidth = function getNumColumnsForWidth(width, itemMinWidth, itemMarginBetween) {
   if (width === 0 || itemMinWidth === 0) return 0;
@@ -80,14 +84,12 @@ var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToVi
 
 var propTypesPositions = _propTypes.default.oneOf(['top', 'right', 'bottom', 'left']);
 
-var CarouselBase =
-/*#__PURE__*/
-function (_Component) {
+var CarouselBase = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(CarouselBase, _Component);
 
-  function CarouselBase() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(CarouselBase);
 
+  function CarouselBase() {
     var _this;
 
     (0, _classCallCheck2.default)(this, CarouselBase);
@@ -96,7 +98,7 @@ function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(CarouselBase)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
     _this.state = {
       indexPageVisible: 0,
       numColumns: 3,
@@ -170,7 +172,7 @@ function (_Component) {
           numColumns = _this$state3.numColumns,
           numPages = _this$state3.numPages;
       var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
-      return _react.default.createElement(_carouselInner.CarouselInner, {
+      return /*#__PURE__*/_react.default.createElement(_carouselInner.CarouselInner, {
         itemMinWidth: itemMinWidth,
         renderItem: children,
         indexPageVisible: indexPageVisible,
@@ -191,7 +193,9 @@ function (_Component) {
           viewportIsXSOrLess = _this$props3.viewportIsXSOrLess,
           hidePagination = _this$props3.hidePagination,
           hidePaginationOnMobile = _this$props3.hidePaginationOnMobile,
-          paginationPosition = _this$props3.paginationPosition;
+          paginationPosition = _this$props3.paginationPosition,
+          prevButtonText = _this$props3.prevButtonText,
+          nextButtonText = _this$props3.nextButtonText;
       var _this$state4 = _this.state,
           indexPageVisible = _this$state4.indexPageVisible,
           numPages = _this$state4.numPages;
@@ -202,40 +206,42 @@ function (_Component) {
 
       if (viewportIsXSOrLess) {
         var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
-        return _react.default.createElement(PageControl, null, rangePage.map(function (index) {
-          return _react.default.createElement(PageDot, {
+        return /*#__PURE__*/_react.default.createElement(PageControl, null, rangePage.map(function (index) {
+          return /*#__PURE__*/_react.default.createElement(PageDot, {
             index: index,
             key: index,
             visibleIndex: indexPageVisible
           });
-        }), _react.default.createElement(PageControlButton, {
+        }), /*#__PURE__*/_react.default.createElement(PageControlButton, {
           prev: true,
           onClick: _this.goPrevPage
-        }), _react.default.createElement(PageControlButton, {
+        }), /*#__PURE__*/_react.default.createElement(PageControlButton, {
           next: true,
           onClick: _this.goNextPage
         }));
       }
 
-      return _react.default.createElement(CarouselPagination, {
+      return /*#__PURE__*/_react.default.createElement(CarouselPagination, {
         position: paginationPosition,
         itemMarginBetween: itemMarginBetween
-      }, _react.default.createElement(_buttonIcon.ButtonIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_button.Button, {
+        icon: true,
         modifier: "beryllium",
         onClick: _this.goPrevPage,
         disabled: indexPageVisible < 1 || numPages < 1
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, prevButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
-        className: "k-ButtonIcon__svg",
-        direction: "left"
-      })), _react.default.createElement(_buttonIcon.ButtonIcon, {
+        direction: "left",
+        "aria-hidden": true
+      })), /*#__PURE__*/_react.default.createElement(_button.Button, {
+        icon: true,
         modifier: "beryllium",
         onClick: _this.goNextPage,
         disabled: indexPageVisible >= numPages - 1
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, nextButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
-        className: "k-ButtonIcon__svg",
-        direction: "right"
+        direction: "right",
+        "aria-hidden": true
       })));
     };
 
@@ -249,7 +255,7 @@ function (_Component) {
           paginationPosition = _this$props4.paginationPosition,
           children = _this$props4.children;
       if (_react.default.Children.count(children) === 0) return null;
-      return _react.default.createElement(FlexContainer, {
+      return /*#__PURE__*/_react.default.createElement(FlexContainer, {
         paginationPosition: paginationPosition
       }, this.renderCarouselInner(), this.renderPagination());
     }
@@ -265,7 +271,9 @@ CarouselBase.defaultProps = {
   paginationPosition: {
     default: 'right',
     fromM: 'bottom'
-  }
+  },
+  prevButtonText: 'Previous items',
+  nextButtonText: 'Next items'
 };
 CarouselBase.propTypes = {
   itemMinWidth: _propTypes.default.number.isRequired,
@@ -285,7 +293,9 @@ CarouselBase.propTypes = {
     fromM: propTypesPositions,
     fromL: propTypesPositions,
     fromXl: propTypesPositions
-  })
+  }),
+  prevButtonText: _propTypes.default.string,
+  nextButtonText: _propTypes.default.string
 };
 
 var flexContainerdirectionStyle = function flexContainerdirectionStyle(positionType) {

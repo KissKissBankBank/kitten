@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.createMatchMediaWithin = exports.createMatchMediaMax = exports.createMatchMediaMin = exports.createMatchMedia = exports.getJoinedQueries = exports.getMaxQuery = exports.getMinQuery = void 0;
+exports.getScreenSizeFrom = exports.createMatchMediaWithin = exports.createMatchMediaMax = exports.createMatchMediaMin = exports.createMatchMedia = exports.getJoinedQueries = exports.getMaxQuery = exports.getMinQuery = void 0;
 
 var _screenConfig = require("../../constants/screen-config");
 
@@ -60,3 +60,26 @@ var createMatchMediaWithin = function createMatchMediaWithin(configName) {
 };
 
 exports.createMatchMediaWithin = createMatchMediaWithin;
+
+var getScreenSizeFrom = function getScreenSizeFrom(direction) {
+  return function (screenSize) {
+    var currentIndex = _screenConfig.ORDERED_SCREEN_SIZES.indexOf(screenSize.toUpperCase());
+
+    var lastIndex = _screenConfig.ORDERED_SCREEN_SIZES.length - 1;
+    var nextIndex = currentIndex === lastIndex ? currentIndex : currentIndex + 1;
+    var prevIndex = currentIndex === 0 ? 0 : currentIndex - 1;
+
+    switch (direction) {
+      case 'previous':
+        return _screenConfig.ORDERED_SCREEN_SIZES[prevIndex];
+
+      case 'next':
+        return _screenConfig.ORDERED_SCREEN_SIZES[nextIndex];
+
+      default:
+        return _screenConfig.ORDERED_SCREEN_SIZES[currentIndex];
+    }
+  };
+};
+
+exports.getScreenSizeFrom = getScreenSizeFrom;

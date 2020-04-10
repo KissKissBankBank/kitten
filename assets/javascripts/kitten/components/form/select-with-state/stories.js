@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, boolean, select } from '@storybook/addon-knobs'
 import { SelectWithState } from './index'
-import Select from 'react-select'
 
 const options = [
   { value: 'bianchi', label: 'Bianchi' },
@@ -68,7 +67,7 @@ const Container = styled.div`
   margin: 30px auto;
 `
 
-const onChange = value => console.log('Selected value', value)
+const onChange = value => console.warn('Selected value', value)
 
 storiesOf('Form/SelectWithState', module)
   .addDecorator(withKnobs)

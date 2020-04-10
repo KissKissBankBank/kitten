@@ -27,14 +27,18 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _styled = require("./styled");
 
-var Container =
-/*#__PURE__*/
-function (_React$PureComponent) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var Container = /*#__PURE__*/function (_React$PureComponent) {
   (0, _inherits2.default)(Container, _React$PureComponent);
+
+  var _super = _createSuper(Container);
 
   function Container() {
     (0, _classCallCheck2.default)(this, Container);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Container).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Container, [{
@@ -43,7 +47,7 @@ function (_React$PureComponent) {
       var _this$props = this.props,
           style = _this$props.style,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["style"]);
-      return _react.default.createElement(_styled.StyledContainer, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_styled.StyledContainer, (0, _extends2.default)({
         styles: style
       }, others));
     }

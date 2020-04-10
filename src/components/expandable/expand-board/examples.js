@@ -17,7 +17,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -29,11 +29,13 @@ var _expandBoard = require("kitten/components/expandable/expand-board");
 
 var _list = require("kitten/components/lists/list");
 
-var _grid = require("kitten/components/grid/grid");
-
 var _text = require("kitten/components/typography/text");
 
 var _typography = require("../../../helpers/utils/typography");
+
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var fadeInAnimation = function fadeInAnimation() {
   return (0, _styledComponents.keyframes)(["0%:{opacity:0;}100%:{opacity:1;}fadeIn;"]);
@@ -53,14 +55,12 @@ var StyledButtonList = _styledComponents.default.div.withConfig({
   componentId: "ewll9p-1"
 })(["margin:", " ", ";padding:0;"], (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(0));
 
-var ExpandBoardWithButtonItemList =
-/*#__PURE__*/
-function (_PureComponent) {
+var ExpandBoardWithButtonItemList = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(ExpandBoardWithButtonItemList, _PureComponent);
 
-  function ExpandBoardWithButtonItemList() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(ExpandBoardWithButtonItemList);
 
+  function ExpandBoardWithButtonItemList() {
     var _this;
 
     (0, _classCallCheck2.default)(this, ExpandBoardWithButtonItemList);
@@ -69,7 +69,7 @@ function (_PureComponent) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(ExpandBoardWithButtonItemList)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
     _this.list = [{
       size: 'Size XS',
       availability: 'Availability: 10/30',
@@ -137,25 +137,25 @@ function (_PureComponent) {
           borderRadius = _this$props.borderRadius,
           withBottomBorderRadius = _this$props.withBottomBorderRadius,
           big = _this$props.big;
-      return _react.default.createElement(_expandBoard.ExpandBoard, {
+      return /*#__PURE__*/_react.default.createElement(_expandBoard.ExpandBoard, {
         onClick: this.handleClick,
         withAnimation: withAnimation
-      }, _react.default.createElement(_expandBoard.ExpandBoard.Button, {
+      }, /*#__PURE__*/_react.default.createElement(_expandBoard.ExpandBoard.Button, {
         expandChildren: expandedButtonText,
         borderRadius: borderRadius,
         big: big
-      }, buttonText), _react.default.createElement(_expandBoard.ExpandBoard.Content, null, _react.default.createElement(_list.List, {
+      }, buttonText), /*#__PURE__*/_react.default.createElement(_expandBoard.ExpandBoard.Content, null, /*#__PURE__*/_react.default.createElement(_list.List, {
         withBottomBorderRadius: withBottomBorderRadius
       }, this.list.map(function (item, key) {
-        return _react.default.createElement(_list.List.ButtonItem, (0, _extends2.default)({
+        return /*#__PURE__*/_react.default.createElement(_list.List.ButtonItem, (0, _extends2.default)({
           key: item.size,
           disabled: item.disabled
-        }, _this2.buttonListItemStyle(key)), _react.default.createElement(StyledButtonList, null, _react.default.createElement(StyledButtonListItem, {
+        }, _this2.buttonListItemStyle(key)), /*#__PURE__*/_react.default.createElement(StyledButtonList, null, /*#__PURE__*/_react.default.createElement(StyledButtonListItem, {
           tag: "p",
           weight: "regular",
           color: "font1",
           size: "tiny"
-        }, item.size), _react.default.createElement(_text.Text, {
+        }, item.size), /*#__PURE__*/_react.default.createElement(_text.Text, {
           tag: "small",
           color: item.disabled ? 'font2' : 'font1',
           size: "micro"

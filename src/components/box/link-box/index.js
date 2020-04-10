@@ -43,7 +43,7 @@ var Icon = _styledComponents.default.div.withConfig({
 })(["display:flex;margin-top:", ";margin-left:", ";margin-bottom:", ";align-items:center;justify-content:center;min-width:", ";background-color:", ";"], (0, _typography.pxToRem)(-2), (0, _typography.pxToRem)(-2), (0, _typography.pxToRem)(-2), (0, _typography.pxToRem)(90), _colorsConfig.default.primary4);
 
 var Arrow = (0, _styledComponents.default)(function (props) {
-  return _react.default.createElement("div", props, _react.default.createElement(_arrowIcon.ArrowIcon, {
+  return /*#__PURE__*/_react.default.createElement("div", props, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
     className: "k-ButtonIcon__svg"
   }));
 }).withConfig({
@@ -71,16 +71,16 @@ var LinkBox = function LinkBox(_ref) {
     target: '_blank',
     rel: 'noopener'
   } : {};
-  return _react.default.createElement(Link, (0, _extends2.default)({}, linkProps, {
+  return /*#__PURE__*/_react.default.createElement(Link, (0, _extends2.default)({}, linkProps, {
     href: href
-  }, target), _react.default.createElement(Container, null, !!displayIcon && _react.default.createElement(Icon, {
+  }, target), /*#__PURE__*/_react.default.createElement(Container, null, !!displayIcon && /*#__PURE__*/_react.default.createElement(Icon, {
     className: "k-u-hidden@xs-down--important"
-  }, children), _react.default.createElement(ParagraphMarger, {
+  }, children), /*#__PURE__*/_react.default.createElement(ParagraphMarger, {
     top: "2",
     bottom: "2"
-  }, _react.default.createElement(_marger.Marger, {
+  }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     bottom: text ? 0.5 : 0
-  }, _react.default.createElement(_text.Text, {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: titleTag,
     weight: "regular",
     size: viewportIsMobile ? 'tiny' : 'default',
@@ -88,7 +88,7 @@ var LinkBox = function LinkBox(_ref) {
     style: {
       lineHeight: 1
     }
-  }, title)), text && _react.default.createElement(_text.Text, {
+  }, title)), text && /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: textTag,
     weight: "light",
     size: "tiny",
@@ -96,7 +96,7 @@ var LinkBox = function LinkBox(_ref) {
     style: {
       lineHeight: 1.3
     }
-  }, text)), _react.default.createElement(Arrow, null)));
+  }, text)), /*#__PURE__*/_react.default.createElement(Arrow, null)));
 };
 
 exports.LinkBox = LinkBox;

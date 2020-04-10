@@ -1,5 +1,4 @@
 import React, {
-  Fragment,
   useRef,
   useState,
   useEffect,
@@ -45,13 +44,15 @@ function useScrollDirection() {
   const oldScrollPos = useRef(0)
 
   useEffect(() => {
-    function onScroll() {
+    const onScroll = () => {
       setScrollPos(window.pageYOffset)
       // save the old scroll position in the ref
       oldScrollPos.current = window.pageYOffset
     }
-    window.addEventListener('scroll', throttle(onScroll, 200))
-    return () => window.removeEventListener('scroll', throttle(onScroll, 200))
+    const scrollThrottle = throttle(onScroll, 200)
+
+    window.addEventListener('scroll', scrollThrottle)
+    return () => window.removeEventListener('scroll', scrollThrottle)
   }, [])
 
   // current scroll position minus the old scroll position saved in state.
@@ -192,9 +193,9 @@ const StickyContainerBase = (
   }
 
   return (
-    <Fragment>
+    <>
       {(stuck || isSticky === 'always') && (
-        <StyledSpacer containerHeight={containerHeight} />
+        <StyledSpacer className="k-Spacer" containerHeight={containerHeight} />
       )}
       <StyledStickyContainer
         ref={currentStickyContainer}
@@ -204,7 +205,7 @@ const StickyContainerBase = (
       >
         {children}
       </StyledStickyContainer>
-    </Fragment>
+    </>
   )
 }
 

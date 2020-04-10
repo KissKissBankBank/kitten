@@ -13,11 +13,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -33,18 +33,20 @@ var _sliderWithTooltipAndPower = require("../../components/sliders/slider-with-t
 
 var _textInputWithUnit = require("../../components/form/text-input-with-unit");
 
-// Simulator that lets users select an amount and an installment, to start
-// simulating a loan.
-var LoanSimulator =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var LoanSimulator = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(LoanSimulator, _React$Component);
+
+  var _super = _createSuper(LoanSimulator);
 
   function LoanSimulator(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, LoanSimulator);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LoanSimulator).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       amount: props.initialAmount * 1,
       installmentAmount: props.initialInstallment,
@@ -62,7 +64,7 @@ function (_React$Component) {
 
   (0, _createClass2.default)(LoanSimulator, [{
     key: "handleFocus",
-    value: function handleFocus(e) {
+    value: function handleFocus() {
       this.setState({
         touched: false,
         installmentAmount: null
@@ -77,7 +79,7 @@ function (_React$Component) {
     }
   }, {
     key: "handleEnter",
-    value: function handleEnter(e) {
+    value: function handleEnter() {
       this.setState({
         touched: true
       });
@@ -158,7 +160,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement(LoanSimulatorContent, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(LoanSimulatorContent, (0, _extends2.default)({
         ref: "content"
       }, this.props, this.state, {
         onFocus: this.handleFocus,
@@ -183,16 +185,16 @@ function (_React$Component) {
 
 exports.LoanSimulator = LoanSimulator;
 
-var LoanSimulatorContent =
-/*#__PURE__*/
-function (_React$Component2) {
+var LoanSimulatorContent = /*#__PURE__*/function (_React$Component2) {
   (0, _inherits2.default)(LoanSimulatorContent, _React$Component2);
+
+  var _super2 = _createSuper(LoanSimulatorContent);
 
   function LoanSimulatorContent(props) {
     var _this2;
 
     (0, _classCallCheck2.default)(this, LoanSimulatorContent);
-    _this2 = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LoanSimulatorContent).call(this, props));
+    _this2 = _super2.call(this, props);
     _this2.handleAmountKeyDown = _this2.handleAmountKeyDown.bind((0, _assertThisInitialized2.default)(_this2));
     _this2.handleInstallmentChange = _this2.handleInstallmentChange.bind((0, _assertThisInitialized2.default)(_this2));
     return _this2;
@@ -243,15 +245,15 @@ function (_React$Component2) {
         commissionAmount = " ".concat(amount, " ");
       } else {
         var text = "\n        (".concat(this.props.feesExemptionLabel, "\n        ").concat(amount, "\n        ").concat(this.props.currencySymbol, ")\n      ");
-        exemptionText = _react.default.createElement("span", {
+        exemptionText = /*#__PURE__*/_react.default.createElement("span", {
           className: "k-LoanSimulator__feesExemption"
         }, text);
       }
 
       commissionAmount += " ".concat(this.props.currencySymbol);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-LoanSimulator__commission"
-      }, this.props.commissionLabel, _react.default.createElement("span", {
+      }, this.props.commissionLabel, /*#__PURE__*/_react.default.createElement("span", {
         className: (0, _classnames.default)({
           'k-u-text--active': active,
           'k-u-text--inactive': !active
@@ -266,7 +268,7 @@ function (_React$Component2) {
           touched = _this$props.touched,
           requiredDurationError = _this$props.requiredDurationError;
       if (!touched || duration > 0 || !requiredDurationError) return;
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         className: "k-LoanSimulator__durationError"
       }, this.props.requiredDurationError);
     }
@@ -274,9 +276,9 @@ function (_React$Component2) {
     key: "renderButton",
     value: function renderButton() {
       if (!this.props.actionLabel) return;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-LoanSimulator__actions"
-      }, _react.default.createElement("button", {
+      }, /*#__PURE__*/_react.default.createElement("button", {
         className: "k-Button k-Button--helium k-Button--big"
       }, this.props.actionLabel));
     }
@@ -287,21 +289,17 @@ function (_React$Component2) {
 
       var _this$props2 = this.props,
           label = _this$props2.label,
-          dragged = _this$props2.dragged,
-          touched = _this$props2.touched,
           duration = _this$props2.duration,
           error = _this$props2.error;
       var amountValid = !this.props.amountError;
-      var showResult = !error && touched && duration;
       var installmentMin = amountValid ? this.props.installmentMin : 0;
       var installmentMax = amountValid ? this.props.installmentMax : 0;
       var installmentAmount = amountValid ? this.props.installmentAmount : 0;
-      var installmentPercentage = amountValid ? this.props.installmentPercentage : 0;
       var errorClass, errorTag, tooltipClass, tooltipText;
 
       if (error) {
         errorClass = 'is-error';
-        errorTag = _react.default.createElement("p", {
+        errorTag = /*#__PURE__*/_react.default.createElement("p", {
           className: "k-LoanSimulator__amount__error"
         }, error);
       }
@@ -311,10 +309,10 @@ function (_React$Component2) {
         var installmentText = "\n        ".concat(this.toCurrency(installmentAmount * 100), "\n        ").concat(this.props.installmentSymbol, "\n      ");
         var durationText = "\n        ".concat(this.props.durationText, "\n        ").concat(duration, "\n        ").concat(durationSymbol, "\n      ");
         tooltipClass = null;
-        tooltipText = [_react.default.createElement("div", {
+        tooltipText = [/*#__PURE__*/_react.default.createElement("div", {
           key: "1",
           className: "k-LoanSimulator__installment"
-        }, installmentText), _react.default.createElement("div", {
+        }, installmentText), /*#__PURE__*/_react.default.createElement("div", {
           key: "2",
           className: "k-LoanSimulator__duration"
         }, durationText)];
@@ -324,19 +322,19 @@ function (_React$Component2) {
       }
 
       var durationInput;
-      if (this.props.durationName) durationInput = _react.default.createElement("input", {
+      if (this.props.durationName) durationInput = /*#__PURE__*/_react.default.createElement("input", {
         type: "hidden",
         name: this.props.durationName,
         value: this.props.duration || ''
       });
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: (0, _classnames.default)('k-LoanSimulator', errorClass)
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-LoanSimulator__amount"
-      }, _react.default.createElement("label", {
+      }, /*#__PURE__*/_react.default.createElement("label", {
         className: "k-Label k-LoanSimulator__label",
         htmlFor: "loan-simulator-amount"
-      }, this.props.amountLabel), _react.default.createElement(_textInputWithUnit.TextInputWithUnit, {
+      }, this.props.amountLabel), /*#__PURE__*/_react.default.createElement(_textInputWithUnit.TextInputWithUnit, {
         ref: function ref(input) {
           return _this3.amount = input;
         },
@@ -352,10 +350,10 @@ function (_React$Component2) {
         onKeyDown: this.props.onAmountKeyDown,
         placeholder: this.props.amountPlaceholder,
         unit: this.props.currencySymbol
-      }), errorTag), _react.default.createElement("div", null, _react.default.createElement("label", {
+      }), errorTag), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("label", {
         className: "k-Label k-LoanSimulator__label",
         onClick: this.props.onInstallmentLabelClick
-      }, this.props.installmentLabel), _react.default.createElement(_sliderWithTooltipAndPower.SliderWithTooltipAndPower, {
+      }, this.props.installmentLabel), /*#__PURE__*/_react.default.createElement(_sliderWithTooltipAndPower.SliderWithTooltipAndPower, {
         ref: function ref(input) {
           return _this3.slider = input;
         },

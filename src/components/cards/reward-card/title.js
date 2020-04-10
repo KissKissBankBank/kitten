@@ -29,23 +29,25 @@ var _text = require("../../../components/typography/text");
 
 var _horizontalStroke = require("../../../components/layout/horizontal-stroke");
 
-var _marger = require("../../../components/layout/marger");
-
 var _typography = require("../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var Text = (0, _radium.default)(_text.Text);
 var HorizontalStroke = (0, _radium.default)(_horizontalStroke.HorizontalStroke);
 
-var RewardCardTitleBase =
-/*#__PURE__*/
-function (_Component) {
+var RewardCardTitleBase = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(RewardCardTitleBase, _Component);
+
+  var _super = _createSuper(RewardCardTitleBase);
 
   function RewardCardTitleBase() {
     (0, _classCallCheck2.default)(this, RewardCardTitleBase);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(RewardCardTitleBase).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(RewardCardTitleBase, [{
@@ -57,13 +59,13 @@ function (_Component) {
           disabled = _this$props.disabled;
       var titleStyles = [styles.base, disabled && styles.disabled];
       var strokeStyles = [styles.stroke.base, disabled && styles.stroke.disabled];
-      return _react.default.createElement(_react.Fragment, null, _react.default.createElement(Text, {
+      return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, /*#__PURE__*/_react.default.createElement(Text, {
         fontStyle: "italic",
         weight: "bold",
         tag: tagName,
         color: "font1",
         style: titleStyles
-      }, children), _react.default.createElement(HorizontalStroke, {
+      }, children), /*#__PURE__*/_react.default.createElement(HorizontalStroke, {
         size: "default",
         style: strokeStyles
       }));

@@ -31,14 +31,18 @@ var _loader = require("../../components/loaders/loader");
 
 var _paragraph = require("../../components/typography/paragraph");
 
-var LoaderWithParagraph =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var LoaderWithParagraph = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(LoaderWithParagraph, _Component);
+
+  var _super = _createSuper(LoaderWithParagraph);
 
   function LoaderWithParagraph() {
     (0, _classCallCheck2.default)(this, LoaderWithParagraph);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LoaderWithParagraph).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(LoaderWithParagraph, [{
@@ -60,14 +64,14 @@ function (_Component) {
         'k-u-margin-right-single': loaderPosition == 'left'
       }, loaderProps.className);
 
-      var loader = _react.default.createElement(_loader.Loader, (0, _extends2.default)({}, loaderProps, {
+      var loader = /*#__PURE__*/_react.default.createElement(_loader.Loader, (0, _extends2.default)({}, loaderProps, {
         className: loaderClassName
       }));
 
       var loaderBefore = loaderPosition == 'top' || loaderPosition == 'left';
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: containerClassName
-      }, others), loaderBefore ? loader : null, _react.default.createElement(_paragraph.Paragraph, (0, _extends2.default)({
+      }, others), loaderBefore ? loader : null, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, (0, _extends2.default)({
         modifier: "secondary",
         margin: false
       }, paragraphProps), this.props.children), loaderBefore ? null : loader);

@@ -17,11 +17,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -31,16 +31,20 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var LinkList =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var LinkList = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(LinkList, _Component);
+
+  var _super = _createSuper(LinkList);
 
   function LinkList() {
     var _this;
 
     (0, _classCallCheck2.default)(this, LinkList);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LinkList).call(this));
+    _this = _super.call(this);
     _this.renderItem = _this.renderItem.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   }
@@ -78,10 +82,10 @@ function (_Component) {
         'k-LinkList__item--doubleMargin': itemMargin == 'double',
         'k-LinkList__item--tripleMargin': itemMargin == 'triple'
       });
-      return _react.default.createElement("li", {
+      return /*#__PURE__*/_react.default.createElement("li", {
         className: linkListItemClassName,
         key: key
-      }, _react.default.createElement("a", (0, _extends2.default)({}, others, {
+      }, /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({}, others, {
         href: href,
         className: linkListClassName
       }), item));
@@ -99,7 +103,7 @@ function (_Component) {
       var listClassName = (0, _classnames.default)('k-LinkList', className, {
         'k-LinkList--withoutMargin': !margin
       });
-      return _react.default.createElement("ul", (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement("ul", (0, _extends2.default)({}, others, {
         className: listClassName
       }), this.renderItems());
     }

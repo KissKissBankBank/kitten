@@ -19,7 +19,7 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
@@ -40,6 +40,10 @@ var _typography = require("../../helpers/utils/typography");
 var _screenConfig = require("../../constants/screen-config");
 
 var _navbar = require("./components/navbar");
+
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var borderSize = (0, _typography.pxToRem)(2);
 var cellSize = (0, _typography.pxToRem)(50);
@@ -83,14 +87,12 @@ var StyledDatePicker = _styledComponents.default.div.withConfig({
   return (0, _styledComponents.css)(["background-color:", ";color:", ";border:double ", " ", ";"], styles.day.hover.backgroundColor, styles.day.hover.color, styles.day.hover.backgroundColor, borderSize);
 });
 
-var DatePicker =
-/*#__PURE__*/
-function (_Component) {
+var DatePicker = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(DatePicker, _Component);
 
-  function DatePicker() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(DatePicker);
 
+  function DatePicker() {
     var _this;
 
     (0, _classCallCheck2.default)(this, DatePicker);
@@ -99,7 +101,7 @@ function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(DatePicker)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
 
     _this.parseDate = function (str) {
       var _str$split = str.split('/'),
@@ -130,9 +132,9 @@ function (_Component) {
           weekDays = _this$props.weekDays,
           months = _this$props.months,
           children = _this$props.children;
-      return _react.default.createElement(StyledDatePicker, {
+      return /*#__PURE__*/_react.default.createElement(StyledDatePicker, {
         styles: styles
-      }, _react.default.createElement(_DayPickerInput.default, {
+      }, /*#__PURE__*/_react.default.createElement(_DayPickerInput.default, {
         formatDate: this.formatDate,
         format: "dd/mm/yyyy",
         placeholder: "dd/mm/yyyy",
@@ -149,7 +151,7 @@ function (_Component) {
             previousMonth: previousMonth,
             nextMonth: nextMonth
           },
-          navbarElement: _react.default.createElement(_navbar.Navbar, {
+          navbarElement: /*#__PURE__*/_react.default.createElement(_navbar.Navbar, {
             iconColor: styles.header.icon.color
           })
         })
@@ -206,20 +208,20 @@ DatePicker.defaultProps = {
   }
 };
 
-var TextInputWithUnit =
-/*#__PURE__*/
-function (_Component2) {
+var TextInputWithUnit = /*#__PURE__*/function (_Component2) {
   (0, _inherits2.default)(TextInputWithUnit, _Component2);
+
+  var _super2 = _createSuper(TextInputWithUnit);
 
   function TextInputWithUnit() {
     (0, _classCallCheck2.default)(this, TextInputWithUnit);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(TextInputWithUnit).apply(this, arguments));
+    return _super2.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TextInputWithUnit, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement(_textInputWithUnit.TextInputWithUnit, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_textInputWithUnit.TextInputWithUnit, (0, _extends2.default)({
         type: "text",
         unit: "\uD83D\uDCC5",
         autoComplete: "off"

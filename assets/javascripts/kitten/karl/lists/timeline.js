@@ -5,7 +5,7 @@ import { Paragraph } from '../../components/typography/paragraph'
 import { Marger } from '../../components/layout/marger'
 import { KarlExampleTitle } from '../../karl/examples/title'
 
-export const KarlTimeline = props => (
+export const KarlTimeline = () => (
   <Fragment>
     <KarlExampleTitle>Large timeline</KarlExampleTitle>
     <Timeline>

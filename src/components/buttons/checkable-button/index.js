@@ -29,8 +29,6 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
-
 var checkedCircleIconStyle = function checkedCircleIconStyle(size) {
   return (0, _styledComponents.css)(["width:", ";height:", ";bottom:-", ";"], (0, _typography.pxToRem)(size), (0, _typography.pxToRem)(size), (0, _typography.pxToRem)(size / 2 + 1));
 };
@@ -90,7 +88,7 @@ var CheckableButton = function CheckableButton(_ref4) {
     }
   }();
 
-  return _react.default.createElement(StyledCheckableButton, (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement(StyledCheckableButton, (0, _extends2.default)({}, props, {
     "aria-checked": isChecked,
     modifier: checkedModifier
   }), children);

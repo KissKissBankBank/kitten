@@ -1,14 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import {
-  withKnobs,
-  text,
-  boolean,
-  number,
-  radios,
-  select,
-} from '@storybook/addon-knobs'
+import { withKnobs, number, select } from '@storybook/addon-knobs'
 import { HorizontalStroke } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'

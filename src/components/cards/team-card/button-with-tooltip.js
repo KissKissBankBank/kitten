@@ -31,16 +31,20 @@ var _phoneIcon = require("../../icons/phone-icon");
 
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
-var TeamCardButtonWithTooltip =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var TeamCardButtonWithTooltip = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(TeamCardButtonWithTooltip, _Component);
+
+  var _super = _createSuper(TeamCardButtonWithTooltip);
 
   function TeamCardButtonWithTooltip(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, TeamCardButtonWithTooltip);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TeamCardButtonWithTooltip).call(this, props));
+    _this = _super.call(this, props);
 
     _this.handleSubmitFocus = function () {
       _this.setState({
@@ -81,7 +85,7 @@ function (_Component) {
           color = _this$props.color;
       var tooltipStyle = [tooltipColor(color), styles.tooltip.content, this.state.hover && styles.tooltip.content.hover, this.state.focus && styles.tooltip.content.focus];
       var arrowTooltipStyle = [styles.tooltip.content.after, arrowTooltipColor(color)];
-      return _react.default.createElement(_radium.StyleRoot, null, _react.default.createElement("a", {
+      return /*#__PURE__*/_react.default.createElement(_radium.StyleRoot, null, /*#__PURE__*/_react.default.createElement("a", {
         href: "tel:".concat(phoneNumber),
         onMouseEnter: this.handleOnMouseEnter,
         onMouseLeave: this.handleOnMouseLeave,
@@ -90,19 +94,19 @@ function (_Component) {
         style: {
           outline: 'none'
         }
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         style: styles.tooltip
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         style: tooltipStyle
-      }, phoneNumber, _react.default.createElement("span", {
+      }, phoneNumber, /*#__PURE__*/_react.default.createElement("span", {
         style: arrowTooltipStyle
-      })), _react.default.createElement(_buttonIcon.ButtonIcon, {
+      })), /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         modifier: "hydrogen",
         className: "k-ButtonIcon--phone",
         style: {
           marginRight: 15
         }
-      }, _react.default.createElement(_phoneIcon.PhoneIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_phoneIcon.PhoneIcon, {
         className: "k-ButtonIcon__svg"
       })))));
     }
@@ -132,7 +136,6 @@ var tooltipColor = function tooltipColor(backgroundTooltipColor) {
   };
 };
 
-var backgroundColor = _colorsConfig.default.primary1;
 var styles = {
   tooltip: {
     position: 'relative',

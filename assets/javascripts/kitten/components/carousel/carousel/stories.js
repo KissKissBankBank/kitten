@@ -82,7 +82,7 @@ storiesOf('Carousel/ProjectCarousel', module)
         )}
         paginationPosition={object('paginationPosition', paginationPosition)}
       >
-        {data.map((item, index) => (
+        {data.map(item => (
           <CrowdfundingCard
             key={`CrowdfundingCard${item.title}`}
             href="#"
@@ -121,7 +121,7 @@ storiesOf('Carousel/ProjectCarousel', module)
         )}
         paginationPosition={object('paginationPosition', paginationPosition)}
       >
-        {data.map((item, index) => (
+        {data.map(item => (
           <CrowdfundingCard
             key={item.title}
             href="#"

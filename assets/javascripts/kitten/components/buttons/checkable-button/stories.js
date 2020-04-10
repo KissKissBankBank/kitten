@@ -1,14 +1,7 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import {
-  withKnobs,
-  text,
-  boolean,
-  number,
-  radios,
-  select,
-} from '@storybook/addon-knobs'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 import { CheckableButton } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -72,44 +65,48 @@ const info = {
 storiesOf('Buttons/Checkable Button', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('isCheckable', () => {
-    const [buttonIsChecked, changeButtonState] = useState(true)
+  .add(
+    'isCheckable',
+    () => {
+      const [buttonIsChecked, changeButtonState] = useState(true)
 
-    return (
-      <Marger top="4" bottom="4">
-        <Container>
-          <Grid>
-            <GridCol col={4}>
-              <CheckableButton
-                tiny={boolean('Tiny', false)}
-                big={boolean('Big', false)}
-                disabled={boolean('Disabled', false)}
-                error={boolean('Error', false)}
-                isChecked={boolean('Checked', false)}
-              >
-                <span>{text('Text', 'MyButton')}</span>
-              </CheckableButton>
-              <p>
-                <small>Button controlled by the "Checked" knob</small>
-              </p>
-            </GridCol>
-            <GridCol col={4}>
-              <CheckableButton
-                tiny={boolean('Tiny', false)}
-                big={boolean('Big', false)}
-                disabled={boolean('Disabled', false)}
-                error={boolean('Error', false)}
-                isChecked={buttonIsChecked}
-                onClick={() => changeButtonState(!buttonIsChecked)}
-              >
-                <span>{text('Text', 'MyButton')}</span>
-              </CheckableButton>
-              <p>
-                <small>Clickable button</small>
-              </p>
-            </GridCol>
-          </Grid>
-        </Container>
-      </Marger>
-    )
-  })
+      return (
+        <Marger top="4" bottom="4">
+          <Container>
+            <Grid>
+              <GridCol col={4}>
+                <CheckableButton
+                  tiny={boolean('Tiny', false)}
+                  big={boolean('Big', false)}
+                  disabled={boolean('Disabled', false)}
+                  error={boolean('Error', false)}
+                  isChecked={boolean('Checked', false)}
+                >
+                  <span>{text('Text', 'MyButton')}</span>
+                </CheckableButton>
+                <p>
+                  <small>Button controlled by the "Checked" knob</small>
+                </p>
+              </GridCol>
+              <GridCol col={4}>
+                <CheckableButton
+                  tiny={boolean('Tiny', false)}
+                  big={boolean('Big', false)}
+                  disabled={boolean('Disabled', false)}
+                  error={boolean('Error', false)}
+                  isChecked={buttonIsChecked}
+                  onClick={() => changeButtonState(!buttonIsChecked)}
+                >
+                  <span>{text('Text', 'MyButton')}</span>
+                </CheckableButton>
+                <p>
+                  <small>Clickable button</small>
+                </p>
+              </GridCol>
+            </Grid>
+          </Container>
+        </Marger>
+      )
+    },
+    { info },
+  )

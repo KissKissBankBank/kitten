@@ -23,14 +23,18 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
-var GrabberIcon =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var GrabberIcon = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(GrabberIcon, _React$Component);
+
+  var _super = _createSuper(GrabberIcon);
 
   function GrabberIcon() {
     (0, _classCallCheck2.default)(this, GrabberIcon);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(GrabberIcon).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(GrabberIcon, [{
@@ -43,15 +47,15 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("svg", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
         viewBox: "0 0 100 100",
         width: "32",
         height: "32"
-      }, this.props), _react.default.createElement("title", null, "Grabber"), _react.default.createElement("path", {
+      }, this.props), /*#__PURE__*/_react.default.createElement("title", null, "Grabber"), /*#__PURE__*/_react.default.createElement("path", {
         d: "M0 0 v100 h20 v-100 z"
-      }), _react.default.createElement("path", {
+      }), /*#__PURE__*/_react.default.createElement("path", {
         d: "M40 0 v100 h20 v-100 z"
-      }), _react.default.createElement("path", {
+      }), /*#__PURE__*/_react.default.createElement("path", {
         d: "M80 0 v100 h20 v-100 z"
       }));
     }

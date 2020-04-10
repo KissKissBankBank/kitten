@@ -11,10 +11,10 @@ import {
   GUTTER,
 } from '../../../constants/grid-config'
 import ColorsConfig from '../../../constants/colors-config'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { ButtonIcon } from '../../../components/buttons/button-icon'
+import { Button } from '../../../components/buttons/button/button'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'
+import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
 
 export const getNumColumnsForWidth = (
   width,
@@ -71,6 +71,8 @@ class CarouselBase extends Component {
       default: 'right',
       fromM: 'bottom',
     },
+    prevButtonText:'Previous items',
+    nextButtonText:'Next items',
   }
 
   static propTypes = {
@@ -92,6 +94,8 @@ class CarouselBase extends Component {
       fromL: propTypesPositions,
       fromXl: propTypesPositions,
     }),
+    prevButtonText: PropTypes.string,
+    nextButtonText: PropTypes.string,
   }
 
   state = {
@@ -201,6 +205,8 @@ class CarouselBase extends Component {
       hidePagination,
       hidePaginationOnMobile,
       paginationPosition,
+      prevButtonText,
+      nextButtonText,
     } = this.props
     const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -236,29 +242,25 @@ class CarouselBase extends Component {
         position={paginationPosition}
         itemMarginBetween={itemMarginBetween}
       >
-        <ButtonIcon
+        <Button
+          icon
           modifier="beryllium"
           onClick={this.goPrevPage}
           disabled={indexPageVisible < 1 || numPages < 1}
         >
-          <ArrowIcon
-            version="solid"
-            className="k-ButtonIcon__svg"
-            direction="left"
-          />
-        </ButtonIcon>
+          <VisuallyHidden>{prevButtonText}</VisuallyHidden>
+          <ArrowIcon version="solid" direction="left" aria-hidden />
+        </Button>
 
-        <ButtonIcon
+        <Button
+          icon
           modifier="beryllium"
           onClick={this.goNextPage}
           disabled={indexPageVisible >= numPages - 1}
         >
-          <ArrowIcon
-            version="solid"
-            className="k-ButtonIcon__svg"
-            direction="right"
-          />
-        </ButtonIcon>
+          <VisuallyHidden>{nextButtonText}</VisuallyHidden>
+          <ArrowIcon version="solid" direction="right" aria-hidden />
+        </Button>
       </CarouselPagination>
     )
   }

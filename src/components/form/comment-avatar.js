@@ -15,9 +15,9 @@ var _deprecated = require("../../helpers/utils/deprecated");
 
 var CommentAvatar = function CommentAvatar(props) {
   var message = "You can use the CommentAvatar instead.\n    For more information: https://github.com/KissKissBankBank/../../blob/master/assets/javascripts/../../components/comments/comment-avatar.js";
-  return _react.default.createElement(_deprecated.Deprecated, {
+  return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
     warningMessage: message
-  }, _react.default.createElement(_commentAvatar.CommentAvatar, props));
+  }, /*#__PURE__*/_react.default.createElement(_commentAvatar.CommentAvatar, props));
 };
 
 exports.CommentAvatar = CommentAvatar;

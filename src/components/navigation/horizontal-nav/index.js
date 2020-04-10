@@ -28,8 +28,7 @@ var HorizontalNav = function HorizontalNav(_ref) {
       height = _ref.height,
       id = _ref.id,
       items = _ref.items,
-      markdown = _ref.markdown,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["center", "className", "elementClassName", "height", "id", "items", "markdown"]);
+      markdown = _ref.markdown;
   var selectedItem = (0, _react.useRef)(null);
   var defaultItem = (0, _react.useRef)(null);
   (0, _react.useEffect)(function () {
@@ -60,21 +59,21 @@ var HorizontalNav = function HorizontalNav(_ref) {
       'is-selected': selected
     });
 
-    var renderBadge = _react.default.createElement(_react.default.Fragment, null, text, _react.default.createElement(_badge.Badge, {
+    var renderBadge = /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, text, /*#__PURE__*/_react.default.createElement(_badge.Badge, {
       className: "k-HorizontalNav__badge"
     }, badge));
 
-    var renderMarkdown = markdown ? _react.default.createElement(_reactMarkdown.default, {
+    var renderMarkdown = markdown ? /*#__PURE__*/_react.default.createElement(_reactMarkdown.default, {
       softBreak: "br",
       source: text
     }) : text;
     var renderText = badge ? renderBadge : renderMarkdown;
-    return _react.default.createElement("li", (0, _extends2.default)({
+    return /*#__PURE__*/_react.default.createElement("li", (0, _extends2.default)({
       className: (0, _classnames.default)('k-HorizontalNav__element', elementClassName),
       key: key,
       ref: selected ? selectedItem : defaultItem,
       role: "menuitem"
-    }, others), _react.default.createElement("a", {
+    }, others), /*#__PURE__*/_react.default.createElement("a", {
       href: href,
       className: itemClassName,
       style: {
@@ -83,7 +82,7 @@ var HorizontalNav = function HorizontalNav(_ref) {
     }, renderText));
   };
 
-  return _react.default.createElement("ul", {
+  return /*#__PURE__*/_react.default.createElement("ul", {
     role: "menubar",
     id: id,
     className: navClassNames

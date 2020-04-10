@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ScreenConfig = exports.SCREEN_SIZE_XL = exports.SCREEN_SIZE_L = exports.SCREEN_SIZE_M = exports.SCREEN_SIZE_S = exports.SCREEN_SIZE_XS = exports.SCREEN_SIZE_XXS = void 0;
+exports.ScreenConfig = exports.ORDERED_SCREEN_SIZES = exports.SCREEN_SIZE_XL = exports.SCREEN_SIZE_L = exports.SCREEN_SIZE_M = exports.SCREEN_SIZE_S = exports.SCREEN_SIZE_XS = exports.SCREEN_SIZE_XXS = void 0;
 
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 
@@ -23,6 +23,8 @@ var SCREEN_SIZE_L = 'L';
 exports.SCREEN_SIZE_L = SCREEN_SIZE_L;
 var SCREEN_SIZE_XL = 'XL';
 exports.SCREEN_SIZE_XL = SCREEN_SIZE_XL;
+var ORDERED_SCREEN_SIZES = [SCREEN_SIZE_XXS, SCREEN_SIZE_XS, SCREEN_SIZE_S, SCREEN_SIZE_M, SCREEN_SIZE_L, SCREEN_SIZE_XL];
+exports.ORDERED_SCREEN_SIZES = ORDERED_SCREEN_SIZES;
 var ScreenConfig = (_ScreenConfig = {}, (0, _defineProperty2.default)(_ScreenConfig, SCREEN_SIZE_XXS, {
   min: null,
   max: 479

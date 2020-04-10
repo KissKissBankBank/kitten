@@ -27,14 +27,18 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var StaticTooltip =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var StaticTooltip = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(StaticTooltip, _Component);
+
+  var _super = _createSuper(StaticTooltip);
 
   function StaticTooltip() {
     (0, _classCallCheck2.default)(this, StaticTooltip);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(StaticTooltip).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(StaticTooltip, [{
@@ -48,7 +52,7 @@ function (_Component) {
         };
       }
 
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         style: style,
         className: "k-StaticTooltip__arrow"
       });
@@ -62,9 +66,9 @@ function (_Component) {
           arrowLeftPosition = _this$props.arrowLeftPosition,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["children", "className", "arrowLeftPosition"]);
       var staticTooltipClassName = (0, _classnames.default)('k-StaticTooltip', className);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: staticTooltipClassName
-      }, others), _react.default.createElement("div", {
+      }, others), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-StaticTooltip__content"
       }, this.renderArrow(), children));
     }

@@ -3,7 +3,6 @@ import slugify from 'slugify'
 import { Title } from '../../../typography/title'
 import { HorizontalStroke } from '../../../layout/horizontal-stroke'
 import { Marger } from '../../../layout/marger'
-import { pxToRem } from '../../../../helpers/utils/typography'
 
 export const MarkdownHeading = props => {
   let modifier

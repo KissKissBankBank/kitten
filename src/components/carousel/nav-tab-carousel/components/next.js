@@ -14,9 +14,9 @@ var _styledComponents = require("./styled-components");
 var Next = function Next(_ref) {
   var children = _ref.children,
       hoverColor = _ref.hoverColor;
-  return _react.default.createElement(_styledComponents.StyledRightArrowContainer, {
+  return /*#__PURE__*/_react.default.createElement(_styledComponents.StyledRightArrowContainer, {
     hoverColor: hoverColor
-  }, _react.default.createElement(_styledComponents.StyledNextText, null, children), _react.default.createElement(_styledComponents.StyledArrowIcon, {
+  }, /*#__PURE__*/_react.default.createElement(_styledComponents.StyledNextText, null, children), /*#__PURE__*/_react.default.createElement(_styledComponents.StyledArrowIcon, {
     version: "solid",
     fill: "#fff"
   }));

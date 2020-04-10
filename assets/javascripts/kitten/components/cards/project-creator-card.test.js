@@ -1,10 +1,6 @@
 import React from 'react'
 import { ProjectCreatorCard } from '../../components/cards/project-creator-card'
 import { ClockIcon } from '../../components/icons/clock-icon'
-import { Paragraph } from '../../components/typography/paragraph'
-import { ButtonIcon } from '../../components/buttons/button-icon'
-import { Separator } from '../../components/layout/separator'
-import { ArrowIcon } from '../../components/icons/arrow-icon'
 
 describe('<ProjectCreatorCard />', () => {
   describe('by default', () => {

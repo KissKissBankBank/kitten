@@ -13,8 +13,6 @@ var _objectDestructuringEmpty2 = _interopRequireDefault(require("@babel/runtime/
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
-var _screenConfig = require("../../../constants/screen-config");
-
 var _typography = require("../../../helpers/utils/typography");
 
 var _container = require("../../../components/grid/container");

@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { CounterBlock } from '../../components/meters/counter-block'
-import { Title } from '../../components/typography/title'
-import { Text } from '../../components/typography/text'
 
 export class KarlCounterBlock extends Component {
   render() {

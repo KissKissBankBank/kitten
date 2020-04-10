@@ -5,7 +5,7 @@ describe('Import components', () => {
     Object.entries(components).map(component => {
       const element = component[1]
 
-      if (!element) console.log('Component undefined:', component)
+      if (!element) console.warn('Component undefined:', component)
       expect(element).toBeDefined()
     })
   })
