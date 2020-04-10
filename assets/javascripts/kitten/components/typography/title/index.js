@@ -32,8 +32,8 @@ export const Title = ({
 
   return (
     <StyledTitle
+      as={tag}
       {...other}
-      tag={tag}
       modifier={modifier}
       margin={margin}
       italic={italic}
