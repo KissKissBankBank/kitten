@@ -6,6 +6,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
 import { CheckedCircleIcon as KittenCheckedCircleIcon } from '../../icons/checked-circle-icon'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledButton = styled.button`
   display: inline-flex;
@@ -94,7 +95,12 @@ const CheckedCircleIcon = styled(({ big, tiny, ...others }) => (
 ))`
   ${checkedCircleIconStyle()}
   ${({ tiny }) => tiny && checkedCircleIconStyle('tiny')}
-  ${({ big }) => big && checkedCircleIconStyle('big')}
+
+  ${({ big }) => big && css`
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      ${checkedCircleIconStyle('big')}
+    }
+  `}
 
   position: absolute;
 `
@@ -127,13 +133,15 @@ export const TINY = css`
 `
 
 export const BIG = css`
-  min-width: ${pxToRem(220)};
-  min-height: ${pxToRem(70)};
-  padding: 0 ${pxToRem(40)};
-  font-size: ${pxToRem(16)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    width: ${pxToRem(220)};
-    height: ${pxToRem(70)};
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    min-width: ${pxToRem(220)};
+    min-height: ${pxToRem(70)};
+    padding: 0 ${pxToRem(40)};
+    font-size: ${pxToRem(16)};
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      width: ${pxToRem(220)};
+      height: ${pxToRem(70)};
+    }
   }
 `
 export const ICON = css`
@@ -158,10 +166,12 @@ export const ICON_TINY = css`
 `
 
 export const ICON_BIG = css`
-  width: ${pxToRem(70)};
-  height: ${pxToRem(70)};
-  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     width: ${pxToRem(70)};
+    height: ${pxToRem(70)};
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      width: ${pxToRem(70)};
+    }
   }
 `
 

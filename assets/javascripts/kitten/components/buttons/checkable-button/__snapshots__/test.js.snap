@@ -184,10 +184,6 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  min-width: 13.75rem;
-  min-height: 4.375rem;
-  padding: 0 2.5rem;
-  font-size: 1rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
@@ -299,10 +295,12 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   }
 }
 
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+@media (min-width:40rem) {
   .c0 {
-    width: 13.75rem;
-    height: 4.375rem;
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
   }
 }
 

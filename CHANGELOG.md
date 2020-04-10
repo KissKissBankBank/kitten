@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Adjust `button` size to follow guidelines on Mobile.
+
 ## [2.64.0] - 2020-04-07
 
 Feature:
