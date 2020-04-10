@@ -30,7 +30,7 @@ const StyledCheckedCircleIcon = styled(CheckedCircleIcon)`
   }
 `
 
-const SuccessProgress = () => (
+const SuccessProgressRing = () => (
   <StyledCheckedCircleIcon
     aria-hidden
     circleColor={COLORS.valid}
@@ -38,7 +38,7 @@ const SuccessProgress = () => (
   />
 )
 
-const OvertimeProgress = () => (
+const OvertimeProgressRing = () => (
   <RocketCircleIcon aria-hidden />
 )
 
@@ -73,7 +73,7 @@ export const SuccessProgress = () => (
   <Marger top="4" bottom="4">
     <Container>
       <StyledContainer>
-        <SuccessProgress />
+        <SuccessProgressRing />
         <StyledText size="micro" color="font1" weight="regular">
           Projet réussi !
         </StyledText>
@@ -86,7 +86,7 @@ export const OvertimeProgress = () => (
   <Marger top="4" bottom="4">
     <Container>
       <StyledContainer>
-        <OvertimeProgress />
+        <OvertimeProgressRing />
         <StyledText size="micro" color="font1" weight="regular">
           Financé à 120% - en prolongation !
         </StyledText>
