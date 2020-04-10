@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from './card'
+import Card from './components/card'
 import { Text } from '../../../../components/typography/text'
 import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
@@ -21,6 +21,7 @@ const selectionData = [
     text3:
       'Soutenez le lancement des prochains pantalons à plis intemporels fabriqués à Paris',
     imageSrc3: 'http://placekitten.com/315/198',
+    overtimeProgress: true,
   },
   {
     title:
@@ -37,6 +38,7 @@ const selectionData = [
     text3:
       'Soutenez le lancement des prochains pantalons à plis intemporels fabriqués à Paris',
     imageSrc3: 'http://placekitten.com/315/198',
+    successProgress: true,
   },
   {
     title:
@@ -106,6 +108,7 @@ const InTheNews = () => (
                   alt: 'Image alt',
                 }}
                 horizontalCard
+                overtimeProgress
               />
               <Card
                 key={`SelectionCard${item.title2}`}
@@ -116,6 +119,7 @@ const InTheNews = () => (
                   alt: 'Image alt',
                 }}
                 horizontalCard
+                successProgress
               />
               <Card
                 key={`SelectionCard${item.title3}`}

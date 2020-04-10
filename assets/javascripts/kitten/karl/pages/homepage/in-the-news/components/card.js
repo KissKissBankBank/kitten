@@ -1,10 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
-import { Text } from '../../../../components/typography/text'
-import { ScreenConfig } from '../../../../constants/screen-config'
-import { Grid, GridCol } from '../../../../components/grid/grid'
+import { pxToRem, stepToRem } from '../../../../../helpers/utils/typography'
+import { Title } from '../../../../../components/typography/title'
+import { Text } from '../../../../../components/typography/text'
+import { ScreenConfig } from '../../../../../constants/screen-config'
+import { Grid, GridCol } from '../../../../../components/grid/grid'
+import { ProgressRing } from '../../../../../components/meters/progress-ring'
+import COLORS from '../../../../../constants/colors-config'
+import { CheckedCircleIcon } from '../../../../../components/icons/checked-circle-icon'
+import { RocketCircleIcon } from '../../../../../components/icons/rocket-circle-icon'
 
 const StyledCard = styled.div`
   margin-bottom: ${pxToRem(30)};
@@ -60,9 +65,8 @@ const StyledDescription = styled(GridCol)`
     `}
 `
 
-const StyledTitle = styled(Text)`
-  margin-top: ${pxToRem(20)};
-  margin-bottom: ${pxToRem(15)};
+const StyledTitle = styled(Title)`
+  margin: ${pxToRem(15)} 0;
   font-size: ${stepToRem(2)};
   line-height: 1.2;
 
@@ -100,6 +104,15 @@ const StyledText = styled(Text)`
     `}
 `
 
+const StyledProgress = styled.div`
+  display: flex;
+`
+
+const StyledProgressText = styled(Text)`
+  margin-left: ${pxToRem(10)};
+  align-self: center;
+`
+
 const StyledImage = styled.img`
   margin-bottom: ${pxToRem(20)};
   display: block;
@@ -107,10 +120,6 @@ const StyledImage = styled.img`
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     margin-bottom: ${pxToRem(30)};
-  }
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    margin-bottom: ${pxToRem(35)};
   }
 
   ${({ horizontalCard }) =>
@@ -125,7 +134,37 @@ const StyledImage = styled.img`
     `}
 `
 
-const Card = ({ imageProps, title, text, horizontalCard, ...props }) => {
+const StyledCheckedCircleIcon = styled(CheckedCircleIcon)`
+  width: ${pxToRem(20)};
+  height: ${pxToRem(20)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    width: ${pxToRem(24)};
+    height: ${pxToRem(24)};
+  }
+`
+
+const SuccessProgressIcon = () => (
+  <StyledCheckedCircleIcon
+    aria-hidden
+    circleColor={COLORS.valid}
+    checkedColor={COLORS.background1}
+  />
+)
+
+const OvertimeProgressIcon = () => (
+  <RocketCircleIcon aria-hidden />
+)
+
+const Card = ({
+  imageProps,
+  title,
+  text,
+  horizontalCard,
+  overtimeProgress,
+  successProgress,
+  ...props
+}) => {
   return (
     <StyledCard horizontalCard={horizontalCard} {...props}>
       <StyledImageContainer col={horizontalCard ? 5 : 0}>
@@ -135,10 +174,40 @@ const Card = ({ imageProps, title, text, horizontalCard, ...props }) => {
         col={horizontalCard ? 7 : 0}
         horizontalCard={horizontalCard}
       >
+      {overtimeProgress && (
+        <StyledProgress>
+          <OvertimeProgressIcon />
+          <StyledProgressText size="micro" color="font1" weight="regular">
+            Financé à 135 %
+          </StyledProgressText>
+        </StyledProgress>
+      )}
+
+      {successProgress && (
+        <StyledProgress>
+          <SuccessProgressIcon />
+          <StyledProgressText size="micro" color="font1" weight="regular">
+            Projet réussi !
+          </StyledProgressText>
+        </StyledProgress>
+      )}
+
+        {!overtimeProgress && !successProgress && (
+          <StyledProgress>
+            <ProgressRing
+              value={75}
+              width={24}
+              strokeWidth={4}
+              color={COLORS.primary2}
+            />
+            <StyledProgressText size="micro" color="font1" weight="regular">
+              Financé à 50%
+            </StyledProgressText>
+          </StyledProgress>
+        )}
         <StyledTitle
           tag="p"
-          color="font1"
-          weight="bold"
+          modifier="septenary"
           horizontalCard={horizontalCard}
         >
           {title}
@@ -159,6 +228,8 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   horizontalCard: PropTypes.bool,
+  overtimeProgress: PropTypes.bool,
+  successProgress: PropTypes.bool,
 }
 
 Card.defaultProps = {
