@@ -116,7 +116,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       className="title__StyledTitleContainer-sc-1wv1kzg-1 faWlNg"
     >
       <p
-        className="k-Title title__StyledTitle-sc-1wv1kzg-2 hnn k-Card__title k-Title--primary k-Title--withoutMargin"
+        className="title__StyledTitle-sc-46lshq-0 jqndyC title__StyledTitle-sc-1wv1kzg-2 hnn k-Card__title"
       >
         Custom title
       </p>
@@ -278,7 +278,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       className="title__StyledTitleContainer-sc-1wv1kzg-1 faWlNg"
     >
       <p
-        className="k-Title title__StyledTitle-sc-1wv1kzg-2 hnn k-Card__title k-Title--primary k-Title--withoutMargin"
+        className="title__StyledTitle-sc-46lshq-0 jqndyC title__StyledTitle-sc-1wv1kzg-2 hnn k-Card__title"
       >
         Custom title
       </p>

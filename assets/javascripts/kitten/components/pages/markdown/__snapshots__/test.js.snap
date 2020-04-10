@@ -6,7 +6,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h1
-      className="k-Title k-Title--secondary"
+      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
       id="h1"
     >
       H1
@@ -23,7 +23,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h2
-      className="k-Title k-Title--quaternary"
+      className="title__StyledTitle-sc-46lshq-0 jSlMJn"
       id="h2"
     >
       H2
@@ -33,7 +33,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h3
-      className="k-Title k-Title--quinary"
+      className="title__StyledTitle-sc-46lshq-0 kWyuxU"
       id="h3"
     >
       H3
@@ -43,7 +43,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h1
-      className="k-Title k-Title--secondary"
+      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
       id="emphasis"
     >
       Emphasis
@@ -95,7 +95,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h1
-      className="k-Title k-Title--secondary"
+      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
       id="list"
     >
       List
@@ -151,7 +151,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h1
-      className="k-Title k-Title--secondary"
+      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
       id="link"
     >
       Link
@@ -187,7 +187,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h1
-      className="k-Title k-Title--secondary"
+      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
       id="h1"
     >
       H1
@@ -204,7 +204,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h2
-      className="k-Title k-Title--quaternary"
+      className="title__StyledTitle-sc-46lshq-0 jSlMJn"
       id="h2"
     >
       H2
@@ -214,7 +214,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h3
-      className="k-Title k-Title--quinary"
+      className="title__StyledTitle-sc-46lshq-0 kWyuxU"
       id="h3"
     >
       H3
@@ -224,7 +224,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h1
-      className="k-Title k-Title--secondary"
+      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
       id="emphasis"
     >
       Emphasis
@@ -276,7 +276,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h1
-      className="k-Title k-Title--secondary"
+      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
       id="list"
     >
       List
@@ -332,7 +332,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="marger__StyledMarger-q3lecu-0 kboIqb"
   >
     <h1
-      className="k-Title k-Title--secondary"
+      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
       id="link"
     >
       Link
