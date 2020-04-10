@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Adjust `button` size to follow guidelines on Mobile.
 - Feature: Update `Title` component and add new doc.
 - Feature: Add `RocketIcon` and `RocketCircleIcon` components.
 - Feature: Create `ProgressRing` component.
