@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Update `Title` component and add new doc.
+- Feature: Update `Title` component and add new doc.
 
 ## [2.64.0] - 2020-04-07
 
