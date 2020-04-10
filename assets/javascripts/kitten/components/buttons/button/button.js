@@ -138,10 +138,12 @@ export const BIG = css`
     min-height: ${pxToRem(70)};
     padding: 0 ${pxToRem(40)};
     font-size: ${pxToRem(16)};
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      width: ${pxToRem(220)};
-      height: ${pxToRem(70)};
-    }
+  }
+  @media screen
+    and (min-width: ${pxToRem(ScreenConfig.S.min)})
+    and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(220)};
+    height: ${pxToRem(70)};
   }
 `
 export const ICON = css`
@@ -169,9 +171,11 @@ export const ICON_BIG = css`
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     width: ${pxToRem(70)};
     height: ${pxToRem(70)};
-    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      width: ${pxToRem(70)};
-    }
+  }
+  @media screen
+    and (min-width: ${pxToRem(ScreenConfig.S.min)})
+    and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(70)};
   }
 `
 

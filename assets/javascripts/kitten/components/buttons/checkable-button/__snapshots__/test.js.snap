@@ -304,6 +304,13 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   }
 }
 
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
 <button
   aria-checked={true}
   className="c0 c1"

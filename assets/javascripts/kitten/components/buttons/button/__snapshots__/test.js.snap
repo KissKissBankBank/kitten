@@ -216,6 +216,13 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   }
 }
 
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
 <button
   className="c0"
 >
@@ -779,6 +786,13 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   }
 }
 
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 3.125rem;
@@ -791,6 +805,12 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   .c0 {
     width: 4.375rem;
     height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 4.375rem;
   }
 }
 
