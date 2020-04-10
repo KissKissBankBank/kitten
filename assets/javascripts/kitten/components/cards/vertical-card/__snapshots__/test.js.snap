@@ -10,7 +10,7 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="k-Title k-Title--senary k-Title--withoutMargin"
+    className="title__StyledTitle-sc-46lshq-0 gvbUmN"
   >
     Custom title
   </h1>
@@ -28,7 +28,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="k-Title k-Title--senary k-Title--withoutMargin"
+    className="title__StyledTitle-sc-46lshq-0 gvbUmN"
   >
     Custom title
   </h1>

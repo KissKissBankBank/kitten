@@ -68,7 +68,7 @@ describe('<SimilarProjectCard />', () => {
     const similarProjectCard = mount(
       <SimilarProjectCard title="Custom title" />,
     )
-    const title = similarProjectCard.find('.k-Title')
+    const title = similarProjectCard.find(Title)
 
     it('renders a <Title />', () => {
       expect(similarProjectCard.find(Title)).toHaveLength(1)
