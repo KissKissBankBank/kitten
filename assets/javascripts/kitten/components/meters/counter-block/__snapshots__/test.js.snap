@@ -8,7 +8,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     className="marger__StyledMarger-q3lecu-0 dnQPiu"
   >
     <p
-      className="k-Title k-Title--tertiary k-Title--withoutMargin"
+      className="title__StyledTitle-sc-46lshq-0 gdNtwY"
     >
       foo
     </p>
