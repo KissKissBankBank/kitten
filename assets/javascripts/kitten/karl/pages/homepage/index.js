@@ -51,7 +51,7 @@ const HomePage = () => (
             La communauté des projets engagés
           </StyledTitle>
           <StyledHorizontalStrokeContainer>
-            <StyledHorizontalStroke huge />
+            <StyledHorizontalStroke />
           </StyledHorizontalStrokeContainer>
         </StyledMarger>
       </GridCol>
