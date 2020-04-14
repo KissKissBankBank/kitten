@@ -37,7 +37,7 @@ const StyledCard = styled.div`
       }
 
       :last-child {
-        margin-bottom: ${pxToRem(20)};
+        margin-bottom: 0;
       }
     `}
 `
@@ -136,6 +136,10 @@ const StyledImage = styled.img`
       @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
         margin-bottom: ${pxToRem(0)};
       }
+
+      :last-child {
+        margin-bottom: 0;
+      }
     `}
 `
 
@@ -219,7 +223,12 @@ const Card = ({
           {title}
         </StyledTitle>
 
-        <StyledText tag="p" color="font1" horizontalCard={horizontalCard}>
+        <StyledText
+          tag="p"
+          color="font1"
+          horizontalCard={horizontalCard}
+          className="k-u-hidden@xs-down"
+        >
           {text}
         </StyledText>
 

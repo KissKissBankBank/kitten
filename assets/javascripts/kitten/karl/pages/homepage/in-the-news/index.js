@@ -8,6 +8,7 @@ import { Carousel } from '../../../../components/carousel/carousel/carousel'
 import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
+import { mediaQueries } from '../../../../hoc/media-queries'
 
 const selectionData = [
   {
@@ -62,17 +63,11 @@ const selectionData = [
   },
 ]
 
-const StyledGridCol = styled(GridCol)`
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    padding: 0;
-    padding-right: ${pxToRem(CONTAINER_PADDING)};
-  }
-`
 
-const InTheNews = () => (
+const InTheNewsBase = ({ viewportIsXSOrLess })=> (
   <Container>
     <Grid>
-      <StyledGridCol col-l="6">
+      <GridCol col-l="6">
         <Text
           tag="p"
           weight="bold"
@@ -91,9 +86,9 @@ const InTheNews = () => (
             alt: '',
           }}
         />
-      </StyledGridCol>
+      </GridCol>
 
-      <StyledGridCol col-l="6">
+      <GridCol col-l="6">
         <Text
           tag="p"
           weight="bold"
@@ -104,8 +99,9 @@ const InTheNews = () => (
           Notre sélection
         </Text>
         <Carousel
-          itemMinWidth={500}
+          itemMinWidth={viewportIsXSOrLess ? 250 : 500}
           baseItemMarginBetween={10}
+          paginationPosition={{ default: 'bottom' }}
         >
           {selectionData.map((item, index) => (
             <div>
@@ -144,9 +140,11 @@ const InTheNews = () => (
             </div>
           ))}
         </Carousel>
-      </StyledGridCol>
+      </GridCol>
     </Grid>
   </Container>
 )
 
-export default InTheNews
+export const InTheNews = mediaQueries(InTheNewsBase, {
+  viewportIsXSOrLess: true,
+})
