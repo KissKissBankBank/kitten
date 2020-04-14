@@ -50,7 +50,6 @@ const StyledDescription = styled(GridCol)`
   ${({ horizontalCard }) =>
     horizontalCard &&
     css`
-      display: block;
       align-self: center;
       padding-right: 0;
       padding-left: ${pxToRem(15)};
@@ -102,9 +101,12 @@ const StyledText = styled(Text)`
   ${({ horizontalCard }) =>
     horizontalCard &&
     css`
+      display: none;
+
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         font-size: ${stepToRem(-1)};
         margin-top: ${pxToRem(10)};
+        display: block;
       }
     `}
 `
@@ -227,7 +229,6 @@ const Card = ({
           tag="p"
           color="font1"
           horizontalCard={horizontalCard}
-          className="k-u-hidden@xs-down"
         >
           {text}
         </StyledText>

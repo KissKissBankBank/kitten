@@ -106,7 +106,7 @@ const InTheNewsBase = ({ viewportIsXSOrLess })=> (
           Notre sélection
         </Text>
         <Carousel
-          itemMinWidth={viewportIsXSOrLess ? 250 : 500}
+          itemMinWidth={viewportIsXSOrLess ? 250 : 490}
           baseItemMarginBetween={10}
           paginationPosition={{ default: 'bottom' }}
         >
