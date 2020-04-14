@@ -73,13 +73,7 @@ export const SuccessProgress = () => (
   <Marger top="4" bottom="4">
     <Container>
       <StyledContainer>
-<<<<<<< HEAD
-        <SuccessProgressIcon />
-||||||| merged common ancestors
-        <SuccessProgress />
-=======
         <SuccessProgressRing />
->>>>>>> origin
         <StyledText size="micro" color="font1" weight="regular">
           Projet réussi !
         </StyledText>
@@ -92,13 +86,7 @@ export const OvertimeProgress = () => (
   <Marger top="4" bottom="4">
     <Container>
       <StyledContainer>
-<<<<<<< HEAD
-        <OvertimeProgressIcon />
-||||||| merged common ancestors
-        <OvertimeProgress />
-=======
         <OvertimeProgressRing />
->>>>>>> origin
         <StyledText size="micro" color="font1" weight="regular">
           Financé à 120% - en prolongation !
         </StyledText>

@@ -4,7 +4,7 @@ import { InTheNews } from './index'
 
 export default {
   component: InTheNews,
-  title: 'pages/homepage/InTheNews',
+  title: 'pages/homepage/ProjectSection',
   decorators: [withKnobs],
   parameters: {
     component: InTheNews,

@@ -6,9 +6,17 @@ import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
 import { CONTAINER_PADDING } from '../../../../constants/grid-config'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { mediaQueries } from '../../../../hoc/media-queries'
+
+const StyledText = styled(Text)`
+  font-size: ${stepToRem(-1)};
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    font-size: ${stepToRem(0)};
+  }
+`
 
 const selectionData = [
   {
@@ -68,16 +76,15 @@ const InTheNewsBase = ({ viewportIsXSOrLess })=> (
   <Container>
     <Grid>
       <GridCol col-l="6">
-        <Text
+        <StyledText
           tag="p"
           weight="bold"
-          size="default"
           color="font1"
           className="k-u-margin-bottom-singleHalf@s-up
           k-u-margin-bottom-single@s-down"
         >
           A la une
-        </Text>
+        </StyledText>
         <Card
           title="Keep It Silky"
           text="Soutenez ma première participation au Salon de la Lingerie de Paris et aidez moi à développer mon réseau commercial ainsi que mon image."
