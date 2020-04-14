@@ -15,9 +15,9 @@ import { Button } from '../../../../components/buttons/button/button'
 import { cssPropertyDistributor } from '../../../../helpers/dom/css-property-distributor'
 import domElementHelper from '../../../../helpers/dom/element-helper'
 
-const oneGridCol = `calc((100vw - (2 * ${pxToRem(CONTAINER_PADDING)})) / 12)`
-const oneGridColThin = `calc((100vw - (2 * ${pxToRem(CONTAINER_PADDING_THIN)})) / 12)`
-const oneGridColXl = `${pxToRem(CONTAINER_MAX_WIDTH / 12)}`
+const paddingPlusGutters = (2 * CONTAINER_PADDING) + (11 * GUTTER)
+const oneGridCol = `calc((100vw - ${pxToRem(paddingPlusGutters)}) / 12)`
+const oneGridColXl = `${pxToRem((CONTAINER_MAX_WIDTH - paddingPlusGutters) / 12)}`
 
 const StyledSection = styled.section`
   background-color: #ffebe0;
@@ -53,22 +53,23 @@ const StyledCard = styled.div`
     margin: 0 ${pxToRem(CONTAINER_PADDING)};
   }
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    margin: 0 ${oneGridCol};
+    margin: 0 calc(${oneGridCol} + ${pxToRem(GUTTER)});
   }
   @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
-    margin: 0 ${oneGridColXl};
+    margin: 0 calc(${oneGridColXl} + ${pxToRem(GUTTER)});
   }
 `
 const StyledContent = styled.div`
-  padding: 0 ${pxToRem(GUTTER / 2)};
-  margin: 0 ${oneGridColThin};
+  margin: 0 ${pxToRem(30)};
 
   text-align: center;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    padding: 0 ${pxToRem(GUTTER)};
     margin: 0 ${pxToRem(oneGridCol)};
   }
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    padding: 0 ${pxToRem(2 * GUTTER)};
     margin: 0 calc(2 * ${oneGridCol});
   }
   @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
