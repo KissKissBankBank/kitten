@@ -9,7 +9,6 @@ import { VisuallyHidden } from '../../../../components/accessibility/visually-hi
 
 const StyledCard = styled.div`
   border-radius: ${pxToRem(15)};
-  cursor: pointer;
   overflow: hidden;
 `
 
