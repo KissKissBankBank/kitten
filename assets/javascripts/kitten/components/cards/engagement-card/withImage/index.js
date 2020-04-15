@@ -26,9 +26,13 @@ const StyledImage = styled.div`
 `
 
 const StyledText = styled(Text)`
-  margin-top: ${pxToRem(15)};
+  margin-top: ${pxToRem(10)};
   display: flex;
   justify-content: center;
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    margin-top: ${pxToRem(15)};
+  }
 `
 
 export const EngagementCardWithImage = ({
