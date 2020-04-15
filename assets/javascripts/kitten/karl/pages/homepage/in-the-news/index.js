@@ -18,6 +18,18 @@ const StyledText = styled(Text)`
   }
 `
 
+const StyledPaddingRight = styled(GridCol)`
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    padding-right: ${pxToRem(20)};
+  }
+`
+
+const StyledPaddingLeft = styled(GridCol)`
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    padding-left: ${pxToRem(20)};
+  }
+`
+
 const selectionData = [
   {
     title:
@@ -75,7 +87,7 @@ const selectionData = [
 const InTheNewsBase = ({ viewportIsXSOrLess })=> (
   <Container>
     <Grid>
-      <GridCol col-l="6" style={{ paddingRight: 20 }}>
+      <StyledPaddingRight col-l="6">
         <StyledText
           tag="p"
           weight="bold"
@@ -93,9 +105,9 @@ const InTheNewsBase = ({ viewportIsXSOrLess })=> (
             alt: '',
           }}
         />
-      </GridCol>
+      </StyledPaddingRight>
 
-      <GridCol col-l="6" style={{ paddingLeft: 20 }}>
+      <StyledPaddingLeft col-l="6">
         <Text
           tag="p"
           weight="bold"
@@ -147,7 +159,7 @@ const InTheNewsBase = ({ viewportIsXSOrLess })=> (
             </div>
           ))}
         </Carousel>
-      </GridCol>
+      </StyledPaddingLeft>
     </Grid>
   </Container>
 )
