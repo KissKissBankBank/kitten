@@ -7,7 +7,6 @@ import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
 
-
 const StyledCard = styled.div`
   border-radius: ${pxToRem(15)};
   cursor: pointer;
@@ -20,7 +19,8 @@ const StyledImage = styled.div`
   background-size: contain;
   transition: transform 0.3s ease;
 
-  :hover {
+  :hover,
+  :focus {
     transform: scale(1.1);
   }
 `

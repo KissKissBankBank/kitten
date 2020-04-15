@@ -23,7 +23,6 @@ const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
 
-
   li {
     position: relative;
   }
