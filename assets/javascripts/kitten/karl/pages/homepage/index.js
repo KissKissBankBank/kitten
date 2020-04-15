@@ -5,6 +5,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import { Container } from '../../../components/grid/container'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { ScreenConfig } from '../../../constants/screen-config'
+import COLORS from '../../../constants/colors-config'
 
 const StyledMarger = styled.div`
   margin-top: ${pxToRem(50)};
@@ -31,7 +32,7 @@ const StyledHorizontalStrokeContainer = styled.div`
 const StyledHorizontalStroke = styled.div`
   display: block;
   border: none;
-  background-color: currentColor;
+  background-color: ${COLORS.font1};
   margin: 0 auto;
   width: ${pxToRem(30)};
   height: ${pxToRem(4)};
@@ -50,9 +51,11 @@ const HomePage = () => (
           <StyledTitle modifier="tertiary" margin={false}>
             La communauté des projets engagés
           </StyledTitle>
+
           <StyledHorizontalStrokeContainer>
             <StyledHorizontalStroke />
           </StyledHorizontalStrokeContainer>
+
         </StyledMarger>
       </GridCol>
     </Grid>
