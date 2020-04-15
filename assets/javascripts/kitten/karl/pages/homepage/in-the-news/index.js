@@ -87,7 +87,7 @@ const selectionData = [
 const InTheNewsBase = ({ viewportIsXSOrLess })=> (
   <Container>
     <Grid>
-      <StyledPaddingRight col-l="6">
+      <StyledPaddingRight col-l={6}>
         <StyledText
           tag="p"
           weight="bold"
@@ -107,7 +107,7 @@ const InTheNewsBase = ({ viewportIsXSOrLess })=> (
         />
       </StyledPaddingRight>
 
-      <StyledPaddingLeft col-l="6">
+      <StyledPaddingLeft col-l={6}>
         <Text
           tag="p"
           weight="bold"

@@ -1,5 +1,5 @@
 import React from 'react'
-import { withKnobs, number, color } from '@storybook/addon-knobs'
+import { withKnobs } from '@storybook/addon-knobs'
 import { InTheNews } from './index'
 
 export default {
