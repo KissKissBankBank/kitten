@@ -19,11 +19,11 @@ const StyledCard = styled.div`
 const StyledImage = styled.img`
   height: ${({ imageHeight }) => pxToRem(imageHeight)};
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 
   :hover,
   :focus {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -63,7 +63,13 @@ export const EngagementCardWithImage = ({
           imageHeight={imageHeight}
         />
       </StyledCard>
-      <StyledText tag="p" size="micro" weight="regular" color="font1" decoration="none">
+      <StyledText
+        size="micro"
+        weight="regular"
+        color="font1"
+        decoration="none"
+        lineHeight="normal"
+      >
         {children}
       </StyledText>
     </StyledContainer>

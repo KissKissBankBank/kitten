@@ -101,8 +101,12 @@ const StyledContainer = styled(Container)`
   }
 
   [class^='carousel-page']:hover > [class^='carousel-page'] a {
-    opacity: 0.5;
+    opacity: 0.7;
   }
+`
+
+const StyledEngagementCardWithImage = styled(EngagementCardWithImage)`
+  max-width: ${pxToRem(200)};
 `
 
 const EngagementsBase = ({ viewportIsXSOrLess }) =>  {
@@ -117,14 +121,14 @@ const EngagementsBase = ({ viewportIsXSOrLess }) =>  {
       >
         {engagementsData.map(({ bgImage, children }) => {
           return (
-            <EngagementCardWithImage
+            <StyledEngagementCardWithImage
               key={children}
               href="#"
               backgroundImage={bgImage}
-              imageHeight={120}
+              imageHeight={viewportIsXSOrLess ? 100 : 120}
             >
               {children}
-            </EngagementCardWithImage>
+            </StyledEngagementCardWithImage>
           )
         })}
       </Carousel>
