@@ -55,7 +55,6 @@ export const EngagementCardWithImage = ({
         as={href ? 'a' : 'div'}
         href={href}
         isActive={isActive}
-
       >
       <StyledCard>
         <StyledImage

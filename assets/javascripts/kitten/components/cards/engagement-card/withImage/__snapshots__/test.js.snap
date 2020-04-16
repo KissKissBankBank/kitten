@@ -10,7 +10,8 @@ exports[`<EngagementCardWithImage /> by default matches with snapshot 1`] = `
     className="withImage__StyledCard-sc-1jg09sq-1 lgohnN"
   >
     <img
-      className="withImage__StyledImage-sc-1jg09sq-2 fWPyYx"
+      alt=""
+      className="withImage__StyledImage-sc-1jg09sq-2 izHKvY"
       src="https://source.unsplash.com/WLUHO9A_xik/200x120"
     />
   </div>
