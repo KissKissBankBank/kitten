@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
-import { Text } from '../../../components/typography/text'
 import { ResponsiveIframeContainer } from '../../../components/layout/responsive-iframe-container'
 import { parseHtml } from '../../../helpers/utils/parser'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -30,7 +29,7 @@ const StyledEmbedPlayer = styled.div`
     height: 100%;
   }
 
-  .EmbedPlayer__playerButton {
+  .EmbedPlayer__button {
     width: ${pxToRem(playerButtonXSSize)};
     height: ${pxToRem(playerButtonXSSize)};
     top: calc(50% - ${pxToRem(playerButtonXSSize / 2)});
@@ -50,7 +49,7 @@ const StyledEmbedPlayer = styled.div`
     }
   }
 
-  .EmbedPlayer__playerButtonPicto {
+  .EmbedPlayer__buttonPicto {
     width: ${pxToRem(8)};
     height: ${pxToRem(8)};
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -128,10 +127,10 @@ export const EmbedPlayer = ({
     >
       <div className="EmbedPlayer__playerPreview">
         {hasIframeHtml && (
-          <div className="EmbedPlayer__playerButton">
+          <div className="EmbedPlayer__button">
             <svg
               aria-hidden
-              className="EmbedPlayer__playerButtonPicto"
+              className="EmbedPlayer__buttonPicto"
               viewBox="0 0 10 10"
               xmlns="http://www.w3.org/2000/svg"
             >

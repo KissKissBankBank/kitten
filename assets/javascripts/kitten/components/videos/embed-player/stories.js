@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 
 export default {
   component: EmbedPlayer,
-  title: 'Media/EmbedPlayer',
+  title: 'Videos/EmbedPlayer',
   decorators: [withKnobs],
   parameters: {
     component: EmbedPlayer,

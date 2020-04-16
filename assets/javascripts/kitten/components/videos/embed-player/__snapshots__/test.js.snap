@@ -3,7 +3,7 @@
 exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
 <div
   aria-label="Play"
-  className="embed-player__StyledEmbedPlayer-py4vym-0 UhfEX player--cursorPointer"
+  className="embed-player__StyledEmbedPlayer-sc-14blbse-0 ftHHdQ player--cursorPointer"
   onClick={[Function]}
   onFocus={[Function]}
   onKeyPress={[Function]}
