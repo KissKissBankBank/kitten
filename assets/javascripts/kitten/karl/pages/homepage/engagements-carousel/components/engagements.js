@@ -89,7 +89,6 @@ const engagementsData = [
 
 const StyledContainer = styled(Container)`
   margin-top: ${pxToRem(20)};
-  box-sizing: border-box;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     & > div > :last-child {
