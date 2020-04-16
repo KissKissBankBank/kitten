@@ -5,13 +5,24 @@ import { EmbedPlayer } from './index'
 describe('<EmbedPlayer />', () => {
   let component
 
-  describe('by default', () => {
+  describe('with default props', () => {
     beforeEach(() => {
-      component = renderer.create(<EmbedPlayer />).toJSON()
+      component = renderer
+      .create(
+        <EmbedPlayer
+          previewProps={{
+            thumbnail: {
+              src: 'https://placekitten.com/620/376',
+            },
+          }}
+          playButtonLabel="Play"
+          ratio={50}
+        />)
+      .toJSON()
+    })
 
-      it('matches with snapshot', () => {
-        expect(component).toMatchSnapshot()
-      })
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
