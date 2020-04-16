@@ -17,7 +17,6 @@ const StyledCard = styled.div`
 `
 
 const StyledImage = styled.img`
-  width: 100%;
   height: ${({ imageHeight }) => pxToRem(imageHeight)};
   display: block;
   transition: transform 0.3s ease;
@@ -25,6 +24,10 @@ const StyledImage = styled.img`
   :hover,
   :focus {
     transform: scale(1.1);
+  }
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+     width: 100%;
   }
 `
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Engagements from './components/engagements'
+import { Engagements } from './components/engagements'
 
 
 const EngagementsCarousel = () => (

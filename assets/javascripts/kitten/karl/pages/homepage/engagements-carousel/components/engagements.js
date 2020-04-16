@@ -5,6 +5,8 @@ import { EngagementCardWithImage } from '../../../../../components/cards/engagem
 import { Carousel } from '../../../../../components/carousel/carousel/carousel'
 import { GUTTER } from '../../../../../constants/grid-config'
 import { pxToRem } from '../../../../../helpers/utils/typography'
+import { mediaQueries } from '../../../../../hoc/media-queries'
+import { ScreenConfig } from '../../../../../constants/screen-config'
 
 const engagementsData = [
   {
@@ -89,8 +91,10 @@ const StyledContainer = styled(Container)`
   margin-top: ${pxToRem(20)};
   box-sizing: border-box;
 
-  & > div > :last-child {
-    margin-top: ${pxToRem(12)};
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    & > div > :last-child {
+      margin-top: ${pxToRem(12)};
+    }
   }
 
   [class^='carousel-page']:hover > [class^='carousel-page'] a:hover {
@@ -102,19 +106,20 @@ const StyledContainer = styled(Container)`
   }
 `
 
-const Engagements = ({ viewportIsSOrLess }) =>  {
+const EngagementsBase = ({ viewportIsXSOrLess }) =>  {
   return (
-    <StyledContainer>
+    <StyledContainer fullWidthBelowScreenSize="S">
       <Carousel
-        itemMinWidth={200}
-        hidePaginationOnMobile
+        itemMinWidth={viewportIsXSOrLess ? 135 : 200}
         baseItemMarginBetween={GUTTER}
+        hidePaginationOnMobile
         paginationPosition={{ default: 'right' }}
-        showOtherPages={viewportIsSOrLess}
+        showOtherPages={viewportIsXSOrLess}
       >
         {engagementsData.map(({ bgImage, children }) => {
           return (
             <EngagementCardWithImage
+              key={children}
               href="#"
               backgroundImage={bgImage}
               imageHeight={120}
@@ -128,4 +133,6 @@ const Engagements = ({ viewportIsSOrLess }) =>  {
   )
 }
 
-export default Engagements
+export const Engagements = mediaQueries(EngagementsBase, {
+  viewportIsXSOrLess: true,
+})
