@@ -58,7 +58,6 @@ const StyledContainer = styled.div`
       top: calc(50% - ${pxToRem(playerButtonSize / 2)});
       left: calc(50% - ${pxToRem(playerButtonSize / 2)});
     }
-
   }
 
   .Video__buttonPicto {
@@ -99,8 +98,6 @@ export const Video = ({ className, children, ariaLabel, autoPlay, poster, src, .
       videoElement.current.play()
     }
     setPlayerVisibility(!isPlayerVisible)
-
-    // this.previewVideo.blur()
   }
 
   const handleKeyDown = event => {
