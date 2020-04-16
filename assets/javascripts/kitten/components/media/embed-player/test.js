@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { EmbedPlayer } from '../../components/media/embed-player'
+import { EmbedPlayer } from './index'
 
 describe('<EmbedPlayer />', () => {
   let component
@@ -22,7 +22,7 @@ describe('<EmbedPlayer />', () => {
           <EmbedPlayer
             previewProps={{
               thumbnail: {
-                src: 'https://placehold.it/620x376/caf4fe/caf4fe',
+                src: 'https://placekitten.com/620/376',
                 alt: 'Une image',
               },
             }}

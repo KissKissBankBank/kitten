@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
+<div
+  aria-label="Play"
+  className="embed-player__StyledEmbedPlayer-py4vym-0 UhfEX player--cursorPointer"
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  style={Object {}}
+  tabIndex={0}
+>
+  <div
+    className="EmbedPlayer__playerPreview"
+  >
+    <div
+      className="EmbedPlayer__playerButton"
+    >
+      <svg
+        className="EmbedPlayer__playerButtonPicto"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0l10 5-10 5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="k-ResponsiveIframeContainer"
+      style={
+        Object {
+          "paddingBottom": "60%",
+        }
+      }
+    >
+      <img
+        alt="Une image"
+        className="EmbedPlayer__thumbnail "
+        src="https://placekitten.com/620/376"
+      />
+    </div>
+  </div>
+</div>
+`;
