@@ -5,17 +5,21 @@ import { Text } from '../../../../components/typography/text'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import { ScreenConfig } from '../../../../constants/screen-config'
-import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+`
 
 const StyledCard = styled.div`
   border-radius: ${pxToRem(15)};
   overflow: hidden;
 `
 
-const StyledImage = styled.div`
-  background-repeat: no-repeat;
-  background-image: url(${({ backgroundImage }) => backgroundImage});
-  background-size: contain;
+const StyledImage = styled.img`
+  width: 100%;
+  display: block;
   transition: transform 0.3s ease;
 
   :hover,
@@ -26,8 +30,7 @@ const StyledImage = styled.div`
 
 const StyledText = styled(Text)`
   margin-top: ${pxToRem(10)};
-  display: flex;
-  justify-content: center;
+  text-align: center;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     margin-top: ${pxToRem(15)};
@@ -39,26 +42,23 @@ export const EngagementCardWithImage = ({
   children,
   isActive,
   href,
-  accessibilityLabel,
   as,
   ...others
 }) => {
   return (
-    <>
+    <StyledContainer
+        {...others}
+        as={href ? 'a' : 'div'}
+        href={href}
+        isActive={isActive}
+      >
       <StyledCard>
-        <StyledImage
-          {...others}
-          as={href ? 'a' : 'div'}
-          href={href}
-          isActive={isActive}
-          backgroundImage={backgroundImage}
-        />
+        <StyledImage src={backgroundImage} />
       </StyledCard>
-      <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
-      <StyledText size="micro" weight="regular" color="font1">
-          {children}
+      <StyledText tag="p" size="micro" weight="regular" color="font1" decoration="none">
+        {children}
       </StyledText>
-    </>
+    </StyledContainer>
   )
 }
 
@@ -66,14 +66,9 @@ EngagementCardWithImage.propTypes = {
   href: PropTypes.string,
   backgroundImage: PropTypes.string.isRequired,
   isActive: PropTypes.bool,
-  /**
-    Accessibility.
-  */
-  accessibilityLabel: PropTypes.string,
 }
 
 EngagementCardWithImage.defaultProps = {
   href: '',
   isActive: false,
-  accessibilityLabel: '',
 }
