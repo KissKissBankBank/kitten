@@ -18,6 +18,7 @@ const StyledCard = styled.div`
 
 const StyledImage = styled.img`
   width: 100%;
+  height: ${({ imageHeight }) => pxToRem(imageHeight)};
   display: block;
   transition: transform 0.3s ease;
 
@@ -42,6 +43,7 @@ export const EngagementCardWithImage = ({
   isActive,
   href,
   as,
+  imageHeight,
   ...others
 }) => {
   return (
@@ -50,9 +52,14 @@ export const EngagementCardWithImage = ({
         as={href ? 'a' : 'div'}
         href={href}
         isActive={isActive}
+
       >
       <StyledCard>
-        <StyledImage src={backgroundImage} />
+        <StyledImage
+          src={backgroundImage}
+          alt=""
+          imageHeight={imageHeight}
+        />
       </StyledCard>
       <StyledText tag="p" size="micro" weight="regular" color="font1" decoration="none">
         {children}
@@ -65,9 +72,11 @@ EngagementCardWithImage.propTypes = {
   href: PropTypes.string,
   backgroundImage: PropTypes.string.isRequired,
   isActive: PropTypes.bool,
+  imageHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
 EngagementCardWithImage.defaultProps = {
   href: '',
   isActive: false,
+  imageHeight: '',
 }
