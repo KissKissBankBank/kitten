@@ -18,6 +18,7 @@ exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
       className="EmbedPlayer__playerButton"
     >
       <svg
+        aria-hidden={true}
         className="EmbedPlayer__playerButtonPicto"
         viewBox="0 0 10 10"
         xmlns="http://www.w3.org/2000/svg"
