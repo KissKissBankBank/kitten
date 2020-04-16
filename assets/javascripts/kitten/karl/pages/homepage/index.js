@@ -15,10 +15,6 @@ const StyledMarger = styled.div`
   }
 `
 
-const StyledTitle = styled(Title)`
-  text-align: center;
-`
-
 const StyledHorizontalStrokeContainer = styled.div`
   margin-top: ${pxToRem(15)};
   margin-bottom: ${pxToRem(30)};
@@ -48,9 +44,9 @@ const HomePage = () => (
     <Grid>
       <GridCol>
         <StyledMarger>
-          <StyledTitle modifier="tertiary" margin={false}>
+          <Title className="k-u-align-center" modifier="tertiary" margin={false}>
             La communauté des projets engagés
-          </StyledTitle>
+          </Title>
 
           <StyledHorizontalStrokeContainer>
             <StyledHorizontalStroke />
