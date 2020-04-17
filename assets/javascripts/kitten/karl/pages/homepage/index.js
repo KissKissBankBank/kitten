@@ -10,6 +10,7 @@ import Video from './video'
 import { NewsBlock } from './news/components/news-block'
 import DialogWithPictureBorder from './dialog-with-picture-border'
 import { InTheNews } from './in-the-news'
+import { HomepageCarousel } from './carousel'
 
 const StyledHomePage = styled.div`
   section.Homepage__Section {
@@ -138,6 +139,14 @@ const HomePage = () => (
           },
         ]}
       />
+    </Container>
+
+    <Container as="section" className="Homepage__Section">
+      <StyledSectionTitle tag="h2" margin={false}>
+        Nos projets populaires
+      </StyledSectionTitle>
+
+      <HomepageCarousel />
     </Container>
 
     <Container as="section" className="Homepage__Section">
