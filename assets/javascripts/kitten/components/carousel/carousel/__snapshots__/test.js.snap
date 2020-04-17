@@ -2,7 +2,7 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="carousel__FlexContainer-sc-1o67jdh-0 jlTVNA"
+  className="carousel__FlexContainer-sc-1o67jdh-0 hhpJPM"
 >
   <div
     className="carousel-inner__StyledCarouselInner-wljpd2-0 jBSEkH"
@@ -77,7 +77,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="carousel__FlexContainer-sc-1o67jdh-0 jlTVNA"
+  className="carousel__FlexContainer-sc-1o67jdh-0 hhpJPM"
 >
   <div
     className="carousel-inner__StyledCarouselInner-wljpd2-0 jBSEkH"
