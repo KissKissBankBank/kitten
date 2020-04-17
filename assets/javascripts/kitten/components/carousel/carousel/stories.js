@@ -81,6 +81,7 @@ storiesOf('Carousel/ProjectCarousel', module)
           CONTAINER_PADDING,
         )}
         paginationPosition={object('paginationPosition', paginationPosition)}
+        showPageSquares={boolean('showPageSquares', false)}
       >
         {data.map(item => (
           <CrowdfundingCard
