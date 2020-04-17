@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TitleWithStroke /> with default props matches with snapshot 1`] = `
+<div
+  className="title-with-stroke__StyledTitleWithStroke-sc-10vl00i-0 iJDXnS TitleWithStroke--align_left"
+>
+  <h1
+    className="TitleWithStroke__Title TitleWithStroke__Title--primary"
+  >
+    Lorem ipsum dolor sit amet…
+  </h1>
+  <span
+    className="TitleWithStroke__Stroke TitleWithStroke__Stroke--primary"
+  />
+</div>
+`;
+
+exports[`<TitleWithStroke /> with more props matches with snapshot 1`] = `
+<div
+  className="title-with-stroke__StyledTitleWithStroke-sc-10vl00i-0 iJDXnS TitleWithStroke--align_center TitleWithStroke--italic"
+>
+  <h4
+    className="TitleWithStroke__Title TitleWithStroke__Title--tertiary"
+  >
+    Lorem ipsum dolor sit amet…
+  </h4>
+  <span
+    className="TitleWithStroke__Stroke TitleWithStroke__Stroke--tertiary"
+  />
+</div>
+`;
