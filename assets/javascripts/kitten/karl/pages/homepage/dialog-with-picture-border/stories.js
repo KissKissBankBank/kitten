@@ -1,7 +1,15 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
+import { withKnobs } from '@storybook/addon-knobs'
 import DialogWithPictureBorder from './index'
 
-storiesOf('Pages/Homepage', module).add('DialogWithPictureBorder', () => {
-  return <DialogWithPictureBorder />
-})
+export default {
+  component: DialogWithPictureBorder,
+  title: 'pages/homepage/DialogWithPictureBorder',
+  parameters: {
+    component: DialogWithPictureBorder,
+  },
+}
+
+export const DefaultProps = () => (
+  <DialogWithPictureBorder />
+)

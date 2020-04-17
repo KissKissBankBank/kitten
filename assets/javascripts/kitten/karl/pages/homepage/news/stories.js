@@ -1,7 +1,15 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
+import { withKnobs } from '@storybook/addon-knobs'
 import HomepageNews from './index'
 
-storiesOf('Pages/Homepage', module).add('News', () => {
-  return <HomepageNews />
-})
+export default {
+  component: HomepageNews,
+  title: 'pages/homepage/HomepageNews',
+  parameters: {
+    component: HomepageNews,
+  },
+}
+
+export const DefaultProps = () => (
+  <HomepageNews />
+)

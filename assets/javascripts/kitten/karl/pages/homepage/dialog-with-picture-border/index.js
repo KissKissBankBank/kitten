@@ -19,7 +19,7 @@ const paddingPlusGutters = (2 * CONTAINER_PADDING) + (11 * GUTTER)
 const oneGridCol = `calc((100vw - ${pxToRem(paddingPlusGutters)}) / 12)`
 const oneGridColXl = `${pxToRem((CONTAINER_MAX_WIDTH - paddingPlusGutters) / 12)}`
 
-const StyledSection = styled.section`
+const StyledSection = styled.div`
   background-color: #ffebe0;
   padding-top: ${pxToRem(50)};
   padding-bottom: ${pxToRem(50)};
