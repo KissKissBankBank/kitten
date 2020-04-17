@@ -14,7 +14,7 @@ import ColorsConfig from '../../../constants/colors-config'
 import { Button } from '../../../components/buttons/button/button'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'
-import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
+import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
 
 export const getNumColumnsForWidth = (
   width,
@@ -59,7 +59,14 @@ const getMarginBetweenAccordingToViewport = (
   return baseItemMarginBetween
 }
 
-const propTypesPositions = PropTypes.oneOf(['top', 'right', 'bottom', 'left', 'bottom-left', 'bottom-right'])
+const propTypesPositions = PropTypes.oneOf([
+  'top',
+  'right',
+  'bottom',
+  'left',
+  'bottom-left',
+  'bottom-right',
+])
 
 class CarouselBase extends Component {
   static defaultProps = {
@@ -71,8 +78,8 @@ class CarouselBase extends Component {
       default: 'right',
       fromM: 'bottom',
     },
-    prevButtonText:'Previous items',
-    nextButtonText:'Next items',
+    prevButtonText: 'Previous items',
+    nextButtonText: 'Next items',
     showPageSquares: false,
   }
 
@@ -246,9 +253,7 @@ class CarouselBase extends Component {
         position={paginationPosition}
         itemMarginBetween={itemMarginBetween}
       >
-        <PaginationButtons
-          position={paginationPosition}
-        >
+        <PaginationButtons position={paginationPosition}>
           <PageButton
             icon
             modifier="beryllium"
@@ -273,10 +278,7 @@ class CarouselBase extends Component {
         {showPageSquares && (
           <PaginationSquares>
             {createRangeFromZeroTo(numPages).map(index => (
-              <PageSquare
-                key={index}
-                isActive={index === indexPageVisible}
-              />
+              <PageSquare key={index} isActive={index === indexPageVisible} />
             ))}
           </PaginationSquares>
         )}
@@ -451,9 +453,11 @@ const PageSquare = styled.span`
   margin: ${pxToRem(2)};
   background-color: ${ColorsConfig.font2};
 
-  ${({ isActive }) => isActive && css`
-    background-color: ${ColorsConfig.font1};
-  `}
+  ${({ isActive }) =>
+    isActive &&
+    css`
+      background-color: ${ColorsConfig.font1};
+    `}
 `
 
 const buttonsPositionStyle = positionType => ({ position }) => {

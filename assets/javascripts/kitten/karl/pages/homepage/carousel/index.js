@@ -20,7 +20,8 @@ const data = [
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,3',
   },
   {
-    title: '"Odyssée" une exposition itinérante de Fred Kleinberg encore plus long et tout ça',
+    title:
+      '"Odyssée" une exposition itinérante de Fred Kleinberg encore plus long et tout ça',
     imageSrc: 'https://source.unsplash.com/random/500x300?kitten,4',
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,5',
   },
@@ -40,54 +41,54 @@ const data = [
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,8',
   },
   {
-    title: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.',
+    title:
+      'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.',
     imageSrc: 'https://source.unsplash.com/random/500x300?kitten,7',
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,6',
   },
 ]
 
 const HomepageCarouselBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => (
-    <Container fullWidthBelowScreenSize="M" >
-      <Carousel
-        itemMinWidth={viewportIsSOrLess ? 150 : 280}
-        baseItemMarginBetween={CONTAINER_PADDING}
-        paginationPosition={{
-          default: 'bottom-right',
-        }}
-        hidePagination={viewportIsMOrLess ? true : false}
-        showOtherPages={viewportIsMOrLess ? true : false}
-        showPageSquares={viewportIsMOrLess ? false : true}
-      >
-        {data.map(item => (
-          <CrowdfundingCard
-            key={`CrowdfundingCard${item.title}`}
-            href="#"
-            imageProps={{
-              src: item.imageSrc,
-              alt: 'Image alt',
-              backgroundColor: '#d8d8d8',
-              color: '#333',
-            }}
-            avatarProps={{
-              src: item.thumbSrc,
-              alt: 'Avatar alt',
-            }}
-            ownerTitle="Owner title"
-            ownerDescription="Owner description"
-            titleProps={{
-              tag: 'h3',
-            }}
-            cardTitle={item.title}
-            cardSubTitle="Custom subtitle"
-            titlesMinHeight
-            progress="84"
-            state="Custom state"
-          />
-        ))}
-      </Carousel>
-    </Container>
-  )
-
+  <Container fullWidthBelowScreenSize="M">
+    <Carousel
+      itemMinWidth={viewportIsSOrLess ? 150 : 280}
+      baseItemMarginBetween={CONTAINER_PADDING}
+      paginationPosition={{
+        default: 'bottom-right',
+      }}
+      hidePagination={viewportIsMOrLess ? true : false}
+      showOtherPages={viewportIsMOrLess ? true : false}
+      showPageSquares={viewportIsMOrLess ? false : true}
+    >
+      {data.map(item => (
+        <CrowdfundingCard
+          key={`CrowdfundingCard${item.title}`}
+          href="#"
+          imageProps={{
+            src: item.imageSrc,
+            alt: 'Image alt',
+            backgroundColor: '#d8d8d8',
+            color: '#333',
+          }}
+          avatarProps={{
+            src: item.thumbSrc,
+            alt: 'Avatar alt',
+          }}
+          ownerTitle="Owner title"
+          ownerDescription="Owner description"
+          titleProps={{
+            tag: 'h3',
+          }}
+          cardTitle={item.title}
+          cardSubTitle="Custom subtitle"
+          titlesMinHeight
+          progress="84"
+          state="Custom state"
+        />
+      ))}
+    </Carousel>
+  </Container>
+)
 
 export const HomepageCarousel = mediaQueries(HomepageCarouselBase, {
   viewportIsMOrLess: true,
