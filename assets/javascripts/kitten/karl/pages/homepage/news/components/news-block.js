@@ -46,7 +46,7 @@ const StyledNewsBlock = styled.div`
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .newsBlock__NewsCard {
+  .newsBlock__NewsCard__link {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -55,6 +55,7 @@ const StyledNewsBlock = styled.div`
   .newsBlock__NewsCard__picture {
     max-width: ${twelveColumns};
     position: relative;
+    overflow: hidden;
 
     @media (orientation: portrait) {
       padding-top: calc(${twelveColumns} * ${portraitImageRatio});
@@ -70,6 +71,7 @@ const StyledNewsBlock = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: transform .4s ease;
     }
   }
 
@@ -83,6 +85,7 @@ const StyledNewsBlock = styled.div`
       line-height: normal;
       line-height: 1.2;
       ${TYPOGRAPHY.fontStyles.bold}
+      transition: color .4s ease;
     }
     .newsBlock__NewsCard__excerpt {
       margin: ${pxToRem(10)} 0 0;
@@ -227,37 +230,51 @@ const StyledNewsBlock = styled.div`
         }
       }
     }
+
+    .newsBlock__NewsCard__link:hover,
+    .newsBlock__NewsCard__link:focus,
+    .newsBlock__NewsCard__link:active {
+      .newsBlock__NewsCard__picture img {
+        transform: scale(1.07);
+      }
+      .newsBlock__NewsCard__title {
+        color: ${COLORS.primary2}
+      }
+
+    }
+
   }
 `
 
 export const NewsCard = ({ contents, horizontal = false, alone = false }) => (
-  <a
-    href="#"
+  <article
     className={classNames('newsBlock__NewsCard', {
       'NewsCard--horizontal': horizontal,
       'NewsCard--vertical': !horizontal,
     })}
   >
-    <picture className="newsBlock__NewsCard__picture">
-      {!alone && (
-        <>
-          <source
-            media="(orientation: portrait)"
-            srcSet={contents.imageUrlPortrait}
-          />
-          <source
-            media="(orientation: landscape)"
-            srcSet={contents.imageUrlLandscape}
-          />
-        </>
-      )}
-      <img src={contents.imageUrlLandscape} alt="" />
-    </picture>
-    <div className="newsBlock__NewsCard__text">
-      <h3 className="newsBlock__NewsCard__title">{contents.title}</h3>
-      <p className="newsBlock__NewsCard__excerpt">{contents.excerpt}</p>
-    </div>
-  </a>
+    <a href={contents.url} className="newsBlock__NewsCard__link">
+      <picture className="newsBlock__NewsCard__picture">
+        {!alone && (
+          <>
+            <source
+              media="(orientation: portrait)"
+              srcSet={contents.imageUrlPortrait}
+            />
+            <source
+              media="(orientation: landscape)"
+              srcSet={contents.imageUrlLandscape}
+            />
+          </>
+        )}
+        <img src={contents.imageUrlLandscape} alt="" />
+      </picture>
+      <div className="newsBlock__NewsCard__text">
+        <h3 className="newsBlock__NewsCard__title">{contents.title}</h3>
+        <p className="newsBlock__NewsCard__excerpt">{contents.excerpt}</p>
+      </div>
+    </a>
+  </article>
 )
 
 export const NewsBlock = ({ contents, horizontal = false }) => {
