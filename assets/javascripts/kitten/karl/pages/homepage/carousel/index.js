@@ -48,11 +48,20 @@ const data = [
   },
 ]
 
-const HomepageCarouselBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => (
+const HomepageCarouselBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => {
+  let padding = 40
+  if (viewportIsMOrLess) {
+    padding = 20
+  }
+  if (viewportIsSOrLess) {
+    padding = 10
+  }
+
+  return (
   <Container fullWidthBelowScreenSize="M">
     <Carousel
       itemMinWidth={viewportIsSOrLess ? 150 : 280}
-      baseItemMarginBetween={CONTAINER_PADDING}
+      baseItemMarginBetween={padding}
       paginationPosition={{
         default: 'bottom-right',
       }}
@@ -88,7 +97,7 @@ const HomepageCarouselBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => (
       ))}
     </Carousel>
   </Container>
-)
+)}
 
 export const HomepageCarousel = mediaQueries(HomepageCarouselBase, {
   viewportIsMOrLess: true,
