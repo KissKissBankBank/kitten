@@ -1,7 +1,10 @@
 const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin')
 
 module.exports = {
-  stories: ['../assets/javascripts/kitten/**/stories.(js|mdx)'],
+  stories: [
+    '../assets/javascripts/kitten/**/stories.(js|mdx)',
+    '../doc/**/*.stories.(js|mdx)',
+  ],
   addons: [
     '@storybook/addon-knobs/register',
     '@storybook/addon-actions/register',
