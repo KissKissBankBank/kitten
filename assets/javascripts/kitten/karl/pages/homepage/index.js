@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Title } from '../../../components/typography/title'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { Container } from '../../../components/grid/container'
-import { Grid, GridCol } from '../../../components/grid/grid'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
+import { Container } from '../../../components/grid/container'
+import { Grid, GridCol } from '../../../components/grid/grid'
+import { Title } from '../../../components/typography/title'
+import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import Video from './video'
 import { NewsBlock } from './news/components/news-block'
 import DialogWithPictureBorder from './dialog-with-picture-border'
@@ -61,13 +63,44 @@ const StyledHorizontalStroke = styled.div`
 `
 
 const StyledSectionTitle = styled(Title)`
-  margin: 0 0 ${pxToRem(10)};
   font-size: ${stepToRem(-1)};
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    margin: 0 0 ${pxToRem(15)};
     font-size: ${stepToRem(0)};
   }
+`
+
+const StyledCarouselLink = styled.a`
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  ${TYPOGRAPHY.fontStyles.regular}
+  color: ${COLORS.font1};
+  transition: color .4s ease;
+
+  span {
+    font-size: ${stepToRem(-2)};
+    margin-right: ${pxToRem(7)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      font-size: ${stepToRem(-1)};
+      margin-right: ${pxToRem(8)};
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: ${COLORS.primary2}
+  }
+
+  svg {
+    vertical-align: center;
+    fill: currentColor;
+    transition: fill .4s ease;
+  }
+
+
 `
 
 const HomePage = () => (
@@ -86,7 +119,14 @@ const HomePage = () => (
     </Container>
 
     <Container as="section" className="Homepage__Section">
-      <StyledSectionTitle tag="h2" margin={false}>
+      <StyledSectionTitle
+        tag="h2"
+        className="
+          k-u-margin-top-none
+          k-u-margin-bottom-singleHalf@s-up
+          k-u-margin-bottom-single@s-down
+        "
+      >
         Notre actu
       </StyledSectionTitle>
       <NewsBlock
@@ -141,13 +181,31 @@ const HomePage = () => (
       />
     </Container>
 
-    <Container as="section" className="Homepage__Section">
-      <StyledSectionTitle tag="h2" margin={false}>
-        Nos projets populaires
-      </StyledSectionTitle>
+    <section className="Homepage__Section">
+      <Container
+        className="k-u-margin-bottom-singleHalf@s-up
+          k-u-margin-bottom-single@s-down"
+      >
+        <Grid>
+          <GridCol col={8}>
+            <StyledSectionTitle tag="h2" margin={false}>
+              Nos projets populaires
+            </StyledSectionTitle>
+          </GridCol>
+          <GridCol col={4}>
+            <StyledCarouselLink
+              href="#"
+            >
+              <span className="k-u-hidden@xs-down">Voir tous les projets</span>
+              <span className="k-u-hidden@s-up" aria-hidden>Tous les projets</span>
+              <ArrowIcon />
+            </StyledCarouselLink>
+          </GridCol>
+        </Grid>
+      </Container>
 
       <HomepageCarousel />
-    </Container>
+    </section>
 
     <Container as="section" className="Homepage__Section">
       <Video className="Homepage__Section"/>

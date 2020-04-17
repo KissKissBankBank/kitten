@@ -310,7 +310,7 @@ const flexContainerdirectionStyle = positionType => ({
       return css`
         flex-direction: column-reverse;
 
-        & > :last-child {
+        & > :nth-child(2) {
           margin: 0;
           margin-bottom: ${pxToRem(GUTTER)};
         }
@@ -321,7 +321,7 @@ const flexContainerdirectionStyle = positionType => ({
       return css`
         flex-direction: column;
 
-        & > :last-child {
+        & > :nth-child(2) {
           margin: 0;
           margin-top: ${pxToRem(GUTTER)};
         }
@@ -330,7 +330,7 @@ const flexContainerdirectionStyle = positionType => ({
       return css`
         flex-direction: row-reverse;
 
-        & > :last-child {
+        & > :nth-child(2) {
           margin: 0;
           margin-right: ${pxToRem(GUTTER)};
         }
@@ -339,7 +339,7 @@ const flexContainerdirectionStyle = positionType => ({
       return css`
         flex-direction: row;
 
-        & > :last-child {
+        & > :nth-child(2) {
           margin: 0;
           margin-left: ${pxToRem(GUTTER)};
         }
