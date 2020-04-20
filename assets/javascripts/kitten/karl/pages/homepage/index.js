@@ -10,6 +10,7 @@ import { Video } from './video'
 import { NewsBlock } from './news/components/news-block'
 import { DialogWithPictureBorder } from './dialog-with-picture-border'
 import { FeaturedProjects } from './featured-projects'
+import { TextWithSideImage } from './text-with-side-image'
 
 const StyledHomePage = styled.div`
   section.Homepage__Section {
@@ -141,11 +142,15 @@ const HomePage = () => (
     </Container>
 
     <Container as="section" className="Homepage__Section">
-      <Video className="Homepage__Section"/>
+      <TextWithSideImage />
+    </Container>
+
+    <Container as="section" className="Homepage__Section">
+      <Video/>
     </Container>
 
     <section className="Homepage__Section Homepage__LastSection">
-      <DialogWithPictureBorder className="Homepage__Section"/>
+      <DialogWithPictureBorder/>
     </section>
   </StyledHomePage>
 )
