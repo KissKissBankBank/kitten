@@ -14,7 +14,7 @@ import ColorsConfig from '../../../constants/colors-config'
 import { Button } from '../../../components/buttons/button/button'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'
-import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
+import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
 
 export const getNumColumnsForWidth = (
   width,
@@ -59,7 +59,14 @@ const getMarginBetweenAccordingToViewport = (
   return baseItemMarginBetween
 }
 
-const propTypesPositions = PropTypes.oneOf(['top', 'right', 'bottom', 'left'])
+const propTypesPositions = PropTypes.oneOf([
+  'top',
+  'right',
+  'bottom',
+  'left',
+  'bottom-left',
+  'bottom-right',
+])
 
 class CarouselBase extends Component {
   static defaultProps = {
@@ -71,8 +78,9 @@ class CarouselBase extends Component {
       default: 'right',
       fromM: 'bottom',
     },
-    prevButtonText:'Previous items',
-    nextButtonText:'Next items',
+    prevButtonText: 'Previous items',
+    nextButtonText: 'Next items',
+    showPageSquares: false,
     tinyButton: false,
   }
 
@@ -98,6 +106,7 @@ class CarouselBase extends Component {
     prevButtonText: PropTypes.string,
     nextButtonText: PropTypes.string,
     tinyButton: PropTypes.bool,
+    showPageSquares: PropTypes.bool,
   }
 
   state = {
@@ -210,6 +219,7 @@ class CarouselBase extends Component {
       prevButtonText,
       nextButtonText,
       tinyButton,
+      showPageSquares,
     } = this.props
     const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -245,27 +255,37 @@ class CarouselBase extends Component {
         position={paginationPosition}
         itemMarginBetween={itemMarginBetween}
       >
-        <Button
-          icon
-          modifier="beryllium"
-          tiny={tinyButton}
-          onClick={this.goPrevPage}
-          disabled={indexPageVisible < 1 || numPages < 1}
-        >
-          <VisuallyHidden>{prevButtonText}</VisuallyHidden>
-          <ArrowIcon version="solid" direction="left" aria-hidden />
-        </Button>
+        <PaginationButtons position={paginationPosition}>
+          <PageButton
+            icon
+            modifier="beryllium"
+            tiny={tinyButton}
+            onClick={this.goPrevPage}
+            disabled={indexPageVisible < 1 || numPages < 1}
+          >
+            <VisuallyHidden>{prevButtonText}</VisuallyHidden>
+            <ArrowIcon version="solid" direction="left" aria-hidden />
+          </PageButton>
 
-        <Button
-          icon
-          modifier="beryllium"
-          tiny={tinyButton}
-          onClick={this.goNextPage}
-          disabled={indexPageVisible >= numPages - 1}
-        >
-          <VisuallyHidden>{nextButtonText}</VisuallyHidden>
-          <ArrowIcon version="solid" direction="right" aria-hidden />
-        </Button>
+          <PageButton
+            icon
+            modifier="beryllium"
+            tiny={tinyButton}
+            onClick={this.goNextPage}
+            disabled={indexPageVisible >= numPages - 1}
+          >
+            <VisuallyHidden>{nextButtonText}</VisuallyHidden>
+            <ArrowIcon version="solid" direction="right" aria-hidden />
+          </PageButton>
+        </PaginationButtons>
+
+        {showPageSquares && (
+          <PaginationSquares>
+            {createRangeFromZeroTo(numPages).map(index => (
+              <PageSquare key={index} isActive={index === indexPageVisible} />
+            ))}
+          </PaginationSquares>
+        )}
       </CarouselPagination>
     )
   }
@@ -293,18 +313,40 @@ const flexContainerdirectionStyle = positionType => ({
     case 'top':
       return css`
         flex-direction: column-reverse;
+
+        & > :nth-child(2) {
+          margin: 0;
+          margin-bottom: ${pxToRem(GUTTER)};
+        }
       `
     case 'bottom':
+    case 'bottom-left':
+    case 'bottom-right':
       return css`
         flex-direction: column;
+
+        & > :nth-child(2) {
+          margin: 0;
+          margin-top: ${pxToRem(GUTTER)};
+        }
       `
     case 'left':
       return css`
         flex-direction: row-reverse;
+
+        & > :nth-child(2) {
+          margin: 0;
+          margin-right: ${pxToRem(GUTTER)};
+        }
       `
     case 'right':
       return css`
         flex-direction: row;
+
+        & > :nth-child(2) {
+          margin: 0;
+          margin-left: ${pxToRem(GUTTER)};
+        }
       `
   }
 }
@@ -344,52 +386,37 @@ const paginationPositionStyle = positionType => ({ position }) => {
   switch (position[positionType]) {
     case 'top':
       return css`
+        align-items: flex-end;
         flex-direction: row;
-        margin: 0; /* Reset css from all previous media-queries */
-        margin-bottom: ${pxToRem(GUTTER)});
-
-        & > button:first-child {
-          margin-bottom: pxToRem(2);
-        }
       `
     case 'bottom':
+    case 'bottom-left':
       return css`
+        align-items: flex-start;
         flex-direction: row;
-        margin: 0; /* Reset css from all previous media-queries */
-        margin-top: ${pxToRem(GUTTER)};
-
-        & > button:first-child {
-          margin-right: ${pxToRem(2)};
-        }
+      `
+    case 'bottom-right':
+      return css`
+        align-items: flex-start;
+        flex-direction: row-reverse;
       `
     case 'left':
       return css`
+        align-items: flex-end;
         flex-direction: column;
-        align-self: flex-start;
-        margin: 0; /* Reset css from all previous media-queries */
-        margin-right: ${pxToRem(GUTTER)};
-
-        & > button:first-child {
-          margin-bottom: ${pxToRem(2)};
-        }
       `
     case 'right':
       return css`
-        flex-direction: column-reverse;
-        align-self: flex-start;
-        margin: 0; /* Reset css from all previous media-queries */
-        margin-left: ${pxToRem(GUTTER)};
-
-        & > button:last-child {
-          margin-bottom: ${pxToRem(2)};
-        }
+        align-items: flex-start;
+        flex-direction: column;
       `
   }
 }
 
 const CarouselPagination = styled.div`
   display: flex;
-  align-items: flex-start;
+  justify-content: space-between;
+
   ${paginationPositionStyle('default')}
 
   @media (min-width: ${ScreenConfig.XXS.min}px) {
@@ -415,6 +442,84 @@ const CarouselPagination = styled.div`
   @media (min-width: ${ScreenConfig.XL.min}px) {
     ${paginationPositionStyle('fromXl')}
   }
+`
+
+const PaginationSquares = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: ${pxToRem(-2)};
+`
+
+const PageSquare = styled.span`
+  display: inline-block;
+  width: ${pxToRem(6)};
+  height: ${pxToRem(6)};
+  margin: ${pxToRem(2)};
+  background-color: ${ColorsConfig.font2};
+
+  ${({ isActive }) =>
+    isActive &&
+    css`
+      background-color: ${ColorsConfig.font1};
+    `}
+`
+
+const buttonsPositionStyle = positionType => ({ position }) => {
+  if (!position[positionType]) return
+
+  switch (position[positionType]) {
+    case 'top':
+    case 'bottom':
+    case 'bottom-left':
+    case 'bottom-right':
+      return css`
+        flex-direction: row;
+      `
+    case 'left':
+      return css`
+        flex-direction: column;
+      `
+    case 'right':
+      return css`
+        flex-direction: column-reverse;
+      `
+  }
+}
+
+const PaginationButtons = styled.div`
+  display: flex;
+  align-items: flex-start;
+  margin: ${pxToRem(-1)};
+
+  ${buttonsPositionStyle('default')}
+
+  @media (min-width: ${ScreenConfig.XXS.min}px) {
+    ${buttonsPositionStyle('fromXxs')}
+  }
+
+  @media (min-width: ${ScreenConfig.XS.min}px) {
+    ${buttonsPositionStyle('fromXs')}
+  }
+
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    ${buttonsPositionStyle('fromS')}
+  }
+
+  @media (min-width: ${ScreenConfig.M.min}px) {
+    ${buttonsPositionStyle('fromM')}
+  }
+
+  @media (min-width: ${ScreenConfig.L.min}px) {
+    ${buttonsPositionStyle('fromL')}
+  }
+
+  @media (min-width: ${ScreenConfig.XL.min}px) {
+    ${buttonsPositionStyle('fromXl')}
+  }
+`
+
+const PageButton = styled(Button)`
+  margin: ${pxToRem(1)};
 `
 
 const PageControl = styled.div`
@@ -459,7 +564,7 @@ const PageDot = styled.div`
     visibleIndex === index &&
     css`
       background-color: ${ColorsConfig.primary2};
-    `}}
+    `}
 `
 
 export const Carousel = withMediaQueries({
