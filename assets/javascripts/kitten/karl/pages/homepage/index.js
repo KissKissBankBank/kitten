@@ -8,12 +8,13 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { Video } from './video'
-import { NewsBlock } from './news/components/news-block'
-import { DialogWithPictureBorder } from './dialog-with-picture-border'
+import EngagementsCarousel from './engagements-carousel'
 import { FeaturedProjects } from './featured-projects'
-import { PopularProjects } from './carousel'
+import { PopularProjects } from './popular-projects'
+import { NewsBlock } from './news/components/news-block'
 import { TextWithSideImage } from './text-with-side-image'
+import { Video } from './video'
+import { DialogWithPictureBorder } from './dialog-with-picture-border'
 
 const StyledHomePage = styled.div`
   section.Homepage__Section {
@@ -114,6 +115,10 @@ const HomePage = () => (
         <StyledHorizontalStroke />
       </StyledHorizontalStrokeContainer>
     </Container>
+
+    <section>
+      <EngagementsCarousel />
+    </section>
 
     <Container as="section" className="Homepage__Section">
       <FeaturedProjects />
