@@ -166,7 +166,7 @@ export const TextWithSideImage = () => (
         <StyledList>
           <StyledItem>
             <StyledItemTitle>
-              22 000 initiatives positives ont vu le jour grâce au crowdfunding.
+              22 000 initiatives positives ont vu le jour<br /> grâce au crowdfunding.
             </StyledItemTitle>
             <StyledItemParagraph>
               Vous avez un projet créatif, associatif ou entrepreneurial ? Toute notre équipe vous accompagne vers la réussite de votre campagne de financement participatif et au-delà : préparation, communication, événementiel... Déjà 22 000 projets impactants déjà financés sur KissKissBankBank.
@@ -174,7 +174,7 @@ export const TextWithSideImage = () => (
           </StyledItem>
           <StyledItem>
             <StyledItemTitle>
-              Des dizaines de partenaires soutiennent les projets des causes qui leur sont chères.
+              Des dizaines de partenaires soutiennent les projets<br /> des causes qui leur sont chères.
             </StyledItemTitle>
             <StyledItemParagraph>
               Vous êtes une marque ou un acteur engagé ? Nous vous proposons de porter haut les couleurs de votre engagement. Ensemble, imaginons des dispositifs pour faire rayonner vos valeurs et propulser les talents de demain.
@@ -182,7 +182,7 @@ export const TextWithSideImage = () => (
           </StyledItem>
           <StyledItem>
             <StyledItemTitle>
-              Une communauté composée de 1&nbsp;829&nbsp;120 citoyens positifs.
+              Une communauté composée de 1&nbsp;829&nbsp;120<br /> citoyens positifs.
             </StyledItemTitle>
             <StyledItemParagraph>
               Nous pensons que financer ensemble des projets a un impact positif sur notre vie et celle des autres. Aujourd’hui, vous êtes déjà 1 829 120 citoyens engagés à partager cet avis. Chaque jour, vous soutenez les porteurs de projet qui partagent vos valeurs et les causes qui vous tiennent à coeur.
