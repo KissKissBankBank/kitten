@@ -1,41 +1,41 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { titleModifierStyles } from '../common/title-modifier-styles'
 import { strokeModifierStyles } from '../../layout/horizontal-stroke/common/stroke-modifier-styles'
 import classNames from 'classnames'
 
 const StyledTitleWithStroke = styled.div`
-  &.TitleWithStroke--align-left {
+  &.k-TitleWithStroke--align-left {
     text-align: left;
   }
-  &.TitleWithStroke--align-center {
+  &.k-TitleWithStroke--align-center {
     text-align: center;
   }
-  &.TitleWithStroke--align-right {
+  &.k-TitleWithStroke--align-right {
     text-align: right;
   }
 
-  .TitleWithStroke__title {
+  .k-TitleWithStroke__title {
     margin-top: 0;
     margin-bottom: 0;
     ${TYPOGRAPHY.fontStyles.bold};
   }
 
-  ${titleModifierStyles('TitleWithStroke__title')}
+  ${titleModifierStyles('k-TitleWithStroke__title')}
 
-  &.TitleWithStroke--italic .TitleWithStroke__title {
+  &.k-TitleWithStroke--italic .k-TitleWithStroke__title {
     font-style: italic;
   }
 
-  .TitleWithStroke__stroke {
+  .k-TitleWithStroke__stroke {
     display: inline-block;
     background-color: currentColor;
     border: none;
   }
 
-  ${strokeModifierStyles('TitleWithStroke__stroke')}
+  ${strokeModifierStyles('k-TitleWithStroke__stroke')}
 `
 
 export const TitleWithStroke = ({
@@ -51,18 +51,18 @@ export const TitleWithStroke = ({
 
   return (
     <StyledTitleWithStroke
-      className={classNames(className, `TitleWithStroke--align-${align}`, {
-        'TitleWithStroke--italic': italic,
+      className={classNames(className, `k-TitleWithStroke--align-${align}`, {
+        'k-TitleWithStroke--italic': italic,
       })}
       {...other}
     >
       <TitleComponent
-        className={`TitleWithStroke__title TitleWithStroke__title--${modifier}`}
+        className={`k-TitleWithStroke__title k-TitleWithStroke__title--${modifier}`}
       >
         {children}
       </TitleComponent>
       <span
-        className={`TitleWithStroke__stroke TitleWithStroke__stroke--${modifier}`}
+        className={`k-TitleWithStroke__stroke k-TitleWithStroke__stroke--${modifier}`}
       />
     </StyledTitleWithStroke>
   )
