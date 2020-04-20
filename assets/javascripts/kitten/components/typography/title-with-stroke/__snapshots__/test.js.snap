@@ -2,30 +2,30 @@
 
 exports[`<TitleWithStroke /> with default props matches with snapshot 1`] = `
 <div
-  className="title-with-stroke__StyledTitleWithStroke-sc-10vl00i-0 iJDXnS TitleWithStroke--align_left"
+  className="title-with-stroke__StyledTitleWithStroke-sc-10vl00i-0 bBGrlM TitleWithStroke--align-left"
 >
   <h1
-    className="TitleWithStroke__Title TitleWithStroke__Title--primary"
+    className="TitleWithStroke__title TitleWithStroke__title--primary"
   >
     Lorem ipsum dolor sit amet…
   </h1>
   <span
-    className="TitleWithStroke__Stroke TitleWithStroke__Stroke--primary"
+    className="TitleWithStroke__stroke TitleWithStroke__stroke--primary"
   />
 </div>
 `;
 
 exports[`<TitleWithStroke /> with more props matches with snapshot 1`] = `
 <div
-  className="title-with-stroke__StyledTitleWithStroke-sc-10vl00i-0 iJDXnS TitleWithStroke--align_center TitleWithStroke--italic"
+  className="title-with-stroke__StyledTitleWithStroke-sc-10vl00i-0 bBGrlM TitleWithStroke--align-center TitleWithStroke--italic"
 >
   <h4
-    className="TitleWithStroke__Title TitleWithStroke__Title--tertiary"
+    className="TitleWithStroke__title TitleWithStroke__title--tertiary"
   >
     Lorem ipsum dolor sit amet…
   </h4>
   <span
-    className="TitleWithStroke__Stroke TitleWithStroke__Stroke--tertiary"
+    className="TitleWithStroke__stroke TitleWithStroke__stroke--tertiary"
   />
 </div>
 `;

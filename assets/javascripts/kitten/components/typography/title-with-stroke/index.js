@@ -7,35 +7,35 @@ import { strokeModifierStyles } from '../../layout/horizontal-stroke/common/stro
 import classNames from 'classnames'
 
 const StyledTitleWithStroke = styled.div`
-  &.TitleWithStroke--align_left {
+  &.TitleWithStroke--align-left {
     text-align: left;
   }
-  &.TitleWithStroke--align_center {
+  &.TitleWithStroke--align-center {
     text-align: center;
   }
-  &.TitleWithStroke--align_right {
+  &.TitleWithStroke--align-right {
     text-align: right;
   }
 
-  .TitleWithStroke__Title {
+  .TitleWithStroke__title {
     margin-top: 0;
     margin-bottom: 0;
     ${TYPOGRAPHY.fontStyles.bold};
   }
 
-  ${titleModifierStyles('TitleWithStroke__Title')}
+  ${titleModifierStyles('TitleWithStroke__title')}
 
-  &.TitleWithStroke--italic .TitleWithStroke__Title {
+  &.TitleWithStroke--italic .TitleWithStroke__title {
     font-style: italic;
   }
 
-  .TitleWithStroke__Stroke {
+  .TitleWithStroke__stroke {
     display: inline-block;
     background-color: currentColor;
     border: none;
   }
 
-  ${strokeModifierStyles('TitleWithStroke__Stroke')}
+  ${strokeModifierStyles('TitleWithStroke__stroke')}
 `
 
 export const TitleWithStroke = ({
@@ -51,18 +51,18 @@ export const TitleWithStroke = ({
 
   return (
     <StyledTitleWithStroke
-      className={classNames(className, `TitleWithStroke--align_${align}`, {
+      className={classNames(className, `TitleWithStroke--align-${align}`, {
         'TitleWithStroke--italic': italic,
       })}
       {...other}
     >
       <TitleComponent
-        className={`TitleWithStroke__Title TitleWithStroke__Title--${modifier}`}
+        className={`TitleWithStroke__title TitleWithStroke__title--${modifier}`}
       >
         {children}
       </TitleComponent>
       <span
-        className={`TitleWithStroke__Stroke TitleWithStroke__Stroke--${modifier}`}
+        className={`TitleWithStroke__stroke TitleWithStroke__stroke--${modifier}`}
       />
     </StyledTitleWithStroke>
   )
