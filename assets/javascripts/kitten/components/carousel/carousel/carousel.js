@@ -216,7 +216,6 @@ class CarouselBase extends Component {
       paginationPosition,
       prevButtonText,
       nextButtonText,
-      showOtherPages,
       showPageSquares,
     } = this.props
     const { indexPageVisible, numPages } = this.state
