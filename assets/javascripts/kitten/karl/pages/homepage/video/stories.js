@@ -1,15 +1,15 @@
 import React from 'react'
 import { withKnobs } from '@storybook/addon-knobs'
-import HomepageNews from './index'
+import { Video } from './index'
 
 export default {
-  component: HomepageNews,
-  title: 'pages/homepage/HomepageNews',
+  component: Video,
+  title: 'pages/homepage/Video',
   parameters: {
-    component: HomepageNews,
+    component: Video,
   },
 }
 
 export const DefaultProps = () => (
-  <HomepageNews />
+  <Video />
 )

@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Update `Title` component and add new doc.
 - Feature: Add `RocketIcon` and `RocketCircleIcon` components.
 - Feature: Create `ProgressRing` component.
+- Doc: Add a doc for style `utilities`.
 
 ## [2.64.0] - 2020-04-07
 

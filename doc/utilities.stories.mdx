@@ -1,0 +1,39 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+
+<Meta title="Utilities" />
+
+# Links
+
+You can find source file [here](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/link/_link.scss).
+
+Use class name `k-u-link` to get a basic style (font, underline etc...)
+
+<Preview>
+  <a href="" className="k-u-link">
+    Hello link !
+  </a>
+</Preview>
+
+Add class name `k-u-link-primary1` to add `color` and `transition`
+
+<Preview>
+  <a href="" className="k-u-link k-u-link-primary1">
+    Hello link !
+  </a>
+</Preview>
+
+Or `k-u-link-background1` to get another `color` style
+
+<Preview style={{ backgroundColor: 'black' }}>
+  <a href="" className="k-u-link k-u-link-background1">
+    Hello link ! Still same style ?
+  </a>
+</Preview>
+
+You can force the style by using `k-u-link-background1--important`
+
+<Preview style={{ backgroundColor: 'black' }}>
+  <a href="" className="k-u-link k-u-link-background1--important">
+    Hello forced style !
+  </a>
+</Preview>
