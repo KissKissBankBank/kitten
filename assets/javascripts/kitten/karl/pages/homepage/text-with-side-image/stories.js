@@ -1,6 +1,7 @@
 import React from 'react'
 import { withKnobs } from '@storybook/addon-knobs'
-import TextWithSideImage from './index'
+import { TextWithSideImage } from './index'
+import { Container } from '../../../../components/grid/container'
 
 export default {
   component: TextWithSideImage,
@@ -11,5 +12,7 @@ export default {
 }
 
 export const DefaultProps = () => (
-  <TextWithSideImage />
+  <Container>
+    <TextWithSideImage />
+  </Container>
 )

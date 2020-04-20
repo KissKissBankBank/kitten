@@ -143,8 +143,7 @@ const StyledItemParagraph = styled.p`
   }
 `
 
-const TextWithSideImage = () => (
-  <Container as="section">
+export const TextWithSideImage = () => (
     <StyledGrid>
       <StyledImageCol col-l={5} offset-l={1}>
         <StyledImage>
@@ -192,7 +191,4 @@ const TextWithSideImage = () => (
         </StyledList>
       </StyledTextCol>
     </StyledGrid>
-  </Container>
 )
-
-export default TextWithSideImage
