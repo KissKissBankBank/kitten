@@ -172,8 +172,7 @@ export const TextWithSideImage = () => (
       <ul className="TextWithSideImage__list">
         <li className="TextWithSideImage__item">
           <p className="TextWithSideImage__itemTitle">
-            22 000 initiatives positives ont vu le jour <br />
-            grâce au crowdfunding.
+            22 000 initiatives positives ont vu le jour grâce au crowdfunding.
           </p>
           <p className="TextWithSideImage__itemParagraph">
             Vous avez un projet créatif, associatif ou entrepreneurial ? Toute
@@ -185,8 +184,8 @@ export const TextWithSideImage = () => (
         </li>
         <li className="TextWithSideImage__item">
           <p className="TextWithSideImage__itemTitle">
-            Des dizaines de partenaires soutiennent les projets <br />
-            des causes qui leur sont chères.
+            Des dizaines de partenaires soutiennent les projets des causes qui
+            leur sont chères.
           </p>
           <p className="TextWithSideImage__itemParagraph">
             Vous êtes une marque ou un acteur engagé ? Nous vous proposons de
@@ -197,8 +196,7 @@ export const TextWithSideImage = () => (
         </li>
         <li className="TextWithSideImage__item">
           <p className="TextWithSideImage__itemTitle">
-            Une communauté composée de 1&nbsp;829&nbsp;120 <br />
-            citoyens positifs.
+            Une communauté composée de 1&nbsp;829&nbsp;120 citoyens positifs.
           </p>
           <p className="TextWithSideImage__itemParagraph">
             Nous pensons que financer ensemble des projets a un impact positif
