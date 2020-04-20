@@ -1,165 +1,176 @@
-import React, { PureComponent, createRef } from 'react'
-import styled, { css } from 'styled-components'
-import { Text } from '../../../components/typography/text'
+import React, { useRef, useState, useEffect } from 'react'
+import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import {
   getReactElementsByType,
   getReactElementsWithoutType,
 } from '../../../helpers/react/react-elements'
+import { ScreenConfig } from '../../../constants/screen-config'
+import classNames from 'classnames'
 
-const StyledContainer = styled.div`
+const actionKeys = ['Enter', ' ']
+
+const playerButtonSize = 90
+const playerButtonXSSize = 70
+
+const StyledVideo = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 
-  ${({ poster, autoPlay }) =>
-    (poster || !autoPlay) &&
-    css`
-      cursor: pointer;
-    `}
+  &.k-Video--hasPointerCursor {
+    cursor: pointer;
+  }
+
+  .k-Video__buttonContainer {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transition: opacity ease 600ms, z-index ease 600ms;
+    transition-delay: 0s, 0s;
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0s, 600ms;
+  }
+
+  &.k-Video--videoIsPlaying .k-Video__buttonContainer {
+    opacity: 0;
+    z-index: 0;
+  }
+
+  .k-Video__button {
+    position: relative;
+    width: ${playerButtonXSSize};
+    height: ${playerButtonXSSize};
+    top: calc(50% - ${playerButtonXSSize} / 2);
+    left: calc(50% - ${playerButtonXSSize} / 2);
+    background: ${COLORS.background1};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      width: ${pxToRem(playerButtonSize)};
+      height: ${pxToRem(playerButtonSize)};
+      top: calc(50% - ${pxToRem(playerButtonSize / 2)});
+      left: calc(50% - ${pxToRem(playerButtonSize / 2)});
+    }
+  }
+
+  .k-Video__buttonPicto {
+    width: ${pxToRem(8)};
+    height: ${pxToRem(8)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      width: ${pxToRem(10)};
+      height: ${pxToRem(10)};
+    }
+  }
+
+  .k-Video__videoElement {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &.k-Video--objectFitCover .k-Video__videoElement {
+    object-position: 50% 50%;
+    object-fit: cover;
+  }
 `
 
-const StyledContainerButton = styled.div`
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  transition: opacity ease 600ms, z-index ease 600ms;
-  transition-delay: 0s, 0s;
+export const Video = ({
+  className,
+  children,
+  ariaLabel,
+  autoPlay,
+  poster,
+  src,
+  ...props
+}) => {
+  const videoElement = useRef(null)
+  const [isPlayerVisible, setPlayerVisibility] = useState(false)
 
-  ${({ isVideoPlaying }) =>
-    isVideoPlaying
-      ? css`
-          opacity: 0;
-          z-index: 0;
-        `
-      : css`
-          opacity: 1;
-          z-index: 1;
-          transition-delay: 0s, 600ms;
-        `}
-`
+  const loader = getReactElementsByType({ children, type: Video.Loader })
+  const childrenWithoutLoader = getReactElementsWithoutType({
+    children,
+    type: Video.Loader,
+  })
+  const isVideoPlaying = !autoPlay && isPlayerVisible
+  const controls = isVideoPlaying && isPlayerVisible
 
-const playerButtonSize = pxToRem(70)
+  useEffect(() => {
+    if (!videoElement.current || !videoElement.current.src) return
+    if (videoElement.current.src === src) return
 
-const StyledPlayerButton = styled.div`
-  position: relative;
-  width: ${playerButtonSize};
-  height: ${playerButtonSize};
-  background: ${COLORS.background1};
-  top: calc(50% - ${playerButtonSize} / 2);
-  left: calc(50% - ${playerButtonSize} / 2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
+    videoElement.current.src = src
+  }, [])
 
-const StyledVideo = styled.video`
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  ${({ controls }) =>
-    !controls &&
-    css`
-      object-fit: cover;
-    `}
-`
-
-export class Video extends PureComponent {
-  video = createRef()
-  state = { showPlayer: false }
-
-  handlePlayClick = () => {
-    if (this.state.showPlayer && !this.props.autoPlay) {
-      this.video.current.pause()
+  const handlePlayClick = () => {
+    if (isVideoPlaying) {
+      videoElement.current.pause()
     } else {
-      this.video.current.play()
+      videoElement.current.play()
     }
-    this.setState({ showPlayer: !this.state.showPlayer })
-    this.previewVideo.blur()
+    setPlayerVisibility(!isPlayerVisible)
   }
 
-  handleKeyDown = event => {
-    const enterKeyCode = 13
-    const spaceKeyCode = 32
-
-    if (event.keyCode === enterKeyCode || event.keyCode === spaceKeyCode) {
+  const handleKeyDown = event => {
+    if (actionKeys.includes(event.key)) {
       event.preventDefault()
-      this.handlePlayClick()
+      handlePlayClick()
     }
   }
 
-  componentDidMount() {
-    this.updateVideoSource()
-  }
+  const componentClassNames = classNames('k-Video', className, {
+    'k-Video--hasPointerCursor': !controls || !autoPlay,
+    'k-Video--objectFitCover': !controls,
+    'k-Video--videoIsPlaying': isVideoPlaying,
+  })
 
-  updateVideoSource = () => {
-    if (this.isVideoSourceMatchesSource()) return
+  return (
+    <StyledVideo
+      onClick={handlePlayClick}
+      aria-label={!autoPlay ? ariaLabel : null}
+      onKeyDown={!autoPlay ? handleKeyDown : null}
+      role={!autoPlay ? 'button' : null}
+      tabIndex={!autoPlay ? 0 : null}
+      className={componentClassNames}
+    >
+      {loader}
 
-    this.video.current.src = this.props.src
-  }
+      {!autoPlay && (
+        <div className="k-Video__buttonContainer">
+          <div className="k-Video__button">
+            <svg
+              aria-hidden
+              className="k-Video__buttonPicto"
+              viewBox="0 0 10 10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M0 0l10 5-10 5z" />
+            </svg>
+          </div>
+        </div>
+      )}
 
-  isVideoSourceMatchesSource = () => {
-    if (!this.video.current || !this.video.current.src) return
-
-    return this.video.current.src === this.props.src
-  }
-
-  a11yOnClickProps = () => {
-    if (this.props.autoPlay) return
-
-    return {
-      onClick: this.handlePlayClick,
-      onKeyDown: this.handleKeyDown,
-      role: 'button',
-      tabIndex: 0,
-    }
-  }
-
-  render() {
-    const { children, ariaLabel, autoPlay, poster, ...props } = this.props
-    const loader = getReactElementsByType({ children, type: Video.Loader })
-    const childrenWithoutLoader = getReactElementsWithoutType({
-      children,
-      type: Video.Loader,
-    })
-    const isVideoPlaying = !autoPlay && this.state.showPlayer
-    const controls = isVideoPlaying && this.state.showPlayer
-
-    return (
-      <StyledContainer
-        onClick={this.handlePlayClick}
-        isVideoPlaying={isVideoPlaying}
-        {...this.a11yOnClickProps()}
+      <video
+        ref={videoElement}
+        className="k-Video__videoElement"
+        controls={controls}
+        autoPlay={autoPlay}
+        poster={poster}
+        src={src}
+        {...props}
       >
-        {loader}
-
-        {!autoPlay && (
-          <StyledContainerButton isVideoPlaying={isVideoPlaying}>
-            <StyledPlayerButton aria-label={ariaLabel}>
-              <Text size="default" weight="regular">
-                ►
-              </Text>
-            </StyledPlayerButton>
-          </StyledContainerButton>
-        )}
-
-        <StyledVideo
-          ref={this.video}
-          controls={controls}
-          autoPlay={autoPlay}
-          poster={poster}
-          {...props}
-        >
-          {childrenWithoutLoader}
-        </StyledVideo>
-      </StyledContainer>
-    )
-  }
+        {childrenWithoutLoader}
+      </video>
+    </StyledVideo>
+  )
 }
 
 Video.Loader = styled.div`
