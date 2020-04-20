@@ -99,14 +99,17 @@ const StyledTextCol = styled(GridCol)`
   flex-direction: column;
   justify-content: center;
   order: 2;
-  padding: ${pxToRem(30)} 0;
+  padding-top: ${pxToRem(30)};
+  padding-bottom: ${pxToRem(30)};
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    padding: ${pxToRem(40)} 0;
+    padding-top: ${pxToRem(40)};
+    padding-bottom: ${pxToRem(40)};
   }
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     order: 1;
-    padding: ${pxToRem(100)} 0;
+    padding-top: ${pxToRem(100)};
+    padding-bottom: ${pxToRem(100)};
   }
 `
 const StyledImageCol = styled(GridCol)`
