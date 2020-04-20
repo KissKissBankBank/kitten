@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
@@ -74,7 +73,7 @@ export const DefaultProps = () => {
               )}
               poster={text(
                 'Poster',
-                'https://d3v4jsc54141g1.cloudfront.net/videos/maker/detailed_description_poster.jpg',
+                'https://source.unsplash.com/random/900x1600/?kitten',
               )}
             >
               <Video.Loader>
