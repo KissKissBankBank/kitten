@@ -54,9 +54,9 @@ const titleModifiers = [
 ]
 
 export const titleModifierStyles = prefix => {
-  return titleModifiers.map((key) => {
+  return titleModifiers.map(key => {
     return css`
-    ${`.${prefix}--${key.name}`} {
+      ${`.${prefix}--${key.name}`} {
         font-size: ${stepToRem(key.fontStepOnMobile)};
         line-height: 1.2;
 

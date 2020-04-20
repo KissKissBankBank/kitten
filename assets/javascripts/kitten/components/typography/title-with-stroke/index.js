@@ -51,13 +51,9 @@ export const TitleWithStroke = ({
 
   return (
     <StyledTitleWithStroke
-      className={classNames(
-        className,
-        `TitleWithStroke--align_${align}`,
-        {
-          'TitleWithStroke--italic': italic,
-        }
-      )}
+      className={classNames(className, `TitleWithStroke--align_${align}`, {
+        'TitleWithStroke--italic': italic,
+      })}
       {...other}
     >
       <TitleComponent
@@ -65,7 +61,9 @@ export const TitleWithStroke = ({
       >
         {children}
       </TitleComponent>
-      <span className={`TitleWithStroke__Stroke TitleWithStroke__Stroke--${modifier}`} />
+      <span
+        className={`TitleWithStroke__Stroke TitleWithStroke__Stroke--${modifier}`}
+      />
     </StyledTitleWithStroke>
   )
 }
@@ -98,11 +96,7 @@ TitleWithStroke.propTypes = {
   /**
     Align title and stroke.
   */
-  align: PropTypes.oneOf([
-    'left',
-    'center',
-    'right',
-  ]),
+  align: PropTypes.oneOf(['left', 'center', 'right']),
   /**
     Use `font-style: italic`.
   */

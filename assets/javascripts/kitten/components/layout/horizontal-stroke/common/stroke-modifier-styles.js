@@ -106,26 +106,26 @@ const strokeModifiers = [
       bottom: 30,
     },
     desktop: {
-      width:0,
-      height:0,
-      top:0,
-      bottom:10,
+      width: 0,
+      height: 0,
+      top: 0,
+      bottom: 10,
     },
   },
 
   {
     name: 'senary',
     mobile: {
-      width:0,
-      height:0,
-      top:0,
-      bottom:10,
+      width: 0,
+      height: 0,
+      top: 0,
+      bottom: 10,
     },
     tablet: {
-      width:0,
-      height:0,
-      top:0,
-      bottom:10,
+      width: 0,
+      height: 0,
+      top: 0,
+      bottom: 10,
     },
     desktop: {
       width: 30,
@@ -138,30 +138,30 @@ const strokeModifiers = [
   {
     name: 'septenary',
     mobile: {
-      width:0,
-      height:0,
-      top:0,
-      bottom:5,
+      width: 0,
+      height: 0,
+      top: 0,
+      bottom: 5,
     },
     tablet: {
-      width:0,
-      height:0,
-      top:0,
-      bottom:10,
+      width: 0,
+      height: 0,
+      top: 0,
+      bottom: 10,
     },
     desktop: {
-      width:0,
-      height:0,
-      top:0,
-      bottom:10,
+      width: 0,
+      height: 0,
+      top: 0,
+      bottom: 10,
     },
   },
 ]
 
 export const strokeModifierStyles = prefix => {
-  return strokeModifiers.map((key) => {
+  return strokeModifiers.map(key => {
     return css`
-    ${`.${prefix}--${key.name}`} {
+      ${`.${prefix}--${key.name}`} {
         width: ${pxToRem(key.mobile.width)};
         height: ${pxToRem(key.mobile.height)};
         margin-top: ${pxToRem(key.mobile.top)};

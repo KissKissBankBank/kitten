@@ -8,11 +8,7 @@ describe('<TitleWithStroke />', () => {
   describe('with default props', () => {
     beforeEach(() => {
       component = renderer
-        .create(
-          <TitleWithStroke
-            children="Lorem ipsum dolor sit amet…"
-          />,
-        )
+        .create(<TitleWithStroke children="Lorem ipsum dolor sit amet…" />)
         .toJSON()
     })
 
