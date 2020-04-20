@@ -20,6 +20,12 @@ const modifierOptions = {
   Septenary: 'septenary',
 }
 
+const alignOptions = {
+  Left: 'left',
+  Center: 'center',
+  Right: 'right',
+}
+
 export default {
   component: TitleWithStroke,
   title: 'Typography/TitleWithStroke',
@@ -36,7 +42,7 @@ export const DefaultProps = () => (
       <TitleWithStroke
         modifier={select("Modifier", modifierOptions, 'primary')}
         italic={boolean("Italic", false)}
-        margin={boolean("Margin", false)}
+        align={select("Align", alignOptions, 'left')}
       >
         {text('Title', "Lorem ipsum dolor sit amet")}
       </TitleWithStroke>
