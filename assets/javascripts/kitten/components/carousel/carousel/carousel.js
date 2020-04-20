@@ -92,6 +92,7 @@ class CarouselBase extends Component {
     lastButtonText: 'Last items',
     showPageSquares: false,
     loop: false,
+    showPageSquares: false,
   }
 
   static propTypes = {
@@ -119,6 +120,7 @@ class CarouselBase extends Component {
     lastButtonText: PropTypes.string,
     showPageSquares: PropTypes.bool,
     loop: PropTypes.bool,
+    showPageSquares: PropTypes.bool,
   }
 
   state = {
@@ -240,6 +242,7 @@ class CarouselBase extends Component {
       lastButtonText,
       showPageSquares,
       loop,
+      showPageSquares,
     } = this.props
     const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
