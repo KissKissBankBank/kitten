@@ -10,6 +10,7 @@ import { ProgressRing } from '../../../../../components/meters/progress-ring'
 import COLORS from '../../../../../constants/colors-config'
 import { CheckedCircleIcon } from '../../../../../components/icons/checked-circle-icon'
 import { RocketCircleIcon } from '../../../../../components/icons/rocket-circle-icon'
+import { mediaQueries } from '../../../../../hoc/media-queries'
 
 const StyledCard = styled.div`
   margin-bottom: ${pxToRem(30)};
@@ -38,12 +39,33 @@ const StyledCard = styled.div`
 
       :last-child {
         margin-bottom: 0;
-      }
+
+        @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+          margin-bottom: ${pxToRem(10)};
+        }
+
+        @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+          margin-bottom: ${pxToRem(20)};
+        }
     `}
 `
 
 const StyledImageContainer = styled(GridCol)`
   padding: 0;
+
+  ${({ horizontalCard }) =>
+    horizontalCard &&
+    css`
+      padding-right: ${pxToRem(7.5)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+        padding-right: ${pxToRem(10)};
+      }
+
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        padding-right: ${pxToRem(15)};
+      }
+    `}
 `
 
 const StyledDescription = styled(GridCol)`
@@ -52,14 +74,14 @@ const StyledDescription = styled(GridCol)`
     css`
       align-self: center;
       padding-right: 0;
-      padding-left: ${pxToRem(15)};
+      padding-left: ${pxToRem(7.5)};
 
       @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-        padding-left: ${pxToRem(20)};
+        padding-left: ${pxToRem(10)};
       }
 
       @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        padding-left: ${pxToRem(30)};
+        padding-left: ${pxToRem(15)};
       }
     `}
 `
@@ -167,22 +189,26 @@ const OvertimeProgressIcon = () => (
   <RocketCircleIcon aria-hidden />
 )
 
-const Card = ({
+const CardBase = ({
   imageProps,
   title,
   text,
   horizontalCard,
   overtimeProgress,
   successProgress,
+  viewportIsXSOrLess,
   ...props
 }) => {
   return (
     <StyledCard horizontalCard={horizontalCard} {...props}>
-      <StyledImageContainer col={horizontalCard ? 5 : 0}>
+      <StyledImageContainer
+        col={horizontalCard ? 6 : 0}
+        horizontalCard={horizontalCard}
+      >
         <StyledImage {...imageProps} horizontalCard={horizontalCard} />
       </StyledImageContainer>
       <StyledDescription
-        col={horizontalCard ? 7 : 0}
+        col={horizontalCard ? 6 : 0}
         horizontalCard={horizontalCard}
       >
       {overtimeProgress && (
@@ -204,12 +230,12 @@ const Card = ({
       )}
 
         {!overtimeProgress && !successProgress && (
-          <StyledProgress>
+          <StyledProgress style={{ marginLeft: -2 }}>
             <ProgressRing
               value={75}
-              width={24}
+              width={viewportIsXSOrLess ? 24 : 28}
               strokeWidth={4}
-              color={COLORS.primary2}
+              color={COLORS.primary1}
             />
             <StyledProgressText size="micro" color="font1" weight="regular">
               Financé à 50%
@@ -238,7 +264,7 @@ const Card = ({
   )
 }
 
-Card.propTypes = {
+CardBase.propTypes = {
   imageProps: PropTypes.shape({
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
@@ -250,8 +276,10 @@ Card.propTypes = {
   successProgress: PropTypes.bool,
 }
 
-Card.defaultProps = {
+CardBase.defaultProps = {
   horizontalCard: false,
 }
 
-export default Card
+export const Card = mediaQueries(CardBase, {
+  viewportIsXSOrLess: true,
+})

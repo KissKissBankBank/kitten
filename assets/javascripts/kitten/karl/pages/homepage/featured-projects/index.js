@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import Card from './components/card'
+import { Card } from './components/card'
 import { Title } from '../../../../components/typography/title'
 import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
-import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { mediaQueries } from '../../../../hoc/media-queries'
@@ -15,18 +14,6 @@ const StyledTitle = styled(Title)`
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     font-size: ${stepToRem(0)};
-  }
-`
-
-const StyledPaddingRight = styled(GridCol)`
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    padding-right: ${pxToRem(20)};
-  }
-`
-
-const StyledPaddingLeft = styled(GridCol)`
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    padding-left: ${pxToRem(20)};
   }
 `
 
@@ -86,7 +73,7 @@ const selectionData = [
 
 const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
   <Grid>
-    <StyledPaddingRight col-l={6}>
+    <GridCol col-l={6}>
       <StyledTitle
         tag="h2"
         className="k-u-margin-bottom-singleHalf@s-up
@@ -102,9 +89,9 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
           alt: '',
         }}
       />
-    </StyledPaddingRight>
+    </GridCol>
 
-    <StyledPaddingLeft col-l={6}>
+    <GridCol col-l={6}>
       <StyledTitle
         tag="h2"
         className="k-u-margin-bottom-singleHalf@s-up
@@ -154,7 +141,7 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
           </div>
         ))}
       </Carousel>
-    </StyledPaddingLeft>
+    </GridCol>
   </Grid>
 )
 
