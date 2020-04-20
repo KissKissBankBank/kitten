@@ -2,21 +2,21 @@
 
 exports[`<Video /> by default matches with snapshot 1`] = `
 <div
-  className="video__StyledContainer-lqao0j-0 dySrLq Video--hasPointerCursor Video--objectFitCover"
+  className="video__StyledVideo-lqao0j-0 kSZbVh k-Video k-Video--hasPointerCursor k-Video--objectFitCover"
   onClick={[Function]}
   onKeyDown={[Function]}
   role="button"
   tabIndex={0}
 >
   <div
-    className="Video__buttonContainer"
+    className="k-Video__buttonContainer"
   >
     <div
-      className="Video__button"
+      className="k-Video__button"
     >
       <svg
         aria-hidden={true}
-        className="Video__buttonPicto"
+        className="k-Video__buttonPicto"
         viewBox="0 0 10 10"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -27,7 +27,7 @@ exports[`<Video /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <video
-    className="Video__videoElement"
+    className="k-Video__videoElement"
     controls={false}
   />
 </div>
@@ -35,7 +35,7 @@ exports[`<Video /> by default matches with snapshot 1`] = `
 
 exports[`<Video /> with some props matches with snapshot 1`] = `
 <div
-  className="video__StyledContainer-lqao0j-0 dySrLq Video--hasPointerCursor Video--objectFitCover"
+  className="video__StyledVideo-lqao0j-0 kSZbVh k-Video k-Video--hasPointerCursor k-Video--objectFitCover"
   onClick={[Function]}
   onKeyDown={[Function]}
   role="button"
@@ -86,14 +86,14 @@ exports[`<Video /> with some props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="Video__buttonContainer"
+    className="k-Video__buttonContainer"
   >
     <div
-      className="Video__button"
+      className="k-Video__button"
     >
       <svg
         aria-hidden={true}
-        className="Video__buttonPicto"
+        className="k-Video__buttonPicto"
         viewBox="0 0 10 10"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -105,7 +105,7 @@ exports[`<Video /> with some props matches with snapshot 1`] = `
   </div>
   <video
     autoPlay={false}
-    className="Video__videoElement"
+    className="k-Video__videoElement"
     controls={false}
     loop={true}
     muted={true}
