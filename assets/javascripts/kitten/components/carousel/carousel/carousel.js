@@ -73,6 +73,7 @@ class CarouselBase extends Component {
     },
     prevButtonText:'Previous items',
     nextButtonText:'Next items',
+    tinyButton: false,
   }
 
   static propTypes = {
@@ -96,6 +97,7 @@ class CarouselBase extends Component {
     }),
     prevButtonText: PropTypes.string,
     nextButtonText: PropTypes.string,
+    tinyButton: PropTypes.bool,
   }
 
   state = {
@@ -207,6 +209,7 @@ class CarouselBase extends Component {
       paginationPosition,
       prevButtonText,
       nextButtonText,
+      tinyButton,
     } = this.props
     const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -245,6 +248,7 @@ class CarouselBase extends Component {
         <Button
           icon
           modifier="beryllium"
+          tiny={tinyButton}
           onClick={this.goPrevPage}
           disabled={indexPageVisible < 1 || numPages < 1}
         >
@@ -255,6 +259,7 @@ class CarouselBase extends Component {
         <Button
           icon
           modifier="beryllium"
+          tiny={tinyButton}
           onClick={this.goNextPage}
           disabled={indexPageVisible >= numPages - 1}
         >
