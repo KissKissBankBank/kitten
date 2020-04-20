@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import styled, { css } from 'styled-components'
-import { Text } from '../../../components/typography/text'
+import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import {
@@ -10,20 +9,22 @@ import {
 import { ScreenConfig } from '../../../constants/screen-config'
 import classNames from 'classnames'
 
+const actionKeys = ['Enter', ' ']
+
 const playerButtonSize = 90
 const playerButtonXSSize = 70
 
-const StyledContainer = styled.div`
+const StyledVideo = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
 
-  &.Video--hasPointerCursor {
+  &.k-Video--hasPointerCursor {
     cursor: pointer;
   }
 
-  .Video__buttonContainer {
+  .k-Video__buttonContainer {
     top: 0;
     right: 0;
     bottom: 0;
@@ -36,12 +37,12 @@ const StyledContainer = styled.div`
     transition-delay: 0s, 600ms;
   }
 
-  &.Video--videoIsPlaying .Video__buttonContainer {
+  &.k-Video--videoIsPlaying .k-Video__buttonContainer {
     opacity: 0;
     z-index: 0;
   }
 
-  .Video__button {
+  .k-Video__button {
     position: relative;
     width: ${playerButtonXSSize};
     height: ${playerButtonXSSize};
@@ -60,55 +61,39 @@ const StyledContainer = styled.div`
     }
   }
 
-  .Video__buttonPicto {
+  .k-Video__buttonPicto {
     width: ${pxToRem(8)};
     height: ${pxToRem(8)};
+
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       width: ${pxToRem(10)};
       height: ${pxToRem(10)};
     }
   }
 
-  .Video__videoElement {
+  .k-Video__videoElement {
     position: relative;
     width: 100%;
     height: 100%;
   }
-  &.Video--objectFitCover .Video__videoElement {
+
+  &.k-Video--objectFitCover .k-Video__videoElement {
     object-position: 50% 50%;
     object-fit: cover;
   }
 `
 
-export const Video = ({ className, children, ariaLabel, autoPlay, poster, src, ...props }) => {
+export const Video = ({
+  className,
+  children,
+  ariaLabel,
+  autoPlay,
+  poster,
+  src,
+  ...props
+}) => {
   const videoElement = useRef(null)
   const [isPlayerVisible, setPlayerVisibility] = useState(false)
-
-  useEffect(() => {
-    if(!videoElement.current || !videoElement.current.src) return
-    if (videoElement.current.src === src) return
-
-    videoElement.current.src = src
-  }, [])
-
-  const handlePlayClick = () => {
-    if (isPlayerVisible && !autoPlay) {
-      videoElement.current.pause()
-    } else {
-      videoElement.current.play()
-    }
-    setPlayerVisibility(!isPlayerVisible)
-  }
-
-  const handleKeyDown = event => {
-    const actionKeys = ['Enter', ' ']
-
-    if (actionKeys.includes(event.key)) {
-      event.preventDefault()
-      handlePlayClick()
-    }
-  }
-
 
   const loader = getReactElementsByType({ children, type: Video.Loader })
   const childrenWithoutLoader = getReactElementsWithoutType({
@@ -118,34 +103,56 @@ export const Video = ({ className, children, ariaLabel, autoPlay, poster, src, .
   const isVideoPlaying = !autoPlay && isPlayerVisible
   const controls = isVideoPlaying && isPlayerVisible
 
+  useEffect(() => {
+    if (!videoElement.current || !videoElement.current.src) return
+    if (videoElement.current.src === src) return
+
+    videoElement.current.src = src
+  }, [])
+
+  const handlePlayClick = () => {
+    if (isVideoPlaying) {
+      videoElement.current.pause()
+    } else {
+      videoElement.current.play()
+    }
+    setPlayerVisibility(!isPlayerVisible)
+  }
+
+  const handleKeyDown = event => {
+    if (actionKeys.includes(event.key)) {
+      event.preventDefault()
+      handlePlayClick()
+    }
+  }
+
+  const componentClassNames = classNames('k-Video', className, {
+    'k-Video--hasPointerCursor': !controls || !autoPlay,
+    'k-Video--objectFitCover': !controls,
+    'k-Video--videoIsPlaying': isVideoPlaying,
+  })
+
   return (
-    <StyledContainer
+    <StyledVideo
       onClick={handlePlayClick}
       aria-label={!autoPlay ? ariaLabel : null}
       onKeyDown={!autoPlay ? handleKeyDown : null}
       role={!autoPlay ? 'button' : null}
       tabIndex={!autoPlay ? 0 : null}
-      className={classNames(
-        className,
-        {
-          'Video--hasPointerCursor': !controls || !autoPlay,
-          'Video--objectFitCover': !controls,
-          'Video--videoIsPlaying': isVideoPlaying,
-        }
-      )}
+      className={componentClassNames}
     >
       {loader}
 
       {!autoPlay && (
-        <div className="Video__buttonContainer">
-          <div className="Video__button">
+        <div className="k-Video__buttonContainer">
+          <div className="k-Video__button">
             <svg
               aria-hidden
-              className="Video__buttonPicto"
+              className="k-Video__buttonPicto"
               viewBox="0 0 10 10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M0 0l10 5-10 5z"/>
+              <path d="M0 0l10 5-10 5z" />
             </svg>
           </div>
         </div>
@@ -153,7 +160,7 @@ export const Video = ({ className, children, ariaLabel, autoPlay, poster, src, .
 
       <video
         ref={videoElement}
-        className="Video__videoElement"
+        className="k-Video__videoElement"
         controls={controls}
         autoPlay={autoPlay}
         poster={poster}
@@ -162,7 +169,7 @@ export const Video = ({ className, children, ariaLabel, autoPlay, poster, src, .
       >
         {childrenWithoutLoader}
       </video>
-    </StyledContainer>
+    </StyledVideo>
   )
 }
 

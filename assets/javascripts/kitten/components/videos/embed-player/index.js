@@ -6,7 +6,9 @@ import { parseHtml } from '../../../helpers/utils/parser'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import classNames from 'classnames'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+
+const actionKeys = ['Enter', ' ']
 
 const playerButtonSize = 90
 const playerButtonXSSize = 70
@@ -17,19 +19,19 @@ const StyledEmbedPlayer = styled.div`
   width: 100%;
   background-color: ${COLORS.font1};
 
-  .EmbedPlayer__thumbnail {
+  .k-EmbedPlayer__thumbnail {
     display: block;
     width: 100%;
   }
 
-  .EmbedPlayer__embededPlayer {
+  .k-EmbedPlayer__embededPlayer {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
   }
 
-  .EmbedPlayer__button {
+  .k-EmbedPlayer__button {
     width: ${pxToRem(playerButtonXSSize)};
     height: ${pxToRem(playerButtonXSSize)};
     top: calc(50% - ${pxToRem(playerButtonXSSize / 2)});
@@ -49,7 +51,7 @@ const StyledEmbedPlayer = styled.div`
     }
   }
 
-  .EmbedPlayer__buttonPicto {
+  .k-EmbedPlayer__buttonPicto {
     width: ${pxToRem(8)};
     height: ${pxToRem(8)};
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -58,17 +60,17 @@ const StyledEmbedPlayer = styled.div`
     }
   }
 
-  .EmbedPlayer__playerPreview {
+  .k-EmbedPlayer__playerPreview {
     position: relative;
     transition: opacity ease 600ms;
     z-index: 1;
     opacity: 1;
   }
-  &.player--videoIsPlaying .EmbedPlayer__playerPreview {
+  &.k-EmbedPlayer--videoIsPlaying .k-EmbedPlayer__playerPreview {
     opacity: 0;
     z-index: 0;
   }
-  &.player--cursorPointer .EmbedPlayer__playerPreview {
+  &.k-EmbedPlayer--cursorPointer .k-EmbedPlayer__playerPreview {
     cursor: pointer;
   }
 `
@@ -84,6 +86,8 @@ export const EmbedPlayer = ({
 }) => {
   const [isPlayerVisible, setPlayerVisibility] = useState(false)
   const previewVideo = useRef(null)
+  const validRatio = parseInt(ratio, 10)
+  const hasIframeHtml = !!iframeHtml
 
   const handleClick = () => {
     setPlayerVisibility(true)
@@ -92,7 +96,6 @@ export const EmbedPlayer = ({
 
   const handleKeyPress = event => {
     event.preventDefault()
-    const actionKeys = ['Enter', ' ']
 
     if (actionKeys.includes(event.key)) handleClick()
   }
@@ -103,8 +106,10 @@ export const EmbedPlayer = ({
     handleKeyPress(event)
   }
 
-  const validRatio = parseInt(ratio, 10)
-  const hasIframeHtml = !!iframeHtml
+  const componentClassNames = classNames('k-EmbedPlayer', className, {
+    'k-EmbedPlayer--videoIsPlaying': hasIframeHtml && isPlayerVisible,
+    'k-EmbedPlayer--cursorPointer': hasIframeHtml,
+  })
 
   return (
     <StyledEmbedPlayer
@@ -117,17 +122,14 @@ export const EmbedPlayer = ({
       role={hasIframeHtml ? 'button' : null}
       tabIndex={hasIframeHtml ? 0 : null}
       aria-label={hasIframeHtml ? playButtonLabel : null}
-      className={classNames(className, {
-        'player--videoIsPlaying': hasIframeHtml && isPlayerVisible,
-        'player--cursorPointer': hasIframeHtml,
-      })}
+      className={componentClassNames}
     >
-      <div className="EmbedPlayer__playerPreview">
+      <div className="k-EmbedPlayer__playerPreview">
         {hasIframeHtml && (
-          <div className="EmbedPlayer__button">
+          <div className="k-EmbedPlayer__button">
             <svg
               aria-hidden
-              className="EmbedPlayer__buttonPicto"
+              className="k-EmbedPlayer__buttonPicto"
               viewBox="0 0 10 10"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -139,7 +141,7 @@ export const EmbedPlayer = ({
         <ResponsiveIframeContainer ratio={validRatio}>
           <img
             {...thumbnail}
-            className={`EmbedPlayer__thumbnail ${thumbnail.className || ''}`}
+            className={`k-EmbedPlayer__thumbnail ${thumbnail.className || ''}`}
           />
         </ResponsiveIframeContainer>
 
@@ -147,7 +149,7 @@ export const EmbedPlayer = ({
       </div>
 
       {hasIframeHtml && isPlayerVisible && (
-        <div className="EmbedPlayer__embededPlayer">
+        <div className="k-EmbedPlayer__embededPlayer">
           <ResponsiveIframeContainer ratio={validRatio}>
             {parseHtml(iframeHtml)}
           </ResponsiveIframeContainer>
