@@ -3,6 +3,25 @@ import { CrowdfundingCard } from '../../../../components/cards/crowdfunding-card
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
 import { Container } from '../../../../components/grid/container'
 import { mediaQueries } from '../../../../hoc/media-queries'
+import { Text } from '../../../../components/typography/text'
+
+const InfoComponent = () => (
+  <>
+    <span className="k-u-hidden@s-up">
+      <Text weight="light">J -</Text>{' '}
+      <Text tag="strong" weight="bold">
+        7
+      </Text>
+    </span>
+    <span className="k-u-hidden@xs-down">
+      <Text tag="strong" weight="bold">
+        7 jours
+      </Text>
+      <br />
+      <span>restants</span>
+    </span>
+  </>
+)
 
 const data = [
   {
@@ -87,9 +106,10 @@ const PopularProjectsBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => {
             }}
             cardTitle={item.title}
             cardSubTitle="Custom subtitle"
-            titlesMinHeight
             progress="84"
-            state="Custom state"
+            info1={<InfoComponent />}
+            info2={<InfoComponent />}
+            info3={<InfoComponent />}
           />
         ))}
       </Carousel>
