@@ -84,7 +84,7 @@ const selectionData = [
 ]
 
 
-const InTheNewsBase = ({ viewportIsXSOrLess })=> (
+const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
   <Grid>
     <StyledPaddingRight col-l={6}>
       <StyledTitle
@@ -158,6 +158,6 @@ const InTheNewsBase = ({ viewportIsXSOrLess })=> (
   </Grid>
 )
 
-export const InTheNews = mediaQueries(InTheNewsBase, {
+export const FeaturedProjects = mediaQueries(FeaturedProjectsBase, {
   viewportIsXSOrLess: true,
 })

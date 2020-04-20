@@ -12,6 +12,7 @@ import Video from './video'
 import { NewsBlock } from './news/components/news-block'
 import DialogWithPictureBorder from './dialog-with-picture-border'
 import { InTheNews } from './in-the-news'
+import { FeaturedProjects } from './featured-projects'
 import { HomepageCarousel } from './carousel'
 
 const StyledHomePage = styled.div`
@@ -115,7 +116,7 @@ const HomePage = () => (
     </Container>
 
     <Container as="section" className="Homepage__Section">
-      <InTheNews />
+      <FeaturedProjects />
     </Container>
 
     <Container as="section" className="Homepage__Section">
