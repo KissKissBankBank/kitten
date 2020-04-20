@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `tinyButtons` props on `Carousel`.
+- Feature: Add `tinyButtons` prop on `Carousel`.
 - Feature: Create `EngagementCardWithImage` component.
 - Fix: Adjust `button` size to follow guidelines on Mobile.
 - Feature: Update `Title` component and add new doc.
