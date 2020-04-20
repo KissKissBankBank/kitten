@@ -17,13 +17,17 @@ const StyledCard = styled.div`
 `
 
 const StyledImage = styled.img`
-  width: 100%;
+  height: ${({ imageHeight }) => pxToRem(imageHeight)};
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 
   :hover,
   :focus {
-    transform: scale(1.1);
+    transform: scale(1.05);
+  }
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+     width: 100%;
   }
 `
 
@@ -42,6 +46,7 @@ export const EngagementCardWithImage = ({
   isActive,
   href,
   as,
+  imageHeight,
   ...others
 }) => {
   return (
@@ -52,9 +57,19 @@ export const EngagementCardWithImage = ({
         isActive={isActive}
       >
       <StyledCard>
-        <StyledImage src={backgroundImage} />
+        <StyledImage
+          src={backgroundImage}
+          alt=""
+          imageHeight={imageHeight}
+        />
       </StyledCard>
-      <StyledText tag="p" size="micro" weight="regular" color="font1" decoration="none">
+      <StyledText
+        size="micro"
+        weight="regular"
+        color="font1"
+        decoration="none"
+        lineHeight="normal"
+      >
         {children}
       </StyledText>
     </StyledContainer>
@@ -65,9 +80,11 @@ EngagementCardWithImage.propTypes = {
   href: PropTypes.string,
   backgroundImage: PropTypes.string.isRequired,
   isActive: PropTypes.bool,
+  imageHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
 EngagementCardWithImage.defaultProps = {
   href: '',
   isActive: false,
+  imageHeight: '',
 }

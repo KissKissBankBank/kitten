@@ -220,7 +220,7 @@ storiesOf('Carousel/EngagementsCarousel', module)
       <StyledContainer fullWidthBelowScreenSize="S">
         <Carousel
           itemMinWidth={110}
-          hidePagination
+          hidePaginationOnMobile
           baseItemMarginBetween={20}
           paginationPosition={{ default: 'right' }}
           showOtherPages={boolean('Show other pages?', false)}
