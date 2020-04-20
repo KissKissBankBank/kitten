@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Doc: Add a doc for style `utilities`.
 - Feature: Add pagination position `bottom-left` and `bottom-right` on Carousel.
 - Feature: Add pagination squares via `showPageSquares` prop on Carousel.
+- Feature: Add Loop feature and `loop` prop on Carousel.
 
 ## [2.64.0] - 2020-04-07
 
