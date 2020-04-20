@@ -135,6 +135,11 @@
     "eslint": "eslint --fix assets/javascripts/**",
     "prettier": "find ./assets/javascripts -regex '.*.js' | xargs prettier --config prettier.config.js --write"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
     "assets/**/*.js": [
       "eslint --fix ",
