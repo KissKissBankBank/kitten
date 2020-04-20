@@ -12,7 +12,7 @@ import { Video } from './video'
 import { NewsBlock } from './news/components/news-block'
 import { DialogWithPictureBorder } from './dialog-with-picture-border'
 import { FeaturedProjects } from './featured-projects'
-import { HomepageCarousel } from './carousel'
+import { HomepageCarousel } from './carousel'
 
 const StyledHomePage = styled.div`
   section.Homepage__Section {
@@ -140,8 +140,7 @@ const HomePage = () => (
               'https://source.unsplash.com/random/300x400?kitten,1',
             imageUrlLandscape:
               'https://source.unsplash.com/random/600x300?kitten,1',
-            url:
-              '#'
+            url: '#',
           },
           {
             title: 'Cras mattis consectetur purus sit amet fermentum.',
@@ -151,8 +150,7 @@ const HomePage = () => (
               'https://source.unsplash.com/random/300x400?kitten,2',
             imageUrlLandscape:
               'https://source.unsplash.com/random/600x300?kitten,2',
-            url:
-              '#'
+            url: '#',
           },
           {
             title: 'Donec sed odio dui.',
@@ -162,8 +160,7 @@ const HomePage = () => (
               'https://source.unsplash.com/random/300x400?kitten,3',
             imageUrlLandscape:
               'https://source.unsplash.com/random/600x300?kitten,3',
-            url:
-              '#'
+            url: '#',
           },
           {
             title:
@@ -174,8 +171,7 @@ const HomePage = () => (
               'https://source.unsplash.com/random/300x400?kitten,4',
             imageUrlLandscape:
               'https://source.unsplash.com/random/600x300?kitten,4',
-            url:
-              '#'
+            url: '#',
           },
         ]}
       />
@@ -193,11 +189,11 @@ const HomePage = () => (
             </StyledSectionTitle>
           </GridCol>
           <GridCol col={4}>
-            <StyledCarouselLink
-              href="#"
-            >
+            <StyledCarouselLink href="#">
               <span className="k-u-hidden@xs-down">Voir tous les projets</span>
-              <span className="k-u-hidden@s-up" aria-hidden>Tous les projets</span>
+              <span className="k-u-hidden@s-up" aria-hidden>
+                Tous les projets
+              </span>
               <ArrowIcon />
             </StyledCarouselLink>
           </GridCol>
@@ -208,11 +204,11 @@ const HomePage = () => (
     </section>
 
     <Container as="section" className="Homepage__Section">
-      <Video className="Homepage__Section"/>
+      <Video className="Homepage__Section" />
     </Container>
 
     <section className="Homepage__Section Homepage__LastSection">
-      <DialogWithPictureBorder className="Homepage__Section"/>
+      <DialogWithPictureBorder className="Homepage__Section" />
     </section>
   </StyledHomePage>
 )

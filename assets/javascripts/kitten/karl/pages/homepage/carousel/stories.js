@@ -1,5 +1,4 @@
 import React from 'react'
-import { withKnobs } from '@storybook/addon-knobs'
 import { HomepageCarousel } from './index'
 
 export default {
@@ -10,7 +9,4 @@ export default {
   },
 }
 
-export const DefaultProps = () => (
-  <HomepageCarousel />
-)
-
+export const DefaultProps = () => <HomepageCarousel />

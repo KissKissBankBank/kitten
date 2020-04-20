@@ -58,46 +58,47 @@ const HomepageCarouselBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => {
   }
 
   return (
-  <Container fullWidthBelowScreenSize="M">
-    <Carousel
-      itemMinWidth={viewportIsSOrLess ? 150 : 280}
-      baseItemMarginBetween={padding}
-      paginationPosition={{
-        default: 'bottom-right',
-      }}
-      hidePagination={viewportIsMOrLess ? true : false}
-      showOtherPages={viewportIsMOrLess ? true : false}
-      showPageSquares={viewportIsMOrLess ? false : true}
-    >
-      {data.map(item => (
-        <CrowdfundingCard
-          key={`CrowdfundingCard${item.title}`}
-          href="#"
-          imageProps={{
-            src: item.imageSrc,
-            alt: 'Image alt',
-            backgroundColor: '#d8d8d8',
-            color: '#333',
-          }}
-          avatarProps={{
-            src: item.thumbSrc,
-            alt: 'Avatar alt',
-          }}
-          ownerTitle="Owner title"
-          ownerDescription="Owner description"
-          titleProps={{
-            tag: 'h3',
-          }}
-          cardTitle={item.title}
-          cardSubTitle="Custom subtitle"
-          titlesMinHeight
-          progress="84"
-          state="Custom state"
-        />
-      ))}
-    </Carousel>
-  </Container>
-)}
+    <Container fullWidthBelowScreenSize="M">
+      <Carousel
+        itemMinWidth={viewportIsSOrLess ? 150 : 280}
+        baseItemMarginBetween={padding}
+        paginationPosition={{
+          default: 'bottom-right',
+        }}
+        hidePagination={viewportIsMOrLess ? true : false}
+        showOtherPages={viewportIsMOrLess ? true : false}
+        showPageSquares={viewportIsMOrLess ? false : true}
+      >
+        {data.map(item => (
+          <CrowdfundingCard
+            key={`CrowdfundingCard${item.title}`}
+            href="#"
+            imageProps={{
+              src: item.imageSrc,
+              alt: 'Image alt',
+              backgroundColor: '#d8d8d8',
+              color: '#333',
+            }}
+            avatarProps={{
+              src: item.thumbSrc,
+              alt: 'Avatar alt',
+            }}
+            ownerTitle="Owner title"
+            ownerDescription="Owner description"
+            titleProps={{
+              tag: 'h3',
+            }}
+            cardTitle={item.title}
+            cardSubTitle="Custom subtitle"
+            titlesMinHeight
+            progress="84"
+            state="Custom state"
+          />
+        ))}
+      </Carousel>
+    </Container>
+  )
+}
 
 export const HomepageCarousel = mediaQueries(HomepageCarouselBase, {
   viewportIsMOrLess: true,
