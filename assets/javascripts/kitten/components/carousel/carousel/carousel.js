@@ -91,6 +91,7 @@ class CarouselBase extends Component {
     firstButtonText: 'First items',
     lastButtonText: 'Last items',
     showPageSquares: false,
+    tinyButtons: false,
     loop: false,
   }
 
@@ -115,6 +116,7 @@ class CarouselBase extends Component {
     }),
     prevButtonText: PropTypes.string,
     nextButtonText: PropTypes.string,
+    tinyButtons: PropTypes.bool,
     firstButtonText: PropTypes.string,
     lastButtonText: PropTypes.string,
     showPageSquares: PropTypes.bool,
@@ -236,6 +238,7 @@ class CarouselBase extends Component {
       paginationPosition,
       prevButtonText,
       nextButtonText,
+      tinyButtons,
       firstButtonText,
       lastButtonText,
       showPageSquares,
@@ -279,6 +282,7 @@ class CarouselBase extends Component {
           <PageButton
             icon
             modifier="beryllium"
+            tiny={tinyButtons}
             onClick={this.goPrevPage}
             disabled={!loop && (indexPageVisible < 1 || numPages < 1)}
           >
@@ -293,6 +297,7 @@ class CarouselBase extends Component {
           <PageButton
             icon
             modifier="beryllium"
+            tiny={tinyButtons}
             onClick={this.goNextPage}
             disabled={!loop && indexPageVisible >= numPages - 1}
           >
