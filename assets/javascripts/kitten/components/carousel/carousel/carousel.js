@@ -48,6 +48,14 @@ export const checkPage = (numPages, newPage) => {
   return newPage
 }
 
+export const checkPageLoop = (numPages, newPage) => {
+  if (numPages < 1) return 0
+  if (newPage < 0) return numPages - 1
+  if (newPage >= numPages) return 0
+
+  return newPage
+}
+
 const getMarginBetweenAccordingToViewport = (
   baseItemMarginBetween,
   viewportIsXSOrLess,
@@ -80,7 +88,10 @@ class CarouselBase extends Component {
     },
     prevButtonText: 'Previous items',
     nextButtonText: 'Next items',
+    firstButtonText: 'First items',
+    lastButtonText: 'Last items',
     showPageSquares: false,
+    loop: false,
   }
 
   static propTypes = {
@@ -104,7 +115,10 @@ class CarouselBase extends Component {
     }),
     prevButtonText: PropTypes.string,
     nextButtonText: PropTypes.string,
+    firstButtonText: PropTypes.string,
+    lastButtonText: PropTypes.string,
     showPageSquares: PropTypes.bool,
+    loop: PropTypes.bool,
   }
 
   state = {
@@ -156,14 +170,20 @@ class CarouselBase extends Component {
   }
 
   goNextPage = () => {
+    const { loop } = this.props
     const { numPages, indexPageVisible } = this.state
-    const newPage = checkPage(numPages, indexPageVisible + 1)
+    const newPage = loop
+      ? checkPageLoop(numPages, indexPageVisible + 1)
+      : checkPage(numPages, indexPageVisible + 1)
     this.setState({ indexPageVisible: newPage })
   }
 
   goPrevPage = () => {
+    const { loop } = this.props
     const { numPages, indexPageVisible } = this.state
-    const newPage = checkPage(numPages, indexPageVisible - 1)
+    const newPage = loop
+      ? checkPageLoop(numPages, indexPageVisible - 1)
+      : checkPage(numPages, indexPageVisible - 1)
     this.setState({ indexPageVisible: newPage })
   }
 
@@ -216,7 +236,10 @@ class CarouselBase extends Component {
       paginationPosition,
       prevButtonText,
       nextButtonText,
+      firstButtonText,
+      lastButtonText,
       showPageSquares,
+      loop,
     } = this.props
     const { indexPageVisible, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -257,9 +280,13 @@ class CarouselBase extends Component {
             icon
             modifier="beryllium"
             onClick={this.goPrevPage}
-            disabled={indexPageVisible < 1 || numPages < 1}
+            disabled={!loop && (indexPageVisible < 1 || numPages < 1)}
           >
-            <VisuallyHidden>{prevButtonText}</VisuallyHidden>
+            <VisuallyHidden>
+              {loop && (indexPageVisible < 1 || numPages < 1)
+                ? lastButtonText
+                : prevButtonText}
+            </VisuallyHidden>
             <ArrowIcon version="solid" direction="left" aria-hidden />
           </PageButton>
 
@@ -267,9 +294,13 @@ class CarouselBase extends Component {
             icon
             modifier="beryllium"
             onClick={this.goNextPage}
-            disabled={indexPageVisible >= numPages - 1}
+            disabled={!loop && indexPageVisible >= numPages - 1}
           >
-            <VisuallyHidden>{nextButtonText}</VisuallyHidden>
+            <VisuallyHidden>
+              {loop && indexPageVisible >= numPages - 1
+                ? firstButtonText
+                : nextButtonText}
+            </VisuallyHidden>
             <ArrowIcon version="solid" direction="right" aria-hidden />
           </PageButton>
         </PaginationButtons>

@@ -63,6 +63,36 @@ const data = [
     imageSrc: 'http://placekitten.com/504/304',
     thumbSrc: 'http://placekitten.com/84/84',
   },
+  {
+    title: 'Item F',
+    imageSrc: 'http://placekitten.com/502/302',
+    thumbSrc: 'http://placekitten.com/82/82',
+  },
+  {
+    title: 'Item G',
+    imageSrc: 'http://placekitten.com/503/303',
+    thumbSrc: 'http://placekitten.com/83/83',
+  },
+  {
+    title: 'Item H',
+    imageSrc: 'http://placekitten.com/504/304',
+    thumbSrc: 'http://placekitten.com/84/84',
+  },
+  {
+    title: 'Item I',
+    imageSrc: 'http://placekitten.com/502/302',
+    thumbSrc: 'http://placekitten.com/82/82',
+  },
+  {
+    title: 'Item J',
+    imageSrc: 'http://placekitten.com/503/303',
+    thumbSrc: 'http://placekitten.com/83/83',
+  },
+  {
+    title: 'Item K',
+    imageSrc: 'http://placekitten.com/504/304',
+    thumbSrc: 'http://placekitten.com/84/84',
+  },
 ]
 
 const paginationPosition = {
@@ -82,6 +112,7 @@ storiesOf('Carousel/ProjectCarousel', module)
         )}
         paginationPosition={object('paginationPosition', paginationPosition)}
         showPageSquares={boolean('showPageSquares', false)}
+        loop={boolean('loop', false)}
       >
         {data.map(item => (
           <CrowdfundingCard
