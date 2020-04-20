@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
@@ -8,78 +7,82 @@ import { Grid, GridCol } from '../../grid/grid'
 import { Video } from './index'
 import { Loader } from '../../loaders/loader'
 
-const info = {
-  text: `
-    # Video
-    &nbsp;
+export default {
+  component: Video,
+  title: 'Videos/Video',
+  decorators: [withKnobs, withInfo],
+  parameters: {
+    component: Video,
+    info: {
+      text: `
+        # Video
+        &nbsp;
 
-    ## Import
-    ~~~js
-    import { Video } from '@kisskissbankbank/kitten/src/components/videos/video'
-    ~~~
+        ## Import
+        ~~~js
+        import { Video } from '@kisskissbankbank/kitten/src/components/videos/video'
+        ~~~
+        &nbsp;
 
-    ## Usage
-    &nbsp;
+        ## Usage
+        &nbsp;
 
-    #### Default
-    &nbsp;
+        #### Default
+        You can use all <video> attributes.
 
-    You can use all <video> attributes.
+        ~~~js
+        <Video src="…" />
+        ~~~
+        &nbsp;
 
-    ~~~js
-    <Video src="…" />
-    ~~~
+        #### Loader
+        ~~~js
+        <Video src="…">
+          <Video.Loader>
+            <LoaderIcon />
+          </Video.Loader>
+        </Video>
+        ~~~
+        &nbsp;
 
-    #### Loader
-    ~~~js
-    <Video src="…">
-      <Video.Loader>
-        <LoaderIcon />
-      </Video.Loader>
-    </Video>
-    ~~~
-  `,
-  header: false,
-  propTables: false,
+        ---
+      `,
+      header: false,
+      propTables: false,
+    },
+  },
 }
 
-storiesOf('Videos/Video', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withInfo)
-  .add(
-    'default',
-    () => {
-      return (
-        <Marger top="3" bottom="3">
-          <Container>
-            <Grid>
-              <GridCol
-                col={number('Grid number', 3)}
-                style={{ height: number('Height', 400) }}
-              >
-                <Video
-                  autoPlay={boolean('Autoplay', false)}
-                  playsInline
-                  loop
-                  muted
-                  src={text(
-                    'Src',
-                    'https://d3v4jsc54141g1.cloudfront.net/videos/home/home_v2.mp4',
-                  )}
-                  poster={text(
-                    'Poster',
-                    'https://d3v4jsc54141g1.cloudfront.net/videos/maker/detailed_description_poster.jpg',
-                  )}
-                >
-                  <Video.Loader>
-                    <Loader />
-                  </Video.Loader>
-                </Video>
-              </GridCol>
-            </Grid>
-          </Container>
-        </Marger>
-      )
-    },
-    { info },
+export const DefaultProps = () => {
+  return (
+    <Marger top="3" bottom="3">
+      <Container>
+        <Grid>
+          <GridCol
+            col={number('Grid number', 3)}
+            style={{ height: number('Height', 400) }}
+          >
+            <Video
+              autoPlay={boolean('Autoplay', false)}
+              playsInline
+              loop
+              muted
+              src={text(
+                'Src',
+                'https://d3v4jsc54141g1.cloudfront.net/videos/home/home_v2.mp4',
+              )}
+              poster={text(
+                'Poster',
+                'https://source.unsplash.com/random/900x1600/?kitten',
+              )}
+            >
+              <Video.Loader>
+                <Loader />
+              </Video.Loader>
+            </Video>
+          </GridCol>
+        </Grid>
+      </Container>
+    </Marger>
   )
+}

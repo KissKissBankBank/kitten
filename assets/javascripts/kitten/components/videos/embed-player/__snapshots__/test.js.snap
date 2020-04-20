@@ -3,7 +3,7 @@
 exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
 <div
   aria-label={null}
-  className="embed-player__StyledEmbedPlayer-sc-14blbse-0 fnqRRs"
+  className="embed-player__StyledEmbedPlayer-sc-14blbse-0 bMUxpX k-EmbedPlayer"
   onClick={null}
   onFocus={null}
   onKeyPress={null}
@@ -12,7 +12,7 @@ exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
   tabIndex={null}
 >
   <div
-    className="EmbedPlayer__playerPreview"
+    className="k-EmbedPlayer__playerPreview"
   >
     <div
       className="k-ResponsiveIframeContainer"
@@ -23,7 +23,8 @@ exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
       }
     >
       <img
-        className="EmbedPlayer__thumbnail "
+        alt="An image"
+        className="k-EmbedPlayer__thumbnail "
         src="https://placekitten.com/620/376"
       />
     </div>
@@ -34,7 +35,7 @@ exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
 exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
 <div
   aria-label="Play"
-  className="embed-player__StyledEmbedPlayer-sc-14blbse-0 fnqRRs player--cursorPointer"
+  className="embed-player__StyledEmbedPlayer-sc-14blbse-0 bMUxpX k-EmbedPlayer k-EmbedPlayer--cursorPointer"
   onClick={[Function]}
   onFocus={[Function]}
   onKeyPress={[Function]}
@@ -43,14 +44,14 @@ exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
   tabIndex={0}
 >
   <div
-    className="EmbedPlayer__playerPreview"
+    className="k-EmbedPlayer__playerPreview"
   >
     <div
-      className="EmbedPlayer__button"
+      className="k-EmbedPlayer__button"
     >
       <svg
         aria-hidden={true}
-        className="EmbedPlayer__buttonPicto"
+        className="k-EmbedPlayer__buttonPicto"
         viewBox="0 0 10 10"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -68,8 +69,8 @@ exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
       }
     >
       <img
-        alt="Une image"
-        className="EmbedPlayer__thumbnail "
+        alt="An image"
+        className="k-EmbedPlayer__thumbnail "
         src="https://placekitten.com/620/376"
       />
     </div>
