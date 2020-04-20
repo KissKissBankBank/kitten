@@ -122,7 +122,7 @@ const StyledButton = styled(Button)`
   }
 `
 
-const DialogWithPictureBorder = () => {
+export const DialogWithPictureBorder = () => {
   const button_1 = useRef(null)
   const button_2 = useRef(null)
 
@@ -161,5 +161,3 @@ const DialogWithPictureBorder = () => {
       </StyledCard>
     </StyledSection>
 )}
-
-export default DialogWithPictureBorder

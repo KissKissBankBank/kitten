@@ -64,7 +64,7 @@ const StyledParagraph = styled(Paragraph)`
   }
 `
 
-const Video = () => {
+export const Video = () => {
   return(
     <StyledGrid>
       <GridCol col-l={9}>
@@ -110,5 +110,3 @@ const Video = () => {
       </GridCol>
     </StyledGrid>
 )}
-
-export default Video

@@ -1,6 +1,6 @@
 import React from 'react'
 import { withKnobs } from '@storybook/addon-knobs'
-import Video from './index'
+import { Video } from './index'
 
 export default {
   component: Video,

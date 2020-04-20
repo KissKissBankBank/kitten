@@ -6,9 +6,9 @@ import { Container } from '../../../components/grid/container'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
-import Video from './video'
+import { Video } from './video'
 import { NewsBlock } from './news/components/news-block'
-import DialogWithPictureBorder from './dialog-with-picture-border'
+import { DialogWithPictureBorder } from './dialog-with-picture-border'
 import { FeaturedProjects } from './featured-projects'
 
 const StyledHomePage = styled.div`

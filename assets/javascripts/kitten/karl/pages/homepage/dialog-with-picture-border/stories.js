@@ -1,6 +1,6 @@
 import React from 'react'
 import { withKnobs } from '@storybook/addon-knobs'
-import DialogWithPictureBorder from './index'
+import { DialogWithPictureBorder } from './index'
 
 export default {
   component: DialogWithPictureBorder,

@@ -1,6 +1,7 @@
 import React from 'react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { FeaturedProjects } from './index'
+import { Container } from '../../../../components/grid/container'
 
 export default {
   component: FeaturedProjects,
@@ -12,5 +13,7 @@ export default {
 }
 
 export const DefaultProps = () => (
-  <FeaturedProjects />
+  <Container>
+    <FeaturedProjects />
+  </Container>
 )
