@@ -95,7 +95,7 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
       <StyledTitle
         tag="h2"
         className="k-u-margin-bottom-singleHalf@s-up
-        k-u-margin-bottom-single@s-down"
+        k-u-margin-bottom-single@s-down k-u-hidden@m-down"
       >
         Notre sélection
       </StyledTitle>
