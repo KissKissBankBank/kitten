@@ -109,6 +109,7 @@ const StyledTextWithSideImage = styled(Grid)`
       padding-bottom: ${pxToRem(100)};
     }
   }
+
   .TextWithSideImage__imageCol{
     order: 1;
 
@@ -130,6 +131,7 @@ const StyledTextWithSideImage = styled(Grid)`
       font-size: ${stepToRem(2)};
     }
   }
+
   .TextWithSideImage__itemParagraph{
     margin: 0;
     line-height: 1.6;
@@ -139,8 +141,6 @@ const StyledTextWithSideImage = styled(Grid)`
       font-size: ${stepToRem(-1)};
     }
   }
-
-
 `
 
 export const TextWithSideImage = () => (
