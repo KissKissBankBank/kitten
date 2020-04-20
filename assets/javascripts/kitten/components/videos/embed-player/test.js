@@ -8,17 +8,19 @@ describe('<EmbedPlayer />', () => {
   describe('with default props', () => {
     beforeEach(() => {
       component = renderer
-      .create(
-        <EmbedPlayer
-          previewProps={{
-            thumbnail: {
-              src: 'https://placekitten.com/620/376',
-            },
-          }}
-          playButtonLabel="Play"
-          ratio={50}
-        />)
-      .toJSON()
+        .create(
+          <EmbedPlayer
+            previewProps={{
+              thumbnail: {
+                src: 'https://placekitten.com/620/376',
+                alt: 'An image',
+              },
+            }}
+            playButtonLabel="Play"
+            ratio={50}
+          />,
+        )
+        .toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -34,7 +36,7 @@ describe('<EmbedPlayer />', () => {
             previewProps={{
               thumbnail: {
                 src: 'https://placekitten.com/620/376',
-                alt: 'Une image',
+                alt: 'An image',
               },
             }}
             playButtonLabel="Play"
