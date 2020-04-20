@@ -18,7 +18,7 @@ const StyledGrid = styled(Grid)`
   align-items: stretch;
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    max-height: ${pxToRem(900)};
+    min-height: ${pxToRem(900)};
   }
 `
 
@@ -95,6 +95,9 @@ const StyledItem = styled.li`
 `
 
 const StyledTextCol = styled(GridCol)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   order: 2;
   padding: ${pxToRem(30)} 0;
 
@@ -144,13 +147,13 @@ const TextWithSideImage = () => (
         <StyledImage>
           <source
             media={`(min-width: ${pxToRem(ScreenConfig.L.min)})`}
-            srcSet="https://source.unsplash.com/random/600x1200?car"
+            srcSet="https://source.unsplash.com/random/600x1200?kitten"
           />
           <source
             media={`(min-width: ${pxToRem(ScreenConfig.S.min)})`}
             srcSet="https://source.unsplash.com/random/800x600?kitten"
           />
-          <img src="https://source.unsplash.com/random/800x600?eating" alt="" />
+          <img src="https://source.unsplash.com/random/800x600?kitten" alt="" />
         </StyledImage>
       </StyledImageCol>
       <StyledTextCol col-s={10} offset-s={1} col-l={5}>
