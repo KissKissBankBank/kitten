@@ -109,32 +109,30 @@ const StyledEngagementCardWithImage = styled(EngagementCardWithImage)`
   max-width: ${pxToRem(200)};
 `
 
-const EngagementsBase = ({ viewportIsXSOrLess }) =>  {
-  return (
-    <StyledContainer fullWidthBelowScreenSize="S">
-      <Carousel
-        itemMinWidth={viewportIsXSOrLess ? 135 : 200}
-        baseItemMarginBetween={GUTTER}
-        hidePaginationOnMobile
-        paginationPosition={{ default: 'right' }}
-        showOtherPages={viewportIsXSOrLess}
-      >
-        {engagementsData.map(({ bgImage, children }) => {
-          return (
-            <StyledEngagementCardWithImage
-              key={children}
-              href="#"
-              backgroundImage={bgImage}
-              imageHeight={viewportIsXSOrLess ? 100 : 120}
-            >
-              {children}
-            </StyledEngagementCardWithImage>
-          )
-        })}
-      </Carousel>
-    </StyledContainer>
-  )
-}
+const EngagementsBase = ({ viewportIsXSOrLess }) => (
+  <StyledContainer fullWidthBelowScreenSize="S">
+    <Carousel
+      itemMinWidth={viewportIsXSOrLess ? 135 : 200}
+      baseItemMarginBetween={GUTTER}
+      hidePaginationOnMobile
+      paginationPosition={{ default: 'right' }}
+      showOtherPages={viewportIsXSOrLess}
+    >
+      {engagementsData.map(({ bgImage, children }) => {
+        return (
+          <StyledEngagementCardWithImage
+            key={children}
+            href="#"
+            backgroundImage={bgImage}
+            imageHeight={viewportIsXSOrLess ? 100 : 120}
+          >
+            {children}
+          </StyledEngagementCardWithImage>
+        )
+      })}
+    </Carousel>
+  </StyledContainer>
+)
 
 export const Engagements = mediaQueries(EngagementsBase, {
   viewportIsXSOrLess: true,
