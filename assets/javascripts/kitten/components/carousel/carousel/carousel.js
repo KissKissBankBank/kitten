@@ -242,6 +242,7 @@ class CarouselBase extends Component {
       firstButtonText,
       lastButtonText,
       showPageSquares,
+      hidePageControl,
       loop,
     } = this.props
     const { indexPageVisible, numPages } = this.state
