@@ -5,6 +5,7 @@ import {
   getNumColumnsForWidth,
   getNumPagesForColumnsAndDataLength,
   checkPage,
+  checkPageLoop,
 } from './carousel'
 import {
   ProjectCard,
@@ -37,6 +38,27 @@ describe('<Carousel />', () => {
         <Carousel
           itemMinWidth={ProjectCardMinWidth}
           baseItemMarginBetween={ProjectCardMarginBetween}
+        >
+          {data.map((item, index) => (
+            <ProjectCard title={item.title} key={index} />
+          ))}
+        </Carousel>,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(carousel).toMatchSnapshot()
+    })
+  })
+
+  describe('with loop prop on desktop', () => {
+    window.matchMedia = createMockMediaMatcher(false) // desktop
+    const carousel = renderer
+      .create(
+        <Carousel
+          itemMinWidth={ProjectCardMinWidth}
+          baseItemMarginBetween={ProjectCardMarginBetween}
+          loop={true}
         >
           {data.map((item, index) => (
             <ProjectCard title={item.title} key={index} />
@@ -146,6 +168,40 @@ describe('<Carousel />', () => {
 
     it('stay page 0 if not number', () => {
       expect(checkPage('0', '0')).toBe(0)
+    })
+  })
+
+  describe('checkPageLoop', () => {
+    it('to page number 2', () => {
+      expect(checkPageLoop(4, 2)).toBe(2)
+    })
+
+    it('to page number 3', () => {
+      expect(checkPageLoop(4, 3)).toBe(3)
+    })
+
+    it('go to first page', () => {
+      expect(checkPageLoop(4, 4)).toBe(0)
+    })
+
+    it('to page number 1', () => {
+      expect(checkPageLoop(4, 1)).toBe(1)
+    })
+
+    it('to page number 0', () => {
+      expect(checkPageLoop(4, 0)).toBe(0)
+    })
+
+    it('go to last if newPage negative', () => {
+      expect(checkPageLoop(4, -1)).toBe(3)
+    })
+
+    it('stay page number 0 if no numPages', () => {
+      expect(checkPageLoop(0, 3)).toBe(0)
+    })
+
+    it('stay page 0 if not number', () => {
+      expect(checkPageLoop('0', '0')).toBe(0)
     })
   })
 })
