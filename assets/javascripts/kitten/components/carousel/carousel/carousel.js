@@ -88,6 +88,8 @@ class CarouselBase extends Component {
     },
     prevButtonText: 'Previous items',
     nextButtonText: 'Next items',
+    firstButtonText: 'First items',
+    lastButtonText: 'Last items',
     showPageSquares: false,
     loop: false,
   }
@@ -113,6 +115,8 @@ class CarouselBase extends Component {
     }),
     prevButtonText: PropTypes.string,
     nextButtonText: PropTypes.string,
+    firstButtonText: PropTypes.string,
+    lastButtonText: PropTypes.string,
     showPageSquares: PropTypes.bool,
     loop: PropTypes.bool,
   }
@@ -232,6 +236,8 @@ class CarouselBase extends Component {
       paginationPosition,
       prevButtonText,
       nextButtonText,
+      firstButtonText,
+      lastButtonText,
       showPageSquares,
       loop,
     } = this.props
@@ -276,7 +282,11 @@ class CarouselBase extends Component {
             onClick={this.goPrevPage}
             disabled={!loop && (indexPageVisible < 1 || numPages < 1)}
           >
-            <VisuallyHidden>{prevButtonText}</VisuallyHidden>
+            <VisuallyHidden>
+              {loop && (indexPageVisible < 1 || numPages < 1)
+                ? lastButtonText
+                : prevButtonText}
+            </VisuallyHidden>
             <ArrowIcon version="solid" direction="left" aria-hidden />
           </PageButton>
 
@@ -286,7 +296,11 @@ class CarouselBase extends Component {
             onClick={this.goNextPage}
             disabled={!loop && indexPageVisible >= numPages - 1}
           >
-            <VisuallyHidden>{nextButtonText}</VisuallyHidden>
+            <VisuallyHidden>
+              {loop && indexPageVisible >= numPages - 1
+                ? firstButtonText
+                : nextButtonText}
+            </VisuallyHidden>
             <ArrowIcon version="solid" direction="right" aria-hidden />
           </PageButton>
         </PaginationButtons>
