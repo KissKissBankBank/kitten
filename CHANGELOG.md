@@ -12,6 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `TitleWithStroke` component.
 - Feature: Add `titleModifierStyles` common style for titles.
 - Feature: Add `strokeModifierStyles` common style for horizontal strokes.
+- Doc: Add a doc for style `utilities`.
 
 ## [2.64.0] - 2020-04-07
 

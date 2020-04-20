@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { withKnobs, text } from '@storybook/addon-knobs'
+import { withKnobs, text, number } from '@storybook/addon-knobs'
 import { EngagementCardWithImage } from './index'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
@@ -25,6 +25,7 @@ export const DefaultProps = () => (
       <StyledEngagementCardWithImage
         href="#"
         backgroundImage="https://source.unsplash.com/WLUHO9A_xik/200x120"
+        imageHeight={number('image height', 120)}
       >
         {text('Categorie', 'Autoproduction culturelle')}
       </StyledEngagementCardWithImage>
