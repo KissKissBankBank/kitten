@@ -10,12 +10,13 @@ exports[`<EngagementCardWithImage /> by default matches with snapshot 1`] = `
     className="withImage__StyledCard-sc-1jg09sq-1 lgohnN"
   >
     <img
-      className="withImage__StyledImage-sc-1jg09sq-2 fWPyYx"
+      alt=""
+      className="withImage__StyledImage-sc-1jg09sq-2 dHofpL"
       src="https://source.unsplash.com/WLUHO9A_xik/200x120"
     />
   </div>
-  <p
-    className="k-u-color-font1 k-u-decoration-none k-u-size-micro k-u-weight-regular withImage__StyledText-sc-1jg09sq-3 ihfHEi"
+  <span
+    className="k-u-color-font1 k-u-decoration-none k-u-line-height-normal k-u-size-micro k-u-weight-regular withImage__StyledText-sc-1jg09sq-3 ihfHEi"
   />
 </a>
 `;
