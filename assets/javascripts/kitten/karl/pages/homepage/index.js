@@ -9,7 +9,7 @@ import COLORS from '../../../constants/colors-config'
 import Video from './video'
 import { NewsBlock } from './news/components/news-block'
 import DialogWithPictureBorder from './dialog-with-picture-border'
-import { InTheNews } from './in-the-news'
+import { FeaturedProjects } from './featured-projects'
 
 const StyledHomePage = styled.div`
   section.Homepage__Section {
@@ -81,7 +81,7 @@ const HomePage = () => (
     </Container>
 
     <Container as="section" className="Homepage__Section">
-      <InTheNews />
+      <FeaturedProjects />
     </Container>
 
     <Container as="section" className="Homepage__Section">

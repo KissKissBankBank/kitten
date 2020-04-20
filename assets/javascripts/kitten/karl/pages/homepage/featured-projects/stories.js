@@ -1,16 +1,16 @@
 import React from 'react'
 import { withKnobs } from '@storybook/addon-knobs'
-import { InTheNews } from './index'
+import { FeaturedProjects } from './index'
 
 export default {
-  component: InTheNews,
-  title: 'pages/homepage/ProjectSection',
+  component: FeaturedProjects,
+  title: 'pages/homepage/FeaturedProjects',
   decorators: [withKnobs],
   parameters: {
-    component: InTheNews,
+    component: FeaturedProjects,
   },
 }
 
 export const DefaultProps = () => (
-  <InTheNews />
+  <FeaturedProjects />
 )
