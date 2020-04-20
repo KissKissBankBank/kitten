@@ -64,53 +64,49 @@ const StyledParagraph = styled(Paragraph)`
   }
 `
 
-const Video = () => {
+export const Video = () => {
   return(
-    <Container>
-      <StyledGrid>
-        <GridCol col-l={9}>
-          <VideoContainer>
-            <EmbedPlayer
-              previewProps={{
-                thumbnail: {
-                  src: 'https://placekitten.com/1280/720',
-                  alt: 'A picture',
-                }
-              }}
-              playButtonLabel="Play"
-              ratio={9 / 16 * 100}
-              iframeHtml={`
-                <iframe
-                  width="640"
-                  height="360"
-                  src="https://www.youtube.com/embed/30wT8ZJOeDA?autoplay=1"
-                  frameborder="0" allow="autoplay; encrypted-media"
-                  allowfullscreen
-                ></iframe>
-              `}
-            />
-          </VideoContainer>
-        </GridCol>
-        <GridCol
-          col-s={10}
-          col-l={3}
-          offset-s={1}
-          offset-l={0}
-          className="k-u-align-center k-Grid__col--offset-0@l"
+    <StyledGrid>
+      <GridCol col-l={9}>
+        <VideoContainer>
+          <EmbedPlayer
+            previewProps={{
+              thumbnail: {
+                src: 'https://source.unsplash.com/random/1280x720?kitten',
+                alt: 'A picture',
+              }
+            }}
+            playButtonLabel="Play"
+            ratio={9 / 16 * 100}
+            iframeHtml={`
+              <iframe
+                width="640"
+                height="360"
+                src="https://www.youtube.com/embed/30wT8ZJOeDA"
+                frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen
+              ></iframe>
+            `}
+          />
+        </VideoContainer>
+      </GridCol>
+      <GridCol
+        col-s={10}
+        col-l={3}
+        offset-s={1}
+        offset-l={0}
+        className="k-u-align-center k-Grid__col--offset-0@l"
+      >
+        <StyledTitle
+          modifier="senary"
+          tag="h2"
         >
-          <StyledTitle
-            modifier="senary"
-            tag="h2"
-          >
-            Maecenas sed diam eget risus varius blandit sit amet non magna.
-          </StyledTitle>
-          <StyledHorizontalStroke />
-          <StyledParagraph className="k-u-margin-none">
-            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-          </StyledParagraph>
-        </GridCol>
-      </StyledGrid>
-    </Container>
+          Maecenas sed diam eget risus varius blandit sit amet non magna.
+        </StyledTitle>
+        <StyledHorizontalStroke />
+        <StyledParagraph className="k-u-margin-none">
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+        </StyledParagraph>
+      </GridCol>
+    </StyledGrid>
 )}
-
-export default Video

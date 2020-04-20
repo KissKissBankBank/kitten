@@ -1,7 +1,15 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import Video from './index'
+import { withKnobs } from '@storybook/addon-knobs'
+import { Video } from './index'
 
-storiesOf('Pages/Homepage', module).add('Video', () => {
-  return <Video />
-})
+export default {
+  component: Video,
+  title: 'pages/homepage/Video',
+  parameters: {
+    component: Video,
+  },
+}
+
+export const DefaultProps = () => (
+  <Video />
+)
