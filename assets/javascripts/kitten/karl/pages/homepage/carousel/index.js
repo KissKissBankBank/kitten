@@ -48,7 +48,7 @@ const data = [
   },
 ]
 
-const HomepageCarouselBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => {
+const PopularProjectsBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => {
   let padding = 40
   if (viewportIsMOrLess) {
     padding = 20
@@ -100,7 +100,7 @@ const HomepageCarouselBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => {
   )
 }
 
-export const HomepageCarousel = mediaQueries(HomepageCarouselBase, {
+export const PopularProjects = mediaQueries(PopularProjectsBase, {
   viewportIsMOrLess: true,
   viewportIsSOrLess: true,
 })

@@ -12,7 +12,7 @@ import { Video } from './video'
 import { NewsBlock } from './news/components/news-block'
 import { DialogWithPictureBorder } from './dialog-with-picture-border'
 import { FeaturedProjects } from './featured-projects'
-import { HomepageCarousel } from './carousel'
+import { PopularProjects } from './carousel'
 
 const StyledHomePage = styled.div`
   section.Homepage__Section {
@@ -200,7 +200,7 @@ const HomePage = () => (
         </Grid>
       </Container>
 
-      <HomepageCarousel />
+      <PopularProjects />
     </section>
 
     <Container as="section" className="Homepage__Section">

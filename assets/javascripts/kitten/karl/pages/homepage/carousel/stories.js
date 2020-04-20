@@ -1,12 +1,12 @@
 import React from 'react'
-import { HomepageCarousel } from './index'
+import { PopularProjects } from './index'
 
 export default {
-  component: HomepageCarousel,
-  title: 'pages/homepage/HomepageCarousel',
+  component: PopularProjects,
+  title: 'pages/homepage/PopularProjects',
   parameters: {
-    component: HomepageCarousel,
+    component: PopularProjects,
   },
 }
 
-export const DefaultProps = () => <HomepageCarousel />
+export const DefaultProps = () => <PopularProjects />
