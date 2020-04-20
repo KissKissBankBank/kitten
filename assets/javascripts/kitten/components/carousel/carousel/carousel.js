@@ -40,14 +40,18 @@ export const getNumPagesForColumnsAndDataLength = (dataLength, numColumns) => {
   return numPages
 }
 
-export const checkPage = (numPages, newPage, loop = false) => {
+export const checkPage = (numPages, newPage) => {
   if (numPages < 1) return 0
-  if (loop) {
-    if (newPage < 0) return numPages - 1
-    if (newPage >= numPages) return 0
-  }
   if (newPage < 0) return 0
   if (newPage >= numPages) return numPages - 1
+
+  return newPage
+}
+
+export const checkPageLoop = (numPages, newPage) => {
+  if (numPages < 1) return 0
+  if (newPage < 0) return numPages - 1
+  if (newPage >= numPages) return 0
 
   return newPage
 }
@@ -164,14 +168,18 @@ class CarouselBase extends Component {
   goNextPage = () => {
     const { loop } = this.props
     const { numPages, indexPageVisible } = this.state
-    const newPage = checkPage(numPages, indexPageVisible + 1, loop)
+    const newPage = loop
+      ? checkPageLoop(numPages, indexPageVisible + 1)
+      : checkPage(numPages, indexPageVisible + 1)
     this.setState({ indexPageVisible: newPage })
   }
 
   goPrevPage = () => {
     const { loop } = this.props
     const { numPages, indexPageVisible } = this.state
-    const newPage = checkPage(numPages, indexPageVisible - 1, loop)
+    const newPage = loop
+      ? checkPageLoop(numPages, indexPageVisible - 1)
+      : checkPage(numPages, indexPageVisible - 1)
     this.setState({ indexPageVisible: newPage })
   }
 
