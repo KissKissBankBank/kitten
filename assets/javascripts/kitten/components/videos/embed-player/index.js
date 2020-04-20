@@ -6,7 +6,7 @@ import { parseHtml } from '../../../helpers/utils/parser'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import classNames from 'classnames'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const playerButtonSize = 90
 const playerButtonXSSize = 70
@@ -18,8 +18,8 @@ const StyledEmbedPlayer = styled.div`
   background-color: ${COLORS.font1};
 
   .EmbedPlayer__thumbnail {
-      display: block;
-      width: 100%;
+    display: block;
+    width: 100%;
   }
 
   .EmbedPlayer__embededPlayer {
@@ -74,14 +74,14 @@ const StyledEmbedPlayer = styled.div`
 `
 
 export const EmbedPlayer = ({
-    ratio,
-    previewProps: { thumbnail, badgeComponent },
-    iframeHtml,
-    playButtonLabel,
-    style: mainStyle = void 0,
-    className,
-    ...others
-  }) => {
+  ratio,
+  previewProps: { thumbnail, badgeComponent },
+  iframeHtml,
+  playButtonLabel,
+  style: mainStyle = void 0,
+  className,
+  ...others
+}) => {
   const [isPlayerVisible, setPlayerVisibility] = useState(false)
   const previewVideo = useRef(null)
 
@@ -117,13 +117,10 @@ export const EmbedPlayer = ({
       role={hasIframeHtml ? 'button' : null}
       tabIndex={hasIframeHtml ? 0 : null}
       aria-label={hasIframeHtml ? playButtonLabel : null}
-      className={classNames(
-        className,
-        {
-          'player--videoIsPlaying': hasIframeHtml && isPlayerVisible,
-          'player--cursorPointer': hasIframeHtml,
-        },
-      )}
+      className={classNames(className, {
+        'player--videoIsPlaying': hasIframeHtml && isPlayerVisible,
+        'player--cursorPointer': hasIframeHtml,
+      })}
     >
       <div className="EmbedPlayer__playerPreview">
         {hasIframeHtml && (
@@ -134,7 +131,7 @@ export const EmbedPlayer = ({
               viewBox="0 0 10 10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M0 0l10 5-10 5z"/>
+              <path d="M0 0l10 5-10 5z" />
             </svg>
           </div>
         )}
@@ -142,7 +139,7 @@ export const EmbedPlayer = ({
         <ResponsiveIframeContainer ratio={validRatio}>
           <img
             {...thumbnail}
-            className={`EmbedPlayer__thumbnail ${thumbnail.className || ''}`}
+            className={`EmbedPlayer__thumbnail ${thumbnail.className || ''}`}
           />
         </ResponsiveIframeContainer>
 
