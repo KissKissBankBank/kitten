@@ -81,7 +81,7 @@ class CarouselBase extends Component {
     prevButtonText: 'Previous items',
     nextButtonText: 'Next items',
     showPageSquares: false,
-    tinyButton: false,
+    tinyButtons: false,
   }
 
   static propTypes = {
@@ -105,7 +105,7 @@ class CarouselBase extends Component {
     }),
     prevButtonText: PropTypes.string,
     nextButtonText: PropTypes.string,
-    tinyButton: PropTypes.bool,
+    tinyButtons: PropTypes.bool,
     showPageSquares: PropTypes.bool,
   }
 
@@ -218,7 +218,7 @@ class CarouselBase extends Component {
       paginationPosition,
       prevButtonText,
       nextButtonText,
-      tinyButton,
+      tinyButtons,
       showPageSquares,
     } = this.props
     const { indexPageVisible, numPages } = this.state
@@ -259,7 +259,7 @@ class CarouselBase extends Component {
           <PageButton
             icon
             modifier="beryllium"
-            tiny={tinyButton}
+            tiny={tinyButtons}
             onClick={this.goPrevPage}
             disabled={indexPageVisible < 1 || numPages < 1}
           >
@@ -270,7 +270,7 @@ class CarouselBase extends Component {
           <PageButton
             icon
             modifier="beryllium"
-            tiny={tinyButton}
+            tiny={tinyButtons}
             onClick={this.goNextPage}
             disabled={indexPageVisible >= numPages - 1}
           >

@@ -75,7 +75,7 @@ storiesOf('Carousel/ProjectCarousel', module)
   .add('default', () => (
     <StoryContainer>
       <Carousel
-        tinyButton={boolean('Button tiny size', false)}
+        tinyButtons={boolean('Button tiny size', false)}
         itemMinWidth={number('itemMinWidth', 280)}
         baseItemMarginBetween={number(
           'baseItemMarginBetween',
