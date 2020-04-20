@@ -1,4 +1,5 @@
 import React from 'react'
+import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, object } from '@storybook/addon-knobs'
 import { Container } from '../../../components/grid/container'
 import { EmbedPlayer } from './index'
