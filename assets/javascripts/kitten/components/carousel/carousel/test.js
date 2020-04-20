@@ -51,6 +51,27 @@ describe('<Carousel />', () => {
     })
   })
 
+  describe('with loop prop on desktop', () => {
+    window.matchMedia = createMockMediaMatcher(false) // desktop
+    const carousel = renderer
+      .create(
+        <Carousel
+          itemMinWidth={ProjectCardMinWidth}
+          baseItemMarginBetween={ProjectCardMarginBetween}
+          loop={true}
+        >
+          {data.map((item, index) => (
+            <ProjectCard title={item.title} key={index} />
+          ))}
+        </Carousel>,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(carousel).toMatchSnapshot()
+    })
+  })
+
   describe('by default on mobile', () => {
     window.matchMedia = createMockMediaMatcher(true) // mobile
     const carousel = renderer
