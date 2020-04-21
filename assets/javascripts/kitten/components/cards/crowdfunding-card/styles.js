@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 
@@ -19,6 +19,10 @@ export const StyledCrowdfundingCard = styled.div`
 
   .k-CrowdfundingCard__paddedContainer {
     padding: 0 ${COMPONENT_GUTTER};
+  }
+
+  .k-CrowdfundingCard__noWrap {
+    white-space: nowrap;
   }
 
   .k-CrowdfundingCard__image__imageContainer {
@@ -56,6 +60,38 @@ export const StyledCrowdfundingCard = styled.div`
 
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
       display: none;
+    }
+  }
+
+  .k-CrowdfundingCard__title {
+    flex: 1;
+    padding: 0;
+    line-height: 1;
+    margin-top: ${pxToRem(10)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      padding: 0 ${COMPONENT_GUTTER};
+    }
+  }
+
+  .k-CrowdfundingCard__title__title {
+    font-size: ${stepToRem(-1)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      font-size: ${stepToRem(2)};
+    }
+  }
+
+  .k-CrowdfundingCard__title__loadingElement {
+    display: block;
+    background-color: ${COLORS.line2};
+    border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
+    height: ${pxToRem(24)};
+
+    &:last-of-type {
+      width: 70%;
+      border-top: ${pxToRem(1)} solid ${COLORS.background1};
+      border-bottom: 0;
     }
   }
 
@@ -144,6 +180,22 @@ export const StyledCrowdfundingCard = styled.div`
   &.k-CrowdfundingCardWidget {
     .k-CrowdfundingCard__titleAndDesc {
       margin-top: ${pxToRem(5)};
+    }
+
+    .k-CrowdfundingCard__titleWrapper {
+      display: flex;
+    }
+
+    .k-CrowdfundingCard__title {
+      @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+        padding: 0 ${COMPONENT_GUTTER} 0 0;
+      }
+    }
+
+    .k-CrowdfundingCard__title__dayCounter {
+      line-height: 1;
+      margin-left: calc(2 * ${COMPONENT_GUTTER});
+      margin-top: ${pxToRem(10)};
     }
   }
 
