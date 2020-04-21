@@ -19,8 +19,14 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     <div
       className="counter-block__StrokeContainer-dpxp7s-2 dIBsco k-u-hidden@m-down"
     >
-      <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj styledStroke"
+      <div
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+        style={
+          Object {
+            "height": null,
+            "width": null,
+          }
+        }
       />
     </div>
     <p
@@ -31,8 +37,14 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     <div
       className="counter-block__StrokeContainer-dpxp7s-2 dIBsco k-u-hidden@m-down"
     >
-      <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj styledStroke"
+      <div
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+        style={
+          Object {
+            "height": null,
+            "width": null,
+          }
+        }
       />
     </div>
   </div>

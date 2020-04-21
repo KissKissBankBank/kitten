@@ -125,8 +125,14 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     <div
       className="subtitle__StyledContainerSubtitle-hzl57w-1 fVLWtT"
     >
-      <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl subtitle__StyledHorizontalStroke-hzl57w-2 dVssq"
+      <div
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--tiny"
+        style={
+          Object {
+            "height": null,
+            "width": null,
+          }
+        }
       />
       <p
         className="k-u-color-font1 k-u-size-micro k-u-weight-regular subtitle__StyledSubtitle-hzl57w-3 krHPNc"
@@ -287,8 +293,14 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     <div
       className="subtitle__StyledContainerSubtitle-hzl57w-1 fVLWtT"
     >
-      <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl subtitle__StyledHorizontalStroke-hzl57w-2 dVssq"
+      <div
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--tiny"
+        style={
+          Object {
+            "height": null,
+            "width": null,
+          }
+        }
       />
       <p
         className="k-u-color-font1 k-u-size-micro k-u-weight-regular subtitle__StyledSubtitle-hzl57w-3 krHPNc"
