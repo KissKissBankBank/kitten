@@ -17,6 +17,18 @@ const StyledTitle = styled(Title)`
   }
 `
 
+const StyledPaddingRight = styled(GridCol)`
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    padding-right: ${pxToRem(20)};
+  }
+`
+
+const StyledPaddingLeft = styled(GridCol)`
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    padding-left: ${pxToRem(20)};
+  }
+`
+
 const selectionData = [
   {
     title:
@@ -73,7 +85,7 @@ const selectionData = [
 
 const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
   <Grid>
-    <GridCol col-l={6}>
+    <StyledPaddingRight col-l={6}>
       <StyledTitle
         tag="h2"
         className="k-u-margin-bottom-singleHalf@s-up
@@ -89,9 +101,9 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
           alt: '',
         }}
       />
-    </GridCol>
+    </StyledPaddingRight>
 
-    <GridCol col-l={6}>
+    <StyledPaddingLeft col-l={6}>
       <StyledTitle
         tag="h2"
         className="k-u-margin-bottom-singleHalf@s-up
@@ -144,7 +156,7 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
           </div>
         ))}
       </Carousel>
-    </GridCol>
+    </StyledPaddingLeft>
   </Grid>
 )
 
