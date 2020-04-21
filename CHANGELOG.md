@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `modifier` prop to `HorizontalStroke`.
+
 ## [2.65.0] - 2020-04-21
 
 Doc:
