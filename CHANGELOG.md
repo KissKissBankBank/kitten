@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `preferCompletePaginationOnMobile` prop on `Carousel`.
 - Feature: Add `tinyButtons` prop on `Carousel`.
 - Feature: Create `EngagementCardWithImage` component.
 - Fix: Adjust `button` size to follow guidelines on Mobile.
