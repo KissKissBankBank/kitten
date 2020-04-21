@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Carousel = exports.checkPage = exports.getNumPagesForColumnsAndDataLength = exports.getNumColumnsForWidth = void 0;
+exports.Carousel = exports.checkPageLoop = exports.checkPage = exports.getNumPagesForColumnsAndDataLength = exports.getNumColumnsForWidth = void 0;
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
@@ -76,13 +76,22 @@ var checkPage = function checkPage(numPages, newPage) {
 
 exports.checkPage = checkPage;
 
+var checkPageLoop = function checkPageLoop(numPages, newPage) {
+  if (numPages < 1) return 0;
+  if (newPage < 0) return numPages - 1;
+  if (newPage >= numPages) return 0;
+  return newPage;
+};
+
+exports.checkPageLoop = checkPageLoop;
+
 var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess) {
   if (viewportIsXSOrLess) return _gridConfig.CONTAINER_PADDING_MOBILE / 2;
   if (viewportIsMOrLess) return _gridConfig.CONTAINER_PADDING / 2;
   return baseItemMarginBetween;
 };
 
-var propTypesPositions = _propTypes.default.oneOf(['top', 'right', 'bottom', 'left']);
+var propTypesPositions = _propTypes.default.oneOf(['top', 'right', 'bottom', 'left', 'bottom-left', 'bottom-right']);
 
 var CarouselBase = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(CarouselBase, _Component);
@@ -128,10 +137,11 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     };
 
     _this.goNextPage = function () {
+      var loop = _this.props.loop;
       var _this$state = _this.state,
           numPages = _this$state.numPages,
           indexPageVisible = _this$state.indexPageVisible;
-      var newPage = checkPage(numPages, indexPageVisible + 1);
+      var newPage = loop ? checkPageLoop(numPages, indexPageVisible + 1) : checkPage(numPages, indexPageVisible + 1);
 
       _this.setState({
         indexPageVisible: newPage
@@ -139,10 +149,11 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     };
 
     _this.goPrevPage = function () {
+      var loop = _this.props.loop;
       var _this$state2 = _this.state,
           numPages = _this$state2.numPages,
           indexPageVisible = _this$state2.indexPageVisible;
-      var newPage = checkPage(numPages, indexPageVisible - 1);
+      var newPage = loop ? checkPageLoop(numPages, indexPageVisible - 1) : checkPage(numPages, indexPageVisible - 1);
 
       _this.setState({
         indexPageVisible: newPage
@@ -195,7 +206,13 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           hidePaginationOnMobile = _this$props3.hidePaginationOnMobile,
           paginationPosition = _this$props3.paginationPosition,
           prevButtonText = _this$props3.prevButtonText,
-          nextButtonText = _this$props3.nextButtonText;
+          nextButtonText = _this$props3.nextButtonText,
+          tinyButtons = _this$props3.tinyButtons,
+          firstButtonText = _this$props3.firstButtonText,
+          lastButtonText = _this$props3.lastButtonText,
+          showPageSquares = _this$props3.showPageSquares,
+          preferCompletePaginationOnMobile = _this$props3.preferCompletePaginationOnMobile,
+          loop = _this$props3.loop;
       var _this$state4 = _this.state,
           indexPageVisible = _this$state4.indexPageVisible,
           numPages = _this$state4.numPages;
@@ -204,7 +221,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       if (viewportIsXSOrLess && hidePaginationOnMobile) return;
       if (numPages <= 1) return;
 
-      if (viewportIsXSOrLess) {
+      if (viewportIsXSOrLess && !preferCompletePaginationOnMobile) {
         var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
         return /*#__PURE__*/_react.default.createElement(PageControl, null, rangePage.map(function (index) {
           return /*#__PURE__*/_react.default.createElement(PageDot, {
@@ -224,24 +241,33 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/_react.default.createElement(CarouselPagination, {
         position: paginationPosition,
         itemMarginBetween: itemMarginBetween
-      }, /*#__PURE__*/_react.default.createElement(_button.Button, {
+      }, /*#__PURE__*/_react.default.createElement(PaginationButtons, {
+        position: paginationPosition
+      }, /*#__PURE__*/_react.default.createElement(PageButton, {
         icon: true,
         modifier: "beryllium",
+        tiny: tinyButtons,
         onClick: _this.goPrevPage,
-        disabled: indexPageVisible < 1 || numPages < 1
-      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, prevButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+        disabled: !loop && (indexPageVisible < 1 || numPages < 1)
+      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && (indexPageVisible < 1 || numPages < 1) ? lastButtonText : prevButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         direction: "left",
         "aria-hidden": true
-      })), /*#__PURE__*/_react.default.createElement(_button.Button, {
+      })), /*#__PURE__*/_react.default.createElement(PageButton, {
         icon: true,
         modifier: "beryllium",
+        tiny: tinyButtons,
         onClick: _this.goNextPage,
-        disabled: indexPageVisible >= numPages - 1
-      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, nextButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+        disabled: !loop && indexPageVisible >= numPages - 1
+      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && indexPageVisible >= numPages - 1 ? firstButtonText : nextButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         direction: "right",
         "aria-hidden": true
+      }))), showPageSquares && /*#__PURE__*/_react.default.createElement(PaginationSquares, null, (0, _range.createRangeFromZeroTo)(numPages).map(function (index) {
+        return /*#__PURE__*/_react.default.createElement(PageSquare, {
+          key: index,
+          isActive: index === indexPageVisible
+        });
       })));
     };
 
@@ -268,12 +294,18 @@ CarouselBase.defaultProps = {
   hidePagination: false,
   showOtherPages: false,
   pagesClassName: null,
+  preferCompletePaginationOnMobile: false,
   paginationPosition: {
     default: 'right',
     fromM: 'bottom'
   },
   prevButtonText: 'Previous items',
-  nextButtonText: 'Next items'
+  nextButtonText: 'Next items',
+  firstButtonText: 'First items',
+  lastButtonText: 'Last items',
+  showPageSquares: false,
+  tinyButtons: false,
+  loop: false
 };
 CarouselBase.propTypes = {
   itemMinWidth: _propTypes.default.number.isRequired,
@@ -285,6 +317,7 @@ CarouselBase.propTypes = {
   hidePagination: _propTypes.default.bool,
   showOtherPages: _propTypes.default.bool,
   pagesClassName: _propTypes.default.string,
+  preferCompletePaginationOnMobile: _propTypes.default.bool,
   paginationPosition: _propTypes.default.shape({
     default: propTypesPositions,
     fromXxs: propTypesPositions,
@@ -295,7 +328,12 @@ CarouselBase.propTypes = {
     fromXl: propTypesPositions
   }),
   prevButtonText: _propTypes.default.string,
-  nextButtonText: _propTypes.default.string
+  nextButtonText: _propTypes.default.string,
+  tinyButtons: _propTypes.default.bool,
+  firstButtonText: _propTypes.default.string,
+  lastButtonText: _propTypes.default.string,
+  showPageSquares: _propTypes.default.bool,
+  loop: _propTypes.default.bool
 };
 
 var flexContainerdirectionStyle = function flexContainerdirectionStyle(positionType) {
@@ -305,16 +343,18 @@ var flexContainerdirectionStyle = function flexContainerdirectionStyle(positionT
 
     switch (paginationPosition[positionType]) {
       case 'top':
-        return (0, _styledComponents.css)(["flex-direction:column-reverse;"]);
+        return (0, _styledComponents.css)(["flex-direction:column-reverse;& >:nth-child(2){margin:0;margin-bottom:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER));
 
       case 'bottom':
-        return (0, _styledComponents.css)(["flex-direction:column;"]);
+      case 'bottom-left':
+      case 'bottom-right':
+        return (0, _styledComponents.css)(["flex-direction:column;& >:nth-child(2){margin:0;margin-top:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER));
 
       case 'left':
-        return (0, _styledComponents.css)(["flex-direction:row-reverse;"]);
+        return (0, _styledComponents.css)(["flex-direction:row-reverse;& >:nth-child(2){margin:0;margin-right:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER));
 
       case 'right':
-        return (0, _styledComponents.css)(["flex-direction:row;"]);
+        return (0, _styledComponents.css)(["flex-direction:row;& >:nth-child(2){margin:0;margin-left:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER));
     }
   };
 };
@@ -331,16 +371,20 @@ var paginationPositionStyle = function paginationPositionStyle(positionType) {
 
     switch (position[positionType]) {
       case 'top':
-        return (0, _styledComponents.css)(["flex-direction:row;margin:0;margin-bottom:", ");& > button:first-child{margin-bottom:pxToRem(2);}"], (0, _typography.pxToRem)(_gridConfig.GUTTER));
+        return (0, _styledComponents.css)(["align-items:flex-end;flex-direction:row;"]);
 
       case 'bottom':
-        return (0, _styledComponents.css)(["flex-direction:row;margin:0;margin-top:", ";& > button:first-child{margin-right:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER), (0, _typography.pxToRem)(2));
+      case 'bottom-left':
+        return (0, _styledComponents.css)(["align-items:flex-start;flex-direction:row;"]);
+
+      case 'bottom-right':
+        return (0, _styledComponents.css)(["align-items:flex-start;flex-direction:row-reverse;"]);
 
       case 'left':
-        return (0, _styledComponents.css)(["flex-direction:column;align-self:flex-start;margin:0;margin-right:", ";& > button:first-child{margin-bottom:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER), (0, _typography.pxToRem)(2));
+        return (0, _styledComponents.css)(["align-items:flex-end;flex-direction:column;"]);
 
       case 'right':
-        return (0, _styledComponents.css)(["flex-direction:column-reverse;align-self:flex-start;margin:0;margin-left:", ";& > button:last-child{margin-bottom:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER), (0, _typography.pxToRem)(2));
+        return (0, _styledComponents.css)(["align-items:flex-start;flex-direction:column;"]);
     }
   };
 };
@@ -348,30 +392,74 @@ var paginationPositionStyle = function paginationPositionStyle(positionType) {
 var CarouselPagination = _styledComponents.default.div.withConfig({
   displayName: "carousel__CarouselPagination",
   componentId: "sc-1o67jdh-1"
-})(["display:flex;align-items:flex-start;", " @media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}"], paginationPositionStyle('default'), _screenConfig.ScreenConfig.XXS.min, paginationPositionStyle('fromXxs'), _screenConfig.ScreenConfig.XS.min, paginationPositionStyle('fromXs'), _screenConfig.ScreenConfig.S.min, paginationPositionStyle('fromS'), _screenConfig.ScreenConfig.M.min, paginationPositionStyle('fromM'), _screenConfig.ScreenConfig.L.min, paginationPositionStyle('fromL'), _screenConfig.ScreenConfig.XL.min, paginationPositionStyle('fromXl'));
+})(["display:flex;justify-content:space-between;", " @media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}"], paginationPositionStyle('default'), _screenConfig.ScreenConfig.XXS.min, paginationPositionStyle('fromXxs'), _screenConfig.ScreenConfig.XS.min, paginationPositionStyle('fromXs'), _screenConfig.ScreenConfig.S.min, paginationPositionStyle('fromS'), _screenConfig.ScreenConfig.M.min, paginationPositionStyle('fromM'), _screenConfig.ScreenConfig.L.min, paginationPositionStyle('fromL'), _screenConfig.ScreenConfig.XL.min, paginationPositionStyle('fromXl'));
+
+var PaginationSquares = _styledComponents.default.div.withConfig({
+  displayName: "carousel__PaginationSquares",
+  componentId: "sc-1o67jdh-2"
+})(["display:flex;flex-direction:row;margin:", ";"], (0, _typography.pxToRem)(-2));
+
+var PageSquare = _styledComponents.default.span.withConfig({
+  displayName: "carousel__PageSquare",
+  componentId: "sc-1o67jdh-3"
+})(["display:inline-block;width:", ";height:", ";margin:", ";background-color:", ";", ""], (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(2), _colorsConfig.default.font2, function (_ref3) {
+  var isActive = _ref3.isActive;
+  return isActive && (0, _styledComponents.css)(["background-color:", ";"], _colorsConfig.default.font1);
+});
+
+var buttonsPositionStyle = function buttonsPositionStyle(positionType) {
+  return function (_ref4) {
+    var position = _ref4.position;
+    if (!position[positionType]) return;
+
+    switch (position[positionType]) {
+      case 'top':
+      case 'bottom':
+      case 'bottom-left':
+      case 'bottom-right':
+        return (0, _styledComponents.css)(["flex-direction:row;"]);
+
+      case 'left':
+        return (0, _styledComponents.css)(["flex-direction:column;"]);
+
+      case 'right':
+        return (0, _styledComponents.css)(["flex-direction:column-reverse;"]);
+    }
+  };
+};
+
+var PaginationButtons = _styledComponents.default.div.withConfig({
+  displayName: "carousel__PaginationButtons",
+  componentId: "sc-1o67jdh-4"
+})(["display:flex;align-items:flex-start;margin:", ";", " @media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}"], (0, _typography.pxToRem)(-1), buttonsPositionStyle('default'), _screenConfig.ScreenConfig.XXS.min, buttonsPositionStyle('fromXxs'), _screenConfig.ScreenConfig.XS.min, buttonsPositionStyle('fromXs'), _screenConfig.ScreenConfig.S.min, buttonsPositionStyle('fromS'), _screenConfig.ScreenConfig.M.min, buttonsPositionStyle('fromM'), _screenConfig.ScreenConfig.L.min, buttonsPositionStyle('fromL'), _screenConfig.ScreenConfig.XL.min, buttonsPositionStyle('fromXl'));
+
+var PageButton = (0, _styledComponents.default)(_button.Button).withConfig({
+  displayName: "carousel__PageButton",
+  componentId: "sc-1o67jdh-5"
+})(["margin:", ";"], (0, _typography.pxToRem)(1));
 
 var PageControl = _styledComponents.default.div.withConfig({
   displayName: "carousel__PageControl",
-  componentId: "sc-1o67jdh-2"
+  componentId: "sc-1o67jdh-6"
 })(["display:flex;flex-direction:row;justify-content:center;position:relative;padding-top:", ";padding-bottom:", ";"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE / 2), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE / 2));
 
 var PageControlButton = _styledComponents.default.div.withConfig({
   displayName: "carousel__PageControlButton",
-  componentId: "sc-1o67jdh-3"
-})(["position:absolute;top:", ";bottom:", ";-webkit-tap-highlight-color:transparent;", " ", ""], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE / 4), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE / 4), function (_ref3) {
-  var prev = _ref3.prev;
+  componentId: "sc-1o67jdh-7"
+})(["position:absolute;top:", ";bottom:", ";-webkit-tap-highlight-color:transparent;", " ", ""], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE / 4), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE / 4), function (_ref5) {
+  var prev = _ref5.prev;
   return prev && (0, _styledComponents.css)(["left:", ";right:50%;"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE));
-}, function (_ref4) {
-  var next = _ref4.next;
+}, function (_ref6) {
+  var next = _ref6.next;
   return next && (0, _styledComponents.css)(["right:", ";left:50%;"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE));
 });
 
 var PageDot = _styledComponents.default.div.withConfig({
   displayName: "carousel__PageDot",
-  componentId: "sc-1o67jdh-4"
-})(["width:", ";height:", ";margin-left:", ";margin-right:", ";border-radius:", ";background-color:", ";", "}"], (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), _colorsConfig.default.font1, function (_ref5) {
-  var visibleIndex = _ref5.visibleIndex,
-      index = _ref5.index;
+  componentId: "sc-1o67jdh-8"
+})(["width:", ";height:", ";margin-left:", ";margin-right:", ";border-radius:", ";background-color:", ";", ""], (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), _colorsConfig.default.font1, function (_ref7) {
+  var visibleIndex = _ref7.visibleIndex,
+      index = _ref7.index;
   return visibleIndex === index && (0, _styledComponents.css)(["background-color:", ";"], _colorsConfig.default.primary2);
 });
 

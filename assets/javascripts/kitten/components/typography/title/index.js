@@ -22,14 +22,7 @@ const StyledTitle = styled.span`
     `}
 `
 
-export const Title = ({
-  modifier,
-  tag,
-  margin,
-  italic,
-  ...other
-}) => {
-
+export const Title = ({ modifier, tag, margin, italic, ...other }) => {
   return (
     <StyledTitle
       as={tag}

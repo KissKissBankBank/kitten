@@ -7,44 +7,44 @@ export const modifierStyles = modifier => {
   let fontStepOnTablet
   let fontStepOnDesktop
 
-  switch(modifier) {
+  switch (modifier) {
     case 'primary':
       fontStepOnMobile = 7
       fontStepOnTablet = 9
       fontStepOnDesktop = 12
       break
 
-    case 'secondary' :
+    case 'secondary':
       fontStepOnMobile = 6
       fontStepOnTablet = 7
       fontStepOnDesktop = 9
       break
 
-    case 'tertiary' :
+    case 'tertiary':
       fontStepOnMobile = 5
       fontStepOnTablet = 6
       fontStepOnDesktop = 7
       break
 
-    case 'quaternary' :
+    case 'quaternary':
       fontStepOnMobile = 4
       fontStepOnTablet = 5
       fontStepOnDesktop = 6
       break
 
-    case 'quinary' :
+    case 'quinary':
       fontStepOnMobile = 2
       fontStepOnTablet = 4
       fontStepOnDesktop = 5
       break
 
-    case 'senary' :
+    case 'senary':
       fontStepOnMobile = 1
       fontStepOnTablet = 2
       fontStepOnDesktop = 4
       break
 
-    case 'septenary' :
+    case 'septenary':
       fontStepOnMobile = 0
       fontStepOnTablet = 1
       fontStepOnDesktop = 2
