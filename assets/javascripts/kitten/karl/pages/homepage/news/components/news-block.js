@@ -46,13 +46,13 @@ const StyledNewsBlock = styled.div`
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .newsBlock__NewsCard__link {
+  .NewsBlock__newsCard__link {
     display: flex;
     flex-direction: column;
     text-decoration: none;
   }
 
-  .newsBlock__NewsCard__picture {
+  .NewsBlock__newsCard__picture {
     max-width: ${twelveColumns};
     position: relative;
     overflow: hidden;
@@ -71,15 +71,15 @@ const StyledNewsBlock = styled.div`
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform .4s ease;
+      transition: transform 0.4s ease;
     }
   }
 
-  .newsBlock__NewsCard__text {
+  .NewsBlock__newsCard__text {
     color: ${COLORS.font1};
     margin-top: ${pxToRem(15)};
 
-    .newsBlock__NewsCard__title {
+    .NewsBlock__newsCard__title {
       margin: 0;
       font-size: ${stepToRem(0)};
       line-height: normal;
@@ -87,7 +87,7 @@ const StyledNewsBlock = styled.div`
       ${TYPOGRAPHY.fontStyles.bold}
       transition: color .4s ease;
     }
-    .newsBlock__NewsCard__excerpt {
+    .NewsBlock__newsCard__excerpt {
       margin: ${pxToRem(10)} 0 0;
       font-size: ${stepToRem(-2)};
       line-height: ${stepToRem(2)};
@@ -95,10 +95,10 @@ const StyledNewsBlock = styled.div`
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      .newsBlock__NewsCard__title {
+      .NewsBlock__newsCard__title {
         font-size: ${stepToRem(2)};
       }
-      .newsBlock__NewsCard__excerpt {
+      .NewsBlock__newsCard__excerpt {
         font-size: ${stepToRem(-1)};
         line-height: ${stepToRem(3)};
       }
@@ -106,10 +106,10 @@ const StyledNewsBlock = styled.div`
   }
 
   &.NewsBlock--1cols {
-    .newsBlock__NewsCard__picture {
+    .NewsBlock__newsCard__picture {
       padding-top: calc(${twelveColumns} * ${landscapeImageRatio});
     }
-    .newsBlock__NewsCard__text {
+    .NewsBlock__newsCard__text {
       margin-top: ${pxToRem(20)};
     }
   }
@@ -145,15 +145,15 @@ const StyledNewsBlock = styled.div`
       width: calc((4 * ${tabletCardWidth}) + (3 * ${gridGapMedium}));
     }
 
-    .newsBlock__NewsCard__text {
+    .NewsBlock__newsCard__text {
       margin-top: ${pxToRem(20)};
 
-      .newsBlock__NewsCard__title {
+      .NewsBlock__newsCard__title {
         font-size: ${stepToRem(1)};
       }
     }
 
-    &.NewsBlock--1cols .newsBlock__NewsCard__text .newsBlock__NewsCard__title {
+    &.NewsBlock--1cols .NewsBlock__newsCard__text .NewsBlock__newsCard__title {
       font-size: ${stepToRem(2)};
     }
   }
@@ -169,21 +169,21 @@ const StyledNewsBlock = styled.div`
         width: auto;
       }
 
-      .newsBlock__NewsCard__text .newsBlock__NewsCard__title {
+      .NewsBlock__newsCard__text .NewsBlock__newsCard__title {
         font-size: ${stepToRem(2)};
       }
 
-      .newsBlock__NewsCard.NewsCard--horizontal {
+      .NewsBlock__newsCard.NewsCard--horizontal .NewsBlock__newsCard__link {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
 
-        .newsBlock__NewsCard__text {
+        .NewsBlock__newsCard__text {
           flex: 0 1 calc(${sixColumns} - ${pxToRem(15)});
           margin-top: 0;
         }
 
-        .newsBlock__NewsCard__picture {
+        .NewsBlock__newsCard__picture {
           flex: 0 1 calc(${sixColumns} - ${pxToRem(15)});
 
           @media (orientation: landscape) {
@@ -192,27 +192,27 @@ const StyledNewsBlock = styled.div`
         }
       }
 
-      .newsBlock__NewsCard.NewsCard--vertical .newsBlock__NewsCard__text {
+      .NewsBlock__newsCard.NewsCard--vertical .NewsBlock__newsCard__text {
         margin-top: ${pxToRem(30)};
       }
 
       &.NewsBlock--2cols .NewsCard--vertical,
       &.NewsBlock--1cols {
-        .newsBlock__NewsCard__title {
+        .NewsBlock__newsCard__title {
           font-size: ${stepToRem(3)};
         }
-        .newsBlock__NewsCard__excerpt {
+        .NewsBlock__newsCard__excerpt {
           margin-top: ${pxToRem(15)};
           font-size: ${stepToRem(0)};
           line-height: ${stepToRem(4)};
         }
       }
 
-      .newsBlock__NewsCard:first-child:last-child {
+      .NewsBlock__newsCard:first-child:last-child .NewsBlock__newsCard__link {
         flex-direction: row;
         align-items: center;
 
-        .newsBlock__NewsCard__picture {
+        .NewsBlock__newsCard__picture {
           width: ${sevenColumns};
 
           @media (orientation: portrait) {
@@ -223,7 +223,7 @@ const StyledNewsBlock = styled.div`
           }
         }
 
-        .newsBlock__NewsCard__text {
+        .NewsBlock__newsCard__text {
           margin-top: 0;
           margin-left: ${pxToRem(40)};
           width: ${fourColumns};
@@ -231,30 +231,28 @@ const StyledNewsBlock = styled.div`
       }
     }
 
-    .newsBlock__NewsCard__link:hover,
-    .newsBlock__NewsCard__link:focus,
-    .newsBlock__NewsCard__link:active {
-      .newsBlock__NewsCard__picture img {
+    .NewsBlock__newsCard__link:hover,
+    .NewsBlock__newsCard__link:focus,
+    .NewsBlock__newsCard__link:active {
+      .NewsBlock__newsCard__picture img {
         transform: scale(1.07);
       }
-      .newsBlock__NewsCard__title {
-        color: ${COLORS.primary2}
+      .NewsBlock__newsCard__title {
+        color: ${COLORS.primary2};
       }
-
     }
-
   }
 `
 
 export const NewsCard = ({ contents, horizontal = false, alone = false }) => (
   <article
-    className={classNames('newsBlock__NewsCard', {
+    className={classNames('NewsBlock__newsCard', {
       'NewsCard--horizontal': horizontal,
       'NewsCard--vertical': !horizontal,
     })}
   >
-    <a href={contents.url} className="newsBlock__NewsCard__link">
-      <picture className="newsBlock__NewsCard__picture">
+    <a href={contents.url} className="NewsBlock__newsCard__link">
+      <picture className="NewsBlock__newsCard__picture">
         {!alone && (
           <>
             <source
@@ -269,9 +267,9 @@ export const NewsCard = ({ contents, horizontal = false, alone = false }) => (
         )}
         <img src={contents.imageUrlLandscape} alt="" />
       </picture>
-      <div className="newsBlock__NewsCard__text">
-        <h3 className="newsBlock__NewsCard__title">{contents.title}</h3>
-        <p className="newsBlock__NewsCard__excerpt">{contents.excerpt}</p>
+      <div className="NewsBlock__newsCard__text">
+        <h3 className="NewsBlock__newsCard__title">{contents.title}</h3>
+        <p className="NewsBlock__newsCard__excerpt">{contents.excerpt}</p>
       </div>
     </a>
   </article>
