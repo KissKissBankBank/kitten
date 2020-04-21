@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Title } from '../../../components/typography/title'
+import { TitleWithStroke } from '../../../components/typography/title-with-stroke'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { Container } from '../../../components/grid/container'
@@ -8,12 +9,13 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import { Video } from './video'
-import { NewsBlock } from './news/components/news-block'
-import { DialogWithPictureBorder } from './dialog-with-picture-border'
+import EngagementsCarousel from './engagements-carousel'
 import { FeaturedProjects } from './featured-projects'
-import { PopularProjects } from './carousel'
+import { PopularProjects } from './popular-projects'
+import { NewsBlock } from './news/components/news-block'
 import { TextWithSideImage } from './text-with-side-image'
+import { Video } from './video'
+import { DialogWithPictureBorder } from './dialog-with-picture-border'
 
 const StyledHomePage = styled.div`
   section.Homepage__Section {
@@ -36,30 +38,6 @@ const StyledHomePage = styled.div`
         margin-bottom: ${pxToRem(100)};
       }
     }
-  }
-`
-
-const StyledHorizontalStrokeContainer = styled.div`
-  margin-top: ${pxToRem(15)};
-  margin-bottom: ${pxToRem(30)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    margin-top: ${pxToRem(20)};
-    margin-bottom: ${pxToRem(40)};
-  }
-`
-
-const StyledHorizontalStroke = styled.div`
-  display: block;
-  border: none;
-  background-color: ${COLORS.font1};
-  margin: 0 auto;
-  width: ${pxToRem(30)};
-  height: ${pxToRem(4)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    width: ${pxToRem(40)};
-    height: ${pxToRem(6)};
   }
 `
 
@@ -107,13 +85,14 @@ const StyledCarouselLink = styled.a`
 const HomePage = () => (
   <StyledHomePage>
     <Container as="section" className="Homepage__Section">
-      <Title className="k-u-align-center" modifier="tertiary" margin={false}>
+      <TitleWithStroke align="center" modifier="tertiary">
         La communauté des projets engagés
-      </Title>
-      <StyledHorizontalStrokeContainer>
-        <StyledHorizontalStroke />
-      </StyledHorizontalStrokeContainer>
+      </TitleWithStroke>
     </Container>
+
+    <section>
+      <EngagementsCarousel />
+    </section>
 
     <Container as="section" className="Homepage__Section">
       <FeaturedProjects />

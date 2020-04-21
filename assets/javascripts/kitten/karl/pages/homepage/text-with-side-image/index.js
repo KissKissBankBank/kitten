@@ -1,13 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Title } from '../../../../components/typography/title'
+import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import COLORS from '../../../../constants/colors-config'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 
 const portraitImageRatio = 50 / 67
 const bulletSize = 4
@@ -19,7 +18,7 @@ const StyledTextWithSideImage = styled(Grid)`
     min-height: ${pxToRem(900)};
   }
 
-  .TextWithSideImage__image{
+  .TextWithSideImage__image {
     display: block;
     position: relative;
 
@@ -42,13 +41,7 @@ const StyledTextWithSideImage = styled(Grid)`
     }
   }
 
-  .TextWithSideImage__horizontalStroke{
-    width: ${pxToRem(30)};
-    height: ${pxToRem(4)};
-    margin: ${pxToRem(15)} 0 ${pxToRem(30)};
-  }
-
-  .TextWithSideImage__list{
+  .TextWithSideImage__list {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -91,7 +84,7 @@ const StyledTextWithSideImage = styled(Grid)`
     }
   }
 
-  .TextWithSideImage__textCol{
+  .TextWithSideImage__textCol {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,7 +103,7 @@ const StyledTextWithSideImage = styled(Grid)`
     }
   }
 
-  .TextWithSideImage__imageCol{
+  .TextWithSideImage__imageCol {
     order: 1;
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
@@ -118,7 +111,7 @@ const StyledTextWithSideImage = styled(Grid)`
     }
   }
 
-  .TextWithSideImage__itemTitle{
+  .TextWithSideImage__itemTitle {
     ${TYPOGRAPHY.fontStyles.bold}
     font-size: ${stepToRem(0)};
     margin: 0 0 ${pxToRem(5)};
@@ -132,7 +125,7 @@ const StyledTextWithSideImage = styled(Grid)`
     }
   }
 
-  .TextWithSideImage__itemParagraph{
+  .TextWithSideImage__itemParagraph {
     margin: 0;
     line-height: 1.6;
     font-size: ${stepToRem(-2)};
@@ -164,16 +157,14 @@ export const TextWithSideImage = () => (
       offset-s={1}
       col-l={5}
     >
-      <Title tag="h2" modifier="quaternary" margin={false}>
+      <TitleWithStroke tag="h2" modifier="quaternary">
         C’est quoi
         <br /> KissKissBankBank ?
-      </Title>
-      <HorizontalStroke className="TextWithSideImage__horizontalStroke" />
+      </TitleWithStroke>
       <ul className="TextWithSideImage__list">
         <li className="TextWithSideImage__item">
           <p className="TextWithSideImage__itemTitle">
-            22 000 initiatives positives ont vu le jour <br />
-            grâce au crowdfunding.
+            22 000 initiatives positives ont vu le jour grâce au crowdfunding.
           </p>
           <p className="TextWithSideImage__itemParagraph">
             Vous avez un projet créatif, associatif ou entrepreneurial ? Toute
@@ -185,8 +176,8 @@ export const TextWithSideImage = () => (
         </li>
         <li className="TextWithSideImage__item">
           <p className="TextWithSideImage__itemTitle">
-            Des dizaines de partenaires soutiennent les projets <br />
-            des causes qui leur sont chères.
+            Des dizaines de partenaires soutiennent les projets des causes qui
+            leur sont chères.
           </p>
           <p className="TextWithSideImage__itemParagraph">
             Vous êtes une marque ou un acteur engagé ? Nous vous proposons de
@@ -197,8 +188,7 @@ export const TextWithSideImage = () => (
         </li>
         <li className="TextWithSideImage__item">
           <p className="TextWithSideImage__itemTitle">
-            Une communauté composée de 1&nbsp;829&nbsp;120 <br />
-            citoyens positifs.
+            Une communauté composée de 1&nbsp;829&nbsp;120 citoyens positifs.
           </p>
           <p className="TextWithSideImage__itemParagraph">
             Nous pensons que financer ensemble des projets a un impact positif
