@@ -1,10 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
-import { storiesOf } from '@storybook/react'
-import { withKnobs, number, object, boolean } from '@storybook/addon-knobs'
 import { CrowdfundingCard } from '../../../../components/cards/crowdfunding-card'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
-import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 import { Container } from '../../../../components/grid/container'
 import { mediaQueries } from '../../../../hoc/media-queries'
 
@@ -68,6 +64,7 @@ const PopularProjectsBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => {
         hidePagination={viewportIsMOrLess ? true : false}
         showOtherPages={viewportIsMOrLess ? true : false}
         showPageSquares={viewportIsMOrLess ? false : true}
+        loop={true}
       >
         {data.map(item => (
           <CrowdfundingCard

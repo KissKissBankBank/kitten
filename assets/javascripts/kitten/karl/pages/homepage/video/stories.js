@@ -1,6 +1,6 @@
 import React from 'react'
-import { withKnobs } from '@storybook/addon-knobs'
 import { Video } from './index'
+import { Container } from '../../../../components/grid/container'
 
 export default {
   component: Video,
@@ -11,5 +11,7 @@ export default {
 }
 
 export const DefaultProps = () => (
-  <Video />
+  <Container>
+    <Video />
+  </Container>
 )
