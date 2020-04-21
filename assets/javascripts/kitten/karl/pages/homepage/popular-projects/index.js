@@ -26,39 +26,39 @@ const InfoComponent = () => (
 const data = [
   {
     title: 'Atelier d’optique bruxellois dédié à l’upcycling et au cust…',
-    imageSrc: 'https://source.unsplash.com/random/500x300?kitten,0',
+    imageSrc: 'https://source.unsplash.com/random/320x200?kitten,0',
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,1',
   },
   {
     title: 'Keep It Silky',
-    imageSrc: 'https://source.unsplash.com/random/500x300?kitten,2',
+    imageSrc: 'https://source.unsplash.com/random/320x200?kitten,2',
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,3',
   },
   {
     title:
       '"Odyssée" une exposition itinérante de Fred Kleinberg encore plus long et tout ça',
-    imageSrc: 'https://source.unsplash.com/random/500x300?kitten,4',
+    imageSrc: 'https://source.unsplash.com/random/320x200?kitten,4',
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,5',
   },
   {
     title: 'Les Arts dessinés : devenez abonné-fondateur',
-    imageSrc: 'https://source.unsplash.com/random/500x300?kitten,6',
+    imageSrc: 'https://source.unsplash.com/random/320x200?kitten,6',
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,7',
   },
   {
     title: 'Cras mattis consectetur purus sit amet fermentum.',
-    imageSrc: 'https://source.unsplash.com/random/500x300?kitten,8',
+    imageSrc: 'https://source.unsplash.com/random/320x200?kitten,8',
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,9',
   },
   {
     title: 'Maecenas faucibus mollis interdum.',
-    imageSrc: 'https://source.unsplash.com/random/500x300?kitten,9',
+    imageSrc: 'https://source.unsplash.com/random/320x200?kitten,9',
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,8',
   },
   {
     title:
       'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.',
-    imageSrc: 'https://source.unsplash.com/random/500x300?kitten,7',
+    imageSrc: 'https://source.unsplash.com/random/320x200?kitten,7',
     thumbSrc: 'https://source.unsplash.com/random/80x80?kitten,6',
   },
 ]
