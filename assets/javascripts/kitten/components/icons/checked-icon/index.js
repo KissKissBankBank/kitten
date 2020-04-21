@@ -21,5 +21,5 @@ CheckedIcon.propTypes = {
 
 CheckedIcon.defaultProps = {
   color: '#fff',
-  title: 'Checked',
+  title: '',
 }

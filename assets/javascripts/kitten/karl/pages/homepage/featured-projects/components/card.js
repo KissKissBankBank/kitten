@@ -34,7 +34,7 @@ const StyledCard = styled.div`
       }
 
       @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        margin-bottom: ${pxToRem(50)};
+        margin-bottom: ${pxToRem(40)};
       }
 
       :last-child {
