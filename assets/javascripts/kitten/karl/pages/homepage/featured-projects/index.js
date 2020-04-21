@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import Card from './components/card'
+import { Card } from './components/card'
 import { Title } from '../../../../components/typography/title'
 import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
-import { CONTAINER_PADDING } from '../../../../constants/grid-config'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { mediaQueries } from '../../../../hoc/media-queries'
@@ -19,13 +18,13 @@ const StyledTitle = styled(Title)`
 `
 
 const StyledPaddingRight = styled(GridCol)`
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     padding-right: ${pxToRem(20)};
   }
 `
 
 const StyledPaddingLeft = styled(GridCol)`
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
     padding-left: ${pxToRem(20)};
   }
 `
@@ -108,7 +107,7 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
       <StyledTitle
         tag="h2"
         className="k-u-margin-bottom-singleHalf@s-up
-        k-u-margin-bottom-single@s-down"
+        k-u-margin-bottom-single@s-down k-u-hidden@m-down"
       >
         Notre sélection
       </StyledTitle>
