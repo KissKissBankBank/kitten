@@ -1,36 +1,13 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import Image from './components/image'
 import TitleComponent from './components/title'
 import Subtitle from './components/subtitle'
 import Informations from './components/informations'
 import ProgressBar from './components/progress'
-import Loading from './components/loading'
 import State from './components/state'
-import { pxToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
-
-const StyledContainer = styled.div`
-  position: relative;
-  padding-bottom: ${pxToRem(5)};
-`
-
-const StyledTitleAndDescription = styled.div`
-  ${({ titlesMinHeight }) =>
-    titlesMinHeight &&
-    css`
-      min-height: ${pxToRem(50)};
-    `}
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    ${({ titlesMinHeight }) =>
-      titlesMinHeight &&
-      css`
-        min-height: ${pxToRem(75)};
-      `}
-  }
-`
+import classNames from 'classnames'
+import { StyledCrowdfundingCard } from './styles'
 
 export class CrowdfundingCard extends PureComponent {
   static propTypes = {
@@ -68,15 +45,24 @@ export class CrowdfundingCard extends PureComponent {
       info3,
       progress,
       progressColor,
+      className,
       ...others
     } = this.props
 
     return (
-      <StyledContainer
+      <StyledCrowdfundingCard
         {...others}
         as={href ? 'a' : 'div'}
         onClick={this.removeCurrentFocus}
-        className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+        className={classNames(
+          'k-CrowdfundingCard',
+          'k-Card k-Card--light k-Card--withoutBoxShadowOnHover',
+          className,
+          {
+            'k-CrowdfundingCard--titlesMinHeight': titlesMinHeight,
+            'k-CrowdfundingCard--isLoading': loading,
+          },
+        )}
         href={href}
       >
         <Image
@@ -87,7 +73,7 @@ export class CrowdfundingCard extends PureComponent {
           avatarProps={avatarProps}
           loading={loading}
         />
-        <StyledTitleAndDescription titlesMinHeight={titlesMinHeight}>
+        <div className="k-CrowdfundingCard__titleAndDesc">
           <TitleComponent
             title={cardTitle}
             loading={loading}
@@ -98,7 +84,7 @@ export class CrowdfundingCard extends PureComponent {
             subTitleTruncate={subTitleTruncate}
             loading={loading}
           />
-        </StyledTitleAndDescription>
+        </div>
         <Informations
           info1={info1}
           info2={info2}
@@ -111,8 +97,9 @@ export class CrowdfundingCard extends PureComponent {
           loading={loading}
         />
         <State state={state} loading={loading} />
-        <Loading loading={loading} />
-      </StyledContainer>
+
+        {loading && <span className="k-CrowdfundingCard__loading" />}
+      </StyledCrowdfundingCard>
     )
   }
 }

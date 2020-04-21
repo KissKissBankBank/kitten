@@ -5,7 +5,6 @@ import Image from '../components/image'
 import TitleComponent from '../components/title'
 import Subtitle from '../components/subtitle'
 import CardButton from '../components/button'
-import Loading from '../components/loading'
 import State from '../components/state'
 import { pxToRem } from '../../../../helpers/utils/typography'
 
@@ -93,7 +92,7 @@ export class CrowdfundingCardWidget extends PureComponent {
         </StyledTitleAndDescription>
         <CardButton text={buttonText} loading={loading} />
         <State widgetState={state} loading={loading} />
-        <Loading loading={loading} />
+        {loading && <span className="k-CrowdfundingCard__loading" />}
       </StyledContainer>
     )
   }
