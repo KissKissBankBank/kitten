@@ -23,7 +23,7 @@ const StyledTitleWithStroke = styled.div`
     ${TYPOGRAPHY.fontStyles.bold};
   }
 
-  ${titleModifierStyles('k-TitleWithStroke__title')}
+  ${titleModifierStyles('.k-TitleWithStroke__title')}
 
   &.k-TitleWithStroke--italic .k-TitleWithStroke__title {
     font-style: italic;
@@ -35,7 +35,7 @@ const StyledTitleWithStroke = styled.div`
     border: none;
   }
 
-  ${strokeModifierStyles('k-TitleWithStroke__stroke')}
+  ${strokeModifierStyles('.k-TitleWithStroke__stroke')}
 `
 
 export const TitleWithStroke = ({

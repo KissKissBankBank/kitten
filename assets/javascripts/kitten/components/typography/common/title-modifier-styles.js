@@ -53,21 +53,33 @@ const titleModifiers = [
   },
 ]
 
-export const titleModifierStyles = prefix => {
-  return titleModifiers.map(key => {
+export const titleModifierStyles = prefix => css`
+  ${titleModifiers.map(key => {
     return css`
-      ${`.${prefix}--${key.name}`} {
+      ${`${prefix}--${key.name}`} {
         font-size: ${stepToRem(key.fontStepOnMobile)};
         line-height: 1.2;
-
-        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-          font-size: ${stepToRem(key.fontStepOnTablet)};
-        }
-
-        @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-          font-size: ${stepToRem(key.fontStepOnDesktop)};
-        }
       }
     `
-  })
-}
+  })}
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    ${titleModifiers.map(key => {
+      return css`
+        ${`${prefix}--${key.name}`} {
+          font-size: ${stepToRem(key.fontStepOnTablet)};
+        }
+      `
+    })}
+  }
+
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    ${titleModifiers.map(key => {
+      return css`
+        ${`${prefix}--${key.name}`} {
+          font-size: ${stepToRem(key.fontStepOnDesktop)};
+        }
+      `
+    })}
+  }
+`
