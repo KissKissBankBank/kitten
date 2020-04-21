@@ -6,7 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add editor icons:
   - `BoldIcon`
-  - `Blockquote`
+  - `BlockquoteIcon`
   - `ListIcon`
   - `VideoIcon`
   - `Title1Icon`
