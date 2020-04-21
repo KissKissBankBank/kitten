@@ -4,22 +4,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `preferCompletePaginationOnMobile` prop on `Carousel`.
-- Feature: Add `tinyButtons` prop on `Carousel`.
-- Feature: Create `EngagementCardWithImage` component.
-- Fix: Adjust `button` size to follow guidelines on Mobile.
-- Feature: Update `Title` component and add new doc.
-- Feature: Add `RocketIcon` and `RocketCircleIcon` components.
-- Feature: Create `ProgressRing` component.
-- Feature: Add `TitleWithStroke` component.
-- Feature: Add `titleModifierStyles` common style for titles.
-- Feature: Add `strokeModifierStyles` common style for horizontal strokes.
-- Fix: Modernize `Video` component.
-- Fix: Use `styled-components` instead of `Radium` for `EmbedPlayer` component.
-- Doc: Add a doc for style `utilities`.
-- Feature: Add pagination position `bottom-left` and `bottom-right` on Carousel.
-- Feature: Add pagination squares via `showPageSquares` prop on Carousel.
-- Feature: Add Loop feature and `loop` prop on Carousel.
+## [2.65.0] - 2020-04-21
+
+Doc:
+- Add a doc for style `utilities`.
+
+Features:
+- Create `EngagementCardWithImage` component.
+- Add `RocketIcon` and `RocketCircleIcon` components.
+- Create `ProgressRing` component.
+- Update `Title` component and add new doc.
+- Add `TitleWithStroke` component.
+- Add `titleModifierStyles` common style for titles.
+- Add `strokeModifierStyles` common style for horizontal strokes.
+- Add `tinyButtons` prop on `Carousel`.
+- Add `preferCompletePaginationOnMobile` prop on `Carousel`.
+- Add pagination position `bottom-left` and `bottom-right` on `Carousel`.
+- Add pagination squares via `showPageSquares` prop on `Carousel`.
+- Add loop feature via `loop` prop on `Carousel`.
+
+Fixes:
+- Adjust `button` size to follow guidelines on Mobile.
+- Modernize `Video` component.
+- Use `styled-components` instead of `Radium` for `EmbedPlayer` component.
 
 ## [2.64.0] - 2020-04-07
 
