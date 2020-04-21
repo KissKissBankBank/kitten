@@ -92,8 +92,12 @@ const StyledTitle = styled(Title)`
   line-height: 1.2;
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    font-size: ${stepToRem(4)};
+    font-size: ${stepToRem(2)};
     margin: ${pxToRem(15)} 0;
+  }
+
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    font-size: ${stepToRem(4)};
   }
 
   ${({ horizontalCard }) =>
@@ -103,8 +107,12 @@ const StyledTitle = styled(Title)`
       font-size: ${stepToRem(-1)};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        font-size: ${stepToRem(2)};
+        font-size: ${stepToRem(1)};
         margin: ${pxToRem(10)} 0;
+      }
+
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        font-size: ${stepToRem(2)};
       }
     `}
 `
