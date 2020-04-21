@@ -10,6 +10,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Update `Title` component and add new doc.
 - Feature: Add `RocketIcon` and `RocketCircleIcon` components.
 - Feature: Create `ProgressRing` component.
+- Feature: Add `TitleWithStroke` component.
+- Feature: Add `titleModifierStyles` common style for titles.
+- Feature: Add `strokeModifierStyles` common style for horizontal strokes.
 - Fix: Modernize `Video` component.
 - Fix: Use `styled-components` instead of `Radium` for `EmbedPlayer` component.
 - Doc: Add a doc for style `utilities`.
