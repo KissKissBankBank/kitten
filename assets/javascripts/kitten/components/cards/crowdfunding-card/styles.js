@@ -59,6 +59,46 @@ export const StyledCrowdfundingCard = styled.div`
     }
   }
 
+  .k-CrowdfundingCard__informations {
+    margin-top: ${pxToRem(15)};
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    line-height: 1;
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      margin-top: ${pxToRem(20)};
+      padding: 0 ${COMPONENT_GUTTER};
+    }
+  }
+
+  .k-CrowdfundingCard__informations__info {
+    margin-right: ${pxToRem(15)};
+    margin-bottom: ${pxToRem(5)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      margin-right: ${pxToRem(20)};
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .k-CrowdfundingCard__informations__loadingElement {
+    display: block;
+    background-color: ${COLORS.line2};
+    border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
+    width: ${pxToRem(40)};
+    height: ${pxToRem(16)};
+
+    &:last-of-type {
+      width: ${pxToRem(65)};
+      border-top: ${pxToRem(1)} solid ${COLORS.background1};
+      border-bottom: 0;
+    }
+  }
+
   .k-CrowdfundingCard__progressBar {
     display: flex;
     flex-direction: row;
