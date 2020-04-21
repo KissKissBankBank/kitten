@@ -12,35 +12,35 @@ import {
 import { EmbedPlayer } from '../../../../components/media/embed-player'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 
-const StyledGrid = styled(Grid)`
+const StyledVideo = styled(Grid)`
   align-items: center;
-`
 
-const VideoContainer = styled.div`
-  position: relative;
-  margin-left: ${pxToRem(-CONTAINER_PADDING_THIN)};
-  background-color: ${COLORS.font1};
+  .Video__videoContainer {
+    position: relative;
+    margin-left: ${pxToRem(-CONTAINER_PADDING_THIN)};
+    background-color: ${COLORS.font1};
 
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    margin-left: ${pxToRem(-CONTAINER_PADDING)};
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin-left: ${pxToRem(-CONTAINER_PADDING)};
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      margin-right: ${pxToRem(20)};
+    }
   }
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    margin-right: ${pxToRem(20)};
-  }
-`
 
-const StyledParagraph = styled(Paragraph)`
-  font-size: ${stepToRem(-2)};
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    font-size: ${stepToRem(-1)};
+  .Video__styledParagraph {
+    font-size: ${stepToRem(-2)};
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      font-size: ${stepToRem(-1)};
+    }
   }
 `
 
 export const Video = () => {
   return (
-    <StyledGrid>
+    <StyledVideo className="Video">
       <GridCol col-l={9}>
-        <VideoContainer>
+        <div className="Video__videoContainer">
           <EmbedPlayer
             previewProps={{
               thumbnail: {
@@ -60,7 +60,7 @@ export const Video = () => {
               ></iframe>
             `}
           />
-        </VideoContainer>
+        </div>
       </GridCol>
       <GridCol
         col-s={10}
@@ -69,17 +69,22 @@ export const Video = () => {
         offset-l={0}
         className="k-u-align-center k-Grid__col--offset-0@l"
       >
-        <TitleWithStroke modifier="senary" tag="h2" align="center">
+        <TitleWithStroke
+          modifier="senary"
+          tag="h2"
+          align="center"
+          className="k-u-margin-top-triple k-u-margin-top-quadruple@s-up k-u-margin-top-none@l-up--important"
+        >
           Maecenas sed diam eget risus varius blandit sit amet non magna.
         </TitleWithStroke>
-        <StyledParagraph className="k-u-margin-none">
+        <Paragraph className="Video__styledParagraph k-u-margin-none">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
           nibh, ut fermentum massa justo sit amet risus. Nulla vitae elit
           libero, a pharetra augue. Etiam porta sem malesuada magna mollis
           euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
           venenatis vestibulum.
-        </StyledParagraph>
+        </Paragraph>
       </GridCol>
-    </StyledGrid>
+    </StyledVideo>
   )
 }

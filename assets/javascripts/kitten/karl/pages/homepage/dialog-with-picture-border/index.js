@@ -20,7 +20,7 @@ const oneGridColXl = `${pxToRem(
   (CONTAINER_MAX_WIDTH - paddingPlusGutters) / 12,
 )}`
 
-const StyledSection = styled.div`
+const StyledDialogWithPictureBorder = styled.div`
   background-color: #ffebe0;
   padding-top: ${pxToRem(50)};
   padding-bottom: ${pxToRem(50)};
@@ -38,75 +38,76 @@ const StyledSection = styled.div`
   @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
     margin: 0 auto;
   }
-`
 
-const StyledCard = styled.div`
-  background-color: white;
-  padding-top: ${pxToRem(50)};
-  padding-bottom: ${pxToRem(50)};
+  .DialogWithPictureBorder__card {
+    background-color: white;
+    padding-top: ${pxToRem(50)};
+    padding-bottom: ${pxToRem(50)};
 
-  margin: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    padding-top: ${pxToRem(80)};
-    padding-bottom: ${pxToRem(80)};
-
-    margin: 0 ${pxToRem(CONTAINER_PADDING)};
-  }
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    margin: 0 calc(${oneGridCol} + ${pxToRem(GUTTER)});
-  }
-  @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
-    margin: 0 calc(${oneGridColXl} + ${pxToRem(GUTTER)});
-  }
-`
-const StyledContent = styled.div`
-  margin: 0 ${pxToRem(30)};
-
-  text-align: center;
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    padding: 0 ${pxToRem(GUTTER)};
-    margin: 0 ${pxToRem(oneGridCol)};
-  }
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    padding: 0 ${pxToRem(2 * GUTTER)};
-    margin: 0 calc(2 * ${oneGridCol});
-  }
-  @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
-    margin: 0 calc(2 * ${oneGridColXl});
-  }
-`
-
-const StyledParagraph = styled(Paragraph)`
-  margin-bottom: ${pxToRem(40)};
-
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    margin-bottom: ${pxToRem(30)};
-    font-size: ${stepToRem(-2)};
-  }
-`
-
-const StyledButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    flex-direction: column-reverse;
-  }
-
-  & > :last-child {
-    margin: 0 0 ${pxToRem(GUTTER)} 0;
+    margin: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      margin: 0 0 0 ${pxToRem(GUTTER)};
+      padding-top: ${pxToRem(80)};
+      padding-bottom: ${pxToRem(80)};
+
+      margin: 0 ${pxToRem(CONTAINER_PADDING)};
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      margin: 0 calc(${oneGridCol} + ${pxToRem(GUTTER)});
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
+      margin: 0 calc(${oneGridColXl} + ${pxToRem(GUTTER)});
     }
   }
-`
 
-const StyledButtonWidthSetter = styled.span`
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    width: 100% !important;
+  .DialogWithPictureBorder__content {
+    margin: 0 ${pxToRem(30)};
+
+    text-align: center;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      padding: 0 ${pxToRem(GUTTER)};
+      margin: 0 ${pxToRem(oneGridCol)};
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      padding: 0 ${pxToRem(2 * GUTTER)};
+      margin: 0 calc(2 * ${oneGridCol});
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
+      margin: 0 calc(2 * ${oneGridColXl});
+    }
+  }
+
+  .DialogWithPictureBorder__paragraph {
+    margin-bottom: ${pxToRem(40)};
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      margin-bottom: ${pxToRem(30)};
+      font-size: ${stepToRem(-2)};
+    }
+  }
+
+  .DialogWithPictureBorder__buttonContainer {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      flex-direction: column-reverse;
+    }
+
+    & > :last-child {
+      margin: 0 0 ${pxToRem(GUTTER)} 0;
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        margin: 0 0 0 ${pxToRem(GUTTER)};
+      }
+    }
+  }
+
+  .DialogWithPictureBorder__buttonWidthSetter {
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      width: 100% !important;
+    }
   }
 `
 
@@ -127,13 +128,16 @@ export const DialogWithPictureBorder = () => {
   }, [])
 
   return (
-    <StyledSection>
-      <StyledCard>
-        <StyledContent>
+    <StyledDialogWithPictureBorder className="DialogWithPictureBorder">
+      <div className="DialogWithPictureBorder__card">
+        <div className="DialogWithPictureBorder__content">
           <TitleWithStroke modifier="quaternary" tag="h2" align="center">
             L’idée, c’est de se lancer !
           </TitleWithStroke>
-          <StyledParagraph className="k-u-margin-none" modifier="quaternary">
+          <Paragraph
+            className="DialogWithPictureBorder__paragraph k-u-margin-none"
+            modifier="quaternary"
+          >
             Citoyenneté, optimiste et indépendance. Créé en 2009,
             KissKissBankBank, pionnier du financement participatif en France,
             reste fidèle à ses trois valeurs fondamentales. Notre ambition ?
@@ -141,21 +145,27 @@ export const DialogWithPictureBorder = () => {
             associatifs et entrepreneuriaux. Depuis 10 ans, la force du
             collectif libère la créativité et le crowdfunding est devenu une
             fabrique à optimisme.
-          </StyledParagraph>
-          <StyledButtonContainer>
-            <StyledButtonWidthSetter ref={button_1}>
+          </Paragraph>
+          <div className="DialogWithPictureBorder__buttonContainer">
+            <span
+              className="DialogWithPictureBorder__buttonWidthSetter"
+              ref={button_1}
+            >
               <Button modifier="hydrogen" big fluid>
                 Lancez votre projet
               </Button>
-            </StyledButtonWidthSetter>
-            <StyledButtonWidthSetter ref={button_2}>
+            </span>
+            <span
+              className="DialogWithPictureBorder__buttonWidthSetter"
+              ref={button_2}
+            >
               <Button modifier="helium" big fluid>
                 Découvrez nos valeurs
               </Button>
-            </StyledButtonWidthSetter>
-          </StyledButtonContainer>
-        </StyledContent>
-      </StyledCard>
-    </StyledSection>
+            </span>
+          </div>
+        </div>
+      </div>
+    </StyledDialogWithPictureBorder>
   )
 }
