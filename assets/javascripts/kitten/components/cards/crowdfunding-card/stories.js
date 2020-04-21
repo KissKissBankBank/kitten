@@ -61,6 +61,7 @@ export const CrowdfundingCard = () => (
       ownerTitle={text('Owner title', 'Owner title')}
       ownerDescription={text('Owner description', 'Owner description')}
       loading={boolean('Loading', false)}
+      stretch={boolean('Stretch', false)}
       cardTitle={text(
         'Title',
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
@@ -85,6 +86,7 @@ export const CrowdfundingCardWidget = () => (
       ownerTitle={text('Owner title', 'Owner title')}
       ownerDescription={text('Owner description', 'Owner description')}
       loading={boolean('Loading', false)}
+      stretch={boolean('Stretch', false)}
       title={text(
         'Title',
         'Lorem ipsum dolor sit amet, consectetuer adipiscing elit…',

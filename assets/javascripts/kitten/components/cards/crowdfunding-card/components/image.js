@@ -48,7 +48,7 @@ class Image extends PureComponent {
     } = this.props
 
     return (
-      <>
+      <div className="k-CrowdfundingCard__image">
         <div
           className="k-CrowdfundingCard__image__imageContainer"
           style={{ backgroundColor: imageContainerBackground }}
@@ -95,7 +95,7 @@ class Image extends PureComponent {
             </Text>
           </div>
         </div>
-      </>
+      </div>
     )
   }
 }

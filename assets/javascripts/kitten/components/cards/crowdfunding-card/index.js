@@ -13,11 +13,13 @@ export class CrowdfundingCard extends PureComponent {
   static propTypes = {
     href: PropTypes.string,
     titlesMinHeight: PropTypes.bool,
+    stretch: PropTypes.bool,
   }
 
   static defaultProps = {
     href: null,
     titlesMinHeight: true,
+    stretch: false,
   }
 
   removeCurrentFocus = () => {
@@ -33,6 +35,7 @@ export class CrowdfundingCard extends PureComponent {
       ownerDescription,
       ownerTitle,
       loading,
+      stretch,
       state,
       cardTitle,
       cardSubTitle,
@@ -61,6 +64,7 @@ export class CrowdfundingCard extends PureComponent {
           {
             'k-CrowdfundingCard--titlesMinHeight': titlesMinHeight,
             'k-CrowdfundingCard--isLoading': loading,
+            'k-CrowdfundingCard--isStretched': stretch,
           },
         )}
         href={href}

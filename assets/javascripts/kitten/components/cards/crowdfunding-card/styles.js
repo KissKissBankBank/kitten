@@ -16,6 +16,7 @@ export const StyledCrowdfundingCard = styled.div`
   position: relative;
   padding-bottom: ${pxToRem(5)};
   overflow: hidden;
+  display: block;
 
   .k-CrowdfundingCard__paddedContainer {
     padding: 0 ${COMPONENT_GUTTER};
@@ -280,6 +281,21 @@ export const StyledCrowdfundingCard = styled.div`
 
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       min-height: ${pxToRem(75)};
+    }
+  }
+
+  /* isStretched */
+
+  &.k-CrowdfundingCard--isStretched {
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .k-CrowdfundingCard__titleAndDesc {
+      flex-grow: 1;
+      flex-shrink: 0;
     }
   }
 `

@@ -110,6 +110,7 @@ const PopularProjectsBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => {
             info1={<InfoComponent />}
             info2={<InfoComponent />}
             info3={<InfoComponent />}
+            stretch
           />
         ))}
       </Carousel>
