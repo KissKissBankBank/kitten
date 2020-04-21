@@ -95,6 +95,40 @@ export const StyledCrowdfundingCard = styled.div`
     }
   }
 
+  .k-CrowdfundingCard__subtitle__container {
+    display: none;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      display: flex;
+      align-items: center;
+      line-height: 1;
+      padding: 0 ${COMPONENT_GUTTER};
+      margin-top: ${pxToRem(10)};
+    }
+  }
+
+  .k-CrowdfundingCard__subtitle__subtitleText {
+    line-height: 1;
+    flex: 1;
+
+    &.k-CrowdfundingCard__subtitle__subtitleText--truncated {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  .k-CrowdfundingCard__subtitle__horizontalStroke {
+    flex-shrink: 0;
+    margin: ${pxToRem(5)} ${COMPONENT_GUTTER} ${pxToRem(5)} 0;
+  }
+
+  .k-CrowdfundingCard__subtitle__loadingElement {
+    display: block;
+    background-color: ${COLORS.line2};
+    width: ${pxToRem(80)};
+    height: ${pxToRem(12)};
+  }
+
   .k-CrowdfundingCard__informations {
     margin-top: ${pxToRem(15)};
     display: flex;
@@ -212,6 +246,10 @@ export const StyledCrowdfundingCard = styled.div`
       border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
       width: ${pxToRem(70)};
       height: ${pxToRem(14)};
+    }
+
+    .k-CrowdfundingCard__subtitle__horizontalStroke {
+      background-color: ${COLORS.line2};
     }
 
     .k-CrowdfundingCard__image__description {
