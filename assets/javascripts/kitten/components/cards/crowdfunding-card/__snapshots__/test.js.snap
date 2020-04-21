@@ -328,19 +328,19 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   }
 }
 
-@media (max-width:47.9375rem) {
+@media (max-width:39.9375rem) {
   .c0 .k-CrowdfundingCard__image__ownerContainer {
     display: none;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__title {
     padding: 0 0.625rem;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__title__title {
     font-size: 1.265625rem;
   }
@@ -362,33 +362,33 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__informations {
     margin-top: 1.25rem;
     padding: 0 0.625rem;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__informations__info {
     margin-right: 1.25rem;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__progressBar {
     padding: 0 0.625rem;
     margin-bottom: 1.25rem;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
     padding: 0 0.625rem 0 0;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
     min-height: 4.6875rem;
   }
@@ -912,19 +912,19 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   fill: #fff;
 }
 
-@media (max-width:47.9375rem) {
+@media (max-width:39.9375rem) {
   .c0 .k-CrowdfundingCard__image__ownerContainer {
     display: none;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__title {
     padding: 0 0.625rem;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__title__title {
     font-size: 1.265625rem;
   }
@@ -946,33 +946,33 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__informations {
     margin-top: 1.25rem;
     padding: 0 0.625rem;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__informations__info {
     margin-right: 1.25rem;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__progressBar {
     padding: 0 0.625rem;
     margin-bottom: 1.25rem;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
     padding: 0 0.625rem 0 0;
   }
 }
 
-@media (min-width:48rem) {
+@media (min-width:40rem) {
   .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
     min-height: 4.6875rem;
   }

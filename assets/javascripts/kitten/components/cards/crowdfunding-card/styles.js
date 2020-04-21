@@ -59,7 +59,7 @@ export const StyledCrowdfundingCard = styled.div`
     margin-top: ${pxToRem(-30)};
     background-color: ${COLORS.background1};
 
-    @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
       display: none;
     }
   }
@@ -70,7 +70,7 @@ export const StyledCrowdfundingCard = styled.div`
     line-height: 1;
     margin-top: ${pxToRem(10)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       padding: 0 ${COMPONENT_GUTTER};
     }
   }
@@ -78,7 +78,7 @@ export const StyledCrowdfundingCard = styled.div`
   .k-CrowdfundingCard__title__title {
     font-size: ${stepToRem(-1)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       font-size: ${stepToRem(2)};
     }
   }
@@ -137,7 +137,7 @@ export const StyledCrowdfundingCard = styled.div`
     padding: 0;
     line-height: 1;
 
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       margin-top: ${pxToRem(20)};
       padding: 0 ${COMPONENT_GUTTER};
     }
@@ -147,7 +147,7 @@ export const StyledCrowdfundingCard = styled.div`
     margin-right: ${pxToRem(15)};
     margin-bottom: ${pxToRem(5)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       margin-right: ${pxToRem(20)};
     }
 
@@ -178,7 +178,7 @@ export const StyledCrowdfundingCard = styled.div`
     margin-top: ${pxToRem(5)};
     margin-bottom: ${pxToRem(10)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       padding: 0 ${COMPONENT_GUTTER};
       margin-bottom: ${pxToRem(20)};
     }
@@ -222,7 +222,7 @@ export const StyledCrowdfundingCard = styled.div`
     }
 
     .k-CrowdfundingCard__title {
-      @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         padding: 0 ${COMPONENT_GUTTER} 0 0;
       }
     }
@@ -279,7 +279,7 @@ export const StyledCrowdfundingCard = styled.div`
   &.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
     min-height: ${pxToRem(50)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       min-height: ${pxToRem(75)};
     }
   }
