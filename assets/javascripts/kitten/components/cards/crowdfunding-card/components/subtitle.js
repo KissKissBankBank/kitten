@@ -79,7 +79,7 @@ class Subtitle extends PureComponent {
 
     return (
       <>
-        {StyledWidgetSubtitle && !loading && (
+        {widgetSubtitle && !loading && (
           <Text
             className="k-u-margin-top-noneHalf k-u-margin-bottom-double"
             tag="p"
