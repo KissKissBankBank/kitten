@@ -118,7 +118,7 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
         paginationPosition={{ default: 'bottom' }}
         tinyButtons
         showPageSquares
-        hidePageControl
+        preferCompletePaginationOnMobile
       >
         {selectionData.map((item, index) => (
           <div>

@@ -82,6 +82,7 @@ class CarouselBase extends Component {
     hidePagination: false,
     showOtherPages: false,
     pagesClassName: null,
+    preferCompletePaginationOnMobile: false,
     paginationPosition: {
       default: 'right',
       fromM: 'bottom',
@@ -105,6 +106,7 @@ class CarouselBase extends Component {
     hidePagination: PropTypes.bool,
     showOtherPages: PropTypes.bool,
     pagesClassName: PropTypes.string,
+    preferCompletePaginationOnMobile: PropTypes.bool,
     paginationPosition: PropTypes.shape({
       default: propTypesPositions,
       fromXxs: propTypesPositions,
@@ -242,7 +244,7 @@ class CarouselBase extends Component {
       firstButtonText,
       lastButtonText,
       showPageSquares,
-      hidePageControl,
+      preferCompletePaginationOnMobile,
       loop,
     } = this.props
     const { indexPageVisible, numPages } = this.state
@@ -256,7 +258,7 @@ class CarouselBase extends Component {
     if (viewportIsXSOrLess && hidePaginationOnMobile) return
     if (numPages <= 1) return
 
-    if (viewportIsXSOrLess) {
+    if (viewportIsXSOrLess && !preferCompletePaginationOnMobile) {
       const rangePage = createRangeFromZeroTo(numPages)
 
       return (
