@@ -68,7 +68,7 @@ class Image extends PureComponent {
             <ButtonImage
               className="k-CrowdfundingCard__image__avatar"
               tag="span"
-              img={!loading && avatarProps}
+              img={!loading ? avatarProps : null}
               withoutPointerEvents
             />
           </div>
