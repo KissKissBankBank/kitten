@@ -1,6 +1,6 @@
-import React, {useEffect, useRef} from 'react'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { Title } from '../../../../components/typography/title'
+import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
 import { Paragraph } from '../../../../components/typography/paragraph'
 import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
@@ -10,14 +10,15 @@ import {
   CONTAINER_PADDING_THIN,
   CONTAINER_PADDING,
 } from '../../../../constants/grid-config'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import { Button } from '../../../../components/buttons/button/button'
 import { cssPropertyDistributor } from '../../../../helpers/dom/css-property-distributor'
 import domElementHelper from '../../../../helpers/dom/element-helper'
 
-const paddingPlusGutters = (2 * CONTAINER_PADDING) + (11 * GUTTER)
+const paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER
 const oneGridCol = `calc((100vw - ${pxToRem(paddingPlusGutters)}) / 12)`
-const oneGridColXl = `${pxToRem((CONTAINER_MAX_WIDTH - paddingPlusGutters) / 12)}`
+const oneGridColXl = `${pxToRem(
+  (CONTAINER_MAX_WIDTH - paddingPlusGutters) / 12,
+)}`
 
 const StyledSection = styled.div`
   background-color: #ffebe0;
@@ -77,13 +78,6 @@ const StyledContent = styled.div`
   }
 `
 
-const StyledHorizontalStroke = styled(HorizontalStroke)`
-  width: ${pxToRem(30)};
-  height: ${pxToRem(4)};
-
-  margin: ${pxToRem(15)} auto ${pxToRem(30)};
-`
-
 const StyledParagraph = styled(Paragraph)`
   margin-bottom: ${pxToRem(40)};
 
@@ -116,48 +110,52 @@ const StyledButtonWidthSetter = styled.span`
   }
 `
 
-const StyledButton = styled(Button)`
-  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
-    width: 100%;
-  }
-`
-
 export const DialogWithPictureBorder = () => {
   const button_1 = useRef(null)
   const button_2 = useRef(null)
 
   useEffect(() => {
     if (domElementHelper.canUseDom() && typeof document !== 'undefined') {
-      document.fonts.ready.then(() => cssPropertyDistributor({
-        elements: [button_1.current, button_2.current],
-        property: 'width',
-        direction: 'max',
-      })
-    )}
+      document.fonts.ready.then(() =>
+        cssPropertyDistributor({
+          elements: [button_1.current, button_2.current],
+          property: 'width',
+          direction: 'max',
+        }),
+      )
+    }
   }, [])
 
   return (
     <StyledSection>
       <StyledCard>
         <StyledContent>
-          <Title modifier="quaternary" tag="h2" margin={false}>
+          <TitleWithStroke modifier="quaternary" tag="h2" align="center">
             L’idée, c’est de se lancer !
-          </Title>
-          <StyledHorizontalStroke />
+          </TitleWithStroke>
           <StyledParagraph className="k-u-margin-none" modifier="quaternary">
-            Citoyenneté, optimiste et indépendance. Créé en 2009, KissKissBankBank, pionnier du financement participatif en France, reste fidèle à ses trois valeurs fondamentales. Notre ambition ? Permettre à toutes et tous de financer ses projets créatifs, associatifs et entrepreneuriaux. Depuis 10 ans, la force du collectif libère la créativité et le crowdfunding est devenu une fabrique à optimisme.
+            Citoyenneté, optimiste et indépendance. Créé en 2009,
+            KissKissBankBank, pionnier du financement participatif en France,
+            reste fidèle à ses trois valeurs fondamentales. Notre ambition ?
+            Permettre à toutes et tous de financer ses projets créatifs,
+            associatifs et entrepreneuriaux. Depuis 10 ans, la force du
+            collectif libère la créativité et le crowdfunding est devenu une
+            fabrique à optimisme.
           </StyledParagraph>
           <StyledButtonContainer>
             <StyledButtonWidthSetter ref={button_1}>
               <Button modifier="hydrogen" big fluid>
                 Lancez votre projet
-              </Button></StyledButtonWidthSetter>
+              </Button>
+            </StyledButtonWidthSetter>
             <StyledButtonWidthSetter ref={button_2}>
               <Button modifier="helium" big fluid>
                 Découvrez nos valeurs
-              </Button></StyledButtonWidthSetter>
+              </Button>
+            </StyledButtonWidthSetter>
           </StyledButtonContainer>
         </StyledContent>
       </StyledCard>
     </StyledSection>
-)}
+  )
+}
