@@ -144,6 +144,10 @@ const StyledText = styled(Text)`
 const StyledProgress = styled.div`
   display: flex;
 `
+const StyledProgressRing = styled.div`
+  display: flex;
+  margin-left: ${pxToRem(-2)};
+`
 
 const StyledProgressText = styled(Text)`
   margin-left: ${pxToRem(10)};
@@ -238,7 +242,7 @@ const CardBase = ({
       )}
 
         {!overtimeProgress && !successProgress && (
-          <StyledProgress style={{ marginLeft: -2 }}>
+          <StyledProgressRing>
             <ProgressRing
               value={75}
               width={viewportIsXSOrLess ? 24 : 28}
@@ -248,7 +252,7 @@ const CardBase = ({
             <StyledProgressText size="micro" color="font1" weight="regular">
               Financé à 50%
             </StyledProgressText>
-          </StyledProgress>
+          </StyledProgressRing>
         )}
 
         <StyledTitle
