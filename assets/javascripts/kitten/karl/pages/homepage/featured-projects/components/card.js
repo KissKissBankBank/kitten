@@ -8,7 +8,7 @@ import { ScreenConfig } from '../../../../../constants/screen-config'
 import { Grid, GridCol } from '../../../../../components/grid/grid'
 import { ProgressRing } from '../../../../../components/meters/progress-ring'
 import COLORS from '../../../../../constants/colors-config'
-import { CheckedCircleIcon } from '../../../../../components/icons/checked-circle-icon'
+import { CheckedIcon } from '../../../../../components/icons/checked-icon'
 import { RocketCircleIcon } from '../../../../../components/icons/rocket-circle-icon'
 import { mediaQueries } from '../../../../../hoc/media-queries'
 
@@ -179,9 +179,14 @@ const StyledImage = styled.img`
     `}
 `
 
-const StyledCheckedCircleIcon = styled(CheckedCircleIcon)`
+const StyledCheckedCircleIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: ${pxToRem(20)};
   height: ${pxToRem(20)};
+  border-radius: 100%;
+  background-color: ${COLORS.valid};
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     width: ${pxToRem(24)};
@@ -190,11 +195,9 @@ const StyledCheckedCircleIcon = styled(CheckedCircleIcon)`
 `
 
 const SuccessProgressIcon = () => (
-  <StyledCheckedCircleIcon
-    aria-hidden
-    circleColor={COLORS.valid}
-    checkedColor={COLORS.background1}
-  />
+  <StyledCheckedCircleIcon aria-hidden>
+    <CheckedIcon />
+  </StyledCheckedCircleIcon>
 )
 
 const OvertimeProgressIcon = () => (
@@ -211,6 +214,7 @@ const CardBase = ({
   viewportIsXSOrLess,
   ...props
 }) => {
+
   return (
     <StyledCard horizontalCard={horizontalCard} {...props}>
       <StyledImageContainer
