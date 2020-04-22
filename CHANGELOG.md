@@ -4,6 +4,24 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add editor icons:
+  - `BoldIcon`
+  - `BlockquoteIcon`
+  - `ListIcon`
+  - `VideoIcon`
+  - `Title1Icon`
+  - `Title2Icon`
+  - `Title3Icon`
+  - `Title4Icon`
+  - `ParagraphIcon`
+  - `ItalicIcon`
+  - `ImageIcon`
+  - `LinkIcon`
+  - `ButtonIcon`
+  - `AlignLeftIcon`
+  - `AlignCenterIcon`
+  - `AlignRightIcon`
+
 ## [2.65.0] - 2020-04-21
 
 Doc:
