@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <Container>
       <Grid>
-        <GridCol col="6" offset="3">
+        <GridCol>
           <Marger top="4" bottom="4">
             {children}
           </Marger>

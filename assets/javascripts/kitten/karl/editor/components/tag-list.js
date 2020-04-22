@@ -86,9 +86,9 @@ const TagList = () => {
       key={value}
       summaryRender={({ open }) => (
         <SummaryButton
-          type="button"
           title="Utiliser un paragraphe"
           className="is-selected"
+          tabIndex="-1"
         >
           <Component />
           <ArrowIcon width="6" direction={open ? 'top' : 'bottom'} />
