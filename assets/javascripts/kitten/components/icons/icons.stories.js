@@ -58,6 +58,21 @@ import { DocIcon } from './doc-icon'
 import { CameraIcon } from './camera-icon'
 import { RocketIcon } from './rocket-icon'
 import { RocketCircleIcon } from './rocket-circle-icon'
+import { BoldIcon } from './bold-icon'
+import { BlockquoteIcon } from './blockquote-icon'
+import { ListIcon } from './list-icon'
+import { VideoIcon } from './video-icon'
+import { Title1Icon } from './title-1-icon'
+import { Title2Icon } from './title-2-icon'
+import { Title3Icon } from './title-3-icon'
+import { Title4Icon } from './title-4-icon'
+import { ItalicIcon } from './italic-icon'
+import { ImageIcon } from './image-icon'
+import { LinkIcon } from './link-icon'
+import { ButtonIcon } from './button-icon'
+import { AlignLeftIcon } from './align-left-icon'
+import { AlignCenterIcon } from './align-center-icon'
+import { AlignRightIcon } from './align-right-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -114,6 +129,7 @@ export const AllIcons = () => {
         <IconContainer children={<SofortIcon />} />
         <IconContainer children={<VisaIcon />} />
       </Group>
+
       <Group title="Social">
         <IconContainer children={<EmailIcon />} />
         <IconContainer children={<FacebookIcon />} />
@@ -125,6 +141,25 @@ export const AllIcons = () => {
         <IconContainer children={<MessengerIcon />} />
         <IconContainer children={<WhatsAppIcon />} />
       </Group>
+
+      <Group title="Editor">
+        <IconContainer children={<BoldIcon />} />
+        <IconContainer children={<BlockquoteIcon />} />
+        <IconContainer children={<ListIcon />} />
+        <IconContainer children={<VideoIcon />} />
+        <IconContainer children={<Title1Icon />} />
+        <IconContainer children={<Title2Icon />} />
+        <IconContainer children={<Title3Icon />} />
+        <IconContainer children={<Title4Icon />} />
+        <IconContainer children={<ItalicIcon />} />
+        <IconContainer children={<ImageIcon />} />
+        <IconContainer children={<LinkIcon />} />
+        <IconContainer children={<ButtonIcon />} />
+        <IconContainer children={<AlignLeftIcon />} />
+        <IconContainer children={<AlignCenterIcon />} />
+        <IconContainer children={<AlignRightIcon />} />
+      </Group>
+
       <Group title="Others">
         <IconContainer children={<BurgerIcon />} />
         <IconContainer children={<GarbageIcon />} />
