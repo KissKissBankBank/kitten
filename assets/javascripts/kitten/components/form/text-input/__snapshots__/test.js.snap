@@ -2,7 +2,7 @@
 
 exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 iikjLD"
+  className="sc-AxirZ DWbNN"
   disabled={false}
   name="text"
 />
@@ -10,7 +10,7 @@ exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
+  className="sc-AxirZ fNOQKu"
   disabled={true}
   name="text"
 />
@@ -18,7 +18,7 @@ exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 qldNZ"
+  className="sc-AxirZ xUmbP"
   disabled={false}
   name="text"
 />
@@ -26,7 +26,7 @@ exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
+  className="sc-AxirZ fNOQKu"
   disabled={false}
   name="foobar"
 />
@@ -34,7 +34,7 @@ exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
+  className="sc-AxirZ fNOQKu"
   disabled={false}
   name="text"
 />
@@ -42,7 +42,7 @@ exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`tiny\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 bXbHeB"
+  className="sc-AxirZ ybBzL"
   disabled={false}
   name="text"
 />
@@ -50,7 +50,7 @@ exports[`<TextInput /> with \`tiny\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`valid\` prop matches with snapshot 1`] = `
 <input
-  className="text-input__StyledInput-sc-11wej6v-1 LSiDR"
+  className="sc-AxirZ klxVlX"
   disabled={false}
   name="text"
 />

@@ -2,25 +2,25 @@
 
 exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
 <div
-  className="counter-block__Container-dpxp7s-0 iAgYYc"
+  className="sc-AxhCb kYpcnu"
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 dZaGay"
+    className="sc-AxirZ ia-dERh"
   >
     <p
-      className="title__StyledTitle-sc-46lshq-0 hKBgXh"
+      className="sc-AxjAm fgcLvp"
     >
       foo
     </p>
   </div>
   <div
-    className="counter-block__FlexContainer-dpxp7s-1 jiRIRa"
+    className="sc-AxhUy jLaEYT"
   >
     <div
-      className="counter-block__StrokeContainer-dpxp7s-2 lhhVum k-u-hidden@m-down"
+      className="sc-AxgMl cwoYYF k-u-hidden@m-down"
     >
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN styledStroke"
+        className="sc-AxiKw gGNgIn styledStroke"
       />
     </div>
     <p
@@ -29,15 +29,15 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       13 106
     </p>
     <div
-      className="counter-block__StrokeContainer-dpxp7s-2 lhhVum k-u-hidden@m-down"
+      className="sc-AxgMl cwoYYF k-u-hidden@m-down"
     >
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gPtwkN styledStroke"
+        className="sc-AxiKw gGNgIn styledStroke"
       />
     </div>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gipxTe"
+    className="sc-AxirZ fuIQYB"
   >
     <p
       className="k-u-size-huge k-u-style-italic styledSubTitle"

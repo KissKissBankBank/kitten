@@ -2,16 +2,16 @@
 
 exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`] = `
 <div
-  className="comment-form__StyledGrid-sc-1yidca9-0 bjRtTv"
+  className="sc-AxgMl knLHFF"
 >
   <div
-    className="comment-avatar__StyledAvatar-sc-10x87zp-0 jrAalf"
+    className="sc-AxirZ gGevlS"
   >
     <div
-      className="comment-avatar__StyledPosition-sc-10x87zp-1 fYsIOh"
+      className="sc-AxiKw brNpYR"
     >
       <div
-        className="comment-avatar__StyledAvatarBadge-sc-10x87zp-3 kdMScJ"
+        className="sc-AxhUy gBoOQP"
       >
         <svg
           height="25"
@@ -35,7 +35,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         </svg>
       </div>
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 rgFnn"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxhCb juvezE"
         tabIndex={null}
       >
         <img
@@ -47,17 +47,17 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
     </div>
   </div>
   <div
-    className="comment-form__StyledGridCol-sc-1yidca9-1 eheln"
+    className="sc-AxheI AGTJS"
   >
     <div
-      className="comment-form__StyledInput-sc-1yidca9-2 jGDYMU"
+      className="sc-Axmtr esHwVP"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="comment-form__StyledTextarea-sc-1yidca9-3 kMpoKs"
+        className="sc-AxmLO gKBMez"
         defaultValue=""
         disabled={false}
         id={null}
@@ -66,15 +66,15 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         rows="1"
       />
       <div
-        className="comment-form__StyledArrow-sc-1yidca9-4 ktMkGK"
+        className="sc-fzozJi hsWJZb"
       >
         <span
-          className="comment-form__StyledArrowBefore-sc-1yidca9-5 kJoOIE"
+          className="sc-fzoLsD gFlHls"
         />
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 kDKIIl"
+      className="sc-AxjAm lhRnXR"
     >
       <span
         className="k-u-color-error k-u-size-micro k-u-weight-regular"
@@ -89,16 +89,16 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
 
 exports[`<CommentForm /> should match its empty snapshot 1`] = `
 <div
-  className="comment-form__StyledGrid-sc-1yidca9-0 bjRtTv"
+  className="sc-AxgMl knLHFF"
 >
   <div
-    className="comment-avatar__StyledAvatar-sc-10x87zp-0 jrAalf"
+    className="sc-AxirZ gGevlS"
   >
     <div
-      className="comment-avatar__StyledPosition-sc-10x87zp-1 fYsIOh"
+      className="sc-AxiKw brNpYR"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 rgFnn"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxhCb juvezE"
         tabIndex={null}
       >
         <img
@@ -110,17 +110,17 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     </div>
   </div>
   <div
-    className="comment-form__StyledGridCol-sc-1yidca9-1 eheln"
+    className="sc-AxheI AGTJS"
   >
     <div
-      className="comment-form__StyledInput-sc-1yidca9-2 jGDYMU"
+      className="sc-Axmtr esHwVP"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="comment-form__StyledTextarea-sc-1yidca9-3 kMpoKs"
+        className="sc-AxmLO gKBMez"
         defaultValue=""
         disabled={false}
         id="custom-textarea-id"
@@ -129,15 +129,15 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         rows="1"
       />
       <div
-        className="comment-form__StyledArrow-sc-1yidca9-4 ktMkGK"
+        className="sc-fzozJi hsWJZb"
       >
         <span
-          className="comment-form__StyledArrowBefore-sc-1yidca9-5 kJoOIE"
+          className="sc-fzoLsD gFlHls"
         />
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 kDKIIl"
+      className="sc-AxjAm lhRnXR"
     >
       <span
         className="k-u-color-error k-u-size-micro k-u-weight-regular"

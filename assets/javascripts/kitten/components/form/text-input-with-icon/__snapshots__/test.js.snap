@@ -2,11 +2,11 @@
 
 exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 <div
-  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fBAZZE"
+  className="sc-AxgMl UsqAV"
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
+    className="sc-AxirZ fNOQKu"
     disabled={false}
     name="text"
     style={
@@ -17,7 +17,7 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 eTfgiN"
+    className="sc-AxheI YMngi"
   >
     <svg
       aria-label={null}
@@ -46,11 +46,11 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fBAZZE"
+  className="sc-AxgMl UsqAV"
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
+    className="sc-AxirZ fNOQKu"
     disabled={true}
     name="text"
     style={
@@ -61,7 +61,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 gCOqRa"
+    className="sc-AxheI dMDeOR"
   >
     <svg
       aria-label={null}
@@ -90,11 +90,11 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 <div
-  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fBAZZE"
+  className="sc-AxgMl UsqAV"
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 ilMIhk"
+    className="sc-AxirZ fNOQKu"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -106,7 +106,7 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 eTfgiN"
+    className="sc-AxheI YMngi"
   >
     <svg
       aria-label={null}

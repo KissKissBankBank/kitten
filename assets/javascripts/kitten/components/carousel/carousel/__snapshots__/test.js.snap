@@ -2,23 +2,23 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="carousel__FlexContainer-sc-1o67jdh-0 jZORpt"
+  className="sc-AxmLO fGuvvD"
 >
   <div
-    className="carousel-inner__StyledCarouselInner-wljpd2-0 ffDrrB"
+    className="sc-AxgMl jWGKu"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 ddDhFH"
+      className="sc-AxheI fsZQch"
       onClick={[Function]}
     >
       <div
-        className="carousel-page__StyledPage-sc-12ynwqa-0 bKxLtX"
+        className="sc-AxhCb ffaSdK"
       >
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 htAxIJ"
+          className="sc-AxhUy hZqsUu"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -29,7 +29,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="marger__StyledMarger-q3lecu-0 jizFlm k-ProjectCard__grid--flex"
+                className="sc-fzqBZW czosQr k-ProjectCard__grid--flex"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -52,10 +52,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="marger__StyledMarger-q3lecu-0 dtnuLs k-ProjectCard__grid--flex"
+                className="sc-fzqBZW gxqxTd k-ProjectCard__grid--flex"
               >
                 <p
-                  className="title__StyledTitle-sc-46lshq-0 zZoGz k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-fzqNJr cMUvav k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -64,10 +64,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 bdXrGE"
+          className="sc-AxhUy ezsiGz"
         />
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 bdXrGE"
+          className="sc-AxhUy ezsiGz"
         />
       </div>
     </div>
@@ -77,23 +77,23 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="carousel__FlexContainer-sc-1o67jdh-0 jZORpt"
+  className="sc-AxmLO fGuvvD"
 >
   <div
-    className="carousel-inner__StyledCarouselInner-wljpd2-0 ffDrrB"
+    className="sc-AxgMl jWGKu"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 ddDhFH custom-class"
+      className="sc-AxheI fsZQch custom-class"
       onClick={[Function]}
     >
       <div
-        className="carousel-page__StyledPage-sc-12ynwqa-0 bKxLtX"
+        className="sc-AxhCb ffaSdK"
       >
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 htAxIJ"
+          className="sc-AxhUy hZqsUu"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -104,7 +104,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="marger__StyledMarger-q3lecu-0 jizFlm k-ProjectCard__grid--flex"
+                className="sc-fzqBZW czosQr k-ProjectCard__grid--flex"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -127,10 +127,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="marger__StyledMarger-q3lecu-0 dtnuLs k-ProjectCard__grid--flex"
+                className="sc-fzqBZW gxqxTd k-ProjectCard__grid--flex"
               >
                 <p
-                  className="title__StyledTitle-sc-46lshq-0 zZoGz k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-fzqNJr cMUvav k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -139,10 +139,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 fXrLHN"
+          className="sc-AxhUy iLqwOC"
         />
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 fXrLHN"
+          className="sc-AxhUy iLqwOC"
         />
       </div>
     </div>
@@ -152,23 +152,23 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="carousel__FlexContainer-sc-1o67jdh-0 jZORpt"
+  className="sc-AxmLO fGuvvD"
 >
   <div
-    className="carousel-inner__StyledCarouselInner-wljpd2-0 ffDrrB"
+    className="sc-AxgMl jWGKu"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 ddDhFH"
+      className="sc-AxheI fsZQch"
       onClick={[Function]}
     >
       <div
-        className="carousel-page__StyledPage-sc-12ynwqa-0 bKxLtX"
+        className="sc-AxhCb ffaSdK"
       >
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 htAxIJ"
+          className="sc-AxhUy hZqsUu"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -179,7 +179,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="marger__StyledMarger-q3lecu-0 jizFlm k-ProjectCard__grid--flex"
+                className="sc-fzqBZW czosQr k-ProjectCard__grid--flex"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -202,10 +202,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="marger__StyledMarger-q3lecu-0 dtnuLs k-ProjectCard__grid--flex"
+                className="sc-fzqBZW gxqxTd k-ProjectCard__grid--flex"
               >
                 <p
-                  className="title__StyledTitle-sc-46lshq-0 zZoGz k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-fzqNJr cMUvav k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -214,10 +214,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 bdXrGE"
+          className="sc-AxhUy ezsiGz"
         />
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 bdXrGE"
+          className="sc-AxhUy ezsiGz"
         />
       </div>
     </div>

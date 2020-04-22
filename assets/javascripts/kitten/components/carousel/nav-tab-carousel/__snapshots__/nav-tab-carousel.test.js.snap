@@ -2,13 +2,13 @@
 
 exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 <div
-  className="nav-tab-carousel__NavTabCarouselStyles-sc-1fg6mhx-0 icyVqu"
+  className="sc-fzoLsD kzHVOt"
 >
   <div
-    className="styled-components__StyledLeftArrowContainer-jws9qo-3 dnPjZi"
+    className="sc-AxhUy byrsIs"
   >
     <svg
-      className="arrow-icon__SvgArrow-sc-3d3g2f-0 duFhdG styled-components__StyledArrowIcon-jws9qo-4 cjPmGw"
+      className="sc-AxjAm iyaRGa sc-AxgMl bAIQAI"
       fill="#fff"
       height="5.64"
       viewBox="0 0 8.48 5.64"
@@ -20,37 +20,37 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="styled-components__StyledPrevText-jws9qo-5 bomtrh"
+      className="sc-AxheI WCLFo"
     >
       Foobar 1
     </div>
   </div>
   <div
-    className="pagination__PaginationStyles-sc-1thdyq2-1 eBOqrf"
+    className="sc-fzozJi fkodrX"
   >
     <a
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 eSDMFv"
+      className="sc-AxmLO ldZdaN"
       href="http://www.google.com"
     />
     <a
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 dlkEZs"
+      className="sc-AxmLO hpujIG"
       href="http://www.cowboybebop.com"
     />
     <a
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 eSDMFv"
+      className="sc-AxmLO ldZdaN"
       href="http://www.starwars.com"
     />
   </div>
   <div
-    className="styled-components__StyledRightArrowContainer-jws9qo-2 gdRJDC"
+    className="sc-AxhCb jkcSJn"
   >
     <div
-      className="styled-components__StyledNextText-jws9qo-6 lfJiMT"
+      className="sc-Axmtr kkxSIw"
     >
       Foobar 2
     </div>
     <svg
-      className="arrow-icon__SvgArrow-sc-3d3g2f-0 dRGAvD styled-components__StyledArrowIcon-jws9qo-4 cjPmGw"
+      className="sc-AxjAm hfhnnP sc-AxgMl bAIQAI"
       fill="#fff"
       height="5.64"
       viewBox="0 0 8.48 5.64"
@@ -67,13 +67,13 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 
 exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
 <div
-  className="nav-tab-carousel__NavTabCarouselStyles-sc-1fg6mhx-0 icyVqu"
+  className="sc-fzoLsD kzHVOt"
 >
   <div
-    className="styled-components__StyledLeftArrowContainer-jws9qo-3 dnPjZi"
+    className="sc-AxhUy byrsIs"
   >
     <svg
-      className="arrow-icon__SvgArrow-sc-3d3g2f-0 duFhdG styled-components__StyledArrowIcon-jws9qo-4 cjPmGw"
+      className="sc-AxjAm iyaRGa sc-AxgMl bAIQAI"
       fill="#fff"
       height="5.64"
       viewBox="0 0 8.48 5.64"
@@ -85,34 +85,34 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="styled-components__StyledPrevText-jws9qo-5 bomtrh"
+      className="sc-AxheI WCLFo"
     >
       Foobar 1
     </div>
   </div>
   <div
-    className="pagination__PaginationStyles-sc-1thdyq2-1 eBOqrf"
+    className="sc-fzozJi fkodrX"
   >
     <div
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 eSDMFv"
+      className="sc-AxmLO ldZdaN"
     />
     <div
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 dlkEZs"
+      className="sc-AxmLO hpujIG"
     />
     <div
-      className="pagination__BulletPointStyles-sc-1thdyq2-0 eSDMFv"
+      className="sc-AxmLO ldZdaN"
     />
   </div>
   <div
-    className="styled-components__StyledRightArrowContainer-jws9qo-2 gdRJDC"
+    className="sc-AxhCb jkcSJn"
   >
     <div
-      className="styled-components__StyledNextText-jws9qo-6 lfJiMT"
+      className="sc-Axmtr kkxSIw"
     >
       Foobar 2
     </div>
     <svg
-      className="arrow-icon__SvgArrow-sc-3d3g2f-0 dRGAvD styled-components__StyledArrowIcon-jws9qo-4 cjPmGw"
+      className="sc-AxjAm hfhnnP sc-AxgMl bAIQAI"
       fill="#fff"
       height="5.64"
       viewBox="0 0 8.48 5.64"

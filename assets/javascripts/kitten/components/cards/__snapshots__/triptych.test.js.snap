@@ -15,16 +15,16 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         data-radium={true}
       >
         <div
-          className="marger__StyledMarger-q3lecu-0 cPjjMS"
+          className="sc-AxjAm jidNFm"
         >
           <h2
-            className="title__StyledTitle-sc-46lshq-0 HFmia"
+            className="sc-AxirZ iHImxt"
           >
             Main title goes here !
           </h2>
         </div>
         <div
-          className="marger__StyledMarger-q3lecu-0 cPjjMS"
+          className="sc-AxjAm jidNFm"
         >
           <span
             className="rmq-f8208d89 k-VerticalStroke k-VerticalStroke--huge"
@@ -45,17 +45,17 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       style={Object {}}
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 mNaWa"
+        className="sc-AxjAm ibAVhG"
       >
         <div>
           <div
-            className="marger__StyledMarger-q3lecu-0 knIeYu"
+            className="sc-AxjAm hmwaKW"
           >
             <div
               data-radium={true}
             >
               <div
-                className="marger__StyledMarger-q3lecu-0 iUgzMH"
+                className="sc-AxjAm gLlDfb"
               >
                 <img
                   alt=""
@@ -70,16 +70,16 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 />
               </div>
               <div
-                className="marger__StyledMarger-q3lecu-0 fnnfRJ"
+                className="sc-AxjAm dxeZJh"
               >
                 <div
                   data-radium={true}
                 >
                   <div
-                    className="marger__StyledMarger-q3lecu-0 knIeYu"
+                    className="sc-AxjAm hmwaKW"
                   >
                     <h1
-                      className="title__StyledTitle-sc-46lshq-0 zZoGz"
+                      className="sc-AxirZ dbrwuw"
                       style={
                         Object {
                           "color": "#222",
@@ -94,7 +94,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 </div>
               </div>
               <div
-                className="marger__StyledMarger-q3lecu-0 fmxyxo"
+                className="sc-AxjAm kmIuYE"
               >
                 <button
                   className="k-Button k-Button--helium"
@@ -122,13 +122,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 kFTXvR"
+        className="sc-AxjAm jnggpx"
       >
         <div
           data-radium={true}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 iUgzMH"
+            className="sc-AxjAm gLlDfb"
           >
             <img
               alt=""
@@ -143,16 +143,16 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             />
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fnnfRJ"
+            className="sc-AxjAm dxeZJh"
           >
             <div
               data-radium={true}
             >
               <div
-                className="marger__StyledMarger-q3lecu-0 krszEY"
+                className="sc-AxjAm fKOaOg"
               >
                 <h1
-                  className="title__StyledTitle-sc-46lshq-0 zZoGz"
+                  className="sc-AxirZ dbrwuw"
                   style={
                     Object {
                       "color": "#222",
@@ -164,7 +164,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 </h1>
               </div>
               <div
-                className="marger__StyledMarger-q3lecu-0 hKnjWo"
+                className="sc-AxjAm dxQDWs"
               >
                 <p
                   className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -181,7 +181,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fmxyxo"
+            className="sc-AxjAm kmIuYE"
           >
             <button
               className="k-Button k-Button--helium"
@@ -209,13 +209,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       style={Object {}}
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 dWHioJ"
+        className="sc-AxjAm kazzXd"
       >
         <div
           data-radium={true}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 iUgzMH"
+            className="sc-AxjAm gLlDfb"
           >
             <img
               alt=""
@@ -230,16 +230,16 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             />
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fnnfRJ"
+            className="sc-AxjAm dxeZJh"
           >
             <div
               data-radium={true}
             >
               <div
-                className="marger__StyledMarger-q3lecu-0 knIeYu"
+                className="sc-AxjAm hmwaKW"
               >
                 <h1
-                  className="title__StyledTitle-sc-46lshq-0 zZoGz"
+                  className="sc-AxirZ dbrwuw"
                   style={
                     Object {
                       "color": "#222",
@@ -254,7 +254,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fmxyxo"
+            className="sc-AxjAm kmIuYE"
           >
             <button
               className="k-Button k-Button--helium"

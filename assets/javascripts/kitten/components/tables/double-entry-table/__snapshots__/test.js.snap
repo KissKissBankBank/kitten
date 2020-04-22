@@ -2,7 +2,7 @@
 
 exports[`<DoubleEntryTable /> with a complete structure and custom classes matches with snapshot 1`] = `
 <div
-  className="styles__Styles-sc-1rikehi-0 hBHgEH DoubleEntryTable__Container"
+  className="sc-AxjAm kdFBER DoubleEntryTable__Container"
 >
   <div
     className="DoubleEntryTable__TableContainer"
