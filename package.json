@@ -51,7 +51,7 @@
     "resize-observer-polyfill": "1.5.1",
     "slugify": "1.3.6",
     "smoothscroll-polyfill": "0.4.4",
-    "styled-components": "4.4.1"
+    "styled-components": "5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "7.8.4",
@@ -95,7 +95,7 @@
     "jest": "25.2.6",
     "jest-canvas-mock": "2.2.0",
     "jest-cli": "25.2.6",
-    "jest-styled-components": "6.3.4",
+    "jest-styled-components": "7.0.0",
     "jsdom": "16.2.2",
     "json-loader": "0.5.7",
     "lint-staged": "10.1.1",
