@@ -183,6 +183,7 @@ const StyledCheckedCircleIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
   width: ${pxToRem(20)};
   height: ${pxToRem(20)};
   border-radius: 100%;
@@ -201,7 +202,7 @@ const SuccessProgressIcon = () => (
 )
 
 const OvertimeProgressIcon = () => (
-  <RocketCircleIcon aria-hidden />
+  <RocketCircleIcon aria-hidden style={{ alignSelf: 'center'}} />
 )
 
 const CardBase = ({
@@ -219,12 +220,16 @@ const CardBase = ({
     <StyledCard horizontalCard={horizontalCard} {...props}>
       <StyledImageContainer
         col={horizontalCard ? 6 : 0}
+        col-s={horizontalCard ? 5 : 0}
+        col-l={horizontalCard ? 6 : 0}
         horizontalCard={horizontalCard}
       >
         <StyledImage {...imageProps} horizontalCard={horizontalCard} />
       </StyledImageContainer>
       <StyledDescription
         col={horizontalCard ? 6 : 0}
+        col-s={horizontalCard ? 7 : 0}
+        col-l={horizontalCard ? 6 : 0}
         horizontalCard={horizontalCard}
       >
       {overtimeProgress && (
@@ -252,6 +257,7 @@ const CardBase = ({
               width={viewportIsXSOrLess ? 24 : 28}
               strokeWidth={4}
               color={COLORS.primary1}
+              style={{ alignSelf: 'center'}}
             />
             <StyledProgressText size="micro" color="font1" weight="regular">
               Financé à 50%
