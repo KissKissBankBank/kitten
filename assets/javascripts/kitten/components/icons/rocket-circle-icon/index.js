@@ -31,6 +31,7 @@ const StyledRocketIcon = styled(({
   <RocketIcon {...others} />
 ))`
   padding-right: ${pxToRem(2)};
+  padding-top: ${pxToRem(1)};
   width: ${({ rocketWidthMobile }) => pxToRem(rocketWidthMobile)};
   height: ${({ rocketHeightMobile }) => pxToRem(rocketHeightMobile)};
 

@@ -8,7 +8,7 @@ import { ScreenConfig } from '../../../../../constants/screen-config'
 import { Grid, GridCol } from '../../../../../components/grid/grid'
 import { ProgressRing } from '../../../../../components/meters/progress-ring'
 import COLORS from '../../../../../constants/colors-config'
-import { CheckedCircleIcon } from '../../../../../components/icons/checked-circle-icon'
+import { CheckedIcon } from '../../../../../components/icons/checked-icon'
 import { RocketCircleIcon } from '../../../../../components/icons/rocket-circle-icon'
 import { mediaQueries } from '../../../../../hoc/media-queries'
 
@@ -34,7 +34,7 @@ const StyledCard = styled.div`
       }
 
       @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        margin-bottom: ${pxToRem(50)};
+        margin-bottom: ${pxToRem(40)};
       }
 
       :last-child {
@@ -179,9 +179,15 @@ const StyledImage = styled.img`
     `}
 `
 
-const StyledCheckedCircleIcon = styled(CheckedCircleIcon)`
+const StyledCheckedCircleIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
   width: ${pxToRem(20)};
   height: ${pxToRem(20)};
+  border-radius: 100%;
+  background-color: ${COLORS.valid};
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     width: ${pxToRem(24)};
@@ -190,15 +196,13 @@ const StyledCheckedCircleIcon = styled(CheckedCircleIcon)`
 `
 
 const SuccessProgressIcon = () => (
-  <StyledCheckedCircleIcon
-    aria-hidden
-    circleColor={COLORS.valid}
-    checkedColor={COLORS.background1}
-  />
+  <StyledCheckedCircleIcon aria-hidden>
+    <CheckedIcon />
+  </StyledCheckedCircleIcon>
 )
 
 const OvertimeProgressIcon = () => (
-  <RocketCircleIcon aria-hidden />
+  <RocketCircleIcon aria-hidden style={{ alignSelf: 'center'}} />
 )
 
 const CardBase = ({
@@ -211,16 +215,21 @@ const CardBase = ({
   viewportIsXSOrLess,
   ...props
 }) => {
+
   return (
     <StyledCard horizontalCard={horizontalCard} {...props}>
       <StyledImageContainer
         col={horizontalCard ? 6 : 0}
+        col-s={horizontalCard ? 5 : 0}
+        col-l={horizontalCard ? 6 : 0}
         horizontalCard={horizontalCard}
       >
         <StyledImage {...imageProps} horizontalCard={horizontalCard} />
       </StyledImageContainer>
       <StyledDescription
         col={horizontalCard ? 6 : 0}
+        col-s={horizontalCard ? 7 : 0}
+        col-l={horizontalCard ? 6 : 0}
         horizontalCard={horizontalCard}
       >
       {overtimeProgress && (
@@ -248,6 +257,7 @@ const CardBase = ({
               width={viewportIsXSOrLess ? 24 : 28}
               strokeWidth={4}
               color={COLORS.primary1}
+              style={{ alignSelf: 'center'}}
             />
             <StyledProgressText size="micro" color="font1" weight="regular">
               Financé à 50%
