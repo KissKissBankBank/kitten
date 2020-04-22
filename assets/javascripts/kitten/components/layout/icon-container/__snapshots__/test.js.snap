@@ -2,17 +2,17 @@
 
 exports[`<IconContainer/> should match snapshot when we add an icon description 1`] = `
 <div
-  className="styled__StyledContainer-z412rl-0 eTfKiw icon-container__StyledContainer-x0wgk3-0 gyibAh"
+  className="styled__StyledContainer-z412rl-0 kCeoMa icon-container__StyledContainer-x0wgk3-0 dkPMc"
   color="#fff"
 >
   <span
-    className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+    className="visually-hidden__StyledElement-sc-3bas83-0 cGSupL"
   >
     checked icon circle
   </span>
   Foobar
   <div
-    className="icon-container__IconWrapper-x0wgk3-1 QDxJI"
+    className="icon-container__IconWrapper-x0wgk3-1 fPMOMI"
     marginHeight={12.5}
     marginWidth={12.5}
   >
@@ -43,12 +43,12 @@ exports[`<IconContainer/> should match snapshot when we add an icon description 
 
 exports[`<IconContainer/> should match snapshot when we change color 1`] = `
 <div
-  className="styled__StyledContainer-z412rl-0 eTfKiw icon-container__StyledContainer-x0wgk3-0 gyibAh"
+  className="styled__StyledContainer-z412rl-0 kCeoMa icon-container__StyledContainer-x0wgk3-0 dkPMc"
   color="#fff"
 >
   Foobar
   <div
-    className="icon-container__IconWrapper-x0wgk3-1 QDxJI"
+    className="icon-container__IconWrapper-x0wgk3-1 fPMOMI"
     marginHeight={12.5}
     marginWidth={12.5}
   >
@@ -79,12 +79,12 @@ exports[`<IconContainer/> should match snapshot when we change color 1`] = `
 
 exports[`<IconContainer/> should match snapshot when we change position 1`] = `
 <div
-  className="styled__StyledContainer-z412rl-0 eTfKiw icon-container__StyledContainer-x0wgk3-0 iwXntf"
+  className="styled__StyledContainer-z412rl-0 kCeoMa icon-container__StyledContainer-x0wgk3-0 bHrTFU"
   color="#fff"
 >
   Foobar
   <div
-    className="icon-container__IconWrapper-x0wgk3-1 nNqvf"
+    className="icon-container__IconWrapper-x0wgk3-1 etKsnA"
     marginHeight={12.5}
     marginWidth={12.5}
   >
@@ -115,12 +115,12 @@ exports[`<IconContainer/> should match snapshot when we change position 1`] = `
 
 exports[`<IconContainer/> should match snapshot when we change width and height 1`] = `
 <div
-  className="styled__StyledContainer-z412rl-0 eTfKiw icon-container__StyledContainer-x0wgk3-0 imiPNa"
+  className="styled__StyledContainer-z412rl-0 kCeoMa icon-container__StyledContainer-x0wgk3-0 eGmxjs"
   color="#fff"
 >
   Foobar
   <div
-    className="icon-container__IconWrapper-x0wgk3-1 fGicWC"
+    className="icon-container__IconWrapper-x0wgk3-1 elqnpB"
     marginHeight={25}
     marginWidth={15}
   >
@@ -151,12 +151,12 @@ exports[`<IconContainer/> should match snapshot when we change width and height 
 
 exports[`<IconContainer/> should match snapshot with default behavior 1`] = `
 <div
-  className="styled__StyledContainer-z412rl-0 eTfKiw icon-container__StyledContainer-x0wgk3-0 gyibAh"
+  className="styled__StyledContainer-z412rl-0 kCeoMa icon-container__StyledContainer-x0wgk3-0 dkPMc"
   color="#fff"
 >
   Foobar
   <div
-    className="icon-container__IconWrapper-x0wgk3-1 QDxJI"
+    className="icon-container__IconWrapper-x0wgk3-1 fPMOMI"
     marginHeight={12.5}
     marginWidth={12.5}
   >

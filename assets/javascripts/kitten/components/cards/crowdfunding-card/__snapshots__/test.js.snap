@@ -577,7 +577,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
       className="c6"
     >
       <div
-        className="c7"
+        className="title__StyledTitleContainer-sc-1wv1kzg-1 c7"
       >
         <span
           className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-bold k-Card__title"

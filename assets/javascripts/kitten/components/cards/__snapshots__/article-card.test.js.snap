@@ -2,12 +2,12 @@
 
 exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 <div
-  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 tikAN k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
   <div
-    className="image__StyledImageContainer-sc-166p1i9-0 jmZvoc k-Card__imageContainer"
+    className="image__StyledImageContainer-sc-166p1i9-0 dqZaMM k-Card__imageContainer"
   >
     <img
       alt=""
@@ -17,13 +17,13 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 kCDtHN"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 hDDaLZ"
   >
     <div
       className="k-u-margin-top-single"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 cfJjjq"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 egDIdl"
         tabIndex={null}
       >
         <img
@@ -34,22 +34,22 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
+      className="image__StyledOwner-sc-166p1i9-3 ckrXwn"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 jMOLOy"
       >
         
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 eWmSsN"
       >
         
       </div>
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 dhknit"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 fqfLLZ"
   >
     
     
@@ -63,12 +63,12 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches with snapshot 1`] = `
 <div
-  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 tikAN k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
   <div
-    className="image__StyledImageContainer-sc-166p1i9-0 jmZvoc k-Card__imageContainer"
+    className="image__StyledImageContainer-sc-166p1i9-0 dqZaMM k-Card__imageContainer"
   >
     <img
       alt=""
@@ -78,13 +78,13 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 kCDtHN"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 hDDaLZ"
   >
     <div
       className="k-u-margin-top-single"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 cfJjjq"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 egDIdl"
         tabIndex={null}
       >
         <img
@@ -95,44 +95,44 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       </span>
     </div>
     <div
-      className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
+      className="image__StyledOwner-sc-166p1i9-3 ckrXwn"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 jMOLOy"
       >
         
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 eWmSsN"
       >
         
       </div>
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 dhknit"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 fqfLLZ"
   >
     <div
-      className="title__StyledTitleContainer-sc-1wv1kzg-1 faWlNg"
+      className="title__StyledTitleContainer-sc-1wv1kzg-1 HXhOr"
     >
       <p
-        className="title__StyledTitle-sc-46lshq-0 jqndyC title__StyledTitle-sc-1wv1kzg-2 hnn k-Card__title"
+        className="title__StyledTitle-sc-46lshq-0 kudqcq title__StyledTitle-sc-1wv1kzg-2 eQfbZk k-Card__title"
       >
         Custom title
       </p>
     </div>
     
     <div
-      className="subtitle__StyledContainerSubtitle-hzl57w-1 fVLWtT"
+      className="subtitle__StyledContainerSubtitle-hzl57w-1 fjFIAU"
     >
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl subtitle__StyledHorizontalStroke-hzl57w-2 dVssq"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cOtRGD subtitle__StyledHorizontalStroke-hzl57w-2 gYZdqf"
       />
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular subtitle__StyledSubtitle-hzl57w-3 krHPNc"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular subtitle__StyledSubtitle-hzl57w-3 jTMkRO"
       >
         <span
-          className="subtitle__StyledTruncate-hzl57w-0 dyLXav"
+          className="subtitle__StyledTruncate-hzl57w-0 clZybz"
           width={0}
         >
           <span />
@@ -163,12 +163,12 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
 
 exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 <div
-  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 tikAN k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
   <div
-    className="image__StyledImageContainer-sc-166p1i9-0 jmZvoc k-Card__imageContainer"
+    className="image__StyledImageContainer-sc-166p1i9-0 dqZaMM k-Card__imageContainer"
   >
     <img
       alt=""
@@ -178,13 +178,13 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 kCDtHN"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 hDDaLZ"
   >
     <div
       className="k-u-margin-top-single"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 cfJjjq"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 egDIdl"
         tabIndex={null}
       >
         <img
@@ -195,22 +195,22 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
+      className="image__StyledOwner-sc-166p1i9-3 ckrXwn"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 jMOLOy"
       >
         
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 eWmSsN"
       >
         
       </div>
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 dhknit"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 fqfLLZ"
   >
     
     
@@ -224,12 +224,12 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
 <a
-  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 hRIUAW k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="crowdfunding-card__StyledContainer-sc-1b0f5ki-0 tikAN k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href="#foobar"
   onClick={[Function]}
 >
   <div
-    className="image__StyledImageContainer-sc-166p1i9-0 jmZvoc k-Card__imageContainer"
+    className="image__StyledImageContainer-sc-166p1i9-0 dqZaMM k-Card__imageContainer"
   >
     <img
       alt="Image alt"
@@ -240,13 +240,13 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="image__StyledContainerAvatar-sc-166p1i9-1 kCDtHN"
+    className="image__StyledContainerAvatar-sc-166p1i9-1 hDDaLZ"
   >
     <div
       className="k-u-margin-top-single"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 cfJjjq"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents image__StyledAvatar-sc-166p1i9-2 egDIdl"
         tabIndex={null}
       >
         <img
@@ -257,44 +257,44 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="image__StyledOwner-sc-166p1i9-3 ksyaAt"
+      className="image__StyledOwner-sc-166p1i9-3 ckrXwn"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 ipABxN"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular image__StyledTitle-sc-166p1i9-4 jMOLOy"
       >
         Custom title
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 dxlaNj"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light image__StyledDescription-sc-166p1i9-5 eWmSsN"
       >
         Custom description
       </div>
     </div>
   </div>
   <div
-    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 dhknit"
+    className="crowdfunding-card__StyledTitleAndDescription-sc-1b0f5ki-1 fqfLLZ"
   >
     <div
-      className="title__StyledTitleContainer-sc-1wv1kzg-1 faWlNg"
+      className="title__StyledTitleContainer-sc-1wv1kzg-1 HXhOr"
     >
       <p
-        className="title__StyledTitle-sc-46lshq-0 jqndyC title__StyledTitle-sc-1wv1kzg-2 hnn k-Card__title"
+        className="title__StyledTitle-sc-46lshq-0 kudqcq title__StyledTitle-sc-1wv1kzg-2 eQfbZk k-Card__title"
       >
         Custom title
       </p>
     </div>
     
     <div
-      className="subtitle__StyledContainerSubtitle-hzl57w-1 fVLWtT"
+      className="subtitle__StyledContainerSubtitle-hzl57w-1 fjFIAU"
     >
       <span
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 gBRCkl subtitle__StyledHorizontalStroke-hzl57w-2 dVssq"
+        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cOtRGD subtitle__StyledHorizontalStroke-hzl57w-2 gYZdqf"
       />
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular subtitle__StyledSubtitle-hzl57w-3 krHPNc"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular subtitle__StyledSubtitle-hzl57w-3 jTMkRO"
       >
         <span
-          className="subtitle__StyledTruncate-hzl57w-0 dyLXav"
+          className="subtitle__StyledTruncate-hzl57w-0 clZybz"
           width={0}
         >
           <span />

@@ -2,21 +2,21 @@
 
 exports[`<EngagementCardWithImage /> by default matches with snapshot 1`] = `
 <a
-  className="withImage__StyledContainer-sc-1jg09sq-0 iuidGJ"
+  className="withImage__StyledContainer-sc-1jg09sq-0 dsgFbF"
   href="#"
   title="Hello word"
 >
   <div
-    className="withImage__StyledCard-sc-1jg09sq-1 lgohnN"
+    className="withImage__StyledCard-sc-1jg09sq-1 eOTmKC"
   >
     <img
       alt=""
-      className="withImage__StyledImage-sc-1jg09sq-2 dHofpL"
+      className="withImage__StyledImage-sc-1jg09sq-2 fFHSYe"
       src="https://source.unsplash.com/WLUHO9A_xik/200x120"
     />
   </div>
   <span
-    className="k-u-color-font1 k-u-decoration-none k-u-line-height-normal k-u-size-micro k-u-weight-regular withImage__StyledText-sc-1jg09sq-3 ihfHEi"
+    className="k-u-color-font1 k-u-decoration-none k-u-line-height-normal k-u-size-micro k-u-weight-regular withImage__StyledText-sc-1jg09sq-3 kPcUiO"
   />
 </a>
 `;

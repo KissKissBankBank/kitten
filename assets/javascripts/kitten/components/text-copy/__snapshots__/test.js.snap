@@ -2,10 +2,10 @@
 
 exports[`<TextCopy /> should match snapshot 1`] = `
 <div
-  className="text-copy__Wrapper-sc-1ikj7bl-1 hxEtXb"
+  className="text-copy__Wrapper-sc-1ikj7bl-1 kkpmue"
 >
   <span
-    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 ksGaXM"
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 bGFQYd"
     onClick={[Function]}
   >
     <span>
@@ -14,7 +14,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
   </span>
   <div
     aria-hidden={true}
-    className="text-copy__IconWrapper-sc-1ikj7bl-3 gHOYBg"
+    className="text-copy__IconWrapper-sc-1ikj7bl-3 bsdqUr"
     onClick={[Function]}
   >
     <svg
@@ -35,15 +35,15 @@ exports[`<TextCopy /> should match snapshot 1`] = `
 
 exports[`<TextCopy /> should match snapshot with button text 1`] = `
 <div
-  className="text-copy__Wrapper-sc-1ikj7bl-1 dhVZjm"
+  className="text-copy__Wrapper-sc-1ikj7bl-1 imhMiQ"
 >
   <span
-    className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+    className="visually-hidden__StyledElement-sc-3bas83-0 cGSupL"
   >
     This is a description
   </span>
   <span
-    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 gYedjB"
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 dTZySv"
     onClick={[Function]}
   >
     <span>
@@ -52,7 +52,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
   </span>
   <button
     aria-label={[Function]}
-    className="text-copy__StyledButton-sc-1ikj7bl-0 fkoKon"
+    className="text-copy__StyledButton-sc-1ikj7bl-0 hDUIYn"
     onClick={[Function]}
     type="button"
   >
@@ -63,15 +63,15 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
 
 exports[`<TextCopy /> should match snapshot with description 1`] = `
 <div
-  className="text-copy__Wrapper-sc-1ikj7bl-1 hxEtXb"
+  className="text-copy__Wrapper-sc-1ikj7bl-1 kkpmue"
 >
   <span
-    className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+    className="visually-hidden__StyledElement-sc-3bas83-0 cGSupL"
   >
     This is a description
   </span>
   <span
-    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 ksGaXM"
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 bGFQYd"
     onClick={[Function]}
   >
     <span>
@@ -80,7 +80,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
   </span>
   <div
     aria-hidden={true}
-    className="text-copy__IconWrapper-sc-1ikj7bl-3 gHOYBg"
+    className="text-copy__IconWrapper-sc-1ikj7bl-3 bsdqUr"
     onClick={[Function]}
   >
     <svg
@@ -101,15 +101,15 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
 
 exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
 <div
-  className="text-copy__Wrapper-sc-1ikj7bl-1 hxEtXb"
+  className="text-copy__Wrapper-sc-1ikj7bl-1 kkpmue"
 >
   <span
-    className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+    className="visually-hidden__StyledElement-sc-3bas83-0 cGSupL"
   >
     This is a description
   </span>
   <span
-    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 EtpoX"
+    className="k-u-line-height-normal k-u-size-micro k-u-weight-light text-copy__StyledText-sc-1ikj7bl-2 kWOxDY"
     onClick={[Function]}
   >
     <span>
@@ -118,7 +118,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
   </span>
   <div
     aria-hidden={true}
-    className="text-copy__IconWrapper-sc-1ikj7bl-3 gHOYBg"
+    className="text-copy__IconWrapper-sc-1ikj7bl-3 bsdqUr"
     onClick={[Function]}
   >
     <svg

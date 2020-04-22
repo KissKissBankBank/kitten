@@ -3,21 +3,21 @@
 exports[`<BulletList /> default matches with snapshot 1`] = `
 <ul
   aria-hidden="true"
-  className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
+  className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB"
 >
   <li
-    className="bullet-list__StyledItem-rdyx84-1 gwNmJF"
+    className="bullet-list__StyledItem-rdyx84-1 hPjHNx"
     id="1"
   >
     Dis Manibus
   </li>
   <li
-    className="bullet-list__StyledItem-rdyx84-1 gwNmJF"
+    className="bullet-list__StyledItem-rdyx84-1 hPjHNx"
   >
     Calpurnia Felicla
   </li>
   <li
-    className="bullet-list__StyledItem-rdyx84-1 gwNmJF"
+    className="bullet-list__StyledItem-rdyx84-1 hPjHNx"
   >
     Germulio coniugi
   </li>
@@ -26,24 +26,24 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
 
 exports[`<BulletList /> with big props matches with snapshot 1`] = `
 <ul
-  className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
+  className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB"
 />
 `;
 
 exports[`<BulletList /> with huge props matches with snapshot 1`] = `
 <ul
-  className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
+  className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB"
 />
 `;
 
 exports[`<BulletList /> with large props matches with snapshot 1`] = `
 <ul
-  className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
+  className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB"
 />
 `;
 
 exports[`<BulletList /> with small props matches with snapshot 1`] = `
 <ul
-  className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd"
+  className="bullet-list__StyledBulletList-rdyx84-0 hFAvjB"
 />
 `;

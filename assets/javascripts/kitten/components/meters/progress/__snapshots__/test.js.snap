@@ -9,10 +9,6 @@ exports[`<Progress /> Progress with multiple props matches with snapshot 1`] = `
   background: #d8d8d8;
 }
 
-.c0.is-disabled .c4::after {
-  background: #d8d8d8;
-}
-
 .c2 {
   position: relative;
   height: 0.125rem;

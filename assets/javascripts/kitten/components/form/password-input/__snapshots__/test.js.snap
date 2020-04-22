@@ -2,10 +2,10 @@
 
 exports[`<PasswordInput /> should match its empty snapshot 1`] = `
 <div
-  className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
+  className="password-input__StyledPasswordInput-sc-1futz46-0 bPPxvu"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY password-input__StyledTextInput-sc-1futz46-1 frwehc"
+    className="text-input__StyledInput-sc-11wej6v-1 ilMIhk password-input__StyledTextInput-sc-1futz46-1 krtkLc"
     disabled={false}
     id="password"
     name="password"
@@ -13,7 +13,7 @@ exports[`<PasswordInput /> should match its empty snapshot 1`] = `
   />
   <span
     aria-pressed={false}
-    className="password-input__StyledIcon-sc-1futz46-2 jSmpuB"
+    className="password-input__StyledIcon-sc-1futz46-2 kVekEU"
     onClick={[Function]}
     onKeyDown={[Function]}
     tabIndex="0"

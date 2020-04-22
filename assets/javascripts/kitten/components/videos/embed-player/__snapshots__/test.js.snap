@@ -3,7 +3,7 @@
 exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
 <div
   aria-label={null}
-  className="embed-player__StyledEmbedPlayer-sc-14blbse-0 bMUxpX k-EmbedPlayer"
+  className="embed-player__StyledEmbedPlayer-sc-14blbse-0 czbOjA k-EmbedPlayer"
   onClick={null}
   onFocus={null}
   onKeyPress={null}
@@ -35,7 +35,7 @@ exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
 exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
 <div
   aria-label="Play"
-  className="embed-player__StyledEmbedPlayer-sc-14blbse-0 bMUxpX k-EmbedPlayer k-EmbedPlayer--cursorPointer"
+  className="embed-player__StyledEmbedPlayer-sc-14blbse-0 czbOjA k-EmbedPlayer k-EmbedPlayer--cursorPointer"
   onClick={[Function]}
   onFocus={[Function]}
   onKeyPress={[Function]}
