@@ -3,6 +3,7 @@ import Layout from './components/layout'
 import Toolbar from './components/toolbar'
 import Actions from './components/actions'
 import Button from './components/button'
+import TagList from './components/tag-list'
 import { BoldIcon } from '../../components/icons/bold-icon'
 import { ItalicIcon } from '../../components/icons/italic-icon'
 import { BlockquoteIcon } from '../../components/icons/blockquote-icon'
@@ -14,7 +15,6 @@ import { ImageIcon } from '../../components/icons/image-icon'
 import { VideoIcon } from '../../components/icons/video-icon'
 import { LinkIcon } from '../../components/icons/link-icon'
 import { ButtonIcon } from '../../components/icons/button-icon'
-import { ParagraphIcon } from '../../components/icons/paragraph-icon'
 
 export default {
   title: 'pages/Editor',
@@ -25,9 +25,7 @@ export const Example = () => {
     <Layout>
       <Toolbar>
         <Actions>
-          <Button title="Utiliser un paragraphe">
-            <ParagraphIcon />
-          </Button>
+          <TagList />
         </Actions>
 
         <Actions>
