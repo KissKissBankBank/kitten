@@ -21,6 +21,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `AlignLeftIcon`
   - `AlignCenterIcon`
   - `AlignRightIcon`
+- Fix: Update `path` fill on `Button`.
 
 ## [2.65.0] - 2020-04-21
 
