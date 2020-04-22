@@ -13,6 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `Title2Icon`
   - `Title3Icon`
   - `Title4Icon`
+  - `ParagraphIcon`
   - `ItalicIcon`
   - `ImageIcon`
   - `LinkIcon`
