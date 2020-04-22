@@ -66,6 +66,7 @@ import { Title1Icon } from './title-1-icon'
 import { Title2Icon } from './title-2-icon'
 import { Title3Icon } from './title-3-icon'
 import { Title4Icon } from './title-4-icon'
+import { ParagraphIcon } from './paragraph-icon'
 import { ItalicIcon } from './italic-icon'
 import { ImageIcon } from './image-icon'
 import { LinkIcon } from './link-icon'
@@ -151,6 +152,7 @@ export const AllIcons = () => {
         <IconContainer children={<Title2Icon />} />
         <IconContainer children={<Title3Icon />} />
         <IconContainer children={<Title4Icon />} />
+        <IconContainer children={<ParagraphIcon />} />
         <IconContainer children={<ItalicIcon />} />
         <IconContainer children={<ImageIcon />} />
         <IconContainer children={<LinkIcon />} />
