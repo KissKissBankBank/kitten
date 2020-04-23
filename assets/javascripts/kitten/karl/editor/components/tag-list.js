@@ -43,12 +43,12 @@ const List = styled.ul`
     &:focus {
       background-color: ${COLORS.background3};
     }
-  }
 
-  .Editor__toolbar__listItem--selected {
-    svg,
-    path {
-      fill: ${COLORS.primary1};
+    &[aria-selected='true'] {
+      svg,
+      path {
+        fill: ${COLORS.primary1};
+      }
     }
   }
 `
@@ -85,11 +85,7 @@ const TagList = () => {
     <Details
       key={value}
       summaryRender={({ open }) => (
-        <SummaryButton
-          title="Utiliser un paragraphe"
-          className="is-selected"
-          tabIndex="-1"
-        >
+        <SummaryButton className="is-selected" tabIndex="-1">
           <Component />
           <ArrowIcon width="6" direction={open ? 'top' : 'bottom'} />
         </SummaryButton>
@@ -100,9 +96,8 @@ const TagList = () => {
           <button
             onClick={handleClick('title1')}
             type="button"
-            className={`Editor__toolbar__listItem ${
-              value === 'title1' ? 'Editor__toolbar__listItem--selected' : ''
-            }`}
+            aria-selected={value === 'title1'}
+            className="Editor__toolbar__listItem"
           >
             <Title1Icon />
           </button>
@@ -111,9 +106,8 @@ const TagList = () => {
           <button
             onClick={handleClick('title2')}
             type="button"
-            className={`Editor__toolbar__listItem ${
-              value === 'title2' ? 'Editor__toolbar__listItem--selected' : ''
-            }`}
+            aria-selected={value === 'title2'}
+            className="Editor__toolbar__listItem"
           >
             <Title2Icon />
           </button>
@@ -122,9 +116,8 @@ const TagList = () => {
           <button
             onClick={handleClick('title3')}
             type="button"
-            className={`Editor__toolbar__listItem ${
-              value === 'title3' ? 'Editor__toolbar__listItem--selected' : ''
-            }`}
+            aria-selected={value === 'title3'}
+            className="Editor__toolbar__listItem"
           >
             <Title3Icon />
           </button>
@@ -133,9 +126,8 @@ const TagList = () => {
           <button
             onClick={handleClick('title4')}
             type="button"
-            className={`Editor__toolbar__listItem ${
-              value === 'title4' ? 'Editor__toolbar__listItem--selected' : ''
-            }`}
+            aria-selected={value === 'title4'}
+            className="Editor__toolbar__listItem"
           >
             <Title4Icon />
           </button>
@@ -144,9 +136,8 @@ const TagList = () => {
           <button
             onClick={handleClick('paragraph')}
             type="button"
-            className={`Editor__toolbar__listItem ${
-              value === 'paragraph' ? 'Editor__toolbar__listItem--selected' : ''
-            }`}
+            aria-selected={value === 'paragraph'}
+            className="Editor__toolbar__listItem"
           >
             <ParagraphIcon />
           </button>
