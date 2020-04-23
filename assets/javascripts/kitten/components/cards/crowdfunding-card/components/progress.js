@@ -1,44 +1,9 @@
 import React, { PureComponent } from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { pxToRem } from '../../../../helpers/utils/typography'
 import { Progress } from '../../../../components/meters/progress'
 import { Text } from '../../../../components/typography/text'
 import COLORS from '../../../../constants/colors-config'
-import { ScreenConfig } from '../../../../constants/screen-config'
-
-const COMPONENT_GUTTER = pxToRem(10)
-
-const StyledContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0;
-  margin-top: ${pxToRem(5)};
-  margin-bottom: ${pxToRem(10)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    padding: 0 ${COMPONENT_GUTTER};
-    margin-bottom: ${pxToRem(20)};
-  }
-`
-
-const StyledProgress = styled(Progress)`
-  flex: 1;
-`
-
-const StyledPercent = styled(Text)`
-  flex-shrink: 0;
-  margin-left: calc(2 * ${COMPONENT_GUTTER});
-`
-
-const StyledLoading = styled.span`
-  display: block;
-  background-color: ${COLORS.line2};
-  border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
-  width: ${pxToRem(40)};
-  height: ${pxToRem(16)};
-`
+import classNames from 'classnames'
 
 class ProgressBar extends PureComponent {
   static propTypes = {
@@ -61,27 +26,31 @@ class ProgressBar extends PureComponent {
     const progressValue = loading ? 65 : progress
 
     return (
-      <StyledContainer>
-        <StyledProgress
+      <div className="k-CrowdfundingCard__progressBar">
+        <Progress
           value={progressValue}
-          className={loading && 'is-disabled'}
+          className={classNames('k-CrowdfundingCard__progressBar__progress', {
+            'is-disabled': loading,
+          })}
           color={progressColor}
           rampProps={{
             style: { height: '4px' },
           }}
         />
 
-        <StyledPercent
+        <Text
           weight="regular"
           size="micro"
           color="font1"
-          className="k-u-hidden@s-down"
+          className="k-CrowdfundingCard__progressBar__percent k-u-hidden@s-down"
         >
-          {loading && <StyledLoading />}
+          {loading && (
+            <span className="k-CrowdfundingCard__progressBar__loadingPercent" />
+          )}
 
           {!loading && `${progress} %`}
-        </StyledPercent>
-      </StyledContainer>
+        </Text>
+      </div>
     )
   }
 }

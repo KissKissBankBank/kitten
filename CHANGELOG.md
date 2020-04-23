@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `CheckedIcon` compoenent.
+- Fix: Fit `CrowdfundingCard` image to new 16/10 ratio.
+- Feature: Add `stretch` prop to `CrowdfundingCard`.
+- Feature: Update `CheckedIcon` component.
 - Feature: Add editor icons:
   - `BoldIcon`
   - `BlockquoteIcon`
