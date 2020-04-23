@@ -2,23 +2,23 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="carousel__FlexContainer-sc-1o67jdh-0 hhpJPM"
+  className="carousel__FlexContainer-sc-1o67jdh-0 hhpJPM k-Carousel"
 >
   <div
-    className="carousel-inner__StyledCarouselInner-wljpd2-0 jBSEkH"
+    className="carousel-inner__StyledCarouselInner-wljpd2-0 jBSEkH k-Carousel__inner"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 iqOkuU"
+      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 iqOkuU k-Carousel__inner__pageContainer"
       onClick={[Function]}
     >
       <div
-        className="carousel-page__StyledPage-sc-12ynwqa-0 fKfWlh"
+        className="carousel-page__StyledPage-sc-12ynwqa-0 fKfWlh k-Carousel__page"
       >
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 cTnAZH"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 cTnAZH k-Carousel__page__item"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -64,10 +64,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb k-Carousel__page__item"
         />
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb k-Carousel__page__item"
         />
       </div>
     </div>
@@ -77,23 +77,23 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="carousel__FlexContainer-sc-1o67jdh-0 hhpJPM"
+  className="carousel__FlexContainer-sc-1o67jdh-0 hhpJPM k-Carousel"
 >
   <div
-    className="carousel-inner__StyledCarouselInner-wljpd2-0 jBSEkH"
+    className="carousel-inner__StyledCarouselInner-wljpd2-0 jBSEkH k-Carousel__inner"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 iqOkuU custom-class"
+      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 iqOkuU k-Carousel__inner__pageContainer"
       onClick={[Function]}
     >
       <div
-        className="carousel-page__StyledPage-sc-12ynwqa-0 fKfWlh"
+        className="carousel-page__StyledPage-sc-12ynwqa-0 fKfWlh k-Carousel__page"
       >
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 cTnAZH"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 cTnAZH k-Carousel__page__item"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -139,10 +139,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 dGWhDF"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 dGWhDF k-Carousel__page__item"
         />
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 dGWhDF"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 dGWhDF k-Carousel__page__item"
         />
       </div>
     </div>
@@ -152,23 +152,23 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="carousel__FlexContainer-sc-1o67jdh-0 hhpJPM"
+  className="carousel__FlexContainer-sc-1o67jdh-0 hhpJPM k-Carousel"
 >
   <div
-    className="carousel-inner__StyledCarouselInner-wljpd2-0 jBSEkH"
+    className="carousel-inner__StyledCarouselInner-wljpd2-0 jBSEkH k-Carousel__inner"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 iqOkuU"
+      className="carousel-inner__StyledCarouselPageContainer-wljpd2-1 iqOkuU k-Carousel__inner__pageContainer"
       onClick={[Function]}
     >
       <div
-        className="carousel-page__StyledPage-sc-12ynwqa-0 fKfWlh"
+        className="carousel-page__StyledPage-sc-12ynwqa-0 fKfWlh k-Carousel__page"
       >
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 cTnAZH"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 cTnAZH k-Carousel__page__item"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -214,10 +214,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb k-Carousel__page__item"
         />
         <div
-          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb"
+          className="carousel-page__StyledItem-sc-12ynwqa-1 gyNZwb k-Carousel__page__item"
         />
       </div>
     </div>
