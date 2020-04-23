@@ -92,7 +92,7 @@ const StyledContainer = styled(Container)`
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     & > div > :last-child {
-      margin-top: ${pxToRem(12)};
+      margin-top: ${pxToRem(20)};
     }
   }
 
@@ -118,6 +118,7 @@ const EngagementsCarouselBase = ({ viewportIsXSOrLess }) => (
       paginationPosition={{ default: 'right' }}
       showOtherPages={viewportIsXSOrLess}
       loop
+      tinyButtons
     >
       {engagementsData.map(({ bgImage, children }) => {
         return (
