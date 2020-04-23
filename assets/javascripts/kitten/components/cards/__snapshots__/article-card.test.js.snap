@@ -2,54 +2,67 @@
 
 exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-fzolEj iXLwLG k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-AxheI eHlfXY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
   <div
-    className="sc-AxjAm gQibUD k-Card__imageContainer"
-  >
-    <img
-      alt=""
-      backgroundColor="#d8d8d8"
-      className="k-Card__image"
-      src="https://placehold.it/350x200/caf4fe/caf4fe"
-    />
-  </div>
-  <div
-    className="sc-AxirZ eUGgwe"
+    className="k-CrowdfundingCard__image"
   >
     <div
-      className="k-u-margin-top-single"
+      className="k-CrowdfundingCard__image__imageContainer"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
     >
-      <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxiKw lnWuCm"
-        tabIndex={null}
-      >
-        <img
-          alt=""
-          className="k-ButtonImage__img"
-          src="https://placehold.it/100x100/caf4fe/caf4fe"
-        />
-      </span>
+      <img
+        alt=""
+        className="k-Card__image"
+        src="https://placehold.it/160x100/caf4fe/caf4fe"
+        style={
+          Object {
+            "backgroundColor": "#d8d8d8",
+          }
+        }
+      />
     </div>
     <div
-      className="sc-AxhCb kGOGkB"
+      className="k-CrowdfundingCard__image__ownerContainer"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular sc-AxhUy kMyssT"
+        className="k-u-margin-top-single"
       >
-        
+        <span
+          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          tabIndex={null}
+        >
+          <img
+            alt=""
+            className="k-ButtonImage__img"
+            src="https://placehold.it/100x100/caf4fe/caf4fe"
+          />
+        </span>
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light sc-AxgMl fFPQpl"
+        className="k-CrowdfundingCard__image__owner"
       >
-        
+        <div
+          className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+        >
+          
+        </div>
+        <div
+          className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+        >
+          
+        </div>
       </div>
     </div>
   </div>
   <div
-    className="sc-fzqBkg gOTAsm"
+    className="k-CrowdfundingCard__titleAndDesc"
   >
     
     
@@ -63,76 +76,90 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches with snapshot 1`] = `
 <div
-  className="sc-fzolEj iXLwLG k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-AxheI eHlfXY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
   <div
-    className="sc-AxjAm gQibUD k-Card__imageContainer"
-  >
-    <img
-      alt=""
-      backgroundColor="#d8d8d8"
-      className="k-Card__image"
-      src="https://placehold.it/350x200/caf4fe/caf4fe"
-    />
-  </div>
-  <div
-    className="sc-AxirZ eUGgwe"
+    className="k-CrowdfundingCard__image"
   >
     <div
-      className="k-u-margin-top-single"
+      className="k-CrowdfundingCard__image__imageContainer"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
     >
-      <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxiKw lnWuCm"
-        tabIndex={null}
-      >
-        <img
-          alt=""
-          className="k-ButtonImage__img"
-          src="https://placehold.it/100x100/caf4fe/caf4fe"
-        />
-      </span>
+      <img
+        alt=""
+        className="k-Card__image"
+        src="https://placehold.it/160x100/caf4fe/caf4fe"
+        style={
+          Object {
+            "backgroundColor": "#d8d8d8",
+          }
+        }
+      />
     </div>
     <div
-      className="sc-AxhCb kGOGkB"
+      className="k-CrowdfundingCard__image__ownerContainer"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular sc-AxhUy kMyssT"
+        className="k-u-margin-top-single"
       >
-        
+        <span
+          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          tabIndex={null}
+        >
+          <img
+            alt=""
+            className="k-ButtonImage__img"
+            src="https://placehold.it/100x100/caf4fe/caf4fe"
+          />
+        </span>
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light sc-AxgMl fFPQpl"
+        className="k-CrowdfundingCard__image__owner"
       >
-        
+        <div
+          className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+        >
+          
+        </div>
+        <div
+          className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+        >
+          
+        </div>
       </div>
     </div>
   </div>
   <div
-    className="sc-fzqBkg gOTAsm"
+    className="k-CrowdfundingCard__titleAndDesc"
   >
     <div
-      className="sc-AxmLO cDRRfW"
+      className="k-CrowdfundingCard__title"
     >
       <p
-        className="sc-AxheI cQdtyY sc-fzozJi fCtUMs k-Card__title"
+        className="sc-AxjAm fgxfLS k-Card__title k-CrowdfundingCard__title__title"
       >
         Custom title
       </p>
     </div>
     
     <div
-      className="sc-fzqBZW floAqh"
+      className="k-CrowdfundingCard__subtitle__container"
     >
       <span
-        className="sc-fznZeY kSeEaV sc-fzqNJr fYezoV"
+        className="sc-AxirZ gwjQl k-CrowdfundingCard__subtitle__horizontalStroke"
+        loading={false}
       />
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular sc-fzoyAV chNsRt"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-CrowdfundingCard__subtitle__subtitleText--truncated"
       >
         <span
-          className="sc-fzokOt karMXD"
+          className="k-CrowdfundingCard__noWrap"
           width={0}
         >
           <span />
@@ -163,54 +190,67 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
 
 exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 <div
-  className="sc-fzolEj iXLwLG k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-AxheI eHlfXY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
   <div
-    className="sc-AxjAm gQibUD k-Card__imageContainer"
-  >
-    <img
-      alt=""
-      backgroundColor="#d8d8d8"
-      className="k-Card__image"
-      src="https://placehold.it/350x200/caf4fe/caf4fe"
-    />
-  </div>
-  <div
-    className="sc-AxirZ eUGgwe"
+    className="k-CrowdfundingCard__image"
   >
     <div
-      className="k-u-margin-top-single"
+      className="k-CrowdfundingCard__image__imageContainer"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
     >
-      <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxiKw lnWuCm"
-        tabIndex={null}
-      >
-        <img
-          alt=""
-          className="k-ButtonImage__img"
-          src="https://placehold.it/100x100/caf4fe/caf4fe"
-        />
-      </span>
+      <img
+        alt=""
+        className="k-Card__image"
+        src="https://placehold.it/160x100/caf4fe/caf4fe"
+        style={
+          Object {
+            "backgroundColor": "#d8d8d8",
+          }
+        }
+      />
     </div>
     <div
-      className="sc-AxhCb kGOGkB"
+      className="k-CrowdfundingCard__image__ownerContainer"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular sc-AxhUy kMyssT"
+        className="k-u-margin-top-single"
       >
-        
+        <span
+          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          tabIndex={null}
+        >
+          <img
+            alt=""
+            className="k-ButtonImage__img"
+            src="https://placehold.it/100x100/caf4fe/caf4fe"
+          />
+        </span>
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light sc-AxgMl fFPQpl"
+        className="k-CrowdfundingCard__image__owner"
       >
-        
+        <div
+          className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+        >
+          
+        </div>
+        <div
+          className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+        >
+          
+        </div>
       </div>
     </div>
   </div>
   <div
-    className="sc-fzqBkg gOTAsm"
+    className="k-CrowdfundingCard__titleAndDesc"
   >
     
     
@@ -224,77 +264,91 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-fzolEj iXLwLG k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-AxheI eHlfXY k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href="#foobar"
   onClick={[Function]}
 >
   <div
-    className="sc-AxjAm gQibUD k-Card__imageContainer"
-  >
-    <img
-      alt="Image alt"
-      backgroundColor="#d8d8d8"
-      className="k-Card__image"
-      color="#333"
-      src="#image"
-    />
-  </div>
-  <div
-    className="sc-AxirZ eUGgwe"
+    className="k-CrowdfundingCard__image"
   >
     <div
-      className="k-u-margin-top-single"
+      className="k-CrowdfundingCard__image__imageContainer"
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
     >
-      <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxiKw lnWuCm"
-        tabIndex={null}
-      >
-        <img
-          alt="Avatar alt"
-          className="k-ButtonImage__img"
-          src="#avatar"
-        />
-      </span>
+      <img
+        alt="Image alt"
+        className="k-Card__image"
+        color="#333"
+        src="#image"
+        style={
+          Object {
+            "backgroundColor": "#d8d8d8",
+          }
+        }
+      />
     </div>
     <div
-      className="sc-AxhCb kGOGkB"
+      className="k-CrowdfundingCard__image__ownerContainer"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular sc-AxhUy kMyssT"
+        className="k-u-margin-top-single"
       >
-        Custom title
+        <span
+          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          tabIndex={null}
+        >
+          <img
+            alt="Avatar alt"
+            className="k-ButtonImage__img"
+            src="#avatar"
+          />
+        </span>
       </div>
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light sc-AxgMl fFPQpl"
+        className="k-CrowdfundingCard__image__owner"
       >
-        Custom description
+        <div
+          className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+        >
+          Custom title
+        </div>
+        <div
+          className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+        >
+          Custom description
+        </div>
       </div>
     </div>
   </div>
   <div
-    className="sc-fzqBkg gOTAsm"
+    className="k-CrowdfundingCard__titleAndDesc"
   >
     <div
-      className="sc-AxmLO cDRRfW"
+      className="k-CrowdfundingCard__title"
     >
       <p
-        className="sc-AxheI cQdtyY sc-fzozJi fCtUMs k-Card__title"
+        className="sc-AxjAm fgxfLS k-Card__title k-CrowdfundingCard__title__title"
       >
         Custom title
       </p>
     </div>
     
     <div
-      className="sc-fzqBZW floAqh"
+      className="k-CrowdfundingCard__subtitle__container"
     >
       <span
-        className="sc-fznZeY kSeEaV sc-fzqNJr fYezoV"
+        className="sc-AxirZ gwjQl k-CrowdfundingCard__subtitle__horizontalStroke"
+        loading={false}
       />
       <p
-        className="k-u-color-font1 k-u-size-micro k-u-weight-regular sc-fzoyAV chNsRt"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-CrowdfundingCard__subtitle__subtitleText--truncated"
       >
         <span
-          className="sc-fzokOt karMXD"
+          className="k-CrowdfundingCard__noWrap"
           width={0}
         >
           <span />
