@@ -37,9 +37,14 @@ class Informations extends PureComponent {
     if (!text) return null
 
     return (
-      <div className="k-CrowdfundingCard__informations__info">
+      <div className="k-CrowdfundingCard__informations__infoContainer">
         {!loading && (
-          <Text size="micro" lineHeight="normal" weight="light" color="font1">
+          <Text
+            lineHeight="normal"
+            weight="light"
+            color="font1"
+            className="k-CrowdfundingCard__informations__info"
+          >
             {text}
           </Text>
         )}

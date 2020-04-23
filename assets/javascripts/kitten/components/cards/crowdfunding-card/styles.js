@@ -141,7 +141,7 @@ export const StyledCrowdfundingCard = styled.div`
     }
   }
 
-  .k-CrowdfundingCard__informations__info {
+  .k-CrowdfundingCard__informations__infoContainer {
     margin-right: ${pxToRem(15)};
     margin-bottom: ${pxToRem(5)};
 
@@ -152,6 +152,10 @@ export const StyledCrowdfundingCard = styled.div`
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .k-CrowdfundingCard__informations__info {
+    font-size: ${pxToRem(12)};
   }
 
   .k-CrowdfundingCard__informations__loadingElement {
