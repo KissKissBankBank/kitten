@@ -448,7 +448,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   margin-right: 0;
 }
 
-.c11 svg {
+.c11 svg,
+.c11 path {
   fill: #fff;
 }
 
@@ -460,7 +461,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 .c11:hover svg,
-.c11:focus svg {
+.c11:focus svg,
+.c11:hover path,
+.c11:focus path {
   fill: #fff;
 }
 
@@ -470,7 +473,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   color: #fff;
 }
 
-.c11:active svg {
+.c11:active svg,
+.c11:active path {
   fill: #fff;
 }
 
@@ -480,7 +484,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   color: #fff;
 }
 
-.c11:disabled svg {
+.c11:disabled svg,
+.c11:disabled path {
   fill: #fff;
 }
 
