@@ -170,13 +170,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   line-height: 1;
 }
 
-.c0 .k-CrowdfundingCard__informations__info {
+.c0 .k-CrowdfundingCard__informations__infoContainer {
   margin-right: 0.9375rem;
   margin-bottom: 0.3125rem;
 }
 
-.c0 .k-CrowdfundingCard__informations__info:last-child {
+.c0 .k-CrowdfundingCard__informations__infoContainer:last-child {
   margin-right: 0;
+}
+
+.c0 .k-CrowdfundingCard__informations__info {
+  font-size: 0.75rem;
 }
 
 .c0 .k-CrowdfundingCard__informations__loadingElement {
@@ -370,7 +374,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 @media (min-width:40rem) {
-  .c0 .k-CrowdfundingCard__informations__info {
+  .c0 .k-CrowdfundingCard__informations__infoContainer {
     margin-right: 1.25rem;
   }
 }
@@ -467,28 +471,28 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     className="k-CrowdfundingCard__informations"
   >
     <div
-      className="k-CrowdfundingCard__informations__info"
+      className="k-CrowdfundingCard__informations__infoContainer"
     >
       <span
-        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
+        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
       >
         Lorem ipsum…
       </span>
     </div>
     <div
-      className="k-CrowdfundingCard__informations__info"
+      className="k-CrowdfundingCard__informations__infoContainer"
     >
       <span
-        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
+        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
       >
         Lorem ipsum…
       </span>
     </div>
     <div
-      className="k-CrowdfundingCard__informations__info"
+      className="k-CrowdfundingCard__informations__infoContainer"
     >
       <span
-        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light"
+        className="k-u-color-font1 k-u-line-height-normal k-u-weight-light k-CrowdfundingCard__informations__info"
       >
         Lorem ipsum…
       </span>
@@ -666,13 +670,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   line-height: 1;
 }
 
-.c0 .k-CrowdfundingCard__informations__info {
+.c0 .k-CrowdfundingCard__informations__infoContainer {
   margin-right: 0.9375rem;
   margin-bottom: 0.3125rem;
 }
 
-.c0 .k-CrowdfundingCard__informations__info:last-child {
+.c0 .k-CrowdfundingCard__informations__infoContainer:last-child {
   margin-right: 0;
+}
+
+.c0 .k-CrowdfundingCard__informations__info {
+  font-size: 0.75rem;
 }
 
 .c0 .k-CrowdfundingCard__informations__loadingElement {
@@ -954,7 +962,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 @media (min-width:40rem) {
-  .c0 .k-CrowdfundingCard__informations__info {
+  .c0 .k-CrowdfundingCard__informations__infoContainer {
     margin-right: 1.25rem;
   }
 }
