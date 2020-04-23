@@ -4,8 +4,6 @@ import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 
 const COMPONENT_GUTTER = pxToRem(10)
-// const TRANSITION_DURATION = '0.4s'
-// const TRANSITION_EASING = 'ease-in-out'
 
 const loadingKeyframes = keyframes`
   from { transform: translateX(-100%) }
