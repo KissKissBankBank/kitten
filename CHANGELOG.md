@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add BEM-style class names to `Carousel` components.
 - Fix: Fit `CrowdfundingCard` image to new 16/10 ratio.
 - Feature: Add `stretch` prop to `CrowdfundingCard`.
 - Feature: Update `CheckedIcon` component.
