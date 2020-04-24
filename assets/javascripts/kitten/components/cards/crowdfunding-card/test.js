@@ -43,6 +43,7 @@ describe('<CrowdfundingCard />', () => {
             info2="Lorem ipsum…"
             info3="Lorem ipsum…"
             progress={42}
+            stretch={true}
           />,
         )
         .toJSON()

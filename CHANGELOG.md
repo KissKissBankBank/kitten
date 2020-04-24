@@ -4,8 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Update `CheckedIcon` compoenent.
-- Feature: Add editor icons:
+- Fix: Update `path` fill on `Button`.
+
+## [2.66.0] - 2020-04-24
+
+Features:
+- Add `stretch` prop to `CrowdfundingCard`.
+- Update `CheckedIcon` component.
+- Add editor icons:
   - `BoldIcon`
   - `BlockquoteIcon`
   - `ListIcon`
@@ -22,7 +28,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `AlignLeftIcon`
   - `AlignCenterIcon`
   - `AlignRightIcon`
-- Fix: Update `path` fill on `Button`.
+- Add BEM-style class names to `Carousel` components.
+
+Fix:
+- Fit `CrowdfundingCard` image to new 16/10 ratio.
 
 ## [2.65.0] - 2020-04-21
 

@@ -45,6 +45,8 @@ var _carouselInner = require("./components/carousel-inner");
 
 var _visuallyHidden = require("../../../components/accessibility/visually-hidden");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
@@ -223,27 +225,35 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
 
       if (viewportIsXSOrLess && !preferCompletePaginationOnMobile) {
         var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
-        return /*#__PURE__*/_react.default.createElement(PageControl, null, rangePage.map(function (index) {
+        return /*#__PURE__*/_react.default.createElement(PageControl, {
+          className: "k-Carousel__pageControl"
+        }, rangePage.map(function (index) {
           return /*#__PURE__*/_react.default.createElement(PageDot, {
+            className: "k-Carousel__pageControl__pageDot",
             index: index,
             key: index,
             visibleIndex: indexPageVisible
           });
         }), /*#__PURE__*/_react.default.createElement(PageControlButton, {
           prev: true,
-          onClick: _this.goPrevPage
+          onClick: _this.goPrevPage,
+          className: "k-Carousel__pageControl__controlButton"
         }), /*#__PURE__*/_react.default.createElement(PageControlButton, {
           next: true,
-          onClick: _this.goNextPage
+          onClick: _this.goNextPage,
+          className: "k-Carousel__pageControl__controlButton"
         }));
       }
 
       return /*#__PURE__*/_react.default.createElement(CarouselPagination, {
         position: paginationPosition,
-        itemMarginBetween: itemMarginBetween
+        itemMarginBetween: itemMarginBetween,
+        className: "k-Carousel__pagination"
       }, /*#__PURE__*/_react.default.createElement(PaginationButtons, {
-        position: paginationPosition
+        position: paginationPosition,
+        className: "k-Carousel__pagination__buttonContainer"
       }, /*#__PURE__*/_react.default.createElement(PageButton, {
+        className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
         tiny: tinyButtons,
@@ -254,6 +264,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         direction: "left",
         "aria-hidden": true
       })), /*#__PURE__*/_react.default.createElement(PageButton, {
+        className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
         tiny: tinyButtons,
@@ -263,10 +274,13 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         version: "solid",
         direction: "right",
         "aria-hidden": true
-      }))), showPageSquares && /*#__PURE__*/_react.default.createElement(PaginationSquares, null, (0, _range.createRangeFromZeroTo)(numPages).map(function (index) {
+      }))), showPageSquares && /*#__PURE__*/_react.default.createElement(PaginationSquares, {
+        className: "k-Carousel__pagination__squaresContainer"
+      }, (0, _range.createRangeFromZeroTo)(numPages).map(function (index) {
         return /*#__PURE__*/_react.default.createElement(PageSquare, {
           key: index,
-          isActive: index === indexPageVisible
+          isActive: index === indexPageVisible,
+          className: "k-Carousel__pagination__square"
         });
       })));
     };
@@ -279,10 +293,12 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this$props4 = this.props,
           paginationPosition = _this$props4.paginationPosition,
-          children = _this$props4.children;
+          children = _this$props4.children,
+          className = _this$props4.className;
       if (_react.default.Children.count(children) === 0) return null;
       return /*#__PURE__*/_react.default.createElement(FlexContainer, {
-        paginationPosition: paginationPosition
+        paginationPosition: paginationPosition,
+        className: (0, _classnames.default)('k-Carousel', className)
       }, this.renderCarouselInner(), this.renderPagination());
     }
   }]);

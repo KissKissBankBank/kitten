@@ -44,6 +44,7 @@ var ButtonImage = /*#__PURE__*/function (_Component) {
   (0, _createClass2.default)(ButtonImage, [{
     key: "renderImage",
     value: function renderImage(props) {
+      if (!props) return null;
       var className = props.className,
           alt = props.alt,
           others = (0, _objectWithoutProperties2.default)(props, ["className", "alt"]);

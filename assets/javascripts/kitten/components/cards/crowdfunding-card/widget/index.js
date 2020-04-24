@@ -1,40 +1,24 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import Image from '../components/image'
 import TitleComponent from '../components/title'
 import Subtitle from '../components/subtitle'
 import CardButton from '../components/button'
-import Loading from '../components/loading'
 import State from '../components/state'
-import { pxToRem } from '../../../../helpers/utils/typography'
-
-const COMPONENT_GUTTER = pxToRem(10)
-
-const StyledContainer = styled.div`
-  position: relative;
-`
-
-const StyledTitleAndDescription = styled.div`
-  padding: 0 ${COMPONENT_GUTTER};
-  margin-top: ${pxToRem(5)};
-
-  ${({ titlesMinHeight }) =>
-    titlesMinHeight &&
-    css`
-      min-height: ${pxToRem(75)};
-    `}
-`
+import { StyledCrowdfundingCard } from '../styles'
+import classNames from 'classnames'
 
 export class CrowdfundingCardWidget extends PureComponent {
   static propTypes = {
     href: PropTypes.string,
     titlesMinHeight: PropTypes.bool,
+    stretch: PropTypes.bool,
   }
 
   static defaultProps = {
     href: null,
     titlesMinHeight: true,
+    stretch: false,
   }
 
   removeCurrentFocus = () => {
@@ -50,6 +34,7 @@ export class CrowdfundingCardWidget extends PureComponent {
       ownerDescription,
       ownerTitle,
       loading,
+      stretch,
       state,
       subtitle,
       title,
@@ -59,15 +44,26 @@ export class CrowdfundingCardWidget extends PureComponent {
       dayCounter,
       titleProps,
       buttonText,
+      className,
       ...others
     } = this.props
 
     return (
-      <StyledContainer
+      <StyledCrowdfundingCard
         {...others}
         as={href ? 'a' : 'div'}
         onClick={this.removeCurrentFocus}
-        className="k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+        className={classNames(
+          'k-CrowdfundingCard',
+          'k-CrowdfundingCardWidget',
+          'k-Card k-Card--light k-Card--withoutBoxShadowOnHover',
+          className,
+          {
+            'k-CrowdfundingCard--titlesMinHeight': titlesMinHeight,
+            'k-CrowdfundingCard--isLoading': loading,
+            'k-CrowdfundingCard--isStretched': stretch,
+          },
+        )}
         href={href}
       >
         <Image
@@ -78,7 +74,7 @@ export class CrowdfundingCardWidget extends PureComponent {
           avatarProps={avatarProps}
           loading={loading}
         />
-        <StyledTitleAndDescription titlesMinHeight={titlesMinHeight}>
+        <div className="k-CrowdfundingCard__titleAndDesc k-CrowdfundingCard__paddedContainer">
           <TitleComponent
             titleTruncate={titleTruncate}
             loading={loading}
@@ -90,11 +86,11 @@ export class CrowdfundingCardWidget extends PureComponent {
             subTitleTruncate={subTitleTruncate}
             loading={loading}
           />
-        </StyledTitleAndDescription>
+        </div>
         <CardButton text={buttonText} loading={loading} />
         <State widgetState={state} loading={loading} />
-        <Loading loading={loading} />
-      </StyledContainer>
+        {loading && <span className="k-CrowdfundingCard__loading" />}
+      </StyledCrowdfundingCard>
     )
   }
 }
