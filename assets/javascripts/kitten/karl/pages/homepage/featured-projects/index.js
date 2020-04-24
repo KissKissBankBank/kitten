@@ -2,30 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import { Card } from './components/card'
 import { Title } from '../../../../components/typography/title'
-import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
+import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { mediaQueries } from '../../../../hoc/media-queries'
 
-const StyledTitle = styled(Title)`
-  font-size: ${stepToRem(-1)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    font-size: ${stepToRem(0)};
-  }
-`
-
-const StyledPaddingRight = styled(GridCol)`
+const StyledFeaturedProjects = styled(Grid)`
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    padding-right: ${pxToRem(20)};
-  }
-`
+    .FeaturedProjects__colLeft {
+      padding-right: ${pxToRem(20)};
+    }
 
-const StyledPaddingLeft = styled(GridCol)`
-  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-    padding-left: ${pxToRem(20)};
+    .FeaturedProjects__colRight {
+      padding-left: ${pxToRem(20)};
+    }
   }
 `
 
@@ -36,8 +27,7 @@ const selectionData = [
     text:
       'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
     imageSrc: 'https://source.unsplash.com/random/315x198?kitten,1',
-    title2:
-      'Un titre court',
+    title2: 'Un titre court',
     text2:
       'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
     imageSrc2: 'https://source.unsplash.com/random/315x198?kitten,2',
@@ -53,8 +43,7 @@ const selectionData = [
     text:
       'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
     imageSrc: 'https://source.unsplash.com/random/315x198?kitten,4',
-    title2:
-      'Un titre court',
+    title2: 'Un titre court',
     text2:
       'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
     imageSrc2: 'https://source.unsplash.com/random/315x198?kitten,5',
@@ -70,8 +59,7 @@ const selectionData = [
     text:
       'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
     imageSrc: 'https://source.unsplash.com/random/315x198?kitten,7',
-    title2:
-      'Un titre court',
+    title2: 'Un titre court',
     text2:
       'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
     imageSrc2: 'https://source.unsplash.com/random/315x198?kitten,8',
@@ -82,17 +70,19 @@ const selectionData = [
   },
 ]
 
-
-const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
-  <Grid>
-    <StyledPaddingRight col-l={6}>
-      <StyledTitle
+const FeaturedProjectsBase = ({ viewportIsXSOrLess }) => (
+  <StyledFeaturedProjects>
+    <GridCol col-l={6} className="FeaturedProjects__colLeft">
+      <Title
         tag="h2"
-        className="k-u-margin-bottom-singleHalf@s-up
+        className="
+        Homepage__section__title
+        k-u-margin-top-none
+        k-u-margin-bottom-singleHalf@s-up
         k-u-margin-bottom-single@s-down"
       >
         À la une
-      </StyledTitle>
+      </Title>
       <Card
         title="Keep It Silky"
         text="Soutenez ma première participation au Salon de la Lingerie de Paris et aidez moi à développer mon réseau commercial ainsi que mon image."
@@ -101,16 +91,19 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
           alt: '',
         }}
       />
-    </StyledPaddingRight>
+    </GridCol>
 
-    <StyledPaddingLeft col-l={6}>
-      <StyledTitle
-        tag="h2"
-        className="k-u-margin-bottom-singleHalf@s-up
+    <GridCol col-l={6} className="FeaturedProjects__colRight">
+      <Title
+        tag="h3"
+        className="
+        Homepage__section__title
+        k-u-margin-top-none
+        k-u-margin-bottom-singleHalf@s-up
         k-u-margin-bottom-single@s-down k-u-hidden@m-down"
       >
         Notre sélection
-      </StyledTitle>
+      </Title>
       <Carousel
         itemMinWidth={viewportIsXSOrLess ? 250 : 490}
         baseItemMarginBetween={10}
@@ -118,11 +111,12 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
         tinyButtons
         showPageSquares
         preferCompletePaginationOnMobile
+        loop
       >
         {selectionData.map((item, index) => (
           <div>
             <Card
-              key={`SelectionCard${item.title}`}
+              key={index}
               title={item.title}
               text={item.text}
               imageProps={{
@@ -133,7 +127,7 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
               overtimeProgress
             />
             <Card
-              key={`SelectionCard${item.title2}`}
+              key={index}
               title={item.title2}
               text={item.text2}
               imageProps={{
@@ -144,7 +138,7 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
               successProgress
             />
             <Card
-              key={`SelectionCard${item.title3}`}
+              key={index}
               title={item.title3}
               text={item.text3}
               imageProps={{
@@ -156,8 +150,8 @@ const FeaturedProjectsBase = ({ viewportIsXSOrLess })=> (
           </div>
         ))}
       </Carousel>
-    </StyledPaddingLeft>
-  </Grid>
+    </GridCol>
+  </StyledFeaturedProjects>
 )
 
 export const FeaturedProjects = mediaQueries(FeaturedProjectsBase, {
