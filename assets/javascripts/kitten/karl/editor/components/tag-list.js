@@ -53,6 +53,23 @@ const List = styled.ul`
   }
 `
 
+const StyledDetails = styled(Details)`
+  summary:focus {
+    outline: none;
+
+    button {
+      border-color: ${COLORS.primary4};
+      background-color: ${COLORS.background1};
+      color: ${COLORS.primary1};
+
+      svg,
+      path {
+        fill: ${COLORS.primary1};
+      }
+    }
+  }
+`
+
 const TagList = () => {
   const [value, setValue] = useState('paragraph')
   let Component
@@ -82,10 +99,10 @@ const TagList = () => {
   }
 
   return (
-    <Details
+    <StyledDetails
       key={value}
       summaryRender={({ open }) => (
-        <SummaryButton className="is-selected" tabIndex="-1">
+        <SummaryButton tabIndex="-1">
           <Component />
           <ArrowIcon width="6" direction={open ? 'top' : 'bottom'} />
         </SummaryButton>
@@ -143,7 +160,7 @@ const TagList = () => {
           </button>
         </li>
       </List>
-    </Details>
+    </StyledDetails>
   )
 }
 
