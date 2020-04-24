@@ -1,5 +1,4 @@
 import React from 'react'
-import { withKnobs } from '@storybook/addon-knobs'
 import { FeaturedProjects } from './index'
 import { Container } from '../../../../components/grid/container'
 import styled from 'styled-components'
@@ -21,7 +20,6 @@ const StyledContainer = styled(Container)`
 export default {
   component: FeaturedProjects,
   title: 'pages/homepage/FeaturedProjects',
-  decorators: [withKnobs],
   parameters: {
     component: FeaturedProjects,
   },

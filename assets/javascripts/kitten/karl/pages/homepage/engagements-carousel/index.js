@@ -88,19 +88,21 @@ const engagementsData = [
 ]
 
 const StyledContainer = styled(Container)`
-  margin-top: ${pxToRem(20)};
-
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    & > div > :last-child {
+    .k-Carousel__pagination {
       margin-top: ${pxToRem(20)};
     }
   }
 
-  [class^='carousel-page']:hover > [class^='carousel-page'] a:hover {
+  .k-Carousel__page__item a {
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .k-Carousel__page:hover > .k-Carousel__page__item a:hover {
     opacity: 1;
   }
 
-  [class^='carousel-page']:hover > [class^='carousel-page'] a {
+  .k-Carousel__page:hover > .k-Carousel__page__item a {
     opacity: 0.7;
   }
 
