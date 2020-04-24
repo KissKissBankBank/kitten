@@ -83,7 +83,8 @@ const PopularProjectsBase = ({ viewportIsMOrLess, viewportIsSOrLess }) => {
         hidePagination={viewportIsMOrLess ? true : false}
         showOtherPages={viewportIsMOrLess ? true : false}
         showPageSquares={viewportIsMOrLess ? false : true}
-        loop={true}
+        loop
+        tinyButtons
       >
         {data.map(item => (
           <CrowdfundingCard

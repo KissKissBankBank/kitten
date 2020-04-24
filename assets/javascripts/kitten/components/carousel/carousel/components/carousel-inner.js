@@ -174,6 +174,7 @@ export class CarouselInner extends Component {
         onTouchStart={this.handleTouchStart}
         onTouchEnd={this.handleTouchEnd}
         showOtherPages={showOtherPages}
+        className="k-Carousel__inner"
       >
         {rangePage.map(index => (
           <StyledCarouselPageContainer
@@ -184,6 +185,7 @@ export class CarouselInner extends Component {
             onClick={this.handlePageClick(index)}
             showOtherPages={showOtherPages}
             className={pagesClassName}
+            className="k-Carousel__inner__pageContainer"
           >
             <CarouselPage
               numColumns={numColumns}

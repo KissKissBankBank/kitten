@@ -35,13 +35,14 @@ export class CarouselPage extends Component {
     const rangeCard = createRangeFromZeroTo(numColumns)
 
     return (
-      <StyledPage>
+      <StyledPage className="k-Carousel__page">
         {rangeCard.map(index => (
           <StyledItem
             key={index}
             index={index}
             itemMinWidth={itemMinWidth}
             itemMarginBetween={itemMarginBetween}
+            className="k-Carousel__page__item"
           >
             {renderItem[index]}
           </StyledItem>

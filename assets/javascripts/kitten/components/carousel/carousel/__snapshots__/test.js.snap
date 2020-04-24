@@ -2,23 +2,23 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-AxmLO fGuvvD"
+  className="sc-AxmLO fGuvvD k-Carousel"
 >
   <div
-    className="sc-AxgMl jWGKu"
+    className="sc-AxgMl jWGKu k-Carousel__inner"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="sc-AxheI fsZQch"
+      className="sc-AxheI fsZQch k-Carousel__inner__pageContainer"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb ffaSdK"
+        className="sc-AxhCb ffaSdK k-Carousel__page"
       >
         <div
-          className="sc-AxhUy hZqsUu"
+          className="sc-AxhUy hZqsUu k-Carousel__page__item"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -64,10 +64,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="sc-AxhUy ezsiGz"
+          className="sc-AxhUy ezsiGz k-Carousel__page__item"
         />
         <div
-          className="sc-AxhUy ezsiGz"
+          className="sc-AxhUy ezsiGz k-Carousel__page__item"
         />
       </div>
     </div>
@@ -77,23 +77,23 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-AxmLO fGuvvD"
+  className="sc-AxmLO fGuvvD k-Carousel"
 >
   <div
-    className="sc-AxgMl jWGKu"
+    className="sc-AxgMl jWGKu k-Carousel__inner"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="sc-AxheI fsZQch custom-class"
+      className="sc-AxheI fsZQch k-Carousel__inner__pageContainer"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb ffaSdK"
+        className="sc-AxhCb ffaSdK k-Carousel__page"
       >
         <div
-          className="sc-AxhUy hZqsUu"
+          className="sc-AxhUy hZqsUu k-Carousel__page__item"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -139,10 +139,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="sc-AxhUy iLqwOC"
+          className="sc-AxhUy iLqwOC k-Carousel__page__item"
         />
         <div
-          className="sc-AxhUy iLqwOC"
+          className="sc-AxhUy iLqwOC k-Carousel__page__item"
         />
       </div>
     </div>
@@ -152,23 +152,23 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-AxmLO fGuvvD"
+  className="sc-AxmLO fGuvvD k-Carousel"
 >
   <div
-    className="sc-AxgMl jWGKu"
+    className="sc-AxgMl jWGKu k-Carousel__inner"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="sc-AxheI fsZQch"
+      className="sc-AxheI fsZQch k-Carousel__inner__pageContainer"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb ffaSdK"
+        className="sc-AxhCb ffaSdK k-Carousel__page"
       >
         <div
-          className="sc-AxhUy hZqsUu"
+          className="sc-AxhUy hZqsUu k-Carousel__page__item"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -214,10 +214,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="sc-AxhUy ezsiGz"
+          className="sc-AxhUy ezsiGz k-Carousel__page__item"
         />
         <div
-          className="sc-AxhUy ezsiGz"
+          className="sc-AxhUy ezsiGz k-Carousel__page__item"
         />
       </div>
     </div>
