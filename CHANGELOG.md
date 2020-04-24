@@ -4,11 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add BEM-style class names to `Carousel` components.
-- Fix: Fit `CrowdfundingCard` image to new 16/10 ratio.
-- Feature: Add `stretch` prop to `CrowdfundingCard`.
-- Feature: Update `CheckedIcon` component.
-- Feature: Add editor icons:
+## [2.66.0] - 2020-04-24
+
+Features:
+- Add `stretch` prop to `CrowdfundingCard`.
+- Update `CheckedIcon` component.
+- Add editor icons:
   - `BoldIcon`
   - `BlockquoteIcon`
   - `ListIcon`
@@ -25,6 +26,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `AlignLeftIcon`
   - `AlignCenterIcon`
   - `AlignRightIcon`
+- Add BEM-style class names to `Carousel` components.
+
+Fix:
+- Fit `CrowdfundingCard` image to new 16/10 ratio.
 
 ## [2.65.0] - 2020-04-21
 
