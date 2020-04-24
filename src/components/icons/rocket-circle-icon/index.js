@@ -55,7 +55,7 @@ var StyledRocketIcon = (0, _styledComponents.default)(function (_ref6) {
 }).withConfig({
   displayName: "rocket-circle-icon__StyledRocketIcon",
   componentId: "paapmm-1"
-})(["width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}"], function (_ref7) {
+})(["padding-right:", ";padding-top:", ";width:", ";height:", ";@media (min-width:", "){width:", ";height:", ";}"], (0, _typography.pxToRem)(2), (0, _typography.pxToRem)(1), function (_ref7) {
   var rocketWidthMobile = _ref7.rocketWidthMobile;
   return (0, _typography.pxToRem)(rocketWidthMobile);
 }, function (_ref8) {

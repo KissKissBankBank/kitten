@@ -65,12 +65,15 @@ var CarouselPage = /*#__PURE__*/function (_Component) {
           itemMarginBetween = _this$props.itemMarginBetween,
           renderItem = _this$props.renderItem;
       var rangeCard = (0, _range.createRangeFromZeroTo)(numColumns);
-      return /*#__PURE__*/_react.default.createElement(StyledPage, null, rangeCard.map(function (index) {
+      return /*#__PURE__*/_react.default.createElement(StyledPage, {
+        className: "k-Carousel__page"
+      }, rangeCard.map(function (index) {
         return /*#__PURE__*/_react.default.createElement(StyledItem, {
           key: index,
           index: index,
           itemMinWidth: itemMinWidth,
-          itemMarginBetween: itemMarginBetween
+          itemMarginBetween: itemMarginBetween,
+          className: "k-Carousel__page__item"
         }, renderItem[index]);
       }));
     }
