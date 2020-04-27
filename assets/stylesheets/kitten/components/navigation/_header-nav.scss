@@ -59,6 +59,7 @@
 
     &, * {
       @include k-typographyFont($font);
+      box-sizing: border-box;
     }
 
     *:focus {
@@ -126,14 +127,13 @@
 
     .text--withEllipsis {
       text-overflow: ellipsis;
-      max-width: k-px-to-rem(135px);
+      max-width: k-px-to-rem(145px);
       white-space: nowrap;
       overflow: hidden;
     }
   }
 
   .k-HeaderNav__UserMenuButton {
-    box-sizing: border-box;
     display: flex;
     align-self: center;
     height: 100%;

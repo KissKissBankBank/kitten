@@ -155,7 +155,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 1.5rem;
+  height: 4.375rem;
   padding: 1.4375rem 1.3125rem 1.375rem 1.875rem;
   -webkit-align-items: center;
   -webkit-box-align: center;
