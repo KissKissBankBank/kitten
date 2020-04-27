@@ -57,7 +57,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -69,7 +70,9 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -79,7 +82,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -89,7 +93,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -164,7 +169,8 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -176,7 +182,9 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -186,7 +194,8 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -196,7 +205,8 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -288,7 +298,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -300,7 +311,9 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -310,7 +323,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -320,7 +334,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -397,7 +412,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -409,7 +425,9 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -419,7 +437,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -429,7 +448,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -504,7 +524,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #19b4fa;
 }
 
@@ -516,7 +537,9 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -526,7 +549,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -536,7 +560,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -615,7 +640,8 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -627,7 +653,9 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -637,7 +665,8 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -647,7 +676,8 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -734,7 +764,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -746,7 +777,9 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -756,7 +789,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -766,7 +800,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -885,7 +920,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -897,7 +933,9 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -907,7 +945,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -917,7 +956,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -1011,7 +1051,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -1023,7 +1064,9 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -1033,7 +1076,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -1043,7 +1087,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -1144,7 +1189,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -1156,7 +1202,9 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -1166,7 +1214,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -1176,7 +1225,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -1259,7 +1309,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -1271,7 +1322,9 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -1281,7 +1334,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -1291,7 +1345,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -1371,7 +1426,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -1383,7 +1439,9 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -1393,7 +1451,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -1403,7 +1462,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
