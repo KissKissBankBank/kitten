@@ -71,7 +71,7 @@ var StyledItem = _styledComponents.default.a.withConfig({
 var ExternalStyledItem = (0, _styledComponents.default)(StyledItem).withConfig({
   displayName: "item__ExternalStyledItem",
   componentId: "sc-5lownc-2"
-})(["display:flex;height:", ";padding:", ";align-items:center;align-self:flex-start;justify-content:space-between;background-color:", ";.itemNextToArrowIcon{margin-right:", ";}.headerMenuArrowIcon{position:relative;left:0;transition:left 0.2s;}svg,img{max-height:", ";width:auto;}:focus,:hover{color:", ";.headerMenuArrowIcon{left:", ";}}::before{display:none;}"], (0, _typography.pxToRem)(24), function (_ref10) {
+})(["display:flex;height:", ";padding:", ";align-items:center;align-self:flex-start;justify-content:space-between;background-color:", ";.itemNextToArrowIcon{margin-right:", ";}.headerMenuArrowIcon{position:relative;left:0;transition:left 0.2s;}svg,img{max-height:", ";width:auto;}:focus,:hover{color:", ";.headerMenuArrowIcon{left:", ";}}::before{display:none;}"], (0, _typography.pxToRem)(70), function (_ref10) {
   var largeItem = _ref10.largeItem;
   return largeItem ? "".concat((0, _typography.pxToRem)(23), " ").concat((0, _typography.pxToRem)(21), " ").concat((0, _typography.pxToRem)(22), " ").concat((0, _typography.pxToRem)(40)) : "".concat((0, _typography.pxToRem)(23), " ").concat((0, _typography.pxToRem)(21), " ").concat((0, _typography.pxToRem)(22), " ").concat((0, _typography.pxToRem)(30));
 }, _colorsConfig.default.background3, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(24), _colorsConfig.default.font1, (0, _typography.pxToRem)(5));
