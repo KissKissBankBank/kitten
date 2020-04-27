@@ -57,7 +57,8 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c1 svg {
+.c1 svg,
+.c1 path {
   fill: #222;
 }
 
@@ -69,7 +70,9 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 .c1:hover svg,
-.c1:focus svg {
+.c1:focus svg,
+.c1:hover path,
+.c1:focus path {
   fill: #fff;
 }
 
@@ -79,7 +82,8 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c1:active svg {
+.c1:active svg,
+.c1:active path {
   fill: #fff;
 }
 
@@ -89,7 +93,8 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c1:disabled svg {
+.c1:disabled svg,
+.c1:disabled path {
   fill: #fff;
 }
 

@@ -72,7 +72,8 @@ export const modifierStyles = modifier => {
     background-color: ${backgroundColor};
     color: ${color};
 
-    svg {
+    svg,
+    path {
       fill: ${color};
     }
 
@@ -86,7 +87,8 @@ export const modifierStyles = modifier => {
         background-color: ${hoverBgColor};
         color: ${hoverColor};
 
-        svg {
+        svg,
+        path {
           fill: ${hoverColor};
         }
       }
@@ -96,7 +98,8 @@ export const modifierStyles = modifier => {
         background-color: ${activeBgColor};
         color: ${activeColor};
 
-        svg {
+        svg,
+        path {
           fill: ${activeColor};
         }
       }
@@ -105,7 +108,8 @@ export const modifierStyles = modifier => {
       background-color: ${COLORS.line2};
       color: ${COLORS.background1};
 
-      svg {
+      svg,
+      path {
         fill: ${COLORS.background1};
       }
     }
