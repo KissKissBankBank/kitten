@@ -4,6 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.66.1] - 2020-04-27
+
+Fixes:
+- Fix `HeaderNav` layout.
+- Update `path` fill on `Button`.
+
 ## [2.66.0] - 2020-04-24
 
 Features:

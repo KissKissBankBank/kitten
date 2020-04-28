@@ -68,7 +68,8 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c3 svg {
+.c3 svg,
+.c3 path {
   fill: #fff;
 }
 
@@ -80,7 +81,9 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 }
 
 .c3:hover svg,
-.c3:focus svg {
+.c3:focus svg,
+.c3:hover path,
+.c3:focus path {
   fill: #fff;
 }
 
@@ -90,7 +93,8 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c3:active svg {
+.c3:active svg,
+.c3:active path {
   fill: #fff;
 }
 
@@ -100,7 +104,8 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c3:disabled svg {
+.c3:disabled svg,
+.c3:disabled path {
   fill: #fff;
 }
 
