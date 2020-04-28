@@ -3,7 +3,7 @@ version: 2
 jobs:
   build_and_test:
     docker:
-      - image: circleci/node:10.16.0-browsers
+      - image: circleci/node:12.15.0-browsers
 
     working_directory: ~/repo
 
@@ -12,8 +12,8 @@ jobs:
 
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "package-lock.json" }}
-          - v1-dependencies-
+          - v2-dependencies-{{ checksum "package-lock.json" }}
+          - v2-dependencies-
 
       - run:
           name: install dependencies
@@ -23,7 +23,7 @@ jobs:
       - save_cache:
           paths:
             - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "package-lock.json" }}
+          key: v2-dependencies-{{ checksum "package-lock.json" }}
 
       - run:
           name: run tests

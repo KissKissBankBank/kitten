@@ -13,7 +13,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
   withoutBorder={false}
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 dhVuZS"
+    className="sc-AxjAm ekdWbF"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -35,10 +35,10 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 bNPfXK"
+            className="sc-AxjAm jDynbx"
           >
             <h1
-              className="title__StyledTitle-sc-46lshq-0 fyNmMc"
+              className="sc-AxirZ gEwSiw"
               style={
                 Object {
                   "color": "#222",
@@ -49,15 +49,15 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="sc-AxjAm ccCISE"
           >
             <span
-              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+              className="sc-AxiKw gGNgIn"
             />
           </div>
           
           <div
-            className="marger__StyledMarger-q3lecu-0 gNBLBo"
+            className="sc-AxjAm iOcWzD"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -102,7 +102,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
   withoutBorder={false}
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 dhVuZS"
+    className="sc-AxjAm ekdWbF"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -124,10 +124,10 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 bNPfXK"
+            className="sc-AxjAm jDynbx"
           >
             <h1
-              className="title__StyledTitle-sc-46lshq-0 fyNmMc"
+              className="sc-AxirZ gEwSiw"
               style={
                 Object {
                   "color": "#222",
@@ -138,14 +138,14 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="sc-AxjAm ccCISE"
           >
             <span
-              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+              className="sc-AxiKw gGNgIn"
             />
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 eQydFv"
+            className="sc-AxjAm bpEnKz"
           >
             <p
               className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
@@ -159,7 +159,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 WSKaG"
+            className="sc-AxjAm bsGvJV"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -179,7 +179,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="sc-AxjAm ccCISE"
           >
             <span
               className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
@@ -232,7 +232,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="marger__StyledMarger-q3lecu-0 gNBLBo"
+          className="sc-AxjAm iOcWzD"
         >
           <button
             aria-labelledby="Custom text button"
@@ -258,7 +258,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             Custom text button
           </button>
           <div
-            className="marger__StyledMarger-q3lecu-0 cOWOpW"
+            className="sc-AxjAm ksLovO"
           >
             <div
               data-radium={true}
@@ -270,7 +270,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               }
             >
               <span
-                className="icon-badge__StyledBadge-sc-13mitia-0 iysqhm"
+                className="sc-AxhCb dbedwk"
                 disabled={false}
                 style={
                   Object {
@@ -279,7 +279,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
                 }
               >
                 <span
-                  className="icon-badge__StyledContent-sc-13mitia-1 iTNHVn"
+                  className="sc-AxhUy efrIZw"
                 >
                   <svg
                     className="k-IconBadge__svg"
@@ -328,7 +328,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         style={Object {}}
       >
         <div
-          className="marger__StyledMarger-q3lecu-0 jMGtVA"
+          className="sc-AxjAm StDqN"
         >
           <div
             data-radium={true}
@@ -386,7 +386,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
   withoutBorder={false}
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 lgDgPO"
+    className="sc-AxjAm dCdSew"
   >
     <div
       className="k-Grid"
@@ -408,10 +408,10 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 bNPfXK"
+            className="sc-AxjAm jDynbx"
           >
             <h1
-              className="title__StyledTitle-sc-46lshq-0 fWULhU"
+              className="sc-AxirZ fVRbfQ"
               style={
                 Object {
                   "color": "#222",
@@ -422,14 +422,14 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="sc-AxjAm ccCISE"
           >
             <span
-              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+              className="sc-AxiKw gGNgIn"
             />
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 eQydFv"
+            className="sc-AxjAm bpEnKz"
           >
             <p
               className="k-u-color-font1 k-u-size-big k-u-weight-bold"
@@ -443,7 +443,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 WSKaG"
+            className="sc-AxjAm bsGvJV"
           >
             <p
               className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -463,7 +463,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="sc-AxjAm ccCISE"
           >
             <div>
               <span
@@ -535,7 +535,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         }
       >
         <div
-          className="marger__StyledMarger-q3lecu-0 jMGtVA"
+          className="sc-AxjAm StDqN"
         >
           <div
             data-radium={true}
@@ -558,7 +558,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 jyDYur"
+      className="sc-AxjAm iySa-Dp"
     >
       <div
         className="k-Grid"
@@ -583,7 +583,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             }
           >
             <span
-              className="icon-badge__StyledBadge-sc-13mitia-0 iysqhm"
+              className="sc-AxhCb dbedwk"
               disabled={false}
               style={
                 Object {
@@ -592,7 +592,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
               }
             >
               <span
-                className="icon-badge__StyledContent-sc-13mitia-1 iTNHVn"
+                className="sc-AxhUy efrIZw"
               >
                 <svg
                   className="k-IconBadge__svg"

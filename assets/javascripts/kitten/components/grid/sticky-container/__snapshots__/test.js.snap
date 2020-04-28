@@ -3,24 +3,24 @@
 exports[`<StickyContainer /> already sticky matches with snapshot 1`] = `
 Array [
   <div
-    className="sticky-container__StyledSpacer-trwgvt-1 ctlyRa k-Spacer"
+    className="sc-AxirZ kwAkwm k-Spacer"
   />,
   <div
-    className="sticky-container__StyledStickyContainer-trwgvt-0 ehxgAs"
+    className="sc-AxjAm egiFtB"
   />,
 ]
 `;
 
 exports[`<StickyContainer /> by default matches with snapshot 1`] = `
 <div
-  className="sticky-container__StyledStickyContainer-trwgvt-0 idbjcB"
+  className="sc-AxjAm fOunFk"
 />
 `;
 
 exports[`<StickyContainer /> with some props matches with snapshot 1`] = `
 <div
   aria-hidden={true}
-  className="sticky-container__StyledStickyContainer-trwgvt-0 jpKiVq custom__class"
+  className="sc-AxjAm gYzLKa custom__class"
   style={
     Object {
       "color": "red",

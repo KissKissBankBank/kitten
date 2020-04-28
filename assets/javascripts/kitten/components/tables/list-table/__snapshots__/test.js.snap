@@ -2,29 +2,29 @@
 
 exports[`<ListTable /> with a complete structure and custom classes matches with snapshot 1`] = `
 <section
-  className="list-table__StyledSection-sc-1q4tayn-0 gbaDiG"
+  className="sc-AxheI kpOWOy"
   id="TestListTable"
 >
   <header
-    className="header__StyledHeader-sc-1f8str-0 sDJi customHeaderClass"
+    className="sc-AxjAm kiBgFD customHeaderClass"
   >
     <ul
-      className="header__StyledList-sc-1f8str-1 djXrzp customListClass"
+      className="sc-AxirZ btAxfE customListClass"
     >
       <li
-        className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
+        className="sc-AxgMl iGytpP"
         id="TestListTable-col-0"
       >
         Header 1
       </li>
       <li
-        className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
+        className="sc-AxgMl iGytpP"
         id="TestListTable-col-1"
       >
         Header 2
       </li>
       <li
-        className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
+        className="sc-AxgMl iGytpP"
         id="TestListTable-col-2"
       >
         Header 3
@@ -32,55 +32,55 @@ exports[`<ListTable /> with a complete structure and custom classes matches with
     </ul>
   </header>
   <ul
-    className="body__ListTableBody-kjc0pl-0 kyLkIG"
+    className="sc-AxiKw dAqgfu"
   >
     <li
-      className="row__StyledRow-sc-1vlimsn-0 dtKcON"
+      className="sc-AxhCb hpjUxV"
     >
       <ul
-        className="row__StyledItemList-sc-1vlimsn-1 ybKEK"
+        className="sc-AxhUy lcNAZT"
       >
         <li
           aria-describedby="TestListTable-col-0"
-          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
+          className="sc-AxgMl iGytpP"
         >
           Content 1
         </li>
         <li
           aria-describedby="TestListTable-col-1"
-          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
+          className="sc-AxgMl iGytpP"
         >
           Content 2
         </li>
         <li
           aria-describedby="TestListTable-col-2"
-          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
+          className="sc-AxgMl iGytpP"
         >
           Content 3
         </li>
       </ul>
     </li>
     <li
-      className="row__StyledRow-sc-1vlimsn-0 kpFNeD customRowClass"
+      className="sc-AxhCb byhHRA customRowClass"
     >
       <ul
-        className="row__StyledItemList-sc-1vlimsn-1 ybKEK customListClass"
+        className="sc-AxhUy lcNAZT customListClass"
       >
         <li
           aria-describedby="TestListTable-col-0"
-          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
+          className="sc-AxgMl iGytpP"
         >
           Content 1
         </li>
         <li
           aria-describedby="TestListTable-col-1"
-          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
+          className="sc-AxgMl iGytpP"
         >
           Content 2
         </li>
         <li
           aria-describedby="TestListTable-col-2"
-          className="col__ListTableCol-sc-1vota8e-0 hLYpEQ"
+          className="sc-AxgMl iGytpP"
         >
           Content 3
         </li>

@@ -2,13 +2,13 @@
 
 exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 <div
-  className="alert__AlertWrapper-j865fd-0 bYunaj"
+  className="sc-AxjAm fGlrFu"
   role="alert"
 >
   Alert !
   <button
     aria-label="Close"
-    className="k-ButtonIcon k-ButtonIcon--cross alert__StyledCloseButton-j865fd-1 fmFwlC k-ButtonIcon--carbon"
+    className="k-ButtonIcon k-ButtonIcon--cross sc-AxirZ eNKOWu k-ButtonIcon--carbon"
     onClick={[Function]}
     tabIndex={null}
     title="Close"
@@ -35,7 +35,7 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 
 exports[`<Alert /> should matches with default snapshot 1`] = `
 <div
-  className="alert__AlertWrapper-j865fd-0 bYunaj"
+  className="sc-AxjAm fGlrFu"
   role="alert"
 >
   Alert !
@@ -44,7 +44,7 @@ exports[`<Alert /> should matches with default snapshot 1`] = `
 
 exports[`<Alert /> should matches with error snapshot 1`] = `
 <div
-  className="alert__AlertWrapper-j865fd-0 blXpCV"
+  className="sc-AxjAm ijAaXt"
   role="alert"
 >
   Alert !
@@ -53,7 +53,7 @@ exports[`<Alert /> should matches with error snapshot 1`] = `
 
 exports[`<Alert /> should matches with success snapshot 1`] = `
 <div
-  className="alert__AlertWrapper-j865fd-0 cUOqTm"
+  className="sc-AxjAm bXmOMf"
   role="alert"
 >
   Alert !
@@ -62,7 +62,7 @@ exports[`<Alert /> should matches with success snapshot 1`] = `
 
 exports[`<Alert /> should matches with warning snapshot 1`] = `
 <div
-  className="alert__AlertWrapper-j865fd-0 qmmji"
+  className="sc-AxjAm efa-dpi"
   role="alert"
 >
   Alert !
