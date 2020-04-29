@@ -6,9 +6,7 @@ import ReactModal from 'react-modal'
 import { CloseButton } from '../../../components/buttons/close-button'
 import { Button } from '../../../components/buttons/button/button'
 import { Paragraph } from '../../../components/typography/paragraph'
-import { Grid, GridCol } from '../../../components/grid/grid'
-import { Container } from '../../../components/grid/container'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, css } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Title } from '../../typography/title'
@@ -23,27 +21,6 @@ const paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER
 const oneGridCol = `calc((100vw - ${pxToRem(
   paddingPlusGutters,
 )}) / 12 + ${pxToRem(GUTTER)})`
-const oneGridColXl = `${pxToRem(
-  (CONTAINER_MAX_WIDTH - paddingPlusGutters) / 12 + GUTTER,
-)}`
-
-const ModalLayout = styled.div`
-  position: relative;
-  background-color: ${COLORS.background1};
-  box-sizing: border-box;
-  margin: ${pxToRem(50)} ${pxToRem(20)};
-  padding: ${pxToRem(50)} ${pxToRem(30)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    margin: ${pxToRem(100)} auto;
-    padding: ${pxToRem(80)} ${oneGridCol};
-  }
-
-  @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
-    margin: ${pxToRem(100)} auto;
-    padding: ${pxToRem(80)} ${oneGridColXl};
-  }
-`
 
 const StyledParagraph = styled(Paragraph)`
   font-size: ${pxToRem(12)};
@@ -55,6 +32,44 @@ const StyledParagraph = styled(Paragraph)`
 const GlobalStyle = createGlobalStyle`
   body.k-Modal__body--open {
     overflow: hidden;
+  }
+  
+  .k-Modal-content {
+    position: relative;
+    background-color: ${COLORS.background1};
+    box-sizing: border-box;
+    margin: ${pxToRem(50)} ${pxToRem(20)};
+    padding: ${pxToRem(50)} ${pxToRem(30)};
+    width: calc(100vw ${pxToRem(20)});
+  
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin: ${pxToRem(100)} auto;
+      padding: ${pxToRem(80)} ${oneGridCol};
+      width: calc((100vw - ${pxToRem(paddingPlusGutters)}) + (${pxToRem(
+  GUTTER,
+)} * 11))
+    }
+  
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      margin: ${pxToRem(100)} auto;
+      padding: ${pxToRem(80)} ${oneGridCol};
+      ${props => css`
+        width: calc(
+          ((100vw - ${pxToRem(paddingPlusGutters)}) / 12 + ${pxToRem(GUTTER)}) *
+            ${props.cols} - ${pxToRem(GUTTER)}
+        );
+      `}
+    }
+    
+    @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
+    ${props => css`
+      width: ${pxToRem(
+        ((CONTAINER_MAX_WIDTH - paddingPlusGutters) / 12 + GUTTER) *
+          props.cols -
+          GUTTER,
+      )};
+    `}
+    }
   }
 
   .k-Modal__close {
@@ -171,7 +186,6 @@ export const Modal = ({
 }) => {
   const [showModal, setShowModal] = useState(false)
   const colsOnDesktop = huge ? 10 : big ? 8 : 6
-  const offsetOnDesktop = huge ? 1 : big ? 2 : 3
   const close = () => {
     setShowModal(false)
     if (onClose) {
@@ -183,44 +197,9 @@ export const Modal = ({
       setShowModal(true)
     }
   }, [])
-  const Layout = (
-    <ModalLayout>
-      {children}
-      {hasCloseButton && (
-        <div className="k-Modal__close">
-          <CloseButton
-            style={{ position: 'fixed' }}
-            className="k-u-hidden@s-up"
-            modifier="beryllium"
-            onClick={close}
-            size="tiny"
-            closeButtonLabel={closeButtonLabel}
-          />
-          <CloseButton
-            style={{ position: 'fixed' }}
-            className="k-u-hidden@xs-down"
-            modifier="beryllium"
-            onClick={close}
-            closeButtonLabel={closeButtonLabel}
-          />
-        </div>
-      )}
-    </ModalLayout>
-  )
   const ModalPortal = ReactDOM.createPortal(
-    <div
-      id="modal-overlay"
-      onClick={e => {
-        if (
-          e.target.dataset.overlay ||
-          (e.target.className.indexOf &&
-            e.target.className.indexOf('k-Modal-content') !== -1)
-        ) {
-          close()
-        }
-      }}
-    >
-      <GlobalStyle />
+    <>
+      <GlobalStyle cols={colsOnDesktop} />
       <ReactModal
         closeTimeoutMS={500}
         role="dialog"
@@ -245,21 +224,30 @@ export const Modal = ({
         bodyOpenClassName="k-Modal__body--open"
         {...modalProps}
       >
-        <Container fullWidthBelowScreenSize="XS" data-overlay="container">
-          <Grid className="k-u-hidden@xs-down" data-overlay="grid">
-            <GridCol
-              col={12}
-              col-l={colsOnDesktop}
-              offset-l={offsetOnDesktop}
-              data-overlay="grid-col"
-            >
-              {Layout}
-            </GridCol>
-          </Grid>
-          <div className="k-u-hidden@s-up">{Layout}</div>
-        </Container>
+        <>
+          {children}
+          {hasCloseButton && (
+            <div className="k-Modal__close">
+              <CloseButton
+                style={{ position: 'fixed' }}
+                className="k-u-hidden@s-up"
+                modifier="beryllium"
+                onClick={close}
+                size="tiny"
+                closeButtonLabel={closeButtonLabel}
+              />
+              <CloseButton
+                style={{ position: 'fixed' }}
+                className="k-u-hidden@xs-down"
+                modifier="beryllium"
+                onClick={close}
+                closeButtonLabel={closeButtonLabel}
+              />
+            </div>
+          )}
+        </>
       </ReactModal>
-    </div>,
+    </>,
     document.body,
   )
   return (
