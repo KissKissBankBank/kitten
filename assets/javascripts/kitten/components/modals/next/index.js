@@ -182,6 +182,7 @@ export const Modal = ({
   maxWidth,
   big,
   huge,
+  isOpen,
   ...others
 }) => {
   const [showModal, setShowModal] = useState(false)
@@ -197,6 +198,11 @@ export const Modal = ({
       setShowModal(true)
     }
   }, [])
+
+  useEffect(() => {
+    setShowModal(isOpen)
+  }, [isOpen])
+
   const ModalPortal = ReactDOM.createPortal(
     <>
       <GlobalStyle cols={colsOnDesktop} />
@@ -265,8 +271,9 @@ Modal.propTypes = {
   closeButtonLabel: PropTypes.string,
   modalProps: PropTypes.object,
   hasCloseButton: PropTypes.bool,
-  big: PropTypes.boolean,
-  huge: PropTypes.boolean,
+  big: PropTypes.bool,
+  huge: PropTypes.bool,
+  isOpen: PropTypes.bool,
 }
 
 Modal.defaultProps = {
@@ -278,6 +285,7 @@ Modal.defaultProps = {
   hasCloseButton: true,
   big: false,
   huge: false,
+  isOpen: false,
 }
 
 Modal.Title = ModalTitle

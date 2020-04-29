@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button } from '../../../components/buttons/button/button'
@@ -37,6 +37,12 @@ export default {
   title: 'NEXT/Modal',
   decorators: [withKnobs],
   component: Modal,
+  subcomponents: {
+    Title: Modal.Title,
+    Paragraph: Modal.Paragraph,
+    Actions: Modal.Actions,
+    Button: Modal.Button,
+  },
 }
 
 export const OneButton = () => (
@@ -70,16 +76,39 @@ export const TwoButton = () => (
   </Modal>
 )
 
-export const LaunchOnMount = () => (
-  <Modal
-    hasCloseButton={boolean('Has close button', true)}
-    big={boolean('Big size', false)}
-    huge={boolean('Huge size', false)}
-  >
-    <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-    <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
-    <Modal.Actions>
-      <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
-    </Modal.Actions>
-  </Modal>
-)
+export const WithState = () => {
+  const [showModal, updateModalState] = useState(false)
+  return (
+    <>
+      <Button modifier="helium" onClick={() => updateModalState(!showModal)}>
+        Open
+      </Button>
+      <Modal
+        isOpen={showModal}
+        hasCloseButton={boolean('Has close button', true)}
+        big={boolean('Big size', false)}
+        huge={boolean('Huge size', false)}
+        onClose={() => updateModalState(false)}
+      >
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
+        <Modal.Actions>
+          <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
+        </Modal.Actions>
+      </Modal>
+    </>
+  )
+}
+
+export const Multi = () => {
+  return (
+    <>
+      <Modal trigger={<Button modifier="helium">Open 1</Button>}>
+        <Modal.Title>Modal 1</Modal.Title>
+      </Modal>
+      <Modal trigger={<Button modifier="helium">Open 2</Button>}>
+        <Modal.Title>Modal 2</Modal.Title>
+      </Modal>
+    </>
+  )
+}
