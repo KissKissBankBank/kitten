@@ -38,6 +38,7 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     background-color: ${COLORS.background1};
     box-sizing: border-box;
+    outline: none;
     margin: ${pxToRem(50)} ${pxToRem(20)};
     padding: ${pxToRem(50)} ${pxToRem(30)};
     width: calc(100vw ${pxToRem(20)});
@@ -135,16 +136,25 @@ const ModalTitle = ({ children }) => (
   </Title>
 )
 
-const ModalParagraph = ({ children }) => (
+const ModalParagraph = ({ children, align }) => (
   <StyledParagraph
     modifier="quaternary"
     margin={false}
+    style={{ textAlign: align }}
     tag="p"
     className="k-u-margin-bottom-triple k-u-margin-bottom-quadruple@s-up"
   >
     {children}
   </StyledParagraph>
 )
+
+ModalParagraph.propTypes = {
+  align: PropTypes.oneOf(['center', 'left', 'right', 'justify']),
+}
+
+ModalParagraph.defaultProps = {
+  align: 'center',
+}
 
 const Actions = styled.div`
   display: flex;
