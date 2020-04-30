@@ -4,10 +4,9 @@ import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const getDashLength = radius => `calc(2 * ${Math.PI} * ${pxToRem(radius)})`
+const getDashLength = radius => 2 * Math.PI * radius
 
-const getDashOffset = ({ r, progressValue }) =>
-  `calc(${getDashLength(r)} * ${100 - progressValue} / 100)`
+const getDashOffset = ({ r, progressValue }) => getDashLength(r) * (100 - progressValue) / 100
 
 const rotateAnimate = ({ r, progressValue }) => keyframes`
   from {
