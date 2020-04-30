@@ -6,7 +6,9 @@ import { pxToRem } from '../../../helpers/utils/typography'
 
 const getDashLength = radius => 2 * Math.PI * radius
 
-const getDashOffset = ({ r, progressValue }) => getDashLength(r) * (100 - progressValue) / 100
+const getDashOffset = ({ r, progressValue }) => (
+  getDashLength(r) * (100 - progressValue) / 100
+)
 
 const rotateAnimate = ({ r, progressValue }) => keyframes`
   from {
