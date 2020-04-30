@@ -230,6 +230,9 @@ export const Modal = ({
           beforeClose: 'k-Modal__overlay--beforeClose',
         }}
         isOpen={showModal}
+        onAfterOpen={({ overlayEl }) => {
+          overlayEl.scrollTop = 0
+        }}
         aria={{
           labelledby,
           describedby,
