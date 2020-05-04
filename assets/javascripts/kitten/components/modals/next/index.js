@@ -30,11 +30,11 @@ const StyledParagraph = styled(Paragraph)`
 `
 
 const GlobalStyle = createGlobalStyle`
-  body.k-Modal__body--open {
+  body.k-ModalNext__body--open {
     overflow: hidden;
   }
   
-  .k-Modal-content {
+  .k-ModalNext-content {
     position: relative;
     background-color: ${COLORS.background1};
     box-sizing: border-box;
@@ -73,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .k-Modal__close {
+  .k-ModalNext__close {
     position: absolute;
     top: 0;
     right: ${pxToRem(40)};
@@ -86,11 +86,11 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   
-  .k-Modal-content {
+  .k-ModalNext-content {
     transform: scale(0.94);
   }
 
-  .k-Modal__overlay {
+  .k-ModalNext__overlay {
     position: fixed;
     z-index: 110;
     overflow: scroll;
@@ -105,20 +105,20 @@ const GlobalStyle = createGlobalStyle`
     background-color: rgba(34, 34, 34, .8);
   }
   
-  .k-Modal__overlay--afterOpen {
+  .k-ModalNext__overlay--afterOpen {
     transition: opacity .3s ease;
     opacity: 1;
   }
-  .k-Modal--afterOpen {
+  .k-ModalNext--afterOpen {
     transition: opacity .3s ease, transform .3s ease;
     transform: scale(1);
     opacity: 1;
   }
 
-  .k-Modal__overlay--beforeClose {
+  .k-ModalNext__overlay--beforeClose {
     opacity: 0;
   }
-  .k-Modal--beforeClose {
+  .k-ModalNext--beforeClose {
     transition: opacity .3s ease, transform .5s ease;
     transform: scale(1.06);
     opacity: 0;
@@ -165,13 +165,12 @@ const Actions = styled.div`
 `
 
 const ModalButton = styled(props => <Button big fluid {...props} />)`
-  :not(:last-child) {
-    margin-bottom: ${pxToRem(20)};
+  @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+    :not(:last-child) {
+      margin-bottom: ${pxToRem(20)};
+    }
   }
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    :not(:last-child) {
-      margin-bottom: 0;
-    }
     :not(:first-child) {
       margin-left: ${pxToRem(GUTTER)};
     }
@@ -220,14 +219,14 @@ export const Modal = ({
         closeTimeoutMS={500}
         role="dialog"
         className={{
-          base: 'k-Modal-content',
-          afterOpen: 'k-Modal--afterOpen',
-          beforeClose: 'k-Modal--beforeClose',
+          base: 'k-ModalNext-content',
+          afterOpen: 'k-ModalNext--afterOpen',
+          beforeClose: 'k-ModalNext--beforeClose',
         }}
         overlayClassName={{
-          base: 'k-Modal__overlay',
-          afterOpen: 'k-Modal__overlay--afterOpen',
-          beforeClose: 'k-Modal__overlay--beforeClose',
+          base: 'k-ModalNext__overlay',
+          afterOpen: 'k-ModalNext__overlay--afterOpen',
+          beforeClose: 'k-ModalNext__overlay--beforeClose',
         }}
         isOpen={showModal}
         onAfterOpen={({ overlayEl }) => {
@@ -240,13 +239,13 @@ export const Modal = ({
         ariaHideApp={false}
         onRequestClose={close}
         contentLabel={label}
-        bodyOpenClassName="k-Modal__body--open"
+        bodyOpenClassName="k-ModalNext__body--open"
         {...modalProps}
       >
         <>
           {children}
           {hasCloseButton && (
-            <div className="k-Modal__close">
+            <div className="k-ModalNext__close">
               <CloseButton
                 style={{ position: 'fixed' }}
                 className="k-u-hidden@s-up"
