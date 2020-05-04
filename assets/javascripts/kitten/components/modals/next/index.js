@@ -30,21 +30,24 @@ const StyledParagraph = styled(Paragraph)`
 `
 
 const GlobalStyle = createGlobalStyle`
+
   body.k-ModalNext__body--open {
     overflow: hidden;
   }
   
-  .k-ModalNext-content {
+  .k-ModalNext__content {
     position: relative;
     background-color: ${COLORS.background1};
     box-sizing: border-box;
     outline: none;
-    margin: ${pxToRem(50)} ${pxToRem(20)};
+    transform: scale(0.94);
+    margin-right: ${pxToRem(20)};
+    margin-left: ${pxToRem(20)};
     padding: ${pxToRem(50)} ${pxToRem(30)};
     width: calc(100vw ${pxToRem(20)});
   
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      margin: ${pxToRem(100)} auto;
+      margin: auto;
       padding: ${pxToRem(80)} ${oneGridCol};
       width: calc((100vw - ${pxToRem(paddingPlusGutters)}) + (${pxToRem(
   GUTTER,
@@ -52,7 +55,6 @@ const GlobalStyle = createGlobalStyle`
     }
   
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      margin: ${pxToRem(100)} auto;
       padding: ${pxToRem(80)} ${oneGridCol};
       ${props => css`
         width: calc(
@@ -86,23 +88,28 @@ const GlobalStyle = createGlobalStyle`
     }
   }
   
-  .k-ModalNext-content {
-    transform: scale(0.94);
-  }
-
   .k-ModalNext__overlay {
     position: fixed;
     z-index: 110;
     overflow: scroll;
-    display: block;
+    display: flex;
+    flex-direction: column;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     opacity: 0;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(34, 34, 34, .8);
+    background-color: rgba(34, 34, 34, .8);    
+    &::before ,
+    &::after {
+      content:'';
+      flex:1;
+      min-height: ${pxToRem(50)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        min-height: ${pxToRem(100)};
+      }
+    }
   }
   
   .k-ModalNext__overlay--afterOpen {
@@ -219,7 +226,7 @@ export const Modal = ({
         closeTimeoutMS={500}
         role="dialog"
         className={{
-          base: 'k-ModalNext-content',
+          base: 'k-ModalNext__content',
           afterOpen: 'k-ModalNext--afterOpen',
           beforeClose: 'k-ModalNext--beforeClose',
         }}
