@@ -255,14 +255,12 @@ const MyResponsiveBar = ({ data }) => {
         }}
         axisLeft={
           isVisitsDisplayed && {
-            tickValues: 5,
             tickSize: 0,
             format: e => restoreVisitValue(e),
           }
         }
         axisRight={
           isContributionsDisplayed && {
-            tickValues: 5,
             tickSize: 0,
             format: e => `${restoreContributionsValue(e)} €`,
           }
