@@ -172,7 +172,7 @@ const ModalButton = styled(props => <Button big fluid {...props} />)`
     :not(:last-child) {
       margin-bottom: 0;
     }
-    &:not(:first-child) {
+    :not(:first-child) {
       margin-left: ${pxToRem(GUTTER)};
     }
   }
