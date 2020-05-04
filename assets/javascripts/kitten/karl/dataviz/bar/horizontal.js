@@ -9,15 +9,28 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { ResponsiveBar } from '@nivo/bar'
 import { horizontalGraphData } from './data-horizontal'
 
-const StyledDatavizHorizontalBar = styled.div`
-  height: ${pxToRem(500)};
-  margin-left: ${pxToRem(-20)};
-  margin-right: ${pxToRem(-20)};
+const graphMarginTop = 50
+const graphMarginBottom = 50
+const graphMarginLeft = 30
+const graphMarginRight = 30
+const rewardBarsHeight = 124
+const graphInnerPadding = rewardBarsHeight / 2
+const invisibleBorderWidth = 2
+const graphWhiteSpace =
+  graphInnerPadding + graphMarginTop + graphMarginBottom - invisibleBorderWidth
 
+const StyledDatavizHorizontalBar = styled.div`
+  height: ${({ itemsNumber }) => {
+    return pxToRem(itemsNumber * rewardBarsHeight + graphWhiteSpace)
+  }};
+  margin-left: ${pxToRem(-graphMarginLeft)};
+  margin-right: ${pxToRem(-graphMarginRight)};
+
+  /* this selector uniquely identifies the right ticks */
   text[transform='translate(-23,0) rotate(23)'] {
-    transform: translate(0px, -50px);
+    transform: translate(0px, -45px);
     text-anchor: start;
-    font-size: ${stepToRem(-1)};
+    dominant-baseline: text-after-edge;
   }
 `
 
@@ -106,7 +119,6 @@ const StyledModifiers = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 0 ${pxToRem(20)};
 `
 
 const StyledLegend = styled.div`
@@ -154,7 +166,7 @@ const StyledButton = styled.button`
   }
 `
 
-const MyResponsiveBar = ({ data }) => {
+const HorizontalBarGraph = ({ data }) => {
   const [keys, setKeys] = useState(['collected', 'percentages'])
   const [isTotalsDisplayed, displayTotals] = useState(true)
   const [isPercentageDisplayed, displayPercentage] = useState(true)
@@ -206,73 +218,84 @@ const MyResponsiveBar = ({ data }) => {
           </StyledButton>
         </StyledLegend>
       </StyledModifiers>
-
-      <ResponsiveBar
-        data={data.rewardsData}
-        keys={keys}
-        indexBy="name"
-        groupMode="grouped"
-        layout="horizontal"
-        margin={{ top: 40, right: 20, bottom: 50, left: 20 }}
-        padding={0.4}
-        innerPadding={10}
-        minValue={0}
-        maxValue={100}
-        tooltip={TooltipElement}
-        axisLeft={{
-          tickSize: 0,
-          tickPadding: 23,
-          tickRotation: 23,
-        }}
-        axisRight={null}
-        axisTop={
-          isTotalsDisplayed && {
-            tickSize: 6,
-            format: e => `${Math.round(restoreTotalValue(e) / 1000)} k€`,
+      <StyledDatavizHorizontalBar
+        itemsNumber={horizontalGraphData.rewardsData.length}
+      >
+        <ResponsiveBar
+          data={data.rewardsData}
+          keys={keys}
+          indexBy="name"
+          groupMode="grouped"
+          layout="horizontal"
+          margin={{
+            top: graphMarginTop,
+            bottom: graphMarginBottom,
+            left: graphMarginLeft,
+            right: graphMarginRight,
+          }}
+          padding={0.435}
+          innerPadding={10}
+          minValue={0}
+          maxValue={100}
+          tooltip={TooltipElement}
+          axisLeft={{
+            tickSize: 0,
+            // these values are necessary for precise CSS selection
+            tickPadding: 23,
+            tickRotation: 23,
+          }}
+          axisRight={null}
+          axisTop={
+            isTotalsDisplayed && {
+              tickSize: 6,
+              format: e => `${Math.round(restoreTotalValue(e) / 1000)} k€`,
+            }
           }
-        }
-        axisBottom={
-          isPercentageDisplayed && {
-            tickSize: 6,
-            format: e => `${restorePercentageValue(e)} %`,
+          axisBottom={
+            isPercentageDisplayed && {
+              tickSize: 6,
+              format: e => `${restorePercentageValue(e)} %`,
+            }
           }
-        }
-        enableGridX={false}
-        enableGridY={false}
-        enableLabel={true}
-        label={data =>
-          data.id == 'collected'
-            ? `${restoreTotalValue(data.value)} €`
-            : `${data.value} %`
-        }
-        labelTextColor={COLORS.background1}
-        motionStiffness={150}
-        motionDamping={20}
-        theme={{
-          axis: {
-            ticks: {
+          enableGridX={false}
+          enableGridY={false}
+          enableLabel={true}
+          label={data =>
+            data.id == 'collected'
+              ? `${restoreTotalValue(data.value)} €`
+              : `${data.value} %`
+          }
+          labelTextColor={COLORS.background1}
+          motionStiffness={150}
+          motionDamping={20}
+          theme={{
+            axis: {
+              ticks: {
+                text: {
+                  fontFamily: TYPOGRAPHY.fontStyles.regular.fontFamily,
+                  fontWeight: TYPOGRAPHY.fontStyles.regular.fontWeight,
+                  fontSize: stepToRem(-1),
+                },
+              },
+            },
+            labels: {
               text: {
                 fontFamily: TYPOGRAPHY.fontStyles.regular.fontFamily,
                 fontWeight: TYPOGRAPHY.fontStyles.regular.fontWeight,
+                fontSize: stepToRem(-1),
               },
             },
-          },
-          labels: {
-            text: {
-              fontFamily: TYPOGRAPHY.fontStyles.regular.fontFamily,
-              fontWeight: TYPOGRAPHY.fontStyles.regular.fontWeight,
+            tooltip: {
+              container: {
+                borderRadius: 'none',
+                boxShadow: 'none',
+                padding: 'none',
+              },
             },
-          },
-          tooltip: {
-            container: {
-              borderRadius: 'none',
-              boxShadow: 'none',
-              padding: 'none',
-            },
-          },
-        }}
-        colors={({ id, data }) => data[`${id}Color`]}
-      />
+          }}
+          colors={({ id, data }) => data[`${id}Color`]}
+        />
+      </StyledDatavizHorizontalBar>
     </>
   )
 }
@@ -281,9 +304,7 @@ export const DatavizHorizontalBar = () => (
   <Container>
     <Grid>
       <GridCol col-l="10" offset-l="1">
-        <StyledDatavizHorizontalBar>
-          <MyResponsiveBar data={horizontalGraphData} />
-        </StyledDatavizHorizontalBar>
+        <HorizontalBarGraph data={horizontalGraphData} />
       </GridCol>
     </Grid>
   </Container>
