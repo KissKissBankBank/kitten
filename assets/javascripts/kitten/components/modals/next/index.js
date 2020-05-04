@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, createContext, useReducer, useContext } from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
@@ -184,7 +184,54 @@ const ModalButton = styled(props => <Button big fluid {...props} />)`
   }
 `
 
-export const Modal = ({
+const initialState = {
+  show: false,
+}
+
+const ModalContext = createContext(initialState)
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'update':
+      return { ...state, ...action }
+  }
+}
+
+export const updateState = show => ({
+  type: 'update',
+  show,
+})
+
+const CloseActionButton = ({ onClick, ...props }) => {
+  const [, dispatch] = useContext(ModalContext)
+  return (
+    <ModalButton
+      {...props}
+      onClick={e => {
+        onClick(e)
+        dispatch(updateState(false))
+      }}
+    />
+  )
+}
+
+CloseActionButton.propTypes = {
+  onClick: PropTypes.func,
+}
+
+CloseActionButton.defaultProps = {
+  onClick: () => null,
+}
+
+const ModalProvider = ({ children }) => {
+  return (
+    <ModalContext.Provider value={useReducer(reducer, initialState)}>
+      {children}
+    </ModalContext.Provider>
+  )
+}
+
+const InnerModal = ({
   trigger,
   children,
   label,
@@ -201,22 +248,22 @@ export const Modal = ({
   isOpen,
   ...others
 }) => {
-  const [showModal, setShowModal] = useState(false)
+  const [{ show }, dispatch] = useContext(ModalContext)
   const colsOnDesktop = huge ? 10 : big ? 8 : 6
   const close = () => {
-    setShowModal(false)
+    dispatch(updateState(false))
     if (onClose) {
       onClose()
     }
   }
   useEffect(() => {
     if (!trigger) {
-      setShowModal(true)
+      dispatch(updateState(true))
     }
   }, [])
 
   useEffect(() => {
-    setShowModal(isOpen)
+    dispatch(updateState(isOpen))
   }, [isOpen])
 
   const ModalPortal = ReactDOM.createPortal(
@@ -235,7 +282,7 @@ export const Modal = ({
           afterOpen: 'k-ModalNext__overlay--afterOpen',
           beforeClose: 'k-ModalNext__overlay--beforeClose',
         }}
-        isOpen={showModal}
+        isOpen={show}
         onAfterOpen={({ overlayEl }) => {
           overlayEl.scrollTop = 0
         }}
@@ -251,8 +298,8 @@ export const Modal = ({
       >
         <>
           {children({
-            open: () => setShowModal(true),
-            close: () => setShowModal(false),
+            open: () => dispatch(updateState(true)),
+            close: () => dispatch(updateState(false)),
           })}
           {hasCloseButton && (
             <div className="k-ModalNext__close">
@@ -280,9 +327,19 @@ export const Modal = ({
   )
   return (
     <div className={classNames('k-Modal', className)} {...others}>
-      {trigger && <span onClick={() => setShowModal(true)}>{trigger}</span>}
+      {trigger && (
+        <span onClick={() => dispatch(updateState(true))}>{trigger}</span>
+      )}
       {ModalPortal}
     </div>
+  )
+}
+
+export const Modal = props => {
+  return (
+    <ModalProvider>
+      <InnerModal {...props} />
+    </ModalProvider>
   )
 }
 
@@ -314,3 +371,4 @@ Modal.Title = ModalTitle
 Modal.Paragraph = ModalParagraph
 Modal.Actions = Actions
 Modal.Button = ModalButton
+Modal.CloseButton = CloseActionButton

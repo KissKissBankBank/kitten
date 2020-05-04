@@ -114,6 +114,21 @@ export const WithState = () => {
   )
 }
 
+export const WithCloseButton = () => {
+  return (
+    <Modal trigger={<Button modifier="helium">Open</Button>}>
+      {() => (
+        <>
+          <Modal.Title>Modal</Modal.Title>
+          <Modal.Actions>
+            <Modal.CloseButton>Close it !</Modal.CloseButton>
+          </Modal.Actions>
+        </>
+      )}
+    </Modal>
+  )
+}
+
 export const Multi = () => {
   return (
     <>
