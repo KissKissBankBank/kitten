@@ -90,7 +90,6 @@ const GlobalStyle = createGlobalStyle`
   
   .k-ModalNext__overlay {
     position: fixed;
-    z-index: 110;
     overflow: scroll;
     display: flex;
     flex-direction: column;
@@ -110,6 +109,10 @@ const GlobalStyle = createGlobalStyle`
         min-height: ${pxToRem(100)};
       }
     }
+    ${props =>
+      css`
+        z-index: ${props.zIndex};
+      `}
   }
   
   .k-ModalNext__overlay--afterOpen {
@@ -246,6 +249,7 @@ const InnerModal = ({
   big,
   huge,
   isOpen,
+  zIndex,
   ...others
 }) => {
   const [{ show }, dispatch] = useContext(ModalContext)
@@ -268,7 +272,7 @@ const InnerModal = ({
 
   const ModalPortal = ReactDOM.createPortal(
     <>
-      <GlobalStyle cols={colsOnDesktop} />
+      <GlobalStyle cols={colsOnDesktop} zIndex={zIndex} />
       <ReactModal
         closeTimeoutMS={500}
         role="dialog"
@@ -353,6 +357,7 @@ Modal.propTypes = {
   big: PropTypes.bool,
   huge: PropTypes.bool,
   isOpen: PropTypes.bool,
+  zIndex: PropTypes.number,
 }
 
 Modal.defaultProps = {
@@ -365,6 +370,7 @@ Modal.defaultProps = {
   big: false,
   huge: false,
   isOpen: false,
+  zIndex: 110,
 }
 
 Modal.Title = ModalTitle

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button } from '../../../components/buttons/button/button'
 
@@ -51,6 +51,7 @@ export const OneButton = () => (
     hasCloseButton={boolean('Has close button', true)}
     big={boolean('Big size', false)}
     huge={boolean('Huge size', false)}
+    zIndex={number('Overlay z-index', 110)}
   >
     {() => (
       <>
