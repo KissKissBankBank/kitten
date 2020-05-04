@@ -78,7 +78,7 @@ const GlobalStyle = createGlobalStyle`
     top: 0;
     right: ${pxToRem(40)};
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-     right: ${pxToRem(50)};
+      right: ${pxToRem(50)};
   }
 
     button {
@@ -243,7 +243,10 @@ export const Modal = ({
         {...modalProps}
       >
         <>
-          {children}
+          {children({
+            open: () => setShowModal(true),
+            close: () => setShowModal(false),
+          })}
           {hasCloseButton && (
             <div className="k-ModalNext__close">
               <CloseButton

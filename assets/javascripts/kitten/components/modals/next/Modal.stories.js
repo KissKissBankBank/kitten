@@ -52,11 +52,15 @@ export const OneButton = () => (
     big={boolean('Big size', false)}
     huge={boolean('Huge size', false)}
   >
-    <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-    <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
-    <Modal.Actions>
-      <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
-    </Modal.Actions>
+    {() => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
+        <Modal.Actions>
+          <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
+        </Modal.Actions>
+      </>
+    )}
   </Modal>
 )
 
@@ -67,12 +71,16 @@ export const TwoButton = () => (
     big={boolean('Big size', true)}
     huge={boolean('Huge size', false)}
   >
-    <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-    <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
-    <Modal.Actions>
-      <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
-      <Modal.Button modifier="oxygen">Action 2 Button</Modal.Button>
-    </Modal.Actions>
+    {() => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
+        <Modal.Actions>
+          <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
+          <Modal.Button modifier="oxygen">Action 2 Button</Modal.Button>
+        </Modal.Actions>
+      </>
+    )}
   </Modal>
 )
 
@@ -90,11 +98,17 @@ export const WithState = () => {
         huge={boolean('Huge size', false)}
         onClose={() => updateModalState(false)}
       >
-        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
-        <Modal.Paragraph>{text('content', paragraphContainer)}</Modal.Paragraph>
-        <Modal.Actions>
-          <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
-        </Modal.Actions>
+        {() => (
+          <>
+            <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+            <Modal.Paragraph>
+              {text('content', paragraphContainer)}
+            </Modal.Paragraph>
+            <Modal.Actions>
+              <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
+            </Modal.Actions>
+          </>
+        )}
       </Modal>
     </>
   )
@@ -104,10 +118,10 @@ export const Multi = () => {
   return (
     <>
       <Modal trigger={<Button modifier="helium">Open 1</Button>}>
-        <Modal.Title>Modal 1</Modal.Title>
+        {() => <Modal.Title>Modal 1</Modal.Title>}
       </Modal>
       <Modal trigger={<Button modifier="helium">Open 2</Button>}>
-        <Modal.Title>Modal 2</Modal.Title>
+        {() => <Modal.Title>Modal 2</Modal.Title>}
       </Modal>
     </>
   )
