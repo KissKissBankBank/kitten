@@ -42,6 +42,7 @@ export default {
     Paragraph: Modal.Paragraph,
     Actions: Modal.Actions,
     Button: Modal.Button,
+    CloseButton: Modal.CloseButton,
   },
 }
 
