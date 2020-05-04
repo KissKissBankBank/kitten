@@ -11,8 +11,14 @@ import { horizontalGraphData } from './data-horizontal'
 
 const StyledDatavizHorizontalBar = styled.div`
   height: ${pxToRem(500)};
-  margin-left: ${pxToRem(-60)};
-  margin-right: ${pxToRem(-60)};
+  margin-left: ${pxToRem(-20)};
+  margin-right: ${pxToRem(-20)};
+
+  text[transform='translate(-23,0) rotate(23)'] {
+    transform: translate(0px, -50px);
+    text-anchor: start;
+    font-size: ${stepToRem(-1)};
+  }
 `
 
 const StyledTooltip = styled.div`
@@ -39,11 +45,11 @@ const StyledTooltip = styled.div`
   }
 `
 
-const restoreVisitValue = value =>
+const restoreTotalValue = value =>
   Math.round(
     value *
-      (horizontalGraphData.maxValues.visits /
-        horizontalGraphData.thresholds.visits),
+      (horizontalGraphData.maxValues.collected /
+        horizontalGraphData.thresholds.collected),
   )
 const restorePercentageValue = value =>
   Math.round(
@@ -54,11 +60,11 @@ const restorePercentageValue = value =>
 
 const TooltipElement = ({ value, data }) => {
   let displayLegend = data.percentagesLegend
-  let displayValue = restorePercentageValue(data.percentages)
+  let displayValue = `${restorePercentageValue(data.percentages)} %`
 
-  if (value === data.visits) {
-    displayLegend = data.visitsLegend
-    displayValue = restoreVisitValue(data.visits)
+  if (value === data.collected) {
+    displayLegend = data.collectedLegend
+    displayValue = restoreTotalValue(data.collected)
   }
 
   return (
@@ -100,7 +106,7 @@ const StyledModifiers = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 0 ${pxToRem(60)};
+  margin: 0 ${pxToRem(20)};
 `
 
 const StyledLegend = styled.div`
@@ -124,7 +130,7 @@ const StyledButton = styled.button`
   ${TYPOGRAPHY.fontStyles.regular}
   font-size: ${stepToRem(-1)};
 
-  &.LegendButton__visits::before {
+  &.LegendButton__collected::before {
     color: #19b4fa;
   }
   &.LegendButton__percentages::before {
@@ -149,22 +155,22 @@ const StyledButton = styled.button`
 `
 
 const MyResponsiveBar = ({ data }) => {
-  const [keys, setKeys] = useState(['visits', 'percentages'])
-  const [isVisitsDisplayed, displayVisits] = useState(true)
+  const [keys, setKeys] = useState(['collected', 'percentages'])
+  const [isTotalsDisplayed, displayTotals] = useState(true)
   const [isPercentageDisplayed, displayPercentage] = useState(true)
 
   useEffect(() => {
     let tempKeys = []
 
-    if (isVisitsDisplayed) {
-      tempKeys.push('visits')
+    if (isTotalsDisplayed) {
+      tempKeys.push('collected')
     }
     if (isPercentageDisplayed) {
       tempKeys.push('percentages')
     }
 
     setKeys(tempKeys)
-  }, [isVisitsDisplayed, isPercentageDisplayed])
+  }, [isTotalsDisplayed, isPercentageDisplayed])
 
   return (
     <>
@@ -173,16 +179,16 @@ const MyResponsiveBar = ({ data }) => {
           <StyledButton
             type="button"
             role="switch"
-            className="LegendButton__visits"
-            aria-checked={isVisitsDisplayed}
+            className="LegendButton__collected"
+            aria-checked={isTotalsDisplayed}
             onClick={() => {
-              if (!isPercentageDisplayed && isVisitsDisplayed) {
+              if (!isPercentageDisplayed && isTotalsDisplayed) {
                 displayPercentage(true)
               }
-              displayVisits(!isVisitsDisplayed)
+              displayTotals(!isTotalsDisplayed)
             }}
           >
-            Pages vues
+            Argents collectés
           </StyledButton>
           <StyledButton
             type="button"
@@ -190,13 +196,13 @@ const MyResponsiveBar = ({ data }) => {
             className="LegendButton__percentages"
             aria-checked={isPercentageDisplayed}
             onClick={() => {
-              if (!isVisitsDisplayed && isPercentageDisplayed) {
-                displayVisits(true)
+              if (!isTotalsDisplayed && isPercentageDisplayed) {
+                displayTotals(true)
               }
               displayPercentage(!isPercentageDisplayed)
             }}
           >
-            Montants collectés
+            % du total collecté
           </StyledButton>
         </StyledLegend>
       </StyledModifiers>
@@ -204,27 +210,29 @@ const MyResponsiveBar = ({ data }) => {
       <ResponsiveBar
         data={data.rewardsData}
         keys={keys}
-        indexBy="id"
+        indexBy="name"
         groupMode="grouped"
         layout="horizontal"
-        margin={{ top: 40, right: 60, bottom: 50, left: 60 }}
-        padding={0.3}
+        margin={{ top: 40, right: 20, bottom: 50, left: 20 }}
+        padding={0.4}
         innerPadding={10}
         minValue={0}
         maxValue={100}
         tooltip={TooltipElement}
-        axisLeft={null}
+        axisLeft={{
+          tickSize: 0,
+          tickPadding: 23,
+          tickRotation: 23,
+        }}
         axisRight={null}
         axisTop={
-          isVisitsDisplayed && {
-            ticks: 10,
+          isTotalsDisplayed && {
             tickSize: 6,
-            format: e => restoreVisitValue(e),
+            format: e => `${Math.round(restoreTotalValue(e) / 1000)} k€`,
           }
         }
         axisBottom={
           isPercentageDisplayed && {
-            ticks: 10,
             tickSize: 6,
             format: e => `${restorePercentageValue(e)} %`,
           }
@@ -233,8 +241,8 @@ const MyResponsiveBar = ({ data }) => {
         enableGridY={false}
         enableLabel={true}
         label={data =>
-          data.id == 'visits'
-            ? restoreVisitValue(data.value)
+          data.id == 'collected'
+            ? `${restoreTotalValue(data.value)} €`
             : `${data.value} %`
         }
         labelTextColor={COLORS.background1}
