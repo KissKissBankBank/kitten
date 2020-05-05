@@ -330,7 +330,7 @@ const InnerModal = ({
     document.body,
   )
   return (
-    <div className={classNames('k-Modal', className)} {...others}>
+    <div className={classNames('k-ModalNext', className)} {...others}>
       {trigger && (
         <span onClick={() => dispatch(updateState(true))}>{trigger}</span>
       )}
