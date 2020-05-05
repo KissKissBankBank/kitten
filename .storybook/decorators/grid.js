@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
-import { DevGrid } from 'kitten/components/dev/dev-grid'
+import React from 'react'
+import { DevGrid } from '../../assets/javascripts/kitten/components/dev/dev-grid'
 
-const GridDecorator = (storyFn) => (
-  <Fragment>
-    { storyFn() }
+const GridDecorator = storyFn => (
+  <>
+    {storyFn()}
     <DevGrid />
-  </Fragment>
+  </>
 )
 
 export default GridDecorator

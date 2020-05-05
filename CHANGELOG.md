@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Remove `calc` on `ProgressRing`.
+- Add: New `<Modal />` component imported from `import { Modal } from '@kisskissbankbank/kitten/next`, (see usage on our Storybook, section named `NEXT`).
 
 ## [2.66.1] - 2020-04-27
 
