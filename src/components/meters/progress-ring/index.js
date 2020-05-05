@@ -24,13 +24,13 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 var _typography = require("../../../helpers/utils/typography");
 
 var getDashLength = function getDashLength(radius) {
-  return "calc(2 * ".concat(Math.PI, " * ").concat((0, _typography.pxToRem)(radius), ")");
+  return 2 * Math.PI * radius;
 };
 
 var getDashOffset = function getDashOffset(_ref) {
   var r = _ref.r,
       progressValue = _ref.progressValue;
-  return "calc(".concat(getDashLength(r), " * ").concat(100 - progressValue, " / 100)");
+  return getDashLength(r) * (100 - progressValue) / 100;
 };
 
 var rotateAnimate = function rotateAnimate(_ref2) {
