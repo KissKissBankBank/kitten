@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `HeaderNav.UserMenu` `closeEvents` prop.
+- Feature: Add `colorHover` prop to `HeaderNav.Button`.
+
 ## [2.67.0] - 2020-05-04
 
 Fix: 

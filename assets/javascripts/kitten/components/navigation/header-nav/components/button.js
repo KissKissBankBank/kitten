@@ -106,6 +106,7 @@ const StyledLink = styled.a`
   }}
 
   &:hover, &:focus {
+    color: ${({ colorHover, color }) => colorHover || color};
     background-color: ${({ backgroundColorHover }) => backgroundColorHover};
   }
 `
@@ -116,6 +117,7 @@ export const Button = ({
   backgroundColor,
   backgroundColorHover,
   color,
+  colorHover,
   text,
   href,
   type,
@@ -154,6 +156,7 @@ export const Button = ({
       backgroundColor={backgroundColor}
       backgroundColorHover={backgroundColorHover}
       color={color}
+      colorHover={colorHover}
       textShownFromMediaQuery={mediaQuery}
       icon={icon}
       text={text}
@@ -180,6 +183,7 @@ Button.propTypes = {
   backgroundColor: PropTypes.string,
   backgroundColorHover: PropTypes.string,
   color: PropTypes.string,
+  colorHover: PropTypes.string,
   text: PropTypes.node,
   href: PropTypes.string,
   a11yText: PropTypes.string,
@@ -195,5 +199,6 @@ Button.defaultProps = {
   backgroundColor: COLORS.line1,
   backgroundColorHover: COLORS.line2,
   color: COLORS.font1,
+  colorHover: null,
   text: null,
 }

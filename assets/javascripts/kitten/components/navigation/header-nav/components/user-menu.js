@@ -13,6 +13,7 @@ export const UserMenu = ({
   children,
   dropdownContentWidth,
   padding,
+  closeEvents,
   ...props
 }) => {
   const userDropdownRef = useRef(null)
@@ -39,7 +40,7 @@ export const UserMenu = ({
           buttonClassName={buttonClassName}
           buttonId={getButtonId(id)}
           className={DROPDOWN_CLASS}
-          closeEvents={[CLOSE_EVENT]}
+          closeEvents={[CLOSE_EVENT, ...closeEvents]}
           closeOnOuterClick
           dropdownContent={navigation}
           dropdownContentWidth={dropdownContentWidth}
@@ -58,11 +59,13 @@ export const UserMenu = ({
 UserMenu.propTypes = {
   dropdownContentWidth: PropTypes.string,
   padding: PropTypes.bool,
+  closeEvents: PropTypes.arrayOf(PropTypes.string),
 }
 
 UserMenu.defaultProps = {
   dropdownContentWidth: null,
   padding: true,
+  closeEvents: [],
 }
 
 UserMenu.Button = ({ children }) => <>{children}</>
