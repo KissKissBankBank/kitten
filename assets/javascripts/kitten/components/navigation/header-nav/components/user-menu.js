@@ -59,7 +59,7 @@ export const UserMenu = ({
 UserMenu.propTypes = {
   dropdownContentWidth: PropTypes.string,
   padding: PropTypes.bool,
-  closeEvents: PropTypes.array,
+  closeEvents: PropTypes.arrayOf(PropTypes.string),
 }
 
 UserMenu.defaultProps = {
