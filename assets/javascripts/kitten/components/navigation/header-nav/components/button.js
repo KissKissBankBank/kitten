@@ -199,6 +199,6 @@ Button.defaultProps = {
   backgroundColor: COLORS.line1,
   backgroundColorHover: COLORS.line2,
   color: COLORS.font1,
-  colorHover: COLORS.font1,
+  colorHover: null,
   text: null,
 }
