@@ -9,7 +9,6 @@ import { AvatarWithTextAndBadge } from '../../../../components/avatar/avatar-wit
 import { LoginIcon } from '../../../../components/icons/login-icon'
 import domElementHelper from '../../../../helpers/dom/element-helper'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { VisuallyHidden } from '../../../../components/accessibility/visually-hidden'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 const getElementById = id => document.getElementById(id)
@@ -187,6 +186,7 @@ export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
               backgroundColor={COLORS.background3}
               backgroundColorHover={COLORS.line1}
               color={COLORS.font1}
+              colorHover={COLORS.font1}
               text="Se connecter"
               href="#"
             />
@@ -194,6 +194,7 @@ export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
               backgroundColor={COLORS.primary1}
               backgroundColorHover={COLORS.primary2}
               color={COLORS.background1}
+              colorHover={COLORS.background1}
               text="S'inscrire"
               href="#"
             />
@@ -211,6 +212,7 @@ export const LendopolisHeaderNavStory = ({ isLogged, isFixed }) => {
                   backgroundColor={COLORS.primary1}
                   backgroundColorHover={COLORS.primary2}
                   color={COLORS.background1}
+                  colorHover={COLORS.background1}
                   as="span"
                 />
               </HeaderNav.UserMenu.Button>
