@@ -11,6 +11,8 @@ exports.UserMenu = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
+
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireWildcard(require("react"));
@@ -33,7 +35,8 @@ var UserMenu = function UserMenu(_ref) {
   var children = _ref.children,
       dropdownContentWidth = _ref.dropdownContentWidth,
       padding = _ref.padding,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth", "padding"]);
+      closeEvents = _ref.closeEvents,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["children", "dropdownContentWidth", "padding", "closeEvents"]);
   var userDropdownRef = (0, _react.useRef)(null);
 
   var getElementById = function getElementById(id) {
@@ -65,7 +68,7 @@ var UserMenu = function UserMenu(_ref) {
       buttonClassName: buttonClassName,
       buttonId: getButtonId(id),
       className: DROPDOWN_CLASS,
-      closeEvents: [CLOSE_EVENT],
+      closeEvents: [CLOSE_EVENT].concat((0, _toConsumableArray2.default)(closeEvents)),
       closeOnOuterClick: true,
       dropdownContent: navigation,
       dropdownContentWidth: dropdownContentWidth,
@@ -82,11 +85,13 @@ var UserMenu = function UserMenu(_ref) {
 exports.UserMenu = UserMenu;
 UserMenu.propTypes = {
   dropdownContentWidth: _propTypes.default.string,
-  padding: _propTypes.default.bool
+  padding: _propTypes.default.bool,
+  closeEvents: _propTypes.default.arrayOf(_propTypes.default.string)
 };
 UserMenu.defaultProps = {
   dropdownContentWidth: null,
-  padding: true
+  padding: true,
+  closeEvents: []
 };
 
 UserMenu.Button = function (_ref3) {

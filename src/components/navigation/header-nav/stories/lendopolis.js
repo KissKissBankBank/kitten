@@ -33,8 +33,6 @@ var _elementHelper = _interopRequireDefault(require("../../../../helpers/dom/ele
 
 var _typography = require("../../../../helpers/utils/typography");
 
-var _visuallyHidden = require("../../../../components/accessibility/visually-hidden");
-
 var HEADER_NAV_ID = 'kkbbAndCoHeaderNav';
 
 var getElementById = function getElementById(id) {
@@ -194,12 +192,14 @@ var LendopolisHeaderNavStory = function LendopolisHeaderNavStory(_ref) {
     backgroundColor: _colorsConfig.default.background3,
     backgroundColorHover: _colorsConfig.default.line1,
     color: _colorsConfig.default.font1,
+    colorHover: _colorsConfig.default.font1,
     text: "Se connecter",
     href: "#"
   }), /*#__PURE__*/_react.default.createElement(_index.default.Button, {
     backgroundColor: _colorsConfig.default.primary1,
     backgroundColorHover: _colorsConfig.default.primary2,
     color: _colorsConfig.default.background1,
+    colorHover: _colorsConfig.default.background1,
     text: "S'inscrire",
     href: "#"
   })), /*#__PURE__*/_react.default.createElement(_index.default.Hidden, {
@@ -213,6 +213,7 @@ var LendopolisHeaderNavStory = function LendopolisHeaderNavStory(_ref) {
     backgroundColor: _colorsConfig.default.primary1,
     backgroundColorHover: _colorsConfig.default.primary2,
     color: _colorsConfig.default.background1,
+    colorHover: _colorsConfig.default.background1,
     as: "span"
   })), /*#__PURE__*/_react.default.createElement(_index.default.UserMenu.Navigation, null, /*#__PURE__*/_react.default.createElement(InnerAnonymousMenu, null)))))));
 };

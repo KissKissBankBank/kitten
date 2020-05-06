@@ -4,12 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `HeaderNav.UserMenu` `closeEvents` prop.
-- Feature: Add `colorHover` prop to `HeaderNav.Button`.
+## [2.68.0] - 2020-05-06
+
+Feature:
+- Add `colorHover` prop to `HeaderNav.Button`.
+
+Fix:
+- `HeaderNav.UserMenu` `closeEvents` prop.
 
 ## [2.67.0] - 2020-05-04
 
-Fix: 
+Fix:
 - Remove `calc` on `ProgressRing`.
 
 Feature:
