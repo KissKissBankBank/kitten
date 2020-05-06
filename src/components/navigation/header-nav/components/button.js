@@ -38,7 +38,7 @@ var horizontalPadding = (0, _styledComponents.css)(["padding-left:", ";padding-r
 var StyledLink = _styledComponents.default.a.withConfig({
   displayName: "button__StyledLink",
   componentId: "k3u2iw-0"
-})(["", " box-sizing:border-box;display:flex;align-items:center;justify-content:center;height:100%;font-size:", ";color:", ";background-color:", ";text-decoration:none;", " &:hover,&:focus{background-color:", ";}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), function (_ref) {
+})(["", " box-sizing:border-box;display:flex;align-items:center;justify-content:center;height:100%;font-size:", ";color:", ";background-color:", ";text-decoration:none;", " &:hover,&:focus{color:", ";background-color:", ";}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), function (_ref) {
   var color = _ref.color;
   return color;
 }, function (_ref2) {
@@ -58,25 +58,30 @@ var StyledLink = _styledComponents.default.a.withConfig({
   var defaultWidthForUpperScreenSize = textShownFromMediaQuery.max && (0, _styledComponents.css)(["@media (", "){", " width:inherit;}@media (min-width:", "px){min-width:", ";}"], textShownFromMediaQuery.max, horizontalPadding, _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(200));
   return (0, _styledComponents.css)(["padding:0;width:", ";@media (min-width:", "px){width:", ";}@media (min-width:", "px){width:", ";}", " ", ""], (0, _typography.pxToRem)(_config.MOBILE_HEADER_HEIGHT), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(_config.TABLET_HEADER_HEIGHT), _screenConfig.ScreenConfig.L.min, (0, _typography.pxToRem)(_config.DESKTOP_HEADER_HEIGHT), defaultWidthForLowerScreenSize, defaultWidthForUpperScreenSize);
 }, function (_ref4) {
-  var backgroundColorHover = _ref4.backgroundColorHover;
+  var colorHover = _ref4.colorHover,
+      color = _ref4.color;
+  return colorHover || color;
+}, function (_ref5) {
+  var backgroundColorHover = _ref5.backgroundColorHover;
   return backgroundColorHover;
 });
 
-var Button = function Button(_ref5) {
-  var a11yText = _ref5.a11yText,
-      icon = _ref5.icon,
-      backgroundColor = _ref5.backgroundColor,
-      backgroundColorHover = _ref5.backgroundColorHover,
-      color = _ref5.color,
-      text = _ref5.text,
-      href = _ref5.href,
-      type = _ref5.type,
-      _ref5$hiddenText = _ref5.hiddenText;
-  _ref5$hiddenText = _ref5$hiddenText === void 0 ? {} : _ref5$hiddenText;
-  var min = _ref5$hiddenText.min,
-      max = _ref5$hiddenText.max,
-      as = _ref5.as,
-      others = (0, _objectWithoutProperties2.default)(_ref5, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "text", "href", "type", "hiddenText", "as"]);
+var Button = function Button(_ref6) {
+  var a11yText = _ref6.a11yText,
+      icon = _ref6.icon,
+      backgroundColor = _ref6.backgroundColor,
+      backgroundColorHover = _ref6.backgroundColorHover,
+      color = _ref6.color,
+      colorHover = _ref6.colorHover,
+      text = _ref6.text,
+      href = _ref6.href,
+      type = _ref6.type,
+      _ref6$hiddenText = _ref6.hiddenText;
+  _ref6$hiddenText = _ref6$hiddenText === void 0 ? {} : _ref6$hiddenText;
+  var min = _ref6$hiddenText.min,
+      max = _ref6$hiddenText.max,
+      as = _ref6.as,
+      others = (0, _objectWithoutProperties2.default)(_ref6, ["a11yText", "icon", "backgroundColor", "backgroundColorHover", "color", "colorHover", "text", "href", "type", "hiddenText", "as"]);
   var previousScreenSize = min && (0, _mediaQueries.getScreenSizeFrom)('previous')(min);
   var nextScreenSize = max && (0, _mediaQueries.getScreenSizeFrom)('next')(max);
   var hiddenMin = min ? "k-u-hidden@".concat(min, "-up--important") : '';
@@ -102,6 +107,7 @@ var Button = function Button(_ref5) {
     backgroundColor: backgroundColor,
     backgroundColorHover: backgroundColorHover,
     color: color,
+    colorHover: colorHover,
     textShownFromMediaQuery: mediaQuery,
     icon: icon,
     text: text
@@ -119,6 +125,7 @@ Button.propTypes = {
   backgroundColor: _propTypes.default.string,
   backgroundColorHover: _propTypes.default.string,
   color: _propTypes.default.string,
+  colorHover: _propTypes.default.string,
   text: _propTypes.default.node,
   href: _propTypes.default.string,
   a11yText: _propTypes.default.string,
@@ -133,5 +140,6 @@ Button.defaultProps = {
   backgroundColor: _colorsConfig.default.line1,
   backgroundColorHover: _colorsConfig.default.line2,
   color: _colorsConfig.default.font1,
+  colorHover: null,
   text: null
 };
