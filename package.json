@@ -21,8 +21,6 @@
   "author": "KissKissBankBank & Co",
   "homepage": "https://github.com/KissKissBankBank/kitten#readme",
   "dependencies": {
-    "@nivo/bar": "^0.61.1",
-    "@nivo/line": "^0.61.1",
     "autoprefixer": "9.7.3",
     "bowser": "1.9.4",
     "classnames": "2.2.6",
@@ -66,6 +64,8 @@
     "@babel/preset-env": "7.9.0",
     "@babel/register": "7.9.0",
     "@babel/runtime": "7.9.2",
+    "@nivo/bar": "^0.61.1",
+    "@nivo/line": "^0.61.1",
     "@storybook/addon-a11y": "5.3.18",
     "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-docs": "5.3.18",
