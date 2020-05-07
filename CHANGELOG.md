@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature:
+- Add `ExportIconAlternate` icon.
+
 ## [2.68.0] - 2020-05-06
 
 Feature:
