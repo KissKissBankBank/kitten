@@ -10,11 +10,38 @@ import { mediaQueries } from '../../../hoc/media-queries'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const StyledGroup = styled.ul`
-  display: inline-flex;
   padding: 0;
+  ${({ margin }) =>
+    !margin &&
+    css`
+      margin: 0;
+    `}
+  ${({ align }) => {
+    switch (align) {
+      case 'left':
+        return css`
+          justify-content: flex-start;
+          display: flex;
+        `
+      case 'center':
+        return css`
+          justify-content: center;
+          display: flex;
+        `
+      case 'right':
+        return css`
+          justify-content: flex-end;
+          display: flex;
+        `
+      default:
+        return css`
+          display: inline-flex;
+        `
+    }
+  }}
 `
 
-const StyledList = styled.li`
+const StyledListItem = styled.li`
   list-style: none;
   margin-right: 0;
 
@@ -191,6 +218,8 @@ const PaginationBase = forwardRef(
       totalPages,
       'aria-label': ariaLabelProp,
       viewportIsMOrLess,
+      margin,
+      align,
     },
     _ref,
   ) => {
@@ -212,7 +241,7 @@ const PaginationBase = forwardRef(
         : goToPageLabel(number)
 
       return (
-        <StyledList key={`page-${number}`}>
+        <StyledListItem key={`page-${number}`}>
           <StyledButtonIcon
             tag={tag}
             href={href}
@@ -227,7 +256,7 @@ const PaginationBase = forwardRef(
           >
             {number}
           </StyledButtonIcon>
-        </StyledList>
+        </StyledListItem>
       )
     }
 
@@ -283,7 +312,7 @@ const PaginationBase = forwardRef(
 
     return (
       <nav role="navigation" aria-label={ariaLabelProp}>
-        <StyledGroup>
+        <StyledGroup margin={margin} align={align}>
           {renderArrowButton('left')}
           {pageNumbers.map(renderPage)}
           {renderArrowButton('right')}
@@ -303,6 +332,8 @@ PaginationBase.propTypes = {
   currentPage: PropTypes.number,
   currentPageLabel: PropTypes.func,
   'aria-label': PropTypes.string,
+  margin: PropTypes.bool,
+  align: PropTypes.oneOf([null, 'left', 'center', 'right']),
 }
 
 PaginationBase.defaultProps = {
@@ -315,6 +346,7 @@ PaginationBase.defaultProps = {
   currentPage: 1,
   totalPages: 1,
   'aria-label': 'Pagination navigation',
+  margin: true,
 }
 
 export const Pagination = mediaQueries(PaginationBase, {
