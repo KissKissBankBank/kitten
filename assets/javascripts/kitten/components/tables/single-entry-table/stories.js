@@ -1,182 +1,377 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { SingleEntryTable } from './index'
+import { SingleEntryTable as SingleEntryTableComponent } from './index'
 import { Container } from '../../grid/container'
 
-const info = {
-  text: `
-    # SingleEntryTable
-    &nbsp;
+export default {
+  component: SingleEntryTable,
+  title: 'Tables/SingleEntryTable',
+  decorators: [withInfo],
+  parameters: {
+    component: SingleEntryTable,
+    info: {
+      text: `
+        # SingleEntryTable
+        &nbsp;
 
-    ## Import
-    ~~~js
-    import { SingleEntryTable } from '@kisskissbankbank/kitten/src/components/tables/double-entry-table'
-    ~~~
+        ## Import
+        ~~~js
+        import { SingleEntryTable } from '@kisskissbankbank/kitten/src/components/tables/double-entry-table'
+        ~~~
 
-    ## Usage
-    &nbsp;
+        ## Usage
+        &nbsp;
 
-    #### Default
-    ~~~js
-    <SingleEntryTable id="…">
-      <SingleEntryTable.Header
-        {...props}
-        headerRowProps={{…}}
-      >
-        <SingleEntryTable.HeaderCol />
-        …
-        <SingleEntryTable.HeaderCol />
-      </SingleEntryTable.Header>
-
-      <SingleEntryTable.Body>
-        <SingleEntryTable.Row>
-          <SingleEntryTable.Col />
-          <SingleEntryTable.Col>
+        #### Default
+        ~~~js
+        <SingleEntryTable id="…">
+          <SingleEntryTable.Header
+            {...props}
+            headerRowProps={{…}}
+          >
+            <SingleEntryTable.HeaderCol />
             …
-          </SingleEntryTable.Col>
-        </SingleEntryTable.Row>
-        <SingleEntryTable.Row>
-          <SingleEntryTable.Col />
-          <SingleEntryTable.Col>
-            …
-          </SingleEntryTable.Col>
-        </SingleEntryTable.Row>
-      </SingleEntryTable.Body>
-    </SingleEntryTable>
-    ~~~
+            <SingleEntryTable.HeaderCol />
+          </SingleEntryTable.Header>
 
-  `,
-  header: false,
-  propTables: false,
+          <SingleEntryTable.Body>
+            <SingleEntryTable.Row>
+              <SingleEntryTable.Col />
+              <SingleEntryTable.Col>
+                …
+              </SingleEntryTable.Col>
+            </SingleEntryTable.Row>
+            <SingleEntryTable.Row>
+              <SingleEntryTable.Col />
+              <SingleEntryTable.Col>
+                …
+              </SingleEntryTable.Col>
+            </SingleEntryTable.Row>
+          </SingleEntryTable.Body>
+        </SingleEntryTable>
+        ~~~
+
+      `,
+      header: false,
+      propTables: false,
+    },
+  },
 }
 
-storiesOf('Tables/SingleEntryTable', module)
-  .addDecorator(withInfo)
-  .add(
-    'default',
-    () => {
-      return (
-        <Container style={{ marginTop: '5em', marginBottom: '5em' }}>
-          <SingleEntryTable id="TestSingleEntryTable">
-            <SingleEntryTable.Header className="customHeaderClass">
-              <SingleEntryTable.HeaderCol>Header 0</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 1</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 2</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 3</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 4</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 5</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 6</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 7</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 8</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 9</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 10</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 11</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 12</SingleEntryTable.HeaderCol>
-              <SingleEntryTable.HeaderCol>Header 13</SingleEntryTable.HeaderCol>
-            </SingleEntryTable.Header>
+export const SingleEntryTable = () => (
+  <Container style={{ marginTop: '5em', marginBottom: '5em' }}>
+    <SingleEntryTableComponent id="TestSingleEntryTable">
+      <SingleEntryTableComponent.Header className="customHeaderClass">
+        <SingleEntryTableComponent.HeaderCol>
+          Header 0
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 1
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 2
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 3
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 4
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 5
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 6
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 7
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 8
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 9
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 10
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 11
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 12
+        </SingleEntryTableComponent.HeaderCol>
+        <SingleEntryTableComponent.HeaderCol>
+          Header 13
+        </SingleEntryTableComponent.HeaderCol>
+      </SingleEntryTableComponent.Header>
 
-            <SingleEntryTable.Body>
-              <SingleEntryTable.Row>
-                <SingleEntryTable.Col>Content 0</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 1</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 2</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 3</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 4</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 5</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 6</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 7</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 8</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 9</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 10</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 11</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 12</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 13</SingleEntryTable.Col>
-              </SingleEntryTable.Row>
-              <SingleEntryTable.Row>
-                <SingleEntryTable.Col>Content 0</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 1</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 2</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 3</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 4</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 5</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 6</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 7</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 8</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 9</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 10</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 11</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 12</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 13</SingleEntryTable.Col>
-              </SingleEntryTable.Row>
-              <SingleEntryTable.Row>
-                <SingleEntryTable.Col>Content 0</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 1</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 2</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 3</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 4</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 5</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 6</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 7</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 8</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 9</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 10</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 11</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 12</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 13</SingleEntryTable.Col>
-              </SingleEntryTable.Row>
-              <SingleEntryTable.Row>
-                <SingleEntryTable.Col>Content 0</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 1</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 2</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 3</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 4</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 5</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 6</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 7</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 8</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 9</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 10</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 11</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 12</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 13</SingleEntryTable.Col>
-              </SingleEntryTable.Row>
-              <SingleEntryTable.Row>
-                <SingleEntryTable.Col>Content 0</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 1</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 2</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 3</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 4</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 5</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 6</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 7</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 8</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 9</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 10</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 11</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 12</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 13</SingleEntryTable.Col>
-              </SingleEntryTable.Row>
-              <SingleEntryTable.Row>
-                <SingleEntryTable.Col>Content 0</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 1</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 2</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 3</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 4</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 5</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 6</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 7</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 8</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 9</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 10</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 11</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 12</SingleEntryTable.Col>
-                <SingleEntryTable.Col>Content 13</SingleEntryTable.Col>
-              </SingleEntryTable.Row>
-            </SingleEntryTable.Body>
-          </SingleEntryTable>
-        </Container>
-      )
-    },
-    { info },
-  )
+      <SingleEntryTableComponent.Body>
+        <SingleEntryTableComponent.Row>
+          <SingleEntryTableComponent.Col>
+            Content 0
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 1
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 2
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 3
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 4
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 5
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 6
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 7
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 8
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 9
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 10
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 11
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 12
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 13
+          </SingleEntryTableComponent.Col>
+        </SingleEntryTableComponent.Row>
+        <SingleEntryTableComponent.Row>
+          <SingleEntryTableComponent.Col>
+            Content 0
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 1
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 2
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 3
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 4
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 5
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 6
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 7
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 8
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 9
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 10
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 11
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 12
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 13
+          </SingleEntryTableComponent.Col>
+        </SingleEntryTableComponent.Row>
+        <SingleEntryTableComponent.Row>
+          <SingleEntryTableComponent.Col>
+            Content 0
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 1
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 2
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 3
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 4
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 5
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 6
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 7
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 8
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 9
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 10
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 11
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 12
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 13
+          </SingleEntryTableComponent.Col>
+        </SingleEntryTableComponent.Row>
+        <SingleEntryTableComponent.Row>
+          <SingleEntryTableComponent.Col>
+            Content 0
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 1
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 2
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 3
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 4
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 5
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 6
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 7
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 8
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 9
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 10
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 11
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 12
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 13
+          </SingleEntryTableComponent.Col>
+        </SingleEntryTableComponent.Row>
+        <SingleEntryTableComponent.Row>
+          <SingleEntryTableComponent.Col>
+            Content 0
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 1
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 2
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 3
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 4
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 5
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 6
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 7
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 8
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 9
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 10
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 11
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 12
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 13
+          </SingleEntryTableComponent.Col>
+        </SingleEntryTableComponent.Row>
+        <SingleEntryTableComponent.Row>
+          <SingleEntryTableComponent.Col>
+            Content 0
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 1
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 2
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 3
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 4
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 5
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 6
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 7
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 8
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 9
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 10
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 11
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 12
+          </SingleEntryTableComponent.Col>
+          <SingleEntryTableComponent.Col>
+            Content 13
+          </SingleEntryTableComponent.Col>
+        </SingleEntryTableComponent.Row>
+      </SingleEntryTableComponent.Body>
+    </SingleEntryTableComponent>
+  </Container>
+)
