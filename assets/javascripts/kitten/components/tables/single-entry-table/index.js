@@ -12,8 +12,10 @@ SingleEntryTable.Header = ({ children, headerRowProps, ...others }) => (
     <tr {...headerRowProps}>{children}</tr>
   </thead>
 )
+
 SingleEntryTable.Body = props => <tbody {...props} />
 SingleEntryTable.Row = props => <tr {...props} />
+
 SingleEntryTable.Col = props => (
   <td
     className="SingleEntryTable__Column SingleEntryTable__Column--Col"
