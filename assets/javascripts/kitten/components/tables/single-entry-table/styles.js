@@ -43,7 +43,6 @@ export const Styles = styled.div`
       ${TYPOGRAPHY.fontStyles.bold}
       background: ${COLORS.background2};
       border-left-width: 0;
-      min-width: ${pxToRem(135)};
 
       &:first-child {
         border-color: ${COLORS.line1};
