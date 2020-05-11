@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Text } from '../../../components/typography/text'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
@@ -8,116 +8,102 @@ import COLORS from '../../../constants/colors-config'
 import { parseHtml } from '../../../helpers/utils/parser'
 import { mediaQueries } from '../../../hoc/media-queries'
 import { pxToRem } from '../../../helpers/utils/typography'
+import classNames from 'classnames'
 
-const StyledGroup = styled.ul`
-  padding: 0;
-  ${({ margin }) =>
-    !margin &&
-    css`
-      margin: 0;
-    `}
-  ${({ align }) => {
-    switch (align) {
-      case 'left':
-        return css`
-          justify-content: flex-start;
-          display: flex;
-        `
-      case 'center':
-        return css`
-          justify-content: center;
-          display: flex;
-        `
-      case 'right':
-        return css`
-          justify-content: flex-end;
-          display: flex;
-        `
-      default:
-        return css`
-          display: inline-flex;
-        `
+const StyledNav = styled.nav`
+  .Pagination__List {
+    padding: 0;
+    display: inline-flex;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .Pagination__ListItem {
+    margin-right: 0;
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      margin: ${pxToRem(0)} ${pxToRem(8)};
     }
-  }}
-`
-
-const StyledListItem = styled.li`
-  list-style: none;
-  margin-right: 0;
-
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    margin: ${pxToRem(0)} ${pxToRem(8)};
-  }
-`
-
-const StyledArrowIconDirection = styled(({ direction, ...others }) => (
-  <li {...others} />
-))`
-  list-style: none;
-
-  ${({ direction }) =>
-    direction === 'left' &&
-    css`
-      margin-right: ${pxToRem(30)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-right: ${pxToRem(22)};
-      }
-    `}
-
-  ${({ direction }) =>
-    direction === 'right' &&
-    css`
-      margin-left: ${pxToRem(30)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(22)};
-      }
-    `}
-`
-
-const StyledButtonIcon = styled(({ isDisabled, isActive, ...others }) => (
-  <Text {...others} />
-))`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  cursor: pointer;
-  width: ${pxToRem(40)};
-  height: ${pxToRem(40)};
-  border-radius: 0;
-  border-width: 0;
-  border-style: solid;
-  outline: none;
-  color: ${COLORS.font1};
-  border-color: ${COLORS.line1};
-  background-color: ${COLORS.background1};
-
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    width: ${pxToRem(50)};
-    height: ${pxToRem(50)};
-    border-width: ${pxToRem(2)};
   }
 
-  &:hover,
-  &:focus {
-    color: ${COLORS.primary1};
-    border-color: ${COLORS.primary1};
+  .Pagination__ListItem__Points {
+    text-align: center;
+    align-self: center;
+    width: ${pxToRem(40)};
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      margin: ${pxToRem(0)} ${pxToRem(8)};
+      width: ${pxToRem(50)};
+    }
+  }
+
+  .Pagination__ListItem__Points {
+    text-align: center;
+    align-self: center;
+    width: ${pxToRem(40)};
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      margin: ${pxToRem(0)} ${pxToRem(8)};
+      width: ${pxToRem(50)};
+    }
+  }
+
+  .Pagination__ListItem__Arrow--direction-left {
+    margin-right: ${pxToRem(30)};
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      margin-right: ${pxToRem(22)};
+    }
+  }
+
+  .Pagination__ListItem__Arrow--direction-right {
+    margin-left: ${pxToRem(30)};
+
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      margin-left: ${pxToRem(22)};
+    }
+  }
+
+  .Pagination__Link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: ${pxToRem(40)};
+    height: ${pxToRem(40)};
+    border-radius: 0;
+    border-width: 0;
+    border-style: solid;
+    outline: none;
+    color: ${COLORS.font1};
+    border-color: ${COLORS.line1};
     background-color: ${COLORS.background1};
-    text-decoration: none;
-  }
 
-  &:active {
-    color: ${COLORS.background1};
-    border-color: ${COLORS.primary1};
-    background-color: ${COLORS.primary1};
-    text-decoration: none;
-  }
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      width: ${pxToRem(50)};
+      height: ${pxToRem(50)};
+      border-width: ${pxToRem(2)};
+    }
 
-  ${({ isActive }) =>
-    isActive &&
-    css`
+    &:hover,
+    &:focus {
+      color: ${COLORS.primary1};
+      border-color: ${COLORS.primary1};
+      background-color: ${COLORS.background1};
+      text-decoration: none;
+    }
+
+    &:active {
+      color: ${COLORS.background1};
+      border-color: ${COLORS.primary1};
+      background-color: ${COLORS.primary1};
+      text-decoration: none;
+    }
+
+    &[aria-current='page'] {
       cursor: auto;
       color: ${COLORS.background1};
       border-color: ${COLORS.primary1};
@@ -130,43 +116,48 @@ const StyledButtonIcon = styled(({ isDisabled, isActive, ...others }) => (
         border-color: ${COLORS.primary1};
         background-color: ${COLORS.primary1};
       }
-    `}
+    }
 
-  &[aria-disabled="true"] {
-    color: ${COLORS.background1};
-    border-color: ${COLORS.line2};
-    background-color: ${COLORS.line2};
-    cursor: not-allowed;
-
-    &:hover,
-    &:focus,
-    &:active {
+    &[aria-disabled='true'] {
       color: ${COLORS.background1};
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: ${COLORS.background1};
+        border-color: ${COLORS.line2};
+        background-color: ${COLORS.line2};
+      }
     }
   }
-`
 
-const StyledSvg = styled(ArrowIcon)`
-  align-self: center;
-  margin: 0;
-  padding: 0;
-  pointer-events: none;
-  color: inherit;
-  fill: currentColor;
-`
+  .Pagination__ArrowIcon {
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    color: inherit;
+    fill: currentColor;
+  }
 
-const StyledPoints = styled.li`
-  list-style: none;
-  text-decoration: none;
-  text-align: center;
-  align-self: center;
-  width: ${pxToRem(40)};
+  &.Pagination--noMargin .Pagination__List {
+    margin: 0;
+  }
 
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    margin: ${pxToRem(0)} ${pxToRem(8)};
-    width: ${pxToRem(50)};
+  &.Pagination--isAligned-left .Pagination__List {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &.Pagination--isAligned-center .Pagination__List {
+    display: flex;
+    justify-content: center;
+  }
+  &.Pagination--isAligned-right .Pagination__List {
+    display: flex;
+    justify-content: flex-end;
   }
 `
 
@@ -220,6 +211,7 @@ const PaginationBase = forwardRef(
       viewportIsMOrLess,
       margin,
       align,
+      className,
     },
     _ref,
   ) => {
@@ -241,8 +233,9 @@ const PaginationBase = forwardRef(
         : goToPageLabel(number)
 
       return (
-        <StyledListItem key={`page-${number}`}>
-          <StyledButtonIcon
+        <li className="Pagination__ListItem" key={`page-${number}`}>
+          <Text
+            className="Pagination__Link"
             tag={tag}
             href={href}
             key={`link-${number}`}
@@ -255,15 +248,19 @@ const PaginationBase = forwardRef(
             onClick={isActive ? null : pageClickHandler(number)}
           >
             {number}
-          </StyledButtonIcon>
-        </StyledListItem>
+          </Text>
+        </li>
       )
     }
 
     const renderSpacer = index => (
-      <StyledPoints key={`spacer-${index}`} aria-hidden="true">
+      <li
+        key={`spacer-${index}`}
+        className="Pagination__ListItem__Points"
+        aria-hidden="true"
+      >
         {'…'}
-      </StyledPoints>
+      </li>
     )
 
     const renderArrowButton = direction => {
@@ -285,39 +282,56 @@ const PaginationBase = forwardRef(
           : currentPage + 1
 
       return (
-        <StyledArrowIconDirection direction={direction}>
-          <StyledButtonIcon
+        <li
+          className={classNames(
+            'Pagination__ListItem__Arrow',
+            `Pagination__ListItem__Arrow--direction-${direction}`,
+          )}
+        >
+          <Text
+            className="Pagination__Link"
             tag="a"
             href={goToPageHref(number)}
             key={`link-${direction}`}
             aria-label={buttonLabel}
             aria-disabled={isDisabled}
             title={buttonLabel}
-            isDisabled={isDisabled}
             tabIndex={isDisabled ? -1 : null}
             onClick={
               isDisabled ? preventClickDefault : pageClickHandler(number)
             }
           >
-            <StyledSvg
+            <ArrowIcon
+              className="Pagination__ArrowIcon"
               direction={direction}
               disabled={isDisabled}
               aria-hidden="true"
               version="solid"
             />
-          </StyledButtonIcon>
-        </StyledArrowIconDirection>
+          </Text>
+        </li>
       )
     }
 
     return (
-      <nav role="navigation" aria-label={ariaLabelProp}>
-        <StyledGroup margin={margin} align={align}>
+      <StyledNav
+        role="navigation"
+        aria-label={ariaLabelProp}
+        className={classNames(
+          'Pagination',
+          className,
+          `Pagination--isAligned-${align}`,
+          {
+            'Pagination--noMargin': !margin,
+          },
+        )}
+      >
+        <ul className="Pagination__List">
           {renderArrowButton('left')}
           {pageNumbers.map(renderPage)}
           {renderArrowButton('right')}
-        </StyledGroup>
-      </nav>
+        </ul>
+      </StyledNav>
     )
   },
 )
