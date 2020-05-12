@@ -19,8 +19,14 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     <div
       className="sc-AxgMl cwoYYF k-u-hidden@m-down"
     >
-      <span
-        className="sc-AxiKw gGNgIn styledStroke"
+      <div
+        className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+        style={
+          Object {
+            "height": null,
+            "width": null,
+          }
+        }
       />
     </div>
     <p
@@ -31,8 +37,14 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     <div
       className="sc-AxgMl cwoYYF k-u-hidden@m-down"
     >
-      <span
-        className="sc-AxiKw gGNgIn styledStroke"
+      <div
+        className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+        style={
+          Object {
+            "height": null,
+            "width": null,
+          }
+        }
       />
     </div>
   </div>

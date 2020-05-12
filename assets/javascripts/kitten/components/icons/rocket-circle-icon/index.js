@@ -21,15 +21,15 @@ const StyledRocketCircle = styled.div`
   }
 `
 
-const StyledRocketIcon = styled(({
-  rocketWidth,
-  rocketHeight,
-  rocketHeightMobile,
-  rocketWidthMobile,
-  ...others
-}) => (
-  <RocketIcon {...others} />
-))`
+const StyledRocketIcon = styled(
+  ({
+    rocketWidth,
+    rocketHeight,
+    rocketHeightMobile,
+    rocketWidthMobile,
+    ...others
+  }) => <RocketIcon {...others} />,
+)`
   padding-right: ${pxToRem(2)};
   padding-top: ${pxToRem(1)};
   width: ${({ rocketWidthMobile }) => pxToRem(rocketWidthMobile)};

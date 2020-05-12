@@ -35,8 +35,18 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       >
         Custom title mount
       </h6>
-      <span
-        className="sc-AxiKw lerUPL"
+      <div
+        className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--default"
+        style={
+          Object {
+            "0": Object {
+              "marginBottom": "1.875rem",
+            },
+            "1": false,
+            "height": null,
+            "width": null,
+          }
+        }
       />
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -124,8 +134,18 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
       >
         Custom title mount
       </h6>
-      <span
-        className="sc-AxiKw lerUPL"
+      <div
+        className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--default"
+        style={
+          Object {
+            "0": Object {
+              "marginBottom": "1.875rem",
+            },
+            "1": false,
+            "height": null,
+            "width": null,
+          }
+        }
       />
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -214,8 +234,18 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       >
         100$
       </h6>
-      <span
-        className="sc-AxiKw lerUPL"
+      <div
+        className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--default"
+        style={
+          Object {
+            "0": Object {
+              "marginBottom": "1.875rem",
+            },
+            "1": false,
+            "height": null,
+            "width": null,
+          }
+        }
       />
       <p
         className="k-u-color-font1 k-u-weight-bold"
@@ -410,8 +440,14 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           <div
             className="sc-AxjAm ccCISE"
           >
-            <span
-              className="sc-AxiKw gGNgIn"
+            <div
+              className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              style={
+                Object {
+                  "height": null,
+                  "width": null,
+                }
+              }
             />
           </div>
           <div

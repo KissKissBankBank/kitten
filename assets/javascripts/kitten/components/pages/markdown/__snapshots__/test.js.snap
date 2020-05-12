@@ -15,8 +15,14 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
   <div
     className="sc-AxiKw kFolyb"
   >
-    <span
-      className="sc-AxirZ cVScHn"
+    <div
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      style={
+        Object {
+          "height": null,
+          "width": null,
+        }
+      }
     />
   </div>
   <div
@@ -52,8 +58,14 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
   <div
     className="sc-AxiKw kFolyb"
   >
-    <span
-      className="sc-AxirZ cVScHn"
+    <div
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      style={
+        Object {
+          "height": null,
+          "width": null,
+        }
+      }
     />
   </div>
   <div
@@ -104,8 +116,14 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   <div
     className="sc-AxiKw kFolyb"
   >
-    <span
-      className="sc-AxirZ cVScHn"
+    <div
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      style={
+        Object {
+          "height": null,
+          "width": null,
+        }
+      }
     />
   </div>
   <div
@@ -160,8 +178,14 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   <div
     className="sc-AxiKw kFolyb"
   >
-    <span
-      className="sc-AxirZ cVScHn"
+    <div
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      style={
+        Object {
+          "height": null,
+          "width": null,
+        }
+      }
     />
   </div>
   <div
@@ -196,8 +220,14 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
   <div
     className="sc-AxiKw kFolyb"
   >
-    <span
-      className="sc-AxirZ cVScHn"
+    <div
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      style={
+        Object {
+          "height": null,
+          "width": null,
+        }
+      }
     />
   </div>
   <div
@@ -233,8 +263,14 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
   <div
     className="sc-AxiKw kFolyb"
   >
-    <span
-      className="sc-AxirZ cVScHn"
+    <div
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      style={
+        Object {
+          "height": null,
+          "width": null,
+        }
+      }
     />
   </div>
   <div
@@ -285,8 +321,14 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   <div
     className="sc-AxiKw kFolyb"
   >
-    <span
-      className="sc-AxirZ cVScHn"
+    <div
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      style={
+        Object {
+          "height": null,
+          "width": null,
+        }
+      }
     />
   </div>
   <div
@@ -341,8 +383,14 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   <div
     className="sc-AxiKw kFolyb"
   >
-    <span
-      className="sc-AxirZ cVScHn"
+    <div
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      style={
+        Object {
+          "height": null,
+          "width": null,
+        }
+      }
     />
   </div>
   <div

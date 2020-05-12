@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `modifier` prop to `HorizontalStroke`.
 - Feature: Add `SingleEntryTable` component.
 Feature:
 - Add `ExportIconAlternate` icon.

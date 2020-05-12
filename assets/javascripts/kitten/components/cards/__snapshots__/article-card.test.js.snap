@@ -151,9 +151,15 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
     <div
       className="k-CrowdfundingCard__subtitle__container"
     >
-      <span
-        className="sc-AxirZ gwjQl k-CrowdfundingCard__subtitle__horizontalStroke"
+      <div
+        className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--tiny"
         loading={false}
+        style={
+          Object {
+            "height": null,
+            "width": null,
+          }
+        }
       />
       <p
         className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-CrowdfundingCard__subtitle__subtitleText--truncated"
@@ -340,9 +346,15 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
     <div
       className="k-CrowdfundingCard__subtitle__container"
     >
-      <span
-        className="sc-AxirZ gwjQl k-CrowdfundingCard__subtitle__horizontalStroke"
+      <div
+        className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--tiny"
         loading={false}
+        style={
+          Object {
+            "height": null,
+            "width": null,
+          }
+        }
       />
       <p
         className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-CrowdfundingCard__subtitle__subtitleText--truncated"

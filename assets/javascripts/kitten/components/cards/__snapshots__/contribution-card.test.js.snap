@@ -51,8 +51,14 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           <div
             className="sc-AxjAm ccCISE"
           >
-            <span
-              className="sc-AxiKw gGNgIn"
+            <div
+              className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              style={
+                Object {
+                  "height": null,
+                  "width": null,
+                }
+              }
             />
           </div>
           
@@ -140,8 +146,14 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           <div
             className="sc-AxjAm ccCISE"
           >
-            <span
-              className="sc-AxiKw gGNgIn"
+            <div
+              className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              style={
+                Object {
+                  "height": null,
+                  "width": null,
+                }
+              }
             />
           </div>
           <div
@@ -424,8 +436,14 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           <div
             className="sc-AxjAm ccCISE"
           >
-            <span
-              className="sc-AxiKw gGNgIn"
+            <div
+              className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              style={
+                Object {
+                  "height": null,
+                  "width": null,
+                }
+              }
             />
           </div>
           <div

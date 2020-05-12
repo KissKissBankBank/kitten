@@ -1,7 +1,6 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, number, select } from '@storybook/addon-knobs'
+import { withKnobs, number, select, object } from '@storybook/addon-knobs'
 import { HorizontalStroke } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -11,6 +10,17 @@ const sizeOptions = {
   Default: 'default',
   Big: 'big',
   Huge: 'huge',
+}
+
+const modifierOptions = {
+  null: null,
+  primary: 'primary',
+  secondary: 'secondary',
+  tertiary: 'tertiary',
+  quaternary: 'quaternary',
+  quinary: 'quinary',
+  senary: 'senary',
+  septenary: 'septenary',
 }
 
 const info = {
@@ -36,6 +46,17 @@ const info = {
     <HorizontalStroke />
     ~~~
 
+    #### Modifier
+    ~~~js
+    <HorizontalStroke modifier="primary" />
+    <HorizontalStroke modifier="secondary" />
+    <HorizontalStroke modifier="tertiary" />
+    <HorizontalStroke modifier="quaternary" />
+    <HorizontalStroke modifier="quinary" />
+    <HorizontalStroke modifier="senary" />
+    <HorizontalStroke modifier="septenary" />
+    ~~~
+
     #### Size
     ~~~js
     <HorizontalStroke size="tiny" />
@@ -53,25 +74,28 @@ const info = {
   propTables: false,
 }
 
-storiesOf('Layout/HorizontalStroke', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withInfo)
-  .add(
-    'default',
-    () => {
-      return (
-        <Marger top="4" bottom="4">
-          <Container>
-            <HorizontalStroke
-              size={select('Size', sizeOptions, 'default')}
-              customSize={{
-                width: number('Width', null),
-                height: number('Height', null),
-              }}
-            />
-          </Container>
-        </Marger>
-      )
-    },
-    { info },
-  )
+export default {
+  component: HorizontalStroke,
+  title: 'Layout/HorizontalStroke',
+  decorators: [withKnobs, withInfo],
+  parameters: {
+    component: HorizontalStroke,
+    info: info,
+  },
+}
+
+export const Default = () => (
+  <Marger top="4" bottom="4">
+    <Container>
+      <HorizontalStroke
+        size={select('Size', sizeOptions, 'default')}
+        modifier={select('Modifier', modifierOptions)}
+        customSize={{
+          width: number('Width', null),
+          height: number('Height', null),
+        }}
+        style={object('Style object', { backgroundColor: '#333' })}
+      />
+    </Container>
+  </Marger>
+)

@@ -158,29 +158,74 @@ const strokeModifiers = [
   },
 ]
 
-export const strokeModifierStyles = prefix => {
-  return strokeModifiers.map(key => {
+export const strokeModifierStyles = prefix => css`
+  ${strokeModifiers.map(key => {
     return css`
-      ${`.${prefix}--${key.name}`} {
+      ${`${prefix}--${key.name}`} {
         width: ${pxToRem(key.mobile.width)};
         height: ${pxToRem(key.mobile.height)};
         margin-top: ${pxToRem(key.mobile.top)};
         margin-bottom: ${pxToRem(key.mobile.bottom)};
+      }
+    `
+  })}
 
-        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    ${strokeModifiers.map(key => {
+      return css`
+        ${`${prefix}--${key.name}`} {
           width: ${pxToRem(key.tablet.width)};
           height: ${pxToRem(key.tablet.height)};
           margin-top: ${pxToRem(key.tablet.top)};
           margin-bottom: ${pxToRem(key.tablet.bottom)};
         }
+      `
+    })}
+  }
 
-        @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    ${strokeModifiers.map(key => {
+      return css`
+        ${`${prefix}--${key.name}`} {
           width: ${pxToRem(key.desktop.width)};
           height: ${pxToRem(key.desktop.height)};
           margin-top: ${pxToRem(key.desktop.top)};
           margin-bottom: ${pxToRem(key.desktop.bottom)};
         }
+      `
+    })}
+  }
+`
+
+export const strokeModifierStylesWithoutMargin = prefix => css`
+  ${strokeModifiers.map(key => {
+    return css`
+      ${`${prefix}--${key.name}`} {
+        width: ${pxToRem(key.mobile.width)};
+        height: ${pxToRem(key.mobile.height)};
       }
     `
-  })
-}
+  })}
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    ${strokeModifiers.map(key => {
+      return css`
+        ${`${prefix}--${key.name}`} {
+          width: ${pxToRem(key.tablet.width)};
+          height: ${pxToRem(key.tablet.height)};
+        }
+      `
+    })}
+  }
+
+  @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    ${strokeModifiers.map(key => {
+      return css`
+        ${`${prefix}--${key.name}`} {
+          width: ${pxToRem(key.desktop.width)};
+          height: ${pxToRem(key.desktop.height)};
+        }
+      `
+    })}
+  }
+`
