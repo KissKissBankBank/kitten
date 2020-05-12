@@ -1,65 +1,9 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { pxToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
-import COLORS from '../../../../constants/colors-config'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import Truncate from 'react-truncate'
-import { ScreenConfig } from '../../../../constants/screen-config'
-
-const COMPONENT_GUTTER = pxToRem(10)
-
-const StyledTruncate = styled(Truncate)`
-  white-space: nowrap;
-`
-
-const StyledContainerSubtitle = styled.div`
-  display: none;
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    display: flex;
-    align-items: center;
-    line-height: 1;
-    padding: 0 ${COMPONENT_GUTTER};
-    margin-top: ${pxToRem(10)};
-  }
-`
-
-const StyledHorizontalStroke = styled(({ loading, ...others }) => (
-  <HorizontalStroke {...others} />
-))`
-  flex-shrink: 0;
-  margin: ${pxToRem(5)} ${COMPONENT_GUTTER} ${pxToRem(5)} 0;
-
-  ${({ loading }) =>
-    loading &&
-    css`
-      background-color: ${COLORS.line2};
-    `}
-`
-
-const StyledSubtitle = styled(Text)`
-  line-height: 1;
-  flex: 1;
-
-  ${({ subTitleTruncate }) =>
-    subTitleTruncate &&
-    css`
-      white-space: nowrap;
-      overflow: hidden;
-    `}
-`
-const StyledSubtitleLoading = styled.span`
-  display: block;
-  background-color: ${COLORS.line2};
-  width: ${pxToRem(80)};
-  height: ${pxToRem(12)};
-`
-
-const StyledWidgetSubtitle = styled(Text)`
-  margin: ${pxToRem(5)} 0 ${pxToRem(20)} 0;
-`
+import classNames from 'classnames'
 
 class Subtitle extends PureComponent {
   static propTypes = {
@@ -93,19 +37,40 @@ class Subtitle extends PureComponent {
     const { loading, subTitle, subTitleTruncate } = this.props
 
     return (
-      <StyledContainerSubtitle>
-        <StyledHorizontalStroke size="tiny" loading={loading} />
+      <div className="k-CrowdfundingCard__subtitle__container">
+        <HorizontalStroke
+          className="k-CrowdfundingCard__subtitle__horizontalStroke"
+          size="tiny"
+          loading={loading}
+        />
 
         {subTitle && !loading && (
-          <StyledSubtitle size="micro" weight="regular" tag="p" color="font1">
-            {subTitleTruncate && <StyledTruncate>{subTitle}</StyledTruncate>}
+          <Text
+            className={classNames(
+              'k-CrowdfundingCard__subtitle__subtitleText',
+              {
+                'k-CrowdfundingCard__subtitle__subtitleText--truncated': subTitleTruncate,
+              },
+            )}
+            size="micro"
+            weight="regular"
+            tag="p"
+            color="font1"
+          >
+            {subTitleTruncate && (
+              <Truncate className="k-CrowdfundingCard__noWrap">
+                {subTitle}
+              </Truncate>
+            )}
 
             {!subTitleTruncate && subTitle}
-          </StyledSubtitle>
+          </Text>
         )}
 
-        {loading && <StyledSubtitleLoading />}
-      </StyledContainerSubtitle>
+        {loading && (
+          <span className="k-CrowdfundingCard__subtitle__loadingElement" />
+        )}
+      </div>
     )
   }
 
@@ -114,8 +79,9 @@ class Subtitle extends PureComponent {
 
     return (
       <>
-        {StyledWidgetSubtitle && !loading && (
-          <StyledWidgetSubtitle
+        {widgetSubtitle && !loading && (
+          <Text
+            className="k-u-margin-top-noneHalf k-u-margin-bottom-double"
             tag="p"
             size="micro"
             color="font1"
@@ -127,10 +93,12 @@ class Subtitle extends PureComponent {
             )}
 
             {!subTitleTruncate && widgetSubtitle}
-          </StyledWidgetSubtitle>
+          </Text>
         )}
 
-        {loading && <StyledSubtitleLoading />}
+        {loading && (
+          <span className="k-CrowdfundingCard__subtitle__loadingElement" />
+        )}
       </>
     )
   }

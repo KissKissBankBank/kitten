@@ -4,10 +4,10 @@ import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-const getDashLength = radius => `calc(2 * ${Math.PI} * ${pxToRem(radius)})`
+const getDashLength = radius => 2 * Math.PI * radius
 
 const getDashOffset = ({ r, progressValue }) =>
-  `calc(${getDashLength(r)} * ${100 - progressValue} / 100)`
+  (getDashLength(r) * (100 - progressValue)) / 100
 
 const rotateAnimate = ({ r, progressValue }) => keyframes`
   from {
@@ -104,7 +104,7 @@ ProgressRing.propTypes = {
     Radius value of ProgressRing
   */
   radius: PropTypes.number,
-   /**
+  /**
     Width of circle (stroke)
   */
   strokeWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),

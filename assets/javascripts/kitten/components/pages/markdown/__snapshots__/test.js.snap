@@ -3,20 +3,20 @@
 exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot 1`] = `
 <div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
+      className="sc-AxjAm olwwK"
       id="h1"
     >
       H1
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
       style={
         Object {
           "height": null,
@@ -26,40 +26,40 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h2
-      className="title__StyledTitle-sc-46lshq-0 jSlMJn"
+      className="sc-AxjAm kWOWDl"
       id="h2"
     >
       H2
     </h2>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h3
-      className="title__StyledTitle-sc-46lshq-0 kWyuxU"
+      className="sc-AxjAm dTYukb"
       id="h3"
     >
       H3
     </h3>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
+      className="sc-AxjAm olwwK"
       id="emphasis"
     >
       Emphasis
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
       style={
         Object {
           "height": null,
@@ -69,7 +69,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 loOPNX"
+    className="sc-AxiKw dEURrP"
   >
     <p
       className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
@@ -104,20 +104,20 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     </p>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
+      className="sc-AxjAm olwwK"
       id="list"
     >
       List
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
       style={
         Object {
           "height": null,
@@ -127,59 +127,59 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kWeiWM"
+        className="sc-AxhUy irmRRN"
       >
         Unordered list can use asterisks
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kWeiWM"
+        className="sc-AxhUy irmRRN"
       >
         Or minuses
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kWeiWM"
+        className="sc-AxhUy irmRRN"
       >
         Or pluses
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
+      className="sc-AxjAm olwwK"
       id="link"
     >
       Link
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
       style={
         Object {
           "height": null,
@@ -189,7 +189,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 loOPNX"
+    className="sc-AxiKw dEURrP"
   >
     <p
       className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
@@ -208,20 +208,20 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
 <div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
+      className="sc-AxjAm olwwK"
       id="h1"
     >
       H1
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
       style={
         Object {
           "height": null,
@@ -231,40 +231,40 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h2
-      className="title__StyledTitle-sc-46lshq-0 jSlMJn"
+      className="sc-AxjAm kWOWDl"
       id="h2"
     >
       H2
     </h2>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h3
-      className="title__StyledTitle-sc-46lshq-0 kWyuxU"
+      className="sc-AxjAm dTYukb"
       id="h3"
     >
       H3
     </h3>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
+      className="sc-AxjAm olwwK"
       id="emphasis"
     >
       Emphasis
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
       style={
         Object {
           "height": null,
@@ -274,7 +274,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 loOPNX"
+    className="sc-AxiKw dEURrP"
   >
     <p
       className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -309,20 +309,20 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     </p>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
+      className="sc-AxjAm olwwK"
       id="list"
     >
       List
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
       style={
         Object {
           "height": null,
@@ -332,59 +332,59 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kXnRej"
+        className="sc-AxhUy fguYj"
       >
         Unordered list can use asterisks
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kXnRej"
+        className="sc-AxhUy fguYj"
       >
         Or minuses
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 gKSWLw"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="bullet-list__StyledBulletList-rdyx84-0 eBDmYd list__BulletListStyle-sc-1hya2vn-0 fMlCJG"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="bullet-list__StyledItem-rdyx84-1 kXnRej"
+        className="sc-AxhUy fguYj"
       >
         Or pluses
       </li>
     </ul>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 kboIqb"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="title__StyledTitle-sc-46lshq-0 kXPoIm"
+      className="sc-AxjAm olwwK"
       id="link"
     >
       Link
     </h1>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 PUhWi"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
       style={
         Object {
           "height": null,
@@ -394,7 +394,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     />
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 loOPNX"
+    className="sc-AxiKw dEURrP"
   >
     <p
       className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"

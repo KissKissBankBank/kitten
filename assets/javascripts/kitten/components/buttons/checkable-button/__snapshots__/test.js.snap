@@ -57,7 +57,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #222;
 }
 
@@ -69,7 +70,9 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -79,7 +82,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -89,7 +93,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -209,7 +214,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #19b4fa;
 }
 
@@ -221,7 +227,9 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -231,7 +239,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -241,7 +250,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -377,7 +387,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #19b4fa;
 }
 
@@ -389,7 +400,9 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -399,7 +412,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -409,7 +423,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -516,7 +531,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #ff0046;
 }
 
@@ -528,7 +544,9 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #ff0046;
 }
 
@@ -538,7 +556,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   color: #ff0046;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #ff0046;
 }
 
@@ -548,7 +567,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 
@@ -659,7 +679,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   margin-right: 0;
 }
 
-.c0 svg {
+.c0 svg,
+.c0 path {
   fill: #19b4fa;
 }
 
@@ -671,7 +692,9 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c0:hover svg,
-.c0:focus svg {
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
   fill: #fff;
 }
 
@@ -681,7 +704,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:active svg {
+.c0:active svg,
+.c0:active path {
   fill: #fff;
 }
 
@@ -691,7 +715,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:disabled svg {
+.c0:disabled svg,
+.c0:disabled path {
   fill: #fff;
 }
 

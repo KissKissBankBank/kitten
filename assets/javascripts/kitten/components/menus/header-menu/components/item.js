@@ -106,7 +106,7 @@ const StyledItem = styled.a`
 
 const ExternalStyledItem = styled(StyledItem)`
   display: flex;
-  height: ${pxToRem(24)};
+  height: ${pxToRem(70)};
   padding: ${({ largeItem }) =>
     largeItem
       ? `${pxToRem(23)} ${pxToRem(21)} ${pxToRem(22)} ${pxToRem(40)}`

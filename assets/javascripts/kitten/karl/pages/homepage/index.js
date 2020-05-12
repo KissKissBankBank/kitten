@@ -9,7 +9,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { ScreenConfig } from '../../../constants/screen-config'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import EngagementsCarousel from './engagements-carousel'
+import { EngagementsCarousel } from './engagements-carousel'
 import { FeaturedProjects } from './featured-projects'
 import { PopularProjects } from './popular-projects'
 import { NewsBlock } from './news/components/news-block'
@@ -18,7 +18,7 @@ import { Video } from './video'
 import { DialogWithPictureBorder } from './dialog-with-picture-border'
 
 const StyledHomePage = styled.div`
-  section.Homepage__Section {
+  .Homepage__section {
     margin-top: ${pxToRem(50)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -28,7 +28,7 @@ const StyledHomePage = styled.div`
       margin-top: ${pxToRem(100)};
     }
 
-    &.Homepage__LastSection {
+    &.Homepage__section--lastSection {
       margin-bottom: ${pxToRem(50)};
 
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -39,52 +39,50 @@ const StyledHomePage = styled.div`
       }
     }
   }
-`
 
-const StyledSectionTitle = styled(Title)`
-  font-size: ${stepToRem(-1)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    font-size: ${stepToRem(0)};
-  }
-`
-
-const StyledCarouselLink = styled.a`
-  display: block;
-  text-align: right;
-  text-decoration: none;
-  ${TYPOGRAPHY.fontStyles.regular}
-  color: ${COLORS.font1};
-  transition: color .4s ease;
-
-  span {
-    font-size: ${stepToRem(-2)};
-    margin-right: ${pxToRem(7)};
+  .Homepage__section__title {
+    font-size: ${stepToRem(-1)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      font-size: ${stepToRem(-1)};
-      margin-right: ${pxToRem(8)};
+      font-size: ${stepToRem(0)};
     }
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    color: ${COLORS.primary2}
+  .Homepage__section__carouselLink {
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    ${TYPOGRAPHY.fontStyles.regular}
+    color: ${COLORS.font1};
+    transition: color .4s ease;
+
+    span {
+      font-size: ${stepToRem(-2)};
+      margin-right: ${pxToRem(7)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        font-size: ${stepToRem(-1)};
+        margin-right: ${pxToRem(8)};
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: ${COLORS.primary2}
+    }
+
+    svg {
+      vertical-align: center;
+      fill: currentColor;
+      transition: fill .4s ease;
+    }
   }
-
-  svg {
-    vertical-align: center;
-    fill: currentColor;
-    transition: fill .4s ease;
-  }
-
-
 `
 
 const HomePage = () => (
   <StyledHomePage>
-    <Container as="section" className="Homepage__Section">
+    <Container as="section" className="Homepage__section">
       <TitleWithStroke align="center" modifier="tertiary">
         La communauté des projets engagés
       </TitleWithStroke>
@@ -94,21 +92,22 @@ const HomePage = () => (
       <EngagementsCarousel />
     </section>
 
-    <Container as="section" className="Homepage__Section">
+    <Container as="section" className="Homepage__section">
       <FeaturedProjects />
     </Container>
 
-    <Container as="section" className="Homepage__Section">
-      <StyledSectionTitle
+    <Container as="section" className="Homepage__section">
+      <Title
         tag="h2"
         className="
+          Homepage__section__title
           k-u-margin-top-none
           k-u-margin-bottom-singleHalf@s-up
           k-u-margin-bottom-single@s-down
         "
       >
         Notre actu
-      </StyledSectionTitle>
+      </Title>
       <NewsBlock
         contents={[
           {
@@ -157,25 +156,25 @@ const HomePage = () => (
       />
     </Container>
 
-    <section className="Homepage__Section">
+    <section className="Homepage__section">
       <Container
         className="k-u-margin-bottom-singleHalf@s-up
           k-u-margin-bottom-single@s-down"
       >
         <Grid>
           <GridCol col={8}>
-            <StyledSectionTitle tag="h2" margin={false}>
+            <Title tag="h2" margin={false} className="Homepage__section__title">
               Nos projets populaires
-            </StyledSectionTitle>
+            </Title>
           </GridCol>
           <GridCol col={4}>
-            <StyledCarouselLink href="#">
+            <a href="#" className="Homepage__section__carouselLink">
               <span className="k-u-hidden@xs-down">Voir tous les projets</span>
               <span className="k-u-hidden@s-up" aria-hidden>
                 Tous les projets
               </span>
               <ArrowIcon />
-            </StyledCarouselLink>
+            </a>
           </GridCol>
         </Grid>
       </Container>
@@ -183,15 +182,15 @@ const HomePage = () => (
       <PopularProjects />
     </section>
 
-    <Container as="section" className="Homepage__Section">
+    <Container as="section" className="Homepage__section">
       <TextWithSideImage />
     </Container>
 
-    <Container as="section" className="Homepage__Section">
+    <Container as="section" className="Homepage__section">
       <Video />
     </Container>
 
-    <section className="Homepage__Section Homepage__LastSection">
+    <section className="Homepage__section Homepage__section--lastSection">
       <DialogWithPictureBorder />
     </section>
   </StyledHomePage>

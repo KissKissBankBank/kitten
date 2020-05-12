@@ -6,6 +6,55 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `modifier` prop to `HorizontalStroke`.
 
+## [2.68.0] - 2020-05-06
+
+Feature:
+- Add `colorHover` prop to `HeaderNav.Button`.
+
+Fix:
+- `HeaderNav.UserMenu` `closeEvents` prop.
+
+## [2.67.0] - 2020-05-04
+
+Fix:
+- Remove `calc` on `ProgressRing`.
+
+Feature:
+- Add: New `<Modal />` component imported from `import { Modal } from '@kisskissbankbank/kitten/next`, (see usage on our Storybook, section named `NEXT`).
+
+## [2.66.1] - 2020-04-27
+
+Fixes:
+- Fix `HeaderNav` layout.
+- Update `path` fill on `Button`.
+
+## [2.66.0] - 2020-04-24
+
+Features:
+- Add `stretch` prop to `CrowdfundingCard`.
+- Update `CheckedIcon` component.
+- Add editor icons:
+  - `BoldIcon`
+  - `BlockquoteIcon`
+  - `ListIcon`
+  - `VideoIcon`
+  - `Title1Icon`
+  - `Title2Icon`
+  - `Title3Icon`
+  - `Title4Icon`
+  - `ParagraphIcon`
+  - `ItalicIcon`
+  - `ImageIcon`
+  - `LinkIcon`
+  - `ButtonIcon`
+  - `AlignLeftIcon`
+  - `AlignCenterIcon`
+  - `AlignRightIcon`
+- Add BEM-style class names to `Carousel` components.
+
+Fix:
+- Fit `CrowdfundingCard` image to new 16/10 ratio.
+
 ## [2.65.0] - 2020-04-21
 
 Doc:

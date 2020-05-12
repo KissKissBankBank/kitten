@@ -2,25 +2,25 @@
 
 exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
 <div
-  className="counter-block__Container-dpxp7s-0 hBIoVh"
+  className="sc-AxhCb kYpcnu"
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 dnQPiu"
+    className="sc-AxirZ ia-dERh"
   >
     <p
-      className="title__StyledTitle-sc-46lshq-0 gdNtwY"
+      className="sc-AxjAm fgcLvp"
     >
       foo
     </p>
   </div>
   <div
-    className="counter-block__FlexContainer-dpxp7s-1 dMNmNG"
+    className="sc-AxhUy jLaEYT"
   >
     <div
-      className="counter-block__StrokeContainer-dpxp7s-2 dIBsco k-u-hidden@m-down"
+      className="sc-AxgMl cwoYYF k-u-hidden@m-down"
     >
       <div
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+        className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
         style={
           Object {
             "height": null,
@@ -35,10 +35,10 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       13 106
     </p>
     <div
-      className="counter-block__StrokeContainer-dpxp7s-2 dIBsco k-u-hidden@m-down"
+      className="sc-AxgMl cwoYYF k-u-hidden@m-down"
     >
       <div
-        className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 kqiNRR k-HorizontalStroke k-HorizontalStroke--size--big"
+        className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
         style={
           Object {
             "height": null,
@@ -49,7 +49,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 hDepGR"
+    className="sc-AxirZ fuIQYB"
   >
     <p
       className="k-u-size-huge k-u-style-italic styledSubTitle"

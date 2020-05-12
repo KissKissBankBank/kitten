@@ -2,15 +2,15 @@
 
 exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 <div
-  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+  className="sc-AxhUy hmRpEX"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc"
+    className="sc-AxirZ fNOQKu sc-AxgMl lavPwF"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 jpFdnp"
+    className="sc-AxheI erMtSI"
     disabled={false}
     type="button"
   >
@@ -21,15 +21,15 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+  className="sc-AxhUy hmRpEX"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc"
+    className="sc-AxirZ fNOQKu sc-AxgMl lavPwF"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 jpFdnp"
+    className="sc-AxheI erMtSI"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -41,16 +41,16 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
 
 exports[`<TextInputWithButton /> with component inside button value matches with snapshot 1`] = `
 <div
-  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+  className="sc-AxhUy hmRpEX"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc"
+    className="sc-AxirZ fNOQKu sc-AxgMl lavPwF"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 jpFdnp"
+    className="sc-AxheI erMtSI"
     disabled={false}
     type="button"
   >
@@ -100,15 +100,15 @@ exports[`<TextInputWithButton /> with component inside button value matches with
 
 exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+  className="sc-AxhUy hmRpEX"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc"
+    className="sc-AxirZ fNOQKu sc-AxgMl lavPwF"
     disabled={true}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 cmzKLD"
+    className="sc-AxheI jAcVZD"
     disabled={true}
     type="button"
   >
@@ -119,15 +119,15 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+  className="sc-AxhUy hmRpEX"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 kfptEQ text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc"
+    className="sc-AxirZ xUmbP sc-AxgMl lavPwF"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 jNnytU"
+    className="sc-AxheI kTUOHm"
     disabled={false}
     type="button"
   >
@@ -138,17 +138,17 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 <div
-  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+  className="sc-AxhUy hmRpEX"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc"
+    className="sc-AxirZ fNOQKu sc-AxgMl lavPwF"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
     value="foobar"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 jpFdnp"
+    className="sc-AxheI erMtSI"
     disabled={false}
     type="button"
   >
@@ -159,15 +159,15 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with tiny prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+  className="sc-AxhUy hmRpEX"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iXzQrK text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc"
+    className="sc-AxirZ ybBzL sc-AxgMl lavPwF"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 jpFdnp"
+    className="sc-AxheI erMtSI"
     disabled={false}
     type="button"
   >
@@ -178,15 +178,15 @@ exports[`<TextInputWithButton /> with tiny prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-button__StyledTextInputWithButton-sc-1yqni7d-0 fyjlXs"
+  className="sc-AxhUy hmRpEX"
 >
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 bfvwuD text-input-with-button__StyledTextInput-sc-1yqni7d-1 znwdc"
+    className="sc-AxirZ klxVlX sc-AxgMl lavPwF"
     disabled={false}
     name="text"
   />
   <button
-    className="text-input-with-button__StyledButton-sc-1yqni7d-2 bWqQoJ"
+    className="sc-AxheI kpbJfS"
     disabled={false}
     type="button"
   >

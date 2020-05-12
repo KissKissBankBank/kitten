@@ -15,6 +15,7 @@ import { Button } from '../../../components/buttons/button/button'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
+import classNames from 'classnames'
 
 export const getNumColumnsForWidth = (
   width,
@@ -262,16 +263,25 @@ class CarouselBase extends Component {
       const rangePage = createRangeFromZeroTo(numPages)
 
       return (
-        <PageControl>
+        <PageControl className="k-Carousel__pageControl">
           {rangePage.map(index => (
             <PageDot
+              className="k-Carousel__pageControl__pageDot"
               index={index}
               key={index}
               visibleIndex={indexPageVisible}
             />
           ))}
-          <PageControlButton prev onClick={this.goPrevPage} />
-          <PageControlButton next onClick={this.goNextPage} />
+          <PageControlButton
+            prev
+            onClick={this.goPrevPage}
+            className="k-Carousel__pageControl__controlButton"
+          />
+          <PageControlButton
+            next
+            onClick={this.goNextPage}
+            className="k-Carousel__pageControl__controlButton"
+          />
         </PageControl>
       )
     }
@@ -280,9 +290,14 @@ class CarouselBase extends Component {
       <CarouselPagination
         position={paginationPosition}
         itemMarginBetween={itemMarginBetween}
+        className="k-Carousel__pagination"
       >
-        <PaginationButtons position={paginationPosition}>
+        <PaginationButtons
+          position={paginationPosition}
+          className="k-Carousel__pagination__buttonContainer"
+        >
           <PageButton
+            className="k-Carousel__pagination__button"
             icon
             modifier="beryllium"
             tiny={tinyButtons}
@@ -298,6 +313,7 @@ class CarouselBase extends Component {
           </PageButton>
 
           <PageButton
+            className="k-Carousel__pagination__button"
             icon
             modifier="beryllium"
             tiny={tinyButtons}
@@ -314,9 +330,13 @@ class CarouselBase extends Component {
         </PaginationButtons>
 
         {showPageSquares && (
-          <PaginationSquares>
+          <PaginationSquares className="k-Carousel__pagination__squaresContainer">
             {createRangeFromZeroTo(numPages).map(index => (
-              <PageSquare key={index} isActive={index === indexPageVisible} />
+              <PageSquare
+                key={index}
+                isActive={index === indexPageVisible}
+                className="k-Carousel__pagination__square"
+              />
             ))}
           </PaginationSquares>
         )}
@@ -325,12 +345,15 @@ class CarouselBase extends Component {
   }
 
   render() {
-    const { paginationPosition, children } = this.props
+    const { paginationPosition, children, className } = this.props
 
     if (React.Children.count(children) === 0) return null
 
     return (
-      <FlexContainer paginationPosition={paginationPosition}>
+      <FlexContainer
+        paginationPosition={paginationPosition}
+        className={classNames('k-Carousel', className)}
+      >
         {this.renderCarouselInner()}
         {this.renderPagination()}
       </FlexContainer>

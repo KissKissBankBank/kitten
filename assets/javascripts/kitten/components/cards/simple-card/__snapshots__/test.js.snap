@@ -2,14 +2,14 @@
 
 exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 <div
-  className="simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov k-Card k-Card--withoutBoxShadowOnHover"
+  className="sc-AxheI hHispj k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 jgfcQX image__StyledImageContainer-sc-8olw7b-2 iPOTuX k-Card__imageContainer"
+    className="sc-AxjAm jidNFm sc-AxhCb gxwtWg k-Card__imageContainer"
   >
     <img
       alt=""
-      className="image__StyledImage-sc-8olw7b-0 KMqEW k-Card__image"
+      className="sc-AxirZ cbemLT k-Card__image"
       src=""
     />
   </div>
@@ -18,14 +18,14 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 
 exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`] = `
 <div
-  className="simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov k-Card k-Card--withoutBoxShadowOnHover"
+  className="sc-AxheI hHispj k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 jgfcQX image__StyledImageContainer-sc-8olw7b-2 hQoFnZ k-Card__imageContainer"
+    className="sc-AxjAm jidNFm sc-AxhCb bFrzYz k-Card__imageContainer"
   >
     <img
       alt=""
-      className="image__StyledImage-sc-8olw7b-0 KMqEW k-Card__image"
+      className="sc-AxirZ cbemLT k-Card__image"
       src=""
     />
   </div>
@@ -34,13 +34,13 @@ exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`]
 
 exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot 1`] = `
 <div
-  className="simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov k-Card k-Card--withoutBoxShadowOnHover"
+  className="sc-AxheI hHispj k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 jgfcQX image__StyledImageContainer-sc-8olw7b-2 iPOTuX k-Card__imageContainer"
+    className="sc-AxjAm jidNFm sc-AxhCb gxwtWg k-Card__imageContainer"
   >
     <div
-      className="image__StyledPlayerButton-sc-8olw7b-1 bgJcrr"
+      className="sc-AxiKw dGvhnc"
     >
       <span
         className="k-u-color-background1 k-u-size-default k-u-weight-regular"
@@ -50,7 +50,7 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
     </div>
     <img
       alt=""
-      className="image__StyledImage-sc-8olw7b-0 KMqEW k-Card__image"
+      className="sc-AxirZ cbemLT k-Card__image"
       src=""
     />
   </div>
@@ -59,14 +59,14 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
 
 exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
 <div
-  className="simple-card__ContainerStyle-sc-1g5bppt-0 ixVVov k-Card k-Card--withoutBoxShadowOnHover"
+  className="sc-AxheI hHispj k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 jgfcQX image__StyledImageContainer-sc-8olw7b-2 iPOTuX k-Card__imageContainer"
+    className="sc-AxjAm jidNFm sc-AxhCb gxwtWg k-Card__imageContainer"
   >
     <img
       alt=""
-      className="image__StyledImage-sc-8olw7b-0 KMqEW k-Card__image"
+      className="sc-AxirZ cbemLT k-Card__image"
       src=""
     />
   </div>

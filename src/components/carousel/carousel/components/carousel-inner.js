@@ -9,6 +9,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.CarouselInner = void 0;
 
+var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
+
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
@@ -223,9 +225,10 @@ var CarouselInner = /*#__PURE__*/function (_Component) {
         onScroll: this.handleInnerScroll,
         onTouchStart: this.handleTouchStart,
         onTouchEnd: this.handleTouchEnd,
-        showOtherPages: showOtherPages
+        showOtherPages: showOtherPages,
+        className: "k-Carousel__inner"
       }, rangePage.map(function (index) {
-        return /*#__PURE__*/_react.default.createElement(StyledCarouselPageContainer, {
+        return /*#__PURE__*/_react.default.createElement(StyledCarouselPageContainer, (0, _defineProperty2.default)({
           key: index,
           index: index,
           indexPageVisible: indexPageVisible,
@@ -233,7 +236,7 @@ var CarouselInner = /*#__PURE__*/function (_Component) {
           onClick: _this2.handlePageClick(index),
           showOtherPages: showOtherPages,
           className: pagesClassName
-        }, /*#__PURE__*/_react.default.createElement(_carouselPage.CarouselPage, {
+        }, "className", "k-Carousel__inner__pageContainer"), /*#__PURE__*/_react.default.createElement(_carouselPage.CarouselPage, {
           numColumns: numColumns,
           itemMinWidth: itemMinWidth,
           itemMarginBetween: itemMarginBetween,

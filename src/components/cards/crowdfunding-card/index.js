@@ -25,8 +25,6 @@ var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
-
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _image = _interopRequireDefault(require("./components/image"));
@@ -39,33 +37,15 @@ var _informations = _interopRequireDefault(require("./components/informations"))
 
 var _progress = _interopRequireDefault(require("./components/progress"));
 
-var _loading = _interopRequireDefault(require("./components/loading"));
-
 var _state = _interopRequireDefault(require("./components/state"));
 
-var _typography = require("../../../helpers/utils/typography");
+var _classnames = _interopRequireDefault(require("classnames"));
 
-var _screenConfig = require("../../../constants/screen-config");
+var _styles = require("./styles");
 
 function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-var StyledContainer = _styledComponents.default.div.withConfig({
-  displayName: "crowdfunding-card__StyledContainer",
-  componentId: "sc-1b0f5ki-0"
-})(["position:relative;padding-bottom:", ";"], (0, _typography.pxToRem)(5));
-
-var StyledTitleAndDescription = _styledComponents.default.div.withConfig({
-  displayName: "crowdfunding-card__StyledTitleAndDescription",
-  componentId: "sc-1b0f5ki-1"
-})(["", " @media (min-width:", "){", "}"], function (_ref) {
-  var titlesMinHeight = _ref.titlesMinHeight;
-  return titlesMinHeight && (0, _styledComponents.css)(["min-height:", ";"], (0, _typography.pxToRem)(50));
-}, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), function (_ref2) {
-  var titlesMinHeight = _ref2.titlesMinHeight;
-  return titlesMinHeight && (0, _styledComponents.css)(["min-height:", ";"], (0, _typography.pxToRem)(75));
-});
 
 var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(CrowdfundingCard, _PureComponent);
@@ -101,6 +81,7 @@ var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
           ownerDescription = _this$props.ownerDescription,
           ownerTitle = _this$props.ownerTitle,
           loading = _this$props.loading,
+          stretch = _this$props.stretch,
           state = _this$props.state,
           cardTitle = _this$props.cardTitle,
           cardSubTitle = _this$props.cardSubTitle,
@@ -113,11 +94,16 @@ var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
           info3 = _this$props.info3,
           progress = _this$props.progress,
           progressColor = _this$props.progressColor,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["href", "imageContainerBackground", "imageProps", "avatarProps", "ownerDescription", "ownerTitle", "loading", "state", "cardTitle", "cardSubTitle", "titleTruncate", "subTitleTruncate", "titlesMinHeight", "titleProps", "info1", "info2", "info3", "progress", "progressColor"]);
-      return /*#__PURE__*/_react.default.createElement(StyledContainer, (0, _extends2.default)({}, others, {
+          className = _this$props.className,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["href", "imageContainerBackground", "imageProps", "avatarProps", "ownerDescription", "ownerTitle", "loading", "stretch", "state", "cardTitle", "cardSubTitle", "titleTruncate", "subTitleTruncate", "titlesMinHeight", "titleProps", "info1", "info2", "info3", "progress", "progressColor", "className"]);
+      return /*#__PURE__*/_react.default.createElement(_styles.StyledCrowdfundingCard, (0, _extends2.default)({}, others, {
         as: href ? 'a' : 'div',
         onClick: this.removeCurrentFocus,
-        className: "k-Card k-Card--light k-Card--withoutBoxShadowOnHover",
+        className: (0, _classnames.default)('k-CrowdfundingCard', 'k-Card k-Card--light k-Card--withoutBoxShadowOnHover', className, {
+          'k-CrowdfundingCard--titlesMinHeight': titlesMinHeight,
+          'k-CrowdfundingCard--isLoading': loading,
+          'k-CrowdfundingCard--isStretched': stretch
+        }),
         href: href
       }), /*#__PURE__*/_react.default.createElement(_image.default, {
         ownerTitle: ownerTitle,
@@ -126,8 +112,8 @@ var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
         imageProps: imageProps,
         avatarProps: avatarProps,
         loading: loading
-      }), /*#__PURE__*/_react.default.createElement(StyledTitleAndDescription, {
-        titlesMinHeight: titlesMinHeight
+      }), /*#__PURE__*/_react.default.createElement("div", {
+        className: "k-CrowdfundingCard__titleAndDesc"
       }, /*#__PURE__*/_react.default.createElement(_title.default, {
         title: cardTitle,
         loading: loading,
@@ -148,8 +134,8 @@ var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
       }), /*#__PURE__*/_react.default.createElement(_state.default, {
         state: state,
         loading: loading
-      }), /*#__PURE__*/_react.default.createElement(_loading.default, {
-        loading: loading
+      }), loading && /*#__PURE__*/_react.default.createElement("span", {
+        className: "k-CrowdfundingCard__loading"
       }));
     }
   }]);
@@ -159,9 +145,11 @@ var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
 exports.CrowdfundingCard = CrowdfundingCard;
 CrowdfundingCard.propTypes = {
   href: _propTypes.default.string,
-  titlesMinHeight: _propTypes.default.bool
+  titlesMinHeight: _propTypes.default.bool,
+  stretch: _propTypes.default.bool
 };
 CrowdfundingCard.defaultProps = {
   href: null,
-  titlesMinHeight: true
+  titlesMinHeight: true,
+  stretch: false
 };
