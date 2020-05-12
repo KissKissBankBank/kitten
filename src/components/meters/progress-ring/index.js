@@ -132,7 +132,7 @@ ProgressRing.propTypes = {
   radius: _propTypes.default.number,
 
   /**
-   Width of circle (stroke)
+    Width of circle (stroke)
   */
   strokeWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
 };

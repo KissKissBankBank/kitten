@@ -49,9 +49,13 @@ var titleModifiers = [{
 }];
 
 var titleModifierStyles = function titleModifierStyles(prefix) {
-  return titleModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{font-size:", ";line-height:1.2;@media (min-width:", "){font-size:", ";}@media (min-width:", "){font-size:", ";}}"], ".".concat(prefix, "--").concat(key.name), (0, _typography.stepToRem)(key.fontStepOnMobile), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.stepToRem)(key.fontStepOnTablet), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.stepToRem)(key.fontStepOnDesktop));
-  });
+  return (0, _styledComponents.css)(["", " @media (min-width:", "){", "}@media (min-width:", "){", "}"], titleModifiers.map(function (key) {
+    return (0, _styledComponents.css)(["", "{font-size:", ";line-height:1.2;}"], "".concat(prefix, "--").concat(key.name), (0, _typography.stepToRem)(key.fontStepOnMobile));
+  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), titleModifiers.map(function (key) {
+    return (0, _styledComponents.css)(["", "{font-size:", ";}"], "".concat(prefix, "--").concat(key.name), (0, _typography.stepToRem)(key.fontStepOnTablet));
+  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), titleModifiers.map(function (key) {
+    return (0, _styledComponents.css)(["", "{font-size:", ";}"], "".concat(prefix, "--").concat(key.name), (0, _typography.stepToRem)(key.fontStepOnDesktop));
+  }));
 };
 
 exports.titleModifierStyles = titleModifierStyles;
