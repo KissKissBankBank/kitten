@@ -4,11 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `modifier` prop to `HorizontalStroke`.
-- Feature: Add `SingleEntryTable` component.
-Feature:
+## [2.69.0] - 2020-05-12
+
+Features:
+- Add `SingleEntryTable` component.
 - Add `ExportIconAlternate` icon.
-- Feature: Add `margin` and `align` props to `Pagination`.
+- Add `modifier` prop to `HorizontalStroke`.
+- Add `margin` and `align` props to `Pagination`.
 
 ## [2.68.0] - 2020-05-06
 

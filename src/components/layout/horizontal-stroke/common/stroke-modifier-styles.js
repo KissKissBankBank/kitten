@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.strokeModifierStyles = void 0;
+exports.strokeModifierStylesWithoutMargin = exports.strokeModifierStyles = void 0;
 
 var _styledComponents = require("styled-components");
 
@@ -154,9 +154,25 @@ var strokeModifiers = [{
 }];
 
 var strokeModifierStyles = function strokeModifierStyles(prefix) {
-  return strokeModifiers.map(function (key) {
-    return (0, _styledComponents.css)(["", "{width:", ";height:", ";margin-top:", ";margin-bottom:", ";@media (min-width:", "){width:", ";height:", ";margin-top:", ";margin-bottom:", ";}@media (min-width:", "){width:", ";height:", ";margin-top:", ";margin-bottom:", ";}}"], ".".concat(prefix, "--").concat(key.name), (0, _typography.pxToRem)(key.mobile.width), (0, _typography.pxToRem)(key.mobile.height), (0, _typography.pxToRem)(key.mobile.top), (0, _typography.pxToRem)(key.mobile.bottom), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(key.tablet.width), (0, _typography.pxToRem)(key.tablet.height), (0, _typography.pxToRem)(key.tablet.top), (0, _typography.pxToRem)(key.tablet.bottom), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(key.desktop.width), (0, _typography.pxToRem)(key.desktop.height), (0, _typography.pxToRem)(key.desktop.top), (0, _typography.pxToRem)(key.desktop.bottom));
-  });
+  return (0, _styledComponents.css)(["", " @media (min-width:", "){", "}@media (min-width:", "){", "}"], strokeModifiers.map(function (key) {
+    return (0, _styledComponents.css)(["", "{width:", ";height:", ";margin-top:", ";margin-bottom:", ";}"], "".concat(prefix, "--").concat(key.name), (0, _typography.pxToRem)(key.mobile.width), (0, _typography.pxToRem)(key.mobile.height), (0, _typography.pxToRem)(key.mobile.top), (0, _typography.pxToRem)(key.mobile.bottom));
+  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), strokeModifiers.map(function (key) {
+    return (0, _styledComponents.css)(["", "{width:", ";height:", ";margin-top:", ";margin-bottom:", ";}"], "".concat(prefix, "--").concat(key.name), (0, _typography.pxToRem)(key.tablet.width), (0, _typography.pxToRem)(key.tablet.height), (0, _typography.pxToRem)(key.tablet.top), (0, _typography.pxToRem)(key.tablet.bottom));
+  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), strokeModifiers.map(function (key) {
+    return (0, _styledComponents.css)(["", "{width:", ";height:", ";margin-top:", ";margin-bottom:", ";}"], "".concat(prefix, "--").concat(key.name), (0, _typography.pxToRem)(key.desktop.width), (0, _typography.pxToRem)(key.desktop.height), (0, _typography.pxToRem)(key.desktop.top), (0, _typography.pxToRem)(key.desktop.bottom));
+  }));
 };
 
 exports.strokeModifierStyles = strokeModifierStyles;
+
+var strokeModifierStylesWithoutMargin = function strokeModifierStylesWithoutMargin(prefix) {
+  return (0, _styledComponents.css)(["", " @media (min-width:", "){", "}@media (min-width:", "){", "}"], strokeModifiers.map(function (key) {
+    return (0, _styledComponents.css)(["", "{width:", ";height:", ";}"], "".concat(prefix, "--").concat(key.name), (0, _typography.pxToRem)(key.mobile.width), (0, _typography.pxToRem)(key.mobile.height));
+  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), strokeModifiers.map(function (key) {
+    return (0, _styledComponents.css)(["", "{width:", ";height:", ";}"], "".concat(prefix, "--").concat(key.name), (0, _typography.pxToRem)(key.tablet.width), (0, _typography.pxToRem)(key.tablet.height));
+  }), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), strokeModifiers.map(function (key) {
+    return (0, _styledComponents.css)(["", "{width:", ";height:", ";}"], "".concat(prefix, "--").concat(key.name), (0, _typography.pxToRem)(key.desktop.width), (0, _typography.pxToRem)(key.desktop.height));
+  }));
+};
+
+exports.strokeModifierStylesWithoutMargin = strokeModifierStylesWithoutMargin;

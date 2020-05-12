@@ -28,7 +28,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 var StyledTitleWithStroke = _styledComponents.default.div.withConfig({
   displayName: "title-with-stroke__StyledTitleWithStroke",
   componentId: "sc-10vl00i-0"
-})(["&.k-TitleWithStroke--align-left{text-align:left;}&.k-TitleWithStroke--align-center{text-align:center;}&.k-TitleWithStroke--align-right{text-align:right;}.k-TitleWithStroke__title{margin-top:0;margin-bottom:0;", ";}", " &.k-TitleWithStroke--italic .k-TitleWithStroke__title{font-style:italic;}.k-TitleWithStroke__stroke{display:inline-block;background-color:currentColor;border:none;}", ""], _typographyConfig.default.fontStyles.bold, (0, _titleModifierStyles.titleModifierStyles)('k-TitleWithStroke__title'), (0, _strokeModifierStyles.strokeModifierStyles)('k-TitleWithStroke__stroke'));
+})(["&.k-TitleWithStroke--align-left{text-align:left;}&.k-TitleWithStroke--align-center{text-align:center;}&.k-TitleWithStroke--align-right{text-align:right;}.k-TitleWithStroke__title{margin-top:0;margin-bottom:0;", ";}", " &.k-TitleWithStroke--italic .k-TitleWithStroke__title{font-style:italic;}.k-TitleWithStroke__stroke{display:inline-block;background-color:currentColor;border:none;}", ""], _typographyConfig.default.fontStyles.bold, (0, _titleModifierStyles.titleModifierStyles)('.k-TitleWithStroke__title'), (0, _strokeModifierStyles.strokeModifierStyles)('.k-TitleWithStroke__stroke'));
 
 var TitleWithStroke = function TitleWithStroke(_ref) {
   var modifier = _ref.modifier,
