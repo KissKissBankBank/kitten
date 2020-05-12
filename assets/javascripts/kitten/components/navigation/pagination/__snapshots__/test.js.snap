@@ -3,18 +3,19 @@
 exports[`<Pagination /> by default should match its empty snapshot 1`] = `
 <nav
   aria-label="Pagination navigation"
+  className="sc-AxirZ dCarLy Pagination Pagination--isAligned-undefined"
   role="navigation"
 >
   <ul
-    className="sc-AxirZ eRyASi"
+    className="Pagination__List"
   >
     <li
-      className="sc-AxhCb JeAMA"
+      className="Pagination__ListItem__Arrow Pagination__ListItem__Arrow--direction-left"
     >
       <a
         aria-disabled={false}
         aria-label="Previous page"
-        className="sc-AxhUy htAxih"
+        className="Pagination__Link"
         href="#9"
         onClick={[Function]}
         tabIndex={null}
@@ -22,7 +23,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="sc-AxjAm iyaRGa sc-AxgMl cWzoVd"
+          className="sc-AxjAm iyaRGa Pagination__ArrowIcon"
           height="5.64"
           viewBox="0 0 8.48 5.64"
           width="8.48"
@@ -35,13 +36,14 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       </a>
     </li>
     <li
-      className="sc-AxiKw bYBllI"
+      className="Pagination__ListItem"
     >
       <a
         aria-current={false}
         aria-label="Go to page 1"
-        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular sc-AxhUy htAxih"
+        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular Pagination__Link"
         href="#1"
+        isActive={false}
         onClick={[Function]}
       >
         1
@@ -49,44 +51,47 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     </li>
     <li
       aria-hidden="true"
-      className="sc-AxheI cewSvm"
+      className="Pagination__ListItem__Points"
     >
       …
     </li>
     <li
-      className="sc-AxiKw bYBllI"
+      className="Pagination__ListItem"
     >
       <a
         aria-current={false}
         aria-label="Go to page 9"
-        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular sc-AxhUy htAxih"
+        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular Pagination__Link"
         href="#9"
+        isActive={false}
         onClick={[Function]}
       >
         9
       </a>
     </li>
     <li
-      className="sc-AxiKw bYBllI"
+      className="Pagination__ListItem"
     >
       <span
         aria-current="page"
         aria-label="Page 10, this is the current page"
-        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular sc-AxhUy eaRQfl"
+        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular Pagination__Link"
         href={null}
+        isActive={true}
         onClick={null}
       >
         10
       </span>
     </li>
     <li
-      className="sc-AxiKw bYBllI"
+      className="Pagination__ListItem"
     >
       <a
         aria-current={false}
         aria-label="Go to page 11"
-        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular sc-AxhUy htAxih"
+        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular Pagination__Link"
         href="#11"
+        isActive={false}
         onClick={[Function]}
       >
         11
@@ -94,30 +99,31 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
     </li>
     <li
       aria-hidden="true"
-      className="sc-AxheI cewSvm"
+      className="Pagination__ListItem__Points"
     >
       …
     </li>
     <li
-      className="sc-AxiKw bYBllI"
+      className="Pagination__ListItem"
     >
       <a
         aria-current={false}
         aria-label="Go to page 42"
-        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular sc-AxhUy htAxih"
+        className="k-u-decoration-none k-u-size-tiny k-u-weight-regular Pagination__Link"
         href="#42"
+        isActive={false}
         onClick={[Function]}
       >
         42
       </a>
     </li>
     <li
-      className="sc-AxhCb kupcQQ"
+      className="Pagination__ListItem__Arrow Pagination__ListItem__Arrow--direction-right"
     >
       <a
         aria-disabled={false}
         aria-label="Next page"
-        className="sc-AxhUy htAxih"
+        className="Pagination__Link"
         href="#11"
         onClick={[Function]}
         tabIndex={null}
@@ -125,7 +131,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="sc-AxjAm hfhnnP sc-AxgMl cWzoVd"
+          className="sc-AxjAm hfhnnP Pagination__ArrowIcon"
           height="5.64"
           viewBox="0 0 8.48 5.64"
           width="8.48"
