@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature:
+- Add `ExportIconAlternate` icon.
 - Feature: Add `margin` and `align` props to `Pagination`.
 
 ## [2.68.0] - 2020-05-06

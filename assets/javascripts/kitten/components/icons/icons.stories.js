@@ -16,6 +16,7 @@ import { DoubleArrowIcon } from './double-arrow-icon'
 import { EditIcon } from './edit-icon'
 import { EmailIcon } from './email-icon'
 import { ExportIcon } from './export-icon'
+import { ExportIconAlternate } from './export-icon-alternate'
 import { FacebookIcon } from './facebook-icon'
 import { FacebookIconWithBackground } from './facebook-icon-with-background'
 import { FilterIcon } from './filter-icon'
@@ -195,6 +196,7 @@ export const AllIcons = () => {
         <IconContainer children={<CopyIcon />} />
         <IconContainer children={<BubbleIcon />} />
         <IconContainer children={<ExportIcon />} />
+        <IconContainer children={<ExportIconAlternate />} />
         <IconContainer children={<StrokeIcon />} />
         <IconContainer children={<KissKissBankBankIcon width="70" />} />
         <IconContainer children={<EmbedIcon />} />
