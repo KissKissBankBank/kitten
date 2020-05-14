@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `TabBar` Next component.
+- Fix: Adjust styles for legacy `TabBar`.
+
 ## [2.69.0] - 2020-05-12
 
 Features:
