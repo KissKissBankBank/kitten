@@ -5,11 +5,11 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 
-const StyledTabBar = styled.div`
+const StyledNavBar = styled.div`
   width: auto;
   flex-grow: 1;
 
-  .k-TabBarNext__nav {
+  .k-NavBar__nav {
     width: auto;
     margin: 0;
     padding: 0 ${pxToRem(25)};
@@ -23,7 +23,7 @@ const StyledTabBar = styled.div`
     }
   }
 
-  .k-TabBarNext__list {
+  .k-NavBar__list {
     list-style-type: none;
     display: flex;
     align-items: center;
@@ -32,11 +32,11 @@ const StyledTabBar = styled.div`
     padding: 0;
   }
 
-  .k-TabBarNext__listItem + .k-TabBarNext__listItem {
+  .k-NavBar__listItem + .k-NavBar__listItem {
       margin-left: ${pxToRem(50)};
   }
 
-  .k-TabBarNext__link {
+  .k-NavBar__link {
     height: ${pxToRem(80)};
 
     ${TYPOGRAPHY.fontStyles.regular}
@@ -65,43 +65,43 @@ const StyledTabBar = styled.div`
   }
 `
 
-const TabBarItem = ({ active, children, className, linkProps, ...props }) => (
-  <li {...props} className={classNames('k-TabBarNext__listItem', className)}>
+const NavBarItem = ({ active, children, className, linkProps, ...props }) => (
+  <li {...props} className={classNames('k-NavBar__listItem', className)}>
     <a
-      {...linkProps}
-      className={classNames('k-TabBarNext__link', linkProps.className)}
       aria-current={active ? 'page' : null}
+      {...linkProps}
+      className={classNames('k-NavBar__link', linkProps.className)}
     >
       {children}
     </a>
   </li>
 )
 
-export const TabBar = ({
+export const NavBar = ({
   children,
   className,
   navProps,
   listProps,
   ...props
 }) => (
-  <StyledTabBar {...props} className={classNames('k-TabBarNext', className)}>
+  <StyledNavBar {...props} className={classNames('k-NavBar', className)}>
     <nav
       {...navProps}
-      className={classNames('k-TabBarNext__nav', navProps.className)}
+      className={classNames('k-NavBar__nav', navProps.className)}
     >
       <ul
         {...listProps}
-        className={classNames('k-TabBarNext__list', listProps.className)}
+        className={classNames('k-NavBar__list', listProps.className)}
       >
         {children}
       </ul>
     </nav>
-  </StyledTabBar>
+  </StyledNavBar>
 )
 
-TabBar.ListItem = TabBarItem
+NavBar.ListItem = NavBarItem
 
-TabBar.defaultProps = {
+NavBar.defaultProps = {
   navProps: {},
   listProps: {},
 }

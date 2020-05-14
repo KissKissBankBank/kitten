@@ -34,23 +34,26 @@
 @mixin k-TabBar($options) {
   // Fonts.
   $font: 'regular';
-  $font-step: -1; // 12px
+  $font-step: -2; // 12px
   $line-height: 1.5;
 
   // Colors.
-  $color: map-get($k-colors, 'font-1');
-  $current-color: map-get($k-colors, 'primary-1');
-  $background-color: map-get($k-colors, 'primary-6');
+  $color: map-get($k-colors, 'primary-5');
+  $current-color: map-get($k-colors, 'background-1');
+  $background-color: map-get($k-colors, 'primary-1');
   $border-color: map-get($k-colors, 'primary-4');
 
   // Size.
-  $border-width: k-px-to-rem(0px);
-  $current-border-width: k-px-to-rem(4px);
+  $round-size: k-px-to-rem(25px);
+  $border-width: k-px-to-rem(1px);
+  $current-border-width: k-px-to-rem(2px);
+  $gutter: k-px-to-rem(10px);
 
   .k-TabBar__nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: inset 0 $border-width 0 rgba($current-color, .1);
 
     list-style-type: none;
     width: 100%;
@@ -72,26 +75,23 @@
   .k-TabBar__list {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     margin: 0;
     padding: 0;
     width: k-px-to-rem(375px);
 
     list-style-type: none;
-
-    > li + li {
-      margin-left: k-px-to-rem(50px);
-    }
   }
 
   .k-TabBar__item {
-    height: k-px-to-rem(80px);
-    margin: 0;
-    padding: 0;
+    height: k-px-to-rem(50px);
+    padding-left: $gutter;
+    padding-right: $gutter;
 
     @include k-typographyFont($font);
     @include k-typographyFontSize($font-step, $line-height);
+    letter-spacing: k-px-to-rem(0.8px);
     text-decoration: none;
     text-align: center;
 
@@ -100,16 +100,18 @@
     flex-direction: column;
     position: relative;
     outline: none;
-    border-bottom: $current-border-width solid transparent;
+    border-top: $current-border-width solid transparent;
     cursor: pointer;
     color: $color;
     transition: color .2s, border-color .2s;
 
     &:hover,
-    &:focus,
-    &[aria-current="page"],
-    &.is-selected {
+    &:focus {
+      color: $current-color;
       text-decoration: none;
+    }
+
+    &.is-selected {
       border-color: $current-color;
       border-width: $current-border-width;
       color: $current-color;
