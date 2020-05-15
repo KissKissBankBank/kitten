@@ -154,7 +154,6 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       <div
         className="sc-AxirZ wSPT k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--tiny"
         color="#222"
-        loading={false}
         style={
           Object {
             "height": null,
@@ -350,7 +349,6 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       <div
         className="sc-AxirZ wSPT k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--tiny"
         color="#222"
-        loading={false}
         style={
           Object {
             "height": null,
