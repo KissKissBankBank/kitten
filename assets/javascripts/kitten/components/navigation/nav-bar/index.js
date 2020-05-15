@@ -13,7 +13,7 @@ const StyledNavBar = styled.div`
     width: auto;
     margin: 0;
     padding: 0 ${pxToRem(25)};
-    background: ${COLORS.primary6};
+    background: ${({ colors }) => colors.background};
     display: flex;
     justify-content: center;
 
@@ -49,18 +49,18 @@ const StyledNavBar = styled.div`
     flex-direction: column;
     position: relative;
     outline: none;
-    border-bottom: ${pxToRem(4)} solid transparent;
-    cursor: pointer;
-    color: ${COLORS.font1};
+    border-bottom: ${pxToRem(4)} solid ${({ colors }) => colors.border};
+    color: ${({ colors }) => colors.link};
     transition: color .2s, border-color .2s;
+    cursor: pointer;
 
     &:hover,
     &:focus,
     &[aria-current="page"] {
+      border-color: ${({ colors }) => colors.activeBorder};
+      color: ${({ colors }) => colors.activeLink};
       text-decoration: none;
-      border-color: currentColor;
       border-width: ${pxToRem(4)};
-      color: ${COLORS.primary1};
     }
   }
 `
@@ -82,9 +82,14 @@ export const NavBar = ({
   className,
   navProps,
   listProps,
+  colors,
   ...props
 }) => (
-  <StyledNavBar {...props} className={classNames('k-NavBar', className)}>
+  <StyledNavBar
+    {...props}
+    className={classNames('k-NavBar', className)}
+    colors={colors}
+  >
     <nav
       {...navProps}
       className={classNames('k-NavBar__nav', navProps.className)}
@@ -104,4 +109,11 @@ NavBar.ListItem = NavBarItem
 NavBar.defaultProps = {
   navProps: {},
   listProps: {},
+  colors: {
+    background: COLORS.primary6,
+    link: COLORS.font1,
+    border: 'transparent',
+    activeLink: COLORS.primary1,
+    activeBorder: COLORS.primary1,
+  },
 }
