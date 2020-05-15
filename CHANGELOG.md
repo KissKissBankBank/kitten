@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `color` prop to `HorizontalStroke`.
 - Fix: Remove `classNames` bug from `HorizontalStroke`.
+- Fix: Remove warning in `Pagination`.
 
 ## [2.69.0] - 2020-05-12
 
