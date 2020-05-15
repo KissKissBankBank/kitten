@@ -242,7 +242,6 @@ const PaginationBase = forwardRef(
             weight="regular"
             decoration="none"
             size="tiny"
-            isActive={isActive}
             aria-current={isActive && 'page'}
             aria-label={ariaLabel}
             onClick={isActive ? null : pageClickHandler(number)}
