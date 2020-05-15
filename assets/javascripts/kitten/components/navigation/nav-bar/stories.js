@@ -1,6 +1,6 @@
 import React from 'react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, color } from '@storybook/addon-knobs'
+import { withKnobs, color, select } from '@storybook/addon-knobs'
 import { NavBar } from './index'
 import { ScrollableContainer } from '../../../components/grid/scrollable-container'
 import COLORS from '../../../constants/colors-config'
@@ -75,6 +75,11 @@ const info = {
   propTables: false,
 }
 
+const modifierTypes = {
+  Regular: 'regular',
+  Big: 'big',
+}
+
 export const Default = () => (
   <NavBar
     colors={{
@@ -84,6 +89,7 @@ export const Default = () => (
       activeLink: color('ActiveLink', COLORS.primary1),
       activeBorder: color('ActiveBorder', COLORS.primary1),
     }}
+    modifier={select('Modifier', modifierTypes, 'regular')}
   >
     <NavBar.ListItem linkProps={{ href: '#1' }} active>
       Item 1

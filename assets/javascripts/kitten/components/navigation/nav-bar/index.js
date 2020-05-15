@@ -1,9 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import {
+  CONTAINER_PADDING_THIN,
+  CONTAINER_PADDING,
+} from '../../../constants/grid-config'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledNavBar = styled.div`
   width: auto;
@@ -12,10 +18,14 @@ const StyledNavBar = styled.div`
   .k-NavBar__nav {
     width: auto;
     margin: 0;
-    padding: 0 ${pxToRem(25)};
+    padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
     background: ${({ colors }) => colors.background};
     display: flex;
     justify-content: center;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}){
+      padding: 0 ${pxToRem(CONTAINER_PADDING)};
+    }
 
     &::before, &::after {
       content: "";
@@ -33,16 +43,21 @@ const StyledNavBar = styled.div`
   }
 
   .k-NavBar__listItem + .k-NavBar__listItem {
+    margin-left: ${pxToRem(25)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}){
       margin-left: ${pxToRem(50)};
+    }
   }
 
   .k-NavBar__link {
-    height: ${pxToRem(80)};
-
+    height: ${pxToRem(65)};
+    box-sizing: border-box;
     ${TYPOGRAPHY.fontStyles.regular}
     font-size: ${stepToRem(-1)};
     text-decoration: none;
     text-align: center;
+
 
     display: flex;
     justify-content: center;
@@ -54,13 +69,28 @@ const StyledNavBar = styled.div`
     transition: color .2s, border-color .2s;
     cursor: pointer;
 
-    &:hover,
+    &:hover {
+      color: ${({ colors }) => colors.activeLink};
+      text-decoration: none;
+    }
+
     &:focus,
     &[aria-current="page"] {
       border-color: ${({ colors }) => colors.activeBorder};
       color: ${({ colors }) => colors.activeLink};
-      text-decoration: none;
       border-width: ${pxToRem(4)};
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}){
+      height: ${pxToRem(80)};
+    }
+  }
+
+  &.k-NavBar--big .k-NavBar__link {
+    height: ${pxToRem(80)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}){
+      height: ${pxToRem(100)};
     }
   }
 `
@@ -83,11 +113,12 @@ export const NavBar = ({
   navProps,
   listProps,
   colors,
+  modifier,
   ...props
 }) => (
   <StyledNavBar
     {...props}
-    className={classNames('k-NavBar', className)}
+    className={classNames('k-NavBar', `k-NavBar--${modifier}`, className)}
     colors={colors}
   >
     <nav
@@ -116,4 +147,16 @@ NavBar.defaultProps = {
     activeLink: COLORS.primary1,
     activeBorder: COLORS.primary1,
   },
+  modifier: 'regular',
+}
+
+NavBar.propTypes = {
+  colors: PropTypes.shape({
+    background: PropTypes.string,
+    link: PropTypes.string,
+    border: PropTypes.string,
+    activeLink: PropTypes.string,
+    activeBorder: PropTypes.string,
+  }),
+  modifier: PropTypes.oneOf(['regular', 'big']),
 }
