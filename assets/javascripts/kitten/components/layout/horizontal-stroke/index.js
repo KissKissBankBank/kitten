@@ -76,7 +76,7 @@ export const HorizontalStroke = ({
       {...props}
       className={classNames(
         'k-HorizontalStroke',
-        classNames,
+        className,
         modifierClassName(),
       )}
       style={{ ...customStyles(), ...style }}
