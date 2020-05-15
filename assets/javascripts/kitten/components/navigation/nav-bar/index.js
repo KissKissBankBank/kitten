@@ -19,7 +19,7 @@ const StyledNavBar = styled.div`
     width: auto;
     margin: 0;
     padding: 0 ${pxToRem(CONTAINER_PADDING_THIN)};
-    background: ${({ colors }) => colors.background};
+    background: ${({ colors }) => colors.background || COLORS.primary6};
     display: flex;
     justify-content: center;
 
@@ -64,20 +64,21 @@ const StyledNavBar = styled.div`
     flex-direction: column;
     position: relative;
     outline: none;
-    border-bottom: ${pxToRem(4)} solid ${({ colors }) => colors.border};
-    color: ${({ colors }) => colors.link};
+    color: ${({ colors }) => colors.link || COLORS.font1};
+    border-bottom: ${pxToRem(4)} solid ${({ colors }) =>
+  colors.border || 'transparent'};
     transition: color .2s, border-color .2s;
     cursor: pointer;
 
     &:hover {
-      color: ${({ colors }) => colors.activeLink};
+      color: ${({ colors }) => colors.activeLink || COLORS.primary1};
       text-decoration: none;
     }
 
     &:focus,
     &[aria-current="page"] {
-      border-color: ${({ colors }) => colors.activeBorder};
-      color: ${({ colors }) => colors.activeLink};
+      border-color: ${({ colors }) => colors.activeBorder || COLORS.primary1};
+      color: ${({ colors }) => colors.activeLink || COLORS.primary1};
       border-width: ${pxToRem(4)};
     }
 
