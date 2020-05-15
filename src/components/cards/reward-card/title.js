@@ -58,7 +58,6 @@ var RewardCardTitleBase = /*#__PURE__*/function (_Component) {
           tagName = _this$props.tagName,
           disabled = _this$props.disabled;
       var titleStyles = [styles.base, disabled && styles.disabled];
-      var strokeStyles = [styles.stroke.base, disabled && styles.stroke.disabled];
       return /*#__PURE__*/_react.default.createElement(_react.Fragment, null, /*#__PURE__*/_react.default.createElement(Text, {
         fontStyle: "italic",
         weight: "bold",
@@ -67,7 +66,8 @@ var RewardCardTitleBase = /*#__PURE__*/function (_Component) {
         style: titleStyles
       }, children), /*#__PURE__*/_react.default.createElement(HorizontalStroke, {
         size: "default",
-        style: strokeStyles
+        className: "k-u-margin-bottom-triple",
+        color: disabled ? _colorsConfig.default.font2 : null
       }));
     }
   }]);
@@ -89,14 +89,6 @@ var styles = {
     fontSize: (0, _typography.pxToRem)(24),
     lineHeight: (0, _typography.pxToRem)(34),
     margin: "0 0 ".concat((0, _typography.pxToRem)(15), " 0")
-  },
-  stroke: {
-    base: {
-      marginBottom: (0, _typography.pxToRem)(30)
-    },
-    disabled: {
-      backgroundColor: _colorsConfig.default.font2
-    }
   },
   disabled: {
     color: _colorsConfig.default.font2,
