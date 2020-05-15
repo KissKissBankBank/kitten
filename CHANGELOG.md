@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `color` prop to `HorizontalStroke`.
+- Fix: Remove `classNames` bug from `HorizontalStroke`.
+
 ## [2.69.0] - 2020-05-12
 
 Features:
