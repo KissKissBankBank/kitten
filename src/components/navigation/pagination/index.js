@@ -113,7 +113,6 @@ var PaginationBase = (0, _react.forwardRef)(function (_ref2, _ref) {
       weight: "regular",
       decoration: "none",
       size: "tiny",
-      isActive: isActive,
       "aria-current": isActive && 'page',
       "aria-label": ariaLabel,
       onClick: isActive ? null : pageClickHandler(number)

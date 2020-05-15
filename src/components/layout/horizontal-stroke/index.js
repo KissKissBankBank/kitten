@@ -39,17 +39,21 @@ exports.HUGE = HUGE;
 var StyledHorizontalStroke = _styledComponents.default.div.withConfig({
   displayName: "horizontal-stroke__StyledHorizontalStroke",
   componentId: "sc-15k7x5m-0"
-})(["border:none;background:", ";&.k-HorizontalStroke--size--tiny{", "}&.k-HorizontalStroke--size--default{", "}&.k-HorizontalStroke--size--big{", "}&.k-HorizontalStroke--size--huge{", "}", ""], _colorsConfig.default.font1, TINY, DEFAULT, BIG, HUGE, (0, _strokeModifierStyles.strokeModifierStylesWithoutMargin)('&.k-HorizontalStroke--modifier'));
+})(["border:none;background:", ";&.k-HorizontalStroke--size--tiny{", "}&.k-HorizontalStroke--size--default{", "}&.k-HorizontalStroke--size--big{", "}&.k-HorizontalStroke--size--huge{", "}", ""], function (_ref) {
+  var color = _ref.color;
+  return color || _colorsConfig.default.font1;
+}, TINY, DEFAULT, BIG, HUGE, (0, _strokeModifierStyles.strokeModifierStylesWithoutMargin)('&.k-HorizontalStroke--modifier'));
 
 exports.StyledHorizontalStroke = StyledHorizontalStroke;
 
-var HorizontalStroke = function HorizontalStroke(_ref) {
-  var className = _ref.className,
-      style = _ref.style,
-      size = _ref.size,
-      modifier = _ref.modifier,
-      customSize = _ref.customSize,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "style", "size", "modifier", "customSize"]);
+var HorizontalStroke = function HorizontalStroke(_ref2) {
+  var className = _ref2.className,
+      style = _ref2.style,
+      size = _ref2.size,
+      modifier = _ref2.modifier,
+      customSize = _ref2.customSize,
+      color = _ref2.color,
+      props = (0, _objectWithoutProperties2.default)(_ref2, ["className", "style", "size", "modifier", "customSize", "color"]);
 
   var modifierClassName = function modifierClassName() {
     if (!modifier) return "k-HorizontalStroke--size--".concat(size);
@@ -65,8 +69,9 @@ var HorizontalStroke = function HorizontalStroke(_ref) {
   };
 
   return /*#__PURE__*/_react.default.createElement(StyledHorizontalStroke, (0, _extends2.default)({}, props, {
-    className: (0, _classnames.default)('k-HorizontalStroke', _classnames.default, modifierClassName()),
-    style: (0, _extends2.default)({}, customStyles(), {}, style)
+    className: (0, _classnames.default)('k-HorizontalStroke', className, modifierClassName()),
+    style: (0, _extends2.default)({}, customStyles(), {}, style),
+    color: color
   }));
 };
 
@@ -77,12 +82,14 @@ HorizontalStroke.propTypes = {
   customSize: _propTypes.default.shape({
     width: _propTypes.default.number,
     height: _propTypes.default.number
-  })
+  }),
+  color: _propTypes.default.string
 };
 HorizontalStroke.defaultProps = {
   size: 'default',
   customSize: {
     width: null,
     height: null
-  }
+  },
+  color: _colorsConfig.default.font1
 };
