@@ -152,7 +152,8 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       className="k-CrowdfundingCard__subtitle__container"
     >
       <div
-        className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--tiny"
+        className="sc-AxirZ wSPT k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--tiny"
+        color="#222"
         loading={false}
         style={
           Object {
@@ -347,7 +348,8 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       className="k-CrowdfundingCard__subtitle__container"
     >
       <div
-        className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--tiny"
+        className="sc-AxirZ wSPT k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--tiny"
+        color="#222"
         loading={false}
         style={
           Object {

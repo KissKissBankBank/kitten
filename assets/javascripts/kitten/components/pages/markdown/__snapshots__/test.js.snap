@@ -17,6 +17,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
   >
     <div
       className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="#222"
       style={
         Object {
           "height": null,
@@ -60,6 +61,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
   >
     <div
       className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="#222"
       style={
         Object {
           "height": null,
@@ -118,6 +120,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   >
     <div
       className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="#222"
       style={
         Object {
           "height": null,
@@ -180,6 +183,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   >
     <div
       className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="#222"
       style={
         Object {
           "height": null,
@@ -222,6 +226,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
   >
     <div
       className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="#222"
       style={
         Object {
           "height": null,
@@ -265,6 +270,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
   >
     <div
       className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="#222"
       style={
         Object {
           "height": null,
@@ -323,6 +329,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   >
     <div
       className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="#222"
       style={
         Object {
           "height": null,
@@ -385,6 +392,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
   >
     <div
       className="sc-AxirZ wSPT k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="#222"
       style={
         Object {
           "height": null,
