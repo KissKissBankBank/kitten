@@ -25,10 +25,6 @@ class RewardCardTitleBase extends Component {
   render() {
     const { children, tagName, disabled } = this.props
     const titleStyles = [styles.base, disabled && styles.disabled]
-    const strokeStyles = [
-      styles.stroke.base,
-      disabled && styles.stroke.disabled,
-    ]
 
     return (
       <Fragment>
@@ -41,7 +37,11 @@ class RewardCardTitleBase extends Component {
         >
           {children}
         </Text>
-        <HorizontalStroke size="default" style={strokeStyles} />
+        <HorizontalStroke
+          size="default"
+          className="k-u-margin-bottom-triple"
+          color={disabled ? COLORS.font2 : null}
+        />
       </Fragment>
     )
   }
@@ -52,14 +52,6 @@ const styles = {
     fontSize: pxToRem(24),
     lineHeight: pxToRem(34),
     margin: `0 0 ${pxToRem(15)} 0`,
-  },
-  stroke: {
-    base: {
-      marginBottom: pxToRem(30),
-    },
-    disabled: {
-      backgroundColor: COLORS.font2,
-    },
   },
   disabled: {
     color: COLORS.font2,
