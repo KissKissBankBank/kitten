@@ -41,7 +41,6 @@ class Subtitle extends PureComponent {
         <HorizontalStroke
           className="k-CrowdfundingCard__subtitle__horizontalStroke"
           size="tiny"
-          loading={loading}
         />
 
         {subTitle && !loading && (

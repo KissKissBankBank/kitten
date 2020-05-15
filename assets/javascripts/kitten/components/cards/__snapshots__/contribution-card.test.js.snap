@@ -53,6 +53,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           >
             <div
               className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              color="#222"
               style={
                 Object {
                   "height": null,
@@ -148,6 +149,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           >
             <div
               className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              color="#222"
               style={
                 Object {
                   "height": null,
@@ -438,6 +440,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           >
             <div
               className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              color="#222"
               style={
                 Object {
                   "height": null,

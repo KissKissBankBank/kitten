@@ -26,7 +26,8 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="sc-AxjAm ccCISE"
         >
           <div
-            className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+            className="sc-AxiKw kcCpID k-HorizontalStroke sc-fzokOt ilvPFV k-HorizontalStroke--size--big"
+            color="#222"
             style={
               Object {
                 "height": null,

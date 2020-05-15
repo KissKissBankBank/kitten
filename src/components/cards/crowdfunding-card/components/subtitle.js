@@ -64,8 +64,7 @@ var Subtitle = /*#__PURE__*/function (_PureComponent) {
         className: "k-CrowdfundingCard__subtitle__container"
       }, /*#__PURE__*/_react.default.createElement(_horizontalStroke.HorizontalStroke, {
         className: "k-CrowdfundingCard__subtitle__horizontalStroke",
-        size: "tiny",
-        loading: loading
+        size: "tiny"
       }), subTitle && !loading && /*#__PURE__*/_react.default.createElement(_text.Text, {
         className: (0, _classnames.default)('k-CrowdfundingCard__subtitle__subtitleText', {
           'k-CrowdfundingCard__subtitle__subtitleText--truncated': subTitleTruncate
