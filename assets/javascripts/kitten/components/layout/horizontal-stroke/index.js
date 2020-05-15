@@ -28,7 +28,7 @@ export const HUGE = css`
 
 export const StyledHorizontalStroke = styled.div`
   border: none;
-  background: ${COLORS.font1};
+  background: ${({ color }) => color || COLORS.font1};
 
   &.k-HorizontalStroke--size--tiny {
     ${TINY}
@@ -55,6 +55,7 @@ export const HorizontalStroke = ({
   size,
   modifier,
   customSize,
+  color,
   ...props
 }) => {
   const modifierClassName = () => {
@@ -76,10 +77,11 @@ export const HorizontalStroke = ({
       {...props}
       className={classNames(
         'k-HorizontalStroke',
-        classNames,
+        className,
         modifierClassName(),
       )}
       style={{ ...customStyles(), ...style }}
+      color={color}
     />
   )
 }
@@ -99,6 +101,7 @@ HorizontalStroke.propTypes = {
     width: PropTypes.number,
     height: PropTypes.number,
   }),
+  color: PropTypes.string,
 }
 
 HorizontalStroke.defaultProps = {
@@ -107,4 +110,5 @@ HorizontalStroke.defaultProps = {
     width: null,
     height: null,
   },
+  color: COLORS.font1,
 }

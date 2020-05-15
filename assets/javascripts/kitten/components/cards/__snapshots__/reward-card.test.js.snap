@@ -36,13 +36,10 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <div
-        className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--default"
+        className="sc-AxiKw kcCpID k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
+        color={null}
         style={
           Object {
-            "0": Object {
-              "marginBottom": "1.875rem",
-            },
-            "1": false,
             "height": null,
             "width": null,
           }
@@ -135,13 +132,10 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <div
-        className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--default"
+        className="sc-AxiKw kcCpID k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
+        color={null}
         style={
           Object {
-            "0": Object {
-              "marginBottom": "1.875rem",
-            },
-            "1": false,
             "height": null,
             "width": null,
           }
@@ -235,13 +229,10 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         100$
       </h6>
       <div
-        className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--default"
+        className="sc-AxiKw kcCpID k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
+        color={null}
         style={
           Object {
-            "0": Object {
-              "marginBottom": "1.875rem",
-            },
-            "1": false,
             "height": null,
             "width": null,
           }
@@ -442,6 +433,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           >
             <div
               className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              color="#222"
               style={
                 Object {
                   "height": null,
