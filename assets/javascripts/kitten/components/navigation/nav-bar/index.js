@@ -60,8 +60,9 @@ const StyledNavBar = styled.div`
 
 
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     outline: none;
     color: ${({ colors }) => colors.link || COLORS.font1};
