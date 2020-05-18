@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `NavBar` component.
+- Fix: `overflow: scroll` bug on ScrollableContainer.
 
 ## [2.70.0] - 2020-05-15
 
