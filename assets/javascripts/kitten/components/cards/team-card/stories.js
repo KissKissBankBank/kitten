@@ -1,10 +1,10 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, text } from '@storybook/addon-knobs'
-import { Container } from '../grid/container'
-import { Grid, GridCol } from '../grid/grid'
-import { TeamCard } from './team-card'
-import { Marger } from '../layout/marger'
+import { Container } from '../../grid/container'
+import { Grid, GridCol } from '../../grid/grid'
+import { TeamCard } from './index'
+import { Marger } from '../../layout/marger'
 
 storiesOf('Cards/TeamCard', module)
   .addDecorator(withKnobs)
