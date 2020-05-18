@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Triptych /> with default props matches with snapshot 1`] = `
+<div
+  className="k-Grid sc-AxjAm hnPBFP k-u-align-center"
+>
+  <div
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--offset-0@m k-Grid__col--10@l k-Grid__col--offset-1@l"
+  >
+    <div>
+      <div
+        className="k-u-margin-bottom-double"
+      >
+        <h2
+          className="sc-AxirZ iHImxt"
+        >
+          Main title goes here !
+        </h2>
+      </div>
+      <span
+        className="k-VerticalStroke k-VerticalStroke--huge Triptych__verticalStroke k-u-margin-bottom-double"
+      />
+    </div>
+  </div>
+  <div
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l Triptych__contentColumn Triptych__contentColumn--odd"
+  >
+    <div>
+      <div
+        data-radium={true}
+      >
+        <div
+          className="sc-AxiKw dRCuzY"
+        >
+          <img
+            alt=""
+            data-radium={true}
+            src="http://via.placeholder.com/349x465/19b4fa/19b4fa"
+            style={
+              Object {
+                "display": "block",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div
+          className="sc-AxiKw haLuOa"
+        >
+          <div
+            data-radium={true}
+          >
+            <div
+              className="sc-AxiKw dnvvmt"
+            >
+              <h1
+                className="sc-AxirZ dbrwuw"
+                style={
+                  Object {
+                    "color": "#222",
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Lorem ipsum dolor sit amet
+              </h1>
+            </div>
+            
+          </div>
+        </div>
+        <div
+          className="sc-AxiKw gDSdPr"
+        >
+          <button
+            className="k-Button k-Button--helium"
+            href={null}
+            onClick={null}
+            tabIndex={null}
+            type="button"
+          >
+            Lorem
+          </button>
+        </div>
+        <style
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l Triptych__contentColumn"
+  >
+    <div
+      data-radium={true}
+    >
+      <div
+        className="sc-AxiKw dRCuzY"
+      >
+        <img
+          alt=""
+          data-radium={true}
+          src="http://via.placeholder.com/349x465/ff8846/ff8846"
+          style={
+            Object {
+              "display": "block",
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="sc-AxiKw haLuOa"
+      >
+        <div
+          data-radium={true}
+        >
+          <div
+            className="sc-AxiKw bUARfH"
+          >
+            <h1
+              className="sc-AxirZ dbrwuw"
+              style={
+                Object {
+                  "color": "#222",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Donsectetur adipiscing elit
+            </h1>
+          </div>
+          <div
+            className="sc-AxiKw IbCeH"
+          >
+            <p
+              className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+              style={
+                Object {
+                  "color": "#222",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Nulla ut orci velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-AxiKw gDSdPr"
+      >
+        <button
+          className="k-Button k-Button--helium"
+          href={null}
+          onClick={null}
+          tabIndex={null}
+          type="button"
+        >
+          Ipsum
+        </button>
+      </div>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l Triptych__contentColumn Triptych__contentColumn--odd"
+  >
+    <div
+      data-radium={true}
+    >
+      <div
+        className="sc-AxiKw dRCuzY"
+      >
+        <img
+          alt=""
+          data-radium={true}
+          src="http://via.placeholder.com/349x465/61d079/61d079"
+          style={
+            Object {
+              "display": "block",
+              "width": "100%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="sc-AxiKw haLuOa"
+      >
+        <div
+          data-radium={true}
+        >
+          <div
+            className="sc-AxiKw dnvvmt"
+          >
+            <h1
+              className="sc-AxirZ dbrwuw"
+              style={
+                Object {
+                  "color": "#222",
+                  "textAlign": "center",
+                }
+              }
+            >
+              Praesent tincidunt ultrices sem
+            </h1>
+          </div>
+          
+        </div>
+      </div>
+      <div
+        className="sc-AxiKw gDSdPr"
+      >
+        <button
+          className="k-Button k-Button--helium"
+          href={null}
+          onClick={null}
+          tabIndex={null}
+          type="button"
+        >
+          Dolor
+        </button>
+      </div>
+      <style
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "",
+          }
+        }
+      />
+    </div>
+  </div>
+</div>
+`;
