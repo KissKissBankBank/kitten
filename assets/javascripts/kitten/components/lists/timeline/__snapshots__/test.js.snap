@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Timeline /> with default props matches with snapshot 1`] = `
+<div
+  className="sc-AxjAm jIEJXh k-Timeline k-Timeline--large"
+>
+  <span
+    className="k-Timeline__verticalLine"
+  />
+  <ol
+    className="k-Timeline__list"
+  >
+    <li
+      className="k-Timeline__listItem"
+    >
+      <span
+        aria-hidden={true}
+        className="k-u-size-tiny k-Timeline__listItem__bullet"
+      >
+        1
+      </span>
+      <div
+        className="k-Timeline__listItem__content"
+      >
+        <span>
+          foo
+        </span>
+      </div>
+    </li>
+    <li
+      className="k-Timeline__listItem"
+    >
+      <span
+        aria-hidden={true}
+        className="k-u-size-tiny k-Timeline__listItem__bullet"
+      >
+        2
+      </span>
+      <div
+        className="k-Timeline__listItem__content"
+      >
+        <span>
+          bar
+        </span>
+      </div>
+    </li>
+    <li
+      className="k-Timeline__listItem"
+    >
+      <span
+        aria-hidden={true}
+        className="k-u-size-tiny k-Timeline__listItem__bullet"
+      >
+        3
+      </span>
+      <div
+        className="k-Timeline__listItem__content"
+      >
+        <span>
+          baz
+        </span>
+      </div>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`<Timeline /> with itemHeight props matches with snapshot 1`] = `
+<div
+  className="sc-AxjAm jIEJXh k-Timeline k-Timeline--thin"
+>
+  <span
+    className="k-Timeline__verticalLine"
+  />
+  <ol
+    className="k-Timeline__list"
+  >
+    <li
+      className="k-Timeline__listItem"
+    >
+      <span
+        aria-hidden={true}
+        className="k-u-size-tiny k-Timeline__listItem__bullet"
+      >
+        1
+      </span>
+      <div
+        className="k-Timeline__listItem__content"
+      >
+        <span>
+          foo
+        </span>
+      </div>
+    </li>
+    <li
+      className="k-Timeline__listItem"
+    >
+      <span
+        aria-hidden={true}
+        className="k-u-size-tiny k-Timeline__listItem__bullet"
+      >
+        2
+      </span>
+      <div
+        className="k-Timeline__listItem__content"
+      >
+        <span>
+          bar
+        </span>
+      </div>
+    </li>
+    <li
+      className="k-Timeline__listItem"
+    >
+      <span
+        aria-hidden={true}
+        className="k-u-size-tiny k-Timeline__listItem__bullet"
+      >
+        3
+      </span>
+      <div
+        className="k-Timeline__listItem__content"
+      >
+        <span>
+          baz
+        </span>
+      </div>
+    </li>
+  </ol>
+</div>
+`;
