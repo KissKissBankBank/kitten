@@ -13,7 +13,7 @@ const StyledTeamCardIcons = styled.div`
   margin-top: ${pxToRem(15)};
   display: flex;
 
-  .TeamCardIcons__buttonIcon:not(:last-child) {
+  .k-TeamCardIcons__buttonIcon:not(:last-child) {
     margin-right: ${pxToRem(15)};
   }
 `
@@ -39,7 +39,7 @@ export const TeamCardIcons = ({
           tag="a"
           href={`mailto:${email}`}
           modifier="hydrogen"
-          className="k-ButtonIcon--phone TeamCardIcons__buttonIcon"
+          className="k-ButtonIcon--phone k-TeamCardIcons__buttonIcon"
         >
           <EmailIcon className="k-ButtonIcon__svg" />
         </ButtonIcon>
@@ -49,7 +49,7 @@ export const TeamCardIcons = ({
         <TeamCardPhoneIcon
           {...props}
           phoneNumber={phoneNumber}
-          className="TeamCardIcons__buttonIcon"
+          className="k-TeamCardIcons__buttonIcon"
         />
       )}
 
@@ -72,7 +72,7 @@ const SocialLinks = ({ links }) => (
           size="tiny"
           target="_blank"
           rel="noopener"
-          className="TeamCardIcons__buttonIcon"
+          className="k-TeamCardIcons__buttonIcon"
         >
           {link.name === 'linkedin' && (
             <LinkedinIcon className="k-ButtonIcon__svg" />

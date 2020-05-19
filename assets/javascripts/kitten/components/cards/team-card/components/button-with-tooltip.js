@@ -10,7 +10,7 @@ const StyledTeamCardButtonWithTooltip = styled.a`
   position: relative;
   display: inline-block;
 
-  .TeamCardButtonWithTooltip__tooltip {
+  .k-TeamCardButtonWithTooltip__tooltip {
     position: absolute;
     top: ${pxToRem(55)};
     padding: ${pxToRem(15)};
@@ -28,13 +28,13 @@ const StyledTeamCardButtonWithTooltip = styled.a`
     border: ${pxToRem(2)} solid ${({ tooltipColor }) => tooltipColor};
   }
 
-  &:hover .TeamCardButtonWithTooltip__tooltip,
-  &:focus .TeamCardButtonWithTooltip__tooltip {
+  &:hover .k-TeamCardButtonWithTooltip__tooltip,
+  &:focus .k-TeamCardButtonWithTooltip__tooltip {
     visibility: visible;
     opacity: 1;
   }
 
-  .TeamCardButtonWithTooltip__tooltipArrow {
+  .k-TeamCardButtonWithTooltip__tooltipArrow {
     position: absolute;
     left: 50%;
     bottom: 102%;
@@ -61,9 +61,9 @@ export const TeamCardButtonWithTooltip = ({
     tooltipColor={tooltipColor}
     {...props}
   >
-    <span className="TeamCardButtonWithTooltip__tooltip">
+    <span className="k-TeamCardButtonWithTooltip__tooltip">
       {phoneNumber}
-      <span className="TeamCardButtonWithTooltip__tooltipArrow" />
+      <span className="k-TeamCardButtonWithTooltip__tooltipArrow" />
     </span>
 
     <ButtonIcon modifier="hydrogen" className="k-ButtonIcon--phone">

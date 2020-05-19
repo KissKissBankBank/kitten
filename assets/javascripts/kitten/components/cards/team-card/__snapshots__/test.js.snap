@@ -2,7 +2,7 @@
 
 exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`] = `
 <div
-  className="sc-AxhCb gXOmpA"
+  className="sc-AxhCb jNyDLS"
 >
   
   
@@ -31,10 +31,10 @@ Array [
     </span>
   </div>,
   <div
-    className="sc-AxhCb gXOmpA"
+    className="sc-AxhCb jNyDLS"
   >
     <a
-      className="k-ButtonIcon k-ButtonIcon--phone TeamCardIcons__buttonIcon k-ButtonIcon--hydrogen"
+      className="k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--hydrogen"
       href="mailto:example@kisskissbankbank.com"
       tabIndex={null}
     >
@@ -55,7 +55,7 @@ Array [
       </svg>
     </a>
     <a
-      className="k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up TeamCardIcons__buttonIcon k-ButtonIcon--hydrogen"
+      className="k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon k-ButtonIcon--hydrogen"
       href="tel:06 00 00 00 00"
       tabIndex={null}
     >
@@ -73,15 +73,15 @@ Array [
       </svg>
     </a>
     <a
-      className="sc-AxiKw bAcPE TeamCardIcons__buttonIcon"
+      className="sc-AxiKw fGXHzU k-TeamCardIcons__buttonIcon"
       href="tel:06 00 00 00 00"
     >
       <span
-        className="TeamCardButtonWithTooltip__tooltip"
+        className="k-TeamCardButtonWithTooltip__tooltip"
       >
         06 00 00 00 00
         <span
-          className="TeamCardButtonWithTooltip__tooltipArrow"
+          className="k-TeamCardButtonWithTooltip__tooltipArrow"
         />
       </span>
       <button
@@ -103,7 +103,7 @@ Array [
       </button>
     </a>
     <a
-      className="k-ButtonIcon TeamCardIcons__buttonIcon k-ButtonIcon--linkedin k-ButtonIcon--tiny"
+      className="k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--linkedin k-ButtonIcon--tiny"
       href="https://www.linkedin.com"
       rel="noopener"
       tabIndex={null}
@@ -123,7 +123,7 @@ Array [
       </svg>
     </a>
     <a
-      className="k-ButtonIcon TeamCardIcons__buttonIcon k-ButtonIcon--twitter k-ButtonIcon--tiny"
+      className="k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--twitter k-ButtonIcon--tiny"
       href="https://www.twitter.com"
       rel="noopener"
       tabIndex={null}
