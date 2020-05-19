@@ -1,18 +1,13 @@
 import React from 'react'
-import { Hero } from '../../components/heroes/hero'
-import { Container } from '../../components/grid/container'
-import { StyleRoot } from 'radium'
+import { Hero } from './index'
+import { Container } from '../../../components/grid/container'
 
 describe('<Hero />', () => {
   let component
 
   describe('by default', () => {
     beforeEach(() => {
-      component = mount(
-        <StyleRoot>
-          <Hero>FooBar</Hero>
-        </StyleRoot>,
-      )
+      component = mount(<Hero>FooBar</Hero>)
     })
 
     it('has a <Container /> component', () => {
