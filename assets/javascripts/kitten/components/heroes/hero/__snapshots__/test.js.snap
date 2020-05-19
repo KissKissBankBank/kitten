@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hero /> by default matches with snapshot 1`] = `
+<div
+  className="sc-AxjAm jnRBqU sc-AxirZ bsqqFg k-Hero k-Hero--direction-left"
+>
+  <div
+    className="k-Grid"
+  >
+    <div
+      className="k-Grid__col--12 k-Grid__col--10@s k-Grid__col--6@l k-Hero__contentGridCol"
+    >
+      <div
+        className="k-Hero__content"
+      >
+        FooBar
+      </div>
+    </div>
+    <div
+      className="k-Grid__col--12 k-Grid__col--7@l k-Hero__imageGridCol"
+    >
+      <div
+        className="k-Hero__image"
+      />
+    </div>
+  </div>
+</div>
+`;
