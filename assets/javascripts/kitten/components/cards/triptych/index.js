@@ -15,7 +15,7 @@ const desktopGutter = 40 / 2
 const StyledTriptych = styled(({ secondElementMarginTop, ...props }) => (
   <Grid {...props} />
 ))`
-  .Triptych__verticalStroke {
+  .k-Triptych__verticalStroke {
     display: block;
     height: ${pxToRem(strokeHeight)};
     margin: 0 auto ${pxToRem(20)};
@@ -25,13 +25,13 @@ const StyledTriptych = styled(({ secondElementMarginTop, ...props }) => (
     }
   }
 
-  .Triptych__contentColumn.Triptych__contentColumn--odd {
+  .k-Triptych__contentColumn.k-Triptych__contentColumn--odd {
     @media (min-width: ${ScreenConfig.L.min}px) {
       margin-top: -${pxToRem((strokeHeight * 2) / 3 + marginStroke * 10)};
     }
   }
 
-  .Triptych__contentColumn:nth-last-child(3) {
+  .k-Triptych__contentColumn:nth-last-child(3) {
     margin-bottom: ${pxToRem(50)};
 
     @media (min-width: ${pxToRem(
@@ -45,7 +45,7 @@ const StyledTriptych = styled(({ secondElementMarginTop, ...props }) => (
       padding-right: ${pxToRem(desktopGutter)};
     }
   }
-  .Triptych__contentColumn:nth-last-child(2) {
+  .k-Triptych__contentColumn:nth-last-child(2) {
     margin-bottom: ${pxToRem(50)};
 
     @media (min-width: ${pxToRem(
@@ -63,7 +63,7 @@ const StyledTriptych = styled(({ secondElementMarginTop, ...props }) => (
       padding-left: ${pxToRem(desktopGutter)};
     }
   }
-  .Triptych__contentColumn:nth-last-child(1) {
+  .k-Triptych__contentColumn:nth-last-child(1) {
     @media (min-width: ${pxToRem(
         ScreenConfig.M.min,
       )}) and (max-width: ${pxToRem(ScreenConfig.M.max)}) {
@@ -102,7 +102,7 @@ export const Triptych = ({ title, item1, item2, item3 }) => {
 
   return (
     <StyledTriptych
-      className="k-u-align-center"
+      className="k-Triptych k-u-align-center"
       secondElementMarginTop={secondElementMarginTop}
     >
       <GridCol col-l="10" offset-l="1" col-m="6" offset-m="0">
@@ -111,7 +111,7 @@ export const Triptych = ({ title, item1, item2, item3 }) => {
 
           <VerticalStroke
             size="huge"
-            className="Triptych__verticalStroke k-u-margin-bottom-double"
+            className="k-Triptych__verticalStroke k-u-margin-bottom-double"
           />
         </div>
       </GridCol>
@@ -119,19 +119,19 @@ export const Triptych = ({ title, item1, item2, item3 }) => {
       <GridCol
         col-l="4"
         col-m="6"
-        className="Triptych__contentColumn Triptych__contentColumn--odd"
+        className="k-Triptych__contentColumn k-Triptych__contentColumn--odd"
       >
         <div ref={firstElement}>{item1}</div>
       </GridCol>
 
-      <GridCol col-l="4" col-m="6" className="Triptych__contentColumn">
+      <GridCol col-l="4" col-m="6" className="k-Triptych__contentColumn">
         {item2}
       </GridCol>
 
       <GridCol
         col-l="4"
         col-m="6"
-        className="Triptych__contentColumn Triptych__contentColumn--odd"
+        className="k-Triptych__contentColumn k-Triptych__contentColumn--odd"
       >
         {item3}
       </GridCol>

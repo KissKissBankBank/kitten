@@ -2,7 +2,7 @@
 
 exports[`<Triptych /> with default props matches with snapshot 1`] = `
 <div
-  className="k-Grid sc-AxjAm hnPBFP k-u-align-center"
+  className="k-Grid sc-AxjAm AOWMT k-Triptych k-u-align-center"
 >
   <div
     className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--offset-0@m k-Grid__col--10@l k-Grid__col--offset-1@l"
@@ -18,12 +18,12 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         </h2>
       </div>
       <span
-        className="k-VerticalStroke k-VerticalStroke--huge Triptych__verticalStroke k-u-margin-bottom-double"
+        className="k-VerticalStroke k-VerticalStroke--huge k-Triptych__verticalStroke k-u-margin-bottom-double"
       />
     </div>
   </div>
   <div
-    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l Triptych__contentColumn Triptych__contentColumn--odd"
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
   >
     <div>
       <div
@@ -92,7 +92,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l Triptych__contentColumn"
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn"
   >
     <div
       data-radium={true}
@@ -173,7 +173,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l Triptych__contentColumn Triptych__contentColumn--odd"
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
   >
     <div
       data-radium={true}
