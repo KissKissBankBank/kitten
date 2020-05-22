@@ -2,36 +2,16 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-fznyAO kngrya"
+  className="sc-AxgMl PtFQF k-RewardCard"
 >
   <div
-    style={
-      Object {
-        "display": "flex",
-        "flexWrap": "wrap",
-        "padding": "0 0.9375rem",
-      }
-    }
+    className="k-RewardCard__cardRow"
   >
     <div
-      style={
-        Object {
-          "flexBasis": "17.1875rem",
-          "flexGrow": 9999,
-          "margin": "0.9375rem",
-        }
-      }
+      className="k-RewardCard__rowContent"
     >
       <h6
-        className="k-u-color-font1 k-u-style-italic k-u-weight-bold"
-        data-radium={true}
-        style={
-          Object {
-            "fontSize": "1.5rem",
-            "lineHeight": "2.125rem",
-            "margin": "0 0 0.9375rem 0",
-          }
-        }
+        className="k-u-color-font1 k-u-style-italic k-u-weight-bold k-RewardCard__title"
       >
         Custom title mount
       </h6>
@@ -57,28 +37,16 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 <div
-  className="sc-fznyAO kngrya"
+  className="sc-AxgMl PtFQF k-RewardCard"
 >
   <div
-    style={
-      Object {
-        "display": "flex",
-        "flexWrap": "wrap",
-        "padding": "0 0.9375rem",
-      }
-    }
+    className="k-RewardCard__cardRow"
   >
     <div
-      style={
-        Object {
-          "flexBasis": "17.1875rem",
-          "flexGrow": 9999,
-          "margin": "0.9375rem",
-        }
-      }
+      className="k-RewardCard__rowContent"
     >
       <div
-        className="sc-AxmLO bTYafk"
+        className="k-RewardCard__diamondBadge"
       >
         <span
           className="sc-AxhCb jkxheH"
@@ -89,7 +57,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
           >
             <svg
               aria-hidden={true}
-              className="sc-fzoLsD hTkdvG k-IconBadge__svg"
+              className="k-RewardCard__diamondBadge__diamondIcon k-IconBadge__svg"
               height="28"
               viewBox="0 0 19 28"
               width="19"
@@ -104,7 +72,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
           </span>
         </span>
         <div
-          className="sc-fzozJi bIJfbc"
+          className="k-RewardCard__diamondBadge__content"
         >
           <span
             className="k-u-color-font1 k-u-size-nano k-u-weight-bold"
@@ -119,15 +87,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         </div>
       </div>
       <h6
-        className="k-u-color-font1 k-u-style-italic k-u-weight-bold"
-        data-radium={true}
-        style={
-          Object {
-            "fontSize": "1.5rem",
-            "lineHeight": "2.125rem",
-            "margin": "0 0 0.9375rem 0",
-          }
-        }
+        className="k-u-color-font1 k-u-style-italic k-u-weight-bold k-RewardCard__title"
       >
         Custom title mount
       </h6>
@@ -153,28 +113,16 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="sc-fznyAO kngrya"
+  className="sc-AxgMl PtFQF k-RewardCard"
 >
   <div
-    style={
-      Object {
-        "display": "flex",
-        "flexWrap": "wrap",
-        "padding": "0 0.9375rem",
-      }
-    }
+    className="k-RewardCard__cardRow"
   >
     <div
-      style={
-        Object {
-          "flexBasis": "17.1875rem",
-          "flexGrow": 9999,
-          "margin": "0.9375rem",
-        }
-      }
+      className="k-RewardCard__rowContent"
     >
       <div
-        className="sc-AxgMl hASlPc"
+        className="k-RewardCard__starredBadge"
       >
         <span
           className="sc-AxhCb jkxheH"
@@ -185,7 +133,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           >
             <svg
               aria-hidden={true}
-              className="sc-Axmtr douNhl k-IconBadge__svg"
+              className="k-RewardCard__starredBadge__starredIcon k-IconBadge__svg"
               height="16"
               viewBox="0 0 18 16"
               width="18"
@@ -201,7 +149,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           </span>
         </span>
         <div
-          className="sc-AxheI kzcuhL"
+          className="k-RewardCard__starredBadge__content"
         >
           <span
             className="k-u-color-font1 k-u-size-nano k-u-weight-bold"
@@ -216,15 +164,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </div>
       </div>
       <h6
-        className="k-u-color-font1 k-u-style-italic k-u-weight-bold"
-        data-radium={true}
-        style={
-          Object {
-            "fontSize": "1.5rem",
-            "lineHeight": "2.125rem",
-            "margin": "0 0 0.9375rem 0",
-          }
-        }
+        className="k-u-color-font1 k-u-style-italic k-u-weight-bold k-RewardCard__title"
       >
         100$
       </h6>
@@ -249,12 +189,11 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
       </p>
       <ul
-        className="sc-fzoyAV fiAkmP"
+        className="sc-fzpans eqJzie"
       >
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular sc-fzpans eDrBTy"
-            disabled={false}
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular k-RewardCard__infos k-RewardCard__infos--hasBottomMargin"
           >
             Contributors: 
             <span
@@ -266,8 +205,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular sc-fzpans eDrBTy"
-            disabled={false}
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular k-RewardCard__infos k-RewardCard__infos--hasBottomMargin"
           >
             Availability: 
             <span
@@ -279,8 +217,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular sc-fzpans djAKEm"
-            disabled={false}
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular k-RewardCard__infos"
           >
             Delivery: 
             <span
@@ -293,44 +230,21 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       </ul>
     </div>
     <div
-      data-radium={true}
-      style={
-        Object {
-          "flexBasis": "11.875rem",
-          "flexGrow": 1,
-          "marginBottom": "0.9375rem",
-          "marginLeft": "0.9375rem",
-          "marginRight": "0.9375rem",
-          "marginTop": "0.9375rem",
-        }
-      }
+      className="k-RewardCard__rowSide k-RewardCard__rowSide--hasMargins"
     >
       <img
         alt="My reward"
-        className="sc-fzplWN dLGokl"
-        disabled={false}
+        className="k-RewardCard__image"
         src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
       />
     </div>
   </div>
   <div
-    style={
-      Object {
-        "borderTop": "2px #eee solid",
-        "display": "flex",
-        "justifyContent": "center",
-        "marginTop": "1.25rem",
-      }
-    }
+    className="k-RewardCard__checkedIconLine"
   >
     <span
-      className="sc-AxhCb dbedwk"
+      className="sc-AxhCb dbedwk k-RewardCard__iconBadge"
       disabled={false}
-      style={
-        Object {
-          "marginTop": "-0.9375rem",
-        }
-      }
     >
       <span
         className="sc-AxhUy efrIZw"
@@ -352,18 +266,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexDirection": "column",
-        "flexWrap": "wrap",
-        "justifyContent": "center",
-        "marginBottom": "0.3125rem",
-        "marginTop": "0.625rem",
-        "padding": "0 0.9375rem",
-      }
-    }
+    className="k-RewardCard__checkedSection"
   >
     <p
       className="k-u-color-font1 k-u-size-tiny"

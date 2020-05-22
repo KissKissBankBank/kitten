@@ -1,9 +1,9 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { RewardCard } from '../../components/cards/reward-card'
-import { Paragraph } from '../../components/typography/paragraph'
-import { List } from '../../components/lists/list'
-import { Text } from '../../components/typography/text'
+import { RewardCard } from './index'
+import { Paragraph } from '../../../components/typography/paragraph'
+import { List } from '../../../components/lists/list'
+import { Text } from '../../../components/typography/text'
 
 const createMockMediaMatcher = matches => () => ({
   matches,
