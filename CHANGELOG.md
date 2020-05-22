@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `disabled` global prop to `RewardCard`.
+- Fix: Remove Radium from `RewardCard`.
+
 ## [2.70.0] - 2020-05-15
 
 Feature:
