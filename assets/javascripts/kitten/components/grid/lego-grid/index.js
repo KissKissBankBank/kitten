@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import classNames from 'classnames'
 import Masonry from 'react-masonry-component'
-import { ScreenConfig } from '../../../constants/screen-config'
+import { ORDERED_SCREEN_SIZES } from '../../../constants/screen-config'
 import { NUM_COLUMNS } from '../../../constants/grid-config'
 
 export const LegoGrid = ({ className, masonryProps, children, ...others }) => {
@@ -9,10 +9,14 @@ export const LegoGrid = ({ className, masonryProps, children, ...others }) => {
 
   useEffect(() => {
     setVisibility(true)
+
+    return () => {
+      setVisibility(false)
+    }
   }, [])
 
   const classByMediaQuery = () => {
-    const classNamesByMediaQuery = Object.keys(ScreenConfig).map(size => {
+    const classNamesByMediaQuery = ORDERED_SCREEN_SIZES.map(size => {
       const mediaQuery = size.toLowerCase()
       const items = others[`items-${mediaQuery}-up`]
 
@@ -45,8 +49,8 @@ LegoGrid.defaultProps = {
   masonryProps: {},
 }
 
-LegoGrid.Item = ({ children, ...props }) => (
-  <div {...props} className={classNames('k-LegoGrid__item', props.className)}>
+LegoGrid.Item = ({ children, className, ...props }) => (
+  <div {...props} className={classNames('k-LegoGrid__item', className)}>
     <div className="k-LegoGrid__item__content">{children}</div>
   </div>
 )
