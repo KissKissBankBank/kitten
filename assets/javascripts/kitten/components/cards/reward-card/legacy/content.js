@@ -1,7 +1,5 @@
 import React from 'react'
-import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { styles } from '../index'
 import { Marger } from '../../../../components/layout/marger'
 import { Title } from '../../../../components/typography/title'
 import { Button } from '../../../../components/buttons/button'
@@ -11,7 +9,7 @@ import { Text } from '../../../../components/typography/text'
 import { StarIcon } from '../../../../components/icons/star-icon'
 import { Deprecated } from '../../../../helpers/utils/deprecated'
 
-const RewardCardContentBase = ({
+export const RewardCardContent = ({
   titleAmount,
   titleTag,
   subtitle,
@@ -22,11 +20,11 @@ const RewardCardContentBase = ({
   isDisabled,
   isTinyVersion,
 }) => {
-  const descriptionStyle = [isDisabled && styles.disabled]
-
   return (
     <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
-      <div style={descriptionStyle} disabled={isDisabled}>
+      <div
+        className={isDisabled ? 'k-LegacyRewardCard__element--disabled' : null}
+      >
         {starred && (
           <Marger bottom="2">
             <Button
@@ -48,7 +46,7 @@ const RewardCardContentBase = ({
             italic
             margin={false}
             tag={titleTag}
-            style={styles.textColor}
+            className="k-LegacyRewardCard-textColor"
           >
             {titleAmount}
           </Title>
@@ -63,7 +61,7 @@ const RewardCardContentBase = ({
               size={isTinyVersion ? 'big' : 'huge'}
               tag={subtitleTag}
               weight="bold"
-              style={styles.textMargin}
+              className="k-LegacyRewardCard-textMargin"
             >
               {subtitle}
             </Text>
@@ -71,7 +69,7 @@ const RewardCardContentBase = ({
         )}
         <Marger top={!subtitle ? 3 : 1}>
           <Paragraph
-            style={styles.textColor}
+            className="k-LegacyRewardCard-textColor"
             modifier={isTinyVersion ? 'quaternary' : 'tertiary'}
             margin={false}
           >
@@ -83,7 +81,7 @@ const RewardCardContentBase = ({
   )
 }
 
-RewardCardContentBase.propTypes = {
+RewardCardContent.propTypes = {
   titleAmount: PropTypes.string.isRequired,
   titleTag: PropTypes.string,
   subtitle: PropTypes.string,
@@ -95,7 +93,7 @@ RewardCardContentBase.propTypes = {
   isTinyVersion: PropTypes.bool.isRequired,
 }
 
-RewardCardContentBase.defaultProps = {
+RewardCardContent.defaultProps = {
   titleTag: 'h1',
   subtitle: '',
   subtitleTag: 'p',
@@ -104,5 +102,3 @@ RewardCardContentBase.defaultProps = {
   starLabel: '',
   isDisabled: false,
 }
-
-export const RewardCardContent = Radium(RewardCardContentBase)

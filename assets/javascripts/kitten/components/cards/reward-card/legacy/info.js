@@ -1,11 +1,7 @@
-import React, { Fragment } from 'react'
-import Radium from 'radium'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { Text as TextBase } from '../../../../components/typography/text'
-import { styles } from '../index'
+import { Text } from '../../../../components/typography/text'
 import { Deprecated } from '../../../../helpers/utils/deprecated'
-
-const Text = Radium(TextBase)
 
 export const Info = ({
   label,
@@ -15,13 +11,9 @@ export const Info = ({
 }) => {
   if (!label) return null
 
-  const infosLists = isTinyVersion
-    ? styles.infos.lists.tinyVersion
-    : styles.infos.lists
-
   const InfoBase = (
     <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
-      <Text color="font1" weight="regular" style={infosLists}>
+      <Text color="font1" weight="regular" className="k-LegacyRewardCard__list">
         {`${label} `}
         <Text weight="light">{value}</Text>
       </Text>
@@ -29,11 +21,11 @@ export const Info = ({
   )
 
   return (
-    <Fragment>
+    <>
       {(viewportIsTabletOrLess || isTinyVersion) && <div>{InfoBase}</div>}
 
       {!viewportIsTabletOrLess && !isTinyVersion && InfoBase}
-    </Fragment>
+    </>
   )
 }
 

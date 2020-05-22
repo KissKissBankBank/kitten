@@ -1,32 +1,37 @@
 import React from 'react'
-import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { styles } from '../index'
+import classNames from 'classnames'
 import { Deprecated } from '../../../../helpers/utils/deprecated'
 
-const RewardCardImageBase = ({ isDisabled, imageProps }) => {
-  const imageStyles = [isDisabled && styles.disabled]
+export const RewardCardImage = ({ isDisabled, imageProps }) => {
   const shouldDisplayImage = imageProps && imageProps.src
 
   if (!shouldDisplayImage) return null
 
   return (
     <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
-      <div style={imageStyles} disabled={isDisabled}>
-        <img {...imageProps} alt={imageProps.alt || ''} style={styles.image} />
+      <div
+        className={isDisabled ? 'k-LegacyRewardCard__element--disabled' : null}
+      >
+        <img
+          {...imageProps}
+          alt={imageProps.alt || ''}
+          className={classNames(
+            'k-LegacyRewardCard__image',
+            imageProps.className,
+          )}
+        />
       </div>
     </Deprecated>
   )
 }
 
-RewardCardImageBase.propTypes = {
+RewardCardImage.propTypes = {
   isDisabled: PropTypes.bool,
   imageProps: PropTypes.object,
 }
 
-RewardCardImageBase.defaultProps = {
+RewardCardImage.defaultProps = {
   isDisabled: false,
   imageProps: {},
 }
-
-export const RewardCardImage = Radium(RewardCardImageBase)

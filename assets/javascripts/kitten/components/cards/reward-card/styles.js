@@ -47,6 +47,7 @@ export const StyledRewardCard = styled.div`
 
     &.k-RewardCard__title--disabled {
       color: ${COLORS.font2};
+      cursor: not-allowed;
     }
   }
 
@@ -55,6 +56,7 @@ export const StyledRewardCard = styled.div`
 
     &.k-RewardCard__image--disabled {
       filter: grayscale(1) opacity(0.4);
+      cursor: not-allowed;
     }
   }
 
@@ -68,6 +70,7 @@ export const StyledRewardCard = styled.div`
 
     &.k-RewardCard__infos--disabled {
       color: ${COLORS.font2};
+      cursor: not-allowed;
     }
   }
 
@@ -124,9 +127,25 @@ export const StyledRewardCard = styled.div`
     border: none;
   }
   &.k-RewardCard--isDisabled {
-    * {
+    .k-RewardCard__diamondBadge,
+    .k-RewardCard__starredBadge {
+      color: ${COLORS.font2};
       cursor: not-allowed;
-      pointer-events: none;
+    }
+
+    .k-RewardCard__title {
+      color: ${COLORS.font2};
+      cursor: not-allowed;
+    }
+
+    .k-RewardCard__image {
+      filter: grayscale(1) opacity(0.4);
+      cursor: not-allowed;
+    }
+
+    .k-RewardCard__infos {
+      color: ${COLORS.font2};
+      cursor: not-allowed;
     }
   }
 `

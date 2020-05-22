@@ -2,10 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import classNames from 'classnames'
-import {
-  LegacyRewardCardContainer,
-  styles as legacyStyles,
-} from './legacy/reward-card-container'
+import { LegacyRewardCardContainer } from './legacy/reward-card-container'
 import { StyledRewardCard } from './styles'
 import { RewardCardInfo } from './components/info'
 import { RewardCardImage } from './components/image'
@@ -174,7 +171,3 @@ RewardCard.propTypes = {
 RewardCard.defaultProps = {
   withoutBorder: false,
 }
-
-// This export handles retro-compatibility.
-// TODO: remove this export when deleting all deprecated components.
-export const styles = legacyStyles
