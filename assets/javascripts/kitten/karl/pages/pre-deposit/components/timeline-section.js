@@ -1,69 +1,37 @@
-import React, { Component } from 'react'
-import Radium from 'radium'
+import React from 'react'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Container } from '../../../../components/grid/container'
-import { Marger } from '../../../../components/layout/marger'
-import { Title as TitleBase } from '../../../../components/typography/title'
-import { Paragraph as ParagraphBase } from '../../../../components/typography/paragraph'
+import { Title } from '../../../../components/typography/title'
+import { Paragraph } from '../../../../components/typography/paragraph'
 import { Button } from '../../../../components/buttons/button'
 import { Timeline } from '../../../../components/lists/timeline'
-import { withMediaQueries } from '../../../../hoc/media-queries'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import COLORS from '../../../../constants/colors-config'
 
-const Title = Radium(TitleBase)
-const Paragraph = Radium(ParagraphBase)
+const ButtonComponent = () => (
+  <div className="k-u-margin-top-quadruple">
+    <Button modifier="helium" size="big">
+      Je lance mon projet
+    </Button>
+  </div>
+)
 
-class TimelineSection extends Component {
-  render() {
-    const { viewportIsXSOrLess, viewportIsMOrLess } = this.props
-
-    return (
-      <Container>
-        <Marger top={viewportIsXSOrLess ? 5 : 7}>
-          <Grid>
-            {this.renderTitle()}
-            {this.renderTimeline()}
-
-            {viewportIsMOrLess && (
-              <GridCol className="k-u-align-center">
-                {this.renderButton()}
-              </GridCol>
-            )}
-          </Grid>
-        </Marger>
-      </Container>
-    )
-  }
-
-  renderTitle() {
-    const { viewportIsMOrLess } = this.props
-
-    return (
+const TimelineSection = ({ paragraphProps }) => (
+  <Container>
+    <Grid className="k-u-margin-top-quintuple k-u-margin-top-septuple@s-up">
       <GridCol col-l="4" offset-l="1" style={{ alignSelf: 'center' }}>
-        <Title modifier="secondary" margin={false} style={styles.title}>
+        <Title
+          modifier="secondary"
+          margin={false}
+          className="PreDeposit__timeline__title"
+        >
           Quelles étapes pour lancer ma collecte de crowdfunding ?
         </Title>
 
-        {!viewportIsMOrLess && this.renderButton()}
+        <div className="k-u-hidden@m-down">
+          <ButtonComponent />
+        </div>
       </GridCol>
-    )
-  }
 
-  renderButton() {
-    return (
-      <Marger top="4">
-        <Button modifier="helium" size="big">
-          Je lance mon projet
-        </Button>
-      </Marger>
-    )
-  }
-
-  renderTimeline() {
-    const { paragraphProps } = this.props
-
-    return (
       <GridCol col-l="5" offset-l="1" col-s="10" offset-s="1">
         <Timeline itemHeight="thin" color="#19b4fa">
           <Paragraph
@@ -99,20 +67,12 @@ class TimelineSection extends Component {
           </Paragraph>
         </Timeline>
       </GridCol>
-    )
-  }
-}
 
-const styles = {
-  title: {
-    color: COLORS.font1,
-    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
-      textAlign: 'center',
-    },
-  },
-}
+      <GridCol className="k-u-hidden@l-up k-u-align-center">
+        <ButtonComponent />
+      </GridCol>
+    </Grid>
+  </Container>
+)
 
-export default withMediaQueries({
-  viewportIsMOrLess: true,
-  viewportIsXSOrLess: true,
-})(Radium(TimelineSection))
+export default TimelineSection
