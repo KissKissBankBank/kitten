@@ -1,22 +1,19 @@
 import React, { Component } from 'react'
 import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../components/layout/marger'
+import { Marger } from '../../../../components/layout/marger'
 import {
   Grid as GridBase,
   GridCol as GridColBase,
-} from '../../../components/grid/grid'
-import COLORS from '../../../constants/colors-config'
-import { ScreenConfig } from '../../../constants/screen-config'
-import { RewardCardContent as LegacyRewardCardContent } from '../../../components/cards/reward-card/content'
-import { RewardCardInfos } from '../../../components/cards/reward-card/infos'
-import { RewardCardImage } from '../../../components/cards/reward-card/image'
-import {
-  RewardCardAction,
-  RewardCardActionOnMOrMore,
-} from '../../../components/cards/reward-card/action'
-import { Deprecated } from '../../../helpers/utils/deprecated'
-import { mediaQueries } from '../../../hoc/media-queries'
+} from '../../../../components/grid/grid'
+import COLORS from '../../../../constants/colors-config'
+import { ScreenConfig } from '../../../../constants/screen-config'
+import { RewardCardContent as LegacyRewardCardContent } from './content'
+import { RewardCardInfos } from './infos'
+import { RewardCardImage } from './image'
+import { RewardCardAction, RewardCardActionOnMOrMore } from './action'
+import { Deprecated } from '../../../../helpers/utils/deprecated'
+import { mediaQueries } from '../../../../hoc/media-queries'
 
 const Grid = Radium(GridBase)
 const GridCol = Radium(GridColBase)

@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { Button as ButtonBase } from '../../../components/buttons/button'
-import { ScreenConfig } from '../../../constants/screen-config'
-import { pxToRem } from '../../../helpers/utils/typography'
-import { Deprecated } from '../../../helpers/utils/deprecated'
+import { Button as ButtonBase } from '../../../../components/buttons/button'
+import { ScreenConfig } from '../../../../constants/screen-config'
+import { pxToRem } from '../../../../helpers/utils/typography'
+import { Deprecated } from '../../../../helpers/utils/deprecated'
 
 const Button = Radium(ButtonBase)
 

@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { Text as TextBase } from '../../../components/typography/text'
-import { styles } from '../../../components/cards/reward-card'
-import { Deprecated } from '../../../helpers/utils/deprecated'
+import { Text as TextBase } from '../../../../components/typography/text'
+import { styles } from '../index'
+import { Deprecated } from '../../../../helpers/utils/deprecated'
 
 const Text = Radium(TextBase)
 

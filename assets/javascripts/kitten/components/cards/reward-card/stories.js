@@ -1,17 +1,17 @@
 import React from 'react'
+import Radium from 'radium'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, text, boolean, object } from '@storybook/addon-knobs'
-import { RewardCard } from '../../components/cards/reward-card'
-import { Grid, GridCol } from '../../components/grid/grid'
-import { Text as TextBase } from '../../components/typography/text'
-import { pxToRem } from '../../helpers/utils/typography'
-import Radium from 'radium'
-import { Button as ButtonBase } from '../../components/buttons/button'
-import { Paragraph as ParagraphBase } from '../../components/typography/paragraph'
-import COLORS from '../../constants/colors-config'
-import { List } from '../../components/lists/list'
-import { ExpandBoard } from '../../components/expandable/expand-board'
+import { RewardCard } from './index'
+import { Grid, GridCol } from '../../../components/grid/grid'
+import { Text as TextBase } from '../../../components/typography/text'
+import { pxToRem } from '../../../helpers/utils/typography'
+import { Button as ButtonBase } from '../../../components/buttons/button'
+import { Paragraph as ParagraphBase } from '../../../components/typography/paragraph'
+import COLORS from '../../../constants/colors-config'
+import { List } from '../../../components/lists/list'
+import { ExpandBoard } from '../../../components/expandable/expand-board'
 
 const Button = Radium(ButtonBase)
 const Paragraph = Radium(ParagraphBase)
@@ -59,6 +59,7 @@ storiesOf('Cards/RewardCard', module)
             <GridCol offset="1" col="10">
               <RewardCard
                 withoutBorder={boolean('withoutBorder', false, versionGroupId)}
+                disabled={disabled}
               >
                 <RewardCard.Row>
                   <RewardCard.RowContent>

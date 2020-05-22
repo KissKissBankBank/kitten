@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Radium from 'radium'
-import { Grid as GridBase, GridCol } from '../../../components/grid/grid'
-import { Text } from '../../../components/typography/text'
-import { RewardCardCheckedIcon } from '../../../components/cards/reward-card/checked-icon'
-import { styles } from '../../../components/cards/reward-card'
-import { Deprecated } from '../../../helpers/utils/deprecated'
+import { Grid as GridBase, GridCol } from '../../../../components/grid/grid'
+import { Text } from '../../../../components/typography/text'
+import { RewardCardCheckedIcon } from './checked-icon'
+import { styles } from '../index'
+import { Deprecated } from '../../../../helpers/utils/deprecated'
 
 const Grid = Radium(GridBase)
 

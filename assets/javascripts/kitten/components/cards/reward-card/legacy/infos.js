@@ -1,10 +1,10 @@
 import React from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { styles } from '../../../components/cards/reward-card'
-import { Info } from '../../../components/cards/reward-card/info'
-import { Marger } from '../../../components/layout/marger'
-import { Deprecated } from '../../../helpers/utils/deprecated'
+import { styles } from '../index'
+import { Info } from './info'
+import { Marger } from '../../../../components/layout/marger'
+import { Deprecated } from '../../../../helpers/utils/deprecated'
 
 const RewardCardInfosBase = ({
   infos,

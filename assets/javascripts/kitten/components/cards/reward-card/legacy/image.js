@@ -1,8 +1,8 @@
 import React from 'react'
 import Radium from 'radium'
 import PropTypes from 'prop-types'
-import { styles } from '../../../components/cards/reward-card'
-import { Deprecated } from '../../../helpers/utils/deprecated'
+import { styles } from '../index'
+import { Deprecated } from '../../../../helpers/utils/deprecated'
 
 const RewardCardImageBase = ({ isDisabled, imageProps }) => {
   const imageStyles = [isDisabled && styles.disabled]
