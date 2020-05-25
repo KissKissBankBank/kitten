@@ -32,7 +32,7 @@ export const Default = () => (
           title="Finland"
           description="Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
           textAlign="center"
-          withTitleStroke={true}
+          withTitleStroke
         />
       </LegoGrid.Item>
       <LegoGrid.Item>
@@ -44,7 +44,7 @@ export const Default = () => (
           title="Nauru"
           description="Aenean lacinia bibendum nulla sed consectetur."
           textAlign="center"
-          withTitleStroke={true}
+          withTitleStroke
         />
       </LegoGrid.Item>
       <LegoGrid.Item>
