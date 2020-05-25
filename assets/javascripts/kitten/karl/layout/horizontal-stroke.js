@@ -4,14 +4,15 @@ import { Marger } from '../../components/layout/marger'
 import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
 import { Text } from '../../components/typography/text'
 import { KarlExampleTitle } from '../../karl/examples/title'
+import styled from 'styled-components'
+
+const StyledFlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
 
 export const KarlHorizontalStrokesWithContent = () => (
-  <div
-    style={{
-      display: 'flex',
-      alignItems: 'center',
-    }}
-  >
+  <StyledFlexContainer>
     <HorizontalStroke size="tiny" />
     <Text
       size="tiny"
@@ -21,7 +22,7 @@ export const KarlHorizontalStrokesWithContent = () => (
     >
       Lorem
     </Text>
-  </div>
+  </StyledFlexContainer>
 )
 
 export const KarlHorizontalStrokes = () => (
