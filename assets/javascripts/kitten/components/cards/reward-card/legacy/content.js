@@ -46,7 +46,7 @@ export const RewardCardContent = ({
             italic
             margin={false}
             tag={titleTag}
-            className="k-LegacyRewardCard-textColor"
+            className="k-u-color-font1"
           >
             {titleAmount}
           </Title>
@@ -61,7 +61,7 @@ export const RewardCardContent = ({
               size={isTinyVersion ? 'big' : 'huge'}
               tag={subtitleTag}
               weight="bold"
-              className="k-LegacyRewardCard-textMargin"
+              className="k-u-margin-none"
             >
               {subtitle}
             </Text>
@@ -69,7 +69,7 @@ export const RewardCardContent = ({
         )}
         <Marger top={!subtitle ? 3 : 1}>
           <Paragraph
-            className="k-LegacyRewardCard-textColor"
+            className="k-u-color-font1"
             modifier={isTinyVersion ? 'quaternary' : 'tertiary'}
             margin={false}
           >

@@ -166,8 +166,10 @@ RewardCard.propTypes = {
     'Use `Reward.Info` to compose your card content now.',
   ),
   withoutBorder: PropTypes.bool,
+  disabled: PropTypes.bool,
 }
 
 RewardCard.defaultProps = {
   withoutBorder: false,
+  disabled: false,
 }

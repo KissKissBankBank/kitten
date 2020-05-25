@@ -13,13 +13,6 @@ export const StyledLegacyRewardCard = styled.div`
     cursor: not-allowed;
   }
 
-  .k-LegacyRewardCard-textColor {
-    color: ${COLORS.font1};
-  }
-  .k-LegacyRewardCard-textMargin {
-    margin: 0;
-  }
-
   .k-LegacyRewardCard__row {
     padding-left: ${pxToRem(20)};
     padding-right: ${pxToRem(20)};
