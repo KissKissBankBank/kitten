@@ -2,7 +2,8 @@
 
 exports[`<ContributionCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-AxirZ jciNGP k-LegacyRewardCard"
+  className="sc-AxirZ imipRp k-LegacyRewardCard"
+  disabled={false}
 >
   <div
     className="sc-AxjAm ekdWbF"
@@ -20,7 +21,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             className="sc-AxjAm jDynbx"
           >
             <h1
-              className="sc-AxiKw dAAJKc k-LegacyRewardCard-textColor"
+              className="sc-AxiKw dAAJKc k-u-color-font1"
             >
               Custom title mount
             </h1>
@@ -44,7 +45,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             className="sc-AxjAm iOcWzD"
           >
             <p
-              className="k-Paragraph k-LegacyRewardCard-textColor k-Paragraph--tertiary k-Paragraph--withoutMargin"
+              className="k-Paragraph k-u-color-font1 k-Paragraph--tertiary k-Paragraph--withoutMargin"
             >
               Custom text description
             </p>
@@ -58,7 +59,8 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
 
 exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-AxirZ jciNGP k-LegacyRewardCard"
+  className="sc-AxirZ imipRp k-LegacyRewardCard"
+  disabled={false}
 >
   <div
     className="sc-AxjAm ekdWbF"
@@ -76,7 +78,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-AxjAm jDynbx"
           >
             <h1
-              className="sc-AxiKw dAAJKc k-LegacyRewardCard-textColor"
+              className="sc-AxiKw dAAJKc k-u-color-font1"
             >
               Custom title mount
             </h1>
@@ -99,7 +101,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-AxjAm bpEnKz"
           >
             <p
-              className="k-u-color-font1 k-u-size-huge k-u-weight-bold k-LegacyRewardCard-textMargin"
+              className="k-u-color-font1 k-u-size-huge k-u-weight-bold k-u-margin-none"
             >
               Custom title description
             </p>
@@ -108,7 +110,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-AxjAm bsGvJV"
           >
             <p
-              className="k-Paragraph k-LegacyRewardCard-textColor k-Paragraph--tertiary k-Paragraph--withoutMargin"
+              className="k-Paragraph k-u-color-font1 k-Paragraph--tertiary k-Paragraph--withoutMargin"
             >
               Custom text description
             </p>
@@ -239,7 +241,8 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
 
 exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
 <div
-  className="sc-AxirZ jciNGP k-LegacyRewardCard k-LegacyRewardCard--tinyVersion k-LegacyRewardCard--sOrLessVersion"
+  className="sc-AxirZ imipRp k-LegacyRewardCard k-LegacyRewardCard--tinyVersion k-LegacyRewardCard--sOrLessVersion"
+  disabled={false}
 >
   <div
     className="sc-AxjAm dCdSew"
@@ -257,7 +260,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-AxjAm jDynbx"
           >
             <h1
-              className="sc-AxiKw biSFLw k-LegacyRewardCard-textColor"
+              className="sc-AxiKw biSFLw k-u-color-font1"
             >
               Custom title mount
             </h1>
@@ -280,7 +283,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-AxjAm bpEnKz"
           >
             <p
-              className="k-u-color-font1 k-u-size-big k-u-weight-bold k-LegacyRewardCard-textMargin"
+              className="k-u-color-font1 k-u-size-big k-u-weight-bold k-u-margin-none"
             >
               Custom title description
             </p>
@@ -289,7 +292,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-AxjAm bsGvJV"
           >
             <p
-              className="k-Paragraph k-LegacyRewardCard-textColor k-Paragraph--quaternary k-Paragraph--withoutMargin"
+              className="k-Paragraph k-u-color-font1 k-Paragraph--quaternary k-Paragraph--withoutMargin"
             >
               Custom text description
             </p>

@@ -285,7 +285,8 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
 <div
-  className="sc-AxirZ jciNGP k-LegacyRewardCard"
+  className="sc-AxirZ imipRp k-LegacyRewardCard"
+  disabled={false}
 >
   <div
     className="sc-AxjAm ekdWbF"
@@ -303,7 +304,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             className="sc-AxjAm jDynbx"
           >
             <h1
-              className="sc-AxiKw dAAJKc k-LegacyRewardCard-textColor"
+              className="sc-AxiKw dAAJKc k-u-color-font1"
             >
               Custom title amount
             </h1>
@@ -326,7 +327,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             className="sc-AxjAm bpEnKz"
           >
             <p
-              className="k-u-color-font1 k-u-size-huge k-u-weight-bold k-LegacyRewardCard-textMargin"
+              className="k-u-color-font1 k-u-size-huge k-u-weight-bold k-u-margin-none"
             >
               Custom title description
             </p>
@@ -335,7 +336,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             className="sc-AxjAm bsGvJV"
           >
             <p
-              className="k-Paragraph k-LegacyRewardCard-textColor k-Paragraph--tertiary k-Paragraph--withoutMargin"
+              className="k-Paragraph k-u-color-font1 k-Paragraph--tertiary k-Paragraph--withoutMargin"
             >
               Custom text description
             </p>
