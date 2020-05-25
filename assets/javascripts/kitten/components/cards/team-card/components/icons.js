@@ -26,7 +26,7 @@ export const TeamCardIcons = ({
   ...props
 }) => {
   const getSocialLinks = () => {
-    if (links) return links
+    if (links.length > 0) return links
 
     // handle deprecated `socialLink` prop
     if (socialLink) return [{ name: 'linkedin', href: socialLink }]
