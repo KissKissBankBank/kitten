@@ -16,6 +16,7 @@ import {
   GUTTER,
   CONTAINER_MAX_WIDTH,
 } from '../../../constants/grid-config'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
 
 const paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER
 const oneGridCol = `calc((100vw - ${pxToRem(
@@ -340,6 +341,7 @@ const InnerModal = ({
 }
 
 export const Modal = props => {
+  if (!domElementHelper.canUseDom()) return null
   return (
     <ModalProvider>
       <InnerModal {...props} />
