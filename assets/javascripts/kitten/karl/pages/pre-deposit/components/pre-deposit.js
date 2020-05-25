@@ -56,7 +56,7 @@ const StyledPreDeposit = styled.div`
     color: ${COLORS.font1};
 
     @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-      text-align: 'center';
+      text-align: center;
     }
   }
 

@@ -9,4 +9,4 @@ export default {
   },
 }
 
-export const FullPage = () => <PreDeposit />
+export const FullPage = PreDeposit
