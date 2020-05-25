@@ -11,6 +11,6 @@ export default {
   },
 }
 
-export const BusinessTakeover = () => <BusinessTakeoverTemplate />
+export const BusinessTakeover = BusinessTakeoverTemplate
 export const FranchiseCreation = () => <FranchiseCreationTemplate />
 export const SmbsDevelopment = () => <SmbsDevelopmentTemplate />
