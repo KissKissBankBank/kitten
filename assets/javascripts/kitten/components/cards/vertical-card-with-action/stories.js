@@ -43,11 +43,10 @@ const info = {
       descriptionTag="p"
       button="Action text"
       buttonModifier="helium"
-      buttonProps: {
+      buttonProps={{
         onClick: () => {},
         href: '#',
-      })
-
+      }}
     />
     ~~~
   `,
