@@ -61,7 +61,6 @@ export const ProgressRing = ({
         stroke={COLORS.line1}
       />
       <StyledMeterCircle
-        className="ProgressRing__meterCircle"
         cx={circleX}
         cy={circleY}
         r={radius}
