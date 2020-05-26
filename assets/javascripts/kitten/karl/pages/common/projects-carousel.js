@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import compose from 'ramda/src/compose'
-import { Container as ContainerBase } from '../../../components/grid/container'
-import { Grid, GridCol as GridColBase } from '../../../components/grid/grid'
-import { Marger as MargerBase } from '../../../components/layout/marger'
+import { Container } from '../../../components/grid/container'
+import { Grid, GridCol } from '../../../components/grid/grid'
+import { Marger } from '../../../components/layout/marger'
 import { Title } from '../../../components/typography/title'
 import { Text } from '../../../components/typography/text'
-import { HorizontalStroke as HorizontalStrokeBase } from '../../../components/layout/horizontal-stroke'
-import { Button as ButtonBase } from '../../../components/buttons/button'
+import { HorizontalStroke } from '../../../components/layout/horizontal-stroke'
+import { Button } from '../../../components/buttons/button'
 import { Carousel } from '../../../components/carousel/carousel'
 import { ScreenConfig, SCREEN_SIZE_M } from '../../../constants/screen-config'
 import {
@@ -16,14 +15,75 @@ import {
 } from '../../../constants/grid-config'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { CrowdfundingCard } from '../../../components/cards/crowdfunding-card'
-import Radium, { StyleRoot } from 'radium'
 import { withMediaQueries } from '../../../hoc/media-queries'
+import { pxToRem } from '../../../helpers/utils/typography'
+import styled from 'styled-components'
 
-const GridCol = Radium(GridColBase)
-const Marger = Radium(MargerBase)
-const Button = Radium(ButtonBase)
-const HorizontalStroke = Radium(HorizontalStrokeBase)
-const Container = Radium(ContainerBase)
+const StyledThanks = styled.div`
+  .ProjectsCarousel__gridCol {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .ProjectsCarousel__Header {
+    flex: 1;
+
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      margin-right: ${pxToRem(-CONTAINER_PADDING)};
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      margin-right: ${pxToRem(-CONTAINER_PADDING_MOBILE)};
+    }
+  }
+
+  .ProjectsCarousel__titleCotnainer {
+    display: flex;
+    align-items: center;
+
+    margin-left: ${pxToRem(-50)};
+
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      margin-left: 0;
+    }
+  }
+
+  .ProjectsCarousel__stroke {
+    margin-right: ${pxToRem(20)};
+
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      order: 2;
+      width: 100%;
+      margin-left: ${pxToRem(20)};
+      margin-right: 0;
+    }
+  }
+
+  .ProjectsCarousel__button {
+    flex-shrink: 0;
+    margin-left: ${pxToRem(10)};
+
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      position: absolute;
+      bottom: 0;
+      right: ${pxToRem(CONTAINER_PADDING)};
+    }
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+    }
+  }
+
+  .ProjectsCarousel__carouselContainer {
+    position: relative;
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      padding-bottom: ${pxToRem(80)};
+    }
+  }
+`
 
 const ProjectsCarousel = ({
   title,
@@ -34,7 +94,13 @@ const ProjectsCarousel = ({
   viewportIsXSOrLess,
 }) => {
   const renderButton = () => (
-    <Button icon iconOnRight tag="a" href={buttonHref} style={styles.button}>
+    <Button
+      icon
+      iconOnRight
+      tag="a"
+      href={buttonHref}
+      className="ProjectsCarousel__button"
+    >
       {buttonLabel}
       <ArrowIcon
         version="solid"
@@ -45,24 +111,21 @@ const ProjectsCarousel = ({
   )
 
   return (
-    <StyleRoot>
+    <StyledThanks>
       <Marger bottom={viewportIsXSOrLess ? 2 : 3}>
         <Container>
           <Grid>
             <GridCol
               col-l="10"
               offset-l="1"
-              style={{
-                ...styles.flex,
-                ...styles.spaceBetween,
-              }}
+              className="ProjectsCarousel__gridCol"
             >
-              <div style={styles.header}>
+              <div className="ProjectsCarousel__Header">
                 <Marger
                   bottom={description ? 0.5 : 0}
-                  style={{ ...styles.flex, ...styles.title }}
+                  className="ProjectsCarousel__titleContainer"
                 >
-                  <HorizontalStroke style={styles.stroke} />
+                  <HorizontalStroke className="ProjectsCarousel__stroke" />
                   <Title tag="h2" modifier="quaternary" margin={false}>
                     {title}
                   </Title>
@@ -85,7 +148,7 @@ const ProjectsCarousel = ({
 
       <Container
         fullWidthBelowScreenSize={SCREEN_SIZE_M}
-        style={styles.carouselContainer}
+        className="ProjectsCarousel__carouselContainer"
       >
         <Carousel
           itemMinWidth={280}
@@ -146,74 +209,8 @@ const ProjectsCarousel = ({
 
         {viewportIsMOrLess && renderButton()}
       </Container>
-    </StyleRoot>
+    </StyledThanks>
   )
-}
-
-const styles = {
-  flex: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-
-  spaceBetween: {
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-  },
-
-  header: {
-    flex: 1,
-
-    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
-      marginRight: `-${CONTAINER_PADDING}px`,
-    },
-
-    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
-      marginRight: `-${CONTAINER_PADDING_MOBILE}px`,
-    },
-  },
-
-  title: {
-    marginLeft: -50,
-
-    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
-      marginLeft: 0,
-    },
-  },
-
-  stroke: {
-    marginRight: 20,
-
-    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
-      order: 2,
-      width: '100%',
-      marginLeft: 20,
-      marginRight: 0,
-    },
-  },
-
-  button: {
-    flexShrink: 0,
-    marginLeft: 10,
-
-    [`@media (max-width: ${ScreenConfig.M.max}px)`]: {
-      position: 'absolute',
-      bottom: 0,
-      right: CONTAINER_PADDING,
-    },
-
-    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
-      right: CONTAINER_PADDING_MOBILE,
-    },
-  },
-
-  carouselContainer: {
-    position: 'relative',
-
-    [`@media (max-width: ${ScreenConfig.XS.max}px)`]: {
-      paddingBottom: 80,
-    },
-  },
 }
 
 ProjectsCarousel.propTypes = {
@@ -229,10 +226,7 @@ ProjectsCarousel.defaultProps = {
   description: null,
 }
 
-export default compose(
-  Radium,
-  withMediaQueries({
-    viewportIsMOrLess: true,
-    viewportIsXSOrLess: true,
-  }),
-)(ProjectsCarousel)
+export default withMediaQueries({
+  viewportIsMOrLess: true,
+  viewportIsXSOrLess: true,
+})(ProjectsCarousel)
