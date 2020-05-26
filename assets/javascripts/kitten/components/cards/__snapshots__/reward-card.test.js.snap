@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-fznyAO kngrya"
+  className="sc-VigVT imModP"
 >
   <div
     style={
@@ -36,7 +36,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <div
-        className="sc-AxiKw kcCpID k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
+        className="sc-htpNat kMsjRF k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
         color={null}
         style={
           Object {
@@ -57,7 +57,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 <div
-  className="sc-fznyAO kngrya"
+  className="sc-VigVT imModP"
 >
   <div
     style={
@@ -78,18 +78,18 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
       }
     >
       <div
-        className="sc-AxmLO bTYafk"
+        className="sc-htoDjs fBtelS"
       >
         <span
-          className="sc-AxhCb jkxheH"
+          className="sc-bxivhb hdmzkI"
           disabled={false}
         >
           <span
-            className="sc-AxhUy jrGfRa"
+            className="sc-ifAKCX jpUFjV"
           >
             <svg
               aria-hidden={true}
-              className="sc-fzoLsD hTkdvG k-IconBadge__svg"
+              className="sc-iwsKbI jbNRSm k-IconBadge__svg"
               height="28"
               viewBox="0 0 19 28"
               width="19"
@@ -104,7 +104,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
           </span>
         </span>
         <div
-          className="sc-fzozJi bIJfbc"
+          className="sc-dnqmqq ghBYzy"
         >
           <span
             className="k-u-color-font1 k-u-size-nano k-u-weight-bold"
@@ -132,7 +132,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <div
-        className="sc-AxiKw kcCpID k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
+        className="sc-htpNat kMsjRF k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
         color={null}
         style={
           Object {
@@ -153,7 +153,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="sc-fznyAO kngrya"
+  className="sc-VigVT imModP"
 >
   <div
     style={
@@ -174,18 +174,18 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       }
     >
       <div
-        className="sc-AxgMl hASlPc"
+        className="sc-EHOje dYJxHU"
       >
         <span
-          className="sc-AxhCb jkxheH"
+          className="sc-bxivhb hdmzkI"
           disabled={false}
         >
           <span
-            className="sc-AxhUy jrGfRa"
+            className="sc-ifAKCX jpUFjV"
           >
             <svg
               aria-hidden={true}
-              className="sc-Axmtr douNhl k-IconBadge__svg"
+              className="sc-gzVnrw gHlkJw k-IconBadge__svg"
               height="16"
               viewBox="0 0 18 16"
               width="18"
@@ -201,7 +201,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           </span>
         </span>
         <div
-          className="sc-AxheI kzcuhL"
+          className="sc-bZQynM hCobU"
         >
           <span
             className="k-u-color-font1 k-u-size-nano k-u-weight-bold"
@@ -229,7 +229,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         100$
       </h6>
       <div
-        className="sc-AxiKw kcCpID k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
+        className="sc-htpNat kMsjRF k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
         color={null}
         style={
           Object {
@@ -249,11 +249,11 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
       </p>
       <ul
-        className="sc-fzoyAV fiAkmP"
+        className="sc-chPdSV cPMQOk"
       >
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular sc-fzpans eDrBTy"
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular sc-gZMcBi bRHmvB"
             disabled={false}
           >
             Contributors: 
@@ -266,7 +266,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular sc-fzpans eDrBTy"
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular sc-gZMcBi bRHmvB"
             disabled={false}
           >
             Availability: 
@@ -279,7 +279,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular sc-fzpans djAKEm"
+            className="k-u-color-font1 k-u-size-tiny k-u-weight-regular sc-gZMcBi dqBOga"
             disabled={false}
           >
             Delivery: 
@@ -307,7 +307,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     >
       <img
         alt="My reward"
-        className="sc-fzplWN dLGokl"
+        className="sc-gqjmRU XAhRh"
         disabled={false}
         src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
       />
@@ -324,7 +324,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     }
   >
     <span
-      className="sc-AxhCb dbedwk"
+      className="sc-bxivhb jPuimP"
       disabled={false}
       style={
         Object {
@@ -333,7 +333,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
       }
     >
       <span
-        className="sc-AxhUy efrIZw"
+        className="sc-ifAKCX hUlZlJ"
       >
         <svg
           className="k-IconBadge__svg"
@@ -393,7 +393,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
   withoutBorder={false}
 >
   <div
-    className="sc-AxjAm ekdWbF"
+    className="sc-bdVaJa fdLNbY"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -415,10 +415,10 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-AxjAm jDynbx"
+            className="sc-bdVaJa zBUGX"
           >
             <h1
-              className="sc-AxirZ gEwSiw"
+              className="sc-bwzfXH hkXZKS"
               style={
                 Object {
                   "color": "#222",
@@ -429,10 +429,10 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="sc-AxjAm ccCISE"
+            className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-htpNat kMsjRF k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {
@@ -443,7 +443,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             />
           </div>
           <div
-            className="sc-AxjAm bpEnKz"
+            className="sc-bdVaJa gSHEXD"
           >
             <p
               className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
@@ -457,7 +457,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            className="sc-AxjAm bsGvJV"
+            className="sc-bdVaJa ggQxmM"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -477,7 +477,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-AxjAm ccCISE"
+            className="sc-bdVaJa iDiPml"
           >
             <span
               className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
@@ -530,7 +530,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="sc-AxjAm iOcWzD"
+          className="sc-bdVaJa jtnNso"
         >
           <button
             aria-labelledby="Custom text button"
@@ -556,7 +556,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             Custom text button
           </button>
           <div
-            className="sc-AxjAm ksLovO"
+            className="sc-bdVaJa jtfdLD"
           >
             <div
               data-radium={true}
@@ -568,7 +568,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
               }
             >
               <span
-                className="sc-AxhCb dbedwk"
+                className="sc-bxivhb jPuimP"
                 disabled={false}
                 style={
                   Object {
@@ -577,7 +577,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
                 }
               >
                 <span
-                  className="sc-AxhUy efrIZw"
+                  className="sc-ifAKCX hUlZlJ"
                 >
                   <svg
                     className="k-IconBadge__svg"
@@ -626,7 +626,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
         style={Object {}}
       >
         <div
-          className="sc-AxjAm StDqN"
+          className="sc-bdVaJa bDWFJH"
         >
           <div
             data-radium={true}

@@ -2,16 +2,16 @@
 
 exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
 <div
-  className="sc-fzoLsD eTqHMK"
+  className="sc-iwsKbI ghJpUv"
 >
   <div
-    className="sc-AxirZ gGevlS"
+    className="sc-bwzfXH fVTbJN"
   >
     <div
-      className="sc-AxiKw brNpYR"
+      className="sc-htpNat dEQIYH"
     >
       <div
-        className="sc-AxhUy gBoOQP"
+        className="sc-ifAKCX eOkFuq"
       >
         <svg
           height="25"
@@ -35,7 +35,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         </svg>
       </div>
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxhCb juvezE"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-bxivhb eOJfhC"
         tabIndex={null}
       >
         <img
@@ -52,13 +52,13 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
     </span>
   </div>
   <span
-    className="sc-fzpans fJEoxT"
+    className="sc-gZMcBi hxoBK"
   >
     <div
-      className="sc-fzplWN hDQaPm"
+      className="sc-gqjmRU cyDemO"
     >
       <div
-        className="sc-AxjAm hdpPkN"
+        className="sc-bdVaJa hOgMxB"
       >
         <span
           className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
@@ -67,16 +67,16 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         </span>
       </div>
       <div
-        className="sc-fznyAO hsRUUQ"
+        className="sc-VigVT efojrA"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light sc-AxmLO wFaYn"
+          className="k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
         >
           Custom text
         </span>
       </div>
       <span
-        className="sc-fzozJi UmOYe"
+        className="sc-dnqmqq cigwiU"
       />
     </div>
     
@@ -86,16 +86,16 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
 
 exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
 <div
-  className="sc-fzoLsD eTqHMK"
+  className="sc-iwsKbI ghJpUv"
 >
   <div
-    className="sc-AxirZ gGevlS"
+    className="sc-bwzfXH fVTbJN"
   >
     <div
-      className="sc-AxiKw brNpYR"
+      className="sc-htpNat dEQIYH"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxhCb juvezE"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-bxivhb eOJfhC"
         tabIndex={null}
       >
         <img
@@ -112,13 +112,13 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     </span>
   </div>
   <span
-    className="sc-fzpans fJEoxT"
+    className="sc-gZMcBi hxoBK"
   >
     <div
-      className="sc-fzplWN hDQaPm"
+      className="sc-gqjmRU cyDemO"
     >
       <div
-        className="sc-AxjAm hdpPkN"
+        className="sc-bdVaJa hOgMxB"
       >
         <span
           className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
@@ -127,23 +127,23 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         </span>
       </div>
       <div
-        className="sc-fznyAO hsRUUQ"
+        className="sc-VigVT efojrA"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light sc-AxmLO wFaYn"
+          className="k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
         >
           Custom text
         </span>
       </div>
       <span
-        className="sc-fzozJi UmOYe"
+        className="sc-dnqmqq cigwiU"
       />
     </div>
     <div
-      className="sc-AxjAm eMEgJX"
+      className="sc-bdVaJa edDsZV"
     >
       <div
-        className="k-u-color-font1 k-u-size-micro k-u-weight-bold sc-fznKkj krVUHp"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-bold sc-jTzLTM fSqnUK"
       >
         <div>
           <a
@@ -175,16 +175,16 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
 
 exports[`<Comment /> should match its empty snapshot 1`] = `
 <div
-  className="sc-fzoLsD eTqHMK"
+  className="sc-iwsKbI ghJpUv"
 >
   <div
-    className="sc-AxirZ gGevlS"
+    className="sc-bwzfXH fVTbJN"
   >
     <div
-      className="sc-AxiKw brNpYR"
+      className="sc-htpNat dEQIYH"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxhCb juvezE"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-bxivhb eOJfhC"
         tabIndex={null}
       >
         <img
@@ -201,13 +201,13 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     </span>
   </div>
   <span
-    className="sc-fzpans fJEoxT"
+    className="sc-gZMcBi hxoBK"
   >
     <div
-      className="sc-fzplWN hDQaPm"
+      className="sc-gqjmRU cyDemO"
     >
       <div
-        className="sc-AxjAm hdpPkN"
+        className="sc-bdVaJa hOgMxB"
       >
         <span
           className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
@@ -216,30 +216,30 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         </span>
       </div>
       <div
-        className="sc-fznyAO cIlDXb"
+        className="sc-VigVT eWLelC"
       >
         <span
-          className="k-u-color-font1 k-u-weight-light sc-AxmLO wFaYn"
+          className="k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
         >
           Custom text
         </span>
       </div>
       <span
-        className="sc-fzozJi UmOYe"
+        className="sc-dnqmqq cigwiU"
       />
     </div>
     <div
-      className="sc-fznZeY bTGFGy"
+      className="sc-fjdhpX jfYGMe"
     >
       <button
         aria-pressed="true"
-        className="sc-AxheI ikHlJJ"
+        className="sc-bZQynM erhepU"
         role="button"
       >
         
         <svg
           aria-hidden="true"
-          className="sc-Axmtr ijteKc"
+          className="sc-gzVnrw cYyNLJ"
           fill="#222"
           focusable="false"
           viewBox="0 0 14 12"
