@@ -23,9 +23,9 @@ const StyledMeterCircle = styled.circle`
   stroke-dasharray: ${({ r }) => getDashLength(r)};
   stroke-dashoffset: ${({ r, progressValue }) =>
     getDashOffset({ r, progressValue })};
-  animation: ${rotateAnimate} 1.4s ease-out;
   transform: rotate(-90deg);
   transform-origin: ${({ cx, cy }) => `${pxToRem(cx)} ${pxToRem(cy)}`};
+  animation: ${rotateAnimate} 1.4s ease-out;
 `
 
 export const ProgressRing = ({
@@ -53,7 +53,6 @@ export const ProgressRing = ({
       xmlns="http://www.w3.org/2000/svg"
     >
       <circle
-        className="ProgressRing__backgroundCircle"
         cx={circleX}
         cy={circleY}
         r={radius}
