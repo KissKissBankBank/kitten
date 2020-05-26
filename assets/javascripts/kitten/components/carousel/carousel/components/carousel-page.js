@@ -26,6 +26,8 @@ const StyledItem = styled.div`
 export class CarouselPage extends Component {
   render() {
     const {
+      legacyMode,
+      data,
       numColumns,
       itemMinWidth,
       itemMarginBetween,
@@ -44,7 +46,9 @@ export class CarouselPage extends Component {
             itemMarginBetween={itemMarginBetween}
             className="k-Carousel__page__item"
           >
-            {renderItem[index]}
+            {legacyMode
+              ? data[index] && renderItem({ item: data[index] })
+              : renderItem[index]}
           </StyledItem>
         ))}
       </StyledPage>

@@ -155,6 +155,8 @@ export class CarouselInner extends Component {
 
   render() {
     const {
+      legacyMode,
+      data,
       itemMinWidth,
       renderItem,
       indexPageVisible,
@@ -176,25 +178,35 @@ export class CarouselInner extends Component {
         showOtherPages={showOtherPages}
         className="k-Carousel__inner"
       >
-        {rangePage.map(index => (
-          <StyledCarouselPageContainer
-            key={index}
-            index={index}
-            indexPageVisible={indexPageVisible}
-            itemMarginBetween={itemMarginBetween}
-            onClick={this.handlePageClick(index)}
-            showOtherPages={showOtherPages}
-            className={pagesClassName}
-            className="k-Carousel__inner__pageContainer"
-          >
-            <CarouselPage
-              numColumns={numColumns}
-              itemMinWidth={itemMinWidth}
+        {rangePage.map(index => {
+          return (
+            <StyledCarouselPageContainer
+              key={index}
+              index={index}
+              indexPageVisible={indexPageVisible}
               itemMarginBetween={itemMarginBetween}
-              renderItem={getDataForPage(renderItem, index, numColumns)}
-            />
-          </StyledCarouselPageContainer>
-        ))}
+              onClick={this.handlePageClick(index)}
+              showOtherPages={showOtherPages}
+              className={pagesClassName}
+              className="k-Carousel__inner__pageContainer"
+            >
+              <CarouselPage
+                legacyMode={legacyMode}
+                data={
+                  legacyMode ? getDataForPage(data, index, numColumns) : null
+                }
+                numColumns={numColumns}
+                itemMinWidth={itemMinWidth}
+                itemMarginBetween={itemMarginBetween}
+                renderItem={
+                  legacyMode
+                    ? renderItem
+                    : getDataForPage(renderItem, index, numColumns)
+                }
+              />
+            </StyledCarouselPageContainer>
+          )
+        })}
       </StyledCarouselInner>
     )
   }
