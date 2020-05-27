@@ -4,9 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Bad position for `ProgressRing` on Chrome.
-- Fix: No SSR for `<Modal />`.
-- Feature: Add `hover` on `embed-player` button. 
+## [2.71.0] - 2020-05-27
+Feature: 
+- Add `hover` on `embed-player` button.
+
+Fixes: 
+- Bad position for `ProgressRing` on Chrome.
+- No SSR for `<Modal />`.
+
+Rollback:
+- Back to `styled-components` v4 because of SSR issues.
 
 ## [2.70.0] - 2020-05-15
 
