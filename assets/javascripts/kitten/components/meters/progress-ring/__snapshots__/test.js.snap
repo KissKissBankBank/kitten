@@ -9,17 +9,20 @@ exports[`<ProgressRing /> by default matches with snapshot 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   <circle
-    className="sc-bdVaJa iELFhm"
     cx={25}
     cy={25}
+    fill="transparent"
     r={20}
-    strokeWidth={5}
+    stroke="#eee"
+    stroke-width={5}
   />
   <circle
-    className="sc-bwzfXH gFDYDc"
+    className="sc-bdVaJa cQmfsG"
     cx={25}
     cy={25}
+    fill="transparent"
     r={20}
+    stroke="#19b4fa"
     strokeWidth={5}
   />
 </svg>
