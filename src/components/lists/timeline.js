@@ -17,11 +17,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -39,7 +39,7 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typographyConfig = _interopRequireDefault(require("../../constants/typography-config"));
 
-function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -120,7 +120,7 @@ var styles = {
     padding: 0,
     margin: 0
   },
-  circle: (0, _extends3.default)({
+  circle: (0, _extends3.default)((0, _extends3.default)({
     boxSizing: 'border-box',
     height: circleSize,
     width: circleSize,
@@ -135,7 +135,7 @@ var styles = {
     lineHeight: 0,
     flex: "0 0 ".concat(circleSize, "px"),
     position: 'relative'
-  }, _typographyConfig.default.fontStyles.bold, (0, _defineProperty2.default)({}, "@media (max-width: ".concat(_screenConfig.ScreenConfig.XS.max, "px)"), {
+  }, _typographyConfig.default.fontStyles.bold), {}, (0, _defineProperty2.default)({}, "@media (max-width: ".concat(_screenConfig.ScreenConfig.XS.max, "px)"), {
     marginRight: 20
   })),
   circleMarger: {

@@ -2,16 +2,16 @@
 
 exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`] = `
 <div
-  className="sc-AxgMl knLHFF"
+  className="sc-EHOje jkvTMv"
 >
   <div
-    className="sc-AxirZ gGevlS"
+    className="sc-bwzfXH fVTbJN"
   >
     <div
-      className="sc-AxiKw brNpYR"
+      className="sc-htpNat dEQIYH"
     >
       <div
-        className="sc-AxhUy gBoOQP"
+        className="sc-ifAKCX eOkFuq"
       >
         <svg
           height="25"
@@ -35,7 +35,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         </svg>
       </div>
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxhCb juvezE"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-bxivhb eOJfhC"
         tabIndex={null}
       >
         <img
@@ -47,17 +47,17 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
     </div>
   </div>
   <div
-    className="sc-AxheI AGTJS"
+    className="sc-bZQynM iZtGOe"
   >
     <div
-      className="sc-Axmtr esHwVP"
+      className="sc-gzVnrw iAreqW"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="sc-AxmLO gKBMez"
+        className="sc-htoDjs bwQFzg"
         defaultValue=""
         disabled={false}
         id={null}
@@ -66,15 +66,15 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         rows="1"
       />
       <div
-        className="sc-fzozJi hsWJZb"
+        className="sc-dnqmqq iEcCzR"
       >
         <span
-          className="sc-fzoLsD gFlHls"
+          className="sc-iwsKbI fhGaBs"
         />
       </div>
     </div>
     <div
-      className="sc-AxjAm lhRnXR"
+      className="sc-bdVaJa bNTSMG"
     >
       <span
         className="k-u-color-error k-u-size-micro k-u-weight-regular"
@@ -89,16 +89,16 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
 
 exports[`<CommentForm /> should match its empty snapshot 1`] = `
 <div
-  className="sc-AxgMl knLHFF"
+  className="sc-EHOje jkvTMv"
 >
   <div
-    className="sc-AxirZ gGevlS"
+    className="sc-bwzfXH fVTbJN"
   >
     <div
-      className="sc-AxiKw brNpYR"
+      className="sc-htpNat dEQIYH"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-AxhCb juvezE"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-bxivhb eOJfhC"
         tabIndex={null}
       >
         <img
@@ -110,17 +110,17 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     </div>
   </div>
   <div
-    className="sc-AxheI AGTJS"
+    className="sc-bZQynM iZtGOe"
   >
     <div
-      className="sc-Axmtr esHwVP"
+      className="sc-gzVnrw iAreqW"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="sc-AxmLO gKBMez"
+        className="sc-htoDjs bwQFzg"
         defaultValue=""
         disabled={false}
         id="custom-textarea-id"
@@ -129,15 +129,15 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         rows="1"
       />
       <div
-        className="sc-fzozJi hsWJZb"
+        className="sc-dnqmqq iEcCzR"
       >
         <span
-          className="sc-fzoLsD gFlHls"
+          className="sc-iwsKbI fhGaBs"
         />
       </div>
     </div>
     <div
-      className="sc-AxjAm lhRnXR"
+      className="sc-bdVaJa bNTSMG"
     >
       <span
         className="k-u-color-error k-u-size-micro k-u-weight-regular"

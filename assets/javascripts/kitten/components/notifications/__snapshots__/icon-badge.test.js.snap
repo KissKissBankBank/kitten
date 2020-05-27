@@ -2,11 +2,11 @@
 
 exports[`<IconBadge /> by default matches with snapshot 1`] = `
 <span
-  className="sc-AxjAm jxauJd"
+  className="sc-bdVaJa gCpINE"
   disabled={false}
 >
   <span
-    className="sc-AxirZ ejmrxT"
+    className="sc-bwzfXH khDaOp"
   >
     Custom children
   </span>

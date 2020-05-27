@@ -70,7 +70,7 @@ var HorizontalStroke = function HorizontalStroke(_ref2) {
 
   return /*#__PURE__*/_react.default.createElement(StyledHorizontalStroke, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-HorizontalStroke', className, modifierClassName()),
-    style: (0, _extends2.default)({}, customStyles(), {}, style),
+    style: (0, _extends2.default)((0, _extends2.default)({}, customStyles()), style),
     color: color
   }));
 };

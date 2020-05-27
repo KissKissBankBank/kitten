@@ -19,11 +19,11 @@ var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/creat
 
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -31,7 +31,7 @@ var _reactPlacesAutocomplete = _interopRequireWildcard(require("react-places-aut
 
 var _locationIcon = require("../../components/icons/location-icon");
 
-function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -117,7 +117,7 @@ var LocationInput = /*#__PURE__*/function (_Component) {
         }, formattedSuggestion.secondaryText));
       };
 
-      var finalInputProps = (0, _extends2.default)({}, inputProps, {
+      var finalInputProps = (0, _extends2.default)((0, _extends2.default)({}, inputProps), {}, {
         value: this.state.address,
         onChange: this.handleChange
       });
