@@ -13,8 +13,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: add `orange` to colors config.
 - Feature: Add `micro` value to `size` `HorizontalStroke` prop.
 - Fix: CrowdfundingCard title image marge.
-- Fix: Bad position for `ProgressRing` on Chrome.
-- Fix: No SSR for `<Modal />`.
+
+## [2.71.0] - 2020-05-27
+Feature:
+- Add `hover` on `embed-player` button.
+
+Fixes:
+- Bad position for `ProgressRing` on Chrome.
+- No SSR for `<Modal />`.
+
+Rollback:
+- Back to `styled-components` v4 because of SSR issues.
 
 ## [2.70.0] - 2020-05-15
 
