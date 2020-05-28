@@ -388,10 +388,17 @@ class CarouselBase extends Component {
     if (!!data && !!renderItem) {
       if (viewportIsMOrLess) {
         return (
-          <div className={classNames('k-Carousel', className)}>
+          <StyledLegacyCarousel
+            className={classNames(
+              'k-Carousel',
+              className,
+              'k-LegacyCarousel',
+              'k-LegacyCarousel--noGrid',
+            )}
+          >
             {this.renderCarouselInner()}
             {this.renderPagination()}
-          </div>
+          </StyledLegacyCarousel>
         )
       }
 
@@ -401,9 +408,16 @@ class CarouselBase extends Component {
             col={withoutLeftOffset ? '11' : '10'}
             offset={withoutLeftOffset ? '0' : '1'}
           >
-            <div className={classNames('k-Carousel', className)}>
+            <StyledLegacyCarousel
+              className={classNames(
+                'k-Carousel',
+                className,
+                'k-LegacyCarousel',
+                'k-LegacyCarousel--inGrid',
+              )}
+            >
               {this.renderCarouselInner()}
-            </div>
+            </StyledLegacyCarousel>
           </GridCol>
 
           <GridCol col="1">{this.renderPagination()}</GridCol>
@@ -422,6 +436,24 @@ class CarouselBase extends Component {
     )
   }
 }
+
+const StyledLegacyCarousel = styled.div`
+  // always displayed in smaller than desktop
+  &.k-LegacyCarousel--noGrid {
+    padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
+    scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      padding: 0 ${pxToRem(CONTAINER_PADDING)};
+      scroll-padding: ${pxToRem(CONTAINER_PADDING)};
+    }
+  }
+
+  // always displayed in desktop
+  &.k-LegacyCarousel--inGrid .k-Carousel__pagination__buttonContainer {
+    flex-direction: column-reverse !important;
+  }
+`
 
 const flexContainerdirectionStyle = positionType => ({
   paginationPosition,
