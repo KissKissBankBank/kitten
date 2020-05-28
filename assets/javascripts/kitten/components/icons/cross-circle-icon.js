@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 import COLORS from '../../constants/colors-config'
 import { computeFromRatio } from '../../helpers/utils/ratio'
 
+const DEFAULT_WIDTH = 20
+const DEFAULT_HEIGHT = 20
+
 export const CrossCircleIcon = ({
   circleColor,
   crossColor,
@@ -11,10 +14,8 @@ export const CrossCircleIcon = ({
   title,
   ...props
 }) => {
-  const DEFAULT_WIDTH = 20
-  const DEFAULT_HEIGHT = 20
-
   const computed = computeFromRatio({
+    defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
     width,
     height,
