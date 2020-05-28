@@ -116,6 +116,22 @@ export const StyledCrowdfundingCard = styled.div`
     }
   }
 
+  .k-CrowdfundingCard__additionalInfo {
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      padding: 0 ${COMPONENT_GUTTER};
+    }
+
+    > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
   .k-CrowdfundingCard__subtitle__horizontalStroke {
     flex-shrink: 0;
     margin: ${pxToRem(5)} ${COMPONENT_GUTTER} ${pxToRem(5)} 0;

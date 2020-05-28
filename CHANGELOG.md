@@ -4,6 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `widgetState` and `additionalInfo` props to `CrowdfundingCard`
+  component.
+- Feature: Update `CheckedCircleIcon`, `CrossCircleIcon`, `CrossIcon`,
+  `LockIcon`, `WarningCircleIcon` components by adding title, width, height
+  and sometimes color props.
+- Feature: Create `FlashCircleIcon`.
+- Feature: add `orange` to colors config.
 - Fix: Bad position for `ProgressRing` on Chrome.
 - Fix: No SSR for `<Modal />`.
 
