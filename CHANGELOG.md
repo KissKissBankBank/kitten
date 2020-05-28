@@ -13,7 +13,7 @@ Features:
   `LockIcon`, `WarningCircleIcon` components by adding title, width, height
   and sometimes color props.
 - Create `FlashCircleIcon`.
-- add `orange` to colors config.
+- Add `orange` to colors config.
 - Add `micro` value to `size` `HorizontalStroke` prop.
 
 Fix:
