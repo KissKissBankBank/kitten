@@ -107,7 +107,7 @@ export const StyledCrowdfundingCard = styled.div`
   }
 
   .k-CrowdfundingCard__subtitle__subtitleText {
-    line-height: 1;
+    line-height: 1.2;
     flex: 1;
 
     &.k-CrowdfundingCard__subtitle__subtitleText--truncated {
@@ -121,6 +121,7 @@ export const StyledCrowdfundingCard = styled.div`
     white-space: nowrap;
     overflow: hidden;
     display: flex;
+    margin-top: ${pxToRem(10)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       padding: 0 ${COMPONENT_GUTTER};

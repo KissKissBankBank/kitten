@@ -11,6 +11,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   and sometimes color props.
 - Feature: Create `FlashCircleIcon`.
 - Feature: add `orange` to colors config.
+- Feature: Add `micro` value to `size` `HorizontalStroke` prop.
+- Fix: CrowdfundingCard title image marge.
 - Fix: Bad position for `ProgressRing` on Chrome.
 - Fix: No SSR for `<Modal />`.
 

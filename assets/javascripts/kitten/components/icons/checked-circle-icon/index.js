@@ -49,7 +49,6 @@ CheckedCircleIcon.prototype = {
 CheckedCircleIcon.defaultProps = {
   circleColor: COLORS.background1,
   checkedColor: COLORS.font1,
-  title: 'Checked circle',
 }
 
 export const checkedCircleIconAsString = ({ circleColor, checkedColor }) => {
