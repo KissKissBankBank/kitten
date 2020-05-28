@@ -43,6 +43,8 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styles = require("./styles");
 
+var _text = require("../../../components/typography/text");
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
@@ -74,28 +76,30 @@ var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
+          additionalInfo = _this$props.additionalInfo,
+          avatarProps = _this$props.avatarProps,
+          cardSubTitle = _this$props.cardSubTitle,
+          cardTitle = _this$props.cardTitle,
+          className = _this$props.className,
           href = _this$props.href,
           imageContainerBackground = _this$props.imageContainerBackground,
           imageProps = _this$props.imageProps,
-          avatarProps = _this$props.avatarProps,
-          ownerDescription = _this$props.ownerDescription,
-          ownerTitle = _this$props.ownerTitle,
-          loading = _this$props.loading,
-          stretch = _this$props.stretch,
-          state = _this$props.state,
-          cardTitle = _this$props.cardTitle,
-          cardSubTitle = _this$props.cardSubTitle,
-          titleTruncate = _this$props.titleTruncate,
-          subTitleTruncate = _this$props.subTitleTruncate,
-          titlesMinHeight = _this$props.titlesMinHeight,
-          titleProps = _this$props.titleProps,
           info1 = _this$props.info1,
           info2 = _this$props.info2,
           info3 = _this$props.info3,
+          loading = _this$props.loading,
+          ownerDescription = _this$props.ownerDescription,
+          ownerTitle = _this$props.ownerTitle,
           progress = _this$props.progress,
           progressColor = _this$props.progressColor,
-          className = _this$props.className,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["href", "imageContainerBackground", "imageProps", "avatarProps", "ownerDescription", "ownerTitle", "loading", "stretch", "state", "cardTitle", "cardSubTitle", "titleTruncate", "subTitleTruncate", "titlesMinHeight", "titleProps", "info1", "info2", "info3", "progress", "progressColor", "className"]);
+          state = _this$props.state,
+          stretch = _this$props.stretch,
+          subTitleTruncate = _this$props.subTitleTruncate,
+          titleProps = _this$props.titleProps,
+          titlesMinHeight = _this$props.titlesMinHeight,
+          titleTruncate = _this$props.titleTruncate,
+          widgetState = _this$props.widgetState,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "widgetState"]);
       return /*#__PURE__*/_react.default.createElement(_styles.StyledCrowdfundingCard, (0, _extends2.default)({}, others, {
         as: href ? 'a' : 'div',
         onClick: this.removeCurrentFocus,
@@ -122,7 +126,13 @@ var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
         subTitle: cardSubTitle,
         subTitleTruncate: subTitleTruncate,
         loading: loading
-      })), /*#__PURE__*/_react.default.createElement(_informations.default, {
+      }), additionalInfo && /*#__PURE__*/_react.default.createElement("span", {
+        className: "k-CrowdfundingCard__additionalInfo"
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
+        size: "micro",
+        lineHeight: "normal",
+        title: additionalInfo
+      }, additionalInfo))), /*#__PURE__*/_react.default.createElement(_informations.default, {
         info1: info1,
         info2: info2,
         info3: info3,
@@ -133,6 +143,7 @@ var CrowdfundingCard = /*#__PURE__*/function (_PureComponent) {
         loading: loading
       }), /*#__PURE__*/_react.default.createElement(_state.default, {
         state: state,
+        widgetState: widgetState,
         loading: loading
       }), loading && /*#__PURE__*/_react.default.createElement("span", {
         className: "k-CrowdfundingCard__loading"

@@ -4,15 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `widgetState` and `additionalInfo` props to `CrowdfundingCard`
+## [2.72.0] - 2020-05-28
+
+Features:
+- `widgetState` and `additionalInfo` props to `CrowdfundingCard`
   component.
-- Feature: Update `CheckedCircleIcon`, `CrossCircleIcon`, `CrossIcon`,
+- Update `CheckedCircleIcon`, `CrossCircleIcon`, `CrossIcon`,
   `LockIcon`, `WarningCircleIcon` components by adding title, width, height
   and sometimes color props.
-- Feature: Create `FlashCircleIcon`.
-- Feature: add `orange` to colors config.
-- Feature: Add `micro` value to `size` `HorizontalStroke` prop.
-- Fix: CrowdfundingCard title image marge.
+- Create `FlashCircleIcon`.
+- add `orange` to colors config.
+- Add `micro` value to `size` `HorizontalStroke` prop.
+
+Fix:
+- CrowdfundingCard title image marge.
 
 ## [2.71.0] - 2020-05-27
 
