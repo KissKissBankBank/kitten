@@ -20,7 +20,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       className="sc-EHOje hOqxns k-u-hidden@m-down"
     >
       <div
-        className="sc-htpNat kMsjRF k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
+        className="sc-htpNat tODhy k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
         color="#222"
         style={
           Object {
@@ -39,7 +39,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       className="sc-EHOje hOqxns k-u-hidden@m-down"
     >
       <div
-        className="sc-htpNat kMsjRF k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
+        className="sc-htpNat tODhy k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
         color="#222"
         style={
           Object {

@@ -6,6 +6,11 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import classNames from 'classnames'
 import { strokeModifierStylesWithoutMargin } from './common/stroke-modifier-styles'
 
+export const MICRO = css`
+  width: ${pxToRem(15)};
+  height: ${pxToRem(2)};
+`
+
 export const TINY = css`
   width: ${pxToRem(20)};
   height: ${pxToRem(2)};
@@ -29,6 +34,10 @@ export const HUGE = css`
 export const StyledHorizontalStroke = styled.div`
   border: none;
   background: ${({ color }) => color || COLORS.font1};
+
+  &.k-HorizontalStroke--size--micro {
+    ${MICRO}
+  }
 
   &.k-HorizontalStroke--size--tiny {
     ${TINY}
@@ -87,7 +96,7 @@ export const HorizontalStroke = ({
 }
 
 HorizontalStroke.propTypes = {
-  size: PropTypes.oneOf(['tiny', 'default', 'big', 'huge']),
+  size: PropTypes.oneOf(['micro', 'tiny', 'default', 'big', 'huge']),
   modifier: PropTypes.oneOf([
     'primary',
     'secondary',

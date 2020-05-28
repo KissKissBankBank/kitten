@@ -23,9 +23,6 @@ exports[`<IconContainer/> should match snapshot when we add an icon description 
       width={25}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        Checked circle
-      </title>
       <circle
         cx="10"
         cy="10"
@@ -34,7 +31,7 @@ exports[`<IconContainer/> should match snapshot when we add an icon description 
       />
       <path
         d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-        fill="#333"
+        fill="#222"
       />
     </svg>
   </div>
@@ -59,9 +56,6 @@ exports[`<IconContainer/> should match snapshot when we change color 1`] = `
       width={25}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        Checked circle
-      </title>
       <circle
         cx="10"
         cy="10"
@@ -70,7 +64,7 @@ exports[`<IconContainer/> should match snapshot when we change color 1`] = `
       />
       <path
         d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-        fill="#333"
+        fill="#222"
       />
     </svg>
   </div>
@@ -95,9 +89,6 @@ exports[`<IconContainer/> should match snapshot when we change position 1`] = `
       width={25}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        Checked circle
-      </title>
       <circle
         cx="10"
         cy="10"
@@ -106,7 +97,7 @@ exports[`<IconContainer/> should match snapshot when we change position 1`] = `
       />
       <path
         d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-        fill="#333"
+        fill="#222"
       />
     </svg>
   </div>
@@ -131,9 +122,6 @@ exports[`<IconContainer/> should match snapshot when we change width and height 
       width={30}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        Checked circle
-      </title>
       <circle
         cx="10"
         cy="10"
@@ -142,7 +130,7 @@ exports[`<IconContainer/> should match snapshot when we change width and height 
       />
       <path
         d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-        fill="#333"
+        fill="#222"
       />
     </svg>
   </div>
@@ -167,9 +155,6 @@ exports[`<IconContainer/> should match snapshot with default behavior 1`] = `
       width={25}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        Checked circle
-      </title>
       <circle
         cx="10"
         cy="10"
@@ -178,7 +163,7 @@ exports[`<IconContainer/> should match snapshot with default behavior 1`] = `
       />
       <path
         d="M8.232 13.89l.707.706 5.656-5.657-1.414-1.415-4.243 4.243-2.122-2.122-1.414 1.415 2.828 2.83z"
-        fill="#333"
+        fill="#222"
       />
     </svg>
   </div>

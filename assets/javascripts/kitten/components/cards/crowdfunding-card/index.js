@@ -8,6 +8,7 @@ import ProgressBar from './components/progress'
 import State from './components/state'
 import classNames from 'classnames'
 import { StyledCrowdfundingCard } from './styles'
+import { Text } from '../../../components/typography/text'
 
 export class CrowdfundingCard extends PureComponent {
   static propTypes = {
@@ -28,27 +29,29 @@ export class CrowdfundingCard extends PureComponent {
 
   render() {
     const {
+      additionalInfo,
+      avatarProps,
+      cardSubTitle,
+      cardTitle,
+      className,
       href,
       imageContainerBackground,
       imageProps,
-      avatarProps,
-      ownerDescription,
-      ownerTitle,
-      loading,
-      stretch,
-      state,
-      cardTitle,
-      cardSubTitle,
-      titleTruncate,
-      subTitleTruncate,
-      titlesMinHeight,
-      titleProps,
       info1,
       info2,
       info3,
+      loading,
+      ownerDescription,
+      ownerTitle,
       progress,
       progressColor,
-      className,
+      state,
+      stretch,
+      subTitleTruncate,
+      titleProps,
+      titlesMinHeight,
+      titleTruncate,
+      widgetState,
       ...others
     } = this.props
 
@@ -88,6 +91,13 @@ export class CrowdfundingCard extends PureComponent {
             subTitleTruncate={subTitleTruncate}
             loading={loading}
           />
+          {additionalInfo && (
+            <span className="k-CrowdfundingCard__additionalInfo">
+              <Text size="micro" lineHeight="normal" title={additionalInfo}>
+                {additionalInfo}
+              </Text>
+            </span>
+          )}
         </div>
         <Informations
           info1={info1}
@@ -100,7 +110,7 @@ export class CrowdfundingCard extends PureComponent {
           progressColor={progressColor}
           loading={loading}
         />
-        <State state={state} loading={loading} />
+        <State state={state} widgetState={widgetState} loading={loading} />
 
         {loading && <span className="k-CrowdfundingCard__loading" />}
       </StyledCrowdfundingCard>

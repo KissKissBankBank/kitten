@@ -6,9 +6,9 @@ import { computeFromRatio } from '../../helpers/utils/ratio'
 const DEFAULT_WIDTH = 20
 const DEFAULT_HEIGHT = 20
 
-export const CrossCircleIcon = ({
+export const FlashCircleIcon = ({
   circleColor,
-  crossColor,
+  flashColor,
   width,
   height,
   title,
@@ -32,22 +32,23 @@ export const CrossCircleIcon = ({
       {title && <title>{title}</title>}
       <circle fill={circleColor} cx="10" cy="10" r="10" />
       <path
-        fill={crossColor}
-        d="M11.414 10l2.122-2.12-1.415-1.416L10 8.586 7.88 6.464 6.463 7.88 8.586 10l-2.122 2.12 1.415 1.416L10 11.414l2.12 2.122 1.416-1.415L11.414 10z"
+        d="m6 10 6-6-1.25 6h3.25l-6 6 1.25-6z"
+        fill={flashColor}
+        fillRule="evenodd"
       />
     </svg>
   )
 }
 
-CrossCircleIcon.prototype = {
+FlashCircleIcon.prototype = {
   circleColor: PropTypes.string,
-  crossColor: PropTypes.string,
+  flashColor: PropTypes.string,
   title: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
-CrossCircleIcon.defaultProps = {
+FlashCircleIcon.defaultProps = {
   circleColor: COLORS.background1,
-  crossColor: COLORS.font1,
+  flashColor: COLORS.font1,
 }

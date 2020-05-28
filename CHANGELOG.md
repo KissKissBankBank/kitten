@@ -4,11 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `widgetState` and `additionalInfo` props to `CrowdfundingCard`
+  component.
+- Feature: Update `CheckedCircleIcon`, `CrossCircleIcon`, `CrossIcon`,
+  `LockIcon`, `WarningCircleIcon` components by adding title, width, height
+  and sometimes color props.
+- Feature: Create `FlashCircleIcon`.
+- Feature: add `orange` to colors config.
+- Feature: Add `micro` value to `size` `HorizontalStroke` prop.
+- Fix: CrowdfundingCard title image marge.
+
 ## [2.71.0] - 2020-05-27
-Feature: 
+
+Feature:
 - Add `hover` on `embed-player` button.
 
-Fixes: 
+Fixes:
 - Bad position for `ProgressRing` on Chrome.
 - No SSR for `<Modal />`.
 
