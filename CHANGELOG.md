@@ -15,6 +15,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: CrowdfundingCard title image marge.
 
 ## [2.71.0] - 2020-05-27
+
 Feature:
 - Add `hover` on `embed-player` button.
 
