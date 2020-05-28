@@ -52,7 +52,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-htpNat kMsjRF k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-htpNat tODhy k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {
@@ -148,7 +148,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-htpNat kMsjRF k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-htpNat tODhy k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {
@@ -439,7 +439,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-htpNat kMsjRF k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-htpNat tODhy k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {

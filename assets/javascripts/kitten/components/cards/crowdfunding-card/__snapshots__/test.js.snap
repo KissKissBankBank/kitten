@@ -132,7 +132,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 .c0 .k-CrowdfundingCard__subtitle__subtitleText {
-  line-height: 1;
+  line-height: 1.2;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -151,6 +151,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 0.625rem;
 }
 
 .c0 .k-CrowdfundingCard__additionalInfo > * {
@@ -465,7 +466,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
         </span>
       </div>
       <div
-        className="k-CrowdfundingCard__image__owner"
+        className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
       >
         <div
           className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
@@ -653,7 +654,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 .c0 .k-CrowdfundingCard__subtitle__subtitleText {
-  line-height: 1;
+  line-height: 1.2;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -672,6 +673,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 0.625rem;
 }
 
 .c0 .k-CrowdfundingCard__additionalInfo > * {
@@ -1085,7 +1087,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
         </span>
       </div>
       <div
-        className="k-CrowdfundingCard__image__owner"
+        className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
       >
         <div
           className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"

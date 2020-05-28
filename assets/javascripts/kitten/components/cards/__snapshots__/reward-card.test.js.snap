@@ -36,7 +36,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <div
-        className="sc-htpNat kMsjRF k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
+        className="sc-htpNat tODhy k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
         color={null}
         style={
           Object {
@@ -132,7 +132,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         Custom title mount
       </h6>
       <div
-        className="sc-htpNat kMsjRF k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
+        className="sc-htpNat tODhy k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
         color={null}
         style={
           Object {
@@ -229,7 +229,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         100$
       </h6>
       <div
-        className="sc-htpNat kMsjRF k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
+        className="sc-htpNat tODhy k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
         color={null}
         style={
           Object {
@@ -432,7 +432,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-htpNat kMsjRF k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-htpNat tODhy k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {
