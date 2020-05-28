@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [2.72.0] - 2020-05-28
 
 Features:
-- `widgetState` and `additionalInfo` props to `CrowdfundingCard`
+- Add `widgetState` and `additionalInfo` props to `CrowdfundingCard`
   component.
 - Update `CheckedCircleIcon`, `CrossCircleIcon`, `CrossIcon`,
   `LockIcon`, `WarningCircleIcon` components by adding title, width, height
@@ -17,7 +17,7 @@ Features:
 - Add `micro` value to `size` `HorizontalStroke` prop.
 
 Fix:
-- CrowdfundingCard title image marge.
+- `CrowdfundingCard` title image margin.
 
 ## [2.71.0] - 2020-05-27
 
