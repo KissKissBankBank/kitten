@@ -143,6 +143,21 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   overflow: hidden;
 }
 
+.c0 .k-CrowdfundingCard__additionalInfo {
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .k-CrowdfundingCard__additionalInfo > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .c0 .k-CrowdfundingCard__subtitle__horizontalStroke {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -363,6 +378,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     line-height: 1;
     padding: 0 0.625rem;
     margin-top: 0.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 .k-CrowdfundingCard__additionalInfo {
+    padding: 0 0.625rem;
   }
 }
 
@@ -641,6 +662,21 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 .c0 .k-CrowdfundingCard__subtitle__subtitleText.k-CrowdfundingCard__subtitle__subtitleText--truncated {
   white-space: nowrap;
   overflow: hidden;
+}
+
+.c0 .k-CrowdfundingCard__additionalInfo {
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0 .k-CrowdfundingCard__additionalInfo > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .c0 .k-CrowdfundingCard__subtitle__horizontalStroke {
@@ -956,6 +992,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
     line-height: 1;
     padding: 0 0.625rem;
     margin-top: 0.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 .k-CrowdfundingCard__additionalInfo {
+    padding: 0 0.625rem;
   }
 }
 
