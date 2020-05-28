@@ -83,7 +83,7 @@ var Image = /*#__PURE__*/function (_PureComponent) {
         img: !loading ? avatarProps : null,
         withoutPointerEvents: true
       })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "k-CrowdfundingCard__image__owner"
+        className: "k-CrowdfundingCard__image__owner k-u-margin-top-single"
       }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         className: "k-CrowdfundingCard__image__title",
         tag: "div",

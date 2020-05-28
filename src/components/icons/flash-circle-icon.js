@@ -5,7 +5,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.WarningCircleIcon = void 0;
+exports.FlashCircleIcon = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -22,13 +22,13 @@ var _ratio = require("../../helpers/utils/ratio");
 var DEFAULT_WIDTH = 20;
 var DEFAULT_HEIGHT = 20;
 
-var WarningCircleIcon = function WarningCircleIcon(_ref) {
+var FlashCircleIcon = function FlashCircleIcon(_ref) {
   var circleColor = _ref.circleColor,
-      warningColor = _ref.warningColor,
+      flashColor = _ref.flashColor,
       width = _ref.width,
       height = _ref.height,
       title = _ref.title,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["circleColor", "warningColor", "width", "height", "title"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["circleColor", "flashColor", "width", "height", "title"]);
   var computed = (0, _ratio.computeFromRatio)({
     defaultWidth: DEFAULT_WIDTH,
     defaultHeight: DEFAULT_HEIGHT,
@@ -46,20 +46,21 @@ var WarningCircleIcon = function WarningCircleIcon(_ref) {
     cy: "10",
     r: "10"
   }), /*#__PURE__*/_react.default.createElement("path", {
-    fill: warningColor,
-    d: "M9.034 7.088l-.07-1.862h2.072l-.07 1.862-.294 4.284H9.328l-.294-4.284zm-.28 6.398c0-.373.12-.684.357-.93.24-.248.535-.372.89-.372s.65.124.89.37c.237.248.356.56.356.932 0 .364-.12.67-.357.917-.24.247-.535.37-.89.37s-.65-.123-.89-.37c-.237-.247-.356-.553-.356-.917z"
+    d: "m6 10 6-6-1.25 6h3.25l-6 6 1.25-6z",
+    fill: flashColor,
+    fillRule: "evenodd"
   }));
 };
 
-exports.WarningCircleIcon = WarningCircleIcon;
-WarningCircleIcon.prototype = {
+exports.FlashCircleIcon = FlashCircleIcon;
+FlashCircleIcon.prototype = {
   circleColor: _propTypes.default.string,
-  warningColor: _propTypes.default.string,
+  flashColor: _propTypes.default.string,
   title: _propTypes.default.string,
   width: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   height: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
 };
-WarningCircleIcon.defaultProps = {
+FlashCircleIcon.defaultProps = {
   circleColor: _colorsConfig.default.background1,
-  warningColor: _colorsConfig.default.font1
+  flashColor: _colorsConfig.default.font1
 };
