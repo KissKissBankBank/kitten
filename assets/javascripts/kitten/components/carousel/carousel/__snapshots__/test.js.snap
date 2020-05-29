@@ -154,7 +154,7 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-AxmLO jFsqcN k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
+  className="sc-AxmLO lbZFtJ k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
 >
   <div
     className="k-Grid"
@@ -240,7 +240,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-AxmLO jFsqcN k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
+  className="sc-AxmLO lbZFtJ k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
 >
   <div
     className="k-Grid"
@@ -326,7 +326,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-AxmLO jFsqcN k-Carousel k-LegacyCarousel k-LegacyCarousel--noGrid"
+  className="sc-AxmLO lbZFtJ k-Carousel k-LegacyCarousel k-LegacyCarousel--noGrid"
 >
   <div
     className="sc-AxgMl jWGKu k-Carousel__inner"
