@@ -438,13 +438,24 @@ class CarouselBase extends Component {
 
 const StyledLegacyCarousel = styled.div`
   // always displayed in smaller than desktop
-  &.k-LegacyCarousel--noGrid {
+  &.k-LegacyCarousel--noGrid .k-Carousel__inner {
     padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
     scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+
+    &::after {
+      content: '';
+      display: block;
+      flex-shrink: 0;
+      width: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+    }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       padding: 0 ${pxToRem(CONTAINER_PADDING)};
       scroll-padding: ${pxToRem(CONTAINER_PADDING)};
+
+      &::after {
+        width: ${pxToRem(CONTAINER_PADDING)};
+      }
     }
   }
 
