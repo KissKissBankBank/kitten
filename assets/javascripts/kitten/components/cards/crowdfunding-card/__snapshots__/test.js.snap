@@ -586,7 +586,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
-  padding-top: calc( () * 100% );
+  padding-top: calc( (0.625) * 100% );
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > img {
