@@ -154,13 +154,13 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="k-Grid"
+  className="sc-AxmLO gpyUne k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
 >
   <div
-    className="k-Grid__col--10 k-Grid__col--offset-1"
+    className="k-Grid"
   >
     <div
-      className="sc-AxmLO gpyUne k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
+      className="k-Grid__col--10 k-Grid__col--offset-1"
     >
       <div
         className="sc-AxgMl jWGKu k-Carousel__inner"
@@ -231,22 +231,22 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
         </div>
       </div>
     </div>
+    <div
+      className="k-Grid__col--1"
+    />
   </div>
-  <div
-    className="k-Grid__col--1"
-  />
 </div>
 `;
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="k-Grid"
+  className="sc-AxmLO gpyUne k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
 >
   <div
-    className="k-Grid__col--11 k-Grid__col--offset-0"
+    className="k-Grid"
   >
     <div
-      className="sc-AxmLO gpyUne k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
+      className="k-Grid__col--11 k-Grid__col--offset-0"
     >
       <div
         className="sc-AxgMl jWGKu k-Carousel__inner"
@@ -317,10 +317,10 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
         </div>
       </div>
     </div>
+    <div
+      className="k-Grid__col--1"
+    />
   </div>
-  <div
-    className="k-Grid__col--1"
-  />
 </div>
 `;
 
