@@ -58,7 +58,7 @@ export const TeamCardIcons = ({
   )
 }
 
-const SocialLinks = ({ links }) => (
+const SocialLinks = ({ links = [] }) => (
   <>
     {links.map(link => {
       if (!link.href) return
