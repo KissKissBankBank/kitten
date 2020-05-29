@@ -6,10 +6,9 @@ import { Title } from '../../../../../components/typography/title'
 import { Text } from '../../../../../components/typography/text'
 import { ScreenConfig } from '../../../../../constants/screen-config'
 import { GridCol } from '../../../../../components/grid/grid'
-import { mediaQueries } from '../../../../../hoc/media-queries'
 import classNames from 'classnames'
 
-const StyledCard = styled.div`
+const StyledCard = styled.article`
   display: flex;
   align-items: center;
   margin-bottom: ${pxToRem(20)};
@@ -44,18 +43,6 @@ const StyledCard = styled.div`
     margin-right: ${pxToRem(30)};
     display: block;
     width: 100%;
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      margin-bottom: ${pxToRem(30)};
-    }
-
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-      margin-bottom: ${pxToRem(0)};
-    }
-
-    :last-child {
-      margin-bottom: 0;
-    }
   }
 
   .Partners__card__title {
@@ -96,19 +83,15 @@ const StyledCard = styled.div`
   }
 `
 
-const CardBase = ({
+export const Card = ({
   imageProps,
   title,
   text,
-  viewportIsXSOrLess,
   className,
   ...props
 }) => {
   return (
-    <StyledCard
-      className={classNames('Partners__card')}
-      {...props}
-    >
+    <StyledCard {...props}>
       <GridCol
         className="Partners__card__imageCol"
         col={6}
@@ -148,7 +131,7 @@ const CardBase = ({
   )
 }
 
-CardBase.propTypes = {
+Card.propTypes = {
   imageProps: PropTypes.shape({
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
@@ -156,7 +139,3 @@ CardBase.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 }
-
-export const Card = mediaQueries(CardBase, {
-  viewportIsXSOrLess: true,
-})

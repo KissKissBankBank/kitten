@@ -6,21 +6,8 @@ import { Title } from '../../../../components/typography/title'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
 import { mediaQueries } from '../../../../hoc/media-queries'
 import { Grid, GridCol } from '../../../../components/grid/grid'
-import { ScreenConfig } from '../../../../constants/screen-config'
 
 const StyledPartners = styled.div`
-  .Partners__mobileTablet {
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      display: none;
-    }
-  }
-
-  .Partners__desktop {    
-    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
-      display: none;
-    }
-  }
-
   .Partners__col {
     display: flex;    
   } 
@@ -29,7 +16,6 @@ const StyledPartners = styled.div`
     &:first-child {
       margin-right: ${pxToRem(20)};
     }
-
     &:last-child {
       margin-left: ${pxToRem(20)};
     }
@@ -90,7 +76,7 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
       showPageSquares
       preferCompletePaginationOnMobile
       loop
-      className="Partners__mobileTablet"
+      className="k-u-hidden@m-up"
     >
       {selectionData.map((item, index) => (
         <div>
@@ -125,7 +111,7 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
       ))}
     </Carousel>
 
-    <Grid className="Partners__desktop">
+    <Grid className="k-u-hidden@m-down">
       <GridCol className="Partners__col">
         {selectionData.map((item, index) => (
           <div className="Partners__colCards">
