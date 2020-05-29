@@ -155,6 +155,7 @@ export const LendopolisCrowdfundingCard = () => {
         widgetState={STATE_CHOICES[widgetState]}
         additionalInfo={'Collecte réservée aux départements : 92, 34, 12, 82'}
         title="Aller sur la collecte …"
+        imageContainerRatio={number('ratio', 9 / 16)}
       />
     </StoryContainer>
   )

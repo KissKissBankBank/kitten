@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Make `CrowdfundingCard` a function instead of a `PureComponent`.
+- Feature: Add `imageContainerRatio` prop to `CrowdfundingCard` component.
+- Fix: On `CrowdfundingCard`, hide `additionalInfo` when `loading` prop is `true`.
+
 ## [2.72.0] - 2020-05-28
 
 Features:
