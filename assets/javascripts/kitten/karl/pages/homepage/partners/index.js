@@ -1,8 +1,40 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Card } from './components/card'
+import { pxToRem } from '../../../../helpers/utils/typography'
 import { Title } from '../../../../components/typography/title'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
 import { mediaQueries } from '../../../../hoc/media-queries'
+import { Grid, GridCol } from '../../../../components/grid/grid'
+import { ScreenConfig } from '../../../../constants/screen-config'
+
+const StyledPartners = styled.div`
+  .Partners__mobileTablet {
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      display: none;
+    }
+  }
+
+  .Partners__desktop {    
+    @media (max-width: ${pxToRem(ScreenConfig.M.max)}) {
+      display: none;
+    }
+  }
+
+  .Partners__col {
+    display: flex;    
+  } 
+
+  .Partners__colCards {
+    &:first-child {
+      margin-right: ${pxToRem(20)};
+    }
+
+    &:last-child {
+      margin-left: ${pxToRem(20)};
+    }
+  }
+`
 
 const selectionData = [
   {
@@ -38,7 +70,7 @@ const selectionData = [
 ]
 
 const PartnersBase = ({ viewportIsXSOrLess }) => (
-  <div>
+  <StyledPartners>
     <Title
       tag="h3"
       className="
@@ -49,6 +81,7 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
     >
       Lorem ipsum dolor sit
     </Title>
+
     <Carousel
       itemMinWidth={viewportIsXSOrLess ? 250 : 490}
       baseItemMarginBetween={10}
@@ -57,6 +90,7 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
       showPageSquares
       preferCompletePaginationOnMobile
       loop
+      className="Partners__mobileTablet"
     >
       {selectionData.map((item, index) => (
         <div>
@@ -68,7 +102,6 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               src: item.imageSrc,
               alt: 'Image alt',
             }}
-            horizontalCard
           />
           <Card
             key={index}
@@ -78,7 +111,6 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               src: item.imageSrc2,
               alt: 'Image alt',
             }}
-            horizontalCard
           />
           <Card
             key={index}
@@ -88,12 +120,47 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               src: item.imageSrc3,
               alt: 'Image alt',
             }}
-            horizontalCard
           />
         </div>
       ))}
     </Carousel>
-  </div>
+
+    <Grid className="Partners__desktop">
+      <GridCol className="Partners__col">
+        {selectionData.map((item, index) => (
+          <div className="Partners__colCards">
+            <Card
+              key={index}
+              title={item.title}
+              text={item.text}
+              imageProps={{
+                src: item.imageSrc,
+                alt: 'Image alt',
+              }}
+            />
+            <Card
+              key={index}
+              title={item.title2}
+              text={item.text2}
+              imageProps={{
+                src: item.imageSrc2,
+                alt: 'Image alt',
+              }}
+            />
+            <Card
+              key={index}
+              title={item.title3}
+              text={item.text3}
+              imageProps={{
+                src: item.imageSrc3,
+                alt: 'Image alt',
+              }}
+            />
+          </div>
+        ))}  
+      </GridCol>
+    </Grid>
+  </StyledPartners>
 )
 
 export const Partners = mediaQueries(PartnersBase, {
