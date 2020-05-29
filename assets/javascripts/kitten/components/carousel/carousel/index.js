@@ -403,25 +403,24 @@ class CarouselBase extends Component {
       }
 
       return (
-        <Grid>
-          <GridCol
-            col={withoutLeftOffset ? '11' : '10'}
-            offset={withoutLeftOffset ? '0' : '1'}
-          >
-            <StyledLegacyCarousel
-              className={classNames(
-                'k-Carousel',
-                className,
-                'k-LegacyCarousel',
-                'k-LegacyCarousel--inGrid',
-              )}
+        <StyledLegacyCarousel
+          className={classNames(
+            'k-Carousel',
+            className,
+            'k-LegacyCarousel',
+            'k-LegacyCarousel--inGrid',
+          )}
+        >
+          <Grid>
+            <GridCol
+              col={withoutLeftOffset ? '11' : '10'}
+              offset={withoutLeftOffset ? '0' : '1'}
             >
               {this.renderCarouselInner()}
-            </StyledLegacyCarousel>
-          </GridCol>
-
-          <GridCol col="1">{this.renderPagination()}</GridCol>
-        </Grid>
+            </GridCol>
+            <GridCol col="1">{this.renderPagination()}</GridCol>
+          </Grid>
+        </StyledLegacyCarousel>
       )
     }
 
