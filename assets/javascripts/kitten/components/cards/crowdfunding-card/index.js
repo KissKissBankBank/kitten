@@ -80,12 +80,7 @@ export const CrowdfundingCard = ({
         />
         {!loading && additionalInfo && (
           <span className="k-CrowdfundingCard__additionalInfo">
-            <Text
-              size="micro"
-              lineHeight="normal"
-              weight="light"
-              title={additionalInfo}
-            >
+            <Text size="micro" lineHeight="normal" weight="light">
               {additionalInfo}
             </Text>
           </span>
