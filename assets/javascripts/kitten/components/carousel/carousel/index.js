@@ -102,7 +102,6 @@ class CarouselBase extends Component {
     showPageSquares: false,
     tinyButtons: false,
     loop: false,
-    legacyGrid: true,
   }
 
   static propTypes = {
