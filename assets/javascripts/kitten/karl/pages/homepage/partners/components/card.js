@@ -10,143 +10,88 @@ import { mediaQueries } from '../../../../../hoc/media-queries'
 import classNames from 'classnames'
 
 const StyledCard = styled.div`
-  margin-bottom: ${pxToRem(30)};
+  display: flex;
+  align-items: center;
+  margin-bottom: ${pxToRem(20)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    margin-bottom: ${pxToRem(40)};
+    margin-bottom: ${pxToRem(30)};
   }
 
   @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+    margin-bottom: ${pxToRem(40)};
+  }
+
+  &:last-child {
     margin-bottom: 0;
   }
 
-  .FeaturedProjects__card__imageCol {
+  .Partners__card__imageCol {
     padding: 0;
+    padding-right: ${pxToRem(7.5)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      padding-right: ${pxToRem(10)};
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      padding-right: ${pxToRem(15)};
+    }
   }
 
-  .FeaturedProjects__card__image {
+  .Partners__card__image {
     margin-bottom: ${pxToRem(20)};
+    margin-right: ${pxToRem(30)};
     display: block;
     width: 100%;
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       margin-bottom: ${pxToRem(30)};
     }
-  }
-
-  .FeaturedProjects__card__title {
-    margin: ${pxToRem(10)} 0;
-    font-size: ${stepToRem(1)};
-    line-height: 1.2;
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      font-size: ${stepToRem(2)};
-      margin: ${pxToRem(15)} 0;
-    }
-
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      font-size: ${stepToRem(4)};
-    }
-  }
-
-  .FeaturedProjects__card__text {
-    font-size: ${stepToRem(-1)};
-    margin-top: ${pxToRem(10)};
-    margin-bottom: ${pxToRem(0)};
-    line-height: 1.5;
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      font-size: ${stepToRem(0)};
-      margin-top: ${pxToRem(15)};
-    }
-  }
-
-  /* if Card isHorizontal */
-
-  &.FeaturedProjects__card--isHorizontal {
-    display: flex;
-    align-items: center;
-    margin-bottom: ${pxToRem(20)};
 
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-      margin-bottom: ${pxToRem(30)};
+      margin-bottom: ${pxToRem(0)};
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .Partners__card__title {
+    font-size: ${stepToRem(-1)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      font-size: ${stepToRem(1)};
+      margin-bottom: ${pxToRem(10)};
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      margin-bottom: ${pxToRem(40)};
+      font-size: ${stepToRem(2)};
     }
+  }
 
-    &:last-child {
-      margin-bottom: 0;
+  .Partners__card__text {
+    display: none;
 
-      @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-        margin-bottom: ${pxToRem(10)};
-      }
-
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        margin-bottom: ${pxToRem(20)};
-      }
-    }
-
-    .FeaturedProjects__card__imageCol {
-      padding-right: ${pxToRem(7.5)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-        padding-right: ${pxToRem(10)};
-      }
-
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        padding-right: ${pxToRem(15)};
-      }
-    }
-
-    .FeaturedProjects__card__image {
-      margin-bottom: ${pxToRem(0)};
-      margin-right: ${pxToRem(30)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-        margin-bottom: ${pxToRem(0)};
-      }
-
-      :last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    .FeaturedProjects__card__descriptionCol {
-      padding-right: 0;
-      padding-left: ${pxToRem(7.5)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-        padding-left: ${pxToRem(10)};
-      }
-
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        padding-left: ${pxToRem(15)};
-      }
-    }
-
-    .FeaturedProjects__card__title {
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       font-size: ${stepToRem(-1)};
+      margin-top: ${pxToRem(10)};
+      margin-bottom: 0;
+      display: block;
+    }
+  }
 
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        font-size: ${stepToRem(1)};
-        margin: ${pxToRem(10)} 0;
-      }
+  .Partners__card__descriptionCol {
+    padding-right: 0;
+    padding-left: ${pxToRem(7.5)};
 
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        font-size: ${stepToRem(2)};
-      }
+    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+      padding-left: ${pxToRem(10)};
     }
 
-    .FeaturedProjects__card__text {
-      display: none;
-
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        font-size: ${stepToRem(-1)};
-        margin-top: ${pxToRem(10)};
-        display: block;
-      }
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      padding-left: ${pxToRem(15)};
     }
   }
 `
@@ -155,50 +100,47 @@ const CardBase = ({
   imageProps,
   title,
   text,
-  horizontalCard,
   viewportIsXSOrLess,
   className,
   ...props
 }) => {
   return (
     <StyledCard
-      className={classNames('FeaturedProjects__card', className, {
-        'FeaturedProjects__card--isHorizontal': horizontalCard,
-      })}
+      className={classNames('Partners__card')}
       {...props}
     >
       <GridCol
-        className="FeaturedProjects__card__imageCol"
-        col={horizontalCard ? 6 : 0}
-        col-s={horizontalCard ? 5 : 0}
-        col-l={horizontalCard ? 6 : 0}
+        className="Partners__card__imageCol"
+        col={6}
+        col-s={5}
+        col-l={6}
       >
         <img
           alt=""
           {...imageProps}
           className={classNames(
-            'FeaturedProjects__card__image',
+            'Partners__card__image',
             imageProps.className,
           )}
         />
       </GridCol>
       <GridCol
-        className="FeaturedProjects__card__descriptionCol"
-        col={horizontalCard ? 6 : 0}
-        col-s={horizontalCard ? 7 : 0}
-        col-l={horizontalCard ? 6 : 0}
+        className="Partners__card__descriptionCol"
+        col={6}
+        col-s={7}
+        col-l={6}
       >
 
         <Title
           margin={0}
-          className="FeaturedProjects__card__title"
+          className="Partners__card__title"
           tag="h4"
           modifier="septenary"
         >
           {title}
         </Title>
 
-        <Text className="FeaturedProjects__card__text" tag="p" color="font1">
+        <Text className="Partners__card__text" tag="p" color="font1">
           {text}
         </Text>
       </GridCol>
@@ -213,11 +155,6 @@ CardBase.propTypes = {
   }),
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  horizontalCard: PropTypes.bool,
-}
-
-CardBase.defaultProps = {
-  horizontalCard: false,
 }
 
 export const Card = mediaQueries(CardBase, {
