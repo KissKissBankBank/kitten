@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `disabled` global prop to `RewardCard`.
 - Fix: Remove Radium from `RewardCard`.
+- Fix: Remove Radium from `Hero`.
+- Fix: Remove Radium from `LegoGrid`.
+- Fix: Remove Radium from `Timeline`.
+- Fix: Remove Radium on various Karl components and stories.
+- Fix: Remove Radium from `CartRewardCard`.
+- Fix: Remove Radium from `VerticalCardWithAction`.
+- Fix: Remove `Radium` from `Triptych`.
+- Fix: Remove `Radium` from `TeamCard`.
 
 ## [2.73.0] - 2020-05-29
 
