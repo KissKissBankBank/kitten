@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { VerticalCardWithAction } from '../../components/cards/vertical-card-with-action'
+import { VerticalCardWithAction } from './index'
 
 describe('<VerticalCardWithAction />', () => {
   let component

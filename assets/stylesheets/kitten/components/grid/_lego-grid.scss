@@ -18,6 +18,14 @@
   .k-LegoGrid {
     @include k-grid;
     display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s, visibility .5s;
+  }
+
+  .k-LegoGrid--isVisible {
+    opacity: 1;
+    visibility: visible;
   }
 
   .k-LegoGrid__item {

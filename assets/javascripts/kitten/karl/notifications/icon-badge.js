@@ -1,32 +1,59 @@
 import React from 'react'
+import { pxToRem } from '../../helpers/utils/typography'
 import { Grid, GridCol } from '../../components/grid/grid'
 import { IconBadge } from '../../components/notifications/icon-badge'
 import { CheckedIcon } from '../../components/icons/checked-icon'
 import { KarlExampleTitle } from '../../karl/examples/title'
+import styled from 'styled-components'
+
+const StyledGrid = styled(Grid)`
+  .karl-Badge {
+    width: ${pxToRem(30)};
+    height: ${pxToRem(30)};
+  }
+
+  .karl-Badge--big {
+    width: ${pxToRem(40)};
+    height: ${pxToRem(40)};
+  }
+
+  .karl-Badge--huge {
+    width: ${pxToRem(50)};
+    height: ${pxToRem(50)};
+  }
+
+  .karl-IconSVG {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: ${pxToRem(11)};
+    height: ${pxToRem(11)};
+  }
+`
 
 export const KarlIconBadge = props => (
-  <Grid>
+  <StyledGrid>
     <GridCol>
       <Grid>
         <GridCol col-s="3">
           <KarlExampleTitle>With on character</KarlExampleTitle>
-          <div style={styles.badge}>
+          <div className="karl-Badge">
             <IconBadge {...props}>C</IconBadge>
           </div>
         </GridCol>
 
         <GridCol col-s="3">
           <KarlExampleTitle>With two characters</KarlExampleTitle>
-          <div style={styles.badge}>
+          <div className="karl-Badge">
             <IconBadge {...props}>A+</IconBadge>
           </div>
         </GridCol>
 
         <GridCol col-s="3">
           <KarlExampleTitle>With svg</KarlExampleTitle>
-          <div style={styles.badge}>
+          <div className="karl-Badge">
             <IconBadge valid {...props}>
-              <CheckedIcon style={styles.iconSvg} />
+              <CheckedIcon className="karl-IconSVG" />
             </IconBadge>
           </div>
         </GridCol>
@@ -37,7 +64,7 @@ export const KarlIconBadge = props => (
       <Grid>
         <GridCol col-s="3">
           <KarlExampleTitle>With big badge</KarlExampleTitle>
-          <div style={styles.badge.big}>
+          <div className="karl-Badge--big">
             <IconBadge big {...props}>
               A+
             </IconBadge>
@@ -46,7 +73,7 @@ export const KarlIconBadge = props => (
 
         <GridCol col-s="3">
           <KarlExampleTitle>With huge badge</KarlExampleTitle>
-          <div style={styles.badge.huge}>
+          <div className="karl-Badge--huge">
             <IconBadge huge {...props}>
               A+
             </IconBadge>
@@ -54,31 +81,5 @@ export const KarlIconBadge = props => (
         </GridCol>
       </Grid>
     </GridCol>
-  </Grid>
+  </StyledGrid>
 )
-
-const bigSize = {
-  width: 40,
-  height: 40,
-}
-
-const hugeSize = {
-  width: 50,
-  height: 50,
-}
-
-const styles = {
-  badge: {
-    width: 30,
-    height: 30,
-    big: bigSize,
-    huge: hugeSize,
-  },
-  iconSvg: {
-    display: 'block',
-    margin: 0,
-    padding: 0,
-    width: 11,
-    height: 11,
-  },
-}

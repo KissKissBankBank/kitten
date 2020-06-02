@@ -1,28 +1,11 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { CartRewardCard } from '../../components/cards/cart-reward-card'
-
-const createMockMediaMatcher = matches => () => ({
-  matches,
-  addListener: () => {},
-  removeListener: () => {},
-})
+import { CartRewardCard } from './index'
 
 describe('<CartRewardCard />', () => {
-  let originalMatchMedia
   let component
 
-  beforeEach(() => {
-    originalMatchMedia = window.matchMedia
-  })
-
-  afterEach(() => {
-    window.matchMedia = originalMatchMedia
-  })
-
   describe('ensure backward compatibility', () => {
-    window.matchMedia = createMockMediaMatcher(false)
-
     // Desactivate warnings.
     jest.spyOn(global.console, 'error').mockImplementation(() => {})
 
@@ -41,8 +24,6 @@ describe('<CartRewardCard />', () => {
   })
 
   describe('by default', () => {
-    window.matchMedia = createMockMediaMatcher(false)
-
     const component = renderer
       .create(
         <CartRewardCard titleAmount="Custom title amount">

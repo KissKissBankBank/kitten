@@ -1,7 +1,7 @@
 import React from 'react'
-import { LegoGrid } from '../../components/grid/lego-grid'
+import { LegoGrid } from './index'
 import Masonry from 'react-masonry-component'
-import { NUM_COLUMNS } from '../../constants/grid-config'
+import { NUM_COLUMNS } from '../../../constants/grid-config'
 
 describe('<LegoGrid />', () => {
   describe('by default', () => {

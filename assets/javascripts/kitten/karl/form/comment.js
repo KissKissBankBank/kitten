@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Comment } from '../../components/comments/comment'
 import { CommentForm } from '../../components/comments/comment-form'
 import { Container } from '../../components/grid/container'
@@ -6,7 +6,7 @@ import { Marger } from '../../components/layout/marger'
 import { KarlExampleTitle } from '../../karl/examples/title'
 
 export const KarlCommentForm = () => (
-  <Fragment>
+  <>
     <KarlExampleTitle>Comment form</KarlExampleTitle>
     <Container>
       <Marger top="2" bottom="2">
@@ -36,11 +36,11 @@ export const KarlCommentForm = () => (
         />
       </Marger>
     </Container>
-  </Fragment>
+  </>
 )
 
 export const KarlComment = () => (
-  <Fragment>
+  <>
     <KarlExampleTitle>Comment</KarlExampleTitle>
     <Container>
       <Marger top="2" bottom="2">
@@ -86,5 +86,5 @@ export const KarlComment = () => (
         />
       </Marger>
     </Container>
-  </Fragment>
+  </>
 )
