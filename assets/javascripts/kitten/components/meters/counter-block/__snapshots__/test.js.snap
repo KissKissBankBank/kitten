@@ -2,25 +2,25 @@
 
 exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-AxhCb kYpcnu"
+  className="sc-bxivhb dlmdLq"
 >
   <div
-    className="sc-AxirZ ia-dERh"
+    className="sc-bwzfXH eHjVoH"
   >
     <p
-      className="sc-AxjAm fgcLvp"
+      className="sc-bdVaJa fpEMpP"
     >
       foo
     </p>
   </div>
   <div
-    className="sc-AxhUy jLaEYT"
+    className="sc-ifAKCX bXMjAs"
   >
     <div
-      className="sc-AxgMl cwoYYF k-u-hidden@m-down"
+      className="sc-EHOje hOqxns k-u-hidden@m-down"
     >
       <div
-        className="sc-AxiKw kcCpID k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
+        className="sc-htpNat tODhy k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
         color="#222"
         style={
           Object {
@@ -36,10 +36,10 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       13 106
     </p>
     <div
-      className="sc-AxgMl cwoYYF k-u-hidden@m-down"
+      className="sc-EHOje hOqxns k-u-hidden@m-down"
     >
       <div
-        className="sc-AxiKw kcCpID k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
+        className="sc-htpNat tODhy k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
         color="#222"
         style={
           Object {
@@ -51,7 +51,7 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="sc-AxirZ fuIQYB"
+    className="sc-bwzfXH dVnEBe"
   >
     <p
       className="k-u-size-huge k-u-style-italic styledSubTitle"
