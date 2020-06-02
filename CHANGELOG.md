@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `disabled` global prop to `RewardCard`.
+- Fix: Remove Radium from `RewardCard`.
 - Fix: Remove Radium from `Hero`.
 - Fix: Remove Radium from `LegoGrid`.
 - Fix: Remove Radium from `Timeline`.

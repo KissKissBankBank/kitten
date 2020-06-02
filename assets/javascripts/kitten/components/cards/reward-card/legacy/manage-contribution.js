@@ -1,15 +1,11 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import Radium from 'radium'
-import { Grid as GridBase, GridCol } from '../../../components/grid/grid'
-import { Text } from '../../../components/typography/text'
-import { RewardCardCheckedIcon } from '../../../components/cards/reward-card/checked-icon'
-import { styles } from '../../../components/cards/reward-card'
-import { Deprecated } from '../../../helpers/utils/deprecated'
+import { Grid, GridCol } from '../../../../components/grid/grid'
+import { Text } from '../../../../components/typography/text'
+import { RewardCardCheckedIcon } from './checked-icon'
+import { Deprecated } from '../../../../helpers/utils/deprecated'
 
-const Grid = Radium(GridBase)
-
-const ManageContributionBase = ({
+export const ManageContribution = ({
   description,
   linkLabel,
   linkHref,
@@ -20,19 +16,15 @@ const ManageContributionBase = ({
   if (!description) return null
   if (isTinyVersion && isDisabled) return null
 
-  const choiceButtonPaddings = isTinyVersion
-    ? styles.choiceButton.paddings.tinyVersion
-    : styles.choiceButton.paddings
-
   return (
     <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
       <Fragment>
         {isSOrLessVersion && (
-          <Grid style={choiceButtonPaddings}>
+          <Grid className="k-LegacyRewardCard__choiceButton">
             <GridCol>
-              <div style={styles.myContribution}>
+              <div className="k-LegacyRewardCard__myContribution">
                 <RewardCardCheckedIcon />
-                <div style={styles.myContribution.text}>
+                <div className="k-LegacyRewardCard__myContribution__text">
                   <Text color="font1" size="tiny" weight="regular">
                     {description}
                     <br />
@@ -53,9 +45,9 @@ const ManageContributionBase = ({
         )}
 
         {!isSOrLessVersion && (
-          <div style={styles.myContribution}>
+          <div className="k-LegacyRewardCard__myContribution">
             <RewardCardCheckedIcon />
-            <div style={styles.myContribution.text}>
+            <div className="k-LegacyRewardCard__myContribution__text">
               <Text color="font1" size="tiny" weight="regular">
                 {description}
                 <br />
@@ -77,7 +69,7 @@ const ManageContributionBase = ({
   )
 }
 
-ManageContributionBase.propTypes = {
+ManageContribution.propTypes = {
   description: PropTypes.string,
   linkLabel: PropTypes.string,
   linkHref: PropTypes.string,
@@ -86,11 +78,9 @@ ManageContributionBase.propTypes = {
   isSOrLessVersion: PropTypes.bool.isRequired,
 }
 
-ManageContributionBase.defaultProps = {
+ManageContribution.defaultProps = {
   description: '',
   linkLabel: '',
   linkHref: '',
   isDisabled: false,
 }
-
-export const ManageContribution = Radium(ManageContributionBase)

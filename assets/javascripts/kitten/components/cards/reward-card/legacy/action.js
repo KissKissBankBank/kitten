@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../components/layout/marger'
-import { ManageContribution } from '../../../components/cards/reward-card/manage-contribution'
-import { RewardCardButton } from '../../../components/cards/reward-card/button'
-import { Deprecated } from '../../../helpers/utils/deprecated'
+import { Marger } from '../../../../components/layout/marger'
+import { ManageContribution } from './manage-contribution'
+import { RewardCardButton } from './button'
+import { Deprecated } from '../../../../helpers/utils/deprecated'
 
 export const RewardCardAction = ({
   manageContributionDescription,

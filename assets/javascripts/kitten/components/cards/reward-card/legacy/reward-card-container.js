@@ -1,25 +1,15 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
-import { Marger } from '../../../components/layout/marger'
-import {
-  Grid as GridBase,
-  GridCol as GridColBase,
-} from '../../../components/grid/grid'
-import COLORS from '../../../constants/colors-config'
-import { ScreenConfig } from '../../../constants/screen-config'
-import { RewardCardContent as LegacyRewardCardContent } from '../../../components/cards/reward-card/content'
-import { RewardCardInfos } from '../../../components/cards/reward-card/infos'
-import { RewardCardImage } from '../../../components/cards/reward-card/image'
-import {
-  RewardCardAction,
-  RewardCardActionOnMOrMore,
-} from '../../../components/cards/reward-card/action'
-import { Deprecated } from '../../../helpers/utils/deprecated'
-import { mediaQueries } from '../../../hoc/media-queries'
-
-const Grid = Radium(GridBase)
-const GridCol = Radium(GridColBase)
+import { Marger } from '../../../../components/layout/marger'
+import { Grid, GridCol } from '../../../../components/grid/grid'
+import { StyledLegacyRewardCard } from './styles'
+import { RewardCardContent as LegacyRewardCardContent } from './content'
+import { RewardCardInfos } from './infos'
+import { RewardCardImage } from './image'
+import { RewardCardAction, RewardCardActionOnMOrMore } from './action'
+import { Deprecated } from '../../../../helpers/utils/deprecated'
+import { mediaQueries } from '../../../../hoc/media-queries'
+import classNames from 'classnames'
 
 class LegacyRewardCardContainerBase extends Component {
   static propTypes = {
@@ -102,16 +92,6 @@ class LegacyRewardCardContainerBase extends Component {
 
     const shouldDisplayImage = imageProps && imageProps.src
 
-    const cardStyles = [others.style, styles.card]
-
-    const cardPaddings = this.isTinyVersion()
-      ? styles.card.paddings.tinyVersion
-      : styles.card.paddings
-
-    const cardImageStyles = this.isTinyVersion()
-      ? styles.card.image.tinyVersion
-      : styles.card.image
-
     const leftColumnProps = this.isTinyVersion()
       ? null
       : {
@@ -132,12 +112,19 @@ class LegacyRewardCardContainerBase extends Component {
 
     return (
       <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
-        <StyleRoot {...others} style={cardStyles}>
+        <StyledLegacyRewardCard
+          className={classNames('k-LegacyRewardCard', this.props.className, {
+            'k-LegacyRewardCard--tinyVersion': this.isTinyVersion(),
+            'k-LegacyRewardCard--sOrLessVersion': this.isSOrLessVersion(),
+            'k-LegacyRewardCard--isDisabled': isDisabled,
+          })}
+          {...others}
+        >
           <Marger
             bottom={this.isSOrLessVersion() ? 0 : 4}
             top={this.isSOrLessVersion() ? 3 : 4}
           >
-            <Grid style={cardPaddings}>
+            <Grid className="k-LegacyRewardCard__row">
               <GridCol {...leftColumnProps}>
                 {titleAmount && (
                   <LegacyRewardCardContent
@@ -176,7 +163,10 @@ class LegacyRewardCardContainerBase extends Component {
               </GridCol>
 
               {shouldDisplayImage && (
-                <GridCol {...rightColumnProps} style={cardImageStyles}>
+                <GridCol
+                  {...rightColumnProps}
+                  className="LegacyRewardCard__col_image"
+                >
                   <Marger bottom={!myContribution ? 2 : null}>
                     <RewardCardImage {...this.props} />
                   </Marger>
@@ -203,119 +193,14 @@ class LegacyRewardCardContainerBase extends Component {
               />
             )}
           </Marger>
-        </StyleRoot>
+        </StyledLegacyRewardCard>
       </Deprecated>
     )
   }
 }
 
-export const styles = {
-  disabled: {
-    filter: 'grayscale(1) opacity(.4)',
-    cursor: 'not-allowed',
-  },
-
-  textColor: {
-    color: COLORS.font1,
-  },
-
-  card: {
-    borderWidth: 2,
-    borderStyle: 'solid',
-    borderColor: COLORS.line1,
-
-    paddings: {
-      paddingLeft: 20,
-      paddingRight: 20,
-
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        paddingLeft: 30,
-        paddingRight: 30,
-      },
-      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingLeft: 40,
-        paddingRight: 0,
-      },
-      [`@media (min-width: ${ScreenConfig['L'].min}px)`]: {
-        paddingLeft: 115,
-        paddingRight: 0,
-      },
-
-      tinyVersion: {
-        paddingLeft: 20,
-        paddingRight: 20,
-      },
-    },
-
-    image: {
-      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        paddingRight: 50,
-      },
-      tinyVersion: {
-        paddingRight: 10,
-      },
-    },
-  },
-
-  textMargin: {
-    margin: 0,
-  },
-
-  infos: {
-    lists: {
-      fontSize: 14,
-
-      [`@media (min-width: ${ScreenConfig['M'].min}px)`]: {
-        fontSize: 16,
-        marginRight: 30,
-      },
-
-      tinyVersion: {
-        fontSize: 14,
-        marginRight: 0,
-      },
-    },
-  },
-
-  choiceButton: {
-    paddingLeft: 20,
-    paddingRight: 20,
-
-    paddings: {
-      [`@media (min-width: ${ScreenConfig['S'].min}px)`]: {
-        paddingLeft: 30,
-        paddingRight: 30,
-      },
-
-      tinyVersion: {
-        paddingLeft: 20,
-        paddingRight: 20,
-      },
-    },
-  },
-
-  myContribution: {
-    display: 'flex',
-    alignItems: 'center',
-
-    text: {
-      display: 'flex',
-      lineHeight: 'normal',
-    },
-  },
-
-  iconBadge: {
-    marginRight: 10,
-  },
-
-  image: {
-    width: '100%',
-    display: 'block',
-  },
-}
-
 export const LegacyRewardCardContainer = mediaQueries(
-  Radium(LegacyRewardCardContainerBase),
+  LegacyRewardCardContainerBase,
   {
     viewportIsTabletOrLess: true,
     viewportIsSOrLess: true,
