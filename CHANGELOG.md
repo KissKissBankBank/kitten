@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove `Radium` from `Triptych`.
 - Fix: Remove `Radium` from `TeamCard`.
 
 ## [2.73.0] - 2020-05-29
