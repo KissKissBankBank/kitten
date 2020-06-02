@@ -18,22 +18,13 @@ const rotateAnimate = ({ r, progressValue }) => keyframes`
   }
 `
 
-const StyledCircleBackground = styled.circle`
-  fill: transparent;
-  stroke: ${COLORS.line1};
-  stroke-width: ${({ strokeWidth }) => pxToRem(strokeWidth)};
-`
-
-const StyledCircle = styled.circle`
-  fill: transparent;
-  stroke-width: ${({ strokeWidth }) => pxToRem(strokeWidth)};
+const StyledMeterCircle = styled.circle`
   stroke-linecap: butt;
   stroke-dasharray: ${({ r }) => getDashLength(r)};
   stroke-dashoffset: ${({ r, progressValue }) =>
     getDashOffset({ r, progressValue })};
-  stroke: ${({ progressColor }) => progressColor};
   transform: rotate(-90deg);
-  transform-origin: 50% 50%;
+  transform-origin: ${({ cx, cy }) => `${pxToRem(cx)} ${pxToRem(cy)}`};
   animation: ${rotateAnimate} 1.4s ease-out;
 `
 
@@ -61,19 +52,22 @@ export const ProgressRing = ({
       viewBox={viewBox}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <StyledCircleBackground
+      <circle
         cx={circleX}
         cy={circleY}
         r={radius}
-        strokeWidth={strokeWidth}
+        stroke-width={strokeWidth}
+        fill="transparent"
+        stroke={COLORS.line1}
       />
-      <StyledCircle
-        progressColor={color}
-        progressValue={progressValue}
+      <StyledMeterCircle
         cx={circleX}
         cy={circleY}
         r={radius}
         strokeWidth={strokeWidth}
+        fill="transparent"
+        stroke={color}
+        progressValue={progressValue}
       />
     </svg>
   )

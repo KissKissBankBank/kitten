@@ -58,20 +58,20 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="sc-AxjAm fvHSbe"
+      className="sc-bdVaJa lecXcD"
     >
       <div
-        className="sc-AxjAm jidNFm"
+        className="sc-bdVaJa bwDdrh"
       >
         <h1
-          className="sc-AxirZ kutymO"
+          className="sc-bwzfXH eUEpZV"
         >
           Custom title amount
         </h1>
       </div>
       
       <div
-        className="sc-AxjAm iySa-Dp"
+        className="sc-bdVaJa chAJzq"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -150,20 +150,20 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       </button>
     </div>
     <div
-      className="sc-AxjAm fvHSbe"
+      className="sc-bdVaJa lecXcD"
     >
       <div
-        className="sc-AxjAm jidNFm"
+        className="sc-bdVaJa bwDdrh"
       >
         <h1
-          className="sc-AxirZ kutymO"
+          className="sc-bwzfXH eUEpZV"
         >
           Custom title amount
         </h1>
       </div>
       
       <div
-        className="sc-AxjAm iySa-Dp"
+        className="sc-bdVaJa chAJzq"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -242,13 +242,13 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       </button>
     </div>
     <div
-      className="sc-AxjAm fvHSbe"
+      className="sc-bdVaJa lecXcD"
     >
       <div
-        className="sc-AxjAm jidNFm"
+        className="sc-bdVaJa bwDdrh"
       >
         <Custom title tag
-          className="sc-AxirZ kutymO"
+          className="sc-bwzfXH eUEpZV"
           italic={true}
           margin={false}
           modifier="quinary"
@@ -257,7 +257,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </Custom title tag>
       </div>
       <div
-        className="sc-AxjAm kxyXra"
+        className="sc-bdVaJa jThHFl"
       >
         <span
           className="k-u-size-default k-u-weight-bold"
@@ -266,7 +266,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="sc-AxjAm iySa-Dp"
+        className="sc-bdVaJa chAJzq"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -288,7 +288,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
         </span>
       </div>
       <div
-        className="sc-AxjAm ksLovO"
+        className="sc-bdVaJa jtfdLD"
       >
         <a
           className="k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"

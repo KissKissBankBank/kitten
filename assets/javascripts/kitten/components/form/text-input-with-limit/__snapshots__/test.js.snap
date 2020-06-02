@@ -2,17 +2,17 @@
 
 exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 <div
-  className="sc-AxgMl kjOsln"
+  className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-AxirZ fNOQKu sc-AxhUy fcYjxG"
+    className="sc-bwzfXH cLpaUK sc-ifAKCX eUaGxb"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-AxheI bpaTkb"
+    className="sc-bZQynM imdljl"
     disabled={false}
   >
     80
@@ -22,17 +22,17 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`] = `
 <div
-  className="sc-AxgMl kjOsln"
+  className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-AxirZ fNOQKu sc-AxhUy fcYjxG"
+    className="sc-bwzfXH cLpaUK sc-ifAKCX eUaGxb"
     defaultValue=""
     disabled={true}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-AxheI isWxau"
+    className="sc-bZQynM gwkZNG"
     disabled={true}
   >
     80
@@ -42,17 +42,17 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
 
 exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = `
 <div
-  className="sc-AxgMl kjOsln"
+  className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-AxirZ xUmbP sc-AxhUy cHjchv"
+    className="sc-bwzfXH hxdmqA sc-ifAKCX hEXEIQ"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-AxheI bpaTkb"
+    className="sc-bZQynM imdljl"
     disabled={false}
   >
     80
@@ -62,17 +62,17 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
 <div
-  className="sc-AxgMl kjOsln"
+  className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-AxirZ ybBzL sc-AxhUy fcYjxG"
+    className="sc-bwzfXH hXpaRk sc-ifAKCX eUaGxb"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-AxheI bpaTkb"
+    className="sc-bZQynM imdljl"
     disabled={false}
   >
     80

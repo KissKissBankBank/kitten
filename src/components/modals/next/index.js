@@ -124,7 +124,7 @@ var ModalContext = (0, _react.createContext)(initialState);
 var reducer = function reducer(state, action) {
   switch (action.type) {
     case 'update':
-      return (0, _extends2.default)({}, state, {}, action);
+      return (0, _extends2.default)((0, _extends2.default)({}, state), action);
   }
 };
 

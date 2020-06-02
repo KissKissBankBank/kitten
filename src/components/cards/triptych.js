@@ -17,11 +17,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -45,7 +45,7 @@ var _gridConfig = require("../../constants/grid-config");
 
 var _firstItem, _secondItem, _thirdItem;
 
-function _createSuper(Derived) { return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -144,7 +144,7 @@ var TriptychBase = /*#__PURE__*/function (_Component) {
         "col-l": "4",
         "col-m": "6"
       }, /*#__PURE__*/_react.default.createElement(Marger, {
-        style: (0, _extends2.default)({}, styles.secondCard, {}, styles.gutter.secondItem),
+        style: (0, _extends2.default)((0, _extends2.default)({}, styles.secondCard), styles.gutter.secondItem),
         top: this.state.secondCardComputedTopMargin / 10,
         bottom: viewportIsMOrLess ? 5 : 0
       }, item2)), /*#__PURE__*/_react.default.createElement(GridCol, {
