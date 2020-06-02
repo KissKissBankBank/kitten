@@ -1,0 +1,167 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`] = `
+<div
+  className="sc-bxivhb eftOVz"
+>
+  
+  
+  <a
+    className="k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--linkedin k-ButtonIcon--tiny"
+    href="https://www.linkedin.com"
+    rel="noopener"
+    tabIndex={null}
+    target="_blank"
+  >
+    <svg
+      className="k-ButtonIcon__svg"
+      viewBox="0 0 14 14"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        LinkedIn
+      </title>
+      <path
+        d="M1.622 0a1.62 1.62 0 1 1-.002 3.242A1.62 1.62 0 0 1 1.622 0zm-1.4 13.465H3.02V4.47H.222v8.995zM4.773 4.47h2.68V5.7h.038c.374-.707 1.286-1.452 2.646-1.452 2.83 0 3.353 1.862 3.353 4.284v4.933h-2.796V9.09c0-1.042-.018-2.384-1.452-2.384-1.455 0-1.677 1.137-1.677 2.31v4.45H4.773V4.47"
+      />
+    </svg>
+  </a>
+</div>
+`;
+
+exports[`<TeamCard /> with some props matches with snapshot 1`] = `
+Array [
+  <div
+    className="sc-bwzfXH cnBWiK k-u-margin-bottom-double"
+    title="Title"
+  />,
+  <div
+    className="sc-bdVaJa jtfdLD"
+  >
+    <span
+      className="k-u-color-font1 k-u-size-default k-u-weight-bold"
+    >
+      Lorem Ipsum
+    </span>
+    <br />
+    <span
+      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+    >
+      Consectetur
+    </span>
+  </div>,
+  <div
+    className="sc-bxivhb eftOVz"
+  >
+    <a
+      className="k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--hydrogen"
+      href="mailto:example@kisskissbankbank.com"
+      tabIndex={null}
+    >
+      <svg
+        className="k-ButtonIcon__svg"
+        fill="#222"
+        height="12"
+        viewBox="0 0 19 12"
+        width="19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Email
+        </title>
+        <path
+          d="M9.5 8l9-6v10H.5V2l9 6zm0-2l-9-6h18l-9 6z"
+        />
+      </svg>
+    </a>
+    <a
+      className="k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon k-ButtonIcon--hydrogen"
+      href="tel:06 00 00 00 00"
+      tabIndex={null}
+    >
+      <svg
+        className="k-ButtonIcon__svg"
+        viewBox="0 0 16 18"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Phone
+        </title>
+        <path
+          d="M3.354 0C2.238 0 .496.498.207 2.268-.2 4.764 1.533 9.09 4.047 12.202c2.49 3.084 6.305 5.63 8.86 5.792.06.004.12.006.177.006 2.39 0 3.002-3.158 2.694-3.548l-4.335-1.94c-.26-.15-.532-.225-.79-.225-.263 0-.51.08-.713.24l-.866.63c-.093.034-.194.05-.302.05-1.807 0-5.535-4.758-4.636-6.166.006-.008.79-.724.79-.724.387-.313.534-.882.347-1.444L4.275.206C4.18.088 3.823 0 3.355 0"
+        />
+      </svg>
+    </a>
+    <a
+      className="sc-htpNat jKwHmM k-TeamCardIcons__buttonIcon"
+      href="tel:06 00 00 00 00"
+    >
+      <span
+        className="k-TeamCardButtonWithTooltip__tooltip"
+      >
+        06 00 00 00 00
+        <span
+          className="k-TeamCardButtonWithTooltip__tooltipArrow"
+        />
+      </span>
+      <button
+        className="k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"
+        tabIndex={null}
+      >
+        <svg
+          className="k-ButtonIcon__svg"
+          viewBox="0 0 16 18"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Phone
+          </title>
+          <path
+            d="M3.354 0C2.238 0 .496.498.207 2.268-.2 4.764 1.533 9.09 4.047 12.202c2.49 3.084 6.305 5.63 8.86 5.792.06.004.12.006.177.006 2.39 0 3.002-3.158 2.694-3.548l-4.335-1.94c-.26-.15-.532-.225-.79-.225-.263 0-.51.08-.713.24l-.866.63c-.093.034-.194.05-.302.05-1.807 0-5.535-4.758-4.636-6.166.006-.008.79-.724.79-.724.387-.313.534-.882.347-1.444L4.275.206C4.18.088 3.823 0 3.355 0"
+          />
+        </svg>
+      </button>
+    </a>
+    <a
+      className="k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--linkedin k-ButtonIcon--tiny"
+      href="https://www.linkedin.com"
+      rel="noopener"
+      tabIndex={null}
+      target="_blank"
+    >
+      <svg
+        className="k-ButtonIcon__svg"
+        viewBox="0 0 14 14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          LinkedIn
+        </title>
+        <path
+          d="M1.622 0a1.62 1.62 0 1 1-.002 3.242A1.62 1.62 0 0 1 1.622 0zm-1.4 13.465H3.02V4.47H.222v8.995zM4.773 4.47h2.68V5.7h.038c.374-.707 1.286-1.452 2.646-1.452 2.83 0 3.353 1.862 3.353 4.284v4.933h-2.796V9.09c0-1.042-.018-2.384-1.452-2.384-1.455 0-1.677 1.137-1.677 2.31v4.45H4.773V4.47"
+        />
+      </svg>
+    </a>
+    <a
+      className="k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--twitter k-ButtonIcon--tiny"
+      href="https://www.twitter.com"
+      rel="noopener"
+      tabIndex={null}
+      target="_blank"
+    >
+      <svg
+        className="k-ButtonIcon__svg"
+        viewBox="0 0 15 14"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Twitter
+        </title>
+        <path
+          d="M15.256 1.468a6.22 6.22 0 0 1-1.797.493c.645-.387 1.14-1 1.375-1.73a6.276 6.276 0 0 1-1.988.758A3.128 3.128 0 0 0 7.433 3.13c0 .245.027.484.08.713a8.88 8.88 0 0 1-6.45-3.27 3.13 3.13 0 0 0 .968 4.179A3.109 3.109 0 0 1 .614 4.36v.04c0 1.516 1.08 2.78 2.51 3.07a3.2 3.2 0 0 1-.824.11c-.203 0-.4-.02-.59-.058a3.13 3.13 0 0 0 2.924 2.174A6.273 6.273 0 0 1 0 10.992a8.86 8.86 0 0 0 4.798 1.407c5.757 0 8.906-4.77 8.906-8.907 0-.136-.003-.27-.01-.405a6.332 6.332 0 0 0 1.562-1.62"
+        />
+      </svg>
+    </a>
+  </div>,
+]
+`;

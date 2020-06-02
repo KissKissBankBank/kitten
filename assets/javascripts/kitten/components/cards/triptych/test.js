@@ -1,31 +1,14 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { Triptych } from '../../components/cards/triptych'
-import { Title } from '../../components/typography/title'
-import { VerticalCardWithAction } from '../../components/cards/vertical-card-with-action'
-
-const createMockMediaMatcher = matches => () => ({
-  matches,
-  addListener: () => {},
-  removeListener: () => {},
-})
+import { Triptych } from './index'
+import { Title } from '../../../components/typography/title'
+import { VerticalCardWithAction } from '../../../components/cards/vertical-card-with-action'
 
 describe('<Triptych />', () => {
-  let originalMatchMedia
   let component
-
-  beforeEach(() => {
-    originalMatchMedia = window.matchMedia
-  })
-
-  afterEach(() => {
-    window.matchMedia = originalMatchMedia
-  })
 
   describe('with default props', () => {
     beforeEach(() => {
-      window.matchMedia = createMockMediaMatcher(false)
-
       component = renderer
         .create(
           <Triptych
