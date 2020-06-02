@@ -10,7 +10,9 @@ const loadingKeyframes = keyframes`
   to { transform: translateX(100%) }
 `
 
-export const StyledCrowdfundingCard = styled.div`
+export const StyledCrowdfundingCard = styled(
+  ({ imageContainerRatio, ...props }) => <div {...props} />,
+)`
   position: relative;
   padding-bottom: ${pxToRem(5)};
   overflow: hidden;
@@ -27,7 +29,9 @@ export const StyledCrowdfundingCard = styled.div`
   .k-CrowdfundingCard__image__imageContainer {
     overflow: hidden;
     position: relative;
-    padding-top: calc((10 / 16) * 100%);
+    padding-top: calc(
+      (${({ imageContainerRatio }) => imageContainerRatio}) * 100%
+    );
 
     & > img {
       width: 100%;
