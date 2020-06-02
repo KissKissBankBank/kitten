@@ -2,17 +2,17 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-AxiKw jItbYh"
+  className="sc-htpNat gkYezB"
   href="#"
 >
   <div
-    className="sc-AxheI gpAZPi"
+    className="sc-bZQynM czKSIP"
   >
     <div
-      className="sc-AxirZ lmgWVO sc-AxhCb fyozhl"
+      className="sc-bwzfXH iTkUFj sc-bxivhb gjdtfU"
     >
       <div
-        className="sc-AxirZ irPhfZ"
+        className="sc-bwzfXH fhbWMi"
       >
         <span
           className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -28,7 +28,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       
     </div>
     <div
-      className="sc-AxgMl cqaegM"
+      className="sc-EHOje gktRhF"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
@@ -51,22 +51,22 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-AxiKw jItbYh"
+  className="sc-htpNat gkYezB"
   href="#foobar"
   rel="noopener"
   target="_blank"
 >
   <div
-    className="sc-AxheI gpAZPi"
+    className="sc-bZQynM czKSIP"
   >
     <div
-      className="sc-AxhUy joeJQV k-u-hidden@xs-down--important"
+      className="sc-ifAKCX hbaqOm k-u-hidden@xs-down--important"
     />
     <div
-      className="sc-AxirZ lmgWVO sc-AxhCb fyozhl"
+      className="sc-bwzfXH iTkUFj sc-bxivhb gjdtfU"
     >
       <div
-        className="sc-AxirZ jyAaby"
+        className="sc-bwzfXH dNghbn"
       >
         <span
           className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -91,7 +91,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="sc-AxgMl cqaegM"
+      className="sc-EHOje gktRhF"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"

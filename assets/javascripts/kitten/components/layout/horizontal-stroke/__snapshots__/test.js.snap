@@ -6,6 +6,11 @@ exports[`<HorizontalStroke /> by default matches with snapshot 1`] = `
   background: #222;
 }
 
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--tiny {
   width: 1.25rem;
   height: 0.125rem;
@@ -151,6 +156,11 @@ exports[`<HorizontalStroke /> with \`big\` size matches with snapshot 1`] = `
 .c0 {
   border: none;
   background: #222;
+}
+
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
 }
 
 .c0.k-HorizontalStroke--size--tiny {
@@ -300,6 +310,11 @@ exports[`<HorizontalStroke /> with \`height via \`customSize\` and width via \`s
   background: #222;
 }
 
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--tiny {
   width: 1.25rem;
   height: 0.125rem;
@@ -445,6 +460,11 @@ exports[`<HorizontalStroke /> with \`huge\` size matches with snapshot 1`] = `
 .c0 {
   border: none;
   background: #222;
+}
+
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
 }
 
 .c0.k-HorizontalStroke--size--tiny {
@@ -594,6 +614,11 @@ exports[`<HorizontalStroke /> with \`primary\` modifier and \`huge\` size matche
   background: #222;
 }
 
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--tiny {
   width: 1.25rem;
   height: 0.125rem;
@@ -739,6 +764,11 @@ exports[`<HorizontalStroke /> with \`primary\` modifier matches with snapshot 1`
 .c0 {
   border: none;
   background: #222;
+}
+
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
 }
 
 .c0.k-HorizontalStroke--size--tiny {
@@ -888,6 +918,11 @@ exports[`<HorizontalStroke /> with \`tiny\` size matches with snapshot 1`] = `
   background: #222;
 }
 
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--tiny {
   width: 1.25rem;
   height: 0.125rem;
@@ -1033,6 +1068,11 @@ exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`st
 .c0 {
   border: none;
   background: #222;
+}
+
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
 }
 
 .c0.k-HorizontalStroke--size--tiny {
@@ -1183,6 +1223,11 @@ exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`st
   background: #222;
 }
 
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--tiny {
   width: 1.25rem;
   height: 0.125rem;
@@ -1328,6 +1373,11 @@ exports[`<HorizontalStroke /> with height via \`customSize\` matches with snapsh
 .c0 {
   border: none;
   background: #222;
+}
+
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
 }
 
 .c0.k-HorizontalStroke--size--tiny {
@@ -1477,6 +1527,11 @@ exports[`<HorizontalStroke /> with width and height via \`customSize\` matches w
   background: #222;
 }
 
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
+}
+
 .c0.k-HorizontalStroke--size--tiny {
   width: 1.25rem;
   height: 0.125rem;
@@ -1622,6 +1677,11 @@ exports[`<HorizontalStroke /> with width via \`customSize\` matches with snapsho
 .c0 {
   border: none;
   background: #222;
+}
+
+.c0.k-HorizontalStroke--size--micro {
+  width: 0.9375rem;
+  height: 0.125rem;
 }
 
 .c0.k-HorizontalStroke--size--tiny {
