@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove Radium from `CartRewardCard`.
 - Fix: Remove Radium from `VerticalCardWithAction`.
 - Fix: Remove `Radium` from `Triptych`.
 - Fix: Remove `Radium` from `TeamCard`.
