@@ -2,23 +2,23 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-fzozJi dfRDUK k-Carousel"
+  className="sc-dnqmqq byRqIQ k-Carousel"
 >
   <div
-    className="sc-AxgMl jWGKu k-Carousel__inner"
+    className="sc-EHOje hDKIby k-Carousel__inner"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="sc-AxheI fsZQch k-Carousel__inner__pageContainer"
+      className="sc-bZQynM kqBCSz k-Carousel__inner__pageContainer"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb ffaSdK k-Carousel__page"
+        className="sc-bxivhb kDJnMy k-Carousel__page"
       >
         <div
-          className="sc-AxhUy hZqsUu k-Carousel__page__item"
+          className="sc-ifAKCX hopHbK k-Carousel__page__item"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -29,7 +29,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="sc-fzqNJr fSnHqq k-ProjectCard__grid--flex"
+                className="sc-kAzzGY ezeBhR k-ProjectCard__grid--flex"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -52,10 +52,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="sc-fzqNJr jsUow k-ProjectCard__grid--flex"
+                className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-fzoyAV hEKEUl k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -64,10 +64,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="sc-AxhUy ezsiGz k-Carousel__page__item"
+          className="sc-ifAKCX kXmzYc k-Carousel__page__item"
         />
         <div
-          className="sc-AxhUy ezsiGz k-Carousel__page__item"
+          className="sc-ifAKCX kXmzYc k-Carousel__page__item"
         />
       </div>
     </div>
@@ -77,23 +77,23 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-fzozJi dfRDUK k-Carousel"
+  className="sc-dnqmqq byRqIQ k-Carousel"
 >
   <div
-    className="sc-AxgMl jWGKu k-Carousel__inner"
+    className="sc-EHOje hDKIby k-Carousel__inner"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="sc-AxheI fsZQch k-Carousel__inner__pageContainer"
+      className="sc-bZQynM kqBCSz k-Carousel__inner__pageContainer"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb ffaSdK k-Carousel__page"
+        className="sc-bxivhb kDJnMy k-Carousel__page"
       >
         <div
-          className="sc-AxhUy hZqsUu k-Carousel__page__item"
+          className="sc-ifAKCX hopHbK k-Carousel__page__item"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -104,7 +104,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="sc-fzqNJr fSnHqq k-ProjectCard__grid--flex"
+                className="sc-kAzzGY ezeBhR k-ProjectCard__grid--flex"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -127,10 +127,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="sc-fzqNJr jsUow k-ProjectCard__grid--flex"
+                className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-fzoyAV hEKEUl k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -139,10 +139,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="sc-AxhUy iLqwOC k-Carousel__page__item"
+          className="sc-ifAKCX bQahgl k-Carousel__page__item"
         />
         <div
-          className="sc-AxhUy iLqwOC k-Carousel__page__item"
+          className="sc-ifAKCX bQahgl k-Carousel__page__item"
         />
       </div>
     </div>
@@ -154,7 +154,7 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-AxmLO lbZFtJ k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
+  className="sc-htoDjs iGhxnQ k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
 >
   <div
     className="k-Grid"
@@ -163,20 +163,20 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
       className="k-Grid__col--10 k-Grid__col--offset-1"
     >
       <div
-        className="sc-AxgMl jWGKu k-Carousel__inner"
+        className="sc-EHOje hDKIby k-Carousel__inner"
         onScroll={[Function]}
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
       >
         <div
-          className="sc-AxheI fsZQch k-Carousel__inner__pageContainer"
+          className="sc-bZQynM kqBCSz k-Carousel__inner__pageContainer"
           onClick={[Function]}
         >
           <div
-            className="sc-AxhCb ffaSdK k-Carousel__page"
+            className="sc-bxivhb kDJnMy k-Carousel__page"
           >
             <div
-              className="sc-AxhUy hZqsUu k-Carousel__page__item"
+              className="sc-ifAKCX hopHbK k-Carousel__page__item"
             >
               <div
                 className="k-ProjectCard k-Card k-Card--light"
@@ -187,7 +187,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                   className="k-ProjectCard__grid"
                 >
                   <div
-                    className="sc-fzqNJr fSnHqq k-ProjectCard__grid--flex"
+                    className="sc-kAzzGY ezeBhR k-ProjectCard__grid--flex"
                   >
                     <span
                       className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -210,10 +210,10 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                     </p>
                   </div>
                   <div
-                    className="sc-fzqNJr jsUow k-ProjectCard__grid--flex"
+                    className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
                   >
                     <p
-                      className="sc-fzoyAV hEKEUl k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                      className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
                     >
                       A
                     </p>
@@ -222,10 +222,10 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
               </div>
             </div>
             <div
-              className="sc-AxhUy ezsiGz k-Carousel__page__item"
+              className="sc-ifAKCX kXmzYc k-Carousel__page__item"
             />
             <div
-              className="sc-AxhUy ezsiGz k-Carousel__page__item"
+              className="sc-ifAKCX kXmzYc k-Carousel__page__item"
             />
           </div>
         </div>
@@ -240,7 +240,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-AxmLO lbZFtJ k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
+  className="sc-htoDjs iGhxnQ k-Carousel k-LegacyCarousel k-LegacyCarousel--inGrid"
 >
   <div
     className="k-Grid"
@@ -249,20 +249,20 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
       className="k-Grid__col--11 k-Grid__col--offset-0"
     >
       <div
-        className="sc-AxgMl jWGKu k-Carousel__inner"
+        className="sc-EHOje hDKIby k-Carousel__inner"
         onScroll={[Function]}
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
       >
         <div
-          className="sc-AxheI fsZQch k-Carousel__inner__pageContainer"
+          className="sc-bZQynM kqBCSz k-Carousel__inner__pageContainer"
           onClick={[Function]}
         >
           <div
-            className="sc-AxhCb ffaSdK k-Carousel__page"
+            className="sc-bxivhb kDJnMy k-Carousel__page"
           >
             <div
-              className="sc-AxhUy hZqsUu k-Carousel__page__item"
+              className="sc-ifAKCX hopHbK k-Carousel__page__item"
             >
               <div
                 className="k-ProjectCard k-Card k-Card--light"
@@ -273,7 +273,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                   className="k-ProjectCard__grid"
                 >
                   <div
-                    className="sc-fzqNJr fSnHqq k-ProjectCard__grid--flex"
+                    className="sc-kAzzGY ezeBhR k-ProjectCard__grid--flex"
                   >
                     <span
                       className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -296,10 +296,10 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                     </p>
                   </div>
                   <div
-                    className="sc-fzqNJr jsUow k-ProjectCard__grid--flex"
+                    className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
                   >
                     <p
-                      className="sc-fzoyAV hEKEUl k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                      className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
                     >
                       A
                     </p>
@@ -308,10 +308,10 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
               </div>
             </div>
             <div
-              className="sc-AxhUy ezsiGz k-Carousel__page__item"
+              className="sc-ifAKCX kXmzYc k-Carousel__page__item"
             />
             <div
-              className="sc-AxhUy ezsiGz k-Carousel__page__item"
+              className="sc-ifAKCX kXmzYc k-Carousel__page__item"
             />
           </div>
         </div>
@@ -326,23 +326,23 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-AxmLO lbZFtJ k-Carousel k-LegacyCarousel k-LegacyCarousel--noGrid"
+  className="sc-htoDjs iGhxnQ k-Carousel k-LegacyCarousel k-LegacyCarousel--noGrid"
 >
   <div
-    className="sc-AxgMl jWGKu k-Carousel__inner"
+    className="sc-EHOje hDKIby k-Carousel__inner"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="sc-AxheI fsZQch k-Carousel__inner__pageContainer"
+      className="sc-bZQynM kqBCSz k-Carousel__inner__pageContainer"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb ffaSdK k-Carousel__page"
+        className="sc-bxivhb kDJnMy k-Carousel__page"
       >
         <div
-          className="sc-AxhUy hZqsUu k-Carousel__page__item"
+          className="sc-ifAKCX hopHbK k-Carousel__page__item"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -353,7 +353,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="sc-fzqNJr fSnHqq k-ProjectCard__grid--flex"
+                className="sc-kAzzGY ezeBhR k-ProjectCard__grid--flex"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -376,10 +376,10 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="sc-fzqNJr jsUow k-ProjectCard__grid--flex"
+                className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-fzoyAV hEKEUl k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -388,10 +388,10 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="sc-AxhUy iLqwOC k-Carousel__page__item"
+          className="sc-ifAKCX bQahgl k-Carousel__page__item"
         />
         <div
-          className="sc-AxhUy iLqwOC k-Carousel__page__item"
+          className="sc-ifAKCX bQahgl k-Carousel__page__item"
         />
       </div>
     </div>
@@ -401,23 +401,23 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-fzozJi dfRDUK k-Carousel"
+  className="sc-dnqmqq byRqIQ k-Carousel"
 >
   <div
-    className="sc-AxgMl jWGKu k-Carousel__inner"
+    className="sc-EHOje hDKIby k-Carousel__inner"
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
   >
     <div
-      className="sc-AxheI fsZQch k-Carousel__inner__pageContainer"
+      className="sc-bZQynM kqBCSz k-Carousel__inner__pageContainer"
       onClick={[Function]}
     >
       <div
-        className="sc-AxhCb ffaSdK k-Carousel__page"
+        className="sc-bxivhb kDJnMy k-Carousel__page"
       >
         <div
-          className="sc-AxhUy hZqsUu k-Carousel__page__item"
+          className="sc-ifAKCX hopHbK k-Carousel__page__item"
         >
           <div
             className="k-ProjectCard k-Card k-Card--light"
@@ -428,7 +428,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="sc-fzqNJr fSnHqq k-ProjectCard__grid--flex"
+                className="sc-kAzzGY ezeBhR k-ProjectCard__grid--flex"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -451,10 +451,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="sc-fzqNJr jsUow k-ProjectCard__grid--flex"
+                className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-fzoyAV hEKEUl k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -463,10 +463,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="sc-AxhUy ezsiGz k-Carousel__page__item"
+          className="sc-ifAKCX kXmzYc k-Carousel__page__item"
         />
         <div
-          className="sc-AxhUy ezsiGz k-Carousel__page__item"
+          className="sc-ifAKCX kXmzYc k-Carousel__page__item"
         />
       </div>
     </div>
