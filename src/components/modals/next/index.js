@@ -45,6 +45,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _gridConfig = require("../../../constants/grid-config");
 
+var _elementHelper = require("../../../helpers/dom/element-helper");
+
 function _templateObject() {
   var data = (0, _taggedTemplateLiteral2.default)(["\n\n  body.k-ModalNext__body--open {\n    overflow: hidden;\n  }\n  \n  .k-ModalNext__content {\n    position: relative;\n    background-color: ", ";\n    box-sizing: border-box;\n    outline: none;\n    transform: scale(0.94);\n    margin-right: ", ";\n    margin-left: ", ";\n    padding: ", " ", ";\n    width: calc(100vw ", ");\n  \n    @media (min-width: ", ") {\n      margin: auto;\n      padding: ", " ", ";\n      width: calc((100vw - ", ") + (", " * 11))\n    }\n  \n    @media (min-width: ", ") {\n      padding: ", " ", ";\n      ", "\n    }\n    \n    @media (min-width: ", ") {\n    ", "\n    }\n  }\n\n  .k-ModalNext__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n    @media (min-width: ", ") {\n      right: ", ";\n  }\n\n    button {\n      margin: 0;\n    }\n  }\n  \n  .k-ModalNext__overlay {\n    position: fixed;\n    overflow: scroll;\n    display: flex;\n    flex-direction: column;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    opacity: 0;\n    background-color: rgba(34, 34, 34, .8);    \n    &::before ,\n    &::after {\n      content:'';\n      flex:1;\n      min-height: ", ";\n\n      @media (min-width: ", ") {\n        min-height: ", ";\n      }\n    }\n    ", "\n  }\n  \n  .k-ModalNext__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-ModalNext--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-ModalNext__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-ModalNext--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n"]);
 
@@ -122,7 +124,7 @@ var ModalContext = (0, _react.createContext)(initialState);
 var reducer = function reducer(state, action) {
   switch (action.type) {
     case 'update':
-      return (0, _extends2.default)({}, state, {}, action);
+      return (0, _extends2.default)((0, _extends2.default)({}, state), action);
   }
 };
 
@@ -277,6 +279,7 @@ var InnerModal = function InnerModal(_ref5) {
 };
 
 var Modal = function Modal(props) {
+  if (!_elementHelper.domElementHelper.canUseDom()) return null;
   return /*#__PURE__*/_react.default.createElement(ModalProvider, null, /*#__PURE__*/_react.default.createElement(InnerModal, props));
 };
 

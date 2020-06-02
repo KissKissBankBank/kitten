@@ -3,7 +3,7 @@
 exports[`<BurgerIcon /> default matches the snapshot 1`] = `
 <svg
   aria-label={null}
-  className="sc-AxjAm gjWxrH"
+  className="sc-bdVaJa iPOKea"
   height="10"
   role="img"
   viewBox="0 0 12 10"
@@ -34,7 +34,7 @@ exports[`<BurgerIcon /> default matches the snapshot 1`] = `
 exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches the snapshot 1`] = `
 <svg
   aria-label={null}
-  className="sc-AxjAm gjWxrH"
+  className="sc-bdVaJa iPOKea"
   height="10"
   role="img"
   viewBox="0 0 12 10"
@@ -65,7 +65,7 @@ exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches th
 exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the snapshot 1`] = `
 <svg
   aria-label={null}
-  className="sc-AxjAm dUsvCk"
+  className="sc-bdVaJa gPRAas"
   height="10"
   role="img"
   viewBox="0 0 12 10"

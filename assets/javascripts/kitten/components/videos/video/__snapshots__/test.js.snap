@@ -2,7 +2,7 @@
 
 exports[`<Video /> by default matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm jAtyGD k-Video k-Video--hasPointerCursor k-Video--objectFitCover"
+  className="sc-bdVaJa dvpKKK k-Video k-Video--hasPointerCursor k-Video--objectFitCover"
   onClick={[Function]}
   onKeyDown={[Function]}
   role="button"
@@ -35,14 +35,14 @@ exports[`<Video /> by default matches with snapshot 1`] = `
 
 exports[`<Video /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm jAtyGD k-Video k-Video--hasPointerCursor k-Video--objectFitCover"
+  className="sc-bdVaJa dvpKKK k-Video k-Video--hasPointerCursor k-Video--objectFitCover"
   onClick={[Function]}
   onKeyDown={[Function]}
   role="button"
   tabIndex={0}
 >
   <div
-    className="sc-AxirZ fafNki"
+    className="sc-bwzfXH gSBjvA"
   >
     <div
       className="k-Loader"

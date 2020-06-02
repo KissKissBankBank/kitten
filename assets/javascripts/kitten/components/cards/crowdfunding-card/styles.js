@@ -10,7 +10,9 @@ const loadingKeyframes = keyframes`
   to { transform: translateX(100%) }
 `
 
-export const StyledCrowdfundingCard = styled.div`
+export const StyledCrowdfundingCard = styled(
+  ({ imageContainerRatio, ...props }) => <div {...props} />,
+)`
   position: relative;
   padding-bottom: ${pxToRem(5)};
   overflow: hidden;
@@ -27,7 +29,9 @@ export const StyledCrowdfundingCard = styled.div`
   .k-CrowdfundingCard__image__imageContainer {
     overflow: hidden;
     position: relative;
-    padding-top: calc((10 / 16) * 100%);
+    padding-top: calc(
+      (${({ imageContainerRatio }) => imageContainerRatio}) * 100%
+    );
 
     & > img {
       width: 100%;
@@ -107,12 +111,29 @@ export const StyledCrowdfundingCard = styled.div`
   }
 
   .k-CrowdfundingCard__subtitle__subtitleText {
-    line-height: 1;
+    line-height: 1.2;
     flex: 1;
 
     &.k-CrowdfundingCard__subtitle__subtitleText--truncated {
       white-space: nowrap;
       overflow: hidden;
+    }
+  }
+
+  .k-CrowdfundingCard__additionalInfo {
+    line-height: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    margin-top: ${pxToRem(10)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      padding: 0 ${COMPONENT_GUTTER};
+    }
+
+    > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 

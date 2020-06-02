@@ -42,41 +42,31 @@ var rotateAnimate = function rotateAnimate(_ref2) {
   }));
 };
 
-var StyledCircleBackground = _styledComponents.default.circle.withConfig({
-  displayName: "progress-ring__StyledCircleBackground",
+var StyledMeterCircle = _styledComponents.default.circle.withConfig({
+  displayName: "progress-ring__StyledMeterCircle",
   componentId: "ysg5f3-0"
-})(["fill:transparent;stroke:", ";stroke-width:", ";"], _colorsConfig.default.line1, function (_ref3) {
-  var strokeWidth = _ref3.strokeWidth;
-  return (0, _typography.pxToRem)(strokeWidth);
-});
-
-var StyledCircle = _styledComponents.default.circle.withConfig({
-  displayName: "progress-ring__StyledCircle",
-  componentId: "ysg5f3-1"
-})(["fill:transparent;stroke-width:", ";stroke-linecap:butt;stroke-dasharray:", ";stroke-dashoffset:", ";stroke:", ";transform:rotate(-90deg);transform-origin:50% 50%;animation:", " 1.4s ease-out;"], function (_ref4) {
-  var strokeWidth = _ref4.strokeWidth;
-  return (0, _typography.pxToRem)(strokeWidth);
-}, function (_ref5) {
-  var r = _ref5.r;
+})(["stroke-linecap:butt;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " 1.4s ease-out;"], function (_ref3) {
+  var r = _ref3.r;
   return getDashLength(r);
-}, function (_ref6) {
-  var r = _ref6.r,
-      progressValue = _ref6.progressValue;
+}, function (_ref4) {
+  var r = _ref4.r,
+      progressValue = _ref4.progressValue;
   return getDashOffset({
     r: r,
     progressValue: progressValue
   });
-}, function (_ref7) {
-  var progressColor = _ref7.progressColor;
-  return progressColor;
+}, function (_ref5) {
+  var cx = _ref5.cx,
+      cy = _ref5.cy;
+  return "".concat((0, _typography.pxToRem)(cx), " ").concat((0, _typography.pxToRem)(cy));
 }, rotateAnimate);
 
-var ProgressRing = function ProgressRing(_ref8) {
-  var color = _ref8.color,
-      value = _ref8.value,
-      width = _ref8.width,
-      strokeWidth = _ref8.strokeWidth,
-      others = (0, _objectWithoutProperties2.default)(_ref8, ["color", "value", "width", "strokeWidth"]);
+var ProgressRing = function ProgressRing(_ref6) {
+  var color = _ref6.color,
+      value = _ref6.value,
+      width = _ref6.width,
+      strokeWidth = _ref6.strokeWidth,
+      others = (0, _objectWithoutProperties2.default)(_ref6, ["color", "value", "width", "strokeWidth"]);
   var circleX = width / 2;
   var circleY = width / 2;
   var radius = circleX - strokeWidth;
@@ -87,18 +77,21 @@ var ProgressRing = function ProgressRing(_ref8) {
     height: width,
     viewBox: viewBox,
     xmlns: "http://www.w3.org/2000/svg"
-  }), /*#__PURE__*/_react.default.createElement(StyledCircleBackground, {
+  }), /*#__PURE__*/_react.default.createElement("circle", {
     cx: circleX,
     cy: circleY,
     r: radius,
-    strokeWidth: strokeWidth
-  }), /*#__PURE__*/_react.default.createElement(StyledCircle, {
-    progressColor: color,
-    progressValue: progressValue,
+    "stroke-width": strokeWidth,
+    fill: "transparent",
+    stroke: _colorsConfig.default.line1
+  }), /*#__PURE__*/_react.default.createElement(StyledMeterCircle, {
     cx: circleX,
     cy: circleY,
     r: radius,
-    strokeWidth: strokeWidth
+    strokeWidth: strokeWidth,
+    fill: "transparent",
+    stroke: color,
+    progressValue: progressValue
   }));
 };
 
