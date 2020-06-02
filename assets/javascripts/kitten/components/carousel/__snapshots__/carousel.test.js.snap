@@ -70,7 +70,7 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                 className="k-ProjectCard__grid"
               >
                 <div
-                  className="sc-AxhUy eWxhWw k-ProjectCard__grid--flex"
+                  className="sc-ifAKCX bfZBon k-ProjectCard__grid--flex"
                 >
                   <span
                     className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -93,10 +93,10 @@ exports[`<Carousel /> by default on desktop is a <Grid /> 1`] = `
                   </p>
                 </div>
                 <div
-                  className="sc-AxhUy ePzcAa k-ProjectCard__grid--flex"
+                  className="sc-ifAKCX fkQNBM k-ProjectCard__grid--flex"
                 >
                   <p
-                    className="sc-AxgMl cRaeDD k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                    className="sc-EHOje ghqYtE k-ProjectCard__grid--flex__item-fluid k-Card__title"
                   >
                     A
                   </p>
@@ -212,7 +212,7 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="sc-AxhUy eWxhWw k-ProjectCard__grid--flex"
+                className="sc-ifAKCX bfZBon k-ProjectCard__grid--flex"
               >
                 <span
                   className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -235,10 +235,10 @@ exports[`<Carousel /> by default on mobile is not a <Grid /> 1`] = `
                 </p>
               </div>
               <div
-                className="sc-AxhUy ePzcAa k-ProjectCard__grid--flex"
+                className="sc-ifAKCX fkQNBM k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-AxgMl cRaeDD k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-EHOje ghqYtE k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -361,7 +361,7 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                 className="k-ProjectCard__grid"
               >
                 <div
-                  className="sc-AxhUy eWxhWw k-ProjectCard__grid--flex"
+                  className="sc-ifAKCX bfZBon k-ProjectCard__grid--flex"
                 >
                   <span
                     className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -384,10 +384,10 @@ exports[`<Carousel /> with withoutLeftOffset on desktop is a <Grid /> 1`] = `
                   </p>
                 </div>
                 <div
-                  className="sc-AxhUy ePzcAa k-ProjectCard__grid--flex"
+                  className="sc-ifAKCX fkQNBM k-ProjectCard__grid--flex"
                 >
                   <p
-                    className="sc-AxgMl cRaeDD k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                    className="sc-EHOje ghqYtE k-ProjectCard__grid--flex__item-fluid k-Card__title"
                   >
                     A
                   </p>

@@ -73,7 +73,7 @@ class Image extends PureComponent {
             />
           </div>
 
-          <div className="k-CrowdfundingCard__image__owner">
+          <div className="k-CrowdfundingCard__image__owner k-u-margin-top-single">
             <Text
               className="k-CrowdfundingCard__image__title"
               tag="div"

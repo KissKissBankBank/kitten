@@ -15,16 +15,16 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         data-radium={true}
       >
         <div
-          className="sc-AxjAm jidNFm"
+          className="sc-bdVaJa bwDdrh"
         >
           <h2
-            className="sc-AxirZ iHImxt"
+            className="sc-bwzfXH jJkeYb"
           >
             Main title goes here !
           </h2>
         </div>
         <div
-          className="sc-AxjAm jidNFm"
+          className="sc-bdVaJa bwDdrh"
         >
           <span
             className="rmq-f8208d89 k-VerticalStroke k-VerticalStroke--huge"
@@ -45,17 +45,17 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       style={Object {}}
     >
       <div
-        className="sc-AxjAm ibAVhG"
+        className="sc-bdVaJa kWlsrv"
       >
         <div>
           <div
-            className="sc-AxjAm hmwaKW"
+            className="sc-bdVaJa igpdyN"
           >
             <div
               data-radium={true}
             >
               <div
-                className="sc-AxjAm gLlDfb"
+                className="sc-bdVaJa fyHFcD"
               >
                 <img
                   alt=""
@@ -70,16 +70,16 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 />
               </div>
               <div
-                className="sc-AxjAm dxeZJh"
+                className="sc-bdVaJa kzCucd"
               >
                 <div
                   data-radium={true}
                 >
                   <div
-                    className="sc-AxjAm hmwaKW"
+                    className="sc-bdVaJa igpdyN"
                   >
                     <h1
-                      className="sc-AxirZ dbrwuw"
+                      className="sc-bwzfXH gVLghD"
                       style={
                         Object {
                           "color": "#222",
@@ -94,7 +94,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 </div>
               </div>
               <div
-                className="sc-AxjAm kmIuYE"
+                className="sc-bdVaJa hMUOCj"
               >
                 <button
                   className="k-Button k-Button--helium"
@@ -122,13 +122,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l"
     >
       <div
-        className="sc-AxjAm jnggpx"
+        className="sc-bdVaJa cXskKC"
       >
         <div
           data-radium={true}
         >
           <div
-            className="sc-AxjAm gLlDfb"
+            className="sc-bdVaJa fyHFcD"
           >
             <img
               alt=""
@@ -143,16 +143,16 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             />
           </div>
           <div
-            className="sc-AxjAm dxeZJh"
+            className="sc-bdVaJa kzCucd"
           >
             <div
               data-radium={true}
             >
               <div
-                className="sc-AxjAm fKOaOg"
+                className="sc-bdVaJa eGDgJX"
               >
                 <h1
-                  className="sc-AxirZ dbrwuw"
+                  className="sc-bwzfXH gVLghD"
                   style={
                     Object {
                       "color": "#222",
@@ -164,7 +164,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
                 </h1>
               </div>
               <div
-                className="sc-AxjAm dxQDWs"
+                className="sc-bdVaJa chkwVs"
               >
                 <p
                   className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -181,7 +181,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="sc-AxjAm kmIuYE"
+            className="sc-bdVaJa hMUOCj"
           >
             <button
               className="k-Button k-Button--helium"
@@ -209,13 +209,13 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
       style={Object {}}
     >
       <div
-        className="sc-AxjAm kazzXd"
+        className="sc-bdVaJa lixdus"
       >
         <div
           data-radium={true}
         >
           <div
-            className="sc-AxjAm gLlDfb"
+            className="sc-bdVaJa fyHFcD"
           >
             <img
               alt=""
@@ -230,16 +230,16 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             />
           </div>
           <div
-            className="sc-AxjAm dxeZJh"
+            className="sc-bdVaJa kzCucd"
           >
             <div
               data-radium={true}
             >
               <div
-                className="sc-AxjAm hmwaKW"
+                className="sc-bdVaJa igpdyN"
               >
                 <h1
-                  className="sc-AxirZ dbrwuw"
+                  className="sc-bwzfXH gVLghD"
                   style={
                     Object {
                       "color": "#222",
@@ -254,7 +254,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="sc-AxjAm kmIuYE"
+            className="sc-bdVaJa hMUOCj"
           >
             <button
               className="k-Button k-Button--helium"

@@ -2,10 +2,10 @@
 
 exports[`<BackerCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-AxirZ bbYePt"
+  className="sc-bwzfXH ikXMwd"
 >
   <div
-    className="sc-AxjAm iBjINj"
+    className="sc-bdVaJa eYYfEq"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
@@ -14,10 +14,10 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    className="sc-AxjAm hYYmlx"
+    className="sc-bdVaJa eDkcBx"
   >
     <span
-      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents sc-AxhCb cSVJtS"
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents sc-bxivhb jQlpWk"
       tabIndex={null}
     >
       <img
@@ -28,7 +28,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    className="sc-AxjAm jVHGNP"
+    className="sc-bdVaJa cfvEqV"
   >
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
@@ -41,27 +41,27 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
 
 exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
 <div
-  className="sc-AxirZ bbYePt"
+  className="sc-bwzfXH ikXMwd"
 >
   <div
-    className="sc-AxjAm iBjINj"
+    className="sc-bdVaJa eYYfEq"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
     >
       Backer name
       <span
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light sc-AxiKw jYEtdQ"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light sc-htpNat hVjTPl"
       >
         Subtitle
       </span>
     </span>
   </div>
   <div
-    className="sc-AxjAm hYYmlx"
+    className="sc-bdVaJa eDkcBx"
   >
     <span
-      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents sc-AxhCb cSVJtS"
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents sc-bxivhb jQlpWk"
       tabIndex={null}
     >
       <img
@@ -72,7 +72,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    className="sc-AxjAm jVHGNP"
+    className="sc-bdVaJa cfvEqV"
   >
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
