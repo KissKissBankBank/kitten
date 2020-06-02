@@ -4,9 +4,10 @@ import { Grid, GridCol } from '../../../../../components/grid/grid'
 import { Title } from '../../../../../components/typography/title'
 import { CardWithButton } from './card-with-button'
 import { Triptych } from '../../../../../components/cards/triptych'
+import COLORS from '../../../../../constants/colors-config'
 
 const SolutionsTriptych = () => (
-  <div className="k-u-margin-top-octuple@xs-down k-u-margin-top-decuple@s-up">
+  <div className="k-u-margin-top-octuple k-u-margin-top-decuple@l-up">
     <Container>
       <Grid>
         <GridCol
@@ -19,7 +20,12 @@ const SolutionsTriptych = () => (
         >
           <Triptych
             title={
-              <Title tag="h2" modifier="secondary" margin={false}>
+              <Title
+                tag="h2"
+                modifier="secondary"
+                margin={false}
+                style={{ color: COLORS.font1 }}
+              >
                 3 solutions pour collecter des fonds et financer mon projet
               </Title>
             }

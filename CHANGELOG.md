@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove Radium from KissKiss page `PreDeposit`.
 - Fix: Remove Radium from Lendo Annex `SimpleTemplate`.
 - Feature: Add `disabled` global prop to `RewardCard`.
 - Fix: Remove Radium from `RewardCard`.
