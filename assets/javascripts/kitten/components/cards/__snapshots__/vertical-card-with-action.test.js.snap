@@ -5,7 +5,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
   data-radium={true}
 >
   <div
-    className="sc-AxjAm gLlDfb"
+    className="sc-bdVaJa fyHFcD"
   >
     <img
       alt=""
@@ -20,16 +20,16 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="sc-AxjAm dxeZJh"
+    className="sc-bdVaJa kzCucd"
   >
     <div
       data-radium={true}
     >
       <div
-        className="sc-AxjAm hmwaKW"
+        className="sc-bdVaJa igpdyN"
       >
         <h1
-          className="sc-AxirZ dbrwuw"
+          className="sc-bwzfXH gVLghD"
           style={
             Object {
               "color": "#222",
@@ -44,7 +44,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="sc-AxjAm kmIuYE"
+    className="sc-bdVaJa hMUOCj"
   >
     <button
       className="k-Button k-Button--helium"
@@ -71,7 +71,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
   data-radium={true}
 >
   <div
-    className="sc-AxjAm gLlDfb"
+    className="sc-bdVaJa fyHFcD"
   >
     <img
       alt="Image alt"
@@ -86,16 +86,16 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     />
   </div>
   <div
-    className="sc-AxjAm dxeZJh"
+    className="sc-bdVaJa kzCucd"
   >
     <div
       data-radium={true}
     >
       <div
-        className="sc-AxjAm fKOaOg"
+        className="sc-bdVaJa eGDgJX"
       >
         <h1
-          className="sc-AxirZ dbrwuw"
+          className="sc-bwzfXH gVLghD"
           style={
             Object {
               "color": "#222",
@@ -107,7 +107,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
         </h1>
       </div>
       <div
-        className="sc-AxjAm dxQDWs"
+        className="sc-bdVaJa chkwVs"
       >
         <p
           className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -124,7 +124,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
     </div>
   </div>
   <div
-    className="sc-AxjAm kmIuYE"
+    className="sc-bdVaJa hMUOCj"
   >
     <button
       className="k-Button k-Button--helium"

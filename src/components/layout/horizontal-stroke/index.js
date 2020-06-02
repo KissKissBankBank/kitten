@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.HorizontalStroke = exports.StyledHorizontalStroke = exports.HUGE = exports.BIG = exports.DEFAULT = exports.TINY = void 0;
+exports.HorizontalStroke = exports.StyledHorizontalStroke = exports.HUGE = exports.BIG = exports.DEFAULT = exports.TINY = exports.MICRO = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -27,6 +27,8 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _strokeModifierStyles = require("./common/stroke-modifier-styles");
 
+var MICRO = (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(2));
+exports.MICRO = MICRO;
 var TINY = (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(2));
 exports.TINY = TINY;
 var DEFAULT = (0, _styledComponents.css)(["width:", ";height:", ";"], (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(4));
@@ -39,10 +41,10 @@ exports.HUGE = HUGE;
 var StyledHorizontalStroke = _styledComponents.default.div.withConfig({
   displayName: "horizontal-stroke__StyledHorizontalStroke",
   componentId: "sc-15k7x5m-0"
-})(["border:none;background:", ";&.k-HorizontalStroke--size--tiny{", "}&.k-HorizontalStroke--size--default{", "}&.k-HorizontalStroke--size--big{", "}&.k-HorizontalStroke--size--huge{", "}", ""], function (_ref) {
+})(["border:none;background:", ";&.k-HorizontalStroke--size--micro{", "}&.k-HorizontalStroke--size--tiny{", "}&.k-HorizontalStroke--size--default{", "}&.k-HorizontalStroke--size--big{", "}&.k-HorizontalStroke--size--huge{", "}", ""], function (_ref) {
   var color = _ref.color;
   return color || _colorsConfig.default.font1;
-}, TINY, DEFAULT, BIG, HUGE, (0, _strokeModifierStyles.strokeModifierStylesWithoutMargin)('&.k-HorizontalStroke--modifier'));
+}, MICRO, TINY, DEFAULT, BIG, HUGE, (0, _strokeModifierStyles.strokeModifierStylesWithoutMargin)('&.k-HorizontalStroke--modifier'));
 
 exports.StyledHorizontalStroke = StyledHorizontalStroke;
 
@@ -70,14 +72,14 @@ var HorizontalStroke = function HorizontalStroke(_ref2) {
 
   return /*#__PURE__*/_react.default.createElement(StyledHorizontalStroke, (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-HorizontalStroke', className, modifierClassName()),
-    style: (0, _extends2.default)({}, customStyles(), {}, style),
+    style: (0, _extends2.default)((0, _extends2.default)({}, customStyles()), style),
     color: color
   }));
 };
 
 exports.HorizontalStroke = HorizontalStroke;
 HorizontalStroke.propTypes = {
-  size: _propTypes.default.oneOf(['tiny', 'default', 'big', 'huge']),
+  size: _propTypes.default.oneOf(['micro', 'tiny', 'default', 'big', 'huge']),
   modifier: _propTypes.default.oneOf(['primary', 'secondary', 'tertiary', 'quaternary', 'quinary', 'senary', 'septenary']),
   customSize: _propTypes.default.shape({
     width: _propTypes.default.number,

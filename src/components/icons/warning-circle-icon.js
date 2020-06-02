@@ -13,14 +13,34 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireDefault(require("react"));
 
+var _propTypes = _interopRequireDefault(require("prop-types"));
+
+var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
+
+var _ratio = require("../../helpers/utils/ratio");
+
+var DEFAULT_WIDTH = 20;
+var DEFAULT_HEIGHT = 20;
+
 var WarningCircleIcon = function WarningCircleIcon(_ref) {
   var circleColor = _ref.circleColor,
       warningColor = _ref.warningColor,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["circleColor", "warningColor"]);
+      width = _ref.width,
+      height = _ref.height,
+      title = _ref.title,
+      props = (0, _objectWithoutProperties2.default)(_ref, ["circleColor", "warningColor", "width", "height", "title"]);
+  var computed = (0, _ratio.computeFromRatio)({
+    defaultWidth: DEFAULT_WIDTH,
+    defaultHeight: DEFAULT_HEIGHT,
+    width: width,
+    height: height
+  });
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 20 20"
-  }, props), /*#__PURE__*/_react.default.createElement("title", null, "Warning"), /*#__PURE__*/_react.default.createElement("circle", {
+    viewBox: "0 0 20 20",
+    width: computed.width,
+    height: computed.height
+  }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("circle", {
     fill: circleColor,
     cx: "10",
     cy: "10",
@@ -32,7 +52,14 @@ var WarningCircleIcon = function WarningCircleIcon(_ref) {
 };
 
 exports.WarningCircleIcon = WarningCircleIcon;
+WarningCircleIcon.prototype = {
+  circleColor: _propTypes.default.string,
+  warningColor: _propTypes.default.string,
+  title: _propTypes.default.string,
+  width: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
+  height: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
+};
 WarningCircleIcon.defaultProps = {
-  circleColor: '#fff',
-  warningColor: '#333'
+  circleColor: _colorsConfig.default.background1,
+  warningColor: _colorsConfig.default.font1
 };
