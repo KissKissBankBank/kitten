@@ -6,6 +6,7 @@ import { Title } from '../../../../components/typography/title'
 import { Carousel } from '../../../../components/carousel/carousel/carousel'
 import { mediaQueries } from '../../../../hoc/media-queries'
 import { Grid, GridCol } from '../../../../components/grid/grid'
+import classNames from 'classnames'
 
 const StyledPartners = styled.div`
   .Partners__col {
@@ -55,15 +56,17 @@ const selectionData = [
   },
 ]
 
+
 const PartnersBase = ({ viewportIsXSOrLess }) => (
   <StyledPartners>
     <Title
       tag="h3"
-      className="
-      Homepage__section__title
-      k-u-margin-top-none
-      k-u-margin-bottom-singleHalf@s-up
-      k-u-margin-bottom-single@s-down"
+      className={classNames(
+        'Homepage__section__title',
+        'k-u-margin-top-none',
+        'k-u-margin-bottom-singleHalf@s-up',
+        'k-u-margin-bottom-single@s-down',
+      )}
     >
       Lorem ipsum dolor sit
     </Title>
@@ -77,12 +80,11 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
         showPageSquares
         preferCompletePaginationOnMobile
         loop
-        className="k-u-hidden@m-up"
       >
-        {selectionData.map((item, index) => (
+        {selectionData.map((item) => (
           <div>
             <Card
-              key={index}
+              key={1}
               title={item.title}
               text={item.text}
               imageProps={{
@@ -91,7 +93,7 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               }}
             />
             <Card
-              key={index}
+              key={2}
               title={item.title2}
               text={item.text2}
               imageProps={{
@@ -100,7 +102,7 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               }}
             />
             <Card
-              key={index}
+              key={3}
               title={item.title3}
               text={item.text3}
               imageProps={{
@@ -115,10 +117,10 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
 
     <Grid className="k-u-hidden@m-down">
       <GridCol className="Partners__col">
-        {selectionData.map((item, index) => (
+        {selectionData.map((item) => (
           <div className="Partners__colCards">
             <Card
-              key={index}
+              key={1}
               title={item.title}
               text={item.text}
               imageProps={{
@@ -127,7 +129,7 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               }}
             />
             <Card
-              key={index}
+              key={2}
               title={item.title2}
               text={item.text2}
               imageProps={{
@@ -136,7 +138,7 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               }}
             />
             <Card
-              key={index}
+              key={3}
               title={item.title3}
               text={item.text3}
               imageProps={{
