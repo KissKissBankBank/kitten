@@ -19,7 +19,7 @@ exports[`<ArrowIcon /> by default (deprecated) matches the snapshot 1`] = `
 
 exports[`<ArrowIcon /> with the version prop by default matches the snapshot 1`] = `
 <svg
-  className="sc-AxjAm hfhnnP"
+  className="sc-bdVaJa Afqxo"
   height="5.64"
   viewBox="0 0 8.48 5.64"
   width="8.48"
@@ -33,7 +33,7 @@ exports[`<ArrowIcon /> with the version prop by default matches the snapshot 1`]
 
 exports[`<ArrowIcon /> with the version prop when disabled matches the snapshot 1`] = `
 <svg
-  className="sc-AxjAm fyuGZA"
+  className="sc-bdVaJa eZlPuQ"
   height="5.64"
   viewBox="0 0 8.48 5.64"
   width="8.48"
@@ -47,7 +47,7 @@ exports[`<ArrowIcon /> with the version prop when disabled matches the snapshot 
 
 exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`bottom\` matches the snapshot 1`] = `
 <svg
-  className="sc-AxjAm gSPUsf"
+  className="sc-bdVaJa gyZASH"
   height="5.64"
   viewBox="0 0 8.48 5.64"
   width="8.48"
@@ -61,7 +61,7 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
 
 exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`left\` matches the snapshot 1`] = `
 <svg
-  className="sc-AxjAm iyaRGa"
+  className="sc-bdVaJa bxGcNc"
   height="5.64"
   viewBox="0 0 8.48 5.64"
   width="8.48"
@@ -75,7 +75,7 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
 
 exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`right\` matches the snapshot 1`] = `
 <svg
-  className="sc-AxjAm hfhnnP"
+  className="sc-bdVaJa Afqxo"
   height="5.64"
   viewBox="0 0 8.48 5.64"
   width="8.48"

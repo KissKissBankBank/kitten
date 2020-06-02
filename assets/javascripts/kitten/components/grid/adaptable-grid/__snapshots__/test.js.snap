@@ -2,15 +2,15 @@
 
 exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm jgWwwj"
+  className="sc-bdVaJa kOvCsC"
 >
   <div
-    className="sc-AxirZ gkwspA"
+    className="sc-bwzfXH hKyxyB"
   >
     Test
   </div>
   <div
-    className="sc-AxirZ gjMFur"
+    className="sc-bwzfXH ivEcjV"
   >
     Test
   </div>
@@ -19,15 +19,15 @@ exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with className matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm jgWwwj my_classname"
+  className="sc-bdVaJa kOvCsC my_classname"
 >
   <div
-    className="sc-AxirZ bBhHcx my_second_classname"
+    className="sc-bwzfXH gCxarn my_second_classname"
   >
     Test
   </div>
   <div
-    className="sc-AxirZ bBhHcx my_third_classname"
+    className="sc-bwzfXH gCxarn my_third_classname"
   >
     Test
   </div>
@@ -36,15 +36,15 @@ exports[`<AdaptableGrid /> with className matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with custom HTML tags matches with snapshot 1`] = `
 <dl
-  className="sc-AxjAm jgWwwj"
+  className="sc-bdVaJa kOvCsC"
 >
   <dd
-    className="sc-AxirZ gkwspA"
+    className="sc-bwzfXH hKyxyB"
   >
     Test
   </dd>
   <dt
-    className="sc-AxirZ gjMFur"
+    className="sc-bwzfXH ivEcjV"
   >
     Test
   </dt>
@@ -53,16 +53,16 @@ exports[`<AdaptableGrid /> with custom HTML tags matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm hHARTD"
+  className="sc-bdVaJa hUIlOj"
 >
   <div
-    className="sc-AxirZ hReZrX"
+    className="sc-bwzfXH ewKIHD"
     offset={3}
   >
     Test
   </div>
   <div
-    className="sc-AxirZ bBhHcx"
+    className="sc-bwzfXH gCxarn"
   >
     Test
   </div>

@@ -2,7 +2,7 @@
 
 exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm gssZYw"
+  className="sc-bdVaJa dMDpeM"
 >
   
   
@@ -12,7 +12,7 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
 exports[`<TeamCard /> with some props matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-AxjAm jidNFm"
+    className="sc-bdVaJa bwDdrh"
   >
     <div
       style={
@@ -30,7 +30,7 @@ Array [
     />
   </div>,
   <div
-    className="sc-AxjAm ksLovO"
+    className="sc-bdVaJa jtfdLD"
   >
     <span
       className="k-u-color-font1 k-u-size-default k-u-weight-bold"
@@ -45,7 +45,7 @@ Array [
     </span>
   </div>,
   <div
-    className="sc-AxjAm gssZYw"
+    className="sc-bdVaJa dMDpeM"
   >
     <a
       className="k-ButtonIcon k-ButtonIcon--phone k-ButtonIcon--hydrogen"

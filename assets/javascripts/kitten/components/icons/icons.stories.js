@@ -20,6 +20,7 @@ import { ExportIconAlternate } from './export-icon-alternate'
 import { FacebookIcon } from './facebook-icon'
 import { FacebookIconWithBackground } from './facebook-icon-with-background'
 import { FilterIcon } from './filter-icon'
+import { FlashCircleIcon } from './flash-circle-icon'
 import { GarbageIcon } from './garbage-icon'
 import { GiropayIcon } from './giropay-icon'
 import { GrabberIcon } from './grabber-icon'
@@ -180,6 +181,7 @@ export const AllIcons = () => {
         <IconContainer children={<CrossIcon />} />
         <IconContainer children={<DoubleArrowIcon />} />
         <IconContainer children={<FilterIcon />} />
+        <IconContainer children={<FlashCircleIcon />} />
         <IconContainer children={<GrabberIcon />} />
         <IconContainer children={<HeartIcon />} />
         <IconContainer children={<InstagramIcon />} />
