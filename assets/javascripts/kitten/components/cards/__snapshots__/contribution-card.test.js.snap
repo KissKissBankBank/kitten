@@ -13,7 +13,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
   withoutBorder={false}
 >
   <div
-    className="sc-AxjAm ekdWbF"
+    className="sc-bdVaJa fdLNbY"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -35,10 +35,10 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-AxjAm jDynbx"
+            className="sc-bdVaJa zBUGX"
           >
             <h1
-              className="sc-AxirZ gEwSiw"
+              className="sc-bwzfXH hkXZKS"
               style={
                 Object {
                   "color": "#222",
@@ -49,10 +49,10 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="sc-AxjAm ccCISE"
+            className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-htpNat tODhy k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {
@@ -64,7 +64,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
           </div>
           
           <div
-            className="sc-AxjAm iOcWzD"
+            className="sc-bdVaJa jtnNso"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -109,7 +109,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
   withoutBorder={false}
 >
   <div
-    className="sc-AxjAm ekdWbF"
+    className="sc-bdVaJa fdLNbY"
   >
     <div
       className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
@@ -131,10 +131,10 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-AxjAm jDynbx"
+            className="sc-bdVaJa zBUGX"
           >
             <h1
-              className="sc-AxirZ gEwSiw"
+              className="sc-bwzfXH hkXZKS"
               style={
                 Object {
                   "color": "#222",
@@ -145,10 +145,10 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="sc-AxjAm ccCISE"
+            className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-htpNat tODhy k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {
@@ -159,7 +159,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             />
           </div>
           <div
-            className="sc-AxjAm bpEnKz"
+            className="sc-bdVaJa gSHEXD"
           >
             <p
               className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
@@ -173,7 +173,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            className="sc-AxjAm bsGvJV"
+            className="sc-bdVaJa ggQxmM"
           >
             <p
               className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
@@ -193,7 +193,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-AxjAm ccCISE"
+            className="sc-bdVaJa iDiPml"
           >
             <span
               className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
@@ -246,7 +246,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="sc-AxjAm iOcWzD"
+          className="sc-bdVaJa jtnNso"
         >
           <button
             aria-labelledby="Custom text button"
@@ -272,7 +272,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             Custom text button
           </button>
           <div
-            className="sc-AxjAm ksLovO"
+            className="sc-bdVaJa jtfdLD"
           >
             <div
               data-radium={true}
@@ -284,7 +284,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               }
             >
               <span
-                className="sc-AxhCb dbedwk"
+                className="sc-bxivhb jPuimP"
                 disabled={false}
                 style={
                   Object {
@@ -293,7 +293,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
                 }
               >
                 <span
-                  className="sc-AxhUy efrIZw"
+                  className="sc-ifAKCX hUlZlJ"
                 >
                   <svg
                     className="k-IconBadge__svg"
@@ -342,7 +342,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         style={Object {}}
       >
         <div
-          className="sc-AxjAm StDqN"
+          className="sc-bdVaJa bDWFJH"
         >
           <div
             data-radium={true}
@@ -400,7 +400,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
   withoutBorder={false}
 >
   <div
-    className="sc-AxjAm dCdSew"
+    className="sc-bdVaJa feOtXc"
   >
     <div
       className="k-Grid"
@@ -422,10 +422,10 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-AxjAm jDynbx"
+            className="sc-bdVaJa zBUGX"
           >
             <h1
-              className="sc-AxirZ fVRbfQ"
+              className="sc-bwzfXH iLZHqP"
               style={
                 Object {
                   "color": "#222",
@@ -436,10 +436,10 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </h1>
           </div>
           <div
-            className="sc-AxjAm ccCISE"
+            className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-AxiKw kcCpID k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-htpNat tODhy k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {
@@ -450,7 +450,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             />
           </div>
           <div
-            className="sc-AxjAm bpEnKz"
+            className="sc-bdVaJa gSHEXD"
           >
             <p
               className="k-u-color-font1 k-u-size-big k-u-weight-bold"
@@ -464,7 +464,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </p>
           </div>
           <div
-            className="sc-AxjAm bsGvJV"
+            className="sc-bdVaJa ggQxmM"
           >
             <p
               className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -484,7 +484,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-AxjAm ccCISE"
+            className="sc-bdVaJa iDiPml"
           >
             <div>
               <span
@@ -556,7 +556,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         }
       >
         <div
-          className="sc-AxjAm StDqN"
+          className="sc-bdVaJa bDWFJH"
         >
           <div
             data-radium={true}
@@ -579,7 +579,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
       </div>
     </div>
     <div
-      className="sc-AxjAm iySa-Dp"
+      className="sc-bdVaJa chAJzq"
     >
       <div
         className="k-Grid"
@@ -604,7 +604,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             }
           >
             <span
-              className="sc-AxhCb dbedwk"
+              className="sc-bxivhb jPuimP"
               disabled={false}
               style={
                 Object {
@@ -613,7 +613,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
               }
             >
               <span
-                className="sc-AxhUy efrIZw"
+                className="sc-ifAKCX hUlZlJ"
               >
                 <svg
                   className="k-IconBadge__svg"

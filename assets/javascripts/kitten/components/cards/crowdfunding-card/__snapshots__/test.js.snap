@@ -64,7 +64,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
-  padding-top: calc((10 / 16) * 100%);
+  padding-top: calc( (0.625) * 100% );
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > img {
@@ -132,7 +132,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 .c0 .k-CrowdfundingCard__subtitle__subtitleText {
-  line-height: 1;
+  line-height: 1.2;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -141,6 +141,22 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 .c0 .k-CrowdfundingCard__subtitle__subtitleText.k-CrowdfundingCard__subtitle__subtitleText--truncated {
   white-space: nowrap;
   overflow: hidden;
+}
+
+.c0 .k-CrowdfundingCard__additionalInfo {
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.625rem;
+}
+
+.c0 .k-CrowdfundingCard__additionalInfo > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .c0 .k-CrowdfundingCard__subtitle__horizontalStroke {
@@ -239,8 +255,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   background: linear-gradient( 90deg,rgba(0,0,0,0),rgba(255,255,255,0.3),rgba(0,0,0,0) );
   -webkit-animation: x 1s linear infinite;
   animation: x 1s linear infinite;
-  -webkit-animation-name: eBYYVz;
-  animation-name: eBYYVz;
+  -webkit-animation-name: linDdK;
+  animation-name: linDdK;
 }
 
 .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleAndDesc {
@@ -367,6 +383,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 @media (min-width:40rem) {
+  .c0 .k-CrowdfundingCard__additionalInfo {
+    padding: 0 0.625rem;
+  }
+}
+
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__informations {
     margin-top: 1.25rem;
     padding: 0 0.625rem;
@@ -444,7 +466,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
         </span>
       </div>
       <div
-        className="k-CrowdfundingCard__image__owner"
+        className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
       >
         <div
           className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
@@ -564,7 +586,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 .c0 .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   position: relative;
-  padding-top: calc((10 / 16) * 100%);
+  padding-top: calc( (0.625) * 100% );
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer > img {
@@ -632,7 +654,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 .c0 .k-CrowdfundingCard__subtitle__subtitleText {
-  line-height: 1;
+  line-height: 1.2;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -641,6 +663,22 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 .c0 .k-CrowdfundingCard__subtitle__subtitleText.k-CrowdfundingCard__subtitle__subtitleText--truncated {
   white-space: nowrap;
   overflow: hidden;
+}
+
+.c0 .k-CrowdfundingCard__additionalInfo {
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0.625rem;
+}
+
+.c0 .k-CrowdfundingCard__additionalInfo > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .c0 .k-CrowdfundingCard__subtitle__horizontalStroke {
@@ -739,8 +777,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   background: linear-gradient( 90deg,rgba(0,0,0,0),rgba(255,255,255,0.3),rgba(0,0,0,0) );
   -webkit-animation: x 1s linear infinite;
   animation: x 1s linear infinite;
-  -webkit-animation-name: eBYYVz;
-  animation-name: eBYYVz;
+  -webkit-animation-name: linDdK;
+  animation-name: linDdK;
 }
 
 .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleAndDesc {
@@ -960,6 +998,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 @media (min-width:40rem) {
+  .c0 .k-CrowdfundingCard__additionalInfo {
+    padding: 0 0.625rem;
+  }
+}
+
+@media (min-width:40rem) {
   .c0 .k-CrowdfundingCard__informations {
     margin-top: 1.25rem;
     padding: 0 0.625rem;
@@ -1043,7 +1087,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
         </span>
       </div>
       <div
-        className="k-CrowdfundingCard__image__owner"
+        className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
       >
         <div
           className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"

@@ -1,9 +1,35 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+import COLORS from '../../constants/colors-config'
+import { computeFromRatio } from '../../helpers/utils/ratio'
 
-export const WarningCircleIcon = ({ circleColor, warningColor, ...props }) => {
+const DEFAULT_WIDTH = 20
+const DEFAULT_HEIGHT = 20
+
+export const WarningCircleIcon = ({
+  circleColor,
+  warningColor,
+  width,
+  height,
+  title,
+  ...props
+}) => {
+  const computed = computeFromRatio({
+    defaultWidth: DEFAULT_WIDTH,
+    defaultHeight: DEFAULT_HEIGHT,
+    width,
+    height,
+  })
+
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" {...props}>
-      <title>Warning</title>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      width={computed.width}
+      height={computed.height}
+      {...props}
+    >
+      {title && <title>{title}</title>}
       <circle fill={circleColor} cx="10" cy="10" r="10" />
       <path
         fill={warningColor}
@@ -13,7 +39,15 @@ export const WarningCircleIcon = ({ circleColor, warningColor, ...props }) => {
   )
 }
 
+WarningCircleIcon.prototype = {
+  circleColor: PropTypes.string,
+  warningColor: PropTypes.string,
+  title: PropTypes.string,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+}
+
 WarningCircleIcon.defaultProps = {
-  circleColor: '#fff',
-  warningColor: '#333',
+  circleColor: COLORS.background1,
+  warningColor: COLORS.font1,
 }
