@@ -23,7 +23,7 @@ class ProgressBar extends PureComponent {
 
     if (progress === false) return null
 
-    const progressValue = loading ? 65 : progress
+    const progressValue = loading ? 65 : parseInt(progress, 10)
 
     return (
       <div className="k-CrowdfundingCard__progressBar">
