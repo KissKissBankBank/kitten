@@ -31,7 +31,7 @@ var card = function card(WrappedComponent, wrappedProps) {
   };
 
   var Card = function Card(props) {
-    var _defaultProps$wrapped = (0, _extends2.default)({}, defaultProps, {}, wrappedProps, {}, props),
+    var _defaultProps$wrapped = (0, _extends2.default)((0, _extends2.default)((0, _extends2.default)({}, defaultProps), wrappedProps), props),
         className = _defaultProps$wrapped.className,
         light = _defaultProps$wrapped.light,
         padded = _defaultProps$wrapped.padded,

@@ -2,32 +2,32 @@
 
 exports[`<InfoLines /> should match its empty snapshot 1`] = `
 <dl
-  className="sc-AxjAm gGcIrh"
+  className="sc-bdVaJa esqPwF"
 >
   <div
-    className="sc-AxirZ bsbrOH"
+    className="sc-bwzfXH gyrmSn"
   >
     <dt
-      className="sc-AxiKw cVSFxB"
+      className="sc-htpNat bsAFap"
     >
       Lorem
     </dt>
     <dd
-      className="sc-AxhCb eUxtTG"
+      className="sc-bxivhb jXbezA"
     >
       Ipsum
     </dd>
   </div>
   <div
-    className="sc-AxirZ bsbrOH"
+    className="sc-bwzfXH gyrmSn"
   >
     <dt
-      className="sc-AxiKw cVSFxB"
+      className="sc-htpNat bsAFap"
     >
       Dolor
     </dt>
     <dd
-      className="sc-AxhCb eUxtTG"
+      className="sc-bxivhb jXbezA"
     >
       Sit amet
     </dd>
