@@ -6,6 +6,42 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Remove Radium from KissKiss page `PreDeposit`.
 
+## [2.73.0] - 2020-05-29
+
+Features:
+- Make `CrowdfundingCard` a function instead of a `PureComponent`.
+- Add `imageContainerRatio` prop to `CrowdfundingCard` component.
+
+Fix:
+- On `CrowdfundingCard`, hide `additionalInfo` when `loading` prop is `true`.
+
+## [2.72.0] - 2020-05-28
+
+Features:
+- Add `widgetState` and `additionalInfo` props to `CrowdfundingCard`
+  component.
+- Update `CheckedCircleIcon`, `CrossCircleIcon`, `CrossIcon`,
+  `LockIcon`, `WarningCircleIcon` components by adding title, width, height
+  and sometimes color props.
+- Create `FlashCircleIcon`.
+- Add `orange` to colors config.
+- Add `micro` value to `size` `HorizontalStroke` prop.
+
+Fix:
+- `CrowdfundingCard` title image margin.
+
+## [2.71.0] - 2020-05-27
+
+Feature:
+- Add `hover` on `embed-player` button.
+
+Fixes:
+- Bad position for `ProgressRing` on Chrome.
+- No SSR for `<Modal />`.
+
+Rollback:
+- Back to `styled-components` v4 because of SSR issues.
+
 ## [2.70.0] - 2020-05-15
 
 Feature:
