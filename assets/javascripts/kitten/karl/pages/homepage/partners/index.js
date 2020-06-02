@@ -68,48 +68,50 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
       Lorem ipsum dolor sit
     </Title>
 
-    <Carousel
-      itemMinWidth={viewportIsXSOrLess ? 250 : 490}
-      baseItemMarginBetween={10}
-      paginationPosition={{ default: 'bottom' }}
-      tinyButtons
-      showPageSquares
-      preferCompletePaginationOnMobile
-      loop
-      className="k-u-hidden@m-up"
-    >
-      {selectionData.map((item, index) => (
-        <div>
-          <Card
-            key={index}
-            title={item.title}
-            text={item.text}
-            imageProps={{
-              src: item.imageSrc,
-              alt: 'Image alt',
-            }}
-          />
-          <Card
-            key={index}
-            title={item.title2}
-            text={item.text2}
-            imageProps={{
-              src: item.imageSrc2,
-              alt: 'Image alt',
-            }}
-          />
-          <Card
-            key={index}
-            title={item.title3}
-            text={item.text3}
-            imageProps={{
-              src: item.imageSrc3,
-              alt: 'Image alt',
-            }}
-          />
-        </div>
-      ))}
-    </Carousel>
+    <div className="k-u-hidden@l-up">
+      <Carousel
+        itemMinWidth={viewportIsXSOrLess ? 250 : 490}
+        baseItemMarginBetween={10}
+        paginationPosition={{ default: 'bottom' }}
+        tinyButtons
+        showPageSquares
+        preferCompletePaginationOnMobile
+        loop
+        className="k-u-hidden@m-up"
+      >
+        {selectionData.map((item, index) => (
+          <div>
+            <Card
+              key={index}
+              title={item.title}
+              text={item.text}
+              imageProps={{
+                src: item.imageSrc,
+                alt: 'Image alt',
+              }}
+            />
+            <Card
+              key={index}
+              title={item.title2}
+              text={item.text2}
+              imageProps={{
+                src: item.imageSrc2,
+                alt: 'Image alt',
+              }}
+            />
+            <Card
+              key={index}
+              title={item.title3}
+              text={item.text3}
+              imageProps={{
+                src: item.imageSrc3,
+                alt: 'Image alt',
+              }}
+            />
+          </div>
+        ))}
+      </Carousel>
+    </div>
 
     <Grid className="k-u-hidden@m-down">
       <GridCol className="Partners__col">

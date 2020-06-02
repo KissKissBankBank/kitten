@@ -13,7 +13,7 @@ const StyledCard = styled.article`
   align-items: center;
   margin-bottom: ${pxToRem(20)};
 
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     margin-bottom: ${pxToRem(30)};
   }
 
@@ -29,7 +29,7 @@ const StyledCard = styled.article`
     padding: 0;
     padding-right: ${pxToRem(7.5)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       padding-right: ${pxToRem(10)};
     }
 
@@ -39,8 +39,6 @@ const StyledCard = styled.article`
   }
 
   .Partners__card__image {
-    margin-bottom: ${pxToRem(20)};
-    margin-right: ${pxToRem(30)};
     display: block;
     width: 100%;
   }
@@ -73,7 +71,7 @@ const StyledCard = styled.article`
     padding-right: 0;
     padding-left: ${pxToRem(7.5)};
 
-    @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       padding-left: ${pxToRem(10)};
     }
 
