@@ -188,7 +188,7 @@ const HomePage = () => (
     </Container>
     
     <Container as="section" className="Homepage__section">
-        <Partners />
+      <Partners />
     </Container>
 
     <Container as="section" className="Homepage__section">

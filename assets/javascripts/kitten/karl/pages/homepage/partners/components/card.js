@@ -85,11 +85,13 @@ export const Card = ({
   imageProps,
   title,
   text,
-  className,
   ...props
 }) => {
   return (
-    <StyledCard {...props}>
+    <StyledCard 
+      className={classNames('Partners__card')}
+      {...props}
+    >
       <GridCol
         className="Partners__card__imageCol"
         col={6}
@@ -113,7 +115,7 @@ export const Card = ({
       >
 
         <Title
-          margin={0}
+          margin={false}
           className="Partners__card__title"
           tag="h4"
           modifier="septenary"
