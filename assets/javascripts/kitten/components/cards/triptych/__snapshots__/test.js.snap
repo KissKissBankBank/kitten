@@ -27,52 +27,32 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
   >
     <div>
       <div
-        data-radium={true}
+        className="sc-htpNat hbzMcy"
       >
         <div
-          className="sc-htpNat gtJGhM"
+          className="k-u-margin-bottom-triple"
         >
           <img
             alt=""
-            data-radium={true}
+            className="k-VerticalCardWithAction__image"
             src="http://via.placeholder.com/349x465/19b4fa/19b4fa"
-            style={
-              Object {
-                "display": "block",
-                "width": "100%",
-              }
-            }
           />
         </div>
         <div
-          className="sc-htpNat kKOIuD"
+          className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
-          <div
-            data-radium={true}
+          <h1
+            className="sc-bwzfXH gVLghD k-u-align-center"
           >
-            <div
-              className="sc-htpNat fGQwBc"
-            >
-              <h1
-                className="sc-bwzfXH gVLghD"
-                style={
-                  Object {
-                    "color": "#222",
-                    "textAlign": "center",
-                  }
-                }
-              >
-                Lorem ipsum dolor sit amet
-              </h1>
-            </div>
-            
-          </div>
+            Lorem ipsum dolor sit amet
+          </h1>
+          
         </div>
         <div
-          className="sc-htpNat fVeBGc"
+          className="k-u-margin-top-triple k-u-align-center"
         >
           <button
-            className="k-Button k-Button--helium"
+            className="k-Button k-Button--helium k-VerticalCardWithAction__button"
             href={null}
             onClick={null}
             tabIndex={null}
@@ -81,13 +61,6 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
             Lorem
           </button>
         </div>
-        <style
-          dangerouslySetInnerHTML={
-            Object {
-              "__html": "",
-            }
-          }
-        />
       </div>
     </div>
   </div>
@@ -95,66 +68,36 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
     className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn"
   >
     <div
-      data-radium={true}
+      className="sc-htpNat hbzMcy"
     >
       <div
-        className="sc-htpNat gtJGhM"
+        className="k-u-margin-bottom-triple"
       >
         <img
           alt=""
-          data-radium={true}
+          className="k-VerticalCardWithAction__image"
           src="http://via.placeholder.com/349x465/ff8846/ff8846"
-          style={
-            Object {
-              "display": "block",
-              "width": "100%",
-            }
-          }
         />
       </div>
       <div
-        className="sc-htpNat kKOIuD"
+        className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
-        <div
-          data-radium={true}
+        <h1
+          className="sc-bwzfXH gVLghD k-u-align-center k-u-margin-bottom-singleHalf--important"
         >
-          <div
-            className="sc-htpNat hzGOPc"
-          >
-            <h1
-              className="sc-bwzfXH gVLghD"
-              style={
-                Object {
-                  "color": "#222",
-                  "textAlign": "center",
-                }
-              }
-            >
-              Donsectetur adipiscing elit
-            </h1>
-          </div>
-          <div
-            className="sc-htpNat itvSJX"
-          >
-            <p
-              className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
-              style={
-                Object {
-                  "color": "#222",
-                  "textAlign": "center",
-                }
-              }
-            >
-              Nulla ut orci velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
-          </div>
-        </div>
+          Donsectetur adipiscing elit
+        </h1>
+        <p
+          className="k-Paragraph k-u-align-center k-u-margin-top-singleHalf--important k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        >
+          Nulla ut orci velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </p>
       </div>
       <div
-        className="sc-htpNat fVeBGc"
+        className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="k-Button k-Button--helium"
+          className="k-Button k-Button--helium k-VerticalCardWithAction__button"
           href={null}
           onClick={null}
           tabIndex={null}
@@ -163,65 +106,38 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           Ipsum
         </button>
       </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
     </div>
   </div>
   <div
     className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
   >
     <div
-      data-radium={true}
+      className="sc-htpNat hbzMcy"
     >
       <div
-        className="sc-htpNat gtJGhM"
+        className="k-u-margin-bottom-triple"
       >
         <img
           alt=""
-          data-radium={true}
+          className="k-VerticalCardWithAction__image"
           src="http://via.placeholder.com/349x465/61d079/61d079"
-          style={
-            Object {
-              "display": "block",
-              "width": "100%",
-            }
-          }
         />
       </div>
       <div
-        className="sc-htpNat kKOIuD"
+        className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
-        <div
-          data-radium={true}
+        <h1
+          className="sc-bwzfXH gVLghD k-u-align-center"
         >
-          <div
-            className="sc-htpNat fGQwBc"
-          >
-            <h1
-              className="sc-bwzfXH gVLghD"
-              style={
-                Object {
-                  "color": "#222",
-                  "textAlign": "center",
-                }
-              }
-            >
-              Praesent tincidunt ultrices sem
-            </h1>
-          </div>
-          
-        </div>
+          Praesent tincidunt ultrices sem
+        </h1>
+        
       </div>
       <div
-        className="sc-htpNat fVeBGc"
+        className="k-u-margin-top-triple k-u-align-center"
       >
         <button
-          className="k-Button k-Button--helium"
+          className="k-Button k-Button--helium k-VerticalCardWithAction__button"
           href={null}
           onClick={null}
           tabIndex={null}
@@ -230,13 +146,6 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           Dolor
         </button>
       </div>
-      <style
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "",
-          }
-        }
-      />
     </div>
   </div>
 </div>
