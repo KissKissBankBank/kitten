@@ -42,14 +42,14 @@ const StyledEmbedPlayer = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 1;
-    &:hover,
-    &:focus {
+    .k-EmbedPlayer:hover &,
+    .k-EmbedPlayer:focus & {
       background-color: ${COLORS.primary2};
       .k-EmbedPlayer__buttonPicto {
         fill: ${COLORS.background1};
       }
     }
-    &:active {
+    .k-EmbedPlayer:active & {
       background-color: ${COLORS.primary3};
       .k-EmbedPlayer__buttonPicto {
         fill: ${COLORS.background1};
