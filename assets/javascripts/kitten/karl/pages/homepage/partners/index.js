@@ -81,10 +81,9 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
         preferCompletePaginationOnMobile
         loop
       >
-        {selectionData.map((item) => (
-          <div>
+        {selectionData.map((item, index) => (
+          <div key={index}>
             <Card
-              key={1}
               title={item.title}
               text={item.text}
               imageProps={{
@@ -93,7 +92,6 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               }}
             />
             <Card
-              key={2}
               title={item.title2}
               text={item.text2}
               imageProps={{
@@ -102,7 +100,6 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               }}
             />
             <Card
-              key={3}
               title={item.title3}
               text={item.text3}
               imageProps={{
@@ -117,10 +114,9 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
 
     <Grid className="k-u-hidden@m-down">
       <GridCol className="Partners__col">
-        {selectionData.map((item) => (
-          <div className="Partners__colCards">
+        {selectionData.map((item, index) => (
+          <div className="Partners__colCards" key={index}>
             <Card
-              key={1}
               title={item.title}
               text={item.text}
               imageProps={{
@@ -129,7 +125,6 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               }}
             />
             <Card
-              key={2}
               title={item.title2}
               text={item.text2}
               imageProps={{
@@ -138,7 +133,6 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               }}
             />
             <Card
-              key={3}
               title={item.title3}
               text={item.text3}
               imageProps={{
