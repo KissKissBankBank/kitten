@@ -10,8 +10,8 @@ import classNames from 'classnames'
 
 const StyledPartners = styled.div`
   .Partners__col {
-    display: flex;    
-  } 
+    display: flex;
+  }
 
   .Partners__colCards {
     &:first-child {
@@ -25,8 +25,7 @@ const StyledPartners = styled.div`
 
 const selectionData = [
   {
-    title:
-      'Sloe, le soin nomade et naturel à la conquête',
+    title: 'Sloe, le soin nomade et naturel à la conquête',
     text:
       'Découvrez des soins 100% naturels et écologiques pour vous aider à passer le cap et en finir avec le plastique.',
     imageSrc: 'https://source.unsplash.com/random/315x198?kitten,1',
@@ -55,7 +54,6 @@ const selectionData = [
     imageSrc3: 'https://source.unsplash.com/random/315x198?kitten,6',
   },
 ]
-
 
 const PartnersBase = ({ viewportIsXSOrLess }) => (
   <StyledPartners>
@@ -141,7 +139,7 @@ const PartnersBase = ({ viewportIsXSOrLess }) => (
               }}
             />
           </div>
-        ))}  
+        ))}
       </GridCol>
     </Grid>
   </StyledPartners>

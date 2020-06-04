@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `NavBar` component.
+- Fix: `overflow: scroll` bug on ScrollableContainer.
 - Feature: Consolidate both `Carousel` components and handle legacy.
 - Fix: No SSR for `<Modal />`.
 - Fix: Remove Radium from KissKiss page `PreDeposit`.

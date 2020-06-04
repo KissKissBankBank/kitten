@@ -172,6 +172,7 @@ export { Overlay } from './components/modals/overlay'
 export { HorizontalNav } from './components/navigation/horizontal-nav'
 export { Pagination } from './components/navigation/pagination'
 export { TabBar } from './components/navigation/tab-bar'
+export { NavBar } from './components/navigation/nav-bar'
 
 // Notifications
 export { Alert } from './components/notifications/alert'

@@ -81,30 +81,14 @@ const StyledCard = styled.article`
   }
 `
 
-export const Card = ({
-  imageProps,
-  title,
-  text,
-  ...props
-}) => {
+export const Card = ({ imageProps, title, text, ...props }) => {
   return (
-    <StyledCard 
-      className={classNames('Partners__card')}
-      {...props}
-    >
-      <GridCol
-        className="Partners__card__imageCol"
-        col={6}
-        col-s={5}
-        col-l={6}
-      >
+    <StyledCard className={classNames('Partners__card')} {...props}>
+      <GridCol className="Partners__card__imageCol" col={6} col-s={5} col-l={6}>
         <img
           alt=""
           {...imageProps}
-          className={classNames(
-            'Partners__card__image',
-            imageProps.className,
-          )}
+          className={classNames('Partners__card__image', imageProps.className)}
         />
       </GridCol>
       <GridCol
@@ -113,7 +97,6 @@ export const Card = ({
         col-s={7}
         col-l={6}
       >
-
         <Title
           margin={false}
           className="Partners__card__title"
