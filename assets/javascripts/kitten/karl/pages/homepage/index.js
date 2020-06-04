@@ -16,6 +16,7 @@ import { NewsBlock } from './news/components/news-block'
 import { TextWithSideImage } from './text-with-side-image'
 import { Video } from './video'
 import { DialogWithPictureBorder } from './dialog-with-picture-border'
+import { Partners } from './partners'
 
 const StyledHomePage = styled.div`
   .Homepage__section {
@@ -184,6 +185,10 @@ const HomePage = () => (
 
     <Container as="section" className="Homepage__section">
       <TextWithSideImage />
+    </Container>
+
+    <Container as="section" className="Homepage__section">
+      <Partners />
     </Container>
 
     <Container as="section" className="Homepage__section">
