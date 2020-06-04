@@ -40,6 +40,7 @@ const StyledEmbedPlayer = styled.div`
   }
   &:active .k-EmbedPlayer__button {
     background-color: ${COLORS.primary3};
+
     .k-EmbedPlayer__buttonPicto {
       fill: ${COLORS.background1};
     }
