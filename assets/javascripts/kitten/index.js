@@ -53,8 +53,6 @@ export { VerticalCard } from './components/cards/vertical-card'
 // Carousel
 export { Carousel } from './components/carousel/carousel'
 export { NavTabCarousel } from './components/carousel/nav-tab-carousel'
-export { CarouselInner } from './components/carousel/carousel-inner'
-export { CarouselPage } from './components/carousel/carousel-page'
 export { SimpleCarousel } from './components/carousel/simple-carousel'
 
 // Comment

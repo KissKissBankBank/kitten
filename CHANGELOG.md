@@ -6,6 +6,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `NavBar` component.
 - Fix: `overflow: scroll` bug on ScrollableContainer.
+- Feature: Consolidate both `Carousel` components and handle legacy.
+- Fix: No SSR for `<Modal />`.
+- Fix: Remove Radium from KissKiss page `PreDeposit`.
+- Fix: Remove Radium from Lendo Annex `SimpleTemplate`.
+- Feature: Add `disabled` global prop to `RewardCard`.
+- Fix: Remove Radium from `RewardCard`.
+- Fix: Remove Radium from `Hero`.
+- Fix: Remove Radium from `LegoGrid`.
+- Fix: Remove Radium from `Timeline`.
+- Fix: Remove Radium on various Karl components and stories.
+- Fix: Remove Radium from `CartRewardCard`.
+- Fix: Remove Radium from `VerticalCardWithAction`.
+- Fix: Remove `Radium` from `Triptych`.
+- Fix: Remove `Radium` from `TeamCard`.
 
 ## [2.73.0] - 2020-05-29
 

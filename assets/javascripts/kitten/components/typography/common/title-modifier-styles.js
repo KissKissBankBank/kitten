@@ -2,7 +2,7 @@ import { css } from 'styled-components'
 import { stepToRem, pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 
-const titleModifiers = [
+export const titleModifiers = [
   {
     name: 'primary',
     fontStepOnMobile: 7,
