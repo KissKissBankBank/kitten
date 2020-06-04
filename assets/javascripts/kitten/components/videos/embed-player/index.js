@@ -34,6 +34,7 @@ const StyledEmbedPlayer = styled.div`
   &:hover .k-EmbedPlayer__button,
   &:focus .k-EmbedPlayer__button {
     background-color: ${COLORS.primary2};
+
     .k-EmbedPlayer__buttonPicto {
       fill: ${COLORS.background1};
     }
