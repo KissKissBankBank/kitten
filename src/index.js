@@ -243,18 +243,6 @@ Object.defineProperty(exports, "NavTabCarousel", {
     return _navTabCarousel.NavTabCarousel;
   }
 });
-Object.defineProperty(exports, "CarouselInner", {
-  enumerable: true,
-  get: function get() {
-    return _carouselInner.CarouselInner;
-  }
-});
-Object.defineProperty(exports, "CarouselPage", {
-  enumerable: true,
-  get: function get() {
-    return _carouselPage.CarouselPage;
-  }
-});
 Object.defineProperty(exports, "SimpleCarousel", {
   enumerable: true,
   get: function get() {
@@ -735,6 +723,12 @@ Object.defineProperty(exports, "TabBar", {
     return _tabBar.TabBar;
   }
 });
+Object.defineProperty(exports, "NavBar", {
+  enumerable: true,
+  get: function get() {
+    return _navBar.NavBar;
+  }
+});
 Object.defineProperty(exports, "Alert", {
   enumerable: true,
   get: function get() {
@@ -1006,10 +1000,6 @@ var _carousel = require("./components/carousel/carousel");
 
 var _navTabCarousel = require("./components/carousel/nav-tab-carousel");
 
-var _carouselInner = require("./components/carousel/carousel-inner");
-
-var _carouselPage = require("./components/carousel/carousel-page");
-
 var _simpleCarousel = require("./components/carousel/simple-carousel");
 
 var _commentAvatar = require("./components/comments/comment-avatar");
@@ -1163,6 +1153,8 @@ var _horizontalNav = require("./components/navigation/horizontal-nav");
 var _pagination = require("./components/navigation/pagination");
 
 var _tabBar = require("./components/navigation/tab-bar");
+
+var _navBar = require("./components/navigation/nav-bar");
 
 var _alert = require("./components/notifications/alert");
 

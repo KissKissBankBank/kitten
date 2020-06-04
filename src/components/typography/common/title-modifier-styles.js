@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.titleModifierStyles = void 0;
+exports.titleModifierStyles = exports.titleModifiers = void 0;
 
 var _styledComponents = require("styled-components");
 
@@ -47,6 +47,7 @@ var titleModifiers = [{
   fontStepOnTablet: 1,
   fontStepOnDesktop: 2
 }];
+exports.titleModifiers = titleModifiers;
 
 var titleModifierStyles = function titleModifierStyles(prefix) {
   return (0, _styledComponents.css)(["", " @media (min-width:", "){", "}@media (min-width:", "){", "}"], titleModifiers.map(function (key) {

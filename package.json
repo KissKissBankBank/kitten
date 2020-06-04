@@ -1,6 +1,6 @@
 {
   "name": "@kisskissbankbank/kitten",
-  "version": "2.73.0",
+  "version": "2.74.0",
   "license": "MIT",
   "description": "Front-end components library",
   "main": "src",
@@ -35,7 +35,6 @@
     "prop-types": "15.7.2",
     "prop-types-extra": "1.1.1",
     "pubsub-js": "1.8.0",
-    "radium": "0.25.1",
     "react-ckeditor-wrapper": "1.1.2",
     "react-cropper": "0.12.0",
     "react-day-picker": "7.4.8",

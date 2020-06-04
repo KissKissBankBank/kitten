@@ -1,0 +1,550 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
+.c0 {
+  width: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 .k-NavBar__nav {
+  width: auto;
+  margin: 0;
+  padding: 0 1.25rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 .k-NavBar__nav::before,
+.c0 .k-NavBar__nav::after {
+  content: "";
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 .k-NavBar__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 .k-NavBar__listItem + .k-NavBar__listItem {
+  margin-left: 1.5625rem;
+}
+
+.c0 .k-NavBar__link {
+  height: 4.0625rem;
+  box-sizing: border-box;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  outline: none;
+  color: #00f;
+  border-bottom: 0.25rem solid transparent;
+  -webkit-transition: color .2s,border-color .2s;
+  transition: color .2s,border-color .2s;
+  cursor: pointer;
+}
+
+.c0 .k-NavBar__link:hover {
+  color: #808;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 .k-NavBar__link:focus,
+.c0 .k-NavBar__link[aria-current="page"] {
+  border-color: rgba(128,0,128,.5);
+  color: #808;
+  border-width: 0.25rem;
+}
+
+.c0.k-NavBar--big .k-NavBar__link {
+  height: 5rem;
+}
+
+@media (min-width:40rem) {
+  .c0 .k-NavBar__nav {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 .k-NavBar__listItem + .k-NavBar__listItem {
+    margin-left: 3.125rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 .k-NavBar__link {
+    height: 5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-NavBar--big .k-NavBar__link {
+    height: 6.25rem;
+  }
+}
+
+<div
+  className="c0 k-NavBar k-NavBar--regular customClass"
+>
+  <nav
+    className="k-NavBar__nav customNavClass"
+  >
+    <ul
+      className="k-NavBar__list customListClass"
+    >
+      <li
+        className="k-NavBar__listItem"
+      >
+        <a
+          aria-current="page"
+          className="k-NavBar__link"
+          href="#1"
+        >
+          Item 1
+        </a>
+      </li>
+      <li
+        className="k-NavBar__listItem customItemClass"
+      >
+        <a
+          aria-current={null}
+          className="k-NavBar__link customLinkClass"
+          href="#2"
+        >
+          Item 2
+        </a>
+      </li>
+      <li
+        className="k-NavBar__listItem"
+      >
+        <a
+          aria-current={null}
+          className="k-NavBar__link"
+          href="#3"
+        >
+          Item 3
+        </a>
+      </li>
+      <li
+        className="k-NavBar__listItem"
+      >
+        <a
+          aria-current={null}
+          className="k-NavBar__link"
+          href="#4"
+        >
+          Item 4
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
+.c0 {
+  width: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 .k-NavBar__nav {
+  width: auto;
+  margin: 0;
+  padding: 0 1.25rem;
+  background: #f3fbff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 .k-NavBar__nav::before,
+.c0 .k-NavBar__nav::after {
+  content: "";
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 .k-NavBar__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 .k-NavBar__listItem + .k-NavBar__listItem {
+  margin-left: 1.5625rem;
+}
+
+.c0 .k-NavBar__link {
+  height: 4.0625rem;
+  box-sizing: border-box;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  outline: none;
+  color: #222;
+  border-bottom: 0.25rem solid transparent;
+  -webkit-transition: color .2s,border-color .2s;
+  transition: color .2s,border-color .2s;
+  cursor: pointer;
+}
+
+.c0 .k-NavBar__link:hover {
+  color: #19b4fa;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 .k-NavBar__link:focus,
+.c0 .k-NavBar__link[aria-current="page"] {
+  border-color: #19b4fa;
+  color: #19b4fa;
+  border-width: 0.25rem;
+}
+
+.c0.k-NavBar--big .k-NavBar__link {
+  height: 5rem;
+}
+
+@media (min-width:40rem) {
+  .c0 .k-NavBar__nav {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 .k-NavBar__listItem + .k-NavBar__listItem {
+    margin-left: 3.125rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 .k-NavBar__link {
+    height: 5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-NavBar--big .k-NavBar__link {
+    height: 6.25rem;
+  }
+}
+
+<div
+  className="c0 k-NavBar k-NavBar--big customClass"
+>
+  <nav
+    className="k-NavBar__nav customNavClass"
+  >
+    <ul
+      className="k-NavBar__list customListClass"
+    >
+      <li
+        className="k-NavBar__listItem"
+      >
+        <a
+          aria-current="page"
+          className="k-NavBar__link"
+          href="#1"
+        >
+          Item 1
+        </a>
+      </li>
+      <li
+        className="k-NavBar__listItem customItemClass"
+      >
+        <a
+          aria-current={null}
+          className="k-NavBar__link customLinkClass"
+          href="#2"
+        >
+          Item 2
+        </a>
+      </li>
+      <li
+        className="k-NavBar__listItem"
+      >
+        <a
+          aria-current={null}
+          className="k-NavBar__link"
+          href="#3"
+        >
+          Item 3
+        </a>
+      </li>
+      <li
+        className="k-NavBar__listItem"
+      >
+        <a
+          aria-current={null}
+          className="k-NavBar__link"
+          href="#4"
+        >
+          Item 4
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
+exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
+.c0 {
+  width: auto;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 .k-NavBar__nav {
+  width: auto;
+  margin: 0;
+  padding: 0 1.25rem;
+  background: #f3fbff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 .k-NavBar__nav::before,
+.c0 .k-NavBar__nav::after {
+  content: "";
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c0 .k-NavBar__list {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.c0 .k-NavBar__listItem + .k-NavBar__listItem {
+  margin-left: 1.5625rem;
+}
+
+.c0 .k-NavBar__link {
+  height: 4.0625rem;
+  box-sizing: border-box;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  outline: none;
+  color: #222;
+  border-bottom: 0.25rem solid transparent;
+  -webkit-transition: color .2s,border-color .2s;
+  transition: color .2s,border-color .2s;
+  cursor: pointer;
+}
+
+.c0 .k-NavBar__link:hover {
+  color: #19b4fa;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 .k-NavBar__link:focus,
+.c0 .k-NavBar__link[aria-current="page"] {
+  border-color: #19b4fa;
+  color: #19b4fa;
+  border-width: 0.25rem;
+}
+
+.c0.k-NavBar--big .k-NavBar__link {
+  height: 5rem;
+}
+
+@media (min-width:40rem) {
+  .c0 .k-NavBar__nav {
+    padding: 0 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 .k-NavBar__listItem + .k-NavBar__listItem {
+    margin-left: 3.125rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 .k-NavBar__link {
+    height: 5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0.k-NavBar--big .k-NavBar__link {
+    height: 6.25rem;
+  }
+}
+
+<div
+  className="c0 k-NavBar k-NavBar--regular customClass"
+>
+  <nav
+    className="k-NavBar__nav customNavClass"
+  >
+    <ul
+      className="k-NavBar__list customListClass"
+    >
+      <li
+        className="k-NavBar__listItem"
+      >
+        <a
+          aria-current="page"
+          className="k-NavBar__link"
+          href="#1"
+        >
+          Item 1
+        </a>
+      </li>
+      <li
+        className="k-NavBar__listItem customItemClass"
+      >
+        <a
+          aria-current={null}
+          className="k-NavBar__link customLinkClass"
+          href="#2"
+        >
+          Item 2
+        </a>
+      </li>
+      <li
+        className="k-NavBar__listItem"
+      >
+        <a
+          aria-current={null}
+          className="k-NavBar__link"
+          href="#3"
+        >
+          Item 3
+        </a>
+      </li>
+      <li
+        className="k-NavBar__listItem"
+      >
+        <a
+          aria-current={null}
+          className="k-NavBar__link"
+          href="#4"
+        >
+          Item 4
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

@@ -1,12 +1,11 @@
 import React from 'react'
-import { StyleRoot } from 'radium'
 import { RewardCard } from '../../components/cards/reward-card'
 import { Container } from '../../components/grid/container'
 import { Marger } from '../../components/layout/marger'
 import { KarlExampleTitle } from '../../karl/examples/title'
 
 export const KarlRewardCard = () => (
-  <StyleRoot>
+  <>
     <KarlExampleTitle>Reward card</KarlExampleTitle>
     <Container>
       <Marger bottom="2">
@@ -148,5 +147,5 @@ export const KarlRewardCard = () => (
         />
       </Marger>
     </Container>
-  </StyleRoot>
+  </>
 )

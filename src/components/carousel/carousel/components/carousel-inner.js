@@ -211,6 +211,8 @@ var CarouselInner = /*#__PURE__*/function (_Component) {
       var _this2 = this;
 
       var _this$props3 = this.props,
+          legacyMode = _this$props3.legacyMode,
+          data = _this$props3.data,
           itemMinWidth = _this$props3.itemMinWidth,
           renderItem = _this$props3.renderItem,
           indexPageVisible = _this$props3.indexPageVisible,
@@ -237,10 +239,12 @@ var CarouselInner = /*#__PURE__*/function (_Component) {
           showOtherPages: showOtherPages,
           className: pagesClassName
         }, "className", "k-Carousel__inner__pageContainer"), /*#__PURE__*/_react.default.createElement(_carouselPage.CarouselPage, {
+          legacyMode: legacyMode,
+          data: legacyMode ? getDataForPage(data, index, numColumns) : null,
           numColumns: numColumns,
           itemMinWidth: itemMinWidth,
           itemMarginBetween: itemMarginBetween,
-          renderItem: getDataForPage(renderItem, index, numColumns)
+          renderItem: legacyMode ? renderItem : getDataForPage(renderItem, index, numColumns)
         }));
       }));
     }

@@ -6,7 +6,7 @@ import {
   getNumPagesForColumnsAndDataLength,
   checkPage,
   checkPageLoop,
-} from './carousel'
+} from './index'
 import {
   ProjectCard,
   MIN_WIDTH as ProjectCardMinWidth,
@@ -86,6 +86,95 @@ describe('<Carousel />', () => {
             <ProjectCard title={item.title} key={index} />
           ))}
         </Carousel>,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(carousel).toMatchSnapshot()
+    })
+  })
+
+  describe('legacy carousel on desktop', () => {
+    window.matchMedia = createMockMediaMatcher(false) // desktop
+
+    // Desactivate warnings.
+    jest.spyOn(global.console, 'error').mockImplementation(() => {})
+
+    const carousel = renderer
+      .create(
+        <Carousel
+          itemMinWidth={ProjectCardMinWidth}
+          baseItemMarginBetween={ProjectCardMarginBetween}
+          data={[{ title: 'A' }]}
+          renderItem={({ item }) => {
+            return <ProjectCard title={item.title} />
+          }}
+        />,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(carousel).toMatchSnapshot()
+    })
+  })
+
+  describe('legacy carousel on desktop with withoutLeftOffset={true}', () => {
+    window.matchMedia = createMockMediaMatcher(false) // desktop
+
+    // Desactivate warnings.
+    jest.spyOn(global.console, 'error').mockImplementation(() => {})
+
+    const carousel = renderer
+      .create(
+        <Carousel
+          itemMinWidth={ProjectCardMinWidth}
+          baseItemMarginBetween={ProjectCardMarginBetween}
+          data={[{ title: 'A' }]}
+          withoutLeftOffset={true}
+          renderItem={({ item }) => {
+            return <ProjectCard title={item.title} />
+          }}
+        />,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(carousel).toMatchSnapshot()
+    })
+  })
+
+  describe('legacy carousel on mobile', () => {
+    window.matchMedia = createMockMediaMatcher(true) // mobile
+
+    // Desactivate warnings.
+    jest.spyOn(global.console, 'error').mockImplementation(() => {})
+
+    const carousel = renderer
+      .create(
+        <Carousel
+          itemMinWidth={ProjectCardMinWidth}
+          baseItemMarginBetween={ProjectCardMarginBetween}
+          data={[{ title: 'A' }]}
+          renderItem={({ item }) => {
+            return <ProjectCard title={item.title} />
+          }}
+        />,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(carousel).toMatchSnapshot()
+    })
+  })
+
+  describe('empty carousel', () => {
+    window.matchMedia = createMockMediaMatcher(true) // mobile
+    const carousel = renderer
+      .create(
+        <Carousel
+          itemMinWidth={ProjectCardMinWidth}
+          baseItemMarginBetween={ProjectCardMarginBetween}
+        />,
       )
       .toJSON()
 
