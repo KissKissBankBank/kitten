@@ -67,7 +67,7 @@ const StyledNavBar = styled.div`
     outline: none;
     color: ${({ colors }) => colors.link || COLORS.font1};
     border-bottom: ${pxToRem(4)} solid ${({ colors }) =>
-  colors.border || 'transparent'};
+      colors.border || 'transparent'};
     transition: color .2s, border-color .2s;
     cursor: pointer;
 
