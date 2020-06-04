@@ -20,14 +20,12 @@ const StyledImage = styled.img`
   height: ${({ imageHeight }) => pxToRem(imageHeight)};
   display: block;
   transition: transform 0.4s ease;
+  object-fit: cover;
+  width: 100%;
 
   :hover,
   :focus {
     transform: scale(1.05);
-  }
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-     width: 100%;
   }
 `
 

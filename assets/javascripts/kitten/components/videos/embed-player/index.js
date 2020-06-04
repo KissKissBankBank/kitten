@@ -31,6 +31,22 @@ const StyledEmbedPlayer = styled.div`
     height: 100%;
   }
 
+  &:hover .k-EmbedPlayer__button,
+  &:focus .k-EmbedPlayer__button {
+    background-color: ${COLORS.primary2};
+
+    .k-EmbedPlayer__buttonPicto {
+      fill: ${COLORS.background1};
+    }
+  }
+  &:active .k-EmbedPlayer__button {
+    background-color: ${COLORS.primary3};
+
+    .k-EmbedPlayer__buttonPicto {
+      fill: ${COLORS.background1};
+    }
+  }
+
   .k-EmbedPlayer__button {
     width: ${pxToRem(playerButtonXSSize)};
     height: ${pxToRem(playerButtonXSSize)};
@@ -42,19 +58,6 @@ const StyledEmbedPlayer = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 1;
-    &:hover,
-    &:focus {
-      background-color: ${COLORS.primary2};
-      .k-EmbedPlayer__buttonPicto {
-        fill: ${COLORS.background1};
-      }
-    }
-    &:active {
-      background-color: ${COLORS.primary3};
-      .k-EmbedPlayer__buttonPicto {
-        fill: ${COLORS.background1};
-      }
-    }
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       width: ${pxToRem(playerButtonSize)};
