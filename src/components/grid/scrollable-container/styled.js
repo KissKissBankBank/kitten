@@ -23,7 +23,7 @@ var gradientWidth = 20;
 var StyledContainer = (0, _styledComponents.default)(_container.Container).withConfig({
   displayName: "styled__StyledContainer",
   componentId: "d41exg-0"
-})(["position:relative;padding-left:0;padding-right:0;"]);
+})(["position:relative;padding-left:0;padding-right:0;overflow:scroll;"]);
 exports.StyledContainer = StyledContainer;
 
 var scrollableContainerStyle = function scrollableContainerStyle(_ref) {

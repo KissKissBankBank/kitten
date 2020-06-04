@@ -60,6 +60,8 @@ var CarouselPage = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props,
+          legacyMode = _this$props.legacyMode,
+          data = _this$props.data,
           numColumns = _this$props.numColumns,
           itemMinWidth = _this$props.itemMinWidth,
           itemMarginBetween = _this$props.itemMarginBetween,
@@ -74,7 +76,9 @@ var CarouselPage = /*#__PURE__*/function (_Component) {
           itemMinWidth: itemMinWidth,
           itemMarginBetween: itemMarginBetween,
           className: "k-Carousel__page__item"
-        }, renderItem[index]);
+        }, legacyMode ? data[index] && renderItem({
+          item: data[index]
+        }) : renderItem[index]);
       }));
     }
   }]);
