@@ -26,10 +26,13 @@ ListTable.Header = ({
   ...others
 }) => {
   return (
-    <header {...others} className={classNames('ListTable__Header', className)}>
+    <header
+      {...others}
+      className={classNames('k-ListTable__Header', className)}
+    >
       <ul
         {...listProps}
-        className={classNames('ListTable__HeaderList', listProps.className)}
+        className={classNames('k-ListTable__HeaderList', listProps.className)}
       >
         <Context.Consumer>
           {({ id }) => (
@@ -46,7 +49,9 @@ ListTable.Header = ({
 }
 
 ListTable.Body = ({ className, ...props }) => {
-  return <ul {...props} className={classNames('ListTable__Body', className)} />
+  return (
+    <ul {...props} className={classNames('k-ListTable__Body', className)} />
+  )
 }
 
 ListTable.Row = ({
@@ -59,13 +64,13 @@ ListTable.Row = ({
   return (
     <li
       {...others}
-      className={classNames('ListTable__Row', className, {
-        'ListTable__Row--is_highlighted': isHighlighted,
+      className={classNames('k-ListTable__Row', className, {
+        'k-ListTable__Row--is_highlighted': isHighlighted,
       })}
     >
       <ul
         {...listProps}
-        className={classNames('ListTable__RowList', listProps.className)}
+        className={classNames('k-ListTable__RowList', listProps.className)}
       >
         <Context.Consumer>
           {({ id }) => (
@@ -84,7 +89,7 @@ ListTable.Row = ({
 }
 
 ListTable.Col = ({ className, ...props }) => {
-  return <li {...props} className={classNames('ListTable__Col', className)} />
+  return <li {...props} className={classNames('k-ListTable__Col', className)} />
 }
 
 ListTable.propTypes = {
