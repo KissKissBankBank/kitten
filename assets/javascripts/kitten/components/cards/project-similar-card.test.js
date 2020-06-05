@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { SimilarProjectCard } from '../../components/cards/project-similar-card'
 import { Title } from '../../components/typography/title'
 import { Paragraph } from '../../components/typography/paragraph'
@@ -68,7 +68,7 @@ describe('<SimilarProjectCard />', () => {
     const similarProjectCard = mount(
       <SimilarProjectCard title="Custom title" />,
     )
-    const title = similarProjectCard.find('.k-Title')
+    const title = similarProjectCard.find(Title)
 
     it('renders a <Title />', () => {
       expect(similarProjectCard.find(Title)).toHaveLength(1)

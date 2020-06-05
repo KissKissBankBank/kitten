@@ -13,11 +13,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -32,6 +32,10 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 var _typography = require("../../../helpers/utils/typography");
 
 var _screenConfig = require("../../../constants/screen-config");
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var StyledInfoLines = _styledComponents.default.div.withConfig({
   displayName: "info-lines__StyledInfoLines",
@@ -76,23 +80,23 @@ var InfoList = function InfoList(_ref6) {
       titleTagList = _ref6.titleTagList,
       itemTagList = _ref6.itemTagList,
       others = (0, _objectWithoutProperties2.default)(_ref6, ["title", "value", "id", "titleTagList", "itemTagList"]);
-  return _react.default.Children.toArray(_react.default.createElement(StyledLine, (0, _extends2.default)({}, others, {
+  return _react.default.Children.toArray( /*#__PURE__*/_react.default.createElement(StyledLine, (0, _extends2.default)({}, others, {
     key: id
-  }), _react.default.createElement(StyledKey, {
+  }), /*#__PURE__*/_react.default.createElement(StyledKey, {
     as: titleTagList
-  }, title), _react.default.createElement(StyledValue, {
+  }, title), /*#__PURE__*/_react.default.createElement(StyledValue, {
     as: itemTagList
   }, value)));
 };
 
-var InfoLines =
-/*#__PURE__*/
-function (_PureComponent) {
+var InfoLines = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(InfoLines, _PureComponent);
+
+  var _super = _createSuper(InfoLines);
 
   function InfoLines() {
     (0, _classCallCheck2.default)(this, InfoLines);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(InfoLines).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(InfoLines, [{
@@ -109,7 +113,7 @@ function (_PureComponent) {
           titleTagList = _this$props.titleTagList,
           itemTagList = _this$props.itemTagList,
           others = (0, _objectWithoutProperties2.default)(_this$props, ["infos", "withBorderRadius", "withLeftRightBorder", "withoutTopBottomBorder", "withoutResponsive", "borderColor", "descriptionTagList", "titleTagList", "itemTagList"]);
-      return _react.default.createElement(StyledInfoLines, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(StyledInfoLines, (0, _extends2.default)({}, others, {
         as: descriptionTagList,
         borderColor: borderColor,
         withBorderRadius: withBorderRadius,
@@ -117,7 +121,7 @@ function (_PureComponent) {
         withoutTopBottomBorder: withoutTopBottomBorder,
         withoutResponsive: withoutResponsive
       }), infos.map(function (info) {
-        return _react.default.createElement(InfoList, {
+        return /*#__PURE__*/_react.default.createElement(InfoList, {
           key: info.id,
           title: info.key,
           value: info.value,

@@ -8,22 +8,27 @@ import { Container } from '../../grid/container'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Marger } from '../../layout/marger'
+import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
+import { PhoneIllustration } from '../../../components/illustrations/phone-illustration'
 
 const StyledEngagementCard = styled(EngagementCard)`
   display: flex;
-  width: ${pxToRem(100)};
   height: ${pxToRem(130)};
-  margin-right: ${pxToRem(20)};
 
   @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    width: ${pxToRem(110)};
-    height: ${pxToRem(150)};
+    height: ${pxToRem(140)};
   }
+`
+
+const StyledContainer = styled(Container)`
+  margin-top: ${pxToRem(20)};
+  box-sizing: border-box;
 `
 
 const StyledList = styled.ul`
   display: flex;
   list-style-type: none;
+  overflow: hidden;
 
   li {
     position: relative;
@@ -58,12 +63,12 @@ const info = {
     <EngagementCard />
     ~~~
 
-    #### Image
+    #### Icon
     ~~~js
-    <EngagementCard imageSrc="…" />
+    <EngagementCard icon={<MyIcon />} />
     ~~~
 
-  #### Background color
+    #### Background color
     ~~~js
     <EngagementCard backgroundColor="…" />
     ~~~
@@ -84,17 +89,14 @@ storiesOf('Cards/EngagementCard', module)
     'default',
     () => {
       return (
-        <Container>
+        <StyledContainer>
           <Marger top="3">
             <StyledList>
               <li>
                 <StyledEngagementCard
                   isActive
                   href="#"
-                  imageSrc={text(
-                    'Image',
-                    'https://via.placeholder.com/130x100/caf4fe',
-                  )}
+                  icon={<PhoneIllustration />}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
                   hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
                 >
@@ -105,33 +107,27 @@ storiesOf('Cards/EngagementCard', module)
                 <StyledEngagementCard
                   className="k-u-hidden@s-down--important"
                   href="#"
-                  imageSrc={text(
-                    'Image',
-                    'https://via.placeholder.com/130x100/caf4fe',
-                  )}
+                  icon={<KissKissBankBankIcon height="25" />}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
                   hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
                 >
-                  {text('Categorie', 'Education')}
+                  {text('Categorie 2', 'Education')}
                 </StyledEngagementCard>
               </li>
               <li>
                 <StyledEngagementCard
                   className="k-u-hidden@s-down--important"
                   href="#"
-                  imageSrc={text(
-                    'Image',
-                    'https://via.placeholder.com/130x100/caf4fe',
-                  )}
+                  icon={<KissKissBankBankIcon height="25" />}
                   backgroundColor={(color, ('backgroundColor', '#caf4fe'))}
                   hoverBorder={(color, ('hoverBorder', '#caf4fe'))}
                 >
-                  {text('Categorie', 'Bio')}
+                  {text('Categorie 3', 'Bio')}
                 </StyledEngagementCard>
               </li>
             </StyledList>
           </Marger>
-        </Container>
+        </StyledContainer>
       )
     },
     { info },

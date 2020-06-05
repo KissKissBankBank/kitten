@@ -15,11 +15,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -29,10 +29,14 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _colorsConfig = _interopRequireDefault(require("../../constants/colors-config"));
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var NotificationBadge = function NotificationBadge(_ref) {
   var notifications = _ref.notifications,
       badgeColor = _ref.badgeColor;
-  return _react.default.createElement("span", {
+  return /*#__PURE__*/_react.default.createElement("span", {
     className: "k-ButtonWithBadge__badge k-Badge",
     style: {
       backgroundColor: badgeColor
@@ -40,14 +44,14 @@ var NotificationBadge = function NotificationBadge(_ref) {
   }, notifications);
 };
 
-var ButtonImageWithTextAndBadge =
-/*#__PURE__*/
-function (_React$Component) {
+var ButtonImageWithTextAndBadge = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(ButtonImageWithTextAndBadge, _React$Component);
+
+  var _super = _createSuper(ButtonImageWithTextAndBadge);
 
   function ButtonImageWithTextAndBadge() {
     (0, _classCallCheck2.default)(this, ButtonImageWithTextAndBadge);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ButtonImageWithTextAndBadge).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(ButtonImageWithTextAndBadge, [{
@@ -68,26 +72,26 @@ function (_React$Component) {
           rest = (0, _objectWithoutProperties2.default)(_this$props, ["className", "isExpanded", "text", "title", "textClassName", "srcImg", "widthImg", "heightImg", "altImg", "notifications", "badgeColor"]);
       var textClass = (0, _classnames.default)('k-ButtonImageWithText__text', 'k-ButtonImageWithText__text--withoutPaddingRight', textClassName);
       var buttonClassName = (0, _classnames.default)('k-ButtonImageWithText', className);
-      return _react.default.createElement("button", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
         className: buttonClassName,
         "aria-haspopup": "true",
         "aria-expanded": isExpanded,
         title: title
-      }, rest), _react.default.createElement("span", {
+      }, rest), /*#__PURE__*/_react.default.createElement("span", {
         className: "k-ButtonWithBadge"
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         ref: "buttonImage",
         className: "k-ButtonImage"
-      }, _react.default.createElement("img", {
+      }, /*#__PURE__*/_react.default.createElement("img", {
         className: "k-ButtonImage__img",
         src: srcImg,
         width: widthImg,
         height: heightImg,
         alt: altImg
-      })), notifications && _react.default.createElement(NotificationBadge, {
+      })), notifications && /*#__PURE__*/_react.default.createElement(NotificationBadge, {
         notifications: notifications,
         badgeColor: badgeColor
-      })), _react.default.createElement("p", {
+      })), /*#__PURE__*/_react.default.createElement("p", {
         className: textClass
       }, text));
     }

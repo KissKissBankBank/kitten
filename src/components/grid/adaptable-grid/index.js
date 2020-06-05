@@ -35,19 +35,18 @@ var AdaptableGrid = function AdaptableGrid(_ref) {
       colNumber = _ref.colNumber,
       colAlign = _ref.colAlign,
       as = _ref.as,
-      className = _ref.className,
-      other = (0, _objectWithoutProperties2.default)(_ref, ["children", "gutter", "colNumber", "colAlign", "as", "className"]);
+      className = _ref.className;
   var gridProperties = {
     colAlign: colAlign,
     colNumber: colNumber,
     gutter: gutter
   };
-  return _react.default.createElement(StyledGrid, {
+  return /*#__PURE__*/_react.default.createElement(StyledGrid, {
     gutter: gutter,
     colAlign: colAlign,
     as: as,
     className: className
-  }, _react.default.createElement(GridProperties.Provider, {
+  }, /*#__PURE__*/_react.default.createElement(GridProperties.Provider, {
     value: gridProperties
   }, children));
 };
@@ -88,7 +87,7 @@ var AdaptableGridCol = function AdaptableGridCol(_ref2) {
     });
     setStyles(stylesByMediaQuery);
   }, []);
-  return _react.default.createElement(StyledGridCol, {
+  return /*#__PURE__*/_react.default.createElement(StyledGridCol, {
     col: col || colNumber,
     offset: offset,
     gutter: gutter,
@@ -144,7 +143,6 @@ var StyledGridCol = _styledComponents.default.div.withConfig({
 }, function (_ref9) {
   var offset = _ref9.offset,
       colNumber = _ref9.colNumber,
-      colAlign = _ref9.colAlign,
       marginDirection = _ref9.marginDirection;
   if (!offset) return;
   return (0, _styledComponents.css)(["margin-", ":", "%;"], marginDirection, offset * 100 / colNumber);

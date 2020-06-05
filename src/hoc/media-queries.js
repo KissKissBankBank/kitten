@@ -19,17 +19,21 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
 var _mediaQueries = require("../helpers/utils/media-queries");
 
 var _screenConfig = require("../constants/screen-config");
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var viewPortTable = {
   viewportIsMobile: _screenConfig.SCREEN_SIZE_XS,
@@ -53,16 +57,16 @@ var mediaQueries = function mediaQueries(WrappedComponent) {
   var _temp;
 
   var hocProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  return _temp =
-  /*#__PURE__*/
-  function (_Component) {
+  return _temp = /*#__PURE__*/function (_Component) {
     (0, _inherits2.default)(_temp, _Component);
+
+    var _super = _createSuper(_temp);
 
     function _temp(props) {
       var _this;
 
       (0, _classCallCheck2.default)(this, _temp);
-      _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(_temp).call(this, props));
+      _this = _super.call(this, props);
 
       _this.setExposedMethods = function (wrappedComponentInstance) {
         if (!wrappedComponentInstance) return;
@@ -74,7 +78,7 @@ var mediaQueries = function mediaQueries(WrappedComponent) {
 
       _this.viewports = {};
       _this.state = Object.keys(hocProps).reduce(function (result, prop) {
-        return _this.isInvalidProp(prop) ? result : (0, _extends3.default)({}, result, (0, _defineProperty2.default)({}, prop, false));
+        return _this.isInvalidProp(prop) ? result : (0, _extends3.default)((0, _extends3.default)({}, result), {}, (0, _defineProperty2.default)({}, prop, false));
       }, {});
       return _this;
     }
@@ -141,7 +145,7 @@ var mediaQueries = function mediaQueries(WrappedComponent) {
     }, {
       key: "render",
       value: function render() {
-        return _react.default.createElement(WrappedComponent, (0, _extends3.default)({
+        return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends3.default)({
           ref: this.setExposedMethods
         }, this.props, this.state));
       }

@@ -2,10 +2,10 @@
 
 exports[`<BackerCard /> by default matches with snapshot 1`] = `
 <div
-  className="backer-card__StyledCard-zl7grf-0 hSpaUR"
+  className="sc-bwzfXH ikXMwd"
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 ktAgUq"
+    className="sc-bdVaJa eYYfEq"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
@@ -14,10 +14,10 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 hAgZUM"
+    className="sc-bdVaJa eDkcBx"
   >
     <span
-      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents backer-card__StyledButtonImage-zl7grf-2 hDlTRo"
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents sc-bxivhb jQlpWk"
       tabIndex={null}
     >
       <img
@@ -28,7 +28,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 bsSajs"
+    className="sc-bdVaJa cfvEqV"
   >
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
@@ -41,27 +41,27 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
 
 exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
 <div
-  className="backer-card__StyledCard-zl7grf-0 hSpaUR"
+  className="sc-bwzfXH ikXMwd"
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 ktAgUq"
+    className="sc-bdVaJa eYYfEq"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
     >
       Backer name
       <span
-        className="k-u-color-font1 k-u-size-micro k-u-weight-light backer-card__StyledSubtitle-zl7grf-1 dNoqEO"
+        className="k-u-color-font1 k-u-size-micro k-u-weight-light sc-htpNat hVjTPl"
       >
         Subtitle
       </span>
     </span>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 hAgZUM"
+    className="sc-bdVaJa eDkcBx"
   >
     <span
-      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents backer-card__StyledButtonImage-zl7grf-2 hDlTRo"
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents sc-bxivhb jQlpWk"
       tabIndex={null}
     >
       <img
@@ -72,7 +72,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
     </span>
   </div>
   <div
-    className="marger__StyledMarger-q3lecu-0 bsSajs"
+    className="sc-bdVaJa cfvEqV"
   >
     <p
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"

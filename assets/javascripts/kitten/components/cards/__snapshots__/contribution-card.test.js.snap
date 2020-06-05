@@ -2,70 +2,50 @@
 
 exports[`<ContributionCard /> by default matches with snapshot 1`] = `
 <div
-  data-radium={true}
-  style={
-    Object {
-      "borderColor": "#eee",
-      "borderStyle": "solid",
-      "borderWidth": 2,
-    }
-  }
-  withoutBorder={false}
+  className="sc-bwzfXH bCeqqR k-LegacyRewardCard"
+  disabled={false}
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 dhVuZS"
+    className="sc-bdVaJa fdLNbY"
   >
     <div
-      className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
-      data-radium={true}
-      style={
-        Object {
-          "paddingLeft": 20,
-          "paddingRight": 20,
-        }
-      }
+      className="k-Grid k-LegacyRewardCard__row"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--7@s k-Grid__col--10@l"
-        data-radium={true}
       >
         <div
-          data-radium={true}
-          disabled={false}
-          style={Object {}}
+          className={null}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 bNPfXK"
+            className="sc-bdVaJa zBUGX"
           >
             <h1
-              className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
-              style={
-                Object {
-                  "color": "#222",
-                }
-              }
+              className="sc-htpNat dnkpxB k-u-color-font1"
             >
               Custom title mount
             </h1>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="sc-bdVaJa iDiPml"
           >
-            <span
-              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+            <div
+              className="sc-bxivhb gmqSjE k-HorizontalStroke k-HorizontalStroke--size--big"
+              color="#222"
+              style={
+                Object {
+                  "height": null,
+                  "width": null,
+                }
+              }
             />
           </div>
           
           <div
-            className="marger__StyledMarger-q3lecu-0 gNBLBo"
+            className="sc-bdVaJa jtnNso"
           >
             <p
-              className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-              style={
-                Object {
-                  "color": "#222",
-                }
-              }
+              className="k-Paragraph k-u-color-font1 k-Paragraph--tertiary k-Paragraph--withoutMargin"
             >
               Custom text description
             </p>
@@ -74,121 +54,76 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
       </div>
     </div>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (min-width: 640px){ .rmq-ac5e1496{padding-left: 30px !important;
-padding-right: 30px !important;}}
-@media (min-width: 768px){ .rmq-5b3da7a1{padding-left: 40px !important;
-padding-right: 0 !important;}}
-@media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
-padding-right: 0 !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
 <div
-  data-radium={true}
-  style={
-    Object {
-      "borderColor": "#eee",
-      "borderStyle": "solid",
-      "borderWidth": 2,
-    }
-  }
-  withoutBorder={false}
+  className="sc-bwzfXH bCeqqR k-LegacyRewardCard"
+  disabled={false}
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 dhVuZS"
+    className="sc-bdVaJa fdLNbY"
   >
     <div
-      className="rmq-ac5e1496 rmq-5b3da7a1 rmq-ce79a9e0 k-Grid"
-      data-radium={true}
-      style={
-        Object {
-          "paddingLeft": 20,
-          "paddingRight": 20,
-        }
-      }
+      className="k-Grid k-LegacyRewardCard__row"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--7@s k-Grid__col--7@l"
-        data-radium={true}
       >
         <div
-          data-radium={true}
-          disabled={false}
-          style={Object {}}
+          className={null}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 bNPfXK"
+            className="sc-bdVaJa zBUGX"
           >
             <h1
-              className="k-Title k-Title--tertiary k-Title--withoutMargin k-Title--italic"
-              style={
-                Object {
-                  "color": "#222",
-                }
-              }
+              className="sc-htpNat dnkpxB k-u-color-font1"
             >
               Custom title mount
             </h1>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="sc-bdVaJa iDiPml"
           >
-            <span
-              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+            <div
+              className="sc-bxivhb gmqSjE k-HorizontalStroke k-HorizontalStroke--size--big"
+              color="#222"
+              style={
+                Object {
+                  "height": null,
+                  "width": null,
+                }
+              }
             />
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 eQydFv"
+            className="sc-bdVaJa gSHEXD"
           >
             <p
-              className="k-u-color-font1 k-u-size-huge k-u-weight-bold"
-              style={
-                Object {
-                  "margin": 0,
-                }
-              }
+              className="k-u-color-font1 k-u-size-huge k-u-weight-bold k-u-margin-none"
             >
               Custom title description
             </p>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 WSKaG"
+            className="sc-bdVaJa ggQxmM"
           >
             <p
-              className="k-Paragraph k-Paragraph--tertiary k-Paragraph--withoutMargin"
-              style={
-                Object {
-                  "color": "#222",
-                }
-              }
+              className="k-Paragraph k-u-color-font1 k-Paragraph--tertiary k-Paragraph--withoutMargin"
             >
               Custom text description
             </p>
           </div>
         </div>
         <div
-          data-radium={true}
-          disabled={false}
-          style={Object {}}
+          className={null}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="sc-bdVaJa iDiPml"
           >
             <span
-              className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
-              data-radium={true}
-              style={
-                Object {
-                  "fontSize": 14,
-                }
-              }
+              className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
             >
               Custom title contributors 
               <span
@@ -198,13 +133,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               </span>
             </span>
             <span
-              className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
-              data-radium={true}
-              style={
-                Object {
-                  "fontSize": 14,
-                }
-              }
+              className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
             >
               Custom title delivery 
               <span
@@ -214,13 +143,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               </span>
             </span>
             <span
-              className="rmq-ef57b76a k-u-color-font1 k-u-weight-regular"
-              data-radium={true}
-              style={
-                Object {
-                  "fontSize": 14,
-                }
-              }
+              className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
             >
               Custom title availability 
               <span
@@ -232,81 +155,50 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
           </div>
         </div>
         <div
-          className="marger__StyledMarger-q3lecu-0 gNBLBo"
+          className="sc-bdVaJa jtnNso"
         >
           <button
             aria-labelledby="Custom text button"
-            className="rmq-b016fca7 k-Button k-Button--helium k-Button--big"
-            data-radium={true}
+            className="k-Button k-Button--helium k-Button--big k-LegacyRewardCard__button"
             disabled={false}
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "justifyContent": "center",
-                "lineHeight": "1.3rem",
-                "padding": "1.375rem 1.875rem",
-                "width": "100%",
-              }
-            }
             tabIndex={null}
             type="button"
           >
             Custom text button
           </button>
           <div
-            className="marger__StyledMarger-q3lecu-0 cOWOpW"
+            className="sc-bdVaJa jtfdLD"
           >
             <div
-              data-radium={true}
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                }
-              }
+              className="k-LegacyRewardCard__myContribution"
             >
               <span
-                className="icon-badge__StyledBadge-sc-13mitia-0 iysqhm"
+                className="sc-ifAKCX iuoTPc k-LegacyRewardCard__iconBadge"
                 disabled={false}
-                style={
-                  Object {
-                    "marginRight": 10,
-                  }
-                }
               >
                 <span
-                  className="icon-badge__StyledContent-sc-13mitia-1 iTNHVn"
+                  className="sc-EHOje VARdb"
                 >
                   <svg
                     className="k-IconBadge__svg"
                     fill="#fff"
+                    height="8"
                     viewBox="0 0 11 8"
+                    width="11"
                     xmlns="http://www.w3.org/2000/svg"
                   >
-                    <title>
-                      Checked
-                    </title>
+                    
                     <path
-                      d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-                    />
-                    <path
-                      d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+                      d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
                     />
                   </svg>
                 </span>
               </span>
               <div
-                data-radium={true}
-                style={
-                  Object {
-                    "display": "flex",
-                    "lineHeight": "normal",
-                  }
-                }
+                className="k-LegacyRewardCard__myContribution__text"
               >
                 <span
                   className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
@@ -326,158 +218,95 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="rmq-c7c1445b k-Grid__col--12 k-Grid__col--4@s k-Grid__col--offset-1@s"
-        data-radium={true}
-        style={Object {}}
+        className="k-Grid__col--12 k-Grid__col--4@s k-Grid__col--offset-1@s LegacyRewardCard__col_image"
       >
         <div
-          className="marger__StyledMarger-q3lecu-0 jMGtVA"
+          className="sc-bdVaJa bDWFJH"
         >
           <div
-            data-radium={true}
-            disabled={false}
-            style={Object {}}
+            className={null}
           >
             <img
               alt="Image alt"
-              data-radium={true}
+              className="k-LegacyRewardCard__image"
               src="#image"
-              style={
-                Object {
-                  "display": "block",
-                  "width": "100%",
-                }
-              }
             />
           </div>
         </div>
       </div>
     </div>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "@media (min-width: 640px){ .rmq-ac5e1496{padding-left: 30px !important;
-padding-right: 30px !important;}}
-@media (min-width: 768px){ .rmq-5b3da7a1{padding-left: 40px !important;
-padding-right: 0 !important;}}
-@media (min-width: 1080px){ .rmq-ce79a9e0{padding-left: 115px !important;
-padding-right: 0 !important;}}
-@media (min-width: 768px){ .rmq-ef57b76a{font-size: 16px !important;
-margin-right: 30px !important;}}
-@media (max-width: 767px){ .rmq-b016fca7{width: calc(100% + 4px) !important;
-position: relative !important;
-left: -2px !important;
-bottom: -2px !important;}}
-@media (min-width: 768px){ .rmq-c7c1445b{padding-right: 50px !important;}}",
-      }
-    }
-  />
 </div>
 `;
 
 exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
 <div
-  data-radium={true}
-  style={
-    Object {
-      "borderColor": "#eee",
-      "borderStyle": "solid",
-      "borderWidth": 2,
-    }
-  }
-  withoutBorder={false}
+  className="sc-bwzfXH bCeqqR k-LegacyRewardCard k-LegacyRewardCard--tinyVersion k-LegacyRewardCard--sOrLessVersion"
+  disabled={false}
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 lgDgPO"
+    className="sc-bdVaJa feOtXc"
   >
     <div
-      className="k-Grid"
-      data-radium={true}
-      style={
-        Object {
-          "paddingLeft": 20,
-          "paddingRight": 20,
-        }
-      }
+      className="k-Grid k-LegacyRewardCard__row"
     >
       <div
         className="k-Grid__col--12"
-        data-radium={true}
       >
         <div
-          data-radium={true}
-          disabled={false}
-          style={Object {}}
+          className={null}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 bNPfXK"
+            className="sc-bdVaJa zBUGX"
           >
             <h1
-              className="k-Title k-Title--quaternary k-Title--withoutMargin k-Title--italic"
-              style={
-                Object {
-                  "color": "#222",
-                }
-              }
+              className="sc-htpNat crSxlp k-u-color-font1"
             >
               Custom title mount
             </h1>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="sc-bdVaJa iDiPml"
           >
-            <span
-              className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj"
+            <div
+              className="sc-bxivhb gmqSjE k-HorizontalStroke k-HorizontalStroke--size--big"
+              color="#222"
+              style={
+                Object {
+                  "height": null,
+                  "width": null,
+                }
+              }
             />
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 eQydFv"
+            className="sc-bdVaJa gSHEXD"
           >
             <p
-              className="k-u-color-font1 k-u-size-big k-u-weight-bold"
-              style={
-                Object {
-                  "margin": 0,
-                }
-              }
+              className="k-u-color-font1 k-u-size-big k-u-weight-bold k-u-margin-none"
             >
               Custom title description
             </p>
           </div>
           <div
-            className="marger__StyledMarger-q3lecu-0 WSKaG"
+            className="sc-bdVaJa ggQxmM"
           >
             <p
-              className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
-              style={
-                Object {
-                  "color": "#222",
-                }
-              }
+              className="k-Paragraph k-u-color-font1 k-Paragraph--quaternary k-Paragraph--withoutMargin"
             >
               Custom text description
             </p>
           </div>
         </div>
         <div
-          data-radium={true}
-          disabled={false}
-          style={Object {}}
+          className={null}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 fSrmLM"
+            className="sc-bdVaJa iDiPml"
           >
             <div>
               <span
-                className="k-u-color-font1 k-u-weight-regular"
-                data-radium={true}
-                style={
-                  Object {
-                    "fontSize": 14,
-                    "marginRight": 0,
-                  }
-                }
+                className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
               >
                 Custom title contributors 
                 <span
@@ -489,14 +318,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </div>
             <div>
               <span
-                className="k-u-color-font1 k-u-weight-regular"
-                data-radium={true}
-                style={
-                  Object {
-                    "fontSize": 14,
-                    "marginRight": 0,
-                  }
-                }
+                className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
               >
                 Custom title delivery 
                 <span
@@ -508,14 +330,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </div>
             <div>
               <span
-                className="k-u-color-font1 k-u-weight-regular"
-                data-radium={true}
-                style={
-                  Object {
-                    "fontSize": 14,
-                    "marginRight": 0,
-                  }
-                }
+                className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
               >
                 Custom title availability 
                 <span
@@ -529,100 +344,59 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="k-Grid__col--12"
-        data-radium={true}
-        style={
-          Object {
-            "paddingRight": 10,
-          }
-        }
+        className="k-Grid__col--12 LegacyRewardCard__col_image"
       >
         <div
-          className="marger__StyledMarger-q3lecu-0 jMGtVA"
+          className="sc-bdVaJa bDWFJH"
         >
           <div
-            data-radium={true}
-            disabled={false}
-            style={Object {}}
+            className={null}
           >
             <img
               alt="Image alt"
-              data-radium={true}
+              className="k-LegacyRewardCard__image"
               src="#image"
-              style={
-                Object {
-                  "display": "block",
-                  "width": "100%",
-                }
-              }
             />
           </div>
         </div>
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 jyDYur"
+      className="sc-bdVaJa chAJzq"
     >
       <div
-        className="k-Grid"
-        data-radium={true}
-        style={
-          Object {
-            "paddingLeft": 20,
-            "paddingRight": 20,
-          }
-        }
+        className="k-Grid k-LegacyRewardCard__choiceButton"
       >
         <div
           className="k-Grid__col--12"
         >
           <div
-            data-radium={true}
-            style={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-              }
-            }
+            className="k-LegacyRewardCard__myContribution"
           >
             <span
-              className="icon-badge__StyledBadge-sc-13mitia-0 iysqhm"
+              className="sc-ifAKCX iuoTPc k-LegacyRewardCard__iconBadge"
               disabled={false}
-              style={
-                Object {
-                  "marginRight": 10,
-                }
-              }
             >
               <span
-                className="icon-badge__StyledContent-sc-13mitia-1 iTNHVn"
+                className="sc-EHOje VARdb"
               >
                 <svg
                   className="k-IconBadge__svg"
                   fill="#fff"
+                  height="8"
                   viewBox="0 0 11 8"
+                  width="11"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <title>
-                    Checked
-                  </title>
+                  
                   <path
-                    d="M4.44 7.596L3.024 6.182 8.682.525l1.414 1.414z"
-                  />
-                  <path
-                    d="M4.44 7.596L.903 4.06l1.414-1.414 3.536 3.536z"
+                    d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
                   />
                 </svg>
               </span>
             </span>
             <div
-              data-radium={true}
-              style={
-                Object {
-                  "display": "flex",
-                  "lineHeight": "normal",
-                }
-              }
+              className="k-LegacyRewardCard__myContribution__text"
             >
               <span
                 className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
@@ -643,32 +417,16 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
     </div>
     <button
       aria-labelledby="Custom text button"
-      className="k-Button k-Button--helium k-Button--big"
-      data-radium={true}
+      className="k-Button k-Button--helium k-Button--big k-LegacyRewardCard__button"
       disabled={false}
       onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      style={
-        Object {
-          "bottom": -2,
-          "left": -2,
-          "position": "relative",
-          "width": "calc(100% + 4px)",
-        }
-      }
       tabIndex={null}
       type="button"
     >
       Custom text button
     </button>
   </div>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
 </div>
 `;

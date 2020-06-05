@@ -10,7 +10,11 @@ exports.Context = void 0;
 var _react = _interopRequireDefault(require("react"));
 
 var Context = _react.default.createContext({
-  borderSide: 'left'
+  backgroundColors: {},
+  borderSide: 'left',
+  borderSideOnHover: true,
+  largeItem: false,
+  noBorder: false
 });
 
 exports.Context = Context;

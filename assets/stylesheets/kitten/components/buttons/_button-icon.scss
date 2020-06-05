@@ -260,10 +260,12 @@
   }
 
   .k-ButtonIcon--big {
-    @include k-buttonPadding($button-size-big, $icon-width, $icon-height);
+    @include k-media-min('s') {
+      @include k-buttonPadding($button-size-big, $icon-width, $icon-height);
 
-    &.k-ButtonIcon--rounded {
-      @include k-buttonRounded($button-size-big-with-border);
+      &.k-ButtonIcon--rounded {
+        @include k-buttonRounded($button-size-big-with-border);
+      }
     }
   }
 

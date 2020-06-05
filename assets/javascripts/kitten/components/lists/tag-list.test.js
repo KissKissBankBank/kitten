@@ -4,7 +4,10 @@ import { TypologyTagIcon } from '../../components/icons/typology-tag-icon'
 import { InstrumentTagIcon } from '../../components/icons/instrument-tag-icon'
 
 describe('<TagList />', () => {
-  const items = [{ key: 'foo', item: 'Foo' }, { key: 'bar', item: 'Bar' }]
+  const items = [
+    { key: 'foo', item: 'Foo' },
+    { key: 'bar', item: 'Bar' },
+  ]
 
   describe('by default', () => {
     const tagList = shallow(<TagList icon={TypologyTagIcon} items={items} />)
@@ -37,13 +40,9 @@ describe('<TagList />', () => {
     })
 
     it('renders a <TypologyTagIcon /> in first child', () => {
-      expect(
-        tagList
-          .children()
-          .first()
-          .find(TypologyTagIcon)
-          .exists(),
-      ).toBe(true)
+      expect(tagList.children().first().find(TypologyTagIcon).exists()).toBe(
+        true,
+      )
     })
 
     it('renders a <InstrumentTagIcon /> in first child', () => {

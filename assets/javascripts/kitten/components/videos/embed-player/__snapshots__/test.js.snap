@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmbedPlayer /> with default props matches with snapshot 1`] = `
+<div
+  aria-label={null}
+  className="sc-bdVaJa bybmuZ k-EmbedPlayer"
+  onClick={null}
+  onFocus={null}
+  onKeyPress={null}
+  role={null}
+  style={Object {}}
+  tabIndex={null}
+>
+  <div
+    className="k-EmbedPlayer__playerPreview"
+  >
+    <div
+      className="k-ResponsiveIframeContainer"
+      style={
+        Object {
+          "paddingBottom": "50%",
+        }
+      }
+    >
+      <img
+        alt="An image"
+        className="k-EmbedPlayer__thumbnail "
+        src="https://placekitten.com/620/376"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<EmbedPlayer /> with some props matches with snapshot 1`] = `
+<div
+  aria-label="Play"
+  className="sc-bdVaJa bybmuZ k-EmbedPlayer k-EmbedPlayer--cursorPointer"
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyPress={[Function]}
+  role="button"
+  style={Object {}}
+  tabIndex={0}
+>
+  <div
+    className="k-EmbedPlayer__playerPreview"
+  >
+    <div
+      className="k-EmbedPlayer__button"
+    >
+      <svg
+        aria-hidden={true}
+        className="k-EmbedPlayer__buttonPicto"
+        viewBox="0 0 10 10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 0l10 5-10 5z"
+        />
+      </svg>
+    </div>
+    <div
+      className="k-ResponsiveIframeContainer"
+      style={
+        Object {
+          "paddingBottom": "60%",
+        }
+      }
+    >
+      <img
+        alt="An image"
+        className="k-EmbedPlayer__thumbnail "
+        src="https://placekitten.com/620/376"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -15,13 +15,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -37,16 +37,22 @@ var _emitter = _interopRequireDefault(require("../../helpers/utils/emitter"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var PhoneDropdown =
-/*#__PURE__*/
-function (_React$Component) {
+var _events = require("../../helpers/dom/events");
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var PhoneDropdown = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(PhoneDropdown, _React$Component);
+
+  var _super = _createSuper(PhoneDropdown);
 
   function PhoneDropdown(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, PhoneDropdown);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(PhoneDropdown).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       isExpanded: false,
       contentPosition: {
@@ -72,7 +78,7 @@ function (_React$Component) {
 
       this.handlePositionUpdate();
 
-      _emitter.default.on('dropdown:opening:trigger', this.handleOtherDropdownsOpening);
+      _emitter.default.on(_events.TOGGLE_DROPDOWN_EVENT, this.handleOtherDropdownsOpening);
 
       _emitter.default.on('element:update', this.handlePositionUpdate);
 
@@ -93,7 +99,7 @@ function (_React$Component) {
         });
       }
 
-      _emitter.default.off('dropdown:opening:trigger', this.handleOtherDropdownsOpening);
+      _emitter.default.off(_events.TOGGLE_DROPDOWN_EVENT, this.handleOtherDropdownsOpening);
 
       _emitter.default.off('element:update', this.handlePositionUpdate);
     } // Component methods.
@@ -168,24 +174,24 @@ function (_React$Component) {
     key: "getDropdownButton",
     value: function getDropdownButton() {
       var buttonClassName = (0, _classnames.default)('k-ButtonIcon', 'k-ButtonIcon--hydrogen', 'k-ButtonIcon--phone', this.props.buttonClassName);
-      return _react.default.createElement(_dropdownButton.DropdownButton, {
+      return /*#__PURE__*/_react.default.createElement(_dropdownButton.DropdownButton, {
         ref: "dropdownButton",
         className: buttonClassName,
         id: this.props.buttonId,
         isExpanded: this.state.isExpanded,
         onClick: this.handleButtonClick
-      }, _react.default.createElement("svg", {
+      }, /*#__PURE__*/_react.default.createElement("svg", {
         className: "k-ButtonIcon__svg",
         viewBox: "0 0 16 18",
         xmlns: "http://www.w3.org/2000/svg"
-      }, _react.default.createElement("path", {
+      }, /*#__PURE__*/_react.default.createElement("path", {
         d: "M3.354 0C2.238 0 .496.498.207 2.268-.2 4.764 1.533 9.09 4.047 12.202c2.49 3.084 6.305 5.63 8.86 5.792.06.004.12.006.177.006 2.39 0 3.002-3.158 2.694-3.548l-4.335-1.94c-.26-.15-.532-.225-.79-.225-.263 0-.51.08-.713.24l-.866.63c-.093.034-.194.05-.302.05-1.807 0-5.535-4.758-4.636-6.166.006-.008.79-.724.79-.724.387-.313.534-.882.347-1.444L4.275.206C4.18.088 3.823 0 3.355 0"
       })));
     }
   }, {
     key: "getDropdownArrow",
     value: function getDropdownArrow() {
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         className: "k-PhoneDropdown__arrow"
       });
     }
@@ -237,7 +243,7 @@ function (_React$Component) {
       var _this$props = this.props,
           dropdownList = _this$props.dropdownList,
           otherProps = (0, _objectWithoutProperties2.default)(_this$props, ["dropdownList"]);
-      return _react.default.createElement(_dropdown.Dropdown, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_dropdown.Dropdown, (0, _extends2.default)({
         ref: "dropdown",
         button: this.getDropdownButton(),
         dropdownContent: this.props.dropdownContent,
@@ -258,7 +264,6 @@ PhoneDropdown.propTypes = {
   buttonClassName: _propTypes.default.string,
   positionedWith: _propTypes.default.func,
   positionedWithBorder: _propTypes.default.bool,
-  positionedOn: _propTypes.default.string,
   refreshEvents: _propTypes.default.array,
   closeEvents: _propTypes.default.array,
   onPositionUpdate: _propTypes.default.func

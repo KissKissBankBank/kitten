@@ -64,19 +64,23 @@ const info = {
 storiesOf('Form/ToggleSwitch', module)
   .addDecorator(withKnobs)
   .addDecorator(withInfo)
-  .add('ToggleSwitch', () => {
-    return (
-      <Grid style={{ marginTop: '5em' }}>
-        <GridCol offset="1" col="6">
-          <ToggleSwitch
-            id="toggle-switch"
-            disabled={boolean('Disabled', false)}
-            big={boolean('Big', false)}
-            label={text('Label', 'Le label')}
-            isLabelVisible={boolean('isLabelVisible', true)}
-            reverseOrder={boolean('reverseOrder', false)}
-          />
-        </GridCol>
-      </Grid>
-    )
-  })
+  .add(
+    'ToggleSwitch',
+    () => {
+      return (
+        <Grid style={{ marginTop: '5em' }}>
+          <GridCol offset="1" col="6">
+            <ToggleSwitch
+              id="toggle-switch"
+              disabled={boolean('Disabled', false)}
+              big={boolean('Big', false)}
+              label={text('Label', 'Le label')}
+              isLabelVisible={boolean('isLabelVisible', true)}
+              reverseOrder={boolean('reverseOrder', false)}
+            />
+          </GridCol>
+        </Grid>
+      )
+    },
+    { info },
+  )

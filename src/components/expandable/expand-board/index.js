@@ -13,11 +13,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -33,6 +33,10 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledButton = (0, _styledComponents.default)(_button.Button).withConfig({
   displayName: "expand-board__StyledButton",
   componentId: "sc-5cysn4-0"
@@ -45,14 +49,14 @@ var StyledArrowIcon = (0, _styledComponents.default)(_arrowIcon.ArrowIcon).withC
   componentId: "sc-5cysn4-1"
 })(["width:", ";height:", ";margin-left:", ";"], (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(10));
 
-var ExpandBoardButton =
-/*#__PURE__*/
-function (_PureComponent) {
+var ExpandBoardButton = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(ExpandBoardButton, _PureComponent);
+
+  var _super = _createSuper(ExpandBoardButton);
 
   function ExpandBoardButton() {
     (0, _classCallCheck2.default)(this, ExpandBoardButton);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(ExpandBoardButton).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(ExpandBoardButton, [{
@@ -68,7 +72,7 @@ function (_PureComponent) {
           borderRadius = _this$props.borderRadius,
           big = _this$props.big;
       var defaultExpandChildren = expandChildren ? expandChildren : children;
-      return _react.default.createElement(StyledButton, {
+      return /*#__PURE__*/_react.default.createElement(StyledButton, {
         big: big,
         modifier: "helium",
         disabled: disabled,
@@ -77,7 +81,7 @@ function (_PureComponent) {
         onClick: onClick,
         type: "button",
         borderRadius: borderRadius
-      }, _react.default.createElement("div", null, expanded ? defaultExpandChildren : children, _react.default.createElement(StyledArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement("div", null, expanded ? defaultExpandChildren : children, /*#__PURE__*/_react.default.createElement(StyledArrowIcon, {
         version: "solid",
         direction: expanded ? 'top' : 'bottom',
         fill: _colorsConfig.default.background1
@@ -108,14 +112,14 @@ ExpandBoardButton.defaultProps = {
   big: true
 };
 
-var ExpandBoardContent =
-/*#__PURE__*/
-function (_PureComponent2) {
+var ExpandBoardContent = /*#__PURE__*/function (_PureComponent2) {
   (0, _inherits2.default)(ExpandBoardContent, _PureComponent2);
+
+  var _super2 = _createSuper(ExpandBoardContent);
 
   function ExpandBoardContent() {
     (0, _classCallCheck2.default)(this, ExpandBoardContent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf3.default)(ExpandBoardContent).apply(this, arguments));
+    return _super2.apply(this, arguments);
   }
 
   (0, _createClass2.default)(ExpandBoardContent, [{
@@ -124,7 +128,7 @@ function (_PureComponent2) {
       var _this$props2 = this.props,
           children = _this$props2.children,
           ariaId = _this$props2.ariaId;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         id: ariaId
       }, children);
     }
@@ -149,14 +153,12 @@ var shrinkAnimation = function shrinkAnimation() {
   return (0, _styledComponents.keyframes)(["0%:{opacity:1;maxHeight:this.props.animationMaxHeight;}100%:{opacity:0;maxHeight:0;}schrink;"]);
 };
 
-var ExpandBoard =
-/*#__PURE__*/
-function (_PureComponent3) {
+var ExpandBoard = /*#__PURE__*/function (_PureComponent3) {
   (0, _inherits2.default)(ExpandBoard, _PureComponent3);
 
-  function ExpandBoard() {
-    var _getPrototypeOf2;
+  var _super3 = _createSuper(ExpandBoard);
 
+  function ExpandBoard() {
     var _this;
 
     (0, _classCallCheck2.default)(this, ExpandBoard);
@@ -165,7 +167,7 @@ function (_PureComponent3) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(ExpandBoard)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super3.call.apply(_super3, [this].concat(args));
     _this.state = {
       expanded: false,
       isShrinking: false,
@@ -284,7 +286,7 @@ function (_PureComponent3) {
             disabled: disabled,
             expanded: _this2.state.expanded,
             onClick: _this2.handleClick,
-            style: _react.default.createElement(StyledButton, null),
+            style: /*#__PURE__*/_react.default.createElement(StyledButton, null),
             ariaId: ariaId
           });
         }
@@ -297,7 +299,7 @@ function (_PureComponent3) {
         }
       });
 
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         style: style
       }, button, this.state.expanded && content);
     }

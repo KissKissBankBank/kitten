@@ -6,6 +6,7 @@ import { ButtonImageWithTextAndBadge } from '../../components/buttons/button-ima
 import { NavList } from '../../components/lists/nav-list'
 import domElementHelper from '../../helpers/dom/element-helper'
 import emitter from '../../helpers/utils/emitter'
+import { TOGGLE_DROPDOWN_EVENT } from '../../helpers/dom/events'
 
 export class UserMenu extends Component {
   constructor(props) {
@@ -27,7 +28,7 @@ export class UserMenu extends Component {
   componentDidMount() {
     this.handlePositionUpdate()
 
-    emitter.on('dropdown:opening:trigger', this.handleOtherDropdownsOpening)
+    emitter.on(TOGGLE_DROPDOWN_EVENT, this.handleOtherDropdownsOpening)
 
     if (this.props.closeEvents) {
       this.props.closeEvents.forEach(ev => {
@@ -37,7 +38,7 @@ export class UserMenu extends Component {
   }
 
   componentWillUnmount() {
-    emitter.off('dropdown:opening:trigger', this.handleOtherDropdownsOpening)
+    emitter.off(TOGGLE_DROPDOWN_EVENT, this.handleOtherDropdownsOpening)
 
     if (this.props.closeEvents) {
       this.props.closeEvents.forEach(ev => {
@@ -227,7 +228,6 @@ UserMenu.propTypes = {
   dropdownList: PropTypes.array,
   positionedWith: PropTypes.func,
   positionedWithBorder: PropTypes.bool,
-  positionedOn: PropTypes.string,
   notifications: PropTypes.number,
   refreshEvents: PropTypes.array,
   closeEvents: PropTypes.array,

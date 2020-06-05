@@ -13,13 +13,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -33,16 +33,20 @@ var _dropdownButton = require("../../components/dropdowns/dropdown-button");
 
 var _elementHelper = _interopRequireDefault(require("../../helpers/dom/element-helper"));
 
-var Dropdown =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var Dropdown = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(Dropdown, _React$Component);
+
+  var _super = _createSuper(Dropdown);
 
   function Dropdown(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, Dropdown);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Dropdown).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       isExpanded: false,
       referenceElementHeight: 0
@@ -164,7 +168,7 @@ function (_React$Component) {
         top: 0
       };
       var arrowHorizontalPosition = this.props.arrowHorizontalPosition;
-      return (0, _extends2.default)({}, defaultPosition, {}, arrowHorizontalPosition);
+      return (0, _extends2.default)((0, _extends2.default)({}, defaultPosition), arrowHorizontalPosition);
     }
   }, {
     key: "getContentPosition",
@@ -173,7 +177,7 @@ function (_React$Component) {
         top: this.state.referenceElementHeight
       };
       var horizontalPosition = this.props.contentHorizontalPosition;
-      return (0, _extends2.default)({}, defaultPosition, {}, horizontalPosition);
+      return (0, _extends2.default)((0, _extends2.default)({}, defaultPosition), horizontalPosition);
     } // Component listener callbacks
 
   }, {
@@ -224,7 +228,7 @@ function (_React$Component) {
     key: "renderButton",
     value: function renderButton() {
       if (this.props.button) return this.props.button;
-      return _react.default.createElement(_dropdownButton.DropdownButton, {
+      return /*#__PURE__*/_react.default.createElement(_dropdownButton.DropdownButton, {
         ref: "dropdownButton",
         className: this.props.buttonClassName,
         id: this.props.buttonId,
@@ -237,7 +241,7 @@ function (_React$Component) {
     value: function renderArrow() {
       if (!this.props.dropdownListArrow) return;
       var style = this.getArrowPosition();
-      return _react.default.createElement("span", {
+      return /*#__PURE__*/_react.default.createElement("span", {
         ref: "arrow",
         style: style
       }, this.props.dropdownListArrow);
@@ -250,10 +254,10 @@ function (_React$Component) {
         'is-expanded': this.state.isExpanded,
         'k-Dropdown--asReference': this.isSelfReference()
       }, this.props.className);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         ref: "dropdown",
         className: dropdownClassName
-      }, button, _react.default.createElement("div", {
+      }, button, /*#__PURE__*/_react.default.createElement("div", {
         ref: "dropdownContent",
         className: "k-Dropdown__content",
         style: this.getContentPosition(),

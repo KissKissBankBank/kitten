@@ -13,11 +13,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -34,6 +34,10 @@ var _text = require("../../../../components/typography/text");
 var _button = require("../../../../components/buttons/button/button");
 
 var _garbageIcon = require("../../../../components/icons/garbage-icon");
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var borderWidth = (0, _typography.pxToRem)(2);
 var borderColor = _colorsConfig.default.line1;
@@ -52,14 +56,14 @@ var StyledGarbageButton = (0, _styledComponents.default)(_button.Button).withCon
   componentId: "sc-154pglo-2"
 })(["align-item:flex-end;"]);
 
-var Header =
-/*#__PURE__*/
-function (_PureComponent) {
+var Header = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(Header, _PureComponent);
+
+  var _super = _createSuper(Header);
 
   function Header() {
     (0, _classCallCheck2.default)(this, Header);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Header).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Header, [{
@@ -69,14 +73,14 @@ function (_PureComponent) {
           children = _this$props.children,
           onClick = _this$props.onClick,
           garbageButton = _this$props.garbageButton;
-      return _react.default.createElement(StyledContainerHeader, null, _react.default.createElement(StyledRewardAmount, null, children), garbageButton && _react.default.createElement(StyledGarbageButton, {
+      return /*#__PURE__*/_react.default.createElement(StyledContainerHeader, null, /*#__PURE__*/_react.default.createElement(StyledRewardAmount, null, children), garbageButton && /*#__PURE__*/_react.default.createElement(StyledGarbageButton, {
         onClick: onClick,
         type: "button",
         "aria-label": "Garbage Button",
         modifier: "beryllium",
         tiny: true,
         icon: true
-      }, _react.default.createElement(_garbageIcon.GarbageIcon, null)));
+      }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, null)));
     }
   }]);
   return Header;

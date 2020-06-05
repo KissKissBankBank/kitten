@@ -26,6 +26,7 @@ const StyledItem = styled.div`
 export class CarouselPage extends Component {
   render() {
     const {
+      legacyMode,
       data,
       numColumns,
       itemMinWidth,
@@ -36,15 +37,18 @@ export class CarouselPage extends Component {
     const rangeCard = createRangeFromZeroTo(numColumns)
 
     return (
-      <StyledPage>
+      <StyledPage className="k-Carousel__page">
         {rangeCard.map(index => (
           <StyledItem
             key={index}
             index={index}
             itemMinWidth={itemMinWidth}
             itemMarginBetween={itemMarginBetween}
+            className="k-Carousel__page__item"
           >
-            {renderItem[index]}
+            {legacyMode
+              ? data[index] && renderItem({ item: data[index] })
+              : renderItem[index]}
           </StyledItem>
         ))}
       </StyledPage>

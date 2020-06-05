@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import { SimpleTemplate } from './simple-template'
-import { Title } from '../../../../components/typography/title'
-import { Text } from '../../../../components/typography/text'
-import { Paragraph } from '../../../../components/typography/paragraph'
-import { BulletList } from '../../../../components/lists/bullet-list'
-import { Marger } from '../../../../components/layout/marger'
-import { withMediaQueries } from '../../../../hoc/media-queries'
-import { parseHtml } from '../../../../helpers/utils/parser'
+import { SimpleTemplate } from './simple-templates'
+import { Title } from '../../../components/typography/title'
+import { Paragraph } from '../../../components/typography/paragraph'
+import { BulletList } from '../../../components/lists/bullet-list'
+import { Marger } from '../../../components/layout/marger'
+import { withMediaQueries } from '../../../hoc/media-queries'
 
 class FranchiseCreationBase extends Component {
   render() {
@@ -15,14 +13,12 @@ class FranchiseCreationBase extends Component {
     const listSize = viewportIsXSOrLess ? { big: true } : { huge: true }
     const sectionMargin = viewportIsXSOrLess ? 4 : 5
 
-    const header = [
-      {
-        background: 'https://placehold.it/350x195/caf4fe/caf4fe',
-        title:
-          'Vous souhaitez financer une création en franchise ou \
+    const header = {
+      background: 'https://placehold.it/350x195/caf4fe/caf4fe',
+      title:
+        'Vous souhaitez financer une création en franchise ou \
             commerce associé ?',
-      },
-    ]
+    }
 
     const section2List = [
       {

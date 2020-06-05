@@ -2,7 +2,7 @@
 
 exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="standalone-range__StyledDatePicker-yne6lo-0 dWVLwI"
+  className="sc-bZQynM kspNNT"
 >
   <div
     className="DayPicker Selectable"
@@ -14,28 +14,22 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       tabIndex={0}
     >
       <p
-        className="k-u-size-tiny k-u-weight-regular navbar__StyledText-sc-1v9dr3-0 kglrxq"
+        className="k-u-size-tiny k-u-weight-regular sc-bxivhb BTiTW"
       >
         Sélectionnez la période souhaitée
       </p>
       <div
-        className="navbar__StyledButton-sc-1v9dr3-1 TCbUf DayPicker-NavBar"
+        className="sc-ifAKCX jhToMv DayPicker-NavBar"
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="button__StyledButton-sc-1q5nte0-0 bUHVxt navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv"
+          className="sc-bwzfXH gQvrSX sc-EHOje lbpOMi"
           onClick={[Function]}
         >
           <svg
-            className=""
-            data-radium={true}
+            className="sc-bdVaJa bxGcNc"
             fill="#222"
             height="8"
-            style={
-              Object {
-                "transform": "rotate(-90deg)",
-              }
-            }
             viewBox="0 0 8.48 5.64"
             width="8"
             xmlns="http://www.w3.org/2000/svg"
@@ -47,19 +41,13 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="button__StyledButton-sc-1q5nte0-0 bUHVxt navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv"
+          className="sc-bwzfXH gQvrSX sc-EHOje lbpOMi"
           onClick={[Function]}
         >
           <svg
-            className=""
-            data-radium={true}
+            className="sc-bdVaJa Afqxo"
             fill="#222"
             height="8"
-            style={
-              Object {
-                "transform": "rotate(90deg)",
-              }
-            }
             viewBox="0 0 8.48 5.64"
             width="8"
             xmlns="http://www.w3.org/2000/svg"

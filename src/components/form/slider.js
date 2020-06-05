@@ -13,13 +13,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -29,17 +29,21 @@ var _sliderBar = require("../../components/sliders/slider-bar");
 
 var _sliderKeyDownHandler = require("../../handlers/sliders/slider-key-down-handler");
 
-// TODO move to the "sliders" group (breaking change)
-var Slider =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+// Slider input to choose an integer value between two bounds
+var Slider = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(Slider, _React$Component);
+
+  var _super = _createSuper(Slider);
 
   function Slider(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, Slider);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Slider).call(this, props));
+    _this = _super.call(this, props);
     _this.handleMove = _this.handleMove.bind((0, _assertThisInitialized2.default)(_this));
     _this.handleKeyDown = _sliderKeyDownHandler.sliderKeyDownHandler.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
@@ -104,7 +108,7 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement(_sliderBar.SliderBar, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_sliderBar.SliderBar, (0, _extends2.default)({
         ref: "contents"
       }, this.props, this.state, {
         onMove: this.handleMove,

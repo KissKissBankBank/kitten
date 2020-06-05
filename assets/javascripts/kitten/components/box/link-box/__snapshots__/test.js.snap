@@ -2,17 +2,17 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="link-box__Link-km85a5-0 cRyYyS"
+  className="sc-htpNat gkYezB"
   href="#"
 >
   <div
-    className="link-box__Container-km85a5-4 hAydRh"
+    className="sc-bZQynM czKSIP"
   >
     <div
-      className="marger__StyledMarger-q3lecu-0 jyDYur link-box__ParagraphMarger-km85a5-1 dSDxqj"
+      className="sc-bwzfXH iTkUFj sc-bxivhb gjdtfU"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 iyINNV"
+        className="sc-bwzfXH fhbWMi"
       >
         <span
           className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -28,12 +28,13 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       
     </div>
     <div
-      className="link-box__Arrow-km85a5-3 bzCsBT"
+      className="sc-EHOje gktRhF"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
-        data-radium={true}
+        height="5.64"
         viewBox="0 0 6 6"
+        width="8.48"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -50,22 +51,22 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="link-box__Link-km85a5-0 cRyYyS"
+  className="sc-htpNat gkYezB"
   href="#foobar"
   rel="noopener"
   target="_blank"
 >
   <div
-    className="link-box__Container-km85a5-4 hAydRh"
+    className="sc-bZQynM czKSIP"
   >
     <div
-      className="link-box__Icon-km85a5-2 jzhPYJ k-u-hidden@xs-down--important"
+      className="sc-ifAKCX hbaqOm k-u-hidden@xs-down--important"
     />
     <div
-      className="marger__StyledMarger-q3lecu-0 jyDYur link-box__ParagraphMarger-km85a5-1 dSDxqj"
+      className="sc-bwzfXH iTkUFj sc-bxivhb gjdtfU"
     >
       <div
-        className="marger__StyledMarger-q3lecu-0 cGMcrq"
+        className="sc-bwzfXH dNghbn"
       >
         <span
           className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -90,12 +91,13 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="link-box__Arrow-km85a5-3 bzCsBT"
+      className="sc-EHOje gktRhF"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
-        data-radium={true}
+        height="5.64"
         viewBox="0 0 6 6"
+        width="8.48"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>

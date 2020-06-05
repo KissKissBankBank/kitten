@@ -1,4 +1,3 @@
-import { storiesOf } from '@storybook/react'
 import styled from 'styled-components'
 import { ArrowIcon } from './arrow-icon'
 import { BancontactIcon } from './bancontact-icon'
@@ -17,9 +16,11 @@ import { DoubleArrowIcon } from './double-arrow-icon'
 import { EditIcon } from './edit-icon'
 import { EmailIcon } from './email-icon'
 import { ExportIcon } from './export-icon'
+import { ExportIconAlternate } from './export-icon-alternate'
 import { FacebookIcon } from './facebook-icon'
 import { FacebookIconWithBackground } from './facebook-icon-with-background'
 import { FilterIcon } from './filter-icon'
+import { FlashCircleIcon } from './flash-circle-icon'
 import { GarbageIcon } from './garbage-icon'
 import { GiropayIcon } from './giropay-icon'
 import { GrabberIcon } from './grabber-icon'
@@ -56,6 +57,25 @@ import { EmbedIcon } from './embed-icon'
 import { GiftIcon } from './gift-icon'
 import { SaveIcon } from './save-icon'
 import { DocIcon } from './doc-icon'
+import { CameraIcon } from './camera-icon'
+import { RocketIcon } from './rocket-icon'
+import { RocketCircleIcon } from './rocket-circle-icon'
+import { BoldIcon } from './bold-icon'
+import { BlockquoteIcon } from './blockquote-icon'
+import { ListIcon } from './list-icon'
+import { VideoIcon } from './video-icon'
+import { Title1Icon } from './title-1-icon'
+import { Title2Icon } from './title-2-icon'
+import { Title3Icon } from './title-3-icon'
+import { Title4Icon } from './title-4-icon'
+import { ParagraphIcon } from './paragraph-icon'
+import { ItalicIcon } from './italic-icon'
+import { ImageIcon } from './image-icon'
+import { LinkIcon } from './link-icon'
+import { ButtonIcon } from './button-icon'
+import { AlignLeftIcon } from './align-left-icon'
+import { AlignCenterIcon } from './align-center-icon'
+import { AlignRightIcon } from './align-right-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -98,7 +118,7 @@ const IconContainer = styled(({ className, children }) => {
   padding: ${pxToRem(10)};
 `
 
-storiesOf('Icons/List', module).add('default', () => {
+export const AllIcons = () => {
   return (
     <Container>
       <Group title="Bank">
@@ -112,6 +132,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<SofortIcon />} />
         <IconContainer children={<VisaIcon />} />
       </Group>
+
       <Group title="Social">
         <IconContainer children={<EmailIcon />} />
         <IconContainer children={<FacebookIcon />} />
@@ -123,6 +144,26 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<MessengerIcon />} />
         <IconContainer children={<WhatsAppIcon />} />
       </Group>
+
+      <Group title="Editor">
+        <IconContainer children={<BoldIcon />} />
+        <IconContainer children={<BlockquoteIcon />} />
+        <IconContainer children={<ListIcon />} />
+        <IconContainer children={<VideoIcon />} />
+        <IconContainer children={<Title1Icon />} />
+        <IconContainer children={<Title2Icon />} />
+        <IconContainer children={<Title3Icon />} />
+        <IconContainer children={<Title4Icon />} />
+        <IconContainer children={<ParagraphIcon />} />
+        <IconContainer children={<ItalicIcon />} />
+        <IconContainer children={<ImageIcon />} />
+        <IconContainer children={<LinkIcon />} />
+        <IconContainer children={<ButtonIcon />} />
+        <IconContainer children={<AlignLeftIcon />} />
+        <IconContainer children={<AlignCenterIcon />} />
+        <IconContainer children={<AlignRightIcon />} />
+      </Group>
+
       <Group title="Others">
         <IconContainer children={<BurgerIcon />} />
         <IconContainer children={<GarbageIcon />} />
@@ -140,6 +181,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<CrossIcon />} />
         <IconContainer children={<DoubleArrowIcon />} />
         <IconContainer children={<FilterIcon />} />
+        <IconContainer children={<FlashCircleIcon />} />
         <IconContainer children={<GrabberIcon />} />
         <IconContainer children={<HeartIcon />} />
         <IconContainer children={<InstagramIcon />} />
@@ -156,6 +198,7 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<CopyIcon />} />
         <IconContainer children={<BubbleIcon />} />
         <IconContainer children={<ExportIcon />} />
+        <IconContainer children={<ExportIconAlternate />} />
         <IconContainer children={<StrokeIcon />} />
         <IconContainer children={<KissKissBankBankIcon width="70" />} />
         <IconContainer children={<EmbedIcon />} />
@@ -163,7 +206,12 @@ storiesOf('Icons/List', module).add('default', () => {
         <IconContainer children={<EditIcon />} />
         <IconContainer children={<SaveIcon />} />
         <IconContainer children={<DocIcon />} />
+        <IconContainer children={<CameraIcon />} />
+        <IconContainer children={<RocketIcon />} />
+        <IconContainer children={<RocketCircleIcon />} />
       </Group>
     </Container>
   )
-})
+}
+
+export default { title: 'Icons/List' }

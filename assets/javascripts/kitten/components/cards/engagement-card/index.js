@@ -1,49 +1,46 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
-
-const borderStyle = css`
-  box-shadow: 0 0 0 ${pxToRem(3)} ${COLORS.background1},
-    0 0 0 ${pxToRem(6)} ${({ hoverBorder }) => hoverBorder};
-`
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledCard = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   border-radius: ${pxToRem(15)};
   position: relative;
   overflow: hidden;
   background-repeat: no-repeat;
-  background-image: url(${({ imageSrc }) => imageSrc});
   background-color: ${({ backgroundColor }) => backgroundColor};
   background-size: contain;
-  padding: ${pxToRem(10)};
+  padding: ${pxToRem(5)};
+  text-decoration: none;
+  border-color: ${COLORS.background1};
 
-  ${({ href }) =>
-    href &&
-    css`
-      :hover,
-      :active,
-      :focus {
-        ${borderStyle}
-      }
-    `}
-
-  ${({ isActive }) => isActive && borderStyle}
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    padding: ${pxToRem(10)};
+  }
 `
 
 const StyledText = styled(Text)`
-  position: absolute;
   text-align: center;
-  bottom: 5%;
   right: ${pxToRem(10)};
   left: ${pxToRem(10)};
   line-height: 1.2;
 `
 
+const StyledIcon = styled.div`
+  display: flex;
+  align-self: center;
+  align-items: center;
+  height: 100%;
+`
+
 export const EngagementCard = ({
-  imageSrc,
+  icon,
   backgroundColor,
   href,
   children,
@@ -57,11 +54,11 @@ export const EngagementCard = ({
       {...others}
       as={href ? 'a' : 'div'}
       href={href}
-      imageSrc={imageSrc}
       backgroundColor={backgroundColor}
       hoverBorder={hoverBorder}
       isActive={isActive}
     >
+      <StyledIcon>{icon}</StyledIcon>
       <StyledText size="micro" weight="regular" color="font1">
         {children}
       </StyledText>
@@ -70,7 +67,7 @@ export const EngagementCard = ({
 }
 
 EngagementCard.propTypes = {
-  imageSrc: PropTypes.string,
+  icon: PropTypes.element.isRequired,
   href: PropTypes.string,
   backgroundColor: PropTypes.string,
   hoverBorder: PropTypes.string,
@@ -78,7 +75,6 @@ EngagementCard.propTypes = {
 }
 
 EngagementCard.defaultProps = {
-  imageSrc: '',
   href: '',
   backgroundColor: '',
   hoverBorder: '',

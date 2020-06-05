@@ -11,28 +11,32 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var TourPopover =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var TourPopover = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(TourPopover, _React$Component);
+
+  var _super = _createSuper(TourPopover);
 
   function TourPopover(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, TourPopover);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TourPopover).call(this, props));
+    _this = _super.call(this, props);
     _this.handleResize = _this.handleResize.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   } // Component lifecycle.
@@ -77,16 +81,16 @@ function (_React$Component) {
         'k-Button--helium': !isDisabled,
         'k-Button--hydrogen': isDisabled
       });
-      return _react.default.createElement("button", {
+      return /*#__PURE__*/_react.default.createElement("button", {
         onClick: isDisabled ? null : this.props.onNextClick,
         title: this.props.buttons.next.title,
         className: buttonClassName,
         disabled: isDisabled
-      }, this.props.buttons.next.label, _react.default.createElement("svg", {
+      }, this.props.buttons.next.label, /*#__PURE__*/_react.default.createElement("svg", {
         className: "k-Button__icon",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 6 6"
-      }, _react.default.createElement("path", {
+      }, /*#__PURE__*/_react.default.createElement("path", {
         d: "M6 0H0v6h2V2h4z"
       })));
     }
@@ -98,66 +102,66 @@ function (_React$Component) {
         'k-Button--helium': !isDisabled,
         'k-Button--hydrogen': isDisabled
       });
-      return _react.default.createElement("button", {
+      return /*#__PURE__*/_react.default.createElement("button", {
         onClick: isDisabled ? null : this.props.onPrevClick,
         title: this.props.buttons.prev.title,
         className: buttonClassName,
         disabled: isDisabled
-      }, _react.default.createElement("svg", {
+      }, /*#__PURE__*/_react.default.createElement("svg", {
         className: "k-Button__icon--tiny",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 6 6",
         fill: "#fff"
-      }, _react.default.createElement("path", {
+      }, /*#__PURE__*/_react.default.createElement("path", {
         d: "M6 0H0v6h2V2h4z"
       })), this.props.buttons.prev.label);
     }
   }, {
     key: "renderCloseButton",
     value: function renderCloseButton() {
-      return _react.default.createElement("button", {
+      return /*#__PURE__*/_react.default.createElement("button", {
         title: this.props.buttons.close.label,
         "aria-label": this.props.buttons.close.label,
         onClick: this.props.onCloseClick,
         className: "k-ButtonIcon k-ButtonIcon--hydrogen k-ButtonIcon--tiny"
-      }, _react.default.createElement("svg", {
+      }, /*#__PURE__*/_react.default.createElement("svg", {
         className: "k-ButtonIcon__svg k-ButtonIcon__svgRotate",
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "-11 -4 125 105"
-      }, _react.default.createElement("path", {
+      }, /*#__PURE__*/_react.default.createElement("path", {
         d: "M91.968 21.407l-70.56 70.56-13.44-13.44 70.56-70.56z"
-      }), _react.default.createElement("path", {
+      }), /*#__PURE__*/_react.default.createElement("path", {
         d: "M91.968 78.527l-13.44 13.44-70.56-70.56 13.44-13.44z"
       })));
     }
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         ref: "popover",
         className: "k-Popover k-Tour__popover",
         role: "dialog",
         "aria-hidden": "true",
         "aria-labelledby": "dialogtitle",
         style: this.props.style
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Popover__container k-Tour__popover__container"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tour__popover__illustration"
-      }, this.props.illustration), _react.default.createElement("div", {
+      }, this.props.illustration), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tour__popover__content"
-      }, _react.default.createElement("p", {
+      }, /*#__PURE__*/_react.default.createElement("p", {
         id: "dialogtitle",
         className: "k-Tour__popover__title"
-      }, this.props.title), _react.default.createElement("p", {
+      }, this.props.title), /*#__PURE__*/_react.default.createElement("p", {
         className: "k-Tour__popover__text"
-      }, this.props.content), _react.default.createElement("div", {
+      }, this.props.content), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tour__popover__navigation"
-      }, _react.default.createElement("p", {
+      }, /*#__PURE__*/_react.default.createElement("p", {
         className: "k-Tour__popover__numbering"
-      }, this.props.progress), _react.default.createElement("div", {
+      }, this.props.progress), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tour__popover__buttons"
-      }, this.renderPrevButton(), this.renderNextButton()))), _react.default.createElement("div", {
+      }, this.renderPrevButton(), this.renderNextButton()))), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Popover__close"
       }, this.renderCloseButton())));
     }

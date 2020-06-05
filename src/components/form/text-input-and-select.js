@@ -42,20 +42,20 @@ var TextInputAndSelect = function TextInputAndSelect(props) {
   }, className); // TODO: handle key without currencyName prop
 
   var renderTextInputWrapper = function renderTextInputWrapper() {
-    return _react.default.createElement("div", {
+    return /*#__PURE__*/_react.default.createElement("div", {
       className: inputWrapperClassName,
       key: "".concat(props.currencyName, "1")
-    }, _react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
+    }, /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
       tiny: tiny,
       disabled: disabled
     }, textInputProps)));
   };
 
   var renderSelectWrapper = function renderSelectWrapper() {
-    return _react.default.createElement("div", {
+    return /*#__PURE__*/_react.default.createElement("div", {
       className: "k-FormComposer__element",
       key: "".concat(props.currencyName, "2")
-    }, _react.default.createElement(_selectWithState.SelectWithState, {
+    }, /*#__PURE__*/_react.default.createElement(_selectWithState.SelectWithState, {
       name: selectName,
       options: selectOptions,
       value: selectValue,
@@ -75,7 +75,7 @@ var TextInputAndSelect = function TextInputAndSelect(props) {
     return [renderTextInputWrapper(), renderSelectWrapper()];
   };
 
-  return _react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
     className: "k-FormComposer"
   }, renderTextInputAndSelect());
 };

@@ -1,31 +1,19 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Button } from '../../../../components/buttons/button/button'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import COLORS from '../../../../constants/colors-config'
-
-const COMPONENT_GUTTER = pxToRem(10)
-
-const StyledLoading = styled(Button)`
-  background-color: ${COLORS.line2};
-  border-color: ${COLORS.line2};
-`
-
-const StyledButtonContainer = styled.div`
-  padding: 0 ${COMPONENT_GUTTER};
-`
 
 const CardButton = ({ text, loading }) => (
-  <StyledButtonContainer>
+  <div className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer">
     {!loading && (
       <Button fluid modifier="helium">
         {text}
       </Button>
     )}
 
-    {loading && <StyledLoading fluid />}
-  </StyledButtonContainer>
+    {loading && (
+      <Button fluid className="k-CrowdfundingCard__cardButton__loadingButton" />
+    )}
+  </div>
 )
 
 export default CardButton

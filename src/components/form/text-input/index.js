@@ -17,11 +17,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -34,6 +34,10 @@ var _typography = require("../../../helpers/utils/typography");
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var borderWidth = (0, _typography.pxToRem)(2);
 var verticalPadding = (0, _typography.pxToRem)(10);
@@ -89,14 +93,14 @@ var digitsStyles = function digitsStyles(digits) {
 
 exports.digitsStyles = digitsStyles;
 
-var TextInput =
-/*#__PURE__*/
-function (_PureComponent) {
+var TextInput = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInput, _PureComponent);
+
+  var _super = _createSuper(TextInput);
 
   function TextInput() {
     (0, _classCallCheck2.default)(this, TextInput);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TextInput).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TextInput, [{
@@ -115,7 +119,7 @@ function (_PureComponent) {
           others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "name", "digits", "tiny", "tag"]);
 
       if (tag === 'textarea') {
-        return _react.default.createElement(StyledTextarea, null, _react.default.createElement(StyledInputTextarea, (0, _extends2.default)({
+        return /*#__PURE__*/_react.default.createElement(StyledTextarea, null, /*#__PURE__*/_react.default.createElement(StyledInputTextarea, (0, _extends2.default)({
           ref: function ref(input) {
             return _this.input = input;
           },
@@ -125,9 +129,9 @@ function (_PureComponent) {
           tiny: tiny,
           digits: digits,
           name: name
-        }, others)), _react.default.createElement(StyledGradientTextarea, null));
+        }, others)), /*#__PURE__*/_react.default.createElement(StyledGradientTextarea, null));
       } else {
-        return _react.default.createElement(StyledInput, (0, _extends2.default)({
+        return /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
           ref: function ref(input) {
             return _this.input = input;
           },

@@ -31,7 +31,7 @@ var card = function card(WrappedComponent, wrappedProps) {
   };
 
   var Card = function Card(props) {
-    var _defaultProps$wrapped = (0, _extends2.default)({}, defaultProps, {}, wrappedProps, {}, props),
+    var _defaultProps$wrapped = (0, _extends2.default)((0, _extends2.default)((0, _extends2.default)({}, defaultProps), wrappedProps), props),
         className = _defaultProps$wrapped.className,
         light = _defaultProps$wrapped.light,
         padded = _defaultProps$wrapped.padded,
@@ -57,7 +57,7 @@ var card = function card(WrappedComponent, wrappedProps) {
       'k-Card--withVerticalPadding': withVerticalPadding,
       'k-Card--withoutBoxShadowOnHover': withoutBoxShadowOnHover
     }, className);
-    return _react.default.createElement(WrappedComponent, (0, _extends2.default)({
+    return /*#__PURE__*/_react.default.createElement(WrappedComponent, (0, _extends2.default)({
       className: cardClassName
     }, others));
   };

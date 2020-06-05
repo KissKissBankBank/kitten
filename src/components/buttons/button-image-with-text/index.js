@@ -54,17 +54,17 @@ var ButtonImageWithText = function ButtonImageWithText(_ref3) {
   var size = micro ? 'micro' : 'tiny';
   var titleWeight = titleRegular ? 'regular' : 'light';
   var textWeight = textRegular ? 'regular' : 'light';
-  return _react.default.createElement(Container, null, _react.default.createElement(_buttonImage.ButtonImage, {
+  return /*#__PURE__*/_react.default.createElement(Container, null, /*#__PURE__*/_react.default.createElement(_buttonImage.ButtonImage, {
     tag: "span",
     img: avatarProps,
     withoutPointerEvents: true
-  }), _react.default.createElement(TextContainer, {
+  }), /*#__PURE__*/_react.default.createElement(TextContainer, {
     largeGutter: largeGutter
-  }, _react.default.createElement(StyledText, {
+  }, /*#__PURE__*/_react.default.createElement(StyledText, {
     tag: tag,
     size: size,
     weight: titleWeight
-  }, title), _react.default.createElement(StyledText, {
+  }, title), /*#__PURE__*/_react.default.createElement(StyledText, {
     tag: tag,
     size: size,
     weight: textWeight

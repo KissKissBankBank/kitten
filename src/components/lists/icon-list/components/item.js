@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -11,7 +9,7 @@ exports.Item = void 0;
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -32,7 +30,7 @@ var Item = function Item(_ref) {
       iconProps = _ref.iconProps,
       children = _ref.children,
       others = (0, _objectWithoutProperties2.default)(_ref, ["icon", "iconProps", "children"]);
-  return _react.default.createElement(StyledItem, others, _react.default.createElement(_icon.Icon, iconProps, icon), _react.default.createElement(StyledContent, null, children));
+  return /*#__PURE__*/_react.default.createElement(StyledItem, others, /*#__PURE__*/_react.default.createElement(_icon.Icon, iconProps, icon), /*#__PURE__*/_react.default.createElement(StyledContent, null, children));
 };
 
 exports.Item = Item;

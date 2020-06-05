@@ -14,7 +14,7 @@ var _react = _interopRequireDefault(require("react"));
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var Line = function Line(props) {
-  return _react.default.createElement("div", (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-Line', props.className)
   }));
 };
@@ -22,7 +22,7 @@ var Line = function Line(props) {
 exports.Line = Line;
 
 Line.Item = function (props) {
-  return _react.default.createElement("div", (0, _extends2.default)({}, props, {
+  return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({}, props, {
     className: (0, _classnames.default)('k-Line__item', props.className)
   }));
 };

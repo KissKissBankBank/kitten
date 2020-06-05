@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EngagementCardWithImage /> by default matches with snapshot 1`] = `
+<a
+  className="sc-bdVaJa fHpsEe"
+  href="#"
+  title="Hello word"
+>
+  <div
+    className="sc-bwzfXH eiHzkV"
+  >
+    <img
+      alt=""
+      className="sc-htpNat bvrdCN"
+      src="https://source.unsplash.com/WLUHO9A_xik/200x120"
+    />
+  </div>
+  <span
+    className="k-u-color-font1 k-u-decoration-none k-u-line-height-normal k-u-size-micro k-u-weight-regular sc-bxivhb iSbjCA"
+  />
+</a>
+`;

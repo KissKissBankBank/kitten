@@ -7,7 +7,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="button__StyledButton-sc-1q5nte0-0 hJdvjM expand-board__StyledButton-sc-5cysn4-0 ibKmMD"
+    className="sc-bdVaJa bzQyWZ sc-bxivhb cvqStu"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -15,15 +15,9 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
     <div>
       Alice
       <svg
-        className="expand-board__StyledArrowIcon-sc-5cysn4-1 kZobdv"
-        data-radium={true}
+        className="sc-htpNat hVzzeN sc-ifAKCX cAwldT"
         fill="#fff"
         height="5.64"
-        style={
-          Object {
-            "transform": "rotate(180deg)",
-          }
-        }
         viewBox="0 0 8.48 5.64"
         width="8.48"
         xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +38,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="button__StyledButton-sc-1q5nte0-0 hJdvjM expand-board__StyledButton-sc-5cysn4-0 ibKmMD"
+    className="sc-bdVaJa bzQyWZ sc-bxivhb cvqStu"
     disabled={true}
     onClick={[Function]}
     type="button"
@@ -52,15 +46,9 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
     <div>
       Alice
       <svg
-        className="expand-board__StyledArrowIcon-sc-5cysn4-1 kZobdv"
-        data-radium={true}
+        className="sc-htpNat hVzzeN sc-ifAKCX cAwldT"
         fill="#fff"
         height="5.64"
-        style={
-          Object {
-            "transform": "rotate(180deg)",
-          }
-        }
         viewBox="0 0 8.48 5.64"
         width="8.48"
         xmlns="http://www.w3.org/2000/svg"

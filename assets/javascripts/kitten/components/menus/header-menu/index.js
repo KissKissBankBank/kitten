@@ -1,52 +1,58 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Item } from './components/item'
+import { Badge } from './components/badge'
 import { Context } from './components/context'
 import COLORS from '../../../constants/colors-config'
+import { pxToRem } from '../../../helpers/utils/typography'
+
+const borderStyle = `${pxToRem(1)} solid ${COLORS.line1}`
 
 const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 1px solid ${COLORS.line1};
-  border-right: 1px solid ${COLORS.line1};
+  border-left: ${({ noBorder }) => (noBorder ? 0 : borderStyle)};
+  border-right: ${({ noBorder }) => (noBorder ? 0 : borderStyle)};
 `
 
-export class HeaderMenu extends Component {
-  static Item = Item
+export const HeaderMenu = ({
+  backgroundColors,
+  borderSide,
+  borderSideOnHover,
+  largeItem,
+  noBorder,
+  children,
+}) => (
+  <Context.Provider
+    value={{
+      backgroundColors: backgroundColors,
+      borderSide: borderSide,
+      borderSideOnHover: borderSideOnHover,
+      largeItem: largeItem,
+      noBorder: noBorder,
+    }}
+  >
+    <List noBorder={noBorder}>{children}</List>
+  </Context.Provider>
+)
 
-  static propTypes = {
-    borderSide: PropTypes.oneOf(['left', 'right']),
-  }
+HeaderMenu.Item = Item
+HeaderMenu.Badge = Badge
 
-  static defaultProps = {
-    borderSide: 'left',
-  }
+HeaderMenu.propTypes = {
+  backgroundColors: PropTypes.object,
+  borderSide: PropTypes.oneOf(['left', 'right', false]),
+  borderSideOnHover: PropTypes.bool,
+  largeItem: PropTypes.bool,
+  noBorder: PropTypes.bool,
+}
 
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      borderSide: props.borderSide,
-    }
-  }
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.borderSide !== this.props.borderSide) {
-      this.setState({ borderSide: this.props.borderSide })
-    }
-  }
-
-  render() {
-    const { children } = this.props
-
-    return (
-      <Context.Provider value={this.state}>
-        <nav role="navigation">
-          <List role="menubar">{children}</List>
-        </nav>
-      </Context.Provider>
-    )
-  }
+HeaderMenu.defaultProps = {
+  backgroundColors: {},
+  borderSide: 'left',
+  borderSideOnHover: true,
+  largeItem: false,
+  noBorder: false,
 }

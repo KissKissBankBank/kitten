@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Marger } from '../../../layout/marger'
 import { PasswordInput } from '../../password-input'
 

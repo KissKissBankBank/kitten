@@ -61,15 +61,16 @@ function useScrollDirection() {
 
   var oldScrollPos = (0, _react.useRef)(0);
   (0, _react.useEffect)(function () {
-    function onScroll() {
+    var onScroll = function onScroll() {
       setScrollPos(window.pageYOffset); // save the old scroll position in the ref
 
       oldScrollPos.current = window.pageYOffset;
-    }
+    };
 
-    window.addEventListener('scroll', (0, _throttle.default)(onScroll, 200));
+    var scrollThrottle = (0, _throttle.default)(onScroll, 200);
+    window.addEventListener('scroll', scrollThrottle);
     return function () {
-      return window.removeEventListener('scroll', (0, _throttle.default)(onScroll, 200));
+      return window.removeEventListener('scroll', scrollThrottle);
     };
   }, []); // current scroll position minus the old scroll position saved in state.
 
@@ -193,9 +194,10 @@ var StickyContainerBase = function StickyContainerBase(_ref4, ref) {
     return (0, _styledComponents.css)(["position:", ";", ":", ";transition-property:", ";"], position, directionToAnimate, directionDistance, directionToAnimate);
   };
 
-  return _react.default.createElement(_react.Fragment, null, (stuck || isSticky === 'always') && _react.default.createElement(StyledSpacer, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, (stuck || isSticky === 'always') && /*#__PURE__*/_react.default.createElement(StyledSpacer, {
+    className: "k-Spacer",
     containerHeight: containerHeight
-  }), _react.default.createElement(StyledStickyContainer, (0, _extends2.default)({
+  }), /*#__PURE__*/_react.default.createElement(StyledStickyContainer, (0, _extends2.default)({
     ref: currentStickyContainer,
     stickyContainerStyleProps: stickyContainerStyleProps,
     isSticky: isSticky

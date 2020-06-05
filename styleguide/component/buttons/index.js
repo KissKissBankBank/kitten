@@ -57,11 +57,6 @@ export default () => {
         component={ButtonWithBadge}
       />
       <Component
-        title="Filter"
-        id="components/buttons/filter"
-        component={Filter}
-      />
-      <Component
         title="Garbage Button"
         id="components/buttons/garbage-button"
         component={GarbageButton}

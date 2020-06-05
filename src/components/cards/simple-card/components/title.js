@@ -15,11 +15,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -33,14 +33,18 @@ var _title = require("../../../../components/typography/title");
 
 var _marger = require("../../../../components/layout/marger");
 
-var TitleComponent =
-/*#__PURE__*/
-function (_PureComponent) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var TitleComponent = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TitleComponent, _PureComponent);
+
+  var _super = _createSuper(TitleComponent);
 
   function TitleComponent() {
     (0, _classCallCheck2.default)(this, TitleComponent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TitleComponent).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TitleComponent, [{
@@ -50,10 +54,10 @@ function (_PureComponent) {
           title = _this$props.title,
           titleProps = _this$props.titleProps;
       var titleClassName = (0, _classnames.default)('k-Card__title', titleProps.className);
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",
         bottom: ".3"
-      }, _react.default.createElement(_title.Title, (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement(_title.Title, (0, _extends2.default)({
         tag: "p"
       }, titleProps, {
         className: titleClassName,

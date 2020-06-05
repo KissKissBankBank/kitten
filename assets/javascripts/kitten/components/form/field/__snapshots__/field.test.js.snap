@@ -3,7 +3,7 @@
 exports[`<Field /> with <Field.Autocomplete /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -27,10 +27,10 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="autocomplete__Container-lfeqwe-0 dWXmqi"
+      className="sc-fjdhpX jLxVvv"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="autocomplete__Input-lfeqwe-1 cWRlxK"
+        className="sc-jzJRlG bCdGhE"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -55,7 +55,7 @@ Array [
 exports[`<Field /> with <Field.Input /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -119,10 +119,10 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="text-input__StyledInput-sc-11wej6v-1 kfptEQ"
+      className="sc-htpNat ynqvX"
       disabled={false}
       id="input"
       name="field"
@@ -130,7 +130,7 @@ Array [
     />
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <p
       className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
@@ -149,7 +149,7 @@ Array [
 exports[`<Field /> with <Field.Input /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -213,10 +213,10 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+      className="sc-htpNat bKpJKj"
       disabled={false}
       id="input"
       name="field"
@@ -229,7 +229,7 @@ Array [
 exports[`<Field /> with <Field.Password /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -293,13 +293,13 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
+      className="sc-gZMcBi jRuEcz"
     >
       <input
-        className="text-input__StyledInput-sc-11wej6v-1 kfptEQ password-input__StyledTextInput-sc-1futz46-1 frwehc"
+        className="sc-htpNat ynqvX sc-gqjmRU liPQXk"
         disabled={false}
         id="input"
         name="field"
@@ -308,7 +308,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="password-input__StyledIcon-sc-1futz46-2 jSmpuB"
+        className="sc-VigVT cXRJCo"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -334,7 +334,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <p
       className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
@@ -353,7 +353,7 @@ Array [
 exports[`<Field /> with <Field.Password /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -417,13 +417,13 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
+      className="sc-gZMcBi jRuEcz"
     >
       <input
-        className="text-input__StyledInput-sc-11wej6v-1 iDULaY password-input__StyledTextInput-sc-1futz46-1 frwehc"
+        className="sc-htpNat bKpJKj sc-gqjmRU liPQXk"
         disabled={false}
         id="input"
         name="field"
@@ -432,7 +432,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="password-input__StyledIcon-sc-1futz46-2 jSmpuB"
+        className="sc-VigVT cXRJCo"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -463,7 +463,7 @@ Array [
 exports[`<Field /> with <Field.RadioButtonSet /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -487,7 +487,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <div
       className="k-RadioButtonSet"
@@ -549,7 +549,7 @@ Array [
 exports[`<Field /> with <Field.Select /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -573,7 +573,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <div
       className="k-Select"

@@ -3,7 +3,7 @@ import { Title } from '../../components/typography/title'
 import { VerticalCardWithAction } from '../../components/cards/vertical-card-with-action'
 import { Triptych } from '../../components/cards/triptych'
 
-export const KarlTriptych = props => (
+export const KarlTriptych = () => (
   <Triptych
     title={
       <Title tag="h2" modifier="secondary" margin={false}>

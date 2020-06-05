@@ -3,7 +3,7 @@
 exports[`<SimpleCarousel /> by default matches with snapshot 1`] = `
 Array [
   <div
-    className="simple-carousel__StyledContainer-t6k8ig-0 eItgJi"
+    className="sc-bwzfXH iKvhCm"
     id=""
     style={Object {}}
   >
@@ -29,7 +29,7 @@ Array [
     </div>
   </div>,
   <div
-    className="simple-carousel__StyledPagination-t6k8ig-1 cJmvhm"
+    className="sc-htpNat LHKdQ"
     onKeyDown={[Function]}
     role="tablist"
     style={Object {}}
@@ -37,7 +37,7 @@ Array [
     <button
       aria-controls="carouselItem_0"
       aria-selected={true}
-      className="simple-carousel__StyledPaginationButton-t6k8ig-2 iDakHt"
+      className="sc-bxivhb cSueJJ"
       id="carouselTab_0"
       onClick={[Function]}
       role="tab"
@@ -45,7 +45,7 @@ Array [
       type="button"
     >
       <span
-        className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+        className="sc-bdVaJa FAarz"
       >
         Page 1
       </span>
@@ -53,7 +53,7 @@ Array [
     <button
       aria-controls="carouselItem_1"
       aria-selected={false}
-      className="simple-carousel__StyledPaginationButton-t6k8ig-2 iDakHt"
+      className="sc-bxivhb cSueJJ"
       id="carouselTab_1"
       onClick={[Function]}
       role="tab"
@@ -61,7 +61,7 @@ Array [
       type="button"
     >
       <span
-        className="visually-hidden__StyledElement-sc-3bas83-0 eAKyRD"
+        className="sc-bdVaJa FAarz"
       >
         Page 2
       </span>
@@ -72,7 +72,7 @@ Array [
 
 exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 <div
-  className="simple-carousel__StyledContainer-t6k8ig-0 kmkOnR"
+  className="sc-bwzfXH fDplRa"
   id=""
   style={Object {}}
 >
@@ -91,7 +91,7 @@ exports[`<SimpleCarousel /> with only one item matches with snapshot 1`] = `
 
 exports[`<SimpleCarousel /> with some props matches with snapshot 1`] = `
 <div
-  className="simple-carousel__StyledContainer-t6k8ig-0 kmkOnR"
+  className="sc-bwzfXH fDplRa"
   id="simpleCarousel"
   style={Object {}}
 >

@@ -15,11 +15,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
@@ -38,6 +38,12 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 var _modifierStyles = require("./helpers/modifier-styles");
 
 var _checkedCircleIcon = require("../../icons/checked-circle-icon");
+
+var _screenConfig = require("../../../constants/screen-config");
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "button__StyledButton",
@@ -98,7 +104,7 @@ var CheckedCircleIcon = (0, _styledComponents.default)(function (_ref10) {
   var big = _ref10.big,
       tiny = _ref10.tiny,
       others = (0, _objectWithoutProperties2.default)(_ref10, ["big", "tiny"]);
-  return _react.default.createElement(_checkedCircleIcon.CheckedCircleIcon, others);
+  return /*#__PURE__*/_react.default.createElement(_checkedCircleIcon.CheckedCircleIcon, others);
 }).withConfig({
   displayName: "button__CheckedCircleIcon",
   componentId: "sc-1q5nte0-1"
@@ -107,7 +113,7 @@ var CheckedCircleIcon = (0, _styledComponents.default)(function (_ref10) {
   return tiny && checkedCircleIconStyle('tiny');
 }, function (_ref12) {
   var big = _ref12.big;
-  return big && checkedCircleIconStyle('big');
+  return big && (0, _styledComponents.css)(["@media (min-width:", "){", "}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), checkedCircleIconStyle('big'));
 });
 var FLUID = (0, _styledComponents.css)(["min-width:initial;width:100%;"]);
 exports.FLUID = FLUID;
@@ -115,23 +121,23 @@ var DEFAULT = (0, _styledComponents.css)(["min-width:", ";min-height:", ";paddin
 exports.DEFAULT = DEFAULT;
 var TINY = (0, _styledComponents.css)(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], (0, _typography.pxToRem)(160), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(160), (0, _typography.pxToRem)(40));
 exports.TINY = TINY;
-var BIG = (0, _styledComponents.css)(["min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], (0, _typography.pxToRem)(220), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(220), (0, _typography.pxToRem)(70));
+var BIG = (0, _styledComponents.css)(["@media (min-width:", "){min-width:", ";min-height:", ";padding:0 ", ";font-size:", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(220), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(16), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(220), (0, _typography.pxToRem)(70));
 exports.BIG = BIG;
 var ICON = (0, _styledComponents.css)(["min-width:initial;min-height:initial;width:", ";height:", ";padding:0;@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";min-width:0;min-height:0;}"], (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50));
 exports.ICON = ICON;
 var ICON_TINY = (0, _styledComponents.css)(["width:", ";height:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40));
 exports.ICON_TINY = ICON_TINY;
-var ICON_BIG = (0, _styledComponents.css)(["width:", ";height:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70));
+var ICON_BIG = (0, _styledComponents.css)(["@media (min-width:", "){width:", ";height:", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(70));
 exports.ICON_BIG = ICON_BIG;
 
-var Button =
-/*#__PURE__*/
-function (_Component) {
+var Button = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Button, _Component);
+
+  var _super = _createSuper(Button);
 
   function Button() {
     (0, _classCallCheck2.default)(this, Button);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Button).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Button, [{
@@ -145,9 +151,9 @@ function (_Component) {
         'aria-checked': true
       };
       modifier === 'checked' && console.warn("Warning: In <Button /> component, 'checked' modifier is deprecated.");
-      return _react.default.createElement(StyledButton, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
         modifier: modifier
-      }, checked, props), children, modifier === 'checked' && _react.default.createElement(CheckedCircleIcon, {
+      }, checked, props), children, modifier === 'checked' && /*#__PURE__*/_react.default.createElement(CheckedCircleIcon, {
         big: props.big && props.big,
         tiny: props.tiny && props.tiny,
         circleColor: _colorsConfig.default.primary1,

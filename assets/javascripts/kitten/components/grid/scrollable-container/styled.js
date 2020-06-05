@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Container } from '../../../components/grid/container'
 import { hexToRgba } from '../../../helpers/utils/hex-to-rgba'
@@ -10,6 +9,7 @@ export const StyledContainer = styled(Container)`
   position: relative;
   padding-left: 0;
   padding-right: 0;
+  overflow: scroll;
 `
 
 export const scrollableContainerStyle = ({}) => css`

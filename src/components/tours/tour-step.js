@@ -15,13 +15,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -29,16 +29,20 @@ var _elementHelper = require("../../helpers/dom/element-helper");
 
 var _tourPopover = require("../../components/tours/tour-popover");
 
-var TourStep =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var TourStep = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(TourStep, _React$Component);
+
+  var _super = _createSuper(TourStep);
 
   function TourStep(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, TourStep);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TourStep).call(this, props));
+    _this = _super.call(this, props);
     _this.state = {
       targetHighlightStyles: null,
       currentPositionTarget: _this.props.targetElement,
@@ -150,11 +154,11 @@ function (_React$Component) {
   }, {
     key: "renderTargetHighlight",
     value: function renderTargetHighlight() {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         ref: "targetHighlight",
         className: "k-Tour__step__targetHighlight",
         style: this.state.targetHighlightStyles
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         className: "k-Tour__step__targetHighlightContent"
       }));
     }
@@ -164,9 +168,9 @@ function (_React$Component) {
       var _this$props = this.props,
           targetElement = _this$props.targetElement,
           popoverProps = (0, _objectWithoutProperties2.default)(_this$props, ["targetElement"]);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Tour__step"
-      }, this.renderTargetHighlight(), _react.default.createElement(_tourPopover.TourPopover, (0, _extends2.default)({
+      }, this.renderTargetHighlight(), /*#__PURE__*/_react.default.createElement(_tourPopover.TourPopover, (0, _extends2.default)({
         ref: "popover",
         onPopoverPosition: this.handlePopoverPosition,
         style: this.state.popoverComputedStyles

@@ -19,13 +19,13 @@ var EmailIcon = function EmailIcon(_ref) {
   var color = _ref.color,
       title = _ref.title,
       props = (0, _objectWithoutProperties2.default)(_ref, ["color", "title"]);
-  return _react.default.createElement("svg", (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({
     width: "19",
     height: "12",
     viewBox: "0 0 19 12",
     xmlns: "http://www.w3.org/2000/svg",
     fill: color
-  }, props), title && _react.default.createElement("title", null, title), _react.default.createElement("path", {
+  }, props), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("path", {
     d: "M9.5 8l9-6v10H.5V2l9 6zm0-2l-9-6h18l-9 6z"
   }));
 };

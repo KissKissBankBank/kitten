@@ -2,48 +2,55 @@
 
 exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
-  className="donation-card__StyledCard-sc-19h76fz-0 GsFsR"
+  className="sc-VigVT lngZQJ"
 >
   <div
-    className="marger__StyledMarger-q3lecu-0 dhVuZS"
+    className="sc-bdVaJa fdLNbY"
   >
     <div
-      className="k-Grid donation-card__StyledGrid-sc-19h76fz-1 glvgJj"
+      className="k-Grid sc-jTzLTM eoFYrV"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--offset-1@m k-Grid__col--8@l k-Grid__col--offset-2@l"
       >
         <div
-          className="marger__StyledMarger-q3lecu-0 jgfcQX"
+          className="sc-bdVaJa bwDdrh"
         >
           <h2
-            className="k-Title donation-card__StyledTitle-sc-19h76fz-2 fGWXlh k-Title--primary k-Title--withoutMargin"
+            className="sc-bwzfXH bstDuc sc-fjdhpX VIych"
           >
             Custom title mount
           </h2>
         </div>
         <div
-          className="marger__StyledMarger-q3lecu-0 fSrmLM"
+          className="sc-bdVaJa iDiPml"
         >
-          <span
-            className="horizontal-stroke__StyledHorizontalStroke-sc-15k7x5m-0 cQtxoj donation-card__StyledHorizontalStroke-sc-19h76fz-3 jVTnEi"
+          <div
+            className="sc-htpNat tODhy k-HorizontalStroke sc-jzJRlG kYcUSx k-HorizontalStroke--size--big"
+            color="#222"
+            style={
+              Object {
+                "height": null,
+                "width": null,
+              }
+            }
           />
         </div>
         <form
-          className="text-input-with-unit-form__StyledFormContainer-wjoixz-0 iADQmK"
+          className="sc-iwsKbI gxKqBA"
           onSubmit={[Function]}
         >
           <div
-            className="marger__StyledMarger-q3lecu-0 gKSWLw"
+            className="sc-bdVaJa kzCucd"
           >
             <div
-              className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+              className="k-Grid sc-gZMcBi gGLumw"
             >
               <div
                 className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
               >
                 <div
-                  className="marger__StyledMarger-q3lecu-0 csmETU"
+                  className="sc-bdVaJa eGDgJX"
                 >
                   <label
                     className="k-Label k-Label--micro"
@@ -54,14 +61,14 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   </label>
                 </div>
                 <div
-                  className="marger__StyledMarger-q3lecu-0 cHJBWz"
+                  className="sc-bdVaJa chkwVs"
                 >
                   <div
-                    className="text-input-with-unit__StyledTextInputWithUnit-gjmccx-0 llwwax"
+                    className="sc-gzVnrw iptKoy"
                   >
                     <input
                       autoComplete="off"
-                      className="text-input__StyledInput-sc-11wej6v-1 iDULaY text-input-with-unit__StyledTextInput-gjmccx-1 dlIRXg"
+                      className="sc-ifAKCX bFNyhG sc-htoDjs icREAh"
                       defaultValue=""
                       disabled={false}
                       id="donation-amount"
@@ -73,7 +80,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                       type="number"
                     />
                     <span
-                      className="text-input-with-unit__StyledInputUnit-gjmccx-2 gbKmhA"
+                      className="sc-dnqmqq jWpsyV"
                       disabled={false}
                     >
                       €
@@ -84,11 +91,11 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="k-Grid text-input-with-unit-form__StyledGridPosition-wjoixz-1 hUwerz"
+            className="k-Grid sc-gZMcBi gGLumw"
           >
             <button
               aria-label="To contribute"
-              className="k-Button k-Button--helium k-Button--big text-input-with-unit-form__StyledButton-wjoixz-2 cWUtac"
+              className="k-Button k-Button--helium k-Button--big sc-gqjmRU dbUtfB"
               disabled={false}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}

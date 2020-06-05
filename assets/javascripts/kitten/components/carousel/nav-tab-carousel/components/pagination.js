@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import COLORS from './../../../../constants/colors-config'
-import { Marger } from './../../../layout/marger'
 import { pxToRem } from './../../../../helpers/utils/typography'
 import { createRangeFromZeroTo } from './../../../../helpers/utils/range'
 

@@ -20,7 +20,7 @@ var FormPhoneNumber = function FormPhoneNumber(props) {
       areaName = props.areaName,
       areaValue = props.areaValue,
       textInputAndSelectProps = (0, _objectWithoutProperties2.default)(props, ["areaOptions", "areaName", "areaValue"]);
-  return _react.default.createElement(_textInputAndSelect.TextInputAndSelect, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(_textInputAndSelect.TextInputAndSelect, (0, _extends2.default)({
     selectOptions: areaOptions,
     selectName: areaName,
     selectValue: areaValue,

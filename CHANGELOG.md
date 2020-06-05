@@ -6,6 +6,272 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature : Add `SaveIcon` and `DocIcon`.
 - Fix: Enhance `ListTable` performance.
+- Fix: Update mobile image size on `EngagementCardWithImage`.
+- Fix: Update pseudo-class of the `EmbedPlayer` btn.
+
+## [2.74.0] - 2020-06-04
+
+Features:
+- Add `NavBar` component.
+- Consolidate both `Carousel` components and handle legacy.
+- Add `disabled` global prop to `RewardCard`.
+
+Fixes:
+- Fix `overflow: scroll` bug on ScrollableContainer.
+- Remove Radium from KissKiss page `PreDeposit`.
+- Remove Radium from Lendo Annex `SimpleTemplate`.
+- Remove Radium from `RewardCard`.
+- Remove Radium from `Hero`.
+- Remove Radium from `LegoGrid`.
+- Remove Radium from `Timeline`.
+- Remove Radium from various Karl components and stories.
+- Remove Radium from `CartRewardCard`.
+- Remove Radium from `VerticalCardWithAction`.
+- Remove Radium from `Triptych`.
+- Remove Radium from `TeamCard`.
+
+## [2.73.0] - 2020-05-29
+
+Features:
+- Make `CrowdfundingCard` a function instead of a `PureComponent`.
+- Add `imageContainerRatio` prop to `CrowdfundingCard` component.
+
+Fix:
+- On `CrowdfundingCard`, hide `additionalInfo` when `loading` prop is `true`.
+
+## [2.72.0] - 2020-05-28
+
+Features:
+- Add `widgetState` and `additionalInfo` props to `CrowdfundingCard`
+  component.
+- Update `CheckedCircleIcon`, `CrossCircleIcon`, `CrossIcon`,
+  `LockIcon`, `WarningCircleIcon` components by adding title, width, height
+  and sometimes color props.
+- Create `FlashCircleIcon`.
+- Add `orange` to colors config.
+- Add `micro` value to `size` `HorizontalStroke` prop.
+
+Fix:
+- `CrowdfundingCard` title image margin.
+
+## [2.71.0] - 2020-05-27
+
+Feature:
+- Add `hover` on `embed-player` button.
+
+Fixes:
+- Bad position for `ProgressRing` on Chrome.
+- No SSR for `<Modal />`.
+
+Rollback:
+- Back to `styled-components` v4 because of SSR issues.
+
+## [2.70.0] - 2020-05-15
+
+Feature:
+- Add `color` prop to `HorizontalStroke`.
+
+Fixes:
+- Remove `classNames` bug from `HorizontalStroke`.
+- Remove warning in `Pagination`.
+
+## [2.69.0] - 2020-05-12
+
+Features:
+- Add `SingleEntryTable` component.
+- Add `ExportIconAlternate` icon.
+- Add `modifier` prop to `HorizontalStroke`.
+- Add `margin` and `align` props to `Pagination`.
+
+## [2.68.0] - 2020-05-06
+
+Feature:
+- Add `colorHover` prop to `HeaderNav.Button`.
+
+Fix:
+- `HeaderNav.UserMenu` `closeEvents` prop.
+
+## [2.67.0] - 2020-05-04
+
+Fix:
+- Remove `calc` on `ProgressRing`.
+
+Feature:
+- Add: New `<Modal />` component imported from `import { Modal } from '@kisskissbankbank/kitten/next`, (see usage on our Storybook, section named `NEXT`).
+
+## [2.66.1] - 2020-04-27
+
+Fixes:
+- Fix `HeaderNav` layout.
+- Update `path` fill on `Button`.
+
+## [2.66.0] - 2020-04-24
+
+Features:
+- Add `stretch` prop to `CrowdfundingCard`.
+- Update `CheckedIcon` component.
+- Add editor icons:
+  - `BoldIcon`
+  - `BlockquoteIcon`
+  - `ListIcon`
+  - `VideoIcon`
+  - `Title1Icon`
+  - `Title2Icon`
+  - `Title3Icon`
+  - `Title4Icon`
+  - `ParagraphIcon`
+  - `ItalicIcon`
+  - `ImageIcon`
+  - `LinkIcon`
+  - `ButtonIcon`
+  - `AlignLeftIcon`
+  - `AlignCenterIcon`
+  - `AlignRightIcon`
+- Add BEM-style class names to `Carousel` components.
+
+Fix:
+- Fit `CrowdfundingCard` image to new 16/10 ratio.
+
+## [2.65.0] - 2020-04-21
+
+Doc:
+- Add a doc for style `utilities`.
+
+Features:
+- Create `EngagementCardWithImage` component.
+- Add `RocketIcon` and `RocketCircleIcon` components.
+- Create `ProgressRing` component.
+- Update `Title` component and add new doc.
+- Add `TitleWithStroke` component.
+- Add `titleModifierStyles` common style for titles.
+- Add `strokeModifierStyles` common style for horizontal strokes.
+- Add `tinyButtons` prop on `Carousel`.
+- Add `preferCompletePaginationOnMobile` prop on `Carousel`.
+- Add pagination position `bottom-left` and `bottom-right` on `Carousel`.
+- Add pagination squares via `showPageSquares` prop on `Carousel`.
+- Add loop feature via `loop` prop on `Carousel`.
+
+Fixes:
+- Adjust `button` size to follow guidelines on Mobile.
+- Modernize `Video` component.
+- Use `styled-components` instead of `Radium` for `EmbedPlayer` component.
+
+## [2.64.0] - 2020-04-07
+
+Feature:
+- Add a11y options for new `Carousel` buttons.
+
+Fix:
+- Fix arrow size on new `Carousel` buttons.
+
+## [2.63.0] - 2020-04-07
+
+Features:
+- Add new Dropdown in `dropdowns/v2`.
+- Add a11y options for new `Carousel` buttons.
+
+Fixes:
+- Revert old Dropdown.
+- Fix arrow size on new `Carousel` buttons.
+
+## [2.62.0] - 2020-04-06
+
+Features:
+- Create `HeaderNav` components.
+- Create `AvatarWithTextAndBadge` components.
+- Create `a11y` helper.
+- Create `LoginIcon` component.
+- Create `HeaderMenu.Badge` component.
+- Create `dropdown-config` file to store component constants.
+- Create `ratio` file with `computeFromRatio` helper.
+- Add `borderSideOnHover`, `largeItem`, `noBorder`, `backgroundColors`
+  props to `HeaderMenu` component.
+- Add `Button` prop to `HeaderMenu.Item` component.
+- Add keyboard key code and event name in `events` file.
+- Add `.k-u-avoid-click` utility.
+- Add a11y events to `DropdownButton` component.
+- Add `tiny` prop in `KissKissBankBankLogo` and `LendopolisLogo`
+  components.
+- Add `ORDERED_SCREEN_SIZES` constant in `screen-config` file.
+- Add `getScreenSizeFrom` helper in `media-queries` file.
+- Add new `k-u-link` utility class for basic link styling.
+
+Fix:
+- Fix `Dropdown` components events and accessibility.
+
+## [2.61.1] - 2020-04-06
+
+Fixes:
+- Fix a memory leak to unmounted `StickyContainer`.
+- Fix `Alert` error when `onAfterClose` is not defined.
+
+## [2.61.0] - 2020-04-02
+
+Feature:
+- Add `cssPropertyDistributor` utility.
+
+Fix:
+- Add API check to `ContinuousIntersectionObserver` utils.
+
+## [2.60.3] - 2020-04-01
+
+Fix:
+- Fix warning in `SelectWithState` component.
+
+## [2.60.2] - 2020-03-26
+
+Fix:
+- More performant `DoubleEntryTable` Component.
+
+## [2.60.1] - 2020-03-25
+
+Fix:
+- Update `CopyIcon`.
+
+## [2.60.0] - 2020-03-19
+
+Features:
+- Add `hidePagination` props to `Carousel`.
+- Create `CameraIcon` component.
+
+## [2.59.1] - 2020-03-17
+
+Fixes:
+- `ArrowIcon` component size.
+- Fix warning in `Pagination` component.
+
+## [2.59.0] - 2020-03-13
+
+Feature:
+- Expose `goToPage` method in `Carousel`.
+
+Fix:
+- Update padding mobile version on EngagementCard.
+
+## [2.58.0] - 2020-03-11
+
+Feature:
+- Add `showOtherPages` and `pagesClassName` to `Carousel`.
+
+Fix:
+- Remove `isActive` styles to `EngagementCard`.
+
+## [2.57.0] - 2020-03-06
+
+Feature:
+- Add `margin` utility classes for new steps and half steps.
+
+Fix:
+- Update `EngagementCard` styles.
+
+## [2.56.0] - 2020-03-03
+
+Features:
+- Add `SaveIcon` and `DocIcon`
+- Bump to `node@12.x`
+
+Fix:
+- Remplace `imageSrc` by `icon` props on `EngagementCard`.
 
 ## [2.55.0] - 2020-02-18
 

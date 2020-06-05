@@ -1,11 +1,15 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
 
 var _react = require("react");
+
+var _elementHelper = _interopRequireDefault(require("../dom/element-helper"));
 
 var useContinuousIntersectionObserver = function useContinuousIntersectionObserver(_ref) {
   var observedComponentRef = _ref.observedComponentRef,
@@ -23,14 +27,15 @@ var useContinuousIntersectionObserver = function useContinuousIntersectionObserv
       return;
     }
 
-    var observer = new IntersectionObserver(onIntersect, {
+    var intersectorOptions = {
       root: root && root.current,
       rootMargin: rootMargin,
       threshold: threshold
-    });
-    observer.observe(observedComponentRef.current);
+    };
+    var observer = _elementHelper.default.canUseDom() && 'IntersectionObserver' in window ? new IntersectionObserver(onIntersect, intersectorOptions) : null;
+    observer && observer.observe(observedComponentRef.current);
     return function () {
-      return observer.unobserve(observedComponentRef.current);
+      return observer && observer.unobserve(observedComponentRef.current);
     };
   }, []);
 };

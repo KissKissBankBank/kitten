@@ -13,8 +13,6 @@ var _objectDestructuringEmpty2 = _interopRequireDefault(require("@babel/runtime/
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
-var _screenConfig = require("../../../constants/screen-config");
-
 var _typography = require("../../../helpers/utils/typography");
 
 var _container = require("../../../components/grid/container");
@@ -25,7 +23,7 @@ var gradientWidth = 20;
 var StyledContainer = (0, _styledComponents.default)(_container.Container).withConfig({
   displayName: "styled__StyledContainer",
   componentId: "d41exg-0"
-})(["position:relative;padding-left:0;padding-right:0;"]);
+})(["position:relative;padding-left:0;padding-right:0;overflow:scroll;"]);
 exports.StyledContainer = StyledContainer;
 
 var scrollableContainerStyle = function scrollableContainerStyle(_ref) {

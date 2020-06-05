@@ -15,18 +15,18 @@ var _react = _interopRequireDefault(require("react"));
 
 var _tooltipNew = require("../components/tooltips/tooltip-new");
 
-var withTooltip = function withTooltip(WrappedComponent, wrappedProps) {
+var withTooltip = function withTooltip(WrappedComponent) {
   var WithTooltip = function WithTooltip(props) {
     var children = props.children,
         id = props.id,
         others = (0, _objectWithoutProperties2.default)(props, ["children", "id"]);
-    return _react.default.createElement("div", {
+    return /*#__PURE__*/_react.default.createElement("div", {
       style: {
         position: 'relative'
       }
-    }, _react.default.createElement(_tooltipNew.TooltipNew, (0, _extends2.default)({
+    }, /*#__PURE__*/_react.default.createElement(_tooltipNew.TooltipNew, (0, _extends2.default)({
       id: id
-    }, others), children), _react.default.createElement(WrappedComponent, {
+    }, others), children), /*#__PURE__*/_react.default.createElement(WrappedComponent, {
       "data-for": id,
       "aria-describedby": id
     }));

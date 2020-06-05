@@ -90,14 +90,16 @@
   }
 
   .k-TagButton--big {
-    @include k-typographyFontSize(
-      $button-big-step,
-      $tag-button-line-height-big
-    );
+    @include k-media-min('s') {
+      @include k-typographyFontSize(
+        $button-big-step,
+        $tag-button-line-height-big
+      );
 
-    padding: 0 k-px-to-rem(30px);
-    min-width: $tag-button-min-width-big;
-    min-height: $tag-button-line-height-big;
+      padding: 0 k-px-to-rem(30px);
+      min-width: $tag-button-min-width-big;
+      min-height: $tag-button-line-height-big;
+    }
   }
 
   // Icon modifier.

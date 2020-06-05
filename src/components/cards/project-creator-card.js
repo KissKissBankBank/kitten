@@ -13,11 +13,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -37,26 +37,30 @@ var _separator = require("../../components/layout/separator");
 
 var _arrowIcon = require("../../components/icons/arrow-icon");
 
-var ProjectCreatorCardComponent =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var ProjectCreatorCardComponent = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(ProjectCreatorCardComponent, _React$Component);
+
+  var _super = _createSuper(ProjectCreatorCardComponent);
 
   function ProjectCreatorCardComponent() {
     (0, _classCallCheck2.default)(this, ProjectCreatorCardComponent);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(ProjectCreatorCardComponent).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(ProjectCreatorCardComponent, [{
     key: "renderDate",
     value: function renderDate() {
       if (!this.props.date) return;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__content"
-      }, _react.default.createElement(_clockIcon.ClockIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_clockIcon.ClockIcon, {
         width: "10px",
         height: "10px"
-      }), _react.default.createElement("span", {
+      }), /*#__PURE__*/_react.default.createElement("span", {
         className: "k-ProjectCreatorCard__date"
       }, this.props.date));
     }
@@ -72,29 +76,29 @@ function (_React$Component) {
         backgroundColor: statusBackgroundColor,
         borderColor: statusBorderColor ? statusBorderColor : statusBackgroundColor
       };
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__status"
-      }, _react.default.createElement("span", {
+      }, /*#__PURE__*/_react.default.createElement("span", {
         className: "k-ProjectCreatorCard__status--icon",
         style: statusStyles
-      }), _react.default.createElement("div", {
+      }), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__status--text"
       }, statusText));
     }
   }, {
     key: "renderDescription",
     value: function renderDescription() {
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__grid"
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",
         bottom: "1"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__grid--flexEnd"
-      }, this.renderDate(), this.renderStatus())), _react.default.createElement(_marger.Marger, {
+      }, this.renderDate(), this.renderStatus())), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "2"
-      }, _react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
         margin: false
       }, this.props.children)));
     }
@@ -105,22 +109,22 @@ function (_React$Component) {
       var target = this.props.isExternal ? {
         target: '_blank'
       } : {};
-      return _react.default.createElement("a", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("a", (0, _extends2.default)({
         className: "k-ProjectCreatorCard__link",
         href: this.props.href
-      }, target), _react.default.createElement(_separator.Separator, {
+      }, target), /*#__PURE__*/_react.default.createElement(_separator.Separator, {
         darker: true
-      }), _react.default.createElement("div", {
+      }), /*#__PURE__*/_react.default.createElement("div", {
         className: "k-ProjectCreatorCard__grid"
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.2",
         bottom: "1.2",
         className: "k-ProjectCreatorCard__grid--flex"
-      }, this.props.linkText, _react.default.createElement(_buttonIcon.ButtonIcon, {
+      }, this.props.linkText, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         size: "tiny",
         withoutHover: true,
         verticalArrow: true
-      }, _react.default.createElement(_arrowIcon.ArrowIcon, {
+      }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         className: "k-ButtonIcon__svg"
       })))));
     }
@@ -128,7 +132,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var ProjectCreatorCardClassName = (0, _classnames.default)('k-ProjectCreatorCard', this.props.className);
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: ProjectCreatorCardClassName
       }, this.renderDescription(), this.renderLink());
     }
@@ -138,7 +142,7 @@ function (_React$Component) {
 
 var ProjectCreatorCard = function ProjectCreatorCard(props) {
   var ProjectCreatorCardContent = (0, _card.card)(ProjectCreatorCardComponent);
-  return _react.default.createElement(ProjectCreatorCardContent, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(ProjectCreatorCardContent, (0, _extends2.default)({
     withDarkBorder: !!props.href,
     light: true,
     withBorder: true,

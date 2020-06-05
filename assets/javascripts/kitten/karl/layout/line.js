@@ -16,7 +16,7 @@ export const KarlLineWithTooltip = props => {
   )
 }
 
-export const KarlLineWithBigHeart = props => {
+export const KarlLineWithBigHeart = () => {
   return (
     <Line>
       <Line.Item>Lorem ipsum dolor sit amet.</Line.Item>
