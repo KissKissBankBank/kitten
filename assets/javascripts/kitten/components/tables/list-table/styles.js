@@ -1,5 +1,5 @@
 import React from 'react'
-import { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import {
@@ -9,20 +9,20 @@ import {
 } from '../../../constants/grid-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-export const ListTableStyles = createGlobalStyle`
-  section.ListTable,
-  section.ListTable * {
+export const StyledListTable = styled.section`
+  &,
+  & * {
     box-sizing: border-box;
   }
 
-  .ListTable__Header {
+  .k-ListTable__Header {
     position: sticky;
     top: 0;
     background: ${COLORS.font1};
     color: ${COLORS.background1};
   }
 
-  .ListTable__HeaderList {
+  .k-ListTable__HeaderList {
     height: ${pxToRem(90)};
     margin: 0 auto;
     max-width: ${pxToRem(CONTAINER_MAX_WIDTH)};
@@ -39,22 +39,21 @@ export const ListTableStyles = createGlobalStyle`
     }
   }
 
-  .ListTable__Body {
+  .k-ListTable__Body {
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
-  .ListTable__Row {
+  .k-ListTable__Row {
     border-bottom: 2px solid ${COLORS.line1};
 
-    .ListTable__Row--is_highlighted{
+    .k-ListTable__Row--is_highlighted {
       background: ${COLORS.primary6};
     }
-
   }
 
-  .ListTable__RowList {
+  .k-ListTable__RowList {
     height: ${pxToRem(90)};
     margin: 0 auto;
     max-width: ${pxToRem(CONTAINER_MAX_WIDTH)};
@@ -71,7 +70,7 @@ export const ListTableStyles = createGlobalStyle`
     }
   }
 
-  .ListTable__Col {
+  .k-ListTable__Col {
     flex-grow: 0;
     flex-shrink: 0;
 

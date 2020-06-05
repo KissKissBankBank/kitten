@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { ListTableStyles } from './styles'
+import { StyledListTable } from './styles'
+import classNames from 'classnames'
 
 const Context = React.createContext({ id: null })
 
 export const ListTable = ({ id, children, className, ...props }) => {
   return (
     <Context.Provider value={{ id }}>
-      <ListTableStyles />
-      <section
-        id={id}
-        className={`ListTable ${className ? className : ''}`}
+      <StyledListTable
         {...props}
+        id={id}
+        className={classNames('k-ListTable', className)}
       >
         {children}
-      </section>
+      </StyledListTable>
     </Context.Provider>
   )
 }
@@ -26,15 +26,10 @@ ListTable.Header = ({
   ...others
 }) => {
   return (
-    <header
-      {...others}
-      className={`ListTable__Header ${className ? className : ''}`}
-    >
+    <header {...others} className={classNames('ListTable__Header', className)}>
       <ul
         {...listProps}
-        className={`ListTable__HeaderList ${
-          listProps.className ? listProps.className : ''
-        }`}
+        className={classNames('ListTable__HeaderList', listProps.className)}
       >
         <Context.Consumer>
           {({ id }) => (
@@ -51,12 +46,7 @@ ListTable.Header = ({
 }
 
 ListTable.Body = ({ className, ...props }) => {
-  return (
-    <ul
-      className={`ListTable__Body ${className ? className : ''}`}
-      {...props}
-    />
-  )
+  return <ul {...props} className={classNames('ListTable__Body', className)} />
 }
 
 ListTable.Row = ({
@@ -68,16 +58,14 @@ ListTable.Row = ({
 }) => {
   return (
     <li
-      className={`ListTable__Row ${
-        className ? className : ''
-      } ${isHighlighted && 'ListTable__Row--is_highlighted'}`}
       {...others}
+      className={classNames('ListTable__Row', className, {
+        'ListTable__Row--is_highlighted': isHighlighted,
+      })}
     >
       <ul
         {...listProps}
-        className={`ListTable__RowList ${
-          listProps.className ? listProps.className : ''
-        }`}
+        className={classNames('ListTable__RowList', listProps.className)}
       >
         <Context.Consumer>
           {({ id }) => (
@@ -96,9 +84,7 @@ ListTable.Row = ({
 }
 
 ListTable.Col = ({ className, ...props }) => {
-  return (
-    <li className={`ListTable__Col ${className ? className : ''}`} {...props} />
-  )
+  return <li {...props} className={classNames('ListTable__Col', className)} />
 }
 
 ListTable.propTypes = {
