@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StyledListTable } from './styles'
+import { ListTableStyles } from './styles'
 import classNames from 'classnames'
 
 const Context = React.createContext({ id: null })
@@ -8,13 +8,14 @@ const Context = React.createContext({ id: null })
 export const ListTable = ({ id, children, className, ...props }) => {
   return (
     <Context.Provider value={{ id }}>
-      <StyledListTable
+      <ListTableStyles />
+      <section
         {...props}
         id={id}
         className={classNames('k-ListTable', className)}
       >
         {children}
-      </StyledListTable>
+      </section>
     </Context.Provider>
   )
 }

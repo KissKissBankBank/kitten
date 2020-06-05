@@ -1,5 +1,4 @@
-import React from 'react'
-import styled from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 import {
@@ -9,9 +8,9 @@ import {
 } from '../../../constants/grid-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
-export const StyledListTable = styled.section`
-  &,
-  & * {
+export const ListTableStyles = createGlobalStyle`
+  section.k-ListTable,
+  section.k-ListTable * {
     box-sizing: border-box;
   }
 

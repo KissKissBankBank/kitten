@@ -2,7 +2,7 @@
 
 exports[`<ListTable /> with a complete structure and custom classes matches with snapshot 1`] = `
 <section
-  className="sc-bdVaJa ioBPrG k-ListTable"
+  className="k-ListTable"
   id="TestListTable"
 >
   <header

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import styled, { css, createGlobalStyle } from 'styled-components'
-import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 import { withKnobs, select } from '@storybook/addon-knobs'
 import { ListTable } from './index'
@@ -17,15 +16,17 @@ import {
   CONTAINER_PADDING,
 } from '../../../constants/grid-config'
 
-const StoryContainer = ({ children }) => (
-  <Container>
-    <Marger top="5" bottom="5">
-      {children}
-    </Marger>
-  </Container>
-)
+export default {
+  component: ListTable,
+  title: 'Tables/ListTable',
+  decorators: [withKnobs, withInfo],
+  parameters: {
+    component: ListTable,
+    info: info,
+  },
+}
 
-const listTableInfo = {
+const info = {
   text: `
     # ListTable
     &nbsp;
@@ -67,24 +68,6 @@ const listTableInfo = {
       </ListTable.Body>
     </ListTable>
     ~~~
-
-  `,
-  header: false,
-  propTables: false,
-}
-
-const toggleableListTableInfo = {
-  text: `
-    # ListTable
-    &nbsp;
-
-    ## Import
-    ~~~js
-    import { ListTable } from '@kisskissbankbank/kitten/src/components/tables/list-table'
-    ~~~
-
-    ## Usage
-    &nbsp;
 
     #### Toggleable
     ~~~js
@@ -128,6 +111,14 @@ const toggleableListTableInfo = {
   header: false,
   propTables: false,
 }
+
+const StoryContainer = ({ children }) => (
+  <Container>
+    <Marger top="5" bottom="5">
+      {children}
+    </Marger>
+  </Container>
+)
 
 const ListTableStyles = createGlobalStyle`
   .customCol_1 {
@@ -355,15 +346,6 @@ const ToggleableTable = styled(ListTable)`
     flex-wrap: wrap;
   }
 `
-
-export default {
-  component: ListTable,
-  title: 'Tables/ListTable',
-  decorators: [withKnobs, withInfo],
-  parameters: {
-    component: ListTable,
-  },
-}
 
 export const Default = () => (
   <div className="k-u-margin-top-quintuple k-u-margin-bottom-quintuple">
