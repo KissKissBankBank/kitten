@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Doc: Add a doc for utilities `color`.
+- Doc: Add a doc for utility `color`.
 - Fix: Update mobile image size on `EngagementCardWithImage`.
 - Fix: Update pseudo-class of the `EmbedPlayer` btn.
 
