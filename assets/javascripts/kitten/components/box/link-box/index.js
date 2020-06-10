@@ -15,13 +15,7 @@ const deprecatedKeys = [
   'viewportIsMobile',
 ]
 
-export const LinkBox = ({
-  href,
-  isExternal,
-  linkProps,
-  // deprecated
-  ...props
-}) => {
+export const LinkBox = ({ href, isExternal, linkProps, ...props }) => {
   const hasDeprecatedProps =
     flow(keys, intersection(deprecatedKeys))(props).length > 0
 
