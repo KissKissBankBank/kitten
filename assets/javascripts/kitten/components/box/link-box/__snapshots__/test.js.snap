@@ -6,29 +6,10 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
   href="#"
 >
   <div
-    className="sc-bZQynM czKSIP"
+    className="sc-htoDjs bGWqgt"
   >
     <div
-      className="sc-bwzfXH iTkUFj sc-bxivhb gjdtfU"
-    >
-      <div
-        className="sc-bwzfXH fhbWMi"
-      >
-        <span
-          className="k-u-color-font1 k-u-size-default k-u-weight-regular"
-          style={
-            Object {
-              "lineHeight": 1,
-            }
-          }
-        >
-          My title
-        </span>
-      </div>
-      
-    </div>
-    <div
-      className="sc-EHOje gktRhF"
+      className="sc-gzVnrw iPIpgU"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
@@ -57,16 +38,105 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
   target="_blank"
 >
   <div
-    className="sc-bZQynM czKSIP"
+    className="sc-htoDjs bGWqgt"
   >
     <div
-      className="sc-ifAKCX hbaqOm k-u-hidden@xs-down--important"
+      className="sc-EHOje gndxJu"
+    >
+      <svg
+        height={20}
+        viewBox="0 0 20 20"
+        width={20}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="10"
+          cy="10"
+          fill="#fff"
+          r="10"
+        />
+        <path
+          d="m6 10 6-6-1.25 6h3.25l-6 6 1.25-6z"
+          fill="#222"
+          fillRule="evenodd"
+        />
+      </svg>
+    </div>
+    <div
+      className="sc-bxivhb iAflSy k-u-margin-top-double k-u-margin-bottom-double"
+    >
+      foobar
+    </div>
+    <div
+      className="sc-gzVnrw iPIpgU"
+    >
+      <svg
+        className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
+        height="5.64"
+        viewBox="0 0 6 6"
+        width="8.48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Arrow
+        </title>
+        <path
+          d="M6 0H0v6h2V2h4z"
+        />
+      </svg>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`Deprecated <LinkBox /> by default matches with snapshot 1`] = `
+<a
+  className="sc-htpNat gkYezB"
+  href="#"
+>
+  <div
+    className="sc-htoDjs bGWqgt"
+  >
+    <div
+      className="sc-gzVnrw iPIpgU"
+    >
+      <svg
+        className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
+        height="5.64"
+        viewBox="0 0 6 6"
+        width="8.48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Arrow
+        </title>
+        <path
+          d="M6 0H0v6h2V2h4z"
+        />
+      </svg>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`Deprecated <LinkBox /> with some props matches with snapshot 1`] = `
+<a
+  className="sc-htpNat gkYezB"
+  href="#foobar"
+  rel="noopener"
+  target="_blank"
+>
+  <div
+    className="sc-htoDjs sc-dnqmqq hooiLi"
+  >
+    <div
+      className="sc-EHOje sc-bZQynM cuwPax k-u-hidden@xs-down--important"
     />
     <div
-      className="sc-bwzfXH iTkUFj sc-bxivhb gjdtfU"
+      className="sc-bxivhb sc-ifAKCX jrgFAA k-u-margin-top-double k-u-margin-bottom-double"
     >
       <div
-        className="sc-bwzfXH dNghbn"
+        className="sc-bdVaJa jFMKxm"
       >
         <span
           className="k-u-color-font1 k-u-size-default k-u-weight-regular"
@@ -91,7 +161,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="sc-EHOje gktRhF"
+      className="sc-gzVnrw iPIpgU"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"

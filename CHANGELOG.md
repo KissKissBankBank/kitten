@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Update `LinkBox` component.
 - Fix: Update mobile image size on `EngagementCardWithImage`.
 - Fix: Update pseudo-class of the `EmbedPlayer` btn.
 

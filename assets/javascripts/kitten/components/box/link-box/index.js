@@ -1,126 +1,47 @@
 import React from 'react'
-import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { ArrowIcon } from '../../../components/icons/arrow-icon'
-import { Text } from '../../../components/typography/text'
-import { Marger } from '../../../components/layout/marger'
-import COLORS from '../../../constants/colors-config'
-import { ScreenConfig } from '../../../constants/screen-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { Link, TextContainer, Icon, Arrow, Container } from './styles'
+import flow from 'lodash/fp/flow'
+import keys from 'lodash/fp/keys'
+import intersection from 'lodash/fp/intersection'
+import { DeprecatedLinkBox } from './deprecated'
+import classNames from 'classnames'
 
-const Link = styled.a`
-  display: flex;
-  color: ${COLORS.font1};
-  text-decoration: none;
-`
-
-const ParagraphMarger = styled(Marger)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-  padding-left: ${pxToRem(20)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    padding-left: ${pxToRem(30)};
-  }
-`
-
-const Icon = styled.div`
-  display: flex;
-  margin-top: ${pxToRem(-2)};
-  margin-left: ${pxToRem(-2)};
-  margin-bottom: ${pxToRem(-2)};
-  align-items: center;
-  justify-content: center;
-  min-width: ${pxToRem(90)};
-  background-color: ${COLORS.primary4};
-`
-
-const Arrow = styled(props => (
-  <div {...props}>
-    <ArrowIcon className="k-ButtonIcon__svg" />
-  </div>
-))`
-  display: flex;
-  align-items: center;
-  padding: ${pxToRem(15)} ${pxToRem(22)} ${pxToRem(15)} ${pxToRem(18)};
-  transition: transform 0.4s ease-in-out;
-
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    padding-left: ${pxToRem(30)};
-    padding-right: ${pxToRem(32)};
-  }
-`
-
-const Container = styled.div`
-  display: flex;
-  min-height: ${pxToRem(90)};
-  width: 100%;
-  box-sizing: border-box;
-  color: ${COLORS.font1};
-  background-color: ${COLORS.background1};
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-
-  &:hover {
-    background-color: ${COLORS.background2};
-
-    ${Arrow} {
-      transform: translate(${pxToRem(5)}, ${pxToRem(0)});
-    }
-  }
-
-  &:active {
-    background-color: ${COLORS.background3};
-  }
-`
+const deprecatedKeys = [
+  'displayIcon',
+  'text',
+  'textTag',
+  'titleTag',
+  'viewportIsMobile',
+]
 
 export const LinkBox = ({
-  title,
-  titleTag,
-  isExternal,
   href,
-  text,
-  textTag,
+  isExternal,
   linkProps,
-  viewportIsMobile,
-  displayIcon,
-  children,
+  // deprecated
+  ...props
 }) => {
+  const hasDeprecatedProps =
+    flow(keys, intersection(deprecatedKeys))(props).length > 0
+
+  if (hasDeprecatedProps) {
+    return (
+      <DeprecatedLinkBox
+        href={href}
+        isExternal={isExternal}
+        linkProps={linkProps}
+        {...props}
+      />
+    )
+  }
+
   const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}
 
   return (
     <Link {...linkProps} href={href} {...target}>
       <Container>
-        {!!displayIcon && (
-          <Icon className="k-u-hidden@xs-down--important">{children}</Icon>
-        )}
-
-        <ParagraphMarger top="2" bottom="2">
-          <Marger bottom={text ? 0.5 : 0}>
-            <Text
-              tag={titleTag}
-              weight="regular"
-              size={viewportIsMobile ? 'tiny' : 'default'}
-              color="font1"
-              style={{ lineHeight: 1 }}
-            >
-              {title}
-            </Text>
-          </Marger>
-
-          {text && (
-            <Text
-              tag={textTag}
-              weight="light"
-              size="tiny"
-              color="font1"
-              style={{ lineHeight: 1.3 }}
-            >
-              {text}
-            </Text>
-          )}
-        </ParagraphMarger>
+        {props.children}
 
         <Arrow />
       </Container>
@@ -128,27 +49,30 @@ export const LinkBox = ({
   )
 }
 
+LinkBox.Icon = Icon
+LinkBox.Text = ({ children, className, ...props }) => (
+  <TextContainer
+    {...props}
+    className={classNames(
+      'k-u-margin-top-double',
+      'k-u-margin-bottom-double',
+      className,
+    )}
+  >
+    {children}
+  </TextContainer>
+)
+
 LinkBox.propTypes = {
-  title: PropTypes.string.isRequired,
-  titleTag: PropTypes.string,
-  isExternal: PropTypes.bool,
   href: PropTypes.string,
-  text: PropTypes.string,
-  textTag: PropTypes.string,
+  isExternal: PropTypes.bool,
   linkProps: PropTypes.object,
-  viewportIsMobile: PropTypes.bool,
-  displayIcon: PropTypes.bool,
 }
 
 LinkBox.defaultProps = {
-  titleTag: 'span',
-  isExternal: false,
   href: '#',
-  text: '',
-  textTag: 'span',
+  isExternal: false,
   linkProps: {},
-  viewportIsMobile: false,
-  displayIcon: false,
 }
 
 // DEPRECATED: do not use default export.

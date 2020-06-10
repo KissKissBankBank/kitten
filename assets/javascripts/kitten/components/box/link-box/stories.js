@@ -5,6 +5,9 @@ import { LinkBox } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import { FlashCircleIcon } from '../../icons/flash-circle-icon'
+import { Text } from '../../typography/text'
+import COLORS from '../../../constants/colors-config'
 
 const info = {
   text: `
@@ -20,32 +23,36 @@ const info = {
 
     #### Default
     ~~~js
-    <LinkBox title="Lorem ipsum" />
+    <LinkBox />
     ~~~
 
-    ### Title props
+    ### With icon
     ~~~js
-    <LinkBox title="Lorem ipsum" titleTag="h3" />
+    <LinkBox>
+      <LinkBox.Icon>
+        <Icon />
+      </LinkBox.Icon>
+    </LinkBox>
     ~~~
 
-    ### Text props
+    ### With text
     ~~~js
-    <LinkBox title="Lorem ipsum" text="Lorem ipsum" textTag="p" />
+    <LinkBox>
+      <LinkBox.Text>
+        <Text>
+          foobar
+        </Text>
+      </LinkBox.Text>
+    </LinkBox>
     ~~~
 
     ### Link props
     ~~~js
     <LinkBox
-      title="Lorem ipsum"
       href="#anchor"
       isExternal
       linkProps={{ aria-hidden: true }}
     />
-    ~~~
-
-    ### displayIcon prop
-    ~~~js
-    <LinkBox title="Lorem ipsum" displayIcon />
     ~~~
   `,
   header: false,
@@ -61,14 +68,28 @@ storiesOf('Box', module)
       <Container>
         <Marger top="5" bottom="5">
           <LinkBox
-            title={text('Title', 'Title')}
-            titleTag={text('Title tag', 'span')}
             href={text('Href', '#anchor')}
             isExternal={boolean('External?', false)}
-            text={text('Text', 'Lorem ipsum…')}
-            textTag={text('Text tag', 'span')}
-            displayIcon={boolean('Show icon?', false)}
-          />
+          >
+            <LinkBox.Icon>
+              <FlashCircleIcon
+                circleColor="#caf4fe"
+                flashColor={COLORS.primary1}
+                width="60"
+                height="60"
+              />
+            </LinkBox.Icon>
+
+            <LinkBox.Text>
+              <Text size="micro" lineHeight="normal">
+                Partie 1
+              </Text>
+
+              <Text size="tiny" weight="regular" lineHeight="normal">
+                Les différents types de financement participatif
+              </Text>
+            </LinkBox.Text>
+          </LinkBox>
         </Marger>
       </Container>
     ),
