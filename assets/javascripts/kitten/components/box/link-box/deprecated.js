@@ -2,14 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Text } from '../../../components/typography/text'
 import { Marger } from '../../../components/layout/marger'
-import {
-  Link,
-  DeprecatedTextContainer,
-  DeprecatedIcon,
-  Arrow,
-  DeprecatedContainer,
-} from './styles'
+import { StyledLinkBox } from './styles'
 import deprecated from 'prop-types-extra/lib/deprecated'
+import classNames from 'classnames'
+import { ArrowIcon } from '../../../components/icons/arrow-icon'
 
 export const DeprecatedLinkBox = ({
   title,
@@ -26,14 +22,27 @@ export const DeprecatedLinkBox = ({
   const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}
 
   return (
-    <Link {...linkProps} href={href} {...target}>
-      <DeprecatedContainer>
+    <StyledLinkBox {...linkProps} href={href} {...target}>
+      <div className="LinkBox__link LinkBox__link--deprecated">
         {!!displayIcon && (
-          <DeprecatedIcon className="k-u-hidden@xs-down--important">
+          <div
+            className={classNames(
+              'LinkBox__icon',
+              'LinkBox__icon--deprecated',
+              'k-u-hidden@xs-down--important',
+            )}
+          >
             {children}
-          </DeprecatedIcon>
+          </div>
         )}
-        <DeprecatedTextContainer className="k-u-margin-top-double k-u-margin-bottom-double">
+        <div
+          className={classNames(
+            'LinkBox__textContainer',
+            'LinkBox__textContainer--deprecated',
+            'k-u-margin-top-double',
+            'k-u-margin-bottom-double',
+          )}
+        >
           <Marger bottom={text ? 0.5 : 0}>
             <Text
               tag={titleTag}
@@ -57,11 +66,13 @@ export const DeprecatedLinkBox = ({
               {text}
             </Text>
           )}
-        </DeprecatedTextContainer>
+        </div>
 
-        <Arrow />
-      </DeprecatedContainer>
-    </Link>
+        <div className="LinkBox__arrow">
+          <ArrowIcon className="k-ButtonIcon__svg" />
+        </div>
+      </div>
+    </StyledLinkBox>
   )
 }
 

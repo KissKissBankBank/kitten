@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, TextContainer, Icon, Arrow, Container } from './styles'
+import { StyledLinkBox } from './styles'
 import { hasDeprecatedProps } from '../../../helpers/utils/deprecated'
 import { DeprecatedLinkBox } from './deprecated'
 import classNames from 'classnames'
+import { ArrowIcon } from '../../../components/icons/arrow-icon'
 
 const deprecatedKeys = [
   'displayIcon',
@@ -13,13 +14,20 @@ const deprecatedKeys = [
   'viewportIsMobile',
 ]
 
-export const LinkBox = ({ href, isExternal, linkProps, ...props }) => {
+export const LinkBox = ({
+  className,
+  href,
+  isExternal,
+  linkProps,
+  ...props
+}) => {
   if (hasDeprecatedProps(deprecatedKeys)(props)) {
     return (
       <DeprecatedLinkBox
         href={href}
         isExternal={isExternal}
         linkProps={linkProps}
+        className={classNames(className, linkProps.className)}
         {...props}
       />
     )
@@ -28,28 +36,41 @@ export const LinkBox = ({ href, isExternal, linkProps, ...props }) => {
   const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}
 
   return (
-    <Link {...linkProps} href={href} {...target}>
-      <Container>
+    <StyledLinkBox
+      {...linkProps}
+      {...target}
+      href={href}
+      className={classNames(className, linkProps.className)}
+    >
+      <div className="LinkBox__link">
         {props.children}
 
-        <Arrow />
-      </Container>
-    </Link>
+        <div className="LinkBox__arrow">
+          <ArrowIcon className="k-ButtonIcon__svg" />
+        </div>
+      </div>
+    </StyledLinkBox>
   )
 }
 
-LinkBox.Icon = Icon
+LinkBox.Icon = ({ children, className, ...props }) => (
+  <div {...props} className={classNames('LinkBox__icon', className)}>
+    {children}
+  </div>
+)
+
 LinkBox.Text = ({ children, className, ...props }) => (
-  <TextContainer
+  <div
     {...props}
     className={classNames(
       'k-u-margin-top-double',
       'k-u-margin-bottom-double',
+      'LinkBox__textContainer',
       className,
     )}
   >
     {children}
-  </TextContainer>
+  </div>
 )
 
 LinkBox.propTypes = {
