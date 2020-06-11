@@ -8,21 +8,22 @@ import classNames from 'classnames'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 
 export const DeprecatedLinkBox = ({
-  title,
-  titleTag,
-  isExternal,
+  children,
+  className,
+  displayIcon,
   href,
+  isExternal,
+  linkProps,
   text,
   textTag,
-  linkProps,
+  title,
+  titleTag,
   viewportIsMobile,
-  displayIcon,
-  children,
 }) => {
   const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}
 
   return (
-    <StyledLinkBox {...linkProps} href={href} {...target}>
+    <StyledLinkBox {...linkProps} href={href} {...target} className={className}>
       <div className="LinkBox__link LinkBox__link--deprecated">
         {!!displayIcon && (
           <div
