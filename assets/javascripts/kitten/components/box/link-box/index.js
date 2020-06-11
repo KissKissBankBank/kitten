@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, TextContainer, Icon, Arrow, Container } from './styles'
-import flow from 'lodash/fp/flow'
-import keys from 'lodash/fp/keys'
-import intersection from 'lodash/fp/intersection'
+import { hasDeprecatedProps } from '../../../helpers/utils/deprecated'
 import { DeprecatedLinkBox } from './deprecated'
 import classNames from 'classnames'
 
@@ -16,10 +14,7 @@ const deprecatedKeys = [
 ]
 
 export const LinkBox = ({ href, isExternal, linkProps, ...props }) => {
-  const hasDeprecatedProps =
-    flow(keys, intersection(deprecatedKeys))(props).length > 0
-
-  if (hasDeprecatedProps) {
+  if (hasDeprecatedProps(deprecatedKeys)(props)) {
     return (
       <DeprecatedLinkBox
         href={href}
