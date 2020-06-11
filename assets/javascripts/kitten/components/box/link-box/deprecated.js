@@ -24,12 +24,12 @@ export const DeprecatedLinkBox = ({
 
   return (
     <StyledLinkBox {...linkProps} href={href} {...target} className={className}>
-      <div className="LinkBox__link LinkBox__link--deprecated">
+      <div className="k-LinkBox__link k-LinkBox__link--deprecated">
         {!!displayIcon && (
           <div
             className={classNames(
-              'LinkBox__icon',
-              'LinkBox__icon--deprecated',
+              'k-LinkBox__icon',
+              'k-LinkBox__icon--deprecated',
               'k-u-hidden@xs-down--important',
             )}
           >
@@ -38,8 +38,8 @@ export const DeprecatedLinkBox = ({
         )}
         <div
           className={classNames(
-            'LinkBox__textContainer',
-            'LinkBox__textContainer--deprecated',
+            'k-LinkBox__textContainer',
+            'k-LinkBox__textContainer--deprecated',
             'k-u-margin-top-double',
             'k-u-margin-bottom-double',
           )}
@@ -69,7 +69,7 @@ export const DeprecatedLinkBox = ({
           )}
         </div>
 
-        <div className="LinkBox__arrow">
+        <div className="k-LinkBox__arrow">
           <ArrowIcon className="k-ButtonIcon__svg" />
         </div>
       </div>
@@ -84,17 +84,23 @@ DeprecatedLinkBox.propTypes = {
   // deprecated
   displayIcon: deprecated(
     PropTypes.bool,
-    'Use `Linkbox.Icon` component instead',
+    'Use `<Linkbox.Icon />` component instead',
   ),
-  text: deprecated(PropTypes.string, 'Use `Linkbox.Text` component instead'),
-  textTag: deprecated(PropTypes.string, 'Use `Linkbox.Text` component instead'),
+  text: deprecated(
+    PropTypes.string,
+    'Use `<Linkbox.Text />` component instead',
+  ),
+  textTag: deprecated(
+    PropTypes.string,
+    'Use `<Linkbox.Text />` component instead',
+  ),
   title: deprecated(
     PropTypes.string.isRequired,
-    'Use `Linkbox.Text` component instead',
+    'Use `<Linkbox.Text />` component instead',
   ),
   titleTag: deprecated(
     PropTypes.string,
-    'Use `Linkbox.Text` component instead',
+    'Use `<Linkbox.Text />` component instead',
   ),
   viewportIsMobile: deprecated(
     PropTypes.bool,

@@ -8,7 +8,7 @@ export const StyledLinkBox = styled.a`
   color: ${COLORS.font1};
   text-decoration: none;
 
-  .LinkBox__link {
+  .k-LinkBox__link {
     display: flex;
     min-height: ${pxToRem(90)};
     width: 100%;
@@ -21,7 +21,7 @@ export const StyledLinkBox = styled.a`
     &:hover {
       background-color: ${COLORS.background2};
 
-      .LinkBox__arrow {
+      .k-LinkBox__arrow {
         transform: translate(${pxToRem(5)}, ${pxToRem(0)});
       }
     }
@@ -31,11 +31,11 @@ export const StyledLinkBox = styled.a`
     }
   }
 
-  .LinkBox__link--deprecated {
+  .k-LinkBox__link--deprecated {
     border-radius: 0;
   }
 
-  .LinkBox__textContainer {
+  .k-LinkBox__textContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,7 +43,7 @@ export const StyledLinkBox = styled.a`
     margin-left: ${pxToRem(15)};
   }
 
-  .LinkBox__textContainer--deprecated {
+  .k-LinkBox__textContainer--deprecated {
     margin-left: ${pxToRem(20)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -51,7 +51,7 @@ export const StyledLinkBox = styled.a`
     }
   }
 
-  .LinkBox__icon {
+  .k-LinkBox__icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,14 +59,14 @@ export const StyledLinkBox = styled.a`
     background-color: transparent;
   }
 
-  .LinkBox__icon--deprecated {
+  .k-LinkBox__icon--deprecated {
     padding: 0;
     margin: ${pxToRem(-2)} 0 ${pxToRem(-2)} ${pxToRem(-2)};
     min-width: ${pxToRem(90)};
     background-color: ${COLORS.primary4};
   }
 
-  .LinkBox__arrow {
+  .k-LinkBox__arrow {
     display: flex;
     align-items: center;
     padding: ${pxToRem(15)} ${pxToRem(22)} ${pxToRem(15)} ${pxToRem(18)};

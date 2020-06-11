@@ -64,96 +64,96 @@
     &:link {
       text-decoration: none;
     }
-  }
 
-  .k-LinkBox__container {
-    display: flex;
-    justify-content: space-between;
+    .k-LinkBox__container {
+      display: flex;
+      justify-content: space-between;
 
-    min-height: k-px-to-rem(90px);
-    box-sizing: border-box;
+      min-height: k-px-to-rem(90px);
+      box-sizing: border-box;
 
-    color: $color;
-    background-color: $background-color;
-    border: $border-size solid $border-color;
+      color: $color;
+      background-color: $background-color;
+      border: $border-size solid $border-color;
 
-    transition: background $transition-duration;
+      transition: background $transition-duration;
 
-    .k-LinkBox:active & {
-      background-color: $background-color-active;
+      .k-LinkBox:active & {
+        background-color: $background-color-active;
+      }
+
+      .k-LinkBox:hover & {
+        background-color: $background-color-hover;
+      }
     }
 
-    .k-LinkBox:hover & {
-      background-color: $background-color-hover;
+    .k-LinkBox__icon {
+      display: flex;
+
+      margin-top: -$border-size;
+      margin-left: -$border-size;
+      margin-bottom: -$border-size;
+
+      align-items: center;
+      justify-content: center;
+      min-width: k-px-to-rem(90px);
+      background-color: $background-color-icon;
+
+      @include k-media-max('m') {
+        display: none;
+      }
     }
-  }
 
-  .k-LinkBox__icon {
-    display: flex;
-
-    margin-top: -$border-size;
-    margin-left: -$border-size;
-    margin-bottom: -$border-size;
-
-    align-items: center;
-    justify-content: center;
-    min-width: k-px-to-rem(90px);
-    background-color: $background-color-icon;
-
-    @include k-media-max('m') {
-      display: none;
+    .k-LinkBox__icon--svg {
+      width: k-px-to-rem(30px);
+      height: k-px-to-rem(40px);
     }
-  }
 
-  .k-LinkBox__icon--svg {
-    width: k-px-to-rem(30px);
-    height: k-px-to-rem(40px);
-  }
+    .k-LinkBox__paragraph {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: center;
+      padding: k-px-to-rem(10px)
+              k-px-to-rem(10px)
+              k-px-to-rem(15px)
+              k-px-to-rem(20px);
+    }
 
-  .k-LinkBox__paragraph {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
-    padding: k-px-to-rem(10px)
-             k-px-to-rem(10px)
-             k-px-to-rem(15px)
-             k-px-to-rem(20px);
-  }
+    .k-LinkBox__title {
+      @include k-typographyFont($title-font);
+      @include k-typographyFontSize($title-size);
 
-  .k-LinkBox__title {
-    @include k-typographyFont($title-font);
-    @include k-typographyFontSize($title-size);
+      margin: 0;
+    }
 
-    margin: 0;
-  }
+    .k-LinkBox__text {
+      @include k-typographyFont($text-font);
+      @include k-typographyFontSize($text-size, $text-line-height);
 
-  .k-LinkBox__text {
-    @include k-typographyFont($text-font);
-    @include k-typographyFontSize($text-size, $text-line-height);
+      margin: 0;
+    }
 
-    margin: 0;
-  }
+    .k-LinkBox__navigation {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-  .k-LinkBox__navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+      padding: k-px-to-rem(15px)
+              k-px-to-rem(20px)
+              k-px-to-rem(15px)
+              k-px-to-rem(10px);
+    }
 
-    padding: k-px-to-rem(15px)
-             k-px-to-rem(20px)
-             k-px-to-rem(15px)
-             k-px-to-rem(10px);
-  }
+    .k-LinkBox__navigation--withAnimation {
+      position: relative;
+      left: 0;
+      transition: left $transition-duration;
 
-  .k-LinkBox__navigation--withAnimation {
-    position: relative;
-    left: 0;
-    transition: left $transition-duration;
-
-    .k-LinkBox:focus &,
-    .k-LinkBox:hover & {
-      left: 5px;
+      .k-LinkBox:focus &,
+      .k-LinkBox:hover & {
+        left: 5px;
+      }
     }
   }
 }

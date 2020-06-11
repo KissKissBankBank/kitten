@@ -42,10 +42,10 @@ export const LinkBox = ({
       href={href}
       className={classNames(className, linkProps.className)}
     >
-      <div className="LinkBox__link">
+      <div className="k-LinkBox__link">
         {props.children}
 
-        <div className="LinkBox__arrow">
+        <div className="k-LinkBox__arrow">
           <ArrowIcon className="k-ButtonIcon__svg" />
         </div>
       </div>
@@ -54,7 +54,7 @@ export const LinkBox = ({
 }
 
 LinkBox.Icon = ({ children, className, ...props }) => (
-  <div {...props} className={classNames('LinkBox__icon', className)}>
+  <div {...props} className={classNames('k-LinkBox__icon', className)}>
     {children}
   </div>
 )
@@ -65,7 +65,7 @@ LinkBox.Text = ({ children, className, ...props }) => (
     className={classNames(
       'k-u-margin-top-double',
       'k-u-margin-bottom-double',
-      'LinkBox__textContainer',
+      'k-LinkBox__textContainer',
       className,
     )}
   >

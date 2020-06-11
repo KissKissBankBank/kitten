@@ -2,14 +2,14 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa ixPLFb"
+  className="sc-bdVaJa hikopz"
   href="#"
 >
   <div
-    className="LinkBox__link"
+    className="k-LinkBox__link"
   >
     <div
-      className="LinkBox__arrow"
+      className="k-LinkBox__arrow"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
@@ -32,16 +32,16 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa ixPLFb"
+  className="sc-bdVaJa hikopz"
   href="#foobar"
   rel="noopener"
   target="_blank"
 >
   <div
-    className="LinkBox__link"
+    className="k-LinkBox__link"
   >
     <div
-      className="LinkBox__icon"
+      className="k-LinkBox__icon"
     >
       <svg
         height={20}
@@ -63,12 +63,12 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       </svg>
     </div>
     <div
-      className="k-u-margin-top-double k-u-margin-bottom-double LinkBox__textContainer"
+      className="k-u-margin-top-double k-u-margin-bottom-double k-LinkBox__textContainer"
     >
       foobar
     </div>
     <div
-      className="LinkBox__arrow"
+      className="k-LinkBox__arrow"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
@@ -91,14 +91,14 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 
 exports[`Deprecated <LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa ixPLFb"
+  className="sc-bdVaJa hikopz"
   href="#"
 >
   <div
-    className="LinkBox__link"
+    className="k-LinkBox__link"
   >
     <div
-      className="LinkBox__arrow"
+      className="k-LinkBox__arrow"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
@@ -121,19 +121,19 @@ exports[`Deprecated <LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`Deprecated <LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa ixPLFb"
+  className="sc-bdVaJa hikopz"
   href="#foobar"
   rel="noopener"
   target="_blank"
 >
   <div
-    className="LinkBox__link LinkBox__link--deprecated"
+    className="k-LinkBox__link k-LinkBox__link--deprecated"
   >
     <div
-      className="LinkBox__icon LinkBox__icon--deprecated k-u-hidden@xs-down--important"
+      className="k-LinkBox__icon k-LinkBox__icon--deprecated k-u-hidden@xs-down--important"
     />
     <div
-      className="LinkBox__textContainer LinkBox__textContainer--deprecated k-u-margin-top-double k-u-margin-bottom-double"
+      className="k-LinkBox__textContainer k-LinkBox__textContainer--deprecated k-u-margin-top-double k-u-margin-bottom-double"
     >
       <div
         className="sc-bwzfXH dNghbn"
@@ -161,7 +161,7 @@ exports[`Deprecated <LinkBox /> with some props matches with snapshot 1`] = `
       </span>
     </div>
     <div
-      className="LinkBox__arrow"
+      className="k-LinkBox__arrow"
     >
       <svg
         className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
