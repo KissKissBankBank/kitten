@@ -50,13 +50,12 @@ List.ButtonItem = ButtonItem
 
 List.defaultProps = {
   bottomBorderRadiusValue: 0,
-  withBottomBorderRadius: 0,
 }
 
 List.propTypes = {
   bottomBorderRadiusValue: PropTypes.number,
   withBottomBorderRadius: deprecated(
     PropTypes.number,
-    'This prop is deprecated, please use bottomBorderRadiusValue instead.',
+    'This prop is deprecated, please use `bottomBorderRadiusValue` instead.',
   ),
 }
