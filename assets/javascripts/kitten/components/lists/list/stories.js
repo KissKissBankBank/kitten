@@ -52,7 +52,7 @@ storiesOf('List', module)
           <GridCol offset="1" col="10">
             <Marger top="1">
               <List
-                withBottomBorderRadius={number('withBottomBorderRadius', 0)}
+                bottomBorderRadiusValue={number('bottomBorderRadiusValue', 0)}
               >
                 <List.ButtonItem
                   hasArrow={boolean('hasArrow', true)}
