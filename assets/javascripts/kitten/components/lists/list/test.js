@@ -27,8 +27,8 @@ describe('<List>', () => {
           .create(
             <List>
               <List.ButtonItem withTopBorder>Alice</List.ButtonItem>
-              <List.ButtonItem>Cheshire Cat</List.ButtonItem>
-              <List.ButtonItem>Mad Hatter</List.ButtonItem>
+              <List.ButtonItem active>Cheshire Cat</List.ButtonItem>
+              <List.ButtonItem hasArrow={false}>Mad Hatter</List.ButtonItem>
             </List>,
           )
           .toJSON()
