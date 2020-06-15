@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Doc: Add a doc for utility `align`.
+- Feature: Update `LinkBox` component.
 - Fix: Update mobile image size on `EngagementCardWithImage`.
 - Fix: Update pseudo-class of the `EmbedPlayer` btn.
 - Feature: Add `hasArrow` and `active` props to `List.ButtonItem`.
