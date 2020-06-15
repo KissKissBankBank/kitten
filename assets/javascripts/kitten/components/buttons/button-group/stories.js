@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, boolean } from '@storybook/addon-knobs'
 import { ButtonGroup } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -24,7 +24,7 @@ const info = {
     ~~~js
     <ButtonGroup>
       <ButtonGroup.Button>Button1</ButtonGroup.Button>
-      <ButtonGroup.Button>Button2</ButtonGroup.Button>
+      <ButtonGroup.Button active>Button2</ButtonGroup.Button>
       <ButtonGroup.Button>Button3</ButtonGroup.Button>
     </ButtonGroup>
     ~~~
@@ -55,7 +55,12 @@ storiesOf('Buttons/ButtonGroup', module)
         <StoryContainer>
           <ButtonGroup aria-label="Button label">
             <ButtonGroup.Button>Button1</ButtonGroup.Button>
-            <ButtonGroup.Button>Button2</ButtonGroup.Button>
+            <ButtonGroup.Button
+              modifier={boolean('active', false) ? 'helium' : 'hydrogen'}
+              active={boolean('active', false)}
+            >
+              Button2
+            </ButtonGroup.Button>
             <ButtonGroup.Button>Button3</ButtonGroup.Button>
           </ButtonGroup>
         </StoryContainer>

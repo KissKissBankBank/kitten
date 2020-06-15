@@ -7,6 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Doc: Add a doc for utility `align`.
 - Fix: Update mobile image size on `EngagementCardWithImage`.
 - Fix: Update pseudo-class of the `EmbedPlayer` btn.
+- Feature: Add `active` prop to `ButtonGroup.Button`.
 
 ## [2.74.0] - 2020-06-04
 
