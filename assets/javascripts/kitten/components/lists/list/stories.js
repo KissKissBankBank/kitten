@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs } from '@storybook/addon-knobs'
+import { withKnobs, boolean, number } from '@storybook/addon-knobs'
 import { List } from './index'
 import { Grid, GridCol } from '../../grid/grid'
 import { Text } from '../../typography/text'
@@ -51,8 +51,13 @@ storiesOf('List', module)
         <Grid>
           <GridCol offset="1" col="10">
             <Marger top="1">
-              <List>
-                <List.ButtonItem withTopBorder>
+              <List
+                withBottomBorderRadius={number('withBottomBorderRadius', 0)}
+              >
+                <List.ButtonItem
+                  hasArrow={boolean('hasArrow', true)}
+                  withTopBorder
+                >
                   <ExampleWrapper>
                     <ExampleText
                       tag="p"
@@ -67,32 +72,26 @@ storiesOf('List', module)
                     </Text>
                   </ExampleWrapper>
                 </List.ButtonItem>
-                <List.ButtonItem disabled>
+                <List.ButtonItem
+                  hasArrow={boolean('hasArrow', true)}
+                  disabled={boolean('disabled', false)}
+                  active={boolean('active', false)}
+                >
                   <ExampleWrapper>
-                    <ExampleText
-                      tag="p"
-                      weight="regular"
-                      color="font1"
-                      size="tiny"
-                    >
+                    <ExampleText tag="p" weight="regular" size="tiny">
                       Taille M
                     </ExampleText>
-                    <Text tag="small" color="font1" size="micro">
+                    <Text tag="small" size="micro">
                       Disponibilité: 10/30
                     </Text>
                   </ExampleWrapper>
                 </List.ButtonItem>
-                <List.ButtonItem>
+                <List.ButtonItem hasArrow={boolean('hasArrow', true)}>
                   <ExampleWrapper>
-                    <ExampleText
-                      tag="p"
-                      weight="regular"
-                      color="font1"
-                      size="tiny"
-                    >
+                    <ExampleText tag="p" weight="regular" size="tiny">
                       Taille XXL
                     </ExampleText>
-                    <Text tag="small" color="font1" size="micro">
+                    <Text tag="small" size="micro">
                       Disponibilité: 10/30
                     </Text>
                   </ExampleWrapper>
