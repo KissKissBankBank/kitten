@@ -149,12 +149,7 @@ export const ButtonItem = ({
 
       {hasArrow && (
         <div className="k-List__button__arrow" aria-hidden>
-          <ArrowIcon
-            className={classNames(
-              'k-Button__icon',
-              'k-List__button__arrowIcon',
-            )}
-          />
+          <ArrowIcon className="k-Button__icon k-List__button__arrowIcon" />
         </div>
       )}
     </Item>
