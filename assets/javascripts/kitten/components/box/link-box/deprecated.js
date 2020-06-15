@@ -50,7 +50,7 @@ export const DeprecatedLinkBox = ({
               weight="regular"
               size={viewportIsMobile ? 'tiny' : 'default'}
               color="font1"
-              style={{ lineHeight: 1 }}
+              className="k-u-line-height-1"
             >
               {title}
             </Text>
@@ -62,7 +62,7 @@ export const DeprecatedLinkBox = ({
               weight="light"
               size="tiny"
               color="font1"
-              style={{ lineHeight: 1.3 }}
+              className="k-u-line-height-1-3"
             >
               {text}
             </Text>
