@@ -109,29 +109,30 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   justify-content: center;
 }
 
-.c2 {
+.c0 .k-ButtonGroup__button {
   z-index: 0;
   min-width: auto;
   width: auto;
 }
 
-.c2:not(:last-child) {
+.c0 .k-ButtonGroup__button:not(:last-child) {
   margin-right: -0.125rem;
 }
 
-.c2:first-child {
+.c0 .k-ButtonGroup__button:first-child {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
 
-.c2:last-child {
+.c0 .k-ButtonGroup__button:last-child {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
 
-.c2:active,
-.c2:hover,
-.c2:focus {
+.c0 .k-ButtonGroup__button:active,
+.c0 .k-ButtonGroup__button:hover,
+.c0 .k-ButtonGroup__button:focus,
+.c0 .k-ButtonGroup__button.k-ButtonGroup__button--isActive {
   border-radius: 0.25rem;
   z-index: 1;
 }
@@ -144,21 +145,21 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 <div
-  className="c0"
+  className="c0 k-ButtonGroup"
   role="group"
 >
   <button
-    className="c1 c2"
+    className="c1 k-ButtonGroup__button"
   >
     Button1
   </button>
   <button
-    className="c1 c2"
+    className="c1 k-ButtonGroup__button k-ButtonGroup__button--isActive"
   >
     Button2
   </button>
   <button
-    className="c1 c2"
+    className="c1 k-ButtonGroup__button"
   >
     Button3
   </button>

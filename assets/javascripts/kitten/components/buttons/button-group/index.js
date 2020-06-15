@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Button } from '../../../components/buttons/button/button'
 import { pxToRem } from '../../../helpers/utils/typography'
+import classNames from 'classnames'
 
 const borderRadius = pxToRem(4)
 const borderSize = pxToRem(2)
@@ -9,39 +10,51 @@ const borderSize = pxToRem(2)
 const StyledButtonGroup = styled.div`
   display: flex;
   justify-content: center;
+
+  .k-ButtonGroup__button {
+    z-index: 0;
+    min-width: auto;
+    width: auto;
+
+    &:not(:last-child) {
+      margin-right: -${borderSize};
+    }
+
+    &:first-child {
+      border-top-left-radius: ${borderRadius};
+      border-bottom-left-radius: ${borderRadius};
+    }
+
+    &:last-child {
+      border-top-right-radius: ${borderRadius};
+      border-bottom-right-radius: ${borderRadius};
+    }
+
+    &:active,
+    &:hover,
+    &:focus,
+    &.k-ButtonGroup__button--isActive {
+      border-radius: ${borderRadius};
+      z-index: 1;
+    }
+  }
 `
 
-const StyledButton = styled(Button)`
-  z-index: 0;
-  min-width: auto;
-  width: auto;
+export const ButtonGroup = ({ className, ...props }) => (
+  <StyledButtonGroup
+    role="group"
+    {...props}
+    className={classNames('k-ButtonGroup', className)}
+  />
+)
 
-  &:not(:last-child) {
-    margin-right: -${borderSize};
-  }
+const ButtonGroupButton = ({ className, active, ...props }) => (
+  <Button
+    {...props}
+    className={classNames('k-ButtonGroup__button', className, {
+      'k-ButtonGroup__button--isActive': active,
+    })}
+  />
+)
 
-  &:first-child {
-    border-top-left-radius: ${borderRadius};
-    border-bottom-left-radius: ${borderRadius};
-  }
-
-  &:last-child {
-    border-top-right-radius: ${borderRadius};
-    border-bottom-right-radius: ${borderRadius};
-  }
-
-  :active,
-  :hover,
-  :focus {
-    border-radius: ${borderRadius};
-    z-index: 1;
-  }
-`
-
-export class ButtonGroup extends Component {
-  static Button = StyledButton
-
-  render() {
-    return <StyledButtonGroup role="group" {...this.props} />
-  }
-}
+ButtonGroup.Button = ButtonGroupButton

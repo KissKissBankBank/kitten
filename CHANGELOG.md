@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Update mobile image size on `EngagementCardWithImage`.
 - Fix: Update pseudo-class of the `EmbedPlayer` btn.
 - Feature: Add `hasArrow` and `active` props to `List.ButtonItem`.
+- Feature: Add `active` prop to `ButtonGroup.Button`.
 
 ## [2.74.0] - 2020-06-04
 
