@@ -26,7 +26,7 @@ export const info = {
       <List.ButtonItem withTopBorder>
         Item 1
       </List.ButtonItem>
-      <List.ButtonItem>
+      <List.ButtonItem active hasArrow={false}>
         Item 2
       </List.ButtonItem>
       <List.ButtonItem disabled>
