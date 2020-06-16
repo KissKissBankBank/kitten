@@ -25,21 +25,19 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _arrowIcon = require("../../../components/icons/arrow-icon");
 
-var deprecatedKeys = ['displayIcon', 'text', 'textTag', 'titleTag', 'viewportIsMobile'];
+var deprecatedKeys = ['displayIcon', 'text', 'textTag', 'titleTag', 'viewportIsMobile', 'linkProps'];
 
 var LinkBox = function LinkBox(_ref) {
   var className = _ref.className,
       href = _ref.href,
       isExternal = _ref.isExternal,
-      linkProps = _ref.linkProps,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "href", "isExternal", "linkProps"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["className", "href", "isExternal"]);
 
   if ((0, _deprecated.hasDeprecatedProps)(deprecatedKeys)(props)) {
     return /*#__PURE__*/_react.default.createElement(_deprecated2.DeprecatedLinkBox, (0, _extends2.default)({
       href: href,
       isExternal: isExternal,
-      linkProps: linkProps,
-      className: (0, _classnames.default)(className, linkProps.className)
+      className: (0, _classnames.default)(className, (props.linkProps || {}).className)
     }, props));
   }
 
@@ -47,15 +45,17 @@ var LinkBox = function LinkBox(_ref) {
     target: '_blank',
     rel: 'noopener'
   } : {};
-  return /*#__PURE__*/_react.default.createElement(_styles.StyledLinkBox, (0, _extends2.default)({}, linkProps, target, {
+  return /*#__PURE__*/_react.default.createElement(_styles.StyledLinkBox, (0, _extends2.default)({}, props, target, {
     href: href,
-    className: (0, _classnames.default)(className, linkProps.className)
+    className: (0, _classnames.default)(className, className)
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-LinkBox__link"
   }, props.children, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-LinkBox__arrow"
   }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
-    className: "k-ButtonIcon__svg"
+    version: "solid",
+    height: "10",
+    width: "10"
   }))));
 };
 
@@ -86,8 +86,7 @@ LinkBox.propTypes = {
 };
 LinkBox.defaultProps = {
   href: '#',
-  isExternal: false,
-  linkProps: {}
+  isExternal: false
 }; // DEPRECATED: do not use default export.
 
 var _default = LinkBox;
