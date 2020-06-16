@@ -12,22 +12,16 @@ const deprecatedKeys = [
   'textTag',
   'titleTag',
   'viewportIsMobile',
+  'linkProps',
 ]
 
-export const LinkBox = ({
-  className,
-  href,
-  isExternal,
-  linkProps,
-  ...props
-}) => {
+export const LinkBox = ({ className, href, isExternal, ...props }) => {
   if (hasDeprecatedProps(deprecatedKeys)(props)) {
     return (
       <DeprecatedLinkBox
         href={href}
         isExternal={isExternal}
-        linkProps={linkProps}
-        className={classNames(className, linkProps.className)}
+        className={classNames(className, (props.linkProps || {}).className)}
         {...props}
       />
     )
@@ -37,16 +31,16 @@ export const LinkBox = ({
 
   return (
     <StyledLinkBox
-      {...linkProps}
+      {...props}
       {...target}
       href={href}
-      className={classNames(className, linkProps.className)}
+      className={classNames(className, className)}
     >
       <div className="k-LinkBox__link">
         {props.children}
 
         <div className="k-LinkBox__arrow">
-          <ArrowIcon className="k-ButtonIcon__svg" />
+          <ArrowIcon version="solid" className="k-ButtonIcon__svg" />
         </div>
       </div>
     </StyledLinkBox>
@@ -82,7 +76,6 @@ LinkBox.propTypes = {
 LinkBox.defaultProps = {
   href: '#',
   isExternal: false,
-  linkProps: {},
 }
 
 // DEPRECATED: do not use default export.
