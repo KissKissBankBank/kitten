@@ -90,6 +90,7 @@ DeprecatedLinkBox.propTypes = {
     PropTypes.string,
     'Use `<Linkbox.Text />` component instead',
   ),
+  linkProps: deprecated(PropTypes.node, 'Use direct props instead'),
   textTag: deprecated(
     PropTypes.string,
     'Use `<Linkbox.Text />` component instead',
