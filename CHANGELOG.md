@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix: Fix `LinkBox` by using direct props instead of `linkProps`.
+## [2.75.1] - 2020-06-16
+
+Fix:
+- Fix `LinkBox` by using direct props instead of `linkProps`.
   `linkProps` is now deprecated
 
 ## [2.75.0] - 2020-06-15
