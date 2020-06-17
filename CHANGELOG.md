@@ -4,6 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.75.2] - 2020-06-17
+
+Fix:
+- Set `max-width` on `RewardCard` row content.
+
 ## [2.75.1] - 2020-06-16
 
 Fix:
