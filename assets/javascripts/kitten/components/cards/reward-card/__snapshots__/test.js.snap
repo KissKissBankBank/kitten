@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM dleGVY k-RewardCard"
+  className="sc-bZQynM hLZFaM k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -37,7 +37,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM dleGVY k-RewardCard"
+  className="sc-bZQynM hLZFaM k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -113,7 +113,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM dleGVY k-RewardCard"
+  className="sc-bZQynM hLZFaM k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
