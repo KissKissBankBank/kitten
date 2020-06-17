@@ -87,6 +87,7 @@ export const StyledRewardCard = styled.div`
     flex-grow: 9999;
     flex-basis: ${pxToRem(275)}; /* content min-width */
     margin: ${pxToRem(15)};
+    max-width: calc(100% - ${pxToRem(15)});
   }
 
   .k-RewardCard__rowSide {
