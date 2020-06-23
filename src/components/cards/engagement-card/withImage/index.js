@@ -36,10 +36,10 @@ var StyledCard = _styledComponents.default.div.withConfig({
 var StyledImage = _styledComponents.default.img.withConfig({
   displayName: "withImage__StyledImage",
   componentId: "sc-1jg09sq-2"
-})(["height:", ";display:block;transition:transform 0.4s ease;:hover,:focus{transform:scale(1.05);}@media (min-width:", "){width:100%;}"], function (_ref) {
+})(["height:", ";display:block;transition:transform 0.4s ease;object-fit:cover;width:100%;:hover,:focus{transform:scale(1.05);}"], function (_ref) {
   var imageHeight = _ref.imageHeight;
   return (0, _typography.pxToRem)(imageHeight);
-}, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min));
+});
 
 var StyledText = (0, _styledComponents.default)(_text.Text).withConfig({
   displayName: "withImage__StyledText",

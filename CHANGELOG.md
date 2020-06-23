@@ -5,8 +5,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Doc: Add a doc for utility `color`.
-- Fix: Update mobile image size on `EngagementCardWithImage`.
-- Fix: Update pseudo-class of the `EmbedPlayer` btn.
+
+## [2.75.2] - 2020-06-17
+
+Fix:
+- Set `max-width` on `RewardCard` row content.
+
+## [2.75.1] - 2020-06-16
+
+Fix:
+- Fix `LinkBox` by using direct props instead of `linkProps`.
+  `linkProps` is now deprecated
+
+## [2.75.0] - 2020-06-15
+
+Doc:
+- Add a doc for utility `align`.
+
+Features:
+- Update `LinkBox` component.
+- Add `hasArrow` and `active` props to `List.ButtonItem`.
+- Add `active` prop to `ButtonGroup.Button`.
+
+Fix:
+- Update mobile image size on `EngagementCardWithImage`.
+- Update pseudo-class of the `EmbedPlayer` btn.
 
 ## [2.74.0] - 2020-06-04
 

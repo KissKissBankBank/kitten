@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import COLORS from '../../../../constants/colors-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { ArrowIcon as KittenArrowIcon } from '../../../icons/arrow-icon'
+import { ArrowIcon } from '../../../icons/arrow-icon'
+import classNames from 'classnames'
 
 const Item = styled.div`
   display: flex;
@@ -12,60 +13,65 @@ const Item = styled.div`
   cursor: pointer;
   padding-left: ${pxToRem(20)};
   padding-right: ${pxToRem(20)};
+  background-color: ${COLORS.background1};
 
   :hover {
     background-color: ${COLORS.background2};
   }
 
-  ${({ withTopBorder }) =>
-    withTopBorder &&
-    css`
-      border-top: ${pxToRem(2)} solid ${COLORS.line1};
-    `}
+  &.k-List__button--withTopBorder {
+    border-top: ${pxToRem(2)} solid ${COLORS.line1};
+  }
 
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      color: ${COLORS.line2};
+  &[aria-disabled='true'] {
+    color: ${COLORS.line2};
+    cursor: not-allowed;
+
+    :hover {
       background-color: ${COLORS.background1};
-      cursor: not-allowed;
+    }
 
-      :hover {
-        background-color: ${COLORS.background1};
-      }
-    `}
+    .k-List__button__arrowIcon {
+      fill: ${COLORS.line2};
+    }
+  }
+
+  &.k-List__button--isActive:not([aria-disabled='true']) {
+    color: ${COLORS.background1};
+    background-color: ${COLORS.primary1};
+    border-color: ${COLORS.primary1};
+
+    :hover {
+      background-color: ${COLORS.primary2};
+    }
+
+    .k-List__button__arrowIcon {
+      fill: ${COLORS.background1};
+    }
+  }
+
+  &.k-List__button--isFocused:not([aria-disabled='true']) {
+    .k-List__button__arrowIcon {
+      left: ${pxToRem(5)};
+    }
+  }
 
   ${({ styles }) => styles}
-`
 
-const Content = styled.div`
-  flex-grow: 1;
-`
+  .k-List__button__content {
+    flex-grow: 1;
+  }
 
-const Arrow = styled.div`
-  display: flex;
-  align-items: center;
-`
+  .k-List__button__arrow {
+    display: flex;
+    align-items: center;
+  }
 
-const ArrowIcon = styled(({ focus, ...props }) => (
-  <KittenArrowIcon {...props} />
-))`
-  position: relative;
-  left: 0;
-  transition: left 0.2s;
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      fill: ${COLORS.line2};
-    `}
-
-  ${({ disabled, focus }) =>
-    !disabled &&
-    focus &&
-    css`
-      left: ${pxToRem(5)};
-    `}
+  .k-List__button__arrowIcon {
+    position: relative;
+    left: 0;
+    transition: left 0.2s;
+  }
 `
 
 export const ButtonItem = ({
@@ -79,6 +85,9 @@ export const ButtonItem = ({
   onBlur,
   onMouseEnter,
   onMouseLeave,
+  className,
+  hasArrow,
+  active,
   ...others
 }) => {
   const [focus, setFocus] = useState(false)
@@ -128,21 +137,21 @@ export const ButtonItem = ({
       onMouseLeave={handleMouseLeave}
       onBlur={handleBlur}
       styles={style}
-      disabled={disabled}
       aria-disabled={disabled}
-      withTopBorder={withTopBorder}
-      className="k-List__button"
+      className={classNames('k-List__button', className, {
+        'k-List__button--withTopBorder': withTopBorder,
+        'k-List__button--isActive': active,
+        'k-List__button--isFocused': focus,
+      })}
       {...others}
     >
-      <Content>{children}</Content>
+      <div className="k-List__button__content">{children}</div>
 
-      <Arrow>
-        <ArrowIcon
-          className="k-Button__icon"
-          focus={focus}
-          disabled={disabled}
-        />
-      </Arrow>
+      {hasArrow && (
+        <div className="k-List__button__arrow" aria-hidden>
+          <ArrowIcon className="k-Button__icon k-List__button__arrowIcon" />
+        </div>
+      )}
     </Item>
   )
 }
@@ -158,6 +167,8 @@ ButtonItem.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   onKeyPress: PropTypes.func,
+  hasArrow: PropTypes.bool,
+  active: PropTypes.bool,
 }
 
 ButtonItem.defaultProps = {
@@ -170,4 +181,6 @@ ButtonItem.defaultProps = {
   onMouseEnter: () => {},
   onMouseLeave: () => {},
   onKeyPress: () => {},
+  hasArrow: true,
+  active: false,
 }
