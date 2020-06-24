@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: Remove duplicate `ClassName` in `LinkBox` component.
+
 ## [2.75.2] - 2020-06-17
 
 Fix:
