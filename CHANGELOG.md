@@ -4,8 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Doc: Add a doc for utility `color`.
-
 ## [2.75.2] - 2020-06-17
 
 Fix:
