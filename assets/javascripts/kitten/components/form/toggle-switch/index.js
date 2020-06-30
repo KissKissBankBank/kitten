@@ -56,7 +56,7 @@ const StyledSwitch = styled.button`
     outline: none;
   }
 
-  .kiss-ToggleSwitch__circle {
+  .k-ToggleSwitch__circle {
     position: absolute;
     box-sizing: border-box;
     display: inline-flex;
@@ -79,7 +79,7 @@ const StyledSwitch = styled.button`
     color: ${({ checkedColor }) => checkedColor};
     border-color: currentColor;
 
-    .kiss-ToggleSwitch__circle {
+    .k-ToggleSwitch__circle {
       left: ${pxToRem(switchWidth - switchHeight - borderSize)};
       border-color: currentColor;
     }
@@ -88,7 +88,7 @@ const StyledSwitch = styled.button`
   &:active {
     color: ${({ activeColor }) => activeColor};
     &,
-    .kiss-ToggleSwitch__circle {
+    .k-ToggleSwitch__circle {
       border-color: ${({ activeColor }) => activeColor};
     }
   }
@@ -103,7 +103,7 @@ const StyledSwitch = styled.button`
         border-color: currentColor;
       `}
 
-    .kiss-ToggleSwitch__circle {
+    .k-ToggleSwitch__circle {
       pointer-events: none;
     }
   }
@@ -173,7 +173,7 @@ export const ToggleSwitch = ({
         locked={locked}
         {...switchProps}
       >
-        <div className="kiss-ToggleSwitch__circle" aria-hidden="true">
+        <div className="k-ToggleSwitch__circle" aria-hidden="true">
           {locked && <LockIcon width="12" color={COLORS.font1} />}
         </div>
       </StyledSwitch>
