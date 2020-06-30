@@ -63,6 +63,18 @@ describe('<ToggleSwitch />', () => {
     })
   })
 
+  describe('with `locked` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<ToggleSwitch id="toggle-switch" locked />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `isLabelVisible` prop', () => {
     beforeEach(() => {
       component = renderer
