@@ -7,7 +7,7 @@ exports[`<ToggleSwitch /> with \`big\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-bwzfXH eWDpQt"
+    className="sc-bwzfXH cahKtf"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -15,7 +15,7 @@ exports[`<ToggleSwitch /> with \`big\` prop matches with snapshot 1`] = `
   >
     <div
       aria-hidden="true"
-      className="kiss-ToggleSwitch__circle"
+      className="k-ToggleSwitch__circle"
     />
   </button>
   <label
@@ -34,7 +34,7 @@ exports[`<ToggleSwitch /> with \`checkedColor\` \`defaultColor\` & \`disabledCol
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-bwzfXH bnlhYv"
+    className="sc-bwzfXH jtXUjU"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -42,7 +42,7 @@ exports[`<ToggleSwitch /> with \`checkedColor\` \`defaultColor\` & \`disabledCol
   >
     <div
       aria-hidden="true"
-      className="kiss-ToggleSwitch__circle"
+      className="k-ToggleSwitch__circle"
     />
   </button>
   <label
@@ -61,7 +61,7 @@ exports[`<ToggleSwitch /> with \`disabled\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-bwzfXH eWDpQt"
+    className="sc-bwzfXH cahKtf"
     disabled={true}
     id="toggle-switch"
     onClick={[Function]}
@@ -69,7 +69,7 @@ exports[`<ToggleSwitch /> with \`disabled\` prop matches with snapshot 1`] = `
   >
     <div
       aria-hidden="true"
-      className="kiss-ToggleSwitch__circle"
+      className="k-ToggleSwitch__circle"
     />
   </button>
   <label
@@ -88,7 +88,7 @@ exports[`<ToggleSwitch /> with \`isChecked\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={true}
-    className="sc-bwzfXH eWDpQt"
+    className="sc-bwzfXH cahKtf"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -96,7 +96,7 @@ exports[`<ToggleSwitch /> with \`isChecked\` prop matches with snapshot 1`] = `
   >
     <div
       aria-hidden="true"
-      className="kiss-ToggleSwitch__circle"
+      className="k-ToggleSwitch__circle"
     />
   </button>
   <label
@@ -115,7 +115,7 @@ exports[`<ToggleSwitch /> with \`isLabelVisible\` prop matches with snapshot 1`]
   <button
     aria-label="switch"
     aria-pressed={false}
-    className="sc-bwzfXH eWDpQt"
+    className="sc-bwzfXH cahKtf"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -123,7 +123,7 @@ exports[`<ToggleSwitch /> with \`isLabelVisible\` prop matches with snapshot 1`]
   >
     <div
       aria-hidden="true"
-      className="kiss-ToggleSwitch__circle"
+      className="k-ToggleSwitch__circle"
     />
   </button>
 </div>
@@ -136,7 +136,7 @@ exports[`<ToggleSwitch /> with \`label\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-bwzfXH eWDpQt"
+    className="sc-bwzfXH cahKtf"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -144,7 +144,7 @@ exports[`<ToggleSwitch /> with \`label\` prop matches with snapshot 1`] = `
   >
     <div
       aria-hidden="true"
-      className="kiss-ToggleSwitch__circle"
+      className="k-ToggleSwitch__circle"
     />
   </button>
   <label
@@ -163,7 +163,7 @@ exports[`<ToggleSwitch /> with \`locked\` prop matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-bwzfXH dMhyar"
+    className="sc-bwzfXH hvgkvY"
     disabled={true}
     id="toggle-switch"
     onClick={[Function]}
@@ -171,7 +171,7 @@ exports[`<ToggleSwitch /> with \`locked\` prop matches with snapshot 1`] = `
   >
     <div
       aria-hidden="true"
-      className="kiss-ToggleSwitch__circle"
+      className="k-ToggleSwitch__circle"
     >
       <svg
         fill="#222"
@@ -202,7 +202,7 @@ exports[`<ToggleSwitch /> with default props matches with snapshot 1`] = `
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-bwzfXH eWDpQt"
+    className="sc-bwzfXH cahKtf"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -210,7 +210,7 @@ exports[`<ToggleSwitch /> with default props matches with snapshot 1`] = `
   >
     <div
       aria-hidden="true"
-      className="kiss-ToggleSwitch__circle"
+      className="k-ToggleSwitch__circle"
     />
   </button>
   <label
