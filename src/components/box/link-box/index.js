@@ -47,7 +47,7 @@ var LinkBox = function LinkBox(_ref) {
   } : {};
   return /*#__PURE__*/_react.default.createElement(_styles.StyledLinkBox, (0, _extends2.default)({}, props, target, {
     href: href,
-    className: (0, _classnames.default)(className, className)
+    className: className
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-LinkBox__link"
   }, props.children, /*#__PURE__*/_react.default.createElement("div", {
