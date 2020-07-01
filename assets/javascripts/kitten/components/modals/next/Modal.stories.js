@@ -143,3 +143,19 @@ export const Multi = () => {
     </>
   )
 }
+
+export const WithoutButton = () => (
+  <Modal
+    trigger={<Button modifier="helium">Open</Button>}
+    big={boolean('Big size', false)}
+    huge={boolean('Huge size', false)}
+    zIndex={number('Overlay z-index', 110)}
+  >
+    {() => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Paragraph withoutMargin>{text('content', paragraphContainer)}</Modal.Paragraph>
+      </>
+    )}
+  </Modal>
+)

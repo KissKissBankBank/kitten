@@ -28,6 +28,13 @@ const StyledParagraph = styled(Paragraph)`
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     font-size: ${pxToRem(14)};
   }
+
+  ${({ withoutMargin }) => 
+    withoutMargin &&
+    css`
+      margin-bottom: 0px;
+    }  
+  `}
 `
 
 const GlobalStyle = createGlobalStyle`
@@ -147,13 +154,14 @@ const ModalTitle = ({ children }) => (
   </Title>
 )
 
-const ModalParagraph = ({ children, align }) => (
+const ModalParagraph = ({ children, withoutMargin, align }) => (
   <StyledParagraph
     modifier="quaternary"
     margin={false}
     style={{ textAlign: align }}
     tag="p"
     className="k-u-margin-bottom-triple k-u-margin-bottom-quadruple@s-up"
+    withoutMargin={withoutMargin}
   >
     {children}
   </StyledParagraph>

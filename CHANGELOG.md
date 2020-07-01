@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `wihoutMargin` on `Modal.Paragraph`.
+
 ## [2.76.0] - 2020-07-01
 
 Feature:
