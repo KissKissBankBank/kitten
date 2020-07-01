@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `locked` prop to `ToggleSwitch`.
+- Fix: Remove duplicate `className` in `LinkBox` component.
 
 ## [2.75.2] - 2020-06-17
 
