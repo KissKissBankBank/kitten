@@ -1,9 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Text } from '../../../../components/typography/text'
-import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
-import COLORS from '../../../../constants/colors-config'
+import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
 
 export const RewardCardTitle = ({
   children,
@@ -12,25 +10,19 @@ export const RewardCardTitle = ({
   className,
   ...props
 }) => (
-  <>
-    <Text
-      {...props}
-      fontStyle="italic"
-      weight="bold"
-      tag={tagName}
-      color="font1"
-      className={classNames('k-RewardCard__title', className, {
-        'k-RewardCard__title--disabled': disabled,
-      })}
-    >
-      {children}
-    </Text>
-    <HorizontalStroke
-      size="default"
-      className="k-u-margin-bottom-triple"
-      color={disabled ? COLORS.font2 : null}
-    />
-  </>
+  <TitleWithStroke
+    {...props}
+    italic
+    margin={false}
+    tag={tagName}
+    modifier="senary"
+    className={classNames('k-RewardCard__title', className, 
+      {'k-RewardCard__title--disabled': disabled},
+      'k-u-color-font1',
+    )}
+  >
+    {children}
+  </TitleWithStroke>
 )
 
 RewardCardTitle.propTypes = {
