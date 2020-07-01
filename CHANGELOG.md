@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `locked` prop to `ToggleSwitch`.
-- Fix: Remove duplicate `className` in `LinkBox` component.
+## [2.76.0] - 2020-07-01
+
+Feature:
+- Add `locked` prop to `ToggleSwitch`.
+
+Fix:
+- Remove duplicate `className` in `LinkBox` component.
 
 ## [2.75.2] - 2020-06-17
 
@@ -20,15 +25,12 @@ Fix:
 
 ## [2.75.0] - 2020-06-15
 
-Doc:
-- Add a doc for utility `align`.
-
 Features:
 - Update `LinkBox` component.
 - Add `hasArrow` and `active` props to `List.ButtonItem`.
 - Add `active` prop to `ButtonGroup.Button`.
 
-Fix:
+Fixes:
 - Update mobile image size on `EngagementCardWithImage`.
 - Update pseudo-class of the `EmbedPlayer` btn.
 
