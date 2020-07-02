@@ -32,7 +32,7 @@ const StyledParagraph = styled(Paragraph)`
   ${({ withoutMargin }) => 
     withoutMargin &&
     css`
-      margin-bottom: 0px;
+      margin-bottom: 0;
     }  
   `}
 `
