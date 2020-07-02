@@ -83,15 +83,20 @@ var ModalTitle = function ModalTitle(_ref) {
 
 var ModalParagraph = function ModalParagraph(_ref2) {
   var children = _ref2.children,
+      withoutMargin = _ref2.withoutMargin,
+      className = _ref2.className,
       align = _ref2.align;
   return /*#__PURE__*/_react.default.createElement(StyledParagraph, {
     modifier: "quaternary",
-    margin: false,
     style: {
       textAlign: align
     },
+    margin: false,
     tag: "p",
-    className: "k-u-margin-bottom-triple k-u-margin-bottom-quadruple@s-up"
+    className: (0, _classnames.default)('k-Modal__paragraph', className, {
+      'k-u-margin-bottom-triple': !withoutMargin,
+      'k-u-margin-bottom-quadruple@s-up': !withoutMargin
+    })
   }, children);
 };
 

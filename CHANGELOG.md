@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `withoutMargin` prop on `Modal.Paragraph`.
-- Fix: Replace `Title` component by `TitleWithStroke` on `RewardCardTitle`.
+## [2.77.0] - 2020-07-02
+
+Feature: 
+- Add `withoutMargin` prop on `Modal.Paragraph`.
+
+Fix:
+- Replace `Title` component by `TitleWithStroke` on `RewardCardTitle`.
 
 ## [2.76.0] - 2020-07-01
 
