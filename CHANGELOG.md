@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Replace `Title` component by `TitleWithStroke` on `RewardCardTitle`.
+
 ## [2.76.0] - 2020-07-01
 
 Feature:
