@@ -151,13 +151,12 @@ const ModalParagraph = ({ children, withoutMargin, className, align }) => (
   <StyledParagraph
     modifier="quaternary"
     style={{ textAlign: align }}
+    margin={false}
     tag="p"
-    className={classNames('k-Modal__paragraph', className,
-      'k-u-margin-bottom-triple',
-      'k-u-margin-bottom-quadruple@s-up',
-      'k-u-margin-top-none',
-      {'k-u-margin-bottom-none--important': withoutMargin},
-    )}
+    className={classNames('k-Modal__paragraph', className, {
+      'k-u-margin-bottom-triple': !withoutMargin,
+      'k-u-margin-bottom-quadruple@s-up': !withoutMargin,
+    })}
   >
     {children}
   </StyledParagraph>
