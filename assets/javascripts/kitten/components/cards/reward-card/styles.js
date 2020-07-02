@@ -41,10 +41,6 @@ export const StyledRewardCard = styled.div`
   }
 
   .k-RewardCard__title {
-    font-size: ${pxToRem(24)};
-    line-height: ${pxToRem(34)};
-    margin: 0 0 ${pxToRem(15)} 0;
-
     &.k-RewardCard__title--disabled {
       color: ${COLORS.font2};
       cursor: not-allowed;
