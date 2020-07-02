@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM hLZFaM k-RewardCard"
+  className="sc-bZQynM ccPRax k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -10,21 +10,18 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
     <div
       className="k-RewardCard__rowContent"
     >
-      <h6
-        className="k-u-color-font1 k-u-style-italic k-u-weight-bold k-RewardCard__title"
-      >
-        Custom title mount
-      </h6>
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
-        color={null}
-        style={
-          Object {
-            "height": null,
-            "width": null,
-          }
-        }
-      />
+        className="sc-gzVnrw jvphxe k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+      >
+        <h6
+          className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
+        >
+          Custom title mount
+        </h6>
+        <span
+          className="k-TitleWithStroke__stroke k-TitleWithStroke__stroke--senary"
+        />
+      </div>
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
       >
@@ -37,7 +34,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM hLZFaM k-RewardCard"
+  className="sc-bZQynM ccPRax k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -86,21 +83,18 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
           </span>
         </div>
       </div>
-      <h6
-        className="k-u-color-font1 k-u-style-italic k-u-weight-bold k-RewardCard__title"
-      >
-        Custom title mount
-      </h6>
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
-        color={null}
-        style={
-          Object {
-            "height": null,
-            "width": null,
-          }
-        }
-      />
+        className="sc-gzVnrw jvphxe k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+      >
+        <h6
+          className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
+        >
+          Custom title mount
+        </h6>
+        <span
+          className="k-TitleWithStroke__stroke k-TitleWithStroke__stroke--senary"
+        />
+      </div>
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
       >
@@ -113,7 +107,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM hLZFaM k-RewardCard"
+  className="sc-bZQynM ccPRax k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -163,21 +157,18 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           </span>
         </div>
       </div>
-      <h6
-        className="k-u-color-font1 k-u-style-italic k-u-weight-bold k-RewardCard__title"
-      >
-        100$
-      </h6>
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke k-u-margin-bottom-triple k-HorizontalStroke--size--default"
-        color={null}
-        style={
-          Object {
-            "height": null,
-            "width": null,
-          }
-        }
-      />
+        className="sc-gzVnrw jvphxe k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+      >
+        <h6
+          className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
+        >
+          100$
+        </h6>
+        <span
+          className="k-TitleWithStroke__stroke k-TitleWithStroke__stroke--senary"
+        />
+      </div>
       <p
         className="k-u-color-font1 k-u-weight-bold"
       >
@@ -189,7 +180,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
       </p>
       <ul
-        className="sc-dnqmqq bYuYzA k-List"
+        className="sc-iwsKbI iHewmE k-List"
       >
         <li>
           <span
