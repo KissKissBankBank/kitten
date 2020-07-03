@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.77.0] - 2020-07-02
 
-Feature: 
+Feature:
 - Add `withoutMargin` prop on `Modal.Paragraph`.
 
 Fix:
