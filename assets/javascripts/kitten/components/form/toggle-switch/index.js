@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
+import { LockIcon } from '../../../components/icons/lock-icon'
 
 const transitionDuration = '.15s'
 const switchWidth = 60
@@ -33,6 +34,7 @@ const StyledSwitchContainer = styled.div`
       }
     `}
 `
+
 const StyledSwitch = styled.button`
   display: inline-block;
   position: relative;
@@ -54,10 +56,12 @@ const StyledSwitch = styled.button`
     outline: none;
   }
 
-  &::before {
+  .k-ToggleSwitch__circle {
     position: absolute;
     box-sizing: border-box;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     left: -${pxToRem(borderSize)};
     top: -${pxToRem(borderSize)};
     width: ${pxToRem(switchHeight)};
@@ -75,7 +79,7 @@ const StyledSwitch = styled.button`
     color: ${({ checkedColor }) => checkedColor};
     border-color: currentColor;
 
-    &::before {
+    .k-ToggleSwitch__circle {
       left: ${pxToRem(switchWidth - switchHeight - borderSize)};
       border-color: currentColor;
     }
@@ -84,15 +88,24 @@ const StyledSwitch = styled.button`
   &:active {
     color: ${({ activeColor }) => activeColor};
     &,
-    &::before {
+    .k-ToggleSwitch__circle {
       border-color: ${({ activeColor }) => activeColor};
     }
   }
 
   &[disabled] {
-    color: ${({ disabledColor }) => disabledColor};
-    border-color: currentColor;
     cursor: not-allowed;
+
+    ${({ locked }) =>
+      !locked &&
+      css`
+        color: ${({ disabledColor }) => disabledColor};
+        border-color: currentColor;
+      `}
+
+    .k-ToggleSwitch__circle {
+      pointer-events: none;
+    }
   }
 `
 
@@ -133,6 +146,7 @@ export const ToggleSwitch = ({
   isLabelVisible,
   label,
   labelProps,
+  locked,
   reverseOrder,
   switchProps,
   ...others
@@ -141,7 +155,7 @@ export const ToggleSwitch = ({
 
   return (
     <StyledSwitchContainer
-      isDisabled={disabled}
+      isDisabled={disabled || locked}
       reverseOrder={reverseOrder}
       {...others}
     >
@@ -149,15 +163,21 @@ export const ToggleSwitch = ({
         onClick={() => setPressedState(!isPressed)}
         type="button"
         id={id}
-        disabled={disabled}
+        disabled={disabled || locked}
         aria-pressed={isPressed}
         aria-label={isLabelVisible ? null : label}
         checkedColor={checkedColor}
         defaultColor={defaultColor}
         disabledColor={disabledColor}
         activeColor={activeColor}
+        locked={locked}
         {...switchProps}
-      />
+      >
+        <div className="k-ToggleSwitch__circle" aria-hidden="true">
+          {locked && <LockIcon width="12" color={COLORS.font1} />}
+        </div>
+      </StyledSwitch>
+
       {isLabelVisible && (
         <StyledLabel
           for={id}
@@ -182,6 +202,7 @@ ToggleSwitch.defaultProps = {
   isChecked: false,
   isLabelVisible: true,
   label: 'switch',
+  locked: false,
   reverseOrder: false,
 }
 
@@ -196,5 +217,6 @@ ToggleSwitch.propTypes = {
   isChecked: PropTypes.bool,
   isLabelVisible: PropTypes.bool,
   label: PropTypes.string,
+  locked: PropTypes.bool,
   reverseOrder: PropTypes.bool,
 }

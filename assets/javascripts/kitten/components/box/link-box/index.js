@@ -30,12 +30,7 @@ export const LinkBox = ({ className, href, isExternal, ...props }) => {
   const target = isExternal ? { target: '_blank', rel: 'noopener' } : {}
 
   return (
-    <StyledLinkBox
-      {...props}
-      {...target}
-      href={href}
-      className={classNames(className, className)}
-    >
+    <StyledLinkBox {...props} {...target} href={href} className={className}>
       <div className="k-LinkBox__link">
         {props.children}
 
