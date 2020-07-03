@@ -231,6 +231,7 @@ export const WithPassedProps = () => (
       paginationPosition={object('paginationPosition', paginationPosition)}
       showPageSquares={boolean('showPageSquares', false)}
       loop={boolean('loop', false)}
+      exportVisibilityProps
     >
       {data.map(item => (
         <CardComponent item={item} key={`CrowdfundingCard${item.title}`} />

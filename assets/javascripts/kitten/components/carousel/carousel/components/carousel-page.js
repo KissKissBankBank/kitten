@@ -35,6 +35,7 @@ export class CarouselPage extends Component {
       renderItem,
       isActivePage,
       hasPageBeenViewed,
+      exportVisibilityProps,
     } = this.props
 
     const rangeCard = createRangeFromZeroTo(numColumns)
@@ -55,11 +56,13 @@ export class CarouselPage extends Component {
           >
             {legacyMode
               ? data[index] && renderItem({ item: data[index] })
-              : renderItem[index] &&
+              : exportVisibilityProps
+              ? renderItem[index] &&
                 React.cloneElement(renderItem[index], {
                   isActivePage,
                   hasPageBeenViewed,
-                })}
+                })
+              : renderItem[index]}
           </StyledItem>
         ))}
       </StyledPage>

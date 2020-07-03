@@ -102,6 +102,7 @@ class CarouselBase extends Component {
     showPageSquares: false,
     tinyButtons: false,
     loop: false,
+    exportVisibilityProps: false,
   }
 
   static propTypes = {
@@ -131,6 +132,7 @@ class CarouselBase extends Component {
     lastButtonText: PropTypes.string,
     showPageSquares: PropTypes.bool,
     loop: PropTypes.bool,
+    exportVisibilityProps: PropTypes.bool,
 
     data: deprecated(
       PropTypes.array,
@@ -239,6 +241,7 @@ class CarouselBase extends Component {
       viewportIsMOrLess,
       showOtherPages,
       pagesClassName,
+      exportVisibilityProps,
     } = this.props
     const { indexPageVisible, numColumns, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -264,6 +267,7 @@ class CarouselBase extends Component {
         showOtherPages={showOtherPages}
         pagesClassName={pagesClassName}
         viewedPages={this.viewedPages}
+        exportVisibilityProps={exportVisibilityProps}
       />
     )
   }

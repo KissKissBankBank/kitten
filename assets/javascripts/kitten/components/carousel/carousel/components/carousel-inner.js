@@ -167,6 +167,7 @@ export class CarouselInner extends Component {
       showOtherPages,
       pagesClassName,
       viewedPages,
+      exportVisibilityProps,
     } = this.props
 
     const rangePage = createRangeFromZeroTo(numPages)
@@ -214,6 +215,7 @@ export class CarouselInner extends Component {
                 }
                 isActivePage={isActivePage}
                 hasPageBeenViewed={viewedPages.has(index)}
+                exportVisibilityProps={exportVisibilityProps}
               />
             </StyledCarouselPageContainer>
           )
