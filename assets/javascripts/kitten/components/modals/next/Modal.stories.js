@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button } from '../../../components/buttons/button/button'
+import { FullSize } from './full-size'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -158,4 +159,8 @@ export const WithoutButton = () => (
       </>
     )}
   </Modal>
+)
+
+export const FullSizeMobile = () => (
+  <FullSize />
 )
