@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 import { createRangeFromZeroTo } from '../../../../helpers/utils/range'
+import classNames from 'classnames'
 
 const StyledPage = styled.div`
   display: flex;
@@ -32,12 +33,18 @@ export class CarouselPage extends Component {
       itemMinWidth,
       itemMarginBetween,
       renderItem,
+      isActivePage,
+      hasPageBeenViewed,
     } = this.props
 
     const rangeCard = createRangeFromZeroTo(numColumns)
 
     return (
-      <StyledPage className="k-Carousel__page">
+      <StyledPage
+        className={classNames('k-Carousel__page', {
+          'k-Carousel__page--isActivePage': isActivePage,
+        })}
+      >
         {rangeCard.map(index => (
           <StyledItem
             key={index}
@@ -48,7 +55,11 @@ export class CarouselPage extends Component {
           >
             {legacyMode
               ? data[index] && renderItem({ item: data[index] })
-              : renderItem[index]}
+              : renderItem[index] &&
+                React.cloneElement(renderItem[index], {
+                  isActivePage,
+                  hasPageBeenViewed,
+                })}
           </StyledItem>
         ))}
       </StyledPage>

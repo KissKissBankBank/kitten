@@ -221,3 +221,46 @@ export const InLegacyGrid = () => (
     />
   </StoryContainer>
 )
+
+export const WithPassedProps = () => (
+  <StoryContainer>
+    <NextCarousel
+      tinyButtons={boolean('Button tiny size', false)}
+      itemMinWidth={number('itemMinWidth', 280)}
+      baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
+      paginationPosition={object('paginationPosition', paginationPosition)}
+      showPageSquares={boolean('showPageSquares', false)}
+      loop={boolean('loop', false)}
+    >
+      {data.map(item => (
+        <CardComponent item={item} key={`CrowdfundingCard${item.title}`} />
+      ))}
+    </NextCarousel>
+  </StoryContainer>
+)
+
+const CardComponent = ({ item, hasPageBeenViewed, isActivePage }) => (
+  <CrowdfundingCard
+    href="#"
+    imageProps={{
+      src: hasPageBeenViewed ? item.imageSrc : null,
+      alt: 'Image alt',
+      backgroundColor: '#d8d8d8',
+      color: '#333',
+    }}
+    avatarProps={{
+      src: item.thumbSrc,
+      alt: 'Avatar alt',
+    }}
+    ownerTitle="Was the page viewed?"
+    ownerDescription={hasPageBeenViewed ? 'Viewed' : 'Not viewed'}
+    titleProps={{
+      tag: 'h4',
+    }}
+    cardTitle={item.title}
+    cardSubTitle={isActivePage ? 'Is active page' : 'Inactive page'}
+    titlesMinHeight
+    progress="84"
+    state="Custom state"
+  />
+)

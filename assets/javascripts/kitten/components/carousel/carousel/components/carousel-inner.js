@@ -16,6 +16,7 @@ if (typeof window !== 'undefined') {
 import { createRangeFromZeroTo } from '../../../../helpers/utils/range'
 import { cssSupports } from '../../../../helpers/utils/feature-detection'
 import { CarouselPage } from './carousel-page'
+import classNames from 'classnames'
 
 const supportScrollSnap = cssSupports('scroll-snap-type: mandatory')
 
@@ -165,6 +166,7 @@ export class CarouselInner extends Component {
       itemMarginBetween,
       showOtherPages,
       pagesClassName,
+      viewedPages,
     } = this.props
 
     const rangePage = createRangeFromZeroTo(numPages)
@@ -179,6 +181,8 @@ export class CarouselInner extends Component {
         className="k-Carousel__inner"
       >
         {rangePage.map(index => {
+          const isActivePage = indexPageVisible === index
+
           return (
             <StyledCarouselPageContainer
               key={index}
@@ -187,8 +191,13 @@ export class CarouselInner extends Component {
               itemMarginBetween={itemMarginBetween}
               onClick={this.handlePageClick(index)}
               showOtherPages={showOtherPages}
-              className={pagesClassName}
-              className="k-Carousel__inner__pageContainer"
+              className={classNames(
+                'k-Carousel__inner__pageContainer',
+                pagesClassName,
+                {
+                  'k-Carousel__inner__pageContainer--isActivePage': isActivePage,
+                },
+              )}
             >
               <CarouselPage
                 legacyMode={legacyMode}
@@ -203,6 +212,8 @@ export class CarouselInner extends Component {
                     ? renderItem
                     : getDataForPage(renderItem, index, numColumns)
                 }
+                isActivePage={isActivePage}
+                hasPageBeenViewed={viewedPages.has(index)}
               />
             </StyledCarouselPageContainer>
           )

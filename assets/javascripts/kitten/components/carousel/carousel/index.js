@@ -155,6 +155,12 @@ class CarouselBase extends Component {
     ),
   }
 
+  viewedPages = new Set()
+
+  componentDidMount() {
+    this.viewedPages.add(0)
+  }
+
   onResizeInner = widthInner => {
     const {
       data,
@@ -201,6 +207,7 @@ class CarouselBase extends Component {
     const newPage = loop
       ? checkPageLoop(numPages, indexPageVisible + 1)
       : checkPage(numPages, indexPageVisible + 1)
+    this.viewedPages.add(newPage)
     this.setState({ indexPageVisible: newPage })
   }
 
@@ -210,12 +217,14 @@ class CarouselBase extends Component {
     const newPage = loop
       ? checkPageLoop(numPages, indexPageVisible - 1)
       : checkPage(numPages, indexPageVisible - 1)
+    this.viewedPages.add(newPage)
     this.setState({ indexPageVisible: newPage })
   }
 
   goToPage = indexPageToGo => {
     const { numPages } = this.state
     const newPage = checkPage(numPages, indexPageToGo)
+    this.viewedPages.add(newPage)
     this.setState({ indexPageVisible: newPage })
   }
 
@@ -254,6 +263,7 @@ class CarouselBase extends Component {
         goToPage={this.goToPage}
         showOtherPages={showOtherPages}
         pagesClassName={pagesClassName}
+        viewedPages={this.viewedPages}
       />
     )
   }

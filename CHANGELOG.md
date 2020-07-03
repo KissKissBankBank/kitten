@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: `Carousel` now passes props to its children.
+
 ## [2.77.0] - 2020-07-02
 
 Feature: 
