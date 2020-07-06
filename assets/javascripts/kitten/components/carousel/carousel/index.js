@@ -102,6 +102,7 @@ class CarouselBase extends Component {
     showPageSquares: false,
     tinyButtons: false,
     loop: false,
+    exportVisibilityProps: false,
   }
 
   static propTypes = {
@@ -131,6 +132,7 @@ class CarouselBase extends Component {
     lastButtonText: PropTypes.string,
     showPageSquares: PropTypes.bool,
     loop: PropTypes.bool,
+    exportVisibilityProps: PropTypes.bool,
 
     data: deprecated(
       PropTypes.array,
@@ -153,6 +155,12 @@ class CarouselBase extends Component {
       getDataLength({ data: this.props.data, children: this.props.children }),
       3,
     ),
+  }
+
+  viewedPages = new Set()
+
+  componentDidMount() {
+    this.viewedPages.add(0)
   }
 
   onResizeInner = widthInner => {
@@ -201,6 +209,7 @@ class CarouselBase extends Component {
     const newPage = loop
       ? checkPageLoop(numPages, indexPageVisible + 1)
       : checkPage(numPages, indexPageVisible + 1)
+    this.viewedPages.add(newPage)
     this.setState({ indexPageVisible: newPage })
   }
 
@@ -210,12 +219,14 @@ class CarouselBase extends Component {
     const newPage = loop
       ? checkPageLoop(numPages, indexPageVisible - 1)
       : checkPage(numPages, indexPageVisible - 1)
+    this.viewedPages.add(newPage)
     this.setState({ indexPageVisible: newPage })
   }
 
   goToPage = indexPageToGo => {
     const { numPages } = this.state
     const newPage = checkPage(numPages, indexPageToGo)
+    this.viewedPages.add(newPage)
     this.setState({ indexPageVisible: newPage })
   }
 
@@ -230,6 +241,7 @@ class CarouselBase extends Component {
       viewportIsMOrLess,
       showOtherPages,
       pagesClassName,
+      exportVisibilityProps,
     } = this.props
     const { indexPageVisible, numColumns, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
@@ -254,6 +266,8 @@ class CarouselBase extends Component {
         goToPage={this.goToPage}
         showOtherPages={showOtherPages}
         pagesClassName={pagesClassName}
+        viewedPages={this.viewedPages}
+        exportVisibilityProps={exportVisibilityProps}
       />
     )
   }
