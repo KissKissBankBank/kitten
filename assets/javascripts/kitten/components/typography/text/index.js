@@ -64,6 +64,9 @@ export class Text extends Component {
 }
 
 Text.propTypes = {
+  /**
+    Choice of colors available :
+  */
   color: PropTypes.oneOf([
     'font1',
     'font2',
@@ -72,11 +75,29 @@ Text.propTypes = {
     'error',
     'valid',
   ]),
+  /**
+    Show underline or not, if `tag="a"`.
+  */
   decoration: PropTypes.oneOf(['underline', 'none']),
+  /**
+    `line-height: normal` correspond approximately 1.2.
+  */
   lineHeight: PropTypes.oneOf(['normal']),
+  /**
+    Choice of sizes available :
+  */
   size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
+  /**
+    Choice of font-style available `normal` or `italic` :
+  */
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
+  /**
+    `text-transform: uppercase`
+  */
   transform: PropTypes.oneOf(['uppercase']),
+  /**
+    Choice of font-weight available `light`, `regular` or `italic` :
+  */
   weight: PropTypes.oneOf(['light', 'regular', 'bold']),
 }
 
