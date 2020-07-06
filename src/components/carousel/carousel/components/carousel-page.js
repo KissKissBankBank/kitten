@@ -25,6 +25,8 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _range = require("../../../../helpers/utils/range");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
@@ -65,10 +67,16 @@ var CarouselPage = /*#__PURE__*/function (_Component) {
           numColumns = _this$props.numColumns,
           itemMinWidth = _this$props.itemMinWidth,
           itemMarginBetween = _this$props.itemMarginBetween,
-          renderItem = _this$props.renderItem;
+          renderItem = _this$props.renderItem,
+          isActivePage = _this$props.isActivePage,
+          hasPageBeenViewed = _this$props.hasPageBeenViewed,
+          exportVisibilityProps = _this$props.exportVisibilityProps;
       var rangeCard = (0, _range.createRangeFromZeroTo)(numColumns);
       return /*#__PURE__*/_react.default.createElement(StyledPage, {
-        className: "k-Carousel__page"
+        className: (0, _classnames.default)('k-Carousel__page', {
+          'k-Carousel__page--isActivePage': isActivePage,
+          'k-Carousel__page--hasBeenViewed': hasPageBeenViewed
+        })
       }, rangeCard.map(function (index) {
         return /*#__PURE__*/_react.default.createElement(StyledItem, {
           key: index,
@@ -78,6 +86,8 @@ var CarouselPage = /*#__PURE__*/function (_Component) {
           className: "k-Carousel__page__item"
         }, legacyMode ? data[index] && renderItem({
           item: data[index]
+        }) : exportVisibilityProps ? renderItem[index] && _react.default.cloneElement(renderItem[index], {
+          hasPageBeenViewed: hasPageBeenViewed
         }) : renderItem[index]);
       }));
     }
