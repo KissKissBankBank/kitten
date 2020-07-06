@@ -24,8 +24,6 @@ const StyledFullSize = styled.div`
 
   .k-ModalNext__fullSize--close {
     position: absolute;
-    top: 0;
-    left: 0;
     top: ${pxToRem(10)};
     left: ${pxToRem(20)};
   }

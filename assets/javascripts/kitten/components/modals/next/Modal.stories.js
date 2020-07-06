@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button } from '../../../components/buttons/button/button'
-import { FullSize } from './full-size'
 
 const paragraphContainer = `
   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -162,5 +161,14 @@ export const WithoutButton = () => (
 )
 
 export const FullSizeMobile = () => (
-  <FullSize />
+  <Modal
+    trigger={<Button modifier="helium">Open</Button>}
+    fullSize={boolean('Full size', true )}
+  >
+    {() => (
+      <>
+        <Modal.FullSize>Clit Révolution, manuel d'activisme féministe</Modal.FullSize>
+      </>
+    )}
+  </Modal>
 )

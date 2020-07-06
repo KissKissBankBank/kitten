@@ -10,6 +10,7 @@ import styled, { createGlobalStyle, css } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { Title } from '../../typography/title'
+import { FullSize } from './full-size'
 import COLORS from '../../../constants/colors-config'
 import {
   CONTAINER_PADDING,
@@ -135,6 +136,11 @@ const GlobalStyle = createGlobalStyle`
     opacity: 0;
   }
 `
+const ModalFullSize = ({children}) => (
+  <FullSize>
+    {children}
+  </FullSize>
+)
 
 const ModalTitle = ({ children }) => (
   <Title
@@ -378,6 +384,7 @@ Modal.defaultProps = {
   zIndex: 110,
 }
 
+Modal.FullSize = ModalFullSize
 Modal.Title = ModalTitle
 Modal.Paragraph = ModalParagraph
 Modal.Actions = Actions
