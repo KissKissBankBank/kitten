@@ -44,6 +44,7 @@ export class CarouselPage extends Component {
       <StyledPage
         className={classNames('k-Carousel__page', {
           'k-Carousel__page--isActivePage': isActivePage,
+          'k-Carousel__page--hasBeenViewed': hasPageBeenViewed,
         })}
       >
         {rangeCard.map(index => (
@@ -59,7 +60,6 @@ export class CarouselPage extends Component {
               : exportVisibilityProps
               ? renderItem[index] &&
                 React.cloneElement(renderItem[index], {
-                  isActivePage,
                   hasPageBeenViewed,
                 })
               : renderItem[index]}

@@ -183,6 +183,7 @@ export class CarouselInner extends Component {
       >
         {rangePage.map(index => {
           const isActivePage = indexPageVisible === index
+          const hasPageBeenViewed = viewedPages.has(index)
 
           return (
             <StyledCarouselPageContainer
@@ -197,6 +198,7 @@ export class CarouselInner extends Component {
                 pagesClassName,
                 {
                   'k-Carousel__inner__pageContainer--isActivePage': isActivePage,
+                  'k-Carousel__inner__pageContainer--hasBeenViewed': hasPageBeenViewed,
                 },
               )}
             >
@@ -214,7 +216,7 @@ export class CarouselInner extends Component {
                     : getDataForPage(renderItem, index, numColumns)
                 }
                 isActivePage={isActivePage}
-                hasPageBeenViewed={viewedPages.has(index)}
+                hasPageBeenViewed={hasPageBeenViewed}
                 exportVisibilityProps={exportVisibilityProps}
               />
             </StyledCarouselPageContainer>
