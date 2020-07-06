@@ -6,10 +6,19 @@ import { Text } from '../../../components/typography/text'
 import { CloseButton } from '../../../components/buttons/close-button'
 
 const StyledFullSize = styled.div`
-  position: relative;
+  position: sticky;
+  top: 0;
+  background-color: ${COLORS.background1};
+  outline: none;
+  box-sizing: border-box;
+  overflow: scroll;
 
+  
   .k-ModalNext__fullSize {
-    padding: ${pxToRem(12)};
+    padding-top: ${pxToRem(10)};
+    padding-right: ${pxToRem(20)};
+    padding-bottom: ${pxToRem(10)};
+    padding-left: ${pxToRem(60)};
     border-bottom: ${pxToRem(2)} solid ${COLORS.line1};
   }
 
@@ -17,17 +26,19 @@ const StyledFullSize = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: ${pxToRem(12)};
-    margin-left: ${pxToRem(12)};
+    top: ${pxToRem(10)};
+    left: ${pxToRem(20)};
   }
 
   .k-ModalNext__fullSize--title {
-    margin-left: ${pxToRem(40)};
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: ${pxToRem(40)};
   }
 `
 
-export const FullSize = () => {
+export const FullSize = ({ children }) => {
   return(
     <StyledFullSize>
       <div className="k-ModalNext__fullSize">
@@ -40,7 +51,7 @@ export const FullSize = () => {
             lineHeight="normal"
             className="k-u-margin-none"
           >
-            Clit Révolution, manuel d'activisme féministe
+            {children}
           </Text>
         </div>
         <CloseButton
@@ -53,4 +64,3 @@ export const FullSize = () => {
     </StyledFullSize>
   )
 }
-
