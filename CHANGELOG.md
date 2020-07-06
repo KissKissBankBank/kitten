@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: `Carousel` passes props relating to visibility to its children.
+## [2.78.0] - 2020-07-06
+
+Feature:
+- `Carousel` passes props relating to visibility to its children.
 
 ## [2.77.0] - 2020-07-02
 

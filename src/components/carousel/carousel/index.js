@@ -129,6 +129,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         children: _this.props.children
       }), 3)
     };
+    _this.viewedPages = new Set();
 
     _this.onResizeInner = function (widthInner) {
       var _this$props = _this.props,
@@ -163,6 +164,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           indexPageVisible = _this$state.indexPageVisible;
       var newPage = loop ? checkPageLoop(numPages, indexPageVisible + 1) : checkPage(numPages, indexPageVisible + 1);
 
+      _this.viewedPages.add(newPage);
+
       _this.setState({
         indexPageVisible: newPage
       });
@@ -175,6 +178,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           indexPageVisible = _this$state2.indexPageVisible;
       var newPage = loop ? checkPageLoop(numPages, indexPageVisible - 1) : checkPage(numPages, indexPageVisible - 1);
 
+      _this.viewedPages.add(newPage);
+
       _this.setState({
         indexPageVisible: newPage
       });
@@ -183,6 +188,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     _this.goToPage = function (indexPageToGo) {
       var numPages = _this.state.numPages;
       var newPage = checkPage(numPages, indexPageToGo);
+
+      _this.viewedPages.add(newPage);
 
       _this.setState({
         indexPageVisible: newPage
@@ -199,7 +206,8 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           viewportIsXSOrLess = _this$props2.viewportIsXSOrLess,
           viewportIsMOrLess = _this$props2.viewportIsMOrLess,
           showOtherPages = _this$props2.showOtherPages,
-          pagesClassName = _this$props2.pagesClassName;
+          pagesClassName = _this$props2.pagesClassName,
+          exportVisibilityProps = _this$props2.exportVisibilityProps;
       var _this$state3 = _this.state,
           indexPageVisible = _this$state3.indexPageVisible,
           numColumns = _this$state3.numColumns,
@@ -218,7 +226,9 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         onResizeInner: _this.onResizeInner,
         goToPage: _this.goToPage,
         showOtherPages: showOtherPages,
-        pagesClassName: pagesClassName
+        pagesClassName: pagesClassName,
+        viewedPages: _this.viewedPages,
+        exportVisibilityProps: exportVisibilityProps
       });
     };
 
@@ -312,6 +322,11 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
   }
 
   (0, _createClass2.default)(CarouselBase, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.viewedPages.add(0);
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this$props4 = this.props,
@@ -369,7 +384,8 @@ CarouselBase.defaultProps = {
   lastButtonText: 'Last items',
   showPageSquares: false,
   tinyButtons: false,
-  loop: false
+  loop: false,
+  exportVisibilityProps: false
 };
 CarouselBase.propTypes = {
   itemMinWidth: _propTypes.default.number.isRequired,
@@ -398,6 +414,7 @@ CarouselBase.propTypes = {
   lastButtonText: _propTypes.default.string,
   showPageSquares: _propTypes.default.bool,
   loop: _propTypes.default.bool,
+  exportVisibilityProps: _propTypes.default.bool,
   data: (0, _deprecated.default)(_propTypes.default.array, 'Provide `Carousel` with children instead of data/renderItem'),
   renderItem: (0, _deprecated.default)(_propTypes.default.func, 'Provide `Carousel` with children instead of data/renderItem'),
   withoutLeftOffset: (0, _deprecated.default)(_propTypes.default.bool, 'Provide `Carousel` with children instead of data/renderItem')

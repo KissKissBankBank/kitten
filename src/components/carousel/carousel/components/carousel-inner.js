@@ -9,8 +9,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.CarouselInner = void 0;
 
-var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
-
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
@@ -42,6 +40,8 @@ var _range = require("../../../../helpers/utils/range");
 var _featureDetection = require("../../../../helpers/utils/feature-detection");
 
 var _carouselPage = require("./carousel-page");
+
+var _classnames = _interopRequireDefault(require("classnames"));
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
@@ -220,7 +220,9 @@ var CarouselInner = /*#__PURE__*/function (_Component) {
           numPages = _this$props3.numPages,
           itemMarginBetween = _this$props3.itemMarginBetween,
           showOtherPages = _this$props3.showOtherPages,
-          pagesClassName = _this$props3.pagesClassName;
+          pagesClassName = _this$props3.pagesClassName,
+          viewedPages = _this$props3.viewedPages,
+          exportVisibilityProps = _this$props3.exportVisibilityProps;
       var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
       return /*#__PURE__*/_react.default.createElement(StyledCarouselInner, {
         ref: this.carouselInner,
@@ -230,21 +232,29 @@ var CarouselInner = /*#__PURE__*/function (_Component) {
         showOtherPages: showOtherPages,
         className: "k-Carousel__inner"
       }, rangePage.map(function (index) {
-        return /*#__PURE__*/_react.default.createElement(StyledCarouselPageContainer, (0, _defineProperty2.default)({
+        var isActivePage = indexPageVisible === index;
+        var hasPageBeenViewed = viewedPages.has(index);
+        return /*#__PURE__*/_react.default.createElement(StyledCarouselPageContainer, {
           key: index,
           index: index,
           indexPageVisible: indexPageVisible,
           itemMarginBetween: itemMarginBetween,
           onClick: _this2.handlePageClick(index),
           showOtherPages: showOtherPages,
-          className: pagesClassName
-        }, "className", "k-Carousel__inner__pageContainer"), /*#__PURE__*/_react.default.createElement(_carouselPage.CarouselPage, {
+          className: (0, _classnames.default)('k-Carousel__inner__pageContainer', pagesClassName, {
+            'k-Carousel__inner__pageContainer--isActivePage': isActivePage,
+            'k-Carousel__inner__pageContainer--hasBeenViewed': hasPageBeenViewed
+          })
+        }, /*#__PURE__*/_react.default.createElement(_carouselPage.CarouselPage, {
           legacyMode: legacyMode,
           data: legacyMode ? getDataForPage(data, index, numColumns) : null,
           numColumns: numColumns,
           itemMinWidth: itemMinWidth,
           itemMarginBetween: itemMarginBetween,
-          renderItem: legacyMode ? renderItem : getDataForPage(renderItem, index, numColumns)
+          renderItem: legacyMode ? renderItem : getDataForPage(renderItem, index, numColumns),
+          isActivePage: isActivePage,
+          hasPageBeenViewed: hasPageBeenViewed,
+          exportVisibilityProps: exportVisibilityProps
         }));
       }));
     }
