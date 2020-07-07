@@ -33,7 +33,7 @@ export default {
 
 export const DefaultProp = () => (
   <Container>
-    <Marger top="4">
+    <Marger top="2">
       <Text
         tag="a"
         color={select('Color', colorOptions, 'font1')}
@@ -50,17 +50,48 @@ export const DefaultProp = () => (
 
 export const Size = () => (
   <>
-    <Marger>
-      <Text size="huge">Lorem ipsum dolor sit amet…</Text>
-      <br />
-      <Text size="big">Lorem ipsum dolor sit amet…</Text>
-      <br />
-      <Text size="default">Lorem ipsum dolor sit amet…</Text>
-      <br />
-      <Text size="tiny">Lorem ipsum dolor sit amet…</Text>
-      <br />
-      <Text size="micro">Lorem ipsum dolor sit amet…</Text>
-    </Marger>
+    <Text size="huge">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text size="big">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text size="default">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text size="tiny">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text size="micro">Lorem ipsum dolor sit amet…</Text>
   </>
+)
 
+export const Color = () => (
+  <>
+    <Text color="font1">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text color="font2">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text color="primary1">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text color="background1">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text color="error">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text color="valid">Lorem ipsum dolor sit amet…</Text>
+  </>
+)
+
+export const style = () => (
+  <>
+    <Text fontStyle="normal">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text fontStyle="italic">Lorem ipsum dolor sit amet…</Text>
+</>
+)
+
+export const weight = () => (
+  <>
+    <Text weight="light">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text weight="regulat">Lorem ipsum dolor sit amet…</Text>
+    <br />
+    <Text weight="bold">Lorem ipsum dolor sit amet…</Text>
+  </>
 )
