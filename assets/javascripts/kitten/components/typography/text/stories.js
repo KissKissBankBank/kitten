@@ -1,7 +1,6 @@
 import React from 'react'
 import { withKnobs } from '@storybook/addon-knobs'
 import { Text } from './index'
-import { Container } from '../../grid/container'
 
 export default {
   component: Text,
@@ -14,16 +13,14 @@ export default {
 }
 
 export const DefaultProp = () => (
-  <Container>
-    <Text
-      color="font1"
-      lineHeight="normal"
-      size="big"
-      weight="regular"
-    >
-      Lorem ipsum dolor sit amet…
-    </Text>
-  </Container>
+  <Text
+    color="font1"
+    lineHeight="normal"
+    size="big"
+    weight="regular"
+  >
+    Lorem ipsum dolor sit amet…
+  </Text>
 )
 
 export const Size = () => (
