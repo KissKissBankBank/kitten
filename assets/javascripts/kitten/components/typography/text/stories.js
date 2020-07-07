@@ -1,25 +1,7 @@
 import React from 'react'
-import { withKnobs, select, text } from '@storybook/addon-knobs'
+import { withKnobs } from '@storybook/addon-knobs'
 import { Text } from './index'
-import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
-
-const colorOptions = {
-  Font1: 'font1',
-  Font2: 'font2',
-  Primary1: 'primary1',
-  Background1: 'background1',
-  Error: 'error',
-  Valid: 'valid',
-}
-
-const sizeOptions = {
-  Huge: 'huge',
-  Big: 'big',
-  Default: 'default',
-  Tiny: 'tiny',
-  Micro: 'micro'
-}
 
 export default {
   component: Text,
@@ -33,18 +15,14 @@ export default {
 
 export const DefaultProp = () => (
   <Container>
-    <Marger top="2">
-      <Text
-        tag="a"
-        color={select('Color', colorOptions, 'font1')}
-        lineHeight="normal"
-        decoration= "none"
-        size={select('Size', sizeOptions, 'big')}
-        weight="regular"
-      >
-        {text('Text', 'Lorem ipsum dolor sit amet')}
-      </Text>
-    </Marger>
+    <Text
+      color="font1"
+      lineHeight="normal"
+      size="big"
+      weight="regular"
+    >
+      Lorem ipsum dolor sit amet…
+    </Text>
   </Container>
 )
 
@@ -109,7 +87,7 @@ export const Color = () => (
   </>
 )
 
-export const style = () => (
+export const FontStyle = () => (
   <>
     <Text size="micro">• fontStyle="normal"</Text>
     <br />
@@ -122,7 +100,7 @@ export const style = () => (
 </>
 )
 
-export const weight = () => (
+export const Weight = () => (
   <>
     <Text size="micro">• weight="light" - font-weight: 400</Text>
     <br />
@@ -140,7 +118,7 @@ export const weight = () => (
   </>
 )
 
-export const decoration = () => (
+export const Decoration = () => (
   <>  
     <Text size="micro">• decoration="underline"</Text>
     <br />
@@ -148,7 +126,7 @@ export const decoration = () => (
   </>
 )
 
-export const transform = () => (
+export const Transform = () => (
   <>
     <Text size="micro">• transform="uppercase"</Text>
     <br />
