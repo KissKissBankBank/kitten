@@ -1,11 +1,9 @@
 import React from 'react'
-import { withKnobs } from '@storybook/addon-knobs'
 import { Text } from './index'
 
 export default {
   component: Text,
   title: 'Typography/Text',
-  decorators: [withKnobs],
   parameters: {
     component: Text,
     componentSubtitle: 'List of Text',
@@ -94,7 +92,7 @@ export const FontStyle = () => (
     <Text size="micro">• fontStyle="italic"</Text>
     <br />
     <Text fontStyle="italic">Lorem ipsum dolor sit amet…</Text>
-</>
+  </>
 )
 
 export const Weight = () => (
