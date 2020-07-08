@@ -65,7 +65,7 @@ export class Text extends Component {
 
 Text.propTypes = {
   /**
-    Choice of colors available :
+    Choice of colors available:
   */
   color: PropTypes.oneOf([
     'font1',
