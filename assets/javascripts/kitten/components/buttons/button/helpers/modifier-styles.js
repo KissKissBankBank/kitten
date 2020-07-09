@@ -75,6 +75,7 @@ export const modifierStyles = modifier => {
     svg,
     path {
       fill: ${color};
+      transition: fill 0.2s;
     }
 
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -103,7 +104,9 @@ export const modifierStyles = modifier => {
           fill: ${activeColor};
         }
       }
-    `} :disabled {
+    `}
+
+    :disabled {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
       color: ${COLORS.background1};
