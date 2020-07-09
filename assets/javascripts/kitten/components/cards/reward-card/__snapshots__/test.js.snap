@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM ccPRax k-RewardCard"
+  className="sc-gzVnrw xqQMs k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -11,7 +11,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       className="k-RewardCard__rowContent"
     >
       <div
-        className="sc-gzVnrw jvphxe k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+        className="sc-htoDjs cvZVPr k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
       >
         <h6
           className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
@@ -23,7 +23,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         />
       </div>
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-ifAKCX iPaGAh"
       >
         Custom text description
       </p>
@@ -34,7 +34,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM ccPRax k-RewardCard"
+  className="sc-gzVnrw xqQMs k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -46,11 +46,11 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         className="k-RewardCard__diamondBadge"
       >
         <span
-          className="sc-ifAKCX hrGAof"
+          className="sc-EHOje jqVNCv"
           disabled={false}
         >
           <span
-            className="sc-EHOje hZqhVA"
+            className="sc-bZQynM gBWQwY"
           >
             <svg
               aria-hidden={true}
@@ -84,7 +84,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-gzVnrw jvphxe k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+        className="sc-htoDjs cvZVPr k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
       >
         <h6
           className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
@@ -96,7 +96,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         />
       </div>
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-ifAKCX iPaGAh"
       >
         Custom text description
       </p>
@@ -107,7 +107,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM ccPRax k-RewardCard"
+  className="sc-gzVnrw xqQMs k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -119,11 +119,11 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         className="k-RewardCard__starredBadge"
       >
         <span
-          className="sc-ifAKCX hrGAof"
+          className="sc-EHOje jqVNCv"
           disabled={false}
         >
           <span
-            className="sc-EHOje hZqhVA"
+            className="sc-bZQynM gBWQwY"
           >
             <svg
               aria-hidden={true}
@@ -158,7 +158,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-gzVnrw jvphxe k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+        className="sc-htoDjs cvZVPr k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
       >
         <h6
           className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
@@ -175,12 +175,12 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
       </p>
       <p
-        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        className="sc-ifAKCX iPaGAh"
       >
         Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
       </p>
       <ul
-        className="sc-iwsKbI iHewmE k-List"
+        className="sc-gZMcBi gTZvfo k-List"
       >
         <li>
           <span
@@ -234,11 +234,11 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     className="k-RewardCard__checkedIconLine"
   >
     <span
-      className="sc-ifAKCX iuoTPc k-RewardCard__iconBadge"
+      className="sc-EHOje kaBNsB k-RewardCard__iconBadge"
       disabled={false}
     >
       <span
-        className="sc-EHOje VARdb"
+        className="sc-bZQynM givIjb"
       >
         <svg
           className="k-IconBadge__svg"
@@ -327,7 +327,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             className="sc-bdVaJa ggQxmM"
           >
             <p
-              className="k-Paragraph k-u-color-font1 k-Paragraph--tertiary k-Paragraph--withoutMargin"
+              className="sc-ifAKCX enScYk k-u-color-font1"
             >
               Custom text description
             </p>
@@ -393,11 +393,11 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
               className="k-LegacyRewardCard__myContribution"
             >
               <span
-                className="sc-ifAKCX iuoTPc k-LegacyRewardCard__iconBadge"
+                className="sc-EHOje kaBNsB k-LegacyRewardCard__iconBadge"
                 disabled={false}
               >
                 <span
-                  className="sc-EHOje VARdb"
+                  className="sc-bZQynM givIjb"
                 >
                   <svg
                     className="k-IconBadge__svg"
