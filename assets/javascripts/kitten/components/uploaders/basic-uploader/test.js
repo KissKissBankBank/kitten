@@ -31,7 +31,7 @@ describe('<BasicUploader />', () => {
           fileName="document.pdf"
           statusText="The document has been validated"
           buttonText="Document"
-          uploaderStatus="valid"
+          status="valid"
           canCancel={true}
           cancelButtonText="Cancel and reupload"
         />,

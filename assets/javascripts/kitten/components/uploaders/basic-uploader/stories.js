@@ -46,7 +46,7 @@ export default {
           fileName="document.pdf"
           statusText="The document has been validated"
           buttonText="Document"
-          uploaderStatus="valid"
+          status="valid"
           onUpload={(file) => { console.log(file) }}
           onCancel={() => {console.log("Cancel button pressed")}}
           canCancel={true}
@@ -109,7 +109,7 @@ export const StatusValid = () => (
           id="BasicUploader__StatusValid"
           buttonText="Send document"
           fileName="document.pdf"
-          uploaderStatus="valid"
+          status="valid"
           canCancel={boolean('canCancel', false)}
           disabled={boolean('disabled', true)}
           statusText="The document is valid."
@@ -127,7 +127,7 @@ export const StatusError = () => (
           id="BasicUploader__StatusError"
           buttonText="Send document"
           fileName="document.pdf"
-          uploaderStatus="error"
+          status="error"
           canCancel={boolean('canCancel', true)}
           disabled={boolean('disabled', false)}
           statusText="The document has been rejected. Please upload another one."
@@ -145,7 +145,7 @@ export const StatusWaiting = () => (
           id="BasicUploader__StatusWaiting"
           buttonText="Send document"
           fileName="document.pdf"
-          uploaderStatus="wait"
+          status="wait"
           canCancel={boolean('canCancel', false)}
           disabled={boolean('disabled', true)}
           statusText="The document is awaiting for validation."
@@ -166,7 +166,7 @@ export const StatusLoading = () => (
             big: true,
             modifier: 'helium',
           }}
-          uploaderStatus="loading"
+          status="loading"
         />
       </GridCol>
     </Grid>
@@ -199,9 +199,9 @@ export const CustomFunctions = () => {
         <GridCol offset="1" col="10" className="k-u-margin-top-quadruple">
           <BasicUploader
             id="BasicUploader__CustomFunctions"
-            onUpload={files => {
+            onUpload={event => {
               setLoadingState(true)
-              setUploadedFiles(files)
+              setUploadedFiles(event.currentTarget.files)
             }}
             onCancel={() => {
               setLoadingState(false)
@@ -216,7 +216,7 @@ export const CustomFunctions = () => {
             fileInputProps={{
               multiple: true,
             }}
-            uploaderStatus={isLoading ? 'loading' : 'ready'}
+            status={isLoading ? 'loading' : 'ready'}
             fileName={
               isLoading && `Currently uploading ${uploadedFiles.length} files`
             }
