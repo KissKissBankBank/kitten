@@ -35,6 +35,11 @@ export class Text extends Component {
 
         // Line height.
         'k-u-line-height-normal': lineHeight == 'normal',
+        'k-u-line-height-1': lineHeight == '1',
+        'k-u-line-height-1-3': lineHeight == '1.3',
+
+        // Setting.
+        'k-u-font-setting-tnum': setting == 'tnum', // Monospaced numbers.
 
         // Size.
         'k-u-size-huge': size == 'huge',
@@ -73,7 +78,8 @@ Text.propTypes = {
     'valid',
   ]),
   decoration: PropTypes.oneOf(['underline', 'none']),
-  lineHeight: PropTypes.oneOf(['normal']),
+  lineHeight: PropTypes.oneOf(['normal', '1', '1.3']),
+  setting: PropTypes.oneOf(['tnum']),
   size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   transform: PropTypes.oneOf(['uppercase']),
@@ -85,6 +91,7 @@ Text.defaultProps = {
   color: null,
   decoration: null,
   lineHeight: null,
+  setting: null,
   size: null,
   fontStyle: null,
   tag: 'span',
