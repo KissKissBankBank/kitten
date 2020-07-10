@@ -9,7 +9,7 @@ import { Text } from '../../../components/typography/text'
 import classNames from 'classnames'
 import { UploadIcon } from '../../../components/icons/upload-icon'
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
-import { WarningCircleIcon } from '../../../components/icons/warning-circle-icon'
+import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon'
 import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
 import { CrossIcon } from '../../../components/icons/cross-icon'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
@@ -201,9 +201,9 @@ export const BasicUploader = ({
                 />
               )}
               {internalStatus === 'error' && (
-                <WarningCircleIcon
+                <CrossCircleIcon
                   circleColor={COLORS.error}
-                  warningColor={COLORS.background1}
+                  crossColor={COLORS.background1}
                   width={20}
                   height={20}
                 />
