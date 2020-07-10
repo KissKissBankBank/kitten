@@ -18,7 +18,7 @@ import { Loader } from '../../../components/loaders/loader'
 const StyledBasicUploader = styled.div`
   input[type='file'] {
     border: 0;
-    clip: rect(0, 0, 0, 0);
+    clip-path: inset(100%);
     height: 1px;
     overflow: hidden;
     padding: 0;

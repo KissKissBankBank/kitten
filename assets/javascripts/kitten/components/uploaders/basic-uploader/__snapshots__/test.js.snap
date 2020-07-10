@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-bxivhb eUwWYq kiss-BasicUploader kiss-BasicUploader--ready"
+  className="sc-bxivhb ddafls kiss-BasicUploader kiss-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -37,7 +37,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-bxivhb eUwWYq kiss-BasicUploader kiss-BasicUploader--ready"
+  className="sc-bxivhb ddafls kiss-BasicUploader kiss-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -72,7 +72,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-bxivhb eUwWYq kiss-BasicUploader kiss-BasicUploader--valid"
+  className="sc-bxivhb ddafls kiss-BasicUploader kiss-BasicUploader--valid"
 >
   <input
     disabled={true}
