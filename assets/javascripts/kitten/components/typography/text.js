@@ -9,6 +9,7 @@ export class Text extends Component {
       color,
       decoration,
       lineHeight,
+      setting,
       size,
       fontStyle,
       tag,
