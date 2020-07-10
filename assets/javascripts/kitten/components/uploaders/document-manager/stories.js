@@ -54,7 +54,7 @@ export default {
           onCancel={() => { () => console.log('cancel clicked') } }
           canCancel={false}
           cancelButtonText="Upload another document"
-          mustReplace={false}
+          canReplace={false}
           replaceButtonText="Replace current"
           loaderAnimation={<Loader />}
           documentIcon={<DocumentIconEmpty />}
@@ -120,7 +120,7 @@ export const StatusError = () => (
           }
           displaySubtitle="document.pdf"
           status="error"
-          mustReplace={boolean('mustReplace', true)}
+          canReplace={boolean('canReplace', true)}
           statusText="The document has been rejected. Please upload another one."
           documentIcon={<DocumentIconHouse />}
         />

@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DocumentManager /> should match snapshot 1`] = `
+<div
+  className="sc-bxivhb bllxPp kiss-DocumentManager__uploader"
+>
+  <input
+    disabled={false}
+    id="DocumentManager"
+    onChange={[Function]}
+    type="file"
+  />
+  <label
+    className="sc-bdVaJa itHzpq kiss-DocumentManager__uploader__button"
+    for="DocumentManager"
+  >
+    <div
+      className="kiss-DocumentManager__uploader__container"
+    >
+      <div
+        className="kiss-DocumentManager__uploader__documentIcon"
+      >
+        <div
+          className="sc-bZQynM gXbZuo kiss-DocumentManager__iconContainer kiss-DocumentManager__iconContainer--ready"
+        >
+          <svg
+            className="sc-htpNat jpRHgA"
+            height="33"
+            viewBox="0 0 25 33"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              className="kiss-DocumentIcon__shadow"
+              d="M3 3h 15l 7 7V33H3L3 3z"
+            />
+            <path
+              className="kiss-DocumentIcon__bg"
+              d="M0 0h15l7 7V30H0L0 0z"
+            />
+            <path
+              className="kiss-DocumentIcon__fold"
+              d="M15 0v7h7L15 0z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        className="kiss-DocumentManager__uploader__content"
+      >
+        <p
+          className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular kiss-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+        >
+          
+        </p>
+        <p
+          className="k-u-line-height-normal k-u-size-micro k-u-weight-light kiss-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+        >
+          
+        </p>
+      </div>
+      <div
+        className="kiss-DocumentManager__uploader__uploadIcon"
+      >
+        <svg
+          aria-hidden={true}
+          className="kiss-DocumentManager__uploader__button__uploadIcon"
+          fill="#fff"
+          height="13"
+          viewBox="0 0 12 13"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+          />
+        </svg>
+      </div>
+    </div>
+  </label>
+</div>
+`;
+
+exports[`<DocumentManager /> should match snapshot with props 1`] = `
+<div
+  className="sc-bxivhb bllxPp kiss-DocumentManager__uploader"
+>
+  <input
+    disabled={false}
+    id="DocumentManager"
+    multiple={true}
+    onChange={[Function]}
+    type="file"
+  />
+  <label
+    className="sc-bdVaJa biqsCf kiss-DocumentManager__uploader__button"
+    for="DocumentManager"
+  >
+    <div
+      className="kiss-DocumentManager__uploader__container"
+    >
+      <div
+        className="kiss-DocumentManager__uploader__documentIcon"
+      >
+        <div
+          className="sc-bZQynM gXbZuo kiss-DocumentManager__iconContainer kiss-DocumentManager__iconContainer--ready"
+        >
+          <svg
+            className="sc-htpNat jpRHgA"
+            height="33"
+            viewBox="0 0 25 33"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            
+            <path
+              className="kiss-DocumentIcon__shadow"
+              d="M3 3h 15l 7 7V33H3L3 3z"
+            />
+            <path
+              className="kiss-DocumentIcon__bg"
+              d="M0 0h15l7 7V30H0L0 0z"
+            />
+            <path
+              className="kiss-DocumentIcon__fold"
+              d="M15 0v7h7L15 0z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        className="kiss-DocumentManager__uploader__content"
+      >
+        <p
+          className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular kiss-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+        >
+          
+        </p>
+        <p
+          className="k-u-line-height-normal k-u-size-micro k-u-weight-light kiss-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+        >
+          
+        </p>
+      </div>
+      <div
+        className="kiss-DocumentManager__uploader__uploadIcon"
+      >
+        <svg
+          aria-hidden={true}
+          className="kiss-DocumentManager__uploader__button__uploadIcon"
+          fill="#fff"
+          height="13"
+          viewBox="0 0 12 13"
+          width="12"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+          />
+        </svg>
+      </div>
+    </div>
+  </label>
+</div>
+`;

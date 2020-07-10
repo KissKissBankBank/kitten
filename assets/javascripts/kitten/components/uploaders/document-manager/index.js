@@ -212,7 +212,7 @@ export const DocumentManager = ({
   onCancel = () => {},
   canCancel = false,
   cancelButtonText = 'Upload another document',
-  mustReplace = false,
+  canReplace = false,
   replaceButtonText = 'Replace current',
   loaderAnimation = <Loader />,
   documentIcon = <DocumentIconEmpty />,
@@ -390,7 +390,7 @@ export const DocumentManager = ({
               </Text>
             </button>
           )}
-          {mustReplace && (
+          {canReplace && (
             <button
               className="kiss-DocumentManager__actionButton"
               onClick={handleReplaceClick}
