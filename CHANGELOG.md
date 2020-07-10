@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `BasicUploader` component.
 - Feature: Add `UploadIcon` component.
 - Fix: Add color transitions to `svg` elements that are inside buttons.
+- Feature: Add `DocumentManager` component.
+- Feature: Add `DocumentIconEmpty`, `DocumentIconPerson` and `DocumentIconHouse`.
 
 ## [2.78.0] - 2020-07-06
 
