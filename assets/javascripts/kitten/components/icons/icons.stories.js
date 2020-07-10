@@ -76,6 +76,7 @@ import { ButtonIcon } from './button-icon'
 import { AlignLeftIcon } from './align-left-icon'
 import { AlignCenterIcon } from './align-center-icon'
 import { AlignRightIcon } from './align-right-icon'
+import { UploadIcon } from './upload-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -209,6 +210,7 @@ export const AllIcons = () => {
         <IconContainer children={<CameraIcon />} />
         <IconContainer children={<RocketIcon />} />
         <IconContainer children={<RocketCircleIcon />} />
+        <IconContainer children={<UploadIcon />} />
       </Group>
     </Container>
   )
