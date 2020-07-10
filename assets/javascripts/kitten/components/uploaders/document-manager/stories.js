@@ -45,14 +45,19 @@ export default {
           id="DocumentManager" // required
           buttonProps={{ big: true }}
           fileInputProps={{ multiple: true }}
-          title="The document has been validated"
-          subtitle="document.pdf"
-          status="valid"
-          onUpload={(file) => { console.log(file) }}
-          onCancel={() => {console.log("Cancel button pressed")}}
-          canCancel={true}
-          cancelButtonText="Cancel and reupload"
+          buttonTitle="Upload files"
+          buttonSubtitle="You can JPG or PNG files up to 2MB"
+          displayTitle=""
+          displaySubtitle=""
+          status={'ready'}
+          onUpload={() => { (event) => console.log(event)} }
+          onCancel={() => { () => console.log('cancel clicked') } }
+          canCancel={false}
+          cancelButtonText="Upload another document"
+          mustReplace={false}
+          replaceButtonText="Replace current"
           loaderAnimation={<Loader />}
+          documentIcon={<DocumentIconEmpty />}
         />
         ~~~
         &nbsp;
