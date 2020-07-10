@@ -84,7 +84,7 @@ export const BasicUploader = ({
   errorText = '',
   statusText = '',
   buttonText = 'Document',
-  uploaderStatus = 'ready',
+  status = 'ready',
   onUpload = () => {},
   onCancel = () => {},
   canCancel = false,
@@ -92,10 +92,10 @@ export const BasicUploader = ({
   loaderAnimation = <Loader />,
   ...props
 }) => {
-  const [internalStatus, setInternalStatus] = useState(uploaderStatus)
+  const [internalStatus, setInternalStatus] = useState(status)
   useEffect(() => {
-    setInternalStatus(uploaderStatus)
-  }, [uploaderStatus])
+    setInternalStatus(status)
+  }, [status])
 
   const [internalDisabled, setInternalDisabled] = useState(disabled)
   useEffect(() => {
@@ -128,7 +128,7 @@ export const BasicUploader = ({
     setInternalFileName(tempText)
     setInternalDisabled(true)
 
-    onUpload(files)
+    onUpload(event)
   }
 
   const onCancelButtonClick = event => {
@@ -225,7 +225,7 @@ export const BasicUploader = ({
               color={internalStatus === 'error' ? 'error' : 'font1'}
               size="tiny"
               lineHeight="normal"
-              className="kiss-BasicUploader__statusTitle k-u-margin-none"
+              className="kiss-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
             >
               {internalStatus === 'file-selected'
                 ? internalFileName
@@ -239,7 +239,7 @@ export const BasicUploader = ({
               color={internalStatus === 'error' ? 'error' : 'font1'}
               size="micro"
               lineHeight="normal"
-              className="kiss-BasicUploader__statusSubtitle k-u-margin-none"
+              className="kiss-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
             >
               {statusesWithIcons.includes(internalStatus) && statusText}
             </Text>
@@ -258,13 +258,7 @@ BasicUploader.propTypes = {
   errorText: PropTypes.string,
   statusText: PropTypes.string,
   buttonText: PropTypes.string,
-  uploaderStatus: PropTypes.oneOf([
-    'ready',
-    'error',
-    'valid',
-    'wait',
-    'loading',
-  ]),
+  status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
   onUpload: PropTypes.func,
   onCancel: PropTypes.func,
   canCancel: PropTypes.bool,
