@@ -132,12 +132,12 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     </button>
     <div>
       <p
-        className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular kiss-BasicUploader__statusTitle k-u-margin-none"
+        className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular kiss-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
       >
         document.pdf
       </p>
       <p
-        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light kiss-BasicUploader__statusSubtitle k-u-margin-none"
+        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light kiss-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
       >
         The document has been validated
       </p>
