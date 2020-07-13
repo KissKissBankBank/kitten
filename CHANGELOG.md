@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 - Fix: escape `<3` with `parseHtml` 
 
+- Feature: Add `BasicUploader` component.
+- Feature: Add `UploadIcon` component.
+- Fix: Add color transitions to `svg` elements that are inside buttons.
+
 ## [2.78.0] - 2020-07-06
 
 Feature:
