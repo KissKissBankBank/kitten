@@ -38,7 +38,7 @@ const StyledBasicUploader = styled.div`
     }
   }
 
-  &:not(.kiss-BasicUploader--loading) {
+  &:not(.k-BasicUploader--loading) {
     input[type='file']:disabled + label {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
@@ -52,7 +52,7 @@ const StyledBasicUploader = styled.div`
     }
   }
 
-  .kiss-BasicUploader__statusBlock {
+  .k-BasicUploader__statusBlock {
     margin-top: ${pxToRem(15)};
     display: flex;
 
@@ -61,7 +61,7 @@ const StyledBasicUploader = styled.div`
     }
   }
 
-  .kiss-BasicUploader__cancelButton {
+  .k-BasicUploader__cancelButton {
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
     cursor: pointer;
@@ -144,9 +144,9 @@ export const BasicUploader = ({
     <StyledBasicUploader
       {...props}
       className={classNames(
-        'kiss-BasicUploader',
+        'k-BasicUploader',
         props.className,
-        `kiss-BasicUploader--${internalStatus}`,
+        `k-BasicUploader--${internalStatus}`,
       )}
     >
       <input
@@ -161,10 +161,7 @@ export const BasicUploader = ({
         {...buttonProps}
         as="label"
         for={id}
-        className={classNames(
-          'kiss-BasicUploader__button',
-          buttonProps.className,
-        )}
+        className={classNames('k-BasicUploader__button', buttonProps.className)}
       >
         {internalStatus === 'loading' ? (
           loaderAnimation
@@ -172,7 +169,7 @@ export const BasicUploader = ({
           <>
             <UploadIcon
               aria-hidden
-              className="kiss-BasicUploader__button__uploadIcon k-u-margin-right-singleHalf"
+              className="k-BasicUploader__button__uploadIcon k-u-margin-right-singleHalf"
             />
             <span>{buttonText}</span>
           </>
@@ -180,10 +177,10 @@ export const BasicUploader = ({
       </Button>
 
       {internalStatus !== 'ready' && (
-        <div className="kiss-BasicUploader__statusBlock">
+        <div className="k-BasicUploader__statusBlock">
           {internalCanCancel && (
             <button
-              className="kiss-BasicUploader__cancelButton"
+              className="k-BasicUploader__cancelButton"
               onClick={onCancelButtonClick}
             >
               <CrossIcon />
@@ -191,7 +188,7 @@ export const BasicUploader = ({
             </button>
           )}
           {!internalCanCancel && statusesWithIcons.includes(internalStatus) && (
-            <div className="kiss-BasicUploader__statusIcon">
+            <div className="k-BasicUploader__statusIcon">
               {internalStatus === 'valid' && (
                 <CheckedCircleIcon
                   circleColor={COLORS.valid}
@@ -225,7 +222,7 @@ export const BasicUploader = ({
               color={internalStatus === 'error' ? 'error' : 'font1'}
               size="tiny"
               lineHeight="normal"
-              className="kiss-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
+              className="k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
             >
               {internalStatus === 'file-selected'
                 ? internalFileName
@@ -239,7 +236,7 @@ export const BasicUploader = ({
               color={internalStatus === 'error' ? 'error' : 'font1'}
               size="micro"
               lineHeight="normal"
-              className="kiss-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+              className="k-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
             >
               {statusesWithIcons.includes(internalStatus) && statusText}
             </Text>
