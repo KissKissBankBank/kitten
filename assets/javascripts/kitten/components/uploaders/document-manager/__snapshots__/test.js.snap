@@ -2,7 +2,7 @@
 
 exports[`<DocumentManager /> should match snapshot 1`] = `
 <div
-  className="sc-bxivhb fdcTgQ kiss-DocumentManager__uploader"
+  className="sc-ifAKCX fSuHIY k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -11,17 +11,17 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa itHzpq kiss-DocumentManager__uploader__button"
+    className="sc-bdVaJa itHzpq k-DocumentManager__uploader__button"
     for="DocumentManager"
   >
     <div
-      className="kiss-DocumentManager__uploader__container"
+      className="k-DocumentManager__uploader__container"
     >
       <div
-        className="kiss-DocumentManager__uploader__documentIcon"
+        className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-bZQynM gXbZuo kiss-DocumentManager__iconContainer kiss-DocumentManager__iconContainer--ready"
+          className="sc-gzVnrw bIWWyz k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
             className="sc-htpNat jpRHgA"
@@ -47,25 +47,25 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
         </div>
       </div>
       <div
-        className="kiss-DocumentManager__uploader__content"
+        className="k-DocumentManager__uploader__content"
       >
         <p
-          className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular kiss-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+          className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
         >
           
         </p>
         <p
-          className="k-u-line-height-normal k-u-size-micro k-u-weight-light kiss-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+          className="k-u-line-height-normal k-u-size-micro k-u-weight-light k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
         >
           
         </p>
       </div>
       <div
-        className="kiss-DocumentManager__uploader__uploadIcon"
+        className="k-DocumentManager__uploader__uploadIcon"
       >
         <svg
           aria-hidden={true}
-          className="kiss-DocumentManager__uploader__button__uploadIcon"
+          className="k-DocumentManager__uploader__button__uploadIcon"
           fill="#fff"
           height="13"
           viewBox="0 0 12 13"
@@ -85,7 +85,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
 
 exports[`<DocumentManager /> should match snapshot with props 1`] = `
 <div
-  className="sc-bxivhb fdcTgQ kiss-DocumentManager__uploader"
+  className="sc-ifAKCX fSuHIY k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -95,17 +95,17 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa biqsCf kiss-DocumentManager__uploader__button"
+    className="sc-bdVaJa biqsCf k-DocumentManager__uploader__button"
     for="DocumentManager"
   >
     <div
-      className="kiss-DocumentManager__uploader__container"
+      className="k-DocumentManager__uploader__container"
     >
       <div
-        className="kiss-DocumentManager__uploader__documentIcon"
+        className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-bZQynM gXbZuo kiss-DocumentManager__iconContainer kiss-DocumentManager__iconContainer--ready"
+          className="sc-gzVnrw bIWWyz k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
             className="sc-htpNat jpRHgA"
@@ -131,25 +131,25 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
         </div>
       </div>
       <div
-        className="kiss-DocumentManager__uploader__content"
+        className="k-DocumentManager__uploader__content"
       >
         <p
-          className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular kiss-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+          className="k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
         >
           
         </p>
         <p
-          className="k-u-line-height-normal k-u-size-micro k-u-weight-light kiss-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+          className="k-u-line-height-normal k-u-size-micro k-u-weight-light k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
         >
           
         </p>
       </div>
       <div
-        className="kiss-DocumentManager__uploader__uploadIcon"
+        className="k-DocumentManager__uploader__uploadIcon"
       >
         <svg
           aria-hidden={true}
-          className="kiss-DocumentManager__uploader__button__uploadIcon"
+          className="k-DocumentManager__uploader__button__uploadIcon"
           fill="#fff"
           height="13"
           viewBox="0 0 12 13"
