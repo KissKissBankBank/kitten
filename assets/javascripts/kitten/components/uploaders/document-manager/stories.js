@@ -8,6 +8,7 @@ import { Loader } from '../../../components/loaders/loader'
 import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty'
 import { DocumentIconHouse } from '../../../components/icons/document-icon-house'
 import { DocumentIconPerson } from '../../../components/icons/document-icon-person'
+import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 
 export default {
   component: DocumentManager,
@@ -57,6 +58,7 @@ export default {
           canReplace={false}
           replaceButtonText="Replace current"
           loaderAnimation={<Loader />}
+          loaderText="Document is loading"
           documentIcon={<DocumentIconEmpty />}
         />
         ~~~
@@ -157,6 +159,7 @@ export const StatusLoading = () => (
             modifier: 'helium',
           }}
           status="loading"
+          loaderText="The document is currently loading"
         />
       </GridCol>
     </Grid>
@@ -185,14 +188,26 @@ export const CustomFunctions = () => {
   const [status, setStatus] = useState('ready')
   const [uploadedFiles, setUploadedFiles] = useState(null)
 
+  const previousStatus = usePrevious(status)
+
   useEffect(() => {
     let loadingDelay
+    let focusDelay
 
     if (status === 'loading') {
       loadingDelay = window.setTimeout(() => setStatus('wait'), 2000)
     }
 
-    return () => window.clearTimeout(loadingDelay)
+    if (['ready', 'loading', 'wait'].includes(previousStatus)) {
+      focusDelay = window.setTimeout(() => {
+        document.getElementById('DocumentManager__CustomFunctions').focus()
+      }, 100)
+    }
+
+    return () => {
+      window.clearTimeout(loadingDelay)
+      window.clearTimeout(focusDelay)
+    }
   }, [status])
 
   return (
@@ -238,6 +253,7 @@ export const CustomFunctions = () => {
             loaderAnimation={status === 'loading' && <Loader />}
             canCancel
             cancelButtonText="Annuler"
+            tabIndex="-1"
           />
         </GridCol>
       </Grid>
