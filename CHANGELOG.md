@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Mobile fixes on `DocumentManager`.
+- Fix: Mobile & a11y fixes on `DocumentManager`.
 
 ## [2.79.0] - 2020-07-13
 
