@@ -3,17 +3,18 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Fix: escape `<3` with `parseHtml` 
 
-- Feature: Add `BasicUploader` component.
-- Feature: Add `UploadIcon` component.
-- Fix: Add color transitions to `svg` elements that are inside buttons.
+## [2.79.0] - 2020-07-13
 
-- Feature: Add `BasicUploader` component.
-- Feature: Add `UploadIcon` component.
-- Fix: Add color transitions to `svg` elements that are inside buttons.
-- Feature: Add `DocumentManager` component.
-- Feature: Add `DocumentIconEmpty`, `DocumentIconPerson` and `DocumentIconHouse`.
+Features:
+- Add `BasicUploader` component.
+- Add `DocumentManager` component.
+- Add `UploadIcon` component.
+- Add `DocumentIconEmpty`, `DocumentIconPerson` and `DocumentIconHouse`.
+
+Fixes:
+- Escape `<3` with `parseHtml`.
+- Add color transitions to `svg` elements that are inside buttons.
 
 ## [2.78.0] - 2020-07-06
 
