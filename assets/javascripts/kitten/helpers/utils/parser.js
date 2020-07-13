@@ -4,10 +4,8 @@ import HtmlToReact from 'html-to-react'
 export const parseHtml = value => {
   if (!value) return
 
-  const encodedValue = value.replace(
-    /[\u00A0-\u9999<>\&]/gim,
-    i => `&#${i.charCodeAt(0)};`,
-  )
+  // We need to escape "<3" common emoji
+  const encodedValue = value.replace('<3', '&lt;3')
 
   return new HtmlToReact.Parser().parse(`<span>${encodedValue}</span>`).props
     .children
