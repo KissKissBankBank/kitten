@@ -78,18 +78,18 @@ const statusesWithIcons = ['error', 'valid', 'wait']
 export const BasicUploader = ({
   id, //required
   buttonProps = {},
-  fileInputProps = {},
-  disabled = false,
-  fileName = '',
-  errorText = '',
-  statusText = '',
   buttonText = 'Document',
-  status = 'ready',
-  onUpload = () => {},
-  onCancel = () => {},
   canCancel = false,
   cancelButtonText = 'Cancel and reupload',
+  disabled = false,
+  errorText = '',
+  fileInputProps = {},
+  fileName = '',
   loaderAnimation = <Loader />,
+  onCancel = () => {},
+  onUpload = () => {},
+  status = 'ready',
+  statusText = '',
   ...props
 }) => {
   const [internalStatus, setInternalStatus] = useState(status)
@@ -249,16 +249,16 @@ export const BasicUploader = ({
 
 BasicUploader.propTypes = {
   id: PropTypes.string.isRequired,
-  fileInputProps: PropTypes.object,
   buttonProps: PropTypes.object,
+  buttonText: PropTypes.string,
+  canCancel: PropTypes.bool,
+  cancelButtonText: PropTypes.string,
   disabled: PropTypes.bool,
   errorText: PropTypes.string,
-  statusText: PropTypes.string,
-  buttonText: PropTypes.string,
-  status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
-  onUpload: PropTypes.func,
-  onCancel: PropTypes.func,
-  canCancel: PropTypes.bool,
+  fileInputProps: PropTypes.object,
   fileName: PropTypes.string,
-  cancelButtonText: PropTypes.string,
+  onCancel: PropTypes.func,
+  onUpload: PropTypes.func,
+  status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
+  statusText: PropTypes.string,
 }

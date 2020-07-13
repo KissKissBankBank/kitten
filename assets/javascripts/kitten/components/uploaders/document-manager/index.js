@@ -12,6 +12,7 @@ import { CrossCircleIcon } from '../../../components/icons/cross-circle-icon'
 import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
 import { Loader } from '../../../components/loaders/loader'
 import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty'
+import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
 
 const StyledDocumentUploader = styled.div`
    {
@@ -202,21 +203,22 @@ const IconContainer = ({ status, children }) => {
 export const DocumentManager = ({
   id, //required
   buttonProps = {},
-  fileInputProps = {},
-  disabled = false,
-  buttonTitle = '',
   buttonSubtitle = '',
-  displayTitle = '',
-  displaySubtitle = '',
-  status = 'ready',
-  onUpload = () => {},
-  onCancel = () => {},
+  buttonTitle = '',
   canCancel = false,
   cancelButtonText = 'Upload another document',
   canReplace = false,
-  replaceButtonText = 'Replace current',
-  loaderAnimation = <Loader />,
+  disabled = false,
+  displaySubtitle = '',
+  displayTitle = '',
   documentIcon = <DocumentIconEmpty />,
+  fileInputProps = {},
+  loaderAnimation = <Loader />,
+  loaderText = '',
+  onCancel = () => {},
+  onUpload = () => {},
+  replaceButtonText = 'Replace current',
+  status = 'ready',
   ...props
 }) => {
   const [internalFileName, setInternalFileName] = useState('')
@@ -325,6 +327,7 @@ export const DocumentManager = ({
     return (
       <StyledDocumentLoading
         {...props}
+        id={id}
         className={classNames('k-DocumentManager__loading', props.className)}
       >
         <Button
@@ -338,6 +341,7 @@ export const DocumentManager = ({
           )}
         >
           {loaderAnimation}
+          <VisuallyHidden>{loaderText}</VisuallyHidden>
         </Button>
       </StyledDocumentLoading>
     )
@@ -346,6 +350,7 @@ export const DocumentManager = ({
   return (
     <StyledDocumentDisplay
       {...props}
+      id={id}
       className={classNames(
         'k-DocumentManager__display',
         `k-DocumentManager__display--${status}`,
@@ -410,18 +415,19 @@ export const DocumentManager = ({
 
 DocumentManager.propTypes = {
   id: PropTypes.string.isRequired,
-  fileInputProps: PropTypes.object,
   buttonProps: PropTypes.object,
-  disabled: PropTypes.bool,
-  errorText: PropTypes.string,
-  status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
-  onUpload: PropTypes.func,
-  onCancel: PropTypes.func,
   canCancel: PropTypes.bool,
-  fileName: PropTypes.string,
   cancelButtonText: PropTypes.string,
-  loaderAnimation: PropTypes.node,
+  disabled: PropTypes.bool,
   documentIcon: PropTypes.node,
-  title: PropTypes.node,
+  errorText: PropTypes.string,
+  fileInputProps: PropTypes.object,
+  fileName: PropTypes.string,
+  loaderAnimation: PropTypes.node,
+  loaderText: PropTypes.node,
+  onCancel: PropTypes.func,
+  onUpload: PropTypes.func,
+  status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
   subtitle: PropTypes.node,
+  title: PropTypes.node,
 }
