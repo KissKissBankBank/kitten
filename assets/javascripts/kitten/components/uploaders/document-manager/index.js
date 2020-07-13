@@ -62,9 +62,10 @@ const StyledDocumentUploader = styled.div`
     .kiss-DocumentManager__uploader__documentIcon {
       flex: 0 0 auto;
       margin-right: ${pxToRem(20)};
+      align-self: flex-start;
     }
     .kiss-DocumentManager__uploader__content {
-      flex: 1 0 auto;
+      flex: 1 1 auto;
     }
     .kiss-DocumentManager__uploader__uploadIcon {
       margin-left: ${pxToRem(20)};
@@ -89,10 +90,10 @@ const StyledDocumentDisplay = styled.div`
   .kiss-DocumentManager__display__documentIcon {
     flex: 0 0 auto;
     margin-right: ${pxToRem(20)};
+    align-self: flex-start;
   }
   .kiss-DocumentManager__display__content {
-    flex: 1 0 auto;
-    max-height: ${pxToRem(60)};
+    flex: 1 1 auto;
   }
 
   .kiss-DocumentManager__actionButton {
