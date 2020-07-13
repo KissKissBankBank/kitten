@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Fix: escape `<3` with `parseHtml` 
 
 - Feature: Add `BasicUploader` component.
 - Feature: Add `UploadIcon` component.

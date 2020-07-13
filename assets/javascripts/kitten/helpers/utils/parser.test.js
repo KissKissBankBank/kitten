@@ -16,4 +16,11 @@ describe('parseHtml()', () => {
 
     expect(parsedHtml).toBe(`FooBar${nbsp}!`)
   })
+
+  it('converts HTML to React with <3 // html entities', () => {
+    const html = 'FooBar <3'
+    const parsedHtml = parseHtml(html)
+
+    expect(parsedHtml).toBe('FooBar <3')
+  })
 })
