@@ -4,9 +4,10 @@ import HtmlToReact from 'html-to-react'
 export const parseHtml = value => {
   if (!value) return
 
-  const encodedValue = value.replace(/[\u00A0-\u9999<>\&]/gim, i => {
-    return '&#' + i.charCodeAt(0) + ';'
-  })
+  const encodedValue = value.replace(
+    /[\u00A0-\u9999<>\&]/gim,
+    i => `&#${i.charCodeAt(0)};`,
+  )
 
   return new HtmlToReact.Parser().parse(`<span>${encodedValue}</span>`).props
     .children
