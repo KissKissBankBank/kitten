@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Fix: escape html entities with `parseHtml` 
 
 ## [2.78.0] - 2020-07-06
 
