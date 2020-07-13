@@ -11,8 +11,10 @@ var _htmlToReact = _interopRequireDefault(require("html-to-react"));
 
 // We add a span to make parseHtml works with strings.
 var parseHtml = function parseHtml(value) {
-  if (!value) return;
-  return new _htmlToReact.default.Parser().parse("<span>".concat(value, "</span>")).props.children;
+  if (!value) return; // We need to escape "<3" common emoji
+
+  var encodedValue = value.replace('<3', '&lt;3');
+  return new _htmlToReact.default.Parser().parse("<span>".concat(encodedValue, "</span>")).props.children;
 };
 
 exports.parseHtml = parseHtml;
