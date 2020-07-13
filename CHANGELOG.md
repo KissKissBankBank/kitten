@@ -4,8 +4,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Mobile & a11y fixes on `DocumentManager`.
-- Feature: New `usePrevious` helper hook.
+## [2.80.0] - 2020-07-13
+
+Feature:
+- New `usePrevious` helper hook.
+
+Fix:
+- Mobile & a11y fixes on `DocumentManager`.
 
 ## [2.79.0] - 2020-07-13
 
