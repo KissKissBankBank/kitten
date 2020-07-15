@@ -65,7 +65,7 @@ export class Text extends Component {
 
 Text.propTypes = {
   /**
-    Choice of colors available:
+    Available colors:
   */
   color: PropTypes.oneOf([
     'font1',
@@ -88,7 +88,7 @@ Text.propTypes = {
   */
   size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
   /**
-    Choice of font-style available `normal` or `italic` :
+    Available font styles (`normal` or `italic`):
   */
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
   /**
@@ -96,7 +96,7 @@ Text.propTypes = {
   */
   transform: PropTypes.oneOf(['uppercase']),
   /**
-    Choice of font-weight available `light`, `regular` or `italic` :
+    Available font weights (`light`, `regular` or `italic`):
   */
   weight: PropTypes.oneOf(['light', 'regular', 'bold']),
 }

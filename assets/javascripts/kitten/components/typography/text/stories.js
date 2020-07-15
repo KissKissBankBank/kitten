@@ -97,17 +97,17 @@ export const FontStyle = () => (
 
 export const Weight = () => (
   <>
-    <Text size="micro">• weight="light" - font-weight: 400</Text>
+    <Text size="micro">• weight="light" - font-weight: 400, Maax Regular</Text>
     <br />
     <Text weight="light">Lorem ipsum dolor sit amet…</Text>
     <br />
     <br />
-    <Text size="micro">• weight="regular" - font-weight: 500</Text>
+    <Text size="micro">• weight="regular" - font-weight: 500, Maax Medium</Text>
     <br />
     <Text weight="regular">Lorem ipsum dolor sit amet…</Text>
     <br />
     <br />
-    <Text size="micro">• weight="bold" - font-weight: 600</Text>
+    <Text size="micro">• weight="bold" - font-weight: 600, Maax Bold</Text>
     <br />
     <Text weight="bold">Lorem ipsum dolor sit amet…</Text>
   </>
