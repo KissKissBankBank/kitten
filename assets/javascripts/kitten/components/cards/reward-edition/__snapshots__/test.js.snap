@@ -71,6 +71,8 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 .c3 svg,
 .c3 path {
   fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c3:hover,

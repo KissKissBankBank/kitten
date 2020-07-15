@@ -60,6 +60,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -217,6 +219,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #19b4fa;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -390,6 +394,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c0 svg,
 .c0 path {
   fill: #19b4fa;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -534,6 +540,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #ff0046;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -682,6 +690,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #19b4fa;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
