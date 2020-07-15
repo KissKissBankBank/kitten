@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Paragraph /> by default matches with snapshot 1`] = `
+<p
+  className="sc-bdVaJa ilEJfi"
+>
+  Lorem ipsum dolor sit amet…
+</p>
+`;
