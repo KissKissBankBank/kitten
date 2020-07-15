@@ -76,15 +76,15 @@ Text.propTypes = {
     'valid',
   ]),
   /**
-    Show underline or not, if `tag="a"`.
+    If `tag="a"`, show underline.
   */
   decoration: PropTypes.oneOf(['underline', 'none']),
   /**
-    `line-height: normal` correspond approximately 1.2.
+    `line-height: normal` correspond approximately to 1.2.
   */
   lineHeight: PropTypes.oneOf(['normal']),
   /**
-    Choice of sizes available :
+    Available sizes:
   */
   size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
   /**
