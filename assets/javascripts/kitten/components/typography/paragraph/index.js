@@ -53,7 +53,7 @@ Paragraph.defaultProps = {
 Paragraph.propTypes = {
   tag: PropTypes.string,
   /**
-    Title have seven modifiers. With different size depending on the device (desktop, tablet and mobile)
+    Title have seven modifiers. With different size depending on the device (`desktop`, `tablet` and `mobile`).
   */
   modifier: PropTypes.oneOf([
     'primary',
