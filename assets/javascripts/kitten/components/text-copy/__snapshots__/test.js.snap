@@ -52,7 +52,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
   </span>
   <button
     aria-label={[Function]}
-    className="sc-bxivhb bbSuCb"
+    className="sc-bxivhb eRBGQH"
     onClick={[Function]}
     type="button"
   >

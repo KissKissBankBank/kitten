@@ -60,6 +60,8 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 .c1 svg,
 .c1 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c1:hover,

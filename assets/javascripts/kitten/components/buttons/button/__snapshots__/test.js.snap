@@ -60,6 +60,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -172,6 +174,8 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -301,6 +305,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -415,6 +421,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -527,6 +535,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 .c0 svg,
 .c0 path {
   fill: #19b4fa;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -643,6 +653,8 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -767,6 +779,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -923,6 +937,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -1054,6 +1070,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -1192,6 +1210,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -1312,6 +1332,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -1429,6 +1451,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,

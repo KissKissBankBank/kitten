@@ -97,6 +97,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 .c1 svg,
 .c1 path {
   fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c1:hover,
@@ -198,6 +200,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 .c9 svg,
 .c9 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c9:hover,
@@ -299,6 +303,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 .c10 svg,
 .c10 path {
   fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c10:hover,
@@ -658,6 +664,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 .c1 svg,
 .c1 path {
   fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c1:hover,
