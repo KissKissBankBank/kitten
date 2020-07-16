@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `stickyProps` to `HeaderNav`.
+- Fix: Pass `isMenuExpanded` prop to styled component.
+
 ## [2.80.0] - 2020-07-13
 
 Feature:
