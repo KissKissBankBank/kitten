@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BasicUploader /> should match snapshot 1`] = `
+<div
+  className="sc-bxivhb hdAFtr k-BasicUploader k-BasicUploader--ready"
+>
+  <input
+    disabled={false}
+    id="BasicUploader"
+    onChange={[Function]}
+    type="file"
+  />
+  <label
+    className="sc-bdVaJa drBUyM k-BasicUploader__button"
+    for="BasicUploader"
+  >
+    <svg
+      aria-hidden={true}
+      className="k-BasicUploader__button__uploadIcon k-u-margin-right-singleHalf"
+      fill="#fff"
+      height="13"
+      viewBox="0 0 12 13"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+      />
+    </svg>
+    <span>
+      Document
+    </span>
+  </label>
+</div>
+`;
+
+exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
+<div
+  className="sc-bxivhb hdAFtr k-BasicUploader k-BasicUploader--ready"
+>
+  <input
+    disabled={false}
+    id="BasicUploader"
+    onChange={[Function]}
+    type="file"
+  />
+  <label
+    className="sc-bdVaJa drBUyM k-BasicUploader__button"
+    for="BasicUploader"
+  >
+    <svg
+      aria-hidden={true}
+      className="k-BasicUploader__button__uploadIcon k-u-margin-right-singleHalf"
+      fill="#fff"
+      height="13"
+      viewBox="0 0 12 13"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+      />
+    </svg>
+    <span>
+      Document
+    </span>
+  </label>
+</div>
+`;
+
+exports[`<BasicUploader /> should match snapshot with props 1`] = `
+<div
+  className="sc-bxivhb hdAFtr k-BasicUploader k-BasicUploader--valid"
+>
+  <input
+    disabled={true}
+    id="BasicUploader"
+    multiple={true}
+    onChange={[Function]}
+    type="file"
+  />
+  <label
+    className="sc-bdVaJa dckyFF k-BasicUploader__button"
+    for="BasicUploader"
+  >
+    <svg
+      aria-hidden={true}
+      className="k-BasicUploader__button__uploadIcon k-u-margin-right-singleHalf"
+      fill="#fff"
+      height="13"
+      viewBox="0 0 12 13"
+      width="12"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      
+      <path
+        d="M7 4.207v4H5v-4L3.172 6 1.757 4.62 6 0 10.243 4.62 8.828 6 7 4.207zM0 8h2v5H0zM10 8h2v5h-2zM0 11h12v2H0z"
+      />
+    </svg>
+    <span>
+      Document
+    </span>
+  </label>
+  <div
+    className="k-BasicUploader__statusBlock"
+  >
+    <button
+      className="k-BasicUploader__cancelButton"
+      onClick={[Function]}
+    >
+      <svg
+        fill="#222"
+        height={8}
+        viewBox="0 0 8 8"
+        width={8}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M.464 6.12L6.12.465 7.537 1.88 1.88 7.535z"
+        />
+        <path
+          d="M1.88.464L7.535 6.12 6.12 7.537.465 1.88z"
+        />
+      </svg>
+      <span
+        className="sc-htpNat gbXWCW"
+      >
+        Cancel and reupload
+      </span>
+    </button>
+    <div>
+      <p
+        className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
+      >
+        document.pdf
+      </p>
+      <p
+        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+      >
+        The document has been validated
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -6,6 +6,26 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: New `setting` prop for `Text` component and new `lineHeight` options.
 
+## [2.80.0] - 2020-07-13
+
+Feature:
+- New `usePrevious` helper hook.
+
+Fix:
+- Mobile & a11y fixes on `DocumentManager`.
+
+## [2.79.0] - 2020-07-13
+
+Features:
+- Add `BasicUploader` component.
+- Add `DocumentManager` component.
+- Add `UploadIcon` component.
+- Add `DocumentIconEmpty`, `DocumentIconPerson` and `DocumentIconHouse`.
+
+Fixes:
+- Escape `<3` with `parseHtml`.
+- Add color transitions to `svg` elements that are inside buttons.
+
 ## [2.78.0] - 2020-07-06
 
 Feature:
