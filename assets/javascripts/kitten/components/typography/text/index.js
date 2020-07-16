@@ -39,7 +39,7 @@ export class Text extends Component {
         'k-u-line-height-1': lineHeight == '1',
         'k-u-line-height-1-3': lineHeight == '1.3',
 
-        // Setting.
+        // Font Feature Settings.
         'k-u-font-setting-tnum': setting == 'tnum', // Monospaced numbers.
 
         // Size.
