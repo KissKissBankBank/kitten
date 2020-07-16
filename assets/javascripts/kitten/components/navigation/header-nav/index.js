@@ -173,7 +173,7 @@ const HeaderNav = ({
         callOnToggle,
       }}
     >
-      <Header zIndex={zIndexConfig}>
+      <Header zIndex={zIndexConfig} isMenuExpanded={isMenuExpanded}>
         <StyledStickyContainer
           ref={stickyContainerRef}
           isSticky={isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp'}
