@@ -6,6 +6,7 @@ import ReactModal from 'react-modal'
 import { CloseButton } from '../../../components/buttons/close-button'
 import { Button } from '../../../components/buttons/button/button'
 import { Paragraph } from '../../../components/typography/paragraph'
+import { Text } from '../../../components/typography/text'
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'
@@ -22,6 +23,10 @@ const paddingPlusGutters = 2 * CONTAINER_PADDING + 11 * GUTTER
 const oneGridCol = `calc((100vw - ${pxToRem(
   paddingPlusGutters,
 )}) / 12 + ${pxToRem(GUTTER)})`
+
+const negativeOneGridCol = `calc(0px - ((100vw - ${pxToRem(
+  paddingPlusGutters,
+)}) / 12 + ${pxToRem(GUTTER)}))`
 
 const StyledParagraph = styled(Paragraph)`
   font-size: ${pxToRem(12)};
@@ -46,6 +51,13 @@ const GlobalStyle = createGlobalStyle`
     margin-left: ${pxToRem(20)};
     padding: ${pxToRem(50)} ${pxToRem(30)};
     width: calc(100vw ${pxToRem(20)});
+    ${props =>
+      props.fullSize &&
+      css`
+        padding-top: 0 !important;
+        min-width: 100vw !important;
+        margin: 0 !important;
+      `};
   
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       margin: auto;
@@ -109,6 +121,11 @@ const GlobalStyle = createGlobalStyle`
       @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
         min-height: ${pxToRem(100)};
       }
+      ${props =>
+        props.fullSize &&
+        css`
+          min-height: 0 !important;
+        `}
     }
     ${props =>
       css`
@@ -134,6 +151,25 @@ const GlobalStyle = createGlobalStyle`
     transform: scale(1.06);
     opacity: 0;
   }
+  
+  .k-ModalNext__title--fullSize {
+    position: sticky;
+    top:0;
+    width: 100vw;
+    text-align: center;
+    margin-left: ${negativeOneGridCol};
+    box-sizing: border-box;
+    background-color: ${COLORS.background1};
+    padding: ${pxToRem(20)} ${oneGridCol};
+    border-bottom: ${pxToRem(2)} solid ${COLORS.line1};
+    margin-bottom: ${pxToRem(50)};
+  }
+  
+  .k-ModalNext__closeButton--fullSize {
+  position: absolute;
+  left: ${pxToRem(20)}
+  top: ${pxToRem(12)}
+  } 
 `
 
 const ModalTitle = ({ children }) => (
@@ -254,6 +290,8 @@ const InnerModal = ({
   huge,
   isOpen,
   zIndex,
+  fullSize,
+  fullSizeTitle,
   ...others
 }) => {
   const [{ show }, dispatch] = useContext(ModalContext)
@@ -276,7 +314,7 @@ const InnerModal = ({
 
   const ModalPortal = ReactDOM.createPortal(
     <>
-      <GlobalStyle cols={colsOnDesktop} zIndex={zIndex} />
+      <GlobalStyle cols={colsOnDesktop} zIndex={zIndex} fullSize={fullSize} />
       <ReactModal
         closeTimeoutMS={500}
         role="dialog"
@@ -305,11 +343,25 @@ const InnerModal = ({
         {...modalProps}
       >
         <>
+          {fullSize && Title && (
+            <div className="k-ModalNext__title--fullSize">
+              <CloseButton
+                className="k-ModalNext__closeButton--fullSize"
+                modifier="hydrogen"
+                onClick={close}
+                size="tiny"
+                closeButtonLabel={closeButtonLabel}
+              />
+              <Text size="tiny" color="font1" weight="regular">
+                {fullSizeTitle}
+              </Text>
+            </div>
+          )}
           {children({
             open: () => dispatch(updateState(true)),
             close: () => dispatch(updateState(false)),
           })}
-          {hasCloseButton && (
+          {hasCloseButton && !fullSize && (
             <div className="k-ModalNext__close">
               <CloseButton
                 style={{ position: 'fixed' }}
@@ -357,12 +409,14 @@ Modal.propTypes = {
   labelledby: PropTypes.string,
   describedby: PropTypes.string,
   closeButtonLabel: PropTypes.string,
+  fullSize: PropTypes.bool,
   modalProps: PropTypes.object,
   hasCloseButton: PropTypes.bool,
   big: PropTypes.bool,
   huge: PropTypes.bool,
   isOpen: PropTypes.bool,
   zIndex: PropTypes.number,
+  fullSizeTitle: PropTypes.string,
 }
 
 Modal.defaultProps = {
@@ -370,12 +424,14 @@ Modal.defaultProps = {
   labelledby: '',
   describedby: '',
   closeButtonLabel: 'Fermer',
+  fullSize: false,
   modalProps: {},
   hasCloseButton: true,
   big: false,
   huge: false,
   isOpen: false,
   zIndex: 110,
+  fullSizeTitle: '',
 }
 
 Modal.Title = ModalTitle
