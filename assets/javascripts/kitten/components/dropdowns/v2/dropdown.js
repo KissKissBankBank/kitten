@@ -211,10 +211,6 @@ export const Dropdown = React.forwardRef(
       }
     }, [closeOnOuterClick, isExpandedState])
 
-    useEffect(() => {
-      handleDropdownPosition()
-    }, [windowWidth])
-
     const closeDropdown = () => {
       toggle(false)
     }
@@ -264,7 +260,10 @@ export const Dropdown = React.forwardRef(
           if (computedLeftElement + minContentWidth() > windowWidth) {
             return windowWidth - minContentWidth()
           }
+
+          return computedLeftElement
         }
+
         return computedLeftElement
       }
 
