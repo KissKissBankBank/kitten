@@ -166,9 +166,9 @@ const GlobalStyle = createGlobalStyle`
   }
   
   .k-ModalNext__closeButton--fullSize {
-  position: absolute;
-  left: ${pxToRem(20)}
-  top: ${pxToRem(12)}
+    position: absolute;
+    left: ${pxToRem(20)}
+    top: ${pxToRem(12)}
   } 
 `
 
