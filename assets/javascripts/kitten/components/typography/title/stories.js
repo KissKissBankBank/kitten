@@ -6,19 +6,19 @@ import { Container } from '../../grid/container'
 import { Text } from '../../typography/text'
 
 const modifierOptions = {
-  Primary: 'primary',	
-  Secondary: 'secondary',	
-  Tertiary: 'tertiary',	
-  Quaternary: 'quaternary',	
-  Quinary: 'quinary',	
-  Senary: 'senary',	
+  Primary: 'primary',
+  Secondary: 'secondary',
+  Tertiary: 'tertiary',
+  Quaternary: 'quaternary',
+  Quinary: 'quinary',
+  Senary: 'senary',
   Septenary: 'septenary',
 }
 
 export default {
   component: Title,
-  decorators: [withKnobs],
   title: 'Typography/Title',
+  decorators: [withKnobs],
   parameters: {
     component: Title,
     componentSubtitle: 'List of Title',

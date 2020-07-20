@@ -23,7 +23,6 @@ export default {
 
 export const DefaultProp = () => (
   <Paragraph
-    tag="p"
     modifier={select('Modifier', modifierOptions, 'primary')}
     margin={boolean('Margin', true)}
     normalLineHeight={boolean('Normal line height', false)}
