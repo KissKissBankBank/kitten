@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
 import HeaderNav from '../index'
 import { LendopolisLogo } from '../../../../components/logos/lendopolis-logo'
 import { KissKissBankBankLogo } from '../../../../components/logos/kisskissbankbanklogo'
@@ -9,7 +8,8 @@ import COLORS from '../../../../constants/colors-config'
 import { Text } from '../../../../components/typography/text'
 import { AvatarWithTextAndBadge } from '../../../../components/avatar/avatar-with-text-and-badge'
 import domElementHelper from '../../../../helpers/dom/element-helper'
-import { pxToRem } from '../../../../helpers/utils/typography'
+import { useWindowWidth } from '../../../../helpers/utils/use-window-width-hook'
+import { useDeepCompareEffect } from '../../../../helpers/utils/use-deep-compare-effect-hook'
 
 const HEADER_NAV_ID = 'kkbbAndCoHeaderNav'
 const getElementById = id => document.getElementById(id)
@@ -78,8 +78,9 @@ const Navigation = () => (
 export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
   const [burgerMenuWidth, setBurgerMenuWidth] = useState(null)
   const [userMenuWidth, setUserMenuWidth] = useState(null)
+  const windowWidth = useWindowWidth()
 
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     setBurgerMenuWidth(
       getComputedLeft(`${HEADER_NAV_ID}PlateformMenu`) +
         getComputedWidthElement(`${HEADER_NAV_ID}PlateformMenu`) +
@@ -88,10 +89,12 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
 
     if (isLogged) {
       setTimeout(() => {
-        setUserMenuWidth(getComputedWidthElement(`${HEADER_NAV_ID}UserMenu`))
+        setUserMenuWidth(
+          getComputedWidthElement(`${HEADER_NAV_ID}UserMenu`) || '0',
+        )
       }, 100)
     }
-  }, [isLogged])
+  }, [isLogged, windowWidth])
 
   return (
     <HeaderNav
@@ -105,7 +108,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
       }}
     >
       <HeaderNav.BurgerMenu>
-        <InnerBurgerMenu />
+        <InnerBurgerMenu dropdownContentWidth={burgerMenuWidth} />
       </HeaderNav.BurgerMenu>
 
       <HeaderNav.Logo href="#">
@@ -136,7 +139,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
         />
 
         <HeaderNav.Logged>
-          <HeaderNav.UserMenu dropdownContentWidth={pxToRem(userMenuWidth)}>
+          <HeaderNav.UserMenu dropdownContentWidth={userMenuWidth}>
             <HeaderNav.UserMenu.Button>
               <AvatarWithTextAndBadge>
                 <AvatarWithTextAndBadge.Image src="https://via.placeholder.com/40x40.png">
