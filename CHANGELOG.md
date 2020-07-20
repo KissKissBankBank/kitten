@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: New `setting` prop for `Text` component and new `lineHeight` options.
+
 ## [2.80.0] - 2020-07-13
 
 Feature:
