@@ -5,6 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `stickyProps` to `HeaderNav`.
+- Feature: Add `useDeepCompareEffect` hook.
+- Feature: Add `useWindowWidth` hook.
 - Fix: Pass `isMenuExpanded` prop to styled component.
 - Fix: Fix `Dropdown` position if content is wider than the window.
 
