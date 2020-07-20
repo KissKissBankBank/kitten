@@ -61,7 +61,7 @@ exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = 
       Custom title
     </h1>
     <p
-      className="sc-bwzfXH epkybD k-u-align-center k-u-margin-top-singleHalf--important"
+      className="sc-bwzfXH gpNpJW k-u-align-center k-u-margin-top-singleHalf--important"
     >
       Custom text
     </p>

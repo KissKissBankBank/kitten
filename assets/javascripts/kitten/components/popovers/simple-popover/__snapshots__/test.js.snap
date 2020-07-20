@@ -32,7 +32,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   font-weight: 400;
   font-size: 0.7901234567901234rem;
   line-height: 1.6;
-  line-height: 1.6;
 }
 
 .c1 {
@@ -618,7 +617,6 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
   font-size: 0.7901234567901234rem;
-  line-height: 1.6;
   line-height: 1.6;
 }
 

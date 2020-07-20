@@ -23,7 +23,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
         />
       </div>
       <p
-        className="sc-ifAKCX iPaGAh"
+        className="sc-ifAKCX fwkQff"
       >
         Custom text description
       </p>
@@ -96,7 +96,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         />
       </div>
       <p
-        className="sc-ifAKCX iPaGAh"
+        className="sc-ifAKCX fwkQff"
       >
         Custom text description
       </p>
@@ -175,7 +175,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
       </p>
       <p
-        className="sc-ifAKCX iPaGAh"
+        className="sc-ifAKCX fwkQff"
       >
         Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
       </p>
@@ -327,7 +327,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
             className="sc-bdVaJa ggQxmM"
           >
             <p
-              className="sc-ifAKCX enScYk k-u-color-font1"
+              className="sc-ifAKCX NRwhd k-u-color-font1"
             >
               Custom text description
             </p>

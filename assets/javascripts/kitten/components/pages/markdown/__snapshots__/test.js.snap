@@ -74,7 +74,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="sc-bZQynM kqSLJU"
+      className="sc-bZQynM BZMjC"
     >
       Emphasis, aka italics, with 
       <em>
@@ -196,7 +196,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="sc-bZQynM kqSLJU"
+      className="sc-bZQynM BZMjC"
     >
       <a
         className="k-Paragraph__link"
@@ -283,7 +283,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="sc-bZQynM bRQoeU"
+      className="sc-bZQynM jQIBlF"
     >
       Emphasis, aka italics, with 
       <em>
@@ -405,7 +405,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat kcNXMt"
   >
     <p
-      className="sc-bZQynM bRQoeU"
+      className="sc-bZQynM jQIBlF"
     >
       <a
         className="k-Paragraph__link"

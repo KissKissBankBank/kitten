@@ -42,7 +42,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                   />
                 </span>
                 <p
-                  className="sc-kgoBCf foLFVQ k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
+                  className="sc-kgoBCf cRgTsm k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
                 >
                   <span
                     className="k-u-weight-regular"
@@ -117,7 +117,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                   />
                 </span>
                 <p
-                  className="sc-kgoBCf foLFVQ k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
+                  className="sc-kgoBCf cRgTsm k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
                 >
                   <span
                     className="k-u-weight-regular"
@@ -200,7 +200,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                       />
                     </span>
                     <p
-                      className="sc-kgoBCf foLFVQ k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
+                      className="sc-kgoBCf cRgTsm k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
                     >
                       <span
                         className="k-u-weight-regular"
@@ -286,7 +286,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                       />
                     </span>
                     <p
-                      className="sc-kgoBCf foLFVQ k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
+                      className="sc-kgoBCf cRgTsm k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
                     >
                       <span
                         className="k-u-weight-regular"
@@ -366,7 +366,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                   />
                 </span>
                 <p
-                  className="sc-kgoBCf foLFVQ k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
+                  className="sc-kgoBCf cRgTsm k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
                 >
                   <span
                     className="k-u-weight-regular"
@@ -441,7 +441,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                   />
                 </span>
                 <p
-                  className="sc-kgoBCf foLFVQ k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
+                  className="sc-kgoBCf cRgTsm k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single"
                 >
                   <span
                     className="k-u-weight-regular"

@@ -45,7 +45,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             className="sc-bdVaJa jtnNso"
           >
             <p
-              className="sc-ifAKCX enScYk k-u-color-font1"
+              className="sc-ifAKCX NRwhd k-u-color-font1"
             >
               Custom text description
             </p>
@@ -110,7 +110,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-bdVaJa ggQxmM"
           >
             <p
-              className="sc-ifAKCX enScYk k-u-color-font1"
+              className="sc-ifAKCX NRwhd k-u-color-font1"
             >
               Custom text description
             </p>
@@ -292,7 +292,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-bdVaJa ggQxmM"
           >
             <p
-              className="sc-ifAKCX iPaGAh k-u-color-font1"
+              className="sc-ifAKCX fwkQff k-u-color-font1"
             >
               Custom text description
             </p>
