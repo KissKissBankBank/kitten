@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from './text'
+import { Text } from './index'
 
 describe('<Text />', () => {
   describe('by default', () => {
