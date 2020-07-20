@@ -13,8 +13,6 @@ var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/sli
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireDefault(require("styled-components"));
-
 var _index = _interopRequireDefault(require("../index"));
 
 var _lendopolisLogo = require("../../../../components/logos/lendopolis-logo");
@@ -33,7 +31,9 @@ var _avatarWithTextAndBadge = require("../../../../components/avatar/avatar-with
 
 var _elementHelper = _interopRequireDefault(require("../../../../helpers/dom/element-helper"));
 
-var _typography = require("../../../../helpers/utils/typography");
+var _useWindowWidthHook = require("../../../../helpers/utils/use-window-width-hook");
+
+var _useDeepCompareEffectHook = require("../../../../helpers/utils/use-deep-compare-effect-hook");
 
 var HEADER_NAV_ID = 'kkbbAndCoHeaderNav';
 
@@ -133,15 +133,16 @@ var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavStory(_re
       userMenuWidth = _useState4[0],
       setUserMenuWidth = _useState4[1];
 
-  (0, _react.useEffect)(function () {
+  var windowWidth = (0, _useWindowWidthHook.useWindowWidth)();
+  (0, _useDeepCompareEffectHook.useDeepCompareEffect)(function () {
     setBurgerMenuWidth(getComputedLeft("".concat(HEADER_NAV_ID, "PlateformMenu")) + getComputedWidthElement("".concat(HEADER_NAV_ID, "PlateformMenu")) + getComputedWidthElement("".concat(HEADER_NAV_ID, "Logo")));
 
     if (isLogged) {
       setTimeout(function () {
-        setUserMenuWidth(getComputedWidthElement("".concat(HEADER_NAV_ID, "UserMenu")));
+        setUserMenuWidth(getComputedWidthElement("".concat(HEADER_NAV_ID, "UserMenu")) || '0');
       }, 100);
     }
-  }, [isLogged]);
+  }, [isLogged, windowWidth]);
   return /*#__PURE__*/_react.default.createElement(_index.default, {
     id: HEADER_NAV_ID,
     isLogged: isLogged,
@@ -151,7 +152,9 @@ var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavStory(_re
       text: 'Aller au contenu principal',
       zIndex: 300
     }
-  }, /*#__PURE__*/_react.default.createElement(_index.default.BurgerMenu, null, /*#__PURE__*/_react.default.createElement(InnerBurgerMenu, null)), /*#__PURE__*/_react.default.createElement(_index.default.Logo, {
+  }, /*#__PURE__*/_react.default.createElement(_index.default.BurgerMenu, null, /*#__PURE__*/_react.default.createElement(InnerBurgerMenu, {
+    dropdownContentWidth: burgerMenuWidth
+  })), /*#__PURE__*/_react.default.createElement(_index.default.Logo, {
     href: "#"
   }, /*#__PURE__*/_react.default.createElement(_index.default.Hidden, {
     min: "xs"
@@ -176,7 +179,7 @@ var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavStory(_re
       max: 'm'
     }
   }), /*#__PURE__*/_react.default.createElement(_index.default.Logged, null, /*#__PURE__*/_react.default.createElement(_index.default.UserMenu, {
-    dropdownContentWidth: (0, _typography.pxToRem)(userMenuWidth)
+    dropdownContentWidth: userMenuWidth
   }, /*#__PURE__*/_react.default.createElement(_index.default.UserMenu.Button, null, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge, null, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Image, {
     src: "https://via.placeholder.com/40x40.png"
   }, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Badge, null, "2")), /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Text, {
