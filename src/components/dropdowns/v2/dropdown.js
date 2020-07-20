@@ -29,6 +29,8 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _elementHelper = _interopRequireDefault(require("../../../helpers/dom/element-helper"));
 
+var _useWindowWidthHook = require("../../../helpers/utils/use-window-width-hook");
+
 var _events = _interopRequireWildcard(require("../../../helpers/dom/events"));
 
 var _a11y = require("../../../helpers/dom/a11y");
@@ -51,7 +53,6 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
       dropdownListArrow = _ref.dropdownListArrow,
       isExpanded = _ref.isExpanded,
       keepInitialButtonAction = _ref.keepInitialButtonAction,
-      notifications = _ref.notifications,
       onPositionUpdate = _ref.onPositionUpdate,
       onToggle = _ref.onToggle,
       positionedHorizontallyWith = _ref.positionedHorizontallyWith,
@@ -83,6 +84,7 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
       horizontalReferenceElementState = _useState8[0],
       setHorizontalReferenceElement = _useState8[1];
 
+  var windowWidth = (0, _useWindowWidthHook.useWindowWidth)();
   var keyboard = _events.default.keyboard;
 
   var closeDropdownOnEsc = function closeDropdownOnEsc(_ref2) {
@@ -168,7 +170,6 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
         right = keyboard.right,
         esc = keyboard.esc,
         shiftTab = keyboard.shiftTab;
-    var backwardTab = event.shiftKey && event.keyCode === tab;
     if (event.keyCode === esc) return toggle(false);
 
     if (event.keyCode === left) {
@@ -189,8 +190,6 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
   };
 
   (0, _react.useEffect)(function () {
-    var focusableElements;
-
     if (isExpandedState) {
       setTimeout(function () {
         var focusableElements = (0, _a11y.getFocusableElementsFrom)(dropdownContentRef.current);
@@ -253,21 +252,30 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
     return (0, _has.default)('current')(dropdownRef) ? dropdownRef.current : dropdownRef;
   };
 
-  var getHorizontalReferenceElement = function getHorizontalReferenceElement() {
-    if (!isSelfReference()) {
-      return (positionedVerticallyWith || positionedWith)();
-    } // Prevent error from ref not set by `useRef`.
-
-
-    return (0, _has.default)('current')(dropdownRef) ? dropdownRef.current : dropdownRef;
-  };
-
   var getComputedHeightElement = function getComputedHeightElement() {
     return _elementHelper.default.getComputedHeight(getVerticalReferenceElement(), positionedWithBorder);
   };
 
   var getComputedLeftElement = function getComputedLeftElement() {
-    return positionedHorizontallyWith ? _elementHelper.default.getComputedLeft(positionedHorizontallyWith()) : 0;
+    if (positionedHorizontallyWith) {
+      var computedLeftElement = _elementHelper.default.getComputedLeft(positionedHorizontallyWith());
+
+      if (!dropdownContentWidth || typeof dropdownContentWidth === 'number') {
+        var minContentWidth = function minContentWidth() {
+          return dropdownContentWidth > 230 ? dropdownContentWidth : 230;
+        };
+
+        if (computedLeftElement + minContentWidth() > windowWidth) {
+          return windowWidth - minContentWidth();
+        }
+
+        return computedLeftElement;
+      }
+
+      return computedLeftElement;
+    }
+
+    return 0;
   };
 
   var getArrowPositionStyle = function getArrowPositionStyle() {
@@ -373,7 +381,6 @@ Dropdown.propTypes = {
   dropdownListArrow: _propTypes.default.node,
   isExpanded: _propTypes.default.bool,
   keepInitialButtonAction: _propTypes.default.bool,
-  notifications: _propTypes.default.number,
   onPositionUpdate: _propTypes.default.func,
   onToggle: _propTypes.default.func,
   positionedHorizontallyWith: _propTypes.default.func,

@@ -57,7 +57,10 @@ export const UserMenu = ({
 }
 
 UserMenu.propTypes = {
-  dropdownContentWidth: PropTypes.string,
+  dropdownContentWidth: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
   padding: PropTypes.bool,
   closeEvents: PropTypes.arrayOf(PropTypes.string),
 }

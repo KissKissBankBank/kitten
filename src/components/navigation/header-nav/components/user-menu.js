@@ -84,7 +84,7 @@ var UserMenu = function UserMenu(_ref) {
 
 exports.UserMenu = UserMenu;
 UserMenu.propTypes = {
-  dropdownContentWidth: _propTypes.default.string,
+  dropdownContentWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   padding: _propTypes.default.bool,
   closeEvents: _propTypes.default.arrayOf(_propTypes.default.string)
 };

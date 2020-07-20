@@ -12,12 +12,7 @@ export default {
 }
 
 export const DefaultProp = () => (
-  <Text
-    color="font1"
-    lineHeight="normal"
-    size="big"
-    weight="regular"
-  >
+  <Text color="font1" lineHeight="normal" size="big" weight="regular">
     Lorem ipsum dolor sit amet…
   </Text>
 )
@@ -68,7 +63,9 @@ export const Color = () => (
     <Marger top="2">
       <Text size="micro">• color="background1"</Text>
       <br />
-      <Text style={{ backgroundColor: "#222" }} color="background1">Lorem ipsum dolor sit amet…</Text>
+      <Text style={{ backgroundColor: '#222' }} color="background1">
+        Lorem ipsum dolor sit amet…
+      </Text>
     </Marger>
     <Marger top="2">
       <Text size="micro">• color="error"</Text>
@@ -93,7 +90,7 @@ export const FontStyle = () => (
       <br />
       <Text fontStyle="italic">Lorem ipsum dolor sit amet…</Text>
     </Marger>
-    </>
+  </>
 )
 
 export const Weight = () => (
@@ -102,7 +99,9 @@ export const Weight = () => (
     <br />
     <Text weight="light">Lorem ipsum dolor sit amet…</Text>
     <Marger top="2">
-      <Text size="micro">• weight="regular" - font-weight: 500, Maax Medium</Text>
+      <Text size="micro">
+        • weight="regular" - font-weight: 500, Maax Medium
+      </Text>
       <br />
       <Text weight="regular">Lorem ipsum dolor sit amet…</Text>
     </Marger>
@@ -115,7 +114,7 @@ export const Weight = () => (
 )
 
 export const Decoration = () => (
-  <>  
+  <>
     <Text size="micro">• decoration="underline"</Text>
     <br />
     <Text decoration="underline">Lorem ipsum dolor sit amet…</Text>
