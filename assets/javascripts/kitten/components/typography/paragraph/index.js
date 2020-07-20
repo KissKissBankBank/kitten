@@ -7,7 +7,6 @@ import { modifierStyles } from './helpers/modifier-styles'
 const StyledParagraph = styled.p`
   ${TYPOGRAPHY.fontStyles.light};
   ${({ modifier }) => modifierStyles(modifier)}
-  line-height: 1.6;
 
   ${({ margin }) =>
   !margin &&

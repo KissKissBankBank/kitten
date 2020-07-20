@@ -1,11 +1,20 @@
 import React from 'react'
+import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 import { Paragraph } from './index'
 import { Text } from '../../../components/typography/text'
 import { Marger } from '../../layout/marger'
 
+const modifierOptions = {
+  Primary: 'primary',
+  Secondary: 'secondary',
+  Tertiary: 'tertiary',
+  Quaternary: 'quaternary',
+}
+
 export default {
   component: Paragraph,
   title: 'Typography/Paragraph',
+  decorators: [withKnobs],
   parameters: {
     component: Paragraph,
     componentSubtitle: 'List of Paragraph',
@@ -15,16 +24,18 @@ export default {
 export const DefaultProp = () => (
   <Paragraph
     tag="p"
-    modifier="primary"
-    margin
-    normalLineHeight={false}
-    italic={false}
+    modifier={select('Modifier', modifierOptions, 'primary')}
+    margin={boolean('Margin', true)}
+    normalLineHeight={boolean('Normal line height', false)}
+    italic={boolean('Italic', false)}
   >
-    Lorem Ipsum is simply dummy text of the printing and 
-    typesetting industry. Lorem Ipsum has been the industry's 
-    standard dummy text ever since the 1500s, when an unknown 
-    printer took a galley of type and scrambled it to make a type 
-    specimen book.
+    {text ('Paragraph',
+      "Lorem Ipsum is simply dummy text of the printing and", 
+      "typesetting industry. Lorem Ipsum has been the industry's",
+      "standard dummy text ever since the 1500s, when an unknown",
+      "printer took a galley of type and scrambled it to make a type",
+      "specimen book.",
+    )}
   </Paragraph>
 )
 
@@ -147,7 +158,7 @@ export const Modifier = () => (
 )
 
 export const Italic = () => (
-  <Paragraph modifier="primary" italic>
+  <Paragraph italic>
     Lorem Ipsum is simply dummy text of the printing and 
     typesetting industry. Lorem Ipsum has been the industry's 
     standard dummy text ever since the 1500s, when an unknown 
@@ -157,7 +168,7 @@ export const Italic = () => (
 )
 
 export const NormalLineHeight = () => (
-  <Paragraph modifier="primary" normalLineHeight>
+  <Paragraph normalLineHeight>
     Lorem Ipsum is simply dummy text of the printing and 
     typesetting industry. Lorem Ipsum has been the industry's 
     standard dummy text ever since the 1500s, when an unknown 
