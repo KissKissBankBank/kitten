@@ -9,6 +9,7 @@ export class Text extends Component {
       color,
       decoration,
       lineHeight,
+      setting,
       size,
       fontStyle,
       tag,
@@ -35,6 +36,11 @@ export class Text extends Component {
 
         // Line height.
         'k-u-line-height-normal': lineHeight == 'normal',
+        'k-u-line-height-1': lineHeight == '1',
+        'k-u-line-height-1-3': lineHeight == '1.3',
+
+        // Font Feature Settings.
+        'k-u-font-setting-tnum': setting == 'tnum', // Monospaced numbers.
 
         // Size.
         'k-u-size-huge': size == 'huge',
@@ -80,9 +86,13 @@ Text.propTypes = {
   */
   decoration: PropTypes.oneOf(['underline', 'none']),
   /**
+    `font-feature-settings: 'tnum'` enables tabular (monospace) numerals.
+  **/
+  setting: PropTypes.oneOf(['tnum']),
+  /**
     `line-height: normal` correspond approximately to 1.2.
   */
-  lineHeight: PropTypes.oneOf(['normal']),
+  lineHeight: PropTypes.oneOf(['normal', '1', '1.3']),
   /**
     Available sizes:
   */
@@ -106,6 +116,7 @@ Text.defaultProps = {
   color: null,
   decoration: null,
   lineHeight: null,
+  setting: null,
   size: null,
   fontStyle: null,
   tag: 'span',
