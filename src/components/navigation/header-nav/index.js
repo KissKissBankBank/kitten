@@ -92,6 +92,7 @@ var HeaderNav = function HeaderNav(_ref4) {
       isFixed = _ref4.isFixed,
       isLogged = _ref4.isLogged,
       quickAccessProps = _ref4.quickAccessProps,
+      stickyProps = _ref4.stickyProps,
       zIndexConfig = _ref4.zIndexConfig;
 
   var _useState = (0, _react.useState)(false),
@@ -183,12 +184,13 @@ var HeaderNav = function HeaderNav(_ref4) {
       callOnToggle: callOnToggle
     }
   }, /*#__PURE__*/_react.default.createElement(Header, {
-    zIndex: zIndexConfig
-  }, /*#__PURE__*/_react.default.createElement(StyledStickyContainer, {
+    zIndex: zIndexConfig,
+    isMenuExpanded: isMenuExpanded
+  }, /*#__PURE__*/_react.default.createElement(StyledStickyContainer, (0, _extends2.default)({
     ref: stickyContainerRef,
     isSticky: isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp',
     isMenuExpanded: isMenuExpanded
-  }, /*#__PURE__*/_react.default.createElement(Navigation, {
+  }, stickyProps), /*#__PURE__*/_react.default.createElement(Navigation, {
     ref: headerRef,
     role: "banner",
     id: id,
@@ -218,6 +220,9 @@ HeaderNav.propTypes = {
     text: _propTypes.default.string,
     zIndex: _propTypes.default.number
   }),
+  stickyProps: _propTypes.default.shape({
+    top: _propTypes.default.number
+  }),
   zIndexConfig: _propTypes.default.shape({
     header: _propTypes.default.number,
     headerWithOpenMenu: _propTypes.default.number
@@ -228,6 +233,7 @@ HeaderNav.defaultProps = {
   isFixed: false,
   isLogged: false,
   quickAccessProps: {},
+  stickyProps: {},
   zIndexConfig: {
     header: 1,
     headerWithOpenMenu: 3

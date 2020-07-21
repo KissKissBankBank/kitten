@@ -51,12 +51,13 @@ var Text = /*#__PURE__*/function (_Component) {
           color = _this$props.color,
           decoration = _this$props.decoration,
           lineHeight = _this$props.lineHeight,
+          setting = _this$props.setting,
           size = _this$props.size,
           fontStyle = _this$props.fontStyle,
           tag = _this$props.tag,
           transform = _this$props.transform,
           weight = _this$props.weight,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "color", "decoration", "lineHeight", "size", "fontStyle", "tag", "transform", "weight"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "color", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "transform", "weight"]);
       var Tag = tag;
       var textClassName = (0, _classnames.default)({
         // Color.
@@ -71,6 +72,11 @@ var Text = /*#__PURE__*/function (_Component) {
         'k-u-decoration-none': decoration == 'none',
         // Line height.
         'k-u-line-height-normal': lineHeight == 'normal',
+        'k-u-line-height-1': lineHeight == '1',
+        'k-u-line-height-1-3': lineHeight == '1.3',
+        // Font Feature Settings.
+        'k-u-font-setting-tnum': setting == 'tnum',
+        // Monospaced numbers.
         // Size.
         'k-u-size-huge': size == 'huge',
         'k-u-size-big': size == 'big',
@@ -98,12 +104,44 @@ var Text = /*#__PURE__*/function (_Component) {
 
 exports.Text = Text;
 Text.propTypes = {
+  /**
+    Available colors:
+  */
   color: _propTypes.default.oneOf(['font1', 'font2', 'primary1', 'background1', 'error', 'valid']),
+
+  /**
+    If `tag="a"`, show underline.
+  */
   decoration: _propTypes.default.oneOf(['underline', 'none']),
-  lineHeight: _propTypes.default.oneOf(['normal']),
+
+  /**
+    `font-feature-settings: 'tnum'` enables tabular (monospace) numerals.
+  **/
+  setting: _propTypes.default.oneOf(['tnum']),
+
+  /**
+    `line-height: normal` correspond approximately to 1.2.
+  */
+  lineHeight: _propTypes.default.oneOf(['normal', '1', '1.3']),
+
+  /**
+    Available sizes:
+  */
   size: _propTypes.default.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
+
+  /**
+    Available font styles (`normal` or `italic`):
+  */
   fontStyle: _propTypes.default.oneOf(['normal', 'italic']),
+
+  /**
+    `text-transform: uppercase`
+  */
   transform: _propTypes.default.oneOf(['uppercase']),
+
+  /**
+    Available font weights (`light`, `regular` or `italic`):
+  */
   weight: _propTypes.default.oneOf(['light', 'regular', 'bold'])
 };
 Text.defaultProps = {
@@ -111,6 +149,7 @@ Text.defaultProps = {
   color: null,
   decoration: null,
   lineHeight: null,
+  setting: null,
   size: null,
   fontStyle: null,
   tag: 'span',

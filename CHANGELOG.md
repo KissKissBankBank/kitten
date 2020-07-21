@@ -4,7 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: New `setting` prop for `Text` component and new `lineHeight` options.
+## [2.81.0] - 2020-07-20
+
+Features:
+- New `setting` prop for `Text` component and new `lineHeight` options.
+- Add `stickyProps` to `HeaderNav`.
+- Add `useDeepCompareEffect` hook.
+- Add `useWindowWidth` hook.
+
+Fixes:
+- Pass `isMenuExpanded` prop to styled component.
+- Fix `Dropdown` position if content is wider than the window.
 
 ## [2.80.0] - 2020-07-13
 

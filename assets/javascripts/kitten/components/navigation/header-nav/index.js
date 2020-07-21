@@ -79,6 +79,7 @@ const HeaderNav = ({
   isFixed,
   isLogged,
   quickAccessProps,
+  stickyProps,
   zIndexConfig,
 }) => {
   const [isMenuExpanded, setMenuExpanded] = useState(false)
@@ -172,11 +173,12 @@ const HeaderNav = ({
         callOnToggle,
       }}
     >
-      <Header zIndex={zIndexConfig}>
+      <Header zIndex={zIndexConfig} isMenuExpanded={isMenuExpanded}>
         <StyledStickyContainer
           ref={stickyContainerRef}
           isSticky={isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp'}
           isMenuExpanded={isMenuExpanded}
+          {...stickyProps}
         >
           <Navigation
             ref={headerRef}
@@ -217,6 +219,9 @@ HeaderNav.propTypes = {
     text: PropTypes.string,
     zIndex: PropTypes.number,
   }),
+  stickyProps: PropTypes.shape({
+    top: PropTypes.number,
+  }),
   zIndexConfig: PropTypes.shape({
     header: PropTypes.number,
     headerWithOpenMenu: PropTypes.number,
@@ -228,6 +233,7 @@ HeaderNav.defaultProps = {
   isFixed: false,
   isLogged: false,
   quickAccessProps: {},
+  stickyProps: {},
   zIndexConfig: {
     header: 1,
     headerWithOpenMenu: 3,
