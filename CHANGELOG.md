@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix shadow on unscrolled `HeaderNav`.
+## [2.81.1] - 2020-07-21
+
+Fix:
+- Fix shadow on unscrolled `HeaderNav`.
 
 ## [2.81.0] - 2020-07-20
 
