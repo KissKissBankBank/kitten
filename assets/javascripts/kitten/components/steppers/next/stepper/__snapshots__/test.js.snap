@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
+<ul
+  className="sc-bwzfXH jzshAe"
+>
+  <li
+    className="sc-htpNat jdbygm"
+  >
+    <span
+      className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-ButtonIcon--empty--nano"
+    />
+    <span
+      className="k-u-size-tiny k-u-weight-regular sc-bxivhb icTOMf"
+    >
+      Default Item
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
+<ul
+  className="sc-bwzfXH jzshAe"
+>
+  <li
+    className="sc-htpNat jdbygm"
+  >
+    <a
+      className="k-u-size-tiny k-u-weight-regular sc-bxivhb icTOMf k-u-link k-u-link-font1"
+      href="https://www.kisskissbankbank.com"
+      rel=""
+      target="_self"
+    >
+      <span
+        className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-ButtonIcon--empty--nano"
+      />
+      Default Link
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
+<ul
+  className="sc-bwzfXH jzshAe"
+>
+  <li
+    className="sc-htpNat jdbygm"
+  >
+    <a
+      className="k-u-size-tiny k-u-weight-regular sc-bxivhb icTOMf k-u-link k-u-link-font1"
+      href="https://www.kisskissbankbank.com"
+      rel="nofollow noopener noreferrer"
+      target="_blank"
+    >
+      <span
+        className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-ButtonIcon--empty--nano"
+      />
+      External Item
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
+<ul
+  className="sc-bwzfXH jzshAe"
+>
+  <li
+    className="sc-htpNat gcWoCb"
+  >
+    <span
+      className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-ButtonIcon--empty--nano"
+    />
+    <span
+      className="k-u-size-tiny k-u-weight-regular sc-bxivhb icTOMf"
+    >
+      Default Item
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
+<ul
+  className="sc-bwzfXH jzshAe"
+>
+  <li
+    className="sc-htpNat fUPfwE"
+  >
+    <span
+      className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--inProgress"
+    >
+      <svg
+        className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg k-Stepper__svg"
+        height="5.64"
+        viewBox="0 0 6 6"
+        width="8.48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Arrow
+        </title>
+        <path
+          d="M6 0H0v6h2V2h4z"
+        />
+      </svg>
+    </span>
+    <span
+      className="k-u-size-tiny k-u-weight-regular sc-bxivhb icTOMf"
+    >
+      Progress Item
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
+<ul
+  className="sc-bwzfXH jzshAe"
+>
+  <li
+    className="sc-htpNat fUPfwE"
+  >
+    <a
+      className="k-u-size-tiny k-u-weight-regular sc-bxivhb icTOMf k-u-link k-u-link-primary1"
+      href="https://www.kisskissbankbank.com"
+      rel=""
+      target="_self"
+    >
+      <span
+        className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--inProgress"
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg k-Stepper__svg"
+          height="5.64"
+          viewBox="0 0 6 6"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            Arrow
+          </title>
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </span>
+      Progress Link
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
+<ul
+  className="sc-bwzfXH jzshAe"
+>
+  <li
+    className="sc-htpNat jdbygm"
+  >
+    <span
+      className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--validated k-ButtonIcon--checked--nano"
+    >
+      <svg
+        className="k-ButtonIcon__svg k-Stepper__svg"
+        fill="#fff"
+        height="8"
+        viewBox="0 0 11 8"
+        width="11"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+        />
+      </svg>
+    </span>
+    <span
+      className="k-u-size-tiny k-u-weight-regular sc-bxivhb icTOMf"
+    >
+      Validated Item
+    </span>
+  </li>
+</ul>
+`;
