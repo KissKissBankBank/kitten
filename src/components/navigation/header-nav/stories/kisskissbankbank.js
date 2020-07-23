@@ -183,7 +183,7 @@ var KissKissBankBankHeaderNavStory = function KissKissBankBankHeaderNavStory(_re
   }, /*#__PURE__*/_react.default.createElement(_index.default.UserMenu.Button, null, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge, null, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Image, {
     src: "https://via.placeholder.com/40x40.png"
   }, /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Badge, null, "2")), /*#__PURE__*/_react.default.createElement(_avatarWithTextAndBadge.AvatarWithTextAndBadge.Text, {
-    textClassName: "k-u-hidden@xxs-down",
+    textClassName: "k-u-hidden@xs-down",
     withEllipsisOverflow: true
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     lineHeight: "normal",

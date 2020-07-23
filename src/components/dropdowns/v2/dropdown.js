@@ -262,7 +262,7 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
 
       if (!dropdownContentWidth || typeof dropdownContentWidth === 'number') {
         var minContentWidth = function minContentWidth() {
-          return dropdownContentWidth > 230 ? dropdownContentWidth : 230;
+          return dropdownContentWidth > 200 ? dropdownContentWidth : 200;
         };
 
         if (computedLeftElement + minContentWidth() > windowWidth) {

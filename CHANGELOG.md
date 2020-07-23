@@ -4,6 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.81.2] - 2020-07-21
+
+Fix:
+- Fix `HeaderNav.UserMenu` `min-width`.
+
+## [2.81.1] - 2020-07-21
+
+Fix:
+- Fix shadow on unscrolled `HeaderNav`.
+
 ## [2.81.0] - 2020-07-20
 
 Features:

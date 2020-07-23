@@ -255,7 +255,7 @@ export const Dropdown = React.forwardRef(
 
         if (!dropdownContentWidth || typeof dropdownContentWidth === 'number') {
           const minContentWidth = () =>
-            dropdownContentWidth > 230 ? dropdownContentWidth : 230
+            dropdownContentWidth > 200 ? dropdownContentWidth : 200
 
           if (computedLeftElement + minContentWidth() > windowWidth) {
             return windowWidth - minContentWidth()
