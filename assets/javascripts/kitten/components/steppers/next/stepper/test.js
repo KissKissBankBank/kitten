@@ -1,6 +1,6 @@
 import renderer from 'react-test-renderer'
 import React from 'react'
-import Stepper from './index'
+import { Stepper } from './index'
 
 describe('NEXT // <Stepper />', () => {
   it('default item matches with snapshot', () => {
