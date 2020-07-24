@@ -12,7 +12,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
   />
   <label
     className="sc-bdVaJa itHzpq k-DocumentManager__uploader__button"
-    for="DocumentManager"
+    htmlFor="DocumentManager"
   >
     <div
       className="k-DocumentManager__uploader__container"
@@ -96,7 +96,7 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
   />
   <label
     className="sc-bdVaJa biqsCf k-DocumentManager__uploader__button"
-    for="DocumentManager"
+    htmlFor="DocumentManager"
   >
     <div
       className="k-DocumentManager__uploader__container"
