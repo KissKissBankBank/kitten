@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `giant` prop to `Button`.
 - Fix: Remove console warning from `ProgressRing`.
 - Fix: Adjust box shadow on Dropdown.
 - Fix: Replace `for` with `htmlFor` in `BasicUploader` and `DocumentManager`.
