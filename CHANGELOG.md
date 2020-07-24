@@ -5,6 +5,31 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: Remove console warning from `ProgressRing`.
+- Fix: Adjust box shadow on Dropdown.
+- Fix: Replace `for` with `htmlFor` in `BasicUploader` and `DocumentManager`.
+- Feature : add `fullSize` and `fullSizeTitle` props to `next/Modal`.
+
+## [2.81.2] - 2020-07-21
+
+Fix:
+- Fix `HeaderNav.UserMenu` `min-width`.
+
+## [2.81.1] - 2020-07-21
+
+Fix:
+- Fix shadow on unscrolled `HeaderNav`.
+
+## [2.81.0] - 2020-07-20
+
+Features:
+- New `setting` prop for `Text` component and new `lineHeight` options.
+- Add `stickyProps` to `HeaderNav`.
+- Add `useDeepCompareEffect` hook.
+- Add `useWindowWidth` hook.
+
+Fixes:
+- Pass `isMenuExpanded` prop to styled component.
+- Fix `Dropdown` position if content is wider than the window.
 
 ## [2.80.0] - 2020-07-13
 

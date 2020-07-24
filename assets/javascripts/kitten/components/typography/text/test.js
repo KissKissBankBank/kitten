@@ -89,4 +89,12 @@ describe('<Text />', () => {
       expect(component.hasClass('k-u-decoration-underline')).toBe(true)
     })
   })
+
+  describe('with settings prop', () => {
+    const component = shallow(<Text setting="tnum" />)
+
+    it('has a good utility class', () => {
+      expect(component.hasClass('k-u-font-setting-tnum')).toBe(true)
+    })
+  })
 })

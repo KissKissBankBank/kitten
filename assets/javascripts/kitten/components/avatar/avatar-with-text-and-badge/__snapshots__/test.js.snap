@@ -26,6 +26,7 @@ exports[`<AvatarWithTextAndBadge /> without avatar should match with snapshot 1`
         decoration={null}
         fontStyle={null}
         lineHeight={null}
+        setting={null}
         size="micro"
         tag="span"
         transform={null}
@@ -43,6 +44,7 @@ exports[`<AvatarWithTextAndBadge /> without avatar should match with snapshot 1`
       decoration={null}
       fontStyle={null}
       lineHeight={null}
+      setting={null}
       size={null}
       tag="span"
       transform={null}
@@ -58,6 +60,7 @@ exports[`<AvatarWithTextAndBadge /> without avatar should match with snapshot 1`
       decoration={null}
       fontStyle={null}
       lineHeight="normal"
+      setting={null}
       size={null}
       tag="span"
       transform={null}
