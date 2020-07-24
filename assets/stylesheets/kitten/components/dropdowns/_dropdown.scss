@@ -74,7 +74,7 @@
     // Height is needed to allow scroll on navigation. The 100% is equal to the
     // header height.
     max-height: calc(100vh - 100%);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
 
     @include k-media-xs {
       min-width: 0;
