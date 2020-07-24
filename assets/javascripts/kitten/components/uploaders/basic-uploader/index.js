@@ -160,7 +160,7 @@ export const BasicUploader = ({
         fluid
         {...buttonProps}
         as="label"
-        for={id}
+        htmlFor={id}
         className={classNames('k-BasicUploader__button', buttonProps.className)}
       >
         {internalStatus === 'loading' ? (

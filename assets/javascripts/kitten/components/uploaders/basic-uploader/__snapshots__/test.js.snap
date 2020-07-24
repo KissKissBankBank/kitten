@@ -12,7 +12,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
   />
   <label
     className="sc-bdVaJa drBUyM k-BasicUploader__button"
-    for="BasicUploader"
+    htmlFor="BasicUploader"
   >
     <svg
       aria-hidden={true}
@@ -47,7 +47,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
   />
   <label
     className="sc-bdVaJa drBUyM k-BasicUploader__button"
-    for="BasicUploader"
+    htmlFor="BasicUploader"
   >
     <svg
       aria-hidden={true}
@@ -83,7 +83,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
   />
   <label
     className="sc-bdVaJa dckyFF k-BasicUploader__button"
-    for="BasicUploader"
+    htmlFor="BasicUploader"
   >
     <svg
       aria-hidden={true}
