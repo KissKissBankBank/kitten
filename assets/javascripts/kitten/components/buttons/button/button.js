@@ -61,11 +61,11 @@ const StyledButton = styled.button`
 
   ${({ tiny }) => tiny && TINY}
   ${({ big }) => big && BIG}
-  ${({ giant }) => giant && BIG}
+  ${({ huge }) => huge && BIG}
   ${({ icon }) => icon && ICON}
   ${({ icon, tiny }) => icon && tiny && ICON_TINY}
   ${({ icon, big }) => icon && big && ICON_BIG}
-  ${({ icon, giant }) => icon && giant && ICON_GIANT}
+  ${({ icon, huge }) => icon && huge && ICON_HUGE}
   ${({ fluid }) => fluid && FLUID}
 
   ${({ modifier }) => modifierStyles(modifier)}
@@ -75,7 +75,7 @@ const checkedCircleIconStyle = size => {
   let iconSize
 
   switch (size) {
-    case 'giant':
+    case 'huge':
       iconSize = 33
       break
     case 'big':
@@ -155,7 +155,7 @@ export const BIG = css`
   }
 `
 
-export const GIANT = css`
+export const HUGE = css`
   min-height: ${pxToRem(70)};
   font-size: ${stepToRem(-1)};
   padding: 0 ${pxToRem(10)};
@@ -209,7 +209,7 @@ export const ICON_BIG = css`
   }
 `
 
-export const ICON_GIANT = css`
+export const ICON_HUGE = css`
   min-width: initial;
   width: ${pxToRem(70)};
   height: ${pxToRem(70)};
@@ -232,7 +232,7 @@ export class Button extends Component {
     borderRadius: PropTypes.number,
     tiny: PropTypes.bool,
     big: PropTypes.bool,
-    giant: PropTypes.bool,
+    huge: PropTypes.bool,
     fluid: PropTypes.bool,
     icon: PropTypes.bool,
     modifier: PropTypes.oneOf([
@@ -250,7 +250,7 @@ export class Button extends Component {
   static defaultProps = {
     tiny: false,
     big: false,
-    giant: false,
+    huge: false,
     fluid: false,
     icon: false,
     modifier: 'hydrogen',

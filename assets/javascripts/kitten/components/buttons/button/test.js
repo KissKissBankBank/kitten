@@ -36,9 +36,9 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with `giant` prop', () => {
+  describe('with `huge` prop', () => {
     beforeEach(() => {
-      component = renderer.create(<Button giant>MyButton</Button>).toJSON()
+      component = renderer.create(<Button huge>MyButton</Button>).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -151,11 +151,11 @@ describe('<Button />', () => {
     })
   })
 
-  describe('with icon and giant', () => {
+  describe('with icon and huge', () => {
     beforeEach(() => {
       component = renderer
         .create(
-          <Button icon giant>
+          <Button icon huge>
             !
           </Button>,
         )
