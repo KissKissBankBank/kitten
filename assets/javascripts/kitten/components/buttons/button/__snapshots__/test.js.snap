@@ -475,7 +475,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
+exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1129,7 +1129,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 </button>
 `;
 
-exports[`<Button /> with icon and giant matches with snapshot 1`] = `
+exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
