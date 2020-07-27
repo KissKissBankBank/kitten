@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `huge` and `center` props to `TextInput`.
+- Feature: Add `huge` prop to `SelectWithState`.
 - Fix: Remove console warning from `ProgressRing`.
 - Fix: Adjust box shadow on Dropdown.
 - Fix: Replace `for` with `htmlFor` in `BasicUploader` and `DocumentManager`.

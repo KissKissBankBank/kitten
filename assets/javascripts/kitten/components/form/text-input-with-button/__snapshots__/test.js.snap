@@ -5,7 +5,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje jZhEES"
+    className="sc-bwzfXH eiEJux sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
@@ -24,7 +24,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje jZhEES"
+    className="sc-bwzfXH eiEJux sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
@@ -44,7 +44,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje jZhEES"
+    className="sc-bwzfXH eiEJux sc-EHOje jZhEES"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -103,7 +103,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje jZhEES"
+    className="sc-bwzfXH eiEJux sc-EHOje jZhEES"
     disabled={true}
     name="text"
   />
@@ -122,7 +122,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH hxdmqA sc-EHOje jZhEES"
+    className="sc-bwzfXH iGQVAk sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
@@ -136,12 +136,31 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
 </div>
 `;
 
+exports[`<TextInputWithButton /> with huge prop matches with snapshot 1`] = `
+<div
+  className="sc-ifAKCX kXEWnh"
+>
+  <input
+    className="sc-bwzfXH izBtTt sc-EHOje jZhEES"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="sc-bZQynM hqRtSn"
+    disabled={false}
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
 exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
 <div
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje jZhEES"
+    className="sc-bwzfXH eiEJux sc-EHOje jZhEES"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -162,7 +181,7 @@ exports[`<TextInputWithButton /> with tiny prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH hXpaRk sc-EHOje jZhEES"
+    className="sc-bwzfXH iHgAQK sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
@@ -181,7 +200,7 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH fweSIF sc-EHOje jZhEES"
+    className="sc-bwzfXH iSPCiL sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />

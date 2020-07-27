@@ -27,6 +27,7 @@ const info = {
     #### Size
     ~~~js
     <TextInputWithButton tiny />
+    <TextInputWithButton huge />
     ~~~
 
     #### State
@@ -52,6 +53,7 @@ storiesOf('Form/TextInput', module)
               error={boolean('Error', false)}
               disabled={boolean('Disabled', false)}
               tiny={boolean('Tiny', false)}
+              huge={boolean('Huge', false)}
               buttonValue={<Loader />}
               inputValue={text('inputValue', 'Une valeur')}
               placeholder={text(

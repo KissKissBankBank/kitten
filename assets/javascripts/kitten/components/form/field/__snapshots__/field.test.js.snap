@@ -122,7 +122,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat ynqvX"
+      className="sc-htpNat KqeiD"
       disabled={false}
       id="input"
       name="field"
@@ -216,7 +216,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat bKpJKj"
+      className="sc-htpNat fRBJHg"
       disabled={false}
       id="input"
       name="field"
@@ -299,7 +299,7 @@ Array [
       className="sc-gZMcBi jRuEcz"
     >
       <input
-        className="sc-htpNat ynqvX sc-gqjmRU liPQXk"
+        className="sc-htpNat KqeiD sc-gqjmRU liPQXk"
         disabled={false}
         id="input"
         name="field"
@@ -423,7 +423,7 @@ Array [
       className="sc-gZMcBi jRuEcz"
     >
       <input
-        className="sc-htpNat bKpJKj sc-gqjmRU liPQXk"
+        className="sc-htpNat fRBJHg sc-gqjmRU liPQXk"
         disabled={false}
         id="input"
         name="field"

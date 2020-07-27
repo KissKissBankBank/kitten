@@ -22,6 +22,7 @@ export const SelectWithState = ({
   onInputChange,
   className,
   tiny,
+  huge,
   error,
   valid,
   disabled,
@@ -62,6 +63,7 @@ export const SelectWithState = ({
 
   const selectClassName = classNames('k-Select', className, {
     'k-Select--tiny': tiny,
+    'k-Select--huge': huge,
     'is-error': error,
     'is-valid': valid,
     'is-disabled': disabled,
@@ -171,6 +173,7 @@ SelectWithState.defaultProps = {
   valid: false,
   disabled: false,
   tiny: false,
+  huge: false,
   name: null,
   inputProps: {},
   autoFill: undefined,

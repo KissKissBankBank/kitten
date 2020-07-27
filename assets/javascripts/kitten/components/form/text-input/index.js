@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const borderWidth = pxToRem(2)
 const verticalPadding = pxToRem(10)
@@ -76,6 +77,23 @@ const styledTextInput = css`
     css`
       height: ${pxToRem(40)};
     `}
+
+  ${({ huge }) =>
+    huge &&
+    css`
+      height: ${pxToRem(70)};
+
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        height: ${pxToRem(90)};
+        font-size: ${stepToRem(0)};
+      }
+    `}
+
+  ${({ center }) =>
+    center &&
+    css`
+      text-align: center;
+    `}
 `
 
 const StyledTextarea = styled.div`
@@ -144,6 +162,8 @@ export class TextInput extends PureComponent {
     valid: PropTypes.bool,
     error: PropTypes.bool,
     tiny: PropTypes.bool,
+    huge: PropTypes.bool,
+    center: PropTypes.bool,
     disabled: PropTypes.bool,
     name: PropTypes.string,
     digits: PropTypes.number,
@@ -154,6 +174,8 @@ export class TextInput extends PureComponent {
     valid: false,
     error: false,
     tiny: false,
+    huge: false,
+    center: false,
     disabled: false,
     name: 'text',
     digits: null,
@@ -167,6 +189,8 @@ export class TextInput extends PureComponent {
       name,
       digits,
       tiny,
+      huge,
+      center,
       tag,
       ...others
     } = this.props
@@ -182,6 +206,8 @@ export class TextInput extends PureComponent {
             tiny={tiny}
             digits={digits}
             name={name}
+            huge={huge}
+            center={center}
             {...others}
           />
           <StyledGradientTextarea />
@@ -197,6 +223,8 @@ export class TextInput extends PureComponent {
           tiny={tiny}
           digits={digits}
           name={name}
+          huge={huge}
+          center={center}
           {...others}
         />
       )

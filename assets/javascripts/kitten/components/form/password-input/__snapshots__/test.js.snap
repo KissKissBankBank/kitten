@@ -5,7 +5,7 @@ exports[`<PasswordInput /> should match its empty snapshot 1`] = `
   className="sc-ifAKCX fbwfwx"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje lbXJmM"
+    className="sc-bwzfXH eiEJux sc-EHOje lbXJmM"
     disabled={false}
     id="password"
     name="password"
