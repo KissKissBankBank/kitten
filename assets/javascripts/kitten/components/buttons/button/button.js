@@ -61,7 +61,7 @@ const StyledButton = styled.button`
 
   ${({ tiny }) => tiny && TINY}
   ${({ big }) => big && BIG}
-  ${({ huge }) => huge && BIG}
+  ${({ huge }) => huge && HUGE}
   ${({ icon }) => icon && ICON}
   ${({ icon, tiny }) => icon && tiny && ICON_TINY}
   ${({ icon, big }) => icon && big && ICON_BIG}

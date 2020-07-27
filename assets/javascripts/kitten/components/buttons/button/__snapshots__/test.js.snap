@@ -507,6 +507,9 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -582,19 +585,19 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:768px) {
   .c0 {
     min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
+    min-height: 5.625rem;
     font-size: 1rem;
+    padding: 0 2.5rem;
   }
 }
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 13.75rem;
-    height: 4.375rem;
+    height: 5.625rem;
   }
 }
 
@@ -1161,6 +1164,9 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
   min-width: initial;
   min-height: initial;
   width: 3.125rem;
@@ -1244,19 +1250,19 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   }
 }
 
-@media (min-width:40rem) {
+@media (min-width:768px) {
   .c0 {
     min-width: 13.75rem;
-    min-height: 4.375rem;
-    padding: 0 2.5rem;
+    min-height: 5.625rem;
     font-size: 1rem;
+    padding: 0 2.5rem;
   }
 }
 
-@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c0 {
     width: 13.75rem;
-    height: 4.375rem;
+    height: 5.625rem;
   }
 }
 
