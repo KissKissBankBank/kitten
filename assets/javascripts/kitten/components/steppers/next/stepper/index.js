@@ -12,17 +12,24 @@ import {
 } from '../../../../components/steppers/stepper-icon'
 import PropTypes from 'prop-types'
 
-const Wrapper = styled.ul`
+const Wrapper = styled.div`
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+`
+
+const List = styled.ul`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  overflow-x: scroll;
   height: ${pxToRem(80)};
   box-sizing: border-box;
   min-width: min-content;
   padding-right: 40px;
   background-color: ${COLORS.primary6};
+  margin: 0;
   @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
     height: ${pxToRem(65)};
   }
@@ -90,7 +97,14 @@ StepperItem.defaultProps = {
   pointer: false,
 }
 
-export const StepperLink = ({ children, state, href, external, ...props }) => {
+export const StepperLink = ({
+  children,
+  state,
+  href,
+  external,
+  linkProps,
+  ...props
+}) => {
   return (
     <ItemWrapper state={state} {...props}>
       <StepperText
@@ -104,6 +118,7 @@ export const StepperLink = ({ children, state, href, external, ...props }) => {
         href={href}
         target={external ? '_blank' : '_self'}
         rel={external ? 'nofollow noopener noreferrer' : ''}
+        {...linkProps}
       >
         <>
           <StepperIcon state={state} />
@@ -118,15 +133,21 @@ StepperLink.propTypes = {
   href: PropTypes.string.isRequired,
   state: PropTypes.oneOf(['default', 'progress', 'validated']),
   external: PropTypes.bool,
+  linkProps: PropTypes.object,
 }
 
 StepperLink.defaultProps = {
   state: 'default',
   external: false,
+  linkProps: {},
 }
 
 export const Stepper = ({ children, ...others }) => {
-  return <Wrapper {...others}>{children}</Wrapper>
+  return (
+    <Wrapper>
+      <List {...others}>{children}</List>
+    </Wrapper>
+  )
 }
 
 Stepper.propTypes = {}

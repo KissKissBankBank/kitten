@@ -28,6 +28,12 @@ export const Default = () => {
       <Stepper.Link href="https://www.kisskissbankbank.com">
         Regular Link
       </Stepper.Link>
+      <Stepper.Link
+        href="https://www.kisskissbankbank.com"
+        linkProps={{ 'aria-current': 'page' }}
+      >
+        Regular Link with props
+      </Stepper.Link>
       <Stepper.Link href="https://www.kisskissbankbank.com" external>
         External Link
       </Stepper.Link>
