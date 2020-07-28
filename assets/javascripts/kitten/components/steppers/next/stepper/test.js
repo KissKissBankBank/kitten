@@ -90,4 +90,22 @@ describe('NEXT // <Stepper />', () => {
 
     expect(component).toMatchSnapshot()
   })
+
+  it('link with linkProps matches with snapshot', () => {
+    const component = renderer
+      .create(
+        <Stepper>
+          <Stepper.Link
+            href="https://www.kisskissbankbank.com"
+            external
+            linkProps={{ 'aria-current': 'page' }}
+          >
+            External Item
+          </Stepper.Link>
+        </Stepper>,
+      )
+      .toJSON()
+
+    expect(component).toMatchSnapshot()
+  })
 })
