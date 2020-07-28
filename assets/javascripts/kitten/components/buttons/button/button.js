@@ -62,10 +62,10 @@ const StyledButton = styled.button`
   ${({ tiny }) => tiny && TINY}
   ${({ big }) => big && BIG}
   ${({ huge }) => huge && HUGE}
-  ${({ icon }) => icon && ICON}
-  ${({ icon, tiny }) => icon && tiny && ICON_TINY}
-  ${({ icon, big }) => icon && big && ICON_BIG}
-  ${({ icon, huge }) => icon && huge && ICON_HUGE}
+  ${({ icon, fluid }) => icon && !fluid && ICON}
+  ${({ icon, tiny, fluid }) => icon && tiny && !fluid && ICON_TINY}
+  ${({ icon, big, fluid }) => icon && big && !fluid && ICON_BIG}
+  ${({ icon, huge, fluid }) => icon && huge && !fluid && ICON_HUGE}
   ${({ fluid }) => fluid && FLUID}
 
   ${({ modifier }) => modifierStyles(modifier)}
@@ -113,8 +113,8 @@ const CheckedCircleIcon = styled(({ big, tiny, ...others }) => (
 `
 
 export const FLUID = css`
-  min-width: initial !important;
-  width: 100% !important;
+  min-width: initial;
+  width: 100%;
 `
 
 export const DEFAULT = css`
