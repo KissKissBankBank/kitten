@@ -273,7 +273,7 @@ export const DocumentManager = ({
           borderRadius={4}
           {...buttonProps}
           as="label"
-          for={id}
+          htmlFor={id}
           className={classNames(
             'k-DocumentManager__uploader__button',
             buttonProps.className,

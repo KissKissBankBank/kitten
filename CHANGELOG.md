@@ -4,6 +4,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove console warning from `ProgressRing`.
+- Fix: Adjust box shadow on Dropdown.
+- Fix: Replace `for` with `htmlFor` in `BasicUploader` and `DocumentManager`.
+- Feature: Add `fullSize` and `fullSizeTitle` props to `next/Modal`.
+- Feature: New `<Stepper />` component imported from `import { Stepper } from '@kisskissbankbank/kitten/next`, (see usage on our Storybook, section named `NEXT`).
+- Feature: Add new `k-u-link-font1` class utility.
+ 
+## [2.81.2] - 2020-07-21
+
+Fix:
+- Fix `HeaderNav.UserMenu` `min-width`.
+
+## [2.81.1] - 2020-07-21
+
+Fix:
+- Fix shadow on unscrolled `HeaderNav`.
+
 ## [2.81.0] - 2020-07-20
 
 Features:

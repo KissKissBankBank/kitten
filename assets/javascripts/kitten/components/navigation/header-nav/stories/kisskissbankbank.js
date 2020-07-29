@@ -147,7 +147,7 @@ export const KissKissBankBankHeaderNavStory = ({ isLogged, isFixed }) => {
                 </AvatarWithTextAndBadge.Image>
 
                 <AvatarWithTextAndBadge.Text
-                  textClassName="k-u-hidden@xxs-down"
+                  textClassName="k-u-hidden@xs-down"
                   withEllipsisOverflow={true}
                 >
                   <Text lineHeight="normal" weight="regular">
