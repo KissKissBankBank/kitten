@@ -80,7 +80,7 @@ describe('<SimilarProjectCard />', () => {
     const similarProjectCard = mount(
       <SimilarProjectCard paragraph="Custom paragraph" />,
     )
-    const paragraph = similarProjectCard.find('.k-Paragraph')
+    const paragraph = similarProjectCard.find(Paragraph)
 
     it('renders a <Paragraph />', () => {
       expect(similarProjectCard.find(Paragraph)).toHaveLength(1)
