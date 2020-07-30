@@ -95,12 +95,10 @@ export const ClickableCard = ({
   disabled,
   fluid,
   size,
-  type,
   ...props
 }) => {
   return (
     <StyledClickableCard
-      as={type === 'link' ? 'a' : type}
       {...props}
       className={classNames(
         'k-ClickableCard',
@@ -150,7 +148,6 @@ ClickableCard.defaultProps = {
   borderColor: COLORS.primary1,
   disabled: false,
   fluid: false,
-  type: 'button',
 }
 
 ClickableCard.propTypes = {
@@ -170,10 +167,6 @@ ClickableCard.propTypes = {
     Card width, in pixels, without unit
   */
   size: PropTypes.number,
-  /**
-    Card type (link or button)
-  */
-  type: PropTypes.oneOf(['button', 'link']),
 }
 
 ClickableCardImage.defaultProps = {
