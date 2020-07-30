@@ -33,6 +33,7 @@ describe('<ClickableCard />', () => {
           borderColor="blue"
           backgroundColor="black"
           aria-checked={true}
+          disabled={true}
           onClick={() => {}}
         >
           <ClickableCard.Image shape="circle" fit="contain">

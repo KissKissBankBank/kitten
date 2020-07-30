@@ -36,6 +36,7 @@ export const Default = () => {
     <StoryContainer>
       <ClickableCard
         size={number('Card size', 250)}
+        disabled={boolean('Is card disabled?', false)}
         fluid={boolean('Is card fluid?', false)}
         borderColor={color('Border color', COLORS.primary1)}
         backgroundColor={color('Background color', COLORS.primary6)}

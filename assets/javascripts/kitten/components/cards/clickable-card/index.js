@@ -86,6 +86,11 @@ const StyledClickableCard = styled.button`
       }
     `}
   }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 `
 
 export const ClickableCard = ({
