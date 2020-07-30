@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [2.82] - 2020-07-30
+## [2.82.0] - 2020-07-30
 
 Features:
 - Add `fullSize` and `fullSizeTitle` props to `next/Modal`.
