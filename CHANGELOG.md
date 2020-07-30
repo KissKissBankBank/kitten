@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `huge` prop to `Button`.
+- Feature: Add `huge` and `giant` props to `Button`.
 
 ## [2.82.0] - 2020-07-30
 
