@@ -1,0 +1,27 @@
+/// Utilities to reset default button styles.
+///
+/// @group reset
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-button;
+///
+/// @example html
+///
+///   <button class="k-u-reset-button" />
+
+.k-u-reset-button {
+/**
+ * https://fvsch.com/styling-buttons/#reset
+ * Reset button styles.
+ * It takes a bit of work to achieve a neutral look.
+ */
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* show a hand cursor on hover; some argue that we
+  should keep the default arrow cursor for buttons */
+  cursor: pointer;
+}

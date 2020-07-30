@@ -98,16 +98,6 @@ const StyledDocumentDisplay = styled.div`
   }
 
   .k-DocumentManager__actionButton {
-    /** https://fvsch.com/styling-buttons/#reset
-     * Reset button styles.
-     * It takes a bit of work to achieve a neutral look.
-     */
-    padding: 0;
-    border: none;
-    font: inherit;
-    color: inherit;
-    background-color: transparent;
-
     margin-top: ${pxToRem(10)};
     cursor: pointer;
     transition: color 0.2s;
@@ -381,7 +371,7 @@ export const DocumentManager = ({
           </Text>
           {canCancel && (
             <button
-              className="k-DocumentManager__actionButton"
+              className="k-DocumentManager__actionButton k-u-reset-button"
               onClick={handleCancelClick}
             >
               <Text
@@ -395,7 +385,7 @@ export const DocumentManager = ({
           )}
           {canReplace && (
             <button
-              className="k-DocumentManager__actionButton"
+              className="k-DocumentManager__actionButton k-u-reset-button"
               onClick={handleReplaceClick}
             >
               <Text
