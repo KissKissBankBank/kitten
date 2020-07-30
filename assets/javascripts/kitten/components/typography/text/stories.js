@@ -1,19 +1,62 @@
 import React from 'react'
 import { Text } from './index'
 import { Marger } from '../../layout/marger'
+import { withKnobs, text, select, color } from '@storybook/addon-knobs'
+import COLORS from '../../../constants/colors-config'
 
 export default {
   component: Text,
   title: 'Typography/Text',
+  decorators: [withKnobs],
   parameters: {
     component: Text,
     componentSubtitle: 'List of Text',
   },
 }
 
+const colorOptions = {
+  font1: 'font1',
+  font2: 'font2',
+  primary1: 'primary1',
+  background1: 'background1',
+  error: 'error',
+  valid: 'valid',
+}
+
+const decorationOptions = { underline: 'underline', none: 'none' }
+
+const lineHeightOptions = { normal: 'normal', '1': '1', '1.3': '1.3' }
+
+const sizeOptions = {
+  huge: 'huge',
+  big: 'big',
+  default: 'default',
+  tiny: 'tiny',
+  micro: 'micro',
+  nano: 'nano',
+}
+
+const fontStyleOptions = { normal: 'normal', italic: 'italic' }
+
+const transformOptions = { uppercase: 'uppercase', null: null }
+
+const weightOptions = { light: 'light', regular: 'regular', bold: 'bold' }
+
+const settingsOptions = { null: null, tnum: 'tnum' }
+
 export const DefaultProp = () => (
-  <Text color="font1" lineHeight="normal" size="big" weight="regular">
-    Lorem ipsum dolor sit amet…
+  <Text
+    color={select('Color', colorOptions, 'font1')}
+    cssColor={color('cssColor', COLORS.font1)}
+    decoration={select('Decoration', decorationOptions, 'none')}
+    lineHeight={select('LineHeight', lineHeightOptions, 'normal')}
+    size={select('Size', sizeOptions, 'default')}
+    fontStyle={select('FontStyle', fontStyleOptions, 'normal')}
+    transform={select('Transform', transformOptions, null)}
+    weight={select('Weight', weightOptions, 'regular')}
+    setting={select('Setting: tnum', settingsOptions, null)}
+  >
+    {text('Text', 'Lorem ipsum dolor sit amet…')}
   </Text>
 )
 

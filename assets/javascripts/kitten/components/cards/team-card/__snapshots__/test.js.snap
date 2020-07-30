@@ -2,7 +2,7 @@
 
 exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb eftOVz"
+  className="sc-ifAKCX cECoah"
 >
   
   
@@ -32,26 +32,26 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
 exports[`<TeamCard /> with some props matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-bwzfXH cnBWiK k-u-margin-bottom-double"
+    className="sc-htpNat fLLWtn k-u-margin-bottom-double"
     title="Title"
   />,
   <div
-    className="sc-bdVaJa jtfdLD"
+    className="sc-bwzfXH kRhUjH"
   >
     <span
-      className="k-u-color-font1 k-u-size-default k-u-weight-bold"
+      className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-default k-u-weight-bold"
     >
       Lorem Ipsum
     </span>
     <br />
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-light"
+      className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-light"
     >
       Consectetur
     </span>
   </div>,
   <div
-    className="sc-bxivhb eftOVz"
+    className="sc-ifAKCX cECoah"
   >
     <a
       className="k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--hydrogen"
@@ -93,7 +93,7 @@ Array [
       </svg>
     </a>
     <a
-      className="sc-htpNat jKwHmM k-TeamCardIcons__buttonIcon"
+      className="sc-bxivhb ebiAFY k-TeamCardIcons__buttonIcon"
       href="tel:06 00 00 00 00"
     >
       <span

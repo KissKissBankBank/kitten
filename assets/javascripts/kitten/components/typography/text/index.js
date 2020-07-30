@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import styled, { css } from 'styled-components'
+
+const StyledText = styled.span`
+  ${({ cssColor }) =>
+    cssColor &&
+    css`
+      color: ${cssColor};
+    `}
+`
 
 export class Text extends Component {
   render() {
     const {
       className,
       color,
+      cssColor,
       decoration,
       lineHeight,
       setting,
@@ -17,8 +27,6 @@ export class Text extends Component {
       weight,
       ...others
     } = this.props
-
-    const Tag = tag
 
     const textClassName = classNames(
       {
@@ -65,7 +73,7 @@ export class Text extends Component {
       className,
     )
 
-    return <Tag {...others} className={textClassName} />
+    return <StyledText as={tag} {...others} className={textClassName} />
   }
 }
 
@@ -81,6 +89,10 @@ Text.propTypes = {
     'error',
     'valid',
   ]),
+  /**
+    Specify a custom color (as a CSS color string).
+  */
+  cssColor: PropTypes.string,
   /**
     If `tag="a"`, show underline.
   */
@@ -114,6 +126,7 @@ Text.propTypes = {
 Text.defaultProps = {
   className: null,
   color: null,
+  cssColor: null,
   decoration: null,
   lineHeight: null,
   setting: null,

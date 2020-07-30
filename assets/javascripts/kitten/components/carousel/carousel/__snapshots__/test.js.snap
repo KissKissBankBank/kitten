@@ -55,7 +55,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-chPdSV gNTmaU k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -130,7 +130,7 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-chPdSV gNTmaU k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -213,7 +213,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                     className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
                   >
                     <p
-                      className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                      className="sc-chPdSV gNTmaU k-ProjectCard__grid--flex__item-fluid k-Card__title"
                     >
                       A
                     </p>
@@ -299,7 +299,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                     className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
                   >
                     <p
-                      className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                      className="sc-chPdSV gNTmaU k-ProjectCard__grid--flex__item-fluid k-Card__title"
                     >
                       A
                     </p>
@@ -379,7 +379,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                 className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-chPdSV gNTmaU k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -454,7 +454,7 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 className="sc-kAzzGY joJvuh k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-chPdSV cYYEzz k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-chPdSV gNTmaU k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>

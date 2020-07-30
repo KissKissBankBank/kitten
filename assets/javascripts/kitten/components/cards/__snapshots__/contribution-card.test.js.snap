@@ -21,7 +21,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             className="sc-bdVaJa zBUGX"
           >
             <h1
-              className="sc-htpNat dnkpxB k-u-color-font1"
+              className="sc-htpNat KvJvV k-u-color-font1"
             >
               Custom title mount
             </h1>
@@ -78,7 +78,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-bdVaJa zBUGX"
           >
             <h1
-              className="sc-htpNat dnkpxB k-u-color-font1"
+              className="sc-htpNat KvJvV k-u-color-font1"
             >
               Custom title mount
             </h1>
@@ -101,7 +101,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-bdVaJa gSHEXD"
           >
             <p
-              className="k-u-color-font1 k-u-size-huge k-u-weight-bold k-u-margin-none"
+              className="sc-EHOje jvzENE k-u-color-font1 k-u-size-huge k-u-weight-bold k-u-margin-none"
             >
               Custom title description
             </p>
@@ -123,31 +123,31 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <span
-              className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+              className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
             >
               Custom title contributors 
               <span
-                className="k-u-weight-light"
+                className="sc-EHOje jvzENE k-u-weight-light"
               >
                 Custom value contributors
               </span>
             </span>
             <span
-              className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+              className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
             >
               Custom title delivery 
               <span
-                className="k-u-weight-light"
+                className="sc-EHOje jvzENE k-u-weight-light"
               >
                 Custom value delivery
               </span>
             </span>
             <span
-              className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+              className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
             >
               Custom title availability 
               <span
-                className="k-u-weight-light"
+                className="sc-EHOje jvzENE k-u-weight-light"
               >
                 Custom value availability
               </span>
@@ -176,11 +176,11 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               className="k-LegacyRewardCard__myContribution"
             >
               <span
-                className="sc-EHOje kaBNsB k-LegacyRewardCard__iconBadge"
+                className="sc-bZQynM RuXvg k-LegacyRewardCard__iconBadge"
                 disabled={false}
               >
                 <span
-                  className="sc-bZQynM givIjb"
+                  className="sc-gzVnrw fyhbVQ"
                 >
                   <svg
                     className="k-IconBadge__svg"
@@ -201,12 +201,12 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
                 className="k-LegacyRewardCard__myContribution__text"
               >
                 <span
-                  className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+                  className="sc-EHOje jvzENE k-u-color-font1 k-u-size-tiny k-u-weight-regular"
                 >
                   Custom my contribution
                   <br />
                   <a
-                    className="k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
+                    className="sc-EHOje jvzENE k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
                     href="Custom manage link contribution"
                   >
                     Custom manage contribution
@@ -260,7 +260,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-bdVaJa zBUGX"
           >
             <h1
-              className="sc-htpNat crSxlp k-u-color-font1"
+              className="sc-htpNat NZuTE k-u-color-font1"
             >
               Custom title mount
             </h1>
@@ -283,7 +283,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-bdVaJa gSHEXD"
           >
             <p
-              className="k-u-color-font1 k-u-size-big k-u-weight-bold k-u-margin-none"
+              className="sc-EHOje jvzENE k-u-color-font1 k-u-size-big k-u-weight-bold k-u-margin-none"
             >
               Custom title description
             </p>
@@ -306,11 +306,11 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           >
             <div>
               <span
-                className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+                className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
               >
                 Custom title contributors 
                 <span
-                  className="k-u-weight-light"
+                  className="sc-EHOje jvzENE k-u-weight-light"
                 >
                   Custom value contributors
                 </span>
@@ -318,11 +318,11 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </div>
             <div>
               <span
-                className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+                className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
               >
                 Custom title delivery 
                 <span
-                  className="k-u-weight-light"
+                  className="sc-EHOje jvzENE k-u-weight-light"
                 >
                   Custom value delivery
                 </span>
@@ -330,11 +330,11 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </div>
             <div>
               <span
-                className="k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+                className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
               >
                 Custom title availability 
                 <span
-                  className="k-u-weight-light"
+                  className="sc-EHOje jvzENE k-u-weight-light"
                 >
                   Custom value availability
                 </span>
@@ -374,11 +374,11 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="k-LegacyRewardCard__myContribution"
           >
             <span
-              className="sc-EHOje kaBNsB k-LegacyRewardCard__iconBadge"
+              className="sc-bZQynM RuXvg k-LegacyRewardCard__iconBadge"
               disabled={false}
             >
               <span
-                className="sc-bZQynM givIjb"
+                className="sc-gzVnrw fyhbVQ"
               >
                 <svg
                   className="k-IconBadge__svg"
@@ -399,12 +399,12 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
               className="k-LegacyRewardCard__myContribution__text"
             >
               <span
-                className="k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+                className="sc-EHOje jvzENE k-u-color-font1 k-u-size-tiny k-u-weight-regular"
               >
                 Custom my contribution
                 <br />
                 <a
-                  className="k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
+                  className="sc-EHOje jvzENE k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
                   href="Custom manage link contribution"
                 >
                   Custom manage contribution

@@ -6,7 +6,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kCNfDe"
+      className="sc-bdVaJa iahiYq"
       id="h1"
     >
       H1
@@ -30,7 +30,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h2
-      className="sc-bdVaJa bydmmT"
+      className="sc-bdVaJa eiyshY"
       id="h2"
     >
       H2
@@ -40,7 +40,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h3
-      className="sc-bdVaJa iTOOed"
+      className="sc-bdVaJa dheggY"
       id="h3"
     >
       H3
@@ -50,7 +50,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kCNfDe"
+      className="sc-bdVaJa iahiYq"
       id="emphasis"
     >
       Emphasis
@@ -109,7 +109,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kCNfDe"
+      className="sc-bdVaJa iahiYq"
       id="list"
     >
       List
@@ -172,7 +172,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kCNfDe"
+      className="sc-bdVaJa iahiYq"
       id="link"
     >
       Link
@@ -215,7 +215,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kCNfDe"
+      className="sc-bdVaJa iahiYq"
       id="h1"
     >
       H1
@@ -239,7 +239,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h2
-      className="sc-bdVaJa bydmmT"
+      className="sc-bdVaJa eiyshY"
       id="h2"
     >
       H2
@@ -249,7 +249,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h3
-      className="sc-bdVaJa iTOOed"
+      className="sc-bdVaJa dheggY"
       id="h3"
     >
       H3
@@ -259,7 +259,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kCNfDe"
+      className="sc-bdVaJa iahiYq"
       id="emphasis"
     >
       Emphasis
@@ -318,7 +318,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kCNfDe"
+      className="sc-bdVaJa iahiYq"
       id="list"
     >
       List
@@ -381,7 +381,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat hXOnrW"
   >
     <h1
-      className="sc-bdVaJa kCNfDe"
+      className="sc-bdVaJa iahiYq"
       id="link"
     >
       Link

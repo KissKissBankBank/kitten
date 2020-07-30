@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `cssColor` prop to `Text` component.
+- Feature: Add `cssColor` prop to `Title` component.
+
 ## [2.82.0] - 2020-07-30
 
 Features:
