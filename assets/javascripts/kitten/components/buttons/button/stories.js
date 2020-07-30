@@ -70,6 +70,7 @@ const info = {
     <Button tiny>MyButton</Button>
     <Button big>MyButton</Button>
     <Button huge>MyButton</Button>
+    <Button giant>MyButton</Button>
     ~~~
 
     #### Display
@@ -142,6 +143,7 @@ storiesOf('Buttons/Button', module)
                   tiny={boolean('Tiny', false)}
                   big={boolean('Big', false)}
                   huge={boolean('Huge', false)}
+                  giant={boolean('Giant', false)}
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
@@ -171,6 +173,7 @@ storiesOf('Buttons/Button', module)
                   tiny={boolean('Tiny', false)}
                   big={boolean('Big', false)}
                   huge={boolean('Huge', false)}
+                  giant={boolean('Giant', false)}
                   fluid={boolean('Fluid', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   disabled={boolean('Disabled', false)}
@@ -212,6 +215,7 @@ storiesOf('Buttons/Button', module)
                   tiny={boolean('Tiny', false)}
                   big={boolean('Big', false)}
                   huge={boolean('Huge', false)}
+                  giant={boolean('Giant', false)}
                   modifier={select('Modifier', modifierOptions, 'hydrogen')}
                   fluid={boolean('Fluid', false)}
                   disabled={boolean('Disabled', false)}
@@ -241,6 +245,7 @@ storiesOf('Buttons/Button', module)
                 tiny={boolean('Tiny', false)}
                 big={boolean('Big', false)}
                 huge={boolean('Huge', false)}
+                giant={boolean('Giant', false)}
                 modifier={select('Modifier', modifierOptions, 'helium')}
                 disabled={boolean('Disabled', false)}
               >

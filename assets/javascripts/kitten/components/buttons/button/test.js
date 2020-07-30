@@ -46,6 +46,16 @@ describe('<Button />', () => {
     })
   })
 
+  describe('with `giant` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<Button giant>MyButton</Button>).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `fluid` prop', () => {
     beforeEach(() => {
       component = renderer.create(<Button fluid>MyButton</Button>).toJSON()
@@ -156,6 +166,22 @@ describe('<Button />', () => {
       component = renderer
         .create(
           <Button icon huge>
+            !
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with icon and giant', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button icon giant>
             !
           </Button>,
         )
