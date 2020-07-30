@@ -58,7 +58,7 @@ var StyledDocumentLoading = _styledComponents.default.div.withConfig({
 var StyledDocumentDisplay = _styledComponents.default.div.withConfig({
   displayName: "document-manager__StyledDocumentDisplay",
   componentId: "fhf9cu-2"
-})([".k-DocumentManager__display__container{display:flex;justify-content:stretch;align-items:center;width:100%;}.k-DocumentManager__display__documentIcon{flex:0 0 auto;margin-right:", ";align-self:flex-start;}.k-DocumentManager__display__content{flex:1 1 auto;}.k-DocumentManager__actionButton{padding:0;border:none;font:inherit;color:inherit;background-color:transparent;margin-top:", ";cursor:pointer;transition:color 0.2s;color:", ";&:hover,&:focus{color:", ";}&:active{color:", ";transition:none;}}&.k-DocumentManager__display--error .k-DocumentManager__actionButton{color:", ";}"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), _colorsConfig.default.primary1, _colorsConfig.default.primary3, _colorsConfig.default.primary1, _colorsConfig.default.error);
+})([".k-DocumentManager__display__container{display:flex;justify-content:stretch;align-items:center;width:100%;}.k-DocumentManager__display__documentIcon{flex:0 0 auto;margin-right:", ";align-self:flex-start;}.k-DocumentManager__display__content{flex:1 1 auto;}.k-DocumentManager__actionButton{margin-top:", ";cursor:pointer;transition:color 0.2s;color:", ";&:hover,&:focus{color:", ";}&:active{color:", ";transition:none;}}&.k-DocumentManager__display--error .k-DocumentManager__actionButton{color:", ";}"], (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(10), _colorsConfig.default.primary1, _colorsConfig.default.primary3, _colorsConfig.default.primary1, _colorsConfig.default.error);
 
 var StyledIconContainer = _styledComponents.default.div.withConfig({
   displayName: "document-manager__StyledIconContainer",
@@ -184,7 +184,7 @@ var DocumentManager = function DocumentManager(_ref2) {
       borderRadius: 4
     }, buttonProps, {
       as: "label",
-      for: id,
+      htmlFor: id,
       className: (0, _classnames.default)('k-DocumentManager__uploader__button', buttonProps.className)
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "k-DocumentManager__uploader__container"
@@ -249,14 +249,14 @@ var DocumentManager = function DocumentManager(_ref2) {
     size: "micro",
     className: "k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
   }, displaySubtitle), canCancel && /*#__PURE__*/_react.default.createElement("button", {
-    className: "k-DocumentManager__actionButton",
+    className: "k-DocumentManager__actionButton k-u-reset-button",
     onClick: handleCancelClick
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     weight: "regular",
     size: "tiny",
     className: "k-DocumentManager__actionButton__text"
   }, cancelButtonText)), canReplace && /*#__PURE__*/_react.default.createElement("button", {
-    className: "k-DocumentManager__actionButton",
+    className: "k-DocumentManager__actionButton k-u-reset-button",
     onClick: handleReplaceClick
   }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     weight: "regular",

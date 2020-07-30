@@ -6,10 +6,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `huge` and `center` props to `TextInput`.
 - Feature: Add `huge` prop to `SelectWithState`.
-- Fix: Remove console warning from `ProgressRing`.
-- Fix: Adjust box shadow on Dropdown.
-- Fix: Replace `for` with `htmlFor` in `BasicUploader` and `DocumentManager`.
-- Feature : add `fullSize` and `fullSizeTitle` props to `next/Modal`.
+
+## [2.82.0] - 2020-07-30
+
+Features:
+- Add `fullSize` and `fullSizeTitle` props to `next/Modal`.
+- New `<Stepper />` component imported from `import { Stepper } from '@kisskissbankbank/kitten/next`, (see usage on our Storybook, section named `NEXT`).
+- Add new `k-u-link-font1` class utility.
+- Add new `ClickableCard` component.
+- Add new `k-u-reset-button` utility class.
+
+Fixes:
+- Remove console warning from `ProgressRing`.
+- Adjust box shadow on Dropdown.
+- Replace `for` with `htmlFor` in `BasicUploader` and `DocumentManager`.
 
 ## [2.81.2] - 2020-07-21
 

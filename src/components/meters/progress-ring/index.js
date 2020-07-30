@@ -81,7 +81,7 @@ var ProgressRing = function ProgressRing(_ref6) {
     cx: circleX,
     cy: circleY,
     r: radius,
-    "stroke-width": strokeWidth,
+    strokeWidth: strokeWidth,
     fill: "transparent",
     stroke: _colorsConfig.default.line1
   }), /*#__PURE__*/_react.default.createElement(StyledMeterCircle, {
