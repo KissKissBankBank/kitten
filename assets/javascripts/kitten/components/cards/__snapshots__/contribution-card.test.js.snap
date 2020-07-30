@@ -45,7 +45,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             className="sc-bdVaJa jtnNso"
           >
             <p
-              className="k-Paragraph k-u-color-font1 k-Paragraph--tertiary k-Paragraph--withoutMargin"
+              className="sc-ifAKCX NRwhd k-u-color-font1"
             >
               Custom text description
             </p>
@@ -110,7 +110,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-bdVaJa ggQxmM"
           >
             <p
-              className="k-Paragraph k-u-color-font1 k-Paragraph--tertiary k-Paragraph--withoutMargin"
+              className="sc-ifAKCX NRwhd k-u-color-font1"
             >
               Custom text description
             </p>
@@ -176,11 +176,11 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               className="k-LegacyRewardCard__myContribution"
             >
               <span
-                className="sc-ifAKCX iuoTPc k-LegacyRewardCard__iconBadge"
+                className="sc-EHOje kaBNsB k-LegacyRewardCard__iconBadge"
                 disabled={false}
               >
                 <span
-                  className="sc-EHOje VARdb"
+                  className="sc-bZQynM givIjb"
                 >
                   <svg
                     className="k-IconBadge__svg"
@@ -292,7 +292,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-bdVaJa ggQxmM"
           >
             <p
-              className="k-Paragraph k-u-color-font1 k-Paragraph--quaternary k-Paragraph--withoutMargin"
+              className="sc-ifAKCX fwkQff k-u-color-font1"
             >
               Custom text description
             </p>
@@ -374,11 +374,11 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="k-LegacyRewardCard__myContribution"
           >
             <span
-              className="sc-ifAKCX iuoTPc k-LegacyRewardCard__iconBadge"
+              className="sc-EHOje kaBNsB k-LegacyRewardCard__iconBadge"
               disabled={false}
             >
               <span
-                className="sc-EHOje VARdb"
+                className="sc-bZQynM givIjb"
               >
                 <svg
                   className="k-IconBadge__svg"

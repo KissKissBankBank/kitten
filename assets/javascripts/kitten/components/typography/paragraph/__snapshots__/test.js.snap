@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Paragraph /> by default matches with snapshot 1`] = `
+<p
+  className="sc-bdVaJa jcZrHk"
+>
+  Lorem ipsum dolor sit amet…
+</p>
+`;
+
+exports[`<Paragraph /> with margin matches with snapshot 1`] = `
+<p
+  className="sc-bdVaJa jcZrHk"
+/>
+`;
+
+exports[`<Paragraph /> with modifier matches with snapshot 1`] = `
+<p
+  className="sc-bdVaJa jcZrHk"
+/>
+`;
+
+exports[`<Paragraph /> without italic matches with snapshot 1`] = `
+<p
+  className="sc-bdVaJa jcZrHk"
+/>
+`;
+
+exports[`<Paragraph /> without normal line height matches with snapshot 1`] = `
+<p
+  className="sc-bdVaJa jcZrHk"
+/>
+`;
