@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ClickableCard /> by default matches with snapshot 1`] = `
+<button
+  className="sc-bdVaJa dogoOi k-ClickableCard k-u-reset-button"
+  disabled={false}
+>
+  <span
+    className="k-ClickableCard__image k-ClickableCard__image--square k-ClickableCard__image--cover"
+  >
+    <img
+      alt=""
+      src="https://placekitten.com/200/400"
+    />
+  </span>
+  <span
+    className="k-ClickableCard__content"
+  >
+    <span>
+      Kitty McMeow
+    </span>
+    <br />
+    <span>
+      @kitty.mcmeow
+    </span>
+  </span>
+</button>
+`;
+
+exports[`<ClickableCard /> with props matches with snapshot 1`] = `
+<button
+  aria-checked={true}
+  className="sc-bdVaJa gCYpzW k-ClickableCard k-u-reset-button k-ClickableCard--fluid"
+  disabled={false}
+  onClick={[Function]}
+  size={250}
+>
+  <span
+    className="k-ClickableCard__image k-ClickableCard__image--circle k-ClickableCard__image--contain"
+  >
+    <img
+      alt=""
+      src="https://placekitten.com/200/400"
+    />
+  </span>
+  <span
+    className="k-ClickableCard__content"
+  >
+    <span>
+      Kitty McMeow
+    </span>
+    <br />
+    <span>
+      @kitty.mcmeow
+    </span>
+  </span>
+</button>
+`;
