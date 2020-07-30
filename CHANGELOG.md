@@ -4,8 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `huge` and `center` props to `TextInput`.
-- Feature: Add `huge` prop to `SelectWithState`.
+- Feature: Add `huge`, `giant` and `center` props to `TextInput`.
+- Feature: Add `huge` and `giant` prop to `SelectWithState`.
 
 ## [2.82.0] - 2020-07-30
 
