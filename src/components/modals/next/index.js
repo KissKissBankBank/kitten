@@ -33,6 +33,8 @@ var _button = require("../../../components/buttons/button/button");
 
 var _paragraph = require("../../../components/typography/paragraph");
 
+var _text = require("../../../components/typography/text");
+
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _typography = require("../../../helpers/utils/typography");
@@ -48,7 +50,7 @@ var _gridConfig = require("../../../constants/grid-config");
 var _elementHelper = require("../../../helpers/dom/element-helper");
 
 function _templateObject() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n\n  body.k-ModalNext__body--open {\n    overflow: hidden;\n  }\n  \n  .k-ModalNext__content {\n    position: relative;\n    background-color: ", ";\n    box-sizing: border-box;\n    outline: none;\n    transform: scale(0.94);\n    margin-right: ", ";\n    margin-left: ", ";\n    padding: ", " ", ";\n    width: calc(100vw ", ");\n  \n    @media (min-width: ", ") {\n      margin: auto;\n      padding: ", " ", ";\n      width: calc((100vw - ", ") + (", " * 11))\n    }\n  \n    @media (min-width: ", ") {\n      padding: ", " ", ";\n      ", "\n    }\n    \n    @media (min-width: ", ") {\n    ", "\n    }\n  }\n\n  .k-ModalNext__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n    @media (min-width: ", ") {\n      right: ", ";\n  }\n\n    button {\n      margin: 0;\n    }\n  }\n  \n  .k-ModalNext__overlay {\n    position: fixed;\n    overflow: scroll;\n    display: flex;\n    flex-direction: column;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    opacity: 0;\n    background-color: rgba(34, 34, 34, .8);    \n    &::before ,\n    &::after {\n      content:'';\n      flex:1;\n      min-height: ", ";\n\n      @media (min-width: ", ") {\n        min-height: ", ";\n      }\n    }\n    ", "\n  }\n  \n  .k-ModalNext__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-ModalNext--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-ModalNext__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-ModalNext--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n"]);
+  var data = (0, _taggedTemplateLiteral2.default)(["\n\n  body.k-ModalNext__body--open {\n    overflow: hidden;\n  }\n  \n  .k-ModalNext__content {\n    position: relative;\n    background-color: ", ";\n    box-sizing: border-box;\n    outline: none;\n    transform: scale(0.94);\n    margin-right: ", ";\n    margin-left: ", ";\n    padding: ", " ", ";\n    width: calc(100vw ", ");\n    ", ";\n  \n    @media (min-width: ", ") {\n      margin: auto;\n      padding: ", " ", ";\n      width: calc((100vw - ", ") + (", " * 11))\n    }\n  \n    @media (min-width: ", ") {\n      padding: ", " ", ";\n      ", "\n    }\n    \n    @media (min-width: ", ") {\n    ", "\n    }\n  }\n\n  .k-ModalNext__close {\n    position: absolute;\n    top: 0;\n    right: ", ";\n    @media (min-width: ", ") {\n      right: ", ";\n  }\n\n    button {\n      margin: 0;\n    }\n  }\n  \n  .k-ModalNext__overlay {\n    position: fixed;\n    overflow: scroll;\n    display: flex;\n    flex-direction: column;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    opacity: 0;\n    background-color: rgba(34, 34, 34, .8);    \n    &::before ,\n    &::after {\n      content:'';\n      flex:1;\n      min-height: ", ";\n\n      @media (min-width: ", ") {\n        min-height: ", ";\n      }\n      ", "\n    }\n    ", "\n  }\n  \n  .k-ModalNext__overlay--afterOpen {\n    transition: opacity .3s ease;\n    opacity: 1;\n  }\n  .k-ModalNext--afterOpen {\n    transition: opacity .3s ease, transform .3s ease;\n    transform: scale(1);\n    opacity: 1;\n  }\n\n  .k-ModalNext__overlay--beforeClose {\n    opacity: 0;\n  }\n  .k-ModalNext--beforeClose {\n    transition: opacity .3s ease, transform .5s ease;\n    transform: scale(1.06);\n    opacity: 0;\n  }\n  \n  .k-ModalNext__title--fullSize {\n    position: sticky;\n    top:0;\n    width: 100vw;\n    text-align: center;\n    margin-left: ", ";\n    box-sizing: border-box;\n    background-color: ", ";\n    padding: ", " ", ";\n    border-bottom: ", " solid ", ";\n    margin-bottom: ", ";\n  }\n  \n  .k-ModalNext__closeButton--fullSize {\n    position: absolute;\n    left: ", "\n    top: ", "\n  } \n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -59,17 +61,22 @@ function _templateObject() {
 
 var paddingPlusGutters = 2 * _gridConfig.CONTAINER_PADDING + 11 * _gridConfig.GUTTER;
 var oneGridCol = "calc((100vw - ".concat((0, _typography.pxToRem)(paddingPlusGutters), ") / 12 + ").concat((0, _typography.pxToRem)(_gridConfig.GUTTER), ")");
+var negativeOneGridCol = "calc(0px - ((100vw - ".concat((0, _typography.pxToRem)(paddingPlusGutters), ") / 12 + ").concat((0, _typography.pxToRem)(_gridConfig.GUTTER), "))");
 var StyledParagraph = (0, _styledComponents.default)(_paragraph.Paragraph).withConfig({
   displayName: "next__StyledParagraph",
   componentId: "sc-6re6vo-0"
 })(["font-size:", ";@media (min-width:", "){font-size:", ";}"], (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(14));
-var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject(), _colorsConfig.default.background1, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(80), oneGridCol, (0, _typography.pxToRem)(paddingPlusGutters), (0, _typography.pxToRem)(_gridConfig.GUTTER), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(80), oneGridCol, function (props) {
+var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject(), _colorsConfig.default.background1, (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(20), function (props) {
+  return props.fullSize && (0, _styledComponents.css)(["padding-top:0 !important;min-width:100vw !important;margin:0 !important;"]);
+}, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(80), oneGridCol, (0, _typography.pxToRem)(paddingPlusGutters), (0, _typography.pxToRem)(_gridConfig.GUTTER), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.L.min), (0, _typography.pxToRem)(80), oneGridCol, function (props) {
   return (0, _styledComponents.css)(["width:calc( ((100vw - ", ") / 12 + ", ") * ", " - ", " );"], (0, _typography.pxToRem)(paddingPlusGutters), (0, _typography.pxToRem)(_gridConfig.GUTTER), props.cols, (0, _typography.pxToRem)(_gridConfig.GUTTER));
 }, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.XL.min), function (props) {
   return (0, _styledComponents.css)(["width:", ";"], (0, _typography.pxToRem)(((_gridConfig.CONTAINER_MAX_WIDTH - paddingPlusGutters) / 12 + _gridConfig.GUTTER) * props.cols - _gridConfig.GUTTER));
 }, (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(100), function (props) {
+  return props.fullSize && (0, _styledComponents.css)(["min-height:0 !important;"]);
+}, function (props) {
   return (0, _styledComponents.css)(["z-index:", ";"], props.zIndex);
-});
+}, negativeOneGridCol, _colorsConfig.default.background1, (0, _typography.pxToRem)(20), oneGridCol, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(12));
 
 var ModalTitle = function ModalTitle(_ref) {
   var children = _ref.children;
@@ -191,7 +198,9 @@ var InnerModal = function InnerModal(_ref5) {
       huge = _ref5.huge,
       isOpen = _ref5.isOpen,
       zIndex = _ref5.zIndex,
-      others = (0, _objectWithoutProperties2.default)(_ref5, ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "big", "huge", "isOpen", "zIndex"]);
+      fullSize = _ref5.fullSize,
+      fullSizeTitle = _ref5.fullSizeTitle,
+      others = (0, _objectWithoutProperties2.default)(_ref5, ["trigger", "children", "label", "labelledby", "describedby", "className", "closeButtonLabel", "onClose", "modalProps", "hasCloseButton", "maxWidth", "big", "huge", "isOpen", "zIndex", "fullSize", "fullSizeTitle"]);
 
   var _useContext3 = (0, _react.useContext)(ModalContext),
       _useContext4 = (0, _slicedToArray2.default)(_useContext3, 2),
@@ -219,7 +228,8 @@ var InnerModal = function InnerModal(_ref5) {
 
   var ModalPortal = _reactDom.default.createPortal( /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(GlobalStyle, {
     cols: colsOnDesktop,
-    zIndex: zIndex
+    zIndex: zIndex,
+    fullSize: fullSize
   }), /*#__PURE__*/_react.default.createElement(_reactModal.default, (0, _extends2.default)({
     closeTimeoutMS: 500,
     role: "dialog",
@@ -246,14 +256,26 @@ var InnerModal = function InnerModal(_ref5) {
     onRequestClose: close,
     contentLabel: label,
     bodyOpenClassName: "k-ModalNext__body--open"
-  }, modalProps), /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, children({
+  }, modalProps), /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, fullSize && _title.Title && /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-ModalNext__title--fullSize"
+  }, /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
+    className: "k-ModalNext__closeButton--fullSize",
+    modifier: "hydrogen",
+    onClick: close,
+    size: "tiny",
+    closeButtonLabel: closeButtonLabel
+  }), /*#__PURE__*/_react.default.createElement(_text.Text, {
+    size: "tiny",
+    color: "font1",
+    weight: "regular"
+  }, fullSizeTitle)), children({
     open: function open() {
       return dispatch(updateState(true));
     },
     close: function close() {
       return dispatch(updateState(false));
     }
-  }), hasCloseButton && /*#__PURE__*/_react.default.createElement("div", {
+  }), hasCloseButton && !fullSize && /*#__PURE__*/_react.default.createElement("div", {
     className: "k-ModalNext__close"
   }, /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
     style: {
@@ -294,24 +316,28 @@ Modal.propTypes = {
   labelledby: _propTypes.default.string,
   describedby: _propTypes.default.string,
   closeButtonLabel: _propTypes.default.string,
+  fullSize: _propTypes.default.bool,
   modalProps: _propTypes.default.object,
   hasCloseButton: _propTypes.default.bool,
   big: _propTypes.default.bool,
   huge: _propTypes.default.bool,
   isOpen: _propTypes.default.bool,
-  zIndex: _propTypes.default.number
+  zIndex: _propTypes.default.number,
+  fullSizeTitle: _propTypes.default.string
 };
 Modal.defaultProps = {
   label: 'Modal',
   labelledby: '',
   describedby: '',
   closeButtonLabel: 'Fermer',
+  fullSize: false,
   modalProps: {},
   hasCloseButton: true,
   big: false,
   huge: false,
   isOpen: false,
-  zIndex: 110
+  zIndex: 110,
+  fullSizeTitle: ''
 };
 Modal.Title = ModalTitle;
 Modal.Paragraph = ModalParagraph;

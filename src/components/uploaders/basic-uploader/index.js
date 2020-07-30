@@ -152,7 +152,7 @@ var BasicUploader = function BasicUploader(_ref) {
     fluid: true
   }, buttonProps, {
     as: "label",
-    for: id,
+    htmlFor: id,
     className: (0, _classnames.default)('k-BasicUploader__button', buttonProps.className)
   }), internalStatus === 'loading' ? loaderAnimation : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_uploadIcon.UploadIcon, {
     "aria-hidden": true,
