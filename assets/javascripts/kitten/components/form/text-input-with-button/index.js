@@ -62,6 +62,7 @@ export class TextInputWithButton extends PureComponent {
     disabled: PropTypes.bool,
     tiny: PropTypes.bool,
     huge: PropTypes.bool,
+    giant: PropTypes.bool,
     modifier: PropTypes.string,
     inputValue: PropTypes.string,
     // DEPRECATED: do not use prop `value`. Use `buttonValue` instead.
@@ -75,6 +76,7 @@ export class TextInputWithButton extends PureComponent {
     disabled: false,
     tiny: false,
     huge: false,
+    giant: false,
     buttonValue: 'Button',
     modifier: 'beryllium',
   }
@@ -86,6 +88,7 @@ export class TextInputWithButton extends PureComponent {
       disabled,
       tiny,
       huge,
+      giant,
       value,
       buttonValue,
       modifier,
@@ -103,6 +106,7 @@ export class TextInputWithButton extends PureComponent {
           disabled={disabled}
           tiny={tiny}
           huge={huge}
+          giant={giant}
           value={inputValue}
         />
         <StyledButton

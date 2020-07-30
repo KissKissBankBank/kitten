@@ -78,6 +78,12 @@ const StyledInputUnit = styled.span`
   ${({ huge }) =>
     huge &&
     css`
+      padding: 0 ${pxToRem(20)};
+    `}
+
+  ${({ giant }) =>
+    giant &&
+    css`
       padding: 0 ${pxToRem(25)};
     `}
 
@@ -100,6 +106,7 @@ export class TextInputWithUnit extends PureComponent {
     error: PropTypes.bool,
     tiny: PropTypes.bool,
     huge: PropTypes.bool,
+    giant: PropTypes.bool,
     center: PropTypes.bool,
     disabled: PropTypes.bool,
     unit: PropTypes.string,
@@ -115,6 +122,7 @@ export class TextInputWithUnit extends PureComponent {
     error: false,
     tiny: false,
     huge: false,
+    giant: false,
     center: false,
     disabled: false,
     digits: null,
@@ -131,6 +139,7 @@ export class TextInputWithUnit extends PureComponent {
       error,
       tiny,
       huge,
+      giant,
       center,
       disabled,
       unit,
@@ -149,6 +158,7 @@ export class TextInputWithUnit extends PureComponent {
           error={error}
           tiny={tiny}
           huge={huge}
+          giant={giant}
           center={center}
           disabled={disabled}
           {...others}
@@ -159,6 +169,7 @@ export class TextInputWithUnit extends PureComponent {
           disabled={disabled}
           tiny={tiny}
           huge={huge}
+          giant={giant}
         >
           {unit || unitWord}
         </StyledInputUnit>

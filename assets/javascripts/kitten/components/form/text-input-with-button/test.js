@@ -101,6 +101,16 @@ describe('<TextInputWithButton />', () => {
     })
   })
 
+  describe('with giant prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInputWithButton giant />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with buttonProps prop', () => {
     beforeEach(() => {
       component = renderer

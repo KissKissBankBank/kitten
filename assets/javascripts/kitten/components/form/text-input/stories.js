@@ -38,6 +38,7 @@ const info = {
     ~~~js
     <TextInput tiny />
     <TextInput huge />
+    <TextInput giant />
     ~~~
 
     #### Alignment
@@ -83,6 +84,7 @@ storiesOf('Form/TextInput', module)
               disabled={boolean('Disabled', false)}
               tiny={boolean('Tiny', false)}
               huge={boolean('Huge', false)}
+              giant={boolean('Giant', false)}
               center={boolean('Center', false)}
               placeholder={text('Placeholder', 'Les props sont transmises')}
               digits={number('Digits', 12)}

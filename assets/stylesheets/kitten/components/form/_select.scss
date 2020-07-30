@@ -39,6 +39,11 @@
 
   $options-huge-at-s-up: map-merge($options, (
     arrow-zone-width: k-px-to-rem(60px),
+    select-input-height: k-px-to-rem(80px),
+  ));
+
+  $options-giant-at-s-up: map-merge($options, (
+    arrow-zone-width: k-px-to-rem(60px),
     select-input-height: k-px-to-rem(90px),
   ));
 
@@ -67,6 +72,17 @@
     @include k-media-min('s') {
       @include _k-Select-ReactSelect($options-huge-at-s-up);
       @include _k-Select-Overrides($options-huge-at-s-up);
+      @include k-typographyFontSize($font-step-at-s-up);
+    }
+  }
+
+  .k-Select--giant {
+    @include _k-Select-ReactSelect($options-huge);
+    @include _k-Select-Overrides($options-huge);
+
+    @include k-media-min('s') {
+      @include _k-Select-ReactSelect($options-giant-at-s-up);
+      @include _k-Select-Overrides($options-giant-at-s-up);
       @include k-typographyFontSize($font-step-at-s-up);
     }
   }

@@ -84,6 +84,17 @@ const styledTextInput = css`
       height: ${pxToRem(70)};
 
       @media (min-width: ${ScreenConfig.M.min}px) {
+        height: ${pxToRem(80)};
+        font-size: ${stepToRem(0)};
+      }
+    `}
+
+  ${({ giant }) =>
+    giant &&
+    css`
+      height: ${pxToRem(70)};
+
+      @media (min-width: ${ScreenConfig.M.min}px) {
         height: ${pxToRem(90)};
         font-size: ${stepToRem(0)};
       }
@@ -163,6 +174,7 @@ export class TextInput extends PureComponent {
     error: PropTypes.bool,
     tiny: PropTypes.bool,
     huge: PropTypes.bool,
+    giant: PropTypes.bool,
     center: PropTypes.bool,
     disabled: PropTypes.bool,
     name: PropTypes.string,
@@ -175,6 +187,7 @@ export class TextInput extends PureComponent {
     error: false,
     tiny: false,
     huge: false,
+    giant: false,
     center: false,
     disabled: false,
     name: 'text',
@@ -190,6 +203,7 @@ export class TextInput extends PureComponent {
       digits,
       tiny,
       huge,
+      giant,
       center,
       tag,
       ...others
@@ -207,6 +221,7 @@ export class TextInput extends PureComponent {
             digits={digits}
             name={name}
             huge={huge}
+            giant={giant}
             center={center}
             {...others}
           />
@@ -224,6 +239,7 @@ export class TextInput extends PureComponent {
           digits={digits}
           name={name}
           huge={huge}
+          giant={giant}
           center={center}
           {...others}
         />

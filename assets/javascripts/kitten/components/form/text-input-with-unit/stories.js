@@ -27,6 +27,7 @@ const info = {
     ~~~js
     <TextInputWithUnit tiny />
     <TextInputWithUnit huge />
+    <TextInputWithUnit giant />
     ~~~
 
    #### Alignment
@@ -62,6 +63,7 @@ storiesOf('Form/TextInput', module)
               disabled={boolean('Disabled', false)}
               tiny={boolean('Tiny', false)}
               huge={boolean('Huge', false)}
+              giant={boolean('Giant', false)}
               center={boolean('Center', false)}
               error={boolean('Error', false)}
               unit={text('Unit', '€')}

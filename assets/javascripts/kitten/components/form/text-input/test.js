@@ -55,6 +55,16 @@ describe('<TextInput />', () => {
     })
   })
 
+  describe('with `giant` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInput giant />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `center` prop', () => {
     beforeEach(() => {
       component = renderer.create(<TextInput center />).toJSON()
