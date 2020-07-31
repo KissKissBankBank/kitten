@@ -2,11 +2,11 @@
 
 exports[`<VerticalCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-EHOje kJvSfu"
+  className="sc-ifAKCX fhNYyh"
 >
   <img
     alt=""
-    className="sc-ifAKCX fexEDx"
+    className="sc-bxivhb kTYzCt"
     src="#image"
   />
   <h1
@@ -20,11 +20,11 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
 
 exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-EHOje kJvSfu"
+  className="sc-ifAKCX fhNYyh"
 >
   <img
     alt="Image alt"
-    className="sc-ifAKCX fexEDx"
+    className="sc-bxivhb kTYzCt"
     src="#image"
   />
   <h1
@@ -36,7 +36,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-htpNat hZkEJt"
+      className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
     >
       Custom text
     </p>
