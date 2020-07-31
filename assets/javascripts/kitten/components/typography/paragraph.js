@@ -26,6 +26,10 @@ export class Paragraph extends Component {
 
     const Tag = tag
 
+    console.warn(
+      `Prefer use <Paragraph /> with '@kisskissbankbank/kitten/src/components/typography/paragraph/next' import.`,
+    )
+
     return <Tag className={paragraphClassNames} {...other} />
   }
 }
