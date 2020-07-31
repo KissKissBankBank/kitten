@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add new `Paragraph` with new font-size logical.
+- Fix: Fix `Paragraph` modifiers.
+
 ## [2.82.0] - 2020-07-30
 
 Features:
