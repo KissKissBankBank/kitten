@@ -1,6 +1,6 @@
 import { css } from 'styled-components'
-import { stepToRem, pxToRem } from '../../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../../constants/screen-config'
+import { stepToRem, pxToRem } from '../../../../../helpers/utils/typography'
+import { ScreenConfig } from '../../../../../constants/screen-config'
 
 export const modifierStyles = modifier => {
   let fontStepOnMobile
@@ -31,18 +31,18 @@ export const modifierStyles = modifier => {
       fontStepOnTablet = -2
       fontStepOnDesktop = -2
       break
+  }
+
+  return css`
+    font-size: ${stepToRem(fontStepOnMobile)};
+    line-height: 1.6;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      font-size: ${stepToRem(fontStepOnTablet)};
     }
 
-    return css`
-      font-size: ${stepToRem(fontStepOnMobile)};
-      line-height: 1.6;
-  
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        font-size: ${stepToRem(fontStepOnTablet)};
-      }
-  
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        font-size: ${stepToRem(fontStepOnDesktop)};
-      }
-    `
-  }
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      font-size: ${stepToRem(fontStepOnDesktop)};
+    }
+  `
+}
