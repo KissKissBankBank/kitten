@@ -19,14 +19,14 @@ var _styledComponents = _interopRequireWildcard(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
+var _typographyConfig = _interopRequireDefault(require("../../../../constants/typography-config"));
 
 var _modifierStyles = require("./helpers/modifier-styles");
 
 var StyledParagraph = _styledComponents.default.p.withConfig({
-  displayName: "paragraph__StyledParagraph",
-  componentId: "sc-1qoa9gz-0"
-})(["", ";", " ", " ", "  ", ""], _typographyConfig.default.fontStyles.light, function (_ref) {
+  displayName: "next__StyledParagraph",
+  componentId: "sc-13obzh7-0"
+})(["", ";", " ", " ", " ", ""], _typographyConfig.default.fontStyles.light, function (_ref) {
   var modifier = _ref.modifier;
   return (0, _modifierStyles.modifierStyles)(modifier);
 }, function (_ref2) {
