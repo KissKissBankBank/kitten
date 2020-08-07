@@ -29,12 +29,7 @@ describe('<Paragraph />', () => {
   describe('with modifier', () => {
     beforeEach(() => {
       component = renderer
-        .create(
-          <Paragraph
-            tag="p"
-            modifier="primary"
-          />,
-        )
+        .create(<Paragraph tag="p" modifier="primary" />)
         .toJSON()
     })
 
@@ -45,14 +40,7 @@ describe('<Paragraph />', () => {
 
   describe('with margin', () => {
     beforeEach(() => {
-      component = renderer
-        .create(
-          <Paragraph
-            tag="p"
-            margin
-          />,
-        )
-        .toJSON()
+      component = renderer.create(<Paragraph tag="p" margin />).toJSON()
     })
 
     it('matches with snapshot', () => {
@@ -63,12 +51,7 @@ describe('<Paragraph />', () => {
   describe('without normal line height', () => {
     beforeEach(() => {
       component = renderer
-        .create(
-          <Paragraph
-            tag="p"
-            normalLineHeight={false}
-          />,
-        )
+        .create(<Paragraph tag="p" normalLineHeight={false} />)
         .toJSON()
     })
 
@@ -79,14 +62,7 @@ describe('<Paragraph />', () => {
 
   describe('without italic', () => {
     beforeEach(() => {
-      component = renderer
-        .create(
-          <Paragraph
-            tag="p"
-            italic={false}
-          />,
-        )
-        .toJSON()
+      component = renderer.create(<Paragraph tag="p" italic={false} />).toJSON()
     })
 
     it('matches with snapshot', () => {
