@@ -1,14 +1,25 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
+import styled, { css } from 'styled-components'
+
+const StyledText = styled.span`
+  ${({ cssColor }) =>
+    cssColor &&
+    css`
+      color: ${cssColor};
+    `}
+`
 
 export class Text extends Component {
   render() {
     const {
       className,
       color,
+      cssColor,
       decoration,
       lineHeight,
+      setting,
       size,
       fontStyle,
       tag,
@@ -16,8 +27,6 @@ export class Text extends Component {
       weight,
       ...others
     } = this.props
-
-    const Tag = tag
 
     const textClassName = classNames(
       {
@@ -35,6 +44,11 @@ export class Text extends Component {
 
         // Line height.
         'k-u-line-height-normal': lineHeight == 'normal',
+        'k-u-line-height-1': lineHeight == '1',
+        'k-u-line-height-1-3': lineHeight == '1.3',
+
+        // Font Feature Settings.
+        'k-u-font-setting-tnum': setting == 'tnum', // Monospaced numbers.
 
         // Size.
         'k-u-size-huge': size == 'huge',
@@ -59,11 +73,14 @@ export class Text extends Component {
       className,
     )
 
-    return <Tag {...others} className={textClassName} />
+    return <StyledText as={tag} {...others} className={textClassName} />
   }
 }
 
 Text.propTypes = {
+  /**
+    Available colors:
+  */
   color: PropTypes.oneOf([
     'font1',
     'font2',
@@ -72,19 +89,47 @@ Text.propTypes = {
     'error',
     'valid',
   ]),
+  /**
+    Specify a custom color (as a CSS color string).
+  */
+  cssColor: PropTypes.string,
+  /**
+    If `tag="a"`, show underline.
+  */
   decoration: PropTypes.oneOf(['underline', 'none']),
-  lineHeight: PropTypes.oneOf(['normal']),
+  /**
+    `font-feature-settings: 'tnum'` enables tabular (monospace) numerals.
+  **/
+  setting: PropTypes.oneOf(['tnum']),
+  /**
+    `line-height: normal` correspond approximately to 1.2.
+  */
+  lineHeight: PropTypes.oneOf(['normal', '1', '1.3']),
+  /**
+    Available sizes:
+  */
   size: PropTypes.oneOf(['huge', 'big', 'default', 'tiny', 'micro', 'nano']),
+  /**
+    Available font styles (`normal` or `italic`):
+  */
   fontStyle: PropTypes.oneOf(['normal', 'italic']),
+  /**
+    `text-transform: uppercase`
+  */
   transform: PropTypes.oneOf(['uppercase']),
+  /**
+    Available font weights (`light`, `regular` or `italic`):
+  */
   weight: PropTypes.oneOf(['light', 'regular', 'bold']),
 }
 
 Text.defaultProps = {
   className: null,
   color: null,
+  cssColor: null,
   decoration: null,
   lineHeight: null,
+  setting: null,
   size: null,
   fontStyle: null,
   tag: 'span',

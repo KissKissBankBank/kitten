@@ -4,10 +4,119 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature : Add `SaveIcon` and `DocIcon`.
 - Fix: Enhance `ListTable` performance.
-- Fix: Update mobile image size on `EngagementCardWithImage`.
-- Fix: Update pseudo-class of the `EmbedPlayer` btn.
+- Feature: Add `huge` and `giant` props to `Button`.
+- Feature: Add `cssColor` prop to `Text` component.
+- Feature: Add `cssColor` prop to `Title` component.
+- Feature: Add `huge`, `giant` and `center` props to `TextInput`.
+- Feature: Add `huge` and `giant` prop to `SelectWithState`.
+
+## [2.83.0] - 2020-07-31
+
+Feature:
+- Add new `Paragraph` with new font-size logic.
+
+Fix:
+- Fix `Paragraph` modifiers.
+
+## [2.82.0] - 2020-07-30
+
+Features:
+- Add `fullSize` and `fullSizeTitle` props to `next/Modal`.
+- New `<Stepper />` component imported from `import { Stepper } from '@kisskissbankbank/kitten/next`, (see usage on our Storybook, section named `NEXT`).
+- Add new `k-u-link-font1` class utility.
+- Add new `ClickableCard` component.
+- Add new `k-u-reset-button` utility class.
+
+Fixes:
+- Remove console warning from `ProgressRing`.
+- Adjust box shadow on Dropdown.
+- Replace `for` with `htmlFor` in `BasicUploader` and `DocumentManager`.
+
+## [2.81.2] - 2020-07-21
+
+Fix:
+- Fix `HeaderNav.UserMenu` `min-width`.
+
+## [2.81.1] - 2020-07-21
+
+Fix:
+- Fix shadow on unscrolled `HeaderNav`.
+
+## [2.81.0] - 2020-07-20
+
+Features:
+- New `setting` prop for `Text` component and new `lineHeight` options.
+- Add `stickyProps` to `HeaderNav`.
+- Add `useDeepCompareEffect` hook.
+- Add `useWindowWidth` hook.
+
+Fixes:
+- Pass `isMenuExpanded` prop to styled component.
+- Fix `Dropdown` position if content is wider than the window.
+
+## [2.80.0] - 2020-07-13
+
+Feature:
+- New `usePrevious` helper hook.
+
+Fix:
+- Mobile & a11y fixes on `DocumentManager`.
+
+## [2.79.0] - 2020-07-13
+
+Features:
+- Add `BasicUploader` component.
+- Add `DocumentManager` component.
+- Add `UploadIcon` component.
+- Add `DocumentIconEmpty`, `DocumentIconPerson` and `DocumentIconHouse`.
+
+Fixes:
+- Escape `<3` with `parseHtml`.
+- Add color transitions to `svg` elements that are inside buttons.
+
+## [2.78.0] - 2020-07-06
+
+Feature:
+- `Carousel` passes props relating to visibility to its children.
+
+## [2.77.0] - 2020-07-02
+
+Feature:
+- Add `withoutMargin` prop on `Modal.Paragraph`.
+
+Fix:
+- Replace `Title` component by `TitleWithStroke` on `RewardCardTitle`.
+
+## [2.76.0] - 2020-07-01
+
+Feature:
+- Add `locked` prop to `ToggleSwitch`.
+
+Fix:
+- Remove duplicate `className` in `LinkBox` component.
+
+## [2.75.2] - 2020-06-17
+
+Fix:
+- Set `max-width` on `RewardCard` row content.
+
+## [2.75.1] - 2020-06-16
+
+Fix:
+- Fix `LinkBox` by using direct props instead of `linkProps`.
+  `linkProps` is now deprecated
+
+## [2.75.0] - 2020-06-15
+
+Features:
+- Update `LinkBox` component.
+- Add `hasArrow` and `active` props to `List.ButtonItem`.
+- Add `active` prop to `ButtonGroup.Button`.
+
+Fixes:
+- Update mobile image size on `EngagementCardWithImage`.
+- Update pseudo-class of the `EmbedPlayer` btn.
 
 ## [2.74.0] - 2020-06-04
 

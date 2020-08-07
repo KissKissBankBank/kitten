@@ -6,6 +6,7 @@ import emitter from '../../../helpers/utils/emitter'
 import { DropdownButton } from './dropdown-button'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import domElementHelper from '../../../helpers/dom/element-helper'
+import { useWindowWidth } from '../../../helpers/utils/use-window-width-hook'
 import domEvents, {
   TOGGLE_DROPDOWN_EVENT,
   DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
@@ -36,7 +37,6 @@ export const Dropdown = React.forwardRef(
       dropdownListArrow,
       isExpanded,
       keepInitialButtonAction,
-      notifications,
       onPositionUpdate,
       onToggle,
       positionedHorizontallyWith,
@@ -61,6 +61,8 @@ export const Dropdown = React.forwardRef(
       horizontalReferenceElementState,
       setHorizontalReferenceElement,
     ] = useState(0)
+
+    const windowWidth = useWindowWidth()
 
     const { keyboard } = domEvents
 
@@ -148,7 +150,6 @@ export const Dropdown = React.forwardRef(
       })
 
       const { tab, up, down, left, right, esc, shiftTab } = keyboard
-      const backwardTab = event.shiftKey && event.keyCode === tab
 
       if (event.keyCode === esc) return toggle(false)
 
@@ -176,8 +177,6 @@ export const Dropdown = React.forwardRef(
     }
 
     useEffect(() => {
-      let focusableElements
-
       if (isExpandedState) {
         setTimeout(() => {
           const focusableElements = getFocusableElementsFrom(
@@ -242,24 +241,34 @@ export const Dropdown = React.forwardRef(
       return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef
     }
 
-    const getHorizontalReferenceElement = () => {
-      if (!isSelfReference()) {
-        return (positionedVerticallyWith || positionedWith)()
-      }
-      // Prevent error from ref not set by `useRef`.
-      return has('current')(dropdownRef) ? dropdownRef.current : dropdownRef
-    }
-
     const getComputedHeightElement = () =>
       domElementHelper.getComputedHeight(
         getVerticalReferenceElement(),
         positionedWithBorder,
       )
 
-    const getComputedLeftElement = () =>
-      positionedHorizontallyWith
-        ? domElementHelper.getComputedLeft(positionedHorizontallyWith())
-        : 0
+    const getComputedLeftElement = () => {
+      if (positionedHorizontallyWith) {
+        const computedLeftElement = domElementHelper.getComputedLeft(
+          positionedHorizontallyWith(),
+        )
+
+        if (!dropdownContentWidth || typeof dropdownContentWidth === 'number') {
+          const minContentWidth = () =>
+            dropdownContentWidth > 200 ? dropdownContentWidth : 200
+
+          if (computedLeftElement + minContentWidth() > windowWidth) {
+            return windowWidth - minContentWidth()
+          }
+
+          return computedLeftElement
+        }
+
+        return computedLeftElement
+      }
+
+      return 0
+    }
 
     const getArrowPositionStyle = () => {
       return { position: 'absolute', top: 0, ...arrowHorizontalPosition }
@@ -391,7 +400,6 @@ Dropdown.propTypes = {
   dropdownListArrow: PropTypes.node,
   isExpanded: PropTypes.bool,
   keepInitialButtonAction: PropTypes.bool,
-  notifications: PropTypes.number,
   onPositionUpdate: PropTypes.func,
   onToggle: PropTypes.func,
   positionedHorizontallyWith: PropTypes.func,

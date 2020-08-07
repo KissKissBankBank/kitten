@@ -1,20 +1,41 @@
 import React from 'react'
-import { Text } from './text'
+import { Text } from './index'
+import renderer from 'react-test-renderer'
 
 describe('<Text />', () => {
   describe('by default', () => {
-    const component = shallow(<Text />)
+    let component
 
-    it('renders a <span />', () => {
-      expect(component.type()).toBe('span')
+    beforeEach(() => {
+      component = renderer.create(<Text />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with tag prop', () => {
-    const component = shallow(<Text tag="div" />)
+    let component
 
-    it('renders a <div />', () => {
-      expect(component.type()).toBe('div')
+    beforeEach(() => {
+      component = renderer.create(<Text tag="div" />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with as prop', () => {
+    let component
+
+    beforeEach(() => {
+      component = renderer.create(<Text as="div" />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
@@ -87,6 +108,14 @@ describe('<Text />', () => {
 
     it('has a good utility class', () => {
       expect(component.hasClass('k-u-decoration-underline')).toBe(true)
+    })
+  })
+
+  describe('with settings prop', () => {
+    const component = shallow(<Text setting="tnum" />)
+
+    it('has a good utility class', () => {
+      expect(component.hasClass('k-u-font-setting-tnum')).toBe(true)
     })
   })
 })

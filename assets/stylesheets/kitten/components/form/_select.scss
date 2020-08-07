@@ -32,10 +32,26 @@
     select-input-height: k-px-to-rem(40px),
   ));
 
+  $options-huge: map-merge($options, (
+    arrow-zone-width: k-px-to-rem(50px),
+    select-input-height: k-px-to-rem(70px),
+  ));
+
+  $options-huge-at-s-up: map-merge($options, (
+    arrow-zone-width: k-px-to-rem(60px),
+    select-input-height: k-px-to-rem(80px),
+  ));
+
+  $options-giant-at-s-up: map-merge($options, (
+    arrow-zone-width: k-px-to-rem(60px),
+    select-input-height: k-px-to-rem(90px),
+  ));
+
   $font: 'light';
 
   $label-font: 'regular';
   $font-step: -1; // 14px
+  $font-step-at-s-up: 0; // 16px
 
   .k-Select {
     @include k-typographyFont($font);
@@ -47,6 +63,28 @@
   .k-Select--tiny {
     @include _k-Select-ReactSelect($options-tiny);
     @include _k-Select-Overrides($options-tiny);
+  }
+
+  .k-Select--huge {
+    @include _k-Select-ReactSelect($options-huge);
+    @include _k-Select-Overrides($options-huge);
+
+    @include k-media-min('s') {
+      @include _k-Select-ReactSelect($options-huge-at-s-up);
+      @include _k-Select-Overrides($options-huge-at-s-up);
+      @include k-typographyFontSize($font-step-at-s-up);
+    }
+  }
+
+  .k-Select--giant {
+    @include _k-Select-ReactSelect($options-huge);
+    @include _k-Select-Overrides($options-huge);
+
+    @include k-media-min('s') {
+      @include _k-Select-ReactSelect($options-giant-at-s-up);
+      @include _k-Select-Overrides($options-giant-at-s-up);
+      @include k-typographyFontSize($font-step-at-s-up);
+    }
   }
 
   .k-Select__option--level1 {

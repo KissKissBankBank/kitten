@@ -10,7 +10,7 @@ exports[`<VerticalCard /> by default matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="sc-bwzfXH gVLghD"
+    className="sc-bwzfXH ffdHnv"
   >
     Custom title
   </h1>
@@ -28,7 +28,7 @@ exports[`<VerticalCard /> with some props matches with snapshot 1`] = `
     src="#image"
   />
   <h1
-    className="sc-bwzfXH gVLghD"
+    className="sc-bwzfXH ffdHnv"
   >
     Custom title
   </h1>

@@ -5,12 +5,12 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje jZhEES"
+    className="sc-bwzfXH cmvcxy sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM gMwIQv"
+    className="sc-bZQynM hqRtSn"
     disabled={false}
     type="button"
   >
@@ -24,12 +24,12 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje jZhEES"
+    className="sc-bwzfXH cmvcxy sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM gMwIQv"
+    className="sc-bZQynM hqRtSn"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -44,13 +44,13 @@ exports[`<TextInputWithButton /> with component inside button value matches with
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje jZhEES"
+    className="sc-bwzfXH cmvcxy sc-EHOje jZhEES"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
   />
   <button
-    className="sc-bZQynM gMwIQv"
+    className="sc-bZQynM hqRtSn"
     disabled={false}
     type="button"
   >
@@ -103,12 +103,12 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje jZhEES"
+    className="sc-bwzfXH cmvcxy sc-EHOje jZhEES"
     disabled={true}
     name="text"
   />
   <button
-    className="sc-bZQynM kCbUVr"
+    className="sc-bZQynM kTAAdF"
     disabled={true}
     type="button"
   >
@@ -122,12 +122,50 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH hxdmqA sc-EHOje jZhEES"
+    className="sc-bwzfXH begKAY sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM gtCKTx"
+    className="sc-bZQynM kcgYZe"
+    disabled={false}
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with giant prop matches with snapshot 1`] = `
+<div
+  className="sc-ifAKCX kXEWnh"
+>
+  <input
+    className="sc-bwzfXH kjUCpq sc-EHOje jZhEES"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="sc-bZQynM hqRtSn"
+    disabled={false}
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`<TextInputWithButton /> with huge prop matches with snapshot 1`] = `
+<div
+  className="sc-ifAKCX kXEWnh"
+>
+  <input
+    className="sc-bwzfXH edATGg sc-EHOje jZhEES"
+    disabled={false}
+    name="text"
+  />
+  <button
+    className="sc-bZQynM hqRtSn"
     disabled={false}
     type="button"
   >
@@ -141,14 +179,14 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-EHOje jZhEES"
+    className="sc-bwzfXH cmvcxy sc-EHOje jZhEES"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
     value="foobar"
   />
   <button
-    className="sc-bZQynM gMwIQv"
+    className="sc-bZQynM hqRtSn"
     disabled={false}
     type="button"
   >
@@ -162,12 +200,12 @@ exports[`<TextInputWithButton /> with tiny prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH hXpaRk sc-EHOje jZhEES"
+    className="sc-bwzfXH kKjtef sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM gMwIQv"
+    className="sc-bZQynM hqRtSn"
     disabled={false}
     type="button"
   >
@@ -181,12 +219,12 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH fweSIF sc-EHOje jZhEES"
+    className="sc-bwzfXH hexTtb sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM cFUtlK"
+    className="sc-bZQynM ioCtgE"
     disabled={false}
     type="button"
   >

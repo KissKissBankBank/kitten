@@ -33,6 +33,7 @@ import domEvents, {
 } from '../../../helpers/dom/events'
 import emitter from '../../../helpers/utils/emitter'
 import { DROPDOWN_ANIMATED_DELAY } from '../../../constants/dropdown-config'
+import { usePrevious } from '../../../helpers/utils/use-previous-hook'
 
 const StyledStickyContainer = styled(StickyContainer)`
   ${({ isMenuExpanded }) =>
@@ -79,12 +80,15 @@ const HeaderNav = ({
   isFixed,
   isLogged,
   quickAccessProps,
+  stickyProps,
   zIndexConfig,
 }) => {
   const [isMenuExpanded, setMenuExpanded] = useState(false)
   const [menuExpandBy, setMenuExpandBy] = useState(null)
+  const [stickyState, setStickyState] = useState(null)
   const stickyContainerRef = useRef(null)
   const headerRef = useRef(null)
+  const previousStickyState = usePrevious(stickyState)
 
   const focusDropdown = ({ detail: dropdown }) => {
     emitter.emit(TOGGLE_DROPDOWN_EVENT, false)
@@ -157,11 +161,17 @@ const HeaderNav = ({
   const updateHeaderBackground = () => /UserMenu/.test(menuExpandBy)
 
   const callOnToggle = ({ isExpanded, expandBy }) => {
-    if (!isExpanded) stickyContainerRef.current.setSticky()
+    if (!isExpanded && previousStickyState === 'always') {
+      stickyContainerRef.current.setSticky()
+    }
 
     setMenuExpanded(isExpanded)
     setMenuExpandBy(expandBy)
   }
+
+  useEffect(() => {
+    setStickyState(isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp')
+  }, [isFixed, isMenuExpanded])
 
   return (
     <Context.Provider
@@ -172,11 +182,12 @@ const HeaderNav = ({
         callOnToggle,
       }}
     >
-      <Header zIndex={zIndexConfig}>
+      <Header zIndex={zIndexConfig} isMenuExpanded={isMenuExpanded}>
         <StyledStickyContainer
           ref={stickyContainerRef}
-          isSticky={isFixed || isMenuExpanded ? 'always' : 'topOnScrollUp'}
+          isSticky={stickyState}
           isMenuExpanded={isMenuExpanded}
+          {...stickyProps}
         >
           <Navigation
             ref={headerRef}
@@ -217,6 +228,9 @@ HeaderNav.propTypes = {
     text: PropTypes.string,
     zIndex: PropTypes.number,
   }),
+  stickyProps: PropTypes.shape({
+    top: PropTypes.number,
+  }),
   zIndexConfig: PropTypes.shape({
     header: PropTypes.number,
     headerWithOpenMenu: PropTypes.number,
@@ -228,6 +242,7 @@ HeaderNav.defaultProps = {
   isFixed: false,
   isLogged: false,
   quickAccessProps: {},
+  stickyProps: {},
   zIndexConfig: {
     header: 1,
     headerWithOpenMenu: 3,

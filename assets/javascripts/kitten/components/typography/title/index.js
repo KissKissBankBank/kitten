@@ -20,9 +20,22 @@ const StyledTitle = styled.span`
     css`
       font-style: italic;
     `}
+
+  ${({ cssColor }) =>
+    cssColor &&
+    css`
+      color: ${cssColor};
+    `}
 `
 
-export const Title = ({ modifier, tag, margin, italic, ...other }) => {
+export const Title = ({
+  modifier,
+  tag,
+  margin,
+  italic,
+  cssColor,
+  ...other
+}) => {
   return (
     <StyledTitle
       as={tag}
@@ -30,6 +43,7 @@ export const Title = ({ modifier, tag, margin, italic, ...other }) => {
       modifier={modifier}
       margin={margin}
       italic={italic}
+      cssColor={cssColor}
     />
   )
 }
@@ -39,6 +53,7 @@ Title.defaultProps = {
   modifier: 'primary',
   margin: true,
   italic: false,
+  cssColor: null,
 }
 
 Title.propTypes = {
@@ -59,6 +74,10 @@ Title.propTypes = {
     Remove default margins of `title` attribut.
   */
   margin: PropTypes.bool,
+  /**
+    Specify a color (use a CSS color string).
+  */
+  cssColor: PropTypes.string,
   /**
     Use `font-style: italic`.
   */

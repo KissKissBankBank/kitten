@@ -19,10 +19,10 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   min-width: 12.5rem;
   min-height: 3.125rem;
   padding: 0 1.875rem;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -60,6 +60,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #222;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -176,10 +178,10 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   min-width: 12.5rem;
   min-height: 3.125rem;
   padding: 0 1.875rem;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -217,6 +219,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #19b4fa;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -349,10 +353,10 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   min-width: 12.5rem;
   min-height: 3.125rem;
   padding: 0 1.875rem;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -390,6 +394,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 .c0 svg,
 .c0 path {
   fill: #19b4fa;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -493,10 +499,10 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   min-width: 12.5rem;
   min-height: 3.125rem;
   padding: 0 1.875rem;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -534,6 +540,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #ff0046;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,
@@ -637,10 +645,10 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   min-width: 12.5rem;
   min-height: 3.125rem;
   padding: 0 1.875rem;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   color: #222;
   line-height: 1.3;
   -webkit-text-decoration: none;
@@ -653,7 +661,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   min-width: 10rem;
   min-height: 2.5rem;
   padding: 0 1.25rem;
-  font-size: 0.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
@@ -682,6 +690,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 .c0 svg,
 .c0 path {
   fill: #19b4fa;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
 }
 
 .c0:hover,

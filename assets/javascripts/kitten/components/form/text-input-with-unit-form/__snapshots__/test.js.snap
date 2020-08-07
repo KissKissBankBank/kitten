@@ -2,14 +2,14 @@
 
 exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
 <form
-  className="sc-htoDjs kWBfyC"
+  className="sc-dnqmqq gecTqK"
   onSubmit={[Function]}
 >
   <div
     className="sc-bdVaJa kzCucd"
   >
     <div
-      className="k-Grid sc-dnqmqq ivyRST"
+      className="k-Grid sc-iwsKbI kVNsEk"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
@@ -33,7 +33,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="sc-htpNat bKpJKj sc-bZQynM kiqCgY"
+              className="sc-htpNat fTSCbm sc-bZQynM kiqCgY"
               defaultValue=""
               disabled={false}
               id="donation-amount"
@@ -45,7 +45,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="sc-gzVnrw kaMYGF"
+              className="sc-gzVnrw eiLylU"
               disabled={false}
             >
               €
@@ -56,11 +56,11 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid sc-dnqmqq ivyRST"
+    className="k-Grid sc-iwsKbI kVNsEk"
   >
     <button
       aria-label="To contribute"
-      className="k-Button k-Button--helium k-Button--big sc-iwsKbI eTitdG"
+      className="k-Button k-Button--helium k-Button--big sc-gZMcBi cvAltb"
       disabled={false}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
@@ -75,14 +75,14 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
 <form
-  className="sc-htoDjs kWBfyC"
+  className="sc-dnqmqq gecTqK"
   onSubmit={[Function]}
 >
   <div
     className="sc-bdVaJa kzCucd"
   >
     <div
-      className="k-Grid sc-dnqmqq ivyRST"
+      className="k-Grid sc-iwsKbI kVNsEk"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
@@ -106,7 +106,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="sc-htpNat bKpJKj sc-bZQynM kiqCgY"
+              className="sc-htpNat fTSCbm sc-bZQynM kiqCgY"
               defaultValue=""
               disabled={false}
               id=""
@@ -118,7 +118,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="sc-gzVnrw kaMYGF"
+              className="sc-gzVnrw eiLylU"
               disabled={false}
             />
           </div>
@@ -127,11 +127,11 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid sc-dnqmqq ivyRST"
+    className="k-Grid sc-iwsKbI kVNsEk"
   >
     <button
       aria-label=""
-      className="k-Button k-Button--helium k-Button--big sc-iwsKbI eTitdG"
+      className="k-Button k-Button--helium k-Button--big sc-gZMcBi cvAltb"
       disabled={false}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
@@ -146,14 +146,14 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] = `
 <form
-  className="sc-htoDjs kWBfyC"
+  className="sc-dnqmqq gecTqK"
   onSubmit={[Function]}
 >
   <div
     className="sc-bdVaJa kzCucd"
   >
     <div
-      className="k-Grid sc-dnqmqq ivyRST"
+      className="k-Grid sc-iwsKbI kVNsEk"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
@@ -177,7 +177,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
           >
             <input
               autoComplete="off"
-              className="sc-htpNat bKpJKj sc-bZQynM kiqCgY"
+              className="sc-htpNat fTSCbm sc-bZQynM kiqCgY"
               defaultValue=""
               disabled={true}
               id=""
@@ -189,7 +189,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
               type="number"
             />
             <span
-              className="sc-gzVnrw jwXdMM"
+              className="sc-gzVnrw cpcqHn"
               disabled={true}
             />
           </div>
@@ -198,11 +198,11 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
     </div>
   </div>
   <div
-    className="k-Grid sc-dnqmqq ivyRST"
+    className="k-Grid sc-iwsKbI kVNsEk"
   >
     <button
       aria-label=""
-      className="k-Button k-Button--helium k-Button--big sc-iwsKbI eTitdG"
+      className="k-Button k-Button--helium k-Button--big sc-gZMcBi cvAltb"
       disabled={true}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
@@ -217,14 +217,14 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
 
 exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
 <form
-  className="sc-htoDjs kWBfyC"
+  className="sc-dnqmqq gecTqK"
   onSubmit={[Function]}
 >
   <div
     className="sc-bdVaJa gSHEXD"
   >
     <div
-      className="k-Grid sc-dnqmqq ivyRST"
+      className="k-Grid sc-iwsKbI kVNsEk"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
@@ -248,7 +248,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="sc-htpNat ynqvX sc-bZQynM kiqCgY"
+              className="sc-htpNat iVlOqv sc-bZQynM kiqCgY"
               defaultValue=""
               disabled={false}
               id=""
@@ -260,7 +260,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="sc-gzVnrw gxSmpY"
+              className="sc-gzVnrw fYzZwf"
               disabled={false}
             />
           </div>
@@ -269,7 +269,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
           className="sc-bdVaJa ggQxmM"
         >
           <span
-            className="k-u-color-error k-u-size-micro k-u-weight-regular"
+            className="sc-htoDjs bZzhDu k-u-color-error k-u-size-micro k-u-weight-regular"
           >
             Error message…
           </span>
@@ -278,11 +278,11 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
     </div>
   </div>
   <div
-    className="k-Grid sc-dnqmqq ivyRST"
+    className="k-Grid sc-iwsKbI kVNsEk"
   >
     <button
       aria-label=""
-      className="k-Button k-Button--helium k-Button--big sc-iwsKbI eTitdG"
+      className="k-Button k-Button--helium k-Button--big sc-gZMcBi cvAltb"
       disabled={false}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}

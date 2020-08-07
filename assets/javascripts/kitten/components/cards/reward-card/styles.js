@@ -41,10 +41,6 @@ export const StyledRewardCard = styled.div`
   }
 
   .k-RewardCard__title {
-    font-size: ${pxToRem(24)};
-    line-height: ${pxToRem(34)};
-    margin: 0 0 ${pxToRem(15)} 0;
-
     &.k-RewardCard__title--disabled {
       color: ${COLORS.font2};
       cursor: not-allowed;
@@ -87,6 +83,7 @@ export const StyledRewardCard = styled.div`
     flex-grow: 9999;
     flex-basis: ${pxToRem(275)}; /* content min-width */
     margin: ${pxToRem(15)};
+    max-width: calc(100% - ${pxToRem(15)});
   }
 
   .k-RewardCard__rowSide {

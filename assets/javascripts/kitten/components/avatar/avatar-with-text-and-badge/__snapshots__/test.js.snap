@@ -23,9 +23,11 @@ exports[`<AvatarWithTextAndBadge /> without avatar should match with snapshot 1`
       "text": <Text
         className={null}
         color={null}
+        cssColor={null}
         decoration={null}
         fontStyle={null}
         lineHeight={null}
+        setting={null}
         size="micro"
         tag="span"
         transform={null}
@@ -40,9 +42,11 @@ exports[`<AvatarWithTextAndBadge /> without avatar should match with snapshot 1`
     <Text
       className={null}
       color={null}
+      cssColor={null}
       decoration={null}
       fontStyle={null}
       lineHeight={null}
+      setting={null}
       size={null}
       tag="span"
       transform={null}
@@ -55,9 +59,11 @@ exports[`<AvatarWithTextAndBadge /> without avatar should match with snapshot 1`
     <Text
       className={null}
       color={null}
+      cssColor={null}
       decoration={null}
       fontStyle={null}
       lineHeight="normal"
+      setting={null}
       size={null}
       tag="span"
       transform={null}

@@ -143,3 +143,43 @@ export const Multi = () => {
     </>
   )
 }
+
+export const WithoutButton = () => (
+  <Modal
+    trigger={<Button modifier="helium">Open</Button>}
+    big={boolean('Big size', false)}
+    huge={boolean('Huge size', false)}
+    zIndex={number('Overlay z-index', 110)}
+  >
+    {() => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Paragraph withoutMargin>
+          {text('content', paragraphContainer)}
+        </Modal.Paragraph>
+      </>
+    )}
+  </Modal>
+)
+
+export const FullSize = () => (
+  <Modal
+    trigger={<Button modifier="helium">Open</Button>}
+    hasCloseButton={boolean('Has close button', true)}
+    zIndex={number('Overlay z-index', 110)}
+    fullSizeTitle="Lorem ipsum dolor sit consectetuer"
+    fullSize={boolean('Has full size', true)}
+  >
+    {() => (
+      <>
+        <Modal.Title>Lorem ipsum dolor sit consectetuer</Modal.Title>
+        <Modal.Paragraph>
+          {text('content', `${paragraphContainer} ${paragraphContainer}`)}
+        </Modal.Paragraph>
+        <Modal.Actions>
+          <Modal.Button modifier="helium">Action 1 Button</Modal.Button>
+        </Modal.Actions>
+      </>
+    )}
+  </Modal>
+)

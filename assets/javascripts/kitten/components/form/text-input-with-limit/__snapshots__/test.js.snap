@@ -5,7 +5,7 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
   className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-ifAKCX eUaGxb"
+    className="sc-bwzfXH cmvcxy sc-ifAKCX eUaGxb"
     defaultValue=""
     disabled={false}
     name="text"
@@ -25,7 +25,7 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
   className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-bwzfXH cLpaUK sc-ifAKCX eUaGxb"
+    className="sc-bwzfXH cmvcxy sc-ifAKCX eUaGxb"
     defaultValue=""
     disabled={true}
     name="text"
@@ -45,7 +45,7 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
   className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-bwzfXH hxdmqA sc-ifAKCX hEXEIQ"
+    className="sc-bwzfXH begKAY sc-ifAKCX hEXEIQ"
     defaultValue=""
     disabled={false}
     name="text"
@@ -65,7 +65,7 @@ exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
   className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-bwzfXH hXpaRk sc-ifAKCX eUaGxb"
+    className="sc-bwzfXH kKjtef sc-ifAKCX eUaGxb"
     defaultValue=""
     disabled={false}
     name="text"
