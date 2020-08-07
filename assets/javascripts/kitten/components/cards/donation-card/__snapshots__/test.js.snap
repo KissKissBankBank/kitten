@@ -68,7 +68,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   >
                     <input
                       autoComplete="off"
-                      className="sc-ifAKCX bFNyhG sc-htoDjs icREAh"
+                      className="sc-ifAKCX hETjNG sc-htoDjs icREAh"
                       defaultValue=""
                       disabled={false}
                       id="donation-amount"
@@ -80,7 +80,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                       type="number"
                     />
                     <span
-                      className="sc-dnqmqq jWpsyV"
+                      className="sc-dnqmqq kVvoRh"
                       disabled={false}
                     >
                       €
