@@ -57,7 +57,7 @@ var StyledTextInput = (0, _styledComponents.default)(_textInput.TextInput).withC
 var StyledInputUnit = _styledComponents.default.span.withConfig({
   displayName: "text-input-with-unit__StyledInputUnit",
   componentId: "gjmccx-2"
-})(["display:flex;align-items:center;justify-content:center;background-color:", ";border:", " solid ", ";border-left:0;border-radius:0;box-sizing:border-box;padding:0 ", ";color:", ";white-space:nowrap;transition:all .2s;font-size:", ";", ";:focus{border-color:", ";color:", ";}", " ", " ", " ", " ", " ", ":focus + &{border-color:", ";color:", ";}"], _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), _colorsConfig.default.font1, (0, _typography.stepToRem)(0), _typographyConfig.default.fontStyles.regular, _colorsConfig.default.line2, _colorsConfig.default.font1, function (_ref2) {
+})(["display:flex;align-items:center;justify-content:center;background-color:", ";border:", " solid ", ";border-left:0;border-radius:0;box-sizing:border-box;padding:0 ", ";color:", ";white-space:nowrap;transition:all .2s;font-size:", ";", ";:focus{border-color:", ";color:", ";}", " ", " ", " ", " ", " ", " ", " ", ":focus + &{border-color:", ";color:", ";}"], _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(15), _colorsConfig.default.font1, (0, _typography.stepToRem)(0), _typographyConfig.default.fontStyles.regular, _colorsConfig.default.line2, _colorsConfig.default.font1, function (_ref2) {
   var valid = _ref2.valid;
   return valid && (0, _styledComponents.css)(["border-color:", ";color:", ";"], _colorsConfig.default.tertiary2, _colorsConfig.default.valid);
 }, function (_ref3) {
@@ -70,7 +70,13 @@ var StyledInputUnit = _styledComponents.default.span.withConfig({
   var tiny = _ref5.tiny;
   return tiny && (0, _styledComponents.css)(["padding:0 ", ";"], (0, _typography.pxToRem)(10));
 }, function (_ref6) {
-  var unitWord = _ref6.unitWord;
+  var huge = _ref6.huge;
+  return huge && (0, _styledComponents.css)(["padding:0 ", ";"], (0, _typography.pxToRem)(20));
+}, function (_ref7) {
+  var giant = _ref7.giant;
+  return giant && (0, _styledComponents.css)(["padding:0 ", ";"], (0, _typography.pxToRem)(25));
+}, function (_ref8) {
+  var unitWord = _ref8.unitWord;
   return unitWord && (0, _styledComponents.css)(["font-size:", ";"], (0, _typography.stepToRem)(-1));
 }, StyledTextInput, _colorsConfig.default.line2, _colorsConfig.default.font1);
 
@@ -94,10 +100,13 @@ var TextInputWithUnit = /*#__PURE__*/function (_PureComponent) {
           valid = _this$props.valid,
           error = _this$props.error,
           tiny = _this$props.tiny,
+          huge = _this$props.huge,
+          giant = _this$props.giant,
+          center = _this$props.center,
           disabled = _this$props.disabled,
           unit = _this$props.unit,
           unitWord = _this$props.unitWord,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["type", "valid", "error", "tiny", "disabled", "unit", "unitWord"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["type", "valid", "error", "tiny", "huge", "giant", "center", "disabled", "unit", "unitWord"]);
       return /*#__PURE__*/_react.default.createElement(StyledTextInputWithUnit, null, /*#__PURE__*/_react.default.createElement(StyledTextInput, (0, _extends2.default)({
         ref: function ref(input) {
           _this.input = input;
@@ -106,12 +115,17 @@ var TextInputWithUnit = /*#__PURE__*/function (_PureComponent) {
         valid: valid,
         error: error,
         tiny: tiny,
+        huge: huge,
+        giant: giant,
+        center: center,
         disabled: disabled
       }, others)), /*#__PURE__*/_react.default.createElement(StyledInputUnit, {
         valid: valid,
         error: error,
         disabled: disabled,
-        tiny: tiny
+        tiny: tiny,
+        huge: huge,
+        giant: giant
       }, unit || unitWord));
     }
   }]);
@@ -124,6 +138,9 @@ TextInputWithUnit.propTypes = {
   valid: _propTypes.default.bool,
   error: _propTypes.default.bool,
   tiny: _propTypes.default.bool,
+  huge: _propTypes.default.bool,
+  giant: _propTypes.default.bool,
+  center: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   unit: _propTypes.default.string,
   unitWord: _propTypes.default.bool,
@@ -136,6 +153,9 @@ TextInputWithUnit.defaultProps = {
   valid: false,
   error: false,
   tiny: false,
+  huge: false,
+  giant: false,
+  center: false,
   disabled: false,
   digits: null
 };

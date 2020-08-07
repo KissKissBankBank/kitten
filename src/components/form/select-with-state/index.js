@@ -43,13 +43,15 @@ var SelectWithState = function SelectWithState(_ref) {
       onInputChange = _ref.onInputChange,
       className = _ref.className,
       tiny = _ref.tiny,
+      huge = _ref.huge,
+      giant = _ref.giant,
       error = _ref.error,
       valid = _ref.valid,
       disabled = _ref.disabled,
       labelText = _ref.labelText,
       autoFill = _ref.autoFill,
       id = _ref.id,
-      props = (0, _objectWithoutProperties2.default)(_ref, ["value", "onChange", "onInputChange", "className", "tiny", "error", "valid", "disabled", "labelText", "autoFill", "id"]);
+      props = (0, _objectWithoutProperties2.default)(_ref, ["value", "onChange", "onInputChange", "className", "tiny", "huge", "giant", "error", "valid", "disabled", "labelText", "autoFill", "id"]);
 
   var _useState = (0, _react.useState)(value),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -92,6 +94,8 @@ var SelectWithState = function SelectWithState(_ref) {
 
   var selectClassName = (0, _classnames.default)('k-Select', className, {
     'k-Select--tiny': tiny,
+    'k-Select--huge': huge,
+    'k-Select--giant': giant,
     'is-error': error,
     'is-valid': valid,
     'is-disabled': disabled
@@ -189,6 +193,8 @@ SelectWithState.defaultProps = {
   valid: false,
   disabled: false,
   tiny: false,
+  huge: false,
+  giant: false,
   name: null,
   inputProps: {},
   autoFill: undefined

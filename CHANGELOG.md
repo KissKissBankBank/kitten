@@ -4,12 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Enhance `ListTable` performance.
-- Feature: Add `huge` and `giant` props to `Button`.
-- Feature: Add `cssColor` prop to `Text` component.
-- Feature: Add `cssColor` prop to `Title` component.
-- Feature: Add `huge`, `giant` and `center` props to `TextInput`.
-- Feature: Add `huge` and `giant` prop to `SelectWithState`.
+## [2.84.0] - 2020-08-07
+
+Features:
+- Add `huge` and `giant` props to `Button`.
+- Add `cssColor` prop to `Text` component.
+- Add `cssColor` prop to `Title` component.
+- Add `huge`, `giant` and `center` props to `TextInput`.
+- Add `huge` and `giant` prop to `SelectWithState`.
+
+Fix:
+- Enhance `ListTable` performance.
 
 ## [2.83.0] - 2020-07-31
 
