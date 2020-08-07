@@ -35,13 +35,15 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
+var _screenConfig = require("../../../constants/screen-config");
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var borderWidth = (0, _typography.pxToRem)(2);
 var verticalPadding = (0, _typography.pxToRem)(10);
-var styledTextInput = (0, _styledComponents.css)(["font-size:", ";line-height:1.3;", ";box-sizing:border-box;border-width:", ";border-style:solid;border-radius:0;width:100%;height:", ";padding:", " ", ";appearance:none;background-color:", ";color:", ";border-color:", ";outline:none;", ";::placeholder{color:", ";}:focus{outline:none;color:", ";border-color:", ";}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}", " ", " &:invalid{box-shadow:none;outline:none;&:not(:focus){color:", ";border-color:", ";}}", ""], (0, _typography.stepToRem)(-1), _typographyConfig.default.fontStyles.light, borderWidth, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _colorsConfig.default.background1, _colorsConfig.default.font1, _colorsConfig.default.line1, function (_ref) {
+var styledTextInput = (0, _styledComponents.css)(["font-size:", ";line-height:1.3;", ";box-sizing:border-box;border-width:", ";border-style:solid;border-radius:0;width:100%;height:", ";padding:", " ", ";appearance:none;background-color:", ";color:", ";border-color:", ";outline:none;", ";::placeholder{color:", ";}:focus{outline:none;color:", ";border-color:", ";}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}", " ", " &:invalid{box-shadow:none;outline:none;&:not(:focus){color:", ";border-color:", ";}}", " ", " ", " ", ""], (0, _typography.stepToRem)(-1), _typographyConfig.default.fontStyles.light, borderWidth, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _colorsConfig.default.background1, _colorsConfig.default.font1, _colorsConfig.default.line1, function (_ref) {
   var digits = _ref.digits;
   return digitsStyles(digits);
 }, _colorsConfig.default.font2, _colorsConfig.default.font1, _colorsConfig.default.line2, _colorsConfig.default.font2, _colorsConfig.default.line1, _colorsConfig.default.line1, function (_ref2) {
@@ -53,6 +55,15 @@ var styledTextInput = (0, _styledComponents.css)(["font-size:", ";line-height:1.
 }, _colorsConfig.default.error3, _colorsConfig.default.error3, function (_ref4) {
   var tiny = _ref4.tiny;
   return tiny && (0, _styledComponents.css)(["height:", ";"], (0, _typography.pxToRem)(40));
+}, function (_ref5) {
+  var huge = _ref5.huge;
+  return huge && (0, _styledComponents.css)(["height:", ";@media (min-width:", "px){height:", ";font-size:", ";}"], (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(80), (0, _typography.stepToRem)(0));
+}, function (_ref6) {
+  var giant = _ref6.giant;
+  return giant && (0, _styledComponents.css)(["height:", ";@media (min-width:", "px){height:", ";font-size:", ";}"], (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(90), (0, _typography.stepToRem)(0));
+}, function (_ref7) {
+  var center = _ref7.center;
+  return center && (0, _styledComponents.css)(["text-align:center;"]);
 });
 
 var StyledTextarea = _styledComponents.default.div.withConfig({
@@ -115,8 +126,11 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
           name = _this$props.name,
           digits = _this$props.digits,
           tiny = _this$props.tiny,
+          huge = _this$props.huge,
+          giant = _this$props.giant,
+          center = _this$props.center,
           tag = _this$props.tag,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "name", "digits", "tiny", "tag"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "name", "digits", "tiny", "huge", "giant", "center", "tag"]);
 
       if (tag === 'textarea') {
         return /*#__PURE__*/_react.default.createElement(StyledTextarea, null, /*#__PURE__*/_react.default.createElement(StyledInputTextarea, (0, _extends2.default)({
@@ -128,7 +142,10 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
           disabled: disabled,
           tiny: tiny,
           digits: digits,
-          name: name
+          name: name,
+          huge: huge,
+          giant: giant,
+          center: center
         }, others)), /*#__PURE__*/_react.default.createElement(StyledGradientTextarea, null));
       } else {
         return /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
@@ -140,7 +157,10 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
           disabled: disabled,
           tiny: tiny,
           digits: digits,
-          name: name
+          name: name,
+          huge: huge,
+          giant: giant,
+          center: center
         }, others));
       }
     }
@@ -154,6 +174,9 @@ TextInput.propTypes = {
   valid: _propTypes.default.bool,
   error: _propTypes.default.bool,
   tiny: _propTypes.default.bool,
+  huge: _propTypes.default.bool,
+  giant: _propTypes.default.bool,
+  center: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   name: _propTypes.default.string,
   digits: _propTypes.default.number
@@ -164,6 +187,9 @@ TextInput.defaultProps = {
   valid: false,
   error: false,
   tiny: false,
+  huge: false,
+  giant: false,
+  center: false,
   disabled: false,
   name: 'text',
   digits: null

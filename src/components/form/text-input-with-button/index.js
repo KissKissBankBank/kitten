@@ -90,17 +90,21 @@ var TextInputWithButton = /*#__PURE__*/function (_PureComponent) {
           error = _this$props.error,
           disabled = _this$props.disabled,
           tiny = _this$props.tiny,
+          huge = _this$props.huge,
+          giant = _this$props.giant,
           value = _this$props.value,
           buttonValue = _this$props.buttonValue,
           modifier = _this$props.modifier,
           buttonProps = _this$props.buttonProps,
           inputValue = _this$props.inputValue,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "buttonValue", "modifier", "buttonProps", "inputValue"]);
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "huge", "giant", "value", "buttonValue", "modifier", "buttonProps", "inputValue"]);
       return /*#__PURE__*/_react.default.createElement(StyledTextInputWithButton, null, /*#__PURE__*/_react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
         valid: valid,
         error: error,
         disabled: disabled,
         tiny: tiny,
+        huge: huge,
+        giant: giant,
         value: inputValue
       })), /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
         type: "button",
@@ -120,6 +124,8 @@ TextInputWithButton.propTypes = {
   error: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   tiny: _propTypes.default.bool,
+  huge: _propTypes.default.bool,
+  giant: _propTypes.default.bool,
   modifier: _propTypes.default.string,
   inputValue: _propTypes.default.string,
   // DEPRECATED: do not use prop `value`. Use `buttonValue` instead.
@@ -131,6 +137,8 @@ TextInputWithButton.defaultProps = {
   error: false,
   disabled: false,
   tiny: false,
+  huge: false,
+  giant: false,
   buttonValue: 'Button',
   modifier: 'beryllium'
 };

@@ -29,9 +29,19 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _styledComponents = _interopRequireWildcard(require("styled-components"));
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var StyledText = _styledComponents.default.span.withConfig({
+  displayName: "text__StyledText",
+  componentId: "sc-1jqe2sw-0"
+})(["", ""], function (_ref) {
+  var cssColor = _ref.cssColor;
+  return cssColor && (0, _styledComponents.css)(["color:", ";"], cssColor);
+});
 
 var Text = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Text, _Component);
@@ -49,6 +59,7 @@ var Text = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           className = _this$props.className,
           color = _this$props.color,
+          cssColor = _this$props.cssColor,
           decoration = _this$props.decoration,
           lineHeight = _this$props.lineHeight,
           setting = _this$props.setting,
@@ -57,8 +68,7 @@ var Text = /*#__PURE__*/function (_Component) {
           tag = _this$props.tag,
           transform = _this$props.transform,
           weight = _this$props.weight,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "color", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "transform", "weight"]);
-      var Tag = tag;
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["className", "color", "cssColor", "decoration", "lineHeight", "setting", "size", "fontStyle", "tag", "transform", "weight"]);
       var textClassName = (0, _classnames.default)({
         // Color.
         'k-u-color-font1': color == 'font1',
@@ -94,7 +104,9 @@ var Text = /*#__PURE__*/function (_Component) {
         'k-u-weight-regular': weight == 'regular',
         'k-u-weight-bold': weight == 'bold'
       }, className);
-      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({}, others, {
+      return /*#__PURE__*/_react.default.createElement(StyledText, (0, _extends2.default)({
+        as: tag
+      }, others, {
         className: textClassName
       }));
     }
@@ -108,6 +120,11 @@ Text.propTypes = {
     Available colors:
   */
   color: _propTypes.default.oneOf(['font1', 'font2', 'primary1', 'background1', 'error', 'valid']),
+
+  /**
+    Specify a custom color (as a CSS color string).
+  */
+  cssColor: _propTypes.default.string,
 
   /**
     If `tag="a"`, show underline.
@@ -147,6 +164,7 @@ Text.propTypes = {
 Text.defaultProps = {
   className: null,
   color: null,
+  cssColor: null,
   decoration: null,
   lineHeight: null,
   setting: null,

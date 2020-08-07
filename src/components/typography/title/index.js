@@ -26,7 +26,7 @@ var _modifierStyles = require("./helpers/modifier-styles");
 var StyledTitle = _styledComponents.default.span.withConfig({
   displayName: "title__StyledTitle",
   componentId: "sc-46lshq-0"
-})(["", ";", " ", " ", ""], _typographyConfig.default.fontStyles.bold, function (_ref) {
+})(["", ";", " ", " ", " ", ""], _typographyConfig.default.fontStyles.bold, function (_ref) {
   var modifier = _ref.modifier;
   return (0, _modifierStyles.modifierStyles)(modifier);
 }, function (_ref2) {
@@ -35,20 +35,25 @@ var StyledTitle = _styledComponents.default.span.withConfig({
 }, function (_ref3) {
   var italic = _ref3.italic;
   return italic && (0, _styledComponents.css)(["font-style:italic;"]);
+}, function (_ref4) {
+  var cssColor = _ref4.cssColor;
+  return cssColor && (0, _styledComponents.css)(["color:", ";"], cssColor);
 });
 
-var Title = function Title(_ref4) {
-  var modifier = _ref4.modifier,
-      tag = _ref4.tag,
-      margin = _ref4.margin,
-      italic = _ref4.italic,
-      other = (0, _objectWithoutProperties2.default)(_ref4, ["modifier", "tag", "margin", "italic"]);
+var Title = function Title(_ref5) {
+  var modifier = _ref5.modifier,
+      tag = _ref5.tag,
+      margin = _ref5.margin,
+      italic = _ref5.italic,
+      cssColor = _ref5.cssColor,
+      other = (0, _objectWithoutProperties2.default)(_ref5, ["modifier", "tag", "margin", "italic", "cssColor"]);
   return /*#__PURE__*/_react.default.createElement(StyledTitle, (0, _extends2.default)({
     as: tag
   }, other, {
     modifier: modifier,
     margin: margin,
-    italic: italic
+    italic: italic,
+    cssColor: cssColor
   }));
 };
 
@@ -57,7 +62,8 @@ Title.defaultProps = {
   tag: 'h1',
   modifier: 'primary',
   margin: true,
-  italic: false
+  italic: false,
+  cssColor: null
 };
 Title.propTypes = {
   tag: _propTypes.default.string,
@@ -71,6 +77,11 @@ Title.propTypes = {
     Remove default margins of `title` attribut.
   */
   margin: _propTypes.default.bool,
+
+  /**
+    Specify a color (use a CSS color string).
+  */
+  cssColor: _propTypes.default.string,
 
   /**
     Use `font-style: italic`.
