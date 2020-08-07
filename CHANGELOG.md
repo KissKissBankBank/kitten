@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `cssColor` prop to `Text` component.
 - Feature: Add `cssColor` prop to `Title` component.
+- Feature: Add `huge`, `giant` and `center` props to `TextInput`.
+- Feature: Add `huge` and `giant` prop to `SelectWithState`.
 
 ## [2.83.0] - 2020-07-31
 

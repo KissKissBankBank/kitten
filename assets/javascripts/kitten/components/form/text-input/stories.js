@@ -37,6 +37,13 @@ const info = {
     #### Size
     ~~~js
     <TextInput tiny />
+    <TextInput huge />
+    <TextInput giant />
+    ~~~
+
+    #### Alignment
+    ~~~js
+    <TextInput center />
     ~~~
 
     #### Tag
@@ -69,13 +76,16 @@ storiesOf('Form/TextInput', module)
     () => {
       return (
         <Grid style={{ marginTop: '5em' }}>
-          <GridCol offset="1" col="6">
+          <GridCol offset="1" col="10">
             <TextInput
               tag={select('Tag', tagOptions, 'input')}
               valid={boolean('Valid', false)}
               error={boolean('Error', false)}
               disabled={boolean('Disabled', false)}
               tiny={boolean('Tiny', false)}
+              huge={boolean('Huge', false)}
+              giant={boolean('Giant', false)}
+              center={boolean('Center', false)}
               placeholder={text('Placeholder', 'Les props sont transmises')}
               digits={number('Digits', 12)}
             />
