@@ -85,6 +85,8 @@ storiesOf('Form/SelectWithState', module)
         error={boolean('Error', false)}
         valid={boolean('Valid', false)}
         tiny={boolean('Tiny', false)}
+        huge={boolean('Huge', false)}
+        giant={boolean('Giant', false)}
         autoFill={select('AutoFill', autoFill)}
       />
     </Container>
@@ -103,6 +105,8 @@ storiesOf('Form/SelectWithState', module)
         error={boolean('Error', false)}
         valid={boolean('Valid', false)}
         tiny={boolean('Tiny', false)}
+        huge={boolean('Huge', false)}
+        giant={boolean('Giant', false)}
         autoFill={select('AutoFill', autoFill)}
       />
     </Container>
