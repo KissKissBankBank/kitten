@@ -1,20 +1,41 @@
 import React from 'react'
 import { Text } from './index'
+import renderer from 'react-test-renderer'
 
 describe('<Text />', () => {
   describe('by default', () => {
-    const component = shallow(<Text />)
+    let component
 
-    it('renders a <span />', () => {
-      expect(component.type()).toBe('span')
+    beforeEach(() => {
+      component = renderer.create(<Text />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with tag prop', () => {
-    const component = shallow(<Text tag="div" />)
+    let component
 
-    it('renders a <div />', () => {
-      expect(component.type()).toBe('div')
+    beforeEach(() => {
+      component = renderer.create(<Text tag="div" />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with as prop', () => {
+    let component
+
+    beforeEach(() => {
+      component = renderer.create(<Text as="div" />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
