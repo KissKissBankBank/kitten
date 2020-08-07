@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `huge` and `giant` props to `Button`.
 - Feature: Add `cssColor` prop to `Text` component.
 - Feature: Add `cssColor` prop to `Title` component.
 - Feature: Add `huge`, `giant` and `center` props to `TextInput`.
@@ -12,7 +13,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [2.83.0] - 2020-07-31
 
 Feature:
-- Add new `Paragraph` with new font-size logical.
+- Add new `Paragraph` with new font-size logic.
 
 Fix:
 - Fix `Paragraph` modifiers.
