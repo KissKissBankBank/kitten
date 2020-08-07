@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Enhance `ListTable` performance.
 - Feature: Add `huge` and `giant` props to `Button`.
 - Feature: Add `cssColor` prop to `Text` component.
 - Feature: Add `cssColor` prop to `Title` component.

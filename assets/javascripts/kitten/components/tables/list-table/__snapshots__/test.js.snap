@@ -2,29 +2,29 @@
 
 exports[`<ListTable /> with a complete structure and custom classes matches with snapshot 1`] = `
 <section
-  className="sc-bZQynM bExtbD"
+  className="k-ListTable"
   id="TestListTable"
 >
   <header
-    className="sc-bdVaJa iuFkAW customHeaderClass"
+    className="k-ListTable__Header customHeaderClass"
   >
     <ul
-      className="sc-bwzfXH hwheGY customListClass"
+      className="k-ListTable__HeaderList customListClass"
     >
       <li
-        className="sc-EHOje dPnxcU"
+        className="k-ListTable__Col"
         id="TestListTable-col-0"
       >
         Header 1
       </li>
       <li
-        className="sc-EHOje dPnxcU"
+        className="k-ListTable__Col"
         id="TestListTable-col-1"
       >
         Header 2
       </li>
       <li
-        className="sc-EHOje dPnxcU"
+        className="k-ListTable__Col"
         id="TestListTable-col-2"
       >
         Header 3
@@ -32,55 +32,55 @@ exports[`<ListTable /> with a complete structure and custom classes matches with
     </ul>
   </header>
   <ul
-    className="sc-htpNat jevOXF"
+    className="k-ListTable__Body"
   >
     <li
-      className="sc-bxivhb gHsnd"
+      className="k-ListTable__Row k-ListTable__Row--is_highlighted"
     >
       <ul
-        className="sc-ifAKCX cAnYSF"
+        className="k-ListTable__RowList"
       >
         <li
           aria-describedby="TestListTable-col-0"
-          className="sc-EHOje dPnxcU"
+          className="k-ListTable__Col"
         >
           Content 1
         </li>
         <li
           aria-describedby="TestListTable-col-1"
-          className="sc-EHOje dPnxcU"
+          className="k-ListTable__Col"
         >
           Content 2
         </li>
         <li
           aria-describedby="TestListTable-col-2"
-          className="sc-EHOje dPnxcU"
+          className="k-ListTable__Col"
         >
           Content 3
         </li>
       </ul>
     </li>
     <li
-      className="sc-bxivhb hsPdgR customRowClass"
+      className="k-ListTable__Row customRowClass"
     >
       <ul
-        className="sc-ifAKCX cAnYSF customListClass"
+        className="k-ListTable__RowList customListClass"
       >
         <li
           aria-describedby="TestListTable-col-0"
-          className="sc-EHOje dPnxcU"
+          className="k-ListTable__Col"
         >
           Content 1
         </li>
         <li
           aria-describedby="TestListTable-col-1"
-          className="sc-EHOje dPnxcU"
+          className="k-ListTable__Col"
         >
           Content 2
         </li>
         <li
           aria-describedby="TestListTable-col-2"
-          className="sc-EHOje dPnxcU"
+          className="k-ListTable__Col"
         >
           Content 3
         </li>
