@@ -10,7 +10,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   margin-bottom: 0.625rem;
 }
 
-.c8 {
+.c7 {
   margin-top: 1.875rem;
 }
 
@@ -25,13 +25,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.c7 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-size: 0.7901234567901234rem;
-  line-height: 1.6;
 }
 
 .c1 {
@@ -144,7 +137,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   fill: #fff;
 }
 
-.c10 {
+.c9 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -186,68 +179,68 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c10:disabled {
+.c9:disabled {
   cursor: not-allowed;
 }
 
-.c10:hover {
+.c9:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c10 >:nth-child(n) {
+.c9 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c10 >:last-child {
+.c9 >:last-child {
   margin-right: 0;
 }
 
-.c10 svg,
-.c10 path {
+.c9 svg,
+.c9 path {
   fill: #222;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c10:hover,
-.c10:focus {
+.c9:hover,
+.c9:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c10:hover svg,
-.c10:focus svg,
-.c10:hover path,
-.c10:focus path {
+.c9:hover svg,
+.c9:focus svg,
+.c9:hover path,
+.c9:focus path {
   fill: #fff;
 }
 
-.c10:active {
+.c9:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c10:active svg,
-.c10:active path {
+.c9:active svg,
+.c9:active path {
   fill: #fff;
 }
 
-.c10:disabled {
+.c9:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c10:disabled svg,
-.c10:disabled path {
+.c9:disabled svg,
+.c9:disabled path {
   fill: #fff;
 }
 
-.c11 {
+.c10 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -289,64 +282,64 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c11:disabled {
+.c10:disabled {
   cursor: not-allowed;
 }
 
-.c11:hover {
+.c10:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c11 >:nth-child(n) {
+.c10 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c11 >:last-child {
+.c10 >:last-child {
   margin-right: 0;
 }
 
-.c11 svg,
-.c11 path {
+.c10 svg,
+.c10 path {
   fill: #fff;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c11:hover,
-.c11:focus {
+.c10:hover,
+.c10:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c11:hover svg,
-.c11:focus svg,
-.c11:hover path,
-.c11:focus path {
+.c10:hover svg,
+.c10:focus svg,
+.c10:hover path,
+.c10:focus path {
   fill: #fff;
 }
 
-.c11:active {
+.c10:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c11:active svg,
-.c11:active path {
+.c10:active svg,
+.c10:active path {
   fill: #fff;
 }
 
-.c11:disabled {
+.c10:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c11:disabled svg,
-.c11:disabled path {
+.c10:disabled svg,
+.c10:disabled path {
   fill: #fff;
 }
 
@@ -409,7 +402,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c9 > * + * {
+.c8 > * + * {
   margin-top: 1.25rem;
 }
 
@@ -422,18 +415,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 @media (min-width:67.5rem) {
   .c5 {
     font-size: 1.601806640625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c7 {
-    font-size: 0.7901234567901234rem;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c7 {
-    font-size: 0.7901234567901234rem;
   }
 }
 
@@ -466,28 +447,28 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c10 {
+  .c9 {
     width: 12.5rem;
     height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c10 {
+  .c9 {
     width: 10rem;
     height: 2.5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c11 {
+  .c10 {
     width: 12.5rem;
     height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c11 {
+  .c10 {
     width: 10rem;
     height: 2.5rem;
   }
@@ -509,7 +490,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 @media (min-width:640px) {
-  .c9 > * + * {
+  .c8 > * + * {
     margin-top: 0;
     margin-left: 1.25rem;
   }
@@ -565,22 +546,22 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
       className="c6"
     >
       <p
-        className="c7"
+        className="k-Paragraph k-Paragraph--quaternary"
       >
         Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. 
       </p>
     </div>
     <div
-      className="c8 c9"
+      className="c7 c8"
     >
       <button
-        className="c10"
+        className="c9"
         onClick={[Function]}
       >
         J’ai compris
       </button>
       <button
-        className="c11"
+        className="c10"
         onClick={[Function]}
       >
         Mes préférences
@@ -611,13 +592,6 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   line-height: 1.2;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-.c6 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 400;
-  font-size: 0.7901234567901234rem;
-  line-height: 1.6;
 }
 
 .c1 {
@@ -781,18 +755,6 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 @media (min-width:67.5rem) {
   .c4 {
     font-size: 1.601806640625rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c6 {
-    font-size: 0.7901234567901234rem;
-  }
-}
-
-@media (min-width:67.5rem) {
-  .c6 {
-    font-size: 0.7901234567901234rem;
   }
 }
 
@@ -873,7 +835,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
       className="c5"
     >
       <p
-        className="c6"
+        className="k-Paragraph k-Paragraph--quaternary"
       >
         
       </p>
