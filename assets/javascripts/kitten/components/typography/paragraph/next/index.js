@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import TYPOGRAPHY from '../../../constants/typography-config'
+import TYPOGRAPHY from '../../../../constants/typography-config'
 import { modifierStyles } from './helpers/modifier-styles'
 
 const StyledParagraph = styled.p`
@@ -19,7 +19,7 @@ const StyledParagraph = styled.p`
     normalLineHeight &&
     css`
       line-height: normal;
-    `} 
+    `}
 
   ${({ italic }) =>
     italic &&

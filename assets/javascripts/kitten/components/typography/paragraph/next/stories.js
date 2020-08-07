@@ -1,8 +1,8 @@
 import React from 'react'
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
 import { Paragraph } from './index'
-import { Text } from '../../../components/typography/text'
-import { Marger } from '../../layout/marger'
+import { Text } from '../../../../components/typography/text'
+import { Marger } from '../../../layout/marger'
 
 const modifierOptions = {
   Primary: 'primary',
