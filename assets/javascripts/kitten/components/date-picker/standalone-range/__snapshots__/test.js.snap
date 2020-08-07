@@ -2,7 +2,7 @@
 
 exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM kspNNT"
+  className="sc-gzVnrw fsyoIl"
 >
   <div
     className="DayPicker Selectable"
@@ -14,16 +14,16 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       tabIndex={0}
     >
       <p
-        className="k-u-size-tiny k-u-weight-regular sc-bxivhb BTiTW"
+        className="sc-bxivhb bUZGRr k-u-size-tiny k-u-weight-regular sc-ifAKCX kidnBC"
       >
         Sélectionnez la période souhaitée
       </p>
       <div
-        className="sc-ifAKCX jhToMv DayPicker-NavBar"
+        className="sc-EHOje lnLHGw DayPicker-NavBar"
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="sc-bwzfXH bEKwPz sc-EHOje lbpOMi"
+          className="sc-bwzfXH itlkYK sc-bZQynM hURQRD"
           onClick={[Function]}
         >
           <svg
@@ -41,7 +41,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="sc-bwzfXH bEKwPz sc-EHOje lbpOMi"
+          className="sc-bwzfXH itlkYK sc-bZQynM hURQRD"
           onClick={[Function]}
         >
           <svg

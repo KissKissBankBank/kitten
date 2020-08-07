@@ -12,7 +12,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-u-margin-bottom-double"
       >
         <h2
-          className="sc-bwzfXH jJkeYb"
+          className="sc-bwzfXH kPzLsa"
         >
           Main title goes here !
         </h2>
@@ -42,7 +42,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
           className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
         >
           <h1
-            className="sc-bwzfXH gVLghD k-u-align-center"
+            className="sc-bwzfXH ffdHnv k-u-align-center"
           >
             Lorem ipsum dolor sit amet
           </h1>
@@ -83,7 +83,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-bwzfXH gVLghD k-u-align-center k-u-margin-bottom-singleHalf--important"
+          className="sc-bwzfXH ffdHnv k-u-align-center k-u-margin-bottom-singleHalf--important"
         >
           Donsectetur adipiscing elit
         </h1>
@@ -127,7 +127,7 @@ exports[`<Triptych /> with default props matches with snapshot 1`] = `
         className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
       >
         <h1
-          className="sc-bwzfXH gVLghD k-u-align-center"
+          className="sc-bwzfXH ffdHnv k-u-align-center"
         >
           Praesent tincidunt ultrices sem
         </h1>

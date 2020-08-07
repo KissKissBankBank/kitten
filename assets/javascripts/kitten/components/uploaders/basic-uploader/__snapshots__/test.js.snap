@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-bxivhb hdAFtr k-BasicUploader k-BasicUploader--ready"
+  className="sc-ifAKCX xoOqN k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -37,7 +37,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-bxivhb hdAFtr k-BasicUploader k-BasicUploader--ready"
+  className="sc-ifAKCX xoOqN k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -72,7 +72,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-bxivhb hdAFtr k-BasicUploader k-BasicUploader--valid"
+  className="sc-ifAKCX xoOqN k-BasicUploader k-BasicUploader--valid"
 >
   <input
     disabled={true}
@@ -125,19 +125,19 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
         />
       </svg>
       <span
-        className="sc-htpNat gbXWCW"
+        className="sc-bxivhb jcNVDI"
       >
         Cancel and reupload
       </span>
     </button>
     <div>
       <p
-        className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
+        className="sc-htpNat KtFsv k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
       >
         document.pdf
       </p>
       <p
-        className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+        className="sc-htpNat KtFsv k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
       >
         The document has been validated
       </p>
