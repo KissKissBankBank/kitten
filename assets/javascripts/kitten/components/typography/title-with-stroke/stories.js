@@ -4,6 +4,7 @@ import { TitleWithStroke } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Text } from '../../typography/text'
+import COLORS from '../../../constants/colors-config'
 
 const modifierOptions = {
   Primary: 'primary',
@@ -38,6 +39,7 @@ export const DefaultProps = () => (
         modifier={select('Modifier', modifierOptions, 'primary')}
         italic={boolean('Italic', false)}
         align={select('Align', alignOptions, 'left')}
+        cssColor={color('cssColor', COLORS.font1)}
       >
         {text('Title', 'Lorem ipsum dolor sit amet')}
       </TitleWithStroke>
