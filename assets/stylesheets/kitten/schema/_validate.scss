@@ -30,7 +30,7 @@
           @return k-unit-error($module, $path, $value-unit);
         }
       }
-      @elseif type-of($value-unit) == 'list' {
+      @else if type-of($value-unit) == 'list' {
         @if index($value-unit, k-unit-or-none($value)) == null {
           @return k-unit-error($module, $path, $value-unit);
         }
@@ -39,7 +39,7 @@
 
     @return k-validate-enum($value, $schema, $module, $path);
   }
-  @elseif $expected-type == 'string' {
+  @else if $expected-type == 'string' {
     @if $value-type != 'string' {
       @return k-schema-error(
         $module, $path,
@@ -49,7 +49,7 @@
 
     @return k-validate-enum($value, $schema, $module, $path);
   }
-  @elseif $expected-type == 'color' {
+  @else if $expected-type == 'color' {
     @if $value-type != 'color' {
       @return k-schema-error(
         $module, $path,
@@ -59,7 +59,7 @@
 
     @return k-validate-enum($value, $schema, $module, $path);
   }
-  @elseif $expected-type == 'boolean' {
+  @else if $expected-type == 'boolean' {
     @if $value-type != 'boolean' {
       @return k-schema-error(
         $module, $path,
@@ -69,7 +69,7 @@
 
     @return k-validate-enum($value, $schema, $module, $path);
   }
-  @elseif $expected-type == 'list' {
+  @else if $expected-type == 'list' {
     @if $value-type != 'list' {
       @return k-schema-error(
         $module, $path,
@@ -92,7 +92,7 @@
 
     @return true;
   }
-  @elseif $expected-type == 'map' {
+  @else if $expected-type == 'map' {
     @if $value-type != 'map' {
       @return k-schema-error(
         $module, $path,
