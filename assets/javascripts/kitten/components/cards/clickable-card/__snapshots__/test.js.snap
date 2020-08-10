@@ -2,7 +2,7 @@
 
 exports[`<ClickableCard /> by default matches with snapshot 1`] = `
 <button
-  className="sc-bdVaJa iWvHqC k-ClickableCard k-u-reset-button"
+  className="sc-bdVaJa gCNiKP k-ClickableCard k-u-reset-button"
   disabled={false}
 >
   <span
@@ -30,7 +30,7 @@ exports[`<ClickableCard /> by default matches with snapshot 1`] = `
 exports[`<ClickableCard /> with props matches with snapshot 1`] = `
 <button
   aria-checked={true}
-  className="sc-bdVaJa hxNPzQ k-ClickableCard k-u-reset-button k-ClickableCard--fluid"
+  className="sc-bdVaJa dwmuqO k-ClickableCard k-u-reset-button k-ClickableCard--fluid"
   disabled={true}
   onClick={[Function]}
   size={250}
