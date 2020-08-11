@@ -29,6 +29,7 @@ $k-typography: k-typography-definition((
 @include k-utilities-event;
 @include k-utilities-responsive;
 @include k-utilities-link;
+@include k-utilities-reset-button;
 @include k-utilities-margin;
 @include k-utilities-active;
 @include k-utilities-align;
