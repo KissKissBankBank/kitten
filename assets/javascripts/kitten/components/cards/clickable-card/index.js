@@ -10,6 +10,9 @@ const StyledClickableCard = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 1;
+
+  transition: opacity 0.15s ease;
 
   &.k-ClickableCard--fluid {
     width: 100%;
