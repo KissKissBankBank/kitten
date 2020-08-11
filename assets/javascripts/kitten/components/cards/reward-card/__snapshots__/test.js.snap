@@ -11,7 +11,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
       className="k-RewardCard__rowContent"
     >
       <div
-        className="sc-htoDjs cvZVPr k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+        className="sc-htoDjs hpWDEM k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
       >
         <h6
           className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
@@ -84,7 +84,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-htoDjs cvZVPr k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+        className="sc-htoDjs hpWDEM k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
       >
         <h6
           className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
@@ -158,7 +158,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </div>
       </div>
       <div
-        className="sc-htoDjs cvZVPr k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+        className="sc-htoDjs hpWDEM k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
       >
         <h6
           className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
