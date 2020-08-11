@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `cssColor` to `TitleWithStroke`.
+- Fix: Add opacity transition to `ClickableCard`.
 
 ## [2.84.0] - 2020-08-07
 
