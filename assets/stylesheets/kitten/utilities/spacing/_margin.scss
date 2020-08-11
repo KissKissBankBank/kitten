@@ -177,6 +177,55 @@
   }
 }
 
+@mixin k-u-margin-multiple($position, $attributes, $slug, $size) {
+  $value: k-px-to-rem($size);
+
+  .k-u-margin-#{$position}-#{$slug} {
+    @each $attr in $attributes {
+      margin-#{$attr}: $value;
+    }
+    &--important {
+      @each $attr in $attributes {
+        margin-#{$attr}: $value !important;
+      }
+    }
+  }
+
+  @each $name, $query in $k-media-queries {
+    @if $name != "xl" {
+      .k-u-margin-#{$position}-#{$slug}\@#{$name}-down {
+        @include k-media-max($name) {
+          @each $attr in $attributes {
+            margin-#{$attr}: $value;
+          }
+
+          &--important {
+            @each $attr in $attributes {
+              margin-#{$attr}: $value !important;
+            }
+          }
+        }
+      }
+    }
+
+    @if $name != "xxs" {
+      .k-u-margin-#{$position}-#{$slug}\@#{$name}-up {
+        @include k-media-min($name) {
+          @each $attr in $attributes {
+            margin-#{$attr}: $value;
+          }
+
+          &--important {
+            @each $attr in $attributes {
+              margin-#{$attr}: $value !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @mixin k-utilities-margin {
   .k-u-margin-none {
     margin: 0;
@@ -208,6 +257,27 @@
     nonuple: 90px,
     nonupleHalf: 95px,
     decuple: 100px,
+    '0': 0,
+    '5': 5px,
+    '10': 10px,
+    '15': 15px,
+    '20': 20px,
+    '25': 25px,
+    '30': 30px,
+    '35': 35px,
+    '40': 40px,
+    '45': 45px,
+    '50': 50px,
+    '55': 55px,
+    '60': 60px,
+    '65': 65px,
+    '70': 70px,
+    '75': 75px,
+    '80': 80px,
+    '85': 85px,
+    '90': 90px,
+    '95': 95px,
+    '100': 100px,
   );
 
   @each $name, $size in $k-sizes {
@@ -215,5 +285,7 @@
     @include k-u-margin('bottom', $name, $size);
     @include k-u-margin('left', $name, $size);
     @include k-u-margin('right', $name, $size);
+    @include k-u-margin-multiple('vertical', ('left', 'right'), $name, $size);
+    @include k-u-margin-multiple('horizontal', ('top', 'bottom'), $name, $size);
   }
 }
