@@ -21,7 +21,7 @@ var ResponsiveIframeContainer = function ResponsiveIframeContainer(_ref) {
       className = _ref.className,
       props = (0, _objectWithoutProperties2.default)(_ref, ["ratio", "style", "className"]);
   var componentClassName = (0, _classnames.default)('k-ResponsiveIframeContainer', className);
-  var styles = (0, _extends2.default)((0, _extends2.default)({}, style), {}, {
+  var styles = (0, _extends2.default)({}, style, {
     paddingBottom: "".concat(ratio, "%")
   });
   return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({

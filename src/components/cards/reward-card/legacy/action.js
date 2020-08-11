@@ -121,7 +121,7 @@ var commonDefaultProps = {
   isDisabled: false,
   topMargin: 0
 };
-RewardCardAction.propTypes = (0, _extends2.default)((0, _extends2.default)({}, commonPropTypes), {}, {
+RewardCardAction.propTypes = (0, _extends2.default)({}, commonPropTypes, {
   topMargin: _propTypes.default.number
 });
 RewardCardAction.defaultProps = (0, _extends2.default)({}, commonDefaultProps);
