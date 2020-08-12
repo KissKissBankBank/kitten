@@ -1,39 +1,42 @@
-// Align
+// Vendor dependencies
+@import '~modularscale-sass/stylesheets/modularscale';
+
+// Helpers
+@import './kitten/schema';
+@import './kitten/definitions';
+@import './kitten/helpers';
+
+// Default config
+@import 'kitten/default-config';
+
+$k-typography: k-typography-definition((
+  root: 16px,
+  font-size: 1rem,
+  font-weight: 400,
+  line-height: 1.5rem,
+  scale-multiplier: $major-second
+));
+
+// Import utilities mixins.
+@import './kitten/utilities';
+
+// Include all utilities.
 @include k-utilities-blockAlign;
-
-// Background
 @include k-utilities-background-color;
-
-// Border
 @include k-utilities-border;
-
-// Cursor
 @include k-utilities-cursor;
-
-// Display
 @include k-utilities-hidden;
-
-// Event
 @include k-utilities-event;
-
-// Image
 @include k-utilities-responsive;
-
-// Link
 @include k-utilities-link;
-
-// Reset
 @include k-utilities-reset-button;
-
-// Spacing
 @include k-utilities-margin;
-
-// Text
 @include k-utilities-active;
-@include k-utilities-aliasing;
 @include k-utilities-align;
+@include k-utilities-aliasing;
 @include k-utilities-color;
 @include k-utilities-decoration;
+@include k-utilities-font-feature-settings;
 @include k-utilities-inactive;
 @include k-utilities-line-height;
 @include k-utilities-size;
