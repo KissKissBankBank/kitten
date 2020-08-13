@@ -14,6 +14,7 @@ Features:
 Fixes:
 - Add opacity transition to `ClickableCard`.
 - Move `.k-u-reset-button` into `k-utilities-reset-button` mixin.
+- Fix `UserMenuButton` min-width from `HeaderNav` in xs screen size.
 
 ## [2.84.0] - 2020-08-07
 
