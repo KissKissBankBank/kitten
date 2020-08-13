@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: You can now import an utilities file with all Kitten utilities:
+  `@kisskissbankbank/kitten/src/stylesheets/utilities.css`.
+- Feature: Add `cssColor` to `TitleWithStroke`.
 - Fix: Add opacity transition to `ClickableCard`.
+- Fix: Move `.k-u-reset-button` into `k-utilities-reset-button` mixin.
 
 ## [2.84.0] - 2020-08-07
 

@@ -6,6 +6,9 @@ import { FlashCircleIcon } from '../../icons/flash-circle-icon'
 describe('Deprecated <LinkBox />', () => {
   let component
 
+  // Mock console.error logs.
+  console.error = jest.fn()
+
   describe('by default', () => {
     beforeEach(() => {
       component = renderer.create(<LinkBox title="My title" />).toJSON()

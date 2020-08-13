@@ -25,7 +25,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactCkeditorWrapper = _interopRequireDefault(require("react-ckeditor-wrapper"));
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function () { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
@@ -62,7 +62,7 @@ var RichTextInput = /*#__PURE__*/function (_React$Component) {
   }, {
     key: "config",
     value: function config() {
-      var config = (0, _extends2.default)((0, _extends2.default)({}, this.props.config), {}, {
+      var config = (0, _extends2.default)({}, this.props.config, {
         defaultLanguage: this.props.locale,
         toolbar: this.props.toolbar
       });

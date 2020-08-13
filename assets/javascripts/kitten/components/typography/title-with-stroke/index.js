@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { titleModifierStyles } from '../common/title-modifier-styles'
 import { strokeModifierStyles } from '../../layout/horizontal-stroke/common/stroke-modifier-styles'
@@ -21,6 +21,7 @@ const StyledTitleWithStroke = styled.div`
     margin-top: 0;
     margin-bottom: 0;
     ${TYPOGRAPHY.fontStyles.bold};
+    color: currentColor;
   }
 
   ${titleModifierStyles('.k-TitleWithStroke__title')}
@@ -36,6 +37,12 @@ const StyledTitleWithStroke = styled.div`
   }
 
   ${strokeModifierStyles('.k-TitleWithStroke__stroke')}
+
+  ${({ cssColor }) =>
+    cssColor &&
+    css`
+      color: ${cssColor};
+    `}
 `
 
 export const TitleWithStroke = ({
@@ -45,6 +52,7 @@ export const TitleWithStroke = ({
   italic,
   className,
   children,
+  cssColor,
   ...other
 }) => {
   const TitleComponent = tag
@@ -54,6 +62,7 @@ export const TitleWithStroke = ({
       className={classNames(className, `k-TitleWithStroke--align-${align}`, {
         'k-TitleWithStroke--italic': italic,
       })}
+      cssColor={cssColor}
       {...other}
     >
       <TitleComponent
@@ -73,6 +82,7 @@ TitleWithStroke.defaultProps = {
   modifier: 'primary',
   align: 'left',
   italic: false,
+  cssColor: null,
 }
 
 TitleWithStroke.propTypes = {
@@ -101,4 +111,8 @@ TitleWithStroke.propTypes = {
     Use `font-style: italic`.
   */
   italic: PropTypes.bool,
+  /**
+    Specify a color (use a CSS color string).
+  */
+  cssColor: PropTypes.string,
 }
