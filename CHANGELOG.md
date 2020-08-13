@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `cssColor` to `TitleWithStroke`.
 - Fix: Add opacity transition to `ClickableCard`.
 - Fix: Move `.k-u-reset-button` into `k-utilities-reset-button` mixin.
+- Fix: Fix `UserMenuButton` min-width from `HeaderNav` in xs screen size.
 
 ## [2.84.0] - 2020-08-07
 
