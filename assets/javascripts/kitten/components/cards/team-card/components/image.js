@@ -7,7 +7,7 @@ import styled from 'styled-components'
 const imageHeight = 378
 const imageWidth = 252
 
-const StyledTeamCardImage = styled(({ styled, ...props }) => (
+const StyledTeamCardImage = styled(({ styled, backgroundSource, ...props }) => (
   <div {...props} />
 ))`
   background-image: url(${({ backgroundSource }) => backgroundSource});
