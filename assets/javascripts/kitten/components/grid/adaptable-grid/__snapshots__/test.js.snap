@@ -56,13 +56,13 @@ exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
   className="sc-bdVaJa hUIlOj"
 >
   <div
-    className="sc-bwzfXH CQbLP"
+    className="sc-bwzfXH ewKIHD"
     offset={3}
   >
     Test
   </div>
   <div
-    className="sc-bwzfXH dxXLKN"
+    className="sc-bwzfXH gCxarn"
   >
     Test
   </div>
