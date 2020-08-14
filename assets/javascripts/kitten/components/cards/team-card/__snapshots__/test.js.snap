@@ -32,6 +32,7 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
 exports[`<TeamCard /> with some props matches with snapshot 1`] = `
 Array [
   <div
+    backgroundSource="http://via.placeholder.com/500x500/caf4fe/caf4fe"
     className="sc-htpNat fLLWtn k-u-margin-bottom-double"
     title="Title"
   />,
