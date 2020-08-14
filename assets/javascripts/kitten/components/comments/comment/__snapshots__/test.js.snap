@@ -137,7 +137,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
       />
     </div>
     <div
-      className="sc-bdVaJa edDsZV"
+      className="sc-bdVaJa tEHAm"
     >
       <div
         className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-micro k-u-weight-bold sc-fjdhpX fNnJaH"
