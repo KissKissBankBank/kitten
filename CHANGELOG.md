@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.85.1] - 2020-08-14
 
-Fix : Allowing adding more props on TeamCardImage component.
+Fix:
+- Allowing adding more props on TeamCardImage component.
 
 ## [2.85.0] - 2020-08-13
 
