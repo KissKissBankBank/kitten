@@ -18,6 +18,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { STATE_CHOICES } from './stories/project-state'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { parseHtml } from '../../../helpers/utils/parser'
+import videoFile from './__assets__/kitten_video.mp4'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -84,6 +85,32 @@ export const CrowdfundingCard = () => (
       info3={text('Info3', 'Lorem ipsum…')}
       progress={number('Progress', 42)}
       state={text('State', 'Lorem ipsum…')}
+    />
+  </StoryContainer>
+)
+
+export const CrowdfundingCardWithVideo = () => (
+  <StoryContainer>
+    <CrowdfundingCardComponent
+      href={text('Link', '#')}
+      ownerTitle={text('Owner title', 'Owner title')}
+      ownerDescription={text('Owner description', 'Owner description')}
+      loading={boolean('Loading', false)}
+      stretch={boolean('Stretch', false)}
+      cardTitle={text(
+        'Title',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+      )}
+      cardSubTitle={text(
+        'SubTitle',
+        'Sed ut perspiciatis unde omnis iste natus error Lorem',
+      )}
+      info1={text('Info1', 'Lorem ipsum…')}
+      info2={text('Info2', 'Lorem ipsum…')}
+      info3={text('Info3', 'Lorem ipsum…')}
+      progress={number('Progress', 42)}
+      state={text('State', 'Lorem ipsum…')}
+      videoProps={[{ src: videoFile, type: 'video/mp4' }]}
     />
   </StoryContainer>
 )

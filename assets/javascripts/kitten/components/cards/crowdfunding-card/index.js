@@ -34,6 +34,7 @@ export const CrowdfundingCard = ({
   titleProps,
   titlesMinHeight,
   titleTruncate,
+  videoProps,
   widgetState,
   ...others
 }) => {
@@ -64,6 +65,7 @@ export const CrowdfundingCard = ({
         ownerDescription={ownerDescription}
         imageContainerBackground={imageContainerBackground}
         imageProps={imageProps}
+        videoProps={videoProps}
         avatarProps={avatarProps}
         loading={loading}
       />
