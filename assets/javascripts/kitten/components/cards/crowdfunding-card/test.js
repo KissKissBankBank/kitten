@@ -94,7 +94,12 @@ describe('<CrowdfundingCard />', () => {
             ownerDescription="Owner description"
             imageProps={{ src: '#image', alt: '' }}
             avatarProps={{ src: '#image', alt: '' }}
-            videoProps={[{ src: '#video', type: 'video/mp4' }]}
+            videoProps={{
+              className: 'testClass',
+              loop: false,
+              muted: false,
+            }}
+            videoSources={[{ src: 'videoFile', type: 'video/mp4' }]}
             state="Sur"
             loading={false}
             title="Lorem ipsum…"

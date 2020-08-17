@@ -110,7 +110,8 @@ export const CrowdfundingCardWithVideo = () => (
       info3={text('Info3', 'Lorem ipsum…')}
       progress={number('Progress', 42)}
       state={text('State', 'Lorem ipsum…')}
-      videoProps={[{ src: videoFile, type: 'video/mp4' }]}
+      videoProps={{ className: 'videoClass' }}
+      videoSources={[{ src: videoFile, type: 'video/mp4' }]}
     />
   </StoryContainer>
 )

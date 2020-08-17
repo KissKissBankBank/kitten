@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 import { Text } from '../../../../components/typography/text'
 import { ButtonImage } from '../../../../components/buttons/button-image'
 import COLORS from '../../../../constants/colors-config'
+import classNames from 'classnames'
 
 const Image = ({
   imageContainerBackground,
   imageProps: { backgroundColor, alt, ...otherImageProps },
   videoProps,
+  videoSources,
   avatarProps,
   ownerDescription,
   ownerTitle,
@@ -18,24 +20,33 @@ const Image = ({
       className="k-CrowdfundingCard__image__imageContainer"
       style={{ backgroundColor: imageContainerBackground }}
     >
-      {!loading && videoProps.length == 0 && (
+      {!loading && videoSources.length == 0 && (
         <img
           {...otherImageProps}
           alt={alt || ''}
-          className="k-Card__image k-CrowdfundingCard__image__image"
-          style={{ backgroundColor: backgroundColor }}
+          className={classNames(
+            'k-Card__image',
+            'k-CrowdfundingCard__image__image',
+            otherImageProps.className,
+          )}
+          style={{ backgroundColor: backgroundColor, ...otherImageProps.style }}
         />
       )}
-      {!loading && videoProps.length > 0 && (
+      {!loading && videoSources.length > 0 && (
         <video
           autoPlay
           loop
           muted
           poster={otherImageProps.src}
-          className="k-Card__image k-CrowdfundingCard__image__image"
-          style={{ backgroundColor: backgroundColor }}
+          {...videoProps}
+          className={classNames(
+            'k-Card__image',
+            'k-CrowdfundingCard__image__image',
+            videoProps.className,
+          )}
+          style={{ backgroundColor: backgroundColor, ...videoProps.style }}
         >
-          {videoProps.map(sourceProps => (
+          {videoSources.map(sourceProps => (
             <source {...sourceProps} />
           ))}
         </video>
@@ -91,7 +102,8 @@ Image.propTypes = {
   ownerDescription: PropTypes.string,
   loading: PropTypes.bool,
   imageContainerBackground: PropTypes.string,
-  videoProps: PropTypes.arrayOf(
+  videoProps: PropTypes.object,
+  videoSources: PropTypes.arrayOf(
     PropTypes.shape({
       src: PropTypes.string,
       type: PropTypes.string,
@@ -113,7 +125,8 @@ Image.defaultProps = {
   ownerDescription: '',
   loading: false,
   imageContainerBackground: '',
-  videoProps: [],
+  videoProps: {},
+  videoSources: [],
 }
 
 export default Image
