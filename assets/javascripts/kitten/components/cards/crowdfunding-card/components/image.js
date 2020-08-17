@@ -47,7 +47,7 @@ const Image = ({
           style={{ backgroundColor: backgroundColor, ...videoProps.style }}
         >
           {videoSources.map(sourceProps => (
-            <source {...sourceProps} />
+            <source key={`video_source_${sourceProps.src}`} {...sourceProps} />
           ))}
         </video>
       )}

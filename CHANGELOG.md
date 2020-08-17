@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `key` to `CrowdfundingCard` video sources.
+
 ## [2.86.0] - 2020-08-17
 
 Feature:
