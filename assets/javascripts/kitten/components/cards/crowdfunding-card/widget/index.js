@@ -12,6 +12,8 @@ export const CrowdfundingCardWidget = ({
   href,
   imageContainerBackground,
   imageProps,
+  videoProps,
+  videoSources,
   avatarProps,
   ownerDescription,
   ownerTitle,
@@ -60,6 +62,8 @@ export const CrowdfundingCardWidget = ({
         imageProps={imageProps}
         avatarProps={avatarProps}
         loading={loading}
+        videoProps={videoProps}
+        videoSources={videoSources}
       />
       <div className="k-CrowdfundingCard__titleAndDesc k-CrowdfundingCard__paddedContainer">
         <TitleComponent

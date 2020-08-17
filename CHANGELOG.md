@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `videoProps` and `videoSources` to display videos on `CrowdfundingCard`.
+
 ## [2.85.1] - 2020-08-14
 
 Fix:
