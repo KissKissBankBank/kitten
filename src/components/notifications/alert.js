@@ -31,25 +31,14 @@ var _screenConfig = require("../../constants/screen-config");
 
 var _typography = require("../../helpers/utils/typography");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var fadeOut = (0, _styledComponents.keyframes)(["0%{opacity:1;}100%{opacity:0;}"]);
 
 var AlertWrapper = _styledComponents.default.div.withConfig({
   displayName: "alert__AlertWrapper",
   componentId: "j865fd-0"
-})(["", ";position:relative;overflow:hidden;padding:", " ", ";font-size:", ";background-color:", ";color:", ";@media (min-width:", "){text-align:center;}a{", ";color:inherit;text-decoration:underline;}", " ", " ", " ", ""], _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(13), (0, _typography.pxToRem)(20), (0, _typography.stepToRem)(-1), _colorsConfig.default.primary5, _colorsConfig.default.primary1, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), _typographyConfig.default.fontStyles.bold, function (props) {
-  return props.success && (0, _styledComponents.css)(["color:", ";background-color:", ";"], _colorsConfig.default.valid, _colorsConfig.default.tertiary1);
-}, function (props) {
-  return props.error && (0, _styledComponents.css)(["color:", ";background-color:", ";"], _colorsConfig.default.error, _colorsConfig.default.error2);
-}, function (props) {
-  return props.warning && (0, _styledComponents.css)(["color:", ";background-color:", ";"], _colorsConfig.default.warning, _colorsConfig.default.warning2);
-}, function (props) {
-  return props.shouldHide && (0, _styledComponents.css)(["pointer-events:none;animation:", " 0.4s cubic-bezier(0.895,0.03,0.685,0.22) forwards;"], fadeOut);
-});
-
-var StyledCloseButton = (0, _styledComponents.default)(_closeButton.CloseButton).withConfig({
-  displayName: "alert__StyledCloseButton",
-  componentId: "j865fd-1"
-})(["position:absolute;top:0;right:0;"]);
+})(["", ";position:relative;overflow:hidden;background-color:", ";color:", ";display:flex;align-items:flex-start;.k-Alert__text{padding:", " ", ";flex:1 0 auto;font-size:", ";@media (min-width:", "){text-align:center;}}.k-Alert__button{flex:0 0 auto;}a{", ";color:inherit;text-decoration:underline;}&.k-Alert--success{color:", ";background-color:", ";}&.k-Alert--error{color:", ";background-color:", ";}&.k-Alert--warning{color:", ";background-color:", ";}&.k-Alert--hasCloseButton{.k-Alert__text{@media (min-width:", "){margin-left:", ";}}}&.k-Alert--shouldHide{pointer-events:none;animation:", " 0.4s cubic-bezier(0.895,0.03,0.685,0.22) forwards;}"], _typographyConfig.default.fontStyles.light, _colorsConfig.default.primary5, _colorsConfig.default.primary1, (0, _typography.pxToRem)(13), (0, _typography.pxToRem)(20), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), _typographyConfig.default.fontStyles.bold, _colorsConfig.default.valid, _colorsConfig.default.tertiary1, _colorsConfig.default.error, _colorsConfig.default.error2, _colorsConfig.default.warning, _colorsConfig.default.warning2, (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(50), fadeOut);
 
 var Alert = function Alert(_ref) {
   var className = _ref.className,
@@ -73,6 +62,7 @@ var Alert = function Alert(_ref) {
       isMounted = _useState4[0],
       setMounted = _useState4[1];
 
+  var alertRef = (0, _react.useRef)(null);
   (0, _react.useEffect)(function () {
     var clearDelayBeforeTrash;
 
@@ -87,23 +77,23 @@ var Alert = function Alert(_ref) {
       return clearTimeout(clearDelayBeforeTrash);
     };
   }, [isMounted]);
-  var alertRef = (0, _react.useRef)(null);
-
-  if (isTrashed || !show) {
-    return null;
-  }
-
+  if (isTrashed || !show) return null;
   return /*#__PURE__*/_react.default.createElement(AlertWrapper, (0, _extends2.default)({
     ref: alertRef,
     role: "alert",
-    success: success,
-    error: error,
-    warning: warning,
-    shouldHide: !isMounted,
-    className: className
-  }, others), /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, children, closeButton && /*#__PURE__*/_react.default.createElement(StyledCloseButton, {
+    className: (0, _classnames.default)('k-Alert', className, {
+      'k-Alert--success': success,
+      'k-Alert--error': error,
+      'k-Alert--warning': warning,
+      'k-Alert--hasCloseButton': closeButton,
+      'k-Alert--shouldHide': !isMounted
+    })
+  }, others), /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-Alert__text"
+  }, children), closeButton && /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
     modifier: "carbon",
     closeButtonLabel: closeButtonLabel,
+    className: "k-Alert__button",
     onClick: function onClick() {
       return setMounted(false);
     }
