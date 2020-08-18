@@ -99,7 +99,10 @@ describe('<CrowdfundingCard />', () => {
               loop: false,
               muted: false,
             }}
-            videoSources={[{ src: 'videoFile', type: 'video/mp4' }]}
+            videoSources={[
+              { src: '#videoFile.mp4', type: 'video/mp4' },
+              { src: '#videoFile.webm', type: 'video/webm' },
+            ]}
             state="Sur"
             loading={false}
             title="Lorem ipsum…"
