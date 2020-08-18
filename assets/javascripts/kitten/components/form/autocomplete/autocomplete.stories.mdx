@@ -41,7 +41,7 @@ import { Autocomplete } from '@kisskissbankbank/kitten/src/components/form/autoc
 - **updateSuggestionsStrategy**: define custom filter strategy of items
 
 ```js
-  updateStrategy={({ items, value }) =>
+  updateSuggestionsStrategy={({ items, value }) =>
     items.filter(item => item.startsWith(value))
   }
 ```
