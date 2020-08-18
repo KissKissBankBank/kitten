@@ -18,7 +18,6 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { STATE_CHOICES } from './stories/project-state'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { parseHtml } from '../../../helpers/utils/parser'
-import videoFile from './__assets__/kitten_video.mp4'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -111,7 +110,18 @@ export const CrowdfundingCardWithVideo = () => (
       progress={number('Progress', 42)}
       state={text('State', 'Lorem ipsum…')}
       videoProps={{ className: 'videoClass' }}
-      videoSources={[{ src: videoFile, type: 'video/mp4' }]}
+      videoSources={[
+        {
+          src:
+            'https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm',
+          type: 'video/webm',
+        },
+        {
+          src:
+            'https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4',
+          type: 'video/mp4',
+        },
+      ]}
     />
   </StoryContainer>
 )

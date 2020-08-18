@@ -19,7 +19,6 @@ import { List } from '../../../components/lists/list'
 import { ExpandBoard } from '../../../components/expandable/expand-board'
 import styled from 'styled-components'
 import classNames from 'classnames'
-import videoFile from './__assets__/kitten_video.mp4'
 
 const StyledStoryContainer = styled(Container)`
   margin-top: ${pxToRem(20)};
@@ -91,7 +90,7 @@ export const RewardCard = () => {
     true,
     versionGroupId,
   )
-  const visual = select(
+  const visualType = select(
     'Visual type',
     {
       none: null,
@@ -236,7 +235,7 @@ export const RewardCard = () => {
                   />
                 </List>
               </RewardCardComponent.RowContent>
-              {visual === 'image' && (
+              {visualType === 'image' && (
                 <RewardCardComponent.RowSide>
                   <RewardCardComponent.Image
                     src={text(
@@ -249,10 +248,17 @@ export const RewardCard = () => {
                   />
                 </RewardCardComponent.RowSide>
               )}
-              {visual === 'video' && (
+              {visualType === 'video' && (
                 <RewardCardComponent.RowSide>
                   <RewardCardComponent.Video disabled={disabled}>
-                    <source type="video/mp4" src={videoFile} />
+                    <source
+                      type="video/webm"
+                      src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
+                    />
+                    <source
+                      type="video/mp4"
+                      src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
+                    />
                   </RewardCardComponent.Video>
                 </RewardCardComponent.RowSide>
               )}
@@ -379,7 +385,7 @@ export const RewardCard = () => {
                     </ExpandBoard>
                   )}
                 </RewardCardComponent.RowContent>
-                {visual && (
+                {visualType && (
                   <RewardCardComponent.RowSide withVerticalMargins={false} />
                 )}
               </RewardCardComponent.Row>
