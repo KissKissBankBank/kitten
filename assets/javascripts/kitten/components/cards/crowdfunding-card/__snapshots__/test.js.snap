@@ -435,11 +435,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   >
     <div
       className="k-CrowdfundingCard__image__imageContainer"
-      style={
-        Object {
-          "backgroundColor": "",
-        }
-      }
+      style={Object {}}
     >
       <img
         alt=""
@@ -447,7 +443,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
         src="#image"
         style={
           Object {
-            "backgroundColor": undefined,
+            "backgroundColor": null,
           }
         }
       />
@@ -996,11 +992,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   >
     <div
       className="k-CrowdfundingCard__image__imageContainer"
-      style={
-        Object {
-          "backgroundColor": "",
-        }
-      }
+      style={Object {}}
     >
       <video
         autoPlay={true}
@@ -1010,7 +1002,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
         poster="#image"
         style={
           Object {
-            "backgroundColor": undefined,
+            "backgroundColor": null,
           }
         }
       >
@@ -1603,11 +1595,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   >
     <div
       className="k-CrowdfundingCard__image__imageContainer"
-      style={
-        Object {
-          "backgroundColor": "",
-        }
-      }
+      style={Object {}}
     >
       <img
         alt=""
@@ -1615,7 +1603,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
         src="#image"
         style={
           Object {
-            "backgroundColor": undefined,
+            "backgroundColor": null,
           }
         }
       />

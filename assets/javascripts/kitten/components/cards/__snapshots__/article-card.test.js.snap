@@ -11,11 +11,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
   >
     <div
       className="k-CrowdfundingCard__image__imageContainer"
-      style={
-        Object {
-          "backgroundColor": "",
-        }
-      }
+      style={Object {}}
     >
       <img
         alt=""
@@ -85,11 +81,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
   >
     <div
       className="k-CrowdfundingCard__image__imageContainer"
-      style={
-        Object {
-          "backgroundColor": "",
-        }
-      }
+      style={Object {}}
     >
       <img
         alt=""
@@ -205,11 +197,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
   >
     <div
       className="k-CrowdfundingCard__image__imageContainer"
-      style={
-        Object {
-          "backgroundColor": "",
-        }
-      }
+      style={Object {}}
     >
       <img
         alt=""
@@ -279,11 +267,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
   >
     <div
       className="k-CrowdfundingCard__image__imageContainer"
-      style={
-        Object {
-          "backgroundColor": "",
-        }
-      }
+      style={Object {}}
     >
       <img
         alt="Image alt"
