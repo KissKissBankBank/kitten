@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Video` component to display videos on `RewardCard`.
 - Fix: Add `key` to `CrowdfundingCard` video sources.
 - Fix: Remove console error from `Header` component `Centered`.
 

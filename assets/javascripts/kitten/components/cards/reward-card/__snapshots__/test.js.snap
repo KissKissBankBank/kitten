@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-gzVnrw xqQMs k-RewardCard"
+  className="sc-gzVnrw ihqWDH k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -34,7 +34,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 <div
-  className="sc-gzVnrw xqQMs k-RewardCard"
+  className="sc-gzVnrw ihqWDH k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -107,7 +107,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="sc-gzVnrw xqQMs k-RewardCard"
+  className="sc-gzVnrw ihqWDH k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -451,6 +451,58 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<RewardCard /> with video matches with snapshot 1`] = `
+<div
+  className="sc-gzVnrw ihqWDH k-RewardCard"
+>
+  <div
+    className="k-RewardCard__cardRow"
+  >
+    <div
+      className="k-RewardCard__rowContent"
+    >
+      <div
+        className="sc-htoDjs hpWDEM k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+      >
+        <h6
+          className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
+        >
+          Custom title mount
+        </h6>
+        <span
+          className="k-TitleWithStroke__stroke k-TitleWithStroke__stroke--senary"
+        />
+      </div>
+      <p
+        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+      >
+        Custom text description
+      </p>
+    </div>
+    <div
+      className="k-RewardCard__rowSide k-RewardCard__rowSide--hasMargins"
+    >
+      <video
+        autoPlay={true}
+        className="k-RewardCard__video"
+        cover="#image.jpg"
+        loop={false}
+        muted={true}
+      >
+        <source
+          src="#video.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="#video.webm"
+          type="video/webm"
+        />
+      </video>
     </div>
   </div>
 </div>
