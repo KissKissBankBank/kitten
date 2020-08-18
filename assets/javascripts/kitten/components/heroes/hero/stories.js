@@ -1,12 +1,11 @@
 import React from 'react'
 import COLORS from '../../../constants/colors-config'
 import { Hero } from './index'
-import { withKnobs, text, boolean, color, select } from '@storybook/addon-knobs'
+import { text, boolean, color, select } from '@storybook/addon-knobs'
 
 export default {
   component: Hero,
   title: 'Heroes/Hero',
-  decorators: [withKnobs],
   parameters: {
     component: Hero,
   },

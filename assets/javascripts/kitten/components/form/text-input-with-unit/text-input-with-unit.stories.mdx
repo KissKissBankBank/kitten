@@ -1,0 +1,53 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './text-input-with-unit.stories.js'
+import { TextInputWithUnit } from './index'
+
+<Meta title="Form/TextInputWithUnit" component={TextInputWithUnit} />
+
+# TextInputWithUnit
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+## Import
+
+```js
+import { TextInputWithUnit } from '@kisskissbankbank/kitten/src/components/form/text-input-with-unit'
+```
+
+## Usage
+
+#### Default
+
+```js
+<TextInputWithUnit />
+```
+
+#### Size
+
+```js
+<TextInputWithUnit tiny />
+<TextInputWithUnit huge />
+<TextInputWithUnit giant />
+```
+
+#### Alignment
+
+```js
+<TextInputWithUnit center />
+```
+
+#### State
+
+```js
+<TextInputWithUnit valid />
+<TextInputWithUnit error />
+<TextInputWithUnit disabled />
+```
+
+### Unit
+
+```js
+<TextInputWithUnit>€</TextInputWithUnit>
+```

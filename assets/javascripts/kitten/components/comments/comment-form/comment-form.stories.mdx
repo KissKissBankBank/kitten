@@ -1,0 +1,60 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './comment-form.stories.js'
+import { CommentForm } from './index'
+
+<Meta title="Comments" component={CommentForm} />
+
+# CommentForm
+
+## Import
+
+```js
+import { CommentForm } from '@kisskissbankbank/kitten/src/components/comments/comment-form'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="CommentForm" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<CommentForm />
+```
+
+### With avatar
+
+```js
+<CommentForm
+  avatarImgProps={{
+    src: '…'
+    alt: '…'
+  }}
+/>
+```
+
+### With commentButton
+
+```js
+<CommentForm commentButton="Button" />
+```
+
+### With error
+
+```js
+<CommentForm error errorMessage="…" />
+```
+
+### With avatarBadge
+
+```js
+<CommentForm avatarBadge="…" />
+```
+
+### With textarea ID
+
+```js
+<CommentForm textareaId="…" />
+```

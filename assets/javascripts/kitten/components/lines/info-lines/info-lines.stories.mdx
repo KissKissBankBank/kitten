@@ -1,0 +1,55 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './info-lines.stories.js'
+import { InfoLines } from './index'
+
+<Meta title="Lines" component={InfoLines} />
+
+# InfoLines
+
+## Import
+
+```js
+import { InfoLines } from '@kisskissbankbank/kitten/src/components/lines/info-lines'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="InfoLines" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<InfoLines id="…" infos={[(key: '…'), (value: '…'), (id: '…')]} />
+```
+
+#### with border color
+
+```js
+<InfoLines borderColor="…" />
+```
+
+#### with borders
+
+```js
+<InfoLines withBorderRadius="…" withLeftRightBorder="…" />
+```
+
+#### without borders
+
+```js
+<InfoLines withoutTopBottomBorder="…" />
+```
+
+#### without responsive
+
+```js
+<InfoLines withoutResponsive="…" />
+```
+
+#### with A11Y
+
+```js
+<InfoLines descriptionTagList="…" titleTagList="…" itemTagList="…" />
+```

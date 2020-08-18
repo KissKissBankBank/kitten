@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './details.stories.js'
+import { Details } from './index'
+
+<Meta title="Details" component={Details} />
+
+# Details
+
+## Import
+
+```js
+import { Details } from '@kisskissbankbank/kitten/src/components/details'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Default" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<Details summaryRender={ ({ open }) => (…) }>
+  <p>My content</p>
+</Details>
+```

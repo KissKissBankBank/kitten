@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { storiesOf } from '@storybook/react'
-import { withKnobs, boolean, text } from '@storybook/addon-knobs'
+import { boolean, text } from '@storybook/addon-knobs'
 import { LendopolisHeaderNavStory } from './stories/lendopolis'
 import { KissKissBankBankHeaderNavStory } from './stories/kisskissbankbank'
 import { MinimalistHeaderNavStory } from './stories/minimalist'
@@ -18,32 +17,35 @@ const Container = styled.div`
       );`};
 `
 
-storiesOf('Navigation/HeaderNav', module)
-  .addDecorator(withKnobs)
-  .add('Lendopolis', () => (
-    <Container whiteBg={boolean('White bg', false)}>
-      <LendopolisHeaderNavStory
-        isLogged={boolean('Is logged', false)}
-        isFixed={boolean('Is fixed', false)}
-      />
-    </Container>
-  ))
+export default {
+  title: 'Navigation/HeaderNav',
+  component: LendopolisHeaderNavStory,
+}
 
-  .add('KissKissBankBank', () => (
-    <Container whiteBg={boolean('White bg', false)}>
-      <KissKissBankBankHeaderNavStory
-        isLogged={boolean('Is logged', false)}
-        isFixed={boolean('Is fixed', false)}
-      />
-    </Container>
-  ))
+export const Lendopolis = () => (
+  <Container whiteBg={boolean('White bg', false)}>
+    <LendopolisHeaderNavStory
+      isLogged={boolean('Is logged', false)}
+      isFixed={boolean('Is fixed', false)}
+    />
+  </Container>
+)
 
-  .add('Minimalist', () => (
-    <Container whiteBg={boolean('White bg', false)}>
-      <MinimalistHeaderNavStory
-        isFixed={boolean('Is fixed', true)}
-        text={text('Texte', 'Ma page mentor')}
-        subText={text('Sous texte', 'Créé le 12/02/2020')}
-      />
-    </Container>
-  ))
+export const KissKissBankBank = () => (
+  <Container whiteBg={boolean('White bg', false)}>
+    <KissKissBankBankHeaderNavStory
+      isLogged={boolean('Is logged', false)}
+      isFixed={boolean('Is fixed', false)}
+    />
+  </Container>
+)
+
+export const Minimalist = () => (
+  <Container whiteBg={boolean('White bg', false)}>
+    <MinimalistHeaderNavStory
+      isFixed={boolean('Is fixed', true)}
+      text={text('Texte', 'Ma page mentor')}
+      subText={text('Sous texte', 'Créé le 12/02/2020')}
+    />
+  </Container>
+)

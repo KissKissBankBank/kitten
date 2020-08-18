@@ -1,0 +1,62 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './tag-button.stories.js'
+import { TagButton } from './index'
+
+<Meta title="Buttons/TagButton" component={TagButton} />
+
+# TagButton
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+## With Icon
+
+<Canvas>
+  <Story name="WithIcon" story={stories.WithIcon} />
+</Canvas>
+
+## Import
+
+```js
+import { TagButton } from '@kisskissbankbank/kitten/src/components/buttons/tag-button'
+```
+
+## Usage
+
+#### Default
+
+```js
+<TagButton>MyTag</TagButton>
+```
+
+#### Size
+
+```js
+<TagButton tiny>MyTag</TagButton>
+<TagButton big>MyTag</TagButton>
+```
+
+#### Modifier
+
+```js
+<TagButton modifier="hydrogen">MyTag</TagButton>
+<TagButton modifier="helium">MyTag</TagButton>
+<TagButton modifier="carbon">MyTag</TagButton>
+```
+
+#### Tag
+
+```js
+<TagButton as="a" href="#">
+  MyButton
+</TagButton>
+```
+
+#### With icon
+
+```js
+<TagButton icon>
+  <MyIcon />
+</TagButton>
+```

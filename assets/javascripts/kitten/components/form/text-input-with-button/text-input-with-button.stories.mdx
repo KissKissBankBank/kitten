@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './text-input-with-button.stories.js'
+import { TextInputWithButton } from './index'
+
+<Meta title="Form/TextInputWithButton" component={TextInputWithButton} />
+
+# TextInputWithButton
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+## Import
+
+```js
+import { TextInputWithButton } from '@kisskissbankbank/kitten/src/components/form/text-input-with-button'
+```
+
+## Usage
+
+#### Default
+
+```js
+<TextInputWithButton />
+```
+
+#### Size
+
+```js
+<TextInputWithButton tiny />
+<TextInputWithButton huge />
+<TextInputWithButton giant />
+```
+
+#### State
+
+```js
+<TextInputWithButton valid />
+<TextInputWithButton error />
+<TextInputWithButton disabled />
+```

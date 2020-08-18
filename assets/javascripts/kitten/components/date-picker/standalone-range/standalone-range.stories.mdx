@@ -1,0 +1,113 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './standalone-range.stories.js'
+import { StandaloneRangeDatePicker } from './index'
+
+<Meta title="Form/DatePicker" component={StandaloneRangeDatePicker} />
+
+# StandaloneRangeDatePicker
+
+<Canvas>
+  <Story name="Example" story={stories.StandaloneRangeDatepicker} />
+</Canvas>
+
+## Import
+
+```js
+import { StandaloneRangeDatePicker } from '@kisskissbankbank/kitten/src/components/date-picker/standalone-range'
+```
+
+## Usage
+
+```js
+<StandaloneRangeDatePicker
+  disabledDays: [
+    {
+      after: new Date(),
+    },
+  ],
+  selectedDay={new Date()}
+  locale="fr"
+  disabledDays={[new Date(2019, 7, 16), new Date(2019, 7, 18)]}
+  weekDays={[
+    'Dimanche',
+    'Lundi',
+    'Mardi',
+    'Mercredi',
+    'Jeudi',
+    'Vendredi',
+    'Samedi',
+  ]}
+  months={[
+    'Janvier',
+    'Février',
+    'Mars',
+    'Avril',
+    'Mai',
+    'Juin',
+    'Juillet',
+    'Août',
+    'Septembre',
+    'Octobre',
+    'Novembre',
+    'Décembre',
+  ]}
+  title="Select a period"
+  previousMonth="Previous month"
+  nextMonth="Next month"
+  styles={{
+    header: {
+      backgroundColor: '#fff',
+      color: COLORS.font1,
+      icon: {
+        color: COLORS.font1,
+      },
+    },
+    borderColor: COLORS.line1,
+    weekdaysColor: COLORS.font1,
+    day: {
+      focus: {
+        color: COLORS.primary1,
+      },
+      hover: {
+        backgroundColor: COLORS.primary1,
+        color: '#fff',
+      },
+      today: {
+        color: COLORS.primary1,
+      },
+      disabled: {
+        color: COLORS.line2,
+      },
+      selected: {
+        backgroundColor: COLORS.primary6,
+        color: COLORS.primary1,
+        borderColor: COLORS.primary4,
+      },
+      selectedStartAndEnd: {
+        backgroundColor: COLORS.primary1,
+        color: '#fff',
+      },
+    },
+  }}
+  firstDayOfWeek={1}
+/>
+```
+
+## Initialize range
+
+```js
+<StandaloneRangeDatePicker
+  …
+  from={ new Date() }
+  to={ new Date() }
+/>
+```
+
+## Get range
+
+```js
+<StandaloneRangeDatePicker
+  …
+  onChange={ range => { … } }
+/>
+```

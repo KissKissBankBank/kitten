@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react'
-import { storiesOf } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text } from '@storybook/addon-knobs'
+import { text } from '@storybook/addon-knobs'
 import { BackerCard } from './backer-card'
 import { Container } from '../../components/grid/container'
 import { Grid, GridCol } from '../../components/grid/grid'
@@ -19,24 +17,29 @@ const Description = () => (
   </Fragment>
 )
 
-storiesOf('Cards/BackerCard', module)
-  .addDecorator(withKnobs)
-  .add(
-    'default',
-    withInfo('common info')(() => (
+export default {
+  title: 'Cards/BackerCard',
+  component: BackerCard,
+  decorators: [
+    Story => (
       <Marger top="4">
         <Container>
           <Grid>
             <GridCol col="3">
-              <BackerCard
-                title={text('Backer title', 'Backer name')}
-                subtitle={text('Backer subtitle', 'Backer subtitle')}
-                imgProps={{ src: 'https://placeimg.com/80/80/any' }}
-                description={<Description />}
-              />
+              <Story />
             </GridCol>
           </Grid>
         </Container>
       </Marger>
-    )),
-  )
+    ),
+  ],
+}
+
+export const Default = () => (
+  <BackerCard
+    title={text('Backer title', 'Backer name')}
+    subtitle={text('Backer subtitle', 'Backer subtitle')}
+    imgProps={{ src: 'https://placeimg.com/80/80/any' }}
+    description={<Description />}
+  />
+)

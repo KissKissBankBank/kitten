@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { storiesOf } from '@storybook/react'
-import { withKnobs } from '@storybook/addon-knobs'
 import { HorizontalNav } from './index'
 
 const StyledContainer = styled.div`
@@ -35,12 +33,15 @@ const items = Array.from(Array(18).keys()).map(index => {
   }
 })
 
-storiesOf('Navigation/HorizontalNav', module)
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <Container>
-      <StyledContainer>
-        <HorizontalNav items={items} center />
-      </StyledContainer>
-    </Container>
-  ))
+export default {
+  title: 'Navigation/HorizontalNav',
+  component: HorizontalNav,
+}
+
+export const Default = () => (
+  <Container>
+    <StyledContainer>
+      <HorizontalNav items={items} center />
+    </StyledContainer>
+  </Container>
+)

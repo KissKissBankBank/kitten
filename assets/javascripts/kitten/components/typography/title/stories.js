@@ -1,5 +1,5 @@
 import React from 'react'
-import { withKnobs, text, boolean, select, color } from '@storybook/addon-knobs'
+import { text, boolean, select, color } from '@storybook/addon-knobs'
 import { Title } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -19,7 +19,6 @@ const modifierOptions = {
 export default {
   component: Title,
   title: 'Typography/Title',
-  decorators: [withKnobs],
   parameters: {
     component: Title,
     componentSubtitle: 'List of Title',

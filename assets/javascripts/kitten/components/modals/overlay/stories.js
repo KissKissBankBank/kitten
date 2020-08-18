@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { Overlay } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -13,7 +12,12 @@ const handleToggleClick = () => window.dispatchEvent(new Event(TOGGLE_EVENT))
 const handleCloseClick = () => window.dispatchEvent(new Event(CLOSE_EVENT))
 const handleOpenClick = () => window.dispatchEvent(new Event(OPEN_EVENT))
 
-storiesOf('Modals/Overlay', module).add('default', () => (
+export default {
+  title: 'Modals/Overlay',
+  component: Overlay,
+}
+
+export const Default = () => (
   <Container>
     <Marger top="2">
       <Overlay
@@ -29,4 +33,4 @@ storiesOf('Modals/Overlay', module).add('default', () => (
       <Button onClick={handleOpenClick}>Open Overlay</Button>
     </Marger>
   </Container>
-))
+)

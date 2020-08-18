@@ -1,5 +1,5 @@
 import React from 'react'
-import { withKnobs, select } from '@storybook/addon-knobs'
+import { select } from '@storybook/addon-knobs'
 import { Container } from '../../../components/grid/container'
 import { Timeline } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
@@ -7,7 +7,6 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 export default {
   component: Timeline,
   title: 'List/Timeline',
-  decorators: [withKnobs],
   parameters: {
     component: Timeline,
   },

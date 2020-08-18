@@ -1,5 +1,4 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import { SearchInput } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -12,10 +11,15 @@ const StoryContainer = ({ children }) => (
   </Container>
 )
 
-storiesOf('Search/SearchInput', module).add('default', () => {
+export default {
+  title: 'Search/SearchInput',
+  component: SearchInput,
+}
+
+export const Default = () => {
   return (
     <StoryContainer>
       <SearchInput placeholder="Recherchez un projet, un porteur…" />
     </StoryContainer>
   )
-})
+}

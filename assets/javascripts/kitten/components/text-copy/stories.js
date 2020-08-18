@@ -1,8 +1,7 @@
 import { Container } from '../grid/container'
 import { Marger } from '../..'
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import { text, boolean } from '@storybook/addon-knobs'
 import { TextCopy } from './index'
 
 const StoryContainer = ({ children }) => (
@@ -13,19 +12,22 @@ const StoryContainer = ({ children }) => (
   </Container>
 )
 
-storiesOf('TextCopy', module)
-  .addDecorator(withKnobs)
-  .add('default', () => {
-    return (
-      <StoryContainer>
-        <TextCopy
-          textToCopy={text('Other text to Copy', undefined)}
-          alertMessage={text('Alert Message', 'Copied link !')}
-          forceOneLine={boolean('Force one line', false)}
-          buttonText={text('button text', 'Je suis button !')}
-        >
-          {text('Text', 'My text to copy on click')}
-        </TextCopy>
-      </StoryContainer>
-    )
-  })
+export default {
+  title: 'TextCopy',
+  component: TextCopy,
+}
+
+export const Default = () => {
+  return (
+    <StoryContainer>
+      <TextCopy
+        textToCopy={text('Other text to Copy', undefined)}
+        alertMessage={text('Alert Message', 'Copied link !')}
+        forceOneLine={boolean('Force one line', false)}
+        buttonText={text('button text', 'Je suis button !')}
+      >
+        {text('Text', 'My text to copy on click')}
+      </TextCopy>
+    </StoryContainer>
+  )
+}

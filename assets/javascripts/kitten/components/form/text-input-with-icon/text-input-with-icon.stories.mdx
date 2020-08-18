@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './text-input-with-icon.stories.js'
+import { TextInputWithIcon } from './index'
+
+<Meta title="Form/TextInputWithIcon" component={TextInputWithIcon} />
+
+# TextInputWithIcon
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+## Import
+
+```js
+import { TextInputWithIcon } from '@kisskissbankbank/kitten/src/components/form/text-input-with-icon'
+```
+
+## Usage
+
+#### Default
+
+```js
+<TextInputWithIcon />
+```
+
+#### Size
+
+```js
+<TextInputWithIcon tiny />
+```
+
+#### State
+
+### Default props's "TextInput"
+
+```js
+<TextInputWithIcon valid />
+<TextInputWithIcon error />
+<TextInputWithIcon disabled />
+```
+
+### With icon
+
+```js
+<TextInputWithIcon>
+  <MyIcon />
+<TextInputWithIcon>
+```

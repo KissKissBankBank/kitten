@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { withKnobs, text } from '@storybook/addon-knobs'
+import { text } from '@storybook/addon-knobs'
 import { Container } from '../../../components/grid/container'
 import { CartRewardCard } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
@@ -8,7 +8,6 @@ import { Button } from '../../../components/buttons/button/button'
 export default {
   component: CartRewardCard,
   title: 'Cards/CartRewardCard',
-  decorators: [withKnobs],
   parameters: {
     component: CartRewardCard,
   },

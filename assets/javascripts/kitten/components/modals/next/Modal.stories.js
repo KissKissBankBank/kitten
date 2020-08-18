@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs'
+import { text, boolean, number } from '@storybook/addon-knobs'
 import { Modal } from './index'
 import { Button } from '../../../components/buttons/button/button'
 
@@ -35,7 +35,6 @@ const paragraphContainer = `
 
 export default {
   title: 'NEXT/Modal',
-  decorators: [withKnobs],
   component: Modal,
   subcomponents: {
     Title: Modal.Title,

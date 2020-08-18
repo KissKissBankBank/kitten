@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { withKnobs, text, number } from '@storybook/addon-knobs'
+import { text, number } from '@storybook/addon-knobs'
 import { EngagementCardWithImage } from './index'
 import { Marger } from '../../../../components/layout/marger'
 import { Container } from '../../../../components/grid/container'
@@ -13,7 +13,6 @@ const StyledEngagementCardWithImage = styled(EngagementCardWithImage)`
 export default {
   component: EngagementCardWithImage,
   title: 'Cards/EngagementCardWithImage',
-  decorators: [withKnobs],
   parameters: {
     component: EngagementCardWithImage,
   },

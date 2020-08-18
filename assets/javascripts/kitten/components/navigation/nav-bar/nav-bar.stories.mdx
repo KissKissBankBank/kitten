@@ -1,0 +1,53 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './nav-bar.stories.js'
+import { NavBar } from './index'
+
+<Meta title="Navigation" component={NavBar} />
+
+# NavBar
+
+## Import
+
+```js
+import { NavBar } from '@kisskissbankbank/kitten/src/components/navigation/nav-bar'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="NavBar" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<NavBar>
+  <NavBar.ListItem linkProps={{ href: '#1' }} active>
+    Item 1
+  </NavBar.ListItem>
+  <NavBar.ListItem linkProps={{ href: '#2' }}>Item 2</NavBar.ListItem>
+  <NavBar.ListItem linkProps={{ href: '#3' }}>Item 3</NavBar.ListItem>
+  <NavBar.ListItem linkProps={{ href: '#4' }}>Item 4</NavBar.ListItem>
+</NavBar>
+```
+
+#### With custom colors
+
+```js
+<NavBar
+  colors={{
+    background: '#fff',
+    link: '#00f',
+    border: 'transparent',
+    activeLink: '#808',
+    activeBorder: 'rgba(128,0,128,.5)',
+  }}
+>
+  <NavBar.ListItem linkProps={{ href: '#1' }} active>
+    Item 1
+  </NavBar.ListItem>
+  <NavBar.ListItem linkProps={{ href: '#2' }}>Item 2</NavBar.ListItem>
+  <NavBar.ListItem linkProps={{ href: '#3' }}>Item 3</NavBar.ListItem>
+  <NavBar.ListItem linkProps={{ href: '#4' }}>Item 4</NavBar.ListItem>
+</NavBar>
+```

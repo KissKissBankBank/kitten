@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import { storiesOf } from '@storybook/react'
 import MobileModal from './index'
 import { Button } from '../../../components/buttons/button/button'
 import styled from 'styled-components'
@@ -105,6 +104,9 @@ const Modal = () => {
   )
 }
 
-storiesOf('Pages/MobileModal', module).add('Mobile-modal', () => {
-  return <Modal />
-})
+export default {
+  title: 'Pages/MobileModal',
+  component: Modal,
+}
+
+export const Default = () => <Modal />

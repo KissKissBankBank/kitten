@@ -1,12 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  withKnobs,
-  text,
-  boolean,
-  number,
-  select,
-} from '@storybook/addon-knobs'
+import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -55,7 +49,6 @@ const WidgetContainerState = () => (
 export default {
   component: CrowdfundingCard,
   title: 'Cards/CrowdfundingCard',
-  decorators: [withKnobs],
   parameters: {
     component: CrowdfundingCard,
     componentSubtitle:

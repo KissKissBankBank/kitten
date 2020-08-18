@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './status-with-bullet.stories.js'
+import { StatusWithBullet } from './index'
+
+<Meta title="StatusWithBullet" component={StatusWithBullet} />
+
+# StatusWithBullet
+
+## Import
+
+```js
+import { StatusWithBullet } from '@kisskissbankbank/kitten/src/components/status-bullet'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Default" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<StatusWithBullet statusMessage="Message" statusType="success" />
+```

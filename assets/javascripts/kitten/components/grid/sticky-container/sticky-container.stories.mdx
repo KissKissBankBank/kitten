@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './sticky-container.stories.js'
+import { StickyContainer } from './index'
+
+<Meta title="Grid/StickyContainer" component={StickyContainer} />
+
+# StickyContainer
+
+## Import
+
+```js
+import { StickyContainer } from '@kisskissbankbank/kitten/src/components/grid/sticky-container'
+```
+
+## Usage
+
+### Always sticky
+
+<Canvas>
+  <Story name="AlwaysSticky" story={stories.AlwaysSticky} />
+</Canvas>
+
+### Sticky : bottomOnScrollDown
+
+<Canvas>
+  <Story
+    name="StickyBottomOnScrollDown"
+    story={stories.StickyBottomOnScrollDown}
+  />
+</Canvas>
+
+### Sticky : topOnScrollUp
+
+<Canvas>
+  <Story
+    name="StickyTopOnScrollUp"
+    story={stories.StickyTopOnScrollUp}
+  />
+</Canvas>
+
+The component can be used as always sticky, and only sticky on scroll up
+or down.
+
+Props:
+
+- 'isSticky' accepts 'topOnScrollUp' or 'bottomOnScrollDown' or 'always',
+  so the component is only sticky when scrolling in that direction, or always.
+- 'top' or 'bottom' help with the component’s position.
+
+### sticky
+
+```js
+<StickyContainer sticky>…</StickyContainer>
+```
