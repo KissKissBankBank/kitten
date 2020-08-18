@@ -435,21 +435,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   >
     <div
       className="k-CrowdfundingCard__image__imageContainer"
-      style={
-        Object {
-          "backgroundColor": "",
-        }
-      }
+      style={null}
     >
       <img
         alt=""
         className="k-Card__image k-CrowdfundingCard__image__image"
         src="#image"
-        style={
-          Object {
-            "backgroundColor": undefined,
-          }
-        }
       />
     </div>
     <div
@@ -996,11 +987,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   >
     <div
       className="k-CrowdfundingCard__image__imageContainer"
-      style={
-        Object {
-          "backgroundColor": "",
-        }
-      }
+      style={null}
     >
       <video
         autoPlay={true}
@@ -1008,15 +995,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
         loop={false}
         muted={false}
         poster="#image"
-        style={
-          Object {
-            "backgroundColor": undefined,
-          }
-        }
       >
         <source
-          src="videoFile"
+          src="#videoFile.mp4"
           type="video/mp4"
+        />
+        <source
+          src="#videoFile.webm"
+          type="video/webm"
         />
       </video>
     </div>
@@ -1599,21 +1585,12 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   >
     <div
       className="k-CrowdfundingCard__image__imageContainer"
-      style={
-        Object {
-          "backgroundColor": "",
-        }
-      }
+      style={null}
     >
       <img
         alt=""
         className="k-Card__image k-CrowdfundingCard__image__image"
         src="#image"
-        style={
-          Object {
-            "backgroundColor": undefined,
-          }
-        }
       />
     </div>
     <div

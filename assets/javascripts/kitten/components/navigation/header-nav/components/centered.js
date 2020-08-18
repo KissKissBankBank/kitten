@@ -17,7 +17,7 @@ export const Centered = ({ children, className, display, ...props }) => {
 }
 
 Centered.propTypes = {
-  display: PropTypes.oneOf['column'],
+  display: PropTypes.oneOf(['column']),
 }
 
 Centered.defaultProps = {
