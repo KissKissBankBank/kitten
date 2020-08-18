@@ -3,7 +3,7 @@ import { DoubleEntryTable } from './index'
 import { Container } from '../../grid/container'
 
 export const Default = () => (
-  <Container style={{ marginTop: '5em', marginBottom: '5em' }}>
+  <Container className="k-u-margin-top-decuple k-u-margin-bottom-decuple">
     <DoubleEntryTable id="TestDoubleEntryTable">
       <DoubleEntryTable.Header className="customHeaderClass">
         <DoubleEntryTable.HeaderCol>Header 0</DoubleEntryTable.HeaderCol>
