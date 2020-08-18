@@ -379,7 +379,7 @@ export const RewardCard = () => {
                     </ExpandBoard>
                   )}
                 </RewardCardComponent.RowContent>
-                {visual !== null && (
+                {visual && (
                   <RewardCardComponent.RowSide withVerticalMargins={false} />
                 )}
               </RewardCardComponent.Row>
