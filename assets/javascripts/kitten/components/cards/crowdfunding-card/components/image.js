@@ -21,7 +21,7 @@ const Image = ({
       style={
         imageContainerBackground
           ? { backgroundColor: imageContainerBackground }
-          : {}
+          : null
       }
     >
       {!loading && videoSources.length == 0 && (
@@ -33,10 +33,14 @@ const Image = ({
             'k-CrowdfundingCard__image__image',
             otherImageProps.className,
           )}
-          style={{
-            backgroundColor: backgroundColor ? backgroundColor : null,
-            ...otherImageProps.style,
-          }}
+          style={
+            backgroundColor
+              ? {
+                  backgroundColor: backgroundColor,
+                  ...otherImageProps.style,
+                }
+              : otherImageProps.style
+          }
         />
       )}
       {!loading && videoSources.length > 0 && (
@@ -51,10 +55,14 @@ const Image = ({
             'k-CrowdfundingCard__image__image',
             videoProps.className,
           )}
-          style={{
-            backgroundColor: backgroundColor ? backgroundColor : null,
-            ...videoProps.style,
-          }}
+          style={
+            backgroundColor
+              ? {
+                  backgroundColor: backgroundColor,
+                  ...videoProps.style,
+                }
+              : videoProps.style
+          }
         >
           {videoSources.map(sourceProps => (
             <source key={`video_source_${sourceProps.src}`} {...sourceProps} />
