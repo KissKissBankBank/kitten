@@ -56,6 +56,15 @@ export const StyledRewardCard = styled.div`
     }
   }
 
+  .k-RewardCard__video {
+    width: 100%;
+
+    &.k-RewardCard__video--disabled {
+      filter: grayscale(1) opacity(0.4);
+      cursor: not-allowed;
+    }
+  }
+
   .k-RewardCard__infos {
     display: block;
     line-height: ${pxToRem(20)};
@@ -135,7 +144,8 @@ export const StyledRewardCard = styled.div`
       cursor: not-allowed;
     }
 
-    .k-RewardCard__image {
+    .k-RewardCard__image,
+    .k-RewardCard__video {
       filter: grayscale(1) opacity(0.4);
       cursor: not-allowed;
     }

@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `Video` component to display videos on `RewardCard`.
+
 ## [2.86.0] - 2020-08-17
 
 Feature:

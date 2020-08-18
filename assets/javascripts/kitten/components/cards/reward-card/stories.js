@@ -1,6 +1,12 @@
 import React from 'react'
 import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, boolean, object } from '@storybook/addon-knobs'
+import {
+  withKnobs,
+  text,
+  boolean,
+  object,
+  select,
+} from '@storybook/addon-knobs'
 import { RewardCard as RewardCardComponent } from './index'
 import { Container } from '../../../components/grid/container'
 import { Grid, GridCol } from '../../../components/grid/grid'
@@ -13,6 +19,7 @@ import { List } from '../../../components/lists/list'
 import { ExpandBoard } from '../../../components/expandable/expand-board'
 import styled from 'styled-components'
 import classNames from 'classnames'
+import videoFile from './__assets__/kitten_video.mp4'
 
 const StyledStoryContainer = styled(Container)`
   margin-top: ${pxToRem(20)};
@@ -84,7 +91,16 @@ export const RewardCard = () => {
     true,
     versionGroupId,
   )
-  const withImage = boolean('With image', true, versionGroupId)
+  const visual = select(
+    'Visual type',
+    {
+      none: null,
+      Image: 'image',
+      Video: 'video',
+    },
+    null,
+    versionGroupId,
+  )
   const disabled = boolean('Disabled', false, versionGroupId)
   const completed = boolean('Completed', false, versionGroupId)
   const withOptions = boolean(
@@ -220,7 +236,7 @@ export const RewardCard = () => {
                   />
                 </List>
               </RewardCardComponent.RowContent>
-              {withImage && (
+              {visual === 'image' && (
                 <RewardCardComponent.RowSide>
                   <RewardCardComponent.Image
                     src={text(
@@ -231,6 +247,13 @@ export const RewardCard = () => {
                     alt={text('Reward image alt', 'My reward', contentGroupId)}
                     disabled={disabled}
                   />
+                </RewardCardComponent.RowSide>
+              )}
+              {visual === 'video' && (
+                <RewardCardComponent.RowSide>
+                  <RewardCardComponent.Video disabled={disabled}>
+                    <source type="video/mp4" src={videoFile} />
+                  </RewardCardComponent.Video>
                 </RewardCardComponent.RowSide>
               )}
             </RewardCardComponent.Row>
@@ -356,7 +379,7 @@ export const RewardCard = () => {
                     </ExpandBoard>
                   )}
                 </RewardCardComponent.RowContent>
-                {withImage && (
+                {visual !== null && (
                   <RewardCardComponent.RowSide withVerticalMargins={false} />
                 )}
               </RewardCardComponent.Row>
