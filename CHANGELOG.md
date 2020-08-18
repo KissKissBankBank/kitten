@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Remove console error from `Header` component `Centered`.
+
 ## [2.86.0] - 2020-08-17
 
 Feature:
