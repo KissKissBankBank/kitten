@@ -39,15 +39,15 @@ var Image = function Image(_ref) {
     className: "k-CrowdfundingCard__image"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "k-CrowdfundingCard__image__imageContainer",
-    style: {
+    style: imageContainerBackground ? {
       backgroundColor: imageContainerBackground
-    }
+    } : null
   }, !loading && videoSources.length == 0 && /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, otherImageProps, {
     alt: alt || '',
     className: (0, _classnames.default)('k-Card__image', 'k-CrowdfundingCard__image__image', otherImageProps.className),
-    style: (0, _extends2.default)({
+    style: backgroundColor ? (0, _extends2.default)({
       backgroundColor: backgroundColor
-    }, otherImageProps.style)
+    }, otherImageProps.style) : otherImageProps.style
   })), !loading && videoSources.length > 0 && /*#__PURE__*/_react.default.createElement("video", (0, _extends2.default)({
     autoPlay: true,
     loop: true,
@@ -55,11 +55,13 @@ var Image = function Image(_ref) {
     poster: otherImageProps.src
   }, videoProps, {
     className: (0, _classnames.default)('k-Card__image', 'k-CrowdfundingCard__image__image', videoProps.className),
-    style: (0, _extends2.default)({
+    style: backgroundColor ? (0, _extends2.default)({
       backgroundColor: backgroundColor
-    }, videoProps.style)
+    }, videoProps.style) : videoProps.style
   }), videoSources.map(function (sourceProps) {
-    return /*#__PURE__*/_react.default.createElement("source", sourceProps);
+    return /*#__PURE__*/_react.default.createElement("source", (0, _extends2.default)({
+      key: "video_source_".concat(sourceProps.src)
+    }, sourceProps));
   }))), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-CrowdfundingCard__image__ownerContainer"
   }, /*#__PURE__*/_react.default.createElement("div", {
