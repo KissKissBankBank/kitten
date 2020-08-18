@@ -1,13 +1,12 @@
 import React from 'react'
 import { Text } from './index'
 import { Marger } from '../../layout/marger'
-import { withKnobs, text, select, color } from '@storybook/addon-knobs'
+import { text, select, color } from '@storybook/addon-knobs'
 import COLORS from '../../../constants/colors-config'
 
 export default {
   component: Text,
   title: 'Typography/Text',
-  decorators: [withKnobs],
   parameters: {
     component: Text,
     componentSubtitle: 'List of Text',

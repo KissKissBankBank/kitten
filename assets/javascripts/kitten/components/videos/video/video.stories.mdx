@@ -1,0 +1,35 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './video.stories.js'
+import { Video } from './index'
+
+<Meta title="Videos" component={Video} />
+
+# Video
+
+## Import
+
+```js
+import { Video } from '@kisskissbankbank/kitten/src/components/videos/video'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Video" story={stories.Default} />
+</Canvas>
+
+You can use all `<video />` attributes.
+
+```js
+<Video src="…" />
+```
+
+#### Loader
+
+```js
+<Video src="…">
+  <Video.Loader>
+    <LoaderIcon />
+  </Video.Loader>
+</Video>
+```

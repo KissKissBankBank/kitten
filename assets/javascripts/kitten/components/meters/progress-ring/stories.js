@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { withKnobs, number, color } from '@storybook/addon-knobs'
+import { number, color } from '@storybook/addon-knobs'
 import { ProgressRing } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -38,14 +38,11 @@ const SuccessProgressRing = () => (
   />
 )
 
-const OvertimeProgressRing = () => (
-  <RocketCircleIcon aria-hidden />
-)
+const OvertimeProgressRing = () => <RocketCircleIcon aria-hidden />
 
 export default {
   component: ProgressRing,
   title: 'Meters/ProgressRing',
-  decorators: [withKnobs],
   parameters: {
     component: ProgressRing,
   },
@@ -94,4 +91,3 @@ export const OvertimeProgress = () => (
     </Container>
   </Marger>
 )
-

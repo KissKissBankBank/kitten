@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './text-input-with-limit.stories.js'
+import { TextInputWithLimit } from './index'
+
+<Meta title="Form/TextInputWithLimit" component={TextInputWithLimit} />
+
+# TextInputWithLimit
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+## Import
+
+```js
+import { TextInputWithLimit } from '@kisskissbankbank/kitten/src/components/form/text-input-with-limit'
+```
+
+## Usage
+
+#### Default
+
+```js
+<TextInputWithLimit />
+```
+
+#### Size
+
+```js
+<TextInputWithLimit tiny />
+```
+
+#### State
+
+```js
+<TextInputWithLimit error />
+<TextInputWithLimit disabled />
+```

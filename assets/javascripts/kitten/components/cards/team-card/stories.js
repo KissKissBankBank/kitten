@@ -1,5 +1,5 @@
 import React from 'react'
-import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import { text, boolean } from '@storybook/addon-knobs'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { TeamCard } from './index'
@@ -8,7 +8,6 @@ import { Marger } from '../../layout/marger'
 export default {
   component: TeamCard,
   title: 'Cards/TeamCard',
-  decorators: [withKnobs],
   parameters: {
     component: TeamCard,
   },

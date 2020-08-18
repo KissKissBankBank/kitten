@@ -1,5 +1,5 @@
 import React from 'react'
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { TitleWithStroke } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -25,7 +25,6 @@ const alignOptions = {
 export default {
   component: TitleWithStroke,
   title: 'Typography/TitleWithStroke',
-  decorators: [withKnobs],
   parameters: {
     component: TitleWithStroke,
     componentSubtitle: 'List of TitleWithStroke',

@@ -1,0 +1,25 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './vertical-card.stories.js'
+import { VerticalCard } from './index'
+
+<Meta title="Cards" component={VerticalCard} />
+
+# VerticalCard
+
+## Import
+
+```js
+import { VerticalCard } from '@kisskissbankbank/kitten/src/components/cards/vertical-card'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="VerticalCard" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<VerticalCard>MyVerticalCard</VerticalCard>
+```

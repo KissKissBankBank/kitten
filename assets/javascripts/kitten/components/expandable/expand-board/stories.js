@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, number, boolean } from '@storybook/addon-knobs'
+import { text, number, boolean } from '@storybook/addon-knobs'
 import { ExpandBoard } from '../../../components/expandable/expand-board'
 import { ExpandBoardWithButtonItemList } from '../../../components/expandable/expand-board/examples'
 import { Grid, GridCol } from '../../../components/grid/grid'
@@ -38,12 +37,6 @@ const radiusBottomBorderRange = {
 export default {
   component: ExpandBoard,
   title: 'Expandable/ExpandBoard',
-  decorators: [withKnobs, withInfo],
-  parameters: {
-    component: ExpandBoard,
-    info:
-      'The ExpandBoard is a container that can expand on click. It can accept any content.',
-  },
 }
 
 export const Default = () => (

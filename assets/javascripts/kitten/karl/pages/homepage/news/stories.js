@@ -1,5 +1,4 @@
 import React from 'react'
-import { withKnobs } from '@storybook/addon-knobs'
 import HomepageNews from './index'
 
 export default {
@@ -10,6 +9,4 @@ export default {
   },
 }
 
-export const DefaultProps = () => (
-  <HomepageNews />
-)
+export const DefaultProps = () => <HomepageNews />

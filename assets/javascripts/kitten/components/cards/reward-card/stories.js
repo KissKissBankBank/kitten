@@ -1,10 +1,5 @@
 import React from 'react'
-import { withInfo } from '@storybook/addon-info'
-import {
-  withKnobs,
-  text,
-  boolean,
-  object,
+import { text, boolean, object ,
   select,
 } from '@storybook/addon-knobs'
 import { RewardCard as RewardCardComponent } from './index'
@@ -66,7 +61,6 @@ const StyledStoryContainer = styled(Container)`
 export default {
   component: RewardCard,
   title: 'Cards/RewardCard',
-  decorators: [withKnobs, withInfo],
   parameters: {
     component: RewardCard,
     info:
