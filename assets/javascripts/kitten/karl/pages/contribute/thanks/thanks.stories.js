@@ -4,7 +4,7 @@ import { Marger } from '../../../../components/layout/marger'
 import { ThanksPage } from './thanks'
 
 export default {
-  title: 'Pages/Contribute',
+  title: 'Pages/Contribute/ThanksPage',
   component: ThanksPage,
 }
 

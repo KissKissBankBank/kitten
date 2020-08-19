@@ -3,7 +3,7 @@ import { text } from '@storybook/addon-knobs'
 import { ArticleCard as _ArticleCard } from './article-card'
 
 export default {
-  title: 'Cards',
+  title: 'Cards/ArticleCard',
   component: _ArticleCard,
 }
 

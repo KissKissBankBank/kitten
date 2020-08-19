@@ -4,7 +4,7 @@ import PaymentChoices from './components/payment-choices'
 import { Marger } from '../../../../components/layout/marger'
 
 export default {
-  title: 'Pages/Contribute',
+  title: 'Pages/Contribute/PaymentChoices',
   component: PaymentChoices,
 }
 
