@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `k-u-margin-vertical-*` and `k-u-margin-horizontal-*` helper classes.
 - Feature: Add `k-u-margin-*-auto` helper classes.
+- Feature: Add `margin()` helper util to help generate util classes.
+
 ## [2.87.0] - 2020-08-18
 
 Feature:
