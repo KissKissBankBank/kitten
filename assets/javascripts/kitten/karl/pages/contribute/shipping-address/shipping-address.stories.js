@@ -4,7 +4,7 @@ import ShippingAddress from './components/shipping-address'
 import { Marger } from '../../../../components/layout/marger'
 
 export default {
-  title: 'Pages/Contribute',
+  title: 'Pages/Contribute/ShippingAddress',
   component: ShippingAddress,
 }
 
