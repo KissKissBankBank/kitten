@@ -4,7 +4,39 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Add opacity transition to `ClickableCard`.
+## [2.87.0] - 2020-08-18
+
+Feature:
+- Add `Video` component to display videos on `RewardCard`.
+
+Fixes:
+- Add `key` to `CrowdfundingCard` video sources.
+- Remove console error from `Header` component `Centered`.
+
+## [2.86.0] - 2020-08-17
+
+Feature:
+- Add `videoProps` and `videoSources` to display videos on `CrowdfundingCard`.
+
+Fix:
+- Fix mobile display of `Alert` notification.
+
+## [2.85.1] - 2020-08-14
+
+Fix:
+- Allowing adding more props on TeamCardImage component.
+
+## [2.85.0] - 2020-08-13
+
+Features:
+- You can now import an utilities file with all Kitten utilities:
+  `@kisskissbankbank/kitten/src/stylesheets/utilities.css`.
+- Add `cssColor` to `TitleWithStroke`.
+
+Fixes:
+- Add opacity transition to `ClickableCard`.
+- Move `.k-u-reset-button` into `k-utilities-reset-button` mixin.
+- Fix `UserMenuButton` min-width from `HeaderNav` in xs screen size.
 
 ## [2.84.0] - 2020-08-07
 

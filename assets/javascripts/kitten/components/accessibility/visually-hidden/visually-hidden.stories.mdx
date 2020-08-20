@@ -1,0 +1,27 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './visually-hidden.stories.js'
+import { VisuallyHidden } from './index'
+
+<Meta title="Accessibility/VisuallyHidden" component={VisuallyHidden} />
+
+# VisuallyHidden
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+This component is used for Accessibility: it conveys content to screen readers but doesn’t display it on screen.
+
+## Import
+
+```js
+import { VisuallyHidden } from '@kisskissbankbank/kitten/src/components/accessibility/visually-hidden'
+```
+
+## Usage
+
+#### Default
+
+```js
+<VisuallyHidden>Visually hidden text</VisuallyHidden>
+```

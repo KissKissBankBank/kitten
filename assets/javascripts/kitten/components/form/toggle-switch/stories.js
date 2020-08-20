@@ -1,12 +1,11 @@
 import React from 'react'
-import { withKnobs, boolean, text } from '@storybook/addon-knobs'
+import { boolean, text } from '@storybook/addon-knobs'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { ToggleSwitch } from './index'
 
 export default {
   component: ToggleSwitch,
   title: 'Form/ToggleSwitch',
-  decorators: [withKnobs],
 }
 
 export const Default = () => {

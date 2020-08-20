@@ -27,6 +27,8 @@ var _info = require("./components/info");
 
 var _image = require("./components/image");
 
+var _video = require("./components/video");
+
 var _title = require("./components/title");
 
 var _row = require("./components/row");
@@ -63,6 +65,7 @@ RewardCard.RowContent = _rowContent.RewardCardRowContent;
 RewardCard.RowSide = _rowSide.RewardCardRowSide;
 RewardCard.Title = _title.RewardCardTitle;
 RewardCard.Image = _image.RewardCardImage;
+RewardCard.Video = _video.RewardCardVideo;
 RewardCard.Info = _info.RewardCardInfo;
 RewardCard.CheckedSection = _checkedSection.RewardCardCheckedSection;
 RewardCard.StarredBadge = _starredBadge.RewardCardStarredBadge;

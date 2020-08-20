@@ -1,9 +1,10 @@
 import React from 'react'
-import { withKnobs, text, boolean, select } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { TitleWithStroke } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Text } from '../../typography/text'
+import COLORS from '../../../constants/colors-config'
 
 const modifierOptions = {
   Primary: 'primary',
@@ -24,7 +25,6 @@ const alignOptions = {
 export default {
   component: TitleWithStroke,
   title: 'Typography/TitleWithStroke',
-  decorators: [withKnobs],
   parameters: {
     component: TitleWithStroke,
     componentSubtitle: 'List of TitleWithStroke',
@@ -38,6 +38,7 @@ export const DefaultProps = () => (
         modifier={select('Modifier', modifierOptions, 'primary')}
         italic={boolean('Italic', false)}
         align={select('Align', alignOptions, 'left')}
+        cssColor={color('cssColor', COLORS.font1)}
       >
         {text('Title', 'Lorem ipsum dolor sit amet')}
       </TitleWithStroke>

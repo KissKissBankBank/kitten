@@ -32,7 +32,7 @@ var Centered = function Centered(_ref) {
 
 exports.Centered = Centered;
 Centered.propTypes = {
-  display: _propTypes.default.oneOf['column']
+  display: _propTypes.default.oneOf(['column'])
 };
 Centered.defaultProps = {
   display: null

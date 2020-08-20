@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import { storiesOf } from '@storybook/react'
 import { Marger } from '../../components/layout/marger'
 import { Container } from '../../components/grid/container'
 import { Grid, GridCol } from '../../components/grid/grid'
@@ -22,21 +21,23 @@ const ObservedComponent = ({ children, ...props }) => {
   )
 }
 
-storiesOf('IntersectionObserver/IntersectionObserverClass', module).add(
-  'using IntersectionObserverClass hook',
-  () => {
-    return (
-      <Container>
-        <Grid>
-          <GridCol col="6" col-xs="4" col-m="3" col-l="2">
-            A kitten will become visible on scroll.
-            <Marger top="100" bottom="50" style={{ background: '#eee' }}>
-              Here:
-              <ObservedComponent>🐱 I’m visible! 🐱</ObservedComponent>
-            </Marger>
-          </GridCol>
-        </Grid>
-      </Container>
-    )
-  },
-)
+export default {
+  title: 'IntersectionObserver/IntersectionObserverClass',
+  component: ObservedComponent,
+}
+
+export const UsingIntersectionObserverClassHook = () => {
+  return (
+    <Container>
+      <Grid>
+        <GridCol col="6" col-xs="4" col-m="3" col-l="2">
+          A kitten will become visible on scroll.
+          <Marger top="100" bottom="50" style={{ background: '#eee' }}>
+            Here:
+            <ObservedComponent>🐱 I’m visible! 🐱</ObservedComponent>
+          </Marger>
+        </GridCol>
+      </Grid>
+    </Container>
+  )
+}

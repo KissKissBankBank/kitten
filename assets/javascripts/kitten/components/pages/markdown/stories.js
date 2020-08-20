@@ -1,6 +1,5 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withKnobs, text, select } from '@storybook/addon-knobs'
+import { text, select } from '@storybook/addon-knobs'
 import { MarkdownPage } from '../../pages/markdown/index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -46,19 +45,22 @@ const modifierOptions = {
   Quaternary: 'quaternary',
 }
 
-storiesOf('Pages/Markdown-Page', module)
-  .addDecorator(withKnobs)
-  .add('default', () => {
-    return (
-      <StoryContainer>
-        <MarkdownPage
-          children={text('children', defaultText)}
-          paragraphModifier={select(
-            'Modifier paragraph',
-            modifierOptions,
-            'primary',
-          )}
-        />
-      </StoryContainer>
-    )
-  })
+export default {
+  title: 'Pages/Markdown-Page',
+  component: MarkdownPage,
+}
+
+export const Default = () => {
+  return (
+    <StoryContainer>
+      <MarkdownPage
+        children={text('children', defaultText)}
+        paragraphModifier={select(
+          'Modifier paragraph',
+          modifierOptions,
+          'primary',
+        )}
+      />
+    </StoryContainer>
+  )
+}

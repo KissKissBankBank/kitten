@@ -1,5 +1,5 @@
 import React from 'react'
-import { withKnobs, number, object, boolean } from '@storybook/addon-knobs'
+import { number, object, boolean } from '@storybook/addon-knobs'
 import { CrowdfundingCard } from '../../../components/cards/crowdfunding-card'
 import { Carousel as LegacyCarousel } from './index'
 import { Carousel as NextCarousel } from './carousel'
@@ -11,7 +11,6 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 export default {
   component: Default,
   title: 'Carousel/ProjectCarousel',
-  decorators: [withKnobs],
   parameters: {
     component: Default,
   },

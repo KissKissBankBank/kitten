@@ -1,0 +1,49 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './single-entry-table.stories.js'
+import { SingleEntryTable as SingleEntryTableComponent } from './index'
+
+<Meta title="Tables/SingleEntryTable" component={SingleEntryTableComponent} />
+
+# SingleEntryTable
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+## Import
+
+```js
+import { SingleEntryTable } from '@kisskissbankbank/kitten/src/components/tables/double-entry-table'
+```
+
+## Usage
+
+#### Default
+
+```js
+<SingleEntryTable id="…">
+  <SingleEntryTable.Header
+    {...props}
+    headerRowProps={{…}}
+  >
+    <SingleEntryTable.HeaderCol />
+    …
+    <SingleEntryTable.HeaderCol />
+  </SingleEntryTable.Header>
+
+  <SingleEntryTable.Body>
+    <SingleEntryTable.Row>
+      <SingleEntryTable.Col />
+      <SingleEntryTable.Col>
+        …
+      </SingleEntryTable.Col>
+    </SingleEntryTable.Row>
+    <SingleEntryTable.Row>
+      <SingleEntryTable.Col />
+      <SingleEntryTable.Col>
+        …
+      </SingleEntryTable.Col>
+    </SingleEntryTable.Row>
+  </SingleEntryTable.Body>
+</SingleEntryTable>
+```

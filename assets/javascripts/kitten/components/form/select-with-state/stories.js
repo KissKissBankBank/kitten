@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { storiesOf } from '@storybook/react'
-import { withKnobs, boolean, select } from '@storybook/addon-knobs'
+import { boolean, select } from '@storybook/addon-knobs'
 import { SelectWithState } from './index'
 
 const options = [
@@ -69,45 +68,49 @@ const Container = styled.div`
 
 const onChange = value => console.warn('Selected value', value)
 
-storiesOf('Form/SelectWithState', module)
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <Container>
-      <SelectWithState
-        id="select-with-label"
-        onChange={onChange}
-        labelText="Please select a bike brand"
-        placeholder="Choose a bike brand"
-        options={options}
-        searchable={boolean('Searchable', false)}
-        clearable={boolean('Clearable', false)}
-        error={boolean('Error', false)}
-        error={boolean('Error', false)}
-        valid={boolean('Valid', false)}
-        tiny={boolean('Tiny', false)}
-        huge={boolean('Huge', false)}
-        giant={boolean('Giant', false)}
-        autoFill={select('AutoFill', autoFill)}
-      />
-    </Container>
-  ))
-  .add('multi', () => (
-    <Container>
-      <SelectWithState
-        id="select-with-label"
-        onChange={onChange}
-        labelText="Please select a bike brand"
-        placeholder="Choose a bike brand"
-        options={multiOptions}
-        searchable={boolean('Searchable', false)}
-        clearable={boolean('Clearable', false)}
-        error={boolean('Error', false)}
-        error={boolean('Error', false)}
-        valid={boolean('Valid', false)}
-        tiny={boolean('Tiny', false)}
-        huge={boolean('Huge', false)}
-        giant={boolean('Giant', false)}
-        autoFill={select('AutoFill', autoFill)}
-      />
-    </Container>
-  ))
+export default {
+  title: 'Form/SelectWithState',
+  component: SelectWithState,
+}
+
+export const Default = () => (
+  <Container>
+    <SelectWithState
+      id="select-with-label"
+      onChange={onChange}
+      labelText="Please select a bike brand"
+      placeholder="Choose a bike brand"
+      options={options}
+      searchable={boolean('Searchable', false)}
+      clearable={boolean('Clearable', false)}
+      error={boolean('Error', false)}
+      error={boolean('Error', false)}
+      valid={boolean('Valid', false)}
+      tiny={boolean('Tiny', false)}
+      huge={boolean('Huge', false)}
+      giant={boolean('Giant', false)}
+      autoFill={select('AutoFill', autoFill)}
+    />
+  </Container>
+)
+
+export const Multi = () => (
+  <Container>
+    <SelectWithState
+      id="select-with-label"
+      onChange={onChange}
+      labelText="Please select a bike brand"
+      placeholder="Choose a bike brand"
+      options={multiOptions}
+      searchable={boolean('Searchable', false)}
+      clearable={boolean('Clearable', false)}
+      error={boolean('Error', false)}
+      error={boolean('Error', false)}
+      valid={boolean('Valid', false)}
+      tiny={boolean('Tiny', false)}
+      huge={boolean('Huge', false)}
+      giant={boolean('Giant', false)}
+      autoFill={select('AutoFill', autoFill)}
+    />
+  </Container>
+)

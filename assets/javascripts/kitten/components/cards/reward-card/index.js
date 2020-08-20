@@ -6,6 +6,7 @@ import { LegacyRewardCardContainer } from './legacy/reward-card-container'
 import { StyledRewardCard } from './styles'
 import { RewardCardInfo } from './components/info'
 import { RewardCardImage } from './components/image'
+import { RewardCardVideo } from './components/video'
 import { RewardCardTitle } from './components/title'
 import { RewardCardRow } from './components/row'
 import { RewardCardRowContent } from './components/row-content'
@@ -42,6 +43,7 @@ RewardCard.RowContent = RewardCardRowContent
 RewardCard.RowSide = RewardCardRowSide
 RewardCard.Title = RewardCardTitle
 RewardCard.Image = RewardCardImage
+RewardCard.Video = RewardCardVideo
 RewardCard.Info = RewardCardInfo
 RewardCard.CheckedSection = RewardCardCheckedSection
 RewardCard.StarredBadge = RewardCardStarredBadge

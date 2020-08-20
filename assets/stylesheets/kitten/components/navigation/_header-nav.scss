@@ -165,10 +165,6 @@
       padding: 0 k-px-to-rem(15px);
     }
 
-    @include k-media-min('xs') {
-      min-width: k-px-to-rem(200px);
-    }
-
     &:hover {
       cursor: pointer;
       background-color: map-get($k-colors, 'line-1');

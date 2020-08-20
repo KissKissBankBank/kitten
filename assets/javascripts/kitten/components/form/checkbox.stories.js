@@ -1,5 +1,5 @@
 import React from 'react'
-import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import { text, boolean } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { Checkbox } from './checkbox'
 import { Grid, GridCol } from '../../components/grid/grid'
@@ -7,7 +7,6 @@ import { Grid, GridCol } from '../../components/grid/grid'
 export default {
   component: Checkbox,
   title: 'Form/Checkbox',
-  decorators: [withKnobs],
   parameters: {
     component: Checkbox,
   },

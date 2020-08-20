@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { withKnobs, boolean } from '@storybook/addon-knobs'
+import { boolean } from '@storybook/addon-knobs'
 import { Carousel } from './carousel'
 import { Container } from '../../../components/grid/container'
 import { EngagementCard } from '../../../components/cards/engagement-card'
@@ -11,7 +11,6 @@ import { ScreenConfig } from '../../../constants/screen-config'
 export default {
   component: Default,
   title: 'Carousel/EngagementsCarousel',
-  decorators: [withKnobs],
   parameters: {
     component: Default,
   },
