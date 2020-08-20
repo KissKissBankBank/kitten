@@ -87,6 +87,48 @@
 ///   <div class="k-u-margin-right-decuple">…</div>
 ///   <div class="k-u-margin-right-none">…</div>
 ///
+///   <div class="k-u-margin-horizontal-single">…</div>
+///   <div class="k-u-margin-horizontal-singleHalf">…</div>
+///   <div class="k-u-margin-horizontal-double">…</div>
+///   <div class="k-u-margin-horizontal-doubleHalf">…</div>
+///   <div class="k-u-margin-horizontal-triple">…</div>
+///   <div class="k-u-margin-horizontal-tripleHalf">…</div>
+///   <div class="k-u-margin-horizontal-quadruple">…</div>
+///   <div class="k-u-margin-horizontal-quadrupleHalf">…</div>
+///   <div class="k-u-margin-horizontal-quintuple">…</div>
+///   <div class="k-u-margin-horizontal-quintupleHalf">…</div>
+///   <div class="k-u-margin-horizontal-sextuple">…</div>
+///   <div class="k-u-margin-horizontal-sextupleHalf">…</div>
+///   <div class="k-u-margin-horizontal-septuple">…</div>
+///   <div class="k-u-margin-horizontal-septupleHalf">…</div>
+///   <div class="k-u-margin-horizontal-octuple">…</div>
+///   <div class="k-u-margin-horizontal-octupleHalf">…</div>
+///   <div class="k-u-margin-horizontal-nonuple">…</div>
+///   <div class="k-u-margin-horizontal-nonupleHalf">…</div>
+///   <div class="k-u-margin-horizontal-decuple">…</div>
+///   <div class="k-u-margin-horizontal-none">…</div>
+///
+///   <div class="k-u-margin-vertical-single">…</div>
+///   <div class="k-u-margin-vertical-singleHalf">…</div>
+///   <div class="k-u-margin-vertical-double">…</div>
+///   <div class="k-u-margin-vertical-doubleHalf">…</div>
+///   <div class="k-u-margin-vertical-triple">…</div>
+///   <div class="k-u-margin-vertical-tripleHalf">…</div>
+///   <div class="k-u-margin-vertical-quadruple">…</div>
+///   <div class="k-u-margin-vertical-quadrupleHalf">…</div>
+///   <div class="k-u-margin-vertical-quintuple">…</div>
+///   <div class="k-u-margin-vertical-quintupleHalf">…</div>
+///   <div class="k-u-margin-vertical-sextuple">…</div>
+///   <div class="k-u-margin-vertical-sextupleHalf">…</div>
+///   <div class="k-u-margin-vertical-septuple">…</div>
+///   <div class="k-u-margin-vertical-septupleHalf">…</div>
+///   <div class="k-u-margin-vertical-octuple">…</div>
+///   <div class="k-u-margin-vertical-octupleHalf">…</div>
+///   <div class="k-u-margin-vertical-nonuple">…</div>
+///   <div class="k-u-margin-vertical-nonupleHalf">…</div>
+///   <div class="k-u-margin-vertical-decuple">…</div>
+///   <div class="k-u-margin-vertical-none">…</div>
+///
 ///   <div class="k-u-margin-none--important">…</div>
 ///
 ///   <div class="k-u-margin-top-single--important">…</div>
@@ -138,6 +180,30 @@
 ///   <div class="k-u-margin-right-nonuple--important">…</div>
 ///   <div class="k-u-margin-right-decuple--important">…</div>
 ///   <div class="k-u-margin-right-none--important">…</div>
+///
+///   <div class="k-u-margin-horizontal-single--important">…</div>
+///   <div class="k-u-margin-horizontal-double--important">…</div>
+///   <div class="k-u-margin-horizontal-triple--important">…</div>
+///   <div class="k-u-margin-horizontal-quadruple--important">…</div>
+///   <div class="k-u-margin-horizontal-quintuple--important">…</div>
+///   <div class="k-u-margin-horizontal-sextuple--important">…</div>
+///   <div class="k-u-margin-horizontal-septuple--important">…</div>
+///   <div class="k-u-margin-horizontal-octuple--important">…</div>
+///   <div class="k-u-margin-horizontal-nonuple--important">…</div>
+///   <div class="k-u-margin-horizontal-decuple--important">…</div>
+///   <div class="k-u-margin-horizontal-none--important">…</div>
+///
+///   <div class="k-u-margin-vertical-single--important">…</div>
+///   <div class="k-u-margin-vertical-double--important">…</div>
+///   <div class="k-u-margin-vertical-triple--important">…</div>
+///   <div class="k-u-margin-vertical-quadruple--important">…</div>
+///   <div class="k-u-margin-vertical-quintuple--important">…</div>
+///   <div class="k-u-margin-vertical-sextuple--important">…</div>
+///   <div class="k-u-margin-vertical-septuple--important">…</div>
+///   <div class="k-u-margin-vertical-octuple--important">…</div>
+///   <div class="k-u-margin-vertical-nonuple--important">…</div>
+///   <div class="k-u-margin-vertical-decuple--important">…</div>
+///   <div class="k-u-margin-vertical-none--important">…</div>
 
 @mixin k-u-margin($position, $slug, $size) {
   $value: k-px-to-rem($size);
@@ -257,27 +323,6 @@
     nonuple: 90px,
     nonupleHalf: 95px,
     decuple: 100px,
-    '0': 0,
-    '5': 5px,
-    '10': 10px,
-    '15': 15px,
-    '20': 20px,
-    '25': 25px,
-    '30': 30px,
-    '35': 35px,
-    '40': 40px,
-    '45': 45px,
-    '50': 50px,
-    '55': 55px,
-    '60': 60px,
-    '65': 65px,
-    '70': 70px,
-    '75': 75px,
-    '80': 80px,
-    '85': 85px,
-    '90': 90px,
-    '95': 95px,
-    '100': 100px,
   );
 
   @each $name, $size in $k-sizes {
