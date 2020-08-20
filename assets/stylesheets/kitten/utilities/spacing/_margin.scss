@@ -323,6 +323,7 @@
     nonuple: 90px,
     nonupleHalf: 95px,
     decuple: 100px,
+    auto: auto,
   );
 
   @each $name, $size in $k-sizes {
