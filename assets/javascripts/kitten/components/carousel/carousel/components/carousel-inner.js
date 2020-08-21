@@ -53,18 +53,18 @@ const getRangePageScrollLeft = (
 export const CarouselInner = ({
   exportVisibilityProps,
   goToPage,
-  indexPageVisible,
+  currentPageIndex,
   itemMarginBetween,
   numberOfItemsPerPage,
   numberOfPages,
   onResizeInner,
   pagesClassName,
-  renderItem,
+  items,
   viewedPages,
 }) => {
   const [isTouched, setTouchState] = useState(false)
   const carouselInner = useRef(null)
-  const previousIndexPageVisible = usePrevious(indexPageVisible)
+  const previousIndexPageVisible = usePrevious(currentPageIndex)
 
   let observer
 
@@ -84,10 +84,10 @@ export const CarouselInner = ({
   }, [carouselInner])
 
   useEffect(() => {
-    if (indexPageVisible !== previousIndexPageVisible) {
-      scrollToPage(indexPageVisible)
+    if (currentPageIndex !== previousIndexPageVisible) {
+      scrollToPage(currentPageIndex)
     }
-  }, [indexPageVisible, previousIndexPageVisible])
+  }, [currentPageIndex, previousIndexPageVisible])
 
   const handleInnerScroll = scrollStop(target => {
     if (isTouched) return null
@@ -104,7 +104,7 @@ export const CarouselInner = ({
     const closest = getClosest(rangePageScrollLeft, scrollLeft)
     const indexClosest = rangePageScrollLeft.indexOf(closest)
 
-    if (indexClosest !== indexPageVisible) return goToPage(indexClosest)
+    if (indexClosest !== currentPageIndex) return goToPage(indexClosest)
     // if the user doesn't scroll enough to change page
     // we need to scroll back to the fake snap page
     if (closest !== scrollLeft) {
@@ -134,7 +134,7 @@ export const CarouselInner = ({
   }
 
   const handlePageClick = index => e => {
-    if (index === indexPageVisible) return
+    if (index === currentPageIndex) return
 
     e.preventDefault()
     scrollToPage(index)
@@ -150,7 +150,7 @@ export const CarouselInner = ({
       className="k-Carousel__inner"
     >
       {[...Array(numberOfPages).keys()].map(index => {
-        const isActivePage = indexPageVisible === index
+        const isActivePage = currentPageIndex === index
         const hasPageBeenViewed = viewedPages.has(index)
 
         return (
@@ -170,12 +170,8 @@ export const CarouselInner = ({
               exportVisibilityProps={exportVisibilityProps}
               hasPageBeenViewed={hasPageBeenViewed}
               isActivePage={isActivePage}
+              pageItems={getDataForPage(items, index, numberOfItemsPerPage)}
               numberOfItemsPerPage={numberOfItemsPerPage}
-              renderItem={getDataForPage(
-                renderItem,
-                index,
-                numberOfItemsPerPage,
-              )}
             />
           </div>
         )

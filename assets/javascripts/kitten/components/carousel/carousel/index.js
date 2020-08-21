@@ -80,7 +80,7 @@ const getMarginBetweenAccordingToViewport = (
 
 class CarouselBase extends Component {
   state = {
-    indexPageVisible: 0,
+    currentPageIndex: 0,
     numberOfItemsPerPage:
       this.props.itemsPerPage > 0 ? this.props.itemsPerPage : 3,
     numberOfPages: getNumberOfPagesForColumnsAndDataLength(
@@ -128,40 +128,40 @@ class CarouselBase extends Component {
       this.state.numberOfItemsPerPage !== numberOfItemsPerPage ||
       this.state.numberOfPages !== numberOfPages
     ) {
-      const indexPageVisible =
-        this.state.indexPageVisible > numberOfPages - 1
+      const currentPageIndex =
+        this.state.currentPageIndex > numberOfPages - 1
           ? numberOfPages - 1
-          : this.state.indexPageVisible
+          : this.state.currentPageIndex
 
-      this.setState({ numberOfItemsPerPage, numberOfPages, indexPageVisible })
+      this.setState({ numberOfItemsPerPage, numberOfPages, currentPageIndex })
     }
   }
 
   goNextPage = () => {
     const { loop } = this.props
-    const { numberOfPages, indexPageVisible } = this.state
+    const { numberOfPages, currentPageIndex } = this.state
     const newPage = loop
-      ? checkPageLoop(numberOfPages, indexPageVisible + 1)
-      : checkPage(numberOfPages, indexPageVisible + 1)
+      ? checkPageLoop(numberOfPages, currentPageIndex + 1)
+      : checkPage(numberOfPages, currentPageIndex + 1)
     this.viewedPages.add(newPage)
-    this.setState({ indexPageVisible: newPage })
+    this.setState({ currentPageIndex: newPage })
   }
 
   goPrevPage = () => {
     const { loop } = this.props
-    const { numberOfPages, indexPageVisible } = this.state
+    const { numberOfPages, currentPageIndex } = this.state
     const newPage = loop
-      ? checkPageLoop(numberOfPages, indexPageVisible - 1)
-      : checkPage(numberOfPages, indexPageVisible - 1)
+      ? checkPageLoop(numberOfPages, currentPageIndex - 1)
+      : checkPage(numberOfPages, currentPageIndex - 1)
     this.viewedPages.add(newPage)
-    this.setState({ indexPageVisible: newPage })
+    this.setState({ currentPageIndex: newPage })
   }
 
   goToPage = indexPageToGo => {
     const { numberOfPages } = this.state
     const newPage = checkPage(numberOfPages, indexPageToGo)
     this.viewedPages.add(newPage)
-    this.setState({ indexPageVisible: newPage })
+    this.setState({ currentPageIndex: newPage })
   }
 
   renderCarouselInner = () => {
@@ -176,34 +176,33 @@ class CarouselBase extends Component {
       exportVisibilityProps,
     } = this.props
 
-    const { indexPageVisible, numberOfItemsPerPage, numberOfPages } = this.state
+    const { currentPageIndex, numberOfItemsPerPage, numberOfPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
       viewportIsXSOrLess,
       viewportIsMOrLess,
     )
 
-    let renderItemObject = children
+    let items = children
 
     // legacy mode
     if (!!data && !!renderItem) {
-      renderItemObject = [...data].map((item, index) => (
+      items = [...data].map((item, index) => (
         <Fragment key={item}>{renderItem({ item: data[index] })}</Fragment>
       ))
     }
 
     return (
       <CarouselInner
-        data={data}
+        currentPageIndex={currentPageIndex}
         exportVisibilityProps={exportVisibilityProps}
         goToPage={this.goToPage}
-        indexPageVisible={indexPageVisible}
         itemMarginBetween={itemMarginBetween}
+        items={items}
         numberOfItemsPerPage={numberOfItemsPerPage}
         numberOfPages={numberOfPages}
         onResizeInner={this.onResizeInner}
         pagesClassName={pagesClassName}
-        renderItem={renderItemObject}
         viewedPages={this.viewedPages}
       />
     )
@@ -223,7 +222,7 @@ class CarouselBase extends Component {
       preferCompletePaginationOnMobile,
       loop,
     } = this.props
-    const { indexPageVisible, numberOfPages } = this.state
+    const { currentPageIndex, numberOfPages } = this.state
 
     if (hidePagination) return
     if (viewportIsXSOrLess && hidePaginationOnMobile) return
@@ -238,7 +237,7 @@ class CarouselBase extends Component {
             <div
               className={classNames('k-Carousel__pageControl__pageDot', {
                 'k-Carousel__pageControl__pageDot--isVisible':
-                  indexPageVisible === index,
+                  currentPageIndex === index,
               })}
               key={`pageDotIndex_${index}`}
             />
@@ -264,10 +263,10 @@ class CarouselBase extends Component {
             modifier="beryllium"
             tiny={tinyButtons}
             onClick={this.goPrevPage}
-            disabled={!loop && (indexPageVisible < 1 || numberOfPages < 1)}
+            disabled={!loop && (currentPageIndex < 1 || numberOfPages < 1)}
           >
             <VisuallyHidden>
-              {loop && (indexPageVisible < 1 || numberOfPages < 1)
+              {loop && (currentPageIndex < 1 || numberOfPages < 1)
                 ? lastButtonText
                 : prevButtonText}
             </VisuallyHidden>
@@ -280,10 +279,10 @@ class CarouselBase extends Component {
             modifier="beryllium"
             tiny={tinyButtons}
             onClick={this.goNextPage}
-            disabled={!loop && indexPageVisible >= numberOfPages - 1}
+            disabled={!loop && currentPageIndex >= numberOfPages - 1}
           >
             <VisuallyHidden>
-              {loop && indexPageVisible >= numberOfPages - 1
+              {loop && currentPageIndex >= numberOfPages - 1
                 ? firstButtonText
                 : nextButtonText}
             </VisuallyHidden>
@@ -298,7 +297,7 @@ class CarouselBase extends Component {
                 key={index}
                 className={classNames('k-Carousel__pagination__square', {
                   'k-Carousel__pagination__square--isActive':
-                    index === indexPageVisible,
+                    index === currentPageIndex,
                 })}
               />
             ))}

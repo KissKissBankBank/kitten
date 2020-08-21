@@ -5,8 +5,8 @@ export const CarouselPage = ({
   exportVisibilityProps,
   hasPageBeenViewed,
   isActivePage,
+  pageItems,
   numberOfItemsPerPage,
-  renderItem,
 }) => (
   <div
     className={classNames('k-Carousel__page', {
@@ -17,11 +17,11 @@ export const CarouselPage = ({
     {[...Array(numberOfItemsPerPage).keys()].map(index => (
       <div key={index} className="k-Carousel__page__item">
         {exportVisibilityProps
-          ? renderItem[index] &&
-            React.cloneElement(renderItem[index], {
+          ? pageItems.length < index &&
+            React.cloneElement(pageItems[index], {
               hasPageBeenViewed,
             })
-          : renderItem[index]}
+          : pageItems[index]}
       </div>
     ))}
   </div>
