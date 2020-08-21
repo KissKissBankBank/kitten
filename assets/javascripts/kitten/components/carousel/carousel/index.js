@@ -28,7 +28,10 @@ export const getNumColumnsForWidth = (
   width,
   itemMinWidth,
   itemMarginBetween,
+  colNumber,
 ) => {
+  if (colNumber > 0 && itemMinWidth === 0) return colNumber
+
   if (width === 0 || itemMinWidth === 0) return 0
 
   const remainingWidthWithOneCard = width - itemMinWidth
@@ -86,6 +89,7 @@ const propTypesPositions = PropTypes.oneOf([
 
 class CarouselBase extends Component {
   static defaultProps = {
+    colNumber: 0,
     hidePaginationOnMobile: false,
     hidePagination: false,
     showOtherPages: false,
@@ -107,6 +111,7 @@ class CarouselBase extends Component {
 
   static propTypes = {
     itemMinWidth: PropTypes.number.isRequired,
+    colNumber: PropTypes.number,
     baseItemMarginBetween: PropTypes.number.isRequired,
     children: PropTypes.node,
     viewportIsMOrLess: PropTypes.bool.isRequired,
@@ -168,6 +173,7 @@ class CarouselBase extends Component {
       data,
       children,
       itemMinWidth,
+      colNumber,
       baseItemMarginBetween,
       viewportIsXSOrLess,
       viewportIsMOrLess,
@@ -183,6 +189,7 @@ class CarouselBase extends Component {
       widthInner,
       itemMinWidth,
       itemMarginBetween,
+      colNumber,
     )
 
     const numPages = getNumPagesForColumnsAndDataLength(
@@ -236,6 +243,7 @@ class CarouselBase extends Component {
       renderItem,
       children,
       itemMinWidth,
+      colNumber,
       baseItemMarginBetween,
       viewportIsXSOrLess,
       viewportIsMOrLess,
@@ -258,6 +266,7 @@ class CarouselBase extends Component {
         data={data}
         renderItem={renderItemObject}
         itemMinWidth={itemMinWidth}
+        specificColNumber={colNumber > 0}
         indexPageVisible={indexPageVisible}
         numColumns={numColumns}
         numPages={numPages}

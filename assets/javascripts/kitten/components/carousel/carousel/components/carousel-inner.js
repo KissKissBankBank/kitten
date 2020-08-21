@@ -168,6 +168,7 @@ export class CarouselInner extends Component {
       pagesClassName,
       viewedPages,
       exportVisibilityProps,
+      specificColNumber,
     } = this.props
 
     const rangePage = createRangeFromZeroTo(numPages)
@@ -209,6 +210,7 @@ export class CarouselInner extends Component {
                 }
                 numColumns={numColumns}
                 itemMinWidth={itemMinWidth}
+                specificColNumber={specificColNumber}
                 itemMarginBetween={itemMarginBetween}
                 renderItem={
                   legacyMode
