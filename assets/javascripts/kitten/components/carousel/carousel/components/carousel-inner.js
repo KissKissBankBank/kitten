@@ -51,15 +51,15 @@ const getRangePageScrollLeft = (
   )
 
 export const CarouselInner = ({
+  currentPageIndex,
   exportVisibilityProps,
   goToPage,
-  currentPageIndex,
   itemMarginBetween,
+  items,
   numberOfItemsPerPage,
   numberOfPages,
   onResizeInner,
   pagesClassName,
-  items,
   viewedPages,
 }) => {
   const [isTouched, setTouchState] = useState(false)
