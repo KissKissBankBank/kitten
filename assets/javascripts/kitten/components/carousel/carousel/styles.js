@@ -300,8 +300,21 @@ export const StyledCarouselContainer = styled.div`
   // Carousel Inner
 
   .k-Carousel__inner{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(${({ numPages }) => numPages}, 100%);
+
+    grid-gap: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      grid-gap: ${pxToRem(CONTAINER_PADDING / 2)};
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      grid-gap: ${({ baseItemMarginBetween }) =>
+        pxToRem(baseItemMarginBetween)};
+    }
+
+
     overflow-x: scroll;
     scroll-behavior: smooth;
     /* hide scrollbar on IE and Edge */
@@ -316,33 +329,18 @@ export const StyledCarouselContainer = styled.div`
     &::-webkit-scrollbar {
       display: none;
     }
-  }
 
-  .k-Carousel__inner__pageContainer {
-    width: 100%;
-    flex-shrink: 0;
-    scroll-snap-align: center;
+    .k-Carousel__inner__pageContainer {
+      width: 100%;
+      scroll-snap-align: center;
 
-    &:not(.k-Carousel__inner__pageContainer--isActivePage) {
-      cursor: pointer;
-    }
-
-
-    &:not(:first-child) {
-      margin-left: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        margin-left: ${pxToRem(CONTAINER_PADDING)};
-      }
-
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        margin-left: ${({ baseItemMarginBetween }) =>
-          pxToRem(baseItemMarginBetween)};
+      &:not(.k-Carousel__inner__pageContainer--isActivePage) {
+        cursor: pointer;
       }
     }
   }
 
-  .k-Carousel--showOtherPages .k-Carousel__inner {
+  &.k-Carousel--showOtherPages .k-Carousel__inner {
     padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
     scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
 
@@ -363,48 +361,23 @@ export const StyledCarouselContainer = styled.div`
   }
 
 
-  // Carousel Item
+  // Carousel Page
 
   .k-Carousel__page {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(${({ numColumns }) => numColumns}, 1fr);
+    grid-gap: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
 
-    .k-Carousel__page__item{
-      flex-shrink: 1;
-      flex-grow: 1;
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      grid-gap: ${pxToRem(CONTAINER_PADDING / 2)};
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      grid-gap: ${({ baseItemMarginBetween }) =>
+        pxToRem(baseItemMarginBetween)};
+    }
 
-      ${({ numColumns, baseItemMarginBetween }) => css`
-        width: calc(
-          (100% - ${(numColumns - 1) * (CONTAINER_PADDING_MOBILE / 2)}px) /
-            ${numColumns}
-        );
-
-        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-          width: calc(
-            (100% - ${(numColumns - 1) * (CONTAINER_PADDING / 2)}px) /
-              ${numColumns}
-          );
-        }
-
-        @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-          width: calc(
-            (100% - ${(numColumns - 1) * baseItemMarginBetween}px) /
-              ${numColumns}
-          );
-        }
-      `}
-
-    &:not(:first-child) {
-      margin-left: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        margin-left: ${pxToRem(CONTAINER_PADDING / 2)};
-      }
-
-      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-        margin-left: ${({ baseItemMarginBetween }) =>
-          pxToRem(baseItemMarginBetween)};
-      }
+    .k-Carousel__page__item {
+      overflow: hidden;
     }
   }
 `

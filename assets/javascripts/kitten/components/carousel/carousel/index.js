@@ -318,9 +318,10 @@ class CarouselBase extends Component {
     if (getDataLength({ data, children }) === 0) return null
 
     const commonProps = {
+      baseItemMarginBetween: baseItemMarginBetween,
       itemMinWidth: itemMinWidth,
       numColumns: this.state.numColumns,
-      baseItemMarginBetween: baseItemMarginBetween,
+      numPages: this.state.numPages,
     }
 
     if (!!data && !!renderItem) {
