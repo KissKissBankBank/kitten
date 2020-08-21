@@ -20,6 +20,3 @@ export const DocLinkBox = ({ isExternal, href, title, text, ...props }) => {
     </LinkBox>
   )
 }
-
-// DEPRECATED: do not use default export.
-export default DocLinkBox

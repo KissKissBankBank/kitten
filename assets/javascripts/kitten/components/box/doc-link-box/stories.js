@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
-import DocLinkBox from './index'
+import { DocLinkBox } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'

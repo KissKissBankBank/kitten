@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import DocLinkBox from './index'
+import { DocLinkBox } from './index'
 
 describe('<DocLinkBox />', () => {
   let component
