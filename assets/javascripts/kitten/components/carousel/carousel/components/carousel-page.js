@@ -5,7 +5,7 @@ export const CarouselPage = ({
   exportVisibilityProps,
   hasPageBeenViewed,
   isActivePage,
-  numColumns,
+  numberOfItemsPerPage,
   renderItem,
 }) => (
   <div
@@ -14,7 +14,7 @@ export const CarouselPage = ({
       'k-Carousel__page--hasBeenViewed': hasPageBeenViewed,
     })}
   >
-    {[...Array(numColumns).keys()].map(index => (
+    {[...Array(numberOfItemsPerPage).keys()].map(index => (
       <div key={index} className="k-Carousel__page__item">
         {exportVisibilityProps
           ? renderItem[index] &&

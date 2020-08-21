@@ -21,45 +21,48 @@ const getDataLength = ({ data, children }) => {
   return React.Children.count(children)
 }
 
-export const getNumColumnsForWidth = (
+export const getNumberOfItemsPerPageForWidth = (
   width,
   itemMinWidth,
   itemMarginBetween,
-  colNumber,
+  itemsPerPage,
 ) => {
-  if (colNumber > 0 && itemMinWidth === 0) return colNumber
+  if (itemsPerPage > 0 && itemMinWidth === 0) return itemsPerPage
 
   if (width === 0 || itemMinWidth === 0) return 0
 
   const remainingWidthWithOneCard = width - itemMinWidth
   const itemWidthAndMargin = itemMinWidth + itemMarginBetween
 
-  const numColumns =
+  const numberOfItemsPerPage =
     Math.floor(remainingWidthWithOneCard / itemWidthAndMargin) + 1
 
-  return numColumns
+  return numberOfItemsPerPage
 }
 
-export const getNumPagesForColumnsAndDataLength = (dataLength, numColumns) => {
-  if (dataLength === 0 || numColumns === 0) return 0
+export const getNumberOfPagesForColumnsAndDataLength = (
+  dataLength,
+  numberOfItemsPerPage,
+) => {
+  if (dataLength === 0 || numberOfItemsPerPage === 0) return 0
 
-  const numPages = Math.ceil(dataLength / numColumns)
+  const numberOfPages = Math.ceil(dataLength / numberOfItemsPerPage)
 
-  return numPages
+  return numberOfPages
 }
 
-export const checkPage = (numPages, newPage) => {
-  if (numPages < 1) return 0
+export const checkPage = (numberOfPages, newPage) => {
+  if (numberOfPages < 1) return 0
   if (newPage < 0) return 0
-  if (newPage >= numPages) return numPages - 1
+  if (newPage >= numberOfPages) return numberOfPages - 1
 
   return newPage
 }
 
-export const checkPageLoop = (numPages, newPage) => {
-  if (numPages < 1) return 0
-  if (newPage < 0) return numPages - 1
-  if (newPage >= numPages) return 0
+export const checkPageLoop = (numberOfPages, newPage) => {
+  if (numberOfPages < 1) return 0
+  if (newPage < 0) return numberOfPages - 1
+  if (newPage >= numberOfPages) return 0
 
   return newPage
 }
@@ -78,10 +81,11 @@ const getMarginBetweenAccordingToViewport = (
 class CarouselBase extends Component {
   state = {
     indexPageVisible: 0,
-    numColumns: this.props.colNumber > 0 ? this.props.colNumber : 3,
-    numPages: getNumPagesForColumnsAndDataLength(
+    numberOfItemsPerPage:
+      this.props.itemsPerPage > 0 ? this.props.itemsPerPage : 3,
+    numberOfPages: getNumberOfPagesForColumnsAndDataLength(
       getDataLength({ data: this.props.data, children: this.props.children }),
-      this.props.colNumber > 0 ? this.props.colNumber : 3,
+      this.props.itemsPerPage > 0 ? this.props.itemsPerPage : 3,
     ),
   }
 
@@ -96,7 +100,7 @@ class CarouselBase extends Component {
       data,
       children,
       itemMinWidth,
-      colNumber,
+      itemsPerPage,
       baseItemMarginBetween,
       viewportIsXSOrLess,
       viewportIsMOrLess,
@@ -108,54 +112,54 @@ class CarouselBase extends Component {
       viewportIsMOrLess,
     )
 
-    const numColumns = getNumColumnsForWidth(
+    const numberOfItemsPerPage = getNumberOfItemsPerPageForWidth(
       innerWidth,
       itemMinWidth,
       itemMarginBetween,
-      colNumber,
+      itemsPerPage,
     )
 
-    const numPages = getNumPagesForColumnsAndDataLength(
+    const numberOfPages = getNumberOfPagesForColumnsAndDataLength(
       getDataLength({ data, children }),
-      numColumns,
+      numberOfItemsPerPage,
     )
 
     if (
-      this.state.numColumns !== numColumns ||
-      this.state.numPages !== numPages
+      this.state.numberOfItemsPerPage !== numberOfItemsPerPage ||
+      this.state.numberOfPages !== numberOfPages
     ) {
       const indexPageVisible =
-        this.state.indexPageVisible > numPages - 1
-          ? numPages - 1
+        this.state.indexPageVisible > numberOfPages - 1
+          ? numberOfPages - 1
           : this.state.indexPageVisible
 
-      this.setState({ numColumns, numPages, indexPageVisible })
+      this.setState({ numberOfItemsPerPage, numberOfPages, indexPageVisible })
     }
   }
 
   goNextPage = () => {
     const { loop } = this.props
-    const { numPages, indexPageVisible } = this.state
+    const { numberOfPages, indexPageVisible } = this.state
     const newPage = loop
-      ? checkPageLoop(numPages, indexPageVisible + 1)
-      : checkPage(numPages, indexPageVisible + 1)
+      ? checkPageLoop(numberOfPages, indexPageVisible + 1)
+      : checkPage(numberOfPages, indexPageVisible + 1)
     this.viewedPages.add(newPage)
     this.setState({ indexPageVisible: newPage })
   }
 
   goPrevPage = () => {
     const { loop } = this.props
-    const { numPages, indexPageVisible } = this.state
+    const { numberOfPages, indexPageVisible } = this.state
     const newPage = loop
-      ? checkPageLoop(numPages, indexPageVisible - 1)
-      : checkPage(numPages, indexPageVisible - 1)
+      ? checkPageLoop(numberOfPages, indexPageVisible - 1)
+      : checkPage(numberOfPages, indexPageVisible - 1)
     this.viewedPages.add(newPage)
     this.setState({ indexPageVisible: newPage })
   }
 
   goToPage = indexPageToGo => {
-    const { numPages } = this.state
-    const newPage = checkPage(numPages, indexPageToGo)
+    const { numberOfPages } = this.state
+    const newPage = checkPage(numberOfPages, indexPageToGo)
     this.viewedPages.add(newPage)
     this.setState({ indexPageVisible: newPage })
   }
@@ -172,7 +176,7 @@ class CarouselBase extends Component {
       exportVisibilityProps,
     } = this.props
 
-    const { indexPageVisible, numColumns, numPages } = this.state
+    const { indexPageVisible, numberOfItemsPerPage, numberOfPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
       viewportIsXSOrLess,
@@ -195,8 +199,8 @@ class CarouselBase extends Component {
         goToPage={this.goToPage}
         indexPageVisible={indexPageVisible}
         itemMarginBetween={itemMarginBetween}
-        numColumns={numColumns}
-        numPages={numPages}
+        numberOfItemsPerPage={numberOfItemsPerPage}
+        numberOfPages={numberOfPages}
         onResizeInner={this.onResizeInner}
         pagesClassName={pagesClassName}
         renderItem={renderItemObject}
@@ -219,14 +223,14 @@ class CarouselBase extends Component {
       preferCompletePaginationOnMobile,
       loop,
     } = this.props
-    const { indexPageVisible, numPages } = this.state
+    const { indexPageVisible, numberOfPages } = this.state
 
     if (hidePagination) return
     if (viewportIsXSOrLess && hidePaginationOnMobile) return
-    if (numPages <= 1) return
+    if (numberOfPages <= 1) return
 
     if (viewportIsXSOrLess && !preferCompletePaginationOnMobile) {
-      const rangePage = createRangeFromZeroTo(numPages)
+      const rangePage = createRangeFromZeroTo(numberOfPages)
 
       return (
         <div className="k-Carousel__pageControl">
@@ -260,10 +264,10 @@ class CarouselBase extends Component {
             modifier="beryllium"
             tiny={tinyButtons}
             onClick={this.goPrevPage}
-            disabled={!loop && (indexPageVisible < 1 || numPages < 1)}
+            disabled={!loop && (indexPageVisible < 1 || numberOfPages < 1)}
           >
             <VisuallyHidden>
-              {loop && (indexPageVisible < 1 || numPages < 1)
+              {loop && (indexPageVisible < 1 || numberOfPages < 1)
                 ? lastButtonText
                 : prevButtonText}
             </VisuallyHidden>
@@ -276,10 +280,10 @@ class CarouselBase extends Component {
             modifier="beryllium"
             tiny={tinyButtons}
             onClick={this.goNextPage}
-            disabled={!loop && indexPageVisible >= numPages - 1}
+            disabled={!loop && indexPageVisible >= numberOfPages - 1}
           >
             <VisuallyHidden>
-              {loop && indexPageVisible >= numPages - 1
+              {loop && indexPageVisible >= numberOfPages - 1
                 ? firstButtonText
                 : nextButtonText}
             </VisuallyHidden>
@@ -289,7 +293,7 @@ class CarouselBase extends Component {
 
         {showPageSquares && (
           <div className="k-Carousel__pagination__squaresContainer">
-            {createRangeFromZeroTo(numPages).map(index => (
+            {createRangeFromZeroTo(numberOfPages).map(index => (
               <div
                 key={index}
                 className={classNames('k-Carousel__pagination__square', {
@@ -322,8 +326,8 @@ class CarouselBase extends Component {
     const commonProps = {
       baseItemMarginBetween: baseItemMarginBetween,
       itemMinWidth: itemMinWidth,
-      numColumns: this.state.numColumns,
-      numPages: this.state.numPages,
+      numberOfItemsPerPage: this.state.numberOfItemsPerPage,
+      numberOfPages: this.state.numberOfPages,
     }
 
     // legacy mode
@@ -365,7 +369,7 @@ class CarouselBase extends Component {
 }
 
 CarouselBase.defaultProps = {
-  colNumber: 0,
+  itemsPerPage: 0,
   hidePaginationOnMobile: false,
   hidePagination: false,
   showOtherPages: false,
@@ -387,7 +391,7 @@ CarouselBase.defaultProps = {
 
 CarouselBase.propTypes = {
   itemMinWidth: PropTypes.number.isRequired,
-  colNumber: PropTypes.number,
+  itemsPerPage: PropTypes.number,
   baseItemMarginBetween: PropTypes.number.isRequired,
   children: PropTypes.node,
   viewportIsMOrLess: PropTypes.bool.isRequired,

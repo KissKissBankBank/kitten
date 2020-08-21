@@ -148,7 +148,7 @@ export const WithSpecificColNumber = () => (
     <NextCarousel
       tinyButtons={boolean('Button tiny size', false)}
       itemMinWidth={0}
-      colNumber={number('colNumber', 1)}
+      itemsPerPage={number('itemsPerPage', 1)}
       baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
       paginationPosition={object('paginationPosition', paginationPosition)}
       showPageSquares={boolean('showPageSquares', false)}

@@ -303,7 +303,8 @@ export const StyledCarouselContainer = styled.div`
 
   .k-Carousel__inner {
     display: grid;
-    grid-template-columns: repeat(${({ numPages }) => numPages}, 100%);
+    grid-template-columns: repeat(${({ numberOfPages }) =>
+      numberOfPages}, 100%);
 
     grid-gap: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
 
@@ -343,23 +344,23 @@ export const StyledCarouselContainer = styled.div`
     /* IE11 support */
     display: -ms-grid;
     -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING_MOBILE / 2)})[${({
-  numPages,
-}) => numPages - 1}] 100%;
+  numberOfPages,
+}) => numberOfPages - 1}] 100%;
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING / 2)})[${({
-  numPages,
-}) => numPages - 1}] 100%;
+  numberOfPages,
+}) => numberOfPages - 1}] 100%;
     }
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       -ms-grid-columns: (100% ${({ baseItemMarginBetween }) =>
-        pxToRem(baseItemMarginBetween)})[${({ numPages }) =>
-  numPages - 1}] 100%;
+        pxToRem(baseItemMarginBetween)})[${({ numberOfPages }) =>
+  numberOfPages - 1}] 100%;
     }
 
     .k-Carousel__inner__pageContainer {
-      ${({ numPages }) =>
-        [...Array(numPages).keys()].map(
+      ${({ numberOfPages }) =>
+        [...Array(numberOfPages).keys()].map(
           item => css`
             &:nth-child(${item + 1}) {
               -ms-grid-column: ${item * 2 + 1};
@@ -395,7 +396,8 @@ export const StyledCarouselContainer = styled.div`
 
   .k-Carousel__page {
     display: grid;
-    grid-template-columns: repeat(${({ numColumns }) => numColumns}, 1fr);
+    grid-template-columns: repeat(${({ numberOfItemsPerPage }) =>
+      numberOfItemsPerPage}, 1fr);
     grid-gap: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
@@ -412,35 +414,37 @@ export const StyledCarouselContainer = styled.div`
 
     /* IE11 support */
     display: -ms-grid;
-    -ms-grid-columns: ${({ numColumns }) =>
-      numColumns > 1
+    -ms-grid-columns: ${({ numberOfItemsPerPage }) =>
+      numberOfItemsPerPage > 1
         ? css`
-    (1fr ${pxToRem(CONTAINER_PADDING_MOBILE / 2)})[${numColumns - 1}] 1fr;
+    (1fr ${pxToRem(CONTAINER_PADDING_MOBILE / 2)})[${
+            numberOfItemsPerPage - 1
+          }] 1fr;
     `
         : '1fr'};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      -ms-grid-columns: ${({ numColumns }) =>
-        numColumns > 1
+      -ms-grid-columns: ${({ numberOfItemsPerPage }) =>
+        numberOfItemsPerPage > 1
           ? css`
-      (1fr ${pxToRem(CONTAINER_PADDING / 2)})[${numColumns - 1}] 1fr;
+      (1fr ${pxToRem(CONTAINER_PADDING / 2)})[${numberOfItemsPerPage - 1}] 1fr;
       `
           : '1fr'};
     }
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      -ms-grid-columns: ${({ numColumns }) =>
-        numColumns > 1
+      -ms-grid-columns: ${({ numberOfItemsPerPage }) =>
+        numberOfItemsPerPage > 1
           ? css`
       (1fr ${({ baseItemMarginBetween }) => pxToRem(baseItemMarginBetween)})[${
-              numColumns - 1
+              numberOfItemsPerPage - 1
             }] 1fr;
       `
           : '1fr'};
     }
 
     .k-Carousel__page__item {
-      ${({ numColumns }) =>
-        [...Array(numColumns).keys()].map(
+      ${({ numberOfItemsPerPage }) =>
+        [...Array(numberOfItemsPerPage).keys()].map(
           item => css`
             &:nth-child(${item + 1}) {
               -ms-grid-column: ${item * 2 + 1};

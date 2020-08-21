@@ -30,10 +30,10 @@ const getClosest = (counts, goal) =>
     Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev,
   )
 
-const getDataForPage = (data, indexPage, numColumns) => {
-  const startIndex = indexPage * numColumns
+const getDataForPage = (data, indexPage, numberOfItemsPerPage) => {
+  const startIndex = indexPage * numberOfItemsPerPage
 
-  return data.slice(startIndex, startIndex + numColumns)
+  return data.slice(startIndex, startIndex + numberOfItemsPerPage)
 }
 
 const getElementPadding = element =>
@@ -42,11 +42,11 @@ const getElementPadding = element =>
 
 const getRangePageScrollLeft = (
   targetClientWidth,
-  numPages,
+  numberOfPages,
   itemMarginBetween,
   containerPadding,
 ) =>
-  [...Array(numPages).keys()].map(
+  [...Array(numberOfPages).keys()].map(
     page => page * (targetClientWidth + itemMarginBetween - containerPadding),
   )
 
@@ -55,8 +55,8 @@ export const CarouselInner = ({
   goToPage,
   indexPageVisible,
   itemMarginBetween,
-  numColumns,
-  numPages,
+  numberOfItemsPerPage,
+  numberOfPages,
   onResizeInner,
   pagesClassName,
   renderItem,
@@ -96,7 +96,7 @@ export const CarouselInner = ({
 
     const rangePageScrollLeft = getRangePageScrollLeft(
       clientWidth,
-      numPages,
+      numberOfPages,
       itemMarginBetween,
       getElementPadding(target),
     )
@@ -118,7 +118,7 @@ export const CarouselInner = ({
 
     const rangePageScrollLeft = getRangePageScrollLeft(
       clientWidth,
-      numPages,
+      numberOfPages,
       itemMarginBetween,
       getElementPadding(target),
     )
@@ -146,7 +146,7 @@ export const CarouselInner = ({
       onTouchEnd={() => setTouchState(false)}
       className="k-Carousel__inner"
     >
-      {[...Array(numPages).keys()].map(index => {
+      {[...Array(numberOfPages).keys()].map(index => {
         const isActivePage = indexPageVisible === index
         const hasPageBeenViewed = viewedPages.has(index)
 
@@ -167,8 +167,12 @@ export const CarouselInner = ({
               exportVisibilityProps={exportVisibilityProps}
               hasPageBeenViewed={hasPageBeenViewed}
               isActivePage={isActivePage}
-              numColumns={numColumns}
-              renderItem={getDataForPage(renderItem, index, numColumns)}
+              numberOfItemsPerPage={numberOfItemsPerPage}
+              renderItem={getDataForPage(
+                renderItem,
+                index,
+                numberOfItemsPerPage,
+              )}
             />
           </div>
         )
