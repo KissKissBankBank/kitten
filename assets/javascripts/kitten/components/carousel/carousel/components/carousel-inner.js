@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
 import { domElementHelper } from '../../../../helpers/dom/element-helper'
 import { CarouselPage } from './carousel-page'
 import classNames from 'classnames'
+import { usePrevious } from '../../../../helpers/utils/use-previous-hook'
 
 if (domElementHelper.canUseDom()) {
   require('smoothscroll-polyfill').polyfill()
@@ -35,64 +36,71 @@ const getDataForPage = (data, indexPage, numColumns) => {
   return data.slice(startIndex, startIndex + numColumns)
 }
 
+const getElementPadding = element =>
+  parseInt(domElementHelper.getComputedStyle(element, 'padding-left')) +
+  parseInt(domElementHelper.getComputedStyle(element, 'padding-right'))
+
 const getRangePageScrollLeft = (
   targetClientWidth,
   numPages,
   itemMarginBetween,
   containerPadding,
 ) =>
-  createRangeFromZeroTo(numPages).map(
-    numPage =>
-      numPage * (targetClientWidth + itemMarginBetween - containerPadding),
+  [...Array(numPages).keys()].map(
+    page => page * (targetClientWidth + itemMarginBetween - containerPadding),
   )
 
-export class CarouselInner extends Component {
-  state = {
-    isTouched: false,
+export const CarouselInner = ({
+  data,
+  exportVisibilityProps,
+  goToPage,
+  indexPageVisible,
+  itemMarginBetween,
+  legacyMode,
+  numColumns,
+  numPages,
+  onResizeInner,
+  pagesClassName,
+  renderItem,
+  viewedPages,
+}) => {
+  const [isTouched, setTouchState] = useState(false)
+  const carouselInner = useRef(null)
+  const previousIndexPageVisible = usePrevious(indexPageVisible)
+
+  let observer
+
+  const onResizeObserve = ([entry]) => {
+    const innerWidth = entry.contentRect.width
+    onResizeInner(innerWidth)
   }
 
-  carouselInner = React.createRef()
+  useEffect(() => {
+    observer = new ResizeObserver(onResizeObserve)
 
-  onResizeObserve = ([entry]) => {
-    const widthInner = entry.contentRect.width
-    this.props.onResizeInner(widthInner)
-  }
+    return () => observer.disconnect()
+  }, [])
 
-  componentDidMount() {
-    this.observer = new ResizeObserver(this.onResizeObserve)
-    this.observer.observe(this.carouselInner.current)
-  }
+  useEffect(() => {
+    carouselInner.current && observer.observe(carouselInner.current)
+  }, [carouselInner])
 
-  componentWillUnmount() {
-    this.observer.disconnect()
-  }
-
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.indexPageVisible !== this.props.indexPageVisible) {
-      this.scrollToPage(nextProps.indexPageVisible)
+  useEffect(() => {
+    if (indexPageVisible !== previousIndexPageVisible) {
+      scrollToPage(indexPageVisible)
     }
-  }
+  }, [indexPageVisible, previousIndexPageVisible])
 
-  getElementPadding = element =>
-    parseInt(domElementHelper.getComputedStyle(element, 'padding-left')) +
-    parseInt(domElementHelper.getComputedStyle(element, 'padding-right'))
+  const handleInnerScroll = scrollStop(target => {
+    if (isTouched) return null
 
-  handleInnerScroll = scrollStop(target => {
-    if (this.state.isTouched) return
-
-    const {
-      numPages,
-      itemMarginBetween,
-      indexPageVisible,
-      goToPage,
-    } = this.props
     const { scrollLeft, clientWidth } = target
 
     const rangePageScrollLeft = getRangePageScrollLeft(
       clientWidth,
       numPages,
       itemMarginBetween,
-      this.getElementPadding(target),
+      getElementPadding(target),
     )
 
     const closest = getClosest(rangePageScrollLeft, scrollLeft)
@@ -106,17 +114,15 @@ export class CarouselInner extends Component {
     }
   })
 
-  scrollToPage = indexPageToScroll => {
-    const { numPages, itemMarginBetween } = this.props
-
-    const target = this.carouselInner.current
+  const scrollToPage = indexPageToScroll => {
+    const target = carouselInner.current
     const { scrollLeft, clientWidth } = target
 
     const rangePageScrollLeft = getRangePageScrollLeft(
       clientWidth,
       numPages,
       itemMarginBetween,
-      this.getElementPadding(target),
+      getElementPadding(target),
     )
 
     const closest = rangePageScrollLeft[indexPageToScroll]
@@ -126,74 +132,55 @@ export class CarouselInner extends Component {
     }
   }
 
-  handleTouchStart = () => this.setState({ isTouched: true })
-  handleTouchEnd = () => this.setState({ isTouched: false })
-
-  handlePageClick = index => e => {
-    if (index === this.props.indexPageVisible) return
+  const handlePageClick = index => e => {
+    if (index === indexPageVisible) return
 
     e.preventDefault()
-    this.scrollToPage(index)
+    scrollToPage(index)
     document.activeElement.blur()
   }
 
-  render() {
-    const {
-      data,
-      exportVisibilityProps,
-      indexPageVisible,
-      legacyMode,
-      numColumns,
-      numPages,
-      pagesClassName,
-      renderItem,
-      viewedPages,
-    } = this.props
+  return (
+    <div
+      ref={carouselInner}
+      onScroll={handleInnerScroll}
+      onTouchStart={() => setTouchState(true)}
+      onTouchEnd={() => setTouchState(false)}
+      className="k-Carousel__inner"
+    >
+      {[...Array(numPages).keys()].map(index => {
+        const isActivePage = indexPageVisible === index
+        const hasPageBeenViewed = viewedPages.has(index)
 
-    return (
-      <div
-        ref={this.carouselInner}
-        onScroll={this.handleInnerScroll}
-        onTouchStart={this.handleTouchStart}
-        onTouchEnd={this.handleTouchEnd}
-        className="k-Carousel__inner"
-      >
-        {[...Array(numPages).keys()].map(index => {
-          const isActivePage = indexPageVisible === index
-          const hasPageBeenViewed = viewedPages.has(index)
-
-          return (
-            <div
-              key={index}
-              onClick={this.handlePageClick(index)}
-              className={classNames(
-                'k-Carousel__inner__pageContainer',
-                pagesClassName,
-                {
-                  'k-Carousel__inner__pageContainer--isActivePage': isActivePage,
-                  'k-Carousel__inner__pageContainer--hasBeenViewed': hasPageBeenViewed,
-                },
-              )}
-            >
-              <CarouselPage
-                data={
-                  legacyMode ? getDataForPage(data, index, numColumns) : null
-                }
-                exportVisibilityProps={exportVisibilityProps}
-                hasPageBeenViewed={hasPageBeenViewed}
-                isActivePage={isActivePage}
-                legacyMode={legacyMode}
-                numColumns={numColumns}
-                renderItem={
-                  legacyMode
-                    ? renderItem
-                    : getDataForPage(renderItem, index, numColumns)
-                }
-              />
-            </div>
-          )
-        })}
-      </div>
-    )
-  }
+        return (
+          <div
+            key={index}
+            onClick={handlePageClick(index)}
+            className={classNames(
+              'k-Carousel__inner__pageContainer',
+              pagesClassName,
+              {
+                'k-Carousel__inner__pageContainer--isActivePage': isActivePage,
+                'k-Carousel__inner__pageContainer--hasBeenViewed': hasPageBeenViewed,
+              },
+            )}
+          >
+            <CarouselPage
+              data={legacyMode ? getDataForPage(data, index, numColumns) : null}
+              exportVisibilityProps={exportVisibilityProps}
+              hasPageBeenViewed={hasPageBeenViewed}
+              isActivePage={isActivePage}
+              legacyMode={legacyMode}
+              numColumns={numColumns}
+              renderItem={
+                legacyMode
+                  ? renderItem
+                  : getDataForPage(renderItem, index, numColumns)
+              }
+            />
+          </div>
+        )
+      })}
+    </div>
+  )
 }
