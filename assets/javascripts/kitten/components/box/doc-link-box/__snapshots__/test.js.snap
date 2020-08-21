@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
+<a
+  className="sc-bdVaJa hikopz"
+  href="#"
+>
+  <div
+    className="k-LinkBox__link"
+  >
+    <div
+      className="k-LinkBox__icon"
+    >
+      <svg
+        className="k-LinkBox__icon--svg"
+        height="50"
+        viewBox="0 0 30 40"
+        width="40"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Document
+        </title>
+        <path
+          d="M30 34H6V0h16l8 8v26z"
+          fill="#fff"
+        />
+        <path
+          d="M9 3h9v2H9zm0 7h16v2H9zm0 4h10v2H9zm0 4h13v2H9zm0 3.8h5v2H9zM20 29h7v2h-7zm3-3h4v2h-4z"
+          fill="#333"
+        />
+        <path
+          d="M22 8V1.4l-.4-.4H7v26a6.53 6.53 0 0 1 6 6h16V8.4l-.4-.4z"
+          fill="none"
+        />
+        <path
+          d="M25.3 4.7L23 2.4V7h4.6l-2.3-2.3z"
+          fill="#fbfbfb"
+        />
+        <path
+          d="M30 8l-8-8H6v27a6.51 6.51 0 1 0 7 7h17zm-7-5.6l2.3 2.3L27.6 7H23zM6.5 39a5.5 5.5 0 1 1 5.5-5.5A5.55 5.55 0 0 1 6.5 39zM29 33H13a6.53 6.53 0 0 0-6-6V1h14.6l.4.4V8h6.6l.4.4z"
+          fill="#333"
+        />
+        <circle
+          cx="6.5"
+          cy="33.5"
+          fill="#68ffa0"
+          r="5.5"
+        />
+        <path
+          d="M8.6 34.2l-1.4-1.4-.7-.7-.7.7-1.4 1.4.7.7 1.4-1.4 1.4 1.4.7-.7z"
+          fill="#68ffa0"
+        />
+        <path
+          d="M6.5 32.1l-.7.7-1.4 1.4.7.7 1.4-1.4 1.4 1.4.7-.7-1.4-1.4-.7-.7z"
+          fill="#333"
+        />
+      </svg>
+    </div>
+    <div
+      className="k-u-margin-top-double k-u-margin-bottom-double k-LinkBox__textContainer"
+    >
+      <span
+        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+      />
+      <span
+        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-micro k-u-weight-light"
+      />
+    </div>
+    <div
+      className="k-LinkBox__arrow"
+    >
+      <svg
+        className="sc-bxivhb cguJqp"
+        height="10"
+        viewBox="0 0 8.48 5.64"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+        />
+      </svg>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
+<a
+  className="sc-bdVaJa hikopz"
+  href="#foobar"
+  rel="noopener"
+  target="_blank"
+>
+  <div
+    className="k-LinkBox__link"
+  >
+    <div
+      className="k-LinkBox__icon"
+    >
+      <svg
+        className="k-LinkBox__icon--svg"
+        height="50"
+        viewBox="0 0 30 40"
+        width="40"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          Document
+        </title>
+        <path
+          d="M30 34H6V0h16l8 8v26z"
+          fill="#fff"
+        />
+        <path
+          d="M9 3h9v2H9zm0 7h16v2H9zm0 4h10v2H9zm0 4h13v2H9zm0 3.8h5v2H9zM20 29h7v2h-7zm3-3h4v2h-4z"
+          fill="#333"
+        />
+        <path
+          d="M22 8V1.4l-.4-.4H7v26a6.53 6.53 0 0 1 6 6h16V8.4l-.4-.4z"
+          fill="none"
+        />
+        <path
+          d="M25.3 4.7L23 2.4V7h4.6l-2.3-2.3z"
+          fill="#fbfbfb"
+        />
+        <path
+          d="M30 8l-8-8H6v27a6.51 6.51 0 1 0 7 7h17zm-7-5.6l2.3 2.3L27.6 7H23zM6.5 39a5.5 5.5 0 1 1 5.5-5.5A5.55 5.55 0 0 1 6.5 39zM29 33H13a6.53 6.53 0 0 0-6-6V1h14.6l.4.4V8h6.6l.4.4z"
+          fill="#333"
+        />
+        <circle
+          cx="6.5"
+          cy="33.5"
+          fill="#68ffa0"
+          r="5.5"
+        />
+        <path
+          d="M8.6 34.2l-1.4-1.4-.7-.7-.7.7-1.4 1.4.7.7 1.4-1.4 1.4 1.4.7-.7z"
+          fill="#68ffa0"
+        />
+        <path
+          d="M6.5 32.1l-.7.7-1.4 1.4.7.7 1.4-1.4 1.4 1.4.7-.7-1.4-1.4-.7-.7z"
+          fill="#333"
+        />
+      </svg>
+    </div>
+    <div
+      className="k-u-margin-top-double k-u-margin-bottom-double k-LinkBox__textContainer"
+    >
+      <span
+        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+      >
+        title
+      </span>
+      <span
+        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-micro k-u-weight-light"
+      >
+        text
+      </span>
+    </div>
+    <div
+      className="k-LinkBox__arrow"
+    >
+      <svg
+        className="sc-bxivhb cguJqp"
+        height="10"
+        viewBox="0 0 8.48 5.64"
+        width="10"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
+        />
+      </svg>
+    </div>
+  </div>
+</a>
+`;
