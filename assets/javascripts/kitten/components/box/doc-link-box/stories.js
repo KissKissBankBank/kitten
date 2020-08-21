@@ -12,7 +12,7 @@ const info = {
 
     ## Import
     ~~~js
-    import DocLinkBox from '@kisskissbankbank/kitten/src/components/box/doc-link-box'
+    import { DocLinkBox } from '@kisskissbankbank/kitten/src/components/box/doc-link-box'
     ~~~
 
     ## Usage
