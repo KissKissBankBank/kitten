@@ -144,31 +144,33 @@ export const StyledCarouselContainer = styled.div`
   }
 
   &.k-Carousel.k-LegacyCarousel {
-    /* always displayed in smaller than desktop */
-    &.k-LegacyCarousel--noGrid .k-Carousel__inner {
-      padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
-      scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-
-      &::after {
-        content: '';
-        display: block;
-        flex-shrink: 0;
-        width: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-      }
-
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        padding: 0 ${pxToRem(CONTAINER_PADDING)};
-        scroll-padding: ${pxToRem(CONTAINER_PADDING)};
+    @media (max-width: ${ScreenConfig.M.max}px) {
+      .k-Carousel__inner {
+        padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
+        scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
 
         &::after {
-          width: ${pxToRem(CONTAINER_PADDING)};
+          content: '';
+          display: block;
+          flex-shrink: 0;
+          width: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+        }
+
+        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+          padding: 0 ${pxToRem(CONTAINER_PADDING)};
+          scroll-padding: ${pxToRem(CONTAINER_PADDING)};
+
+          &::after {
+            width: ${pxToRem(CONTAINER_PADDING)};
+          }
         }
       }
     }
 
-    /* always displayed in desktop */
-    &.k-LegacyCarousel--inGrid .k-Carousel__pagination__buttonContainer {
-      flex-direction: column-reverse !important;
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      .k-Carousel__pagination__buttonContainer {
+        flex-direction: column-reverse !important;
+      }
     }
   }
 

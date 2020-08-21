@@ -309,7 +309,6 @@ class CarouselBase extends Component {
       data,
       renderItem,
       withoutLeftOffset,
-      viewportIsMOrLess,
       baseItemMarginBetween,
       children,
       className,
@@ -327,42 +326,24 @@ class CarouselBase extends Component {
       numPages: this.state.numPages,
     }
 
+    // legacy mode
     if (!!data && !!renderItem) {
-      if (viewportIsMOrLess) {
-        return (
-          <StyledCarouselContainer
-            {...commonProps}
-            className={classNames(
-              'k-Carousel',
-              className,
-              'k-LegacyCarousel',
-              'k-LegacyCarousel--noGrid',
-            )}
-          >
-            {this.renderCarouselInner()}
-            {this.renderPagination()}
-          </StyledCarouselContainer>
-        )
-      }
-
       return (
         <StyledCarouselContainer
           {...commonProps}
-          className={classNames(
-            'k-Carousel',
-            className,
-            'k-LegacyCarousel',
-            'k-LegacyCarousel--inGrid',
-          )}
+          className={classNames('k-Carousel', className, 'k-LegacyCarousel')}
         >
           <Grid>
             <GridCol
-              col={withoutLeftOffset ? '11' : '10'}
-              offset={withoutLeftOffset ? '0' : '1'}
+              col="12"
+              col-l={withoutLeftOffset ? '11' : '10'}
+              offset-l={withoutLeftOffset ? '0' : '1'}
             >
               {this.renderCarouselInner()}
             </GridCol>
-            <GridCol col="1">{this.renderPagination()}</GridCol>
+            <GridCol col="12" col-l="1">
+              {this.renderPagination()}
+            </GridCol>
           </Grid>
         </StyledCarouselContainer>
       )
