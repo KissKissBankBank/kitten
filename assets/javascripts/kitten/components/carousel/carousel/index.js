@@ -1,23 +1,20 @@
 import React, { Component } from 'react'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
-import { pxToRem } from '../../../helpers/utils/typography'
-import { ScreenConfig } from '../../../constants/screen-config'
 import { createRangeFromZeroTo } from '../../../helpers/utils/range'
 import { withMediaQueries } from '../../../hoc/media-queries'
 import {
   CONTAINER_PADDING,
   CONTAINER_PADDING_MOBILE,
-  GUTTER,
 } from '../../../constants/grid-config'
-import ColorsConfig from '../../../constants/colors-config'
 import { Button } from '../../../components/buttons/button/button'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { CarouselInner } from './components/carousel-inner'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
 import classNames from 'classnames'
 import { Grid, GridCol } from '../../../components/grid/grid'
+
+import { StyledCarouselContainer } from './styles'
 
 const getDataLength = ({ data, children }) => {
   if (!!data) return data.length
@@ -78,81 +75,7 @@ const getMarginBetweenAccordingToViewport = (
   return baseItemMarginBetween
 }
 
-const propTypesPositions = PropTypes.oneOf([
-  'top',
-  'right',
-  'bottom',
-  'left',
-  'bottom-left',
-  'bottom-right',
-])
-
 class CarouselBase extends Component {
-  static defaultProps = {
-    colNumber: 0,
-    hidePaginationOnMobile: false,
-    hidePagination: false,
-    showOtherPages: false,
-    pagesClassName: null,
-    preferCompletePaginationOnMobile: false,
-    paginationPosition: {
-      default: 'right',
-      fromM: 'bottom',
-    },
-    prevButtonText: 'Previous items',
-    nextButtonText: 'Next items',
-    firstButtonText: 'First items',
-    lastButtonText: 'Last items',
-    showPageSquares: false,
-    tinyButtons: false,
-    loop: false,
-    exportVisibilityProps: false,
-  }
-
-  static propTypes = {
-    itemMinWidth: PropTypes.number.isRequired,
-    colNumber: PropTypes.number,
-    baseItemMarginBetween: PropTypes.number.isRequired,
-    children: PropTypes.node,
-    viewportIsMOrLess: PropTypes.bool.isRequired,
-    viewportIsXSOrLess: PropTypes.bool.isRequired,
-    hidePaginationOnMobile: PropTypes.bool,
-    hidePagination: PropTypes.bool,
-    showOtherPages: PropTypes.bool,
-    pagesClassName: PropTypes.string,
-    preferCompletePaginationOnMobile: PropTypes.bool,
-    paginationPosition: PropTypes.shape({
-      default: propTypesPositions,
-      fromXxs: propTypesPositions,
-      fromXs: propTypesPositions,
-      fromS: propTypesPositions,
-      fromM: propTypesPositions,
-      fromL: propTypesPositions,
-      fromXl: propTypesPositions,
-    }),
-    prevButtonText: PropTypes.string,
-    nextButtonText: PropTypes.string,
-    tinyButtons: PropTypes.bool,
-    firstButtonText: PropTypes.string,
-    lastButtonText: PropTypes.string,
-    showPageSquares: PropTypes.bool,
-    loop: PropTypes.bool,
-    exportVisibilityProps: PropTypes.bool,
-
-    data: deprecated(
-      PropTypes.array,
-      'Provide `Carousel` with children instead of data/renderItem',
-    ),
-    renderItem: deprecated(
-      PropTypes.func,
-      'Provide `Carousel` with children instead of data/renderItem',
-    ),
-    withoutLeftOffset: deprecated(
-      PropTypes.bool,
-      'Provide `Carousel` with children instead of data/renderItem',
-    ),
-  }
-
   state = {
     indexPageVisible: 0,
     numColumns: 3,
@@ -247,7 +170,6 @@ class CarouselBase extends Component {
       baseItemMarginBetween,
       viewportIsXSOrLess,
       viewportIsMOrLess,
-      showOtherPages,
       pagesClassName,
       exportVisibilityProps,
     } = this.props
@@ -273,7 +195,6 @@ class CarouselBase extends Component {
         itemMarginBetween={itemMarginBetween}
         onResizeInner={this.onResizeInner}
         goToPage={this.goToPage}
-        showOtherPages={showOtherPages}
         pagesClassName={pagesClassName}
         viewedPages={this.viewedPages}
         exportVisibilityProps={exportVisibilityProps}
@@ -283,12 +204,9 @@ class CarouselBase extends Component {
 
   renderPagination = () => {
     const {
-      baseItemMarginBetween,
-      viewportIsMOrLess,
       viewportIsXSOrLess,
       hidePagination,
       hidePaginationOnMobile,
-      paginationPosition,
       prevButtonText,
       nextButtonText,
       tinyButtons,
@@ -299,11 +217,6 @@ class CarouselBase extends Component {
       loop,
     } = this.props
     const { indexPageVisible, numPages } = this.state
-    const itemMarginBetween = getMarginBetweenAccordingToViewport(
-      baseItemMarginBetween,
-      viewportIsXSOrLess,
-      viewportIsMOrLess,
-    )
 
     if (hidePagination) return
     if (viewportIsXSOrLess && hidePaginationOnMobile) return
@@ -313,40 +226,32 @@ class CarouselBase extends Component {
       const rangePage = createRangeFromZeroTo(numPages)
 
       return (
-        <PageControl className="k-Carousel__pageControl">
+        <div className="k-Carousel__pageControl">
           {rangePage.map(index => (
-            <PageDot
-              className="k-Carousel__pageControl__pageDot"
-              index={index}
-              key={index}
-              visibleIndex={indexPageVisible}
+            <div
+              className={classNames('k-Carousel__pageControl__pageDot', {
+                'k-Carousel__pageControl__pageDot--isVisible':
+                  visibleIndex === index,
+              })}
+              key={`pageDotIndex_${index}`}
             />
           ))}
-          <PageControlButton
-            prev
+          <div
             onClick={this.goPrevPage}
-            className="k-Carousel__pageControl__controlButton"
+            className="k-Carousel__pageControl__controlButton k-Carousel__pageControl__controlButton--prev"
           />
-          <PageControlButton
-            next
+          <div
             onClick={this.goNextPage}
-            className="k-Carousel__pageControl__controlButton"
+            className="k-Carousel__pageControl__controlButton k-Carousel__pageControl__controlButton--next"
           />
-        </PageControl>
+        </div>
       )
     }
 
     return (
-      <CarouselPagination
-        position={paginationPosition}
-        itemMarginBetween={itemMarginBetween}
-        className="k-Carousel__pagination"
-      >
-        <PaginationButtons
-          position={paginationPosition}
-          className="k-Carousel__pagination__buttonContainer"
-        >
-          <PageButton
+      <div className="k-Carousel__pagination">
+        <div className="k-Carousel__pagination__buttonContainer">
+          <Button
             className="k-Carousel__pagination__button"
             icon
             modifier="beryllium"
@@ -360,9 +265,9 @@ class CarouselBase extends Component {
                 : prevButtonText}
             </VisuallyHidden>
             <ArrowIcon version="solid" direction="left" aria-hidden />
-          </PageButton>
+          </Button>
 
-          <PageButton
+          <Button
             className="k-Carousel__pagination__button"
             icon
             modifier="beryllium"
@@ -376,21 +281,23 @@ class CarouselBase extends Component {
                 : nextButtonText}
             </VisuallyHidden>
             <ArrowIcon version="solid" direction="right" aria-hidden />
-          </PageButton>
-        </PaginationButtons>
+          </Button>
+        </div>
 
         {showPageSquares && (
-          <PaginationSquares className="k-Carousel__pagination__squaresContainer">
+          <div className="k-Carousel__pagination__squaresContainer">
             {createRangeFromZeroTo(numPages).map(index => (
-              <PageSquare
+              <div
                 key={index}
-                isActive={index === indexPageVisible}
-                className="k-Carousel__pagination__square"
+                className={classNames('k-Carousel__pagination__square', {
+                  'k-Carousel__pagination__square--isActive':
+                    index === indexPageVisible,
+                })}
               />
             ))}
-          </PaginationSquares>
+          </div>
         )}
-      </CarouselPagination>
+      </div>
     )
   }
 
@@ -400,9 +307,10 @@ class CarouselBase extends Component {
       renderItem,
       withoutLeftOffset,
       viewportIsMOrLess,
-      paginationPosition,
       children,
       className,
+      paginationPosition,
+      showOtherPages,
     } = this.props
 
     if (getDataLength({ data, children }) === 0) return null
@@ -410,7 +318,7 @@ class CarouselBase extends Component {
     if (!!data && !!renderItem) {
       if (viewportIsMOrLess) {
         return (
-          <StyledLegacyCarousel
+          <StyledCarouselContainer
             className={classNames(
               'k-Carousel',
               className,
@@ -420,12 +328,12 @@ class CarouselBase extends Component {
           >
             {this.renderCarouselInner()}
             {this.renderPagination()}
-          </StyledLegacyCarousel>
+          </StyledCarouselContainer>
         )
       }
 
       return (
-        <StyledLegacyCarousel
+        <StyledCarouselContainer
           className={classNames(
             'k-Carousel',
             className,
@@ -442,313 +350,97 @@ class CarouselBase extends Component {
             </GridCol>
             <GridCol col="1">{this.renderPagination()}</GridCol>
           </Grid>
-        </StyledLegacyCarousel>
+        </StyledCarouselContainer>
       )
     }
 
     return (
-      <FlexContainer
+      <StyledCarouselContainer
         paginationPosition={paginationPosition}
-        className={classNames('k-Carousel', className)}
+        className={classNames('k-Carousel', className, {
+          'k-Carousel--showOtherPages': showOtherPages,
+        })}
       >
         {this.renderCarouselInner()}
         {this.renderPagination()}
-      </FlexContainer>
+      </StyledCarouselContainer>
     )
   }
 }
 
-const StyledLegacyCarousel = styled.div`
-  // always displayed in smaller than desktop
-  &.k-LegacyCarousel--noGrid .k-Carousel__inner {
-    padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
-    scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-
-    &::after {
-      content: '';
-      display: block;
-      flex-shrink: 0;
-      width: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-    }
-
-    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding: 0 ${pxToRem(CONTAINER_PADDING)};
-      scroll-padding: ${pxToRem(CONTAINER_PADDING)};
-
-      &::after {
-        width: ${pxToRem(CONTAINER_PADDING)};
-      }
-    }
-  }
-
-  // always displayed in desktop
-  &.k-LegacyCarousel--inGrid .k-Carousel__pagination__buttonContainer {
-    flex-direction: column-reverse !important;
-  }
-`
-
-const flexContainerdirectionStyle = positionType => ({
-  paginationPosition,
-}) => {
-  if (!paginationPosition[positionType]) return
-
-  switch (paginationPosition[positionType]) {
-    case 'top':
-      return css`
-        flex-direction: column-reverse;
-
-        & > :nth-child(2) {
-          margin: 0;
-          margin-bottom: ${pxToRem(GUTTER)};
-        }
-      `
-    case 'bottom':
-    case 'bottom-left':
-    case 'bottom-right':
-      return css`
-        flex-direction: column;
-
-        & > :nth-child(2) {
-          margin: 0;
-          margin-top: ${pxToRem(GUTTER)};
-        }
-      `
-    case 'left':
-      return css`
-        flex-direction: row-reverse;
-
-        & > :nth-child(2) {
-          margin: 0;
-          margin-right: ${pxToRem(GUTTER)};
-        }
-      `
-    case 'right':
-      return css`
-        flex-direction: row;
-
-        & > :nth-child(2) {
-          margin: 0;
-          margin-left: ${pxToRem(GUTTER)};
-        }
-      `
-  }
+CarouselBase.defaultProps = {
+  colNumber: 0,
+  hidePaginationOnMobile: false,
+  hidePagination: false,
+  showOtherPages: false,
+  pagesClassName: null,
+  preferCompletePaginationOnMobile: false,
+  paginationPosition: {
+    default: 'right',
+    fromM: 'bottom',
+  },
+  prevButtonText: 'Previous items',
+  nextButtonText: 'Next items',
+  firstButtonText: 'First items',
+  lastButtonText: 'Last items',
+  showPageSquares: false,
+  tinyButtons: false,
+  loop: false,
+  exportVisibilityProps: false,
 }
 
-const FlexContainer = styled.div`
-  display: flex;
-  ${flexContainerdirectionStyle('default')}
+CarouselBase.propTypes = {
+  itemMinWidth: PropTypes.number.isRequired,
+  colNumber: PropTypes.number,
+  baseItemMarginBetween: PropTypes.number.isRequired,
+  children: PropTypes.node,
+  viewportIsMOrLess: PropTypes.bool.isRequired,
+  viewportIsXSOrLess: PropTypes.bool.isRequired,
+  hidePaginationOnMobile: PropTypes.bool,
+  hidePagination: PropTypes.bool,
+  showOtherPages: PropTypes.bool,
+  pagesClassName: PropTypes.string,
+  preferCompletePaginationOnMobile: PropTypes.bool,
+  paginationPosition: PropTypes.shape({
+    default: positionsPropTypes,
+    fromXxs: positionsPropTypes,
+    fromXs: positionsPropTypes,
+    fromS: positionsPropTypes,
+    fromM: positionsPropTypes,
+    fromL: positionsPropTypes,
+    fromXl: positionsPropTypes,
+  }),
+  prevButtonText: PropTypes.string,
+  nextButtonText: PropTypes.string,
+  tinyButtons: PropTypes.bool,
+  firstButtonText: PropTypes.string,
+  lastButtonText: PropTypes.string,
+  showPageSquares: PropTypes.bool,
+  loop: PropTypes.bool,
+  exportVisibilityProps: PropTypes.bool,
 
-  @media (min-width: ${ScreenConfig.XXS.min}px) {
-    ${flexContainerdirectionStyle('fromXxs')}
-  }
-
-  @media (min-width: ${ScreenConfig.XS.min}px) {
-    ${flexContainerdirectionStyle('fromXs')}
-  }
-
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    ${flexContainerdirectionStyle('fromS')}
-  }
-
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    ${flexContainerdirectionStyle('fromM')}
-  }
-
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    ${flexContainerdirectionStyle('fromL')}
-  }
-
-  @media (min-width: ${ScreenConfig.XL.min}px) {
-    ${flexContainerdirectionStyle('fromXl')}
-  }
-`
-
-const paginationPositionStyle = positionType => ({ position }) => {
-  if (!position[positionType]) return
-
-  switch (position[positionType]) {
-    case 'top':
-      return css`
-        align-items: flex-end;
-        flex-direction: row;
-      `
-    case 'bottom':
-    case 'bottom-left':
-      return css`
-        align-items: flex-start;
-        flex-direction: row;
-      `
-    case 'bottom-right':
-      return css`
-        align-items: flex-start;
-        flex-direction: row-reverse;
-      `
-    case 'left':
-      return css`
-        align-items: flex-end;
-        flex-direction: column;
-      `
-    case 'right':
-      return css`
-        align-items: flex-start;
-        flex-direction: column;
-      `
-  }
+  data: deprecated(
+    PropTypes.array,
+    'Provide `Carousel` with children instead of data/renderItem',
+  ),
+  renderItem: deprecated(
+    PropTypes.func,
+    'Provide `Carousel` with children instead of data/renderItem',
+  ),
+  withoutLeftOffset: deprecated(
+    PropTypes.bool,
+    'Provide `Carousel` with children instead of data/renderItem',
+  ),
 }
 
-const CarouselPagination = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  ${paginationPositionStyle('default')}
-
-  @media (min-width: ${ScreenConfig.XXS.min}px) {
-    ${paginationPositionStyle('fromXxs')}
-  }
-
-  @media (min-width: ${ScreenConfig.XS.min}px) {
-    ${paginationPositionStyle('fromXs')}
-  }
-
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    ${paginationPositionStyle('fromS')}
-  }
-
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    ${paginationPositionStyle('fromM')}
-  }
-
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    ${paginationPositionStyle('fromL')}
-  }
-
-  @media (min-width: ${ScreenConfig.XL.min}px) {
-    ${paginationPositionStyle('fromXl')}
-  }
-`
-
-const PaginationSquares = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: ${pxToRem(-2)};
-`
-
-const PageSquare = styled.span`
-  display: inline-block;
-  width: ${pxToRem(6)};
-  height: ${pxToRem(6)};
-  margin: ${pxToRem(2)};
-  background-color: ${ColorsConfig.font2};
-
-  ${({ isActive }) =>
-    isActive &&
-    css`
-      background-color: ${ColorsConfig.font1};
-    `}
-`
-
-const buttonsPositionStyle = positionType => ({ position }) => {
-  if (!position[positionType]) return
-
-  switch (position[positionType]) {
-    case 'top':
-    case 'bottom':
-    case 'bottom-left':
-    case 'bottom-right':
-      return css`
-        flex-direction: row;
-      `
-    case 'left':
-      return css`
-        flex-direction: column;
-      `
-    case 'right':
-      return css`
-        flex-direction: column-reverse;
-      `
-  }
-}
-
-const PaginationButtons = styled.div`
-  display: flex;
-  align-items: flex-start;
-  margin: ${pxToRem(-1)};
-
-  ${buttonsPositionStyle('default')}
-
-  @media (min-width: ${ScreenConfig.XXS.min}px) {
-    ${buttonsPositionStyle('fromXxs')}
-  }
-
-  @media (min-width: ${ScreenConfig.XS.min}px) {
-    ${buttonsPositionStyle('fromXs')}
-  }
-
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    ${buttonsPositionStyle('fromS')}
-  }
-
-  @media (min-width: ${ScreenConfig.M.min}px) {
-    ${buttonsPositionStyle('fromM')}
-  }
-
-  @media (min-width: ${ScreenConfig.L.min}px) {
-    ${buttonsPositionStyle('fromL')}
-  }
-
-  @media (min-width: ${ScreenConfig.XL.min}px) {
-    ${buttonsPositionStyle('fromXl')}
-  }
-`
-
-const PageButton = styled(Button)`
-  margin: ${pxToRem(1)};
-`
-
-const PageControl = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: relative;
-  padding-top: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
-  padding-bottom: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
-`
-
-const PageControlButton = styled.div`
-  position: absolute;
-  top: ${pxToRem(CONTAINER_PADDING_MOBILE / 4)};
-  bottom: ${pxToRem(CONTAINER_PADDING_MOBILE / 4)};
-  -webkit-tap-highlight-color: transparent;
-
-  ${({ prev }) =>
-    prev &&
-    css`
-      left: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-      right: 50%;
-    `}
-
-  ${({ next }) =>
-    next &&
-    css`
-      right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-      left: 50%;
-    `}
-`
-
-const PageDot = styled.div`
-  width: ${pxToRem(8)};
-  height: ${pxToRem(8)};
-  margin-left: ${pxToRem(4)};
-  margin-right: ${pxToRem(4)};
-  border-radius: ${pxToRem(4)};
-  background-color: ${ColorsConfig.font1};
-
-  ${({ visibleIndex, index }) =>
-    visibleIndex === index &&
-    css`
-      background-color: ${ColorsConfig.primary2};
-    `}
-`
+const positionsPropTypes = PropTypes.oneOf([
+  'top',
+  'right',
+  'bottom',
+  'left',
+  'bottom-left',
+  'bottom-right',
+])
 
 export const Carousel = withMediaQueries({
   viewportIsXSOrLess: true,
