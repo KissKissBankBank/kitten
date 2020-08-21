@@ -363,4 +363,48 @@ export const StyledCarouselContainer = styled.div`
   }
 
 
+  // Carousel Item
+
+  .k-Carousel__page {
+    display: flex;
+    flex-direction: row;
+
+    .k-Carousel__page__item{
+      flex-shrink: 1;
+      flex-grow: 1;
+
+      ${({ numColumns, baseItemMarginBetween }) => css`
+        width: calc(
+          (100% - ${(numColumns - 1) * (CONTAINER_PADDING_MOBILE / 2)}px) /
+            ${numColumns}
+        );
+
+        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+          width: calc(
+            (100% - ${(numColumns - 1) * (CONTAINER_PADDING / 2)}px) /
+              ${numColumns}
+          );
+        }
+
+        @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+          width: calc(
+            (100% - ${(numColumns - 1) * baseItemMarginBetween}px) /
+              ${numColumns}
+          );
+        }
+      `}
+
+    &:not(:first-child) {
+      margin-left: ${pxToRem(CONTAINER_PADDING_MOBILE / 2)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        margin-left: ${pxToRem(CONTAINER_PADDING / 2)};
+      }
+
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        margin-left: ${({ baseItemMarginBetween }) =>
+          pxToRem(baseItemMarginBetween)};
+      }
+    }
+  }
 `

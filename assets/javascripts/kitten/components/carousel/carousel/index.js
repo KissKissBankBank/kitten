@@ -78,7 +78,7 @@ const getMarginBetweenAccordingToViewport = (
 class CarouselBase extends Component {
   state = {
     indexPageVisible: 0,
-    numColumns: 3,
+    numColumns: this.props.colNumber > 0 ? this.props.colNumber : 3,
     numPages: getNumPagesForColumnsAndDataLength(
       getDataLength({ data: this.props.data, children: this.props.children }),
       3,
@@ -312,15 +312,22 @@ class CarouselBase extends Component {
       className,
       paginationPosition,
       showOtherPages,
+      itemMinWidth,
     } = this.props
 
     if (getDataLength({ data, children }) === 0) return null
+
+    const commonProps = {
+      itemMinWidth: itemMinWidth,
+      numColumns: this.state.numColumns,
+      baseItemMarginBetween: baseItemMarginBetween,
+    }
 
     if (!!data && !!renderItem) {
       if (viewportIsMOrLess) {
         return (
           <StyledCarouselContainer
-            baseItemMarginBetween={baseItemMarginBetween}
+            {...commonProps}
             className={classNames(
               'k-Carousel',
               className,
@@ -336,7 +343,7 @@ class CarouselBase extends Component {
 
       return (
         <StyledCarouselContainer
-          baseItemMarginBetween={baseItemMarginBetween}
+          {...commonProps}
           className={classNames(
             'k-Carousel',
             className,
@@ -359,7 +366,7 @@ class CarouselBase extends Component {
 
     return (
       <StyledCarouselContainer
-        baseItemMarginBetween={baseItemMarginBetween}
+        {...commonProps}
         paginationPosition={paginationPosition}
         className={classNames('k-Carousel', className, {
           'k-Carousel--showOtherPages': showOtherPages,
