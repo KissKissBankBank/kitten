@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
 import { domElementHelper } from '../../../../helpers/dom/element-helper'
-
-if (typeof window !== 'undefined') {
-  require('smoothscroll-polyfill').polyfill()
-}
-
-import { createRangeFromZeroTo } from '../../../../helpers/utils/range'
 import { CarouselPage } from './carousel-page'
 import classNames from 'classnames'
+
+if (domElementHelper.canUseDom()) {
+  require('smoothscroll-polyfill').polyfill()
+}
 
 // inspired by https://github.com/cferdinandi/scrollStop
 const scrollStop = callback => {
@@ -141,21 +139,16 @@ export class CarouselInner extends Component {
 
   render() {
     const {
-      legacyMode,
       data,
-      itemMinWidth,
-      renderItem,
+      exportVisibilityProps,
       indexPageVisible,
+      legacyMode,
       numColumns,
       numPages,
-      itemMarginBetween,
       pagesClassName,
+      renderItem,
       viewedPages,
-      exportVisibilityProps,
-      specificColNumber,
     } = this.props
-
-    const rangePage = createRangeFromZeroTo(numPages)
 
     return (
       <div
@@ -165,7 +158,7 @@ export class CarouselInner extends Component {
         onTouchEnd={this.handleTouchEnd}
         className="k-Carousel__inner"
       >
-        {rangePage.map(index => {
+        {[...Array(numPages).keys()].map(index => {
           const isActivePage = indexPageVisible === index
           const hasPageBeenViewed = viewedPages.has(index)
 
@@ -183,22 +176,19 @@ export class CarouselInner extends Component {
               )}
             >
               <CarouselPage
-                legacyMode={legacyMode}
                 data={
                   legacyMode ? getDataForPage(data, index, numColumns) : null
                 }
+                exportVisibilityProps={exportVisibilityProps}
+                hasPageBeenViewed={hasPageBeenViewed}
+                isActivePage={isActivePage}
+                legacyMode={legacyMode}
                 numColumns={numColumns}
-                itemMinWidth={itemMinWidth}
-                specificColNumber={specificColNumber}
-                itemMarginBetween={itemMarginBetween}
                 renderItem={
                   legacyMode
                     ? renderItem
                     : getDataForPage(renderItem, index, numColumns)
                 }
-                isActivePage={isActivePage}
-                hasPageBeenViewed={hasPageBeenViewed}
-                exportVisibilityProps={exportVisibilityProps}
               />
             </div>
           )
