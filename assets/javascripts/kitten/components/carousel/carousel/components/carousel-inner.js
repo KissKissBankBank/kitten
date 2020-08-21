@@ -114,6 +114,9 @@ export const CarouselInner = ({
 
   const scrollToPage = indexPageToScroll => {
     const target = carouselInner.current
+
+    if (!target) return null
+
     const { scrollLeft, clientWidth } = target
 
     const rangePageScrollLeft = getRangePageScrollLeft(

@@ -27,7 +27,7 @@ export const getNumberOfItemsPerPageForWidth = (
   itemMarginBetween,
   itemsPerPage,
 ) => {
-  if (itemsPerPage > 0 && itemMinWidth === 0) return itemsPerPage
+  if (!!itemsPerPage && itemMinWidth === 0) return itemsPerPage
 
   if (width === 0 || itemMinWidth === 0) return 0
 
