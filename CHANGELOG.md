@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix deprecated warning on DocLinkBox component.
+## [2.87.1] - 2020-08-21
+
+Fix:
+- Fix deprecated warning on DocLinkBox component.
 
 ## [2.87.0] - 2020-08-18
 
