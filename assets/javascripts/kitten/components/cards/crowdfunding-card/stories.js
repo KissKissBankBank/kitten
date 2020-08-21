@@ -1,12 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  withKnobs,
-  text,
-  boolean,
-  number,
-  select,
-} from '@storybook/addon-knobs'
+import { text, boolean, number, select } from '@storybook/addon-knobs'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
@@ -55,7 +49,6 @@ const WidgetContainerState = () => (
 export default {
   component: CrowdfundingCard,
   title: 'Cards/CrowdfundingCard',
-  decorators: [withKnobs],
   parameters: {
     component: CrowdfundingCard,
     componentSubtitle:
@@ -84,6 +77,44 @@ export const CrowdfundingCard = () => (
       info3={text('Info3', 'Lorem ipsum…')}
       progress={number('Progress', 42)}
       state={text('State', 'Lorem ipsum…')}
+    />
+  </StoryContainer>
+)
+
+export const CrowdfundingCardWithVideo = () => (
+  <StoryContainer>
+    <CrowdfundingCardComponent
+      href={text('Link', '#')}
+      ownerTitle={text('Owner title', 'Owner title')}
+      ownerDescription={text('Owner description', 'Owner description')}
+      loading={boolean('Loading', false)}
+      stretch={boolean('Stretch', false)}
+      cardTitle={text(
+        'Title',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do',
+      )}
+      cardSubTitle={text(
+        'SubTitle',
+        'Sed ut perspiciatis unde omnis iste natus error Lorem',
+      )}
+      info1={text('Info1', 'Lorem ipsum…')}
+      info2={text('Info2', 'Lorem ipsum…')}
+      info3={text('Info3', 'Lorem ipsum…')}
+      progress={number('Progress', 42)}
+      state={text('State', 'Lorem ipsum…')}
+      videoProps={{ className: 'videoClass' }}
+      videoSources={[
+        {
+          src:
+            'https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm',
+          type: 'video/webm',
+        },
+        {
+          src:
+            'https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4',
+          type: 'video/mp4',
+        },
+      ]}
     />
   </StoryContainer>
 )

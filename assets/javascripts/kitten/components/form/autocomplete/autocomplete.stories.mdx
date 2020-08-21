@@ -1,0 +1,47 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './autocomplete.stories.js'
+import { Autocomplete } from './index'
+
+<Meta title="Form/Autocomplete" component={Autocomplete} />
+
+# Autocomplete
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+## With Icon
+
+<Canvas>
+  <Story name="WithIcon" story={stories.WithIcon} />
+</Canvas>
+
+## Import
+
+```js
+import { Autocomplete } from '@kisskissbankbank/kitten/src/components/form/autocomplete'
+```
+
+## Usage
+
+#### Default
+
+```js
+<Autocomplete
+  id=""
+  name=""
+  placeholder=""
+  …
+  items={ ['foo', 'bar'] }
+/>
+```
+
+## Props
+
+- **updateSuggestionsStrategy**: define custom filter strategy of items
+
+```js
+  updateSuggestionsStrategy={({ items, value }) =>
+    items.filter(item => item.startsWith(value))
+  }
+```

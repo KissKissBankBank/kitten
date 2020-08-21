@@ -33,6 +33,8 @@ var CrowdfundingCardWidget = function CrowdfundingCardWidget(_ref) {
   var href = _ref.href,
       imageContainerBackground = _ref.imageContainerBackground,
       imageProps = _ref.imageProps,
+      videoProps = _ref.videoProps,
+      videoSources = _ref.videoSources,
       avatarProps = _ref.avatarProps,
       ownerDescription = _ref.ownerDescription,
       ownerTitle = _ref.ownerTitle,
@@ -49,7 +51,7 @@ var CrowdfundingCardWidget = function CrowdfundingCardWidget(_ref) {
       buttonText = _ref.buttonText,
       className = _ref.className,
       imageContainerRatio = _ref.imageContainerRatio,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["href", "imageContainerBackground", "imageProps", "avatarProps", "ownerDescription", "ownerTitle", "loading", "stretch", "state", "subtitle", "title", "titleTruncate", "titlesMinHeight", "subTitleTruncate", "dayCounter", "titleProps", "buttonText", "className", "imageContainerRatio"]);
+      others = (0, _objectWithoutProperties2.default)(_ref, ["href", "imageContainerBackground", "imageProps", "videoProps", "videoSources", "avatarProps", "ownerDescription", "ownerTitle", "loading", "stretch", "state", "subtitle", "title", "titleTruncate", "titlesMinHeight", "subTitleTruncate", "dayCounter", "titleProps", "buttonText", "className", "imageContainerRatio"]);
 
   var removeCurrentFocus = function removeCurrentFocus() {
     document.activeElement.blur();
@@ -71,7 +73,9 @@ var CrowdfundingCardWidget = function CrowdfundingCardWidget(_ref) {
     imageContainerBackground: imageContainerBackground,
     imageProps: imageProps,
     avatarProps: avatarProps,
-    loading: loading
+    loading: loading,
+    videoProps: videoProps,
+    videoSources: videoSources
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "k-CrowdfundingCard__titleAndDesc k-CrowdfundingCard__paddedContainer"
   }, /*#__PURE__*/_react.default.createElement(_title.default, {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { DatePicker } from './index'
-import { storiesOf } from '@storybook/react'
-import { withKnobs, date, text, object, array } from '@storybook/addon-knobs'
+import { date, text, object, array } from '@storybook/addon-knobs'
 import { Container } from '../../components/grid/container'
 import { Marger } from '../../components/layout/marger'
 import COLORS from '../../constants/colors-config'
@@ -74,32 +73,36 @@ class CustomInput extends Component {
   }
 }
 
-storiesOf('Form/DatePicker', module)
-  .addDecorator(withKnobs)
-  .add('with default TextInputWithUnit', () => {
-    return (
-      <StoryContainer>
-        <DatePicker
-          selectedDay={date('default selected Date', today)}
-          locale="fr"
-          weekDays={array('Week days', weekDays)}
-          months={array('Months', months)}
-          previousMonth={text('Aria-label for previous month', 'Mois suivant')}
-          nextMonth={text('Aria-label for next month', 'Mois précédent')}
-          styles={object('Styles', styles)}
-        />
-      </StoryContainer>
-    )
-  })
-  .add('with custom input', () => {
-    return (
-      <StoryContainer>
-        <DatePicker
-          selectedDay={date('default selected Date', today)}
-          styles={object('Styles', styles)}
-        >
-          {CustomInput}
-        </DatePicker>
-      </StoryContainer>
-    )
-  })
+export default {
+  title: 'Form/DatePicker',
+  component: DatePicker,
+}
+
+export const WithTextInputWithUnit = () => {
+  return (
+    <StoryContainer>
+      <DatePicker
+        selectedDay={date('default selected Date', today)}
+        locale="fr"
+        weekDays={array('Week days', weekDays)}
+        months={array('Months', months)}
+        previousMonth={text('Aria-label for previous month', 'Mois suivant')}
+        nextMonth={text('Aria-label for next month', 'Mois précédent')}
+        styles={object('Styles', styles)}
+      />
+    </StoryContainer>
+  )
+}
+
+export const WithCustomInput = () => {
+  return (
+    <StoryContainer>
+      <DatePicker
+        selectedDay={date('default selected Date', today)}
+        styles={object('Styles', styles)}
+      >
+        {CustomInput}
+      </DatePicker>
+    </StoryContainer>
+  )
+}

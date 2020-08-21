@@ -1,0 +1,106 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './button.stories.js'
+import { Button } from './button'
+
+<Meta title="Buttons/Button" component={Button} />
+
+# Buttons
+
+## Import
+
+```js
+import { Button } from '@kisskissbankbank/kitten/src/components/buttons/button/button'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="WithText" story={stories.WithText} />
+</Canvas>
+
+#### Default
+
+```js
+<Button>MyButton</Button>
+```
+
+#### Size
+
+```js
+<Button tiny>MyButton</Button>
+<Button big>MyButton</Button>
+<Button huge>MyButton</Button>
+<Button giant>MyButton</Button>
+```
+
+#### Display
+
+```js
+<Button fluid>MyButton</Button>
+```
+
+#### With borderRadius
+
+```js
+<Button borderRadius={4}>
+  <MyButton />
+</Button>
+```
+
+#### Modifier
+
+```js
+<Button modifier="hydrogen">MyButton</Button>
+<Button modifier="helium">MyButton</Button>
+<Button modifier="lithium">MyButton</Button>
+<Button modifier="beryllium">MyButton</Button>
+<Button modifier="carbon">MyButton</Button>
+<Button modifier="oxygen">MyButton</Button>
+```
+
+#### Tag
+
+```js
+<Button as="a" href="#">MyButton</Button>
+<Button as="input" type="submit" value="MyButton" />
+```
+
+#### With some elements
+
+```js
+<Button>
+  <span>My</span>
+  <span>Button</span>
+</Button>
+```
+
+#### With text and icon
+
+<Canvas>
+  <Story name="WithTextAndIcon" story={stories.WithTextAndIcon} />
+</Canvas>
+
+```js
+<Button>
+  <MyIcon />
+  <span>MyButton</span>
+</Button>
+```
+
+#### With icon
+
+<Canvas>
+  <Story name="WithIcon" story={stories.WithIcon} />
+</Canvas>
+
+```js
+<Button icon>
+  <MyIcon />
+</Button>
+```
+
+#### With Badge
+
+<Canvas>
+  <Story name="WithBadge" story={stories.WithBadge} />
+</Canvas>

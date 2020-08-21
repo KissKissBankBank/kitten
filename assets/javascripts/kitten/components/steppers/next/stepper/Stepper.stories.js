@@ -1,12 +1,10 @@
 import React from 'react'
-import { withKnobs } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { Stepper, StepperLink, StepperItem } from './index'
 
 export default {
   component: Stepper,
   title: 'Next/Stepper',
-  decorators: [withKnobs],
   parameters: {
     component: Stepper,
     subcomponents: { 'Stepper.Item': StepperItem, 'Stepper.Link': StepperLink },

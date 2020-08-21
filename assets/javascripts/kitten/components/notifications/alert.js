@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
-import styled, { css, keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { CloseButton } from '../../components/buttons/close-button'
 import COLORS from '../../constants/colors-config'
 import TYPOGRAPHY from '../../constants/typography-config'
 import { ScreenConfig } from '../../constants/screen-config'
 import { pxToRem, stepToRem } from '../../helpers/utils/typography'
+import classNames from 'classnames'
 
 const fadeOut = keyframes`
   0% { opacity: 1; }
@@ -16,13 +17,23 @@ const AlertWrapper = styled.div`
   ${TYPOGRAPHY.fontStyles.light};
   position: relative;
   overflow: hidden;
-  padding: ${pxToRem(13)} ${pxToRem(20)};
-  font-size: ${stepToRem(-1)};
   background-color: ${COLORS.primary5};
   color: ${COLORS.primary1};
+  display: flex;
+  align-items: flex-start;
 
-  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-    text-align: center;
+  .k-Alert__text {
+    padding: ${pxToRem(13)} ${pxToRem(20)};
+    flex: 1 0 auto;
+    font-size: ${stepToRem(-1)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      text-align: center;
+    }
+  }
+
+  .k-Alert__button {
+    flex: 0 0 auto;
   }
 
   a {
@@ -31,36 +42,33 @@ const AlertWrapper = styled.div`
     text-decoration: underline;
   }
 
-  ${props =>
-    props.success &&
-    css`
-      color: ${COLORS.valid};
-      background-color: ${COLORS.tertiary1};
-    `}
-  ${props =>
-    props.error &&
-    css`
-      color: ${COLORS.error};
-      background-color: ${COLORS.error2};
-    `}
-  ${props =>
-    props.warning &&
-    css`
-      color: ${COLORS.warning};
-      background-color: ${COLORS.warning2};
-    `}
-  ${props =>
-    props.shouldHide &&
-    css`
-      pointer-events: none;
-      animation: ${fadeOut} 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
-    `}
-`
+  &.k-Alert--success {
+    color: ${COLORS.valid};
+    background-color: ${COLORS.tertiary1};
+  }
 
-const StyledCloseButton = styled(CloseButton)`
-  position: absolute;
-  top: 0;
-  right: 0;
+  &.k-Alert--error {
+    color: ${COLORS.error};
+    background-color: ${COLORS.error2};
+  }
+
+  &.k-Alert--warning {
+    color: ${COLORS.warning};
+    background-color: ${COLORS.warning2};
+  }
+
+  &.k-Alert--hasCloseButton {
+    .k-Alert__text {
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        margin-left: ${pxToRem(50)};
+      }
+    }
+  }
+
+  &.k-Alert--shouldHide {
+    pointer-events: none;
+    animation: ${fadeOut} 0.4s cubic-bezier(0.895, 0.03, 0.685, 0.22) forwards;
+  }
 `
 
 export const Alert = ({
@@ -77,6 +85,8 @@ export const Alert = ({
 }) => {
   const [isTrashed, trashIt] = useState(false)
   const [isMounted, setMounted] = useState(true)
+  const alertRef = useRef(null)
+
   useEffect(() => {
     let clearDelayBeforeTrash
     if (!isMounted) {
@@ -87,27 +97,30 @@ export const Alert = ({
     }
     return () => clearTimeout(clearDelayBeforeTrash)
   }, [isMounted])
-  const alertRef = useRef(null)
-  if (isTrashed || !show) {
-    return null
-  }
+
+  if (isTrashed || !show) return null
+
   return (
     <AlertWrapper
       ref={alertRef}
       role="alert"
-      success={success}
-      error={error}
-      warning={warning}
-      shouldHide={!isMounted}
-      className={className}
+      className={classNames('k-Alert', className, {
+        'k-Alert--success': success,
+        'k-Alert--error': error,
+        'k-Alert--warning': warning,
+        'k-Alert--hasCloseButton': closeButton,
+        'k-Alert--shouldHide': !isMounted,
+      })}
       {...others}
     >
       <>
-        {children}
+        <div className="k-Alert__text">{children}</div>
+
         {closeButton && (
-          <StyledCloseButton
+          <CloseButton
             modifier="carbon"
             closeButtonLabel={closeButtonLabel}
+            className="k-Alert__button"
             onClick={() => setMounted(false)}
           />
         )}

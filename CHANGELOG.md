@@ -6,6 +6,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: Fix deprecated warning on DocLinkBox component.
 
+## [2.87.0] - 2020-08-18
+
+Feature:
+- Add `Video` component to display videos on `RewardCard`.
+
+Fixes:
+- Add `key` to `CrowdfundingCard` video sources.
+- Remove console error from `Header` component `Centered`.
+
+## [2.86.0] - 2020-08-17
+
+Feature:
+- Add `videoProps` and `videoSources` to display videos on `CrowdfundingCard`.
+
+Fix:
+- Fix mobile display of `Alert` notification.
+
 ## [2.85.1] - 2020-08-14
 
 Fix:

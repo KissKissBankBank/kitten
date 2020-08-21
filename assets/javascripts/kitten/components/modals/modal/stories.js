@@ -1,6 +1,5 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
-import { withKnobs, text, boolean } from '@storybook/addon-knobs'
+import { text, boolean } from '@storybook/addon-knobs'
 import { Button } from '../../../components/buttons/button'
 import { Title } from '../../../components/typography/title'
 import { Paragraph } from '../../../components/typography/paragraph'
@@ -63,15 +62,18 @@ const StoryButton = ({ children }) => (
   <Button modifier="helium">{children}</Button>
 )
 
-storiesOf('Modals/Modal', module)
-  .addDecorator(withKnobs)
-  .add('default', () => (
-    <Marger top="2">
-      <Modal
-        closeButtonLabel="Fermer"
-        trigger={<StoryButton children={text('bouton', 'open')} />}
-        content={<StoryContent content={text('content', paragraphContainer)} />}
-        disableOutsideScroll={boolean('Disable outside scroll', false)}
-      />
-    </Marger>
-  ))
+export default {
+  title: 'Modals/Modal',
+  component: Modal,
+}
+
+export const Default = () => (
+  <Marger top="2">
+    <Modal
+      closeButtonLabel="Fermer"
+      trigger={<StoryButton children={text('bouton', 'open')} />}
+      content={<StoryContent content={text('content', paragraphContainer)} />}
+      disableOutsideScroll={boolean('Disable outside scroll', false)}
+    />
+  </Marger>
+)

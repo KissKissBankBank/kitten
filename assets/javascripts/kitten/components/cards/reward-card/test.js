@@ -125,6 +125,35 @@ describe('<RewardCard />', () => {
     })
   })
 
+  describe('with video', () => {
+    it('matches with snapshot', () => {
+      window.matchMedia = createMockMediaMatcher(false)
+      const component = renderer
+        .create(
+          <RewardCard>
+            <RewardCard.Row>
+              <RewardCard.RowContent>
+                <RewardCard.Title>Custom title mount</RewardCard.Title>
+
+                <Paragraph modifier="quaternary" margin={false}>
+                  Custom text description
+                </Paragraph>
+              </RewardCard.RowContent>
+
+              <RewardCard.RowSide>
+                <RewardCard.Video loop={false} cover="#image.jpg">
+                  <source type="video/mp4" src="#video.mp4" />
+                  <source type="video/webm" src="#video.webm" />
+                </RewardCard.Video>
+              </RewardCard.RowSide>
+            </RewardCard.Row>
+          </RewardCard>,
+        )
+        .toJSON()
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with DiamondBadge', () => {
     it('matches with snapshot', () => {
       window.matchMedia = createMockMediaMatcher(false)

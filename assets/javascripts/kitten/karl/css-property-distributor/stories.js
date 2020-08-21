@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react'
-import { storiesOf } from '@storybook/react'
 import styled, { css } from 'styled-components'
 import { cssPropertyDistributor } from '../../helpers/dom/css-property-distributor'
 import { Container } from '../../components/grid/container'
@@ -53,16 +52,23 @@ const ExampleComponent = ({ property, direction }) => {
   )
 }
 
-storiesOf('helpers/dom/cssPropertyDistributor', module)
-  .add('distributing max width', () => {
-    return <ExampleComponent property="width" direction="max" />
-  })
-  .add('distributing min width', () => {
-    return <ExampleComponent property="width" direction="min" />
-  })
-  .add('distributing max height', () => {
-    return <ExampleComponent property="height" direction="max" />
-  })
-  .add('distributing min height', () => {
-    return <ExampleComponent property="height" direction="min" />
-  })
+export default {
+  title: 'helpers/dom/cssPropertyDistributor',
+  component: cssPropertyDistributor,
+}
+
+export const DistributingMaxWidth = () => {
+  return <ExampleComponent property="width" direction="max" />
+}
+
+export const DistributingMinWidth = () => {
+  return <ExampleComponent property="width" direction="min" />
+}
+
+export const DistributingMaxHeight = () => {
+  return <ExampleComponent property="height" direction="max" />
+}
+
+export const DistributingMinHeight = () => {
+  return <ExampleComponent property="height" direction="min" />
+}

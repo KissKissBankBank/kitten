@@ -1,0 +1,31 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './bullet-list.stories.js'
+import { BulletList } from './index'
+
+<Meta title="List/BulletList" component={BulletList} />
+
+# BulletList
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+## Import
+
+```js
+import { BulletList } from '@kisskissbankbank/kitten/src/components/lists/bullet-list'
+```
+
+## Usage
+
+#### Default
+
+```js
+<BulletList items={[(key: '…'), (item: '…')]} />
+```
+
+#### With differents sizes
+
+```js
+<BulletList small large big huge />
+```

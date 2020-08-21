@@ -82,4 +82,42 @@ describe('<CrowdfundingCard />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('CrowdfundingCard with video props', () => {
+    beforeEach(() => {
+      window.matchMedia = createMockMediaMatcher(false)
+
+      component = renderer
+        .create(
+          <CrowdfundingCard
+            ownerTitle="Owner title"
+            ownerDescription="Owner description"
+            imageProps={{ src: '#image', alt: '' }}
+            avatarProps={{ src: '#image', alt: '' }}
+            videoProps={{
+              className: 'testClass',
+              loop: false,
+              muted: false,
+            }}
+            videoSources={[
+              { src: '#videoFile.mp4', type: 'video/mp4' },
+              { src: '#videoFile.webm', type: 'video/webm' },
+            ]}
+            state="Sur"
+            loading={false}
+            title="Lorem ipsum…"
+            subtitle="Sed ut perspiciatis unde omnis iste natus error Lorem"
+            titleTruncate
+            subTitleTruncate
+            buttonText="Lorem ipsum"
+            dayCounter={null}
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })

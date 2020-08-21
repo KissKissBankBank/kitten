@@ -1,0 +1,79 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './arrow-container.stories.js'
+import { ArrowContainer } from './index'
+
+<Meta title="Layout/ArrowContainer" component={ArrowContainer} />
+
+# ArrowContainer
+
+<Canvas>
+  <Story name="Example" story={stories.Default} />
+</Canvas>
+
+## Import
+
+```js
+import { ArrowContainer } from '@kisskissbankbank/kitten/src/components/layout/arrow-container'
+```
+
+## Usage
+
+#### Default
+
+```js
+<ArrowContainer>MyContent</ArrowContainer>
+```
+
+#### Color
+
+```js
+<ArrowContainer color="#ff0000">MyContent</ArrowContainer>
+```
+
+#### Size of arrow
+
+```js
+<ArrowContainer size={20}>MyContent</ArrowContainer>
+```
+
+#### Position of arrow (top/right/bottom/left)
+
+```js
+<ArrowContainer position="right">MyContent</ArrowContainer>
+```
+
+#### Distance
+
+```js
+<ArrowContainer distance={30}>MyContent</ArrowContainer>
+```
+
+#### Centered position (gives priority to distance prop)
+
+```js
+<ArrowContainer centered>MyContent</ArrowContainer>
+```
+
+#### Add a drop shadow on the box
+
+```js
+<ArrowContainer shadow>MyContent</ArrowContainer>
+```
+
+#### Add a border radius
+
+```js
+<ArrowContainer borderRadius={4}>MyContent</ArrowContainer>
+```
+
+#### Add a border color
+
+```js
+<ArrowContainer borderColor={COLORS.line1}>MyContent</ArrowContainer>
+```
+
+#### Add a border width
+
+```js
+<ArrowContainer borderWidth={2}>MyContent</ArrowContainer>
+```

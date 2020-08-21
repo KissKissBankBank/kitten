@@ -1,0 +1,57 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './document-manager.stories.js'
+import { DocumentManager } from './index'
+
+<Meta title="Box/DocumentManager" component={DocumentManager} />
+
+# DocumentManager
+
+## Import
+
+```js
+import { DocumentManager } from '@kisskissbankbank/kitten/src/components/uploaders/document-manager'
+```
+
+## Usage
+
+#### Default
+
+<Canvas>
+  <Story name="StatusReady" story={stories.StatusReady} />
+</Canvas>
+
+#### Status Valid
+
+<Canvas>
+  <Story name="StatusValid" story={stories.StatusValid} />
+</Canvas>
+
+#### Status Error
+
+<Canvas>
+  <Story name="StatusError" story={stories.StatusError} />
+</Canvas>
+
+#### Status Waiting
+
+<Canvas>
+  <Story name="StatusWaiting" story={stories.StatusWaiting} />
+</Canvas>
+
+#### Status Loading
+
+<Canvas>
+  <Story name="StatusLoading" story={stories.StatusLoading} />
+</Canvas>
+
+#### CustomFileInputProps
+
+<Canvas>
+  <Story name="CustomFileInputProps" story={stories.CustomFileInputProps} />
+</Canvas>
+
+#### CustomFunctions
+
+<Canvas>
+  <Story name="CustomFunctions" story={stories.CustomFunctions} />
+</Canvas>

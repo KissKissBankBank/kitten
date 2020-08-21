@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -13,17 +11,7 @@ var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends")
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -33,74 +21,72 @@ var _buttonImage = require("../../../../components/buttons/button-image");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+var _classnames = _interopRequireDefault(require("classnames"));
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-var Image = /*#__PURE__*/function (_PureComponent) {
-  (0, _inherits2.default)(Image, _PureComponent);
-
-  var _super = _createSuper(Image);
-
-  function Image() {
-    (0, _classCallCheck2.default)(this, Image);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(Image, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          imageContainerBackground = _this$props.imageContainerBackground,
-          _this$props$imageProp = _this$props.imageProps,
-          backgroundColor = _this$props$imageProp.backgroundColor,
-          alt = _this$props$imageProp.alt,
-          otherImageProps = (0, _objectWithoutProperties2.default)(_this$props$imageProp, ["backgroundColor", "alt"]),
-          avatarProps = _this$props.avatarProps,
-          ownerDescription = _this$props.ownerDescription,
-          ownerTitle = _this$props.ownerTitle,
-          loading = _this$props.loading;
-      return /*#__PURE__*/_react.default.createElement("div", {
-        className: "k-CrowdfundingCard__image"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "k-CrowdfundingCard__image__imageContainer",
-        style: {
-          backgroundColor: imageContainerBackground
-        }
-      }, !loading && /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, otherImageProps, {
-        alt: alt || '',
-        className: "k-Card__image",
-        style: {
-          backgroundColor: backgroundColor
-        }
-      }))), /*#__PURE__*/_react.default.createElement("div", {
-        className: "k-CrowdfundingCard__image__ownerContainer"
-      }, /*#__PURE__*/_react.default.createElement("div", {
-        className: "k-u-margin-top-single"
-      }, /*#__PURE__*/_react.default.createElement(_buttonImage.ButtonImage, {
-        className: "k-CrowdfundingCard__image__avatar",
-        tag: "span",
-        img: !loading ? avatarProps : null,
-        withoutPointerEvents: true
-      })), /*#__PURE__*/_react.default.createElement("div", {
-        className: "k-CrowdfundingCard__image__owner k-u-margin-top-single"
-      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
-        className: "k-CrowdfundingCard__image__title",
-        tag: "div",
-        size: "micro",
-        weight: "regular",
-        color: "font1"
-      }, !loading && ownerTitle), /*#__PURE__*/_react.default.createElement(_text.Text, {
-        className: "k-CrowdfundingCard__image__description",
-        tag: "div",
-        size: "micro",
-        weight: "light",
-        color: "font1"
-      }, !loading && ownerDescription))));
-    }
-  }]);
-  return Image;
-}(_react.PureComponent);
+var Image = function Image(_ref) {
+  var imageContainerBackground = _ref.imageContainerBackground,
+      _ref$imageProps = _ref.imageProps,
+      backgroundColor = _ref$imageProps.backgroundColor,
+      alt = _ref$imageProps.alt,
+      otherImageProps = (0, _objectWithoutProperties2.default)(_ref$imageProps, ["backgroundColor", "alt"]),
+      videoProps = _ref.videoProps,
+      videoSources = _ref.videoSources,
+      avatarProps = _ref.avatarProps,
+      ownerDescription = _ref.ownerDescription,
+      ownerTitle = _ref.ownerTitle,
+      loading = _ref.loading;
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-CrowdfundingCard__image"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-CrowdfundingCard__image__imageContainer",
+    style: imageContainerBackground ? {
+      backgroundColor: imageContainerBackground
+    } : null
+  }, !loading && videoSources.length == 0 && /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, otherImageProps, {
+    alt: alt || '',
+    className: (0, _classnames.default)('k-Card__image', 'k-CrowdfundingCard__image__image', otherImageProps.className),
+    style: backgroundColor ? (0, _extends2.default)({
+      backgroundColor: backgroundColor
+    }, otherImageProps.style) : otherImageProps.style
+  })), !loading && videoSources.length > 0 && /*#__PURE__*/_react.default.createElement("video", (0, _extends2.default)({
+    autoPlay: true,
+    loop: true,
+    muted: true,
+    poster: otherImageProps.src
+  }, videoProps, {
+    className: (0, _classnames.default)('k-Card__image', 'k-CrowdfundingCard__image__image', videoProps.className),
+    style: backgroundColor ? (0, _extends2.default)({
+      backgroundColor: backgroundColor
+    }, videoProps.style) : videoProps.style
+  }), videoSources.map(function (sourceProps) {
+    return /*#__PURE__*/_react.default.createElement("source", (0, _extends2.default)({
+      key: "video_source_".concat(sourceProps.src)
+    }, sourceProps));
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-CrowdfundingCard__image__ownerContainer"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-u-margin-top-single"
+  }, /*#__PURE__*/_react.default.createElement(_buttonImage.ButtonImage, {
+    className: "k-CrowdfundingCard__image__avatar",
+    tag: "span",
+    img: !loading ? avatarProps : null,
+    withoutPointerEvents: true
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-CrowdfundingCard__image__owner k-u-margin-top-single"
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
+    className: "k-CrowdfundingCard__image__title",
+    tag: "div",
+    size: "micro",
+    weight: "regular",
+    color: "font1"
+  }, !loading && ownerTitle), /*#__PURE__*/_react.default.createElement(_text.Text, {
+    className: "k-CrowdfundingCard__image__description",
+    tag: "div",
+    size: "micro",
+    weight: "light",
+    color: "font1"
+  }, !loading && ownerDescription))));
+};
 
 Image.propTypes = {
   imageProps: _propTypes.default.shape({
@@ -115,7 +101,12 @@ Image.propTypes = {
   ownerTitle: _propTypes.default.string,
   ownerDescription: _propTypes.default.string,
   loading: _propTypes.default.bool,
-  imageContainerBackground: _propTypes.default.string
+  imageContainerBackground: _propTypes.default.string,
+  videoProps: _propTypes.default.object,
+  videoSources: _propTypes.default.arrayOf(_propTypes.default.shape({
+    src: _propTypes.default.string,
+    type: _propTypes.default.string
+  }))
 };
 Image.defaultProps = {
   imageProps: {
@@ -130,7 +121,9 @@ Image.defaultProps = {
   ownerTitle: '',
   ownerDescription: '',
   loading: false,
-  imageContainerBackground: ''
+  imageContainerBackground: '',
+  videoProps: {},
+  videoSources: []
 };
 var _default = Image;
 exports.default = _default;

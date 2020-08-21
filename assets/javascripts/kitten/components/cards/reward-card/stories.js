@@ -1,6 +1,7 @@
 import React from 'react'
-import { withInfo } from '@storybook/addon-info'
-import { withKnobs, text, boolean, object } from '@storybook/addon-knobs'
+import { text, boolean, object ,
+  select,
+} from '@storybook/addon-knobs'
 import { RewardCard as RewardCardComponent } from './index'
 import { Container } from '../../../components/grid/container'
 import { Grid, GridCol } from '../../../components/grid/grid'
@@ -60,7 +61,6 @@ const StyledStoryContainer = styled(Container)`
 export default {
   component: RewardCard,
   title: 'Cards/RewardCard',
-  decorators: [withKnobs, withInfo],
   parameters: {
     component: RewardCard,
     info:
@@ -84,7 +84,16 @@ export const RewardCard = () => {
     true,
     versionGroupId,
   )
-  const withImage = boolean('With image', true, versionGroupId)
+  const visualType = select(
+    'Visual type',
+    {
+      none: null,
+      Image: 'image',
+      Video: 'video',
+    },
+    null,
+    versionGroupId,
+  )
   const disabled = boolean('Disabled', false, versionGroupId)
   const completed = boolean('Completed', false, versionGroupId)
   const withOptions = boolean(
@@ -220,7 +229,7 @@ export const RewardCard = () => {
                   />
                 </List>
               </RewardCardComponent.RowContent>
-              {withImage && (
+              {visualType === 'image' && (
                 <RewardCardComponent.RowSide>
                   <RewardCardComponent.Image
                     src={text(
@@ -231,6 +240,20 @@ export const RewardCard = () => {
                     alt={text('Reward image alt', 'My reward', contentGroupId)}
                     disabled={disabled}
                   />
+                </RewardCardComponent.RowSide>
+              )}
+              {visualType === 'video' && (
+                <RewardCardComponent.RowSide>
+                  <RewardCardComponent.Video disabled={disabled}>
+                    <source
+                      type="video/webm"
+                      src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
+                    />
+                    <source
+                      type="video/mp4"
+                      src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
+                    />
+                  </RewardCardComponent.Video>
                 </RewardCardComponent.RowSide>
               )}
             </RewardCardComponent.Row>
@@ -356,7 +379,7 @@ export const RewardCard = () => {
                     </ExpandBoard>
                   )}
                 </RewardCardComponent.RowContent>
-                {withImage && (
+                {visualType && (
                   <RewardCardComponent.RowSide withVerticalMargins={false} />
                 )}
               </RewardCardComponent.Row>
