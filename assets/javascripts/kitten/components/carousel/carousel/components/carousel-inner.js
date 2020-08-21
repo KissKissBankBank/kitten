@@ -7,11 +7,8 @@ if (typeof window !== 'undefined') {
 }
 
 import { createRangeFromZeroTo } from '../../../../helpers/utils/range'
-import { cssSupports } from '../../../../helpers/utils/feature-detection'
 import { CarouselPage } from './carousel-page'
 import classNames from 'classnames'
-
-const supportScrollSnap = cssSupports('scroll-snap-type: mandatory')
 
 // inspired by https://github.com/cferdinandi/scrollStop
 const scrollStop = callback => {
@@ -25,12 +22,7 @@ const scrollStop = callback => {
 
     target = event.target
 
-    isScrolling = setTimeout(
-      () => callback(target),
-      // wait more for scrollStop if browser support snap
-      // because of the momentum on iOS
-      supportScrollSnap ? 132 : 66,
-    )
+    isScrolling = setTimeout(() => callback(target), 132)
   }
 }
 
