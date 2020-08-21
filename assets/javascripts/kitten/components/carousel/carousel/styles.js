@@ -299,7 +299,7 @@ export const StyledCarouselContainer = styled.div`
 
   // Carousel Inner
 
-  .k-Carousel__inner{
+  .k-Carousel__inner {
     display: grid;
     grid-template-columns: repeat(${({ numPages }) => numPages}, 100%);
 
@@ -313,7 +313,6 @@ export const StyledCarouselContainer = styled.div`
       grid-gap: ${({ baseItemMarginBetween }) =>
         pxToRem(baseItemMarginBetween)};
     }
-
 
     overflow-x: scroll;
     scroll-behavior: smooth;
@@ -337,6 +336,35 @@ export const StyledCarouselContainer = styled.div`
       &:not(.k-Carousel__inner__pageContainer--isActivePage) {
         cursor: pointer;
       }
+    }
+
+    /* IE11 support */
+    display: -ms-grid;
+    -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING_MOBILE / 2)})[${({
+  numPages,
+}) => numPages - 1}] 100%;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      -ms-grid-columns: (100% ${pxToRem(CONTAINER_PADDING / 2)})[${({
+  numPages,
+}) => numPages - 1}] 100%;
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      -ms-grid-columns: (100% ${({ baseItemMarginBetween }) =>
+        pxToRem(baseItemMarginBetween)})[${({ numPages }) =>
+  numPages - 1}] 100%;
+    }
+
+    .k-Carousel__inner__pageContainer {
+      ${({ numPages }) =>
+        [...Array(numPages).keys()].map(
+          item => css`
+            &:nth-child(${item + 1}) {
+              -ms-grid-column: ${item * 2 + 1};
+            }
+          `,
+        )}
+      -ms-grid-column-span: 1;
     }
   }
 
@@ -378,6 +406,46 @@ export const StyledCarouselContainer = styled.div`
 
     .k-Carousel__page__item {
       overflow: hidden;
+    }
+
+    /* IE11 support */
+    display: -ms-grid;
+    -ms-grid-columns: ${({ numColumns }) =>
+      numColumns > 1
+        ? css`
+    (1fr ${pxToRem(CONTAINER_PADDING_MOBILE / 2)})[${numColumns - 1}] 1fr;
+    `
+        : '1fr'};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      -ms-grid-columns: ${({ numColumns }) =>
+        numColumns > 1
+          ? css`
+      (1fr ${pxToRem(CONTAINER_PADDING / 2)})[${numColumns - 1}] 1fr;
+      `
+          : '1fr'};
+    }
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      -ms-grid-columns: ${({ numColumns }) =>
+        numColumns > 1
+          ? css`
+      (1fr ${({ baseItemMarginBetween }) => pxToRem(baseItemMarginBetween)})[${
+              numColumns - 1
+            }] 1fr;
+      `
+          : '1fr'};
+    }
+
+    .k-Carousel__page__item {
+      ${({ numColumns }) =>
+        [...Array(numColumns).keys()].map(
+          item => css`
+            &:nth-child(${item + 1}) {
+              -ms-grid-column: ${item * 2 + 1};
+            }
+          `,
+        )}
+      -ms-grid-column-span: 1;
     }
   }
 `
