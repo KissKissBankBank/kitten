@@ -1,12 +1,5 @@
 import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
 import ResizeObserver from 'resize-observer-polyfill'
-import { pxToRem } from '../../../../helpers/utils/typography'
-import {
-  CONTAINER_PADDING,
-  CONTAINER_PADDING_MOBILE,
-} from '../../../../constants/grid-config'
-import { ScreenConfig } from '../../../../constants/screen-config'
 import { domElementHelper } from '../../../../helpers/dom/element-helper'
 
 if (typeof window !== 'undefined') {
@@ -164,7 +157,6 @@ export class CarouselInner extends Component {
       numColumns,
       numPages,
       itemMarginBetween,
-      showOtherPages,
       pagesClassName,
       viewedPages,
       exportVisibilityProps,
@@ -174,12 +166,11 @@ export class CarouselInner extends Component {
     const rangePage = createRangeFromZeroTo(numPages)
 
     return (
-      <StyledCarouselInner
+      <div
         ref={this.carouselInner}
         onScroll={this.handleInnerScroll}
         onTouchStart={this.handleTouchStart}
         onTouchEnd={this.handleTouchEnd}
-        showOtherPages={showOtherPages}
         className="k-Carousel__inner"
       >
         {rangePage.map(index => {
@@ -187,13 +178,9 @@ export class CarouselInner extends Component {
           const hasPageBeenViewed = viewedPages.has(index)
 
           return (
-            <StyledCarouselPageContainer
+            <div
               key={index}
-              index={index}
-              indexPageVisible={indexPageVisible}
-              itemMarginBetween={itemMarginBetween}
               onClick={this.handlePageClick(index)}
-              showOtherPages={showOtherPages}
               className={classNames(
                 'k-Carousel__inner__pageContainer',
                 pagesClassName,
@@ -221,71 +208,10 @@ export class CarouselInner extends Component {
                 hasPageBeenViewed={hasPageBeenViewed}
                 exportVisibilityProps={exportVisibilityProps}
               />
-            </StyledCarouselPageContainer>
+            </div>
           )
         })}
-      </StyledCarouselInner>
+      </div>
     )
   }
 }
-
-const StyledCarouselInner = styled.div`
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  /* hide scrollbar on IE and Edge */
-  -ms-over-flow-style: none;
-  /* mandatory to combine scroll with this property on iOS */
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: ${supportScrollSnap ? 'mandatory' : 'none'};
-  /* Fix bug IE11 ResizeObserver, to trigger a first resize */
-  min-height: 1;
-
-  /* hide scrollbar on Chrome and Safari */
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  ${({ showOtherPages }) =>
-    showOtherPages &&
-    css`
-      padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
-      scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-
-      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-        padding: 0 ${pxToRem(CONTAINER_PADDING)};
-        scroll-padding: ${pxToRem(CONTAINER_PADDING)};
-      }
-    `}
-`
-
-const StyledCarouselPageContainer = styled.div`
-  width: 100%;
-  flex-shrink: 0;
-  scroll-snap-align: ${supportScrollSnap ? 'center' : 'none'};
-
-  ${({ showOtherPages }) =>
-    showOtherPages &&
-    css`
-      &:last-child {
-        padding-right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
-
-        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-          padding-right: ${pxToRem(CONTAINER_PADDING)};
-        }
-      }
-    `}
-
-  ${({ index, indexPageVisible }) =>
-    index !== indexPageVisible &&
-    css`
-      cursor: pointer;
-    `}
-
-  ${({ index, itemMarginBetween }) =>
-    index &&
-    css`
-      margin-left: ${pxToRem(itemMarginBetween)};
-    `}
-`

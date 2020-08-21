@@ -307,6 +307,7 @@ class CarouselBase extends Component {
       renderItem,
       withoutLeftOffset,
       viewportIsMOrLess,
+      baseItemMarginBetween,
       children,
       className,
       paginationPosition,
@@ -319,6 +320,7 @@ class CarouselBase extends Component {
       if (viewportIsMOrLess) {
         return (
           <StyledCarouselContainer
+            baseItemMarginBetween={baseItemMarginBetween}
             className={classNames(
               'k-Carousel',
               className,
@@ -334,6 +336,7 @@ class CarouselBase extends Component {
 
       return (
         <StyledCarouselContainer
+          baseItemMarginBetween={baseItemMarginBetween}
           className={classNames(
             'k-Carousel',
             className,
@@ -356,6 +359,7 @@ class CarouselBase extends Component {
 
     return (
       <StyledCarouselContainer
+        baseItemMarginBetween={baseItemMarginBetween}
         paginationPosition={paginationPosition}
         className={classNames('k-Carousel', className, {
           'k-Carousel--showOtherPages': showOtherPages,

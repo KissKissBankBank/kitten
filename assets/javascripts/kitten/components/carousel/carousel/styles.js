@@ -297,4 +297,70 @@ export const StyledCarouselContainer = styled.div`
     }
   }
 
+  // Carousel Inner
+
+  .k-Carousel__inner{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    /* hide scrollbar on IE and Edge */
+    -ms-over-flow-style: none;
+    /* mandatory to combine scroll with this property on iOS */
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: mandatory;
+    /* Fix bug IE11 ResizeObserver, to trigger a first resize */
+    min-height: 1;
+
+    /* hide scrollbar on Chrome and Safari */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .k-Carousel__inner__pageContainer {
+    width: 100%;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+
+    &:not(.k-Carousel__inner__pageContainer--isActivePage) {
+      cursor: pointer;
+    }
+
+
+    &:not(:first-child) {
+      margin-left: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+
+      @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+        margin-left: ${pxToRem(CONTAINER_PADDING)};
+      }
+
+      @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+        margin-left: ${({ baseItemMarginBetween }) =>
+          pxToRem(baseItemMarginBetween)};
+      }
+    }
+  }
+
+  .k-Carousel--showOtherPages .k-Carousel__inner {
+    padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
+    scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      padding: 0 ${pxToRem(CONTAINER_PADDING)};
+      scroll-padding: ${pxToRem(CONTAINER_PADDING)};
+    }
+
+    .k-Carousel__inner__pageContainer {
+      &:last-child {
+        padding-right: ${pxToRem(CONTAINER_PADDING_MOBILE)};
+
+        @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+          padding-right: ${pxToRem(CONTAINER_PADDING)};
+        }
+      }
+    }
+  }
+
+
 `
