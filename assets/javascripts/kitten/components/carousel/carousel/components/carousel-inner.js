@@ -51,12 +51,10 @@ const getRangePageScrollLeft = (
   )
 
 export const CarouselInner = ({
-  data,
   exportVisibilityProps,
   goToPage,
   indexPageVisible,
   itemMarginBetween,
-  legacyMode,
   numColumns,
   numPages,
   onResizeInner,
@@ -166,17 +164,11 @@ export const CarouselInner = ({
             )}
           >
             <CarouselPage
-              data={legacyMode ? getDataForPage(data, index, numColumns) : null}
               exportVisibilityProps={exportVisibilityProps}
               hasPageBeenViewed={hasPageBeenViewed}
               isActivePage={isActivePage}
-              legacyMode={legacyMode}
               numColumns={numColumns}
-              renderItem={
-                legacyMode
-                  ? renderItem
-                  : getDataForPage(renderItem, index, numColumns)
-              }
+              renderItem={getDataForPage(renderItem, index, numColumns)}
             />
           </div>
         )

@@ -2,11 +2,9 @@ import React from 'react'
 import classNames from 'classnames'
 
 export const CarouselPage = ({
-  data,
   exportVisibilityProps,
   hasPageBeenViewed,
   isActivePage,
-  legacyMode,
   numColumns,
   renderItem,
 }) => (
@@ -18,9 +16,7 @@ export const CarouselPage = ({
   >
     {[...Array(numColumns).keys()].map(index => (
       <div key={index} className="k-Carousel__page__item">
-        {legacyMode
-          ? data[index] && renderItem({ item: data[index] })
-          : exportVisibilityProps
+        {exportVisibilityProps
           ? renderItem[index] &&
             React.cloneElement(renderItem[index], {
               hasPageBeenViewed,

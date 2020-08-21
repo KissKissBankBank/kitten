@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import deprecated from 'prop-types-extra/lib/deprecated'
 import PropTypes from 'prop-types'
 import { createRangeFromZeroTo } from '../../../helpers/utils/range'
@@ -81,7 +81,7 @@ class CarouselBase extends Component {
     numColumns: this.props.colNumber > 0 ? this.props.colNumber : 3,
     numPages: getNumPagesForColumnsAndDataLength(
       getDataLength({ data: this.props.data, children: this.props.children }),
-      3,
+      this.props.colNumber > 0 ? this.props.colNumber : 3,
     ),
   }
 
@@ -91,7 +91,7 @@ class CarouselBase extends Component {
     this.viewedPages.add(0)
   }
 
-  onResizeInner = widthInner => {
+  onResizeInner = innerWidth => {
     const {
       data,
       children,
@@ -109,7 +109,7 @@ class CarouselBase extends Component {
     )
 
     const numColumns = getNumColumnsForWidth(
-      widthInner,
+      innerWidth,
       itemMinWidth,
       itemMarginBetween,
       colNumber,
@@ -165,14 +165,13 @@ class CarouselBase extends Component {
       data,
       renderItem,
       children,
-      itemMinWidth,
-      colNumber,
       baseItemMarginBetween,
       viewportIsXSOrLess,
       viewportIsMOrLess,
       pagesClassName,
       exportVisibilityProps,
     } = this.props
+
     const { indexPageVisible, numColumns, numPages } = this.state
     const itemMarginBetween = getMarginBetweenAccordingToViewport(
       baseItemMarginBetween,
@@ -180,24 +179,28 @@ class CarouselBase extends Component {
       viewportIsMOrLess,
     )
 
-    const renderItemObject = !!data && !!renderItem ? renderItem : children
+    let renderItemObject = children
+
+    // legacy mode
+    if (!!data && !!renderItem) {
+      renderItemObject = [...data].map((item, index) => (
+        <Fragment key={item}>{renderItem({ item: data[index] })}</Fragment>
+      ))
+    }
 
     return (
       <CarouselInner
-        legacyMode={!!data && !!renderItem}
         data={data}
-        renderItem={renderItemObject}
-        itemMinWidth={itemMinWidth}
-        specificColNumber={colNumber > 0}
+        exportVisibilityProps={exportVisibilityProps}
+        goToPage={this.goToPage}
         indexPageVisible={indexPageVisible}
+        itemMarginBetween={itemMarginBetween}
         numColumns={numColumns}
         numPages={numPages}
-        itemMarginBetween={itemMarginBetween}
         onResizeInner={this.onResizeInner}
-        goToPage={this.goToPage}
         pagesClassName={pagesClassName}
+        renderItem={renderItemObject}
         viewedPages={this.viewedPages}
-        exportVisibilityProps={exportVisibilityProps}
       />
     )
   }
