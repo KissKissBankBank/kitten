@@ -231,7 +231,7 @@ class CarouselBase extends Component {
             <div
               className={classNames('k-Carousel__pageControl__pageDot', {
                 'k-Carousel__pageControl__pageDot--isVisible':
-                  visibleIndex === index,
+                  indexPageVisible === index,
               })}
               key={`pageDotIndex_${index}`}
             />
