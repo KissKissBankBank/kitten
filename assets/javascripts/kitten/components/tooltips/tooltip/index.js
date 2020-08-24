@@ -60,5 +60,4 @@ Tooltip.propTypes = {
   children: PropTypes.node,
 }
 
-// DEPRECATED: do not use default export.
 export default Tooltip
