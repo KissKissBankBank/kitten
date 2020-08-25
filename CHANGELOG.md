@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add global closing event on `Tooltip`.
-- Feature: Wait until fonts are loaded to trucate titles on `CrowdfundingCard`.
+- Fix: Wait until fonts are loaded to trucate titles on `CrowdfundingCard`.
 
 ## [2.87.1] - 2020-08-21
 
