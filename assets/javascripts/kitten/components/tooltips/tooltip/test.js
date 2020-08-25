@@ -1,6 +1,6 @@
 import React from 'react'
-import { Tooltip } from './tooltip'
-import { ButtonQuestionMarkIcon } from '../../components/buttons/button-question-mark-icon'
+import { Tooltip } from './index'
+import { ButtonQuestionMarkIcon } from '../../../components/buttons/button-question-mark-icon'
 import ReactTooltip from 'react-tooltip'
 
 const component = shallow(
@@ -18,7 +18,9 @@ describe('<Tooltip />', () => {
     expect(button.type()).toBe(ButtonQuestionMarkIcon)
     expect(button.props()['data-tip']).toBeTruthy()
     expect(button.props()['data-for']).toBe('tooltip-right')
-    expect(button.props()['data-event']).toBe('click')
+    expect(button.props()['data-event']).toBe(
+      `TooltipEvents__open_tooltip-right`,
+    )
     expect(button.props()['data-dismiss']).toBe('tooltip-right')
     expect(button.props()['aria-describedby']).toBe('tooltip-right')
   })
