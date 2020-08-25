@@ -154,29 +154,9 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         }
       />
       <p
-        className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-u-margin-none k-CrowdfundingCard__subtitle__subtitleText--truncated"
+        className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-u-margin-none"
       >
-        <span
-          className="k-CrowdfundingCard__noWrap"
-          width={0}
-        >
-          <span />
-          <span>
-            Custom subtitle
-          </span>
-          <span
-            style={
-              Object {
-                "left": 0,
-                "position": "fixed",
-                "top": 0,
-                "visibility": "hidden",
-              }
-            }
-          >
-            …
-          </span>
-        </span>
+        Custom subtitle
       </p>
     </div>
     
@@ -341,29 +321,9 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         }
       />
       <p
-        className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-u-margin-none k-CrowdfundingCard__subtitle__subtitleText--truncated"
+        className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-u-margin-none"
       >
-        <span
-          className="k-CrowdfundingCard__noWrap"
-          width={0}
-        >
-          <span />
-          <span>
-            Custom subtitle
-          </span>
-          <span
-            style={
-              Object {
-                "left": 0,
-                "position": "fixed",
-                "top": 0,
-                "visibility": "hidden",
-              }
-            }
-          >
-            …
-          </span>
-        </span>
+        Custom subtitle
       </p>
     </div>
     

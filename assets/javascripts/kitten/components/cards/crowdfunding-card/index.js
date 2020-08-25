@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Image from './components/image'
 import TitleComponent from './components/title'
@@ -9,6 +9,7 @@ import State from './components/state'
 import classNames from 'classnames'
 import { StyledCrowdfundingCard } from './styles'
 import { Text } from '../../../components/typography/text'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
 
 export const CrowdfundingCard = ({
   additionalInfo,
@@ -43,6 +44,22 @@ export const CrowdfundingCard = ({
     document.activeElement.blur()
   }
 
+  const [shouldTruncateTitle, setTitleTruncate] = useState(false)
+  const [shouldTruncateSubTitle, setSubTitleTruncate] = useState(false)
+
+  useEffect(() => {
+    if (
+      domElementHelper.canUseDom() &&
+      typeof document !== 'undefined' &&
+      'fonts' in document // IE11 Fix, tests `document.fonts.ready.then()`
+    ) {
+      document.fonts.ready.then(() => {
+        setTitleTruncate(titleTruncate)
+        setSubTitleTruncate(subTitleTruncate)
+      })
+    }
+  }, [])
+
   return (
     <StyledCrowdfundingCard
       {...others}
@@ -75,11 +92,11 @@ export const CrowdfundingCard = ({
         <TitleComponent
           title={cardTitle}
           loading={loading}
-          titleTruncate={titleTruncate}
+          titleTruncate={shouldTruncateTitle}
         />
         <Subtitle
           subTitle={cardSubTitle}
-          subTitleTruncate={subTitleTruncate}
+          subTitleTruncate={shouldTruncateSubTitle}
           loading={loading}
         />
         {!loading && additionalInfo && (
