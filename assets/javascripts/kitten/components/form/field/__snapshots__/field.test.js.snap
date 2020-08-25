@@ -109,92 +109,11 @@ Array [
             </svg>
           </button>
           <div
-            className="__react_component_tooltip te8bfc466-e41e-4b5a-8394-3f2951105d8b place-top type-dark"
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
           >
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "
-  	.te8bfc466-e41e-4b5a-8394-3f2951105d8b {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-top {
-        margin-top: -10px;
-    }
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-bottom {
-        margin-top: 10px;
-    }
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-left {
-        margin-left: -10px;
-    }
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-right {
-        margin-left: 10px;
-    }
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .te8bfc466-e41e-4b5a-8394-3f2951105d8b.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                }
-              }
-            />
             Tooltip
           </div>
         </div>
@@ -286,92 +205,11 @@ Array [
             </svg>
           </button>
           <div
-            className="__react_component_tooltip t2e5541a8-31c3-47a0-abd6-3a982235a73f place-top type-dark"
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
           >
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "
-  	.t2e5541a8-31c3-47a0-abd6-3a982235a73f {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-top {
-        margin-top: -10px;
-    }
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-bottom {
-        margin-top: 10px;
-    }
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-left {
-        margin-left: -10px;
-    }
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-right {
-        margin-left: 10px;
-    }
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t2e5541a8-31c3-47a0-abd6-3a982235a73f.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                }
-              }
-            />
             Tooltip
           </div>
         </div>
@@ -449,92 +287,11 @@ Array [
             </svg>
           </button>
           <div
-            className="__react_component_tooltip t141da9e2-7330-4d46-a534-478800c89ea0 place-top type-dark"
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
           >
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "
-  	.t141da9e2-7330-4d46-a534-478800c89ea0 {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t141da9e2-7330-4d46-a534-478800c89ea0.place-top {
-        margin-top: -10px;
-    }
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-bottom {
-        margin-top: 10px;
-    }
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-left {
-        margin-left: -10px;
-    }
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-right {
-        margin-left: 10px;
-    }
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t141da9e2-7330-4d46-a534-478800c89ea0.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                }
-              }
-            />
             Tooltip
           </div>
         </div>
@@ -656,92 +413,11 @@ Array [
             </svg>
           </button>
           <div
-            className="__react_component_tooltip t74f81bba-ee79-4950-8355-618d3fabd7ca place-top type-dark"
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
           >
-            <style
-              dangerouslySetInnerHTML={
-                Object {
-                  "__html": "
-  	.t74f81bba-ee79-4950-8355-618d3fabd7ca {
-	    color: #fff;
-	    background: #222;
-	    border: 1px solid transparent;
-  	}
-
-  	.t74f81bba-ee79-4950-8355-618d3fabd7ca.place-top {
-        margin-top: -10px;
-    }
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-top::before {
-        border-top: 8px solid transparent;
-    }
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-top::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        bottom: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-top-color: #222;
-        border-top-style: solid;
-        border-top-width: 6px;
-    }
-
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-bottom {
-        margin-top: 10px;
-    }
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-bottom::before {
-        border-bottom: 8px solid transparent;
-    }
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-bottom::after {
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        top: -6px;
-        left: 50%;
-        margin-left: -8px;
-        border-bottom-color: #222;
-        border-bottom-style: solid;
-        border-bottom-width: 6px;
-    }
-
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-left {
-        margin-left: -10px;
-    }
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-left::before {
-        border-left: 8px solid transparent;
-    }
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-left::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        right: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-left-color: #222;
-        border-left-style: solid;
-        border-left-width: 6px;
-    }
-
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-right {
-        margin-left: 10px;
-    }
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-right::before {
-        border-right: 8px solid transparent;
-    }
-    .t74f81bba-ee79-4950-8355-618d3fabd7ca.place-right::after {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        left: -6px;
-        top: 50%;
-        margin-top: -4px;
-        border-right-color: #222;
-        border-right-style: solid;
-        border-right-width: 6px;
-    }
-  ",
-                }
-              }
-            />
             Tooltip
           </div>
         </div>
