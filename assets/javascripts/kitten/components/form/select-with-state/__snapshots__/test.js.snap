@@ -1,240 +1,256 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectWithState /> with classes props matches with snapshot 1`] = `
-<div
-  className="k-Select k-Select--tiny is-error is-valid is-disabled"
->
+<div>
   <div
-    className="Select Select--single is-disabled"
+    className="sc-bdVaJa bpOtsE k-Select--is-disabled css-14jk2my-container"
+    onKeyDown={[Function]}
   >
     <div
-      className="Select-control"
-      onKeyDown={[Function]}
+      className="k-Select__control k-Select__control--is-disabled css-1fhf3k1-control"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
     >
-      <span
-        className="Select-multi-value-wrapper"
-        id="react-select-5--value"
+      <div
+        className="k-Select__value-container css-g1d714-ValueContainer"
       >
         <div
-          className="Select-placeholder"
+          className="k-Select__placeholder css-1wa3eu0-placeholder"
         >
           Select...
         </div>
-        <div
-          aria-activedescendant="react-select-5--value"
-          aria-disabled="true"
-          aria-expanded={false}
-          aria-owns=""
-          className="Select-input"
+        <input
+          aria-autocomplete="list"
+          aria-labelledby=""
+          className="css-62g3xt-dummyInput"
+          disabled={true}
+          id="react-select-5-input"
           onBlur={[Function]}
+          onChange={[Function]}
           onFocus={[Function]}
-          role="combobox"
-          style={
-            Object {
-              "border": 0,
-              "display": "inline-block",
-              "width": 1,
-            }
-          }
-          tabIndex={0}
+          readOnly={true}
+          tabIndex="0"
+          value=""
         />
-      </span>
-      <span
-        className="Select-arrow-zone"
-        onMouseDown={[Function]}
+      </div>
+      <div
+        className="k-Select__indicators css-1hb7zxy-IndicatorsContainer"
       >
         <span
-          className="Select-arrow"
-          onMouseDown={[Function]}
+          className="k-Select__indicator-separator css-109onse-indicatorSeparator"
         />
-      </span>
+        <div
+          aria-hidden="true"
+          className="k-Select__indicator k-Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="css-6q0nyr-Svg"
+            focusable="false"
+            height={20}
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`<SelectWithState /> with default props matches with snapshot 1`] = `
-<div
-  className="k-Select"
->
+<div>
   <div
-    className="Select Select--single"
+    className="sc-bdVaJa eYWVjY css-2b097c-container"
+    onKeyDown={[Function]}
   >
     <div
-      className="Select-control"
-      onKeyDown={[Function]}
+      className="k-Select__control css-yk16xz-control"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
     >
-      <span
-        className="Select-multi-value-wrapper"
-        id="react-select-2--value"
+      <div
+        className="k-Select__value-container css-g1d714-ValueContainer"
       >
         <div
-          className="Select-placeholder"
+          className="k-Select__placeholder css-1wa3eu0-placeholder"
         >
           Select...
         </div>
-        <div
-          aria-activedescendant="react-select-2--value"
-          aria-disabled="false"
-          aria-expanded={false}
-          aria-owns=""
-          className="Select-input"
+        <input
+          aria-autocomplete="list"
+          aria-labelledby=""
+          className="css-62g3xt-dummyInput"
+          disabled={false}
+          id="react-select-2-input"
           onBlur={[Function]}
+          onChange={[Function]}
           onFocus={[Function]}
-          role="combobox"
-          style={
-            Object {
-              "border": 0,
-              "display": "inline-block",
-              "width": 1,
-            }
-          }
-          tabIndex={0}
+          readOnly={true}
+          tabIndex="0"
+          value=""
         />
-      </span>
-      <span
-        className="Select-arrow-zone"
-        onMouseDown={[Function]}
+      </div>
+      <div
+        className="k-Select__indicators css-1hb7zxy-IndicatorsContainer"
       >
         <span
-          className="Select-arrow"
-          onMouseDown={[Function]}
+          className="k-Select__indicator-separator css-1okebmr-indicatorSeparator"
         />
-      </span>
+        <div
+          aria-hidden="true"
+          className="k-Select__indicator k-Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="css-6q0nyr-Svg"
+            focusable="false"
+            height={20}
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`<SelectWithState /> with default value matches with snapshot 1`] = `
-<div
-  className="k-Select"
->
+<div>
   <div
-    className="Select Select--single has-value"
+    className="sc-bdVaJa eYWVjY css-2b097c-container"
+    onKeyDown={[Function]}
   >
     <div
-      className="Select-control"
-      onKeyDown={[Function]}
+      className="k-Select__control css-yk16xz-control"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
     >
-      <span
-        className="Select-multi-value-wrapper"
-        id="react-select-3--value"
+      <div
+        className="k-Select__value-container css-g1d714-ValueContainer"
       >
         <div
-          className="Select-value"
+          className="k-Select__placeholder css-1wa3eu0-placeholder"
         >
-          <span
-            aria-selected="true"
-            className="Select-value-label"
-            id="react-select-3--value-item"
-            role="option"
-          >
-            Bar
-          </span>
+          Select...
         </div>
-        <div
-          aria-activedescendant="react-select-3--value"
-          aria-disabled="false"
-          aria-expanded={false}
-          aria-owns=""
-          className="Select-input"
+        <input
+          aria-autocomplete="list"
+          aria-labelledby=""
+          className="css-62g3xt-dummyInput"
+          disabled={false}
+          id="react-select-3-input"
           onBlur={[Function]}
+          onChange={[Function]}
           onFocus={[Function]}
-          role="combobox"
-          style={
-            Object {
-              "border": 0,
-              "display": "inline-block",
-              "width": 1,
-            }
-          }
-          tabIndex={0}
+          readOnly={true}
+          tabIndex="0"
+          value=""
         />
-      </span>
-      <span
-        className="Select-arrow-zone"
-        onMouseDown={[Function]}
+      </div>
+      <div
+        className="k-Select__indicators css-1hb7zxy-IndicatorsContainer"
       >
         <span
-          className="Select-arrow"
-          onMouseDown={[Function]}
+          className="k-Select__indicator-separator css-1okebmr-indicatorSeparator"
         />
-      </span>
+        <div
+          aria-hidden="true"
+          className="k-Select__indicator k-Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="css-6q0nyr-Svg"
+            focusable="false"
+            height={20}
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`<SelectWithState /> with label matches with snapshot 1`] = `
-<div
-  className="k-Select"
->
-  <label
-    className="k-Select__label"
-  >
-    FooBar
-  </label>
+<div>
   <div
-    className="Select Select--single"
+    className="sc-bdVaJa eYWVjY css-2b097c-container"
+    onKeyDown={[Function]}
   >
     <div
-      className="Select-control"
-      onKeyDown={[Function]}
+      className="k-Select__control css-yk16xz-control"
       onMouseDown={[Function]}
       onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
     >
-      <span
-        className="Select-multi-value-wrapper"
-        id="react-select-4--value"
+      <div
+        className="k-Select__value-container css-g1d714-ValueContainer"
       >
         <div
-          className="Select-placeholder"
+          className="k-Select__placeholder css-1wa3eu0-placeholder"
         >
           Select...
         </div>
-        <div
-          aria-activedescendant="react-select-4--value"
-          aria-disabled="false"
-          aria-expanded={false}
-          aria-owns=""
-          className="Select-input"
+        <input
+          aria-autocomplete="list"
+          aria-labelledby=""
+          className="css-62g3xt-dummyInput"
+          disabled={false}
+          id="react-select-4-input"
           onBlur={[Function]}
+          onChange={[Function]}
           onFocus={[Function]}
-          role="combobox"
-          style={
-            Object {
-              "border": 0,
-              "display": "inline-block",
-              "width": 1,
-            }
-          }
-          tabIndex={0}
+          readOnly={true}
+          tabIndex="0"
+          value=""
         />
-      </span>
-      <span
-        className="Select-arrow-zone"
-        onMouseDown={[Function]}
+      </div>
+      <div
+        className="k-Select__indicators css-1hb7zxy-IndicatorsContainer"
       >
         <span
-          className="Select-arrow"
-          onMouseDown={[Function]}
+          className="k-Select__indicator-separator css-1okebmr-indicatorSeparator"
         />
-      </span>
+        <div
+          aria-hidden="true"
+          className="k-Select__indicator k-Select__dropdown-indicator css-tlfecz-indicatorContainer"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="css-6q0nyr-Svg"
+            focusable="false"
+            height={20}
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </div>
