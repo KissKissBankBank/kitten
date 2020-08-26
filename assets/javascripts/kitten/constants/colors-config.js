@@ -22,6 +22,7 @@ export default {
   tertiary2: '#cff0d6', // Semi Light Green
 
   valid: '#61d079', // Green
+  valid2: '#cff0d6', // Light Green
 
   error: '#ff0046', // Red
   error2: '#ffe5ec', // Light Red

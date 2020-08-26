@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './select.stories.js'
+import { SelectWithState } from './index'
+
+<Meta title="Form/SelectWithState" component={SelectWithState} />
+
+# SelectWithState
+
+---
+
+Our select is based on `react-select` library https://react-select.com/ (v3.1).
+
+## Default
+
+<Canvas>
+  <Story name="Default" story={stories.Default} />
+</Canvas>
+
+## With default value
+
+Our select is `uncontrolled`, the `value` behave as **default value**, usefull to link it with form lib (Formik…).
+
+<Canvas>
+  <Story name="WithDefaultValue" story={stories.WithDefaultValue} />
+</Canvas>
+
+## With custom styles
+
+We extend default styles using `classNames`, follow this section to know how to : https://react-select.com/styles#using-classnames. Our classNames prefix is `k-Select`.
+
+You can also extend `Option` component by creating a `CustomOption` component (see https://react-select.com/components).
+
+<Canvas>
+  <Story name="WithCustomStyles" story={stories.WithCustomStyles} />
+</Canvas>
+
+## With multi levels
+
+<Canvas>
+  <Story name="WithMulti" story={stories.Multi} />
+</Canvas>

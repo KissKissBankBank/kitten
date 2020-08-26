@@ -39,7 +39,6 @@
 @import './components/form/radio-button-set';
 @import './components/form/radio-button';
 @import './components/form/search-input';
-@import './components/form/select';
 @import './components/form/slider-tooltip';
 @import './components/form/slider';
 @import './components/form/switch';
@@ -54,20 +53,20 @@
 @import './components/grid/container';
 @import './components/grid/grid';
 @import './components/grid/lego-grid';
-@import "./components/grid/row";
-@import "./components/grid/side-grid";
-@import "./components/grid/single-column";
-@import "./components/grid/vertical-grid";
+@import './components/grid/row';
+@import './components/grid/side-grid';
+@import './components/grid/single-column';
+@import './components/grid/vertical-grid';
 
 // Headers
 @import './components/headers/header';
 
 // Icons
-@import "./components/icons/arrow-icon";
+@import './components/icons/arrow-icon';
 
 // Images
-@import "./components/images/cropper";
-@import "./components/images/image-with-caption";
+@import './components/images/cropper';
+@import './components/images/image-with-caption';
 
 // Layout
 @import './components/layout/horizontal-stroke';
@@ -123,11 +122,11 @@
 @import './components/steppers/stepper';
 
 // Teaser
-@import "./components/teaser/teaser";
+@import './components/teaser/teaser';
 
 // Testimonies
-@import "./components/testimonies/testimony-list";
-@import "./components/testimonies/testimony";
+@import './components/testimonies/testimony-list';
+@import './components/testimonies/testimony';
 
 // Titles
 @import './components/titles/title-with-actions';

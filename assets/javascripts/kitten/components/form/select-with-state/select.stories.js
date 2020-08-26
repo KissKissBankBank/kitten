@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { pxToRem } from '../../../helpers/utils/typography'
 import { boolean, select } from '@storybook/addon-knobs'
 import { SelectWithState } from './index'
 
@@ -19,6 +20,7 @@ const options = [
 const multiOptions = [
   {
     label: 'Top 10',
+    value: 'Top 10',
     children: [
       { value: 'bianchi', label: 'Bianchi' },
       { value: 'bmc', label: 'BMC' },
@@ -34,6 +36,7 @@ const multiOptions = [
   },
   {
     label: 'Other best',
+    value: 'Other best',
     children: [
       { value: 'giant', label: 'Giant' },
       { value: 'gt', label: 'GT' },
@@ -61,56 +64,88 @@ const autoFill = {
   Name: 'name',
 }
 
-const Container = styled.div`
-  max-width: 300px;
-  margin: 30px auto;
-`
-
-const onChange = value => console.warn('Selected value', value)
-
-export default {
-  title: 'Form/SelectWithState',
-  component: SelectWithState,
-}
-
-export const Default = () => (
-  <Container>
+export const Default = args => {
+  return (
     <SelectWithState
-      id="select-with-label"
-      onChange={onChange}
-      labelText="Please select a bike brand"
+      name="select-default"
       placeholder="Choose a bike brand"
       options={options}
       searchable={boolean('Searchable', false)}
+      disabled={boolean('Disabled', false)}
       clearable={boolean('Clearable', false)}
-      error={boolean('Error', false)}
       error={boolean('Error', false)}
       valid={boolean('Valid', false)}
       tiny={boolean('Tiny', false)}
       huge={boolean('Huge', false)}
       giant={boolean('Giant', false)}
+      noResultText="No results"
+      autoFill={select('AutoFill', autoFill)}
+      {...args}
+    />
+  )
+}
+
+export const WithDefaultValue = () => {
+  return (
+    <SelectWithState
+      name="select-with-default-value"
+      placeholder="Choose a bike brand"
+      options={options}
+      value="cannondale"
+      searchable={boolean('Searchable', false)}
+      disabled={boolean('Disabled', false)}
+      clearable={boolean('Clearable', false)}
+      error={boolean('Error', false)}
+      valid={boolean('Valid', false)}
+      tiny={boolean('Tiny', false)}
+      huge={boolean('Huge', false)}
+      giant={boolean('Giant', false)}
+      noResultText="No results"
       autoFill={select('AutoFill', autoFill)}
     />
-  </Container>
-)
+  )
+}
 
-export const Multi = () => (
-  <Container>
+export const WithCustomStyles = () => {
+  const CustomSelect = styled(SelectWithState)`
+    .k-Select__control {
+      border: ${pxToRem(4)} solid red;
+      border-radius: 0px;
+      background-color: yellow;
+      height: ${pxToRem(80)};
+      outline: none;
+`
+
+  const StyledOption = styled.div`
+    background-color: green;
+    color: white;
+  `
+  return (
+    <CustomSelect
+      name="select-with-custom-styles"
+      placeholder="Choose a bike brand"
+      CustomOption={({ innerProps, children }) => {
+        return <StyledOption {...innerProps}>{children}</StyledOption>
+      }}
+      options={options}
+    />
+  )
+}
+
+export const Multi = () => {
+  return (
     <SelectWithState
-      id="select-with-label"
-      onChange={onChange}
-      labelText="Please select a bike brand"
+      name="select-with-label-multi"
       placeholder="Choose a bike brand"
       options={multiOptions}
       searchable={boolean('Searchable', false)}
       clearable={boolean('Clearable', false)}
       error={boolean('Error', false)}
-      error={boolean('Error', false)}
       valid={boolean('Valid', false)}
       tiny={boolean('Tiny', false)}
       huge={boolean('Huge', false)}
       giant={boolean('Giant', false)}
       autoFill={select('AutoFill', autoFill)}
     />
-  </Container>
-)
+  )
+}
