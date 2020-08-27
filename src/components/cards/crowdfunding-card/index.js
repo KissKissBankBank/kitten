@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -9,9 +11,11 @@ exports.CrowdfundingCard = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
+
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -32,6 +36,8 @@ var _classnames = _interopRequireDefault(require("classnames"));
 var _styles = require("./styles");
 
 var _text = require("../../../components/typography/text");
+
+var _elementHelper = require("../../../helpers/dom/element-helper");
 
 var CrowdfundingCard = function CrowdfundingCard(_ref) {
   var additionalInfo = _ref.additionalInfo,
@@ -66,6 +72,25 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
     document.activeElement.blur();
   };
 
+  var _useState = (0, _react.useState)(false),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      shouldTruncateTitle = _useState2[0],
+      setTitleTruncate = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(false),
+      _useState4 = (0, _slicedToArray2.default)(_useState3, 2),
+      shouldTruncateSubTitle = _useState4[0],
+      setSubTitleTruncate = _useState4[1];
+
+  (0, _react.useEffect)(function () {
+    if (_elementHelper.domElementHelper.canUseDom() && typeof document !== 'undefined' && 'fonts' in document // IE11 Fix, tests `document.fonts.ready.then()`
+    ) {
+        document.fonts.ready.then(function () {
+          setTitleTruncate(titleTruncate);
+          setSubTitleTruncate(subTitleTruncate);
+        });
+      }
+  }, []);
   return /*#__PURE__*/_react.default.createElement(_styles.StyledCrowdfundingCard, (0, _extends2.default)({}, others, {
     as: href ? 'a' : 'div',
     imageContainerRatio: imageContainerRatio,
@@ -90,10 +115,10 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_title.default, {
     title: cardTitle,
     loading: loading,
-    titleTruncate: titleTruncate
+    titleTruncate: shouldTruncateTitle
   }), /*#__PURE__*/_react.default.createElement(_subtitle.default, {
     subTitle: cardSubTitle,
-    subTitleTruncate: subTitleTruncate,
+    subTitleTruncate: shouldTruncateSubTitle,
     loading: loading
   }), !loading && additionalInfo && /*#__PURE__*/_react.default.createElement("span", {
     className: "k-CrowdfundingCard__additionalInfo"
