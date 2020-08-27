@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Fix `exportVisibilityProps` bug on `Carousel`.
+## [2.88.2] - 2020-08-27
+
+- Fix `exportVisibilityProps` bug on `Carousel`.
 
 ## [2.88.1] - 2020-08-27
 
