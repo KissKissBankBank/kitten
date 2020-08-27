@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `GifVideo` component that waits until sources fail then loads `poster`.
+
 ## [2.88.1] - 2020-08-27
 
 Fix:

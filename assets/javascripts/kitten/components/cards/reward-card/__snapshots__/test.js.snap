@@ -490,9 +490,9 @@ exports[`<RewardCard /> with video matches with snapshot 1`] = `
       <video
         autoPlay={true}
         className="k-RewardCard__video"
-        cover="#image.jpg"
         loop={false}
         muted={true}
+        poster={null}
       >
         <source
           src="#video.mp4"

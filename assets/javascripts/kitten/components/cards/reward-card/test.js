@@ -141,7 +141,7 @@ describe('<RewardCard />', () => {
               </RewardCard.RowContent>
 
               <RewardCard.RowSide>
-                <RewardCard.Video loop={false} cover="#image.jpg">
+                <RewardCard.Video loop={false} poster="#image.jpg">
                   <source type="video/mp4" src="#video.mp4" />
                   <source type="video/webm" src="#video.webm" />
                 </RewardCard.Video>
