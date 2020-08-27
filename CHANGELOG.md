@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Create `CheckList` component.
+
 ## [2.88.1] - 2020-08-27
 
 Fix:
