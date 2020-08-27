@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix: - Fix `parseHtml` returning encoded error when using `replace()` on a
+  non `string` component.
+
 ## [2.88.0] - 2020-08-27
 
 Features:
