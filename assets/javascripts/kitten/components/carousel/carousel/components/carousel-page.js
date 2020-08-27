@@ -17,7 +17,7 @@ export const CarouselPage = ({
     {[...Array(numberOfItemsPerPage).keys()].map(index => (
       <div key={index} className="k-Carousel__page__item">
         {exportVisibilityProps
-          ? pageItems.length < index &&
+          ? index < pageItems.length &&
             React.cloneElement(pageItems[index], {
               hasPageBeenViewed,
             })
