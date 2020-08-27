@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [BREAKIN CHANGE] Migrate `SelectWithState` from `react-select@1` to `react-select@3`
 
   - Our composant follow closer the new `react-select` API
-  - We have removed this following props : `onInputChange`, `deleteRemoves`, `multi`, `inputProps` and `labelText`
+  - We have removed the following props : `onInputChange`, `deleteRemoves`, `multi`, `inputProps` and `labelText`
   - Use `Field.Select` from `@kisskissbankbank/kitten/src/next`. `SelectWithState` import has been deprecated.
   - Styles strategy has changed, check our storybook https://kisskissbankbank.github.io/kitten for more details
 
