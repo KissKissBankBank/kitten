@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add global closing event on `Tooltip`.
-- Fix: Wait until fonts are loaded to trucate titles on `CrowdfundingCard`.
-- Feature: Add `itemsPerPage` prop to use instead of `itemMinWidth` on `Carousel`.
+## [2.88.0] - 2020-08-27
+
+Features:
+- Add global closing event on `Tooltip`.
+- Add `itemsPerPage` prop to use instead of `itemMinWidth` on `Carousel`.
+
+Fix:
+- Wait until fonts are loaded to trucate titles on `CrowdfundingCard`.
 
 ## [2.87.1] - 2020-08-21
 

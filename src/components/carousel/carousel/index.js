@@ -7,7 +7,11 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Carousel = exports.checkPageLoop = exports.checkPage = exports.getNumPagesForColumnsAndDataLength = exports.getNumColumnsForWidth = void 0;
+exports.Carousel = exports.checkPageLoop = exports.checkPage = exports.getNumberOfPagesForColumnsAndDataLength = exports.getNumberOfItemsPerPageForWidth = void 0;
+
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 
@@ -25,19 +29,11 @@ var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecate
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
-
-var _typography = require("../../../helpers/utils/typography");
-
-var _screenConfig = require("../../../constants/screen-config");
-
 var _range = require("../../../helpers/utils/range");
 
 var _mediaQueries = require("../../../hoc/media-queries");
 
 var _gridConfig = require("../../../constants/grid-config");
-
-var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _button = require("../../../components/buttons/button/button");
 
@@ -51,6 +47,8 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _grid = require("../../../components/grid/grid");
 
+var _styles = require("./styles");
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
@@ -62,37 +60,38 @@ var getDataLength = function getDataLength(_ref) {
   return _react.default.Children.count(children);
 };
 
-var getNumColumnsForWidth = function getNumColumnsForWidth(width, itemMinWidth, itemMarginBetween) {
+var getNumberOfItemsPerPageForWidth = function getNumberOfItemsPerPageForWidth(width, itemMinWidth, itemMarginBetween, itemsPerPage) {
+  if (!!itemsPerPage && itemMinWidth === 0) return itemsPerPage;
   if (width === 0 || itemMinWidth === 0) return 0;
   var remainingWidthWithOneCard = width - itemMinWidth;
   var itemWidthAndMargin = itemMinWidth + itemMarginBetween;
-  var numColumns = Math.floor(remainingWidthWithOneCard / itemWidthAndMargin) + 1;
-  return numColumns;
+  var numberOfItemsPerPage = Math.floor(remainingWidthWithOneCard / itemWidthAndMargin) + 1;
+  return numberOfItemsPerPage;
 };
 
-exports.getNumColumnsForWidth = getNumColumnsForWidth;
+exports.getNumberOfItemsPerPageForWidth = getNumberOfItemsPerPageForWidth;
 
-var getNumPagesForColumnsAndDataLength = function getNumPagesForColumnsAndDataLength(dataLength, numColumns) {
-  if (dataLength === 0 || numColumns === 0) return 0;
-  var numPages = Math.ceil(dataLength / numColumns);
-  return numPages;
+var getNumberOfPagesForColumnsAndDataLength = function getNumberOfPagesForColumnsAndDataLength(dataLength, numberOfItemsPerPage) {
+  if (dataLength === 0 || numberOfItemsPerPage === 0) return 0;
+  var numberOfPages = Math.ceil(dataLength / numberOfItemsPerPage);
+  return numberOfPages;
 };
 
-exports.getNumPagesForColumnsAndDataLength = getNumPagesForColumnsAndDataLength;
+exports.getNumberOfPagesForColumnsAndDataLength = getNumberOfPagesForColumnsAndDataLength;
 
-var checkPage = function checkPage(numPages, newPage) {
-  if (numPages < 1) return 0;
+var checkPage = function checkPage(numberOfPages, newPage) {
+  if (numberOfPages < 1) return 0;
   if (newPage < 0) return 0;
-  if (newPage >= numPages) return numPages - 1;
+  if (newPage >= numberOfPages) return numberOfPages - 1;
   return newPage;
 };
 
 exports.checkPage = checkPage;
 
-var checkPageLoop = function checkPageLoop(numPages, newPage) {
-  if (numPages < 1) return 0;
-  if (newPage < 0) return numPages - 1;
-  if (newPage >= numPages) return 0;
+var checkPageLoop = function checkPageLoop(numberOfPages, newPage) {
+  if (numberOfPages < 1) return 0;
+  if (newPage < 0) return numberOfPages - 1;
+  if (newPage >= numberOfPages) return 0;
   return newPage;
 };
 
@@ -103,8 +102,6 @@ var getMarginBetweenAccordingToViewport = function getMarginBetweenAccordingToVi
   if (viewportIsMOrLess) return _gridConfig.CONTAINER_PADDING / 2;
   return baseItemMarginBetween;
 };
-
-var propTypesPositions = _propTypes.default.oneOf(['top', 'right', 'bottom', 'left', 'bottom-left', 'bottom-right']);
 
 var CarouselBase = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(CarouselBase, _Component);
@@ -122,37 +119,38 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
 
     _this = _super.call.apply(_super, [this].concat(args));
     _this.state = {
-      indexPageVisible: 0,
-      numColumns: 3,
-      numPages: getNumPagesForColumnsAndDataLength(getDataLength({
+      currentPageIndex: 0,
+      numberOfItemsPerPage: _this.props.itemsPerPage > 0 ? _this.props.itemsPerPage : 3,
+      numberOfPages: getNumberOfPagesForColumnsAndDataLength(getDataLength({
         data: _this.props.data,
         children: _this.props.children
-      }), 3)
+      }), _this.props.itemsPerPage > 0 ? _this.props.itemsPerPage : 3)
     };
     _this.viewedPages = new Set();
 
-    _this.onResizeInner = function (widthInner) {
+    _this.onResizeInner = function (innerWidth) {
       var _this$props = _this.props,
           data = _this$props.data,
           children = _this$props.children,
           itemMinWidth = _this$props.itemMinWidth,
+          itemsPerPage = _this$props.itemsPerPage,
           baseItemMarginBetween = _this$props.baseItemMarginBetween,
           viewportIsXSOrLess = _this$props.viewportIsXSOrLess,
           viewportIsMOrLess = _this$props.viewportIsMOrLess;
       var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
-      var numColumns = getNumColumnsForWidth(widthInner, itemMinWidth, itemMarginBetween);
-      var numPages = getNumPagesForColumnsAndDataLength(getDataLength({
+      var numberOfItemsPerPage = getNumberOfItemsPerPageForWidth(innerWidth, itemMinWidth, itemMarginBetween, itemsPerPage);
+      var numberOfPages = getNumberOfPagesForColumnsAndDataLength(getDataLength({
         data: data,
         children: children
-      }), numColumns);
+      }), numberOfItemsPerPage);
 
-      if (_this.state.numColumns !== numColumns || _this.state.numPages !== numPages) {
-        var indexPageVisible = _this.state.indexPageVisible > numPages - 1 ? numPages - 1 : _this.state.indexPageVisible;
+      if (_this.state.numberOfItemsPerPage !== numberOfItemsPerPage || _this.state.numberOfPages !== numberOfPages) {
+        var currentPageIndex = _this.state.currentPageIndex > numberOfPages - 1 ? numberOfPages - 1 : _this.state.currentPageIndex;
 
         _this.setState({
-          numColumns: numColumns,
-          numPages: numPages,
-          indexPageVisible: indexPageVisible
+          numberOfItemsPerPage: numberOfItemsPerPage,
+          numberOfPages: numberOfPages,
+          currentPageIndex: currentPageIndex
         });
       }
     };
@@ -160,39 +158,39 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
     _this.goNextPage = function () {
       var loop = _this.props.loop;
       var _this$state = _this.state,
-          numPages = _this$state.numPages,
-          indexPageVisible = _this$state.indexPageVisible;
-      var newPage = loop ? checkPageLoop(numPages, indexPageVisible + 1) : checkPage(numPages, indexPageVisible + 1);
+          numberOfPages = _this$state.numberOfPages,
+          currentPageIndex = _this$state.currentPageIndex;
+      var newPage = loop ? checkPageLoop(numberOfPages, currentPageIndex + 1) : checkPage(numberOfPages, currentPageIndex + 1);
 
       _this.viewedPages.add(newPage);
 
       _this.setState({
-        indexPageVisible: newPage
+        currentPageIndex: newPage
       });
     };
 
     _this.goPrevPage = function () {
       var loop = _this.props.loop;
       var _this$state2 = _this.state,
-          numPages = _this$state2.numPages,
-          indexPageVisible = _this$state2.indexPageVisible;
-      var newPage = loop ? checkPageLoop(numPages, indexPageVisible - 1) : checkPage(numPages, indexPageVisible - 1);
+          numberOfPages = _this$state2.numberOfPages,
+          currentPageIndex = _this$state2.currentPageIndex;
+      var newPage = loop ? checkPageLoop(numberOfPages, currentPageIndex - 1) : checkPage(numberOfPages, currentPageIndex - 1);
 
       _this.viewedPages.add(newPage);
 
       _this.setState({
-        indexPageVisible: newPage
+        currentPageIndex: newPage
       });
     };
 
     _this.goToPage = function (indexPageToGo) {
-      var numPages = _this.state.numPages;
-      var newPage = checkPage(numPages, indexPageToGo);
+      var numberOfPages = _this.state.numberOfPages;
+      var newPage = checkPage(numberOfPages, indexPageToGo);
 
       _this.viewedPages.add(newPage);
 
       _this.setState({
-        indexPageVisible: newPage
+        currentPageIndex: newPage
       });
     };
 
@@ -201,45 +199,47 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           data = _this$props2.data,
           renderItem = _this$props2.renderItem,
           children = _this$props2.children,
-          itemMinWidth = _this$props2.itemMinWidth,
           baseItemMarginBetween = _this$props2.baseItemMarginBetween,
           viewportIsXSOrLess = _this$props2.viewportIsXSOrLess,
           viewportIsMOrLess = _this$props2.viewportIsMOrLess,
-          showOtherPages = _this$props2.showOtherPages,
           pagesClassName = _this$props2.pagesClassName,
           exportVisibilityProps = _this$props2.exportVisibilityProps;
       var _this$state3 = _this.state,
-          indexPageVisible = _this$state3.indexPageVisible,
-          numColumns = _this$state3.numColumns,
-          numPages = _this$state3.numPages;
+          currentPageIndex = _this$state3.currentPageIndex,
+          numberOfItemsPerPage = _this$state3.numberOfItemsPerPage,
+          numberOfPages = _this$state3.numberOfPages;
       var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
-      var renderItemObject = !!data && !!renderItem ? renderItem : children;
+      var items = children; // legacy mode
+
+      if (!!data && !!renderItem) {
+        items = (0, _toConsumableArray2.default)(data).map(function (item, index) {
+          return /*#__PURE__*/_react.default.createElement(_react.Fragment, {
+            key: item
+          }, renderItem({
+            item: data[index]
+          }));
+        });
+      }
+
       return /*#__PURE__*/_react.default.createElement(_carouselInner.CarouselInner, {
-        legacyMode: !!data && !!renderItem,
-        data: data,
-        renderItem: renderItemObject,
-        itemMinWidth: itemMinWidth,
-        indexPageVisible: indexPageVisible,
-        numColumns: numColumns,
-        numPages: numPages,
-        itemMarginBetween: itemMarginBetween,
-        onResizeInner: _this.onResizeInner,
+        currentPageIndex: currentPageIndex,
+        exportVisibilityProps: exportVisibilityProps,
         goToPage: _this.goToPage,
-        showOtherPages: showOtherPages,
+        itemMarginBetween: itemMarginBetween,
+        items: items,
+        numberOfItemsPerPage: numberOfItemsPerPage,
+        numberOfPages: numberOfPages,
+        onResizeInner: _this.onResizeInner,
         pagesClassName: pagesClassName,
-        viewedPages: _this.viewedPages,
-        exportVisibilityProps: exportVisibilityProps
+        viewedPages: _this.viewedPages
       });
     };
 
     _this.renderPagination = function () {
       var _this$props3 = _this.props,
-          baseItemMarginBetween = _this$props3.baseItemMarginBetween,
-          viewportIsMOrLess = _this$props3.viewportIsMOrLess,
           viewportIsXSOrLess = _this$props3.viewportIsXSOrLess,
           hidePagination = _this$props3.hidePagination,
           hidePaginationOnMobile = _this$props3.hidePaginationOnMobile,
-          paginationPosition = _this$props3.paginationPosition,
           prevButtonText = _this$props3.prevButtonText,
           nextButtonText = _this$props3.nextButtonText,
           tinyButtons = _this$props3.tinyButtons,
@@ -249,71 +249,66 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           preferCompletePaginationOnMobile = _this$props3.preferCompletePaginationOnMobile,
           loop = _this$props3.loop;
       var _this$state4 = _this.state,
-          indexPageVisible = _this$state4.indexPageVisible,
-          numPages = _this$state4.numPages;
-      var itemMarginBetween = getMarginBetweenAccordingToViewport(baseItemMarginBetween, viewportIsXSOrLess, viewportIsMOrLess);
+          currentPageIndex = _this$state4.currentPageIndex,
+          numberOfPages = _this$state4.numberOfPages;
       if (hidePagination) return;
       if (viewportIsXSOrLess && hidePaginationOnMobile) return;
-      if (numPages <= 1) return;
+      if (numberOfPages <= 1) return;
 
       if (viewportIsXSOrLess && !preferCompletePaginationOnMobile) {
-        var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
-        return /*#__PURE__*/_react.default.createElement(PageControl, {
+        var rangePage = (0, _range.createRangeFromZeroTo)(numberOfPages);
+        return /*#__PURE__*/_react.default.createElement("div", {
           className: "k-Carousel__pageControl"
         }, rangePage.map(function (index) {
-          return /*#__PURE__*/_react.default.createElement(PageDot, {
-            className: "k-Carousel__pageControl__pageDot",
-            index: index,
-            key: index,
-            visibleIndex: indexPageVisible
+          return /*#__PURE__*/_react.default.createElement("div", {
+            className: (0, _classnames.default)('k-Carousel__pageControl__pageDot', {
+              'k-Carousel__pageControl__pageDot--isVisible': currentPageIndex === index
+            }),
+            key: "pageDotIndex_".concat(index)
           });
-        }), /*#__PURE__*/_react.default.createElement(PageControlButton, {
-          prev: true,
+        }), /*#__PURE__*/_react.default.createElement("div", {
           onClick: _this.goPrevPage,
-          className: "k-Carousel__pageControl__controlButton"
-        }), /*#__PURE__*/_react.default.createElement(PageControlButton, {
-          next: true,
+          className: "k-Carousel__pageControl__controlButton k-Carousel__pageControl__controlButton--prev"
+        }), /*#__PURE__*/_react.default.createElement("div", {
           onClick: _this.goNextPage,
-          className: "k-Carousel__pageControl__controlButton"
+          className: "k-Carousel__pageControl__controlButton k-Carousel__pageControl__controlButton--next"
         }));
       }
 
-      return /*#__PURE__*/_react.default.createElement(CarouselPagination, {
-        position: paginationPosition,
-        itemMarginBetween: itemMarginBetween,
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Carousel__pagination"
-      }, /*#__PURE__*/_react.default.createElement(PaginationButtons, {
-        position: paginationPosition,
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Carousel__pagination__buttonContainer"
-      }, /*#__PURE__*/_react.default.createElement(PageButton, {
+      }, /*#__PURE__*/_react.default.createElement(_button.Button, {
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
         tiny: tinyButtons,
         onClick: _this.goPrevPage,
-        disabled: !loop && (indexPageVisible < 1 || numPages < 1)
-      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && (indexPageVisible < 1 || numPages < 1) ? lastButtonText : prevButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+        disabled: !loop && (currentPageIndex < 1 || numberOfPages < 1)
+      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && (currentPageIndex < 1 || numberOfPages < 1) ? lastButtonText : prevButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         direction: "left",
         "aria-hidden": true
-      })), /*#__PURE__*/_react.default.createElement(PageButton, {
+      })), /*#__PURE__*/_react.default.createElement(_button.Button, {
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
         tiny: tinyButtons,
         onClick: _this.goNextPage,
-        disabled: !loop && indexPageVisible >= numPages - 1
-      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && indexPageVisible >= numPages - 1 ? firstButtonText : nextButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+        disabled: !loop && currentPageIndex >= numberOfPages - 1
+      }, /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, loop && currentPageIndex >= numberOfPages - 1 ? firstButtonText : nextButtonText), /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
         version: "solid",
         direction: "right",
         "aria-hidden": true
-      }))), showPageSquares && /*#__PURE__*/_react.default.createElement(PaginationSquares, {
+      }))), showPageSquares && /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Carousel__pagination__squaresContainer"
-      }, (0, _range.createRangeFromZeroTo)(numPages).map(function (index) {
-        return /*#__PURE__*/_react.default.createElement(PageSquare, {
+      }, (0, _range.createRangeFromZeroTo)(numberOfPages).map(function (index) {
+        return /*#__PURE__*/_react.default.createElement("div", {
           key: index,
-          isActive: index === indexPageVisible,
-          className: "k-Carousel__pagination__square"
+          className: (0, _classnames.default)('k-Carousel__pagination__square', {
+            'k-Carousel__pagination__square--isActive': index === currentPageIndex
+          })
         });
       })));
     };
@@ -333,42 +328,49 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
           data = _this$props4.data,
           renderItem = _this$props4.renderItem,
           withoutLeftOffset = _this$props4.withoutLeftOffset,
-          viewportIsMOrLess = _this$props4.viewportIsMOrLess,
-          paginationPosition = _this$props4.paginationPosition,
+          baseItemMarginBetween = _this$props4.baseItemMarginBetween,
           children = _this$props4.children,
-          className = _this$props4.className;
+          className = _this$props4.className,
+          paginationPosition = _this$props4.paginationPosition,
+          showOtherPages = _this$props4.showOtherPages,
+          itemMinWidth = _this$props4.itemMinWidth;
       if (getDataLength({
         data: data,
         children: children
       }) === 0) return null;
+      var commonProps = {
+        baseItemMarginBetween: baseItemMarginBetween,
+        itemMinWidth: itemMinWidth,
+        numberOfItemsPerPage: this.state.numberOfItemsPerPage,
+        numberOfPages: this.state.numberOfPages
+      }; // legacy mode
 
       if (!!data && !!renderItem) {
-        if (viewportIsMOrLess) {
-          return /*#__PURE__*/_react.default.createElement(StyledLegacyCarousel, {
-            className: (0, _classnames.default)('k-Carousel', className, 'k-LegacyCarousel', 'k-LegacyCarousel--noGrid')
-          }, this.renderCarouselInner(), this.renderPagination());
-        }
-
-        return /*#__PURE__*/_react.default.createElement(StyledLegacyCarousel, {
-          className: (0, _classnames.default)('k-Carousel', className, 'k-LegacyCarousel', 'k-LegacyCarousel--inGrid')
-        }, /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
-          col: withoutLeftOffset ? '11' : '10',
-          offset: withoutLeftOffset ? '0' : '1'
+        return /*#__PURE__*/_react.default.createElement(_styles.StyledCarouselContainer, (0, _extends2.default)({}, commonProps, {
+          className: (0, _classnames.default)('k-Carousel', className, 'k-LegacyCarousel')
+        }), /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
+          col: "12",
+          "col-l": withoutLeftOffset ? '11' : '10',
+          "offset-l": withoutLeftOffset ? '0' : '1'
         }, this.renderCarouselInner()), /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
-          col: "1"
+          col: "12",
+          "col-l": "1"
         }, this.renderPagination())));
       }
 
-      return /*#__PURE__*/_react.default.createElement(FlexContainer, {
+      return /*#__PURE__*/_react.default.createElement(_styles.StyledCarouselContainer, (0, _extends2.default)({}, commonProps, {
         paginationPosition: paginationPosition,
-        className: (0, _classnames.default)('k-Carousel', className)
-      }, this.renderCarouselInner(), this.renderPagination());
+        className: (0, _classnames.default)('k-Carousel', className, {
+          'k-Carousel--showOtherPages': showOtherPages
+        })
+      }), this.renderCarouselInner(), this.renderPagination());
     }
   }]);
   return CarouselBase;
 }(_react.Component);
 
 CarouselBase.defaultProps = {
+  itemsPerPage: 0,
   hidePaginationOnMobile: false,
   hidePagination: false,
   showOtherPages: false,
@@ -389,6 +391,7 @@ CarouselBase.defaultProps = {
 };
 CarouselBase.propTypes = {
   itemMinWidth: _propTypes.default.number.isRequired,
+  itemsPerPage: _propTypes.default.number,
   baseItemMarginBetween: _propTypes.default.number.isRequired,
   children: _propTypes.default.node,
   viewportIsMOrLess: _propTypes.default.bool.isRequired,
@@ -399,13 +402,13 @@ CarouselBase.propTypes = {
   pagesClassName: _propTypes.default.string,
   preferCompletePaginationOnMobile: _propTypes.default.bool,
   paginationPosition: _propTypes.default.shape({
-    default: propTypesPositions,
-    fromXxs: propTypesPositions,
-    fromXs: propTypesPositions,
-    fromS: propTypesPositions,
-    fromM: propTypesPositions,
-    fromL: propTypesPositions,
-    fromXl: propTypesPositions
+    default: positionsPropTypes,
+    fromXxs: positionsPropTypes,
+    fromXs: positionsPropTypes,
+    fromS: positionsPropTypes,
+    fromM: positionsPropTypes,
+    fromL: positionsPropTypes,
+    fromXl: positionsPropTypes
   }),
   prevButtonText: _propTypes.default.string,
   nextButtonText: _propTypes.default.string,
@@ -420,137 +423,7 @@ CarouselBase.propTypes = {
   withoutLeftOffset: (0, _deprecated.default)(_propTypes.default.bool, 'Provide `Carousel` with children instead of data/renderItem')
 };
 
-var StyledLegacyCarousel = _styledComponents.default.div.withConfig({
-  displayName: "carousel__StyledLegacyCarousel",
-  componentId: "sc-1vyxuma-0"
-})(["&.k-LegacyCarousel--noGrid .k-Carousel__inner{padding:0 ", ";scroll-padding:", ";&::after{content:'';display:block;flex-shrink:0;width:", ";}@media (min-width:", "){padding:0 ", ";scroll-padding:", ";&::after{width:", ";}}}&.k-LegacyCarousel--inGrid .k-Carousel__pagination__buttonContainer{flex-direction:column-reverse !important;}"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING));
-
-var flexContainerdirectionStyle = function flexContainerdirectionStyle(positionType) {
-  return function (_ref2) {
-    var paginationPosition = _ref2.paginationPosition;
-    if (!paginationPosition[positionType]) return;
-
-    switch (paginationPosition[positionType]) {
-      case 'top':
-        return (0, _styledComponents.css)(["flex-direction:column-reverse;& >:nth-child(2){margin:0;margin-bottom:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER));
-
-      case 'bottom':
-      case 'bottom-left':
-      case 'bottom-right':
-        return (0, _styledComponents.css)(["flex-direction:column;& >:nth-child(2){margin:0;margin-top:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER));
-
-      case 'left':
-        return (0, _styledComponents.css)(["flex-direction:row-reverse;& >:nth-child(2){margin:0;margin-right:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER));
-
-      case 'right':
-        return (0, _styledComponents.css)(["flex-direction:row;& >:nth-child(2){margin:0;margin-left:", ";}"], (0, _typography.pxToRem)(_gridConfig.GUTTER));
-    }
-  };
-};
-
-var FlexContainer = _styledComponents.default.div.withConfig({
-  displayName: "carousel__FlexContainer",
-  componentId: "sc-1vyxuma-1"
-})(["display:flex;", " @media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}"], flexContainerdirectionStyle('default'), _screenConfig.ScreenConfig.XXS.min, flexContainerdirectionStyle('fromXxs'), _screenConfig.ScreenConfig.XS.min, flexContainerdirectionStyle('fromXs'), _screenConfig.ScreenConfig.S.min, flexContainerdirectionStyle('fromS'), _screenConfig.ScreenConfig.M.min, flexContainerdirectionStyle('fromM'), _screenConfig.ScreenConfig.L.min, flexContainerdirectionStyle('fromL'), _screenConfig.ScreenConfig.XL.min, flexContainerdirectionStyle('fromXl'));
-
-var paginationPositionStyle = function paginationPositionStyle(positionType) {
-  return function (_ref3) {
-    var position = _ref3.position;
-    if (!position[positionType]) return;
-
-    switch (position[positionType]) {
-      case 'top':
-        return (0, _styledComponents.css)(["align-items:flex-end;flex-direction:row;"]);
-
-      case 'bottom':
-      case 'bottom-left':
-        return (0, _styledComponents.css)(["align-items:flex-start;flex-direction:row;"]);
-
-      case 'bottom-right':
-        return (0, _styledComponents.css)(["align-items:flex-start;flex-direction:row-reverse;"]);
-
-      case 'left':
-        return (0, _styledComponents.css)(["align-items:flex-end;flex-direction:column;"]);
-
-      case 'right':
-        return (0, _styledComponents.css)(["align-items:flex-start;flex-direction:column;"]);
-    }
-  };
-};
-
-var CarouselPagination = _styledComponents.default.div.withConfig({
-  displayName: "carousel__CarouselPagination",
-  componentId: "sc-1vyxuma-2"
-})(["display:flex;justify-content:space-between;", " @media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}"], paginationPositionStyle('default'), _screenConfig.ScreenConfig.XXS.min, paginationPositionStyle('fromXxs'), _screenConfig.ScreenConfig.XS.min, paginationPositionStyle('fromXs'), _screenConfig.ScreenConfig.S.min, paginationPositionStyle('fromS'), _screenConfig.ScreenConfig.M.min, paginationPositionStyle('fromM'), _screenConfig.ScreenConfig.L.min, paginationPositionStyle('fromL'), _screenConfig.ScreenConfig.XL.min, paginationPositionStyle('fromXl'));
-
-var PaginationSquares = _styledComponents.default.div.withConfig({
-  displayName: "carousel__PaginationSquares",
-  componentId: "sc-1vyxuma-3"
-})(["display:flex;flex-direction:row;margin:", ";"], (0, _typography.pxToRem)(-2));
-
-var PageSquare = _styledComponents.default.span.withConfig({
-  displayName: "carousel__PageSquare",
-  componentId: "sc-1vyxuma-4"
-})(["display:inline-block;width:", ";height:", ";margin:", ";background-color:", ";", ""], (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(2), _colorsConfig.default.font2, function (_ref4) {
-  var isActive = _ref4.isActive;
-  return isActive && (0, _styledComponents.css)(["background-color:", ";"], _colorsConfig.default.font1);
-});
-
-var buttonsPositionStyle = function buttonsPositionStyle(positionType) {
-  return function (_ref5) {
-    var position = _ref5.position;
-    if (!position[positionType]) return;
-
-    switch (position[positionType]) {
-      case 'top':
-      case 'bottom':
-      case 'bottom-left':
-      case 'bottom-right':
-        return (0, _styledComponents.css)(["flex-direction:row;"]);
-
-      case 'left':
-        return (0, _styledComponents.css)(["flex-direction:column;"]);
-
-      case 'right':
-        return (0, _styledComponents.css)(["flex-direction:column-reverse;"]);
-    }
-  };
-};
-
-var PaginationButtons = _styledComponents.default.div.withConfig({
-  displayName: "carousel__PaginationButtons",
-  componentId: "sc-1vyxuma-5"
-})(["display:flex;align-items:flex-start;margin:", ";", " @media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}@media (min-width:", "px){", "}"], (0, _typography.pxToRem)(-1), buttonsPositionStyle('default'), _screenConfig.ScreenConfig.XXS.min, buttonsPositionStyle('fromXxs'), _screenConfig.ScreenConfig.XS.min, buttonsPositionStyle('fromXs'), _screenConfig.ScreenConfig.S.min, buttonsPositionStyle('fromS'), _screenConfig.ScreenConfig.M.min, buttonsPositionStyle('fromM'), _screenConfig.ScreenConfig.L.min, buttonsPositionStyle('fromL'), _screenConfig.ScreenConfig.XL.min, buttonsPositionStyle('fromXl'));
-
-var PageButton = (0, _styledComponents.default)(_button.Button).withConfig({
-  displayName: "carousel__PageButton",
-  componentId: "sc-1vyxuma-6"
-})(["margin:", ";"], (0, _typography.pxToRem)(1));
-
-var PageControl = _styledComponents.default.div.withConfig({
-  displayName: "carousel__PageControl",
-  componentId: "sc-1vyxuma-7"
-})(["display:flex;flex-direction:row;justify-content:center;position:relative;padding-top:", ";padding-bottom:", ";"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE / 2), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE / 2));
-
-var PageControlButton = _styledComponents.default.div.withConfig({
-  displayName: "carousel__PageControlButton",
-  componentId: "sc-1vyxuma-8"
-})(["position:absolute;top:", ";bottom:", ";-webkit-tap-highlight-color:transparent;", " ", ""], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE / 4), (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE / 4), function (_ref6) {
-  var prev = _ref6.prev;
-  return prev && (0, _styledComponents.css)(["left:", ";right:50%;"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE));
-}, function (_ref7) {
-  var next = _ref7.next;
-  return next && (0, _styledComponents.css)(["right:", ";left:50%;"], (0, _typography.pxToRem)(_gridConfig.CONTAINER_PADDING_MOBILE));
-});
-
-var PageDot = _styledComponents.default.div.withConfig({
-  displayName: "carousel__PageDot",
-  componentId: "sc-1vyxuma-9"
-})(["width:", ";height:", ";margin-left:", ";margin-right:", ";border-radius:", ";background-color:", ";", ""], (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), (0, _typography.pxToRem)(4), _colorsConfig.default.font1, function (_ref8) {
-  var visibleIndex = _ref8.visibleIndex,
-      index = _ref8.index;
-  return visibleIndex === index && (0, _styledComponents.css)(["background-color:", ";"], _colorsConfig.default.primary2);
-});
+var positionsPropTypes = _propTypes.default.oneOf(['top', 'right', 'bottom', 'left', 'bottom-left', 'bottom-right']);
 
 var Carousel = (0, _mediaQueries.withMediaQueries)({
   viewportIsXSOrLess: true,
