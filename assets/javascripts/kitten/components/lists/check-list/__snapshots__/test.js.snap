@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkBox /> by default matches with snapshot 1`] = `
+<ul
+  className="sc-bdVaJa dIrwOo"
+/>
+`;
+
+exports[`<LinkBox /> with CheckList.Item matches with snapshot 1`] = `
+<ul
+  className="sc-bdVaJa dIrwOo"
+>
+  <li
+    className="k-CheckList__item k-CheckList__item--done"
+  >
+    <span
+      className="strike"
+    >
+      Task #1
+    </span>
+  </li>
+  <li
+    className="k-CheckList__item"
+  >
+    Task #2
+  </li>
+</ul>
+`;

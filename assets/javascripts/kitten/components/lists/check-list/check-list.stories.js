@@ -1,6 +1,5 @@
 import React from 'react'
 import { CheckList } from './index'
-import { text, boolean } from '@storybook/addon-knobs'
 
 export const Default = () => (
   <CheckList>

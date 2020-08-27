@@ -1,29 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import COLORS from './../../../constants/colors-config'
 import classNames from 'classnames'
 import { pxToRem, stepToRem } from './../../../helpers/utils/typography'
-
-const strikeWidthKeyframes = keyframes`
-  0%   { width : 0; }
-  100% { width: 100%; }
-`
 
 const List = styled.ul`
   display: inline-flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
-  background: gray;
 
   .k-CheckList__item {
     list-style-type: none;
     display: flex;
     align-items: stretch;
-    margin-bottom: ${pxToRem(5)};
+    margin-bottom: ${pxToRem(10)};
     color: ${COLORS.font1};
-    background: lime;
+    font-size: ${stepToRem(-1)};
+    line-height: 1.2;
 
     .strike {
       position: relative;
@@ -32,10 +27,7 @@ const List = styled.ul`
     &::before {
       content: '●';
       color: ${COLORS.line2};
-      font-size: ${stepToRem(6)};
-      display: flex;
-      align-content: center;
-      background: blue;
+      padding-right: ${pxToRem(10)};
     }
 
     &::last {
@@ -50,17 +42,7 @@ const List = styled.ul`
   }
 
   .strike {
-    &::after {
-      content: ' ';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: ${COLORS.font1};
-      animation: ${strikeWidthKeyframes} 1.3s linear forwards;
-      animation-iteration-count: 1;
-    }
+    text-decoration: line-through;
   }
 `
 
@@ -85,6 +67,6 @@ CheckList.Item.PropTypes = {
   done: PropTypes.bool,
 }
 
-LinkBox.defaultProps = {
+CheckList.defaultProps = {
   done: false,
 }
