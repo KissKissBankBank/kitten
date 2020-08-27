@@ -2,13 +2,13 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <ul
-  className="sc-bdVaJa dIrwOo"
+  className="sc-bdVaJa bCgUlF"
 />
 `;
 
 exports[`<LinkBox /> with CheckList.Item matches with snapshot 1`] = `
 <ul
-  className="sc-bdVaJa dIrwOo"
+  className="sc-bdVaJa bCgUlF"
 >
   <li
     className="k-CheckList__item k-CheckList__item--done"
