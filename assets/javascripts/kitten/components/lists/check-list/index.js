@@ -21,7 +21,7 @@ const List = styled.ul`
     line-height: 1.2;
 
     .strike {
-      position: relative;
+      text-decoration: line-through;
     }
 
     &::before {
@@ -39,10 +39,6 @@ const List = styled.ul`
     &::before {
       color: ${COLORS.valid};
     }
-  }
-
-  .strike {
-    text-decoration: line-through;
   }
 `
 
