@@ -10,7 +10,7 @@ const StyledSelect = styled(Select)`
 
   .k-Select__control {
     border: ${pxToRem(2)} solid ${COLORS.line1};
-    border-radius: 0px;
+    border-radius: 0;
     background-color: ${COLORS.background1};
     height: ${pxToRem(50)};
     box-shadow: none;
