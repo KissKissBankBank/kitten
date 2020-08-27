@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SelectWithState /> with classes props matches with snapshot 1`] = `
-<div>
+<div
+  className="sc-bdVaJa cXaWTl"
+>
   <div
-    className="sc-bdVaJa bpOtsE k-Select--is-disabled css-14jk2my-container"
+    className="sc-bwzfXH bieRoJ k-Select__tiny k-Select__valid k-Select__error k-Select__disabled k-Select--is-disabled css-14jk2my-container"
     onKeyDown={[Function]}
   >
     <div
@@ -65,9 +67,11 @@ exports[`<SelectWithState /> with classes props matches with snapshot 1`] = `
 `;
 
 exports[`<SelectWithState /> with default props matches with snapshot 1`] = `
-<div>
+<div
+  className="sc-bdVaJa cXaWTl"
+>
   <div
-    className="sc-bdVaJa eYWVjY css-2b097c-container"
+    className="sc-bwzfXH bieRoJ css-2b097c-container"
     onKeyDown={[Function]}
   >
     <div
@@ -129,9 +133,11 @@ exports[`<SelectWithState /> with default props matches with snapshot 1`] = `
 `;
 
 exports[`<SelectWithState /> with default value matches with snapshot 1`] = `
-<div>
+<div
+  className="sc-bdVaJa cXaWTl"
+>
   <div
-    className="sc-bdVaJa eYWVjY css-2b097c-container"
+    className="sc-bwzfXH bieRoJ css-2b097c-container"
     onKeyDown={[Function]}
   >
     <div
@@ -193,9 +199,11 @@ exports[`<SelectWithState /> with default value matches with snapshot 1`] = `
 `;
 
 exports[`<SelectWithState /> with label matches with snapshot 1`] = `
-<div>
+<div
+  className="sc-bdVaJa cXaWTl"
+>
   <div
-    className="sc-bdVaJa eYWVjY css-2b097c-container"
+    className="sc-bwzfXH bieRoJ css-2b097c-container"
     onKeyDown={[Function]}
   >
     <div
