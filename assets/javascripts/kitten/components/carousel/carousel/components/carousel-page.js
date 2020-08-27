@@ -20,6 +20,7 @@ export const CarouselPage = ({
           ? index < pageItems.length &&
             React.cloneElement(pageItems[index], {
               hasPageBeenViewed,
+              isActivePage,
             })
           : pageItems[index]}
       </div>
