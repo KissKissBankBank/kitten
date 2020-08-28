@@ -73,6 +73,27 @@ describe('<Carousel />', () => {
     })
   })
 
+  describe('with exportVisibilityProps prop', () => {
+    window.matchMedia = createMockMediaMatcher(false) // desktop
+    const carousel = renderer
+      .create(
+        <Carousel
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
+          exportVisibilityProps
+        >
+          {data.map((item, index) => (
+            <ProjectCard title={item.title} key={index} />
+          ))}
+        </Carousel>,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(carousel).toMatchSnapshot()
+    })
+  })
+
   describe('with itemsPerPage prop', () => {
     window.matchMedia = createMockMediaMatcher(false) // desktop
     const carousel = renderer

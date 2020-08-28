@@ -28,8 +28,9 @@ var CarouselPage = function CarouselPage(_ref) {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: index,
       className: "k-Carousel__page__item"
-    }, exportVisibilityProps ? pageItems.length < index && _react.default.cloneElement(pageItems[index], {
-      hasPageBeenViewed: hasPageBeenViewed
+    }, exportVisibilityProps ? index < pageItems.length && _react.default.cloneElement(pageItems[index], {
+      hasPageBeenViewed: hasPageBeenViewed,
+      isActivePage: isActivePage
     }) : pageItems[index]);
   }));
 };
