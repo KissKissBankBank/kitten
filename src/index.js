@@ -639,6 +639,12 @@ Object.defineProperty(exports, "List", {
     return _list.List;
   }
 });
+Object.defineProperty(exports, "CheckList", {
+  enumerable: true,
+  get: function get() {
+    return _checkList.CheckList;
+  }
+});
 Object.defineProperty(exports, "NavList", {
   enumerable: true,
   get: function get() {
@@ -933,6 +939,12 @@ Object.defineProperty(exports, "Video", {
     return _video.Video;
   }
 });
+Object.defineProperty(exports, "GifVideo", {
+  enumerable: true,
+  get: function get() {
+    return _gifVideo.GifVideo;
+  }
+});
 
 var _visuallyHidden = require("./components/accessibility/visually-hidden");
 
@@ -1126,6 +1138,8 @@ var _bulletList = require("./components/lists/bullet-list");
 
 var _list = require("./components/lists/list");
 
+var _checkList = require("./components/lists/check-list");
+
 var _navList = require("./components/lists/nav-list");
 
 var _tagList = require("./components/lists/tag-list");
@@ -1219,3 +1233,5 @@ var _simpleUploader = require("./components/uploaders/simple-uploader");
 var _uploader = require("./components/uploaders/uploader");
 
 var _video = require("./components/videos/video");
+
+var _gifVideo = require("./components/videos/gif-video");
