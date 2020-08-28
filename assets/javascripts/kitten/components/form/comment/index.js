@@ -1,6 +1,6 @@
 import React from 'react'
-import { Comment as DefaultComment } from '../../components/comments/comment'
-import { Deprecated } from '../../helpers/utils/deprecated'
+import { Comment as DefaultComment } from '../../../components/comments/comment'
+import { Deprecated } from '../../../helpers/utils/deprecated'
 
 export const Comment = props => {
   const message = `You can use the Comment instead.

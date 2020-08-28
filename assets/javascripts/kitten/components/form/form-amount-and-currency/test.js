@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormAmountAndCurrency } from '../../components/form/form-amount-and-currency'
+import { FormAmountAndCurrency } from '../../../components/form/form-amount-and-currency'
 
 describe('<FormAmountAndCurrency />', () => {
   describe('valid prop', () => {

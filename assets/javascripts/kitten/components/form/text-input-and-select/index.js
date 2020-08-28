@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
-import { SelectWithState } from '../../components/form/select-with-state'
-import { TextInput } from '../../components/form/text-input'
+import { SelectWithState } from '../../../components/form/select-with-state'
+import { TextInput } from '../../../components/form/text-input'
 
 export const TextInputAndSelect = props => {
   const {

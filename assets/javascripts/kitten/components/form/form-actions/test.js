@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormActions } from '../../components/form/form-actions'
+import { FormActions } from '../../../components/form/form-actions'
 
 describe('<FormActions />', () => {
   it('renders a <div class="k-FormActions" />', () => {

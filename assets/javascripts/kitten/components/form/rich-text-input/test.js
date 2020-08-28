@@ -1,5 +1,5 @@
 import React from 'react'
-import { RichTextInput } from '../../components/form/rich-text-input'
+import { RichTextInput } from '../../../components/form/rich-text-input'
 
 describe('<RichTextInput />', () => {
   describe('By default', () => {

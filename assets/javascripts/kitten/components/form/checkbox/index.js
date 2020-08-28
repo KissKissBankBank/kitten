@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import classNames from 'classnames'
-import { Text } from '../../components/typography/text'
+import { Text } from '../../../components/typography/text'
 
 export const Checkbox = ({
   className,

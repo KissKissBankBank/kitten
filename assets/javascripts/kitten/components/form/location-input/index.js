@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 // Via "https://github.com/kenny-hibino/react-places-autocomplete"
 import PlacesAutocomplete, { geocodeByPlaceId } from 'react-places-autocomplete'
-import { LocationIcon } from '../../components/icons/location-icon'
+import { LocationIcon } from '../../../components/icons/location-icon'
 
 // Make sure you include a script to the Google Maps places API.
 // For example:

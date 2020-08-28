@@ -1,5 +1,5 @@
 import React from 'react'
-import { RadioButton } from '../../components/form/radio-button'
+import { RadioButton } from '../../../components/form/radio-button'
 
 describe('<RadioButton />', () => {
   describe('By default', () => {

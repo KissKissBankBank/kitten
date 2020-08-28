@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormRow } from '../../components/form/form-row'
+import { FormRow } from '../../../components/form/form-row'
 
 describe('<FormRow />', () => {
   it('renders a <div class="k-FormRow" />', () => {

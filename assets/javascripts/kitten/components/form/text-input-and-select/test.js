@@ -1,7 +1,7 @@
 import React from 'react'
-import { TextInputAndSelect } from '../../components/form/text-input-and-select'
-import { SelectWithState } from '../../components/form/select-with-state'
-import { TextInput } from '../../components/form/text-input'
+import { TextInputAndSelect } from '../../../components/form/text-input-and-select'
+import { SelectWithState } from '../../../components/form/select-with-state'
+import { TextInput } from '../../../components/form/text-input'
 
 describe('<TextInputWithSelect />', () => {
   describe('by default', () => {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import domElementHelper from '../../helpers/dom/element-helper'
+import domElementHelper from '../../../helpers/dom/element-helper'
 
 export class Label extends Component {
   constructor(props) {

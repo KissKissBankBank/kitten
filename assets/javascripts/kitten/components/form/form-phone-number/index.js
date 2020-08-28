@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextInputAndSelect } from '../../components/form/text-input-and-select'
+import { TextInputAndSelect } from '../../../components/form/text-input-and-select'
 
 export const FormPhoneNumber = props => {
   const { areaOptions, areaName, areaValue, ...textInputAndSelectProps } = props

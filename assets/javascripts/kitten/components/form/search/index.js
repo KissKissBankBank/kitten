@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { TextInput } from '../../components/form/text-input'
-import { SearchIcon } from '../../components/icons/search-icon'
+import { TextInput } from '../../../components/form/text-input'
+import { SearchIcon } from '../../../components/icons/search-icon'
 
 export class Search extends Component {
   constructor(props) {

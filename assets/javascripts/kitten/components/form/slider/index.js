@@ -2,8 +2,8 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { SliderBar } from '../../components/sliders/slider-bar'
-import { sliderKeyDownHandler } from '../../handlers/sliders/slider-key-down-handler'
+import { SliderBar } from '../../../components/sliders/slider-bar'
+import { sliderKeyDownHandler } from '../../../handlers/sliders/slider-key-down-handler'
 
 // Slider input to choose an integer value between two bounds
 export class Slider extends React.Component {

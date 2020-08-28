@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch } from '../../components/form/switch'
+import { Switch } from '../../../components/form/switch'
 
 describe('<Switch />', () => {
   const component = shallow(

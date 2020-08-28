@@ -1,5 +1,5 @@
 import React from 'react'
-import { LocationInput } from '../../components/form/location-input'
+import { LocationInput } from '../../../components/form/location-input'
 
 describe('<LocationInput />', () => {
   describe('by default', () => {

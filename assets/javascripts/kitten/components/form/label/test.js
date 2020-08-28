@@ -1,5 +1,5 @@
 import React from 'react'
-import { Label } from '../../components/form/label'
+import { Label } from '../../../components/form/label'
 
 describe('<Label />', () => {
   const component = shallow(<Label />)
