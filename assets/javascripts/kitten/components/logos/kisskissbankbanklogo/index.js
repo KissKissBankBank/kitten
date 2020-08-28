@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { computeFromRatio } from '../../helpers/utils/ratio'
+import { computeFromRatio } from '../../../helpers/utils/ratio'
 
 export const KissKissBankBankLogo = ({
   color,

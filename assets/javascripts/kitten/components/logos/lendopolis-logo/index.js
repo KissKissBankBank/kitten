@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { pxToRem } from '../../helpers/utils/typography'
-import { computeFromRatio } from '../../helpers/utils/ratio'
+import { computeFromRatio } from '../../../helpers/utils/ratio'
 
 export const LendopolisLogo = ({
   primaryColor,

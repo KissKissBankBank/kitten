@@ -1,5 +1,5 @@
 import React from 'react'
-import { TabBar } from './tab-bar'
+import { TabBar } from './index'
 
 describe('<TabBar />', () => {
   const component = shallow(

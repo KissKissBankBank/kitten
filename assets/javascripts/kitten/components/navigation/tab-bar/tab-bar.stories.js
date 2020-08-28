@@ -1,5 +1,5 @@
 import React from 'react'
-import { TabBar } from './tab-bar'
+import { TabBar } from './index'
 
 export default {
   component: TabBar,
