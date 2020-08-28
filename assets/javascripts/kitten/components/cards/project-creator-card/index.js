@@ -1,12 +1,12 @@
 import React from 'react'
 import classNames from 'classnames'
-import { card } from '../../hoc/card'
-import { Marger } from '../../components/layout/marger'
-import { ClockIcon } from '../../components/icons/clock-icon'
-import { Paragraph } from '../../components/typography/paragraph'
-import { ButtonIcon } from '../../components/buttons/button-icon'
-import { Separator } from '../../components/layout/separator'
-import { ArrowIcon } from '../../components/icons/arrow-icon'
+import { card } from '../../../hoc/card'
+import { Marger } from '../../../components/layout/marger'
+import { ClockIcon } from '../../../components/icons/clock-icon'
+import { Paragraph } from '../../../components/typography/paragraph'
+import { ButtonIcon } from '../../../components/buttons/button-icon'
+import { Separator } from '../../../components/layout/separator'
+import { ArrowIcon } from '../../../components/icons/arrow-icon'
 
 class ProjectCreatorCardComponent extends React.Component {
   renderDate() {

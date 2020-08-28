@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { BackerCard } from '../../components/cards/backer-card'
+import { BackerCard } from '../../../components/cards/backer-card'
 
 describe('<BackerCard />', () => {
   let component

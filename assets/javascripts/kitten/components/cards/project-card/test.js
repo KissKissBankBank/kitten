@@ -1,12 +1,12 @@
 import React from 'react'
-import { ProjectCard } from '../../components/cards/project-card'
-import { ButtonImage } from '../../components/buttons/button-image'
-import { Paragraph } from '../../components/typography/paragraph'
-import { IconBadge } from '../../components/notifications/icon-badge'
-import { Title } from '../../components/typography/title'
-import { Progress } from '../../components/meters/progress'
-import { LockIcon } from '../../components/icons/lock-icon'
-import { TagList } from '../../components/lists/tag-list'
+import { ProjectCard } from '../../../components/cards/project-card'
+import { ButtonImage } from '../../../components/buttons/button-image'
+import { Paragraph } from '../../../components/typography/paragraph'
+import { IconBadge } from '../../../components/notifications/icon-badge'
+import { Title } from '../../../components/typography/title'
+import { Progress } from '../../../components/meters/progress'
+import { LockIcon } from '../../../components/icons/lock-icon'
+import { TagList } from '../../../components/lists/tag-list'
 
 describe('<ProjectCard />', () => {
   describe('by default', () => {

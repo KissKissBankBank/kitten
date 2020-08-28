@@ -1,5 +1,5 @@
 import React from 'react'
-import { CrowdfundingCard } from '../../components/cards/crowdfunding-card'
+import { CrowdfundingCard } from '../../../components/cards/crowdfunding-card'
 
 export const ArticleCard = ({ articleTitle, articleSubTitle, ...props }) => (
   <CrowdfundingCard

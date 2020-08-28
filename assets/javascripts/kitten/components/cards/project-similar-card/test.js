@@ -1,10 +1,10 @@
 import React from 'react'
-import { SimilarProjectCard } from '../../components/cards/project-similar-card'
-import { Title } from '../../components/typography/title'
-import { Paragraph } from '../../components/typography/paragraph'
-import { TagList } from '../../components/lists/tag-list'
-import { LockIcon } from '../../components/icons/lock-icon'
-import { Loader } from '../../components/loaders/loader'
+import { SimilarProjectCard } from '../../../components/cards/project-similar-card'
+import { Title } from '../../../components/typography/title'
+import { Paragraph } from '../../../components/typography/paragraph'
+import { TagList } from '../../../components/lists/tag-list'
+import { LockIcon } from '../../../components/icons/lock-icon'
+import { Loader } from '../../../components/loaders/loader'
 
 describe('<SimilarProjectCard />', () => {
   describe('by default', () => {

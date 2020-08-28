@@ -1,6 +1,6 @@
 import React from 'react'
-import { RewardCard } from '../../components/cards/reward-card'
-import { Deprecated } from '../../helpers/utils/deprecated'
+import { RewardCard } from '../../../components/cards/reward-card'
+import { Deprecated } from '../../../helpers/utils/deprecated'
 
 export const ContributionCard = props => {
   const message = `You can use the RewardComponent instead.

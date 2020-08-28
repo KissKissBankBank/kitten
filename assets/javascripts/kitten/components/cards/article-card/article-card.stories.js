@@ -1,6 +1,6 @@
 import React from 'react'
 import { text } from '@storybook/addon-knobs'
-import { ArticleCard as _ArticleCard } from './article-card'
+import { ArticleCard as _ArticleCard } from './index'
 
 export default {
   title: 'Cards/ArticleCard',

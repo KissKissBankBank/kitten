@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import { text } from '@storybook/addon-knobs'
-import { BackerCard } from './backer-card'
-import { Container } from '../../components/grid/container'
-import { Grid, GridCol } from '../../components/grid/grid'
-import { Marger } from '../../components/layout/marger'
-import { Text } from '../../components/typography/text'
+import { BackerCard } from './index'
+import { Container } from '../../../components/grid/container'
+import { Grid, GridCol } from '../../../components/grid/grid'
+import { Marger } from '../../../components/layout/marger'
+import { Text } from '../../../components/typography/text'
 
 const Description = () => (
   <Fragment>

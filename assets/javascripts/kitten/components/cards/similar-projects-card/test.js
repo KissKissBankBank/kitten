@@ -1,6 +1,6 @@
 import React from 'react'
-import { SimilarProjectsCard } from '../../components/cards/similar-projects-card'
-import { SimilarProjectCard } from '../../components/cards/project-similar-card'
+import { SimilarProjectsCard } from '../../../components/cards/similar-projects-card'
+import { SimilarProjectCard } from '../../../components/cards/project-similar-card'
 
 describe('<SimilarProjectsCard />', () => {
   const emptyArray = []

@@ -1,6 +1,6 @@
 import React from 'react'
-import { ProjectCreatorCard } from '../../components/cards/project-creator-card'
-import { ClockIcon } from '../../components/icons/clock-icon'
+import { ProjectCreatorCard } from '../../../components/cards/project-creator-card'
+import { ClockIcon } from '../../../components/icons/clock-icon'
 
 describe('<ProjectCreatorCard />', () => {
   describe('by default', () => {
