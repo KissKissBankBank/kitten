@@ -1,19 +1,22 @@
 #!/usr/bin/env bash
-if [ -z "$1" ]
-  then
-    echo "You need to supply version (patch|minor|major or specific tag)"
-    exit
-fi
-echo "You're about to release the next version of kitten (${1})"
+
+PACKAGE_VERSION=$(cat package.json \
+  | grep version \
+  | head -1 \
+  | awk -F: '{ print $2 }' \
+  | sed 's/[",]//g' \
+  | tr -d '[[:space:]]')
+
+echo "You're about to release the next version of kitten $PACKAGE_VERSION"
 bin/install
 npm test
-git checkout -b release/v$1
+git checkout -b release/v${PACKAGE_VERSION}
 npm run build:js
 npm run build:utilities
 git add .
-git commit -m "add built js files for ${1}"
-npm --no-git-tag-version version $1
+git commit -m "add built js files for $PACKAGE_VERSION"
+npm --no-git-tag-version version ${PACKAGE_VERSION}
 git add .
-git commit -m "bump kitten version to $1"
-git push origin release/v$1
-echo "Done! You can now create a release PR: https://github.com/KissKissBankBank/kitten/compare/release/v${1}?expand=1 😸"
+git commit -m "bump kitten version to $PACKAGE_VERSION"
+git push origin release/v${PACKAGE_VERSION}
+echo "Done! You can now create a release PR: https://github.com/KissKissBankBank/kitten/compare/release/v${PACKAGE_VERSION}?expand=1 😸"
