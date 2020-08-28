@@ -4,6 +4,9 @@ export { VisuallyHidden } from './components/accessibility/visually-hidden'
 // Accordeon
 export { Accordeon } from './components/accordeon'
 
+// Avatar
+export { AvatarWithTextAndBadge } from './components/avatar/avatar-with-text-and-badge'
+
 // Box
 export { DocLinkBox } from './components/box/doc-link-box'
 export { InformationBox } from './components/box/information-box'
@@ -31,6 +34,8 @@ export {
   PinterestButtonIcon,
 } from './components/buttons/social-button-icon'
 export { TagButton } from './components/buttons/tag-button'
+export { ButtonImageWithText } from './components/buttons/button-image-with-text'
+export { CheckableButton } from './components/buttons/checkable-button'
 
 // Cards
 export { SimpleCard } from './components/cards/simple-card'
@@ -49,6 +54,9 @@ export { TeamCard } from './components/cards/team-card'
 export { Triptych } from './components/cards/triptych'
 export { VerticalCardWithAction } from './components/cards/vertical-card-with-action'
 export { VerticalCard } from './components/cards/vertical-card'
+export { ClickableCard } from './components/cards/clickable-card'
+export { CrowdfundingCard } from './components/cards/crowdfunding-card'
+export { EngagementCard } from './components/cards/engagement-card'
 
 // Carousel
 export { Carousel } from './components/carousel/carousel'
@@ -62,6 +70,7 @@ export { Comment } from './components/comments/comment'
 
 // Date-picker
 export { DatePicker } from './components/date-picker'
+export { StandaloneRangeDatePicker } from './components/date-picker/standalone-range'
 
 // Details
 export { Details } from './components/details'
@@ -155,15 +164,13 @@ export { Timeline } from './components/lists/timeline'
 export { LoaderWithParagraph } from './components/loaders/loader-with-paragraph'
 export { Loader } from './components/loaders/loader'
 
-// Media
-export { EmbedPlayer } from './components/media/embed-player'
-
 // Menus
 export { HeaderMenu } from './components/menus/header-menu'
 
 // Meters
 export { CounterBlock } from './components/meters/counter-block'
 export { Progress } from './components/meters/progress'
+export { ProgressRing } from './components/meters/progress-ring'
 
 // Modals
 export { Modal } from './components/modals/modal'
@@ -211,6 +218,14 @@ export {
 } from './components/steppers/stepper-icon'
 export { Stepper } from './components/steppers/stepper'
 
+// Tables
+export { DoubleEntryTable } from './components/tables/double-entry-table'
+export { ListTable } from './components/tables/list-table'
+export { SingleEntryTable } from './components/tables/single-entry-table'
+
+// Text Copy
+export { TextCopy } from './components/text-copy'
+
 // Tooltips
 export { QuestionMarkWithTooltip } from './components/tooltips/question-mark-with-tooltip'
 export { StaticTooltip } from './components/tooltips/static-tooltip'
@@ -229,11 +244,15 @@ export { Paragraph } from './components/typography/paragraph'
 export { SupTitle } from './components/typography/sup-title'
 export { Text } from './components/typography/text'
 export { Title } from './components/typography/title'
+export { TitleWithStroke } from './components/typography/title-with-stroke'
 
 // Uploaders
+export { BasicUploader } from './components/uploaders/basic-uploader'
+export { DocumentManager } from './components/uploaders/document-manager'
 export { SimpleUploader } from './components/uploaders/simple-uploader'
 export { Uploader } from './components/uploaders/uploader'
 
 // Videos
 export { Video } from './components/videos/video'
 export { GifVideo } from './components/videos/gif-video'
+export { EmbedPlayer } from './components/videos/embed-player'
