@@ -410,6 +410,81 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 </div>
 `;
 
+exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
+<div
+  className="sc-ifAKCX jlBsuI k-Carousel"
+>
+  <div
+    className="k-Carousel__inner"
+    onScroll={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+  >
+    <div
+      className="k-Carousel__inner__pageContainer k-Carousel__inner__pageContainer--isActivePage k-Carousel__inner__pageContainer--hasBeenViewed"
+      onClick={[Function]}
+    >
+      <div
+        className="k-Carousel__page k-Carousel__page--isActivePage k-Carousel__page--hasBeenViewed"
+      >
+        <div
+          className="k-Carousel__page__item"
+        >
+          <div
+            className="k-ProjectCard k-Card k-Card--light"
+            href={null}
+            title={null}
+          >
+            <div
+              className="k-ProjectCard__grid"
+            >
+              <div
+                className="sc-EHOje ejmMxo k-ProjectCard__grid--flex"
+              >
+                <span
+                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+                  tabIndex={null}
+                >
+                  <img
+                    alt=""
+                    className="k-ButtonImage__img"
+                    src={null}
+                  />
+                </span>
+                <p
+                  className="k-Paragraph k-ProjectCard__grid--flex__item-fluid k-u-margin-left-single k-u-margin-right-single k-Paragraph--quaternary k-Paragraph--withoutMargin k-Paragraph--normalLineHeight"
+                >
+                  <span
+                    className="k-u-weight-regular"
+                  >
+                    Name
+                  </span>
+                </p>
+              </div>
+              <div
+                className="sc-EHOje jtHUlo k-ProjectCard__grid--flex"
+              >
+                <p
+                  className="sc-bZQynM dWuFfX k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                >
+                  A
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="k-Carousel__page__item"
+        />
+        <div
+          className="k-Carousel__page__item"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
   className="sc-ifAKCX fFVeAE k-Carousel"

@@ -6,10 +6,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Create `CheckList` component.
 
+## [2.88.2] - 2020-08-27
+
+Fix :
+- Fix `exportVisibilityProps` bug on `Carousel`.
+
 ## [2.88.1] - 2020-08-27
 
 Fix:
-  - Fix `parseHtml` returning encoded error when using `replace()` on a
+- Fix `parseHtml` returning encoded error when using `replace()` on a
   non `string` component.
 
 ## [2.88.0] - 2020-08-27
