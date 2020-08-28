@@ -143,6 +143,47 @@ export const Default = () => (
   </StoryContainer>
 )
 
+export const WithSpecificColNumber = () => (
+  <StoryContainer>
+    <NextCarousel
+      tinyButtons={boolean('Button tiny size', false)}
+      itemMinWidth={0}
+      itemsPerPage={number('itemsPerPage', 1)}
+      baseItemMarginBetween={number('baseItemMarginBetween', CONTAINER_PADDING)}
+      paginationPosition={object('paginationPosition', paginationPosition)}
+      showPageSquares={boolean('showPageSquares', false)}
+      loop={boolean('loop', false)}
+    >
+      {data.map(item => (
+        <CrowdfundingCard
+          key={`CrowdfundingCard${item.title}`}
+          href="#"
+          imageProps={{
+            src: item.imageSrc,
+            alt: 'Image alt',
+            backgroundColor: '#d8d8d8',
+            color: '#333',
+          }}
+          avatarProps={{
+            src: item.thumbSrc,
+            alt: 'Avatar alt',
+          }}
+          ownerTitle="Title"
+          ownerDescription="Custom description"
+          titleProps={{
+            tag: 'h4',
+          }}
+          cardTitle={item.title}
+          cardSubTitle="Custom subtitle"
+          titlesMinHeight
+          progress="84"
+          state="Custom state"
+        />
+      ))}
+    </NextCarousel>
+  </StoryContainer>
+)
+
 export const InNestedGrid = () => (
   <InNestedGridStoryContainer>
     <NextCarousel

@@ -13,7 +13,7 @@ var _htmlToReact = _interopRequireDefault(require("html-to-react"));
 var parseHtml = function parseHtml(value) {
   if (!value) return; // We need to escape "<3" common emoji
 
-  var encodedValue = value.replace('<3', '&lt;3');
+  var encodedValue = typeof value === 'string' ? value.replace('<3', '&lt;3') : value;
   return new _htmlToReact.default.Parser().parse("<span>".concat(encodedValue, "</span>")).props.children;
 };
 
