@@ -1,6 +1,6 @@
 import React from 'react'
-import { domElementHelper } from '../../helpers/dom/element-helper'
-import { TourPopover } from '../../components/tours/tour-popover'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
+import { TourPopover } from '../../../components/tours/tour-popover'
 
 export class TourStep extends React.Component {
   constructor(props) {

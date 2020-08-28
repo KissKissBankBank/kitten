@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { domElementHelper } from '../../helpers/dom/element-helper'
-import { TourStep } from '../../components/tours/tour-step'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
+import { TourStep } from '../../../components/tours/tour-step'
 
 export class Tour extends Component {
   constructor(props) {

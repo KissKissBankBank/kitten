@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticTooltip } from './static-tooltip'
+import { StaticTooltip } from './index'
 
 describe('<StaticTooltip />', () => {
   describe('by default', () => {

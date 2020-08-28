@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { Marger } from '../../components/layout/marger'
+import { Marger } from '../../../components/layout/marger'
 
 export class TooltipNew extends Component {
   renderArrow() {
