@@ -1,3 +1,1 @@
-import { Button } from './deprecated/index.js'
-
-export { Button }
+export { Button } from './deprecated/index.js'
