@@ -24,19 +24,19 @@ const List = styled.ul`
       text-decoration: line-through;
     }
 
-    &::before {
+    &:before {
       content: '●';
       color: ${COLORS.line2};
       padding-right: ${pxToRem(10)};
     }
 
-    &::last {
+    &:last-child {
       margin-bottom: 0;
     }
   }
 
   .k-CheckList__item--done {
-    &::before {
+    &:before {
       color: ${COLORS.valid};
     }
   }
