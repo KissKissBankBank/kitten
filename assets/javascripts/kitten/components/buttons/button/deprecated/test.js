@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../../components/buttons/button'
+import { Button } from '../../../../components/buttons/button'
 
 describe('Button with default props', () => {
   const component = shallow(<Button />)

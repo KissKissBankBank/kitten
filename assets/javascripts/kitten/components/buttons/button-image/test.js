@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonImage } from '../../components/buttons/button-image'
+import { ButtonImage } from '../../../components/buttons/button-image'
 
 describe('<ButtonImage />', () => {
   describe('by default', () => {

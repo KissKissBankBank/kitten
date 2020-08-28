@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
-import { CloseButton } from '../../components/buttons/close-button'
-import { ButtonIcon } from '../../components/buttons/button-icon'
+import { CloseButton } from '../../../components/buttons/close-button'
+import { ButtonIcon } from '../../../components/buttons/button-icon'
 
 describe('<CloseButton />', () => {
   describe('by default', () => {

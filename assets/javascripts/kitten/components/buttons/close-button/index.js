@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import { ButtonIcon } from '../../components/buttons/button-icon'
-import { CrossIcon } from '../../components/icons/cross-icon'
+import { ButtonIcon } from '../../../components/buttons/button-icon'
+import { CrossIcon } from '../../../components/icons/cross-icon'
 
 export class CloseButton extends Component {
   render() {

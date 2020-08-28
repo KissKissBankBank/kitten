@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { ButtonImageWithTextAndBadge } from '../../components/buttons/button-image-with-text-and-badge'
+import { ButtonImageWithTextAndBadge } from '../../../components/buttons/button-image-with-text-and-badge'
 
 describe('<ButtonImageWithTextAndBadge />', () => {
   it('default snapshot', () => {

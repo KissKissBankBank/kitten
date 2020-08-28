@@ -1,8 +1,8 @@
 import React from 'react'
-import { Button } from '../../components/buttons/button'
-import { FacebookIcon } from '../../components/icons/facebook-icon'
-import { TwitterIcon } from '../../components/icons/twitter-icon'
-import { LinkedinIcon } from '../../components/icons/linkedin-icon'
+import { Button } from '../../../components/buttons/button'
+import { FacebookIcon } from '../../../components/icons/facebook-icon'
+import { TwitterIcon } from '../../../components/icons/twitter-icon'
+import { LinkedinIcon } from '../../../components/icons/linkedin-icon'
 
 export const FacebookButtonIconWords = ({ children, ...props }) => (
   <Button icon size="big" modifier="facebook" {...props}>

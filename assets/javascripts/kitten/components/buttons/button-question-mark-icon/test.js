@@ -1,7 +1,7 @@
 import React from 'react'
-import { QuestionMarkIcon } from '../../components/icons/question-mark-icon'
-import { ButtonIcon } from '../../components/buttons/button-icon'
-import { ButtonQuestionMarkIcon } from '../../components/buttons/button-question-mark-icon'
+import { QuestionMarkIcon } from '../../../components/icons/question-mark-icon'
+import { ButtonIcon } from '../../../components/buttons/button-icon'
+import { ButtonQuestionMarkIcon } from '../../../components/buttons/button-question-mark-icon'
 
 describe('ButtonQuestionMarkIcon />', () => {
   describe('by default', () => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import COLORS from '../../constants/colors-config'
+import COLORS from '../../../constants/colors-config'
 
 const NotificationBadge = ({ notifications, badgeColor }) => (
   <span
