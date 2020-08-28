@@ -16,7 +16,7 @@ git push origin ${REALEASE_TAG}
 npm publish
 
 echo "Done! kitten v$PACKAGE_VERSION is published! 🚀"
-echo "I can use it alteady with npm install @kisskissbankbank/kitten"
+echo "I can use it already with npm install @kisskissbankbank/kitten"
 
 npm run deploy-storybook
 
