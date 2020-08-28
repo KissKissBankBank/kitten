@@ -42,6 +42,12 @@ const List = styled.ul`
   }
 `
 
+const a11yProps = done => {
+  return {
+    'aria-label': done ? 'Élément validé' : 'Élément non validé',
+  }
+}
+
 export const CheckList = ({ children, ...props }) => {
   return <List {...props}>{children}</List>
 }
@@ -53,6 +59,7 @@ CheckList.Item = ({ done, children, className, ...props }) => {
         'k-CheckList__item--done': done,
       })}
       {...props}
+      {...a11yProps(done)}
     >
       {done ? <span className="strike">{children}</span> : children}
     </li>

@@ -11,6 +11,7 @@ exports[`<LinkBox /> with CheckList.Item matches with snapshot 1`] = `
   className="sc-bdVaJa dTqfnJ"
 >
   <li
+    aria-label="Élément validé"
     className="k-CheckList__item k-CheckList__item--done"
   >
     <span
@@ -20,6 +21,7 @@ exports[`<LinkBox /> with CheckList.Item matches with snapshot 1`] = `
     </span>
   </li>
   <li
+    aria-label="Élément non validé"
     className="k-CheckList__item"
   >
     Task #2
