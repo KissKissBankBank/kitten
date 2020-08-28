@@ -1,5 +1,5 @@
 import React from 'react'
-import { Uploader } from './uploader'
+import { Uploader } from './index'
 import Dropzone from 'react-dropzone'
 
 const CustomTheme = () => <div className="custom-theme" />

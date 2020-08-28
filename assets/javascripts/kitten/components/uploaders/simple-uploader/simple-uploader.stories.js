@@ -1,7 +1,7 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import { text, boolean, number } from '@storybook/addon-knobs'
-import { SimpleUploader } from './simple-uploader'
+import { SimpleUploader } from './index'
 
 export default {
   title: 'Uploaders/SimpleUploader',

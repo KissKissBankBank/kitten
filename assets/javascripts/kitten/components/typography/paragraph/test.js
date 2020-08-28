@@ -1,5 +1,5 @@
 import React from 'react'
-import { Paragraph } from './paragraph'
+import { Paragraph } from './index'
 
 describe('Paragraph with default props', () => {
   const defaultComponent = shallow(<Paragraph />)

@@ -1,5 +1,5 @@
 import React from 'react'
-import { SupTitle } from './sup-title'
+import { SupTitle } from './index'
 
 describe('<SupTitle />', () => {
   describe('by default', () => {

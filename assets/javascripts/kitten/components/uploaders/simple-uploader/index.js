@@ -1,8 +1,8 @@
 import React from 'react'
-import { Uploader } from '../../components/uploaders/uploader'
-import { Button } from '../../components/buttons/button'
-import { ButtonIcon } from '../../components/buttons/button-icon'
-import { CrossIcon } from '../../components/icons/cross-icon'
+import { Uploader } from '../../../components/uploaders/uploader'
+import { Button } from '../../../components/buttons/button'
+import { ButtonIcon } from '../../../components/buttons/button-icon'
+import { CrossIcon } from '../../../components/icons/cross-icon'
 
 const Theme = props => {
   const handleClick = props.disabled ? null : props.onCancel
