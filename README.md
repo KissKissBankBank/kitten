@@ -184,11 +184,12 @@ $ npm login
 - Run this command:
 
 ```sh
-bin/release NEW_VERSION
+bin/release
 ```
 
 - Follow the link to create the pull request on Github.
-- Announce the release on KissKissBankBank's #kit-ui Slack channel with the
+- Announce the release on KissKissBankBank's
+  [#kit-ui Slack channel](slack://channel?id=C1C04G41Y&team=T03M237SF) with the
   related CHANGELOG.
 
 ### Release!
