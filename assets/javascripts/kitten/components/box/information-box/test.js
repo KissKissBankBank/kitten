@@ -1,6 +1,6 @@
 import React from 'react'
-import { Title } from '../../components/typography/title'
-import { InformationBox } from '../../components/box/information-box'
+import { Title } from '../../../components/typography/title'
+import { InformationBox } from '../../../components/box/information-box'
 
 describe('<InformationBox />', () => {
   describe('by default', () => {

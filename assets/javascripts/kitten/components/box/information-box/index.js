@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { Title } from '../../components/typography/title'
-import { Marger } from '../../components/layout/marger'
+import { Title } from '../../../components/typography/title'
+import { Marger } from '../../../components/layout/marger'
 
 export class InformationBox extends Component {
   render() {
