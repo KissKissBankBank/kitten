@@ -235,3 +235,4 @@ export { Uploader } from './components/uploaders/uploader'
 
 // Videos
 export { Video } from './components/videos/video'
+export { GifVideo } from './components/videos/gif-video'
