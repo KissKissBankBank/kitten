@@ -1,5 +1,5 @@
 import React from 'react'
-import { VerticalStroke } from '../../components/layout/vertical-stroke'
+import { VerticalStroke } from '../../../components/layout/vertical-stroke'
 
 describe('<VerticalStroke />', () => {
   describe('by default', () => {

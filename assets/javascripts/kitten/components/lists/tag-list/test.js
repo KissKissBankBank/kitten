@@ -1,7 +1,7 @@
 import React from 'react'
-import { TagList } from '../../components/lists/tag-list'
-import { TypologyTagIcon } from '../../components/icons/typology-tag-icon'
-import { InstrumentTagIcon } from '../../components/icons/instrument-tag-icon'
+import { TagList } from '../../../components/lists/tag-list'
+import { TypologyTagIcon } from '../../../components/icons/typology-tag-icon'
+import { InstrumentTagIcon } from '../../../components/icons/instrument-tag-icon'
 
 describe('<TagList />', () => {
   const items = [

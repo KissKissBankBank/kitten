@@ -1,13 +1,13 @@
 import React from 'react'
 import Cropper from 'react-cropper'
-import { Marger } from '../../components/layout/marger'
-import { Grid, GridCol } from '../../components/grid/grid'
-import { Text } from '../../components/typography/text'
-import { Label } from '../../components/form/label'
-import { Paragraph } from '../../components/typography/paragraph'
-import { SimpleUploader } from '../../components/uploaders/simple-uploader'
-import { Slider } from '../../components/form/slider'
-import { domElementHelper } from '../../helpers/dom/element-helper'
+import { Marger } from '../../../components/layout/marger'
+import { Grid, GridCol } from '../../../components/grid/grid'
+import { Text } from '../../../components/typography/text'
+import { Label } from '../../../components/form/label'
+import { Paragraph } from '../../../components/typography/paragraph'
+import { SimpleUploader } from '../../../components/uploaders/simple-uploader'
+import { Slider } from '../../../components/form/slider'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
 
 export class ImageCropper extends React.Component {
   constructor(props) {

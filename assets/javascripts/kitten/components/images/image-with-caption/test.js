@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageWithCaption } from '../../components/images/image-with-caption'
+import { ImageWithCaption } from '../../../components/images/image-with-caption'
 
 describe('<ImageWithCaption />', () => {
   describe('by default', () => {

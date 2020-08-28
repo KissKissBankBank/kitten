@@ -1,5 +1,5 @@
 import React from 'react'
-import { Line } from '../../components/layout/line'
+import { Line } from '../../../components/layout/line'
 
 describe('<Line />', () => {
   describe('by default', () => {

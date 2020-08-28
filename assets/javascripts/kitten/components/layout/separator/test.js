@@ -1,5 +1,5 @@
 import React from 'react'
-import { Separator } from '../../components/layout/separator'
+import { Separator } from '../../../components/layout/separator'
 
 describe('<Separator />', () => {
   describe('by default', () => {

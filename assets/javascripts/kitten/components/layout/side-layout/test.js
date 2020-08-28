@@ -1,5 +1,5 @@
 import React from 'react'
-import { SideLayout } from '../../components/layout/side-layout'
+import { SideLayout } from '../../../components/layout/side-layout'
 
 describe('<SideLayout />', () => {
   describe('by default', () => {

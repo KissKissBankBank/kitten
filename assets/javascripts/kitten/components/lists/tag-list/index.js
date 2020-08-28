@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { TypologyTagIcon } from '../../components/icons/typology-tag-icon'
+import { TypologyTagIcon } from '../../../components/icons/typology-tag-icon'
 
 export class TagList extends React.Component {
   constructor(props) {

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { ScreenConfig } from '../../constants/screen-config'
-import TYPOGRAPHY from '../../constants/typography-config'
+import { ScreenConfig } from '../../../constants/screen-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
 import isStringANumber from 'is-string-a-number'
-import { upcaseFirst } from '../../helpers/utils/string'
+import { upcaseFirst } from '../../../helpers/utils/string'
 
 export class Marger extends Component {
   static propTypes = {

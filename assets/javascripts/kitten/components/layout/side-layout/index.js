@@ -5,8 +5,8 @@ import {
   SideGrid,
   SideGridContent,
   SideGridAside,
-} from '../../components/grid/side-grid'
-import { Grid, GridCol } from '../../components/grid/grid'
+} from '../../../components/grid/side-grid'
+import { Grid, GridCol } from '../../../components/grid/grid'
 
 export class SideLayout extends React.Component {
   constructor(props) {

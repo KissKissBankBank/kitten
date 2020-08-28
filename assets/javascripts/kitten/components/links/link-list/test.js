@@ -1,5 +1,5 @@
 import React from 'react'
-import { LinkList } from '../../components/links/link-list'
+import { LinkList } from '../../../components/links/link-list'
 
 describe('<LinkList />', () => {
   const items = [

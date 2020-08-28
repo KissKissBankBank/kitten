@@ -1,8 +1,8 @@
 import React from 'react'
 import sinon from 'sinon'
-import { ImageCropper } from '../../components/images/image-cropper'
+import { ImageCropper } from '../../../components/images/image-cropper'
 import Cropper from 'react-cropper'
-import { SimpleUploader } from '../../components/uploaders/simple-uploader'
+import { SimpleUploader } from '../../../components/uploaders/simple-uploader'
 
 describe('<ImageCropper />', () => {
   const sandbox = sinon.createSandbox()

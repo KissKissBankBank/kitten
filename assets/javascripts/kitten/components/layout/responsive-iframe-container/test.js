@@ -1,5 +1,5 @@
 import React from 'react'
-import { ResponsiveIframeContainer } from '../../components/layout/responsive-iframe-container'
+import { ResponsiveIframeContainer } from '../../../components/layout/responsive-iframe-container'
 
 describe('<ResponsiveIframeContainer />', () => {
   describe('by default', () => {
