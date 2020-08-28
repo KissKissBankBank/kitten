@@ -8,7 +8,7 @@ export default {
 }
 
 export const ArticleCard = () => (
-  <ArticleCard
+  <_ArticleCard
     articleTitle={text('Article Title', 'Article Title')}
     articleSubTitle={text('Article SubTitle', 'Article SubTitle')}
   />

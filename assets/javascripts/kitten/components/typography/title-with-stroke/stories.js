@@ -1,5 +1,5 @@
 import React from 'react'
-import { text, boolean, select } from '@storybook/addon-knobs'
+import { text, boolean, select, color } from '@storybook/addon-knobs'
 import { TitleWithStroke } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
