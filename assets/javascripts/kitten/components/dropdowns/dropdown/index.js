@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import emitter from '../../helpers/utils/emitter'
-import { DropdownButton } from '../../components/dropdowns/dropdown-button'
-import domElementHelper from '../../helpers/dom/element-helper'
+import emitter from '../../../helpers/utils/emitter'
+import { DropdownButton } from '../../../components/dropdowns/dropdown-button'
+import domElementHelper from '../../../helpers/dom/element-helper'
 
 export class Dropdown extends React.Component {
   constructor(props) {
@@ -20,8 +20,6 @@ export class Dropdown extends React.Component {
   }
 
   componentDidMount() {
-    const dropdown = this
-
     if (domElementHelper.canUseDom()) {
       // Update dropdown content position after DOM is build.
       let referenceElementHeight = this.getReferenceElementHeight()
@@ -107,6 +105,7 @@ export class Dropdown extends React.Component {
 
   getReferenceElementHeight() {
     let referenceElement = this.getReferenceElement()
+    if (!referenceElement) return
 
     return domElementHelper.getComputedHeight(
       referenceElement,
@@ -131,6 +130,7 @@ export class Dropdown extends React.Component {
   // Component listener callbacks
 
   revertHandleClickOnLinks() {
+    if (!this.refs.dropdownContent) return
     const links = this.refs.dropdownContent.getElementsByTagName('a')
 
     Array.prototype.forEach.call(links, link => {
@@ -139,6 +139,7 @@ export class Dropdown extends React.Component {
   }
 
   handleClickOnLinks() {
+    if (!this.refs.dropdownContent) return
     const links = this.refs.dropdownContent.getElementsByTagName('a')
 
     Array.prototype.forEach.call(links, link => {
@@ -260,10 +261,10 @@ Dropdown.defaultProps = {
   closeEvents: [],
 
   // Called when one of the `refreshEvents` is triggered.
-  onPositionUpdate: function() {},
+  onPositionUpdate: function () {},
 
   // Called when the dropdown is opened or closed
-  onToggle: function() {},
+  onToggle: function () {},
 }
 
 // DEPRECATED: do not use default export.

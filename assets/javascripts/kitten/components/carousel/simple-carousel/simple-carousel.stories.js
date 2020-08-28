@@ -1,5 +1,5 @@
 import React from 'react'
-import { KarlSimpleCarousel } from '../../karl/carousel/simple-carousel'
+import { KarlSimpleCarousel } from '../../../karl/carousel/simple-carousel'
 
 export default {
   title: 'Carousel/SimpleCarousel',

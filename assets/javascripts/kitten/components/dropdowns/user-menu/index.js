@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { Dropdown } from '../../components/dropdowns/dropdown'
-import { ButtonImageWithTextAndBadge } from '../../components/buttons/button-image-with-text-and-badge'
-import { NavList } from '../../components/lists/nav-list'
-import domElementHelper from '../../helpers/dom/element-helper'
-import emitter from '../../helpers/utils/emitter'
-import { TOGGLE_DROPDOWN_EVENT } from '../../helpers/dom/events'
+import { Dropdown } from '../../../components/dropdowns/dropdown'
+import { ButtonImageWithTextAndBadge } from '../../../components/buttons/button-image-with-text-and-badge'
+import { NavList } from '../../../components/lists/nav-list'
+import domElementHelper from '../../../helpers/dom/element-helper'
+import emitter from '../../../helpers/utils/emitter'
+import { TOGGLE_DROPDOWN_EVENT } from '../../../helpers/dom/events'
 
 export class UserMenu extends Component {
   constructor(props) {

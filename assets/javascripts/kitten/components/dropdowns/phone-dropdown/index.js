@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Dropdown } from '../../components/dropdowns/dropdown'
-import { DropdownButton } from '../../components/dropdowns/dropdown-button'
-import domElementHelper from '../../helpers/dom/element-helper'
-import emitter from '../../helpers/utils/emitter'
+import { Dropdown } from '../../../components/dropdowns/dropdown'
+import { DropdownButton } from '../../../components/dropdowns/dropdown-button'
+import domElementHelper from '../../../helpers/dom/element-helper'
+import emitter from '../../../helpers/utils/emitter'
 import classNames from 'classnames'
-import { TOGGLE_DROPDOWN_EVENT } from '../../helpers/dom/events'
+import { TOGGLE_DROPDOWN_EVENT } from '../../../helpers/dom/events'
 
 export class PhoneDropdown extends React.Component {
   constructor(props) {
@@ -60,10 +60,12 @@ export class PhoneDropdown extends React.Component {
   }
 
   getDropdownContentElement() {
+    if (!this.refs.dropdown) return
     return this.refs.dropdown.refs.dropdownContent
   }
 
   getDropdownButtonElement() {
+    if (!this.refs.dropdownButton) return
     return this.refs.dropdownButton.refs.dropdownButton
   }
 
