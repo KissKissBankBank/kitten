@@ -74,7 +74,7 @@ CheckList.Item.PropTypes = {
   }),
 }
 
-CheckList.defaultProps = {
+CheckList.Item.defaultProps = {
   done: false,
   a11yText: {
     default: 'Élément non validé',
