@@ -994,7 +994,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
         className="k-Card__image k-CrowdfundingCard__image__image testClass"
         loop={false}
         muted={false}
-        poster="#image"
+        poster={null}
       >
         <source
           src="#videoFile.mp4"

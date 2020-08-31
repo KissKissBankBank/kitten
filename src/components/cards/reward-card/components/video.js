@@ -17,15 +17,13 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _gifVideo = require("../../../../components/videos/gif-video");
+
 var RewardCardVideo = function RewardCardVideo(_ref) {
   var className = _ref.className,
       disabled = _ref.disabled,
       others = (0, _objectWithoutProperties2.default)(_ref, ["className", "disabled"]);
-  return /*#__PURE__*/_react.default.createElement("video", (0, _extends2.default)({
-    loop: true,
-    muted: true,
-    autoPlay: true
-  }, others, {
+  return /*#__PURE__*/_react.default.createElement(_gifVideo.GifVideo, (0, _extends2.default)({}, others, {
     className: (0, _classnames.default)('k-RewardCard__video', className, {
       'k-RewardCard__image--disabled': disabled
     })

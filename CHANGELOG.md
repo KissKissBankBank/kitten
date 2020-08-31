@@ -4,14 +4,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.89.0] - 2020-08-28
+
+Features:
+- Add `GifVideo` component that waits until sources fail then loads `poster`.
+- Create `CheckList` component.
+
 ## [2.88.2] - 2020-08-27
 
+Fix :
 - Fix `exportVisibilityProps` bug on `Carousel`.
 
 ## [2.88.1] - 2020-08-27
 
 Fix:
-  - Fix `parseHtml` returning encoded error when using `replace()` on a
+- Fix `parseHtml` returning encoded error when using `replace()` on a
   non `string` component.
 
 ## [2.88.0] - 2020-08-27

@@ -4,6 +4,7 @@ import { Text } from '../../../../components/typography/text'
 import { ButtonImage } from '../../../../components/buttons/button-image'
 import COLORS from '../../../../constants/colors-config'
 import classNames from 'classnames'
+import { GifVideo } from '../../../../components/videos/gif-video'
 
 const Image = ({
   imageContainerBackground,
@@ -44,10 +45,7 @@ const Image = ({
         />
       )}
       {!loading && videoSources.length > 0 && (
-        <video
-          autoPlay
-          loop
-          muted
+        <GifVideo
           poster={otherImageProps.src}
           {...videoProps}
           className={classNames(
@@ -67,7 +65,7 @@ const Image = ({
           {videoSources.map(sourceProps => (
             <source key={`video_source_${sourceProps.src}`} {...sourceProps} />
           ))}
-        </video>
+        </GifVideo>
       )}
     </div>
 
