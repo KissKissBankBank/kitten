@@ -66,7 +66,7 @@ CheckList.Item = ({ done, children, a11yText, className, ...props }) => {
   )
 }
 
-CheckList.Item.PropTypes = {
+CheckList.Item.propTypes = {
   done: PropTypes.bool,
   a11yText: PropTypes.shape({
     default: PropTypes.string,
