@@ -1,16 +1,9 @@
 import React from 'react'
+import { Button } from '../../../components/buttons/button/button'
 import { QuestionMarkIcon } from '../../../components/icons/question-mark-icon'
-import { ButtonIcon } from '../../../components/buttons/button-icon'
 
 export const ButtonQuestionMarkIcon = props => (
-  <ButtonIcon
-    className="k-ButtonIcon--tooltip--nano"
-    modifier="helium"
-    size="nano"
-    type="button"
-    rounded
-    {...props}
-  >
-    <QuestionMarkIcon className="k-ButtonIcon__svg" />
-  </ButtonIcon>
+  <Button modifier="helium" nano rounded icon type="button" {...props}>
+    <QuestionMarkIcon width="10" height="10" />
+  </Button>
 )
