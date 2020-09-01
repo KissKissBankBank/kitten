@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import {
   FacebookButtonIcon,
   TwitterButtonIcon,
@@ -8,178 +7,147 @@ import {
   YoutubeButtonIcon,
   PinterestButtonIcon,
 } from '../../../components/buttons/social-button-icon'
-import { ButtonIcon } from '../../../components/buttons/button-icon'
-import { FacebookIcon } from '../../../components/icons/facebook-icon'
-import { TwitterIcon } from '../../../components/icons/twitter-icon'
-import { LinkedinIcon } from '../../../components/icons/linkedin-icon'
-import { InstagramIcon } from '../../../components/icons/instagram-icon'
-import { YoutubeIcon } from '../../../components/icons/youtube-icon'
-import { PinterestIcon } from '../../../components/icons/pinterest-icon'
+import renderer from 'react-test-renderer'
+import 'jest-styled-components'
 
-describe('<FacebookButtonIcon />', () => {
-  describe('by default', () => {
-    const button = shallow(<FacebookButtonIcon />)
+describe('SocialButtonIcon', () => {
+  let component
 
-    it('is a <ButtonIcon modifier="facebook" />', () => {
-      expect(button.find(ButtonIcon).exists()).toBe(true)
-      expect(button.props().modifier).toBe('facebook')
+  describe('<FacebookButtonIcon />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<FacebookButtonIcon>Facebook</FacebookButtonIcon>)
+        .toJSON()
     })
 
-    it('has a <FacebookIcon />', () => {
-      expect(button.find(FacebookIcon).exists()).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+  describe('<FacebookButtonIcon /> with props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<FacebookButtonIcon tiny>Facebook</FacebookButtonIcon>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('with other props', () => {
-    const button = shallow(
-      <FacebookButtonIcon
-        className={classNames('k-ButtonIcon__svg', 'custom__class')}
-      />,
-    )
+  describe('<TwitterButtonIcon />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TwitterButtonIcon>Twitter</TwitterButtonIcon>)
+        .toJSON()
+    })
 
-    it('has a default classes', () => {
-      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
-      expect(button.hasClass('custom__class')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
-})
-
-describe('<TwitterButtonIcon />', () => {
-  describe('by default', () => {
-    const button = shallow(<TwitterButtonIcon />)
-
-    it('is a <ButtonIcon modifier="facebook" />', () => {
-      expect(button.find(ButtonIcon).exists()).toBe(true)
-      expect(button.props().modifier).toBe('twitter')
+  describe('<TwitterButtonIcon /> with props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TwitterButtonIcon tiny>Twitter</TwitterButtonIcon>)
+        .toJSON()
     })
 
-    it('has a <TwitterIcon />', () => {
-      expect(button.find(TwitterIcon).exists()).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('with other props', () => {
-    const button = shallow(
-      <TwitterButtonIcon
-        className={classNames('k-ButtonIcon__svg', 'custom__class')}
-      />,
-    )
+  describe('<LinkedinButtonIcon />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<LinkedinButtonIcon>Linkedin</LinkedinButtonIcon>)
+        .toJSON()
+    })
 
-    it('has a default classes', () => {
-      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
-      expect(button.hasClass('custom__class')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
-})
-
-describe('<LinkedinButtonIcon />', () => {
-  describe('by default', () => {
-    const button = shallow(<LinkedinButtonIcon />)
-
-    it('is a <ButtonIcon modifier="linkedin" />', () => {
-      expect(button.find(ButtonIcon).exists()).toBe(true)
-      expect(button.props().modifier).toBe('linkedin')
+  describe('<LinkedinButtonIcon /> with props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<LinkedinButtonIcon tiny>Linkedin</LinkedinButtonIcon>)
+        .toJSON()
     })
 
-    it('has a <LinkedinIcon />', () => {
-      expect(button.find(LinkedinIcon).exists()).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('with other props', () => {
-    const button = shallow(
-      <LinkedinButtonIcon
-        className={classNames('k-ButtonIcon__svg', 'custom__class')}
-      />,
-    )
+  describe('<InstagramButtonIcon />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<InstagramButtonIcon>Instagram</InstagramButtonIcon>)
+        .toJSON()
+    })
 
-    it('has a default classes', () => {
-      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
-      expect(button.hasClass('custom__class')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
-})
-
-describe('<InstagramButtonIcon />', () => {
-  describe('by default', () => {
-    const button = shallow(<InstagramButtonIcon />)
-
-    it('is a <ButtonIcon modifier="instagram" />', () => {
-      expect(button.find(ButtonIcon).exists()).toBe(true)
-      expect(button.props().modifier).toBe('instagram')
+  describe('<InstagramButtonIcon /> with props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<InstagramButtonIcon tiny>Instagram</InstagramButtonIcon>)
+        .toJSON()
     })
 
-    it('has a <InstagramIcon />', () => {
-      expect(button.find(InstagramIcon).exists()).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('with other props', () => {
-    const button = shallow(
-      <InstagramButtonIcon
-        className={classNames('k-ButtonIcon__svg', 'custom__class')}
-      />,
-    )
+  describe('<YoutubeButtonIcon />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<YoutubeButtonIcon>Youtube</YoutubeButtonIcon>)
+        .toJSON()
+    })
 
-    it('has a default classes', () => {
-      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
-      expect(button.hasClass('custom__class')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
-})
-
-describe('<YoutubeButtonIcon />', () => {
-  describe('by default', () => {
-    const button = shallow(<YoutubeButtonIcon />)
-
-    it('is a <ButtonIcon modifier="youtube" />', () => {
-      expect(button.find(ButtonIcon).exists()).toBe(true)
-      expect(button.props().modifier).toBe('youtube')
+  describe('<YoutubeButtonIcon /> with props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<YoutubeButtonIcon tiny>Youtube</YoutubeButtonIcon>)
+        .toJSON()
     })
 
-    it('has a <YoutubeIcon />', () => {
-      expect(button.find(YoutubeIcon).exists()).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('with other props', () => {
-    const button = shallow(
-      <YoutubeButtonIcon
-        className={classNames('k-ButtonIcon__svg', 'custom__class')}
-      />,
-    )
+  describe('<PinterestButtonIcon />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<PinterestButtonIcon>Pinterest</PinterestButtonIcon>)
+        .toJSON()
+    })
 
-    it('has a default classes', () => {
-      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
-      expect(button.hasClass('custom__class')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
-})
-
-describe('<PinterestButtonIcon />', () => {
-  describe('by default', () => {
-    const button = shallow(<PinterestButtonIcon />)
-
-    it('is a <ButtonIcon modifier="pinterest" />', () => {
-      expect(button.find(ButtonIcon).exists()).toBe(true)
-      expect(button.props().modifier).toBe('pinterest')
+  describe('<PinterestButtonIcon /> with props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<PinterestButtonIcon tiny>Pinterest</PinterestButtonIcon>)
+        .toJSON()
     })
 
-    it('has a <PinterestIcon />', () => {
-      expect(button.find(PinterestIcon).exists()).toBe(true)
-    })
-  })
-
-  describe('with other props', () => {
-    const button = shallow(
-      <PinterestButtonIcon
-        className={classNames('k-ButtonIcon__svg', 'custom__class')}
-      />,
-    )
-
-    it('has a default classes', () => {
-      expect(button.hasClass('k-ButtonIcon__svg')).toBe(true)
-      expect(button.hasClass('custom__class')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 })
