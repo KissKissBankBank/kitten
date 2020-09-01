@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Feature: - Use `BasicUploader` for `ImageCropper`, remove `base64` prop (always `true`)
+
 ## [2.90.0] - 2020-09-01
 
 Features:
