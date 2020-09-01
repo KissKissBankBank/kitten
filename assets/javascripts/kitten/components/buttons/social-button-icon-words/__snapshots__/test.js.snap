@@ -107,6 +107,22 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   }
 }
 
+@media (min-width:40rem) {
+  .c0 {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
 <button
   className="c0"
 >
@@ -396,6 +412,22 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   .c0 {
     width: 12.5rem;
     height: 3.125rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 13.75rem;
+    height: 4.375rem;
   }
 }
 
@@ -691,6 +723,22 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   }
 }
 
+@media (min-width:40rem) {
+  .c0 {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
 <button
   className="c0"
 >
@@ -964,6 +1012,22 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   .c0 {
     width: 12.5rem;
     height: 3.125rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c0 {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 13.75rem;
+    height: 4.375rem;
   }
 }
 

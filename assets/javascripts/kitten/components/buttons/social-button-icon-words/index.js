@@ -6,28 +6,28 @@ import { LinkedinIcon } from '../../../components/icons/linkedin-icon'
 import { InstagramIcon } from '../../../components/icons/instagram-icon'
 
 export const FacebookButtonIconWords = ({ children, ...props }) => (
-  <Button {...props} modifier="social_facebook">
+  <Button big {...props} modifier="social_facebook">
     <FacebookIcon height="14" width="7" />
     <span>{children}</span>
   </Button>
 )
 
 export const TwitterButtonIconWords = ({ children, ...props }) => (
-  <Button {...props} modifier="social_twitter">
+  <Button big {...props} modifier="social_twitter">
     <TwitterIcon height="12" width="15" />
     <span>{children}</span>
   </Button>
 )
 
 export const InstagramButtonIconWords = ({ children, ...props }) => (
-  <Button {...props} modifier="social_instagram">
+  <Button big {...props} modifier="social_instagram">
     <InstagramIcon height="16" width="16" />
     <span>{children}</span>
   </Button>
 )
 
 export const LinkedinButtonIconWords = ({ children, ...props }) => (
-  <Button {...props} modifier="social_linkedin">
+  <Button big {...props} modifier="social_linkedin">
     <LinkedinIcon height="12" width="12" />
     <span>{children}</span>
   </Button>
