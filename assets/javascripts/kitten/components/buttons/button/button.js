@@ -59,16 +59,21 @@ const StyledButton = styled.button`
       border-radius: ${pxToRem(borderRadius)};
     `}
 
+  ${({ nano }) => nano && NANO}
+  ${({ micro }) => micro && MICRO}
   ${({ tiny }) => tiny && TINY}
   ${({ big }) => big && BIG}
   ${({ huge }) => huge && HUGE}
   ${({ giant }) => giant && GIANT}
   ${({ icon, fluid }) => icon && !fluid && ICON}
+  ${({ icon, nano, fluid }) => icon && nano && !fluid && ICON_NANO}
+  ${({ icon, micro, fluid }) => icon && micro && !fluid && ICON_MICRO}
   ${({ icon, tiny, fluid }) => icon && tiny && !fluid && ICON_TINY}
   ${({ icon, big, fluid }) => icon && big && !fluid && ICON_BIG}
   ${({ icon, huge, fluid }) => icon && huge && !fluid && ICON_HUGE}
   ${({ icon, giant, fluid }) => icon && giant && !fluid && ICON_GIANT}
   ${({ fluid }) => fluid && FLUID}
+  ${({ rounded }) => rounded && ROUNDED}
 
   ${({ modifier }) => modifierStyles(modifier)}
 `
@@ -87,6 +92,11 @@ const checkedCircleIconStyle = size => {
     case 'tiny':
       iconSize = 15
       break
+    case 'micro':
+      iconSize = 10
+    case 'nano':
+      iconSize = 8
+      break
     default:
       iconSize = 20
   }
@@ -102,6 +112,8 @@ const CheckedCircleIcon = styled(({ giant, huge, big, tiny, ...others }) => (
   <KittenCheckedCircleIcon {...others} />
 ))`
   ${checkedCircleIconStyle()}
+  ${({ nano }) => nano && checkedCircleIconStyle('nano')}
+  ${({ micro }) => micro && checkedCircleIconStyle('micro')}
   ${({ tiny }) => tiny && checkedCircleIconStyle('tiny')}
 
   ${({ big }) =>
@@ -136,6 +148,10 @@ export const FLUID = css`
   width: 100%;
 `
 
+export const ROUNDED = css`
+  border-radius: 50%;
+`
+
 export const DEFAULT = css`
   min-width: ${pxToRem(200)};
   min-height: ${pxToRem(50)};
@@ -144,6 +160,28 @@ export const DEFAULT = css`
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     width: ${pxToRem(200)};
     height: ${pxToRem(50)};
+  }
+`
+
+export const NANO = css`
+  min-width: ${pxToRem(100)};
+  min-height: ${pxToRem(20)};
+  padding: 0 ${pxToRem(6)};
+  font-size: ${stepToRem(-2)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(100)};
+    height: ${pxToRem(20)};
+  }
+`
+
+export const MICRO = css`
+  min-width: ${pxToRem(130)};
+  min-height: ${pxToRem(30)};
+  padding: 0 ${pxToRem(10)};
+  font-size: ${stepToRem(-2)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(100)};
+    height: ${pxToRem(20)};
   }
 `
 
@@ -227,6 +265,22 @@ export const ICON = css`
   }
 `
 
+export const ICON_NANO = css`
+  width: ${pxToRem(20)};
+  height: ${pxToRem(20)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(20)};
+  }
+`
+
+export const ICON_MICRO = css`
+  width: ${pxToRem(30)};
+  height: ${pxToRem(30)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(30)};
+  }
+`
+
 export const ICON_TINY = css`
   width: ${pxToRem(40)};
   height: ${pxToRem(40)};
@@ -237,6 +291,9 @@ export const ICON_TINY = css`
 
 export const ICON_BIG = css`
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
     width: ${pxToRem(70)};
     height: ${pxToRem(70)};
   }
@@ -287,12 +344,15 @@ export const ICON_GIANT = css`
 export class Button extends Component {
   static propTypes = {
     borderRadius: PropTypes.number,
+    nano: PropTypes.bool,
+    micro: PropTypes.bool,
     tiny: PropTypes.bool,
     big: PropTypes.bool,
     huge: PropTypes.bool,
     giant: PropTypes.bool,
     fluid: PropTypes.bool,
     icon: PropTypes.bool,
+    rounded: PropTypes.bool,
     modifier: PropTypes.oneOf([
       'hydrogen',
       'helium',
@@ -306,12 +366,15 @@ export class Button extends Component {
   }
 
   static defaultProps = {
+    nano: false,
+    micro: false,
     tiny: false,
     big: false,
     huge: false,
     giant: false,
     fluid: false,
     icon: false,
+    rounded: false,
     modifier: 'hydrogen',
     borderRadius: 0,
   }
@@ -334,6 +397,8 @@ export class Button extends Component {
             huge={!!props.huge}
             big={!!props.big}
             tiny={!!props.tiny}
+            micro={!!props.micro}
+            nano={!!props.nano}
             circleColor={COLORS.primary1}
             checkedColor={COLORS.background1}
           />

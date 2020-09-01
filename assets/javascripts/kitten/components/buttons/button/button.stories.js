@@ -69,6 +69,8 @@ WithText.decorators = [
 
 export const WithIcon = () => (
   <Button
+    rounded={boolean('Rounded', false)}
+    nano={boolean('Nano', false)}
     tiny={boolean('Tiny', false)}
     big={boolean('Big', false)}
     huge={boolean('Huge', false)}

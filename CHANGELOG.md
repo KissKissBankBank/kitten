@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add 'nano' and 'micro' size props to Button component.
+- Add 'rounded' prop to Button component.
+
 ## [2.89.0] - 2020-08-28
 
 Features:
