@@ -1,40 +1,26 @@
-import React, { Component } from 'react'
-import classNames from 'classnames'
-import { ButtonIcon } from '../../../components/buttons/button-icon'
+import React from 'react'
+import { Button } from '../../../components/buttons/button/button'
 import { CrossIcon } from '../../../components/icons/cross-icon'
 
-export class CloseButton extends Component {
-  render() {
-    const {
-      className,
-      closeButtonLabel,
-      size,
-      buttonModifier,
-      ...others
-    } = this.props
-
-    const buttonClassName = classNames(
-      'k-ButtonIcon--cross',
-      { [`k-ButtonIcon--cross--${size}`]: size },
-      className,
-    )
-
-    return (
-      <ButtonIcon
-        type="button"
-        className={buttonClassName}
-        title={closeButtonLabel}
-        aria-label={closeButtonLabel}
-        modifier={buttonModifier}
-        {...others}
-      >
-        <CrossIcon
-          className={classNames('k-ButtonIcon__svg', 'k-ButtonIcon__svgRotate')}
-        />
-      </ButtonIcon>
-    )
-  }
-}
+export const CloseButton = ({
+  closeButtonLabel,
+  size,
+  buttonModifier,
+  ...others
+}) => (
+  <Button
+    icon
+    type="button"
+    title={closeButtonLabel}
+    aria-label={closeButtonLabel}
+    modifier={buttonModifier}
+    tiny={size === 'tiny'}
+    big={size === 'big'}
+    {...others}
+  >
+    <CrossIcon width="8" height="8" />
+  </Button>
+)
 
 CloseButton.defaultProps = {
   closeButtonLabel: 'Close',
