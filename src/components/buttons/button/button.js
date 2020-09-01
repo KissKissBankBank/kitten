@@ -215,7 +215,7 @@ Button.propTypes = {
   giant: _propTypes.default.bool,
   fluid: _propTypes.default.bool,
   icon: _propTypes.default.bool,
-  modifier: _propTypes.default.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked'])
+  modifier: _propTypes.default.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest'])
 };
 Button.defaultProps = {
   tiny: false,

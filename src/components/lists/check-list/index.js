@@ -57,7 +57,7 @@ CheckList.Item = function (_ref2) {
   }, children) : children);
 };
 
-CheckList.Item.PropTypes = {
+CheckList.Item.propTypes = {
   done: _propTypes.default.bool,
   a11yText: _propTypes.default.shape({
     default: _propTypes.default.string,
