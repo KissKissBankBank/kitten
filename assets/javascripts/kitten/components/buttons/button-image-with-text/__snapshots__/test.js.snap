@@ -5,7 +5,7 @@ exports[`<ButtonImageWithText /> should match with snapshot 1`] = `
   className="sc-htpNat gzmFqo k-ButtonImageNextWithText"
 >
   <button
-    className="sc-bdVaJa ljhWMJ k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
+    className="sc-bdVaJa hRRgAj k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
   >
     <img
       alt=""

@@ -31,7 +31,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         className="k-u-margin-top-single"
       >
         <span
-          className="sc-bwzfXH jybFEX k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="sc-bwzfXH eDGITK k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -100,7 +100,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         className="k-u-margin-top-single"
       >
         <span
-          className="sc-bwzfXH jybFEX k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="sc-bwzfXH eDGITK k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -195,7 +195,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         className="k-u-margin-top-single"
       >
         <span
-          className="sc-bwzfXH jybFEX k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="sc-bwzfXH eDGITK k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
@@ -265,7 +265,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         className="k-u-margin-top-single"
       >
         <span
-          className="sc-bwzfXH jybFEX k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
+          className="sc-bwzfXH eDGITK k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt="Avatar alt"

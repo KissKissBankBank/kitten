@@ -2,7 +2,7 @@
 
 exports[`<ButtonImage /> should match with propped snapshot 1`] = `
 <button
-  className="sc-bdVaJa ljhWMJ k-ButtonImageNext k-ButtonImageNext--tiny k-ButtonImageNext--withoutPointerEvents k-ButtonImageNext--withBorder"
+  className="sc-bdVaJa hRRgAj k-ButtonImageNext k-ButtonImageNext--tiny k-ButtonImageNext--withoutPointerEvents k-ButtonImageNext--withBorder"
 >
   <img
     alt=""
@@ -14,7 +14,7 @@ exports[`<ButtonImage /> should match with propped snapshot 1`] = `
 
 exports[`<ButtonImage /> should match with snapshot 1`] = `
 <button
-  className="sc-bdVaJa ljhWMJ k-ButtonImageNext"
+  className="sc-bdVaJa hRRgAj k-ButtonImageNext"
 >
   <img
     alt=""

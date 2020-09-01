@@ -17,7 +17,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
     className="sc-bdVaJa eDkcBx"
   >
     <span
-      className="sc-htpNat dccPIc k-ButtonImageNext k-ButtonImageNext--huge k-ButtonImageNext--withoutPointerEvents sc-EHOje dpqDOD"
+      className="sc-htpNat gBPtjm k-ButtonImageNext k-ButtonImageNext--huge k-ButtonImageNext--withoutPointerEvents sc-EHOje dpqDOD"
     >
       <img
         alt=""
@@ -60,7 +60,7 @@ exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
     className="sc-bdVaJa eDkcBx"
   >
     <span
-      className="sc-htpNat dccPIc k-ButtonImageNext k-ButtonImageNext--huge k-ButtonImageNext--withoutPointerEvents sc-EHOje dpqDOD"
+      className="sc-htpNat gBPtjm k-ButtonImageNext k-ButtonImageNext--huge k-ButtonImageNext--withoutPointerEvents sc-EHOje dpqDOD"
     >
       <img
         alt=""

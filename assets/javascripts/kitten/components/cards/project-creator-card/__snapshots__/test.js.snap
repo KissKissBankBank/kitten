@@ -133,7 +133,7 @@ exports[`<ProjectCreatorCard /> snapshot with notifications 1`] = `
       >
         This is the text
         <button
-          className="sc-bwzfXH fpLNzS sc-bxivhb kubQGo k-ButtonIconNext k-ButtonIconNext--tiny k-ButtonIconNext--withoutHover k-ButtonIconNext--verticalArrow"
+          className="sc-bwzfXH fpLNzS sc-bxivhb koaiar k-ButtonIconNext k-ButtonIconNext--tiny k-ButtonIconNext--withoutHover k-ButtonIconNext--verticalArrow"
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
