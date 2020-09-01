@@ -1,0 +1,1817 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  border: 0.125rem solid #3b5998;
+  background-color: #3b5998;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #2c4a89;
+  background-color: #2c4a89;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #1d3b7a;
+  background-color: #1d3b7a;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="14"
+    viewBox="0 0 8 15"
+    width="14"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Facebook
+    </title>
+    <path
+      d="M4.785 14.196V7.72H6.96l.324-2.523h-2.5v-1.61c0-.732.204-1.23 1.252-1.23h1.336V.1C7.142.07 6.348 0 5.425 0 3.498 0 2.18 1.176 2.18 3.336v1.86H0v2.525h2.18v6.476h2.605z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.125rem solid #3b5998;
+  background-color: #3b5998;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #2c4a89;
+  background-color: #2c4a89;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #1d3b7a;
+  background-color: #1d3b7a;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 2.5rem;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="14"
+    viewBox="0 0 8 15"
+    width="14"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Facebook
+    </title>
+    <path
+      d="M4.785 14.196V7.72H6.96l.324-2.523h-2.5v-1.61c0-.732.204-1.23 1.252-1.23h1.336V.1C7.142.07 6.348 0 5.425 0 3.498 0 2.18 1.176 2.18 3.336v1.86H0v2.525h2.18v6.476h2.605z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  border: 0.125rem solid #3b5998;
+  background-color: #3b5998;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background 0.2s,color 0.2s;
+  transition: background 0.2s,color 0.2s;
+  border: 0 !important;
+  background-repeat: no-repeat;
+  background-image: radial-gradient( farthest-side at 32% 100%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82% ),linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);
+  background-size: 160% 100%;
+  background-position: center;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  background-image: radial-gradient( farthest-side at 32% 100%,#f0d26e 0%,#f0be5a 10%,#eb8228 28%,#dc3232 42%,transparent 82% ),linear-gradient(135deg,#143cc8 12%,#b42daf 58%);
+}
+
+.c0:active {
+  background-image: radial-gradient( farthest-side at 32% 100%,#e1c35f 0%,#e1af4b 10%,#dc7319 28%,#cd2323 42%,transparent 82% ),linear-gradient(135deg,#052db9 12%,#a51ea0 58%);
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #2c4a89;
+  background-color: #2c4a89;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #1d3b7a;
+  background-color: #1d3b7a;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="16"
+    viewBox="0 0 70 70"
+    width="16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Instagram
+    </title>
+    <path
+      d="M17 0A17 17 0 0 0 0 17v36a17 17 0 0 0 17 17h36a17 17 0 0 0 17-17V17A17 17 0 0 0 53 0zm0 6h36a10.91 10.91 0 0 1 11 11v36a10.91 10.91 0 0 1-11 11H17A10.91 10.91 0 0 1 6 53V17A10.91 10.91 0 0 1 17 6zm38 6a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm-20 6a17 17 0 1 0 17 17 17 17 0 0 0-17-17zm0 6a11 11 0 1 1-11 11 11 11 0 0 1 11-11z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.125rem solid #3b5998;
+  background-color: #3b5998;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background 0.2s,color 0.2s;
+  transition: background 0.2s,color 0.2s;
+  border: 0 !important;
+  background-repeat: no-repeat;
+  background-image: radial-gradient( farthest-side at 32% 100%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82% ),linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);
+  background-size: 160% 100%;
+  background-position: center;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  background-image: radial-gradient( farthest-side at 32% 100%,#f0d26e 0%,#f0be5a 10%,#eb8228 28%,#dc3232 42%,transparent 82% ),linear-gradient(135deg,#143cc8 12%,#b42daf 58%);
+}
+
+.c0:active {
+  background-image: radial-gradient( farthest-side at 32% 100%,#e1c35f 0%,#e1af4b 10%,#dc7319 28%,#cd2323 42%,transparent 82% ),linear-gradient(135deg,#052db9 12%,#a51ea0 58%);
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #2c4a89;
+  background-color: #2c4a89;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #1d3b7a;
+  background-color: #1d3b7a;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 2.5rem;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="16"
+    viewBox="0 0 70 70"
+    width="16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Instagram
+    </title>
+    <path
+      d="M17 0A17 17 0 0 0 0 17v36a17 17 0 0 0 17 17h36a17 17 0 0 0 17-17V17A17 17 0 0 0 53 0zm0 6h36a10.91 10.91 0 0 1 11 11v36a10.91 10.91 0 0 1-11 11H17A10.91 10.91 0 0 1 6 53V17A10.91 10.91 0 0 1 17 6zm38 6a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm-20 6a17 17 0 1 0 17 17 17 17 0 0 0-17-17zm0 6a11 11 0 1 1-11 11 11 11 0 0 1 11-11z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  border: 0.125rem solid #00669e;
+  background-color: #00669e;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #00578f;
+  background-color: #00578f;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #004880;
+  background-color: #004880;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="12"
+    viewBox="0 0 14 14"
+    width="12"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      LinkedIn
+    </title>
+    <path
+      d="M1.622 0a1.62 1.62 0 1 1-.002 3.242A1.62 1.62 0 0 1 1.622 0zm-1.4 13.465H3.02V4.47H.222v8.995zM4.773 4.47h2.68V5.7h.038c.374-.707 1.286-1.452 2.646-1.452 2.83 0 3.353 1.862 3.353 4.284v4.933h-2.796V9.09c0-1.042-.018-2.384-1.452-2.384-1.455 0-1.677 1.137-1.677 2.31v4.45H4.773V4.47"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.125rem solid #00669e;
+  background-color: #00669e;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #00578f;
+  background-color: #00578f;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #004880;
+  background-color: #004880;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 2.5rem;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="12"
+    viewBox="0 0 14 14"
+    width="12"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      LinkedIn
+    </title>
+    <path
+      d="M1.622 0a1.62 1.62 0 1 1-.002 3.242A1.62 1.62 0 0 1 1.622 0zm-1.4 13.465H3.02V4.47H.222v8.995zM4.773 4.47h2.68V5.7h.038c.374-.707 1.286-1.452 2.646-1.452 2.83 0 3.353 1.862 3.353 4.284v4.933h-2.796V9.09c0-1.042-.018-2.384-1.452-2.384-1.455 0-1.677 1.137-1.677 2.31v4.45H4.773V4.47"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  border: 0.125rem solid #bd081c;
+  background-color: #bd081c;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #ae000d;
+  background-color: #ae000d;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #9f0000;
+  background-color: #9f0000;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="16"
+    viewBox="0 0 121.3 156.8"
+    width="16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Pinterest
+    </title>
+    <path
+      d="M64.3 0C21.6 0 0 30.7 0 56.2c0 15.5 5.9 29.3 18.4 34.4 2.1.8 3.9 0 4.5-2.3l1.8-7.2c.6-2.3.4-3.1-1.3-5-3.6-4.3-5.9-9.8-5.9-17.7 0-22.8 17-43.1 44.3-43.1 24.2 0 37.5 14.8 37.5 34.5 0 26-11.5 47.9-28.5 47.9-9.4 0-16.5-7.8-14.2-17.3 2.7-11.4 7.9-23.7 7.9-31.9 0-7.4-4-13.5-12.1-13.5C42.8 35 35 45 35 58.3c0 8.5 2.9 14.2 2.9 14.2s-9.9 41.8-11.6 49.1c-3.4 14.6-.5 32.4-.3 34.2.1 1.1 1.5 1.3 2.1.5.9-1.2 12.4-15.3 16.3-29.5 1.1-4 6.3-24.7 6.3-24.7 3.1 6 12.3 11.2 22 11.2 28.9 0 48.6-26.4 48.6-61.7 0-26.7-22.6-51.6-57-51.6z"
+      fill="#fff"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.125rem solid #bd081c;
+  background-color: #bd081c;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #ae000d;
+  background-color: #ae000d;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #9f0000;
+  background-color: #9f0000;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 2.5rem;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="16"
+    viewBox="0 0 121.3 156.8"
+    width="16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Pinterest
+    </title>
+    <path
+      d="M64.3 0C21.6 0 0 30.7 0 56.2c0 15.5 5.9 29.3 18.4 34.4 2.1.8 3.9 0 4.5-2.3l1.8-7.2c.6-2.3.4-3.1-1.3-5-3.6-4.3-5.9-9.8-5.9-17.7 0-22.8 17-43.1 44.3-43.1 24.2 0 37.5 14.8 37.5 34.5 0 26-11.5 47.9-28.5 47.9-9.4 0-16.5-7.8-14.2-17.3 2.7-11.4 7.9-23.7 7.9-31.9 0-7.4-4-13.5-12.1-13.5C42.8 35 35 45 35 58.3c0 8.5 2.9 14.2 2.9 14.2s-9.9 41.8-11.6 49.1c-3.4 14.6-.5 32.4-.3 34.2.1 1.1 1.5 1.3 2.1.5.9-1.2 12.4-15.3 16.3-29.5 1.1-4 6.3-24.7 6.3-24.7 3.1 6 12.3 11.2 22 11.2 28.9 0 48.6-26.4 48.6-61.7 0-26.7-22.6-51.6-57-51.6z"
+      fill="#fff"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  border: 0.125rem solid #55acee;
+  background-color: #55acee;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #469ddf;
+  background-color: #469ddf;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #388ed0;
+  background-color: #388ed0;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="15"
+    viewBox="0 0 15 14"
+    width="15"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Twitter
+    </title>
+    <path
+      d="M15.256 1.468a6.22 6.22 0 0 1-1.797.493c.645-.387 1.14-1 1.375-1.73a6.276 6.276 0 0 1-1.988.758A3.128 3.128 0 0 0 7.433 3.13c0 .245.027.484.08.713a8.88 8.88 0 0 1-6.45-3.27 3.13 3.13 0 0 0 .968 4.179A3.109 3.109 0 0 1 .614 4.36v.04c0 1.516 1.08 2.78 2.51 3.07a3.2 3.2 0 0 1-.824.11c-.203 0-.4-.02-.59-.058a3.13 3.13 0 0 0 2.924 2.174A6.273 6.273 0 0 1 0 10.992a8.86 8.86 0 0 0 4.798 1.407c5.757 0 8.906-4.77 8.906-8.907 0-.136-.003-.27-.01-.405a6.332 6.332 0 0 0 1.562-1.62"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.125rem solid #55acee;
+  background-color: #55acee;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #469ddf;
+  background-color: #469ddf;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #388ed0;
+  background-color: #388ed0;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 2.5rem;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="15"
+    viewBox="0 0 15 14"
+    width="15"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Twitter
+    </title>
+    <path
+      d="M15.256 1.468a6.22 6.22 0 0 1-1.797.493c.645-.387 1.14-1 1.375-1.73a6.276 6.276 0 0 1-1.988.758A3.128 3.128 0 0 0 7.433 3.13c0 .245.027.484.08.713a8.88 8.88 0 0 1-6.45-3.27 3.13 3.13 0 0 0 .968 4.179A3.109 3.109 0 0 1 .614 4.36v.04c0 1.516 1.08 2.78 2.51 3.07a3.2 3.2 0 0 1-.824.11c-.203 0-.4-.02-.59-.058a3.13 3.13 0 0 0 2.924 2.174A6.273 6.273 0 0 1 0 10.992a8.86 8.86 0 0 0 4.798 1.407c5.757 0 8.906-4.77 8.906-8.907 0-.136-.003-.27-.01-.405a6.332 6.332 0 0 0 1.562-1.62"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  border: 0.125rem solid #ff0000;
+  background-color: #ff0000;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #f00000;
+  background-color: #f00000;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #e10000;
+  background-color: #e10000;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="16"
+    viewBox="0 0 176 124"
+    width="16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Youtube
+    </title>
+    <path
+      d="M172.3 19.4c-2-7.6-8-13.6-15.6-15.7C143 0 88 0 88 0S33 0 19.2 3.7c-7.6 2-13.5 8-15.6 15.7C0 33.2 0 62 0 62s0 28.8 3.7 42.6c2 7.6 8 13.6 15.6 15.7C33 124 88 124 88 124s55 0 68.8-3.7c7.6-2 13.5-8 15.6-15.7C176 90.8 176 62 176 62s0-28.8-3.7-42.6zM70 88.2V35.8L116 62 70 88.2z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.125rem solid #ff0000;
+  background-color: #ff0000;
+  color: #fff;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: #fff;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #f00000;
+  background-color: #f00000;
+  color: #fff;
+}
+
+.c0:hover svg,
+.c0:focus svg,
+.c0:hover path,
+.c0:focus path {
+  fill: #fff;
+}
+
+.c0:active {
+  border-color: #e10000;
+  background-color: #e10000;
+  color: #fff;
+}
+
+.c0:active svg,
+.c0:active path {
+  fill: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+.c0:disabled svg,
+.c0:disabled path {
+  fill: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 2.5rem;
+  }
+}
+
+<button
+  className="c0"
+>
+  <svg
+    height="16"
+    viewBox="0 0 176 124"
+    width="16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      Youtube
+    </title>
+    <path
+      d="M172.3 19.4c-2-7.6-8-13.6-15.6-15.7C143 0 88 0 88 0S33 0 19.2 3.7c-7.6 2-13.5 8-15.6 15.7C0 33.2 0 62 0 62s0 28.8 3.7 42.6c2 7.6 8 13.6 15.6 15.7C33 124 88 124 88 124s55 0 68.8-3.7c7.6-2 13.5-8 15.6-15.7C176 90.8 176 62 176 62s0-28.8-3.7-42.6zM70 88.2V35.8L116 62 70 88.2z"
+    />
+  </svg>
+</button>
+`;

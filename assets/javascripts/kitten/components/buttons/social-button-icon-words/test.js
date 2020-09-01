@@ -3,83 +3,119 @@ import {
   FacebookButtonIconWords,
   TwitterButtonIconWords,
   LinkedinButtonIconWords,
+  InstagramButtonIconWords,
 } from '../../../components/buttons/social-button-icon-words'
-import { Button } from '../../../components/buttons/button'
-import { FacebookIcon } from '../../../components/icons/facebook-icon'
-import { TwitterIcon } from '../../../components/icons/twitter-icon'
-import { LinkedinIcon } from '../../../components/icons/linkedin-icon'
+import renderer from 'react-test-renderer'
+import 'jest-styled-components'
 
-describe('<FacebookButtonIconWords />', () => {
-  describe('by default', () => {
-    const button = shallow(<FacebookButtonIconWords />)
+describe('SocialButtonIconWords', () => {
+  let component
 
-    it('is a <Button modifier="facebook" />', () => {
-      expect(button.find(Button).exists()).toBe(true)
-      expect(button.props().modifier).toBe('facebook')
+  describe('<FacebookButtonIconWords />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<FacebookButtonIconWords>Facebook</FacebookButtonIconWords>)
+        .toJSON()
     })
 
-    it('has a <FacebookIcon />', () => {
-      expect(button.find(FacebookIcon).exists()).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+  describe('<FacebookButtonIconWords /> with props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <FacebookButtonIconWords big fluid>
+            Facebook
+          </FacebookButtonIconWords>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('children prop', () => {
-    const component = mount(
-      <FacebookButtonIconWords>Lorem ipsum…</FacebookButtonIconWords>,
-    )
+  describe('<TwitterButtonIconWords />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TwitterButtonIconWords>Twitter</TwitterButtonIconWords>)
+        .toJSON()
+    })
 
-    it('renders the right children', () => {
-      expect(component.props().children).toEqual('Lorem ipsum…')
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
-})
-
-describe('<TwitterButtonIconWords />', () => {
-  describe('by default', () => {
-    const button = shallow(<TwitterButtonIconWords />)
-
-    it('is a <Button modifier="twitter" />', () => {
-      expect(button.find(Button).exists()).toBe(true)
-      expect(button.props().modifier).toBe('twitter')
+  describe('<TwitterButtonIconWords /> with props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <TwitterButtonIconWords big fluid>
+            Twitter
+          </TwitterButtonIconWords>,
+        )
+        .toJSON()
     })
 
-    it('has a <TwitterIcon />', () => {
-      expect(button.find(TwitterIcon).exists()).toBe(true)
-    })
-  })
-
-  describe('children prop', () => {
-    const component = mount(
-      <TwitterButtonIconWords>Lorem ipsum…</TwitterButtonIconWords>,
-    )
-
-    it('renders the right children', () => {
-      expect(component.props().children).toEqual('Lorem ipsum…')
-    })
-  })
-})
-
-describe('<LinkedinButtonIconWords />', () => {
-  describe('by default', () => {
-    const button = shallow(<LinkedinButtonIconWords />)
-
-    it('is a <Button modifier="linkedin" />', () => {
-      expect(button.find(Button).exists()).toBe(true)
-      expect(button.props().modifier).toBe('linkedin')
-    })
-
-    it('has a <LinkedinIcon />', () => {
-      expect(button.find(LinkedinIcon).exists()).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('children prop', () => {
-    const component = mount(
-      <LinkedinButtonIconWords>Lorem ipsum…</LinkedinButtonIconWords>,
-    )
+  describe('<LinkedinButtonIconWords />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<LinkedinButtonIconWords>Linkedin</LinkedinButtonIconWords>)
+        .toJSON()
+    })
 
-    it('renders the right children', () => {
-      expect(component.props().children).toEqual('Lorem ipsum…')
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+  describe('<LinkedinButtonIconWords /> with props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <LinkedinButtonIconWords big fluid>
+            Linkedin
+          </LinkedinButtonIconWords>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('<InstagramButtonIconWords />', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<InstagramButtonIconWords>Instagram</InstagramButtonIconWords>)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+  describe('<InstagramButtonIconWords /> with props', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <InstagramButtonIconWords big fluid>
+            Instagram
+          </InstagramButtonIconWords>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 })

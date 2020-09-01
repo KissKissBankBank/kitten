@@ -10,7 +10,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-bZQynM hqRtSn"
+    className="sc-bZQynM gOIwnQ"
     disabled={false}
     type="button"
   >
@@ -29,7 +29,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
     name="text"
   />
   <button
-    className="sc-bZQynM hqRtSn"
+    className="sc-bZQynM gOIwnQ"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -50,7 +50,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
     placeholder="Les props sont transmises"
   />
   <button
-    className="sc-bZQynM hqRtSn"
+    className="sc-bZQynM gOIwnQ"
     disabled={false}
     type="button"
   >
@@ -108,7 +108,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
     name="text"
   />
   <button
-    className="sc-bZQynM kTAAdF"
+    className="sc-bZQynM bCwdiE"
     disabled={true}
     type="button"
   >
@@ -127,7 +127,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-bZQynM kcgYZe"
+    className="sc-bZQynM odEHr"
     disabled={false}
     type="button"
   >
@@ -146,7 +146,7 @@ exports[`<TextInputWithButton /> with giant prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-bZQynM hqRtSn"
+    className="sc-bZQynM gOIwnQ"
     disabled={false}
     type="button"
   >
@@ -165,7 +165,7 @@ exports[`<TextInputWithButton /> with huge prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-bZQynM hqRtSn"
+    className="sc-bZQynM gOIwnQ"
     disabled={false}
     type="button"
   >
@@ -186,7 +186,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
     value="foobar"
   />
   <button
-    className="sc-bZQynM hqRtSn"
+    className="sc-bZQynM gOIwnQ"
     disabled={false}
     type="button"
   >
@@ -205,7 +205,7 @@ exports[`<TextInputWithButton /> with tiny prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-bZQynM hqRtSn"
+    className="sc-bZQynM gOIwnQ"
     disabled={false}
     type="button"
   >
@@ -224,7 +224,7 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
     name="text"
   />
   <button
-    className="sc-bZQynM ioCtgE"
+    className="sc-bZQynM eSaPTl"
     disabled={false}
     type="button"
   >
