@@ -4,7 +4,7 @@ exports[`<ButtonImageWithTextAndBadge /> default snapshot 1`] = `
 <button
   aria-expanded={false}
   aria-haspopup="true"
-  className="k-ButtonImageWithText"
+  className="sc-bwzfXH iUQliu k-ButtonImageNextWithTextAndBadge"
   onClick={[Function]}
   title="Custom title"
 >
@@ -24,7 +24,7 @@ exports[`<ButtonImageWithTextAndBadge /> default snapshot 1`] = `
     </span>
   </span>
   <p
-    className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight"
+    className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-light k-ButtonImageNextWithTextAndBadge__text k-ButtonImageNextWithTextAndBadge__text--withoutPaddingRight"
   >
     Custom text
   </p>
@@ -35,7 +35,7 @@ exports[`<ButtonImageWithTextAndBadge /> snapshot with notifications 1`] = `
 <button
   aria-expanded={false}
   aria-haspopup="true"
-  className="k-ButtonImageWithText"
+  className="sc-bwzfXH iUQliu k-ButtonImageNextWithTextAndBadge"
   onClick={[Function]}
   title="Custom title"
 >
@@ -65,7 +65,7 @@ exports[`<ButtonImageWithTextAndBadge /> snapshot with notifications 1`] = `
     </span>
   </span>
   <p
-    className="k-ButtonImageWithText__text k-ButtonImageWithText__text--withoutPaddingRight"
+    className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-light k-ButtonImageNextWithTextAndBadge__text k-ButtonImageNextWithTextAndBadge__text--withoutPaddingRight"
   >
     Custom text
   </p>

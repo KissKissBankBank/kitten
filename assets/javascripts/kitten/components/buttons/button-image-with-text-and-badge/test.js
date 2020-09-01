@@ -20,6 +20,7 @@ describe('<ButtonImageWithTextAndBadge />', () => {
 
     expect(tree).toMatchSnapshot()
   })
+
   it('snapshot with notifications', () => {
     const tree = renderer
       .create(
