@@ -1,5 +1,5 @@
 import React from 'react'
-import { ButtonIcon } from '../../../components/buttons/button-icon'
+import { Button } from '../../../components/buttons/button/button'
 import { FacebookIcon } from '../../../components/icons/facebook-icon'
 import { TwitterIcon } from '../../../components/icons/twitter-icon'
 import { LinkedinIcon } from '../../../components/icons/linkedin-icon'
@@ -8,37 +8,37 @@ import { YoutubeIcon } from '../../../components/icons/youtube-icon'
 import { PinterestIcon } from '../../../components/icons/pinterest-icon'
 
 export const FacebookButtonIcon = props => (
-  <ButtonIcon {...props} modifier="facebook">
-    <FacebookIcon className="k-ButtonIcon__svg" />
-  </ButtonIcon>
+  <Button {...props} modifier="social_facebook" icon>
+    <FacebookIcon width="14" height="14" />
+  </Button>
 )
 
 export const TwitterButtonIcon = props => (
-  <ButtonIcon {...props} modifier="twitter">
-    <TwitterIcon className="k-ButtonIcon__svg" />
-  </ButtonIcon>
+  <Button {...props} modifier="social_twitter" icon>
+    <TwitterIcon width="15" height="15" />
+  </Button>
 )
 
 export const LinkedinButtonIcon = props => (
-  <ButtonIcon {...props} modifier="linkedin">
-    <LinkedinIcon className="k-ButtonIcon__svg" />
-  </ButtonIcon>
+  <Button {...props} modifier="social_linkedin" icon>
+    <LinkedinIcon width="12" height="12" />
+  </Button>
 )
 
 export const InstagramButtonIcon = props => (
-  <ButtonIcon {...props} modifier="instagram">
-    <InstagramIcon className="k-ButtonIcon__svg" />
-  </ButtonIcon>
+  <Button {...props} modifier="social_instagram" icon>
+    <InstagramIcon width="16" height="16" />
+  </Button>
 )
 
 export const YoutubeButtonIcon = props => (
-  <ButtonIcon {...props} modifier="youtube">
-    <YoutubeIcon className="k-ButtonIcon__svg" />
-  </ButtonIcon>
+  <Button {...props} modifier="social_youtube" icon>
+    <YoutubeIcon width="16" height="16" />
+  </Button>
 )
 
 export const PinterestButtonIcon = props => (
-  <ButtonIcon {...props} modifier="pinterest">
-    <PinterestIcon className="k-ButtonIcon__svg" />
-  </ButtonIcon>
+  <Button {...props} modifier="social_pinterest" icon>
+    <PinterestIcon width="16" height="16" />
+  </Button>
 )

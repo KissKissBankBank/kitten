@@ -4,7 +4,16 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Fix:
+Feature:
+- Add 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram',
+  'social_youtube', 'social_pinterest' modifiers to Button component.
+- Add `InstagramButtonIconWords` component.
+
+Fixes:
+- Refactor `FacebookButtonIconWords`, `TwitterButtonIconWords`,
+  `LinkedinButtonIconWords` components.
+- Refactor `FacebookButtonIcon`, `TwitterButtonIcon`, `LinkedinButtonIcon`,
+  `InstagramButtonIcon`, `YoutubeButtonIcon`,  `PinterestButtonIcon` components.
 - Fix Legacy Carousel width.
 
 ## [2.89.0] - 2020-08-28
