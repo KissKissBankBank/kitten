@@ -18,6 +18,7 @@ Fixes:
   `InstagramButtonIcon`, `YoutubeButtonIcon`,  `PinterestButtonIcon` components.
 - Refactor `CloseButton` component.
 - Refactor `ButtonQuestionMarkIcon` component.
+- Refactor `ButtonIcon` component.
 
 ## [2.89.0] - 2020-08-28
 

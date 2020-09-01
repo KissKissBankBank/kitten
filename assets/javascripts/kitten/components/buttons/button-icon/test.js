@@ -1,82 +1,145 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import { ButtonIcon } from '../../../components/buttons/button-icon'
 
 describe('<ButtonIcon />', () => {
-  describe('by default', () => {
-    const component = shallow(<ButtonIcon />)
+  let component
 
-    it('it a <ButtonIcon />', () => {
-      expect(component.find('button')).toHaveLength(1)
-      expect(component.hasClass('k-ButtonIcon')).toBe(true)
-      expect(component.props.tabindex).toBe(void 0)
+  describe('by default', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ButtonIcon>
+            <svg className="k-ButtonIcon__svg" />
+          </ButtonIcon>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('modifier prop', () => {
-    const component = shallow(<ButtonIcon modifier="helium" />)
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ButtonIcon modifier="helium">
+            <svg className="k-ButtonIcon__svg" />
+          </ButtonIcon>,
+        )
+        .toJSON()
+    })
 
-    it('has className', () => {
-      expect(component.hasClass('k-ButtonIcon--helium')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('className prop', () => {
-    const component = shallow(<ButtonIcon className="customClass" />)
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ButtonIcon className="test_className_prop">
+            <svg className="k-ButtonIcon__svg" />
+          </ButtonIcon>,
+        )
+        .toJSON()
+    })
 
-    it('has customClass', () => {
-      expect(component.hasClass('customClass')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('size prop', () => {
-    const component = shallow(<ButtonIcon size="tiny" />)
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ButtonIcon size="nano">
+            <svg className="k-ButtonIcon__svg" />
+          </ButtonIcon>,
+        )
+        .toJSON()
+    })
 
-    it('has size', () => {
-      expect(component.hasClass('k-ButtonIcon--tiny')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('tag prop', () => {
-    const component = shallow(<ButtonIcon tag="a" />)
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ButtonIcon tag="span">
+            <svg className="k-ButtonIcon__svg" />
+          </ButtonIcon>,
+        )
+        .toJSON()
+    })
 
-    it('changes the tag', () => {
-      expect(component.find('a')).toHaveLength(1)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('rounded prop', () => {
-    const component = shallow(<ButtonIcon rounded />)
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ButtonIcon rounded>
+            <svg className="k-ButtonIcon__svg" />
+          </ButtonIcon>,
+        )
+        .toJSON()
+    })
 
-    it('has rounded', () => {
-      expect(component.hasClass('k-ButtonIcon--rounded')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with tag="a" and no href', () => {
-    const component = shallow(<ButtonIcon tag="a" />)
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ButtonIcon tag="a">
+            <svg className="k-ButtonIcon__svg" />
+          </ButtonIcon>,
+        )
+        .toJSON()
+    })
 
-    it('adds a tabindex', () => {
-      expect(component.props().tabIndex).toBe(0)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('with tag="a" href="foo"', () => {
-    const component = shallow(<ButtonIcon tag="a" href="foo" />)
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ButtonIcon tag="a" href="foo">
+            <svg className="k-ButtonIcon__svg" />
+          </ButtonIcon>,
+        )
+        .toJSON()
+    })
 
-    it('does not add a tabindex', () => {
-      expect(component.props().tabIndex).toBeFalsy()
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
-  describe('children prop', () => {
-    const component = shallow(
-      <ButtonIcon>
-        <svg />
-      </ButtonIcon>,
-    )
+  describe('without children', () => {
+    beforeEach(() => {
+      component = renderer.create(<ButtonIcon />).toJSON()
+    })
 
-    it('has children', () => {
-      expect(component.find('svg')).toHaveLength(1)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 })
