@@ -14,6 +14,7 @@ Fixes:
   `LinkedinButtonIconWords` components.
 - Refactor `FacebookButtonIcon`, `TwitterButtonIcon`, `LinkedinButtonIcon`,
   `InstagramButtonIcon`, `YoutubeButtonIcon`,  `PinterestButtonIcon` components.
+- Fix Legacy Carousel width.
 
 ## [2.89.0] - 2020-08-28
 
