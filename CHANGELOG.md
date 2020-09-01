@@ -21,6 +21,7 @@ Fixes:
 - Refactor `ButtonIcon` component.
 - Refactor `ButtonImageWithTextAndBadge` component.
 - Refactor `ButtonImageWithText` component.
+- Refactor `ButtonImage` component.
 
 ## [2.89.0] - 2020-08-28
 

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonImage /> should match with propped snapshot 1`] = `
+<button
+  className="sc-bdVaJa ljhWMJ k-ButtonImageNext k-ButtonImageNext--tiny k-ButtonImageNext--withoutPointerEvents k-ButtonImageNext--withBorder"
+>
+  <img
+    alt=""
+    className="k-ButtonImageNext__img"
+    src="#image_url"
+  />
+</button>
+`;
+
+exports[`<ButtonImage /> should match with snapshot 1`] = `
+<button
+  className="sc-bdVaJa ljhWMJ k-ButtonImageNext"
+>
+  <img
+    alt=""
+    className="k-ButtonImageNext__img"
+    src="#image_url"
+  />
+</button>
+`;
