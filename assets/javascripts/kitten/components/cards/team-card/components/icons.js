@@ -68,7 +68,7 @@ const SocialLinks = ({ links = [] }) => (
           tag="a"
           key={link.name}
           href={link.href}
-          modifier={link.name}
+          modifier={`social_${link.name}`}
           size="tiny"
           target="_blank"
           rel="noopener"

@@ -1118,6 +1118,9 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 @media (min-width:40rem) {
   .c0 {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
     width: 4.375rem;
     height: 4.375rem;
   }

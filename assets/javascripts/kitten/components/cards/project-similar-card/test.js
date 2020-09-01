@@ -9,7 +9,7 @@ import { Loader } from '../../../components/loaders/loader'
 describe('<SimilarProjectCard />', () => {
   describe('by default', () => {
     const similarProjectCard = mount(<SimilarProjectCard />)
-    const arrowButtons = similarProjectCard.find('.k-ButtonIcon')
+    const arrowButtons = similarProjectCard.find('.k-ButtonIconNext')
     const leftArrowButton = arrowButtons.first()
     const rightArrowButton = arrowButtons.last()
 
@@ -226,7 +226,7 @@ describe('<SimilarProjectCard />', () => {
 
   describe('with leftArrowDisabled prop', () => {
     const similarProjectCard = mount(<SimilarProjectCard leftArrowDisabled />)
-    const leftArrowButton = similarProjectCard.find('.k-ButtonIcon').first()
+    const leftArrowButton = similarProjectCard.find('.k-ButtonIconNext').first()
 
     it('disables the left arrow button', () => {
       expect(leftArrowButton.props().disabled).toBeTruthy()
@@ -235,7 +235,7 @@ describe('<SimilarProjectCard />', () => {
 
   describe('with rightArrowDisabled prop', () => {
     const similarProjectCard = mount(<SimilarProjectCard rightArrowDisabled />)
-    const rightArrowButton = similarProjectCard.find('.k-ButtonIcon').last()
+    const rightArrowButton = similarProjectCard.find('.k-ButtonIconNext').last()
 
     it('disables the right arrow button', () => {
       expect(rightArrowButton.props().disabled).toBeTruthy()
@@ -247,7 +247,7 @@ describe('<SimilarProjectCard />', () => {
     const similarProjectCard = mount(
       <SimilarProjectCard onLeftArrowClick={handleOnLeftArrowClick} />,
     )
-    const leftArrowButton = similarProjectCard.find('.k-ButtonIcon').first()
+    const leftArrowButton = similarProjectCard.find('.k-ButtonIconNext').first()
 
     it('attaches the right handler to left arrow button onClick prop', () => {
       expect(leftArrowButton.props().onClick).toBe(handleOnLeftArrowClick)
@@ -259,7 +259,7 @@ describe('<SimilarProjectCard />', () => {
     const similarProjectCard = mount(
       <SimilarProjectCard onRightArrowClick={handleOnRightArrowClick} />,
     )
-    const rightArrowButton = similarProjectCard.find('.k-ButtonIcon').last()
+    const rightArrowButton = similarProjectCard.find('.k-ButtonIconNext').last()
 
     it('attaches the right handler to right arrow button onClick prop', () => {
       expect(rightArrowButton.props().onClick).toBe(handleOnRightArrowClick)

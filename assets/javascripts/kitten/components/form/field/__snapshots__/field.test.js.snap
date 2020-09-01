@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-jzJRlG bTVSHD"
+      className="sc-kAzzGY jplcDl"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-cSHVUG jrEObi"
+        className="sc-chPdSV ehdkFE"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -84,19 +84,19 @@ Array [
         >
           <button
             aria-describedby="tooltip"
-            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            className="sc-bwzfXH krTgus"
             data-dismiss="tooltip"
             data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
             data-place="right"
             data-tip={true}
             onClick={[Function]}
-            tabIndex={null}
             type="button"
           >
             <svg
-              className="k-ButtonIcon__svg"
+              height="10"
               viewBox="0 0 6 10"
+              width="10"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -124,7 +124,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat iVlOqv"
+      className="sc-ifAKCX eilIky"
       disabled={false}
       id="input"
       name="field"
@@ -135,7 +135,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-gZMcBi giNnHm k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-VigVT fIhGog k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -180,19 +180,19 @@ Array [
         >
           <button
             aria-describedby="tooltip"
-            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            className="sc-bwzfXH krTgus"
             data-dismiss="tooltip"
             data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
             data-place="right"
             data-tip={true}
             onClick={[Function]}
-            tabIndex={null}
             type="button"
           >
             <svg
-              className="k-ButtonIcon__svg"
+              height="10"
               viewBox="0 0 6 10"
+              width="10"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -220,7 +220,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat fTSCbm"
+      className="sc-ifAKCX hETjNG"
       disabled={false}
       id="input"
       name="field"
@@ -262,19 +262,19 @@ Array [
         >
           <button
             aria-describedby="tooltip"
-            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            className="sc-bwzfXH krTgus"
             data-dismiss="tooltip"
             data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
             data-place="right"
             data-tip={true}
             onClick={[Function]}
-            tabIndex={null}
             type="button"
           >
             <svg
-              className="k-ButtonIcon__svg"
+              height="10"
               viewBox="0 0 6 10"
+              width="10"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -302,10 +302,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU eSPiSL"
+      className="sc-jTzLTM hwhVrJ"
     >
       <input
-        className="sc-htpNat iVlOqv sc-VigVT fUPyOg"
+        className="sc-ifAKCX eilIky sc-fjdhpX kCYvEC"
         disabled={false}
         id="input"
         name="field"
@@ -314,7 +314,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jTzLTM gQMtOg"
+        className="sc-jzJRlG eULSFC"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -343,7 +343,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-gZMcBi giNnHm k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-VigVT fIhGog k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -388,19 +388,19 @@ Array [
         >
           <button
             aria-describedby="tooltip"
-            className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
+            className="sc-bwzfXH krTgus"
             data-dismiss="tooltip"
             data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
             data-place="right"
             data-tip={true}
             onClick={[Function]}
-            tabIndex={null}
             type="button"
           >
             <svg
-              className="k-ButtonIcon__svg"
+              height="10"
               viewBox="0 0 6 10"
+              width="10"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>
@@ -428,10 +428,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU eSPiSL"
+      className="sc-jTzLTM hwhVrJ"
     >
       <input
-        className="sc-htpNat fTSCbm sc-VigVT fUPyOg"
+        className="sc-ifAKCX hETjNG sc-fjdhpX kCYvEC"
         disabled={false}
         id="input"
         name="field"
@@ -440,7 +440,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jTzLTM gQMtOg"
+        className="sc-jzJRlG eULSFC"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"

@@ -2,7 +2,7 @@
 
 exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-bZQynM gfPyqN k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -10,9 +10,8 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
   >
     <button
       aria-label="Garbage Button"
-      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--beryllium k-ButtonIcon--tiny"
+      className="sc-bwzfXH LtVmh sc-bxivhb kubQGo k-ButtonIconNext k-CartRewardCard__garbage k-ButtonIconNext--tiny"
       onClick={[Function]}
-      tabIndex={null}
       title="Garbage Button"
       type="button"
     >
@@ -39,7 +38,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bwzfXH cavDWq"
+        className="sc-ifAKCX jmYBZO"
       >
         Custom title amount
       </h1>
@@ -61,7 +60,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-bZQynM gfPyqN k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -69,9 +68,8 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
   >
     <button
       aria-label="Garbage Button"
-      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--beryllium k-ButtonIcon--tiny"
+      className="sc-bwzfXH LtVmh sc-bxivhb kubQGo k-ButtonIconNext k-CartRewardCard__garbage k-ButtonIconNext--tiny"
       onClick={[Function]}
-      tabIndex={null}
       title="Garbage Button"
       type="button"
     >
@@ -98,7 +96,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bwzfXH cavDWq"
+        className="sc-ifAKCX jmYBZO"
       >
         Custom title amount
       </h1>
@@ -120,7 +118,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
 
 exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-bZQynM gfPyqN k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -128,9 +126,8 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
   >
     <button
       aria-label="Garbage Button"
-      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--beryllium k-ButtonIcon--tiny"
+      className="sc-bwzfXH LtVmh sc-bxivhb kubQGo k-ButtonIconNext k-CartRewardCard__garbage k-ButtonIconNext--tiny"
       onClick={[Function]}
-      tabIndex={null}
       title="Garbage Button"
       type="button"
     >
@@ -157,7 +154,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double"
     >
       <Custom title tag
-        className="sc-bwzfXH cavDWq"
+        className="sc-ifAKCX jmYBZO"
         cssColor={null}
         italic={true}
         margin={false}
@@ -170,7 +167,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-single k-u-margin-top-double"
     >
       <span
-        className="sc-htpNat KtFsv k-u-size-default k-u-weight-bold"
+        className="sc-EHOje jvzENE k-u-size-default k-u-weight-bold"
       >
         Custom subtitle
       </span>
@@ -185,12 +182,12 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       </p>
     </div>
     <p
-      className="sc-htpNat KtFsv k-u-size-tiny k-u-weight-regular k-u-margin-none"
+      className="sc-EHOje jvzENE k-u-size-tiny k-u-weight-regular k-u-margin-none"
     >
       Custom shipping title
        
       <span
-        className="sc-htpNat KtFsv k-u-weight-light"
+        className="sc-EHOje jvzENE k-u-weight-light"
       >
         Custom shipping value
       </span>
@@ -199,7 +196,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="sc-bdVaJa jtfdLD"
     >
       <a
-        className="sc-htpNat KtFsv k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
+        className="sc-EHOje jvzENE k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
         href="Custom amount link"
       >
         Custom amount

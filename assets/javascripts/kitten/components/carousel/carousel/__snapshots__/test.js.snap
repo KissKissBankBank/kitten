@@ -32,12 +32,11 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 className="sc-EHOje ejmMxo k-ProjectCard__grid--flex"
               >
                 <span
-                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                  tabIndex={null}
+                  className="sc-dnqmqq cqLfcx k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                 >
                   <img
                     alt=""
-                    className="k-ButtonImage__img"
+                    className="k-ButtonImageNext__img"
                     src={null}
                   />
                 </span>
@@ -107,12 +106,11 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 className="sc-EHOje ejmMxo k-ProjectCard__grid--flex"
               >
                 <span
-                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                  tabIndex={null}
+                  className="sc-dnqmqq cqLfcx k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                 >
                   <img
                     alt=""
-                    className="k-ButtonImage__img"
+                    className="k-ButtonImageNext__img"
                     src={null}
                   />
                 </span>
@@ -190,12 +188,11 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                     className="sc-EHOje ejmMxo k-ProjectCard__grid--flex"
                   >
                     <span
-                      className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                      tabIndex={null}
+                      className="sc-dnqmqq cqLfcx k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                     >
                       <img
                         alt=""
-                        className="k-ButtonImage__img"
+                        className="k-ButtonImageNext__img"
                         src={null}
                       />
                     </span>
@@ -276,12 +273,11 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                     className="sc-EHOje ejmMxo k-ProjectCard__grid--flex"
                   >
                     <span
-                      className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                      tabIndex={null}
+                      className="sc-dnqmqq cqLfcx k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                     >
                       <img
                         alt=""
-                        className="k-ButtonImage__img"
+                        className="k-ButtonImageNext__img"
                         src={null}
                       />
                     </span>
@@ -362,12 +358,11 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                     className="sc-EHOje ejmMxo k-ProjectCard__grid--flex"
                   >
                     <span
-                      className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                      tabIndex={null}
+                      className="sc-dnqmqq cqLfcx k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                     >
                       <img
                         alt=""
-                        className="k-ButtonImage__img"
+                        className="k-ButtonImageNext__img"
                         src={null}
                       />
                     </span>
@@ -442,12 +437,11 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 className="sc-EHOje ejmMxo k-ProjectCard__grid--flex"
               >
                 <span
-                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                  tabIndex={null}
+                  className="sc-dnqmqq cqLfcx k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                 >
                   <img
                     alt=""
-                    className="k-ButtonImage__img"
+                    className="k-ButtonImageNext__img"
                     src={null}
                   />
                 </span>
@@ -517,12 +511,11 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 className="sc-EHOje ejmMxo k-ProjectCard__grid--flex"
               >
                 <span
-                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                  tabIndex={null}
+                  className="sc-dnqmqq cqLfcx k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                 >
                   <img
                     alt=""
-                    className="k-ButtonImage__img"
+                    className="k-ButtonImageNext__img"
                     src={null}
                   />
                 </span>
@@ -598,12 +591,11 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 className="sc-EHOje ejmMxo k-ProjectCard__grid--flex"
               >
                 <span
-                  className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-                  tabIndex={null}
+                  className="sc-dnqmqq cqLfcx k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                 >
                   <img
                     alt=""
-                    className="k-ButtonImage__img"
+                    className="k-ButtonImageNext__img"
                     src={null}
                   />
                 </span>

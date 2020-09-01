@@ -1,18 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] = `
-.c2 {
-  max-width: 100%;
+.c1 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.c1:hover,
+.c1:focus {
+  opacity: .8;
+}
+
+.c1.k-ButtonImageNext--tiny {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c1.k-ButtonImageNext--huge {
+  width: 5rem;
+  height: 5rem;
+}
+
+.c1.k-ButtonImageNext--withoutPointerEvents {
+  pointer-events: none;
+}
+
+.c1.k-ButtonImageNext--withBorder {
+  border: 0.125rem solid #eee;
+}
+
+.c1 .k-ButtonImageNext__img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .c3 {
+  max-width: 100%;
+}
+
+.c4 {
   position: relative;
   height: 0.125rem;
   background: #eee;
   height: 4px;
 }
 
-.c3::after {
+.c4::after {
   content: '';
   position: absolute;
   top: 0;
@@ -25,11 +76,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   background: #19b4fa;
 }
 
-.c1.is-disabled .c3::after {
+.c2.is-disabled .c4::after {
   background: #d8d8d8;
 }
 
-.c4 {
+.c5 {
   position: absolute;
   top: 0;
   right: 0;
@@ -346,8 +397,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   flex-shrink: 0;
 }
 
+@media (min-width:640px) {
+  .c1.k-ButtonImageNext--big {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
+
 @media (max-width:47.9375rem) {
-  .c4 {
+  .c5 {
     display: none;
   }
 }
@@ -450,12 +508,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
         className="k-u-margin-top-single"
       >
         <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
-          tabIndex={null}
+          className="c1 k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
-            className="k-ButtonImage__img"
+            className="k-ButtonImageNext__img"
             src="#image"
           />
         </span>
@@ -522,11 +579,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c1 c2 k-CrowdfundingCard__progressBar__progress"
+      className="c2 c3 k-CrowdfundingCard__progressBar__progress"
       role="progressbar"
     >
       <div
-        className="c3"
+        className="c4"
       />
     </div>
     <span
@@ -536,7 +593,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     </span>
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
@@ -549,18 +606,69 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 `;
 
 exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with snapshot 1`] = `
-.c2 {
-  max-width: 100%;
+.c1 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.c1:hover,
+.c1:focus {
+  opacity: .8;
+}
+
+.c1.k-ButtonImageNext--tiny {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c1.k-ButtonImageNext--huge {
+  width: 5rem;
+  height: 5rem;
+}
+
+.c1.k-ButtonImageNext--withoutPointerEvents {
+  pointer-events: none;
+}
+
+.c1.k-ButtonImageNext--withBorder {
+  border: 0.125rem solid #eee;
+}
+
+.c1 .k-ButtonImageNext__img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .c3 {
+  max-width: 100%;
+}
+
+.c4 {
   position: relative;
   height: 0.125rem;
   background: #eee;
   height: 4px;
 }
 
-.c3::after {
+.c4::after {
   content: '';
   position: absolute;
   top: 0;
@@ -573,15 +681,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   background: #19b4fa;
 }
 
-.c1.is-disabled .c3::after {
+.c2.is-disabled .c4::after {
   background: #d8d8d8;
 }
 
-.c1.is-disabled .c5::after {
+.c2.is-disabled .c6::after {
   background: #d8d8d8;
 }
 
-.c4 {
+.c5 {
   position: absolute;
   top: 0;
   right: 0;
@@ -898,8 +1006,15 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   flex-shrink: 0;
 }
 
+@media (min-width:640px) {
+  .c1.k-ButtonImageNext--big {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
+}
+
 @media (max-width:47.9375rem) {
-  .c4 {
+  .c5 {
     display: none;
   }
 }
@@ -1013,12 +1128,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
         className="k-u-margin-top-single"
       >
         <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
-          tabIndex={null}
+          className="c1 k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
-            className="k-ButtonImage__img"
+            className="k-ButtonImageNext__img"
             src="#image"
           />
         </span>
@@ -1054,11 +1168,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c1 c2 k-CrowdfundingCard__progressBar__progress"
+      className="c2 c3 k-CrowdfundingCard__progressBar__progress"
       role="progressbar"
     >
       <div
-        className="c3"
+        className="c4"
       />
     </div>
     <span
@@ -1068,7 +1182,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     </span>
   </div>
   <div
-    className="c4"
+    className="c5"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
@@ -1081,7 +1195,58 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 `;
 
 exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot 1`] = `
-.c2 {
+.c1 {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  opacity: 1;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+.c1:hover,
+.c1:focus {
+  opacity: .8;
+}
+
+.c1.k-ButtonImageNext--tiny {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c1.k-ButtonImageNext--huge {
+  width: 5rem;
+  height: 5rem;
+}
+
+.c1.k-ButtonImageNext--withoutPointerEvents {
+  pointer-events: none;
+}
+
+.c1.k-ButtonImageNext--withBorder {
+  border: 0.125rem solid #eee;
+}
+
+.c1 .k-ButtonImageNext__img {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.c3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1395,7 +1560,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   flex-shrink: 0;
 }
 
-.c1 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1435,65 +1600,72 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c1:disabled {
+.c2:disabled {
   cursor: not-allowed;
 }
 
-.c1:hover {
+.c2:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1 >:nth-child(n) {
+.c2 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c1 >:last-child {
+.c2 >:last-child {
   margin-right: 0;
 }
 
-.c1 svg,
-.c1 path {
+.c2 svg,
+.c2 path {
   fill: #fff;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c1:hover,
-.c1:focus {
+.c2:hover,
+.c2:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c1:hover svg,
-.c1:focus svg,
-.c1:hover path,
-.c1:focus path {
+.c2:hover svg,
+.c2:focus svg,
+.c2:hover path,
+.c2:focus path {
   fill: #fff;
 }
 
-.c1:active {
+.c2:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c1:active svg,
-.c1:active path {
+.c2:active svg,
+.c2:active path {
   fill: #fff;
 }
 
-.c1:disabled {
+.c2:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c1:disabled svg,
-.c1:disabled path {
+.c2:disabled svg,
+.c2:disabled path {
   fill: #fff;
+}
+
+@media (min-width:640px) {
+  .c1.k-ButtonImageNext--big {
+    width: 3.125rem;
+    height: 3.125rem;
+  }
 }
 
 @media (max-width:39.9375rem) {
@@ -1569,7 +1741,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1 {
+  .c2 {
     width: 12.5rem;
     height: 3.125rem;
   }
@@ -1600,12 +1772,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
         className="k-u-margin-top-single"
       >
         <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
-          tabIndex={null}
+          className="c1 k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents k-CrowdfundingCard__image__avatar"
         >
           <img
             alt=""
-            className="k-ButtonImage__img"
+            className="k-ButtonImageNext__img"
             src="#image"
           />
         </span>
@@ -1699,14 +1870,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c1"
+      className="c2"
     >
       Lorem ipsum
     </button>
   </div>
   
   <div
-    className="c2"
+    className="c3"
   >
     Sur
   </div>
