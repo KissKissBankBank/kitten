@@ -145,6 +145,15 @@ export const StyledCarouselContainer = styled.div`
 
   &.k-Carousel.k-LegacyCarousel {
     @media (max-width: ${ScreenConfig.M.max}px) {
+      .k-Grid {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .k-Grid__col--12 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
       .k-Carousel__inner {
         padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
         scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};

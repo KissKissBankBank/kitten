@@ -24,6 +24,14 @@ const StoryContainer = ({ children }) => (
   </Container>
 )
 
+const LegacyStoryContainer = ({ children }) => (
+  <Container fullWidthBelowScreenSize="M">
+    <Marger top="5" bottom="5">
+      {children}
+    </Marger>
+  </Container>
+)
+
 const InNestedGridStoryContainer = ({ children }) => (
   <Container>
     <Marger top="5" bottom="5">
@@ -222,7 +230,7 @@ export const InNestedGrid = () => (
 )
 
 export const InLegacyGrid = () => (
-  <StoryContainer>
+  <LegacyStoryContainer>
     <LegacyCarousel
       withoutLeftOffset={boolean('Without left offset', false)}
       tinyButtons={boolean('Button tiny size', false)}
@@ -259,7 +267,7 @@ export const InLegacyGrid = () => (
         />
       )}
     />
-  </StoryContainer>
+  </LegacyStoryContainer>
 )
 
 export const WithPassedProps = () => (
