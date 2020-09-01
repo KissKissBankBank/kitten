@@ -1,26 +1,34 @@
 import React from 'react'
-import { Button } from '../../../components/buttons/button'
+import { Button } from '../../../components/buttons/button/button'
 import { FacebookIcon } from '../../../components/icons/facebook-icon'
 import { TwitterIcon } from '../../../components/icons/twitter-icon'
 import { LinkedinIcon } from '../../../components/icons/linkedin-icon'
+import { InstagramIcon } from '../../../components/icons/instagram-icon'
 
 export const FacebookButtonIconWords = ({ children, ...props }) => (
-  <Button icon size="big" modifier="facebook" {...props}>
-    <FacebookIcon className="k-Button__icon" />
-    {children}
+  <Button {...props} modifier="social_facebook">
+    <FacebookIcon height="14" width="7" />
+    <span>{children}</span>
   </Button>
 )
 
 export const TwitterButtonIconWords = ({ children, ...props }) => (
-  <Button icon size="big" modifier="twitter" {...props}>
-    <TwitterIcon className="k-Button__icon" />
-    {children}
+  <Button {...props} modifier="social_twitter">
+    <TwitterIcon height="12" width="15" />
+    <span>{children}</span>
+  </Button>
+)
+
+export const InstagramButtonIconWords = ({ children, ...props }) => (
+  <Button {...props} modifier="social_instagram">
+    <InstagramIcon height="16" width="16" />
+    <span>{children}</span>
   </Button>
 )
 
 export const LinkedinButtonIconWords = ({ children, ...props }) => (
-  <Button icon size="big" modifier="linkedin" {...props}>
-    <LinkedinIcon className="k-Button__icon" />
-    {children}
+  <Button {...props} modifier="social_linkedin">
+    <LinkedinIcon height="12" width="12" />
+    <span>{children}</span>
   </Button>
 )
