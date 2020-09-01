@@ -20,6 +20,7 @@ Fixes:
 - Refactor `ButtonQuestionMarkIcon` component.
 - Refactor `ButtonIcon` component.
 - Refactor `ButtonImageWithTextAndBadge` component.
+- Refactor `ButtonImageWithText` component.
 
 ## [2.89.0] - 2020-08-28
 

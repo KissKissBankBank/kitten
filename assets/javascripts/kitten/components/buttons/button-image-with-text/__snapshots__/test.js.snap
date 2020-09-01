@@ -2,28 +2,27 @@
 
 exports[`<ButtonImageWithText /> should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH lhrcar"
+  className="sc-htpNat gzmFqo k-ButtonImageNextWithText"
 >
-  <span
-    className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
-    tabIndex={null}
+  <button
+    className="sc-bdVaJa ljhWMJ k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
   >
     <img
       alt=""
-      className="k-ButtonImage__img"
+      className="k-ButtonImageNext__img"
       src="https://placehold.it/100x100/caf4fe/caf4fe"
     />
-  </span>
+  </button>
   <div
-    className="sc-htpNat jQqfDF"
+    className="k-ButtonImageNextWithText__textContainer"
   >
     <p
-      className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-light sc-bxivhb bYufdY"
+      className="sc-bwzfXH uTxCW k-u-size-tiny k-u-weight-light k-ButtonImageNextWithText__text"
     >
       Custom title
     </p>
     <p
-      className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-light sc-bxivhb bYufdY"
+      className="sc-bwzfXH uTxCW k-u-size-tiny k-u-weight-light k-ButtonImageNextWithText__text"
     >
       Custom description
     </p>

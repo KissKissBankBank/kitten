@@ -27,14 +27,15 @@ import { ButtonImageWithText } from '@kisskissbankbank/kitten/src/components/but
 #### With props
 
 ```js
-<LinkBox
-  title="Title"
-  description="Lorem ipsum"
-  micro
-  tag="span"
-  titleRegular
-  textRegular
-  largeGutter
-  avatarProps={{ alt: 'Lorem ipsum' }}
+<ButtonImageWithText
+  title=""
+  description=""
+  micro={false}
+  largeGutter={false}
+  titleRegular={false}
+  textRegular={false}
+  avatarProps={{
+    src: 'https://placehold.it/100x100/caf4fe/caf4fe',
+  }}
 />
 ```

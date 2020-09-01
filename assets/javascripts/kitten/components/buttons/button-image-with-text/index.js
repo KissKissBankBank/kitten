@@ -1,37 +1,34 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { ButtonImage } from '../../../components/buttons/button-image'
 import { Text } from '../../../components/typography/text'
 import { pxToRem } from '../../../helpers/utils/typography'
+import classNames from 'classnames'
 
-const Container = styled.div`
+const StyledButtonImageWithText = styled.div`
   display: flex;
   align-items: center;
   flex: 1;
-`
 
-const TextContainer = styled.div`
-  margin-left: ${pxToRem(10)};
-  line-height: 1.2;
+  .k-ButtonImageNextWithText__textContainer {
+    margin-left: ${pxToRem(10)};
+    line-height: 1.2;
 
-  ${({ largeGutter }) =>
-    largeGutter &&
-    css`
+    &.k-ButtonImageNextWithText__textContainer--largeGutter {
       margin-left: ${pxToRem(15)};
-    `}
-`
+    }
+  }
 
-const StyledText = styled(Text)`
-  display: flex;
-  align-items: center;
-  flex: 1;
+  .k-ButtonImageNextWithText__text {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
 
-  ${({ tag }) =>
-    tag === 'p' &&
-    css`
-      margin: 0;
-    `}
+  p.k-ButtonImageNextWithText__text {
+    margin: 0;
+  }
 `
 
 export const ButtonImageWithText = ({
@@ -49,19 +46,33 @@ export const ButtonImageWithText = ({
   const textWeight = textRegular ? 'regular' : 'light'
 
   return (
-    <Container>
-      <ButtonImage tag="span" img={avatarProps} withoutPointerEvents />
+    <StyledButtonImageWithText className="k-ButtonImageNextWithText">
+      <ButtonImage img={avatarProps} withoutPointerEvents />
 
-      <TextContainer largeGutter={largeGutter}>
-        <StyledText tag={tag} size={size} weight={titleWeight}>
+      <div
+        className={classNames('k-ButtonImageNextWithText__textContainer', {
+          'k-ButtonImageNextWithText__textContainer--largeGutter': largeGutter,
+        })}
+      >
+        <Text
+          className="k-ButtonImageNextWithText__text"
+          tag={tag}
+          size={size}
+          weight={titleWeight}
+        >
           {title}
-        </StyledText>
+        </Text>
 
-        <StyledText tag={tag} size={size} weight={textWeight}>
+        <Text
+          className="k-ButtonImageNextWithText__text"
+          tag={tag}
+          size={size}
+          weight={textWeight}
+        >
           {description}
-        </StyledText>
-      </TextContainer>
-    </Container>
+        </Text>
+      </div>
+    </StyledButtonImageWithText>
   )
 }
 
