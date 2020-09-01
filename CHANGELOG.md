@@ -4,7 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-Feature:
+## [2.90.0] - 2020-09-01
+
+Features:
 - Add 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram',
   'social_youtube', 'social_pinterest' modifiers to Button component.
 - Add `InstagramButtonIconWords` component.
