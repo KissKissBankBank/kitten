@@ -77,61 +77,57 @@ export const ImageCropper = ({
   }
   const dragMode = disabled || !isCropEnabled ? 'none' : 'move'
   return (
-    <section>
-      <Grid>
-        <GridCol col="12">
-          <Marger bottom="1.5">
-            <Label size="tiny">{label}</Label>
-          </Marger>
+    <>
+      <Marger bottom="1.5">
+        <Label size="tiny">{label}</Label>
+      </Marger>
 
-          <Marger top="1.5" bottom="1">
-            <BasicUploader
-              id={name}
-              fileName={fileNameState}
-              buttonText={buttonLabel}
-              disabled={disabled}
-              errorText={errorText}
-              status={status}
-              fileInputProps={{ accept: acceptedFiles }}
-              onUpload={e => {
-                try {
-                  const file = e.currentTarget.files[0]
-                  if (file.size > maxSize) {
-                    setStatus('error')
-                    setErrorText(uploaderErrorLabel)
-                  } else {
-                    const reader = new FileReader()
-                    reader.onload = event => {
-                      setImageSrc(event.target.result)
-                      setFileName(file.name)
-                    }
-                    reader.readAsDataURL(file)
-                  }
-                } catch (e) {
-                  setStatus('error')
-                  setErrorText(uploaderErrorLabel)
+      <Marger top="1.5" bottom="1">
+        <BasicUploader
+          id={name}
+          fileName={fileNameState}
+          buttonText={buttonLabel}
+          disabled={disabled}
+          errorText={errorText}
+          status={status}
+          fileInputProps={{ accept: acceptedFiles }}
+          onUpload={e => {
+            try {
+              const file = e.currentTarget.files[0]
+              if (file.size > maxSize) {
+                setStatus('error')
+                setErrorText(uploaderErrorLabel)
+              } else {
+                const reader = new FileReader()
+                reader.onload = event => {
+                  setImageSrc(event.target.result)
+                  setFileName(file.name)
                 }
-              }}
-              onCancel={() => {
-                setImageSrc(imageSrc)
-                setFileName(fileName)
-                setErrorText('')
+                reader.readAsDataURL(file)
+              }
+            } catch (e) {
+              setStatus('error')
+              setErrorText(uploaderErrorLabel)
+            }
+          }}
+          onCancel={() => {
+            setImageSrc(imageSrc)
+            setFileName(fileName)
+            setErrorText('')
 
-                onChange({
-                  value: null,
-                  name: null,
-                })
-              }}
-            />
-          </Marger>
+            onChange({
+              value: null,
+              name: null,
+            })
+          }}
+        />
+      </Marger>
 
-          <Marger top="1">
-            <Paragraph modifier="quaternary" margin={false}>
-              {description}
-            </Paragraph>
-          </Marger>
-        </GridCol>
-      </Grid>
+      <Marger top="1">
+        <Paragraph modifier="quaternary" margin={false}>
+          {description}
+        </Paragraph>
+      </Marger>
 
       {imageSrcState && (
         <Grid>
@@ -198,7 +194,7 @@ export const ImageCropper = ({
           )}
         </Grid>
       )}
-    </section>
+    </>
   )
 }
 
