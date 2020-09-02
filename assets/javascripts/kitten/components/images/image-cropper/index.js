@@ -132,7 +132,7 @@ export const ImageCropper = ({
       {imageSrcState && (
         <Grid>
           <GridCol col="12" col-m="6">
-            <Marger top="2" key="cropper">
+            <Marger top="2">
               <div ref={cropperContainerRef}>
                 {cropperWidth && cropperHeight && (
                   <Cropper
