@@ -111,6 +111,7 @@ Slider.defaultProps = {
   step: 1,
   onChange: function () {},
   onChangeEnd: function () {},
+  onAction: function () {},
 }
 
 // DEPRECATED: do not use default export.
