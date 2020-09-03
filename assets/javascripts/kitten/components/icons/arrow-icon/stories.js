@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, GridCol } from '../components/grid/grid'
-import { ArrowIcon } from '../components/icons/arrow-icon'
+import { ArrowIcon } from './index'
 
 export default {
   title: 'ArrowIcon',
