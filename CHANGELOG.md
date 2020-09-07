@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 Feature: - Use `BasicUploader` for `ImageCropper`, remove `base64` prop (always `true`)
+Fix: Fix `ClickableCard` image dimensions in Safari.
 
 ## [2.90.0] - 2020-09-01
 
