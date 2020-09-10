@@ -77,6 +77,7 @@ import { AlignLeftIcon } from './align-left-icon'
 import { AlignCenterIcon } from './align-center-icon'
 import { AlignRightIcon } from './align-right-icon'
 import { UploadIcon } from './upload-icon'
+import { DownloadIcon } from './download-icon'
 import { DocumentIconEmpty } from './document-icon-empty'
 import { DocumentIconHouse } from './document-icon-house'
 import { DocumentIconPerson } from './document-icon-person'
@@ -220,6 +221,7 @@ export const AllIcons = () => {
         <IconContainer children={<RocketIcon />} />
         <IconContainer children={<RocketCircleIcon />} />
         <IconContainer children={<UploadIcon />} />
+        <IconContainer children={<DownloadIcon />} />
       </Group>
     </Container>
   )
