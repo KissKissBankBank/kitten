@@ -27,6 +27,12 @@ export const GifVideo = ({ poster, children, ...props }) => {
     sources.forEach(source => {
       source.addEventListener('error', handleSourceError)
     })
+
+    return () => {
+      sources.forEach(source => {
+        source.removeEventListener('error', handleSourceError)
+      })
+    }
   }, [videoElement])
 
   useEffect(() => {
