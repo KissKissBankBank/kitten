@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `DownloadIcon` component.
+## [2.92.0] - 2020-09-10
+
+Feature:
+- Add `DownloadIcon` component.
 
 ## [2.91.1] - 2020-09-10
 
