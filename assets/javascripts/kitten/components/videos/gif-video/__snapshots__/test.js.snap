@@ -6,6 +6,7 @@ exports[`<GifVideo /> with multiple sources matches with snapshot 1`] = `
   className="sc-bdVaJa fzPwtu"
   loop={true}
   muted={true}
+  playsInline={true}
   poster={null}
 >
   <source
@@ -25,6 +26,7 @@ exports[`<GifVideo /> with no source matches with snapshot 1`] = `
   className="sc-bdVaJa fzPwtu"
   loop={true}
   muted={true}
+  playsInline={true}
   poster={null}
 />
 `;

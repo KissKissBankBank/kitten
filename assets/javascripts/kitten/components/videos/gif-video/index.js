@@ -41,6 +41,7 @@ export const GifVideo = ({ poster, children, ...props }) => {
       autoPlay
       loop
       muted
+      playsInline
       {...props}
       poster={shouldLoadPoster ? poster : null}
     >

@@ -998,6 +998,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
         className="c1 k-Card__image k-CrowdfundingCard__image__image testClass"
         loop={false}
         muted={false}
+        playsInline={true}
         poster={null}
       >
         <source

@@ -492,6 +492,7 @@ exports[`<RewardCard /> with video matches with snapshot 1`] = `
         className="sc-htoDjs kEqSux k-RewardCard__video"
         loop={false}
         muted={true}
+        playsInline={true}
         poster={null}
       >
         <source
