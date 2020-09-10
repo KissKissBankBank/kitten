@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix controls issue on `GifVideo`.
+
 ## [2.91.0] - 2020-09-07
 
 Feature:
