@@ -280,7 +280,7 @@ export const AllIcons = () => {
         <IconContainer children={<CopyIcon color={colorInput} />} />
         <IconContainer children={<BubbleIcon color={colorInput} />} />
         <IconContainer children={<ExportIcon color={colorInput} />} />
-        <IconContainer children={<ExportIconAlternate />} />
+        <IconContainer children={<ExportIconAlternate color={colorInput} />} />
         <IconContainer children={<StrokeIcon color={colorInput} />} />
         <IconContainer
           className="noMaxDimensions"

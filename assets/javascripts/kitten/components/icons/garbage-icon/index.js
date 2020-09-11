@@ -7,6 +7,7 @@ export const GarbageIcon = ({ color, title, ...props }) => (
     height="14"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 12 14"
+    fill={color}
     {...props}
   >
     {title && <title>{title}</title>}
