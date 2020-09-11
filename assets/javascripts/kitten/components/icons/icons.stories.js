@@ -103,6 +103,7 @@ const Group = styled(({ className, children, title }) => {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(${pxToRem(140)}, 1fr));
   grid-gap: ${pxToRem(40)} ${pxToRem(20)};
+  margin-bottom: ${pxToRem(40)};
 `
 
 const IconContainer = styled(({ className, children }) => {
@@ -206,6 +207,28 @@ export const AllIcons = () => {
         <IconContainer children={<DocumentIconPerson />} />
       </Group>
 
+      <Group title="ArrowIcon">
+        <IconContainer
+          children={
+            <ArrowIcon version="solid" color={colorInput} direction="top" />
+          }
+        />
+        <IconContainer
+          children={
+            <ArrowIcon version="solid" color={colorInput} direction="bottom" />
+          }
+        />
+        <IconContainer
+          children={
+            <ArrowIcon version="solid" color={colorInput} direction="left" />
+          }
+        />
+        <IconContainer
+          children={
+            <ArrowIcon version="solid" color={colorInput} direction="right" />
+          }
+        />
+      </Group>
       <Group title="Others">
         <IconContainer children={<BurgerIcon color={colorInput} />} />
         <IconContainer children={<GarbageIcon color={colorInput} />} />
@@ -213,9 +236,6 @@ export const AllIcons = () => {
         <IconContainer children={<SearchIcon color={colorInput} />} />
         <IconContainer children={<WaitingIcon color={colorInput} />} />
         <IconContainer children={<WarningIcon color={colorInput} />} />
-        <IconContainer
-          children={<ArrowIcon version="solid" color={colorInput} />}
-        />
         <IconContainer children={<Cart color={colorInput} />} />
         <IconContainer
           children={
