@@ -105,23 +105,23 @@ const Group = styled(({ className, children, title }) => {
   align-items: center;
 `
 
-const SvgWrapper = styled.div`
-  width: ${pxToRem(25)};
-  height: ${pxToRem(25)};
-  margin: auto;
-  padding: ${pxToRem(15)};
-`
-
 const IconContainer = styled(({ className, children }) => {
   return (
     <div className={className}>
-      <SvgWrapper>{children}</SvgWrapper>
+      <div className="svgWrapper">{children}</div>
       <Text size="micro">{children.type.name}</Text>
     </div>
   )
 })`
   text-align: center;
   padding: ${pxToRem(10)};
+
+  .svgWrapper {
+    width: ${pxToRem(25)};
+    height: ${pxToRem(25)};
+    margin: auto;
+    padding: ${pxToRem(15)};
+  }
 `
 
 const colorInput = color('Main color', '#333')
