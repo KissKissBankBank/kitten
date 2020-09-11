@@ -22,5 +22,5 @@ InstrumentTagIcon.propTypes = {
 
 InstrumentTagIcon.defaultProps = {
   color: '#333',
-  title: 'Instrument tag',
+  title: '',
 }

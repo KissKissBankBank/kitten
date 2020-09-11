@@ -13,6 +13,7 @@ export class FilterIcon extends Component {
       name,
       begin,
       animated,
+      title,
       ...others
     } = this.props
 
@@ -30,7 +31,7 @@ export class FilterIcon extends Component {
         fill={color}
         {...others}
       >
-        <title>Filter icon</title>
+        {title && <title>{title}</title>}
         <rect x="2" width="2" height="10">
           <animate
             attributeType={type}
@@ -138,4 +139,5 @@ FilterIcon.defaultProps = {
   type: 'xml',
   name: 'y',
   begin: '0',
+  title: '',
 }

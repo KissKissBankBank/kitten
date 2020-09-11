@@ -22,5 +22,5 @@ GarbageIcon.propTypes = {
 
 GarbageIcon.defaultProps = {
   color: '#fff',
-  title: 'Garbage',
+  title: '',
 }

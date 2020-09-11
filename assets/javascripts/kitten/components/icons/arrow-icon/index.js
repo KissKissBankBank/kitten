@@ -9,6 +9,7 @@ export const DeprecatedArrowIconSvg = ({
   direction,
   disabled,
   version,
+  title,
   ...others
 }) => {
   const arrowIconClassNames = classNames(
@@ -27,7 +28,7 @@ export const DeprecatedArrowIconSvg = ({
       className={arrowIconClassNames}
       viewBox="0 0 6 6"
     >
-      <title>Arrow</title>
+      {title && <title>{title}</title>}
       <path d="M6 0H0v6h2V2h4z" />
     </svg>
   )
@@ -76,6 +77,7 @@ export const ArrowIcon = ({
   direction,
   disabled,
   color,
+  title,
   ...others
 }) => {
   if (version === 'deprecated-center-of-gravity') {
@@ -84,6 +86,7 @@ export const ArrowIcon = ({
         version={version}
         direction={direction}
         disabled={disabled}
+        title={title}
         {...others}
       />
     )
@@ -104,6 +107,7 @@ export const ArrowIcon = ({
       fill={disabled ? COLORS.background1 : color}
       transform={direction && transform[direction]}
     >
+      {title && <title>{title}</title>}
       <path d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z" />
     </svg>
   )
@@ -117,6 +121,7 @@ ArrowIcon.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   color: PropTypes.string,
+  title: PropTypes.string,
 }
 
 ArrowIcon.defaultProps = {
@@ -127,4 +132,5 @@ ArrowIcon.defaultProps = {
   width: '8.48',
   height: '5.64',
   color: COLORS.font1,
+  title: '',
 }
