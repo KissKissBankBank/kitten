@@ -248,7 +248,9 @@ export const AllIcons = () => {
             <ClockCircleIcon bgColor={bgColorInput} color={colorInput} />
           }
         />
-        <IconContainer children={<ClockIcon color={colorInput} />} />
+        <IconContainer
+          children={<ClockIcon bgColor={bgColorInput} color={colorInput} />}
+        />
         <IconContainer
           children={
             <CrossCircleIcon bgColor={bgColorInput} color={colorInput} />
