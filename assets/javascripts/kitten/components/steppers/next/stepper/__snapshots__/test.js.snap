@@ -145,9 +145,7 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Arrow
-          </title>
+          
           <path
             d="M6 0H0v6h2V2h4z"
           />
@@ -189,9 +187,7 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
             width="8.48"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              Arrow
-            </title>
+            
             <path
               d="M6 0H0v6h2V2h4z"
             />

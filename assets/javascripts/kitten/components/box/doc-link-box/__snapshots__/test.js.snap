@@ -79,6 +79,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
         width="10"
         xmlns="http://www.w3.org/2000/svg"
       >
+        
         <path
           d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
         />
@@ -173,6 +174,7 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
         width="10"
         xmlns="http://www.w3.org/2000/svg"
       >
+        
         <path
           d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
         />

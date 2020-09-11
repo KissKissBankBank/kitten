@@ -217,9 +217,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          Garbage
-        </title>
+        
         <path
           d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
         />
