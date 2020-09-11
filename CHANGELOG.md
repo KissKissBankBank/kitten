@@ -4,6 +4,37 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `color` and `bgColor` props and deprecate old color props on:
+  - `CheckedCircleIcon`
+  - `ClockCircleIcon`
+  - `ClockIcon`
+  - `CrossCircleIcon`
+  - `FlashCircleIcon`
+  - `StyledRocketCircle`
+  - `WarningCircleIcon`
+- Feature: Add `color` props to:
+  - `Cart`
+  - `FacebookIcon`
+  - `FacebookIconWithBackground`
+  - `GarbageIcon`
+  - `GrabberIcon`
+  - `InstagramIcon`
+  - `InstrumentTagIcon`
+  - `LinkedinIcon`
+  - `LocationIcon`
+  - `MenuIcon`
+  - `MessengerIcon`
+  - `PhoneIcon`
+  - `PinterestIcon`
+  - `QuestionMarkIcon`
+  - `StarIcon`
+  - `TwitterIcon`
+  - `TypologyTagIcon`
+  - `WhatsAppIcon`
+  - `YoutubeIcon`
+- Fix `ArrowIcon` props.
+
+
 ## [2.92.0] - 2020-09-10
 
 Feature:
