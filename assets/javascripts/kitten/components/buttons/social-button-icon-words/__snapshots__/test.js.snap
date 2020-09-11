@@ -127,14 +127,13 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   className="c0"
 >
   <svg
+    fill="#222"
     height="14"
     viewBox="0 0 8 15"
     width="7"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      Facebook
-    </title>
+    
     <path
       d="M4.785 14.196V7.72H6.96l.324-2.523h-2.5v-1.61c0-.732.204-1.23 1.252-1.23h1.336V.1C7.142.07 6.348 0 5.425 0 3.498 0 2.18 1.176 2.18 3.336v1.86H0v2.525h2.18v6.476h2.605z"
     />
@@ -274,14 +273,13 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   className="c0"
 >
   <svg
+    fill="#222"
     height="14"
     viewBox="0 0 8 15"
     width="7"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      Facebook
-    </title>
+    
     <path
       d="M4.785 14.196V7.72H6.96l.324-2.523h-2.5v-1.61c0-.732.204-1.23 1.252-1.23h1.336V.1C7.142.07 6.348 0 5.425 0 3.498 0 2.18 1.176 2.18 3.336v1.86H0v2.525h2.18v6.476h2.605z"
     />
@@ -435,14 +433,13 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   className="c0"
 >
   <svg
+    fill="#222"
     height="16"
     viewBox="0 0 70 70"
     width="16"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      Instagram
-    </title>
+    
     <path
       d="M17 0A17 17 0 0 0 0 17v36a17 17 0 0 0 17 17h36a17 17 0 0 0 17-17V17A17 17 0 0 0 53 0zm0 6h36a10.91 10.91 0 0 1 11 11v36a10.91 10.91 0 0 1-11 11H17A10.91 10.91 0 0 1 6 53V17A10.91 10.91 0 0 1 17 6zm38 6a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm-20 6a17 17 0 1 0 17 17 17 17 0 0 0-17-17zm0 6a11 11 0 1 1-11 11 11 11 0 0 1 11-11z"
     />
@@ -598,14 +595,13 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   className="c0"
 >
   <svg
+    fill="#222"
     height="16"
     viewBox="0 0 70 70"
     width="16"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      Instagram
-    </title>
+    
     <path
       d="M17 0A17 17 0 0 0 0 17v36a17 17 0 0 0 17 17h36a17 17 0 0 0 17-17V17A17 17 0 0 0 53 0zm0 6h36a10.91 10.91 0 0 1 11 11v36a10.91 10.91 0 0 1-11 11H17A10.91 10.91 0 0 1 6 53V17A10.91 10.91 0 0 1 17 6zm38 6a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm-20 6a17 17 0 1 0 17 17 17 17 0 0 0-17-17zm0 6a11 11 0 1 1-11 11 11 11 0 0 1 11-11z"
     />
@@ -743,14 +739,13 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   className="c0"
 >
   <svg
+    fill="#222"
     height="12"
     viewBox="0 0 14 14"
     width="12"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      LinkedIn
-    </title>
+    
     <path
       d="M1.622 0a1.62 1.62 0 1 1-.002 3.242A1.62 1.62 0 0 1 1.622 0zm-1.4 13.465H3.02V4.47H.222v8.995zM4.773 4.47h2.68V5.7h.038c.374-.707 1.286-1.452 2.646-1.452 2.83 0 3.353 1.862 3.353 4.284v4.933h-2.796V9.09c0-1.042-.018-2.384-1.452-2.384-1.455 0-1.677 1.137-1.677 2.31v4.45H4.773V4.47"
     />
@@ -890,14 +885,13 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   className="c0"
 >
   <svg
+    fill="#222"
     height="12"
     viewBox="0 0 14 14"
     width="12"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      LinkedIn
-    </title>
+    
     <path
       d="M1.622 0a1.62 1.62 0 1 1-.002 3.242A1.62 1.62 0 0 1 1.622 0zm-1.4 13.465H3.02V4.47H.222v8.995zM4.773 4.47h2.68V5.7h.038c.374-.707 1.286-1.452 2.646-1.452 2.83 0 3.353 1.862 3.353 4.284v4.933h-2.796V9.09c0-1.042-.018-2.384-1.452-2.384-1.455 0-1.677 1.137-1.677 2.31v4.45H4.773V4.47"
     />
@@ -1035,14 +1029,13 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   className="c0"
 >
   <svg
+    fill="#222"
     height="12"
     viewBox="0 0 15 14"
     width="15"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      Twitter
-    </title>
+    
     <path
       d="M15.256 1.468a6.22 6.22 0 0 1-1.797.493c.645-.387 1.14-1 1.375-1.73a6.276 6.276 0 0 1-1.988.758A3.128 3.128 0 0 0 7.433 3.13c0 .245.027.484.08.713a8.88 8.88 0 0 1-6.45-3.27 3.13 3.13 0 0 0 .968 4.179A3.109 3.109 0 0 1 .614 4.36v.04c0 1.516 1.08 2.78 2.51 3.07a3.2 3.2 0 0 1-.824.11c-.203 0-.4-.02-.59-.058a3.13 3.13 0 0 0 2.924 2.174A6.273 6.273 0 0 1 0 10.992a8.86 8.86 0 0 0 4.798 1.407c5.757 0 8.906-4.77 8.906-8.907 0-.136-.003-.27-.01-.405a6.332 6.332 0 0 0 1.562-1.62"
     />
@@ -1182,14 +1175,13 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   className="c0"
 >
   <svg
+    fill="#222"
     height="12"
     viewBox="0 0 15 14"
     width="15"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      Twitter
-    </title>
+    
     <path
       d="M15.256 1.468a6.22 6.22 0 0 1-1.797.493c.645-.387 1.14-1 1.375-1.73a6.276 6.276 0 0 1-1.988.758A3.128 3.128 0 0 0 7.433 3.13c0 .245.027.484.08.713a8.88 8.88 0 0 1-6.45-3.27 3.13 3.13 0 0 0 .968 4.179A3.109 3.109 0 0 1 .614 4.36v.04c0 1.516 1.08 2.78 2.51 3.07a3.2 3.2 0 0 1-.824.11c-.203 0-.4-.02-.59-.058a3.13 3.13 0 0 0 2.924 2.174A6.273 6.273 0 0 1 0 10.992a8.86 8.86 0 0 0 4.798 1.407c5.757 0 8.906-4.77 8.906-8.907 0-.136-.003-.27-.01-.405a6.332 6.332 0 0 0 1.562-1.62"
     />

@@ -211,6 +211,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
       type="button"
     >
       <svg
+        fill="#fff"
         height="14"
         viewBox="0 0 12 14"
         width="12"

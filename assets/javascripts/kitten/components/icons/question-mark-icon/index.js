@@ -13,12 +13,12 @@ export const QuestionMarkIcon = ({ color, title, ...props }) => (
   </svg>
 )
 
-CameraIcon.propTypes = {
+QuestionMarkIcon.propTypes = {
   color: PropTypes.string,
   title: PropTypes.string,
 }
 
-CameraIcon.defaultProps = {
+QuestionMarkIcon.defaultProps = {
   color: '#fff',
   title: '',
 }

@@ -9,36 +9,36 @@ import { PinterestIcon } from '../../../components/icons/pinterest-icon'
 
 export const FacebookButtonIcon = props => (
   <Button {...props} modifier="social_facebook" icon>
-    <FacebookIcon width="14" height="14" />
+    <FacebookIcon width="14" height="14" title="Facebook" />
   </Button>
 )
 
 export const TwitterButtonIcon = props => (
   <Button {...props} modifier="social_twitter" icon>
-    <TwitterIcon width="15" height="15" />
+    <TwitterIcon width="15" height="15" title="Twitter" />
   </Button>
 )
 
 export const LinkedinButtonIcon = props => (
   <Button {...props} modifier="social_linkedin" icon>
-    <LinkedinIcon width="12" height="12" />
+    <LinkedinIcon width="12" height="12" title="Linkedin" />
   </Button>
 )
 
 export const InstagramButtonIcon = props => (
   <Button {...props} modifier="social_instagram" icon>
-    <InstagramIcon width="16" height="16" />
+    <InstagramIcon width="16" height="16" title="Instagram" />
   </Button>
 )
 
 export const YoutubeButtonIcon = props => (
   <Button {...props} modifier="social_youtube" icon>
-    <YoutubeIcon width="16" height="16" />
+    <YoutubeIcon width="16" height="16" title="Youtube" />
   </Button>
 )
 
 export const PinterestButtonIcon = props => (
   <Button {...props} modifier="social_pinterest" icon>
-    <PinterestIcon width="16" height="16" />
+    <PinterestIcon width="16" height="16" title="Pinterest" />
   </Button>
 )

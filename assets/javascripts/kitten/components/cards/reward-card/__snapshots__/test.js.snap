@@ -128,14 +128,13 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
             <svg
               aria-hidden={true}
               className="k-RewardCard__starredBadge__starredIcon k-IconBadge__svg"
+              fill="#222"
               height="16"
               viewBox="0 0 18 16"
               width="18"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>
-                Star
-              </title>
+              
               <path
                 d="M8.999 0l1.93 5.974c.028.09.112.15.206.15l6.274-.013-5.084 3.68a.216.216 0 0 0-.079.242L14.198 16l-5.072-3.7a.216.216 0 0 0-.255 0L3.801 16l1.953-5.967a.216.216 0 0 0-.079-.243L.591 6.111l6.274.012c.094 0 .178-.06.207-.15L8.999 0z"
               />
@@ -180,7 +179,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
       </p>
       <ul
-        className="sc-gqjmRU fuvKbJ k-List"
+        className="sc-gZMcBi gTZvfo k-List"
       >
         <li>
           <span

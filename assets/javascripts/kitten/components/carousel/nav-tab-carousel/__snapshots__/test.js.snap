@@ -2,15 +2,16 @@
 
 exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 <div
-  className="sc-iwsKbI hmMuqr"
+  className="sc-dnqmqq jWSrvv"
 >
   <div
-    className="sc-ifAKCX iGsRDJ"
+    className="sc-bxivhb dpfxZU"
   >
     <svg
-      className="sc-bdVaJa bxGcNc sc-EHOje fRNqx"
-      fill="#fff"
+      className="sc-ifAKCX jyHSSs"
+      fill="#222"
       height="5.64"
+      transform="rotate(-90)"
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
@@ -20,39 +21,40 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="sc-bZQynM fguCgi"
+      className="sc-EHOje Cpfri"
     >
       Foobar 1
     </div>
   </div>
   <div
-    className="sc-dnqmqq cSGWTX"
+    className="sc-htoDjs dBedLo"
   >
     <a
-      className="sc-htoDjs bXwzCf"
+      className="sc-gzVnrw DSxsg"
       href="http://www.google.com"
     />
     <a
-      className="sc-htoDjs bjyWyY"
+      className="sc-gzVnrw etwgon"
       href="http://www.cowboybebop.com"
     />
     <a
-      className="sc-htoDjs bXwzCf"
+      className="sc-gzVnrw DSxsg"
       href="http://www.starwars.com"
     />
   </div>
   <div
-    className="sc-bxivhb iGkdfL"
+    className="sc-htpNat eMWHOL"
   >
     <div
-      className="sc-gzVnrw ehiXuV"
+      className="sc-bZQynM hJDVrx"
     >
       Foobar 2
     </div>
     <svg
-      className="sc-bdVaJa Afqxo sc-EHOje fRNqx"
-      fill="#fff"
+      className="sc-ifAKCX jyHSSs"
+      fill="#222"
       height="5.64"
+      transform="rotate(90)"
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
@@ -67,15 +69,16 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 
 exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
 <div
-  className="sc-iwsKbI hmMuqr"
+  className="sc-dnqmqq jWSrvv"
 >
   <div
-    className="sc-ifAKCX iGsRDJ"
+    className="sc-bxivhb dpfxZU"
   >
     <svg
-      className="sc-bdVaJa bxGcNc sc-EHOje fRNqx"
-      fill="#fff"
+      className="sc-ifAKCX jyHSSs"
+      fill="#222"
       height="5.64"
+      transform="rotate(-90)"
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
@@ -85,36 +88,37 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="sc-bZQynM fguCgi"
+      className="sc-EHOje Cpfri"
     >
       Foobar 1
     </div>
   </div>
   <div
-    className="sc-dnqmqq cSGWTX"
+    className="sc-htoDjs dBedLo"
   >
     <div
-      className="sc-htoDjs bXwzCf"
+      className="sc-gzVnrw DSxsg"
     />
     <div
-      className="sc-htoDjs bjyWyY"
+      className="sc-gzVnrw etwgon"
     />
     <div
-      className="sc-htoDjs bXwzCf"
+      className="sc-gzVnrw DSxsg"
     />
   </div>
   <div
-    className="sc-bxivhb iGkdfL"
+    className="sc-htpNat eMWHOL"
   >
     <div
-      className="sc-gzVnrw ehiXuV"
+      className="sc-bZQynM hJDVrx"
     >
       Foobar 2
     </div>
     <svg
-      className="sc-bdVaJa Afqxo sc-EHOje fRNqx"
-      fill="#fff"
+      className="sc-ifAKCX jyHSSs"
+      fill="#222"
       height="5.64"
+      transform="rotate(90)"
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
