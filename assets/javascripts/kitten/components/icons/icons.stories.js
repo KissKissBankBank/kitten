@@ -86,6 +86,7 @@ import { Text } from '../..'
 import React from 'react'
 import { pxToRem } from '../../helpers/utils/typography'
 import { color } from '@storybook/addon-knobs'
+import LinkTo from '@storybook/addon-links/react'
 
 const Container = styled.div`
   padding: ${pxToRem(40)};
@@ -106,11 +107,21 @@ const Group = styled(({ className, children, title }) => {
   margin-bottom: ${pxToRem(40)};
 `
 
-const IconContainer = styled(({ className, children }) => {
+const IconContainer = styled(({ className, link, children }) => {
   return (
     <div className={className}>
       <div className="svgWrapper">{children}</div>
-      <Text size="micro">{children.type.name}</Text>
+      {link ? (
+        <LinkTo
+          {...link}
+          className="k-u-link k-u-link-font1 k-u-size-micro"
+          aria-label="go to story"
+        >
+          {children.type.name} <ArrowIcon direction="right" />
+        </LinkTo>
+      ) : (
+        <Text size="micro">{children.type.name}</Text>
+      )}
     </div>
   )
 })`
@@ -229,8 +240,26 @@ export const AllIcons = () => {
           }
         />
       </Group>
-      <Group title="Others">
-        <IconContainer children={<BurgerIcon color={colorInput} />} />
+
+      <Group title="Complex icons">
+        <IconContainer
+          children={<BurgerIcon />}
+          link={{
+            kind: 'Icons/BurgerIcon',
+            story: 'Default',
+          }}
+        />
+
+        <IconContainer
+          children={<FilterIcon color={colorInput} />}
+          link={{
+            kind: 'Icons/FilterIcon',
+            story: 'Default',
+          }}
+        />
+      </Group>
+
+      <Group title="Other icons">
         <IconContainer children={<GarbageIcon color={colorInput} />} />
         <IconContainer children={<LockIcon color={colorInput} />} />
         <IconContainer children={<SearchIcon color={colorInput} />} />
@@ -258,7 +287,6 @@ export const AllIcons = () => {
         />
         <IconContainer children={<CrossIcon color={colorInput} />} />
         <IconContainer children={<DoubleArrowIcon color={colorInput} />} />
-        <IconContainer children={<FilterIcon color={colorInput} />} />
         <IconContainer
           children={
             <FlashCircleIcon bgColor={bgColorInput} color={colorInput} />
