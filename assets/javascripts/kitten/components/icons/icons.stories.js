@@ -100,9 +100,9 @@ const Group = styled(({ className, children, title }) => {
     </>
   )
 })`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(${pxToRem(140)}, 1fr));
+  grid-gap: ${pxToRem(40)} ${pxToRem(20)};
 `
 
 const IconContainer = styled(({ className, children }) => {
@@ -114,13 +114,28 @@ const IconContainer = styled(({ className, children }) => {
   )
 })`
   text-align: center;
-  padding: ${pxToRem(10)};
 
   .svgWrapper {
-    width: ${pxToRem(25)};
-    height: ${pxToRem(25)};
     margin: auto;
-    padding: ${pxToRem(15)};
+    height: ${pxToRem(40)};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg {
+    width: auto;
+    height: auto;
+    max-width: ${pxToRem(25)};
+    max-height: ${pxToRem(25)};
+  }
+
+  &.noMaxDimensions svg {
+    max-height: initial;
+    max-width: initial;
+  }
+  &.noMaxWidth svg {
+    max-width: initial;
   }
 `
 
@@ -131,15 +146,21 @@ export const AllIcons = () => {
   return (
     <Container>
       <Group title="Bank">
-        <IconContainer children={<BancontactIcon />} />
-        <IconContainer children={<CbIcon />} />
-        <IconContainer children={<GiropayIcon />} />
-        <IconContainer children={<IdealIcon />} />
-        <IconContainer children={<MaestroIcon />} />
-        <IconContainer children={<MasterCardIcon />} />
-        <IconContainer children={<PayPalIcon />} />
-        <IconContainer children={<SofortIcon />} />
-        <IconContainer children={<VisaIcon />} />
+        <IconContainer
+          className="noMaxDimensions"
+          children={<BancontactIcon />}
+        />
+        <IconContainer className="noMaxDimensions" children={<CbIcon />} />
+        <IconContainer className="noMaxDimensions" children={<GiropayIcon />} />
+        <IconContainer className="noMaxDimensions" children={<IdealIcon />} />
+        <IconContainer className="noMaxDimensions" children={<MaestroIcon />} />
+        <IconContainer
+          className="noMaxDimensions"
+          children={<MasterCardIcon />}
+        />
+        <IconContainer className="noMaxDimensions" children={<PayPalIcon />} />
+        <IconContainer className="noMaxDimensions" children={<SofortIcon />} />
+        <IconContainer className="noMaxDimensions" children={<VisaIcon />} />
       </Group>
 
       <Group title="Social">
@@ -150,10 +171,11 @@ export const AllIcons = () => {
         />
         <IconContainer children={<InstagramIcon color={colorInput} />} />
         <IconContainer children={<LinkedinIcon color={colorInput} />} />
-        <IconContainer children={<TwitterIcon color={colorInput} />} />
-        <IconContainer children={<YoutubeIcon color={colorInput} />} />
         <IconContainer children={<MessengerIcon color={colorInput} />} />
+        <IconContainer children={<PinterestIcon color={colorInput} />} />
+        <IconContainer children={<TwitterIcon color={colorInput} />} />
         <IconContainer children={<WhatsAppIcon color={colorInput} />} />
+        <IconContainer children={<YoutubeIcon color={colorInput} />} />
       </Group>
 
       <Group title="Editor">
@@ -169,7 +191,10 @@ export const AllIcons = () => {
         <IconContainer children={<ItalicIcon color={colorInput} />} />
         <IconContainer children={<ImageIcon color={colorInput} />} />
         <IconContainer children={<LinkIcon color={colorInput} />} />
-        <IconContainer children={<ButtonIcon color={colorInput} />} />
+        <IconContainer
+          className="noMaxWidth"
+          children={<ButtonIcon color={colorInput} />}
+        />
         <IconContainer children={<AlignLeftIcon color={colorInput} />} />
         <IconContainer children={<AlignCenterIcon color={colorInput} />} />
         <IconContainer children={<AlignRightIcon color={colorInput} />} />
@@ -219,13 +244,11 @@ export const AllIcons = () => {
         />
         <IconContainer children={<GrabberIcon color={colorInput} />} />
         <IconContainer children={<HeartIcon color={colorInput} />} />
-        <IconContainer children={<InstagramIcon color={colorInput} />} />
         <IconContainer children={<InstrumentTagIcon color={colorInput} />} />
         <IconContainer children={<LocationIcon color={colorInput} />} />
         <IconContainer children={<MenuIcon color={colorInput} />} />
         <IconContainer children={<PasswordIcon color={colorInput} />} />
         <IconContainer children={<PhoneIcon color={colorInput} />} />
-        <IconContainer children={<PinterestIcon color={colorInput} />} />
         <IconContainer children={<QuestionMarkIcon color={colorInput} />} />
         <IconContainer children={<StarIcon color={colorInput} />} />
         <IconContainer children={<TypologyTagIcon color={colorInput} />} />
@@ -240,6 +263,7 @@ export const AllIcons = () => {
         <IconContainer children={<ExportIconAlternate />} />
         <IconContainer children={<StrokeIcon color={colorInput} />} />
         <IconContainer
+          className="noMaxDimensions"
           children={<KissKissBankBankIcon color={colorInput} width="70" />}
         />
         <IconContainer children={<EmbedIcon color={colorInput} />} />
