@@ -85,6 +85,7 @@ import { DocumentIconPerson } from './document-icon-person'
 import { Text } from '../..'
 import React from 'react'
 import { pxToRem } from '../../helpers/utils/typography'
+import { color } from '@storybook/addon-knobs'
 
 const Container = styled.div`
   padding: ${pxToRem(40)};
@@ -123,6 +124,9 @@ const IconContainer = styled(({ className, children }) => {
   padding: ${pxToRem(10)};
 `
 
+const colorInput = color('Main color', '#333')
+const bgColorInput = color('Background color', '#FFF')
+
 export const AllIcons = () => {
   return (
     <Container>
@@ -139,34 +143,36 @@ export const AllIcons = () => {
       </Group>
 
       <Group title="Social">
-        <IconContainer children={<EmailIcon />} />
-        <IconContainer children={<FacebookIcon />} />
-        <IconContainer children={<FacebookIconWithBackground />} />
-        <IconContainer children={<InstagramIcon />} />
-        <IconContainer children={<LinkedinIcon />} />
-        <IconContainer children={<TwitterIcon />} />
-        <IconContainer children={<YoutubeIcon />} />
-        <IconContainer children={<MessengerIcon />} />
-        <IconContainer children={<WhatsAppIcon />} />
+        <IconContainer children={<EmailIcon color={colorInput} />} />
+        <IconContainer children={<FacebookIcon color={colorInput} />} />
+        <IconContainer
+          children={<FacebookIconWithBackground color={colorInput} />}
+        />
+        <IconContainer children={<InstagramIcon color={colorInput} />} />
+        <IconContainer children={<LinkedinIcon color={colorInput} />} />
+        <IconContainer children={<TwitterIcon color={colorInput} />} />
+        <IconContainer children={<YoutubeIcon color={colorInput} />} />
+        <IconContainer children={<MessengerIcon color={colorInput} />} />
+        <IconContainer children={<WhatsAppIcon color={colorInput} />} />
       </Group>
 
       <Group title="Editor">
-        <IconContainer children={<BoldIcon />} />
-        <IconContainer children={<BlockquoteIcon />} />
-        <IconContainer children={<ListIcon />} />
-        <IconContainer children={<VideoIcon />} />
-        <IconContainer children={<Title1Icon />} />
-        <IconContainer children={<Title2Icon />} />
-        <IconContainer children={<Title3Icon />} />
-        <IconContainer children={<Title4Icon />} />
-        <IconContainer children={<ParagraphIcon />} />
-        <IconContainer children={<ItalicIcon />} />
-        <IconContainer children={<ImageIcon />} />
-        <IconContainer children={<LinkIcon />} />
-        <IconContainer children={<ButtonIcon />} />
-        <IconContainer children={<AlignLeftIcon />} />
-        <IconContainer children={<AlignCenterIcon />} />
-        <IconContainer children={<AlignRightIcon />} />
+        <IconContainer children={<BoldIcon color={colorInput} />} />
+        <IconContainer children={<BlockquoteIcon color={colorInput} />} />
+        <IconContainer children={<ListIcon color={colorInput} />} />
+        <IconContainer children={<VideoIcon color={colorInput} />} />
+        <IconContainer children={<Title1Icon color={colorInput} />} />
+        <IconContainer children={<Title2Icon color={colorInput} />} />
+        <IconContainer children={<Title3Icon color={colorInput} />} />
+        <IconContainer children={<Title4Icon color={colorInput} />} />
+        <IconContainer children={<ParagraphIcon color={colorInput} />} />
+        <IconContainer children={<ItalicIcon color={colorInput} />} />
+        <IconContainer children={<ImageIcon color={colorInput} />} />
+        <IconContainer children={<LinkIcon color={colorInput} />} />
+        <IconContainer children={<ButtonIcon color={colorInput} />} />
+        <IconContainer children={<AlignLeftIcon color={colorInput} />} />
+        <IconContainer children={<AlignCenterIcon color={colorInput} />} />
+        <IconContainer children={<AlignRightIcon color={colorInput} />} />
       </Group>
 
       <Group title="Document">
@@ -176,52 +182,78 @@ export const AllIcons = () => {
       </Group>
 
       <Group title="Others">
-        <IconContainer children={<BurgerIcon />} />
-        <IconContainer children={<GarbageIcon />} />
-        <IconContainer children={<LockIcon />} />
-        <IconContainer children={<SearchIcon />} />
-        <IconContainer children={<WaitingIcon color="#000" />} />
-        <IconContainer children={<WarningIcon color="#000" />} />
-        <IconContainer children={<ArrowIcon />} />
-        <IconContainer children={<Cart />} />
-        <IconContainer children={<CheckedCircleIcon />} />
-        <IconContainer children={<CheckedIcon />} />
-        <IconContainer children={<ClockCircleIcon />} />
-        <IconContainer children={<ClockIcon />} />
-        <IconContainer children={<CrossCircleIcon />} />
-        <IconContainer children={<CrossIcon />} />
-        <IconContainer children={<DoubleArrowIcon />} />
-        <IconContainer children={<FilterIcon />} />
-        <IconContainer children={<FlashCircleIcon />} />
-        <IconContainer children={<GrabberIcon />} />
-        <IconContainer children={<HeartIcon />} />
-        <IconContainer children={<InstagramIcon />} />
-        <IconContainer children={<InstrumentTagIcon />} />
-        <IconContainer children={<LocationIcon />} />
-        <IconContainer children={<MenuIcon />} />
-        <IconContainer children={<PasswordIcon />} />
-        <IconContainer children={<PhoneIcon />} />
-        <IconContainer children={<PinterestIcon />} />
-        <IconContainer children={<QuestionMarkIcon />} />
-        <IconContainer children={<StarIcon />} />
-        <IconContainer children={<TypologyTagIcon />} />
-        <IconContainer children={<WarningCircleIcon />} />
-        <IconContainer children={<CopyIcon />} />
-        <IconContainer children={<BubbleIcon />} />
-        <IconContainer children={<ExportIcon />} />
+        <IconContainer children={<BurgerIcon color={colorInput} />} />
+        <IconContainer children={<GarbageIcon color={colorInput} />} />
+        <IconContainer children={<LockIcon color={colorInput} />} />
+        <IconContainer children={<SearchIcon color={colorInput} />} />
+        <IconContainer children={<WaitingIcon color={colorInput} />} />
+        <IconContainer children={<WarningIcon color={colorInput} />} />
+        <IconContainer
+          children={<ArrowIcon version="solid" color={colorInput} />}
+        />
+        <IconContainer children={<Cart color={colorInput} />} />
+        <IconContainer
+          children={
+            <CheckedCircleIcon bgColor={bgColorInput} color={colorInput} />
+          }
+        />
+        <IconContainer children={<CheckedIcon color={colorInput} />} />
+        <IconContainer
+          children={
+            <ClockCircleIcon bgColor={bgColorInput} color={colorInput} />
+          }
+        />
+        <IconContainer children={<ClockIcon color={colorInput} />} />
+        <IconContainer
+          children={
+            <CrossCircleIcon bgColor={bgColorInput} color={colorInput} />
+          }
+        />
+        <IconContainer children={<CrossIcon color={colorInput} />} />
+        <IconContainer children={<DoubleArrowIcon color={colorInput} />} />
+        <IconContainer children={<FilterIcon color={colorInput} />} />
+        <IconContainer
+          children={
+            <FlashCircleIcon bgColor={bgColorInput} color={colorInput} />
+          }
+        />
+        <IconContainer children={<GrabberIcon color={colorInput} />} />
+        <IconContainer children={<HeartIcon color={colorInput} />} />
+        <IconContainer children={<InstagramIcon color={colorInput} />} />
+        <IconContainer children={<InstrumentTagIcon color={colorInput} />} />
+        <IconContainer children={<LocationIcon color={colorInput} />} />
+        <IconContainer children={<MenuIcon color={colorInput} />} />
+        <IconContainer children={<PasswordIcon color={colorInput} />} />
+        <IconContainer children={<PhoneIcon color={colorInput} />} />
+        <IconContainer children={<PinterestIcon color={colorInput} />} />
+        <IconContainer children={<QuestionMarkIcon color={colorInput} />} />
+        <IconContainer children={<StarIcon color={colorInput} />} />
+        <IconContainer children={<TypologyTagIcon color={colorInput} />} />
+        <IconContainer
+          children={
+            <WarningCircleIcon bgColor={bgColorInput} color={colorInput} />
+          }
+        />
+        <IconContainer children={<CopyIcon color={colorInput} />} />
+        <IconContainer children={<BubbleIcon color={colorInput} />} />
+        <IconContainer children={<ExportIcon color={colorInput} />} />
         <IconContainer children={<ExportIconAlternate />} />
-        <IconContainer children={<StrokeIcon />} />
+        <IconContainer children={<StrokeIcon color={colorInput} />} />
         <IconContainer children={<KissKissBankBankIcon width="70" />} />
-        <IconContainer children={<EmbedIcon />} />
-        <IconContainer children={<GiftIcon />} />
-        <IconContainer children={<EditIcon />} />
-        <IconContainer children={<SaveIcon />} />
-        <IconContainer children={<DocIcon />} />
-        <IconContainer children={<CameraIcon />} />
-        <IconContainer children={<RocketIcon />} />
-        <IconContainer children={<RocketCircleIcon />} />
-        <IconContainer children={<UploadIcon />} />
-        <IconContainer children={<DownloadIcon />} />
+        <IconContainer children={<EmbedIcon color={colorInput} />} />
+        <IconContainer children={<GiftIcon color={colorInput} />} />
+        <IconContainer children={<EditIcon color={colorInput} />} />
+        <IconContainer children={<SaveIcon color={colorInput} />} />
+        <IconContainer children={<DocIcon color={colorInput} />} />
+        <IconContainer children={<CameraIcon color={colorInput} />} />
+        <IconContainer children={<RocketIcon color={colorInput} />} />
+        <IconContainer
+          children={
+            <RocketCircleIcon bgColor={bgColorInput} color={colorInput} />
+          }
+        />
+        <IconContainer children={<UploadIcon color={colorInput} />} />
+        <IconContainer children={<DownloadIcon color={colorInput} />} />
       </Group>
     </Container>
   )
