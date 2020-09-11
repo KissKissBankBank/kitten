@@ -286,7 +286,7 @@ export const AllIcons = () => {
         <IconContainer children={<StrokeIcon color={colorInput} />} />
         <IconContainer
           className="noMaxDimensions"
-          children={<KissKissBankBankIcon color={colorInput} width="70" />}
+          children={<KissKissBankBankIcon color={colorInput} width="90" />}
         />
         <IconContainer children={<EmbedIcon color={colorInput} />} />
         <IconContainer children={<GiftIcon color={colorInput} />} />
