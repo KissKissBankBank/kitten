@@ -4,7 +4,7 @@ import { Button } from './button'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
-import { BurgerIcon } from '../../icons/burger-icon'
+import { HeartIcon } from '../../icons/heart-icon'
 import { Badge } from '../../..'
 import { Cart } from '../../icons/cart'
 
@@ -79,7 +79,7 @@ export const WithIcon = () => (
     borderRadius={number('Border radius', 0, radiusBorderRange)}
     icon
   >
-    <BurgerIcon
+    <HeartIcon
       width={number('Icon size', 15, svgSizeRange)}
       height={number('Icon size', 15, svgSizeRange)}
     />
@@ -114,7 +114,7 @@ export const WithTextAndIcon = () => {
       borderRadius={number('Border radius', 0, radiusBorderRange)}
     >
       {iconPosition === 'left' && (
-        <BurgerIcon
+        <HeartIcon
           width={number('Icon size', 15, svgSizeRange)}
           height={number('Icon size', 15, svgSizeRange)}
         />
@@ -123,7 +123,7 @@ export const WithTextAndIcon = () => {
       <span>{text('Text', 'MyButton')}</span>
 
       {iconPosition === 'right' && (
-        <BurgerIcon
+        <HeartIcon
           width={number('Icon size', 15, svgSizeRange)}
           height={number('Icon size', 15, svgSizeRange)}
         />
