@@ -40,8 +40,9 @@ export const TeamCardIcons = ({
           href={`mailto:${email}`}
           modifier="hydrogen"
           className="k-ButtonIcon--phone k-TeamCardIcons__buttonIcon"
+          aria-label="E-mail"
         >
-          <EmailIcon className="k-ButtonIcon__svg" />
+          <EmailIcon aria-hidden className="k-ButtonIcon__svg" />
         </ButtonIcon>
       )}
 
@@ -67,6 +68,7 @@ const SocialLinks = ({ links = [] }) => (
         <ButtonIcon
           tag="a"
           key={link.name}
+          aria-label={link.name}
           href={link.href}
           modifier={link.name}
           size="tiny"
@@ -75,10 +77,10 @@ const SocialLinks = ({ links = [] }) => (
           className="k-TeamCardIcons__buttonIcon"
         >
           {link.name === 'linkedin' && (
-            <LinkedinIcon className="k-ButtonIcon__svg" />
+            <LinkedinIcon aria-hidden className="k-ButtonIcon__svg" />
           )}
           {link.name === 'twitter' && (
-            <TwitterIcon className="k-ButtonIcon__svg" />
+            <TwitterIcon aria-hidden className="k-ButtonIcon__svg" />
           )}
         </ButtonIcon>
       )

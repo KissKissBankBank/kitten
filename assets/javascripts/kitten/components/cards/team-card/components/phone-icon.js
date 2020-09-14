@@ -23,14 +23,16 @@ export const TeamCardPhoneIcon = ({
           'k-u-hidden@s-up',
           className,
         )}
+        aria-label="Telephone"
       >
-        <PhoneIcon className="k-ButtonIcon__svg" />
+        <PhoneIcon aria-hidden className="k-ButtonIcon__svg" />
       </ButtonIcon>
 
       <TeamCardButtonWithTooltip
         phoneNumber={phoneNumber}
         tooltipColor={tooltipColor}
         className={className}
+        aria-label="Telephone"
         {...props}
       />
     </>
