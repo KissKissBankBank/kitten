@@ -34,6 +34,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `YoutubeIcon`
 - Fix `ArrowIcon` props.
 - Feature: Add `deleteButtonA11yText` prop to `CartRewardCard` (defaults to 'Delete').
+- Feature: Add `garbageButtonA11yText` prop to `RewardEdition` (defaults to 'Delete').
 
 
 ## [2.92.0] - 2020-09-10
