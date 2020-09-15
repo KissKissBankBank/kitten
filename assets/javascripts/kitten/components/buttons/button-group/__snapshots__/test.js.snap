@@ -59,7 +59,7 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 
 .c1 svg,
 .c1 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -71,33 +71,16 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c1:hover svg,
-.c1:focus svg,
-.c1:hover path,
-.c1:focus path {
-  fill: #fff;
-}
-
 .c1:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c1:active svg,
-.c1:active path {
-  fill: #fff;
-}
-
 .c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c1:disabled svg,
-.c1:disabled path {
-  fill: #fff;
 }
 
 .c0 {

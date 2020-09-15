@@ -96,7 +96,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c1 svg,
 .c1 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -108,33 +108,16 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   color: #fff;
 }
 
-.c1:hover svg,
-.c1:focus svg,
-.c1:hover path,
-.c1:focus path {
-  fill: #fff;
-}
-
 .c1:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c1:active svg,
-.c1:active path {
-  fill: #fff;
-}
-
 .c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c1:disabled svg,
-.c1:disabled path {
-  fill: #fff;
 }
 
 .c9 {
@@ -199,7 +182,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c9 svg,
 .c9 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -211,33 +194,16 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   color: #fff;
 }
 
-.c9:hover svg,
-.c9:focus svg,
-.c9:hover path,
-.c9:focus path {
-  fill: #fff;
-}
-
 .c9:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c9:active svg,
-.c9:active path {
-  fill: #fff;
-}
-
 .c9:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c9:disabled svg,
-.c9:disabled path {
-  fill: #fff;
 }
 
 .c10 {
@@ -302,7 +268,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c10 svg,
 .c10 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -314,33 +280,16 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   color: #fff;
 }
 
-.c10:hover svg,
-.c10:focus svg,
-.c10:hover path,
-.c10:focus path {
-  fill: #fff;
-}
-
 .c10:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c10:active svg,
-.c10:active path {
-  fill: #fff;
-}
-
 .c10:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c10:disabled svg,
-.c10:disabled path {
-  fill: #fff;
 }
 
 .c0 {
@@ -663,7 +612,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 
 .c1 svg,
 .c1 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -675,33 +624,16 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c1:hover svg,
-.c1:focus svg,
-.c1:hover path,
-.c1:focus path {
-  fill: #fff;
-}
-
 .c1:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c1:active svg,
-.c1:active path {
-  fill: #fff;
-}
-
 .c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c1:disabled svg,
-.c1:disabled path {
-  fill: #fff;
 }
 
 .c0 {

@@ -135,7 +135,7 @@ export const modifierStyles = modifier => {
 
     svg,
     path {
-      fill: ${color};
+      fill: currentColor;
       transition: fill 0.2s;
     }
 
@@ -191,22 +191,12 @@ export const modifierStyles = modifier => {
         border-color: ${hoverBorderColor};
         background-color: ${hoverBgColor};
         color: ${hoverColor};
-
-        svg,
-        path {
-          fill: ${hoverColor};
-        }
       }
 
       :active {
         border-color: ${activeBorderColor};
         background-color: ${activeBgColor};
         color: ${activeColor};
-
-        svg,
-        path {
-          fill: ${activeColor};
-        }
       }
     `}
 
@@ -214,11 +204,6 @@ export const modifierStyles = modifier => {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
       color: ${COLORS.background1};
-
-      svg,
-      path {
-        fill: ${COLORS.background1};
-      }
     }
   `
 }
