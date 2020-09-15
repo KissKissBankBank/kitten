@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-ifAKCX kXPlry k-BasicUploader k-BasicUploader--ready"
+  className="sc-ifAKCX gkOYVG k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -11,7 +11,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa lqQtv k-BasicUploader__button"
+    className="sc-bdVaJa jTQgBx k-BasicUploader__button"
     htmlFor="BasicUploader"
   >
     <svg
@@ -37,7 +37,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-ifAKCX kXPlry k-BasicUploader k-BasicUploader--ready"
+  className="sc-ifAKCX gkOYVG k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -46,7 +46,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa lqQtv k-BasicUploader__button"
+    className="sc-bdVaJa jTQgBx k-BasicUploader__button"
     htmlFor="BasicUploader"
   >
     <svg
@@ -72,7 +72,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-ifAKCX kXPlry k-BasicUploader k-BasicUploader--valid"
+  className="sc-ifAKCX gkOYVG k-BasicUploader k-BasicUploader--valid"
 >
   <input
     disabled={true}
@@ -82,7 +82,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa jDEBAw k-BasicUploader__button"
+    className="sc-bdVaJa hTBayC k-BasicUploader__button"
     htmlFor="BasicUploader"
   >
     <svg
