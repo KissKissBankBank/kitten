@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix hover delay on `Button` svg icon.
+
 ## [2.92.0] - 2020-09-10
 
 Feature:

@@ -16,6 +16,8 @@ export const IsCheckable = () => {
             <CheckableButton
               tiny={boolean('Tiny', false)}
               big={boolean('Big', false)}
+              huge={boolean('Huge', false)}
+              giant={boolean('Giant', false)}
               disabled={boolean('Disabled', false)}
               error={boolean('Error', false)}
               isChecked={boolean('Checked', false)}
@@ -30,6 +32,8 @@ export const IsCheckable = () => {
             <CheckableButton
               tiny={boolean('Tiny', false)}
               big={boolean('Big', false)}
+              huge={boolean('Huge', false)}
+              giant={boolean('Giant', false)}
               disabled={boolean('Disabled', false)}
               error={boolean('Error', false)}
               isChecked={buttonIsChecked}
