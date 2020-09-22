@@ -6,7 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.92.1] - 2020-09-22
 
-- Fix hover delay on `Button` svg icon.
+Fixes:
+- Fixhover delay on `Button` svg icon.
 - Fix `Chrome` issue with `EventTarget` on `ImageCropper`.
 
 ## [2.92.0] - 2020-09-10
