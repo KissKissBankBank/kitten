@@ -3,7 +3,7 @@
 exports[`<GifVideo /> with multiple sources matches with snapshot 1`] = `
 <video
   autoPlay={true}
-  className="sc-bdVaJa fzPwtu"
+  className="sc-AxjAm drGsjj"
   loop={true}
   muted={true}
   playsInline={true}
@@ -23,7 +23,7 @@ exports[`<GifVideo /> with multiple sources matches with snapshot 1`] = `
 exports[`<GifVideo /> with no source matches with snapshot 1`] = `
 <video
   autoPlay={true}
-  className="sc-bdVaJa fzPwtu"
+  className="sc-AxjAm drGsjj"
   loop={true}
   muted={true}
   playsInline={true}

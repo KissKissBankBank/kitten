@@ -2,7 +2,7 @@
 
 exports[`<Hero /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa mTdHm sc-bwzfXH cLqKGm k-Hero k-Hero--direction-left"
+  className="sc-AxjAm jnRBqU sc-AxirZ bsqqFg k-Hero k-Hero--direction-left"
 >
   <div
     className="k-Grid"

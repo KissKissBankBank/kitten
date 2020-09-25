@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
-.c3 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -50,64 +50,64 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c3:disabled {
+.c2:disabled {
   cursor: not-allowed;
 }
 
-.c3:hover {
+.c2:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3 >:nth-child(n) {
+.c2 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c3 >:last-child {
+.c2 >:last-child {
   margin-right: 0;
 }
 
-.c3 svg,
-.c3 path {
+.c2 svg,
+.c2 path {
   fill: #fff;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c3:hover,
-.c3:focus {
+.c2:hover,
+.c2:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c3:hover svg,
-.c3:focus svg,
-.c3:hover path,
-.c3:focus path {
+.c2:hover svg,
+.c2:focus svg,
+.c2:hover path,
+.c2:focus path {
   fill: #fff;
 }
 
-.c3:active {
+.c2:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c3:active svg,
-.c3:active path {
+.c2:active svg,
+.c2:active path {
   fill: #fff;
 }
 
-.c3:disabled {
+.c2:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
 }
 
-.c3:disabled svg,
-.c3:disabled path {
+.c2:disabled svg,
+.c2:disabled path {
   fill: #fff;
 }
 
@@ -123,7 +123,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   display: flex;
 }
 
-.c2 {
+.c1 .k-RewardEdition__Header__Amount {
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
@@ -141,14 +141,13 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   align-items: center;
 }
 
-.c4 {
-  -webkit-align-item: flex-end;
-  -webkit-box-align-item: flex-end;
-  -ms-flex-align-item: flex-end;
-  align-item: flex-end;
+.c1 .k-RewardEdition__Header__Button {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
 }
 
-.c5 {
+.c3 {
   padding: 2.5rem;
 }
 
@@ -161,21 +160,21 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c3 {
+  .c2 {
     width: 12.5rem;
     height: 3.125rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c3 {
+  .c2 {
     width: 10rem;
     height: 2.5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c3 {
+  .c2 {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
@@ -183,13 +182,13 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c3 {
+  .c2 {
     width: 2.5rem;
   }
 }
 
 @media (max-width:767px) {
-  .c5 {
+  .c3 {
     padding: 1.875rem;
   }
 }
@@ -201,16 +200,17 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
     className="c1"
   >
     <span
-      className="c2"
+      className="k-RewardEdition__Header__Amount"
     >
       Header
     </span>
     <button
-      aria-label="Garbage Button"
-      className="c3 c4"
+      aria-label="Delete"
+      className="c2 k-RewardEdition__Header__Button"
       type="button"
     >
       <svg
+        aria-hidden={true}
         fill="#fff"
         height="14"
         viewBox="0 0 12 14"
@@ -225,7 +225,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
     </button>
   </div>
   <div
-    className="c5"
+    className="c3"
   >
     Content
   </div>

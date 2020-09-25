@@ -2,31 +2,31 @@
 
 exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-jTzLTM cyfLMo"
+  className="sc-fznKkj dSkfyj"
 >
   <div
-    className="sc-bdVaJa fdLNbY"
+    className="sc-AxjAm ekdWbF"
   >
     <div
-      className="k-Grid sc-fjdhpX bZEpQm"
+      className="k-Grid sc-fznZeY lkxUPj"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--offset-1@m k-Grid__col--8@l k-Grid__col--offset-2@l"
       >
         <div
-          className="sc-bdVaJa bwDdrh"
+          className="sc-AxjAm jidNFm"
         >
           <h2
-            className="sc-bwzfXH gWcALb sc-jzJRlG bNGPDf"
+            className="sc-AxirZ gfKAtd sc-fzokOt rpQiv"
           >
             Custom title mount
           </h2>
         </div>
         <div
-          className="sc-bdVaJa iDiPml"
+          className="sc-AxjAm ccCISE"
         >
           <div
-            className="sc-htpNat tODhy k-HorizontalStroke sc-cSHVUG eRLmiG k-HorizontalStroke--size--big"
+            className="sc-AxiKw eCNdJc k-HorizontalStroke sc-fzqBZW jlHITg k-HorizontalStroke--size--big"
             color="#222"
             style={
               Object {
@@ -37,20 +37,20 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           />
         </div>
         <form
-          className="sc-gZMcBi gijxyl"
+          className="sc-fzpans eRDGDt"
           onSubmit={[Function]}
         >
           <div
-            className="sc-bdVaJa kzCucd"
+            className="sc-AxjAm dxeZJh"
           >
             <div
-              className="k-Grid sc-gqjmRU hbhdEb"
+              className="k-Grid sc-fzplWN dLksUL"
             >
               <div
                 className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
               >
                 <div
-                  className="sc-bdVaJa eGDgJX"
+                  className="sc-AxjAm fKOaOg"
                 >
                   <label
                     className="k-Label k-Label--micro"
@@ -61,14 +61,14 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                   </label>
                 </div>
                 <div
-                  className="sc-bdVaJa chkwVs"
+                  className="sc-AxjAm dxQDWs"
                 >
                   <div
-                    className="sc-gzVnrw iptKoy"
+                    className="sc-Axmtr lhrWOh"
                   >
                     <input
                       autoComplete="off"
-                      className="sc-ifAKCX hETjNG sc-htoDjs icREAh"
+                      className="sc-AxhUy dsdvxU sc-AxmLO ksijGU"
                       defaultValue=""
                       disabled={false}
                       id="donation-amount"
@@ -80,7 +80,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                       type="number"
                     />
                     <span
-                      className="sc-dnqmqq kVvoRh"
+                      className="sc-fzozJi lbLpMl"
                       disabled={false}
                     >
                       €
@@ -91,11 +91,11 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
             </div>
           </div>
           <div
-            className="k-Grid sc-gqjmRU hbhdEb"
+            className="k-Grid sc-fzplWN dLksUL"
           >
             <button
               aria-label="To contribute"
-              className="k-Button k-Button--helium k-Button--big sc-VigVT bLnQql"
+              className="k-Button k-Button--helium k-Button--big sc-fznyAO cDhWmD"
               disabled={false}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}

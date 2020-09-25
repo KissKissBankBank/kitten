@@ -2,21 +2,21 @@
 
 exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-AxhCb kRwRRZ k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
     className="k-CartRewardCard__cart"
   >
     <button
-      aria-label="Garbage Button"
+      aria-label="Delete"
       className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--beryllium k-ButtonIcon--tiny"
       onClick={[Function]}
       tabIndex={null}
-      title="Garbage Button"
       type="button"
     >
       <svg
+        aria-hidden={true}
         className="k-ButtonIcon__svg"
         fill="#fff"
         height="14"
@@ -38,7 +38,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bwzfXH cavDWq"
+        className="sc-AxirZ jSSvxK"
       >
         Custom title amount
       </h1>
@@ -60,21 +60,21 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-AxhCb kRwRRZ k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
     className="k-CartRewardCard__cart"
   >
     <button
-      aria-label="Garbage Button"
+      aria-label="Delete"
       className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--beryllium k-ButtonIcon--tiny"
       onClick={[Function]}
       tabIndex={null}
-      title="Garbage Button"
       type="button"
     >
       <svg
+        aria-hidden={true}
         className="k-ButtonIcon__svg"
         fill="#fff"
         height="14"
@@ -96,7 +96,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-bwzfXH cavDWq"
+        className="sc-AxirZ jSSvxK"
       >
         Custom title amount
       </h1>
@@ -118,21 +118,21 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
 
 exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-AxhCb kRwRRZ k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
     className="k-CartRewardCard__cart"
   >
     <button
-      aria-label="Garbage Button"
+      aria-label="Delete"
       className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--beryllium k-ButtonIcon--tiny"
       onClick={[Function]}
       tabIndex={null}
-      title="Garbage Button"
       type="button"
     >
       <svg
+        aria-hidden={true}
         className="k-ButtonIcon__svg"
         fill="#fff"
         height="14"
@@ -154,7 +154,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double"
     >
       <Custom title tag
-        className="sc-bwzfXH cavDWq"
+        className="sc-AxirZ jSSvxK"
         cssColor={null}
         italic={true}
         margin={false}
@@ -167,7 +167,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-single k-u-margin-top-double"
     >
       <span
-        className="sc-htpNat KtFsv k-u-size-default k-u-weight-bold"
+        className="sc-AxiKw bOTXee k-u-size-default k-u-weight-bold"
       >
         Custom subtitle
       </span>
@@ -182,21 +182,21 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       </p>
     </div>
     <p
-      className="sc-htpNat KtFsv k-u-size-tiny k-u-weight-regular k-u-margin-none"
+      className="sc-AxiKw bOTXee k-u-size-tiny k-u-weight-regular k-u-margin-none"
     >
       Custom shipping title
        
       <span
-        className="sc-htpNat KtFsv k-u-weight-light"
+        className="sc-AxiKw bOTXee k-u-weight-light"
       >
         Custom shipping value
       </span>
     </p>
     <div
-      className="sc-bdVaJa jtfdLD"
+      className="sc-AxjAm ksLovO"
     >
       <a
-        className="sc-htpNat KtFsv k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
+        className="sc-AxiKw bOTXee k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
         href="Custom amount link"
       >
         Custom amount

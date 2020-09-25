@@ -2,7 +2,7 @@
 
 exports[`<Timeline /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH KtMDD k-Timeline k-Timeline--large"
+  className="sc-AxirZ eQcleS k-Timeline k-Timeline--large"
 >
   <span
     className="k-Timeline__verticalLine"
@@ -15,7 +15,7 @@ exports[`<Timeline /> with default props matches with snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-Timeline__listItem__bullet"
+        className="sc-AxjAm StDqN k-u-size-tiny k-Timeline__listItem__bullet"
       >
         1
       </span>
@@ -32,7 +32,7 @@ exports[`<Timeline /> with default props matches with snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-Timeline__listItem__bullet"
+        className="sc-AxjAm StDqN k-u-size-tiny k-Timeline__listItem__bullet"
       >
         2
       </span>
@@ -49,7 +49,7 @@ exports[`<Timeline /> with default props matches with snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-Timeline__listItem__bullet"
+        className="sc-AxjAm StDqN k-u-size-tiny k-Timeline__listItem__bullet"
       >
         3
       </span>
@@ -67,7 +67,7 @@ exports[`<Timeline /> with default props matches with snapshot 1`] = `
 
 exports[`<Timeline /> with itemHeight props matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH KtMDD k-Timeline k-Timeline--thin"
+  className="sc-AxirZ eQcleS k-Timeline k-Timeline--thin"
 >
   <span
     className="k-Timeline__verticalLine"
@@ -80,7 +80,7 @@ exports[`<Timeline /> with itemHeight props matches with snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-Timeline__listItem__bullet"
+        className="sc-AxjAm StDqN k-u-size-tiny k-Timeline__listItem__bullet"
       >
         1
       </span>
@@ -97,7 +97,7 @@ exports[`<Timeline /> with itemHeight props matches with snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-Timeline__listItem__bullet"
+        className="sc-AxjAm StDqN k-u-size-tiny k-Timeline__listItem__bullet"
       >
         2
       </span>
@@ -114,7 +114,7 @@ exports[`<Timeline /> with itemHeight props matches with snapshot 1`] = `
     >
       <span
         aria-hidden={true}
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-Timeline__listItem__bullet"
+        className="sc-AxjAm StDqN k-u-size-tiny k-Timeline__listItem__bullet"
       >
         3
       </span>

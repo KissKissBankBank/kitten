@@ -2,11 +2,11 @@
 
 exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 <div
-  className="sc-EHOje jsaDiO"
+  className="sc-AxgMl UsqAV"
 >
   
   <input
-    className="sc-bwzfXH cmvcxy"
+    className="sc-AxirZ hLnVGF"
     disabled={false}
     name="text"
     style={
@@ -17,7 +17,7 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="sc-bZQynM eLJVgP"
+    className="sc-AxheI YMngi"
   >
     <svg
       aria-label={null}
@@ -46,11 +46,11 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-EHOje jsaDiO"
+  className="sc-AxgMl UsqAV"
 >
   
   <input
-    className="sc-bwzfXH cmvcxy"
+    className="sc-AxirZ hLnVGF"
     disabled={true}
     name="text"
     style={
@@ -61,7 +61,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="sc-bZQynM hnUUFQ"
+    className="sc-AxheI dMDeOR"
   >
     <svg
       aria-label={null}
@@ -90,11 +90,11 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 <div
-  className="sc-EHOje jsaDiO"
+  className="sc-AxgMl UsqAV"
 >
   
   <input
-    className="sc-bwzfXH cmvcxy"
+    className="sc-AxirZ hLnVGF"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -106,7 +106,7 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="sc-bZQynM eLJVgP"
+    className="sc-AxheI YMngi"
   >
     <svg
       aria-label={null}

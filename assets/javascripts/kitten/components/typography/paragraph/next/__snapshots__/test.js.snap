@@ -2,7 +2,7 @@
 
 exports[`<Paragraph /> by default matches with snapshot 1`] = `
 <p
-  className="sc-bdVaJa cyesXU"
+  className="sc-AxjAm fRkOMa"
 >
   Lorem ipsum dolor sit amet…
 </p>
@@ -10,24 +10,24 @@ exports[`<Paragraph /> by default matches with snapshot 1`] = `
 
 exports[`<Paragraph /> with margin matches with snapshot 1`] = `
 <p
-  className="sc-bdVaJa cyesXU"
+  className="sc-AxjAm fRkOMa"
 />
 `;
 
 exports[`<Paragraph /> with modifier matches with snapshot 1`] = `
 <p
-  className="sc-bdVaJa cyesXU"
+  className="sc-AxjAm fRkOMa"
 />
 `;
 
 exports[`<Paragraph /> without italic matches with snapshot 1`] = `
 <p
-  className="sc-bdVaJa cyesXU"
+  className="sc-AxjAm fRkOMa"
 />
 `;
 
 exports[`<Paragraph /> without normal line height matches with snapshot 1`] = `
 <p
-  className="sc-bdVaJa cyesXU"
+  className="sc-AxjAm fRkOMa"
 />
 `;

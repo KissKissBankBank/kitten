@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-ifAKCX kXPlry k-BasicUploader k-BasicUploader--ready"
+  className="sc-AxhUy jtQhoy k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -11,7 +11,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa lqQtv k-BasicUploader__button"
+    className="sc-AxjAm bzulzE k-BasicUploader__button"
     htmlFor="BasicUploader"
   >
     <svg
@@ -37,7 +37,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-ifAKCX kXPlry k-BasicUploader k-BasicUploader--ready"
+  className="sc-AxhUy jtQhoy k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -46,7 +46,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa lqQtv k-BasicUploader__button"
+    className="sc-AxjAm bzulzE k-BasicUploader__button"
     htmlFor="BasicUploader"
   >
     <svg
@@ -72,7 +72,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-ifAKCX kXPlry k-BasicUploader k-BasicUploader--valid"
+  className="sc-AxhUy jtQhoy k-BasicUploader k-BasicUploader--valid"
 >
   <input
     disabled={true}
@@ -82,7 +82,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa jDEBAw k-BasicUploader__button"
+    className="sc-AxjAm iqVpug k-BasicUploader__button"
     htmlFor="BasicUploader"
   >
     <svg
@@ -125,19 +125,19 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
         />
       </svg>
       <span
-        className="sc-bxivhb jcNVDI"
+        className="sc-AxhCb gRtgpM"
       >
         Cancel and reupload
       </span>
     </button>
     <div>
       <p
-        className="sc-htpNat KtFsv k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
+        className="sc-AxiKw bOTXee k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular k-BasicUploader__statusTitle  k-u-margin-none k-u-line-height-1-3"
       >
         document.pdf
       </p>
       <p
-        className="sc-htpNat KtFsv k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+        className="sc-AxiKw bOTXee k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-BasicUploader__statusSubtitle  k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
       >
         The document has been validated
       </p>

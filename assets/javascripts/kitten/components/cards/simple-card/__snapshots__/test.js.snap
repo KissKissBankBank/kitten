@@ -2,14 +2,14 @@
 
 exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-gzVnrw cylCQ k-Card k-Card--withoutBoxShadowOnHover"
+  className="sc-Axmtr ewHqPM k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH hUACjC sc-ifAKCX bFbUUN k-Card__imageContainer"
+    className="sc-AxirZ igIQeF sc-AxhUy ixJEVp k-Card__imageContainer"
   >
     <img
       alt=""
-      className="sc-htpNat kCkIOi k-Card__image"
+      className="sc-AxiKw ccnYHX k-Card__image"
       src=""
     />
   </div>
@@ -18,14 +18,14 @@ exports[`<SimpleCard /> by default matches with snapshot 1`] = `
 
 exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`] = `
 <div
-  className="sc-gzVnrw cylCQ k-Card k-Card--withoutBoxShadowOnHover"
+  className="sc-Axmtr ewHqPM k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH hUACjC sc-ifAKCX ljbxsF k-Card__imageContainer"
+    className="sc-AxirZ igIQeF sc-AxhUy ikEZyS k-Card__imageContainer"
   >
     <img
       alt=""
-      className="sc-htpNat kCkIOi k-Card__image"
+      className="sc-AxiKw ccnYHX k-Card__image"
       src=""
     />
   </div>
@@ -34,23 +34,23 @@ exports[`<SimpleCard /> with imageContainerRatio props matches with snapshot 1`]
 
 exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot 1`] = `
 <div
-  className="sc-gzVnrw cylCQ k-Card k-Card--withoutBoxShadowOnHover"
+  className="sc-Axmtr ewHqPM k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH hUACjC sc-ifAKCX bFbUUN k-Card__imageContainer"
+    className="sc-AxirZ igIQeF sc-AxhUy ixJEVp k-Card__imageContainer"
   >
     <div
-      className="sc-bxivhb eIBNLB"
+      className="sc-AxhCb CUkwY"
     >
       <span
-        className="sc-bdVaJa bDWFJH k-u-color-background1 k-u-size-default k-u-weight-regular"
+        className="sc-AxjAm StDqN k-u-color-background1 k-u-size-default k-u-weight-regular"
       >
         ►
       </span>
     </div>
     <img
       alt=""
-      className="sc-htpNat kCkIOi k-Card__image"
+      className="sc-AxiKw ccnYHX k-Card__image"
       src=""
     />
   </div>
@@ -59,14 +59,14 @@ exports[`<SimpleCard /> with withPlayerButtonOnImage props matches with snapshot
 
 exports[`<SimpleCard /> without horizontalStroke prop matches snapshot 1`] = `
 <div
-  className="sc-gzVnrw cylCQ k-Card k-Card--withoutBoxShadowOnHover"
+  className="sc-Axmtr ewHqPM k-Card k-Card--withoutBoxShadowOnHover"
 >
   <div
-    className="sc-bwzfXH hUACjC sc-ifAKCX bFbUUN k-Card__imageContainer"
+    className="sc-AxirZ igIQeF sc-AxhUy ixJEVp k-Card__imageContainer"
   >
     <img
       alt=""
-      className="sc-htpNat kCkIOi k-Card__image"
+      className="sc-AxiKw ccnYHX k-Card__image"
       src=""
     />
   </div>

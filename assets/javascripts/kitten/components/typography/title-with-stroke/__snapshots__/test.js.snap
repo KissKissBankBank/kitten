@@ -2,7 +2,7 @@
 
 exports[`<TitleWithStroke /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa dQIiGX k-TitleWithStroke--align-left"
+  className="sc-AxjAm bvMOCt k-TitleWithStroke--align-left"
 >
   <h1
     className="k-TitleWithStroke__title k-TitleWithStroke__title--primary"
@@ -17,7 +17,7 @@ exports[`<TitleWithStroke /> with default props matches with snapshot 1`] = `
 
 exports[`<TitleWithStroke /> with more props matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa vGdTF k-TitleWithStroke--align-center k-TitleWithStroke--italic"
+  className="sc-AxjAm cAOUJm k-TitleWithStroke--align-center k-TitleWithStroke--italic"
 >
   <h4
     className="k-TitleWithStroke__title k-TitleWithStroke__title--tertiary"

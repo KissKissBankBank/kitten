@@ -2,11 +2,12 @@
 
 exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX cECoah"
+  className="sc-AxhUy joscIf"
 >
   
   
   <a
+    aria-label="linkedin"
     className="k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--linkedin k-ButtonIcon--tiny"
     href="https://www.linkedin.com"
     rel="noopener"
@@ -14,6 +15,7 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
     target="_blank"
   >
     <svg
+      aria-hidden={true}
       className="k-ButtonIcon__svg"
       fill="#222"
       viewBox="0 0 14 14"
@@ -31,33 +33,35 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
 exports[`<TeamCard /> with some props matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-htpNat fLLWtn k-u-margin-bottom-double"
+    className="sc-AxiKw bxbWGS k-u-margin-bottom-double"
     title="Title"
   />,
   <div
-    className="sc-bwzfXH kRhUjH"
+    className="sc-AxirZ ckcclp"
   >
     <span
-      className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-default k-u-weight-bold"
+      className="sc-AxjAm StDqN k-u-color-font1 k-u-size-default k-u-weight-bold"
     >
       Lorem Ipsum
     </span>
     <br />
     <span
-      className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-light"
+      className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-light"
     >
       Consectetur
     </span>
   </div>,
   <div
-    className="sc-ifAKCX cECoah"
+    className="sc-AxhUy joscIf"
   >
     <a
+      aria-label="E-mail"
       className="k-ButtonIcon k-ButtonIcon--phone k-TeamCardIcons__buttonIcon k-ButtonIcon--hydrogen"
       href="mailto:example@kisskissbankbank.com"
       tabIndex={null}
     >
       <svg
+        aria-hidden={true}
         className="k-ButtonIcon__svg"
         fill="#222"
         height="12"
@@ -72,11 +76,13 @@ Array [
       </svg>
     </a>
     <a
+      aria-label="Telephone"
       className="k-ButtonIcon k-ButtonIcon--phone k-u-hidden@s-up k-TeamCardIcons__buttonIcon k-ButtonIcon--hydrogen"
       href="tel:06 00 00 00 00"
       tabIndex={null}
     >
       <svg
+        aria-hidden={true}
         className="k-ButtonIcon__svg"
         fill="#222"
         viewBox="0 0 16 18"
@@ -89,7 +95,8 @@ Array [
       </svg>
     </a>
     <a
-      className="sc-bxivhb ebiAFY k-TeamCardIcons__buttonIcon"
+      aria-label="Telephone"
+      className="sc-AxhCb sdyMw k-TeamCardIcons__buttonIcon"
       href="tel:06 00 00 00 00"
     >
       <span
@@ -118,6 +125,7 @@ Array [
       </button>
     </a>
     <a
+      aria-label="linkedin"
       className="k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--linkedin k-ButtonIcon--tiny"
       href="https://www.linkedin.com"
       rel="noopener"
@@ -125,6 +133,7 @@ Array [
       target="_blank"
     >
       <svg
+        aria-hidden={true}
         className="k-ButtonIcon__svg"
         fill="#222"
         viewBox="0 0 14 14"
@@ -137,6 +146,7 @@ Array [
       </svg>
     </a>
     <a
+      aria-label="twitter"
       className="k-ButtonIcon k-TeamCardIcons__buttonIcon k-ButtonIcon--twitter k-ButtonIcon--tiny"
       href="https://www.twitter.com"
       rel="noopener"
@@ -144,6 +154,7 @@ Array [
       target="_blank"
     >
       <svg
+        aria-hidden={true}
         className="k-ButtonIcon__svg"
         fill="#222"
         viewBox="0 0 15 14"

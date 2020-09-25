@@ -2,7 +2,7 @@
 
 exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htoDjs eZBwPF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-AxmLO cgqnOS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
@@ -45,12 +45,12 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
       >
         <div
-          className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+          className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
         >
           
         </div>
         <div
-          className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+          className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
         >
           
         </div>
@@ -72,7 +72,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches with snapshot 1`] = `
 <div
-  className="sc-htoDjs eZBwPF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-AxmLO cgqnOS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
@@ -115,12 +115,12 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
       >
         <div
-          className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+          className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
         >
           
         </div>
         <div
-          className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+          className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
         >
           
         </div>
@@ -134,7 +134,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       className="k-CrowdfundingCard__title"
     >
       <p
-        className="sc-htpNat hbLhrJ k-Card__title k-CrowdfundingCard__title__title"
+        className="sc-AxiKw PmFQt k-Card__title k-CrowdfundingCard__title__title"
       >
         Custom title
       </p>
@@ -144,7 +144,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       className="k-CrowdfundingCard__subtitle__container"
     >
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--micro"
+        className="sc-AxhCb jgGBWI k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--micro"
         color="#222"
         style={
           Object {
@@ -154,7 +154,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         }
       />
       <p
-        className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-u-margin-none"
+        className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-u-margin-none"
       >
         Custom subtitle
       </p>
@@ -168,7 +168,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
 
 exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 <div
-  className="sc-htoDjs eZBwPF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-AxmLO cgqnOS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
@@ -211,12 +211,12 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
       >
         <div
-          className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+          className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
         >
           
         </div>
         <div
-          className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+          className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
         >
           
         </div>
@@ -238,7 +238,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-htoDjs eZBwPF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-AxmLO cgqnOS k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href="#foobar"
   onClick={[Function]}
 >
@@ -282,12 +282,12 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
       >
         <div
-          className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
+          className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
         >
           Custom title
         </div>
         <div
-          className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
+          className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
         >
           Custom description
         </div>
@@ -301,7 +301,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       className="k-CrowdfundingCard__title"
     >
       <p
-        className="sc-htpNat hbLhrJ k-Card__title k-CrowdfundingCard__title__title"
+        className="sc-AxiKw PmFQt k-Card__title k-CrowdfundingCard__title__title"
       >
         Custom title
       </p>
@@ -311,7 +311,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       className="k-CrowdfundingCard__subtitle__container"
     >
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--micro"
+        className="sc-AxhCb jgGBWI k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--micro"
         color="#222"
         style={
           Object {
@@ -321,7 +321,7 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
         }
       />
       <p
-        className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-u-margin-none"
+        className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__subtitle__subtitleText k-u-margin-none"
       >
         Custom subtitle
       </p>

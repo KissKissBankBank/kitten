@@ -2,12 +2,12 @@
 
 exports[`<EngagementCard /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bwzfXH flhVvD"
+  className="sc-AxirZ jBiSGp"
   href="#"
   title="Hello word"
 >
   <div
-    className="sc-bxivhb gvvrfY"
+    className="sc-AxhCb hsiIHq"
   >
     <svg
       fill="#fff"
@@ -29,7 +29,7 @@ exports[`<EngagementCard /> by default matches with snapshot 1`] = `
     </svg>
   </div>
   <span
-    className="sc-bdVaJa bDWFJH k-u-color-font1 k-u-size-micro k-u-weight-regular sc-htpNat cisgUT"
+    className="sc-AxjAm StDqN k-u-color-font1 k-u-size-micro k-u-weight-regular sc-AxiKw hiQCWC"
   />
 </a>
 `;

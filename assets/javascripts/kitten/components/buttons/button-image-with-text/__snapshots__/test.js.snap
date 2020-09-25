@@ -2,7 +2,7 @@
 
 exports[`<ButtonImageWithText /> should match with snapshot 1`] = `
 <div
-  className="sc-bwzfXH lhrcar"
+  className="sc-AxirZ VaUIp"
 >
   <span
     className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
@@ -15,15 +15,15 @@ exports[`<ButtonImageWithText /> should match with snapshot 1`] = `
     />
   </span>
   <div
-    className="sc-htpNat jQqfDF"
+    className="sc-AxiKw gRvpHu"
   >
     <p
-      className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-light sc-bxivhb bYufdY"
+      className="sc-AxjAm StDqN k-u-size-tiny k-u-weight-light sc-AxhCb cIsthL"
     >
       Custom title
     </p>
     <p
-      className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-light sc-bxivhb bYufdY"
+      className="sc-AxjAm StDqN k-u-size-tiny k-u-weight-light sc-AxhCb cIsthL"
     >
       Custom description
     </p>

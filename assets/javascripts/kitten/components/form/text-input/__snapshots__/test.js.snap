@@ -2,7 +2,7 @@
 
 exports[`<TextInput /> with \`center\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bwzfXH gGyzVw"
+  className="sc-AxirZ gGGKvu"
   disabled={false}
   name="text"
 />
@@ -10,7 +10,7 @@ exports[`<TextInput /> with \`center\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bwzfXH tLjSM"
+  className="sc-AxirZ gzSokG"
   disabled={false}
   name="text"
 />
@@ -18,7 +18,7 @@ exports[`<TextInput /> with \`digits\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bwzfXH cmvcxy"
+  className="sc-AxirZ hLnVGF"
   disabled={true}
   name="text"
 />
@@ -26,7 +26,7 @@ exports[`<TextInput /> with \`disabled\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bwzfXH begKAY"
+  className="sc-AxirZ hdggzc"
   disabled={false}
   name="text"
 />
@@ -34,7 +34,7 @@ exports[`<TextInput /> with \`error\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`giant\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bwzfXH kjUCpq"
+  className="sc-AxirZ bBHpxA"
   disabled={false}
   name="text"
 />
@@ -42,7 +42,7 @@ exports[`<TextInput /> with \`giant\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`huge\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bwzfXH edATGg"
+  className="sc-AxirZ carLrL"
   disabled={false}
   name="text"
 />
@@ -50,7 +50,7 @@ exports[`<TextInput /> with \`huge\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bwzfXH cmvcxy"
+  className="sc-AxirZ hLnVGF"
   disabled={false}
   name="foobar"
 />
@@ -58,7 +58,7 @@ exports[`<TextInput /> with \`name\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bwzfXH cmvcxy"
+  className="sc-AxirZ hLnVGF"
   disabled={false}
   name="text"
 />
@@ -66,7 +66,7 @@ exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`tiny\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bwzfXH kKjtef"
+  className="sc-AxirZ gUZorU"
   disabled={false}
   name="text"
 />
@@ -74,7 +74,7 @@ exports[`<TextInput /> with \`tiny\` prop matches with snapshot 1`] = `
 
 exports[`<TextInput /> with \`valid\` prop matches with snapshot 1`] = `
 <input
-  className="sc-bwzfXH hexTtb"
+  className="sc-AxirZ AJCco"
   disabled={false}
   name="text"
 />

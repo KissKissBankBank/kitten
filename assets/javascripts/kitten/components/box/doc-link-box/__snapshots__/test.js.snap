@@ -2,7 +2,7 @@
 
 exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hikopz"
+  className="sc-AxjAm cgumRf"
   href="#"
 >
   <div
@@ -61,10 +61,10 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
       className="k-u-margin-top-double k-u-margin-bottom-double k-LinkBox__textContainer"
     >
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+        className="sc-AxirZ ktnnZK k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
       />
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-micro k-u-weight-light"
+        className="sc-AxirZ ktnnZK k-u-line-height-normal k-u-size-micro k-u-weight-light"
       />
     </div>
     <div
@@ -91,7 +91,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hikopz"
+  className="sc-AxjAm cgumRf"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -152,12 +152,12 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
       className="k-u-margin-top-double k-u-margin-bottom-double k-LinkBox__textContainer"
     >
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+        className="sc-AxirZ ktnnZK k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
       >
         title
       </span>
       <span
-        className="sc-bwzfXH uTxCW k-u-line-height-normal k-u-size-micro k-u-weight-light"
+        className="sc-AxirZ ktnnZK k-u-line-height-normal k-u-size-micro k-u-weight-light"
       >
         text
       </span>

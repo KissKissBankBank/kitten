@@ -2,13 +2,13 @@
 
 exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 <div
-  className="sc-dnqmqq jWSrvv"
+  className="sc-fzozJi eGtmb"
 >
   <div
-    className="sc-bxivhb dpfxZU"
+    className="sc-AxhCb dobhtl"
   >
     <svg
-      className="sc-ifAKCX jyHSSs"
+      className="sc-AxhUy fSJeRm"
       fill="#222"
       height="5.64"
       transform="rotate(-90)"
@@ -22,37 +22,37 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="sc-EHOje Cpfri"
+      className="sc-AxgMl lfMYHu"
     >
       Foobar 1
     </div>
   </div>
   <div
-    className="sc-htoDjs dBedLo"
+    className="sc-AxmLO fapxhm"
   >
     <a
-      className="sc-gzVnrw DSxsg"
+      className="sc-Axmtr ifyMVg"
       href="http://www.google.com"
     />
     <a
-      className="sc-gzVnrw etwgon"
+      className="sc-Axmtr brbEnz"
       href="http://www.cowboybebop.com"
     />
     <a
-      className="sc-gzVnrw DSxsg"
+      className="sc-Axmtr ifyMVg"
       href="http://www.starwars.com"
     />
   </div>
   <div
-    className="sc-htpNat eMWHOL"
+    className="sc-AxiKw grqRbr"
   >
     <div
-      className="sc-bZQynM hJDVrx"
+      className="sc-AxheI ikLyOr"
     >
       Foobar 2
     </div>
     <svg
-      className="sc-ifAKCX jyHSSs"
+      className="sc-AxhUy fSJeRm"
       fill="#222"
       height="5.64"
       transform="rotate(90)"
@@ -71,13 +71,13 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 
 exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
 <div
-  className="sc-dnqmqq jWSrvv"
+  className="sc-fzozJi eGtmb"
 >
   <div
-    className="sc-bxivhb dpfxZU"
+    className="sc-AxhCb dobhtl"
   >
     <svg
-      className="sc-ifAKCX jyHSSs"
+      className="sc-AxhUy fSJeRm"
       fill="#222"
       height="5.64"
       transform="rotate(-90)"
@@ -91,34 +91,34 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
       />
     </svg>
     <div
-      className="sc-EHOje Cpfri"
+      className="sc-AxgMl lfMYHu"
     >
       Foobar 1
     </div>
   </div>
   <div
-    className="sc-htoDjs dBedLo"
+    className="sc-AxmLO fapxhm"
   >
     <div
-      className="sc-gzVnrw DSxsg"
+      className="sc-Axmtr ifyMVg"
     />
     <div
-      className="sc-gzVnrw etwgon"
+      className="sc-Axmtr brbEnz"
     />
     <div
-      className="sc-gzVnrw DSxsg"
+      className="sc-Axmtr ifyMVg"
     />
   </div>
   <div
-    className="sc-htpNat eMWHOL"
+    className="sc-AxiKw grqRbr"
   >
     <div
-      className="sc-bZQynM hJDVrx"
+      className="sc-AxheI ikLyOr"
     >
       Foobar 2
     </div>
     <svg
-      className="sc-ifAKCX jyHSSs"
+      className="sc-AxhUy fSJeRm"
       fill="#222"
       height="5.64"
       transform="rotate(90)"

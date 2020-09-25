@@ -3,20 +3,20 @@
 exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot 1`] = `
 <div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-AxjAm JzFja"
       id="h1"
     >
       H1
     </h1>
   </div>
   <div
-    className="sc-htpNat dOYDhH"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ dJDRqk k-HorizontalStroke k-HorizontalStroke--size--big"
       color="#222"
       style={
         Object {
@@ -27,40 +27,40 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     />
   </div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h2
-      className="sc-bdVaJa eiyshY"
+      className="sc-AxjAm jpindR"
       id="h2"
     >
       H2
     </h2>
   </div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h3
-      className="sc-bdVaJa dheggY"
+      className="sc-AxjAm rohUP"
       id="h3"
     >
       H3
     </h3>
   </div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-AxjAm JzFja"
       id="emphasis"
     >
       Emphasis
     </h1>
   </div>
   <div
-    className="sc-htpNat dOYDhH"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ dJDRqk k-HorizontalStroke k-HorizontalStroke--size--big"
       color="#222"
       style={
         Object {
@@ -71,7 +71,7 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     />
   </div>
   <div
-    className="sc-htpNat kcNXMt"
+    className="sc-AxiKw dEURrP"
   >
     <p
       className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
@@ -106,20 +106,20 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     </p>
   </div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-AxjAm JzFja"
       id="list"
     >
       List
     </h1>
   </div>
   <div
-    className="sc-htpNat dOYDhH"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ dJDRqk k-HorizontalStroke k-HorizontalStroke--size--big"
       color="#222"
       style={
         Object {
@@ -130,59 +130,59 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     />
   </div>
   <div
-    className="sc-htpNat kKOIuD"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="sc-AxhUy irmRRN"
       >
         Unordered list can use asterisks
       </li>
     </ul>
   </div>
   <div
-    className="sc-htpNat kKOIuD"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="sc-AxhUy irmRRN"
       >
         Or minuses
       </li>
     </ul>
   </div>
   <div
-    className="sc-htpNat kKOIuD"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="sc-AxhUy irmRRN"
       >
         Or pluses
       </li>
     </ul>
   </div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-AxjAm JzFja"
       id="link"
     >
       Link
     </h1>
   </div>
   <div
-    className="sc-htpNat dOYDhH"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ dJDRqk k-HorizontalStroke k-HorizontalStroke--size--big"
       color="#222"
       style={
         Object {
@@ -193,7 +193,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     />
   </div>
   <div
-    className="sc-htpNat kcNXMt"
+    className="sc-AxiKw dEURrP"
   >
     <p
       className="k-Paragraph k-Paragraph--primary k-Paragraph--withoutMargin"
@@ -212,20 +212,20 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
 <div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-AxjAm JzFja"
       id="h1"
     >
       H1
     </h1>
   </div>
   <div
-    className="sc-htpNat dOYDhH"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ dJDRqk k-HorizontalStroke k-HorizontalStroke--size--big"
       color="#222"
       style={
         Object {
@@ -236,40 +236,40 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h2
-      className="sc-bdVaJa eiyshY"
+      className="sc-AxjAm jpindR"
       id="h2"
     >
       H2
     </h2>
   </div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h3
-      className="sc-bdVaJa dheggY"
+      className="sc-AxjAm rohUP"
       id="h3"
     >
       H3
     </h3>
   </div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-AxjAm JzFja"
       id="emphasis"
     >
       Emphasis
     </h1>
   </div>
   <div
-    className="sc-htpNat dOYDhH"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ dJDRqk k-HorizontalStroke k-HorizontalStroke--size--big"
       color="#222"
       style={
         Object {
@@ -280,7 +280,7 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     />
   </div>
   <div
-    className="sc-htpNat kcNXMt"
+    className="sc-AxiKw dEURrP"
   >
     <p
       className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
@@ -315,20 +315,20 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     </p>
   </div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-AxjAm JzFja"
       id="list"
     >
       List
     </h1>
   </div>
   <div
-    className="sc-htpNat dOYDhH"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ dJDRqk k-HorizontalStroke k-HorizontalStroke--size--big"
       color="#222"
       style={
         Object {
@@ -339,59 +339,59 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     />
   </div>
   <div
-    className="sc-htpNat kKOIuD"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="sc-AxhUy fguYj"
       >
         Unordered list can use asterisks
       </li>
     </ul>
   </div>
   <div
-    className="sc-htpNat kKOIuD"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="sc-AxhUy fguYj"
       >
         Or minuses
       </li>
     </ul>
   </div>
   <div
-    className="sc-htpNat kKOIuD"
+    className="sc-AxiKw haLuOa"
   >
     <ul
-      className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
+      className="sc-AxhCb hFrpQV sc-AxgMl gFkhME"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="sc-AxhUy fguYj"
       >
         Or pluses
       </li>
     </ul>
   </div>
   <div
-    className="sc-htpNat hXOnrW"
+    className="sc-AxiKw XHDnF"
   >
     <h1
-      className="sc-bdVaJa iahiYq"
+      className="sc-AxjAm JzFja"
       id="link"
     >
       Link
     </h1>
   </div>
   <div
-    className="sc-htpNat dOYDhH"
+    className="sc-AxiKw kFolyb"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
+      className="sc-AxirZ dJDRqk k-HorizontalStroke k-HorizontalStroke--size--big"
       color="#222"
       style={
         Object {
@@ -402,7 +402,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     />
   </div>
   <div
-    className="sc-htpNat kcNXMt"
+    className="sc-AxiKw dEURrP"
   >
     <p
       className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"

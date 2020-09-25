@@ -2,7 +2,7 @@
 
 exports[`<SingleEntryTable /> with a complete structure and custom classes matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa kndkKw SingleEntryTable__Container"
+  className="sc-AxjAm axGpT SingleEntryTable__Container"
 >
   <table
     className="SingleEntryTable__Table"
