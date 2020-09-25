@@ -2,18 +2,18 @@
 
 exports[`<Text /> by default matches with snapshot 1`] = `
 <span
-  className="sc-AxjAm StDqN"
+  className="sc-bdVaJa bDWFJH"
 />
 `;
 
 exports[`<Text /> with as prop matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm StDqN"
+  className="sc-bdVaJa bDWFJH"
 />
 `;
 
 exports[`<Text /> with tag prop matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm StDqN"
+  className="sc-bdVaJa bDWFJH"
 />
 `;

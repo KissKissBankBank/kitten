@@ -2,7 +2,7 @@
 
 exports[`<Title /> by default matches with snapshot 1`] = `
 <h1
-  className="sc-AxjAm bFvTJM"
+  className="sc-bdVaJa duRKpN"
 >
   Lorem ipsum dolor sit amet…
 </h1>

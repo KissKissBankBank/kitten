@@ -259,8 +259,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   background: linear-gradient( 90deg,rgba(0,0,0,0),rgba(255,255,255,0.3),rgba(0,0,0,0) );
   -webkit-animation: x 1s linear infinite;
   animation: x 1s linear infinite;
-  -webkit-animation-name: eBYYVz;
-  animation-name: eBYYVz;
+  -webkit-animation-name: linDdK;
+  animation-name: linDdK;
 }
 
 .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleAndDesc {
@@ -581,6 +581,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   background: #d8d8d8;
 }
 
+.c2.is-disabled .c6::after {
+  background: #d8d8d8;
+}
+
 .c5 {
   position: absolute;
   top: 0;
@@ -811,8 +815,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   background: linear-gradient( 90deg,rgba(0,0,0,0),rgba(255,255,255,0.3),rgba(0,0,0,0) );
   -webkit-animation: x 1s linear infinite;
   animation: x 1s linear infinite;
-  -webkit-animation-name: eBYYVz;
-  animation-name: eBYYVz;
+  -webkit-animation-name: linDdK;
+  animation-name: linDdK;
 }
 
 .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleAndDesc {
@@ -1309,8 +1313,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   background: linear-gradient( 90deg,rgba(0,0,0,0),rgba(255,255,255,0.3),rgba(0,0,0,0) );
   -webkit-animation: x 1s linear infinite;
   animation: x 1s linear infinite;
-  -webkit-animation-name: eBYYVz;
-  animation-name: eBYYVz;
+  -webkit-animation-name: linDdK;
+  animation-name: linDdK;
 }
 
 .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleAndDesc {

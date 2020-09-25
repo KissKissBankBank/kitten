@@ -3,7 +3,7 @@
 exports[`<ImageCropper /> matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-AxjAm fKOaOg"
+    className="sc-bdVaJa eGDgJX"
   >
     <label
       className="k-Label k-Label--tiny"
@@ -14,10 +14,10 @@ Array [
     </label>
   </div>,
   <div
-    className="sc-AxjAm ihYyaQ"
+    className="sc-bdVaJa CoxgX"
   >
     <div
-      className="sc-AxgMl klHMUL k-BasicUploader k-BasicUploader--ready"
+      className="sc-EHOje izhqx k-BasicUploader k-BasicUploader--ready"
     >
       <input
         accept=".jpg,.jpeg,.gif,.png"
@@ -27,7 +27,7 @@ Array [
         type="file"
       />
       <label
-        className="sc-AxirZ ehSbzQ k-BasicUploader__button"
+        className="sc-bwzfXH kyKhZB k-BasicUploader__button"
         htmlFor="cropper"
       >
         <svg
@@ -51,7 +51,7 @@ Array [
     </div>
   </div>,
   <div
-    className="sc-AxjAm bsGvJV"
+    className="sc-bdVaJa ggQxmM"
   >
     <p
       className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"

@@ -2,16 +2,16 @@
 
 exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 <div
-  className="sc-AxhUy YnAIG"
+  className="sc-ifAKCX bCBibu"
 >
   <input
-    className="sc-AxirZ hLnVGF sc-AxgMl iHEIpk"
+    className="sc-bwzfXH cmvcxy sc-EHOje kAxTfU"
     disabled={false}
     name="text"
     type="number"
   />
   <span
-    className="sc-AxheI iRXQBq"
+    className="sc-bZQynM TJfWV"
     disabled={false}
   >
     λ
@@ -21,16 +21,16 @@ exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-AxhUy YnAIG"
+  className="sc-ifAKCX bCBibu"
 >
   <input
-    className="sc-AxirZ hLnVGF sc-AxgMl iHEIpk"
+    className="sc-bwzfXH cmvcxy sc-EHOje kAxTfU"
     disabled={true}
     name="text"
     type="number"
   />
   <span
-    className="sc-AxheI cXfyQO"
+    className="sc-bZQynM dSWnSJ"
     disabled={true}
   >
     λ
@@ -40,16 +40,16 @@ exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-AxhUy YnAIG"
+  className="sc-ifAKCX bCBibu"
 >
   <input
-    className="sc-AxirZ hdggzc sc-AxgMl iHEIpk"
+    className="sc-bwzfXH begKAY sc-EHOje kAxTfU"
     disabled={false}
     name="text"
     type="number"
   />
   <span
-    className="sc-AxheI eSFmUZ"
+    className="sc-bZQynM bsuCEw"
     disabled={false}
   >
     λ
@@ -59,10 +59,10 @@ exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
 <div
-  className="sc-AxhUy YnAIG"
+  className="sc-ifAKCX bCBibu"
 >
   <input
-    className="sc-AxirZ hLnVGF sc-AxgMl iHEIpk"
+    className="sc-bwzfXH cmvcxy sc-EHOje kAxTfU"
     disabled={false}
     name="text"
     type="number"
@@ -70,7 +70,7 @@ exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
     €
   </input>
   <span
-    className="sc-AxheI iRXQBq"
+    className="sc-bZQynM TJfWV"
     disabled={false}
   >
     λ
@@ -80,16 +80,16 @@ exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-AxhUy YnAIG"
+  className="sc-ifAKCX bCBibu"
 >
   <input
-    className="sc-AxirZ AJCco sc-AxgMl iHEIpk"
+    className="sc-bwzfXH hexTtb sc-EHOje kAxTfU"
     disabled={false}
     name="text"
     type="number"
   />
   <span
-    className="sc-AxheI jbUhyH"
+    className="sc-bZQynM eKWFmD"
     disabled={false}
   >
     λ

@@ -2,7 +2,7 @@
 
 exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-AxhCb kRwRRZ k-CartRewardCard"
+  className="sc-bxivhb NpcKf k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -38,7 +38,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-AxirZ jSSvxK"
+        className="sc-bwzfXH cavDWq"
       >
         Custom title amount
       </h1>
@@ -60,7 +60,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 1`] = `
 <div
-  className="sc-AxhCb kRwRRZ k-CartRewardCard"
+  className="sc-bxivhb NpcKf k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -96,7 +96,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
       className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
     >
       <h1
-        className="sc-AxirZ jSSvxK"
+        className="sc-bwzfXH cavDWq"
       >
         Custom title amount
       </h1>
@@ -118,7 +118,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
 
 exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-AxhCb kRwRRZ k-CartRewardCard"
+  className="sc-bxivhb NpcKf k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -154,7 +154,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-double"
     >
       <Custom title tag
-        className="sc-AxirZ jSSvxK"
+        className="sc-bwzfXH cavDWq"
         cssColor={null}
         italic={true}
         margin={false}
@@ -167,7 +167,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       className="k-u-margin-bottom-single k-u-margin-top-double"
     >
       <span
-        className="sc-AxiKw bOTXee k-u-size-default k-u-weight-bold"
+        className="sc-htpNat KtFsv k-u-size-default k-u-weight-bold"
       >
         Custom subtitle
       </span>
@@ -182,21 +182,21 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
       </p>
     </div>
     <p
-      className="sc-AxiKw bOTXee k-u-size-tiny k-u-weight-regular k-u-margin-none"
+      className="sc-htpNat KtFsv k-u-size-tiny k-u-weight-regular k-u-margin-none"
     >
       Custom shipping title
        
       <span
-        className="sc-AxiKw bOTXee k-u-weight-light"
+        className="sc-htpNat KtFsv k-u-weight-light"
       >
         Custom shipping value
       </span>
     </p>
     <div
-      className="sc-AxjAm ksLovO"
+      className="sc-bdVaJa jtfdLD"
     >
       <a
-        className="sc-AxiKw bOTXee k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
+        className="sc-htpNat KtFsv k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
         href="Custom amount link"
       >
         Custom amount

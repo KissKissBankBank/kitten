@@ -2,12 +2,12 @@
 
 exports[`<ToggleSwitch /> with \`big\` prop matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm jLRnid"
+  className="sc-bdVaJa dPVrAh"
 >
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-AxirZ nnlGs"
+    className="sc-bwzfXH cahKtf"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -19,7 +19,7 @@ exports[`<ToggleSwitch /> with \`big\` prop matches with snapshot 1`] = `
     />
   </button>
   <label
-    className="sc-AxiKw duWqIa"
+    className="sc-htpNat gGZSds"
     for="toggle-switch"
   >
     switch
@@ -29,12 +29,12 @@ exports[`<ToggleSwitch /> with \`big\` prop matches with snapshot 1`] = `
 
 exports[`<ToggleSwitch /> with \`checkedColor\` \`defaultColor\` & \`disabledColor\` props matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm jLRnid"
+  className="sc-bdVaJa dPVrAh"
 >
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-AxirZ fvkSTo"
+    className="sc-bwzfXH jtXUjU"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -46,7 +46,7 @@ exports[`<ToggleSwitch /> with \`checkedColor\` \`defaultColor\` & \`disabledCol
     />
   </button>
   <label
-    className="sc-AxiKw hqHQqB"
+    className="sc-htpNat gyVlOB"
     for="toggle-switch"
   >
     switch
@@ -56,12 +56,12 @@ exports[`<ToggleSwitch /> with \`checkedColor\` \`defaultColor\` & \`disabledCol
 
 exports[`<ToggleSwitch /> with \`disabled\` prop matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm gcUFWi"
+  className="sc-bdVaJa cXgxJA"
 >
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-AxirZ nnlGs"
+    className="sc-bwzfXH cahKtf"
     disabled={true}
     id="toggle-switch"
     onClick={[Function]}
@@ -73,7 +73,7 @@ exports[`<ToggleSwitch /> with \`disabled\` prop matches with snapshot 1`] = `
     />
   </button>
   <label
-    className="sc-AxiKw bkCPDJ"
+    className="sc-htpNat kGWVbx"
     for="toggle-switch"
   >
     switch
@@ -83,12 +83,12 @@ exports[`<ToggleSwitch /> with \`disabled\` prop matches with snapshot 1`] = `
 
 exports[`<ToggleSwitch /> with \`isChecked\` prop matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm jLRnid"
+  className="sc-bdVaJa dPVrAh"
 >
   <button
     aria-label={null}
     aria-pressed={true}
-    className="sc-AxirZ nnlGs"
+    className="sc-bwzfXH cahKtf"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -100,7 +100,7 @@ exports[`<ToggleSwitch /> with \`isChecked\` prop matches with snapshot 1`] = `
     />
   </button>
   <label
-    className="sc-AxiKw bkCPDJ"
+    className="sc-htpNat kGWVbx"
     for="toggle-switch"
   >
     switch
@@ -110,12 +110,12 @@ exports[`<ToggleSwitch /> with \`isChecked\` prop matches with snapshot 1`] = `
 
 exports[`<ToggleSwitch /> with \`isLabelVisible\` prop matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm jLRnid"
+  className="sc-bdVaJa dPVrAh"
 >
   <button
     aria-label="switch"
     aria-pressed={false}
-    className="sc-AxirZ nnlGs"
+    className="sc-bwzfXH cahKtf"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -131,12 +131,12 @@ exports[`<ToggleSwitch /> with \`isLabelVisible\` prop matches with snapshot 1`]
 
 exports[`<ToggleSwitch /> with \`label\` prop matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm jLRnid"
+  className="sc-bdVaJa dPVrAh"
 >
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-AxirZ nnlGs"
+    className="sc-bwzfXH cahKtf"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -148,7 +148,7 @@ exports[`<ToggleSwitch /> with \`label\` prop matches with snapshot 1`] = `
     />
   </button>
   <label
-    className="sc-AxiKw bkCPDJ"
+    className="sc-htpNat kGWVbx"
     for="toggle-switch"
   >
     A test label
@@ -158,12 +158,12 @@ exports[`<ToggleSwitch /> with \`label\` prop matches with snapshot 1`] = `
 
 exports[`<ToggleSwitch /> with \`locked\` prop matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm gcUFWi"
+  className="sc-bdVaJa cXgxJA"
 >
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-AxirZ fOpcru"
+    className="sc-bwzfXH hvgkvY"
     disabled={true}
     id="toggle-switch"
     onClick={[Function]}
@@ -187,7 +187,7 @@ exports[`<ToggleSwitch /> with \`locked\` prop matches with snapshot 1`] = `
     </div>
   </button>
   <label
-    className="sc-AxiKw bkCPDJ"
+    className="sc-htpNat kGWVbx"
     for="toggle-switch"
   >
     switch
@@ -197,12 +197,12 @@ exports[`<ToggleSwitch /> with \`locked\` prop matches with snapshot 1`] = `
 
 exports[`<ToggleSwitch /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-AxjAm jLRnid"
+  className="sc-bdVaJa dPVrAh"
 >
   <button
     aria-label={null}
     aria-pressed={false}
-    className="sc-AxirZ nnlGs"
+    className="sc-bwzfXH cahKtf"
     disabled={false}
     id="toggle-switch"
     onClick={[Function]}
@@ -214,7 +214,7 @@ exports[`<ToggleSwitch /> with default props matches with snapshot 1`] = `
     />
   </button>
   <label
-    className="sc-AxiKw bkCPDJ"
+    className="sc-htpNat kGWVbx"
     for="toggle-switch"
   >
     switch
