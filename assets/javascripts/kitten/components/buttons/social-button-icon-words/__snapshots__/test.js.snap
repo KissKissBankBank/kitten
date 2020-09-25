@@ -59,7 +59,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -71,33 +71,16 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -205,7 +188,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -217,33 +200,16 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -356,7 +322,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -377,33 +343,16 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -518,7 +467,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -539,33 +488,16 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -671,7 +603,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -683,33 +615,16 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #004880;
   background-color: #004880;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -817,7 +732,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -829,33 +744,16 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #004880;
   background-color: #004880;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -961,7 +859,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -973,33 +871,16 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #388ed0;
   background-color: #388ed0;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1107,7 +988,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1119,33 +1000,16 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #388ed0;
   background-color: #388ed0;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {

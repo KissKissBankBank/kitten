@@ -1456,7 +1456,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 
 .c1 svg,
 .c1 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1468,33 +1468,16 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   color: #fff;
 }
 
-.c1:hover svg,
-.c1:focus svg,
-.c1:hover path,
-.c1:focus path {
-  fill: #fff;
-}
-
 .c1:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c1:active svg,
-.c1:active path {
-  fill: #fff;
-}
-
 .c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c1:disabled svg,
-.c1:disabled path {
-  fill: #fff;
 }
 
 @media (max-width:39.9375rem) {

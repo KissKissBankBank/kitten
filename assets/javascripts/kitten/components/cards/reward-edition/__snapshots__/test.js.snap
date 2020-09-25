@@ -70,7 +70,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 
 .c2 svg,
 .c2 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -82,33 +82,16 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c2:hover svg,
-.c2:focus svg,
-.c2:hover path,
-.c2:focus path {
-  fill: #fff;
-}
-
 .c2:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c2:active svg,
-.c2:active path {
-  fill: #fff;
-}
-
 .c2:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c2:disabled svg,
-.c2:disabled path {
-  fill: #fff;
 }
 
 .c1 {

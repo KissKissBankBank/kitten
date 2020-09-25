@@ -17,7 +17,7 @@ Array [
     className="sc-AxjAm ihYyaQ"
   >
     <div
-      className="sc-AxgMl irIVZw k-BasicUploader k-BasicUploader--ready"
+      className="sc-AxgMl klHMUL k-BasicUploader k-BasicUploader--ready"
     >
       <input
         accept=".jpg,.jpeg,.gif,.png"
@@ -27,7 +27,7 @@ Array [
         type="file"
       />
       <label
-        className="sc-AxirZ iIbEUT k-BasicUploader__button"
+        className="sc-AxirZ ehSbzQ k-BasicUploader__button"
         htmlFor="cropper"
       >
         <svg

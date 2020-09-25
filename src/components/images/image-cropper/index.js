@@ -221,7 +221,7 @@ var ImageCropper = function ImageCropper(_ref) {
     crop: function crop(result) {
       onChange({
         value: result.target.src,
-        base: result.originalTarget.src,
+        base: (0, _getOr.default)(result.srcElement.src)('originalTarget.src')(result),
         name: fileNameState,
         cropperData: result.detail
       });

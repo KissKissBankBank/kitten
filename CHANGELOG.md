@@ -36,6 +36,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add `deleteButtonA11yText` prop to `CartRewardCard` (defaults to 'Delete').
 - Feature: Add `garbageButtonA11yText` prop to `RewardEdition` (defaults to 'Delete').
 
+## [2.92.1] - 2020-09-22
+
+Fixes:
+- Fixhover delay on `Button` svg icon.
+- Fix `Chrome` issue with `EventTarget` on `ImageCropper`.
 
 ## [2.92.0] - 2020-09-10
 

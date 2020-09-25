@@ -64,7 +64,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -76,33 +76,16 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -210,7 +193,7 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -222,33 +205,16 @@ exports[`SocialButtonIcon <FacebookButtonIcon /> with props matches with snapsho
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -370,7 +336,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -391,33 +357,16 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -532,7 +481,7 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -553,33 +502,16 @@ exports[`SocialButtonIcon <InstagramButtonIcon /> with props matches with snapsh
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -694,7 +626,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -706,33 +638,16 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #004880;
   background-color: #004880;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -840,7 +755,7 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -852,33 +767,16 @@ exports[`SocialButtonIcon <LinkedinButtonIcon /> with props matches with snapsho
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #004880;
   background-color: #004880;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -993,7 +891,7 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1005,33 +903,16 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #9f0000;
   background-color: #9f0000;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1139,7 +1020,7 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1151,33 +1032,16 @@ exports[`SocialButtonIcon <PinterestButtonIcon /> with props matches with snapsh
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #9f0000;
   background-color: #9f0000;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1292,7 +1156,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1304,33 +1168,16 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #388ed0;
   background-color: #388ed0;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1438,7 +1285,7 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1450,33 +1297,16 @@ exports[`SocialButtonIcon <TwitterButtonIcon /> with props matches with snapshot
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #388ed0;
   background-color: #388ed0;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1591,7 +1421,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1603,33 +1433,16 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #e10000;
   background-color: #e10000;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1737,7 +1550,7 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
 
 .c0 svg,
 .c0 path {
-  fill: #fff;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1749,33 +1562,16 @@ exports[`SocialButtonIcon <YoutubeButtonIcon /> with props matches with snapshot
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #e10000;
   background-color: #e10000;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
