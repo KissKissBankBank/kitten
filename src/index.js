@@ -15,6 +15,12 @@ Object.defineProperty(exports, "Accordeon", {
     return _accordeon.Accordeon;
   }
 });
+Object.defineProperty(exports, "AvatarWithTextAndBadge", {
+  enumerable: true,
+  get: function get() {
+    return _avatarWithTextAndBadge.AvatarWithTextAndBadge;
+  }
+});
 Object.defineProperty(exports, "DocLinkBox", {
   enumerable: true,
   get: function get() {
@@ -93,6 +99,12 @@ Object.defineProperty(exports, "LinkedinButtonIconWords", {
     return _socialButtonIconWords.LinkedinButtonIconWords;
   }
 });
+Object.defineProperty(exports, "InstagramButtonIconWords", {
+  enumerable: true,
+  get: function get() {
+    return _socialButtonIconWords.InstagramButtonIconWords;
+  }
+});
 Object.defineProperty(exports, "FacebookButtonIcon", {
   enumerable: true,
   get: function get() {
@@ -133,6 +145,18 @@ Object.defineProperty(exports, "TagButton", {
   enumerable: true,
   get: function get() {
     return _tagButton.TagButton;
+  }
+});
+Object.defineProperty(exports, "ButtonImageWithText", {
+  enumerable: true,
+  get: function get() {
+    return _buttonImageWithText.ButtonImageWithText;
+  }
+});
+Object.defineProperty(exports, "CheckableButton", {
+  enumerable: true,
+  get: function get() {
+    return _checkableButton.CheckableButton;
   }
 });
 Object.defineProperty(exports, "SimpleCard", {
@@ -231,6 +255,24 @@ Object.defineProperty(exports, "VerticalCard", {
     return _verticalCard.VerticalCard;
   }
 });
+Object.defineProperty(exports, "ClickableCard", {
+  enumerable: true,
+  get: function get() {
+    return _clickableCard.ClickableCard;
+  }
+});
+Object.defineProperty(exports, "CrowdfundingCard", {
+  enumerable: true,
+  get: function get() {
+    return _crowdfundingCard.CrowdfundingCard;
+  }
+});
+Object.defineProperty(exports, "EngagementCard", {
+  enumerable: true,
+  get: function get() {
+    return _engagementCard.EngagementCard;
+  }
+});
 Object.defineProperty(exports, "Carousel", {
   enumerable: true,
   get: function get() {
@@ -271,6 +313,12 @@ Object.defineProperty(exports, "DatePicker", {
   enumerable: true,
   get: function get() {
     return _datePicker.DatePicker;
+  }
+});
+Object.defineProperty(exports, "StandaloneRangeDatePicker", {
+  enumerable: true,
+  get: function get() {
+    return _standaloneRange.StandaloneRangeDatePicker;
   }
 });
 Object.defineProperty(exports, "Details", {
@@ -675,12 +723,6 @@ Object.defineProperty(exports, "Loader", {
     return _loader.Loader;
   }
 });
-Object.defineProperty(exports, "EmbedPlayer", {
-  enumerable: true,
-  get: function get() {
-    return _embedPlayer.EmbedPlayer;
-  }
-});
 Object.defineProperty(exports, "HeaderMenu", {
   enumerable: true,
   get: function get() {
@@ -697,6 +739,12 @@ Object.defineProperty(exports, "Progress", {
   enumerable: true,
   get: function get() {
     return _progress.Progress;
+  }
+});
+Object.defineProperty(exports, "ProgressRing", {
+  enumerable: true,
+  get: function get() {
+    return _progressRing.ProgressRing;
   }
 });
 Object.defineProperty(exports, "Modal", {
@@ -843,6 +891,30 @@ Object.defineProperty(exports, "Stepper", {
     return _stepper.Stepper;
   }
 });
+Object.defineProperty(exports, "DoubleEntryTable", {
+  enumerable: true,
+  get: function get() {
+    return _doubleEntryTable.DoubleEntryTable;
+  }
+});
+Object.defineProperty(exports, "ListTable", {
+  enumerable: true,
+  get: function get() {
+    return _listTable.ListTable;
+  }
+});
+Object.defineProperty(exports, "SingleEntryTable", {
+  enumerable: true,
+  get: function get() {
+    return _singleEntryTable.SingleEntryTable;
+  }
+});
+Object.defineProperty(exports, "TextCopy", {
+  enumerable: true,
+  get: function get() {
+    return _textCopy.TextCopy;
+  }
+});
 Object.defineProperty(exports, "QuestionMarkWithTooltip", {
   enumerable: true,
   get: function get() {
@@ -921,6 +993,24 @@ Object.defineProperty(exports, "Title", {
     return _title.Title;
   }
 });
+Object.defineProperty(exports, "TitleWithStroke", {
+  enumerable: true,
+  get: function get() {
+    return _titleWithStroke.TitleWithStroke;
+  }
+});
+Object.defineProperty(exports, "BasicUploader", {
+  enumerable: true,
+  get: function get() {
+    return _basicUploader.BasicUploader;
+  }
+});
+Object.defineProperty(exports, "DocumentManager", {
+  enumerable: true,
+  get: function get() {
+    return _documentManager.DocumentManager;
+  }
+});
 Object.defineProperty(exports, "SimpleUploader", {
   enumerable: true,
   get: function get() {
@@ -945,10 +1035,18 @@ Object.defineProperty(exports, "GifVideo", {
     return _gifVideo.GifVideo;
   }
 });
+Object.defineProperty(exports, "EmbedPlayer", {
+  enumerable: true,
+  get: function get() {
+    return _embedPlayer.EmbedPlayer;
+  }
+});
 
 var _visuallyHidden = require("./components/accessibility/visually-hidden");
 
 var _accordeon = require("./components/accordeon");
+
+var _avatarWithTextAndBadge = require("./components/avatar/avatar-with-text-and-badge");
 
 var _docLinkBox = require("./components/box/doc-link-box");
 
@@ -975,6 +1073,10 @@ var _socialButtonIconWords = require("./components/buttons/social-button-icon-wo
 var _socialButtonIcon = require("./components/buttons/social-button-icon");
 
 var _tagButton = require("./components/buttons/tag-button");
+
+var _buttonImageWithText = require("./components/buttons/button-image-with-text");
+
+var _checkableButton = require("./components/buttons/checkable-button");
 
 var _simpleCard = require("./components/cards/simple-card");
 
@@ -1008,6 +1110,12 @@ var _verticalCardWithAction = require("./components/cards/vertical-card-with-act
 
 var _verticalCard = require("./components/cards/vertical-card");
 
+var _clickableCard = require("./components/cards/clickable-card");
+
+var _crowdfundingCard = require("./components/cards/crowdfunding-card");
+
+var _engagementCard = require("./components/cards/engagement-card");
+
 var _carousel = require("./components/carousel/carousel");
 
 var _navTabCarousel = require("./components/carousel/nav-tab-carousel");
@@ -1021,6 +1129,8 @@ var _commentForm = require("./components/comments/comment-form");
 var _comment = require("./components/comments/comment");
 
 var _datePicker = require("./components/date-picker");
+
+var _standaloneRange = require("./components/date-picker/standalone-range");
 
 var _details = require("./components/details");
 
@@ -1150,13 +1260,13 @@ var _loaderWithParagraph = require("./components/loaders/loader-with-paragraph")
 
 var _loader = require("./components/loaders/loader");
 
-var _embedPlayer = require("./components/media/embed-player");
-
 var _headerMenu = require("./components/menus/header-menu");
 
 var _counterBlock = require("./components/meters/counter-block");
 
 var _progress = require("./components/meters/progress");
+
+var _progressRing = require("./components/meters/progress-ring");
 
 var _modal = require("./components/modals/modal");
 
@@ -1202,6 +1312,14 @@ var _stepperIcon = require("./components/steppers/stepper-icon");
 
 var _stepper = require("./components/steppers/stepper");
 
+var _doubleEntryTable = require("./components/tables/double-entry-table");
+
+var _listTable = require("./components/tables/list-table");
+
+var _singleEntryTable = require("./components/tables/single-entry-table");
+
+var _textCopy = require("./components/text-copy");
+
 var _questionMarkWithTooltip = require("./components/tooltips/question-mark-with-tooltip");
 
 var _staticTooltip = require("./components/tooltips/static-tooltip");
@@ -1228,6 +1346,12 @@ var _text = require("./components/typography/text");
 
 var _title = require("./components/typography/title");
 
+var _titleWithStroke = require("./components/typography/title-with-stroke");
+
+var _basicUploader = require("./components/uploaders/basic-uploader");
+
+var _documentManager = require("./components/uploaders/document-manager");
+
 var _simpleUploader = require("./components/uploaders/simple-uploader");
 
 var _uploader = require("./components/uploaders/uploader");
@@ -1235,3 +1359,5 @@ var _uploader = require("./components/uploaders/uploader");
 var _video = require("./components/videos/video");
 
 var _gifVideo = require("./components/videos/gif-video");
+
+var _embedPlayer = require("./components/videos/embed-player");

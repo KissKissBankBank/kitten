@@ -59,7 +59,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -71,33 +71,16 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -173,7 +156,7 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -185,33 +168,16 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -304,7 +270,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -316,33 +282,16 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -420,7 +369,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -432,33 +381,16 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -537,7 +469,7 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -549,33 +481,16 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -670,7 +585,7 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -682,33 +597,16 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -800,7 +698,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 
 .c0 svg,
 .c0 path {
-  fill: #19b4fa;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -812,33 +710,16 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -918,7 +799,7 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -930,33 +811,16 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1044,7 +908,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1056,33 +920,16 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1197,7 +1044,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1209,33 +1056,16 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1322,7 +1152,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1334,33 +1164,16 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1485,7 +1298,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1497,33 +1310,16 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1648,7 +1444,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1660,33 +1456,16 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1788,7 +1567,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1800,33 +1579,16 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1910,7 +1672,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -1922,33 +1684,16 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -2029,7 +1774,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0 svg,
 .c0 path {
-  fill: #222;
+  fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
@@ -2041,33 +1786,16 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   color: #fff;
 }
 
-.c0:hover svg,
-.c0:focus svg,
-.c0:hover path,
-.c0:focus path {
-  fill: #fff;
-}
-
 .c0:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c0:active svg,
-.c0:active path {
-  fill: #fff;
-}
-
 .c0:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
-}
-
-.c0:disabled svg,
-.c0:disabled path {
-  fill: #fff;
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {

@@ -4,6 +4,44 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.92.1] - 2020-09-22
+
+Fixes:
+- Fixhover delay on `Button` svg icon.
+- Fix `Chrome` issue with `EventTarget` on `ImageCropper`.
+
+## [2.92.0] - 2020-09-10
+
+Feature:
+- Add `DownloadIcon` component.
+
+## [2.91.1] - 2020-09-10
+
+Fix:
+- Fix controls issue on `GifVideo`.
+
+## [2.91.0] - 2020-09-07
+
+Feature:
+- Use `BasicUploader` for `ImageCropper`, remove `base64` prop (always `true`).
+
+Fix:
+- Fix `ClickableCard` image dimensions in Safari.
+
+## [2.90.0] - 2020-09-01
+
+Features:
+- Add 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram',
+  'social_youtube', 'social_pinterest' modifiers to Button component.
+- Add `InstagramButtonIconWords` component.
+
+Fixes:
+- Refactor `FacebookButtonIconWords`, `TwitterButtonIconWords`,
+  `LinkedinButtonIconWords` components.
+- Refactor `FacebookButtonIcon`, `TwitterButtonIcon`, `LinkedinButtonIcon`,
+  `InstagramButtonIcon`, `YoutubeButtonIcon`,  `PinterestButtonIcon` components.
+- Fix Legacy Carousel width.
+
 ## [2.89.0] - 2020-08-28
 
 Features:

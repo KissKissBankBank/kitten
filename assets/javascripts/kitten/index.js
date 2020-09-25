@@ -24,6 +24,7 @@ export {
   FacebookButtonIconWords,
   TwitterButtonIconWords,
   LinkedinButtonIconWords,
+  InstagramButtonIconWords,
 } from './components/buttons/social-button-icon-words'
 export {
   FacebookButtonIcon,
