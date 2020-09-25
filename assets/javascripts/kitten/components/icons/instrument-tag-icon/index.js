@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 export const InstrumentTagIcon = ({ color, title, ...props }) => (
   <svg
-    version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 9 11"
     fill={color}

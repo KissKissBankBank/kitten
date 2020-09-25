@@ -1,4 +1,5 @@
 import React from 'react'
+import COLORS from '../../../constants/colors-config'
 
 export const FilterIcon = ({
   color,
@@ -14,7 +15,6 @@ export const FilterIcon = ({
 
   return (
     <svg
-      version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"
@@ -125,7 +125,7 @@ export const FilterIcon = ({
 }
 
 FilterIcon.defaultProps = {
-  color: '#222',
+  color: COLORS.font1,
   duration: '1.5s',
   animated: false,
   type: 'xml',

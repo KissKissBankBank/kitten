@@ -186,19 +186,21 @@ export const modifierStyles = modifier => {
 
     ${modifier !== 'checked' &&
     css`
-      :hover,
-      :focus {
+      &:hover,
+      &:focus {
         border-color: ${hoverBorderColor};
         background-color: ${hoverBgColor};
         color: ${hoverColor};
       }
 
-      :active {
+      &:active {
         border-color: ${activeBorderColor};
         background-color: ${activeBgColor};
         color: ${activeColor};
       }
-    `} :disabled {
+    `}
+
+    &:disabled {
       border-color: ${COLORS.line2};
       background-color: ${COLORS.line2};
       color: ${COLORS.background1};
