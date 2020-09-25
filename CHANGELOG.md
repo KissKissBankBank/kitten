@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add EcmaScript Modules files. You can import components with
+  `import { MyComponent, MyOtherComponent } from '@kisskissbankbank/kitten'`.
+
 ## [2.92.1] - 2020-09-22
 
 Fixes:
