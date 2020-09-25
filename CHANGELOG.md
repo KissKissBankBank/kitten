@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add EcmaScript Modules files. You can import components with
+  `import { MyComponent, MyOtherComponent } from '@kisskissbankbank/kitten'`.
 - Feature: Add `color` and `bgColor` props and deprecate old color props on:
   - `CheckedCircleIcon`
   - `ClockCircleIcon`
