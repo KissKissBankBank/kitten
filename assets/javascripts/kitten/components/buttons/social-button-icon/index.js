@@ -21,7 +21,7 @@ export const TwitterButtonIcon = props => (
 
 export const LinkedinButtonIcon = props => (
   <Button {...props} modifier="social_linkedin" icon>
-    <LinkedinIcon width="12" height="12" title="Linkedin" />
+    <LinkedinIcon width="12" height="12" title="LinkedIn" />
   </Button>
 )
 
@@ -33,7 +33,7 @@ export const InstagramButtonIcon = props => (
 
 export const YoutubeButtonIcon = props => (
   <Button {...props} modifier="social_youtube" icon>
-    <YoutubeIcon width="16" height="16" title="Youtube" />
+    <YoutubeIcon width="16" height="16" title="YouTube" />
   </Button>
 )
 
