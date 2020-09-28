@@ -73,6 +73,7 @@ export class CartRewardCard extends Component {
     updateAmountLink: PropTypes.string,
     onAfterClose: PropTypes.func,
     onCloseClick: PropTypes.func,
+    deleteButtonA11yText: PropTypes.string,
 
     // Deprecated.
     shippingTitle: deprecated(
@@ -97,6 +98,7 @@ export class CartRewardCard extends Component {
     updateAmountLink: '',
     onAfterClose: () => {},
     onCloseClick: null,
+    deleteButtonA11yText: 'Delete',
   }
 
   constructor(props) {
@@ -205,14 +207,13 @@ export class CartRewardCard extends Component {
       <div className="k-CartRewardCard__cart">
         <ButtonIcon
           type="button"
-          title="Garbage Button"
-          aria-label="Garbage Button"
+          aria-label={this.props.deleteButtonA11yText}
           modifier="beryllium"
           size="tiny"
           onClick={this.handleCloseClick}
           className="k-CartRewardCard__garbage"
         >
-          <GarbageIcon className="k-ButtonIcon__svg" />
+          <GarbageIcon aria-hidden className="k-ButtonIcon__svg" />
         </ButtonIcon>
       </div>
     )

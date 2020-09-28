@@ -12,12 +12,15 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
       className="k-LinkBox__arrow"
     >
       <svg
-        className="sc-bxivhb cguJqp"
+        className=""
+        fill="#222"
         height="10"
+        transform="rotate(90)"
         viewBox="0 0 8.48 5.64"
         width="10"
         xmlns="http://www.w3.org/2000/svg"
       >
+        
         <path
           d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
         />
@@ -68,12 +71,15 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
       className="k-LinkBox__arrow"
     >
       <svg
-        className="sc-bxivhb cguJqp"
+        className=""
+        fill="#222"
         height="10"
+        transform="rotate(90)"
         viewBox="0 0 8.48 5.64"
         width="10"
         xmlns="http://www.w3.org/2000/svg"
       >
+        
         <path
           d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
         />
@@ -96,12 +102,15 @@ exports[`Deprecated <LinkBox /> by default matches with snapshot 1`] = `
       className="k-LinkBox__arrow"
     >
       <svg
-        className="sc-bxivhb cguJqp"
+        className=""
+        fill="#222"
         height="10"
+        transform="rotate(90)"
         viewBox="0 0 8.48 5.64"
         width="10"
         xmlns="http://www.w3.org/2000/svg"
       >
+        
         <path
           d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
         />
@@ -152,9 +161,7 @@ exports[`Deprecated <LinkBox /> with some props matches with snapshot 1`] = `
         width="8.48"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          Arrow
-        </title>
+        
         <path
           d="M6 0H0v6h2V2h4z"
         />

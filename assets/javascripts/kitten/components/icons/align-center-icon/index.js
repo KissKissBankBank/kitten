@@ -9,7 +9,7 @@ export const AlignCenterIcon = ({ color, title, ...props }) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    {title && <title>{title}</title>}>
+    {title && <title>{title}</title>}
     <path d="M12 8v2H3V8h9zm2-4v2H0V4h14zm-1-4v2H2V0h11z" fill={color} />
   </svg>
 )

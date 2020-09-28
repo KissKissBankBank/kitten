@@ -93,12 +93,6 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 `;
 
 exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
-.c3 {
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
 .c1 {
   display: block;
   position: relative;
@@ -280,12 +274,15 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
         </a>
       </span>
       <svg
-        className="c3 headerMenuArrowIcon"
+        className="headerMenuArrowIcon"
+        fill="#222"
         height="5.64"
+        transform="rotate(90)"
         viewBox="0 0 8.48 5.64"
         width="8.48"
         xmlns="http://www.w3.org/2000/svg"
       >
+        
         <path
           d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
         />

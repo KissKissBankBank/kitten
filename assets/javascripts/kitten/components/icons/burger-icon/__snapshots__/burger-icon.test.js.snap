@@ -11,19 +11,19 @@ exports[`<BurgerIcon /> default matches the snapshot 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   <rect
-    className="item-buns"
+    className="k-BurgerIcon__bun"
     height="2"
     width="12"
     y="0"
   />
   <rect
-    className="item-patty"
+    className="k-BurgerIcon__patty"
     height="2"
     width="12"
     y="4"
   />
   <rect
-    className="item-buns"
+    className="k-BurgerIcon__bun"
     height="2"
     width="12"
     y="8"
@@ -42,19 +42,19 @@ exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches th
   xmlns="http://www.w3.org/2000/svg"
 >
   <rect
-    className="item-buns"
+    className="k-BurgerIcon__bun"
     height="2"
     width="12"
     y="0"
   />
   <rect
-    className="item-patty"
+    className="k-BurgerIcon__patty"
     height="2"
     width="12"
     y="4"
   />
   <rect
-    className="item-buns"
+    className="k-BurgerIcon__bun"
     height="2"
     width="12"
     y="8"
@@ -65,7 +65,7 @@ exports[`<BurgerIcon /> with no \`title\` (\`iconTitle\` to \`null\`) matches th
 exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the snapshot 1`] = `
 <svg
   aria-label={null}
-  className="sc-bdVaJa gPRAas"
+  className="sc-bdVaJa fmruZZ"
   height="10"
   role="img"
   viewBox="0 0 12 10"
@@ -73,19 +73,19 @@ exports[`<BurgerIcon /> with the prop \`isActive\` set to \`true\` matches the s
   xmlns="http://www.w3.org/2000/svg"
 >
   <rect
-    className="item-buns"
+    className="k-BurgerIcon__bun"
     height="2"
     width="12"
     y="0"
   />
   <rect
-    className="item-patty"
+    className="k-BurgerIcon__patty"
     height="2"
     width="12"
     y="4"
   />
   <rect
-    className="item-buns"
+    className="k-BurgerIcon__bun"
     height="2"
     width="12"
     y="8"

@@ -6,6 +6,37 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add EcmaScript Modules files. You can import components with
   `import { MyComponent, MyOtherComponent } from '@kisskissbankbank/kitten'`.
+- Feature: Add `color` and `bgColor` props and deprecate old color props on:
+  - `CheckedCircleIcon`
+  - `ClockCircleIcon`
+  - `ClockIcon`
+  - `CrossCircleIcon`
+  - `FlashCircleIcon`
+  - `StyledRocketCircle`
+  - `WarningCircleIcon`
+- Feature: Add `color` props to:
+  - `Cart`
+  - `FacebookIcon`
+  - `FacebookIconWithBackground`
+  - `GarbageIcon`
+  - `GrabberIcon`
+  - `InstagramIcon`
+  - `InstrumentTagIcon`
+  - `LinkedinIcon`
+  - `LocationIcon`
+  - `MenuIcon`
+  - `MessengerIcon`
+  - `PhoneIcon`
+  - `PinterestIcon`
+  - `QuestionMarkIcon`
+  - `StarIcon`
+  - `TwitterIcon`
+  - `TypologyTagIcon`
+  - `WhatsAppIcon`
+  - `YoutubeIcon`
+- Fix `ArrowIcon` props.
+- Feature: Add `deleteButtonA11yText` prop to `CartRewardCard` (defaults to 'Delete').
+- Feature: Add `garbageButtonA11yText` prop to `RewardEdition` (defaults to 'Delete').
 
 ## [2.92.1] - 2020-09-22
 

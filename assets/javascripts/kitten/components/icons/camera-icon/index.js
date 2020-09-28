@@ -25,5 +25,5 @@ CameraIcon.propTypes = {
 
 CameraIcon.defaultProps = {
   color: '#222',
-  title: 'Camera',
+  title: '',
 }

@@ -2,11 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
 import { computeFromRatio } from '../../../helpers/utils/ratio'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const DEFAULT_WIDTH = 20
 const DEFAULT_HEIGHT = 20
 
 export const CrossCircleIcon = ({
+  color,
+  bgColor,
   circleColor,
   crossColor,
   width,
@@ -30,9 +33,9 @@ export const CrossCircleIcon = ({
       {...props}
     >
       {title && <title>{title}</title>}
-      <circle fill={circleColor} cx="10" cy="10" r="10" />
+      <circle fill={bgColor || circleColor} cx="10" cy="10" r="10" />
       <path
-        fill={crossColor}
+        fill={color || crossColor}
         d="M11.414 10l2.122-2.12-1.415-1.416L10 8.586 7.88 6.464 6.463 7.88 8.586 10l-2.122 2.12 1.415 1.416L10 11.414l2.12 2.122 1.416-1.415L11.414 10z"
       />
     </svg>
@@ -40,14 +43,22 @@ export const CrossCircleIcon = ({
 }
 
 CrossCircleIcon.prototype = {
-  circleColor: PropTypes.string,
-  crossColor: PropTypes.string,
+  bgColor: PropTypes.string,
+  color: PropTypes.string,
+  circleColor: deprecated(
+    PropTypes.string,
+    '`circleColor` is deprecated. Please use `bgColor` instead.',
+  ),
+  crossColor: deprecated(
+    PropTypes.string,
+    '`crossColor` is deprecated. Please use `color` instead.',
+  ),
   title: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }
 
 CrossCircleIcon.defaultProps = {
-  circleColor: COLORS.background1,
-  crossColor: COLORS.font1,
+  bgColor: COLORS.background1,
+  color: COLORS.font1,
 }

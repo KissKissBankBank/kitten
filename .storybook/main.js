@@ -50,6 +50,7 @@ module.exports = {
     '../doc/**/*.stories.@(js|mdx)',
   ],
   addons: [
+    '@storybook/addon-links',
     '@storybook/addon-knobs',
     '@storybook/addon-actions',
     '@storybook/addon-a11y',

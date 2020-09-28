@@ -2,7 +2,7 @@
 
 exports[`<DatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="sc-dnqmqq idJIFt"
+  className="sc-htoDjs bqdhgJ"
 >
   <div
     className="DayPickerInput"
@@ -38,7 +38,7 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
 
 exports[`<DatePicker /> with custom input matches with snapshot 1`] = `
 <div
-  className="sc-dnqmqq idJIFt"
+  className="sc-htoDjs bqdhgJ"
 >
   <div
     className="DayPickerInput"
