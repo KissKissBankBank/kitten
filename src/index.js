@@ -1,5 +1,7 @@
 "use strict";
 
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -759,6 +761,12 @@ Object.defineProperty(exports, "Overlay", {
     return _overlay.Overlay;
   }
 });
+Object.defineProperty(exports, "HeaderNav", {
+  enumerable: true,
+  get: function get() {
+    return _headerNav.default;
+  }
+});
 Object.defineProperty(exports, "HorizontalNav", {
   enumerable: true,
   get: function get() {
@@ -1271,6 +1279,8 @@ var _progressRing = require("./components/meters/progress-ring");
 var _modal = require("./components/modals/modal");
 
 var _overlay = require("./components/modals/overlay");
+
+var _headerNav = _interopRequireDefault(require("./components/navigation/header-nav"));
 
 var _horizontalNav = require("./components/navigation/horizontal-nav");
 

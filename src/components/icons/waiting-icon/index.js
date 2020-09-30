@@ -38,5 +38,5 @@ WaitingIcon.propTypes = {
 };
 WaitingIcon.defaultProps = {
   color: '#fff',
-  title: 'Waiting'
+  title: ''
 };

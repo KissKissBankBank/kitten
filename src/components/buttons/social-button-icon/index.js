@@ -31,7 +31,8 @@ var FacebookButtonIcon = function FacebookButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_facebookIcon.FacebookIcon, {
     width: "14",
-    height: "14"
+    height: "14",
+    title: "Facebook"
   }));
 };
 
@@ -43,7 +44,8 @@ var TwitterButtonIcon = function TwitterButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {
     width: "15",
-    height: "15"
+    height: "15",
+    title: "Twitter"
   }));
 };
 
@@ -55,7 +57,8 @@ var LinkedinButtonIcon = function LinkedinButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
     width: "12",
-    height: "12"
+    height: "12",
+    title: "LinkedIn"
   }));
 };
 
@@ -67,7 +70,8 @@ var InstagramButtonIcon = function InstagramButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_instagramIcon.InstagramIcon, {
     width: "16",
-    height: "16"
+    height: "16",
+    title: "Instagram"
   }));
 };
 
@@ -79,7 +83,8 @@ var YoutubeButtonIcon = function YoutubeButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_youtubeIcon.YoutubeIcon, {
     width: "16",
-    height: "16"
+    height: "16",
+    title: "YouTube"
   }));
 };
 
@@ -91,7 +96,8 @@ var PinterestButtonIcon = function PinterestButtonIcon(props) {
     icon: true
   }), /*#__PURE__*/_react.default.createElement(_pinterestIcon.PinterestIcon, {
     width: "16",
-    height: "16"
+    height: "16",
+    title: "Pinterest"
   }));
 };
 

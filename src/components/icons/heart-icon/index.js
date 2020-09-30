@@ -29,5 +29,5 @@ var HeartIcon = function HeartIcon(_ref) {
 exports.HeartIcon = HeartIcon;
 HeartIcon.defaultProps = {
   color: '#222',
-  title: 'Heart'
+  title: ''
 };
