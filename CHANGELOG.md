@@ -37,6 +37,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix `ArrowIcon` props.
 - Feature: Add `deleteButtonA11yText` prop to `CartRewardCard` (defaults to 'Delete').
 - Feature: Add `garbageButtonA11yText` prop to `RewardEdition` (defaults to 'Delete').
+- Fix `Alert` display with long texts
 
 ## [2.92.1] - 2020-09-22
 
