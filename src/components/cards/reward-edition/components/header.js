@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -9,17 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Header = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _styledComponents = _interopRequireDefault(require("styled-components"));
 
@@ -35,61 +23,40 @@ var _button = require("../../../../components/buttons/button/button");
 
 var _garbageIcon = require("../../../../components/icons/garbage-icon");
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
 var borderWidth = (0, _typography.pxToRem)(2);
 var borderColor = _colorsConfig.default.line1;
 
-var StyledContainerHeader = _styledComponents.default.div.withConfig({
-  displayName: "header__StyledContainerHeader",
+var StyledHeader = _styledComponents.default.div.withConfig({
+  displayName: "header__StyledHeader",
   componentId: "sc-154pglo-0"
-})(["border-bottom-width:", ";border-bottom-style:solid;border-bottom-color:", ";padding:", ";background-color:", ";display:flex;"], borderWidth, borderColor, (0, _typography.pxToRem)(15), _colorsConfig.default.background3);
+})(["border-bottom-width:", ";border-bottom-style:solid;border-bottom-color:", ";padding:", ";background-color:", ";display:flex;.k-RewardEdition__Header__Amount{flex:auto;display:flex;justify-content:center;align-items:center;}.k-RewardEdition__Header__Button{align-self:flex-end;}"], borderWidth, borderColor, (0, _typography.pxToRem)(15), _colorsConfig.default.background3);
 
-var StyledRewardAmount = (0, _styledComponents.default)(_text.Text).withConfig({
-  displayName: "header__StyledRewardAmount",
-  componentId: "sc-154pglo-1"
-})(["flex:auto;display:flex;justify-content:center;align-items:center;"]);
-var StyledGarbageButton = (0, _styledComponents.default)(_button.Button).withConfig({
-  displayName: "header__StyledGarbageButton",
-  componentId: "sc-154pglo-2"
-})(["align-item:flex-end;"]);
-
-var Header = /*#__PURE__*/function (_PureComponent) {
-  (0, _inherits2.default)(Header, _PureComponent);
-
-  var _super = _createSuper(Header);
-
-  function Header() {
-    (0, _classCallCheck2.default)(this, Header);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(Header, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          children = _this$props.children,
-          onClick = _this$props.onClick,
-          garbageButton = _this$props.garbageButton;
-      return /*#__PURE__*/_react.default.createElement(StyledContainerHeader, null, /*#__PURE__*/_react.default.createElement(StyledRewardAmount, null, children), garbageButton && /*#__PURE__*/_react.default.createElement(StyledGarbageButton, {
-        onClick: onClick,
-        type: "button",
-        "aria-label": "Garbage Button",
-        modifier: "beryllium",
-        tiny: true,
-        icon: true
-      }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, null)));
-    }
-  }]);
-  return Header;
-}(_react.PureComponent);
+var Header = function Header(_ref) {
+  var children = _ref.children,
+      onClick = _ref.onClick,
+      garbageButton = _ref.garbageButton,
+      garbageButtonA11yText = _ref.garbageButtonA11yText;
+  return /*#__PURE__*/_react.default.createElement(StyledHeader, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
+    className: "k-RewardEdition__Header__Amount"
+  }, children), garbageButton && /*#__PURE__*/_react.default.createElement(_button.Button, {
+    onClick: onClick,
+    type: "button",
+    "aria-label": garbageButtonA11yText,
+    modifier: "beryllium",
+    tiny: true,
+    icon: true,
+    className: "k-RewardEdition__Header__Button"
+  }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, {
+    "aria-hidden": true
+  })));
+};
 
 exports.Header = Header;
 Header.propTypes = {
-  garbageButton: _propTypes.default.bool
+  garbageButton: _propTypes.default.bool,
+  garbageButtonA11yText: _propTypes.default.string
 };
 Header.defaultProps = {
-  garbageButton: true
+  garbageButton: true,
+  garbageButtonA11yText: 'Delete'
 };

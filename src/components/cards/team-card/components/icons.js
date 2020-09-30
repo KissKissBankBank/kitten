@@ -56,8 +56,10 @@ var TeamCardIcons = function TeamCardIcons(_ref) {
     tag: "a",
     href: "mailto:".concat(email),
     modifier: "hydrogen",
-    className: "k-ButtonIcon--phone k-TeamCardIcons__buttonIcon"
+    className: "k-ButtonIcon--phone k-TeamCardIcons__buttonIcon",
+    "aria-label": "E-mail"
   }, /*#__PURE__*/_react.default.createElement(_emailIcon.EmailIcon, {
+    "aria-hidden": true,
     className: "k-ButtonIcon__svg"
   })), phoneNumber && /*#__PURE__*/_react.default.createElement(_phoneIcon.TeamCardPhoneIcon, (0, _extends2.default)({}, props, {
     phoneNumber: phoneNumber,
@@ -77,6 +79,7 @@ var SocialLinks = function SocialLinks(_ref2) {
     return /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
       tag: "a",
       key: link.name,
+      "aria-label": link.name,
       href: link.href,
       modifier: link.name,
       size: "tiny",
@@ -84,8 +87,10 @@ var SocialLinks = function SocialLinks(_ref2) {
       rel: "noopener",
       className: "k-TeamCardIcons__buttonIcon"
     }, link.name === 'linkedin' && /*#__PURE__*/_react.default.createElement(_linkedinIcon.LinkedinIcon, {
+      "aria-hidden": true,
       className: "k-ButtonIcon__svg"
     }), link.name === 'twitter' && /*#__PURE__*/_react.default.createElement(_twitterIcon.TwitterIcon, {
+      "aria-hidden": true,
       className: "k-ButtonIcon__svg"
     }));
   }));
