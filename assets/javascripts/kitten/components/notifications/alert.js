@@ -24,7 +24,7 @@ const AlertWrapper = styled.div`
 
   .k-Alert__text {
     padding: ${pxToRem(13)} ${pxToRem(20)};
-    flex: 1 0 auto;
+    flex: 1 0 0;
     font-size: ${stepToRem(-1)};
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
