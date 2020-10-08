@@ -5,7 +5,6 @@ import { pxToRem } from '../../../helpers/utils/typography'
 export const StyledRewardCard = styled.div`
   background-color: ${COLORS.background1};
   width: 100%;
-  padding: ${pxToRem(15)} 0;
   box-sizing: border-box;
   border: ${pxToRem(2)} solid ${COLORS.line1};
 
@@ -91,8 +90,8 @@ export const StyledRewardCard = styled.div`
        container. */
     flex-grow: 9999;
     flex-basis: ${pxToRem(275)}; /* content min-width */
-    margin: ${pxToRem(15)};
-    max-width: calc(100% - ${pxToRem(15)});
+    margin: ${pxToRem(30)};
+    max-width: calc(100% - ${pxToRem(30)});
   }
 
   .k-RewardCard__rowSide {

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { TitleWithStroke } from '../../../../components/typography/title-with-stroke'
+import { Title } from '../../../../components/typography/title'
 
 export const RewardCardTitle = ({
   children,
@@ -10,7 +10,7 @@ export const RewardCardTitle = ({
   className,
   ...props
 }) => (
-  <TitleWithStroke
+  <Title
     {...props}
     italic
     margin={false}
@@ -22,7 +22,7 @@ export const RewardCardTitle = ({
     )}
   >
     {children}
-  </TitleWithStroke>
+  </Title>
 )
 
 RewardCardTitle.propTypes = {

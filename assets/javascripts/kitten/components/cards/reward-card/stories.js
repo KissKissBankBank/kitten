@@ -68,6 +68,119 @@ export default {
   },
 }
 
+export const New_RewardCard = () => {
+  const versionGroupId = 'Versions'
+  const contentGroupId = 'Content'
+
+  const starred = boolean('Starred', true, versionGroupId)
+  const diamond = boolean('Diamond', false, versionGroupId)
+  const alreadyContributed = boolean(
+    'Has user contributed?',
+    true,
+    versionGroupId,
+  )
+  const hasRewardLabel = boolean(
+    'Does the reward have a label?',
+    true,
+    versionGroupId,
+  )
+  const visualType = select(
+    'Visual type',
+    {
+      none: null,
+      Image: 'image',
+      Video: 'video',
+    },
+    null,
+    versionGroupId,
+  )
+  const disabled = boolean('Disabled', false, versionGroupId)
+  const completed = boolean('Completed', false, versionGroupId)
+  const withOptions = boolean(
+    'Does the reward have options?',
+    false,
+    versionGroupId,
+  )
+  const option2Disabled = boolean(
+    'Reward option 2 disabled',
+    true,
+    versionGroupId,
+  )
+
+  return (
+    <StyledStoryContainer>
+      <Grid>
+        <GridCol offset="3" col="6">
+          <RewardCardComponent
+            withoutBorder={boolean('withoutBorder', false, versionGroupId)}
+            disabled={disabled}
+          >
+          <RewardCardComponent.Image
+            src={text(
+              'Reward image src',
+              'http://via.placeholder.com/200x100/caf4fe/caf4fe',
+              contentGroupId,
+            )}
+            alt={text('Reward image alt', 'My reward', contentGroupId)}
+            disabled={disabled}
+          />
+
+            <RewardCardComponent.RowContent>
+              
+              {hasRewardLabel && (
+                <Text
+                  color="font1"
+                  tag="p"
+                  weight="bold"
+                  className={classNames('RewardCard_story__label', {
+                    RewardCard_story__disabled: disabled,
+                  })}
+                >
+                  {text(
+                    'Reward label',
+                    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+                    contentGroupId,
+                  )}
+                </Text>
+              )}
+
+              <RewardCardComponent.Title disabled={disabled}>
+                {text('Title', '100 €', contentGroupId)}
+              </RewardCardComponent.Title>
+
+              <List>
+                <RewardCardComponent.Info
+                  key="Contributors"
+                  label={text(
+                    'Info 1 label:',
+                    '35',
+                    contentGroupId,
+                  )}
+                  value={text('Info 1 value:', 'contributeurs', contentGroupId)}
+                  disabled={disabled}
+                />
+
+                <RewardCardComponent.Info
+                  key="Delivery"
+                  label={text('Info 3 label:','Livraison estimée', contentGroupId)}
+                  value={text(
+                    'Info 3 value:',
+                    'Janvier 2019',
+                    contentGroupId,
+                  )}
+                  withMarginBottom={false}
+                  disabled={disabled}
+                />
+              </List>
+            </RewardCardComponent.RowContent>
+ 
+          </RewardCardComponent>
+        </GridCol>
+      </Grid>
+    </StyledStoryContainer>
+  )
+}
+
 export const RewardCard = () => {
   const versionGroupId = 'Versions'
   const contentGroupId = 'Content'
