@@ -72,40 +72,12 @@ export const New_RewardCard = () => {
   const versionGroupId = 'Versions'
   const contentGroupId = 'Content'
 
-  const starred = boolean('Starred', true, versionGroupId)
-  const diamond = boolean('Diamond', false, versionGroupId)
-  const alreadyContributed = boolean(
-    'Has user contributed?',
-    true,
-    versionGroupId,
-  )
   const hasRewardLabel = boolean(
     'Does the reward have a label?',
     true,
     versionGroupId,
   )
-  const visualType = select(
-    'Visual type',
-    {
-      none: null,
-      Image: 'image',
-      Video: 'video',
-    },
-    null,
-    versionGroupId,
-  )
   const disabled = boolean('Disabled', false, versionGroupId)
-  const completed = boolean('Completed', false, versionGroupId)
-  const withOptions = boolean(
-    'Does the reward have options?',
-    false,
-    versionGroupId,
-  )
-  const option2Disabled = boolean(
-    'Reward option 2 disabled',
-    true,
-    versionGroupId,
-  )
 
   return (
     <StyledStoryContainer>
