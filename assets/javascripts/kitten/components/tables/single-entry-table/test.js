@@ -37,4 +37,37 @@ describe('<SingleEntryTable />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with `isSliding` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <SingleEntryTable id="SingleEntryTable" isSliding>
+            <SingleEntryTable.Header>
+              <SingleEntryTable.HeaderCol>Header 1</SingleEntryTable.HeaderCol>
+              <SingleEntryTable.HeaderCol>Header 2</SingleEntryTable.HeaderCol>
+              <SingleEntryTable.HeaderCol>Header 3</SingleEntryTable.HeaderCol>
+            </SingleEntryTable.Header>
+
+            <SingleEntryTable.Body>
+              <SingleEntryTable.Row>
+                <SingleEntryTable.Col>Content 1</SingleEntryTable.Col>
+                <SingleEntryTable.Col>Content 2</SingleEntryTable.Col>
+                <SingleEntryTable.Col>Content 3</SingleEntryTable.Col>
+              </SingleEntryTable.Row>
+              <SingleEntryTable.Row>
+                <SingleEntryTable.Col>Content 1</SingleEntryTable.Col>
+                <SingleEntryTable.Col>Content 2</SingleEntryTable.Col>
+                <SingleEntryTable.Col>Content 3</SingleEntryTable.Col>
+              </SingleEntryTable.Row>
+            </SingleEntryTable.Body>
+          </SingleEntryTable>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
