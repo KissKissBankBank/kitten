@@ -4,7 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `isSliding` prop to `SingleEntryTable`.
+## [2.94.0] - 2020-10-13
+
+Feature:
+- Add `isSliding` prop to `SingleEntryTable`.
+
+Fix:
 - Fix `ArrowIcon` display bug in Safari.
 
 ## [2.93.0] - 2020-09-30

@@ -91,16 +91,18 @@ var ArrowIcon = function ArrowIcon(_ref2) {
   }
 
   var transform = {
-    right: 'rotate(90)',
-    left: 'rotate(-90)',
-    bottom: 'rotate(180)',
+    right: 'rotate(90deg)',
+    left: 'rotate(-90deg)',
+    bottom: 'rotate(180deg)',
     top: null
   };
   return /*#__PURE__*/_react.default.createElement("svg", (0, _extends2.default)({}, others, {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 8.48 5.64",
     fill: disabled ? _colorsConfig.default.background1 : color,
-    transform: direction ? transform[direction] : null
+    style: {
+      transform: transform[direction]
+    }
   }), title && /*#__PURE__*/_react.default.createElement("title", null, title), /*#__PURE__*/_react.default.createElement("path", {
     d: "M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
   }));
