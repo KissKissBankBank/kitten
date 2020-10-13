@@ -20,7 +20,11 @@ exports[`<ArrowIcon /> with the version prop by default matches the snapshot 1`]
   className=""
   fill="#222"
   height="5.64"
-  transform="rotate(90)"
+  style={
+    Object {
+      "transform": "rotate(90deg)",
+    }
+  }
   viewBox="0 0 8.48 5.64"
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +41,11 @@ exports[`<ArrowIcon /> with the version prop when disabled matches the snapshot 
   className=""
   fill="#fff"
   height="5.64"
-  transform="rotate(90)"
+  style={
+    Object {
+      "transform": "rotate(90deg)",
+    }
+  }
   viewBox="0 0 8.48 5.64"
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +62,11 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
   className=""
   fill="#222"
   height="5.64"
-  transform="rotate(180)"
+  style={
+    Object {
+      "transform": "rotate(180deg)",
+    }
+  }
   viewBox="0 0 8.48 5.64"
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +83,11 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
   className=""
   fill="#222"
   height="5.64"
-  transform="rotate(-90)"
+  style={
+    Object {
+      "transform": "rotate(-90deg)",
+    }
+  }
   viewBox="0 0 8.48 5.64"
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +104,11 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
   className=""
   fill="#222"
   height="5.64"
-  transform="rotate(90)"
+  style={
+    Object {
+      "transform": "rotate(90deg)",
+    }
+  }
   viewBox="0 0 8.48 5.64"
   width="8.48"
   xmlns="http://www.w3.org/2000/svg"
