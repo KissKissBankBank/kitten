@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix `ArrowIcon` display bug in Safari.
+
 ## [2.93.0] - 2020-09-30
 
 Features:
