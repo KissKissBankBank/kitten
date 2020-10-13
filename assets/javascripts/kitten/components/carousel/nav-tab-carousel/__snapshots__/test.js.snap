@@ -11,7 +11,11 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
       className="sc-ifAKCX jyHSSs"
       fill="#222"
       height="5.64"
-      transform="rotate(-90)"
+      style={
+        Object {
+          "transform": "rotate(-90deg)",
+        }
+      }
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +59,11 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
       className="sc-ifAKCX jyHSSs"
       fill="#222"
       height="5.64"
-      transform="rotate(90)"
+      style={
+        Object {
+          "transform": "rotate(90deg)",
+        }
+      }
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +88,11 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
       className="sc-ifAKCX jyHSSs"
       fill="#222"
       height="5.64"
-      transform="rotate(-90)"
+      style={
+        Object {
+          "transform": "rotate(-90deg)",
+        }
+      }
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
@@ -121,7 +133,11 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
       className="sc-ifAKCX jyHSSs"
       fill="#222"
       height="5.64"
-      transform="rotate(90)"
+      style={
+        Object {
+          "transform": "rotate(90deg)",
+        }
+      }
       viewBox="0 0 8.48 5.64"
       width="8.48"
       xmlns="http://www.w3.org/2000/svg"
