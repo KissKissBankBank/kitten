@@ -208,8 +208,8 @@ export class CartRewardCard extends Component {
         <ButtonIcon
           type="button"
           aria-label={this.props.deleteButtonA11yText}
-          modifier="beryllium"
-          size="tiny"
+          modifier="hydrogen"
+          size="micro"
           onClick={this.handleCloseClick}
           className="k-CartRewardCard__garbage"
         >
