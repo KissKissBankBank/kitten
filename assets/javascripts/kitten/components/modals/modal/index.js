@@ -117,8 +117,9 @@ export class Modal extends Component {
       <div className="k-Modal__close">
         <CloseButton
           className="k-Modal__close--fixed"
-          modifier="beryllium"
+          modifier="hydrogen"
           onClick={this.close}
+          size="micro"
           closeButtonLabel={closeButtonLabel}
         />
       </div>
