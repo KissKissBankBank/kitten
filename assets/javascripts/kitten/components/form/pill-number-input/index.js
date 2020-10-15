@@ -147,13 +147,16 @@ export const PillNumberInput = ({
       {...props}
     >
       <button
-        className="k-PillNumberInput__minusButton"
         data-button="minus"
         disabled={currentValue === min}
         onClick={minusOne}
         tabIndex="-1"
         aria-hidden="true"
         {...minusButtonProps}
+        className={classNames(
+          'k-PillNumberInput__minusButton',
+          minusButtonProps.className,
+        )}
       >
         <svg
           width="8"
@@ -165,7 +168,6 @@ export const PillNumberInput = ({
         </svg>
       </button>
       <input
-        className="k-PillNumberInput__input"
         ref={inputRef}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
@@ -177,15 +179,19 @@ export const PillNumberInput = ({
         aria-valuenow={currentValue}
         role="spinbutton"
         {...inputProps}
+        className={classNames('k-PillNumberInput__input', inputProps.className)}
       />
       <button
-        className="k-PillNumberInput__plusButton"
         data-button="plus"
         disabled={currentValue === max}
         onClick={plusOne}
         tabIndex="-1"
         aria-hidden="true"
         {...plusButtonProps}
+        className={classNames(
+          'k-PillNumberInput__plusButton',
+          plusButtonProps.className,
+        )}
       >
         <svg
           width="8"
