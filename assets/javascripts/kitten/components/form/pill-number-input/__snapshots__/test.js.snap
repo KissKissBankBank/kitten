@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PillNumberInput /> should match its empty snapshot 1`] = `
+exports[`<PillNumberInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa jNsHMR k-PillNumberInput"
+  className="sc-bdVaJa jNsHMR k-PillNumberInput CustomClass__1"
 >
   <button
     aria-hidden="true"
-    className="k-PillNumberInput__minusButton"
+    className="k-PillNumberInput__minusButton CustomClass__3"
     data-button="minus"
     disabled={false}
     onClick={[Function]}
@@ -24,10 +24,11 @@ exports[`<PillNumberInput /> should match its empty snapshot 1`] = `
     </svg>
   </button>
   <input
-    aria-valuemax={99}
-    aria-valuemin={0}
-    aria-valuenow={1}
-    className="k-PillNumberInput__input"
+    aria-label="Label !"
+    aria-valuemax={42}
+    aria-valuemin={2}
+    aria-valuenow={5}
+    className="k-PillNumberInput__input CustomClass__2"
     inputMode="numeric"
     onChange={[Function]}
     onKeyDown={[Function]}
@@ -37,7 +38,7 @@ exports[`<PillNumberInput /> should match its empty snapshot 1`] = `
   />
   <button
     aria-hidden="true"
-    className="k-PillNumberInput__plusButton"
+    className="k-PillNumberInput__plusButton CustomClass__4"
     data-button="plus"
     disabled={false}
     onClick={[Function]}
