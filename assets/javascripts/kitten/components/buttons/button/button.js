@@ -64,6 +64,7 @@ const StyledButton = styled.button`
   ${({ huge }) => huge && HUGE}
   ${({ giant }) => giant && GIANT}
   ${({ icon, fluid }) => icon && !fluid && ICON}
+  ${({ icon, micro, fluid }) => icon && micro && !fluid && ICON_MICRO}
   ${({ icon, tiny, fluid }) => icon && tiny && !fluid && ICON_TINY}
   ${({ icon, big, fluid }) => icon && big && !fluid && ICON_BIG}
   ${({ icon, huge, fluid }) => icon && huge && !fluid && ICON_HUGE}
@@ -227,6 +228,14 @@ export const ICON = css`
   }
 `
 
+export const ICON_MICRO = css`
+  width: ${pxToRem(30)};
+  height: ${pxToRem(30)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(30)};
+  }
+`
+
 export const ICON_TINY = css`
   width: ${pxToRem(40)};
   height: ${pxToRem(40)};
@@ -287,6 +296,7 @@ export const ICON_GIANT = css`
 export class Button extends Component {
   static propTypes = {
     borderRadius: PropTypes.number,
+    micro: PropTypes.bool,
     tiny: PropTypes.bool,
     big: PropTypes.bool,
     huge: PropTypes.bool,
@@ -312,6 +322,7 @@ export class Button extends Component {
   }
 
   static defaultProps = {
+    micro: false,
     tiny: false,
     big: false,
     huge: false,

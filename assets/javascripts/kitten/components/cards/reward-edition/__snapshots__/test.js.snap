@@ -32,20 +32,16 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  min-width: 10rem;
-  min-height: 2.5rem;
-  padding: 0 1.25rem;
-  font-size: 0.8888888888888888rem;
   min-width: initial;
   min-height: initial;
   width: 3.125rem;
   height: 3.125rem;
   padding: 0;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 0.125rem solid #222;
-  background-color: #222;
-  color: #fff;
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 0.125rem solid #eee;
+  background-color: #fff;
+  color: #222;
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -151,13 +147,6 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c2 {
-    width: 10rem;
-    height: 2.5rem;
-  }
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
@@ -166,7 +155,7 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
   .c2 {
-    width: 2.5rem;
+    width: 1.875rem;
   }
 }
 

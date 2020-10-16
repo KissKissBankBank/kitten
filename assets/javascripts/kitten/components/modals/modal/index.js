@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
   .k-Modal__close {
     position: absolute;
     top: 0;
-    right: ${pxToRem(50)};
+    right: ${pxToRem(30)};
 
     button {
       margin: 0;
@@ -117,8 +117,9 @@ export class Modal extends Component {
       <div className="k-Modal__close">
         <CloseButton
           className="k-Modal__close--fixed"
-          modifier="beryllium"
+          modifier="hydrogen"
           onClick={this.close}
+          size="micro"
           closeButtonLabel={closeButtonLabel}
         />
       </div>
