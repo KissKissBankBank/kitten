@@ -14,10 +14,10 @@ describe('<PillNumberInput />', () => {
       .create(
         <PillNumberInput
           onChange={e => parseInt(e.target.value, 10)}
-          value="5"
-          min="2"
-          max="42"
-          step="2"
+          value={5}
+          min={2}
+          max={42}
+          step={2}
           inputProps={{
             'aria-label': 'Label !',
             className: 'CustomClass__2',

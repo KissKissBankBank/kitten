@@ -134,11 +134,9 @@ export const PillNumberInput = ({
   }
 
   useEffect(() => {
-    if (/[0-9]*/.test(currentValue)) {
-      nativeInputValueSetter.call(inputRef.current, currentValue)
+    nativeInputValueSetter.call(inputRef.current, currentValue)
 
-      inputRef.current.dispatchEvent(changeEvent)
-    }
+    inputRef.current.dispatchEvent(changeEvent)
   }, [currentValue])
 
   return (
