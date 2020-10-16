@@ -43,8 +43,8 @@ export const Header = ({
         onClick={onClick}
         type="button"
         aria-label={garbageButtonA11yText}
-        modifier="beryllium"
-        tiny
+        modifier="hydrogen"
+        micro
         icon
         className="k-RewardEdition__Header__Button"
       >

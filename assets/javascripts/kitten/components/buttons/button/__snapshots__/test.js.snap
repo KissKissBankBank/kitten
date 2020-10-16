@@ -1374,6 +1374,124 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 </button>
 `;
 
+exports[`<Button /> with icon and micro matches with snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.8888888888888888rem;
+  color: #222;
+  line-height: 1.3;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appareance: none;
+  -moz-appareance: none;
+  appareance: none;
+  outline: none;
+  cursor: pointer;
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 0.125rem solid #eee;
+  background-color: #fff;
+  color: #222;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0 >:nth-child(n) {
+  margin-right: 0.625rem;
+  text-align: left;
+}
+
+.c0 >:last-child {
+  margin-right: 0;
+}
+
+.c0 svg,
+.c0 path {
+  fill: currentColor;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+}
+
+.c0:hover,
+.c0:focus {
+  border-color: #05a8e6;
+  background-color: #05a8e6;
+  color: #fff;
+}
+
+.c0:active {
+  border-color: #0496cc;
+  background-color: #0496cc;
+  color: #fff;
+}
+
+.c0:disabled {
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+  color: #fff;
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 12.5rem;
+    height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 3.125rem;
+    min-width: 0;
+    min-height: 0;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c0 {
+    width: 1.875rem;
+  }
+}
+
+<button
+  className="c0"
+>
+  !
+</button>
+`;
+
 exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 .c0 {
   display: -webkit-inline-box;

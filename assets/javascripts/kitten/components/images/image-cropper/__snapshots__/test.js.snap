@@ -27,7 +27,7 @@ Array [
         type="file"
       />
       <label
-        className="sc-bwzfXH kKCtNA k-BasicUploader__button"
+        className="sc-bwzfXH eUkODD k-BasicUploader__button"
         htmlFor="cropper"
       >
         <svg
