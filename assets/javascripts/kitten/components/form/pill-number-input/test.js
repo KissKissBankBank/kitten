@@ -3,12 +3,6 @@ import renderer from 'react-test-renderer'
 import { PillNumberInput } from './index'
 
 describe('<PillNumberInput />', () => {
-  it('should match its empty snapshot', () => {
-    const tree = renderer.create(<PillNumberInput />).toJSON()
-
-    expect(tree).toMatchSnapshot()
-  })
-
   it('should match its snapshot with props', () => {
     const tree = renderer
       .create(
