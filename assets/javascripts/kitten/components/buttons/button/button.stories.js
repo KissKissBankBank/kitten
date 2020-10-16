@@ -69,6 +69,7 @@ WithText.decorators = [
 
 export const WithIcon = () => (
   <Button
+    micro={boolean('Micro', false)}
     tiny={boolean('Tiny', false)}
     big={boolean('Big', false)}
     huge={boolean('Huge', false)}
