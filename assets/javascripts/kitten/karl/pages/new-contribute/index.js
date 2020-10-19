@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Summary from './components/summary'
+import Selection from './components/selection'
 import LittleMore from './components/little-more'
+import Summary from './components/summary'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { Title } from '../../../components/typography/title'
@@ -23,8 +24,12 @@ const NewContributePage = () => {
           <Title color="font1" modifier="quinary">
             Votre sélection
           </Title>
-          <Summary />
+          <Selection />
           <LittleMore />
+          <Title color="font1" modifier="quinary">
+            Récapitulatif
+          </Title>
+          <Summary />
         </GridCol>
 
         <GridCol col-l="4">

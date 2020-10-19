@@ -16,7 +16,6 @@ const StyledLittleMore = styled((props) => <div {...props} />)`
   border-style: dashed;
   border-color: ${COLORS.line1};
   border-radius: ${pxToRem(8)};
-  padding: ${pxToRem(30)};
 
   @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
     margin-top: ${pxToRem(30)};
@@ -25,6 +24,7 @@ const StyledLittleMore = styled((props) => <div {...props} />)`
   .k-LittleMore__description {
     display: flex;
     align-items: start;
+    margin: ${pxToRem(30)};
     
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       align-items: center;
@@ -43,11 +43,11 @@ const StyledLittleMore = styled((props) => <div {...props} />)`
 
   .k-LittleMore__description--infos {
     padding-left: ${pxToRem(15)};
-    padding-right: 0;
-
+    
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
-      padding-right: ${pxToRem(20)};
       padding-left: ${pxToRem(20)};
+      display: flex;
+      flex: 1;
     }
 
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
@@ -55,14 +55,21 @@ const StyledLittleMore = styled((props) => <div {...props} />)`
     }
   }
 
-  .k-LittleMore__description--infosLabel {
-    font-size: ${stepToRem(-1)};
+  .k-LittleMore__description--info {
+    flex: 1;
     margin-bottom: ${pxToRem(20)};
-    margin-top: 0;
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin-bottom: 0;
+    }
+  }
+
+  .k-LittleMore__description--infoLabel {
+    font-size: ${stepToRem(-1)};
+    margin: 0;
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       font-size: ${stepToRem(0)};
-      margin: 0;
     }
   }
 
@@ -80,30 +87,32 @@ const LittleMore = () => {
           className="k-LittleMore__description--image"
         />
         <div className="k-LittleMore__description--infos">
-          <Text
-            color="font1"
-            as="p"
-            weight="bold"
-            lineHeight="normal"
-            className="k-LittleMore__description--infosLabel"
-          >
-            Un petit plus pour 900 care
-          </Text>
-          <Text
-            color="font1"
-            as="p"
-            size="micro"
-            lineHeight="normal"
-            className="k-u-margin-none"
-          >
-            Donnez encore plus de chances à ce projet de voir le jour.
-          </Text>
-        </div>
-        <div className="k-LittleMore__description--input">
-          <TextInputWithUnit 
-            unit="€"
-            digits={12}
-          />
+          <div className="k-LittleMore__description--info">
+            <Text
+              color="font1"
+              as="p"
+              weight="bold"
+              lineHeight="normal"
+              className="k-LittleMore__description--infoLabel"
+            >
+              Un petit plus pour 900 care
+            </Text>
+            <Text
+              color="font1"
+              as="p"
+              size="micro"
+              lineHeight="normal"
+              className="k-u-margin-none"
+            >
+              Donnez encore plus de chances à ce projet de voir le jour.
+            </Text>
+          </div>
+          <div className="k-LittleMore__description--input">
+            <TextInputWithUnit 
+              unit="€"
+              digits={12}
+            />
+          </div>
         </div>
       </div>
     </StyledLittleMore>
