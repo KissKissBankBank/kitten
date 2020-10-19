@@ -11,6 +11,7 @@ const StyledSummary = styled((props) => <div {...props} />)`
   border-style: solid;
   border-color: ${COLORS.line1};
   border-radius: ${pxToRem(8)};
+  border-width: ${pxToRem(2)};
   padding: ${pxToRem(40)} ${pxToRem(30)} ${pxToRem(30)};
 
   .k-Summary__subSummary {

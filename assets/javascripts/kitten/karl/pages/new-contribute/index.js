@@ -20,20 +20,19 @@ const NewContributePage = () => {
   return (
     <StyledPage className="k-NewContributuinPage">
       <Grid>
-        <GridCol col-l="8">
+        <GridCol col-l="7">
           <Title color="font1" modifier="quinary">
             Votre sélection
           </Title>
           <Selection />
           <LittleMore />
+        </GridCol>
+
+        <GridCol col-l="4" offset-l="1">
           <Title color="font1" modifier="quinary">
             Récapitulatif
           </Title>
           <Summary />
-        </GridCol>
-
-        <GridCol col-l="4">
-
         </GridCol>
       </Grid>
     </StyledPage>

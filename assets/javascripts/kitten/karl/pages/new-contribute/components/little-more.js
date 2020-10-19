@@ -49,10 +49,6 @@ const StyledLittleMore = styled((props) => <div {...props} />)`
       display: flex;
       flex: 1;
     }
-
-    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
-      padding-right: ${pxToRem(70)};
-    }
   }
 
   .k-LittleMore__description--info {
@@ -61,6 +57,11 @@ const StyledLittleMore = styled((props) => <div {...props} />)`
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       margin-bottom: 0;
+      margin-right: 20px;
+    }
+
+    @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
+      margin-right: 70px;
     }
   }
 
@@ -75,6 +76,17 @@ const StyledLittleMore = styled((props) => <div {...props} />)`
 
   .k-LittleMore__description--input {
     justify-content: flex-end;
+    margin: 0;
+  }
+
+  .k-LittleMore__description--inputButton {
+    color: ${COLORS.primary1};
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    font-size: ${stepToRem(-1)};
+    font-weight: bold;
+    text-align: left;
   }
 `
 
@@ -108,10 +120,13 @@ const LittleMore = () => {
             </Text>
           </div>
           <div className="k-LittleMore__description--input">
-            <TextInputWithUnit 
+            <TextInputWithUnit
               unit="€"
               digits={12}
             />
+            <button className="k-LittleMore__description--inputButton">
+              Ajouter ce montant
+            </button>
           </div>
         </div>
       </div>
