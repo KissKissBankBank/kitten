@@ -122,7 +122,6 @@ const LittleMore = () => {
           <div className="k-LittleMore__description--input">
             <TextInputWithUnit
               unit="€"
-              digits={12}
             />
             <button className="k-LittleMore__description--inputButton">
               Ajouter ce montant
