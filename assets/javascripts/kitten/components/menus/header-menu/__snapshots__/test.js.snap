@@ -277,7 +277,11 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
         className="headerMenuArrowIcon"
         fill="#222"
         height="5.64"
-        transform="rotate(90)"
+        style={
+          Object {
+            "transform": "rotate(90deg)",
+          }
+        }
         viewBox="0 0 8.48 5.64"
         width="8.48"
         xmlns="http://www.w3.org/2000/svg"

@@ -10,7 +10,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
   >
     <button
       aria-label="Delete"
-      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--beryllium k-ButtonIcon--tiny"
+      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--hydrogen k-ButtonIcon--micro"
       onClick={[Function]}
       tabIndex={null}
       type="button"
@@ -68,7 +68,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
   >
     <button
       aria-label="Delete"
-      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--beryllium k-ButtonIcon--tiny"
+      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--hydrogen k-ButtonIcon--micro"
       onClick={[Function]}
       tabIndex={null}
       type="button"
@@ -126,7 +126,7 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
   >
     <button
       aria-label="Delete"
-      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--beryllium k-ButtonIcon--tiny"
+      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--hydrogen k-ButtonIcon--micro"
       onClick={[Function]}
       tabIndex={null}
       type="button"

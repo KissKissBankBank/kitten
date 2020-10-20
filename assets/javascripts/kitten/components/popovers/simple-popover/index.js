@@ -117,8 +117,8 @@ export const SimplePopover = ({
         aria-label={closeButtonLabel}
         onClick={onCloseClick}
         type="button"
-        modifier="beryllium"
-        tiny
+        modifier="hydrogen"
+        micro
         icon
       >
         <CrossIcon aria-hidden width="8" height="8" fill={COLORS.background1} />

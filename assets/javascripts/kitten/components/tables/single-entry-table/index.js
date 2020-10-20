@@ -1,9 +1,16 @@
 import React from 'react'
 import { Styles } from './styles'
+import classNames from 'classnames'
 
-export const SingleEntryTable = ({ ...props }) => (
-  <Styles className="SingleEntryTable__Container">
-    <table className="SingleEntryTable__Table" {...props} />
+export const SingleEntryTable = ({ isSliding = false, ...props }) => (
+  <Styles
+    className={classNames('SingleEntryTable__Container', {
+      'SingleEntryTable--isSliding': isSliding,
+    })}
+  >
+    <div className="SingleEntryTable__TableContainer">
+      <table className="SingleEntryTable__Table" {...props} />
+    </div>
   </Styles>
 )
 
@@ -14,6 +21,7 @@ SingleEntryTable.Header = ({ children, headerRowProps, ...others }) => (
 )
 
 SingleEntryTable.Body = props => <tbody {...props} />
+
 SingleEntryTable.Row = props => <tr {...props} />
 
 SingleEntryTable.Col = props => (
@@ -22,6 +30,7 @@ SingleEntryTable.Col = props => (
     {...props}
   />
 )
+
 SingleEntryTable.HeaderCol = props => (
   <th
     className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"

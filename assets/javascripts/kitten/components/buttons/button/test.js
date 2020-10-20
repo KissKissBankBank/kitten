@@ -129,6 +129,22 @@ describe('<Button />', () => {
     })
   })
 
+  describe('with icon and micro', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Button icon micro>
+            !
+          </Button>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with icon and tiny', () => {
     beforeEach(() => {
       component = renderer
