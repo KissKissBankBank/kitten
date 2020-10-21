@@ -22,7 +22,7 @@ import { ScreenConfig } from '../../../constants/screen-config';
 var StyledButton = styled.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "sc-1q5nte0-0"
-})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appareance:none;outline:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}", " >:last-child{margin-right:0;}", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], function () {
+})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appareance:none;outline:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}", " >:last-child{margin-right:0;}", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], function () {
   return DEFAULT;
 }, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.font1, pxToRem(10), function (_ref) {
   var modifier = _ref.modifier;
@@ -48,29 +48,34 @@ var StyledButton = styled.button.withConfig({
   return icon && !fluid && ICON;
 }, function (_ref8) {
   var icon = _ref8.icon,
-      tiny = _ref8.tiny,
+      micro = _ref8.micro,
       fluid = _ref8.fluid;
-  return icon && tiny && !fluid && ICON_TINY;
+  return icon && micro && !fluid && ICON_MICRO;
 }, function (_ref9) {
   var icon = _ref9.icon,
-      big = _ref9.big,
+      tiny = _ref9.tiny,
       fluid = _ref9.fluid;
-  return icon && big && !fluid && ICON_BIG;
+  return icon && tiny && !fluid && ICON_TINY;
 }, function (_ref10) {
   var icon = _ref10.icon,
-      huge = _ref10.huge,
+      big = _ref10.big,
       fluid = _ref10.fluid;
-  return icon && huge && !fluid && ICON_HUGE;
+  return icon && big && !fluid && ICON_BIG;
 }, function (_ref11) {
   var icon = _ref11.icon,
-      giant = _ref11.giant,
+      huge = _ref11.huge,
       fluid = _ref11.fluid;
-  return icon && giant && !fluid && ICON_GIANT;
+  return icon && huge && !fluid && ICON_HUGE;
 }, function (_ref12) {
-  var fluid = _ref12.fluid;
-  return fluid && FLUID;
+  var icon = _ref12.icon,
+      giant = _ref12.giant,
+      fluid = _ref12.fluid;
+  return icon && giant && !fluid && ICON_GIANT;
 }, function (_ref13) {
-  var modifier = _ref13.modifier;
+  var fluid = _ref13.fluid;
+  return fluid && FLUID;
+}, function (_ref14) {
+  var modifier = _ref14.modifier;
   return modifierStyles(modifier);
 });
 
@@ -98,28 +103,28 @@ var checkedCircleIconStyle = function checkedCircleIconStyle(size) {
   return css(["width:", ";height:", ";bottom:-", ";"], pxToRem(iconSize), pxToRem(iconSize), pxToRem(iconSize / 2));
 };
 
-var CheckedCircleIcon = styled(function (_ref14) {
-  var giant = _ref14.giant,
-      huge = _ref14.huge,
-      big = _ref14.big,
-      tiny = _ref14.tiny,
-      others = _objectWithoutProperties(_ref14, ["giant", "huge", "big", "tiny"]);
+var CheckedCircleIcon = styled(function (_ref15) {
+  var giant = _ref15.giant,
+      huge = _ref15.huge,
+      big = _ref15.big,
+      tiny = _ref15.tiny,
+      others = _objectWithoutProperties(_ref15, ["giant", "huge", "big", "tiny"]);
 
   return /*#__PURE__*/React.createElement(KittenCheckedCircleIcon, others);
 }).withConfig({
   displayName: "button__CheckedCircleIcon",
   componentId: "sc-1q5nte0-1"
-})(["", " ", " ", " ", " ", " position:absolute;"], checkedCircleIconStyle(), function (_ref15) {
-  var tiny = _ref15.tiny;
+})(["", " ", " ", " ", " ", " position:absolute;"], checkedCircleIconStyle(), function (_ref16) {
+  var tiny = _ref16.tiny;
   return tiny && checkedCircleIconStyle('tiny');
-}, function (_ref16) {
-  var big = _ref16.big;
-  return big && css(["@media (min-width:", "){", "}"], pxToRem(ScreenConfig.S.min), checkedCircleIconStyle('big'));
 }, function (_ref17) {
-  var huge = _ref17.huge;
-  return huge && css(["@media (min-width:", "){", "}"], pxToRem(ScreenConfig.S.min), checkedCircleIconStyle('huge'));
+  var big = _ref17.big;
+  return big && css(["@media (min-width:", "){", "}"], pxToRem(ScreenConfig.S.min), checkedCircleIconStyle('big'));
 }, function (_ref18) {
-  var giant = _ref18.giant;
+  var huge = _ref18.huge;
+  return huge && css(["@media (min-width:", "){", "}"], pxToRem(ScreenConfig.S.min), checkedCircleIconStyle('huge'));
+}, function (_ref19) {
+  var giant = _ref19.giant;
   return giant && css(["@media (min-width:", "){", "}"], pxToRem(ScreenConfig.S.min), checkedCircleIconStyle('giant'));
 });
 export var FLUID = css(["min-width:initial;width:100%;"]);
@@ -129,6 +134,7 @@ export var BIG = css(["@media (min-width:", "){min-width:", ";min-height:", ";pa
 export var HUGE = css(["min-height:", ";font-size:", ";padding:0 ", ";@media (min-width:", "px){min-width:", ";min-height:", ";font-size:", ";padding:0 ", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(70), stepToRem(-1), pxToRem(10), ScreenConfig.M.min, pxToRem(220), pxToRem(80), stepToRem(0), pxToRem(40), pxToRem(ScreenConfig.M.min), pxToRem(220), pxToRem(80));
 export var GIANT = css(["min-height:", ";font-size:", ";padding:0 ", ";@media (min-width:", "px){min-width:", ";min-height:", ";font-size:", ";padding:0 ", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";height:", ";}"], pxToRem(70), stepToRem(-1), pxToRem(10), ScreenConfig.M.min, pxToRem(220), pxToRem(90), stepToRem(0), pxToRem(40), pxToRem(ScreenConfig.M.min), pxToRem(220), pxToRem(90));
 export var ICON = css(["min-width:initial;min-height:initial;width:", ";height:", ";padding:0;@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";min-width:0;min-height:0;}"], pxToRem(50), pxToRem(50), pxToRem(50));
+export var ICON_MICRO = css(["width:", ";height:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(30), pxToRem(30), pxToRem(30));
 export var ICON_TINY = css(["width:", ";height:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(40), pxToRem(40), pxToRem(40));
 export var ICON_BIG = css(["@media (min-width:", "){width:", ";height:", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(ScreenConfig.S.min), pxToRem(70), pxToRem(70), pxToRem(ScreenConfig.S.min), pxToRem(70));
 export var ICON_HUGE = css(["min-width:initial;width:", ";height:", ";@media (min-width:", "){min-width:initial;width:", ";height:", ";}@media screen and (min-width:", ") and (-ms-high-contrast:active),(-ms-high-contrast:none){width:", ";}"], pxToRem(70), pxToRem(70), pxToRem(ScreenConfig.M.min), pxToRem(80), pxToRem(80), pxToRem(ScreenConfig.M.min), pxToRem(80));
@@ -173,15 +179,17 @@ export var Button = /*#__PURE__*/function (_Component) {
 }(Component);
 Button.propTypes = {
   borderRadius: PropTypes.number,
+  micro: PropTypes.bool,
   tiny: PropTypes.bool,
   big: PropTypes.bool,
   huge: PropTypes.bool,
   giant: PropTypes.bool,
   fluid: PropTypes.bool,
   icon: PropTypes.bool,
-  modifier: PropTypes.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked'])
+  modifier: PropTypes.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest'])
 };
 Button.defaultProps = {
+  micro: false,
   tiny: false,
   big: false,
   huge: false,

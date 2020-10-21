@@ -1,15 +1,22 @@
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
 import { Styles } from './styles';
+import classNames from 'classnames';
 export var SingleEntryTable = function SingleEntryTable(_ref) {
-  var props = _extends({}, _ref);
+  var _ref$isSliding = _ref.isSliding,
+      isSliding = _ref$isSliding === void 0 ? false : _ref$isSliding,
+      props = _objectWithoutProperties(_ref, ["isSliding"]);
 
   return /*#__PURE__*/React.createElement(Styles, {
-    className: "SingleEntryTable__Container"
+    className: classNames('SingleEntryTable__Container', {
+      'SingleEntryTable--isSliding': isSliding
+    })
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "SingleEntryTable__TableContainer"
   }, /*#__PURE__*/React.createElement("table", _extends({
     className: "SingleEntryTable__Table"
-  }, props)));
+  }, props))));
 };
 
 SingleEntryTable.Header = function (_ref2) {

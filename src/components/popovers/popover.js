@@ -60,7 +60,8 @@ var Popover = /*#__PURE__*/function (_Component) {
     key: "renderCloseButton",
     value: function renderCloseButton() {
       return /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
-        modifier: "beryllium",
+        modifier: "hydrogen",
+        size: "micro",
         closeButtonLabel: this.props.closeButtonLabel,
         onClick: this.handleCloseClick
       });

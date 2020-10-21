@@ -133,13 +133,13 @@ export var CartRewardCard = /*#__PURE__*/function (_Component) {
         className: "k-CartRewardCard__cart"
       }, /*#__PURE__*/React.createElement(ButtonIcon, {
         type: "button",
-        title: "Garbage Button",
-        "aria-label": "Garbage Button",
-        modifier: "beryllium",
-        size: "tiny",
+        "aria-label": this.props.deleteButtonA11yText,
+        modifier: "hydrogen",
+        size: "micro",
         onClick: this.handleCloseClick,
         className: "k-CartRewardCard__garbage"
       }, /*#__PURE__*/React.createElement(GarbageIcon, {
+        "aria-hidden": true,
         className: "k-ButtonIcon__svg"
       })));
     }
@@ -184,6 +184,7 @@ CartRewardCard.propTypes = {
   updateAmountLink: PropTypes.string,
   onAfterClose: PropTypes.func,
   onCloseClick: PropTypes.func,
+  deleteButtonA11yText: PropTypes.string,
   // Deprecated.
   shippingTitle: deprecated(PropTypes.string, 'Prefer use <CartRewardCard.Information />'),
   shippingValue: deprecated(PropTypes.string, 'Prefer use <CartRewardCard.Information />'),
@@ -196,7 +197,8 @@ CartRewardCard.defaultProps = {
   updateAmountTitle: '',
   updateAmountLink: '',
   onAfterClose: function onAfterClose() {},
-  onCloseClick: null
+  onCloseClick: null,
+  deleteButtonA11yText: 'Delete'
 };
 
 CartRewardCard.Information = function (_ref2) {

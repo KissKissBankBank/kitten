@@ -3,7 +3,7 @@ import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutPr
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { TitleWithStroke } from '../../../../components/typography/title-with-stroke';
+import { Title } from '../../../../components/typography/title';
 export var RewardCardTitle = function RewardCardTitle(_ref) {
   var children = _ref.children,
       tagName = _ref.tagName,
@@ -11,7 +11,7 @@ export var RewardCardTitle = function RewardCardTitle(_ref) {
       className = _ref.className,
       props = _objectWithoutProperties(_ref, ["children", "tagName", "disabled", "className"]);
 
-  return /*#__PURE__*/React.createElement(TitleWithStroke, _extends({}, props, {
+  return /*#__PURE__*/React.createElement(Title, _extends({}, props, {
     italic: true,
     margin: false,
     tag: tagName,

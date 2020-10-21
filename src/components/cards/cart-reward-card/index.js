@@ -167,8 +167,8 @@ var CartRewardCard = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         type: "button",
         "aria-label": this.props.deleteButtonA11yText,
-        modifier: "beryllium",
-        size: "tiny",
+        modifier: "hydrogen",
+        size: "micro",
         onClick: this.handleCloseClick,
         className: "k-CartRewardCard__garbage"
       }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, {
