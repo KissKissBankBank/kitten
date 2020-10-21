@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PillNumberInput /> should match its snapshot with props 1`] = `
+<div
+  className="sc-bdVaJa jNsHMR k-PillNumberInput CustomClass__1"
+>
+  <button
+    aria-hidden="true"
+    className="k-PillNumberInput__minusButton CustomClass__3"
+    data-button="minus"
+    disabled={false}
+    onClick={[Function]}
+    tabIndex="-1"
+  >
+    <svg
+      height="2"
+      viewBox="0 0 8 2"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 0h8v2H0z"
+      />
+    </svg>
+  </button>
+  <input
+    aria-label="Label !"
+    aria-valuemax={42}
+    aria-valuemin={2}
+    aria-valuenow={5}
+    className="k-PillNumberInput__input CustomClass__2"
+    inputMode="numeric"
+    onChange={[Function]}
+    onKeyDown={[Function]}
+    pattern="[0-9]*"
+    role="spinbutton"
+    type="text"
+  />
+  <button
+    aria-hidden="true"
+    className="k-PillNumberInput__plusButton CustomClass__4"
+    data-button="plus"
+    disabled={false}
+    onClick={[Function]}
+    tabIndex="-1"
+  >
+    <svg
+      height="8"
+      viewBox="0 0 8 8"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 3h8v2H0z"
+      />
+      <path
+        d="M3 0h2v8h-2z"
+      />
+    </svg>
+  </button>
+</div>
+`;
