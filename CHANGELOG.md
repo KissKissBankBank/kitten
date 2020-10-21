@@ -9,6 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features: 
 - Add `PillNumberInput` component.
 - Add `micro` size for `<Button icon>`.
+- Add original `file <File>` on `onChange` callback for `<ImageCropper />`
 
 ## [2.94.0] - 2020-10-13
 
