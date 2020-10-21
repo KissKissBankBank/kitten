@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `micro` size for `<Button icon>`.
+- Feature: Add original `file <File>` on `onChange` callback for `<ImageCropper />`
 
 ## [2.94.0] - 2020-10-13
 
