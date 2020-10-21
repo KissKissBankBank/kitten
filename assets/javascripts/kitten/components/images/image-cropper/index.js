@@ -38,6 +38,7 @@ export const ImageCropper = ({
   const [sliderMin, setSliderMin] = useState(0)
   const [sliderMax, setSliderMax] = useState(100)
   const [sliderValue, setSliderValue] = useState(0)
+  const [uploadedFile, setUploadedFile] = useState(null)
 
   useEffect(() => {
     if (cropperInstance && cropperInstance.imageData.naturalWidth) {
@@ -94,6 +95,7 @@ export const ImageCropper = ({
           onUpload={e => {
             try {
               const file = e.currentTarget.files[0]
+              setUploadedFile(file)
               if (file.size > maxSize) {
                 setStatus('error')
                 setErrorText(uploaderErrorLabel)
@@ -114,10 +116,12 @@ export const ImageCropper = ({
             setImageSrc(imageSrc)
             setFileName(fileName)
             setErrorText('')
+            setUploadedFile(null)
 
             onChange({
               value: null,
               name: null,
+              file: null,
             })
           }}
         />
@@ -161,6 +165,7 @@ export const ImageCropper = ({
                           'originalTarget.src',
                         )(result),
                         name: fileNameState,
+                        file: uploadedFile,
                         cropperData: result.detail,
                       })
                     }}
