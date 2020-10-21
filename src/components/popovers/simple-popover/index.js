@@ -112,8 +112,8 @@ var SimplePopover = function SimplePopover(_ref2) {
     "aria-label": closeButtonLabel,
     onClick: onCloseClick,
     type: "button",
-    modifier: "beryllium",
-    tiny: true,
+    modifier: "hydrogen",
+    micro: true,
     icon: true
   }, /*#__PURE__*/_react.default.createElement(_crossIcon.CrossIcon, {
     "aria-hidden": true,

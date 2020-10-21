@@ -67,7 +67,7 @@ function _templateObject() {
   return data;
 }
 
-var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject(), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.background1, (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(690), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(50));
+var GlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject(), (0, _typography.pxToRem)(20), (0, _typography.pxToRem)(20), _colorsConfig.default.background1, (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(60), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.M.min), (0, _typography.pxToRem)(690), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(110), (0, _typography.pxToRem)(30));
 var AnimatedGlobalStyle = (0, _styledComponents.createGlobalStyle)(_templateObject2());
 
 var Modal = /*#__PURE__*/function (_Component) {
@@ -116,8 +116,9 @@ var Modal = /*#__PURE__*/function (_Component) {
         className: "k-Modal__close"
       }, /*#__PURE__*/_react.default.createElement(_closeButton.CloseButton, {
         className: "k-Modal__close--fixed",
-        modifier: "beryllium",
+        modifier: "hydrogen",
         onClick: this.close,
+        size: "micro",
         closeButtonLabel: closeButtonLabel
       }));
     }

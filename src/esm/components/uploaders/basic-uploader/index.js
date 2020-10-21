@@ -136,17 +136,20 @@ export var BasicUploader = function BasicUploader(_ref) {
     circleColor: COLORS.valid,
     checkedColor: COLORS.background1,
     width: 20,
-    height: 20
+    height: 20,
+    "aria-hidden": true
   }), internalStatus === 'error' && /*#__PURE__*/React.createElement(CrossCircleIcon, {
     circleColor: COLORS.error,
     crossColor: COLORS.background1,
     width: 20,
-    height: 20
+    height: 20,
+    "aria-hidden": true
   }), internalStatus === 'wait' && /*#__PURE__*/React.createElement(ClockCircleIcon, {
     circleColor: COLORS.primary1,
     clockColor: COLORS.background1,
     width: 20,
-    height: 20
+    height: 20,
+    "aria-hidden": true
   })), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Text, {
     tag: "p",
     weight: "regular",

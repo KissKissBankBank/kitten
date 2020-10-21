@@ -425,6 +425,12 @@ Object.defineProperty(exports, "PasswordInput", {
     return _passwordInput.PasswordInput;
   }
 });
+Object.defineProperty(exports, "PillNumberInput", {
+  enumerable: true,
+  get: function get() {
+    return _pillNumberInput.PillNumberInput;
+  }
+});
 Object.defineProperty(exports, "RadioButtonSet", {
   enumerable: true,
   get: function get() {
@@ -1173,6 +1179,8 @@ var _label = require("./components/form/label");
 var _locationInput = require("./components/form/location-input");
 
 var _passwordInput = require("./components/form/password-input");
+
+var _pillNumberInput = require("./components/form/pill-number-input");
 
 var _radioButtonSet = require("./components/form/radio-button-set");
 

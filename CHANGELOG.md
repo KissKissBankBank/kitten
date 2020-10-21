@@ -4,8 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `PillNumberInput` component.
-- Feature: Add `micro` size for `<Button icon>`.
+## [2.95.0] - 2020-10-21
+
+Features: 
+- Add `PillNumberInput` component.
+- Add `micro` size for `<Button icon>`.
 
 ## [2.94.0] - 2020-10-13
 
