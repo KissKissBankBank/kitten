@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Delay `PillNumberInput` component call to `window` after `canUseDom()`.
+## [2.95.1] - 2020-10-22
+
+Fix:
+- Delay `PillNumberInput` component call to `window` after `canUseDom()`.
 
 ## [2.95.0] - 2020-10-21
 
