@@ -5,6 +5,7 @@ import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
+import domElementHelper from '../../../helpers/dom/element-helper'
 
 const StyledPillNumberInput = styled.div`
   display: inline-flex;
@@ -70,10 +71,10 @@ const StyledPillNumberInput = styled.div`
   }
 `
 
-const nativeInputValueSetter = Object.getOwnPropertyDescriptor(
-  window.HTMLInputElement.prototype,
-  'value',
-).set
+const nativeInputValueSetter =
+  domElementHelper.canUseDom() &&
+  Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')
+    .set
 
 export const PillNumberInput = ({
   onChange = () => {},
@@ -134,7 +135,8 @@ export const PillNumberInput = ({
   }
 
   useEffect(() => {
-    nativeInputValueSetter.call(inputRef.current, currentValue)
+    nativeInputValueSetter &&
+      nativeInputValueSetter.call(inputRef.current, currentValue)
 
     inputRef.current.dispatchEvent(changeEvent)
   }, [currentValue])
