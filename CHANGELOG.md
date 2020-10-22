@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Fix:
+- File reference on `<ImageCropper />`.
+
 ## [2.95.1] - 2020-10-22
 
 Fix:
