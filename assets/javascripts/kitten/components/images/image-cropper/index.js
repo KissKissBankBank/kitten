@@ -39,7 +39,7 @@ export const ImageCropper = ({
   const [sliderMax, setSliderMax] = useState(100)
   const [sliderValue, setSliderValue] = useState(0)
   const [uploadedFile, setUploadedFile] = useState(null)
-  const [cropperData, setCropperData] = useState(null)
+  const [resultData, setResultData] = useState(null)
 
   useEffect(() => {
     if (cropperInstance && cropperInstance.imageData.naturalWidth) {
@@ -78,14 +78,18 @@ export const ImageCropper = ({
     height: cropperHeight,
   }
   useEffect(() => {
-    if (fileNameState && uploadedFile && cropperData) {
+    if (fileNameState && uploadedFile && resultData) {
       onChange({
+        value: resultData.target.src,
+        base: getOr(resultData.srcElement.src)('originalTarget.src')(
+          resultData,
+        ),
         name: fileNameState,
         file: uploadedFile,
-        cropperData: cropperData,
+        cropperData: resultData.detail,
       })
     }
-  }, [cropperData, fileNameState, uploadedFile])
+  }, [resultData, fileNameState, uploadedFile])
   const dragMode = disabled || !isCropEnabled ? 'none' : 'move'
   return (
     <>
@@ -169,7 +173,7 @@ export const ImageCropper = ({
                     zoomOnWheel={false}
                     dragMode={dragMode}
                     crop={result => {
-                      setCropperData(result.detail)
+                      setResultData(result)
                     }}
                   />
                 )}
