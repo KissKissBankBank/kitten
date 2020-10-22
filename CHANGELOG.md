@@ -4,9 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Delay `PillNumberInput` component call to `window` after `canUseDom()`.
+
 ## [2.95.0] - 2020-10-21
 
-Features: 
+Features:
 - Add `PillNumberInput` component.
 - Add `micro` size for `<Button icon>`.
 - Add original `file <File>` on `onChange` callback for `<ImageCropper />`
