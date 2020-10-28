@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import has from 'lodash/fp/has'
+import isNull from 'lodash/fp/isNull'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import emitter from '../../../helpers/utils/emitter'
@@ -287,6 +288,8 @@ export const Dropdown = React.forwardRef(
     const revertHandleClickOnLinks = () => handleClickOnLinks()
 
     const handleClickOnLinks = () => {
+      if (isNull(dropdownContentRef.current)) return
+
       const links = dropdownContentRef.current.getElementsByTagName('a')
 
       Array.prototype.forEach.call(links, link => {
