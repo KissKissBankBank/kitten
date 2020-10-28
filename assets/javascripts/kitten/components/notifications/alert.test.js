@@ -1,157 +1,32 @@
 import React from 'react'
-import sinon from 'sinon'
+import renderer from 'react-test-renderer'
 import { Alert } from './alert'
 
 describe('<Alert />', () => {
-  const sandbox = sinon.createSandbox()
-
-  afterEach(() => {
-    sandbox.restore()
+  it('should matches with default snapshot', () => {
+    const component = renderer.create(<Alert>Alert !</Alert>).toJSON()
+    expect(component).toMatchSnapshot()
   })
-
-  describe('by default', () => {
-    const alert = shallow(<Alert />)
-
-    it('is a <div />', () => {
-      expect(alert.type()).toBe('div')
-    })
-
-    it('has a default classes', () => {
-      expect(alert.hasClass('k-Alert')).toBe(true)
-      expect(alert.find('.k-Alert__container').exists()).toBe(true)
-      expect(alert.find('.k-Alert__row').exists()).toBe(true)
-      expect(alert.find('.k-Alert__content').exists()).toBe(true)
-    })
-
-    it('has a role alert', () => {
-      expect(alert.props().role).toBe('alert')
-    })
-
-    it('has not a <CloseButton />', () => {
-      expect(alert.find('CloseButton').exists()).toBe(false)
-    })
-
-    it('has initial state', () => {
-      expect(alert.state().show).toBe(true)
-      expect(alert.state().height).toBe('auto')
-    })
+  it('should matches with error snapshot', () => {
+    const component = renderer.create(<Alert error>Alert !</Alert>).toJSON()
+    expect(component).toMatchSnapshot()
   })
-
-  describe('with show prop at false', () => {
-    const alert = shallow(<Alert show={false} />)
-
-    it("don't show the alert", () => {
-      expect(alert.type()).toBeNull()
-    })
+  it('should matches with success snapshot', () => {
+    const component = renderer.create(<Alert success>Alert !</Alert>).toJSON()
+    expect(component).toMatchSnapshot()
   })
-
-  describe('with error prop', () => {
-    const alert = shallow(<Alert error />)
-
-    it('has a error class', () => {
-      expect(alert.hasClass('k-Alert--error')).toBe(true)
-    })
+  it('should matches with warning snapshot', () => {
+    const component = renderer.create(<Alert warning>Alert !</Alert>).toJSON()
+    expect(component).toMatchSnapshot()
   })
-
-  describe('with success prop', () => {
-    const alert = shallow(<Alert success />)
-
-    it('has a success class', () => {
-      expect(alert.hasClass('k-Alert--success')).toBe(true)
-    })
-  })
-
-  describe('with custom class', () => {
-    const alert = shallow(<Alert className="custom__class" />)
-
-    it('has a custom class', () => {
-      expect(alert.hasClass('custom__class')).toBe(true)
-    })
-  })
-
-  describe('with other prop', () => {
-    const alert = shallow(<Alert aria-hidden="true" />)
-
-    it('has an aria-hidden attribute', () => {
-      expect(alert.props()['aria-hidden']).toBe('true')
-    })
-  })
-
-  describe('with close button', () => {
-    const alert = shallow(
-      <Alert closeButton closeButtonLabel="Close this alert" />,
-    )
-
-    it('has a <CloseButton />', () => {
-      expect(alert.find('CloseButton').exists()).toBe(true)
-    })
-
-    it('has a label', () => {
-      const closeButton = alert.find('CloseButton')
-
-      expect(closeButton.props().closeButtonLabel).toBe('Close this alert')
-    })
-  })
-
-  describe('with children', () => {
-    const alert = shallow(
-      <Alert>Lorem ipsum dolor sit amet, consectetur adipisicing elit…</Alert>,
-    )
-
-    it('has text', () => {
-      expect(alert.text()).toBe(
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit…',
+  it('should matches with closeButton snapshot', () => {
+    const component = renderer
+      .create(
+        <Alert closeButton closeButtonLabel="Close">
+          Alert !
+        </Alert>,
       )
-    })
-  })
-
-  describe('with onAfterClose prop', () => {
-    let onCloseSpy
-    let alertComponent
-
-    beforeAll(() => {
-      onCloseSpy = sandbox.spy()
-      alertComponent = mount(<Alert closeButton onAfterClose={onCloseSpy} />)
-
-      alertComponent.instance().handleAnimationEnd()
-    })
-
-    it('calls onClose prop callback', () => {
-      expect(onCloseSpy.calledOnce).toBe(true)
-    })
-  })
-
-  describe('simulates onAnimationEnd event', () => {
-    let onCloseSpy
-    let alertComponent
-
-    beforeAll(() => {
-      onCloseSpy = sandbox.spy()
-      alertComponent = mount(<Alert onAfterClose={onCloseSpy} />)
-
-      alertComponent.simulate('animationEnd')
-    })
-
-    it('has handleAnimationEnd in onAnimationEnd attribute', () => {
-      expect(onCloseSpy.calledOnce).toBe(true)
-    })
-  })
-
-  describe('simulates click event on CloseButton', () => {
-    const alert = mount(<Alert closeButton />)
-    const closeButton = alert.find('CloseButton')
-
-    beforeAll(() => {
-      closeButton.simulate('click')
-    })
-
-    it('changes state', () => {
-      expect(alert.state().show).toBe(false)
-      expect(alert.state().height).not.toBe('auto')
-    })
-
-    it('has a hidden class', () => {
-      expect(alert.render().hasClass('k-Alert--hidden')).toBe(true)
-    })
+      .toJSON()
+    expect(component).toMatchSnapshot()
   })
 })

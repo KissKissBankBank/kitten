@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SingleEntryTable /> with \`isSliding\` prop matches with snapshot 1`] = `
+<div
+  className="sc-bdVaJa fKpxoQ SingleEntryTable__Container SingleEntryTable--isSliding"
+>
+  <div
+    className="SingleEntryTable__TableContainer"
+  >
+    <table
+      className="SingleEntryTable__Table"
+      id="SingleEntryTable"
+    >
+      <thead>
+        <tr>
+          <th
+            className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
+            scope="column"
+          >
+            Header 1
+          </th>
+          <th
+            className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
+            scope="column"
+          >
+            Header 2
+          </th>
+          <th
+            className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
+            scope="column"
+          >
+            Header 3
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 1
+          </td>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 2
+          </td>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 3
+          </td>
+        </tr>
+        <tr>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 1
+          </td>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 2
+          </td>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 3
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`<SingleEntryTable /> with a complete structure and custom classes matches with snapshot 1`] = `
+<div
+  className="sc-bdVaJa fKpxoQ SingleEntryTable__Container"
+>
+  <div
+    className="SingleEntryTable__TableContainer"
+  >
+    <table
+      className="SingleEntryTable__Table"
+      id="SingleEntryTable"
+    >
+      <thead
+        className="customHeaderClass"
+      >
+        <tr>
+          <th
+            className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
+            scope="column"
+          >
+            Header 1
+          </th>
+          <th
+            className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
+            scope="column"
+          >
+            Header 2
+          </th>
+          <th
+            className="SingleEntryTable__Column SingleEntryTable__Column--HeaderCol"
+            scope="column"
+          >
+            Header 3
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 1
+          </td>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 2
+          </td>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 3
+          </td>
+        </tr>
+        <tr
+          className="customRowClass"
+        >
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 1
+          </td>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 2
+          </td>
+          <td
+            className="SingleEntryTable__Column SingleEntryTable__Column--Col"
+          >
+            Content 3
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

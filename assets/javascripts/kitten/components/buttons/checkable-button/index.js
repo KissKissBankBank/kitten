@@ -6,7 +6,6 @@ import { checkedCircleIconAsString } from '../../icons/checked-circle-icon'
 import { encodeSvgString } from '../../../helpers/utils/encode-svg'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
-import TYPOGRAPHY from '../../../constants/typography-config'
 
 const checkedCircleIconStyle = size => css`
   width: ${pxToRem(size)};

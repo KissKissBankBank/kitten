@@ -1,0 +1,233 @@
+/// A horizontal navigation, used in header.
+///
+/// @group navigation
+///
+/// @example scss - usage
+///
+///   @include k-HeaderNav-nav;
+///
+/// @example html
+///
+///   <ul class="k-HeaderNav-nav" role="menubar">
+///     <li class="k-HeaderNav-nav__element" role="menuitem">
+///       <a class="k-HeaderNav-nav__item" href="#">
+///         Nav link 1
+///       </a>
+///     </li>
+///     <li class="k-HeaderNav-nav__element k-HeaderNav-nav__element--fixedSize"
+///         role="menuitem">
+///       <a class="k-HeaderNav-nav__item is-selected" href="#">
+///         Nav link 2 (selected)
+///       </a>
+///     </li>
+///   </ul>
+
+@mixin k-HeaderNav {
+  // Font
+  $font: 'regular';
+  $font-step: -1; // 14px
+  $line-height: normal;
+
+  // Colors
+  $base-color: map-get($k-colors, 'font-1');
+
+  // Hover
+  $hover-color: map-get($k-colors, 'primary-1');
+
+  // Focus
+  $focus-color: map-get($k-colors, 'primary-1');
+
+  $focus-alt-color: map-get($k-colors, 'primary-3');
+
+  // State 'is-selected'
+  $is-selected-color: map-get($k-colors, 'primary-1');
+
+  $border-width: k-px-to-rem(4px);
+  $padding-x: k-px-to-rem(40px);
+
+  $transition-speed: .2s;
+
+  .k-HeaderNav {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-left: k-px-to-rem(10px);
+
+    @include k-media-min('s') {
+      padding-left: k-px-to-rem(20px);
+    }
+
+    &, * {
+      @include k-typographyFont($font);
+      box-sizing: border-box;
+    }
+
+    *:focus {
+      outline-offset: k-px-to-rem(-3px);
+
+      outline-width: k-px-to-rem(2px);
+      outline-style: solid;
+      outline-color: Highlight;
+
+      @media (-webkit-min-device-pixel-ratio:0) {
+        outline-color: -webkit-focus-ring-color;
+        outline-style: auto;
+        outline-width: k-px-to-rem(5px);
+      }
+
+      &:hover {
+        outline: none;
+      }
+    }
+  }
+
+  .k-HeaderNav-Logo {
+    padding: k-px-to-rem(10px);
+    display: flex;
+    align-items: center;
+
+    @include k-media-max('xxs') {
+      padding-left: k-px-to-rem(5px);
+      padding-right: k-px-to-rem(5px);
+    }
+  }
+
+  .k-HeaderNav--right,
+  .k-HeaderNav--centered {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .k-HeaderNav--right {
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+
+  .k-HeaderNav--centered {
+    justify-content: center;
+    flex-grow: 100;
+  }
+
+  .k-HeaderNav--column {
+    flex-direction: column;
+  }
+
+  .k-HeaderNav-nav {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+  .k-HeaderNav__UserMenu {
+    height: 100%;
+    display: flex;
+
+    .text--withEllipsis {
+      text-overflow: ellipsis;
+      max-width: k-px-to-rem(145px);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  .k-HeaderNav__UserMenuButton {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 $padding-x;
+    border: 0;
+    @include k-typographyFontSize($font-step, $line-height);
+    background-color: map-get($k-colors, 'background-3');
+
+    .k-Badge {
+      border-color: map-get($k-colors, 'background-3');
+    }
+
+    .is-expanded & {
+      &, &:hover {
+        background-color: map-get($k-colors, 'background-1');
+
+        .k-Badge {
+          border-color: map-get($k-colors, 'background-1');
+        }
+      }
+    }
+
+    .k-ButtonImageWithText {
+      align-self: center;
+    }
+
+    @include k-media-max('xxs') {
+      padding: 0 k-px-to-rem(15px);
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: map-get($k-colors, 'line-1');
+
+      .k-Badge {
+        border-color: map-get($k-colors, 'line-1');
+      }
+
+      .k-ButtonImageWithText__text {
+        color: map-get($k-colors, 'font-1');
+      }
+    }
+  }
+
+  .k-HeaderNav__UserMenuButton--nopadding {
+    padding: 0;
+  }
+
+  .k-HeaderNav-nav--center {
+    justify-content: center;
+  }
+
+  .k-HeaderNav-nav__element {
+    -ms-overflow-x: hidden;
+
+    display: flex;
+    align-items: stretch;
+  }
+
+  .k-HeaderNav-nav__element--fixedSize {
+    flex-shrink: 0;
+  }
+
+  .k-HeaderNav-nav__item {
+    display: flex;
+    align-items: center;
+
+    padding: 0 $padding-x;
+    border-top: $border-width solid transparent;
+
+    @include k-typographyFont($font);
+    @include k-typographyFontSize($font-step, $line-height);
+
+    color: $base-color;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: color $transition-speed, border-color $transition-speed;
+
+    &:hover, &:focus {
+      color: $hover-color;
+      text-decoration: none;
+    }
+
+    &:active {
+      border-color: $focus-color;
+      color: $focus-color;
+    }
+
+    &.is-selected {
+      border-color: $is-selected-color;
+      color: $is-selected-color;
+    }
+  }
+}

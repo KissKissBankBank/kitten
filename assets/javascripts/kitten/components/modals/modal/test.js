@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import sinon from 'sinon'
 import { Modal } from './index'
 

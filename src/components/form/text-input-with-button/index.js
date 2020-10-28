@@ -17,11 +17,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -38,6 +38,12 @@ var _typography = require("../../../helpers/utils/typography");
 var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-config"));
 
 var _modifierStyles = require("../../../components/buttons/button/helpers/modifier-styles");
+
+var _deprecated = _interopRequireDefault(require("prop-types-extra/lib/deprecated"));
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var StyledTextInputWithButton = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-button__StyledTextInputWithButton",
@@ -66,14 +72,14 @@ var StyledButton = _styledComponents.default.button.withConfig({
   return disabled && (0, _styledComponents.css)(["cursor:not-allowed;"]);
 });
 
-var TextInputWithButton =
-/*#__PURE__*/
-function (_PureComponent) {
+var TextInputWithButton = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInputWithButton, _PureComponent);
+
+  var _super = _createSuper(TextInputWithButton);
 
   function TextInputWithButton() {
     (0, _classCallCheck2.default)(this, TextInputWithButton);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TextInputWithButton).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TextInputWithButton, [{
@@ -84,22 +90,29 @@ function (_PureComponent) {
           error = _this$props.error,
           disabled = _this$props.disabled,
           tiny = _this$props.tiny,
+          huge = _this$props.huge,
+          giant = _this$props.giant,
           value = _this$props.value,
+          buttonValue = _this$props.buttonValue,
           modifier = _this$props.modifier,
           buttonProps = _this$props.buttonProps,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "value", "modifier", "buttonProps"]);
-      return _react.default.createElement(StyledTextInputWithButton, null, _react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
+          inputValue = _this$props.inputValue,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "tiny", "huge", "giant", "value", "buttonValue", "modifier", "buttonProps", "inputValue"]);
+      return /*#__PURE__*/_react.default.createElement(StyledTextInputWithButton, null, /*#__PURE__*/_react.default.createElement(StyledTextInput, (0, _extends2.default)({}, others, {
         valid: valid,
         error: error,
         disabled: disabled,
-        tiny: tiny
-      })), _react.default.createElement(StyledButton, (0, _extends2.default)({
+        tiny: tiny,
+        huge: huge,
+        giant: giant,
+        value: inputValue
+      })), /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
         type: "button",
         modifier: modifier,
         valid: valid,
         error: error,
         disabled: disabled
-      }, buttonProps), value));
+      }, buttonProps), value || buttonValue));
     }
   }]);
   return TextInputWithButton;
@@ -111,14 +124,21 @@ TextInputWithButton.propTypes = {
   error: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   tiny: _propTypes.default.bool,
+  huge: _propTypes.default.bool,
+  giant: _propTypes.default.bool,
   modifier: _propTypes.default.string,
-  value: _propTypes.default.string
+  inputValue: _propTypes.default.string,
+  // DEPRECATED: do not use prop `value`. Use `buttonValue` instead.
+  value: (0, _deprecated.default)(_propTypes.default.node, 'Use `buttonValue` instead.'),
+  buttonValue: _propTypes.default.node
 };
 TextInputWithButton.defaultProps = {
   valid: false,
   error: false,
   disabled: false,
   tiny: false,
-  value: 'Button',
+  huge: false,
+  giant: false,
+  buttonValue: 'Button',
   modifier: 'beryllium'
 };

@@ -25,6 +25,7 @@
   $background-color-helium: map-get($k-colors, 'primary-1');
 
   $font: 'regular';
+  $link-font: 'bold';
   $font-size: -1; // 14px
   $line-height: 1.25;
 
@@ -55,6 +56,8 @@
     // ReactTooltip forces a default `border-radius: 3px`, we have to set it
     // to 0px.
     border-radius: 0 !important;
+
+    pointer-events: initial !important;
 
     &.place-top {
       margin-bottom: $tooltip-margin !important;
@@ -106,6 +109,11 @@
         right: k-px-to-rem(-8px) !important;
         top: 52% !important;
       }
+    }
+
+    a {
+      color: $color-helium !important;
+      @include k-typographyFont($link-font);
     }
   }
 }

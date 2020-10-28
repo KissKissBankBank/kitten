@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BackerCard /> by default matches with snapshot 1`] = `
+<div
+  className="sc-htpNat jkqZpd"
+>
+  <div
+    className="sc-bdVaJa eYYfEq"
+  >
+    <span
+      className="sc-bwzfXH uTxCW k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+    >
+      Backer name
+    </span>
+  </div>
+  <div
+    className="sc-bdVaJa eDkcBx"
+  >
+    <span
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents sc-ifAKCX vzBGi"
+      tabIndex={null}
+    >
+      <img
+        alt=""
+        className="k-ButtonImage__img"
+        src="#custom-src"
+      />
+    </span>
+  </div>
+  <div
+    className="sc-bdVaJa cfvEqV"
+  >
+    <p
+      className="sc-bwzfXH uTxCW k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
+    >
+      Description
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
+<div
+  className="sc-htpNat jkqZpd"
+>
+  <div
+    className="sc-bdVaJa eYYfEq"
+  >
+    <span
+      className="sc-bwzfXH uTxCW k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
+    >
+      Backer name
+      <span
+        className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-micro k-u-weight-light sc-bxivhb cATKsk"
+      >
+        Subtitle
+      </span>
+    </span>
+  </div>
+  <div
+    className="sc-bdVaJa eDkcBx"
+  >
+    <span
+      className="k-ButtonImage k-ButtonImage--huge k-ButtonImage--withoutPointerEvents sc-ifAKCX vzBGi"
+      tabIndex={null}
+    >
+      <img
+        alt=""
+        className="k-ButtonImage__img"
+        src="#custom-src"
+      />
+    </span>
+  </div>
+  <div
+    className="sc-bdVaJa cfvEqV"
+  >
+    <p
+      className="sc-bwzfXH uTxCW k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-none"
+    >
+      Description
+    </p>
+  </div>
+</div>
+`;

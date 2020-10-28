@@ -1,0 +1,44 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './icon-list.stories.js'
+import { IconList } from './index'
+
+<Meta title="List/IconList" component={IconList} />
+
+# IconList
+
+## Import
+
+```js
+import { IconList } from '@kisskissbankbank/kitten/src/components/lists/icon-list'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="IconList" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<IconList>
+  <IconList.Item>Foo</IconList.Item>
+  <IconList.Item>Bar</IconList.Item>
+</IconList>
+```
+
+#### With custom icon
+
+```js
+<IconList>
+  <IconList.Item
+    icon={<MyIcon />}
+    iconProps={{
+      style: { backgroundColor: '#FFEBE0', borderColor: '#FFEBE0' },
+    }}
+  >
+    Foo
+  </IconList.Item>
+  <IconList.Item>Bar</IconList.Item>
+</IconList>
+```

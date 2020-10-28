@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
+<div
+  className="sc-bwzfXH gpkizz"
+>
+  <div
+    className="k-u-margin-bottom-triple"
+  >
+    <img
+      alt=""
+      className="k-VerticalCardWithAction__image"
+      src="#image"
+    />
+  </div>
+  <div
+    className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
+  >
+    <h1
+      className="sc-bdVaJa ihBNbB k-u-align-center"
+    >
+      Custom title
+    </h1>
+    
+  </div>
+  <div
+    className="k-u-margin-top-triple k-u-align-center"
+  >
+    <button
+      className="k-Button k-Button--helium k-VerticalCardWithAction__button"
+      href={null}
+      onClick={null}
+      tabIndex={null}
+      type="button"
+    >
+      button
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = `
+<div
+  className="sc-bwzfXH gpkizz"
+>
+  <div
+    className="k-u-margin-bottom-triple"
+  >
+    <img
+      alt="Image alt"
+      className="k-VerticalCardWithAction__image"
+      src="#image"
+    />
+  </div>
+  <div
+    className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
+  >
+    <h1
+      className="sc-bdVaJa ihBNbB k-u-align-center k-u-margin-bottom-singleHalf--important"
+    >
+      Custom title
+    </h1>
+    <p
+      className="k-Paragraph k-u-align-center k-u-margin-top-singleHalf--important k-Paragraph--quaternary k-Paragraph--withoutMargin"
+    >
+      Custom text
+    </p>
+  </div>
+  <div
+    className="k-u-margin-top-triple k-u-align-center"
+  >
+    <button
+      className="k-Button k-Button--helium k-VerticalCardWithAction__button"
+      href={null}
+      onClick={null}
+      tabIndex={null}
+      type="button"
+    >
+      button
+    </button>
+  </div>
+</div>
+`;

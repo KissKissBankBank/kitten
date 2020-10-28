@@ -2,7 +2,7 @@
 
 exports[`<List> by default matches with snapshot 1`] = `
 <ul
-  className="list__StyledList-sc-1ns0hml-0 ehUmXC"
+  className="sc-bwzfXH eSuJfv k-List"
 >
   <li>
     <div>
@@ -24,13 +24,12 @@ exports[`<List> by default matches with snapshot 1`] = `
 
 exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
 <ul
-  className="list__StyledList-sc-1ns0hml-0 ehUmXC"
+  className="sc-bwzfXH eSuJfv k-List"
 >
   <li>
     <div
       aria-disabled={false}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 eQyeg"
-      disabled={false}
+      className="sc-bdVaJa SfCGr k-List__button k-List__button--withTopBorder"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -41,22 +40,22 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
       tabIndex="0"
     >
       <div
-        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+        className="k-List__button__content"
       >
         Alice
       </div>
       <div
-        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+        aria-hidden={true}
+        className="k-List__button__arrow"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
-          data-radium={true}
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon k-List__button__arrowIcon"
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Arrow
-          </title>
+          
           <path
             d="M6 0H0v6h2V2h4z"
           />
@@ -67,8 +66,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   <li>
     <div
       aria-disabled={false}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 cXshSK"
-      disabled={false}
+      className="sc-bdVaJa SfCGr k-List__button k-List__button--isActive"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -79,22 +77,22 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
       tabIndex="0"
     >
       <div
-        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+        className="k-List__button__content"
       >
         Cheshire Cat
       </div>
       <div
-        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+        aria-hidden={true}
+        className="k-List__button__arrow"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
-          data-radium={true}
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon k-List__button__arrowIcon"
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Arrow
-          </title>
+          
           <path
             d="M6 0H0v6h2V2h4z"
           />
@@ -105,8 +103,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   <li>
     <div
       aria-disabled={false}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 cXshSK"
-      disabled={false}
+      className="sc-bdVaJa SfCGr k-List__button"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -117,26 +114,9 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
       tabIndex="0"
     >
       <div
-        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+        className="k-List__button__content"
       >
         Mad Hatter
-      </div>
-      <div
-        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
-      >
-        <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
-          data-radium={true}
-          viewBox="0 0 6 6"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            Arrow
-          </title>
-          <path
-            d="M6 0H0v6h2V2h4z"
-          />
-        </svg>
       </div>
     </div>
   </li>
@@ -145,13 +125,12 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
 
 exports[`<List> with <ListButtonItem> with a disabled button matches with snapshot 1`] = `
 <ul
-  className="list__StyledList-sc-1ns0hml-0 ehUmXC"
+  className="sc-bwzfXH eSuJfv k-List"
 >
   <li>
     <div
       aria-disabled={false}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 eQyeg"
-      disabled={false}
+      className="sc-bdVaJa SfCGr k-List__button k-List__button--withTopBorder"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -162,22 +141,22 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
       tabIndex="0"
     >
       <div
-        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+        className="k-List__button__content"
       >
         Alice
       </div>
       <div
-        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+        aria-hidden={true}
+        className="k-List__button__arrow"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
-          data-radium={true}
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon k-List__button__arrowIcon"
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Arrow
-          </title>
+          
           <path
             d="M6 0H0v6h2V2h4z"
           />
@@ -188,8 +167,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   <li>
     <div
       aria-disabled={true}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 hDlIEc"
-      disabled={true}
+      className="sc-bdVaJa SfCGr k-List__button"
       onBlur={[Function]}
       onClick={null}
       onFocus={[Function]}
@@ -200,22 +178,22 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
       tabIndex="-1"
     >
       <div
-        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+        className="k-List__button__content"
       >
         Cheshire Cat
       </div>
       <div
-        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+        aria-hidden={true}
+        className="k-List__button__arrow"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-ArrowIcon--disabled k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 IIVFy"
-          data-radium={true}
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon k-List__button__arrowIcon"
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Arrow
-          </title>
+          
           <path
             d="M6 0H0v6h2V2h4z"
           />
@@ -226,8 +204,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   <li>
     <div
       aria-disabled={false}
-      className="k-List__button button-item__Item-sc-1xwobvm-0 cXshSK"
-      disabled={false}
+      className="sc-bdVaJa SfCGr k-List__button"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -238,22 +215,22 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
       tabIndex="0"
     >
       <div
-        className="button-item__Content-sc-1xwobvm-1 fKXndd"
+        className="k-List__button__content"
       >
         Mad Hatter
       </div>
       <div
-        className="button-item__Arrow-sc-1xwobvm-2 jcFtTs"
+        aria-hidden={true}
+        className="k-List__button__arrow"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon button-item__ArrowIcon-sc-1xwobvm-3 iooXxv"
-          data-radium={true}
+          className="k-ArrowIcon k-ArrowIcon--right k-Button__icon k-List__button__arrowIcon"
+          height="5.64"
           viewBox="0 0 6 6"
+          width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Arrow
-          </title>
+          
           <path
             d="M6 0H0v6h2V2h4z"
           />

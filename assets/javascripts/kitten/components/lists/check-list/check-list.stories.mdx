@@ -1,0 +1,38 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './check-list.stories.js'
+import { CheckList } from './index'
+
+<Meta title="List" component={CheckList} />
+
+# CheckList
+
+<Canvas>
+  <Story name="CheckList" story={stories.Default} />
+</Canvas>
+
+## Import
+
+```js
+import { CheckList } from '@kisskissbankbank/kitten/src/components/lists/check-list'
+```
+
+## Usage
+
+#### Default
+
+```js
+<CheckList />
+```
+
+### With Items
+
+```js
+<CheckList>
+  <CheckList.Item done>
+    TODO #1
+  </CheckList.Item>
+  <CheckList.Item>
+    TODO #2
+  </CheckList.Item>
+</CheckList>
+```

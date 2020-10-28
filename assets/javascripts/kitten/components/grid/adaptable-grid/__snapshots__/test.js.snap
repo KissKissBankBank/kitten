@@ -2,15 +2,15 @@
 
 exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 eaVPuD"
+  className="sc-bdVaJa kOvCsC"
 >
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 iweQMd"
+    className="sc-bwzfXH hKyxyB"
   >
     Test
   </div>
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 iUkZox"
+    className="sc-bwzfXH ivEcjV"
   >
     Test
   </div>
@@ -19,15 +19,15 @@ exports[`<AdaptableGrid /> by default matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with className matches with snapshot 1`] = `
 <div
-  className="my_classname adaptable-grid__StyledGrid-txsbu0-0 eaVPuD"
+  className="sc-bdVaJa kOvCsC my_classname"
 >
   <div
-    className="my_second_classname adaptable-grid__StyledGridCol-txsbu0-1 WhXQT"
+    className="sc-bwzfXH gCxarn my_second_classname"
   >
     Test
   </div>
   <div
-    className="my_third_classname adaptable-grid__StyledGridCol-txsbu0-1 WhXQT"
+    className="sc-bwzfXH gCxarn my_third_classname"
   >
     Test
   </div>
@@ -36,15 +36,15 @@ exports[`<AdaptableGrid /> with className matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with custom HTML tags matches with snapshot 1`] = `
 <dl
-  className="adaptable-grid__StyledGrid-txsbu0-0 eaVPuD"
+  className="sc-bdVaJa kOvCsC"
 >
   <dd
-    className="adaptable-grid__StyledGridCol-txsbu0-1 iweQMd"
+    className="sc-bwzfXH hKyxyB"
   >
     Test
   </dd>
   <dt
-    className="adaptable-grid__StyledGridCol-txsbu0-1 iUkZox"
+    className="sc-bwzfXH ivEcjV"
   >
     Test
   </dt>
@@ -53,16 +53,16 @@ exports[`<AdaptableGrid /> with custom HTML tags matches with snapshot 1`] = `
 
 exports[`<AdaptableGrid /> with some props matches with snapshot 1`] = `
 <div
-  className="adaptable-grid__StyledGrid-txsbu0-0 cHmwhM"
+  className="sc-bdVaJa hUIlOj"
 >
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 iQyJqa"
+    className="sc-bwzfXH CQbLP"
     offset={3}
   >
     Test
   </div>
   <div
-    className="adaptable-grid__StyledGridCol-txsbu0-1 WhXQT"
+    className="sc-bwzfXH dxXLKN"
   >
     Test
   </div>

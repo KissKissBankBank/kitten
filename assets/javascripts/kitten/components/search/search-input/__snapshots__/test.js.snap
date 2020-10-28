@@ -128,7 +128,7 @@ exports[`<SearchInput /> Search input with attributes matches with snapshot 1`] 
 
 <input
   aria-label="Rechercher"
-  className="k-testClass c0"
+  className="c0 k-testClass"
   placeholder="Rechercher"
   type="search"
 />

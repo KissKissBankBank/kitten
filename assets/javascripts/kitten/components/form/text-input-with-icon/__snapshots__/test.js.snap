@@ -2,11 +2,11 @@
 
 exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 <div
-  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fEDZEZ"
+  className="sc-EHOje jsaDiO"
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+    className="sc-bwzfXH cmvcxy"
     disabled={false}
     name="text"
     style={
@@ -17,15 +17,16 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 iSmOxb"
+    className="sc-bZQynM eLJVgP"
   >
     <svg
+      aria-label={null}
+      height={14}
+      role="img"
       viewBox="-0.7 -0.7 18 18"
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        Search
-      </title>
       <circle
         cx="7"
         cy="7"
@@ -45,11 +46,11 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fEDZEZ"
+  className="sc-EHOje jsaDiO"
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+    className="sc-bwzfXH cmvcxy"
     disabled={true}
     name="text"
     style={
@@ -60,15 +61,16 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 gtJNGX"
+    className="sc-bZQynM hnUUFQ"
   >
     <svg
+      aria-label={null}
+      height={14}
+      role="img"
       viewBox="-0.7 -0.7 18 18"
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        Search
-      </title>
       <circle
         cx="7"
         cy="7"
@@ -88,11 +90,11 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 <div
-  className="text-input-with-icon__StyledTextInputWithIcon-rvt8kr-0 fEDZEZ"
+  className="sc-EHOje jsaDiO"
 >
   
   <input
-    className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+    className="sc-bwzfXH cmvcxy"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -104,15 +106,16 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
   />
   <span
     aria-hidden="true"
-    className="text-input-with-icon__StyledIcon-rvt8kr-1 iSmOxb"
+    className="sc-bZQynM eLJVgP"
   >
     <svg
+      aria-label={null}
+      height={14}
+      role="img"
       viewBox="-0.7 -0.7 18 18"
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        Search
-      </title>
       <circle
         cx="7"
         cy="7"

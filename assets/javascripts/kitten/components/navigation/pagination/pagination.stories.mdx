@@ -1,0 +1,41 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './pagination.stories.js'
+import { Pagination } from './index'
+
+<Meta title="Navigation/Pagination" component={Pagination} />
+
+# Pagination
+
+## Import
+
+```js
+import { Pagination } from '@kisskissbankbank/kitten/src/components/navigation/pagination'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Pagination" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<Pagination />
+```
+
+### With total pages
+
+```js
+<Pagination
+  totalPages={…}
+/>
+```
+
+### With current page
+
+```js
+<Pagination
+  currentPage={…}
+/>
+```

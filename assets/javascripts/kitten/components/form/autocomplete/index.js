@@ -94,7 +94,9 @@ const StyledLoader = styled(({ addRightPadding, ...others }) => (
     `}
 `
 
-const StyledIcon = styled(({ disabled, ...others }) => <span {...others} />)`
+const StyledIcon = styled(({ disabled, iconPosition, ...others }) => (
+  <span {...others} />
+))`
   display: flex;
   position: absolute;
   align-self: center;

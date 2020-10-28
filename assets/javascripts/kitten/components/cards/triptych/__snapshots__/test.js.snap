@@ -1,0 +1,152 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Triptych /> with default props matches with snapshot 1`] = `
+<div
+  className="k-Grid sc-bdVaJa bzumAI k-Triptych k-u-align-center"
+>
+  <div
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--offset-0@m k-Grid__col--10@l k-Grid__col--offset-1@l"
+  >
+    <div>
+      <div
+        className="k-u-margin-bottom-double"
+      >
+        <h2
+          className="sc-bwzfXH kPzLsa"
+        >
+          Main title goes here !
+        </h2>
+      </div>
+      <span
+        className="k-VerticalStroke k-VerticalStroke--huge k-Triptych__verticalStroke k-u-margin-bottom-double"
+      />
+    </div>
+  </div>
+  <div
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
+  >
+    <div>
+      <div
+        className="sc-htpNat hbzMcy"
+      >
+        <div
+          className="k-u-margin-bottom-triple"
+        >
+          <img
+            alt=""
+            className="k-VerticalCardWithAction__image"
+            src="http://via.placeholder.com/349x465/19b4fa/19b4fa"
+          />
+        </div>
+        <div
+          className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
+        >
+          <h1
+            className="sc-bwzfXH ffdHnv k-u-align-center"
+          >
+            Lorem ipsum dolor sit amet
+          </h1>
+          
+        </div>
+        <div
+          className="k-u-margin-top-triple k-u-align-center"
+        >
+          <button
+            className="k-Button k-Button--helium k-VerticalCardWithAction__button"
+            href={null}
+            onClick={null}
+            tabIndex={null}
+            type="button"
+          >
+            Lorem
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn"
+  >
+    <div
+      className="sc-htpNat hbzMcy"
+    >
+      <div
+        className="k-u-margin-bottom-triple"
+      >
+        <img
+          alt=""
+          className="k-VerticalCardWithAction__image"
+          src="http://via.placeholder.com/349x465/ff8846/ff8846"
+        />
+      </div>
+      <div
+        className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
+      >
+        <h1
+          className="sc-bwzfXH ffdHnv k-u-align-center k-u-margin-bottom-singleHalf--important"
+        >
+          Donsectetur adipiscing elit
+        </h1>
+        <p
+          className="k-Paragraph k-u-align-center k-u-margin-top-singleHalf--important k-Paragraph--quaternary k-Paragraph--withoutMargin"
+        >
+          Nulla ut orci velit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+        </p>
+      </div>
+      <div
+        className="k-u-margin-top-triple k-u-align-center"
+      >
+        <button
+          className="k-Button k-Button--helium k-VerticalCardWithAction__button"
+          href={null}
+          onClick={null}
+          tabIndex={null}
+          type="button"
+        >
+          Ipsum
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="k-Grid__col--12 k-Grid__col--6@m k-Grid__col--4@l k-Triptych__contentColumn k-Triptych__contentColumn--odd"
+  >
+    <div
+      className="sc-htpNat hbzMcy"
+    >
+      <div
+        className="k-u-margin-bottom-triple"
+      >
+        <img
+          alt=""
+          className="k-VerticalCardWithAction__image"
+          src="http://via.placeholder.com/349x465/61d079/61d079"
+        />
+      </div>
+      <div
+        className="k-VerticalCardWithAction__text k-u-margin-top-triple k-u-margin-bottom-triple"
+      >
+        <h1
+          className="sc-bwzfXH ffdHnv k-u-align-center"
+        >
+          Praesent tincidunt ultrices sem
+        </h1>
+        
+      </div>
+      <div
+        className="k-u-margin-top-triple k-u-align-center"
+      >
+        <button
+          className="k-Button k-Button--helium k-VerticalCardWithAction__button"
+          href={null}
+          onClick={null}
+          tabIndex={null}
+          type="button"
+        >
+          Dolor
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

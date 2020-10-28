@@ -1,68 +1,8 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
-import { pxToRem, stepToRem } from '../../../../helpers/utils/typography'
 import { Text } from '../../../../components/typography/text'
 import { Title } from '../../../../components/typography/title'
-import COLORS from '../../../../constants/colors-config'
 import Truncate from 'react-truncate'
-import { ScreenConfig } from '../../../../constants/screen-config'
-
-const COMPONENT_GUTTER = pxToRem(10)
-
-const StyledTruncate = styled(Truncate)`
-  white-space: nowrap;
-`
-
-const StyledTitleContainer = styled.div`
-  flex: 1;
-  padding: 0;
-  line-height: 1;
-  margin-top: ${pxToRem(10)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    padding: 0 ${COMPONENT_GUTTER};
-  }
-`
-
-const StyledTitle = styled(Title)`
-  font-size: ${stepToRem(-1)};
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    font-size: ${stepToRem(2)};
-  }
-`
-
-const StyledWidgetTitle = styled(StyledTitleContainer)`
-  padding: 0;
-
-  @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
-    padding-left: 0;
-  }
-`
-
-const StyledTitleLoading = styled.span`
-  display: block;
-  background-color: ${COLORS.line2};
-  border-bottom: ${pxToRem(1)} solid ${COLORS.background1};
-  height: ${pxToRem(24)};
-`
-
-const StyledTitleSmallLoading = styled(StyledTitleLoading)`
-  width: 70%;
-  border-top: ${pxToRem(1)} solid ${COLORS.background1};
-  border-bottom: 0;
-`
-
-const StyledWidgetContainer = styled.div`
-  display: flex;
-`
-
-const StyledDayCounter = styled.div`
-  line-height: 1;
-  margin-left: calc(2 * ${COMPONENT_GUTTER});
-  margin-top: ${pxToRem(10)};
-`
 
 class TitleComponent extends PureComponent {
   static propTypes = {
@@ -84,14 +24,7 @@ class TitleComponent extends PureComponent {
   }
 
   render() {
-    const {
-      title,
-      titleTruncate,
-      titleProps,
-      loading,
-      widgetTitle,
-      dayCounter,
-    } = this.props
+    const { title, widgetTitle } = this.props
 
     return (
       <>
@@ -105,36 +38,42 @@ class TitleComponent extends PureComponent {
     const { loading, titleProps, titleTruncate, title } = this.props
 
     return (
-      <StyledTitleContainer>
+      <div className="k-CrowdfundingCard__title">
         {!loading && (
-          <StyledTitle
+          <Title
             tag="p"
             margin={false}
-            className="k-Card__title"
+            className="k-Card__title k-CrowdfundingCard__title__title"
             {...titleProps}
           >
             {titleTruncate && (
               <>
-                <StyledTruncate lines={2} className="k-u-hidden@s-down">
+                <Truncate
+                  lines={2}
+                  className="k-CrowdfundingCard__noWrap k-u-hidden@s-down"
+                >
                   {title}
-                </StyledTruncate>
-                <Truncate lines={3} className="k-u-hidden@m-up">
+                </Truncate>
+                <Truncate
+                  lines={3}
+                  className="k-CrowdfundingCard__noWrap k-u-hidden@m-up"
+                >
                   {title}
                 </Truncate>
               </>
             )}
 
             {!titleTruncate && title}
-          </StyledTitle>
+          </Title>
         )}
 
         {loading && (
           <>
-            <StyledTitleLoading />
-            <StyledTitleSmallLoading />
+            <span className="k-CrowdfundingCard__title__loadingElement" />
+            <span className="k-CrowdfundingCard__title__loadingElement" />
           </>
         )}
-      </StyledTitleContainer>
+      </div>
     )
   }
 
@@ -143,8 +82,8 @@ class TitleComponent extends PureComponent {
 
     return (
       <>
-        <StyledWidgetContainer>
-          <StyledWidgetTitle>
+        <div className="k-CrowdfundingCard__titleWrapper">
+          <div className="k-CrowdfundingCard__title">
             {!loading && (
               <Text
                 tag="span"
@@ -159,10 +98,10 @@ class TitleComponent extends PureComponent {
                 {!titleTruncate && widgetTitle}
               </Text>
             )}
-          </StyledWidgetTitle>
+          </div>
 
           {!loading && (
-            <StyledDayCounter>
+            <div className="k-CrowdfundingCard__title__dayCounter">
               <Text
                 size="tiny"
                 color="font1"
@@ -171,14 +110,14 @@ class TitleComponent extends PureComponent {
               >
                 {dayCounter}
               </Text>
-            </StyledDayCounter>
+            </div>
           )}
-        </StyledWidgetContainer>
+        </div>
 
         {loading && (
           <>
-            <StyledTitleLoading />
-            <StyledTitleSmallLoading />
+            <span className="k-CrowdfundingCard__title__loadingElement" />
+            <span className="k-CrowdfundingCard__title__loadingElement" />
           </>
         )}
       </>

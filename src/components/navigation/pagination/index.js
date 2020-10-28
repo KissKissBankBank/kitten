@@ -10,23 +10,11 @@ Object.defineProperty(exports, "__esModule", {
 exports.pages = pages;
 exports.Pagination = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
 var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -44,51 +32,12 @@ var _mediaQueries = require("../../../hoc/media-queries");
 
 var _typography = require("../../../helpers/utils/typography");
 
-var StyledGroup = _styledComponents.default.ul.withConfig({
-  displayName: "pagination__StyledGroup",
+var _classnames = _interopRequireDefault(require("classnames"));
+
+var StyledNav = _styledComponents.default.nav.withConfig({
+  displayName: "pagination__StyledNav",
   componentId: "sc-19bydjm-0"
-})(["display:inline-flex;padding:0;"]);
-
-var StyledList = _styledComponents.default.li.withConfig({
-  displayName: "pagination__StyledList",
-  componentId: "sc-19bydjm-1"
-})(["list-style:none;margin-right:0;@media (min-width:", "px){margin:", " ", ";}"], _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(0), (0, _typography.pxToRem)(8));
-
-var StyledArrowIconDirection = (0, _styledComponents.default)(function (_ref) {
-  var direction = _ref.direction,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["direction"]);
-  return _react.default.createElement("li", others);
-}).withConfig({
-  displayName: "pagination__StyledArrowIconDirection",
-  componentId: "sc-19bydjm-2"
-})(["list-style:none;", " ", ""], function (_ref2) {
-  var direction = _ref2.direction;
-  return direction === 'left' && (0, _styledComponents.css)(["margin-right:", ";@media (min-width:", "px){margin-right:", ";}"], (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(22));
-}, function (_ref3) {
-  var direction = _ref3.direction;
-  return direction === 'right' && (0, _styledComponents.css)(["margin-left:", ";@media (min-width:", "px){margin-left:", ";}"], (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(22));
-});
-var StyledButtonIcon = (0, _styledComponents.default)(function (_ref4) {
-  var isDisabled = _ref4.isDisabled,
-      isActive = _ref4.isActive,
-      others = (0, _objectWithoutProperties2.default)(_ref4, ["isDisabled", "isActive"]);
-  return _react.default.createElement(_text.Text, others);
-}).withConfig({
-  displayName: "pagination__StyledButtonIcon",
-  componentId: "sc-19bydjm-3"
-})(["display:flex;justify-content:center;align-items:center;box-sizing:border-box;cursor:pointer;width:", ";height:", ";border-radius:0;border-width:0;border-style:solid;outline:none;color:", ";border-color:", ";background-color:", ";@media (min-width:", "px){width:", ";height:", ";border-width:", ";}&:hover,&:focus{color:", ";border-color:", ";background-color:", ";}&:active{color:", ";border-color:", ";background-color:", ";}", " &[aria-disabled=\"true\"]{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), _colorsConfig.default.font1, _colorsConfig.default.line1, _colorsConfig.default.background1, _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(2), _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, function (_ref5) {
-  var isActive = _ref5.isActive;
-  return isActive && (0, _styledComponents.css)(["cursor:auto;color:", ";border-color:", ";background-color:", ";&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}"], _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1);
-}, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2);
-var StyledSvg = (0, _styledComponents.default)(_arrowIcon.ArrowIcon).withConfig({
-  displayName: "pagination__StyledSvg",
-  componentId: "sc-19bydjm-4"
-})(["align-self:center;margin:0;padding:0;width:", ";height:", ";pointer-events:none;color:inherit;fill:currentColor;"], (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(6));
-
-var StyledPoints = _styledComponents.default.li.withConfig({
-  displayName: "pagination__StyledPoints",
-  componentId: "sc-19bydjm-5"
-})(["list-style:none;text-decoration:none;text-align:center;align-self:center;width:", ";@media (min-width:", "px){margin:", " ", ";width:", ";}"], (0, _typography.pxToRem)(40), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(0), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(50)); // Returns an array with the given bounds
+})([".Pagination__List{padding:0;display:inline-flex;}li{list-style:none;}.Pagination__ListItem{margin-right:0;@media (min-width:", "px){margin:", " ", ";}}.Pagination__ListItem__Points{text-align:center;align-self:center;width:", ";@media (min-width:", "px){margin:", " ", ";width:", ";}}.Pagination__ListItem__Points{text-align:center;align-self:center;width:", ";@media (min-width:", "px){margin:", " ", ";width:", ";}}.Pagination__ListItem__Arrow--direction-left{margin-right:", ";@media (min-width:", "px){margin-right:", ";}}.Pagination__ListItem__Arrow--direction-right{margin-left:", ";@media (min-width:", "px){margin-left:", ";}}.Pagination__Link{display:flex;justify-content:center;align-items:center;box-sizing:border-box;cursor:pointer;width:", ";height:", ";border-radius:0;border-width:0;border-style:solid;outline:none;color:", ";border-color:", ";background-color:", ";@media (min-width:", "px){width:", ";height:", ";border-width:", ";}&:hover,&:focus{color:", ";border-color:", ";background-color:", ";text-decoration:none;}&:active{color:", ";border-color:", ";background-color:", ";text-decoration:none;}&[aria-current='page']{cursor:auto;color:", ";border-color:", ";background-color:", ";&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}}&[aria-disabled='true']{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;&:hover,&:focus,&:active{color:", ";border-color:", ";background-color:", ";}}}.Pagination__ArrowIcon{align-self:center;margin:0;padding:0;pointer-events:none;color:inherit;fill:currentColor;}&.Pagination--noMargin .Pagination__List{margin:0;}&.Pagination--isAligned-left .Pagination__List{display:flex;justify-content:flex-start;}&.Pagination--isAligned-center .Pagination__List{display:flex;justify-content:center;}&.Pagination--isAligned-right .Pagination__List{display:flex;justify-content:flex-end;}"], _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(0), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(40), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(0), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(40), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(0), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(22), (0, _typography.pxToRem)(30), _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(22), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(40), _colorsConfig.default.font1, _colorsConfig.default.line1, _colorsConfig.default.background1, _screenConfig.ScreenConfig.S.min, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(2), _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.primary1, _colorsConfig.default.primary1, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.line2, _colorsConfig.default.line2); // Returns an array with the given bounds
 
 
 var range = function range(start, end) {
@@ -120,113 +69,99 @@ function pages(min, max, currentPage, availableSlots) {
   return [min, null].concat((0, _toConsumableArray2.default)(range(currentPage - sides, currentPage + sides)), [null, max]);
 }
 
-var PaginationBase =
-/*#__PURE__*/
-function (_PureComponent) {
-  (0, _inherits2.default)(PaginationBase, _PureComponent);
+var PaginationBase = (0, _react.forwardRef)(function (_ref2, _ref) {
+  var prevButtonLabel = _ref2.prevButtonLabel,
+      nextButtonLabel = _ref2.nextButtonLabel,
+      goToPageLabel = _ref2.goToPageLabel,
+      goToPageHref = _ref2.goToPageHref,
+      onPageClick = _ref2.onPageClick,
+      currentPageLabel = _ref2.currentPageLabel,
+      currentPage = _ref2.currentPage,
+      totalPages = _ref2.totalPages,
+      ariaLabelProp = _ref2['aria-label'],
+      viewportIsMOrLess = _ref2.viewportIsMOrLess,
+      margin = _ref2.margin,
+      align = _ref2.align,
+      className = _ref2.className;
+  var size = viewportIsMOrLess ? 5 : 7;
+  var pageNumbers = pages(1, totalPages, currentPage, size);
 
-  function PaginationBase() {
-    var _getPrototypeOf2;
+  var preventClickDefault = function preventClickDefault(e) {
+    return e.preventDefault();
+  };
 
-    var _this;
-
-    (0, _classCallCheck2.default)(this, PaginationBase);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(PaginationBase)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _this.preventClickDefault = function (e) {
-      return e.preventDefault();
+  var pageClickHandler = function pageClickHandler(number) {
+    return function (event) {
+      return onPageClick(number, event);
     };
+  };
 
-    _this.pageClickHandler = function (number) {
-      return function (event) {
-        return _this.props.onPageClick(number, event);
-      };
-    };
+  var renderPage = function renderPage(number, index) {
+    if (!number) return renderSpacer(index);
+    var isActive = number === currentPage;
+    var tag = isActive ? 'span' : 'a';
+    var href = isActive ? null : goToPageHref(number);
+    var ariaLabel = isActive ? currentPageLabel(number) : goToPageLabel(number);
+    return /*#__PURE__*/_react.default.createElement("li", {
+      className: "Pagination__ListItem",
+      key: "page-".concat(number)
+    }, /*#__PURE__*/_react.default.createElement(_text.Text, {
+      className: "Pagination__Link",
+      tag: tag,
+      href: href,
+      key: "link-".concat(number),
+      weight: "regular",
+      decoration: "none",
+      size: "tiny",
+      "aria-current": isActive && 'page',
+      "aria-label": ariaLabel,
+      onClick: isActive ? null : pageClickHandler(number)
+    }, number));
+  };
 
-    _this.renderPage = function (number, index) {
-      if (!number) return _this.renderSpacer(index);
-      var isActive = number === _this.props.currentPage;
-      var tag = isActive ? 'span' : 'a';
-      var href = isActive ? null : _this.props.goToPageHref(number);
-      var ariaLabel = isActive ? _this.props.currentPageLabel(number) : _this.props.goToPageLabel(number);
-      return _react.default.createElement(StyledList, {
-        key: "page-".concat(number)
-      }, _react.default.createElement(StyledButtonIcon, {
-        tag: tag,
-        href: href,
-        key: "link-".concat(number),
-        weight: "regular",
-        decoration: "none",
-        size: "tiny",
-        isActive: isActive,
-        "aria-current": isActive && 'page',
-        "aria-label": ariaLabel,
-        onClick: isActive ? null : _this.pageClickHandler(number)
-      }, number));
-    };
+  var renderSpacer = function renderSpacer(index) {
+    return /*#__PURE__*/_react.default.createElement("li", {
+      key: "spacer-".concat(index),
+      className: "Pagination__ListItem__Points",
+      "aria-hidden": "true"
+    }, '…');
+  };
 
-    return _this;
-  }
+  var renderArrowButton = function renderArrowButton(direction) {
+    var buttonLabel = direction == 'left' ? (0, _parser.parseHtml)(prevButtonLabel) : (0, _parser.parseHtml)(nextButtonLabel);
+    var isDisabled = direction == 'left' ? currentPage == 1 : currentPage == totalPages;
+    var number = direction == 'left' ? currentPage == 1 ? 1 : currentPage - 1 : currentPage == totalPages ? totalPages : currentPage + 1;
+    return /*#__PURE__*/_react.default.createElement("li", {
+      className: (0, _classnames.default)('Pagination__ListItem__Arrow', "Pagination__ListItem__Arrow--direction-".concat(direction))
+    }, /*#__PURE__*/_react.default.createElement(_text.Text, {
+      className: "Pagination__Link",
+      tag: "a",
+      href: goToPageHref(number),
+      key: "link-".concat(direction),
+      "aria-label": buttonLabel,
+      "aria-disabled": isDisabled,
+      title: buttonLabel,
+      tabIndex: isDisabled ? -1 : null,
+      onClick: isDisabled ? preventClickDefault : pageClickHandler(number)
+    }, /*#__PURE__*/_react.default.createElement(_arrowIcon.ArrowIcon, {
+      className: "Pagination__ArrowIcon",
+      direction: direction,
+      disabled: isDisabled,
+      "aria-hidden": "true",
+      version: "solid"
+    })));
+  };
 
-  (0, _createClass2.default)(PaginationBase, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          totalPages = _this$props.totalPages,
-          currentPage = _this$props.currentPage;
-      var size = this.props.viewportIsTabletOrLess ? 5 : 7;
-      var pageNumbers = pages(1, totalPages, currentPage, size);
-      return _react.default.createElement("nav", {
-        role: "navigation",
-        "aria-label": this.props['aria-label']
-      }, _react.default.createElement(StyledGroup, null, this.renderArrowButton('left'), pageNumbers.map(this.renderPage), this.renderArrowButton('right')));
-    }
-  }, {
-    key: "renderSpacer",
-    value: function renderSpacer(index) {
-      return _react.default.createElement(StyledPoints, {
-        key: "spacer-".concat(index),
-        "aria-hidden": "true"
-      }, '…');
-    }
-  }, {
-    key: "renderArrowButton",
-    value: function renderArrowButton(direction) {
-      var _this$props2 = this.props,
-          prevButtonLabel = _this$props2.prevButtonLabel,
-          nextButtonLabel = _this$props2.nextButtonLabel,
-          currentPage = _this$props2.currentPage,
-          totalPages = _this$props2.totalPages;
-      var buttonLabel = direction == 'left' ? (0, _parser.parseHtml)(prevButtonLabel) : (0, _parser.parseHtml)(nextButtonLabel);
-      var isDisabled = direction == 'left' ? currentPage == 1 : currentPage == totalPages;
-      var number = direction == 'left' ? currentPage == 1 ? 1 : currentPage - 1 : currentPage == totalPages ? totalPages : currentPage + 1;
-      return _react.default.createElement(StyledArrowIconDirection, {
-        direction: direction
-      }, _react.default.createElement(StyledButtonIcon, {
-        tag: "a",
-        href: this.props.goToPageHref(number),
-        key: "link-".concat(direction),
-        "aria-label": buttonLabel,
-        "aria-disabled": isDisabled,
-        title: buttonLabel,
-        isDisabled: isDisabled,
-        tabIndex: isDisabled ? -1 : null,
-        onClick: isDisabled ? this.preventClickDefault : this.pageClickHandler(number)
-      }, _react.default.createElement(StyledSvg, {
-        direction: direction,
-        disabled: isDisabled,
-        "aria-hidden": "true"
-      })));
-    }
-  }]);
-  return PaginationBase;
-}(_react.PureComponent);
-
+  return /*#__PURE__*/_react.default.createElement(StyledNav, {
+    role: "navigation",
+    "aria-label": ariaLabelProp,
+    className: (0, _classnames.default)('Pagination', className, "Pagination--isAligned-".concat(align), {
+      'Pagination--noMargin': !margin
+    })
+  }, /*#__PURE__*/_react.default.createElement("ul", {
+    className: "Pagination__List"
+  }, renderArrowButton('left'), pageNumbers.map(renderPage), renderArrowButton('right')));
+});
 PaginationBase.propTypes = {
   prevButtonLabel: _propTypes.default.string,
   nextButtonLabel: _propTypes.default.string,
@@ -236,7 +171,9 @@ PaginationBase.propTypes = {
   totalPages: _propTypes.default.number,
   currentPage: _propTypes.default.number,
   currentPageLabel: _propTypes.default.func,
-  'aria-label': _propTypes.default.string
+  'aria-label': _propTypes.default.string,
+  margin: _propTypes.default.bool,
+  align: _propTypes.default.oneOf([null, 'left', 'center', 'right'])
 };
 PaginationBase.defaultProps = {
   prevButtonLabel: 'Previous page',
@@ -253,9 +190,10 @@ PaginationBase.defaultProps = {
   },
   currentPage: 1,
   totalPages: 1,
-  'aria-label': 'Pagination navigation'
+  'aria-label': 'Pagination navigation',
+  margin: true
 };
 var Pagination = (0, _mediaQueries.mediaQueries)(PaginationBase, {
-  viewportIsTabletOrLess: true
+  viewportIsMOrLess: true
 });
 exports.Pagination = Pagination;

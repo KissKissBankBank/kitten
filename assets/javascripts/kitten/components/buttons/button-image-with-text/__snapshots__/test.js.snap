@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonImageWithText /> should match with snapshot 1`] = `
+<div
+  className="sc-bwzfXH lhrcar"
+>
+  <span
+    className="k-ButtonImage k-ButtonImage--withoutPointerEvents"
+    tabIndex={null}
+  >
+    <img
+      alt=""
+      className="k-ButtonImage__img"
+      src="https://placehold.it/100x100/caf4fe/caf4fe"
+    />
+  </span>
+  <div
+    className="sc-htpNat jQqfDF"
+  >
+    <p
+      className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-light sc-bxivhb bYufdY"
+    >
+      Custom title
+    </p>
+    <p
+      className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-light sc-bxivhb bYufdY"
+    >
+      Custom description
+    </p>
+  </div>
+</div>
+`;

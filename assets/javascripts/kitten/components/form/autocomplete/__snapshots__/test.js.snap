@@ -167,7 +167,6 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
   <span
     aria-hidden="true"
     className="c2"
-    iconPosition="left"
   >
     <svg
       fill="#222"
@@ -176,9 +175,7 @@ exports[`<Autocomplete /> with icon matches with snapshot 1`] = `
       width={15}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        Location
-      </title>
+      
       <path
         d="M6 0C2.686 0 0 2.72 0 6.033 0 7.69.672 9.186 1.758 10.31L6 14.313l4.282-4.094v-.008A6.003 6.003 0 0 0 6 0zm.04 8.4a2.4 2.4 0 1 1 0-4.8 2.4 2.4 0 0 1 0 4.8z"
       />

@@ -15,13 +15,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _react = _interopRequireDefault(require("react"));
 
@@ -29,27 +29,31 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _checkbox = require("../../components/form/checkbox");
 
-var CheckboxSet =
-/*#__PURE__*/
-function (_React$Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var CheckboxSet = /*#__PURE__*/function (_React$Component) {
   (0, _inherits2.default)(CheckboxSet, _React$Component);
+
+  var _super = _createSuper(CheckboxSet);
 
   function CheckboxSet(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, CheckboxSet);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CheckboxSet).call(this, props));
+    _this = _super.call(this, props);
     _this.renderCheckbox = _this.renderCheckbox.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   }
 
   (0, _createClass2.default)(CheckboxSet, [{
     key: "renderCheckbox",
-    value: function renderCheckbox(item, index) {
+    value: function renderCheckbox(item) {
       var className = item.className,
           itemProps = (0, _objectWithoutProperties2.default)(item, ["className"]);
       var checkboxClassName = (0, _classnames.default)('k-CheckboxSet__checkbox', className);
-      return _react.default.createElement(_checkbox.Checkbox, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_checkbox.Checkbox, (0, _extends2.default)({
         className: checkboxClassName,
         error: this.props.error,
         name: this.props.name,
@@ -66,7 +70,7 @@ function (_React$Component) {
           error = _this$props.error,
           checkboxSetProps = (0, _objectWithoutProperties2.default)(_this$props, ["items", "className", "name", "error"]);
       var checkboxSetClassName = (0, _classnames.default)('k-CheckboxSet', className);
-      return _react.default.createElement("div", (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement("div", (0, _extends2.default)({
         className: checkboxSetClassName
       }, checkboxSetProps), this.props.items.map(this.renderCheckbox));
     }

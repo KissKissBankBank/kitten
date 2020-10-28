@@ -11,35 +11,24 @@ exports.CarouselInner = void 0;
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
-
 var _resizeObserverPolyfill = _interopRequireDefault(require("resize-observer-polyfill"));
 
-var _typography = require("../../../../helpers/utils/typography");
-
-var _range = require("../../../../helpers/utils/range");
-
-var _featureDetection = require("../../../../helpers/utils/feature-detection");
+var _elementHelper = require("../../../../helpers/dom/element-helper");
 
 var _carouselPage = require("./carousel-page");
 
-if (typeof window !== 'undefined') {
-  require('smoothscroll-polyfill').polyfill();
-}
+var _classnames = _interopRequireDefault(require("classnames"));
 
-var supportScrollSnap = (0, _featureDetection.cssSupports)('scroll-snap-type: mandatory'); // inspired by https://github.com/cferdinandi/scrollStop
+var _usePreviousHook = require("../../../../helpers/utils/use-previous-hook");
+
+if (_elementHelper.domElementHelper.canUseDom()) {
+  require('smoothscroll-polyfill').polyfill();
+} // inspired by https://github.com/cferdinandi/scrollStop
+
 
 var scrollStop = function scrollStop(callback) {
   if (!callback) return;
@@ -50,9 +39,7 @@ var scrollStop = function scrollStop(callback) {
     target = event.target;
     isScrolling = setTimeout(function () {
       return callback(target);
-    }, // wait more for scrollStop if browser support snap
-    // because of the momentum on iOS
-    supportScrollSnap ? 132 : 66);
+    }, 132);
   };
 };
 
@@ -62,189 +49,137 @@ var getClosest = function getClosest(counts, goal) {
   });
 };
 
-var getDataForPage = function getDataForPage(data, indexPage, numColumns) {
-  var startIndex = indexPage * numColumns;
-  return data.slice(startIndex, startIndex + numColumns);
+var getDataForPage = function getDataForPage(data, indexPage, numberOfItemsPerPage) {
+  var startIndex = indexPage * numberOfItemsPerPage;
+  return data.slice(startIndex, startIndex + numberOfItemsPerPage);
 };
 
-var getRangePageScrollLeft = function getRangePageScrollLeft(targetClientWidth, numPages, itemMarginBetween) {
-  return (0, _range.createRangeFromZeroTo)(numPages).map(function (numPage) {
-    return numPage * (targetClientWidth + itemMarginBetween);
+var getElementPadding = function getElementPadding(element) {
+  return parseInt(_elementHelper.domElementHelper.getComputedStyle(element, 'padding-left')) + parseInt(_elementHelper.domElementHelper.getComputedStyle(element, 'padding-right'));
+};
+
+var getRangePageScrollLeft = function getRangePageScrollLeft(targetClientWidth, numberOfPages, itemMarginBetween, containerPadding) {
+  return (0, _toConsumableArray2.default)(Array(numberOfPages).keys()).map(function (page) {
+    return page * (targetClientWidth + itemMarginBetween - containerPadding);
   });
 };
 
-var CarouselInner =
-/*#__PURE__*/
-function (_Component) {
-  (0, _inherits2.default)(CarouselInner, _Component);
+var CarouselInner = function CarouselInner(_ref) {
+  var currentPageIndex = _ref.currentPageIndex,
+      exportVisibilityProps = _ref.exportVisibilityProps,
+      goToPage = _ref.goToPage,
+      itemMarginBetween = _ref.itemMarginBetween,
+      items = _ref.items,
+      numberOfItemsPerPage = _ref.numberOfItemsPerPage,
+      numberOfPages = _ref.numberOfPages,
+      onResizeInner = _ref.onResizeInner,
+      pagesClassName = _ref.pagesClassName,
+      viewedPages = _ref.viewedPages;
 
-  function CarouselInner() {
-    var _getPrototypeOf2;
+  var _useState = (0, _react.useState)(false),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      isTouched = _useState2[0],
+      setTouchState = _useState2[1];
 
-    var _this;
+  var carouselInner = (0, _react.useRef)(null);
+  var previousIndexPageVisible = (0, _usePreviousHook.usePrevious)(currentPageIndex);
+  var observer;
 
-    (0, _classCallCheck2.default)(this, CarouselInner);
+  var onResizeObserve = function onResizeObserve(_ref2) {
+    var _ref3 = (0, _slicedToArray2.default)(_ref2, 1),
+        entry = _ref3[0];
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+    var innerWidth = entry.contentRect.width;
+    onResizeInner(innerWidth);
+  };
+
+  (0, _react.useEffect)(function () {
+    observer = new _resizeObserverPolyfill.default(onResizeObserve);
+    return function () {
+      return observer.disconnect();
+    };
+  }, []);
+  (0, _react.useEffect)(function () {
+    carouselInner.current && observer.observe(carouselInner.current);
+  }, [carouselInner]);
+  (0, _react.useEffect)(function () {
+    if (currentPageIndex !== previousIndexPageVisible) {
+      scrollToPage(currentPageIndex);
     }
+  }, [currentPageIndex, previousIndexPageVisible]);
+  var handleInnerScroll = scrollStop(function (target) {
+    if (isTouched) return null;
+    var scrollLeft = target.scrollLeft,
+        clientWidth = target.clientWidth;
+    var rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numberOfPages, itemMarginBetween, getElementPadding(target));
+    var closest = getClosest(rangePageScrollLeft, scrollLeft);
+    var indexClosest = rangePageScrollLeft.indexOf(closest);
+    if (indexClosest !== currentPageIndex) return goToPage(indexClosest); // if the user doesn't scroll enough to change page
+    // we need to scroll back to the fake snap page
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(CarouselInner)).call.apply(_getPrototypeOf2, [this].concat(args)));
-    _this.state = {
-      isTouched: false
-    };
-    _this.carouselInner = _react.default.createRef();
-
-    _this.onResizeObserve = function (_ref) {
-      var _ref2 = (0, _slicedToArray2.default)(_ref, 1),
-          entry = _ref2[0];
-
-      var widthInner = entry.contentRect.width;
-
-      _this.props.onResizeInner(widthInner);
-    };
-
-    _this.handleInnerScroll = scrollStop(function (target) {
-      if (_this.state.isTouched) return;
-      var _this$props = _this.props,
-          numPages = _this$props.numPages,
-          itemMarginBetween = _this$props.itemMarginBetween,
-          indexPageVisible = _this$props.indexPageVisible,
-          goToPage = _this$props.goToPage;
-      var scrollLeft = target.scrollLeft,
-          clientWidth = target.clientWidth;
-      var rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, itemMarginBetween);
-      var closest = getClosest(rangePageScrollLeft, scrollLeft);
-      var indexClosest = rangePageScrollLeft.indexOf(closest);
-      if (indexClosest !== indexPageVisible) return goToPage(indexClosest); // if the user doesn't scroll enough to change page
-      // we need to scroll back to the fake snap page
-
-      if (closest !== scrollLeft) {
-        return target.scrollTo({
-          top: 0,
-          left: closest,
-          behavior: 'smooth'
-        });
-      }
-    });
-
-    _this.scrollToPage = function (indexPageToScroll) {
-      var _this$props2 = _this.props,
-          numPages = _this$props2.numPages,
-          itemMarginBetween = _this$props2.itemMarginBetween;
-      var target = _this.carouselInner.current;
-      var scrollLeft = target.scrollLeft,
-          clientWidth = target.clientWidth;
-      var rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numPages, itemMarginBetween);
-      var closest = rangePageScrollLeft[indexPageToScroll];
-
-      if (closest !== scrollLeft) {
-        target.scrollTo({
-          top: 0,
-          left: closest,
-          behavior: 'smooth'
-        });
-      }
-    };
-
-    _this.handleTouchStart = function () {
-      return _this.setState({
-        isTouched: true
+    if (closest !== scrollLeft) {
+      return target.scrollTo({
+        top: 0,
+        left: closest,
+        behavior: 'smooth'
       });
-    };
+    }
+  });
 
-    _this.handleTouchEnd = function () {
-      return _this.setState({
-        isTouched: false
+  var scrollToPage = function scrollToPage(indexPageToScroll) {
+    var target = carouselInner.current;
+    if (!target) return null;
+    var scrollLeft = target.scrollLeft,
+        clientWidth = target.clientWidth;
+    var rangePageScrollLeft = getRangePageScrollLeft(clientWidth, numberOfPages, itemMarginBetween, getElementPadding(target));
+    var closest = rangePageScrollLeft[indexPageToScroll];
+
+    if (closest !== scrollLeft) {
+      target.scrollTo({
+        top: 0,
+        left: closest,
+        behavior: 'smooth'
       });
+    }
+  };
+
+  var handlePageClick = function handlePageClick(index) {
+    return function (e) {
+      if (index === currentPageIndex) return;
+      e.preventDefault();
+      scrollToPage(index);
+      document.activeElement.blur();
     };
+  };
 
-    _this.handlePageClick = function (index) {
-      return function (e) {
-        if (index === _this.props.indexPageVisible) return;
-        e.preventDefault();
-
-        _this.scrollToPage(index);
-
-        document.activeElement.blur();
-      };
-    };
-
-    return _this;
-  }
-
-  (0, _createClass2.default)(CarouselInner, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.observer = new _resizeObserverPolyfill.default(this.onResizeObserve);
-      this.observer.observe(this.carouselInner.current);
-    }
-  }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.observer.disconnect();
-    }
-  }, {
-    key: "UNSAFE_componentWillReceiveProps",
-    value: function UNSAFE_componentWillReceiveProps(nextProps) {
-      if (nextProps.indexPageVisible !== this.props.indexPageVisible) {
-        this.scrollToPage(nextProps.indexPageVisible);
-      }
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var _this2 = this;
-
-      var _this$props3 = this.props,
-          data = _this$props3.data,
-          itemMinWidth = _this$props3.itemMinWidth,
-          renderItem = _this$props3.renderItem,
-          indexPageVisible = _this$props3.indexPageVisible,
-          numColumns = _this$props3.numColumns,
-          numPages = _this$props3.numPages,
-          itemMarginBetween = _this$props3.itemMarginBetween;
-      var rangePage = (0, _range.createRangeFromZeroTo)(numPages);
-      return _react.default.createElement(StyledCarouselInner, {
-        ref: this.carouselInner,
-        onScroll: this.handleInnerScroll,
-        onTouchStart: this.handleTouchStart,
-        onTouchEnd: this.handleTouchEnd
-      }, rangePage.map(function (index) {
-        return _react.default.createElement(StyledCarouselPageContainer, {
-          key: index,
-          index: index,
-          indexPageVisible: indexPageVisible,
-          itemMarginBetween: itemMarginBetween,
-          onClick: _this2.handlePageClick(index)
-        }, _react.default.createElement(_carouselPage.CarouselPage, {
-          numColumns: numColumns,
-          itemMinWidth: itemMinWidth,
-          itemMarginBetween: itemMarginBetween,
-          renderItem: getDataForPage(renderItem, index, numColumns)
-        }));
-      }));
-    }
-  }]);
-  return CarouselInner;
-}(_react.Component);
+  return /*#__PURE__*/_react.default.createElement("div", {
+    ref: carouselInner,
+    onScroll: handleInnerScroll,
+    onTouchStart: function onTouchStart() {
+      return setTouchState(true);
+    },
+    onTouchEnd: function onTouchEnd() {
+      return setTouchState(false);
+    },
+    className: "k-Carousel__inner"
+  }, (0, _toConsumableArray2.default)(Array(numberOfPages).keys()).map(function (index) {
+    var isActivePage = currentPageIndex === index;
+    var hasPageBeenViewed = viewedPages.has(index);
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: index,
+      onClick: handlePageClick(index),
+      className: (0, _classnames.default)('k-Carousel__inner__pageContainer', pagesClassName, {
+        'k-Carousel__inner__pageContainer--isActivePage': isActivePage,
+        'k-Carousel__inner__pageContainer--hasBeenViewed': hasPageBeenViewed
+      })
+    }, /*#__PURE__*/_react.default.createElement(_carouselPage.CarouselPage, {
+      exportVisibilityProps: exportVisibilityProps,
+      hasPageBeenViewed: hasPageBeenViewed,
+      isActivePage: isActivePage,
+      pageItems: getDataForPage(items, index, numberOfItemsPerPage),
+      numberOfItemsPerPage: numberOfItemsPerPage
+    }));
+  }));
+};
 
 exports.CarouselInner = CarouselInner;
-
-var StyledCarouselInner = _styledComponents.default.div.withConfig({
-  displayName: "carousel-inner__StyledCarouselInner",
-  componentId: "wljpd2-0"
-})(["display:flex;flex-direct:row;overflow-x:scroll;scroll-behavior:smooth;-ms-over-flow-style:none;-webkit-overflow-scrolling:touch;scroll-snap-type:", ";min-height:1;&::-webkit-scrollbar{display:none;}"], supportScrollSnap ? 'mandatory' : 'none');
-
-var StyledCarouselPageContainer = _styledComponents.default.div.withConfig({
-  displayName: "carousel-inner__StyledCarouselPageContainer",
-  componentId: "wljpd2-1"
-})(["width:100%;flex-shrink:0;scroll-snap-align:", ";}", " ", ""], supportScrollSnap ? 'center' : 'none', function (_ref3) {
-  var index = _ref3.index,
-      indexPageVisible = _ref3.indexPageVisible;
-  return index !== indexPageVisible && (0, _styledComponents.css)(["cursor:pointer;"]);
-}, function (_ref4) {
-  var index = _ref4.index,
-      itemMarginBetween = _ref4.itemMarginBetween;
-  return index && (0, _styledComponents.css)(["margin-left:", ";"], (0, _typography.pxToRem)(itemMarginBetween));
-});

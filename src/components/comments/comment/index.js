@@ -11,8 +11,6 @@ exports.Comment = void 0;
 
 var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
 var _react = _interopRequireWildcard(require("react"));
 
 var _styledComponents = _interopRequireWildcard(require("styled-components"));
@@ -91,7 +89,7 @@ var Comment = function Comment(_ref3) {
       bottomNotes = _ref3.bottomNotes,
       likeButtonProps = _ref3.likeButtonProps,
       avatarBadge = _ref3.avatarBadge,
-      props = (0, _objectWithoutProperties2.default)(_ref3, ["text", "ownerName", "avatarImgProps", "commentDate", "bottomNotes", "likeButtonProps", "avatarBadge"]);
+      id = _ref3.id;
   var likeButtonElement = (0, _react.useRef)(null);
 
   var _useState = (0, _react.useState)(0),
@@ -106,30 +104,32 @@ var Comment = function Comment(_ref3) {
 
     setLikeButtonWidth(elementWidth + marginLeftAndRight);
   }, []);
-  return _react.default.createElement(StyledGrid, null, _react.default.createElement(_commentAvatar.CommentAvatar, {
+  return /*#__PURE__*/_react.default.createElement(StyledGrid, {
+    id: id
+  }, /*#__PURE__*/_react.default.createElement(_commentAvatar.CommentAvatar, {
     avatarImgProps: avatarImgProps,
     commentDate: commentDate,
     avatarBadge: avatarBadge
-  }), _react.default.createElement(StyledCommentContainer, null, _react.default.createElement(StyledCommentContent, null, ownerName && _react.default.createElement(_marger.Marger, {
+  }), /*#__PURE__*/_react.default.createElement(StyledCommentContainer, null, /*#__PURE__*/_react.default.createElement(StyledCommentContent, null, ownerName && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     bottom: "1"
-  }, _react.default.createElement(_text.Text, {
+  }, /*#__PURE__*/_react.default.createElement(_text.Text, {
     color: "font1",
     size: "tiny",
     weight: "regular"
-  }, ownerName)), _react.default.createElement(StyledMargerText, {
+  }, ownerName)), /*#__PURE__*/_react.default.createElement(StyledMargerText, {
     hasLikeButton: !!likeButtonProps.children,
     ownerName: ownerName
-  }, _react.default.createElement(StyledContentText, {
+  }, /*#__PURE__*/_react.default.createElement(StyledContentText, {
     color: "font1",
     weight: "light"
-  }, text)), _react.default.createElement(StyledCommentArrow, null)), likeButtonProps.children && _react.default.createElement(StyledLikeButtonBox, {
+  }, text)), /*#__PURE__*/_react.default.createElement(StyledCommentArrow, null)), likeButtonProps.children && /*#__PURE__*/_react.default.createElement(StyledLikeButtonBox, {
     ref: likeButtonElement
-  }, _react.default.createElement(_likeButton.LikeButton, likeButtonProps)), bottomNotes && _react.default.createElement(_marger.Marger, {
+  }, /*#__PURE__*/_react.default.createElement(_likeButton.LikeButton, likeButtonProps)), bottomNotes && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: ".5",
     style: {
       marginRight: likeButtonWidth
     }
-  }, _react.default.createElement(StyledBottomNotes, {
+  }, /*#__PURE__*/_react.default.createElement(StyledBottomNotes, {
     tag: "div",
     color: "font1",
     size: "micro",

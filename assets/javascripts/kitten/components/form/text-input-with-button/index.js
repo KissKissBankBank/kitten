@@ -6,6 +6,7 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import { modifierStyles } from '../../../components/buttons/button/helpers/modifier-styles'
+import deprecated from 'prop-types-extra/lib/deprecated'
 
 const StyledTextInputWithButton = styled.div`
   display: flex;
@@ -60,8 +61,13 @@ export class TextInputWithButton extends PureComponent {
     error: PropTypes.bool,
     disabled: PropTypes.bool,
     tiny: PropTypes.bool,
+    huge: PropTypes.bool,
+    giant: PropTypes.bool,
     modifier: PropTypes.string,
-    value: PropTypes.string,
+    inputValue: PropTypes.string,
+    // DEPRECATED: do not use prop `value`. Use `buttonValue` instead.
+    value: deprecated(PropTypes.node, 'Use `buttonValue` instead.'),
+    buttonValue: PropTypes.node,
   }
 
   static defaultProps = {
@@ -69,7 +75,9 @@ export class TextInputWithButton extends PureComponent {
     error: false,
     disabled: false,
     tiny: false,
-    value: 'Button',
+    huge: false,
+    giant: false,
+    buttonValue: 'Button',
     modifier: 'beryllium',
   }
 
@@ -79,9 +87,13 @@ export class TextInputWithButton extends PureComponent {
       error,
       disabled,
       tiny,
+      huge,
+      giant,
       value,
+      buttonValue,
       modifier,
       buttonProps,
+      inputValue,
       ...others
     } = this.props
 
@@ -93,6 +105,9 @@ export class TextInputWithButton extends PureComponent {
           error={error}
           disabled={disabled}
           tiny={tiny}
+          huge={huge}
+          giant={giant}
+          value={inputValue}
         />
         <StyledButton
           type="button"
@@ -102,7 +117,7 @@ export class TextInputWithButton extends PureComponent {
           disabled={disabled}
           {...buttonProps}
         >
-          {value}
+          {value || buttonValue}
         </StyledButton>
       </StyledTextInputWithButton>
     )

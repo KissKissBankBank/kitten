@@ -1,0 +1,93 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './list-table.stories.js'
+import { ListTable } from './index'
+
+<Meta title="Tables/ListTable" component={ListTable} />
+
+# ListTable
+
+## Import
+
+```js
+import { ListTable } from '@kisskissbankbank/kitten/src/components/tables/list-table'
+```
+
+## Usage
+
+#### Default
+
+<Canvas>
+  <Story name="Default" story={stories.Default} />
+</Canvas>
+
+```js
+<ListTable id="…">
+  <ListTable.Header
+    {...props}
+    listProps={{…}}
+  >
+    <ListTable.Col>
+      …
+    </ListTable.Col>
+  </ListTable.Header>
+
+  <ListTable.Body>
+    <ListTable.Row isHighlighted>
+      <ListTable.Col>
+        …
+      </ListTable.Col>
+    </ListTable.Row>
+    <ListTable.Row
+      {...props}
+      listProps={{…}}
+    >
+      <ListTable.Col>
+        …
+      </ListTable.Col>
+    </ListTable.Row>
+  </ListTable.Body>
+</ListTable>
+```
+
+#### Toggleable
+
+<Canvas>
+  <Story name="Toggleable" story={stories.Toggleable} />
+</Canvas>
+
+```js
+<ListTable id="…">
+  <ListTable.Header
+    {...props}
+    listProps={{…}}
+  >
+    <ListTable.Col>
+      <button
+        type="button"
+        onClick={() => setDisplayState(!displayed)}
+        aria-expanded={displayed}
+        aria-controls="toggleableListTable"
+      >
+        Voir les détails
+      </button>
+    </ListTable.Col>
+  </ListTable.Header>
+  { displayed && (
+    <ListTable.Body id="toggleableListTable">
+      <ListTable.Row isHighlighted>
+        <ListTable.Col>
+          …
+        </ListTable.Col>
+      </ListTable.Row>
+      <ListTable.Row
+        {...props}
+        listProps={{…}}
+      >
+        <ListTable.Col>
+          …
+        </ListTable.Col>
+      </ListTable.Row>
+    </ListTable.Body>
+  )
+</ListTable>
+```

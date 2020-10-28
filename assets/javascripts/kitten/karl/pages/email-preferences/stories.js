@@ -1,7 +1,9 @@
 import React from 'react'
-import { storiesOf } from '@storybook/react'
 import EmailPreferences from './index'
 
-storiesOf('Pages/EmailPreferences', module).add('Email-preferences', () => {
-  return <EmailPreferences />
-})
+export default {
+  title: 'Pages/EmailPreferences',
+  component: EmailPreferences,
+}
+
+export const Default = () => <EmailPreferences />

@@ -2,7 +2,7 @@
 
 exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="standalone-range__StyledDatePicker-yne6lo-0 dWVLwI"
+  className="sc-bZQynM kspNNT"
 >
   <div
     className="DayPicker Selectable"
@@ -14,21 +14,20 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       tabIndex={0}
     >
       <p
-        className="k-u-size-tiny k-u-weight-regular navbar__StyledText-sc-1v9dr3-0 kglrxq"
+        className="sc-htpNat KtFsv k-u-size-tiny k-u-weight-regular sc-bxivhb BTiTW"
       >
         Sélectionnez la période souhaitée
       </p>
       <div
-        className="DayPicker-NavBar navbar__StyledButton-sc-1v9dr3-1 TCbUf"
+        className="sc-ifAKCX jhToMv DayPicker-NavBar"
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv button__StyledButton-sc-1q5nte0-0 cXcqfZ"
+          className="sc-bdVaJa fQYNxU sc-EHOje lbpOMi"
           onClick={[Function]}
         >
           <svg
             className=""
-            data-radium={true}
             fill="#222"
             height="8"
             style={
@@ -40,6 +39,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
             width="8"
             xmlns="http://www.w3.org/2000/svg"
           >
+            
             <path
               d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
             />
@@ -47,12 +47,11 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="navbar__StyledArrowIcon-sc-1v9dr3-2 iXVBAv button__StyledButton-sc-1q5nte0-0 cXcqfZ"
+          className="sc-bdVaJa fQYNxU sc-EHOje lbpOMi"
           onClick={[Function]}
         >
           <svg
             className=""
-            data-radium={true}
             fill="#222"
             height="8"
             style={
@@ -64,6 +63,7 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
             width="8"
             xmlns="http://www.w3.org/2000/svg"
           >
+            
             <path
               d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
             />

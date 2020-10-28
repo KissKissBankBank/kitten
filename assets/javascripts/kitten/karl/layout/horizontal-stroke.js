@@ -1,40 +1,28 @@
 import React from 'react'
 import { Grid, GridCol } from '../../components/grid/grid'
-import Radium from 'radium'
 import { Marger } from '../../components/layout/marger'
 import { HorizontalStroke } from '../../components/layout/horizontal-stroke'
-import { Text as TextBase } from '../../components/typography/text'
+import { Text } from '../../components/typography/text'
 import { KarlExampleTitle } from '../../karl/examples/title'
+import styled from 'styled-components'
 
-const Text = Radium(TextBase)
+const StyledFlexContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
 
-const KarlHorizontalStrokesWithContentBase = () => (
-  <div style={styles.content}>
+export const KarlHorizontalStrokesWithContent = () => (
+  <StyledFlexContainer>
     <HorizontalStroke size="tiny" />
     <Text
       size="tiny"
       weight="regular"
-      style={styles.content.text}
+      className="k-u-margin-left-single"
       color="font1"
     >
       Lorem
     </Text>
-  </div>
-)
-
-const styles = {
-  content: {
-    display: 'flex',
-    alignItems: 'center',
-
-    text: {
-      marginLeft: '10px',
-    },
-  },
-}
-
-export const KarlHorizontalStrokesWithContent = Radium(
-  KarlHorizontalStrokesWithContentBase,
+  </StyledFlexContainer>
 )
 
 export const KarlHorizontalStrokes = () => (

@@ -1,0 +1,43 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './engagement-card.stories.js'
+import { EngagementCard } from './index'
+
+<Meta title="Cards/EngagementCard" component={EngagementCard} />
+
+# EngagementCard
+
+## Import
+
+```js
+import { EngagementCard } from '@kisskissbankbank/kitten/src/components/cards/engagement-card'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="EngagementCard" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<EngagementCard />
+```
+
+#### Icon
+
+```js
+<EngagementCard icon={<MyIcon />} />
+```
+
+#### Background color
+
+```js
+<EngagementCard backgroundColor="…" />
+```
+
+#### With a border on hover
+
+```js
+<EngagementCard hoverBorder="…" />
+```

@@ -14,7 +14,6 @@ export const AdaptableGrid = ({
   colAlign,
   as,
   className,
-  ...other
 }) => {
   const gridProperties = { colAlign, colNumber, gutter }
   return (
@@ -57,18 +56,24 @@ export const AdaptableGridCol = ({
 
       return css`
         @media (min-width: ${pxToRem(ScreenConfig[size].min)}) {
-          ${col &&
+          ${
+            col &&
             css`
               width: ${(col * 100) / colNumber}%;
-            `}
-          ${offset > 0 &&
+            `
+          }
+          ${
+            offset > 0 &&
             css`
               margin-${marginDirection}: ${(offset * 100) / colNumber}%;
-            `}
-          ${offset === 0 &&
+            `
+          }
+          ${
+            offset === 0 &&
             css`
               margin-${marginDirection}: 0;
-            `}
+            `
+          }
         }
       `
     })
@@ -122,7 +127,7 @@ const StyledGridCol = styled.div`
   padding-right: ${({ gutter }) => pxToRem(gutter / 2)};
   flex: 0 0 auto;
   width: ${({ col, colNumber }) => (col * 100) / colNumber}%;
-  ${({ offset, colNumber, colAlign, marginDirection }) => {
+  ${({ offset, colNumber, marginDirection }) => {
     if (!offset) return
     return css`margin-${marginDirection}: ${(offset * 100) / colNumber}%;`
   }}

@@ -13,8 +13,17 @@
 // Display
 @import './utilities/display/hidden';
 
+// Event
+@import './utilities/event/pointer-event';
+
 // Image
 @import './utilities/image/responsive';
+
+// Link
+@import './utilities/link/link';
+
+// Reset
+@import './utilities/reset/button';
 
 // Spacing
 @import './utilities/spacing/margin';
@@ -25,6 +34,7 @@
 @import './utilities/text/anti-aliasing';
 @import './utilities/text/color';
 @import './utilities/text/decoration';
+@import './utilities/text/font-feature-settings';
 @import './utilities/text/inactive';
 @import './utilities/text/line-height';
 @import './utilities/text/size';

@@ -4,5 +4,10 @@ import HtmlToReact from 'html-to-react'
 export const parseHtml = value => {
   if (!value) return
 
-  return new HtmlToReact.Parser().parse(`<span>${value}</span>`).props.children
+  // We need to escape "<3" common emoji
+  const encodedValue =
+    typeof value === 'string' ? value.replace('<3', '&lt;3') : value
+
+  return new HtmlToReact.Parser().parse(`<span>${encodedValue}</span>`).props
+    .children
 }

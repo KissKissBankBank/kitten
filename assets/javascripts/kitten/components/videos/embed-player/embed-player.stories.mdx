@@ -1,0 +1,46 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './embed-player.stories.js'
+import { EmbedPlayer } from './index'
+
+<Meta title="Videos/EmbedPlayer" component={EmbedPlayer} />
+
+# EmbedPlayer
+
+## Usage
+
+<Canvas>
+  <Story name="Default" story={stories.Default} />
+</Canvas>
+
+## Import
+
+```js
+import { EmbedPlayer } from '@kisskissbankbank/kitten/src/components/videos/embed-player'
+```
+
+## Usage
+
+#### Default
+
+You can use iframeHtml to specify an iFrame to embed.
+The ratio prop is required.
+
+```js
+<EmbedPlayer
+  previewProps={
+    thumbnail: {
+      src: 'https://placekitten.com/620/376',
+      alt: 'Une image',
+    },
+  }
+  playButtonLabel="Play"
+  ratio={(376.0 / 620) * 100}
+  iframeHtml='<iframe
+      width="620"
+      height="376"
+      src="https://www.youtube.com/embed/30wT8ZJOeDA"
+      frameborder="0" allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>'
+/>
+```

@@ -11,7 +11,6 @@ const createMockMediaMatcher = matches => () => ({
 
 describe('<CommentForm />', () => {
   let originalMatchMedia
-  let component
 
   beforeEach(() => {
     originalMatchMedia = window.matchMedia

@@ -17,11 +17,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -29,20 +29,24 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 var _stepperIcon = require("./stepper-icon");
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var iconTypeComponents = {
   default: _stepperIcon.StepperIconDefault,
   inProgress: _stepperIcon.StepperIconInProgress,
   validated: _stepperIcon.StepperIconValidated
 };
 
-var Stepper =
-/*#__PURE__*/
-function (_Component) {
+var Stepper = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Stepper, _Component);
+
+  var _super = _createSuper(Stepper);
 
   function Stepper() {
     (0, _classCallCheck2.default)(this, Stepper);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Stepper).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Stepper, [{
@@ -53,7 +57,7 @@ function (_Component) {
         'k-Stepper__break': !this.props.withAlignStart
       });
       return text.split(regex).map(function (line, index) {
-        return line.match(regex) ? _react.default.createElement("br", {
+        return line.match(regex) ? /*#__PURE__*/_react.default.createElement("br", {
           className: brClassNames,
           key: index
         }) : line;
@@ -70,10 +74,10 @@ function (_Component) {
       var Tag = href ? 'a' : 'span';
       var IconType = iconTypeComponents[iconType];
       var className = (0, _classnames.default)('k-Stepper__link', linkClassNames);
-      return _react.default.createElement(Tag, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(Tag, (0, _extends2.default)({
         className: className,
         href: href
-      }, other), _react.default.createElement(IconType, null), this.lineBreaks(text));
+      }, other), /*#__PURE__*/_react.default.createElement(IconType, null), this.lineBreaks(text));
     }
   }, {
     key: "renderItems",
@@ -85,7 +89,7 @@ function (_Component) {
         'k-Stepper__item--tinySpacing': this.props.withTinySpacing
       });
       return items.map(function (item, index) {
-        return _react.default.createElement("li", {
+        return /*#__PURE__*/_react.default.createElement("li", {
           className: itemClassNames,
           key: index
         }, _this.renderLink(item, index));
@@ -97,10 +101,10 @@ function (_Component) {
       var listClassNames = (0, _classnames.default)('k-Stepper__list', {
         'k-Stepper__list--alignStart': this.props.withAlignStart
       });
-      return _react.default.createElement("nav", {
+      return /*#__PURE__*/_react.default.createElement("nav", {
         className: "k-Stepper",
         role: "navigation"
-      }, _react.default.createElement("ul", {
+      }, /*#__PURE__*/_react.default.createElement("ul", {
         className: listClassNames
       }, this.renderItems()));
     }

@@ -1,8 +1,7 @@
 import styled, { css } from 'styled-components'
-import { ScreenConfig } from '../../../constants/screen-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { Container } from '../../../components/grid/container'
-import { rgba } from 'polished'
+import { hexToRgba } from '../../../helpers/utils/hex-to-rgba'
 
 const gradientWidth = 20
 
@@ -10,6 +9,7 @@ export const StyledContainer = styled(Container)`
   position: relative;
   padding-left: 0;
   padding-right: 0;
+  overflow: scroll;
 `
 
 export const scrollableContainerStyle = ({}) => css`
@@ -44,8 +44,8 @@ export const scrollableContainerStyle = ({}) => css`
         width: ${pxToRem(gradientWidth)};
         background-image: linear-gradient(
           to right,
-          ${rgba(shadowColor, 1)},
-          ${rgba(shadowColor, 0)}
+          ${hexToRgba(shadowColor, 1)},
+          ${hexToRgba(shadowColor, 0)}
         );
       }
     `}
@@ -57,8 +57,8 @@ export const scrollableContainerStyle = ({}) => css`
         width: ${pxToRem(gradientWidth)};
         background-image: linear-gradient(
           to left,
-          ${rgba(shadowColor, 1)},
-          ${rgba(shadowColor, 0)}
+          ${hexToRgba(shadowColor, 1)},
+          ${hexToRgba(shadowColor, 0)}
         );
       }
     `}

@@ -3,7 +3,7 @@
 exports[`<Field /> with <Field.Autocomplete /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -27,10 +27,10 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="autocomplete__Container-lfeqwe-0 dWXmqi"
+      className="sc-jzJRlG bTVSHD"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="autocomplete__Input-lfeqwe-1 cWRlxK"
+        className="sc-cSHVUG jrEObi"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -55,7 +55,7 @@ Array [
 exports[`<Field /> with <Field.Input /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -86,28 +86,28 @@ Array [
             aria-describedby="tooltip"
             className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
             data-dismiss="tooltip"
-            data-event="click"
+            data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
+            data-place="right"
             data-tip={true}
+            onClick={[Function]}
             tabIndex={null}
             type="button"
           >
             <svg
               className="k-ButtonIcon__svg"
+              fill="#fff"
               viewBox="0 0 6 10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>
-                Question mark
-              </title>
+              
               <path
                 d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
-                fill="#FFF"
               />
             </svg>
           </button>
           <div
-            className="__react_component_tooltip place-right type-dark "
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
@@ -119,10 +119,10 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="text-input__StyledInput-sc-11wej6v-1 kfptEQ"
+      className="sc-htpNat iVlOqv"
       disabled={false}
       id="input"
       name="field"
@@ -130,10 +130,10 @@ Array [
     />
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-gZMcBi giNnHm k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -149,7 +149,7 @@ Array [
 exports[`<Field /> with <Field.Input /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -180,28 +180,28 @@ Array [
             aria-describedby="tooltip"
             className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
             data-dismiss="tooltip"
-            data-event="click"
+            data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
+            data-place="right"
             data-tip={true}
+            onClick={[Function]}
             tabIndex={null}
             type="button"
           >
             <svg
               className="k-ButtonIcon__svg"
+              fill="#fff"
               viewBox="0 0 6 10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>
-                Question mark
-              </title>
+              
               <path
                 d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
-                fill="#FFF"
               />
             </svg>
           </button>
           <div
-            className="__react_component_tooltip place-right type-dark "
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
@@ -213,10 +213,10 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="text-input__StyledInput-sc-11wej6v-1 iDULaY"
+      className="sc-htpNat fTSCbm"
       disabled={false}
       id="input"
       name="field"
@@ -229,7 +229,7 @@ Array [
 exports[`<Field /> with <Field.Password /> in error matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -260,28 +260,28 @@ Array [
             aria-describedby="tooltip"
             className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
             data-dismiss="tooltip"
-            data-event="click"
+            data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
+            data-place="right"
             data-tip={true}
+            onClick={[Function]}
             tabIndex={null}
             type="button"
           >
             <svg
               className="k-ButtonIcon__svg"
+              fill="#fff"
               viewBox="0 0 6 10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>
-                Question mark
-              </title>
+              
               <path
                 d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
-                fill="#FFF"
               />
             </svg>
           </button>
           <div
-            className="__react_component_tooltip place-right type-dark "
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
@@ -293,13 +293,13 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
+      className="sc-gqjmRU eSPiSL"
     >
       <input
-        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 kfptEQ"
+        className="sc-htpNat iVlOqv sc-VigVT fUPyOg"
         disabled={false}
         id="input"
         name="field"
@@ -308,7 +308,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="password-input__StyledIcon-sc-1futz46-2 jSmpuB"
+        className="sc-jTzLTM gQMtOg"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -334,10 +334,10 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-gZMcBi giNnHm k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -353,7 +353,7 @@ Array [
 exports[`<Field /> with <Field.Password /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -384,28 +384,28 @@ Array [
             aria-describedby="tooltip"
             className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
             data-dismiss="tooltip"
-            data-event="click"
+            data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
+            data-place="right"
             data-tip={true}
+            onClick={[Function]}
             tabIndex={null}
             type="button"
           >
             <svg
               className="k-ButtonIcon__svg"
+              fill="#fff"
               viewBox="0 0 6 10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>
-                Question mark
-              </title>
+              
               <path
                 d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
-                fill="#FFF"
               />
             </svg>
           </button>
           <div
-            className="__react_component_tooltip place-right type-dark "
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
@@ -417,13 +417,13 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="password-input__StyledPasswordInput-sc-1futz46-0 jORLcb"
+      className="sc-gqjmRU eSPiSL"
     >
       <input
-        className="password-input__StyledTextInput-sc-1futz46-1 frwehc text-input__StyledInput-sc-11wej6v-1 iDULaY"
+        className="sc-htpNat fTSCbm sc-VigVT fUPyOg"
         disabled={false}
         id="input"
         name="field"
@@ -432,7 +432,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="password-input__StyledIcon-sc-1futz46-2 jSmpuB"
+        className="sc-jTzLTM gQMtOg"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -463,7 +463,7 @@ Array [
 exports[`<Field /> with <Field.RadioButtonSet /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -487,7 +487,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <div
       className="k-RadioButtonSet"
@@ -549,7 +549,7 @@ Array [
 exports[`<Field /> with <Field.Select /> matches with snapshot 1`] = `
 Array [
   <div
-    className="marger__StyledMarger-q3lecu-0 gkLTfi"
+    className="sc-bdVaJa hOgMxB"
   >
     <div
       className="k-Line"
@@ -573,7 +573,7 @@ Array [
     </div>
   </div>,
   <div
-    className="marger__StyledMarger-q3lecu-0 WSKaG"
+    className="sc-bdVaJa ggQxmM"
   >
     <div
       className="k-Select"

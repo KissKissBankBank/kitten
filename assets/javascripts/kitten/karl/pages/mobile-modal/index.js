@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
 
     @media (max-width: ${pxToRem(ScreenConfig.S.max)}) {
       width: 100vw;
-      height: 100vh;
+      height: 100%;
     }
     @media (min-width: ${pxToRem(ScreenConfig.M.min)}) {
       max-height: calc(100vh - ${pxToRem(20)} * 2);
@@ -57,6 +57,33 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
 
     background-color: rgba(34, 34, 34, .9);
+  }
+
+  .k-MobileModal__overlay {
+    opacity: 0;
+  }
+  .k-MobileModal__content {
+    opacity: 0;
+    transform: scale(.94);
+  }
+
+  .k-MobileModal__overlay--afterOpen {
+    transition: opacity .3s ease;
+    opacity: 1;
+  }
+  .k-MobileModal--afterOpen {
+    transition: opacity .3s ease, transform .3s ease;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .k-MobileModal__overlay--beforeClose {
+    opacity: 0;
+  }
+  .k-MobileModal--beforeClose {
+    transition: opacity .3s ease, transform .5s ease;
+    transform: scale(1.06);
+    opacity: 0;
   }
 `
 

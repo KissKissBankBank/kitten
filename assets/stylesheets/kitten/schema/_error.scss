@@ -60,7 +60,7 @@
       );
     }
   }
-  @elseif type-of($unit) == 'list' {
+  @else if type-of($unit) == 'list' {
     @return k-schema-error(
       $module, $path,
       "should be one of #{$unit}"

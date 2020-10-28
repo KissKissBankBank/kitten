@@ -103,11 +103,7 @@ describe('<Stepper />', () => {
 
   describe('with different icon types', () => {
     it('renders a <StepperIconDefault />', () => {
-      const icon = component
-        .find('.k-Stepper__link')
-        .at(0)
-        .children()
-        .first()
+      const icon = component.find('.k-Stepper__link').at(0).children().first()
 
       expect(icon.type()).toBe(StepperIconDefault)
     })
@@ -123,11 +119,7 @@ describe('<Stepper />', () => {
     })
 
     it('renders a <StepperIconValidated />', () => {
-      const icon = component
-        .find('.k-Stepper__link')
-        .at(2)
-        .children()
-        .first()
+      const icon = component.find('.k-Stepper__link').at(2).children().first()
 
       expect(icon.type()).toBe(StepperIconValidated)
     })

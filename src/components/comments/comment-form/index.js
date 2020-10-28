@@ -13,11 +13,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _taggedTemplateLiteral2 = _interopRequireDefault(require("@babel/runtime/helpers/taggedTemplateLiteral"));
 
@@ -42,6 +42,10 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
 var _typography = require("../../../helpers/utils/typography");
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _templateObject3() {
   var data = (0, _taggedTemplateLiteral2.default)(["\n      border-right-color: ", ";\n    "]);
@@ -112,16 +116,16 @@ var StyledArrowBefore = _styledComponents.default.span.withConfig({
   componentId: "sc-1yidca9-5"
 })(["position:absolute;width:0;height:0;margin-top:-", ";border-width:", ";border-style:solid;border-color:transparent;border-right-color:", ";left:-", ";"], (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), _colorsConfig.default.background1, (0, _typography.pxToRem)(7));
 
-var CommentForm =
-/*#__PURE__*/
-function (_PureComponent) {
+var CommentForm = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(CommentForm, _PureComponent);
+
+  var _super = _createSuper(CommentForm);
 
   function CommentForm(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, CommentForm);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CommentForm).call(this, props));
+    _this = _super.call(this, props);
 
     _this.handleChange = function (e) {
       var element = e.target;
@@ -153,7 +157,7 @@ function (_PureComponent) {
       var _this$props = this.props,
           avatarImgProps = _this$props.avatarImgProps,
           avatarBadge = _this$props.avatarBadge;
-      return _react.default.createElement(StyledGrid, null, _react.default.createElement(_commentAvatar.CommentAvatar, {
+      return /*#__PURE__*/_react.default.createElement(StyledGrid, null, /*#__PURE__*/_react.default.createElement(_commentAvatar.CommentAvatar, {
         avatarBadge: avatarBadge,
         avatarImgProps: avatarImgProps
       }), this.renderInput());
@@ -168,7 +172,7 @@ function (_PureComponent) {
           commentLabel = _this$props2.commentLabel,
           ariaId = _this$props2.ariaId,
           textareaId = _this$props2.textareaId;
-      return _react.default.createElement(StyledGridCol, null, _react.default.createElement(StyledInput, null, _react.default.createElement(StyledTextarea, {
+      return /*#__PURE__*/_react.default.createElement(StyledGridCol, null, /*#__PURE__*/_react.default.createElement(StyledInput, null, /*#__PURE__*/_react.default.createElement(StyledTextarea, {
         id: textareaId,
         "aria-label": commentLabel,
         "aria-describedby": ariaId,
@@ -180,16 +184,16 @@ function (_PureComponent) {
         placeholder: placeholder,
         onChange: this.handleChange,
         rows: "1"
-      }), _react.default.createElement(StyledArrow, null, _react.default.createElement(StyledArrowBefore, null))), this.renderError(), this.renderButton());
+      }), /*#__PURE__*/_react.default.createElement(StyledArrow, null, /*#__PURE__*/_react.default.createElement(StyledArrowBefore, null))), this.renderError(), this.renderButton());
     }
   }, {
     key: "renderButton",
     value: function renderButton() {
       if (!this.state.value) return;
       var commentButton = this.props.commentButton;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2"
-      }, _react.default.createElement(_button.Button, {
+      }, /*#__PURE__*/_react.default.createElement(_button.Button, {
         type: "button",
         modifier: "helium",
         onClick: this.handleSubmit,
@@ -204,9 +208,9 @@ function (_PureComponent) {
           errorMessage = _this$props3.errorMessage,
           ariaId = _this$props3.ariaId;
       if (!error) return;
-      return _react.default.createElement(_marger.Marger, {
+      return /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: ".5"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         id: ariaId,
         color: "error",
         size: "micro",

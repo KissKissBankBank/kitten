@@ -7,12 +7,23 @@
 // Border
 @include k-utilities-border;
 
+// Cursor
+@include k-utilities-cursor;
+
 // Display
 @include k-utilities-hidden;
 
+// Event
+@include k-utilities-event;
 
 // Image
 @include k-utilities-responsive;
+
+// Link
+@include k-utilities-link;
+
+// Reset
+@include k-utilities-reset-button;
 
 // Spacing
 @include k-utilities-margin;

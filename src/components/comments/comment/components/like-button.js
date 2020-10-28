@@ -17,11 +17,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -39,6 +39,10 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _visuallyHidden = require("../../../accessibility/visually-hidden");
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "like-button__StyledButton",
   componentId: "wk7ovs-0"
@@ -53,14 +57,14 @@ var StyledHeartIcon = (0, _styledComponents.default)(_heartIcon.HeartIcon).withC
   componentId: "wk7ovs-1"
 })(["width:", ";height:", ";margin-right:", ";overflow:hidden;transition:fill 0.2s;"], (0, _typography.pxToRem)(14), (0, _typography.pxToRem)(12), (0, _typography.pxToRem)(10));
 
-var LikeButton =
-/*#__PURE__*/
-function (_PureComponent) {
+var LikeButton = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(LikeButton, _PureComponent);
+
+  var _super = _createSuper(LikeButton);
 
   function LikeButton() {
     (0, _classCallCheck2.default)(this, LikeButton);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(LikeButton).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(LikeButton, [{
@@ -71,10 +75,10 @@ function (_PureComponent) {
           accessibilityLabel = _this$props.accessibilityLabel,
           hasLiked = _this$props.hasLiked,
           props = (0, _objectWithoutProperties2.default)(_this$props, ["children", "accessibilityLabel", "hasLiked"]);
-      return _react.default.createElement(StyledButton, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
         role: "button",
         "aria-pressed": "".concat(hasLiked)
-      }, props), accessibilityLabel && _react.default.createElement(_visuallyHidden.VisuallyHidden, null, accessibilityLabel), _react.default.createElement(StyledHeartIcon, {
+      }, props), accessibilityLabel && /*#__PURE__*/_react.default.createElement(_visuallyHidden.VisuallyHidden, null, accessibilityLabel), /*#__PURE__*/_react.default.createElement(StyledHeartIcon, {
         "aria-hidden": "true",
         focusable: "false"
       }), children);

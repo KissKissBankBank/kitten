@@ -101,7 +101,6 @@ export class TextInputWithUnitForm extends PureComponent {
       onInputChange,
       onInputFocus,
       version,
-      ...others
     } = this.props
 
     return (

@@ -1,0 +1,71 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './comment.stories.js'
+import { Comment } from './index'
+
+<Meta title="Form/Comment" component={Comment} />
+
+# Comment
+
+## Import
+
+```js
+import { Comment } from '@kisskissbankbank/kitten/src/components/comments/comment'
+```
+
+## Usage
+
+<Canvas>
+  <Story name="Comment" story={stories.Default} />
+</Canvas>
+
+#### Default
+
+```js
+<Comment />
+```
+
+### With avatar
+
+```js
+<Comment
+  avatarImgProps={{
+    src: '…',
+    alt: '…',
+  }}
+/>
+```
+
+### With commentDate
+
+```js
+<Comment commentDate="…" />
+```
+
+### With ownerName
+
+```js
+<Comment ownerName="…" />
+```
+
+### Text
+
+```js
+<Comment text="…" />
+```
+
+### Likes
+
+```js
+<Comment
+  likeButtonProps={{
+    hasLiked: '…',
+    children: '…',
+    accessibilityLabel: '…',
+  }}
+/>
+
+### With avatarBadge
+
+~~~js
+<Comment avatarBadge="…" />
+```

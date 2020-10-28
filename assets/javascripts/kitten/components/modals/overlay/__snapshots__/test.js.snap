@@ -27,7 +27,7 @@ exports[`<Overlay /> overlay with \`isActive\` prop and custom class matches wit
 }
 
 <div
-  className="is-active fooBarTest c0"
+  className="c0 is-active fooBarTest"
 />
 `;
 
@@ -58,7 +58,7 @@ exports[`<Overlay /> overlay with \`isActive\` prop matches with snapshot 1`] = 
 }
 
 <div
-  className="is-active c0"
+  className="c0 is-active"
 />
 `;
 

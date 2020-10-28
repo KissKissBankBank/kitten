@@ -45,13 +45,7 @@ const StyledStrong = styled.strong`
   }
 `
 
-export const Contributor = ({
-  firstName,
-  lastName,
-  email,
-  address,
-  hasMultipleContributions,
-}) => {
+export const Contributor = ({ firstName, lastName, email, address }) => {
   return (
     <section>
       <StyledTitle>Contributeur</StyledTitle>
@@ -76,13 +70,9 @@ export const Contributor = ({
   )
 }
 
-Contributor.defaultProps = {
-  hasMultipleContributions: false,
-}
 Contributor.propTypes = {
   firstName: PropTypes.string.isRequired,
   lastName: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   address: PropTypes.string.isRequired,
-  hasMultipleContributions: PropTypes.bool,
 }

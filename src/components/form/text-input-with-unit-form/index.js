@@ -13,11 +13,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
@@ -41,6 +41,10 @@ var _button = require("../../../components/buttons/button");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledFormContainer = _styledComponents.default.form.withConfig({
   displayName: "text-input-with-unit-form__StyledFormContainer",
   componentId: "wjoixz-0"
@@ -49,7 +53,7 @@ var StyledFormContainer = _styledComponents.default.form.withConfig({
 var StyledGridPosition = (0, _styledComponents.default)(function (_ref) {
   var align = _ref.align,
       others = (0, _objectWithoutProperties2.default)(_ref, ["align"]);
-  return _react.default.createElement(_grid.Grid, others);
+  return /*#__PURE__*/_react.default.createElement(_grid.Grid, others);
 }).withConfig({
   displayName: "text-input-with-unit-form__StyledGridPosition",
   componentId: "wjoixz-1"
@@ -60,7 +64,7 @@ var StyledGridPosition = (0, _styledComponents.default)(function (_ref) {
 var StyledButton = (0, _styledComponents.default)(function (_ref3) {
   var version = _ref3.version,
       others = (0, _objectWithoutProperties2.default)(_ref3, ["version"]);
-  return _react.default.createElement(_button.Button, others);
+  return /*#__PURE__*/_react.default.createElement(_button.Button, others);
 }).withConfig({
   displayName: "text-input-with-unit-form__StyledButton",
   componentId: "wjoixz-2"
@@ -69,14 +73,14 @@ var StyledButton = (0, _styledComponents.default)(function (_ref3) {
   return version === 'tiny' && (0, _styledComponents.css)(["width:100%;"]);
 });
 
-var TextInputWithUnitForm =
-/*#__PURE__*/
-function (_PureComponent) {
+var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInputWithUnitForm, _PureComponent);
+
+  var _super = _createSuper(TextInputWithUnitForm);
 
   function TextInputWithUnitForm() {
     (0, _classCallCheck2.default)(this, TextInputWithUnitForm);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(TextInputWithUnitForm).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(TextInputWithUnitForm, [{
@@ -99,27 +103,26 @@ function (_PureComponent) {
           onInputBlur = _this$props.onInputBlur,
           onInputChange = _this$props.onInputChange,
           onInputFocus = _this$props.onInputFocus,
-          version = _this$props.version,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["align", "formIsDisabled", "inputId", "inputPlaceholder", "inputUnit", "inputLabel", "inputDefaultValue", "inputIsOnError", "errorMessage", "buttonLabel", "onButtonMouseEnter", "onButtonMouseLeave", "onFormSubmit", "onInputBlur", "onInputChange", "onInputFocus", "version"]);
-      return _react.default.createElement(StyledFormContainer, {
+          version = _this$props.version;
+      return /*#__PURE__*/_react.default.createElement(StyledFormContainer, {
         onSubmit: onFormSubmit
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "3",
         bottom: !inputIsOnError ? 3 : 1
-      }, _react.default.createElement(StyledGridPosition, {
+      }, /*#__PURE__*/_react.default.createElement(StyledGridPosition, {
         align: align
-      }, _react.default.createElement(_grid.GridCol, {
+      }, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         "col-m": version === 'tiny' ? 0 : 5,
         "col-xs": version === 'tiny' ? 0 : 7
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "1.5"
-      }, _react.default.createElement(_label.Label, {
+      }, /*#__PURE__*/_react.default.createElement(_label.Label, {
         size: "micro",
         htmlFor: inputId
-      }, inputLabel)), _react.default.createElement(_marger.Marger, {
+      }, inputLabel)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1.5",
         bottom: inputIsOnError ? 1 : null
-      }, _react.default.createElement(_textInputWithUnit.TextInputWithUnit, {
+      }, /*#__PURE__*/_react.default.createElement(_textInputWithUnit.TextInputWithUnit, {
         error: inputIsOnError,
         id: inputId,
         type: "number",
@@ -131,15 +134,15 @@ function (_PureComponent) {
         onFocus: onInputFocus,
         defaultValue: inputDefaultValue,
         autoComplete: "off"
-      })), inputIsOnError && _react.default.createElement(_marger.Marger, {
+      })), inputIsOnError && /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1"
-      }, _react.default.createElement(_text.Text, {
+      }, /*#__PURE__*/_react.default.createElement(_text.Text, {
         size: "micro",
         color: "error",
         weight: "regular"
-      }, errorMessage))))), _react.default.createElement(StyledGridPosition, {
+      }, errorMessage))))), /*#__PURE__*/_react.default.createElement(StyledGridPosition, {
         align: align
-      }, _react.default.createElement(StyledButton, {
+      }, /*#__PURE__*/_react.default.createElement(StyledButton, {
         size: "big",
         modifier: "helium",
         type: "submit",

@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
 
   .k-Modal__content {
     position: relative;
-    max-height: calc(100vh - ${pxToRem(20)} * 2);
+    max-height: calc(100% - ${pxToRem(20)} * 2);
     max-width: calc(100vw - ${pxToRem(20)} * 2);
 
     background-color: ${COLORS.background1};
@@ -38,7 +38,11 @@ const GlobalStyle = createGlobalStyle`
   .k-Modal__close {
     position: absolute;
     top: 0;
-    right: ${pxToRem(50)};
+    right: ${pxToRem(30)};
+
+    button {
+      margin: 0;
+    }
   }
 
   .k-Modal__close--fixed {
@@ -58,6 +62,35 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
 
     background-color: rgba(34, 34, 34, .9);
+  }
+`
+
+const AnimatedGlobalStyle = createGlobalStyle`
+  .k-Modal__overlay {
+    opacity: 0;
+  }
+  .k-Modal__content {
+    opacity: 0;
+    transform: scale(.94);
+  }
+
+  .k-Modal__overlay--afterOpen {
+    transition: opacity .3s ease;
+    opacity: 1;
+  }
+  .k-Modal--afterOpen {
+    transition: opacity .3s ease, transform .3s ease;
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .k-Modal__overlay--beforeClose {
+    opacity: 0;
+  }
+  .k-Modal--beforeClose {
+    transition: opacity .3s ease, transform .5s ease;
+    transform: scale(1.06);
+    opacity: 0;
   }
 `
 
@@ -84,8 +117,9 @@ export class Modal extends Component {
       <div className="k-Modal__close">
         <CloseButton
           className="k-Modal__close--fixed"
-          modifier="beryllium"
+          modifier="hydrogen"
           onClick={this.close}
+          size="micro"
           closeButtonLabel={closeButtonLabel}
         />
       </div>
@@ -124,6 +158,7 @@ export class Modal extends Component {
       disableOutsideScroll,
       modalClassNames,
       hasCloseButton,
+      isAnimated,
       ...others
     } = this.props
 
@@ -135,7 +170,10 @@ export class Modal extends Component {
 
         {this.renderGlobalStyle()}
 
+        {isAnimated && <AnimatedGlobalStyle />}
+
         <ReactModal
+          closeTimeoutMS={isAnimated ? 500 : 0}
           role="dialog"
           className={{ ...modalClassNames.className }}
           overlayClassName={{ ...modalClassNames.overlayClassName }}
@@ -182,6 +220,7 @@ Modal.propTypes = {
     closeContainerClassName: PropTypes.string,
   }),
   hasCloseButton: PropTypes.bool,
+  isAnimated: PropTypes.bool,
 }
 
 Modal.defaultProps = {
@@ -205,4 +244,5 @@ Modal.defaultProps = {
     closeContainerClassName: 'k-Modal__close',
   },
   hasCloseButton: true,
+  isAnimated: true,
 }

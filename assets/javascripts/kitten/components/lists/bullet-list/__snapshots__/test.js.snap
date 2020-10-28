@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BulletList /> default matches with snapshot 1`] = `
+<ul
+  aria-hidden="true"
+  className="sc-bdVaJa eUtzqk"
+>
+  <li
+    className="sc-bwzfXH jUkWMz"
+    id="1"
+  >
+    Dis Manibus
+  </li>
+  <li
+    className="sc-bwzfXH jUkWMz"
+  >
+    Calpurnia Felicla
+  </li>
+  <li
+    className="sc-bwzfXH jUkWMz"
+  >
+    Germulio coniugi
+  </li>
+</ul>
+`;
+
+exports[`<BulletList /> with big props matches with snapshot 1`] = `
+<ul
+  className="sc-bdVaJa eUtzqk"
+/>
+`;
+
+exports[`<BulletList /> with huge props matches with snapshot 1`] = `
+<ul
+  className="sc-bdVaJa eUtzqk"
+/>
+`;
+
+exports[`<BulletList /> with large props matches with snapshot 1`] = `
+<ul
+  className="sc-bdVaJa eUtzqk"
+/>
+`;
+
+exports[`<BulletList /> with small props matches with snapshot 1`] = `
+<ul
+  className="sc-bdVaJa eUtzqk"
+/>
+`;

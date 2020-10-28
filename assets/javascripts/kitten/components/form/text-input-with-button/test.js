@@ -1,6 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { TextInputWithButton } from './index'
+import { Loader } from '../../../components/loaders/loader'
 
 describe('<TextInputWithButton />', () => {
   let component
@@ -20,7 +21,25 @@ describe('<TextInputWithButton />', () => {
       component = renderer
         .create(
           <TextInputWithButton
-            value="Button"
+            buttonValue="Button"
+            inputValue="foobar"
+            placeholder="Les props sont transmises"
+          />,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with component inside button value', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <TextInputWithButton
+            buttonValue={<Loader />}
             placeholder="Les props sont transmises"
           />,
         )
@@ -65,6 +84,26 @@ describe('<TextInputWithButton />', () => {
   describe('with tiny prop', () => {
     beforeEach(() => {
       component = renderer.create(<TextInputWithButton tiny />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with huge prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInputWithButton huge />).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with giant prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TextInputWithButton giant />).toJSON()
     })
 
     it('matches with snapshot', () => {

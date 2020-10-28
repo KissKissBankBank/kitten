@@ -36,7 +36,7 @@ const StyledWidgetContainer = styled.div`
 
 class State extends PureComponent {
   static propTypes = {
-    state: PropTypes.string,
+    state: PropTypes.node,
     widgetState: PropTypes.node,
     loading: PropTypes.bool,
   }

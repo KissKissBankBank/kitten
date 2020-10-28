@@ -1,0 +1,207 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
+<div
+  className="sc-bxivhb NpcKf k-CartRewardCard"
+  onAnimationEnd={[Function]}
+>
+  <div
+    className="k-CartRewardCard__cart"
+  >
+    <button
+      aria-label="Delete"
+      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--hydrogen k-ButtonIcon--micro"
+      onClick={[Function]}
+      tabIndex={null}
+      type="button"
+    >
+      <svg
+        aria-hidden={true}
+        className="k-ButtonIcon__svg"
+        fill="#fff"
+        height="14"
+        viewBox="0 0 12 14"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="k-u-margin-bottom-quadruple k-CartRewardCard__description"
+  >
+    <div
+      className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
+    >
+      <h1
+        className="sc-bwzfXH cavDWq"
+      >
+        Custom title amount
+      </h1>
+    </div>
+    
+    <div
+      className="k-u-margin-bottom-double k-u-margin-top-double k-u-margin-top-single@xs-down"
+    >
+      <p
+        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+      >
+        Custom text description
+      </p>
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 1`] = `
+<div
+  className="sc-bxivhb NpcKf k-CartRewardCard"
+  onAnimationEnd={[Function]}
+>
+  <div
+    className="k-CartRewardCard__cart"
+  >
+    <button
+      aria-label="Delete"
+      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--hydrogen k-ButtonIcon--micro"
+      onClick={[Function]}
+      tabIndex={null}
+      type="button"
+    >
+      <svg
+        aria-hidden={true}
+        className="k-ButtonIcon__svg"
+        fill="#fff"
+        height="14"
+        viewBox="0 0 12 14"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="k-u-margin-bottom-quadruple k-CartRewardCard__description"
+  >
+    <div
+      className="k-u-margin-bottom-double k-u-margin-bottom-single@xs-down"
+    >
+      <h1
+        className="sc-bwzfXH cavDWq"
+      >
+        Custom title amount
+      </h1>
+    </div>
+    
+    <div
+      className="k-u-margin-bottom-double k-u-margin-top-double k-u-margin-top-single@xs-down"
+    >
+      <p
+        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+      >
+        Custom text description
+      </p>
+    </div>
+    
+  </div>
+</div>
+`;
+
+exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
+<div
+  className="sc-bxivhb NpcKf k-CartRewardCard"
+  onAnimationEnd={[Function]}
+>
+  <div
+    className="k-CartRewardCard__cart"
+  >
+    <button
+      aria-label="Delete"
+      className="k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--hydrogen k-ButtonIcon--micro"
+      onClick={[Function]}
+      tabIndex={null}
+      type="button"
+    >
+      <svg
+        aria-hidden={true}
+        className="k-ButtonIcon__svg"
+        fill="#fff"
+        height="14"
+        viewBox="0 0 12 14"
+        width="12"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    className="k-u-margin-bottom-quadruple k-CartRewardCard__description"
+  >
+    <div
+      className="k-u-margin-bottom-double"
+    >
+      <Custom title tag
+        className="sc-bwzfXH cavDWq"
+        cssColor={null}
+        italic={true}
+        margin={false}
+        modifier="quinary"
+      >
+        Custom title amount
+      </Custom title tag>
+    </div>
+    <div
+      className="k-u-margin-bottom-single k-u-margin-top-double"
+    >
+      <span
+        className="sc-htpNat KtFsv k-u-size-default k-u-weight-bold"
+      >
+        Custom subtitle
+      </span>
+    </div>
+    <div
+      className="k-u-margin-bottom-double k-u-margin-top-double"
+    >
+      <p
+        className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
+      >
+        Custom text description
+      </p>
+    </div>
+    <p
+      className="sc-htpNat KtFsv k-u-size-tiny k-u-weight-regular k-u-margin-none"
+    >
+      Custom shipping title
+       
+      <span
+        className="sc-htpNat KtFsv k-u-weight-light"
+      >
+        Custom shipping value
+      </span>
+    </p>
+    <div
+      className="sc-bdVaJa jtfdLD"
+    >
+      <a
+        className="sc-htpNat KtFsv k-u-color-primary1 k-u-decoration-none k-u-size-tiny k-u-weight-regular"
+        href="Custom amount link"
+      >
+        Custom amount
+      </a>
+    </div>
+  </div>
+</div>
+`;

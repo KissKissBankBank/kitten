@@ -15,11 +15,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -34,6 +34,10 @@ var _marger = require("../../../../components/layout/marger");
 var _typography = require("../../../../helpers/utils/typography");
 
 var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 var StyledImage = _styledComponents.default.img.withConfig({
   displayName: "image__StyledImage",
@@ -58,14 +62,14 @@ var StyledImageContainer = (0, _styledComponents.default)(_marger.Marger).withCo
   return imageContainerRatio && (0, _styledComponents.css)(["overflow:hidden;position:relative;padding-top:calc(100% / calc(", "));& > img{position:absolute;top:0;height:auto;text-align:center;}"], imageContainerRatio);
 });
 
-var Image =
-/*#__PURE__*/
-function (_PureComponent) {
+var Image = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(Image, _PureComponent);
+
+  var _super = _createSuper(Image);
 
   function Image() {
     (0, _classCallCheck2.default)(this, Image);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(Image).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(Image, [{
@@ -80,7 +84,7 @@ function (_PureComponent) {
           imageContainerRatio = _this$props.imageContainerRatio;
 
       var PlayerButtonOnImage = function PlayerButtonOnImage(props) {
-        return _react.default.createElement(StyledPlayerButton, null, _react.default.createElement(_text.Text, {
+        return /*#__PURE__*/_react.default.createElement(StyledPlayerButton, null, /*#__PURE__*/_react.default.createElement(_text.Text, {
           size: "default",
           weight: "regular",
           color: props.arrowColor,
@@ -88,15 +92,15 @@ function (_PureComponent) {
         }, "\u25BA"));
       };
 
-      return _react.default.createElement(StyledImageContainer, {
+      return /*#__PURE__*/_react.default.createElement(StyledImageContainer, {
         bottom: "2",
         className: "k-Card__imageContainer",
         imageContainerBackground: imageContainerBackground,
         imageContainerRatio: imageContainerRatio
-      }, withPlayerButtonOnImage && _react.default.createElement(PlayerButtonOnImage, {
+      }, withPlayerButtonOnImage && /*#__PURE__*/_react.default.createElement(PlayerButtonOnImage, {
         arrowColor: arrowColor,
         ariaLabel: ariaLabel
-      }), _react.default.createElement(StyledImage, (0, _extends2.default)({}, imageProps, {
+      }), /*#__PURE__*/_react.default.createElement(StyledImage, (0, _extends2.default)({}, imageProps, {
         alt: imageProps.alt || '',
         className: "k-Card__image"
       })));

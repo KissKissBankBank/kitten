@@ -15,11 +15,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
-var _getPrototypeOf3 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -41,14 +41,16 @@ var _waitingIcon = require("../../../../components/icons/waiting-icon");
 
 var _lockIcon = require("../../../../components/icons/lock-icon");
 
-var Status =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var Status = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(Status, _Component);
 
-  function Status() {
-    var _getPrototypeOf2;
+  var _super = _createSuper(Status);
 
+  function Status() {
     var _this;
 
     (0, _classCallCheck2.default)(this, Status);
@@ -57,7 +59,7 @@ function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(Status)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _super.call.apply(_super, [this].concat(args));
 
     _this.iconByStatus = function () {
       var _this$props = _this.props,
@@ -66,24 +68,24 @@ function (_Component) {
           error = _this$props.error,
           waiting = _this$props.waiting,
           disabled = _this$props.disabled;
-      if (valid) return _react.default.createElement(_checkedIcon.CheckedIcon, {
+      if (valid) return /*#__PURE__*/_react.default.createElement(_checkedIcon.CheckedIcon, {
         width: "10",
         title: null
       });
-      if (success) return _react.default.createElement(_checkedIcon.CheckedIcon, {
+      if (success) return /*#__PURE__*/_react.default.createElement(_checkedIcon.CheckedIcon, {
         width: "10",
         title: null
       });
-      if (error) return _react.default.createElement(_warningIcon.WarningIcon, {
+      if (error) return /*#__PURE__*/_react.default.createElement(_warningIcon.WarningIcon, {
         color: _colorsConfig.default.error,
         title: null
       });
-      if (waiting) return _react.default.createElement(_waitingIcon.WaitingIcon, {
+      if (waiting) return /*#__PURE__*/_react.default.createElement(_waitingIcon.WaitingIcon, {
         height: "4",
         color: _colorsConfig.default.primary1,
         title: null
       });
-      if (disabled) return _react.default.createElement(_lockIcon.LockIcon, {
+      if (disabled) return /*#__PURE__*/_react.default.createElement(_lockIcon.LockIcon, {
         width: "10",
         color: _colorsConfig.default.background1,
         title: null
@@ -100,7 +102,7 @@ function (_Component) {
       var _this$props2 = this.props,
           children = _this$props2.children,
           other = (0, _objectWithoutProperties2.default)(_this$props2, ["children"]);
-      return _react.default.createElement(StyledStatus, other, this.iconByStatus() || children);
+      return /*#__PURE__*/_react.default.createElement(StyledStatus, other, this.iconByStatus() || children);
     }
   }]);
   return Status;

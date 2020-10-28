@@ -111,9 +111,9 @@ var StandaloneRangeDatePicker = function StandaloneRangeDatePicker(_ref12) {
     setDateRange(_reactDayPicker.DateUtils.addDayToRange(day, dateRange));
   };
 
-  return _react.default.createElement(StyledDatePicker, {
+  return /*#__PURE__*/_react.default.createElement(StyledDatePicker, {
     styles: styles
-  }, _react.default.createElement(_reactDayPicker.default, (0, _extends2.default)({
+  }, /*#__PURE__*/_react.default.createElement(_reactDayPicker.default, (0, _extends2.default)({
     className: "Selectable",
     numberOfMonths: numberOfMonths,
     selectedDays: [dateRange.from, dateRange],
@@ -123,7 +123,7 @@ var StandaloneRangeDatePicker = function StandaloneRangeDatePicker(_ref12) {
     },
     onDayClick: handleDayClick,
     disabledDays: disabledDays,
-    navbarElement: _react.default.createElement(_navbar.Navbar, {
+    navbarElement: /*#__PURE__*/_react.default.createElement(_navbar.Navbar, {
       title: title,
       iconColor: styles.header.icon.color,
       months: months

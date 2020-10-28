@@ -26,4 +26,9 @@ export default {
   error: '#ff0046', // Red
   error2: '#ffe5ec', // Light Red
   error3: '#ffb2c7', // Semi Light Red
+
+  orange: '#ff7800',
+
+  warning: '#8a6d3b',
+  warning2: '#fcf8e3',
 }

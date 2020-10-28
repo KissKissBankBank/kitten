@@ -1,47 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<IconBadge /> by default matches with snapshot 1`] = `
-<div
-  data-radium={true}
+<span
+  className="sc-bdVaJa kqnBTx"
+  disabled={false}
 >
   <span
-    data-radium={true}
-    style={
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "#61d079",
-        "borderRadius": 50,
-        "display": "flex",
-        "justifyContent": "center",
-        "minHeight": 50,
-        "minWidth": 50,
-        "padding": 0,
-      }
-    }
+    className="k-IconBadge__content"
   >
-    <span
-      data-radium={true}
-      style={
-        Object {
-          "color": "#fff",
-          "fill": "#fff",
-          "flexBasis": 11,
-          "fontSize": 14,
-          "fontWeight": "bold",
-          "lineHeight": 0,
-          "textAlign": "center",
-        }
-      }
-    >
-      Custom children
-    </span>
+    Custom children
   </span>
-  <style
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "",
-      }
-    }
-  />
-</div>
+</span>
 `;

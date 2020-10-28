@@ -1,0 +1,54 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './donation-card.stories.js'
+import { DonationCard } from './index'
+
+<Meta title="Cards/DonationCard" component={DonationCard} />
+
+# DonationCard
+
+## Import
+
+```js
+import { DonationCard } from '@kisskissbankbank/kitten/src/components/cards/donation-card'
+```
+
+## Usage
+
+#### Default
+
+<Canvas>
+  <Story name="DonationCard" story={stories.Default} />
+</Canvas>
+
+```js
+<DonationCard />
+```
+
+#### Title
+
+```js
+<DonationCard title="…" titleTag="…" />
+```
+
+#### With isDisabled
+
+```js
+<DonationCard isDisabled />
+```
+
+#### Version
+
+```js
+<DonationCard version="default" />
+<DonationCard version="tiny" />
+```
+
+### Props
+
+```js
+  <DonationCard
+    donationForm={{
+      # show TextInputWithUnitForm component
+    }}
+  />
+```

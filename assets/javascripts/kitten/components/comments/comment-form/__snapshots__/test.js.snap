@@ -2,16 +2,16 @@
 
 exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`] = `
 <div
-  className="comment-form__StyledGrid-sc-1yidca9-0 kwVmiQ"
+  className="sc-bZQynM fTMccj"
 >
   <div
-    className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
+    className="sc-htpNat jOCivv"
   >
     <div
-      className="comment-avatar__StyledPosition-sc-10x87zp-1 cBLdwX"
+      className="sc-bxivhb cdaogt"
     >
       <div
-        className="comment-avatar__StyledAvatarBadge-sc-10x87zp-3 giOOEs"
+        className="sc-EHOje qrHlx"
       >
         <svg
           height="25"
@@ -19,9 +19,6 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
           width="25"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Checked circle
-          </title>
           <circle
             cx="10"
             cy="10"
@@ -35,7 +32,7 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         </svg>
       </div>
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 DuzOU"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
         tabIndex={null}
       >
         <img
@@ -47,17 +44,17 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
     </div>
   </div>
   <div
-    className="comment-form__StyledGridCol-sc-1yidca9-1 jLIWaw"
+    className="sc-gzVnrw jAbCjw"
   >
     <div
-      className="comment-form__StyledInput-sc-1yidca9-2 bYAxli"
+      className="sc-htoDjs iqtPDC"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="comment-form__StyledTextarea-sc-1yidca9-3 isQSPk"
+        className="sc-dnqmqq ejrbGE"
         defaultValue=""
         disabled={false}
         id={null}
@@ -66,18 +63,18 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
         rows="1"
       />
       <div
-        className="comment-form__StyledArrow-sc-1yidca9-4 fhIhpw"
+        className="sc-iwsKbI jdbRCZ"
       >
         <span
-          className="comment-form__StyledArrowBefore-sc-1yidca9-5 bbqecq"
+          className="sc-gZMcBi hHcEiz"
         />
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 gWrqvV"
+      className="sc-bdVaJa bNTSMG"
     >
       <span
-        className="k-u-color-error k-u-size-micro k-u-weight-regular"
+        className="sc-bwzfXH uTxCW k-u-color-error k-u-size-micro k-u-weight-regular"
         id=""
       >
         Cum sociis natoque penatibus et magnis
@@ -89,16 +86,16 @@ exports[`<CommentForm /> should match a snapshot with a complex avatar badge 1`]
 
 exports[`<CommentForm /> should match its empty snapshot 1`] = `
 <div
-  className="comment-form__StyledGrid-sc-1yidca9-0 kwVmiQ"
+  className="sc-bZQynM fTMccj"
 >
   <div
-    className="comment-avatar__StyledAvatar-sc-10x87zp-0 fNhTWh"
+    className="sc-htpNat jOCivv"
   >
     <div
-      className="comment-avatar__StyledPosition-sc-10x87zp-1 cBLdwX"
+      className="sc-bxivhb cdaogt"
     >
       <span
-        className="k-ButtonImage k-ButtonImage--withoutPointerEvents comment-avatar__StyledButtonImage-sc-10x87zp-2 DuzOU"
+        className="k-ButtonImage k-ButtonImage--withoutPointerEvents sc-ifAKCX jFoXrH"
         tabIndex={null}
       >
         <img
@@ -110,17 +107,17 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
     </div>
   </div>
   <div
-    className="comment-form__StyledGridCol-sc-1yidca9-1 jLIWaw"
+    className="sc-gzVnrw jAbCjw"
   >
     <div
-      className="comment-form__StyledInput-sc-1yidca9-2 bYAxli"
+      className="sc-htoDjs iqtPDC"
     >
       <textarea
         aria-describedby=""
         aria-invalid="false"
         aria-label=""
         aria-required="true"
-        className="comment-form__StyledTextarea-sc-1yidca9-3 isQSPk"
+        className="sc-dnqmqq ejrbGE"
         defaultValue=""
         disabled={false}
         id="custom-textarea-id"
@@ -129,18 +126,18 @@ exports[`<CommentForm /> should match its empty snapshot 1`] = `
         rows="1"
       />
       <div
-        className="comment-form__StyledArrow-sc-1yidca9-4 fhIhpw"
+        className="sc-iwsKbI jdbRCZ"
       >
         <span
-          className="comment-form__StyledArrowBefore-sc-1yidca9-5 bbqecq"
+          className="sc-gZMcBi hHcEiz"
         />
       </div>
     </div>
     <div
-      className="marger__StyledMarger-q3lecu-0 gWrqvV"
+      className="sc-bdVaJa bNTSMG"
     >
       <span
-        className="k-u-color-error k-u-size-micro k-u-weight-regular"
+        className="sc-bwzfXH uTxCW k-u-color-error k-u-size-micro k-u-weight-regular"
         id=""
       >
         Cum sociis natoque penatibus et magnis

@@ -17,13 +17,13 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
 var _assertThisInitialized2 = _interopRequireDefault(require("@babel/runtime/helpers/assertThisInitialized"));
 
 var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
+
+var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -37,16 +37,20 @@ var _popover = require("../../components/popovers/popover");
 
 var _button = require("../../components/buttons/button");
 
-var CallToActionPopover =
-/*#__PURE__*/
-function (_Component) {
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+var CallToActionPopover = /*#__PURE__*/function (_Component) {
   (0, _inherits2.default)(CallToActionPopover, _Component);
+
+  var _super = _createSuper(CallToActionPopover);
 
   function CallToActionPopover(props) {
     var _this;
 
     (0, _classCallCheck2.default)(this, CallToActionPopover);
-    _this = (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(CallToActionPopover).call(this, props));
+    _this = _super.call(this, props);
     _this.renderButton = _this.renderButton.bind((0, _assertThisInitialized2.default)(_this));
     return _this;
   }
@@ -65,9 +69,9 @@ function (_Component) {
     value: function renderIllustration() {
       if (!this.props.illustration) return;
       var Illustration = this.props.illustration;
-      return _react.default.createElement("div", {
+      return /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Popover__illustration"
-      }, _react.default.createElement(Illustration, null));
+      }, /*#__PURE__*/_react.default.createElement(Illustration, null));
     }
   }, {
     key: "renderButton",
@@ -76,7 +80,7 @@ function (_Component) {
           clickOptions = options.clickOptions,
           others = (0, _objectWithoutProperties2.default)(options, ["label", "clickOptions"]);
       var clickHandler = this.getButtonClickHandler(clickOptions);
-      return _react.default.createElement(_button.Button, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_button.Button, (0, _extends2.default)({
         onClick: clickHandler,
         key: i,
         children: label
@@ -97,29 +101,29 @@ function (_Component) {
           buttons = _this$props.buttons,
           illustration = _this$props.illustration,
           popoverProps = (0, _objectWithoutProperties2.default)(_this$props, ["title", "text", "titleAriaLabelId", "buttons", "illustration"]);
-      return _react.default.createElement(_popover.Popover, (0, _extends2.default)({
+      return /*#__PURE__*/_react.default.createElement(_popover.Popover, (0, _extends2.default)({
         titleAriaLabelId: titleAriaLabelId
-      }, popoverProps), this.renderIllustration(), _react.default.createElement(_marger.Marger, {
+      }, popoverProps), this.renderIllustration(), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "4",
         bottom: "4",
         className: "k-Popover__content"
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "1"
-      }, _react.default.createElement(_title.Title, {
+      }, /*#__PURE__*/_react.default.createElement(_title.Title, {
         id: titleAriaLabelId,
         modifier: "senary",
         margin: false
-      }, title)), _react.default.createElement(_marger.Marger, {
+      }, title)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "1",
         bottom: "3"
-      }, _react.default.createElement(_paragraph.Paragraph, {
+      }, /*#__PURE__*/_react.default.createElement(_paragraph.Paragraph, {
         modifier: "tertiary",
         margin: false
-      }, text)), _react.default.createElement(_marger.Marger, {
+      }, text)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "3"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Popover__navigation"
-      }, _react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement("div", {
         className: "k-Popover__buttons"
       }, this.renderButtonsList())))));
     }

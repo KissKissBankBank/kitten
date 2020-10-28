@@ -17,7 +17,8 @@ export class Popover extends Component {
   renderCloseButton() {
     return (
       <CloseButton
-        modifier="beryllium"
+        modifier="hydrogen"
+        size="micro"
         closeButtonLabel={this.props.closeButtonLabel}
         onClick={this.handleCloseClick}
       />

@@ -15,11 +15,11 @@ var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/cl
 
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
 
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
+
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 
 var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
 
@@ -43,6 +43,10 @@ var _textInputWithUnitForm = require("../../../components/form/text-input-with-u
 
 var _typography = require("../../../helpers/utils/typography");
 
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "donation-card__StyledCard",
   componentId: "sc-19h76fz-0"
@@ -58,7 +62,7 @@ var StyledGrid = (0, _styledComponents.default)(_grid.Grid).withConfig({
 var StyledTitle = (0, _styledComponents.default)(function (_ref2) {
   var version = _ref2.version,
       others = (0, _objectWithoutProperties2.default)(_ref2, ["version"]);
-  return _react.default.createElement(_title.Title, others);
+  return /*#__PURE__*/_react.default.createElement(_title.Title, others);
 }).withConfig({
   displayName: "donation-card__StyledTitle",
   componentId: "sc-19h76fz-2"
@@ -71,14 +75,14 @@ var StyledHorizontalStroke = (0, _styledComponents.default)(_horizontalStroke.Ho
   componentId: "sc-19h76fz-3"
 })(["margin:0 auto;"]);
 
-var DonationCard =
-/*#__PURE__*/
-function (_PureComponent) {
+var DonationCard = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(DonationCard, _PureComponent);
+
+  var _super = _createSuper(DonationCard);
 
   function DonationCard() {
     (0, _classCallCheck2.default)(this, DonationCard);
-    return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(DonationCard).apply(this, arguments));
+    return _super.apply(this, arguments);
   }
 
   (0, _createClass2.default)(DonationCard, [{
@@ -89,29 +93,28 @@ function (_PureComponent) {
           titleTag = _this$props.titleTag,
           isDisabled = _this$props.isDisabled,
           version = _this$props.version,
-          donationForm = _this$props.donationForm,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["title", "titleTag", "isDisabled", "version", "donationForm"]);
-      return _react.default.createElement(StyledCard, {
+          donationForm = _this$props.donationForm;
+      return /*#__PURE__*/_react.default.createElement(StyledCard, {
         isDisabled: isDisabled
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: version === 'tiny' ? 3 : 4,
         top: version === 'tiny' ? 3 : 4
-      }, _react.default.createElement(StyledGrid, null, _react.default.createElement(_grid.GridCol, {
+      }, /*#__PURE__*/_react.default.createElement(StyledGrid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         "col-m": version === 'tiny' ? 0 : 10,
         "offset-m": version === 'tiny' ? 0 : 1,
         "col-l": version === 'tiny' ? 0 : 8,
         "offset-l": version === 'tiny' ? 0 : 2
-      }, _react.default.createElement(_marger.Marger, {
+      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: "2"
-      }, _react.default.createElement(StyledTitle, {
+      }, /*#__PURE__*/_react.default.createElement(StyledTitle, {
         margin: false,
         tag: titleTag
-      }, title)), _react.default.createElement(_marger.Marger, {
+      }, title)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         top: "2",
         bottom: "3"
-      }, _react.default.createElement(StyledHorizontalStroke, {
+      }, /*#__PURE__*/_react.default.createElement(StyledHorizontalStroke, {
         size: "big"
-      })), _react.default.createElement(_textInputWithUnitForm.TextInputWithUnitForm, (0, _extends2.default)({}, donationForm, {
+      })), /*#__PURE__*/_react.default.createElement(_textInputWithUnitForm.TextInputWithUnitForm, (0, _extends2.default)({}, donationForm, {
         align: "center",
         version: version
       }))))));

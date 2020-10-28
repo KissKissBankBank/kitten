@@ -27,8 +27,8 @@ describe('<List>', () => {
           .create(
             <List>
               <List.ButtonItem withTopBorder>Alice</List.ButtonItem>
-              <List.ButtonItem>Cheshire Cat</List.ButtonItem>
-              <List.ButtonItem>Mad Hatter</List.ButtonItem>
+              <List.ButtonItem active>Cheshire Cat</List.ButtonItem>
+              <List.ButtonItem hasArrow={false}>Mad Hatter</List.ButtonItem>
             </List>,
           )
           .toJSON()
@@ -48,10 +48,7 @@ describe('<List>', () => {
           </List>,
         )
 
-        const button = component
-          .find(List.ButtonItem)
-          .at(1)
-          .dive()
+        const button = component.find(List.ButtonItem).at(1).dive()
 
         button.simulate('click')
 
@@ -87,10 +84,7 @@ describe('<List>', () => {
           </List>,
         )
 
-        const button = component
-          .find(List.ButtonItem)
-          .at(1)
-          .dive()
+        const button = component.find(List.ButtonItem).at(1).dive()
 
         button.simulate('click')
 

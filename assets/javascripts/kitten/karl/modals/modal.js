@@ -5,7 +5,7 @@ import { Paragraph } from '../../components/typography/paragraph'
 import { Modal } from '../../components/modals/modal'
 import { Marger } from '../../components/layout/marger'
 import { createMatchMediaMax } from '../../helpers/utils/media-queries'
-import { ScreenConfig, SCREEN_SIZE_XS } from '../../constants/screen-config'
+import { SCREEN_SIZE_XS } from '../../constants/screen-config'
 
 class KarlModalComponent extends Component {
   constructor(props, context) {
@@ -94,7 +94,7 @@ class KarlModalComponent extends Component {
 
 const KarlModalButton = () => <Button modifier="helium">Open</Button>
 
-export const KarlModal = props => (
+export const KarlModal = () => (
   <Modal
     trigger={<KarlModalButton />}
     content={<KarlModalComponent />}

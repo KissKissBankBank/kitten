@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import classNames from 'classnames'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
@@ -42,10 +41,11 @@ export const Progress = ({ color, value, rampProps, ...others }) => {
 
   useEffect(() => {
     let progress = 0
+    let valueAsNumber = parseInt(value, 10)
 
-    if (value < valueMin) progress = valueMin
-    else if (value > valueMax) progress = valueMax
-    else progress = value
+    if (valueAsNumber < valueMin) progress = valueMin
+    else if (valueAsNumber > valueMax) progress = valueMax
+    else progress = valueAsNumber
 
     setProgressValue(progress)
   }, [value])
@@ -75,6 +75,6 @@ Progress.defaultProps = {
 
 Progress.propTypes = {
   color: PropTypes.string,
-  value: PropTypes.number,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rampProps: PropTypes.object,
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import { ProjectCard } from '../../components/cards/project-card'
 import { CheckedCircleIcon } from '../../components/icons/checked-circle-icon'
 import { WarningCircleIcon } from '../../components/icons/warning-circle-icon'

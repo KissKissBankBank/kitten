@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Radium, { StyleRoot } from 'radium'
 import PropTypes from 'prop-types'
 import { GarbageIcon } from '../../components/icons/garbage-icon'
 import { ButtonIcon } from '../../components/buttons/button-icon'
@@ -34,4 +33,4 @@ class KarlGarbageButtonComponent extends Component {
   }
 }
 
-export const KarlGarbageButton = Radium(KarlGarbageButtonComponent)
+export const KarlGarbageButton = KarlGarbageButtonComponent
