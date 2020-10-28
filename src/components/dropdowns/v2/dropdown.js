@@ -17,6 +17,8 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _has = _interopRequireDefault(require("lodash/fp/has"));
 
+var _isNull = _interopRequireDefault(require("lodash/fp/isNull"));
+
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
@@ -299,6 +301,7 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
   };
 
   var handleClickOnLinks = function handleClickOnLinks() {
+    if ((0, _isNull.default)(dropdownContentRef.current)) return;
     var links = dropdownContentRef.current.getElementsByTagName('a');
     Array.prototype.forEach.call(links, function (link) {
       link.removeEventListener('click', closeDropdown);
