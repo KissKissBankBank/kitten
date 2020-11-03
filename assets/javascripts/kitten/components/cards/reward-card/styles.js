@@ -8,11 +8,6 @@ export const StyledRewardCard = styled.div`
   box-sizing: border-box;
   border: ${pxToRem(2)} solid ${COLORS.line1};
 
-  &.k-RewardCard__disabled {
-    color: ${COLORS.font2};
-    cursor: not-allowed;
-  }
-
   .k-RewardCard__diamondBadge,
   .k-RewardCard__starredBadge {
     display: flex;
@@ -120,8 +115,8 @@ export const StyledRewardCard = styled.div`
     border: none;
   }
   &.k-RewardCard--isDisabled {
-    color: ${COLORS.font2};
     cursor: not-allowed;
+    color: ${COLORS.font2};
 
     .k-RewardCard__image,
     .k-RewardCard__video {

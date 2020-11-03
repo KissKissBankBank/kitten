@@ -12,7 +12,7 @@ export const RewardCardTitle = ({
   <Title
     {...props}
     italic
-    color="font1"
+    cssColor="font1"
     tag={tagName}
     modifier="senary"
     className={classNames('k-RewardCard__title', className,

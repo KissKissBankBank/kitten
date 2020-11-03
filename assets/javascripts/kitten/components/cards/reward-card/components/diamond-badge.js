@@ -12,6 +12,7 @@ export const RewardCardDiamondBadge = ({
     <div
       {...props}
       className="k-RewardCard__diamondBadge"
+      className={`k-RewardCard__diamondBadge ${className}`}
     >
       <IconBadge big disabled={disabled}>
         <DiamondIcon
