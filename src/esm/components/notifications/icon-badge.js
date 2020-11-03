@@ -8,7 +8,7 @@ import { pxToRem, stepToRem } from '../../helpers/utils/typography';
 var StyledBadge = styled.span.withConfig({
   displayName: "icon-badge__StyledBadge",
   componentId: "sc-13mitia-0"
-})(["display:flex;justify-content:center;align-items:center;padding:0;min-width:", ";min-height:", ";border-radius:", ";background-color:", ";", " ", " ", " ", ""], pxToRem(30), pxToRem(30), pxToRem(30), COLORS.primary1, function (_ref) {
+})(["display:flex;justify-content:center;align-items:center;padding:0;min-width:", ";min-height:", ";border-radius:", ";background-color:", ";", " ", " ", " ", " .k-IconBadge__content{flex-basis:", ";color:", ";text-align:center;font-weight:bold;font-size:", ";line-height:0;", "}svg{fill:", ";}"], pxToRem(30), pxToRem(30), pxToRem(30), COLORS.primary1, function (_ref) {
   var valid = _ref.valid;
   return valid && css(["background-color:", ";"], COLORS.valid);
 }, function (_ref2) {
@@ -20,15 +20,11 @@ var StyledBadge = styled.span.withConfig({
 }, function (_ref4) {
   var huge = _ref4.huge;
   return huge && css(["min-width:", ";min-height:", ";border-radius:", ";"], pxToRem(50), pxToRem(50), pxToRem(50));
-});
-var StyledContent = styled.span.withConfig({
-  displayName: "icon-badge__StyledContent",
-  componentId: "sc-13mitia-1"
-})(["flex-basis:", ";fill:", ";color:", ";text-align:center;font-weight:bold;font-size:", ";line-height:0;", ""], pxToRem(11), COLORS.background1, COLORS.background1, stepToRem(-2), function (_ref5) {
+}, pxToRem(11), COLORS.background1, stepToRem(-2), function (_ref5) {
   var big = _ref5.big,
       huge = _ref5.huge;
   return (big || huge) && css(["font-size:", ";"], stepToRem(-1));
-});
+}, COLORS.background1);
 export var IconBadge = function IconBadge(_ref6) {
   var children = _ref6.children,
       disabled = _ref6.disabled,
@@ -42,9 +38,8 @@ export var IconBadge = function IconBadge(_ref6) {
     valid: valid,
     big: big,
     huge: huge
-  }, others), /*#__PURE__*/React.createElement(StyledContent, {
-    big: big,
-    huge: huge
+  }, others), /*#__PURE__*/React.createElement("span", {
+    className: "k-IconBadge__content"
   }, children));
 };
 IconBadge.defaultProps = {

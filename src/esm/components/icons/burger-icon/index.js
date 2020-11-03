@@ -16,10 +16,10 @@ var StyledItem = styled.svg.withConfig({
   return hoverColor;
 }, function (_ref3) {
   var isActive = _ref3.isActive;
-  return isActive && css([".item-buns{transform:translateX(2px);}.item-patty{transform:translateX(-2px);}"]);
+  return isActive && css([".k-BurgerIcon__bun{transform:translateX(2px);}.k-BurgerIcon__patty{transform:translateX(-2px);}"]);
 }, function (_ref4) {
   var isAnimatedOnHover = _ref4.isAnimatedOnHover;
-  return isAnimatedOnHover && css(["&:hover,button:hover &,&:focus,button:focus &{.item-buns{transform:translateX(2px);}.item-patty{transform:translateX(-2px);}}"]);
+  return isAnimatedOnHover && css(["&:hover,button:hover &,&:focus,button:focus &{.k-BurgerIcon__bun{transform:translateX(2px);}.k-BurgerIcon__patty{transform:translateX(-2px);}}"]);
 });
 export var BurgerIcon = function BurgerIcon(_ref5) {
   var mainColor = _ref5.mainColor,
@@ -47,17 +47,17 @@ export var BurgerIcon = function BurgerIcon(_ref5) {
     y: "0",
     width: "12",
     height: "2",
-    className: "item-buns"
+    className: "k-BurgerIcon__bun"
   }), /*#__PURE__*/React.createElement("rect", {
     y: "4",
     width: "12",
     height: "2",
-    className: "item-patty"
+    className: "k-BurgerIcon__patty"
   }), /*#__PURE__*/React.createElement("rect", {
     y: "8",
     width: "12",
     height: "2",
-    className: "item-buns"
+    className: "k-BurgerIcon__bun"
   }));
 };
 BurgerIcon.propTypes = {

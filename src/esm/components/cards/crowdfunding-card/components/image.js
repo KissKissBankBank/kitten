@@ -6,6 +6,7 @@ import { Text } from '../../../../components/typography/text';
 import { ButtonImage } from '../../../../components/buttons/button-image';
 import COLORS from '../../../../constants/colors-config';
 import classNames from 'classnames';
+import { GifVideo } from '../../../../components/videos/gif-video';
 
 var Image = function Image(_ref) {
   var imageContainerBackground = _ref.imageContainerBackground,
@@ -33,10 +34,7 @@ var Image = function Image(_ref) {
     style: backgroundColor ? _extends({
       backgroundColor: backgroundColor
     }, otherImageProps.style) : otherImageProps.style
-  })), !loading && videoSources.length > 0 && /*#__PURE__*/React.createElement("video", _extends({
-    autoPlay: true,
-    loop: true,
-    muted: true,
+  })), !loading && videoSources.length > 0 && /*#__PURE__*/React.createElement(GifVideo, _extends({
     poster: otherImageProps.src
   }, videoProps, {
     className: classNames('k-Card__image', 'k-CrowdfundingCard__image__image', videoProps.className),

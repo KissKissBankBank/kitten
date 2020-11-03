@@ -227,7 +227,7 @@ var InnerModal = function InnerModal(_ref5) {
     className: "k-ModalNext__closeButton--fullSize",
     modifier: "hydrogen",
     onClick: close,
-    size: "tiny",
+    size: "micro",
     closeButtonLabel: closeButtonLabel
   }), /*#__PURE__*/React.createElement(Text, {
     size: "tiny",
@@ -247,16 +247,16 @@ var InnerModal = function InnerModal(_ref5) {
       position: 'fixed'
     },
     className: "k-u-hidden@s-up",
-    modifier: "beryllium",
+    modifier: "hydrogen",
     onClick: close,
-    size: "tiny",
+    size: "micro",
     closeButtonLabel: closeButtonLabel
   }), /*#__PURE__*/React.createElement(CloseButton, {
     style: {
       position: 'fixed'
     },
     className: "k-u-hidden@xs-down",
-    modifier: "beryllium",
+    modifier: "hydrogen",
     onClick: close,
     closeButtonLabel: closeButtonLabel
   }))))), document.body);

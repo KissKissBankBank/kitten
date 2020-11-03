@@ -34,8 +34,10 @@ export var TeamCardIcons = function TeamCardIcons(_ref) {
     tag: "a",
     href: "mailto:".concat(email),
     modifier: "hydrogen",
-    className: "k-ButtonIcon--phone k-TeamCardIcons__buttonIcon"
+    className: "k-ButtonIcon--phone k-TeamCardIcons__buttonIcon",
+    "aria-label": "E-mail"
   }, /*#__PURE__*/React.createElement(EmailIcon, {
+    "aria-hidden": true,
     className: "k-ButtonIcon__svg"
   })), phoneNumber && /*#__PURE__*/React.createElement(TeamCardPhoneIcon, _extends({}, props, {
     phoneNumber: phoneNumber,
@@ -53,6 +55,7 @@ var SocialLinks = function SocialLinks(_ref2) {
     return /*#__PURE__*/React.createElement(ButtonIcon, {
       tag: "a",
       key: link.name,
+      "aria-label": link.name,
       href: link.href,
       modifier: link.name,
       size: "tiny",
@@ -60,8 +63,10 @@ var SocialLinks = function SocialLinks(_ref2) {
       rel: "noopener",
       className: "k-TeamCardIcons__buttonIcon"
     }, link.name === 'linkedin' && /*#__PURE__*/React.createElement(LinkedinIcon, {
+      "aria-hidden": true,
       className: "k-ButtonIcon__svg"
     }), link.name === 'twitter' && /*#__PURE__*/React.createElement(TwitterIcon, {
+      "aria-hidden": true,
       className: "k-ButtonIcon__svg"
     }));
   }));
