@@ -42,8 +42,8 @@ var Header = function Header(_ref) {
     onClick: onClick,
     type: "button",
     "aria-label": garbageButtonA11yText,
-    modifier: "beryllium",
-    tiny: true,
+    modifier: "hydrogen",
+    micro: true,
     icon: true,
     className: "k-RewardEdition__Header__Button"
   }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, {

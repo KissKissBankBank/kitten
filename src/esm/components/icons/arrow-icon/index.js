@@ -2,7 +2,6 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _defineProperty from "@babel/runtime/helpers/esm/defineProperty";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
-import styled, { css } from 'styled-components';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Deprecated } from '../../../helpers/utils/deprecated';
@@ -14,14 +13,15 @@ export var DeprecatedArrowIconSvg = function DeprecatedArrowIconSvg(_ref) {
       direction = _ref.direction,
       disabled = _ref.disabled,
       version = _ref.version,
-      others = _objectWithoutProperties(_ref, ["className", "direction", "disabled", "version"]);
+      title = _ref.title,
+      others = _objectWithoutProperties(_ref, ["className", "direction", "disabled", "version", "title"]);
 
   var arrowIconClassNames = classNames('k-ArrowIcon', (_classNames = {}, _defineProperty(_classNames, "k-ArrowIcon--".concat(direction), direction), _defineProperty(_classNames, 'k-ArrowIcon--disabled', disabled), _classNames), className);
   return /*#__PURE__*/React.createElement("svg", _extends({}, others, {
     xmlns: "http://www.w3.org/2000/svg",
     className: arrowIconClassNames,
     viewBox: "0 0 6 6"
-  }), /*#__PURE__*/React.createElement("title", null, "Arrow"), /*#__PURE__*/React.createElement("path", {
+  }), title && /*#__PURE__*/React.createElement("title", null, title), /*#__PURE__*/React.createElement("path", {
     d: "M6 0H0v6h2V2h4z"
   }));
 };
@@ -51,55 +51,37 @@ DeprecatedArrowIcon.defaultProps = {
   disabled: false,
   className: ''
 };
-var SvgArrow = styled(function (_ref2) {
-  var direction = _ref2.direction,
+export var ArrowIcon = function ArrowIcon(_ref2) {
+  var version = _ref2.version,
+      direction = _ref2.direction,
       disabled = _ref2.disabled,
-      props = _objectWithoutProperties(_ref2, ["direction", "disabled"]);
-
-  return /*#__PURE__*/React.createElement("svg", props);
-}).withConfig({
-  displayName: "arrow-icon__SvgArrow",
-  componentId: "sc-3d3g2f-0"
-})(["transform:", ";", ""], function (_ref3) {
-  var direction = _ref3.direction;
-
-  switch (direction) {
-    case 'right':
-      return 'rotate(90deg)';
-
-    case 'left':
-      return 'rotate(-90deg)';
-
-    case 'bottom':
-      return 'rotate(180deg)';
-
-    default:
-      return 'none';
-  }
-}, function (_ref4) {
-  var disabled = _ref4.disabled;
-  return disabled && css(["fill:", ";"], COLORS.background1);
-});
-export var ArrowIcon = function ArrowIcon(_ref5) {
-  var version = _ref5.version,
-      direction = _ref5.direction,
-      disabled = _ref5.disabled,
-      others = _objectWithoutProperties(_ref5, ["version", "direction", "disabled"]);
+      color = _ref2.color,
+      title = _ref2.title,
+      others = _objectWithoutProperties(_ref2, ["version", "direction", "disabled", "color", "title"]);
 
   if (version === 'deprecated-center-of-gravity') {
     return /*#__PURE__*/React.createElement(DeprecatedArrowIcon, _extends({
       version: version,
       direction: direction,
-      disabled: disabled
+      disabled: disabled,
+      title: title
     }, others));
   }
 
-  return /*#__PURE__*/React.createElement(SvgArrow, _extends({}, others, {
+  var transform = {
+    right: 'rotate(90deg)',
+    left: 'rotate(-90deg)',
+    bottom: 'rotate(180deg)',
+    top: null
+  };
+  return /*#__PURE__*/React.createElement("svg", _extends({}, others, {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 8.48 5.64",
-    direction: direction,
-    disabled: disabled
-  }), /*#__PURE__*/React.createElement("path", {
+    fill: disabled ? COLORS.background1 : color,
+    style: {
+      transform: transform[direction]
+    }
+  }), title && /*#__PURE__*/React.createElement("title", null, title), /*#__PURE__*/React.createElement("path", {
     d: "M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
   }));
 };
@@ -109,7 +91,9 @@ ArrowIcon.propTypes = {
   disabled: PropTypes.bool,
   className: PropTypes.string,
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  color: PropTypes.string,
+  title: PropTypes.string
 };
 ArrowIcon.defaultProps = {
   version: 'deprecated-center-of-gravity',
@@ -117,5 +101,7 @@ ArrowIcon.defaultProps = {
   disabled: false,
   className: '',
   width: '8.48',
-  height: '5.64'
+  height: '5.64',
+  color: COLORS.font1,
+  title: ''
 };

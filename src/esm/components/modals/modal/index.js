@@ -41,7 +41,7 @@ import { createGlobalStyle } from 'styled-components';
 import { pxToRem } from '../../../helpers/utils/typography';
 import { ScreenConfig } from '../../../constants/screen-config';
 import COLORS from '../../../constants/colors-config';
-var GlobalStyle = createGlobalStyle(_templateObject(), pxToRem(20), pxToRem(20), COLORS.background1, pxToRem(60), pxToRem(60), pxToRem(ScreenConfig.M.min), pxToRem(690), pxToRem(110), pxToRem(110), pxToRem(50));
+var GlobalStyle = createGlobalStyle(_templateObject(), pxToRem(20), pxToRem(20), COLORS.background1, pxToRem(60), pxToRem(60), pxToRem(ScreenConfig.M.min), pxToRem(690), pxToRem(110), pxToRem(110), pxToRem(30));
 var AnimatedGlobalStyle = createGlobalStyle(_templateObject2());
 export var Modal = /*#__PURE__*/function (_Component) {
   _inherits(Modal, _Component);
@@ -89,8 +89,9 @@ export var Modal = /*#__PURE__*/function (_Component) {
         className: "k-Modal__close"
       }, /*#__PURE__*/React.createElement(CloseButton, {
         className: "k-Modal__close--fixed",
-        modifier: "beryllium",
+        modifier: "hydrogen",
         onClick: this.close,
+        size: "micro",
         closeButtonLabel: closeButtonLabel
       }));
     }
