@@ -40,6 +40,7 @@ export const StyledRewardCard = styled.div`
 
   .k-RewardCard__image {
     width: 100%;
+    object-fit: cover;
 
     &.k-RewardCard__image--disabled {
       filter: grayscale(1) opacity(0.4);
