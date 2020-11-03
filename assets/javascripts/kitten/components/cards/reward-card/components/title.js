@@ -13,12 +13,13 @@ export const RewardCardTitle = ({
   <Title
     {...props}
     italic
-    margin={false}
     tag={tagName}
     modifier="senary"
     className={classNames('k-RewardCard__title', className, 
       {'k-RewardCard__title--disabled': disabled},
       'k-u-color-font1',
+      'k-u-margin-bottom-double',
+      'k-u-margin-top-none',
     )}
   >
     {children}
