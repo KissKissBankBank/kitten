@@ -6,18 +6,16 @@ import { Title } from '../../../../components/typography/title'
 export const RewardCardTitle = ({
   children,
   tagName,
-  disabled,
   className,
   ...props
 }) => (
   <Title
     {...props}
     italic
+    color="font1"
     tag={tagName}
     modifier="senary"
-    className={classNames('k-RewardCard__title', className, 
-      {'k-RewardCard__title--disabled': disabled},
-      'k-u-color-font1',
+    className={classNames('k-RewardCard__title', className,
       'k-u-margin-bottom-double',
       'k-u-margin-top-none',
     )}
@@ -29,11 +27,9 @@ export const RewardCardTitle = ({
 RewardCardTitle.propTypes = {
   children: PropTypes.string,
   tagName: PropTypes.string,
-  disabled: PropTypes.bool,
 }
 
 RewardCardTitle.defaultProps = {
   children: '',
   tagName: 'h6',
-  disabled: false,
 }

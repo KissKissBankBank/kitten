@@ -1,21 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
 import { IconBadge } from '../../../../components/notifications/icon-badge'
 import { DiamondIcon } from '../../../../components/icons/diamond-icon'
 
 export const RewardCardDiamondBadge = ({
   children,
   className,
-  disabled,
   ...props
 }) => {
   return (
     <div
       {...props}
-      className={classNames('k-RewardCard__diamondBadge', className, {
-        'k-RewardCard__diamondBadge--disabled': disabled,
-      })}
+      className="k-RewardCard__diamondBadge"
     >
       <IconBadge big disabled={disabled}>
         <DiamondIcon
@@ -29,11 +25,9 @@ export const RewardCardDiamondBadge = ({
 }
 
 RewardCardDiamondBadge.propTypes = {
-  disabled: PropTypes.bool,
   children: PropTypes.node,
 }
 
 RewardCardDiamondBadge.defaultProps = {
-  disabled: false,
   children: null,
 }
