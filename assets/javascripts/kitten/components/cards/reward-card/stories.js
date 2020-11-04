@@ -82,7 +82,7 @@ export const New_RewardCard = () => {
   return (
     <StyledStoryContainer>
       <Grid>
-        <GridCol offset="3" col="6">
+        <GridCol>
           <RewardCardComponent
             withoutBorder={boolean('withoutBorder', false, versionGroupId)}
             disabled={disabled}
@@ -104,6 +104,7 @@ export const New_RewardCard = () => {
                   color="font1"
                   tag="p"
                   weight="bold"
+                  size="tiny"
                   className={classNames('RewardCard_story__label', {
                     RewardCard_story__disabled: disabled,
                   })}

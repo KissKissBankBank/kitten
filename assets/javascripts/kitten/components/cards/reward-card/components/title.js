@@ -16,7 +16,7 @@ export const RewardCardTitle = ({
     italic
     cssColor={disabled ? COLORS.font2 : COLORS.font1}
     tag={tagName}
-    modifier="senary"
+    modifier="quinary"
     className={classNames('k-RewardCard__title', className,
       'k-u-margin-bottom-double',
       'k-u-margin-top-none',

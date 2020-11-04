@@ -38,11 +38,11 @@ export const StyledRewardCard = styled.div`
     width: ${pxToRem(14)};
   }
 
-  .k-RewardCard__title {	
-    &.k-RewardCard__title--disabled {	
-      color: ${COLORS.font2};	
-      cursor: not-allowed;	
-    }	
+  .k-RewardCard__title {
+    &.k-RewardCard__title--disabled {
+      color: ${COLORS.font2};
+      cursor: not-allowed;
+    }
   }
 
   .k-RewardCard__image {
@@ -72,9 +72,9 @@ export const StyledRewardCard = styled.div`
       margin-bottom: ${pxToRem(10)};
     }
 
-    &.k-RewardCard__infos--disabled {	
-      color: ${COLORS.font2};	
-      cursor: not-allowed;	
+    &.k-RewardCard__infos--disabled {
+      color: ${COLORS.font2};
+      cursor: not-allowed;
     }
   }
 
