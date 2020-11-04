@@ -1,17 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import { IconBadge } from '../../../../components/notifications/icon-badge'
 import { StarIcon } from '../../../../components/icons/star-icon'
 
 export const RewardCardStarredBadge = ({
   children,
   className,
+  disabled,
   ...props
 }) => {
   return (
     <div
       {...props}
-      className={`k-RewardCard__starredBadge ${className}`}
+      className={classNames('k-RewardCard__starredBadge', className, {
+        'k-RewardCard__starredBadge--disabled': disabled,
+      })}
     >
       <IconBadge big disabled={disabled}>
         <StarIcon
@@ -25,9 +29,11 @@ export const RewardCardStarredBadge = ({
 }
 
 RewardCardStarredBadge.propTypes = {
+  disabled: PropTypes.bool,
   children: PropTypes.node,
 }
 
 RewardCardStarredBadge.defaultProps = {
+  disabled: false,
   children: null,
 }

@@ -18,6 +18,11 @@ export const StyledRewardCard = styled.div`
     & > * + * {
       margin-left: ${pxToRem(10)};
     }
+    &.k-RewardCard__diamondBadge--disabled,	
+    &.k-RewardCard__starredBadge--disabled {	
+      color: ${COLORS.font2};	
+      cursor: not-allowed;	
+    }
   }
   .k-RewardCard__diamondBadge__content,
   .k-RewardCard__starredBadge__content {
@@ -31,6 +36,13 @@ export const StyledRewardCard = styled.div`
   .k-RewardCard__starredBadge__starredIcon {
     height: ${pxToRem(14)};
     width: ${pxToRem(14)};
+  }
+
+  .k-RewardCard__title {	
+    &.k-RewardCard__title--disabled {	
+      color: ${COLORS.font2};	
+      cursor: not-allowed;	
+    }	
   }
 
   .k-RewardCard__image {
@@ -58,6 +70,11 @@ export const StyledRewardCard = styled.div`
 
     &.k-RewardCard__infos--hasBottomMargin {
       margin-bottom: ${pxToRem(10)};
+    }
+
+    &.k-RewardCard__infos--disabled {	
+      color: ${COLORS.font2};	
+      cursor: not-allowed;	
     }
   }
 
@@ -115,13 +132,23 @@ export const StyledRewardCard = styled.div`
     border: none;
   }
   &.k-RewardCard--isDisabled {
-    cursor: not-allowed;
-    color: ${COLORS.font2};
-
+    .k-RewardCard__diamondBadge,
+    .k-RewardCard__starredBadge {
+      cursor: not-allowed;
+      color: ${COLORS.font2};
+    }
+    .k-RewardCard__title {	
+      color: ${COLORS.font2};	
+      cursor: not-allowed;	
+    }
     .k-RewardCard__image,
     .k-RewardCard__video {
       filter: grayscale(1) opacity(0.4);
       cursor: not-allowed;
+    }
+    .k-RewardCard__infos {	
+      color: ${COLORS.font2};	
+      cursor: not-allowed;	
     }
   }
 `
