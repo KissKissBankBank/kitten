@@ -44,6 +44,7 @@
     "react-markdown": "2.5.1",
     "react-masonry-component": "6.2.1",
     "react-modal": "3.11.2",
+    "react-number-format": "4.4.1",
     "react-places-autocomplete": "5.4.3",
     "react-select": "1.0.0",
     "react-test-renderer": "16.13.1",
