@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Content reference on `<Dropdown />`
+## [2.95.3] - 2020-11-05
+
+Fix:
+- Content reference on `<Dropdown />`
 
 ## [2.95.2] - 2020-10-22
 
