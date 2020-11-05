@@ -1,9 +1,12 @@
 import React from 'react'
 import NumberFormat from 'react-number-format'
+import { useFormContext } from '../'
 
-export const Cvc = ({
-  customComponents: { field: Field, label: Label, input: Input },
-}) => {
+export const Cvc = () => {
+  const {
+    customComponents: { field: Field, label: Label, input: Input },
+  } = useFormContext()
+
   return (
     <Field>
       <Label htmlFor="frmCCCVC">CVC</Label>

@@ -1,5 +1,6 @@
 import React from 'react'
 import NumberFormat from 'react-number-format'
+import { useFormContext } from '../'
 
 const limit = (val, max) => {
   if (val.length === 1 && val[0] > max[0]) {
@@ -24,9 +25,11 @@ const cardExpiry = val => {
   return month + (year.length ? '/' + year : '')
 }
 
-export const Expiry = ({
-  customComponents: { field: Field, label: Label, input: Input },
-}) => {
+export const Expiry = () => {
+  const {
+    customComponents: { field: Field, label: Label, input: Input },
+  } = useFormContext()
+
   return (
     <Field>
       <Label htmlFor="frmCCExp">Expiry</Label>

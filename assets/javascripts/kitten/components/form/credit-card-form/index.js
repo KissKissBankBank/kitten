@@ -1,16 +1,19 @@
-import React from 'react'
+import React, { createContext, useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Number } from './components/number'
 import { Expiry } from './components/expiry'
 import { Cvc } from './components/cvc'
 
-export const CreditCardForm = ({ customComponents }) => {
+const FormContext = createContext()
+export const useFormContext = () => useContext(FormContext)
+
+export const CreditCardForm = props => {
   return (
-    <>
-      <Number customComponents={customComponents} />
-      <Expiry customComponents={customComponents} />
-      <Cvc customComponents={customComponents} />
-    </>
+    <FormContext.Provider value={props}>
+      <Number />
+      <Expiry />
+      <Cvc />
+    </FormContext.Provider>
   )
 }
 

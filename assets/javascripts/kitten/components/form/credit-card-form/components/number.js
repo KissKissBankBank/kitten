@@ -1,9 +1,12 @@
 import React from 'react'
 import NumberFormat from 'react-number-format'
+import { useFormContext } from '../'
 
-export const Number = ({
-  customComponents: { field: Field, label: Label, input: Input },
-}) => {
+export const Number = () => {
+  const {
+    customComponents: { field: Field, label: Label, input: Input },
+  } = useFormContext()
+
   return (
     <Field>
       <Label htmlFor="frmCCNum">Card Number</Label>
