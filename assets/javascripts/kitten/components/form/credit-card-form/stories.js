@@ -19,7 +19,11 @@ export default {
 export const Default = () => {
   return (
     <StoryContainer>
-      <CreditCardForm />
+      <CreditCardForm
+        customComponents={{
+          field: props => <span {...props} />,
+        }}
+      />
     </StoryContainer>
   )
 }
