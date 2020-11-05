@@ -11,6 +11,22 @@ const defaultProps = {
     label: props => <label {...props} />,
     input: props => <input {...props} />,
   },
+  number: {
+    label: 'Card Number',
+    customComponents: {},
+    validate: () => {},
+  },
+  expiry: {
+    label: 'Expiry',
+    customComponents: {},
+    validate: () => {},
+  },
+  cvc: {
+    label: 'CVC',
+    customComponents: {},
+    validate: () => {},
+  },
+  onValidate: () => {},
 }
 
 const FormContext = createContext(defaultProps)
@@ -28,6 +44,7 @@ export const CreditCardForm = props => {
   )
 }
 
+// TODO: Update me!
 CreditCardForm.propTypes = {
   customComponents: PropTypes.objectOf(PropTypes.element),
 }

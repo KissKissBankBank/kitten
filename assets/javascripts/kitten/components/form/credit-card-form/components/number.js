@@ -4,12 +4,20 @@ import { useFormContext } from '../'
 
 export const Number = () => {
   const {
-    customComponents: { field: Field, label: Label, input: Input },
+    customComponents: {
+      field: globalField,
+      label: globalLabel,
+      input: globalInput,
+    },
+    number: { label, customComponents },
   } = useFormContext()
+  const Field = customComponents.field || globalField
+  const Label = customComponents.label || globalLabel
+  const Input = customComponents.input || globalInput
 
   return (
     <Field>
-      <Label htmlFor="frmCCNum">Card Number</Label>
+      <Label htmlFor="frmCCNum">{label}</Label>
 
       <NumberFormat
         name="cardnumber"
@@ -17,6 +25,7 @@ export const Number = () => {
         autoComplete="cc-number"
         format="#### #### #### ####"
         inputMode="numeric"
+        placeholder="#### #### #### ####"
         customInput={Input}
       />
     </Field>

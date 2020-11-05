@@ -27,12 +27,20 @@ const cardExpiry = val => {
 
 export const Expiry = () => {
   const {
-    customComponents: { field: Field, label: Label, input: Input },
+    customComponents: {
+      field: globalField,
+      label: globalLabel,
+      input: globalInput,
+    },
+    expiry: { label, customComponents },
   } = useFormContext()
+  const Field = customComponents.field || globalField
+  const Label = customComponents.label || globalLabel
+  const Input = customComponents.input || globalInput
 
   return (
     <Field>
-      <Label htmlFor="frmCCExp">Expiry</Label>
+      <Label htmlFor="frmCCExp">{label}</Label>
 
       <NumberFormat
         name="cc-exp"

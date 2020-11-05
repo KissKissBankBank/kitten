@@ -36,7 +36,26 @@ export const withCustomComponents = () => {
           label: ({ children, ...props }) => (
             <Field.Label labelProps={props} children={children} />
           ),
-          input: Field.Input,
+          input: props => <Field.Input {...props} />,
+        }}
+        number={{
+          label: 'Numéro de carte',
+        }}
+        expiry={{
+          label: 'Date de validité',
+          customComponents: {
+            input: props => (
+              <Field.Input {...props} placeholder="MM/AA" digits={6} />
+            ),
+          },
+        }}
+        cvc={{
+          label: 'Cryptogramme visuel',
+          customComponents: {
+            input: props => (
+              <Field.Input {...props} placeholder="###" digits={6} />
+            ),
+          },
         }}
       />
     </StoryContainer>
