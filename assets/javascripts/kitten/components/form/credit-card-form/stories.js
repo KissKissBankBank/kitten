@@ -2,6 +2,7 @@ import React from 'react'
 import { CreditCardForm } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
+import { Field } from '../field'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -19,9 +20,23 @@ export default {
 export const Default = () => {
   return (
     <StoryContainer>
+      <CreditCardForm />
+    </StoryContainer>
+  )
+}
+
+export const withCustomComponents = () => {
+  return (
+    <StoryContainer>
       <CreditCardForm
         customComponents={{
-          field: props => <span {...props} />,
+          field: props => (
+            <div {...props} className="k-u-margin-bottom-triple" />
+          ),
+          label: ({ children, ...props }) => (
+            <Field.Label labelProps={props} children={children} />
+          ),
+          input: Field.Input,
         }}
       />
     </StoryContainer>
