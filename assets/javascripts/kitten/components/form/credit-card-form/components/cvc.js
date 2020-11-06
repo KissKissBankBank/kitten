@@ -27,7 +27,7 @@ export const Cvc = () => {
         autoComplete="cc-csc"
         format="###"
         inputMode="numeric"
-        placeholder="CVC"
+        placeholder="###"
         customInput={Input}
       />
     </Field>

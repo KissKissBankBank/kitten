@@ -52,9 +52,7 @@ export const withCustomComponents = () => {
         cvc={{
           label: 'Cryptogramme visuel',
           customComponents: {
-            input: props => (
-              <Field.Input {...props} placeholder="###" digits={6} />
-            ),
+            input: props => <Field.Input {...props} digits={6} />,
           },
         }}
       />
