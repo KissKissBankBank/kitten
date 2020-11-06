@@ -7,6 +7,7 @@ import { DiamondIcon } from '../../../../components/icons/diamond-icon'
 export const RewardCardDiamondBadge = ({
   children,
   className,
+  disabled,
   ...props
 }) => {
   return (

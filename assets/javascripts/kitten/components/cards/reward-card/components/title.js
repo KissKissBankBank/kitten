@@ -13,7 +13,6 @@ export const RewardCardTitle = ({
 }) => (
   <Title
     {...props}
-    italic
     cssColor={disabled ? COLORS.font2 : COLORS.font1}
     tag={tagName}
     modifier="quinary"

@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM kcnoUJ k-RewardCard"
+  className="sc-bZQynM ljTwjA k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -10,18 +10,11 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
     <div
       className="k-RewardCard__rowContent"
     >
-      <div
-        className="sc-htoDjs hpWDEM k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+      <h6
+        className="sc-htpNat kVNXBx k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
       >
-        <h6
-          className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
-        >
-          Custom title mount
-        </h6>
-        <span
-          className="k-TitleWithStroke__stroke k-TitleWithStroke__stroke--senary"
-        />
-      </div>
+        Custom title mount
+      </h6>
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
       >
@@ -34,7 +27,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM kcnoUJ k-RewardCard"
+  className="sc-bZQynM ljTwjA k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -83,18 +76,11 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
           </span>
         </div>
       </div>
-      <div
-        className="sc-htoDjs hpWDEM k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+      <h6
+        className="sc-htpNat kVNXBx k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
       >
-        <h6
-          className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
-        >
-          Custom title mount
-        </h6>
-        <span
-          className="k-TitleWithStroke__stroke k-TitleWithStroke__stroke--senary"
-        />
-      </div>
+        Custom title mount
+      </h6>
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
       >
@@ -107,7 +93,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM kcnoUJ k-RewardCard"
+  className="sc-bZQynM ljTwjA k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -156,18 +142,11 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
           </span>
         </div>
       </div>
-      <div
-        className="sc-htoDjs hpWDEM k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+      <h6
+        className="sc-htpNat kVNXBx k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
       >
-        <h6
-          className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
-        >
-          100$
-        </h6>
-        <span
-          className="k-TitleWithStroke__stroke k-TitleWithStroke__stroke--senary"
-        />
-      </div>
+        100$
+      </h6>
       <p
         className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-bold"
       >
@@ -179,11 +158,11 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         Superatis Tauri montis verticibus qui ad solis ortum sublimius attolluntur, Cilicia spatiis porrigitur late distentis dives bonis omnibus terra, eiusque lateri dextro adnexa Isauria, pari sorte uberi palmite viget et frugibus minutis, quam mediam navigabile flumen Calycadnus interscindit.
       </p>
       <ul
-        className="sc-iwsKbI iHewmE k-List"
+        className="sc-dnqmqq bYuYzA k-List"
       >
         <li>
           <span
-            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-tiny k-u-weight-regular k-RewardCard__infos k-RewardCard__infos--hasBottomMargin"
+            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-RewardCard__infos k-RewardCard__infos--hasBottomMargin"
           >
             Contributors: 
             <span
@@ -195,7 +174,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-tiny k-u-weight-regular k-RewardCard__infos k-RewardCard__infos--hasBottomMargin"
+            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-RewardCard__infos k-RewardCard__infos--hasBottomMargin"
           >
             Availability: 
             <span
@@ -207,7 +186,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
         </li>
         <li>
           <span
-            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-tiny k-u-weight-regular k-RewardCard__infos"
+            className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-micro k-u-weight-regular k-RewardCard__infos"
           >
             Delivery: 
             <span
@@ -457,7 +436,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with video matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM kcnoUJ k-RewardCard"
+  className="sc-bZQynM ljTwjA k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -465,18 +444,11 @@ exports[`<RewardCard /> with video matches with snapshot 1`] = `
     <div
       className="k-RewardCard__rowContent"
     >
-      <div
-        className="sc-htoDjs hpWDEM k-RewardCard__title k-u-color-font1 k-TitleWithStroke--align-left k-TitleWithStroke--italic"
+      <h6
+        className="sc-htpNat kVNXBx k-RewardCard__title k-u-margin-bottom-double k-u-margin-top-none"
       >
-        <h6
-          className="k-TitleWithStroke__title k-TitleWithStroke__title--senary"
-        >
-          Custom title mount
-        </h6>
-        <span
-          className="k-TitleWithStroke__stroke k-TitleWithStroke__stroke--senary"
-        />
-      </div>
+        Custom title mount
+      </h6>
       <p
         className="k-Paragraph k-Paragraph--quaternary k-Paragraph--withoutMargin"
       >
