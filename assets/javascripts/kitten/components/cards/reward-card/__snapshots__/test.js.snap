@@ -2,7 +2,7 @@
 
 exports[`<RewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM kFocqW k-RewardCard"
+  className="sc-bZQynM kvUiju k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -27,7 +27,7 @@ exports[`<RewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM kFocqW k-RewardCard"
+  className="sc-bZQynM kvUiju k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -93,7 +93,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM kFocqW k-RewardCard"
+  className="sc-bZQynM kvUiju k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -201,15 +201,11 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
     <div
       className="k-RewardCard__rowSide k-RewardCard__rowSide--hasMargins"
     >
-      <div
-        className="k-RewardCard__responsiveElement"
-      >
-        <img
-          alt="My reward"
-          className="k-RewardCard__image"
-          src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
-        />
-      </div>
+      <img
+        alt="My reward"
+        className="k-RewardCard__image"
+        src="http://via.placeholder.com/200x240/caf4fe/caf4fe"
+      />
     </div>
   </div>
   <div
@@ -440,7 +436,7 @@ exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with video matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM kFocqW k-RewardCard"
+  className="sc-bZQynM kvUiju k-RewardCard"
 >
   <div
     className="k-RewardCard__cardRow"
@@ -462,27 +458,23 @@ exports[`<RewardCard /> with video matches with snapshot 1`] = `
     <div
       className="k-RewardCard__rowSide k-RewardCard__rowSide--hasMargins"
     >
-      <div
-        className="k-RewardCard__responsiveElement"
+      <video
+        autoPlay={true}
+        className="sc-gzVnrw gSBsWz k-RewardCard__video"
+        loop={false}
+        muted={true}
+        playsInline={true}
+        poster={null}
       >
-        <video
-          autoPlay={true}
-          className="sc-gzVnrw gSBsWz k-RewardCard__video"
-          loop={false}
-          muted={true}
-          playsInline={true}
-          poster={null}
-        >
-          <source
-            src="#video.mp4"
-            type="video/mp4"
-          />
-          <source
-            src="#video.webm"
-            type="video/webm"
-          />
-        </video>
-      </div>
+        <source
+          src="#video.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="#video.webm"
+          type="video/webm"
+        />
+      </video>
     </div>
   </div>
 </div>

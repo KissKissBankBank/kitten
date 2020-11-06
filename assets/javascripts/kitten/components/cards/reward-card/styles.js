@@ -45,25 +45,8 @@ export const StyledRewardCard = styled.div`
     }
   }
 
-  .k-RewardCard__responsiveElement {
-    position: relative;
-    padding-bottom: calc(10 / 16 * 100%);
+  .k-RewardCard__image {
     width: 100%;
-    overflow: hidden;
-  }
-
-  .k-RewardCard__image,
-  .k-RewardCard__video {
-    // display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .3s ease;
 
     &.k-RewardCard__image--disabled {
       filter: grayscale(1) opacity(0.4);
