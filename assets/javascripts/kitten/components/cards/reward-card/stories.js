@@ -82,7 +82,7 @@ export const New_RewardCard = () => {
   return (
     <StyledStoryContainer>
       <Grid>
-        <GridCol>
+        <GridCol col-l="6">
           <RewardCardComponent
             withoutBorder={boolean('withoutBorder', false, versionGroupId)}
             disabled={disabled}
@@ -90,7 +90,7 @@ export const New_RewardCard = () => {
           <RewardCardComponent.Image
             src={text(
               'Reward image src',
-              'http://via.placeholder.com/200x100/caf4fe/caf4fe',
+              'http://placekitten.com/800/500',
               contentGroupId,
             )}
             alt={text('Reward image alt', 'My reward', contentGroupId)}
