@@ -42,17 +42,7 @@ const StyledRadioButton = styled.label`
 
     &:checked {
       position: relative;
-      border: ${pxToRem(6)} solid ${COLORS.primary1};
-    }
-
-    &:disabled {
-      background-color: ${COLORS.line1};
-      border-color: ${COLORS.line2};
-    }
-
-    &:checked:disabled {
-      background-color: ${COLORS.background1};
-      border-color: ${COLORS.line2};
+      border: ${pxToRem(5)} solid ${COLORS.primary1};
     }
   }
 
@@ -64,14 +54,19 @@ const StyledRadioButton = styled.label`
     }
   }
 
+  & .k-Form-RadioButton__input:disabled {
+    background-color: ${COLORS.line1};
+    border-color: ${COLORS.line2};
+
+    &:checked {
+      background-color: ${COLORS.background1};
+      border-color: ${COLORS.line2};
+    }
+  }
+
   .k-Form-RadioButton__label {
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-1)};
-
-    &:active,
-    .k-Form-RadioButton__input:active + & {
-      color: ${COLORS.primary3};
-    }
 
     .k-Form-RadioButton__input:disabled + & {
       cursor: not-allowed;
@@ -80,6 +75,12 @@ const StyledRadioButton = styled.label`
     .k-Form-RadioButton--error & {
       border-color: ${COLORS.error3};
     }
+  }
+
+  &:active .k-Form-RadioButton__label,
+  .k-Form-RadioButton__label:active,
+  .k-Form-RadioButton__input:active + .k-Form-RadioButton__label {
+    color: ${COLORS.primary3};
   }
 
   .k-Form-RadioButton__label--large {
@@ -114,9 +115,14 @@ const StyledRadioButton = styled.label`
     border-radius: ${pxToRem(6)};
     border: 2px solid ${COLORS.line1};
 
+    &:active,
     &:focus-within,
     &:focus {
       border-color: ${COLORS.primary1};
+    }
+
+    &.k-Form-RadioButton--error {
+      border-color: ${COLORS.error3};
     }
 
     @media (min-width: ${ScreenConfig.S.min}px) {
@@ -128,7 +134,7 @@ const StyledRadioButton = styled.label`
         height: ${pxToRem(20)};
 
         &:checked {
-          background-size: ${pxToRem(8)};
+          border-width: ${pxToRem(6)};
         }
       }
 
