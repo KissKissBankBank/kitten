@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `variant` prop to `RadioButton`, with default value `andromeda`.
+
 ## [2.95.3] - 2020-11-05
 
 Fix:
