@@ -41,6 +41,7 @@ module.exports = {
           },
         },
       ],
+      sideEffects: true,
     })
     return alteredConfig
   },
