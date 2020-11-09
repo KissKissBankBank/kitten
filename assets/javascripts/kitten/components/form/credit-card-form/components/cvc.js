@@ -2,8 +2,6 @@ import React from 'react'
 import NumberFormat from 'react-number-format'
 import { useFormContext } from '../'
 
-// TODO: Validation sur 3 caractères.
-
 export const Cvc = () => {
   const {
     customComponents: {
