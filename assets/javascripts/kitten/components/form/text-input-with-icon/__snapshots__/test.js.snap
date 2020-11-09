@@ -2,22 +2,17 @@
 
 exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 <div
-  className="sc-EHOje jsaDiO"
+  className="sc-bxivhb inWqAT k-Form-TextInputWithIcon"
 >
   
   <input
-    className="sc-bwzfXH cmvcxy"
+    className="sc-bdVaJa fLerWA k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
-    style={
-      Object {
-        "paddingLeft": "3.125rem",
-      }
-    }
   />
   <span
     aria-hidden="true"
-    className="sc-bZQynM eLJVgP"
+    className="k-Form-TextInputWithIcon__icon"
   >
     <svg
       aria-label={null}
@@ -46,22 +41,17 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-EHOje jsaDiO"
+  className="sc-bxivhb inWqAT k-Form-TextInputWithIcon"
 >
   
   <input
-    className="sc-bwzfXH cmvcxy"
+    className="sc-bdVaJa fLerWA k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
     disabled={true}
     name="text"
-    style={
-      Object {
-        "paddingLeft": "3.125rem",
-      }
-    }
   />
   <span
     aria-hidden="true"
-    className="sc-bZQynM hnUUFQ"
+    className="k-Form-TextInputWithIcon__icon k-Form-TextInputWithIcon__icon--disabled"
   >
     <svg
       aria-label={null}
@@ -90,23 +80,18 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 <div
-  className="sc-EHOje jsaDiO"
+  className="sc-bxivhb inWqAT k-Form-TextInputWithIcon"
 >
   
   <input
-    className="sc-bwzfXH cmvcxy"
+    className="sc-bdVaJa fLerWA k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
-    style={
-      Object {
-        "paddingLeft": "3.125rem",
-      }
-    }
   />
   <span
     aria-hidden="true"
-    className="sc-bZQynM eLJVgP"
+    className="k-Form-TextInputWithIcon__icon"
   >
     <svg
       aria-label={null}

@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-jzJRlG bTVSHD"
+      className="sc-iwsKbI cdTKwF"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-cSHVUG jrEObi"
+        className="sc-gZMcBi kyYKsf"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -122,7 +122,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat iVlOqv"
+      className="sc-bwzfXH kivJAT k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -133,7 +133,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-gZMcBi giNnHm k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-EHOje jvzENE k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -216,7 +216,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat fTSCbm"
+      className="sc-bwzfXH kivJAT k-Form-TextInput k-Form-TextInput--andromeda"
       disabled={false}
       id="input"
       name="field"
@@ -296,10 +296,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU eSPiSL"
+      className="sc-bZQynM gdDOhh"
     >
       <input
-        className="sc-htpNat iVlOqv sc-VigVT fUPyOg"
+        className="sc-bwzfXH kivJAT k-Form-TextInput sc-gzVnrw iNeeLo k-Form-TextInput--andromeda k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -308,7 +308,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jTzLTM gQMtOg"
+        className="sc-htoDjs dsIbJx"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -337,7 +337,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-gZMcBi giNnHm k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-EHOje jvzENE k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -420,10 +420,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU eSPiSL"
+      className="sc-bZQynM gdDOhh"
     >
       <input
-        className="sc-htpNat fTSCbm sc-VigVT fUPyOg"
+        className="sc-bwzfXH kivJAT k-Form-TextInput sc-gzVnrw iNeeLo k-Form-TextInput--andromeda"
         disabled={false}
         id="input"
         name="field"
@@ -432,7 +432,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jTzLTM gQMtOg"
+        className="sc-htoDjs dsIbJx"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"

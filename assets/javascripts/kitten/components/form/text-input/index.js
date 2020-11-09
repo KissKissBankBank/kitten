@@ -260,6 +260,7 @@ export class TextInput extends PureComponent {
       tag,
       variant,
       className,
+      style,
       ...others
     } = this.props
 
@@ -294,7 +295,9 @@ export class TextInput extends PureComponent {
                 'k-Form-TextInput--alignCenter': center,
               },
             )}
-            style={{ '--input-content-width': digits, ...others.style }}
+            style={
+              !!digits ? { '--input-content-width': digits, ...style } : style
+            }
             {...others}
           />
           <div className="k-Form-TextInput__textareaGradient" />
@@ -321,7 +324,9 @@ export class TextInput extends PureComponent {
               'k-Form-TextInput--alignCenter': center,
             },
           )}
-          style={{ '--input-content-width': digits, ...others.style }}
+          style={
+            !!digits ? { '--input-content-width': digits, ...style } : style
+          }
           {...others}
         />
       )
