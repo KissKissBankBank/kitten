@@ -15,7 +15,7 @@ const StyledInput = styled.input`
   line-height: 1em;
   ${TYPOGRAPHY.fontStyles.light};
   box-sizing: border-box;
-  border-width: ${pxToRem(2)}; // IE11
+  border-width: ${pxToRem(2)}; /* IE11 */
   border-width: var(--input-border-width);
   border-style: solid;
   border-radius: 0;
@@ -58,7 +58,7 @@ const StyledInput = styled.input`
 
   // VARIANTS
 
-  padding: ${pxToRem(10)} ${pxToRem(15)}; // IE11
+  padding: ${pxToRem(10)} ${pxToRem(15)}; /* IE11 */
   padding: ${pxToRem(10)} var(--input-padding-horizontal);
 
   &.k-Form-TextInput--orion {
@@ -71,8 +71,8 @@ const StyledInput = styled.input`
       height: ${pxToRem(70)};
       font-size: ${stepToRem(0)};
 
-      // IE11
-      @supports not (--css: variables) {
+      /* IE11 */
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         padding: ${pxToRem(10)} ${pxToRem(30)};
       }
     }
@@ -129,41 +129,41 @@ const StyledInput = styled.input`
     text-align: center;
   }
 
-  // IE11 doesn't support CSS variables
-  @supports not (--css: variables) {
+  /* IE11 doesn't support CSS variables */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     &.k-Form-TextInput-hasDigits_2 {
       text-align: center;
-      width: calc(2ch + ${pxToRem(2 * (10 + 2))});
+      width: calc(2em + ${pxToRem(2 * (10 + 2))});
 
       &.k-Form-TextInput--orion {
-        width: calc(2ch + ${pxToRem(2 * (15 + 2))});
+        width: calc(2em + ${pxToRem(2 * (15 + 2))});
 
         @media (min-width: ${ScreenConfig.M.min}px) {
-          width: calc(2ch + ${pxToRem(2 * (30 + 2))});
+          width: calc(2em + ${pxToRem(2 * (30 + 2))});
         }
       }
     }
 
     &.k-Form-TextInput-hasDigits_4 {
-      width: calc(4ch + ${pxToRem(2 * (10 + 2))});
+      width: calc(4em + ${pxToRem(2 * (10 + 2))});
 
       &.k-Form-TextInput--orion {
-        width: calc(4ch + ${pxToRem(2 * (15 + 2))});
+        width: calc(4em + ${pxToRem(2 * (15 + 2))});
 
         @media (min-width: ${ScreenConfig.M.min}px) {
-          width: calc(4ch + ${pxToRem(2 * (30 + 2))});
+          width: calc(4em + ${pxToRem(2 * (30 + 2))});
         }
       }
     }
 
-    &.k-Form-TextInput-has_Digits_12 {
-      width: calc(12ch + ${pxToRem(2 * (10 + 2))});
+    &.k-Form-TextInput-hasDigits_12 {
+      width: calc(12em + ${pxToRem(2 * (10 + 2))});
 
       &.k-Form-TextInput--orion {
-        width: calc(12ch + ${pxToRem(2 * (15 + 2))});
+        width: calc(12em + ${pxToRem(2 * (15 + 2))});
 
         @media (min-width: ${ScreenConfig.M.min}px) {
-          width: calc(12ch + ${pxToRem(2 * (30 + 2))});
+          width: calc(12em + ${pxToRem(2 * (30 + 2))});
         }
       }
     }

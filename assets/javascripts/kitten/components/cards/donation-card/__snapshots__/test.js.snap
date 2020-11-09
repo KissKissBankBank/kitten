@@ -65,7 +65,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
                 >
                   <input
                     autoComplete="off"
-                    className="sc-bxivhb fWbNXm k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
+                    className="sc-bxivhb faAfYI k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
                     defaultValue=""
                     disabled={false}
                     id="donation-amount"

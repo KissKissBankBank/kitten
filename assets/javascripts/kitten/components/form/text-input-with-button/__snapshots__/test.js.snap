@@ -5,7 +5,7 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
+    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
   />
@@ -24,7 +24,7 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
+    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
   />
@@ -44,7 +44,7 @@ exports[`<TextInputWithButton /> with component inside button value matches with
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
+    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -103,7 +103,7 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--disabled"
+    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--disabled"
     disabled={true}
     name="text"
   />
@@ -122,7 +122,7 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--error"
+    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--error"
     disabled={false}
     name="text"
   />
@@ -141,7 +141,7 @@ exports[`<TextInputWithButton /> with giant prop matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--giant"
+    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--giant"
     disabled={false}
     name="text"
   />
@@ -160,7 +160,7 @@ exports[`<TextInputWithButton /> with huge prop matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--huge"
+    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--huge"
     disabled={false}
     name="text"
   />
@@ -179,7 +179,7 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
+    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
@@ -200,7 +200,7 @@ exports[`<TextInputWithButton /> with tiny prop matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--tiny"
+    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--tiny"
     disabled={false}
     name="text"
   />
@@ -219,7 +219,7 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
   className="sc-htpNat ePpdXQ"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--valid"
+    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb wFwRO k-Form-TextInput--andromeda k-Form-TextInput--valid"
     disabled={false}
     name="text"
   />

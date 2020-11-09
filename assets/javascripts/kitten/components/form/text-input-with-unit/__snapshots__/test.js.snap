@@ -5,7 +5,7 @@ exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
   className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
     type="number"
@@ -23,7 +23,7 @@ exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
   className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
     disabled={true}
     name="text"
     type="number"
@@ -41,7 +41,7 @@ exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
   className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--error"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--error"
     disabled={false}
     name="text"
     type="number"
@@ -59,7 +59,7 @@ exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
   className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
     type="number"
@@ -79,7 +79,7 @@ exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
   className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
 >
   <input
-    className="sc-bdVaJa fLerWA k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--valid"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--valid"
     disabled={false}
     name="text"
     type="number"
