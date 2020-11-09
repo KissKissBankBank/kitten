@@ -2,7 +2,7 @@
 
 exports[`<RadioButton /> with \`valid\` prop matches with snapshot 1`] = `
 <label
-  className="sc-bdVaJa ejxNiR k-Form-RadioButton k-Form-RadioButton--andromeda"
+  className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButton--andromeda"
 >
   <input
     className="k-Form-RadioButton__input"
