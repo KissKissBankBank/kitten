@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-jzJRlG bTVSHD"
+      className="sc-cSHVUG ihFPoa"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-cSHVUG jrEObi"
+        className="sc-kAzzGY jfcNYo"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -296,10 +296,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU eSPiSL"
+      className="sc-VigVT kmeNZe"
     >
       <input
-        className="sc-htpNat iVlOqv sc-VigVT fUPyOg"
+        className="sc-htpNat iVlOqv sc-jTzLTM eJSurr"
         disabled={false}
         id="input"
         name="field"
@@ -308,7 +308,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jTzLTM gQMtOg"
+        className="sc-fjdhpX fSgJsw"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -420,10 +420,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU eSPiSL"
+      className="sc-VigVT kmeNZe"
     >
       <input
-        className="sc-htpNat fTSCbm sc-VigVT fUPyOg"
+        className="sc-htpNat fTSCbm sc-jTzLTM eJSurr"
         disabled={false}
         id="input"
         name="field"
@@ -432,7 +432,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jTzLTM gQMtOg"
+        className="sc-fjdhpX fSgJsw"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -492,55 +492,58 @@ Array [
     <div
       className="k-RadioButtonSet"
     >
-      <div
-        className="k-RadioButton k-RadioButtonSet__radioButton"
+      <label
+        className="sc-gqjmRU bukDay k-Form-RadioButton k-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+        htmlFor="option-a"
       >
         <input
-          className="k-RadioButton__input"
+          className="k-Form-RadioButton__input"
           defaultChecked={true}
+          disabled={false}
           id="option-a"
           name="radio"
           type="radio"
         />
-        <label
-          className="k-RadioButton__label"
-          htmlFor="option-a"
+        <span
+          className="k-Form-RadioButton__label"
         >
           Option A
-        </label>
-      </div>
-      <div
-        className="k-RadioButton k-RadioButtonSet__radioButton"
+        </span>
+      </label>
+      <label
+        className="sc-gqjmRU bukDay k-Form-RadioButton k-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+        htmlFor="option-b"
       >
         <input
-          className="k-RadioButton__input"
+          className="k-Form-RadioButton__input"
+          disabled={false}
           id="option-b"
           name="radio"
           type="radio"
         />
-        <label
-          className="k-RadioButton__label"
-          htmlFor="option-b"
+        <span
+          className="k-Form-RadioButton__label"
         >
           Option B
-        </label>
-      </div>
-      <div
-        className="k-RadioButton k-RadioButtonSet__radioButton"
+        </span>
+      </label>
+      <label
+        className="sc-gqjmRU bukDay k-Form-RadioButton k-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+        htmlFor="option-c"
       >
         <input
-          className="k-RadioButton__input"
+          className="k-Form-RadioButton__input"
+          disabled={false}
           id="option-c"
           name="radio"
           type="radio"
         />
-        <label
-          className="k-RadioButton__label"
-          htmlFor="option-c"
+        <span
+          className="k-Form-RadioButton__label"
         >
           Option C
-        </label>
-      </div>
+        </span>
+      </label>
     </div>
   </div>,
 ]

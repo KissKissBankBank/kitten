@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { RadioButton } from '../../components/form/radio-button'
+import { RadioButton } from '../../../components/form/radio-button'
 
 export class RadioButtonSet extends React.Component {
   constructor(props) {
