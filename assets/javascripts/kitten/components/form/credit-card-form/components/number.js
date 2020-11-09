@@ -1,20 +1,13 @@
-import React from 'react'
-import { renderToStaticMarkup } from 'react-dom/server'
+import React, { useState } from 'react'
 import styled, { css } from 'styled-components'
 import NumberFormat from 'react-number-format'
-import creditCardType from 'credit-card-type'
 import { useFormContext } from '../'
 import { pxToRem } from '../../../../helpers/utils/typography'
-import { VisaIcon } from '../../../icons/visa-icon'
-
-creditCardType.addCard({
-  niceType: 'Bancontact',
-  type: 'bcmc',
-  patterns: [6703],
-  gaps: [4, 8, 12],
-  lengths: [16],
-  code: null,
-})
+import {
+  getCreditCardType,
+  getCreditCardFormat,
+  getIconSvgStringByType,
+} from './helpers'
 
 const StyledNumberFormat = styled(({ iconSvg, ...others }) => (
   <NumberFormat {...others} />
@@ -30,7 +23,8 @@ const StyledNumberFormat = styled(({ iconSvg, ...others }) => (
   `}
 `
 
-export const Number = () => {
+export const Number = ({ value: defaultValue }) => {
+  const [value, setValue] = useState(defaultValue)
   const {
     customComponents: {
       field: globalField,
@@ -42,10 +36,9 @@ export const Number = () => {
   const Field = customComponents.field || globalField
   const Label = customComponents.label || globalLabel
   const Input = customComponents.input || globalInput
-
-  const svgString = encodeURIComponent(
-    renderToStaticMarkup(<VisaIcon height="15" />),
-  )
+  const ccType = getCreditCardType(value)
+  const ccFormat = getCreditCardFormat(ccType)
+  const ccIconSvg = getIconSvgStringByType(ccType.type)
 
   return (
     <Field>
@@ -55,14 +48,13 @@ export const Number = () => {
         name="cardnumber"
         id="frmCCNum"
         autoComplete="cc-number"
-        format="#### #### #### ####"
+        format={ccFormat}
         inputMode="numeric"
         placeholder="#### #### #### ####"
         customInput={Input}
-        iconSvg={svgString}
+        iconSvg={ccIconSvg}
         onValueChange={({ value }) => {
-          console.warn(value)
-          console.warn(creditCardType(value))
+          setValue(value)
         }}
       />
     </Field>
