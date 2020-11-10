@@ -39,7 +39,7 @@ export const Default = () => (
   <Grid>
     <GridCol offset="1" col="8">
       <RadioButtonSet
-        id={text('ID', 'option-a')}
+        id={text('ID', 'story-radio-button-set')}
         label={text('Label', null)}
         items={[
           {
@@ -74,7 +74,7 @@ export const OrionGrid = () => (
       <OrionGlobalStyle />
       <RadioButtonSet
         className="k-Form-RadioButtonSet__orionGrid"
-        id={text('ID', 'option-a')}
+        id={text('ID', 'story-radio-button-set')}
         items={[
           {
             text: text('Option A', '25 €'),
