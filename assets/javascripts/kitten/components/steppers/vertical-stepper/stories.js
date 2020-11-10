@@ -26,7 +26,11 @@ export const Default = () => {
           href="#"
           statusProps={{ title: 'Étape validée' }}
         >
-          <VerticalStepper.Title>Infos clés</VerticalStepper.Title>
+          <VerticalStepper.Title
+            variant="orion"
+          >
+            Infos clés
+          </VerticalStepper.Title>
 
           <VerticalStepper.Link>Éditer</VerticalStepper.Link>
         </VerticalStepper.Step>
