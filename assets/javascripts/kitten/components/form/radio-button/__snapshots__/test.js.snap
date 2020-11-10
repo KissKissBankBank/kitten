@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RadioButton /> with \`valid\` prop matches with snapshot 1`] = `
+exports[`<RadioButton /> default matches with snapshot 1`] = `
 <label
   className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButton--andromeda"
 >

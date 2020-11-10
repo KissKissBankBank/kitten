@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-cSHVUG ihFPoa"
+      className="sc-kAzzGY jplcDl"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-kAzzGY jfcNYo"
+        className="sc-chPdSV ehdkFE"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -296,10 +296,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-VigVT kmeNZe"
+      className="sc-jTzLTM hwhVrJ"
     >
       <input
-        className="sc-htpNat iVlOqv sc-jTzLTM eJSurr"
+        className="sc-htpNat iVlOqv sc-fjdhpX kCYvEC"
         disabled={false}
         id="input"
         name="field"
@@ -308,7 +308,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-fjdhpX fSgJsw"
+        className="sc-jzJRlG eULSFC"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -420,10 +420,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-VigVT kmeNZe"
+      className="sc-jTzLTM hwhVrJ"
     >
       <input
-        className="sc-htpNat fTSCbm sc-jTzLTM eJSurr"
+        className="sc-htpNat fTSCbm sc-fjdhpX kCYvEC"
         disabled={false}
         id="input"
         name="field"
@@ -432,7 +432,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-fjdhpX fSgJsw"
+        className="sc-jzJRlG eULSFC"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -489,18 +489,17 @@ Array [
   <div
     className="sc-bdVaJa ggQxmM"
   >
-    <div
-      className="k-RadioButtonSet"
+    <fieldset
+      className="sc-VigVT buVlsy k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+      disabled={false}
     >
       <label
-        className="sc-gqjmRU bukDay k-Form-RadioButton k-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-        htmlFor="option-a"
+        className="sc-gqjmRU bukDay k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
       >
         <input
           className="k-Form-RadioButton__input"
           defaultChecked={true}
           disabled={false}
-          id="option-a"
           name="radio"
           type="radio"
         />
@@ -511,13 +510,11 @@ Array [
         </span>
       </label>
       <label
-        className="sc-gqjmRU bukDay k-Form-RadioButton k-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-        htmlFor="option-b"
+        className="sc-gqjmRU bukDay k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
       >
         <input
           className="k-Form-RadioButton__input"
           disabled={false}
-          id="option-b"
           name="radio"
           type="radio"
         />
@@ -528,13 +525,11 @@ Array [
         </span>
       </label>
       <label
-        className="sc-gqjmRU bukDay k-Form-RadioButton k-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-        htmlFor="option-c"
+        className="sc-gqjmRU bukDay k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
       >
         <input
           className="k-Form-RadioButton__input"
           disabled={false}
-          id="option-c"
           name="radio"
           type="radio"
         />
@@ -544,7 +539,7 @@ Array [
           Option C
         </span>
       </label>
-    </div>
+    </fieldset>
   </div>,
 ]
 `;

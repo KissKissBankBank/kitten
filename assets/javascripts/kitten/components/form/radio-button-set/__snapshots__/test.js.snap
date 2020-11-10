@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
+<fieldset
+  className="sc-bwzfXH ekoBnF k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+  disabled={false}
+>
+  <legend
+    className="k-Label k-Form-RadioButtonSet__label"
+    htmlFor={null}
+    onClick={[Function]}
+  >
+    Label
+  </legend>
+  <label
+    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+  >
+    <input
+      className="k-Form-RadioButton__input"
+      defaultChecked={true}
+      disabled={false}
+      name="test-radio-button-set"
+      type="radio"
+    />
+    <span
+      className="k-Form-RadioButton__label"
+    >
+      Option A
+    </span>
+  </label>
+  <label
+    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+  >
+    <input
+      className="k-Form-RadioButton__input"
+      disabled={false}
+      name="test-radio-button-set"
+      type="radio"
+    />
+    <span
+      className="k-Form-RadioButton__label"
+    >
+      Option B
+    </span>
+  </label>
+  <label
+    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+  >
+    <input
+      className="k-Form-RadioButton__input"
+      disabled={false}
+      name="test-radio-button-set"
+      type="radio"
+    />
+    <span
+      className="k-Form-RadioButton__label"
+    >
+      Option C
+    </span>
+  </label>
+</fieldset>
+`;

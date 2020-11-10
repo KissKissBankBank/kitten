@@ -46,7 +46,7 @@ describe('<RadioButton />', () => {
     })
   })
 
-  describe('with `valid` prop', () => {
+  describe('default', () => {
     let component
     beforeEach(() => {
       component = renderer.create(<RadioButton text="Text" />).toJSON()
