@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Refactor `Checkbox` and `CheckboxSet` components.
+- Feature: Add `label` prop to `Checkbox` and `CheckboxSet` components and
+  display custom text is `children` are passed in addition to `label`.
+
 ## [2.95.3] - 2020-11-05
 
 Fix:
