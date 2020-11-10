@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
+import Title from './components/title'
+import COLORS from '../../../constants/colors-config'
 
 const StyledNav = styled.nav`
   position: relative;
@@ -25,13 +27,16 @@ const StyledNav = styled.nav`
   }
 `
 
-
-const VerticalStepperSingle = () => {
+export const VerticalStepperSingle = ({ children }) => {
   return (
     <StyledNav>
-      <ul className="k-VerticalStepperSingle" role="tablist">{children}</ul>
+      <ul className="k-VerticalStepperSingle" role="tablist">
+        <li>
+          <Title>Etape 1
+            <span>Décrivez-nous votre projet</span>
+          </Title>
+        </li>
+      </ul>
     </StyledNav>
   )
 }
-
-  export default VerticalStepperSingle

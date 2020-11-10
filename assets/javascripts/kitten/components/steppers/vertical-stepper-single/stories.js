@@ -1,8 +1,7 @@
 import React from 'react'
-import { VerticalStepper } from './index'
+import { VerticalStepperSingle } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
-import { Text } from '../../typography/text'
 
 const StoryContainer = ({ children }) => (
   <Container>
@@ -20,9 +19,7 @@ export default {
 export const Default = () => {
   return (
     <StoryContainer>
-      <VerticalStepperSingle>
-
-      </VerticalStepperSingle>
+      <VerticalStepperSingle />
     </StoryContainer>
   )
 }
