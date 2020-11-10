@@ -14,11 +14,13 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
   </legend>
   <label
     className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    htmlFor="option-a"
   >
     <input
       className="k-Form-RadioButton__input"
       defaultChecked={true}
       disabled={false}
+      id="option-a"
       name="test-radio-button-set"
       type="radio"
     />
@@ -30,10 +32,12 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
   </label>
   <label
     className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    htmlFor="option-b"
   >
     <input
       className="k-Form-RadioButton__input"
       disabled={false}
+      id="option-b"
       name="test-radio-button-set"
       type="radio"
     />
@@ -45,10 +49,144 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
   </label>
   <label
     className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    htmlFor="option-c"
   >
     <input
       className="k-Form-RadioButton__input"
       disabled={false}
+      id="option-c"
+      name="test-radio-button-set"
+      type="radio"
+    />
+    <span
+      className="k-Form-RadioButton__label"
+    >
+      Option C
+    </span>
+  </label>
+</fieldset>
+`;
+
+exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = `
+<fieldset
+  className="sc-bwzfXH ekoBnF k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+  disabled={false}
+>
+  <legend
+    className="k-Label k-Form-RadioButtonSet__label"
+    htmlFor={null}
+    onClick={[Function]}
+  >
+    Label test
+  </legend>
+  <label
+    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    htmlFor="option-a"
+  >
+    <input
+      className="k-Form-RadioButton__input"
+      defaultChecked={true}
+      disabled={false}
+      id="option-a"
+      name="test-radio-button-set"
+      type="radio"
+    />
+    <span
+      className="k-Form-RadioButton__label"
+    >
+      Option A
+    </span>
+  </label>
+  <label
+    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    htmlFor="option-b"
+  >
+    <input
+      className="k-Form-RadioButton__input"
+      disabled={false}
+      id="option-b"
+      name="test-radio-button-set"
+      type="radio"
+    />
+    <span
+      className="k-Form-RadioButton__label"
+    >
+      Option B
+    </span>
+  </label>
+  <label
+    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    htmlFor="option-c"
+  >
+    <input
+      className="k-Form-RadioButton__input"
+      disabled={false}
+      id="option-c"
+      name="test-radio-button-set"
+      type="radio"
+    />
+    <span
+      className="k-Form-RadioButton__label"
+    >
+      Option C
+    </span>
+  </label>
+</fieldset>
+`;
+
+exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
+<fieldset
+  className="sc-bwzfXH ekoBnF k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+  disabled={false}
+>
+  <legend>
+    <h1>
+      Legend test
+    </h1>
+  </legend>
+  <label
+    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    htmlFor="option-a"
+  >
+    <input
+      className="k-Form-RadioButton__input"
+      defaultChecked={true}
+      disabled={false}
+      id="option-a"
+      name="test-radio-button-set"
+      type="radio"
+    />
+    <span
+      className="k-Form-RadioButton__label"
+    >
+      Option A
+    </span>
+  </label>
+  <label
+    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    htmlFor="option-b"
+  >
+    <input
+      className="k-Form-RadioButton__input"
+      disabled={false}
+      id="option-b"
+      name="test-radio-button-set"
+      type="radio"
+    />
+    <span
+      className="k-Form-RadioButton__label"
+    >
+      Option B
+    </span>
+  </label>
+  <label
+    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    htmlFor="option-c"
+  >
+    <input
+      className="k-Form-RadioButton__input"
+      disabled={false}
+      id="option-c"
       name="test-radio-button-set"
       type="radio"
     />

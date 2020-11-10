@@ -495,11 +495,13 @@ Array [
     >
       <label
         className="sc-gqjmRU bukDay k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+        htmlFor="option-a"
       >
         <input
           className="k-Form-RadioButton__input"
           defaultChecked={true}
           disabled={false}
+          id="option-a"
           name="radio"
           type="radio"
         />
@@ -511,10 +513,12 @@ Array [
       </label>
       <label
         className="sc-gqjmRU bukDay k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+        htmlFor="option-b"
       >
         <input
           className="k-Form-RadioButton__input"
           disabled={false}
+          id="option-b"
           name="radio"
           type="radio"
         />
@@ -526,10 +530,12 @@ Array [
       </label>
       <label
         className="sc-gqjmRU bukDay k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+        htmlFor="option-c"
       >
         <input
           className="k-Form-RadioButton__input"
           disabled={false}
+          id="option-c"
           name="radio"
           type="radio"
         />

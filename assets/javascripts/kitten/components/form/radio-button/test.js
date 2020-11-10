@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer'
 
 describe('<RadioButton />', () => {
   describe('By default', () => {
-    const component = shallow(<RadioButton text="Label Text" />)
+    const component = shallow(<RadioButton id="test-id" text="Label Text" />)
     const input = component.find('input')
 
     it('renders an input.k-Form-RadioButton__input">', () => {
@@ -14,7 +14,9 @@ describe('<RadioButton />', () => {
   })
 
   describe('large prop', () => {
-    const component = shallow(<RadioButton text="Label Text" large />)
+    const component = shallow(
+      <RadioButton id="test-id" text="Label Text" large />,
+    )
     const label = component.find('.k-Form-RadioButton__label')
 
     it('passes the right props to the `label` component', () => {
@@ -24,7 +26,7 @@ describe('<RadioButton />', () => {
 
   describe('largeContent prop', () => {
     const component = shallow(
-      <RadioButton text="Label Text" largeContent>
+      <RadioButton id="test-id" text="Label Text" largeContent>
         Hello
       </RadioButton>,
     )
@@ -38,7 +40,9 @@ describe('<RadioButton />', () => {
   })
 
   describe('error prop', () => {
-    const component = shallow(<RadioButton text="Label Text" error />)
+    const component = shallow(
+      <RadioButton id="test-id" text="Label Text" error />,
+    )
     const input = component.find('.k-Form-RadioButton')
 
     it('passes the right props to the `input`component', () => {
@@ -49,7 +53,9 @@ describe('<RadioButton />', () => {
   describe('default', () => {
     let component
     beforeEach(() => {
-      component = renderer.create(<RadioButton text="Text" />).toJSON()
+      component = renderer
+        .create(<RadioButton id="test-id" text="Text" />)
+        .toJSON()
     })
 
     it('matches with snapshot', () => {

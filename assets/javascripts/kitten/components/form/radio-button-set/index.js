@@ -59,9 +59,10 @@ export const RadioButtonSet = ({
         {label}
       </Label>
     )}
-    {children && <legend>{children}</legend>}
+    {children && !label && <legend>{children}</legend>}
     {items.map(({ id, className, ...itemProps }) => (
       <RadioButton
+        id={id}
         variant={variant}
         error={error}
         name={name}
