@@ -11,6 +11,7 @@ import classNames from 'classnames'
 import { WarningCircleIcon } from '../../../components/icons/warning-circle-icon'
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
+import find from 'lodash/fp/find'
 
 const StyledDropdownSelect = styled.div`
   position: relative;
@@ -365,13 +366,22 @@ export const DropdownSelect = ({
   size,
   a11yStatusError,
   a11yStatusValid,
+  a11ySelectionMessageDisplayer,
+  defaultSelectedValue,
+  onChange,
+  onValueChange,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
-    return `${itemToString(selectedItem)} was selected`
+    return a11ySelectionMessageDisplayer(itemToString(selectedItem))
   }
 
-  const itemToString = item => {
-    return item ? String(item.label) : ''
+  const itemToString = item => (item ? String(item.label) : '')
+
+  const initialSelectedItem = find(['value', defaultSelectedValue])(items)
+
+  const onSelectedItemChange = changes => {
+    onChange(changes.selectedItem)
+    onValueChange({ value: changes.selectedItem })
   }
 
   const {
@@ -382,7 +392,15 @@ export const DropdownSelect = ({
     getMenuProps,
     highlightedIndex,
     getItemProps,
-  } = useSelect({ items, id, getA11ySelectionMessage, itemToString })
+  } = useSelect({
+    id: `${id}_element`,
+    toggleButtonId: id,
+    items,
+    getA11ySelectionMessage,
+    itemToString,
+    initialSelectedItem,
+    onSelectedItemChange,
+  })
 
   useEffect(() => {
     getLabelProps && labelPropsGetter(getLabelProps)
@@ -478,6 +496,9 @@ DropdownSelect.defaultProps = {
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
+  a11ySelectionMessageDisplayer: () => {},
+  onChange: () => {},
+  onValueChange: () => {},
 }
 
 DropdownSelect.propTypes = {
@@ -491,4 +512,7 @@ DropdownSelect.propTypes = {
   size: PropTypes.oneOf(['tiny', 'normal', 'big', 'huge', 'giant']),
   a11yStatusError: PropTypes.string,
   a11yStatusValid: PropTypes.string,
+  a11ySelectionMessageDisplayer: PropTypes.func,
+  onChange: PropTypes.func,
+  onValueChange: PropTypes.func,
 }

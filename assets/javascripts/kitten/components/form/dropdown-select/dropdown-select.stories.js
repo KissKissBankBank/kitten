@@ -51,6 +51,7 @@ export const Default = () => {
             'normal',
           )}
           variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
+          defaultSelectedValue="focus"
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
