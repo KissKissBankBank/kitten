@@ -21,7 +21,7 @@ var RewardCardInfo = function RewardCardInfo(_ref) {
       withMarginBottom = _ref.withMarginBottom,
       disabled = _ref.disabled;
   return /*#__PURE__*/_react.default.createElement(_text.Text, {
-    size: "tiny",
+    size: "micro",
     color: "font1",
     weight: "regular",
     className: (0, _classnames.default)('k-RewardCard__infos', {
