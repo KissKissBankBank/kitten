@@ -60,3 +60,15 @@ export const getCreditCardFormat = type => {
     .map((v, i) => (type.gaps.includes(i + 1) ? `${v} ` : v))
     .join('')
 }
+
+export const withCode = number => {
+  const type = getCreditCardType(number)
+
+  return number ? !isEmpty(type.code) : true
+}
+
+export const getCodeFormat = number => {
+  const type = getCreditCardType(number)
+
+  return number ? Array(type.code.size).fill('#').join('') : '###'
+}

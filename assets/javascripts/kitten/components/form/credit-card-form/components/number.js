@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 import NumberFormat from 'react-number-format'
 import { useFormContext } from '../'
@@ -23,22 +23,29 @@ const StyledNumberFormat = styled(({ iconSvg, ...others }) => (
   `}
 `
 
-export const Number = ({ value: defaultValue }) => {
-  const [value, setValue] = useState(defaultValue)
+export const Number = () => {
   const {
     customComponents: {
       field: globalField,
       label: globalLabel,
       input: globalInput,
+      error: globalError,
     },
     number: { label, customComponents },
+    values: { number },
+    setInputValues,
   } = useFormContext()
   const Field = customComponents.field || globalField
   const Label = customComponents.label || globalLabel
   const Input = customComponents.input || globalInput
-  const ccType = getCreditCardType(value)
+  const Error = customComponents.error || globalError
+  const ccType = getCreditCardType(number)
   const ccFormat = getCreditCardFormat(ccType)
   const ccIconSvg = getIconSvgStringByType(ccType.type)
+
+  const handleChange = ({ value }) => {
+    setInputValues({ number: value })
+  }
 
   return (
     <Field>
@@ -50,13 +57,14 @@ export const Number = ({ value: defaultValue }) => {
         autoComplete="cc-number"
         format={ccFormat}
         inputMode="numeric"
-        placeholder="#### #### #### ####"
+        placeholder={ccFormat}
         customInput={Input}
         iconSvg={ccIconSvg}
-        onValueChange={({ value }) => {
-          setValue(value)
-        }}
+        value={number}
+        onValueChange={handleChange}
       />
+
+      <Error />
     </Field>
   )
 }

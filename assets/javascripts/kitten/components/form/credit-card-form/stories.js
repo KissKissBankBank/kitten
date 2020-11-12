@@ -37,6 +37,7 @@ export const withCustomComponents = () => {
             <Field.Label labelProps={props} children={children} />
           ),
           input: props => <Field.Input {...props} />,
+          error: () => null,
         }}
         number={{
           label: 'Numéro de carte',
@@ -47,6 +48,9 @@ export const withCustomComponents = () => {
             input: props => (
               <Field.Input {...props} placeholder="MM/AA" digits={6} />
             ),
+            error: () => (
+              <Field.ErrorMessage>Mon message d'erreur</Field.ErrorMessage>
+            ),
           },
         }}
         cvc={{
@@ -55,6 +59,7 @@ export const withCustomComponents = () => {
             input: props => <Field.Input {...props} digits={6} />,
           },
         }}
+        onChange={values => console.warn(values)}
       />
     </StoryContainer>
   )

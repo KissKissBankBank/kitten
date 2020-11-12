@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import merge from 'lodash/fp/merge'
 import { Number } from './components/number'
@@ -10,33 +10,49 @@ const defaultProps = {
     field: props => <div {...props} />,
     label: props => <label {...props} />,
     input: props => <input {...props} />,
+    error: () => null,
   },
   number: {
     label: 'Card Number',
     customComponents: {},
-    validate: () => {},
   },
   expiry: {
     label: 'Expiry',
     customComponents: {},
-    validate: () => {},
   },
   cvc: {
     label: 'CVC',
     customComponents: {},
-    validate: () => {},
   },
-  onValidate: () => {},
+  values: {
+    number: '',
+    expiry: '',
+    cvc: '',
+  },
+  onChange: _values => {},
 }
 
 const FormContext = createContext(defaultProps)
 export const useFormContext = () => useContext(FormContext)
 
 export const CreditCardForm = props => {
-  const value = merge(defaultProps)(props)
+  const [inputValues, updateInputValues] = useState(
+    merge(defaultProps.values)(props.values),
+  )
+  const contextValues = merge(defaultProps)({
+    ...props,
+    values: inputValues,
+    setInputValues: v => {
+      updateInputValues(merge(inputValues)(v))
+    },
+  })
+
+  useEffect(() => {
+    contextValues.onChange(inputValues)
+  }, [inputValues])
 
   return (
-    <FormContext.Provider value={value}>
+    <FormContext.Provider value={contextValues}>
       <Number />
       <Expiry />
       <Cvc />
