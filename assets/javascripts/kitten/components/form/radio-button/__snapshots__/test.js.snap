@@ -2,13 +2,14 @@
 
 exports[`<RadioButton /> default matches with snapshot 1`] = `
 <label
-  className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButton--andromeda"
+  className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButton--andromeda"
   htmlFor="test-id"
 >
   <input
     className="k-Form-RadioButton__input"
     disabled={false}
     id="test-id"
+    onChange={[Function]}
     type="radio"
   />
   <span

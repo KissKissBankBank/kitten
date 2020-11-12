@@ -494,7 +494,7 @@ Array [
       disabled={false}
     >
       <label
-        className="sc-gqjmRU bukDay k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+        className="sc-gqjmRU jhEwoO k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
         htmlFor="option-a"
       >
         <input
@@ -503,6 +503,7 @@ Array [
           disabled={false}
           id="option-a"
           name="radio"
+          onChange={[Function]}
           type="radio"
         />
         <span
@@ -512,7 +513,7 @@ Array [
         </span>
       </label>
       <label
-        className="sc-gqjmRU bukDay k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+        className="sc-gqjmRU jhEwoO k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
         htmlFor="option-b"
       >
         <input
@@ -520,6 +521,7 @@ Array [
           disabled={false}
           id="option-b"
           name="radio"
+          onChange={[Function]}
           type="radio"
         />
         <span
@@ -529,7 +531,7 @@ Array [
         </span>
       </label>
       <label
-        className="sc-gqjmRU bukDay k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+        className="sc-gqjmRU jhEwoO k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
         htmlFor="option-c"
       >
         <input
@@ -537,6 +539,7 @@ Array [
           disabled={false}
           id="option-c"
           name="radio"
+          onChange={[Function]}
           type="radio"
         />
         <span

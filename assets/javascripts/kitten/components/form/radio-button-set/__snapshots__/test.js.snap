@@ -13,7 +13,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
     Label
   </legend>
   <label
-    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
     htmlFor="option-a"
   >
     <input
@@ -22,6 +22,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
       disabled={false}
       id="option-a"
       name="test-radio-button-set"
+      onChange={[Function]}
       type="radio"
     />
     <span
@@ -31,7 +32,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
     </span>
   </label>
   <label
-    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
     htmlFor="option-b"
   >
     <input
@@ -39,6 +40,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
       disabled={false}
       id="option-b"
       name="test-radio-button-set"
+      onChange={[Function]}
       type="radio"
     />
     <span
@@ -48,7 +50,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
     </span>
   </label>
   <label
-    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
     htmlFor="option-c"
   >
     <input
@@ -56,6 +58,7 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
       disabled={false}
       id="option-c"
       name="test-radio-button-set"
+      onChange={[Function]}
       type="radio"
     />
     <span
@@ -80,7 +83,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
     Label test
   </legend>
   <label
-    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
     htmlFor="option-a"
   >
     <input
@@ -89,6 +92,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
       disabled={false}
       id="option-a"
       name="test-radio-button-set"
+      onChange={[Function]}
       type="radio"
     />
     <span
@@ -98,7 +102,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
     </span>
   </label>
   <label
-    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
     htmlFor="option-b"
   >
     <input
@@ -106,6 +110,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
       disabled={false}
       id="option-b"
       name="test-radio-button-set"
+      onChange={[Function]}
       type="radio"
     />
     <span
@@ -115,7 +120,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
     </span>
   </label>
   <label
-    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
     htmlFor="option-c"
   >
     <input
@@ -123,6 +128,7 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
       disabled={false}
       id="option-c"
       name="test-radio-button-set"
+      onChange={[Function]}
       type="radio"
     />
     <span
@@ -145,7 +151,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
     </h1>
   </legend>
   <label
-    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
     htmlFor="option-a"
   >
     <input
@@ -154,6 +160,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
       disabled={false}
       id="option-a"
       name="test-radio-button-set"
+      onChange={[Function]}
       type="radio"
     />
     <span
@@ -163,7 +170,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
     </span>
   </label>
   <label
-    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
     htmlFor="option-b"
   >
     <input
@@ -171,6 +178,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
       disabled={false}
       id="option-b"
       name="test-radio-button-set"
+      onChange={[Function]}
       type="radio"
     />
     <span
@@ -180,7 +188,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
     </span>
   </label>
   <label
-    className="sc-bdVaJa ghwOOI k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
+    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
     htmlFor="option-c"
   >
     <input
@@ -188,6 +196,7 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
       disabled={false}
       id="option-c"
       name="test-radio-button-set"
+      onChange={[Function]}
       type="radio"
     />
     <span
