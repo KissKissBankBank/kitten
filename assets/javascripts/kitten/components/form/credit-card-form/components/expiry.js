@@ -22,8 +22,9 @@ export const Expiry = () => {
   const handleChange = ({ value }) => {
     const month = value.substring(0, 2)
     const year = value.substring(2, 4)
+    const formattedValue = value ? month + '/' + year : ''
 
-    setInputValues({ expiry: value ? month + '/' + year : '' })
+    setInputValues({ expiry: formattedValue })
   }
 
   return (

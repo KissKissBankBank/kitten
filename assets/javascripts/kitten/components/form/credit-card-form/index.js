@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
 import merge from 'lodash/fp/merge'
 import { Number } from './components/number'
 import { Expiry } from './components/expiry'
@@ -59,10 +58,3 @@ export const CreditCardForm = props => {
     </FormContext.Provider>
   )
 }
-
-// TODO: Update me!
-CreditCardForm.propTypes = {
-  customComponents: PropTypes.objectOf(PropTypes.element),
-}
-
-CreditCardForm.defaultProps = defaultProps
