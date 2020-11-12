@@ -8,29 +8,35 @@ import { CheckedIcon } from '../../../../components/icons/checked-icon'
 import { WarningIcon } from '../../../../components/icons/warning-icon'
 import { WaitingIcon } from '../../../../components/icons/waiting-icon'
 import { LockIcon } from '../../../../components/icons/lock-icon'
+import classNames from 'classnames'
 
 export class Status extends Component {
-  static propTypes = {
-    valid: PropTypes.bool,
-    success: PropTypes.bool,
-    error: PropTypes.bool,
-    waiting: PropTypes.bool,
-    disabled: PropTypes.bool,
-  }
-
-  static defaultProps = {
-    valid: false,
-    success: false,
-    error: false,
-    waiting: false,
-    disabled: false,
-  }
-
   render() {
-    const { children, ...other } = this.props
+    const {
+      children,
+      valid,
+      success,
+      error,
+      waiting,
+      disabled,
+      ...other
+    } = this.props
 
     return (
-      <StyledStatus {...other}>{this.iconByStatus() || children}</StyledStatus>
+      <StyledStatus 
+        {...other}
+        className={classNames(
+          {
+            'k-Steppers--VerticalStepper__status--valid': valid,
+            'k-Steppers--VerticalStepper__status--success': success,
+            'k-Steppers--VerticalStepper__status--error': error,
+            'k-Steppers--VerticalStepper__status--waiting': waiting,
+            'k-Steppers--VerticalStepper__status--disabled': disabled,
+          }
+        )}
+      >
+        {this.iconByStatus() || children}
+      </StyledStatus>
     )
   }
 
@@ -38,7 +44,7 @@ export class Status extends Component {
     const { valid, success, error, waiting, disabled } = this.props
 
     if (valid) return <CheckedIcon width="10" title={null} />
-    if (success) return <CheckedIcon width="10" title={null} />
+    if (success) return <CheckedIcon width="10" title={null} /> 
     if (error) return <WarningIcon color={COLORS.error} title={null} />
     if (waiting)
       return <WaitingIcon height="4" color={COLORS.primary1} title={null} />
@@ -71,39 +77,45 @@ export const StyledStatus = styled.span`
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${pxToRem(14)};
 
-  ${({ success }) =>
-    success &&
-    css`
-      background-color: ${COLORS.valid};
-      border-color: ${COLORS.valid};
-    `}
+  &.k-Steppers--VerticalStepper__status--success {
+    background-color: ${COLORS.valid};
+    border-color: ${COLORS.valid};
+  }
 
-  ${({ valid }) =>
-    valid &&
-    css`
-      background-color: ${COLORS.primary1};
-      border-color: ${COLORS.primary1};
-    `}
+  &.k-Steppers--VerticalStepper__status--valid {
+    background-color: ${COLORS.primary1};
+    border-color: ${COLORS.primary1};
+  }
 
-  ${({ error }) =>
-    error &&
-    css`
-      color: ${COLORS.error};
-      border-color: ${COLORS.error3};
-    `}
+  &.k-Steppers--VerticalStepper__status--error {
+    color: ${COLORS.error};
+    border-color: ${COLORS.error3};
+  }
 
-  ${({ waiting }) =>
-    waiting &&
-    css`
-      color: ${COLORS.primary1};
-      border-color: ${COLORS.primary4};
-    `}
+  &.k-Steppers--VerticalStepper__status--waiting {
+    color: ${COLORS.primary1};
+    border-color: ${COLORS.primary4};
+  }
 
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      color: ${COLORS.background1};
-      border-color: ${COLORS.line2};
-      background-color: ${COLORS.line2};
-    `}
+  &.k-Steppers--VerticalStepper__status--disabled {
+    color: ${COLORS.background1};
+    border-color: ${COLORS.line2};
+    background-color: ${COLORS.line2};
+  }
 `
+
+Status.propTypes = {
+  valid: PropTypes.bool,
+  success: PropTypes.bool,
+  error: PropTypes.bool,
+  waiting: PropTypes.bool,
+  disabled: PropTypes.bool,
+}
+
+Status.defaultProps = {
+  valid: false,
+  success: false,
+  error: false,
+  waiting: false,
+  disabled: false,
+}
