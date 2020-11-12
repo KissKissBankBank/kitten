@@ -51,7 +51,7 @@ export const WithText = () => (
     giant={boolean('Giant', false)}
     fluid={boolean('Fluid', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
-    modifier={select('Variant', variantOptions, 'andromeda')}
+    variant={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
   >
@@ -81,6 +81,7 @@ export const WithIcon = () => (
     huge={boolean('Huge', false)}
     giant={boolean('Giant', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
+    variant={select('Variant', variantOptions, 'andromeda')}
     fluid={boolean('Fluid', false)}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
@@ -117,6 +118,7 @@ export const WithTextAndIcon = () => {
       giant={boolean('Giant', false)}
       fluid={boolean('Fluid', false)}
       modifier={select('Modifier', modifierOptions, 'hydrogen')}
+      variant={select('Variant', variantOptions, 'andromeda')}
       disabled={boolean('Disabled', false)}
       borderRadius={number('Border radius', 0, radiusBorderRange)}
     >
@@ -159,6 +161,7 @@ export const WithBadge = () => (
     huge={boolean('Huge', false)}
     giant={boolean('Giant', false)}
     modifier={select('Modifier', modifierOptions, 'helium')}
+    variant={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}
   >
     <span>{text('Text', 'MyButton')}</span>
