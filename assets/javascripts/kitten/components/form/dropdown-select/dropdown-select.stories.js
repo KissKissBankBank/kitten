@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { DropdownSelect } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
@@ -35,6 +35,7 @@ export const Default = () => {
     <Grid>
       <GridCol offset="1" col="8">
         <DropdownSelect
+          id={text('id', 'dropdown-select')}
           error={boolean('error', false)}
           valid={boolean('valid', false)}
           disabled={boolean('disabled', false)}
@@ -44,6 +45,12 @@ export const Default = () => {
           labelPropsGetter={passedLabelProps => {
             passedLabelProps && setLabelProps(passedLabelProps())
           }}
+          size={select(
+            'size',
+            ['tiny', 'normal', 'big', 'huge', 'giant'],
+            'normal',
+          )}
+          variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
@@ -51,7 +58,7 @@ export const Default = () => {
           penatibus et magnis dis parturient montes, nascetur ridiculus mus.
           Etiam porta sem malesuada magna mollis euismod.
         </p>
-        <p>Fakelabel props:</p>
+        <p>labelPropsGetter props:</p>
         <ul>
           {labelProps &&
             Object.keys(labelProps).map(prop => (
