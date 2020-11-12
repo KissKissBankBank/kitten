@@ -35,7 +35,7 @@ export const Expiry = () => {
         name="cc-exp"
         id="frmCCExp"
         autoComplete="cc-exp"
-        format={'##/##'}
+        format="##/##"
         inputMode="numeric"
         placeholder="MM/YY"
         customInput={Input}
