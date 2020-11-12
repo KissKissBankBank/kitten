@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `variant` to `Button`, defaults to `andromeda`.
+
 ## [2.95.3] - 2020-11-05
 
 Fix:

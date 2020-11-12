@@ -27,6 +27,11 @@ const svgPositionOptions = {
   Right: 'right',
 }
 
+const variantOptions = {
+  Andromeda: 'andromeda',
+  Orion: 'orion',
+}
+
 const modifierOptions = {
   Hydrogen: 'hydrogen',
   Helium: 'helium',
@@ -46,6 +51,7 @@ export const WithText = () => (
     giant={boolean('Giant', false)}
     fluid={boolean('Fluid', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
+    modifier={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
   >
