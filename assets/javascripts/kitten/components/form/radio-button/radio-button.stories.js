@@ -18,6 +18,7 @@ export const Default = () => (
       <RadioButton
         id={text('id', 'radio-box_id')}
         onLabelClick={action('label-click')}
+        onChange={action('change')}
         error={boolean('Error', false)}
         disabled={boolean('Disabled', false)}
         large={boolean('Large', false)}

@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import styled from 'styled-components'
@@ -117,7 +117,8 @@ const StyledRadioButton = styled.label`
 
     &:active,
     &:focus-within,
-    &:focus {
+    &:focus,
+    &.k-Form-RadioButton--isChecked {
       border-color: ${COLORS.primary1};
     }
 
@@ -165,9 +166,17 @@ export const RadioButton = ({
   error,
   disabled,
   variant,
+  onChange,
   ...inputProps
 }) => {
   const inputEl = useRef(null)
+  const [isChecked, setChecked] = useState(false)
+
+  const handleChange = changeEvent => {
+    setChecked(inputEl.current.checked)
+
+    onChange(changeEvent)
+  }
 
   return (
     <StyledRadioButton
@@ -176,7 +185,10 @@ export const RadioButton = ({
         'k-Form-RadioButton',
         className,
         `k-Form-RadioButton--${variant}`,
-        { 'k-Form-RadioButton--error': error },
+        {
+          'k-Form-RadioButton--error': error,
+          'k-Form-RadioButton--isChecked': isChecked,
+        },
       )}
     >
       <input
@@ -185,6 +197,7 @@ export const RadioButton = ({
         type="radio"
         className={classNames('k-Form-RadioButton__input', inputClassName)}
         disabled={disabled}
+        onChange={handleChange}
         {...inputProps}
       />
 
@@ -219,6 +232,7 @@ RadioButton.propTypes = {
   error: PropTypes.bool,
   disabled: PropTypes.bool,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
+  onChange: PropTypes.func,
 }
 
 RadioButton.defaultProps = {
@@ -227,4 +241,5 @@ RadioButton.defaultProps = {
   error: false,
   disabled: false,
   variant: 'andromeda',
+  onChange: () => {},
 }
