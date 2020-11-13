@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import COLORS from '../../../../constants/colors-config'
+import { LINK_CLASSNAME } from '../index'
 
 const StyledParagraph = styled.p`
   margin: 0;
@@ -32,6 +33,7 @@ export const Link = ({ className, ...props }) => {
       <span
         {...props}
         className={classNames(
+          LINK_CLASSNAME,
           'k-Stepepers-VerticalStepper__link',
           className,
         )}
