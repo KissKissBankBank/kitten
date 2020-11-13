@@ -46,7 +46,7 @@ export class Status extends Component {
   iconByStatus = () => {
     const { valid, success, error, waiting, disabled, variant } = this.props
 
-    if (success && variant === 'andromeda')
+    if (success)
     return <CheckedIcon width="10" title={null} />
 
     if (error)
@@ -86,7 +86,7 @@ export const StyledStatus = styled.span`
   margin-right: ${pxToRem(15)};
 
   background-color: ${COLORS.background1};
-  border: 2px solid ${COLORS.line1};
+  border: ${pxToRem(2)} solid ${COLORS.line1};
 
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${pxToRem(14)};
@@ -118,10 +118,18 @@ export const StyledStatus = styled.span`
   }
 
   &.k-Steppers--VerticalStepper__status--orion {
+    border: ${pxToRem(3)} solid ${COLORS.line1};
 
     &.k-Steppers--VerticalStepper__status--success {
       background-color: ${COLORS.primary1};
       border-color: ${COLORS.primary1};
+
+      :before {
+        width: ${pxToRem(35)};
+        height: ${pxToRem(35)};
+        border-radius: ${pxToRem(35)};
+        background-color: ${COLORS.background1};
+      }
     }
 
     &.k-Steppers--VerticalStepper__status--valid {

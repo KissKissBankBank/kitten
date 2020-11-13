@@ -50,6 +50,13 @@ export const Step = ({
 
 const StyledItem = styled.li`
   margin ${pxToRem(30)} 0;
+  
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 `
 
 const StyledLink = styled.a`

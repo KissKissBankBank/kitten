@@ -20,7 +20,7 @@ export default {
 export const Default = () => {
   return (
     <StoryContainer>
-      <VerticalStepper>
+      <VerticalStepper variant="orion">
         <VerticalStepper.Step
           success
           href="#"
