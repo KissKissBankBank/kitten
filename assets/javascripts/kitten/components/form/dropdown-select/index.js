@@ -327,6 +327,7 @@ const StyledDropdownSelect = styled.div`
     }
 
     .k-Form-DropdownSelect__list {
+      box-shadow: 0 ${pxToRem(5)} ${pxToRem(5)} 0 rgba(0, 0, 0, 0.1);
       border-bottom-left-radius: ${pxToRem(6)};
       border-bottom-right-radius: ${pxToRem(6)};
 
