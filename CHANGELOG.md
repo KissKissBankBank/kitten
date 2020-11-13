@@ -4,8 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `variant` prop to `Accordeon`, defaults to `andromeda`.
+- Feature: Add `closeOnClick` prop to `Accordeon`, defaults to false.
+
 ## [2.96.0] - 2020-11-12
-Feature: 
+
+Feature:
 - Update `RewardCard` component.
 
 ## [2.95.3] - 2020-11-05

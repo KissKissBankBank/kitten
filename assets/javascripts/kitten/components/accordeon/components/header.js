@@ -1,51 +1,27 @@
-import React from 'react'
-import styled from 'styled-components'
-import COLORS from '../../../constants/colors-config'
-import { pxToRem } from '../../../helpers/utils/typography'
+import React, { useContext } from 'react'
 import { Context } from './context'
+import { ArrowIcon } from '../../../components/icons/arrow-icon'
 
-const HeaderStyled = styled.button`
-  display: block;
+export const Header = ({ id, children, index }) => {
+  const { updateSelectedItem, selectedItem, componentId } = useContext(Context)
 
-  margin: 0;
-  width: 100%;
-  padding: ${pxToRem(20)};
-  min-height: ${pxToRem(30)};
-  box-sizing: border-box;
-  overflow: visible;
-
-  background: transparent;
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-  border-radius: ${pxToRem(3)};
-
-  color: inherit;
-  font: inherit;
-  text-align: inherit;
-  line-height: normal;
-
-  -webkit-appearance: none;
-  cursor: pointer;
-  outline: none;
-
-  &[aria-expanded='true'] {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-`
-
-export const Header = ({ id, children }) => (
-  <Context.Consumer>
-    {({ updateSelectedItem, selectedItem, componentId }) => (
-      <HeaderStyled
-        onClick={() => updateSelectedItem(id)}
-        role="button"
-        aria-expanded={selectedItem === id}
-        aria-disabled={selectedItem === id}
-        id={`${componentId}-header${id}`}
-        aria-controls={`${componentId}-content${id}`}
-      >
-        {children}
-      </HeaderStyled>
-    )}
-  </Context.Consumer>
-)
+  return (
+    <button
+      className="k-Accordeon__header"
+      onClick={() => updateSelectedItem(index)}
+      role="button"
+      aria-expanded={selectedItem === index}
+      aria-disabled={selectedItem === index}
+      id={`${componentId}-${id}_header`}
+      aria-controls={`${componentId}-${id}_content`}
+    >
+      <span className="k-Accordeon__header__content">{children}</span>
+      <span className="k-Accordeon__header__arrow">
+        <ArrowIcon
+          direction={selectedItem === index ? 'top' : 'bottom'}
+          aria-hidden
+        />
+      </span>
+    </button>
+  )
+}
