@@ -186,6 +186,7 @@ export const Accordeon = ({
     updateSelectedItem,
     selectedItem: internalSelectedItem,
     componentId: id,
+    closeOnClick,
   }
 
   return (

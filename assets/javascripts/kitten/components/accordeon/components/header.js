@@ -3,7 +3,12 @@ import { Context } from './context'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 
 export const Header = ({ id, children, index }) => {
-  const { updateSelectedItem, selectedItem, componentId } = useContext(Context)
+  const {
+    updateSelectedItem,
+    selectedItem,
+    componentId,
+    closeOnClick,
+  } = useContext(Context)
 
   return (
     <button
@@ -11,7 +16,7 @@ export const Header = ({ id, children, index }) => {
       onClick={() => updateSelectedItem(index)}
       role="button"
       aria-expanded={selectedItem === index}
-      aria-disabled={selectedItem === index}
+      aria-disabled={closeOnClick ? null : selectedItem === index}
       id={`${componentId}-${id}_header`}
       aria-controls={`${componentId}-${id}_content`}
     >
