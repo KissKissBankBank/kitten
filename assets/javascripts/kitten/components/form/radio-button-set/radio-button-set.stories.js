@@ -63,6 +63,7 @@ export const Default = () => (
           { andromeda: 'andromeda', orion: 'orion' },
           'andromeda',
         )}
+        design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
       />
     </GridCol>
   </Grid>
@@ -105,6 +106,7 @@ export const OrionGrid = () => (
         error={boolean('Error?', false)}
         disabled={boolean('Disabled', false)}
         variant="orion"
+        design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
       >
         <h1 className="k-Title k-Title--quaternary k-u-margin-bottom-triple">
           Choisissez le montant que vous souhaitez offrir

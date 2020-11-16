@@ -29,6 +29,7 @@ export const Default = () => (
           { andromeda: 'andromeda', orion: 'orion' },
           'andromeda',
         )}
+        design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
       >
         {text('Content', null)}
       </RadioButton>

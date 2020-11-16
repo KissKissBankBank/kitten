@@ -41,6 +41,7 @@ export const RadioButtonSet = ({
   name,
   error,
   variant,
+  design,
   label,
   children,
   ...props
@@ -64,6 +65,7 @@ export const RadioButtonSet = ({
       <RadioButton
         id={id}
         variant={variant}
+        design={design}
         error={error}
         name={name}
         key={id}
@@ -86,6 +88,7 @@ RadioButtonSet.propTypes = {
     }),
   ),
   variant: PropTypes.oneOf(['andromeda', 'orion']),
+  design: PropTypes.oneOf(['disc', 'check']),
   disabled: PropTypes.bool,
 }
 
@@ -102,5 +105,6 @@ RadioButtonSet.defaultProps = {
     },
   ],
   variant: 'andromeda',
+  design: 'disc',
   disabled: false,
 }

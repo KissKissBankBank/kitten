@@ -5,10 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `variant` prop to `RadioButton`, with default value `andromeda`.
+- Feature: Add `design` prop to `RadioButton`, with default value `disc`.
+- Feature: Better accessibility on `RadioButtonSet`.
 
 ## [2.96.0] - 2020-11-12
 
-Feature: 
+Feature:
 - Update `RewardCard` component.
 
 ## [2.95.3] - 2020-11-05
