@@ -64,21 +64,22 @@ const StyledList = styled.ul`
     }
 
     li:not(:last-of-type) {
-      margin: 1.875rem 0;
+      margin: ${pxToRem(30)} 0;
       position: relative;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         left: ${pxToRem(14)};
         top: ${pxToRem(35)};
-        background-color: ${COLORS.line1}; ;
+        background-color: ${COLORS.line1};
         width: ${pxToRem(3)};
         height: calc(100% - 10px);
       }
     }
   }
 `
+
 VerticalStepper.propTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion']),
 }

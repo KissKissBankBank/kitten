@@ -148,6 +148,9 @@ export const StyledStatus = styled.span`
       width: ${pxToRem(INACTIVE_STATUS_SIZE)};
       height: ${pxToRem(INACTIVE_STATUS_SIZE)};
       border-radius: ${pxToRem(INACTIVE_STATUS_SIZE)};
+
+      margin-left: calc(${pxToRem(INACTIVE_STATUS_SIZE)} / 2);
+      margin-right: ${pxToRem(20)};
     }
   }
   
