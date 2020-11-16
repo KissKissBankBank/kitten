@@ -31,7 +31,7 @@ export const Default = () => (
         )}
         design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
       >
-        {text('Content', null)}
+        {text('Content', '')}
       </RadioButton>
     </GridCol>
   </Grid>

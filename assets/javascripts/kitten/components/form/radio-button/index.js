@@ -9,6 +9,7 @@ import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledRadioButton = styled.div`
   display: inline;
+  margin: ${pxToRem(10)} 0;
 
   &, & * {
     transition: all .2s ease;
@@ -117,8 +118,9 @@ const StyledRadioButton = styled.div`
   .k-Form-RadioButton__labelContents {
     flex: 1 0 100%;
     margin-left: ${pxToRem(16 + 10)};
+    line-height: 1.5;
 
-    ${TYPOGRAPHY.fontStyles.label}
+    ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-2)};
 
     &:empty {
