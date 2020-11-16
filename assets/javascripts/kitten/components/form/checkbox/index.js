@@ -10,9 +10,9 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 const StyledCheckbox = styled.div`
   ${TYPOGRAPHY.fontStyles.light}
   font-size: ${stepToRem(-1)};
-  line-height: normal;
+  line-height: 1.5;
 
-  display: inline-flex;
+  display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
 
@@ -24,6 +24,7 @@ const StyledCheckbox = styled.div`
   }
 
   .k-Form-Checkbox__label {
+    flex-basis: calc(100% - ${pxToRem(20 + 10)});
     cursor: pointer;
     transition: color .2s;
 
