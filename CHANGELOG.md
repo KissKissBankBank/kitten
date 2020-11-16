@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `CreditCardForm` component.
+## [2.97.0] - 2020-11-16
+
+Feature:
+- Add `CreditCardForm` component.
 
 ## [2.96.0] - 2020-11-12
 
