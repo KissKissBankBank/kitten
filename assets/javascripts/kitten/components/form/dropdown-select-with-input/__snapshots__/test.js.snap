@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownSelectWithInput /> should match its snapshot with props 1`] = `
+<div
+  className="sc-bdVaJa fiTVuN k-Form-DropdownSelectWithInput"
+>
+  <label
+    className="k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single"
+    htmlFor="dropdown-select-with-input-test"
+    id="dropdown-select-with-input-test_element-label"
+    onClick={[Function]}
+  >
+    DropdownSelectWithInput test
+  </label>
+  <div
+    className="k-Form-DropdownSelectWithInput__container"
+  >
+    <button
+      aria-expanded={false}
+      aria-haspopup="listbox"
+      aria-labelledby="dropdown-select-with-input-test_element-label dropdown-select-with-input-test"
+      className="k-Form-DropdownSelectWithInput__button"
+      id="dropdown-select-with-input-test"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      type="button"
+      value={null}
+    >
+      <span
+        className="k-Form-DropdownSelectWithInput__content k-Form-DropdownSelectWithInput__placeholder"
+      >
+        Select
+      </span>
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__button__arrowBox"
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--bottom"
+          height="5.64"
+          viewBox="0 0 6 6"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </span>
+      <span
+        className="k-Form-DropdownSelectWithInput__button__statusBadges"
+      />
+    </button>
+    <input
+      aria-labelledby="dropdown-select-with-input-test_element-label dropdown-select-with-input-test"
+      className="k-Form-DropdownSelectWithInput__input"
+      id="dropdown-select-with-input-test_element-input"
+      placeholder="kisskissbankbank"
+      type="text"
+    />
+  </div>
+  <ul
+    aria-labelledby="dropdown-select-with-input-test_element-label"
+    className="k-Form-DropdownSelectWithInput__list"
+    id="dropdown-select-with-input-test_element-menu"
+    onBlur={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    role="listbox"
+    tabIndex={-1}
+  />
+</div>
+`;
