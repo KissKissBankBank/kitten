@@ -12,9 +12,8 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
   >
     Label
   </legend>
-  <label
-    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-    htmlFor="option-a"
+  <div
+    className="sc-bdVaJa dcVSDn k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
   >
     <input
       className="k-Form-RadioButton__input"
@@ -22,51 +21,61 @@ exports[`<RadioButtonSet /> default matches with snapshot 1`] = `
       disabled={false}
       id="option-a"
       name="test-radio-button-set"
-      onChange={[Function]}
       type="radio"
     />
-    <span
+    <label
       className="k-Form-RadioButton__label"
+      htmlFor="option-a"
     >
-      Option A
-    </span>
-  </label>
-  <label
-    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-    htmlFor="option-b"
+      <span
+        className="k-Form-RadioButton__labelText"
+      >
+        Option A
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa dcVSDn k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
   >
     <input
       className="k-Form-RadioButton__input"
       disabled={false}
       id="option-b"
       name="test-radio-button-set"
-      onChange={[Function]}
       type="radio"
     />
-    <span
+    <label
       className="k-Form-RadioButton__label"
+      htmlFor="option-b"
     >
-      Option B
-    </span>
-  </label>
-  <label
-    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-    htmlFor="option-c"
+      <span
+        className="k-Form-RadioButton__labelText"
+      >
+        Option B
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa dcVSDn k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
   >
     <input
       className="k-Form-RadioButton__input"
       disabled={false}
       id="option-c"
       name="test-radio-button-set"
-      onChange={[Function]}
       type="radio"
     />
-    <span
+    <label
       className="k-Form-RadioButton__label"
+      htmlFor="option-c"
     >
-      Option C
-    </span>
-  </label>
+      <span
+        className="k-Form-RadioButton__labelText"
+      >
+        Option C
+      </span>
+    </label>
+  </div>
 </fieldset>
 `;
 
@@ -82,9 +91,8 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
   >
     Label test
   </legend>
-  <label
-    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-    htmlFor="option-a"
+  <div
+    className="sc-bdVaJa dcVSDn k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
   >
     <input
       className="k-Form-RadioButton__input"
@@ -92,51 +100,61 @@ exports[`<RadioButtonSet /> with children and label matches with snapshot 1`] = 
       disabled={false}
       id="option-a"
       name="test-radio-button-set"
-      onChange={[Function]}
       type="radio"
     />
-    <span
+    <label
       className="k-Form-RadioButton__label"
+      htmlFor="option-a"
     >
-      Option A
-    </span>
-  </label>
-  <label
-    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-    htmlFor="option-b"
+      <span
+        className="k-Form-RadioButton__labelText"
+      >
+        Option A
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa dcVSDn k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
   >
     <input
       className="k-Form-RadioButton__input"
       disabled={false}
       id="option-b"
       name="test-radio-button-set"
-      onChange={[Function]}
       type="radio"
     />
-    <span
+    <label
       className="k-Form-RadioButton__label"
+      htmlFor="option-b"
     >
-      Option B
-    </span>
-  </label>
-  <label
-    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-    htmlFor="option-c"
+      <span
+        className="k-Form-RadioButton__labelText"
+      >
+        Option B
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa dcVSDn k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
   >
     <input
       className="k-Form-RadioButton__input"
       disabled={false}
       id="option-c"
       name="test-radio-button-set"
-      onChange={[Function]}
       type="radio"
     />
-    <span
+    <label
       className="k-Form-RadioButton__label"
+      htmlFor="option-c"
     >
-      Option C
-    </span>
-  </label>
+      <span
+        className="k-Form-RadioButton__labelText"
+      >
+        Option C
+      </span>
+    </label>
+  </div>
 </fieldset>
 `;
 
@@ -150,9 +168,8 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
       Legend test
     </h1>
   </legend>
-  <label
-    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-    htmlFor="option-a"
+  <div
+    className="sc-bdVaJa dcVSDn k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
   >
     <input
       className="k-Form-RadioButton__input"
@@ -160,50 +177,60 @@ exports[`<RadioButtonSet /> with children matches with snapshot 1`] = `
       disabled={false}
       id="option-a"
       name="test-radio-button-set"
-      onChange={[Function]}
       type="radio"
     />
-    <span
+    <label
       className="k-Form-RadioButton__label"
+      htmlFor="option-a"
     >
-      Option A
-    </span>
-  </label>
-  <label
-    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-    htmlFor="option-b"
+      <span
+        className="k-Form-RadioButton__labelText"
+      >
+        Option A
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa dcVSDn k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
   >
     <input
       className="k-Form-RadioButton__input"
       disabled={false}
       id="option-b"
       name="test-radio-button-set"
-      onChange={[Function]}
       type="radio"
     />
-    <span
+    <label
       className="k-Form-RadioButton__label"
+      htmlFor="option-b"
     >
-      Option B
-    </span>
-  </label>
-  <label
-    className="sc-bdVaJa eUXGZp k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda"
-    htmlFor="option-c"
+      <span
+        className="k-Form-RadioButton__labelText"
+      >
+        Option B
+      </span>
+    </label>
+  </div>
+  <div
+    className="sc-bdVaJa dcVSDn k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
   >
     <input
       className="k-Form-RadioButton__input"
       disabled={false}
       id="option-c"
       name="test-radio-button-set"
-      onChange={[Function]}
       type="radio"
     />
-    <span
+    <label
       className="k-Form-RadioButton__label"
+      htmlFor="option-c"
     >
-      Option C
-    </span>
-  </label>
+      <span
+        className="k-Form-RadioButton__labelText"
+      >
+        Option C
+      </span>
+    </label>
+  </div>
 </fieldset>
 `;
