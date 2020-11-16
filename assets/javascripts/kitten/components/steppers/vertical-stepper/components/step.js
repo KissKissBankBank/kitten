@@ -22,7 +22,7 @@ export const Step = ({
 
   return (
     <StyledItem>
-      <StyledLink as={other.href ? 'a' : 'span'} {...other}>
+      <StyledLink as={other.href ? 'a' : 'span'} {...other} variant={variant}>
         <Status
           success={success}
           valid={valid}
