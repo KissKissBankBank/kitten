@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CreditCardForm /> should match its snapshot with custom props 1`] = `
+Array [
+  <div
+    className="k-u-margin-bottom-triple"
+  >
+    <div
+      className="sc-bwzfXH gRnEuD"
+    >
+      <div
+        className="k-Line"
+        style={
+          Object {
+            "lineHeight": 1,
+          }
+        }
+      >
+        <div
+          className="k-Line__item"
+        >
+          <label
+            className="k-Label k-Label--micro"
+            htmlFor="frmCCNum"
+            onClick={[Function]}
+          >
+            Numéro de carte
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bwzfXH LQqbp"
+    >
+      <input
+        autoComplete="cc-number"
+        className="sc-ifAKCX hETjNG sc-bdVaJa iaWybd"
+        disabled={false}
+        id="frmCCNum"
+        inputMode="numeric"
+        name="cardnumber"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseUp={[Function]}
+        placeholder="#### #### #### #######"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
+  <div
+    className="k-u-margin-bottom-triple"
+  >
+    <div
+      className="sc-bwzfXH gRnEuD"
+    >
+      <div
+        className="k-Line"
+        style={
+          Object {
+            "lineHeight": 1,
+          }
+        }
+      >
+        <div
+          className="k-Line__item"
+        >
+          <label
+            className="k-Label k-Label--micro"
+            htmlFor="frmCCExp"
+            onClick={[Function]}
+          >
+            Date de validité
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bwzfXH LQqbp"
+    >
+      <input
+        autoComplete="cc-exp"
+        className="sc-ifAKCX jgSgCQ"
+        disabled={false}
+        id="frmCCExp"
+        inputMode="numeric"
+        name="cc-exp"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseUp={[Function]}
+        placeholder="MM/AA"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
+  <div
+    className="k-u-margin-bottom-triple"
+  >
+    <div
+      className="sc-bwzfXH gRnEuD"
+    >
+      <div
+        className="k-Line"
+        style={
+          Object {
+            "lineHeight": 1,
+          }
+        }
+      >
+        <div
+          className="k-Line__item"
+        >
+          <label
+            className="k-Label k-Label--micro"
+            htmlFor="frmCCCVC"
+            onClick={[Function]}
+          >
+            Cryptogramme visuel
+          </label>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-bwzfXH LQqbp"
+    >
+      <input
+        autoComplete="cc-csc"
+        className="sc-ifAKCX jgSgCQ"
+        disabled={false}
+        id="frmCCCVC"
+        inputMode="numeric"
+        name="cvc"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseUp={[Function]}
+        placeholder="###"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`<CreditCardForm /> should match its snapshot with default props 1`] = `
+Array [
+  <div>
+    <label
+      htmlFor="frmCCNum"
+    >
+      Card Number
+    </label>
+    <input
+      autoComplete="cc-number"
+      className="sc-bdVaJa iaWybd"
+      id="frmCCNum"
+      inputMode="numeric"
+      name="cardnumber"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder="#### #### #### #######"
+      type="text"
+      value=""
+    />
+  </div>,
+  <div>
+    <label
+      htmlFor="frmCCExp"
+    >
+      Card Number
+    </label>
+    <input
+      autoComplete="cc-exp"
+      id="frmCCExp"
+      inputMode="numeric"
+      name="cc-exp"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder="MM/YY"
+      type="text"
+      value=""
+    />
+  </div>,
+  <div>
+    <label
+      htmlFor="frmCCCVC"
+    >
+      Card Number
+    </label>
+    <input
+      autoComplete="cc-csc"
+      id="frmCCCVC"
+      inputMode="numeric"
+      name="cvc"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseUp={[Function]}
+      placeholder="###"
+      type="text"
+      value=""
+    />
+  </div>,
+]
+`;

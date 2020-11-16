@@ -13,36 +13,27 @@ const StoryContainer = ({ children }) => (
   </Container>
 )
 
-export default {
-  title: 'Form/CreditCardForm',
-  component: CreditCardForm,
-}
-
-export const Default = () => {
+export const DefaultExample = () => {
   return (
-    <StoryContainer>
-      <CreditCardForm>
-        <CreditCardForm.Number />
-        <CreditCardForm.Expiry />
-        <CreditCardForm.Cvc />
-      </CreditCardForm>
-    </StoryContainer>
+    <CreditCardForm>
+      <CreditCardForm.Number />
+      <CreditCardForm.Expiry />
+      <CreditCardForm.Cvc />
+    </CreditCardForm>
   )
 }
 
-export const withCustomComponents = () => {
+export const CustomExample = () => {
   const handleChange = values => {
     console.warn('Values:', values)
   }
 
   return (
-    <StoryContainer>
-      <CreditCardForm onChange={handleChange}>
-        <Number />
-        <Expiry />
-        <Cvc />
-      </CreditCardForm>
-    </StoryContainer>
+    <CreditCardForm onChange={handleChange}>
+      <Number />
+      <Expiry />
+      <Cvc />
+    </CreditCardForm>
   )
 }
 
@@ -133,5 +124,26 @@ const Cvc = () => {
         return <Field.ErrorMessage>Le champ est requis.</Field.ErrorMessage>
       }}
     />
+  )
+}
+
+export default {
+  title: 'Form/CreditCardForm',
+  component: CreditCardForm,
+}
+
+export const Default = () => {
+  return (
+    <StoryContainer>
+      <DefaultExample />
+    </StoryContainer>
+  )
+}
+
+export const withCustomComponents = () => {
+  return (
+    <StoryContainer>
+      <CustomExample />
+    </StoryContainer>
   )
 }
