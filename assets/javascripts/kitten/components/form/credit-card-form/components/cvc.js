@@ -1,24 +1,20 @@
 import React, { useEffect } from 'react'
+import PropTypes from 'prop-types'
 import NumberFormat from 'react-number-format'
 import { useFormContext } from '../'
 import { withCode, getCodeFormat } from './helpers'
 
-export const Cvc = () => {
+export const Cvc = ({
+  label,
+  fieldComponent: Field,
+  labelComponent: Label,
+  inputComponent: Input,
+  errorComponent: Error,
+}) => {
   const {
-    customComponents: {
-      field: globalField,
-      label: globalLabel,
-      input: globalInput,
-      error: globalError,
-    },
-    cvc: { label, customComponents },
     values: { number, cvc },
     setInputValues,
   } = useFormContext()
-  const Field = customComponents.field || globalField
-  const Label = customComponents.label || globalLabel
-  const Input = customComponents.input || globalInput
-  const Error = customComponents.error || globalError
   const withCvc = withCode(number)
 
   const handleChange = ({ value }) => {
@@ -52,4 +48,20 @@ export const Cvc = () => {
       <Error />
     </Field>
   )
+}
+
+Cvc.propTypes = {
+  label: PropTypes.string,
+  fieldComponent: PropTypes.elementType,
+  labelComponent: PropTypes.elementType,
+  inputComponent: PropTypes.elementType,
+  errorComponent: PropTypes.elementType,
+}
+
+Cvc.defaultProps = {
+  label: 'Card Number',
+  fieldComponent: props => <div {...props} />,
+  labelComponent: props => <label {...props} />,
+  inputComponent: props => <input {...props} />,
+  errorComponent: () => null,
 }

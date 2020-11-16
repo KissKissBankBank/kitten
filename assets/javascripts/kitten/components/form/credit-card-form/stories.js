@@ -21,104 +21,117 @@ export default {
 export const Default = () => {
   return (
     <StoryContainer>
-      <CreditCardForm />
+      <CreditCardForm>
+        <CreditCardForm.Number />
+        <CreditCardForm.Expiry />
+        <CreditCardForm.Cvc />
+      </CreditCardForm>
     </StoryContainer>
   )
 }
 
 export const withCustomComponents = () => {
-  const [errors, setErrors] = useState({
-    number: false,
-    expiry: false,
-    cvc: false,
-  })
-
-  const handleNumberBlur = e => {
-    setErrors({ ...errors, number: isEmpty(e.target.value) })
-  }
-
-  const handleExpiryBlur = e => {
-    setErrors({ ...errors, expiry: isEmpty(e.target.value) })
-  }
-
-  const handleCvcBlur = e => {
-    setErrors({ ...errors, cvc: isEmpty(e.target.value) })
+  const handleChange = values => {
+    console.warn('Values:', values)
   }
 
   return (
     <StoryContainer>
-      <CreditCardForm
-        customComponents={{
-          field: props => (
-            <div {...props} className="k-u-margin-bottom-triple" />
-          ),
-          label: ({ children, ...props }) => (
-            <Field.Label labelProps={props} children={children} />
-          ),
-          input: props => <Field.Input {...props} />,
-        }}
-        number={{
-          label: 'Numéro de carte',
-          customComponents: {
-            input: props => (
-              <Field.Input
-                {...props}
-                onBlur={handleNumberBlur}
-                error={errors.number}
-              />
-            ),
-            error: () => {
-              if (!errors.number) return null
-
-              return (
-                <Field.ErrorMessage>Le champ est requis.</Field.ErrorMessage>
-              )
-            },
-          },
-        }}
-        expiry={{
-          label: 'Date de validité',
-          customComponents: {
-            input: props => (
-              <Field.Input
-                {...props}
-                placeholder="MM/AA"
-                digits={6}
-                onBlur={handleExpiryBlur}
-                error={errors.expiry}
-              />
-            ),
-            error: () => {
-              if (!errors.expiry) return null
-
-              return (
-                <Field.ErrorMessage>Le champ est requis.</Field.ErrorMessage>
-              )
-            },
-          },
-        }}
-        cvc={{
-          label: 'Cryptogramme visuel',
-          customComponents: {
-            input: props => (
-              <Field.Input
-                {...props}
-                digits={6}
-                onBlur={handleCvcBlur}
-                error={errors.cvc}
-              />
-            ),
-            error: () => {
-              if (!errors.cvc) return null
-
-              return (
-                <Field.ErrorMessage>Le champ est requis.</Field.ErrorMessage>
-              )
-            },
-          },
-        }}
-        onChange={values => console.warn(values)}
-      />
+      <CreditCardForm onChange={handleChange}>
+        <Number />
+        <Expiry />
+        <Cvc />
+      </CreditCardForm>
     </StoryContainer>
+  )
+}
+
+const Number = () => {
+  const [error, setError] = useState(false)
+
+  const handleBlur = e => {
+    setError(isEmpty(e.target.value))
+  }
+
+  return (
+    <CreditCardForm.Number
+      label="Numéro de carte"
+      fieldComponent={props => (
+        <div {...props} className="k-u-margin-bottom-triple" />
+      )}
+      labelComponent={({ children, ...props }) => (
+        <Field.Label labelProps={props} children={children} />
+      )}
+      inputComponent={props => (
+        <Field.Input {...props} error={error} onBlur={handleBlur} />
+      )}
+      errorComponent={() => {
+        if (!error) return null
+
+        return <Field.ErrorMessage>Le champ est requis.</Field.ErrorMessage>
+      }}
+    />
+  )
+}
+
+const Expiry = () => {
+  const [error, setError] = useState(false)
+
+  const handleBlur = e => {
+    setError(isEmpty(e.target.value))
+  }
+
+  return (
+    <CreditCardForm.Expiry
+      label="Date de validité"
+      fieldComponent={props => (
+        <div {...props} className="k-u-margin-bottom-triple" />
+      )}
+      labelComponent={({ children, ...props }) => (
+        <Field.Label labelProps={props} children={children} />
+      )}
+      inputComponent={props => (
+        <Field.Input
+          {...props}
+          placeholder="MM/AA"
+          digits={6}
+          error={error}
+          onBlur={handleBlur}
+        />
+      )}
+      errorComponent={() => {
+        if (!error) return null
+
+        return <Field.ErrorMessage>Le champ est requis.</Field.ErrorMessage>
+      }}
+    />
+  )
+}
+
+const Cvc = () => {
+  const [error, setError] = useState(false)
+
+  const handleBlur = e => {
+    setError(isEmpty(e.target.value))
+  }
+
+  return (
+    <CreditCardForm.Cvc
+      label="Cryptogramme visuel"
+      fieldComponent={props => (
+        <div {...props} className="k-u-margin-bottom-triple" />
+      )}
+      labelComponent={({ children, ...props }) => (
+        <Field.Label labelProps={props} children={children} />
+      )}
+      inputComponent={props => (
+        <Field.Input {...props} digits={6} error={error} onBlur={handleBlur} />
+      )}
+      errorComponent={() => {
+        if (!error) return null
+
+        return <Field.ErrorMessage>Le champ est requis.</Field.ErrorMessage>
+      }}
+    />
   )
 }

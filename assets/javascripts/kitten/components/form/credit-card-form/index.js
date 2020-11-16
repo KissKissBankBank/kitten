@@ -5,24 +5,6 @@ import { Expiry } from './components/expiry'
 import { Cvc } from './components/cvc'
 
 const defaultProps = {
-  customComponents: {
-    field: props => <div {...props} />,
-    label: props => <label {...props} />,
-    input: props => <input {...props} />,
-    error: () => null,
-  },
-  number: {
-    label: 'Card Number',
-    customComponents: {},
-  },
-  expiry: {
-    label: 'Expiry',
-    customComponents: {},
-  },
-  cvc: {
-    label: 'CVC',
-    customComponents: {},
-  },
   values: {
     number: '',
     expiry: '',
@@ -34,7 +16,7 @@ const defaultProps = {
 const FormContext = createContext(defaultProps)
 export const useFormContext = () => useContext(FormContext)
 
-export const CreditCardForm = props => {
+export const CreditCardForm = ({ children, ...props }) => {
   const [inputValues, updateInputValues] = useState(
     merge(defaultProps.values)(props.values),
   )
@@ -52,9 +34,11 @@ export const CreditCardForm = props => {
 
   return (
     <FormContext.Provider value={contextValues}>
-      <Number />
-      <Expiry />
-      <Cvc />
+      {children}
     </FormContext.Provider>
   )
 }
+
+CreditCardForm.Number = Number
+CreditCardForm.Expiry = Expiry
+CreditCardForm.Cvc = Cvc

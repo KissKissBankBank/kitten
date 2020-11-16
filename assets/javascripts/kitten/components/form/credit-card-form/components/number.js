@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import NumberFormat from 'react-number-format'
 import { useFormContext } from '../'
@@ -23,22 +24,17 @@ const StyledNumberFormat = styled(({ iconSvg, ...others }) => (
   `}
 `
 
-export const Number = () => {
+export const Number = ({
+  label,
+  fieldComponent: Field,
+  labelComponent: Label,
+  inputComponent: Input,
+  errorComponent: Error,
+}) => {
   const {
-    customComponents: {
-      field: globalField,
-      label: globalLabel,
-      input: globalInput,
-      error: globalError,
-    },
-    number: { label, customComponents },
     values: { number },
     setInputValues,
   } = useFormContext()
-  const Field = customComponents.field || globalField
-  const Label = customComponents.label || globalLabel
-  const Input = customComponents.input || globalInput
-  const Error = customComponents.error || globalError
   const ccType = getCreditCardType(number)
   const ccFormat = getCreditCardFormat(ccType)
   const ccIconSvg = getIconSvgStringByType(ccType.type)
@@ -67,4 +63,20 @@ export const Number = () => {
       <Error />
     </Field>
   )
+}
+
+Number.propTypes = {
+  label: PropTypes.string,
+  fieldComponent: PropTypes.elementType,
+  labelComponent: PropTypes.elementType,
+  inputComponent: PropTypes.elementType,
+  errorComponent: PropTypes.elementType,
+}
+
+Number.defaultProps = {
+  label: 'Card Number',
+  fieldComponent: props => <div {...props} />,
+  labelComponent: props => <label {...props} />,
+  inputComponent: props => <input {...props} />,
+  errorComponent: () => null,
 }

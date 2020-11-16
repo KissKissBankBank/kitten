@@ -1,23 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import NumberFormat from 'react-number-format'
 import { useFormContext } from '../'
 
-export const Expiry = () => {
+export const Expiry = ({
+  label,
+  fieldComponent: Field,
+  labelComponent: Label,
+  inputComponent: Input,
+  errorComponent: Error,
+}) => {
   const {
-    customComponents: {
-      field: globalField,
-      label: globalLabel,
-      input: globalInput,
-      error: globalError,
-    },
-    expiry: { label, customComponents },
     values: { expiry },
     setInputValues,
   } = useFormContext()
-  const Field = customComponents.field || globalField
-  const Label = customComponents.label || globalLabel
-  const Input = customComponents.input || globalInput
-  const Error = customComponents.error || globalError
 
   const handleChange = ({ value }) => {
     const month = value.substring(0, 2)
@@ -46,4 +42,20 @@ export const Expiry = () => {
       <Error />
     </Field>
   )
+}
+
+Expiry.propTypes = {
+  label: PropTypes.string,
+  fieldComponent: PropTypes.elementType,
+  labelComponent: PropTypes.elementType,
+  inputComponent: PropTypes.elementType,
+  errorComponent: PropTypes.elementType,
+}
+
+Expiry.defaultProps = {
+  label: 'Card Number',
+  fieldComponent: props => <div {...props} />,
+  labelComponent: props => <label {...props} />,
+  inputComponent: props => <input {...props} />,
+  errorComponent: () => null,
 }
