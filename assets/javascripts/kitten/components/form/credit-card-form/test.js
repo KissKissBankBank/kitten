@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { DefaultExample, CustomExample } from './stories'
+import { DefaultExample, CustomExample } from './examples'
 
 describe('<CreditCardForm />', () => {
   it('should match its snapshot with default props', () => {
