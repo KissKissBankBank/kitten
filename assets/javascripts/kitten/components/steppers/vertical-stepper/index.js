@@ -60,7 +60,22 @@ const StyledList = styled.ul`
 
   &.k-Steppers--VerticalStepper__orion {
     :before {
-      border-left: ${pxToRem(3)} solid ${COLORS.line1};
+      border-left: none;
+    }
+
+    li:not(:last-of-type) {
+      margin: 1.875rem 0;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: ${pxToRem(14)};
+        top: ${pxToRem(35)};
+        background-color: ${COLORS.line1}; ;
+        width: ${pxToRem(3)};
+        height: calc(100% - 10px);
+      }
     }
   }
 `
@@ -69,5 +84,5 @@ VerticalStepper.propTypes = {
 }
 
 VerticalStepper.defaultProps = {
-  variant: 'orion',
+  variant: 'andromeda',
 }

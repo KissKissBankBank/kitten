@@ -14,6 +14,7 @@ const StyledTitle = styled.p`
 
   &.k-Stepepers-VerticalStepper__title--orion {
     font-size: ${stepToRem(-1)};
+    font-weight: 500;
   }
 
 `

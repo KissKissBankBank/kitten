@@ -16,6 +16,7 @@ export const Step = ({
   statusProps,
   children,
   className,
+  variant,
   ...other
 }) => {
 
@@ -28,6 +29,7 @@ export const Step = ({
           error={error}
           waiting={waiting}
           disabled={disabled}
+          variant={variant}
           {...statusProps}
         />
 
@@ -56,6 +58,13 @@ const StyledItem = styled.li`
   }
   &:last-of-type {
     margin-bottom: 0;
+  }
+
+  li:not(:last-of-type) {
+    margin: 0 !important;
+    &::after {
+      display: none;
+    }
   }
 `
 

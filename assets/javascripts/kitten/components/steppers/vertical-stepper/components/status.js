@@ -168,5 +168,5 @@ Status.defaultProps = {
   error: false,
   waiting: false,
   disabled: false,
-  variant: 'orion',
+  variant: 'andromeda',
 }

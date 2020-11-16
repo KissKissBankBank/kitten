@@ -17,17 +17,67 @@ export default {
   component: VerticalStepper,
 }
 
-export const Default = () => {
+export const WithOrionVariant = () => {
   return (
     <StoryContainer>
       <VerticalStepper variant="orion">
         <VerticalStepper.Step
           success
           href="#"
+          statusProps={{ title: 'ÉTAPE 1' }}
+          variant="orion"
+        >
+          <VerticalStepper.Title variant="orion">ÉTAPE 1</VerticalStepper.Title>
+          <Text color="font1" size="tiny">Décrivez-nous votre projet</Text>
+
+        </VerticalStepper.Step>
+
+        <VerticalStepper.Step
+          valid
+          href="#"
+          statusProps={{ title: 'ÉTAPE 2' }}
+          variant="orion"
+        >
+          <VerticalStepper.Title variant="orion">ÉTAPE 2</VerticalStepper.Title>
+          <Text color="font1" size="tiny">Créez votre projet (nom, durée, ...)</Text>
+        </VerticalStepper.Step>
+
+        <VerticalStepper.Step
+          href="#"
+          waiting
+          statusProps={{ title: 'ÉTAPE 3' }}
+          variant="orion"
+        >
+          <VerticalStepper.Title variant="orion">ÉTAPE 3</VerticalStepper.Title>
+          <Text color="font1" size="tiny">Préparez votre campagne (contenu de votre page, contreparties...)</Text>
+        </VerticalStepper.Step>
+
+        <VerticalStepper.Step
+          disabled
+          href="#"
+          statusProps={{ title: 'ÉTAPE 4' }}
+          variant="orion"
+        >
+          <VerticalStepper.Title variant="orion">ÉTAPE 4</VerticalStepper.Title>
+          <Text color="font2" size="tiny">Soumettez votre projet (votre coach vérifie votre projet et vous conseille)</Text>
+        </VerticalStepper.Step>
+
+      </VerticalStepper>
+    </StoryContainer>
+  )
+}
+
+export const Default = () => {
+  return (
+    <StoryContainer>
+      <VerticalStepper>
+        <VerticalStepper.Step
+          success
+          href="#"
           statusProps={{ title: 'Étape validée' }}
         >
           <VerticalStepper.Title
-            variant="orion"
+          
           >
             Infos clés
           </VerticalStepper.Title>
