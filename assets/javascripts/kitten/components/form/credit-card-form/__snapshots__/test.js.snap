@@ -34,7 +34,7 @@ Array [
     >
       <input
         autoComplete="cc-number"
-        className="sc-ifAKCX hETjNG sc-bdVaJa iaWybd"
+        className="sc-bxivhb cjHZhD sc-bdVaJa iaWybd"
         disabled={false}
         id="frmCCNum"
         inputMode="numeric"
@@ -82,7 +82,7 @@ Array [
     >
       <input
         autoComplete="cc-exp"
-        className="sc-ifAKCX jgSgCQ"
+        className="sc-bxivhb eKzmyA"
         disabled={false}
         id="frmCCExp"
         inputMode="numeric"
@@ -130,7 +130,7 @@ Array [
     >
       <input
         autoComplete="cc-csc"
-        className="sc-ifAKCX jgSgCQ"
+        className="sc-bxivhb eKzmyA"
         disabled={false}
         id="frmCCCVC"
         inputMode="numeric"
