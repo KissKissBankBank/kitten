@@ -69,6 +69,7 @@ export const Default = () => {
             passedLabelProps && setLabelProps(passedLabelProps())
           }}
           resetOnBackspace={boolean('resetOnBackspace', false)}
+          highlightOptionBox={boolean('highlightOptionBox', true)}
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.

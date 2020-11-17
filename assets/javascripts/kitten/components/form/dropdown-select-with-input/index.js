@@ -299,6 +299,7 @@ export const DropdownSelectWithInput = ({
   toggleButtonProps,
   inputProps,
   resetOnBackspace,
+  highlightOptionBox,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -395,7 +396,11 @@ export const DropdownSelectWithInput = ({
           {...getToggleButtonProps()}
         >
           {selectedItem ? (
-            <span className="k-Form-DropdownSelectWithInput__content k-Form-DropdownSelectWithInput__content--selectedItem">
+            <span
+              className={classNames('k-Form-DropdownSelectWithInput__content', {
+                'k-Form-DropdownSelectWithInput__content--selectedItem': highlightOptionBox,
+              })}
+            >
               {selectedItem.icon && (
                 <span
                   className="k-Form-DropdownSelectWithInput__content__icon"
@@ -488,6 +493,7 @@ DropdownSelectWithInput.defaultProps = {
   toggleButtonProps: {},
   inputProps: {},
   resetOnBackspace: false,
+  highlightOptionBox: true,
 }
 
 DropdownSelectWithInput.propTypes = {
@@ -506,4 +512,5 @@ DropdownSelectWithInput.propTypes = {
   toggleButtonProps: PropTypes.object,
   inputProps: PropTypes.object,
   resetOnBackspace: PropTypes.bool,
+  highlightOptionBox: PropTypes.bool,
 }
