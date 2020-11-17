@@ -14,6 +14,7 @@ exports[`<DropdownSelectWithInput /> should match its snapshot with props 1`] = 
   </label>
   <div
     className="k-Form-DropdownSelectWithInput__container"
+    onKeyDown={[Function]}
   >
     <button
       aria-expanded={false}
