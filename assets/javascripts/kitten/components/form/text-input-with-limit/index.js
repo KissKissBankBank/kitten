@@ -44,11 +44,13 @@ const StyledTextInputWithLimit = styled.div`
     color: ${COLORS.error} !important;
   }
 
-  .k-Form-TextInput__textareaContainer--orion
-    + .k-Form-TextInputWithLimit__limitNumber {
-    top: initial;
-    bottom: ${pxToRem(15)};
-    right: ${pxToRem(15)};
+  .k-Form-TextInput__textareaContainer--orion,
+  .k-Form-TextInput--orion {
+    & + .k-Form-TextInputWithLimit__limitNumber {
+      top: initial;
+      bottom: ${pxToRem(15)};
+      right: ${pxToRem(15)};
+    }
   }
 `
 
