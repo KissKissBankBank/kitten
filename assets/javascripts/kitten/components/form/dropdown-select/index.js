@@ -94,7 +94,6 @@ const StyledDropdownSelect = styled.div`
     background-color: ${COLORS.background1};
     list-style: none;
 
-
     &:not(:empty) {
       border: ${pxToRem(2)} solid ${COLORS.line1};
       border-top: 0;
