@@ -281,7 +281,7 @@ const StyledDropdownSelectWithInput = styled.div`
 
 export const DropdownSelectWithInput = ({
   labelText,
-  items,
+  options,
   placeholder,
   inputPlaceholder,
   labelPropsGetter,
@@ -295,9 +295,10 @@ export const DropdownSelectWithInput = ({
   a11ySelectionMessageDisplayer,
   defaultSelectedValue,
   onChange,
-  onValueChange,
+  onInputChange,
   toggleButtonProps,
   inputProps,
+  resetOnBackspace,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -307,11 +308,11 @@ export const DropdownSelectWithInput = ({
 
   const itemToString = item => (item ? String(item.label) : '')
 
-  const initialSelectedItem = find(['value', defaultSelectedValue])(items)
+  const initialSelectedItem = find(['value', defaultSelectedValue])(options)
 
   const onSelectedItemChange = changes => {
     onChange(changes.selectedItem)
-    onValueChange({ value: changes.selectedItem })
+    onInputChange({ value: changes.selectedItem })
   }
 
   const onIsOpenChange = changes => {
@@ -328,10 +329,11 @@ export const DropdownSelectWithInput = ({
     getMenuProps,
     highlightedIndex,
     getItemProps,
+    selectItem,
   } = useSelect({
     id: `${id}_element`,
     toggleButtonId: id,
-    items,
+    items: options,
     getA11ySelectionMessage,
     itemToString,
     initialSelectedItem,
@@ -342,6 +344,21 @@ export const DropdownSelectWithInput = ({
   useEffect(() => {
     getLabelProps && labelPropsGetter(getLabelProps)
   }, [getLabelProps])
+
+  const handleInputKeydown = event => {
+    if (!resetOnBackspace) return
+
+    if (inputEl.current.value === '' && event.key === 'Backspace') {
+      // Prevent history.back()
+      event.preventDefault()
+
+      selectItem(null)
+
+      // Because we ca’t access to the ref
+      const buttonElement = document.getElementById(id)
+      buttonElement.focus()
+    }
+  }
 
   return (
     <StyledDropdownSelectWithInput
@@ -365,7 +382,10 @@ export const DropdownSelectWithInput = ({
       >
         {labelText}
       </Label>
-      <div className="k-Form-DropdownSelectWithInput__container">
+      <div
+        className="k-Form-DropdownSelectWithInput__container"
+        onKeyDown={handleInputKeydown}
+      >
         <button
           className="k-Form-DropdownSelectWithInput__button"
           type="button"
@@ -428,7 +448,7 @@ export const DropdownSelectWithInput = ({
       </div>
       <ul className="k-Form-DropdownSelectWithInput__list" {...getMenuProps()}>
         {isOpen &&
-          items.map((item, index) => (
+          options.map((item, index) => (
             <li
               className={classNames('k-Form-DropdownSelectWithInput__item', {
                 'k-Form-DropdownSelectWithInput__item--higlighted':
@@ -456,7 +476,7 @@ export const DropdownSelectWithInput = ({
 
 DropdownSelectWithInput.defaultProps = {
   hideLabel: false,
-  items: [],
+  options: [],
   placeholder: 'Select',
   inputPlaceholder: 'kisskissbankbank',
   labelPropsGetter: () => {},
@@ -464,16 +484,17 @@ DropdownSelectWithInput.defaultProps = {
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: () => {},
   onChange: () => {},
-  onValueChange: () => {},
+  onInputChange: () => {},
   toggleButtonProps: {},
   inputProps: {},
+  resetOnBackspace: false,
 }
 
 DropdownSelectWithInput.propTypes = {
   id: PropTypes.string.isRequired,
   labelText: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
-  items: PropTypes.arrayOf(PropTypes.object),
+  options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   inputPlaceholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
@@ -481,7 +502,8 @@ DropdownSelectWithInput.propTypes = {
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,
   onChange: PropTypes.func,
-  onValueChange: PropTypes.func,
+  onInputChange: PropTypes.func,
   toggleButtonProps: PropTypes.object,
   inputProps: PropTypes.object,
+  resetOnBackspace: PropTypes.bool,
 }

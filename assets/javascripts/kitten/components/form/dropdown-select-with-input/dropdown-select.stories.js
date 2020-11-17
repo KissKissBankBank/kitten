@@ -18,7 +18,7 @@ export default {
   },
 }
 
-const items = [
+const options = [
   {
     value: 'facebook',
     label: 'https://www.facebook.com/',
@@ -64,10 +64,11 @@ export const Default = () => {
           disabled={boolean('disabled', false)}
           hideLabel={boolean('hide label?', false)}
           labelText={text('LabelText', 'label')}
-          items={items}
+          options={options}
           labelPropsGetter={passedLabelProps => {
             passedLabelProps && setLabelProps(passedLabelProps())
           }}
+          resetOnBackspace={boolean('resetOnBackspace', false)}
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.

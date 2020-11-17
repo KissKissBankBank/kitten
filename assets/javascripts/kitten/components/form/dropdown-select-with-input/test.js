@@ -16,7 +16,7 @@ describe('<DropdownSelectWithInput />', () => {
         <DropdownSelectWithInput
           id="dropdown-select-with-input-test"
           labelText="DropdownSelectWithInput test"
-          items={[
+          options={[
             {
               value: 'facebook',
               label: 'https://www.facebook.com/',
