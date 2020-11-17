@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -12,28 +12,19 @@ import classNames from 'classnames'
 export const STEP_CLASSNAME = 'VerticalStepper__step'
 export const LINK_CLASSNAME = 'VerticalStepper__link'
 
-export class VerticalStepper extends Component {
-  static Step = Step
-  static Title = Title
-  static List = List
-  static Link = Link
-
-  render() {
-    const { children, variant } = this.props
-
-    return (
-      <StyledNav variant={variant}>
-        <StyledList
-          role="tablist"
-          className={classNames(
-            `k-Steppers--VerticalStepper__${variant}`,
-          )}
-        >
-          {children}
-        </StyledList>
-      </StyledNav>
-    )
-  }
+export const VerticalStepper = ({ children, variant }) => {
+  return (
+    <StyledNav variant={variant}>
+      <StyledList
+        role="tablist"
+        className={classNames(
+          `k-Steppers--VerticalStepper__${variant}`,
+        )}
+      >
+        {children}
+      </StyledList>
+    </StyledNav>
+  )
 }
 
 const StyledNav = styled.nav`
@@ -79,6 +70,11 @@ const StyledList = styled.ul`
     }
   }
 `
+
+VerticalStepper.Step = Step
+VerticalStepper.Title = Title
+VerticalStepper.List = List
+VerticalStepper.Link = Link
 
 VerticalStepper.propTypes = {
   variant: PropTypes.oneOf(['andromeda', 'orion']),
