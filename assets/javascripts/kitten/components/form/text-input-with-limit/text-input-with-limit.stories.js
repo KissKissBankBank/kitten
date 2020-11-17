@@ -15,7 +15,6 @@ const tagOptions = {
 export const Default = () => (
   <TextInputWithLimit
     disabled={boolean('Disabled', false)}
-    tiny={boolean('Tiny', false)}
     tag={select('Tag', tagOptions, 'input')}
     variant={select('Variant', variantOptions, 'andromeda')}
     limit={number('Limit', 80)}
