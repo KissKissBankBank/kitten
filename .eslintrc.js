@@ -9,6 +9,7 @@ module.exports ={
       "jsx": true
     }
   },
+  "ignorePatterns": ["assets/javascripts/kitten/components/form/dropdown-phone-select/data/CountryData.js"],
   "rules": {
     "no-unused-vars": ["error", {
       "ignoreRestSiblings": true,
