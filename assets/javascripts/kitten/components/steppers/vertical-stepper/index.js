@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
@@ -12,7 +12,7 @@ import classNames from 'classnames'
 export const STEP_CLASSNAME = 'VerticalStepper__step'
 export const LINK_CLASSNAME = 'VerticalStepper__link'
 
-export const VerticalStepper = ({ children, variant }) => {
+export const VerticalStepper = ({ children, variant, ...props }) => {
   return (
     <StyledNav variant={variant}>
       <StyledList
@@ -20,12 +20,14 @@ export const VerticalStepper = ({ children, variant }) => {
         className={classNames(
           `k-Steppers--VerticalStepper__${variant}`,
         )}
+        {...props}
       >
         {children}
       </StyledList>
     </StyledNav>
   )
 }
+
 
 const StyledNav = styled.nav`
   position: relative;
@@ -62,10 +64,16 @@ const StyledList = styled.ul`
         content: '';
         position: absolute;
         left: ${pxToRem(14)};
-        top: ${pxToRem(35)};
+        top: ${pxToRem(46)};
         background-color: ${COLORS.line1};
         width: ${pxToRem(3)};
-        height: calc(100% - 10px);
+        height: calc(100% - 15px);
+        
+        ${({ success }) =>
+        success &&
+        css`
+          background-color: ${COLORS.primary1};
+        `}
       }
     }
   }

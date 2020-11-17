@@ -35,7 +35,6 @@ export const Step = ({
 
         <div
           error={error}
-          disabled={disabled}
           className={classNames(
             STEP_CLASSNAME,
             'k-Steppers--VerticalStepper__step--link--content',
@@ -70,7 +69,7 @@ const StyledItem = styled.li`
 
 const StyledLink = styled.a`
   display: inline-flex;
-
+  align-items: center;
   ${({ as, onClick }) =>
   (as === 'a' || onClick) &&
   css`
