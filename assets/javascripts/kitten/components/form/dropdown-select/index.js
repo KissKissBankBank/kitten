@@ -119,6 +119,10 @@ const StyledDropdownSelect = styled.div`
     &[disabled] {
       color: ${COLORS.font2};
     }
+
+    &.k-Form-DropdownSelect__item--level_2 {
+      padding-left: ${pxToRem(30)};
+    }
   }
 
   &:focus-within {
@@ -354,7 +358,7 @@ const StyledDropdownSelect = styled.div`
 
 export const DropdownSelect = ({
   labelText,
-  items,
+  options,
   placeholder,
   labelPropsGetter,
   error,
@@ -369,7 +373,7 @@ export const DropdownSelect = ({
   a11ySelectionMessageDisplayer,
   defaultSelectedValue,
   onChange,
-  onValueChange,
+  onInputChange,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -377,11 +381,33 @@ export const DropdownSelect = ({
 
   const itemToString = item => (item ? String(item.label) : '')
 
-  const initialSelectedItem = find(['value', defaultSelectedValue])(items)
+  const initialSelectedItem = find(['value', defaultSelectedValue])(options)
 
   const onSelectedItemChange = changes => {
     onChange(changes.selectedItem)
-    onValueChange({ value: changes.selectedItem })
+    onInputChange({ value: changes.selectedItem })
+  }
+
+  // Turns a hierarchy of options with `children` into a flat array
+  // of options with a `level` of 1, 2 or null.
+  const flattenedOptions = () => {
+    const flatOptions = []
+
+    options.map(option => {
+      if (option.children) {
+        option.level = 1
+        flatOptions.push(option)
+
+        option.children.map(opt => {
+          opt.level = 2
+          flatOptions.push(opt)
+        })
+      } else {
+        flatOptions.push(option)
+      }
+    })
+
+    return flatOptions
   }
 
   const {
@@ -395,7 +421,7 @@ export const DropdownSelect = ({
   } = useSelect({
     id: `${id}_element`,
     toggleButtonId: id,
-    items,
+    items: flattenedOptions(),
     getA11ySelectionMessage,
     itemToString,
     initialSelectedItem,
@@ -469,12 +495,16 @@ export const DropdownSelect = ({
       </button>
       <ul className="k-Form-DropdownSelect__list" {...getMenuProps()}>
         {isOpen &&
-          items.map((item, index) => (
+          flattenedOptions().map((item, index) => (
             <li
-              className={classNames('k-Form-DropdownSelect__item', {
-                'k-Form-DropdownSelect__item--higlighted':
-                  highlightedIndex === index,
-              })}
+              className={classNames(
+                'k-Form-DropdownSelect__item',
+                `k-Form-DropdownSelect__item--level_${item.level || 1}`,
+                {
+                  'k-Form-DropdownSelect__item--higlighted':
+                    highlightedIndex === index,
+                },
+              )}
               key={`${item.value}${index}`}
               disabled={item.disabled}
               {...getItemProps({ item, index, disabled: item.disabled })}
@@ -489,7 +519,7 @@ export const DropdownSelect = ({
 
 DropdownSelect.defaultProps = {
   hideLabel: false,
-  items: [],
+  options: [],
   placeholder: 'Select',
   labelPropsGetter: () => {},
   variant: 'andromeda',
@@ -498,14 +528,14 @@ DropdownSelect.defaultProps = {
   a11yStatusValid: 'Valid',
   a11ySelectionMessageDisplayer: () => {},
   onChange: () => {},
-  onValueChange: () => {},
+  onInputChange: () => {},
 }
 
 DropdownSelect.propTypes = {
   id: PropTypes.string.isRequired,
   labelText: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
-  items: PropTypes.arrayOf(PropTypes.object),
+  options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
   labelPropsGetter: PropTypes.func,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
@@ -514,5 +544,5 @@ DropdownSelect.propTypes = {
   a11yStatusValid: PropTypes.string,
   a11ySelectionMessageDisplayer: PropTypes.func,
   onChange: PropTypes.func,
-  onValueChange: PropTypes.func,
+  onInputChange: PropTypes.func,
 }

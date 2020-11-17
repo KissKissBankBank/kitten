@@ -11,10 +11,15 @@ export default {
   },
 }
 
-const items = [
-  { value: 'bianchi', label: 'Bianchi' },
-  { value: 'bmc', label: 'BMC' },
-  { value: 'cannondale', label: 'Cannondale' },
+const options = [
+  {
+    value: 'bianchi',
+    label: 'Bianchi',
+    children: [
+      { value: 'bmc', label: 'BMC' },
+      { value: 'cannondale', label: 'Cannondale' },
+    ],
+  },
   { value: 'canyon', label: 'Canyon' },
   { value: 'cervelo', label: 'Cervelo' },
   { value: 'diamondback', label: 'Diamondback' },
@@ -41,7 +46,7 @@ export const Default = () => {
           disabled={boolean('disabled', false)}
           hideLabel={boolean('hide label?', false)}
           labelText={text('LabelText', 'label')}
-          items={items}
+          options={options}
           labelPropsGetter={passedLabelProps => {
             passedLabelProps && setLabelProps(passedLabelProps())
           }}
