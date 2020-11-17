@@ -2,7 +2,6 @@ import React from 'react'
 import { text, boolean, select } from '@storybook/addon-knobs'
 import { RadioButtonSet } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
-
 import { createGlobalStyle } from 'styled-components'
 import { ScreenConfig } from '../../../constants/screen-config'
 import { GUTTER } from '../../../constants/grid-config'

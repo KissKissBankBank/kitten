@@ -24,7 +24,6 @@ const StyledRadioButton = styled.div`
     flex-wrap: wrap;
     cursor: pointer;
 
-
     &::before {
       box-sizing: border-box;
       display: block;
