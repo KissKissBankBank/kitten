@@ -36,6 +36,7 @@ export const WithOrionVariant = () => {
 
         <VerticalStepper.Step
           valid
+          bridge
           href="#"
           statusProps={{ title: 'Étape complétée' }}
           variant="orion"
@@ -47,7 +48,7 @@ export const WithOrionVariant = () => {
 
         </VerticalStepper.Step>
 
-        <VerticalStepper.Step statusProps={{ title: 'Étape à commencer' }} variant="orion">
+        <VerticalStepper.Step disabled statusProps={{ title: 'Étape à commencer' }} variant="orion">
           <VerticalStepper.Title variant="orion">
             ÉTAPE 3
           </VerticalStepper.Title>

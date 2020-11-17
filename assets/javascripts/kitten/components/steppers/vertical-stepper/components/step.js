@@ -17,13 +17,18 @@ export const Step = ({
   children,
   className,
   variant,
+  bridge,
   ...other
 }) => {
 
   return (
     <StyledItem className={classNames(
       'k-Steppers--VerticalStepper__item',
-      {'k-Steppers--VerticalStepper__item--hasActiveLine': success},
+      {
+        'k-Steppers--VerticalStepper__item--hasActiveLine': success,
+        'k-Steppers--VerticalStepper__item--stepBridge': bridge,
+        'k-Steppers--VerticalStepper__item--hasDisabledLine': disabled,
+      },
     )}>
       <StyledLink as={other.href ? 'a' : 'span'} {...other} variant={variant}>
         <Status

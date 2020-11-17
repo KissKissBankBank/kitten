@@ -64,15 +64,27 @@ const StyledList = styled.ul`
         content: '';
         position: absolute;
         left: ${pxToRem(14)};
-        top: ${pxToRem(46)};
+        top: ${pxToRem(42)};
         background-color: ${COLORS.line1};
         width: ${pxToRem(3)};
-        height: calc(100% - 15px);
+        height: calc(100% - 8px);
       }
     }
 
     li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
       background-color: ${COLORS.primary1};
+    }
+
+    li.k-Steppers--VerticalStepper__item--stepBridge:not(:last-of-type) {
+      margin-bottom: ${pxToRem(70)};
+      &::after {
+        height: 185%;
+      }
+    }
+
+    li.k-Steppers--VerticalStepper__item--hasDisabledLine:not(:last-of-type)::after {
+      top: ${pxToRem(35)};
+      height: 115%;
     }
   }
 `
