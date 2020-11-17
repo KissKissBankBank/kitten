@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../../constants/typography-config'
 import COLORS from '../../../../constants/colors-config'
 import { LINK_CLASSNAME } from '../index'
 
-const StyledParagraph = styled.p`
+const StyledParagraph = styled.span`
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -25,9 +26,21 @@ const StyledParagraph = styled.p`
     &:active {
       color: ${COLORS.primary3};
     }
+  }
+
+  .k-Stepepers-VerticalStepper__link--orion {
+      font-size: ${pxToRem(14)};
+
+    :before {
+      padding: 0 ${pxToRem(8)};
+      content: '●';
+      font-size: ${pxToRem(8)};
+      color: ${COLORS.font1};
+    }
+  }
 `
 
-export const Link = ({ className, ...props }) => {
+export const Link = ({ variant, className, ...props }) => {
   return (
     <StyledParagraph>
       <span
@@ -35,9 +48,18 @@ export const Link = ({ className, ...props }) => {
         className={classNames(
           LINK_CLASSNAME,
           'k-Stepepers-VerticalStepper__link',
+          `k-Stepepers-VerticalStepper__link--${variant}`,
           className,
         )}
       />
     </StyledParagraph>
   )
+}
+
+Link.protoTypes = {
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
+}
+
+Link.defaultProps = {
+  variant: 'andromeda',
 }

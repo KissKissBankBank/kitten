@@ -30,6 +30,7 @@ export const WithOrionVariant = () => {
           <VerticalStepper.Title variant="orion">ÉTAPE 1</VerticalStepper.Title>
           <Text weight="light" size="tiny">
             Décrivez-nous votre projet
+            <VerticalStepper.Link variant="orion">Modifier</VerticalStepper.Link>
           </Text>
         </VerticalStepper.Step>
 

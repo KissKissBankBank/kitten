@@ -68,13 +68,11 @@ const StyledList = styled.ul`
         background-color: ${COLORS.line1};
         width: ${pxToRem(3)};
         height: calc(100% - 15px);
-        
-        ${({ success }) =>
-        success &&
-        css`
-          background-color: ${COLORS.primary1};
-        `}
       }
+    }
+
+    li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
+      background-color: ${COLORS.primary1};
     }
   }
 `

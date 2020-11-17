@@ -21,7 +21,10 @@ export const Step = ({
 }) => {
 
   return (
-    <StyledItem>
+    <StyledItem className={classNames(
+      'k-Steppers--VerticalStepper__item',
+      {'k-Steppers--VerticalStepper__item--hasActiveLine': success},
+    )}>
       <StyledLink as={other.href ? 'a' : 'span'} {...other} variant={variant}>
         <Status
           success={success}
