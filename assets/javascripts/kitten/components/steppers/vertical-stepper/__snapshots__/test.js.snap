@@ -23,134 +23,92 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   box-sizing: border-box;
   margin-right: 0.9375rem;
   background-color: #fff;
-  border: 2px solid #eee;
+  border: 0.125rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
+}
+
+.c4.k-Steppers--VerticalStepper__status--success {
   background-color: #61d079;
   border-color: #61d079;
 }
 
-.c9 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
-  box-sizing: border-box;
-  margin-right: 0.9375rem;
-  background-color: #fff;
-  border: 2px solid #eee;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
+.c4.k-Steppers--VerticalStepper__status--valid {
   background-color: #19b4fa;
   border-color: #19b4fa;
 }
 
-.c12 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
-  box-sizing: border-box;
-  margin-right: 0.9375rem;
-  background-color: #fff;
-  border: 2px solid #eee;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
+.c4.k-Steppers--VerticalStepper__status--error {
   color: #ff0046;
   border-color: #ffb2c7;
 }
 
-.c14 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
-  box-sizing: border-box;
-  margin-right: 0.9375rem;
-  background-color: #fff;
-  border: 2px solid #eee;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
+.c4.k-Steppers--VerticalStepper__status--waiting {
   color: #19b4fa;
   border-color: #bae8fd;
 }
 
-.c15 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
-  box-sizing: border-box;
-  margin-right: 0.9375rem;
+.c4.k-Steppers--VerticalStepper__status--disabled {
+  color: #fff;
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+}
+
+.c4.k-Steppers--VerticalStepper__status--orion {
+  border: 0.1875rem solid #eee;
+}
+
+.c4.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
+  background-color: #19b4fa;
+  border-color: #19b4fa;
+}
+
+.c4.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success:before {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  border-radius: 2.1875rem;
   background-color: #fff;
-  border: 2px solid #eee;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
+}
+
+.c4.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
+  background-color: #fff;
+  border-color: #19b4fa;
+}
+
+.c4.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
+  background-color: #fff;
+  border-color: #eee;
+}
+
+.c4.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+  background-color: #fff;
+  border-color: #eee;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 0.9375rem;
+  margin-left: calc(0.9375rem / 2);
+  margin-right: 1.25rem;
 }
 
 .c2 {
   margin: 1.875rem 0;
+}
+
+.c2:first-of-type {
+  margin-top: 0;
+}
+
+.c2:last-of-type {
+  margin-bottom: 0;
+}
+
+.c2 li:not(:last-of-type) {
+  margin: 0 !important;
+}
+
+.c2 li:not(:last-of-type)::after {
+  display: none;
 }
 
 .c3 {
@@ -188,7 +146,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   color: #0496cc;
 }
 
-.c5 {
+.c3 .k-Steppers--VerticalStepper__step--link--content {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,7 +164,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   color: #222;
 }
 
-.c6 {
+.c3 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
+  color: #b8b8b8;
+}
+
+.c5 {
   margin: 0 0 0.125rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -214,23 +176,18 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   line-height: normal;
 }
 
-.c7 {
+.c5.k-Stepepers-VerticalStepper__title--orion {
+  font-size: 0.8888888888888888rem;
+  font-weight: 500;
+}
+
+.c6 {
   margin: 0;
   padding: 0;
   line-height: 1;
 }
 
-.c8 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: normal;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c13 {
+.c6 .k-Stepepers-VerticalStepper__link {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
@@ -242,13 +199,13 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   transition: color 0.4s;
 }
 
-.c13:hover,
-.c13:focus,
-.c13:active {
+.c6 .k-Stepepers-VerticalStepper__link:hover,
+.c6 .k-Stepepers-VerticalStepper__link:focus,
+.c6 .k-Stepepers-VerticalStepper__link:active {
   color: #0496cc;
 }
 
-.c10 {
+.c7 {
   margin: 0.3125rem 0 0.625rem;
   padding: 0;
   font-family: Maax,Helvetica,Arial,sans-serif;
@@ -257,7 +214,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   line-height: normal;
 }
 
-.c11 {
+.c8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -271,7 +228,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   list-style: none;
 }
 
-.c11:before {
+.c8:before {
   padding-right: 0.625rem;
   content: '●';
   font-size: 0.5rem;
@@ -295,14 +252,33 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   left: 0.875rem;
   z-index: -1;
   content: '';
-  border-left: 2px dashed #eee;
+  border-left: 0.125rem dashed #eee;
+}
+
+.c1.k-Steppers--VerticalStepper__orion:before {
+  border-left: none;
+}
+
+.c1.k-Steppers--VerticalStepper__orion li:not(:last-of-type) {
+  margin: 1.875rem 0;
+  position: relative;
+}
+
+.c1.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
+  content: '';
+  position: absolute;
+  left: 0.875rem;
+  top: 2.1875rem;
+  background-color: #eee;
+  width: 0.1875rem;
+  height: calc(100% - 10px);
 }
 
 <nav
   className="c0"
 >
   <ul
-    className="c1"
+    className="c1 k-Steppers--VerticalStepper__andromeda"
     role="tablist"
   >
     <li
@@ -313,8 +289,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="c4"
-          disabled={false}
+          className="c4 k-Steppers--VerticalStepper__status--success k-Steppers--VerticalStepper__status--andromeda"
         >
           <svg
             fill="#fff"
@@ -329,19 +304,20 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="c5 VerticalStepper__step"
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
           disabled={false}
+          error={false}
         >
           <p
-            className="c6"
+            className="c5 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <p
-            className="c7"
+            className="c6"
           >
             <span
-              className="c8 VerticalStepper__link"
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link"
             >
               Link
             </span>
@@ -357,8 +333,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="c9"
-          disabled={false}
+          className="c4 k-Steppers--VerticalStepper__status--valid k-Steppers--VerticalStepper__status--andromeda"
         >
           <svg
             fill="#fff"
@@ -373,38 +348,39 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="c5 VerticalStepper__step"
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
           disabled={false}
+          error={false}
         >
           <p
-            className="c6"
+            className="c5 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <ul
-            className="c10"
+            className="c7"
           >
             <li
-              className="c11"
+              className="c8"
             >
               Item
             </li>
             <li
-              className="c11"
+              className="c8"
             >
               Item
             </li>
             <li
-              className="c11"
+              className="c8"
             >
               …
             </li>
           </ul>
           <p
-            className="c7"
+            className="c6"
           >
             <span
-              className="c8 VerticalStepper__link"
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link"
             >
               Link
             </span>
@@ -420,8 +396,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="c12"
-          disabled={false}
+          className="c4 k-Steppers--VerticalStepper__status--error k-Steppers--VerticalStepper__status--andromeda"
         >
           <svg
             height="10"
@@ -436,37 +411,39 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="c5 VerticalStepper__step"
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
           disabled={false}
+          error={true}
         >
           <p
-            className="c6"
+            className="c5 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <ul
-            className="c10"
+            className="c7"
           >
             <li
-              className="c11"
+              className="c8"
             >
               Item
             </li>
             <li
-              className="c11"
+              className="c8"
             >
               Item
             </li>
           </ul>
           <p
-            className="c7"
+            className="c6"
           >
-            <a
-              className="c13 VerticalStepper__link"
+            <span
+              as="a"
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link"
               href="#"
             >
               Link
-            </a>
+            </span>
           </p>
         </div>
       </a>
@@ -479,8 +456,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="c14"
-          disabled={false}
+          className="c4 k-Steppers--VerticalStepper__status--waiting k-Steppers--VerticalStepper__status--andromeda"
         >
           <svg
             height="4"
@@ -496,19 +472,20 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           </svg>
         </span>
         <div
-          className="c5 VerticalStepper__step"
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
           disabled={false}
+          error={false}
         >
           <p
-            className="c6"
+            className="c5 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <p
-            className="c7"
+            className="c6"
           >
             <span
-              className="c8 VerticalStepper__link"
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link"
             >
               Link
             </span>
@@ -524,23 +501,35 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         href="#"
       >
         <span
-          className="c15"
-          disabled={false}
-        />
+          className="c4 k-Steppers--VerticalStepper__status--andromeda"
+        >
+          <svg
+            fill="#fff"
+            height="8"
+            viewBox="0 0 11 8"
+            width="10"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+            />
+          </svg>
+        </span>
         <div
-          className="c5 VerticalStepper__step"
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
           disabled={false}
+          error={false}
         >
           <p
-            className="c6"
+            className="c5 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <p
-            className="c7"
+            className="c6"
           >
             <span
-              className="c8 VerticalStepper__link"
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link"
             >
               Link
             </span>
