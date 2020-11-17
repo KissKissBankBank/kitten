@@ -9,3 +9,7 @@ export default {
 export const Default = args => {
   return <ImageCropper {...args} />
 }
+
+export const WithImage = () => {
+  return <ImageCropper imageSrc="/steven.jpg" fileName="Steven" />
+}

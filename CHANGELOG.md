@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Fix `ImageCropper` `onChange` firing on uploaded images.
 
 ## [2.97.0] - 2020-11-16
 
