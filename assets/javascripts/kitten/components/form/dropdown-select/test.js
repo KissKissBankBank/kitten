@@ -10,9 +10,14 @@ describe('<DropdownSelect />', () => {
           id="dropdown-select-test"
           labelText="DropdownSelect test"
           items={[
-            { value: 'bianchi', label: 'Bianchi' },
-            { value: 'bmc', label: 'BMC' },
-            { value: 'cannondale', label: 'Cannondale' },
+            {
+              value: 'bianchi',
+              label: 'Bianchi',
+              children: [
+                { value: 'bmc', label: 'BMC' },
+                { value: 'cannondale', label: 'Cannondale' },
+              ],
+            },
             { value: 'canyon', label: 'Canyon' },
             { value: 'cervelo', label: 'Cervelo' },
             { value: 'diamondback', label: 'Diamondback' },
