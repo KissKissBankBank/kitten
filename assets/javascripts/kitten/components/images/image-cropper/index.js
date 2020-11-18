@@ -78,7 +78,7 @@ export const ImageCropper = ({
     height: cropperHeight,
   }
   useEffect(() => {
-    if (fileNameState && uploadedFile && resultData) {
+    if (fileNameState && resultData) {
       onChange({
         value: resultData.target.src,
         base: getOr(resultData.srcElement.src)('originalTarget.src')(
