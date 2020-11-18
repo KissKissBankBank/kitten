@@ -45,7 +45,6 @@ export const WithOrionVariant = () => {
           <Text weight="light" size="tiny">
             Créez votre projet (nom, durée, ...)
           </Text>
-
         </VerticalStepper.Step>
 
         <VerticalStepper.Step waiting statusProps={{ title: 'Étape à commencer' }} variant="orion">

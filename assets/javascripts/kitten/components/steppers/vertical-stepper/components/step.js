@@ -109,7 +109,6 @@ const StyledLink = styled.a`
     flex-direction: column;
     justify-content: center;
     flex: 1;
-
     color: ${COLORS.font1};
 
     &.k-Steppers--VerticalStepper__step--link--content--disabled {

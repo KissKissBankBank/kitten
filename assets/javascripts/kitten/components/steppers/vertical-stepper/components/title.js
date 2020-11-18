@@ -29,7 +29,6 @@ export const Title = ({ variant, className, children }) => {
     >
       {children}
     </StyledTitle>
-
   )
 }
 

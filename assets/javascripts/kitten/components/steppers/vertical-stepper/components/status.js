@@ -91,7 +91,7 @@ const StyledStatus = styled.span`
   width: ${pxToRem(STATUS_SIZE)};
   height: ${pxToRem(STATUS_SIZE)};
   border-radius: ${pxToRem(STATUS_SIZE)};
-
+  box-sizing: border-box;
   margin-right: ${pxToRem(15)};
 
   background-color: ${COLORS.background1};
@@ -104,22 +104,18 @@ const StyledStatus = styled.span`
     background-color: ${COLORS.valid};
     border-color: ${COLORS.valid};
   }
-
   &.k-Steppers--VerticalStepper__status--valid {
     background-color: ${COLORS.primary1};
     border-color: ${COLORS.primary1};
   }
-
   &.k-Steppers--VerticalStepper__status--error {
     color: ${COLORS.error};
     border-color: ${COLORS.error3};
   }
-
   &.k-Steppers--VerticalStepper__status--waiting {
     color: ${COLORS.primary1};
     border-color: ${COLORS.primary4};
   }
-
   &.k-Steppers--VerticalStepper__status--disabled {
     color: ${COLORS.background1};
     border-color: ${COLORS.line2};
@@ -141,17 +137,14 @@ const StyledStatus = styled.span`
       background-color: ${COLORS.primary1};
       border-color: ${COLORS.primary1};
     }
-
     &.k-Steppers--VerticalStepper__status--valid {
       background-color: ${COLORS.background1};
       border-color: ${COLORS.primary1};
     }
-
     &.k-Steppers--VerticalStepper__status--waiting {
       background-color: ${COLORS.background1};
       border-color: ${COLORS.line1};
     }
-  
     &.k-Steppers--VerticalStepper__status--disabled {
       background-color: ${COLORS.background1};
       border-color: ${COLORS.line1};

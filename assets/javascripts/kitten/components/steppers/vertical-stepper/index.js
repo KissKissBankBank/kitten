@@ -28,7 +28,6 @@ export const VerticalStepper = ({ children, variant, ...props }) => {
   )
 }
 
-
 const StyledNav = styled.nav`
   position: relative;
   padding: 1px 0;
