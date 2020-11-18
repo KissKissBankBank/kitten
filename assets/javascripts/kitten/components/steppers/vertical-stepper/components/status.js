@@ -25,21 +25,25 @@ export class Status extends Component {
     } = this.props
 
     return (
-      <StyledStatus 
-        {...other}
-        className={classNames(
-          {
-            'k-Steppers--VerticalStepper__status--valid': valid,
-            'k-Steppers--VerticalStepper__status--success': success,
-            'k-Steppers--VerticalStepper__status--error': error,
-            'k-Steppers--VerticalStepper__status--waiting': waiting,
-            'k-Steppers--VerticalStepper__status--disabled': disabled,
-          },
-          `k-Steppers--VerticalStepper__status--${variant}`,
-        )}
-      >
-        {this.iconByStatus() || children}
-      </StyledStatus>
+      <StyledOrionStatus className={classNames(
+        `k-Steppers--VerticalStepper__${variant}--status`,
+      )}>
+        <StyledStatus 
+          {...other}
+          className={classNames(
+            {
+              'k-Steppers--VerticalStepper__status--valid': valid,
+              'k-Steppers--VerticalStepper__status--success': success,
+              'k-Steppers--VerticalStepper__status--error': error,
+              'k-Steppers--VerticalStepper__status--waiting': waiting,
+              'k-Steppers--VerticalStepper__status--disabled': disabled,
+            },
+            `k-Steppers--VerticalStepper__status--${variant}`,
+          )}
+        >
+          {this.iconByStatus() || children}
+        </StyledStatus>
+      </StyledOrionStatus>
     )
   }
 
@@ -71,7 +75,13 @@ export class Status extends Component {
 const STATUS_SIZE = 30
 const INACTIVE_STATUS_SIZE = 15
 
-export const StyledStatus = styled.span`
+const StyledOrionStatus = styled.div`
+  &.k-Steppers--VerticalStepper__orion--status {
+    border: ${pxToRem(6)} solid ${COLORS.background1};
+  }
+`
+
+const StyledStatus = styled.span`
   flex-shrink: 0;
 
   display: flex;
@@ -81,7 +91,6 @@ export const StyledStatus = styled.span`
   width: ${pxToRem(STATUS_SIZE)};
   height: ${pxToRem(STATUS_SIZE)};
   border-radius: ${pxToRem(STATUS_SIZE)};
-  box-sizing: border-box;
 
   margin-right: ${pxToRem(15)};
 
@@ -118,18 +127,19 @@ export const StyledStatus = styled.span`
   }
 
   &.k-Steppers--VerticalStepper__status--orion {
-    border: ${pxToRem(3)} solid ${COLORS.line1};
+    box-sizing: border-box;
+    width: 100%;
+    border: ${pxToRem(3)} solid ${COLORS.background1};
+    z-index: 1;
+    padding: ${pxToRem(3)};
+  
+    width: ${pxToRem(STATUS_SIZE)};
+    height: ${pxToRem(STATUS_SIZE)};
+    border-radius: ${pxToRem(STATUS_SIZE)}; 
 
     &.k-Steppers--VerticalStepper__status--success {
       background-color: ${COLORS.primary1};
       border-color: ${COLORS.primary1};
-
-      :before {
-        width: ${pxToRem(35)};
-        height: ${pxToRem(35)};
-        border-radius: ${pxToRem(35)};
-        background-color: ${COLORS.background1};
-      }
     }
 
     &.k-Steppers--VerticalStepper__status--valid {
@@ -145,15 +155,14 @@ export const StyledStatus = styled.span`
     &.k-Steppers--VerticalStepper__status--disabled {
       background-color: ${COLORS.background1};
       border-color: ${COLORS.line1};
+
       width: ${pxToRem(INACTIVE_STATUS_SIZE)};
       height: ${pxToRem(INACTIVE_STATUS_SIZE)};
       border-radius: ${pxToRem(INACTIVE_STATUS_SIZE)};
-
-      margin-left: calc(${pxToRem(INACTIVE_STATUS_SIZE)} / 2);
+      margin-left: ${pxToRem(7)};
       margin-right: ${pxToRem(20)};
     }
   }
-  
 `
 
 Status.propTypes = {

@@ -27,7 +27,6 @@ export const Step = ({
       {
         'k-Steppers--VerticalStepper__item--hasActiveLine': success,
         'k-Steppers--VerticalStepper__item--stepBridge': bridge,
-        'k-Steppers--VerticalStepper__item--hasDisabledLine': disabled,
       },
     )}>
       <StyledLink as={other.href ? 'a' : 'span'} {...other} variant={variant}>
@@ -58,7 +57,7 @@ export const Step = ({
 }
 
 const StyledItem = styled.li`
-  margin ${pxToRem(30)} 0;
+  padding: ${pxToRem(15)} 0;
   
   &:first-of-type {
     margin-top: 0;

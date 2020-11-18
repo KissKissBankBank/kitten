@@ -57,17 +57,17 @@ const StyledList = styled.ul`
     }
 
     li:not(:last-of-type) {
-      margin: ${pxToRem(30)} 0;
       position: relative;
 
       &::after {
         content: '';
         position: absolute;
-        left: ${pxToRem(14)};
-        top: ${pxToRem(42)};
+        left: ${pxToRem(19)};
+        top: ${pxToRem(30)};
         background-color: ${COLORS.line1};
         width: ${pxToRem(3)};
-        height: calc(100% - 8px);
+        height: 100%;
+        z-index: -1;
       }
     }
 
@@ -76,15 +76,7 @@ const StyledList = styled.ul`
     }
 
     li.k-Steppers--VerticalStepper__item--stepBridge:not(:last-of-type) {
-      margin-bottom: ${pxToRem(70)};
-      &::after {
-        height: 185%;
-      }
-    }
-
-    li.k-Steppers--VerticalStepper__item--hasDisabledLine:not(:last-of-type)::after {
-      top: ${pxToRem(35)};
-      height: 115%;
+      padding-bottom: ${pxToRem(60)};
     }
   }
 `
