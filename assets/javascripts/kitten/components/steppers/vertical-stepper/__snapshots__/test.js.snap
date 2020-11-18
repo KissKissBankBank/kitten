@@ -24,6 +24,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   width: 1.875rem;
   height: 1.875rem;
   border-radius: 1.875rem;
+  box-sizing: border-box;
   margin-right: 0.9375rem;
   background-color: #fff;
   border: 0.125rem solid #eee;
@@ -606,6 +607,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   width: 1.875rem;
   height: 1.875rem;
   border-radius: 1.875rem;
+  box-sizing: border-box;
   margin-right: 0.9375rem;
   background-color: #fff;
   border: 0.125rem solid #eee;
