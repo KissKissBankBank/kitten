@@ -15,7 +15,7 @@ export default {
 export const Default = () => {
   return (
     <Grid>
-      <GridCol offset="1" col="8">
+      <GridCol offset-l="1" col-l="8">
         <DropdownPhoneSelect
           id={text('id', 'dropdown-select')}
           error={boolean('error', false)}

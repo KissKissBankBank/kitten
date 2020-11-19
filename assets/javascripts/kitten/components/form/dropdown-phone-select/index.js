@@ -45,9 +45,10 @@ const processCountries = ({ countries, prefix, locale, flagsUrl }) => {
 
 const formatNumber = (text, country) => {
   if (!country) return text
-  if (!format) return text
 
   const { format } = country
+
+  if (!format) return text
 
   const pattern = removeCountryCodeFromFormat(format)
 
