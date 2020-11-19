@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Feature:
 - Add `DropdownSelectWithInput` component.
 - Add `GlobeIcon` icon.
+- Add `DropdownPhoneSelect` component.
+- Add `FlagIcon` icon.
+- Add `.k-u-a11y-visuallyHidden` CSS helper.
 
 ## [2.96.0] - 2020-11-12
 Feature:
