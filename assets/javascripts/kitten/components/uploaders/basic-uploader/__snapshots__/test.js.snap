@@ -2,7 +2,7 @@
 
 exports[`<BasicUploader /> should match snapshot 1`] = `
 <div
-  className="sc-ifAKCX bFhmek k-BasicUploader k-BasicUploader--ready"
+  className="sc-bxivhb dWkRY k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -37,7 +37,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 <div
-  className="sc-ifAKCX bFhmek k-BasicUploader k-BasicUploader--ready"
+  className="sc-bxivhb dWkRY k-BasicUploader k-BasicUploader--ready"
 >
   <input
     disabled={false}
@@ -72,7 +72,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
 
 exports[`<BasicUploader /> should match snapshot with props 1`] = `
 <div
-  className="sc-ifAKCX bFhmek k-BasicUploader k-BasicUploader--valid"
+  className="sc-bxivhb dWkRY k-BasicUploader k-BasicUploader--valid"
 >
   <input
     disabled={true}
@@ -125,7 +125,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
         />
       </svg>
       <span
-        className="sc-bxivhb jcNVDI"
+        className="k-u-a11y-visuallyHidden"
       >
         Cancel and reupload
       </span>

@@ -2,7 +2,7 @@
 
 exports[`<DocumentManager /> should match snapshot 1`] = `
 <div
-  className="sc-EHOje hEQxOC k-DocumentManager__uploader"
+  className="sc-ifAKCX fSuHIY k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -21,7 +21,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
         className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-htoDjs bPwevW k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
+          className="sc-gzVnrw bIWWyz k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
             className="sc-bxivhb tOIMr"
@@ -85,7 +85,7 @@ exports[`<DocumentManager /> should match snapshot 1`] = `
 
 exports[`<DocumentManager /> should match snapshot with props 1`] = `
 <div
-  className="sc-EHOje hEQxOC k-DocumentManager__uploader"
+  className="sc-ifAKCX fSuHIY k-DocumentManager__uploader"
 >
   <input
     disabled={false}
@@ -105,7 +105,7 @@ exports[`<DocumentManager /> should match snapshot with props 1`] = `
         className="k-DocumentManager__uploader__documentIcon"
       >
         <div
-          className="sc-htoDjs bPwevW k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
+          className="sc-gzVnrw bIWWyz k-DocumentManager__iconContainer k-DocumentManager__iconContainer--ready"
         >
           <svg
             className="sc-bxivhb tOIMr"

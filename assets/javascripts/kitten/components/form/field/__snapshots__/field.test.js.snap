@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-jzJRlG bTVSHD"
+      className="sc-fjdhpX jLxVvv"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-cSHVUG jrEObi"
+        className="sc-jzJRlG bCdGhE"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
