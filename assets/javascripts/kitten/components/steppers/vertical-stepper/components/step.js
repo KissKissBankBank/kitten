@@ -26,7 +26,6 @@ export const Step = ({
       'k-Steppers--VerticalStepper__item',
       {
         'k-Steppers--VerticalStepper__item--hasActiveLine': success,
-        'k-Steppers--VerticalStepper__item--stepBridge': bridge,
       },
     )}>
       <StyledLink as={other.href ? 'a' : 'span'} {...other} variant={variant}>
@@ -36,6 +35,7 @@ export const Step = ({
           error={error}
           waiting={waiting}
           disabled={disabled}
+          bridge={bridge}
           variant={variant}
           {...statusProps}
         />
@@ -124,6 +124,7 @@ Step.propTypes = {
   error: PropTypes.bool,
   waiting: PropTypes.bool,
   disabled: PropTypes.bool,
+  bridge: PropTypes.bool,
 }
 
 Step.defaultProps = {
@@ -133,4 +134,5 @@ Step.defaultProps = {
   error: false,
   waiting: false,
   disabled: false,
+  bridge: false,
 }

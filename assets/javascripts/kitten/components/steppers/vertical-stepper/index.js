@@ -73,10 +73,6 @@ const StyledList = styled.ul`
     li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
       background-color: ${COLORS.primary1};
     }
-
-    li.k-Steppers--VerticalStepper__item--stepBridge:not(:last-of-type) {
-      padding-bottom: ${pxToRem(60)};
-    }
   }
 `
 

@@ -20,6 +20,7 @@ export class Status extends Component {
       error,
       waiting,
       disabled,
+      bridge,
       variant,
       ...other
     } = this.props
@@ -37,6 +38,7 @@ export class Status extends Component {
               'k-Steppers--VerticalStepper__status--error': error,
               'k-Steppers--VerticalStepper__status--waiting': waiting,
               'k-Steppers--VerticalStepper__status--disabled': disabled,
+              'k-Steppers--VerticalStepper__status--bridge': bridge,
             },
             `k-Steppers--VerticalStepper__status--${variant}`,
           )}
@@ -155,6 +157,19 @@ const StyledStatus = styled.span`
       margin-left: ${pxToRem(7)};
       margin-right: ${pxToRem(20)};
     }
+    &.k-Steppers--VerticalStepper__status--bridge {
+      height: ${pxToRem(21)};
+      position: relative;
+      border: 0;
+
+      &::before {
+        width: ${pxToRem(2)};
+        content: "";
+        position: absolute;
+        height: 100%;
+        border-left: ${pxToRem(3)} dotted ${COLORS.line1};
+      }
+    }
   }
 `
 
@@ -164,6 +179,7 @@ Status.propTypes = {
   error: PropTypes.bool,
   waiting: PropTypes.bool,
   disabled: PropTypes.bool,
+  bridge: PropTypes.bool,
   variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 
@@ -173,5 +189,6 @@ Status.defaultProps = {
   error: false,
   waiting: false,
   disabled: false,
+  bridge: false,
   variant: 'andromeda',
 }
