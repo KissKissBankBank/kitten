@@ -40,7 +40,7 @@ export const Default = () => {
               'yt',
             ],
           }}
-          value="06123456789"
+          value={text('value', '+33 1 23 45 67 89')}
           locale={select('locale', ['fr', 'en', 'nl'], 'fr')}
           flagsUrl={flagFile}
         />

@@ -167,12 +167,13 @@ const getCountryObjectFromIso = (country, onlyCountries) => {
 export const DropdownPhoneSelect = ({
   id,
   value,
-  country,
+  defaultCountry,
   locale,
   placeholder,
   onChange,
   flagsUrl,
   assumeCountry,
+  inputProps,
   ...props
 }) => {
   // Consts
@@ -275,49 +276,47 @@ export const DropdownPhoneSelect = ({
   }
 
   // Effects
+
   useEffect(() => {
-    if (country) {
-      const newCountry = getCountryObjectFromIso(country, onlyCountries)
+    // Populate form on new props
+    let inputNumber = value ? value.replace(/\D/g, '') : ''
 
-      if (newCountry && newCountry.iso2) {
-        setCountry(newCountry.iso2)
-        setDefaultSelectedValue(newCountry.iso2)
-      }
-    }
-
-    if (value) {
-      const inputNumber = value ? value.replace(/\D/g, '') : ''
-
-      let countryGuess
-      if (inputNumber.length > 1) {
-        // Country detect by phone
-        countryGuess = guessSelectedCountry(
-          inputNumber.substring(0, 6),
-          country,
-          onlyCountries,
-        )
-        if (!countryGuess) {
-          countryGuess = getCountryObjectFromIso(assumeCountry, onlyCountries)
-        } else {
-          countryGuess = 0
-        }
-      } else if (country != '') {
-        // Default country
-        countryGuess = onlyCountries.find(o => o.iso2 == country) || 0
+    let countryGuess
+    if (inputNumber.length > 1) {
+      if (startsWith(inputNumber, '0') && !startsWith(inputNumber, '00')) {
+        // French mobile phone number
+        countryGuess = getCountryObjectFromIso(assumeCountry, onlyCountries)
+        inputNumber = inputNumber.slice(1)
       } else {
-        // Empty params
-        countryGuess = 0
-      }
+        // Country detect by phone
+        countryGuess =
+          guessSelectedCountry(
+            inputNumber.substring(0, 6),
+            defaultCountry,
+            onlyCountries,
+          ) || 0
 
-      if (countryGuess !== 0) {
-        setCountry(countryGuess.iso2)
-        setDefaultSelectedValue(countryGuess.iso2)
-        setInputNumber(inputNumber)
+        if (countryGuess !== 0) {
+          inputNumber = inputNumber.slice(countryGuess.countryCode.length)
+        }
       }
+    } else if (defaultCountry != '') {
+      // Default country
+      countryGuess = onlyCountries.find(o => o.iso2 == defaultCountry) || 0
+    } else {
+      // Empty params
+      countryGuess = 0
     }
-  }, [])
+
+    if (countryGuess !== 0) {
+      setCountry(countryGuess.iso2)
+      setDefaultSelectedValue(countryGuess.iso2)
+      setInputNumber(inputNumber)
+    }
+  }, [value, defaultCountry])
 
   useEffect(() => {
+    // Adjust input number on country change
     if (getCountry) {
       handleInput({ target: { value: getInputNumber } })
     }
@@ -350,13 +349,15 @@ export const DropdownPhoneSelect = ({
       inputProps={{
         onChange: handleInput,
         value: getFormattedNumber,
+        type: 'tel',
+        ...inputProps,
       }}
     />
   )
 }
 
 DropdownPhoneSelect.defaultProps = {
-  country: '',
+  defaultCountry: '',
   value: '',
   phoneProps: {
     onlyCountries: [],
@@ -381,6 +382,7 @@ DropdownPhoneSelect.defaultProps = {
   placeholder: 'Telephone',
   flagsUrl: './flags.png',
   assumeCountry: 'fr',
+  inputProps: {},
 
   onChange: () => {},
 }
