@@ -17,24 +17,24 @@ const StyledDropdownSelectWithInput = styled.div`
   position: relative;
 
   .k-Form-DropdownSelectWithInput__container {
-      display: flex;
-      box-sizing: border-box;
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      padding: 0 ${pxToRem(10 + 10)} 0 0;
-      margin: 0;
-      border: ${pxToRem(2)} solid ${COLORS.line1};
-      background-color: ${COLORS.background1};
-      font-size: ${stepToRem(-1)};
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 ${pxToRem(10 + 10)} 0 0;
+    margin: 0;
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+    background-color: ${COLORS.background1};
+    font-size: ${stepToRem(-1)};
 
-      height: ${pxToRem(60)};
-      border-radius: ${pxToRem(6)};
+    height: ${pxToRem(60)};
+    border-radius: ${pxToRem(6)};
 
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        height: ${pxToRem(70)};
-        border-radius: ${pxToRem(8)};
-      }
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      height: ${pxToRem(70)};
+      border-radius: ${pxToRem(8)};
+    }
   }
 
 
@@ -80,6 +80,7 @@ const StyledDropdownSelectWithInput = styled.div`
     height: ${pxToRem(46)};
   }
   .k-Form-DropdownSelectWithInput__placeholder {
+    font-size: ${stepToRem(0)};
     color: ${COLORS.font2};
   }
 
@@ -314,8 +315,6 @@ export const DropdownSelectWithInput = ({
 
   const itemToString = item => (item ? String(item.label) : '')
 
-  const initialSelectedItem = find(['value', defaultSelectedValue])(options)
-
   const onSelectedItemChange = changes => {
     onChange(changes.selectedItem)
     onInputChange({ value: changes.selectedItem })
@@ -342,10 +341,16 @@ export const DropdownSelectWithInput = ({
     items: options,
     getA11ySelectionMessage,
     itemToString,
-    initialSelectedItem,
     onSelectedItemChange,
     onIsOpenChange,
   })
+
+  useEffect(() => {
+    if (!defaultSelectedValue) return
+
+    const initialSelectedItem = find(['value', defaultSelectedValue])(options)
+    selectItem(initialSelectedItem)
+  }, [defaultSelectedValue])
 
   useEffect(() => {
     getLabelProps && labelPropsGetter(getLabelProps)
