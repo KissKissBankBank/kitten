@@ -107,11 +107,9 @@ const StyledDropdownSelectWithInput = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: ${pxToRem(60)};
     left: ${pxToRem(20)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      height: ${pxToRem(70)};
       left: ${pxToRem(30)};
     }
   }
@@ -124,7 +122,7 @@ const StyledDropdownSelectWithInput = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: auto;
 
     right: ${pxToRem(10)};
 

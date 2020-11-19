@@ -40,7 +40,7 @@ export const Default = () => {
               'yt',
             ],
           }}
-          country="fr"
+          value="06123456789"
           locale={select('locale', ['fr', 'en', 'nl'], 'fr')}
           flagsUrl={flagFile}
         />

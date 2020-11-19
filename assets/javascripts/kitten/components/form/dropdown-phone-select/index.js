@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { DropdownSelectWithInput } from '../../../components/form/dropdown-select-with-input'
 import CountryData from './data/CountryData.js'
-import reduce from 'lodash/reduce'
+import { reduce, startsWith, memoize } from 'lodash'
 import { usePrevious } from '../../../helpers/utils/use-previous-hook'
-import lang_fr from './data/lang/fr.json'
+import locale_fr from './data/lang/fr'
 import { FlagIcon } from '../../../components/icons/flag-icon'
-
-const locale_fr = JSON.parse(JSON.stringify(lang_fr))
 
 const removeCountryCodeFromFormat = format => {
   const patternArray = format.split(' ')
@@ -128,25 +126,32 @@ const getOptions = ({
   return options
 }
 
-// const guessSelectedCountry = (inputNumber, country, onlyCountries) => {
-//   const secondBestGuess = onlyCountries.find(o => o.iso2 == country)
-//   if (inputNumber.trim() === '') return secondBestGuess
+const guessSelectedCountry = memoize((inputNumber, country, onlyCountries) => {
+  const secondBestGuess = onlyCountries.find(o => o.iso2 == country)
+  if (inputNumber.trim() === '') return secondBestGuess
 
-//   const bestGuess = onlyCountries.reduce((selectedCountry, country) => {
-//     if (startsWith(inputNumber, country.dialCode)) {
-//       if (country.dialCode.length > selectedCountry.dialCode.length) {
-//         return country
-//       }
-//       if (country.dialCode.length === selectedCountry.dialCode.length && country.priority < selectedCountry.priority) {
-//         return country
-//       }
-//     }
-//     return selectedCountry
-//   }, {dialCode: '', priority: 10001}, this)
+  const bestGuess = onlyCountries.reduce(
+    (selectedCountry, country) => {
+      if (startsWith(inputNumber, country.dialCode)) {
+        if (country.dialCode.length > selectedCountry.dialCode.length) {
+          return country
+        }
+        if (
+          country.dialCode.length === selectedCountry.dialCode.length &&
+          country.priority < selectedCountry.priority
+        ) {
+          return country
+        }
+      }
+      return selectedCountry
+    },
+    { dialCode: '', priority: 10001 },
+    this,
+  )
 
-//   if (!bestGuess.name) return secondBestGuess
-//   return bestGuess
-// }
+  if (!bestGuess.name) return secondBestGuess
+  return bestGuess
+})
 
 const getCountryObjectFromIso = (country, onlyCountries) => {
   let newSelectedCountry
@@ -167,6 +172,7 @@ export const DropdownPhoneSelect = ({
   placeholder,
   onChange,
   flagsUrl,
+  assumeCountry,
   ...props
 }) => {
   // Consts
@@ -174,8 +180,9 @@ export const DropdownPhoneSelect = ({
   const [getCountry, setCountry] = useState(null)
   const [getFormattedNumber, setFormattedNumber] = useState('')
   const [getCaretPosition, setCaretPosition] = useState(0)
-  const [getInputPlaceholder, setInputPlaceholder] = useState('0 00 00 00 00')
+  const [getInputPlaceholder, setInputPlaceholder] = useState(placeholder)
   const [getDefaultSelectedValue, setDefaultSelectedValue] = useState(null)
+  const [getInputNumber, setInputNumber] = useState(null)
   const getPreviousFormattedNumber = usePrevious(getFormattedNumber)
 
   const phoneProps = {
@@ -210,26 +217,14 @@ export const DropdownPhoneSelect = ({
     flagsUrl,
   })
 
-  // const inputNumber = value ? value.replace(/\D/g, '') : ''
-
-  // let countryGuess
-  // if (inputNumber.length > 1) {
-  //   // Country detect by phone
-  //   countryGuess = guessSelectedCountry(inputNumber.substring(0, 6), country, onlyCountries) || 0
-  // } else if (country) {
-  //   // Default country
-  //   countryGuess = onlyCountries.find(o => o.iso2 == country) || 0
-  // } else {
-  //   // Empty params
-  //   countryGuess = 0
-  // }
-
   // Handlers
 
   const handleInput = event => {
     const currentCountry = getCountryObjectFromIso(getCountry, onlyCountries)
     const { value } = event.target
     const innerValue = value.replace(/\D/g, '')
+
+    setInputNumber(innerValue)
 
     if (value.replace(/\D/g, '').length > 15) return
     if (innerValue === getFormattedNumber) return
@@ -241,25 +236,28 @@ export const DropdownPhoneSelect = ({
 
     const caretPosition = event.target.selectionStart
 
-    const { format } = currentCountry
+    const { format, countryCode } = currentCountry
     const pattern = removeCountryCodeFromFormat(format)
     const limit = pattern.length
 
     if (
       getFormattedNumber.length === limit &&
       innerFormattedNumber.length >= getFormattedNumber.length
-    )
+    ) {
       return
+    }
 
     setCaretPosition(caretPosition)
     setFormattedNumber(innerFormattedNumber)
 
+    const numberToExport = `${phoneProps.prefix}${countryCode} ${innerFormattedNumber}`
+
     if (!!onChange) {
       onChange(
-        innerFormattedNumber.replace(/[^0-9]+/g, ''),
+        numberToExport.replace(/[^0-9]+/g, ''),
         currentCountry,
         event,
-        innerFormattedNumber,
+        numberToExport,
       )
     }
   }
@@ -286,7 +284,44 @@ export const DropdownPhoneSelect = ({
         setDefaultSelectedValue(newCountry.iso2)
       }
     }
+
+    if (value) {
+      const inputNumber = value ? value.replace(/\D/g, '') : ''
+
+      let countryGuess
+      if (inputNumber.length > 1) {
+        // Country detect by phone
+        countryGuess = guessSelectedCountry(
+          inputNumber.substring(0, 6),
+          country,
+          onlyCountries,
+        )
+        if (!countryGuess) {
+          countryGuess = getCountryObjectFromIso(assumeCountry, onlyCountries)
+        } else {
+          countryGuess = 0
+        }
+      } else if (country != '') {
+        // Default country
+        countryGuess = onlyCountries.find(o => o.iso2 == country) || 0
+      } else {
+        // Empty params
+        countryGuess = 0
+      }
+
+      if (countryGuess !== 0) {
+        setCountry(countryGuess.iso2)
+        setDefaultSelectedValue(countryGuess.iso2)
+        setInputNumber(inputNumber)
+      }
+    }
   }, [])
+
+  useEffect(() => {
+    if (getCountry) {
+      handleInput({ target: { value: getInputNumber } })
+    }
+  }, [getCountry, getInputNumber])
 
   useEffect(() => {
     // Adjust caret position depending on the edit
@@ -345,6 +380,7 @@ DropdownPhoneSelect.defaultProps = {
   locale: 'en',
   placeholder: 'Telephone',
   flagsUrl: './flags.png',
+  assumeCountry: 'fr',
 
   onChange: () => {},
 }
