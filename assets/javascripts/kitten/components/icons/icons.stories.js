@@ -82,6 +82,8 @@ import { DocumentIconEmpty } from './document-icon-empty'
 import { DocumentIconHouse } from './document-icon-house'
 import { DocumentIconPerson } from './document-icon-person'
 import { GlobeIcon } from './globe-icon'
+import { FlagIcon, flagList } from './flag-icon'
+import flagFile from 'icons/flags.png'
 
 import { Text } from '../..'
 import React from 'react'
@@ -334,6 +336,17 @@ export const AllIcons = () => {
         <IconContainer
           children={<GlobeIcon color={colorInput} width="16" height="16" />}
         />
+      </Group>
+      <Group title="Other icons">
+        {flagList.map(country => (
+          <IconContainer>
+            <FlagIcon
+              country={country}
+              countryName={country}
+              flagsUrl={flagFile}
+            />
+          </IconContainer>
+        ))}
       </Group>
     </Container>
   )
