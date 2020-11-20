@@ -257,8 +257,7 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__input {
       color: ${COLORS.font2};
     }
-    .k-Form-DropdownSelectWithInput__content--selectedItem,
-    .k-Form-DropdownSelectWithInput__content__icon {
+    .k-Form-DropdownSelectWithInput__content--selectedItem {
       background-color: ${COLORS.line2};
       color: ${COLORS.background1};
     }
@@ -304,6 +303,7 @@ export const DropdownSelectWithInput = ({
   inputProps,
   resetOnBackspace,
   highlightOptionBox,
+  openOnLoad,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -341,6 +341,7 @@ export const DropdownSelectWithInput = ({
     itemToString,
     onSelectedItemChange,
     onIsOpenChange,
+    initialIsOpen: openOnLoad,
   })
 
   useEffect(() => {
@@ -516,6 +517,7 @@ DropdownSelectWithInput.defaultProps = {
   inputProps: {},
   resetOnBackspace: false,
   highlightOptionBox: true,
+  openOnLoad: false,
 }
 
 DropdownSelectWithInput.propTypes = {
@@ -535,4 +537,5 @@ DropdownSelectWithInput.propTypes = {
   inputProps: PropTypes.object,
   resetOnBackspace: PropTypes.bool,
   highlightOptionBox: PropTypes.bool,
+  openOnLoad: PropTypes.bool,
 }

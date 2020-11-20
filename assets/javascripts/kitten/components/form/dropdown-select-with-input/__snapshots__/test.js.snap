@@ -2,7 +2,7 @@
 
 exports[`<DropdownSelectWithInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa jVxXpF k-Form-DropdownSelectWithInput"
+  className="sc-bdVaJa dzftOJ k-Form-DropdownSelectWithInput k-Form-DropdownSelectWithInput--isOpen"
 >
   <label
     className="k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single"
@@ -17,7 +17,7 @@ exports[`<DropdownSelectWithInput /> should match its snapshot with props 1`] = 
     onKeyDown={[Function]}
   >
     <button
-      aria-expanded={false}
+      aria-expanded={true}
       aria-haspopup="listbox"
       aria-labelledby="dropdown-select-with-input-test_element-label dropdown-select-with-input-test"
       className="k-Form-DropdownSelectWithInput__button"
@@ -37,7 +37,7 @@ exports[`<DropdownSelectWithInput /> should match its snapshot with props 1`] = 
         className="k-Form-DropdownSelectWithInput__button__arrowBox"
       >
         <svg
-          className="k-ArrowIcon k-ArrowIcon--bottom"
+          className="k-ArrowIcon k-ArrowIcon--top"
           height="5.64"
           viewBox="0 0 6 6"
           width="8.48"
@@ -70,6 +70,178 @@ exports[`<DropdownSelectWithInput /> should match its snapshot with props 1`] = 
     onMouseLeave={[Function]}
     role="listbox"
     tabIndex={-1}
-  />
+  >
+    <li
+      aria-selected="false"
+      className="k-Form-DropdownSelectWithInput__item"
+      id="dropdown-select-with-input-test_element-item-0"
+      onClick={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__item__icon"
+      >
+        <svg
+          fill="#222"
+          height="15"
+          viewBox="0 0 8 15"
+          width="8"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M4.785 14.196V7.72H6.96l.324-2.523h-2.5v-1.61c0-.732.204-1.23 1.252-1.23h1.336V.1C7.142.07 6.348 0 5.425 0 3.498 0 2.18 1.176 2.18 3.336v1.86H0v2.525h2.18v6.476h2.605z"
+          />
+        </svg>
+      </span>
+      https://www.facebook.com/
+    </li>
+    <li
+      aria-selected="false"
+      className="k-Form-DropdownSelectWithInput__item"
+      id="dropdown-select-with-input-test_element-item-1"
+      onClick={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__item__icon"
+      >
+        <svg
+          fill="#222"
+          height="14"
+          viewBox="0 0 15 14"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M15.256 1.468a6.22 6.22 0 0 1-1.797.493c.645-.387 1.14-1 1.375-1.73a6.276 6.276 0 0 1-1.988.758A3.128 3.128 0 0 0 7.433 3.13c0 .245.027.484.08.713a8.88 8.88 0 0 1-6.45-3.27 3.13 3.13 0 0 0 .968 4.179A3.109 3.109 0 0 1 .614 4.36v.04c0 1.516 1.08 2.78 2.51 3.07a3.2 3.2 0 0 1-.824.11c-.203 0-.4-.02-.59-.058a3.13 3.13 0 0 0 2.924 2.174A6.273 6.273 0 0 1 0 10.992a8.86 8.86 0 0 0 4.798 1.407c5.757 0 8.906-4.77 8.906-8.907 0-.136-.003-.27-.01-.405a6.332 6.332 0 0 0 1.562-1.62"
+          />
+        </svg>
+      </span>
+      https://www.twitter.com/
+    </li>
+    <li
+      aria-selected="false"
+      className="k-Form-DropdownSelectWithInput__item"
+      id="dropdown-select-with-input-test_element-item-2"
+      onClick={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__item__icon"
+      >
+        <svg
+          fill="#222"
+          height="14"
+          viewBox="0 0 14 14"
+          width="14"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M1.622 0a1.62 1.62 0 1 1-.002 3.242A1.62 1.62 0 0 1 1.622 0zm-1.4 13.465H3.02V4.47H.222v8.995zM4.773 4.47h2.68V5.7h.038c.374-.707 1.286-1.452 2.646-1.452 2.83 0 3.353 1.862 3.353 4.284v4.933h-2.796V9.09c0-1.042-.018-2.384-1.452-2.384-1.455 0-1.677 1.137-1.677 2.31v4.45H4.773V4.47"
+          />
+        </svg>
+      </span>
+      https://www.linkedin.com/
+    </li>
+    <li
+      aria-selected="false"
+      className="k-Form-DropdownSelectWithInput__item"
+      id="dropdown-select-with-input-test_element-item-3"
+      onClick={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__item__icon"
+      >
+        <svg
+          fill="#222"
+          height="17"
+          viewBox="0 0 70 70"
+          width="17"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M17 0A17 17 0 0 0 0 17v36a17 17 0 0 0 17 17h36a17 17 0 0 0 17-17V17A17 17 0 0 0 53 0zm0 6h36a10.91 10.91 0 0 1 11 11v36a10.91 10.91 0 0 1-11 11H17A10.91 10.91 0 0 1 6 53V17A10.91 10.91 0 0 1 17 6zm38 6a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm-20 6a17 17 0 1 0 17 17 17 17 0 0 0-17-17zm0 6a11 11 0 1 1-11 11 11 11 0 0 1 11-11z"
+          />
+        </svg>
+      </span>
+      https://www.instagram.com/
+    </li>
+    <li
+      aria-selected="false"
+      className="k-Form-DropdownSelectWithInput__item"
+      id="dropdown-select-with-input-test_element-item-4"
+      onClick={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__item__icon"
+      >
+        <svg
+          fill="#222"
+          height="12"
+          viewBox="0 0 176 124"
+          width="17"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M172.3 19.4c-2-7.6-8-13.6-15.6-15.7C143 0 88 0 88 0S33 0 19.2 3.7c-7.6 2-13.5 8-15.6 15.7C0 33.2 0 62 0 62s0 28.8 3.7 42.6c2 7.6 8 13.6 15.6 15.7C33 124 88 124 88 124s55 0 68.8-3.7c7.6-2 13.5-8 15.6-15.7C176 90.8 176 62 176 62s0-28.8-3.7-42.6zM70 88.2V35.8L116 62 70 88.2z"
+          />
+        </svg>
+      </span>
+      https://www.youtube.com/
+    </li>
+    <li
+      aria-selected="false"
+      className="k-Form-DropdownSelectWithInput__item"
+      id="dropdown-select-with-input-test_element-item-5"
+      onClick={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__item__icon"
+      >
+        <svg
+          fill="#222"
+          height="16"
+          viewBox="0 0 16 16"
+          width="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M8 0c4.4183 0 8 3.5817 8 8s-3.5817 8-8 8-8-3.5817-8-8 3.5817-8 8-8zm0 1.2C4.2445 1.2 1.2 4.2445 1.2 8c0 3.7555 3.0445 6.8 6.8 6.8 3.7555 0 6.8-3.0445 6.8-6.8 0-3.7555-3.0445-6.8-6.8-6.8z"
+          />
+          <path
+            d="M8 0c2.4853 0 4.5 3.5817 4.5 8s-2.0147 8-4.5 8-4.5-3.5817-4.5-8S5.5147 0 8 0zm0 1.2C6.363 1.2 4.7 4.1564 4.7 8s1.663 6.8 3.3 6.8c1.637 0 3.3-2.9564 3.3-6.8S9.637 1.2 8 1.2z"
+          />
+          <path
+            d="M0 7.4h16v1.2H0z"
+          />
+          <path
+            d="M8.6 0v16H7.4V0z"
+          />
+        </svg>
+      </span>
+      https://www.…
+    </li>
+  </ul>
 </div>
 `;
