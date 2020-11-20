@@ -45,6 +45,7 @@ export const Default = () => {
           valid={boolean('valid', false)}
           disabled={boolean('disabled', false)}
           hideLabel={boolean('hide label?', false)}
+          combobox={boolean('combobox?', false)}
           labelText={text('LabelText', 'label')}
           options={options}
           labelPropsGetter={passedLabelProps => {
@@ -57,6 +58,8 @@ export const Default = () => {
           )}
           variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
           defaultSelectedValue="focus"
+          comboboxButtonLabelText={text('Buton aria-label', 'label')}
+          noResultText={text('No results text', 'No results')}
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
@@ -68,7 +71,7 @@ export const Default = () => {
         <ul>
           {labelProps &&
             Object.keys(labelProps).map(prop => (
-              <li>
+              <li key={prop}>
                 {prop}: {labelProps[prop]}
               </li>
             ))}

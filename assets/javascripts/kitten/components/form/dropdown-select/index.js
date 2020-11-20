@@ -1,380 +1,42 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSelect } from 'downshift'
-import styled from 'styled-components'
-import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import COLORS from '../../../constants/colors-config'
-import TYPOGRAPHY from '../../../constants/typography-config'
-import { ScreenConfig } from '../../../constants/screen-config'
 import { Label } from '../../../components/form/label'
 import classNames from 'classnames'
 import { WarningCircleIcon } from '../../../components/icons/warning-circle-icon'
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import find from 'lodash/fp/find'
+import { DropdownCombobox } from './combobox'
+import { StyledDropdown } from './styles'
+import COLORS from '../../../constants/colors-config'
 
-const StyledDropdownSelect = styled.div`
-  position: relative;
+export const DropdownSelect = ({ combobox, ...props }) => {
+  if (combobox) return <DropdownCombobox {...props} />
 
-  .k-Form-DropdownSelect__label--isHidden:not(:focus):not(:active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(100%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-  }
+  const {
+    labelText,
+    options,
+    placeholder,
+    labelPropsGetter,
+    error,
+    valid,
+    disabled,
+    hideLabel,
+    id,
+    variant,
+    size,
+    a11yStatusError,
+    a11yStatusValid,
+    a11ySelectionMessageDisplayer,
+    defaultSelectedValue,
+    onChange,
+    onInputChange,
+    onMenuClose,
+    onMenuOpen,
+    openOnLoad,
+  } = props
 
-  .k-Form-DropdownSelect__button {
-    box-sizing: border-box;
-    position: relative;
-    appearance: none;
-    width: 100%;
-    height: ${pxToRem(50)};
-    overflow: hidden;
-    padding: 0 ${pxToRem(40 + 10)} 0 0;
-    margin: 0;
-
-    border: ${pxToRem(2)} solid ${COLORS.line1};
-    background-color: ${COLORS.background1};
-
-    font-size: ${stepToRem(-1)};
-    text-align: left;
-    cursor: default;
-    outline: none;
-
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .k-Form-DropdownSelect__content {
-    ${TYPOGRAPHY.fontStyles.light}
-    padding: 0 ${pxToRem(15)};
-    color: ${COLORS.font1};
-  }
-  .k-Form-DropdownSelect__placeholder {
-    color: ${COLORS.font2};
-  }
-
-  .k-Form-DropdownSelect__button__arrowBox {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-
-  .k-Form-DropdownSelect__button__statusBadges {
-    position: absolute;
-    top: 0;
-    right: ${pxToRem(40 + 10)};
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-
-    svg {
-      width: ${pxToRem(24)};
-      height: ${pxToRem(24)};
-    }
-  }
-
-  .k-Form-DropdownSelect__list {
-    box-sizing: border-box;
-    position: absolute;
-    width: 100%;
-    max-height: ${pxToRem(250)};
-    padding: 0;
-    margin: 0;
-    overflow-y: scroll;
-    background-color: ${COLORS.background1};
-    list-style: none;
-
-    &:not(:empty) {
-      border: ${pxToRem(2)} solid ${COLORS.line1};
-      border-top: 0;
-    }
-    &:focus {
-      outline: none;
-    }
-  }
-
-  .k-Form-DropdownSelect__item {
-    transition: background-color .2s ease;
-    box-sizing: border-box;
-    padding: ${pxToRem(15)};
-    min-height: ${pxToRem(50)};
-    ${TYPOGRAPHY.fontStyles.light}
-    font-size: ${stepToRem(-1)};
-    user-select: none;
-
-    &[aria-selected="true"] {
-      background-color: ${COLORS.background3};
-    }
-
-    &[disabled] {
-      color: ${COLORS.font2};
-    }
-
-    &.k-Form-DropdownSelect__item--level_2 {
-      padding-left: ${pxToRem(30)};
-    }
-  }
-
-  &:focus-within {
-    .k-Form-DropdownSelect__button,
-    .k-Form-DropdownSelect__button__arrowBox,
-    .k-Form-DropdownSelect__list {
-      border-color: ${COLORS.line2};
-    }
-  }
-
-  &.k-Form-DropdownSelect--error {
-    .k-Form-DropdownSelect__button {
-      padding-right: ${pxToRem(40 + 10 + 24 + 10)};
-    }
-
-    .k-Form-DropdownSelect__button,
-    .k-Form-DropdownSelect__button__arrowBox,
-    .k-Form-DropdownSelect__list {
-      border-color: ${COLORS.error3};
-    }
-  }
-  &.k-Form-DropdownSelect--valid {
-    .k-Form-DropdownSelect__button {
-      padding-right: ${pxToRem(40 + 10 + 24 + 10)};
-    }
-
-    .k-Form-DropdownSelect__button,
-    .k-Form-DropdownSelect__button__arrowBox,
-    .k-Form-DropdownSelect__list {
-      border-color: ${COLORS.tertiary2};
-    }
-  }
-  &.k-Form-DropdownSelect--disabled {
-    .k-Form-DropdownSelect__button,
-    .k-Form-DropdownSelect__button__arrowBox,
-    .k-Form-DropdownSelect__list {
-      background-color: ${COLORS.line1};
-      border-color: ${COLORS.line2};
-    }
-    .k-Form-DropdownSelect__button__arrowBox svg {
-      fill: ${COLORS.font2};
-    }
-    .k-Form-DropdownSelect__content {
-      color: ${COLORS.font2};
-    }
-  }
-
-
-  /* SIZES */
-  &.k-Form-DropdownSelect--andromeda {
-
-    .k-Form-DropdownSelect__button__arrowBox {
-      width: ${pxToRem(40)};
-      right: 0;
-      border-left: inherit;
-    }
-
-
-    &.k-Form-DropdownSelect--tiny {
-      .k-Form-DropdownSelect__button {
-        height: ${pxToRem(40)};
-        padding-right: ${pxToRem(30 + 10)};
-      }
-
-      .k-Form-DropdownSelect__button__arrowBox {
-        width: ${pxToRem(30)};
-      }
-
-      .k-Form-DropdownSelect__button__statusBadges {
-        right: ${pxToRem(30 + 10)};
-
-        svg {
-          width: ${pxToRem(20)};
-          height: ${pxToRem(20)};
-        }
-      }
-
-      .k-Form-DropdownSelect__item {
-        min-height: ${pxToRem(40)};
-        padding-top: ${pxToRem(8)};
-        padding-bottom: ${pxToRem(8)};
-      }
-
-      &.k-Form-DropdownSelect--error .k-Form-DropdownSelect__button,
-      &.k-Form-DropdownSelect--valid .k-Form-DropdownSelect__button {
-        padding-right: ${pxToRem(30 + 10 + 20 + 10)};
-      }
-    }
-
-    &.k-Form-DropdownSelect--big {
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        .k-Form-DropdownSelect__button {
-          height: ${pxToRem(60)};
-          padding-right: ${pxToRem(50 + 10)};
-        }
-
-        .k-Form-DropdownSelect__button__arrowBox {
-            width: ${pxToRem(50)};
-        }
-
-        .k-Form-DropdownSelect__button__statusBadges {
-          right: ${pxToRem(50 + 10)};
-        }
-        &.k-Form-DropdownSelect--error .k-Form-DropdownSelect__button,
-        &.k-Form-DropdownSelect--valid .k-Form-DropdownSelect__button {
-          padding-right: ${pxToRem(50 + 10 + 24 + 10)};
-        }
-      }
-    }
-
-    &.k-Form-DropdownSelect--huge,
-    &.k-Form-DropdownSelect--giant {
-      .k-Form-DropdownSelect__button {
-        height: ${pxToRem(70)};
-        padding-right: ${pxToRem(50 + 10)};
-      }
-
-      .k-Form-DropdownSelect__button__arrowBox {
-          width: ${pxToRem(50)};
-      }
-
-      .k-Form-DropdownSelect__button__statusBadges {
-        right: ${pxToRem(50 + 10)};
-      }
-      &.k-Form-DropdownSelect--error .k-Form-DropdownSelect__button,
-      &.k-Form-DropdownSelect--valid .k-Form-DropdownSelect__button {
-        padding-right: ${pxToRem(50 + 10 + 24 + 10)};
-      }
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        .k-Form-DropdownSelect__button {
-          padding-right: ${pxToRem(60 + 10)};
-        }
-
-        .k-Form-DropdownSelect__button__arrowBox {
-            width: ${pxToRem(60)};
-        }
-
-        .k-Form-DropdownSelect__button__statusBadges {
-          right: ${pxToRem(60 + 10)};
-        }
-        &.k-Form-DropdownSelect--error .k-Form-DropdownSelect__button,
-        &.k-Form-DropdownSelect--valid .k-Form-DropdownSelect__button {
-          padding-right: ${pxToRem(60 + 10 + 24 + 10)};
-        }
-
-        &.k-Form-DropdownSelect--huge .k-Form-DropdownSelect__button {
-            height: ${pxToRem(80)};
-        }
-        &.k-Form-DropdownSelect--giant .k-Form-DropdownSelect__button {
-            height: ${pxToRem(90)};
-        }
-      }
-    }
-  }
-
-
-  /* ORION */
-
-  &.k-Form-DropdownSelect--orion {
-    .k-Form-DropdownSelect__button,
-    .k-Form-DropdownSelect__button__arrowBox {
-      height: ${pxToRem(60)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        height: ${pxToRem(70)};
-      }
-    }
-
-    .k-Form-DropdownSelect__button {
-      border-radius: ${pxToRem(6)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        border-radius: ${pxToRem(8)};
-      }
-
-      &[aria-expanded="true"] {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
-    }
-
-    .k-Form-DropdownSelect__button__arrowBox {
-      left: ${pxToRem(20)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        left: ${pxToRem(30)};
-      }
-    }
-
-    .k-Form-DropdownSelect__content {
-      margin-left: ${pxToRem(20 + 10)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        margin-left: ${pxToRem(30 + 10)};
-      }
-    }
-
-    .k-Form-DropdownSelect__button__statusBadges {
-      right: ${pxToRem(10)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        right: ${pxToRem(20)};
-      }
-    }
-
-    .k-Form-DropdownSelect__list {
-      box-shadow: 0 ${pxToRem(5)} ${pxToRem(5)} 0 rgba(0, 0, 0, 0.1);
-      border-bottom-left-radius: ${pxToRem(6)};
-      border-bottom-right-radius: ${pxToRem(6)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        border-bottom-left-radius: ${pxToRem(8)};
-        border-bottom-right-radius: ${pxToRem(8)};
-      }
-    }
-    .k-Form-DropdownSelect__item {
-      min-height: ${pxToRem(40)};
-      padding-top: ${pxToRem(8)};
-      padding-bottom: ${pxToRem(8)};
-    }
-
-    &.k-Form-DropdownSelect--error .k-Form-DropdownSelect__button,
-    &.k-Form-DropdownSelect--valid .k-Form-DropdownSelect__button {
-      padding-right: ${pxToRem(10 + 10 + 24 + 10)};
-
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        padding-right: ${pxToRem(20 + 10 + 24 + 10)};
-      }
-    }
-  }
-`
-
-export const DropdownSelect = ({
-  labelText,
-  options,
-  placeholder,
-  labelPropsGetter,
-  error,
-  valid,
-  disabled,
-  hideLabel,
-  id,
-  variant,
-  size,
-  a11yStatusError,
-  a11yStatusValid,
-  a11ySelectionMessageDisplayer,
-  defaultSelectedValue,
-  onChange,
-  onInputChange,
-}) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
   }
@@ -410,6 +72,12 @@ export const DropdownSelect = ({
     return flatOptions
   }
 
+  const onIsOpenChange = changes => {
+    if (changes.isOpen) return onMenuOpen({ changes })
+
+    return onMenuClose({ changes })
+  }
+
   const {
     isOpen,
     selectedItem,
@@ -426,6 +94,8 @@ export const DropdownSelect = ({
     itemToString,
     initialSelectedItem,
     onSelectedItemChange,
+    onIsOpenChange,
+    initialIsOpen: openOnLoad,
   })
 
   useEffect(() => {
@@ -433,24 +103,25 @@ export const DropdownSelect = ({
   }, [getLabelProps])
 
   return (
-    <StyledDropdownSelect
+    <StyledDropdown
       className={classNames(
-        'k-Form-DropdownSelect',
-        `k-Form-DropdownSelect--${variant}`,
-        `k-Form-DropdownSelect--${size}`,
+        'k-Form-Dropdown',
+        `k-Form-Dropdown--${variant}`,
+        `k-Form-Dropdown--${size}`,
         {
-          'k-Form-DropdownSelect--error': error,
-          'k-Form-DropdownSelect--valid': valid,
-          'k-Form-DropdownSelect--disabled': disabled,
+          'k-Form-Dropdown--isOpen': isOpen,
+          'k-Form-Dropdown--error': error,
+          'k-Form-Dropdown--valid': valid,
+          'k-Form-Dropdown--disabled': disabled,
         },
       )}
     >
       <Label
         className={classNames(
-          'k-Form-DropdownSelect__label',
+          'k-Form-Dropdown__label',
           'k-u-margin-bottom-single',
           {
-            'k-Form-DropdownSelect__label--isHidden': hideLabel,
+            'k-Form-Dropdown__label--isHidden': hideLabel,
           },
         )}
         {...getLabelProps()}
@@ -493,15 +164,15 @@ export const DropdownSelect = ({
           )}
         </span>
       </button>
-      <ul className="k-Form-DropdownSelect__list" {...getMenuProps()}>
+      <ul className="k-Form-Dropdown__list" {...getMenuProps()}>
         {isOpen &&
           flattenedOptions().map((item, index) => (
             <li
               className={classNames(
-                'k-Form-DropdownSelect__item',
-                `k-Form-DropdownSelect__item--level_${item.level || 1}`,
+                'k-Form-Dropdown__item',
+                `k-Form-Dropdown__item--level_${item.level || 1}`,
                 {
-                  'k-Form-DropdownSelect__item--higlighted':
+                  'k-Form-Dropdown__item--higlighted':
                     highlightedIndex === index,
                 },
               )}
@@ -513,7 +184,7 @@ export const DropdownSelect = ({
             </li>
           ))}
       </ul>
-    </StyledDropdownSelect>
+    </StyledDropdown>
   )
 }
 
@@ -529,6 +200,9 @@ DropdownSelect.defaultProps = {
   a11ySelectionMessageDisplayer: () => {},
   onChange: () => {},
   onInputChange: () => {},
+  onMenuClose: () => {},
+  onMenuOpen: () => {},
+  openOnLoad: false,
 }
 
 DropdownSelect.propTypes = {
@@ -545,4 +219,7 @@ DropdownSelect.propTypes = {
   a11ySelectionMessageDisplayer: PropTypes.func,
   onChange: PropTypes.func,
   onInputChange: PropTypes.func,
+  onMenuClose: PropTypes.func,
+  onMenuOpen: PropTypes.func,
+  openOnLoad: PropTypes.bool,
 }
