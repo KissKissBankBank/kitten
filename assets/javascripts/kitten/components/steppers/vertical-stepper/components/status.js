@@ -26,12 +26,15 @@ export class Status extends Component {
     } = this.props
 
     return (
-      <StyledOrionStatus className={classNames(
-        `k-Steppers--VerticalStepper__${variant}--status`,
+      <StyledContainerStatus className={classNames(
+        'k-Steppers--VerticalStepper__statusContainer',
+        `k-Steppers--VerticalStepper__statusContainer--${variant}`,
       )}>
-        <StyledStatus 
+        <span 
           {...other}
           className={classNames(
+            'k-Steppers--VerticalStepper__status',
+            `k-Steppers--VerticalStepper__status--${variant}`,
             {
               'k-Steppers--VerticalStepper__status--valid': valid,
               'k-Steppers--VerticalStepper__status--success': success,
@@ -40,12 +43,11 @@ export class Status extends Component {
               'k-Steppers--VerticalStepper__status--disabled': disabled,
               'k-Steppers--VerticalStepper__status--bridge': bridge,
             },
-            `k-Steppers--VerticalStepper__status--${variant}`,
           )}
         >
           {this.iconByStatus() || children}
-        </StyledStatus>
-      </StyledOrionStatus>
+        </span>
+      </StyledContainerStatus>
     )
   }
 
@@ -77,97 +79,97 @@ export class Status extends Component {
 const STATUS_SIZE = 30
 const INACTIVE_STATUS_SIZE = 15
 
-const StyledOrionStatus = styled.div`
-  &.k-Steppers--VerticalStepper__orion--status {
+const StyledContainerStatus = styled.div`
+  &.k-Steppers--VerticalStepper__statusContainer--orion {
     border: ${pxToRem(6)} solid ${COLORS.background1};
   }
-`
 
-const StyledStatus = styled.span`
-  flex-shrink: 0;
+  .k-Steppers--VerticalStepper__status {
+    flex-shrink: 0;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  width: ${pxToRem(STATUS_SIZE)};
-  height: ${pxToRem(STATUS_SIZE)};
-  border-radius: ${pxToRem(STATUS_SIZE)};
-  box-sizing: border-box;
-  margin-right: ${pxToRem(15)};
-
-  background-color: ${COLORS.background1};
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-
-  ${TYPOGRAPHY.fontStyles.regular};
-  font-size: ${pxToRem(14)};
-
-  &.k-Steppers--VerticalStepper__status--success {
-    background-color: ${COLORS.valid};
-    border-color: ${COLORS.valid};
-  }
-  &.k-Steppers--VerticalStepper__status--valid {
-    background-color: ${COLORS.primary1};
-    border-color: ${COLORS.primary1};
-  }
-  &.k-Steppers--VerticalStepper__status--error {
-    color: ${COLORS.error};
-    border-color: ${COLORS.error3};
-  }
-  &.k-Steppers--VerticalStepper__status--waiting {
-    color: ${COLORS.primary1};
-    border-color: ${COLORS.primary4};
-  }
-  &.k-Steppers--VerticalStepper__status--disabled {
-    color: ${COLORS.background1};
-    border-color: ${COLORS.line2};
-    background-color: ${COLORS.line2};
-  }
-
-  &.k-Steppers--VerticalStepper__status--orion {
-    box-sizing: border-box;
-    width: 100%;
-    border: ${pxToRem(3)} solid ${COLORS.background1};
-    z-index: 1;
-    padding: ${pxToRem(3)};
-  
     width: ${pxToRem(STATUS_SIZE)};
     height: ${pxToRem(STATUS_SIZE)};
-    border-radius: ${pxToRem(STATUS_SIZE)}; 
+    border-radius: ${pxToRem(STATUS_SIZE)};
+    box-sizing: border-box;
+    margin-right: ${pxToRem(15)};
+
+    background-color: ${COLORS.background1};
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+
+    ${TYPOGRAPHY.fontStyles.regular};
+    font-size: ${pxToRem(14)};
 
     &.k-Steppers--VerticalStepper__status--success {
+      background-color: ${COLORS.valid};
+      border-color: ${COLORS.valid};
+    }
+    &.k-Steppers--VerticalStepper__status--valid {
       background-color: ${COLORS.primary1};
       border-color: ${COLORS.primary1};
     }
-    &.k-Steppers--VerticalStepper__status--valid {
-      background-color: ${COLORS.background1};
-      border-color: ${COLORS.primary1};
+    &.k-Steppers--VerticalStepper__status--error {
+      color: ${COLORS.error};
+      border-color: ${COLORS.error3};
     }
     &.k-Steppers--VerticalStepper__status--waiting {
-      background-color: ${COLORS.background1};
-      border-color: ${COLORS.line1};
+      color: ${COLORS.primary1};
+      border-color: ${COLORS.primary4};
     }
     &.k-Steppers--VerticalStepper__status--disabled {
-      background-color: ${COLORS.background1};
-      border-color: ${COLORS.line1};
-
-      width: ${pxToRem(INACTIVE_STATUS_SIZE)};
-      height: ${pxToRem(INACTIVE_STATUS_SIZE)};
-      border-radius: ${pxToRem(INACTIVE_STATUS_SIZE)};
-      margin-left: ${pxToRem(7)};
-      margin-right: ${pxToRem(20)};
+      color: ${COLORS.background1};
+      border-color: ${COLORS.line2};
+      background-color: ${COLORS.line2};
     }
-    &.k-Steppers--VerticalStepper__status--bridge {
-      height: ${pxToRem(21)};
-      position: relative;
-      border: 0;
 
-      &::before {
-        width: ${pxToRem(2)};
-        content: "";
-        position: absolute;
-        height: 100%;
-        border-left: ${pxToRem(3)} dotted ${COLORS.line1};
+    &.k-Steppers--VerticalStepper__status--orion {
+      box-sizing: border-box;
+      width: 100%;
+      border: ${pxToRem(3)} solid ${COLORS.background1};
+      z-index: 1;
+      padding: ${pxToRem(3)};
+    
+      width: ${pxToRem(STATUS_SIZE)};
+      height: ${pxToRem(STATUS_SIZE)};
+      border-radius: ${pxToRem(STATUS_SIZE)}; 
+
+      &.k-Steppers--VerticalStepper__status--success {
+        background-color: ${COLORS.primary1};
+        border-color: ${COLORS.primary1};
+      }
+      &.k-Steppers--VerticalStepper__status--valid {
+        background-color: ${COLORS.background1};
+        border-color: ${COLORS.primary1};
+      }
+      &.k-Steppers--VerticalStepper__status--waiting {
+        background-color: ${COLORS.background1};
+        border-color: ${COLORS.line1};
+      }
+      &.k-Steppers--VerticalStepper__status--disabled {
+        background-color: ${COLORS.background1};
+        border-color: ${COLORS.line1};
+
+        width: ${pxToRem(INACTIVE_STATUS_SIZE)};
+        height: ${pxToRem(INACTIVE_STATUS_SIZE)};
+        border-radius: ${pxToRem(INACTIVE_STATUS_SIZE)};
+        margin-left: ${pxToRem(7)};
+        margin-right: ${pxToRem(20)};
+      }
+      &.k-Steppers--VerticalStepper__status--bridge {
+        height: ${pxToRem(21)};
+        position: relative;
+        border: 0;
+
+        &::before {
+          width: ${pxToRem(2)};
+          content: "";
+          position: absolute;
+          height: 100%;
+          border-left: ${pxToRem(3)} dotted ${COLORS.line1};
+        }
       }
     }
   }

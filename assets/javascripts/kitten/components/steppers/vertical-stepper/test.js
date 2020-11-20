@@ -70,18 +70,15 @@ describe('<VerticalStepper />', () => {
           <VerticalStepper variant="orion">
             <VerticalStepper.Step variant="orion" success href="#">
               <VerticalStepper.Title variant="orion">Title</VerticalStepper.Title>
-
               <VerticalStepper.Link variant="orion">Link</VerticalStepper.Link>
             </VerticalStepper.Step>
 
             <VerticalStepper.Step variant="orion" valid href="#">
               <VerticalStepper.Title variant="orion">Title</VerticalStepper.Title>
-
             </VerticalStepper.Step>
 
             <VerticalStepper.Step variant="orion" error href="#">
               <VerticalStepper.Title variant="orion">Title</VerticalStepper.Title>
-
             </VerticalStepper.Step>
 
             <VerticalStepper.Step variant="orion" waiting href="#">

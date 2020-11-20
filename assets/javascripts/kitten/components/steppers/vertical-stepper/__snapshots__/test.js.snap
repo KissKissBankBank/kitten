@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
-.c4.k-Steppers--VerticalStepper__orion--status {
+.c3.k-Steppers--VerticalStepper__statusContainer--orion {
   border: 0.375rem solid #fff;
 }
 
-.c5 {
+.c3 .k-Steppers--VerticalStepper__status {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -33,33 +33,33 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   font-size: 0.875rem;
 }
 
-.c5.k-Steppers--VerticalStepper__status--success {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
   background-color: #61d079;
   border-color: #61d079;
 }
 
-.c5.k-Steppers--VerticalStepper__status--valid {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
   background-color: #19b4fa;
   border-color: #19b4fa;
 }
 
-.c5.k-Steppers--VerticalStepper__status--error {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
   color: #ff0046;
   border-color: #ffb2c7;
 }
 
-.c5.k-Steppers--VerticalStepper__status--waiting {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--waiting {
   color: #19b4fa;
   border-color: #bae8fd;
 }
 
-.c5.k-Steppers--VerticalStepper__status--disabled {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
   color: #fff;
   border-color: #d8d8d8;
   background-color: #d8d8d8;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
   box-sizing: border-box;
   width: 100%;
   border: 0.1875rem solid #fff;
@@ -70,22 +70,22 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-radius: 1.875rem;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
   background-color: #19b4fa;
   border-color: #19b4fa;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
   background-color: #fff;
   border-color: #19b4fa;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
   background-color: #fff;
   border-color: #eee;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
   background-color: #fff;
   border-color: #eee;
   width: 0.9375rem;
@@ -95,13 +95,13 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   margin-right: 1.25rem;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge {
   height: 1.3125rem;
   position: relative;
   border: 0;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge::before {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge::before {
   width: 0.125rem;
   content: "";
   position: absolute;
@@ -109,27 +109,27 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-left: 0.1875rem dotted #eee;
 }
 
-.c2 {
+.c1 {
   padding: 0.9375rem 0;
 }
 
-.c2:first-of-type {
+.c1:first-of-type {
   margin-top: 0;
 }
 
-.c2:last-of-type {
+.c1:last-of-type {
   margin-bottom: 0;
 }
 
-.c2 li:not(:last-of-type) {
+.c1 li:not(:last-of-type) {
   margin: 0 !important;
 }
 
-.c2 li:not(:last-of-type)::after {
+.c1 li:not(:last-of-type)::after {
   display: none;
 }
 
-.c3 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -143,32 +143,32 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   text-decoration: none;
 }
 
-.c3 .VerticalStepper__step {
+.c2 .VerticalStepper__step {
   -webkit-transition: -webkit-transform 0.4s;
   -webkit-transition: transform 0.4s;
   transition: transform 0.4s;
 }
 
-.c3 .VerticalStepper__link {
+.c2 .VerticalStepper__link {
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
 }
 
-.c3:hover .VerticalStepper__step,
-.c3:focus .VerticalStepper__step,
-.c3:active .VerticalStepper__step {
+.c2:hover .VerticalStepper__step,
+.c2:focus .VerticalStepper__step,
+.c2:active .VerticalStepper__step {
   -webkit-transform: translateX(0.3125rem);
   -ms-transform: translateX(0.3125rem);
   transform: translateX(0.3125rem);
 }
 
-.c3:hover .VerticalStepper__link,
-.c3:focus .VerticalStepper__link,
-.c3:active .VerticalStepper__link {
+.c2:hover .VerticalStepper__link,
+.c2:focus .VerticalStepper__link,
+.c2:active .VerticalStepper__link {
   color: #0496cc;
 }
 
-.c3 .k-Steppers--VerticalStepper__step--link--content {
+.c2 .k-Steppers--VerticalStepper__step--link--content {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -186,11 +186,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   color: #222;
 }
 
-.c3 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
+.c2 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
   color: #b8b8b8;
 }
 
-.c6 {
+.c4 {
   margin: 0 0 0.125rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -198,18 +198,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   line-height: normal;
 }
 
-.c6.k-Stepepers-VerticalStepper__title--orion {
+.c4.k-Stepepers-VerticalStepper__title--orion {
   font-size: 0.8888888888888888rem;
-  font-weight: 500;
 }
 
-.c7 {
+.c5 {
   margin: 0;
   padding: 0;
   line-height: 1;
 }
 
-.c7 .k-Stepepers-VerticalStepper__link {
+.c5 .k-Stepepers-VerticalStepper__link {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
@@ -221,24 +220,24 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   transition: color 0.4s;
 }
 
-.c7 .k-Stepepers-VerticalStepper__link:hover,
-.c7 .k-Stepepers-VerticalStepper__link:focus,
-.c7 .k-Stepepers-VerticalStepper__link:active {
+.c5 .k-Stepepers-VerticalStepper__link:hover,
+.c5 .k-Stepepers-VerticalStepper__link:focus,
+.c5 .k-Stepepers-VerticalStepper__link:active {
   color: #0496cc;
 }
 
-.c7 .k-Stepepers-VerticalStepper__link--orion {
+.c5 .k-Stepepers-VerticalStepper__link--orion {
   font-size: 0.875rem;
 }
 
-.c7 .k-Stepepers-VerticalStepper__link--orion:before {
+.c5 .k-Stepepers-VerticalStepper__link--orion:before {
   padding: 0 0.5rem;
   content: '●';
   font-size: 0.5rem;
   color: #222;
 }
 
-.c8 {
+.c6 {
   margin: 0.3125rem 0 0.625rem;
   padding: 0;
   font-family: Maax,Helvetica,Arial,sans-serif;
@@ -247,7 +246,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   line-height: normal;
 }
 
-.c9 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -261,7 +260,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   list-style: none;
 }
 
-.c9:before {
+.c7:before {
   padding-right: 0.625rem;
   content: '●';
   font-size: 0.5rem;
@@ -272,13 +271,13 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   padding: 1px 0;
 }
 
-.c1 {
+.c0 .k-Steppers--VerticalStepper {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.c1:before {
+.c0 .k-Steppers--VerticalStepper:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -288,15 +287,15 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-left: 0.125rem dashed #eee;
 }
 
-.c1.k-Steppers--VerticalStepper__orion:before {
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion:before {
   border-left: none;
 }
 
-.c1.k-Steppers--VerticalStepper__orion li:not(:last-of-type) {
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type) {
   position: relative;
 }
 
-.c1.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
   content: '';
   position: absolute;
   left: 1.1875rem;
@@ -307,7 +306,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   z-index: -1;
 }
 
-.c1.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
   background-color: #19b4fa;
 }
 
@@ -315,21 +314,21 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   className="c0"
 >
   <ul
-    className="c1 k-Steppers--VerticalStepper__andromeda"
+    className="k-Steppers--VerticalStepper k-Steppers--VerticalStepper__andromeda"
     role="tablist"
   >
     <li
-      className="c2 k-Steppers--VerticalStepper__item k-Steppers--VerticalStepper__item--hasActiveLine"
+      className="c1 k-Steppers--VerticalStepper__item k-Steppers--VerticalStepper__item--hasActiveLine"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
         <div
-          className="c4 k-Steppers--VerticalStepper__andromeda--status"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
         >
           <span
-            className="c5 k-Steppers--VerticalStepper__status--success k-Steppers--VerticalStepper__status--andromeda"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--success"
           >
             <svg
               fill="#fff"
@@ -349,12 +348,12 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           error={false}
         >
           <p
-            className="c6 k-Stepepers-VerticalStepper__title--andromeda"
+            className="c4 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <span
-            className="c7"
+            className="c5"
           >
             <span
               className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--andromeda"
@@ -366,17 +365,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       </a>
     </li>
     <li
-      className="c2 k-Steppers--VerticalStepper__item"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
         <div
-          className="c4 k-Steppers--VerticalStepper__andromeda--status"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
         >
           <span
-            className="c5 k-Steppers--VerticalStepper__status--valid k-Steppers--VerticalStepper__status--andromeda"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--valid"
           >
             <svg
               fill="#fff"
@@ -396,31 +395,31 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           error={false}
         >
           <p
-            className="c6 k-Stepepers-VerticalStepper__title--andromeda"
+            className="c4 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <ul
-            className="c8"
+            className="c6"
           >
             <li
-              className="c9"
+              className="c7"
             >
               Item
             </li>
             <li
-              className="c9"
+              className="c7"
             >
               Item
             </li>
             <li
-              className="c9"
+              className="c7"
             >
               …
             </li>
           </ul>
           <span
-            className="c7"
+            className="c5"
           >
             <span
               className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--andromeda"
@@ -432,17 +431,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       </a>
     </li>
     <li
-      className="c2 k-Steppers--VerticalStepper__item"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
         <div
-          className="c4 k-Steppers--VerticalStepper__andromeda--status"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
         >
           <span
-            className="c5 k-Steppers--VerticalStepper__status--error k-Steppers--VerticalStepper__status--andromeda"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--error"
           >
             <svg
               height="10"
@@ -462,26 +461,26 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           error={true}
         >
           <p
-            className="c6 k-Stepepers-VerticalStepper__title--andromeda"
+            className="c4 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <ul
-            className="c8"
+            className="c6"
           >
             <li
-              className="c9"
+              className="c7"
             >
               Item
             </li>
             <li
-              className="c9"
+              className="c7"
             >
               Item
             </li>
           </ul>
           <span
-            className="c7"
+            className="c5"
           >
             <span
               as="a"
@@ -495,17 +494,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       </a>
     </li>
     <li
-      className="c2 k-Steppers--VerticalStepper__item"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
         <div
-          className="c4 k-Steppers--VerticalStepper__andromeda--status"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
         >
           <span
-            className="c5 k-Steppers--VerticalStepper__status--waiting k-Steppers--VerticalStepper__status--andromeda"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--waiting"
           >
             <svg
               height="4"
@@ -526,12 +525,12 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           error={false}
         >
           <p
-            className="c6 k-Stepepers-VerticalStepper__title--andromeda"
+            className="c4 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <span
-            className="c7"
+            className="c5"
           >
             <span
               className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--andromeda"
@@ -543,17 +542,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
       </a>
     </li>
     <li
-      className="c2 k-Steppers--VerticalStepper__item"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
         <div
-          className="c4 k-Steppers--VerticalStepper__andromeda--status"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
         >
           <span
-            className="c5 k-Steppers--VerticalStepper__status--andromeda"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda"
           >
             <svg
               fill="#fff"
@@ -573,12 +572,12 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
           error={false}
         >
           <p
-            className="c6 k-Stepepers-VerticalStepper__title--andromeda"
+            className="c4 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <span
-            className="c7"
+            className="c5"
           >
             <span
               className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--andromeda"
@@ -594,11 +593,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 `;
 
 exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
-.c4.k-Steppers--VerticalStepper__orion--status {
+.c3.k-Steppers--VerticalStepper__statusContainer--orion {
   border: 0.375rem solid #fff;
 }
 
-.c5 {
+.c3 .k-Steppers--VerticalStepper__status {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -626,33 +625,33 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   font-size: 0.875rem;
 }
 
-.c5.k-Steppers--VerticalStepper__status--success {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
   background-color: #61d079;
   border-color: #61d079;
 }
 
-.c5.k-Steppers--VerticalStepper__status--valid {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
   background-color: #19b4fa;
   border-color: #19b4fa;
 }
 
-.c5.k-Steppers--VerticalStepper__status--error {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
   color: #ff0046;
   border-color: #ffb2c7;
 }
 
-.c5.k-Steppers--VerticalStepper__status--waiting {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--waiting {
   color: #19b4fa;
   border-color: #bae8fd;
 }
 
-.c5.k-Steppers--VerticalStepper__status--disabled {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
   color: #fff;
   border-color: #d8d8d8;
   background-color: #d8d8d8;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
   box-sizing: border-box;
   width: 100%;
   border: 0.1875rem solid #fff;
@@ -663,22 +662,22 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   border-radius: 1.875rem;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
   background-color: #19b4fa;
   border-color: #19b4fa;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
   background-color: #fff;
   border-color: #19b4fa;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
   background-color: #fff;
   border-color: #eee;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
   background-color: #fff;
   border-color: #eee;
   width: 0.9375rem;
@@ -688,13 +687,13 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   margin-right: 1.25rem;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge {
   height: 1.3125rem;
   position: relative;
   border: 0;
 }
 
-.c5.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge::before {
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge::before {
   width: 0.125rem;
   content: "";
   position: absolute;
@@ -702,27 +701,27 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   border-left: 0.1875rem dotted #eee;
 }
 
-.c2 {
+.c1 {
   padding: 0.9375rem 0;
 }
 
-.c2:first-of-type {
+.c1:first-of-type {
   margin-top: 0;
 }
 
-.c2:last-of-type {
+.c1:last-of-type {
   margin-bottom: 0;
 }
 
-.c2 li:not(:last-of-type) {
+.c1 li:not(:last-of-type) {
   margin: 0 !important;
 }
 
-.c2 li:not(:last-of-type)::after {
+.c1 li:not(:last-of-type)::after {
   display: none;
 }
 
-.c3 {
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -736,32 +735,32 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c3 .VerticalStepper__step {
+.c2 .VerticalStepper__step {
   -webkit-transition: -webkit-transform 0.4s;
   -webkit-transition: transform 0.4s;
   transition: transform 0.4s;
 }
 
-.c3 .VerticalStepper__link {
+.c2 .VerticalStepper__link {
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
 }
 
-.c3:hover .VerticalStepper__step,
-.c3:focus .VerticalStepper__step,
-.c3:active .VerticalStepper__step {
+.c2:hover .VerticalStepper__step,
+.c2:focus .VerticalStepper__step,
+.c2:active .VerticalStepper__step {
   -webkit-transform: translateX(0.3125rem);
   -ms-transform: translateX(0.3125rem);
   transform: translateX(0.3125rem);
 }
 
-.c3:hover .VerticalStepper__link,
-.c3:focus .VerticalStepper__link,
-.c3:active .VerticalStepper__link {
+.c2:hover .VerticalStepper__link,
+.c2:focus .VerticalStepper__link,
+.c2:active .VerticalStepper__link {
   color: #0496cc;
 }
 
-.c3 .k-Steppers--VerticalStepper__step--link--content {
+.c2 .k-Steppers--VerticalStepper__step--link--content {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -779,11 +778,11 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   color: #222;
 }
 
-.c3 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
+.c2 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
   color: #b8b8b8;
 }
 
-.c6 {
+.c4 {
   margin: 0 0 0.125rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -791,18 +790,17 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   line-height: normal;
 }
 
-.c6.k-Stepepers-VerticalStepper__title--orion {
+.c4.k-Stepepers-VerticalStepper__title--orion {
   font-size: 0.8888888888888888rem;
-  font-weight: 500;
 }
 
-.c7 {
+.c5 {
   margin: 0;
   padding: 0;
   line-height: 1;
 }
 
-.c7 .k-Stepepers-VerticalStepper__link {
+.c5 .k-Stepepers-VerticalStepper__link {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
@@ -814,17 +812,17 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   transition: color 0.4s;
 }
 
-.c7 .k-Stepepers-VerticalStepper__link:hover,
-.c7 .k-Stepepers-VerticalStepper__link:focus,
-.c7 .k-Stepepers-VerticalStepper__link:active {
+.c5 .k-Stepepers-VerticalStepper__link:hover,
+.c5 .k-Stepepers-VerticalStepper__link:focus,
+.c5 .k-Stepepers-VerticalStepper__link:active {
   color: #0496cc;
 }
 
-.c7 .k-Stepepers-VerticalStepper__link--orion {
+.c5 .k-Stepepers-VerticalStepper__link--orion {
   font-size: 0.875rem;
 }
 
-.c7 .k-Stepepers-VerticalStepper__link--orion:before {
+.c5 .k-Stepepers-VerticalStepper__link--orion:before {
   padding: 0 0.5rem;
   content: '●';
   font-size: 0.5rem;
@@ -836,13 +834,13 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   padding: 1px 0;
 }
 
-.c1 {
+.c0 .k-Steppers--VerticalStepper {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.c1:before {
+.c0 .k-Steppers--VerticalStepper:before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -852,15 +850,15 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   border-left: 0.125rem dashed #eee;
 }
 
-.c1.k-Steppers--VerticalStepper__orion:before {
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion:before {
   border-left: none;
 }
 
-.c1.k-Steppers--VerticalStepper__orion li:not(:last-of-type) {
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type) {
   position: relative;
 }
 
-.c1.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
   content: '';
   position: absolute;
   left: 1.1875rem;
@@ -871,7 +869,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   z-index: -1;
 }
 
-.c1.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
   background-color: #19b4fa;
 }
 
@@ -879,21 +877,21 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   className="c0"
 >
   <ul
-    className="c1 k-Steppers--VerticalStepper__orion"
+    className="k-Steppers--VerticalStepper k-Steppers--VerticalStepper__orion"
     role="tablist"
   >
     <li
-      className="c2 k-Steppers--VerticalStepper__item k-Steppers--VerticalStepper__item--hasActiveLine"
+      className="c1 k-Steppers--VerticalStepper__item k-Steppers--VerticalStepper__item--hasActiveLine"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
         <div
-          className="c4 k-Steppers--VerticalStepper__orion--status"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
         >
           <span
-            className="c5 k-Steppers--VerticalStepper__status--success k-Steppers--VerticalStepper__status--orion"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--success"
           >
             <svg
               fill="#fff"
@@ -913,12 +911,12 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
           error={false}
         >
           <p
-            className="c6 k-Stepepers-VerticalStepper__title--orion"
+            className="c4 k-Stepepers-VerticalStepper__title--orion"
           >
             Title
           </p>
           <span
-            className="c7"
+            className="c5"
           >
             <span
               className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--orion"
@@ -930,17 +928,17 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
       </a>
     </li>
     <li
-      className="c2 k-Steppers--VerticalStepper__item"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
         <div
-          className="c4 k-Steppers--VerticalStepper__orion--status"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
         >
           <span
-            className="c5 k-Steppers--VerticalStepper__status--valid k-Steppers--VerticalStepper__status--orion"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--valid"
           >
             <svg
               height="6"
@@ -962,7 +960,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
           error={false}
         >
           <p
-            className="c6 k-Stepepers-VerticalStepper__title--orion"
+            className="c4 k-Stepepers-VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -970,17 +968,17 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
       </a>
     </li>
     <li
-      className="c2 k-Steppers--VerticalStepper__item"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
         <div
-          className="c4 k-Steppers--VerticalStepper__orion--status"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
         >
           <span
-            className="c5 k-Steppers--VerticalStepper__status--error k-Steppers--VerticalStepper__status--orion"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--error"
           >
             <svg
               height="10"
@@ -1000,7 +998,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
           error={true}
         >
           <p
-            className="c6 k-Stepepers-VerticalStepper__title--orion"
+            className="c4 k-Stepepers-VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -1008,17 +1006,17 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
       </a>
     </li>
     <li
-      className="c2 k-Steppers--VerticalStepper__item"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
         <div
-          className="c4 k-Steppers--VerticalStepper__orion--status"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
         >
           <span
-            className="c5 k-Steppers--VerticalStepper__status--waiting k-Steppers--VerticalStepper__status--orion"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--waiting"
           />
         </div>
         <div
@@ -1026,7 +1024,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
           error={false}
         >
           <p
-            className="c6 k-Stepepers-VerticalStepper__title--orion"
+            className="c4 k-Stepepers-VerticalStepper__title--orion"
           >
             Title
           </p>
@@ -1034,17 +1032,17 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
       </a>
     </li>
     <li
-      className="c2 k-Steppers--VerticalStepper__item"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
         <div
-          className="c4 k-Steppers--VerticalStepper__orion--status"
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
         >
           <span
-            className="c5 k-Steppers--VerticalStepper__status--orion"
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion"
           />
         </div>
         <div
@@ -1052,7 +1050,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
           error={false}
         >
           <p
-            className="c6 k-Stepepers-VerticalStepper__title--orion"
+            className="c4 k-Stepepers-VerticalStepper__title--orion"
           >
             Title
           </p>
