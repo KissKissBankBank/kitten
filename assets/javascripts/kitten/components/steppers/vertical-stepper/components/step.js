@@ -1,113 +1,138 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import COLORS from '../../../../constants/colors-config'
 import { Status } from './status'
+import classNames from 'classnames'
 import { STEP_CLASSNAME, LINK_CLASSNAME } from '../index'
 
-export class Step extends Component {
-  static propTypes = {
-    href: PropTypes.string,
-    valid: PropTypes.bool,
-    success: PropTypes.bool,
-    error: PropTypes.bool,
-    waiting: PropTypes.bool,
-    disabled: PropTypes.bool,
-  }
+export const Step = ({
+  success,
+  valid,
+  error,
+  waiting,
+  disabled,
+  statusProps,
+  children,
+  className,
+  variant,
+  bridge,
+  ...other
+}) => {
 
-  static defaultProps = {
-    href: null,
-    valid: false,
-    success: false,
-    error: false,
-    waiting: false,
-    disabled: false,
-  }
+  return (
+    <StyledItem className={classNames(
+      'k-Steppers--VerticalStepper__item',
+      {
+        'k-Steppers--VerticalStepper__item--hasActiveLine': success,
+      },
+    )}>
+      <StyledLink as={other.href ? 'a' : 'span'} {...other} variant={variant}>
+        <Status
+          success={success}
+          valid={valid}
+          error={error}
+          waiting={waiting}
+          disabled={disabled}
+          bridge={bridge}
+          variant={variant}
+          {...statusProps}
+        />
 
-  render() {
-    const {
-      success,
-      valid,
-      error,
-      waiting,
-      disabled,
-      statusProps,
-      children,
-      ...other
-    } = this.props
-
-    return (
-      <StyledItem>
-        <StyledLink as={other.href ? 'a' : 'span'} {...other}>
-          <Status
-            success={success}
-            valid={valid}
-            error={error}
-            waiting={waiting}
-            disabled={disabled}
-            {...statusProps}
-          />
-
-          <StyledContent
-            error={error}
-            disabled={disabled}
-            className={STEP_CLASSNAME}
-          >
-            {children}
-          </StyledContent>
-        </StyledLink>
-      </StyledItem>
-    )
-  }
+        <div
+          error={error}
+          className={classNames(
+            STEP_CLASSNAME,
+            'k-Steppers--VerticalStepper__step--link--content',
+            {'k-Steppers--VerticalStepper__step--link--content--disabled': disabled},
+            className,
+          )}
+        >
+          {children}
+        </div>
+      </StyledLink>
+    </StyledItem>
+  )
 }
 
 const StyledItem = styled.li`
-  margin ${pxToRem(30)} 0;
+  padding: ${pxToRem(15)} 0;
+  
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  li:not(:last-of-type) {
+    margin: 0 !important;
+    &::after {
+      display: none;
+    }
+  }
 `
 
 const StyledLink = styled.a`
   display: inline-flex;
-
+  align-items: center;
   ${({ as, onClick }) =>
-    (as === 'a' || onClick) &&
-    css`
-      cursor: pointer;
-      text-decoration: none;
+  (as === 'a' || onClick) &&
+  css`
+    cursor: pointer;
+    text-decoration: none;
 
+    .${STEP_CLASSNAME} {
+      transition: transform 0.4s;
+    }
+
+    .${LINK_CLASSNAME} {
+      transition: color 0.4s;
+    }
+
+    :hover,
+    :focus,
+    :active {
       .${STEP_CLASSNAME} {
-        transition: transform 0.4s;
+        transform: translateX(${pxToRem(5)});
       }
 
       .${LINK_CLASSNAME} {
-        transition: color 0.4s;
+        color: ${COLORS.primary3};
       }
+    }
+  `}
 
-      :hover,
-      :focus,
-      :active {
-        .${STEP_CLASSNAME} {
-          transform: translateX(${pxToRem(5)});
-        }
+  .k-Steppers--VerticalStepper__step--link--content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    color: ${COLORS.font1};
 
-        .${LINK_CLASSNAME} {
-          color: ${COLORS.primary3};
-        }
-      }
-    `}
-`
-
-const StyledContent = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-
-  color: ${COLORS.font1};
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
+    &.k-Steppers--VerticalStepper__step--link--content--disabled {
       color: ${COLORS.font2};
-    `}
+    }
+  }
 `
+
+Step.propTypes = {
+  href: PropTypes.string,
+  valid: PropTypes.bool,
+  success: PropTypes.bool,
+  error: PropTypes.bool,
+  waiting: PropTypes.bool,
+  disabled: PropTypes.bool,
+  bridge: PropTypes.bool,
+}
+
+Step.defaultProps = {
+  href: null,
+  valid: false,
+  success: false,
+  error: false,
+  waiting: false,
+  disabled: false,
+  bridge: false,
+}

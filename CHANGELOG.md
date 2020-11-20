@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 - Fix `ImageCropper` `onChange` firing on uploaded images.
+- Feature: Add `variant` prop to `VerticalStepper`, with default value `andromeda`.
+- Feature: Add `DotIcon` component.
 
 ## [2.97.0] - 2020-11-16
 
