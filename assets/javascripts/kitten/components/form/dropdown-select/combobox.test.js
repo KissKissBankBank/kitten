@@ -2,13 +2,16 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { DropdownSelect } from './index'
 
-describe('<DropdownSelect />', () => {
+describe('<DropdownSelect combobox />', () => {
   it('should match its snapshot with props', () => {
     const tree = renderer
       .create(
         <DropdownSelect
-          id="dropdown-select-test"
+          combobox
+          id="dropdown-select-test_2"
           labelText="DropdownSelect test"
+          comboboxButtonLabelText="Button label text"
+          noResultText="No result"
           items={[
             {
               value: 'bianchi',

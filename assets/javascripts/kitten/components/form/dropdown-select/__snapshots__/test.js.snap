@@ -2,10 +2,10 @@
 
 exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa hbfSfb k-Form-DropdownSelect k-Form-DropdownSelect--andromeda k-Form-DropdownSelect--normal"
+  className="sc-bdVaJa keiqDv k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
 >
   <label
-    className="k-Label k-Form-DropdownSelect__label k-u-margin-bottom-single"
+    className="k-Label k-Form-Dropdown__label k-u-margin-bottom-single"
     htmlFor="dropdown-select-test"
     id="dropdown-select-test_element-label"
     onClick={[Function]}
@@ -13,7 +13,7 @@ exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
     DropdownSelect test
   </label>
   <button
-    aria-expanded={false}
+    aria-expanded={true}
     aria-haspopup="listbox"
     aria-labelledby="dropdown-select-test_element-label dropdown-select-test"
     className="k-Form-DropdownSelect__button"
@@ -33,7 +33,7 @@ exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
       className="k-Form-DropdownSelect__button__arrowBox"
     >
       <svg
-        className="k-ArrowIcon k-ArrowIcon--bottom"
+        className="k-ArrowIcon k-ArrowIcon--top"
         height="5.64"
         viewBox="0 0 6 6"
         width="8.48"
@@ -51,7 +51,7 @@ exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
   </button>
   <ul
     aria-labelledby="dropdown-select-test_element-label"
-    className="k-Form-DropdownSelect__list"
+    className="k-Form-Dropdown__list"
     id="dropdown-select-test_element-menu"
     onBlur={[Function]}
     onKeyDown={[Function]}
