@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { pxToRem } from '../../../../helpers/utils/typography'
@@ -36,18 +36,14 @@ const StyledItem = styled.li`
   }
 `
 
-export class List extends Component {
-  static Item = StyledItem
+export const List = ({...props}) => <StyledList {...props} />
 
-  static propTypes = {
-    error: PropTypes.bool,
-  }
+List.Item = StyledItem
 
-  static defaultProps = {
-    error: false,
-  }
+List.propTypes = {
+  error: PropTypes.bool,
+}
 
-  render() {
-    return <StyledList {...this.props} />
-  }
+List.defaultProps = {
+  error: false,
 }

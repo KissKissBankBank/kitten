@@ -3,6 +3,19 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Fix `ImageCropper` `onChange` firing on uploaded images.
+- Feature: Add `variant` prop to `VerticalStepper`, with default value `andromeda`.
+- Feature: Add `DotIcon` component.
+
+## [2.97.0] - 2020-11-16
+
+Feature:
+- Add `CreditCardForm` component.
+
+## [2.96.0] - 2020-11-12
+
+Feature:
+- Update `RewardCard` component.
 
 - Feature: Add component `DropdownSelect`, has `combobox` boolean prop.
 
