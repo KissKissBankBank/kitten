@@ -58,7 +58,7 @@ export const DropdownCombobox = ({
     })
 
     setFilteredOptions(newItemsList)
-    onInputChange({ value: inputValue, changes })
+    onInputChange({ value: changes.inputValue, changes })
   }
 
   const onIsOpenChange = changes => {
