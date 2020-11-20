@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownPhoneSelect /> should match its snapshot with props 1`] = `
+<div
+  className="sc-bdVaJa dzftOJ k-Form-DropdownSelectWithInput k-Form-DropdownSelectWithInput--isOpen"
+>
+  <label
+    className="k-Label k-Form-DropdownSelectWithInput__label k-u-margin-bottom-single"
+    htmlFor="dropdown-phone-select-test"
+    id="dropdown-phone-select-test_element-label"
+    onClick={[Function]}
+  >
+    DropdownPhoneSelect test
+  </label>
+  <div
+    className="k-Form-DropdownSelectWithInput__container"
+    onKeyDown={[Function]}
+  >
+    <button
+      aria-expanded={true}
+      aria-haspopup="listbox"
+      aria-labelledby="dropdown-phone-select-test_element-label dropdown-phone-select-test"
+      className="k-Form-DropdownSelectWithInput__button"
+      id="dropdown-phone-select-test"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      type="button"
+      value={null}
+    >
+      <span
+        className="k-Form-DropdownSelectWithInput__content k-Form-DropdownSelectWithInput__placeholder"
+      >
+        Telephone
+      </span>
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__button__arrowBox"
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--top"
+          height="5.64"
+          viewBox="0 0 6 6"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </span>
+      <span
+        className="k-Form-DropdownSelectWithInput__button__statusBadges"
+      />
+    </button>
+    <input
+      aria-labelledby="dropdown-phone-select-test_element-label dropdown-phone-select-test"
+      className="k-Form-DropdownSelectWithInput__input"
+      id="dropdown-phone-select-test_element-input"
+      onChange={[Function]}
+      placeholder="Telephone"
+      type="tel"
+      value=""
+    />
+  </div>
+  <ul
+    aria-labelledby="dropdown-phone-select-test_element-label"
+    className="k-Form-DropdownSelectWithInput__list"
+    id="dropdown-phone-select-test_element-menu"
+    onBlur={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    role="listbox"
+    tabIndex={-1}
+  >
+    <li
+      aria-hidden={true}
+      aria-selected="false"
+      className="k-Form-DropdownSelectWithInput__separator"
+      disabled={true}
+      id="dropdown-phone-select-test_element-item-0"
+      role="option"
+    />
+    <li
+      aria-selected="false"
+      className="k-Form-DropdownSelectWithInput__item"
+      id="dropdown-phone-select-test_element-item-1"
+      onClick={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__item__icon"
+      >
+        <div
+          className="sc-bwzfXH zWQS be"
+          style={
+            Object {
+              "backgroundImage": "url(./flags.png)",
+            }
+          }
+        >
+          <span
+            className="k-u-a11y-visuallyHidden"
+          >
+            Belgique
+          </span>
+        </div>
+      </span>
+      Belgique
+      <span
+        className="k-u-color-font2 k-u-margin-left-noneHalf"
+      >
+        +
+        32
+      </span>
+    </li>
+    <li
+      aria-selected="false"
+      className="k-Form-DropdownSelectWithInput__item"
+      id="dropdown-phone-select-test_element-item-2"
+      onClick={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__item__icon"
+      >
+        <div
+          className="sc-bwzfXH zWQS fr"
+          style={
+            Object {
+              "backgroundImage": "url(./flags.png)",
+            }
+          }
+        >
+          <span
+            className="k-u-a11y-visuallyHidden"
+          >
+            France
+          </span>
+        </div>
+      </span>
+      France
+      <span
+        className="k-u-color-font2 k-u-margin-left-noneHalf"
+      >
+        +
+        33
+      </span>
+    </li>
+    <li
+      aria-selected="false"
+      className="k-Form-DropdownSelectWithInput__item"
+      id="dropdown-phone-select-test_element-item-3"
+      onClick={[Function]}
+      onMouseMove={[Function]}
+      role="option"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownSelectWithInput__item__icon"
+      >
+        <div
+          className="sc-bwzfXH zWQS lu"
+          style={
+            Object {
+              "backgroundImage": "url(./flags.png)",
+            }
+          }
+        >
+          <span
+            className="k-u-a11y-visuallyHidden"
+          >
+            Luxembourg
+          </span>
+        </div>
+      </span>
+      Luxembourg
+      <span
+        className="k-u-color-font2 k-u-margin-left-noneHalf"
+      >
+        +
+        352
+      </span>
+    </li>
+  </ul>
+</div>
+`;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import { DropdownSelectWithInput } from '../../../components/form/dropdown-select-with-input'
 import CountryData from './data/CountryData.js'
 import { reduce, startsWith, memoize } from 'lodash'
@@ -43,9 +44,7 @@ const processCountries = ({ countries, prefix, locale, flagsUrl }) => {
 
 const formatNumber = (text, country) => {
   if (!country) return text
-
   const { format } = country
-
   if (!format) return text
 
   const pattern = removeCountryCodeFromFormat(format)
@@ -53,7 +52,6 @@ const formatNumber = (text, country) => {
   if (!text || text.length === 0) {
     return ''
   }
-
   if ((text && text.length < 2) || !pattern) {
     return text
   }
@@ -156,9 +154,10 @@ const guessSelectedCountry = memoize((inputNumber, country, onlyCountries) => {
 const getCountryObjectFromIso = (country, onlyCountries) => {
   let newSelectedCountry
   if (country.indexOf(0) >= '0' && country.indexOf(0) <= '9') {
-    // digit
+    // "country" is a digit
     newSelectedCountry = onlyCountries.find(o => o.dialCode == +country)
   } else {
+    // "country" is an iso string
     newSelectedCountry = onlyCountries.find(o => o.iso2 == country)
   }
   return newSelectedCountry
@@ -272,7 +271,11 @@ export const DropdownPhoneSelect = ({
     setCountry(newCountry.iso2)
 
     const placeholderFormat = removeCountryCodeFromFormat(newCountry.format)
-    setInputPlaceholder(placeholderFormat.replace(/\./g, '0'))
+    if (placeholderFormat === '') {
+      setInputPlaceholder(placeholder)
+    } else {
+      setInputPlaceholder(placeholderFormat.replace(/\./g, '0'))
+    }
   }
 
   // Effects
@@ -371,7 +374,7 @@ DropdownPhoneSelect.defaultProps = {
     priority: null,
     areaCodes: null,
     preserveOrder: ['preferredCountries'],
-    defaultMask: '. .. .. .. ..',
+    defaultMask: '',
     alwaysDefaultMask: false,
     prefix: '+',
   },
@@ -382,7 +385,36 @@ DropdownPhoneSelect.defaultProps = {
   placeholder: 'Telephone',
   flagsUrl: './flags.png',
   assumeCountry: 'fr',
-  inputProps: {},
 
   onChange: () => {},
+}
+
+DropdownPhoneSelect.propTypes = {
+  phoneProps: PropTypes.shape({
+    onlyCountries: PropTypes.array,
+    preferredCountries: PropTypes.array,
+    excludeCountries: PropTypes.array,
+    disabled: PropTypes.bool,
+    enableAreaCodes: PropTypes.bool,
+    enableTerritories: PropTypes.bool,
+    regions: PropTypes.string,
+    masks: PropTypes.string,
+    priority: PropTypes.string,
+    areaCodes: PropTypes.string,
+    preserveOrder: PropTypes.array,
+    defaultMask: PropTypes.string,
+    alwaysDefaultMask: PropTypes.bool,
+    prefix: PropTypes.string,
+  }),
+
+  id: PropTypes.string.isRequired,
+  defaultCountry: PropTypes.string,
+  value: PropTypes.string,
+
+  inputProps: PropTypes.object,
+  locale: PropTypes.string,
+  placeholder: PropTypes.string,
+  flagsUrl: PropTypes.string.isRequired,
+  assumeCountry: PropTypes.string,
+  onChange: PropTypes.func,
 }
