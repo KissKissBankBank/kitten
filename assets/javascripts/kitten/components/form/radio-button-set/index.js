@@ -61,18 +61,23 @@ export const RadioButtonSet = ({
       </Label>
     )}
     {children && !label && <legend>{children}</legend>}
-    {items.map(({ id, className, ...itemProps }) => (
-      <RadioButton
-        id={id}
-        variant={variant}
-        design={design}
-        error={error}
-        name={name}
-        key={id}
-        {...itemProps}
-        className={classNames('k-Form-RadioButtonSet__radioButton', className)}
-      />
-    ))}
+    <div className="k-Form-RadioButtonSet__radioContainer">
+      {items.map(({ id, className, ...itemProps }) => (
+        <RadioButton
+          id={id}
+          variant={variant}
+          design={design}
+          error={error}
+          name={name}
+          key={id}
+          {...itemProps}
+          className={classNames(
+            'k-Form-RadioButtonSet__radioButton',
+            className,
+          )}
+        />
+      ))}
+    </div>
   </StyledRadioButtonSet>
 )
 

@@ -8,7 +8,7 @@ import { GUTTER } from '../../../constants/grid-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 
 const OrionGlobalStyle = createGlobalStyle`
-  .k-Form-RadioButtonSet.k-Form-RadioButtonSet__orionGrid {
+  .k-Form-RadioButtonSet.k-Form-RadioButtonSet__orionGrid .k-Form-RadioButtonSet__radioContainer {
     display: grid;
     grid-template-columns: 1fr;
     gap: ${pxToRem(GUTTER)};
@@ -111,6 +111,49 @@ export const OrionGrid = () => (
           Choisissez le montant que vous souhaitez offrir
         </h1>
       </RadioButtonSet>
+    </GridCol>
+  </Grid>
+)
+export const OrionGridWithLabel = () => (
+  <Grid>
+    <GridCol offset="1" col="8">
+      <OrionGlobalStyle />
+      <RadioButtonSet
+        label="Test de label"
+        className="k-Form-RadioButtonSet__orionGrid"
+        id={text('ID', 'story-radio-button-set')}
+        items={[
+          {
+            text: text('Option A', '25 €'),
+            id: 'option-a',
+            defaultChecked: true,
+          },
+          {
+            text: text('Option B', '50 €'),
+            id: 'option-b',
+          },
+          {
+            text: text('Option C', '100 €'),
+            id: 'option-c',
+          },
+          {
+            text: text('Option D', '200 €'),
+            id: 'option-d',
+          },
+          {
+            text: text('Option E', '500 €'),
+            id: 'option-e',
+          },
+          {
+            text: text('Option F', '1000 €'),
+            id: 'option-f',
+          },
+        ]}
+        error={boolean('Error?', false)}
+        disabled={boolean('Disabled', false)}
+        variant="orion"
+        design={select('design', { disc: 'disc', check: 'check' }, 'disc')}
+      />
     </GridCol>
   </Grid>
 )
