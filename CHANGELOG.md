@@ -2,6 +2,15 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [2.98.0] - 2020-11-23
+
+Features:
+- Add `variant` prop to `VerticalStepper`, with default value `andromeda`.
+- Add `DotIcon` component.
+
+Fix:
+- `ImageCropper` `onChange` firing on uploaded images.
+
 ## [unreleased]
 - Fix `ImageCropper` `onChange` firing on uploaded images.
 - Feature: Add `variant` prop to `VerticalStepper`, with default value `andromeda`.
