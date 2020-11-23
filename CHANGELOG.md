@@ -3,9 +3,11 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+
 - Fix `ImageCropper` `onChange` firing on uploaded images.
 - Feature: Add `variant` prop to `VerticalStepper`, with default value `andromeda`.
 - Feature: Add `DotIcon` component.
+- Feature: Add component `DropdownSelect`, has `combobox` boolean prop.
 
 ## [2.97.0] - 2020-11-16
 
@@ -16,8 +18,6 @@ Feature:
 
 Feature:
 - Update `RewardCard` component.
-
-- Feature: Add component `DropdownSelect`, has `combobox` boolean prop.
 
 ## [2.95.3] - 2020-11-05
 

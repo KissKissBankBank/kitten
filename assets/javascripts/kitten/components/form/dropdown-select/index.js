@@ -197,7 +197,7 @@ DropdownSelect.defaultProps = {
   size: 'normal',
   a11yStatusError: 'Error',
   a11yStatusValid: 'Valid',
-  a11ySelectionMessageDisplayer: () => {},
+  a11ySelectionMessageDisplayer: item => `${item} is now selected.`,
   onChange: () => {},
   onInputChange: () => {},
   onMenuClose: () => {},
