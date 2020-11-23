@@ -17,6 +17,7 @@ export const Default = () => (
     <GridCol offset="1" col="8">
       <RadioButton
         id="test_1"
+        name="test"
         onLabelClick={action('label-click')}
         onChange={action('change')}
         error={boolean('Error', false)}
@@ -35,6 +36,7 @@ export const Default = () => (
       </RadioButton>
       <RadioButton
         id="test_2"
+        name="test"
         onLabelClick={action('label-click')}
         onChange={action('change')}
         error={boolean('Error', false)}
@@ -53,6 +55,7 @@ export const Default = () => (
       </RadioButton>
       <RadioButton
         id="test_3"
+        name="test"
         onLabelClick={action('label-click')}
         onChange={action('change')}
         error={boolean('Error', false)}
