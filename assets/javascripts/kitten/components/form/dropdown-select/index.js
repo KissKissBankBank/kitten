@@ -189,6 +189,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
 }
 
 DropdownSelect.defaultProps = {
+  combobox: false,
   hideLabel: false,
   options: [],
   placeholder: 'Select',
@@ -208,6 +209,7 @@ DropdownSelect.defaultProps = {
 DropdownSelect.propTypes = {
   id: PropTypes.string.isRequired,
   labelText: PropTypes.string.isRequired,
+  combobox: PropTypes.bool,
   hideLabel: PropTypes.bool,
   options: PropTypes.arrayOf(PropTypes.object),
   placeholder: PropTypes.string,
