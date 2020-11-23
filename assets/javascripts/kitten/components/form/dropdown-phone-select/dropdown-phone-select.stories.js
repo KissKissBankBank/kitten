@@ -23,8 +23,8 @@ export const Default = () => {
           disabled={boolean('disabled', false)}
           hideLabel={boolean('hide label?', false)}
           labelText={text('LabelText', 'label')}
-          resetOnBackspace={true}
-          highlightOptionBox={true}
+          resetOnBackspace
+          highlightOptionBox
           placeholder={text('placeholder', 'Téléphone')}
           phoneProps={{
             preferredCountries: [

@@ -8,9 +8,7 @@ import locale_fr from './data/lang/fr'
 import { FlagIcon } from '../../../components/icons/flag-icon'
 
 const removeCountryCodeFromFormat = format => {
-  const patternArray = format.split(' ')
-  patternArray.shift()
-  return patternArray.join(' ')
+  return format.replace(/\+[.]+\s/gi, '')
 }
 
 const processCountries = ({ countries, prefix, locale, flagsUrl }) => {
@@ -83,9 +81,7 @@ const formatNumber = (text, country) => {
     },
   )
 
-  const formattedNumber = formattedObject.formattedText
-
-  return formattedNumber
+  return formattedObject.formattedText
 }
 
 const getOptions = ({
@@ -226,7 +222,7 @@ export const DropdownPhoneSelect = ({
 
     setInputNumber(innerValue)
 
-    if (value.replace(/\D/g, '').length > 15) return
+    if (innerValue.length > 15) return
     if (innerValue === getFormattedNumber) return
 
     let innerFormattedNumber = ''
@@ -250,16 +246,15 @@ export const DropdownPhoneSelect = ({
     setCaretPosition(caretPosition)
     setFormattedNumber(innerFormattedNumber)
 
-    const numberToExport = `${phoneProps.prefix}${countryCode} ${innerFormattedNumber}`
+    if (!onChange) return
 
-    if (!!onChange) {
-      onChange(
-        numberToExport.replace(/[^0-9]+/g, ''),
-        currentCountry,
-        event,
-        numberToExport,
-      )
-    }
+    const numberToExport = `${phoneProps.prefix}${countryCode} ${innerFormattedNumber}`
+    onChange(
+      numberToExport.replace(/[^0-9]+/g, ''),
+      currentCountry,
+      event,
+      numberToExport,
+    )
   }
 
   const handleSelect = country => {

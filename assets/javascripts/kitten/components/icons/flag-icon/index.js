@@ -737,16 +737,14 @@ const FlagContainer = styled.div`
   }
 `
 
-export const FlagIcon = ({ country, countryName, flagsUrl }) => {
-  return (
-    <FlagContainer
-      className={country}
-      style={{ backgroundImage: `url(${flagsUrl})` }}
-    >
-      <span className="k-u-a11y-visuallyHidden">{countryName}</span>
-    </FlagContainer>
-  )
-}
+export const FlagIcon = ({ country, countryName, flagsUrl }) => (
+  <FlagContainer
+    className={country}
+    style={{ backgroundImage: `url(${flagsUrl})` }}
+  >
+    <span className="k-u-a11y-visuallyHidden">{countryName}</span>
+  </FlagContainer>
+)
 
 export const flagList = [
   'ad',
