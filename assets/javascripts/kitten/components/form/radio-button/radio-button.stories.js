@@ -16,7 +16,43 @@ export const Default = () => (
   <Grid>
     <GridCol offset="1" col="8">
       <RadioButton
-        id={text('id', 'radio-box_id')}
+        id="test_1"
+        onLabelClick={action('label-click')}
+        onChange={action('change')}
+        error={boolean('Error', false)}
+        disabled={boolean('Disabled', false)}
+        large={boolean('Large', false)}
+        largeContent={boolean('LargeContent', false)}
+        text={text('Text', 'RadioButton Label')}
+        variant={select(
+          'Variant',
+          { andromeda: 'andromeda', orion: 'orion' },
+          'andromeda',
+        )}
+        design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
+      >
+        {text('Content', '')}
+      </RadioButton>
+      <RadioButton
+        id="test_2"
+        onLabelClick={action('label-click')}
+        onChange={action('change')}
+        error={boolean('Error', false)}
+        disabled={boolean('Disabled', false)}
+        large={boolean('Large', false)}
+        largeContent={boolean('LargeContent', false)}
+        text={text('Text', 'RadioButton Label')}
+        variant={select(
+          'Variant',
+          { andromeda: 'andromeda', orion: 'orion' },
+          'andromeda',
+        )}
+        design={select('Design', { disc: 'disc', check: 'check' }, 'radio')}
+      >
+        {text('Content', '')}
+      </RadioButton>
+      <RadioButton
+        id="test_3"
         onLabelClick={action('label-click')}
         onChange={action('change')}
         error={boolean('Error', false)}

@@ -8,7 +8,6 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledRadioButton = styled.div`
-  display: inline;
   margin: ${pxToRem(10)} 0;
 
   &, & * {
@@ -135,6 +134,7 @@ const StyledRadioButton = styled.div`
   /* VARIANT = "orion" */
 
   &.k-Form-RadioButton--orion {
+    margin: ${pxToRem(20)} 0;
 
     .k-Form-RadioButton__label {
       box-sizing: border-box;
