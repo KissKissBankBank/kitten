@@ -8,9 +8,7 @@ export const Content = ({ id, children, index }) => {
   const { selectedItem, componentId } = useContext(Context)
 
   useEffect(() => {
-    setMaxHeight(
-      contentEl && contentEl.current && contentEl.current.scrollHeight,
-    )
+    setMaxHeight(contentEl?.current?.scrollHeight || 0)
   }, [contentEl])
 
   return (
