@@ -50,7 +50,7 @@ const formatNumber = (text, country) => {
   if (!text || text.length === 0) {
     return ''
   }
-  if ((text && text.length < 2) || !pattern) {
+  if (text?.length < 2 || pattern == '') {
     return text
   }
 
@@ -234,7 +234,7 @@ export const DropdownPhoneSelect = ({
 
     const { format, countryCode } = currentCountry
     const pattern = removeCountryCodeFromFormat(format)
-    const limit = pattern.length
+    const limit = pattern.length > 0 ? pattern.length : 15
 
     if (
       getFormattedNumber.length === limit &&
