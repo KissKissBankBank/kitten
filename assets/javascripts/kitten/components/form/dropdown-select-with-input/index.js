@@ -17,24 +17,24 @@ const StyledDropdownSelectWithInput = styled.div`
   position: relative;
 
   .k-Form-DropdownSelectWithInput__container {
-      display: flex;
-      box-sizing: border-box;
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-      padding: 0 ${pxToRem(10 + 10)} 0 0;
-      margin: 0;
-      border: ${pxToRem(2)} solid ${COLORS.line1};
-      background-color: ${COLORS.background1};
-      font-size: ${stepToRem(-1)};
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 0 ${pxToRem(10 + 10)} 0 0;
+    margin: 0;
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+    background-color: ${COLORS.background1};
+    font-size: ${stepToRem(-1)};
 
-      height: ${pxToRem(60)};
-      border-radius: ${pxToRem(6)};
+    height: ${pxToRem(60)};
+    border-radius: ${pxToRem(6)};
 
-      @media (min-width: ${ScreenConfig.S.min}px) {
-        height: ${pxToRem(70)};
-        border-radius: ${pxToRem(8)};
-      }
+    @media (min-width: ${ScreenConfig.S.min}px) {
+      height: ${pxToRem(70)};
+      border-radius: ${pxToRem(8)};
+    }
   }
 
 
@@ -208,7 +208,7 @@ const StyledDropdownSelectWithInput = styled.div`
     margin-right: ${pxToRem(20)};
 
     svg {
-      max-width:100%;
+      max-width: 100%;
     }
   }
 
