@@ -161,7 +161,7 @@ exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
       id="accordeon-accordeon-0_content"
       style={
         Object {
-          "--accordeon-content-max-height": "0rem",
+          "--accordeon-content-max-height": 0,
         }
       }
     >
@@ -215,7 +215,7 @@ exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
       id="accordeon-accordeon-1_content"
       style={
         Object {
-          "--accordeon-content-max-height": "0rem",
+          "--accordeon-content-max-height": 0,
         }
       }
     >
@@ -1375,7 +1375,7 @@ exports[`<Accordeon /> with two items matches with snapshot 1`] = `
       id="accordeon-accordeon-0_content"
       style={
         Object {
-          "--accordeon-content-max-height": "0rem",
+          "--accordeon-content-max-height": 0,
         }
       }
     >
@@ -1429,7 +1429,7 @@ exports[`<Accordeon /> with two items matches with snapshot 1`] = `
       id="accordeon-accordeon-1_content"
       style={
         Object {
-          "--accordeon-content-max-height": "0rem",
+          "--accordeon-content-max-height": 0,
         }
       }
     >
