@@ -2,18 +2,17 @@
 
 exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 <div
-  className="sc-EHOje fvUlWx"
+  className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-ifAKCX eUaGxb"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-bZQynM imdljl"
-    disabled={false}
+    className="k-Form-TextInputWithLimit__limitNumber"
   >
     80
   </div>
@@ -22,18 +21,17 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`] = `
 <div
-  className="sc-EHOje fvUlWx"
+  className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-ifAKCX eUaGxb"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
     defaultValue=""
     disabled={true}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-bZQynM gwkZNG"
-    disabled={true}
+    className="k-Form-TextInputWithLimit__limitNumber k-Form-TextInputWithLimit__limitNumber--disabled"
   >
     80
   </div>
@@ -42,18 +40,17 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
 
 exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = `
 <div
-  className="sc-EHOje fvUlWx"
+  className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bwzfXH begKAY sc-ifAKCX hEXEIQ"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--error"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-bZQynM imdljl"
-    disabled={false}
+    className="k-Form-TextInputWithLimit__limitNumber"
   >
     80
   </div>
@@ -62,18 +59,17 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
 
 exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
 <div
-  className="sc-EHOje fvUlWx"
+  className="sc-htpNat jYlDxq k-Form-TextInputWithLimit"
 >
   <input
-    className="sc-bwzfXH kKjtef sc-ifAKCX eUaGxb"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithLimit__input k-Form-TextInput--andromeda k-Form-TextInput--tiny"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-bZQynM imdljl"
-    disabled={false}
+    className="k-Form-TextInputWithLimit__limitNumber"
   >
     80
   </div>

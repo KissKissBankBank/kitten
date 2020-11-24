@@ -1,41 +1,90 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { ScreenConfig } from '../../../constants/screen-config'
+import classNames from 'classnames'
 
-const borderWidth = pxToRem(2)
-const verticalPadding = pxToRem(10)
+const StyledInput = styled.input`
+  --input-padding-horizontal: ${pxToRem(15)};
+  --input-border-width: ${pxToRem(2)};
 
-const styledTextInput = css`
   font-size: ${stepToRem(-1)};
-  line-height: 1.3;
+  line-height: 1em;
   ${TYPOGRAPHY.fontStyles.light};
   box-sizing: border-box;
-  border-width: ${borderWidth};
+  border-width: ${pxToRem(2)}; /* IE11 */
+  border-width: var(--input-border-width);
   border-style: solid;
   border-radius: 0;
   width: 100%;
-  height: ${pxToRem(50)};
-  padding: ${pxToRem(10)} ${pxToRem(15)};
   appearance: none;
   background-color: ${COLORS.background1};
   color: ${COLORS.font1};
   border-color: ${COLORS.line1};
   outline: none;
-  ${({ digits }) => digitsStyles(digits)};
 
   ::placeholder {
     color: ${COLORS.font2};
   }
 
-  :focus {
-    outline: none;
-    color: ${COLORS.font1};
-    border-color: ${COLORS.line2};
+  // SIZES
+
+  height: ${pxToRem(50)};
+
+  &.k-Form-TextInput--tiny {
+    height: ${pxToRem(40)};
   }
+
+  &.k-Form-TextInput--huge {
+    height: ${pxToRem(70)};
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      height: ${pxToRem(80)};
+      font-size: ${stepToRem(0)};
+    }
+  }
+
+  &.k-Form-TextInput--giant {
+    height: ${pxToRem(70)};
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      height: ${pxToRem(90)};
+      font-size: ${stepToRem(0)};
+    }
+  }
+
+  // VARIANTS
+
+  padding: ${pxToRem(10)} ${pxToRem(15)}; /* IE11 */
+  padding: ${pxToRem(10)} var(--input-padding-horizontal);
+
+  &.k-Form-TextInput--orion {
+    border-radius: ${pxToRem(6)};
+    height: ${pxToRem(60)};
+
+    @media (min-width: ${ScreenConfig.M.min}px) {
+      --input-padding-horizontal: ${pxToRem(30)};
+      border-radius: ${pxToRem(8)};
+      height: ${pxToRem(70)};
+      font-size: ${stepToRem(0)};
+
+      /* IE11 */
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        padding: ${pxToRem(10)} ${pxToRem(30)};
+      }
+    }
+  }
+
+  // TEXT
+
+  &.k-Form-TextInput--alignCenter {
+    text-align: center;
+  }
+
+  // STATES
 
   :disabled {
     color: ${COLORS.font2};
@@ -44,128 +93,129 @@ const styledTextInput = css`
     cursor: not-allowed;
   }
 
-  ${({ valid }) =>
-    valid &&
-    css`
-      &:not(:focus) {
-        color: ${COLORS.tertiary2};
-        border-color: ${COLORS.tertiary2};
-      }
-    `}
+  &.k-Form-TextInput--valid {
+    color: ${COLORS.tertiary2};
+    border-color: ${COLORS.tertiary2};
+  }
 
-  ${({ error }) =>
-    error &&
-    css`
-      &:not(:focus) {
-        color: ${COLORS.error3};
-        border-color: ${COLORS.error3};
-      }
-    `}
+  &.k-Form-TextInput--error {
+    color: ${COLORS.error3};
+    border-color: ${COLORS.error3};
+  }
 
   &:invalid {
     box-shadow: none;
     outline: none;
+    color: ${COLORS.error3};
+    border-color: ${COLORS.error3};
+  }
 
-    &:not(:focus) {
-      color: ${COLORS.error3};
-      border-color: ${COLORS.error3};
+  &:focus {
+    outline: none;
+    color: ${COLORS.font1};
+    border-color: ${COLORS.line2};
+  }
+
+  // DIGITS
+
+  &.k-Form-TextInput-hasDigits {
+    width: calc(
+      var(--input-content-width) * 1ch +
+        (2 * (var(--input-padding-horizontal) + var(--input-border-width)))
+    );
+  }
+
+  &.k-Form-TextInput-hasDigits_2 {
+    text-align: center;
+  }
+
+  /* IE11 doesn't support CSS variables */
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    &.k-Form-TextInput-hasDigits_2 {
+      text-align: center;
+      width: calc(2em + ${pxToRem(2 * (10 + 2))});
+
+      &.k-Form-TextInput--orion {
+        width: calc(2em + ${pxToRem(2 * (15 + 2))});
+
+        @media (min-width: ${ScreenConfig.M.min}px) {
+          width: calc(2em + ${pxToRem(2 * (30 + 2))});
+        }
+      }
+    }
+
+    &.k-Form-TextInput-hasDigits_4 {
+      width: calc(4em + ${pxToRem(2 * (10 + 2))});
+
+      &.k-Form-TextInput--orion {
+        width: calc(4em + ${pxToRem(2 * (15 + 2))});
+
+        @media (min-width: ${ScreenConfig.M.min}px) {
+          width: calc(4em + ${pxToRem(2 * (30 + 2))});
+        }
+      }
+    }
+
+    &.k-Form-TextInput-hasDigits_12 {
+      width: calc(12em + ${pxToRem(2 * (10 + 2))});
+
+      &.k-Form-TextInput--orion {
+        width: calc(12em + ${pxToRem(2 * (15 + 2))});
+
+        @media (min-width: ${ScreenConfig.M.min}px) {
+          width: calc(12em + ${pxToRem(2 * (30 + 2))});
+        }
+      }
+    }
+  }
+`
+
+const StyledTextareaContainer = styled.div`
+  position: relative;
+  display: flex;
+
+  textarea.k-Form-TextInput {
+    height: initial;
+    resize: vertical;
+    line-height: 1.3;
+
+    &:disabled {
+      resize: none;
+    }
+
+    padding-bottom: 0;
+
+    &.k-Form-TextInput--orion {
+      padding: ${pxToRem(21)} ${pxToRem(15)} 0;
+      min-height: ${pxToRem(60)};
+
+      @media (min-width: ${ScreenConfig.M.min}px) {
+        padding: ${pxToRem(25)} ${pxToRem(30)} 0;
+        min-height: ${pxToRem(70)};
+      }
     }
   }
 
-  ${({ tiny }) =>
-    tiny &&
-    css`
-      height: ${pxToRem(40)};
-    `}
+  .k-Form-TextInput__textareaGradient {
+    position: absolute;
+    left: ${pxToRem(10)};
+    right: ${pxToRem(10)};
+    bottom: ${pxToRem(3)};
+    height: ${pxToRem(10)};
 
-  ${({ huge }) =>
-    huge &&
-    css`
-      height: ${pxToRem(70)};
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      ${COLORS.background1}
+    );
 
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        height: ${pxToRem(80)};
-        font-size: ${stepToRem(0)};
-      }
-    `}
+    pointer-events: none;
 
-  ${({ giant }) =>
-    giant &&
-    css`
-      height: ${pxToRem(70)};
-
-      @media (min-width: ${ScreenConfig.M.min}px) {
-        height: ${pxToRem(90)};
-        font-size: ${stepToRem(0)};
-      }
-    `}
-
-  ${({ center }) =>
-    center &&
-    css`
-      text-align: center;
-    `}
-`
-
-const StyledTextarea = styled.div`
-  position: relative;
-  display: flex;
-`
-
-const StyledInput = styled.input`
-  ${styledTextInput}
-`
-
-const StyledInputTextarea = styled.textarea`
-  ${styledTextInput}
-  height: initial;
-  resize: vertical;
-
-  :disabled {
-    resize: none;
+    textarea.k-Form-TextInput:disabled + & {
+      display: none;
+    }
   }
 `
-
-const StyledGradientTextarea = styled.div`
-  position: absolute;
-  left: ${verticalPadding};
-  right: ${verticalPadding};
-  bottom: ${borderWidth};
-  height: ${verticalPadding};
-
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0),
-    ${COLORS.background1}
-  );
-
-  pointer-events: none;
-
-  ${StyledInputTextarea}:disabled + & {
-    display: none;
-  }
-`
-
-export const digitsStyles = digits => {
-  const horizontalPadding = 15
-  const digitLength = 15
-
-  switch (`${digits}`) {
-    case '2':
-      return css`
-        width: ${pxToRem(horizontalPadding * 2 + digitLength * 2)};
-        text-align: center;
-      `
-    case '6':
-      return css`
-        width: ${pxToRem(horizontalPadding * 2 + digitLength * 6)};
-      `
-    case '12':
-      return css`
-        width: ${pxToRem(horizontalPadding * 2 + digitLength * 12)};
-      `
-  }
-}
 
 export class TextInput extends PureComponent {
   static propTypes = {
@@ -179,6 +229,7 @@ export class TextInput extends PureComponent {
     disabled: PropTypes.bool,
     name: PropTypes.string,
     digits: PropTypes.number,
+    variant: PropTypes.string,
   }
 
   static defaultProps = {
@@ -192,6 +243,7 @@ export class TextInput extends PureComponent {
     disabled: false,
     name: 'text',
     digits: null,
+    variant: 'andromeda',
   }
 
   render() {
@@ -206,41 +258,75 @@ export class TextInput extends PureComponent {
       giant,
       center,
       tag,
+      variant,
+      className,
+      style,
       ...others
     } = this.props
 
+    const digitsClass = !!digits
+      ? `k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_${digits}`
+      : null
+
     if (tag === 'textarea') {
       return (
-        <StyledTextarea>
-          <StyledInputTextarea
+        <StyledTextareaContainer
+          className={classNames(
+            'k-Form-TextInput__textareaContainer',
+            `k-Form-TextInput__textareaContainer--${variant}`,
+          )}
+        >
+          <StyledInput
             ref={input => (this.input = input)}
-            valid={valid}
-            error={error}
+            as="textarea"
             disabled={disabled}
-            tiny={tiny}
-            digits={digits}
-            name={name}
-            huge={huge}
-            giant={giant}
-            center={center}
+            className={classNames(
+              'k-Form-TextInput',
+              className,
+              digitsClass,
+              `k-Form-TextInput--${variant}`,
+              {
+                'k-Form-TextInput--valid': valid,
+                'k-Form-TextInput--error': error,
+                'k-Form-TextInput--disabled': disabled,
+                'k-Form-TextInput--tiny': tiny,
+                'k-Form-TextInput--huge': huge,
+                'k-Form-TextInput--giant': giant,
+                'k-Form-TextInput--alignCenter': center,
+              },
+            )}
+            style={
+              !!digits ? { '--input-content-width': digits, ...style } : style
+            }
             {...others}
           />
-          <StyledGradientTextarea />
-        </StyledTextarea>
+          <div className="k-Form-TextInput__textareaGradient" />
+        </StyledTextareaContainer>
       )
     } else {
       return (
         <StyledInput
           ref={input => (this.input = input)}
-          valid={valid}
-          error={error}
           disabled={disabled}
-          tiny={tiny}
-          digits={digits}
           name={name}
-          huge={huge}
-          giant={giant}
-          center={center}
+          className={classNames(
+            'k-Form-TextInput',
+            className,
+            digitsClass,
+            `k-Form-TextInput--${variant}`,
+            {
+              'k-Form-TextInput--valid': valid,
+              'k-Form-TextInput--error': error,
+              'k-Form-TextInput--disabled': disabled,
+              'k-Form-TextInput--tiny': tiny,
+              'k-Form-TextInput--huge': huge,
+              'k-Form-TextInput--giant': giant,
+              'k-Form-TextInput--alignCenter': center,
+            },
+          )}
+          style={
+            !!digits ? { '--input-content-width': digits, ...style } : style
+          }
           {...others}
         />
       )

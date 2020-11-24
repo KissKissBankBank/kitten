@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioButton /> default matches with snapshot 1`] = `
+<div
+  className="sc-bdVaJa HuekC k-Form-RadioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+>
+  <input
+    className="k-Form-RadioButton__input"
+    disabled={false}
+    id="test-id"
+    type="radio"
+  />
+  <label
+    className="k-Form-RadioButton__label"
+    htmlFor="test-id"
+  >
+    <span
+      className="k-Form-RadioButton__labelText"
+    >
+      Text
+    </span>
+  </label>
+</div>
+`;

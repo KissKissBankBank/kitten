@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Title } from '../../../../components/typography/title';
+import COLORS from '../../../../constants/colors-config';
 export var RewardCardTitle = function RewardCardTitle(_ref) {
   var children = _ref.children,
       tagName = _ref.tagName,
@@ -12,13 +13,10 @@ export var RewardCardTitle = function RewardCardTitle(_ref) {
       props = _objectWithoutProperties(_ref, ["children", "tagName", "disabled", "className"]);
 
   return /*#__PURE__*/React.createElement(Title, _extends({}, props, {
-    italic: true,
-    margin: false,
+    cssColor: disabled ? COLORS.font2 : COLORS.font1,
     tag: tagName,
-    modifier: "senary",
-    className: classNames('k-RewardCard__title', className, {
-      'k-RewardCard__title--disabled': disabled
-    }, 'k-u-color-font1')
+    modifier: "quinary",
+    className: classNames('k-RewardCard__title', className, 'k-u-margin-bottom-double', 'k-u-margin-top-none')
   }), children);
 };
 RewardCardTitle.propTypes = {
