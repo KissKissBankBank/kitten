@@ -82,6 +82,7 @@ import { DownloadIcon } from './download-icon'
 import { DocumentIconEmpty } from './document-icon-empty'
 import { DocumentIconHouse } from './document-icon-house'
 import { DocumentIconPerson } from './document-icon-person'
+import { GlobeIcon } from './globe-icon'
 
 import { Text } from '../..'
 import React from 'react'
@@ -332,6 +333,9 @@ export const AllIcons = () => {
         />
         <IconContainer children={<UploadIcon color={colorInput} />} />
         <IconContainer children={<DownloadIcon color={colorInput} />} />
+        <IconContainer
+          children={<GlobeIcon color={colorInput} width="16" height="16" />}
+        />
       </Group>
     </Container>
   )

@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+Features:
+- Add `DropdownSelectWithInput` component.
+- Add `GlobeIcon` icon.
 - Feature: Add `variant` prop to `Accordeon`, defaults to `andromeda`.
 - Feature: Add `closeOnClick` prop to `Accordeon`, defaults to false.
 - Feature: Add `variant` prop to `Button`, defaults to `andromeda`.
