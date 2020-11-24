@@ -78,6 +78,16 @@ export var ImageCropper = function ImageCropper(_ref) {
       sliderValue = _useState20[0],
       setSliderValue = _useState20[1];
 
+  var _useState21 = useState(null),
+      _useState22 = _slicedToArray(_useState21, 2),
+      uploadedFile = _useState22[0],
+      setUploadedFile = _useState22[1];
+
+  var _useState23 = useState(null),
+      _useState24 = _slicedToArray(_useState23, 2),
+      resultData = _useState24[0],
+      setResultData = _useState24[1];
+
   useEffect(function () {
     if (cropperInstance && cropperInstance.imageData.naturalWidth) {
       var imageData = cropperInstance.imageData;
@@ -115,6 +125,17 @@ export var ImageCropper = function ImageCropper(_ref) {
     width: cropperWidth,
     height: cropperHeight
   };
+  useEffect(function () {
+    if (fileNameState && resultData) {
+      onChange({
+        value: resultData.target.src,
+        base: getOr(resultData.srcElement.src)('originalTarget.src')(resultData),
+        name: fileNameState,
+        file: uploadedFile,
+        cropperData: resultData.detail
+      });
+    }
+  }, [resultData, fileNameState, uploadedFile]);
   var dragMode = disabled || !isCropEnabled ? 'none' : 'move';
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Marger, {
     bottom: "1.5"
@@ -136,6 +157,7 @@ export var ImageCropper = function ImageCropper(_ref) {
     onUpload: function onUpload(e) {
       try {
         var file = e.currentTarget.files[0];
+        setUploadedFile(file);
 
         if (file.size > maxSize) {
           setStatus('error');
@@ -159,9 +181,11 @@ export var ImageCropper = function ImageCropper(_ref) {
       setImageSrc(imageSrc);
       setFileName(fileName);
       setErrorText('');
+      setUploadedFile(null);
       onChange({
         value: null,
-        name: null
+        name: null,
+        file: null
       });
     }
   })), /*#__PURE__*/React.createElement(Marger, {
@@ -196,12 +220,7 @@ export var ImageCropper = function ImageCropper(_ref) {
     zoomOnWheel: false,
     dragMode: dragMode,
     crop: function crop(result) {
-      onChange({
-        value: result.target.src,
-        base: getOr(result.srcElement.src)('originalTarget.src')(result),
-        name: fileNameState,
-        cropperData: result.detail
-      });
+      setResultData(result);
     }
   })))), isCropEnabled && !disabled && /*#__PURE__*/React.createElement(GridCol, {
     col: "12",

@@ -1,99 +1,78 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { TextInput } from '../../../components/form/text-input'
 import PropTypes from 'prop-types'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
+import classNames from 'classnames'
 
 const StyledTextInputWithUnit = styled.div`
   display: flex;
   width: 1%;
 
-  ${({ digits }) =>
-    !digits &&
-    css`
-      width: 100%;
-    `}
-`
-
-const StyledTextInput = styled(TextInput)`
-  transition: all 0.2s;
-
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    margin: 0;
-    -webkit-appearance: none;
+  &:not(.k-Form-TextInputWithUnit--hasDigits) {
+    width: 100%;
   }
-`
 
-const StyledInputUnit = styled.span`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: ${COLORS.background1};
-  border: ${pxToRem(2)} solid ${COLORS.line1};
-  border-left: 0;
-  border-radius: 0;
-  box-sizing: border-box;
-  padding: 0 ${pxToRem(15)};
-  color: ${COLORS.font1};
-  white-space: nowrap;
-  transition: all .2s;
-  font-size: ${stepToRem(0)};
-  ${TYPOGRAPHY.fontStyles.regular};
+  .k-Form-TextInputWithUnit__input {
+    transition: all 0.2s;
 
-  :focus {
-    border-color: ${COLORS.line2};
+    &[type='number'] {
+      appearance: textfield;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        margin: 0;
+        appearance: none;
+      }
+    }
+  }
+
+  .k-Form-TextInputWithUnit__unit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ${COLORS.background1};
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border-left: 0;
+    border-radius: 0;
+    box-sizing: border-box;
+    padding: 0 ${pxToRem(15)};
     color: ${COLORS.font1};
-  }
+    white-space: nowrap;
+    transition: all 0.2s;
+    font-size: ${stepToRem(0)};
+    ${TYPOGRAPHY.fontStyles.regular};
 
-  ${({ valid }) =>
-    valid &&
-    css`
+    &.k-Form-TextInputWithUnit__unit--valid {
       border-color: ${COLORS.tertiary2};
       color: ${COLORS.valid};
-    `}
-
-  ${({ error }) =>
-    error &&
-    css`
+    }
+    &.k-Form-TextInputWithUnit__unit--error {
       border-color: ${COLORS.error3};
       color: ${COLORS.error};
-    `}
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
+    }
+    &.k-Form-TextInputWithUnit__unit--disabled {
       color: ${COLORS.font2};
       background-color: ${COLORS.line1};
-    `}
-
-  ${({ tiny }) =>
-    tiny &&
-    css`
+    }
+    &.k-Form-TextInputWithUnit__unit--tiny {
       padding: 0 ${pxToRem(10)};
-    `}
-
-  ${({ huge }) =>
-    huge &&
-    css`
+    }
+    &.k-Form-TextInputWithUnit__unit--huge {
       padding: 0 ${pxToRem(20)};
-    `}
-
-  ${({ giant }) =>
-    giant &&
-    css`
+    }
+    &.k-Form-TextInputWithUnit__unit--giant {
       padding: 0 ${pxToRem(25)};
-    `}
+    }
 
-  ${({ unitWord }) =>
-    unitWord &&
-    css`
+    &.k-Form-TextInputWithUnit__unit--hasUnitWord {
       font-size: ${stepToRem(-1)};
-    `}
+    }
+  }
 
-  ${StyledTextInput}:focus + & {
+  &:focus-within .k-Form-TextInputWithUnit__unit {
     border-color: ${COLORS.line2};
     color: ${COLORS.font1};
   }
@@ -133,46 +112,37 @@ export class TextInputWithUnit extends PureComponent {
   }
 
   render() {
-    const {
-      type,
-      valid,
-      error,
-      tiny,
-      huge,
-      giant,
-      center,
-      disabled,
-      unit,
-      unitWord,
-      ...others
-    } = this.props
+    const { unit, unitWord, ...others } = this.props
 
     return (
-      <StyledTextInputWithUnit>
-        <StyledTextInput
+      <StyledTextInputWithUnit
+        className={classNames('k-Form-TextInputWithUnit', {
+          'k-Form-TextInputWithUnit--hasDigits': !!this.props.digits,
+        })}
+      >
+        <TextInput
           ref={input => {
             this.input = input
           }}
-          type={type}
-          valid={valid}
-          error={error}
-          tiny={tiny}
-          huge={huge}
-          giant={giant}
-          center={center}
-          disabled={disabled}
           {...others}
+          className={classNames(
+            'k-Form-TextInputWithUnit__input',
+            this.props.className,
+          )}
         />
-        <StyledInputUnit
-          valid={valid}
-          error={error}
-          disabled={disabled}
-          tiny={tiny}
-          huge={huge}
-          giant={giant}
+        <span
+          className={classNames('k-Form-TextInputWithUnit__unit', {
+            'k-Form-TextInputWithUnit__unit--valid': this.props.valid,
+            'k-Form-TextInputWithUnit__unit--error': this.props.error,
+            'k-Form-TextInputWithUnit__unit--disabled': this.props.disabled,
+            'k-Form-TextInputWithUnit__unit--tiny': this.props.tiny,
+            'k-Form-TextInputWithUnit__unit--huge': this.props.huge,
+            'k-Form-TextInputWithUnit__unit--giant': this.props.giant,
+            'k-Form-TextInputWithUnit__unit--hasUnitWord': !!unitWord,
+          })}
         >
           {unit || unitWord}
-        </StyledInputUnit>
+        </span>
       </StyledTextInputWithUnit>
     )
   }

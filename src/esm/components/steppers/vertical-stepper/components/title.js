@@ -1,7 +1,24 @@
+import React from 'react';
 import styled from 'styled-components';
-import { pxToRem } from '../../../../helpers/utils/typography';
+import PropTypes from 'prop-types';
+import { pxToRem, stepToRem } from '../../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../../constants/typography-config';
-export var Title = styled.p.withConfig({
-  displayName: "title__Title",
+import classNames from 'classnames';
+var StyledTitle = styled.p.withConfig({
+  displayName: "title__StyledTitle",
   componentId: "zdw2ns-0"
-})(["margin:0 0 ", ";", ";font-size:", ";line-height:normal;"], pxToRem(2), TYPOGRAPHY.fontStyles.regular, pxToRem(16));
+})(["margin:0 0 ", ";", ";font-size:", ";line-height:normal;&.k-Stepepers-VerticalStepper__title--orion{font-size:", ";}"], pxToRem(2), TYPOGRAPHY.fontStyles.regular, stepToRem(0), stepToRem(-1));
+export var Title = function Title(_ref) {
+  var variant = _ref.variant,
+      className = _ref.className,
+      children = _ref.children;
+  return /*#__PURE__*/React.createElement(StyledTitle, {
+    className: classNames("k-Stepepers-VerticalStepper__title--".concat(variant), className)
+  }, children);
+};
+Title.protoTypes = {
+  variant: PropTypes.oneOf(['andromeda', 'orion'])
+};
+Title.defaultProps = {
+  variant: 'andromeda'
+};
