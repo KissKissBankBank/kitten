@@ -7,9 +7,15 @@ const tagOptions = {
   Textarea: 'textarea',
 }
 
+const variantOptions = {
+  Andromeda: 'andromeda',
+  Orion: 'orion',
+}
+
 export const Default = () => (
   <TextInput
     tag={select('Tag', tagOptions, 'input')}
+    variant={select('Variant', variantOptions, 'andromeda')}
     valid={boolean('Valid', false)}
     error={boolean('Error', false)}
     disabled={boolean('Disabled', false)}

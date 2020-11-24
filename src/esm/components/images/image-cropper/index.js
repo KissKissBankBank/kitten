@@ -126,7 +126,7 @@ export var ImageCropper = function ImageCropper(_ref) {
     height: cropperHeight
   };
   useEffect(function () {
-    if (fileNameState && uploadedFile && resultData) {
+    if (fileNameState && resultData) {
       onChange({
         value: resultData.target.src,
         base: getOr(resultData.srcElement.src)('originalTarget.src')(resultData),

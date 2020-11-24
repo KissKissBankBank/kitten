@@ -11,7 +11,7 @@ export const DotIcon = ({ color, title, ...props }) => {
       {...props}
     >
       {title && <title>{title}</title>}
-      <circle cx="3" cy="3" r="3" fill={color}/>
+      <circle cx="3" cy="3" r="3" fill={color} />
     </svg>
   )
 }

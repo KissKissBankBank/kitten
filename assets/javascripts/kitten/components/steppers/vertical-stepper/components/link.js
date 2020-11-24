@@ -29,7 +29,7 @@ const StyledParagraph = styled.span`
   }
 
   .k-Stepepers-VerticalStepper__link--orion {
-      font-size: ${pxToRem(14)};
+    font-size: ${pxToRem(14)};
 
     :before {
       padding: 0 ${pxToRem(8)};

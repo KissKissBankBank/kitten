@@ -30,7 +30,9 @@ export const WithOrionVariant = () => {
           <VerticalStepper.Title variant="orion">ÉTAPE 1</VerticalStepper.Title>
           <Text weight="light" size="tiny">
             Décrivez-nous votre projet
-            <VerticalStepper.Link variant="orion">Modifier</VerticalStepper.Link>
+            <VerticalStepper.Link variant="orion">
+              Modifier
+            </VerticalStepper.Link>
           </Text>
         </VerticalStepper.Step>
 
@@ -48,20 +50,27 @@ export const WithOrionVariant = () => {
 
         <VerticalStepper.Step variant="orion" bridge />
 
-        <VerticalStepper.Step waiting statusProps={{ title: 'Étape à commencer' }} variant="orion">
-          <VerticalStepper.Title variant="orion">
-            ÉTAPE 3
-          </VerticalStepper.Title>
+        <VerticalStepper.Step
+          waiting
+          statusProps={{ title: 'Étape à commencer' }}
+          variant="orion"
+        >
+          <VerticalStepper.Title variant="orion">ÉTAPE 3</VerticalStepper.Title>
           <Text weight="light" size="tiny">
             Préparez votre campagne (contenu de votre page, contreparties...)
           </Text>
         </VerticalStepper.Step>
 
-        <VerticalStepper.Step disabled statusProps={{ title: 'Étape bloquée' }} variant="orion">
+        <VerticalStepper.Step
+          disabled
+          statusProps={{ title: 'Étape bloquée' }}
+          variant="orion"
+        >
           <VerticalStepper.Title variant="orion">ÉTAPE 4</VerticalStepper.Title>
 
           <Text weight="light" size="tiny">
-            Soumettez votre projet (votre coach vérifie votre projet et vous conseille)
+            Soumettez votre projet (votre coach vérifie votre projet et vous
+            conseille)
           </Text>
         </VerticalStepper.Step>
       </VerticalStepper>

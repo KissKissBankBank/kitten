@@ -91,6 +91,7 @@ export { ExpandBoard } from './components/expandable/expand-board'
 // Form
 export { Field } from './components/form/field'
 export { TextInputWithButton } from './components/form/text-input-with-button'
+export { CheckboxSet } from './components/form/checkbox-set'
 export { Checkbox } from './components/form/checkbox'
 export { CreditCardForm } from './components/form/credit-card-form'
 export { FormActions } from './components/form/form-actions'

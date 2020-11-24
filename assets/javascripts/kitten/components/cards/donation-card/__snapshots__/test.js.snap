@@ -2,13 +2,13 @@
 
 exports[`<DonationCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-jTzLTM cyfLMo"
+  className="sc-htoDjs hCpWUH"
 >
   <div
     className="sc-bdVaJa fdLNbY"
   >
     <div
-      className="k-Grid sc-fjdhpX bZEpQm"
+      className="k-Grid sc-dnqmqq ienetW"
     >
       <div
         className="k-Grid__col--12 k-Grid__col--10@m k-Grid__col--offset-1@m k-Grid__col--8@l k-Grid__col--offset-2@l"
@@ -17,7 +17,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="sc-bdVaJa bwDdrh"
         >
           <h2
-            className="sc-bwzfXH gWcALb sc-jzJRlG bNGPDf"
+            className="sc-bwzfXH gWcALb sc-iwsKbI ckVQZr"
           >
             Custom title mount
           </h2>
@@ -26,7 +26,7 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           className="sc-bdVaJa iDiPml"
         >
           <div
-            className="sc-htpNat tODhy k-HorizontalStroke sc-cSHVUG eRLmiG k-HorizontalStroke--size--big"
+            className="sc-htpNat tODhy k-HorizontalStroke sc-gZMcBi dSetrv k-HorizontalStroke--size--big"
             color="#222"
             style={
               Object {
@@ -37,73 +37,71 @@ exports[`<DonationCard /> by default matches with snapshot 1`] = `
           />
         </div>
         <form
-          className="sc-gZMcBi gijxyl"
+          className="sc-gzVnrw hovhA"
           onSubmit={[Function]}
         >
           <div
-            className="sc-bdVaJa kzCucd"
+            className="k-Grid k-Form-TextInputWithUnitForm__grid k-Form-TextInputWithUnitForm__grid--center k-u-margin-top-triple k-u-margin-bottom-triple"
           >
             <div
-              className="k-Grid sc-gqjmRU hbhdEb"
+              className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
             >
               <div
-                className="k-Grid__col--12 k-Grid__col--7@xs k-Grid__col--5@m"
+                className="sc-bdVaJa eGDgJX"
+              >
+                <label
+                  className="k-Label k-Label--micro"
+                  htmlFor="donation-amount"
+                  onClick={[Function]}
+                >
+                  Enter your amount
+                </label>
+              </div>
+              <div
+                className="sc-bdVaJa chkwVs"
               >
                 <div
-                  className="sc-bdVaJa eGDgJX"
+                  className="sc-EHOje OAorC k-Form-TextInputWithUnit"
                 >
-                  <label
-                    className="k-Label k-Label--micro"
-                    htmlFor="donation-amount"
-                    onClick={[Function]}
+                  <input
+                    autoComplete="off"
+                    className="sc-bxivhb faAfYI k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
+                    defaultValue=""
+                    disabled={false}
+                    id="donation-amount"
+                    name="text"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    placeholder="Your amount"
+                    type="number"
+                  />
+                  <span
+                    className="k-Form-TextInputWithUnit__unit"
                   >
-                    Enter your amount
-                  </label>
-                </div>
-                <div
-                  className="sc-bdVaJa chkwVs"
-                >
-                  <div
-                    className="sc-gzVnrw iptKoy"
-                  >
-                    <input
-                      autoComplete="off"
-                      className="sc-ifAKCX hETjNG sc-htoDjs icREAh"
-                      defaultValue=""
-                      disabled={false}
-                      id="donation-amount"
-                      name="text"
-                      onBlur={[Function]}
-                      onChange={[Function]}
-                      onFocus={[Function]}
-                      placeholder="Your amount"
-                      type="number"
-                    />
-                    <span
-                      className="sc-dnqmqq kVvoRh"
-                      disabled={false}
-                    >
-                      €
-                    </span>
-                  </div>
+                    €
+                  </span>
                 </div>
               </div>
             </div>
           </div>
           <div
-            className="k-Grid sc-gqjmRU hbhdEb"
+            className="k-Grid"
           >
-            <button
-              aria-label="To contribute"
-              className="k-Button k-Button--helium k-Button--big sc-VigVT bLnQql"
-              disabled={false}
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              tabIndex={null}
-              type="submit"
+            <div
+              className="k-Grid__col--12 k-u-align-center"
             >
-              To contribute
-            </button>
+              <button
+                className="k-Button k-Button--helium k-Button--big k-Form-TextInputWithUnitForm__submit k-Form-TextInputWithUnitForm__grid--default"
+                disabled={false}
+                onMouseEnter={[Function]}
+                onMouseLeave={[Function]}
+                tabIndex={null}
+                type="submit"
+              >
+                To contribute
+              </button>
+            </div>
           </div>
         </form>
       </div>

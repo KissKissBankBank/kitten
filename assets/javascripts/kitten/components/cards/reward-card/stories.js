@@ -1,7 +1,5 @@
 import React from 'react'
-import { text, boolean, object ,
-  select,
-} from '@storybook/addon-knobs'
+import { text, boolean, object, select } from '@storybook/addon-knobs'
 import { RewardCard as RewardCardComponent } from './index'
 import { Container } from '../../../components/grid/container'
 import { Grid, GridCol } from '../../../components/grid/grid'
@@ -87,18 +85,17 @@ export const New_RewardCard = () => {
             withoutBorder={boolean('withoutBorder', false, versionGroupId)}
             disabled={disabled}
           >
-          <RewardCardComponent.Image
-            src={text(
-              'Reward image src',
-              'http://placekitten.com/800/500',
-              contentGroupId,
-            )}
-            alt={text('Reward image alt', 'My reward', contentGroupId)}
-            disabled={disabled}
-          />
+            <RewardCardComponent.Image
+              src={text(
+                'Reward image src',
+                'http://placekitten.com/800/500',
+                contentGroupId,
+              )}
+              alt={text('Reward image alt', 'My reward', contentGroupId)}
+              disabled={disabled}
+            />
 
             <RewardCardComponent.RowContent>
-              
               {hasRewardLabel && (
                 <Text
                   color="font1"
@@ -124,29 +121,24 @@ export const New_RewardCard = () => {
               <List>
                 <RewardCardComponent.Info
                   key="Contributors"
-                  label={text(
-                    'Info 1 label:',
-                    '35',
-                    contentGroupId,
-                  )}
+                  label={text('Info 1 label:', '35', contentGroupId)}
                   value={text('Info 1 value:', 'contributeurs', contentGroupId)}
                   disabled={disabled}
                 />
 
                 <RewardCardComponent.Info
                   key="Delivery"
-                  label={text('Info 3 label:','Livraison estimée', contentGroupId)}
-                  value={text(
-                    'Info 3 value:',
-                    'Janvier 2019',
+                  label={text(
+                    'Info 3 label:',
+                    'Livraison estimée',
                     contentGroupId,
                   )}
+                  value={text('Info 3 value:', 'Janvier 2019', contentGroupId)}
                   withMarginBottom={false}
                   disabled={disabled}
                 />
               </List>
             </RewardCardComponent.RowContent>
- 
           </RewardCardComponent>
         </GridCol>
       </Grid>

@@ -4,10 +4,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix `ImageCropper` `onChange` firing on uploaded images.
-- Feature: Add `variant` prop to `VerticalStepper`, with default value `andromeda`.
-- Feature: Add `DotIcon` component.
 - Feature: Add component `DropdownSelect`, has `combobox` boolean prop.
+- Fix: Refactor `Checkbox` and `CheckboxSet` components.
+- Feature: Add `label` prop to `Checkbox` and `CheckboxSet` components and
+  display custom text if `children` are passed in addition to `label`.
+- Feature: Add `variant` prop to `RadioButton`, with default value `andromeda`.
+- Feature: Add `design` prop to `RadioButton`, with default value `disc`.
+- Feature: Better accessibility on `RadioButtonSet`.
+- Feature: Add `variant` prop to `TextInput` with `andromeda` as default value.
+
+## [2.98.0] - 2020-11-23
+
+Features:
+- Add `variant` prop to `VerticalStepper`, with default value `andromeda`.
+- Add `DotIcon` component.
+
+Fix:
+- `ImageCropper` `onChange` firing on uploaded images.
 
 ## [2.97.0] - 2020-11-16
 
