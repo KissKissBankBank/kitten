@@ -1,28 +1,33 @@
-import React from 'react';
-import styled from 'styled-components';
-import COLORS from '../../../constants/colors-config';
-import { pxToRem } from '../../../helpers/utils/typography';
+import React, { useContext } from 'react';
 import { Context } from './context';
-var HeaderStyled = styled.button.withConfig({
-  displayName: "header__HeaderStyled",
-  componentId: "sc-1djz5wl-0"
-})(["display:block;margin:0;width:100%;padding:", ";min-height:", ";box-sizing:border-box;overflow:visible;background:transparent;border:", " solid ", ";border-radius:", ";color:inherit;font:inherit;text-align:inherit;line-height:normal;-webkit-appearance:none;cursor:pointer;outline:none;&[aria-expanded='true']{border-bottom-left-radius:0;border-bottom-right-radius:0;}"], pxToRem(20), pxToRem(30), pxToRem(2), COLORS.line1, pxToRem(3));
+import { ArrowIcon } from '../../../components/icons/arrow-icon';
 export var Header = function Header(_ref) {
   var id = _ref.id,
-      children = _ref.children;
-  return /*#__PURE__*/React.createElement(Context.Consumer, null, function (_ref2) {
-    var updateSelectedItem = _ref2.updateSelectedItem,
-        selectedItem = _ref2.selectedItem,
-        componentId = _ref2.componentId;
-    return /*#__PURE__*/React.createElement(HeaderStyled, {
-      onClick: function onClick() {
-        return updateSelectedItem(id);
-      },
-      role: "button",
-      "aria-expanded": selectedItem === id,
-      "aria-disabled": selectedItem === id,
-      id: "".concat(componentId, "-header").concat(id),
-      "aria-controls": "".concat(componentId, "-content").concat(id)
-    }, children);
-  });
+      children = _ref.children,
+      index = _ref.index;
+
+  var _useContext = useContext(Context),
+      updateSelectedItem = _useContext.updateSelectedItem,
+      selectedItem = _useContext.selectedItem,
+      componentId = _useContext.componentId,
+      closeOnClick = _useContext.closeOnClick;
+
+  return /*#__PURE__*/React.createElement("button", {
+    className: "k-Accordeon__header",
+    onClick: function onClick() {
+      return updateSelectedItem(index);
+    },
+    role: "button",
+    "aria-expanded": selectedItem === index,
+    "aria-disabled": closeOnClick ? null : selectedItem === index,
+    id: "".concat(componentId, "-").concat(id, "_header"),
+    "aria-controls": "".concat(componentId, "-").concat(id, "_content")
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "k-Accordeon__header__content"
+  }, children), /*#__PURE__*/React.createElement("span", {
+    className: "k-Accordeon__header__arrow"
+  }, /*#__PURE__*/React.createElement(ArrowIcon, {
+    direction: selectedItem === index ? 'top' : 'bottom',
+    "aria-hidden": true
+  })));
 };

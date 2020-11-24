@@ -1,7 +1,7 @@
-import React from 'react';
-export var Context = React.createContext({
+import { createContext } from 'react';
+export var Context = createContext({
   selectedItem: null,
   updateSelectedItem: function updateSelectedItem() {},
-  isAnimated: true,
-  componentId: 'accordeon'
+  componentId: 'accordeon',
+  closeOnClick: false
 });

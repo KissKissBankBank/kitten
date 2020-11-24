@@ -1,11 +1,12 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Header } from './header';
 import { Content } from './content';
 import { getReactElementsByType } from '../../../helpers/react/react-elements';
 export var Item = function Item(_ref) {
   var children = _ref.children,
-      id = _ref.id;
+      id = _ref.id,
+      index = _ref.index;
   var header = getReactElementsByType({
     children: children,
     type: Header
@@ -14,14 +15,18 @@ export var Item = function Item(_ref) {
     children: children,
     type: Content
   });
-  return /*#__PURE__*/React.createElement(Fragment, null, header[0] && React.cloneElement(header[0], {
-    id: id
+  return /*#__PURE__*/React.createElement("div", {
+    className: "k-Accordeon__item"
+  }, header[0] && React.cloneElement(header[0], {
+    id: id,
+    index: index
   }), content[0] && React.cloneElement(content[0], {
-    id: id
+    id: id,
+    index: index
   }));
 };
 Item.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  id: PropTypes.string
 };
 Item.defaultProps = {
   id: null
