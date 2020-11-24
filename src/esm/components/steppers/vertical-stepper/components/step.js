@@ -1,71 +1,69 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { pxToRem } from '../../../../helpers/utils/typography';
 import COLORS from '../../../../constants/colors-config';
 import { Status } from './status';
+import classNames from 'classnames';
 import { STEP_CLASSNAME, LINK_CLASSNAME } from '../index';
-export var Step = /*#__PURE__*/function (_Component) {
-  _inherits(Step, _Component);
+export var Step = function Step(_ref) {
+  var success = _ref.success,
+      valid = _ref.valid,
+      error = _ref.error,
+      waiting = _ref.waiting,
+      disabled = _ref.disabled,
+      statusProps = _ref.statusProps,
+      children = _ref.children,
+      className = _ref.className,
+      variant = _ref.variant,
+      bridge = _ref.bridge,
+      other = _objectWithoutProperties(_ref, ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "variant", "bridge"]);
 
-  var _super = _createSuper(Step);
-
-  function Step() {
-    _classCallCheck(this, Step);
-
-    return _super.apply(this, arguments);
-  }
-
-  _createClass(Step, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          success = _this$props.success,
-          valid = _this$props.valid,
-          error = _this$props.error,
-          waiting = _this$props.waiting,
-          disabled = _this$props.disabled,
-          statusProps = _this$props.statusProps,
-          children = _this$props.children,
-          other = _objectWithoutProperties(_this$props, ["success", "valid", "error", "waiting", "disabled", "statusProps", "children"]);
-
-      return /*#__PURE__*/React.createElement(StyledItem, null, /*#__PURE__*/React.createElement(StyledLink, _extends({
-        as: other.href ? 'a' : 'span'
-      }, other), /*#__PURE__*/React.createElement(Status, _extends({
-        success: success,
-        valid: valid,
-        error: error,
-        waiting: waiting,
-        disabled: disabled
-      }, statusProps)), /*#__PURE__*/React.createElement(StyledContent, {
-        error: error,
-        disabled: disabled,
-        className: STEP_CLASSNAME
-      }, children)));
-    }
-  }]);
-
-  return Step;
-}(Component);
+  return /*#__PURE__*/React.createElement(StyledItem, {
+    className: classNames('k-Steppers--VerticalStepper__item', {
+      'k-Steppers--VerticalStepper__item--hasActiveLine': success
+    })
+  }, /*#__PURE__*/React.createElement(StyledLink, _extends({
+    as: other.href ? 'a' : 'span'
+  }, other, {
+    variant: variant
+  }), /*#__PURE__*/React.createElement(Status, _extends({
+    success: success,
+    valid: valid,
+    error: error,
+    waiting: waiting,
+    disabled: disabled,
+    bridge: bridge,
+    variant: variant
+  }, statusProps)), /*#__PURE__*/React.createElement("div", {
+    error: error,
+    className: classNames(STEP_CLASSNAME, 'k-Steppers--VerticalStepper__step--link--content', {
+      'k-Steppers--VerticalStepper__step--link--content--disabled': disabled
+    }, className)
+  }, children)));
+};
+var StyledItem = styled.li.withConfig({
+  displayName: "step__StyledItem",
+  componentId: "sc-1you76f-0"
+})(["padding:", " 0;&:first-of-type{margin-top:0;}&:last-of-type{margin-bottom:0;}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}"], pxToRem(15));
+var StyledLink = styled.a.withConfig({
+  displayName: "step__StyledLink",
+  componentId: "sc-1you76f-1"
+})(["display:inline-flex;align-items:center;", " .k-Steppers--VerticalStepper__step--link--content{display:flex;flex-direction:column;justify-content:center;flex:1;color:", ";&.k-Steppers--VerticalStepper__step--link--content--disabled{color:", ";}}"], function (_ref2) {
+  var as = _ref2.as,
+      onClick = _ref2.onClick;
+  return (as === 'a' || onClick) && css(["cursor:pointer;text-decoration:none;.", "{transition:transform 0.4s;}.", "{transition:color 0.4s;}:hover,:focus,:active{.", "{transform:translateX(", ");}.", "{color:", ";}}"], STEP_CLASSNAME, LINK_CLASSNAME, STEP_CLASSNAME, pxToRem(5), LINK_CLASSNAME, COLORS.primary3);
+}, COLORS.font1, COLORS.font2);
 Step.propTypes = {
   href: PropTypes.string,
   valid: PropTypes.bool,
   success: PropTypes.bool,
   error: PropTypes.bool,
   waiting: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  bridge: PropTypes.bool
 };
 Step.defaultProps = {
   href: null,
@@ -73,24 +71,6 @@ Step.defaultProps = {
   success: false,
   error: false,
   waiting: false,
-  disabled: false
+  disabled: false,
+  bridge: false
 };
-var StyledItem = styled.li.withConfig({
-  displayName: "step__StyledItem",
-  componentId: "sc-1you76f-0"
-})(["margin ", " 0;"], pxToRem(30));
-var StyledLink = styled.a.withConfig({
-  displayName: "step__StyledLink",
-  componentId: "sc-1you76f-1"
-})(["display:inline-flex;", ""], function (_ref) {
-  var as = _ref.as,
-      onClick = _ref.onClick;
-  return (as === 'a' || onClick) && css(["cursor:pointer;text-decoration:none;.", "{transition:transform 0.4s;}.", "{transition:color 0.4s;}:hover,:focus,:active{.", "{transform:translateX(", ");}.", "{color:", ";}}"], STEP_CLASSNAME, LINK_CLASSNAME, STEP_CLASSNAME, pxToRem(5), LINK_CLASSNAME, COLORS.primary3);
-});
-var StyledContent = styled.div.withConfig({
-  displayName: "step__StyledContent",
-  componentId: "sc-1you76f-2"
-})(["display:flex;flex-direction:column;justify-content:center;flex:1;color:", ";", ""], COLORS.font1, function (_ref2) {
-  var disabled = _ref2.disabled;
-  return disabled && css(["color:", ";"], COLORS.font2);
-});

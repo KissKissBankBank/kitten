@@ -2,17 +2,16 @@
 
 exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX bCBibu"
+  className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-EHOje kAxTfU"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
     type="number"
   />
   <span
-    className="sc-bZQynM TJfWV"
-    disabled={false}
+    className="k-Form-TextInputWithUnit__unit"
   >
     λ
   </span>
@@ -21,17 +20,16 @@ exports[`<TextInputWithUnit /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX bCBibu"
+  className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-EHOje kAxTfU"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
     disabled={true}
     name="text"
     type="number"
   />
   <span
-    className="sc-bZQynM dSWnSJ"
-    disabled={true}
+    className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--disabled"
   >
     λ
   </span>
@@ -40,17 +38,16 @@ exports[`<TextInputWithUnit /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX bCBibu"
+  className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
 >
   <input
-    className="sc-bwzfXH begKAY sc-EHOje kAxTfU"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--error"
     disabled={false}
     name="text"
     type="number"
   />
   <span
-    className="sc-bZQynM bsuCEw"
-    disabled={false}
+    className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--error"
   >
     λ
   </span>
@@ -59,10 +56,10 @@ exports[`<TextInputWithUnit /> with error prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX bCBibu"
+  className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-EHOje kAxTfU"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
     type="number"
@@ -70,8 +67,7 @@ exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
     €
   </input>
   <span
-    className="sc-bZQynM TJfWV"
-    disabled={false}
+    className="k-Form-TextInputWithUnit__unit"
   >
     λ
   </span>
@@ -80,17 +76,16 @@ exports[`<TextInputWithUnit /> with unit prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithUnit /> with valid prop matches with snapshot 1`] = `
 <div
-  className="sc-ifAKCX bCBibu"
+  className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
 >
   <input
-    className="sc-bwzfXH hexTtb sc-EHOje kAxTfU"
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda k-Form-TextInput--valid"
     disabled={false}
     name="text"
     type="number"
   />
   <span
-    className="sc-bZQynM eKWFmD"
-    disabled={false}
+    className="k-Form-TextInputWithUnit__unit k-Form-TextInputWithUnit__unit--valid"
   >
     λ
   </span>

@@ -10,7 +10,7 @@ export const RewardCardInfo = ({
   disabled,
 }) => (
   <Text
-    size="tiny"
+    size="micro"
     color="font1"
     weight="regular"
     className={classNames('k-RewardCard__infos', {
