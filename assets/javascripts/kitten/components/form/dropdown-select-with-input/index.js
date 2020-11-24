@@ -86,8 +86,11 @@ const StyledDropdownSelectWithInput = styled.div`
 
   .k-Form-DropdownSelectWithInput__content__icon {
     margin-right: ${pxToRem(15)};
+    display: flex;
+    align-items: center;
 
     svg {
+      display: block;
       max-width: ${pxToRem(17)};
       max-height: ${pxToRem(17)};
     }
@@ -203,10 +206,14 @@ const StyledDropdownSelectWithInput = styled.div`
 
   }
   .k-Form-DropdownSelectWithInput__item__icon {
-    width: ${pxToRem(20)};
     margin-right: ${pxToRem(20)};
+    min-width: ${pxToRem(20)};
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     svg {
+      display: block;
       max-width:100%;
     }
   }
