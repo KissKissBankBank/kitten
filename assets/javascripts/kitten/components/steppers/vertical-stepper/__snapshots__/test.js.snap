@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
-.c4 {
+.c3.k-Steppers--VerticalStepper__statusContainer--orion {
+  border: 0.375rem solid #fff;
+}
+
+.c3 .k-Steppers--VerticalStepper__status {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -23,172 +27,148 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   box-sizing: border-box;
   margin-right: 0.9375rem;
   background-color: #fff;
-  border: 2px solid #eee;
+  border: 0.125rem solid #eee;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
   background-color: #61d079;
   border-color: #61d079;
 }
 
-.c9 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
-  box-sizing: border-box;
-  margin-right: 0.9375rem;
-  background-color: #fff;
-  border: 2px solid #eee;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
   background-color: #19b4fa;
   border-color: #19b4fa;
 }
 
-.c12 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
-  box-sizing: border-box;
-  margin-right: 0.9375rem;
-  background-color: #fff;
-  border: 2px solid #eee;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
   color: #ff0046;
   border-color: #ffb2c7;
 }
 
-.c14 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 1.875rem;
-  height: 1.875rem;
-  border-radius: 1.875rem;
-  box-sizing: border-box;
-  margin-right: 0.9375rem;
-  background-color: #fff;
-  border: 2px solid #eee;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--waiting {
   color: #19b4fa;
   border-color: #bae8fd;
 }
 
-.c15 {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
+  color: #fff;
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
+  box-sizing: border-box;
+  width: 100%;
+  border: 0.1875rem solid #fff;
+  z-index: 1;
+  padding: 0.1875rem;
   width: 1.875rem;
   height: 1.875rem;
   border-radius: 1.875rem;
-  box-sizing: border-box;
-  margin-right: 0.9375rem;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
+  background-color: #19b4fa;
+  border-color: #19b4fa;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
   background-color: #fff;
-  border: 2px solid #eee;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.875rem;
+  border-color: #19b4fa;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
+  background-color: #fff;
+  border-color: #eee;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+  background-color: #fff;
+  border-color: #eee;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 0.9375rem;
+  margin-left: 0.4375rem;
+  margin-right: 1.25rem;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge {
+  height: 1.3125rem;
+  position: relative;
+  border: 0;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge::before {
+  width: 0.125rem;
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 0.1875rem dotted #eee;
+}
+
+.c1 {
+  padding: 0.9375rem 0;
+}
+
+.c1:first-of-type {
+  margin-top: 0;
+}
+
+.c1:last-of-type {
+  margin-bottom: 0;
+}
+
+.c1 li:not(:last-of-type) {
+  margin: 0 !important;
+}
+
+.c1 li:not(:last-of-type)::after {
+  display: none;
 }
 
 .c2 {
-  margin: 1.875rem 0;
-}
-
-.c3 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c3 .VerticalStepper__step {
+.c2 .VerticalStepper__step {
   -webkit-transition: -webkit-transform 0.4s;
   -webkit-transition: transform 0.4s;
   transition: transform 0.4s;
 }
 
-.c3 .VerticalStepper__link {
+.c2 .VerticalStepper__link {
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
 }
 
-.c3:hover .VerticalStepper__step,
-.c3:focus .VerticalStepper__step,
-.c3:active .VerticalStepper__step {
+.c2:hover .VerticalStepper__step,
+.c2:focus .VerticalStepper__step,
+.c2:active .VerticalStepper__step {
   -webkit-transform: translateX(0.3125rem);
   -ms-transform: translateX(0.3125rem);
   transform: translateX(0.3125rem);
 }
 
-.c3:hover .VerticalStepper__link,
-.c3:focus .VerticalStepper__link,
-.c3:active .VerticalStepper__link {
+.c2:hover .VerticalStepper__link,
+.c2:focus .VerticalStepper__link,
+.c2:active .VerticalStepper__link {
   color: #0496cc;
 }
 
-.c5 {
+.c2 .k-Steppers--VerticalStepper__step--link--content {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -206,7 +186,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   color: #222;
 }
 
-.c6 {
+.c2 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
+  color: #b8b8b8;
+}
+
+.c4 {
   margin: 0 0 0.125rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -214,23 +198,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   line-height: normal;
 }
 
-.c7 {
+.c4.k-Stepepers-VerticalStepper__title--orion {
+  font-size: 0.8888888888888888rem;
+}
+
+.c5 {
   margin: 0;
   padding: 0;
   line-height: 1;
 }
 
-.c8 {
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: normal;
-  color: #19b4fa;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c13 {
+.c5 .k-Stepepers-VerticalStepper__link {
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.75rem;
@@ -242,13 +220,24 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   transition: color 0.4s;
 }
 
-.c13:hover,
-.c13:focus,
-.c13:active {
+.c5 .k-Stepepers-VerticalStepper__link:hover,
+.c5 .k-Stepepers-VerticalStepper__link:focus,
+.c5 .k-Stepepers-VerticalStepper__link:active {
   color: #0496cc;
 }
 
-.c10 {
+.c5 .k-Stepepers-VerticalStepper__link--orion {
+  font-size: 0.875rem;
+}
+
+.c5 .k-Stepepers-VerticalStepper__link--orion:before {
+  padding: 0 0.5rem;
+  content: '●';
+  font-size: 0.5rem;
+  color: #222;
+}
+
+.c6 {
   margin: 0.3125rem 0 0.625rem;
   padding: 0;
   font-family: Maax,Helvetica,Arial,sans-serif;
@@ -257,7 +246,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   line-height: normal;
 }
 
-.c11 {
+.c7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -271,7 +260,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   list-style: none;
 }
 
-.c11:before {
+.c7:before {
   padding-right: 0.625rem;
   content: '●';
   font-size: 0.5rem;
@@ -282,268 +271,788 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   padding: 1px 0;
 }
 
-.c1 {
+.c0 .k-Steppers--VerticalStepper {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.c1:before {
+.c0 .k-Steppers--VerticalStepper:before {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0.875rem;
   z-index: -1;
   content: '';
-  border-left: 2px dashed #eee;
+  border-left: 0.125rem dashed #eee;
+}
+
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion:before {
+  border-left: none;
+}
+
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type) {
+  position: relative;
+}
+
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
+  content: '';
+  position: absolute;
+  left: 1.1875rem;
+  top: 1.875rem;
+  background-color: #eee;
+  width: 0.1875rem;
+  height: 100%;
+  z-index: -1;
+}
+
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
+  background-color: #19b4fa;
 }
 
 <nav
   className="c0"
 >
   <ul
-    className="c1"
+    className="k-Steppers--VerticalStepper k-Steppers--VerticalStepper__andromeda"
     role="tablist"
   >
     <li
-      className="c2"
+      className="c1 k-Steppers--VerticalStepper__item k-Steppers--VerticalStepper__item--hasActiveLine"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
-        <span
-          className="c4"
-          disabled={false}
-        >
-          <svg
-            fill="#fff"
-            height="8"
-            viewBox="0 0 11 8"
-            width="10"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
-            />
-          </svg>
-        </span>
         <div
-          className="c5 VerticalStepper__step"
-          disabled={false}
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
+        >
+          <span
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--success"
+          >
+            <svg
+              fill="#fff"
+              height="8"
+              viewBox="0 0 11 8"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
+          error={false}
         >
           <p
-            className="c6"
+            className="c4 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
-          <p
-            className="c7"
+          <span
+            className="c5"
           >
             <span
-              className="c8 VerticalStepper__link"
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--andromeda"
             >
               Link
             </span>
-          </p>
+          </span>
         </div>
       </a>
     </li>
     <li
-      className="c2"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
-        <span
-          className="c9"
-          disabled={false}
-        >
-          <svg
-            fill="#fff"
-            height="8"
-            viewBox="0 0 11 8"
-            width="10"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
-            />
-          </svg>
-        </span>
         <div
-          className="c5 VerticalStepper__step"
-          disabled={false}
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
+        >
+          <span
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--valid"
+          >
+            <svg
+              fill="#fff"
+              height="8"
+              viewBox="0 0 11 8"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
+          error={false}
         >
           <p
-            className="c6"
+            className="c4 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <ul
-            className="c10"
+            className="c6"
           >
             <li
-              className="c11"
+              className="c7"
             >
               Item
             </li>
             <li
-              className="c11"
+              className="c7"
             >
               Item
             </li>
             <li
-              className="c11"
+              className="c7"
             >
               …
             </li>
           </ul>
-          <p
-            className="c7"
+          <span
+            className="c5"
           >
             <span
-              className="c8 VerticalStepper__link"
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--andromeda"
             >
               Link
             </span>
-          </p>
+          </span>
         </div>
       </a>
     </li>
     <li
-      className="c2"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
-        <span
-          className="c12"
-          disabled={false}
-        >
-          <svg
-            height="10"
-            width="2"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
-              fill="#ff0046"
-              fillRule="evenodd"
-            />
-          </svg>
-        </span>
         <div
-          className="c5 VerticalStepper__step"
-          disabled={false}
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
+        >
+          <span
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--error"
+          >
+            <svg
+              height="10"
+              width="2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
+                fill="#ff0046"
+                fillRule="evenodd"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
+          error={true}
         >
           <p
-            className="c6"
+            className="c4 k-Stepepers-VerticalStepper__title--andromeda"
           >
             Title
           </p>
           <ul
-            className="c10"
+            className="c6"
           >
             <li
-              className="c11"
+              className="c7"
             >
               Item
             </li>
             <li
-              className="c11"
+              className="c7"
             >
               Item
             </li>
           </ul>
-          <p
-            className="c7"
+          <span
+            className="c5"
           >
-            <a
-              className="c13 VerticalStepper__link"
+            <span
+              as="a"
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--andromeda"
               href="#"
             >
               Link
-            </a>
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li
+      className="c1 k-Steppers--VerticalStepper__item"
+    >
+      <a
+        className="c2"
+        href="#"
+      >
+        <div
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
+        >
+          <span
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--waiting"
+          >
+            <svg
+              height="4"
+              viewBox="0 0 13 3"
+              width="13"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 0h3v3H5V0zM0 0h3v3H0V0zm10 0h3v3h-3V0z"
+                fill="#19b4fa"
+                fillRule="nonzero"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
+          error={false}
+        >
+          <p
+            className="c4 k-Stepepers-VerticalStepper__title--andromeda"
+          >
+            Title
+          </p>
+          <span
+            className="c5"
+          >
+            <span
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--andromeda"
+            >
+              Link
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li
+      className="c1 k-Steppers--VerticalStepper__item"
+    >
+      <a
+        className="c2"
+        href="#"
+      >
+        <div
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--andromeda"
+        >
+          <span
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda"
+          >
+            <svg
+              fill="#fff"
+              height="8"
+              viewBox="0 0 11 8"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
+          error={false}
+        >
+          <p
+            className="c4 k-Stepepers-VerticalStepper__title--andromeda"
+          >
+            Title
+          </p>
+          <span
+            className="c5"
+          >
+            <span
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--andromeda"
+            >
+              Link
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</nav>
+`;
+
+exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
+.c3.k-Steppers--VerticalStepper__statusContainer--orion {
+  border: 0.375rem solid #fff;
+}
+
+.c3 .k-Steppers--VerticalStepper__status {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 1.875rem;
+  box-sizing: border-box;
+  margin-right: 0.9375rem;
+  background-color: #fff;
+  border: 0.125rem solid #eee;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
+  background-color: #61d079;
+  border-color: #61d079;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
+  background-color: #19b4fa;
+  border-color: #19b4fa;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
+  color: #ff0046;
+  border-color: #ffb2c7;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--waiting {
+  color: #19b4fa;
+  border-color: #bae8fd;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
+  color: #fff;
+  border-color: #d8d8d8;
+  background-color: #d8d8d8;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
+  box-sizing: border-box;
+  width: 100%;
+  border: 0.1875rem solid #fff;
+  z-index: 1;
+  padding: 0.1875rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 1.875rem;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
+  background-color: #19b4fa;
+  border-color: #19b4fa;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
+  background-color: #fff;
+  border-color: #19b4fa;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
+  background-color: #fff;
+  border-color: #eee;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
+  background-color: #fff;
+  border-color: #eee;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  border-radius: 0.9375rem;
+  margin-left: 0.4375rem;
+  margin-right: 1.25rem;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge {
+  height: 1.3125rem;
+  position: relative;
+  border: 0;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--bridge::before {
+  width: 0.125rem;
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-left: 0.1875rem dotted #eee;
+}
+
+.c1 {
+  padding: 0.9375rem 0;
+}
+
+.c1:first-of-type {
+  margin-top: 0;
+}
+
+.c1:last-of-type {
+  margin-bottom: 0;
+}
+
+.c1 li:not(:last-of-type) {
+  margin: 0 !important;
+}
+
+.c1 li:not(:last-of-type)::after {
+  display: none;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2 .VerticalStepper__step {
+  -webkit-transition: -webkit-transform 0.4s;
+  -webkit-transition: transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.c2 .VerticalStepper__link {
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.c2:hover .VerticalStepper__step,
+.c2:focus .VerticalStepper__step,
+.c2:active .VerticalStepper__step {
+  -webkit-transform: translateX(0.3125rem);
+  -ms-transform: translateX(0.3125rem);
+  transform: translateX(0.3125rem);
+}
+
+.c2:hover .VerticalStepper__link,
+.c2:focus .VerticalStepper__link,
+.c2:active .VerticalStepper__link {
+  color: #0496cc;
+}
+
+.c2 .k-Steppers--VerticalStepper__step--link--content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #222;
+}
+
+.c2 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
+  color: #b8b8b8;
+}
+
+.c4 {
+  margin: 0 0 0.125rem;
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: normal;
+}
+
+.c4.k-Stepepers-VerticalStepper__title--orion {
+  font-size: 0.8888888888888888rem;
+}
+
+.c5 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.c5 .k-Stepepers-VerticalStepper__link {
+  font-family: Maax,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: normal;
+  color: #19b4fa;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.c5 .k-Stepepers-VerticalStepper__link:hover,
+.c5 .k-Stepepers-VerticalStepper__link:focus,
+.c5 .k-Stepepers-VerticalStepper__link:active {
+  color: #0496cc;
+}
+
+.c5 .k-Stepepers-VerticalStepper__link--orion {
+  font-size: 0.875rem;
+}
+
+.c5 .k-Stepepers-VerticalStepper__link--orion:before {
+  padding: 0 0.5rem;
+  content: '●';
+  font-size: 0.5rem;
+  color: #222;
+}
+
+.c0 {
+  position: relative;
+  padding: 1px 0;
+}
+
+.c0 .k-Steppers--VerticalStepper {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c0 .k-Steppers--VerticalStepper:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.875rem;
+  z-index: -1;
+  content: '';
+  border-left: 0.125rem dashed #eee;
+}
+
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion:before {
+  border-left: none;
+}
+
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type) {
+  position: relative;
+}
+
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
+  content: '';
+  position: absolute;
+  left: 1.1875rem;
+  top: 1.875rem;
+  background-color: #eee;
+  width: 0.1875rem;
+  height: 100%;
+  z-index: -1;
+}
+
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
+  background-color: #19b4fa;
+}
+
+<nav
+  className="c0"
+>
+  <ul
+    className="k-Steppers--VerticalStepper k-Steppers--VerticalStepper__orion"
+    role="tablist"
+  >
+    <li
+      className="c1 k-Steppers--VerticalStepper__item k-Steppers--VerticalStepper__item--hasActiveLine"
+    >
+      <a
+        className="c2"
+        href="#"
+      >
+        <div
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
+        >
+          <span
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--success"
+          >
+            <svg
+              fill="#fff"
+              height="8"
+              viewBox="0 0 11 8"
+              width="10"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M.904 4.06l1.414-1.414L4.44 4.768 8.682.525l1.414 1.414L4.44 7.596.904 4.061z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
+          error={false}
+        >
+          <p
+            className="c4 k-Stepepers-VerticalStepper__title--orion"
+          >
+            Title
+          </p>
+          <span
+            className="c5"
+          >
+            <span
+              className="VerticalStepper__link k-Stepepers-VerticalStepper__link k-Stepepers-VerticalStepper__link--orion"
+            >
+              Link
+            </span>
+          </span>
+        </div>
+      </a>
+    </li>
+    <li
+      className="c1 k-Steppers--VerticalStepper__item"
+    >
+      <a
+        className="c2"
+        href="#"
+      >
+        <div
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
+        >
+          <span
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--valid"
+          >
+            <svg
+              height="6"
+              viewBox="0 0 6 6"
+              width="6"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                cx="3"
+                cy="3"
+                fill="#19b4fa"
+                r="3"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
+          error={false}
+        >
+          <p
+            className="c4 k-Stepepers-VerticalStepper__title--orion"
+          >
+            Title
           </p>
         </div>
       </a>
     </li>
     <li
-      className="c2"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
-        <span
-          className="c14"
-          disabled={false}
-        >
-          <svg
-            height="4"
-            viewBox="0 0 13 3"
-            width="13"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5 0h3v3H5V0zM0 0h3v3H0V0zm10 0h3v3h-3V0z"
-              fill="#19b4fa"
-              fillRule="nonzero"
-            />
-          </svg>
-        </span>
         <div
-          className="c5 VerticalStepper__step"
-          disabled={false}
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
+        >
+          <span
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--error"
+          >
+            <svg
+              height="10"
+              width="2"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
+                fill="#ff0046"
+                fillRule="evenodd"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
+          error={true}
         >
           <p
-            className="c6"
+            className="c4 k-Stepepers-VerticalStepper__title--orion"
           >
             Title
-          </p>
-          <p
-            className="c7"
-          >
-            <span
-              className="c8 VerticalStepper__link"
-            >
-              Link
-            </span>
           </p>
         </div>
       </a>
     </li>
     <li
-      className="c2"
+      className="c1 k-Steppers--VerticalStepper__item"
     >
       <a
-        className="c3"
+        className="c2"
         href="#"
       >
-        <span
-          className="c15"
-          disabled={false}
-        />
         <div
-          className="c5 VerticalStepper__step"
-          disabled={false}
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
+        >
+          <span
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion k-Steppers--VerticalStepper__status--waiting"
+          />
+        </div>
+        <div
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
+          error={false}
         >
           <p
-            className="c6"
+            className="c4 k-Stepepers-VerticalStepper__title--orion"
           >
             Title
           </p>
+        </div>
+      </a>
+    </li>
+    <li
+      className="c1 k-Steppers--VerticalStepper__item"
+    >
+      <a
+        className="c2"
+        href="#"
+      >
+        <div
+          className="c3 k-Steppers--VerticalStepper__statusContainer k-Steppers--VerticalStepper__statusContainer--orion"
+        >
+          <span
+            className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--orion"
+          />
+        </div>
+        <div
+          className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
+          error={false}
+        >
           <p
-            className="c7"
+            className="c4 k-Stepepers-VerticalStepper__title--orion"
           >
-            <span
-              className="c8 VerticalStepper__link"
-            >
-              Link
-            </span>
+            Title
           </p>
         </div>
       </a>
