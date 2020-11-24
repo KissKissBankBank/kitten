@@ -27,6 +27,7 @@ const StyledCheckbox = styled.div`
     flex-basis: calc(100% - ${pxToRem(20 + 10)});
     cursor: pointer;
     transition: color .2s;
+    ${TYPOGRAPHY.fontStyles.light}
 
     &:active {
       color: ${COLORS.primary3};
