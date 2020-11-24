@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-kAzzGY jplcDl"
+      className="sc-gqjmRU gSiJXU"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-chPdSV ehdkFE"
+        className="sc-VigVT faGjpy"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -122,7 +122,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat iVlOqv"
+      className="sc-bwzfXH gbcMMf k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -133,7 +133,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-gZMcBi giNnHm k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-EHOje jvzENE k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -216,7 +216,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat fTSCbm"
+      className="sc-bwzfXH gbcMMf k-Form-TextInput k-Form-TextInput--andromeda"
       disabled={false}
       id="input"
       name="field"
@@ -296,10 +296,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-jTzLTM hwhVrJ"
+      className="sc-htoDjs egfdSC"
     >
       <input
-        className="sc-htpNat iVlOqv sc-fjdhpX kCYvEC"
+        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-dnqmqq fFBxT k-Form-TextInput--andromeda k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -308,7 +308,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jzJRlG eULSFC"
+        className="sc-iwsKbI jmQvaO"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -337,7 +337,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-gZMcBi giNnHm k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-EHOje jvzENE k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -420,10 +420,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-jTzLTM hwhVrJ"
+      className="sc-htoDjs egfdSC"
     >
       <input
-        className="sc-htpNat fTSCbm sc-fjdhpX kCYvEC"
+        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-dnqmqq fFBxT k-Form-TextInput--andromeda"
         disabled={false}
         id="input"
         name="field"
@@ -432,7 +432,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jzJRlG eULSFC"
+        className="sc-iwsKbI jmQvaO"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -490,14 +490,14 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <fieldset
-      className="sc-VigVT buVlsy k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+      className="sc-gzVnrw eXZJHp k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
       disabled={false}
     >
       <div
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-gqjmRU jMvANQ k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-bZQynM ilpqlP k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -519,7 +519,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-gqjmRU jMvANQ k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-bZQynM ilpqlP k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -540,7 +540,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-gqjmRU jMvANQ k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-bZQynM ilpqlP k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"
