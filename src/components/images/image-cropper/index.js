@@ -149,7 +149,7 @@ var ImageCropper = function ImageCropper(_ref) {
     height: cropperHeight
   };
   (0, _react.useEffect)(function () {
-    if (fileNameState && uploadedFile && resultData) {
+    if (fileNameState && resultData) {
       onChange({
         value: resultData.target.src,
         base: (0, _getOr.default)(resultData.srcElement.src)('originalTarget.src')(resultData),

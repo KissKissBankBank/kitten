@@ -2,6 +2,7 @@ import _extends from "@babel/runtime/helpers/esm/extends";
 import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import React, { useState, useEffect, useRef } from 'react';
 import has from 'lodash/fp/has';
+import isNull from 'lodash/fp/isNull';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import emitter from '../../../helpers/utils/emitter';
@@ -272,6 +273,7 @@ export var Dropdown = React.forwardRef(function (_ref, dropdownRef) {
   };
 
   var handleClickOnLinks = function handleClickOnLinks() {
+    if (isNull(dropdownContentRef.current)) return;
     var links = dropdownContentRef.current.getElementsByTagName('a');
     Array.prototype.forEach.call(links, function (link) {
       link.removeEventListener('click', closeDropdown);

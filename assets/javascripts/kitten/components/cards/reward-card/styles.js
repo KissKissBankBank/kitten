@@ -18,10 +18,10 @@ export const StyledRewardCard = styled.div`
     & > * + * {
       margin-left: ${pxToRem(10)};
     }
-    &.k-RewardCard__diamondBadge--disabled,	
-    &.k-RewardCard__starredBadge--disabled {	
-      color: ${COLORS.font2};	
-      cursor: not-allowed;	
+    &.k-RewardCard__diamondBadge--disabled,
+    &.k-RewardCard__starredBadge--disabled {
+      color: ${COLORS.font2};
+      cursor: not-allowed;
     }
   }
   .k-RewardCard__diamondBadge__content,
@@ -136,18 +136,18 @@ export const StyledRewardCard = styled.div`
       cursor: not-allowed;
       color: ${COLORS.font2};
     }
-    .k-RewardCard__title {	
-      color: ${COLORS.font2};	
-      cursor: not-allowed;	
+    .k-RewardCard__title {
+      color: ${COLORS.font2};
+      cursor: not-allowed;
     }
     .k-RewardCard__image,
     .k-RewardCard__video {
       filter: grayscale(1) opacity(0.4);
       cursor: not-allowed;
     }
-    .k-RewardCard__infos {	
-      color: ${COLORS.font2};	
-      cursor: not-allowed;	
+    .k-RewardCard__infos {
+      color: ${COLORS.font2};
+      cursor: not-allowed;
     }
   }
 `
