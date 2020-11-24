@@ -2,36 +2,60 @@ import React from 'react'
 import sinon from 'sinon'
 import { Checkbox } from '../../../components/form/checkbox'
 import { Text } from '../../../components/typography/text'
+import renderer from 'react-test-renderer'
 
 const sinonTest = require('sinon-test')(sinon)
 
 describe('<Checkbox />', () => {
-  describe('By default', () => {
-    const component = shallow(<Checkbox />)
-    const input = component.find('input')
-    const label = component.find('label')
-
-    it('renders an input.k-Checkbox__input', () => {
-      expect(input.type()).toBe('input')
-      expect(input.hasClass('k-Checkbox__input')).toBe(true)
+  describe('default', () => {
+    let component
+    beforeEach(() => {
+      component = renderer
+        .create(<Checkbox id="test-checkbox">Label</Checkbox>)
+        .toJSON()
     })
 
-    it('renders a label.k-Checkbox__label', () => {
-      expect(label.type()).toBe('label')
-      expect(label.hasClass('k-Checkbox__label')).toBe(true)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('with label prop', () => {
+    let component
+    beforeEach(() => {
+      component = renderer
+        .create(<Checkbox id="test-checkbox" label="Test label" />)
+        .toJSON()
     })
 
-    it('renders a <Text />', () => {
-      expect(label.find(Text)).toHaveLength(1)
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
+  describe('whith label and children props', () => {
+    let component
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <Checkbox id="test-checkbox" label="Main label">
+            Secondary content
+          </Checkbox>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
     })
   })
 
   describe('error prop', () => {
     const component = shallow(<Checkbox error />)
-    const input = component.find('input')
+    const container = component.find('.k-Form-Checkbox')
 
-    it('passes the right props to the `input` component', () => {
-      expect(input.hasClass('is-error')).toBe(true)
+    it('passes the right props to the container element', () => {
+      expect(container.hasClass('k-Form-Checkbox--error')).toBe(true)
     })
   })
 
@@ -74,9 +98,11 @@ describe('<Checkbox />', () => {
       sinonTest(function () {
         const clickSpy = this.spy()
         const wrapper = shallow(
-          <Checkbox onLabelClick={clickSpy}>CLICK</Checkbox>,
+          <Checkbox children="Label" onLabelClick={clickSpy}>
+            CLICK
+          </Checkbox>,
         )
-        wrapper.find('label').simulate('click')
+        wrapper.find('.k-Form-Checkbox__label').simulate('click')
         expect(clickSpy.calledOnce).toBe(true)
       }),
     )

@@ -1,34 +1,41 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { pxToRem } from '../../../helpers/utils/typography'
 import { TextInput } from '../../../components/form/text-input'
 import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
 import { VisuallyHidden } from '../../accessibility/visually-hidden'
+import classNames from 'classnames'
 
 const StyledTextInputWithIcon = styled.div`
-  display: flex;
   position: relative;
-`
 
-const StyledIcon = styled(({ disabled, ...others }) => <span {...others} />)`
-  display: flex;
-  position: absolute;
-  align-self: center;
-  padding: 0 ${pxToRem(18)};
-  z-index: 1;
-  left: 0;
+  .k-Form-TextInputWithIcon__input {
+    padding-left: ${pxToRem(50)};
+  }
 
-  ${({ disabled }) =>
-    disabled &&
-    css`
-      & > svg [stroke]:not([stroke='none']) {
+  .k-Form-TextInputWithIcon__icon {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: ${pxToRem(50)};
+    height: 100%;
+
+    &.k-Form-TextInputWithIcon__icon--disabled > svg {
+      &[stroke]:not([stroke='none']),
+      & [stroke]:not([stroke='none']) {
         stroke: ${COLORS.font2};
       }
-      & > svg [fill]:not([fill='none']) {
+      &[fill]:not([fill='none']),
+      & [fill]:not([fill='none']) {
         fill: ${COLORS.font2};
       }
-    `}
+    }
+  }
 `
 
 export class TextInputWithIcon extends PureComponent {
@@ -47,18 +54,26 @@ export class TextInputWithIcon extends PureComponent {
     const { disabled, icon, accessibilityLabel, ...others } = this.props
 
     return (
-      <StyledTextInputWithIcon>
+      <StyledTextInputWithIcon className="k-Form-TextInputWithIcon">
         {accessibilityLabel && (
           <VisuallyHidden>{accessibilityLabel}</VisuallyHidden>
         )}
         <TextInput
           {...others}
-          style={{ paddingLeft: `${pxToRem(50)}`, ...others.style }}
+          className={classNames(
+            'k-Form-TextInputWithIcon__input',
+            others.className,
+          )}
           disabled={disabled}
         />
-        <StyledIcon aria-hidden="true" disabled={disabled}>
+        <span
+          aria-hidden="true"
+          className={classNames('k-Form-TextInputWithIcon__icon', {
+            'k-Form-TextInputWithIcon__icon--disabled': disabled,
+          })}
+        >
           {icon}
-        </StyledIcon>
+        </span>
       </StyledTextInputWithIcon>
     )
   }

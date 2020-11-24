@@ -6,6 +6,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `variant` prop to `Accordeon`, defaults to `andromeda`.
 - Feature: Add `closeOnClick` prop to `Accordeon`, defaults to false.
+- Feature: Add `variant` prop to `Button`, defaults to `andromeda`.
+- Feature: Add component `DropdownSelect`, has `combobox` boolean prop.
+- Fix: Refactor `Checkbox` and `CheckboxSet` components.
+- Feature: Add `label` prop to `Checkbox` and `CheckboxSet` components and
+  display custom text if `children` are passed in addition to `label`.
+- Feature: Add `variant` prop to `RadioButton`, defaults to `andromeda`.
+- Feature: Add `design` prop to `RadioButton`, defaults to `disc`.
+- Feature: Better accessibility on `RadioButtonSet`.
+- Feature: Add `variant` prop to `TextInput`, defaults to `andromeda`.
+
+## [2.98.0] - 2020-11-23
+
+Features:
+- Add `variant` prop to `VerticalStepper`, with default value `andromeda`.
+- Add `DotIcon` component.
+
+Fix:
+- `ImageCropper` `onChange` firing on uploaded images.
+
+## [2.97.0] - 2020-11-16
+
+Feature:
+- Add `CreditCardForm` component.
 
 ## [2.96.0] - 2020-11-12
 
