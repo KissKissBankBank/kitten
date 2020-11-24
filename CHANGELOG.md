@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add component `DropdownSelect`, has `combobox` boolean prop.
 - Fix: Refactor `Checkbox` and `CheckboxSet` components.
 - Feature: Add `label` prop to `Checkbox` and `CheckboxSet` components and
   display custom text if `children` are passed in addition to `label`.

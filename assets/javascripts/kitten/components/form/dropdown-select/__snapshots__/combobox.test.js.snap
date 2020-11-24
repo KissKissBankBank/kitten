@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownSelect combobox /> should match its snapshot with props 1`] = `
+<div
+  className="sc-bdVaJa keiqDv k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
+>
+  <label
+    className="k-Label k-Form-Dropdown__label k-u-margin-bottom-single"
+    htmlFor="dropdown-select-test_2"
+    id="dropdown-select-test_2_element-label"
+    onClick={[Function]}
+  >
+    DropdownSelect test
+  </label>
+  <div
+    aria-expanded={true}
+    aria-haspopup="listbox"
+    aria-owns="dropdown-select-test_2_element-menu"
+    className="k-Form-DropdownCombobox"
+    role="combobox"
+  >
+    <input
+      aria-autocomplete="list"
+      aria-controls="dropdown-select-test_2_element-menu"
+      aria-labelledby="dropdown-select-test_2_element-label"
+      autoComplete="off"
+      className="k-Form-DropdownCombobox__input"
+      id="dropdown-select-test_2"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Select"
+      value=""
+    />
+    <button
+      aria-label="Button label text"
+      className="k-Form-DropdownCombobox__arrowButton"
+      id="dropdown-select-test_2_element-toggle-button"
+      onClick={[Function]}
+      tabIndex={-1}
+      type="button"
+    >
+      <span
+        aria-hidden={true}
+        className="k-Form-DropdownCombobox__arrowButton__arrowBox"
+      >
+        <svg
+          className="k-ArrowIcon k-ArrowIcon--top"
+          height="5.64"
+          viewBox="0 0 6 6"
+          width="8.48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          
+          <path
+            d="M6 0H0v6h2V2h4z"
+          />
+        </svg>
+      </span>
+    </button>
+    <span
+      className="k-Form-DropdownCombobox__statusBadges"
+    />
+  </div>
+  <ul
+    aria-labelledby="dropdown-select-test_2_element-label"
+    className="k-Form-Dropdown__list"
+    id="dropdown-select-test_2_element-menu"
+    onMouseLeave={[Function]}
+    role="listbox"
+  >
+    <li
+      className="k-Form-Dropdown__item"
+      disabled={true}
+    >
+      No result
+    </li>
+  </ul>
+</div>
+`;
