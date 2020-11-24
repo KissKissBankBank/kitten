@@ -203,7 +203,6 @@ const StyledDropdownSelectWithInput = styled.div`
     &[disabled] {
       color: ${COLORS.font2};
     }
-
   }
   .k-Form-DropdownSelectWithInput__item__icon {
     margin-right: ${pxToRem(20)};

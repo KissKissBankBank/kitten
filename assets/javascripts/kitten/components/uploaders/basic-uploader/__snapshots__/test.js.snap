@@ -11,7 +11,7 @@ exports[`<BasicUploader /> should match snapshot 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa crhVmM k-BasicUploader__button"
+    className="sc-bdVaJa cfqwsX k-BasicUploader__button"
     htmlFor="BasicUploader"
   >
     <svg
@@ -46,7 +46,7 @@ exports[`<BasicUploader /> should match snapshot with Error props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa crhVmM k-BasicUploader__button"
+    className="sc-bdVaJa cfqwsX k-BasicUploader__button"
     htmlFor="BasicUploader"
   >
     <svg
@@ -82,7 +82,7 @@ exports[`<BasicUploader /> should match snapshot with props 1`] = `
     type="file"
   />
   <label
-    className="sc-bdVaJa dbVfjd k-BasicUploader__button"
+    className="sc-bdVaJa CsjpJ k-BasicUploader__button"
     htmlFor="BasicUploader"
   >
     <svg

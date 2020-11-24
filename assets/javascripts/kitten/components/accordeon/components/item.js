@@ -1,23 +1,23 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Header } from './header'
 import { Content } from './content'
 import { getReactElementsByType } from '../../../helpers/react/react-elements'
 
-export const Item = ({ children, id }) => {
+export const Item = ({ children, id, index }) => {
   const header = getReactElementsByType({ children, type: Header })
   const content = getReactElementsByType({ children, type: Content })
 
   return (
-    <Fragment>
-      {header[0] && React.cloneElement(header[0], { id })}
-      {content[0] && React.cloneElement(content[0], { id })}
-    </Fragment>
+    <div className="k-Accordeon__item">
+      {header[0] && React.cloneElement(header[0], { id, index })}
+      {content[0] && React.cloneElement(content[0], { id, index })}
+    </div>
   )
 }
 
 Item.propTypes = {
-  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  id: PropTypes.string,
 }
 
 Item.defaultProps = {

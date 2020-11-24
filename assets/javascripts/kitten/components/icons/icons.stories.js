@@ -13,6 +13,7 @@ import { CopyIcon } from './copy-icon'
 import { CrossCircleIcon } from './cross-circle-icon'
 import { CrossIcon } from './cross-icon'
 import { DoubleArrowIcon } from './double-arrow-icon'
+import { DotIcon } from './dot-icon'
 import { EditIcon } from './edit-icon'
 import { EmailIcon } from './email-icon'
 import { ExportIcon } from './export-icon'
@@ -264,6 +265,7 @@ export const AllIcons = () => {
         <IconContainer children={<WaitingIcon color={colorInput} />} />
         <IconContainer children={<WarningIcon color={colorInput} />} />
         <IconContainer children={<Cart color={colorInput} />} />
+        <IconContainer children={<DotIcon color={colorInput} />} />
         <IconContainer
           children={
             <CheckedCircleIcon bgColor={bgColorInput} color={colorInput} />

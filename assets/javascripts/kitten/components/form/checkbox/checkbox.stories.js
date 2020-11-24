@@ -16,11 +16,73 @@ export const Default = () => (
   <Grid>
     <GridCol offset="1" col="8">
       <Checkbox
-        id={text('id', 'checkbox_id')}
         onLabelClick={action('label-click')}
         indeterminate={boolean('indeterminate', false)}
+        id={text('id', 'checkbox_id')}
+        disabled={boolean('disabled', false)}
       >
         {text('text', 'Checkbox Label')}
+      </Checkbox>
+    </GridCol>
+    <GridCol offset="1" col="8">
+      <Checkbox
+        id="checkbox_id_2"
+        indeterminate={boolean('indeterminate', false)}
+        disabled={boolean('disabled', false)}
+      >
+        This label has a <a href="#link">link</a>.
+      </Checkbox>
+    </GridCol>
+  </Grid>
+)
+
+export const WithContent = () => (
+  <Grid>
+    <GridCol offset="1" col="8">
+      <Checkbox
+        indeterminate={boolean('indeterminate', false)}
+        id={text('id', 'checkbox_id')}
+        disabled={boolean('disabled', false)}
+        label={text('label', 'Checkbox Label')}
+      >
+        {text('content', 'Checkbox content')}
+      </Checkbox>
+      <Checkbox
+        indeterminate={boolean('indeterminate', false)}
+        id="checkbox_id_1"
+        disabled={boolean('disabled', false)}
+        label="This checkbox has a label prop but no children"
+      />
+      <Checkbox
+        indeterminate={boolean('indeterminate', false)}
+        id="checkbox_id_2"
+        disabled={boolean('disabled', false)}
+      >
+        This checkbox doesn't have a `label` prop.
+        <br />
+        Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis
+        consectetur purus sit amet fermentum.
+      </Checkbox>
+      <Checkbox
+        indeterminate={boolean('indeterminate', false)}
+        id="checkbox_id_3"
+        disabled={boolean('disabled', false)}
+        label="This checkbox has a Label prop and a big content"
+      >
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+        ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla
+        sed consectetur. Donec sed odio dui. Donec ullamcorper nulla non metus
+        auctor fringilla. Aenean lacinia bibendum nulla sed consectetur. Morbi
+        leo risus, porta ac consectetur ac, vestibulum at eros.
+        <br />
+        Donec ullamcorper nulla non metus auctor fringilla. Fusce dapibus,
+        tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
+        massa justo sit amet risus. Curabitur blandit tempus porttitor. Duis
+        mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia
+        odio sem nec elit. Duis mollis, est non commodo luctus, nisi erat
+        porttitor ligula, eget lacinia odio sem nec elit. Duis mollis, est non
+        commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
+        elit.
       </Checkbox>
     </GridCol>
   </Grid>
