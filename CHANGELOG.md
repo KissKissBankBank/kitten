@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Refactor `Checkbox` and `CheckboxSet` components.
+- Feature: Add `label` prop to `Checkbox` and `CheckboxSet` components and
+  display custom text if `children` are passed in addition to `label`.
 - Feature: Add `variant` prop to `RadioButton`, with default value `andromeda`.
 - Feature: Add `design` prop to `RadioButton`, with default value `disc`.
 - Feature: Better accessibility on `RadioButtonSet`.

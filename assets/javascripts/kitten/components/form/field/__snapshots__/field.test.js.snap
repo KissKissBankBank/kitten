@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU gSiJXU"
+      className="sc-VigVT cfOvOR"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-VigVT faGjpy"
+        className="sc-jTzLTM bIvyxV"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -296,10 +296,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-htoDjs egfdSC"
+      className="sc-dnqmqq kmxqSx"
     >
       <input
-        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-dnqmqq fFBxT k-Form-TextInput--andromeda k-Form-TextInput--error"
+        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -308,7 +308,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-iwsKbI jmQvaO"
+        className="sc-gZMcBi gPuGFE"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -420,10 +420,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-htoDjs egfdSC"
+      className="sc-dnqmqq kmxqSx"
     >
       <input
-        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-dnqmqq fFBxT k-Form-TextInput--andromeda"
+        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda"
         disabled={false}
         id="input"
         name="field"
@@ -432,7 +432,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-iwsKbI jmQvaO"
+        className="sc-gZMcBi gPuGFE"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
