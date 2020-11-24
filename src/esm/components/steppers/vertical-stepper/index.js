@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { pxToRem } from '../../../helpers/utils/typography';
 import COLORS from '../../../constants/colors-config';

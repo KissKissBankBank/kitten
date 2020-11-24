@@ -11,67 +11,21 @@ function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflec
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { PureComponent } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import COLORS from '../../../constants/colors-config';
 import TYPOGRAPHY from '../../../constants/typography-config';
 import { ScreenConfig } from '../../../constants/screen-config';
-var borderWidth = pxToRem(2);
-var verticalPadding = pxToRem(10);
-var styledTextInput = css(["font-size:", ";line-height:1.3;", ";box-sizing:border-box;border-width:", ";border-style:solid;border-radius:0;width:100%;height:", ";padding:", " ", ";appearance:none;background-color:", ";color:", ";border-color:", ";outline:none;", ";::placeholder{color:", ";}:focus{outline:none;color:", ";border-color:", ";}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}", " ", " &:invalid{box-shadow:none;outline:none;&:not(:focus){color:", ";border-color:", ";}}", " ", " ", " ", ""], stepToRem(-1), TYPOGRAPHY.fontStyles.light, borderWidth, pxToRem(50), pxToRem(10), pxToRem(15), COLORS.background1, COLORS.font1, COLORS.line1, function (_ref) {
-  var digits = _ref.digits;
-  return digitsStyles(digits);
-}, COLORS.font2, COLORS.font1, COLORS.line2, COLORS.font2, COLORS.line1, COLORS.line1, function (_ref2) {
-  var valid = _ref2.valid;
-  return valid && css(["&:not(:focus){color:", ";border-color:", ";}"], COLORS.tertiary2, COLORS.tertiary2);
-}, function (_ref3) {
-  var error = _ref3.error;
-  return error && css(["&:not(:focus){color:", ";border-color:", ";}"], COLORS.error3, COLORS.error3);
-}, COLORS.error3, COLORS.error3, function (_ref4) {
-  var tiny = _ref4.tiny;
-  return tiny && css(["height:", ";"], pxToRem(40));
-}, function (_ref5) {
-  var huge = _ref5.huge;
-  return huge && css(["height:", ";@media (min-width:", "px){height:", ";font-size:", ";}"], pxToRem(70), ScreenConfig.M.min, pxToRem(80), stepToRem(0));
-}, function (_ref6) {
-  var giant = _ref6.giant;
-  return giant && css(["height:", ";@media (min-width:", "px){height:", ";font-size:", ";}"], pxToRem(70), ScreenConfig.M.min, pxToRem(90), stepToRem(0));
-}, function (_ref7) {
-  var center = _ref7.center;
-  return center && css(["text-align:center;"]);
-});
-var StyledTextarea = styled.div.withConfig({
-  displayName: "text-input__StyledTextarea",
-  componentId: "sc-11wej6v-0"
-})(["position:relative;display:flex;"]);
+import classNames from 'classnames';
 var StyledInput = styled.input.withConfig({
   displayName: "text-input__StyledInput",
+  componentId: "sc-11wej6v-0"
+})(["--input-padding-horizontal:", ";--input-border-width:", ";font-size:", ";line-height:1em;", ";box-sizing:border-box;border-width:", ";border-width:var(--input-border-width);border-style:solid;border-radius:0;width:100%;appearance:none;background-color:", ";color:", ";border-color:", ";outline:none;::placeholder{color:", ";}height:", ";&.k-Form-TextInput--tiny{height:", ";}&.k-Form-TextInput--huge{height:", ";@media (min-width:", "px){height:", ";font-size:", ";}}&.k-Form-TextInput--giant{height:", ";@media (min-width:", "px){height:", ";font-size:", ";}}padding:", " ", ";padding:", " var(--input-padding-horizontal);&.k-Form-TextInput--orion{border-radius:", ";height:", ";@media (min-width:", "px){--input-padding-horizontal:", ";border-radius:", ";height:", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){padding:", " ", ";}}}&.k-Form-TextInput--alignCenter{text-align:center;}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}&.k-Form-TextInput--valid{color:", ";border-color:", ";}&.k-Form-TextInput--error{color:", ";border-color:", ";}&:invalid{box-shadow:none;outline:none;color:", ";border-color:", ";}&:focus{outline:none;color:", ";border-color:", ";}&.k-Form-TextInput-hasDigits{width:calc( var(--input-content-width) * 1ch + (2 * (var(--input-padding-horizontal) + var(--input-border-width))) );}&.k-Form-TextInput-hasDigits_2{text-align:center;}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){&.k-Form-TextInput-hasDigits_2{text-align:center;width:calc(2em + ", ");&.k-Form-TextInput--orion{width:calc(2em + ", ");@media (min-width:", "px){width:calc(2em + ", ");}}}&.k-Form-TextInput-hasDigits_4{width:calc(4em + ", ");&.k-Form-TextInput--orion{width:calc(4em + ", ");@media (min-width:", "px){width:calc(4em + ", ");}}}&.k-Form-TextInput-hasDigits_12{width:calc(12em + ", ");&.k-Form-TextInput--orion{width:calc(12em + ", ");@media (min-width:", "px){width:calc(12em + ", ");}}}}"], pxToRem(15), pxToRem(2), stepToRem(-1), TYPOGRAPHY.fontStyles.light, pxToRem(2), COLORS.background1, COLORS.font1, COLORS.line1, COLORS.font2, pxToRem(50), pxToRem(40), pxToRem(70), ScreenConfig.M.min, pxToRem(80), stepToRem(0), pxToRem(70), ScreenConfig.M.min, pxToRem(90), stepToRem(0), pxToRem(10), pxToRem(15), pxToRem(10), pxToRem(6), pxToRem(60), ScreenConfig.M.min, pxToRem(30), pxToRem(8), pxToRem(70), stepToRem(0), pxToRem(10), pxToRem(30), COLORS.font2, COLORS.line1, COLORS.line1, COLORS.tertiary2, COLORS.tertiary2, COLORS.error3, COLORS.error3, COLORS.error3, COLORS.error3, COLORS.font1, COLORS.line2, pxToRem(2 * (10 + 2)), pxToRem(2 * (15 + 2)), ScreenConfig.M.min, pxToRem(2 * (30 + 2)), pxToRem(2 * (10 + 2)), pxToRem(2 * (15 + 2)), ScreenConfig.M.min, pxToRem(2 * (30 + 2)), pxToRem(2 * (10 + 2)), pxToRem(2 * (15 + 2)), ScreenConfig.M.min, pxToRem(2 * (30 + 2)));
+var StyledTextareaContainer = styled.div.withConfig({
+  displayName: "text-input__StyledTextareaContainer",
   componentId: "sc-11wej6v-1"
-})(["", ""], styledTextInput);
-var StyledInputTextarea = styled.textarea.withConfig({
-  displayName: "text-input__StyledInputTextarea",
-  componentId: "sc-11wej6v-2"
-})(["", " height:initial;resize:vertical;:disabled{resize:none;}"], styledTextInput);
-var StyledGradientTextarea = styled.div.withConfig({
-  displayName: "text-input__StyledGradientTextarea",
-  componentId: "sc-11wej6v-3"
-})(["position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),", " );pointer-events:none;", ":disabled + &{display:none;}"], verticalPadding, verticalPadding, borderWidth, verticalPadding, COLORS.background1, StyledInputTextarea);
-export var digitsStyles = function digitsStyles(digits) {
-  var horizontalPadding = 15;
-  var digitLength = 15;
-
-  switch ("".concat(digits)) {
-    case '2':
-      return css(["width:", ";text-align:center;"], pxToRem(horizontalPadding * 2 + digitLength * 2));
-
-    case '6':
-      return css(["width:", ";"], pxToRem(horizontalPadding * 2 + digitLength * 6));
-
-    case '12':
-      return css(["width:", ";"], pxToRem(horizontalPadding * 2 + digitLength * 12));
-  }
-};
+})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:1.3;&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--orion{padding:", " ", " 0;min-height:", ";@media (min-width:", "px){padding:", " ", " 0;min-height:", ";}}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),", " );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}"], pxToRem(21), pxToRem(15), pxToRem(60), ScreenConfig.M.min, pxToRem(25), pxToRem(30), pxToRem(70), pxToRem(10), pxToRem(10), pxToRem(3), pxToRem(10), COLORS.background1);
 export var TextInput = /*#__PURE__*/function (_PureComponent) {
   _inherits(TextInput, _PureComponent);
 
@@ -99,37 +53,56 @@ export var TextInput = /*#__PURE__*/function (_PureComponent) {
           giant = _this$props.giant,
           center = _this$props.center,
           tag = _this$props.tag,
-          others = _objectWithoutProperties(_this$props, ["valid", "error", "disabled", "name", "digits", "tiny", "huge", "giant", "center", "tag"]);
+          variant = _this$props.variant,
+          className = _this$props.className,
+          style = _this$props.style,
+          others = _objectWithoutProperties(_this$props, ["valid", "error", "disabled", "name", "digits", "tiny", "huge", "giant", "center", "tag", "variant", "className", "style"]);
+
+      var digitsClass = !!digits ? "k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_".concat(digits) : null;
 
       if (tag === 'textarea') {
-        return /*#__PURE__*/React.createElement(StyledTextarea, null, /*#__PURE__*/React.createElement(StyledInputTextarea, _extends({
+        return /*#__PURE__*/React.createElement(StyledTextareaContainer, {
+          className: classNames('k-Form-TextInput__textareaContainer', "k-Form-TextInput__textareaContainer--".concat(variant))
+        }, /*#__PURE__*/React.createElement(StyledInput, _extends({
           ref: function ref(input) {
             return _this.input = input;
           },
-          valid: valid,
-          error: error,
+          as: "textarea",
           disabled: disabled,
-          tiny: tiny,
-          digits: digits,
-          name: name,
-          huge: huge,
-          giant: giant,
-          center: center
-        }, others)), /*#__PURE__*/React.createElement(StyledGradientTextarea, null));
+          className: classNames('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), {
+            'k-Form-TextInput--valid': valid,
+            'k-Form-TextInput--error': error,
+            'k-Form-TextInput--disabled': disabled,
+            'k-Form-TextInput--tiny': tiny,
+            'k-Form-TextInput--huge': huge,
+            'k-Form-TextInput--giant': giant,
+            'k-Form-TextInput--alignCenter': center
+          }),
+          style: !!digits ? _extends({
+            '--input-content-width': digits
+          }, style) : style
+        }, others)), /*#__PURE__*/React.createElement("div", {
+          className: "k-Form-TextInput__textareaGradient"
+        }));
       } else {
         return /*#__PURE__*/React.createElement(StyledInput, _extends({
           ref: function ref(input) {
             return _this.input = input;
           },
-          valid: valid,
-          error: error,
           disabled: disabled,
-          tiny: tiny,
-          digits: digits,
           name: name,
-          huge: huge,
-          giant: giant,
-          center: center
+          className: classNames('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), {
+            'k-Form-TextInput--valid': valid,
+            'k-Form-TextInput--error': error,
+            'k-Form-TextInput--disabled': disabled,
+            'k-Form-TextInput--tiny': tiny,
+            'k-Form-TextInput--huge': huge,
+            'k-Form-TextInput--giant': giant,
+            'k-Form-TextInput--alignCenter': center
+          }),
+          style: !!digits ? _extends({
+            '--input-content-width': digits
+          }, style) : style
         }, others));
       }
     }
@@ -147,7 +120,8 @@ TextInput.propTypes = {
   center: PropTypes.bool,
   disabled: PropTypes.bool,
   name: PropTypes.string,
-  digits: PropTypes.number
+  digits: PropTypes.number,
+  variant: PropTypes.string
 };
 TextInput.defaultProps = {
   tag: 'input',
@@ -160,5 +134,6 @@ TextInput.defaultProps = {
   center: false,
   disabled: false,
   name: 'text',
-  digits: null
+  digits: null,
+  variant: 'andromeda'
 };

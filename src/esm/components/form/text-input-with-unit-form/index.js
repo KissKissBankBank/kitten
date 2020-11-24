@@ -3,50 +3,26 @@ import _createClass from "@babel/runtime/helpers/esm/createClass";
 import _inherits from "@babel/runtime/helpers/esm/inherits";
 import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
 import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 import React, { PureComponent } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Marger } from '../../../components/layout/marger';
-import { Grid as KittenGrid, GridCol } from '../../../components/grid/grid';
+import { Grid, GridCol } from '../../../components/grid/grid';
 import { TextInputWithUnit } from '../../../components/form/text-input-with-unit';
 import { Text } from '../../../components/typography/text';
 import { Label } from '../../../components/form/label';
-import { Button as KittenButton } from '../../../components/buttons/button';
+import { Button } from '../../../components/buttons/button';
 import { ScreenConfig } from '../../../constants/screen-config';
+import classNames from 'classnames';
 var StyledFormContainer = styled.form.withConfig({
   displayName: "text-input-with-unit-form__StyledFormContainer",
   componentId: "wjoixz-0"
-})(["margin:0;padding:0;"]);
-var StyledGridPosition = styled(function (_ref) {
-  var align = _ref.align,
-      others = _objectWithoutProperties(_ref, ["align"]);
-
-  return /*#__PURE__*/React.createElement(KittenGrid, others);
-}).withConfig({
-  displayName: "text-input-with-unit-form__StyledGridPosition",
-  componentId: "wjoixz-1"
-})(["", ""], function (_ref2) {
-  var align = _ref2.align;
-  return align === 'center' && css(["display:flex;justify-content:center;"]);
-});
-var StyledButton = styled(function (_ref3) {
-  var version = _ref3.version,
-      others = _objectWithoutProperties(_ref3, ["version"]);
-
-  return /*#__PURE__*/React.createElement(KittenButton, others);
-}).withConfig({
-  displayName: "text-input-with-unit-form__StyledButton",
-  componentId: "wjoixz-2"
-})(["@media (min-width:", "px){width:100%:}", ""], ScreenConfig.S.min, function (_ref4) {
-  var version = _ref4.version;
-  return version === 'tiny' && css(["width:100%;"]);
-});
+})(["margin:0;padding:0;.k-Form-TextInputWithUnitForm__grid--center{display:flex;justify-content:center;}.k-Form-TextInputWithUnitForm__submit{@media (min-width:", "px){width:100%;}}"], ScreenConfig.S.min);
 export var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
   _inherits(TextInputWithUnitForm, _PureComponent);
 
@@ -81,11 +57,10 @@ export var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
           version = _this$props.version;
       return /*#__PURE__*/React.createElement(StyledFormContainer, {
         onSubmit: onFormSubmit
-      }, /*#__PURE__*/React.createElement(Marger, {
-        top: "3",
-        bottom: !inputIsOnError ? 3 : 1
-      }, /*#__PURE__*/React.createElement(StyledGridPosition, {
-        align: align
+      }, /*#__PURE__*/React.createElement(Grid, {
+        className: classNames('k-Form-TextInputWithUnitForm__grid', "k-Form-TextInputWithUnitForm__grid--".concat(align), 'k-u-margin-top-triple', 'k-u-margin-bottom-triple', {
+          'k-u-margin-bottom-single--important': inputIsOnError
+        })
       }, /*#__PURE__*/React.createElement(GridCol, {
         "col-m": version === 'tiny' ? 0 : 5,
         "col-xs": version === 'tiny' ? 0 : 7
@@ -115,18 +90,18 @@ export var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
         size: "micro",
         color: "error",
         weight: "regular"
-      }, errorMessage))))), /*#__PURE__*/React.createElement(StyledGridPosition, {
-        align: align
-      }, /*#__PURE__*/React.createElement(StyledButton, {
+      }, errorMessage)))), /*#__PURE__*/React.createElement(Grid, null, /*#__PURE__*/React.createElement(GridCol, {
+        col: "12",
+        className: "k-u-align-".concat(align)
+      }, /*#__PURE__*/React.createElement(Button, {
         size: "big",
         modifier: "helium",
         type: "submit",
-        "aria-label": buttonLabel,
         onMouseEnter: onButtonMouseEnter,
         onMouseLeave: onButtonMouseLeave,
         disabled: formIsDisabled,
-        version: version
-      }, buttonLabel)));
+        className: classNames('k-Form-TextInputWithUnitForm__submit', "k-Form-TextInputWithUnitForm__grid--".concat(version))
+      }, buttonLabel))));
     }
   }]);
 

@@ -4,23 +4,27 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.99.0] - 2020-11-24
+
 Features:
-- Add `DropdownSelectWithInput` component.
 - Add `GlobeIcon` icon.
-- Add `DropdownPhoneSelect` component.
 - Add `FlagIcon` icon.
-- Add `.k-u-a11y-visuallyHidden` CSS helper.
-- Feature: Add `variant` prop to `Accordeon`, defaults to `andromeda`.
-- Feature: Add `closeOnClick` prop to `Accordeon`, defaults to false.
-- Feature: Add `variant` prop to `Button`, defaults to `andromeda`.
-- Feature: Add component `DropdownSelect`, has `combobox` boolean prop.
-- Fix: Refactor `Checkbox` and `CheckboxSet` components.
-- Feature: Add `label` prop to `Checkbox` and `CheckboxSet` components and
+- Add `DropdownPhoneSelect` component.
+- Add `DropdownSelect` component, has `combobox` boolean prop.
+- Add `DropdownSelectWithInput` component.
+- Add `variant` prop to `Accordeon`, defaults to `andromeda`.
+- Add `closeOnClick` prop to `Accordeon`, defaults to false.
+- Add `label` prop to `Checkbox` and `CheckboxSet` components and
   display custom text if `children` are passed in addition to `label`.
-- Feature: Add `variant` prop to `RadioButton`, defaults to `andromeda`.
-- Feature: Add `design` prop to `RadioButton`, defaults to `disc`.
-- Feature: Better accessibility on `RadioButtonSet`.
-- Feature: Add `variant` prop to `TextInput`, defaults to `andromeda`.
+- Add `design` prop to `RadioButton`, defaults to `disc`.
+- Add `variant` prop to `RadioButton`, defaults to `andromeda`.
+- Better accessibility on `RadioButtonSet`.
+- Add `variant` prop to `Button`, defaults to `andromeda`.
+- Add `variant` prop to `TextInput`, defaults to `andromeda`.
+- Add `.k-u-a11y-visuallyHidden` CSS helper.
+
+Fix:
+- Refactor `Checkbox` and `CheckboxSet` components.
 
 ## [2.98.0] - 2020-11-23
 

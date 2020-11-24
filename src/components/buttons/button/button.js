@@ -48,7 +48,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 var StyledButton = _styledComponents.default.button.withConfig({
   displayName: "button__StyledButton",
   componentId: "sc-1q5nte0-0"
-})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appareance:none;outline:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}", " >:last-child{margin-right:0;}", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], function () {
+})(["display:inline-flex;align-items:center;justify-content:center;position:relative;box-sizing:border-box;", " ", ";font-size:", ";color:", ";line-height:1.3;text-decoration:none;appearance:none;outline:none;cursor:pointer;&:disabled{cursor:not-allowed;}&:hover{text-decoration:none;}>:nth-child(n){margin-right:", ";text-align:left;}", " >:last-child{margin-right:0;}", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", ""], function () {
   return DEFAULT;
 }, _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), _colorsConfig.default.font1, (0, _typography.pxToRem)(10), function (_ref) {
   var modifier = _ref.modifier;
@@ -101,7 +101,12 @@ var StyledButton = _styledComponents.default.button.withConfig({
   var fluid = _ref13.fluid;
   return fluid && FLUID;
 }, function (_ref14) {
-  var modifier = _ref14.modifier;
+  var variant = _ref14.variant;
+  return variant === 'orion' && (0, _styledComponents.css)(["", " border-radius:", ";@media (min-width:", "){border-radius:", ";}"], function () {
+    return BIG;
+  }, (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), (0, _typography.pxToRem)(8));
+}, function (_ref15) {
+  var modifier = _ref15.modifier;
   return (0, _modifierStyles.modifierStyles)(modifier);
 });
 
@@ -129,27 +134,27 @@ var checkedCircleIconStyle = function checkedCircleIconStyle(size) {
   return (0, _styledComponents.css)(["width:", ";height:", ";bottom:-", ";"], (0, _typography.pxToRem)(iconSize), (0, _typography.pxToRem)(iconSize), (0, _typography.pxToRem)(iconSize / 2));
 };
 
-var CheckedCircleIcon = (0, _styledComponents.default)(function (_ref15) {
-  var giant = _ref15.giant,
-      huge = _ref15.huge,
-      big = _ref15.big,
-      tiny = _ref15.tiny,
-      others = (0, _objectWithoutProperties2.default)(_ref15, ["giant", "huge", "big", "tiny"]);
+var CheckedCircleIcon = (0, _styledComponents.default)(function (_ref16) {
+  var giant = _ref16.giant,
+      huge = _ref16.huge,
+      big = _ref16.big,
+      tiny = _ref16.tiny,
+      others = (0, _objectWithoutProperties2.default)(_ref16, ["giant", "huge", "big", "tiny"]);
   return /*#__PURE__*/_react.default.createElement(_checkedCircleIcon.CheckedCircleIcon, others);
 }).withConfig({
   displayName: "button__CheckedCircleIcon",
   componentId: "sc-1q5nte0-1"
-})(["", " ", " ", " ", " ", " position:absolute;"], checkedCircleIconStyle(), function (_ref16) {
-  var tiny = _ref16.tiny;
+})(["", " ", " ", " ", " ", " position:absolute;"], checkedCircleIconStyle(), function (_ref17) {
+  var tiny = _ref17.tiny;
   return tiny && checkedCircleIconStyle('tiny');
-}, function (_ref17) {
-  var big = _ref17.big;
-  return big && (0, _styledComponents.css)(["@media (min-width:", "){", "}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), checkedCircleIconStyle('big'));
 }, function (_ref18) {
-  var huge = _ref18.huge;
-  return huge && (0, _styledComponents.css)(["@media (min-width:", "){", "}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), checkedCircleIconStyle('huge'));
+  var big = _ref18.big;
+  return big && (0, _styledComponents.css)(["@media (min-width:", "){", "}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), checkedCircleIconStyle('big'));
 }, function (_ref19) {
-  var giant = _ref19.giant;
+  var huge = _ref19.huge;
+  return huge && (0, _styledComponents.css)(["@media (min-width:", "){", "}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), checkedCircleIconStyle('huge'));
+}, function (_ref20) {
+  var giant = _ref20.giant;
   return giant && (0, _styledComponents.css)(["@media (min-width:", "){", "}"], (0, _typography.pxToRem)(_screenConfig.ScreenConfig.S.min), checkedCircleIconStyle('giant'));
 });
 var FLUID = (0, _styledComponents.css)(["min-width:initial;width:100%;"]);
@@ -193,13 +198,15 @@ var Button = /*#__PURE__*/function (_Component) {
       var _this$props = this.props,
           children = _this$props.children,
           modifier = _this$props.modifier,
-          props = (0, _objectWithoutProperties2.default)(_this$props, ["children", "modifier"]);
+          variant = _this$props.variant,
+          props = (0, _objectWithoutProperties2.default)(_this$props, ["children", "modifier", "variant"]);
       var checked = modifier === 'checked' && {
         'aria-checked': true
       };
       modifier === 'checked' && console.warn("Warning: In <Button /> component, 'checked' modifier is deprecated.");
       return /*#__PURE__*/_react.default.createElement(StyledButton, (0, _extends2.default)({
-        modifier: modifier
+        modifier: modifier,
+        variant: variant
       }, checked, props), children, modifier === 'checked' && /*#__PURE__*/_react.default.createElement(CheckedCircleIcon, {
         giant: !!props.giant,
         huge: !!props.huge,
@@ -223,7 +230,8 @@ Button.propTypes = {
   giant: _propTypes.default.bool,
   fluid: _propTypes.default.bool,
   icon: _propTypes.default.bool,
-  modifier: _propTypes.default.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest'])
+  modifier: _propTypes.default.oneOf(['hydrogen', 'helium', 'lithium', 'beryllium', 'carbon', 'oxygen', 'copper', 'checked', 'social_facebook', 'social_twitter', 'social_linkedin', 'social_instagram', 'social_youtube', 'social_pinterest']),
+  variant: _propTypes.default.oneOf(['andromeda', 'orion'])
 };
 Button.defaultProps = {
   micro: false,
@@ -234,5 +242,6 @@ Button.defaultProps = {
   fluid: false,
   icon: false,
   modifier: 'hydrogen',
-  borderRadius: 0
+  borderRadius: 0,
+  variant: 'andromeda'
 };
