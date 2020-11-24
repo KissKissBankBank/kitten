@@ -83,6 +83,8 @@ import { DocumentIconEmpty } from './document-icon-empty'
 import { DocumentIconHouse } from './document-icon-house'
 import { DocumentIconPerson } from './document-icon-person'
 import { GlobeIcon } from './globe-icon'
+import { FlagIcon, flagList } from './flag-icon'
+import flagFile from 'icons/flags.png'
 
 import { Text } from '../..'
 import React from 'react'
@@ -109,7 +111,7 @@ const Group = styled(({ className, children, title }) => {
   margin-bottom: ${pxToRem(40)};
 `
 
-const IconContainer = styled(({ className, link, children }) => {
+const IconContainer = styled(({ className, link, children, suffix }) => {
   return (
     <div className={className}>
       <div className="svgWrapper">{children}</div>
@@ -122,7 +124,10 @@ const IconContainer = styled(({ className, link, children }) => {
           {children.type.name} <ArrowIcon direction="right" />
         </LinkTo>
       ) : (
-        <Text size="micro">{children.type.name}</Text>
+        <Text size="micro">
+          {children.type.name}
+          {suffix && <> {suffix}</>}
+        </Text>
       )}
     </div>
   )
@@ -153,10 +158,10 @@ const IconContainer = styled(({ className, link, children }) => {
   }
 `
 
-const colorInput = color('Main color', '#333')
-const bgColorInput = color('Background color', '#FFF')
-
 export const AllIcons = () => {
+  const colorInput = color('Main color', '#333')
+  const bgColorInput = color('Background color', '#FFF')
+
   return (
     <Container>
       <Group title="Bank">
@@ -221,26 +226,18 @@ export const AllIcons = () => {
       </Group>
 
       <Group title="ArrowIcon">
-        <IconContainer
-          children={
-            <ArrowIcon version="solid" color={colorInput} direction="top" />
-          }
-        />
-        <IconContainer
-          children={
-            <ArrowIcon version="solid" color={colorInput} direction="bottom" />
-          }
-        />
-        <IconContainer
-          children={
-            <ArrowIcon version="solid" color={colorInput} direction="left" />
-          }
-        />
-        <IconContainer
-          children={
-            <ArrowIcon version="solid" color={colorInput} direction="right" />
-          }
-        />
+        <IconContainer suffix='direction="top"'>
+          <ArrowIcon version="solid" color={colorInput} direction="top" />
+        </IconContainer>
+        <IconContainer suffix='direction="bottom"'>
+          <ArrowIcon version="solid" color={colorInput} direction="bottom" />
+        </IconContainer>
+        <IconContainer suffix='direction="left"'>
+          <ArrowIcon version="solid" color={colorInput} direction="left" />
+        </IconContainer>
+        <IconContainer suffix='direction="right"'>
+          <ArrowIcon version="solid" color={colorInput} direction="right" />
+        </IconContainer>
       </Group>
 
       <Group title="Complex icons">
@@ -336,6 +333,17 @@ export const AllIcons = () => {
         <IconContainer
           children={<GlobeIcon color={colorInput} width="16" height="16" />}
         />
+      </Group>
+      <Group title="Country flag icons">
+        {flagList.map(country => (
+          <IconContainer key={country} suffix={`country="${country}"`}>
+            <FlagIcon
+              country={country}
+              countryName={country}
+              flagsUrl={flagFile}
+            />
+          </IconContainer>
+        ))}
       </Group>
     </Container>
   )

@@ -48,6 +48,7 @@ describe('<DropdownSelectWithInput />', () => {
               icon: <GlobeIcon width="16" height="16" />,
             },
           ]}
+          openOnLoad
         />,
       )
       .toJSON()

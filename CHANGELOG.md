@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 Features:
 - Add `DropdownSelectWithInput` component.
 - Add `GlobeIcon` icon.
+- Add `DropdownPhoneSelect` component.
+- Add `FlagIcon` icon.
+- Add `.k-u-a11y-visuallyHidden` CSS helper.
 - Feature: Add `variant` prop to `Accordeon`, defaults to `andromeda`.
 - Feature: Add `closeOnClick` prop to `Accordeon`, defaults to false.
 - Feature: Add `variant` prop to `Button`, defaults to `andromeda`.

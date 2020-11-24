@@ -80,13 +80,17 @@ const StyledDropdownSelectWithInput = styled.div`
     height: ${pxToRem(46)};
   }
   .k-Form-DropdownSelectWithInput__placeholder {
+    font-size: ${stepToRem(0)};
     color: ${COLORS.font2};
   }
 
   .k-Form-DropdownSelectWithInput__content__icon {
     margin-right: ${pxToRem(15)};
+    display: flex;
+    align-items: center;
 
     svg {
+      display: block;
       max-width: ${pxToRem(17)};
       max-height: ${pxToRem(17)};
     }
@@ -106,11 +110,9 @@ const StyledDropdownSelectWithInput = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: ${pxToRem(60)};
     left: ${pxToRem(20)};
 
     @media (min-width: ${ScreenConfig.S.min}px) {
-      height: ${pxToRem(70)};
       left: ${pxToRem(30)};
     }
   }
@@ -123,7 +125,7 @@ const StyledDropdownSelectWithInput = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: auto;
 
     right: ${pxToRem(10)};
 
@@ -202,14 +204,22 @@ const StyledDropdownSelectWithInput = styled.div`
       color: ${COLORS.font2};
     }
   }
-
   .k-Form-DropdownSelectWithInput__item__icon {
-    width: ${pxToRem(20)};
     margin-right: ${pxToRem(20)};
+    min-width: ${pxToRem(20)};
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     svg {
-      max-width: 100%;
+      display: block;
+      max-width:100%;
     }
+  }
+
+  .k-Form-DropdownSelectWithInput__separator {
+    height: ${pxToRem(2)};
+    background-color: ${COLORS.line1};
   }
 
   &:focus-within {
@@ -253,8 +263,7 @@ const StyledDropdownSelectWithInput = styled.div`
     .k-Form-DropdownSelectWithInput__input {
       color: ${COLORS.font2};
     }
-    .k-Form-DropdownSelectWithInput__content--selectedItem,
-    .k-Form-DropdownSelectWithInput__content__icon {
+    .k-Form-DropdownSelectWithInput__content--selectedItem {
       background-color: ${COLORS.line2};
       color: ${COLORS.background1};
     }
@@ -300,6 +309,7 @@ export const DropdownSelectWithInput = ({
   inputProps,
   resetOnBackspace,
   highlightOptionBox,
+  openOnLoad,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -308,8 +318,6 @@ export const DropdownSelectWithInput = ({
   const inputEl = useRef(inputEl)
 
   const itemToString = item => (item ? String(item.label) : '')
-
-  const initialSelectedItem = find(['value', defaultSelectedValue])(options)
 
   const onSelectedItemChange = changes => {
     onChange(changes.selectedItem)
@@ -337,10 +345,17 @@ export const DropdownSelectWithInput = ({
     items: options,
     getA11ySelectionMessage,
     itemToString,
-    initialSelectedItem,
     onSelectedItemChange,
     onIsOpenChange,
+    initialIsOpen: openOnLoad,
   })
+
+  useEffect(() => {
+    if (!defaultSelectedValue) return
+
+    const initialSelectedItem = find(['value', defaultSelectedValue])(options)
+    selectItem(initialSelectedItem)
+  }, [defaultSelectedValue])
 
   useEffect(() => {
     getLabelProps && labelPropsGetter(getLabelProps)
@@ -409,7 +424,7 @@ export const DropdownSelectWithInput = ({
                   {selectedItem.icon}
                 </span>
               )}
-              {selectedItem.label}
+              {selectedItem.labelSelected || selectedItem.label}
             </span>
           ) : (
             <span className="k-Form-DropdownSelectWithInput__content k-Form-DropdownSelectWithInput__placeholder">
@@ -453,27 +468,41 @@ export const DropdownSelectWithInput = ({
       </div>
       <ul className="k-Form-DropdownSelectWithInput__list" {...getMenuProps()}>
         {isOpen &&
-          options.map((item, index) => (
-            <li
-              className={classNames('k-Form-DropdownSelectWithInput__item', {
-                'k-Form-DropdownSelectWithInput__item--higlighted':
-                  highlightedIndex === index,
-              })}
-              key={`${item.value}${index}`}
-              disabled={item.disabled}
-              {...getItemProps({ item, index, disabled: item.disabled })}
-            >
-              {item.icon && (
-                <span
-                  className="k-Form-DropdownSelectWithInput__item__icon"
+          options.map((item, index) => {
+            if (item.separator)
+              return (
+                <li
+                  key={`separator${index}`}
+                  className="k-Form-DropdownSelectWithInput__separator"
                   aria-hidden
-                >
-                  {item.icon}
-                </span>
-              )}
-              {item.label}
-            </li>
-          ))}
+                  {...getItemProps({ item, index, disabled: true })}
+                />
+              )
+
+            return (
+              <li
+                className={classNames('k-Form-DropdownSelectWithInput__item', {
+                  'k-Form-DropdownSelectWithInput__item--separator':
+                    item.separator,
+                  'k-Form-DropdownSelectWithInput__item--higlighted':
+                    highlightedIndex === index,
+                })}
+                key={`${item.value}${index}`}
+                disabled={item.disabled}
+                {...getItemProps({ item, index, disabled: item.disabled })}
+              >
+                {item.icon && (
+                  <span
+                    className="k-Form-DropdownSelectWithInput__item__icon"
+                    aria-hidden
+                  >
+                    {item.icon}
+                  </span>
+                )}
+                {item.labelInList || item.label}
+              </li>
+            )
+          })}
       </ul>
     </StyledDropdownSelectWithInput>
   )
@@ -494,6 +523,7 @@ DropdownSelectWithInput.defaultProps = {
   inputProps: {},
   resetOnBackspace: false,
   highlightOptionBox: true,
+  openOnLoad: false,
 }
 
 DropdownSelectWithInput.propTypes = {
@@ -513,4 +543,5 @@ DropdownSelectWithInput.propTypes = {
   inputProps: PropTypes.object,
   resetOnBackspace: PropTypes.bool,
   highlightOptionBox: PropTypes.bool,
+  openOnLoad: PropTypes.bool,
 }

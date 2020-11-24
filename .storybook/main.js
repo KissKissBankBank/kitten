@@ -15,17 +15,17 @@ module.exports = {
         },
       },
     }
-    alteredConfig.module.rules.push({
-      test: /\.(svg|png|jpe?g)$/,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            name: 'images/[name].[ext]',
-          },
-        },
-      ],
-    })
+    // alteredConfig.module.rules.push({
+    //   test: /\.(svg|png|jpe?g)$/,
+    //   use: [
+    //     {
+    //       loader: 'file-loader',
+    //       options: {
+    //         name: 'images/[name].[ext]',
+    //       },
+    //     },
+    //   ],
+    // })
     alteredConfig.module.rules.push({
       test: /\.scss$/,
       resolve: {

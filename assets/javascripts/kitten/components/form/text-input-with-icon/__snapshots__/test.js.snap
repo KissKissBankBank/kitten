@@ -2,7 +2,7 @@
 
 exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb inWqAT k-Form-TextInputWithIcon"
+  className="sc-htpNat dYsqxt k-Form-TextInputWithIcon"
 >
   
   <input
@@ -41,7 +41,7 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb inWqAT k-Form-TextInputWithIcon"
+  className="sc-htpNat dYsqxt k-Form-TextInputWithIcon"
 >
   
   <input
@@ -80,7 +80,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 
 exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb inWqAT k-Form-TextInputWithIcon"
+  className="sc-htpNat dYsqxt k-Form-TextInputWithIcon"
 >
   
   <input
