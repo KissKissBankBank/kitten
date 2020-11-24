@@ -2,6 +2,10 @@
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [unreleased]
+
+- Feature: Add `variant` prop to `TextInput` with `andromeda` as default value.
+
 ## [2.98.0] - 2020-11-23
 
 Features:
@@ -10,11 +14,6 @@ Features:
 
 Fix:
 - `ImageCropper` `onChange` firing on uploaded images.
-
-## [unreleased]
-- Fix `ImageCropper` `onChange` firing on uploaded images.
-- Feature: Add `variant` prop to `VerticalStepper`, with default value `andromeda`.
-- Feature: Add `DotIcon` component.
 
 ## [2.97.0] - 2020-11-16
 
