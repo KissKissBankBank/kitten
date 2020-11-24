@@ -1426,9 +1426,9 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
-  -webkit-appareance: none;
-  -moz-appareance: none;
-  appareance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   outline: none;
   cursor: pointer;
   min-width: initial;

@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `variant` prop to `Button` with `andromeda` as default value.
 - Feature: Add component `DropdownSelect`, has `combobox` boolean prop.
 - Fix: Refactor `Checkbox` and `CheckboxSet` components.
 - Feature: Add `label` prop to `Checkbox` and `CheckboxSet` components and
