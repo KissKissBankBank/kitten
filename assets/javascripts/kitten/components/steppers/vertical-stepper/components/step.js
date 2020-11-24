@@ -20,14 +20,12 @@ export const Step = ({
   bridge,
   ...other
 }) => {
-
   return (
-    <StyledItem className={classNames(
-      'k-Steppers--VerticalStepper__item',
-      {
+    <StyledItem
+      className={classNames('k-Steppers--VerticalStepper__item', {
         'k-Steppers--VerticalStepper__item--hasActiveLine': success,
-      },
-    )}>
+      })}
+    >
       <StyledLink as={other.href ? 'a' : 'span'} {...other} variant={variant}>
         <Status
           success={success}
@@ -45,7 +43,9 @@ export const Step = ({
           className={classNames(
             STEP_CLASSNAME,
             'k-Steppers--VerticalStepper__step--link--content',
-            {'k-Steppers--VerticalStepper__step--link--content--disabled': disabled},
+            {
+              'k-Steppers--VerticalStepper__step--link--content--disabled': disabled,
+            },
             className,
           )}
         >
@@ -58,7 +58,7 @@ export const Step = ({
 
 const StyledItem = styled.li`
   padding: ${pxToRem(15)} 0;
-  
+
   &:first-of-type {
     margin-top: 0;
   }
@@ -78,31 +78,31 @@ const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
   ${({ as, onClick }) =>
-  (as === 'a' || onClick) &&
-  css`
-    cursor: pointer;
-    text-decoration: none;
+    (as === 'a' || onClick) &&
+    css`
+      cursor: pointer;
+      text-decoration: none;
 
-    .${STEP_CLASSNAME} {
-      transition: transform 0.4s;
-    }
-
-    .${LINK_CLASSNAME} {
-      transition: color 0.4s;
-    }
-
-    :hover,
-    :focus,
-    :active {
       .${STEP_CLASSNAME} {
-        transform: translateX(${pxToRem(5)});
+        transition: transform 0.4s;
       }
 
       .${LINK_CLASSNAME} {
-        color: ${COLORS.primary3};
+        transition: color 0.4s;
       }
-    }
-  `}
+
+      :hover,
+      :focus,
+      :active {
+        .${STEP_CLASSNAME} {
+          transform: translateX(${pxToRem(5)});
+        }
+
+        .${LINK_CLASSNAME} {
+          color: ${COLORS.primary3};
+        }
+      }
+    `}
 
   .k-Steppers--VerticalStepper__step--link--content {
     display: flex;

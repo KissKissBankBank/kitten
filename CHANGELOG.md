@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `variant` prop to `RadioButton`, with default value `andromeda`.
+- Feature: Add `design` prop to `RadioButton`, with default value `disc`.
+- Feature: Better accessibility on `RadioButtonSet`.
 - Feature: Add `variant` prop to `TextInput` with `andromeda` as default value.
 
 ## [2.98.0] - 2020-11-23

@@ -26,11 +26,13 @@ export class Status extends Component {
     } = this.props
 
     return (
-      <StyledContainerStatus className={classNames(
-        'k-Steppers--VerticalStepper__statusContainer',
-        `k-Steppers--VerticalStepper__statusContainer--${variant}`,
-      )}>
-        <span 
+      <StyledContainerStatus
+        className={classNames(
+          'k-Steppers--VerticalStepper__statusContainer',
+          `k-Steppers--VerticalStepper__statusContainer--${variant}`,
+        )}
+      >
+        <span
           {...other}
           className={classNames(
             'k-Steppers--VerticalStepper__status',
@@ -54,15 +56,13 @@ export class Status extends Component {
   iconByStatus = () => {
     const { valid, success, error, waiting, disabled, variant } = this.props
 
-    if (success)
-      return <CheckedIcon width="10" title={null} />
+    if (success) return <CheckedIcon width="10" title={null} />
 
-    if (error)
-      return <WarningIcon color={COLORS.error} title={null} />
+    if (error) return <WarningIcon color={COLORS.error} title={null} />
 
     if (waiting && variant === 'andromeda')
       return <WaitingIcon height="4" color={COLORS.primary1} title={null} />
-      
+
     if (disabled && variant === 'andromeda')
       return <LockIcon width="10" color={COLORS.background1} title={null} />
 
@@ -131,10 +131,10 @@ const StyledContainerStatus = styled.div`
       border: ${pxToRem(3)} solid ${COLORS.background1};
       z-index: 1;
       padding: ${pxToRem(3)};
-    
+
       width: ${pxToRem(STATUS_SIZE)};
       height: ${pxToRem(STATUS_SIZE)};
-      border-radius: ${pxToRem(STATUS_SIZE)}; 
+      border-radius: ${pxToRem(STATUS_SIZE)};
 
       &.k-Steppers--VerticalStepper__status--success {
         background-color: ${COLORS.primary1};
@@ -165,7 +165,7 @@ const StyledContainerStatus = styled.div`
 
         &::before {
           width: ${pxToRem(2)};
-          content: "";
+          content: '';
           position: absolute;
           height: 100%;
           border-left: ${pxToRem(3)} dotted ${COLORS.line1};

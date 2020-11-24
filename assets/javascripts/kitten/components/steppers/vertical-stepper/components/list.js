@@ -36,7 +36,7 @@ const StyledItem = styled.li`
   }
 `
 
-export const List = ({...props}) => <StyledList {...props} />
+export const List = ({ ...props }) => <StyledList {...props} />
 
 List.Item = StyledItem
 
