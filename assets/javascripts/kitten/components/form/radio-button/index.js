@@ -49,9 +49,6 @@ const StyledRadioButton = styled.div`
   .k-Form-RadioButton__input {
     position: absolute;
     opacity: 0;
-    width: 0;
-    height: 0;
-    overflow: hidden;
   }
 
   /* Label statuses */
