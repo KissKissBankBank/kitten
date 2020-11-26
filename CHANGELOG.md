@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `disableInput` prop to `PillNumberInput`, defaults to `false`.
+- A11y: Better accessibility for `PillNumberInput` with `a11yTextHelper` prop.
 
 ## [2.100.1] - 2020-11-26
 

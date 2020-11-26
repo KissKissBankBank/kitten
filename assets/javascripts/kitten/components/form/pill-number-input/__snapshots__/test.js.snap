@@ -59,5 +59,11 @@ exports[`<PillNumberInput /> should match its snapshot with props 1`] = `
       />
     </svg>
   </button>
+  <div
+    aria-live="polite"
+    className="k-u-a11y-visuallyHidden"
+  >
+    
+  </div>
 </div>
 `;

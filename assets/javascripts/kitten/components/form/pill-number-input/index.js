@@ -98,10 +98,14 @@ export const PillNumberInput = ({
   className = null,
   disableInput = false,
   disabled = false,
+  a11yTextHelper = a => {
+    return `Selection: ${a}`
+  },
   ...props
 }) => {
   const inputRef = useRef(null)
   const [currentValue, setCurrentValue] = useState(value)
+  const [a11yText, setA11yText] = useState('')
   const changeEvent = new Event('change', { bubbles: true })
 
   const handleKeyDown = keyDownEvent => {
@@ -126,22 +130,26 @@ export const PillNumberInput = ({
 
   const handleChange = changeEvent => {
     const inputValue = changeEvent.target.value
+    let newValue = inputValue
 
     if (!inputValue) {
-      changeEvent.target.value = 0
+      newValue = 0
     }
 
     if (parseInt(inputValue, 10) > max) {
-      changeEvent.target.value = max
+      newValue = max
     }
 
     if (parseInt(inputValue, 10) < min) {
-      changeEvent.target.value = min
+      newValue = min
     }
 
     if (isNaN(parseInt(inputValue, 10)) || /[^0-9]/.test(inputValue)) {
-      changeEvent.target.value = value
+      newValue = value
     }
+
+    changeEvent.target.value = newValue
+    setA11yText(a11yTextHelper(newValue))
 
     onChange(changeEvent)
   }
@@ -218,6 +226,9 @@ export const PillNumberInput = ({
           <path d="M3 0h2v8h-2z" />
         </svg>
       </button>
+      <div aria-live="polite" className="k-u-a11y-visuallyHidden">
+        {a11yText}
+      </div>
     </StyledPillNumberInput>
   )
 }
@@ -233,4 +244,5 @@ PillNumberInput.propTypes = {
   plusButtonProps: PropTypes.object,
   disableInput: PropTypes.bool,
   disabled: PropTypes.bool,
+  a11yTextHelper: PropTypes.func,
 }
