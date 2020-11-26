@@ -16,13 +16,14 @@ export var Content = function Content(_ref) {
 
   var _useContext = useContext(Context),
       selectedItem = _useContext.selectedItem,
-      componentId = _useContext.componentId;
+      componentId = _useContext.componentId,
+      accordeonWidth = _useContext.accordeonWidth;
 
   useEffect(function () {
     var _contentEl$current;
 
     setMaxHeight((contentEl === null || contentEl === void 0 ? void 0 : (_contentEl$current = contentEl.current) === null || _contentEl$current === void 0 ? void 0 : _contentEl$current.scrollHeight) || 0);
-  }, [contentEl]);
+  }, [selectedItem, accordeonWidth]);
   return /*#__PURE__*/React.createElement("div", {
     className: "k-Accordeon__content",
     "aria-hidden": selectedItem !== index,
