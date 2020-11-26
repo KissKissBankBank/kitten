@@ -1,4 +1,4 @@
-import React, { useState, cloneElement } from 'react'
+import React, { useState, cloneElement, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { Item } from './components/item'
 import { Header } from './components/header'
@@ -11,6 +11,8 @@ import { pxToRem } from '../../helpers/utils/typography'
 import classNames from 'classnames'
 import TYPOGRAPHY from '../../constants/typography-config'
 import { ScreenConfig } from '../../constants/screen-config'
+import { useDebounce } from '../../helpers/utils/debounce'
+import { domElementHelper } from '../../helpers/dom/element-helper'
 
 const StyledAccordeon = styled.div`
   .k-Accordeon__item ~ .k-Accordeon__item {
@@ -61,22 +63,28 @@ const StyledAccordeon = styled.div`
     }
   }
 
-  @media not (prefers-reduced-motion: reduce) {
-    &.k-Accordeon--isAnimated .k-Accordeon__header {
-      transition: border 0.4s ease, border-radius 0.4s ease;
-      transition-delay: 0s;
+  &.k-Accordeon--isAnimated .k-Accordeon__header {
+    transition: border 0.4s ease, border-radius 0.4s ease;
+    transition-delay: 0s;
 
-      &[aria-hidden='true'] {
-        transition-delay: 0.4s;
-      }
+    &[aria-hidden='true'] {
+      transition-delay: 0.4s;
     }
-    &.k-Accordeon--isAnimated .k-Accordeon__content {
-      overflow: hidden;
-      transition: visibility 0s ease, all 0.4s ease;
-      transition-delay: 0s, 0s, 0s;
+  }
+  &.k-Accordeon--isAnimated .k-Accordeon__content {
+    overflow: hidden;
+    transition: visibility 0s ease, all 0.4s ease;
+    transition-delay: 0s, 0s, 0s;
 
-      &[aria-hidden='true'] {
-        transition-delay: 0.4s, 0s, 0s;
+    &[aria-hidden='true'] {
+      transition-delay: 0.4s, 0s, 0s;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    &.k-Accordeon--isAnimated {
+      .k-Accordeon__header,
+      .k-Accordeon__content{
+        transition: none !important;
       }
     }
   }
@@ -170,6 +178,25 @@ export const Accordeon = ({
 }) => {
   const items = getReactElementsByType({ children, type: Accordeon.Item })
   const [internalSelectedItem, setSelectedItem] = useState(selectedItem)
+  const [accordeonWidth, setAccordeonWidth] = useState(0)
+  const debouncedAccordeonWidth = useDebounce(accordeonWidth, 200)
+  const accordeonElement = useRef(null)
+
+  const fakeResizeObserver = { observe: () => {}, disconnect: () => {} }
+  const accordeonSizeObserver =
+    domElementHelper.canUseDom() && 'ResizeObserver' in window
+      ? new ResizeObserver(entries => {
+          entries.forEach(entry => {
+            setAccordeonWidth(entry.contentRect.width)
+          })
+        })
+      : fakeResizeObserver
+
+  useEffect(() => {
+    accordeonSizeObserver.observe(accordeonElement?.current || null)
+
+    return () => accordeonSizeObserver.disconnect()
+  }, [accordeonElement])
 
   const updateSelectedItem = newSelectedItem => {
     const newItem =
@@ -187,6 +214,7 @@ export const Accordeon = ({
     selectedItem: internalSelectedItem,
     componentId: id,
     closeOnClick,
+    accordeonWidth: debouncedAccordeonWidth,
   }
 
   return (
@@ -194,6 +222,7 @@ export const Accordeon = ({
       className={classNames('k-Accordeon', `k-Accordeon--${variant}`, {
         'k-Accordeon--isAnimated': isAnimated,
       })}
+      ref={accordeonElement}
     >
       <Context.Provider value={context}>
         {items.map((item, index) => {

@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `useDebounce(value, delay)` hook.
+- Fix: Accordeon height update frequency.
+
 ## [2.99.0] - 2020-11-24
 
 Features:
