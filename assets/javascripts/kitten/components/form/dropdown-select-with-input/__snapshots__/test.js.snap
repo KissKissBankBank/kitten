@@ -64,6 +64,7 @@ exports[`<DropdownSelectWithInput /> should match its snapshot with props 1`] = 
       aria-labelledby="dropdown-select-with-input-test_element-label dropdown-select-with-input-test"
       className="k-Form-DropdownSelectWithInput__input"
       id="dropdown-select-with-input-test_element-input"
+      onChange={[Function]}
       placeholder="kisskissbankbank"
       type="text"
     />
