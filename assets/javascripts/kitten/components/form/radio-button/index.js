@@ -18,28 +18,30 @@ const StyledRadioButton = styled.div`
 
   .k-Form-RadioButton__label {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     align-self: flex-start;
     flex-wrap: wrap;
     cursor: pointer;
 
-    &::before {
-      box-sizing: border-box;
-      display: block;
-      flex-shrink: 0;
-      width: ${pxToRem(16)};
-      height: ${pxToRem(16)};
-      margin: ${pxToRem(2)} ${pxToRem(10)} 0 0;
+  }
+  /* Radio box */
 
-      content: '';
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: ${COLORS.background1};
-      border: ${pxToRem(2)} solid ${COLORS.line1};
-      border-radius: 50%;
+  .k-Form-RadioButton__label::before {
+    box-sizing: border-box;
+    display: block;
+    flex-shrink: 0;
+    width: ${pxToRem(16)};
+    height: ${pxToRem(16)};
+    margin: ${pxToRem(5)} ${pxToRem(10)} 0 0;
 
-      transition: border .2s, background .2s;
-    }
+    content: '';
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: ${COLORS.background1};
+    border: ${pxToRem(2)} solid ${COLORS.line1};
+    border-radius: 50%;
+
+    transition: border .2s, background .2s;
   }
 
   /* Hide input */
@@ -95,6 +97,7 @@ const StyledRadioButton = styled.div`
   /* Label text styles */
 
   .k-Form-RadioButton__labelText {
+    flex: 1 0 calc(100% - ${pxToRem(16 + 10)});
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-1)};
   }
@@ -138,7 +141,7 @@ const StyledRadioButton = styled.div`
 
     .k-Form-RadioButton__label {
       box-sizing: border-box;
-      padding: ${pxToRem(15)};
+      padding: ${pxToRem(25)} ${pxToRem(15)};
       min-height: ${pxToRem(60)};
       border-radius: ${pxToRem(6)};
       border: 2px solid ${COLORS.line1};
@@ -168,12 +171,14 @@ const StyledRadioButton = styled.div`
       }
 
       .k-Form-RadioButton__label::before {
+        margin-top: ${pxToRem(2)};
         width: ${pxToRem(20)};
         height: ${pxToRem(20)};
       }
 
       .k-Form-RadioButton__labelText {
         font-size: ${stepToRem(0)};
+        flex: 1 0 calc(100% - ${pxToRem(20 + 10)});
       }
 
       .k-Form-RadioButton__labelContents {
