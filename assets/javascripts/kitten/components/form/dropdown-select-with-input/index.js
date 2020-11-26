@@ -336,13 +336,20 @@ export const DropdownSelectWithInput = ({
 
   const onSelectedItemChange = changes => {
     onChange(changes.selectedItem)
-    onInputChange({ value: changes.selectedItem })
+    onInputChange({
+      selectValue: changes.selectedItem,
+      inputValue: inputEl.value,
+    })
   }
 
   const onIsOpenChange = changes => {
     if (!changes.isOpen) {
       inputEl && inputEl.current && inputEl.current.focus()
     }
+  }
+
+  const handleInputChange = event => {
+    onInputChange({ selectValue: selectedItem, inputValue: event.target.value })
   }
 
   const {
@@ -484,6 +491,7 @@ export const DropdownSelectWithInput = ({
           disabled={disabled}
           id={`${id}_element-input`}
           aria-labelledby={`${id}_element-label ${id}`}
+          onChange={handleInputChange}
           {...inputProps}
         />
       </div>
