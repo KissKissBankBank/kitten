@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.100.1] - 2020-11-26
 
+Fix:
 - Fix `RadioButton` styles.
 
 ## [2.100.0] - 2020-11-26
