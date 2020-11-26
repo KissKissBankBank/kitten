@@ -5,7 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `deactivateDropdown` prop to `DropdownSelectWithInput`.
-- Fix: Fix `DropdownSelectWithInput` menu dropdown Z index.
+- Fix: Fix `DropdownSelectWithInput` and `DropdownSelect` menu dropdown Z index.
 - Fix: Fix `onInputChange` handling.
 - Fix: RadioButton min-height and content margin.
 - Feature: Add `useDebounce(value, delay)` hook.
