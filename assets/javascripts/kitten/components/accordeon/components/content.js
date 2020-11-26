@@ -5,11 +5,11 @@ import { pxToRem } from '../../../helpers/utils/typography'
 export const Content = ({ id, children, index }) => {
   const [maxHeight, setMaxHeight] = useState(0)
   const contentEl = useRef(null)
-  const { selectedItem, componentId } = useContext(Context)
+  const { selectedItem, componentId, accordeonWidth } = useContext(Context)
 
   useEffect(() => {
     setMaxHeight(contentEl?.current?.scrollHeight || 0)
-  }, [contentEl])
+  }, [selectedItem, accordeonWidth])
 
   return (
     <div
