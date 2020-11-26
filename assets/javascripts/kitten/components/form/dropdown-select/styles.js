@@ -111,6 +111,7 @@ export const StyledDropdown = styled.div`
   .k-Form-Dropdown__list {
     box-sizing: border-box;
     position: absolute;
+    z-index: 1;
     width: 100%;
     max-height: ${pxToRem(250)};
     padding: 0;
