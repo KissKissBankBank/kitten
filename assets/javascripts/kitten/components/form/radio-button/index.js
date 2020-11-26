@@ -14,7 +14,7 @@ const StyledRadioButton = styled.div`
     transition: all .2s ease;
   }
 
-  /* label */
+  /* label block */
 
   .k-Form-RadioButton__label {
     display: flex;
@@ -22,9 +22,9 @@ const StyledRadioButton = styled.div`
     align-self: flex-start;
     flex-wrap: wrap;
     cursor: pointer;
-
   }
-  /* Radio box */
+
+  /* radio box */
 
   .k-Form-RadioButton__label::before {
     box-sizing: border-box;
@@ -49,6 +49,7 @@ const StyledRadioButton = styled.div`
   .k-Form-RadioButton__input {
     position: absolute;
     opacity: 0;
+    cursor: pointer;
   }
 
   /* Label statuses */
