@@ -4,12 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: Add `deactivateDropdown` prop to `DropdownSelectWithInput`.
-- Fix: Fix `DropdownSelectWithInput` and `DropdownSelect` menu dropdown Z index.
-- Fix: Fix `onInputChange` handling.
-- Fix: `RadioButton` styles.
-- Feature: Add `useDebounce(value, delay)` hook.
-- Fix: Accordeon height update frequency.
+## [2.100.0] - 2020-11-26
+
+Features:
+- Add `deactivateDropdown` prop to `DropdownSelectWithInput`.
+- Add `useDebounce(value, delay)` hook.
+
+Fixes:
+- Fix `DropdownSelectWithInput` and `DropdownSelect` menu dropdown Z index.
+- Fix `onInputChange` handling.
+- `RadioButton` styles.
+- Accordeon height update frequency.
 
 ## [2.99.0] - 2020-11-24
 

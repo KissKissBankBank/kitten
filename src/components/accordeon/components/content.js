@@ -31,13 +31,14 @@ var Content = function Content(_ref) {
 
   var _useContext = (0, _react.useContext)(_context.Context),
       selectedItem = _useContext.selectedItem,
-      componentId = _useContext.componentId;
+      componentId = _useContext.componentId,
+      accordeonWidth = _useContext.accordeonWidth;
 
   (0, _react.useEffect)(function () {
     var _contentEl$current;
 
     setMaxHeight((contentEl === null || contentEl === void 0 ? void 0 : (_contentEl$current = contentEl.current) === null || _contentEl$current === void 0 ? void 0 : _contentEl$current.scrollHeight) || 0);
-  }, [contentEl]);
+  }, [selectedItem, accordeonWidth]);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "k-Accordeon__content",
     "aria-hidden": selectedItem !== index,
