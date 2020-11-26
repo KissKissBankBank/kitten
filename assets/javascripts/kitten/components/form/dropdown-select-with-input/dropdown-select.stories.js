@@ -90,3 +90,54 @@ export const Default = () => {
     </Grid>
   )
 }
+
+export const DeactivatedDropdown = () => {
+  return (
+    <Grid>
+      <GridCol offset="1" col="8">
+        <DropdownSelectWithInput
+          id={text('id', 'dropdown-select')}
+          error={boolean('error', false)}
+          valid={boolean('valid', false)}
+          disabled={boolean('disabled', false)}
+          hideLabel={true}
+          labelText="Facebook"
+          options={options}
+          resetOnBackspace={boolean('resetOnBackspace', false)}
+          highlightOptionBox={boolean('highlightOptionBox', true)}
+          defaultSelectedValue="facebook"
+          deactivateDropdown
+          className="k-u-margin-bottom-triple"
+        />
+        <DropdownSelectWithInput
+          id={text('id', 'dropdown-select')}
+          error={boolean('error', false)}
+          valid={boolean('valid', false)}
+          disabled={boolean('disabled', false)}
+          hideLabel={true}
+          labelText="Twitter"
+          options={options}
+          resetOnBackspace={boolean('resetOnBackspace', false)}
+          highlightOptionBox={boolean('highlightOptionBox', true)}
+          defaultSelectedValue="twitter"
+          deactivateDropdown
+          className="k-u-margin-bottom-triple"
+        />
+        <DropdownSelectWithInput
+          id={text('id', 'dropdown-select')}
+          error={boolean('error', false)}
+          valid={boolean('valid', false)}
+          disabled={boolean('disabled', false)}
+          hideLabel={true}
+          labelText="Instagram"
+          options={options}
+          resetOnBackspace={boolean('resetOnBackspace', false)}
+          highlightOptionBox={boolean('highlightOptionBox', true)}
+          defaultSelectedValue="instagram"
+          deactivateDropdown
+          className="k-u-margin-bottom-triple"
+        />
+      </GridCol>
+    </Grid>
+  )
+}

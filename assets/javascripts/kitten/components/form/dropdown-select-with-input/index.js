@@ -73,12 +73,14 @@ const StyledDropdownSelectWithInput = styled.div`
       margin-left: ${pxToRem(60)};
     }
   }
+
   .k-Form-DropdownSelectWithInput__content--selectedItem {
     background: ${COLORS.primary5};
     border-radius: ${pxToRem(4)};
     padding: 0 ${pxToRem(15)};
     height: ${pxToRem(46)};
   }
+
   .k-Form-DropdownSelectWithInput__placeholder {
     font-size: ${stepToRem(0)};
     color: ${COLORS.font2};
@@ -153,6 +155,7 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__list {
     box-sizing: border-box;
     position: absolute;
+    z-index: 1;
     width: 100%;
     max-height: ${pxToRem(310)};
     padding: 0;
@@ -286,6 +289,16 @@ const StyledDropdownSelectWithInput = styled.div`
       display: inline-block;
     }
   }
+
+  &.k-Form-DropdownSelectWithInput--noDropdown {
+    .k-Form-DropdownSelectWithInput__content {
+      margin: 0 ${pxToRem(10)};
+
+      @media (min-width: ${ScreenConfig.S.min}px) {
+        margin-left: ${pxToRem(10)};
+      }
+    }
+  }
 `
 
 export const DropdownSelectWithInput = ({
@@ -310,6 +323,8 @@ export const DropdownSelectWithInput = ({
   resetOnBackspace,
   highlightOptionBox,
   openOnLoad,
+  deactivateDropdown,
+  className,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -362,7 +377,7 @@ export const DropdownSelectWithInput = ({
   }, [getLabelProps])
 
   const handleInputKeydown = event => {
-    if (!resetOnBackspace) return
+    if (!resetOnBackspace || deactivateDropdown) return
 
     if (inputEl.current.value === '' && event.key === 'Backspace') {
       // Prevent history.back()
@@ -378,12 +393,13 @@ export const DropdownSelectWithInput = ({
 
   return (
     <StyledDropdownSelectWithInput
-      className={classNames('k-Form-DropdownSelectWithInput', {
+      className={classNames('k-Form-DropdownSelectWithInput', className, {
         'k-Form-DropdownSelectWithInput--isOpen': isOpen,
         'k-Form-DropdownSelectWithInput--hasItemSelected': !!selectedItem,
         'k-Form-DropdownSelectWithInput--error': error,
         'k-Form-DropdownSelectWithInput--valid': valid,
         'k-Form-DropdownSelectWithInput--disabled': disabled,
+        'k-Form-DropdownSelectWithInput--noDropdown': deactivateDropdown,
       })}
     >
       <Label
@@ -405,10 +421,10 @@ export const DropdownSelectWithInput = ({
         <button
           className="k-Form-DropdownSelectWithInput__button"
           type="button"
-          disabled={disabled}
           value={selectedItem ? selectedItem.value : null}
           {...toggleButtonProps}
           {...getToggleButtonProps()}
+          disabled={disabled || deactivateDropdown}
         >
           {selectedItem ? (
             <span
@@ -431,12 +447,17 @@ export const DropdownSelectWithInput = ({
               {placeholder}
             </span>
           )}
-          <span
-            className="k-Form-DropdownSelectWithInput__button__arrowBox"
-            aria-hidden
-          >
-            <ArrowIcon direction={isOpen ? 'top' : 'bottom'} />
-          </span>
+          {!deactivateDropdown && (
+            <span
+              className="k-Form-DropdownSelectWithInput__button__arrowBox"
+              aria-hidden
+            >
+              <ArrowIcon
+                version="solid"
+                direction={isOpen ? 'top' : 'bottom'}
+              />
+            </span>
+          )}
           <span className="k-Form-DropdownSelectWithInput__button__statusBadges">
             {error && (
               <WarningCircleIcon
@@ -468,6 +489,7 @@ export const DropdownSelectWithInput = ({
       </div>
       <ul className="k-Form-DropdownSelectWithInput__list" {...getMenuProps()}>
         {isOpen &&
+          !deactivateDropdown &&
           options.map((item, index) => {
             if (item.separator)
               return (
@@ -524,6 +546,7 @@ DropdownSelectWithInput.defaultProps = {
   resetOnBackspace: false,
   highlightOptionBox: true,
   openOnLoad: false,
+  deactivateDropdown: false,
 }
 
 DropdownSelectWithInput.propTypes = {
@@ -544,4 +567,5 @@ DropdownSelectWithInput.propTypes = {
   resetOnBackspace: PropTypes.bool,
   highlightOptionBox: PropTypes.bool,
   openOnLoad: PropTypes.bool,
+  deactivateDropdown: PropTypes.bool,
 }

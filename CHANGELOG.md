@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `deactivateDropdown` prop to `DropdownSelectWithInput`.
+- Fix: Fix `DropdownSelectWithInput` menu dropdown Z index.
+
 ## [2.99.0] - 2020-11-24
 
 Features:
