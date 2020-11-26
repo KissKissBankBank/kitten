@@ -17,10 +17,10 @@ describe('<RadioButton />', () => {
     const component = shallow(
       <RadioButton id="test-id" text="Label Text" large />,
     )
-    const label = component.find('.k-Form-RadioButton__labelText')
+    const radioButton = component.find('.k-Form-RadioButton')
 
-    it('passes the right props to the label text component', () => {
-      expect(label.hasClass('k-Form-RadioButton__labelText--large')).toBe(true)
+    it('passes the right props to the component', () => {
+      expect(radioButton.hasClass('k-Form-RadioButton--largeLabel')).toBe(true)
     })
   })
 
@@ -30,12 +30,12 @@ describe('<RadioButton />', () => {
         Hello
       </RadioButton>,
     )
-    const labelContents = component.find('.k-Form-RadioButton__labelContents')
+    const radioButton = component.find('.k-Form-RadioButton')
 
-    it('passes the right props to the `contentLarge` component', () => {
-      expect(
-        labelContents.hasClass('k-Form-RadioButton__labelContents--large'),
-      ).toBe(true)
+    it('passes the right props to the component', () => {
+      expect(radioButton.hasClass('k-Form-RadioButton--largeContent')).toBe(
+        true,
+      )
     })
   })
 

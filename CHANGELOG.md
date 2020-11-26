@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix `RadioButton` styles.
+
 ## [2.100.0] - 2020-11-26
 
 Features:
@@ -13,8 +15,8 @@ Features:
 Fixes:
 - Fix `DropdownSelectWithInput` and `DropdownSelect` menu dropdown Z index.
 - Fix `onInputChange` handling.
-- `RadioButton` styles.
-- Accordeon height update frequency.
+- Fix `RadioButton` styles.
+- Fix `Accordeon` height update frequency.
 
 ## [2.99.0] - 2020-11-24
 

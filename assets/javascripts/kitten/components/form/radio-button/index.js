@@ -32,7 +32,7 @@ const StyledRadioButton = styled.div`
     flex-shrink: 0;
     width: ${pxToRem(16)};
     height: ${pxToRem(16)};
-    margin: ${pxToRem(5)} ${pxToRem(10)} 0 0;
+    margin: ${pxToRem(4)} ${pxToRem(10)} 0 0;
 
     content: '';
     background-position: center;
@@ -98,6 +98,7 @@ const StyledRadioButton = styled.div`
     flex: 1 0 calc(100% - ${pxToRem(16 + 10)});
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-1)};
+    line-height: 1.5;
   }
 
   :active .k-Form-RadioButton__labelText,
@@ -105,9 +106,15 @@ const StyledRadioButton = styled.div`
     color: ${COLORS.primary3};
   }
 
-  .k-Form-RadioButton__labelText--large {
-    ${TYPOGRAPHY.fontStyles.regular}
-    font-size: ${stepToRem(2)};
+  &.k-Form-RadioButton--largeLabel {
+    .k-Form-RadioButton__label::before {
+      margin-top: ${pxToRem(8)};
+    }
+
+    .k-Form-RadioButton__labelText {
+      ${TYPOGRAPHY.fontStyles.regular}
+      font-size: ${stepToRem(2)};
+    }
   }
 
   .k-Form-RadioButton__labelText--withContents {
@@ -127,7 +134,7 @@ const StyledRadioButton = styled.div`
     }
   }
 
-  .k-Form-RadioButton__labelContents--large {
+  &.k-Form-RadioButton--largeContent .k-Form-RadioButton__labelContents {
     font-size: ${stepToRem(-1)};
   }
 
@@ -233,6 +240,8 @@ export const RadioButton = ({
         `k-Form-RadioButton--${design}`,
         {
           'k-Form-RadioButton--error': error,
+          'k-Form-RadioButton--largeLabel': large,
+          'k-Form-RadioButton--largeContent': largeContent,
         },
       )}
     >
@@ -245,23 +254,15 @@ export const RadioButton = ({
       />
       <label htmlFor={id} className="k-Form-RadioButton__label">
         <span
-          className={classNames(
-            'k-Form-RadioButton__labelText',
-            { 'k-Form-RadioButton__labelText--large': large },
-            { 'k-Form-RadioButton__labelText--withContents': !!children },
-          )}
+          className={classNames('k-Form-RadioButton__labelText', {
+            'k-Form-RadioButton__labelText--withContents': !!children,
+          })}
         >
           {text}
         </span>
 
         {children && (
-          <div
-            className={classNames('k-Form-RadioButton__labelContents', {
-              'k-Form-RadioButton__labelContents--large': largeContent,
-            })}
-          >
-            {children}
-          </div>
+          <div className="k-Form-RadioButton__labelContents">{children}</div>
         )}
       </label>
     </StyledRadioButton>
