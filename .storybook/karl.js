@@ -35,6 +35,6 @@ export default create({
   inputBorderRadius: 4,
 
   brandTitle: 'Kitten, by KissKissBankBank & Co.',
-  brandUrl: 'https://kitten.vercel.com',
+  brandUrl: 'https://kitten.vercel.app',
   brandImage: '/logo-kisskissandco.svg',
 })
