@@ -19,6 +19,17 @@ const StyledAccordeon = styled.div`
     margin-top: ${pxToRem(15)};
   }
 
+  .k-Accordeon__item:focus-within {
+    border-radius: ${pxToRem(3)};
+    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1}, 0 0 0 ${pxToRem(
+  4,
+)} ${COLORS.primary4};
+
+    .k-Accordeon__header {
+      outline: none;
+    }
+  }
+
   .k-Accordeon__header {
     display: block;
 
@@ -35,12 +46,6 @@ const StyledAccordeon = styled.div`
     background-color: transparent;
     cursor: pointer;
     text-align: left;
-  }
-
-  .k-Accordeon__header:focus,
-  .k-Accordeon__header:focus + .k-Accordeon__content {
-    outline: none;
-    border-color: ${COLORS.primary1};
   }
 
   .k-Accordeon__content {
@@ -115,6 +120,10 @@ const StyledAccordeon = styled.div`
   }
 
   &.k-Accordeon--orion {
+    .k-Accordeon__item {
+      border-radius: ${pxToRem(6)};
+    }
+
     .k-Accordeon__header {
       position: relative;
       padding: ${pxToRem(25)} ${pxToRem(30 + 10 + 10)} ${pxToRem(25)} ${pxToRem(

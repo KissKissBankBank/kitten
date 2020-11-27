@@ -27,7 +27,7 @@ const StyledTagButton = styled(
   border-radius: ${pxToRem(4)};
   border-width: ${pxToRem(2)};
   border-style: solid;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
   box-sizing: border-box;
 
   ${TYPOGRAPHY.fontStyles.regular};
@@ -39,7 +39,14 @@ const StyledTagButton = styled(
   outline: none;
   cursor: pointer;
 
-  :disabled {
+  &:focus {
+    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1}, 0 0 0 ${pxToRem(
+  4,
+)} ${COLORS.primary4};
+  }
+
+
+  &:disabled {
     cursor: not-allowed;
   }
 
@@ -93,8 +100,11 @@ const StyledTagButton = styled(
       border-color: ${COLORS.background1};
       background-color: ${COLORS.background1};
 
-      &:hover,
       &:focus {
+        border-color: ${COLORS.background1};
+      }
+
+      &:hover {
         color: ${COLORS.primary1};
         border-color: ${COLORS.background1};
         background-color: ${COLORS.background1};
@@ -121,8 +131,11 @@ const hydrogen = css`
   border-color: ${COLORS.line1};
   background-color: ${COLORS.background1};
 
-  &:hover,
   &:focus {
+    border-color: ${COLORS.primary1};
+  }
+
+  &:hover {
     color: ${COLORS.background1};
     border-color: ${COLORS.primary2};
     background-color: ${COLORS.primary2};

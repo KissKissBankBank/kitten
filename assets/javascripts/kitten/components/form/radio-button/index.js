@@ -41,7 +41,7 @@ const StyledRadioButton = styled.div`
     border: ${pxToRem(2)} solid ${COLORS.line1};
     border-radius: 50%;
 
-    transition: border .2s, background .2s;
+    transition: border .2s, background .2s, box-shadow .2s
   }
 
   /* Hide input */
@@ -57,6 +57,9 @@ const StyledRadioButton = styled.div`
   .k-Form-RadioButton__input:focus + .k-Form-RadioButton__label::before {
     outline: none;
     border-color: ${COLORS.primary1};
+    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1}, 0 0 0 ${pxToRem(
+  4,
+)} ${COLORS.primary4};
   }
   .k-Form-RadioButton__input:checked + .k-Form-RadioButton__label::before {
     border: ${pxToRem(5)} solid ${COLORS.primary1};
@@ -156,6 +159,16 @@ const StyledRadioButton = styled.div`
     .k-Form-RadioButton__input:focus:not(:disabled) {
       & + .k-Form-RadioButton__label {
         border-color: ${COLORS.primary1};
+      }
+    }
+
+    .k-Form-RadioButton__input:focus + .k-Form-RadioButton__label {
+      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1}, 0 0 0 ${pxToRem(
+  4,
+)} ${COLORS.primary4};
+
+      &::before {
+        box-shadow: none;
       }
     }
 

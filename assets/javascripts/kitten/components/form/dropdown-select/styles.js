@@ -159,6 +159,12 @@ export const StyledDropdown = styled.div`
     .k-Form-Dropdown__list {
       border-color: ${COLORS.line2};
     }
+    .k-Form-DropdownCombobox,
+    .k-Form-DropdownSelect__button {
+      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1}, 0 0 0 ${pxToRem(
+  4,
+)} ${COLORS.primary4};
+    }
   }
 
   &.k-Form-Dropdown--error {

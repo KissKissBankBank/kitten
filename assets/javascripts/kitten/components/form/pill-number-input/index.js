@@ -18,7 +18,14 @@ const StyledPillNumberInput = styled.div`
   border-radius: ${pxToRem(20)};
   transition: border-color .2s ease;
 
-  &:focus-within, &:hover {
+  &:focus-within {
+    border-color: ${COLORS.line2};
+    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1}, 0 0 0 ${pxToRem(
+  4,
+)} ${COLORS.primary4};
+  }
+
+  &:hover {
     border-color: ${COLORS.line2};
   }
 

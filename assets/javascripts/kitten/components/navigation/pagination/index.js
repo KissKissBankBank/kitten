@@ -81,6 +81,7 @@ const StyledNav = styled.nav`
     color: ${COLORS.font1};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.background1};
+    transition: all 0.2s ease;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${pxToRem(50)};
@@ -94,6 +95,11 @@ const StyledNav = styled.nav`
       border-color: ${COLORS.primary1};
       background-color: ${COLORS.background1};
       text-decoration: none;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
+        0 0 0 ${pxToRem(4)} ${COLORS.primary4};
     }
 
     &:active {
@@ -245,6 +251,7 @@ const PaginationBase = forwardRef(
             aria-current={isActive && 'page'}
             aria-label={ariaLabel}
             onClick={isActive ? null : pageClickHandler(number)}
+            tabIndex="0"
           >
             {number}
           </Text>

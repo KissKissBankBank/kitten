@@ -66,8 +66,21 @@ const StyledItem = styled.li`
     margin-bottom: 0;
   }
 
+  &:focus-within {
+    a,
+    button {
+      border-radius: ${pxToRem(3)};
+      padding-right: ${pxToRem(10)};
+      outline: none;
+      box-shadow: 0 0 0 ${pxToRem(4)} ${COLORS.background1},
+        0 0 0 ${pxToRem(6)} ${COLORS.primary4},
+        0 0 0 ${pxToRem(10)} ${COLORS.background1};
+    }
+  }
+
   li:not(:last-of-type) {
     margin: 0 !important;
+
     &::after {
       display: none;
     }
@@ -77,6 +90,7 @@ const StyledItem = styled.li`
 const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
+
   ${({ as, onClick }) =>
     (as === 'a' || onClick) &&
     css`

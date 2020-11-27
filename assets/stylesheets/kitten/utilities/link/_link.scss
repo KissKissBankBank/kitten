@@ -22,9 +22,25 @@
     @include k-typographyFont($font);
     text-decoration: none;
 
+    &:focus {
+      outline: none;
+      border-radius: 2px;
+      box-shadow:
+        0 0 0 2px map-get($k-colors, 'background-1'),
+        0 0 0 4px map-get($k-colors, 'primary-4');
+    }
+
     &--important {
       @include k-typographyFont($font, true);
       text-decoration: none !important;
+
+      &:focus {
+        outline: none;
+        border-radius: 2px;
+        box-shadow:
+          0 0 0 2px map-get($k-colors, 'background-1'),
+          0 0 0 4px map-get($k-colors, 'primary-4');
+      }
     }
   }
 

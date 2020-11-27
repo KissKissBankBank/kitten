@@ -99,6 +99,14 @@
     @include k-buttonPadding($button-size, $icon-width, $icon-height);
 
     border-radius: $button-radius;
+
+    &:focus {
+      outline: none;
+      border-radius: 2px;
+      box-shadow:
+        0 0 0 2px map-get($k-colors, 'background-1'),
+        0 0 0 4px map-get($k-colors, 'primary-4');
+    }
   }
 
   .k-ButtonIcon__svg {

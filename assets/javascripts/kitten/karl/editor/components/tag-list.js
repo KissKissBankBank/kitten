@@ -11,11 +11,6 @@ import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import { pxToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 
-const SummaryButton = styled(Button)`
-  pointer-events: none;
-  width: ${pxToRem(75)};
-`
-
 const List = styled.ul`
   position: absolute;
   display: flex;
@@ -28,6 +23,7 @@ const List = styled.ul`
 
   .Editor__toolbar__listItem {
     width: 100%;
+    position: relative;
     padding: ${pxToRem(15)} ${pxToRem(20)};
     border: none;
     border-left: ${pxToRem(2)} solid ${COLORS.line1};
@@ -44,6 +40,12 @@ const List = styled.ul`
       background-color: ${COLORS.background3};
     }
 
+    &:focus {
+      z-index: 3;
+      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
+        0 0 0 ${pxToRem(4)} ${COLORS.primary4};
+    }
+
     &[aria-selected='true'] {
       svg,
       path {
@@ -54,17 +56,27 @@ const List = styled.ul`
 `
 
 const StyledDetails = styled(Details)`
-  summary:focus {
-    outline: none;
+  summary.Editor__toolbar__tagListToggle {
+    .Editor__toolbar__tagListToggle__button {
+      pointer-events: none;
+      width: ${pxToRem(75)};
+    }
 
-    button {
-      border-color: ${COLORS.primary4};
-      background-color: ${COLORS.background1};
-      color: ${COLORS.primary1};
+    &:focus {
+      outline: none;
+      z-index: 3;
+      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
+        0 0 0 ${pxToRem(4)} ${COLORS.primary4};
 
-      svg,
-      path {
-        fill: ${COLORS.primary1};
+      .Editor__toolbar__tagListToggle__button {
+        border-color: ${COLORS.primary4};
+        background-color: ${COLORS.background1};
+        color: ${COLORS.primary1};
+
+        svg,
+        path {
+          fill: ${COLORS.primary1};
+        }
       }
     }
   }
@@ -102,11 +114,16 @@ const TagList = () => {
     <StyledDetails
       key={value}
       summaryRender={({ open }) => (
-        <SummaryButton tabIndex="-1">
+        <Button
+          tabIndex="-1"
+          tag="span"
+          className="Editor__toolbar__tagListToggle__button"
+        >
           <Component />
           <ArrowIcon width="6" direction={open ? 'top' : 'bottom'} />
-        </SummaryButton>
+        </Button>
       )}
+      summaryProps={{ className: 'Editor__toolbar__tagListToggle' }}
     >
       <List>
         <li>

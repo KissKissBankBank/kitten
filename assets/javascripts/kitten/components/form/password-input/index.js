@@ -15,7 +15,7 @@ const StyledTextInput = styled(TextInput)`
   padding-right: ${pxToRem(40)};
 `
 
-const StyledIcon = styled.span`
+const StyledIcon = styled.button`
   display: flex;
   position: absolute;
   z-index: 1;
@@ -24,6 +24,12 @@ const StyledIcon = styled.span`
   top: 0;
   bottom: 0;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
+      0 0 0 ${pxToRem(4)} ${COLORS.primary4};
+  }
 
   &[aria-pressed='true'] {
     svg {
@@ -56,14 +62,6 @@ export class PasswordInput extends PureComponent {
     this.setState({ isHidden: !this.state.isHidden })
   }
 
-  handleKeyDown = event => {
-    const enterKeyCode = 13
-
-    if (event.keyCode == enterKeyCode) {
-      this.handleClick()
-    }
-  }
-
   render() {
     const { name, iconLabel, hiddenIconLabel, ...others } = this.props
 
@@ -79,9 +77,9 @@ export class PasswordInput extends PureComponent {
         <StyledIcon
           title={iconTitle}
           onClick={this.handleClick}
-          onKeyDown={this.handleKeyDown}
           aria-pressed={active}
           tabIndex="0"
+          className="k-u-reset-button"
         >
           <PasswordIcon />
         </StyledIcon>

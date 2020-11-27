@@ -171,7 +171,9 @@
 
       &:focus,
       .k-Slider.is-grabbing & {
-        box-shadow: 0 0 k-px-to-rem(10px) 0 $handle-color;
+        box-shadow:
+          0 0 0 k-px-to-rem(2px) k-map-fetch($k-colors, 'background-1'),
+          0 0 0 k-px-to-rem(4px) k-map-fetch($k-colors, 'primary-4');
       }
 
       .k-Slider.is-grabbing & {

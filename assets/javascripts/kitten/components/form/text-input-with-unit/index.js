@@ -72,9 +72,18 @@ const StyledTextInputWithUnit = styled.div`
     }
   }
 
-  &:focus-within .k-Form-TextInputWithUnit__unit {
-    border-color: ${COLORS.line2};
-    color: ${COLORS.font1};
+  &:focus-within {
+    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
+      0 0 0 ${pxToRem(4)} ${COLORS.primary4};
+
+    .k-Form-TextInput {
+      box-shadow: none;
+    }
+
+    .k-Form-TextInputWithUnit__unit {
+      border-color: ${COLORS.line2};
+      color: ${COLORS.font1};
+    }
   }
 `
 

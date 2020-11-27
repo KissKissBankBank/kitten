@@ -52,10 +52,9 @@ const StyledCheckbox = styled.div`
     &:focus {
       outline: none;
       border-color: ${COLORS.primary1};
-    }
-
-    &:checked:focus {
-      box-shadow: 0 0 ${pxToRem(3)} ${COLORS.primary1};
+      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1}, 0 0 0 ${pxToRem(
+  4,
+)} ${COLORS.primary4};
     }
 
     &:checked,

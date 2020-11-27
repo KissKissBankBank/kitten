@@ -34,6 +34,18 @@ const AlertWrapper = styled.div`
 
   .k-Alert__button {
     flex: 0 0 auto;
+    transition: all 0.2s ease;
+
+    svg,
+    svg path {
+      transition: fill 0.2s ease;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 ${pxToRem(2)} ${COLORS.background1},
+        inset 0 0 0 ${pxToRem(4)} ${COLORS.primary1};
+    }
   }
 
   a {

@@ -45,15 +45,19 @@ const StyledSwitch = styled.button`
   background-color: currentColor;
   border: ${pxToRem(borderSize)} solid ${COLORS.line2};
   border-radius: ${pxToRem(borderRadius)};
-  transition: color ${transitionDuration} ease,
-    border-color ${transitionDuration} ease,
+  transition: box-shadow ${transitionDuration} ease,
+    color ${transitionDuration} ease, border-color ${transitionDuration} ease,
     background-color ${transitionDuration} ease;
   cursor: pointer;
 
   &:focus {
     border-color: ${COLORS.primary1};
-    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.primary4};
+    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
+      0 0 0 ${pxToRem(4)} ${COLORS.primary4};
     outline: none;
+    .k-ToggleSwitch__circle {
+      border-color: ${COLORS.primary1};
+    }
   }
 
   .k-ToggleSwitch__circle {

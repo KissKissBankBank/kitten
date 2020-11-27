@@ -25,6 +25,11 @@ const StyledButton = styled.button`
   box-sizing: border-box;
   outline: none;
 
+  &:focus {
+    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
+      0 0 0 ${pxToRem(4)} ${COLORS.primary4};
+  }
+
   &[aria-pressed='true'] {
     svg {
       fill: ${COLORS.error};

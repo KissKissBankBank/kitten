@@ -234,6 +234,13 @@ const StyledDropdownSelectWithInput = styled.div`
     button, input {
       outline: none;
     }
+
+    .k-Form-DropdownSelectWithInput__container {
+      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1}, 0 0 0 ${pxToRem(
+  4,
+)} ${COLORS.primary4};
+    }
+
   }
 
   &.k-Form-DropdownSelectWithInput--error .k-Form-DropdownSelectWithInput__input,

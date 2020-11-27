@@ -30,6 +30,15 @@ const StyledContainer = styled.div`
       pointer-events: none;
     }
   }
+
+  button,
+  a {
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.font1},
+        0 0 0 ${pxToRem(4)} ${COLORS.primary3};
+    }
+  }
 `
 const StyledPagination = styled.div`
   justify-content: ${({ paginationAlign }) => paginationAlign};
@@ -54,6 +63,12 @@ const StyledPaginationButton = styled.button`
   transition: background 0.4s ease-in-out;
   background: ${({ paginationColor }) => paginationColor};
   vertical-align: top;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.font1},
+      0 0 0 ${pxToRem(4)} ${COLORS.primary3};
+  }
 
   &[aria-selected='true'] {
     background: ${({ activePaginationColor }) => activePaginationColor};

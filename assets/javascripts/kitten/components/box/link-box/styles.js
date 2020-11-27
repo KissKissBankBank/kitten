@@ -8,6 +8,20 @@ export const StyledLinkBox = styled.a`
   color: ${COLORS.font1};
   text-decoration: none;
 
+  &:focus {
+    outline: none;
+
+    .k-LinkBox__link {
+      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
+        0 0 0 ${pxToRem(4)} ${COLORS.primary4};
+      background-color: ${COLORS.background2};
+
+      .k-LinkBox__arrow {
+        transform: translate(${pxToRem(5)}, ${pxToRem(0)});
+      }
+    }
+  }
+
   .k-LinkBox__link {
     display: flex;
     min-height: ${pxToRem(90)};
@@ -17,6 +31,7 @@ export const StyledLinkBox = styled.a`
     background-color: ${COLORS.background1};
     border: ${pxToRem(2)} solid ${COLORS.line1};
     border-radius: ${pxToRem(4)};
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
       background-color: ${COLORS.background2};
@@ -70,7 +85,7 @@ export const StyledLinkBox = styled.a`
     display: flex;
     align-items: center;
     padding: ${pxToRem(15)} ${pxToRem(22)} ${pxToRem(15)} ${pxToRem(18)};
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       padding-left: ${pxToRem(30)};
