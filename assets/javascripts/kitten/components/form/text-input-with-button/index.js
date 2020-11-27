@@ -21,7 +21,6 @@ const StyledButton = styled.button`
   font-size: ${stepToRem(-1)};
   line-height: 1.3;
   flex: 1 0 auto;
-  outline: none;
   appearance: none;
   cursor: pointer;
   padding: 0 ${pxToRem(30)};
@@ -53,6 +52,11 @@ const StyledButton = styled.button`
     css`
       cursor: not-allowed;
     `}
+
+  &:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
 `
 
 export class TextInputWithButton extends PureComponent {

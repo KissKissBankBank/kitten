@@ -52,9 +52,8 @@ const StyledSwitch = styled.button`
 
   &:focus {
     border-color: ${COLORS.primary1};
-    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
-      0 0 0 ${pxToRem(4)} ${COLORS.primary4};
-    outline: none;
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
     .k-ToggleSwitch__circle {
       border-color: ${COLORS.primary1};
     }

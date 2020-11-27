@@ -15,7 +15,7 @@ const Item = styled.div`
   padding-left: ${pxToRem(20)};
   padding-right: ${pxToRem(20)};
   background-color: ${COLORS.background1};
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease;
 
   :hover {
     background-color: ${COLORS.background2};
@@ -23,9 +23,8 @@ const Item = styled.div`
 
   &:focus {
     z-index: 1;
-    outline: none;
-    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
-      0 0 0 ${pxToRem(4)} ${COLORS.primary4};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 
   &.k-List__button--withTopBorder {

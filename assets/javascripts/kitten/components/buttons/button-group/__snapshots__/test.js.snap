@@ -30,13 +30,12 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c1:disabled {
@@ -78,7 +77,8 @@ exports[`<ButtonGroup /> with some props matches with snapshot 1`] = `
 }
 
 .c1:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c1:disabled {

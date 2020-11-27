@@ -158,7 +158,6 @@
       width: $handle-size;
       margin-left: -($handle-size / 2);
 
-      outline: 0; // hide default outline in favor of our hand-made focus style
       border: 1px solid $border-color;
       border-radius: 50%;
       background: $handle-color;
@@ -171,9 +170,8 @@
 
       &:focus,
       .k-Slider.is-grabbing & {
-        box-shadow:
-          0 0 0 k-px-to-rem(2px) k-map-fetch($k-colors, 'background-1'),
-          0 0 0 k-px-to-rem(4px) k-map-fetch($k-colors, 'primary-4');
+        outline: map-get($k-colors, 'primary-4') solid k-px-to-rem(2px);
+        outline-offset: k-px-to-rem(2px);
       }
 
       .k-Slider.is-grabbing & {

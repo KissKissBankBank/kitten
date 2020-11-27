@@ -25,8 +25,7 @@ const StyledDatePicker = styled.div`
   .DayPickerInput-Overlay {
     box-shadow: none;
     margin-top: 18px;
-    outline: none;
-    min-width: calc(7 * ${tinyCellSize} + 2 * ${tinyDayPickerPadding});
+        min-width: calc(7 * ${tinyCellSize} + 2 * ${tinyDayPickerPadding});
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       min-width: calc(7 * ${cellSize} + 2 * ${dayPickerPadding});
@@ -86,7 +85,6 @@ const StyledDatePicker = styled.div`
     vertical-align: middle;
     box-sizing: border-box;
     ${fontSize}
-    outline: none;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       width: ${cellSize};
@@ -144,7 +142,6 @@ const StyledDatePicker = styled.div`
   .DayPicker-wrapper {
     padding: 0 ${tinyDayPickerPadding} ${tinyDayPickerPadding}
       ${tinyDayPickerPadding};
-    outline: none;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       padding: 0 ${dayPickerPadding} ${dayPickerPadding} ${dayPickerPadding};
@@ -154,7 +151,6 @@ const StyledDatePicker = styled.div`
   .DayPicker {
     ${fontSize}
     ${TYPOGRAPHY.fontStyles.light}
-    outline: none;
 
     ${({ styles }) => css`
       border: solid ${styles.borderColor} ${borderSize};

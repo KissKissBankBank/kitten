@@ -19,16 +19,6 @@ const StyledAccordeon = styled.div`
     margin-top: ${pxToRem(15)};
   }
 
-  .k-Accordeon__item:focus-within {
-    border-radius: ${pxToRem(3)};
-    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1}, 0 0 0 ${pxToRem(
-  4,
-)} ${COLORS.primary4};
-
-    .k-Accordeon__header {
-      outline: none;
-    }
-  }
 
   .k-Accordeon__header {
     display: block;
@@ -46,6 +36,11 @@ const StyledAccordeon = styled.div`
     background-color: transparent;
     cursor: pointer;
     text-align: left;
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
   }
 
   .k-Accordeon__content {

@@ -27,7 +27,6 @@ const Input = styled.input`
   background: ${COLORS.background1};
   border: ${pxToRem(borderSize)} solid ${COLORS.line1};
   padding: 0 ${pxToRem(15)};
-  outline: none;
 
   ${TYPOGRAPHY.fontStyles.light};
   font-size: ${stepToRem(-1)};
@@ -175,7 +174,8 @@ const Item = styled.li`
   }
 
   :focus {
-    outline: none;
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 
   &[aria-selected='true'] {

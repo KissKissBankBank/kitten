@@ -23,11 +23,10 @@ const StyledButton = styled.button`
 
   appareance: none;
   box-sizing: border-box;
-  outline: none;
 
   &:focus {
-    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
-      0 0 0 ${pxToRem(4)} ${COLORS.primary4};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 
   &[aria-pressed='true'] {

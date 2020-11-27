@@ -5,7 +5,7 @@ exports[`<PasswordInput /> should match its empty snapshot 1`] = `
   className="sc-htpNat fPTXzr"
 >
   <input
-    className="sc-bdVaJa eDiHEM k-Form-TextInput sc-bxivhb hXfOnm k-Form-TextInput--andromeda"
+    className="sc-bdVaJa brqohi k-Form-TextInput sc-bxivhb hXfOnm k-Form-TextInput--andromeda"
     disabled={false}
     id="password"
     name="password"
@@ -13,7 +13,7 @@ exports[`<PasswordInput /> should match its empty snapshot 1`] = `
   />
   <button
     aria-pressed={false}
-    className="sc-ifAKCX bGsQJR k-u-reset-button"
+    className="sc-ifAKCX cMFPqE k-u-reset-button"
     onClick={[Function]}
     tabIndex="0"
     title="Custom icon label"

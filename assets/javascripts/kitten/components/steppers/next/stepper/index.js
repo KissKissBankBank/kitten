@@ -63,13 +63,12 @@ const StepperText = styled(Text)`
   display: flex;
   align-items: center;
   white-space: nowrap;
-  transition: color 0.2s ease, box-shadow 0.2s ease;
+  transition: color 0.2s ease;
   border-radius: ${pxToRem(6)};
 
   &:focus {
-    outline: none;
-    box-shadow: 0 0 0 ${pxToRem(4)} ${COLORS.primary6},
-      0 0 0 ${pxToRem(6)} ${COLORS.primary4};
+    outline: ${COLORS.primary3} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 `
 

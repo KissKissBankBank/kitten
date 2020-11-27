@@ -36,13 +36,11 @@ const StyledTagButton = styled(
   line-height: 1.3;
   text-decoration: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
 
   &:focus {
-    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1}, 0 0 0 ${pxToRem(
-  4,
-)} ${COLORS.primary4};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 
 

@@ -30,13 +30,12 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c0:disabled {
@@ -78,7 +77,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -161,15 +161,14 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c0:disabled {
@@ -211,7 +210,8 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -294,13 +294,12 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   -webkit-transition: background 0.2s,color 0.2s;
   transition: background 0.2s,color 0.2s;
   border: 0 !important;
@@ -358,7 +357,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -441,15 +441,14 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
   color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   -webkit-transition: background 0.2s,color 0.2s;
   transition: background 0.2s,color 0.2s;
   border: 0 !important;
@@ -507,7 +506,8 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -590,13 +590,12 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
   color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c0:disabled {
@@ -638,7 +637,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -721,15 +721,14 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
   color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c0:disabled {
@@ -771,7 +770,8 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -854,13 +854,12 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
   color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c0:disabled {
@@ -902,7 +901,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -985,15 +985,14 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
   color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c0:disabled {
@@ -1035,7 +1034,8 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {

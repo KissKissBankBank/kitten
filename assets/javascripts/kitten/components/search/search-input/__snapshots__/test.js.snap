@@ -4,7 +4,6 @@ exports[`<SearchInput /> Basic search input matches with snapshot 1`] = `
 .c0 {
   width: 100%;
   border: none;
-  outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -44,6 +43,11 @@ exports[`<SearchInput /> Basic search input matches with snapshot 1`] = `
 
 .c0::-ms-clear {
   display: none;
+}
+
+.c0:focus {
+  outline: #e8f7fe solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 @media (min-width:640px) {
@@ -70,7 +74,6 @@ exports[`<SearchInput /> Search input with attributes matches with snapshot 1`] 
 .c0 {
   width: 100%;
   border: none;
-  outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -110,6 +113,11 @@ exports[`<SearchInput /> Search input with attributes matches with snapshot 1`] 
 
 .c0::-ms-clear {
   display: none;
+}
+
+.c0:focus {
+  outline: #e8f7fe solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 @media (min-width:640px) {

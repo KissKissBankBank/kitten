@@ -33,7 +33,6 @@ const List = styled.ul`
 
     appareance: none;
     box-sizing: border-box;
-    outline: none;
 
     &:hover,
     &:focus {
@@ -42,8 +41,8 @@ const List = styled.ul`
 
     &:focus {
       z-index: 3;
-      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
-        0 0 0 ${pxToRem(4)} ${COLORS.primary4};
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
 
     &[aria-selected='true'] {
@@ -63,10 +62,9 @@ const StyledDetails = styled(Details)`
     }
 
     &:focus {
-      outline: none;
       z-index: 3;
-      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
-        0 0 0 ${pxToRem(4)} ${COLORS.primary4};
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
 
       .Editor__toolbar__tagListToggle__button {
         border-color: ${COLORS.primary4};

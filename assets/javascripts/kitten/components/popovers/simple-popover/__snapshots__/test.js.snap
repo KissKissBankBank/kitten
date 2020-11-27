@@ -56,7 +56,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -68,8 +67,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c1:disabled {
@@ -111,7 +110,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 .c1:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c1:disabled {
@@ -149,7 +149,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -158,8 +157,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c9:disabled {
@@ -201,7 +200,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 .c9:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c9:disabled {
@@ -239,7 +239,6 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: 10rem;
   min-height: 2.5rem;
@@ -248,8 +247,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   border: 0.125rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c10:disabled {
@@ -291,7 +290,8 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 }
 
 .c10:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c10:disabled {
@@ -573,7 +573,6 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   min-height: initial;
@@ -585,8 +584,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
 .c1:disabled {
@@ -628,7 +627,8 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 }
 
 .c1:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c1:disabled {

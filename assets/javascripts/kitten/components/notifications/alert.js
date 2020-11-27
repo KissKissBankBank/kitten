@@ -42,9 +42,8 @@ const AlertWrapper = styled.div`
     }
 
     &:focus {
-      outline: none;
-      box-shadow: inset 0 0 0 ${pxToRem(2)} ${COLORS.background1},
-        inset 0 0 0 ${pxToRem(4)} ${COLORS.primary1};
+      outline: ${COLORS.background1} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(-4)};
     }
   }
 

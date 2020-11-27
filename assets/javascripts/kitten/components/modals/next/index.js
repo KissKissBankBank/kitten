@@ -40,12 +40,11 @@ const GlobalStyle = createGlobalStyle`
   body.k-ModalNext__body--open {
     overflow: hidden;
   }
-  
+
   .k-ModalNext__content {
     position: relative;
     background-color: ${COLORS.background1};
     box-sizing: border-box;
-    outline: none;
     transform: scale(0.94);
     margin-right: ${pxToRem(20)};
     margin-left: ${pxToRem(20)};
@@ -58,7 +57,7 @@ const GlobalStyle = createGlobalStyle`
         min-width: 100vw !important;
         margin: 0 !important;
       `};
-  
+
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
       margin: auto;
       padding: ${pxToRem(80)} ${oneGridCol};
@@ -66,7 +65,7 @@ const GlobalStyle = createGlobalStyle`
   GUTTER,
 )} * 11))
     }
-  
+
     @media (min-width: ${pxToRem(ScreenConfig.L.min)}) {
       padding: ${pxToRem(80)} ${oneGridCol};
       ${props => css`
@@ -76,7 +75,7 @@ const GlobalStyle = createGlobalStyle`
         );
       `}
     }
-    
+
     @media (min-width: ${pxToRem(ScreenConfig.XL.min)}) {
     ${props => css`
       width: ${pxToRem(
@@ -100,7 +99,7 @@ const GlobalStyle = createGlobalStyle`
       margin: 0;
     }
   }
-  
+
   .k-ModalNext__overlay {
     position: fixed;
     overflow: scroll;
@@ -111,7 +110,7 @@ const GlobalStyle = createGlobalStyle`
     right: 0;
     bottom: 0;
     opacity: 0;
-    background-color: rgba(34, 34, 34, .8);    
+    background-color: rgba(34, 34, 34, .8);
     &::before ,
     &::after {
       content:'';
@@ -132,7 +131,7 @@ const GlobalStyle = createGlobalStyle`
         z-index: ${props.zIndex};
       `}
   }
-  
+
   .k-ModalNext__overlay--afterOpen {
     transition: opacity .3s ease;
     opacity: 1;
@@ -151,7 +150,7 @@ const GlobalStyle = createGlobalStyle`
     transform: scale(1.06);
     opacity: 0;
   }
-  
+
   .k-ModalNext__title--fullSize {
     position: sticky;
     top:0;
@@ -164,12 +163,12 @@ const GlobalStyle = createGlobalStyle`
     border-bottom: ${pxToRem(2)} solid ${COLORS.line1};
     margin-bottom: ${pxToRem(50)};
   }
-  
+
   .k-ModalNext__closeButton--fullSize {
     position: absolute;
     left: ${pxToRem(20)}
     top: ${pxToRem(12)}
-  } 
+  }
 `
 
 const ModalTitle = ({ children }) => (

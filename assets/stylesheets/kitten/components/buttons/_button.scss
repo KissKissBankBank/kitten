@@ -121,9 +121,8 @@
     text-decoration: none;
 
     &:focus {
-      box-shadow:
-        0 0 0 2px map-get($k-colors, 'background-1'),
-        0 0 0 4px map-get($k-colors, 'primary-4');
+      outline: map-get($k-colors, 'primary-4') solid k-px-to-rem(2px);
+      outline-offset: k-px-to-rem(2px);
     }
   }
 

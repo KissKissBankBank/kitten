@@ -66,16 +66,12 @@ const StyledItem = styled.li`
     margin-bottom: 0;
   }
 
-  &:focus-within {
-    a,
-    button {
-      border-radius: ${pxToRem(3)};
-      padding-right: ${pxToRem(10)};
-      outline: none;
-      box-shadow: 0 0 0 ${pxToRem(4)} ${COLORS.background1},
-        0 0 0 ${pxToRem(6)} ${COLORS.primary4},
-        0 0 0 ${pxToRem(10)} ${COLORS.background1};
-    }
+  a:focus,
+  button:focus {
+    border-radius: ${pxToRem(3)};
+    padding-right: ${pxToRem(10)};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 
   li:not(:last-of-type) {

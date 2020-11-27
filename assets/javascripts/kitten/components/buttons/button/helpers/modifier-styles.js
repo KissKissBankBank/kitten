@@ -139,8 +139,7 @@ export const modifierStyles = modifier => {
       transition: fill 0.2s;
     }
 
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s,
-      box-shadow 0.2s;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 
     ${modifier === 'social_instagram' &&
     css`
@@ -202,8 +201,8 @@ export const modifierStyles = modifier => {
     `}
 
     &:focus {
-      box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.background1},
-        0 0 0 ${pxToRem(4)} ${COLORS.primary4};
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
     }
 
     &:disabled {

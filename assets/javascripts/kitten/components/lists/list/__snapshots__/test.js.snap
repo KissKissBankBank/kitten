@@ -29,7 +29,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   <li>
     <div
       aria-disabled={false}
-      className="sc-bdVaJa fHJFbn k-List__button k-List__button--withTopBorder"
+      className="sc-bdVaJa fFjuwm k-List__button k-List__button--withTopBorder"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -66,7 +66,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   <li>
     <div
       aria-disabled={false}
-      className="sc-bdVaJa fHJFbn k-List__button k-List__button--isActive"
+      className="sc-bdVaJa fFjuwm k-List__button k-List__button--isActive"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -103,7 +103,7 @@ exports[`<List> with <ListButtonItem> by default matches with snapshot 1`] = `
   <li>
     <div
       aria-disabled={false}
-      className="sc-bdVaJa fHJFbn k-List__button"
+      className="sc-bdVaJa fFjuwm k-List__button"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -130,7 +130,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   <li>
     <div
       aria-disabled={false}
-      className="sc-bdVaJa fHJFbn k-List__button k-List__button--withTopBorder"
+      className="sc-bdVaJa fFjuwm k-List__button k-List__button--withTopBorder"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -167,7 +167,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   <li>
     <div
       aria-disabled={true}
-      className="sc-bdVaJa fHJFbn k-List__button"
+      className="sc-bdVaJa fFjuwm k-List__button"
       onBlur={[Function]}
       onClick={null}
       onFocus={[Function]}
@@ -204,7 +204,7 @@ exports[`<List> with <ListButtonItem> with a disabled button matches with snapsh
   <li>
     <div
       aria-disabled={false}
-      className="sc-bdVaJa fHJFbn k-List__button"
+      className="sc-bdVaJa fFjuwm k-List__button"
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}

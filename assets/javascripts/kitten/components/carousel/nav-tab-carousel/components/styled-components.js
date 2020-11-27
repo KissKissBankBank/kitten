@@ -53,9 +53,8 @@ export const StyledRightArrowContainer = styled.div`
     ${sharedHoverStyledArrowIcons}
   }
   &:focus {
-    outline: none;
-    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.font1},
-      0 0 0 ${pxToRem(4)} ${COLORS.primary3};
+    outline: ${COLORS.primary3} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 `
 
@@ -70,9 +69,8 @@ export const StyledLeftArrowContainer = styled.div`
     ${sharedHoverStyledArrowIcons}
   }
   &:focus {
-    outline: none;
-    box-shadow: 0 0 0 ${pxToRem(2)} ${COLORS.font1},
-      0 0 0 ${pxToRem(4)} ${COLORS.primary3};
+    outline: ${COLORS.primary3} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
   }
 `
 

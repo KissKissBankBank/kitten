@@ -35,7 +35,6 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
   min-height: 3.125rem;
   min-width: 5rem;
@@ -47,7 +46,8 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -131,7 +131,6 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
   color: #222;
   border-color: #eee;
@@ -139,7 +138,8 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -216,7 +216,6 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
   color: #222;
   border-color: #eee;
@@ -227,7 +226,8 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -304,7 +304,6 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
   min-height: 1.875rem;
   min-width: 3.75rem;
@@ -316,7 +315,8 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -400,7 +400,6 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
   color: #222;
   border-color: #eee;
@@ -411,7 +410,8 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {
@@ -520,7 +520,6 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   -webkit-appareance: none;
   -moz-appareance: none;
   appareance: none;
-  outline: none;
   cursor: pointer;
   color: #222;
   border-color: #eee;
@@ -528,7 +527,8 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0:disabled {

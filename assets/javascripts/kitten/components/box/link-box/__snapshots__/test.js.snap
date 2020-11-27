@@ -2,7 +2,7 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa eJYLtp"
+  className="sc-bdVaJa kKCOBn"
   href="#"
 >
   <div
@@ -36,7 +36,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa eJYLtp"
+  className="sc-bdVaJa kKCOBn"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -99,7 +99,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 
 exports[`Deprecated <LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa eJYLtp"
+  className="sc-bdVaJa kKCOBn"
   href="#"
   title="My title"
 >
@@ -134,7 +134,7 @@ exports[`Deprecated <LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`Deprecated <LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa eJYLtp"
+  className="sc-bdVaJa kKCOBn"
   href="#foobar"
   rel="noopener"
   target="_blank"

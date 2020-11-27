@@ -22,7 +22,6 @@ const StyledDatePicker = styled.div`
     min-width: calc(7 * ${tinyCellSize} + 2 * ${tinyDayPickerPadding});
     margin-top: ${pxToRem(18)};
     box-shadow: none;
-    outline: none;
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       min-width: calc(7 * ${cellSize} + 2 * ${dayPickerPadding});
@@ -53,8 +52,7 @@ const StyledDatePicker = styled.div`
   .DayPicker {
     font-size: ${stepToRem(-1)};
     ${TYPOGRAPHY.fontStyles.light}
-    outline: none;
-    border: none;
+        border: none;
 
     .DayPicker-Month {
       margin: 0;
@@ -82,7 +80,6 @@ const StyledDatePicker = styled.div`
       vertical-align: middle;
       box-sizing: border-box;
       font-size: ${stepToRem(-2)};
-      outline: none;
 
       @media (min-width: ${ScreenConfig.S.min}px) {
         width: ${cellSize};
