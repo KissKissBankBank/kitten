@@ -25,6 +25,8 @@ addParameters({
 
       return anysort(previousMeta.kind, nextMeta.kind, [
         'Documentation/Introduction',
+        'Documentation/Usage/Using Kitten',
+        'Documentation/Usage/**',
         'Documentation/**',
         '**',
       ])

@@ -1,5 +1,5 @@
 import { Meta } from '@storybook/addon-docs/blocks'
-import { TitleWithStroke, Title, Paragraph } from '../../assets/javascripts/kitten'
+import { TitleWithStroke, Paragraph, Hero } from '../../assets/javascripts/kitten'
 
 <Meta title="Documentation/Introduction" />
 
@@ -7,18 +7,19 @@ import { TitleWithStroke, Title, Paragraph } from '../../assets/javascripts/kit
   Kitten
 </TitleWithStroke>
 
-![Gif of kittens playing](https://camo.githubusercontent.com/4aa161b6a86a0521167f9bf5734124714373014bf665665d01c01e84f3c7272d/687474703a2f2f692e696d6775722e636f6d2f456247686644482e676966)
+<Hero
+  direction="right"
+  imageSrc="https://camo.githubusercontent.com/4aa161b6a86a0521167f9bf5734124714373014bf665665d01c01e84f3c7272d/687474703a2f2f692e696d6775722e636f6d2f456247686644482e676966"
+>
+  <Paragraph modifier="primary">
+    Kitten is the design system used on <a className="k-u-link--important k-u-link-background1--important k-u-weight-regular--important" href="https://www.kisskissbankbank.com">KissKissBankBank</a> and <a className="k-u-link--important k-u-link-background1--important k-u-weight-regular--important" href="https://www.lendopolis.com">Lendopolis.com</a>.
+  </Paragraph>
 
-<Title tag="p" modifier="quinary">
-  Kitten is the design system used on <a className="k-u-link--important k-u-link-primary1--important k-u-weight-bold--important" href="https://www.kisskissbankbank.com">KissKissBankBank</a> and <a className="k-u-link--important k-u-link-primary1--important k-u-weight-bold--important" href="https://www.lendopolis.com">Lendopolis.com</a>.
-</Title>
+  <Paragraph modifier="tertiary">
+    It is a components library based on Sass (soon to be deprecated) and React.
+  </Paragraph>
 
-<Paragraph modifier="secondary">
-  It is a components library based on Sass (soon to be deprecated) and React.
-</Paragraph>
-
-<Paragraph modifier="secondary">
-  The source is available on <a href="https://github.com/KissKissBankBank/kitten/">GitHub: KissKissBankBank/kitten</a>
-</Paragraph>
-
-
+  <Paragraph modifier="tertiary">
+    The source is available on <a className="k-u-link--important k-u-link-primary1--important" href="https://github.com/KissKissBankBank/kitten/">GitHub: kitten</a>
+  </Paragraph>
+</Hero>
