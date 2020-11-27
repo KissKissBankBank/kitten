@@ -178,7 +178,7 @@ export const DropdownPhoneSelect = ({
   const [getCaretPosition, setCaretPosition] = useState(0)
   const [getInputPlaceholder, setInputPlaceholder] = useState(placeholder)
   const [getDefaultSelectedValue, setDefaultSelectedValue] = useState(null)
-  const [getInputNumber, setInputNumber] = useState(null)
+  const [getInputNumber, setInputNumber] = useState('')
   const getPreviousFormattedNumber = usePrevious(getFormattedNumber)
 
   const phoneProps = {

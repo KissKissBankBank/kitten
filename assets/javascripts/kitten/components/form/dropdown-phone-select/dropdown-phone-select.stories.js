@@ -54,3 +54,39 @@ export const Default = () => {
     </Grid>
   )
 }
+
+export const WithoutValues = () => {
+  return (
+    <Grid>
+      <GridCol offset-l="1" col-l="8">
+        <DropdownPhoneSelect
+          id={text('id', 'dropdown-select')}
+          error={boolean('error', false)}
+          valid={boolean('valid', false)}
+          disabled={boolean('disabled', false)}
+          hideLabel={boolean('hide label?', false)}
+          labelText={text('LabelText', 'label')}
+          resetOnBackspace
+          highlightOptionBox
+          placeholder={text('placeholder', 'Téléphone')}
+          phoneProps={{
+            preferredCountries: [
+              'fr',
+              'be',
+              'lu',
+              're',
+              'gp',
+              'mq',
+              'pf',
+              'nc',
+              'gf',
+              'yt',
+            ],
+          }}
+          locale={select('locale', ['fr', 'en', 'nl'], 'fr')}
+          flagsUrl={flagFile}
+        />
+      </GridCol>
+    </Grid>
+  )
+}
