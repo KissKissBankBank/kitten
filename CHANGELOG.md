@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- A11y: Add Focus styles for focusable elements.
+
 ## [2.100.1] - 2020-11-26
 
 Fix:
