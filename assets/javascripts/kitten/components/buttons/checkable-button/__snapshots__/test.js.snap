@@ -35,8 +35,8 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -75,6 +75,10 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -177,8 +181,8 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -217,6 +221,10 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -335,8 +343,8 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -375,6 +383,10 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -464,8 +476,8 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   border: 0.125rem solid #ffb2c7;
   background-color: #fff;
   color: #ff0046;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -504,6 +516,10 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   border-color: currentColor;
   background-color: #fff;
   color: #ff0046;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -597,8 +613,8 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   border: 0.125rem solid #bae8fd;
   background-color: #fff;
   color: #19b4fa;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -637,6 +653,10 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {

@@ -2,7 +2,7 @@
 
 exports[`<PillNumberInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa jNsHMR k-PillNumberInput CustomClass__1"
+  className="sc-bdVaJa ibqaej k-PillNumberInput CustomClass__1"
 >
   <button
     aria-hidden="true"

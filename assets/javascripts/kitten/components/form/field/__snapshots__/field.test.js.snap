@@ -122,7 +122,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bwzfXH gbcMMf k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
+      className="sc-bwzfXH huoDzU k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -216,7 +216,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bwzfXH gbcMMf k-Form-TextInput k-Form-TextInput--andromeda"
+      className="sc-bwzfXH huoDzU k-Form-TextInput k-Form-TextInput--andromeda"
       disabled={false}
       id="input"
       name="field"
@@ -299,18 +299,17 @@ Array [
       className="sc-dnqmqq kmxqSx"
     >
       <input
-        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda k-Form-TextInput--error"
+        className="sc-bwzfXH huoDzU k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
         placeholder="Placeholder…"
         type="password"
       />
-      <span
+      <button
         aria-pressed={false}
-        className="sc-gZMcBi gPuGFE"
+        className="sc-gZMcBi dcbdtv k-u-reset-button"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
         title="Show password"
       >
@@ -330,7 +329,7 @@ Array [
             r="2"
           />
         </svg>
-      </span>
+      </button>
     </div>
   </div>,
   <div
@@ -423,18 +422,17 @@ Array [
       className="sc-dnqmqq kmxqSx"
     >
       <input
-        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda"
+        className="sc-bwzfXH huoDzU k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda"
         disabled={false}
         id="input"
         name="field"
         placeholder="Placeholder…"
         type="password"
       />
-      <span
+      <button
         aria-pressed={false}
-        className="sc-gZMcBi gPuGFE"
+        className="sc-gZMcBi dcbdtv k-u-reset-button"
         onClick={[Function]}
-        onKeyDown={[Function]}
         tabIndex="0"
         title="Show password"
       >
@@ -454,7 +452,7 @@ Array [
             r="2"
           />
         </svg>
-      </span>
+      </button>
     </div>
   </div>,
 ]
@@ -497,7 +495,7 @@ Array [
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-bZQynM kaHuMl k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-bZQynM dDYfPW k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -519,7 +517,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-bZQynM kaHuMl k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-bZQynM dDYfPW k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -540,7 +538,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-bZQynM kaHuMl k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-bZQynM dDYfPW k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"

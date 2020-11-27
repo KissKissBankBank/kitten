@@ -2,7 +2,7 @@
 
 exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa llHAMW k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
+  className="sc-bdVaJa ekWBEQ k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
 >
   <label
     className="k-Label k-Form-Dropdown__label k-u-margin-bottom-single"

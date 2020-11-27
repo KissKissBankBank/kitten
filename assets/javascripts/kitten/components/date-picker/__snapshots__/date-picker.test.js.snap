@@ -8,11 +8,11 @@ exports[`<DatePicker /> by default matches with snapshot 1`] = `
     className="DayPickerInput"
   >
     <div
-      className="sc-htpNat jTrwbo k-Form-TextInputWithUnit"
+      className="sc-htpNat fOoVPX k-Form-TextInputWithUnit"
     >
       <input
         autoComplete="off"
-        className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
+        className="sc-bdVaJa eDiHEM k-Form-TextInput k-Form-TextInputWithUnit__input k-Form-TextInput--andromeda"
         disabled={false}
         name="text"
         onBlur={[Function]}

@@ -22,8 +22,8 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   border-radius: 0.25rem;
   border-width: 0.125rem;
   border-style: solid;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -46,6 +46,10 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   background-color: #fff;
 }
 
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -55,8 +59,11 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0:hover,
 .c0:focus {
+  border-color: #19b4fa;
+}
+
+.c0:hover {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
@@ -111,8 +118,8 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   border-radius: 0.25rem;
   border-width: 0.125rem;
   border-style: solid;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -131,6 +138,10 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   background-color: #fff;
 }
 
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -140,8 +151,11 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0:hover,
 .c0:focus {
+  border-color: #19b4fa;
+}
+
+.c0:hover {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
@@ -189,8 +203,8 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   border-radius: 0.25rem;
   border-width: 0.125rem;
   border-style: solid;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -212,6 +226,10 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   background-color: #19b4fa;
 }
 
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -221,8 +239,11 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0:hover,
 .c0:focus {
+  border-color: #19b4fa;
+}
+
+.c0:hover {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
@@ -270,8 +291,8 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   border-radius: 0.25rem;
   border-width: 0.125rem;
   border-style: solid;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -294,6 +315,10 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   background-color: #fff;
 }
 
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -303,8 +328,11 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0:hover,
 .c0:focus {
+  border-color: #19b4fa;
+}
+
+.c0:hover {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
@@ -359,8 +387,8 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   border-radius: 0.25rem;
   border-width: 0.125rem;
   border-style: solid;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -382,6 +410,10 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   background-color: #fff;
 }
 
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -391,8 +423,11 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0:hover,
 .c0:focus {
+  border-color: #19b4fa;
+}
+
+.c0:hover {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
@@ -404,8 +439,11 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   background-color: #fff;
 }
 
-.c0:hover,
 .c0:focus {
+  border-color: #19b4fa;
+}
+
+.c0:hover {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
@@ -469,8 +507,8 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   border-radius: 0.25rem;
   border-width: 0.125rem;
   border-style: solid;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
   box-sizing: border-box;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
@@ -489,6 +527,10 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   background-color: #fff;
 }
 
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -498,8 +540,11 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0:hover,
 .c0:focus {
+  border-color: #19b4fa;
+}
+
+.c0:hover {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;

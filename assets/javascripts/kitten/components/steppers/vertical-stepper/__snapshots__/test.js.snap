@@ -121,6 +121,14 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   margin-bottom: 0;
 }
 
+.c1:focus-within a,
+.c1:focus-within button {
+  border-radius: 0.1875rem;
+  padding-right: 0.625rem;
+  outline: none;
+  box-shadow: 0 0 0 0.25rem #fff,0 0 0 0.375rem #bae8fd,0 0 0 0.625rem #fff;
+}
+
 .c1 li:not(:last-of-type) {
   margin: 0 !important;
 }
@@ -711,6 +719,14 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 
 .c1:last-of-type {
   margin-bottom: 0;
+}
+
+.c1:focus-within a,
+.c1:focus-within button {
+  border-radius: 0.1875rem;
+  padding-right: 0.625rem;
+  outline: none;
+  box-shadow: 0 0 0 0.25rem #fff,0 0 0 0.375rem #bae8fd,0 0 0 0.625rem #fff;
 }
 
 .c1 li:not(:last-of-type) {

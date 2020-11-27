@@ -1436,8 +1436,8 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   border: 0.125rem solid #19b4fa;
   background-color: #19b4fa;
   color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c1:disabled {
@@ -1476,6 +1476,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c1:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c1:disabled {

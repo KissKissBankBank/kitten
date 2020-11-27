@@ -5,17 +5,16 @@ exports[`<PasswordInput /> should match its empty snapshot 1`] = `
   className="sc-htpNat fPTXzr"
 >
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput sc-bxivhb hXfOnm k-Form-TextInput--andromeda"
+    className="sc-bdVaJa eDiHEM k-Form-TextInput sc-bxivhb hXfOnm k-Form-TextInput--andromeda"
     disabled={false}
     id="password"
     name="password"
     type="password"
   />
-  <span
+  <button
     aria-pressed={false}
-    className="sc-ifAKCX hHjtlG"
+    className="sc-ifAKCX bGsQJR k-u-reset-button"
     onClick={[Function]}
-    onKeyDown={[Function]}
     tabIndex="0"
     title="Custom icon label"
   >
@@ -35,6 +34,6 @@ exports[`<PasswordInput /> should match its empty snapshot 1`] = `
         r="2"
       />
     </svg>
-  </span>
+  </button>
 </div>
 `;

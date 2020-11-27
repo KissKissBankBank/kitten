@@ -6,7 +6,7 @@ exports[`<TextInputWithIcon /> by default matches with snapshot 1`] = `
 >
   
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda"
+    className="sc-bdVaJa eDiHEM k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
   />
@@ -45,7 +45,7 @@ exports[`<TextInputWithIcon /> with disabled prop matches with snapshot 1`] = `
 >
   
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
+    className="sc-bdVaJa eDiHEM k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda k-Form-TextInput--disabled"
     disabled={true}
     name="text"
   />
@@ -84,7 +84,7 @@ exports[`<TextInputWithIcon /> with props matches with snapshot 1`] = `
 >
   
   <input
-    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda"
+    className="sc-bdVaJa eDiHEM k-Form-TextInput k-Form-TextInputWithIcon__input k-Form-TextInput--andromeda"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"

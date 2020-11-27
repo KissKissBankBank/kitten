@@ -35,8 +35,8 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -75,6 +75,10 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -132,8 +136,8 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -172,6 +176,10 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -246,8 +254,8 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -286,6 +294,10 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -345,8 +357,8 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -385,6 +397,10 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -445,8 +461,8 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -485,6 +501,10 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -561,8 +581,8 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -601,6 +621,10 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -674,8 +698,8 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   border: 0.125rem dashed #bae8fd;
   background-color: #fff;
   color: #19b4fa;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -714,6 +738,10 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -775,8 +803,8 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -815,6 +843,10 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -884,8 +916,8 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -924,6 +956,10 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -1020,8 +1056,8 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -1060,6 +1096,10 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -1128,8 +1168,8 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -1168,6 +1208,10 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -1274,8 +1318,8 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -1314,6 +1358,10 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -1416,8 +1464,8 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -1456,6 +1504,10 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -1538,8 +1590,8 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -1578,6 +1630,10 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -1661,8 +1717,8 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -1701,6 +1757,10 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -1766,8 +1826,8 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -1806,6 +1866,10 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -1868,8 +1932,8 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -1908,6 +1972,10 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -1968,8 +2036,8 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -2008,6 +2076,10 @@ exports[`<Button /> with variant and fluid matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
@@ -2088,8 +2160,8 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
+  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,color 0.2s,border-color 0.2s,box-shadow 0.2s;
 }
 
 .c0:disabled {
@@ -2128,6 +2200,10 @@ exports[`<Button /> with variant matches with snapshot 1`] = `
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 0.125rem #fff,0 0 0 0.25rem #bae8fd;
 }
 
 .c0:disabled {
