@@ -53,7 +53,7 @@ const ExampleComponent = ({ property, direction }) => {
 }
 
 export default {
-  title: 'helpers/dom/cssPropertyDistributor',
+  title: 'Helpers/DOM/cssPropertyDistributor',
   component: cssPropertyDistributor,
 }
 

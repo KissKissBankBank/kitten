@@ -1,15 +1,23 @@
 import { Meta } from '@storybook/addon-docs/blocks'
 import { TitleWithStroke, Paragraph, Hero } from '../../assets/javascripts/kitten'
+import logoFile from '../../.storybook/public/logo-kisskissandco.svg'
+import kittenFile from '../../.storybook/public/kitten.jpg'
 
 <Meta title="Documentation/Introduction" />
 
 <TitleWithStroke>
-  Kitten
+  Kitten, by
+  {' '}
+  <img
+    src={logoFile}
+    alt="KissKissBankBank & Co."
+    style={{ maxHeight: '.8em', verticalAlign: 'middle', }}
+  />
 </TitleWithStroke>
 
 <Hero
   direction="right"
-  imageSrc="https://camo.githubusercontent.com/4aa161b6a86a0521167f9bf5734124714373014bf665665d01c01e84f3c7272d/687474703a2f2f692e696d6775722e636f6d2f456247686644482e676966"
+  imageSrc={kittenFile}
 >
   <Paragraph modifier="primary">
     Kitten is the design system used on <a className="k-u-link--important k-u-link-background1--important k-u-weight-regular--important" href="https://www.kisskissbankbank.com">KissKissBankBank</a> and <a className="k-u-link--important k-u-link-background1--important k-u-weight-regular--important" href="https://www.lendopolis.com">Lendopolis.com</a>.

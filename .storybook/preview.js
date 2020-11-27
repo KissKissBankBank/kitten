@@ -7,11 +7,13 @@ import GridDecorator from './decorators/grid'
 import { addParameters } from '@storybook/react'
 import { DocsPage, DocsContainer } from '@storybook/addon-docs/blocks'
 import anysort from 'anysort'
+import { themes } from '@storybook/theming';
 
 addParameters({
   docs: {
     container: DocsContainer,
     page: DocsPage,
+    theme: themes.karl,
   },
   options: {
     /**
@@ -28,6 +30,7 @@ addParameters({
         'Documentation/Usage/Using Kitten',
         'Documentation/Usage/**',
         'Documentation/**',
+        'Helpers/**',
         '**',
       ])
     }
