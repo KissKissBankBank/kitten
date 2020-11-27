@@ -1,6 +1,6 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks'
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 
-<Meta title="Utilities/Colors" />
+<Meta title="Documentation/Utilities/Colors" />
 
 # Colors
 
@@ -8,55 +8,43 @@ You can find source file [here](https://github.com/KissKissBankBank/kitten/blob/
 
 Add class name `k-u-color-font1` to add `color`
 
-<Preview>
-  <Story name="font1">
-    <p className="k-u-color-font1">
-      Hello color!
-    </p>
-  </Story>
-</Preview>
+<Canvas>
+  <p className="k-u-color-font1">
+    Hello color!
+  </p>
+</Canvas>
 
 Or `k-u-color-font2`
-<Preview>
-  <Story name="font2">
-    <p className="k-u-color-font2">
-      Hello color! Still same style ? No, I'm a different color.
-    </p>
-  </Story>
-</Preview>
+<Canvas>
+  <p className="k-u-color-font2">
+    Hello color! Still same style ? No, I'm a different color.
+  </p>
+</Canvas>
 
 Or `k-u-color-primary1`
-<Preview>
-  <Story name="primary1">
-    <p className="k-u-color-primary1">
-      Hello color! I'm blue like the sky.
-    </p>
-  </Story>
-</Preview>
+<Canvas>
+  <p className="k-u-color-primary1">
+    Hello color! I'm blue like the sky.
+  </p>
+</Canvas>
 
 Or `k-u-color-background1`
-<Preview>
-  <Story style={{ backgroundColor: 'black' }} name="backgroud1">
-    <p className="k-u-color-background1">
-      Hello color! I'm white as white text on a black background!
-    </p>
-  </Story>
-</Preview>
+<Canvas style={{ backgroundColor: 'black' }}>
+  <p className="k-u-color-background1">
+    Hello color! I'm white as white text on a black background!
+  </p>
+</Canvas>
 
 Or `k-u-color-error`
-<Preview>
-  <Story name="error">
-    <p className="k-u-color-error">
-      Hello color! I'm red with anger.
-    </p>
-  </Story>
-</Preview>
+<Canvas>
+  <p className="k-u-color-error">
+    Hello color! I'm red with anger.
+  </p>
+</Canvas>
 
 Or finally `k-u-color-valid`
-<Preview>
-  <Story name="valid">
-    <p className="k-u-color-valid">
-      Hello color! I'm green like a well-watered lawn.
-    </p>
-  </Story>
-</Preview>
+<Canvas>
+  <p className="k-u-color-valid">
+    Hello color! I'm green like a well-watered lawn.
+  </p>
+</Canvas>
