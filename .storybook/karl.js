@@ -2,7 +2,6 @@
 
 import { create } from '@storybook/theming/create'
 import COLORS from '../assets/javascripts/kitten/constants/colors-config'
-import kisskissLogoFile from './public/logo-kisskissandco.svg'
 
 export default create({
   base: 'light',
@@ -37,5 +36,5 @@ export default create({
 
   brandTitle: 'Kitten, by KissKissBankBank & Co.',
   brandUrl: 'https://kitten.vercel.com',
-  brandImage: kisskissLogoFile,
+  brandImage: '/logo-kisskissandco.svg',
 })
