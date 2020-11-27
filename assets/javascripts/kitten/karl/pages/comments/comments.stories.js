@@ -2,7 +2,7 @@ import React from 'react'
 import CommentsPage from './components/comments'
 
 export default {
-  title: 'Pages/Comments',
+  title: 'pages/Comments',
   component: CommentsPage,
 }
 

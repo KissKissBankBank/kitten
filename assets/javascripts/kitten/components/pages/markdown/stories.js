@@ -46,7 +46,7 @@ const modifierOptions = {
 }
 
 export default {
-  title: 'Pages/Markdown-Page',
+  title: 'pages/Markdown-Page',
   component: MarkdownPage,
 }
 
