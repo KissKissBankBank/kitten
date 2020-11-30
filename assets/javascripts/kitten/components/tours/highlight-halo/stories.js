@@ -14,7 +14,7 @@ const StoryContainer = ({ children }) => (
 )
 
 export default {
-  title: 'Popovers & Tours/HighlightHalo',
+  title: 'Notifications/HighlightHalo',
   component: HighlightHalo,
 }
 

@@ -13,7 +13,7 @@ const StoryContainer = ({ children }) => (
 )
 
 export default {
-  title: 'TextCopy',
+  title: 'TextCopy/TextCopy',
   component: TextCopy,
 }
 
