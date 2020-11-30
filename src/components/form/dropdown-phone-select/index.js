@@ -216,7 +216,7 @@ var DropdownPhoneSelect = function DropdownPhoneSelect(_ref3) {
       getDefaultSelectedValue = _useState10[0],
       setDefaultSelectedValue = _useState10[1];
 
-  var _useState11 = (0, _react.useState)(null),
+  var _useState11 = (0, _react.useState)(''),
       _useState12 = (0, _slicedToArray2.default)(_useState11, 2),
       getInputNumber = _useState12[0],
       setInputNumber = _useState12[1];
