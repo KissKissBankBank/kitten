@@ -4,7 +4,7 @@ import { Progress as _Progress } from './index'
 import COLORS from '../../../constants/colors-config'
 
 export default {
-  title: 'Meters',
+  title: 'Meters/Progress',
   component: _Progress,
 }
 

@@ -6,7 +6,7 @@ import LazyHook from './lazy-hook.js'
 import ImgWithLazy from './img-with-lazy.js'
 
 export default {
-  title: 'IntersectionObserver/IntersectionObserverClass/Lazy',
+  title: 'Helpers/IntersectionObserver/IntersectionObserverClass/Lazy',
   component: LazyHook,
 }
 
