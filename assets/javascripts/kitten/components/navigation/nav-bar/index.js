@@ -75,10 +75,13 @@ const StyledNavBar = styled.div`
       text-decoration: none;
     }
 
-    &:focus,
-    &[aria-current="page"] {
+    &:focus {
       outline: ${COLORS.primary4} solid ${pxToRem(2)};
       outline-offset: ${pxToRem(2)};
+    }
+
+    &:focus,
+    &[aria-current="page"] {
       border-color: ${({ colors }) => colors.activeBorder || COLORS.primary1};
       color: ${({ colors }) => colors.activeLink || COLORS.primary1};
       border-width: ${pxToRem(4)};

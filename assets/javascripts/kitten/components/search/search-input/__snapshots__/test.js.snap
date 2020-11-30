@@ -46,7 +46,7 @@ exports[`<SearchInput /> Basic search input matches with snapshot 1`] = `
 }
 
 .c0:focus {
-  outline: #e8f7fe solid 0.125rem;
+  outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
 }
 
@@ -116,7 +116,7 @@ exports[`<SearchInput /> Search input with attributes matches with snapshot 1`] 
 }
 
 .c0:focus {
-  outline: #e8f7fe solid 0.125rem;
+  outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
 }
 

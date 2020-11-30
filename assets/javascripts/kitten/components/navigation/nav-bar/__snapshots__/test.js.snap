@@ -89,10 +89,13 @@ exports[`<NavBar /> NavBar with \`colors\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 .k-NavBar__link:focus,
-.c0 .k-NavBar__link[aria-current="page"] {
+.c0 .k-NavBar__link:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0 .k-NavBar__link:focus,
+.c0 .k-NavBar__link[aria-current="page"] {
   border-color: rgba(128,0,128,.5);
   color: #808;
   border-width: 0.25rem;
@@ -273,10 +276,13 @@ exports[`<NavBar /> NavBar with \`modifier\` prop matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 .k-NavBar__link:focus,
-.c0 .k-NavBar__link[aria-current="page"] {
+.c0 .k-NavBar__link:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0 .k-NavBar__link:focus,
+.c0 .k-NavBar__link[aria-current="page"] {
   border-color: #19b4fa;
   color: #19b4fa;
   border-width: 0.25rem;
@@ -457,10 +463,13 @@ exports[`<NavBar /> simple NavBar matches with snapshot 1`] = `
   text-decoration: none;
 }
 
-.c0 .k-NavBar__link:focus,
-.c0 .k-NavBar__link[aria-current="page"] {
+.c0 .k-NavBar__link:focus {
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
+}
+
+.c0 .k-NavBar__link:focus,
+.c0 .k-NavBar__link[aria-current="page"] {
   border-color: #19b4fa;
   color: #19b4fa;
   border-width: 0.25rem;

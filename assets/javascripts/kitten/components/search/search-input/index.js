@@ -40,7 +40,7 @@ export const SearchInput = styled.input.attrs({ type: 'search' })`
   }
 
   &:focus {
-    outline: ${COLORS.primary5} solid ${pxToRem(2)};
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
 `

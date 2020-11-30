@@ -101,6 +101,11 @@ const StyledDatePicker = styled.div`
     &.DayPicker-Day--outside {
       border: 0;
     }
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
   }
 
   .DayPicker-Day--today {
@@ -146,6 +151,10 @@ const StyledDatePicker = styled.div`
     @media (min-width: ${ScreenConfig.S.min}px) {
       padding: 0 ${dayPickerPadding} ${dayPickerPadding} ${dayPickerPadding};
     }
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
   }
 
   .DayPicker {
@@ -155,6 +164,7 @@ const StyledDatePicker = styled.div`
     ${({ styles }) => css`
       border: solid ${styles.borderColor} ${borderSize};
     `}
+
     /* Hovered selectable day*/
     &:not(.DayPicker--interactionDisabled) {
       .DayPicker-Day {
