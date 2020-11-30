@@ -12,7 +12,7 @@ import domElementHelper from '../../../helpers/dom/element-helper';
 var StyledPillNumberInput = styled.div.withConfig({
   displayName: "pill-number-input__StyledPillNumberInput",
   componentId: "ujaaef-0"
-})(["display:inline-flex;align-items:center;justify-content:stretch;height:", ";width:", ";padding:0 ", ";border:2px solid ", ";border-radius:", ";transition:border-color .2s ease;&:focus-within,&:hover{border-color:", ";}&,& *{box-sizing:border-box;}.k-PillNumberInput__input{flex:1 1 auto;appearance:none;appearance:textfield;border:0;min-width:0;", " font-size:", ";text-align:center;&:focus{outline:none;}}.k-PillNumberInput__minusButton,.k-PillNumberInput__plusButton{flex:0 0 auto;padding:0 ", ";border:none;background:none;display:flex;align-items:center;justify-content:center;height:100%;cursor:pointer;svg{transition:fill .2s ease;}&:hover svg{fill:", ";}&:active svg{fill:", ";}&:disabled svg{fill:", ";}}"], pxToRem(40), pxToRem(85), pxToRem(10), COLORS.line1, pxToRem(20), COLORS.line2, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), pxToRem(5), COLORS.primary1, COLORS.primary2, COLORS.line2);
+})(["display:inline-flex;align-items:center;justify-content:stretch;height:", ";width:", ";padding:0 ", ";border:2px solid ", ";border-radius:", ";transition:border-color .2s ease;&:focus-within,&:hover{border-color:", ";}&,& *{box-sizing:border-box;}.k-PillNumberInput__input{flex:1 1 auto;appearance:none;appearance:textfield;border:0;min-width:0;", " font-size:", ";text-align:center;&:focus{outline:none;}&:disabled{background-color:", ";color:", ";}}.k-PillNumberInput__minusButton,.k-PillNumberInput__plusButton{flex:0 0 auto;padding:0 ", ";border:none;background:none;display:flex;align-items:center;justify-content:center;height:100%;cursor:pointer;svg{transition:fill .2s ease;}&:hover svg{fill:", ";}&:active svg{fill:", ";}&:disabled svg{fill:", ";}}&.k-PillNumberInput--disableInput .k-PillNumberInput__input:disabled{background-color:", ";color:", ";}"], pxToRem(40), pxToRem(85), pxToRem(10), COLORS.line1, pxToRem(20), COLORS.line2, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.background1, COLORS.font2, pxToRem(5), COLORS.primary1, COLORS.primary2, COLORS.line2, COLORS.background1, COLORS.font1);
 var nativeInputValueSetter = domElementHelper.canUseDom() && Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
 export var PillNumberInput = function PillNumberInput(_ref) {
   var _ref$onChange = _ref.onChange,
@@ -33,7 +33,11 @@ export var PillNumberInput = function PillNumberInput(_ref) {
       plusButtonProps = _ref$plusButtonProps === void 0 ? {} : _ref$plusButtonProps,
       _ref$className = _ref.className,
       className = _ref$className === void 0 ? null : _ref$className,
-      props = _objectWithoutProperties(_ref, ["onChange", "value", "step", "min", "max", "inputProps", "minusButtonProps", "plusButtonProps", "className"]);
+      _ref$disableInput = _ref.disableInput,
+      disableInput = _ref$disableInput === void 0 ? false : _ref$disableInput,
+      _ref$disabled = _ref.disabled,
+      disabled = _ref$disabled === void 0 ? false : _ref$disabled,
+      props = _objectWithoutProperties(_ref, ["onChange", "value", "step", "min", "max", "inputProps", "minusButtonProps", "plusButtonProps", "className", "disableInput", "disabled"]);
 
   var inputRef = useRef(null);
 
@@ -99,10 +103,12 @@ export var PillNumberInput = function PillNumberInput(_ref) {
     inputRef.current.dispatchEvent(changeEvent);
   }, [currentValue]);
   return /*#__PURE__*/React.createElement(StyledPillNumberInput, _extends({
-    className: classNames('k-PillNumberInput', className)
+    className: classNames('k-PillNumberInput', className, {
+      'k-PillNumberInput--disableInput': disableInput
+    })
   }, props), /*#__PURE__*/React.createElement("button", _extends({
     "data-button": "minus",
-    disabled: currentValue === min,
+    disabled: disabled || currentValue === min,
     onClick: minusOne,
     tabIndex: "-1",
     "aria-hidden": "true"
@@ -125,12 +131,13 @@ export var PillNumberInput = function PillNumberInput(_ref) {
     "aria-valuemin": min,
     "aria-valuemax": max,
     "aria-valuenow": currentValue,
-    role: "spinbutton"
+    role: "spinbutton",
+    disabled: disabled || disableInput
   }, inputProps, {
     className: classNames('k-PillNumberInput__input', inputProps.className)
   })), /*#__PURE__*/React.createElement("button", _extends({
     "data-button": "plus",
-    disabled: currentValue === max,
+    disabled: disabled || currentValue === max,
     onClick: plusOne,
     tabIndex: "-1",
     "aria-hidden": "true"
@@ -155,5 +162,7 @@ PillNumberInput.propTypes = {
   step: PropTypes.number,
   inputProps: PropTypes.object,
   minusButtonProps: PropTypes.object,
-  plusButtonProps: PropTypes.object
+  plusButtonProps: PropTypes.object,
+  disableInput: PropTypes.bool,
+  disabled: PropTypes.bool
 };

@@ -4,11 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix `DropdownPhoneSelect` when phone number is empty.
-- Feature: Add `disableInput` prop to `PillNumberInput`, defaults to `false`.
-- Feature: Add `k-u-margin-vertical-*` and `k-u-margin-horizontal-*` helper classes.
-- Feature: Add `k-u-margin-*-auto` helper classes.
-- Feature: Add `margin()` helper util to help generate util classes.
+## [2.101.0] - 2020-11-30
+
+Features:
+
+- Add `disableInput` prop to `PillNumberInput`, defaults to `false`.
+- Add `k-u-margin-vertical-*` and `k-u-margin-horizontal-*` helper classes.
+- Add `k-u-margin-*-auto` helper classes.
+- Add `margin()` JS helper to help generate `k-u-margin-*` utility classes.
+
+Fix:
+
+- `DropdownPhoneSelect` when phone number is empty.
 
 ## [2.100.1] - 2020-11-26
 
