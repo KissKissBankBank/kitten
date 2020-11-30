@@ -40,6 +40,11 @@ const StyledPillNumberInput = styled.div`
     &:focus {
       outline: none;
     }
+
+    &:disabled {
+      background-color: ${COLORS.background1};
+      color: ${COLORS.font2};
+    }
   }
 
   .k-PillNumberInput__minusButton,
@@ -69,6 +74,11 @@ const StyledPillNumberInput = styled.div`
       fill: ${COLORS.line2};
     }
   }
+
+  &.k-PillNumberInput--disableInput .k-PillNumberInput__input:disabled {
+    background-color: ${COLORS.background1};
+    color: ${COLORS.font1};
+  }
 `
 
 const nativeInputValueSetter =
@@ -86,6 +96,8 @@ export const PillNumberInput = ({
   minusButtonProps = {},
   plusButtonProps = {},
   className = null,
+  disableInput = false,
+  disabled = false,
   ...props
 }) => {
   const inputRef = useRef(null)
@@ -143,12 +155,14 @@ export const PillNumberInput = ({
 
   return (
     <StyledPillNumberInput
-      className={classNames('k-PillNumberInput', className)}
+      className={classNames('k-PillNumberInput', className, {
+        'k-PillNumberInput--disableInput': disableInput,
+      })}
       {...props}
     >
       <button
         data-button="minus"
-        disabled={currentValue === min}
+        disabled={disabled || currentValue === min}
         onClick={minusOne}
         tabIndex="-1"
         aria-hidden="true"
@@ -178,12 +192,13 @@ export const PillNumberInput = ({
         aria-valuemax={max}
         aria-valuenow={currentValue}
         role="spinbutton"
+        disabled={disabled || disableInput}
         {...inputProps}
         className={classNames('k-PillNumberInput__input', inputProps.className)}
       />
       <button
         data-button="plus"
-        disabled={currentValue === max}
+        disabled={disabled || currentValue === max}
         onClick={plusOne}
         tabIndex="-1"
         aria-hidden="true"
@@ -216,4 +231,6 @@ PillNumberInput.propTypes = {
   inputProps: PropTypes.object,
   minusButtonProps: PropTypes.object,
   plusButtonProps: PropTypes.object,
+  disableInput: PropTypes.bool,
+  disabled: PropTypes.bool,
 }
