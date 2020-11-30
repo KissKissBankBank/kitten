@@ -3,22 +3,28 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
-- Fix `DropdownPhoneSelect` when phone number is empty.
 
+- Fix `DropdownPhoneSelect` when phone number is empty.
 - Feature: Add `disableInput` prop to `PillNumberInput`, defaults to `false`.
+- Feature: Add `k-u-margin-vertical-*` and `k-u-margin-horizontal-*` helper classes.
+- Feature: Add `k-u-margin-*-auto` helper classes.
+- Feature: Add `margin()` helper util to help generate util classes.
 
 ## [2.100.1] - 2020-11-26
 
 Fix:
+
 - Fix `RadioButton` styles.
 
 ## [2.100.0] - 2020-11-26
 
 Features:
+
 - Add `deactivateDropdown` prop to `DropdownSelectWithInput`.
 - Add `useDebounce(value, delay)` hook.
 
 Fixes:
+
 - Fix `DropdownSelectWithInput` and `DropdownSelect` menu dropdown Z index.
 - Fix `onInputChange` handling.
 - Fix `RadioButton` styles.
@@ -27,6 +33,7 @@ Fixes:
 ## [2.99.0] - 2020-11-24
 
 Features:
+
 - Add `GlobeIcon` icon.
 - Add `FlagIcon` icon.
 - Add `DropdownPhoneSelect` component.
@@ -44,45 +51,54 @@ Features:
 - Add `.k-u-a11y-visuallyHidden` CSS helper.
 
 Fix:
+
 - Refactor `Checkbox` and `CheckboxSet` components.
 
 ## [2.98.0] - 2020-11-23
 
 Features:
+
 - Add `variant` prop to `VerticalStepper`, with default value `andromeda`.
 - Add `DotIcon` component.
 
 Fix:
+
 - `ImageCropper` `onChange` firing on uploaded images.
 
 ## [2.97.0] - 2020-11-16
 
 Feature:
+
 - Add `CreditCardForm` component.
 
 ## [2.96.0] - 2020-11-12
 
 Feature:
+
 - Update `RewardCard` component.
 
 ## [2.95.3] - 2020-11-05
 
 Fix:
+
 - Content reference on `<Dropdown />`
 
 ## [2.95.2] - 2020-10-22
 
 Fix:
+
 - File reference on `<ImageCropper />`.
 
 ## [2.95.1] - 2020-10-22
 
 Fix:
+
 - Delay `PillNumberInput` component call to `window` after `canUseDom()`.
 
 ## [2.95.0] - 2020-10-21
 
 Features:
+
 - Add `PillNumberInput` component.
 - Add `micro` size for `<Button icon>`.
 - Add original `file <File>` on `onChange` callback for `<ImageCropper />`
@@ -90,9 +106,11 @@ Features:
 ## [2.94.0] - 2020-10-13
 
 Feature:
+
 - Add `isSliding` prop to `SingleEntryTable`.
 
 Fix:
+
 - Fix `ArrowIcon` display bug in Safari.
 
 ## [2.93.0] - 2020-09-30
@@ -218,10 +236,6 @@ Fix:
 Fix:
 
 - Fix deprecated warning on DocLinkBox component.
-
-- Feature: Add `k-u-margin-vertical-*` and `k-u-margin-horizontal-*` helper classes.
-- Feature: Add `k-u-margin-*-auto` helper classes.
-- Feature: Add `margin()` helper util to help generate util classes.
 
 ## [2.87.0] - 2020-08-18
 
