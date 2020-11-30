@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Feature : Add `huge` props on `TagButton`.
 
 ## [2.101.0] - 2020-11-30
 

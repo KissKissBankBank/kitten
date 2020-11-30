@@ -13,6 +13,7 @@ export const Default = () => (
   <TagButton
     tiny={boolean('Tiny', false)}
     big={boolean('Big', false)}
+    huge={boolean('Huge', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
     selected={boolean('Select', false)}
   >
@@ -24,6 +25,7 @@ export const WithIcon = () => (
   <TagButton
     tiny={boolean('Tiny', false)}
     big={boolean('Big', false)}
+    huge={boolean('Huge', false)}
     selected={boolean('Select', false)}
     icon={boolean('Icon', false)}
   >

@@ -1,9 +1,10 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
+import classNames from 'classnames'
 
 const StyledTagButton = styled(
   ({ selected, icon, tiny, big, modifier, ...others }) => (
@@ -48,132 +49,148 @@ const StyledTagButton = styled(
     text-align: left;
   }
 
-  ${({ icon }) =>
-    icon &&
-    css`
-      ${hydrogen}
-    `}
+  &.k-Buttons--TagButton__icon {
+    color: ${COLORS.font1};
+    border-color: ${COLORS.line1};
+    background-color: ${COLORS.background1};
+  
+    &:hover,
+    &:focus {
+      color: ${COLORS.background1};
+      border-color: ${COLORS.primary2};
+      background-color: ${COLORS.primary2};
+    }
+  
+    &:active {
+      color: ${COLORS.primary2};
+      border-color: ${COLORS.primary2};
+      background-color: ${COLORS.background1};
+    }
+  }
 
-  ${({ tiny }) =>
-    tiny &&
-    css`
-      min-height: ${pxToRem(30)};
-      min-width: ${pxToRem(60)};
-      padding: 0 ${pxToRem(20)};
-      font-size: ${stepToRem(-2)};
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        height: ${pxToRem(40)};
-        width: ${pxToRem(60)};
-      }
-    `}
+  &.k-Buttons--TagButton__tiny {
+    min-height: ${pxToRem(30)};
+    min-width: ${pxToRem(60)};
+    padding: 0 ${pxToRem(20)};
+    font-size: ${stepToRem(-2)};
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      height: ${pxToRem(40)};
+      width: ${pxToRem(60)};
+    }
+  }
 
-  ${({ big }) =>
-    big &&
-    css`
-      min-height: ${pxToRem(50)};
-      min-width: ${pxToRem(80)};
-      padding: 0 ${pxToRem(30)};
-      font-size: ${stepToRem(-1)};
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        height: ${pxToRem(50)};
-        width: ${pxToRem(80)};
-      }
-    `}
+  &.k-Buttons--TagButton__big {
+    min-height: ${pxToRem(50)};
+    min-width: ${pxToRem(80)};
+    padding: 0 ${pxToRem(30)};
+    font-size: ${stepToRem(-1)};
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      height: ${pxToRem(50)};
+      width: ${pxToRem(80)};
+    }
+  }
 
-  ${({ modifier }) =>
-    (modifier === 'helium' || 'hydrogen') &&
-    css`
-      ${hydrogen}
-    `}
+  &.k-Buttons--TagButton__huge {
+    min-height: ${pxToRem(60)};
+    min-width: ${pxToRem(80)};
+    padding: 0 ${pxToRem(30)};
+    font-size: ${stepToRem(-1)};
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      height: ${pxToRem(60)};
+      width: ${pxToRem(80)};
+    }
+  }
 
-  ${({ modifier }) =>
-    modifier === 'carbon' &&
-    css`
-      color: ${COLORS.font1};
+  &.k-Buttons--TagButton__helium,
+  &.k-Buttons--TagButton__hydrogen {
+    color: ${COLORS.font1};
+    border-color: ${COLORS.line1};
+    background-color: ${COLORS.background1};
+  
+    &:hover,
+    &:focus {
+      color: ${COLORS.background1};
+      border-color: ${COLORS.primary2};
+      background-color: ${COLORS.primary2};
+    }
+  
+    &:active {
+      color: ${COLORS.primary2};
+      border-color: ${COLORS.primary2};
+      background-color: ${COLORS.background1};
+    }
+  }
+
+  &.k-Buttons--TagButton__carbon {
+    color: ${COLORS.font1};
+    border-color: ${COLORS.background1};
+    background-color: ${COLORS.background1};
+
+    &:hover,
+    &:focus {
+      color: ${COLORS.primary1};
       border-color: ${COLORS.background1};
       background-color: ${COLORS.background1};
+    }
 
-      &:hover,
-      &:focus {
-        color: ${COLORS.primary1};
-        border-color: ${COLORS.background1};
-        background-color: ${COLORS.background1};
-      }
+    &:active {
+      color: ${COLORS.primary1};
+      border-color: ${COLORS.background1};
+      background-color: ${COLORS.background1};
+    }
+  }
 
-      &:active {
-        color: ${COLORS.primary1};
-        border-color: ${COLORS.background1};
-        background-color: ${COLORS.background1};
-      }
-    `}
-
-  ${({ selected }) =>
-    selected &&
-    css`
-      color: ${COLORS.background1};
-      border-color: ${COLORS.primary1};
-      background-color: ${COLORS.primary1};
-    `}
-`
-
-const hydrogen = css`
-  color: ${COLORS.font1};
-  border-color: ${COLORS.line1};
-  background-color: ${COLORS.background1};
-
-  &:hover,
-  &:focus {
+  &.k-Buttons--TagButton__selected {
     color: ${COLORS.background1};
-    border-color: ${COLORS.primary2};
-    background-color: ${COLORS.primary2};
-  }
-
-  &:active {
-    color: ${COLORS.primary2};
-    border-color: ${COLORS.primary2};
-    background-color: ${COLORS.background1};
+    border-color: ${COLORS.primary1};
+    background-color: ${COLORS.primary1};
   }
 `
 
-export class TagButton extends PureComponent {
-  static propTypes = {
-    modifier: PropTypes.string,
-    tiny: PropTypes.bool,
-    big: PropTypes.bool,
-    icon: PropTypes.bool,
-    selected: PropTypes.bool,
-  }
+export const TagButton = ({
+  children,
+  modifier,
+  selected,
+  tiny,
+  big,
+  huge,
+  icon,
+  ...others
+}) => {
 
-  static defaultProps = {
-    children: 'Tag',
-    modifier: 'hydrogen',
-    icon: false,
-    tiny: false,
-    big: false,
-    selected: false,
-  }
-  render() {
-    const {
-      children,
-      modifier,
-      selected,
-      tiny,
-      big,
-      icon,
-      ...others
-    } = this.props
+  return (
+    <StyledTagButton
+      className={classNames(
+        'k-Buttons--TagButton',
+        `k-Buttons--TagButton__${modifier}`,
+        {
+          'k-Buttons--TagButton__tiny': tiny,
+          'k-Buttons--TagButton__big': big,
+          'k-Buttons--TagButton__huge': huge,
+          'k-Buttons--TagButton__selected': selected,
+          'k-Buttons--tagButton__icon': icon,
+        }
+      )}
+      {...others}
+    >
+      {children}
+    </StyledTagButton>
+  )
+}
 
-    return (
-      <StyledTagButton
-        modifier={modifier}
-        selected={selected}
-        tiny={tiny}
-        big={big}
-        icon={icon}
-        {...others}
-      >
-        {children}
-      </StyledTagButton>
-    )
-  }
+TagButton.propTypes = {
+  modifier: PropTypes.oneOf(['helium', 'hydrogen', 'carbon']),
+  tiny: PropTypes.bool,
+  big: PropTypes.bool,
+  icon: PropTypes.bool,
+  selected: PropTypes.bool,
+}
+
+TagButton.defaultProps = {
+  children: 'Tag',
+  modifier: 'hydrogen',
+  icon: false,
+  tiny: false,
+  big: false,
+  selected: false,
 }
