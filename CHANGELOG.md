@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- A11y: Add Focus styles for focusable elements.
+- Feature: Add `summaryProps` to `Details` component.
+- A11y: Handle keyboard navigation on `Carousel`.
+
 ## [2.101.0] - 2020-11-30
 
 Features:
@@ -16,9 +20,6 @@ Features:
 Fix:
 
 - `DropdownPhoneSelect` when phone number is empty.
-
-- A11y: Add Focus styles for focusable elements.
-- Feature: Add `summaryProps` to `Details` component.
 
 ## [2.100.1] - 2020-11-26
 

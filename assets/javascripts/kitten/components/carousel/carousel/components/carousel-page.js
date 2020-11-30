@@ -7,23 +7,37 @@ export const CarouselPage = ({
   isActivePage,
   pageItems,
   numberOfItemsPerPage,
-}) => (
-  <div
-    className={classNames('k-Carousel__page', {
-      'k-Carousel__page--isActivePage': isActivePage,
-      'k-Carousel__page--hasBeenViewed': hasPageBeenViewed,
-    })}
-  >
-    {[...Array(numberOfItemsPerPage).keys()].map(index => (
-      <div key={index} className="k-Carousel__page__item">
-        {exportVisibilityProps
-          ? index < pageItems.length &&
-            React.cloneElement(pageItems[index], {
-              hasPageBeenViewed,
-              isActivePage,
-            })
-          : pageItems[index]}
-      </div>
-    ))}
-  </div>
-)
+  goToPage,
+  pageIndex,
+}) => {
+  const handleFocus = () => {
+    if (isActivePage) return
+
+    return goToPage(pageIndex)
+  }
+
+  return (
+    <div
+      className={classNames('k-Carousel__page', {
+        'k-Carousel__page--isActivePage': isActivePage,
+        'k-Carousel__page--hasBeenViewed': hasPageBeenViewed,
+      })}
+    >
+      {[...Array(numberOfItemsPerPage).keys()].map(index => (
+        <div key={index} className="k-Carousel__page__item">
+          {exportVisibilityProps
+            ? index < pageItems.length &&
+              React.cloneElement(pageItems[index], {
+                hasPageBeenViewed,
+                isActivePage,
+                onFocus: handleFocus,
+              })
+            : index < pageItems.length &&
+              React.cloneElement(pageItems[index], {
+                onFocus: handleFocus,
+              })}
+        </div>
+      ))}
+    </div>
+  )
+}

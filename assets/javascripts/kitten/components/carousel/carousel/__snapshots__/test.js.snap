@@ -2,10 +2,11 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat veUAu k-Carousel"
+  className="sc-htpNat errhZp k-Carousel"
 >
   <div
     className="k-Carousel__inner"
+    onKeyDown={[Function]}
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
@@ -77,10 +78,11 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat veUAu k-Carousel"
+  className="sc-htpNat errhZp k-Carousel"
 >
   <div
     className="k-Carousel__inner"
+    onKeyDown={[Function]}
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
@@ -154,7 +156,7 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat lhsKzg k-Carousel k-LegacyCarousel"
+  className="sc-htpNat jouaPS k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -164,6 +166,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
     >
       <div
         className="k-Carousel__inner"
+        onKeyDown={[Function]}
         onScroll={[Function]}
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
@@ -240,7 +243,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-htpNat lhsKzg k-Carousel k-LegacyCarousel"
+  className="sc-htpNat jouaPS k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -250,6 +253,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
     >
       <div
         className="k-Carousel__inner"
+        onKeyDown={[Function]}
         onScroll={[Function]}
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
@@ -326,7 +330,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat lhsKzg k-Carousel k-LegacyCarousel"
+  className="sc-htpNat jouaPS k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -336,6 +340,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
     >
       <div
         className="k-Carousel__inner"
+        onKeyDown={[Function]}
         onScroll={[Function]}
         onTouchEnd={[Function]}
         onTouchStart={[Function]}
@@ -412,10 +417,11 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat veUAu k-Carousel"
+  className="sc-htpNat errhZp k-Carousel"
 >
   <div
     className="k-Carousel__inner"
+    onKeyDown={[Function]}
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
@@ -487,10 +493,11 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
 
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat hTAERe k-Carousel"
+  className="sc-htpNat kofUvh k-Carousel"
 >
   <div
     className="k-Carousel__inner"
+    onKeyDown={[Function]}
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}
@@ -568,10 +575,11 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat veUAu k-Carousel"
+  className="sc-htpNat errhZp k-Carousel"
 >
   <div
     className="k-Carousel__inner"
+    onKeyDown={[Function]}
     onScroll={[Function]}
     onTouchEnd={[Function]}
     onTouchStart={[Function]}

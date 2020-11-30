@@ -141,12 +141,22 @@ export const CarouselInner = ({
     document.activeElement.blur()
   }
 
+  const handleKeyDown = e => {
+    if (e.key == 'ArrowRight') {
+      goToPage(currentPageIndex + 1)
+    }
+    if (e.key == 'ArrowLeft') {
+      goToPage(currentPageIndex - 1)
+    }
+  }
+
   return (
     <div
       ref={carouselInner}
       onScroll={handleInnerScroll}
       onTouchStart={() => setTouchState(true)}
       onTouchEnd={() => setTouchState(false)}
+      onKeyDown={handleKeyDown}
       className="k-Carousel__inner"
     >
       {[...Array(numberOfPages).keys()].map(index => {
@@ -172,6 +182,8 @@ export const CarouselInner = ({
               isActivePage={isActivePage}
               pageItems={getDataForPage(items, index, numberOfItemsPerPage)}
               numberOfItemsPerPage={numberOfItemsPerPage}
+              goToPage={goToPage}
+              pageIndex={index}
             />
           </div>
         )
