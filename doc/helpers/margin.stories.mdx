@@ -1,0 +1,87 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Helpers/margin()" />
+
+# `margin()`
+
+The `margin()` JS helper takes an object describing the margins of an element
+and returns class names for the [margin CSS utility](?path=/story/documentation-css-utilities-margin--page).
+
+Without Kitten CSS Utilities, this helper will not work.
+
+## Source
+
+[`assets/javascripts/kitten/helpers/utils/margin/index.js`](https://github.com/KissKissBankBank/kitten/blob/master/assets/javascripts/kitten/helpers/utils/margin/index.js)
+
+## Using
+
+### Import
+
+```
+import margin from '@kisskissbankbank/kitten/src/helpers/utils/margin'
+```
+
+### Usage
+
+The first argument needed for the `margin()` function to work, is an object.
+The object children are
+[the 6 directions](?id=documentation-css-utilities-margin--page&viewMode=story#direction),
+they are all optional.
+
+The children of these directions are objects, containing pairs of media query
+and value.
+
+An optional second argument can be passed, the boolean `asArray`
+(defaults to `false`), which will make the helper return an array of strings
+instead of a single string of concatenated class names.
+
+### Examples
+
+#### Basic usage
+
+```js
+>> margin({ top: { default: 5 } })
+<- 'k-u-margin-top-quintuple'
+>> margin({ top: { default: 'quintuple' }})
+<- 'k-u-margin-top-quintuple'
+```
+
+#### Media queries
+
+```js
+>> margin({ top: { fromM: 5 } })
+<- 'k-u-margin-top-quintuple@m-up'
+>> margin({ top: { default: 3, fromS: 5, fromL: 'decuple' } })
+<- 'k-u-margin-top-triple k-u-margin-top-quintuple@s-up k-u-margin-top-decuple@l-up'
+```
+
+#### With `asArray`
+
+```js
+>> const options = {
+      top: {
+        fromXxs: 5,
+        fromL: 8.5,
+      },
+      bottom: {
+        default: 0,
+        fromXl: 'decuple',
+      },
+      vertical: {
+        fromS: 9,
+      },
+      horizontal: {
+        fromXs: 'auto',
+      },
+    }
+>> margin(options, true)
+<- Array [
+    'k-u-margin-top-quintuple',
+    'k-u-margin-top-octupleHalf@l-up',
+    'k-u-margin-bottom-none',
+    'k-u-margin-bottom-decuple@xl-up',
+    'k-u-margin-vertical-nonuple@s-up',
+    'k-u-margin-horizontal-auto@xs-up',
+  ]
+```
+
