@@ -15,17 +15,17 @@ module.exports = {
         },
       },
     }
-    alteredConfig.module.rules.push({
-      test: /\.(svg|png|jpe?g)$/,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            name: 'images/[name].[ext]',
-          },
-        },
-      ],
-    })
+    // alteredConfig.module.rules.push({
+    //   test: /\.(svg|png|jpe?g)$/,
+    //   use: [
+    //     {
+    //       loader: 'file-loader',
+    //       options: {
+    //         name: 'images/[name].[ext]',
+    //       },
+    //     },
+    //   ],
+    // })
     alteredConfig.module.rules.push({
       test: /\.scss$/,
       resolve: {
@@ -41,6 +41,7 @@ module.exports = {
           },
         },
       ],
+      sideEffects: true,
     })
     return alteredConfig
   },
@@ -50,6 +51,7 @@ module.exports = {
     '../doc/**/*.stories.@(js|mdx)',
   ],
   addons: [
+    '@storybook/addon-links',
     '@storybook/addon-knobs',
     '@storybook/addon-actions',
     '@storybook/addon-a11y',

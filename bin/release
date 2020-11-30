@@ -9,6 +9,7 @@ bin/install
 npm test
 git checkout -b release/v$1
 npm run build:js
+npm run build:js:esm
 npm run build:utilities
 git add .
 git commit -m "add built js files for ${1}"

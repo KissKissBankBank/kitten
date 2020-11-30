@@ -19,11 +19,9 @@ var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime
 
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
 
-var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutProperties"));
-
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -41,6 +39,8 @@ var _button = require("../../../components/buttons/button");
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
@@ -48,30 +48,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 var StyledFormContainer = _styledComponents.default.form.withConfig({
   displayName: "text-input-with-unit-form__StyledFormContainer",
   componentId: "wjoixz-0"
-})(["margin:0;padding:0;"]);
-
-var StyledGridPosition = (0, _styledComponents.default)(function (_ref) {
-  var align = _ref.align,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["align"]);
-  return /*#__PURE__*/_react.default.createElement(_grid.Grid, others);
-}).withConfig({
-  displayName: "text-input-with-unit-form__StyledGridPosition",
-  componentId: "wjoixz-1"
-})(["", ""], function (_ref2) {
-  var align = _ref2.align;
-  return align === 'center' && (0, _styledComponents.css)(["display:flex;justify-content:center;"]);
-});
-var StyledButton = (0, _styledComponents.default)(function (_ref3) {
-  var version = _ref3.version,
-      others = (0, _objectWithoutProperties2.default)(_ref3, ["version"]);
-  return /*#__PURE__*/_react.default.createElement(_button.Button, others);
-}).withConfig({
-  displayName: "text-input-with-unit-form__StyledButton",
-  componentId: "wjoixz-2"
-})(["@media (min-width:", "px){width:100%:}", ""], _screenConfig.ScreenConfig.S.min, function (_ref4) {
-  var version = _ref4.version;
-  return version === 'tiny' && (0, _styledComponents.css)(["width:100%;"]);
-});
+})(["margin:0;padding:0;.k-Form-TextInputWithUnitForm__grid--center{display:flex;justify-content:center;}.k-Form-TextInputWithUnitForm__submit{@media (min-width:", "px){width:100%;}}"], _screenConfig.ScreenConfig.S.min);
 
 var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInputWithUnitForm, _PureComponent);
@@ -106,11 +83,10 @@ var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
           version = _this$props.version;
       return /*#__PURE__*/_react.default.createElement(StyledFormContainer, {
         onSubmit: onFormSubmit
-      }, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
-        top: "3",
-        bottom: !inputIsOnError ? 3 : 1
-      }, /*#__PURE__*/_react.default.createElement(StyledGridPosition, {
-        align: align
+      }, /*#__PURE__*/_react.default.createElement(_grid.Grid, {
+        className: (0, _classnames.default)('k-Form-TextInputWithUnitForm__grid', "k-Form-TextInputWithUnitForm__grid--".concat(align), 'k-u-margin-top-triple', 'k-u-margin-bottom-triple', {
+          'k-u-margin-bottom-single--important': inputIsOnError
+        })
       }, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
         "col-m": version === 'tiny' ? 0 : 5,
         "col-xs": version === 'tiny' ? 0 : 7
@@ -140,18 +116,18 @@ var TextInputWithUnitForm = /*#__PURE__*/function (_PureComponent) {
         size: "micro",
         color: "error",
         weight: "regular"
-      }, errorMessage))))), /*#__PURE__*/_react.default.createElement(StyledGridPosition, {
-        align: align
-      }, /*#__PURE__*/_react.default.createElement(StyledButton, {
+      }, errorMessage)))), /*#__PURE__*/_react.default.createElement(_grid.Grid, null, /*#__PURE__*/_react.default.createElement(_grid.GridCol, {
+        col: "12",
+        className: "k-u-align-".concat(align)
+      }, /*#__PURE__*/_react.default.createElement(_button.Button, {
         size: "big",
         modifier: "helium",
         type: "submit",
-        "aria-label": buttonLabel,
         onMouseEnter: onButtonMouseEnter,
         onMouseLeave: onButtonMouseLeave,
         disabled: formIsDisabled,
-        version: version
-      }, buttonLabel)));
+        className: (0, _classnames.default)('k-Form-TextInputWithUnitForm__submit', "k-Form-TextInputWithUnitForm__grid--".concat(version))
+      }, buttonLabel))));
     }
   }]);
   return TextInputWithUnitForm;

@@ -26,7 +26,7 @@ const StyledSection = styled.section`
 `
 
 export default {
-  title: 'IntersectionObserver/ContinuousIntersectionObserver',
+  title: 'Helpers/IntersectionObserver/ContinuousIntersectionObserver',
   component: ContinuousIntersectionObserver,
 }
 

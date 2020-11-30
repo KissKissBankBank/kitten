@@ -11,9 +11,7 @@ exports[`<EngagementCard /> by default matches with snapshot 1`] = `
   >
     <svg
       fill="#fff"
-      height="30"
       viewBox="0 0 134 30"
-      width=""
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>

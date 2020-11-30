@@ -2,7 +2,7 @@
 
 exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
 <div
-  className="sc-gZMcBi fAqsa"
+  className="sc-iwsKbI ghJpUv"
 >
   <div
     className="sc-htpNat jOCivv"
@@ -49,10 +49,10 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
     </span>
   </div>
   <span
-    className="sc-gqjmRU hZQwhG"
+    className="sc-gZMcBi hxoBK"
   >
     <div
-      className="sc-VigVT layygq"
+      className="sc-gqjmRU cyDemO"
     >
       <div
         className="sc-bdVaJa hOgMxB"
@@ -64,16 +64,16 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         </span>
       </div>
       <div
-        className="sc-jTzLTM cCewLx"
+        className="sc-VigVT efojrA"
       >
         <span
-          className="sc-bwzfXH uTxCW k-u-color-font1 k-u-weight-light sc-dnqmqq lkFWeM"
+          className="sc-bwzfXH uTxCW k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
         >
           Custom text
         </span>
       </div>
       <span
-        className="sc-iwsKbI kvzWsf"
+        className="sc-dnqmqq cigwiU"
       />
     </div>
     
@@ -83,7 +83,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
 
 exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
 <div
-  className="sc-gZMcBi fAqsa"
+  className="sc-iwsKbI ghJpUv"
 >
   <div
     className="sc-htpNat jOCivv"
@@ -109,10 +109,10 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     </span>
   </div>
   <span
-    className="sc-gqjmRU hZQwhG"
+    className="sc-gZMcBi hxoBK"
   >
     <div
-      className="sc-VigVT layygq"
+      className="sc-gqjmRU cyDemO"
     >
       <div
         className="sc-bdVaJa hOgMxB"
@@ -124,23 +124,23 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         </span>
       </div>
       <div
-        className="sc-jTzLTM cCewLx"
+        className="sc-VigVT efojrA"
       >
         <span
-          className="sc-bwzfXH uTxCW k-u-color-font1 k-u-weight-light sc-dnqmqq lkFWeM"
+          className="sc-bwzfXH uTxCW k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
         >
           Custom text
         </span>
       </div>
       <span
-        className="sc-iwsKbI kvzWsf"
+        className="sc-dnqmqq cigwiU"
       />
     </div>
     <div
       className="sc-bdVaJa tEHAm"
     >
       <div
-        className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-micro k-u-weight-bold sc-fjdhpX fNnJaH"
+        className="sc-bwzfXH uTxCW k-u-color-font1 k-u-size-micro k-u-weight-bold sc-jTzLTM fSqnUK"
       >
         <div>
           <a
@@ -172,7 +172,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
 
 exports[`<Comment /> should match its empty snapshot 1`] = `
 <div
-  className="sc-gZMcBi fAqsa"
+  className="sc-iwsKbI ghJpUv"
 >
   <div
     className="sc-htpNat jOCivv"
@@ -198,10 +198,10 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     </span>
   </div>
   <span
-    className="sc-gqjmRU hZQwhG"
+    className="sc-gZMcBi hxoBK"
   >
     <div
-      className="sc-VigVT layygq"
+      className="sc-gqjmRU cyDemO"
     >
       <div
         className="sc-bdVaJa hOgMxB"
@@ -213,38 +213,36 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         </span>
       </div>
       <div
-        className="sc-jTzLTM cypeDI"
+        className="sc-VigVT eWLelC"
       >
         <span
-          className="sc-bwzfXH uTxCW k-u-color-font1 k-u-weight-light sc-dnqmqq lkFWeM"
+          className="sc-bwzfXH uTxCW k-u-color-font1 k-u-weight-light sc-htoDjs gPUvVR"
         >
           Custom text
         </span>
       </div>
       <span
-        className="sc-iwsKbI kvzWsf"
+        className="sc-dnqmqq cigwiU"
       />
     </div>
     <div
-      className="sc-jzJRlG dllbll"
+      className="sc-fjdhpX jfYGMe"
     >
       <button
         aria-pressed="true"
-        className="sc-gzVnrw bCgizs"
+        className="sc-bZQynM erhepU"
         role="button"
       >
         
         <svg
           aria-hidden="true"
-          className="sc-htoDjs kBkodc"
+          className="sc-gzVnrw cYyNLJ"
           fill="#222"
           focusable="false"
           viewBox="0 0 14 12"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Heart
-          </title>
+          
           <path
             d="M7 2.927C6.71 1.267 5.262.007 3.52.01 1.574.013-.003 1.595 0 3.543 0 4.485.37 5.34.97 5.97l.012.014L7.012 12l5.856-5.88c.698-.646 1.134-1.57 1.132-2.597-.002-1.95-1.582-3.525-3.53-3.523C8.73.002 7.284 1.267 7 2.927z"
           />

@@ -105,7 +105,7 @@ const Modal = () => {
 }
 
 export default {
-  title: 'Pages/MobileModal',
+  title: 'pages/MobileModal',
   component: Modal,
 }
 

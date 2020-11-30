@@ -13,7 +13,7 @@ const StoryContainer = ({ children }) => (
 )
 
 export default {
-  title: 'Popovers & Tours/SimplePopover',
+  title: 'Popovers/SimplePopover',
   component: SimplePopover,
 }
 

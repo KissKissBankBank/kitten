@@ -1,0 +1,29 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks'
+import * as stories from './doc-link-box.stories.js'
+import { DocLinkBox } from './index'
+
+<Meta title="Box/DocLinkBox" component={DocLinkBox} />
+
+# LinkBox
+
+<Canvas>
+  <Story name="DocLinkBox" story={stories.Default} />
+</Canvas>
+
+## Import
+~~~js
+import { DocLinkBox } from '@kisskissbankbank/kitten/src/components/box/doc-link-box'
+~~~
+
+## Usage
+&nbsp;
+
+#### Default
+~~~js
+<DocLinkBox
+  href="#anchor"
+  isExternal
+  title="title"
+  text="text"
+/>
+~~~

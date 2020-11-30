@@ -23,6 +23,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
+var _gifVideo = require("../../../../components/videos/gif-video");
+
 var Image = function Image(_ref) {
   var imageContainerBackground = _ref.imageContainerBackground,
       _ref$imageProps = _ref.imageProps,
@@ -48,10 +50,7 @@ var Image = function Image(_ref) {
     style: backgroundColor ? (0, _extends2.default)({
       backgroundColor: backgroundColor
     }, otherImageProps.style) : otherImageProps.style
-  })), !loading && videoSources.length > 0 && /*#__PURE__*/_react.default.createElement("video", (0, _extends2.default)({
-    autoPlay: true,
-    loop: true,
-    muted: true,
+  })), !loading && videoSources.length > 0 && /*#__PURE__*/_react.default.createElement(_gifVideo.GifVideo, (0, _extends2.default)({
     poster: otherImageProps.src
   }, videoProps, {
     className: (0, _classnames.default)('k-Card__image', 'k-CrowdfundingCard__image__image', videoProps.className),

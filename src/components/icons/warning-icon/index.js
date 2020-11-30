@@ -37,5 +37,5 @@ WarningIcon.propTypes = {
 };
 WarningIcon.defaultProps = {
   color: '#fff',
-  title: 'Warning'
+  title: ''
 };

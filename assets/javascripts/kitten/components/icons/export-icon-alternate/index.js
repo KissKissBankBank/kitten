@@ -12,14 +12,8 @@ export const ExportIconAlternate = ({ color, iconTitle, title, ...props }) => (
     fill={color}
     {...props}
   >
-    {title !== '' && <title>{title}</title>}
-    <rect x="0" y="0" width="4" height="2" />
-    <rect x="6" y="0" width="6" height="2" />
-    <rect x="4" y="3" width="8" height="2" transform="rotate(-45 8 4)" />
-    <rect x="0" y="0" width="2" height="12" />
-    <rect x="0" y="10" width="12" height="2" />
-    <rect x="10" y="8" width="2" height="4" />
-    <rect x="10" y="0" width="2" height="6" />
+    {title && <title>{title}</title>}
+    <path d="M0 0h4v2H0zM6 0h6v2H6z M0 10h12v2H0z M10 8h2v4h-2zM10 0h2v6h-2z M4.4644661 6.12132034L10.12132033.4644661l1.41421357 1.41421357L5.87867966 7.5355339zM0 0h2v12H0z" />
   </svg>
 )
 

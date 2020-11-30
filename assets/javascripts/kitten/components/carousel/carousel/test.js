@@ -2,15 +2,15 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import {
   Carousel,
-  getNumColumnsForWidth,
-  getNumPagesForColumnsAndDataLength,
+  getNumberOfItemsPerPageForWidth,
+  getNumberOfPagesForColumnsAndDataLength,
   checkPage,
   checkPageLoop,
 } from './index'
 import {
   ProjectCard,
-  MIN_WIDTH as ProjectCardMinWidth,
-  MARGIN_BETWEEN as ProjectCardMarginBetween,
+  MIN_WIDTH as projectCardMinWidth,
+  MARGIN_BETWEEN as projectCardMarginBetween,
 } from '../../../components/cards/project-card'
 
 const createMockMediaMatcher = matches => () => ({
@@ -36,8 +36,8 @@ describe('<Carousel />', () => {
     const carousel = renderer
       .create(
         <Carousel
-          itemMinWidth={ProjectCardMinWidth}
-          baseItemMarginBetween={ProjectCardMarginBetween}
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
           tinyButtons={false}
         >
           {data.map((item, index) => (
@@ -57,9 +57,51 @@ describe('<Carousel />', () => {
     const carousel = renderer
       .create(
         <Carousel
-          itemMinWidth={ProjectCardMinWidth}
-          baseItemMarginBetween={ProjectCardMarginBetween}
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
           loop={true}
+        >
+          {data.map((item, index) => (
+            <ProjectCard title={item.title} key={index} />
+          ))}
+        </Carousel>,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(carousel).toMatchSnapshot()
+    })
+  })
+
+  describe('with exportVisibilityProps prop', () => {
+    window.matchMedia = createMockMediaMatcher(false) // desktop
+    const carousel = renderer
+      .create(
+        <Carousel
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
+          exportVisibilityProps
+        >
+          {data.map((item, index) => (
+            <ProjectCard title={item.title} key={index} />
+          ))}
+        </Carousel>,
+      )
+      .toJSON()
+
+    it('matches with snapshot', () => {
+      expect(carousel).toMatchSnapshot()
+    })
+  })
+
+  describe('with itemsPerPage prop', () => {
+    window.matchMedia = createMockMediaMatcher(false) // desktop
+    const carousel = renderer
+      .create(
+        <Carousel
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
+          itemsPerPage={5}
         >
           {data.map((item, index) => (
             <ProjectCard title={item.title} key={index} />
@@ -78,8 +120,8 @@ describe('<Carousel />', () => {
     const carousel = renderer
       .create(
         <Carousel
-          itemMinWidth={ProjectCardMinWidth}
-          baseItemMarginBetween={ProjectCardMarginBetween}
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
           pagesClassName="custom-class"
         >
           {data.map((item, index) => (
@@ -103,8 +145,8 @@ describe('<Carousel />', () => {
     const carousel = renderer
       .create(
         <Carousel
-          itemMinWidth={ProjectCardMinWidth}
-          baseItemMarginBetween={ProjectCardMarginBetween}
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
           data={[{ title: 'A' }]}
           renderItem={({ item }) => {
             return <ProjectCard title={item.title} />
@@ -127,8 +169,8 @@ describe('<Carousel />', () => {
     const carousel = renderer
       .create(
         <Carousel
-          itemMinWidth={ProjectCardMinWidth}
-          baseItemMarginBetween={ProjectCardMarginBetween}
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
           data={[{ title: 'A' }]}
           withoutLeftOffset={true}
           renderItem={({ item }) => {
@@ -152,8 +194,8 @@ describe('<Carousel />', () => {
     const carousel = renderer
       .create(
         <Carousel
-          itemMinWidth={ProjectCardMinWidth}
-          baseItemMarginBetween={ProjectCardMarginBetween}
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
           data={[{ title: 'A' }]}
           renderItem={({ item }) => {
             return <ProjectCard title={item.title} />
@@ -172,8 +214,8 @@ describe('<Carousel />', () => {
     const carousel = renderer
       .create(
         <Carousel
-          itemMinWidth={ProjectCardMinWidth}
-          baseItemMarginBetween={ProjectCardMarginBetween}
+          itemMinWidth={projectCardMinWidth}
+          baseItemMarginBetween={projectCardMarginBetween}
         />,
       )
       .toJSON()
@@ -183,47 +225,51 @@ describe('<Carousel />', () => {
     })
   })
 
-  describe('getNumColumnsForWidth', () => {
+  describe('getNumberOfItemsPerPageForWidth', () => {
     it('5 columns', () => {
-      expect(getNumColumnsForWidth(1000, 150, 50)).toBe(5)
+      expect(getNumberOfItemsPerPageForWidth(1000, 150, 50)).toBe(5)
     })
 
     it('1 column', () => {
-      expect(getNumColumnsForWidth(300, 150, 20)).toBe(1)
+      expect(getNumberOfItemsPerPageForWidth(300, 150, 20)).toBe(1)
     })
 
     it('0 column if no width', () => {
-      expect(getNumColumnsForWidth(0, 100, 10)).toBe(0)
+      expect(getNumberOfItemsPerPageForWidth(0, 100, 10)).toBe(0)
     })
 
     it('0 column if no itemWidth', () => {
-      expect(getNumColumnsForWidth(800, 0, 0)).toBe(0)
+      expect(getNumberOfItemsPerPageForWidth(800, 0, 0)).toBe(0)
     })
 
     it('NaN if not number', () => {
-      expect(getNumColumnsForWidth('0', '0', '0')).toBeNaN()
+      expect(getNumberOfItemsPerPageForWidth('0', '0', '0')).toBeNaN()
+    })
+
+    it('2 columns if no itemWidth but 2 itemsPerPage', () => {
+      expect(getNumberOfItemsPerPageForWidth(800, 0, 0, 2)).toBe(2)
     })
   })
 
-  describe('getNumPagesForColumnsAndDataLength', () => {
+  describe('getNumberOfPagesForColumnsAndDataLength', () => {
     it('3 pages', () => {
-      expect(getNumPagesForColumnsAndDataLength(7, 3)).toBe(3)
+      expect(getNumberOfPagesForColumnsAndDataLength(7, 3)).toBe(3)
     })
 
     it('1 page', () => {
-      expect(getNumPagesForColumnsAndDataLength(2, 2)).toBe(1)
+      expect(getNumberOfPagesForColumnsAndDataLength(2, 2)).toBe(1)
     })
 
     it('0 page if no dataLength', () => {
-      expect(getNumPagesForColumnsAndDataLength(0, 3)).toBe(0)
+      expect(getNumberOfPagesForColumnsAndDataLength(0, 3)).toBe(0)
     })
 
-    it('0 page if no numColumns', () => {
-      expect(getNumPagesForColumnsAndDataLength(5, 0)).toBe(0)
+    it('0 page if no numberOfItemsPerPage', () => {
+      expect(getNumberOfPagesForColumnsAndDataLength(5, 0)).toBe(0)
     })
 
     it('NaN if not number', () => {
-      expect(getNumPagesForColumnsAndDataLength('0', '0')).toBeNaN()
+      expect(getNumberOfPagesForColumnsAndDataLength('0', '0')).toBeNaN()
     })
   })
 

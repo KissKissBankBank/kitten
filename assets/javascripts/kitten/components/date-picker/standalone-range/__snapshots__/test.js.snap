@@ -2,7 +2,7 @@
 
 exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="sc-gzVnrw fsyoIl"
+  className="sc-bZQynM kspNNT"
 >
   <div
     className="DayPicker Selectable"
@@ -14,26 +14,32 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       tabIndex={0}
     >
       <p
-        className="sc-bxivhb bUZGRr k-u-size-tiny k-u-weight-regular sc-ifAKCX kidnBC"
+        className="sc-htpNat KtFsv k-u-size-tiny k-u-weight-regular sc-bxivhb BTiTW"
       >
         Sélectionnez la période souhaitée
       </p>
       <div
-        className="sc-EHOje lnLHGw DayPicker-NavBar"
+        className="sc-ifAKCX jhToMv DayPicker-NavBar"
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="sc-bwzfXH bEKwPz sc-bZQynM hURQRD"
+          className="sc-bdVaJa isuiaM sc-EHOje lbpOMi"
           onClick={[Function]}
         >
           <svg
-            className="sc-bdVaJa bxGcNc"
+            className=""
             fill="#222"
             height="8"
+            style={
+              Object {
+                "transform": "rotate(-90deg)",
+              }
+            }
             viewBox="0 0 8.48 5.64"
             width="8"
             xmlns="http://www.w3.org/2000/svg"
           >
+            
             <path
               d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
             />
@@ -41,17 +47,23 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="sc-bwzfXH bEKwPz sc-bZQynM hURQRD"
+          className="sc-bdVaJa isuiaM sc-EHOje lbpOMi"
           onClick={[Function]}
         >
           <svg
-            className="sc-bdVaJa Afqxo"
+            className=""
             fill="#222"
             height="8"
+            style={
+              Object {
+                "transform": "rotate(90deg)",
+              }
+            }
             viewBox="0 0 8.48 5.64"
             width="8"
             xmlns="http://www.w3.org/2000/svg"
           >
+            
             <path
               d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
             />

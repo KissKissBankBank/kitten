@@ -1,7 +1,12 @@
 module.exports = api => {
   const isTest = api.env('test')
+  const isESMBuild = process.env.BABEL_ENV === 'esm'
+
   const plugins = [
-    '@babel/plugin-transform-runtime',
+    [
+      '@babel/plugin-transform-runtime',
+      { useESModules: isESMBuild }
+    ],
     '@babel/plugin-transform-react-jsx',
     [
       '@babel/plugin-proposal-object-rest-spread',
@@ -23,6 +28,7 @@ module.exports = api => {
       [
         '@babel/preset-env',
         {
+          modules: isESMBuild ? false : 'commonjs',
           targets: {
             browsers: ['last 2 versions', 'ie >= 10'],
           },

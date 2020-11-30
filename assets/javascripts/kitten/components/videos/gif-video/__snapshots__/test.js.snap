@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GifVideo /> with multiple sources matches with snapshot 1`] = `
+<video
+  autoPlay={true}
+  className="sc-bdVaJa fzPwtu"
+  loop={true}
+  muted={true}
+  playsInline={true}
+  poster={null}
+>
+  <source
+    src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.webm"
+    type="video/webm"
+  />
+  <source
+    src="https://kkbb-production.s3-eu-west-1.amazonaws.com/videos/kitten/kitten_video.mp4"
+    type="video/mp4"
+  />
+</video>
+`;
+
+exports[`<GifVideo /> with no source matches with snapshot 1`] = `
+<video
+  autoPlay={true}
+  className="sc-bdVaJa fzPwtu"
+  loop={true}
+  muted={true}
+  playsInline={true}
+  poster={null}
+/>
+`;

@@ -352,6 +352,15 @@
     }
   }
 
+  .k-ButtonIcon--cross--micro {
+    @include k-buttonPadding($button-size-micro, $cross-size, $cross-size);
+
+    .k-ButtonIcon__svg {
+      width: $cross-size;
+      height: $cross-size;
+    }
+  }
+
   .k-ButtonIcon--cross--tiny {
     @include k-buttonPadding($button-size-tiny, $cross-size, $cross-size);
 

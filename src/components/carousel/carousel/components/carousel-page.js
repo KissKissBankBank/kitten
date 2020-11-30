@@ -1,7 +1,5 @@
 "use strict";
 
-var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
-
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 Object.defineProperty(exports, "__esModule", {
@@ -9,90 +7,32 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.CarouselPage = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
+var _toConsumableArray2 = _interopRequireDefault(require("@babel/runtime/helpers/toConsumableArray"));
 
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
-
-var _react = _interopRequireWildcard(require("react"));
-
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
-
-var _range = require("../../../../helpers/utils/range");
+var _react = _interopRequireDefault(require("react"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-var StyledPage = _styledComponents.default.div.withConfig({
-  displayName: "carousel-page__StyledPage",
-  componentId: "sc-12ynwqa-0"
-})(["display:flex;flex-direction:row;"]);
-
-var StyledItem = _styledComponents.default.div.withConfig({
-  displayName: "carousel-page__StyledItem",
-  componentId: "sc-12ynwqa-1"
-})(["flex-grow:1;flex-shrink:1;", " ", ""], function (_ref) {
-  var itemMinWidth = _ref.itemMinWidth;
-  return (0, _styledComponents.css)(["min-width:", "px;flex-basis:", "px;"], itemMinWidth, itemMinWidth);
-}, function (_ref2) {
-  var index = _ref2.index,
-      itemMarginBetween = _ref2.itemMarginBetween;
-  return index && (0, _styledComponents.css)(["margin-left:", "px;"], itemMarginBetween);
-});
-
-var CarouselPage = /*#__PURE__*/function (_Component) {
-  (0, _inherits2.default)(CarouselPage, _Component);
-
-  var _super = _createSuper(CarouselPage);
-
-  function CarouselPage() {
-    (0, _classCallCheck2.default)(this, CarouselPage);
-    return _super.apply(this, arguments);
-  }
-
-  (0, _createClass2.default)(CarouselPage, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          legacyMode = _this$props.legacyMode,
-          data = _this$props.data,
-          numColumns = _this$props.numColumns,
-          itemMinWidth = _this$props.itemMinWidth,
-          itemMarginBetween = _this$props.itemMarginBetween,
-          renderItem = _this$props.renderItem,
-          isActivePage = _this$props.isActivePage,
-          hasPageBeenViewed = _this$props.hasPageBeenViewed,
-          exportVisibilityProps = _this$props.exportVisibilityProps;
-      var rangeCard = (0, _range.createRangeFromZeroTo)(numColumns);
-      return /*#__PURE__*/_react.default.createElement(StyledPage, {
-        className: (0, _classnames.default)('k-Carousel__page', {
-          'k-Carousel__page--isActivePage': isActivePage,
-          'k-Carousel__page--hasBeenViewed': hasPageBeenViewed
-        })
-      }, rangeCard.map(function (index) {
-        return /*#__PURE__*/_react.default.createElement(StyledItem, {
-          key: index,
-          index: index,
-          itemMinWidth: itemMinWidth,
-          itemMarginBetween: itemMarginBetween,
-          className: "k-Carousel__page__item"
-        }, legacyMode ? data[index] && renderItem({
-          item: data[index]
-        }) : exportVisibilityProps ? renderItem[index] && _react.default.cloneElement(renderItem[index], {
-          hasPageBeenViewed: hasPageBeenViewed
-        }) : renderItem[index]);
-      }));
-    }
-  }]);
-  return CarouselPage;
-}(_react.Component);
+var CarouselPage = function CarouselPage(_ref) {
+  var exportVisibilityProps = _ref.exportVisibilityProps,
+      hasPageBeenViewed = _ref.hasPageBeenViewed,
+      isActivePage = _ref.isActivePage,
+      pageItems = _ref.pageItems,
+      numberOfItemsPerPage = _ref.numberOfItemsPerPage;
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: (0, _classnames.default)('k-Carousel__page', {
+      'k-Carousel__page--isActivePage': isActivePage,
+      'k-Carousel__page--hasBeenViewed': hasPageBeenViewed
+    })
+  }, (0, _toConsumableArray2.default)(Array(numberOfItemsPerPage).keys()).map(function (index) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: index,
+      className: "k-Carousel__page__item"
+    }, exportVisibilityProps ? index < pageItems.length && _react.default.cloneElement(pageItems[index], {
+      hasPageBeenViewed: hasPageBeenViewed,
+      isActivePage: isActivePage
+    }) : pageItems[index]);
+  }));
+};
 
 exports.CarouselPage = CarouselPage;

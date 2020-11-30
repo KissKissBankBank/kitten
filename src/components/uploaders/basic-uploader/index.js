@@ -168,17 +168,20 @@ var BasicUploader = function BasicUploader(_ref) {
     circleColor: _colorsConfig.default.valid,
     checkedColor: _colorsConfig.default.background1,
     width: 20,
-    height: 20
+    height: 20,
+    "aria-hidden": true
   }), internalStatus === 'error' && /*#__PURE__*/_react.default.createElement(_crossCircleIcon.CrossCircleIcon, {
     circleColor: _colorsConfig.default.error,
     crossColor: _colorsConfig.default.background1,
     width: 20,
-    height: 20
+    height: 20,
+    "aria-hidden": true
   }), internalStatus === 'wait' && /*#__PURE__*/_react.default.createElement(_clockCircleIcon.ClockCircleIcon, {
     circleColor: _colorsConfig.default.primary1,
     clockColor: _colorsConfig.default.background1,
     width: 20,
-    height: 20
+    height: 20,
+    "aria-hidden": true
   })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_text.Text, {
     tag: "p",
     weight: "regular",

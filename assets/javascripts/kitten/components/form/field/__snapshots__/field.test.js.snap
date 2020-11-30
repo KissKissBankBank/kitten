@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-jzJRlG bTVSHD"
+      className="sc-gqjmRU gSiJXU"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-cSHVUG jrEObi"
+        className="sc-VigVT faGjpy"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -86,28 +86,28 @@ Array [
             aria-describedby="tooltip"
             className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
             data-dismiss="tooltip"
-            data-event="click"
+            data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
+            data-place="right"
             data-tip={true}
+            onClick={[Function]}
             tabIndex={null}
             type="button"
           >
             <svg
               className="k-ButtonIcon__svg"
+              fill="#fff"
               viewBox="0 0 6 10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>
-                Question mark
-              </title>
+              
               <path
                 d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
-                fill="#FFF"
               />
             </svg>
           </button>
           <div
-            className="__react_component_tooltip place-right type-dark "
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
@@ -122,7 +122,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat iVlOqv"
+      className="sc-bwzfXH gbcMMf k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -133,7 +133,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-gZMcBi giNnHm k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-EHOje jvzENE k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -180,28 +180,28 @@ Array [
             aria-describedby="tooltip"
             className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
             data-dismiss="tooltip"
-            data-event="click"
+            data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
+            data-place="right"
             data-tip={true}
+            onClick={[Function]}
             tabIndex={null}
             type="button"
           >
             <svg
               className="k-ButtonIcon__svg"
+              fill="#fff"
               viewBox="0 0 6 10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>
-                Question mark
-              </title>
+              
               <path
                 d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
-                fill="#FFF"
               />
             </svg>
           </button>
           <div
-            className="__react_component_tooltip place-right type-dark "
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
@@ -216,7 +216,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat fTSCbm"
+      className="sc-bwzfXH gbcMMf k-Form-TextInput k-Form-TextInput--andromeda"
       disabled={false}
       id="input"
       name="field"
@@ -260,28 +260,28 @@ Array [
             aria-describedby="tooltip"
             className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
             data-dismiss="tooltip"
-            data-event="click"
+            data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
+            data-place="right"
             data-tip={true}
+            onClick={[Function]}
             tabIndex={null}
             type="button"
           >
             <svg
               className="k-ButtonIcon__svg"
+              fill="#fff"
               viewBox="0 0 6 10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>
-                Question mark
-              </title>
+              
               <path
                 d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
-                fill="#FFF"
               />
             </svg>
           </button>
           <div
-            className="__react_component_tooltip place-right type-dark "
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
@@ -296,10 +296,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU eSPiSL"
+      className="sc-dnqmqq kmxqSx"
     >
       <input
-        className="sc-htpNat iVlOqv sc-VigVT fUPyOg"
+        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -308,7 +308,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jTzLTM gQMtOg"
+        className="sc-gZMcBi gPuGFE"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -337,7 +337,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-gZMcBi giNnHm k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-EHOje jvzENE k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -384,28 +384,28 @@ Array [
             aria-describedby="tooltip"
             className="k-ButtonIcon k-ButtonIcon--tooltip--nano k-ButtonIcon--helium k-ButtonIcon--nano k-ButtonIcon--rounded"
             data-dismiss="tooltip"
-            data-event="click"
+            data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
+            data-place="right"
             data-tip={true}
+            onClick={[Function]}
             tabIndex={null}
             type="button"
           >
             <svg
               className="k-ButtonIcon__svg"
+              fill="#fff"
               viewBox="0 0 6 10"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <title>
-                Question mark
-              </title>
+              
               <path
                 d="M1.98 8.486c0 .468.372.852.852.852a.858.858 0 1 0 0-1.716.85.85 0 0 0-.852.864zM3.552 5.63c1.32-.264 2.208-1.2 2.208-2.46C5.76 1.682 4.584.662 2.988.662c-1.2 0-2.16.624-2.748 1.488l.912.996C1.62 2.306 2.232 1.97 3 1.97c.708 0 1.332.432 1.332 1.176 0 .9-.876 1.332-1.8 1.332h-.396v2.196h1.416V5.63z"
-                fill="#FFF"
               />
             </svg>
           </button>
           <div
-            className="__react_component_tooltip place-right type-dark "
+            className="__react_component_tooltip place-top type-dark "
             data-id="tooltip"
             id="tooltip"
             role="tooltip"
@@ -420,10 +420,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU eSPiSL"
+      className="sc-dnqmqq kmxqSx"
     >
       <input
-        className="sc-htpNat fTSCbm sc-VigVT fUPyOg"
+        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda"
         disabled={false}
         id="input"
         name="field"
@@ -432,7 +432,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jTzLTM gQMtOg"
+        className="sc-gZMcBi gPuGFE"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -489,59 +489,79 @@ Array [
   <div
     className="sc-bdVaJa ggQxmM"
   >
-    <div
-      className="k-RadioButtonSet"
+    <fieldset
+      className="sc-gzVnrw eXZJHp k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+      disabled={false}
     >
       <div
-        className="k-RadioButton k-RadioButtonSet__radioButton"
+        className="k-Form-RadioButtonSet__radioContainer"
       >
-        <input
-          className="k-RadioButton__input"
-          defaultChecked={true}
-          id="option-a"
-          name="radio"
-          type="radio"
-        />
-        <label
-          className="k-RadioButton__label"
-          htmlFor="option-a"
+        <div
+          className="sc-bZQynM kaHuMl k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
-          Option A
-        </label>
-      </div>
-      <div
-        className="k-RadioButton k-RadioButtonSet__radioButton"
-      >
-        <input
-          className="k-RadioButton__input"
-          id="option-b"
-          name="radio"
-          type="radio"
-        />
-        <label
-          className="k-RadioButton__label"
-          htmlFor="option-b"
+          <input
+            className="k-Form-RadioButton__input"
+            defaultChecked={true}
+            disabled={false}
+            id="option-a"
+            name="radio"
+            type="radio"
+          />
+          <label
+            className="k-Form-RadioButton__label"
+            htmlFor="option-a"
+          >
+            <span
+              className="k-Form-RadioButton__labelText"
+            >
+              Option A
+            </span>
+          </label>
+        </div>
+        <div
+          className="sc-bZQynM kaHuMl k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
-          Option B
-        </label>
-      </div>
-      <div
-        className="k-RadioButton k-RadioButtonSet__radioButton"
-      >
-        <input
-          className="k-RadioButton__input"
-          id="option-c"
-          name="radio"
-          type="radio"
-        />
-        <label
-          className="k-RadioButton__label"
-          htmlFor="option-c"
+          <input
+            className="k-Form-RadioButton__input"
+            disabled={false}
+            id="option-b"
+            name="radio"
+            type="radio"
+          />
+          <label
+            className="k-Form-RadioButton__label"
+            htmlFor="option-b"
+          >
+            <span
+              className="k-Form-RadioButton__labelText"
+            >
+              Option B
+            </span>
+          </label>
+        </div>
+        <div
+          className="sc-bZQynM kaHuMl k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
-          Option C
-        </label>
+          <input
+            className="k-Form-RadioButton__input"
+            disabled={false}
+            id="option-c"
+            name="radio"
+            type="radio"
+          />
+          <label
+            className="k-Form-RadioButton__label"
+            htmlFor="option-c"
+          >
+            <span
+              className="k-Form-RadioButton__labelText"
+            >
+              Option C
+            </span>
+          </label>
+        </div>
       </div>
-    </div>
+    </fieldset>
   </div>,
 ]
 `;

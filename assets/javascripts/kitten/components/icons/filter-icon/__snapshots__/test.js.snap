@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterIcon /> should match its empty snapshot 1`] = `
+<svg
+  fill="#222"
+  height="24px"
+  viewBox="0 0 20 24"
+  width="20px"
+  x="0px"
+  xmlns="http://www.w3.org/2000/svg"
+  y="0px"
+>
+  
+  <rect
+    height="10"
+    width="2"
+    x="2"
+  >
+    <animate
+      attributeName="y"
+      attributeType="xml"
+      begin="0"
+      dur="1.5s"
+      repeatCount="indefinite"
+      values="-4; 0; -4"
+    />
+  </rect>
+  <rect
+    height="10"
+    width="2"
+    x="2"
+    y="14"
+  >
+    <animate
+      attributeName="y"
+      attributeType="xml"
+      begin="0"
+      dur="1.5s"
+      repeatCount="indefinite"
+      values="14; 18; 14"
+    />
+  </rect>
+  <path
+    d="M4,9v2H2V9H4 M6,7H0v6h6V7L6,7z"
+  >
+    <animateTransform
+      attributeName="transform"
+      attributeType="xml"
+      begin="0"
+      dur="1.5s"
+      repeatCount="indefinite"
+      type="translate"
+      values="0 0; 0 4; 0 0"
+    />
+  </path>
+  <rect
+    height="14"
+    width="2"
+    x="9"
+  >
+    <animate
+      attributeName="y"
+      attributeType="xml"
+      begin="0"
+      dur="1.5s"
+      repeatCount="indefinite"
+      values="0; -12; 0"
+    />
+  </rect>
+  <rect
+    height="14"
+    width="2"
+    x="9"
+    y="22"
+  >
+    <animate
+      attributeName="y"
+      attributeType="xml"
+      begin="0"
+      dur="1.5s"
+      repeatCount="indefinite"
+      values="22; 10; 22"
+    />
+  </rect>
+  <path
+    d="M11,17v2H9v-2H11 M13,15H7v6h6V15L13,15z"
+  >
+    <animateTransform
+      attributeName="transform"
+      attributeType="xml"
+      begin="0"
+      dur="1.5s"
+      repeatCount="indefinite"
+      type="translate"
+      values="0 0; 0 -12; 0 0"
+    />
+  </path>
+  <rect
+    height="12"
+    width="2"
+    x="16"
+  >
+    <animate
+      attributeName="y"
+      attributeType="xml"
+      begin="0"
+      dur="1.5s"
+      repeatCount="indefinite"
+      values="-8; 0; -8"
+    />
+  </rect>
+  <rect
+    height="12"
+    width="2"
+    x="16"
+    y="12"
+  >
+    <animate
+      attributeName="y"
+      attributeType="xml"
+      begin="0"
+      dur="1.5s"
+      repeatCount="indefinite"
+      values="12; 20; 12"
+    />
+  </rect>
+  <path
+    d="M18,7v2h-2V7H18 M20,5h-6v6h6V5L20,5z"
+  >
+    <animateTransform
+      attributeName="transform"
+      attributeType="xml"
+      begin="0"
+      dur="1.5s"
+      repeatCount="indefinite"
+      type="translate"
+      values="0 0; 0 8; 0 0"
+    />
+  </path>
+</svg>
+`;

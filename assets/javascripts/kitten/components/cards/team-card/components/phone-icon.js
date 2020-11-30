@@ -10,6 +10,7 @@ export const TeamCardPhoneIcon = ({
   phoneNumber,
   tooltipColor,
   className,
+  buttonLabel,
   ...props
 }) => {
   return (
@@ -23,14 +24,16 @@ export const TeamCardPhoneIcon = ({
           'k-u-hidden@s-up',
           className,
         )}
+        aria-label={buttonLabel}
       >
-        <PhoneIcon className="k-ButtonIcon__svg" />
+        <PhoneIcon aria-hidden className="k-ButtonIcon__svg" />
       </ButtonIcon>
 
       <TeamCardButtonWithTooltip
         phoneNumber={phoneNumber}
         tooltipColor={tooltipColor}
         className={className}
+        aria-label={buttonLabel}
         {...props}
       />
     </>
@@ -40,9 +43,11 @@ export const TeamCardPhoneIcon = ({
 TeamCardPhoneIcon.propTypes = {
   phoneNumber: PropTypes.string,
   tooltipColor: PropTypes.string,
+  buttonLabel: PropTypes.string,
 }
 
 TeamCardPhoneIcon.defaultProps = {
   phoneNumber: '',
   tooltipColor: COLORS.primary1,
+  buttonLabel: 'Telephone',
 }

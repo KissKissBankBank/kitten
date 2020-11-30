@@ -23,7 +23,7 @@ const StyledButton = styled.button`
   line-height: 1.3;
   text-decoration: none;
 
-  appareance: none;
+  appearance: none;
   outline: none;
 
   cursor: pointer;
@@ -64,11 +64,24 @@ const StyledButton = styled.button`
   ${({ huge }) => huge && HUGE}
   ${({ giant }) => giant && GIANT}
   ${({ icon, fluid }) => icon && !fluid && ICON}
+  ${({ icon, micro, fluid }) => icon && micro && !fluid && ICON_MICRO}
   ${({ icon, tiny, fluid }) => icon && tiny && !fluid && ICON_TINY}
   ${({ icon, big, fluid }) => icon && big && !fluid && ICON_BIG}
   ${({ icon, huge, fluid }) => icon && huge && !fluid && ICON_HUGE}
   ${({ icon, giant, fluid }) => icon && giant && !fluid && ICON_GIANT}
   ${({ fluid }) => fluid && FLUID}
+
+  ${({ variant }) =>
+    variant === 'orion' &&
+    css`
+    ${() => BIG}
+
+    border-radius: ${pxToRem(6)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      border-radius: ${pxToRem(8)};
+    }
+  `}
 
   ${({ modifier }) => modifierStyles(modifier)}
 `
@@ -227,6 +240,14 @@ export const ICON = css`
   }
 `
 
+export const ICON_MICRO = css`
+  width: ${pxToRem(30)};
+  height: ${pxToRem(30)};
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    width: ${pxToRem(30)};
+  }
+`
+
 export const ICON_TINY = css`
   width: ${pxToRem(40)};
   height: ${pxToRem(40)};
@@ -287,6 +308,7 @@ export const ICON_GIANT = css`
 export class Button extends Component {
   static propTypes = {
     borderRadius: PropTypes.number,
+    micro: PropTypes.bool,
     tiny: PropTypes.bool,
     big: PropTypes.bool,
     huge: PropTypes.bool,
@@ -302,10 +324,18 @@ export class Button extends Component {
       'oxygen',
       'copper',
       'checked',
+      'social_facebook',
+      'social_twitter',
+      'social_linkedin',
+      'social_instagram',
+      'social_youtube',
+      'social_pinterest',
     ]),
+    variant: PropTypes.oneOf(['andromeda', 'orion']),
   }
 
   static defaultProps = {
+    micro: false,
     tiny: false,
     big: false,
     huge: false,
@@ -314,10 +344,11 @@ export class Button extends Component {
     icon: false,
     modifier: 'hydrogen',
     borderRadius: 0,
+    variant: 'andromeda',
   }
 
   render() {
-    const { children, modifier, ...props } = this.props
+    const { children, modifier, variant, ...props } = this.props
     const checked = modifier === 'checked' && { 'aria-checked': true }
 
     modifier === 'checked' &&
@@ -326,7 +357,12 @@ export class Button extends Component {
       )
 
     return (
-      <StyledButton modifier={modifier} {...checked} {...props}>
+      <StyledButton
+        modifier={modifier}
+        variant={variant}
+        {...checked}
+        {...props}
+      >
         {children}
         {modifier === 'checked' && (
           <CheckedCircleIcon
