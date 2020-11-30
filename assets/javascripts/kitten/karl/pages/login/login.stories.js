@@ -3,7 +3,7 @@ import { boolean } from '@storybook/addon-knobs'
 import Login from './components/login'
 
 export default {
-  title: 'Pages/Login',
+  title: 'pages/Login',
   component: Login,
 }
 

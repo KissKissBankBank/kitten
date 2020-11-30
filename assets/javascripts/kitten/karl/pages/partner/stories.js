@@ -2,7 +2,7 @@ import React from 'react'
 import PartnerPage from './components/page'
 
 export default {
-  title: 'Pages/Partner',
+  title: 'pages/Partner',
   component: PartnerPage,
 }
 
