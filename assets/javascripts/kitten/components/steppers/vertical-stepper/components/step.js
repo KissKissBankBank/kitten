@@ -66,8 +66,8 @@ const StyledItem = styled.li`
     margin-bottom: 0;
   }
 
-  a:focus,
   [role='button']:focus,
+  a:focus,
   button:focus {
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
