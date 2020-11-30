@@ -3,6 +3,7 @@
 This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
+- Fix `DropdownPhoneSelect` when phone number is empty.
 
 ## [2.100.1] - 2020-11-26
 
