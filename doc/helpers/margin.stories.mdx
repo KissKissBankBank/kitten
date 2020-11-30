@@ -30,6 +30,10 @@ they are all optional.
 
 The children of these directions are objects, containing pairs of media query
 and value.
+The media query is in the form `fromXxs`, `fromM`, `fromXl`.
+The value can be a number that is 1/10 of the pixel value that is wanted
+(`2` will be equivalent to `20px`, `8.5` will be `85px`), or a string for the
+value of the CSS utility (`single`, `tripleHalf`, `noneHalf`, `auto`…)
 
 An optional second argument can be passed, the boolean `asArray`
 (defaults to `false`), which will make the helper return an array of strings
