@@ -48,89 +48,89 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0.k-Buttons--TagButton__icon {
+.c0.k-Buttons--tagButton__icon {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__icon:hover,
-.c0.k-Buttons--TagButton__icon:focus {
+.c0.k-Buttons--tagButton__icon:hover,
+.c0.k-Buttons--tagButton__icon:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__icon:active {
+.c0.k-Buttons--tagButton__icon:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__tiny {
+.c0.k-Buttons--tagButton__tiny {
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.7901234567901234rem;
 }
 
-.c0.k-Buttons--TagButton__big {
+.c0.k-Buttons--tagButton__big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__huge {
+.c0.k-Buttons--tagButton__huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__helium,
-.c0.k-Buttons--TagButton__hydrogen {
+.c0.k-Buttons--tagButton__helium,
+.c0.k-Buttons--tagButton__hydrogen {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__helium:hover,
-.c0.k-Buttons--TagButton__hydrogen:hover,
-.c0.k-Buttons--TagButton__helium:focus,
-.c0.k-Buttons--TagButton__hydrogen:focus {
+.c0.k-Buttons--tagButton__helium:hover,
+.c0.k-Buttons--tagButton__hydrogen:hover,
+.c0.k-Buttons--tagButton__helium:focus,
+.c0.k-Buttons--tagButton__hydrogen:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__helium:active,
-.c0.k-Buttons--TagButton__hydrogen:active {
+.c0.k-Buttons--tagButton__helium:active,
+.c0.k-Buttons--tagButton__hydrogen:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon {
+.c0.k-Buttons--tagButton__carbon {
   color: #222;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:hover,
-.c0.k-Buttons--TagButton__carbon:focus {
+.c0.k-Buttons--tagButton__carbon:hover,
+.c0.k-Buttons--tagButton__carbon:focus {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:active {
+.c0.k-Buttons--tagButton__carbon:active {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__selected {
+.c0.k-Buttons--tagButton__selected {
   color: #fff;
   border-color: #19b4fa;
   background-color: #19b4fa;
@@ -144,28 +144,28 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__tiny {
+  .c0.k-Buttons--tagButton__tiny {
     height: 2.5rem;
     width: 3.75rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__big {
+  .c0.k-Buttons--tagButton__big {
     height: 3.125rem;
     width: 5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__huge {
+  .c0.k-Buttons--tagButton__huge {
     height: 3.75rem;
     width: 5rem;
   }
 }
 
 <button
-  className="c0 k-Buttons--TagButton k-Buttons--TagButton__hydrogen k-Buttons--TagButton__big"
+  className="c0 k-Buttons--tagButton k-Buttons--tagButton__hydrogen k-Buttons--tagButton__big"
 >
   MyButton
 </button>
@@ -219,89 +219,89 @@ exports[`<TagButton /> with \`huge\` prop matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0.k-Buttons--TagButton__icon {
+.c0.k-Buttons--tagButton__icon {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__icon:hover,
-.c0.k-Buttons--TagButton__icon:focus {
+.c0.k-Buttons--tagButton__icon:hover,
+.c0.k-Buttons--tagButton__icon:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__icon:active {
+.c0.k-Buttons--tagButton__icon:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__tiny {
+.c0.k-Buttons--tagButton__tiny {
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.7901234567901234rem;
 }
 
-.c0.k-Buttons--TagButton__big {
+.c0.k-Buttons--tagButton__big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__huge {
+.c0.k-Buttons--tagButton__huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__helium,
-.c0.k-Buttons--TagButton__hydrogen {
+.c0.k-Buttons--tagButton__helium,
+.c0.k-Buttons--tagButton__hydrogen {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__helium:hover,
-.c0.k-Buttons--TagButton__hydrogen:hover,
-.c0.k-Buttons--TagButton__helium:focus,
-.c0.k-Buttons--TagButton__hydrogen:focus {
+.c0.k-Buttons--tagButton__helium:hover,
+.c0.k-Buttons--tagButton__hydrogen:hover,
+.c0.k-Buttons--tagButton__helium:focus,
+.c0.k-Buttons--tagButton__hydrogen:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__helium:active,
-.c0.k-Buttons--TagButton__hydrogen:active {
+.c0.k-Buttons--tagButton__helium:active,
+.c0.k-Buttons--tagButton__hydrogen:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon {
+.c0.k-Buttons--tagButton__carbon {
   color: #222;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:hover,
-.c0.k-Buttons--TagButton__carbon:focus {
+.c0.k-Buttons--tagButton__carbon:hover,
+.c0.k-Buttons--tagButton__carbon:focus {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:active {
+.c0.k-Buttons--tagButton__carbon:active {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__selected {
+.c0.k-Buttons--tagButton__selected {
   color: #fff;
   border-color: #19b4fa;
   background-color: #19b4fa;
@@ -315,28 +315,28 @@ exports[`<TagButton /> with \`huge\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__tiny {
+  .c0.k-Buttons--tagButton__tiny {
     height: 2.5rem;
     width: 3.75rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__big {
+  .c0.k-Buttons--tagButton__big {
     height: 3.125rem;
     width: 5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__huge {
+  .c0.k-Buttons--tagButton__huge {
     height: 3.75rem;
     width: 5rem;
   }
 }
 
 <button
-  className="c0 k-Buttons--TagButton k-Buttons--TagButton__hydrogen k-Buttons--TagButton__huge"
+  className="c0 k-Buttons--tagButton k-Buttons--tagButton__hydrogen k-Buttons--tagButton__huge"
 >
   MyButton
 </button>
@@ -390,89 +390,89 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0.k-Buttons--TagButton__icon {
+.c0.k-Buttons--tagButton__icon {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__icon:hover,
-.c0.k-Buttons--TagButton__icon:focus {
+.c0.k-Buttons--tagButton__icon:hover,
+.c0.k-Buttons--tagButton__icon:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__icon:active {
+.c0.k-Buttons--tagButton__icon:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__tiny {
+.c0.k-Buttons--tagButton__tiny {
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.7901234567901234rem;
 }
 
-.c0.k-Buttons--TagButton__big {
+.c0.k-Buttons--tagButton__big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__huge {
+.c0.k-Buttons--tagButton__huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__helium,
-.c0.k-Buttons--TagButton__hydrogen {
+.c0.k-Buttons--tagButton__helium,
+.c0.k-Buttons--tagButton__hydrogen {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__helium:hover,
-.c0.k-Buttons--TagButton__hydrogen:hover,
-.c0.k-Buttons--TagButton__helium:focus,
-.c0.k-Buttons--TagButton__hydrogen:focus {
+.c0.k-Buttons--tagButton__helium:hover,
+.c0.k-Buttons--tagButton__hydrogen:hover,
+.c0.k-Buttons--tagButton__helium:focus,
+.c0.k-Buttons--tagButton__hydrogen:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__helium:active,
-.c0.k-Buttons--TagButton__hydrogen:active {
+.c0.k-Buttons--tagButton__helium:active,
+.c0.k-Buttons--tagButton__hydrogen:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon {
+.c0.k-Buttons--tagButton__carbon {
   color: #222;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:hover,
-.c0.k-Buttons--TagButton__carbon:focus {
+.c0.k-Buttons--tagButton__carbon:hover,
+.c0.k-Buttons--tagButton__carbon:focus {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:active {
+.c0.k-Buttons--tagButton__carbon:active {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__selected {
+.c0.k-Buttons--tagButton__selected {
   color: #fff;
   border-color: #19b4fa;
   background-color: #19b4fa;
@@ -486,28 +486,28 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__tiny {
+  .c0.k-Buttons--tagButton__tiny {
     height: 2.5rem;
     width: 3.75rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__big {
+  .c0.k-Buttons--tagButton__big {
     height: 3.125rem;
     width: 5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__huge {
+  .c0.k-Buttons--tagButton__huge {
     height: 3.75rem;
     width: 5rem;
   }
 }
 
 <button
-  className="c0 k-Buttons--TagButton k-Buttons--TagButton__helium"
+  className="c0 k-Buttons--tagButton k-Buttons--tagButton__helium"
 >
   MyButton
 </button>
@@ -561,89 +561,89 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0.k-Buttons--TagButton__icon {
+.c0.k-Buttons--tagButton__icon {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__icon:hover,
-.c0.k-Buttons--TagButton__icon:focus {
+.c0.k-Buttons--tagButton__icon:hover,
+.c0.k-Buttons--tagButton__icon:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__icon:active {
+.c0.k-Buttons--tagButton__icon:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__tiny {
+.c0.k-Buttons--tagButton__tiny {
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.7901234567901234rem;
 }
 
-.c0.k-Buttons--TagButton__big {
+.c0.k-Buttons--tagButton__big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__huge {
+.c0.k-Buttons--tagButton__huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__helium,
-.c0.k-Buttons--TagButton__hydrogen {
+.c0.k-Buttons--tagButton__helium,
+.c0.k-Buttons--tagButton__hydrogen {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__helium:hover,
-.c0.k-Buttons--TagButton__hydrogen:hover,
-.c0.k-Buttons--TagButton__helium:focus,
-.c0.k-Buttons--TagButton__hydrogen:focus {
+.c0.k-Buttons--tagButton__helium:hover,
+.c0.k-Buttons--tagButton__hydrogen:hover,
+.c0.k-Buttons--tagButton__helium:focus,
+.c0.k-Buttons--tagButton__hydrogen:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__helium:active,
-.c0.k-Buttons--TagButton__hydrogen:active {
+.c0.k-Buttons--tagButton__helium:active,
+.c0.k-Buttons--tagButton__hydrogen:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon {
+.c0.k-Buttons--tagButton__carbon {
   color: #222;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:hover,
-.c0.k-Buttons--TagButton__carbon:focus {
+.c0.k-Buttons--tagButton__carbon:hover,
+.c0.k-Buttons--tagButton__carbon:focus {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:active {
+.c0.k-Buttons--tagButton__carbon:active {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__selected {
+.c0.k-Buttons--tagButton__selected {
   color: #fff;
   border-color: #19b4fa;
   background-color: #19b4fa;
@@ -657,28 +657,28 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__tiny {
+  .c0.k-Buttons--tagButton__tiny {
     height: 2.5rem;
     width: 3.75rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__big {
+  .c0.k-Buttons--tagButton__big {
     height: 3.125rem;
     width: 5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__huge {
+  .c0.k-Buttons--tagButton__huge {
     height: 3.75rem;
     width: 5rem;
   }
 }
 
 <button
-  className="c0 k-Buttons--TagButton k-Buttons--TagButton__hydrogen k-Buttons--TagButton__selected"
+  className="c0 k-Buttons--tagButton k-Buttons--tagButton__hydrogen k-Buttons--tagButton__selected"
 >
   MyButton
 </button>
@@ -732,89 +732,89 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0.k-Buttons--TagButton__icon {
+.c0.k-Buttons--tagButton__icon {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__icon:hover,
-.c0.k-Buttons--TagButton__icon:focus {
+.c0.k-Buttons--tagButton__icon:hover,
+.c0.k-Buttons--tagButton__icon:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__icon:active {
+.c0.k-Buttons--tagButton__icon:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__tiny {
+.c0.k-Buttons--tagButton__tiny {
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.7901234567901234rem;
 }
 
-.c0.k-Buttons--TagButton__big {
+.c0.k-Buttons--tagButton__big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__huge {
+.c0.k-Buttons--tagButton__huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__helium,
-.c0.k-Buttons--TagButton__hydrogen {
+.c0.k-Buttons--tagButton__helium,
+.c0.k-Buttons--tagButton__hydrogen {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__helium:hover,
-.c0.k-Buttons--TagButton__hydrogen:hover,
-.c0.k-Buttons--TagButton__helium:focus,
-.c0.k-Buttons--TagButton__hydrogen:focus {
+.c0.k-Buttons--tagButton__helium:hover,
+.c0.k-Buttons--tagButton__hydrogen:hover,
+.c0.k-Buttons--tagButton__helium:focus,
+.c0.k-Buttons--tagButton__hydrogen:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__helium:active,
-.c0.k-Buttons--TagButton__hydrogen:active {
+.c0.k-Buttons--tagButton__helium:active,
+.c0.k-Buttons--tagButton__hydrogen:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon {
+.c0.k-Buttons--tagButton__carbon {
   color: #222;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:hover,
-.c0.k-Buttons--TagButton__carbon:focus {
+.c0.k-Buttons--tagButton__carbon:hover,
+.c0.k-Buttons--tagButton__carbon:focus {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:active {
+.c0.k-Buttons--tagButton__carbon:active {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__selected {
+.c0.k-Buttons--tagButton__selected {
   color: #fff;
   border-color: #19b4fa;
   background-color: #19b4fa;
@@ -828,28 +828,28 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__tiny {
+  .c0.k-Buttons--tagButton__tiny {
     height: 2.5rem;
     width: 3.75rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__big {
+  .c0.k-Buttons--tagButton__big {
     height: 3.125rem;
     width: 5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__huge {
+  .c0.k-Buttons--tagButton__huge {
     height: 3.75rem;
     width: 5rem;
   }
 }
 
 <button
-  className="c0 k-Buttons--TagButton k-Buttons--TagButton__hydrogen k-Buttons--TagButton__tiny"
+  className="c0 k-Buttons--tagButton k-Buttons--tagButton__hydrogen k-Buttons--tagButton__tiny"
 >
   MyButton
 </button>
@@ -903,89 +903,89 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0.k-Buttons--TagButton__icon {
+.c0.k-Buttons--tagButton__icon {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__icon:hover,
-.c0.k-Buttons--TagButton__icon:focus {
+.c0.k-Buttons--tagButton__icon:hover,
+.c0.k-Buttons--tagButton__icon:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__icon:active {
+.c0.k-Buttons--tagButton__icon:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__tiny {
+.c0.k-Buttons--tagButton__tiny {
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.7901234567901234rem;
 }
 
-.c0.k-Buttons--TagButton__big {
+.c0.k-Buttons--tagButton__big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__huge {
+.c0.k-Buttons--tagButton__huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__helium,
-.c0.k-Buttons--TagButton__hydrogen {
+.c0.k-Buttons--tagButton__helium,
+.c0.k-Buttons--tagButton__hydrogen {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__helium:hover,
-.c0.k-Buttons--TagButton__hydrogen:hover,
-.c0.k-Buttons--TagButton__helium:focus,
-.c0.k-Buttons--TagButton__hydrogen:focus {
+.c0.k-Buttons--tagButton__helium:hover,
+.c0.k-Buttons--tagButton__hydrogen:hover,
+.c0.k-Buttons--tagButton__helium:focus,
+.c0.k-Buttons--tagButton__hydrogen:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__helium:active,
-.c0.k-Buttons--TagButton__hydrogen:active {
+.c0.k-Buttons--tagButton__helium:active,
+.c0.k-Buttons--tagButton__hydrogen:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon {
+.c0.k-Buttons--tagButton__carbon {
   color: #222;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:hover,
-.c0.k-Buttons--TagButton__carbon:focus {
+.c0.k-Buttons--tagButton__carbon:hover,
+.c0.k-Buttons--tagButton__carbon:focus {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:active {
+.c0.k-Buttons--tagButton__carbon:active {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__selected {
+.c0.k-Buttons--tagButton__selected {
   color: #fff;
   border-color: #19b4fa;
   background-color: #19b4fa;
@@ -999,28 +999,28 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__tiny {
+  .c0.k-Buttons--tagButton__tiny {
     height: 2.5rem;
     width: 3.75rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__big {
+  .c0.k-Buttons--tagButton__big {
     height: 3.125rem;
     width: 5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__huge {
+  .c0.k-Buttons--tagButton__huge {
     height: 3.75rem;
     width: 5rem;
   }
 }
 
 <button
-  className="c0 k-Buttons--TagButton k-Buttons--TagButton__hydrogen k-Buttons--tagButton__icon"
+  className="c0 k-Buttons--tagButton k-Buttons--tagButton__hydrogen k-Buttons--tagButton__icon"
 >
   <svg
     viewBox="0 0 732 224.43"
@@ -1090,89 +1090,89 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   text-align: left;
 }
 
-.c0.k-Buttons--TagButton__icon {
+.c0.k-Buttons--tagButton__icon {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__icon:hover,
-.c0.k-Buttons--TagButton__icon:focus {
+.c0.k-Buttons--tagButton__icon:hover,
+.c0.k-Buttons--tagButton__icon:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__icon:active {
+.c0.k-Buttons--tagButton__icon:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__tiny {
+.c0.k-Buttons--tagButton__tiny {
   min-height: 1.875rem;
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.7901234567901234rem;
 }
 
-.c0.k-Buttons--TagButton__big {
+.c0.k-Buttons--tagButton__big {
   min-height: 3.125rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__huge {
+.c0.k-Buttons--tagButton__huge {
   min-height: 3.75rem;
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
 }
 
-.c0.k-Buttons--TagButton__helium,
-.c0.k-Buttons--TagButton__hydrogen {
+.c0.k-Buttons--tagButton__helium,
+.c0.k-Buttons--tagButton__hydrogen {
   color: #222;
   border-color: #eee;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__helium:hover,
-.c0.k-Buttons--TagButton__hydrogen:hover,
-.c0.k-Buttons--TagButton__helium:focus,
-.c0.k-Buttons--TagButton__hydrogen:focus {
+.c0.k-Buttons--tagButton__helium:hover,
+.c0.k-Buttons--tagButton__hydrogen:hover,
+.c0.k-Buttons--tagButton__helium:focus,
+.c0.k-Buttons--tagButton__hydrogen:focus {
   color: #fff;
   border-color: #05a8e6;
   background-color: #05a8e6;
 }
 
-.c0.k-Buttons--TagButton__helium:active,
-.c0.k-Buttons--TagButton__hydrogen:active {
+.c0.k-Buttons--tagButton__helium:active,
+.c0.k-Buttons--tagButton__hydrogen:active {
   color: #05a8e6;
   border-color: #05a8e6;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon {
+.c0.k-Buttons--tagButton__carbon {
   color: #222;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:hover,
-.c0.k-Buttons--TagButton__carbon:focus {
+.c0.k-Buttons--tagButton__carbon:hover,
+.c0.k-Buttons--tagButton__carbon:focus {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__carbon:active {
+.c0.k-Buttons--tagButton__carbon:active {
   color: #19b4fa;
   border-color: #fff;
   background-color: #fff;
 }
 
-.c0.k-Buttons--TagButton__selected {
+.c0.k-Buttons--tagButton__selected {
   color: #fff;
   border-color: #19b4fa;
   background-color: #19b4fa;
@@ -1186,28 +1186,28 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__tiny {
+  .c0.k-Buttons--tagButton__tiny {
     height: 2.5rem;
     width: 3.75rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__big {
+  .c0.k-Buttons--tagButton__big {
     height: 3.125rem;
     width: 5rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c0.k-Buttons--TagButton__huge {
+  .c0.k-Buttons--tagButton__huge {
     height: 3.75rem;
     width: 5rem;
   }
 }
 
 <button
-  className="c0 k-Buttons--TagButton k-Buttons--TagButton__hydrogen"
+  className="c0 k-Buttons--tagButton k-Buttons--tagButton__hydrogen"
 >
   MyButton
 </button>
