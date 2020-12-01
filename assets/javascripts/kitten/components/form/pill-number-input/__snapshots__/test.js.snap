@@ -2,7 +2,7 @@
 
 exports[`<PillNumberInput /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa iadUiF k-PillNumberInput CustomClass__1"
+  className="sc-bdVaJa fYuCUm k-PillNumberInput CustomClass__1"
 >
   <button
     aria-hidden="true"
@@ -29,6 +29,7 @@ exports[`<PillNumberInput /> should match its snapshot with props 1`] = `
     aria-valuemin={2}
     aria-valuenow={5}
     className="k-PillNumberInput__input CustomClass__2"
+    disabled={false}
     inputMode="numeric"
     onChange={[Function]}
     onKeyDown={[Function]}

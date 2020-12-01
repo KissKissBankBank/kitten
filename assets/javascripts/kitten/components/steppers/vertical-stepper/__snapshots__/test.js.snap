@@ -121,10 +121,9 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   margin-bottom: 0;
 }
 
+.c1 [role='button']:focus,
 .c1 a:focus,
 .c1 button:focus {
-  border-radius: 0.1875rem;
-  padding-right: 0.625rem;
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
 }
@@ -146,6 +145,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-right: 0.625rem;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -721,10 +721,9 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   margin-bottom: 0;
 }
 
+.c1 [role='button']:focus,
 .c1 a:focus,
 .c1 button:focus {
-  border-radius: 0.1875rem;
-  padding-right: 0.625rem;
   outline: #bae8fd solid 0.125rem;
   outline-offset: 0.125rem;
 }
@@ -746,6 +745,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-right: 0.625rem;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;

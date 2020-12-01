@@ -66,10 +66,9 @@ const StyledItem = styled.li`
     margin-bottom: 0;
   }
 
+  [role='button']:focus,
   a:focus,
   button:focus {
-    border-radius: ${pxToRem(3)};
-    padding-right: ${pxToRem(10)};
     outline: ${COLORS.primary4} solid ${pxToRem(2)};
     outline-offset: ${pxToRem(2)};
   }
@@ -86,6 +85,7 @@ const StyledItem = styled.li`
 const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
+  padding-right: ${pxToRem(10)};
 
   ${({ as, onClick }) =>
     (as === 'a' || onClick) &&
