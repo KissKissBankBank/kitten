@@ -182,6 +182,7 @@ TagButton.propTypes = {
   modifier: PropTypes.oneOf(['helium', 'hydrogen', 'carbon']),
   tiny: PropTypes.bool,
   big: PropTypes.bool,
+  huge: PropTypes.bool,
   icon: PropTypes.bool,
   selected: PropTypes.bool,
 }
@@ -192,5 +193,6 @@ TagButton.defaultProps = {
   icon: false,
   tiny: false,
   big: false,
+  huge: false,
   selected: false,
 }
