@@ -148,6 +148,10 @@ const StyledContainerStatus = styled.div`
         background-color: ${COLORS.background1};
         border-color: ${COLORS.line1};
       }
+      &.k-Steppers--VerticalStepper__status--error {
+        color: ${COLORS.error};
+        border-color: ${COLORS.error};
+      }
       &.k-Steppers--VerticalStepper__status--disabled {
         background-color: ${COLORS.background1};
         border-color: ${COLORS.line1};
