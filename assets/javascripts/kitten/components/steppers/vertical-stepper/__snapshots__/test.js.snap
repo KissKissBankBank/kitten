@@ -85,6 +85,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-color: #eee;
 }
 
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--error {
+  color: #ff0046;
+  border-color: #ff0046;
+}
+
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
   background-color: #fff;
   border-color: #eee;
@@ -345,7 +350,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--andromeda"
@@ -392,7 +396,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--andromeda"
@@ -458,7 +461,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={true}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--andromeda"
@@ -522,7 +524,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--andromeda"
@@ -569,7 +570,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--andromeda"
@@ -675,6 +675,11 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
   background-color: #fff;
   border-color: #eee;
+}
+
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--error {
+  color: #ff0046;
+  border-color: #ff0046;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
@@ -908,7 +913,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--orion"
@@ -957,7 +961,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--orion"
@@ -995,7 +998,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={true}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--orion"
@@ -1021,7 +1023,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--orion"
@@ -1047,7 +1048,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--orion"

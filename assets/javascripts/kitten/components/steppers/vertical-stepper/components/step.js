@@ -39,7 +39,6 @@ export const Step = ({
         />
 
         <div
-          error={error}
           className={classNames(
             STEP_CLASSNAME,
             'k-Steppers--VerticalStepper__step--link--content',
