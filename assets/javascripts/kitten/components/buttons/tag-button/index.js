@@ -49,7 +49,7 @@ const StyledTagButton = styled(
     text-align: left;
   }
 
-  &.k-Buttons--tagButton__icon {
+  &.k-Buttons__tagButton--icon {
     color: ${COLORS.font1};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.background1};
@@ -68,7 +68,7 @@ const StyledTagButton = styled(
     }
   }
 
-  &.k-Buttons--tagButton__tiny {
+  &.k-Buttons__tagButton--tiny {
     min-height: ${pxToRem(30)};
     min-width: ${pxToRem(60)};
     padding: 0 ${pxToRem(20)};
@@ -79,7 +79,7 @@ const StyledTagButton = styled(
     }
   }
 
-  &.k-Buttons--tagButton__big {
+  &.k-Buttons__tagButton--big {
     min-height: ${pxToRem(50)};
     min-width: ${pxToRem(80)};
     padding: 0 ${pxToRem(30)};
@@ -90,7 +90,7 @@ const StyledTagButton = styled(
     }
   }
 
-  &.k-Buttons--tagButton__huge {
+  &.k-Buttons__tagButton--huge {
     min-height: ${pxToRem(60)};
     min-width: ${pxToRem(80)};
     padding: 0 ${pxToRem(30)};
@@ -101,8 +101,8 @@ const StyledTagButton = styled(
     }
   }
 
-  &.k-Buttons--tagButton__helium,
-  &.k-Buttons--tagButton__hydrogen {
+  &.k-Buttons__tagButton--helium,
+  &.k-Buttons__tagButton--hydrogen {
     color: ${COLORS.font1};
     border-color: ${COLORS.line1};
     background-color: ${COLORS.background1};
@@ -121,7 +121,7 @@ const StyledTagButton = styled(
     }
   }
 
-  &.k-Buttons--tagButton__carbon {
+  &.k-Buttons__tagButton--carbon {
     color: ${COLORS.font1};
     border-color: ${COLORS.background1};
     background-color: ${COLORS.background1};
@@ -140,7 +140,7 @@ const StyledTagButton = styled(
     }
   }
 
-  &.k-Buttons--tagButton__selected {
+  &.k-Buttons__tagButton--selected {
     color: ${COLORS.background1};
     border-color: ${COLORS.primary1};
     background-color: ${COLORS.primary1};
@@ -161,14 +161,14 @@ export const TagButton = ({
   return (
     <StyledTagButton
       className={classNames(
-        'k-Buttons--tagButton',
-        `k-Buttons--tagButton__${modifier}`,
+        'k-Buttons__tagButton',
+        `k-Buttons__tagButton--${modifier}`,
         {
-          'k-Buttons--tagButton__tiny': tiny,
-          'k-Buttons--tagButton__big': big,
-          'k-Buttons--tagButton__huge': huge,
-          'k-Buttons--tagButton__selected': selected,
-          'k-Buttons--tagButton__icon': icon,
+          'k-Buttons__tagButton--tiny': tiny,
+          'k-Buttons__tagButton--big': big,
+          'k-Buttons__tagButton--huge': huge,
+          'k-Buttons__tagButton--selected': selected,
+          'k-Buttons__tagButton--icon': icon,
         }
       )}
       {...others}
