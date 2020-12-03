@@ -19,6 +19,11 @@
 // Event
 @include k-utilities-event;
 
+// Flex
+@include k-utilities-flex;
+@include k-utilities-justifyContent;
+@include k-utilities-alignItems;
+
 // Image
 @include k-utilities-responsive;
 

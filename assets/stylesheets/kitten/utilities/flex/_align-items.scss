@@ -1,0 +1,87 @@
+/// Block alignment utilities, with FlexBox.
+///
+/// @group flex
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-alignItems;
+///
+/// @example html
+///
+///   <div class="k-u-flex-alignItems-center@xxs-down">…</div>
+///   <div class="k-u-flex-alignItems-center@xs-down">…</div>
+///   <div class="k-u-flex-alignItems-center@s-down">…</div>
+///   <div class="k-u-flex-alignItems-center@m-down">…</div>
+///   <div class="k-u-flex-alignItems-center@l-down">…</div>
+///
+///   <div class="k-u-flex-alignItems-center@xs-up">…</div>
+///   <div class="k-u-flex-alignItems-center@s-up">…</div>
+///   <div class="k-u-flex-alignItems-center@m-up">…</div>
+///   <div class="k-u-flex-alignItems-center@l-up">…</div>
+///   <div class="k-u-flex-alignItems-center@xl-up">…</div>
+///
+///   <div class="k-u-flex-alignItems-center">…</div>
+///   <div class="k-u-flex-alignItems-start">…</div>
+///   <div class="k-u-flex-alignItems-end">…</div>
+///
+///   <div class="k-u-flex-alignItems-center@xxs-down--important">…</div>
+///   <div class="k-u-flex-alignItems-center@xs-down--important">…</div>
+///   <div class="k-u-flex-alignItems-center@s-down--important">…</div>
+///   <div class="k-u-flex-alignItems-center@m-down--important">…</div>
+///   <div class="k-u-flex-alignItems-center@l-down--important">…</div>
+///
+///   <div class="k-u-flex-alignItems-center@xs-up--important">…</div>
+///   <div class="k-u-flex-alignItems-center@s-up--important">…</div>
+///   <div class="k-u-flex-alignItems-center@m-up--important">…</div>
+///   <div class="k-u-flex-alignItems-center@l-up--important">…</div>
+///   <div class="k-u-flex-alignItems-center@xl-up--important">…</div>
+///
+///   <div class="k-u-flex-alignItems-center--important">…</div>
+///   <div class="k-u-flex-alignItems-start--important">…</div>
+///   <div class="k-u-flex-alignItems-end--important">…</div>
+
+@mixin k-u-flex-alignItems($position, $align) {
+  $value: $align;
+
+  .k-u-flex-alignItems-#{$position} {
+    align-items: $value;
+
+    &--important {
+      align-items: $value !important;
+    }
+  }
+
+  @each $name, $query in $k-media-queries {
+    @if $name != "xl" {
+      .k-u-flex-alignItems-#{$position}\@#{$name}-down {
+        @include k-media-max($name) {
+          align-items: $value;
+
+          &--important {
+            align-items: $value !important;
+          }
+        }
+      }
+    }
+
+    @if $name != "xxs" {
+      .k-u-flex-alignItems-#{$position}\@#{$name}-up {
+        @include k-media-min($name) {
+          align-items: $value;
+
+          &--important {
+            align-items: $value !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin k-utilities-alignItems {
+  @include k-u-flex-alignItems('normal', normal);
+  @include k-u-flex-alignItems('stretch', stretch);
+  @include k-u-flex-alignItems('center', center);
+  @include k-u-flex-alignItems('start', flex-start);
+  @include k-u-flex-alignItems('end', flex-end);
+}

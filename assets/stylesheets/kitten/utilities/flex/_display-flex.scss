@@ -1,0 +1,77 @@
+/// FlexBox display utility.
+///
+/// @group flex
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-flex;
+///
+/// @example html
+///
+///   <div class="k-u-flex">…</div>
+///   <div class="k-u-flex@xxs-down">…</div>
+///   <div class="k-u-flex--important">…</div>
+
+@mixin k-utilities-flex {
+  .k-u-flex {
+    display: flex;
+
+    &--important {
+      display: flex !important;
+    }
+
+    &-inline {
+      display: inline-flex;
+
+      &--important {
+        display: inline-flex !important;
+      }
+    }
+  }
+
+  @each $name, $query in $k-media-queries {
+    @if $name != "xl" {
+      .k-u-flex\@#{$name}-down {
+        @include k-media-max($name) {
+          display: flex;
+
+          &--important {
+            display: flex !important;
+          }
+        }
+      }
+
+      .k-u-flex-inline\@#{$name}-down {
+        @include k-media-max($name) {
+          display: inline-flex;
+
+          &--important {
+            display: inline-flex !important;
+          }
+        }
+      }
+    }
+
+    @if $name != "xxs" {
+      .k-u-flex\@#{$name}-up {
+        @include k-media-min($name) {
+          display: flex;
+
+          &--important {
+            display: flex !important;
+          }
+        }
+      }
+
+      .k-u-flex-inline\@#{$name}-up {
+        @include k-media-min($name) {
+          display: inline-flex;
+
+          &--important {
+            display: inline-flex !important;
+          }
+        }
+      }
+    }
+  }
+}

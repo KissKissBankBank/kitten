@@ -1,0 +1,13 @@
+.has-overrides {
+  .k-u-flex,
+  .k-u-flex-inline {
+    height: 150px;
+    padding: 4px;
+    border: 1px solid k-map-fetch($k-colors, 'primary-4');
+
+    & > * {
+      margin: 0;
+      border: 1px solid k-map-fetch($k-colors, 'primary-1');
+    }
+  }
+}
