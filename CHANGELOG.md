@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 - Feature : Add `huge` props on `TagButton`.
 
-- Fix: Update `error` props on `VerticalStepper` with `variant="orion"`. 
+- Feature: Add type to `CreditCardForm` values.
+- Fix: Update `error` props on `VerticalStepper` with `variant="orion"`.
 
 ## [2.101.0] - 2020-11-30
 
