@@ -53,6 +53,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   display: block;
 }
 
+.c0[href]:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0 .k-CrowdfundingCard__paddedContainer {
   padding: 0 0.625rem;
 }
@@ -609,6 +614,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   display: block;
 }
 
+.c0[href]:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0 .k-CrowdfundingCard__paddedContainer {
   padding: 0 0.625rem;
 }
@@ -1105,6 +1115,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
+}
+
+.c0[href]:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
