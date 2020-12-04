@@ -85,7 +85,6 @@ const StyledItem = styled.li`
 const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
-
   ${({ as, onClick }) =>
     (as === 'a' || onClick) &&
     css`
