@@ -1,0 +1,71 @@
+@mixin k-theme-light {
+  :root {
+    // HSL base
+    --color-hsl-font1: 0, 0%, 13%;
+    --color-hsl-font2: 0, 0%, 72%;
+    --color-hsl-background1: 0, 0%, 100%;
+    --color-hsl-background2: 0, 0%, 98%;
+    --color-hsl-background3: 0, 0%, 96%;
+    --color-hsl-lightRed: 21, 100%, 94%;
+    --color-hsl-line1: 0, 0%, 93%;
+    --color-hsl-line2: 0, 0%, 85%;
+    --color-hsl-primary1: 199, 96%, 54%;
+    --color-hsl-primary2: 197, 96%, 46%;
+    --color-hsl-primary3: 196, 96%, 41%;
+    --color-hsl-primary4: 199, 94%, 86%;
+    --color-hsl-primary5: 199, 92%, 95%;
+    --color-hsl-primary6: 200, 100%, 98%;
+    --color-hsl-secondary1: 178, 100%, 65%;
+    --color-hsl-secondary2: 178, 86%, 59%;
+    --color-hsl-secondary3: 178, 75%, 53%;
+    --color-hsl-tertiary1: 131, 52%, 96%;
+    --color-hsl-tertiary2: 133, 52%, 88%;
+    --color-hsl-tertiary3: 148, 72%, 59%;
+    --color-hsl-valid: 133, 54%, 60%;
+    --color-hsl-error: 344, 100%, 50%;
+    --color-hsl-error2: 344, 100%, 95%;
+    --color-hsl-error3: 344, 100%, 85%;
+    --color-hsl-orange: 28, 100%, 50%;
+    --color-hsl-warning: 38, 40%, 39%;
+    --color-hsl-warning2: 50, 81%, 94%;
+    --color-hsl-red-light-mdc: 21, 100%, 94%;
+    --color-hsl-red-mdc: 0, 100%, 50%;
+    --color-hsl-blue-light-mdc: 192, 96%, 89%;
+
+    // Ready-to-consume colors
+    --color-font1: hsl(var(--color-hsl-font1));
+    --color-font2: hsl(var(--color-hsl-font2));
+    --color-background1: hsl(var(--color-hsl-background1));
+    --color-background2: hsl(var(--color-hsl-background2));
+    --color-background3: hsl(var(--color-hsl-background3));
+    --color-lightRed: hsl(var(--color-hsl-lightRed));
+    --color-line1: hsl(var(--color-hsl-line1));
+    --color-line2: hsl(var(--color-hsl-line2));
+    --color-primary1: hsl(var(--color-hsl-primary1));
+    --color-primary2: hsl(var(--color-hsl-primary2));
+    --color-primary3: hsl(var(--color-hsl-primary3));
+    --color-primary4: hsl(var(--color-hsl-primary4));
+    --color-primary5: hsl(var(--color-hsl-primary5));
+    --color-primary6: hsl(var(--color-hsl-primary6));
+    --color-secondary1: hsl(var(--color-hsl-secondary1));
+    --color-secondary2: hsl(var(--color-hsl-secondary2));
+    --color-secondary3: hsl(var(--color-hsl-secondary3));
+    --color-tertiary1: hsl(var(--color-hsl-tertiary1));
+    --color-tertiary2: hsl(var(--color-hsl-tertiary2));
+    --color-tertiary3: hsl(var(--color-hsl-tertiary3));
+    --color-valid: hsl(var(--color-hsl-valid));
+    --color-error: hsl(var(--color-hsl-error));
+    --color-error2: hsl(var(--color-hsl-error2));
+    --color-error3: hsl(var(--color-hsl-error3));
+    --color-orange: hsl(var(--color-hsl-orange));
+    --color-warning: hsl(var(--color-hsl-warning));
+    --color-warning2: hsl(var(--color-hsl-warning2));
+    --color-red-light-mdc: hsl(var(--color-hsl-red-light-mdc));
+    --color-red-mdc: hsl(var(--color-hsl-red-mdc));
+    --color-blue-light-mdc: hsl(var(--color-hsl-blue-light-mdc));
+  }
+
+  html {
+    background-color: var(--color-background1);
+  }
+}

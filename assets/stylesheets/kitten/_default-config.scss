@@ -72,39 +72,39 @@ $k-fonts: (
 // Colors
 
 $k-colors: (
-  'font-1': #222, // Dark Grey
-  'font-2': #b8b8b8, // Semi Dark Grey
-  'background-1': #fff, // White
-  'background-2': #fbfbfb, // Extra Light Grey
-  'background-3': #f6f6f6, // Light Grey
-  'line-1': #eee, // Semi Light Grey
-  'line-2': #d8d8d8, // Grey
+  'font-1': var(--color-font1), // Dark Grey
+  'font-2': var(--color-font2), // Semi Dark Grey
+  'background-1': var(--color-background1), // White
+  'background-2': var(--color-background2), // Extra Light Grey
+  'background-3': var(--color-background3), // Light Grey
+  'line-1': var(--color-line1), // Semi Light Grey
+  'line-2': var(--color-line2), // Grey
 
-  'primary-1': #19b4fa, // Primary
-  'primary-2': #05a8e6, // Semi Dark Primary
-  'primary-3': #0496cc, // Dark Primary
-  'primary-4': #bae8fd, // Light Primary
-  'primary-5': #e8f7fe, // Extra Light Primary
-  'primary-6': #f3fbff, // Thin Primary
+  'primary-1': var(--color-primary1), // Primary
+  'primary-2': var(--color-primary2), // Semi Dark Primary
+  'primary-3': var(--color-primary3), // Dark Primary
+  'primary-4': var(--color-primary4), // Light Primary
+  'primary-5': var(--color-primary5), // Extra Light Primary
+  'primary-6': var(--color-primary6), // Thin Primary
 
   // DEPRECATED: colors.
-  'secondary-1': #4bfffa,
-  'secondary-2': #3cf0eb,
-  'secondary-3': #2de1dc,
+  'secondary-1': var(--color-secondary1),
+  'secondary-2': var(--color-secondary2),
+  'secondary-3': var(--color-secondary3),
 
-  'tertiary-1': #effaf1, // Light Green
-  'tertiary-2': #cff0d6, // Semi Light Green
+  'tertiary-1': var(--color-tertiary1), // Light Green
+  'tertiary-2': var(--color-tertiary2), // Semi Light Green
 
    // DEPRECATED: colors.
-  'tertiary-3': #4ae191,
+  'tertiary-3': var(--color-tertiary3),
 
-  'valid': #61d079, // Green
+  'valid': var(--color-valid), // Green
 
-  'error': #ff0046, // Red
-  'error-2': #ffe5ec, // Light Red
-  'error-3': #ffb2c7, // Semi Light Red
+  'error': var(--color-error), // Red
+  'error-2': var(--color-error2), // Light Red
+  'error-3': var(--color-error3), // Semi Light Red
 
-  'red-light-mdc': #ffebe0,
-  'red-mdc': #ff0000,
-  'blue-light-mdc': #caf4fe,
+  'red-light-mdc': var(--red-light-mdc),
+  'red-mdc': var(--red-mdc),
+  'blue-light-mdc': var(--blue-light-mdc),
 ) !default;

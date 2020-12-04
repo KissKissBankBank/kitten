@@ -20,6 +20,9 @@ $k-typography: k-typography-definition((
 // Import utilities mixins.
 @import './kitten/utilities';
 
+// Include theme.
+@include k-theme-light;
+
 // Include all utilities.
 @include k-utilities-blockAlign;
 @include k-utilities-background-color;

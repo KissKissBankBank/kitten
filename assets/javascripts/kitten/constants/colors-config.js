@@ -1,34 +1,34 @@
 export default {
-  font1: '#222', // Dark Grey
-  font2: '#b8b8b8', // Semi Dark Grey
+  font1: 'var(--color-font1)', // Dark Grey
+  font2: 'var(--color-font2)', // Semi Dark Grey
 
-  background1: '#fff', // White
-  background2: '#fbfbfb', // Extra Light Grey
-  background3: '#f6f6f6', // Light Grey
+  background1: 'var(--color-background1)', // White
+  background2: 'var(--color-background2)', // Extra Light Grey
+  background3: 'var(--color-background3)', // Light Grey
 
-  lightRed: '#ffebe0', // Light Red
+  lightRed: 'var(--color-lightRed)', // Light Red
 
-  line1: '#eee', // Semi Light Grey
-  line2: '#d8d8d8', // Grey
+  line1: 'var(--color-line1)', // Semi Light Grey
+  line2: 'var(--color-line2)', // Grey
 
-  primary1: '#19b4fa', // Primary
-  primary2: '#05a8e6', // Semi Dark Primary
-  primary3: '#0496cc', // Dark Primary
-  primary4: '#bae8fd', // Light Primary
-  primary5: '#e8f7fe', // Extra Light Primary
-  primary6: '#f3fbff', // Thin Primary
+  primary1: 'var(--color-primary1)', // Primary
+  primary2: 'var(--color-primary2)', // Semi Dark Primary
+  primary3: 'var(--color-primary3)', // Dark Primary
+  primary4: 'var(--color-primary4)', // Light Primary
+  primary5: 'var(--color-primary5)', // Extra Light Primary
+  primary6: 'var(--color-primary6)', // Thin Primary
 
-  tertiary1: '#effaf1', // Light Green
-  tertiary2: '#cff0d6', // Semi Light Green
+  tertiary1: 'var(--color-tertiary1)', // Light Green
+  tertiary2: 'var(--color-tertiary2)', // Semi Light Green
 
-  valid: '#61d079', // Green
+  valid: 'var(--color-valid)', // Green
 
-  error: '#ff0046', // Red
-  error2: '#ffe5ec', // Light Red
-  error3: '#ffb2c7', // Semi Light Red
+  error: 'var(--color-error)', // Red
+  error2: 'var(--color-error2)', // Light Red
+  error3: 'var(--color-error3)', // Semi Light Red
 
-  orange: '#ff7800',
+  orange: 'var(--color-orange)',
 
-  warning: '#8a6d3b',
-  warning2: '#fcf8e3',
+  warning: 'var(--color-warning)',
+  warning2: 'var(--color-warning2)',
 }
