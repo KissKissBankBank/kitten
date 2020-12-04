@@ -4,7 +4,7 @@ import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 
 # Align items
 
-Align-items utility to be used with `k-u-flex`.
+Align-items utility to be used with a flexbox container, like `k-u-flex` or `k-u-flex-inline`.
 
 ## Source
 
@@ -14,6 +14,8 @@ Align-items utility to be used with `k-u-flex`.
 
 Utilities to align items according to media-queries.
 
+The class name has the form `k-u-flex-alignItems-{value}`
+
 Accepts values:
 
 - `normal`
@@ -22,8 +24,10 @@ Accepts values:
 - `start`
 - `end`
 
+## Examples
+
 `k-u-flex-alignItems-normal`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-alignItems-normal">
   <p>
     First block item
@@ -38,7 +42,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-alignItems-stretch`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-alignItems-stretch">
   <p>
     First block item
@@ -53,7 +57,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-alignItems-center`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-alignItems-center">
   <p>
     First block item
@@ -68,7 +72,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-alignItems-start`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-alignItems-start">
   <p>
     First block item
@@ -83,7 +87,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-alignItems-end`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-alignItems-end">
   <p>
     First block item

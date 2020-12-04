@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `k-u-flex`, `k-u-flex-alignItems-*`, `k-u-flex-direction-*` and `k-u-flex-justifyContent-*` utilities.
+
 - Feature: Add type to `CreditCardForm` values.
 - Fix: Update `error` props on `VerticalStepper` with `variant="orion"`.
 

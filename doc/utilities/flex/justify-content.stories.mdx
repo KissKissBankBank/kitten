@@ -4,7 +4,7 @@ import { Meta, Canvas } from '@storybook/addon-docs/blocks'
 
 # Justify content
 
-Justify-content utility to be used with `k-u-flex`.
+Justify-content utility to be used with a flexbox container, like `k-u-flex` or `k-u-flex-inline`.
 
 ## Source
 
@@ -13,6 +13,8 @@ Justify-content utility to be used with `k-u-flex`.
 ## Usage
 
 Utilities to justify flexbox content according to media-queries.
+
+The class name has the form `k-u-flex-justifyContent-{value}`
 
 Accepts values:
 
@@ -27,8 +29,10 @@ Accepts values:
 - `se` (for `space-evenly` property)
 - `stretch`
 
+## Examples
+
 `k-u-flex-justifyContent-normal`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-justifyContent-normal">
   <p>
     First item
@@ -43,7 +47,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-justifyContent-center`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-justifyContent-center">
   <p>
     First item
@@ -58,7 +62,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-justifyContent-start`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-justifyContent-start">
   <p>
     First item
@@ -73,7 +77,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-justifyContent-end`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-justifyContent-end">
   <p>
     First item
@@ -88,7 +92,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-justifyContent-left`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-justifyContent-left">
   <p>
     First item
@@ -103,7 +107,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-justifyContent-right`
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-justifyContent-right">
   <p>
     First item
@@ -118,7 +122,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-justifyContent-sa` (for `space-around` property)
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-justifyContent-sa">
   <p>
     First item
@@ -133,7 +137,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-justifyContent-sb` (for `space-between` property)
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-justifyContent-sb">
   <p>
     First item
@@ -148,7 +152,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-justifyContent-se` (for `space-evenly` property)
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-justifyContent-se">
   <p>
     First item
@@ -163,7 +167,7 @@ Accepts values:
 </Canvas>
 
 `k-u-flex-justifyContent-stretch` (works with elements with `flex-basis: auto`).
-<Canvas className="has-overrides">
+<Canvas className="has-overrides show-flex">
 <div className="k-u-flex k-u-flex-justifyContent-stretch">
   <p style={{ flex: '1 1 auto' }}>
     First item

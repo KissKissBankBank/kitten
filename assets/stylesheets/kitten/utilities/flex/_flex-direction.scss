@@ -1,0 +1,88 @@
+/// Flex direction utilities, with FlexBox.
+///
+/// @group flex
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-direction;
+///
+/// @example html
+///
+///   <div class="k-u-flex-direction-row@xxs-down">…</div>
+///   <div class="k-u-flex-direction-row@xs-down">…</div>
+///   <div class="k-u-flex-direction-row@s-down">…</div>
+///   <div class="k-u-flex-direction-row@m-down">…</div>
+///   <div class="k-u-flex-direction-row@l-down">…</div>
+///
+///   <div class="k-u-flex-direction-row@xs-up">…</div>
+///   <div class="k-u-flex-direction-row@s-up">…</div>
+///   <div class="k-u-flex-direction-row@m-up">…</div>
+///   <div class="k-u-flex-direction-row@l-up">…</div>
+///   <div class="k-u-flex-direction-row@xl-up">…</div>
+///
+///   <div class="k-u-flex-direction-row">…</div>
+///   <div class="k-u-flex-direction-rowReverse">…</div>
+///   <div class="k-u-flex-direction-column">…</div>
+///   <div class="k-u-flex-direction-columnReverse">…</div>
+///
+///   <div class="k-u-flex-direction-row@xxs-down--important">…</div>
+///   <div class="k-u-flex-direction-row@xs-down--important">…</div>
+///   <div class="k-u-flex-direction-row@s-down--important">…</div>
+///   <div class="k-u-flex-direction-row@m-down--important">…</div>
+///   <div class="k-u-flex-direction-row@l-down--important">…</div>
+///
+///   <div class="k-u-flex-direction-row@xs-up--important">…</div>
+///   <div class="k-u-flex-direction-row@s-up--important">…</div>
+///   <div class="k-u-flex-direction-row@m-up--important">…</div>
+///   <div class="k-u-flex-direction-row@l-up--important">…</div>
+///   <div class="k-u-flex-direction-row@xl-up--important">…</div>
+///
+///   <div class="k-u-flex-direction-row--important">…</div>
+///   <div class="k-u-flex-direction-rowReverse--important">…</div>
+///   <div class="k-u-flex-direction-column--important">…</div>
+///   <div class="k-u-flex-direction-columnReverse--important">…</div>
+
+@mixin k-u-flex-direction($position, $align) {
+  $value: $align;
+
+  .k-u-flex-direction-#{$position} {
+    flex-direction: $value;
+
+    &--important {
+      flex-direction: $value !important;
+    }
+  }
+
+  @each $name, $query in $k-media-queries {
+    @if $name != "xl" {
+      .k-u-flex-direction-#{$position}\@#{$name}-down {
+        @include k-media-max($name) {
+          flex-direction: $value;
+
+          &--important {
+            flex-direction: $value !important;
+          }
+        }
+      }
+    }
+
+    @if $name != "xxs" {
+      .k-u-flex-direction-#{$position}\@#{$name}-up {
+        @include k-media-min($name) {
+          flex-direction: $value;
+
+          &--important {
+            flex-direction: $value !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin k-utilities-flexDirection {
+  @include k-u-flex-direction('row', row);
+  @include k-u-flex-direction('rowReverse', row-reverse);
+  @include k-u-flex-direction('column', column);
+  @include k-u-flex-direction('columnReverse', column-reverse);
+}
