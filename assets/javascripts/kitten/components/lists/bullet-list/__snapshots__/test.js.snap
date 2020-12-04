@@ -6,18 +6,18 @@ exports[`<BulletList /> default matches with snapshot 1`] = `
   className="sc-bdVaJa eUtzqk"
 >
   <li
-    className="sc-bwzfXH jUkWMz"
+    className="sc-bwzfXH bYeDjQ"
     id="1"
   >
     Dis Manibus
   </li>
   <li
-    className="sc-bwzfXH jUkWMz"
+    className="sc-bwzfXH bYeDjQ"
   >
     Calpurnia Felicla
   </li>
   <li
-    className="sc-bwzfXH jUkWMz"
+    className="sc-bwzfXH bYeDjQ"
   >
     Germulio coniugi
   </li>

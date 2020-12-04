@@ -22,8 +22,8 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
   border-radius: 3.125rem;
   box-sizing: border-box;
   margin-right: 1.25rem;
-  background-color: #fff;
-  border: 2px solid #eee;
+  background-color: var(--color-background1);
+  border: 2px solid var(--color-line1);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
@@ -60,7 +60,7 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
   flex: 1;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 400;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.6;
   font-size: 0.875rem;
 }
@@ -83,7 +83,7 @@ exports[`<IconList /> with all sub-components matches with snapshot 1`] = `
   left: 1.5rem;
   z-index: -1;
   content: '';
-  border-left: 2px dashed #eee;
+  border-left: 2px dashed var(--color-line1);
 }
 
 @media (min-width:640px) {

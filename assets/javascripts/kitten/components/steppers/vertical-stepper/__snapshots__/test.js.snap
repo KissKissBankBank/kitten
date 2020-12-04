@@ -2,7 +2,7 @@
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
 .c3.k-Steppers--VerticalStepper__statusContainer--orion {
-  border: 0.375rem solid #fff;
+  border: 0.375rem solid var(--color-background1);
 }
 
 .c3 .k-Steppers--VerticalStepper__status {
@@ -26,43 +26,43 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-radius: 1.875rem;
   box-sizing: border-box;
   margin-right: 0.9375rem;
-  background-color: #fff;
-  border: 0.125rem solid #eee;
+  background-color: var(--color-background1);
+  border: 0.125rem solid var(--color-line1);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
-  background-color: #61d079;
-  border-color: #61d079;
+  background-color: var(--color-valid);
+  border-color: var(--color-valid);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
-  background-color: #19b4fa;
-  border-color: #19b4fa;
+  background-color: var(--color-primary1);
+  border-color: var(--color-primary1);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
-  color: #ff0046;
-  border-color: #ffb2c7;
+  color: var(--color-error);
+  border-color: var(--color-error3);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--waiting {
-  color: #19b4fa;
-  border-color: #bae8fd;
+  color: var(--color-primary1);
+  border-color: var(--color-primary4);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
-  color: #fff;
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
+  color: var(--color-background1);
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
   box-sizing: border-box;
   width: 100%;
-  border: 0.1875rem solid #fff;
+  border: 0.1875rem solid var(--color-background1);
   z-index: 1;
   padding: 0.1875rem;
   width: 1.875rem;
@@ -71,23 +71,23 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
-  background-color: #19b4fa;
-  border-color: #19b4fa;
+  background-color: var(--color-primary1);
+  border-color: var(--color-primary1);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
-  background-color: #fff;
-  border-color: #19b4fa;
+  background-color: var(--color-background1);
+  border-color: var(--color-primary1);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
-  background-color: #fff;
-  border-color: #eee;
+  background-color: var(--color-background1);
+  border-color: var(--color-line1);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
-  background-color: #fff;
-  border-color: #eee;
+  background-color: var(--color-background1);
+  border-color: var(--color-line1);
   width: 0.9375rem;
   height: 0.9375rem;
   border-radius: 0.9375rem;
@@ -106,7 +106,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   content: "";
   position: absolute;
   height: 100%;
-  border-left: 0.1875rem dotted #eee;
+  border-left: 0.1875rem dotted var(--color-line1);
 }
 
 .c1 {
@@ -165,7 +165,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c2:hover .VerticalStepper__link,
 .c2:focus .VerticalStepper__link,
 .c2:active .VerticalStepper__link {
-  color: #0496cc;
+  color: var(--color-primary3);
 }
 
 .c2 .k-Steppers--VerticalStepper__step--link--content {
@@ -183,11 +183,11 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  color: #222;
+  color: var(--color-font1);
 }
 
 .c2 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
-  color: #b8b8b8;
+  color: var(--color-font2);
 }
 
 .c4 {
@@ -213,7 +213,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   font-weight: 500;
   font-size: 0.75rem;
   line-height: normal;
-  color: #19b4fa;
+  color: var(--color-primary1);
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 0.4s;
@@ -223,7 +223,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c5 .k-Stepepers-VerticalStepper__link:hover,
 .c5 .k-Stepepers-VerticalStepper__link:focus,
 .c5 .k-Stepepers-VerticalStepper__link:active {
-  color: #0496cc;
+  color: var(--color-primary3);
 }
 
 .c5 .k-Stepepers-VerticalStepper__link--orion {
@@ -234,7 +234,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   padding: 0 0.5rem;
   content: '●';
   font-size: 0.5rem;
-  color: #222;
+  color: var(--color-font1);
 }
 
 .c6 {
@@ -284,7 +284,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   left: 0.875rem;
   z-index: -1;
   content: '';
-  border-left: 0.125rem dashed #eee;
+  border-left: 0.125rem dashed var(--color-line1);
 }
 
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion:before {
@@ -300,14 +300,14 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   position: absolute;
   left: 1.1875rem;
   top: 1.875rem;
-  background-color: #eee;
+  background-color: var(--color-line1);
   width: 0.1875rem;
   height: 100%;
   z-index: -1;
 }
 
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
-  background-color: #19b4fa;
+  background-color: var(--color-primary1);
 }
 
 <nav
@@ -378,7 +378,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda k-Steppers--VerticalStepper__status--valid"
           >
             <svg
-              fill="#fff"
+              fill="var(--color-background1)"
               height="8"
               viewBox="0 0 11 8"
               width="10"
@@ -450,7 +450,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             >
               <path
                 d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
-                fill="#ff0046"
+                fill="var(--color-error)"
                 fillRule="evenodd"
               />
             </svg>
@@ -514,7 +514,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             >
               <path
                 d="M5 0h3v3H5V0zM0 0h3v3H0V0zm10 0h3v3h-3V0z"
-                fill="#19b4fa"
+                fill="var(--color-primary1)"
                 fillRule="nonzero"
               />
             </svg>
@@ -555,7 +555,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
             className="k-Steppers--VerticalStepper__status k-Steppers--VerticalStepper__status--andromeda"
           >
             <svg
-              fill="#fff"
+              fill="var(--color-background1)"
               height="8"
               viewBox="0 0 11 8"
               width="10"
@@ -594,7 +594,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c3.k-Steppers--VerticalStepper__statusContainer--orion {
-  border: 0.375rem solid #fff;
+  border: 0.375rem solid var(--color-background1);
 }
 
 .c3 .k-Steppers--VerticalStepper__status {
@@ -618,43 +618,43 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   border-radius: 1.875rem;
   box-sizing: border-box;
   margin-right: 0.9375rem;
-  background-color: #fff;
-  border: 0.125rem solid #eee;
+  background-color: var(--color-background1);
+  border: 0.125rem solid var(--color-line1);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.875rem;
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--success {
-  background-color: #61d079;
-  border-color: #61d079;
+  background-color: var(--color-valid);
+  border-color: var(--color-valid);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--valid {
-  background-color: #19b4fa;
-  border-color: #19b4fa;
+  background-color: var(--color-primary1);
+  border-color: var(--color-primary1);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--error {
-  color: #ff0046;
-  border-color: #ffb2c7;
+  color: var(--color-error);
+  border-color: var(--color-error3);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--waiting {
-  color: #19b4fa;
-  border-color: #bae8fd;
+  color: var(--color-primary1);
+  border-color: var(--color-primary4);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--disabled {
-  color: #fff;
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
+  color: var(--color-background1);
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
   box-sizing: border-box;
   width: 100%;
-  border: 0.1875rem solid #fff;
+  border: 0.1875rem solid var(--color-background1);
   z-index: 1;
   padding: 0.1875rem;
   width: 1.875rem;
@@ -663,23 +663,23 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--success {
-  background-color: #19b4fa;
-  border-color: #19b4fa;
+  background-color: var(--color-primary1);
+  border-color: var(--color-primary1);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--valid {
-  background-color: #fff;
-  border-color: #19b4fa;
+  background-color: var(--color-background1);
+  border-color: var(--color-primary1);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--waiting {
-  background-color: #fff;
-  border-color: #eee;
+  background-color: var(--color-background1);
+  border-color: var(--color-line1);
 }
 
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
-  background-color: #fff;
-  border-color: #eee;
+  background-color: var(--color-background1);
+  border-color: var(--color-line1);
   width: 0.9375rem;
   height: 0.9375rem;
   border-radius: 0.9375rem;
@@ -698,7 +698,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   content: "";
   position: absolute;
   height: 100%;
-  border-left: 0.1875rem dotted #eee;
+  border-left: 0.1875rem dotted var(--color-line1);
 }
 
 .c1 {
@@ -757,7 +757,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c2:hover .VerticalStepper__link,
 .c2:focus .VerticalStepper__link,
 .c2:active .VerticalStepper__link {
-  color: #0496cc;
+  color: var(--color-primary3);
 }
 
 .c2 .k-Steppers--VerticalStepper__step--link--content {
@@ -775,11 +775,11 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  color: #222;
+  color: var(--color-font1);
 }
 
 .c2 .k-Steppers--VerticalStepper__step--link--content.k-Steppers--VerticalStepper__step--link--content--disabled {
-  color: #b8b8b8;
+  color: var(--color-font2);
 }
 
 .c4 {
@@ -805,7 +805,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   font-weight: 500;
   font-size: 0.75rem;
   line-height: normal;
-  color: #19b4fa;
+  color: var(--color-primary1);
   -webkit-text-decoration: none;
   text-decoration: none;
   -webkit-transition: color 0.4s;
@@ -815,7 +815,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c5 .k-Stepepers-VerticalStepper__link:hover,
 .c5 .k-Stepepers-VerticalStepper__link:focus,
 .c5 .k-Stepepers-VerticalStepper__link:active {
-  color: #0496cc;
+  color: var(--color-primary3);
 }
 
 .c5 .k-Stepepers-VerticalStepper__link--orion {
@@ -826,7 +826,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   padding: 0 0.5rem;
   content: '●';
   font-size: 0.5rem;
-  color: #222;
+  color: var(--color-font1);
 }
 
 .c0 {
@@ -847,7 +847,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   left: 0.875rem;
   z-index: -1;
   content: '';
-  border-left: 0.125rem dashed #eee;
+  border-left: 0.125rem dashed var(--color-line1);
 }
 
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion:before {
@@ -863,14 +863,14 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   position: absolute;
   left: 1.1875rem;
   top: 1.875rem;
-  background-color: #eee;
+  background-color: var(--color-line1);
   width: 0.1875rem;
   height: 100%;
   z-index: -1;
 }
 
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li.k-Steppers--VerticalStepper__item--hasActiveLine:not(:last-of-type)::after {
-  background-color: #19b4fa;
+  background-color: var(--color-primary1);
 }
 
 <nav
@@ -949,7 +949,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
               <circle
                 cx="3"
                 cy="3"
-                fill="#19b4fa"
+                fill="var(--color-primary1)"
                 r="3"
               />
             </svg>
@@ -987,7 +987,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
             >
               <path
                 d="M1.82 6.86H.168V0H1.82v6.86zM0 8.96c0-.28.098-.518.294-.714a.972.972 0 0 1 .714-.294c.28 0 .518.098.714.294a.972.972 0 0 1 .294.714c0 .27-.098.504-.294.7a.972.972 0 0 1-.714.294.972.972 0 0 1-.714-.294.956.956 0 0 1-.294-.7z"
-                fill="#ff0046"
+                fill="var(--color-error)"
                 fillRule="evenodd"
               />
             </svg>

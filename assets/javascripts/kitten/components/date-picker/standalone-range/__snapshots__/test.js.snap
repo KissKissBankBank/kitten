@@ -2,7 +2,7 @@
 
 exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM kspNNT"
+  className="sc-bZQynM fAJunH"
 >
   <div
     className="DayPicker Selectable"
@@ -23,12 +23,12 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
       >
         <button
           aria-label="Mois précédent, Décembre 2018"
-          className="sc-bdVaJa fQYNxU sc-EHOje lbpOMi"
+          className="sc-bdVaJa esUTQO sc-EHOje lbpOMi"
           onClick={[Function]}
         >
           <svg
             className=""
-            fill="#222"
+            fill="var(--color-font1)"
             height="8"
             style={
               Object {
@@ -47,12 +47,12 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
         </button>
         <button
           aria-label="Mois suivant, Février 2019"
-          className="sc-bdVaJa fQYNxU sc-EHOje lbpOMi"
+          className="sc-bdVaJa esUTQO sc-EHOje lbpOMi"
           onClick={[Function]}
         >
           <svg
             className=""
-            fill="#222"
+            fill="var(--color-font1)"
             height="8"
             style={
               Object {

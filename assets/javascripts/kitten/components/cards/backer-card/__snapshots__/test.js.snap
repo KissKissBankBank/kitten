@@ -2,7 +2,7 @@
 
 exports[`<BackerCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jkqZpd"
+  className="sc-htpNat hIhTbU"
 >
   <div
     className="sc-bdVaJa eYYfEq"
@@ -41,7 +41,7 @@ exports[`<BackerCard /> by default matches with snapshot 1`] = `
 
 exports[`<BackerCard /> with subtitle prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jkqZpd"
+  className="sc-htpNat hIhTbU"
 >
   <div
     className="sc-bdVaJa eYYfEq"

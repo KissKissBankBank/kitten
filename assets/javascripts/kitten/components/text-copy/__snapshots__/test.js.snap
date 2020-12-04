@@ -2,7 +2,7 @@
 
 exports[`<TextCopy /> should match snapshot 1`] = `
 <div
-  className="sc-EHOje ktnuIJ"
+  className="sc-EHOje fOpRm"
 >
   <span
     className="sc-htpNat KtFsv k-u-line-height-normal k-u-size-micro k-u-weight-light sc-bZQynM fnsoqs"
@@ -14,7 +14,7 @@ exports[`<TextCopy /> should match snapshot 1`] = `
   </span>
   <div
     aria-hidden={true}
-    className="sc-gzVnrw gFNTgC"
+    className="sc-gzVnrw eHBmtl"
     onClick={[Function]}
   >
     <svg
@@ -43,7 +43,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
     This is a description
   </span>
   <span
-    className="sc-htpNat KtFsv k-u-line-height-normal k-u-size-micro k-u-weight-light sc-bZQynM hWZnbU"
+    className="sc-htpNat KtFsv k-u-line-height-normal k-u-size-micro k-u-weight-light sc-bZQynM dUQZuy"
     onClick={[Function]}
   >
     <span>
@@ -52,7 +52,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
   </span>
   <button
     aria-label={[Function]}
-    className="sc-ifAKCX cTnxbM"
+    className="sc-ifAKCX ePOIZs"
     onClick={[Function]}
     type="button"
   >
@@ -63,7 +63,7 @@ exports[`<TextCopy /> should match snapshot with button text 1`] = `
 
 exports[`<TextCopy /> should match snapshot with description 1`] = `
 <div
-  className="sc-EHOje ktnuIJ"
+  className="sc-EHOje fOpRm"
 >
   <span
     className="sc-bxivhb jcNVDI"
@@ -80,7 +80,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
   </span>
   <div
     aria-hidden={true}
-    className="sc-gzVnrw gFNTgC"
+    className="sc-gzVnrw eHBmtl"
     onClick={[Function]}
   >
     <svg
@@ -101,7 +101,7 @@ exports[`<TextCopy /> should match snapshot with description 1`] = `
 
 exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
 <div
-  className="sc-EHOje ktnuIJ"
+  className="sc-EHOje fOpRm"
 >
   <span
     className="sc-bxivhb jcNVDI"
@@ -118,7 +118,7 @@ exports[`<TextCopy /> should match snapshot with one line forced 1`] = `
   </span>
   <div
     aria-hidden={true}
-    className="sc-gzVnrw gFNTgC"
+    className="sc-gzVnrw eHBmtl"
     onClick={[Function]}
   >
     <svg

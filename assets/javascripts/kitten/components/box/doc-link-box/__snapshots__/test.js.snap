@@ -2,7 +2,7 @@
 
 exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hikopz"
+  className="sc-bdVaJa iTDvZI"
   href="#"
 >
   <div
@@ -72,7 +72,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="#222"
+        fill="var(--color-font1)"
         height="10"
         style={
           Object {
@@ -95,7 +95,7 @@ exports[`<DocLinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hikopz"
+  className="sc-bdVaJa iTDvZI"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -171,7 +171,7 @@ exports[`<DocLinkBox /> with some props matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="#222"
+        fill="var(--color-font1)"
         height="10"
         style={
           Object {

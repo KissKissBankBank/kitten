@@ -16,8 +16,8 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat dOYDhH"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
-      color="#222"
+      className="sc-bwzfXH ddZLUP k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="var(--color-font1)"
       style={
         Object {
           "height": null,
@@ -60,8 +60,8 @@ exports[`<MarkdownPage /> with \`paragraphModifier\` props matches with snapshot
     className="sc-htpNat dOYDhH"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
-      color="#222"
+      className="sc-bwzfXH ddZLUP k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="var(--color-font1)"
       style={
         Object {
           "height": null,
@@ -119,8 +119,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat dOYDhH"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
-      color="#222"
+      className="sc-bwzfXH ddZLUP k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="var(--color-font1)"
       style={
         Object {
           "height": null,
@@ -136,7 +136,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="sc-ifAKCX gDXGhB"
       >
         Unordered list can use asterisks
       </li>
@@ -149,7 +149,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="sc-ifAKCX gDXGhB"
       >
         Or minuses
       </li>
@@ -162,7 +162,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
     >
       <li
-        className="sc-ifAKCX byUWJJ"
+        className="sc-ifAKCX gDXGhB"
       >
         Or pluses
       </li>
@@ -182,8 +182,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat dOYDhH"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
-      color="#222"
+      className="sc-bwzfXH ddZLUP k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="var(--color-font1)"
       style={
         Object {
           "height": null,
@@ -225,8 +225,8 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat dOYDhH"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
-      color="#222"
+      className="sc-bwzfXH ddZLUP k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="var(--color-font1)"
       style={
         Object {
           "height": null,
@@ -269,8 +269,8 @@ exports[`<MarkdownPage /> with children matches with snapshot 1`] = `
     className="sc-htpNat dOYDhH"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
-      color="#222"
+      className="sc-bwzfXH ddZLUP k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="var(--color-font1)"
       style={
         Object {
           "height": null,
@@ -328,8 +328,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat dOYDhH"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
-      color="#222"
+      className="sc-bwzfXH ddZLUP k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="var(--color-font1)"
       style={
         Object {
           "height": null,
@@ -345,7 +345,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="sc-ifAKCX cvDHeV"
       >
         Unordered list can use asterisks
       </li>
@@ -358,7 +358,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="sc-ifAKCX cvDHeV"
       >
         Or minuses
       </li>
@@ -371,7 +371,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
       className="sc-bxivhb gKgImp sc-EHOje iGxsgV"
     >
       <li
-        className="sc-ifAKCX hdtMub"
+        className="sc-ifAKCX cvDHeV"
       >
         Or pluses
       </li>
@@ -391,8 +391,8 @@ Strikethrough uses two tildes. ~~Scratch this.~~
     className="sc-htpNat dOYDhH"
   >
     <div
-      className="sc-bwzfXH leelsx k-HorizontalStroke k-HorizontalStroke--size--big"
-      color="#222"
+      className="sc-bwzfXH ddZLUP k-HorizontalStroke k-HorizontalStroke--size--big"
+      color="var(--color-font1)"
       style={
         Object {
           "height": null,

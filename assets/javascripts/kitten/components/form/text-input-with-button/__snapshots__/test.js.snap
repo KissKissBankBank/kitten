@@ -5,12 +5,12 @@ exports[`<TextInputWithButton /> by default matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-EHOje jZhEES"
+    className="sc-bwzfXH LfxJj sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM ehYCeu"
+    className="sc-bZQynM hHZLHL"
     disabled={false}
     type="button"
   >
@@ -24,12 +24,12 @@ exports[`<TextInputWithButton /> with buttonProps prop matches with snapshot 1`]
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-EHOje jZhEES"
+    className="sc-bwzfXH LfxJj sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM ehYCeu"
+    className="sc-bZQynM hHZLHL"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -44,13 +44,13 @@ exports[`<TextInputWithButton /> with component inside button value matches with
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-EHOje jZhEES"
+    className="sc-bwzfXH LfxJj sc-EHOje jZhEES"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
   />
   <button
-    className="sc-bZQynM ehYCeu"
+    className="sc-bZQynM hHZLHL"
     disabled={false}
     type="button"
   >
@@ -103,12 +103,12 @@ exports[`<TextInputWithButton /> with disabled prop matches with snapshot 1`] = 
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-EHOje jZhEES"
+    className="sc-bwzfXH LfxJj sc-EHOje jZhEES"
     disabled={true}
     name="text"
   />
   <button
-    className="sc-bZQynM iqqpmB"
+    className="sc-bZQynM eqOGmT"
     disabled={true}
     type="button"
   >
@@ -122,12 +122,12 @@ exports[`<TextInputWithButton /> with error prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH begKAY sc-EHOje jZhEES"
+    className="sc-bwzfXH dPobDt sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM llRTrK"
+    className="sc-bZQynM dPHGpa"
     disabled={false}
     type="button"
   >
@@ -141,12 +141,12 @@ exports[`<TextInputWithButton /> with giant prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH kjUCpq sc-EHOje jZhEES"
+    className="sc-bwzfXH fYxOFs sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM ehYCeu"
+    className="sc-bZQynM hHZLHL"
     disabled={false}
     type="button"
   >
@@ -160,12 +160,12 @@ exports[`<TextInputWithButton /> with huge prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH edATGg sc-EHOje jZhEES"
+    className="sc-bwzfXH gTFTIL sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM ehYCeu"
+    className="sc-bZQynM hHZLHL"
     disabled={false}
     type="button"
   >
@@ -179,14 +179,14 @@ exports[`<TextInputWithButton /> with props matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-EHOje jZhEES"
+    className="sc-bwzfXH LfxJj sc-EHOje jZhEES"
     disabled={false}
     name="text"
     placeholder="Les props sont transmises"
     value="foobar"
   />
   <button
-    className="sc-bZQynM ehYCeu"
+    className="sc-bZQynM hHZLHL"
     disabled={false}
     type="button"
   >
@@ -200,12 +200,12 @@ exports[`<TextInputWithButton /> with tiny prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH kKjtef sc-EHOje jZhEES"
+    className="sc-bwzfXH giqvQX sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM ehYCeu"
+    className="sc-bZQynM hHZLHL"
     disabled={false}
     type="button"
   >
@@ -219,12 +219,12 @@ exports[`<TextInputWithButton /> with valid prop matches with snapshot 1`] = `
   className="sc-ifAKCX kXEWnh"
 >
   <input
-    className="sc-bwzfXH hexTtb sc-EHOje jZhEES"
+    className="sc-bwzfXH iyJZlp sc-EHOje jZhEES"
     disabled={false}
     name="text"
   />
   <button
-    className="sc-bZQynM bBRNbd"
+    className="sc-bZQynM iSiNFM"
     disabled={false}
     type="button"
   >

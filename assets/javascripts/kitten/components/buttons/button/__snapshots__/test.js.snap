@@ -23,7 +23,7 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -32,9 +32,9 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -66,21 +66,21 @@ exports[`<Button /> with \`as\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -120,7 +120,7 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -129,9 +129,9 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -163,21 +163,21 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -233,7 +233,7 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -243,9 +243,9 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
   outline: none;
   cursor: pointer;
   border-radius: 0.25rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -277,21 +277,21 @@ exports[`<Button /> with \`borderRadius\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -331,7 +331,7 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -342,9 +342,9 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
   cursor: pointer;
   min-width: initial;
   width: 100%;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -376,21 +376,21 @@ exports[`<Button /> with \`fluid\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -430,7 +430,7 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -442,9 +442,9 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
   padding: 0 0.625rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -476,21 +476,21 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -546,7 +546,7 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -558,9 +558,9 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
   min-height: 4.375rem;
   font-size: 0.8888888888888888rem;
   padding: 0 0.625rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -592,21 +592,21 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -662,7 +662,7 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -671,9 +671,9 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.125rem dashed #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border: 0.125rem dashed var(--color-primary4);
+  background-color: var(--color-background1);
+  color: var(--color-primary1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -705,21 +705,21 @@ exports[`<Button /> with \`oxygen\` \`modifier\` prop matches with snapshot 1`] 
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -759,7 +759,7 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -772,9 +772,9 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
   min-height: 2.5rem;
   padding: 0 1.25rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -806,21 +806,21 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -867,7 +867,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -881,9 +881,9 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
   width: 3.125rem;
   height: 3.125rem;
   padding: 0;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -915,21 +915,21 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1006,7 +1006,7 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1017,9 +1017,9 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
   cursor: pointer;
   min-width: initial;
   width: 100%;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1051,21 +1051,21 @@ exports[`<Button /> with icon and fluid matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1105,7 +1105,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1125,9 +1125,9 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
   min-width: initial;
   width: 4.375rem;
   height: 4.375rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1159,21 +1159,21 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1251,7 +1251,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1271,9 +1271,9 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
   min-width: initial;
   width: 4.375rem;
   height: 4.375rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1305,21 +1305,21 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1397,7 +1397,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1413,9 +1413,9 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
   padding: 0;
   width: 1.875rem;
   height: 1.875rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1447,21 +1447,21 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1515,7 +1515,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1535,9 +1535,9 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
   padding: 0;
   width: 2.5rem;
   height: 2.5rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1569,21 +1569,21 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1644,7 +1644,7 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1658,9 +1658,9 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
   width: 3.125rem;
   height: 3.125rem;
   padding: 0;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1692,21 +1692,21 @@ exports[`<Button /> with icon matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1754,7 +1754,7 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1763,9 +1763,9 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1797,21 +1797,21 @@ exports[`<Button /> with some elements matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -1856,7 +1856,7 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1865,9 +1865,9 @@ exports[`<Button /> with text matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -1899,21 +1899,21 @@ exports[`<Button /> with text matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {

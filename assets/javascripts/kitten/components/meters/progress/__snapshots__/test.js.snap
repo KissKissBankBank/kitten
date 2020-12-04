@@ -6,21 +6,21 @@ exports[`<Progress /> Progress with multiple props matches with snapshot 1`] = `
 }
 
 .c0.is-disabled .c3::after {
-  background: #d8d8d8;
+  background: var(--color-line2);
 }
 
 .c0.is-disabled .c4::after {
-  background: #d8d8d8;
+  background: var(--color-line2);
 }
 
 .c0.is-disabled .c5::after {
-  background: #d8d8d8;
+  background: var(--color-line2);
 }
 
 .c2 {
   position: relative;
   height: 0.125rem;
-  background: #eee;
+  background: var(--color-line1);
   height: 6px;
 }
 
@@ -34,11 +34,11 @@ exports[`<Progress /> Progress with multiple props matches with snapshot 1`] = `
   max-width: 50%;
   -webkit-transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
   transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
-  background: #19b4fa;
+  background: var(--color-primary1);
 }
 
 .c0.is-disabled .c2::after {
-  background: #d8d8d8;
+  background: var(--color-line2);
 }
 
 <div
@@ -62,7 +62,7 @@ exports[`<Progress /> simple Progress  matches with snapshot 1`] = `
 .c2 {
   position: relative;
   height: 0.125rem;
-  background: #eee;
+  background: var(--color-line1);
 }
 
 .c2::after {
@@ -75,11 +75,11 @@ exports[`<Progress /> simple Progress  matches with snapshot 1`] = `
   max-width: 0%;
   -webkit-transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
   transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
-  background: #19b4fa;
+  background: var(--color-primary1);
 }
 
 .c0.is-disabled .c2::after {
-  background: #d8d8d8;
+  background: var(--color-line2);
 }
 
 <div

@@ -2,7 +2,7 @@
 
 exports[`<StatusWithBullet /> should match its empty snapshot 1`] = `
 <div
-  className="sc-bwzfXH gyvICU k-u-sample-class"
+  className="sc-bwzfXH cMgrpk k-u-sample-class"
 >
   <span
     aria-hidden="true"

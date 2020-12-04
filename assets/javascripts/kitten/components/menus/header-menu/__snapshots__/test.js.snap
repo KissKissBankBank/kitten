@@ -5,11 +5,11 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   display: block;
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
-  background-color: #fff;
-  border-bottom: 0.0625rem solid #eee;
+  background-color: var(--color-background1);
+  border-bottom: 0.0625rem solid var(--color-line1);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
@@ -35,7 +35,7 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
 .c1:hover::before,
 .c1:focus::before {
   width: 0.25rem;
-  background-color: #19b4fa;
+  background-color: var(--color-primary1);
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -49,8 +49,8 @@ exports[`<HeaderMenu /> with border to right matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 0.0625rem solid #eee;
-  border-right: 0.0625rem solid #eee;
+  border-left: 0.0625rem solid var(--color-line1);
+  border-right: 0.0625rem solid var(--color-line1);
 }
 
 <ul
@@ -97,11 +97,11 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   display: block;
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
-  background-color: #fff;
-  border-bottom: 0.0625rem solid #eee;
+  background-color: var(--color-background1);
+  border-bottom: 0.0625rem solid var(--color-line1);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
@@ -127,7 +127,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 .c1:hover::before,
 .c1:focus::before {
   width: 0.25rem;
-  background-color: #19b4fa;
+  background-color: var(--color-primary1);
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -136,11 +136,11 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   display: block;
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
-  background-color: #fff;
-  border-bottom: 0.0625rem solid #eee;
+  background-color: var(--color-background1);
+  border-bottom: 0.0625rem solid var(--color-line1);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
@@ -162,7 +162,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #f6f6f6;
+  background-color: var(--color-background3);
 }
 
 .c2:focus {
@@ -183,12 +183,12 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 
 .c2:hover,
 .c2:focus {
-  color: #19b4fa;
+  color: var(--color-primary1);
 }
 
 .c2:hover::before,
 .c2:focus::before {
-  background-color: #19b4fa;
+  background-color: var(--color-primary1);
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -212,7 +212,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
 
 .c2:focus,
 .c2:hover {
-  color: #222;
+  color: var(--color-font1);
 }
 
 .c2:focus .headerMenuArrowIcon,
@@ -228,8 +228,8 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 0.0625rem solid #eee;
-  border-right: 0.0625rem solid #eee;
+  border-left: 0.0625rem solid var(--color-line1);
+  border-right: 0.0625rem solid var(--color-line1);
 }
 
 <ul
@@ -275,7 +275,7 @@ exports[`<HeaderMenu /> with one custom item matches with snapshot 1`] = `
       </span>
       <svg
         className="headerMenuArrowIcon"
-        fill="#222"
+        fill="var(--color-font1)"
         height="5.64"
         style={
           Object {
@@ -301,11 +301,11 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   display: block;
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
-  background-color: #fff;
-  border-bottom: 0.0625rem solid #eee;
+  background-color: var(--color-background1);
+  border-bottom: 0.0625rem solid var(--color-line1);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
@@ -331,7 +331,7 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c1:hover::before,
 .c1:focus::before {
   width: 0.25rem;
-  background-color: #19b4fa;
+  background-color: var(--color-primary1);
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -340,16 +340,16 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
   display: block;
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
-  background-color: #fff;
-  border-bottom: 0.0625rem solid #eee;
+  background-color: var(--color-background1);
+  border-bottom: 0.0625rem solid var(--color-line1);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #19b4fa;
+  color: var(--color-primary1);
 }
 
 .c2:focus {
@@ -371,22 +371,22 @@ exports[`<HeaderMenu /> with one selected item matches with snapshot 1`] = `
 .c2:hover::before,
 .c2:focus::before {
   width: 0.25rem;
-  background-color: #19b4fa;
+  background-color: var(--color-primary1);
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
 
 .c2::before {
   width: 0.25rem;
-  background-color: #19b4fa;
+  background-color: var(--color-primary1);
 }
 
 .c0 {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 0.0625rem solid #eee;
-  border-right: 0.0625rem solid #eee;
+  border-left: 0.0625rem solid var(--color-line1);
+  border-right: 0.0625rem solid var(--color-line1);
 }
 
 <ul
@@ -433,11 +433,11 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   display: block;
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
-  background-color: #fff;
-  border-bottom: 0.0625rem solid #eee;
+  background-color: var(--color-background1);
+  border-bottom: 0.0625rem solid var(--color-line1);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
@@ -463,7 +463,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c1:hover::before,
 .c1:focus::before {
   width: 0.25rem;
-  background-color: #19b4fa;
+  background-color: var(--color-primary1);
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -472,16 +472,16 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   display: block;
   position: relative;
   padding: 1.125rem 1.875rem 1.0625rem;
-  background-color: #fff;
-  border-bottom: 0.0625rem solid #eee;
+  background-color: var(--color-background1);
+  border-bottom: 0.0625rem solid var(--color-line1);
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1;
   font-size: 0.875rem;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: #b8b8b8;
+  color: var(--color-font2);
 }
 
 .c2:focus {
@@ -503,7 +503,7 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
 .c2:hover::before,
 .c2:focus::before {
   width: 0.25rem;
-  background-color: #19b4fa;
+  background-color: var(--color-primary1);
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
 }
@@ -512,8 +512,8 @@ exports[`<HeaderMenu /> with three items matches with snapshot 1`] = `
   margin: 0;
   padding: 0;
   list-style: none;
-  border-left: 0.0625rem solid #eee;
-  border-right: 0.0625rem solid #eee;
+  border-left: 0.0625rem solid var(--color-line1);
+  border-right: 0.0625rem solid var(--color-line1);
 }
 
 <ul

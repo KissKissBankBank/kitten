@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-cSHVUG jrEObi"
+        className="sc-cSHVUG fCpHQv"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -122,7 +122,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat iVlOqv"
+      className="sc-htpNat ipwjvB"
       disabled={false}
       id="input"
       name="field"
@@ -216,7 +216,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-htpNat fTSCbm"
+      className="sc-htpNat pFxkN"
       disabled={false}
       id="input"
       name="field"
@@ -299,7 +299,7 @@ Array [
       className="sc-gqjmRU eSPiSL"
     >
       <input
-        className="sc-htpNat iVlOqv sc-VigVT fUPyOg"
+        className="sc-htpNat ipwjvB sc-VigVT fUPyOg"
         disabled={false}
         id="input"
         name="field"
@@ -308,7 +308,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jTzLTM gQMtOg"
+        className="sc-jTzLTM ikUTxU"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"
@@ -423,7 +423,7 @@ Array [
       className="sc-gqjmRU eSPiSL"
     >
       <input
-        className="sc-htpNat fTSCbm sc-VigVT fUPyOg"
+        className="sc-htpNat pFxkN sc-VigVT fUPyOg"
         disabled={false}
         id="input"
         name="field"
@@ -432,7 +432,7 @@ Array [
       />
       <span
         aria-pressed={false}
-        className="sc-jTzLTM gQMtOg"
+        className="sc-jTzLTM ikUTxU"
         onClick={[Function]}
         onKeyDown={[Function]}
         tabIndex="0"

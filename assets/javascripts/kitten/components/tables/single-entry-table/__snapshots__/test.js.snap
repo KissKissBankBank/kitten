@@ -2,7 +2,7 @@
 
 exports[`<SingleEntryTable /> with \`isSliding\` prop matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa fKpxoQ SingleEntryTable__Container SingleEntryTable--isSliding"
+  className="sc-bdVaJa hXjHGw SingleEntryTable__Container SingleEntryTable--isSliding"
 >
   <div
     className="SingleEntryTable__TableContainer"
@@ -76,7 +76,7 @@ exports[`<SingleEntryTable /> with \`isSliding\` prop matches with snapshot 1`] 
 
 exports[`<SingleEntryTable /> with a complete structure and custom classes matches with snapshot 1`] = `
 <div
-  className="sc-bdVaJa fKpxoQ SingleEntryTable__Container"
+  className="sc-bdVaJa hXjHGw SingleEntryTable__Container"
 >
   <div
     className="SingleEntryTable__TableContainer"

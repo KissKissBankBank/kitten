@@ -5,14 +5,14 @@ exports[`<TextInputWithLimit /> by default matches with snapshot 1`] = `
   className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-ifAKCX eUaGxb"
+    className="sc-bwzfXH LfxJj sc-ifAKCX cvqGPW"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-bZQynM imdljl"
+    className="sc-bZQynM bMDsgn"
     disabled={false}
   >
     80
@@ -25,14 +25,14 @@ exports[`<TextInputWithLimit /> with \`disabled\` prop matches with snapshot 1`]
   className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-bwzfXH cmvcxy sc-ifAKCX eUaGxb"
+    className="sc-bwzfXH LfxJj sc-ifAKCX cvqGPW"
     defaultValue=""
     disabled={true}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-bZQynM gwkZNG"
+    className="sc-bZQynM galYYx"
     disabled={true}
   >
     80
@@ -45,14 +45,14 @@ exports[`<TextInputWithLimit /> with \`error\` prop matches with snapshot 1`] = 
   className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-bwzfXH begKAY sc-ifAKCX hEXEIQ"
+    className="sc-bwzfXH dPobDt sc-ifAKCX gOamqF"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-bZQynM imdljl"
+    className="sc-bZQynM bMDsgn"
     disabled={false}
   >
     80
@@ -65,14 +65,14 @@ exports[`<TextInputWithLimit /> with \`tiny\` prop matches with snapshot 1`] = `
   className="sc-EHOje fvUlWx"
 >
   <input
-    className="sc-bwzfXH kKjtef sc-ifAKCX eUaGxb"
+    className="sc-bwzfXH giqvQX sc-ifAKCX cvqGPW"
     defaultValue=""
     disabled={false}
     name="text"
     onChange={[Function]}
   />
   <div
-    className="sc-bZQynM imdljl"
+    className="sc-bZQynM bMDsgn"
     disabled={false}
   >
     80

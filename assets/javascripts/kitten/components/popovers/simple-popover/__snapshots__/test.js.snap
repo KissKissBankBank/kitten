@@ -49,7 +49,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -65,9 +65,9 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   padding: 0;
   width: 1.875rem;
   height: 1.875rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -99,21 +99,21 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c1:hover,
 .c1:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c1:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c1:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 .c9 {
@@ -138,7 +138,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -151,9 +151,9 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   min-height: 2.5rem;
   padding: 0 1.25rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -185,21 +185,21 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c9:hover,
 .c9:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c9:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c9:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 .c10 {
@@ -224,7 +224,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -237,9 +237,9 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   min-height: 2.5rem;
   padding: 0 1.25rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #19b4fa;
-  background-color: #19b4fa;
-  color: #fff;
+  border: 0.125rem solid var(--color-primary1);
+  background-color: var(--color-primary1);
+  color: var(--color-background1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -271,21 +271,21 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
 
 .c10:hover,
 .c10:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c10:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c10:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 .c0 {
@@ -299,14 +299,14 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  border: solid #eee 0.125rem;
+  border: solid var(--color-line1) 0.125rem;
   box-sizing: border-box;
   max-width: 34.6875rem;
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   margin-bottom: 1.25rem;
-  background-color: #fff;
+  background-color: var(--color-background1);
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.3s ease,visibility 0s ease;
@@ -336,7 +336,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: #bae8fd;
+  background-color: var(--color-primary4);
 }
 
 .c2 {
@@ -448,7 +448,7 @@ exports[`<SimplePopover /> SimplePopover with multiple props matches with snapsh
   >
     <svg
       aria-hidden={true}
-      fill="#fff"
+      fill="var(--color-background1)"
       height="8"
       viewBox="0 0 8 8"
       width="8"
@@ -554,7 +554,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -570,9 +570,9 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   padding: 0;
   width: 1.875rem;
   height: 1.875rem;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -604,21 +604,21 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
 
 .c1:hover,
 .c1:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c1:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c1:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 .c0 {
@@ -632,14 +632,14 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
-  border: solid #eee 0.125rem;
+  border: solid var(--color-line1) 0.125rem;
   box-sizing: border-box;
   max-width: 34.6875rem;
   -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   margin-bottom: 1.25rem;
-  background-color: #fff;
+  background-color: var(--color-background1);
   opacity: 1;
   visibility: visible;
   -webkit-transition: opacity 0.3s ease,visibility 0s ease;
@@ -716,7 +716,7 @@ exports[`<SimplePopover /> simple SimplePopover  matches with snapshot 1`] = `
   >
     <svg
       aria-hidden={true}
-      fill="#fff"
+      fill="var(--color-background1)"
       height="8"
       viewBox="0 0 8 8"
       width="8"

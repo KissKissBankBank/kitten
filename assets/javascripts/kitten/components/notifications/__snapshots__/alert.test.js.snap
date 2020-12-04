@@ -2,7 +2,7 @@
 
 exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 <div
-  className="sc-bdVaJa dXsGhD k-Alert k-Alert--hasCloseButton"
+  className="sc-bdVaJa eHSDao k-Alert k-Alert--hasCloseButton"
   role="alert"
 >
   <div
@@ -20,7 +20,7 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
   >
     <svg
       className="k-ButtonIcon__svg k-ButtonIcon__svgRotate"
-      fill="#222"
+      fill="var(--color-font1)"
       height={8}
       viewBox="0 0 8 8"
       width={8}
@@ -39,7 +39,7 @@ exports[`<Alert /> should matches with closeButton snapshot 1`] = `
 
 exports[`<Alert /> should matches with default snapshot 1`] = `
 <div
-  className="sc-bdVaJa dXsGhD k-Alert"
+  className="sc-bdVaJa eHSDao k-Alert"
   role="alert"
 >
   <div
@@ -52,7 +52,7 @@ exports[`<Alert /> should matches with default snapshot 1`] = `
 
 exports[`<Alert /> should matches with error snapshot 1`] = `
 <div
-  className="sc-bdVaJa dXsGhD k-Alert k-Alert--error"
+  className="sc-bdVaJa eHSDao k-Alert k-Alert--error"
   role="alert"
 >
   <div
@@ -65,7 +65,7 @@ exports[`<Alert /> should matches with error snapshot 1`] = `
 
 exports[`<Alert /> should matches with success snapshot 1`] = `
 <div
-  className="sc-bdVaJa dXsGhD k-Alert k-Alert--success"
+  className="sc-bdVaJa eHSDao k-Alert k-Alert--success"
   role="alert"
 >
   <div
@@ -78,7 +78,7 @@ exports[`<Alert /> should matches with success snapshot 1`] = `
 
 exports[`<Alert /> should matches with warning snapshot 1`] = `
 <div
-  className="sc-bdVaJa dXsGhD k-Alert k-Alert--warning"
+  className="sc-bdVaJa eHSDao k-Alert k-Alert--warning"
   role="alert"
 >
   <div

@@ -28,7 +28,7 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.7901234567901234rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -41,9 +41,9 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   min-width: 5rem;
   padding: 0 1.875rem;
   font-size: 0.8888888888888888rem;
-  color: #222;
-  border-color: #eee;
-  background-color: #fff;
+  color: var(--color-font1);
+  border-color: var(--color-line1);
+  background-color: var(--color-background1);
 }
 
 .c0:disabled {
@@ -57,15 +57,15 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-background1);
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
 }
 
 .c0:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary2);
+  border-color: var(--color-primary2);
+  background-color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -117,7 +117,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.7901234567901234rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -126,9 +126,9 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  color: #222;
-  border-color: #eee;
-  background-color: #fff;
+  color: var(--color-font1);
+  border-color: var(--color-line1);
+  background-color: var(--color-background1);
 }
 
 .c0:disabled {
@@ -142,15 +142,15 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-background1);
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
 }
 
 .c0:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary2);
+  border-color: var(--color-primary2);
+  background-color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -195,7 +195,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.7901234567901234rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -204,12 +204,12 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  color: #222;
-  border-color: #eee;
-  background-color: #fff;
-  color: #fff;
-  border-color: #19b4fa;
-  background-color: #19b4fa;
+  color: var(--color-font1);
+  border-color: var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-background1);
+  border-color: var(--color-primary1);
+  background-color: var(--color-primary1);
 }
 
 .c0:disabled {
@@ -223,15 +223,15 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-background1);
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
 }
 
 .c0:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary2);
+  border-color: var(--color-primary2);
+  background-color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -276,7 +276,7 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.7901234567901234rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -289,9 +289,9 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   min-width: 3.75rem;
   padding: 0 1.25rem;
   font-size: 0.7901234567901234rem;
-  color: #222;
-  border-color: #eee;
-  background-color: #fff;
+  color: var(--color-font1);
+  border-color: var(--color-line1);
+  background-color: var(--color-background1);
 }
 
 .c0:disabled {
@@ -305,15 +305,15 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-background1);
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
 }
 
 .c0:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary2);
+  border-color: var(--color-primary2);
+  background-color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -365,7 +365,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.7901234567901234rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -374,12 +374,12 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  color: #222;
-  border-color: #eee;
-  background-color: #fff;
-  color: #222;
-  border-color: #eee;
-  background-color: #fff;
+  color: var(--color-font1);
+  border-color: var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
+  border-color: var(--color-line1);
+  background-color: var(--color-background1);
 }
 
 .c0:disabled {
@@ -393,28 +393,28 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-background1);
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
 }
 
 .c0:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary2);
+  border-color: var(--color-primary2);
+  background-color: var(--color-background1);
 }
 
 .c0:hover,
 .c0:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-background1);
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
 }
 
 .c0:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary2);
+  border-color: var(--color-primary2);
+  background-color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -475,7 +475,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.7901234567901234rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -484,9 +484,9 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  color: #222;
-  border-color: #eee;
-  background-color: #fff;
+  color: var(--color-font1);
+  border-color: var(--color-line1);
+  background-color: var(--color-background1);
 }
 
 .c0:disabled {
@@ -500,15 +500,15 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  color: #fff;
-  border-color: #05a8e6;
-  background-color: #05a8e6;
+  color: var(--color-background1);
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
 }
 
 .c0:active {
-  color: #05a8e6;
-  border-color: #05a8e6;
-  background-color: #fff;
+  color: var(--color-primary2);
+  border-color: var(--color-primary2);
+  background-color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {

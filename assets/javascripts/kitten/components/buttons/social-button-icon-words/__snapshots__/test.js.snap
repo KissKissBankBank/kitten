@@ -23,7 +23,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -34,7 +34,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
   cursor: pointer;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
-  color: #fff;
+  color: var(--color-background1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -68,19 +68,19 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> matches with snapshot
 .c0:focus {
   border-color: #2c4a89;
   background-color: #2c4a89;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -150,7 +150,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -163,7 +163,7 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
   width: 100%;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
-  color: #fff;
+  color: var(--color-background1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -197,19 +197,19 @@ exports[`SocialButtonIconWords <FacebookButtonIconWords /> with props matches wi
 .c0:focus {
   border-color: #2c4a89;
   background-color: #2c4a89;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -279,7 +279,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -290,7 +290,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
   cursor: pointer;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
-  color: #fff;
+  color: var(--color-background1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   -webkit-transition: background 0.2s,color 0.2s;
@@ -340,19 +340,19 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> matches with snapsho
 .c0:focus {
   border-color: #2c4a89;
   background-color: #2c4a89;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -422,7 +422,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -435,7 +435,7 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
   width: 100%;
   border: 0.125rem solid #3b5998;
   background-color: #3b5998;
-  color: #fff;
+  color: var(--color-background1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   -webkit-transition: background 0.2s,color 0.2s;
@@ -485,19 +485,19 @@ exports[`SocialButtonIconWords <InstagramButtonIconWords /> with props matches w
 .c0:focus {
   border-color: #2c4a89;
   background-color: #2c4a89;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:active {
   border-color: #1d3b7a;
   background-color: #1d3b7a;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -567,7 +567,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -578,7 +578,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
   cursor: pointer;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
-  color: #fff;
+  color: var(--color-background1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -612,19 +612,19 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> matches with snapshot
 .c0:focus {
   border-color: #00578f;
   background-color: #00578f;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:active {
   border-color: #004880;
   background-color: #004880;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -694,7 +694,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -707,7 +707,7 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
   width: 100%;
   border: 0.125rem solid #00669e;
   background-color: #00669e;
-  color: #fff;
+  color: var(--color-background1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -741,19 +741,19 @@ exports[`SocialButtonIconWords <LinkedinButtonIconWords /> with props matches wi
 .c0:focus {
   border-color: #00578f;
   background-color: #00578f;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:active {
   border-color: #004880;
   background-color: #004880;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -823,7 +823,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -834,7 +834,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
   cursor: pointer;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
-  color: #fff;
+  color: var(--color-background1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -868,19 +868,19 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> matches with snapshot 
 .c0:focus {
   border-color: #469ddf;
   background-color: #469ddf;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:active {
   border-color: #388ed0;
   background-color: #388ed0;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -950,7 +950,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -963,7 +963,7 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
   width: 100%;
   border: 0.125rem solid #55acee;
   background-color: #55acee;
-  color: #fff;
+  color: var(--color-background1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -997,19 +997,19 @@ exports[`SocialButtonIconWords <TwitterButtonIconWords /> with props matches wit
 .c0:focus {
   border-color: #469ddf;
   background-color: #469ddf;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:active {
   border-color: #388ed0;
   background-color: #388ed0;
-  color: #fff;
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {

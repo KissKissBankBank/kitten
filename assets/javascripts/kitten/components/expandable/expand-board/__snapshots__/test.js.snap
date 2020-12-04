@@ -7,7 +7,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="sc-bdVaJa jFsoYo sc-htpNat RoTKj"
+    className="sc-bdVaJa gGPjWQ sc-htpNat RoTKj"
     disabled={false}
     onClick={[Function]}
     type="button"
@@ -16,7 +16,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
       Alice
       <svg
         className="sc-bxivhb GRsEG"
-        fill="#222"
+        fill="var(--color-font1)"
         height="5.64"
         style={
           Object {
@@ -44,7 +44,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
   <button
     aria-controls="k-ExpandBoard"
     aria-expanded={false}
-    className="sc-bdVaJa jFsoYo sc-htpNat RoTKj"
+    className="sc-bdVaJa gGPjWQ sc-htpNat RoTKj"
     disabled={true}
     onClick={[Function]}
     type="button"
@@ -53,7 +53,7 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
       Alice
       <svg
         className="sc-bxivhb GRsEG"
-        fill="#222"
+        fill="var(--color-font1)"
         height="5.64"
         style={
           Object {

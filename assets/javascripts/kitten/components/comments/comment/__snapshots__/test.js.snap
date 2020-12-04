@@ -52,7 +52,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
     className="sc-gqjmRU hZQwhG"
   >
     <div
-      className="sc-VigVT layygq"
+      className="sc-VigVT cYrlmN"
     >
       <div
         className="sc-bdVaJa hOgMxB"
@@ -73,7 +73,7 @@ exports[`<Comment /> should match a snapshot with a complex avatar badge 1`] = `
         </span>
       </div>
       <span
-        className="sc-iwsKbI kvzWsf"
+        className="sc-iwsKbI fHIJwC"
       />
     </div>
     
@@ -112,7 +112,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
     className="sc-gqjmRU hZQwhG"
   >
     <div
-      className="sc-VigVT layygq"
+      className="sc-VigVT cYrlmN"
     >
       <div
         className="sc-bdVaJa hOgMxB"
@@ -133,7 +133,7 @@ exports[`<Comment /> should match a snapshot with a complex bottom notes 1`] = `
         </span>
       </div>
       <span
-        className="sc-iwsKbI kvzWsf"
+        className="sc-iwsKbI fHIJwC"
       />
     </div>
     <div
@@ -201,7 +201,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     className="sc-gqjmRU hZQwhG"
   >
     <div
-      className="sc-VigVT layygq"
+      className="sc-VigVT cYrlmN"
     >
       <div
         className="sc-bdVaJa hOgMxB"
@@ -222,7 +222,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
         </span>
       </div>
       <span
-        className="sc-iwsKbI kvzWsf"
+        className="sc-iwsKbI fHIJwC"
       />
     </div>
     <div
@@ -230,7 +230,7 @@ exports[`<Comment /> should match its empty snapshot 1`] = `
     >
       <button
         aria-pressed="true"
-        className="sc-gzVnrw bCgizs"
+        className="sc-gzVnrw fzNHse"
         role="button"
       >
         

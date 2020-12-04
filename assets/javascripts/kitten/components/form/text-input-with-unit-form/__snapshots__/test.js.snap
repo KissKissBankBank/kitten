@@ -33,7 +33,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="sc-htpNat fTSCbm sc-bZQynM kiqCgY"
+              className="sc-htpNat pFxkN sc-bZQynM kiqCgY"
               defaultValue=""
               disabled={false}
               id="donation-amount"
@@ -45,7 +45,7 @@ exports[`<TextInputWithUnitForm /> by default matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="sc-gzVnrw eiLylU"
+              className="sc-gzVnrw dtoLmU"
               disabled={false}
             >
               €
@@ -106,7 +106,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="sc-htpNat fTSCbm sc-bZQynM kiqCgY"
+              className="sc-htpNat pFxkN sc-bZQynM kiqCgY"
               defaultValue=""
               disabled={false}
               id=""
@@ -118,7 +118,7 @@ exports[`<TextInputWithUnitForm /> with align prop matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="sc-gzVnrw eiLylU"
+              className="sc-gzVnrw dtoLmU"
               disabled={false}
             />
           </div>
@@ -177,7 +177,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
           >
             <input
               autoComplete="off"
-              className="sc-htpNat fTSCbm sc-bZQynM kiqCgY"
+              className="sc-htpNat pFxkN sc-bZQynM kiqCgY"
               defaultValue=""
               disabled={true}
               id=""
@@ -189,7 +189,7 @@ exports[`<TextInputWithUnitForm /> with disabled prop matches with snapshot 1`] 
               type="number"
             />
             <span
-              className="sc-gzVnrw cpcqHn"
+              className="sc-gzVnrw zyXzQ"
               disabled={true}
             />
           </div>
@@ -248,7 +248,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
           >
             <input
               autoComplete="off"
-              className="sc-htpNat iVlOqv sc-bZQynM kiqCgY"
+              className="sc-htpNat ipwjvB sc-bZQynM kiqCgY"
               defaultValue=""
               disabled={false}
               id=""
@@ -260,7 +260,7 @@ exports[`<TextInputWithUnitForm /> with error prop matches with snapshot 1`] = `
               type="number"
             />
             <span
-              className="sc-gzVnrw fYzZwf"
+              className="sc-gzVnrw cwiptu"
               disabled={false}
             />
           </div>

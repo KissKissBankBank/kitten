@@ -11,7 +11,7 @@ Array [
   box-sizing: border-box;
   overflow: visible;
   background: transparent;
-  border: 0.125rem solid #eee;
+  border: 0.125rem solid var(--color-line1);
   border-radius: 0.1875rem;
   color: inherit;
   font: inherit;
@@ -40,8 +40,8 @@ Array [
   box-sizing: border-box;
   visibility: visible;
   height: auto;
-  background-color: #f6f6f6;
-  border: 0.125rem solid #eee;
+  background-color: var(--color-background3);
+  border: 0.125rem solid var(--color-line1);
   border-top: 0;
   border-bottom-left-radius: 0.1875rem;
   border-bottom-right-radius: 0.1875rem;
@@ -109,7 +109,7 @@ Array [
   box-sizing: border-box;
   overflow: visible;
   background: transparent;
-  border: 0.125rem solid #eee;
+  border: 0.125rem solid var(--color-line1);
   border-radius: 0.1875rem;
   color: inherit;
   font: inherit;
@@ -138,8 +138,8 @@ Array [
   box-sizing: border-box;
   visibility: visible;
   height: auto;
-  background-color: #f6f6f6;
-  border: 0.125rem solid #eee;
+  background-color: var(--color-background3);
+  border: 0.125rem solid var(--color-line1);
   border-top: 0;
   border-bottom-left-radius: 0.1875rem;
   border-bottom-right-radius: 0.1875rem;
@@ -211,7 +211,7 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
   box-sizing: border-box;
   overflow: visible;
   background: transparent;
-  border: 0.125rem solid #eee;
+  border: 0.125rem solid var(--color-line1);
   border-radius: 0.1875rem;
   color: inherit;
   font: inherit;
@@ -240,8 +240,8 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
   box-sizing: border-box;
   visibility: visible;
   height: auto;
-  background-color: #f6f6f6;
-  border: 0.125rem solid #eee;
+  background-color: var(--color-background3);
+  border: 0.125rem solid var(--color-line1);
   border-top: 0;
   border-bottom-left-radius: 0.1875rem;
   border-bottom-right-radius: 0.1875rem;
@@ -313,7 +313,7 @@ Array [
   box-sizing: border-box;
   overflow: visible;
   background: transparent;
-  border: 0.125rem solid #eee;
+  border: 0.125rem solid var(--color-line1);
   border-radius: 0.1875rem;
   color: inherit;
   font: inherit;
@@ -342,8 +342,8 @@ Array [
   box-sizing: border-box;
   visibility: visible;
   height: auto;
-  background-color: #f6f6f6;
-  border: 0.125rem solid #eee;
+  background-color: var(--color-background3);
+  border: 0.125rem solid var(--color-line1);
   border-top: 0;
   border-bottom-left-radius: 0.1875rem;
   border-bottom-right-radius: 0.1875rem;
@@ -411,7 +411,7 @@ Array [
   box-sizing: border-box;
   overflow: visible;
   background: transparent;
-  border: 0.125rem solid #eee;
+  border: 0.125rem solid var(--color-line1);
   border-radius: 0.1875rem;
   color: inherit;
   font: inherit;
@@ -440,8 +440,8 @@ Array [
   box-sizing: border-box;
   visibility: visible;
   height: auto;
-  background-color: #f6f6f6;
-  border: 0.125rem solid #eee;
+  background-color: var(--color-background3);
+  border: 0.125rem solid var(--color-line1);
   border-top: 0;
   border-bottom-left-radius: 0.1875rem;
   border-bottom-right-radius: 0.1875rem;

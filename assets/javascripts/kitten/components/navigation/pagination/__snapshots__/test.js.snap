@@ -3,7 +3,7 @@
 exports[`<Pagination /> by default should match its empty snapshot 1`] = `
 <nav
   aria-label="Pagination navigation"
-  className="sc-bwzfXH jimmEN Pagination Pagination--isAligned-undefined"
+  className="sc-bwzfXH bjVIkI Pagination Pagination--isAligned-undefined"
   role="navigation"
 >
   <ul
@@ -24,7 +24,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         <svg
           aria-hidden="true"
           className="Pagination__ArrowIcon"
-          fill="#222"
+          fill="var(--color-font1)"
           height="5.64"
           style={
             Object {
@@ -134,7 +134,7 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
         <svg
           aria-hidden="true"
           className="Pagination__ArrowIcon"
-          fill="#222"
+          fill="var(--color-font1)"
           height="5.64"
           style={
             Object {

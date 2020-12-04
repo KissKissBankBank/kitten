@@ -2,7 +2,7 @@
 
 exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH gpkizz"
+  className="sc-bwzfXH jWJmXX"
 >
   <div
     className="k-u-margin-bottom-triple"
@@ -41,7 +41,7 @@ exports[`<VerticalCardWithAction /> by default matches with snapshot 1`] = `
 
 exports[`<VerticalCardWithAction /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH gpkizz"
+  className="sc-bwzfXH jWJmXX"
 >
   <div
     className="k-u-margin-bottom-triple"

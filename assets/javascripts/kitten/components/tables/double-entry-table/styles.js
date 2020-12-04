@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
-import { hexToRgba as rgba } from '../../../helpers/utils/hex-to-rgba'
 import { ScreenConfig } from '../../../constants/screen-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 
@@ -11,24 +10,26 @@ export const Styles = styled.div`
   .DoubleEntryTable__TableContainer {
     overflow-x: scroll;
     margin-bottom: ${pxToRem(30)};
-    border-left: ${pxToRem(2)} solid ${rgba(COLORS.background1, 0.0667)};
-    border-right: ${pxToRem(2)} solid ${rgba(COLORS.background1, 0.0667)};
+    border-left: ${pxToRem(2)} solid hsla(var(--color-hsl-background1), 0.0667);
+    border-right: ${pxToRem(
+      2,
+    )} solid hsla(var(--color-hsl-background1), 0.0667);
 
     background: linear-gradient(
         to right,
         white 30%,
-        ${rgba(COLORS.background1, 0)}
+        hsla(var(--color-hsl-background1), 0)
       ),
-      linear-gradient(to left, white 30%, ${rgba(COLORS.background1, 0)}),
+      linear-gradient(to left, white 30%, hsla(var(--color-hsl-background1), 0)),
       radial-gradient(
         farthest-side at 0 50%,
-        ${rgba(COLORS.font1, 0.2)},
-        ${rgba(COLORS.font1, 0)}
+        hsla(var(--color-hsl-font1), 0.2),
+        hsla(var(--color-hsl-font1), 0)
       ),
       radial-gradient(
         farthest-side at 100% 50%,
-        ${rgba(COLORS.font1, 0.2)},
-        ${rgba(COLORS.font1, 0)}
+        hsla(var(--color-hsl-font1), 0.2),
+        hsla(var(--color-hsl-font1), 0)
       );
 
     background-repeat: no-repeat;

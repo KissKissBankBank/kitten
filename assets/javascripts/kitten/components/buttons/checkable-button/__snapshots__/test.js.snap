@@ -23,7 +23,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -32,9 +32,9 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.125rem solid #eee;
-  background-color: #fff;
-  color: #222;
+  border: 0.125rem solid var(--color-line1);
+  background-color: var(--color-background1);
+  color: var(--color-font1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -66,21 +66,21 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 .c1::after {
@@ -89,7 +89,7 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
   width: 1.25rem;
   height: 1.25rem;
   bottom: -0.6875rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1wcmltYXJ5MSkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1iYWNrZ3JvdW5kMSkiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0;
@@ -115,15 +115,15 @@ exports[`<CheckableButton /> basic matches with snapshot 1`] = `
 
 .c1:hover,
 .c1:focus {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border-color: var(--color-primary4);
+  background-color: var(--color-background1);
+  color: var(--color-primary1);
 }
 
 .c1:active {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
+  border-color: var(--color-primary2);
+  background-color: var(--color-background1);
+  color: var(--color-primary2);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -165,7 +165,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -174,9 +174,9 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.125rem solid #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border: 0.125rem solid var(--color-primary4);
+  background-color: var(--color-background1);
+  color: var(--color-primary1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -208,21 +208,21 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 .c1::after {
@@ -231,7 +231,7 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
   width: 1.5rem;
   height: 1.5rem;
   bottom: -0.8125rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1wcmltYXJ5MSkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1iYWNrZ3JvdW5kMSkiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0;
@@ -257,15 +257,15 @@ exports[`<CheckableButton /> with \`big\` prop matches with snapshot 1`] = `
 
 .c1:hover,
 .c1:focus {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border-color: var(--color-primary4);
+  background-color: var(--color-background1);
+  color: var(--color-primary1);
 }
 
 .c1:active {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
+  border-color: var(--color-primary2);
+  background-color: var(--color-background1);
+  color: var(--color-primary2);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -323,7 +323,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -332,9 +332,9 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.125rem solid #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border: 0.125rem solid var(--color-primary4);
+  background-color: var(--color-background1);
+  color: var(--color-primary1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -366,21 +366,21 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 .c1::after {
@@ -389,7 +389,7 @@ exports[`<CheckableButton /> with \`disabled\` prop matches with snapshot 1`] = 
   width: 1.25rem;
   height: 1.25rem;
   bottom: -0.6875rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZDhkOGQ4IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1saW5lMikiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1iYWNrZ3JvdW5kMSkiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0;
@@ -452,7 +452,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -461,9 +461,9 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   appareance: none;
   outline: none;
   cursor: pointer;
-  border: 0.125rem solid #ffb2c7;
-  background-color: #fff;
-  color: #ff0046;
+  border: 0.125rem solid var(--color-error3);
+  background-color: var(--color-background1);
+  color: var(--color-error);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -496,20 +496,20 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
 .c0:hover,
 .c0:focus {
   border-color: currentColor;
-  background-color: #fff;
-  color: #ff0046;
+  background-color: var(--color-background1);
+  color: var(--color-error);
 }
 
 .c0:active {
   border-color: currentColor;
-  background-color: #fff;
-  color: #ff0046;
+  background-color: var(--color-background1);
+  color: var(--color-error);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 .c1::after {
@@ -518,7 +518,7 @@ exports[`<CheckableButton /> with \`error\` prop matches with snapshot 1`] = `
   width: 1.25rem;
   height: 1.25rem;
   bottom: -0.6875rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjZmYwMDQ2IiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1lcnJvcikiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1iYWNrZ3JvdW5kMSkiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0;
@@ -581,7 +581,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
-  color: #222;
+  color: var(--color-font1);
   line-height: 1.3;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -594,9 +594,9 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   min-height: 2.5rem;
   padding: 0 1.25rem;
   font-size: 0.8888888888888888rem;
-  border: 0.125rem solid #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border: 0.125rem solid var(--color-primary4);
+  background-color: var(--color-background1);
+  color: var(--color-primary1);
   -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
@@ -628,21 +628,21 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c0:hover,
 .c0:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
+  border-color: var(--color-primary2);
+  background-color: var(--color-primary2);
+  color: var(--color-background1);
 }
 
 .c0:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
+  border-color: var(--color-primary3);
+  background-color: var(--color-primary3);
+  color: var(--color-background1);
 }
 
 .c0:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
+  border-color: var(--color-line2);
+  background-color: var(--color-line2);
+  color: var(--color-background1);
 }
 
 .c1::after {
@@ -651,7 +651,7 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
   width: 0.9375rem;
   height: 0.9375rem;
   bottom: -0.53125rem;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSIjMTliNGZhIiBjeD0iMTAiIGN5PSIxMCIgcj0iMTAiIC8+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTguMjMyIDEzLjg5bC43MDcuNzA2IDUuNjU2LTUuNjU3LTEuNDE0LTEuNDE1LTQuMjQzIDQuMjQzLTIuMTIyLTIuMTIyLTEuNDE0IDEuNDE1IDIuODI4IDIuODN6Ii8+PC9zdmc+);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMCAyMCI+PGNpcmNsZSBmaWxsPSJ2YXIoLS1jb2xvci1wcmltYXJ5MSkiIGN4PSIxMCIgY3k9IjEwIiByPSIxMCIgLz48cGF0aCBmaWxsPSJ2YXIoLS1jb2xvci1iYWNrZ3JvdW5kMSkiIGQ9Ik04LjIzMiAxMy44OWwuNzA3LjcwNiA1LjY1Ni01LjY1Ny0xLjQxNC0xLjQxNS00LjI0MyA0LjI0My0yLjEyMi0yLjEyMi0xLjQxNCAxLjQxNSAyLjgyOCAyLjgzeiIvPjwvc3ZnPg==);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   opacity: 0;
@@ -677,15 +677,15 @@ exports[`<CheckableButton /> with \`tiny\` prop matches with snapshot 1`] = `
 
 .c1:hover,
 .c1:focus {
-  border-color: #bae8fd;
-  background-color: #fff;
-  color: #19b4fa;
+  border-color: var(--color-primary4);
+  background-color: var(--color-background1);
+  color: var(--color-primary1);
 }
 
 .c1:active {
-  border-color: #05a8e6;
-  background-color: #fff;
-  color: #05a8e6;
+  border-color: var(--color-primary2);
+  background-color: var(--color-background1);
+  color: var(--color-primary2);
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {

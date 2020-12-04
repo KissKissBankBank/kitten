@@ -14,25 +14,25 @@ exports[`<SearchInput /> Basic search input matches with snapshot 1`] = `
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
   font-weight: 600;
-  caret-color: #19b4fa;
+  caret-color: var(--color-primary1);
   font-size: 1.75rem;
   line-height: 2.75rem;
 }
 
 .c0::-webkit-input-placeholder {
-  color: #eee;
+  color: var(--color-line1);
 }
 
 .c0::-moz-placeholder {
-  color: #eee;
+  color: var(--color-line1);
 }
 
 .c0:-ms-input-placeholder {
-  color: #eee;
+  color: var(--color-line1);
 }
 
 .c0::placeholder {
-  color: #eee;
+  color: var(--color-line1);
 }
 
 .c0::-webkit-search-decoration,
@@ -80,25 +80,25 @@ exports[`<SearchInput /> Search input with attributes matches with snapshot 1`] 
   -ms-letter-spacing: .01rem;
   letter-spacing: .01rem;
   font-weight: 600;
-  caret-color: #19b4fa;
+  caret-color: var(--color-primary1);
   font-size: 1.75rem;
   line-height: 2.75rem;
 }
 
 .c0::-webkit-input-placeholder {
-  color: #eee;
+  color: var(--color-line1);
 }
 
 .c0::-moz-placeholder {
-  color: #eee;
+  color: var(--color-line1);
 }
 
 .c0:-ms-input-placeholder {
-  color: #eee;
+  color: var(--color-line1);
 }
 
 .c0::placeholder {
-  color: #eee;
+  color: var(--color-line1);
 }
 
 .c0::-webkit-search-decoration,

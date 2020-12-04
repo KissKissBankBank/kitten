@@ -2,7 +2,7 @@
 
 exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-htoDjs eZBwPF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-htoDjs dEOYUF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
@@ -19,7 +19,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
         src="https://placehold.it/160x100/caf4fe/caf4fe"
         style={
           Object {
-            "backgroundColor": "#d8d8d8",
+            "backgroundColor": "var(--color-line2)",
           }
         }
       />
@@ -72,7 +72,7 @@ exports[`<ArticleCard /> by default matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches with snapshot 1`] = `
 <div
-  className="sc-htoDjs eZBwPF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-htoDjs dEOYUF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
@@ -89,7 +89,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
         src="https://placehold.it/160x100/caf4fe/caf4fe"
         style={
           Object {
-            "backgroundColor": "#d8d8d8",
+            "backgroundColor": "var(--color-line2)",
           }
         }
       />
@@ -144,8 +144,8 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
       className="k-CrowdfundingCard__subtitle__container"
     >
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--micro"
-        color="#222"
+        className="sc-bxivhb hBxdNb k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--micro"
+        color="var(--color-font1)"
         style={
           Object {
             "height": null,
@@ -168,7 +168,7 @@ exports[`<ArticleCard /> with articleTitle and articleSubTitle props matches wit
 
 exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 <div
-  className="sc-htoDjs eZBwPF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-htoDjs dEOYUF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href={null}
   onClick={[Function]}
 >
@@ -185,7 +185,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
         src="https://placehold.it/160x100/caf4fe/caf4fe"
         style={
           Object {
-            "backgroundColor": "#d8d8d8",
+            "backgroundColor": "var(--color-line2)",
           }
         }
       />
@@ -238,7 +238,7 @@ exports[`<ArticleCard /> with ignored props matches with snapshot 1`] = `
 
 exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-htoDjs eZBwPF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
+  className="sc-htoDjs dEOYUF k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover"
   href="#foobar"
   onClick={[Function]}
 >
@@ -311,8 +311,8 @@ exports[`<ArticleCard /> with some props matches with snapshot 1`] = `
       className="k-CrowdfundingCard__subtitle__container"
     >
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--micro"
-        color="#222"
+        className="sc-bxivhb hBxdNb k-HorizontalStroke k-CrowdfundingCard__subtitle__horizontalStroke k-HorizontalStroke--size--micro"
+        color="var(--color-font1)"
         style={
           Object {
             "height": null,

@@ -2,7 +2,7 @@
 
 exports[`<Timeline /> with default props matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH KtMDD k-Timeline k-Timeline--large"
+  className="sc-bwzfXH iNtWkh k-Timeline k-Timeline--large"
 >
   <span
     className="k-Timeline__verticalLine"
@@ -67,7 +67,7 @@ exports[`<Timeline /> with default props matches with snapshot 1`] = `
 
 exports[`<Timeline /> with itemHeight props matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH KtMDD k-Timeline k-Timeline--thin"
+  className="sc-bwzfXH iNtWkh k-Timeline k-Timeline--thin"
 >
   <span
     className="k-Timeline__verticalLine"

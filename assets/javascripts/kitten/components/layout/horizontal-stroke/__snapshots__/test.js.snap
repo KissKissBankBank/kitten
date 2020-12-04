@@ -3,7 +3,7 @@
 exports[`<HorizontalStroke /> by default matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -142,7 +142,7 @@ exports[`<HorizontalStroke /> by default matches with snapshot 1`] = `
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": null,
@@ -155,7 +155,7 @@ exports[`<HorizontalStroke /> by default matches with snapshot 1`] = `
 exports[`<HorizontalStroke /> with \`big\` size matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -294,7 +294,7 @@ exports[`<HorizontalStroke /> with \`big\` size matches with snapshot 1`] = `
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--size--big"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": null,
@@ -307,7 +307,7 @@ exports[`<HorizontalStroke /> with \`big\` size matches with snapshot 1`] = `
 exports[`<HorizontalStroke /> with \`height via \`customSize\` and width via \`style\` matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -446,7 +446,7 @@ exports[`<HorizontalStroke /> with \`height via \`customSize\` and width via \`s
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": 50,
@@ -459,7 +459,7 @@ exports[`<HorizontalStroke /> with \`height via \`customSize\` and width via \`s
 exports[`<HorizontalStroke /> with \`huge\` size matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -598,7 +598,7 @@ exports[`<HorizontalStroke /> with \`huge\` size matches with snapshot 1`] = `
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--size--huge"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": null,
@@ -611,7 +611,7 @@ exports[`<HorizontalStroke /> with \`huge\` size matches with snapshot 1`] = `
 exports[`<HorizontalStroke /> with \`primary\` modifier and \`huge\` size matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -750,7 +750,7 @@ exports[`<HorizontalStroke /> with \`primary\` modifier and \`huge\` size matche
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--modifier--primary"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": null,
@@ -763,7 +763,7 @@ exports[`<HorizontalStroke /> with \`primary\` modifier and \`huge\` size matche
 exports[`<HorizontalStroke /> with \`primary\` modifier matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -902,7 +902,7 @@ exports[`<HorizontalStroke /> with \`primary\` modifier matches with snapshot 1`
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--modifier--primary"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": null,
@@ -915,7 +915,7 @@ exports[`<HorizontalStroke /> with \`primary\` modifier matches with snapshot 1`
 exports[`<HorizontalStroke /> with \`tiny\` size matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -1054,7 +1054,7 @@ exports[`<HorizontalStroke /> with \`tiny\` size matches with snapshot 1`] = `
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--size--tiny"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": null,
@@ -1067,7 +1067,7 @@ exports[`<HorizontalStroke /> with \`tiny\` size matches with snapshot 1`] = `
 exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`style\` and more custom styles matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -1206,7 +1206,7 @@ exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`st
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "backgroundColor": "#888",
@@ -1220,7 +1220,7 @@ exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`st
 exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`style\` matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -1359,7 +1359,7 @@ exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`st
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": undefined,
@@ -1372,7 +1372,7 @@ exports[`<HorizontalStroke /> with \`width via \`customSize\` and width via \`st
 exports[`<HorizontalStroke /> with height via \`customSize\` matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -1511,7 +1511,7 @@ exports[`<HorizontalStroke /> with height via \`customSize\` matches with snapsh
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": 50,
@@ -1524,7 +1524,7 @@ exports[`<HorizontalStroke /> with height via \`customSize\` matches with snapsh
 exports[`<HorizontalStroke /> with width and height via \`customSize\` matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -1663,7 +1663,7 @@ exports[`<HorizontalStroke /> with width and height via \`customSize\` matches w
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": 50,
@@ -1676,7 +1676,7 @@ exports[`<HorizontalStroke /> with width and height via \`customSize\` matches w
 exports[`<HorizontalStroke /> with width via \`customSize\` matches with snapshot 1`] = `
 .c0 {
   border: none;
-  background: #222;
+  background: var(--color-font1);
 }
 
 .c0.k-HorizontalStroke--size--micro {
@@ -1815,7 +1815,7 @@ exports[`<HorizontalStroke /> with width via \`customSize\` matches with snapsho
 
 <div
   className="c0 k-HorizontalStroke k-HorizontalStroke--size--default"
-  color="#222"
+  color="var(--color-font1)"
   style={
     Object {
       "height": undefined,

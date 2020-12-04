@@ -2,7 +2,7 @@
 
 exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-bxivhb gtpXnE k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -60,7 +60,7 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
 
 exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-bxivhb gtpXnE k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div
@@ -118,7 +118,7 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
 
 exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bxivhb NpcKf k-CartRewardCard"
+  className="sc-bxivhb gtpXnE k-CartRewardCard"
   onAnimationEnd={[Function]}
 >
   <div

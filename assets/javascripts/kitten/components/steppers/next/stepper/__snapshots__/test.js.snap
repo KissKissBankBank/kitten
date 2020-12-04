@@ -5,7 +5,7 @@ exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
   className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-htpNat fpxRfI"
+    className="sc-htpNat hVWrls"
   >
     <li
       className="sc-bxivhb BaPoz"
@@ -28,7 +28,7 @@ exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
   className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-htpNat fpxRfI"
+    className="sc-htpNat hVWrls"
   >
     <li
       className="sc-bxivhb BaPoz"
@@ -54,7 +54,7 @@ exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
   className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-htpNat fpxRfI"
+    className="sc-htpNat hVWrls"
   >
     <li
       className="sc-bxivhb BaPoz"
@@ -80,7 +80,7 @@ exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
   className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-htpNat fpxRfI"
+    className="sc-htpNat hVWrls"
   >
     <li
       className="sc-bxivhb BaPoz"
@@ -107,7 +107,7 @@ exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
   className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-htpNat fpxRfI"
+    className="sc-htpNat hVWrls"
   >
     <li
       className="sc-bxivhb hbYiXc"
@@ -130,10 +130,10 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
   className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-htpNat fpxRfI"
+    className="sc-htpNat hVWrls"
   >
     <li
-      className="sc-bxivhb EOtIZ"
+      className="sc-bxivhb ipVpsq"
     >
       <span
         className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--inProgress"
@@ -166,10 +166,10 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
   className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-htpNat fpxRfI"
+    className="sc-htpNat hVWrls"
   >
     <li
-      className="sc-bxivhb EOtIZ"
+      className="sc-bxivhb ipVpsq"
     >
       <a
         className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu k-u-link k-u-link-primary1"
@@ -205,7 +205,7 @@ exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
   className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-htpNat fpxRfI"
+    className="sc-htpNat hVWrls"
   >
     <li
       className="sc-bxivhb BaPoz"

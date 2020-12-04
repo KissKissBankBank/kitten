@@ -18,7 +18,7 @@ exports[`<ArrowIcon /> by default (deprecated) matches the snapshot 1`] = `
 exports[`<ArrowIcon /> with the version prop by default matches the snapshot 1`] = `
 <svg
   className=""
-  fill="#222"
+  fill="var(--color-font1)"
   height="5.64"
   style={
     Object {
@@ -39,7 +39,7 @@ exports[`<ArrowIcon /> with the version prop by default matches the snapshot 1`]
 exports[`<ArrowIcon /> with the version prop when disabled matches the snapshot 1`] = `
 <svg
   className=""
-  fill="#fff"
+  fill="var(--color-background1)"
   height="5.64"
   style={
     Object {
@@ -60,7 +60,7 @@ exports[`<ArrowIcon /> with the version prop when disabled matches the snapshot 
 exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`bottom\` matches the snapshot 1`] = `
 <svg
   className=""
-  fill="#222"
+  fill="var(--color-font1)"
   height="5.64"
   style={
     Object {
@@ -81,7 +81,7 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
 exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`left\` matches the snapshot 1`] = `
 <svg
   className=""
-  fill="#222"
+  fill="var(--color-font1)"
   height="5.64"
   style={
     Object {
@@ -102,7 +102,7 @@ exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to 
 exports[`<ArrowIcon /> with the version prop with the prop \`direction\` set to \`right\` matches the snapshot 1`] = `
 <svg
   className=""
-  fill="#222"
+  fill="var(--color-font1)"
   height="5.64"
   style={
     Object {

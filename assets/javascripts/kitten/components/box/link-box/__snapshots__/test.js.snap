@@ -2,7 +2,7 @@
 
 exports[`<LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hikopz"
+  className="sc-bdVaJa iTDvZI"
   href="#"
 >
   <div
@@ -13,7 +13,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="#222"
+        fill="var(--color-font1)"
         height="10"
         style={
           Object {
@@ -36,7 +36,7 @@ exports[`<LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hikopz"
+  className="sc-bdVaJa iTDvZI"
   href="#foobar"
   rel="noopener"
   target="_blank"
@@ -56,12 +56,12 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
         <circle
           cx="10"
           cy="10"
-          fill="#fff"
+          fill="var(--color-background1)"
           r="10"
         />
         <path
           d="m6 10 6-6-1.25 6h3.25l-6 6 1.25-6z"
-          fill="#222"
+          fill="var(--color-font1)"
           fillRule="evenodd"
         />
       </svg>
@@ -76,7 +76,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="#222"
+        fill="var(--color-font1)"
         height="10"
         style={
           Object {
@@ -99,7 +99,7 @@ exports[`<LinkBox /> with some props matches with snapshot 1`] = `
 
 exports[`Deprecated <LinkBox /> by default matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hikopz"
+  className="sc-bdVaJa iTDvZI"
   href="#"
   title="My title"
 >
@@ -111,7 +111,7 @@ exports[`Deprecated <LinkBox /> by default matches with snapshot 1`] = `
     >
       <svg
         className=""
-        fill="#222"
+        fill="var(--color-font1)"
         height="10"
         style={
           Object {
@@ -134,7 +134,7 @@ exports[`Deprecated <LinkBox /> by default matches with snapshot 1`] = `
 
 exports[`Deprecated <LinkBox /> with some props matches with snapshot 1`] = `
 <a
-  className="sc-bdVaJa hikopz"
+  className="sc-bdVaJa iTDvZI"
   href="#foobar"
   rel="noopener"
   target="_blank"

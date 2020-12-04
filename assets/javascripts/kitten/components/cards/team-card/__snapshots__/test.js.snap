@@ -33,7 +33,7 @@ exports[`<TeamCard /> with socialLink prop (deprecated) matches with snapshot 1`
 exports[`<TeamCard /> with some props matches with snapshot 1`] = `
 Array [
   <div
-    className="sc-htpNat fLLWtn k-u-margin-bottom-double"
+    className="sc-htpNat kZvZmJ k-u-margin-bottom-double"
     title="Title"
   />,
   <div
@@ -96,7 +96,7 @@ Array [
     </a>
     <a
       aria-label="Telephone"
-      className="sc-bxivhb ebiAFY k-TeamCardIcons__buttonIcon"
+      className="sc-bxivhb cWlHtz k-TeamCardIcons__buttonIcon"
       href="tel:06 00 00 00 00"
     >
       <span

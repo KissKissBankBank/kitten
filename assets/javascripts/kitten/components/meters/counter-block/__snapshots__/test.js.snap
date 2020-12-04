@@ -20,8 +20,8 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       className="sc-bZQynM esQqxf k-u-hidden@m-down"
     >
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
-        color="#222"
+        className="sc-bxivhb hBxdNb k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
+        color="var(--color-font1)"
         style={
           Object {
             "height": null,
@@ -39,8 +39,8 @@ exports[`<CounterBlock /> with default props matches with snapshot 1`] = `
       className="sc-bZQynM esQqxf k-u-hidden@m-down"
     >
       <div
-        className="sc-bxivhb gmqSjE k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
-        color="#222"
+        className="sc-bxivhb hBxdNb k-HorizontalStroke styledStroke k-HorizontalStroke--size--big"
+        color="var(--color-font1)"
         style={
           Object {
             "height": null,

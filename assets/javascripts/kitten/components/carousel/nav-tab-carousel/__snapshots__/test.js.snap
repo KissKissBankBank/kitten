@@ -2,14 +2,14 @@
 
 exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 <div
-  className="sc-dnqmqq jWSrvv"
+  className="sc-dnqmqq kyrEyT"
 >
   <div
     className="sc-bxivhb dpfxZU"
   >
     <svg
       className="sc-ifAKCX jyHSSs"
-      fill="#222"
+      fill="var(--color-font1)"
       height="5.64"
       style={
         Object {
@@ -35,15 +35,15 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
     className="sc-htoDjs dBedLo"
   >
     <a
-      className="sc-gzVnrw DSxsg"
+      className="sc-gzVnrw deRiKy"
       href="http://www.google.com"
     />
     <a
-      className="sc-gzVnrw etwgon"
+      className="sc-gzVnrw cdBter"
       href="http://www.cowboybebop.com"
     />
     <a
-      className="sc-gzVnrw DSxsg"
+      className="sc-gzVnrw deRiKy"
       href="http://www.starwars.com"
     />
   </div>
@@ -57,7 +57,7 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
     </div>
     <svg
       className="sc-ifAKCX jyHSSs"
-      fill="#222"
+      fill="var(--color-font1)"
       height="5.64"
       style={
         Object {
@@ -79,14 +79,14 @@ exports[`<NavTabCarousel /> with links prop matches with snapshot 1`] = `
 
 exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
 <div
-  className="sc-dnqmqq jWSrvv"
+  className="sc-dnqmqq kyrEyT"
 >
   <div
     className="sc-bxivhb dpfxZU"
   >
     <svg
       className="sc-ifAKCX jyHSSs"
-      fill="#222"
+      fill="var(--color-font1)"
       height="5.64"
       style={
         Object {
@@ -112,13 +112,13 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
     className="sc-htoDjs dBedLo"
   >
     <div
-      className="sc-gzVnrw DSxsg"
+      className="sc-gzVnrw deRiKy"
     />
     <div
-      className="sc-gzVnrw etwgon"
+      className="sc-gzVnrw cdBter"
     />
     <div
-      className="sc-gzVnrw DSxsg"
+      className="sc-gzVnrw deRiKy"
     />
   </div>
   <div
@@ -131,7 +131,7 @@ exports[`<NavTabCarousel /> with totalIndex prop matches with snapshot 1`] = `
     </div>
     <svg
       className="sc-ifAKCX jyHSSs"
-      fill="#222"
+      fill="var(--color-font1)"
       height="5.64"
       style={
         Object {

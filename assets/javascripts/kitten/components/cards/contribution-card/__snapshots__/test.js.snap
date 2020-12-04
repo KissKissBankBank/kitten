@@ -2,7 +2,7 @@
 
 exports[`<ContributionCard /> by default matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH bCeqqR k-LegacyRewardCard"
+  className="sc-bwzfXH kTeHHf k-LegacyRewardCard"
   disabled={false}
 >
   <div
@@ -30,8 +30,8 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-bxivhb gmqSjE k-HorizontalStroke k-HorizontalStroke--size--big"
-              color="#222"
+              className="sc-bxivhb hBxdNb k-HorizontalStroke k-HorizontalStroke--size--big"
+              color="var(--color-font1)"
               style={
                 Object {
                   "height": null,
@@ -59,7 +59,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
 
 exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH bCeqqR k-LegacyRewardCard"
+  className="sc-bwzfXH kTeHHf k-LegacyRewardCard"
   disabled={false}
 >
   <div
@@ -87,8 +87,8 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-bxivhb gmqSjE k-HorizontalStroke k-HorizontalStroke--size--big"
-              color="#222"
+              className="sc-bxivhb hBxdNb k-HorizontalStroke k-HorizontalStroke--size--big"
+              color="var(--color-font1)"
               style={
                 Object {
                   "height": null,
@@ -176,7 +176,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               className="k-LegacyRewardCard__myContribution"
             >
               <span
-                className="sc-EHOje cOnFfw k-LegacyRewardCard__iconBadge"
+                className="sc-EHOje kPmPBZ k-LegacyRewardCard__iconBadge"
                 disabled={false}
               >
                 <span
@@ -241,7 +241,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
 
 exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH bCeqqR k-LegacyRewardCard k-LegacyRewardCard--tinyVersion k-LegacyRewardCard--sOrLessVersion"
+  className="sc-bwzfXH kTeHHf k-LegacyRewardCard k-LegacyRewardCard--tinyVersion k-LegacyRewardCard--sOrLessVersion"
   disabled={false}
 >
   <div
@@ -269,8 +269,8 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-bxivhb gmqSjE k-HorizontalStroke k-HorizontalStroke--size--big"
-              color="#222"
+              className="sc-bxivhb hBxdNb k-HorizontalStroke k-HorizontalStroke--size--big"
+              color="var(--color-font1)"
               style={
                 Object {
                   "height": null,
@@ -374,7 +374,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="k-LegacyRewardCard__myContribution"
           >
             <span
-              className="sc-EHOje cOnFfw k-LegacyRewardCard__iconBadge"
+              className="sc-EHOje kPmPBZ k-LegacyRewardCard__iconBadge"
               disabled={false}
             >
               <span
