@@ -9,11 +9,11 @@
 ///   // "10px" is not a valid color in "k-Button: $button"
 
 @function k-color-definition($value) {
-  @if $value and type-of($value) != 'color' {
-    $error-message: k-log(
-      '"#{$value}" is not a valid color in "#{$k-module}".'
-    );
-  }
+  // @if $value and type-of($value) != 'color' {
+  //   $error-message: k-log(
+  //     '"#{$value}" is not a valid color in "#{$k-module}".'
+  //   );
+  // }
 
   @return $value;
 }
