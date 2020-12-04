@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { useState, PureComponent } from 'react'
 import styled from 'styled-components'
 import { TextInput } from '../../../components/form/text-input'
 import { PasswordIcon } from '../../../components/icons/password-icon'
@@ -9,83 +9,80 @@ import { pxToRem } from '../../../helpers/utils/typography'
 const StyledPasswordInput = styled.div`
   position: relative;
   display: flex;
-`
 
-const StyledTextInput = styled(TextInput)`
-  padding-right: ${pxToRem(40)};
-`
+  .k-Form-Password__input {
+    padding-right: ${pxToRem(40)};
+  }
 
-const StyledIcon = styled.span`
-  display: flex;
-  position: absolute;
-  z-index: 1;
-  padding: 0 ${pxToRem(11)};
-  right: 0;
-  top: 0;
-  bottom: 0;
-  cursor: pointer;
+  .k-Form-Password__icon {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    padding: 0 ${pxToRem(11)};
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
 
-  &[aria-pressed='true'] {
-    svg {
-      fill: ${COLORS.primary1};
-      transition: all 0.2s;
+    &[aria-pressed='true'] {
+      svg {
+        fill: ${COLORS.primary1};
+        transition: all 0.2s;
+      }
     }
   }
 `
 
-export class PasswordInput extends PureComponent {
-  static propTypes = {
-    iconLabel: PropTypes.string.isRequired,
-    hiddenIconLabel: PropTypes.string.isRequired,
-    name: PropTypes.string,
+export const PasswordInput = ({
+  name,
+  iconLabel,
+  hiddenIconLabel,
+  ...others
+}) => {
+
+  const [isHidden, setIsHidden ] = useState(true)
+  const type = isHidden ? 'password' : 'text'
+  const active = !isHidden
+  const iconTitle = isHidden ? iconLabel : hiddenIconLabel
+
+  const handleClick = () => {
+    setIsHidden(!isHidden)
   }
 
-  static defaultProps = {
-    name: 'password',
-  }
-
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      isHidden: true,
-    }
-  }
-
-  handleClick = () => {
-    this.setState({ isHidden: !this.state.isHidden })
-  }
-
-  handleKeyDown = event => {
+  const handleKeyDown = () => {
     const enterKeyCode = 13
 
-    if (event.keyCode == enterKeyCode) {
-      this.handleClick()
-    }
-  }
+    if (event.keyCode == enterKeyCode) { handleClick }
+  } 
 
-  render() {
-    const { name, iconLabel, hiddenIconLabel, ...others } = this.props
+  return (
+    <StyledPasswordInput>
+      <TextInput
+        className="k-Form-Password__input"
+        {...others}
+        name={name}
+        type={type}
+      />
+      <span
+        title={iconTitle}
+        onClick={handleClick}
+        onKeyDown={handleKeyDown}
+        aria-pressed={active}
+        tabIndex="0"
+        className="k-Form-Password__icon"
+      >
+        <PasswordIcon />
+      </span>
+    </StyledPasswordInput>
+  )
+}
 
-    const type = this.state.isHidden ? 'password' : 'text'
+PasswordInput.propTypes = {
+  iconLabel: PropTypes.string.isRequired,
+  hiddenIconLabel: PropTypes.string.isRequired,
+  name: PropTypes.string,
+}
 
-    const active = !this.state.isHidden
-
-    const iconTitle = this.state.isHidden ? iconLabel : hiddenIconLabel
-
-    return (
-      <StyledPasswordInput>
-        <StyledTextInput {...others} name={name} type={type} />
-        <StyledIcon
-          title={iconTitle}
-          onClick={this.handleClick}
-          onKeyDown={this.handleKeyDown}
-          aria-pressed={active}
-          tabIndex="0"
-        >
-          <PasswordIcon />
-        </StyledIcon>
-      </StyledPasswordInput>
-    )
-  }
+PasswordInput.defaultProps = {
+  name: 'password',
 }
