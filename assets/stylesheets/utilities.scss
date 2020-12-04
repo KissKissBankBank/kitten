@@ -27,6 +27,8 @@ $k-typography: k-typography-definition((
 @include k-utilities-border;
 @include k-utilities-cursor;
 @include k-utilities-hidden;
+@include k-utilities-block;
+@include k-utilities-blockInline;
 @include k-utilities-event;
 @include k-utilities-flex;
 @include k-utilities-justifyContent;

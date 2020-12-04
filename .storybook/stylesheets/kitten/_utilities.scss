@@ -15,6 +15,8 @@
 
 // Display
 @include k-utilities-hidden;
+@include k-utilities-block;
+@include k-utilities-block-inline;
 
 // Event
 @include k-utilities-event;

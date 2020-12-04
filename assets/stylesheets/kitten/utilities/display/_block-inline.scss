@@ -1,0 +1,84 @@
+/// Utilities to display items as inline blocks according to media-queries.
+///
+/// @group display
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-block-inline;
+///
+/// @example html
+///
+///   <div class="k-u-block-inline">…</div>
+///
+///   <div class="k-u-block-inline@xxs-down">…</div>
+///   <div class="k-u-block-inline@xs-down">…</div>
+///   <div class="k-u-block-inline@s-down">…</div>
+///   <div class="k-u-block-inline@m-down">…</div>
+///   <div class="k-u-block-inline@l-down">…</div>
+///
+///   <div class="k-u-block-inline@xs-up">…</div>
+///   <div class="k-u-block-inline@s-up">…</div>
+///   <div class="k-u-block-inline@m-up">…</div>
+///   <div class="k-u-block-inline@l-up">…</div>
+///   <div class="k-u-block-inline@xl-up">…</div>
+///
+///   <div class="k-u-block-inline--important">…</div>
+///
+///   <div class="k-u-block-inline@xxs-down--important">…</div>
+///   <div class="k-u-block-inline@xs-down--important">…</div>
+///   <div class="k-u-block-inline@s-down--important">…</div>
+///   <div class="k-u-block-inline@m-down--important">…</div>
+///   <div class="k-u-block-inline@l-down--important">…</div>
+///
+///   <div class="k-u-block-inline@xs-up--important">…</div>
+///   <div class="k-u-block-inline@s-up--important">…</div>
+///   <div class="k-u-block-inline@m-up--important">…</div>
+///   <div class="k-u-block-inline@l-up--important">…</div>
+///   <div class="k-u-block-inline@xl-up--important">…</div>
+
+@mixin k-utilities-block-inline {
+  .k-u-block-inline {
+    display: inline-block;
+
+    &--important {
+      display: inline-block !important;
+    }
+  }
+
+  @each $name, $query in $k-media-queries {
+
+    @if $name != "xl" {
+      .k-u-block-inline\@#{$name}-down {
+        @include k-media-max($name) {
+          display: inline-block;
+
+          &--important {
+            display: inline-block !important;
+          }
+        }
+      }
+    }
+
+    @if $name != "xxs" {
+      .k-u-block-inline\@#{$name}-up {
+        @include k-media-min($name) {
+          display: inline-block;
+
+          &--important {
+            display: inline-block !important;
+          }
+        }
+      }
+    }
+
+    .k-u-block-inline\@#{$name} {
+      @include k-media-within($name) {
+        display: inline-block;
+
+        &--important {
+          display: inline-block !important;
+        }
+      }
+    }
+  }
+}

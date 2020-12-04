@@ -1,0 +1,47 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/CSS Utilities/Display/Hidden" />
+
+# Cursor
+
+Display utilities to hide an element.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/display/_hidden.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/display/_hidden.scss)
+
+## Usage
+
+Utility to hide items according to media-queries.
+Can be used with the [block](?path=/docs/documentation-css-utilities-display-block--page) and the [inline block](?path=/docs/documentation-css-utilities-display-block-inline--page) utility.
+
+The class name has the form `k-u-hidden`.
+
+**For better effect with the Hidden utility, when not using the utilities.css stylesheet, the `k-utilities-block` and `k-utilities-blockInline` mixins have to be imported after the `k-utilities-hidden` util.**
+
+```scss
+@include k-utilities-hidden;
+@include k-utilities-block;
+@include k-utilities-blockInline;
+```
+
+## Examples
+
+<Canvas>
+<ul>
+  <li>
+    <span className="k-u-hidden">I'm always hidden</span>
+  </li>
+  <li>
+    <span className="k-u-hidden@xs-down">I'm hidden at and below XS</span>
+  </li>
+  <li>
+    <span className="k-u-hidden@s-up">I'm hidden at and above S</span>
+  </li>
+  <li>
+    <span className="k-u-hidden@xs-down k-u-hidden@l-up">
+      I'm hidden at and below XS and at and above L
+    </span>
+  </li>
+</ul>
+</Canvas>
