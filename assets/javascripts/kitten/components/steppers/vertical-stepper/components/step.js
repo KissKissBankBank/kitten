@@ -24,6 +24,7 @@ export const Step = ({
     <StyledItem
       className={classNames('k-Steppers--VerticalStepper__item', {
         'k-Steppers--VerticalStepper__item--hasActiveLine': success,
+        'k-Steppers--VerticalStepper__item--bridge': bridge,
       })}
     >
       <StyledLink
@@ -78,15 +79,15 @@ const StyledItem = styled.li`
       display: none;
     }
   }
+
+  &.k-Steppers--VerticalStepper__item--bridge {
+    padding: ${pxToRem(8)} 0;
+  }
 `
 
 const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
-  
-  .k-Steppers--VerticalStepper__item--inactiveLine {
-    display: none;
-  }
 
   ${({ as, onClick }) =>
     (as === 'a' || onClick) &&
@@ -114,7 +115,7 @@ const StyledLink = styled.a`
         }
       }
 
-      .k-Steppers--VerticalStepper__item--inactiveLine {
+      &.k-Steppers--VerticalStepper__item--inactiveLine {
         transform: translateX(0);
       }
     `}
