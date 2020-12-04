@@ -4,7 +4,7 @@
 ///
 /// @example scss - Usage
 ///
-///   @include k-utilities-alignItems;
+///   @include k-utilities-align-items;
 ///
 /// @example html
 ///
@@ -78,7 +78,7 @@
   }
 }
 
-@mixin k-utilities-alignItems {
+@mixin k-utilities-align-items {
   @include k-u-flex-alignItems('normal', normal);
   @include k-u-flex-alignItems('stretch', stretch);
   @include k-u-flex-alignItems('center', center);

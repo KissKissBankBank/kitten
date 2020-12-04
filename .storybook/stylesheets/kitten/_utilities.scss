@@ -16,16 +16,16 @@
 // Display
 @include k-utilities-hidden;
 @include k-utilities-block;
-@include k-utilities-block-inline;
+@include k-utilities-inline-block;
 
 // Event
 @include k-utilities-event;
 
 // Flex
 @include k-utilities-flex;
-@include k-utilities-justifyContent;
-@include k-utilities-alignItems;
-@include k-utilities-flexDirection;
+@include k-utilities-justify-content;
+@include k-utilities-align-items;
+@include k-utilities-flex-direction;
 
 // Image
 @include k-utilities-responsive;

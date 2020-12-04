@@ -28,12 +28,12 @@ $k-typography: k-typography-definition((
 @include k-utilities-cursor;
 @include k-utilities-hidden;
 @include k-utilities-block;
-@include k-utilities-blockInline;
+@include k-utilities-inline-block;
 @include k-utilities-event;
 @include k-utilities-flex;
-@include k-utilities-justifyContent;
-@include k-utilities-alignItems;
-@include k-utilities-flexDirection;
+@include k-utilities-justify-content;
+@include k-utilities-align-items;
+@include k-utilities-flex-direction;
 @include k-utilities-responsive;
 @include k-utilities-link;
 @include k-utilities-reset-button;

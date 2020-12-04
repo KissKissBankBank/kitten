@@ -4,7 +4,7 @@
 ///
 /// @example scss - Usage
 ///
-///   @include k-utilities-justifyContent;
+///   @include k-utilities-justify-content;
 ///
 /// @example html
 ///
@@ -78,7 +78,7 @@
   }
 }
 
-@mixin k-utilities-justifyContent {
+@mixin k-utilities-justify-content {
   @include k-u-flex-justifyContent('normal', center);
   @include k-u-flex-justifyContent('center', center);
   @include k-u-flex-justifyContent('start', flex-start);

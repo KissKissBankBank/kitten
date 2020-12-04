@@ -20,12 +20,13 @@
       display: flex !important;
     }
 
-    &-inline {
-      display: inline-flex;
+  }
 
-      &--important {
-        display: inline-flex !important;
-      }
+  .k-u-inlineFlex {
+    display: inline-flex;
+
+    &--important {
+      display: inline-flex !important;
     }
   }
 
@@ -41,7 +42,7 @@
         }
       }
 
-      .k-u-flex-inline\@#{$name}-down {
+      .k-u-inlineFlex\@#{$name}-down {
         @include k-media-max($name) {
           display: inline-flex;
 
@@ -63,7 +64,7 @@
         }
       }
 
-      .k-u-flex-inline\@#{$name}-up {
+      .k-u-inlineFlex\@#{$name}-up {
         @include k-media-min($name) {
           display: inline-flex;
 

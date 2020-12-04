@@ -4,7 +4,7 @@
 ///
 /// @example scss - Usage
 ///
-///   @include k-utilities-direction;
+///   @include k-utilities-flex-direction;
 ///
 /// @example html
 ///
@@ -80,7 +80,7 @@
   }
 }
 
-@mixin k-utilities-flexDirection {
+@mixin k-utilities-flex-direction {
   @include k-u-flex-direction('row', row);
   @include k-u-flex-direction('rowReverse', row-reverse);
   @include k-u-flex-direction('column', column);
