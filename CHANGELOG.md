@@ -6,12 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add CSS utilities:
   - `k-u-flex`
-  - `k-u-flex-inline`
+  - `k-u-inlineFlex`
   - `k-u-flex-alignItems-*`
   - `k-u-flex-direction-*`
   - `k-u-flex-justifyContent-*`
   - `k-u-block`
-  - `k-u-block-inline`
+  - `k-u-inlineBlock`
   and docs.
 
 - Feature: Add type to `CreditCardForm` values.
