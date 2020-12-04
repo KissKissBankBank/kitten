@@ -26,7 +26,14 @@ export const Step = ({
         'k-Steppers--VerticalStepper__item--hasActiveLine': success,
       })}
     >
-      <StyledLink as={other.href ? 'a' : 'span'} {...other} variant={variant}>
+      <StyledLink
+        as={other.href ? 'a' : 'span'}
+        {...other}
+        variant={variant}
+        className={classNames(
+         { 'k-Steppers--VerticalStepper__item--inactiveLine' : disabled || error },
+        )}
+      >
         <Status
           success={success}
           valid={valid}
@@ -76,6 +83,11 @@ const StyledItem = styled.li`
 const StyledLink = styled.a`
   display: inline-flex;
   align-items: center;
+  
+  .k-Steppers--VerticalStepper__item--inactiveLine {
+    display: none;
+  }
+
   ${({ as, onClick }) =>
     (as === 'a' || onClick) &&
     css`
@@ -100,6 +112,10 @@ const StyledLink = styled.a`
         .${LINK_CLASSNAME} {
           color: ${COLORS.primary3};
         }
+      }
+
+      .k-Steppers--VerticalStepper__item--inactiveLine {
+        transform: translateX(0);
       }
     `}
 
