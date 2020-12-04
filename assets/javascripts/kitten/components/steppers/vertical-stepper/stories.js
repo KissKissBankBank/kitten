@@ -17,6 +17,67 @@ export default {
   component: VerticalStepper,
 }
 
+export const WithOrionVariant = () => {
+  return (
+    <StoryContainer>
+      <VerticalStepper variant="orion">
+        <VerticalStepper.Step
+          success
+          href="#"
+          statusProps={{ title: 'Étape validée' }}
+          variant="orion"
+        >
+          <VerticalStepper.Title variant="orion">ÉTAPE 1</VerticalStepper.Title>
+          <Text weight="light" size="tiny">
+            Décrivez-nous votre projet
+            <VerticalStepper.Link variant="orion">
+              Modifier
+            </VerticalStepper.Link>
+          </Text>
+        </VerticalStepper.Step>
+
+        <VerticalStepper.Step
+          valid
+          href="#"
+          statusProps={{ title: 'Étape complétée' }}
+          variant="orion"
+        >
+          <VerticalStepper.Title variant="orion">ÉTAPE 2</VerticalStepper.Title>
+          <Text weight="light" size="tiny">
+            Créez votre projet (nom, durée, ...)
+          </Text>
+        </VerticalStepper.Step>
+
+        <VerticalStepper.Step variant="orion" bridge />
+
+        <VerticalStepper.Step
+          error
+          statusProps={{ title: 'Étape à commencer' }}
+          variant="orion"
+        >
+          <VerticalStepper.Title variant="orion">ÉTAPE 3</VerticalStepper.Title>
+          <Text weight="light" size="tiny">
+            Préparez votre campagne (contenu de votre page, contreparties...)
+          </Text>
+        </VerticalStepper.Step>
+
+        <VerticalStepper.Step
+          disabled
+          statusProps={{ title: 'Étape bloquée' }}
+          variant="orion"
+        >
+          <VerticalStepper.Title variant="orion">ÉTAPE 4</VerticalStepper.Title>
+
+          <Text weight="light" size="tiny">
+            Soumettez votre projet (votre coach vérifie votre projet et vous
+            conseille)
+          </Text>
+        </VerticalStepper.Step>
+      </VerticalStepper>
+    </StoryContainer>
+  )
+}
+
 export const Default = () => {
   return (
     <StoryContainer>
@@ -37,12 +98,6 @@ export const Default = () => {
           statusProps={{ title: 'Étape complétée' }}
         >
           <VerticalStepper.Title>Réseaux</VerticalStepper.Title>
-
-          <VerticalStepper.List>
-            <VerticalStepper.List.Item>Facebook</VerticalStepper.List.Item>
-            <VerticalStepper.List.Item>Twitter</VerticalStepper.List.Item>
-            <VerticalStepper.List.Item>…</VerticalStepper.List.Item>
-          </VerticalStepper.List>
 
           <VerticalStepper.Link>Éditer</VerticalStepper.Link>
         </VerticalStepper.Step>

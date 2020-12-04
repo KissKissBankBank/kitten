@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownSelect /> should match its snapshot with props 1`] = `
+<div
+  className="sc-bdVaJa llHAMW k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
+>
+  <label
+    className="k-Label k-Form-Dropdown__label k-u-margin-bottom-single"
+    htmlFor="dropdown-select-test"
+    id="dropdown-select-test_element-label"
+    onClick={[Function]}
+  >
+    DropdownSelect test
+  </label>
+  <button
+    aria-expanded={true}
+    aria-haspopup="listbox"
+    aria-labelledby="dropdown-select-test_element-label dropdown-select-test"
+    className="k-Form-DropdownSelect__button"
+    id="dropdown-select-test"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    type="button"
+    value={null}
+  >
+    <span
+      className="k-Form-DropdownSelect__content k-Form-DropdownSelect__placeholder"
+    >
+      Select
+    </span>
+    <span
+      aria-hidden={true}
+      className="k-Form-DropdownSelect__button__arrowBox"
+    >
+      <svg
+        className="k-ArrowIcon k-ArrowIcon--top"
+        height="5.64"
+        viewBox="0 0 6 6"
+        width="8.48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        
+        <path
+          d="M6 0H0v6h2V2h4z"
+        />
+      </svg>
+    </span>
+    <span
+      className="k-Form-DropdownSelect__button__statusBadges"
+    />
+  </button>
+  <ul
+    aria-labelledby="dropdown-select-test_element-label"
+    className="k-Form-Dropdown__list"
+    id="dropdown-select-test_element-menu"
+    onBlur={[Function]}
+    onKeyDown={[Function]}
+    onMouseLeave={[Function]}
+    role="listbox"
+    tabIndex={-1}
+  />
+</div>
+`;

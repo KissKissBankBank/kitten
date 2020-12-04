@@ -2,7 +2,7 @@ import React from 'react'
 import EmailPreferences from './index'
 
 export default {
-  title: 'Pages/EmailPreferences',
+  title: 'pages/EmailPreferences',
   component: EmailPreferences,
 }
 

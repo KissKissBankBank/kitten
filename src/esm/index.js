@@ -66,7 +66,12 @@ export { ExpandBoard } from './components/expandable/expand-board'; // Form
 
 export { Field } from './components/form/field';
 export { TextInputWithButton } from './components/form/text-input-with-button';
+export { CheckboxSet } from './components/form/checkbox-set';
 export { Checkbox } from './components/form/checkbox';
+export { CreditCardForm } from './components/form/credit-card-form';
+export { DropdownPhoneSelect } from './components/form/dropdown-phone-select';
+export { DropdownSelectWithInput } from './components/form/dropdown-select-with-input';
+export { DropdownSelect } from './components/form/dropdown-select';
 export { FormActions } from './components/form/form-actions';
 export { FormAmountAndCurrency } from './components/form/form-amount-and-currency';
 export { FormPhoneNumber } from './components/form/form-phone-number';
@@ -74,6 +79,7 @@ export { FormRow } from './components/form/form-row';
 export { Label } from './components/form/label';
 export { LocationInput } from './components/form/location-input';
 export { PasswordInput } from './components/form/password-input';
+export { PillNumberInput } from './components/form/pill-number-input';
 export { RadioButtonSet } from './components/form/radio-button-set';
 export { RadioButton } from './components/form/radio-button';
 export { RichTextInput } from './components/form/rich-text-input';

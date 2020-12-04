@@ -7,7 +7,7 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TextInput = exports.digitsStyles = void 0;
+exports.TextInput = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -25,7 +25,7 @@ var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/ge
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
@@ -37,72 +37,21 @@ var _typographyConfig = _interopRequireDefault(require("../../../constants/typog
 
 var _screenConfig = require("../../../constants/screen-config");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
-var borderWidth = (0, _typography.pxToRem)(2);
-var verticalPadding = (0, _typography.pxToRem)(10);
-var styledTextInput = (0, _styledComponents.css)(["font-size:", ";line-height:1.3;", ";box-sizing:border-box;border-width:", ";border-style:solid;border-radius:0;width:100%;height:", ";padding:", " ", ";appearance:none;background-color:", ";color:", ";border-color:", ";outline:none;", ";::placeholder{color:", ";}:focus{outline:none;color:", ";border-color:", ";}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}", " ", " &:invalid{box-shadow:none;outline:none;&:not(:focus){color:", ";border-color:", ";}}", " ", " ", " ", ""], (0, _typography.stepToRem)(-1), _typographyConfig.default.fontStyles.light, borderWidth, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), _colorsConfig.default.background1, _colorsConfig.default.font1, _colorsConfig.default.line1, function (_ref) {
-  var digits = _ref.digits;
-  return digitsStyles(digits);
-}, _colorsConfig.default.font2, _colorsConfig.default.font1, _colorsConfig.default.line2, _colorsConfig.default.font2, _colorsConfig.default.line1, _colorsConfig.default.line1, function (_ref2) {
-  var valid = _ref2.valid;
-  return valid && (0, _styledComponents.css)(["&:not(:focus){color:", ";border-color:", ";}"], _colorsConfig.default.tertiary2, _colorsConfig.default.tertiary2);
-}, function (_ref3) {
-  var error = _ref3.error;
-  return error && (0, _styledComponents.css)(["&:not(:focus){color:", ";border-color:", ";}"], _colorsConfig.default.error3, _colorsConfig.default.error3);
-}, _colorsConfig.default.error3, _colorsConfig.default.error3, function (_ref4) {
-  var tiny = _ref4.tiny;
-  return tiny && (0, _styledComponents.css)(["height:", ";"], (0, _typography.pxToRem)(40));
-}, function (_ref5) {
-  var huge = _ref5.huge;
-  return huge && (0, _styledComponents.css)(["height:", ";@media (min-width:", "px){height:", ";font-size:", ";}"], (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(80), (0, _typography.stepToRem)(0));
-}, function (_ref6) {
-  var giant = _ref6.giant;
-  return giant && (0, _styledComponents.css)(["height:", ";@media (min-width:", "px){height:", ";font-size:", ";}"], (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(90), (0, _typography.stepToRem)(0));
-}, function (_ref7) {
-  var center = _ref7.center;
-  return center && (0, _styledComponents.css)(["text-align:center;"]);
-});
-
-var StyledTextarea = _styledComponents.default.div.withConfig({
-  displayName: "text-input__StyledTextarea",
-  componentId: "sc-11wej6v-0"
-})(["position:relative;display:flex;"]);
-
 var StyledInput = _styledComponents.default.input.withConfig({
   displayName: "text-input__StyledInput",
+  componentId: "sc-11wej6v-0"
+})(["--input-padding-horizontal:", ";--input-border-width:", ";font-size:", ";line-height:1em;", ";box-sizing:border-box;border-width:", ";border-width:var(--input-border-width);border-style:solid;border-radius:0;width:100%;appearance:none;background-color:", ";color:", ";border-color:", ";outline:none;::placeholder{color:", ";}height:", ";&.k-Form-TextInput--tiny{height:", ";}&.k-Form-TextInput--huge{height:", ";@media (min-width:", "px){height:", ";font-size:", ";}}&.k-Form-TextInput--giant{height:", ";@media (min-width:", "px){height:", ";font-size:", ";}}padding:", " ", ";padding:", " var(--input-padding-horizontal);&.k-Form-TextInput--orion{border-radius:", ";height:", ";@media (min-width:", "px){--input-padding-horizontal:", ";border-radius:", ";height:", ";font-size:", ";@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){padding:", " ", ";}}}&.k-Form-TextInput--alignCenter{text-align:center;}:disabled{color:", ";border-color:", ";background-color:", ";cursor:not-allowed;}&.k-Form-TextInput--valid{color:", ";border-color:", ";}&.k-Form-TextInput--error{color:", ";border-color:", ";}&:invalid{box-shadow:none;outline:none;color:", ";border-color:", ";}&:focus{outline:none;color:", ";border-color:", ";}&.k-Form-TextInput-hasDigits{width:calc( var(--input-content-width) * 1ch + (2 * (var(--input-padding-horizontal) + var(--input-border-width))) );}&.k-Form-TextInput-hasDigits_2{text-align:center;}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){&.k-Form-TextInput-hasDigits_2{text-align:center;width:calc(2em + ", ");&.k-Form-TextInput--orion{width:calc(2em + ", ");@media (min-width:", "px){width:calc(2em + ", ");}}}&.k-Form-TextInput-hasDigits_4{width:calc(4em + ", ");&.k-Form-TextInput--orion{width:calc(4em + ", ");@media (min-width:", "px){width:calc(4em + ", ");}}}&.k-Form-TextInput-hasDigits_12{width:calc(12em + ", ");&.k-Form-TextInput--orion{width:calc(12em + ", ");@media (min-width:", "px){width:calc(12em + ", ");}}}}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(2), (0, _typography.stepToRem)(-1), _typographyConfig.default.fontStyles.light, (0, _typography.pxToRem)(2), _colorsConfig.default.background1, _colorsConfig.default.font1, _colorsConfig.default.line1, _colorsConfig.default.font2, (0, _typography.pxToRem)(50), (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(80), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(70), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(90), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(6), (0, _typography.pxToRem)(60), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(8), (0, _typography.pxToRem)(70), (0, _typography.stepToRem)(0), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(30), _colorsConfig.default.font2, _colorsConfig.default.line1, _colorsConfig.default.line1, _colorsConfig.default.tertiary2, _colorsConfig.default.tertiary2, _colorsConfig.default.error3, _colorsConfig.default.error3, _colorsConfig.default.error3, _colorsConfig.default.error3, _colorsConfig.default.font1, _colorsConfig.default.line2, (0, _typography.pxToRem)(2 * (10 + 2)), (0, _typography.pxToRem)(2 * (15 + 2)), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(2 * (30 + 2)), (0, _typography.pxToRem)(2 * (10 + 2)), (0, _typography.pxToRem)(2 * (15 + 2)), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(2 * (30 + 2)), (0, _typography.pxToRem)(2 * (10 + 2)), (0, _typography.pxToRem)(2 * (15 + 2)), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(2 * (30 + 2)));
+
+var StyledTextareaContainer = _styledComponents.default.div.withConfig({
+  displayName: "text-input__StyledTextareaContainer",
   componentId: "sc-11wej6v-1"
-})(["", ""], styledTextInput);
-
-var StyledInputTextarea = _styledComponents.default.textarea.withConfig({
-  displayName: "text-input__StyledInputTextarea",
-  componentId: "sc-11wej6v-2"
-})(["", " height:initial;resize:vertical;:disabled{resize:none;}"], styledTextInput);
-
-var StyledGradientTextarea = _styledComponents.default.div.withConfig({
-  displayName: "text-input__StyledGradientTextarea",
-  componentId: "sc-11wej6v-3"
-})(["position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),", " );pointer-events:none;", ":disabled + &{display:none;}"], verticalPadding, verticalPadding, borderWidth, verticalPadding, _colorsConfig.default.background1, StyledInputTextarea);
-
-var digitsStyles = function digitsStyles(digits) {
-  var horizontalPadding = 15;
-  var digitLength = 15;
-
-  switch ("".concat(digits)) {
-    case '2':
-      return (0, _styledComponents.css)(["width:", ";text-align:center;"], (0, _typography.pxToRem)(horizontalPadding * 2 + digitLength * 2));
-
-    case '6':
-      return (0, _styledComponents.css)(["width:", ";"], (0, _typography.pxToRem)(horizontalPadding * 2 + digitLength * 6));
-
-    case '12':
-      return (0, _styledComponents.css)(["width:", ";"], (0, _typography.pxToRem)(horizontalPadding * 2 + digitLength * 12));
-  }
-};
-
-exports.digitsStyles = digitsStyles;
+})(["position:relative;display:flex;textarea.k-Form-TextInput{height:initial;resize:vertical;line-height:1.3;&:disabled{resize:none;}padding-bottom:0;&.k-Form-TextInput--orion{padding:", " ", " 0;min-height:", ";@media (min-width:", "px){padding:", " ", " 0;min-height:", ";}}}.k-Form-TextInput__textareaGradient{position:absolute;left:", ";right:", ";bottom:", ";height:", ";background-image:linear-gradient( to bottom,rgba(255,255,255,0),", " );pointer-events:none;textarea.k-Form-TextInput:disabled + &{display:none;}}"], (0, _typography.pxToRem)(21), (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(60), _screenConfig.ScreenConfig.M.min, (0, _typography.pxToRem)(25), (0, _typography.pxToRem)(30), (0, _typography.pxToRem)(70), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(10), (0, _typography.pxToRem)(3), (0, _typography.pxToRem)(10), _colorsConfig.default.background1);
 
 var TextInput = /*#__PURE__*/function (_PureComponent) {
   (0, _inherits2.default)(TextInput, _PureComponent);
@@ -130,37 +79,55 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
           giant = _this$props.giant,
           center = _this$props.center,
           tag = _this$props.tag,
-          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "name", "digits", "tiny", "huge", "giant", "center", "tag"]);
+          variant = _this$props.variant,
+          className = _this$props.className,
+          style = _this$props.style,
+          others = (0, _objectWithoutProperties2.default)(_this$props, ["valid", "error", "disabled", "name", "digits", "tiny", "huge", "giant", "center", "tag", "variant", "className", "style"]);
+      var digitsClass = !!digits ? "k-Form-TextInput-hasDigits k-Form-TextInput-hasDigits_".concat(digits) : null;
 
       if (tag === 'textarea') {
-        return /*#__PURE__*/_react.default.createElement(StyledTextarea, null, /*#__PURE__*/_react.default.createElement(StyledInputTextarea, (0, _extends2.default)({
+        return /*#__PURE__*/_react.default.createElement(StyledTextareaContainer, {
+          className: (0, _classnames.default)('k-Form-TextInput__textareaContainer', "k-Form-TextInput__textareaContainer--".concat(variant))
+        }, /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
           ref: function ref(input) {
             return _this.input = input;
           },
-          valid: valid,
-          error: error,
+          as: "textarea",
           disabled: disabled,
-          tiny: tiny,
-          digits: digits,
-          name: name,
-          huge: huge,
-          giant: giant,
-          center: center
-        }, others)), /*#__PURE__*/_react.default.createElement(StyledGradientTextarea, null));
+          className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), {
+            'k-Form-TextInput--valid': valid,
+            'k-Form-TextInput--error': error,
+            'k-Form-TextInput--disabled': disabled,
+            'k-Form-TextInput--tiny': tiny,
+            'k-Form-TextInput--huge': huge,
+            'k-Form-TextInput--giant': giant,
+            'k-Form-TextInput--alignCenter': center
+          }),
+          style: !!digits ? (0, _extends2.default)({
+            '--input-content-width': digits
+          }, style) : style
+        }, others)), /*#__PURE__*/_react.default.createElement("div", {
+          className: "k-Form-TextInput__textareaGradient"
+        }));
       } else {
         return /*#__PURE__*/_react.default.createElement(StyledInput, (0, _extends2.default)({
           ref: function ref(input) {
             return _this.input = input;
           },
-          valid: valid,
-          error: error,
           disabled: disabled,
-          tiny: tiny,
-          digits: digits,
           name: name,
-          huge: huge,
-          giant: giant,
-          center: center
+          className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), {
+            'k-Form-TextInput--valid': valid,
+            'k-Form-TextInput--error': error,
+            'k-Form-TextInput--disabled': disabled,
+            'k-Form-TextInput--tiny': tiny,
+            'k-Form-TextInput--huge': huge,
+            'k-Form-TextInput--giant': giant,
+            'k-Form-TextInput--alignCenter': center
+          }),
+          style: !!digits ? (0, _extends2.default)({
+            '--input-content-width': digits
+          }, style) : style
         }, others));
       }
     }
@@ -179,7 +146,8 @@ TextInput.propTypes = {
   center: _propTypes.default.bool,
   disabled: _propTypes.default.bool,
   name: _propTypes.default.string,
-  digits: _propTypes.default.number
+  digits: _propTypes.default.number,
+  variant: _propTypes.default.string
 };
 TextInput.defaultProps = {
   tag: 'input',
@@ -192,5 +160,6 @@ TextInput.defaultProps = {
   center: false,
   disabled: false,
   name: 'text',
-  digits: null
+  digits: null,
+  variant: 'andromeda'
 };

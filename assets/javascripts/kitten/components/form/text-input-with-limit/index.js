@@ -1,64 +1,60 @@
 import React, { useState } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { TextInput } from '../../../components/form/text-input'
 import PropTypes from 'prop-types'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
-
-const errorColor = css`
-  ${({ error }) =>
-    error &&
-    css`
-      color: ${COLORS.error};
-    `}
-`
-
-const FocusTextInput = styled(TextInput)`
-  :focus + div {
-    color: ${COLORS.font1};
-    ${errorColor}
-  }
-`
+import classNames from 'classnames'
 
 const StyledTextInputWithLimit = styled.div`
   position: relative;
   display: block;
-`
 
-const StyledCounter = styled.div`
-  ${TYPOGRAPHY.fontStyles.regular};
-  font-size: ${stepToRem(-2)};
-  line-height: 1.3;
-  position: absolute;
-  right: 0;
-  top: 0;
+  .k-Form-TextInputWithLimit__limitNumber {
+    ${TYPOGRAPHY.fontStyles.regular};
+    font-size: ${stepToRem(-2)};
+    line-height: 1.3;
+    position: absolute;
+    right: ${pxToRem(5)};
+    top: ${pxToRem(5)};
 
-  margin-top: ${pxToRem(5)};
-  margin-right: ${pxToRem(5)};
+    color: ${COLORS.font2};
+    text-shadow: ${pxToRem(2)} 0 0 ${COLORS.background1},
+      -${pxToRem(2)} 0 0 ${COLORS.background1},
+      0 ${pxToRem(2)} 0 ${COLORS.background1},
+      0 -${pxToRem(2)} 0 ${COLORS.background1},
+      ${pxToRem(1)} ${pxToRem(1)} ${COLORS.background1},
+      -${pxToRem(1)} -${pxToRem(1)} 0 ${COLORS.background1},
+      ${pxToRem(1)} -${pxToRem(1)} 0 ${COLORS.background1},
+      -${pxToRem(1)} ${pxToRem(1)} 0 ${COLORS.background1};
+    pointer-events: none;
 
-  color: ${COLORS.font2};
-  text-shadow: ${pxToRem(2)} 0 0 ${COLORS.background1},
-    -${pxToRem(2)} 0 0 ${COLORS.background1},
-    0 ${pxToRem(2)} 0 ${COLORS.background1},
-    0 -${pxToRem(2)} 0 ${COLORS.background1},
-    ${pxToRem(1)} ${pxToRem(1)} ${COLORS.background1},
-    -${pxToRem(1)} -${pxToRem(1)} 0 ${COLORS.background1},
-    ${pxToRem(1)} -${pxToRem(1)} 0 ${COLORS.background1},
-    -${pxToRem(1)} ${pxToRem(1)} 0 ${COLORS.background1};
-  pointer-events: none;
-
-  ${errorColor}
-
-  ${({ disabled }) =>
-    disabled &&
-    css`
+    .k-Form-TextInputWithLimit__limitNumber--disabled {
       text-shadow: none;
-    `}
+    }
+  }
+
+  &:focus + .k-Form-TextInputWithLimit__limitNumber,
+  &:focus-within + .k-Form-TextInputWithLimit__limitNumber {
+    color: ${COLORS.font1};
+  }
+
+  .k-Form-TextInputWithLimit__limitNumber--error {
+    color: ${COLORS.error} !important;
+  }
+
+  .k-Form-TextInput__textareaContainer--orion,
+  .k-Form-TextInput--orion {
+    & + .k-Form-TextInputWithLimit__limitNumber {
+      top: initial;
+      bottom: ${pxToRem(15)};
+      right: ${pxToRem(15)};
+    }
+  }
 `
 
 export const TextInputWithLimit = ({
-  tiny,
   limit,
   onChange,
   disabled,
@@ -68,22 +64,28 @@ export const TextInputWithLimit = ({
 }) => {
   const [textValue] = useState(value || defaultValue)
   const [length, setLength] = useState(textValue.length)
+
   return (
-    <StyledTextInputWithLimit>
-      <FocusTextInput
+    <StyledTextInputWithLimit className="k-Form-TextInputWithLimit">
+      <TextInput
         onChange={e => {
           const value = e.target.value
           setLength(value.length)
           onChange(e)
         }}
         disabled={disabled}
-        tiny={tiny}
         defaultValue={textValue}
         {...others}
+        className={classNames('k-Form-TextInputWithLimit__input')}
       />
-      <StyledCounter error={length > limit} disabled={disabled}>
+      <div
+        className={classNames('k-Form-TextInputWithLimit__limitNumber', {
+          'k-Form-TextInputWithLimit__limitNumber--disabled': disabled,
+          'k-Form-TextInputWithLimit__limitNumber--error': length > limit,
+        })}
+      >
         {limit - length}
-      </StyledCounter>
+      </div>
     </StyledTextInputWithLimit>
   )
 }
@@ -91,7 +93,6 @@ export const TextInputWithLimit = ({
 TextInputWithLimit.propTypes = {
   limit: PropTypes.number,
   disabled: PropTypes.bool,
-  tiny: PropTypes.bool,
   error: PropTypes.bool,
   onChange: PropTypes.func,
   defaultValue: PropTypes.string,
@@ -100,7 +101,6 @@ TextInputWithLimit.propTypes = {
 TextInputWithLimit.defaultProps = {
   limit: 80,
   disabled: false,
-  tiny: false,
   error: false,
   defaultValue: '',
   onChange: () => {},

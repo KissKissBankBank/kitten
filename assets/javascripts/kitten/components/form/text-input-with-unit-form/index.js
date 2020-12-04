@@ -1,41 +1,29 @@
 import React, { PureComponent } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { Marger } from '../../../components/layout/marger'
-import { Grid as KittenGrid, GridCol } from '../../../components/grid/grid'
+import { Grid, GridCol } from '../../../components/grid/grid'
 import { TextInputWithUnit } from '../../../components/form/text-input-with-unit'
 import { Text } from '../../../components/typography/text'
 import { Label } from '../../../components/form/label'
-import { Button as KittenButton } from '../../../components/buttons/button'
+import { Button } from '../../../components/buttons/button'
 import { ScreenConfig } from '../../../constants/screen-config'
+import classNames from 'classnames'
 
 const StyledFormContainer = styled.form`
   margin: 0;
   padding: 0;
-`
 
-const StyledGridPosition = styled(({ align, ...others }) => (
-  <KittenGrid {...others} />
-))`
-  ${({ align }) =>
-    align === 'center' &&
-    css`
-      display: flex;
-      justify-content: center;
-    `}
-`
-
-const StyledButton = styled(({ version, ...others }) => (
-  <KittenButton {...others} />
-))`
-  @media (min-width: ${ScreenConfig.S.min}px) {
-    width: 100%:
+  .k-Form-TextInputWithUnitForm__grid--center {
+    display: flex;
+    justify-content: center;
   }
-  ${({ version }) =>
-    version === 'tiny' &&
-    css`
+
+  .k-Form-TextInputWithUnitForm__submit {
+    @media (min-width: ${ScreenConfig.S.min}px) {
       width: 100%;
-    `}
+    }
+  }
 `
 
 export class TextInputWithUnitForm extends PureComponent {
@@ -105,59 +93,71 @@ export class TextInputWithUnitForm extends PureComponent {
 
     return (
       <StyledFormContainer onSubmit={onFormSubmit}>
-        <Marger top="3" bottom={!inputIsOnError ? 3 : 1}>
-          <StyledGridPosition align={align}>
-            <GridCol
-              col-m={version === 'tiny' ? 0 : 5}
-              col-xs={version === 'tiny' ? 0 : 7}
-            >
-              <Marger bottom="1.5">
-                <Label size="micro" htmlFor={inputId}>
-                  {inputLabel}
-                </Label>
-              </Marger>
-
-              <Marger top="1.5" bottom={inputIsOnError ? 1 : null}>
-                <TextInputWithUnit
-                  error={inputIsOnError}
-                  id={inputId}
-                  type="number"
-                  placeholder={inputPlaceholder}
-                  unit={inputUnit}
-                  disabled={formIsDisabled}
-                  onBlur={onInputBlur}
-                  onChange={onInputChange}
-                  onFocus={onInputFocus}
-                  defaultValue={inputDefaultValue}
-                  autoComplete="off"
-                />
-              </Marger>
-
-              {inputIsOnError && (
-                <Marger top="1">
-                  <Text size="micro" color="error" weight="regular">
-                    {errorMessage}
-                  </Text>
-                </Marger>
-              )}
-            </GridCol>
-          </StyledGridPosition>
-        </Marger>
-
-        <StyledGridPosition align={align}>
-          <StyledButton
-            size="big"
-            modifier="helium"
-            type="submit"
-            aria-label={buttonLabel}
-            onMouseEnter={onButtonMouseEnter}
-            onMouseLeave={onButtonMouseLeave}
-            disabled={formIsDisabled}
-            version={version}
+        <Grid
+          className={classNames(
+            'k-Form-TextInputWithUnitForm__grid',
+            `k-Form-TextInputWithUnitForm__grid--${align}`,
+            'k-u-margin-top-triple',
+            'k-u-margin-bottom-triple',
+            {
+              'k-u-margin-bottom-single--important': inputIsOnError,
+            },
+          )}
+        >
+          <GridCol
+            col-m={version === 'tiny' ? 0 : 5}
+            col-xs={version === 'tiny' ? 0 : 7}
           >
-            {buttonLabel}
-          </StyledButton>
-        </StyledGridPosition>
+            <Marger bottom="1.5">
+              <Label size="micro" htmlFor={inputId}>
+                {inputLabel}
+              </Label>
+            </Marger>
+
+            <Marger top="1.5" bottom={inputIsOnError ? 1 : null}>
+              <TextInputWithUnit
+                error={inputIsOnError}
+                id={inputId}
+                type="number"
+                placeholder={inputPlaceholder}
+                unit={inputUnit}
+                disabled={formIsDisabled}
+                onBlur={onInputBlur}
+                onChange={onInputChange}
+                onFocus={onInputFocus}
+                defaultValue={inputDefaultValue}
+                autoComplete="off"
+              />
+            </Marger>
+
+            {inputIsOnError && (
+              <Marger top="1">
+                <Text size="micro" color="error" weight="regular">
+                  {errorMessage}
+                </Text>
+              </Marger>
+            )}
+          </GridCol>
+        </Grid>
+
+        <Grid>
+          <GridCol col="12" className={`k-u-align-${align}`}>
+            <Button
+              size="big"
+              modifier="helium"
+              type="submit"
+              onMouseEnter={onButtonMouseEnter}
+              onMouseLeave={onButtonMouseLeave}
+              disabled={formIsDisabled}
+              className={classNames(
+                'k-Form-TextInputWithUnitForm__submit',
+                `k-Form-TextInputWithUnitForm__grid--${version}`,
+              )}
+            >
+              {buttonLabel}
+            </Button>
+          </GridCol>
+        </Grid>
       </StyledFormContainer>
     )
   }

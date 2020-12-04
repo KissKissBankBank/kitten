@@ -5,7 +5,6 @@ import { pxToRem } from '../../../helpers/utils/typography'
 export const StyledRewardCard = styled.div`
   background-color: ${COLORS.background1};
   width: 100%;
-  padding: ${pxToRem(15)} 0;
   box-sizing: border-box;
   border: ${pxToRem(2)} solid ${COLORS.line1};
 
@@ -19,7 +18,6 @@ export const StyledRewardCard = styled.div`
     & > * + * {
       margin-left: ${pxToRem(10)};
     }
-
     &.k-RewardCard__diamondBadge--disabled,
     &.k-RewardCard__starredBadge--disabled {
       color: ${COLORS.font2};
@@ -91,8 +89,8 @@ export const StyledRewardCard = styled.div`
        container. */
     flex-grow: 9999;
     flex-basis: ${pxToRem(275)}; /* content min-width */
-    margin: ${pxToRem(15)};
-    max-width: calc(100% - ${pxToRem(15)});
+    margin: ${pxToRem(30)};
+    max-width: calc(100% - ${pxToRem(30)});
   }
 
   .k-RewardCard__rowSide {
@@ -135,21 +133,18 @@ export const StyledRewardCard = styled.div`
   &.k-RewardCard--isDisabled {
     .k-RewardCard__diamondBadge,
     .k-RewardCard__starredBadge {
-      color: ${COLORS.font2};
       cursor: not-allowed;
+      color: ${COLORS.font2};
     }
-
     .k-RewardCard__title {
       color: ${COLORS.font2};
       cursor: not-allowed;
     }
-
     .k-RewardCard__image,
     .k-RewardCard__video {
       filter: grayscale(1) opacity(0.4);
       cursor: not-allowed;
     }
-
     .k-RewardCard__infos {
       color: ${COLORS.font2};
       cursor: not-allowed;

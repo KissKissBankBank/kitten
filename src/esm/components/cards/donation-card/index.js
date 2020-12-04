@@ -23,7 +23,7 @@ import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 var StyledCard = styled.div.withConfig({
   displayName: "donation-card__StyledCard",
   componentId: "sc-19h76fz-0"
-})(["border-width:", ";border-style:solid;border-color:", ";", ""], pxToRem(2), COLORS.line1, function (_ref) {
+})(["border-width:", ";border-style:solid;border-color:", ";padding:0 ", ";", ""], pxToRem(2), COLORS.line1, pxToRem(5), function (_ref) {
   var isDisabled = _ref.isDisabled;
   return isDisabled && css(["filter:grayscale(1) opacity(0.4);cursor:not-allowed;"]);
 });

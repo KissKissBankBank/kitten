@@ -1,12 +1,12 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
+import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
 import React from 'react';
-import styled from 'styled-components';
-var StyledElement = styled.span.withConfig({
-  displayName: "visually-hidden__StyledElement",
-  componentId: "sc-3bas83-0"
-})(["&:not(:focus):not(:active){clip:rect(0 0 0 0);clip-path:inset(100%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px;}"]);
+import classNames from 'classnames';
 export var VisuallyHidden = function VisuallyHidden(_ref) {
-  var props = _extends({}, _ref);
+  var className = _ref.className,
+      props = _objectWithoutProperties(_ref, ["className"]);
 
-  return /*#__PURE__*/React.createElement(StyledElement, props);
+  return /*#__PURE__*/React.createElement("span", _extends({
+    className: classNames(className, 'k-u-a11y-visuallyHidden')
+  }, props));
 };

@@ -12,6 +12,7 @@ export const Default = () => (
     center={boolean('Center', false)}
     error={boolean('Error', false)}
     unit={text('Unit', '€')}
-    digits={number('Digits', 0)}
+    unitWord={text('UnitWord', null)}
+    digits={number('Digits', null)}
   />
 )

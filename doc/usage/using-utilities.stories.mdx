@@ -1,0 +1,48 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/Usage/Using Utilities" />
+
+# Using Utilities
+
+The CSS utilities are class names that can be used for very basic styling.
+
+**When to use it?** You should use these utilities when your HTML element does
+not have more than 3 lines of CSS to style it.
+
+## Importing
+
+```
+@import '@kisskissbankbank/kitten/src/stylesheets/utilities';
+```
+
+## Using the utilities
+
+### Media Queries
+
+Some CSS utilities will have built-in media queries document width references in
+ he form of a short breakpoint name and a direction (`up` or `down`).
+The CSS rule of the utility will be embeded in the corresponding Media Query.
+
+Equivalent to `@media (min-width: ___) {}`
+
+- `@xxs-up`
+- `@xs-up`
+- `@s-up`
+- `@m-up`
+- `@l-up`
+- `@xl-up`
+
+
+Equivalent to `@media (max-width: ___) {}`
+
+- `@xxs-down`
+- `@xs-down`
+- `@s-down`
+- `@m-down`
+- `@l-down`
+- `@xl-down`
+
+### Important
+
+Adding `--important` at the end of any CSS utility will add `!important` at the
+end of the CSS rule.

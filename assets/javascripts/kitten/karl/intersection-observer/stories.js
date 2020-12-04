@@ -22,7 +22,7 @@ const ObservedComponent = ({ children, ...props }) => {
 }
 
 export default {
-  title: 'IntersectionObserver/IntersectionObserverClass',
+  title: 'Helpers/IntersectionObserver/IntersectionObserverClass',
   component: ObservedComponent,
 }
 

@@ -8,7 +8,7 @@ export var RewardCardInfo = function RewardCardInfo(_ref) {
       withMarginBottom = _ref.withMarginBottom,
       disabled = _ref.disabled;
   return /*#__PURE__*/React.createElement(Text, {
-    size: "tiny",
+    size: "micro",
     color: "font1",
     weight: "regular",
     className: classNames('k-RewardCard__infos', {

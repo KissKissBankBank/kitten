@@ -4,7 +4,7 @@ import { Loader } from './loader'
 import { LoaderWithParagraph } from './loader-with-paragraph'
 
 export default {
-  title: 'Loaders',
+  title: 'Loaders/Loaders',
   component: Loader,
 }
 

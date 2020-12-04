@@ -13,6 +13,7 @@ const StyledCard = styled.div`
   border-width: ${pxToRem(2)};
   border-style: solid;
   border-color: ${COLORS.line1};
+  padding: 0 ${pxToRem(5)};
 
   ${({ isDisabled }) =>
     isDisabled &&
