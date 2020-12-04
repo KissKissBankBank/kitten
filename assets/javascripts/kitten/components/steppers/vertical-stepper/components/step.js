@@ -28,12 +28,9 @@ export const Step = ({
       })}
     >
       <StyledLink
-        as={other.href ? 'a' : 'span'}
+        as={other.href && !disabled ? 'a' : 'span'}
         {...other}
         variant={variant}
-        className={classNames(
-         { 'k-Steppers--VerticalStepper__item--inactiveLine' : disabled || error },
-        )}
       >
         <Status
           success={success}
@@ -113,10 +110,6 @@ const StyledLink = styled.a`
         .${LINK_CLASSNAME} {
           color: ${COLORS.primary3};
         }
-      }
-
-      &.k-Steppers--VerticalStepper__item--inactiveLine {
-        transform: translateX(0);
       }
     `}
 
