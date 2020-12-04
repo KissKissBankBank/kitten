@@ -8,6 +8,10 @@
 @import 'kitten/components';
 @import 'kitten/utilities';
 
+// Theme
+@import 'kitten/themes';
+
+// Dependencies
 @import '~react-day-picker/lib/style';
 
 // Custom styles for StoryBook iFrame.
