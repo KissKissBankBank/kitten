@@ -763,6 +763,8 @@ Fix:
 
 - use style-components for `CounterBlock` and fix `title` and `subTitle` props.
 
+- Feature: Add `Card` React component based on `k-Card` CSS component.
+
 ## [2.53.0] - 2020-02-03
 
 Feature:
