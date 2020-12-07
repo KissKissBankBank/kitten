@@ -8,8 +8,9 @@ var useLazyObserver = function useLazyObserver(lazyComponentRef) {
       withLazyObserver = _useState2[0],
       setLazyObserver = _useState2[1];
 
+  var hasNoRef = !(lazyComponentRef === null || lazyComponentRef === void 0 ? void 0 : lazyComponentRef.current);
   useEffect(function () {
-    if (!lazyComponentRef || lazyComponentRef && !lazyComponentRef.current) {
+    if (hasNoRef) {
       console.warn('lazyComponentRef.current does not exist, useLazyObserver will return true');
       setLazyObserver(true);
       return;
@@ -19,7 +20,8 @@ var useLazyObserver = function useLazyObserver(lazyComponentRef) {
       return setLazyObserver(true);
     });
     return function () {
-      return LazyObserver.unobserve(lazyComponentRef.current);
+      if (hasNoRef) return;
+      LazyObserver.unobserve(lazyComponentRef.current);
     };
   }, []);
   return withLazyObserver;

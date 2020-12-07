@@ -43,10 +43,11 @@ var Step = function Step(_ref) {
       other = (0, _objectWithoutProperties2.default)(_ref, ["success", "valid", "error", "waiting", "disabled", "statusProps", "children", "className", "variant", "bridge"]);
   return /*#__PURE__*/_react.default.createElement(StyledItem, {
     className: (0, _classnames.default)('k-Steppers--VerticalStepper__item', {
-      'k-Steppers--VerticalStepper__item--hasActiveLine': success
+      'k-Steppers--VerticalStepper__item--hasActiveLine': success,
+      'k-Steppers--VerticalStepper__item--bridge': bridge
     })
   }, /*#__PURE__*/_react.default.createElement(StyledLink, (0, _extends2.default)({
-    as: other.href ? 'a' : 'span'
+    as: other.href && !disabled ? 'a' : 'span'
   }, other, {
     variant: variant
   }), /*#__PURE__*/_react.default.createElement(_status.Status, (0, _extends2.default)({
@@ -58,7 +59,6 @@ var Step = function Step(_ref) {
     bridge: bridge,
     variant: variant
   }, statusProps)), /*#__PURE__*/_react.default.createElement("div", {
-    error: error,
     className: (0, _classnames.default)(_index.STEP_CLASSNAME, 'k-Steppers--VerticalStepper__step--link--content', {
       'k-Steppers--VerticalStepper__step--link--content--disabled': disabled
     }, className)
@@ -70,7 +70,7 @@ exports.Step = Step;
 var StyledItem = _styledComponents.default.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-1you76f-0"
-})(["padding:", " 0;&:first-of-type{margin-top:0;}&:last-of-type{margin-bottom:0;}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}"], (0, _typography.pxToRem)(15));
+})(["padding:", " 0;&:first-of-type{margin-top:0;}&:last-of-type{margin-bottom:0;}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(8));
 
 var StyledLink = _styledComponents.default.a.withConfig({
   displayName: "step__StyledLink",

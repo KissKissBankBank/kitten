@@ -54,8 +54,13 @@ var Number = function Number(_ref3) {
 
   var handleChange = function handleChange(_ref4) {
     var value = _ref4.value;
+
+    var _getCreditCardType = (0, _helpers.getCreditCardType)(value),
+        type = _getCreditCardType.type;
+
     setInputValues({
-      number: value
+      number: value,
+      type: type
     });
   };
 
