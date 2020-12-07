@@ -1,20 +1,21 @@
-import React, { useState, PureComponent } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { TextInput } from '../../../components/form/text-input'
 import { PasswordIcon } from '../../../components/icons/password-icon'
 import COLORS from '../../../constants/colors-config'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
+import classNames from 'classnames'
 
 const StyledPasswordInput = styled.div`
   position: relative;
   display: flex;
 
-  .k-Form-Password__input {
+  .k-Form-PasswordInput__input {
     padding-right: ${pxToRem(40)};
   }
 
-  .k-Form-Password__icon {
+  .k-Form-PasswordInput__icon {
     display: flex;
     position: absolute;
     z-index: 1;
@@ -56,12 +57,12 @@ export const PasswordInput = ({
   } 
 
   return (
-    <StyledPasswordInput>
+    <StyledPasswordInput className="k-Form-PasswordInput">
       <TextInput
-        className="k-Form-Password__input"
         {...others}
         name={name}
         type={type}
+        className={classNames('k-Form-PasswordInput__input')}
       />
       <span
         title={iconTitle}
@@ -69,7 +70,7 @@ export const PasswordInput = ({
         onKeyDown={handleKeyDown}
         aria-pressed={active}
         tabIndex="0"
-        className="k-Form-Password__icon"
+        className={classNames('k-Form-PasswordInput__icon')}
       >
         <PasswordIcon />
       </span>
