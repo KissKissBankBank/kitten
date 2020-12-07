@@ -133,7 +133,7 @@
     "styleguide:start": "npm i && webpack-dev-server",
     "styleguide:build": "rm -rf build && webpack --config webpack.config.build.js --progress --colors && htmlprocessor styleguide/index.html -o build/main.html && cp -R styleguide/assets build",
     "storybook": "npm i && start-storybook -s .storybook/public -p 6006 --no-manager-cache",
-    "build-storybook": "build-storybook -s .storybook/public --no-manager-cache",
+    "build-storybook": "build-storybook -s .storybook/public",
     "deploy-storybook": "storybook-to-ghpages",
     "clean:src": "rm -rf src/components src/config src/constants src/handlers src/helpers src/hoc",
     "clean:src:esm": "rm -rf src/esm",
