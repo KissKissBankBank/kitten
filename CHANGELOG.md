@@ -4,10 +4,17 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Ref errors on `LazyObserver` and `Dropdown`
-- Fix: `VerticalStepper` styles.
-- Feature: Add type to `CreditCardForm` values.
-- Fix: Update `error` props on `VerticalStepper` with `variant="orion"`.
+## [2.102.0] - 2020-12-07
+
+Feature:
+
+- Add type to `CreditCardForm` values.
+
+Fixes:
+
+- Fix ref errors on `LazyObserver` and `Dropdown`.
+- Fix `VerticalStepper` styles.
+- Update `error` props on `VerticalStepper` with `variant="orion"`.
 
 ## [2.101.0] - 2020-11-30
 

@@ -23,10 +23,11 @@ export var Step = function Step(_ref) {
 
   return /*#__PURE__*/React.createElement(StyledItem, {
     className: classNames('k-Steppers--VerticalStepper__item', {
-      'k-Steppers--VerticalStepper__item--hasActiveLine': success
+      'k-Steppers--VerticalStepper__item--hasActiveLine': success,
+      'k-Steppers--VerticalStepper__item--bridge': bridge
     })
   }, /*#__PURE__*/React.createElement(StyledLink, _extends({
-    as: other.href ? 'a' : 'span'
+    as: other.href && !disabled ? 'a' : 'span'
   }, other, {
     variant: variant
   }), /*#__PURE__*/React.createElement(Status, _extends({
@@ -38,7 +39,6 @@ export var Step = function Step(_ref) {
     bridge: bridge,
     variant: variant
   }, statusProps)), /*#__PURE__*/React.createElement("div", {
-    error: error,
     className: classNames(STEP_CLASSNAME, 'k-Steppers--VerticalStepper__step--link--content', {
       'k-Steppers--VerticalStepper__step--link--content--disabled': disabled
     }, className)
@@ -47,7 +47,7 @@ export var Step = function Step(_ref) {
 var StyledItem = styled.li.withConfig({
   displayName: "step__StyledItem",
   componentId: "sc-1you76f-0"
-})(["padding:", " 0;&:first-of-type{margin-top:0;}&:last-of-type{margin-bottom:0;}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}"], pxToRem(15));
+})(["padding:", " 0;&:first-of-type{margin-top:0;}&:last-of-type{margin-bottom:0;}li:not(:last-of-type){margin:0 !important;&::after{display:none;}}&.k-Steppers--VerticalStepper__item--bridge{padding:", " 0;}"], pxToRem(15), pxToRem(8));
 var StyledLink = styled.a.withConfig({
   displayName: "step__StyledLink",
   componentId: "sc-1you76f-1"
