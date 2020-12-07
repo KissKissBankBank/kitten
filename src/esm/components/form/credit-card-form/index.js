@@ -10,7 +10,8 @@ var defaultProps = {
   values: {
     number: '',
     expiry: '',
-    cvc: ''
+    cvc: '',
+    type: ''
   },
   onChange: function onChange(_values) {}
 };
