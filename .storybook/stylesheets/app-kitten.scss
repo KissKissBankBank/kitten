@@ -6,7 +6,9 @@
 
 // Components instanciation
 @import 'kitten/components';
-@import 'kitten/utilities';
+
+// Import all utilities
+@import '../../assets/stylesheets/utilities';
 
 @import '~react-day-picker/lib/style';
 
