@@ -35,9 +35,13 @@ export var Number = function Number(_ref3) {
 
   var handleChange = function handleChange(_ref4) {
     var value = _ref4.value;
+
+    var _getCreditCardType = getCreditCardType(value),
+        type = _getCreditCardType.type;
+
     setInputValues({
       number: value,
-      type: ccType.type
+      type: type
     });
   };
 
