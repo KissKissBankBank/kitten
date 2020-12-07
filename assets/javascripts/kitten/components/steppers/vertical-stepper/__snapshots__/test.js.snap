@@ -134,6 +134,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   display: none;
 }
 
+.c1.k-Steppers--VerticalStepper__item--bridge {
+  padding: 0.5rem 0;
+}
+
 .c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -724,6 +728,10 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 
 .c1 li:not(:last-of-type)::after {
   display: none;
+}
+
+.c1.k-Steppers--VerticalStepper__item--bridge {
+  padding: 0.5rem 0;
 }
 
 .c2 {

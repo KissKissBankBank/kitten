@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature : Add `huge` props on `TagButton`.
 - Feature: Add CSS utilities:
   - `k-u-flex`
   - `k-u-inlineFlex`
@@ -14,8 +15,23 @@ This project adheres to [Semantic Versioning](http://semver.org/).
   - `k-u-inlineBlock`
   and docs.
 
-- Feature: Add type to `CreditCardForm` values.
-- Fix: Update `error` props on `VerticalStepper` with `variant="orion"`.
+## [2.102.1] - 2020-12-07
+
+Fix:
+
+- Fix a synchronization bug between number and type values (`CreditCardForm`).
+
+## [2.102.0] - 2020-12-07
+
+Feature:
+
+- Add type to `CreditCardForm` values.
+
+Fixes:
+
+- Fix ref errors on `LazyObserver` and `Dropdown`.
+- Fix `VerticalStepper` styles.
+- Update `error` props on `VerticalStepper` with `variant="orion"`.
 
 ## [2.101.0] - 2020-11-30
 
