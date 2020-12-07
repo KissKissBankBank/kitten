@@ -24,6 +24,7 @@ const StyledPasswordInput = styled.div`
     top: 0;
     bottom: 0;
     cursor: pointer;
+    align-items: center;
 
     &[aria-pressed='true'] {
       svg {
@@ -42,38 +43,30 @@ export const PasswordInput = ({
 }) => {
 
   const [isHidden, setIsHidden ] = useState(true)
-  const type = isHidden ? 'password' : 'text'
-  const active = !isHidden
-  const iconTitle = isHidden ? iconLabel : hiddenIconLabel
 
   const handleClick = () => {
     setIsHidden(!isHidden)
   }
-
-  const handleKeyDown = () => {
-    const enterKeyCode = 13
-
-    if (event.keyCode == enterKeyCode) { handleClick }
-  } 
 
   return (
     <StyledPasswordInput className="k-Form-PasswordInput">
       <TextInput
         {...others}
         name={name}
-        type={type}
-        className={classNames('k-Form-PasswordInput__input')}
+        type={isHidden ? 'password' : 'text'}
+        className="k-Form-PasswordInput__input"
       />
-      <span
-        title={iconTitle}
+      <button
+        aria-label={isHidden ? iconLabel : hiddenIconLabel}
         onClick={handleClick}
-        onKeyDown={handleKeyDown}
-        aria-pressed={active}
-        tabIndex="0"
-        className={classNames('k-Form-PasswordInput__icon')}
+        aria-pressed={!isHidden}
+        className={classNames(
+          'k-Form-PasswordInput__icon',
+          'k-u-reset-button',
+        )}
       >
         <PasswordIcon />
-      </span>
+      </button>
     </StyledPasswordInput>
   )
 }
