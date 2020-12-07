@@ -43,7 +43,7 @@
 @mixin k-u-blockAlign($position, $align) {
   $value: $align;
 
-  .k-u-blockAlign-#{position} {
+  .k-u-blockAlign-#{$position} {
     align-self: $value;
 
     &--important {

@@ -6,6 +6,21 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Fix: `PasswordInput` styles.
 
+## [2.103.0] - 2020-12-07
+
+Features :
+
+- Add `huge` props on `TagButton`.
+- Add CSS utilities:
+  - `k-u-flex`
+  - `k-u-inlineFlex`
+  - `k-u-flex-alignItems-*`
+  - `k-u-flex-direction-*`
+  - `k-u-flex-justifyContent-*`
+  - `k-u-block`
+  - `k-u-inlineBlock`
+  and docs.
+
 ## [2.102.1] - 2020-12-07
 
 Fix:

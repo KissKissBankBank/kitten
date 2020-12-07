@@ -1,0 +1,42 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/CSS Utilities/BlockAlign" />
+
+# Block Align
+
+These block alignment utilities will only be useful inside of a flexbox container, like `k-u-flex` or `k-u-flex-inline`.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/align/_align.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/align/_align.scss)
+
+## Usage
+
+Utilities to align items according to media-queries (aligns : center, start, end).
+
+`k-u-blockAlign-center`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-blockAlign-center">
+    Hello text align center !
+  </p>
+</div>
+</Canvas>
+
+`k-u-blockAlign-start`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-blockAlign-start">
+    Hello text! Still same style ? No, I'm start aligned.
+  </p>
+</div>
+</Canvas>
+
+`k-u-blockAlign-end`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-blockAlign-end">
+    Hello text! I'm on the end.
+  </p>
+</div>
+</Canvas>
