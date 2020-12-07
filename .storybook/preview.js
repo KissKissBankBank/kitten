@@ -16,7 +16,7 @@ addParameters({
   },
   options: {
     storySort: {
-      order: ['Documentation', ['Introduction', 'Usage'], 'Helpers'],
+      order: ['Documentation', ['Introduction', 'Usage', 'Design'], 'Helpers'],
       method: 'alphabetical',
     }
   },
