@@ -296,7 +296,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-dnqmqq dkyyev k-Form-PasswordInput"
+      className="sc-dnqmqq hKCwhX k-Form-PasswordInput"
     >
       <input
         className="sc-bwzfXH gbcMMf k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
@@ -306,13 +306,11 @@ Array [
         placeholder="Placeholder…"
         type="password"
       />
-      <span
+      <button
+        aria-label="Show password"
         aria-pressed={false}
-        className="k-Form-PasswordInput__icon"
+        className="k-Form-PasswordInput__icon k-u-reset-button"
         onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
-        title="Show password"
       >
         <svg
           fill="#222"
@@ -330,7 +328,7 @@ Array [
             r="2"
           />
         </svg>
-      </span>
+      </button>
     </div>
   </div>,
   <div
@@ -420,7 +418,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-dnqmqq dkyyev k-Form-PasswordInput"
+      className="sc-dnqmqq hKCwhX k-Form-PasswordInput"
     >
       <input
         className="sc-bwzfXH gbcMMf k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
@@ -430,13 +428,11 @@ Array [
         placeholder="Placeholder…"
         type="password"
       />
-      <span
+      <button
+        aria-label="Show password"
         aria-pressed={false}
-        className="k-Form-PasswordInput__icon"
+        className="k-Form-PasswordInput__icon k-u-reset-button"
         onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
-        title="Show password"
       >
         <svg
           fill="#222"
@@ -454,7 +450,7 @@ Array [
             r="2"
           />
         </svg>
-      </span>
+      </button>
     </div>
   </div>,
 ]
