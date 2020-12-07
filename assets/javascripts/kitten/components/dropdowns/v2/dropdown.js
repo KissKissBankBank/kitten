@@ -99,8 +99,14 @@ export const Dropdown = React.forwardRef(
       }
 
       window.addEventListener('keydown', closeDropdownOnEsc)
-      dropdownButtonRef.current.addEventListener('keydown', dropdownKbdTrigger)
-      dropdownButtonRef.current.addEventListener('mouseup', blur)
+
+      if (!isNull(dropdownButtonRef.current)) {
+        dropdownButtonRef.current.addEventListener(
+          'keydown',
+          dropdownKbdTrigger,
+        )
+        dropdownButtonRef.current.addEventListener('mouseup', blur)
+      }
 
       if (!has('current')(dropdownRef)) {
         console.warn(
@@ -126,11 +132,14 @@ export const Dropdown = React.forwardRef(
         }
 
         window.removeEventListener('keydown', closeDropdownOnEsc)
-        dropdownButtonRef.current.removeEventListener(
-          'keydown',
-          dropdownKbdTrigger,
-        )
-        dropdownButtonRef.current.removeEventListener('mouseup', blur)
+
+        if (!isNull(dropdownButtonRef.current)) {
+          dropdownButtonRef.current.removeEventListener(
+            'keydown',
+            dropdownKbdTrigger,
+          )
+          dropdownButtonRef.current.removeEventListener('mouseup', blur)
+        }
       }
     }, [])
 
@@ -139,7 +148,7 @@ export const Dropdown = React.forwardRef(
       event.preventDefault()
 
       const focusableElements = getFocusableElementsFrom(
-        dropdownContentRef.current,
+        dropdownContentRef?.current,
       )
 
       const kbdNav = keyboardNavigation(focusableElements, {
@@ -147,7 +156,7 @@ export const Dropdown = React.forwardRef(
           prev: DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
           next: DROPDOWN_LAST_FOCUS_REACHED_EVENT,
         },
-        triggeredElement: dropdownButtonRef.current,
+        triggeredElement: dropdownButtonRef?.current,
       })
 
       const { tab, up, down, left, right, esc, shiftTab } = keyboard
@@ -157,14 +166,14 @@ export const Dropdown = React.forwardRef(
       if (event.keyCode === left) {
         return dispatchEvent(
           DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
-          dropdownButtonRef.current,
+          dropdownButtonRef?.current,
         )()
       }
 
       if (event.keyCode === right) {
         return dispatchEvent(
           DROPDOWN_LAST_FOCUS_REACHED_EVENT,
-          dropdownButtonRef.current,
+          dropdownButtonRef?.current,
         )()
       }
 
@@ -178,21 +187,26 @@ export const Dropdown = React.forwardRef(
     }
 
     useEffect(() => {
-      if (isExpandedState) {
+      if (isExpandedState && !isNull(dropdownContentRef.current)) {
         setTimeout(() => {
           const focusableElements = getFocusableElementsFrom(
             dropdownContentRef.current,
           )
-
           if (focusableElements.length > 0) {
             toggleByEventType === 'keyboard' && focusableElements[0].focus()
+
             dropdownContentRef.current.addEventListener('keydown', manageA11yOn)
           }
         }, DROPDOWN_ANIMATED_DELAY)
       }
 
       return () => {
-        dropdownContentRef.current.removeEventListener('keydown', manageA11yOn)
+        if (!isNull(dropdownContentRef.current)) {
+          dropdownContentRef.current.removeEventListener(
+            'keydown',
+            manageA11yOn,
+          )
+        }
       }
     }, [isExpandedState])
 
