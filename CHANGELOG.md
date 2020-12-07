@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 - Feature : Add `huge` props on `TagButton`.
+- Feature: Add `variant` prop to `Progress`, defaults to `andromeda`.
 
 ## [2.102.1] - 2020-12-07
 

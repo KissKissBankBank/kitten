@@ -41,15 +41,23 @@ exports[`<Progress /> Progress with multiple props matches with snapshot 1`] = `
   background: #d8d8d8;
 }
 
+.c2.k-Meters-Progress__ramp--orion {
+  border-radius: 0.1875rem;
+}
+
+.c2.k-Meters-Progress__ramp--orion::after {
+  border-radius: 0.1875rem;
+}
+
 <div
   aria-valuemax={100}
   aria-valuemin={0}
   aria-valuenow={50}
-  className="c0 c1"
+  className="c0 c1 k-Meters-Progress"
   role="progressbar"
 >
   <div
-    className="c2"
+    className="c2 k-Meters-Progress__ramp k-Meters-Progress__ramp--andromeda"
   />
 </div>
 `;
@@ -82,15 +90,23 @@ exports[`<Progress /> simple Progress  matches with snapshot 1`] = `
   background: #d8d8d8;
 }
 
+.c2.k-Meters-Progress__ramp--orion {
+  border-radius: 0.1875rem;
+}
+
+.c2.k-Meters-Progress__ramp--orion::after {
+  border-radius: 0.1875rem;
+}
+
 <div
   aria-valuemax={100}
   aria-valuemin={0}
   aria-valuenow={0}
-  className="c0 c1"
+  className="c0 c1 k-Meters-Progress"
   role="progressbar"
 >
   <div
-    className="c2"
+    className="c2 k-Meters-Progress__ramp k-Meters-Progress__ramp--andromeda"
   />
 </div>
 `;

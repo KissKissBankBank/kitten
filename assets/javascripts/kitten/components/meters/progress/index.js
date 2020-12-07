@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
+import classNames from 'classnames'
 
 const valueMin = 0
 const valueMax = 100
@@ -34,9 +35,18 @@ const StyledRamp = styled(({ style, sliderColor, progressValue, ...props }) => (
       background: ${COLORS.line2};
     }
   }
+
+  &.k-Meters-Progress__ramp--orion {
+    border-radius: ${pxToRem(3)};
+    
+    &::after {
+      border-radius: ${pxToRem(3)};
+    }
+  }
+
 `
 
-export const Progress = ({ color, value, rampProps, ...others }) => {
+export const Progress = ({ color, value, rampProps, variant, ...others }) => {
   const [progressValue, setProgressValue] = useState(0)
 
   useEffect(() => {
@@ -57,11 +67,16 @@ export const Progress = ({ color, value, rampProps, ...others }) => {
       aria-valuemin={valueMin}
       aria-valuemax={valueMax}
       aria-valuenow={progressValue}
+      className="k-Meters-Progress"
     >
       <StyledRamp
         {...rampProps}
         sliderColor={color}
         progressValue={`${progressValue}%`}
+        className={classNames(
+          'k-Meters-Progress__ramp',
+          `k-Meters-Progress__ramp--${variant}`,
+        )}
       />
     </StyledProgress>
   )
@@ -71,10 +86,12 @@ Progress.defaultProps = {
   color: COLORS.primary1,
   value: 50,
   rampProps: {},
+  variant: 'andromeda',
 }
 
 Progress.propTypes = {
   color: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   rampProps: PropTypes.object,
+  variant: PropTypes.string,
 }
