@@ -4,8 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature : Add `huge` props on `TagButton`.
-- Feature: Add CSS utilities:
+## [2.103.0] - 2020-12-07
+
+Features :
+
+- Add `huge` props on `TagButton`.
+- Add CSS utilities:
   - `k-u-flex`
   - `k-u-inlineFlex`
   - `k-u-flex-alignItems-*`
