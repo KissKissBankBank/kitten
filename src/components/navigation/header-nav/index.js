@@ -145,6 +145,7 @@ var HeaderNav = function HeaderNav(_ref4) {
     window.addEventListener(_events.DROPDOWN_FIRST_FOCUS_REACHED_EVENT, focusDropdown);
     window.addEventListener(_events.DROPDOWN_LAST_FOCUS_REACHED_EVENT, focusElementNextToDropdown);
     return function () {
+      if (!headerRef.current) return;
       headerRef.current.removeEventListener('keydown', handleKeyboardNavigation);
       window.removeEventListener(_events.DROPDOWN_FIRST_FOCUS_REACHED_EVENT, focusDropdown);
       window.removeEventListener(_events.DROPDOWN_LAST_FOCUS_REACHED_EVENT, focusElementNextToDropdown);
