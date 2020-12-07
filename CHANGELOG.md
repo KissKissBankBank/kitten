@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.102.1] - 2020-12-07
+
 Fix:
 
 - Fix a synchronization bug between number and type values (`CreditCardForm`).
