@@ -12,8 +12,8 @@ Feature:
 
 Fixes:
 
-- Ref errors on `LazyObserver` and `Dropdown`.
-- `VerticalStepper` styles.
+- Fix ref errors on `LazyObserver` and `Dropdown`.
+- Fix `VerticalStepper` styles.
 - Update `error` props on `VerticalStepper` with `variant="orion"`.
 
 ## [2.101.0] - 2020-11-30
