@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `PasswordInput` styles.
+
 ## [2.102.1] - 2020-12-07
 
 Fix:
