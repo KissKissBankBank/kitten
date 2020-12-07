@@ -12,6 +12,10 @@
 
 @import '~react-day-picker/lib/style';
 
+// Custom styles for stories
+
+@import 'custom/flex';
+
 // Custom styles for StoryBook iFrame.
 body {
   margin: 0;
