@@ -1,93 +1,46 @@
 import _extends from "@babel/runtime/helpers/esm/extends";
+import _slicedToArray from "@babel/runtime/helpers/esm/slicedToArray";
 import _objectWithoutProperties from "@babel/runtime/helpers/esm/objectWithoutProperties";
-import _classCallCheck from "@babel/runtime/helpers/esm/classCallCheck";
-import _createClass from "@babel/runtime/helpers/esm/createClass";
-import _inherits from "@babel/runtime/helpers/esm/inherits";
-import _possibleConstructorReturn from "@babel/runtime/helpers/esm/possibleConstructorReturn";
-import _getPrototypeOf from "@babel/runtime/helpers/esm/getPrototypeOf";
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { TextInput } from '../../../components/form/text-input';
 import { PasswordIcon } from '../../../components/icons/password-icon';
 import COLORS from '../../../constants/colors-config';
 import PropTypes from 'prop-types';
 import { pxToRem } from '../../../helpers/utils/typography';
+import classNames from 'classnames';
 var StyledPasswordInput = styled.div.withConfig({
   displayName: "password-input__StyledPasswordInput",
   componentId: "sc-1futz46-0"
-})(["position:relative;display:flex;"]);
-var StyledTextInput = styled(TextInput).withConfig({
-  displayName: "password-input__StyledTextInput",
-  componentId: "sc-1futz46-1"
-})(["padding-right:", ";"], pxToRem(40));
-var StyledIcon = styled.span.withConfig({
-  displayName: "password-input__StyledIcon",
-  componentId: "sc-1futz46-2"
-})(["display:flex;position:absolute;z-index:1;padding:0 ", ";right:0;top:0;bottom:0;cursor:pointer;&[aria-pressed='true']{svg{fill:", ";transition:all 0.2s;}}"], pxToRem(11), COLORS.primary1);
-export var PasswordInput = /*#__PURE__*/function (_PureComponent) {
-  _inherits(PasswordInput, _PureComponent);
+})(["position:relative;display:flex;.k-Form-PasswordInput__input{padding-right:", ";}.k-Form-PasswordInput__icon{display:flex;position:absolute;z-index:1;padding:0 ", ";right:0;top:0;bottom:0;cursor:pointer;align-items:center;&[aria-pressed='true']{svg{fill:", ";transition:all 0.2s;}}}"], pxToRem(40), pxToRem(11), COLORS.primary1);
+export var PasswordInput = function PasswordInput(_ref) {
+  var name = _ref.name,
+      iconLabel = _ref.iconLabel,
+      hiddenIconLabel = _ref.hiddenIconLabel,
+      others = _objectWithoutProperties(_ref, ["name", "iconLabel", "hiddenIconLabel"]);
 
-  var _super = _createSuper(PasswordInput);
+  var _useState = useState(true),
+      _useState2 = _slicedToArray(_useState, 2),
+      isHidden = _useState2[0],
+      setIsHidden = _useState2[1];
 
-  function PasswordInput(props) {
-    var _this;
+  var handleClick = function handleClick() {
+    setIsHidden(!isHidden);
+  };
 
-    _classCallCheck(this, PasswordInput);
-
-    _this = _super.call(this, props);
-
-    _this.handleClick = function () {
-      _this.setState({
-        isHidden: !_this.state.isHidden
-      });
-    };
-
-    _this.handleKeyDown = function (event) {
-      var enterKeyCode = 13;
-
-      if (event.keyCode == enterKeyCode) {
-        _this.handleClick();
-      }
-    };
-
-    _this.state = {
-      isHidden: true
-    };
-    return _this;
-  }
-
-  _createClass(PasswordInput, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          name = _this$props.name,
-          iconLabel = _this$props.iconLabel,
-          hiddenIconLabel = _this$props.hiddenIconLabel,
-          others = _objectWithoutProperties(_this$props, ["name", "iconLabel", "hiddenIconLabel"]);
-
-      var type = this.state.isHidden ? 'password' : 'text';
-      var active = !this.state.isHidden;
-      var iconTitle = this.state.isHidden ? iconLabel : hiddenIconLabel;
-      return /*#__PURE__*/React.createElement(StyledPasswordInput, null, /*#__PURE__*/React.createElement(StyledTextInput, _extends({}, others, {
-        name: name,
-        type: type
-      })), /*#__PURE__*/React.createElement(StyledIcon, {
-        title: iconTitle,
-        onClick: this.handleClick,
-        onKeyDown: this.handleKeyDown,
-        "aria-pressed": active,
-        tabIndex: "0"
-      }, /*#__PURE__*/React.createElement(PasswordIcon, null)));
-    }
-  }]);
-
-  return PasswordInput;
-}(PureComponent);
+  return /*#__PURE__*/React.createElement(StyledPasswordInput, {
+    className: "k-Form-PasswordInput"
+  }, /*#__PURE__*/React.createElement(TextInput, _extends({}, others, {
+    name: name,
+    type: isHidden ? 'password' : 'text',
+    className: "k-Form-PasswordInput__input"
+  })), /*#__PURE__*/React.createElement("button", {
+    "aria-label": isHidden ? iconLabel : hiddenIconLabel,
+    onClick: handleClick,
+    "aria-pressed": !isHidden,
+    className: classNames('k-Form-PasswordInput__icon', 'k-u-reset-button')
+  }, /*#__PURE__*/React.createElement(PasswordIcon, null)));
+};
 PasswordInput.propTypes = {
   iconLabel: PropTypes.string.isRequired,
   hiddenIconLabel: PropTypes.string.isRequired,
