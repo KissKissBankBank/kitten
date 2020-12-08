@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU gSiJXU"
+      className="sc-iwsKbI cdTKwF"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-VigVT faGjpy"
+        className="sc-gZMcBi kyYKsf"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -296,23 +296,21 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-dnqmqq kmxqSx"
+      className="sc-dnqmqq hKCwhX k-Form-PasswordInput"
     >
       <input
-        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda k-Form-TextInput--error"
+        className="sc-bwzfXH gbcMMf k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
         placeholder="Placeholder…"
         type="password"
       />
-      <span
+      <button
+        aria-label="Show password"
         aria-pressed={false}
-        className="sc-gZMcBi gPuGFE"
+        className="k-Form-PasswordInput__icon k-u-reset-button"
         onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
-        title="Show password"
       >
         <svg
           fill="#222"
@@ -330,7 +328,7 @@ Array [
             r="2"
           />
         </svg>
-      </span>
+      </button>
     </div>
   </div>,
   <div
@@ -420,23 +418,21 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-dnqmqq kmxqSx"
+      className="sc-dnqmqq hKCwhX k-Form-PasswordInput"
     >
       <input
-        className="sc-bwzfXH gbcMMf k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda"
+        className="sc-bwzfXH gbcMMf k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
         disabled={false}
         id="input"
         name="field"
         placeholder="Placeholder…"
         type="password"
       />
-      <span
+      <button
+        aria-label="Show password"
         aria-pressed={false}
-        className="sc-gZMcBi gPuGFE"
+        className="k-Form-PasswordInput__icon k-u-reset-button"
         onClick={[Function]}
-        onKeyDown={[Function]}
-        tabIndex="0"
-        title="Show password"
       >
         <svg
           fill="#222"
@@ -454,7 +450,7 @@ Array [
             r="2"
           />
         </svg>
-      </span>
+      </button>
     </div>
   </div>,
 ]
