@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import COLORS from './../../../constants/colors-config'
 import classNames from 'classnames'
 import { pxToRem, stepToRem } from './../../../helpers/utils/typography'
+import TYPOGRAPHY from '../../../constants/typography-config'
 
 const List = styled.ul`
   display: inline-flex;
@@ -12,6 +13,7 @@ const List = styled.ul`
   margin: 0;
 
   .k-CheckList__item {
+    ${TYPOGRAPHY.fontStyles.light};
     list-style-type: none;
     display: flex;
     align-items: stretch;
