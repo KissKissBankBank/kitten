@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `PasswordInput` styles.
+- Fix: `CheckList` styles.
 
 ## [2.103.0] - 2020-12-07
 
