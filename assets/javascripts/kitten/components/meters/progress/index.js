@@ -36,14 +36,13 @@ const StyledRamp = styled(({ style, sliderColor, progressValue, ...props }) => (
     }
   }
 
-  &.k-Meters-Progress__ramp--orion {
+  .k-Meters-Progress--orion & {
     border-radius: ${pxToRem(3)};
     
     &::after {
       border-radius: ${pxToRem(3)};
     }
   }
-
 `
 
 export const Progress = ({ color, value, rampProps, variant, ...others }) => {
@@ -67,16 +66,16 @@ export const Progress = ({ color, value, rampProps, variant, ...others }) => {
       aria-valuemin={valueMin}
       aria-valuemax={valueMax}
       aria-valuenow={progressValue}
-      className="k-Meters-Progress"
+      className={classNames(
+        'k-Meters-Progress',
+        `k-Meters-Progress--${variant}`,
+      )}
     >
       <StyledRamp
         {...rampProps}
         sliderColor={color}
         progressValue={`${progressValue}%`}
-        className={classNames(
-          'k-Meters-Progress__ramp',
-          `k-Meters-Progress__ramp--${variant}`,
-        )}
+        className="k-Meters-Progress__ramp"
       />
     </StyledProgress>
   )
