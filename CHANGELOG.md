@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `variant` prop to `Progress`, defaults to `andromeda`.
 - Fix: `PasswordInput` styles.
 - Fix: `CheckList` styles.
 

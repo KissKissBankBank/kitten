@@ -29,6 +29,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   background: #d8d8d8;
 }
 
+.k-Meters-Progress--orion .c3 {
+  border-radius: 0.1875rem;
+}
+
+.k-Meters-Progress--orion .c3::after {
+  border-radius: 0.1875rem;
+}
+
 .c4 {
   position: absolute;
   top: 0;
@@ -522,11 +530,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c1 c2 k-CrowdfundingCard__progressBar__progress"
+      className="c1 c2 k-Meters-Progress k-Meters-Progress--andromeda"
       role="progressbar"
     >
       <div
-        className="c3"
+        className="c3 k-Meters-Progress__ramp"
       />
     </div>
     <span
@@ -579,6 +587,14 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 
 .c2.is-disabled .c4::after {
   background: #d8d8d8;
+}
+
+.k-Meters-Progress--orion .c4 {
+  border-radius: 0.1875rem;
+}
+
+.k-Meters-Progress--orion .c4::after {
+  border-radius: 0.1875rem;
 }
 
 .c2.is-disabled .c6::after {
@@ -1059,11 +1075,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c2 c3 k-CrowdfundingCard__progressBar__progress"
+      className="c2 c3 k-Meters-Progress k-Meters-Progress--andromeda"
       role="progressbar"
     >
       <div
-        className="c4"
+        className="c4 k-Meters-Progress__ramp"
       />
     </div>
     <span
