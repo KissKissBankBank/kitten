@@ -4,7 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.104.1] - 2020-12-14
+
 Rollback:
+
 - Back to `styled-components` because bug in className.
 
 ## [2.104.0] - 2020-12-08
