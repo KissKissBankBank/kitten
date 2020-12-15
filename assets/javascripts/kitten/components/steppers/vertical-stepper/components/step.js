@@ -65,9 +65,11 @@ const StyledItem = styled.li`
 
   &:first-of-type {
     margin-top: 0;
+    padding-top: 0;
   }
   &:last-of-type {
     margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   li:not(:last-of-type) {
