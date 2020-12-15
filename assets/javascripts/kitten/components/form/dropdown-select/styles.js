@@ -137,6 +137,9 @@ export const StyledDropdown = styled.div`
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-1)};
     user-select: none;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
 
     &[aria-selected="true"] {
       background-color: ${COLORS.background3};
