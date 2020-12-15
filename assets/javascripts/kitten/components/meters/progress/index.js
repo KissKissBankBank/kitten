@@ -10,42 +10,49 @@ const valueMax = 100
 
 const StyledProgress = styled.div`
   max-width: 100%;
-`
 
-const StyledRamp = styled(({ style, sliderColor, progressValue, ...props }) => (
-  <div {...props} />
-))`
-  position: relative;
-  height: ${pxToRem(2)};
-  background: ${COLORS.line1};
-  ${({ style }) => style}
+  .k-Meters-Progress__ramp {
+    position: relative;
+    height: ${pxToRem(2)};
+    background: ${COLORS.line1};
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-width: ${({ progressValue }) => progressValue};
-    transition: max-width 1s cubic-bezier(0, 0.5, 0.3, 1);
-    background: ${({ sliderColor }) => sliderColor};
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-width: ${({ progressValue }) => progressValue};
+      transition: max-width 1s cubic-bezier(0, 0.5, 0.3, 1);
+      background: ${({ sliderColor }) => sliderColor};
+    }
+  }
 
-    ${StyledProgress}.is-disabled & {
+  &.k-Meters-Progress--disabled,
+  &.is-disabled {
+    .k-Meters-Progress__ramp::after {
       background: ${COLORS.line2};
     }
   }
 
-  .k-Meters-Progress--orion & {
-    border-radius: ${pxToRem(3)};
-    
+  &.k-Meters-Progress--orion .k-Meters-Progress__ramp {
+    &,
     &::after {
       border-radius: ${pxToRem(3)};
     }
   }
 `
 
-export const Progress = ({ color, value, rampProps, variant, ...others }) => {
+export const Progress = ({
+  color,
+  className,
+  value,
+  rampProps,
+  variant,
+  disabled,
+  ...others
+}) => {
   const [progressValue, setProgressValue] = useState(0)
 
   useEffect(() => {
@@ -68,14 +75,18 @@ export const Progress = ({ color, value, rampProps, variant, ...others }) => {
       aria-valuenow={progressValue}
       className={classNames(
         'k-Meters-Progress',
+        className,
         `k-Meters-Progress--${variant}`,
+        {
+          'k-Meters-Progress--disabled': disabled,
+        },
       )}
+      sliderColor={color}
+      progressValue={`${progressValue}%`}
     >
-      <StyledRamp
+      <div
         {...rampProps}
-        sliderColor={color}
-        progressValue={`${progressValue}%`}
-        className="k-Meters-Progress__ramp"
+        className={classNames('k-Meters-Progress__ramp', rampProps.className)}
       />
     </StyledProgress>
   )

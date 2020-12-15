@@ -1,18 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] = `
-.c2 {
+.c1 {
   max-width: 100%;
 }
 
-.c3 {
+.c1 .k-Meters-Progress__ramp {
   position: relative;
   height: 0.125rem;
   background: #eee;
-  height: 4px;
 }
 
-.c3::after {
+.c1 .k-Meters-Progress__ramp::after {
   content: '';
   position: absolute;
   top: 0;
@@ -25,19 +24,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   background: #19b4fa;
 }
 
-.c1.is-disabled .c3::after {
+.c1.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
+.c1.is-disabled .k-Meters-Progress__ramp::after {
   background: #d8d8d8;
 }
 
-.k-Meters-Progress--orion .c3 {
+.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp,
+.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
   border-radius: 0.1875rem;
 }
 
-.k-Meters-Progress--orion .c3::after {
-  border-radius: 0.1875rem;
-}
-
-.c4 {
+.c2 {
   position: absolute;
   top: 0;
   right: 0;
@@ -355,7 +352,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 @media (max-width:47.9375rem) {
-  .c4 {
+  .c2 {
     display: none;
   }
 }
@@ -530,11 +527,16 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c1 c2 k-Meters-Progress k-Meters-Progress--andromeda"
+      className="c1 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
       role="progressbar"
     >
       <div
-        className="c3 k-Meters-Progress__ramp"
+        className="k-Meters-Progress__ramp"
+        style={
+          Object {
+            "height": "4px",
+          }
+        }
       />
     </div>
     <span
@@ -544,7 +546,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     </span>
   </div>
   <div
-    className="c4"
+    className="c2"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
@@ -561,18 +563,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   display: none;
 }
 
-.c3 {
+.c2 {
   max-width: 100%;
 }
 
-.c4 {
+.c2 .k-Meters-Progress__ramp {
   position: relative;
   height: 0.125rem;
   background: #eee;
-  height: 4px;
 }
 
-.c4::after {
+.c2 .k-Meters-Progress__ramp::after {
   content: '';
   position: absolute;
   top: 0;
@@ -585,23 +586,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   background: #19b4fa;
 }
 
-.c2.is-disabled .c4::after {
+.c2.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
+.c2.is-disabled .k-Meters-Progress__ramp::after {
   background: #d8d8d8;
 }
 
-.k-Meters-Progress--orion .c4 {
+.c2.k-Meters-Progress--orion .k-Meters-Progress__ramp,
+.c2.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
   border-radius: 0.1875rem;
 }
 
-.k-Meters-Progress--orion .c4::after {
-  border-radius: 0.1875rem;
-}
-
-.c2.is-disabled .c6::after {
-  background: #d8d8d8;
-}
-
-.c5 {
+.c3 {
   position: absolute;
   top: 0;
   right: 0;
@@ -919,7 +914,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 }
 
 @media (max-width:47.9375rem) {
-  .c5 {
+  .c3 {
     display: none;
   }
 }
@@ -1075,11 +1070,16 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
       aria-valuemax={100}
       aria-valuemin={0}
       aria-valuenow={0}
-      className="c2 c3 k-Meters-Progress k-Meters-Progress--andromeda"
+      className="c2 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
       role="progressbar"
     >
       <div
-        className="c4 k-Meters-Progress__ramp"
+        className="k-Meters-Progress__ramp"
+        style={
+          Object {
+            "height": "4px",
+          }
+        }
       />
     </div>
     <span
@@ -1089,7 +1089,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     </span>
   </div>
   <div
-    className="c5"
+    className="c3"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
