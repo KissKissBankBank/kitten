@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Fix `DropdownSelect` item line height and alignment.
+
 ## [2.104.1] - 2020-12-14
 
 Rollback:
