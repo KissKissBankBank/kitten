@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Fix className and refacto.
 - Fix: Fix `DropdownSelect` item line height and alignment.
 - Fix: `ProgressBar` wasn’t passing class names.
-- Feature: Add `uniqLabelOnSearch` prop on `Dropdown`
+- Feature: Add `uniqLabelOnSearch` prop on `DropdownSelect`.
 
 ## [2.104.1] - 2020-12-14
 

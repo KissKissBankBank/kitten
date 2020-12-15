@@ -81,7 +81,7 @@ export const Default = () => {
   )
 }
 
-export const WithDoublon = () => {
+export const WithDuplicateValue = () => {
   return (
     <Grid>
       <GridCol offset="1" col="8">
