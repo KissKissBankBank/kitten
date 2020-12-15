@@ -6,11 +6,7 @@ import TYPOGRAPHY from '../../../constants/typography-config'
 import COLORS from '../../../constants/colors-config'
 import classNames from 'classnames'
 
-const StyledTagButton = styled(
-  ({ selected, icon, tiny, big, modifier, ...others }) => (
-    <button {...others} />
-  ),
-)`
+const StyledTagButton = styled.button`
   min-height: ${pxToRem(40)};
   min-width: ${pxToRem(60)};
   padding: 0 ${pxToRem(20)};
