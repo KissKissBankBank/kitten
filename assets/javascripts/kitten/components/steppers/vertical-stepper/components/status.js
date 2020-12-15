@@ -81,7 +81,7 @@ const INACTIVE_STATUS_SIZE = 15
 
 const StyledContainerStatus = styled.div`
   &.k-Steppers--VerticalStepper__statusContainer--orion {
-    border: ${pxToRem(6)} solid ${COLORS.background1};
+    border: ${pxToRem(5)} solid ${COLORS.background1};
   }
 
   .k-Steppers--VerticalStepper__status {
@@ -173,6 +173,7 @@ const StyledContainerStatus = styled.div`
           position: absolute;
           height: 100%;
           border-left: ${pxToRem(3)} dotted ${COLORS.line1};
+          margin-left: ${pxToRem(3)};
         }
       }
     }

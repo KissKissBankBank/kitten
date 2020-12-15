@@ -2,7 +2,7 @@
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
 .c3.k-Steppers--VerticalStepper__statusContainer--orion {
-  border: 0.375rem solid #fff;
+  border: 0.3125rem solid #fff;
 }
 
 .c3 .k-Steppers--VerticalStepper__status {
@@ -112,6 +112,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   position: absolute;
   height: 100%;
   border-left: 0.1875rem dotted #eee;
+  margin-left: 0.1875rem;
 }
 
 .c1 {
@@ -120,10 +121,12 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 .c1:first-of-type {
   margin-top: 0;
+  padding-top: 0;
 }
 
 .c1:last-of-type {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .c1 li:not(:last-of-type) {
@@ -200,7 +203,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c4 {
-  margin: 0 0 0.125rem;
+  margin: 0;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -209,6 +212,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 .c4.k-Stepepers-VerticalStepper__title--orion {
   font-size: 0.8888888888888888rem;
+  font-weight: bold;
 }
 
 .c5 {
@@ -598,7 +602,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c3.k-Steppers--VerticalStepper__statusContainer--orion {
-  border: 0.375rem solid #fff;
+  border: 0.3125rem solid #fff;
 }
 
 .c3 .k-Steppers--VerticalStepper__status {
@@ -708,6 +712,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   position: absolute;
   height: 100%;
   border-left: 0.1875rem dotted #eee;
+  margin-left: 0.1875rem;
 }
 
 .c1 {
@@ -716,10 +721,12 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 
 .c1:first-of-type {
   margin-top: 0;
+  padding-top: 0;
 }
 
 .c1:last-of-type {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .c1 li:not(:last-of-type) {
@@ -796,7 +803,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 }
 
 .c4 {
-  margin: 0 0 0.125rem;
+  margin: 0;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -805,6 +812,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 
 .c4.k-Stepepers-VerticalStepper__title--orion {
   font-size: 0.8888888888888888rem;
+  font-weight: bold;
 }
 
 .c5 {
