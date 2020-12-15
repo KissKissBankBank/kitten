@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: `VerticalStepper` styles.
+- Fix: Fix className and refacto.
+
 ## [2.104.1] - 2020-12-14
 
 Rollback:
