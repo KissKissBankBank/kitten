@@ -4,11 +4,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: `VerticalStepper` styles.
-- Fix: Fix className and refacto.
-- Fix: Fix `DropdownSelect` item line height and alignment.
-- Fix: `ProgressBar` wasn’t passing class names.
-- Feature: Add `uniqLabelOnSearch` prop on `DropdownSelect`.
+## [2.105.0] - 2020-12-16
+
+Feature:
+
+- Add `uniqLabelOnSearch` prop on `DropdownSelect`.
+
+Fixes:
+
+- `VerticalStepper` styles.
+- Fix className and refacto.
+- Fix `DropdownSelect` item line height and alignment.
+- `ProgressBar` wasn’t passing class names.
 
 ## [2.104.1] - 2020-12-14
 
@@ -24,8 +31,8 @@ Feature:
 
 Fixes:
 
-  - `PasswordInput` styles.
-  - `CheckList` styles.
+- `PasswordInput` styles.
+- `CheckList` styles.
 
 ## [2.103.0] - 2020-12-07
 
@@ -40,7 +47,7 @@ Features :
   - `k-u-flex-justifyContent-*`
   - `k-u-block`
   - `k-u-inlineBlock`
-  and docs.
+    and docs.
 
 ## [2.102.1] - 2020-12-07
 
