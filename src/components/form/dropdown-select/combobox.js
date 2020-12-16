@@ -33,6 +33,14 @@ var _arrowIcon = require("../../../components/icons/arrow-icon");
 
 var _find = _interopRequireDefault(require("lodash/fp/find"));
 
+var _flow = _interopRequireDefault(require("lodash/fp/flow"));
+
+var _uniqBy = _interopRequireDefault(require("lodash/fp/uniqBy"));
+
+var _filter = _interopRequireDefault(require("lodash/fp/filter"));
+
+var _isEmpty = _interopRequireDefault(require("lodash/isEmpty"));
+
 var _styles = require("./styles");
 
 var DropdownCombobox = function DropdownCombobox(_ref) {
@@ -57,7 +65,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       onInputChange = _ref.onInputChange,
       onMenuClose = _ref.onMenuClose,
       onMenuOpen = _ref.onMenuOpen,
-      openOnLoad = _ref.openOnLoad;
+      openOnLoad = _ref.openOnLoad,
+      uniqLabelOnSearch = _ref.uniqLabelOnSearch;
 
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -90,9 +99,11 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
   };
 
   var onInputValueChange = function onInputValueChange(changes) {
-    var newItemsList = flattenedOptions.filter(function (item) {
+    var newItemsList = (0, _flow.default)((0, _filter.default)(function (item) {
       return item.value.toLowerCase().startsWith(changes.inputValue.toLowerCase());
-    });
+    }), !(0, _isEmpty.default)(changes.inputValue) && uniqLabelOnSearch ? (0, _uniqBy.default)('label') : function (item) {
+      return item;
+    })(flattenedOptions);
     setFilteredOptions(newItemsList);
     onInputChange({
       value: changes.inputValue,
