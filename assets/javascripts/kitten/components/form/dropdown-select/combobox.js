@@ -8,6 +8,10 @@ import { WarningCircleIcon } from '../../../components/icons/warning-circle-icon
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import find from 'lodash/fp/find'
+import flow from 'lodash/fp/flow'
+import uniqBy from 'lodash/fp/uniqBy'
+import filter from 'lodash/fp/filter'
+import isEmpty from 'lodash/isEmpty'
 import { StyledDropdown } from './styles'
 
 export const DropdownCombobox = ({
@@ -33,6 +37,7 @@ export const DropdownCombobox = ({
   onMenuClose,
   onMenuOpen,
   openOnLoad,
+  uniqLabelOnSearch,
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -51,11 +56,16 @@ export const DropdownCombobox = ({
   }
 
   const onInputValueChange = changes => {
-    const newItemsList = flattenedOptions.filter(item => {
-      return item.value
-        .toLowerCase()
-        .startsWith(changes.inputValue.toLowerCase())
-    })
+    const newItemsList = flow(
+      filter(item => {
+        return item.value
+          .toLowerCase()
+          .startsWith(changes.inputValue.toLowerCase())
+      }),
+      !isEmpty(changes.inputValue) && uniqLabelOnSearch
+        ? uniqBy('label')
+        : item => item,
+    )(flattenedOptions)
 
     setFilteredOptions(newItemsList)
     onInputChange({ value: changes.inputValue, changes })

@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-## [2.104.2] - 2020-12-16
+## [2.105.0] - 2020-12-16
 
-Fixes : 
+Feature: 
+
+  - Add `uniqLabelOnSearch` prop on `DropdownSelect`.
+
+Fixes: 
+
   - `VerticalStepper` styles.
   - Fix className and refacto.
   - Fix `DropdownSelect` item line height and alignment.
