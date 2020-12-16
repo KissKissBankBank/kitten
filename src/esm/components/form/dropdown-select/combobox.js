@@ -10,6 +10,10 @@ import { WarningCircleIcon } from '../../../components/icons/warning-circle-icon
 import { CheckedCircleIcon } from '../../../components/icons/checked-circle-icon';
 import { ArrowIcon } from '../../../components/icons/arrow-icon';
 import find from 'lodash/fp/find';
+import flow from 'lodash/fp/flow';
+import uniqBy from 'lodash/fp/uniqBy';
+import filter from 'lodash/fp/filter';
+import isEmpty from 'lodash/isEmpty';
 import { StyledDropdown } from './styles';
 export var DropdownCombobox = function DropdownCombobox(_ref) {
   var labelText = _ref.labelText,
@@ -33,7 +37,8 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       onInputChange = _ref.onInputChange,
       onMenuClose = _ref.onMenuClose,
       onMenuOpen = _ref.onMenuOpen,
-      openOnLoad = _ref.openOnLoad;
+      openOnLoad = _ref.openOnLoad,
+      uniqLabelOnSearch = _ref.uniqLabelOnSearch;
 
   var _useState = useState([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -66,9 +71,11 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
   };
 
   var onInputValueChange = function onInputValueChange(changes) {
-    var newItemsList = flattenedOptions.filter(function (item) {
+    var newItemsList = flow(filter(function (item) {
       return item.value.toLowerCase().startsWith(changes.inputValue.toLowerCase());
-    });
+    }), !isEmpty(changes.inputValue) && uniqLabelOnSearch ? uniqBy('label') : function (item) {
+      return item;
+    })(flattenedOptions);
     setFilteredOptions(newItemsList);
     onInputChange({
       value: changes.inputValue,
