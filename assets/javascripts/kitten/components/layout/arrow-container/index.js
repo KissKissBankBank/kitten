@@ -1,8 +1,9 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 const Container = styled(
   ({
@@ -16,137 +17,115 @@ const Container = styled(
   }) => <div {...others} />,
 )`
   position: relative;
-  padding: ${({ padding }) => pxToRem(padding)};
-  background-color: ${({ color }) => color};
-  border-radius: ${({ borderRadius }) => pxToRem(borderRadius)};
-  box-sizing: border-box;
-  ${({ shadow }) =>
-    shadow &&
-    css`
-      box-shadow: 0 ${pxToRem(10)} ${pxToRem(20)} 0 rgba(0, 0, 0, 0.2);
-    `}
-  border:
-    ${({ borderWidth }) => borderWidth}px
-    solid
-    ${({ borderColor }) => borderColor};
   z-index: 1;
-`
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid
+    var(--k-ArrowContainer-borderColor);
 
-const Arrow = styled(
-  ({
-    color,
-    size,
-    distance,
-    position,
-    centered,
-    borderColor,
-    borderWidth,
-    ...others
-  }) => <span {...others} />,
-)`
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  border: ${({ size }) => pxToRem(size)} solid transparent;
+  &.k-ArrowContainer--hasShadow {
+    box-shadow: 0 ${pxToRem(10)} ${pxToRem(20)} 0 rgba(0, 0, 0, 0.2);
+  }
 
-  ${({ position, size, distance, color, centered }) => {
-    const distanceValue = centered
-      ? `calc(50% - ${pxToRem(size)})`
-      : pxToRem(distance)
+  .k-ArrowContainer__arrow {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border: var(--k-ArrowContainer-arrowSize) solid transparent;
+  }
 
-    if (position === 'top') {
-      return css`
-        top: -${pxToRem(size * 2)};
-        left: ${distanceValue};
-        border-bottom-color: ${color};
-      `
-    }
-
-    if (position === 'bottom') {
-      return css`
-        bottom: -${pxToRem(size * 2)};
-        left: ${distanceValue};
-        border-top-color: ${color};
-      `
-    }
-
-    if (position === 'right') {
-      return css`
-        right: -${pxToRem(size * 2)};
-        top: ${distanceValue};
-        border-left-color: ${color};
-      `
-    }
-
-    return css`
-      top: ${distanceValue};
-      left: -${pxToRem(size * 2)};
-      border-right-color: ${color};
-    `
-  }}
-
-  &::before {
+  &.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
     content: '';
     display: block;
     position: absolute;
     width: 0;
     height: 0;
     z-index: -1;
+  }
 
-    ${({ position, size, borderColor, borderWidth }) => {
-      if (borderWidth <= 0) return
+  &.k-ArrowContainer--top .k-ArrowContainer__arrow {
+    top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+    left: var(--k-ArrowContainer-arrowDistance);
+    border-bottom-color: var(--k-ArrowContainer-color);
 
-      const rawDistanceValue = Math.sqrt(Math.pow(borderWidth, 2) * 2)
-      const distanceValue =
-        borderWidth % 2 === 0
-          ? Math.floor(rawDistanceValue)
-          : Math.ceil(rawDistanceValue)
+    &::before {
+      top: calc(
+        (
+            var(--k-ArrowContainer-borderSize) +
+              var(--k-ArrowContainer-borderDistance)
+          ) * -1
+      );
+      left: calc(var(--k-ArrowContainer-borderSize) * -1);
+      border: var(--k-ArrowContainer-borderSize) solid transparent;
+      border-bottom-color: var(--k-ArrowContainer-borderColor);
+    }
+  }
 
-      const borderSize = distanceValue + size
+  &.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+    bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+    left: var(--k-ArrowContainer-arrowDistance);
+    border-top-color: var(--k-ArrowContainer-color);
 
-      if (position === 'top') {
-        return css`
-          top: -${pxToRem(distanceValue + borderSize)};
-          left: -${pxToRem(borderSize)};
-          border: ${pxToRem(borderSize)} solid transparent;
-          border-bottom-color: ${borderColor};
-        `
-      }
+    &::before {
+      bottom: calc(
+        (
+            var(--k-ArrowContainer-borderSize) +
+              var(--k-ArrowContainer-borderDistance)
+          ) * -1
+      );
+      left: calc(var(--k-ArrowContainer-borderSize) * -1);
+      border: var(--k-ArrowContainer-borderSize) solid transparent;
+      border-top-color: var(--k-ArrowContainer-borderColor);
+    }
+  }
 
-      if (position === 'bottom') {
-        return css`
-          bottom: -${pxToRem(distanceValue + borderSize)};
-          left: -${pxToRem(borderSize)};
-          border: ${pxToRem(borderSize)} solid transparent;
-          border-top-color: ${borderColor};
-        `
-      }
+  &.k-ArrowContainer--right .k-ArrowContainer__arrow {
+    right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+    top: var(--k-ArrowContainer-arrowDistance);
+    border-left-color: var(--k-ArrowContainer-color);
 
-      if (position === 'right') {
-        return css`
-          right: -${pxToRem(distanceValue + borderSize)};
-          top: -${pxToRem(borderSize)};
-          border: ${pxToRem(borderSize)} solid transparent;
-          border-left-color: ${borderColor};
-        `
-      }
+    &::before {
+      right: calc(
+        (
+            var(--k-ArrowContainer-borderSize) +
+              var(--k-ArrowContainer-borderDistance)
+          ) * -1
+      );
+      top: calc(var(--k-ArrowContainer-borderSize) * -1);
+      border: var(--k-ArrowContainer-borderSize) solid transparent;
+      border-left-color: var(--k-ArrowContainer-borderColor);
+    }
+  }
 
-      return css`
-        top: -${pxToRem(borderSize)};
-        left: -${pxToRem(distanceValue + borderSize)};
-        border: ${pxToRem(borderSize)} solid transparent;
-        border-right-color: ${borderColor};
-      `
-    }}
+  &.k-ArrowContainer--left .k-ArrowContainer__arrow {
+    left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+    top: var(--k-ArrowContainer-arrowDistance);
+    border-right-color: var(--k-ArrowContainer-color);
+
+    &::before {
+      top: calc(var(--k-ArrowContainer-borderSize) * -1);
+      left: calc(
+        (
+            var(--k-ArrowContainer-borderSize) +
+              var(--k-ArrowContainer-borderDistance)
+          ) * -1
+      );
+      border: var(--k-ArrowContainer-borderSize) solid transparent;
+      border-right-color: var(--k-ArrowContainer-borderColor);
+    }
   }
 `
 
 export const ArrowContainer = ({
   children,
+  className,
   color,
   size,
   distance,
+  distanceAsPercentage,
   position,
   centered,
   padding,
@@ -155,34 +134,57 @@ export const ArrowContainer = ({
   borderColor,
   borderWidth,
   ...props
-}) => (
-  <Container
-    color={color}
-    padding={padding}
-    shadow={shadow}
-    borderRadius={borderRadius}
-    borderColor={borderColor}
-    borderWidth={borderWidth}
-    {...props}
-  >
-    {children}
-    <Arrow
-      color={color}
-      size={size}
-      distance={distance}
-      position={position}
-      centered={centered}
-      borderColor={borderColor}
-      borderWidth={borderWidth}
-    />
-  </Container>
-)
+}) => {
+  const arrowDistance = centered
+    ? `calc(50% - ${pxToRem(size)})`
+    : distanceAsPercentage
+    ? `calc(${distance}% - ${pxToRem(size)})`
+    : pxToRem(distance)
+
+  const rawDistanceValue = Math.sqrt(Math.pow(borderWidth, 2) * 2)
+  const borderDistance =
+    borderWidth % 2 === 0
+      ? Math.floor(rawDistanceValue)
+      : Math.ceil(rawDistanceValue)
+
+  const borderSize = borderDistance + size
+
+  return (
+    <Container
+      className={classNames(
+        'k-ArrowContainer',
+        className,
+        `k-ArrowContainer--${position}`,
+        {
+          'k-ArrowContainer--hasShadow': shadow,
+          'k-ArrowContainer--hasBorder': borderWidth > 0,
+        },
+      )}
+      style={{
+        '--k-ArrowContainer-arrowDistance': arrowDistance,
+        '--k-ArrowContainer-arrowSize': pxToRem(size),
+        '--k-ArrowContainer-borderColor': borderColor,
+        '--k-ArrowContainer-borderDistance': pxToRem(borderDistance),
+        '--k-ArrowContainer-borderSize': pxToRem(borderSize),
+        '--k-ArrowContainer-borderRadius': pxToRem(borderRadius),
+        '--k-ArrowContainer-borderWidth': pxToRem(borderWidth),
+        '--k-ArrowContainer-color': color,
+        '--k-ArrowContainer-padding': pxToRem(padding),
+      }}
+      {...props}
+    >
+      {children}
+      <span className="k-ArrowContainer__arrow" />
+    </Container>
+  )
+}
 
 ArrowContainer.propTypes = {
   color: PropTypes.string,
   size: PropTypes.number,
   position: PropTypes.string,
   distance: PropTypes.number,
+  distanceAsPercentage: PropTypes.bool,
   centered: PropTypes.bool,
   padding: PropTypes.number,
   shadow: PropTypes.bool,
@@ -196,6 +198,7 @@ ArrowContainer.defaultProps = {
   size: 10,
   position: 'left',
   distance: 20,
+  distanceAsPercentage: false,
   padding: 20,
   centered: false,
   shadow: false,

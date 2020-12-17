@@ -3,26 +3,27 @@
 exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #f6f6f6;
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 0px solid #1CAFE1;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: 1.25rem;
-  left: -1.25rem;
-  border-right-color: #f6f6f6;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -31,12 +32,77 @@ exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] 
   z-index: -1;
 }
 
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
 <div
-  className="c0"
+  className="c0 k-ArrowContainer k-ArrowContainer--left"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "1.25rem",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#1CAFE1",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "0.625rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
   />
 </div>
 `;
@@ -44,26 +110,27 @@ exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] 
 exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #f6f6f6;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  border: 0px solid #eee;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: 1.25rem;
-  left: -1.25rem;
-  border-right-color: #f6f6f6;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -72,12 +139,77 @@ exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`]
   z-index: -1;
 }
 
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
 <div
-  className="c0"
+  className="c0 k-ArrowContainer k-ArrowContainer--left"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "1.25rem",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": "0.25rem",
+      "--k-ArrowContainer-borderSize": "0.625rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
   />
 </div>
 `;
@@ -85,44 +217,106 @@ exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`]
 exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #f6f6f6;
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 3px solid #eee;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: 1.25rem;
-  left: -1.25rem;
-  border-right-color: #f6f6f6;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
   width: 0;
   height: 0;
   z-index: -1;
-  top: -0.9375rem;
-  left: -1.25rem;
-  border: 0.9375rem solid transparent;
-  border-right-color: #eee;
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
 }
 
 <div
-  className="c0"
+  className="c0 k-ArrowContainer k-ArrowContainer--left k-ArrowContainer--hasBorder"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "1.25rem",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": "0.3125rem",
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "0.9375rem",
+      "--k-ArrowContainer-borderWidth": "0.1875rem",
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
   />
 </div>
 `;
@@ -130,26 +324,27 @@ exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] 
 exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #f6f6f6;
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 0px solid #eee;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: calc(50% - 0.625rem);
-  left: -1.25rem;
-  border-right-color: #f6f6f6;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -158,12 +353,77 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
   z-index: -1;
 }
 
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
 <div
-  className="c0"
+  className="c0 k-ArrowContainer k-ArrowContainer--left"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "calc(50% - 0.625rem)",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "0.625rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
   />
 </div>
 `;
@@ -171,26 +431,27 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #ff0000;
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 0px solid #eee;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: 1.25rem;
-  left: -1.25rem;
-  border-right-color: #ff0000;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -199,12 +460,184 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
   z-index: -1;
 }
 
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
 <div
-  className="c0"
+  className="c0 k-ArrowContainer k-ArrowContainer--left"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "1.25rem",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "0.625rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#ff0000",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
+  />
+</div>
+`;
+
+exports[`<ArrowContainer /> with \`distance\` and \`distanceAsPercentage\` prop matches with snapshot 1`] = `
+.c0 {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
+}
+
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
+<div
+  className="c0 k-ArrowContainer k-ArrowContainer--left"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "calc(30% - 0.625rem)",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "0.625rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
+>
+  Foobar
+  <span
+    className="k-ArrowContainer__arrow"
   />
 </div>
 `;
@@ -212,26 +645,27 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #f6f6f6;
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 0px solid #eee;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: 1.875rem;
-  left: -1.25rem;
-  border-right-color: #f6f6f6;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -240,12 +674,77 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
   z-index: -1;
 }
 
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
 <div
-  className="c0"
+  className="c0 k-ArrowContainer k-ArrowContainer--left"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "1.875rem",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "0.625rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
   />
 </div>
 `;
@@ -253,26 +752,27 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #f6f6f6;
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 0px solid #eee;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  bottom: -1.25rem;
-  left: 1.25rem;
-  border-top-color: #f6f6f6;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -281,12 +781,77 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
   z-index: -1;
 }
 
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
 <div
-  className="c0"
+  className="c0 k-ArrowContainer k-ArrowContainer--bottom"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "1.25rem",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "0.625rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
   />
 </div>
 `;
@@ -294,27 +859,27 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #f6f6f6;
-  border-radius: 0;
-  box-sizing: border-box;
-  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
-  border: 0px solid #eee;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: 1.25rem;
-  left: -1.25rem;
-  border-right-color: #f6f6f6;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -323,12 +888,77 @@ exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
   z-index: -1;
 }
 
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
 <div
-  className="c0"
+  className="c0 k-ArrowContainer k-ArrowContainer--left k-ArrowContainer--hasShadow"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "1.25rem",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "0.625rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
   />
 </div>
 `;
@@ -336,26 +966,27 @@ exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #f6f6f6;
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 0px solid #eee;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 1.25rem solid transparent;
-  top: 1.25rem;
-  left: -2.5rem;
-  border-right-color: #f6f6f6;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -364,12 +995,77 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
   z-index: -1;
 }
 
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
 <div
-  className="c0"
+  className="c0 k-ArrowContainer k-ArrowContainer--left"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "1.25rem",
+      "--k-ArrowContainer-arrowSize": "1.25rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "1.25rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
   />
 </div>
 `;
@@ -377,26 +1073,27 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #f6f6f6;
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 0px solid #eee;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: 1.25rem;
-  left: -1.25rem;
-  border-right-color: #f6f6f6;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -405,12 +1102,77 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
   z-index: -1;
 }
 
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
 <div
-  className="c0"
+  className="c0 k-ArrowContainer k-ArrowContainer--left"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "1.25rem",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "0.625rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
   />
 </div>
 `;
@@ -418,26 +1180,27 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
 exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
 .c0 {
   position: relative;
-  padding: 1.25rem;
-  background-color: #f6f6f6;
-  border-radius: 0;
-  box-sizing: border-box;
-  border: 0px solid #eee;
   z-index: 1;
+  box-sizing: border-box;
+  padding: var(--k-ArrowContainer-padding);
+  background-color: var(--k-ArrowContainer-color);
+  border-radius: var(--k-ArrowContainer-borderRadius);
+  border: var(--k-ArrowContainer-borderWidth) solid var(--k-ArrowContainer-borderColor);
 }
 
-.c1 {
+.c0.k-ArrowContainer--hasShadow {
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0,0,0,0.2);
+}
+
+.c0 .k-ArrowContainer__arrow {
   position: absolute;
   display: block;
   width: 0;
   height: 0;
-  border: 0.625rem solid transparent;
-  top: 1.25rem;
-  left: -1.25rem;
-  border-right-color: #f6f6f6;
+  border: var(--k-ArrowContainer-arrowSize) solid transparent;
 }
 
-.c1::before {
+.c0.k-ArrowContainer--hasBorder .k-ArrowContainer__arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -446,13 +1209,77 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
   z-index: -1;
 }
 
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow {
+  top: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-bottom-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
+  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-bottom-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow {
+  bottom: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  left: var(--k-ArrowContainer-arrowDistance);
+  border-top-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
+  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-top-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow {
+  right: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-left-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
+  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-left-color: var(--k-ArrowContainer-borderColor);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow {
+  left: calc(var(--k-ArrowContainer-arrowSize) * -2);
+  top: var(--k-ArrowContainer-arrowDistance);
+  border-right-color: var(--k-ArrowContainer-color);
+}
+
+.c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
+  top: calc(var(--k-ArrowContainer-borderSize) * -1);
+  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  border: var(--k-ArrowContainer-borderSize) solid transparent;
+  border-right-color: var(--k-ArrowContainer-borderColor);
+}
+
 <article
-  className="c0 k-u-example-class"
-  color="#f6f6f6"
+  className="c0 k-ArrowContainer k-u-example-class k-ArrowContainer--left"
+  style={
+    Object {
+      "--k-ArrowContainer-arrowDistance": "1.25rem",
+      "--k-ArrowContainer-arrowSize": "0.625rem",
+      "--k-ArrowContainer-borderColor": "#eee",
+      "--k-ArrowContainer-borderDistance": 0,
+      "--k-ArrowContainer-borderRadius": 0,
+      "--k-ArrowContainer-borderSize": "0.625rem",
+      "--k-ArrowContainer-borderWidth": 0,
+      "--k-ArrowContainer-color": "#f6f6f6",
+      "--k-ArrowContainer-padding": "1.25rem",
+    }
+  }
 >
   Foobar
   <span
-    className="c1"
+    className="k-ArrowContainer__arrow"
   />
 </article>
 `;

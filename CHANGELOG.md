@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `distanceAsPercentage` prop to `ArrowContainer`, defaults to false.
+
 ## [2.105.0] - 2020-12-16
 
 Feature:
