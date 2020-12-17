@@ -175,7 +175,8 @@ DropdownSelect.defaultProps = {
   onInputChange: function onInputChange() {},
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},
-  openOnLoad: false
+  openOnLoad: false,
+  uniqLabelOnSearch: false
 };
 DropdownSelect.propTypes = {
   id: PropTypes.string.isRequired,
@@ -194,5 +195,6 @@ DropdownSelect.propTypes = {
   onInputChange: PropTypes.func,
   onMenuClose: PropTypes.func,
   onMenuOpen: PropTypes.func,
-  openOnLoad: PropTypes.bool
+  openOnLoad: PropTypes.bool,
+  uniqLabelOnSearch: PropTypes.bool
 };

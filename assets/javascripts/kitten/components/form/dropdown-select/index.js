@@ -204,6 +204,7 @@ DropdownSelect.defaultProps = {
   onMenuClose: () => {},
   onMenuOpen: () => {},
   openOnLoad: false,
+  uniqLabelOnSearch: false,
 }
 
 DropdownSelect.propTypes = {
@@ -224,4 +225,5 @@ DropdownSelect.propTypes = {
   onMenuClose: PropTypes.func,
   onMenuOpen: PropTypes.func,
   openOnLoad: PropTypes.bool,
+  uniqLabelOnSearch: PropTypes.bool,
 }
