@@ -311,6 +311,7 @@ Array [
         aria-pressed={false}
         className="k-Form-PasswordInput__icon k-u-reset-button"
         onClick={[Function]}
+        type="button"
       >
         <svg
           fill="#222"
@@ -433,6 +434,7 @@ Array [
         aria-pressed={false}
         className="k-Form-PasswordInput__icon k-u-reset-button"
         onClick={[Function]}
+        type="button"
       >
         <svg
           fill="#222"

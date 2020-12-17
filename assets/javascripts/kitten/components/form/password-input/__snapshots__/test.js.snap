@@ -16,6 +16,7 @@ exports[`<PasswordInput /> should match its empty snapshot 1`] = `
     aria-pressed={false}
     className="k-Form-PasswordInput__icon k-u-reset-button"
     onClick={[Function]}
+    type="button"
   >
     <svg
       fill="#222"
