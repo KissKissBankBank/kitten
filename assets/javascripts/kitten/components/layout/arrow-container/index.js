@@ -5,17 +5,7 @@ import { pxToRem } from '../../../helpers/utils/typography'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
-const Container = styled(
-  ({
-    color,
-    padding,
-    shadow,
-    borderRadius,
-    borderColor,
-    borderWidth,
-    ...others
-  }) => <div {...others} />,
-)`
+const Container = styled.div`
   position: relative;
   z-index: 1;
   box-sizing: border-box;
