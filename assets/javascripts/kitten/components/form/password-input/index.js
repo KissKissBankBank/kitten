@@ -41,8 +41,7 @@ export const PasswordInput = ({
   hiddenIconLabel,
   ...others
 }) => {
-
-  const [isHidden, setIsHidden ] = useState(true)
+  const [isHidden, setIsHidden] = useState(true)
 
   const handleClick = () => {
     setIsHidden(!isHidden)
@@ -57,13 +56,11 @@ export const PasswordInput = ({
         className="k-Form-PasswordInput__input"
       />
       <button
+        type="button"
         aria-label={isHidden ? iconLabel : hiddenIconLabel}
         onClick={handleClick}
         aria-pressed={!isHidden}
-        className={classNames(
-          'k-Form-PasswordInput__icon',
-          'k-u-reset-button',
-        )}
+        className={classNames('k-Form-PasswordInput__icon', 'k-u-reset-button')}
       >
         <PasswordIcon />
       </button>
