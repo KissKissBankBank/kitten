@@ -39,7 +39,7 @@ exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] 
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -52,7 +52,7 @@ exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] 
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -65,7 +65,7 @@ exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] 
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -79,7 +79,7 @@ exports[`<ArrowContainer /> with \`borderColor\` prop matches with snapshot 1`] 
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -146,7 +146,7 @@ exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`]
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -159,7 +159,7 @@ exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`]
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -172,7 +172,7 @@ exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`]
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -186,7 +186,7 @@ exports[`<ArrowContainer /> with \`borderRadius\` prop matches with snapshot 1`]
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -253,7 +253,7 @@ exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] 
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -266,7 +266,7 @@ exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] 
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -279,7 +279,7 @@ exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] 
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -293,7 +293,7 @@ exports[`<ArrowContainer /> with \`borderWidth\` prop matches with snapshot 1`] 
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -360,7 +360,7 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -373,7 +373,7 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -386,7 +386,7 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -400,7 +400,7 @@ exports[`<ArrowContainer /> with \`centered\` prop matches with snapshot 1`] = `
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -467,7 +467,7 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -480,7 +480,7 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -493,7 +493,7 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -507,7 +507,7 @@ exports[`<ArrowContainer /> with \`color\` prop matches with snapshot 1`] = `
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -574,7 +574,7 @@ exports[`<ArrowContainer /> with \`distance\` and \`distanceAsPercentage\` prop 
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -587,7 +587,7 @@ exports[`<ArrowContainer /> with \`distance\` and \`distanceAsPercentage\` prop 
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -600,7 +600,7 @@ exports[`<ArrowContainer /> with \`distance\` and \`distanceAsPercentage\` prop 
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -614,7 +614,7 @@ exports[`<ArrowContainer /> with \`distance\` and \`distanceAsPercentage\` prop 
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -681,7 +681,7 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -694,7 +694,7 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -707,7 +707,7 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -721,7 +721,7 @@ exports[`<ArrowContainer /> with \`distance\` prop matches with snapshot 1`] = `
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -788,7 +788,7 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -801,7 +801,7 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -814,7 +814,7 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -828,7 +828,7 @@ exports[`<ArrowContainer /> with \`position\` prop matches with snapshot 1`] = `
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -895,7 +895,7 @@ exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -908,7 +908,7 @@ exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -921,7 +921,7 @@ exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -935,7 +935,7 @@ exports[`<ArrowContainer /> with \`shadow\` prop matches with snapshot 1`] = `
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -1002,7 +1002,7 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -1015,7 +1015,7 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -1028,7 +1028,7 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -1042,7 +1042,7 @@ exports[`<ArrowContainer /> with \`size\` prop matches with snapshot 1`] = `
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -1109,7 +1109,7 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -1122,7 +1122,7 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -1135,7 +1135,7 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -1149,7 +1149,7 @@ exports[`<ArrowContainer /> with default props matches with snapshot 1`] = `
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
@@ -1216,7 +1216,7 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--top .k-ArrowContainer__arrow::before {
-  top: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  top: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-bottom-color: var(--k-ArrowContainer-borderColor);
@@ -1229,7 +1229,7 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--bottom .k-ArrowContainer__arrow::before {
-  bottom: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  bottom: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   left: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-top-color: var(--k-ArrowContainer-borderColor);
@@ -1242,7 +1242,7 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
 }
 
 .c0.k-ArrowContainer--right .k-ArrowContainer__arrow::before {
-  right: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  right: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-left-color: var(--k-ArrowContainer-borderColor);
@@ -1256,7 +1256,7 @@ exports[`<ArrowContainer /> with other props matches with snapshot 1`] = `
 
 .c0.k-ArrowContainer--left .k-ArrowContainer__arrow::before {
   top: calc(var(--k-ArrowContainer-borderSize) * -1);
-  left: calc((var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance)) * -1);
+  left: calc( ( var(--k-ArrowContainer-borderSize) + var(--k-ArrowContainer-borderDistance) ) * -1 );
   border: var(--k-ArrowContainer-borderSize) solid transparent;
   border-right-color: var(--k-ArrowContainer-borderColor);
 }
