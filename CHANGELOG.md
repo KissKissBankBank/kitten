@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add `type="button"` to button on `PasswordInput`.
+
 ## [2.105.0] - 2020-12-16
 
 Feature:
