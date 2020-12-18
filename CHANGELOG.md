@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Allow `PropTypes.node` on `text` prop.
+- Fix: `RadioButton`: Allow `PropTypes.node` on `text` prop.
 
 ## [2.106.0] - 2020-12-18
 
