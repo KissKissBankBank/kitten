@@ -29,8 +29,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _typography = require("../../../helpers/utils/typography");
 
-var _classnames = _interopRequireDefault(require("classnames"));
-
 var StyledPasswordInput = _styledComponents.default.div.withConfig({
   displayName: "password-input__StyledPasswordInput",
   componentId: "sc-1futz46-0"
@@ -58,10 +56,11 @@ var PasswordInput = function PasswordInput(_ref) {
     type: isHidden ? 'password' : 'text',
     className: "k-Form-PasswordInput__input"
   })), /*#__PURE__*/_react.default.createElement("button", {
+    type: "button",
     "aria-label": isHidden ? iconLabel : hiddenIconLabel,
     onClick: handleClick,
     "aria-pressed": !isHidden,
-    className: (0, _classnames.default)('k-Form-PasswordInput__icon', 'k-u-reset-button')
+    className: "k-Form-PasswordInput__icon k-u-reset-button"
   }, /*#__PURE__*/_react.default.createElement(_passwordIcon.PasswordIcon, null)));
 };
 
