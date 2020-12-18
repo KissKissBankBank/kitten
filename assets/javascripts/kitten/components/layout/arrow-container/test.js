@@ -66,6 +66,22 @@ describe('<ArrowContainer />', () => {
     })
   })
 
+  describe('with `distance` and `distanceAsPercentage` prop', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(
+          <ArrowContainer distance={30} distanceAsPercentage>
+            Foobar
+          </ArrowContainer>,
+        )
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `centered` prop', () => {
     beforeEach(() => {
       component = renderer
