@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Open menu on focus `DropdownSelect` combobox.
 - Feature: Add Icons, Constants and useful Helpers to main export.
 - Fix: Add `type="button"` to button on `PasswordInput`.
 

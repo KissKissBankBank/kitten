@@ -89,6 +89,7 @@ export const DropdownCombobox = ({
     getMenuProps,
     highlightedIndex,
     getItemProps,
+    openMenu,
   } = useCombobox({
     id: `${id}_element`,
     inputId: id,
@@ -162,6 +163,8 @@ export const DropdownCombobox = ({
           className="k-Form-DropdownCombobox__input"
           placeholder={placeholder}
           disabled={disabled}
+          onFocus={() => !isOpen && openMenu()}
+          onClick={() => !isOpen && openMenu()}
           {...getInputProps()}
         />
         <button
