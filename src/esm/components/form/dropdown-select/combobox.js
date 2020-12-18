@@ -112,7 +112,8 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       getInputProps = _useCombobox.getInputProps,
       getMenuProps = _useCombobox.getMenuProps,
       highlightedIndex = _useCombobox.highlightedIndex,
-      getItemProps = _useCombobox.getItemProps;
+      getItemProps = _useCombobox.getItemProps,
+      openMenu = _useCombobox.openMenu;
 
   useEffect(function () {
     getLabelProps && labelPropsGetter(getLabelProps);
@@ -154,7 +155,13 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
   }, getComboboxProps()), /*#__PURE__*/React.createElement("input", _extends({
     className: "k-Form-DropdownCombobox__input",
     placeholder: placeholder,
-    disabled: disabled
+    disabled: disabled,
+    onFocus: function onFocus() {
+      return !isOpen && openMenu();
+    },
+    onClick: function onClick() {
+      return !isOpen && openMenu();
+    }
   }, getInputProps())), /*#__PURE__*/React.createElement("button", _extends({
     className: "k-Form-DropdownCombobox__arrowButton",
     type: "button",

@@ -8,7 +8,6 @@ import { PasswordIcon } from '../../../components/icons/password-icon';
 import COLORS from '../../../constants/colors-config';
 import PropTypes from 'prop-types';
 import { pxToRem } from '../../../helpers/utils/typography';
-import classNames from 'classnames';
 var StyledPasswordInput = styled.div.withConfig({
   displayName: "password-input__StyledPasswordInput",
   componentId: "sc-1futz46-0"
@@ -35,10 +34,11 @@ export var PasswordInput = function PasswordInput(_ref) {
     type: isHidden ? 'password' : 'text',
     className: "k-Form-PasswordInput__input"
   })), /*#__PURE__*/React.createElement("button", {
+    type: "button",
     "aria-label": isHidden ? iconLabel : hiddenIconLabel,
     onClick: handleClick,
     "aria-pressed": !isHidden,
-    className: classNames('k-Form-PasswordInput__icon', 'k-u-reset-button')
+    className: "k-Form-PasswordInput__icon k-u-reset-button"
   }, /*#__PURE__*/React.createElement(PasswordIcon, null)));
 };
 PasswordInput.propTypes = {
