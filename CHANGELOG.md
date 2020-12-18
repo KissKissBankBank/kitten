@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add `distanceAsPercentage` prop to `ArrowContainer`, defaults to false.
+- Fix: Open menu on focus `DropdownSelect` combobox.
+- Feature: Add Icons, Constants and useful Helpers to main export.
+- Fix: Add `type="button"` to button on `PasswordInput`.
 
 ## [2.105.0] - 2020-12-16
 
@@ -14,8 +17,8 @@ Feature:
 
 Fixes:
 
-- `VerticalStepper` styles.
-- Fix className and refacto.
+- Fix `VerticalStepper` styles.
+- Fix `TagButton` className and refacto.
 - Fix `DropdownSelect` item line height and alignment.
 - `ProgressBar` wasn’t passing class names.
 

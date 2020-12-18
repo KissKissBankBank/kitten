@@ -5,7 +5,6 @@ import { PasswordIcon } from '../../../components/icons/password-icon'
 import COLORS from '../../../constants/colors-config'
 import PropTypes from 'prop-types'
 import { pxToRem } from '../../../helpers/utils/typography'
-import classNames from 'classnames'
 
 const StyledPasswordInput = styled.div`
   position: relative;
@@ -41,8 +40,7 @@ export const PasswordInput = ({
   hiddenIconLabel,
   ...others
 }) => {
-
-  const [isHidden, setIsHidden ] = useState(true)
+  const [isHidden, setIsHidden] = useState(true)
 
   const handleClick = () => {
     setIsHidden(!isHidden)
@@ -57,13 +55,11 @@ export const PasswordInput = ({
         className="k-Form-PasswordInput__input"
       />
       <button
+        type="button"
         aria-label={isHidden ? iconLabel : hiddenIconLabel}
         onClick={handleClick}
         aria-pressed={!isHidden}
-        className={classNames(
-          'k-Form-PasswordInput__icon',
-          'k-u-reset-button',
-        )}
+        className="k-Form-PasswordInput__icon k-u-reset-button"
       >
         <PasswordIcon />
       </button>
