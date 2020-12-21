@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `variant` prop to `ProgressRing`, defaults to `andromeda`.
+
 ## [2.106.0] - 2020-12-18
 
 Features:

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
+import classNames from 'classnames'
 
 const getDashLength = radius => 2 * Math.PI * radius
 
@@ -26,6 +27,10 @@ const StyledMeterCircle = styled.circle`
   transform: rotate(-90deg);
   transform-origin: ${({ cx, cy }) => `${pxToRem(cx)} ${pxToRem(cy)}`};
   animation: ${rotateAnimate} 1.4s ease-out;
+
+  .k-Meters__ProgressRing--orion {
+    stroke-linecap: round;
+  }
 `
 
 export const ProgressRing = ({
@@ -33,6 +38,8 @@ export const ProgressRing = ({
   value,
   width,
   strokeWidth,
+  variant,
+  className,
   ...others
 }) => {
   const circleX = width / 2
@@ -68,6 +75,10 @@ export const ProgressRing = ({
         fill="transparent"
         stroke={color}
         progressValue={progressValue}
+        className={classNames(
+          'k-Meters__ProgressRing',
+          `k-Meters__ProgressRing--${variant}`,
+        )}
       />
     </svg>
   )
@@ -79,6 +90,7 @@ ProgressRing.defaultProps = {
   width: 50,
   radius: null,
   strokeWidth: 5,
+  variant: 'andromeda',
 }
 
 ProgressRing.propTypes = {
@@ -102,4 +114,5 @@ ProgressRing.propTypes = {
     Width of circle (stroke)
   */
   strokeWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }

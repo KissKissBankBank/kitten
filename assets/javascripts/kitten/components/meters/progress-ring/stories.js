@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { number, color } from '@storybook/addon-knobs'
+import { number, color, select } from '@storybook/addon-knobs'
 import { ProgressRing } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
@@ -57,6 +57,7 @@ export const DefaultProps = () => (
           value={number('Value', 50)}
           width={number('Width', 24)}
           strokeWidth={number('Stroke width', 4)}
+          variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
         />
         <StyledText size="micro" color="font1" weight="regular">
           Financé à 50%
