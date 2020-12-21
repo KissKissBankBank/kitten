@@ -18,7 +18,7 @@ describe('<ProgressRing />', () => {
             strokeWidth={5}
             radius={100}
             variant="andromeda"
-            speedAnimation={1.4}
+            animationSpeed={1.4}
           />,
         )
         .toJSON()

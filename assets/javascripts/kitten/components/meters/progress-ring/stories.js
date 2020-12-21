@@ -57,7 +57,7 @@ export const DefaultProps = () => (
           value={number('Value', 50)}
           width={number('Width', 160)}
           strokeWidth={number('Stroke width', 10)}
-          speedAnimation={number('speed', 3)}
+          animationSpeed={number('speed', 3)}
           variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
         />
         <StyledText size="micro" color="font1" weight="regular">
