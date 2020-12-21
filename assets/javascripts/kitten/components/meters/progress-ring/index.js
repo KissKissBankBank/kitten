@@ -26,7 +26,7 @@ const StyledMeterCircle = styled.circle`
     getDashOffset({ r, progressValue })};
   transform: rotate(-90deg);
   transform-origin: ${({ cx, cy }) => `${pxToRem(cx)} ${pxToRem(cy)}`};
-  animation: ${rotateAnimate} ${({ animationSpeed }) => animationSpeed} ease-out;
+  animation: ${rotateAnimate} ${({ animationSpeed }) => animationSpeed}s ease-out;
   
   &.k-Meters__ProgressRing--orion {
     stroke-linecap: round;
@@ -73,7 +73,7 @@ export const ProgressRing = ({
         cy={circleY}
         r={radius}
         strokeWidth={strokeWidth}
-        animationSpeed={`${animationSpeed}s`}
+        animationSpeed={animationSpeed}
         fill="transparent"
         stroke={color}
         progressValue={progressValue}
