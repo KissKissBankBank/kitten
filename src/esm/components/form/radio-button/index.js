@@ -49,7 +49,7 @@ export var RadioButton = function RadioButton(_ref) {
   }, children)));
 };
 RadioButton.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.node.isRequired,
   id: PropTypes.string.isRequired,
   large: PropTypes.bool,
   largeContent: PropTypes.bool,
