@@ -26,11 +26,11 @@ const StyledMeterCircle = styled.circle`
     getDashOffset({ r, progressValue })};
   transform: rotate(-90deg);
   transform-origin: ${({ cx, cy }) => `${pxToRem(cx)} ${pxToRem(cy)}`};
-  animation: ${rotateAnimate} 1.4s ease-out;
-
-  .k-Meters__ProgressRing--orion {
+  animation: ${rotateAnimate} ${({ speedAnimation }) => speedAnimation} ease-out;
+  
+  &.k-Meters__ProgressRing--orion {
     stroke-linecap: round;
-  }
+  }  
 `
 
 export const ProgressRing = ({
@@ -40,6 +40,7 @@ export const ProgressRing = ({
   strokeWidth,
   variant,
   className,
+  speedAnimation,
   ...others
 }) => {
   const circleX = width / 2
@@ -72,11 +73,13 @@ export const ProgressRing = ({
         cy={circleY}
         r={radius}
         strokeWidth={strokeWidth}
+        speedAnimation={`${speedAnimation}s`}
         fill="transparent"
         stroke={color}
         progressValue={progressValue}
         className={classNames(
           'k-Meters__ProgressRing',
+          className,
           `k-Meters__ProgressRing--${variant}`,
         )}
       />
@@ -91,6 +94,7 @@ ProgressRing.defaultProps = {
   radius: null,
   strokeWidth: 5,
   variant: 'andromeda',
+  speedAnimation: '1.4s',
 }
 
 ProgressRing.propTypes = {
@@ -115,4 +119,5 @@ ProgressRing.propTypes = {
   */
   strokeWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   variant: PropTypes.oneOf(['andromeda', 'orion']),
+  speedAnimation: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 }

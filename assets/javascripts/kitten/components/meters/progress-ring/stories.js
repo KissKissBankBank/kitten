@@ -55,8 +55,9 @@ export const DefaultProps = () => (
         <ProgressRing
           color={color('Color', COLORS.primary2)}
           value={number('Value', 50)}
-          width={number('Width', 24)}
-          strokeWidth={number('Stroke width', 4)}
+          width={number('Width', 160)}
+          strokeWidth={number('Stroke width', 10)}
+          speedAnimation={number('speed', 3)}
           variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
         />
         <StyledText size="micro" color="font1" weight="regular">
