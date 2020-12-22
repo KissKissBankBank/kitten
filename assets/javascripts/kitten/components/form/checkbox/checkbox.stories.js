@@ -1,5 +1,5 @@
 import React from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { Checkbox } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
@@ -20,6 +20,7 @@ export const Default = () => (
         indeterminate={boolean('indeterminate', false)}
         id={text('id', 'checkbox_id')}
         disabled={boolean('disabled', false)}
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
       >
         {text('text', 'Checkbox Label')}
       </Checkbox>

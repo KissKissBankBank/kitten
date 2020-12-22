@@ -49,6 +49,10 @@ const StyledCheckbox = styled.div`
     cursor: pointer;
     transition: border-color .2s, background-color .2s;
 
+    .k-Form-Checkbox--orion & {
+      border-radius: ${pxToRem(4)};
+    }
+
     &:focus {
       outline: none;
       border-color: ${COLORS.primary1};
@@ -133,6 +137,7 @@ export const Checkbox = ({
   onLabelClick,
   indeterminate,
   label,
+  variant,
   ...inputProps
 }) => {
   const inputElement = useRef(null)
@@ -145,10 +150,15 @@ export const Checkbox = ({
 
   return (
     <StyledCheckbox
-      className={classNames('k-Form-Checkbox', className, {
-        'k-Form-Checkbox--error': error,
-        'k-Form-Checkbox--disabled': disabled,
-      })}
+      className={classNames(
+        'k-Form-Checkbox',
+        `k-Form-Checkbox--${variant}`,
+        {
+          'k-Form-Checkbox--error': error,
+          'k-Form-Checkbox--disabled': disabled,
+        },
+        className,
+      )}
     >
       <input
         ref={inputElement}
@@ -213,6 +223,7 @@ Checkbox.defaultProps = {
   indeterminate: false,
   error: false,
   disabled: false,
+  variant: 'andromeda',
 }
 
 Checkbox.propTypes = {
@@ -223,4 +234,5 @@ Checkbox.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node,
   label: PropTypes.string,
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
