@@ -62,7 +62,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
   box-sizing: border-box;
   width: 100%;
-  border-left: 0;
   border: 0.1875rem solid #fff;
   z-index: 1;
   padding: 0.1875rem;
@@ -669,7 +668,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion {
   box-sizing: border-box;
   width: 100%;
-  border-left: 0;
   border: 0.1875rem solid #fff;
   z-index: 1;
   padding: 0.1875rem;

@@ -128,7 +128,6 @@ const StyledContainerStatus = styled.div`
     &.k-Steppers--VerticalStepper__status--orion {
       box-sizing: border-box;
       width: 100%;
-      border-left: 0;
       border: ${pxToRem(3)} solid ${COLORS.background1};
       z-index: 1;
       padding: ${pxToRem(3)};
