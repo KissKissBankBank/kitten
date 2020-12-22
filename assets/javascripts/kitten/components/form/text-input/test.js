@@ -104,4 +104,16 @@ describe('<TextInput />', () => {
       expect(component).toMatchSnapshot()
     })
   })
+
+  describe('with `textarea` tag', () => {
+    beforeEach(() => {
+      component = renderer
+        .create(<TextInput tag="textarea" name="message" />)
+        .toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
 })
