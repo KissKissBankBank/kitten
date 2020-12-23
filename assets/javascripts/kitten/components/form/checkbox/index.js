@@ -98,6 +98,10 @@ const StyledCheckbox = styled.div`
     }
   }
 
+  &.k-Form-Checkbox--orion .k-Form-Checkbox__input {
+    border-radius: ${pxToRem(4)};
+  }
+
   .k-Form-Checkbox__link,
   label a {
     ${TYPOGRAPHY.fontStyles.regular}
@@ -133,6 +137,7 @@ export const Checkbox = ({
   onLabelClick,
   indeterminate,
   label,
+  variant,
   ...inputProps
 }) => {
   const inputElement = useRef(null)
@@ -145,10 +150,15 @@ export const Checkbox = ({
 
   return (
     <StyledCheckbox
-      className={classNames('k-Form-Checkbox', className, {
-        'k-Form-Checkbox--error': error,
-        'k-Form-Checkbox--disabled': disabled,
-      })}
+      className={classNames(
+        'k-Form-Checkbox',
+        `k-Form-Checkbox--${variant}`,
+        {
+          'k-Form-Checkbox--error': error,
+          'k-Form-Checkbox--disabled': disabled,
+        },
+        className,
+      )}
     >
       <input
         ref={inputElement}
@@ -213,6 +223,7 @@ Checkbox.defaultProps = {
   indeterminate: false,
   error: false,
   disabled: false,
+  variant: 'andromeda',
 }
 
 Checkbox.propTypes = {
@@ -223,4 +234,5 @@ Checkbox.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node,
   label: PropTypes.string,
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }

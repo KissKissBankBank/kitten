@@ -1,5 +1,5 @@
 import React from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
 import { Checkbox } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
@@ -20,6 +20,7 @@ export const Default = () => (
         indeterminate={boolean('indeterminate', false)}
         id={text('id', 'checkbox_id')}
         disabled={boolean('disabled', false)}
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
       >
         {text('text', 'Checkbox Label')}
       </Checkbox>
@@ -29,6 +30,7 @@ export const Default = () => (
         id="checkbox_id_2"
         indeterminate={boolean('indeterminate', false)}
         disabled={boolean('disabled', false)}
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
       >
         This label has a <a href="#link">link</a>.
       </Checkbox>
@@ -44,6 +46,7 @@ export const WithContent = () => (
         id={text('id', 'checkbox_id')}
         disabled={boolean('disabled', false)}
         label={text('label', 'Checkbox Label')}
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
       >
         {text('content', 'Checkbox content')}
       </Checkbox>
@@ -52,11 +55,13 @@ export const WithContent = () => (
         id="checkbox_id_1"
         disabled={boolean('disabled', false)}
         label="This checkbox has a label prop but no children"
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
       />
       <Checkbox
         indeterminate={boolean('indeterminate', false)}
         id="checkbox_id_2"
         disabled={boolean('disabled', false)}
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
       >
         This checkbox doesn't have a `label` prop.
         <br />
@@ -67,6 +72,7 @@ export const WithContent = () => (
         indeterminate={boolean('indeterminate', false)}
         id="checkbox_id_3"
         disabled={boolean('disabled', false)}
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
         label="This checkbox has a Label prop and a big content"
       >
         Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,

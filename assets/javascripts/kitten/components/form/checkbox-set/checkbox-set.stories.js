@@ -1,5 +1,5 @@
 import React from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, select } from '@storybook/addon-knobs'
 import { CheckboxSet } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
@@ -15,6 +15,7 @@ export const Default = () => (
   <Grid>
     <GridCol offset="1" col="8">
       <CheckboxSet
+        variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
         id={text('ID', 'story-radio-button-set')}
         label={text('Label', null)}
         items={[
