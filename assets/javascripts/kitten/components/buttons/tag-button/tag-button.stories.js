@@ -16,6 +16,7 @@ export const Default = () => (
     huge={boolean('Huge', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
     selected={boolean('Select', false)}
+    variant={select('variant', ['andromeda', 'orion'], 'andromeda')}
   >
     {(text, ('Text', 'MyTag'))}
   </TagButton>

@@ -6,6 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Add `variant` prop to `CheckboxSet`, defaults to `andromeda`.
 - Feature: Add `variant` prop to `Checkbox`, defaults to `andromeda`.
+- Feature: Add `variant` prop to `TagButton`, defaults to `andromeda`.
+- Fix: `VerticalStepper` styles.
 - Feature: Add `variant` prop to `ProgressRing`, defaults to `andromeda`.
 - Feature: Add `animationSpeed` prop to `ProgressRing`.
 

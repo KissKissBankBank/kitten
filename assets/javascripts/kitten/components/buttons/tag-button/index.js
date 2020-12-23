@@ -32,6 +32,11 @@ const StyledTagButton = styled.button`
   appareance: none;
   outline: none;
   cursor: pointer;
+
+  &.k-Buttons__tagButton--orion {
+    border-radius: ${pxToRem(8)};
+  }
+
   :disabled {
     cursor: not-allowed;
   }
@@ -138,6 +143,7 @@ export const TagButton = ({
   huge,
   icon,
   className,
+  variant,
   ...others
 }) => {
 
@@ -147,6 +153,7 @@ export const TagButton = ({
         'k-Buttons__tagButton',
         className,
         `k-Buttons__tagButton--${modifier}`,
+        `k-Buttons__tagButton--${variant}`,
         {
           'k-Buttons__tagButton--tiny': tiny,
           'k-Buttons__tagButton--big': big,
@@ -169,6 +176,7 @@ TagButton.propTypes = {
   huge: PropTypes.bool,
   icon: PropTypes.bool,
   selected: PropTypes.bool,
+  variant: PropTypes.oneOf(['andromeda', 'orion']),
 }
 
 TagButton.defaultProps = {
@@ -179,4 +187,5 @@ TagButton.defaultProps = {
   big: false,
   huge: false,
   selected: false,
+  variant: 'andromeda',
 }
