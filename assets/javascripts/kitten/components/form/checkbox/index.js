@@ -49,10 +49,6 @@ const StyledCheckbox = styled.div`
     cursor: pointer;
     transition: border-color .2s, background-color .2s;
 
-    .k-Form-Checkbox--orion & {
-      border-radius: ${pxToRem(4)};
-    }
-
     &:focus {
       outline: none;
       border-color: ${COLORS.primary1};
@@ -100,6 +96,10 @@ const StyledCheckbox = styled.div`
         box-shadow: 0 0 ${pxToRem(3)} ${COLORS.error};
       }
     }
+  }
+
+  &.k-Form-Checkbox--orion .k-Form-Checkbox__input {
+    border-radius: ${pxToRem(4)};
   }
 
   .k-Form-Checkbox__link,
