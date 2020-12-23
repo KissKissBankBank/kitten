@@ -39,6 +39,10 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
   cursor: pointer;
 }
 
+.c0.k-Buttons__tagButton--orion {
+  border-radius: 0.5rem;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -165,7 +169,7 @@ exports[`<TagButton /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--big"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--big"
 >
   MyButton
 </button>
@@ -210,6 +214,10 @@ exports[`<TagButton /> with \`huge\` prop matches with snapshot 1`] = `
   cursor: pointer;
 }
 
+.c0.k-Buttons__tagButton--orion {
+  border-radius: 0.5rem;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -336,7 +344,7 @@ exports[`<TagButton /> with \`huge\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--huge"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--huge"
 >
   MyButton
 </button>
@@ -381,6 +389,10 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
   cursor: pointer;
 }
 
+.c0.k-Buttons__tagButton--orion {
+  border-radius: 0.5rem;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -507,7 +519,7 @@ exports[`<TagButton /> with \`modifier\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--helium"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--helium k-Buttons__tagButton--andromeda"
 >
   MyButton
 </button>
@@ -552,6 +564,10 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
   cursor: pointer;
 }
 
+.c0.k-Buttons__tagButton--orion {
+  border-radius: 0.5rem;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -678,7 +694,7 @@ exports[`<TagButton /> with \`selected\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--selected"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--selected"
 >
   MyButton
 </button>
@@ -723,6 +739,10 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
   cursor: pointer;
 }
 
+.c0.k-Buttons__tagButton--orion {
+  border-radius: 0.5rem;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -849,7 +869,7 @@ exports[`<TagButton /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--tiny"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--tiny"
 >
   MyButton
 </button>
@@ -894,6 +914,10 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
   cursor: pointer;
 }
 
+.c0.k-Buttons__tagButton--orion {
+  border-radius: 0.5rem;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -1020,7 +1044,7 @@ exports[`<TagButton /> with icon matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--icon"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda k-Buttons__tagButton--icon"
 >
   <svg
     viewBox="0 0 732 224.43"
@@ -1081,6 +1105,10 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
   cursor: pointer;
 }
 
+.c0.k-Buttons__tagButton--orion {
+  border-radius: 0.5rem;
+}
+
 .c0:disabled {
   cursor: not-allowed;
 }
@@ -1207,7 +1235,7 @@ exports[`<TagButton /> with text matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen"
+  className="c0 k-Buttons__tagButton k-Buttons__tagButton--hydrogen k-Buttons__tagButton--andromeda"
 >
   MyButton
 </button>
