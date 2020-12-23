@@ -77,7 +77,7 @@ export class Status extends Component {
 }
 
 const STATUS_SIZE = 30
-const INACTIVE_STATUS_SIZE = 15
+const INACTIVE_STATUS_SIZE = 16
 
 const StyledContainerStatus = styled.div`
   &.k-Steppers--VerticalStepper__statusContainer--orion {
