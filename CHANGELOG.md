@@ -4,13 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix: Propagate `name` argument when `TextInput` is a textarea.
-- Feature: Add `variant` prop to `CheckboxSet`, defaults to `andromeda`.
-- Feature: Add `variant` prop to `Checkbox`, defaults to `andromeda`.
-- Feature: Add `variant` prop to `TagButton`, defaults to `andromeda`.
-- Fix: `VerticalStepper` styles.
-- Feature: Add `variant` prop to `ProgressRing`, defaults to `andromeda`.
-- Feature: Add `animationSpeed` prop to `ProgressRing`.
+## [2.107.0] - 2020-12-24
+
+Features:
+
+- Add `variant` prop to `CheckboxSet`, defaults to `andromeda`.
+- Add `variant` prop to `Checkbox`, defaults to `andromeda`.
+- Add `variant` prop to `TagButton`, defaults to `andromeda`.
+- Add `variant` prop to `ProgressRing`, defaults to `andromeda`.
+- Add `animationSpeed` prop to `ProgressRing`.
+
+Fixes:
+
+- Propagate `name` argument when `TextInput` is a textarea.
+- `VerticalStepper` styles.
 
 ## [2.106.1] - 2020-12-18
 

@@ -23,6 +23,8 @@ var _colorsConfig = _interopRequireDefault(require("../../../constants/colors-co
 
 var _typography = require("../../../helpers/utils/typography");
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 var getDashLength = function getDashLength(radius) {
   return 2 * Math.PI * radius;
 };
@@ -45,7 +47,7 @@ var rotateAnimate = function rotateAnimate(_ref2) {
 var StyledMeterCircle = _styledComponents.default.circle.withConfig({
   displayName: "progress-ring__StyledMeterCircle",
   componentId: "ysg5f3-0"
-})(["stroke-linecap:butt;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " 1.4s ease-out;"], function (_ref3) {
+})(["stroke-linecap:butt;stroke-dasharray:", ";stroke-dashoffset:", ";transform:rotate(-90deg);transform-origin:", ";animation:", " ", "s ease-out;&.k-Meters__ProgressRing--orion{stroke-linecap:round;}"], function (_ref3) {
   var r = _ref3.r;
   return getDashLength(r);
 }, function (_ref4) {
@@ -59,14 +61,20 @@ var StyledMeterCircle = _styledComponents.default.circle.withConfig({
   var cx = _ref5.cx,
       cy = _ref5.cy;
   return "".concat((0, _typography.pxToRem)(cx), " ").concat((0, _typography.pxToRem)(cy));
-}, rotateAnimate);
+}, rotateAnimate, function (_ref6) {
+  var animationSpeed = _ref6.animationSpeed;
+  return animationSpeed;
+});
 
-var ProgressRing = function ProgressRing(_ref6) {
-  var color = _ref6.color,
-      value = _ref6.value,
-      width = _ref6.width,
-      strokeWidth = _ref6.strokeWidth,
-      others = (0, _objectWithoutProperties2.default)(_ref6, ["color", "value", "width", "strokeWidth"]);
+var ProgressRing = function ProgressRing(_ref7) {
+  var color = _ref7.color,
+      value = _ref7.value,
+      width = _ref7.width,
+      strokeWidth = _ref7.strokeWidth,
+      variant = _ref7.variant,
+      className = _ref7.className,
+      animationSpeed = _ref7.animationSpeed,
+      others = (0, _objectWithoutProperties2.default)(_ref7, ["color", "value", "width", "strokeWidth", "variant", "className", "animationSpeed"]);
   var circleX = width / 2;
   var circleY = width / 2;
   var radius = circleX - strokeWidth;
@@ -89,9 +97,11 @@ var ProgressRing = function ProgressRing(_ref6) {
     cy: circleY,
     r: radius,
     strokeWidth: strokeWidth,
+    animationSpeed: animationSpeed,
     fill: "transparent",
     stroke: color,
-    progressValue: progressValue
+    progressValue: progressValue,
+    className: (0, _classnames.default)('k-Meters__ProgressRing', className, "k-Meters__ProgressRing--".concat(variant))
   }));
 };
 
@@ -101,7 +111,9 @@ ProgressRing.defaultProps = {
   value: '',
   width: 50,
   radius: null,
-  strokeWidth: 5
+  strokeWidth: 5,
+  variant: 'andromeda',
+  animationSpeed: 1.4
 };
 ProgressRing.propTypes = {
   /**
@@ -127,5 +139,7 @@ ProgressRing.propTypes = {
   /**
     Width of circle (stroke)
   */
-  strokeWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string])
+  strokeWidth: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
+  variant: _propTypes.default.oneOf(['andromeda', 'orion']),
+  animationSpeed: _propTypes.default.number
 };
