@@ -117,7 +117,7 @@ export var Status = /*#__PURE__*/function (_Component) {
   return Status;
 }(Component);
 var STATUS_SIZE = 30;
-var INACTIVE_STATUS_SIZE = 15;
+var INACTIVE_STATUS_SIZE = 16;
 var StyledContainerStatus = styled.div.withConfig({
   displayName: "status__StyledContainerStatus",
   componentId: "sc-17oq9bs-0"

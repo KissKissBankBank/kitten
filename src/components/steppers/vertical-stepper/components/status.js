@@ -146,7 +146,7 @@ var Status = /*#__PURE__*/function (_Component) {
 
 exports.Status = Status;
 var STATUS_SIZE = 30;
-var INACTIVE_STATUS_SIZE = 15;
+var INACTIVE_STATUS_SIZE = 16;
 
 var StyledContainerStatus = _styledComponents.default.div.withConfig({
   displayName: "status__StyledContainerStatus",
