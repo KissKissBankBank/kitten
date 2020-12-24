@@ -51,6 +51,8 @@ const StyledNav = styled.nav`
     }
 
     &.k-Steppers--VerticalStepper__orion {
+      margin-left: ${pxToRem(-5)};
+
       :before {
         border-left: none;
       }
@@ -61,7 +63,7 @@ const StyledNav = styled.nav`
         &::after {
           content: '';
           position: absolute;
-          left: ${pxToRem(19)};
+          left: ${pxToRem(18.5)};
           top: ${pxToRem(30)};
           background-color: ${COLORS.line1};
           width: ${pxToRem(3)};
