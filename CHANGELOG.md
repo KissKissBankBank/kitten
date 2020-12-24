@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Propagate `name` argument when `TextInput` is a textarea.
 - Feature: Add `variant` prop to `CheckboxSet`, defaults to `andromeda`.
 - Feature: Add `variant` prop to `Checkbox`, defaults to `andromeda`.
 - Feature: Add `variant` prop to `TagButton`, defaults to `andromeda`.

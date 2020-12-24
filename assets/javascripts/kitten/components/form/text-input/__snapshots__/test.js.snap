@@ -69,6 +69,21 @@ exports[`<TextInput /> with \`tag\` prop matches with snapshot 1`] = `
 />
 `;
 
+exports[`<TextInput /> with \`textarea\` tag matches with snapshot 1`] = `
+<div
+  className="sc-bwzfXH bEnvnC k-Form-TextInput__textareaContainer k-Form-TextInput__textareaContainer--andromeda"
+>
+  <textarea
+    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInput--andromeda"
+    disabled={false}
+    name="message"
+  />
+  <div
+    className="k-Form-TextInput__textareaGradient"
+  />
+</div>
+`;
+
 exports[`<TextInput /> with \`tiny\` prop matches with snapshot 1`] = `
 <input
   className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--tiny"
