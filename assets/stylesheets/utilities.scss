@@ -33,6 +33,7 @@ $k-typography: k-typography-definition((
 @include k-utilities-flex;
 @include k-utilities-justify-content;
 @include k-utilities-align-items;
+@include k-utilities-align-self;
 @include k-utilities-flex-direction;
 @include k-utilities-responsive;
 @include k-utilities-link;
