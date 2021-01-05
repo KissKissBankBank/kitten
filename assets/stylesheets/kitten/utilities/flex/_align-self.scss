@@ -40,8 +40,7 @@
 ///   <div class="k-u-flex-alignSelf-start--important">…</div>
 ///   <div class="k-u-flex-alignSelf-end--important">…</div>
 
-@mixin k-u-flex-alignSelf($position, $align) {
-  $value: $align;
+@mixin k-u-flex-alignSelf($position, $value) {
 
   .k-u-flex-alignSelf-#{$position} {
     align-self: $value;
