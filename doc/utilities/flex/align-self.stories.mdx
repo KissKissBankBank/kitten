@@ -1,0 +1,102 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/CSS Utilities/Flex/Align Self" />
+
+# Align self
+
+Align-self utility to be used with a flexbox container, like `k-u-flex` or `k-u-flex-inline`.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/flex/_align-self.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/flex/_align-self.scss)
+
+## Usage
+
+Utilities to align self according to media-queries.
+
+The class name has the form `k-u-flex-alignSelf-{value}`
+
+Accepts values:
+
+- `normal`
+- `stretch`
+- `center`
+- `start`
+- `end`
+
+## Examples
+
+`k-u-flex-alignSelf-normal`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-flex-alignSelf-normal">
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+
+`k-u-flex-alignSelf-stretch`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-flex-alignSelf-stretch">
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+
+`k-u-flex-alignSelf-center`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-flex-alignSelf-center">
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+
+`k-u-flex-alignSelf-start`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-flex-alignSelf-start">
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
+
+`k-u-flex-alignSelf-end`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-flex-alignSelf-end">
+    First block item
+  </p>
+  <p>
+    Second block item
+  </p>
+  <p>
+    Third block item
+  </p>
+</div>
+</Canvas>
