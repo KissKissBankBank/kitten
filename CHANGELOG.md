@@ -4,7 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Add CSS utilities `k-u-flex-alignSelf-*` and docs.
+- Feature: Add CSS utilities `k-u-flex-alignSelf-*` and docs.
 
 ## [2.107.0] - 2020-12-24
 
