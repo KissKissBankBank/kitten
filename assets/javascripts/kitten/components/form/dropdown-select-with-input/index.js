@@ -184,10 +184,10 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__item {
     display: flex;
     align-items: center;
-
     transition: background-color .2s ease;
     box-sizing: border-box;
     padding: ${pxToRem(15)};
+    color: ${COLORS.font1};
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-1)};
     user-select: none;
@@ -207,6 +207,7 @@ const StyledDropdownSelectWithInput = styled.div`
       color: ${COLORS.font2};
     }
   }
+
   .k-Form-DropdownSelectWithInput__item__icon {
     margin-right: ${pxToRem(20)};
     min-width: ${pxToRem(20)};
