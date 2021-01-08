@@ -2,7 +2,7 @@
 
 exports[`<RangeSlider /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa fuRUUH"
+  className="sc-bdVaJa fFWHKc k-RangeSlider"
   style={
     Object {
       "--range-input-ratio": 0,
