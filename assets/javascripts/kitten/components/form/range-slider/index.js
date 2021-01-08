@@ -1,11 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 import styled from 'styled-components'
-import { pxToRem } from '../../../helpers/utils/typography'
+import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
+import TYPOGRAPHY from '../../../constants/typography-config'
 import domElementHelper from '../../../helpers/dom/element-helper'
 
 const StyledRangeSlider = styled.div`
+  --range-thumb-position: calc(
+      ${pxToRem(25)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(25)}))
+    );
   position: relative;
 
   &::before,
@@ -22,9 +27,7 @@ const StyledRangeSlider = styled.div`
   }
 
   &::after {
-    width: calc(
-      ${pxToRem(25)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(25)}))
-    );
+    width: var(--range-thumb-position);
     background: ${COLORS.primary1};
   }
 
@@ -37,6 +40,12 @@ const StyledRangeSlider = styled.div`
     padding: 0;
     z-index: 2;
     background: transparent;
+    display: block;
+
+    &:focus {
+      outline: ${COLORS.primary4} solid ${pxToRem(2)};
+      outline-offset: ${pxToRem(2)};
+    }
 
     &::-moz-range-track {
       width: 100%;
@@ -46,7 +55,7 @@ const StyledRangeSlider = styled.div`
     }
     &::-moz-range-thumb {
       height: ${pxToRem(40)};
-      width: ${pxToRem(50)};
+      width: ${pxToRem(50 + 2 * 2)};
       box-sizing: border-box;
       background-color: ${COLORS.primary1};
       background-image: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath fill='%23fff' d='M0 0 h 2 V 10 h -2 z M4 0 h 2 V 10 h -2 z M8 0 h 2 V 10 h -2 z' /%3E%3C/svg%3E");
@@ -56,6 +65,8 @@ const StyledRangeSlider = styled.div`
       -moz-appearance: none;
       appearance: none;
       border: ${pxToRem(2)} solid ${COLORS.background1};
+      border-top: 0;
+      border-bottom: 0;
       border-radius: ${pxToRem(20)};
     }
 
@@ -67,7 +78,7 @@ const StyledRangeSlider = styled.div`
     }
     &::-webkit-slider-thumb {
       height: ${pxToRem(40)};
-      width: ${pxToRem(50)};
+      width: ${pxToRem(50 + 2 * 2)};
       box-sizing: border-box;
       background-color: ${COLORS.primary1};
       background-image: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath fill='%23fff' d='M0 0 h 2 V 10 h -2 z M4 0 h 2 V 10 h -2 z M8 0 h 2 V 10 h -2 z' /%3E%3C/svg%3E");
@@ -77,7 +88,42 @@ const StyledRangeSlider = styled.div`
       -webkit-appearance: none;
       appearance: none;
       border: ${pxToRem(2)} solid ${COLORS.background1};
+      border-top: 0;
+      border-bottom: 0;
       border-radius: ${pxToRem(20)};
+    }
+
+    &:active::-moz-range-thumb {
+      background-color: ${COLORS.primary2};
+    }
+    &:active::-webkit-slider-thumb {
+      background-color: ${COLORS.primary2};
+    }
+  }
+
+  .k-RangeSlider__rangeThumbText {
+    position: absolute;
+    ${TYPOGRAPHY.fontStyles.regular}
+    font-size: ${stepToRem(-1)};
+    line-height: ${pxToRem(18)};
+    color: ${COLORS.font1};
+    left: calc(var(--range-thumb-position) - ${pxToRem(50)});
+    width: ${pxToRem(100)};
+    text-align: center;
+  }
+
+  &.k-RangeSlider--rangeThumbText-top {
+    margin-top: ${pxToRem(10 + 18)};
+
+    .k-RangeSlider__rangeThumbText {
+      bottom: calc(100% + ${pxToRem(10)});
+    }
+  }
+  &.k-RangeSlider--rangeThumbText-bottom {
+    margin-bottom: ${pxToRem(10 + 18)};
+
+    .k-RangeSlider__rangeThumbText {
+      top: calc(100% + ${pxToRem(10)});
     }
   }
 `
@@ -91,6 +137,8 @@ export const RangeSlider = ({
   onChange,
   initialValue,
   wrapperProps,
+  rangeThumbText,
+  rangeThumbPosition,
   ...props
 }) => {
   const [inputRatio, setInputRatio] = useState(0)
@@ -118,9 +166,18 @@ export const RangeSlider = ({
   return (
     <StyledRangeSlider
       style={{ '--range-input-ratio': inputRatio }}
+      className={classNames('k-RangeSlider', {
+        'k-RangeSlider--rangeThumbText-top':
+          rangeThumbText && rangeThumbPosition === 'top',
+        'k-RangeSlider--rangeThumbText-bottom':
+          rangeThumbText && rangeThumbPosition === 'bottom',
+      })}
       {...wrapperProps}
     >
       <input ref={inputEl} type="range" onChange={handleChange} {...props} />
+      {rangeThumbText && (
+        <span className="k-RangeSlider__rangeThumbText">{rangeThumbText}</span>
+      )}
     </StyledRangeSlider>
   )
 }
@@ -133,6 +190,8 @@ RangeSlider.propTypes = {
   name: PropTypes.string,
   onChange: PropTypes.func,
   wrapperProps: PropTypes.object,
+  rangeThumbText: PropTypes.node,
+  rangeThumbPosition: PropTypes.oneOf(['top', 'bottom']),
 }
 
 RangeSlider.defaultProps = {
@@ -142,4 +201,5 @@ RangeSlider.defaultProps = {
   step: 1,
   onChange: () => {},
   wrapperProps: {},
+  rangeThumbPosition: 'bottom',
 }
