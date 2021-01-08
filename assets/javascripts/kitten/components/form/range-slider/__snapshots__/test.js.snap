@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RangeSlider /> should match its snapshot with props 1`] = `
+<div
+  className="sc-bdVaJa fuRUUH"
+  style={
+    Object {
+      "--range-input-ratio": 0,
+    }
+  }
+>
+  <input
+    max={42}
+    min={2}
+    onChange={[Function]}
+    step={2}
+    type="range"
+  />
+</div>
+`;
