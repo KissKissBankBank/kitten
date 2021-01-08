@@ -155,7 +155,8 @@ const StyledDropdownSelectWithInput = styled.div`
   .k-Form-DropdownSelectWithInput__list {
     box-sizing: border-box;
     position: absolute;
-    z-index: 1;
+    z-index: 1000;
+    z-index: var(--menu-z-index, 1000);
     width: 100%;
     max-height: ${pxToRem(310)};
     padding: 0;
@@ -326,6 +327,7 @@ export const DropdownSelectWithInput = ({
   openOnLoad,
   deactivateDropdown,
   className,
+  menuZIndex,
 }) => {
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
     return a11ySelectionMessageDisplayer(itemToString(selectedItem))
@@ -409,6 +411,7 @@ export const DropdownSelectWithInput = ({
         'k-Form-DropdownSelectWithInput--disabled': disabled,
         'k-Form-DropdownSelectWithInput--noDropdown': deactivateDropdown,
       })}
+      style={{ '--menu-z-index': menuZIndex }}
     >
       <Label
         className={classNames(
@@ -556,6 +559,7 @@ DropdownSelectWithInput.defaultProps = {
   highlightOptionBox: true,
   openOnLoad: false,
   deactivateDropdown: false,
+  menuZIndex: 1000,
 }
 
 DropdownSelectWithInput.propTypes = {
@@ -577,4 +581,5 @@ DropdownSelectWithInput.propTypes = {
   highlightOptionBox: PropTypes.bool,
   openOnLoad: PropTypes.bool,
   deactivateDropdown: PropTypes.bool,
+  menuZIndex: PropTypes.number,
 }
