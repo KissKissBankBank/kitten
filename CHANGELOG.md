@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Replace deprecated `Slider` with `RangeSlider` on `ImageCropper`.
 - Feature: New `RangeSlider`, based on `input[type="range"]` HTML element.
 - Fix: Define default color for `DropdownSelect` items.
 - Feature: Add CSS utilities `k-u-flex-alignSelf-*` and docs.
