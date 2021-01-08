@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
-import { domElementHelper } from '../../helpers/dom/element-helper'
-import { GrabberIcon } from '../../components/icons/grabber-icon'
+import { domElementHelper } from '../../../helpers/dom/element-helper'
+import { GrabberIcon } from '../../../components/icons/grabber-icon'
 
 // DOM for the Slider component. See Slider for state and
 export class SliderBar extends React.Component {
