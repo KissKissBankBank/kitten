@@ -38,6 +38,7 @@ export const DropdownCombobox = ({
   onMenuOpen,
   openOnLoad,
   uniqLabelOnSearch,
+  menuZIndex,
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -145,6 +146,7 @@ export const DropdownCombobox = ({
           'k-Form-Dropdown--disabled': disabled,
         },
       )}
+      style={{ '--menu-z-index': menuZIndex }}
     >
       <Label
         className={classNames(
@@ -243,6 +245,7 @@ DropdownCombobox.defaultProps = {
   onMenuClose: () => {},
   onMenuOpen: () => {},
   openOnLoad: false,
+  menuZIndex: 1000,
 }
 
 DropdownCombobox.propTypes = {
@@ -264,4 +267,5 @@ DropdownCombobox.propTypes = {
   onMenuClose: PropTypes.func,
   onMenuOpen: PropTypes.func,
   openOnLoad: PropTypes.bool,
+  menuZIndex: PropTypes.number,
 }
