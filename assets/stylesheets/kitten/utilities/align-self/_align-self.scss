@@ -1,0 +1,89 @@
+/// Block alignment utilities, with FlexBox.
+///
+/// @group align
+///
+/// @example scss - Usage
+///
+///   @include k-utilities-alignSelf;
+///
+/// @example html
+///
+///   <div class="k-u-alignSelf-center@xxs-down">…</div>
+///   <div class="k-u-alignSelf-center@xs-down">…</div>
+///   <div class="k-u-alignSelf-center@s-down">…</div>
+///   <div class="k-u-alignSelf-center@m-down">…</div>
+///   <div class="k-u-alignSelf-center@l-down">…</div>
+///
+///   <div class="k-u-alignSelf-center@xs-up">…</div>
+///   <div class="k-u-alignSelf-center@s-up">…</div>
+///   <div class="k-u-alignSelf-center@m-up">…</div>
+///   <div class="k-u-alignSelf-center@l-up">…</div>
+///   <div class="k-u-alignSelf-center@xl-up">…</div>
+///
+///   <div class="k-u-alignSelf-normal">…</div>
+///   <div class="k-u-alignSelf-stretch">…</div>
+///   <div class="k-u-alignSelf-center">…</div>
+///   <div class="k-u-alignSelf-start">…</div>
+///   <div class="k-u-alignSelf-end">…</div>
+///
+///   <div class="k-u-alignSelf-center@xxs-down--important">…</div>
+///   <div class="k-u-alignSelf-center@xs-down--important">…</div>
+///   <div class="k-u-alignSelf-center@s-down--important">…</div>
+///   <div class="k-u-alignSelf-center@m-down--important">…</div>
+///   <div class="k-u-alignSelf-center@l-down--important">…</div>
+///
+///   <div class="k-u-alignSelf-center@xs-up--important">…</div>
+///   <div class="k-u-alignSelf-center@s-up--important">…</div>
+///   <div class="k-u-alignSelf-center@m-up--important">…</div>
+///   <div class="k-u-alignSelf-center@l-up--important">…</div>
+///   <div class="k-u-alignSelf-center@xl-up--important">…</div>
+///
+///   <div class="k-u-alignSelf-center--important">…</div>
+///   <div class="k-u-alignSelf-start--important">…</div>
+///   <div class="k-u-alignSelf-end--important">…</div>
+
+@mixin k-u-alignSelf($position, $align) {
+  $value: $align;
+
+  .k-u-alignSelf-#{$position} {
+    align-self: $value;
+
+    &--important {
+      align-self: $value !important;
+    }
+  }
+
+  @each $name, $query in $k-media-queries {
+    @if $name != "xl" {
+      .k-u-alignSelf-#{$position}\@#{$name}-down {
+        @include k-media-max($name) {
+          align-self: $value;
+
+          &--important {
+            align-self: $value !important;
+          }
+        }
+      }
+    }
+
+    @if $name != "xxs" {
+      .k-u-alignSelf-#{$position}\@#{$name}-up {
+        @include k-media-min($name) {
+          align-self: $value;
+
+          &--important {
+            align-self: $value !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin k-utilities-align-self {
+  @include k-u-alignSelf('center', center);
+  @include k-u-alignSelf('end', flex-end);
+  @include k-u-alignSelf('normal', normal);
+  @include k-u-alignSelf('start', flex-start);
+  @include k-u-alignSelf('stretch', stretch);
+}
