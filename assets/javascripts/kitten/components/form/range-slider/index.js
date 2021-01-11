@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import domElementHelper from '../../../helpers/dom/element-helper'
+import { nativeInputValueSetter } from '../../../helpers/dom/native-input-value-setter'
+import { createEvent } from '../../../helpers/dom/create-event'
 
 const StyledRangeSlider = styled.div`
   --range-thumb-position: calc(
@@ -128,11 +129,6 @@ const StyledRangeSlider = styled.div`
   }
 `
 
-const nativeInputValueSetter =
-  domElementHelper.canUseDom() &&
-  Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')
-    .set
-
 export const RangeSlider = ({
   onChange,
   initialValue,
@@ -143,8 +139,7 @@ export const RangeSlider = ({
 }) => {
   const [inputRatio, setInputRatio] = useState(0)
   const inputEl = useRef(null)
-  const changeEvent = new Event('change', { bubbles: true })
-
+  const changeEvent = createEvent('change')
   useEffect(() => {
     inputEl &&
       nativeInputValueSetter &&
