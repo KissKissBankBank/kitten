@@ -107,8 +107,8 @@ HorizontalStroke.propTypes = {
     'septenary',
   ]),
   customSize: PropTypes.shape({
-    width: PropTypes.number,
-    height: PropTypes.number,
+    width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   }),
   color: PropTypes.string,
 }
