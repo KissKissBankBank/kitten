@@ -2,7 +2,12 @@
 
 exports[`<DropdownSelect combobox /> should match its snapshot with props 1`] = `
 <div
-  className="sc-bdVaJa XAmeC k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
+  className="sc-bdVaJa famHsz k-Form-Dropdown k-Form-Dropdown--andromeda k-Form-Dropdown--normal k-Form-Dropdown--isOpen"
+  style={
+    Object {
+      "--menu-z-index": 1000,
+    }
+  }
 >
   <label
     className="k-Label k-Form-Dropdown__label k-u-margin-bottom-single"

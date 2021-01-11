@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { text, boolean } from '@storybook/addon-knobs'
+import { text, boolean, number } from '@storybook/addon-knobs'
 import { DropdownSelectWithInput } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
@@ -108,6 +108,7 @@ export const DeactivatedDropdown = () => {
           defaultSelectedValue="facebook"
           deactivateDropdown
           className="k-u-margin-bottom-triple"
+          menuZIndex={number('menuZIndex', 1000)}
         />
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
@@ -122,6 +123,7 @@ export const DeactivatedDropdown = () => {
           defaultSelectedValue="twitter"
           deactivateDropdown
           className="k-u-margin-bottom-triple"
+          menuZIndex={number('menuZIndex', 1000)}
         />
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
@@ -136,6 +138,7 @@ export const DeactivatedDropdown = () => {
           defaultSelectedValue="instagram"
           deactivateDropdown
           className="k-u-margin-bottom-triple"
+          menuZIndex={number('menuZIndex', 1000)}
         />
       </GridCol>
     </Grid>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { text, boolean, select } from '@storybook/addon-knobs'
+import { text, boolean, select, number } from '@storybook/addon-knobs'
 import { DropdownSelect } from './index'
 import { Grid, GridCol } from '../../../components/grid/grid'
 
@@ -60,6 +60,7 @@ export const Default = () => {
           defaultSelectedValue="focus"
           comboboxButtonLabelText={text('Buton aria-label', 'label')}
           noResultText={text('No results text', 'No results')}
+          menuZIndex={number('menuZIndex', 1000)}
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
@@ -108,6 +109,7 @@ export const WithDuplicateValue = () => {
           comboboxButtonLabelText={text('Buton aria-label', 'label')}
           noResultText={text('No results text', 'No results')}
           uniqLabelOnSearch={boolean('uniqLabelOnSearch', false)}
+          menuZIndex={number('menuZIndex', 1000)}
         />
       </GridCol>
     </Grid>
