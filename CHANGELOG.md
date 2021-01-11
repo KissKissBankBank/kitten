@@ -4,12 +4,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Feature: New `RangeSlider`, based on `input[type="range"]` HTML element.
-- Feature: Set `RewardCard` ratio to 16/10.
-- Feature: Allow string prop types for `customSize` on `HorizontalStroke`.
-- Feature: `menuZIndex` prop for custom menu z-index in `DropdownSelect` and `DropdownSelectWithInput`.
-- Fix: Define default color for `DropdownSelect` items.
-- Fix: Refactor `k-u-blockAlign` to `k-u-alignSelf-*` and docs.
+## [2.108.0] - 2020-01-11
+
+Features:
+
+- New `RangeSlider`, based on `input[type="range"]` HTML element.
+- Set `RewardCard` ratio to 16/10.
+- Allow string prop types for `customSize` on `HorizontalStroke`.
+- `menuZIndex` prop for custom menu z-index in `DropdownSelect` and `DropdownSelectWithInput`.
+
+Fixes:
+
+- Define default color for `DropdownSelect` items.
+- Refactor `k-u-blockAlign` to `k-u-alignSelf-*` and docs.
 
 ## [2.107.0] - 2020-12-24
 

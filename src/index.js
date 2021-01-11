@@ -473,6 +473,12 @@ Object.defineProperty(exports, "RadioButton", {
     return _radioButton.RadioButton;
   }
 });
+Object.defineProperty(exports, "RangeSlider", {
+  enumerable: true,
+  get: function get() {
+    return _rangeSlider.RangeSlider;
+  }
+});
 Object.defineProperty(exports, "RichTextInput", {
   enumerable: true,
   get: function get() {
@@ -1667,6 +1673,12 @@ Object.defineProperty(exports, "DESKTOP_HEADER_HEIGHT", {
     return _config.DESKTOP_HEADER_HEIGHT;
   }
 });
+Object.defineProperty(exports, "createEvent", {
+  enumerable: true,
+  get: function get() {
+    return _createEvent.createEvent;
+  }
+});
 Object.defineProperty(exports, "cssPropertyDistributor", {
   enumerable: true,
   get: function get() {
@@ -1677,6 +1689,12 @@ Object.defineProperty(exports, "domElementHelper", {
   enumerable: true,
   get: function get() {
     return _elementHelper.default;
+  }
+});
+Object.defineProperty(exports, "nativeInputValueSetter", {
+  enumerable: true,
+  get: function get() {
+    return _nativeInputValueSetter.nativeInputValueSetter;
   }
 });
 Object.defineProperty(exports, "getReactElementsByType", {
@@ -1873,6 +1891,8 @@ var _pillNumberInput = require("./components/form/pill-number-input");
 var _radioButtonSet = require("./components/form/radio-button-set");
 
 var _radioButton = require("./components/form/radio-button");
+
+var _rangeSlider = require("./components/form/range-slider");
 
 var _richTextInput = require("./components/form/rich-text-input");
 
@@ -2248,9 +2268,13 @@ var _typographyConfig = _interopRequireDefault(require("./constants/typography-c
 
 var _config = require("./components/navigation/header-nav/config");
 
+var _createEvent = require("./helpers/dom/create-event");
+
 var _cssPropertyDistributor = require("./helpers/dom/css-property-distributor");
 
 var _elementHelper = _interopRequireDefault(require("./helpers/dom/element-helper"));
+
+var _nativeInputValueSetter = require("./helpers/dom/native-input-value-setter");
 
 var _reactElements = require("./helpers/react/react-elements");
 

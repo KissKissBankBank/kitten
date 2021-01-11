@@ -29,14 +29,14 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var _elementHelper = _interopRequireDefault(require("../../../helpers/dom/element-helper"));
+var _nativeInputValueSetter = require("../../../helpers/dom/native-input-value-setter");
+
+var _createEvent = require("../../../helpers/dom/create-event");
 
 var StyledPillNumberInput = _styledComponents.default.div.withConfig({
   displayName: "pill-number-input__StyledPillNumberInput",
   componentId: "ujaaef-0"
 })(["display:inline-flex;align-items:center;justify-content:stretch;height:", ";width:", ";padding:0 ", ";border:2px solid ", ";border-radius:", ";transition:border-color .2s ease;&:focus-within,&:hover{border-color:", ";}&,& *{box-sizing:border-box;}.k-PillNumberInput__input{flex:1 1 auto;appearance:none;appearance:textfield;border:0;min-width:0;", " font-size:", ";text-align:center;&:focus{outline:none;}&:disabled{background-color:", ";color:", ";}}.k-PillNumberInput__minusButton,.k-PillNumberInput__plusButton{flex:0 0 auto;padding:0 ", ";border:none;background:none;display:flex;align-items:center;justify-content:center;height:100%;cursor:pointer;svg{transition:fill .2s ease;}&:hover svg{fill:", ";}&:active svg{fill:", ";}&:disabled svg{fill:", ";}}&.k-PillNumberInput--disableInput .k-PillNumberInput__input:disabled{background-color:", ";color:", ";}"], (0, _typography.pxToRem)(40), (0, _typography.pxToRem)(85), (0, _typography.pxToRem)(10), _colorsConfig.default.line1, (0, _typography.pxToRem)(20), _colorsConfig.default.line2, _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-1), _colorsConfig.default.background1, _colorsConfig.default.font2, (0, _typography.pxToRem)(5), _colorsConfig.default.primary1, _colorsConfig.default.primary2, _colorsConfig.default.line2, _colorsConfig.default.background1, _colorsConfig.default.font1);
-
-var nativeInputValueSetter = _elementHelper.default.canUseDom() && Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
 
 var PillNumberInput = function PillNumberInput(_ref) {
   var _ref$onChange = _ref.onChange,
@@ -69,9 +69,7 @@ var PillNumberInput = function PillNumberInput(_ref) {
       currentValue = _useState2[0],
       setCurrentValue = _useState2[1];
 
-  var changeEvent = new Event('change', {
-    bubbles: true
-  });
+  var changeEvent = (0, _createEvent.createEvent)('change');
 
   var handleKeyDown = function handleKeyDown(keyDownEvent) {
     if (keyDownEvent.key === 'ArrowUp' && inputRef.current.value < max) {
@@ -122,7 +120,7 @@ var PillNumberInput = function PillNumberInput(_ref) {
   };
 
   (0, _react.useEffect)(function () {
-    nativeInputValueSetter && nativeInputValueSetter.call(inputRef.current, currentValue);
+    _nativeInputValueSetter.nativeInputValueSetter && _nativeInputValueSetter.nativeInputValueSetter.call(inputRef.current, currentValue);
     inputRef.current.dispatchEvent(changeEvent);
   }, [currentValue]);
   return /*#__PURE__*/_react.default.createElement(StyledPillNumberInput, (0, _extends2.default)({
