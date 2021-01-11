@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Set `RewardCard` ratio to 16/10.
 - Fix: Define default color for `DropdownSelect` items.
 - Feature: Add CSS utilities `k-u-flex-alignSelf-*` and docs.
 
