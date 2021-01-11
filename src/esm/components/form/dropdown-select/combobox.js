@@ -38,7 +38,8 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       onMenuClose = _ref.onMenuClose,
       onMenuOpen = _ref.onMenuOpen,
       openOnLoad = _ref.openOnLoad,
-      uniqLabelOnSearch = _ref.uniqLabelOnSearch;
+      uniqLabelOnSearch = _ref.uniqLabelOnSearch,
+      menuZIndex = _ref.menuZIndex;
 
   var _useState = useState([]),
       _useState2 = _slicedToArray(_useState, 2),
@@ -145,7 +146,10 @@ export var DropdownCombobox = function DropdownCombobox(_ref) {
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
       'k-Form-Dropdown--disabled': disabled
-    })
+    }),
+    style: {
+      '--menu-z-index': menuZIndex
+    }
   }, /*#__PURE__*/React.createElement(Label, _extends({
     className: classNames('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
       'k-Form-Dropdown__label--isHidden': hideLabel
@@ -217,7 +221,8 @@ DropdownCombobox.defaultProps = {
   onInputChange: function onInputChange() {},
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},
-  openOnLoad: false
+  openOnLoad: false,
+  menuZIndex: 1000
 };
 DropdownCombobox.propTypes = {
   id: PropTypes.string.isRequired,
@@ -237,5 +242,6 @@ DropdownCombobox.propTypes = {
   onInputChange: PropTypes.func,
   onMenuClose: PropTypes.func,
   onMenuOpen: PropTypes.func,
-  openOnLoad: PropTypes.bool
+  openOnLoad: PropTypes.bool,
+  menuZIndex: PropTypes.number
 };

@@ -22,12 +22,14 @@ var RewardCardImage = function RewardCardImage(_ref) {
       className = _ref.className,
       disabled = _ref.disabled,
       others = (0, _objectWithoutProperties2.default)(_ref, ["alt", "className", "disabled"]);
-  return /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, others, {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "k-RewardCard__figureWrapper"
+  }, /*#__PURE__*/_react.default.createElement("img", (0, _extends2.default)({}, others, {
     alt: alt,
     className: (0, _classnames.default)('k-RewardCard__image', className, {
       'k-RewardCard__image--disabled': disabled
     })
-  }));
+  })));
 };
 
 exports.RewardCardImage = RewardCardImage;
