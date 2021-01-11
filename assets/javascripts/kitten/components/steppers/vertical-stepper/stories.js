@@ -22,7 +22,7 @@ export const WithOrionVariant = () => {
     <StoryContainer>
       <VerticalStepper variant="orion">
         <VerticalStepper.Step
-          success
+          valid
           href="#"
           statusProps={{ title: 'Étape validée' }}
           variant="orion"
@@ -37,7 +37,8 @@ export const WithOrionVariant = () => {
         </VerticalStepper.Step>
 
         <VerticalStepper.Step
-          valid
+          disabled
+          waiting
           href="#"
           statusProps={{ title: 'Étape complétée' }}
           variant="orion"
