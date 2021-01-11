@@ -5,7 +5,8 @@ import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
-import domElementHelper from '../../../helpers/dom/element-helper'
+import { nativeInputValueSetter } from '../../../helpers/dom/native-input-value-setter'
+import { createEvent } from '../../../helpers/dom/create-event'
 
 const StyledRangeSlider = styled.div`
   --range-thumb-position: calc(
@@ -113,25 +114,20 @@ const StyledRangeSlider = styled.div`
   }
 
   &.k-RangeSlider--rangeThumbText-top {
-    margin-top: ${pxToRem(10 + 18)};
+    padding-top: ${pxToRem(10 + 18)};
 
     .k-RangeSlider__rangeThumbText {
-      bottom: calc(100% + ${pxToRem(10)});
+      top: 0;
     }
   }
   &.k-RangeSlider--rangeThumbText-bottom {
-    margin-bottom: ${pxToRem(10 + 18)};
+    padding-bottom: ${pxToRem(10 + 18)};
 
     .k-RangeSlider__rangeThumbText {
-      top: calc(100% + ${pxToRem(10)});
+      bottom: 0;
     }
   }
 `
-
-const nativeInputValueSetter =
-  domElementHelper.canUseDom() &&
-  Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')
-    .set
 
 export const RangeSlider = ({
   onChange,
@@ -143,7 +139,7 @@ export const RangeSlider = ({
 }) => {
   const [inputRatio, setInputRatio] = useState(0)
   const inputEl = useRef(null)
-  const changeEvent = new Event('change', { bubbles: true })
+  const changeEvent = createEvent('change')
 
   useEffect(() => {
     inputEl &&
@@ -187,7 +183,7 @@ RangeSlider.propTypes = {
   min: PropTypes.number,
   max: PropTypes.number,
   step: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   wrapperProps: PropTypes.object,
   rangeThumbText: PropTypes.node,
@@ -201,5 +197,6 @@ RangeSlider.defaultProps = {
   step: 1,
   onChange: () => {},
   wrapperProps: {},
+  rangeThumbText: null,
   rangeThumbPosition: 'bottom',
 }

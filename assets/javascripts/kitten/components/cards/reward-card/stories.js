@@ -16,6 +16,7 @@ import classNames from 'classnames'
 const StyledStoryContainer = styled(Container)`
   margin-top: ${pxToRem(20)};
   margin-bottom: ${pxToRem(20)};
+  max-width: ${pxToRem(460)};
 
   .RewardCard_story__button {
     width: 100%;
@@ -88,7 +89,7 @@ export const New_RewardCard = () => {
             <RewardCardComponent.Image
               src={text(
                 'Reward image src',
-                'http://placekitten.com/800/500',
+                'http://placekitten.com/400/400',
                 contentGroupId,
               )}
               alt={text('Reward image alt', 'My reward', contentGroupId)}

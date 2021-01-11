@@ -6,8 +6,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Feature: Replace deprecated `Slider` with `RangeSlider` on `ImageCropper`.
 - Feature: New `RangeSlider`, based on `input[type="range"]` HTML element.
+- Feature: Set `RewardCard` ratio to 16/10.
+- Feature: Allow string prop types for `customSize` on `HorizontalStroke`.
+- Feature: `menuZIndex` prop for custom menu z-index in `DropdownSelect` and `DropdownSelectWithInput`.
 - Fix: Define default color for `DropdownSelect` items.
-- Feature: Add CSS utilities `k-u-flex-alignSelf-*` and docs.
+- Fix: Refactor `k-u-blockAlign` to `k-u-alignSelf-*` and docs.
 
 ## [2.107.0] - 2020-12-24
 

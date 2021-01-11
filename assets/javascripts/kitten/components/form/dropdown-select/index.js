@@ -35,6 +35,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     onMenuClose,
     onMenuOpen,
     openOnLoad,
+    menuZIndex,
   } = props
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
@@ -115,6 +116,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
           'k-Form-Dropdown--disabled': disabled,
         },
       )}
+      style={{ '--menu-z-index': menuZIndex }}
     >
       <Label
         className={classNames(
@@ -205,6 +207,7 @@ DropdownSelect.defaultProps = {
   onMenuOpen: () => {},
   openOnLoad: false,
   uniqLabelOnSearch: false,
+  menuZIndex: 1000,
 }
 
 DropdownSelect.propTypes = {
@@ -226,4 +229,5 @@ DropdownSelect.propTypes = {
   onMenuOpen: PropTypes.func,
   openOnLoad: PropTypes.bool,
   uniqLabelOnSearch: PropTypes.bool,
+  menuZIndex: PropTypes.number,
 }

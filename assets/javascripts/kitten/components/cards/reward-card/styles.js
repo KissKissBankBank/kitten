@@ -45,19 +45,24 @@ export const StyledRewardCard = styled.div`
     }
   }
 
-  .k-RewardCard__image {
-    width: 100%;
+  .k-RewardCard__figureWrapper {
+    position: relative;
+    padding-top: calc((5 / 8) * 100%);
 
-    &.k-RewardCard__image--disabled {
-      filter: grayscale(1) opacity(0.4);
-      cursor: not-allowed;
+    .k-RewardCard__image,
+    .k-RewardCard__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
     }
   }
 
-  .k-RewardCard__video {
-    width: 100%;
-
-    &.k-RewardCard__video--disabled {
+  .k-RewardCard__image.k-RewardCard__image--disabled,
+  .k-RewardCard__video.k-RewardCard__video--disabled {
       filter: grayscale(1) opacity(0.4);
       cursor: not-allowed;
     }

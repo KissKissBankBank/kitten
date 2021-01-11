@@ -387,8 +387,10 @@ export {
 // HELPERS
 // -------
 
+export { createEvent } from './helpers/dom/create-event'
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor'
 export { default as domElementHelper } from './helpers/dom/element-helper'
+export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter'
 export {
   getReactElementsByType,
   getReactElementsWithoutType,
