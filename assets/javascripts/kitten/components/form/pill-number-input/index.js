@@ -6,7 +6,7 @@ import COLORS from '../../../constants/colors-config'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { nativeInputValueSetter } from '../../../helpers/dom/native-input-value-setter'
-import { sendEvent } from '../../../helpers/dom/send-event'
+import { createEvent } from '../../../helpers/dom/create-event'
 
 const StyledPillNumberInput = styled.div`
   display: inline-flex;
@@ -98,6 +98,7 @@ export const PillNumberInput = ({
 }) => {
   const inputRef = useRef(null)
   const [currentValue, setCurrentValue] = useState(value)
+  const changeEvent = createEvent('change')
 
   const handleKeyDown = keyDownEvent => {
     if (keyDownEvent.key === 'ArrowUp' && inputRef.current.value < max) {
@@ -145,7 +146,7 @@ export const PillNumberInput = ({
     nativeInputValueSetter &&
       nativeInputValueSetter.call(inputRef.current, currentValue)
 
-    sendEvent(inputRef.current, 'change')
+    inputRef.current.dispatchEvent(changeEvent)
   }, [currentValue])
 
   return (

@@ -140,6 +140,7 @@ export const RangeSlider = ({
   const [inputRatio, setInputRatio] = useState(0)
   const inputEl = useRef(null)
   const changeEvent = createEvent('change')
+
   useEffect(() => {
     inputEl &&
       nativeInputValueSetter &&
