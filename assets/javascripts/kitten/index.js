@@ -111,6 +111,7 @@ export { PasswordInput } from './components/form/password-input'
 export { PillNumberInput } from './components/form/pill-number-input'
 export { RadioButtonSet } from './components/form/radio-button-set'
 export { RadioButton } from './components/form/radio-button'
+export { RangeSlider } from './components/form/range-slider'
 export { RichTextInput } from './components/form/rich-text-input'
 export { Search } from './components/form/search'
 export { SelectWithState } from './components/form/select-with-state'
@@ -386,8 +387,10 @@ export {
 // HELPERS
 // -------
 
+export { createEvent } from './helpers/dom/create-event'
 export { cssPropertyDistributor } from './helpers/dom/css-property-distributor'
 export { default as domElementHelper } from './helpers/dom/element-helper'
+export { nativeInputValueSetter } from './helpers/dom/native-input-value-setter'
 export {
   getReactElementsByType,
   getReactElementsWithoutType,
