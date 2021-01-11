@@ -114,17 +114,17 @@ const StyledRangeSlider = styled.div`
   }
 
   &.k-RangeSlider--rangeThumbText-top {
-    margin-top: ${pxToRem(10 + 18)};
+    padding-top: ${pxToRem(10 + 18)};
 
     .k-RangeSlider__rangeThumbText {
-      bottom: calc(100% + ${pxToRem(10)});
+      top: 0;
     }
   }
   &.k-RangeSlider--rangeThumbText-bottom {
-    margin-bottom: ${pxToRem(10 + 18)};
+    padding-bottom: ${pxToRem(10 + 18)};
 
     .k-RangeSlider__rangeThumbText {
-      top: calc(100% + ${pxToRem(10)});
+      bottom: 0;
     }
   }
 `
@@ -183,7 +183,7 @@ RangeSlider.propTypes = {
   min: PropTypes.number,
   max: PropTypes.number,
   step: PropTypes.number,
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   wrapperProps: PropTypes.object,
   rangeThumbText: PropTypes.node,
@@ -197,5 +197,6 @@ RangeSlider.defaultProps = {
   step: 1,
   onChange: () => {},
   wrapperProps: {},
+  rangeThumbText: null,
   rangeThumbPosition: 'bottom',
 }
