@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Set `RewardCard` ratio to 16/10.
 - Feature: Allow string prop types for `customSize` on `HorizontalStroke`.
 - Feature: `menuZIndex` prop for custom menu z-index in `DropdownSelect` and `DropdownSelectWithInput`.
 - Fix: Define default color for `DropdownSelect` items.
