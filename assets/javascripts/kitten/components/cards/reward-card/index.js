@@ -24,11 +24,11 @@ export const RewardCard = ({
   <>
     {children ? (
       <StyledRewardCard
-        className={classNames('k-RewardCard', {
+        {...others}
+        className={classNames('k-RewardCard', others.className, {
           'k-rewardCard--withoutBorder': withoutBorder,
           'k-RewardCard--isDisabled': disabled,
         })}
-        {...others}
       >
         {children}
       </StyledRewardCard>
