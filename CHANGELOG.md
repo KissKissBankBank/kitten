@@ -4,8 +4,6 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Fix test warning on `RangeSlider`.
-
 ## [2.108.0] - 2020-01-11
 
 Features:
