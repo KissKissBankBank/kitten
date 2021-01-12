@@ -9,6 +9,7 @@ export const StyledContainer = styled(Container)`
   position: relative;
   padding-left: 0;
   padding-right: 0;
+  width: 100%;
 `
 
 export const scrollableContainerStyle = ({}) => css`
