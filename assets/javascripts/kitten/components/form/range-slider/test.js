@@ -7,6 +7,7 @@ describe('<RangeSlider />', () => {
     const tree = renderer
       .create(
         <RangeSlider
+          name="test-slider-input"
           onChange={e => parseInt(e.target.value, 10)}
           initialValue={5}
           min={2}
