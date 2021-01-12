@@ -7,7 +7,7 @@ Array [
   >
     <label
       className="k-Label k-Label--tiny"
-      htmlFor={null}
+      htmlFor="cropper"
       onClick={[Function]}
     >
       Lorem ipsum…

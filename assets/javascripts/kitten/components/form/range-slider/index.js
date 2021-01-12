@@ -182,7 +182,7 @@ RangeSlider.propTypes = {
   initialValue: PropTypes.number,
   min: PropTypes.number,
   max: PropTypes.number,
-  step: PropTypes.number,
+  step: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   name: PropTypes.string.isRequired,
   onChange: PropTypes.func,
   wrapperProps: PropTypes.object,

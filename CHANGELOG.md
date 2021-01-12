@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Replace deprecated `Slider` with `RangeSlider` on `ImageCropper`.
 - Feature: Add `className` prop propagation to `RewardCard`.
 
 ## [2.108.0] - 2020-01-11
