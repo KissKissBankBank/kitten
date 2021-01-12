@@ -8,12 +8,12 @@ import styled from 'styled-components';
 import COLORS from '../../../constants/colors-config';
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography';
 import TYPOGRAPHY from '../../../constants/typography-config';
-import domElementHelper from '../../../helpers/dom/element-helper';
+import { nativeInputValueSetter } from '../../../helpers/dom/native-input-value-setter';
+import { createEvent } from '../../../helpers/dom/create-event';
 var StyledPillNumberInput = styled.div.withConfig({
   displayName: "pill-number-input__StyledPillNumberInput",
   componentId: "ujaaef-0"
 })(["display:inline-flex;align-items:center;justify-content:stretch;height:", ";width:", ";padding:0 ", ";border:2px solid ", ";border-radius:", ";transition:border-color .2s ease;&:focus-within,&:hover{border-color:", ";}&,& *{box-sizing:border-box;}.k-PillNumberInput__input{flex:1 1 auto;appearance:none;appearance:textfield;border:0;min-width:0;", " font-size:", ";text-align:center;&:focus{outline:none;}&:disabled{background-color:", ";color:", ";}}.k-PillNumberInput__minusButton,.k-PillNumberInput__plusButton{flex:0 0 auto;padding:0 ", ";border:none;background:none;display:flex;align-items:center;justify-content:center;height:100%;cursor:pointer;svg{transition:fill .2s ease;}&:hover svg{fill:", ";}&:active svg{fill:", ";}&:disabled svg{fill:", ";}}&.k-PillNumberInput--disableInput .k-PillNumberInput__input:disabled{background-color:", ";color:", ";}"], pxToRem(40), pxToRem(85), pxToRem(10), COLORS.line1, pxToRem(20), COLORS.line2, TYPOGRAPHY.fontStyles.regular, stepToRem(-1), COLORS.background1, COLORS.font2, pxToRem(5), COLORS.primary1, COLORS.primary2, COLORS.line2, COLORS.background1, COLORS.font1);
-var nativeInputValueSetter = domElementHelper.canUseDom() && Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
 export var PillNumberInput = function PillNumberInput(_ref) {
   var _ref$onChange = _ref.onChange,
       onChange = _ref$onChange === void 0 ? function () {} : _ref$onChange,
@@ -46,9 +46,7 @@ export var PillNumberInput = function PillNumberInput(_ref) {
       currentValue = _useState2[0],
       setCurrentValue = _useState2[1];
 
-  var changeEvent = new Event('change', {
-    bubbles: true
-  });
+  var changeEvent = createEvent('change');
 
   var handleKeyDown = function handleKeyDown(keyDownEvent) {
     if (keyDownEvent.key === 'ArrowUp' && inputRef.current.value < max) {
