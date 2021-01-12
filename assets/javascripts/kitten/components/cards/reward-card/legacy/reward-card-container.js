@@ -113,12 +113,12 @@ class LegacyRewardCardContainerBase extends Component {
     return (
       <Deprecated warningMessage="Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../">
         <StyledLegacyRewardCard
+          {...others}
           className={classNames('k-LegacyRewardCard', this.props.className, {
             'k-LegacyRewardCard--tinyVersion': this.isTinyVersion(),
             'k-LegacyRewardCard--sOrLessVersion': this.isSOrLessVersion(),
             'k-LegacyRewardCard--isDisabled': isDisabled,
           })}
-          {...others}
         >
           <Marger
             bottom={this.isSOrLessVersion() ? 0 : 4}

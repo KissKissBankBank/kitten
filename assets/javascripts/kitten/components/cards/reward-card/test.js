@@ -195,6 +195,7 @@ describe('<RewardCard />', () => {
       const component = renderer
         .create(
           <RewardCard
+            className="customClassName"
             titleAmount="Custom title amount"
             imageProps={{
               src: '#image',

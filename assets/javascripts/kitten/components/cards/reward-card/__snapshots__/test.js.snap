@@ -258,7 +258,7 @@ exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with legacy props matches with snapshot 1`] = `
 <div
-  className="sc-bwzfXH bCeqqR k-LegacyRewardCard"
+  className="sc-bwzfXH bCeqqR k-LegacyRewardCard customClassName"
   disabled={false}
 >
   <div
