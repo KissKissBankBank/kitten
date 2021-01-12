@@ -9,7 +9,7 @@ export const StyledContainer = styled(Container)`
   position: relative;
   padding-left: 0;
   padding-right: 0;
-  overflow: scroll;
+  width: 100%;
 `
 
 export const scrollableContainerStyle = ({}) => css`
@@ -25,6 +25,7 @@ export const scrollableContainerStyle = ({}) => css`
   &::-webkit-scrollbar {
     display: none;
   }
+  scrollbar-width: none;
 
   &:before,
   &:after {
