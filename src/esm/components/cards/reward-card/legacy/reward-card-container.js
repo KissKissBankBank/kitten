@@ -138,13 +138,13 @@ var LegacyRewardCardContainerBase = /*#__PURE__*/function (_Component) {
       if (!titleAmount) return null;
       return /*#__PURE__*/React.createElement(Deprecated, {
         warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-      }, /*#__PURE__*/React.createElement(StyledLegacyRewardCard, _extends({
+      }, /*#__PURE__*/React.createElement(StyledLegacyRewardCard, _extends({}, others, {
         className: classNames('k-LegacyRewardCard', this.props.className, {
           'k-LegacyRewardCard--tinyVersion': this.isTinyVersion(),
           'k-LegacyRewardCard--sOrLessVersion': this.isSOrLessVersion(),
           'k-LegacyRewardCard--isDisabled': isDisabled
         })
-      }, others), /*#__PURE__*/React.createElement(Marger, {
+      }), /*#__PURE__*/React.createElement(Marger, {
         bottom: this.isSOrLessVersion() ? 0 : 4,
         top: this.isSOrLessVersion() ? 3 : 4
       }, /*#__PURE__*/React.createElement(Grid, {

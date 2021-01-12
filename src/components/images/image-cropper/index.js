@@ -27,7 +27,7 @@ var _paragraph = require("../../../components/typography/paragraph");
 
 var _basicUploader = require("../../../components/uploaders/basic-uploader");
 
-var _slider = require("../../../components/form/slider");
+var _rangeSlider = require("../../../components/form/range-slider");
 
 var _elementHelper = require("../../../helpers/dom/element-helper");
 
@@ -97,8 +97,8 @@ var ImageCropper = function ImageCropper(_ref) {
 
   var _useState19 = (0, _react.useState)(0),
       _useState20 = (0, _slicedToArray2.default)(_useState19, 2),
-      sliderValue = _useState20[0],
-      setSliderValue = _useState20[1];
+      initialSliderValue = _useState20[0],
+      setInitialSliderValue = _useState20[1];
 
   var _useState21 = (0, _react.useState)(null),
       _useState22 = (0, _slicedToArray2.default)(_useState21, 2),
@@ -120,7 +120,7 @@ var ImageCropper = function ImageCropper(_ref) {
       var max = sliderMax + ratio;
       setSliderMin(min);
       setSliderMax(max);
-      setSliderValue(min);
+      setInitialSliderValue(min);
     }
   }, [(0, _getOr.default)(null)('imageData.naturalWidth')(cropperInstance)]);
 
@@ -163,7 +163,8 @@ var ImageCropper = function ImageCropper(_ref) {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     bottom: "1.5"
   }, /*#__PURE__*/_react.default.createElement(_label.Label, {
-    size: "tiny"
+    size: "tiny",
+    htmlFor: name
   }, label)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "1.5",
     bottom: "1"
@@ -258,17 +259,20 @@ var ImageCropper = function ImageCropper(_ref) {
     top: "1.5",
     bottom: "1"
   }, /*#__PURE__*/_react.default.createElement(_label.Label, {
-    size: "micro"
+    size: "micro",
+    htmlFor: "zoomSlider"
   }, sliderTitle)), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
     top: "1"
-  }, /*#__PURE__*/_react.default.createElement(_slider.Slider, {
+  }, /*#__PURE__*/_react.default.createElement(_rangeSlider.RangeSlider, {
+    id: "zoomSlider",
     name: "zoom",
     min: sliderMin,
     max: sliderMax,
-    value: sliderValue,
-    onChange: function onChange(value) {
-      setSliderValue(value);
-      cropperInstance.zoomTo(value / 100);
+    step: "any",
+    initialValue: initialSliderValue,
+    onChange: function onChange(event) {
+      var value = event.target.value;
+      cropperInstance && cropperInstance.zoomTo(value / 100);
     }
   })))));
 };
