@@ -48,12 +48,12 @@ var RewardCard = function RewardCard(_ref) {
       withoutBorder = _ref.withoutBorder,
       disabled = _ref.disabled,
       others = (0, _objectWithoutProperties2.default)(_ref, ["children", "withoutBorder", "disabled"]);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, children ? /*#__PURE__*/_react.default.createElement(_styles.StyledRewardCard, (0, _extends2.default)({
-    className: (0, _classnames.default)('k-RewardCard', {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, children ? /*#__PURE__*/_react.default.createElement(_styles.StyledRewardCard, (0, _extends2.default)({}, others, {
+    className: (0, _classnames.default)('k-RewardCard', others.className, {
       'k-rewardCard--withoutBorder': withoutBorder,
       'k-RewardCard--isDisabled': disabled
     })
-  }, others), children) : /*#__PURE__*/_react.default.createElement(_rewardCardContainer.LegacyRewardCardContainer, (0, _extends2.default)({
+  }), children) : /*#__PURE__*/_react.default.createElement(_rewardCardContainer.LegacyRewardCardContainer, (0, _extends2.default)({
     withoutBorder: withoutBorder,
     disabled: disabled
   }, others)));

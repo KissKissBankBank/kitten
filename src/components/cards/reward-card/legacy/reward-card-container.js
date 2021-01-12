@@ -165,13 +165,13 @@ var LegacyRewardCardContainerBase = /*#__PURE__*/function (_Component) {
       if (!titleAmount) return null;
       return /*#__PURE__*/_react.default.createElement(_deprecated.Deprecated, {
         warningMessage: "Please use RewardCard sub-component to make your composition. You can check some examples on https://kisskissbankbank.github.io/../../../"
-      }, /*#__PURE__*/_react.default.createElement(_styles.StyledLegacyRewardCard, (0, _extends2.default)({
+      }, /*#__PURE__*/_react.default.createElement(_styles.StyledLegacyRewardCard, (0, _extends2.default)({}, others, {
         className: (0, _classnames.default)('k-LegacyRewardCard', this.props.className, {
           'k-LegacyRewardCard--tinyVersion': this.isTinyVersion(),
           'k-LegacyRewardCard--sOrLessVersion': this.isSOrLessVersion(),
           'k-LegacyRewardCard--isDisabled': isDisabled
         })
-      }, others), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
+      }), /*#__PURE__*/_react.default.createElement(_marger.Marger, {
         bottom: this.isSOrLessVersion() ? 0 : 4,
         top: this.isSOrLessVersion() ? 3 : 4
       }, /*#__PURE__*/_react.default.createElement(_grid.Grid, {

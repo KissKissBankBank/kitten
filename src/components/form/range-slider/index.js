@@ -91,7 +91,7 @@ RangeSlider.propTypes = {
   initialValue: _propTypes.default.number,
   min: _propTypes.default.number,
   max: _propTypes.default.number,
-  step: _propTypes.default.number,
+  step: _propTypes.default.oneOfType([_propTypes.default.number, _propTypes.default.string]),
   name: _propTypes.default.string.isRequired,
   onChange: _propTypes.default.func,
   wrapperProps: _propTypes.default.object,
