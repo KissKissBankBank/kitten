@@ -93,7 +93,7 @@ exports[`<RewardCard /> with DiamondBadge matches with snapshot 1`] = `
 
 exports[`<RewardCard /> with all props matches with snapshot 1`] = `
 <div
-  className="sc-bZQynM htIJZx k-RewardCard"
+  className="sc-bZQynM htIJZx k-RewardCard customClassName"
 >
   <div
     className="k-RewardCard__cardRow"

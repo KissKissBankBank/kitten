@@ -19,12 +19,13 @@ export const RewardCard = ({
   children,
   withoutBorder,
   disabled,
+  className,
   ...others
 }) => (
   <>
     {children ? (
       <StyledRewardCard
-        className={classNames('k-RewardCard', {
+        className={classNames('k-RewardCard', className, {
           'k-rewardCard--withoutBorder': withoutBorder,
           'k-RewardCard--isDisabled': disabled,
         })}

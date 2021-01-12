@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Return ability to add `className` to `RewardCard`.
+
 ## [2.108.0] - 2020-01-11
 
 Features:

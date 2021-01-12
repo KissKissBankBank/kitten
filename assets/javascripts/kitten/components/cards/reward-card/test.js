@@ -49,7 +49,7 @@ describe('<RewardCard />', () => {
       window.matchMedia = createMockMediaMatcher(false)
       const component = renderer
         .create(
-          <RewardCard>
+          <RewardCard className="customClassName">
             <RewardCard.Row>
               <RewardCard.RowContent>
                 <RewardCard.StarredBadge>
