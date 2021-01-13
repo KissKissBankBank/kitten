@@ -31,6 +31,8 @@ var _progress = _interopRequireDefault(require("./components/progress"));
 
 var _state = _interopRequireDefault(require("./components/state"));
 
+var _button = _interopRequireDefault(require("./components/button"));
+
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styles = require("./styles");
@@ -66,7 +68,8 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
       videoProps = _ref.videoProps,
       videoSources = _ref.videoSources,
       widgetState = _ref.widgetState,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState"]);
+      buttonText = _ref.buttonText,
+      others = (0, _objectWithoutProperties2.default)(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText"]);
 
   var removeCurrentFocus = function removeCurrentFocus() {
     document.activeElement.blur();
@@ -135,6 +138,9 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
     progress: progress,
     progressColor: progressColor,
     loading: loading
+  }), buttonText && /*#__PURE__*/_react.default.createElement(_button.default, {
+    text: buttonText,
+    loading: loading
   }), /*#__PURE__*/_react.default.createElement(_state.default, {
     state: state,
     widgetState: widgetState,
@@ -149,11 +155,13 @@ CrowdfundingCard.propTypes = {
   href: _propTypes.default.string,
   titlesMinHeight: _propTypes.default.bool,
   stretch: _propTypes.default.bool,
-  imageContainerRatio: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number])
+  imageContainerRatio: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
+  buttonText: _propTypes.default.string
 };
 CrowdfundingCard.defaultProps = {
   href: null,
   titlesMinHeight: true,
   stretch: false,
-  imageContainerRatio: 10 / 16
+  imageContainerRatio: 10 / 16,
+  buttonText: null
 };
