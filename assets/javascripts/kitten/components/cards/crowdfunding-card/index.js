@@ -6,6 +6,7 @@ import Subtitle from './components/subtitle'
 import Informations from './components/informations'
 import ProgressBar from './components/progress'
 import State from './components/state'
+import CardButton from './components/button'
 import classNames from 'classnames'
 import { StyledCrowdfundingCard } from './styles'
 import { Text } from '../../../components/typography/text'
@@ -38,6 +39,7 @@ export const CrowdfundingCard = ({
   videoProps,
   videoSources,
   widgetState,
+  buttonText,
   ...others
 }) => {
   const removeCurrentFocus = () => {
@@ -118,6 +120,7 @@ export const CrowdfundingCard = ({
         progressColor={progressColor}
         loading={loading}
       />
+      {buttonText && <CardButton text={buttonText} loading={loading} />}
       <State state={state} widgetState={widgetState} loading={loading} />
 
       {loading && <span className="k-CrowdfundingCard__loading" />}
@@ -133,6 +136,7 @@ CrowdfundingCard.propTypes = {
     PropTypes.string,
     PropTypes.number,
   ]),
+  buttonText: PropTypes.string,
 }
 
 CrowdfundingCard.defaultProps = {
@@ -140,4 +144,5 @@ CrowdfundingCard.defaultProps = {
   titlesMinHeight: true,
   stretch: false,
   imageContainerRatio: 10 / 16,
+  buttonText: null,
 }
