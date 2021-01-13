@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `buttonText` prop to `CrowdfundingCard`.
 - Fix: Fix overflow style on `ScrollableContainer`.
 
 ## [2.109.0] - 2020-01-12
