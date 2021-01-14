@@ -33,6 +33,14 @@ var _arrowIcon = require("../../../components/icons/arrow-icon");
 
 var _find = _interopRequireDefault(require("lodash/fp/find"));
 
+var _flow = _interopRequireDefault(require("lodash/fp/flow"));
+
+var _uniqBy = _interopRequireDefault(require("lodash/fp/uniqBy"));
+
+var _filter = _interopRequireDefault(require("lodash/fp/filter"));
+
+var _isEmpty = _interopRequireDefault(require("lodash/isEmpty"));
+
 var _styles = require("./styles");
 
 var DropdownCombobox = function DropdownCombobox(_ref) {
@@ -57,7 +65,9 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       onInputChange = _ref.onInputChange,
       onMenuClose = _ref.onMenuClose,
       onMenuOpen = _ref.onMenuOpen,
-      openOnLoad = _ref.openOnLoad;
+      openOnLoad = _ref.openOnLoad,
+      uniqLabelOnSearch = _ref.uniqLabelOnSearch,
+      menuZIndex = _ref.menuZIndex;
 
   var _useState = (0, _react.useState)([]),
       _useState2 = (0, _slicedToArray2.default)(_useState, 2),
@@ -90,9 +100,11 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
   };
 
   var onInputValueChange = function onInputValueChange(changes) {
-    var newItemsList = flattenedOptions.filter(function (item) {
+    var newItemsList = (0, _flow.default)((0, _filter.default)(function (item) {
       return item.value.toLowerCase().startsWith(changes.inputValue.toLowerCase());
-    });
+    }), !(0, _isEmpty.default)(changes.inputValue) && uniqLabelOnSearch ? (0, _uniqBy.default)('label') : function (item) {
+      return item;
+    })(flattenedOptions);
     setFilteredOptions(newItemsList);
     onInputChange({
       value: changes.inputValue,
@@ -129,7 +141,8 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       getInputProps = _useCombobox.getInputProps,
       getMenuProps = _useCombobox.getMenuProps,
       highlightedIndex = _useCombobox.highlightedIndex,
-      getItemProps = _useCombobox.getItemProps;
+      getItemProps = _useCombobox.getItemProps,
+      openMenu = _useCombobox.openMenu;
 
   (0, _react.useEffect)(function () {
     getLabelProps && labelPropsGetter(getLabelProps);
@@ -161,7 +174,10 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
       'k-Form-Dropdown--disabled': disabled
-    })
+    }),
+    style: {
+      '--menu-z-index': menuZIndex
+    }
   }, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
       'k-Form-Dropdown__label--isHidden': hideLabel
@@ -171,7 +187,13 @@ var DropdownCombobox = function DropdownCombobox(_ref) {
   }, getComboboxProps()), /*#__PURE__*/_react.default.createElement("input", (0, _extends2.default)({
     className: "k-Form-DropdownCombobox__input",
     placeholder: placeholder,
-    disabled: disabled
+    disabled: disabled,
+    onFocus: function onFocus() {
+      return !isOpen && openMenu();
+    },
+    onClick: function onClick() {
+      return !isOpen && openMenu();
+    }
   }, getInputProps())), /*#__PURE__*/_react.default.createElement("button", (0, _extends2.default)({
     className: "k-Form-DropdownCombobox__arrowButton",
     type: "button",
@@ -229,7 +251,8 @@ DropdownCombobox.defaultProps = {
   onInputChange: function onInputChange() {},
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},
-  openOnLoad: false
+  openOnLoad: false,
+  menuZIndex: 1000
 };
 DropdownCombobox.propTypes = {
   id: _propTypes.default.string.isRequired,
@@ -249,5 +272,6 @@ DropdownCombobox.propTypes = {
   onInputChange: _propTypes.default.func,
   onMenuClose: _propTypes.default.func,
   onMenuOpen: _propTypes.default.func,
-  openOnLoad: _propTypes.default.bool
+  openOnLoad: _propTypes.default.bool,
+  menuZIndex: _propTypes.default.number
 };

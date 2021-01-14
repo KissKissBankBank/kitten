@@ -5,13 +5,17 @@ import { Button } from '../../../../components/buttons/button/button'
 const CardButton = ({ text, loading }) => (
   <div className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer">
     {!loading && (
-      <Button fluid modifier="helium">
+      <Button type="button" fluid modifier="helium">
         {text}
       </Button>
     )}
 
     {loading && (
-      <Button fluid className="k-CrowdfundingCard__cardButton__loadingButton" />
+      <Button
+        type="button"
+        fluid
+        className="k-CrowdfundingCard__cardButton__loadingButton"
+      />
     )}
   </div>
 )

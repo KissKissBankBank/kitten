@@ -110,7 +110,8 @@ export const StyledDropdown = styled.div`
   .k-Form-Dropdown__list {
     box-sizing: border-box;
     position: absolute;
-    z-index: 1;
+    z-index: 1000;
+    z-index: var(--menu-z-index, 1000);
     width: 100%;
     max-height: ${pxToRem(250)};
     padding: 0;
@@ -134,9 +135,13 @@ export const StyledDropdown = styled.div`
     box-sizing: border-box;
     padding: ${pxToRem(15)};
     min-height: ${pxToRem(50)};
+    color: ${COLORS.font1};
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-1)};
     user-select: none;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
 
     &[aria-selected="true"] {
       background-color: ${COLORS.background3};

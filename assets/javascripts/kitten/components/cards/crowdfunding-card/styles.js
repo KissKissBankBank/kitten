@@ -18,6 +18,11 @@ export const StyledCrowdfundingCard = styled(
   overflow: hidden;
   display: block;
 
+  &[href]:focus {
+    outline: ${COLORS.primary4} solid ${pxToRem(2)};
+    outline-offset: ${pxToRem(2)};
+  }
+
   .k-CrowdfundingCard__paddedContainer {
     padding: 0 ${COMPONENT_GUTTER};
   }

@@ -22,12 +22,12 @@ export var RewardCard = function RewardCard(_ref) {
       disabled = _ref.disabled,
       others = _objectWithoutProperties(_ref, ["children", "withoutBorder", "disabled"]);
 
-  return /*#__PURE__*/React.createElement(React.Fragment, null, children ? /*#__PURE__*/React.createElement(StyledRewardCard, _extends({
-    className: classNames('k-RewardCard', {
+  return /*#__PURE__*/React.createElement(React.Fragment, null, children ? /*#__PURE__*/React.createElement(StyledRewardCard, _extends({}, others, {
+    className: classNames('k-RewardCard', others.className, {
       'k-rewardCard--withoutBorder': withoutBorder,
       'k-RewardCard--isDisabled': disabled
     })
-  }, others), children) : /*#__PURE__*/React.createElement(LegacyRewardCardContainer, _extends({
+  }), children) : /*#__PURE__*/React.createElement(LegacyRewardCardContainer, _extends({
     withoutBorder: withoutBorder,
     disabled: disabled
   }, others)));

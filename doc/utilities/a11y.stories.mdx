@@ -1,0 +1,29 @@
+import { Meta, Canvas, Story } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/CSS Utilities/Accessibility/Visually Hidden" />
+
+# Accessibility: Visually Hidden
+
+Use this utility when you want to hide an element to visual browsers but not
+text-based browsers and screen-readers. Read more over at
+[a11yproject.com](https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/).
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/a11y/_visually-hidden.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/a11y/_visually-hidden.scss)
+
+## Usage
+
+This utility will hide an element to visual browsers, but keep the element
+legible by screen readers.
+
+`k-u-a11y-visuallyHidden`
+<Canvas>
+<p>
+  <span>This is visible</span>
+  <br />
+  <span className="k-u-a11y-visuallyHidden">
+    This is not visible
+  </span>
+</p>
+</Canvas>

@@ -22,7 +22,7 @@ var _classnames = _interopRequireDefault(require("classnames"));
 var StyledTitle = _styledComponents.default.p.withConfig({
   displayName: "title__StyledTitle",
   componentId: "zdw2ns-0"
-})(["margin:0 0 ", ";", ";font-size:", ";line-height:normal;&.k-Stepepers-VerticalStepper__title--orion{font-size:", ";}"], (0, _typography.pxToRem)(2), _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(0), (0, _typography.stepToRem)(-1));
+})(["margin:0;", ";font-size:", ";line-height:normal;&.k-Stepepers-VerticalStepper__title--orion{font-size:", ";font-weight:bold;line-height:1;margin-bottom:", ";}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(0), (0, _typography.stepToRem)(-1), (0, _typography.pxToRem)(5));
 
 var Title = function Title(_ref) {
   var variant = _ref.variant,

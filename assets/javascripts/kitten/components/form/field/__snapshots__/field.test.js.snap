@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU gSiJXU"
+      className="sc-iwsKbI cdTKwF"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-VigVT iQhtHk"
+        className="sc-gZMcBi lmEZvD"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -296,10 +296,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-dnqmqq kmxqSx"
+      className="sc-dnqmqq iVdmNR k-Form-PasswordInput"
     >
       <input
-        className="sc-bwzfXH kBmQlm k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda k-Form-TextInput--error"
+        className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -307,11 +307,11 @@ Array [
         type="password"
       />
       <button
+        aria-label="Show password"
         aria-pressed={false}
-        className="sc-gZMcBi cfFPfO k-u-reset-button"
+        className="k-Form-PasswordInput__icon k-u-reset-button"
         onClick={[Function]}
-        tabIndex="0"
-        title="Show password"
+        type="button"
       >
         <svg
           fill="#222"
@@ -419,10 +419,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-dnqmqq kmxqSx"
+      className="sc-dnqmqq iVdmNR k-Form-PasswordInput"
     >
       <input
-        className="sc-bwzfXH kBmQlm k-Form-TextInput sc-iwsKbI edMhih k-Form-TextInput--andromeda"
+        className="sc-bwzfXH kBmQlm k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
         disabled={false}
         id="input"
         name="field"
@@ -430,11 +430,11 @@ Array [
         type="password"
       />
       <button
+        aria-label="Show password"
         aria-pressed={false}
-        className="sc-gZMcBi cfFPfO k-u-reset-button"
+        className="k-Form-PasswordInput__icon k-u-reset-button"
         onClick={[Function]}
-        tabIndex="0"
-        title="Show password"
+        type="button"
       >
         <svg
           fill="#222"

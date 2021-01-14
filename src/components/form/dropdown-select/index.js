@@ -60,7 +60,8 @@ var DropdownSelect = function DropdownSelect(_ref) {
       onInputChange = props.onInputChange,
       onMenuClose = props.onMenuClose,
       onMenuOpen = props.onMenuOpen,
-      openOnLoad = props.openOnLoad;
+      openOnLoad = props.openOnLoad,
+      menuZIndex = props.menuZIndex;
 
   var getA11ySelectionMessage = function getA11ySelectionMessage(_ref2) {
     var itemToString = _ref2.itemToString,
@@ -137,7 +138,10 @@ var DropdownSelect = function DropdownSelect(_ref) {
       'k-Form-Dropdown--error': error,
       'k-Form-Dropdown--valid': valid,
       'k-Form-Dropdown--disabled': disabled
-    })
+    }),
+    style: {
+      '--menu-z-index': menuZIndex
+    }
   }, /*#__PURE__*/_react.default.createElement(_label.Label, (0, _extends2.default)({
     className: (0, _classnames.default)('k-Form-Dropdown__label', 'k-u-margin-bottom-single', {
       'k-Form-Dropdown__label--isHidden': hideLabel
@@ -201,7 +205,9 @@ DropdownSelect.defaultProps = {
   onInputChange: function onInputChange() {},
   onMenuClose: function onMenuClose() {},
   onMenuOpen: function onMenuOpen() {},
-  openOnLoad: false
+  openOnLoad: false,
+  uniqLabelOnSearch: false,
+  menuZIndex: 1000
 };
 DropdownSelect.propTypes = {
   id: _propTypes.default.string.isRequired,
@@ -220,5 +226,7 @@ DropdownSelect.propTypes = {
   onInputChange: _propTypes.default.func,
   onMenuClose: _propTypes.default.func,
   onMenuOpen: _propTypes.default.func,
-  openOnLoad: _propTypes.default.bool
+  openOnLoad: _propTypes.default.bool,
+  uniqLabelOnSearch: _propTypes.default.bool,
+  menuZIndex: _propTypes.default.number
 };

@@ -124,8 +124,11 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
     }
 
     window.addEventListener('keydown', closeDropdownOnEsc);
-    dropdownButtonRef.current.addEventListener('keydown', dropdownKbdTrigger);
-    dropdownButtonRef.current.addEventListener('mouseup', blur);
+
+    if (!(0, _isNull.default)(dropdownButtonRef.current)) {
+      dropdownButtonRef.current.addEventListener('keydown', dropdownKbdTrigger);
+      dropdownButtonRef.current.addEventListener('mouseup', blur);
+    }
 
     if (!(0, _has.default)('current')(dropdownRef)) {
       console.warn('The `ref` prop from <Dropdown /> should be set using `useRef`.');
@@ -149,21 +152,24 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
       }
 
       window.removeEventListener('keydown', closeDropdownOnEsc);
-      dropdownButtonRef.current.removeEventListener('keydown', dropdownKbdTrigger);
-      dropdownButtonRef.current.removeEventListener('mouseup', blur);
+
+      if (!(0, _isNull.default)(dropdownButtonRef.current)) {
+        dropdownButtonRef.current.removeEventListener('keydown', dropdownKbdTrigger);
+        dropdownButtonRef.current.removeEventListener('mouseup', blur);
+      }
     };
   }, []);
 
   var manageA11yOn = function manageA11yOn(event) {
     event.stopPropagation();
     event.preventDefault();
-    var focusableElements = (0, _a11y.getFocusableElementsFrom)(dropdownContentRef.current);
+    var focusableElements = (0, _a11y.getFocusableElementsFrom)(dropdownContentRef === null || dropdownContentRef === void 0 ? void 0 : dropdownContentRef.current);
     var kbdNav = (0, _a11y.keyboardNavigation)(focusableElements, {
       events: {
         prev: _events.DROPDOWN_FIRST_FOCUS_REACHED_EVENT,
         next: _events.DROPDOWN_LAST_FOCUS_REACHED_EVENT
       },
-      triggeredElement: dropdownButtonRef.current
+      triggeredElement: dropdownButtonRef === null || dropdownButtonRef === void 0 ? void 0 : dropdownButtonRef.current
     });
     var tab = keyboard.tab,
         up = keyboard.up,
@@ -175,11 +181,11 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
     if (event.keyCode === esc) return toggle(false);
 
     if (event.keyCode === left) {
-      return (0, _events.dispatchEvent)(_events.DROPDOWN_FIRST_FOCUS_REACHED_EVENT, dropdownButtonRef.current)();
+      return (0, _events.dispatchEvent)(_events.DROPDOWN_FIRST_FOCUS_REACHED_EVENT, dropdownButtonRef === null || dropdownButtonRef === void 0 ? void 0 : dropdownButtonRef.current)();
     }
 
     if (event.keyCode === right) {
-      return (0, _events.dispatchEvent)(_events.DROPDOWN_LAST_FOCUS_REACHED_EVENT, dropdownButtonRef.current)();
+      return (0, _events.dispatchEvent)(_events.DROPDOWN_LAST_FOCUS_REACHED_EVENT, dropdownButtonRef === null || dropdownButtonRef === void 0 ? void 0 : dropdownButtonRef.current)();
     }
 
     if (shiftTab(event) || event.keyCode === up) {
@@ -192,7 +198,7 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
   };
 
   (0, _react.useEffect)(function () {
-    if (isExpandedState) {
+    if (isExpandedState && !(0, _isNull.default)(dropdownContentRef.current)) {
       setTimeout(function () {
         var focusableElements = (0, _a11y.getFocusableElementsFrom)(dropdownContentRef.current);
 
@@ -204,7 +210,9 @@ var Dropdown = _react.default.forwardRef(function (_ref, dropdownRef) {
     }
 
     return function () {
-      dropdownContentRef.current.removeEventListener('keydown', manageA11yOn);
+      if (!(0, _isNull.default)(dropdownContentRef.current)) {
+        dropdownContentRef.current.removeEventListener('keydown', manageA11yOn);
+      }
     };
   }, [isExpandedState]);
   (0, _react.useEffect)(function () {

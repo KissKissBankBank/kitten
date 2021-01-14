@@ -9,6 +9,7 @@ const defaultProps = {
     number: '',
     expiry: '',
     cvc: '',
+    type: '',
   },
   onChange: _values => {},
 }

@@ -24,9 +24,14 @@ export const Step = ({
     <StyledItem
       className={classNames('k-Steppers--VerticalStepper__item', {
         'k-Steppers--VerticalStepper__item--hasActiveLine': success,
+        'k-Steppers--VerticalStepper__item--bridge': bridge,
       })}
     >
-      <StyledLink as={other.href ? 'a' : 'span'} {...other} variant={variant}>
+      <StyledLink
+        as={other.href && !disabled ? 'a' : 'span'}
+        {...other}
+        variant={variant}
+      >
         <Status
           success={success}
           valid={valid}
@@ -39,7 +44,6 @@ export const Step = ({
         />
 
         <div
-          error={error}
           className={classNames(
             STEP_CLASSNAME,
             'k-Steppers--VerticalStepper__step--link--content',
@@ -61,9 +65,11 @@ const StyledItem = styled.li`
 
   &:first-of-type {
     margin-top: 0;
+    padding-top: 0;
   }
   &:last-of-type {
     margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   [role='button']:focus,
@@ -79,6 +85,10 @@ const StyledItem = styled.li`
     &::after {
       display: none;
     }
+  }
+
+  &.k-Steppers--VerticalStepper__item--bridge {
+    padding: ${pxToRem(8)} 0;
   }
 `
 

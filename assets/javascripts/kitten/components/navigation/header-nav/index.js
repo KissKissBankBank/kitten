@@ -123,6 +123,8 @@ const HeaderNav = ({
     )
 
     return () => {
+      if (!headerRef.current) return
+
       headerRef.current.removeEventListener('keydown', handleKeyboardNavigation)
       window.removeEventListener(
         DROPDOWN_FIRST_FOCUS_REACHED_EVENT,

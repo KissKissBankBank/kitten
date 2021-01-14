@@ -37,6 +37,16 @@ describe('<TagButton />', () => {
     })
   })
 
+  describe('with `huge` prop', () => {
+    beforeEach(() => {
+      component = renderer.create(<TagButton huge>MyButton</TagButton>).toJSON()
+    })
+
+    it('matches with snapshot', () => {
+      expect(component).toMatchSnapshot()
+    })
+  })
+
   describe('with `modifier` prop', () => {
     beforeEach(() => {
       component = renderer
