@@ -25,7 +25,7 @@ const StyledDatePicker = styled.div`
   .DayPickerInput-Overlay {
     box-shadow: none;
     margin-top: 18px;
-        min-width: calc(7 * ${tinyCellSize} + 2 * ${tinyDayPickerPadding});
+    min-width: calc(7 * ${tinyCellSize} + 2 * ${tinyDayPickerPadding});
 
     @media (min-width: ${ScreenConfig.S.min}px) {
       min-width: calc(7 * ${cellSize} + 2 * ${dayPickerPadding});

@@ -45,8 +45,8 @@ const StyledSwitch = styled.button`
   background-color: currentColor;
   border: ${pxToRem(borderSize)} solid ${COLORS.line2};
   border-radius: ${pxToRem(borderRadius)};
-  transition: box-shadow ${transitionDuration} ease,
-    color ${transitionDuration} ease, border-color ${transitionDuration} ease,
+  transition: color ${transitionDuration} ease,
+    border-color ${transitionDuration} ease,
     background-color ${transitionDuration} ease;
   cursor: pointer;
 
