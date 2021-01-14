@@ -16,6 +16,16 @@ export const CarouselPage = ({
     return goToPage(pageIndex)
   }
 
+  const itemProps = (() => {
+    if (!exportVisibilityProps) return { onFocus: handleFocus }
+
+    return {
+      hasPageBeenViewed,
+      isActivePage,
+      onFocus: handleFocus,
+    }
+  })()
+
   return (
     <div
       className={classNames('k-Carousel__page', {
@@ -23,21 +33,18 @@ export const CarouselPage = ({
         'k-Carousel__page--hasBeenViewed': hasPageBeenViewed,
       })}
     >
-      {[...Array(numberOfItemsPerPage).keys()].map(index => (
-        <div key={index} className="k-Carousel__page__item">
-          {exportVisibilityProps
-            ? index < pageItems.length &&
-              React.cloneElement(pageItems[index], {
-                hasPageBeenViewed,
-                isActivePage,
-                onFocus: handleFocus,
-              })
-            : index < pageItems.length &&
-              React.cloneElement(pageItems[index], {
-                onFocus: handleFocus,
-              })}
-        </div>
-      ))}
+      {[...Array(numberOfItemsPerPage).keys()].map(index => {
+        // If there's not enough items in the last page of the Carousel
+        if (index >= pageItems.length) {
+          return <div key={index} className="k-Carousel__page__item" />
+        }
+
+        return (
+          <div key={index} className="k-Carousel__page__item">
+            {React.cloneElement(pageItems[index], itemProps)}
+          </div>
+        )
+      })}
     </div>
   )
 }
