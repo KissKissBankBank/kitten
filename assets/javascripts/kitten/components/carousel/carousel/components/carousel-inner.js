@@ -142,10 +142,10 @@ export const CarouselInner = ({
   }
 
   const handleKeyDown = e => {
-    if (e.key == 'ArrowRight') {
+    if (e.key === 'ArrowRight') {
       goToPage(currentPageIndex + 1)
     }
-    if (e.key == 'ArrowLeft') {
+    else if (e.key === 'ArrowLeft') {
       goToPage(currentPageIndex - 1)
     }
   }
