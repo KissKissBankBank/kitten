@@ -2,7 +2,7 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat errhZp k-Carousel"
+  className="sc-htpNat eSYAdD k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -78,7 +78,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat errhZp k-Carousel"
+  className="sc-htpNat eSYAdD k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -156,7 +156,7 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jouaPS k-Carousel k-LegacyCarousel"
+  className="sc-htpNat ceuXfg k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -243,7 +243,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jouaPS k-Carousel k-LegacyCarousel"
+  className="sc-htpNat ceuXfg k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -330,7 +330,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jouaPS k-Carousel k-LegacyCarousel"
+  className="sc-htpNat ceuXfg k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -417,7 +417,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat errhZp k-Carousel"
+  className="sc-htpNat eSYAdD k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -493,7 +493,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
 
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat kofUvh k-Carousel"
+  className="sc-htpNat hOEpvd k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -575,7 +575,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat errhZp k-Carousel"
+  className="sc-htpNat eSYAdD k-Carousel"
 >
   <div
     className="k-Carousel__inner"
