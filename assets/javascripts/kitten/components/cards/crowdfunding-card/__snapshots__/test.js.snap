@@ -100,7 +100,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   top: 0;
   margin-top: -1.875rem;
   background-color: #fff;
-  display: none;
 }
 
 .c0 .k-CrowdfundingCard__title {
@@ -696,7 +695,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   top: 0;
   margin-top: -1.875rem;
   background-color: #fff;
-  display: none;
 }
 
 .c0 .k-CrowdfundingCard__title {
@@ -1303,7 +1301,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   top: 0;
   margin-top: -1.875rem;
   background-color: #fff;
-  display: none;
 }
 
 .c0 .k-CrowdfundingCard__title {
@@ -1948,7 +1945,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   top: 0;
   margin-top: -1.875rem;
   background-color: #fff;
-  display: none;
 }
 
 .c0 .k-CrowdfundingCard__title {
@@ -2542,7 +2538,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   top: 0;
   margin-top: -1.875rem;
   background-color: #fff;
-  display: none;
 }
 
 .c0 .k-CrowdfundingCard__title {
