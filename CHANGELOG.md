@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `forceVersion` prop to `CrowdfundingCard`.
+
 ## [2.110.0] - 2020-01-13
 
 Feature:
