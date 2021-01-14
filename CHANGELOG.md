@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Fix: Add button types on `Carousel` navigation.
+- Fix: Remove scrollbars on `Carousel` on Firefox.
+
 ## [2.110.0] - 2020-01-13
 
 Feature:
