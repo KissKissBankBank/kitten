@@ -7,7 +7,7 @@ import { Grid, GridCol } from '../../../components/grid/grid';
 import { Label } from '../../../components/form/label';
 import { Paragraph } from '../../../components/typography/paragraph';
 import { BasicUploader } from '../../../components/uploaders/basic-uploader';
-import { Slider } from '../../../components/form/slider';
+import { RangeSlider } from '../../../components/form/range-slider';
 import { domElementHelper } from '../../../helpers/dom/element-helper';
 export var ImageCropper = function ImageCropper(_ref) {
   var imageSrc = _ref.imageSrc,
@@ -75,8 +75,8 @@ export var ImageCropper = function ImageCropper(_ref) {
 
   var _useState19 = useState(0),
       _useState20 = _slicedToArray(_useState19, 2),
-      sliderValue = _useState20[0],
-      setSliderValue = _useState20[1];
+      initialSliderValue = _useState20[0],
+      setInitialSliderValue = _useState20[1];
 
   var _useState21 = useState(null),
       _useState22 = _slicedToArray(_useState21, 2),
@@ -98,7 +98,7 @@ export var ImageCropper = function ImageCropper(_ref) {
       var max = sliderMax + ratio;
       setSliderMin(min);
       setSliderMax(max);
-      setSliderValue(min);
+      setInitialSliderValue(min);
     }
   }, [getOr(null)('imageData.naturalWidth')(cropperInstance)]);
 
@@ -140,7 +140,8 @@ export var ImageCropper = function ImageCropper(_ref) {
   return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Marger, {
     bottom: "1.5"
   }, /*#__PURE__*/React.createElement(Label, {
-    size: "tiny"
+    size: "tiny",
+    htmlFor: name
   }, label)), /*#__PURE__*/React.createElement(Marger, {
     top: "1.5",
     bottom: "1"
@@ -235,17 +236,20 @@ export var ImageCropper = function ImageCropper(_ref) {
     top: "1.5",
     bottom: "1"
   }, /*#__PURE__*/React.createElement(Label, {
-    size: "micro"
+    size: "micro",
+    htmlFor: "zoomSlider"
   }, sliderTitle)), /*#__PURE__*/React.createElement(Marger, {
     top: "1"
-  }, /*#__PURE__*/React.createElement(Slider, {
+  }, /*#__PURE__*/React.createElement(RangeSlider, {
+    id: "zoomSlider",
     name: "zoom",
     min: sliderMin,
     max: sliderMax,
-    value: sliderValue,
-    onChange: function onChange(value) {
-      setSliderValue(value);
-      cropperInstance.zoomTo(value / 100);
+    step: "any",
+    initialValue: initialSliderValue,
+    onChange: function onChange(event) {
+      var value = event.target.value;
+      cropperInstance && cropperInstance.zoomTo(value / 100);
     }
   })))));
 };

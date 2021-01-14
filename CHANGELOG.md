@@ -4,6 +4,133 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+## [2.110.0] - 2020-01-13
+
+Feature:
+
+- Add `buttonText` prop to `CrowdfundingCard`.
+
+Fix:
+
+- Fix overflow style on `ScrollableContainer`.
+
+## [2.109.0] - 2020-01-12
+
+Features:
+
+- Replace deprecated `Slider` with `RangeSlider` on `ImageCropper`.
+- Add `className` prop propagation to `RewardCard`.
+
+## [2.108.0] - 2020-01-11
+
+Features:
+
+- New `RangeSlider`, based on `input[type="range"]` HTML element.
+- Set `RewardCard` ratio to 16/10.
+- Allow string prop types for `customSize` on `HorizontalStroke`.
+- `menuZIndex` prop for custom menu z-index in `DropdownSelect` and `DropdownSelectWithInput`.
+
+Fixes:
+
+- Define default color for `DropdownSelect` items.
+- Refactor `k-u-blockAlign` to `k-u-alignSelf-*` and docs.
+
+## [2.107.0] - 2020-12-24
+
+Features:
+
+- Add `variant` prop to `CheckboxSet`, defaults to `andromeda`.
+- Add `variant` prop to `Checkbox`, defaults to `andromeda`.
+- Add `variant` prop to `TagButton`, defaults to `andromeda`.
+- Add `variant` prop to `ProgressRing`, defaults to `andromeda`.
+- Add `animationSpeed` prop to `ProgressRing`.
+
+Fixes:
+
+- Propagate `name` argument when `TextInput` is a textarea.
+- `VerticalStepper` styles.
+
+## [2.106.1] - 2020-12-18
+
+Fix:
+
+- `RadioButton`: Allow `PropTypes.node` on `text` prop.
+
+## [2.106.0] - 2020-12-18
+
+Features:
+
+- Add `distanceAsPercentage` prop to `ArrowContainer`, defaults to false.
+- Add Icons, Constants and useful Helpers to main export.
+
+Fixes:
+
+- Open menu on focus `DropdownSelect` combobox.
+- Add `type="button"` to button on `PasswordInput`.
+
+## [2.105.0] - 2020-12-16
+
+Feature:
+
+- Add `uniqLabelOnSearch` prop on `DropdownSelect`.
+
+Fixes:
+
+- Fix `VerticalStepper` styles.
+- Fix `TagButton` className and refactoring.
+- Fix `DropdownSelect` item line height and alignment.
+- `ProgressBar` wasn’t passing class names.
+
+## [2.104.1] - 2020-12-14
+
+Rollback:
+
+- Back to `styled-components` because bug in className.
+
+## [2.104.0] - 2020-12-08
+
+Feature:
+
+- Add `variant` prop to `Progress`, defaults to `andromeda`.
+
+Fixes:
+
+- `PasswordInput` styles.
+- `CheckList` styles.
+
+## [2.103.0] - 2020-12-07
+
+Features :
+
+- Add `huge` props on `TagButton`.
+- Add CSS utilities:
+  - `k-u-flex`
+  - `k-u-inlineFlex`
+  - `k-u-flex-alignItems-*`
+  - `k-u-flex-direction-*`
+  - `k-u-flex-justifyContent-*`
+  - `k-u-block`
+  - `k-u-inlineBlock`
+    and docs.
+
+## [2.102.1] - 2020-12-07
+
+Fix:
+
+- Fix a synchronization bug between number and type values (`CreditCardForm`).
+
+## [2.102.0] - 2020-12-07
+
+Feature:
+
+- Add type to `CreditCardForm` values.
+
+Fixes:
+
+- Fix ref errors on `LazyObserver` and `Dropdown`.
+- Fix `VerticalStepper` styles.
+- Update `error` props on `VerticalStepper` with `variant="orion"`.
+
 ## [2.101.0] - 2020-11-30
 
 Features:

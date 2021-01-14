@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../../components/grid/grid'
 import { Label } from '../../../components/form/label'
 import { Paragraph } from '../../../components/typography/paragraph'
 import { BasicUploader } from '../../../components/uploaders/basic-uploader'
-import { Slider } from '../../../components/form/slider'
+import { RangeSlider } from '../../../components/form/range-slider'
 import { domElementHelper } from '../../../helpers/dom/element-helper'
 
 export const ImageCropper = ({
@@ -37,7 +37,7 @@ export const ImageCropper = ({
   const [cropperInstance, setCropperInstance] = useState(null)
   const [sliderMin, setSliderMin] = useState(0)
   const [sliderMax, setSliderMax] = useState(100)
-  const [sliderValue, setSliderValue] = useState(0)
+  const [initialSliderValue, setInitialSliderValue] = useState(0)
   const [uploadedFile, setUploadedFile] = useState(null)
   const [resultData, setResultData] = useState(null)
 
@@ -51,7 +51,7 @@ export const ImageCropper = ({
       const max = sliderMax + ratio
       setSliderMin(min)
       setSliderMax(max)
-      setSliderValue(min)
+      setInitialSliderValue(min)
     }
   }, [getOr(null)('imageData.naturalWidth')(cropperInstance)])
   const setCropperSize = () => {
@@ -94,7 +94,9 @@ export const ImageCropper = ({
   return (
     <>
       <Marger bottom="1.5">
-        <Label size="tiny">{label}</Label>
+        <Label size="tiny" htmlFor={name}>
+          {label}
+        </Label>
       </Marger>
 
       <Marger top="1.5" bottom="1">
@@ -189,17 +191,21 @@ export const ImageCropper = ({
                 </Paragraph>
               </Marger>
               <Marger top="1.5" bottom="1">
-                <Label size="micro">{sliderTitle}</Label>
+                <Label size="micro" htmlFor="zoomSlider">
+                  {sliderTitle}
+                </Label>
               </Marger>
               <Marger top="1">
-                <Slider
+                <RangeSlider
+                  id="zoomSlider"
                   name="zoom"
                   min={sliderMin}
                   max={sliderMax}
-                  value={sliderValue}
-                  onChange={value => {
-                    setSliderValue(value)
-                    cropperInstance.zoomTo(value / 100)
+                  step="any"
+                  initialValue={initialSliderValue}
+                  onChange={event => {
+                    const value = event.target.value
+                    cropperInstance && cropperInstance.zoomTo(value / 100)
                   }}
                 />
               </Marger>

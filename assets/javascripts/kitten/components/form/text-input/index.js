@@ -279,6 +279,7 @@ export class TextInput extends PureComponent {
             ref={input => (this.input = input)}
             as="textarea"
             disabled={disabled}
+            name={name}
             className={classNames(
               'k-Form-TextInput',
               className,

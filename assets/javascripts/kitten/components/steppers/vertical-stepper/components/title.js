@@ -6,7 +6,7 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import classNames from 'classnames'
 
 const StyledTitle = styled.p`
-  margin: 0 0 ${pxToRem(2)};
+  margin: 0;
 
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${stepToRem(0)};
@@ -14,6 +14,9 @@ const StyledTitle = styled.p`
 
   &.k-Stepepers-VerticalStepper__title--orion {
     font-size: ${stepToRem(-1)};
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: ${pxToRem(5)};
   }
 `
 

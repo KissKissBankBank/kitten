@@ -94,6 +94,7 @@ var TextInput = /*#__PURE__*/function (_PureComponent) {
           },
           as: "textarea",
           disabled: disabled,
+          name: name,
           className: (0, _classnames.default)('k-Form-TextInput', className, digitsClass, "k-Form-TextInput--".concat(variant), {
             'k-Form-TextInput--valid': valid,
             'k-Form-TextInput--error': error,

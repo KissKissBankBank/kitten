@@ -9,12 +9,14 @@ export var RewardCardImage = function RewardCardImage(_ref) {
       disabled = _ref.disabled,
       others = _objectWithoutProperties(_ref, ["alt", "className", "disabled"]);
 
-  return /*#__PURE__*/React.createElement("img", _extends({}, others, {
+  return /*#__PURE__*/React.createElement("div", {
+    className: "k-RewardCard__figureWrapper"
+  }, /*#__PURE__*/React.createElement("img", _extends({}, others, {
     alt: alt,
     className: classNames('k-RewardCard__image', className, {
       'k-RewardCard__image--disabled': disabled
     })
-  }));
+  })));
 };
 RewardCardImage.propTypes = {
   alt: PropTypes.string,

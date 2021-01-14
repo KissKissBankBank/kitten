@@ -17,7 +17,7 @@ exports[`<ProgressRing /> by default matches with snapshot 1`] = `
     strokeWidth={5}
   />
   <circle
-    className="sc-bdVaJa cQmfsG"
+    className="sc-bdVaJa wbZQK k-Meters__ProgressRing k-Meters__ProgressRing--andromeda"
     cx={25}
     cy={25}
     fill="transparent"

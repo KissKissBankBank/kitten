@@ -2,7 +2,7 @@
 
 exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] = `
 .c3.k-Steppers--VerticalStepper__statusContainer--orion {
-  border: 0.375rem solid #fff;
+  border: 0.3125rem solid #fff;
 }
 
 .c3 .k-Steppers--VerticalStepper__status {
@@ -85,12 +85,17 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-color: #eee;
 }
 
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--error {
+  color: #ff0046;
+  border-color: #ff0046;
+}
+
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
   background-color: #fff;
   border-color: #eee;
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 0.9375rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
   margin-left: 0.4375rem;
   margin-right: 1.25rem;
 }
@@ -107,6 +112,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   position: absolute;
   height: 100%;
   border-left: 0.1875rem dotted #eee;
+  margin-left: 0.1875rem;
 }
 
 .c1 {
@@ -115,10 +121,12 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 .c1:first-of-type {
   margin-top: 0;
+  padding-top: 0;
 }
 
 .c1:last-of-type {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .c1 [role='button']:focus,
@@ -134,6 +142,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 .c1 li:not(:last-of-type)::after {
   display: none;
+}
+
+.c1.k-Steppers--VerticalStepper__item--bridge {
+  padding: 0.5rem 0;
 }
 
 .c2 {
@@ -199,7 +211,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 }
 
 .c4 {
-  margin: 0 0 0.125rem;
+  margin: 0;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -208,6 +220,9 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 .c4.k-Stepepers-VerticalStepper__title--orion {
   font-size: 0.8888888888888888rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0.3125rem;
 }
 
 .c5 {
@@ -295,6 +310,10 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
   border-left: 0.125rem dashed #eee;
 }
 
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion {
+  margin-left: -0.3125rem;
+}
+
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion:before {
   border-left: none;
 }
@@ -306,7 +325,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
   content: '';
   position: absolute;
-  left: 1.1875rem;
+  left: 1.15625rem;
   top: 1.875rem;
   background-color: #eee;
   width: 0.1875rem;
@@ -353,7 +372,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--andromeda"
@@ -400,7 +418,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--andromeda"
@@ -466,7 +483,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={true}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--andromeda"
@@ -530,7 +546,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--andromeda"
@@ -577,7 +592,6 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--andromeda"
@@ -602,7 +616,7 @@ exports[`<VerticalStepper /> with all sub-components matches with snapshot 1`] =
 
 exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c3.k-Steppers--VerticalStepper__statusContainer--orion {
-  border: 0.375rem solid #fff;
+  border: 0.3125rem solid #fff;
 }
 
 .c3 .k-Steppers--VerticalStepper__status {
@@ -685,12 +699,17 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   border-color: #eee;
 }
 
+.c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--error {
+  color: #ff0046;
+  border-color: #ff0046;
+}
+
 .c3 .k-Steppers--VerticalStepper__status.k-Steppers--VerticalStepper__status--orion.k-Steppers--VerticalStepper__status--disabled {
   background-color: #fff;
   border-color: #eee;
-  width: 0.9375rem;
-  height: 0.9375rem;
-  border-radius: 0.9375rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
   margin-left: 0.4375rem;
   margin-right: 1.25rem;
 }
@@ -707,6 +726,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   position: absolute;
   height: 100%;
   border-left: 0.1875rem dotted #eee;
+  margin-left: 0.1875rem;
 }
 
 .c1 {
@@ -715,10 +735,12 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 
 .c1:first-of-type {
   margin-top: 0;
+  padding-top: 0;
 }
 
 .c1:last-of-type {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .c1 [role='button']:focus,
@@ -734,6 +756,10 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 
 .c1 li:not(:last-of-type)::after {
   display: none;
+}
+
+.c1.k-Steppers--VerticalStepper__item--bridge {
+  padding: 0.5rem 0;
 }
 
 .c2 {
@@ -799,7 +825,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 }
 
 .c4 {
-  margin: 0 0 0.125rem;
+  margin: 0;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -808,6 +834,9 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 
 .c4.k-Stepepers-VerticalStepper__title--orion {
   font-size: 0.8888888888888888rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0.3125rem;
 }
 
 .c5 {
@@ -866,6 +895,10 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
   border-left: 0.125rem dashed #eee;
 }
 
+.c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion {
+  margin-left: -0.3125rem;
+}
+
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion:before {
   border-left: none;
 }
@@ -877,7 +910,7 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
 .c0 .k-Steppers--VerticalStepper.k-Steppers--VerticalStepper__orion li:not(:last-of-type)::after {
   content: '';
   position: absolute;
-  left: 1.1875rem;
+  left: 1.15625rem;
   top: 1.875rem;
   background-color: #eee;
   width: 0.1875rem;
@@ -924,7 +957,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--orion"
@@ -973,7 +1005,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--orion"
@@ -1011,7 +1042,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={true}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--orion"
@@ -1037,7 +1067,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--orion"
@@ -1063,7 +1092,6 @@ exports[`<VerticalStepper /> with orion variant matches with snapshot 1`] = `
         </div>
         <div
           className="VerticalStepper__step k-Steppers--VerticalStepper__step--link--content"
-          error={false}
         >
           <p
             className="c4 k-Stepepers-VerticalStepper__title--orion"
