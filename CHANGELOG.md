@@ -4,6 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add Focus styles for focusable elements.
+
 ## [2.110.0] - 2020-01-13
 
 Feature:
@@ -143,9 +145,6 @@ Features:
 Fix:
 
 - `DropdownPhoneSelect` when phone number is empty.
-
-- A11y: Add Focus styles for focusable elements.
-- Feature: Add `summaryProps` to `Details` component.
 
 ## [2.100.1] - 2020-11-26
 
