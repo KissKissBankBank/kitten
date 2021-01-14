@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Feature: Add Focus styles for focusable elements.
+- Feature: Add `summaryProps` to `Details` component.
 
 ## [2.110.0] - 2020-01-13
 

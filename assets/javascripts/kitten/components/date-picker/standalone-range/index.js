@@ -52,7 +52,7 @@ const StyledDatePicker = styled.div`
   .DayPicker {
     font-size: ${stepToRem(-1)};
     ${TYPOGRAPHY.fontStyles.light}
-        border: none;
+    border: none;
 
     .DayPicker-Month {
       margin: 0;

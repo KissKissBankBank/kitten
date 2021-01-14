@@ -22,8 +22,7 @@ const StyledTagButton = styled.button`
   border-radius: ${pxToRem(4)};
   border-width: ${pxToRem(2)};
   border-style: solid;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s,
-    box-shadow 0.2s;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   box-sizing: border-box;
   ${TYPOGRAPHY.fontStyles.regular};
   font-size: ${stepToRem(-2)};
