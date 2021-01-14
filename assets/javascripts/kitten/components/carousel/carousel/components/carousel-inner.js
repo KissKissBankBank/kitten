@@ -144,8 +144,7 @@ export const CarouselInner = ({
   const handleKeyDown = e => {
     if (e.key === 'ArrowRight') {
       goToPage(currentPageIndex + 1)
-    }
-    else if (e.key === 'ArrowLeft') {
+    } else if (e.key === 'ArrowLeft') {
       goToPage(currentPageIndex - 1)
     }
   }
@@ -182,8 +181,7 @@ export const CarouselInner = ({
               isActivePage={isActivePage}
               pageItems={getDataForPage(items, index, numberOfItemsPerPage)}
               numberOfItemsPerPage={numberOfItemsPerPage}
-              goToPage={goToPage}
-              pageIndex={index}
+              goToCurrentPage={() => goToPage(index)}
             />
           </div>
         )

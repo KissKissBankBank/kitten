@@ -7,13 +7,12 @@ export const CarouselPage = ({
   isActivePage,
   pageItems,
   numberOfItemsPerPage,
-  goToPage,
-  pageIndex,
+  goToCurrentPage,
 }) => {
   const handleFocus = () => {
     if (isActivePage) return
 
-    return goToPage(pageIndex)
+    return goToCurrentPage()
   }
 
   const itemProps = (() => {
