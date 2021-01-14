@@ -116,6 +116,8 @@ export const FieldSelectExample = ({
   options,
   error,
   errorMessage,
+  labelText,
+  hideLabel,
 }) => (
   <FieldBase
     id={id}
@@ -126,6 +128,8 @@ export const FieldSelectExample = ({
     errorMessage={errorMessage}
   >
     <Field.Select
+      labelText={labelText}
+      hideLabel={hideLabel}
       id={id}
       name="select"
       placeholder={placeholder}

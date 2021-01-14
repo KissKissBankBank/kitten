@@ -98,6 +98,7 @@ export const WithSelect = () => {
   return (
     <StoryGrid>
       <FieldSelectExample
+        hideLabel={boolean('Hide Label?', false)}
         id={text('ID', 'select')}
         tiny={boolean('Tiny', false)}
         label={text('Label', 'Label')}
