@@ -58,7 +58,6 @@ const mobileStyles = css`
     top: 0;
     margin-top: ${pxToRem(-30)};
     background-color: ${COLORS.background1};
-    display: none;
   }
 
   .k-CrowdfundingCard__title {
