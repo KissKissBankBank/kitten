@@ -34,23 +34,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   border-radius: 0.1875rem;
 }
 
-.c2 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fff;
-  padding: 0.625rem;
-  line-height: 1;
-}
-
 .c0 {
   position: relative;
   padding-bottom: 0.3125rem;
@@ -238,6 +221,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 }
 
 .c0 .k-CrowdfundingCard__progressBar__percent {
+  display: none;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -343,14 +327,32 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   flex-shrink: 0;
 }
 
-.c0 .k-CrowdfundingCard__image__imageContainer {
-  padding-top: calc( (0.625) * 100% );
+.c0 .k-CrowdfundingCard__state {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  padding: 0.625rem;
+  line-height: 1;
 }
 
-@media (max-width:47.9375rem) {
-  .c2 {
-    display: none;
-  }
+.c0 .k-CrowdfundingCard__widgetState {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background: #222;
+  border-radius: 1.5625rem;
+  margin: 0.625rem 0.625rem 0 0;
+  right: 0;
+  top: 0;
+  padding: 0.625rem 1.25rem;
+}
+
+.c0 .k-CrowdfundingCard__image__imageContainer {
+  padding-top: calc( (0.625) * 100% );
 }
 
 @media (min-width:40rem) {
@@ -409,12 +411,27 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
     margin-bottom: 1.25rem;
   }
 
+  .c0 .k-CrowdfundingCard__progressBar__percent {
+    display: inherit;
+  }
+
   .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
     padding: 0 0.625rem 0 0;
   }
 
   .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
     min-height: 4.6875rem;
+  }
+
+  .c0 .k-CrowdfundingCard__state {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -529,13 +546,13 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
       />
     </div>
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent k-u-hidden@s-down"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
     >
       42 %
     </span>
   </div>
   <div
-    className="c2"
+    className="k-CrowdfundingCard__state"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
@@ -548,20 +565,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 `;
 
 exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with snapshot 1`] = `
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  background: #222;
-  border-radius: 1.5625rem;
-  margin: 0.625rem 0.625rem 0 0;
-  right: 0;
-  top: 0;
-  padding: 0.625rem 1.25rem;
-}
-
 .c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -833,6 +836,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 .c0 .k-CrowdfundingCard__progressBar__percent {
+  display: none;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -936,6 +940,30 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+}
+
+.c0 .k-CrowdfundingCard__state {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  padding: 0.625rem;
+  line-height: 1;
+}
+
+.c0 .k-CrowdfundingCard__widgetState {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background: #222;
+  border-radius: 1.5625rem;
+  margin: 0.625rem 0.625rem 0 0;
+  right: 0;
+  top: 0;
+  padding: 0.625rem 1.25rem;
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer {
@@ -1005,12 +1033,27 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     margin-bottom: 1.25rem;
   }
 
+  .c0 .k-CrowdfundingCard__progressBar__percent {
+    display: inherit;
+  }
+
   .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
     padding: 0 0.625rem 0 0;
   }
 
   .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
     min-height: 4.6875rem;
+  }
+
+  .c0 .k-CrowdfundingCard__state {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -1146,7 +1189,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   </div>
   
   <div
-    className="c2"
+    className="k-CrowdfundingCard__widgetState"
   >
     Sur
   </div>
@@ -1154,20 +1197,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 `;
 
 exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches with snapshot 1`] = `
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  background: #222;
-  border-radius: 1.5625rem;
-  margin: 0.625rem 0.625rem 0 0;
-  right: 0;
-  top: 0;
-  padding: 0.625rem 1.25rem;
-}
-
 .c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1439,6 +1468,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 }
 
 .c0 .k-CrowdfundingCard__progressBar__percent {
+  display: none;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -1544,6 +1574,30 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   flex-shrink: 0;
 }
 
+.c0 .k-CrowdfundingCard__state {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  padding: 0.625rem;
+  line-height: 1;
+}
+
+.c0 .k-CrowdfundingCard__widgetState {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background: #222;
+  border-radius: 1.5625rem;
+  margin: 0.625rem 0.625rem 0 0;
+  right: 0;
+  top: 0;
+  padding: 0.625rem 1.25rem;
+}
+
 .c0 .k-CrowdfundingCard__image__ownerContainer {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -1599,12 +1653,27 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   margin-bottom: 1.25rem;
 }
 
+.c0 .k-CrowdfundingCard__progressBar__percent {
+  display: inherit;
+}
+
 .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
   padding: 0 0.625rem 0 0;
 }
 
 .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
   min-height: 4.6875rem;
+}
+
+.c0 .k-CrowdfundingCard__state {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c0 .k-CrowdfundingCard__image__imageContainer {
@@ -1750,7 +1819,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   </div>
   
   <div
-    className="c2"
+    className="k-CrowdfundingCard__widgetState"
   >
     Sur
   </div>
@@ -1793,23 +1862,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 .c2.k-Meters-Progress--orion .k-Meters-Progress__ramp,
 .c2.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
   border-radius: 0.1875rem;
-}
-
-.c4 {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #fff;
-  padding: 0.625rem;
-  line-height: 1;
 }
 
 .c3 {
@@ -2083,6 +2135,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 }
 
 .c0 .k-CrowdfundingCard__progressBar__percent {
+  display: none;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2188,14 +2241,32 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   flex-shrink: 0;
 }
 
-.c0 .k-CrowdfundingCard__image__imageContainer {
-  padding-top: calc( (0.625) * 100% );
+.c0 .k-CrowdfundingCard__state {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  padding: 0.625rem;
+  line-height: 1;
 }
 
-@media (max-width:47.9375rem) {
-  .c4 {
-    display: none;
-  }
+.c0 .k-CrowdfundingCard__widgetState {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background: #222;
+  border-radius: 1.5625rem;
+  margin: 0.625rem 0.625rem 0 0;
+  right: 0;
+  top: 0;
+  padding: 0.625rem 1.25rem;
+}
+
+.c0 .k-CrowdfundingCard__image__imageContainer {
+  padding-top: calc( (0.625) * 100% );
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
@@ -2261,12 +2332,27 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     margin-bottom: 1.25rem;
   }
 
+  .c0 .k-CrowdfundingCard__progressBar__percent {
+    display: inherit;
+  }
+
   .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
     padding: 0 0.625rem 0 0;
   }
 
   .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
     min-height: 4.6875rem;
+  }
+
+  .c0 .k-CrowdfundingCard__state {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -2362,7 +2448,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
       />
     </div>
     <span
-      className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent k-u-hidden@s-down"
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
     >
       0 %
     </span>
@@ -2378,7 +2464,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     </button>
   </div>
   <div
-    className="c4"
+    className="k-CrowdfundingCard__state"
   >
     <span
       className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
@@ -2391,20 +2477,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
 `;
 
 exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot 1`] = `
-.c2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  background: #222;
-  border-radius: 1.5625rem;
-  margin: 0.625rem 0.625rem 0 0;
-  right: 0;
-  top: 0;
-  padding: 0.625rem 1.25rem;
-}
-
 .c1 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -2676,6 +2748,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
 }
 
 .c0 .k-CrowdfundingCard__progressBar__percent {
+  display: none;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -2781,6 +2854,30 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   flex-shrink: 0;
 }
 
+.c0 .k-CrowdfundingCard__state {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  background-color: #fff;
+  padding: 0.625rem;
+  line-height: 1;
+}
+
+.c0 .k-CrowdfundingCard__widgetState {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background: #222;
+  border-radius: 1.5625rem;
+  margin: 0.625rem 0.625rem 0 0;
+  right: 0;
+  top: 0;
+  padding: 0.625rem 1.25rem;
+}
+
 .c0 .k-CrowdfundingCard__image__imageContainer {
   padding-top: calc( (0.625) * 100% );
 }
@@ -2848,12 +2945,27 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
     margin-bottom: 1.25rem;
   }
 
+  .c0 .k-CrowdfundingCard__progressBar__percent {
+    display: inherit;
+  }
+
   .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
     padding: 0 0.625rem 0 0;
   }
 
   .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
     min-height: 4.6875rem;
+  }
+
+  .c0 .k-CrowdfundingCard__state {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
 }
 
@@ -2989,7 +3101,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   </div>
   
   <div
-    className="c2"
+    className="k-CrowdfundingCard__widgetState"
   >
     Sur
   </div>
