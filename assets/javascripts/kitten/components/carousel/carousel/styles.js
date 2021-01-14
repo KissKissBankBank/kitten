@@ -266,6 +266,11 @@ export const StyledCarouselContainer = styled.div`
 
     .k-Carousel__pagination__button {
       margin: ${pxToRem(1)};
+      position: relative;
+
+      &:focus {
+        z-index: 1;
+      }
     }
   }
 
