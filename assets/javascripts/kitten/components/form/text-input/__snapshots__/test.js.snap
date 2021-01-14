@@ -74,7 +74,7 @@ exports[`<TextInput /> with \`textarea\` tag matches with snapshot 1`] = `
   className="sc-bwzfXH bEnvnC k-Form-TextInput__textareaContainer k-Form-TextInput__textareaContainer--andromeda"
 >
   <textarea
-    className="sc-bdVaJa gvIinf k-Form-TextInput k-Form-TextInput--andromeda"
+    className="sc-bdVaJa brqohi k-Form-TextInput k-Form-TextInput--andromeda"
     disabled={false}
     name="message"
   />
