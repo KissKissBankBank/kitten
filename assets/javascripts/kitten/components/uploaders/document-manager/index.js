@@ -13,65 +13,80 @@ import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
 import { Loader } from '../../../components/loaders/loader'
 import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
+import isEmpty from 'lodash/fp/isEmpty'
+import { DropdownSelect } from '../../../components/form/dropdown-select'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledDocumentUploader = styled.div`
-   {
-    input[type='file'] {
-      border: 0;
-      clip-path: inset(100%);
-      height: 1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute !important;
-      white-space: nowrap;
-      width: 1px;
-    }
+  input[type='file'] {
+    border: 0;
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+  }
 
-    input[type='file']:focus + label {
-      background-color: ${COLORS.primary2};
-      border-color: ${COLORS.primary2};
-      color: ${COLORS.background1};
+  input[type='file']:hover + label,
+  input[type='file']:active + label,
+  input[type='file']:focus + label {
+    background-color: ${COLORS.background2};
+    border-color: ${COLORS.line1};
+    color: ${COLORS.font1};
 
-      svg,
-      path {
-        fill: ${COLORS.background1};
-      }
+    svg,
+    path {
+      fill: ${COLORS.font1};
     }
+  }
 
-    input[type='file']:disabled + label {
-      border-color: ${COLORS.line2};
-      background-color: ${COLORS.line2};
-      color: ${COLORS.background1};
-      pointer-events: none;
+  input[type='file']:disabled + label {
+    border-color: ${COLORS.line2};
+    background-color: ${COLORS.line2};
+    color: ${COLORS.background1};
+    pointer-events: none;
 
-      svg,
-      path {
-        fill: ${COLORS.background1};
-      }
+    svg,
+    path {
+      fill: ${COLORS.background1};
     }
+  }
 
-    .k-DocumentManager__uploader__button {
-      padding: ${pxToRem(20)};
-    }
+  .k-DocumentManager__uploader__button {
+    padding: ${pxToRem(20)};
+  }
 
-    .k-DocumentManager__uploader__container {
-      display: flex;
-      justify-content: stretch;
-      align-items: center;
-      width: 100%;
+  .k-DocumentManager__uploader__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+  .k-DocumentManager__uploader__documentIcon {
+    flex: 0 0 auto;
+    margin-right: ${pxToRem(20)};
+    align-self: flex-start;
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      display: none;
     }
-    .k-DocumentManager__uploader__documentIcon {
-      flex: 0 0 auto;
-      margin-right: ${pxToRem(20)};
-      align-self: flex-start;
-    }
-    .k-DocumentManager__uploader__content {
-      flex: 1 1 auto;
-    }
-    .k-DocumentManager__uploader__uploadIcon {
-      margin-left: ${pxToRem(20)};
-      flex: 0 0 auto;
-    }
+  }
+  .k-DocumentManager__uploader__content {
+    flex: 1 1 auto;
+  }
+  .k-DocumentManager__uploader__uploadIcon {
+    margin-left: ${pxToRem(20)};
+    flex: 0 0 auto;
+  }
+
+  .k-DocumentManager__statusTitle {
+    margin: 0;
+    line-height: 1.3;
+  }
+  .k-DocumentManager__statusSubtitle {
+    margin: ${pxToRem(5)} 0 0;
   }
 `
 
@@ -84,7 +99,7 @@ const StyledDocumentLoading = styled.div`
 const StyledDocumentDisplay = styled.div`
   .k-DocumentManager__display__container {
     display: flex;
-    justify-content: stretch;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
   }
@@ -92,13 +107,21 @@ const StyledDocumentDisplay = styled.div`
     flex: 0 0 auto;
     margin-right: ${pxToRem(20)};
     align-self: flex-start;
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      display: none;
+    }
   }
   .k-DocumentManager__display__content {
     flex: 1 1 auto;
   }
 
   .k-DocumentManager__actionButton {
-    margin-top: ${pxToRem(10)};
+    margin: ${pxToRem(10)} 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+    background-color: transparent;
     cursor: pointer;
     transition: color 0.2s;
     color: ${COLORS.primary1};
@@ -114,6 +137,14 @@ const StyledDocumentDisplay = styled.div`
   }
   &.k-DocumentManager__display--error .k-DocumentManager__actionButton {
     color: ${COLORS.error};
+  }
+
+  .k-DocumentManager__statusTitle {
+    margin: 0;
+    line-height: 1.3;
+  }
+  .k-DocumentManager__statusSubtitle {
+    margin: ${pxToRem(5)} 0 0;
   }
 `
 
@@ -143,6 +174,19 @@ const StyledIconContainer = styled.div`
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
     border-radius: 50%;
+  }
+`
+
+const StyledSelect = styled.div`
+  flex: 1 0 100%;
+
+  .k-DocumentManager__select {
+    margin-top: ${pxToRem(15)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin-left: ${pxToRem(80)};
+      max-width: ${pxToRem(300)};
+    }
   }
 `
 
@@ -209,6 +253,7 @@ export const DocumentManager = ({
   onUpload = () => {},
   replaceButtonText = 'Replace current',
   status = 'ready',
+  typeSelectorProps = {},
   ...props
 }) => {
   const [internalFileName, setInternalFileName] = useState('')
@@ -244,6 +289,25 @@ export const DocumentManager = ({
   const handleCancelClick = () => {
     onCancel()
   }
+
+  const handleSelectClick = event => {
+    event.preventDefault()
+
+    typeSelectorProps.onClick && typeSelectorProps.onClick()
+  }
+
+  const Select = () => (
+    <StyledSelect>
+      <DropdownSelect
+        {...typeSelectorProps}
+        onClick={handleSelectClick}
+        className={classNames(
+          'k-DocumentManager__select',
+          typeSelectorProps.className,
+        )}
+      />
+    </StyledSelect>
+  )
 
   if (internalStatus === 'ready' || internalStatus === 'file-selected') {
     return (
@@ -282,7 +346,7 @@ export const DocumentManager = ({
                 weight="regular"
                 size="tiny"
                 lineHeight="normal"
-                className="k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+                className="k-DocumentManager__statusTitle"
               >
                 {internalStatus === 'file-selected'
                   ? internalFileName
@@ -294,7 +358,7 @@ export const DocumentManager = ({
                   weight="light"
                   size="micro"
                   lineHeight="normal"
-                  className="k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+                  className="k-DocumentManager__statusSubtitle"
                 >
                   {buttonSubtitle}
                 </Text>
@@ -307,6 +371,8 @@ export const DocumentManager = ({
                 className="k-DocumentManager__uploader__button__uploadIcon"
               />
             </div>
+
+            {!isEmpty(typeSelectorProps) && <Select />}
           </div>
         </Button>
       </StyledDocumentUploader>
@@ -357,7 +423,7 @@ export const DocumentManager = ({
             tag="p"
             weight="regular"
             size="tiny"
-            className="k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+            className="k-DocumentManager__statusTitle"
           >
             {displayTitle}
           </Text>
@@ -365,13 +431,13 @@ export const DocumentManager = ({
             tag="p"
             weight="light"
             size="micro"
-            className="k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+            className="k-DocumentManager__statusSubtitle"
           >
             {displaySubtitle}
           </Text>
           {canCancel && (
             <button
-              className="k-DocumentManager__actionButton k-u-reset-button"
+              className="k-DocumentManager__actionButton"
               onClick={handleCancelClick}
             >
               <Text
@@ -385,7 +451,7 @@ export const DocumentManager = ({
           )}
           {canReplace && (
             <button
-              className="k-DocumentManager__actionButton k-u-reset-button"
+              className="k-DocumentManager__actionButton"
               onClick={handleReplaceClick}
             >
               <Text
@@ -398,6 +464,8 @@ export const DocumentManager = ({
             </button>
           )}
         </div>
+
+        {!isEmpty(typeSelectorProps) && <Select />}
       </div>
     </StyledDocumentDisplay>
   )
@@ -420,4 +488,5 @@ DocumentManager.propTypes = {
   status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
   subtitle: PropTypes.node,
   title: PropTypes.node,
+  typeSelectorProps: PropTypes.object,
 }

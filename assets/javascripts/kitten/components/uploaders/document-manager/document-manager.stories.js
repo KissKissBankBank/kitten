@@ -153,3 +153,59 @@ export const CustomFunctions = () => {
     />
   )
 }
+
+const options = [
+  {
+    value: 'bianchi',
+    label: 'Bianchi',
+    children: [
+      { value: 'bmc', label: 'BMC' },
+      { value: 'cannondale', label: 'Cannondale' },
+    ],
+  },
+  { value: 'canyon', label: 'Canyon' },
+  { value: 'cervelo', label: 'Cervelo' },
+  { value: 'diamondback', label: 'Diamondback' },
+  { value: 'eddy merckx', label: 'Eddy Merckx', disabled: true },
+  { value: 'felt', label: 'Felt' },
+  { value: 'focus', label: 'Focus' },
+  {
+    value: 'fuji',
+    label:
+      'Fuji Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam porta sem malesuada magna mollis euismod.',
+  },
+]
+
+export const WithTypeSelector = () => (
+  <DocumentManager
+    id="DocumentManager__WithTypeSelector"
+    buttonTitle="Send document"
+    buttonSubtitle="Document size must be 2Mb or less."
+    typeSelectorProps={{
+      id: 'dropdown-select',
+      hideLabel: true,
+      labelText: 'Type select Label',
+      options: options,
+      defaultSelectedValue: 'focus',
+    }}
+  />
+)
+
+export const WithTypeSelectorValid = () => (
+  <DocumentManager
+    id="DocumentManager__WithTypeSelectorValid"
+    displayTitle="Recto/Verso de ma pièce d’identité validé le 6 janvier 2020"
+    displaySubtitle="document.pdf"
+    status="valid"
+    canCancel={boolean('canCancel', false)}
+    statusText="The document is valid."
+    documentIcon={<DocumentIconPerson />}
+    typeSelectorProps={{
+      id: 'dropdown-select',
+      hideLabel: true,
+      labelText: 'Type select Label',
+      options: options,
+      defaultSelectedValue: 'focus',
+    }}
+  />
+)
