@@ -399,6 +399,7 @@ export const StyledCrowdfundingCard = styled(
   }}
 
   .k-CrowdfundingCard__image__imageContainer {
+    /* When IE11 depreciates, replace prop with CSS custom property */
     padding-top: calc(
       (${({ imageContainerRatio }) => imageContainerRatio}) * 100%
     );
