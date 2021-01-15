@@ -240,6 +240,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/React.createElement("div", {
         className: "k-Carousel__pagination__buttonContainer"
       }, /*#__PURE__*/React.createElement(Button, {
+        type: "button",
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
@@ -251,6 +252,7 @@ var CarouselBase = /*#__PURE__*/function (_Component) {
         direction: "left",
         "aria-hidden": true
       })), /*#__PURE__*/React.createElement(Button, {
+        type: "button",
         className: "k-Carousel__pagination__button",
         icon: true,
         modifier: "beryllium",
