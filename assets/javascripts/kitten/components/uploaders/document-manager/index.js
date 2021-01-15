@@ -68,6 +68,10 @@ const StyledDocumentUploader = styled.div`
     flex: 0 0 auto;
     margin-right: ${pxToRem(20)};
     align-self: flex-start;
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      display: none;
+    }
   }
   .k-DocumentManager__uploader__content {
     flex: 1 1 auto;
@@ -75,6 +79,14 @@ const StyledDocumentUploader = styled.div`
   .k-DocumentManager__uploader__uploadIcon {
     margin-left: ${pxToRem(20)};
     flex: 0 0 auto;
+  }
+
+  .k-DocumentManager__statusTitle {
+    margin: 0;
+    line-height: 1.3;
+  }
+  .k-DocumentManager__statusSubtitle {
+    margin: ${pxToRem(5)} 0 0;
   }
 `
 
@@ -95,13 +107,21 @@ const StyledDocumentDisplay = styled.div`
     flex: 0 0 auto;
     margin-right: ${pxToRem(20)};
     align-self: flex-start;
+
+    @media (max-width: ${pxToRem(ScreenConfig.XS.max)}) {
+      display: none;
+    }
   }
   .k-DocumentManager__display__content {
     flex: 1 1 auto;
   }
 
   .k-DocumentManager__actionButton {
-    margin-top: ${pxToRem(10)};
+    margin: ${pxToRem(10)} 0;
+    padding: 0;
+    border: none;
+    font: inherit;
+    background-color: transparent;
     cursor: pointer;
     transition: color 0.2s;
     color: ${COLORS.primary1};
@@ -117,6 +137,14 @@ const StyledDocumentDisplay = styled.div`
   }
   &.k-DocumentManager__display--error .k-DocumentManager__actionButton {
     color: ${COLORS.error};
+  }
+
+  .k-DocumentManager__statusTitle {
+    margin: 0;
+    line-height: 1.3;
+  }
+  .k-DocumentManager__statusSubtitle {
+    margin: ${pxToRem(5)} 0 0;
   }
 `
 
@@ -153,7 +181,10 @@ const StyledSelect = styled.div`
   flex: 1 0 100%;
 
   .k-DocumentManager__select {
+    margin-top: ${pxToRem(15)};
+
     @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      margin-left: ${pxToRem(80)};
       max-width: ${pxToRem(300)};
     }
   }
@@ -260,9 +291,9 @@ export const DocumentManager = ({
   }
 
   const handleSelectClick = event => {
-    typeSelectorProps.onClick && typeSelectorProps.onClick()
-
     event.preventDefault()
+
+    typeSelectorProps.onClick && typeSelectorProps.onClick()
   }
 
   const Select = () => (
@@ -272,8 +303,6 @@ export const DocumentManager = ({
         onClick={handleSelectClick}
         className={classNames(
           'k-DocumentManager__select',
-          'k-u-margin-top-singleHalf',
-          'k-u-margin-left-octuple@s-up',
           typeSelectorProps.className,
         )}
       />
@@ -305,7 +334,7 @@ export const DocumentManager = ({
           )}
         >
           <div className="k-DocumentManager__uploader__container">
-            <div className="k-DocumentManager__uploader__documentIcon  k-u-hidden@xs-down">
+            <div className="k-DocumentManager__uploader__documentIcon">
               <IconContainer status={internalStatus}>
                 {documentIcon}
               </IconContainer>
@@ -317,7 +346,7 @@ export const DocumentManager = ({
                 weight="regular"
                 size="tiny"
                 lineHeight="normal"
-                className="k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+                className="k-DocumentManager__statusTitle"
               >
                 {internalStatus === 'file-selected'
                   ? internalFileName
@@ -329,7 +358,7 @@ export const DocumentManager = ({
                   weight="light"
                   size="micro"
                   lineHeight="normal"
-                  className="k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+                  className="k-DocumentManager__statusSubtitle"
                 >
                   {buttonSubtitle}
                 </Text>
@@ -385,7 +414,7 @@ export const DocumentManager = ({
       )}
     >
       <div className="k-DocumentManager__display__container">
-        <div className="k-DocumentManager__display__documentIcon  k-u-hidden@xs-down">
+        <div className="k-DocumentManager__display__documentIcon">
           <IconContainer status={status}>{documentIcon}</IconContainer>
         </div>
 
@@ -394,7 +423,7 @@ export const DocumentManager = ({
             tag="p"
             weight="regular"
             size="tiny"
-            className="k-DocumentManager__statusTitle k-u-margin-none k-u-line-height-1-3"
+            className="k-DocumentManager__statusTitle"
           >
             {displayTitle}
           </Text>
@@ -402,13 +431,13 @@ export const DocumentManager = ({
             tag="p"
             weight="light"
             size="micro"
-            className="k-DocumentManager__statusSubtitle k-u-margin-none k-u-margin-top-noneHalf k-u-line-height-1-3"
+            className="k-DocumentManager__statusSubtitle"
           >
             {displaySubtitle}
           </Text>
           {canCancel && (
             <button
-              className="k-DocumentManager__actionButton k-u-reset-button"
+              className="k-DocumentManager__actionButton"
               onClick={handleCancelClick}
             >
               <Text
@@ -422,7 +451,7 @@ export const DocumentManager = ({
           )}
           {canReplace && (
             <button
-              className="k-DocumentManager__actionButton k-u-reset-button"
+              className="k-DocumentManager__actionButton"
               onClick={handleReplaceClick}
             >
               <Text
