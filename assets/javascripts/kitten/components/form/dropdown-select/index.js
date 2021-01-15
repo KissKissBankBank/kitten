@@ -36,6 +36,8 @@ export const DropdownSelect = ({ combobox, ...props }) => {
     onMenuOpen,
     openOnLoad,
     menuZIndex,
+    className,
+    ...otherProps
   } = props
 
   const getA11ySelectionMessage = ({ itemToString, selectedItem }) => {
@@ -105,6 +107,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
 
   return (
     <StyledDropdown
+      {...otherProps}
       className={classNames(
         'k-Form-Dropdown',
         `k-Form-Dropdown--${variant}`,
@@ -115,6 +118,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
           'k-Form-Dropdown--valid': valid,
           'k-Form-Dropdown--disabled': disabled,
         },
+        className,
       )}
       style={{ '--menu-z-index': menuZIndex }}
     >
@@ -147,7 +151,7 @@ export const DropdownSelect = ({ combobox, ...props }) => {
           </span>
         )}
         <span className="k-Form-DropdownSelect__button__arrowBox" aria-hidden>
-          <ArrowIcon direction={isOpen ? 'top' : 'bottom'} />
+          <ArrowIcon version="solid" direction={isOpen ? 'top' : 'bottom'} />
         </span>
         <span className="k-Form-DropdownSelect__button__statusBadges">
           {error && (

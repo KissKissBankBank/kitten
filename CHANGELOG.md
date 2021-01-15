@@ -7,6 +7,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fix: Add button types on `Carousel` navigation.
 - Fix: Remove scrollbars on `Carousel` on Firefox.
 
+- Feature: Propagate `className` on `DropdownSelect`.
+- Fix: Use `version="solid"` on `DropdownSelect` `ArrowIcon`.
+- Feature: Add `DropdownSelect` inside `DocumentManager` with `typeSelectorProps` prop.
+
 ## [2.110.0] - 2020-01-13
 
 Feature:

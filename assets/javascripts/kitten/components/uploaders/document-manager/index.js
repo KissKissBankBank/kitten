@@ -13,65 +13,68 @@ import { ClockCircleIcon } from '../../../components/icons/clock-circle-icon'
 import { Loader } from '../../../components/loaders/loader'
 import { DocumentIconEmpty } from '../../../components/icons/document-icon-empty'
 import { VisuallyHidden } from '../../../components/accessibility/visually-hidden'
+import isEmpty from 'lodash/fp/isEmpty'
+import { DropdownSelect } from '../../../components/form/dropdown-select'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledDocumentUploader = styled.div`
-   {
-    input[type='file'] {
-      border: 0;
-      clip-path: inset(100%);
-      height: 1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute !important;
-      white-space: nowrap;
-      width: 1px;
-    }
+  input[type='file'] {
+    border: 0;
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+  }
 
-    input[type='file']:focus + label {
-      background-color: ${COLORS.primary2};
-      border-color: ${COLORS.primary2};
-      color: ${COLORS.background1};
+  input[type='file']:hover + label,
+  input[type='file']:active + label,
+  input[type='file']:focus + label {
+    background-color: ${COLORS.background2};
+    border-color: ${COLORS.line1};
+    color: ${COLORS.font1};
 
-      svg,
-      path {
-        fill: ${COLORS.background1};
-      }
+    svg,
+    path {
+      fill: ${COLORS.font1};
     }
+  }
 
-    input[type='file']:disabled + label {
-      border-color: ${COLORS.line2};
-      background-color: ${COLORS.line2};
-      color: ${COLORS.background1};
-      pointer-events: none;
+  input[type='file']:disabled + label {
+    border-color: ${COLORS.line2};
+    background-color: ${COLORS.line2};
+    color: ${COLORS.background1};
+    pointer-events: none;
 
-      svg,
-      path {
-        fill: ${COLORS.background1};
-      }
+    svg,
+    path {
+      fill: ${COLORS.background1};
     }
+  }
 
-    .k-DocumentManager__uploader__button {
-      padding: ${pxToRem(20)};
-    }
+  .k-DocumentManager__uploader__button {
+    padding: ${pxToRem(20)};
+  }
 
-    .k-DocumentManager__uploader__container {
-      display: flex;
-      justify-content: stretch;
-      align-items: center;
-      width: 100%;
-    }
-    .k-DocumentManager__uploader__documentIcon {
-      flex: 0 0 auto;
-      margin-right: ${pxToRem(20)};
-      align-self: flex-start;
-    }
-    .k-DocumentManager__uploader__content {
-      flex: 1 1 auto;
-    }
-    .k-DocumentManager__uploader__uploadIcon {
-      margin-left: ${pxToRem(20)};
-      flex: 0 0 auto;
-    }
+  .k-DocumentManager__uploader__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+  .k-DocumentManager__uploader__documentIcon {
+    flex: 0 0 auto;
+    margin-right: ${pxToRem(20)};
+    align-self: flex-start;
+  }
+  .k-DocumentManager__uploader__content {
+    flex: 1 1 auto;
+  }
+  .k-DocumentManager__uploader__uploadIcon {
+    margin-left: ${pxToRem(20)};
+    flex: 0 0 auto;
   }
 `
 
@@ -84,7 +87,7 @@ const StyledDocumentLoading = styled.div`
 const StyledDocumentDisplay = styled.div`
   .k-DocumentManager__display__container {
     display: flex;
-    justify-content: stretch;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
   }
@@ -143,6 +146,16 @@ const StyledIconContainer = styled.div`
     width: ${pxToRem(20)};
     height: ${pxToRem(20)};
     border-radius: 50%;
+  }
+`
+
+const StyledSelect = styled.div`
+  flex: 1 0 100%;
+
+  .k-DocumentManager__select {
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      max-width: ${pxToRem(300)};
+    }
   }
 `
 
@@ -209,6 +222,7 @@ export const DocumentManager = ({
   onUpload = () => {},
   replaceButtonText = 'Replace current',
   status = 'ready',
+  typeSelectorProps = {},
   ...props
 }) => {
   const [internalFileName, setInternalFileName] = useState('')
@@ -245,6 +259,27 @@ export const DocumentManager = ({
     onCancel()
   }
 
+  const handleSelectClick = event => {
+    typeSelectorProps.onClick && typeSelectorProps.onClick()
+
+    event.preventDefault()
+  }
+
+  const Select = () => (
+    <StyledSelect>
+      <DropdownSelect
+        {...typeSelectorProps}
+        onClick={handleSelectClick}
+        className={classNames(
+          'k-DocumentManager__select',
+          'k-u-margin-top-singleHalf',
+          'k-u-margin-left-octuple@s-up',
+          typeSelectorProps.className,
+        )}
+      />
+    </StyledSelect>
+  )
+
   if (internalStatus === 'ready' || internalStatus === 'file-selected') {
     return (
       <StyledDocumentUploader
@@ -270,7 +305,7 @@ export const DocumentManager = ({
           )}
         >
           <div className="k-DocumentManager__uploader__container">
-            <div className="k-DocumentManager__uploader__documentIcon">
+            <div className="k-DocumentManager__uploader__documentIcon  k-u-hidden@xs-down">
               <IconContainer status={internalStatus}>
                 {documentIcon}
               </IconContainer>
@@ -307,6 +342,8 @@ export const DocumentManager = ({
                 className="k-DocumentManager__uploader__button__uploadIcon"
               />
             </div>
+
+            {!isEmpty(typeSelectorProps) && <Select />}
           </div>
         </Button>
       </StyledDocumentUploader>
@@ -348,7 +385,7 @@ export const DocumentManager = ({
       )}
     >
       <div className="k-DocumentManager__display__container">
-        <div className="k-DocumentManager__display__documentIcon">
+        <div className="k-DocumentManager__display__documentIcon  k-u-hidden@xs-down">
           <IconContainer status={status}>{documentIcon}</IconContainer>
         </div>
 
@@ -398,6 +435,8 @@ export const DocumentManager = ({
             </button>
           )}
         </div>
+
+        {!isEmpty(typeSelectorProps) && <Select />}
       </div>
     </StyledDocumentDisplay>
   )
@@ -420,4 +459,5 @@ DocumentManager.propTypes = {
   status: PropTypes.oneOf(['ready', 'error', 'valid', 'wait', 'loading']),
   subtitle: PropTypes.node,
   title: PropTypes.node,
+  typeSelectorProps: PropTypes.object,
 }

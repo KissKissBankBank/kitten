@@ -39,6 +39,8 @@ export const DropdownCombobox = ({
   openOnLoad,
   uniqLabelOnSearch,
   menuZIndex,
+  className,
+  ...otherProps
 }) => {
   const [flattenedOptions, setFlattenedOptions] = useState([])
   const [filteredOptions, setFilteredOptions] = useState([])
@@ -135,6 +137,7 @@ export const DropdownCombobox = ({
 
   return (
     <StyledDropdown
+      {...otherProps}
       className={classNames(
         'k-Form-Dropdown',
         `k-Form-Dropdown--${variant}`,
@@ -145,6 +148,7 @@ export const DropdownCombobox = ({
           'k-Form-Dropdown--valid': valid,
           'k-Form-Dropdown--disabled': disabled,
         },
+        className,
       )}
       style={{ '--menu-z-index': menuZIndex }}
     >
@@ -180,7 +184,7 @@ export const DropdownCombobox = ({
             className="k-Form-DropdownCombobox__arrowButton__arrowBox"
             aria-hidden
           >
-            <ArrowIcon direction={isOpen ? 'top' : 'bottom'} />
+            <ArrowIcon version="solid" direction={isOpen ? 'top' : 'bottom'} />
           </span>
         </button>
         <span className="k-Form-DropdownCombobox__statusBadges">
