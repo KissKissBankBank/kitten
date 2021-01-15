@@ -70,6 +70,7 @@ export const Default = () => {
           }}
           resetOnBackspace={boolean('resetOnBackspace', false)}
           highlightOptionBox={boolean('highlightOptionBox', true)}
+          hideIconOnMobile={boolean('hideIconOnMobile', false)}
         />
         <p>
           Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
@@ -109,6 +110,7 @@ export const DeactivatedDropdown = () => {
           deactivateDropdown
           className="k-u-margin-bottom-triple"
           menuZIndex={number('menuZIndex', 1000)}
+          hideIconOnMobile={boolean('hideIconOnMobile', false)}
         />
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
@@ -124,6 +126,7 @@ export const DeactivatedDropdown = () => {
           deactivateDropdown
           className="k-u-margin-bottom-triple"
           menuZIndex={number('menuZIndex', 1000)}
+          hideIconOnMobile={boolean('hideIconOnMobile', false)}
         />
         <DropdownSelectWithInput
           id={text('id', 'dropdown-select')}
@@ -139,6 +142,7 @@ export const DeactivatedDropdown = () => {
           deactivateDropdown
           className="k-u-margin-bottom-triple"
           menuZIndex={number('menuZIndex', 1000)}
+          hideIconOnMobile={boolean('hideIconOnMobile', false)}
         />
       </GridCol>
     </Grid>

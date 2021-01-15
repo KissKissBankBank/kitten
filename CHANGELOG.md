@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `hideIconOnMobile` prop on `DropdownSelectWithInput`.
+- Fix: `DropdownSelectWithInput` mobile style fixes.
+
 ## [2.111.0] - 2020-01-15
 
 Feature:
