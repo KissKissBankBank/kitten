@@ -4,6 +4,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Feature: Add `forceVersion` prop to `CrowdfundingCard`.
 - Fix: Add button types on `Carousel` navigation.
 - Fix: Remove scrollbars on `Carousel` on Firefox.
 
