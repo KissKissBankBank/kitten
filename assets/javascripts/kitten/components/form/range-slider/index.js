@@ -7,10 +7,11 @@ import COLORS from '../../../constants/colors-config'
 import TYPOGRAPHY from '../../../constants/typography-config'
 import { nativeInputValueSetter } from '../../../helpers/dom/native-input-value-setter'
 import { createEvent } from '../../../helpers/dom/create-event'
+import { ScreenConfig } from '../../../constants/screen-config'
 
 const StyledRangeSlider = styled.div`
   --range-thumb-position: calc(
-      ${pxToRem(25)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(25)}))
+      ${pxToRem(20)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(20)}))
     );
   position: relative;
 
@@ -20,7 +21,7 @@ const StyledRangeSlider = styled.div`
     position: absolute;
     height: ${pxToRem(4)};
     left: 0;
-    top: ${pxToRem(18)};
+    top: ${pxToRem(13)};
     width: 100%;
     background: ${COLORS.line1};
     z-index: 1;
@@ -36,7 +37,7 @@ const StyledRangeSlider = styled.div`
     position: relative;
     appearance: none;
     width: 100%;
-    height: ${pxToRem(40)};
+    height: ${pxToRem(30)};
     margin: 0;
     padding: 0;
     z-index: 2;
@@ -50,13 +51,13 @@ const StyledRangeSlider = styled.div`
 
     &::-moz-range-track {
       width: 100%;
-      height: ${pxToRem(40)};
+      height: ${pxToRem(30)};
       cursor: pointer;
       background: transparent;
     }
     &::-moz-range-thumb {
-      height: ${pxToRem(40)};
-      width: ${pxToRem(50 + 2 * 2)};
+      height: ${pxToRem(30)};
+      width: ${pxToRem(40 + 2 * 2)};
       box-sizing: border-box;
       background-color: ${COLORS.primary1};
       background-image: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath fill='%23fff' d='M0 0 h 2 V 10 h -2 z M4 0 h 2 V 10 h -2 z M8 0 h 2 V 10 h -2 z' /%3E%3C/svg%3E");
@@ -68,18 +69,18 @@ const StyledRangeSlider = styled.div`
       border: ${pxToRem(2)} solid ${COLORS.background1};
       border-top: 0;
       border-bottom: 0;
-      border-radius: ${pxToRem(20)};
+      border-radius: ${pxToRem(15)};
     }
 
     &::-webkit-slider-runnable-track {
       width: 100%;
-      height: ${pxToRem(40)};
+      height: ${pxToRem(30)};
       cursor: pointer;
       background: transparent;
     }
     &::-webkit-slider-thumb {
-      height: ${pxToRem(40)};
-      width: ${pxToRem(50 + 2 * 2)};
+      height: ${pxToRem(30)};
+      width: ${pxToRem(40 + 2 * 2)};
       box-sizing: border-box;
       background-color: ${COLORS.primary1};
       background-image: url("data:image/svg+xml,%3Csvg height='10' width='10' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath fill='%23fff' d='M0 0 h 2 V 10 h -2 z M4 0 h 2 V 10 h -2 z M8 0 h 2 V 10 h -2 z' /%3E%3C/svg%3E");
@@ -91,7 +92,7 @@ const StyledRangeSlider = styled.div`
       border: ${pxToRem(2)} solid ${COLORS.background1};
       border-top: 0;
       border-bottom: 0;
-      border-radius: ${pxToRem(20)};
+      border-radius: ${pxToRem(15)};
     }
 
     &:active::-moz-range-thumb {
@@ -114,17 +115,77 @@ const StyledRangeSlider = styled.div`
   }
 
   &.k-RangeSlider--rangeThumbText-top {
-    padding-top: ${pxToRem(10 + 18)};
+    padding-top: ${pxToRem(20 + 13)};
+    &::before,
+    &::after {
+      top: unset;
+      bottom: ${pxToRem(13)};
+    }
 
     .k-RangeSlider__rangeThumbText {
       top: 0;
     }
   }
   &.k-RangeSlider--rangeThumbText-bottom {
-    padding-bottom: ${pxToRem(10 + 18)};
+    padding-bottom: ${pxToRem(20 + 13)};
 
     .k-RangeSlider__rangeThumbText {
       bottom: 0;
+    }
+  }
+
+  @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+    --range-thumb-position: calc(
+      ${pxToRem(25)} + var(--range-input-ratio) * (100% - (2 * ${pxToRem(25)}))
+    );
+
+
+    &::before,
+    &::after {
+      top: ${pxToRem(18)};
+    }
+
+    input[type='range'] {
+      height: ${pxToRem(40)};
+
+      &::-moz-range-track {
+        height: ${pxToRem(40)};
+      }
+      &::-moz-range-thumb {
+        height: ${pxToRem(40)};
+        width: ${pxToRem(50 + 2 * 2)};
+        border-radius: ${pxToRem(20)};
+      }
+
+      &::-webkit-slider-runnable-track {
+        height: ${pxToRem(40)};
+      }
+
+      &::-webkit-slider-thumb {
+        height: ${pxToRem(40)};
+        width: ${pxToRem(50 + 2 * 2)};
+        border-radius: ${pxToRem(20)};
+      }
+    }
+
+    &.k-RangeSlider--rangeThumbText-top {
+      padding-top: ${pxToRem(10 + 18)};
+      &::before,
+      &::after {
+        top: unset;
+        bottom: ${pxToRem(18)};
+      }
+
+      .k-RangeSlider__rangeThumbText {
+        top: 0;
+      }
+    }
+    &.k-RangeSlider--rangeThumbText-bottom {
+      padding-bottom: ${pxToRem(10 + 18)};
+
+      .k-RangeSlider__rangeThumbText {
+        bottom: 0;
+      }
     }
   }
 `
