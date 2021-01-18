@@ -35,7 +35,6 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
                 "transform": "rotate(-90deg)",
               }
             }
-            version="solid"
             viewBox="0 0 8.48 5.64"
             width="8"
             xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +59,6 @@ exports[`<StandaloneRangeDatePicker /> by default matches with snapshot 1`] = `
                 "transform": "rotate(90deg)",
               }
             }
-            version="solid"
             viewBox="0 0 8.48 5.64"
             width="8"
             xmlns="http://www.w3.org/2000/svg"

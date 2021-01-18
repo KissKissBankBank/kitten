@@ -34,7 +34,6 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          version="solid"
           viewBox="0 0 8.48 5.64"
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +94,6 @@ exports[`<Accordeon /> with an ID matches with snapshot 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          version="solid"
           viewBox="0 0 8.48 5.64"
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +161,6 @@ exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          version="solid"
           viewBox="0 0 8.48 5.64"
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +221,6 @@ exports[`<Accordeon /> with an variant matches with snapshot 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          version="solid"
           viewBox="0 0 8.48 5.64"
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"
@@ -405,7 +401,6 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                     fill="#222"
                     height="5.64"
                     style="transform: rotate(180deg);"
-                    version="solid"
                     viewBox="0 0 8.48 5.64"
                     width="8.48"
                     xmlns="http://www.w3.org/2000/svg"
@@ -457,7 +452,6 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                     fill="#222"
                     height="5.64"
                     style="transform: rotate(180deg);"
-                    version="solid"
                     viewBox="0 0 8.48 5.64"
                     width="8.48"
                     xmlns="http://www.w3.org/2000/svg"
@@ -529,7 +523,6 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -542,7 +535,6 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                           "transform": "rotate(180deg)",
                         }
                       }
-                      version="solid"
                       viewBox="0 0 8.48 5.64"
                       width="8.48"
                       xmlns="http://www.w3.org/2000/svg"
@@ -619,7 +611,6 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -632,7 +623,6 @@ exports[`<Accordeon /> with isAnimated prop set to \`false\` matches with snapsh
                           "transform": "rotate(180deg)",
                         }
                       }
-                      version="solid"
                       viewBox="0 0 8.48 5.64"
                       width="8.48"
                       xmlns="http://www.w3.org/2000/svg"
@@ -711,7 +701,6 @@ exports[`<Accordeon /> with one item matches with snapshot 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          version="solid"
           viewBox="0 0 8.48 5.64"
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"
@@ -891,7 +880,6 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                     class=""
                     fill="#222"
                     height="5.64"
-                    version="solid"
                     viewBox="0 0 8.48 5.64"
                     width="8.48"
                     xmlns="http://www.w3.org/2000/svg"
@@ -943,7 +931,6 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                     fill="#222"
                     height="5.64"
                     style="transform: rotate(180deg);"
-                    version="solid"
                     viewBox="0 0 8.48 5.64"
                     width="8.48"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1015,7 +1002,6 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -1028,7 +1014,6 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                           "transform": null,
                         }
                       }
-                      version="solid"
                       viewBox="0 0 8.48 5.64"
                       width="8.48"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1105,7 +1090,6 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -1118,7 +1102,6 @@ exports[`<Accordeon /> with the first selected item matches with snapshot 1`] = 
                           "transform": "rotate(180deg)",
                         }
                       }
-                      version="solid"
                       viewBox="0 0 8.48 5.64"
                       width="8.48"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1310,7 +1293,6 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                     fill="#222"
                     height="5.64"
                     style="transform: rotate(180deg);"
-                    version="solid"
                     viewBox="0 0 8.48 5.64"
                     width="8.48"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1362,7 +1344,6 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                     fill="#222"
                     height="5.64"
                     style=""
-                    version="solid"
                     viewBox="0 0 8.48 5.64"
                     width="8.48"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1434,7 +1415,6 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -1447,7 +1427,6 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                           "transform": "rotate(180deg)",
                         }
                       }
-                      version="solid"
                       viewBox="0 0 8.48 5.64"
                       width="8.48"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1524,7 +1503,6 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                     disabled={false}
                     height="5.64"
                     title=""
-                    version="solid"
                     width="8.48"
                   >
                     <svg
@@ -1537,7 +1515,6 @@ exports[`<Accordeon /> with the second selected item after click simulate matche
                           "transform": null,
                         }
                       }
-                      version="solid"
                       viewBox="0 0 8.48 5.64"
                       width="8.48"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1616,7 +1593,6 @@ exports[`<Accordeon /> with two items matches with snapshot 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          version="solid"
           viewBox="0 0 8.48 5.64"
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"
@@ -1677,7 +1653,6 @@ exports[`<Accordeon /> with two items matches with snapshot 1`] = `
               "transform": "rotate(180deg)",
             }
           }
-          version="solid"
           viewBox="0 0 8.48 5.64"
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"

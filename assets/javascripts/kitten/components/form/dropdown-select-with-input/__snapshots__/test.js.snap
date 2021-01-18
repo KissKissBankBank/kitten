@@ -51,7 +51,6 @@ exports[`<DropdownSelectWithInput /> should match its snapshot with props 1`] = 
               "transform": null,
             }
           }
-          version="solid"
           viewBox="0 0 8.48 5.64"
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"

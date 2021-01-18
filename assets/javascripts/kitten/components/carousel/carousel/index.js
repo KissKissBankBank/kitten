@@ -271,7 +271,7 @@ class CarouselBase extends Component {
                 ? lastButtonText
                 : prevButtonText}
             </VisuallyHidden>
-            <ArrowIcon version="solid" direction="left" aria-hidden />
+            <ArrowIcon direction="left" aria-hidden />
           </Button>
 
           <Button
@@ -288,7 +288,7 @@ class CarouselBase extends Component {
                 ? firstButtonText
                 : nextButtonText}
             </VisuallyHidden>
-            <ArrowIcon version="solid" direction="right" aria-hidden />
+            <ArrowIcon direction="right" aria-hidden />
           </Button>
         </div>
 

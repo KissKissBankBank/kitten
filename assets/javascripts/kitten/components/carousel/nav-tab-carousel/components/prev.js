@@ -8,7 +8,7 @@ import {
 export const Prev = ({ children, hoverColor }) => {
   return (
     <StyledLeftArrowContainer hoverColor={hoverColor}>
-      <StyledArrowIcon version="solid" direction="left" fill="#fff" />
+      <StyledArrowIcon direction="left" fill="#fff" />
       <StyledPrevText>{children}</StyledPrevText>
     </StyledLeftArrowContainer>
   )

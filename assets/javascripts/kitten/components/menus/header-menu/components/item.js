@@ -177,11 +177,7 @@ export const Item = ({
             noBorder={noBorder}
           >
             <span className="itemNextToArrowIcon">{children}</span>
-            <ArrowIcon
-              className="headerMenuArrowIcon"
-              version="solid"
-              direction="right"
-            />
+            <ArrowIcon className="headerMenuArrowIcon" direction="right" />
           </ExternalStyledItem>
         )}
 

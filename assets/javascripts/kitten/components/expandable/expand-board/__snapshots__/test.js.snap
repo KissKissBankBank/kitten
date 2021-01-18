@@ -23,7 +23,6 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> by 
             "transform": "rotate(180deg)",
           }
         }
-        version="solid"
         viewBox="0 0 8.48 5.64"
         width="8.48"
         xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +60,6 @@ exports[`<ExpandBoard /> with <ExpandBoard.Button> and <ExpandBoard.Content> dis
             "transform": "rotate(180deg)",
           }
         }
-        version="solid"
         viewBox="0 0 8.48 5.64"
         width="8.48"
         xmlns="http://www.w3.org/2000/svg"

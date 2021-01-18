@@ -9,7 +9,7 @@ export const Next = ({ children, hoverColor }) => {
   return (
     <StyledRightArrowContainer hoverColor={hoverColor}>
       <StyledNextText>{children}</StyledNextText>
-      <StyledArrowIcon version="solid" fill="#fff" />
+      <StyledArrowIcon fill="#fff" />
     </StyledRightArrowContainer>
   )
 }
