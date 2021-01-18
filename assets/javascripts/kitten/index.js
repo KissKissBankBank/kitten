@@ -17,7 +17,7 @@ export { InformationBox } from './components/box/information-box'
 export { LinkBox } from './components/box/link-box'
 
 // Buttons
-export { Button } from './components/buttons/button/button'
+export { Button } from './components/buttons/button'
 export { ButtonIcon } from './components/buttons/button-icon'
 export { ButtonImageWithTextAndBadge } from './components/buttons/button-image-with-text-and-badge'
 export { ButtonGroup } from './components/buttons/button-group'

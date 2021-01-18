@@ -6,10 +6,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking Change:
 - Remove `k-Button*` SASS mixin and CSS styles.
+- `Button`: Deprecate size props (`giant`, `huge`, `big`, `tiny`).
+- Remove deprecated Button (`buttons/button`), replace it with Button (`buttons/button/button`)
 
 Features:
 
-- Add `nano` and `micro` size props to Button component.
+- Add `size` prop to Button component.
 - Add `rounded` prop to Button component.
 - Add `social_facebook`, `social_twitter`, `social_linkedin`, `social_instagram`,
   `social_youtube`, `social_pinterest` modifiers to Button component.
