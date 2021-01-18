@@ -244,23 +244,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   animation-name: linDdK;
 }
 
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleAndDesc {
-  margin-top: 0.3125rem;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleWrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title__dayCounter {
-  line-height: 1;
-  margin-left: calc(2 * 0.625rem);
-  margin-top: 0.625rem;
-}
-
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   background-color: #d8d8d8;
@@ -413,10 +396,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
   .c0 .k-CrowdfundingCard__progressBar__percent {
     display: inherit;
-  }
-
-  .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
-    padding: 0 0.625rem 0 0;
   }
 
   .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
@@ -566,6 +545,39 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
 
 exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with snapshot 1`] = `
 .c1 {
+  max-width: 100%;
+}
+
+.c1 .k-Meters-Progress__ramp {
+  position: relative;
+  height: 0.125rem;
+  background: #eee;
+}
+
+.c1 .k-Meters-Progress__ramp::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 0%;
+  -webkit-transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
+  transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
+  background: #19b4fa;
+}
+
+.c1.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
+.c1.is-disabled .k-Meters-Progress__ramp::after {
+  background: #d8d8d8;
+}
+
+.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp,
+.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
+  border-radius: 0.1875rem;
+}
+
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -605,45 +617,45 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c1:disabled {
+.c2:disabled {
   cursor: not-allowed;
 }
 
-.c1:hover {
+.c2:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1 >:nth-child(n) {
+.c2 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c1 >:last-child {
+.c2 >:last-child {
   margin-right: 0;
 }
 
-.c1 svg,
-.c1 path {
+.c2 svg,
+.c2 path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c1:hover,
-.c1:focus {
+.c2:hover,
+.c2:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c1:active {
+.c2:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c1:disabled {
+.c2:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -857,23 +869,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   animation: x 1s linear infinite;
   -webkit-animation-name: linDdK;
   animation-name: linDdK;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleAndDesc {
-  margin-top: 0.3125rem;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleWrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title__dayCounter {
-  line-height: 1;
-  margin-left: calc(2 * 0.625rem);
-  margin-top: 0.625rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
@@ -971,7 +966,7 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1 {
+  .c2 {
     width: 12.5rem;
     height: 3.125rem;
   }
@@ -1037,10 +1032,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     display: inherit;
   }
 
-  .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
-    padding: 0 0.625rem 0 0;
-  }
-
   .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
     min-height: 4.6875rem;
   }
@@ -1058,9 +1049,10 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
 }
 
 <div
-  className="c0 k-CrowdfundingCard k-CrowdfundingCardWidget k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+  className="c0 k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
   href={null}
   onClick={[Function]}
+  title="Lorem ipsum…"
 >
   <div
     className="k-CrowdfundingCard__image"
@@ -1109,95 +1101,96 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
     </div>
   </div>
   <div
-    className="k-CrowdfundingCard__titleAndDesc k-CrowdfundingCard__paddedContainer"
+    className="k-CrowdfundingCard__titleAndDesc"
   >
     
-    <div
-      className="k-CrowdfundingCard__titleWrapper"
-    >
-      <div
-        className="k-CrowdfundingCard__title"
-      >
-        <span
-          className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-bold k-Card__title"
-        >
-          <span
-            width={0}
-          >
-            <span />
-            <span>
-              Lorem ipsum…
-            </span>
-            <span
-              style={
-                Object {
-                  "left": 0,
-                  "position": "fixed",
-                  "top": 0,
-                  "visibility": "hidden",
-                }
-              }
-            >
-              …
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        className="k-CrowdfundingCard__title__dayCounter"
-      >
-        <span
-          className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
-        />
-      </div>
-    </div>
     
-    <p
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-top-noneHalf k-u-margin-bottom-double"
+    
+    
+  </div>
+  <div
+    className="k-CrowdfundingCard__progressBar"
+  >
+    <div
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={0}
+      className="c1 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+      role="progressbar"
     >
-      <span
-        width={0}
-      >
-        <span />
-        <span>
-          Sed ut perspiciatis unde omnis iste natus error Lorem
-        </span>
-        <span
-          style={
-            Object {
-              "left": 0,
-              "position": "fixed",
-              "top": 0,
-              "visibility": "hidden",
-            }
+      <div
+        className="k-Meters-Progress__ramp"
+        style={
+          Object {
+            "height": "4px",
           }
-        >
-          …
-        </span>
-      </span>
-    </p>
+        }
+      />
+    </div>
+    <span
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+    >
+      0 %
+    </span>
   </div>
   <div
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c1"
+      className="c2"
       type="button"
     >
       Contribute
     </button>
   </div>
-  
   <div
-    className="k-CrowdfundingCard__widgetState"
+    className="k-CrowdfundingCard__state"
   >
-    Sur
+    <span
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+    >
+      Sur
+    </span>
   </div>
+  
 </div>
 `;
 
 exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches with snapshot 1`] = `
 .c1 {
+  max-width: 100%;
+}
+
+.c1 .k-Meters-Progress__ramp {
+  position: relative;
+  height: 0.125rem;
+  background: #eee;
+}
+
+.c1 .k-Meters-Progress__ramp::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 0%;
+  -webkit-transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
+  transition: max-width 1s cubic-bezier(0,0.5,0.3,1);
+  background: #19b4fa;
+}
+
+.c1.k-Meters-Progress--disabled .k-Meters-Progress__ramp::after,
+.c1.is-disabled .k-Meters-Progress__ramp::after {
+  background: #d8d8d8;
+}
+
+.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp,
+.c1.k-Meters-Progress--orion .k-Meters-Progress__ramp::after {
+  border-radius: 0.1875rem;
+}
+
+.c2 {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1237,45 +1230,45 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   transition: background-color 0.2s,color 0.2s,border-color 0.2s;
 }
 
-.c1:disabled {
+.c2:disabled {
   cursor: not-allowed;
 }
 
-.c1:hover {
+.c2:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c1 >:nth-child(n) {
+.c2 >:nth-child(n) {
   margin-right: 0.625rem;
   text-align: left;
 }
 
-.c1 >:last-child {
+.c2 >:last-child {
   margin-right: 0;
 }
 
-.c1 svg,
-.c1 path {
+.c2 svg,
+.c2 path {
   fill: currentColor;
   -webkit-transition: fill 0.2s;
   transition: fill 0.2s;
 }
 
-.c1:hover,
-.c1:focus {
+.c2:hover,
+.c2:focus {
   border-color: #05a8e6;
   background-color: #05a8e6;
   color: #fff;
 }
 
-.c1:active {
+.c2:active {
   border-color: #0496cc;
   background-color: #0496cc;
   color: #fff;
 }
 
-.c1:disabled {
+.c2:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
   color: #fff;
@@ -1489,23 +1482,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   animation: x 1s linear infinite;
   -webkit-animation-name: linDdK;
   animation-name: linDdK;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleAndDesc {
-  margin-top: 0.3125rem;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleWrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title__dayCounter {
-  line-height: 1;
-  margin-left: calc(2 * 0.625rem);
-  margin-top: 0.625rem;
 }
 
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
@@ -1657,10 +1633,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   display: inherit;
 }
 
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
-  padding: 0 0.625rem 0 0;
-}
-
 .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
   min-height: 4.6875rem;
 }
@@ -1681,16 +1653,17 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1 {
+  .c2 {
     width: 12.5rem;
     height: 3.125rem;
   }
 }
 
 <div
-  className="c0 k-CrowdfundingCard k-CrowdfundingCardWidget k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
+  className="c0 k-CrowdfundingCard k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
   href={null}
   onClick={[Function]}
+  title="Lorem ipsum…"
 >
   <div
     className="k-CrowdfundingCard__image"
@@ -1739,90 +1712,58 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
     </div>
   </div>
   <div
-    className="k-CrowdfundingCard__titleAndDesc k-CrowdfundingCard__paddedContainer"
+    className="k-CrowdfundingCard__titleAndDesc"
   >
     
-    <div
-      className="k-CrowdfundingCard__titleWrapper"
-    >
-      <div
-        className="k-CrowdfundingCard__title"
-      >
-        <span
-          className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-bold k-Card__title"
-        >
-          <span
-            width={0}
-          >
-            <span />
-            <span>
-              Lorem ipsum…
-            </span>
-            <span
-              style={
-                Object {
-                  "left": 0,
-                  "position": "fixed",
-                  "top": 0,
-                  "visibility": "hidden",
-                }
-              }
-            >
-              …
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        className="k-CrowdfundingCard__title__dayCounter"
-      >
-        <span
-          className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
-        />
-      </div>
-    </div>
     
-    <p
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-top-noneHalf k-u-margin-bottom-double"
+    
+    
+  </div>
+  <div
+    className="k-CrowdfundingCard__progressBar"
+  >
+    <div
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={0}
+      className="c1 k-Meters-Progress k-CrowdfundingCard__progressBar__progress k-Meters-Progress--andromeda"
+      role="progressbar"
     >
-      <span
-        width={0}
-      >
-        <span />
-        <span>
-          Sed ut perspiciatis unde omnis iste natus error Lorem
-        </span>
-        <span
-          style={
-            Object {
-              "left": 0,
-              "position": "fixed",
-              "top": 0,
-              "visibility": "hidden",
-            }
+      <div
+        className="k-Meters-Progress__ramp"
+        style={
+          Object {
+            "height": "4px",
           }
-        >
-          …
-        </span>
-      </span>
-    </p>
+        }
+      />
+    </div>
+    <span
+      className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__progressBar__percent"
+    >
+      0 %
+    </span>
   </div>
   <div
     className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
   >
     <button
-      className="c1"
+      className="c2"
       type="button"
     >
       Contribute
     </button>
   </div>
-  
   <div
-    className="k-CrowdfundingCard__widgetState"
+    className="k-CrowdfundingCard__state"
   >
-    Sur
+    <span
+      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+    >
+      Sur
+    </span>
   </div>
+  
 </div>
 `;
 
@@ -2158,23 +2099,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   animation-name: linDdK;
 }
 
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleAndDesc {
-  margin-top: 0.3125rem;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleWrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title__dayCounter {
-  line-height: 1;
-  margin-left: calc(2 * 0.625rem);
-  margin-top: 0.625rem;
-}
-
 .c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
   overflow: hidden;
   background-color: #d8d8d8;
@@ -2336,10 +2260,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     display: inherit;
   }
 
-  .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
-    padding: 0 0.625rem 0 0;
-  }
-
   .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
     min-height: 4.6875rem;
   }
@@ -2473,637 +2393,5 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
     </span>
   </div>
   
-</div>
-`;
-
-exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot 1`] = `
-.c1 {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: relative;
-  box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
-  font-family: Maax,Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  font-size: 0.8888888888888888rem;
-  color: #222;
-  line-height: 1.3;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  cursor: pointer;
-  min-width: initial;
-  width: 100%;
-  border: 0.125rem solid #19b4fa;
-  background-color: #19b4fa;
-  color: #fff;
-  -webkit-transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-  transition: background-color 0.2s,color 0.2s,border-color 0.2s;
-}
-
-.c1:disabled {
-  cursor: not-allowed;
-}
-
-.c1:hover {
-  -webkit-text-decoration: none;
-  text-decoration: none;
-}
-
-.c1 >:nth-child(n) {
-  margin-right: 0.625rem;
-  text-align: left;
-}
-
-.c1 >:last-child {
-  margin-right: 0;
-}
-
-.c1 svg,
-.c1 path {
-  fill: currentColor;
-  -webkit-transition: fill 0.2s;
-  transition: fill 0.2s;
-}
-
-.c1:hover,
-.c1:focus {
-  border-color: #05a8e6;
-  background-color: #05a8e6;
-  color: #fff;
-}
-
-.c1:active {
-  border-color: #0496cc;
-  background-color: #0496cc;
-  color: #fff;
-}
-
-.c1:disabled {
-  border-color: #d8d8d8;
-  background-color: #d8d8d8;
-  color: #fff;
-}
-
-.c0 {
-  position: relative;
-  padding-bottom: 0.3125rem;
-  overflow: hidden;
-  display: block;
-}
-
-.c0 .k-CrowdfundingCard__paddedContainer {
-  padding: 0 0.625rem;
-}
-
-.c0 .k-CrowdfundingCard__noWrap {
-  white-space: nowrap;
-}
-
-.c0 .k-CrowdfundingCard__image__imageContainer {
-  overflow: hidden;
-  position: relative;
-}
-
-.c0 .k-CrowdfundingCard__image__imageContainer > .k-CrowdfundingCard__image__image {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  text-align: center;
-}
-
-.c0 .k-CrowdfundingCard__image__avatar {
-  margin-left: 0.625rem;
-  background-color: #d8d8d8;
-}
-
-.c0 .k-CrowdfundingCard__image__owner {
-  margin-left: 0.625rem;
-  margin-right: calc(2 * 0.625rem);
-  line-height: 1.2;
-}
-
-.c0 .k-CrowdfundingCard__image__ownerContainer {
-  display: none;
-  position: relative;
-  top: 0;
-  margin-top: -1.875rem;
-  background-color: #fff;
-}
-
-.c0 .k-CrowdfundingCard__title {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  padding: 0;
-  line-height: 1;
-  margin-top: 0.625rem;
-}
-
-.c0 .k-CrowdfundingCard__title__title {
-  font-size: 0.8888888888888888rem;
-}
-
-.c0 .k-CrowdfundingCard__title__loadingElement {
-  display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
-  height: 1.5rem;
-}
-
-.c0 .k-CrowdfundingCard__title__loadingElement:last-of-type {
-  width: 70%;
-  border-top: 0.0625rem solid #fff;
-  border-bottom: 0;
-}
-
-.c0 .k-CrowdfundingCard__subtitle__container {
-  display: none;
-}
-
-.c0 .k-CrowdfundingCard__subtitle__subtitleText {
-  line-height: 1.2;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c0 .k-CrowdfundingCard__subtitle__subtitleText.k-CrowdfundingCard__subtitle__subtitleText--truncated {
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.c0 .k-CrowdfundingCard__additionalInfo {
-  line-height: 1;
-  white-space: nowrap;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 0.625rem;
-}
-
-.c0 .k-CrowdfundingCard__additionalInfo > * {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.c0 .k-CrowdfundingCard__subtitle__horizontalStroke {
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin: 0.3125rem 0.625rem 0.3125rem 0;
-}
-
-.c0 .k-CrowdfundingCard__subtitle__loadingElement {
-  display: block;
-  background-color: #d8d8d8;
-  width: 5rem;
-  height: 0.75rem;
-}
-
-.c0 .k-CrowdfundingCard__informations {
-  margin-top: 0.9375rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  padding: 0;
-  line-height: 1;
-}
-
-.c0 .k-CrowdfundingCard__informations__infoContainer {
-  margin-right: 0.9375rem;
-  margin-bottom: 0.3125rem;
-}
-
-.c0 .k-CrowdfundingCard__informations__infoContainer:last-child {
-  margin-right: 0;
-}
-
-.c0 .k-CrowdfundingCard__informations__info {
-  font-size: 0.75rem;
-}
-
-.c0 .k-CrowdfundingCard__informations__loadingElement {
-  display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
-  width: 2.5rem;
-  height: 1rem;
-}
-
-.c0 .k-CrowdfundingCard__informations__loadingElement:last-of-type {
-  width: 4.0625rem;
-  border-top: 0.0625rem solid #fff;
-  border-bottom: 0;
-}
-
-.c0 .k-CrowdfundingCard__progressBar {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 0;
-  margin-top: 0.3125rem;
-  margin-bottom: 0.625rem;
-}
-
-.c0 .k-CrowdfundingCard__progressBar__progress {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c0 .k-CrowdfundingCard__progressBar__percent {
-  display: none;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  margin-left: calc(2 * 0.625rem);
-}
-
-.c0 .k-CrowdfundingCard__loading {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
-  background: linear-gradient( 90deg,rgba(0,0,0,0),rgba(255,255,255,0.3),rgba(0,0,0,0) );
-  -webkit-animation: x 1s linear infinite;
-  animation: x 1s linear infinite;
-  -webkit-animation-name: linDdK;
-  animation-name: linDdK;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleAndDesc {
-  margin-top: 0.3125rem;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__titleWrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title__dayCounter {
-  line-height: 1;
-  margin-left: calc(2 * 0.625rem);
-  margin-top: 0.625rem;
-}
-
-.c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__imageContainer {
-  overflow: hidden;
-  background-color: #d8d8d8;
-}
-
-.c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__title {
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
-  width: 4.375rem;
-  height: 0.875rem;
-}
-
-.c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__subtitle__horizontalStroke {
-  background-color: #d8d8d8;
-}
-
-.c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__image__description {
-  background-color: #d8d8d8;
-  border-top: 0.0625rem solid #fff;
-  width: 6.25rem;
-  height: 0.875rem;
-}
-
-.c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__progressBar__loadingPercent {
-  display: block;
-  background-color: #d8d8d8;
-  border-bottom: 0.0625rem solid #fff;
-  width: 2.5rem;
-  height: 1rem;
-}
-
-.c0.k-CrowdfundingCard--isLoading .k-CrowdfundingCard__cardButton__loadingButton {
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-}
-
-.c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
-  min-height: 3.125rem;
-}
-
-.c0.k-CrowdfundingCard--isStretched {
-  height: 100%;
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.c0.k-CrowdfundingCard--isStretched .k-CrowdfundingCard__titleAndDesc {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-}
-
-.c0 .k-CrowdfundingCard__state {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: none;
-  background-color: #fff;
-  padding: 0.625rem;
-  line-height: 1;
-}
-
-.c0 .k-CrowdfundingCard__widgetState {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  background: #222;
-  border-radius: 1.5625rem;
-  margin: 0.625rem 0.625rem 0 0;
-  right: 0;
-  top: 0;
-  padding: 0.625rem 1.25rem;
-}
-
-.c0 .k-CrowdfundingCard__image__imageContainer {
-  padding-top: calc( (0.625) * 100% );
-}
-
-@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c1 {
-    width: 12.5rem;
-    height: 3.125rem;
-  }
-}
-
-@media (min-width:40rem) {
-  .c0 .k-CrowdfundingCard__image__ownerContainer {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .c0 .k-CrowdfundingCard__title {
-    padding: 0 0.625rem;
-  }
-
-  .c0 .k-CrowdfundingCard__title__title {
-    font-size: 1.265625rem;
-  }
-
-  .c0 .k-CrowdfundingCard__subtitle__container {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    line-height: 1;
-    padding: 0 0.625rem;
-    margin-top: 0.625rem;
-  }
-
-  .c0 .k-CrowdfundingCard__additionalInfo {
-    padding: 0 0.625rem;
-  }
-
-  .c0 .k-CrowdfundingCard__informations {
-    margin-top: 1.25rem;
-    padding: 0 0.625rem;
-  }
-
-  .c0 .k-CrowdfundingCard__informations__infoContainer {
-    margin-right: 1.25rem;
-  }
-
-  .c0 .k-CrowdfundingCard__informations__infoContainer:last-child {
-    margin-right: 0;
-  }
-
-  .c0 .k-CrowdfundingCard__progressBar {
-    padding: 0 0.625rem;
-    margin-bottom: 1.25rem;
-  }
-
-  .c0 .k-CrowdfundingCard__progressBar__percent {
-    display: inherit;
-  }
-
-  .c0.k-CrowdfundingCardWidget .k-CrowdfundingCard__title {
-    padding: 0 0.625rem 0 0;
-  }
-
-  .c0.k-CrowdfundingCard--titlesMinHeight .k-CrowdfundingCard__titleAndDesc {
-    min-height: 4.6875rem;
-  }
-
-  .c0 .k-CrowdfundingCard__state {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-}
-
-<div
-  className="c0 k-CrowdfundingCard k-CrowdfundingCardWidget k-Card k-Card--light k-Card--withoutBoxShadowOnHover k-CrowdfundingCard--titlesMinHeight"
-  href={null}
-  onClick={[Function]}
->
-  <div
-    className="k-CrowdfundingCard__image"
-  >
-    <div
-      className="k-CrowdfundingCard__image__imageContainer"
-      style={null}
-    >
-      <img
-        alt=""
-        className="k-Card__image k-CrowdfundingCard__image__image"
-        src="#image"
-      />
-    </div>
-    <div
-      className="k-CrowdfundingCard__image__ownerContainer"
-    >
-      <div
-        className="k-u-margin-top-single"
-      >
-        <span
-          className="k-ButtonImage k-ButtonImage--withoutPointerEvents k-CrowdfundingCard__image__avatar"
-          tabIndex={null}
-        >
-          <img
-            alt=""
-            className="k-ButtonImage__img"
-            src="#image"
-          />
-        </span>
-      </div>
-      <div
-        className="k-CrowdfundingCard__image__owner k-u-margin-top-single"
-      >
-        <div
-          className="k-u-color-font1 k-u-size-micro k-u-weight-regular k-CrowdfundingCard__image__title"
-        >
-          Owner title
-        </div>
-        <div
-          className="k-u-color-font1 k-u-size-micro k-u-weight-light k-CrowdfundingCard__image__description"
-        >
-          Owner description
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="k-CrowdfundingCard__titleAndDesc k-CrowdfundingCard__paddedContainer"
-  >
-    
-    <div
-      className="k-CrowdfundingCard__titleWrapper"
-    >
-      <div
-        className="k-CrowdfundingCard__title"
-      >
-        <span
-          className="k-u-color-font1 k-u-line-height-normal k-u-size-default k-u-weight-bold k-Card__title"
-        >
-          <span
-            width={0}
-          >
-            <span />
-            <span>
-              Lorem ipsum…
-            </span>
-            <span
-              style={
-                Object {
-                  "left": 0,
-                  "position": "fixed",
-                  "top": 0,
-                  "visibility": "hidden",
-                }
-              }
-            >
-              …
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        className="k-CrowdfundingCard__title__dayCounter"
-      >
-        <span
-          className="k-u-color-font1 k-u-line-height-normal k-u-size-tiny k-u-weight-regular"
-        />
-      </div>
-    </div>
-    
-    <p
-      className="k-u-color-font1 k-u-line-height-normal k-u-size-micro k-u-weight-light k-u-margin-top-noneHalf k-u-margin-bottom-double"
-    >
-      <span
-        width={0}
-      >
-        <span />
-        <span>
-          Sed ut perspiciatis unde omnis iste natus error Lorem
-        </span>
-        <span
-          style={
-            Object {
-              "left": 0,
-              "position": "fixed",
-              "top": 0,
-              "visibility": "hidden",
-            }
-          }
-        >
-          …
-        </span>
-      </span>
-    </p>
-  </div>
-  <div
-    className="k-CrowdfundingCard__cardButton k-CrowdfundingCard__paddedContainer"
-  >
-    <button
-      className="c1"
-      type="button"
-    >
-      Lorem ipsum
-    </button>
-  </div>
-  
-  <div
-    className="k-CrowdfundingCard__widgetState"
-  >
-    Sur
-  </div>
 </div>
 `;
