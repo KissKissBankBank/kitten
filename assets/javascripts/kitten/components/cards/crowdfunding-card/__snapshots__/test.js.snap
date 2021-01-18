@@ -41,6 +41,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard props matches with snapshot 1`] =
   display: block;
 }
 
+.c0[href]:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c0 .k-CrowdfundingCard__paddedContainer {
   padding: 0 0.625rem;
 }
@@ -594,7 +599,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -643,6 +647,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   color: #fff;
 }
 
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -654,6 +663,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with buttonText prop matches with
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
+}
+
+.c0[href]:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -1226,7 +1240,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -1275,6 +1288,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   color: #fff;
 }
 
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -1286,6 +1304,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with forceVersion prop matches wi
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
+}
+
+.c0[href]:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -1893,7 +1916,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -1942,6 +1964,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   color: #fff;
 }
 
+.c3:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c3:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -1953,6 +1980,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCard with video props matches with sna
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
+}
+
+.c0[href]:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
@@ -2506,7 +2538,6 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
   min-width: initial;
   width: 100%;
@@ -2555,6 +2586,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   color: #fff;
 }
 
+.c1:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
+}
+
 .c1:disabled {
   border-color: #d8d8d8;
   background-color: #d8d8d8;
@@ -2566,6 +2602,11 @@ exports[`<CrowdfundingCard /> CrowdfundingCardWidget props matches with snapshot
   padding-bottom: 0.3125rem;
   overflow: hidden;
   display: block;
+}
+
+.c0[href]:focus {
+  outline: #bae8fd solid 0.125rem;
+  outline-offset: 0.125rem;
 }
 
 .c0 .k-CrowdfundingCard__paddedContainer {
