@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 Breaking Change:
 - Remove `k-Button*` SASS mixin and CSS styles.
+- Remove `ButtonImageWithText` and `ButtonImageWithTextAndBadge`.
 
 Features:
 
@@ -24,8 +25,6 @@ Fixes:
 - Refactor `CloseButton` component.
 - Refactor `ButtonQuestionMarkIcon` component.
 - Refactor `ButtonIcon` component.
-- Refactor `ButtonImageWithTextAndBadge` component.
-- Refactor `ButtonImageWithText` component.
 - Refactor `ButtonImage` component.
 
 ## [2.112.0] - 2020-01-18
