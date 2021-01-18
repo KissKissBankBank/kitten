@@ -16,6 +16,7 @@ Features:
 - Add `social_facebook`, `social_twitter`, `social_linkedin`, `social_instagram`,
   `social_youtube`, `social_pinterest` modifiers to Button component.
 - Add `InstagramButtonIconWords` component.
+- Add `type="button"` to Button by default.
 
 Fixes:
 
