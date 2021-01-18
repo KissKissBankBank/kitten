@@ -66,9 +66,7 @@ exports[`<ProjectCreatorCard /> snapshot with notifications 1`] = `
             width="10px"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              Clock
-            </title>
+            
             <circle
               cx="5.5"
               cy="5.5"
@@ -133,7 +131,7 @@ exports[`<ProjectCreatorCard /> snapshot with notifications 1`] = `
       >
         This is the text
         <button
-          className="sc-bwzfXH fpLNzS sc-bxivhb koaiar k-ButtonIconNext k-ButtonIconNext--tiny k-ButtonIconNext--withoutHover k-ButtonIconNext--verticalArrow"
+          className="sc-bwzfXH cYndTi sc-bxivhb fVJshV k-ButtonIcon k-ButtonIcon--tiny k-ButtonIcon--withoutHover k-ButtonIcon--verticalArrow"
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"
@@ -142,9 +140,7 @@ exports[`<ProjectCreatorCard /> snapshot with notifications 1`] = `
             width="8.48"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              Arrow
-            </title>
+            
             <path
               d="M6 0H0v6h2V2h4z"
             />

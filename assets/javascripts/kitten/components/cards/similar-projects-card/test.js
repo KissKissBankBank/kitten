@@ -179,9 +179,7 @@ describe('<SimilarProjectsCard />', () => {
           )
 
           similarProjectsCard.setState({ currentIndex: 2 })
-          leftArrowButton = similarProjectsCard
-            .find('.k-ButtonIconNext')
-            .first()
+          leftArrowButton = similarProjectsCard.find('.k-ButtonIcon').first()
           leftArrowButton.simulate('click')
 
           currentCard = similarProjectsCard.find(SimilarProjectCard)
@@ -214,9 +212,7 @@ describe('<SimilarProjectsCard />', () => {
             <SimilarProjectsCard projects={[project1, project2, project3]} />,
           )
           currentCard = similarProjectsCard.find(SimilarProjectCard)
-          leftArrowButton = similarProjectsCard
-            .find('.k-ButtonIconNext')
-            .first()
+          leftArrowButton = similarProjectsCard.find('.k-ButtonIcon').first()
 
           similarProjectsCard.setState({ currentIndex: 1 })
           leftArrowButton.simulate('click')
@@ -254,9 +250,7 @@ describe('<SimilarProjectsCard />', () => {
           similarProjectsCard = mount(
             <SimilarProjectsCard projects={[project1, project2, project3]} />,
           )
-          rightArrowButton = similarProjectsCard
-            .find('.k-ButtonIconNext')
-            .last()
+          rightArrowButton = similarProjectsCard.find('.k-ButtonIcon').last()
           rightArrowButton.simulate('click')
 
           currentCard = similarProjectsCard.find(SimilarProjectCard)
@@ -288,9 +282,7 @@ describe('<SimilarProjectsCard />', () => {
           similarProjectsCard = mount(
             <SimilarProjectsCard projects={[project1, project2, project3]} />,
           )
-          rightArrowButton = similarProjectsCard
-            .find('.k-ButtonIconNext')
-            .last()
+          rightArrowButton = similarProjectsCard.find('.k-ButtonIcon').last()
 
           similarProjectsCard.setState({ currentIndex: 1 })
           rightArrowButton.simulate('click')

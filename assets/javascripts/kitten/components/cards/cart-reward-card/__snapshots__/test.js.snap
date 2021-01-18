@@ -9,22 +9,21 @@ exports[`<CartRewardCard /> by default matches with snapshot 1`] = `
     className="k-CartRewardCard__cart"
   >
     <button
-      aria-label="Garbage Button"
-      className="sc-bwzfXH LtVmh sc-bxivhb koaiar k-ButtonIconNext k-CartRewardCard__garbage k-ButtonIconNext--tiny"
+      aria-label="Delete"
+      className="sc-bwzfXH kRVWfb sc-bxivhb fVJshV k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro"
       onClick={[Function]}
-      title="Garbage Button"
       type="button"
     >
       <svg
+        aria-hidden={true}
         className="k-ButtonIcon__svg"
+        fill="#fff"
         height="14"
         viewBox="0 0 12 14"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          Garbage
-        </title>
+        
         <path
           d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
         />
@@ -67,22 +66,21 @@ exports[`<CartRewardCard /> ensure backward compatibility matches with snapshot 
     className="k-CartRewardCard__cart"
   >
     <button
-      aria-label="Garbage Button"
-      className="sc-bwzfXH LtVmh sc-bxivhb koaiar k-ButtonIconNext k-CartRewardCard__garbage k-ButtonIconNext--tiny"
+      aria-label="Delete"
+      className="sc-bwzfXH kRVWfb sc-bxivhb fVJshV k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro"
       onClick={[Function]}
-      title="Garbage Button"
       type="button"
     >
       <svg
+        aria-hidden={true}
         className="k-ButtonIcon__svg"
+        fill="#fff"
         height="14"
         viewBox="0 0 12 14"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          Garbage
-        </title>
+        
         <path
           d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
         />
@@ -125,22 +123,21 @@ exports[`<CartRewardCard /> with some props matches with snapshot 1`] = `
     className="k-CartRewardCard__cart"
   >
     <button
-      aria-label="Garbage Button"
-      className="sc-bwzfXH LtVmh sc-bxivhb koaiar k-ButtonIconNext k-CartRewardCard__garbage k-ButtonIconNext--tiny"
+      aria-label="Delete"
+      className="sc-bwzfXH kRVWfb sc-bxivhb fVJshV k-ButtonIcon k-CartRewardCard__garbage k-ButtonIcon--micro"
       onClick={[Function]}
-      title="Garbage Button"
       type="button"
     >
       <svg
+        aria-hidden={true}
         className="k-ButtonIcon__svg"
+        fill="#fff"
         height="14"
         viewBox="0 0 12 14"
         width="12"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          Garbage
-        </title>
+        
         <path
           d="M4.3 0h3v2h-3zM0 2h12v1H0zm1 2l1 10h8l1-10H1zm3.5 8h-1V6h1v6zm2 0h-1V6h1v6zm2 0h-1V6h1v6z"
         />

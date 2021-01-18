@@ -32,6 +32,10 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   appearance: none;
   outline: none;
   cursor: pointer;
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
   min-width: initial;
   min-height: initial;
   width: 3.125rem;
@@ -142,6 +146,13 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   .c2 {
     width: 12.5rem;
     height: 3.125rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2 {
+    width: 6.25rem;
+    height: 1.25rem;
   }
 }
 
