@@ -8,6 +8,7 @@ Breaking Change:
 - Remove `k-Button*` SASS mixin and CSS styles.
 - `Button`: Deprecate size props (`giant`, `huge`, `big`, `tiny`).
 - Remove deprecated Button (`buttons/button`), replace it with Button (`buttons/button/button`)
+- Remove `ButtonImageWithText` and `ButtonImageWithTextAndBadge`.
 
 Features:
 
@@ -27,8 +28,6 @@ Fixes:
 - Refactor `CloseButton` component.
 - Refactor `ButtonQuestionMarkIcon` component.
 - Refactor `ButtonIcon` component.
-- Refactor `ButtonImageWithTextAndBadge` component.
-- Refactor `ButtonImageWithText` component.
 - Refactor `ButtonImage` component.
 
 ## [2.112.0] - 2020-01-18

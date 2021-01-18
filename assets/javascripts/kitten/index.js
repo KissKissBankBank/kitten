@@ -19,7 +19,6 @@ export { LinkBox } from './components/box/link-box'
 // Buttons
 export { Button } from './components/buttons/button'
 export { ButtonIcon } from './components/buttons/button-icon'
-export { ButtonImageWithTextAndBadge } from './components/buttons/button-image-with-text-and-badge'
 export { ButtonGroup } from './components/buttons/button-group'
 export { ButtonImage } from './components/buttons/button-image'
 export { ButtonQuestionMarkIcon } from './components/buttons/button-question-mark-icon'
@@ -39,7 +38,6 @@ export {
   PinterestButtonIcon,
 } from './components/buttons/social-button-icon'
 export { TagButton } from './components/buttons/tag-button'
-export { ButtonImageWithText } from './components/buttons/button-image-with-text'
 export { CheckableButton } from './components/buttons/checkable-button'
 
 // Cards
