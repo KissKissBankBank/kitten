@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
+- Breaking Change: `ArrowIcon` defaults to `solid` version.
+- Breaking Change: Delete `DeprecatedArrowIcon`.
+
 ## [2.112.0] - 2020-01-18
 
 Feature:
