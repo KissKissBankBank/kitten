@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { Dropdown } from '../../../components/dropdowns/dropdown'
-import { ButtonImageWithTextAndBadge } from '../../../components/buttons/button-image-with-text-and-badge'
 import { NavList } from '../../../components/lists/nav-list'
 import domElementHelper from '../../../helpers/dom/element-helper'
 import emitter from '../../../helpers/utils/emitter'
@@ -138,7 +137,7 @@ export class UserMenu extends Component {
 
   getDropdownButton() {
     return (
-      <ButtonImageWithTextAndBadge
+      <button
         ref="dropdownButton"
         className={this.props.buttonClassName}
         id={this.getButtonId()}
@@ -148,12 +147,13 @@ export class UserMenu extends Component {
         widthImg={this.props.buttonImgWidth}
         heightImg={this.props.buttonImgHeight}
         altImg={this.props.buttonImgAlt}
-        text={this.props.buttonText}
-        title={this.props.buttonTitle}
         notifications={this.props.buttonNotifications}
         badgeColor={this.props.badgeColor}
         textClassName="k-Header__userMenuText--withEllipsis"
-      />
+      >
+        {this.props.buttonTitle}
+        {this.props.buttonText}
+      </button>
     )
   }
 
