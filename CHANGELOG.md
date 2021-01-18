@@ -4,7 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [unreleased]
 
-- Breaking Change: Delete deprecated `cards` components.
+- Breaking Change: Delete the following deprecated `cards` components:
+  - `ArticleCard`
+  - `ContributionCard`
+  - `CrowdfundingCardWidget`
+  - `ProjectCard`
+  - `ProjectCreatorCard`
+  - `ProjectSimilarCard`
+  - `RewardCardLegacy`
+  - `SimilarProjectsCard`.
 
 ## [2.112.0] - 2020-01-18
 
