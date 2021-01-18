@@ -7,6 +7,30 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Feature: Add Focus styles for focusable elements.
 - Feature: Add `summaryProps` to `Details` component.
 
+## [2.112.0] - 2020-01-18
+
+Feature:
+
+- Add `hideIconOnMobile` prop on `DropdownSelectWithInput`.
+
+Fixes:
+
+- `DropdownSelectWithInput` mobile style fixes.
+- `DropdownSelect` mobile style fixes.
+- `RangeSlider` mobile style fixes.
+- `RadioButton` mobile style fixes.
+
+## [2.111.0] - 2020-01-15
+
+Feature:
+
+- Add `forceVersion` prop to `CrowdfundingCard`.
+
+Fixes:
+
+- Add button types on `Carousel` navigation.
+- Fix: Remove scrollbars on `Carousel` on Firefox.
+
 ## [2.110.0] - 2020-01-13
 
 Feature:
