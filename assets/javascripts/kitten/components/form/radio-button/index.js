@@ -122,12 +122,13 @@ const StyledRadioButton = styled.div`
   }
 
   .k-Form-RadioButton__labelContents {
+    margin-top: ${pxToRem(4)};
     margin-left: ${pxToRem(16 + 10)};
     flex: 1 0 calc(100% - ${pxToRem(16 + 10 + 10)});
-    line-height: 1.5;
 
     ${TYPOGRAPHY.fontStyles.light}
     font-size: ${stepToRem(-2)};
+    line-height: ${pxToRem(19)};
 
     &:empty {
       display: none;
@@ -138,15 +139,22 @@ const StyledRadioButton = styled.div`
     font-size: ${stepToRem(-1)};
   }
 
+  @media (min-width: ${ScreenConfig.S.min}px) {
+    .k-Form-RadioButton__labelContents {
+      margin-top: ${pxToRem(8)};
+      font-size: ${stepToRem(-1)};
+      line-height: ${pxToRem(22)};
+    }
+  }
 
   /* VARIANT = "orion" */
 
   &.k-Form-RadioButton--orion {
-    margin: ${pxToRem(20)} 0;
+    margin: ${pxToRem(15)} 0;
 
     .k-Form-RadioButton__label {
       box-sizing: border-box;
-      padding: ${pxToRem(25)} ${pxToRem(15)};
+      padding: ${pxToRem(18)} ${pxToRem(15)};
       min-height: ${pxToRem(60)};
       border-radius: ${pxToRem(6)};
       border: 2px solid ${COLORS.line1};
@@ -167,12 +175,16 @@ const StyledRadioButton = styled.div`
 
     .k-Form-RadioButton__labelText {
       ${TYPOGRAPHY.fontStyles.regular};
+      line-height: ${pxToRem(20)};
     }
 
     @media (min-width: ${ScreenConfig.S.min}px) {
+      margin: ${pxToRem(20)} 0;
+
       .k-Form-RadioButton__label {
         min-height: ${pxToRem(80)};
         border-radius: ${pxToRem(8)};
+        padding: ${pxToRem(30 - 3)} ${pxToRem(15)};
       }
 
       .k-Form-RadioButton__label::before {
@@ -184,6 +196,7 @@ const StyledRadioButton = styled.div`
       .k-Form-RadioButton__labelText {
         font-size: ${stepToRem(0)};
         flex: 1 0 calc(100% - ${pxToRem(20 + 10)});
+        line-height: ${pxToRem(22)};
       }
 
       .k-Form-RadioButton__labelContents {
