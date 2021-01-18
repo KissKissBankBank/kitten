@@ -195,6 +195,7 @@ export const BasicUploader = ({
                   checkedColor={COLORS.background1}
                   width={20}
                   height={20}
+                  aria-hidden
                 />
               )}
               {internalStatus === 'error' && (
@@ -203,6 +204,7 @@ export const BasicUploader = ({
                   crossColor={COLORS.background1}
                   width={20}
                   height={20}
+                  aria-hidden
                 />
               )}
               {internalStatus === 'wait' && (
@@ -211,6 +213,7 @@ export const BasicUploader = ({
                   clockColor={COLORS.background1}
                   width={20}
                   height={20}
+                  aria-hidden
                 />
               )}
             </div>

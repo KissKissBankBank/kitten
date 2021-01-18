@@ -4,7 +4,7 @@ import { Button } from './button'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
-import { BurgerIcon } from '../../icons/burger-icon'
+import { HeartIcon } from '../../icons/heart-icon'
 import { Badge } from '../../..'
 import { Cart } from '../../icons/cart'
 
@@ -27,6 +27,11 @@ const svgPositionOptions = {
   Right: 'right',
 }
 
+const variantOptions = {
+  Andromeda: 'andromeda',
+  Orion: 'orion',
+}
+
 const modifierOptions = {
   Hydrogen: 'hydrogen',
   Helium: 'helium',
@@ -46,6 +51,7 @@ export const WithText = () => (
     giant={boolean('Giant', false)}
     fluid={boolean('Fluid', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
+    variant={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
   >
@@ -71,17 +77,19 @@ export const WithIcon = () => (
   <Button
     rounded={boolean('Rounded', false)}
     nano={boolean('Nano', false)}
+    micro={boolean('Micro', false)}
     tiny={boolean('Tiny', false)}
     big={boolean('Big', false)}
     huge={boolean('Huge', false)}
     giant={boolean('Giant', false)}
     modifier={select('Modifier', modifierOptions, 'hydrogen')}
+    variant={select('Variant', variantOptions, 'andromeda')}
     fluid={boolean('Fluid', false)}
     disabled={boolean('Disabled', false)}
     borderRadius={number('Border radius', 0, radiusBorderRange)}
     icon
   >
-    <BurgerIcon
+    <HeartIcon
       width={number('Icon size', 15, svgSizeRange)}
       height={number('Icon size', 15, svgSizeRange)}
     />
@@ -112,11 +120,12 @@ export const WithTextAndIcon = () => {
       giant={boolean('Giant', false)}
       fluid={boolean('Fluid', false)}
       modifier={select('Modifier', modifierOptions, 'hydrogen')}
+      variant={select('Variant', variantOptions, 'andromeda')}
       disabled={boolean('Disabled', false)}
       borderRadius={number('Border radius', 0, radiusBorderRange)}
     >
       {iconPosition === 'left' && (
-        <BurgerIcon
+        <HeartIcon
           width={number('Icon size', 15, svgSizeRange)}
           height={number('Icon size', 15, svgSizeRange)}
         />
@@ -125,7 +134,7 @@ export const WithTextAndIcon = () => {
       <span>{text('Text', 'MyButton')}</span>
 
       {iconPosition === 'right' && (
-        <BurgerIcon
+        <HeartIcon
           width={number('Icon size', 15, svgSizeRange)}
           height={number('Icon size', 15, svgSizeRange)}
         />
@@ -154,6 +163,7 @@ export const WithBadge = () => (
     huge={boolean('Huge', false)}
     giant={boolean('Giant', false)}
     modifier={select('Modifier', modifierOptions, 'helium')}
+    variant={select('Variant', variantOptions, 'andromeda')}
     disabled={boolean('Disabled', false)}
   >
     <span>{text('Text', 'MyButton')}</span>

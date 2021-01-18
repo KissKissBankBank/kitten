@@ -50,7 +50,7 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 var StyledCard = _styledComponents.default.div.withConfig({
   displayName: "donation-card__StyledCard",
   componentId: "sc-19h76fz-0"
-})(["border-width:", ";border-style:solid;border-color:", ";", ""], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, function (_ref) {
+})(["border-width:", ";border-style:solid;border-color:", ";padding:0 ", ";", ""], (0, _typography.pxToRem)(2), _colorsConfig.default.line1, (0, _typography.pxToRem)(5), function (_ref) {
   var isDisabled = _ref.isDisabled;
   return isDisabled && (0, _styledComponents.css)(["filter:grayscale(1) opacity(0.4);cursor:not-allowed;"]);
 });

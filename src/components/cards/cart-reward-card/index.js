@@ -166,13 +166,13 @@ var CartRewardCard = /*#__PURE__*/function (_Component) {
         className: "k-CartRewardCard__cart"
       }, /*#__PURE__*/_react.default.createElement(_buttonIcon.ButtonIcon, {
         type: "button",
-        title: "Garbage Button",
-        "aria-label": "Garbage Button",
-        modifier: "beryllium",
-        size: "tiny",
+        "aria-label": this.props.deleteButtonA11yText,
+        modifier: "hydrogen",
+        size: "micro",
         onClick: this.handleCloseClick,
         className: "k-CartRewardCard__garbage"
       }, /*#__PURE__*/_react.default.createElement(_garbageIcon.GarbageIcon, {
+        "aria-hidden": true,
         className: "k-ButtonIcon__svg"
       })));
     }
@@ -220,6 +220,7 @@ CartRewardCard.propTypes = {
   updateAmountLink: _propTypes.default.string,
   onAfterClose: _propTypes.default.func,
   onCloseClick: _propTypes.default.func,
+  deleteButtonA11yText: _propTypes.default.string,
   // Deprecated.
   shippingTitle: (0, _deprecated.default)(_propTypes.default.string, 'Prefer use <CartRewardCard.Information />'),
   shippingValue: (0, _deprecated.default)(_propTypes.default.string, 'Prefer use <CartRewardCard.Information />'),
@@ -232,7 +233,8 @@ CartRewardCard.defaultProps = {
   updateAmountTitle: '',
   updateAmountLink: '',
   onAfterClose: function onAfterClose() {},
-  onCloseClick: null
+  onCloseClick: null,
+  deleteButtonA11yText: 'Delete'
 };
 
 CartRewardCard.Information = function (_ref2) {

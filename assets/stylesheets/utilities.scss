@@ -21,12 +21,20 @@ $k-typography: k-typography-definition((
 @import './kitten/utilities';
 
 // Include all utilities.
+@include k-utilities-visually-hidden;
 @include k-utilities-blockAlign;
+@include k-utilities-align-self;
 @include k-utilities-background-color;
 @include k-utilities-border;
 @include k-utilities-cursor;
 @include k-utilities-hidden;
+@include k-utilities-block;
+@include k-utilities-inline-block;
 @include k-utilities-event;
+@include k-utilities-flex;
+@include k-utilities-justify-content;
+@include k-utilities-align-items;
+@include k-utilities-flex-direction;
 @include k-utilities-responsive;
 @include k-utilities-link;
 @include k-utilities-reset-button;

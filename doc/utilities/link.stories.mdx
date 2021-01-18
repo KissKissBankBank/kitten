@@ -1,0 +1,45 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/CSS Utilities/Link" />
+
+# Links
+
+Links utilities.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/link/_link.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/link/_link.scss)
+
+## Usage
+
+Use class name `k-u-link` to get a basic style (font, underline etc...)
+
+<Canvas>
+<a href="#" className="k-u-link">
+  Hello link !
+</a>
+</Canvas>
+
+Add class name `k-u-link-primary1` to add `color` and `transition`
+
+<Canvas>
+<a href="#" className="k-u-link k-u-link-primary1">
+  Hello link !
+</a>
+</Canvas>
+
+Or `k-u-link-background1` to get another `color` style
+
+<Canvas style={{ backgroundColor: 'black' }}>
+<a href="#" className="k-u-link k-u-link-background1">
+  Hello link ! Still same style ?
+</a>
+</Canvas>
+
+You can force the style by using `k-u-link-background1--important`
+
+<Canvas style={{ backgroundColor: 'black' }}>
+<a href="#" className="k-u-link k-u-link-background1--important">
+  Hello forced style !
+</a>
+</Canvas>

@@ -23,7 +23,7 @@ const StyledButton = styled.button`
   line-height: 1.3;
   text-decoration: none;
 
-  appareance: none;
+  appearance: none;
   outline: none;
 
   cursor: pointer;
@@ -75,6 +75,18 @@ const StyledButton = styled.button`
   ${({ fluid }) => fluid && FLUID}
   ${({ rounded }) => rounded && ROUNDED}
 
+  ${({ variant }) =>
+    variant === 'orion' &&
+    css`
+    ${() => BIG}
+
+    border-radius: ${pxToRem(6)};
+
+    @media (min-width: ${pxToRem(ScreenConfig.S.min)}) {
+      border-radius: ${pxToRem(8)};
+    }
+  `}
+
   ${({ modifier }) => modifierStyles(modifier)}
 `
 
@@ -94,6 +106,7 @@ const checkedCircleIconStyle = size => {
       break
     case 'micro':
       iconSize = 10
+      break
     case 'nano':
       iconSize = 8
       break
@@ -369,6 +382,7 @@ export class Button extends Component {
       'social_youtube',
       'social_pinterest',
     ]),
+    variant: PropTypes.oneOf(['andromeda', 'orion']),
   }
 
   static defaultProps = {
@@ -383,10 +397,11 @@ export class Button extends Component {
     rounded: false,
     modifier: 'hydrogen',
     borderRadius: 0,
+    variant: 'andromeda',
   }
 
   render() {
-    const { children, modifier, ...props } = this.props
+    const { children, modifier, variant, ...props } = this.props
     const checked = modifier === 'checked' && { 'aria-checked': true }
 
     modifier === 'checked' &&
@@ -395,7 +410,12 @@ export class Button extends Component {
       )
 
     return (
-      <StyledButton modifier={modifier} {...checked} {...props}>
+      <StyledButton
+        modifier={modifier}
+        variant={variant}
+        {...checked}
+        {...props}
+      >
         {children}
         {modifier === 'checked' && (
           <CheckedCircleIcon

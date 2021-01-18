@@ -1,0 +1,72 @@
+import { Meta, Canvas } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/CSS Utilities/AlignSelf" />
+
+# Align Self
+
+These self-alignment utilities will only be useful inside of a Flexbox or a CSS
+Grid container, like `k-u-flex` or `k-u-flex-inline`.
+
+## Source
+
+[`assets/stylesheets/kitten/utilities/align/_align.scss`](https://github.com/KissKissBankBank/kitten/blob/master/assets/stylesheets/kitten/utilities/align/_align.scss)
+
+## Usage
+
+Utilities to align items according to media-queries (aligns : normal, stretch,
+center, start, end).
+
+`k-u-alignSelf-normal`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-margin-right-double--important">Default for comparison</p>
+  <p className="k-u-alignSelf-normal">
+    Normal alignment (defaults to stretch).
+  </p>
+  <p className="k-u-margin-left-double--important">Default for comparison</p>
+</div>
+</Canvas>
+
+`k-u-alignSelf-stretch`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-margin-right-double--important">Default for comparison</p>
+  <p className="k-u-alignSelf-stretch">
+    Helloooooooo stretched block.
+  </p>
+  <p className="k-u-margin-left-double--important">Default for comparison</p>
+</div>
+</Canvas>
+
+`k-u-alignSelf-center`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-margin-right-double--important">Default for comparison</p>
+  <p className="k-u-alignSelf-center">
+    Hello, I am center-aligned!
+  </p>
+  <p className="k-u-margin-left-double--important">Default for comparison</p>
+</div>
+</Canvas>
+
+`k-u-alignSelf-start`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-margin-right-double--important">Default for comparison</p>
+  <p className="k-u-alignSelf-start">
+    Still the same style? No, I’m start aligned.
+  </p>
+  <p className="k-u-margin-left-double--important">Default for comparison</p>
+</div>
+</Canvas>
+
+`k-u-alignSelf-end`
+<Canvas className="has-overrides show-flex">
+<div className="k-u-flex">
+  <p className="k-u-margin-right-double--important">Default for comparison</p>
+  <p className="k-u-alignSelf-end">
+    Bye bye! I’m on the end.
+  </p>
+  <p className="k-u-margin-left-double--important">Default for comparison</p>
+</div>
+</Canvas>

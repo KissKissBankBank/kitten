@@ -145,6 +145,15 @@ export const StyledCarouselContainer = styled.div`
 
   &.k-Carousel.k-LegacyCarousel {
     @media (max-width: ${ScreenConfig.M.max}px) {
+      .k-Grid {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .k-Grid__col--12 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+
       .k-Carousel__inner {
         padding: 0 ${pxToRem(CONTAINER_PADDING_MOBILE)};
         scroll-padding: ${pxToRem(CONTAINER_PADDING_MOBILE)};
@@ -317,6 +326,9 @@ export const StyledCarouselContainer = styled.div`
         pxToRem(baseItemMarginBetween)};
     }
 
+    /* Fix bug IE11 ResizeObserver, to trigger a first resize */
+    min-height: 1;
+
     overflow-x: scroll;
     scroll-behavior: smooth;
     /* hide scrollbar on IE and Edge */
@@ -324,9 +336,8 @@ export const StyledCarouselContainer = styled.div`
     /* mandatory to combine scroll with this property on iOS */
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: mandatory;
-    /* Fix bug IE11 ResizeObserver, to trigger a first resize */
-    min-height: 1;
-
+    /* Hide scrollbar on Firefox. */
+    scrollbar-width: none;
     /* hide scrollbar on Chrome and Safari */
     &::-webkit-scrollbar {
       display: none;

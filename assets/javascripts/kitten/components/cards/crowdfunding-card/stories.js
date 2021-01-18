@@ -77,6 +77,17 @@ export const CrowdfundingCard = () => (
       info3={text('Info3', 'Lorem ipsum…')}
       progress={number('Progress', 42)}
       state={text('State', 'Lorem ipsum…')}
+      buttonText={text('Button text', null)}
+      forceVersion={select(
+        'Version',
+        {
+          Default: null,
+          Mobile: 'mobile',
+          Tablet: 'tablet',
+          Desktop: 'desktop',
+        },
+        null,
+      )}
     />
   </StoryContainer>
 )

@@ -2,17 +2,17 @@
 
 exports[`<IconContainer/> should match snapshot when we add an icon description 1`] = `
 <div
-  className="sc-bdVaJa mTdHm sc-htpNat dFmIqQ"
+  className="sc-bdVaJa mTdHm sc-bwzfXH cfyooj"
   color="#fff"
 >
   <span
-    className="sc-bwzfXH ialnYM"
+    className="k-u-a11y-visuallyHidden"
   >
     checked icon circle
   </span>
   Foobar
   <div
-    className="sc-bxivhb htzmJv"
+    className="sc-htpNat ipfoBr"
     marginHeight={12.5}
     marginWidth={12.5}
   >
@@ -40,12 +40,12 @@ exports[`<IconContainer/> should match snapshot when we add an icon description 
 
 exports[`<IconContainer/> should match snapshot when we change color 1`] = `
 <div
-  className="sc-bdVaJa mTdHm sc-htpNat dFmIqQ"
+  className="sc-bdVaJa mTdHm sc-bwzfXH cfyooj"
   color="#fff"
 >
   Foobar
   <div
-    className="sc-bxivhb htzmJv"
+    className="sc-htpNat ipfoBr"
     marginHeight={12.5}
     marginWidth={12.5}
   >
@@ -73,12 +73,12 @@ exports[`<IconContainer/> should match snapshot when we change color 1`] = `
 
 exports[`<IconContainer/> should match snapshot when we change position 1`] = `
 <div
-  className="sc-bdVaJa mTdHm sc-htpNat jJDosi"
+  className="sc-bdVaJa mTdHm sc-bwzfXH ljmhiu"
   color="#fff"
 >
   Foobar
   <div
-    className="sc-bxivhb gOKKPD"
+    className="sc-htpNat cWmHFq"
     marginHeight={12.5}
     marginWidth={12.5}
   >
@@ -106,12 +106,12 @@ exports[`<IconContainer/> should match snapshot when we change position 1`] = `
 
 exports[`<IconContainer/> should match snapshot when we change width and height 1`] = `
 <div
-  className="sc-bdVaJa mTdHm sc-htpNat jMrsct"
+  className="sc-bdVaJa mTdHm sc-bwzfXH hIPcdh"
   color="#fff"
 >
   Foobar
   <div
-    className="sc-bxivhb djKdMX"
+    className="sc-htpNat jSGglG"
     marginHeight={25}
     marginWidth={15}
   >
@@ -139,12 +139,12 @@ exports[`<IconContainer/> should match snapshot when we change width and height 
 
 exports[`<IconContainer/> should match snapshot with default behavior 1`] = `
 <div
-  className="sc-bdVaJa mTdHm sc-htpNat dFmIqQ"
+  className="sc-bdVaJa mTdHm sc-bwzfXH cfyooj"
   color="#fff"
 >
   Foobar
   <div
-    className="sc-bxivhb htzmJv"
+    className="sc-htpNat ipfoBr"
     marginHeight={12.5}
     marginWidth={12.5}
   >

@@ -1,11 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const KissKissBankBankIcon = ({ color, title, width, ...props }) => (
+export const KissKissBankBankIcon = ({ color, title, ...props }) => (
   <svg
-    fill="#000"
-    width={width}
-    height="30"
     viewBox="0 0 134 30"
     xmlns="http://www.w3.org/2000/svg"
     fill={color}
@@ -21,11 +18,9 @@ export const KissKissBankBankIcon = ({ color, title, width, ...props }) => (
 KissKissBankBankIcon.propTypes = {
   color: PropTypes.string,
   title: PropTypes.string,
-  width: PropTypes.string,
 }
 
 KissKissBankBankIcon.defaultProps = {
   color: '#fff',
   title: 'KissKissBankBank',
-  width: '',
 }

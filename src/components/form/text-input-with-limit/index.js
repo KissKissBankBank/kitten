@@ -17,7 +17,7 @@ var _objectWithoutProperties2 = _interopRequireDefault(require("@babel/runtime/h
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _styledComponents = _interopRequireWildcard(require("styled-components"));
+var _styledComponents = _interopRequireDefault(require("styled-components"));
 
 var _textInput = require("../../../components/form/text-input");
 
@@ -29,36 +29,20 @@ var _typography = require("../../../helpers/utils/typography");
 
 var _typographyConfig = _interopRequireDefault(require("../../../constants/typography-config"));
 
-var errorColor = (0, _styledComponents.css)(["", ""], function (_ref) {
-  var error = _ref.error;
-  return error && (0, _styledComponents.css)(["color:", ";"], _colorsConfig.default.error);
-});
-var FocusTextInput = (0, _styledComponents.default)(_textInput.TextInput).withConfig({
-  displayName: "text-input-with-limit__FocusTextInput",
-  componentId: "ufrmmb-0"
-})([":focus + div{color:", ";", "}"], _colorsConfig.default.font1, errorColor);
+var _classnames = _interopRequireDefault(require("classnames"));
 
 var StyledTextInputWithLimit = _styledComponents.default.div.withConfig({
   displayName: "text-input-with-limit__StyledTextInputWithLimit",
-  componentId: "ufrmmb-1"
-})(["position:relative;display:block;"]);
+  componentId: "ufrmmb-0"
+})(["position:relative;display:block;.k-Form-TextInputWithLimit__limitNumber{", ";font-size:", ";line-height:1.3;position:absolute;right:", ";top:", ";color:", ";text-shadow:", " 0 0 ", ",-", " 0 0 ", ",0 ", " 0 ", ",0 -", " 0 ", ",", " ", " ", ",-", " -", " 0 ", ",", " -", " 0 ", ",-", " ", " 0 ", ";pointer-events:none;.k-Form-TextInputWithLimit__limitNumber--disabled{text-shadow:none;}}&:focus + .k-Form-TextInputWithLimit__limitNumber,&:focus-within + .k-Form-TextInputWithLimit__limitNumber{color:", ";}.k-Form-TextInputWithLimit__limitNumber--error{color:", " !important;}.k-Form-TextInput__textareaContainer--orion,.k-Form-TextInput--orion{& + .k-Form-TextInputWithLimit__limitNumber{top:initial;bottom:", ";right:", ";}}"], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-2), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(5), _colorsConfig.default.font2, (0, _typography.pxToRem)(2), _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.background1, (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(1), _colorsConfig.default.background1, (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(1), _colorsConfig.default.background1, (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(1), _colorsConfig.default.background1, (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(1), _colorsConfig.default.background1, _colorsConfig.default.font1, _colorsConfig.default.error, (0, _typography.pxToRem)(15), (0, _typography.pxToRem)(15));
 
-var StyledCounter = _styledComponents.default.div.withConfig({
-  displayName: "text-input-with-limit__StyledCounter",
-  componentId: "ufrmmb-2"
-})(["", ";font-size:", ";line-height:1.3;position:absolute;right:0;top:0;margin-top:", ";margin-right:", ";color:", ";text-shadow:", " 0 0 ", ",-", " 0 0 ", ",0 ", " 0 ", ",0 -", " 0 ", ",", " ", " ", ",-", " -", " 0 ", ",", " -", " 0 ", ",-", " ", " 0 ", ";pointer-events:none;", " ", ""], _typographyConfig.default.fontStyles.regular, (0, _typography.stepToRem)(-2), (0, _typography.pxToRem)(5), (0, _typography.pxToRem)(5), _colorsConfig.default.font2, (0, _typography.pxToRem)(2), _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.background1, (0, _typography.pxToRem)(2), _colorsConfig.default.background1, (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(1), _colorsConfig.default.background1, (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(1), _colorsConfig.default.background1, (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(1), _colorsConfig.default.background1, (0, _typography.pxToRem)(1), (0, _typography.pxToRem)(1), _colorsConfig.default.background1, errorColor, function (_ref2) {
-  var disabled = _ref2.disabled;
-  return disabled && (0, _styledComponents.css)(["text-shadow:none;"]);
-});
-
-var TextInputWithLimit = function TextInputWithLimit(_ref3) {
-  var tiny = _ref3.tiny,
-      limit = _ref3.limit,
-      _onChange = _ref3.onChange,
-      disabled = _ref3.disabled,
-      value = _ref3.value,
-      defaultValue = _ref3.defaultValue,
-      others = (0, _objectWithoutProperties2.default)(_ref3, ["tiny", "limit", "onChange", "disabled", "value", "defaultValue"]);
+var TextInputWithLimit = function TextInputWithLimit(_ref) {
+  var limit = _ref.limit,
+      _onChange = _ref.onChange,
+      disabled = _ref.disabled,
+      value = _ref.value,
+      defaultValue = _ref.defaultValue,
+      others = (0, _objectWithoutProperties2.default)(_ref, ["limit", "onChange", "disabled", "value", "defaultValue"]);
 
   var _useState = (0, _react.useState)(value || defaultValue),
       _useState2 = (0, _slicedToArray2.default)(_useState, 1),
@@ -69,7 +53,9 @@ var TextInputWithLimit = function TextInputWithLimit(_ref3) {
       length = _useState4[0],
       setLength = _useState4[1];
 
-  return /*#__PURE__*/_react.default.createElement(StyledTextInputWithLimit, null, /*#__PURE__*/_react.default.createElement(FocusTextInput, (0, _extends2.default)({
+  return /*#__PURE__*/_react.default.createElement(StyledTextInputWithLimit, {
+    className: "k-Form-TextInputWithLimit"
+  }, /*#__PURE__*/_react.default.createElement(_textInput.TextInput, (0, _extends2.default)({
     onChange: function onChange(e) {
       var value = e.target.value;
       setLength(value.length);
@@ -77,11 +63,14 @@ var TextInputWithLimit = function TextInputWithLimit(_ref3) {
       _onChange(e);
     },
     disabled: disabled,
-    tiny: tiny,
     defaultValue: textValue
-  }, others)), /*#__PURE__*/_react.default.createElement(StyledCounter, {
-    error: length > limit,
-    disabled: disabled
+  }, others, {
+    className: (0, _classnames.default)('k-Form-TextInputWithLimit__input')
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: (0, _classnames.default)('k-Form-TextInputWithLimit__limitNumber', {
+      'k-Form-TextInputWithLimit__limitNumber--disabled': disabled,
+      'k-Form-TextInputWithLimit__limitNumber--error': length > limit
+    })
   }, limit - length));
 };
 
@@ -89,7 +78,6 @@ exports.TextInputWithLimit = TextInputWithLimit;
 TextInputWithLimit.propTypes = {
   limit: _propTypes.default.number,
   disabled: _propTypes.default.bool,
-  tiny: _propTypes.default.bool,
   error: _propTypes.default.bool,
   onChange: _propTypes.default.func,
   defaultValue: _propTypes.default.string
@@ -97,7 +85,6 @@ TextInputWithLimit.propTypes = {
 TextInputWithLimit.defaultProps = {
   limit: 80,
   disabled: false,
-  tiny: false,
   error: false,
   defaultValue: '',
   onChange: function onChange() {}

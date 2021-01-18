@@ -21,10 +21,10 @@ const StyledItem = styled.svg`
   ${({ isActive }) =>
     isActive &&
     css`
-      .item-buns {
+      .k-BurgerIcon__bun {
         transform: translateX(2px);
       }
-      .item-patty {
+      .k-BurgerIcon__patty {
         transform: translateX(-2px);
       }
     `}
@@ -36,10 +36,10 @@ const StyledItem = styled.svg`
       button:hover &,
       &:focus,
       button:focus & {
-        .item-buns {
+        .k-BurgerIcon__bun {
           transform: translateX(2px);
         }
-        .item-patty {
+        .k-BurgerIcon__patty {
           transform: translateX(-2px);
         }
       }
@@ -71,9 +71,9 @@ export const BurgerIcon = ({
     {...props}
   >
     {(iconTitle || title) && <title>{iconTitle || title}</title>}
-    <rect y="0" width="12" height="2" className="item-buns" />
-    <rect y="4" width="12" height="2" className="item-patty" />
-    <rect y="8" width="12" height="2" className="item-buns" />
+    <rect y="0" width="12" height="2" className="k-BurgerIcon__bun" />
+    <rect y="4" width="12" height="2" className="k-BurgerIcon__patty" />
+    <rect y="8" width="12" height="2" className="k-BurgerIcon__bun" />
   </StyledItem>
 )
 

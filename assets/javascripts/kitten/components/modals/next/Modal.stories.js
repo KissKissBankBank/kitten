@@ -34,7 +34,7 @@ const paragraphContainer = `
 `
 
 export default {
-  title: 'NEXT/Modal',
+  title: 'Modals/NEXT/Modal',
   component: Modal,
   subcomponents: {
     Title: Modal.Title,

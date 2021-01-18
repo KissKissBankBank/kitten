@@ -4,6 +4,6 @@ import NewsList from './index'
 export const Default = () => <NewsList />
 
 export default {
-  title: 'Pages/Actus',
+  title: 'pages/Actus',
   component: NewsList,
 }

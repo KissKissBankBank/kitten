@@ -1,7 +1,5 @@
 import React from 'react'
-import { text, boolean, object ,
-  select,
-} from '@storybook/addon-knobs'
+import { text, boolean, object, select } from '@storybook/addon-knobs'
 import { RewardCard as RewardCardComponent } from './index'
 import { Container } from '../../../components/grid/container'
 import { Grid, GridCol } from '../../../components/grid/grid'
@@ -18,6 +16,7 @@ import classNames from 'classnames'
 const StyledStoryContainer = styled(Container)`
   margin-top: ${pxToRem(20)};
   margin-bottom: ${pxToRem(20)};
+  max-width: ${pxToRem(460)};
 
   .RewardCard_story__button {
     width: 100%;
@@ -66,6 +65,86 @@ export default {
     info:
       'The RewardCard is a card with two versions depending on the parent container width. It can be composed with many sub-components.',
   },
+}
+
+export const New_RewardCard = () => {
+  const versionGroupId = 'Versions'
+  const contentGroupId = 'Content'
+
+  const hasRewardLabel = boolean(
+    'Does the reward have a label?',
+    true,
+    versionGroupId,
+  )
+  const disabled = boolean('Disabled', false, versionGroupId)
+
+  return (
+    <StyledStoryContainer>
+      <Grid>
+        <GridCol col-l="6">
+          <RewardCardComponent
+            withoutBorder={boolean('withoutBorder', false, versionGroupId)}
+            disabled={disabled}
+          >
+            <RewardCardComponent.Image
+              src={text(
+                'Reward image src',
+                'http://placekitten.com/400/400',
+                contentGroupId,
+              )}
+              alt={text('Reward image alt', 'My reward', contentGroupId)}
+              disabled={disabled}
+            />
+
+            <RewardCardComponent.RowContent>
+              {hasRewardLabel && (
+                <Text
+                  color="font1"
+                  tag="p"
+                  weight="bold"
+                  size="tiny"
+                  className={classNames('RewardCard_story__label', {
+                    RewardCard_story__disabled: disabled,
+                  })}
+                >
+                  {text(
+                    'Reward label',
+                    'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+                    contentGroupId,
+                  )}
+                </Text>
+              )}
+
+              <RewardCardComponent.Title disabled={disabled}>
+                {text('Title', '100 €', contentGroupId)}
+              </RewardCardComponent.Title>
+
+              <List>
+                <RewardCardComponent.Info
+                  key="Contributors"
+                  label={text('Info 1 label:', '35', contentGroupId)}
+                  value={text('Info 1 value:', 'contributeurs', contentGroupId)}
+                  disabled={disabled}
+                />
+
+                <RewardCardComponent.Info
+                  key="Delivery"
+                  label={text(
+                    'Info 3 label:',
+                    'Livraison estimée',
+                    contentGroupId,
+                  )}
+                  value={text('Info 3 value:', 'Janvier 2019', contentGroupId)}
+                  withMarginBottom={false}
+                  disabled={disabled}
+                />
+              </List>
+            </RewardCardComponent.RowContent>
+          </RewardCardComponent>
+        </GridCol>
+      </Grid>
+    </StyledStoryContainer>
+  )
 }
 
 export const RewardCard = () => {

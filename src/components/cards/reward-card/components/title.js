@@ -17,7 +17,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _titleWithStroke = require("../../../../components/typography/title-with-stroke");
+var _title = require("../../../../components/typography/title");
+
+var _colorsConfig = _interopRequireDefault(require("../../../../constants/colors-config"));
 
 var RewardCardTitle = function RewardCardTitle(_ref) {
   var children = _ref.children,
@@ -25,14 +27,11 @@ var RewardCardTitle = function RewardCardTitle(_ref) {
       disabled = _ref.disabled,
       className = _ref.className,
       props = (0, _objectWithoutProperties2.default)(_ref, ["children", "tagName", "disabled", "className"]);
-  return /*#__PURE__*/_react.default.createElement(_titleWithStroke.TitleWithStroke, (0, _extends2.default)({}, props, {
-    italic: true,
-    margin: false,
+  return /*#__PURE__*/_react.default.createElement(_title.Title, (0, _extends2.default)({}, props, {
+    cssColor: disabled ? _colorsConfig.default.font2 : _colorsConfig.default.font1,
     tag: tagName,
-    modifier: "senary",
-    className: (0, _classnames.default)('k-RewardCard__title', className, {
-      'k-RewardCard__title--disabled': disabled
-    }, 'k-u-color-font1')
+    modifier: "quinary",
+    className: (0, _classnames.default)('k-RewardCard__title', className, 'k-u-margin-bottom-double', 'k-u-margin-top-none')
   }), children);
 };
 

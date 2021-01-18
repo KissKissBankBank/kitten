@@ -3,7 +3,7 @@
 exports[`<Pagination /> by default should match its empty snapshot 1`] = `
 <nav
   aria-label="Pagination navigation"
-  className="sc-htpNat iEjKAm Pagination Pagination--isAligned-undefined"
+  className="sc-bwzfXH jimmEN Pagination Pagination--isAligned-undefined"
   role="navigation"
 >
   <ul
@@ -23,12 +23,19 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="sc-bwzfXH cChGsy Pagination__ArrowIcon"
+          className="Pagination__ArrowIcon"
+          fill="#222"
           height="5.64"
+          style={
+            Object {
+              "transform": "rotate(-90deg)",
+            }
+          }
           viewBox="0 0 8.48 5.64"
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
+          
           <path
             d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
           />
@@ -126,12 +133,19 @@ exports[`<Pagination /> by default should match its empty snapshot 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="sc-bwzfXH cUzINT Pagination__ArrowIcon"
+          className="Pagination__ArrowIcon"
+          fill="#222"
           height="5.64"
+          style={
+            Object {
+              "transform": "rotate(90deg)",
+            }
+          }
           viewBox="0 0 8.48 5.64"
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
+          
           <path
             d="M0 4.24 L4.24,0 L8.48,4.24 L7.08,5.64 L4.24,2.77 L1.4,5.6 z"
           />

@@ -31,6 +31,8 @@ var _progress = _interopRequireDefault(require("./components/progress"));
 
 var _state = _interopRequireDefault(require("./components/state"));
 
+var _button = _interopRequireDefault(require("./components/button"));
+
 var _classnames = _interopRequireDefault(require("classnames"));
 
 var _styles = require("./styles");
@@ -66,7 +68,9 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
       videoProps = _ref.videoProps,
       videoSources = _ref.videoSources,
       widgetState = _ref.widgetState,
-      others = (0, _objectWithoutProperties2.default)(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState"]);
+      buttonText = _ref.buttonText,
+      forceVersion = _ref.forceVersion,
+      others = (0, _objectWithoutProperties2.default)(_ref, ["additionalInfo", "avatarProps", "cardSubTitle", "cardTitle", "className", "href", "imageContainerBackground", "imageProps", "info1", "info2", "info3", "loading", "ownerDescription", "ownerTitle", "progress", "progressColor", "imageContainerRatio", "state", "stretch", "subTitleTruncate", "titleProps", "titlesMinHeight", "titleTruncate", "videoProps", "videoSources", "widgetState", "buttonText", "forceVersion"]);
 
   var removeCurrentFocus = function removeCurrentFocus() {
     document.activeElement.blur();
@@ -100,7 +104,8 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
       'k-CrowdfundingCard--isLoading': loading,
       'k-CrowdfundingCard--isStretched': stretch
     }),
-    href: href
+    href: href,
+    forceVersion: forceVersion
   }), /*#__PURE__*/_react.default.createElement(_image.default, {
     ownerTitle: ownerTitle,
     ownerDescription: ownerDescription,
@@ -135,6 +140,9 @@ var CrowdfundingCard = function CrowdfundingCard(_ref) {
     progress: progress,
     progressColor: progressColor,
     loading: loading
+  }), buttonText && /*#__PURE__*/_react.default.createElement(_button.default, {
+    text: buttonText,
+    loading: loading
   }), /*#__PURE__*/_react.default.createElement(_state.default, {
     state: state,
     widgetState: widgetState,
@@ -149,11 +157,15 @@ CrowdfundingCard.propTypes = {
   href: _propTypes.default.string,
   titlesMinHeight: _propTypes.default.bool,
   stretch: _propTypes.default.bool,
-  imageContainerRatio: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number])
+  imageContainerRatio: _propTypes.default.oneOfType([_propTypes.default.string, _propTypes.default.number]),
+  buttonText: _propTypes.default.string,
+  forceVersion: _propTypes.default.oneOf(['mobile', 'tablet', 'desktop'])
 };
 CrowdfundingCard.defaultProps = {
   href: null,
   titlesMinHeight: true,
   stretch: false,
-  imageContainerRatio: 10 / 16
+  imageContainerRatio: 10 / 16,
+  buttonText: null,
+  forceVersion: null
 };

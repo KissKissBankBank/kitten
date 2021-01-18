@@ -1,22 +1,30 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 
-export class GrabberIcon extends React.Component {
-  componentDidMount() {
-    const element = ReactDOM.findDOMNode(this)
-    element.setAttribute('xmlns', 'http://www.w3.org/2000/svg')
-  }
+export const GrabberIcon = ({ color, title, ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 100 100"
+    width="32"
+    height="32"
+    fill={color}
+    {...props}
+  >
+    {title && <title>{title}</title>}
+    <path d="M0 0 v100 h20 v-100 z" />
+    <path d="M40 0 v100 h20 v-100 z" />
+    <path d="M80 0 v100 h20 v-100 z" />
+  </svg>
+)
 
-  render() {
-    return (
-      <svg viewBox="0 0 100 100" width="32" height="32" {...this.props}>
-        <title>Grabber</title>
-        <path d="M0 0 v100 h20 v-100 z" />
-        <path d="M40 0 v100 h20 v-100 z" />
-        <path d="M80 0 v100 h20 v-100 z" />
-      </svg>
-    )
-  }
+GrabberIcon.propTypes = {
+  color: PropTypes.string,
+  title: PropTypes.string,
+}
+
+GrabberIcon.defaultProps = {
+  color: '#222',
+  title: '',
 }
 
 // DEPRECATED: do not use default export.

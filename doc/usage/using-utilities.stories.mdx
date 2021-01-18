@@ -1,0 +1,75 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Documentation/Usage/Using Utilities" />
+
+# Using Utilities
+
+The CSS utilities are class names that can be used for very basic styling.
+These utility classes _are used by React Components_.
+Kitten will not work properly without these utility classes.
+
+## Importing
+
+```
+@import '@kisskissbankbank/kitten/src/stylesheets/utilities';
+```
+
+## Using the utilities
+
+**When to use it?** You should use these utilities if you would need no more
+than 3 lines of CSS to style your HTML element.
+
+For example, instead of writing
+
+```js
+const FooBar = styled(props => (
+  <div {...props}>
+    Foo, bar, baz.
+  </div>)
+)`
+  @media (min-width: 768px) {
+    margin-top: 10px;
+  }
+`
+```
+
+you should write
+
+```js
+const FooBar = props => (
+  <div {...props} className="k-u-margin-top-single@s-up">
+    Foo, bar, baz.
+  </div>
+)
+```
+
+
+### Media Queries
+
+Some CSS utilities will have built-in media queries document width references in
+ he form of a short breakpoint name and a direction (`up` or `down`).
+The CSS rule of the utility will be embeded in the corresponding Media Query.
+
+Equivalent to `@media (min-width: ___) {}`
+
+- `@xxs-up`
+- `@xs-up`
+- `@s-up`
+- `@m-up`
+- `@l-up`
+- `@xl-up`
+
+
+Equivalent to `@media (max-width: ___) {}`
+
+- `@xxs-down`
+- `@xs-down`
+- `@s-down`
+- `@m-down`
+- `@l-down`
+- `@xl-down`
+
+### Important
+
+Adding `--important` at the end of any CSS utility will add `!important` at the
+end of the CSS rule.

@@ -2,19 +2,19 @@
 
 exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-htpNat fpxRfI"
   >
     <li
-      className="sc-ifAKCX hoZzDU"
+      className="sc-bxivhb BaPoz"
     >
       <span
         className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-ButtonIcon--empty--nano"
       />
       <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje cBiUKd"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu"
       >
         Default Item
       </span>
@@ -25,16 +25,16 @@ exports[`NEXT // <Stepper /> default item matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-htpNat fpxRfI"
   >
     <li
-      className="sc-ifAKCX hoZzDU"
+      className="sc-bxivhb BaPoz"
     >
       <a
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje cBiUKd k-u-link k-u-link-font1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel=""
         target="_self"
@@ -51,16 +51,16 @@ exports[`NEXT // <Stepper /> default link matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-htpNat fpxRfI"
   >
     <li
-      className="sc-ifAKCX hoZzDU"
+      className="sc-bxivhb BaPoz"
     >
       <a
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje cBiUKd k-u-link k-u-link-font1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
         target="_blank"
@@ -77,17 +77,17 @@ exports[`NEXT // <Stepper /> external link matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-htpNat fpxRfI"
   >
     <li
-      className="sc-ifAKCX hoZzDU"
+      className="sc-bxivhb BaPoz"
     >
       <a
         aria-current="page"
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje cBiUKd k-u-link k-u-link-font1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu k-u-link k-u-link-font1"
         href="https://www.kisskissbankbank.com"
         rel="nofollow noopener noreferrer"
         target="_blank"
@@ -104,19 +104,19 @@ exports[`NEXT // <Stepper /> link with linkProps matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-htpNat fpxRfI"
   >
     <li
-      className="sc-ifAKCX iAQSMw"
+      className="sc-bxivhb hbYiXc"
     >
       <span
         className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-ButtonIcon--empty--nano"
       />
       <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje cBiUKd"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu"
       >
         Default Item
       </span>
@@ -127,13 +127,13 @@ exports[`NEXT // <Stepper /> pointer item matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-htpNat fpxRfI"
   >
     <li
-      className="sc-ifAKCX dYtWil"
+      className="sc-bxivhb EOtIZ"
     >
       <span
         className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--inProgress"
@@ -145,16 +145,14 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
           width="8.48"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            Arrow
-          </title>
+          
           <path
             d="M6 0H0v6h2V2h4z"
           />
         </svg>
       </span>
       <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje cBiUKd"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu"
       >
         Progress Item
       </span>
@@ -165,16 +163,16 @@ exports[`NEXT // <Stepper /> progress item matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-htpNat fpxRfI"
   >
     <li
-      className="sc-ifAKCX dYtWil"
+      className="sc-bxivhb EOtIZ"
     >
       <a
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje cBiUKd k-u-link k-u-link-primary1"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu k-u-link k-u-link-primary1"
         href="https://www.kisskissbankbank.com"
         rel=""
         target="_self"
@@ -189,9 +187,7 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
             width="8.48"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              Arrow
-            </title>
+            
             <path
               d="M6 0H0v6h2V2h4z"
             />
@@ -206,13 +202,13 @@ exports[`NEXT // <Stepper /> progress link matches with snapshot 1`] = `
 
 exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
 <div
-  className="sc-htpNat jJKVyg"
+  className="sc-bwzfXH cbljrM"
 >
   <ul
-    className="sc-bxivhb TJkmv"
+    className="sc-htpNat fpxRfI"
   >
     <li
-      className="sc-ifAKCX hoZzDU"
+      className="sc-bxivhb BaPoz"
     >
       <span
         className="k-ButtonIcon k-ButtonIcon--nano k-ButtonIcon--hydrogen k-ButtonIcon--withoutHover k-ButtonIcon--rounded k-Stepper__icon k-Stepper__icon--validated k-ButtonIcon--checked--nano"
@@ -232,7 +228,7 @@ exports[`NEXT // <Stepper /> validated item matches with snapshot 1`] = `
         </svg>
       </span>
       <span
-        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-EHOje cBiUKd"
+        className="sc-bdVaJa bDWFJH k-u-size-tiny k-u-weight-regular sc-ifAKCX bYvwOu"
       >
         Validated Item
       </span>
