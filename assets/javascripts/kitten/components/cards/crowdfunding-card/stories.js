@@ -5,8 +5,6 @@ import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
 import { Grid, GridCol } from '../../grid/grid'
 import { CrowdfundingCard as CrowdfundingCardComponent } from './index'
-import { CrowdfundingCardWidget as CrowdfundingCardWidgetComponent } from './widget'
-import { KissKissBankBankIcon } from '../../../components/icons/kisskissbankbank-icon'
 import { Text } from '../../../components/typography/text'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { STATE_CHOICES } from './stories/project-state'
@@ -23,27 +21,6 @@ const StoryContainer = ({ children }) => (
       </GridCol>
     </Grid>
   </Container>
-)
-
-const StyledWidgetText = styled(Text)`
-  display: flex;
-  align-items: center;
-`
-
-const StyledWidgetLogo = styled(KissKissBankBankIcon)`
-  margin-left: ${pxToRem(5)};
-`
-
-const WidgetContainerState = () => (
-  <StyledWidgetText
-    size="micro"
-    lineHeight="normal"
-    weight="regular"
-    color="background1"
-  >
-    Sur
-    <StyledWidgetLogo width="80" height="18" />
-  </StyledWidgetText>
 )
 
 export default {
@@ -126,29 +103,6 @@ export const CrowdfundingCardWithVideo = () => (
           type: 'video/mp4',
         },
       ]}
-    />
-  </StoryContainer>
-)
-
-export const CrowdfundingCardWidget = () => (
-  <StoryContainer>
-    <CrowdfundingCardWidgetComponent
-      href={text('Link', '#')}
-      ownerTitle={text('Owner title', 'Owner title')}
-      ownerDescription={text('Owner description', 'Owner description')}
-      loading={boolean('Loading', false)}
-      stretch={boolean('Stretch', false)}
-      title={text(
-        'Title',
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit…',
-      )}
-      dayCounter={text('Day counter', '27 jours restants')}
-      subtitle={text(
-        'Subtitle',
-        'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma Aenean massa. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
-      )}
-      buttonText={text('Button text', 'Contribuer')}
-      state={<WidgetContainerState />}
     />
   </StoryContainer>
 )
