@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [unreleased]
 
 - Fix: `RangeSlider` mobile style fixes.
+- Fix: `RadioButton` mobile style fixes.
 
 ## [2.111.0] - 2020-01-15
 
