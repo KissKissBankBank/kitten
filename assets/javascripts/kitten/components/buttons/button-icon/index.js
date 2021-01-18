@@ -8,7 +8,7 @@ const StyledButton = styled(({ tag, ...props }) => (
   <Button {...props} as={tag} />
 ))`
   svg,
-  .k-ButtonIconNext__svg {
+  .k-ButtonIcon__svg {
     display: block;
     margin: 0;
     padding: 0;
@@ -18,18 +18,18 @@ const StyledButton = styled(({ tag, ...props }) => (
 
     pointer-events: none;
 
-    .k-ButtonIconNext__svg__stroke {
+    .k-ButtonIcon__svg__stroke {
       transition: stroke 0.2s;
     }
   }
 
-  &.k-ButtonIconNext--nano svg,
-  &.k-ButtonIconNext--nano .k-ButtonIconNext__svg {
+  &.k-ButtonIcon--nano svg,
+  &.k-ButtonIcon--nano .k-ButtonIcon__svg {
     width: ${pxToRem(8)};
     height: ${pxToRem(8)};
   }
 
-  .k-ButtonIconNext--withoutHover {
+  .k-ButtonIcon--withoutHover {
     pointer-events: none;
   }
 `
@@ -43,10 +43,10 @@ export const ButtonIcon = ({
   ...others
 }) => (
   <StyledButton
-    className={classNames('k-ButtonIconNext', className, {
-      [`k-ButtonIconNext--${size}`]: size,
-      'k-ButtonIconNext--withoutHover': withoutHover,
-      'k-ButtonIconNext--verticalArrow': verticalArrow,
+    className={classNames('k-ButtonIcon', className, {
+      [`k-ButtonIcon--${size}`]: size,
+      'k-ButtonIcon--withoutHover': withoutHover,
+      'k-ButtonIcon--verticalArrow': verticalArrow,
     })}
     nano={size === 'nano'}
     micro={size === 'micro'}
