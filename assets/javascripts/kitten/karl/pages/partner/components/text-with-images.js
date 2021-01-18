@@ -5,7 +5,7 @@ import { Container } from '../../../../components/grid/container'
 import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Title } from '../../../../components/typography/title'
 import { Text } from '../../../../components/typography/text'
-import { Button } from '../../../../components/buttons/button/button'
+import { Button } from '../../../../components/buttons/button'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../../constants/screen-config'
 

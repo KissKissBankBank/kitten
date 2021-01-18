@@ -131,7 +131,13 @@ exports[`<ProjectCreatorCard /> snapshot with notifications 1`] = `
       >
         This is the text
         <button
-          className="sc-bwzfXH cYndTi sc-bxivhb fVJshV k-ButtonIcon k-ButtonIcon--tiny k-ButtonIcon--withoutHover k-ButtonIcon--verticalArrow"
+          className="sc-bwzfXH cpmNwT k-Button sc-htpNat eNOWYY k-ButtonIcon k-ButtonIcon--tiny k-ButtonIcon--withoutHover k-ButtonIcon--verticalArrow k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+          style={
+            Object {
+              "--border-radius": 0,
+            }
+          }
+          type="button"
         >
           <svg
             className="k-ArrowIcon k-ArrowIcon--right k-ButtonIcon__svg"

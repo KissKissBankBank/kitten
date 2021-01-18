@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import { FacebookIcon } from '../../../components/icons/facebook-icon'
 import { TwitterIcon } from '../../../components/icons/twitter-icon'
 import { LinkedinIcon } from '../../../components/icons/linkedin-icon'

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { SimplePopover } from './index'
 import { Marger } from '../../layout/marger'
 import { Container } from '../../grid/container'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 
 const StoryContainer = ({ children }) => (
   <Container>

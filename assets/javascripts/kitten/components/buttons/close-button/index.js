@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import { CrossIcon } from '../../../components/icons/cross-icon'
 
 export const CloseButton = ({
@@ -14,8 +14,7 @@ export const CloseButton = ({
     title={closeButtonLabel}
     aria-label={closeButtonLabel}
     modifier={buttonModifier}
-    tiny={size === 'tiny'}
-    big={size === 'big'}
+    size={size}
     {...others}
   >
     <CrossIcon width="8" height="8" />

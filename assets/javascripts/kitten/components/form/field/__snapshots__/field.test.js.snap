@@ -30,7 +30,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gqjmRU gSiJXU"
+      className="sc-gZMcBi kXcfTS"
     >
       <input
         aria-activedescendant=""
@@ -38,7 +38,7 @@ Array [
         aria-expanded={false}
         aria-owns="field-results"
         autoComplete="off"
-        className="sc-VigVT faGjpy"
+        className="sc-gqjmRU leGtWe"
         id="autocomplete"
         name="field"
         onBlur={[Function]}
@@ -84,13 +84,18 @@ Array [
         >
           <button
             aria-describedby="tooltip"
-            className="sc-bwzfXH bRRDsJ"
+            className="sc-bwzfXH fnIkzy k-Button k-Button--nano k-Button--helium k-Button--andromeda k-Button--hasIcon k-Button--rounded"
             data-dismiss="tooltip"
             data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
             data-place="right"
             data-tip={true}
             onClick={[Function]}
+            style={
+              Object {
+                "--border-radius": 0,
+              }
+            }
             type="button"
           >
             <svg
@@ -122,7 +127,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bxivhb faAfYI k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
+      className="sc-htpNat hRCVis k-Form-TextInput k-Form-TextInput--andromeda k-Form-TextInput--error"
       disabled={false}
       id="input"
       name="field"
@@ -133,7 +138,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-gzVnrw ibZhkv k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-bZQynM bOrPFB k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -178,13 +183,18 @@ Array [
         >
           <button
             aria-describedby="tooltip"
-            className="sc-bwzfXH bRRDsJ"
+            className="sc-bwzfXH fnIkzy k-Button k-Button--nano k-Button--helium k-Button--andromeda k-Button--hasIcon k-Button--rounded"
             data-dismiss="tooltip"
             data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
             data-place="right"
             data-tip={true}
             onClick={[Function]}
+            style={
+              Object {
+                "--border-radius": 0,
+              }
+            }
             type="button"
           >
             <svg
@@ -216,7 +226,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <input
-      className="sc-bxivhb faAfYI k-Form-TextInput k-Form-TextInput--andromeda"
+      className="sc-htpNat hRCVis k-Form-TextInput k-Form-TextInput--andromeda"
       disabled={false}
       id="input"
       name="field"
@@ -258,13 +268,18 @@ Array [
         >
           <button
             aria-describedby="tooltip"
-            className="sc-bwzfXH bRRDsJ"
+            className="sc-bwzfXH fnIkzy k-Button k-Button--nano k-Button--helium k-Button--andromeda k-Button--hasIcon k-Button--rounded"
             data-dismiss="tooltip"
             data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
             data-place="right"
             data-tip={true}
             onClick={[Function]}
+            style={
+              Object {
+                "--border-radius": 0,
+              }
+            }
             type="button"
           >
             <svg
@@ -296,10 +311,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gZMcBi deIJCS k-Form-PasswordInput"
+      className="sc-iwsKbI hWLcYV k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb faAfYI k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
+        className="sc-htpNat hRCVis k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda k-Form-TextInput--error"
         disabled={false}
         id="input"
         name="field"
@@ -336,7 +351,7 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <p
-      className="sc-gzVnrw ibZhkv k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
+      className="sc-bZQynM bOrPFB k-u-color-error k-u-line-height-normal k-u-size-micro k-u-weight-regular"
       style={
         Object {
           "margin": 0,
@@ -381,13 +396,18 @@ Array [
         >
           <button
             aria-describedby="tooltip"
-            className="sc-bwzfXH bRRDsJ"
+            className="sc-bwzfXH fnIkzy k-Button k-Button--nano k-Button--helium k-Button--andromeda k-Button--hasIcon k-Button--rounded"
             data-dismiss="tooltip"
             data-event="TooltipEvents__open_tooltip"
             data-for="tooltip"
             data-place="right"
             data-tip={true}
             onClick={[Function]}
+            style={
+              Object {
+                "--border-radius": 0,
+              }
+            }
             type="button"
           >
             <svg
@@ -419,10 +439,10 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <div
-      className="sc-gZMcBi deIJCS k-Form-PasswordInput"
+      className="sc-iwsKbI hWLcYV k-Form-PasswordInput"
     >
       <input
-        className="sc-bxivhb faAfYI k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
+        className="sc-htpNat hRCVis k-Form-TextInput k-Form-PasswordInput__input k-Form-TextInput--andromeda"
         disabled={false}
         id="input"
         name="field"
@@ -488,14 +508,14 @@ Array [
     className="sc-bdVaJa ggQxmM"
   >
     <fieldset
-      className="sc-dnqmqq fsRQlI k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
+      className="sc-htoDjs dxNZQM k-Form-RadioButtonSet k-Form-RadioButtonSet--andromeda"
       disabled={false}
     >
       <div
         className="k-Form-RadioButtonSet__radioContainer"
       >
         <div
-          className="sc-htoDjs kfWTKy k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-gzVnrw gJNpwg k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -517,7 +537,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-htoDjs kfWTKy k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-gzVnrw gJNpwg k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"
@@ -538,7 +558,7 @@ Array [
           </label>
         </div>
         <div
-          className="sc-htoDjs kfWTKy k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
+          className="sc-gzVnrw gJNpwg k-Form-RadioButton k-Form-RadioButtonSet__radioButton k-Form-RadioButton--andromeda k-Form-RadioButton--disc"
         >
           <input
             className="k-Form-RadioButton__input"

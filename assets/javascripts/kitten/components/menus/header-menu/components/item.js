@@ -6,7 +6,7 @@ import TYPOGRAPHY from '../../../../constants/typography-config'
 import { pxToRem } from '../../../../helpers/utils/typography'
 import { Context } from './context'
 import { ArrowIcon } from '../../../icons/arrow-icon'
-import { Button } from '../../../../components/buttons/button/button'
+import { Button } from '../../../../components/buttons/button'
 
 const ButtonContainer = styled.div`
   padding: ${pxToRem(20)};

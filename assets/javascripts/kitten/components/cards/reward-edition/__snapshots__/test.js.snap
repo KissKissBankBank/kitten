@@ -16,10 +16,6 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   justify-content: center;
   position: relative;
   box-sizing: border-box;
-  min-width: 12.5rem;
-  min-height: 3.125rem;
-  padding: 0 1.875rem;
-  font-size: 0.8888888888888888rem;
   font-family: Maax,Helvetica,Arial,sans-serif;
   font-weight: 500;
   font-size: 0.8888888888888888rem;
@@ -30,19 +26,11 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  outline: none;
   cursor: pointer;
-  min-width: 8.125rem;
-  min-height: 1.875rem;
-  padding: 0 0.625rem;
-  font-size: 0.7901234567901234rem;
-  min-width: initial;
-  min-height: initial;
-  width: 3.125rem;
-  height: 3.125rem;
-  padding: 0;
-  width: 1.875rem;
-  height: 1.875rem;
+  min-width: 12.5rem;
+  min-height: 3.125rem;
+  padding: 0 1.875rem;
+  font-size: 0.8888888888888888rem;
   border: 0.125rem solid #eee;
   background-color: #fff;
   color: #222;
@@ -66,6 +54,91 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 
 .c2 >:last-child {
   margin-right: 0;
+}
+
+.c2.k-Button--hasBorderRadius {
+  border-radius: var(--border-radius);
+}
+
+.c2.k-Button--nano {
+  min-width: 6.25rem;
+  min-height: 1.25rem;
+  padding: 0 0.375rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c2.k-Button--micro {
+  min-width: 8.125rem;
+  min-height: 1.875rem;
+  padding: 0 0.625rem;
+  font-size: 0.7901234567901234rem;
+}
+
+.c2.k-Button--tiny {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  padding: 0 1.25rem;
+  font-size: 0.8888888888888888rem;
+}
+
+.c2.k-Button--huge {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c2.k-Button--giant {
+  min-height: 4.375rem;
+  font-size: 0.8888888888888888rem;
+  padding: 0 0.625rem;
+}
+
+.c2.k-Button--hasIcon:not(.k-Button--fluid) {
+  min-width: initial;
+  min-height: initial;
+  width: 3.125rem;
+  height: 3.125rem;
+  padding: 0;
+}
+
+.c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+  min-width: initial;
+  width: 4.375rem;
+  height: 4.375rem;
+}
+
+.c2.k-Button--fluid {
+  min-width: initial;
+  width: 100%;
+}
+
+.c2.k-Button--rounded {
+  border-radius: 50%;
+}
+
+.c2.k-Button--orion {
+  border-radius: 0.375rem;
 }
 
 .c2 svg,
@@ -150,14 +223,76 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
+  .c2.k-Button--nano {
     width: 6.25rem;
     height: 1.25rem;
   }
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
+  .c2.k-Button--micro {
+    width: 6.25rem;
+    height: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--tiny {
+    width: 10rem;
+    height: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c2.k-Button--big {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--big {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c2.k-Button--huge {
+    min-width: 13.75rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--huge {
+    width: 13.75rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:768px) {
+  .c2.k-Button--giant {
+    min-width: 13.75rem;
+    min-height: 5.625rem;
+    font-size: 1rem;
+    padding: 0 2.5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--giant {
+    width: 13.75rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--hasIcon:not(.k-Button--fluid) {
     width: 3.125rem;
     min-width: 0;
     min-height: 0;
@@ -165,8 +300,86 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
 }
 
 @media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
-  .c2 {
+  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--nano {
+    width: 1.25rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--micro {
     width: 1.875rem;
+  }
+}
+
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--tiny {
+    width: 2.5rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--big {
+    width: 4.375rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    min-width: initial;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--huge {
+    width: 5rem;
+  }
+}
+
+@media (min-width:48rem) {
+  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    min-width: initial;
+    width: 5.625rem;
+    height: 5.625rem;
+  }
+}
+
+@media screen and (min-width:48rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--hasIcon:not(.k-Button--fluid).k-Button--giant {
+    width: 5.625rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c2.k-Button--orion {
+    min-width: 13.75rem;
+    min-height: 4.375rem;
+    padding: 0 2.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:40rem) and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+  .c2.k-Button--orion {
+    width: 13.75rem;
+    height: 4.375rem;
+  }
+}
+
+@media (min-width:40rem) {
+  .c2.k-Button--orion {
+    border-radius: 0.5rem;
   }
 }
 
@@ -189,7 +402,12 @@ exports[`<RewardEdition /> with some props matches with snapshot 1`] = `
     </span>
     <button
       aria-label="Delete"
-      className="c2 k-RewardEdition__Header__Button"
+      className="c2 k-Button k-RewardEdition__Header__Button k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+      style={
+        Object {
+          "--border-radius": 0,
+        }
+      }
       type="button"
     >
       <svg

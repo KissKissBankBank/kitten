@@ -7,7 +7,7 @@ import { EditIcon } from '../../../../components/icons/edit-icon'
 import { ButtonIcon } from '../../../../components/buttons/button-icon'
 import { Title } from '../../../../components/typography/title'
 import { Text } from '../../../../components/typography/text'
-import { Button } from '../../../../components/buttons/button/button'
+import { Button } from '../../../../components/buttons/button'
 import { ScreenConfig } from '../../../../constants/screen-config'
 
 const borderWidth = 2

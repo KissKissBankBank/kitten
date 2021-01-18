@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import styled, { css } from 'styled-components'
 import { checkedCircleIconAsString } from '../../icons/checked-circle-icon'
 import { encodeSvgString } from '../../../helpers/utils/encode-svg'
@@ -26,9 +26,9 @@ const StyledCheckableButton = styled(Button)`
     content: '';
     position: absolute;
 
-    ${({ tiny, big }) => {
-      if (tiny === true) return checkedCircleIconStyle(15)
-      if (big === true) return checkedCircleIconStyle(24)
+    ${({ size }) => {
+      if (size === 'true') return checkedCircleIconStyle(15)
+      if (size === 'true') return checkedCircleIconStyle(24)
       return checkedCircleIconStyle(20)
     }}
 
@@ -104,17 +104,13 @@ export const CheckableButton = ({ isChecked, children, error, ...props }) => {
 }
 
 CheckableButton.propTypes = {
-  big: PropTypes.bool,
   disabled: PropTypes.bool,
   error: PropTypes.bool,
   isChecked: PropTypes.bool,
-  tiny: PropTypes.bool,
 }
 
 CheckableButton.defaultProps = {
-  big: false,
   disabled: false,
   error: false,
   isChecked: false,
-  tiny: false,
 }

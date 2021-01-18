@@ -683,7 +683,7 @@ exports[`<Button /> with \`big\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--big k-Button--hydrogen k-Button--andromeda"
   style={
     Object {
       "--border-radius": 0,
@@ -1727,7 +1727,7 @@ exports[`<Button /> with \`giant\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--giant k-Button--hydrogen k-Button--andromeda"
   style={
     Object {
       "--border-radius": 0,
@@ -2075,7 +2075,7 @@ exports[`<Button /> with \`huge\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--huge k-Button--hydrogen k-Button--andromeda"
   style={
     Object {
       "--border-radius": 0,
@@ -2771,7 +2771,7 @@ exports[`<Button /> with \`tiny\` prop matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--hydrogen k-Button--andromeda"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda"
   style={
     Object {
       "--border-radius": 0,
@@ -3119,7 +3119,7 @@ exports[`<Button /> with icon and big matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--big k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -3815,7 +3815,7 @@ exports[`<Button /> with icon and giant matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--giant k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -4163,7 +4163,7 @@ exports[`<Button /> with icon and huge matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--huge k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -4511,7 +4511,7 @@ exports[`<Button /> with icon and micro matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--micro k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,
@@ -4859,7 +4859,7 @@ exports[`<Button /> with icon and tiny matches with snapshot 1`] = `
 }
 
 <button
-  className="c0 k-Button k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
+  className="c0 k-Button k-Button--tiny k-Button--hydrogen k-Button--andromeda k-Button--hasIcon"
   style={
     Object {
       "--border-radius": 0,

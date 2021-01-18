@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import MobileModal from './index'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import styled from 'styled-components'
 import { pxToRem, stepToRem } from '../../../helpers/utils/typography'
 import { ScreenConfig } from '../../../constants/screen-config'

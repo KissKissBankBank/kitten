@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import PropTypes from 'prop-types'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import { ArrowIcon } from '../../../components/icons/arrow-icon'
 import COLORS from '../../../constants/colors-config'
 import { pxToRem } from '../../../helpers/utils/typography'
@@ -35,7 +35,7 @@ export class ExpandBoardButton extends PureComponent {
     expanded: PropTypes.bool,
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
-    big: PropTypes.bool,
+    size: PropTypes.string,
     borderRadius: PropTypes.number,
   }
 
@@ -46,7 +46,7 @@ export class ExpandBoardButton extends PureComponent {
     onClick: () => {},
     ariaId: '',
     borderRadius: 0,
-    big: true,
+    size: 'big',
   }
 
   render() {
@@ -58,14 +58,14 @@ export class ExpandBoardButton extends PureComponent {
       onClick,
       ariaId,
       borderRadius,
-      big,
+      size,
     } = this.props
 
     const defaultExpandChildren = expandChildren ? expandChildren : children
 
     return (
       <StyledButton
-        big={big}
+        size={size}
         modifier="helium"
         disabled={disabled}
         aria-expanded={expanded}

@@ -4,7 +4,7 @@ import { CrowdfundingCardWidget } from '../../../components/cards/crowdfunding-c
 import { Grid, GridCol } from '../../../components/grid/grid'
 import { Container } from '../../../components/grid/container'
 import { Modal } from '../../../components/modals/modal'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 import { TextInput } from '../../../components/form/text-input'
 import { Title } from '../../../components/typography/title'
 import { Text } from '../../../components/typography/text'

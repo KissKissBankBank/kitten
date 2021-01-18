@@ -9,7 +9,7 @@ import { Title } from '../../../components/typography/title'
 import { Paragraph } from '../../../components/typography/paragraph'
 import { CONTAINER_PADDING_THIN } from '../../../constants/grid-config'
 import { ScreenConfig } from '../../../constants/screen-config'
-import { Button } from '../../../components/buttons/button/button'
+import { Button } from '../../../components/buttons/button'
 
 const borderSize = 2
 
@@ -118,7 +118,7 @@ export const SimplePopover = ({
         onClick={onCloseClick}
         type="button"
         modifier="hydrogen"
-        micro
+        size="micro"
         icon
       >
         <CrossIcon aria-hidden width="8" height="8" fill={COLORS.background1} />

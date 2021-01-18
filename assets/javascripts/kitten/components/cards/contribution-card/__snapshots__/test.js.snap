@@ -30,7 +30,7 @@ exports[`<ContributionCard /> by default matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-bxivhb gmqSjE k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-ifAKCX gKmkxO k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {
@@ -87,7 +87,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-bxivhb gmqSjE k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-ifAKCX gKmkxO k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {
@@ -101,7 +101,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-bdVaJa gSHEXD"
           >
             <p
-              className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-huge k-u-weight-bold k-u-margin-none"
+              className="sc-EHOje jvzENE k-u-color-font1 k-u-size-huge k-u-weight-bold k-u-margin-none"
             >
               Custom title description
             </p>
@@ -123,31 +123,31 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <span
-              className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+              className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
             >
               Custom title contributors 
               <span
-                className="sc-ifAKCX cFlEyZ k-u-weight-light"
+                className="sc-EHOje jvzENE k-u-weight-light"
               >
                 Custom value contributors
               </span>
             </span>
             <span
-              className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+              className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
             >
               Custom title delivery 
               <span
-                className="sc-ifAKCX cFlEyZ k-u-weight-light"
+                className="sc-EHOje jvzENE k-u-weight-light"
               >
                 Custom value delivery
               </span>
             </span>
             <span
-              className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+              className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
             >
               Custom title availability 
               <span
-                className="sc-ifAKCX cFlEyZ k-u-weight-light"
+                className="sc-EHOje jvzENE k-u-weight-light"
               >
                 Custom value availability
               </span>
@@ -159,12 +159,16 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
         >
           <button
             aria-labelledby="Custom text button"
-            className="k-Button k-Button--helium k-Button--big k-LegacyRewardCard__button"
+            className="sc-bxivhb cbeVsA k-Button k-LegacyRewardCard__button k-Button--big k-Button--helium k-Button--andromeda"
             disabled={false}
             onClick={[Function]}
             onMouseEnter={[Function]}
             onMouseLeave={[Function]}
-            tabIndex={null}
+            style={
+              Object {
+                "--border-radius": 0,
+              }
+            }
             type="button"
           >
             Custom text button
@@ -176,7 +180,7 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
               className="k-LegacyRewardCard__myContribution"
             >
               <span
-                className="sc-EHOje cOnFfw k-LegacyRewardCard__iconBadge"
+                className="sc-bZQynM bXIiYe k-LegacyRewardCard__iconBadge"
                 disabled={false}
               >
                 <span
@@ -201,12 +205,12 @@ exports[`<ContributionCard /> with some props matches with snapshot 1`] = `
                 className="k-LegacyRewardCard__myContribution__text"
               >
                 <span
-                  className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+                  className="sc-EHOje jvzENE k-u-color-font1 k-u-size-tiny k-u-weight-regular"
                 >
                   Custom my contribution
                   <br />
                   <a
-                    className="sc-ifAKCX cFlEyZ k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
+                    className="sc-EHOje jvzENE k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
                     href="Custom manage link contribution"
                   >
                     Custom manage contribution
@@ -269,7 +273,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-bdVaJa iDiPml"
           >
             <div
-              className="sc-bxivhb gmqSjE k-HorizontalStroke k-HorizontalStroke--size--big"
+              className="sc-ifAKCX gKmkxO k-HorizontalStroke k-HorizontalStroke--size--big"
               color="#222"
               style={
                 Object {
@@ -283,7 +287,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="sc-bdVaJa gSHEXD"
           >
             <p
-              className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-big k-u-weight-bold k-u-margin-none"
+              className="sc-EHOje jvzENE k-u-color-font1 k-u-size-big k-u-weight-bold k-u-margin-none"
             >
               Custom title description
             </p>
@@ -306,11 +310,11 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
           >
             <div>
               <span
-                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+                className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
               >
                 Custom title contributors 
                 <span
-                  className="sc-ifAKCX cFlEyZ k-u-weight-light"
+                  className="sc-EHOje jvzENE k-u-weight-light"
                 >
                   Custom value contributors
                 </span>
@@ -318,11 +322,11 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </div>
             <div>
               <span
-                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+                className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
               >
                 Custom title delivery 
                 <span
-                  className="sc-ifAKCX cFlEyZ k-u-weight-light"
+                  className="sc-EHOje jvzENE k-u-weight-light"
                 >
                   Custom value delivery
                 </span>
@@ -330,11 +334,11 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             </div>
             <div>
               <span
-                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
+                className="sc-EHOje jvzENE k-u-color-font1 k-u-weight-regular k-LegacyRewardCard__list"
               >
                 Custom title availability 
                 <span
-                  className="sc-ifAKCX cFlEyZ k-u-weight-light"
+                  className="sc-EHOje jvzENE k-u-weight-light"
                 >
                   Custom value availability
                 </span>
@@ -374,7 +378,7 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
             className="k-LegacyRewardCard__myContribution"
           >
             <span
-              className="sc-EHOje cOnFfw k-LegacyRewardCard__iconBadge"
+              className="sc-bZQynM bXIiYe k-LegacyRewardCard__iconBadge"
               disabled={false}
             >
               <span
@@ -399,12 +403,12 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
               className="k-LegacyRewardCard__myContribution__text"
             >
               <span
-                className="sc-ifAKCX cFlEyZ k-u-color-font1 k-u-size-tiny k-u-weight-regular"
+                className="sc-EHOje jvzENE k-u-color-font1 k-u-size-tiny k-u-weight-regular"
               >
                 Custom my contribution
                 <br />
                 <a
-                  className="sc-ifAKCX cFlEyZ k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
+                  className="sc-EHOje jvzENE k-u-color-primary1 k-u-decoration-none k-u-weight-regular"
                   href="Custom manage link contribution"
                 >
                   Custom manage contribution
@@ -417,12 +421,16 @@ exports[`<ContributionCard /> with tiny version matches with snapshot 1`] = `
     </div>
     <button
       aria-labelledby="Custom text button"
-      className="k-Button k-Button--helium k-Button--big k-LegacyRewardCard__button"
+      className="sc-bxivhb cbeVsA k-Button k-LegacyRewardCard__button k-Button--big k-Button--helium k-Button--andromeda"
       disabled={false}
       onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      tabIndex={null}
+      style={
+        Object {
+          "--border-radius": 0,
+        }
+      }
       type="button"
     >
       Custom text button

@@ -2,7 +2,7 @@
 
 exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iwpsnQ k-Carousel"
+  className="sc-bwzfXH ieTkNE k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -29,10 +29,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="sc-bxivhb eOfqAd k-ProjectCard__grid--flex"
+                className="sc-htpNat dPdrGa k-ProjectCard__grid--flex"
               >
                 <span
-                  className="sc-bZQynM fUtNUM k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
+                  className="sc-EHOje kBkttj k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                 >
                   <img
                     alt=""
@@ -51,10 +51,10 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="sc-bxivhb caHrlh k-ProjectCard__grid--flex"
+                className="sc-htpNat cpVosV k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-ifAKCX dzdewm k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-bxivhb ebgsHQ k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -76,7 +76,7 @@ exports[`<Carousel /> by default on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iwpsnQ k-Carousel"
+  className="sc-bwzfXH ieTkNE k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -103,10 +103,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="sc-bxivhb eOfqAd k-ProjectCard__grid--flex"
+                className="sc-htpNat dPdrGa k-ProjectCard__grid--flex"
               >
                 <span
-                  className="sc-bZQynM fUtNUM k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
+                  className="sc-EHOje kBkttj k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                 >
                   <img
                     alt=""
@@ -125,10 +125,10 @@ exports[`<Carousel /> by default on mobile matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="sc-bxivhb caHrlh k-ProjectCard__grid--flex"
+                className="sc-htpNat cpVosV k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-ifAKCX dzdewm k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-bxivhb ebgsHQ k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -152,7 +152,7 @@ exports[`<Carousel /> empty carousel matches with snapshot 1`] = `null`;
 
 exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dhDPHc k-Carousel k-LegacyCarousel"
+  className="sc-bwzfXH kHftbI k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -185,10 +185,10 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                   className="k-ProjectCard__grid"
                 >
                   <div
-                    className="sc-bxivhb eOfqAd k-ProjectCard__grid--flex"
+                    className="sc-htpNat dPdrGa k-ProjectCard__grid--flex"
                   >
                     <span
-                      className="sc-bZQynM fUtNUM k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
+                      className="sc-EHOje kBkttj k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                     >
                       <img
                         alt=""
@@ -207,10 +207,10 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
                     </p>
                   </div>
                   <div
-                    className="sc-bxivhb caHrlh k-ProjectCard__grid--flex"
+                    className="sc-htpNat cpVosV k-ProjectCard__grid--flex"
                   >
                     <p
-                      className="sc-ifAKCX dzdewm k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                      className="sc-bxivhb ebgsHQ k-ProjectCard__grid--flex__item-fluid k-Card__title"
                     >
                       A
                     </p>
@@ -237,7 +237,7 @@ exports[`<Carousel /> legacy carousel on desktop matches with snapshot 1`] = `
 
 exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dhDPHc k-Carousel k-LegacyCarousel"
+  className="sc-bwzfXH kHftbI k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -270,10 +270,10 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                   className="k-ProjectCard__grid"
                 >
                   <div
-                    className="sc-bxivhb eOfqAd k-ProjectCard__grid--flex"
+                    className="sc-htpNat dPdrGa k-ProjectCard__grid--flex"
                   >
                     <span
-                      className="sc-bZQynM fUtNUM k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
+                      className="sc-EHOje kBkttj k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                     >
                       <img
                         alt=""
@@ -292,10 +292,10 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
                     </p>
                   </div>
                   <div
-                    className="sc-bxivhb caHrlh k-ProjectCard__grid--flex"
+                    className="sc-htpNat cpVosV k-ProjectCard__grid--flex"
                   >
                     <p
-                      className="sc-ifAKCX dzdewm k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                      className="sc-bxivhb ebgsHQ k-ProjectCard__grid--flex__item-fluid k-Card__title"
                     >
                       A
                     </p>
@@ -322,7 +322,7 @@ exports[`<Carousel /> legacy carousel on desktop with withoutLeftOffset={true} m
 
 exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 <div
-  className="sc-htpNat dhDPHc k-Carousel k-LegacyCarousel"
+  className="sc-bwzfXH kHftbI k-Carousel k-LegacyCarousel"
 >
   <div
     className="k-Grid"
@@ -355,10 +355,10 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                   className="k-ProjectCard__grid"
                 >
                   <div
-                    className="sc-bxivhb eOfqAd k-ProjectCard__grid--flex"
+                    className="sc-htpNat dPdrGa k-ProjectCard__grid--flex"
                   >
                     <span
-                      className="sc-bZQynM fUtNUM k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
+                      className="sc-EHOje kBkttj k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                     >
                       <img
                         alt=""
@@ -377,10 +377,10 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
                     </p>
                   </div>
                   <div
-                    className="sc-bxivhb caHrlh k-ProjectCard__grid--flex"
+                    className="sc-htpNat cpVosV k-ProjectCard__grid--flex"
                   >
                     <p
-                      className="sc-ifAKCX dzdewm k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                      className="sc-bxivhb ebgsHQ k-ProjectCard__grid--flex__item-fluid k-Card__title"
                     >
                       A
                     </p>
@@ -407,7 +407,7 @@ exports[`<Carousel /> legacy carousel on mobile matches with snapshot 1`] = `
 
 exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iwpsnQ k-Carousel"
+  className="sc-bwzfXH ieTkNE k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -434,10 +434,10 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
               className="k-ProjectCard__grid"
             >
               <div
-                className="sc-bxivhb eOfqAd k-ProjectCard__grid--flex"
+                className="sc-htpNat dPdrGa k-ProjectCard__grid--flex"
               >
                 <span
-                  className="sc-bZQynM fUtNUM k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
+                  className="sc-EHOje kBkttj k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                 >
                   <img
                     alt=""
@@ -456,10 +456,10 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
                 </p>
               </div>
               <div
-                className="sc-bxivhb caHrlh k-ProjectCard__grid--flex"
+                className="sc-htpNat cpVosV k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-ifAKCX dzdewm k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-bxivhb ebgsHQ k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -481,7 +481,7 @@ exports[`<Carousel /> with exportVisibilityProps prop matches with snapshot 1`] 
 
 exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat brSuNi k-Carousel"
+  className="sc-bwzfXH iIlykV k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -508,10 +508,10 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="sc-bxivhb eOfqAd k-ProjectCard__grid--flex"
+                className="sc-htpNat dPdrGa k-ProjectCard__grid--flex"
               >
                 <span
-                  className="sc-bZQynM fUtNUM k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
+                  className="sc-EHOje kBkttj k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                 >
                   <img
                     alt=""
@@ -530,10 +530,10 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="sc-bxivhb caHrlh k-ProjectCard__grid--flex"
+                className="sc-htpNat cpVosV k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-ifAKCX dzdewm k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-bxivhb ebgsHQ k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>
@@ -561,7 +561,7 @@ exports[`<Carousel /> with itemsPerPage prop matches with snapshot 1`] = `
 
 exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
 <div
-  className="sc-htpNat iwpsnQ k-Carousel"
+  className="sc-bwzfXH ieTkNE k-Carousel"
 >
   <div
     className="k-Carousel__inner"
@@ -588,10 +588,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
               className="k-ProjectCard__grid"
             >
               <div
-                className="sc-bxivhb eOfqAd k-ProjectCard__grid--flex"
+                className="sc-htpNat dPdrGa k-ProjectCard__grid--flex"
               >
                 <span
-                  className="sc-bZQynM fUtNUM k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
+                  className="sc-EHOje kBkttj k-ButtonImageNext k-ButtonImageNext--withoutPointerEvents"
                 >
                   <img
                     alt=""
@@ -610,10 +610,10 @@ exports[`<Carousel /> with loop prop on desktop matches with snapshot 1`] = `
                 </p>
               </div>
               <div
-                className="sc-bxivhb caHrlh k-ProjectCard__grid--flex"
+                className="sc-htpNat cpVosV k-ProjectCard__grid--flex"
               >
                 <p
-                  className="sc-ifAKCX dzdewm k-ProjectCard__grid--flex__item-fluid k-Card__title"
+                  className="sc-bxivhb ebgsHQ k-ProjectCard__grid--flex__item-fluid k-Card__title"
                 >
                   A
                 </p>

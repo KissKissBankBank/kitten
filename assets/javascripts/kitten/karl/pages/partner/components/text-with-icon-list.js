@@ -6,7 +6,7 @@ import { Grid, GridCol } from '../../../../components/grid/grid'
 import { Title } from '../../../../components/typography/title'
 import { Text } from '../../../../components/typography/text'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
-import { Button, FLUID } from '../../../../components/buttons/button/button'
+import { Button, FLUID } from '../../../../components/buttons/button'
 import { ScreenConfig } from '../../../../constants/screen-config'
 import { IconList } from '../../../../components/lists/icon-list'
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Button, ICON } from '../../../components/buttons/button/button'
+import { Button, ICON } from '../../../components/buttons/button'
 import { modifierStyles } from '../../../components/buttons/button/helpers/modifier-styles'
 import COLORS from '../../../constants/colors-config'
 

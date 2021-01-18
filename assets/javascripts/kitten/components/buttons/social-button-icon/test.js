@@ -27,7 +27,7 @@ describe('SocialButtonIcon', () => {
   describe('<FacebookButtonIcon /> with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<FacebookButtonIcon tiny>Facebook</FacebookButtonIcon>)
+        .create(<FacebookButtonIcon size="tiny">Facebook</FacebookButtonIcon>)
         .toJSON()
     })
 
@@ -50,7 +50,7 @@ describe('SocialButtonIcon', () => {
   describe('<TwitterButtonIcon /> with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<TwitterButtonIcon tiny>Twitter</TwitterButtonIcon>)
+        .create(<TwitterButtonIcon size="tiny">Twitter</TwitterButtonIcon>)
         .toJSON()
     })
 
@@ -73,7 +73,7 @@ describe('SocialButtonIcon', () => {
   describe('<LinkedinButtonIcon /> with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<LinkedinButtonIcon tiny>Linkedin</LinkedinButtonIcon>)
+        .create(<LinkedinButtonIcon size="tiny">Linkedin</LinkedinButtonIcon>)
         .toJSON()
     })
 
@@ -96,7 +96,9 @@ describe('SocialButtonIcon', () => {
   describe('<InstagramButtonIcon /> with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<InstagramButtonIcon tiny>Instagram</InstagramButtonIcon>)
+        .create(
+          <InstagramButtonIcon size="tiny">Instagram</InstagramButtonIcon>,
+        )
         .toJSON()
     })
 
@@ -119,7 +121,7 @@ describe('SocialButtonIcon', () => {
   describe('<YoutubeButtonIcon /> with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<YoutubeButtonIcon tiny>Youtube</YoutubeButtonIcon>)
+        .create(<YoutubeButtonIcon size="tiny">Youtube</YoutubeButtonIcon>)
         .toJSON()
     })
 
@@ -142,7 +144,9 @@ describe('SocialButtonIcon', () => {
   describe('<PinterestButtonIcon /> with props', () => {
     beforeEach(() => {
       component = renderer
-        .create(<PinterestButtonIcon tiny>Pinterest</PinterestButtonIcon>)
+        .create(
+          <PinterestButtonIcon size="tiny">Pinterest</PinterestButtonIcon>,
+        )
         .toJSON()
     })
 

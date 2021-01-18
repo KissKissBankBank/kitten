@@ -8,7 +8,7 @@ import { Marger } from '../../../../components/layout/marger'
 import { HorizontalStroke } from '../../../../components/layout/horizontal-stroke'
 import { Field } from '../../../../components/form/field'
 import { Checkbox } from '../../../../components/form/checkbox'
-import { Button } from '../../../../components/buttons/button/button'
+import { Button } from '../../../../components/buttons/button'
 import COLORS from '../../../../constants/colors-config'
 import styled from 'styled-components'
 

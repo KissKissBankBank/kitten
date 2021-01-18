@@ -17,7 +17,7 @@ Array [
     className="sc-bdVaJa CoxgX"
   >
     <div
-      className="sc-ifAKCX bFhmek k-BasicUploader k-BasicUploader--ready"
+      className="sc-bxivhb dWkRY k-BasicUploader k-BasicUploader--ready"
     >
       <input
         accept=".jpg,.jpeg,.gif,.png"
@@ -27,8 +27,14 @@ Array [
         type="file"
       />
       <label
-        className="sc-bwzfXH fXKLES k-BasicUploader__button"
+        className="sc-bwzfXH cpmNwT k-Button k-BasicUploader__button k-Button--normal k-Button--hydrogen k-Button--andromeda k-Button--fluid"
         htmlFor="cropper"
+        style={
+          Object {
+            "--border-radius": 0,
+          }
+        }
+        type="button"
       >
         <svg
           aria-hidden={true}
